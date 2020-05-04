@@ -111,7 +111,7 @@ export class LiturgicalDocument {
       if(this.condition.mode == 'or') {
         return evaluatedConditions.reduce((a, b) => a || b);
       } else {
-        return evaluatedConditions.reduce((a, b) => a || b);
+        return evaluatedConditions.reduce((a, b) => a && b);
       }
     } else {
       return true;

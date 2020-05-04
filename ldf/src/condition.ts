@@ -42,7 +42,7 @@ export class Condition {
   };
 
   /** Given a liturgical day and a set of preferences, evaluates whether the condition should be included */
-  include(day : LiturgicalDay, prefs : ClientPreferences) : boolean {
+  include(day : LiturgicalDay, prefs : ClientPreferences = {}) : boolean {
     let include : boolean = true,
         evaluatedConditions : boolean[] = new Array(include);
 
