@@ -1,0 +1,9 @@
+*/.env
+*/dist/
+*/migrations/
+*/node_modules/
+*/www/
+node_modules/
+.DS_STORE
+certs/
+*/dist/
