@@ -5,9 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { BibleReading, Heading, LiturgicalDocument, ResponsivePrayer, SelectableCitation, Text, } from "../../ldf/src";
-import { Cursor, } from "./components/editable-text/cursor";
-import { Change, } from "./components/editable-text/change";
+import { BibleReading, Change, Cursor, Heading, LiturgicalDocument, ResponsivePrayer, SelectableCitation, Text, } from "@venite/ldf";
 import { Liturgy, } from "../../ldf/src/liturgy/liturgy";
 import { Option, } from "../../ldf/src/option";
 import { Psalm, } from "../../ldf/src/psalm";
@@ -50,11 +48,11 @@ export namespace Components {
         /**
           * Reduces the list of edits triggered by input events to as few contiguous edits as possible. and emits it as a `docChanged` event
          */
-        "processEdits": () => Promise<any[]>;
+        "processEdits": () => Promise<Change[]>;
         /**
           * Sets private cursor field to a Cursor instance and sends it as a `cursor` event
          */
-        "registerCursor": () => Promise<any>;
+        "registerCursor": () => Promise<Cursor>;
         /**
           * Starting text for editing
          */

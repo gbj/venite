@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event         | Description | Type                      |
-| ------------- | ----------- | ------------------------- |
-| `cursorMoved` |             | `CustomEvent<Cursor>`     |
+| Event         | Description | Type                    |
+| ------------- | ----------- | ----------------------- |
+| `cursorMoved` |             | `CustomEvent<Cursor>`   |
 | `docChanged`  |             | `CustomEvent<Change[]>` |
 
 

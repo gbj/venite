@@ -1,6 +1,6 @@
 {
   "name": "@venite/components",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Rendering components for the Venite.app Liturgical Document Format (LDF)",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -36,7 +36,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@types/jest": "^25.2.1"
+    "@types/jest": "^25.2.1",
+    "@venite/ldf": "0.0.5"
   },
   "repository": {
     "type": "git",
