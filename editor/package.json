@@ -1,0 +1,39 @@
+{
+  "name": "@venite/editor",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/editor/editor.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.12.2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@venite/components": "0.0.5",
+    "@venite/ldf": "0.0.5",
+    "jot": "git+https://github.com/joshdata/jot.git",
+    "json-pointer": "^0.6.0",
+    "rxjs": "^6.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gbj/venite"
+  }
+}

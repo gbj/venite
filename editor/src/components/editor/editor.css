@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+:host textarea {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  border: 1px solid grey;
+
+  outline: none;
+
+  background: transparent;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+
+  font-family: inherit;
+}
