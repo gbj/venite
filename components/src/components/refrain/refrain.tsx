@@ -47,7 +47,7 @@ export class RefrainComponent {
   // Render
   render() {
     return (
-      <Host>
+      <Host lang={this.obj.language}>
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>

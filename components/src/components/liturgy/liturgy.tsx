@@ -46,7 +46,7 @@ export class LiturgyComponent {
   // Render
   render() {
     return (
-      <Host>
+      <Host lang={this.obj.language}>
         {this.obj.value.map((doc, docIndex) =>
           <ldf-liturgical-document doc={doc} path={`${this.path || ''}/value/${docIndex}`} editable={this.editable}></ldf-liturgical-document>
         )}

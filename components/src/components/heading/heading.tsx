@@ -105,7 +105,7 @@ export class HeadingComponent {
           hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined;
 
     return (
-      <Host>
+      <Host lang={this.obj.language}>
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>

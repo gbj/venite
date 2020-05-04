@@ -86,6 +86,6 @@ export class LiturgicalDocumentComponent {
 
   // Render
   render() {
-    return <Host>{this.chooseComponent(this.obj)}</Host>;
+    return <Host lang={this.obj.language}>{this.chooseComponent(this.obj)}</Host>;
   }
 }

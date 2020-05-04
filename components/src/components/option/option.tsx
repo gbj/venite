@@ -126,7 +126,7 @@ export class OptionComponent {
   // Render
   render() {
     return (
-      <Host>
+      <Host lang={this.obj.language}>
         <ldf-label-bar>
           {/* Can be overwritten by apps that use Ionic or other frameworks */}
           <slot slot='end' name='controls'>{this.selectNode()}</slot>

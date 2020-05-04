@@ -101,7 +101,7 @@ export class ResponsivePrayerComponent {
        */
 
       return (
-        <Host class={this.obj.style}>
+        <Host class={this.obj.style} lang={this.obj.language}>
           <ldf-label-bar>
             <slot slot='end' name='controls'></slot>
           </ldf-label-bar>
@@ -132,7 +132,7 @@ export class ResponsivePrayerComponent {
        *    We entreat you, O Lord.
        */
       return (
-        <Host>
+        <Host class={this.obj.style} lang={this.obj.language}>
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
@@ -185,7 +185,7 @@ export class ResponsivePrayerComponent {
        *    Let us pray.
        */
       return (
-        <Host>
+        <Host class={this.obj.style} lang={this.obj.language}>
           <ldf-label-bar>
             <slot slot='end' name='controls'></slot>
           </ldf-label-bar>

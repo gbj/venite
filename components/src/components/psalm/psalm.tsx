@@ -104,7 +104,7 @@ export class PsalmComponent {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
 
     return (
-      <Host>
+      <Host lang={this.obj.language}>
         {/* Slot for controls*/}
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>

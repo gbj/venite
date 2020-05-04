@@ -78,7 +78,7 @@ export class TextComponent {
 
     if(this.editable) {
       return (
-        <Host>
+        <Host lang={this.obj.language}>
           <ldf-label-bar>
             <slot slot='end' name='controls'></slot>
           </ldf-label-bar>
@@ -105,7 +105,7 @@ export class TextComponent {
       );
     } else {
       return (
-        <Host>
+        <Host lang={this.obj.language}>
           <ldf-label-bar>
             <slot slot='end' name='controls'></slot>
           </ldf-label-bar>
