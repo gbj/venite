@@ -39,5 +39,7 @@
     "test": "tests"
   },
   "dependencies": {},
-  "files": ["dist/**/*"]
+  "files": [
+    "dist/**/*"
+  ]
 }
