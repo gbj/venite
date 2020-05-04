@@ -40,6 +40,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gbj/venite"
-  }
+    "url": "git+https://github.com/gbj/venite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbj/venite/issues"
+  },
+  "homepage": "https://github.com/gbj/venite#readme",
+  "author": "Greg Johnston <greg@venite.app>"
 }
