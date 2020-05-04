@@ -1,6 +1,6 @@
 import { LiturgicalDay } from './calendar/liturgical-day';
 import { ResponsivePrayerLine } from './responsive-prayer';
-import { BibleReadingVerse } from './bible-reading/bible-reading';
+import { BibleReadingVerse } from './bible-reading/bible-reading-verse';
 import { Citation } from './citation/citation';
 import { PsalmVerse } from './psalm';
 import { Heading } from './heading';

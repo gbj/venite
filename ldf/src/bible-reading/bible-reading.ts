@@ -1,4 +1,5 @@
 import { LiturgicalDocument } from '..';
+import { BibleReadingVerse } from './bible-reading-verse';
 import { BIBLE_BOOK_ABBREVIATIONS } from './bible-book-abbreviations';
 import { BIBLE_BOOK_NAMES } from './bible-book-names.i18n';
 
@@ -102,11 +103,4 @@ export class BibleReading extends LiturgicalDocument {
   constructor(data: Partial<BibleReading> = {}) {
     super(data);
   }
-}
-
-export class BibleReadingVerse {
-  book?: string;
-  chapter?: string;
-  verse?: string;
-  text: string;
 }
