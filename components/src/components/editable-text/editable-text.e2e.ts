@@ -3,7 +3,7 @@ import { EditableTextComponent } from './editable-text';
 
 import { handleInput } from './handle-input';
 import { Cursor } from './cursor';
-import { TextEdit } from './text-edit';
+import { Change } from './text-edit';
 
 describe('ldf-editable-text', () => {
   it('should render initial text', async () => {
@@ -29,7 +29,7 @@ describe('ldf-editable-text', () => {
     let value = await textarea.getProperty('value');
     expect(value).toBe('');
 
-    const textEdited = await page.spyOnEvent('textEdited');
+    const docChanged = await page.spyOnEvent('docChanged');
 
     await textarea.press('T');
     await page.keyboard.down('Shift');
@@ -43,7 +43,7 @@ describe('ldf-editable-text', () => {
 
     await page.waitForChanges();
 
-    expect(textEdited).toHaveReceivedEventDetail([{
+    expect(docChanged).toHaveReceivedEventDetail([{
       op: 'insert',
       pos: 0,
       length: 0,
@@ -74,7 +74,7 @@ describe('ldf-editable-text', () => {
     let value2 = await textarea.getProperty('value');
     expect(value2).toBe('This is');
 
-    const textEdited = await page.spyOnEvent('textEdited');
+    const docChanged = await page.spyOnEvent('docChanged');
 
     await textarea.press('Backspace');
     await textarea.press('Backspace');
@@ -85,7 +85,7 @@ describe('ldf-editable-text', () => {
     let value3 = await textarea.getProperty('value');
     expect(value3).toBe('Thi')
 
-    expect(textEdited).toHaveReceivedEventDetail([{
+    expect(docChanged).toHaveReceivedEventDetail([{
       op: 'delete',
       pos: 6,
       length: 1,

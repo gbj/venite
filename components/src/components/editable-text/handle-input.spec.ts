@@ -1,6 +1,6 @@
 import { handleInput } from './handle-input';
 import { Cursor } from './cursor';
-import { TextEdit } from './text-edit';
+import { Change } from './text-edit';
 import * as jot from 'jot';
 
 it('insertText: should generate events to JOT-apply an insert to blank string', async () => {
@@ -9,7 +9,7 @@ it('insertText: should generate events to JOT-apply an insert to blank string', 
   };
 
   const cursor = new Cursor(undefined, 0, 0);
-  const event : TextEdit = handleInput('insertText', 'TEST', undefined, cursor);
+  const event : Change = handleInput('insertText', 'TEST', undefined, cursor);
 
   const jots = new jot.APPLY('value',
     new jot.SPLICE(event.pos, event.length, event.value)
@@ -27,7 +27,7 @@ it('insertText: should generate events to JOT-apply an insert to any string', as
   };
 
   const cursor = new Cursor(undefined, 8, 0);
-  const event : TextEdit = handleInput('insertText', ' my God', undefined, cursor);
+  const event : Change = handleInput('insertText', ' my God', undefined, cursor);
 
   const jots = new jot.APPLY('value',
     new jot.SPLICE(event.pos, event.length, event.value)
@@ -45,7 +45,7 @@ it('insertFromPaste: should generate events to JOT-apply an insert to any string
   };
 
   const cursor = new Cursor(undefined, 8, 0);
-  const event : TextEdit = handleInput('insertFromPaste', ' my God', undefined, cursor);
+  const event : Change = handleInput('insertFromPaste', ' my God', undefined, cursor);
 
   const jots = new jot.APPLY('value',
     new jot.SPLICE(event.pos, event.length, event.value)
@@ -63,7 +63,7 @@ it('insertLineBreak: should generate events to JOT-apply an insert to any string
   };
 
   const cursor = new Cursor(undefined, 9, 0);
-  const event : TextEdit = handleInput('insertLineBreak', null, undefined, cursor);
+  const event : Change = handleInput('insertLineBreak', null, undefined, cursor);
 
   const jots = new jot.APPLY('value',
     new jot.SPLICE(event.pos, event.length, event.value)
@@ -81,7 +81,7 @@ it('deleteContentBackward', async () => {
   };
 
   const cursor = new Cursor(undefined, 23, 23);
-  const events : TextEdit[] = [handleInput('deleteContentBackward', null, undefined, cursor)];
+  const events : Change[] = [handleInput('deleteContentBackward', null, undefined, cursor)];
   cursor.start--;
   cursor.end--;
   events.push(handleInput('deleteContentBackward', null, undefined, cursor));
@@ -118,7 +118,7 @@ it('deleteContentForward', async () => {
   };
 
   const cursor = new Cursor(undefined, 0, 0);
-  const events : TextEdit[] = [handleInput('deleteContentForward', null, undefined, cursor)];
+  const events : Change[] = [handleInput('deleteContentForward', null, undefined, cursor)];
   events.push(handleInput('deleteContentForward', null, undefined, cursor));
   events.push(handleInput('deleteContentForward', null, undefined, cursor));
 
@@ -160,10 +160,10 @@ it('test whole-text substitution for e.g., insertFromDrop', async () => {
 
   const cursor = new Cursor(undefined, 0, 0);
 
-  const event : TextEdit = handleInput('historyUndo', null, 'The Lord is good to ', cursor);
+  const event : Change = handleInput('historyUndo', null, 'The Lord is good to ', cursor);
 
   expect(event).toEqual(
-    new TextEdit('set', null, null, 'The Lord is good to ')
+    new Change('set', null, null, 'The Lord is good to ')
   );
 
   const jots = new jot.APPLY('value',

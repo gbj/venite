@@ -1,4 +1,4 @@
-export class TextEdit {
+export class Change {
   op: 'insert' | 'delete' | 'set';
   pos: number;
   length: number;

@@ -2,7 +2,7 @@ import { Component, Element, Prop, Listen, Event, EventEmitter, Method, Host, h 
 import Debounce from 'debounce-decorator';
 
 import { Cursor } from './cursor';
-import { TextEdit } from './text-edit';
+import { Change } from './change';
 import { handleInput } from './handle-input';
 
 @Component({
@@ -14,7 +14,7 @@ export class EditableTextComponent {
   @Element() el: HTMLElement;
   private textarea : HTMLTextAreaElement;
   private cursor : Cursor;
-  private edits : TextEdit[] = new Array();
+  private edits : Change[] = new Array();
 
   // Properties
   /**
@@ -40,8 +40,8 @@ export class EditableTextComponent {
   }
 
   // Events
-  @Event() cursorMoved : EventEmitter<Cursor>;
-  @Event() textEdited : EventEmitter<TextEdit[]>;
+  @Event({ bubbles: true }) cursorMoved : EventEmitter<Cursor>;
+  @Event({ bubbles: true }) docChanged : EventEmitter<Change[]>;
 
   // Listeners
   @Listen('input')
@@ -49,10 +49,9 @@ export class EditableTextComponent {
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
 
-    // second, determine the appropriate TextEdit event to be sent, depending
+    // second, determine the appropriate Change event to be sent, depending
     // on the input type
-    console.log(ev);
-    let edit : TextEdit = handleInput(ev.inputType, ev.data, this.cursor.element.value, this.cursor);
+    let edit : Change = handleInput(ev.inputType, ev.data, this.cursor.element.value, this.cursor);
 
     // push this particular edit onto the stack
     this.edits.push(edit);
@@ -105,12 +104,12 @@ export class EditableTextComponent {
   }
 
   /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
-   *  and emits it as a `textEdited` event  */
+   *  and emits it as a `docChanged` event  */
   @Debounce(200)
   @Method()
-  async processEdits() : Promise<TextEdit[]> {
-    const consolidatedEdits : TextEdit[] = new Array();
-    let consolidated : TextEdit;
+  async processEdits() : Promise<Change[]> {
+    const consolidatedEdits : Change[] = new Array();
+    let consolidated : Change;
 
     const edits = this.edits;
     this.edits = new Array();
@@ -120,9 +119,9 @@ export class EditableTextComponent {
         const next = edits[index + 1];
 
         if(!consolidated) {
-          consolidated = new TextEdit(cur.op, cur.pos, cur.length, cur.value);
+          consolidated = new Change(cur.op, cur.pos, cur.length, cur.value);
         } else {
-          consolidated = new TextEdit(cur.op, consolidated.pos, consolidated.length + cur.length, `${consolidated.value}${cur.value}`);
+          consolidated = new Change(cur.op, consolidated.pos, consolidated.length + cur.length, `${consolidated.value}${cur.value}`);
         }
 
         if(!next) {
@@ -136,8 +135,7 @@ export class EditableTextComponent {
       }
     });
 
-    console.log('EMITTING THE FOLLOWING: ', consolidatedEdits);
-    this.textEdited.emit(consolidatedEdits);
+    this.docChanged.emit(consolidatedEdits);
     this.edits = new Array();
     return consolidatedEdits;
   }

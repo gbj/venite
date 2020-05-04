@@ -19,19 +19,19 @@
 | Event         | Description | Type                      |
 | ------------- | ----------- | ------------------------- |
 | `cursorMoved` |             | `CustomEvent<Cursor>`     |
-| `textEdited`  |             | `CustomEvent<TextEdit[]>` |
+| `docChanged`  |             | `CustomEvent<Change[]>` |
 
 
 ## Methods
 
-### `processEdits() => Promise<TextEdit[]>`
+### `processEdits() => Promise<Change[]>`
 
 Reduces the list of edits triggered by input events to as few contiguous edits as possible.
-and emits it as a `textEdited` event
+and emits it as a `docChanged` event
 
 #### Returns
 
-Type: `Promise<TextEdit[]>`
+Type: `Promise<Change[]>`
 
 
 
