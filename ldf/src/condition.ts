@@ -1,4 +1,4 @@
-import { LiturgicalDay, Liturgy, ClientPreferences } from '.';
+import { LiturgicalDay, ClientPreferences } from '.';
 
 export class Condition {
   // `only` is only an array of values, any of which makes the condition true

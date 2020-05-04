@@ -1,7 +1,7 @@
 import { LiturgicalDay } from './calendar/liturgical-day';
 import { ResponsivePrayerLine } from './responsive-prayer';
 import { BibleReadingVerse } from './bible-reading/bible-reading';
-import { Citation } from './citation';
+import { Citation } from './citation/citation';
 import { PsalmVerse } from './psalm';
 import { Heading } from './heading';
 import { Sharing } from './sharing/sharing';

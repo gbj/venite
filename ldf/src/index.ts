@@ -1,4 +1,5 @@
 export * from './liturgical-document';
+export * from './category';
 export * from './condition';
 export * from './refrain';
 export * from './liturgy/liturgy';
@@ -19,4 +20,5 @@ export * from './psalm';
 export * from './refrain';
 export * from './responsive-prayer';
 export * from './rubric';
+export * from './sharing/sharing';
 export * from './text';

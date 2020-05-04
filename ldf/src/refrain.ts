@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from './liturgical-document';
+import { LiturgicalDocument } from '.';
 
 /** Refrain represents a short text like the Gloria Patri, Hail Mary, or an Antiphon */
 export class Refrain extends LiturgicalDocument {
