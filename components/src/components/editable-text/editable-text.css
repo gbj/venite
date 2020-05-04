@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  font-family: var(--ldf-font-face);
+}
+
+:host textarea {
+  display: block;
+
+  /* Wrapping ldf-editable in a span with appropriate class
+   * (e.g., `response`) will mean it appears properly */
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-variant: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+
+  height: 1.75em;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1.75em;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+
+  margin-top: calc(var(--ldf-string-border-width)+var(--ldf-string-border-radius));
+  margin-bottom: var(--ldf-string-border-bottom-width);
+  padding-left: calc(var(--ldf-string-border-width) + 4px);
+  padding-right: calc(var(--ldf-string-border-width) + 4px);
+}
+
+/*:host textarea:focus {
+  border-top-left-radius: var(--ldf-string-border-radius);
+  border-top-right-radius: var(--ldf-string-border-radius);
+  border: var(--ldf-string-focus-border);
+  border-bottom: var(--ldf-string-focus-border-bottom);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}*/

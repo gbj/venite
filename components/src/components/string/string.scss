@@ -1,0 +1,31 @@
+:host {
+  font-family: var(--ldf-font-face);
+  font-weight: inherit;
+  font-style: inherit;
+  white-space: pre-wrap;
+}
+
+.tetragrammaton {
+  font-variant: small-caps;
+}
+
+.drop {
+  font-size: 200%;
+}
+
+.firstword {
+  font-variant: var(--ldf-drop-firstword-font-variant);
+}
+
+.drop {
+  float: left;
+  font-family: var(--ldf-drop-font-family);
+  font-size: var(--ldf-drop-font-size);
+  margin-right: var(--ldf-drop-margin-right);
+  line-height: var(--ldf-drop-line-height);
+}
+
+:host[dir='rtl'] .drop {
+  float: right;
+  font-family: 'Times New Roman';
+}

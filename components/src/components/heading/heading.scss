@@ -1,0 +1,19 @@
+:host {
+  font-family: var(--ldf-font-face);
+
+  h1 {
+    text-align: var(--ldf-title-text-align);
+    font-weight: var(--ldf-title-font-weight);
+    font-style: var(--ldf-title-font-style);
+    font-variant: var(--ldf-title-font-variant);
+    font-size: var(--ldf-title-font-size);
+  }
+
+  h2 {
+    text-align: var(--ldf-title-text-align);
+    font-weight: var(--ldf-subtitle-font-weight);
+    font-style: var(--ldf-subtitle-font-style);
+    font-variant: var(--ldf-subtitle-font-variant);
+    font-size: var(--ldf-subtitle-font-size);
+  }
+}

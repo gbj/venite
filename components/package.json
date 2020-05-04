@@ -1,0 +1,45 @@
+{
+  "name": "@venite/components",
+  "version": "0.0.1",
+  "description": "Rendering components for the Venite.app Liturgical Document Format (LDF)",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ldf-components/ldf-components.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test.spec": "stencil test --spec --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.12.7",
+    "@stencil/sass": "^1.3.1",
+    "@types/node": "^13.13.0",
+    "@types/puppeteer": "2.0.1",
+    "debounce-decorator": "^1.0.6",
+    "jest": "24.9.0",
+    "jest-cli": "24.9.0",
+    "jot": "git+https://github.com/joshdata/jot.git",
+    "json-pointer": "^0.6.0",
+    "puppeteer": "2.1.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "^25.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gbj/venite"
+  }
+}

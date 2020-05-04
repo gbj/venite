@@ -1,0 +1,28 @@
+.response {
+  font-weight: var(--ldf-response-font-weight);
+  font-style: var(--ldf-response-font-style);
+}
+
+.preces td:first-child {
+  font-style: italic;
+  text-align: left;
+  padding-right: 1em;
+  vertical-align: top;
+}
+
+.optional {
+  padding-left: 0.5em;
+  border-left: 2px solid black;
+}
+
+.rubric {
+  font-family: var(--ldf-font-face);
+  color: var(--ldf-rubric-color);
+  font-style: var(--ldf-rubric-font-style);
+  font-weight: var(--ldf-rubric-font-weight);
+  font-size: var(--ldf-rubric-font-size);
+}
+
+.litany {
+  white-space: pre-wrap;
+}

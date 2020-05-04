@@ -1,0 +1,32 @@
+:host {
+  font-family: var(--ldf-font-face);
+  white-space: pre-wrap;
+}
+
+:host[lang="he"] {
+  text-align: right;
+  direction: rtl;
+  font-size: 1.5em;
+  font-family: "Times New Roman" !important;
+
+    .drop {
+      float: right !important;
+      font-family: "Times New Roman" !important;
+    }
+}
+
+sup {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.citation {
+  font-size: 80%;
+  font-style: italic;
+  margin-left: 1em;
+}
+
+.response {
+  font-weight: var(--ldf-response-font-weight);
+  font-style: var(--ldf-response-font-style);
+}

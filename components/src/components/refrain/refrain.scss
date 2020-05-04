@@ -1,0 +1,34 @@
+:host {
+  font-family: var(--ldf-font-face);
+  display: block;
+
+  p {
+    font-style: inherit;
+    margin-bottom: 0;
+    margin: 0;
+  }
+}
+
+.antiphon {
+  font-style: var(--ldf-antiphon-font-style);
+}
+
+.gloria {
+  margin-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+@media (min-width: 767px) {
+  .gloria {
+    margin-left: 1em;
+    text-indent: -1em;
+
+    > p:first-child {
+      margin-left: 0em;
+    }
+
+    > p:nth-child(even) {
+      margin-left: 1em;
+    }
+  }
+}

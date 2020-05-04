@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Venite.app — Liturgy Document Format (LDF) Playground</title>
+
+  <!-- Drop in these four lines to run anywhere -->
+  <link rel="stylesheet" href="/build/ldf.css">
+  <script type="module" src="/build/ldf.esm.js"></script>
+  <script nomodule src="/build/ldf.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
+  <style>
+  #example, #editable {
+    display: table-cell;
+    padding: 2em;
+    vertical-align: top;
+    width: 50vw;
+  }
+  #example {
+    border-right: 1px dotted grey;
+  }
+  </style>
+  <style>
+  .venite-button {
+    display: flex;
+    justify-content: center;
+  }
+  .venite-button a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-family: 'EB Garamond', 'Garamond', serif;
+  }
+  .venite-button img {
+    max-width: 20px;
+    height: auto;
+    vertical-align: middle;
+  }
+  .venite-button span {
+    vertical-align: middle;
+  }
+  </style>
+</head>
+<body>
+  <div id="example">
+    <div class='venite-button'><a href='https://www.venite.app' target='_system'><img src='https://www.venite.app/assets/icon/apple-touch-icon.png'><span>Powered by Venite.app</span></a></div>
+  </div>
+  <div id="editable"></div>
+  <script>
+  const LITURGY = {
+    type: 'liturgy',
+    metadata: {
+      preferences: {}
+    },
+    value: [
+      {type: "heading", metadata: {level: 1 }, label: "Compline"},
+      {type: "heading", metadata: {level: 2 }, label: "Wednesday after the Third Sunday of Easter"},
+      {type: "heading", citation: { source: 'BCP', citation: 'p. 127' }},
+      {type: "text", metadata: { response: "Amen." }, value: ["The Lord Almighty grant us a peaceful night and a perfect end."]},
+      {type: "responsive", style: "preces", value: [
+        { label: "Officiant", text: "Our help is in the Name of the Lord." },
+        { label: "People", text: "The maker of heaven and earth."}
+      ]},
+      {type: "text", value: ["Let us confess our sins to God."] },
+      {type: "text", style: "prayer", value: [`Almighty God, our heavenly Father:\nWe have sinned against you,
+through our own fault,
+in thought, and word, and deed,
+and in what we have left undone.
+For the sake of your Son our Lord Jesus Christ,
+forgive us all our offenses;
+and grant that we may serve you
+in newness of life,
+to the glory of your Name.`]},
+      {type: "text", style: "prayer", value: ['May the Almighty God grant us forgiveness of all our sins, and the grace and comfort of the Holy Spirit.']},
+      {type: "responsive", style: "preces", value: [
+        { label: "Officiant", text: "O God, make speed to save us." },
+        { label: "People", text: "O Lord, make haste to help us."}
+      ]},
+      {type: "refrain", style: "gloria", value: [`Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:`,`as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen.`]},
+      {type: "text", value: ['Alleluia.']},
+      {type: "option", metadata: { selected: 0 }, value: [
+        {type: "text", style: "prayer", label: "The Lord’s Prayer", version_label: "Traditional", value: [`Our Father, who art in heaven,
+	hallowed be thy Name,
+	thy kingdom come,
+	thy will be done,
+	on earth as it is in heaven.
+Give us this day our daily bread.
+And forgive us our trespasses,
+	as we forgive those
+	who trespass against us.
+And lead us not into temptation,
+	but deliver us from evil.`]},
+  {type: "text", style: "prayer", label: "The Lord’s Prayer", version_label: "Contemporary", value: [`Our Father in heaven,
+	hallowed be your Name,
+	your kingdom come,
+	your will be done,
+	on earth as in heaven.
+Give us today our daily bread.
+Forgive us our sins,
+	as we forgive those
+	who sin against us.
+Save us from the time of trial,
+	and deliver us from evil.`]}
+      ]},
+      {
+        slug: 'psalm_80',
+        label: 'Psalm 80',
+        language: 'en',
+        version: 'bcp1979',
+        type: 'psalm',
+        style: 'psalm',
+        citation: 'BCP p. 897',
+        metadata: {
+          latinname: 'Qui regis Israel'
+        },
+        value: [
+          [
+            {
+              number: '1',
+              verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+              halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+            },
+            {
+              number: '2',
+              verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+              halfverse: 'stir up your strength and come to help us.'
+            },
+            {
+              number: '3',
+              verse: 'Restore us, O God of hosts; *',
+              halfverse: 'show the light of your countenance, and we shall be saved.'
+            }
+          ]
+        ]
+      },
+      {type: "bible-reading", style: "long", citation: "John 1:1-6", label: "The Gospel", metadata: { intro: {type: 'responsive', style: 'responsive', value: [{text: 'The Holy Gospel of Our Lord Jesus Christ, according to ${shortName}.', response: 'Glory to you, Lord Christ.'}]}}},
+//      {type: "bible-reading", style: "long", citation: "John 1:1-6", label: "The First Reading", metadata: { intro: {type: 'text', value: ['A Reading from ${longName}.']}}},
+//      {type: "bible-reading", style: "short", citation: "John 1:1-6"}
+    ],
+  };
+  let node = document.createElement('ldf-liturgy');
+  node.setAttribute('path', '');
+  node.setAttribute('doc', JSON.stringify(LITURGY));
+  document.getElementById('example').append(node);
+
+  let editNode = document.createElement('ldf-liturgy');
+  node.setAttribute('path', '');
+  editNode.setAttribute('doc', JSON.stringify(LITURGY));
+  editNode.setAttribute('editable', true);
+  document.getElementById('editable').append(editNode);
+  //document.getElementById('example').innerHTML = `<ldf-liturgy json="${JSON.stringify(LITURGY)}" path="/"></ldf-liturgy>`
+  </script>
+
+  <!--<h1>LDF Component Examples</h1>
+  <h2>ldf-label</h2>
+  <ldf-label json='{"type": "label", "level": 1, "label": "Morning Prayer"}'></ldf-label>
+  <ldf-label json='{"type": "label", "level": 2, "label": "Wednesday after the Third Sunday of Easter"}'></ldf-label>
+  <h2>ldf-psalm</h2>
+  <div class='dropcaps-plain psalmverses-true'>
+  <ldf-psalm json='{"type": "psalm", "style": "psalm", "metadata": { "number": "80", "antiphon": "The Lord is full of compassion and mercy; O come, let us adore him.", "gloria": "Glory to the Father, and to the Son, and to the Holy Spirit; "}, "citation": "Psalm 80", "value": [[{"number": "1", "verse": "Hear, O Shepherd of Israel, leading Joseph like a flock; * ", "halfverse": "shine forth, you that are enthroned upon the cherubim."}, {"number": "2", "verse": "In the presence of Ephraim, Benjamin, and Manasseh, *", "halfverse": "stir up your strength and come to help us."}, {"number": "3", "verse": "Restore us, O God of hosts; *", "halfverse": "show the light of your countenance, and we shall be saved."}]]}'></ldf-psalm>
+  <ldf-psalm json='{"type": "psalm", "style": "psalm", "metadata": { "number": "80"}, "citation": "Psalm 80:2", "value": [[{"number": "1", "verse": "Hear, O Shepherd of Israel, leading Joseph like a flock; * ", "halfverse": "shine forth, you that are enthroned upon the cherubim."}, {"number": "2", "verse": "In the presence of Ephraim, Benjamin, and Manasseh, *", "halfverse": "stir up your strength and come to help us."}, {"number": "3", "verse": "Restore us, O God of hosts; *", "halfverse": "show the light of your countenance, and we shall be saved."}]]}'></ldf-psalm>
+  </div>
+  <h3>editable</h3>
+  <ldf-psalm editable='true' json='{"type": "psalm", "style": "psalm", "metadata": { "number": "80"}, "citation": "Psalm 80", "value": [[{"number": "1", "verse": "Hear, O Shepherd of Israel, leading Joseph like a flock; * ", "halfverse": "shine forth, you that are enthroned upon the cherubim."}, {"number": "2", "verse": "In the presence of Ephraim, Benjamin, and Manasseh, *", "halfverse": "stir up your strength and come to help us."}, {"number": "3", "verse": "Restore us, O God of hosts; *", "halfverse": "show the light of your countenance, and we shall be saved."}]]}'></ldf-psalm>
+
+  <h2>ldf-bible-reading</h2>
+  <ldf-bible-reading json='{"style": "short", "citation": "Jambo 3:24", "metadata": { "response": "Amen." }, "version": "ESV"}'></ldf-bible-reading>
+  <ldf-bible-reading json='{"style": "short", "citation": "John 3:16", "metadata": { "response": "Amen." }, "version": "ESV"}'></ldf-bible-reading>
+  <ldf-bible-reading json='{"style": "short", "citation": "John 3:16", "metadata": { "response": "Amen." }, "version": "ESV", "value": [{"text": "For God so loved the world..."}]}'></ldf-bible-reading>
+
+  <h2>ldf-responsive-prayer</h2>
+  <ldf-responsive-prayer json='{"style": "preces", "value": [{"label": "℣", "text": "O Lord, open thou our lips."}, {"label": "℟", "text": "And our mouth shall show forth thy praise."}]}'>
+  </ldf-responsive-prayer>
+  <ldf-responsive-prayer json='{"style": "litany", "metadata": { "response": "We entreat you, O Lord." }, "value": [{"text": "That this evening may be holy, good, and peaceful,"}, {"text": "That your holy angels may lead us in paths of peace and goodwill,"}]}'>
+  </ldf-responsive-prayer>
+  <ldf-responsive-prayer json='{"style": "responsive", "value": [{"text": "The Lord be with you.", "response": "And also with you." }, {"text": "Let us pray."}]}'>
+  </ldf-responsive-prayer>
+  <ldf-responsive-prayer json='{"style": "litany", "metadata": { "response": "[Silence]" }, "value": [{"text": "That this evening may be holy, good, and peaceful,"}, {"text": "That your holy angels may lead us in paths of peace and goodwill,"}]}'>
+  </ldf-responsive-prayer>
+  <h3>editable</h3>
+  <ldf-responsive-prayer editable='true' json='{"style": "preces", "value": [{"label": "℣", "text": "O Lord, open thou our lips."}, {"label": "℟", "text": "And our mouth shall show forth thy praise."}]}'>
+  </ldf-responsive-prayer>
+  <ldf-responsive-prayer editable='true' json='{"style": "litany", "metadata": { "response": "We entreat you, O Lord." }, "value": [{"text": "That this evening may be holy, good, and peaceful,"}, {"text": "That your holy angels may lead us in paths of peace and goodwill,"}]}'>
+  </ldf-responsive-prayer>
+  <ldf-responsive-prayer editable='true' json='{"style": "responsive", "value": [{"text": "The Lord be with you.", "metadata": { "response": "And also with you." }}, {"text": "Let us pray."}]}'>
+  </ldf-responsive-prayer>
+  <h2>ldf-rubric</h2>
+  <ldf-rubric json='{"value": ["The Officiant begins the service with one or more of these sentences of Scripture."]}'>
+  </ldf-rubric>
+  <h3>editable</h3>
+  <ldf-rubric editable='true' path='/' json='{"value": ["The Officiant begins the service with one or more of these sentences of Scripture."]}'>
+  </ldf-rubric>
+  <h2>ldf-refrain</h2>
+  <ldf-refrain json='{"value": ["Hail&nbsp;Mary&nbsp;full&nbsp;of&nbsp;grace, the&nbsp;Lord&nbsp;is&nbsp;with&nbsp;you;"]}'>
+  </ldf-refrain>
+  <ldf-refrain json='{"value": ["Our King and Savior now draws near: O come, let us adore him."], "display": "italic"}' >
+  </ldf-refrain>
+  <h3>editable</h3>
+  <ldf-refrain editable='true' path='/' json='{"value": ["Hail&nbsp;Mary&nbsp;full&nbsp;of&nbsp;grace, the&nbsp;Lord&nbsp;is&nbsp;with&nbsp;you;"]}'>
+  </ldf-refrain>
+  <ldf-refrain editable='true' path='/' json='{"value": ["Our King and Savior now draws near: O come, let us adore him."], "display": "italic"}' >
+  </ldf-refrain>
+  <h2>ldf-text</h2>
+  <ldf-text
+    json='{"value":["Keep watch, dear LORD, with those who work, or watch, or weep this night..."],"response":"Amen."}'
+  ></ldf-text>
+  <ldf-text
+    json='{"value":["Keep watch, dear LORD, with those who work, or watch, or weep this night..."],"style":"prayer"}'
+  ></ldf-text>
+  <h3>editable</h3>
+  <div lang="es">
+    <ldf-text
+      json='{"value":["O Dios, de quien proceden todos los deseos santos..."], "response":"Poobah."}'
+      editable='true'
+      path='/'
+    ></ldf-text>
+  </div>
+  <div lang="es">
+    <ldf-text
+      json='{"value":["O Dios, de quien proceden todos los deseos santos, todos los buenos consejos y obras justas, da a tus siervos la paz que el mundo no puede dar; a fin de que nuestros corazones se terminen a cumplir tus mandamientos, y de que, sieod nosostros por tí amparados contra el temor de nuestros enemigos, podamos vivir en reposo y tranquilidad: por los merecimientos de Jesu Cristo nuestro Salvador."]}'
+      editable='true'
+      path='/'
+    ></ldf-text>
+  </div>
+  <h2>ldf-string</h2>
+  <ldf-string
+    text='Lorem ipsum sit dolor amet.'
+    dropcap='force'
+  ></ldf-string><br/><br/>
+  <ldf-string
+    text='Lorem ipsum sit dolor amet.'
+    dropcap='enabled'
+  ></ldf-string><br/><br/>
+  <ldf-string
+    text='Enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna'
+    dropcap='enabled'
+  ></ldf-string><br/><br/>
+  <ldf-string
+    text='Enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna'
+    dropcap='enabled'
+    index=1
+  ></ldf-string><br/><br/>
+  <ldf-string
+    text='Enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna'
+    dropcap='disalbed'
+  ></ldf-string><br/><br/>
+
+  <h2>'Font' Property</h2>
+  <div class="font-gill-sans">
+    <ldf-text
+      json='{"value":["Keep watch, dear LORD, with those who work, or watch, or weep this night..."],"response":"Amen."}'
+    ></ldf-text>
+  </div>-->
+
+</body>
+</html>

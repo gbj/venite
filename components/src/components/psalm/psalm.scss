@@ -1,0 +1,46 @@
+.psalm-set {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Psalm grid display */
+.psalm {
+  display: var(--ldf-psalm-grid-display);
+  grid-template-columns: var(--ldf-psalm-grid-template-columns);
+  grid-template-rows: auto;
+  grid-template-areas: var(--ldf-psalm-grid-template-areas);
+  margin: 0;
+
+  sup {
+    display: var(--ldf-psalm-number-display);
+    grid-area: number;
+  }
+  .text {
+    grid-area: verse;
+  }
+  .halfverse {
+    margin-left: 1.5em;
+  }
+  .verse, .halfverse {
+    display: inline;
+  }
+}
+
+/* Antiphon display */
+.antiphon {
+  display: var(--ldf-psalm-antiphon-display);
+  font-style: var(--ldf-antiphon-font-style);
+  font-weight: var(--ldf-antiphon-font-weight);
+  margin-top: 0.5em;
+}
+
+.repeat-antiphon {
+  display: var(--ldf-psalm-repeat-antiphon-display);
+}
+
+h5 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  margin-right: 1em;
+}

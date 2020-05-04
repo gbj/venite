@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  slot {
+    display: block;
+  }
+
+  ::slotted[slot="end"] {
+    text-align: right;
+  }
+}
