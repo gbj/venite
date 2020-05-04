@@ -63,7 +63,7 @@ export class ResponsivePrayerComponent {
   stringNode(line : ResponsivePrayerLine, index : number, part : 'label' | 'text' | 'response') : JSX.Element {
     return (
       <ldf-string
-        citation={this.obj.label}
+        citation={{label: this.obj.label}}
         id={`${this.obj.uid}-${index}-${part}`}
         text={line[part]}>
       </ldf-string>
@@ -82,7 +82,7 @@ export class ResponsivePrayerComponent {
       return (
         <span class='response'>
           <ldf-string
-            citation={this.obj.label}
+            citation={{label: this.obj.label}}
             id={`${this.obj.uid}-${index}-response`}
             text={text}>
           </ldf-string>

@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Element, JSX, h } from '@stencil/core';
-import { SelectableCitation } from '../../../../ldf/src/citation';
+import { SelectableCitation } from '../../../../ldf/src';
 
 @Component({
   tag: 'ldf-string',
@@ -25,7 +25,7 @@ export class StringComponent {
   /**
    * Citation (used in Share and Favorite APIs)
    */
-  @Prop() citation : string | SelectableCitation;
+  @Prop() citation : SelectableCitation;
 
   /**
    * Enable, disable, or force dropcap on the first letter of the text.

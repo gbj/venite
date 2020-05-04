@@ -140,7 +140,7 @@ export class PsalmComponent {
                     placeholder='Lorem ipsum sit dolor amet, *'>
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
-                    citation={`Ps. ${this.obj.metadata && this.obj.metadata.number}` + verse.number && `:${verse.number}`}
+                    citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
                     dropcap={verseIndex == 0 ? 'force' : 'disabled'}
                     index={verseIndex}>
                   </ldf-string>}
@@ -160,7 +160,7 @@ export class PsalmComponent {
                     placeholder='consectetur adipiscing elit.'>
                   </ldf-editable-text> :
                   <ldf-string text={verse.halfverse}
-                    citation={`Ps. ${this.obj.metadata && this.obj.metadata.number}` + verse.number && `:${verse.number}`}
+                    citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
                     dropcap='disabled'>
                   </ldf-string>}
                 </div>

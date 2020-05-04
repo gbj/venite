@@ -1,6 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { Heading } from '../../../../ldf/src/heading';
-import { Citation } from '../../../../ldf/src/citation';
+import { Heading, Citation } from '../../../../ldf/src';
 
 @Component({
   tag: 'ldf-heading',

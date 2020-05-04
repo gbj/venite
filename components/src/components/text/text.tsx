@@ -119,7 +119,7 @@ export class TextComponent {
                   {prayer.map((chunk, chunkIndex) =>
                     <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                       <ldf-string text={chunk}
-                        citation={this.obj.label}
+                        citation={{label: this.obj.label}}
                         dropcap={this.obj.value[prayerIndex].length > 200 && chunkIndex == 0 ? 'force' : 'enabled'}
                         index={prayerIndex + chunkIndex}>
                       </ldf-string>

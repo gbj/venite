@@ -128,7 +128,7 @@ export class BibleReadingComponent {
             <p>
               {this.verses.map(verse =>
                 <ldf-string
-                  citation={this.obj.citation}
+                  citation={{book: verse.book, chapter: verse.chapter, verse: verse.verse}}
                   id={this.obj.uid}
                   text={verse.text}>
                 </ldf-string>
