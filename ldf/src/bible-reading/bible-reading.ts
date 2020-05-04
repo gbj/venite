@@ -7,37 +7,39 @@ export class BibleReading extends LiturgicalDocument {
   type: 'bible-reading';
   style: 'long' | 'short';
   citation: string;
-  metadata? : {
+  metadata?: {
     compiled_intro?: LiturgicalDocument;
     intro?: LiturgicalDocument;
     response?: string;
-  }
-  value : BibleReadingVerse[];
+  };
+  value: BibleReadingVerse[];
 
   /** Replaces ${bookName} or ${fullBookName} in LD passed as intro with appropriate value */
-  compileIntro() : void {
-    if(this.metadata && this.metadata.intro) {
+  compileIntro(): void {
+    if (this.metadata && this.metadata.intro) {
       const abbrev = this.abbrevFromCitation(),
-            bookCode = this.bookCodeFromAbbrev(abbrev),
-            longName = this.longNameFromBookCode(bookCode),
-            shortName = this.shortNameFromBookCode(bookCode);
+        bookCode = this.bookCodeFromAbbrev(abbrev),
+        longName = this.longNameFromBookCode(bookCode),
+        shortName = this.shortNameFromBookCode(bookCode);
 
-      const newValue : any[] = new Array();
+      const newValue: any[] = new Array();
 
-      this.metadata.intro.value.forEach((introValue : any) => {
+      this.metadata.intro.value.forEach((introValue: any) => {
         // Intro is presumably a Text or similar
-        if(typeof introValue == 'string') {
+        if (typeof introValue == 'string') {
           newValue.push(
             introValue
               .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
-              .replace(/\$\{shortName\}/g, shortName)
+              .replace(/\$\{shortName\}/g, shortName),
           );
         }
         // Intro is presumably a ResponsivePrayer or similar
-        else if(introValue.hasOwnProperty('text')) {
-          newValue.push({ ... introValue, text: introValue.text
-            .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
-            .replace(/\$\{shortName\}/g, shortName)
+        else if (introValue.hasOwnProperty('text')) {
+          newValue.push({
+            ...introValue,
+            text: introValue.text
+              .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
+              .replace(/\$\{shortName\}/g, shortName),
           });
         }
         // if it's neither of those, do nothing at all to it
@@ -46,50 +48,52 @@ export class BibleReading extends LiturgicalDocument {
         }
       });
 
-      this.metadata.compiled_intro = new LiturgicalDocument({ ... this.metadata.intro, value: newValue });
+      this.metadata.compiled_intro = new LiturgicalDocument({ ...this.metadata.intro, value: newValue });
     }
   }
 
   /** Generates an abbreviated book name from citation
-    * @example
-    * // returns 'Genesis'
-    * this.citation = 'Gen. 3:4'
-    * this.abbrevFromCitation() */
-  abbrevFromCitation() : string {
-    let citation : string;
+   * @example
+   * // returns 'Genesis'
+   * this.citation = 'Gen. 3:4'
+   * this.abbrevFromCitation() */
+  abbrevFromCitation(): string {
+    let citation: string;
     try {
       const matches = (this.citation || '').match(/([\w\d\s\.]+)\d+(:\d+)?/);
-      citation = matches && matches.length >=2 ? matches[1].trim() : '';
-    } catch(e) {
+      citation = matches && matches.length >= 2 ? matches[1].trim() : '';
+    } catch (e) {
       citation = this.citation;
     }
     return citation;
   }
 
   /** Given an abbreviated book name, returns the name of the book
-    * @example
-    * // returns 'Genesis'
-    * this.bookCodeFromAbbrev('Gen') */
-  bookCodeFromAbbrev(a : string) : string {
+   * @example
+   * // returns 'Genesis'
+   * this.bookCodeFromAbbrev('Gen') */
+  bookCodeFromAbbrev(a: string): string {
     const abbrev = a.replace(/\./g, ''),
-          searchResult = BIBLE_BOOK_ABBREVIATIONS.find(book => book.name == abbrev || book.aliases.includes(abbrev) || book.name.includes(abbrev));
+      searchResult = BIBLE_BOOK_ABBREVIATIONS.find(
+        (book) => book.name == abbrev || book.aliases.includes(abbrev) || book.name.includes(abbrev),
+      );
     return searchResult ? searchResult.name : a;
   }
 
   /** Given a book name, returns the full name in the language passed; if not found, returns book name given
-    * @example
-    * // returns 'The Book of Genesis'
-    * this.longNameFromBookCode('Genesis') */
-  longNameFromBookCode(bookName : string, lang : string = 'en') : string {
+   * @example
+   * // returns 'The Book of Genesis'
+   * this.longNameFromBookCode('Genesis') */
+  longNameFromBookCode(bookName: string, lang: string = 'en'): string {
     const searchResult = BIBLE_BOOK_NAMES[bookName][lang];
     return searchResult ? searchResult.long : bookName;
   }
 
   /** Given a book name, returns the short name in the language passed; if not found, returns book name given
-    * @example
-    * // returns 'Genesis'
-    * this.shortNameFromBookCode('Genesis') */
-  shortNameFromBookCode(bookName : string, lang : string = 'en') : string {
+   * @example
+   * // returns 'Genesis'
+   * this.shortNameFromBookCode('Genesis') */
+  shortNameFromBookCode(bookName: string, lang: string = 'en'): string {
     const searchResult = BIBLE_BOOK_NAMES[bookName][lang];
     return searchResult ? searchResult.short : bookName;
   }

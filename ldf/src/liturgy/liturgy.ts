@@ -7,7 +7,7 @@ export class Liturgy extends LiturgicalDocument {
 
   metadata: {
     /** `Preferences` instance that a liturgy can access while being compiled */
-    preferences : {
+    preferences: {
       [x: string]: Preference;
     };
 
@@ -16,14 +16,14 @@ export class Liturgy extends LiturgicalDocument {
      * // liturgyversions for `EOW` liturgy
      * `['eow', 'bcp1979']`
      */
-    liturgyversions? : string[];
+    liturgyversions?: string[];
 
     /** "Supplements" are not standalone liturgies and should not be listed in a menu of options to pray */
     supplement?: boolean;
 
     /** True if this is inherently an evening liturgy, like Evening Prayer or Compline */
     evening: boolean;
-  }
+  };
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */
   value: LiturgicalDocument[];

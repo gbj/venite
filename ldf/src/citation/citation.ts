@@ -11,7 +11,7 @@ export class Citation {
   citation: string;
 
   /** Provides a human-readable string form of the citation */
-  public toString(suppressSource : boolean = false) : string {
+  public toString(suppressSource: boolean = false): string {
     return suppressSource ? this.citation : `${this.source} ${this.citation}`;
   }
 

@@ -16,10 +16,10 @@ export class HolyDay {
   };
 
   /** Optional: Identifies the month/date of the feast
-  * @example
-  * // Feb. 2, The Presentation
-  * `'2/2'`
-  */
+   * @example
+   * // Feb. 2, The Presentation
+   * `'2/2'`
+   */
   mmdd?: string;
 
   /** Optional: Slug used to find readings in the API, if different from `slug` property */
@@ -29,7 +29,16 @@ export class HolyDay {
   name?: string;
 
   /** A machine-readable identifier for the liturgical season */
-  season: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime';
+  season:
+    | 'Advent'
+    | 'Christmas'
+    | 'Epiphany'
+    | 'Lent'
+    | 'HolyWeek'
+    | 'Easter'
+    | 'Pentecost'
+    | 'Saints'
+    | 'OrdinaryTime';
 
   /** Optional: Identifies whether it is the Eve of ___ */
   eve?: boolean;

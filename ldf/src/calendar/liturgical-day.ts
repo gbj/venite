@@ -8,7 +8,6 @@ import { HolyDay } from './holy-day';
  * like "Monday in Holy Week" or "The Eve of the Epiphany."
  */
 export class LiturgicalDay {
-
   /** Dates are always stored as YYYY-MM-DD. No time or timezone information is helpful.
    *  Date math can be done using a library like js-joda.
    * @example
@@ -42,7 +41,16 @@ export class LiturgicalDay {
   years: { [x: string]: any };
 
   /** A machine-readable identifier for the liturgical season */
-  season: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime';
+  season:
+    | 'Advent'
+    | 'Christmas'
+    | 'Epiphany'
+    | 'Lent'
+    | 'HolyWeek'
+    | 'Easter'
+    | 'Pentecost'
+    | 'Saints'
+    | 'OrdinaryTime';
 
   /**
    * An array of possible {@link HolyDay}s that fall at this moment. It’s up to the consumer
@@ -68,9 +76,9 @@ export class LiturgicalDay {
   propers?: string;
 
   /** Returns a native Date from the day's date string */
-  getDate() : Date {
+  getDate(): Date {
     const [y, m, d] = this.date.split('-'),
-          date = new Date();
+      date = new Date();
     date.setFullYear(parseInt(y));
     date.setMonth(parseInt(m) - 1); // months are 0-11, not 1-12
     date.setDate(parseInt(d));

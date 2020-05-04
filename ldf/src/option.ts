@@ -1,12 +1,12 @@
 import { LiturgicalDocument, BibleReading } from '.';
 
-const VERSIONS : { [x: string]: string } = {
-  'ip': 'IP',
-  'bcp1979': '1979',
-  'eow': 'EOW',
-  'coverdale': 'Coverdale',
-  'rite_i': 'Rite I'
-}
+const VERSIONS: { [x: string]: string } = {
+  ip: 'IP',
+  bcp1979: '1979',
+  eow: 'EOW',
+  coverdale: 'Coverdale',
+  rite_i: 'Rite I',
+};
 
 export class Option extends LiturgicalDocument {
   type: 'option';
@@ -23,94 +23,121 @@ export class Option extends LiturgicalDocument {
     super(data);
   }
 
-  uniqueVersions() : number {
-    return this.value.map(o => o.version)
-            .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], [] as string[])
-            .length;
+  uniqueVersions(): number {
+    return this.value
+      .map((o) => o.version)
+      .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
-  uniqueLabels() : number {
-    return this.value.map(o => o.label)
-            .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], [] as string[])
-            .length;
+  uniqueLabels(): number {
+    return this.value
+      .map((o) => o.label)
+      .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
-  uniqueCitations() : number {
-    return this.value.map(o => o.citation ? o.citation.toString() : '')
-            .filter(citation => !!citation)
-            .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], [] as string[])
-            .length;
+  uniqueCitations(): number {
+    return this.value
+      .map((o) => (o.citation ? o.citation.toString() : ''))
+      .filter((citation) => !!citation)
+      .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
   /** Gives an appropriate version label for the document given */
-  getVersionLabel(option : LiturgicalDocument, maxLength : number = 50) : string {
-    const uniqueVersions : number = this.uniqueVersions(),
-          uniqueLabels : number = this.uniqueLabels(),
-          uniqueCitations : number = this.uniqueCitations();
+  getVersionLabel(option: LiturgicalDocument, maxLength: number = 50): string {
+    const uniqueVersions: number = this.uniqueVersions(),
+      uniqueLabels: number = this.uniqueLabels(),
+      uniqueCitations: number = this.uniqueCitations();
 
-    let label : string;
+    let label: string;
 
     // Psalm 119 parts => Psalm 119: Aleph
-    if(option.type == 'psalm' && uniqueVersions == 1 && ((option.slug.match(/psalm_119_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+119/))))) {
+    if (
+      option.type == 'psalm' &&
+      uniqueVersions == 1 &&
+      (option.slug.match(/psalm_119_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+119/)))
+    ) {
       label = option.label;
     }
     // Other psalms: Psalm 121
-    else if(option.type == 'psalm' && uniqueVersions == 1 && (option.slug.match(/psalm_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+\d+/)))) {
+    else if (
+      option.type == 'psalm' &&
+      uniqueVersions == 1 &&
+      (option.slug.match(/psalm_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+\d+/)))
+    ) {
       label = option.citation ? option.citation.toString() : `Psalm ${option.metadata.number}`;
     }
     // Readings of many citations => include truncated text
-    else if(option.type == 'bible-reading' && uniqueCitations > 1 && option.citation && option.value && option.value.length > 0) {
-      const text : string = (option as BibleReading).value.map(v => v.text).join(' ');
+    else if (
+      option.type == 'bible-reading' &&
+      uniqueCitations > 1 &&
+      option.citation &&
+      option.value &&
+      option.value.length > 0
+    ) {
+      const text: string = (option as BibleReading).value.map((v) => v.text).join(' ');
 
-      if(uniqueVersions > 1) {
-        label = `${option.citation.toString()} (${option.version}) (“${text}”)`
+      if (uniqueVersions > 1) {
+        label = `${option.citation.toString()} (${option.version}) (“${text}”)`;
       } else {
-        label = `${option.citation.toString()} (“${text}”)`
+        label = `${option.citation.toString()} (“${text}”)`;
       }
     }
     // Readings with one version => John 1:1-4
-    else if(option.type == 'bible-reading' && option.citation && uniqueVersions == 1) {
+    else if (option.type == 'bible-reading' && option.citation && uniqueVersions == 1) {
       label = option.citation.toString();
     }
     // Readings with multiple versions => John 1:1-4
-    else if(option.type == 'bible-reading' && option.citation && uniqueVersions > 1) {
+    else if (option.type == 'bible-reading' && option.citation && uniqueVersions > 1) {
       label = `${option.citation.toString()} (${option.version})`;
     }
     // Canticles, if only one version
-    else if(uniqueVersions == 1 && option.type == 'psalm' && option.style == 'canticle' && option.metadata && option.metadata.localname) {
+    else if (
+      uniqueVersions == 1 &&
+      option.type == 'psalm' &&
+      option.style == 'canticle' &&
+      option.metadata &&
+      option.metadata.localname
+    ) {
       label = option.metadata.localname;
     }
     // Canticles and invitatories, if multiple options => Venite (EOW)
-    else if(uniqueVersions > 1 && option.metadata && option.metadata.hasOwnProperty('localname') && option.version) {
+    else if (uniqueVersions > 1 && option.metadata && option.metadata.hasOwnProperty('localname') && option.version) {
       label = `${option.metadata.localname} (${VERSIONS[option.version]})`;
     }
     // Version label other than BCP 1979 => EOW
-    else if(option.version_label && option.version_label !== 'bcp1979') {
+    else if (option.version_label && option.version_label !== 'bcp1979') {
       label = option.version_label;
     }
     // If multiple labels, then label => Trisagion, Gloria in Excelsis, Kyrie
-    else if(option.label && uniqueLabels > 1 && uniqueVersions == 1) {
+    else if (option.label && uniqueLabels > 1 && uniqueVersions == 1) {
       label = option.label;
     }
     // If multiple labels and version, then label (version) => Trisagion (BCP), Gloria in Excelsis (EOW)
-    else if(option.label && uniqueLabels > 1 && uniqueVersions > 1) {
+    else if (option.label && uniqueLabels > 1 && uniqueVersions > 1) {
       label = `${option.label} (${VERSIONS[option.version]})`;
     }
     // Local name but no version (or version is BCP) => 'The Song of Mary'
-    else if(option.metadata && option.metadata.hasOwnProperty('localname') && (!option.version_label || option.version_label == 'bcp1979')) {
+    else if (
+      option.metadata &&
+      option.metadata.hasOwnProperty('localname') &&
+      (!option.version_label || option.version_label == 'bcp1979')
+    ) {
       label = option.metadata.localname;
     }
     // Fall back to a version label
-    else if(uniqueVersions > 1 && option.version) {
+    else if (uniqueVersions > 1 && option.version) {
       label = VERSIONS[option.version];
     }
     // Fall back to a citation
-    else if(option.citation) {
+    else if (option.citation) {
       label = option.citation.toString();
     }
     // Fallback: stripped version of JSON of value
     else {
-      label = `“${JSON.stringify(option.value).replace(/[\[\]\{\}\"\'\:]/g, ' ').replace(/\\n/g, ' ').trim()}”`;
+      label = `“${JSON.stringify(option.value)
+        .replace(/[\[\]\{\}\"\'\:]/g, ' ')
+        .replace(/\\n/g, ' ')
+        .trim()}”`;
     }
 
     label = label.length > maxLength ? label.substring(0, maxLength) + '...' : label;

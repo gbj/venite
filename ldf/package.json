@@ -7,7 +7,10 @@
   "scripts": {
     "test": "npx jest",
     "docs": "./node_modules/typedoc/bin/typedoc --out docs src",
-    "prepublish": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "author": "Greg Johnston <greg@venite.app>",
   "license": "MIT",
@@ -16,7 +19,10 @@
     "@types/jest": "^25.2.1",
     "babel-jest": "^25.4.0",
     "jest": "^25.4.0",
+    "prettier": "^2.0.5",
     "ts-jest": "^25.4.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   },
@@ -32,5 +38,6 @@
     "doc": "docs",
     "test": "tests"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": ["dist/**/*"]
 }

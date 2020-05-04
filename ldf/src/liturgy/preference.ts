@@ -17,8 +17,8 @@ export class Preference {
   options: PreferenceOption[];
 
   /** Given a `value` for the preference, returns the full option */
-  getPreferenceOption(value : string) : PreferenceOption | undefined {
-    return this.options.find(option => option.value == value);
+  getPreferenceOption(value: string): PreferenceOption | undefined {
+    return this.options.find((option) => option.value == value);
   }
 }
 
@@ -54,5 +54,5 @@ export class PreferenceOption {
      * // Rite I canticle table falls back to Rite II table when it doesn't add any options
      * { "value": "rite_i", "label": "Rite I", "metadata": { "fallback": "bcp1979" } }  */
     fallback?: string;
-  }
+  };
 }

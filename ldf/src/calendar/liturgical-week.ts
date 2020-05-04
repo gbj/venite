@@ -19,7 +19,16 @@ export class LiturgicalWeek {
   week: number;
 
   /** A machine-readable identifier for the liturgical season */
-  season: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime';
+  season:
+    | 'Advent'
+    | 'Christmas'
+    | 'Epiphany'
+    | 'Lent'
+    | 'HolyWeek'
+    | 'Easter'
+    | 'Pentecost'
+    | 'Saints'
+    | 'OrdinaryTime';
 
   /** A human-readable name for the week, in English */
   name: string;

@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
     "strictPropertyInitialization": false,
     "lib": ["dom", "es6", "es2017"],
     "declaration": true,
     "outDir": "dist"
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "tests", "docs"]
 }

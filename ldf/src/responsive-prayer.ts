@@ -4,10 +4,10 @@ import { LiturgicalDocument } from './liturgical-document';
 export class ResponsivePrayer extends LiturgicalDocument {
   type: 'responsive';
   style: 'preces' | 'litany' | 'responsive';
-  value : ResponsivePrayerLine[];
+  value: ResponsivePrayerLine[];
   metadata?: {
     response: string;
-  }
+  };
 
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<ResponsivePrayer> = {}) {

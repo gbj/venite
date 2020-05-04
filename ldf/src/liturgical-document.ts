@@ -87,28 +87,28 @@ export class LiturgicalDocument {
    * @example
    * { response: 'Thanks be to God.' }
    */
-  metadata? : any;
+  metadata?: any;
 
   /** Marks a document hidden, so it will not display but will not be deleted
-    * Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
-    * making it easier to restore or toggle on and off */
-  hidden : boolean = false;
+   * Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
+   * making it easier to restore or toggle on and off */
+  hidden: boolean = false;
 
   /** The content of the document. */
   value: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[];
 
   /** Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
-    * given the day and assigned preferences  */
-  include(day : LiturgicalDay, prefs : ClientPreferences = {}) : boolean {
-    if(this.condition !== undefined) {
-      const evaluatedConditions : boolean[] = this.condition.conditions.map(condition => {
-        if(!(condition instanceof Condition)) {
+   * given the day and assigned preferences  */
+  include(day: LiturgicalDay, prefs: ClientPreferences = {}): boolean {
+    if (this.condition !== undefined) {
+      const evaluatedConditions: boolean[] = this.condition.conditions.map((condition) => {
+        if (!(condition instanceof Condition)) {
           condition = new Condition(condition);
         }
         return condition.include(day || this.day, prefs);
       });
 
-      if(this.condition.mode == 'or') {
+      if (this.condition.mode == 'or') {
         return evaluatedConditions.reduce((a, b) => a || b);
       } else {
         return evaluatedConditions.reduce((a, b) => a && b);
