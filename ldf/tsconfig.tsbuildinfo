@@ -1,0 +1,692 @@
+{
+  "program": {
+    "fileInfos": {
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1",
+        "signature": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f",
+        "signature": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f",
+        "signature": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "765e0e9c9d74cf4d031ca8b0bdb269a853e7d81eda6354c8510218d03db12122",
+        "signature": "765e0e9c9d74cf4d031ca8b0bdb269a853e7d81eda6354c8510218d03db12122"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "285958e7699f1babd76d595830207f18d719662a0c30fac7baca7df7162a9210",
+        "signature": "285958e7699f1babd76d595830207f18d719662a0c30fac7baca7df7162a9210"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "./src/category.ts": {
+        "version": "b049a23dbbefe1e701387871668a0ad8aad490534055210537f6a087afe8a3d8",
+        "signature": "3a59b1a9b0eedc2ccd8708b93e745009c84fa8011fd2641f04f1d41d688ce1ed"
+      },
+      "./src/bible-reading/bible-book-abbreviations.ts": {
+        "version": "f2e5bc945a61ecbab3bb9f697c7f036a2f04e5d8628c909c0474381220f469f6",
+        "signature": "8734c9ea899543d019683434aa96aeea72a868987b2f466b39c87fe521f53ef1"
+      },
+      "./src/bible-reading/bible-book-names.i18n.ts": {
+        "version": "f73cc06f6168675a93500b9ecedac739feaae4af68f28ce29b4cfe6040664885",
+        "signature": "ba7e39f360f408061d6a9049b55f3d35ade5d9e464c99ae4715089e5a19e74a6"
+      },
+      "./src/bible-reading/bible-reading.ts": {
+        "version": "010959d8ce6ff234ac252f58aca98fc30260f0710929b45224bb34a2060a0c76",
+        "signature": "c88d790e6f8ebeff8f3bacd228cea72b0cbf56ae912386f6d03dfc1d5832e4ca"
+      },
+      "./src/calendar/liturgical-color.ts": {
+        "version": "6b93a547835b6e30dd6aaa51b9ac25ea8260d600929d94e7a6a0fa1f60ff0be3",
+        "signature": "e7fed358aca4fbf259a7cdaf1a99bf9cbb718ac871af3f2a6482a72eaf60ba43"
+      },
+      "./src/calendar/holy-day.ts": {
+        "version": "9f2133539cb5925e2eb5dfd1e4c5e0f792081cedd92f8f98c16e86da0a236d7b",
+        "signature": "78278605f7e821f4629cc4ea9eb0e7136fc56eaa3c870e7967dfcd5109080a0f"
+      },
+      "./src/calendar/proper.ts": {
+        "version": "f9b5fa286ca31c92f10084874251d76be4600dccba6de801d55ae72f62c8d721",
+        "signature": "f4b7598c3f69069fc838719409b49314f2a4c051223fd954488ce26f6ce03109"
+      },
+      "./src/calendar/liturgical-week.ts": {
+        "version": "6e4660eab4910badf82a36a35fa9566254f5340e430026fd7ca65e9afdfc6f2a",
+        "signature": "767fd6c38b52d87008bbf102b923cfe8266a00c0a50e0c0de909af692ae1a723"
+      },
+      "./src/calendar/liturgical-day.ts": {
+        "version": "6ca122ef99250e61053e63ad59ffb8d9a5f530005cf52c9d0d428ba4cd7689d9",
+        "signature": "1a263dc702a880758d6ceef441aca1b22d4bc5e6483191db6094897f5675b5d9"
+      },
+      "./src/citation/citation.ts": {
+        "version": "39487eac604344ddaa9b4fc526b3f0bf084655fd11fe1cd541ee89d66dd9d26c",
+        "signature": "25d7a1ce0f6fc505811665a18eddda64f40784a1bfe62f9daa6541a896f82d82"
+      },
+      "./src/citation/selectable-citation.ts": {
+        "version": "75f0ed14e02afbcc2d8f869f2cd53e87fd18fe5a957b5951c1661631d92eb28b",
+        "signature": "70a5a1cc57a7a2eac008cfebb1b9be76a7461b7dbdc5004f31d1e3f4073baecc"
+      },
+      "./src/citation/source.ts": {
+        "version": "f8dba5a43fef4c7cbd2ecdbd6706b208256285ff8e38c5aa9f939896e09770f5",
+        "signature": "ef759b32c23ef623f3e4f73285c673981708012ae94d42c2df58645368602868"
+      },
+      "./src/editing/cursor.ts": {
+        "version": "dcaa86195cb1c37ebb16580aec26d81fcc36c4b7817a251374f413a06f16ce6a",
+        "signature": "6b522ab4b68aaf0a35ce7040b58f2a7a5c87d05548a195eb9b1d353b65142047"
+      },
+      "./src/editing/change.ts": {
+        "version": "20170bbab9a6a4f9de78bbd05facdd29ab5007e19e7b3f2b1e6dc55c4c25d733",
+        "signature": "82856bfdd122e042b7d7cb645d22b950d654553b23afabb9dcb314bb5d46c5be"
+      },
+      "./src/responsive-prayer.ts": {
+        "version": "68fa3c37d259a97fd8a7ecb6181c13216bcb91d9533b0acffa1fc634a4ab5e0e",
+        "signature": "ec494b603f9f3aa1f620abd93233d85fe341d3577de4691e64100fb5acd4a451"
+      },
+      "./src/psalm.ts": {
+        "version": "245b0c1499a9ce30b6bde85a1fd5e4ebfc650e5ded589803eb8d5f8c5e785012",
+        "signature": "f7bf137a4363d5b8f7b0f950216c6e53d768435e128977e216d7c0a4937184c6"
+      },
+      "./src/sharing/sharing.ts": {
+        "version": "32cca5900d3154b9492af18544a473b35bfa249ba23dd03c91b04ad3f3f7099e",
+        "signature": "3dd4843a27594d1a2046d4b53265067fd89a7058d23c27f3b0dbb71b4366a786"
+      },
+      "./src/liturgy/client-preferences.ts": {
+        "version": "323beca0aa3ef4f61f5e4fec58e6991aa0e477d8cc4961d430e1b767248dda5b",
+        "signature": "84eca9b00a08f62878c35b1584d1bef55cb99633d919936bae2407e8296777ff"
+      },
+      "./src/liturgical-document.ts": {
+        "version": "42375b12a449bedd9a9a2bdf91e46bb6f542269929ee84ff23b62dd6772890af",
+        "signature": "7095995f40a7b2df537ec4d2d1b399e7b66d593a0cff36b5905d5f6a086f0cd6"
+      },
+      "./src/heading.ts": {
+        "version": "cdcdc65e1471e2adfc1b20406af31a7054b0ce181a0483f4e1316acc15360f67",
+        "signature": "dbb9cf11661898d131f0850c8e4b9dcd9579ffd2fc377e172e7eb5d1152e9c20"
+      },
+      "./src/liturgy/preference.ts": {
+        "version": "90ff036b693af9087cb05464a17666d0671701861d176626947a11a22218e7b3",
+        "signature": "2cb5fd1647a1a1026a93d9e5e3fcc7753aa29a0639c90fcfbd66a0405f998f8c"
+      },
+      "./src/liturgy/liturgy.ts": {
+        "version": "5c5fba98c1c3c92aae25e8631462a41dc3cbe54bdf4329d2dfd5ed0f1f1f4f79",
+        "signature": "b5a3211ad43753a447d00cf6b5949c426d3a1f93902ab7e2e0cf194958aa5764"
+      },
+      "./src/option.ts": {
+        "version": "50b3cb2922d089975343b6d16def274f67283f14aad685ed1676ea53820242c8",
+        "signature": "12b10a678178f7d25b6db1e86c042638d333651f9b933bac122558dfa8d1a282"
+      },
+      "./src/refrain.ts": {
+        "version": "1347c18c4e643b58d4a3dd13b23eef3e549b52a06ee68e46f736995eb79954c8",
+        "signature": "0267d3d8f997999339bb8a474390aa432678f0a62ab9879d285df714dec49dac"
+      },
+      "./src/rubric.ts": {
+        "version": "08bf60868f09ee0b0fe04d6a7eeaff399ac00753e3897fed9da30847624541c9",
+        "signature": "3e1f6497c8b0b8244352033f07f444f5e40862a3980e3de49f5c18711d729b53"
+      },
+      "./src/text.ts": {
+        "version": "a3da39bc5debe91d68a1aa3075eeab824df20a64d2a0c1a8ffb468f64c4763f1",
+        "signature": "b090858500c0ef22017821b98f2a030beb179f02b856dbf9d5ac3641010c122a"
+      },
+      "./src/index.ts": {
+        "version": "501b6823aacd8aa1c23cc4086db9539ad92a71754c2349f100b6051bb8d389e3",
+        "signature": "501b6823aacd8aa1c23cc4086db9539ad92a71754c2349f100b6051bb8d389e3"
+      },
+      "./src/condition.ts": {
+        "version": "2ee5eed01b01608c387b12dfdf8313baaa3209d44a53d4cf079ad0ba8838670c",
+        "signature": "3efc9b5507c1745421d1f13ebb7423d0329ad2cda93c6630fb990d07f96a0593"
+      },
+      "./tests/bible.test.ts": {
+        "version": "bdead1bed43c0b27fd3f7db577e45e48f011ddf3b55d2666d79a6dddeb867ea8",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "./tests/condition.test.ts": {
+        "version": "9ce7c2deba70d2ce7c6754d70e6ab884953bab33b8f55eb58b3aedac10f352de",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "./tests/liturgical-document.test.ts": {
+        "version": "414070a6819b7ba57e49356a0f46ede3e0b148fa878c17b0cd44559bd50de9ef",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "./tests/option.test.ts": {
+        "version": "efe21f1d89513e6d1d8b340d650349e7015e1113d1892ea645427516c1577829",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "./tests/psalm.test.ts": {
+        "version": "cebd30d15a08da3425eb376b3bafa79866bbe08559b9008b26a0d4c588faaa34",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "./node_modules/@babel/types/lib/index.d.ts": {
+        "version": "9566baf39af3e8e8525367b91f8313d0f3dee7dd21aa76bb9ecbc5c3c66df739",
+        "signature": "9566baf39af3e8e8525367b91f8313d0f3dee7dd21aa76bb9ecbc5c3c66df739"
+      },
+      "./node_modules/@types/babel__generator/index.d.ts": {
+        "version": "b25c5f2970d06c729f464c0aeaa64b1a5b5f1355aa93554bb5f9c199b8624b1e",
+        "signature": "b25c5f2970d06c729f464c0aeaa64b1a5b5f1355aa93554bb5f9c199b8624b1e"
+      },
+      "./node_modules/@types/babel__traverse/index.d.ts": {
+        "version": "0dea413c59f1ff4a1f23f806d8aa5cdb7572652b301f081545fcf1c9ae10d4d5",
+        "signature": "0dea413c59f1ff4a1f23f806d8aa5cdb7572652b301f081545fcf1c9ae10d4d5"
+      },
+      "./node_modules/@babel/parser/typings/babel-parser.d.ts": {
+        "version": "56dede90729ef85351f132d66e05510851211d627e2f2c6621475d4f7938f365",
+        "signature": "56dede90729ef85351f132d66e05510851211d627e2f2c6621475d4f7938f365"
+      },
+      "./node_modules/@types/babel__template/index.d.ts": {
+        "version": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8",
+        "signature": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8"
+      },
+      "./node_modules/@types/babel__core/index.d.ts": {
+        "version": "af523cd24a11e1feadface05a9ac4f692a99bcb65c020b96061c63ac593824ad",
+        "signature": "af523cd24a11e1feadface05a9ac4f692a99bcb65c020b96061c63ac593824ad"
+      },
+      "./node_modules/@types/color-name/index.d.ts": {
+        "version": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e",
+        "signature": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e"
+      },
+      "./node_modules/@types/istanbul-lib-coverage/index.d.ts": {
+        "version": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd",
+        "signature": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd"
+      },
+      "./node_modules/@types/istanbul-lib-report/index.d.ts": {
+        "version": "7eb06594824ada538b1d8b48c3925a83e7db792f47a081a62cf3e5c4e23cf0ee",
+        "signature": "7eb06594824ada538b1d8b48c3925a83e7db792f47a081a62cf3e5c4e23cf0ee"
+      },
+      "./node_modules/@types/istanbul-reports/index.d.ts": {
+        "version": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b",
+        "signature": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b"
+      },
+      "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts": {
+        "version": "d3f71718012cf793afd0e6dbf8c3b2c7670dd4dd68dfdcee5b280b20c5c5f207",
+        "signature": "d3f71718012cf793afd0e6dbf8c3b2c7670dd4dd68dfdcee5b280b20c5c5f207"
+      },
+      "./node_modules/jest-diff/build/ts3.4/types.d.ts": {
+        "version": "9fd17d8fcaaadff8ea8acaa1be7ae46f9434657d62ceb2932083bc8156d30d55",
+        "signature": "9fd17d8fcaaadff8ea8acaa1be7ae46f9434657d62ceb2932083bc8156d30d55"
+      },
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": {
+        "version": "747b3159ab8ae386103b3e756b0b8890e5fdbb171da4b1cffd129e30825f3b40",
+        "signature": "747b3159ab8ae386103b3e756b0b8890e5fdbb171da4b1cffd129e30825f3b40"
+      },
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": {
+        "version": "9770ffc9151e11eb053917a88c564659e8d693bb688f524cc09c200cdea498d9",
+        "signature": "9770ffc9151e11eb053917a88c564659e8d693bb688f524cc09c200cdea498d9"
+      },
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": {
+        "version": "04349ed673ffd6efaa8f038f956e4f2900ac5ccd7479dc4e229619bd8ceac1a5",
+        "signature": "04349ed673ffd6efaa8f038f956e4f2900ac5ccd7479dc4e229619bd8ceac1a5"
+      },
+      "./node_modules/pretty-format/build/ts3.4/types.d.ts": {
+        "version": "ca515643955ee73349a4b8daf4a8179b44b4978f976e93f3ff472ffe649b5051",
+        "signature": "ca515643955ee73349a4b8daf4a8179b44b4978f976e93f3ff472ffe649b5051"
+      },
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": {
+        "version": "6f935cbac1b663774dd15b39fb94c62153f2d1aa10dfa0955776512fa65db053",
+        "signature": "6f935cbac1b663774dd15b39fb94c62153f2d1aa10dfa0955776512fa65db053"
+      },
+      "./node_modules/@types/jest/index.d.ts": {
+        "version": "46c3ecbaa2492e3ad0a4647302d39f044ae297b81fc82cd21f8399dc8048c414",
+        "signature": "46c3ecbaa2492e3ad0a4647302d39f044ae297b81fc82cd21f8399dc8048c414"
+      },
+      "./node_modules/@types/normalize-package-data/index.d.ts": {
+        "version": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613",
+        "signature": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613"
+      },
+      "./node_modules/@types/prettier/index.d.ts": {
+        "version": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef",
+        "signature": "29651525db5579157e617c77e869af8bfdc1130f5d811c1f759ad35b7bafc8ef"
+      },
+      "./node_modules/@types/stack-utils/index.d.ts": {
+        "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
+        "signature": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49"
+      },
+      "./node_modules/@types/yargs-parser/index.d.ts": {
+        "version": "fdfbe321c556c39a2ecf791d537b999591d0849e971dd938d88f460fea0186f6",
+        "signature": "fdfbe321c556c39a2ecf791d537b999591d0849e971dd938d88f460fea0186f6"
+      },
+      "./node_modules/@types/yargs/index.d.ts": {
+        "version": "2893564a05d3bbe2a4d812dfd5ad3d7a6981a754283b695272d6ead03f638b67",
+        "signature": "2893564a05d3bbe2a4d812dfd5ad3d7a6981a754283b695272d6ead03f638b67"
+      }
+    },
+    "options": {
+      "incremental": true,
+      "target": 2,
+      "module": 1,
+      "strict": true,
+      "strictPropertyInitialization": false,
+      "lib": [
+        "lib.dom.d.ts",
+        "lib.es2015.d.ts",
+        "lib.es2017.d.ts"
+      ],
+      "declaration": true,
+      "configFilePath": "./tsconfig.json"
+    },
+    "referencedMap": {
+      "./src/bible-reading/bible-reading.ts": [
+        "./src/index.ts",
+        "./src/bible-reading/bible-book-abbreviations.ts",
+        "./src/bible-reading/bible-book-names.i18n.ts"
+      ],
+      "./src/calendar/holy-day.ts": [
+        "./src/calendar/liturgical-color.ts"
+      ],
+      "./src/calendar/liturgical-week.ts": [
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/proper.ts"
+      ],
+      "./src/calendar/liturgical-day.ts": [
+        "./src/calendar/proper.ts",
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/liturgical-week.ts",
+        "./src/calendar/holy-day.ts"
+      ],
+      "./src/responsive-prayer.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/psalm.ts": [
+        "./src/index.ts"
+      ],
+      "./src/liturgical-document.ts": [
+        "./src/calendar/liturgical-day.ts",
+        "./src/responsive-prayer.ts",
+        "./src/bible-reading/bible-reading.ts",
+        "./src/citation/citation.ts",
+        "./src/psalm.ts",
+        "./src/heading.ts",
+        "./src/sharing/sharing.ts",
+        "./src/category.ts",
+        "./src/condition.ts",
+        "./src/liturgy/client-preferences.ts"
+      ],
+      "./src/heading.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/liturgy/liturgy.ts": [
+        "./src/liturgical-document.ts",
+        "./src/liturgy/preference.ts"
+      ],
+      "./src/option.ts": [
+        "./src/index.ts"
+      ],
+      "./src/refrain.ts": [
+        "./src/index.ts"
+      ],
+      "./src/rubric.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/text.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/index.ts": [
+        "./src/bible-reading/bible-reading.ts",
+        "./src/category.ts",
+        "./src/calendar/holy-day.ts",
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/liturgical-day.ts",
+        "./src/calendar/liturgical-week.ts",
+        "./src/calendar/proper.ts",
+        "./src/citation/citation.ts",
+        "./src/citation/selectable-citation.ts",
+        "./src/citation/source.ts",
+        "./src/condition.ts",
+        "./src/editing/cursor.ts",
+        "./src/editing/change.ts",
+        "./src/heading.ts",
+        "./src/liturgical-document.ts",
+        "./src/liturgy/liturgy.ts",
+        "./src/liturgy/preference.ts",
+        "./src/liturgy/client-preferences.ts",
+        "./src/option.ts",
+        "./src/psalm.ts",
+        "./src/refrain.ts",
+        "./src/responsive-prayer.ts",
+        "./src/rubric.ts",
+        "./src/sharing/sharing.ts",
+        "./src/text.ts"
+      ],
+      "./src/condition.ts": [
+        "./src/index.ts"
+      ],
+      "./tests/bible.test.ts": [
+        "./src/index.ts"
+      ],
+      "./tests/condition.test.ts": [
+        "./src/index.ts"
+      ],
+      "./tests/liturgical-document.test.ts": [
+        "./src/index.ts"
+      ],
+      "./tests/option.test.ts": [
+        "./src/index.ts"
+      ],
+      "./tests/psalm.test.ts": [
+        "./src/index.ts"
+      ],
+      "./node_modules/@types/babel__generator/index.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__traverse/index.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__template/index.d.ts": [
+        "./node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__core/index.d.ts": [
+        "./node_modules/@types/babel__generator/index.d.ts",
+        "./node_modules/@types/babel__traverse/index.d.ts",
+        "./node_modules/@types/babel__template/index.d.ts",
+        "./node_modules/@babel/types/lib/index.d.ts",
+        "./node_modules/@babel/parser/typings/babel-parser.d.ts"
+      ],
+      "./node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "./node_modules/@types/istanbul-lib-coverage/index.d.ts"
+      ],
+      "./node_modules/@types/istanbul-reports/index.d.ts": [
+        "./node_modules/@types/istanbul-lib-report/index.d.ts",
+        "./node_modules/@types/istanbul-lib-coverage/index.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": [
+        "./node_modules/pretty-format/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/@types/jest/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+        "./node_modules/pretty-format/build/ts3.4/index.d.ts"
+      ],
+      "./node_modules/@types/yargs/index.d.ts": [
+        "./node_modules/@types/yargs-parser/index.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "./src/bible-reading/bible-reading.ts": [
+        "./src/index.ts"
+      ],
+      "./src/calendar/holy-day.ts": [
+        "./src/calendar/liturgical-color.ts"
+      ],
+      "./src/calendar/liturgical-week.ts": [
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/proper.ts"
+      ],
+      "./src/calendar/liturgical-day.ts": [
+        "./src/calendar/liturgical-week.ts",
+        "./src/calendar/holy-day.ts",
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/proper.ts"
+      ],
+      "./src/responsive-prayer.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/psalm.ts": [
+        "./src/index.ts"
+      ],
+      "./src/liturgical-document.ts": [
+        "./src/category.ts",
+        "./src/condition.ts",
+        "./src/sharing/sharing.ts",
+        "./src/citation/citation.ts",
+        "./src/calendar/liturgical-day.ts",
+        "./src/responsive-prayer.ts",
+        "./src/bible-reading/bible-reading.ts",
+        "./src/psalm.ts",
+        "./src/heading.ts",
+        "./src/liturgy/client-preferences.ts"
+      ],
+      "./src/heading.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/liturgy/liturgy.ts": [
+        "./src/liturgy/preference.ts",
+        "./src/liturgical-document.ts"
+      ],
+      "./src/option.ts": [
+        "./src/index.ts"
+      ],
+      "./src/refrain.ts": [
+        "./src/index.ts"
+      ],
+      "./src/rubric.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/text.ts": [
+        "./src/liturgical-document.ts"
+      ],
+      "./src/index.ts": [
+        "./src/bible-reading/bible-reading.ts",
+        "./src/category.ts",
+        "./src/calendar/holy-day.ts",
+        "./src/calendar/liturgical-color.ts",
+        "./src/calendar/liturgical-day.ts",
+        "./src/calendar/liturgical-week.ts",
+        "./src/calendar/proper.ts",
+        "./src/citation/citation.ts",
+        "./src/citation/selectable-citation.ts",
+        "./src/citation/source.ts",
+        "./src/condition.ts",
+        "./src/editing/cursor.ts",
+        "./src/editing/change.ts",
+        "./src/heading.ts",
+        "./src/liturgical-document.ts",
+        "./src/liturgy/liturgy.ts",
+        "./src/liturgy/preference.ts",
+        "./src/liturgy/client-preferences.ts",
+        "./src/option.ts",
+        "./src/psalm.ts",
+        "./src/refrain.ts",
+        "./src/responsive-prayer.ts",
+        "./src/rubric.ts",
+        "./src/sharing/sharing.ts",
+        "./src/text.ts"
+      ],
+      "./src/condition.ts": [
+        "./src/index.ts"
+      ],
+      "./node_modules/@types/babel__generator/index.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__traverse/index.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__template/index.d.ts": [
+        "./node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "./node_modules/@babel/types/lib/index.d.ts"
+      ],
+      "./node_modules/@types/babel__core/index.d.ts": [
+        "./node_modules/@types/babel__generator/index.d.ts",
+        "./node_modules/@types/babel__traverse/index.d.ts",
+        "./node_modules/@types/babel__template/index.d.ts",
+        "./node_modules/@babel/types/lib/index.d.ts",
+        "./node_modules/@babel/parser/typings/babel-parser.d.ts"
+      ],
+      "./node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "./node_modules/@types/istanbul-lib-coverage/index.d.ts"
+      ],
+      "./node_modules/@types/istanbul-reports/index.d.ts": [
+        "./node_modules/@types/istanbul-lib-report/index.d.ts",
+        "./node_modules/@types/istanbul-lib-coverage/index.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": [
+        "./node_modules/pretty-format/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/@types/jest/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+        "./node_modules/pretty-format/build/ts3.4/index.d.ts"
+      ],
+      "./node_modules/@types/yargs/index.d.ts": [
+        "./node_modules/@types/yargs-parser/index.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "./src/category.ts",
+      "./src/bible-reading/bible-book-abbreviations.ts",
+      "./src/bible-reading/bible-book-names.i18n.ts",
+      "./src/bible-reading/bible-reading.ts",
+      "./src/calendar/liturgical-color.ts",
+      "./src/calendar/holy-day.ts",
+      "./src/calendar/proper.ts",
+      "./src/calendar/liturgical-week.ts",
+      "./src/calendar/liturgical-day.ts",
+      "./src/citation/citation.ts",
+      "./src/citation/selectable-citation.ts",
+      "./src/citation/source.ts",
+      "./src/editing/cursor.ts",
+      "./src/editing/change.ts",
+      "./src/responsive-prayer.ts",
+      "./src/psalm.ts",
+      "./src/sharing/sharing.ts",
+      "./src/liturgy/client-preferences.ts",
+      "./src/liturgical-document.ts",
+      "./src/heading.ts",
+      "./src/liturgy/preference.ts",
+      "./src/liturgy/liturgy.ts",
+      "./src/option.ts",
+      "./src/refrain.ts",
+      "./src/rubric.ts",
+      "./src/text.ts",
+      "./src/index.ts",
+      "./src/condition.ts",
+      "./tests/bible.test.ts",
+      "./tests/condition.test.ts",
+      "./tests/liturgical-document.test.ts",
+      "./tests/option.test.ts",
+      "./tests/psalm.test.ts",
+      "./node_modules/@babel/types/lib/index.d.ts",
+      "./node_modules/@types/babel__generator/index.d.ts",
+      "./node_modules/@types/babel__traverse/index.d.ts",
+      "./node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "./node_modules/@types/babel__template/index.d.ts",
+      "./node_modules/@types/babel__core/index.d.ts",
+      "./node_modules/@types/color-name/index.d.ts",
+      "./node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "./node_modules/@types/istanbul-lib-report/index.d.ts",
+      "./node_modules/@types/istanbul-reports/index.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/types.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+      "./node_modules/pretty-format/build/ts3.4/types.d.ts",
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts",
+      "./node_modules/@types/jest/index.d.ts",
+      "./node_modules/@types/normalize-package-data/index.d.ts",
+      "./node_modules/@types/prettier/index.d.ts",
+      "./node_modules/@types/stack-utils/index.d.ts",
+      "./node_modules/@types/yargs-parser/index.d.ts",
+      "./node_modules/@types/yargs/index.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es5.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2016.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.dom.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts"
+    ]
+  },
+  "version": "3.6.4"
+}

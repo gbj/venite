@@ -5,6 +5,8 @@
     "module": "commonjs",
     "strict": true,
     "strictPropertyInitialization": false,
-    "lib": ["es6", "es2017"]
+    "lib": ["dom", "es6", "es2017"],
+    "declaration": true,
+    "outDir": "dist"
   }
 }

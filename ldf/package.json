@@ -1,11 +1,13 @@
 {
   "name": "@venite/ldf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Typescript classes for the Liturgy Document Format (LDF) used by Venite.app",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
-    "docs": "./node_modules/typedoc/bin/typedoc --out docs src"
+    "docs": "./node_modules/typedoc/bin/typedoc --out docs src",
+    "prepublish": "tsc"
   },
   "author": "Greg Johnston <greg@venite.app>",
   "license": "MIT",
