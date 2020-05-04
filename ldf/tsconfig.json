@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "lib": ["es6", "es2017"]
+  }
+}
