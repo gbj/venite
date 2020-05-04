@@ -1,3 +1,5 @@
+components/ldf
+*/components.d.ts
 */.env
 */dist/
 */migrations/
