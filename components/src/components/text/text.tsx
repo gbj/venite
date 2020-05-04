@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Element, Host, Method, h } from '@stencil/core';
-import { Text, Heading } from '../../../../ldf/src';
+import { Text, Heading } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({

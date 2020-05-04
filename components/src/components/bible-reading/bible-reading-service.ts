@@ -1,4 +1,4 @@
-import { BibleReadingVerse } from '../../../../ldf/src';
+import { BibleReadingVerse } from '@venite/ldf';
 
 export class BibleReadingServiceController {
   async find(

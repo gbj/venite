@@ -1,5 +1,4 @@
-import { Change } from './change';
-import { Cursor } from './cursor';
+import { Change, Cursor } from '@venite/ldf';
 
 export function handleInput(
   inputType : string,

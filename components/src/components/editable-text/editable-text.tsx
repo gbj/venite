@@ -1,8 +1,7 @@
 import { Component, Element, Prop, Listen, Event, EventEmitter, Method, Host, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 
-import { Cursor } from './cursor';
-import { Change } from './change';
+import { Change, Cursor } from '@venite/ldf';
 import { handleInput } from './handle-input';
 
 @Component({

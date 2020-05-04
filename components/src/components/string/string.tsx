@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Element, JSX, h } from '@stencil/core';
-import { SelectableCitation } from '../../../../ldf/src';
+import { SelectableCitation } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-string',

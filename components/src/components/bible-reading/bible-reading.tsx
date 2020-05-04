@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Watch, State, Method, Host, JSX, h } from '@stencil/core';
-import { BibleReading, BibleReadingVerse, Heading } from '../../../../ldf/src';
+import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
 import { BibleReadingService } from './bible-reading-service';
 import { getLocaleComponentStrings } from '../../utils/locale';
 

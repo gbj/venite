@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { LiturgicalDocument, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '../../../../ldf/src';
+import { LiturgicalDocument, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-liturgical-document',

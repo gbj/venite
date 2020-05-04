@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Element, Host, JSX, h } from '@stencil/core';
-import { ResponsivePrayer, ResponsivePrayerLine, Heading } from '../../../../ldf/src';
+import { ResponsivePrayer, ResponsivePrayerLine, Heading } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-responsive-prayer',
