@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { LiturgicalDocument, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-liturgical-document',
@@ -50,31 +50,31 @@ export class LiturgicalDocumentComponent {
 
     switch(doc.type) {
       case 'liturgy':
-        // TODO
+        node = <ldf-liturgy path={this.path} editable={this.editable} doc={doc as Liturgy}></ldf-liturgy>;
         break;
       case 'heading':
-        node = <ldf-heading path={`${this.path}/`} editable={this.editable} doc={doc as Heading}></ldf-heading>;
+        node = <ldf-heading path={this.path} editable={this.editable} doc={doc as Heading}></ldf-heading>;
         break;
       case 'option':
-        node = <ldf-option path={`${this.path}/`} editable={this.editable} doc={doc as Option}></ldf-option>;
+        node = <ldf-option path={this.path} editable={this.editable} doc={doc as Option}></ldf-option>;
         break;
       case 'refrain':
-        node = <ldf-refrain path={`${this.path}/`} editable={this.editable} doc={doc as Refrain}></ldf-refrain>;
+        node = <ldf-refrain path={this.path} editable={this.editable} doc={doc as Refrain}></ldf-refrain>;
         break;
       case 'rubric':
-        node = <ldf-rubric path={`${this.path}/`} editable={this.editable} doc={doc as Rubric}></ldf-rubric>;
+        node = <ldf-rubric path={this.path} editable={this.editable} doc={doc as Rubric}></ldf-rubric>;
         break;
       case 'text':
-        node = <ldf-text path={`${this.path}/`} editable={this.editable} doc={doc as Text}></ldf-text>
+        node = <ldf-text path={this.path} editable={this.editable} doc={doc as Text}></ldf-text>
         break;
       case 'responsive':
-        node = <ldf-responsive-prayer path={`${this.path}/`} editable={this.editable} doc={doc as ResponsivePrayer}></ldf-responsive-prayer>
+        node = <ldf-responsive-prayer path={this.path} editable={this.editable} doc={doc as ResponsivePrayer}></ldf-responsive-prayer>
         break;
       case 'bible-reading':
-        node = <ldf-bible-reading path={`${this.path}/`} editable={this.editable} doc={doc as BibleReading}></ldf-bible-reading>
+        node = <ldf-bible-reading path={this.path} editable={this.editable} doc={doc as BibleReading}></ldf-bible-reading>
         break;
       case 'psalm':
-        node = <ldf-psalm path={`${this.path}/`} editable={this.editable} doc={doc as Psalm}></ldf-psalm>
+        node = <ldf-psalm path={this.path} editable={this.editable} doc={doc as Psalm}></ldf-psalm>
         break;
       default:
         console.warn('invalid type for document', doc);

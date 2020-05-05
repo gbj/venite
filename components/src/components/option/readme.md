@@ -44,6 +44,7 @@ graph TD;
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
   ldf-liturgical-document --> ldf-option
+  ldf-liturgy --> ldf-liturgical-document
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-refrain --> ldf-label-bar

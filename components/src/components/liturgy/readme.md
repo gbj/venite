@@ -16,6 +16,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [ldf-liturgical-document](../liturgical-document)
+
 ### Depends on
 
 - [ldf-liturgical-document](../liturgical-document)
@@ -24,14 +28,7 @@
 ```mermaid
 graph TD;
   ldf-liturgy --> ldf-liturgical-document
-  ldf-liturgical-document --> ldf-heading
-  ldf-liturgical-document --> ldf-option
-  ldf-liturgical-document --> ldf-refrain
-  ldf-liturgical-document --> ldf-rubric
-  ldf-liturgical-document --> ldf-text
-  ldf-liturgical-document --> ldf-responsive-prayer
-  ldf-liturgical-document --> ldf-bible-reading
-  ldf-liturgical-document --> ldf-psalm
+  ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-option --> ldf-label-bar

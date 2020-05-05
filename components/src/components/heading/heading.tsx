@@ -112,7 +112,7 @@ export class HeadingComponent {
 
         <ldf-label-bar>
           {hasLabel && this.headerNode(level, label)}
-          <slot name='additional' slot='additional'/>
+          <slot name='additional'/>
           {hasCitation && this.citationNode(this.obj.citation)}
         </ldf-label-bar>
       </Host>

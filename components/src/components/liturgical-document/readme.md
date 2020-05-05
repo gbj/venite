@@ -24,6 +24,7 @@
 
 ### Depends on
 
+- [ldf-liturgy](../liturgy)
 - [ldf-heading](../heading)
 - [ldf-option](../option)
 - [ldf-refrain](../refrain)
@@ -36,6 +37,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
   ldf-liturgical-document --> ldf-option
   ldf-liturgical-document --> ldf-refrain
@@ -44,6 +46,7 @@ graph TD;
   ldf-liturgical-document --> ldf-responsive-prayer
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
+  ldf-liturgy --> ldf-liturgical-document
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
@@ -65,7 +68,6 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-liturgy --> ldf-liturgical-document
   style ldf-liturgical-document fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

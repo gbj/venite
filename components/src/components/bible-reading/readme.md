@@ -60,6 +60,7 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-liturgical-document --> ldf-bible-reading
+  ldf-liturgy --> ldf-liturgical-document
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
   ldf-refrain --> ldf-label-bar

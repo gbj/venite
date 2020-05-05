@@ -91,13 +91,15 @@ export class EditableTextComponent {
 
   // Public Methods
   /** Sets private cursor field to a Cursor instance and sends it as a `cursor` event */
+  @Debounce(200)
   @Method()
   async registerCursor() : Promise<Cursor> {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
     if(!this.cursor || start !== this.cursor.start || end !== this.cursor.end) {
-      this.cursor = new Cursor(this.textarea, this.textarea.selectionStart, this.textarea.selectionEnd);
+      this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
       this.cursorMoved.emit(this.cursor);
+      console.log('emitted ', this.cursor);
     }
     return this.cursor;
   }
