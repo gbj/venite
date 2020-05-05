@@ -5,10 +5,10 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { LiturgicalDocument, } from "@venite/ldf";
 export namespace Components {
     interface LdfEditor {
-        "doc": LiturgicalDocument | string;
+        "docId": string;
+        "userToken": string;
     }
 }
 declare global {
@@ -24,7 +24,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LdfEditor {
-        "doc"?: LiturgicalDocument | string;
+        "docId"?: string;
+        "userToken"?: string;
     }
     interface IntrinsicElements {
         "ldf-editor": LdfEditor;

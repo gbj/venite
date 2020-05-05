@@ -26,11 +26,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@venite/components": "0.0.5",
-    "@venite/ldf": "0.0.5",
+    "@venite/components": "0.0.7",
+    "@venite/ldf": "0.0.7",
     "jot": "git+https://github.com/joshdata/jot.git",
     "json-pointer": "^0.6.0",
-    "rxjs": "^6.5.5"
+    "query-selector-shadow-dom": "^0.4.6",
+    "rxjs": "^6.5.5",
+    "socket.io-client": "^2.3.0",
+    "textarea-caret": "^3.1.0",
+    "values.js": "^1.1.1"
   },
   "repository": {
     "type": "git",
