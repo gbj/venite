@@ -35,7 +35,6 @@ export class EditableTextComponent {
   componentDidRender() {
     // After the first render, with text in place, adjust size from minimum
     this.autoGrow();
-    this.textarea.setSelectionRange(0, 4)
   }
 
   // Events
@@ -120,9 +119,9 @@ export class EditableTextComponent {
         const next = edits[index + 1];
 
         if(!consolidated) {
-          consolidated = new Change(cur.op, cur.pos, cur.length, cur.value);
+          consolidated = new Change(cur.path, cur.op, cur.pos, cur.length, cur.value);
         } else {
-          consolidated = new Change(cur.op, consolidated.pos, consolidated.length + cur.length, `${consolidated.value}${cur.value}`);
+          consolidated = new Change(cur.path, cur.op, consolidated.pos, consolidated.length + cur.length, `${consolidated.value}${cur.value}`);
         }
 
         if(!next) {
