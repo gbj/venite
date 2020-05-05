@@ -1,4 +1,5 @@
 export class Change {
+  user?: string;  // Username; Overridden by the server when it broadcasts it
   op: 'insert' | 'delete' | 'set';
   pos: number;
   length: number;

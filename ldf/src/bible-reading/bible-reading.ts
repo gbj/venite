@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from '..';
+import { LiturgicalDocument } from '../liturgical-document';
 import { BibleReadingVerse } from './bible-reading-verse';
 import { BIBLE_BOOK_ABBREVIATIONS } from './bible-book-abbreviations';
 import { BIBLE_BOOK_NAMES } from './bible-book-names.i18n';

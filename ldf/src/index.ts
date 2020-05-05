@@ -1,4 +1,7 @@
+export * from './liturgical-document';
+
 export * from './bible-reading/bible-reading';
+export * from './bible-reading/bible-reading-verse';
 export * from './category';
 export * from './calendar/holy-day';
 export * from './calendar/liturgical-color';
@@ -9,10 +12,7 @@ export * from './citation/citation';
 export * from './citation/selectable-citation';
 export * from './citation/source';
 export * from './condition';
-export * from './editing/cursor';
-export * from './editing/change';
 export * from './heading';
-export * from './liturgical-document';
 export * from './liturgy/liturgy';
 export * from './liturgy/preference';
 export * from './liturgy/client-preferences';
@@ -23,3 +23,7 @@ export * from './responsive-prayer';
 export * from './rubric';
 export * from './sharing/sharing';
 export * from './text';
+
+export * from './editing/cursor';
+export * from './editing/change';
+export * from './editing/user';
