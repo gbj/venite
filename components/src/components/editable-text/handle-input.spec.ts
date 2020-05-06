@@ -1,6 +1,5 @@
 import { handleInput } from './handle-input';
-import { Cursor } from './cursor';
-import { Change } from './text-edit';
+import { Cursor, Change } from '@venite/ldf';
 import * as jot from 'jot';
 
 it('insertText: should generate events to JOT-apply an insert to blank string', async () => {

@@ -2,8 +2,7 @@ import { newE2EPage } from '@stencil/core/testing';
 import { EditableTextComponent } from './editable-text';
 
 import { handleInput } from './handle-input';
-import { Cursor } from './cursor';
-import { Change } from './text-edit';
+import { Cursor, Change } from '@venite/ldf';
 
 describe('ldf-editable-text', () => {
   it('should render initial text', async () => {
