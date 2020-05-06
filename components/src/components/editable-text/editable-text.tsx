@@ -90,17 +90,23 @@ export class EditableTextComponent {
 
   // Public Methods
   /** Sets private cursor field to a Cursor instance and sends it as a `cursor` event */
-  @Debounce(200)
   @Method()
   async registerCursor() : Promise<Cursor> {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
     if(!this.cursor || start !== this.cursor.start || end !== this.cursor.end) {
       this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
-      this.cursorMoved.emit(this.cursor);
-      console.log('emitted ', this.cursor);
+      this.emitCursor(this.cursor);
     }
     return this.cursor;
+  }
+
+  // Debounce emitting the change, not registering the change
+  // That means the cursor will also be in the right place when edits need to refer to it,
+  // but also that we won't be sending cursor updates to the server constantly as we type
+  @Debounce(200)
+  emitCursor(cursor : Cursor) {
+    this.cursorMoved.emit(cursor);
   }
 
   /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
@@ -111,9 +117,16 @@ export class EditableTextComponent {
     const consolidatedEdits : Change[] = new Array();
     let consolidated : Change;
 
+    // Edits have been accumulating in a queue in this.edits on each input
+    // copy this into a local variable, and clear out the queue
     const edits = this.edits;
     this.edits = new Array();
 
+    /** consolidate these edits into the smallest number of possible changes
+      * for example, merge
+      * @example
+      * yields 'The', '(Backspace)', 'is'
+      * from six changes 'T' 'h' 'e' '(Backspace)' 'i' 's' */
     edits.forEach((cur, index) => {
       if(cur.op == 'insert') {
         const next = edits[index + 1];
@@ -135,6 +148,7 @@ export class EditableTextComponent {
       }
     });
 
+    console.log(consolidatedEdits);
     this.docChanged.emit(consolidatedEdits);
     this.edits = new Array();
     return consolidatedEdits;
