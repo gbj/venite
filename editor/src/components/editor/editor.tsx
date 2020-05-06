@@ -119,7 +119,6 @@ export class EditorComponent {
 
   receivedDocChanged(data : Change[]) {
     data.forEach((change) => {
-      console.log(change.user, this.userToken);
       // swap out for actual username
       if(change.user !== this.userToken) {
         const target = elementFromPath(this.el, change.path);

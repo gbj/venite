@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@venite/components": "0.0.7",
-    "@venite/ldf": "0.0.7",
+    "@venite/ldf": "0.0.10",
     "jot": "git+https://github.com/joshdata/jot.git",
     "json-pointer": "^0.6.0",
     "query-selector-shadow-dom": "^0.4.6",
