@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description               | Type     | Default     |
-| -------- | --------- | ------------------------- | -------- | ----------- |
-| `text`   | `text`    | Starting text for editing | `string` | `undefined` |
+| Property    | Attribute    | Description | Type     | Default     |
+| ----------- | ------------ | ----------- | -------- | ----------- |
+| `docId`     | `doc-id`     |             | `string` | `undefined` |
+| `userToken` | `user-token` |             | `string` | `undefined` |
 
 
 ----------------------------------------------

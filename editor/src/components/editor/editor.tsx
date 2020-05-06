@@ -1,7 +1,8 @@
 import { Component, Element, State, Listen, Host, Prop, Watch, h } from '@stencil/core';
-import { Cursor, LiturgicalDocument, User } from '@venite/ldf';
+import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { EditorService } from './editor-service';
 import { elementFromPath } from '../../utils/element-from-path';
+import { applyChangeToElement } from '../../utils/apply';
 import getCaretCoordinates from 'textarea-caret';
 import Values from 'values.js';
 
@@ -53,7 +54,7 @@ export class EditorComponent {
 
     // Subscribe to observables that handle each of the events from the server
     EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data));
-    EditorService.docChanged.subscribe((data) => console.log('[RxJS] [docChanged]', data));
+    EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data));
     EditorService.users.subscribe((data) => this.users = data);
     EditorService.joined.subscribe((data) => {
       console.log('`joined` received', data);
@@ -87,11 +88,11 @@ export class EditorComponent {
 
   // Local Methods
   receivedCursorMoved(data : Cursor) {
-    if(data) {
-      if(data.path) {
-        // Cursor is somewhere
-        const target : HTMLElement = elementFromPath(this.el, data.path),
-              textarea = target.shadowRoot.querySelector('textarea');
+    if(data && data.path) {
+      // Cursor is somewhere
+      const target : HTMLElement = elementFromPath(this.el, data.path);
+      if(target) {
+        const textarea = target.shadowRoot.querySelector('textarea');
 
         const rect = textarea.getBoundingClientRect();
 
@@ -103,14 +104,29 @@ export class EditorComponent {
           end: { top: end.top + rect.top, left: end.left + rect.left}
         };
         this.cursorPos = {... this.cursorPos};
-
         console.log(this.cursorPos);
       } else {
         // Cursor is nowhere; hide this user's cursor
         this.cursorPos[data.user] = undefined;
         this.cursorPos = {... this.cursorPos};
       }
+    } else {
+      // Cursor is nowhere; hide this user's cursor
+      this.cursorPos[data.user] = undefined;
+      this.cursorPos = {... this.cursorPos};
     }
+  }
+
+  receivedDocChanged(data : Change[]) {
+    data.forEach((change) => {
+      console.log(change.user, this.userToken);
+      // swap out for actual username
+      if(change.user !== this.userToken) {
+        const target = elementFromPath(this.el, change.path);
+        console.log('change = ', change, target);
+        applyChangeToElement(target, change);
+      }
+    });
   }
 
   async joinNewDocument() {

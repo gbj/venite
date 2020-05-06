@@ -10,7 +10,7 @@ class EditorServiceController {
   public cursorMoved : Subject<Cursor> = new Subject<Cursor>();
 
   /** Observable that emits a Change whenever another user edits the document */
-  public docChanged : Subject<Change> = new Subject<Change>();
+  public docChanged : Subject<Change[]> = new Subject<Change[]>();
 
   /** Array that gives usernames and colors */
   public users : Subject<User[]> = new Subject<User[]>();
