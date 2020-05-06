@@ -55,7 +55,10 @@ export class EditorComponent {
     // Subscribe to observables that handle each of the events from the server
     EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data));
     EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data));
-    EditorService.users.subscribe((data) => this.users = data);
+    EditorService.users.subscribe((data) => {
+      console.log('users = ', data);
+      this.users = data;
+    });
     EditorService.joined.subscribe((data) => {
       console.log('`joined` received', data);
       this.obj = data.doc;
@@ -121,9 +124,9 @@ export class EditorComponent {
     data.forEach((change) => {
       // swap out for actual username
       if(change.user !== this.userToken) {
-        const target = elementFromPath(this.el, change.path);
-        console.log('change = ', change, target);
-        applyChangeToElement(target, change);
+        const target = elementFromPath(this.el, change.path),
+              textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
+        applyChangeToElement(textarea, change);
       }
     });
   }
@@ -155,7 +158,7 @@ export class EditorComponent {
         {this.cursorPos && Object.keys(this.cursorPos).map(username => {
           const user = this.users.find(u => u.username == username),
                 pos = this.cursorPos[username];
-          console.log(user);
+          console.log(this.users, user);
           // TODO: filter based on actual username, not userToken, once AuthService is setup
           if(user && this.cursorPos[username] && this.userToken !== username) {
             return [

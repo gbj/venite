@@ -9,9 +9,8 @@ import { Change } from '@venite/ldf';
   return new jot.APPLY(propertyName, new jot.SPLICE(0, 1, "")).apply(applyAgainst);
 }*/
 
-export function applyChangeToElement(el : any, change : Change) {
-  const textarea : HTMLTextAreaElement = el.shadowRoot.querySelector('textarea');
-  console.log('changing', el, textarea, textarea.value);
+export function applyChangeToElement(textarea : HTMLTextAreaElement, change : Change) {
+  console.log('changing', change, textarea, textarea.value);
   let old : string = textarea.value;
 
 
@@ -30,6 +29,7 @@ export function applyChangeToElement(el : any, change : Change) {
         console.log('[deleted] new value = ', textarea.value);
       break;
     case 'set':
+      textarea.value = change.value;
       break;
   }
 }
