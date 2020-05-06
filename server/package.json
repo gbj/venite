@@ -11,7 +11,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node -r esm dist/main",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,10 +25,11 @@
     "@nestjs/platform-express": "^7.0.9",
     "@nestjs/platform-socket.io": "^7.0.9",
     "@nestjs/websockets": "^7.0.9",
+    "esm": "^3.2.25",
     "pleasejs": "^0.4.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.5",
+    "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.1.5",

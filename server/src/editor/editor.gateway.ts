@@ -1,18 +1,6 @@
 import { WebSocketGateway, WebSocketServer, SubscribeMessage, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
 
-//import { User, Change, Cursor } from '@venite/ldf';
-export class User {
-  client : string;  // Given by Socket.IO
-  room : string;    // Document ID
-  username: string;
-  color: string;
-
-  //** Constructor takes a Javascript object containing the class's properties */
-  constructor(data: Partial<User> = {}) {
-    Object.assign(this, data);
-  }
-}
-
+import { User, Change, Cursor } from '@venite/ldf';
 
 // color generation
 import * as Please from 'pleasejs';
@@ -148,8 +136,9 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
         });
 
         // just give everyone else in the room the new list of users
-        client.to(message.docId)
-          .emit('users', this.users.filter(user => user.room == message.docId));
+        console.log(this.users);
+        client.broadcast
+          .emit('users', this.users);//.filter(user => user.room == message.docId));
       }
     }
 
