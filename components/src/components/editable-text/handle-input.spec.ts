@@ -39,6 +39,24 @@ it('insertText: should generate events to JOT-apply an insert to any string', as
   expect(edited.value).toBe('The Lord my God is good to me.');
 });
 
+it('insertText: replaces text when cursor is expanded and not collapsed', async () => {
+  const original = {
+    'value': 'The Lord is good to me.'
+  };
+
+  const cursor = new Cursor(undefined, 0, 3);
+  const event : Change = handleInput('insertText', 'My', undefined, cursor);
+
+  const jots = new jot.APPLY('value',
+    new jot.SPLICE(event.pos, event.length, event.value)
+  );
+
+  const edited = jots.apply(original);
+
+  expect(original.value).toBe('The Lord is good to me.');
+  expect(edited.value).toBe('My Lord is good to me.');
+});
+
 it('insertFromPaste: should generate events to JOT-apply an insert to any string', async () => {
   const original = {
     'value': 'The Lord is good to me.'

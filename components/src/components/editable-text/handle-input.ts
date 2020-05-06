@@ -14,12 +14,12 @@ export function handleInput(
     // insert: at cursor, overwrite 0 characters (i.e., insert) with data
     case 'insertText':
     case 'insertFromPaste':
-      edit = new Change(cursor.path, 'insert', cursor.start, 0, data);
+      edit = new Change(cursor.path, 'insert', cursor.start, cursor.end - cursor.start, data);
       break;
 
     // insert line break (data is null in this case)
     case 'insertLineBreak':
-      edit = new Change(cursor.path, 'insert', cursor.start, 0, '\n');
+      edit = new Change(cursor.path, 'insert', cursor.start, cursor.end - cursor.start, '\n');
       break;
 
     case 'deleteContentBackward':
