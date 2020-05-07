@@ -109,6 +109,10 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
     async handleDisconnect(){
     }
 
+    getDoc(docId : string) {
+      return DOCS[docId];
+    }
+
     @SubscribeMessage('join')
     async onJoin(client, message : { userToken : string; docId: string; }) {
       // authenticate user token
@@ -120,7 +124,7 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
         client.join(message.docId);
 
         // load document from database
-        const doc = DOCS[message.docId];
+        const doc = this.getDoc(message.docId);
 
         // add user to list
         this.users.push(new User({
@@ -151,15 +155,19 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
     }
 
     @SubscribeMessage('docChanged')
-    async onDocChanged(client, message) {// : Change){
-      message.user = this.users.find(user => user.client == client.id);
+    async onDocChanged(client, message : Change) {
+      message.user = this.users.find(user => user.client == client.id).username;
       client.broadcast.emit('docChanged', message);
     }
 
     @SubscribeMessage('cursorMoved')
-    async onCursorMoved(client, message) {// : Cursor){
+    async onCursorMoved(client, message : Cursor) {
       message.user = this.users.find(user => user.client == client.id).username;
       client.broadcast.emit('cursorMoved', message);
     }
 
+    @SubscribeMessage('refreshDoc')
+    async onRefreshDoc(client, docId : string) {
+      client.emit(this.getDoc(docId));
+    }
 }
