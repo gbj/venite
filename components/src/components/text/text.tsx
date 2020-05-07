@@ -90,7 +90,7 @@ export class TextComponent {
             <ldf-editable-text
               id={`${this.obj.uid || this.obj.slug}-${prayerIndex}`}
               text={prayer}
-              path={`${this.path}/value/${prayerIndex}//`}>
+              path={`${this.path}/value/${prayerIndex}`}>
             </ldf-editable-text>
           )}
           <span class='response'>

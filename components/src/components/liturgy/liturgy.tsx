@@ -45,10 +45,11 @@ export class LiturgyComponent {
 
   // Render
   render() {
+    const basePath : string = this.path == '/' ? '' : `${this.path}/`;
     return (
       <Host lang={this.obj.language}>
         {this.obj.value.map((doc, docIndex) =>
-          <ldf-liturgical-document doc={doc} path={`${this.path || ''}/value/${docIndex}`} editable={this.editable}></ldf-liturgical-document>
+          <ldf-liturgical-document doc={doc} path={`${basePath}/value/${docIndex}`} editable={this.editable}></ldf-liturgical-document>
         )}
       </Host>
     );
