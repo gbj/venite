@@ -16,6 +16,7 @@ export * from './heading';
 export * from './liturgy/liturgy';
 export * from './liturgy/preference';
 export * from './liturgy/client-preferences';
+export * from './meditation';
 export * from './option';
 export * from './psalm';
 export * from './refrain';

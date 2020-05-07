@@ -15,7 +15,7 @@ export class LiturgicalDocument {
   id?: number;
 
   /** Indicates the type of document */
-  type: 'liturgy' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm';
+  type: 'liturgy' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation';
 
   /** An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style. */
   style?: string;
