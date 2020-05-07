@@ -1,8 +1,8 @@
 import { Component, Element, State, Listen, Host, Prop, Watch, h } from '@stencil/core';
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { EditorService } from './editor-service';
-import { elementFromPath } from '../../utils/element-from-path';
-import { applyChangeToElement } from '../../utils/apply';
+import { elementFromPath } from './utils/element-from-path';
+import { applyChangeToElement } from './utils/apply';
 import getCaretCoordinates from 'textarea-caret';
 import Values from 'values.js';
 
@@ -55,6 +55,10 @@ export class EditorComponent {
     // Subscribe to observables that handle each of the events from the server
     EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data));
     EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data));
+    EditorService.refreshDoc.subscribe((data) => {
+      // TODO: check whether we have focused into another area and started editing
+      this.obj = data;
+    })
     EditorService.users.subscribe((data) => {
       console.log('users = ', data);
       this.users = data;
@@ -78,6 +82,7 @@ export class EditorComponent {
   onCursorMoved(ev) {
     if(!ev.detail) {
       EditorService.emit('cursorMoved', new Cursor('', 0, 0, undefined));
+      EditorService.emit('refreshDoc', this.docId);
     } else {
       EditorService.emit('cursorMoved', ev.detail);
     }
@@ -140,6 +145,9 @@ export class EditorComponent {
   }
 
   render() {
+    // TODO #auth -- replace this with real user info
+    const user = this.users.find(u => u.username == this.userToken);
+
     return (
       <Host>
         {/*
@@ -153,6 +161,14 @@ export class EditorComponent {
             )
           )}</p>
           */}
+        {/* "Logged in as" toolbar */}
+        <ldf-label-bar>
+          {user && <div slot='start'>Logged in as <span class='user' style={{
+              backgroundColor: new Values(user.color).tint(40).hexString(),
+              borderColor: new Values(user.color).shade(10).hexString()
+            }}>{user.username}</span>.</div>}
+          <slot name='controls' slot='end'/>
+        </ldf-label-bar>
 
         {/* Cursors */}
         {this.cursorPos && Object.keys(this.cursorPos).map(username => {
@@ -190,7 +206,7 @@ export class EditorComponent {
 
         {/* Render the actual liturgy */}
         {this.obj && <ldf-liturgical-document
-          editable='true'
+          editable={true}
           path='/'
           doc={this.obj}>
         </ldf-liturgical-document>}

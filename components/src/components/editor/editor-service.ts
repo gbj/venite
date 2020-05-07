@@ -12,6 +12,9 @@ class EditorServiceController {
   /** Observable that emits a Change whenever another user edits the document */
   public docChanged : Subject<Change[]> = new Subject<Change[]>();
 
+  /** Observable that listens for a change when the server sends the most recent version of document */
+  public refreshDoc : Subject<LiturgicalDocument> = new Subject<LiturgicalDocument>();
+
   /** Array that gives usernames and colors */
   public users : Subject<User[]> = new Subject<User[]>();
 
@@ -57,6 +60,7 @@ class EditorServiceController {
     this.socket.on('docChanged', (data) => this.docChanged.next(data));
     this.socket.on('users', (data) => this.users.next(data));
     this.socket.on('joined', (data) => this.joined.next(data));
+    this.socket.on('refreshDoc', (data) => this.refreshDoc.next(data));
   }
 }
 
