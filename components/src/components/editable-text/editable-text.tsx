@@ -44,6 +44,24 @@ export class EditableTextComponent {
   // Listeners
   @Listen('input')
   onInput(ev : InputEvent) {
+    const start = this.textarea.selectionStart,
+          end = this.textarea.selectionEnd;
+
+    /* Update cursor positions if textarea range has changed
+     * Necessary for the following
+     * 1. Double-click to select a range of text
+     * 2. Delete or insert
+     * 3. Firefox will edit only the selected text; Safari/Chrome will extend it to a space on either side
+     */
+     console.log('cursor', this.cursor.start, this.cursor.end);
+     console.log('input', start, end);
+    if(start !== this.cursor.start) {
+      this.cursor.start = start;
+    }
+    if(end == this.cursor.end - 1) {
+      this.cursor.end = end;
+    }
+
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
 
@@ -98,6 +116,7 @@ export class EditableTextComponent {
       this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
       this.emitCursor(this.cursor);
     }
+    console.log(this.cursor, start, end);
     return this.cursor;
   }
 
