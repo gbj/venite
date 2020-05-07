@@ -1,5 +1,6 @@
 components/ldf
 */components.d.ts
+*/src/components.d.ts
 */.env
 */dist/
 */migrations/
