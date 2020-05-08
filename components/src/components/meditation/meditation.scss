@@ -1,0 +1,55 @@
+:host {
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .progress-circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+
+    .progress-circle {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      .circle-overlay {
+        background-color: var(--ldf-background-color);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 90%;
+        width: 90%;
+        border-radius: 50%;
+      }
+
+      .seconds {
+        font-family: var(--ldf-font-face);
+        font-size: 3em;
+      }
+    }
+  }
+
+  /* Plain, non-Ionic styling */
+  button.clear {
+    background-color: var(--ldf-background-color);
+    border: none;
+    font-size: 1em;
+  }
+}
+
+/* Animation */
+.hidden {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: 0.25s;
+}

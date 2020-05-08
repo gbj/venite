@@ -6,6 +6,7 @@ export class Meditation extends LiturgicalDocument {
   metadata: {
     /** Default length in seconds */
     length: number;
+    delay: number;
   };
 
   /** Optionally: a guided meditation or other appropriate text */
