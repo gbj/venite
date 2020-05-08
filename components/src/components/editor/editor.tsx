@@ -1,4 +1,4 @@
-import { Component, Element, State, Listen, Host, Prop, Watch, h } from '@stencil/core';
+import { Component, Element, State, Listen, Host, Prop, Watch, JSX, h } from '@stencil/core';
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
@@ -23,7 +23,8 @@ export class EditorComponent {
     // indexed by username
     [user: string]: {
       start: { left: number; top : number; };
-      end: { left: number; top : number; }
+      end: { left: number; top : number; };
+      target: HTMLTextAreaElement | HTMLInputElement;
     }
   } = {};
 
@@ -100,7 +101,10 @@ export class EditorComponent {
       // Cursor is somewhere
       const target : HTMLElement = elementFromPath(this.el, data.path);
       if(target) {
-        const textarea = target.shadowRoot.querySelector('textarea');
+        let textarea : HTMLTextAreaElement | HTMLInputElement = target.shadowRoot.querySelector('textarea');
+        if(!textarea) {
+          textarea = target.shadowRoot.querySelector('input');
+        }
 
         const rect = textarea.getBoundingClientRect();
 
@@ -109,7 +113,8 @@ export class EditorComponent {
 
         this.cursorPos[data.user] = {
           start: { top: start.top + rect.top, left: start.left + rect.left},
-          end: { top: end.top + rect.top, left: end.left + rect.left}
+          end: { top: end.top + rect.top, left: end.left + rect.left},
+          target: textarea
         };
         this.cursorPos = {... this.cursorPos};
         console.log(this.cursorPos);
@@ -144,6 +149,63 @@ export class EditorComponent {
     EditorService.join(this.docId, this.userToken);
   }
 
+  // Render helpers
+  buildCursorMarker(username : string) : JSX.Element[] {
+    const user = this.users.find(u => u.username == username),
+          pos = this.cursorPos[username];
+
+    // TODO: filter based on actual username, not userToken, once AuthService is setup
+
+    if(user && pos && this.userToken !== username) {
+      const fontSize = getComputedStyle(pos.target).fontSize;
+
+      return [
+        // label
+        this.buildCursorLabel(user, fontSize, pos.start.left, pos.start.top),
+        // basic rectangle
+        this.buildCursorRectangle('main-wing', user, pos.start.left == pos.end.left, fontSize, pos.start.left, pos.start.top, pos.end.left - pos.start.left, pos.end.top - pos.start.top),
+        // "right-wing" rectangle
+        pos.end.top !== pos.start.top && this.buildCursorRectangle('right-wing', user, false, fontSize, pos.start.left, pos.start.top, parseInt(getComputedStyle(pos.target).width), pos.end.top - pos.start.top, 0),
+        // "left-wing" rectangle
+        pos.end.top !== pos.start.top && this.buildCursorRectangle('left-wing', user, false, fontSize, pos.target.getBoundingClientRect().x, pos.start.top, pos.start.left, pos.end.top - pos.start.top, 0, 1.5)
+      ];
+    } else {
+      return [];
+    }
+  }
+
+  buildCursorLabel(user : User, fontSize : string, left : number, top : number) : JSX.Element {
+    return (
+      <div
+        class='cursor-label'
+        style={{
+          left: `${Math.round(left)}px`,
+          top: `calc(${Math.round(top)}px - ${fontSize})`,
+          backgroundColor: new Values(user.color).tint(75).hexString(),
+          borderColor: new Values(user.color).shade(40).hexString()
+        }}
+      >{user.username}</div>
+    );
+  }
+
+  buildCursorRectangle(wing : string, user : User, collapsed : boolean, fontSize : string, left : number, top : number, width : number, height : number = 0, addlHeight : number = 1.5, addlTop : number = 0) {
+    const style = {
+      left: `${Math.round(left)}px`,
+      top: `calc(${Math.round(top)}px + calc(${addlTop} * ${fontSize}))`,
+      width: `${Math.round(width)}px`,
+      height: `calc(${Math.round(height)}px + calc(${addlHeight} * ${fontSize}))`,
+      backgroundColor: new Values(user.color).tint(75).hexString(),
+      borderColor: new Values(user.color).shade(40).hexString()
+    };
+
+    return (
+      <div
+        class={collapsed ? `cursor collapsed ${wing}` : `cursor ${wing}`}
+        style={style}>
+      </div>
+    );
+  }
+
   render() {
     // TODO #auth -- replace this with real user info
     const user = this.users.find(u => u.username == this.userToken);
@@ -171,38 +233,7 @@ export class EditorComponent {
         </ldf-label-bar>
 
         {/* Cursors */}
-        {this.cursorPos && Object.keys(this.cursorPos).map(username => {
-          const user = this.users.find(u => u.username == username),
-                pos = this.cursorPos[username];
-          console.log(this.users, user);
-          // TODO: filter based on actual username, not userToken, once AuthService is setup
-          if(user && this.cursorPos[username] && this.userToken !== username) {
-            return [
-              <div
-                class='cursor-label'
-                style={{
-                  left: `${Math.round(pos.start.left)}px`,
-                  top: `calc(${Math.round(pos.start.top)}px - 1.5em)`,
-                  backgroundColor: new Values(user.color).tint(60).hexString(),
-                  borderColor: new Values(user.color).shade(40).hexString()
-                }}
-              >{user.username}</div>,
-              <div
-                class={pos.start.left == pos.end.left ? 'cursor collapsed' : 'cursor'}
-                style={{
-                  left: `${Math.round(pos.start.left)}px`,
-                  top: `${Math.round(pos.start.top)}px`,
-                  width: `${Math.round(pos.end.left - pos.start.left)}px`,
-                  backgroundColor: new Values(user.color).tint(60).hexString(),
-                  borderColor: new Values(user.color).shade(40).hexString()
-                }}>
-              </div>
-            ];
-          } else {
-            return undefined;
-          }
-        }
-        )}
+        {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
 
         {/* Render the actual liturgy */}
         {this.obj && <ldf-liturgical-document

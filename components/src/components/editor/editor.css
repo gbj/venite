@@ -22,9 +22,8 @@
 }
 
 .cursor, .cursor-label {
-  opacity: 0.75;
-  position: absolute;
-  height: 1.5em;
+  opacity: 1;
+  position: fixed;
   border-left-width: 2px;
   border-right-width: 2px;
   border-style: solid;
@@ -41,6 +40,7 @@
   display: block;
   font-family: sans-serif;
   font-size: 8pt;
+  height: 1.5em;
   margin-top: -2px;
   text-align: center;
   padding-right: 3px;
@@ -54,6 +54,13 @@
   border-left-width: 2px;
   border-right-width: 0;
   animation: 1s blink step-end infinite;
+}
+
+.left-wing {
+  border-right: none;
+}
+.right-wing {
+  border-right: none;
 }
 
 @keyframes "blink" {
