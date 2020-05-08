@@ -1,4 +1,6 @@
 import { Component, Element, State, Listen, Host, Prop, Watch, JSX, h } from '@stencil/core';
+import Debounce from 'debounce-decorator';
+
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
@@ -19,6 +21,10 @@ export class EditorComponent {
 
   @State() cursor: Cursor;
   @State() users : User[] = new Array();
+
+  cursors : {
+    [user: string]: Cursor
+  } = {};
   @State() cursorPos : {
     // indexed by username
     [user: string]: {
@@ -95,8 +101,47 @@ export class EditorComponent {
     EditorService.emit('docChanged', ev.detail);
   }
 
+  // Listen for scroll and window resize events and reset the cursors accordingly
+  // (the cursor reset method is debounced)
+  @Listen('scroll', { target: 'document' })
+  onScroll() {
+    console.log('scroll');
+    this.clearCursors();
+    this.resetCursors();
+  }
+
+  @Listen('resize', { target: 'window' })
+  onResize() {
+    console.log('resize');
+    this.clearCursors();
+    this.resetCursors();
+  }
+
   // Local Methods
+
+  clearCursors() {
+    this.cursorPos = {};
+  }
+
+  // Debounce resetCursors() for e.g., scroll
+  @Debounce(20)
+  resetCursors() {
+    const newCursorPos = {};
+    Object.keys(this.cursors).forEach(username => {
+      const cursor = this.cursors[username];
+      this.cursorToPos(cursor, newCursorPos)
+    });
+    this.cursorPos = newCursorPos;
+  }
+
   receivedCursorMoved(data : Cursor) {
+    this.cursors[data.user] = data;
+    this.cursorToPos(data, this.cursorPos);
+    this.cursorPos = { ... this.cursorPos};
+  }
+
+  // mutates cursorPos
+  cursorToPos(data : Cursor, cursorPos : any) {
     if(data && data.path) {
       // Cursor is somewhere
       const target : HTMLElement = elementFromPath(this.el, data.path);
@@ -111,22 +156,18 @@ export class EditorComponent {
         const start = getCaretCoordinates(textarea, data.start, undefined),
               end = getCaretCoordinates(textarea, data.end, undefined);
 
-        this.cursorPos[data.user] = {
+        cursorPos[data.user] = {
           start: { top: start.top + rect.top, left: start.left + rect.left},
           end: { top: end.top + rect.top, left: end.left + rect.left},
           target: textarea
         };
-        this.cursorPos = {... this.cursorPos};
-        console.log(this.cursorPos);
       } else {
         // Cursor is nowhere; hide this user's cursor
-        this.cursorPos[data.user] = undefined;
-        this.cursorPos = {... this.cursorPos};
+        cursorPos[data.user] = undefined;
       }
     } else {
       // Cursor is nowhere; hide this user's cursor
-      this.cursorPos[data.user] = undefined;
-      this.cursorPos = {... this.cursorPos};
+      cursorPos[data.user] = undefined;
     }
   }
 
