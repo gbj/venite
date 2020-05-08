@@ -11,7 +11,7 @@ import { handleInput } from './handle-input';
 })
 export class EditableTextComponent {
   @Element() el: HTMLElement;
-  private textarea : HTMLTextAreaElement;
+  private textarea : HTMLTextAreaElement | HTMLInputElement;
   private cursor : Cursor;
   private edits : Change[] = new Array();
 
@@ -30,6 +30,11 @@ export class EditableTextComponent {
    * Displays if text is falsy or an empty string
    */
   @Prop() placeholder: string;
+
+  /**
+   * Whether to display as a short, single-line input
+   */
+  @Prop() short : boolean;
 
   // Life Cycle
   componentDidRender() {
@@ -175,35 +180,61 @@ export class EditableTextComponent {
 
   // Private Methods
   autoGrow() {
-    /* this code is cosmetic, not essential, and relies on the global `window`
-     * we can't guarantee that `window` is always available (e.g., in Angular Unievrsal)
-     * so if there’s no window, just do nothing and let the textarea UI be
-     */
-    if(window) {
-      // reset the textarea height
-      this.textarea.style.height = '1.5em';
+    if(!this.short) {
+      /* this code is cosmetic, not essential, and relies on the global `window`
+       * we can't guarantee that `window` is always available (e.g., in Angular Unievrsal)
+       * so if there’s no window, just do nothing and let the textarea UI be
+       */
+      if(window) {
+        // reset the textarea height
+        this.textarea.style.height = '1.5em';
 
-      // calculate the textarea’s height
-      const computed = window.getComputedStyle(this.textarea),
-            height = parseInt(computed.getPropertyValue('border-top-width')) +
-                     parseInt(computed.getPropertyValue('padding-top')) +
-                     this.textarea.scrollHeight +
-                     parseInt(computed.getPropertyValue('padding-bottom')) +
-                     parseInt(computed.getPropertyValue('border-bottom-width')) +
-                     5;
+        // calculate the textarea’s height
+        const computed = window.getComputedStyle(this.textarea),
+              height = parseInt(computed.getPropertyValue('border-top-width')) +
+                       parseInt(computed.getPropertyValue('padding-top')) +
+                       this.textarea.scrollHeight +
+                       parseInt(computed.getPropertyValue('padding-bottom')) +
+                       parseInt(computed.getPropertyValue('border-bottom-width')) +
+                       5;
 
-      // set the new height of the textarea
-      this.textarea.style.height = `${height}px`;
+        // set the new height of the textarea
+        this.textarea.style.height = `${height}px`;
+      }
     }
   }
 
   render() {
-    return (
-      <Host>
-        <textarea
-          ref={el => this.textarea = el as HTMLTextAreaElement}
-          placeholder={this.placeholder}>{this.text}</textarea>
-      </Host>
-    );
+    // Ordinarily, use textarea
+    if(!this.short) {
+      return (
+        <Host>
+          <textarea
+            ref={el => this.textarea = el as HTMLTextAreaElement}
+            placeholder={this.placeholder}>{this.text}</textarea>
+        </Host>
+      );
+    } else {
+      if(customElements && !!customElements.get('ion-input')) {
+        return (
+          <Host>
+            <ion-input
+              ref={el => this.textarea = el as HTMLInputElement}
+              placeholder={this.placeholder}
+              value={this.text}>
+            </ion-input>}
+          </Host>
+        );
+      } else {
+        return (
+          <Host>
+            <input
+              ref={el => this.textarea = el as HTMLInputElement}
+              placeholder={this.placeholder}
+              value={this.text}/>
+          </Host>
+        );
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { LiturgicalDocument, Liturgy, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-liturgical-document',
@@ -54,6 +54,9 @@ export class LiturgicalDocumentComponent {
         break;
       case 'heading':
         node = <ldf-heading path={this.path} editable={this.editable} doc={doc as Heading}></ldf-heading>;
+        break;
+      case 'meditation':
+        node = <ldf-meditation path={this.path} editable={this.editable} doc={doc as Meditation}></ldf-meditation>;
         break;
       case 'option':
         node = <ldf-option path={this.path} editable={this.editable} doc={doc as Option}></ldf-option>;
