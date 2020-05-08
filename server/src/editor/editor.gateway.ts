@@ -12,6 +12,7 @@ const DOCS = {
       preferences: {}
     },
     value: [
+      {type: "heading", metadata: {length: 60 } },
       {type: "heading", metadata: {level: 1 }, label: "Compline"},
       {type: "heading", metadata: {level: 2 }, label: "Wednesday after the Third Sunday of Easter"},
       {type: "heading", citation: { source: 'BCP', citation: 'p. 127' }},
