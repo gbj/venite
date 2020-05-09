@@ -192,6 +192,7 @@ export class EditorComponent {
   }
 
   async receivedDocChanged(data : Change[]) {
+    console.log('received docChanged', data);
     data.forEach(async (change) => {
       // swap out for actual username
       if(change.user !== this.userToken) {

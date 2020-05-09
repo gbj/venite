@@ -3,6 +3,7 @@ import Debounce from 'debounce-decorator';
 
 import { Change, Cursor } from '@venite/ldf';
 import { handleInput } from './handle-input';
+import { consolidateChanges } from './consolidate-changes';
 
 @Component({
   tag: 'ldf-editable-text',
@@ -14,6 +15,7 @@ export class EditableTextComponent {
   private textarea : HTMLTextAreaElement | HTMLInputElement;
   private cursor : Cursor;
   private edits : Change[] = new Array();
+  private previousText : string;
 
   @State() currentText : string;
 
@@ -54,36 +56,37 @@ export class EditableTextComponent {
 
   // Listeners
   @Listen('input')
-  onInput(ev : InputEvent) {
-    const start = this.textarea.selectionStart,
-          end = this.textarea.selectionEnd;
-
-    /* Update cursor positions if textarea range has changed
-     * Necessary for the following
-     * 1. Double-click to select a range of text (i.e., not a collapsed cursor)
-     * 2. Delete or insert
-     * 3. Firefox will edit only the selected text; Safari/Chrome will extend it to a space on either side */
-    if(this.cursor.start !== this.cursor.end && start !== this.cursor.start) {
-      this.cursor.start = start;
-    }
-    if(end == this.cursor.end - 1) {
-      this.cursor.end = end;
-    }
-
+  async onInput() {
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
 
     // second, determine the appropriate Change event to be sent, depending
     // on the input type
-    let edit : Change = handleInput(ev.inputType, ev.data, this.cursor.element.value, this.cursor);
 
     // push this particular edit onto the stack
-    this.edits.push(edit);
+    this.edits.push(handleInput(this.cursor.path, this.previousText, this.cursor.element.value));
+    this.previousText = this.cursor.element.value;
 
     /* call the processEvents() to emit an event
      * this method is debounced so that, as we type, new edits will be pushed onto the stack
      * and will finally be collated and emitted as an event */
-    this.processEdits();
+    const consolidated = this.processEdits();
+    console.log('consolidated = ', consolidated);
+
+  }
+
+  /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
+   *  and emits it as a `docChanged` event  */
+  @Debounce(200)
+  processEdits() : Change[] {
+    const consolidated =  consolidateChanges(this.cursor.path, this.edits);
+
+    // clear out the old edits
+    this.edits = new Array();
+
+    // emit and return the new ones
+    this.docChanged.emit(consolidated);
+    return consolidated;
   }
 
   // This textarea no longer has the focus, so we no longer know where the cursor is
@@ -124,7 +127,6 @@ export class EditableTextComponent {
       this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
       this.emitCursor(this.cursor);
     }
-    console.log(this.cursor, start, end);
     return this.cursor;
   }
 
@@ -158,6 +160,7 @@ export class EditableTextComponent {
   // Lifecycle
   componentWillLoad() {
     this.textChanged(this.text);
+    this.previousText = this.text;
   }
 
   // Debounce emitting the change, not registering the change
@@ -166,51 +169,6 @@ export class EditableTextComponent {
   @Debounce(200)
   emitCursor(cursor : Cursor) {
     this.cursorMoved.emit(cursor);
-  }
-
-  /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
-   *  and emits it as a `docChanged` event  */
-  @Debounce(200)
-  @Method()
-  async processEdits() : Promise<Change[]> {
-    const consolidatedEdits : Change[] = new Array();
-    let consolidated : Change;
-
-    // Edits have been accumulating in a queue in this.edits on each input
-    // copy this into a local variable, and clear out the queue
-    const edits = this.edits;
-    this.edits = new Array();
-
-    /** consolidate these edits into the smallest number of possible changes
-      * for example, merge
-      * @example
-      * yields 'The', '(Backspace)', 'is'
-      * from six changes 'T' 'h' 'e' '(Backspace)' 'i' 's' */
-    edits.forEach((cur, index) => {
-      if(cur.op == 'insert') {
-        const next = edits[index + 1];
-
-        if(!consolidated) {
-          consolidated = new Change(cur.path, cur.op, cur.pos, cur.length, cur.value);
-        } else {
-          consolidated = new Change(cur.path, cur.op, consolidated.pos, consolidated.length + cur.length, `${consolidated.value}${cur.value}`);
-        }
-
-        if(!next) {
-          consolidatedEdits.push(consolidated);
-        }
-      } else {
-        if(consolidated) {
-          consolidatedEdits.push(consolidated);
-        }
-        consolidatedEdits.push(cur);
-      }
-    });
-
-    console.log(consolidatedEdits);
-    this.docChanged.emit(consolidatedEdits);
-    this.edits = new Array();
-    return consolidatedEdits;
   }
 
   render() {
