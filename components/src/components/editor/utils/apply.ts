@@ -9,10 +9,9 @@ import { Change } from '@venite/ldf';
   return new jot.APPLY(propertyName, new jot.SPLICE(0, 1, "")).apply(applyAgainst);
 }*/
 
-export function applyChangeToElement(textarea : HTMLTextAreaElement, change : Change) {
+export function applyChangeToElement(textarea : HTMLTextAreaElement, change : Change) : string {
   console.log('changing', change, textarea, textarea.value);
   let old : string = textarea.value;
-
 
   switch(change.op) {
     case 'insert':
@@ -20,16 +19,16 @@ export function applyChangeToElement(textarea : HTMLTextAreaElement, change : Ch
       textarea.value = (old.substring(0, change.pos) +
         change.value +
         old.substring(change.pos + change.length, old.length));
-      console.log('[inserted] new value = ', textarea.value);
       break;
     case 'delete':
       textarea.value = old.substring(0, change.pos) +
         change.value +
         old.substring(change.pos + change.length, old.length);
-        console.log('[deleted] new value = ', textarea.value);
       break;
     case 'set':
       textarea.value = change.value;
       break;
   }
+
+  return textarea.value;
 }

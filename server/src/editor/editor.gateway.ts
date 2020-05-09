@@ -102,6 +102,7 @@ Save us from the time of trial,
 export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
     @WebSocketServer() server;
+
     users: User[] = new Array();
 
     async handleConnection(){
@@ -149,10 +150,11 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
     @SubscribeMessage('leave')
     async onLeave(client, docId : string) {
+      console.log('leave received', client.id, docId);
       client.leave(docId);
       this.users = this.users.filter(user => user.client !== client.id);
-      client.to(docId)
-        .emit('users', this.users.filter(user => user.room == docId));
+      console.log('updated users: ', this.users);
+      client.emit('users', this.users.filter(user => user.room == docId));
     }
 
     @SubscribeMessage('docChanged')

@@ -269,7 +269,8 @@ export class EditorComponent {
 
   render() {
     // TODO #auth -- replace this with real user info
-    const user = this.users.find(u => u.username == this.userToken);
+    const user = this.users.find(u => u.username == this.userToken),
+          otherUsers = this.users.filter(u => u.username !== this.userToken);
 
     return (
       <Host>
@@ -286,10 +287,22 @@ export class EditorComponent {
           */}
         {/* "Logged in as" toolbar */}
         <ldf-label-bar>
-          {user && <div slot='start'>Logged in as <span class='user' style={{
-              backgroundColor: new Values(user.color).tint(40).hexString(),
-              borderColor: new Values(user.color).shade(10).hexString()
-            }}>{user.username}</span>.</div>}
+          <div slot='start'>
+            {user && <span>Logged in as <span class='user' style={{
+                backgroundColor: new Values(user.color).tint(40).hexString(),
+                borderColor: new Values(user.color).shade(10).hexString()
+              }}>{user.username}</span>. </span>}
+            {
+              otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
+                <span>
+                  <span class='user' style={{
+                    backgroundColor: new Values(u.color).tint(40).hexString(),
+                    borderColor: new Values(u.color).shade(10).hexString()
+                  }}>{u.username}</span>
+                </span>
+              ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
+            }
+            </div>
           <slot name='controls' slot='end'/>
         </ldf-label-bar>
 

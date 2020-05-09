@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Listen, Event, EventEmitter, Method, Host, h } from '@stencil/core';
+import { Component, Element, Prop, Listen, Event, EventEmitter, Method, Host, State, Watch, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 
 import { Change, Cursor } from '@venite/ldf';
@@ -15,11 +15,17 @@ export class EditableTextComponent {
   private cursor : Cursor;
   private edits : Change[] = new Array();
 
+  @State() currentText : string;
+
   // Properties
   /**
    * Starting text for editing
    */
   @Prop() text: string;
+  @Watch('text')
+  textChanged(newText : string) {
+    this.currentText = newText;
+  }
 
   /**
    * A JSON Pointer that points to the Collect being edited
@@ -52,14 +58,12 @@ export class EditableTextComponent {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
 
-    console.log('input event', start, end, ev.data, ev);
-
     /* Update cursor positions if textarea range has changed
      * Necessary for the following
      * 1. Double-click to select a range of text (i.e., not a collapsed cursor)
      * 2. Delete or insert
      * 3. Firefox will edit only the selected text; Safari/Chrome will extend it to a space on either side */
-    if(this.cursor.start !== this.cursor.end && start !== this.cursor.start && this.cursor.start !== 0) {
+    if(this.cursor.start !== this.cursor.end && start !== this.cursor.start) {
       this.cursor.start = start;
     }
     if(end == this.cursor.end - 1) {
@@ -124,6 +128,38 @@ export class EditableTextComponent {
     return this.cursor;
   }
 
+  /** Expand the child textarea horizontally to fit its content */
+  @Method()
+  autoGrow() {
+    if(!this.short) {
+      /* this code is cosmetic, not essential, and relies on the global `window`
+       * we can't guarantee that `window` is always available (e.g., in Angular Unievrsal)
+       * so if there’s no window, just do nothing and let the textarea UI be
+       */
+      if(window) {
+        // reset the textarea height
+        this.textarea.style.height = '1.5em';
+
+        // calculate the textarea’s height
+        const computed = window.getComputedStyle(this.textarea),
+              height = parseInt(computed.getPropertyValue('border-top-width')) +
+                       parseInt(computed.getPropertyValue('padding-top')) +
+                       this.textarea.scrollHeight +
+                       parseInt(computed.getPropertyValue('padding-bottom')) +
+                       parseInt(computed.getPropertyValue('border-bottom-width')) +
+                       5;
+
+        // set the new height of the textarea
+        this.textarea.style.height = `${height}px`;
+      }
+    }
+  }
+
+  // Lifecycle
+  componentWillLoad() {
+    this.textChanged(this.text);
+  }
+
   // Debounce emitting the change, not registering the change
   // That means the cursor will also be in the right place when edits need to refer to it,
   // but also that we won't be sending cursor updates to the server constantly as we type
@@ -177,32 +213,6 @@ export class EditableTextComponent {
     return consolidatedEdits;
   }
 
-  // Private Methods
-  autoGrow() {
-    if(!this.short) {
-      /* this code is cosmetic, not essential, and relies on the global `window`
-       * we can't guarantee that `window` is always available (e.g., in Angular Unievrsal)
-       * so if there’s no window, just do nothing and let the textarea UI be
-       */
-      if(window) {
-        // reset the textarea height
-        this.textarea.style.height = '1.5em';
-
-        // calculate the textarea’s height
-        const computed = window.getComputedStyle(this.textarea),
-              height = parseInt(computed.getPropertyValue('border-top-width')) +
-                       parseInt(computed.getPropertyValue('padding-top')) +
-                       this.textarea.scrollHeight +
-                       parseInt(computed.getPropertyValue('padding-bottom')) +
-                       parseInt(computed.getPropertyValue('border-bottom-width')) +
-                       5;
-
-        // set the new height of the textarea
-        this.textarea.style.height = `${height}px`;
-      }
-    }
-  }
-
   render() {
     // Ordinarily, use textarea
     if(!this.short) {
@@ -210,7 +220,7 @@ export class EditableTextComponent {
         <Host>
           <textarea
             ref={el => this.textarea = el as HTMLTextAreaElement}
-            placeholder={this.placeholder}>{this.text}</textarea>
+            placeholder={this.placeholder}>{this.currentText}</textarea>
         </Host>
       );
     } else {
@@ -220,7 +230,7 @@ export class EditableTextComponent {
             <ion-input
               ref={el => this.textarea = el as HTMLInputElement}
               placeholder={this.placeholder}
-              value={this.text}>
+              value={this.currentText}>
             </ion-input>}
           </Host>
         );
@@ -230,7 +240,7 @@ export class EditableTextComponent {
             <input
               ref={el => this.textarea = el as HTMLInputElement}
               placeholder={this.placeholder}
-              value={this.text}/>
+              value={this.currentText}/>
           </Host>
         );
       }

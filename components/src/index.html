@@ -12,13 +12,13 @@
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-  
   <div id='example'>
     <ldf-editor doc-id='abc123' user-token=''>
       <div slot='controls'>
         <input type='text' id='docId' placeholder='Document ID' name='docId' value='abc123' />
         <input type='text' id='userToken' placeholder='User Token' name='userToken' />
         <button onClick="handleForm()">Join</button>
+        <button onClick="leave()">Leave</button>
       </div>
     </ldf-editor>
   </div>
@@ -31,6 +31,12 @@
     editNode.setAttribute('doc-id', doc);
     editNode.setAttribute('user-token', user);
     console.log(editNode);
+  }
+
+  async function leave() {
+    await customElements.whenDefined('ldf-editor');
+    const component = document.querySelector('ldf-editor');
+    await component.leave('abc123');
   }
   </script>
 
