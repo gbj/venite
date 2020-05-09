@@ -1,8 +1,9 @@
-import { Component, Element, State, Listen, Host, Prop, Watch, JSX, h } from '@stencil/core';
+import { Component, Element, State, Listen, Host, Prop, Watch, Method, JSX, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 import { Subscription } from 'rxjs';
 
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
+
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
 import { applyChangeToElement } from './utils/apply';
@@ -82,14 +83,6 @@ export class EditorComponent {
     }));
   }
 
-  disconnectedCallback() {
-    // disconnect from the server
-    EditorService.disconnect();
-
-    // unsubscribe from all subscriptions to avoid memory leak
-    this.subscription.unsubscribe();
-  }
-
   // Listeners
   // Watch for cursor moves bubbled up from the editable-texts and send them to the server
   @Listen('cursorMoved')
@@ -122,6 +115,26 @@ export class EditorComponent {
     console.log('resize');
     this.clearCursors();
     this.resetCursors();
+  }
+
+  // fires when user is leaving the page
+  @Listen('beforeunload', { target: 'window' })
+  onBeforeUnload() {
+    // leave the 'room' for the doc
+    this.leave(this.docId);
+
+    // disconnect from the server
+    EditorService.disconnect();
+
+    // unsubscribe from all subscriptions to avoid memory leak
+    this.subscription.unsubscribe();
+  }
+
+  // Public methods
+  @Method()
+  async leave(docId : string) : Promise<void> {
+    EditorService.leave(docId);
+    this.obj = null;
   }
 
   // Local Methods
@@ -178,11 +191,11 @@ export class EditorComponent {
     }
   }
 
-  receivedDocChanged(data : Change[]) {
-    data.forEach((change) => {
+  async receivedDocChanged(data : Change[]) {
+    data.forEach(async (change) => {
       // swap out for actual username
       if(change.user !== this.userToken) {
-        const target = elementFromPath(this.el, change.path),
+        const target : HTMLElement = elementFromPath(this.el, change.path),
               textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
         applyChangeToElement(textarea, change);
       }
