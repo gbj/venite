@@ -1,5 +1,6 @@
 import { Component, Element, State, Listen, Host, Prop, Watch, JSX, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
+import { Subscription } from 'rxjs';
 
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { EditorService } from './editor-service';
@@ -36,6 +37,9 @@ export class EditorComponent {
 
   hasJoinedDocument : boolean = false;
 
+  // Store all our Subscriptions here so we can unsubscribe when the component unloads
+  subscription : Subscription = new Subscription();
+
   // Props
   @Prop() docId : string;
   @Watch('docId')
@@ -52,7 +56,7 @@ export class EditorComponent {
   }
 
   // Life Cycle
-  componentWillLoad() {
+  connectedCallback() {
     // Connect to the server, without logging in or opening a document
     EditorService.connect();
 
@@ -60,27 +64,30 @@ export class EditorComponent {
     EditorService.join(this.docId, this.userToken);
 
     // Subscribe to observables that handle each of the events from the server
-    EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data));
-    EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data));
-    EditorService.refreshDoc.subscribe((data) => {
+    this.subscription.add(EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data)));
+    this.subscription.add(EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data)));
+    this.subscription.add(EditorService.refreshDoc.subscribe((data) => {
       // TODO: check whether we have focused into another area and started editing
       this.obj = data;
-    })
-    EditorService.users.subscribe((data) => {
+    }));
+    this.subscription.add(EditorService.users.subscribe((data) => {
       console.log('users = ', data);
       this.users = data;
-    });
-    EditorService.joined.subscribe((data) => {
+    }));
+    this.subscription.add(EditorService.joined.subscribe((data) => {
       console.log('`joined` received', data);
       this.obj = data.doc;
       this.users = data.users;
       this.hasJoinedDocument = true;
-    });
+    }));
   }
 
   disconnectedCallback() {
     // disconnect from the server
     EditorService.disconnect();
+
+    // unsubscribe from all subscriptions to avoid memory leak
+    this.subscription.unsubscribe();
   }
 
   // Listeners
