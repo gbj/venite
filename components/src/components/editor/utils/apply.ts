@@ -1,34 +1,12 @@
-//import * as jot from 'jot';
-//import * as pointer from 'json-pointer';
 import { Change } from '@venite/ldf';
 
-/*export function apply(obj : any, path : string) { //, op : any) {
-  const splitPath : string[] = path.split('/'),
-        propertyName = splitPath[splitPath.length - 1],
-        applyAgainst = pointer.get(obj, splitPath.slice(0, splitPath.length - 1));
-  return new jot.APPLY(propertyName, new jot.SPLICE(0, 1, "")).apply(applyAgainst);
-}*/
+import * as json0 from 'ot-json0';
 
 export function applyChangeToElement(textarea : HTMLTextAreaElement, change : Change) : string {
-  console.log('changing', change, textarea, textarea.value);
-  let old : string = textarea.value;
+  const currentValue = textarea.value;
 
-  switch(change.op) {
-    case 'insert':
-      console.log('old value = ', old);
-      textarea.value = (old.substring(0, change.pos) +
-        change.value +
-        old.substring(change.pos + change.length, old.length));
-      break;
-    case 'delete':
-      textarea.value = old.substring(0, change.pos) +
-        change.value +
-        old.substring(change.pos + change.length, old.length);
-      break;
-    case 'set':
-      textarea.value = change.value;
-      break;
-  }
+  const newValue = json0.type.apply(currentValue, new Array(change.op));
+  textarea.value = newValue;
 
-  return textarea.value;
+  return newValue;
 }

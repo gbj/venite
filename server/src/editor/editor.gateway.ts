@@ -160,6 +160,7 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
     @SubscribeMessage('docChanged')
     async onDocChanged(client, message : Change) {
       message.user = this.users.find(user => user.client == client.id).username;
+      console.log('change = ', message);
       client.broadcast.emit('docChanged', message);
     }
 
