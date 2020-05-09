@@ -8,9 +8,10 @@ export function handleInput(
 ) : Change {
   let edit : Change;
 
+  console.log(cursor.start, cursor.end);
+
   switch(inputType) {
     /* TODO -- handle other input types **/
-
     // insert: at cursor, overwrite 0 characters (i.e., insert) with data
     case 'insertText':
     case 'insertFromPaste':

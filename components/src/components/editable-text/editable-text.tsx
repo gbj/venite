@@ -52,15 +52,14 @@ export class EditableTextComponent {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
 
+    console.log('input event', start, end, ev.data, ev);
+
     /* Update cursor positions if textarea range has changed
      * Necessary for the following
-     * 1. Double-click to select a range of text
+     * 1. Double-click to select a range of text (i.e., not a collapsed cursor)
      * 2. Delete or insert
-     * 3. Firefox will edit only the selected text; Safari/Chrome will extend it to a space on either side
-     */
-     console.log('cursor', this.cursor.start, this.cursor.end);
-     console.log('input', start, end);
-    if(start !== this.cursor.start) {
+     * 3. Firefox will edit only the selected text; Safari/Chrome will extend it to a space on either side */
+    if(this.cursor.start !== this.cursor.end && start !== this.cursor.start && this.cursor.start !== 0) {
       this.cursor.start = start;
     }
     if(end == this.cursor.end - 1) {
