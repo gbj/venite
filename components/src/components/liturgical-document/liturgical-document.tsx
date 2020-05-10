@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Host, Listen, JSX, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
 @Component({
@@ -8,6 +8,7 @@ import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option,
 export class LiturgicalDocumentComponent {
   // States
   @State() obj : LiturgicalDocument;
+  @State() hasFocus : boolean = false;
 
   // Properties
   /**
@@ -28,15 +29,30 @@ export class LiturgicalDocumentComponent {
     }
   }
 
-  /**
-   * A JSON Pointer that points to the Collect being edited
-   */
+  /** A JSON Pointer that points to the LiturgicalDocument being edited */
   @Prop({ reflect: true }) path : string;
 
   /**
    * Whether the object is editable
    */
   @Prop() editable : boolean;
+
+  // Listeners
+
+  /** On hover, display Add Block buttons */
+  @Listen('mouseover')
+  onMouseOver() {
+    this.setFocus(true);
+  }
+
+  @Listen('mouseout')
+  onMouseOut() {
+    this.setFocus(false)
+  }
+
+  setFocus(value : boolean) {
+    this.hasFocus = value;
+  }
 
   // Lifecycle events
   componentWillLoad() {
@@ -89,6 +105,12 @@ export class LiturgicalDocumentComponent {
 
   // Render
   render() {
-    return <Host lang={this.obj.language}>{this.chooseComponent(this.obj)}</Host>;
+    return (
+      <Host lang={this.obj.language}>
+        {this.editable && <ldf-editable-add-block visible={this.hasFocus} path={this.path}></ldf-editable-add-block>}
+
+        {this.chooseComponent(this.obj)}
+      </Host>
+  );
   }
 }

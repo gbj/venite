@@ -1,5 +1,5 @@
 class Json0Operation {
-  p: (number | string)[];
+  p: (number | string | undefined)[];
   li?: any;
   lm?: any;
   ld?: any;

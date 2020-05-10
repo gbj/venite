@@ -1,9 +1,16 @@
 :root {
   /* Globals/Dark Mode */
   --ldf-background-color: #ffffff;
+  --ldf-color: #121212;
+
+  .dark {
+    --ldf-background-color: #ffffff;
+    --ldf-color: #121212;
+  }
 
   /* Font preference */
   --ldf-font-face: 'EB Garamond', 'Garamond', serif;
+  --ldf-controls-font-family: 'Roboto', sans-serif;
 
   .font-gill-sans {
     --ldf-font-face: 'Gill Sans', sans-serif;

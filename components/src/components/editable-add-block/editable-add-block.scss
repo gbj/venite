@@ -1,0 +1,110 @@
+:host {
+  width: 100%;
+
+  /* Center buttons within button container */
+  .button-container {
+    display: flex;
+    align-items: center;
+    height: 2em;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Shared button styles */
+  button {
+    background-color: var(--ldf-background-color);
+    color: var(--ldf-color);
+    font-size: 2em;
+    font-family: var(--ldf-controls-font-family);
+    font-weight: lighter;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* Shared animations */
+  button.visible {
+    opacity: 1;
+    transition: 0.25s;
+  }
+
+  button.hidden {
+    opacity: 0;
+    transition: 0.25s;
+  }
+
+  /* Circular (+) Add Button */
+  button.add {
+    border: 1px solid #808080;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #cccccc;
+    color: #808080;
+  }
+
+  /* Buttons for each possible block */
+  button.block {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 2em;
+    padding: 0.25em;
+
+    svg {
+      height: 1em;
+      margin-bottom: 0.25em;
+      width: auto;
+    }
+  }
+
+  /* Add Block */
+  .underlying {
+    width: 100%;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    min-height: 1em;
+    position: relative;
+    bottom: 1.5em;
+    z-index: -1;
+  }
+
+  .underlying.visible {
+    opacity: 0.5;
+    transition: 0.25s;
+  }
+
+  .underlying.visible.expanded {
+    z-index: 1;
+  }
+
+  .underlying.hidden {
+    opacity: 0;
+    transition: 0.25s;
+
+    button {
+      z-index: -1;
+    }
+  }
+
+  /* Options within add block */
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .options.collapsed button, .options.collapsed ion-button {
+    height: 0;
+    opacity: 0;
+    transition: 0.25s;
+    z-index: -1;
+  }
+
+  .options.expanded button, .options.expanded ion-button {
+    opacity: 1;
+    transition: 0.25s;
+    z-index: 1;
+  }
+}

@@ -9,7 +9,7 @@ export function consolidateChanges(path : string, changes : Change[]) : Change[]
     .reduce((a, b) => json0.type.compose(a, b));
 
   return Array.isArray(composedOps) ?
-    composedOps.map(op => new Change(path, op)) :
+    composedOps.map(op => new Change(path, new Array(op))) :
     new Array(new Change(path, composedOps));
 
 }

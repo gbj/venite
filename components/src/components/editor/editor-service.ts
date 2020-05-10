@@ -48,7 +48,7 @@ class EditorServiceController {
     console.log('emitted', event, message);
   }
 
-  constructor(url : string = 'http://localhost:3000') {
+  constructor(url : string = 'http://10.0.0.163:3000') {
     this.socket = io(url);
 
     // When this user connects or disconnects
