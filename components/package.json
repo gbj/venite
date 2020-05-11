@@ -32,7 +32,6 @@
     "debounce-decorator": "^1.0.6",
     "jest": "^24.9.0",
     "jest-cli": "24.9.0",
-    "jot": "git+https://github.com/joshdata/jot.git",
     "json-pointer": "^0.6.0",
     "puppeteer": "2.1.1",
     "ts-jest": "^25.5.0",

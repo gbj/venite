@@ -1,7 +1,6 @@
 import { Change, LiturgicalDocument } from '@venite/ldf';
 
 import * as json0 from 'ot-json0';
-//import pointer from 'json-pointer';
 
 /** Pure function: returns a new `LiturgicalDocument` that applies `change` to the old `LiturgicalDocument` given by `doc` */
 export function applyChange(doc : LiturgicalDocument, change : Change) : LiturgicalDocument {
