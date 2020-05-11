@@ -1,0 +1,30 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.25em;
+  }
+}
+
+/* Buttons for each possible block */
+button.block {
+  border: none;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+  width: 6em;
+  padding: 0.25em;
+
+  svg {
+    height: 2em;
+    margin-bottom: 0.25em;
+    width: auto;
+  }
+}

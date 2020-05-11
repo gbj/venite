@@ -42,25 +42,6 @@
     font-size: 2em;
   }
 
-  /* Buttons for each possible block */
-  button.block {
-    border: none;
-    display: block;
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    align-items: center;
-    justify-content: center;
-    width: 6em;
-    padding: 0.25em;
-
-    svg {
-      height: 0.5em;
-      margin-bottom: 0.25em;
-      width: auto;
-    }
-  }
-
   /* Add Block */
   .underlying {
     width: 100%;
@@ -115,5 +96,15 @@
     opacity: 1;
     transition: 0.25s;
     z-index: 1;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
   }
 }

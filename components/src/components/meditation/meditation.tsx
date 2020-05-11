@@ -203,12 +203,12 @@ export class MeditationComponent {
     this.secondsRemaining = this.obj.metadata.length;
   }
 
-  buttonNode(handler, label : string, icon : string, fill : string = 'clear', size : string = 'large') : JSX.Element {
+  buttonNode(handler, label : string, icon : string, fill : 'clear' | 'outline' | 'solid' | 'default' = 'clear', size : 'default' | 'large' | 'small' = 'large') : JSX.Element {
     const localeStrings = this.localeStrings || {};
 
     if(customElements && !!customElements.get('ion-button')) {
       return (
-        <ion-button click={handler} fill={fill} style={{color: this.color}} size={size}>
+        <ion-button onClick={handler} fill={fill} style={{color: this.color}} size={size}>
           <ion-icon name={icon} slot='start'></ion-icon>
           <ion-label>{localeStrings[label]}</ion-label>
         </ion-button>
@@ -234,7 +234,7 @@ export class MeditationComponent {
         <ldf-label-bar>
           <div class={{'hidden': !!this.secondsRemaining}}>
             <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
-              {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'block')}
+              {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid')}
               <input type='number' value={this.obj.metadata.length / 60} onInput={(e) => this.handleControlValue(e)} />
               <span>{localeStrings.minutes}</span>
             </form>

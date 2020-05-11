@@ -86,9 +86,9 @@ export class OptionComponent {
       // <= 2, short options
       if(!optionsAreLong) {
         return (
-          <ion-segment color="primary" value={currentlySelected}>
+          <ion-segment color="primary" value={currentlySelected.toString()}>
             {this.obj.value.map((option, optionIndex) =>
-              <ion-segment-button value={optionIndex}>
+              <ion-segment-button value={optionIndex.toString()}>
                 <ion-label>{this.obj.getVersionLabel(option)}</ion-label>
               </ion-segment-button>
             )}
