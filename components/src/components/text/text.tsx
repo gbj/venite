@@ -93,14 +93,14 @@ export class TextComponent {
               path={`${this.path}/value/${prayerIndex}`}>
             </ldf-editable-text>
           )}
-          <span class='response'>
+          {!(this.obj.metadata && this.obj.metadata.omit_response) && <span class='response'>
             <ldf-editable-text
               id={`${this.obj.uid || this.obj.slug}-response`}
               text={this.obj.metadata && this.obj.metadata.response}
               path={`${this.path}/response`}
               placeholder={localeStrings.amen}>
             </ldf-editable-text>
-          </span>
+          </span>}
         </Host>
       );
     } else {

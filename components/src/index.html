@@ -11,24 +11,24 @@
   <script type="module" src="/build/ldf.esm.js"></script>
   <script nomodule src="/build/ldf.js"></script>
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
-<body>
-  <i class="fas fa-bible"></i>
-  <div id='example'>
+<body class="md">
+  <h1>Venite</h1>
+  <article id='example'>
+    <h2>Bulletin Editor</h2>
     <ldf-editor doc-id='abc123' user-token=''>
-      <div slot='controls'>
+      <nav slot='controls'>
         <input type='text' id='docId' placeholder='Document ID' name='docId' value='abc123' />
         <input type='text' id='userToken' placeholder='User Token' name='userToken' value='Greg' />
         <button onClick="handleForm()">Join</button>
         <button onClick="leave()">Leave</button>
-      </div>
+      </nav>
     </ldf-editor>
-  </div>
+  </article>
 
   <script>
   function handleForm() {
-    const editNode = document.getElementById('example').childNodes[1],
+    const editNode = document.getElementById('example').querySelector('ldf-editor'),
           doc = document.getElementById('docId').value,
           user = document.getElementById('userToken').value;
     editNode.setAttribute('doc-id', doc);

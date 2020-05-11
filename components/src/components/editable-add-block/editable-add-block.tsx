@@ -85,7 +85,8 @@ export class EditableAddBlockComponent {
     this.docShouldChange.emit(
       new Change(
         null, // null path, because we're passing the path in the `p` of the json0 op below
-        template.map(doc => ({ p, li: doc }))
+        template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
+          .map(doc => ({ p, li: doc }))
       )
     );
   }

@@ -12,6 +12,8 @@ export class Heading extends LiturgicalDocument {
     break?: boolean;
   };
 
+  value: string[];
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<Heading> = {}) {
     super(data);

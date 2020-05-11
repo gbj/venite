@@ -7,6 +7,7 @@ export class Text extends LiturgicalDocument {
   value: string[];
   metadata?: {
     response: string;
+    omit_response: boolean;
   };
 
   //** Constructor takes a Javascript object containing the class's properties */

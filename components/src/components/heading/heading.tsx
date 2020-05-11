@@ -112,7 +112,17 @@ export class HeadingComponent {
 
         <ldf-label-bar>
           {hasLabel && this.headerNode(level, label)}
-          <slot name='additional'/>
+          <slot name='additional'>
+            {this.obj.value && this.obj.value.length > 0 && this.obj.value.map((para, ii) =>
+              this.editable ?
+              <ldf-editable-text
+                id={`${this.obj.uid || this.obj.slug}-${ii}`}
+                text={para}
+                path={`${this.path}/value/${ii}`}
+              ></ldf-editable-text> :
+              <p id={`${this.obj.uid || this.obj.slug}-${ii}`}>{para}</p>
+            )}
+          </slot>
           {hasCitation && this.citationNode(this.obj.citation)}
         </ldf-label-bar>
       </Host>

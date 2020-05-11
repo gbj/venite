@@ -1,10 +1,19 @@
 {
+  "anthem": "Anthem",
   "bible": "Reading",
   "heading": "Heading",
+  "hymn": "Hymn",
+  "litany": "Litany",
   "meditation": "Meditation",
   "prayer": "Prayer",
+  "preces": "Preces",
   "refrain": "Refrain",
+  "responsive": "Responsive Prayer",
   "rubric": "Rubric",
   "text": "Text",
-  "title": "Add a Block"
+  "title": "Add a Block",
+  "Reading": "Reading",
+  "Prayer": "Prayer",
+  "Liturgy": "Liturgy",
+  "Music": "Music"
 }
