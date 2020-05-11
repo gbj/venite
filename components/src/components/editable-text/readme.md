@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                                            | Type     | Default     |
-| ------------- | ------------- | ------------------------------------------------------ | -------- | ----------- |
-| `path`        | `path`        | A JSON Pointer that points to the Collect being edited | `string` | `undefined` |
-| `placeholder` | `placeholder` | Displays if text is falsy or an empty string           | `string` | `undefined` |
-| `text`        | `text`        | Starting text for editing                              | `string` | `undefined` |
+| Property      | Attribute     | Description                                            | Type      | Default     |
+| ------------- | ------------- | ------------------------------------------------------ | --------- | ----------- |
+| `path`        | `path`        | A JSON Pointer that points to the Collect being edited | `string`  | `undefined` |
+| `placeholder` | `placeholder` | Displays if text is falsy or an empty string           | `string`  | `undefined` |
+| `short`       | `short`       | Whether to display as a short, single-line input       | `boolean` | `undefined` |
+| `text`        | `text`        | Starting text for editing                              | `string`  | `undefined` |
 
 
 ## Events
@@ -23,17 +24,6 @@
 
 
 ## Methods
-
-### `processEdits() => Promise<Change[]>`
-
-Reduces the list of edits triggered by input events to as few contiguous edits as possible.
-and emits it as a `docChanged` event
-
-#### Returns
-
-Type: `Promise<Change[]>`
-
-
 
 ### `registerCursor() => Promise<Cursor>`
 

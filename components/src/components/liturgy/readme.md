@@ -31,8 +31,19 @@ graph TD;
   ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-meditation --> ion-button
+  ldf-meditation --> ion-icon
+  ldf-meditation --> ion-label
+  ldf-meditation --> ldf-label-bar
+  ion-button --> ion-ripple-effect
+  ldf-option --> ion-segment
+  ldf-option --> ion-segment-button
+  ldf-option --> ion-label
+  ldf-option --> ion-select
+  ldf-option --> ion-select-option
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
+  ion-segment-button --> ion-ripple-effect
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar
@@ -54,6 +65,8 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

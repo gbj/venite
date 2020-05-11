@@ -35,18 +35,34 @@ Type: `Promise<void>`
 
 ### Depends on
 
+- ion-segment
+- ion-segment-button
+- ion-label
+- ion-select
+- ion-select-option
 - [ldf-label-bar](../label-bar)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
+  ldf-option --> ion-segment
+  ldf-option --> ion-segment-button
+  ldf-option --> ion-label
+  ldf-option --> ion-select
+  ldf-option --> ion-select-option
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
+  ion-segment-button --> ion-ripple-effect
   ldf-liturgical-document --> ldf-option
   ldf-liturgy --> ldf-liturgical-document
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-meditation --> ion-button
+  ldf-meditation --> ion-icon
+  ldf-meditation --> ion-label
+  ldf-meditation --> ldf-label-bar
+  ion-button --> ion-ripple-effect
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar
@@ -68,6 +84,8 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
   style ldf-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
