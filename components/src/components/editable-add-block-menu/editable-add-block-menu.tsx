@@ -1,4 +1,4 @@
-import { Element, Component, Prop, Host, State, h } from '@stencil/core';
+import { Element, Component, Prop, Host, Listen, State, h } from '@stencil/core';
 import { LiturgicalDocument } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
@@ -13,11 +13,20 @@ export class EditableAddBlockMenuComponent {
   @Element() element: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
+  @State() menu = [ ... MENU ];
 
   @Prop() modal : any;
 
+  // Listener to capture searchbar changes
+  @Listen('ionChange')
+  onIonChange(ev : CustomEvent) {
+    const search = ev.detail.value;
+    this.filter(search);
+  }
+
   async componentWillLoad() {
     this.loadLocaleStrings();
+    this.filter('');
   }
 
   /** Asynchronously return localization strings */
@@ -43,11 +52,35 @@ export class EditableAddBlockMenuComponent {
     this.modal.dismiss(template);
   }
 
+  /** Mark each item in menu as hidden or not
+    * depending on whether its label or the localized version includes
+    * the search */
+  filter(search: string) {
+    this.menu = [
+      ... this.menu.map(entry => {
+        const label = (entry.label || '').toLowerCase(),
+              localeLabel = ((this.localeStrings || {})[entry.label] || '').toLowerCase(),
+              s = search.toLowerCase();
+        console.log(label, localeLabel, s, label.includes(s), localeLabel.includes(s) );
+        return {
+          ... entry,
+          hidden: !(label.includes(s) || localeLabel.includes(s))
+        }
+      })
+    ];
+  }
+
   render() {
     const localeStrings = this.localeStrings || {};
 
     // list of unique section tags
-    const sections = Array.from(new Set(MENU.map(item => item.section).flat()));
+    const sections = Array.from(
+      new Set(
+        this.menu
+          .filter(item => !item.hidden)
+          .map(item => item.section).flat()
+      )
+    );
 
     return (
       <Host>
@@ -60,13 +93,16 @@ export class EditableAddBlockMenuComponent {
               </ion-button>
             </ion-buttons>
           </ion-toolbar>
+          <ion-toolbar>
+            <ion-searchbar slot="end"></ion-searchbar>
+          </ion-toolbar>
         </ion-header>
         <ion-content>
           {sections.map(section =>
             <ion-list>
               <ion-list-header>{localeStrings[section] || section}</ion-list-header>
               <ul>
-              {MENU.filter(item => item.section.includes(section) && !item.hidden).map(item =>
+              {this.menu.filter(item => item.section.includes(section) && !item.hidden).map(item =>
                 <li>
                   <button onClick={() => this.add(item.template)} class='block'>
                     { (item.icon)() }
