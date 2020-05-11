@@ -14,7 +14,6 @@
   button {
     background-color: var(--ldf-background-color);
     color: var(--ldf-color);
-    font-size: 2em;
     font-family: var(--ldf-controls-font-family);
     font-weight: lighter;
   }
@@ -40,20 +39,23 @@
     border-radius: 50%;
     box-shadow: 0 0 5px #cccccc;
     color: #808080;
+    font-size: 2em;
   }
 
   /* Buttons for each possible block */
   button.block {
     border: none;
+    display: block;
     display: flex;
     flex-direction: column;
+    font-size: 1em;
     align-items: center;
     justify-content: center;
-    max-width: 2em;
+    width: 6em;
     padding: 0.25em;
 
     svg {
-      height: 1em;
+      height: 0.5em;
       margin-bottom: 0.25em;
       width: auto;
     }
@@ -79,9 +81,13 @@
     z-index: 1;
   }
 
+  .underlying.collapsed {
+    height: 1em;
+  }
+
   .underlying.hidden {
     opacity: 0;
-    transition: 0.25s;
+    transition: 1s;
 
     button {
       z-index: -1;
@@ -91,14 +97,17 @@
   /* Options within add block */
   .options {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 1em;
   }
 
   .options.collapsed button, .options.collapsed ion-button {
     height: 0;
     opacity: 0;
     transition: 0.25s;
+    width: 2em;
     z-index: -1;
   }
 

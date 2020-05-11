@@ -1,4 +1,4 @@
-import { Element, Component, Prop, State, Host, Event, EventEmitter, JSX, h } from '@stencil/core';
+import { Element, Component, Prop, State, Host, Event, EventEmitter, JSX, Watch, h } from '@stencil/core';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { LiturgicalDocument, Change } from '@venite/ldf';
 
@@ -20,6 +20,12 @@ export class EditableAddBlockComponent {
   // Properties
   /** If `visible` is true, the button should appear. */
   @Prop() visible : boolean;
+  @Watch('visible')
+  onVisibleChange() {
+    if(!this.visible) {
+      this.collapsed = true;
+    }
+  }
 
   /**  A JSON Pointer that points to the LiturgicalDocument being edited */
   @Prop({ reflect: true }) path : string;
@@ -80,7 +86,7 @@ export class EditableAddBlockComponent {
 
   // Add a block
   add(type : "liturgy" | "heading" | "option" | "refrain" | "rubric" | "text" | "responsive" | "bible-reading" | "psalm" | "meditation") {
-    const doc = new LiturgicalDocument({ type, label: 'New Item', value: [] });
+    const doc = new LiturgicalDocument({ type, value: [''] });
 
     this.docShouldChange.emit(
       new Change(
@@ -123,11 +129,30 @@ export class EditableAddBlockComponent {
               { localeStrings.heading }
             </button>
 
-            {/* Text — SVG is Font Awesome 'justify-left' */}
+            {/* Meditate — SVG is Font Awesome 'fa-sun' */}
+            <button onClick={() => this.add('meditation')} class='block'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg>
+              { localeStrings.meditation }
+            </button>
+
+            {/* Rubric — SVG is Font Awesome 'fa-directions' */}
+            <button onClick={() => this.add('rubric')} class='block'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="directions" class="svg-inline--fa fa-directions fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.61 233.32L278.68 9.39c-12.52-12.52-32.83-12.52-45.36 0L9.39 233.32c-12.52 12.53-12.52 32.83 0 45.36l223.93 223.93c12.52 12.53 32.83 12.53 45.36 0l223.93-223.93c12.52-12.53 12.52-32.83 0-45.36zm-100.98 12.56l-84.21 77.73c-5.12 4.73-13.43 1.1-13.43-5.88V264h-96v64c0 4.42-3.58 8-8 8h-32c-4.42 0-8-3.58-8-8v-80c0-17.67 14.33-32 32-32h112v-53.73c0-6.97 8.3-10.61 13.43-5.88l84.21 77.73c3.43 3.17 3.43 8.59 0 11.76z"></path></svg>
+              { localeStrings.rubric }
+            </button>
+
+            {/* Refrain — SVG is Font Awesome 'fa-comment' */}
+            <button class='block'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment" class="svg-inline--fa fa-comment fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"></path></svg>
+              { localeStrings.refrain }
+            </button>
+
+            {/* Text — SVG is Font Awesome 'fa-justify-left' */}
             <button onClick={() => this.add('text')} class='block'>
               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="align-left" class="svg-inline--fa fa-align-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M12.83 352h262.34A12.82 12.82 0 0 0 288 339.17v-38.34A12.82 12.82 0 0 0 275.17 288H12.83A12.82 12.82 0 0 0 0 300.83v38.34A12.82 12.82 0 0 0 12.83 352zm0-256h262.34A12.82 12.82 0 0 0 288 83.17V44.83A12.82 12.82 0 0 0 275.17 32H12.83A12.82 12.82 0 0 0 0 44.83v38.34A12.82 12.82 0 0 0 12.83 96zM432 160H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0 256H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg>
               { localeStrings.text }
             </button>
+
           </div>
         </div>
       </Host>

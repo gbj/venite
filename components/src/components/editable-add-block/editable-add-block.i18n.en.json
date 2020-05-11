@@ -1,5 +1,10 @@
 {
-  "bible": "Bible Reading",
+  "label": "Label",
+  "citation": "Citation",
+  "bible": "Reading",
+  "meditation": "Meditation",
+  "refrain": "Refrain",
+  "rubric": "Rubric",
   "text": "Text",
   "heading": "Heading"
 }

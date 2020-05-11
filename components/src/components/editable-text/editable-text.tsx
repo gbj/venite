@@ -4,6 +4,7 @@ import Debounce from 'debounce-decorator';
 import { Change, Cursor } from '@venite/ldf';
 import { handleInput } from './handle-input';
 import { consolidateChanges } from './consolidate-changes';
+import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
   tag: 'ldf-editable-text',
@@ -18,6 +19,7 @@ export class EditableTextComponent {
   private previousText : string;
 
   @State() currentText : string;
+  @State() localeStrings: { [x: string]: string; };
 
   // Properties
   /**
@@ -131,7 +133,6 @@ export class EditableTextComponent {
   }
 
   /** Expand the child textarea horizontally to fit its content */
-  @Method()
   autoGrow() {
     if(!this.short) {
       /* this code is cosmetic, not essential, and relies on the global `window`
@@ -159,6 +160,7 @@ export class EditableTextComponent {
 
   // Lifecycle
   componentWillLoad() {
+    this.loadLocaleStrings();
     this.textChanged(this.text);
     this.previousText = this.text;
   }
@@ -171,14 +173,35 @@ export class EditableTextComponent {
     this.cursorMoved.emit(cursor);
   }
 
+  /** Asynchronously return localization strings */
+  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
+    if(!this.localeStrings) {
+      await this.loadLocaleStrings();
+      return this.localeStrings;
+    } else {
+      return this.localeStrings;
+    }
+  }
+
+  /** Asynchronously load localization strings */
+  async loadLocaleStrings() : Promise<void> {
+    try {
+      this.localeStrings = await getLocaleComponentStrings(this.el);
+    } catch(e) {
+      console.warn(e);
+    }
+  }
+
   render() {
+    const localeStrings = this.localeStrings || {};
+
     // Ordinarily, use textarea
     if(!this.short) {
       return (
         <Host>
           <textarea
             ref={el => this.textarea = el as HTMLTextAreaElement}
-            placeholder={this.placeholder}>{this.currentText}</textarea>
+            placeholder={this.placeholder || localeStrings.placeholder}>{this.currentText}</textarea>
         </Host>
       );
     } else {
@@ -187,7 +210,7 @@ export class EditableTextComponent {
           <Host>
             <ion-input
               ref={el => this.textarea = el as HTMLInputElement}
-              placeholder={this.placeholder}
+              placeholder={this.placeholder || localeStrings.placeholder}
               value={this.currentText}>
             </ion-input>}
           </Host>
@@ -197,7 +220,7 @@ export class EditableTextComponent {
           <Host>
             <input
               ref={el => this.textarea = el as HTMLInputElement}
-              placeholder={this.placeholder}
+              placeholder={this.placeholder || localeStrings.placeholder}
               value={this.currentText}/>
           </Host>
         );
