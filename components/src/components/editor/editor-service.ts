@@ -48,6 +48,10 @@ class EditorServiceController {
     console.log('emitted', event, message);
   }
 
+  emitDocChanged(change : Change[]) {
+    this.emit('docChanged', change);
+  }
+
   constructor(url : string = 'http://10.0.0.163:3000') {
     this.socket = io(url);
 

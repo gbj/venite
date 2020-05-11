@@ -6,7 +6,7 @@ import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
-import { applyChangeToElement } from './utils/apply';
+import { applyChange, applyChangeToElement } from './utils/apply';
 import getCaretCoordinates from 'textarea-caret';
 import Values from 'values.js';
 
@@ -86,7 +86,7 @@ export class EditorComponent {
   // Listeners
   // Watch for cursor moves bubbled up from the editable-texts and send them to the server
   @Listen('cursorMoved')
-  onCursorMoved(ev) {
+  onCursorMoved(ev : CustomEvent) {
     if(!ev.detail) {
       EditorService.emit('cursorMoved', new Cursor('', 0, 0, undefined));
       EditorService.emit('refreshDoc', this.docId);
@@ -95,10 +95,18 @@ export class EditorComponent {
     }
   }
 
-  // Watch for edits bubbled up from the editable-texts and send them to the server
+  /** docChanged event: the doc has already been changed, but we need to notify the server */
   @Listen('docChanged')
-  onDocChanged(ev) {
-    EditorService.emit('docChanged', ev.detail);
+  onDocChanged(ev : CustomEvent) {
+    console.log('docChanged ev = ', ev);
+    EditorService.emitDocChanged(ev.detail);
+  }
+
+  /** docShouldChange event: we need to 1) change the doc and 2) notify the server */
+  @Listen('docShouldChange')
+  onDocShouldChange(ev : CustomEvent) {
+    this.obj = new LiturgicalDocument(applyChange(this.obj, ev.detail));
+    EditorService.emitDocChanged(new Array(ev.detail));
   }
 
   // Listen for scroll and window resize events and reset the cursors accordingly
@@ -193,12 +201,17 @@ export class EditorComponent {
 
   async receivedDocChanged(data : Change[]) {
     console.log('received docChanged', data);
-    data.forEach(async (change) => {
+    data.forEach((change) => {
       // swap out for actual username
       if(change.user !== this.userToken) {
-        const target : HTMLElement = elementFromPath(this.el, change.path),
-              textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
-        applyChangeToElement(textarea, change);
+        // if path is given, assume it's a text modification and edit the textarea directly
+        if(change.path) {
+          const target : HTMLElement = elementFromPath(this.el, change.path),
+                textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
+          applyChangeToElement(textarea, change);
+        } else {
+          this.obj = applyChange(this.obj, change);
+        }
       }
     });
   }

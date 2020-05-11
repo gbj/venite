@@ -25,7 +25,7 @@ export class EditableAddBlockComponent {
   @Prop({ reflect: true }) path : string;
 
   // Events
-  @Event({ bubbles: true }) docChanged : EventEmitter<Change[]>;
+  @Event({ bubbles: true }) docShouldChange : EventEmitter<Change>;
 
   // Lifecycle events
   async componentWillLoad() {
@@ -80,9 +80,22 @@ export class EditableAddBlockComponent {
 
   // Add a block
   add(type : "liturgy" | "heading" | "option" | "refrain" | "rubric" | "text" | "responsive" | "bible-reading" | "psalm" | "meditation") {
-    const doc = new LiturgicalDocument({ type });
-    this.docChanged.emit(new Array(new Change(this.path, [ { p: [], li: doc } ])));
-    // TODO: Actually insert the new document into the tree
+    const doc = new LiturgicalDocument({ type, label: 'New Item', value: [] });
+
+    this.docShouldChange.emit(
+      new Change(
+        null, // null path, because we're passing the path in the `p` of the json0 op below
+        [
+          {
+            p: this.path.split('/').filter(part => part !== ''),
+            li: doc
+          }
+        ]
+      )
+    );
+
+    // collapse the UI
+    this.collapsed = true;
   }
 
   // Render
