@@ -25,6 +25,7 @@
     "@nestjs/platform-express": "^7.0.9",
     "@nestjs/platform-socket.io": "^7.0.9",
     "@nestjs/websockets": "^7.0.9",
+    "@venite/ldf": "^0.1.0",
     "automerge": "^0.14.0",
     "esm": "^3.2.25",
     "pleasejs": "^0.4.2",
