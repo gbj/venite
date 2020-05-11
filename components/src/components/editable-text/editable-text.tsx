@@ -205,26 +205,14 @@ export class EditableTextComponent {
         </Host>
       );
     } else {
-      if(customElements && !!customElements.get('ion-input')) {
-        return (
-          <Host>
-            <ion-input
-              ref={el => this.textarea = el as HTMLInputElement}
-              placeholder={this.placeholder || localeStrings.placeholder}
-              value={this.currentText}>
-            </ion-input>}
-          </Host>
-        );
-      } else {
-        return (
-          <Host>
-            <input
-              ref={el => this.textarea = el as HTMLInputElement}
-              placeholder={this.placeholder || localeStrings.placeholder}
-              value={this.currentText}/>
-          </Host>
-        );
-      }
+      return (
+        <Host>
+          <input
+            ref={el => this.textarea = el as HTMLInputElement}
+            placeholder={this.placeholder || localeStrings.placeholder}
+            value={this.currentText}/>
+        </Host>
+      );
     }
   }
 }
