@@ -5,6 +5,6 @@ import diffMatchPatch from 'diff-match-patch';
 
 export function handleInput(path: string, oldValue: string, newValue: string) : Change {
 
-  return new Change(path, jsondiff(oldValue, newValue, diffMatchPatch));
+  return new Change({ path, op: jsondiff(oldValue, newValue, diffMatchPatch) });
 
 }

@@ -4,19 +4,8 @@ import * as json0 from 'ot-json0';
 
 /** Pure function: returns a new `LiturgicalDocument` that applies `change` to the old `LiturgicalDocument` given by `doc` */
 export function applyChange(doc : LiturgicalDocument, change : Change) : LiturgicalDocument {
-  // change.path is a pointer to the part of the object to be changed
-  const pathParts : (string | number)[] = change.path ?
-    change.path
-      .split('/')
-  //    .map(part => parseInt(part) ? parseInt(part) : part)
-      .filter(part => part !== '') :
-    new Array();
-
-  const fullyPathedOps = change.op.map(op => { return { ... op, p: pathParts.concat(op.p) } });
-
-  console.log('pathParts = ', pathParts);
-  console.log('fullyPathedOps = ', fullyPathedOps);
-  return new LiturgicalDocument(json0.type.apply(doc, fullyPathedOps));
+  console.log('fullyPathedOps = ', change.fullyPathedOp());
+  return new LiturgicalDocument(json0.type.apply(doc, change.fullyPathedOp()));
 }
 
 /** Mutates the value of `input` (an `input` or `textarea`) based on `change` */

@@ -1,18 +1,22 @@
 import { WebSocketGateway, WebSocketServer, SubscribeMessage, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
+import { Socket } from 'socket.io';
 
-import { User, Change, Cursor } from '@venite/ldf';
+import { LiturgicalDocument, ChangeMessage, CursorMessage, User, Change, Cursor } from '@venite/ldf';
+import { DocumentManager } from './document-manager';
+
+import * as json0 from 'ot-json0';
 
 // color generation
 import * as Please from 'pleasejs';
 
 const DOCS = {
+  'def456': { type: "meditation", metadata: {length: 60 } },
   'abc123': {
     type: 'liturgy',
     metadata: {
       preferences: {}
     },
     value: [
-      {type: "heading", metadata: {length: 60 } },
       {type: "heading", metadata: {level: 1 }, label: "Compline"},
       {type: "heading", metadata: {level: 2 }, label: "Wednesday after the Third Sunday of Easter"},
       {type: "heading", citation: { source: 'BCP', citation: 'p. 127' }},
@@ -103,33 +107,46 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
     @WebSocketServer() server;
 
-    users: User[] = new Array();
-
+    /* Connection/Disconnection */
     async handleConnection(){
     }
 
     async handleDisconnect(){
     }
 
+    /** Receive a document from the database */
     getDoc(docId : string) {
       return DOCS[docId];
     }
 
+    setDoc(docId, value : LiturgicalDocument) {
+      DOCS[docId] = value;
+    }
+
+    /* Users: Joining/Leaving Rooms */
     @SubscribeMessage('join')
-    async onJoin(client, message : { userToken : string; docId: string; }) {
+    async onJoin(client : Socket, message : { userToken : string; docId: string; }) {
       // authenticate user token
-      const username : string = message.userToken;
+      const username : string = message.userToken,
+            docId = message.docId;
 
       // if logged in
       if(username !== '') {
         // join the document room
-        client.join(message.docId);
+        client.join(docId);
 
-        // load document from database
-        const doc = this.getDoc(message.docId);
+        // check to see if already loaded into a manager
+        let docManager : DocumentManager;
+        if(this.docManagers[docId]) {
+          docManager = this.docManagers[docId];
+        } else {
+          docManager = new DocumentManager();
+          docManager.document = this.getDoc(message.docId);
+          this.docManagers[docId] = docManager;
+        }
 
         // add user to list
-        this.users.push(new User({
+        docManager.addUser(new User({
           client: client.id.toString(),
           username,
           color: Please.make_color()[0]
@@ -137,40 +154,79 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
         // tell the person who joined who's there, and what the doc is
         client.emit('joined', {
-          users: this.users,
-          doc
+          users: docManager.users,
+          doc: docManager.document
         });
 
         // just give everyone else in the room the new list of users
-        console.log(this.users);
-        client.broadcast
-          .emit('users', this.users);//.filter(user => user.room == message.docId));
+        client.to(docId).broadcast
+          .emit('users', docManager.users);//.filter(user => user.room == message.docId));
       }
     }
 
     @SubscribeMessage('leave')
-    async onLeave(client, docId : string) {
-      console.log('leave received', client.id, docId);
-      client.leave(docId);
-      this.users = this.users.filter(user => user.client !== client.id);
-      console.log('updated users: ', this.users);
-      client.emit('users', this.users.filter(user => user.room == docId));
+    async onLeave(client : Socket, docId : string) {
+      const docManager = this.docManagers[docId];
+      if(docManager) {
+        client.leave(docId);
+        docManager.removeUser(client.id);
+        client.emit('users', docManager.users);
+      }
     }
 
-    @SubscribeMessage('docChanged')
-    async onDocChanged(client, message : Change[]) {
-      const user = this.users.find(user => user.client == client.id).username;
-      client.broadcast.emit('docChanged', message.map(m => { return { ... m, user } }));
-    }
-
+    /* Cursors */
     @SubscribeMessage('cursorMoved')
-    async onCursorMoved(client, message : Cursor) {
-      message.user = this.users.find(user => user.client == client.id).username;
-      client.broadcast.emit('cursorMoved', message);
+    async onCursorMoved(client : Socket, message : CursorMessage) {
+      console.log('received cursorMoved', message);
+      const { docId, username, lastRevision, cursor } = message;
+
+      const docManager = this.docManagers[docId],
+            user = docManager.clientToUser(client.id);
+
+      if(user) { message.username = user.username; }
+
+      client.to(docId).broadcast.emit('cursorMoved', message);
+      console.log('(gateway) moved cursor', message);
     }
 
-    @SubscribeMessage('refreshDoc')
-    async onRefreshDoc(client, docId : string) {
-      client.emit(this.getDoc(docId));
+    /* 4. Implementation of server side of OT protocol
+     *    outline found here: https://medium.com/coinmonks/operational-transformations-as-an-algorithm-for-automatic-conflict-resolution-3bf8920ea447#d628 */
+    private docManagers: {
+      [docId: string]: DocumentManager;
+    } = {};
+
+    @SubscribeMessage('sentChange')
+    async onSentChange(client : Socket, message : ChangeMessage) {
+      const { docId, username, lastRevision, change } = message;
+
+      const docManager = this.docManagers[docId],
+            user = docManager.clientToUser(client.id);
+
+      this.applyChangeToDoc(docId, new Change(change));
+
+      // send the change to everyone
+      console.log('broadcasting...', message);
+      client.to(docId).broadcast.emit('docChanged', { ... message, user });
+
+      // send an ack to the user who sent the change
+      client.emit('ack', true);
+      console.log('sending ack to ', user.username);
     }
+
+    applyChangeToDoc(docId : string, change : Change) {
+      const doc = this.getDoc(docId);
+      this.setDoc(docId, json0.type.apply(doc, change.fullyPathedOp()));
+    }
+
+    /* Transforming changes and applying them to the doc */
+/*    @SubscribeMessage('docChanged')
+    async onDocChanged(client : Socket, message : { change: Change[]; lastRevision: number; }) {
+      const user = this.clientToUser(client);
+
+       Look up the revisions since the last one they've reported
+
+
+       Send the transformed change to clients
+      client.broadcast.emit('docChanged', message.map(m => { return { ... m, user } }));
+    } */
 }

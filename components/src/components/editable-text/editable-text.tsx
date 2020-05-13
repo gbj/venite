@@ -53,8 +53,8 @@ export class EditableTextComponent {
   }
 
   // Events
-  @Event({ bubbles: true }) cursorMoved : EventEmitter<Cursor>;
-  @Event({ bubbles: true }) docChanged : EventEmitter<Change[]>;
+  @Event({ bubbles: true }) ldfCursorMoved : EventEmitter<Cursor>;
+  @Event({ bubbles: true }) ldfEditableTextChanged : EventEmitter<Change>;
 
   // Listeners
   @Listen('input')
@@ -80,14 +80,14 @@ export class EditableTextComponent {
   /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
    *  and emits it as a `docChanged` event  */
   @Debounce(200)
-  processEdits() : Change[] {
-    const consolidated =  consolidateChanges(this.cursor.path, this.edits);
+  processEdits() : Change {
+    const consolidated = consolidateChanges(this.cursor.path, this.edits);
 
     // clear out the old edits
     this.edits = new Array();
 
     // emit and return the new ones
-    this.docChanged.emit(consolidated);
+    this.ldfEditableTextChanged.emit(consolidated);
     return consolidated;
   }
 
@@ -95,7 +95,7 @@ export class EditableTextComponent {
   @Listen('focusout')
   onFocusOut() {
     this.cursor = undefined;
-    this.cursorMoved.emit(undefined);
+    this.ldfCursorMoved.emit(undefined);
   }
 
   // Each of focus/select/click/keydown could indicate an action taken that has moved the caret or selection
@@ -170,7 +170,7 @@ export class EditableTextComponent {
   // but also that we won't be sending cursor updates to the server constantly as we type
   @Debounce(200)
   emitCursor(cursor : Cursor) {
-    this.cursorMoved.emit(cursor);
+    this.ldfCursorMoved.emit(cursor);
   }
 
   /** Asynchronously return localization strings */

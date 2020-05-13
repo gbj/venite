@@ -8,11 +8,15 @@ import { Sharing } from './sharing/sharing';
 import { Category } from './category';
 import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
+import { Change } from './editing/change';
 
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
   id?: number;
+
+  /** Array of changes to arrive at this document state. Important to collaborative editing. */
+  revision_log? : Change[];
 
   /** Indicates the type of document */
   type: 'liturgy' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation';

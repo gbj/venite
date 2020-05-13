@@ -27,4 +27,6 @@ export * from './text';
 
 export * from './editing/cursor';
 export * from './editing/change';
+export * from './editing/change-message';
+export * from './editing/cursor-message';
 export * from './editing/user';

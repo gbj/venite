@@ -2,7 +2,7 @@ import { Component, Element, State, Listen, Host, Prop, Watch, Method, JSX, h } 
 import Debounce from 'debounce-decorator';
 import { Subscription } from 'rxjs';
 
-import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
+import { ChangeMessage, CursorMessage, Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
@@ -67,10 +67,6 @@ export class EditorComponent {
     // Subscribe to observables that handle each of the events from the server
     this.subscription.add(EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data)));
     this.subscription.add(EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data)));
-    this.subscription.add(EditorService.refreshDoc.subscribe((data) => {
-      // TODO: check whether we have focused into another area and started editing
-      this.obj = data;
-    }));
     this.subscription.add(EditorService.users.subscribe((data) => {
       console.log('users = ', data);
       this.users = data;
@@ -85,28 +81,28 @@ export class EditorComponent {
 
   // Listeners
   // Watch for cursor moves bubbled up from the editable-texts and send them to the server
-  @Listen('cursorMoved')
+  @Listen('ldfCursorMoved')
   onCursorMoved(ev : CustomEvent) {
+    console.log('moving cursor', ev);
     if(!ev.detail) {
-      EditorService.emit('cursorMoved', new Cursor('', 0, 0, undefined));
-      EditorService.emit('refreshDoc', this.docId);
+      EditorService.moveCursor(new Cursor('', 0, 0, undefined));
     } else {
-      EditorService.emit('cursorMoved', ev.detail);
+      EditorService.moveCursor(ev.detail);
     }
   }
 
   /** docChanged event: the doc has already been changed, but we need to notify the server */
-  @Listen('docChanged')
-  onDocChanged(ev : CustomEvent) {
-    console.log('docChanged ev = ', ev);
-    EditorService.emitDocChanged(ev.detail);
+  @Listen('ldfEditableTextChanged')
+  onEditableTextChanged(ev : CustomEvent) {
+    console.log('ldfEditableTextChanged ev = ', ev);
+    EditorService.processChange(new Change(ev.detail));
   }
 
   /** docShouldChange event: we need to 1) change the doc and 2) notify the server */
-  @Listen('docShouldChange')
+  @Listen('ldfDocShouldChange')
   onDocShouldChange(ev : CustomEvent) {
-    this.obj = new LiturgicalDocument(applyChange(this.obj, ev.detail));
-    EditorService.emitDocChanged(new Array(ev.detail));
+    this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
+    EditorService.processChange(new Change(ev.detail));
   }
 
   // Listen for scroll and window resize events and reset the cursors accordingly
@@ -157,19 +153,19 @@ export class EditorComponent {
     const newCursorPos = {};
     Object.keys(this.cursors).forEach(username => {
       const cursor = this.cursors[username];
-      this.cursorToPos(cursor, newCursorPos)
+      this.cursorToPos(cursor, username, newCursorPos)
     });
     this.cursorPos = newCursorPos;
   }
 
-  receivedCursorMoved(data : Cursor) {
-    this.cursors[data.user] = data;
-    this.cursorToPos(data, this.cursorPos);
+  receivedCursorMoved(data : CursorMessage) {
+    this.cursors[data.username] = data.cursor;
+    this.cursorToPos(data.cursor, data.username, this.cursorPos);
     this.cursorPos = { ... this.cursorPos};
   }
 
   // mutates cursorPos
-  cursorToPos(data : Cursor, cursorPos : any) {
+  cursorToPos(data : Cursor, user : string, cursorPos : any) {
     if(data && data.path) {
       // Cursor is somewhere
       const target : HTMLElement = elementFromPath(this.el, data.path);
@@ -184,36 +180,37 @@ export class EditorComponent {
         const start = getCaretCoordinates(textarea, data.start, undefined),
               end = getCaretCoordinates(textarea, data.end, undefined);
 
-        cursorPos[data.user] = {
+        cursorPos[user] = {
           start: { top: start.top + rect.top, left: start.left + rect.left},
           end: { top: end.top + rect.top, left: end.left + rect.left},
           target: textarea
         };
+
+        console.log("new cursorPos = ", cursorPos);
       } else {
         // Cursor is nowhere; hide this user's cursor
-        cursorPos[data.user] = undefined;
+        cursorPos[user] = undefined;
       }
     } else {
       // Cursor is nowhere; hide this user's cursor
-      cursorPos[data.user] = undefined;
+      cursorPos[user] = undefined;
     }
   }
 
-  async receivedDocChanged(data : Change[]) {
-    console.log('received docChanged', data);
-    data.forEach((change) => {
-      // swap out for actual username
-      if(change.user !== this.userToken) {
-        // if path is given, assume it's a text modification and edit the textarea directly
-        if(change.path) {
-          const target : HTMLElement = elementFromPath(this.el, change.path),
-                textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
-          applyChangeToElement(textarea, change);
-        } else {
-          this.obj = applyChange(this.obj, change);
-        }
+  async receivedDocChanged(message : ChangeMessage) {
+    console.log('received docChanged', message);
+    const change = message.change;
+    // swap out for actual username
+    if(change.user !== this.userToken && message.username !== this.userToken) {
+      // if path is given, assume it's a text modification and edit the textarea directly
+      if(change.path) {
+        const target : HTMLElement = elementFromPath(this.el, change.path),
+              textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
+        applyChangeToElement(textarea, new Change(change));
+      } else {
+        this.obj = applyChange(this.obj, new Change(change));
       }
-    });
+    }
   }
 
   async joinNewDocument() {

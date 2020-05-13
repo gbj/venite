@@ -21,7 +21,7 @@ export class EditableAddBlockComponent {
   @Prop({ reflect: true }) path : string;
 
   // Events
-  @Event({ bubbles: true }) docShouldChange : EventEmitter<Change>;
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   // Lifecycle events
   async componentWillLoad() {
@@ -82,12 +82,12 @@ export class EditableAddBlockComponent {
   // Add a block
   add(template : LiturgicalDocument[]) {
     const p = this.path.split('/').filter(part => part !== '');
-    this.docShouldChange.emit(
-      new Change(
-        null, // null path, because we're passing the path in the `p` of the json0 op below
-        template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
+    this.ldfDocShouldChange.emit(
+      new Change({
+        path: null, // null path, because we're passing the path in the `p` of the json0 op below
+        op: template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
           .map(doc => ({ p, li: doc }))
-      )
+      })
     );
   }
 

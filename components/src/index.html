@@ -6,16 +6,13 @@
   <title>Venite.app — Liturgy Document Format (LDF) Playground</title>
 
   <!-- Drop in these four lines to run anywhere -->
-  <link rel="stylesheet" type="text/css" href="/assets/fontawesome/css/all.css">
   <link rel="stylesheet" href="/build/ldf.css">
   <script type="module" src="/build/ldf.esm.js"></script>
   <script nomodule src="/build/ldf.js"></script>
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
 </head>
 <body class="md">
-  <h1>Venite</h1>
-  <article id='example'>
-    <h2>Bulletin Editor</h2>
+  <div id='example'>
     <ldf-editor doc-id='abc123' user-token=''>
       <nav slot='controls'>
         <input type='text' id='docId' placeholder='Document ID' name='docId' value='abc123' />
@@ -24,7 +21,7 @@
         <button onClick="leave()">Leave</button>
       </nav>
     </ldf-editor>
-  </article>
+  </div>
 
   <script>
   function handleForm() {
