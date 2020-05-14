@@ -90,17 +90,18 @@ export class EditorComponent {
     }
   }
 
+  // TODO: simplify this now that model has changed
   /** docChanged event: the doc has already been changed, but we need to notify the server */
   @Listen('ldfEditableTextChanged')
   onEditableTextChanged(ev : CustomEvent) {
-    console.log('ldfEditableTextChanged ev = ', ev);
     EditorService.processChange(new Change(ev.detail));
   }
 
-  /** docShouldChange event: we need to 1) change the doc and 2) notify the server */
+  /** docShouldChange event: we need to notify the server
+    * Will update our doc when we get an ack from the server */
   @Listen('ldfDocShouldChange')
   onDocShouldChange(ev : CustomEvent) {
-    this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
+    //this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
     EditorService.processChange(new Change(ev.detail));
   }
 
@@ -108,14 +109,12 @@ export class EditorComponent {
   // (the cursor reset method is debounced)
   @Listen('scroll', { target: 'document' })
   onScroll() {
-    console.log('scroll');
     this.clearCursors();
     this.resetCursors();
   }
 
   @Listen('resize', { target: 'window' })
   onResize() {
-    console.log('resize');
     this.clearCursors();
     this.resetCursors();
   }
@@ -195,19 +194,10 @@ export class EditorComponent {
   }
 
   async receivedDocChanged(message : ChangeMessage) {
-    console.log('received docChanged', message);
     const change = message.change;
-    // swap out for actual username
-    if(change.user !== this.userToken && message.username !== this.userToken) {
-      // if path is given, assume it's a text modification and edit the textarea directly
-      if(change.path) {
-        const target : HTMLElement = elementFromPath(this.el, change.path),
-              textarea : HTMLTextAreaElement = target.shadowRoot.querySelector('textarea');
-        applyChangeToElement(textarea, new Change(change));
-      } else {
-        this.obj = applyChange(this.obj, new Change(change));
-      }
-    }
+    const oldObj = this.obj;
+    this.obj = new LiturgicalDocument(JSON.parse(JSON.stringify(applyChange(this.obj, new Change(change)))));
+    console.log('(rDC)', oldObj, change, this.obj);
   }
 
   async joinNewDocument() {
@@ -320,6 +310,12 @@ export class EditorComponent {
         {/* Render the actual liturgy */}
         {this.obj && <ldf-liturgical-document
           editable={true}
+          path='/'
+          doc={this.obj}>
+        </ldf-liturgical-document>}
+
+        {this.obj && <ldf-liturgical-document
+          editable={false}
           path='/'
           doc={this.obj}>
         </ldf-liturgical-document>}

@@ -141,8 +141,23 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
           docManager = this.docManagers[docId];
         } else {
           docManager = new DocumentManager();
+          docManager.docId = docId;
           docManager.document = this.getDoc(message.docId);
           this.docManagers[docId] = docManager;
+          // unsubscribe from this and delete the DocManager...when? memory leak
+          docManager.changes.subscribe(change => {
+            const { client, message } = change;
+
+            // save the changed document
+            this.setDoc(docId, docManager.document);
+
+            // send the change to everyone
+            client.to(docId).broadcast
+              .emit('docChanged', message);
+
+            // send an ack to the user who sent the change
+            client.emit('ack', message);
+          })
         }
 
         // add user to list
@@ -202,23 +217,7 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
             user = docManager.clientToUser(client.id);
 
       // apply the change on the server copy of document
-      const { revision, transformedChange } = docManager.applyChangeToDoc(new Change(change), lastRevision);
-      console.log('(sentChange) updated revision = ', revision, 'change = ', transformedChange.op)
-
-
-      // save the changed document
-      this.setDoc(docId, docManager.document);
-
-      // send the change to everyone
-      client.to(docId).broadcast.emit('docChanged', {
-        docId,
-        username,
-        lastRevision: revision,
-        change: transformedChange
-      });
-
-      // send an ack to the user who sent the change
-      client.emit('ack', revision);
+      docManager.addChangeToQueue(client, new Change({ ... change, user: user.username }), lastRevision);
     }
 
     /* Transforming changes and applying them to the doc */

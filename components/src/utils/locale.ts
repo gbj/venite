@@ -16,7 +16,7 @@ function fetchLocaleStringsForComponent(componentName: string, locale: string): 
 export async function getLocaleComponentStrings(element: HTMLElement): Promise<any> {
   let componentName = element.tagName.toLowerCase().replace('ldf-', '');
   let componentLanguage = getComponentClosestLanguage(element);
-  console.log(`closest language is '${componentLanguage}'`);
+
   let strings;
   try {
     strings = await fetchLocaleStringsForComponent(componentName, componentLanguage);

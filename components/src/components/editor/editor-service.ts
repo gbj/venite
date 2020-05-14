@@ -47,7 +47,6 @@ class EditorServiceController {
     this.socket.emit('leave', docId);
   }
 
-
   // 3. Helper to emit any message
   /** Passes cursor and document change events to the server */
   emit(event : string, message : any) {
@@ -76,8 +75,6 @@ class EditorServiceController {
     // add the change to end of the list of pending changes
     this.pendingChanges.push(change);
 
-    console.log('(processChange) hasBeenAcknowledged (before sending) = ', this.hasBeenAcknowledged);
-
     // if you've been acknowledged, send the first change in the pending queue
     if(this.hasBeenAcknowledged) {
       this.sendNextChange();
@@ -98,11 +95,12 @@ class EditorServiceController {
   }
 
   // `ack` received from server — i.e., it's processed the change we sent and is sending back the latest revision number
-  ack(revision : number) {
-    console.log('(ack) ack received with revision #', revision);
+  ack(message : ChangeMessage) {
     this.hasBeenAcknowledged = true;
-    this.lastRevision = revision;
-    console.log('last revision = ', this.lastRevision);
+    this.lastRevision = message.lastRevision;
+
+    this.docChanged.next(message);
+
     if(this.pendingChanges.length > 0) {
       console.log('(ack) sending next pending change');
       this.sendNextChange();

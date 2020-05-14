@@ -29,6 +29,9 @@ export class EditableTextComponent {
   @Watch('text')
   textChanged(newText : string) {
     this.currentText = newText;
+    if(this.textarea) {
+      this.textarea.value = this.currentText;
+    }
   }
 
   /**
