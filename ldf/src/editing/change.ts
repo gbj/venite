@@ -16,7 +16,6 @@ export class Change {
   op: Json0Operation[];
 
   fullyPathedOp() {
-    console.log('(fullyPathedOp)', this, this.path, this.op);
     const pathParts : (string | number | undefined)[] = this.path ?
       this.path
         .split('/')

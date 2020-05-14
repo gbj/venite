@@ -3,6 +3,8 @@ import { Subject } from 'rxjs';
 import { ChangeMessage, CursorMessage, Change, Cursor, User } from '@venite/ldf';
 import { LiturgicalDocument } from '@venite/ldf';
 
+import * as json0 from 'ot-json0';
+
 class EditorServiceController {
   // Private Variables
   private socket : io.Socket;
@@ -60,18 +62,17 @@ class EditorServiceController {
   private sentChanges : Change[] = new Array();
   private pendingChanges : Change[] = new Array();
 
+  // send a message that we've moved our cursor
   moveCursor(cursor : Cursor) {
     this.socket.emit('cursorMoved', {
       docId: this.docId,
       lastRevision: this.lastRevision,
       cursor
     });
-    console.log('(EditorService) moved cursor', cursor);
   }
 
+  // every new `Change` to come in runs through here
   processChange(change : Change) {
-    console.log('processChange', change);
-
     // add the change to end of the list of pending changes
     this.pendingChanges.push(change);
 
@@ -83,6 +84,7 @@ class EditorServiceController {
     }
   }
 
+  // send the next change in the pending queue to the server
   sendNextChange() {
     this.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
     const nextChange = this.pendingChanges.shift(), // takes item from beginning of array and mutates
@@ -93,35 +95,45 @@ class EditorServiceController {
           };
     this.emit('sentChange', message);
     this.sentChanges.push(nextChange);
-    console.log('(sendNextChange) hasBeenAcknowledged (after sending) = ', this.hasBeenAcknowledged);
   }
 
-  ack(acknowledged : boolean) {
-    console.log('(ack) ack received', acknowledged);
-    this.hasBeenAcknowledged = acknowledged;
-    if(acknowledged && this.pendingChanges.length > 0) {
+  // `ack` received from server — i.e., it's processed the change we sent and is sending back the latest revision number
+  ack(revision : number) {
+    console.log('(ack) ack received with revision #', revision);
+    this.hasBeenAcknowledged = true;
+    this.lastRevision = revision;
+    console.log('last revision = ', this.lastRevision);
+    if(this.pendingChanges.length > 0) {
       console.log('(ack) sending next pending change');
       this.sendNextChange();
     }
   }
 
+  // `Change` received from another client
+  // Transform our pending changes and update revision number
+  receivedDocChanged(message : ChangeMessage) {
+    this.pendingChanges = this.pendingChanges.map(myChange => json0.type.transform(myChange.fullyPathedOp(), message.change.fullyPathedOp()));
+    this.lastRevision = message.lastRevision;
+    this.docChanged.next(message);
+  }
+
   // Constructor — connects to server and sets up listeners
-  constructor(url : string = 'http://localhost:3000') {
+  constructor(url : string = 'http://10.0.0.163:3000') {
     this.socket = io(url);
 
-    // When this user connects or disconnects
+    // When this user connects or disconnects, or load a doc
     this.socket.on('connect', () => console.log('connected to server'));
     this.socket.on('disconnect', () => console.log('disconnected from server'));
-
-    // Events from other users => emit via RxJS Subjects
-    this.socket.on('cursorMoved', (data) => this.cursorMoved.next(data));
-    this.socket.on('docChanged', (data) => this.docChanged.next(data));
-    this.socket.on('users', (data) => this.users.next(data));
     this.socket.on('joined', (data) => {
       this.hasBeenAcknowledged = true;
-      console.log('hasBeenAcknowledged (after joining) =', this.hasBeenAcknowledged);
+      this.lastRevision = data.lastRevision;
       this.joined.next(data)
     });
+
+    // Events from other users => process or emit via RxJS Subjects
+    this.socket.on('cursorMoved', (data) => this.cursorMoved.next(data));
+    this.socket.on('docChanged', (data) => this.receivedDocChanged(data));
+    this.socket.on('users', (data) => this.users.next(data));
     this.socket.on('ack', (data) => this.ack(data));
   }
 }

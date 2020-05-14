@@ -83,7 +83,6 @@ export class EditorComponent {
   // Watch for cursor moves bubbled up from the editable-texts and send them to the server
   @Listen('ldfCursorMoved')
   onCursorMoved(ev : CustomEvent) {
-    console.log('moving cursor', ev);
     if(!ev.detail) {
       EditorService.moveCursor(new Cursor('', 0, 0, undefined));
     } else {
@@ -185,8 +184,6 @@ export class EditorComponent {
           end: { top: end.top + rect.top, left: end.left + rect.left},
           target: textarea
         };
-
-        console.log("new cursorPos = ", cursorPos);
       } else {
         // Cursor is nowhere; hide this user's cursor
         cursorPos[user] = undefined;

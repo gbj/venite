@@ -155,7 +155,8 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
         // tell the person who joined who's there, and what the doc is
         client.emit('joined', {
           users: docManager.users,
-          doc: docManager.document
+          doc: docManager.document,
+          lastRevision: docManager.getLastRevision()
         });
 
         // just give everyone else in the room the new list of users
@@ -177,7 +178,6 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
     /* Cursors */
     @SubscribeMessage('cursorMoved')
     async onCursorMoved(client : Socket, message : CursorMessage) {
-      console.log('received cursorMoved', message);
       const { docId, username, lastRevision, cursor } = message;
 
       const docManager = this.docManagers[docId],
@@ -186,7 +186,6 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
       if(user) { message.username = user.username; }
 
       client.to(docId).broadcast.emit('cursorMoved', message);
-      console.log('(gateway) moved cursor', message);
     }
 
     /* 4. Implementation of server side of OT protocol
@@ -202,20 +201,24 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
       const docManager = this.docManagers[docId],
             user = docManager.clientToUser(client.id);
 
-      this.applyChangeToDoc(docId, new Change(change));
+      // apply the change on the server copy of document
+      const { revision, transformedChange } = docManager.applyChangeToDoc(new Change(change), lastRevision);
+      console.log('(sentChange) updated revision = ', revision, 'change = ', transformedChange.op)
+
+
+      // save the changed document
+      this.setDoc(docId, docManager.document);
 
       // send the change to everyone
-      console.log('broadcasting...', message);
-      client.to(docId).broadcast.emit('docChanged', { ... message, user });
+      client.to(docId).broadcast.emit('docChanged', {
+        docId,
+        username,
+        lastRevision: revision,
+        change: transformedChange
+      });
 
       // send an ack to the user who sent the change
-      client.emit('ack', true);
-      console.log('sending ack to ', user.username);
-    }
-
-    applyChangeToDoc(docId : string, change : Change) {
-      const doc = this.getDoc(docId);
-      this.setDoc(docId, json0.type.apply(doc, change.fullyPathedOp()));
+      client.emit('ack', revision);
     }
 
     /* Transforming changes and applying them to the doc */

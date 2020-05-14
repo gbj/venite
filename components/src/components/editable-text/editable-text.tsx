@@ -56,6 +56,11 @@ export class EditableTextComponent {
   @Event({ bubbles: true }) ldfCursorMoved : EventEmitter<Cursor>;
   @Event({ bubbles: true }) ldfEditableTextChanged : EventEmitter<Change>;
 
+  @Listen('beforeinput')
+  onBeforeInput() {
+    this.previousText = this.cursor.element.value;
+  }
+
   // Listeners
   @Listen('input')
   async onInput() {
@@ -72,9 +77,7 @@ export class EditableTextComponent {
     /* call the processEvents() to emit an event
      * this method is debounced so that, as we type, new edits will be pushed onto the stack
      * and will finally be collated and emitted as an event */
-    const consolidated = this.processEdits();
-    console.log('consolidated = ', consolidated);
-
+    this.processEdits();
   }
 
   /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
