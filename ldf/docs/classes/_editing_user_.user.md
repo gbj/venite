@@ -25,7 +25,7 @@
 
 \+ **new User**(`data`: Partial‹[User](_editing_user_.user.md)›): *[User](_editing_user_.user.md)*
 
-*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/user.ts#L5)*
+*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/user.ts#L5)*
 
 **Parameters:**
 
@@ -41,7 +41,7 @@ Name | Type | Default |
 
 • **client**: *string*
 
-*Defined in [editing/user.ts:2](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/user.ts#L2)*
+*Defined in [editing/user.ts:2](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/user.ts#L2)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **color**: *string*
 
-*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/user.ts#L5)*
+*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/user.ts#L5)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **room**: *string*
 
-*Defined in [editing/user.ts:3](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/user.ts#L3)*
+*Defined in [editing/user.ts:3](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/user.ts#L3)*
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 • **username**: *string*
 
-*Defined in [editing/user.ts:4](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/user.ts#L4)*
+*Defined in [editing/user.ts:4](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/user.ts#L4)*

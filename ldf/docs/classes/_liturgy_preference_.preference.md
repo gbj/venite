@@ -27,7 +27,7 @@
 
 • **category**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:10](https://github.com/gbj/venite/blob/f982f6c/ldf/src/liturgy/preference.ts#L10)*
+*Defined in [liturgy/preference.ts:10](https://github.com/gbj/venite/blob/3d88b83/ldf/src/liturgy/preference.ts#L10)*
 
 Optional: Category to which a preference belongs, if any.
 
@@ -41,7 +41,7 @@ ___
 
 • **description**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/f982f6c/ldf/src/liturgy/preference.ts#L13)*
+*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/3d88b83/ldf/src/liturgy/preference.ts#L13)*
 
 Optional: Additional descriptive text. Can include HTML.
 
@@ -51,7 +51,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/f982f6c/ldf/src/liturgy/preference.ts#L4)*
+*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/3d88b83/ldf/src/liturgy/preference.ts#L4)*
 
 Human-readable label for the preference
 
@@ -61,7 +61,7 @@ ___
 
 • **options**: *[PreferenceOption](_liturgy_preference_.preferenceoption.md)[]*
 
-*Defined in [liturgy/preference.ts:17](https://github.com/gbj/venite/blob/f982f6c/ldf/src/liturgy/preference.ts#L17)*
+*Defined in [liturgy/preference.ts:17](https://github.com/gbj/venite/blob/3d88b83/ldf/src/liturgy/preference.ts#L17)*
 
 Array of options for this preference, in order they will be displayed.
 Defaults to first in array if `PreferenceOption.default` is not set.
@@ -72,7 +72,7 @@ Defaults to first in array if `PreferenceOption.default` is not set.
 
 ▸ **getPreferenceOption**(`value`: string): *[PreferenceOption](_liturgy_preference_.preferenceoption.md) | undefined*
 
-*Defined in [liturgy/preference.ts:20](https://github.com/gbj/venite/blob/f982f6c/ldf/src/liturgy/preference.ts#L20)*
+*Defined in [liturgy/preference.ts:20](https://github.com/gbj/venite/blob/3d88b83/ldf/src/liturgy/preference.ts#L20)*
 
 Given a `value` for the preference, returns the full option
 

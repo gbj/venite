@@ -22,4 +22,4 @@ Representing categories as their own class makes it easy to build a many-to-many
 
 • **name**: *string*
 
-*Defined in [category.ts:5](https://github.com/gbj/venite/blob/f982f6c/ldf/src/category.ts#L5)*
+*Defined in [category.ts:5](https://github.com/gbj/venite/blob/3d88b83/ldf/src/category.ts#L5)*

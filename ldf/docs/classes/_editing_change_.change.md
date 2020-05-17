@@ -14,48 +14,37 @@
 
 ### Properties
 
-* [length](_editing_change_.change.md#length)
 * [op](_editing_change_.change.md#op)
 * [path](_editing_change_.change.md#path)
-* [pos](_editing_change_.change.md#pos)
 * [user](_editing_change_.change.md#optional-user)
-* [value](_editing_change_.change.md#value)
+
+### Methods
+
+* [fullyPathedOp](_editing_change_.change.md#fullypathedop)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Change**(`path`: string, `op`: "insert" | "delete" | "set", `pos`: number, `length`: number, `value`: string): *[Change](_editing_change_.change.md)*
+\+ **new Change**(`data`: Partial‹[Change](_editing_change_.change.md)›): *[Change](_editing_change_.change.md)*
 
-*Defined in [editing/change.ts:7](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L7)*
+*Defined in [editing/change.ts:28](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L28)*
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`path` | string |
-`op` | "insert" &#124; "delete" &#124; "set" |
-`pos` | number |
-`length` | number |
-`value` | string |
+Name | Type | Default |
+------ | ------ | ------ |
+`data` | Partial‹[Change](_editing_change_.change.md)› | {} |
 
 **Returns:** *[Change](_editing_change_.change.md)*
 
 ## Properties
 
-###  length
-
-• **length**: *number*
-
-*Defined in [editing/change.ts:6](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L6)*
-
-___
-
 ###  op
 
-• **op**: *"insert" | "delete" | "set"*
+• **op**: *[Json0Operation](_editing_change_.json0operation.md)[]*
 
-*Defined in [editing/change.ts:4](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L4)*
+*Defined in [editing/change.ts:16](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L16)*
 
 ___
 
@@ -63,15 +52,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [editing/change.ts:3](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L3)*
-
-___
-
-###  pos
-
-• **pos**: *number*
-
-*Defined in [editing/change.ts:5](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L5)*
+*Defined in [editing/change.ts:15](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L15)*
 
 ___
 
@@ -79,12 +60,14 @@ ___
 
 • **user**? : *undefined | string*
 
-*Defined in [editing/change.ts:2](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L2)*
+*Defined in [editing/change.ts:14](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L14)*
 
-___
+## Methods
 
-###  value
+###  fullyPathedOp
 
-• **value**: *string*
+▸ **fullyPathedOp**(): *object[]*
 
-*Defined in [editing/change.ts:7](https://github.com/gbj/venite/blob/f982f6c/ldf/src/editing/change.ts#L7)*
+*Defined in [editing/change.ts:18](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L18)*
+
+**Returns:** *object[]*

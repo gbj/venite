@@ -24,7 +24,7 @@
 
 \+ **new Proper**(`data`: Partial‹[Proper](_calendar_proper_.proper.md)›): *[Proper](_calendar_proper_.proper.md)*
 
-*Defined in [calendar/proper.ts:9](https://github.com/gbj/venite/blob/f982f6c/ldf/src/calendar/proper.ts#L9)*
+*Defined in [calendar/proper.ts:9](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/proper.ts#L9)*
 
 **Parameters:**
 
@@ -40,7 +40,7 @@ Name | Type | Default |
 
 • **label**: *string*
 
-*Defined in [calendar/proper.ts:9](https://github.com/gbj/venite/blob/f982f6c/ldf/src/calendar/proper.ts#L9)*
+*Defined in [calendar/proper.ts:9](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/proper.ts#L9)*
 
 A human-readable label for the week, e.g., "Proper 7"
 
@@ -50,7 +50,7 @@ ___
 
 • **proper**: *number*
 
-*Defined in [calendar/proper.ts:3](https://github.com/gbj/venite/blob/f982f6c/ldf/src/calendar/proper.ts#L3)*
+*Defined in [calendar/proper.ts:3](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/proper.ts#L3)*
 
 The number of the proper, e.g., 7 for Proper 7
 
@@ -60,6 +60,6 @@ ___
 
 • **slug**: *string*
 
-*Defined in [calendar/proper.ts:6](https://github.com/gbj/venite/blob/f982f6c/ldf/src/calendar/proper.ts#L6)*
+*Defined in [calendar/proper.ts:6](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/proper.ts#L6)*
 
 A unique slug used to compose LiturgicalDay slugs, e.g., "proper-7"

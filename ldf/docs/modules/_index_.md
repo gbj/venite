@@ -10,10 +10,12 @@
 * [BibleReadingVerse](_index_.md#biblereadingverse)
 * [Category](_index_.md#category)
 * [Change](_index_.md#change)
+* [ChangeMessage](_index_.md#changemessage)
 * [Citation](_index_.md#citation)
 * [ClientPreferences](_index_.md#clientpreferences)
 * [Condition](_index_.md#condition)
 * [Cursor](_index_.md#cursor)
+* [CursorMessage](_index_.md#cursormessage)
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
 * [LiturgicalColor](_index_.md#liturgicalcolor)
@@ -37,6 +39,7 @@
 * [Source](_index_.md#source)
 * [Text](_index_.md#text)
 * [User](_index_.md#user)
+* [specificClass](_index_.md#specificclass)
 
 ## References
 
@@ -64,6 +67,12 @@ ___
 
 ___
 
+###  ChangeMessage
+
+• **ChangeMessage**:
+
+___
+
 ###  Citation
 
 • **Citation**:
@@ -85,6 +94,12 @@ ___
 ###  Cursor
 
 • **Cursor**:
+
+___
+
+###  CursorMessage
+
+• **CursorMessage**:
 
 ___
 
@@ -223,3 +238,9 @@ ___
 ###  User
 
 • **User**:
+
+___
+
+###  specificClass
+
+• **specificClass**:
