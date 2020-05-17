@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Host, Listen, JSX, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
 @Component({
@@ -12,7 +12,7 @@ export class LiturgicalDocumentComponent {
 
   // Properties
   /**
-   * An LDF LiturgicalDocument object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF LiturgicalDocument object.
    */
   @Prop() doc : LiturgicalDocument | string;
   @Watch('doc')
@@ -37,27 +37,30 @@ export class LiturgicalDocumentComponent {
    */
   @Prop() editable : boolean;
 
-  // Listeners
-
-  /** On hover, display Add Block buttons */
-  @Listen('mouseover')
-  onMouseOver() {
-    this.setFocus(true);
-  }
-
-  @Listen('mouseout')
-  onMouseOut() {
-    this.setFocus(false)
-  }
-
-  setFocus(value : boolean) {
-    this.hasFocus = value;
-  }
+  // Events
+  @Event() focusPath : EventEmitter<string>;
 
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
   }
+
+  /** On hover, display Add Block buttons */
+  @Listen('mouseover')
+  onMouseOver() {
+    this.focusPath.emit(this.path);
+  }
+
+  @Listen('mouseout')
+  onMouseOut() {
+    this.focusPath.emit(this.path);
+  }
+
+  @Listen('click')
+  onClick() {
+    this.focusPath.emit(this.path);
+  }
+
 
   /** Processes generic LiturgicalDocument into component of the appropriate type */
   //@Method()
@@ -107,8 +110,6 @@ export class LiturgicalDocumentComponent {
   render() {
     return (
       <Host lang={this.obj.language}>
-        {this.editable && <ldf-editable-add-block visible={this.hasFocus} path={this.path}></ldf-editable-add-block>}
-
         {this.chooseComponent(this.obj)}
       </Host>
   );

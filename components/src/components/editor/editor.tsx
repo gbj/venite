@@ -6,7 +6,7 @@ import { ChangeMessage, CursorMessage, Cursor, Change, LiturgicalDocument, User 
 
 import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
-import { applyChange, applyChangeToElement } from './utils/apply';
+import { applyChange } from './utils/apply';
 import getCaretCoordinates from 'textarea-caret';
 import Values from 'values.js';
 
@@ -102,6 +102,7 @@ export class EditorComponent {
   @Listen('ldfDocShouldChange')
   onDocShouldChange(ev : CustomEvent) {
     //this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
+    console.log('change = ', ev.detail);
     EditorService.processChange(new Change(ev.detail));
   }
 
@@ -195,6 +196,7 @@ export class EditorComponent {
 
   async receivedDocChanged(message : ChangeMessage) {
     const change = message.change;
+    change.path = undefined; // paths have already been set by server
     const oldObj = this.obj;
     this.obj = new LiturgicalDocument(JSON.parse(JSON.stringify(applyChange(this.obj, new Change(change)))));
     console.log('(rDC)', oldObj, change, this.obj);

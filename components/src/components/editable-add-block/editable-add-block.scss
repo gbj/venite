@@ -5,7 +5,7 @@
   .button-container {
     display: flex;
     align-items: center;
-    height: 2em;
+    height: 0; /* 2em; */
     justify-content: center;
     width: 100%;
   }
@@ -38,6 +38,8 @@
     border: 1px solid #808080;
     border-radius: 50%;
     box-shadow: 0 0 5px #cccccc;
+    height: 1.5em;
+    width: 1.5em;
     color: #808080;
     font-size: 2em;
   }
@@ -49,7 +51,7 @@
     border-bottom: 1px solid #a0a0a0;
     min-height: 1em;
     position: relative;
-    bottom: 1.5em;
+    bottom: 0.5em;
     z-index: -1;
   }
 
@@ -76,28 +78,6 @@
   }
 
   /* Options within add block */
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-  }
-
-  .options.collapsed button, .options.collapsed ion-button {
-    height: 0;
-    opacity: 0;
-    transition: 0.25s;
-    width: 2em;
-    z-index: -1;
-  }
-
-  .options.expanded button, .options.expanded ion-button {
-    opacity: 1;
-    transition: 0.25s;
-    z-index: 1;
-  }
-
   .visually-hidden {
     position: absolute !important;
     height: 1px;

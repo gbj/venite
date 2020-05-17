@@ -15,7 +15,7 @@ export class ResponsivePrayerComponent {
 
   // Properties
   /**
-   * An LDF ResponsivePrayer object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF ResponsivePrayer object.
    */
   @Prop() doc : ResponsivePrayer | string;
   @Watch('doc')

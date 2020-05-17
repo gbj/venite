@@ -36,6 +36,9 @@ export class DocumentManager {
   /** Adds a change into the queue */
   addChangeToQueue(client: Socket, change : Change, clientLastRevision : number ) {
     this.pending_changes.push({ client, change, clientLastRevision });
+    console.log('*** start ***')
+    console.log('document = ', this.document);
+    console.log('pending_changes = ', this.pending_changes.map(o => ({ change: JSON.stringify(o.change), revision: o.clientLastRevision })));
     this.applyNextChange();
   }
 
@@ -44,8 +47,6 @@ export class DocumentManager {
     const nextChange = this.pending_changes.shift(),
           { client, change, clientLastRevision } = nextChange,
           realLastRevision = this.getLastRevision();
-
-    console.log('processing change from ', change.user, 'queue is now ', this.pending_changes);
 
     console.log(change.user, clientLastRevision, realLastRevision);
 
@@ -56,8 +57,6 @@ export class DocumentManager {
 
       transformsToApply.forEach(transformOp => op = json0.type.transform(op, transformOp, 'right'));
 
-      console.log('op = ', op);
-
       this.document = json0.type.apply(this.document, op);
       this.revision_log.push(new Change({ ... change, op }));
     } else {
@@ -65,6 +64,8 @@ export class DocumentManager {
       this.document = json0.type.apply(this.document, op);
       this.revision_log.push(change);
     }
+
+    console.log('revision_log = ', this.revision_log);
 
     // return the latest revision and transformed change to be sent out to clients
     op = op.map(o => (o.hasOwnProperty('si') || o.hasOwnProperty('sd') ? { ... o, p: o.p.slice(o.p.length - 1)} : o));     // hacky way of getting to the textarea -- fix this
@@ -78,9 +79,14 @@ export class DocumentManager {
       }
     });
 
+    console.log('pending_changes = ', this.pending_changes.map(o => ({ change: JSON.stringify(o.change), revision: o.clientLastRevision })));
+
     if(this.pending_changes.length > 0) {
       this.applyNextChange();
     }
+
+    console.log('document = ', this.document);
+    console.log('*** end ***')
   }
 
   constructor() {

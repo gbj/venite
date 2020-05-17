@@ -17,10 +17,10 @@
 
 ## Events
 
-| Event         | Description | Type                    |
-| ------------- | ----------- | ----------------------- |
-| `cursorMoved` |             | `CustomEvent<Cursor>`   |
-| `docChanged`  |             | `CustomEvent<Change[]>` |
+| Event                    | Description | Type                  |
+| ------------------------ | ----------- | --------------------- |
+| `ldfCursorMoved`         |             | `CustomEvent<Cursor>` |
+| `ldfEditableTextChanged` |             | `CustomEvent<Change>` |
 
 
 ## Methods
@@ -40,6 +40,7 @@ Type: `Promise<Cursor>`
 
 ### Used by
 
+ - [ldf-editable-metadata](../editable-metadata)
  - [ldf-heading](../heading)
  - [ldf-psalm](../psalm)
  - [ldf-refrain](../refrain)
@@ -50,6 +51,7 @@ Type: `Promise<Cursor>`
 ### Graph
 ```mermaid
 graph TD;
+  ldf-editable-metadata --> ldf-editable-text
   ldf-heading --> ldf-editable-text
   ldf-psalm --> ldf-editable-text
   ldf-refrain --> ldf-editable-text

@@ -10,7 +10,7 @@ import * as json0 from 'ot-json0';
 import * as Please from 'pleasejs';
 
 const DOCS = {
-  'def456': { type: "meditation", metadata: {length: 60 } },
+  'def456': {type: "heading", metadata: {level: 1 }, label: "Compline"},
   'abc123': {
     type: 'liturgy',
     metadata: {
@@ -25,7 +25,7 @@ const DOCS = {
         { label: "Officiant", text: "Our help is in the Name of the Lord." },
         { label: "People", text: "The maker of heaven and earth."}
       ]},
-      {type: "text", value: ["Let us confess our sins to God."] },
+      {type: "text", label: '', value: ["Let us confess our sins to God."] },
       {type: "text", style: "prayer", value: [`Almighty God, our heavenly Father:\nWe have sinned against you,
 through our own fault,
 in thought, and word, and deed,

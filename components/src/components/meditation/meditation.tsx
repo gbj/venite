@@ -22,7 +22,7 @@ export class MeditationComponent {
 
   // Properties
   /**
-   * An LDF Meditation object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Meditation object.
    */
   @Prop() doc : Meditation | string;
   @Watch('doc')

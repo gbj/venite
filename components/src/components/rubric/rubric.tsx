@@ -12,7 +12,7 @@ export class RubricComponent {
 
   // Properties
   /**
-   * An LDF Rubric object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Rubric object.
    */
   @Prop() doc : Rubric | string;
   @Watch('doc')

@@ -12,7 +12,7 @@ export class HeadingComponent {
 
   // Properties
   /**
-   * An LDF Heading object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Heading object.
    */
   @Prop() doc : Heading | string;
   @Watch('doc')

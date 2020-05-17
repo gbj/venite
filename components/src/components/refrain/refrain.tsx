@@ -12,7 +12,7 @@ export class RefrainComponent {
 
   // Properties
   /**
-   * An LDF Refrain object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Refrain object.
    */
   @Prop() doc : Refrain | string;
   @Watch('doc')

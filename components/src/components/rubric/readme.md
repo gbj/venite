@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                               | Type               | Default     |
-| ---------- | ---------- | ------------------------------------------------------------------------- | ------------------ | ----------- |
-| `doc`      | `doc`      | An LDF Rubric object. If both `doc` and `json` are passed, `doc` is used. | `Rubric \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                                            | `boolean`          | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Collect being edited                    | `string`           | `undefined` |
+| Property   | Attribute  | Description                                            | Type               | Default     |
+| ---------- | ---------- | ------------------------------------------------------ | ------------------ | ----------- |
+| `doc`      | `doc`      | An LDF Rubric object.                                  | `Rubric \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                         | `boolean`          | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Collect being edited | `string`           | `undefined` |
 
 
 ## Dependencies

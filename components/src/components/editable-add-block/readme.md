@@ -15,16 +15,16 @@
 
 ## Events
 
-| Event             | Description | Type                  |
-| ----------------- | ----------- | --------------------- |
-| `docShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [ldf-liturgical-document](../liturgical-document)
+ - [ldf-liturgy](../liturgy)
 
 ### Depends on
 
@@ -35,7 +35,7 @@
 graph TD;
   ldf-editable-add-block --> ion-modal
   ion-modal --> ion-backdrop
-  ldf-liturgical-document --> ldf-editable-add-block
+  ldf-liturgy --> ldf-editable-add-block
   style ldf-editable-add-block fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

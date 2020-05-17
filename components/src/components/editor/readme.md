@@ -48,15 +48,27 @@ graph TD;
   ldf-liturgical-document --> ldf-responsive-prayer
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
-  ldf-liturgical-document --> ldf-editable-add-block
+  ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-editable-metadata
   ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
+  ldf-editable-metadata --> ldf-label-bar
+  ldf-editable-metadata --> ion-buttons
+  ldf-editable-metadata --> ion-button
+  ldf-editable-metadata --> ion-icon
+  ldf-editable-metadata --> ion-label
+  ldf-editable-metadata --> ldf-editable-select
+  ldf-editable-metadata --> ldf-editable-text
+  ion-button --> ion-ripple-effect
+  ldf-editable-select --> ion-select
+  ldf-editable-select --> ion-select-option
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
-  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label
@@ -86,8 +98,6 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
   style ldf-editor fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

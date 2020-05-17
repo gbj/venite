@@ -16,7 +16,7 @@ export class TextComponent {
 
   // Properties
   /**
-   * An LDF Text object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Text object.
    */
   @Prop() doc : Text | string;
   @Watch('doc')

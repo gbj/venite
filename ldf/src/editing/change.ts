@@ -22,6 +22,8 @@ export class Change {
         .filter(part => part) :
       new Array();
 
+    console.log('pathParts = ', pathParts, 'op = ', this.op);
+
     return this.op.map(op => ({ ... op, p: pathParts.concat(op.p) }));
   }
 

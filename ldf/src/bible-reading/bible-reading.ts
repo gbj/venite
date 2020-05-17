@@ -3,10 +3,13 @@ import { BibleReadingVerse } from './bible-reading-verse';
 import { BIBLE_BOOK_ABBREVIATIONS } from './bible-book-abbreviations';
 import { BIBLE_BOOK_NAMES } from './bible-book-names.i18n';
 
+const STYLES = ['long', 'short'] as const;
+type StyleTuple = typeof STYLES;
+
 /** BibleReading represents liturgical instructions. */
 export class BibleReading extends LiturgicalDocument {
   type: 'bible-reading';
-  style: 'long' | 'short';
+  style: StyleTuple[number];
   citation: string;
   metadata?: {
     compiled_intro?: LiturgicalDocument;
@@ -97,6 +100,11 @@ export class BibleReading extends LiturgicalDocument {
   shortNameFromBookCode(bookName: string, lang: string = 'en'): string {
     const searchResult = BIBLE_BOOK_NAMES[bookName][lang];
     return searchResult ? searchResult.short : bookName;
+  }
+
+  /** Returns the list of all possible `style` values.  */
+  availableStyles() : ReadonlyArray<string> {
+    return STYLES;
   }
 
   //** Constructor takes a Javascript object containing the class's properties */

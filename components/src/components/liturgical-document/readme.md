@@ -7,11 +7,18 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                                           | Type                           | Default     |
-| ---------- | ---------- | ------------------------------------------------------------------------------------- | ------------------------------ | ----------- |
-| `doc`      | `doc`      | An LDF LiturgicalDocument object. If both `doc` and `json` are passed, `doc` is used. | `LiturgicalDocument \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                                                        | `boolean`                      | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the LiturgicalDocument being edited                     | `string`                       | `undefined` |
+| Property   | Attribute  | Description                                                       | Type                           | Default     |
+| ---------- | ---------- | ----------------------------------------------------------------- | ------------------------------ | ----------- |
+| `doc`      | `doc`      | An LDF LiturgicalDocument object.                                 | `LiturgicalDocument \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                                    | `boolean`                      | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the LiturgicalDocument being edited | `string`                       | `undefined` |
+
+
+## Events
+
+| Event       | Description | Type                  |
+| ----------- | ----------- | --------------------- |
+| `focusPath` |             | `CustomEvent<string>` |
 
 
 ## Dependencies
@@ -35,7 +42,6 @@
 - [ldf-responsive-prayer](../responsive-prayer)
 - [ldf-bible-reading](../bible-reading)
 - [ldf-psalm](../psalm)
-- [ldf-editable-add-block](../editable-add-block)
 
 ### Graph
 ```mermaid
@@ -50,15 +56,25 @@ graph TD;
   ldf-liturgical-document --> ldf-responsive-prayer
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
-  ldf-liturgical-document --> ldf-editable-add-block
   ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
+  ldf-editable-metadata --> ldf-label-bar
+  ldf-editable-metadata --> ion-buttons
+  ldf-editable-metadata --> ion-button
+  ldf-editable-metadata --> ion-icon
+  ldf-editable-metadata --> ion-label
+  ldf-editable-metadata --> ldf-editable-select
+  ldf-editable-metadata --> ldf-editable-text
+  ion-button --> ion-ripple-effect
+  ldf-editable-select --> ion-select
+  ldf-editable-select --> ion-select-option
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
-  ion-button --> ion-ripple-effect
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect
   ldf-refrain --> ldf-label-bar
@@ -79,8 +95,6 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
   ldf-editor --> ldf-liturgical-document
   style ldf-liturgical-document fill:#f9f,stroke:#333,stroke-width:4px
 ```

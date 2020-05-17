@@ -14,7 +14,7 @@ export class OptionComponent {
 
   // Properties
   /**
-   * An LDF Option object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Option object.
    */
   @Prop() doc : Option | string;
   @Watch('doc')

@@ -19,7 +19,7 @@ export class PsalmComponent {
 
   // Properties
   /**
-   * An LDF Psalm object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF Psalm object.
    */
   @Prop() doc : Psalm | string;
   @Watch('doc')

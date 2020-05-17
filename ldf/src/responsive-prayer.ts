@@ -1,13 +1,21 @@
 import { LiturgicalDocument } from './liturgical-document';
 
+const STYLES = ['preces', 'litany', 'responsive'] as const;
+type StyleTuple = typeof STYLES;
+
 /** Text represents collect or any other short prayer. */
 export class ResponsivePrayer extends LiturgicalDocument {
   type: 'responsive';
-  style: 'preces' | 'litany' | 'responsive';
+  style: StyleTuple[number];
   value: ResponsivePrayerLine[];
   metadata?: {
     response: string;
   };
+
+  /** Returns the list of all possible `style` values. */
+  availableStyles() : ReadonlyArray<string> {
+    return STYLES;
+  }
 
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<ResponsivePrayer> = {}) {

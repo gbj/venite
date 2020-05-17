@@ -10,6 +10,9 @@ import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
 
+const TYPES = ['liturgy', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
+type TypeTuple = typeof TYPES;
+
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
@@ -19,7 +22,7 @@ export class LiturgicalDocument {
   revision_log? : Change[];
 
   /** Indicates the type of document */
-  type: 'liturgy' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation';
+  type: TypeTuple[number];
 
   /** An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style. */
   style?: string;
@@ -120,6 +123,16 @@ export class LiturgicalDocument {
     } else {
       return true;
     }
+  }
+
+  /** Returns the list of all possible `type` values */
+  availableTypes() : ReadonlyArray<string> {
+    return TYPES;
+  }
+
+  /** Returns the list of all possible `style` values. Child classes should override if they have styles available. */
+  availableStyles() : ReadonlyArray<string> {
+    return [];
   }
 
   //** Constructor takes a Javascript object containing the class's properties */

@@ -20,7 +20,7 @@ export class BibleReadingComponent {
 
   // Properties
   /**
-   * An LDF BibleReading object. If both `doc` and `json` are passed, `doc` is used.
+   * An LDF BibleReading object.
    */
   @Prop() doc : BibleReading | string;
   @Watch('doc')

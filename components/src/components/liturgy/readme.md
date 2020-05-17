@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                                | Type                | Default     |
-| ---------- | ---------- | -------------------------------------------------------------------------- | ------------------- | ----------- |
-| `doc`      | `doc`      | An LDF Liturgy object. If both `doc` and `json` are passed, `doc` is used. | `Liturgy \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                                             | `boolean`           | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Liturgy being edited                     | `string`            | `undefined` |
+| Property   | Attribute  | Description                                            | Type                | Default     |
+| ---------- | ---------- | ------------------------------------------------------ | ------------------- | ----------- |
+| `doc`      | `doc`      | An LDF Liturgy object.                                 | `Liturgy \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                         | `boolean`           | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Liturgy being edited | `string`            | `undefined` |
 
 
 ## Dependencies
@@ -22,12 +22,28 @@
 
 ### Depends on
 
+- [ldf-editable-add-block](../editable-add-block)
+- [ldf-editable-metadata](../editable-metadata)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
+  ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-editable-metadata
   ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
+  ldf-editable-metadata --> ldf-label-bar
+  ldf-editable-metadata --> ion-buttons
+  ldf-editable-metadata --> ion-button
+  ldf-editable-metadata --> ion-icon
+  ldf-editable-metadata --> ion-label
+  ldf-editable-metadata --> ldf-editable-select
+  ldf-editable-metadata --> ldf-editable-text
+  ion-button --> ion-ripple-effect
+  ldf-editable-select --> ion-select
+  ldf-editable-select --> ion-select-option
   ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
@@ -35,7 +51,6 @@ graph TD;
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
-  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label
@@ -65,8 +80,6 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

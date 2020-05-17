@@ -60,7 +60,8 @@ export class EditableAddBlockComponent {
       <button class={classes} onClick={() => this.expand()}>
         <label class='visually-hidden'>{ (this.localeStrings || {}).add}</label>
         +
-      </button>);
+      </button>
+    );
   }
 
   async expand() {

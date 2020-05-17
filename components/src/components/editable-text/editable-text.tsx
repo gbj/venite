@@ -28,6 +28,7 @@ export class EditableTextComponent {
   @Prop() text: string;
   @Watch('text')
   textChanged(newText : string) {
+    console.log('newText = ', newText);
     this.currentText = newText;
     if(this.textarea) {
       this.textarea.value = this.currentText;

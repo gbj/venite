@@ -1,5 +1,8 @@
 import { LiturgicalDocument, Heading, Refrain } from '.';
 
+const STYLES = ['psalm', 'canticle', 'invitatory'] as const;
+type StyleTuple = typeof STYLES;
+
 /** PsalmVerse is a single verse or line
  * @example
  * // 1  The Lord is my shepherd; *
@@ -21,7 +24,7 @@ export class PsalmVerse {
 /** Psalm represents liturgical instructions. */
 export class Psalm extends LiturgicalDocument {
   type: 'psalm';
-  style: 'psalm' | 'canticle' | 'invitatory';
+  style: StyleTuple[number];
   citation: string;
   metadata?: {
     number?: string;
@@ -126,6 +129,11 @@ export class Psalm extends LiturgicalDocument {
         metadata.omit_gloria && setIndex == filteredValueLength - 1 // antiphon will repeat after Gloria, so don't include it here as well
       )
     ); // if there's no Gloria, and this is the final set
+  }
+
+  /** Returns the list of all possible `style` values.  */
+  availableStyles() : ReadonlyArray<string> {
+    return STYLES;
   }
 
   //** Constructor takes a Javascript object containing the class's properties */

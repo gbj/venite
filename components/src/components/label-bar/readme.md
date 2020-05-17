@@ -10,6 +10,7 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
+ - [ldf-editable-metadata](../editable-metadata)
  - [ldf-editor](../editor)
  - [ldf-heading](../heading)
  - [ldf-meditation](../meditation)
@@ -24,6 +25,7 @@
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
+  ldf-editable-metadata --> ldf-label-bar
   ldf-editor --> ldf-label-bar
   ldf-heading --> ldf-label-bar
   ldf-meditation --> ldf-label-bar
