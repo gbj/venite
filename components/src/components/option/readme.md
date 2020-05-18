@@ -55,21 +55,19 @@ graph TD;
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect
   ldf-liturgical-document --> ldf-option
-  ldf-liturgy --> ldf-editable-add-block
-  ldf-liturgy --> ldf-editable-metadata
+  ldf-liturgy --> ldf-label-bar
+  ldf-liturgy --> ldf-editable-delete
   ldf-liturgy --> ldf-liturgical-document
+  ldf-liturgy --> ldf-editable-add-block
+  ldf-editable-delete --> ion-alert
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
+  ion-button --> ion-ripple-effect
   ldf-editable-add-block --> ion-modal
   ion-modal --> ion-backdrop
-  ldf-editable-metadata --> ldf-label-bar
-  ldf-editable-metadata --> ion-buttons
-  ldf-editable-metadata --> ion-button
-  ldf-editable-metadata --> ion-icon
-  ldf-editable-metadata --> ion-label
-  ldf-editable-metadata --> ldf-editable-select
-  ldf-editable-metadata --> ldf-editable-text
-  ion-button --> ion-ripple-effect
-  ldf-editable-select --> ion-select
-  ldf-editable-select --> ion-select-option
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-meditation --> ion-button

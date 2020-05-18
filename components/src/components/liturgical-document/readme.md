@@ -16,9 +16,10 @@
 
 ## Events
 
-| Event       | Description | Type                  |
-| ----------- | ----------- | --------------------- |
-| `focusPath` |             | `CustomEvent<string>` |
+| Event       | Description | Type                              |
+| ----------- | ----------- | --------------------------------- |
+| `focusObj`  |             | `CustomEvent<LiturgicalDocument>` |
+| `focusPath` |             | `CustomEvent<string>`             |
 
 
 ## Dependencies
@@ -57,18 +58,15 @@ graph TD;
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-delete --> ion-alert
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
+  ion-button --> ion-ripple-effect
   ldf-editable-add-block --> ion-modal
   ion-modal --> ion-backdrop
-  ldf-editable-metadata --> ldf-label-bar
-  ldf-editable-metadata --> ion-buttons
-  ldf-editable-metadata --> ion-button
-  ldf-editable-metadata --> ion-icon
-  ldf-editable-metadata --> ion-label
-  ldf-editable-metadata --> ldf-editable-select
-  ldf-editable-metadata --> ldf-editable-text
-  ion-button --> ion-ripple-effect
-  ldf-editable-select --> ion-select
-  ldf-editable-select --> ion-select-option
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-meditation --> ion-button

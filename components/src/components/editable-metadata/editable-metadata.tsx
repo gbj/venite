@@ -102,10 +102,10 @@ export class EditableMetadataComponent {
           <SelectField field='type' types={availableTypes} />
 
           {/* `style` */}
-          { availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+          {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
 
           {/* `label` */}
-          <fieldset>
+          {(!this.obj.label || this.obj.label == '') && <fieldset>
             <label htmlFor='label'>{localeStrings.label}</label>
             <ldf-editable-text id='label'
               short={true}
@@ -113,7 +113,7 @@ export class EditableMetadataComponent {
               text={this.obj.label}
               placeholder={localeStrings.label}>
             </ldf-editable-text>
-          </fieldset>
+          </fieldset>}
         </form>
       </Host>
     );

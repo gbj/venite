@@ -22,28 +22,25 @@
 
 ### Depends on
 
-- [ldf-editable-add-block](../editable-add-block)
-- [ldf-editable-metadata](../editable-metadata)
+- [ldf-label-bar](../label-bar)
+- [ldf-editable-delete](../editable-delete)
 - [ldf-liturgical-document](../liturgical-document)
+- [ldf-editable-add-block](../editable-add-block)
 
 ### Graph
 ```mermaid
 graph TD;
-  ldf-liturgy --> ldf-editable-add-block
-  ldf-liturgy --> ldf-editable-metadata
+  ldf-liturgy --> ldf-label-bar
+  ldf-liturgy --> ldf-editable-delete
   ldf-liturgy --> ldf-liturgical-document
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
-  ldf-editable-metadata --> ldf-label-bar
-  ldf-editable-metadata --> ion-buttons
-  ldf-editable-metadata --> ion-button
-  ldf-editable-metadata --> ion-icon
-  ldf-editable-metadata --> ion-label
-  ldf-editable-metadata --> ldf-editable-select
-  ldf-editable-metadata --> ldf-editable-text
+  ldf-liturgy --> ldf-editable-add-block
+  ldf-editable-delete --> ion-alert
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
   ion-button --> ion-ripple-effect
-  ldf-editable-select --> ion-select
-  ldf-editable-select --> ion-select-option
   ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
@@ -80,6 +77,8 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
+  ldf-editable-add-block --> ion-modal
+  ion-modal --> ion-backdrop
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
