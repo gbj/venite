@@ -50,8 +50,11 @@ export class DocumentManager {
 
     console.log(change.user, clientLastRevision, realLastRevision);
 
+    // merge `Change.path` and `Change.op.p`
     let op = change.fullyPathedOp();
+    console.log('fully pathed op = ', op);
 
+    // if the client was basing this on an outdated revision, transform the change
     if(clientLastRevision < realLastRevision) {
       const transformsToApply = this.revision_log.slice(clientLastRevision, realLastRevision).map(change => change.fullyPathedOp());
 
@@ -59,8 +62,10 @@ export class DocumentManager {
 
       this.document = json0.type.apply(this.document, op);
       this.revision_log.push(new Change({ ... change, op }));
-    } else {
-      const op = change.fullyPathedOp();
+    }
+    // otherwise, just apply the change
+    else {
+      console.log('document = ', this.document)
       this.document = json0.type.apply(this.document, op);
       this.revision_log.push(change);
     }
