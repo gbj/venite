@@ -1,4 +1,4 @@
-import { WebSocketGateway, WebSocketServer, SubscribeMessage, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
+import { WebSocketGateway, WebSocketServer, SubscribeMessage, OnGatewayConnection, OnGatewayDisconnect, WsException } from '@nestjs/websockets';
 import { Socket } from 'socket.io';
 
 import { LiturgicalDocument, ChangeMessage, CursorMessage, User, Change, Cursor } from '@venite/ldf';
@@ -124,6 +124,17 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
     }
 
     /* Users: Joining/Leaving Rooms */
+
+    // Helper function used by `onJoin` and `onRefreshDoc`
+    emitJoined(client : Socket, docManager : DocumentManager) {
+      client.emit('joined', {
+        users: docManager.users,
+        doc: docManager.document,
+        lastRevision: docManager.getLastRevision()
+      });
+    }
+
+    // Respond to joining
     @SubscribeMessage('join')
     async onJoin(client : Socket, message : { userToken : string; docId: string; }) {
       // authenticate user token
@@ -168,11 +179,7 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
         }));
 
         // tell the person who joined who's there, and what the doc is
-        client.emit('joined', {
-          users: docManager.users,
-          doc: docManager.document,
-          lastRevision: docManager.getLastRevision()
-        });
+        this.emitJoined(client, docManager);
 
         // just give everyone else in the room the new list of users
         client.to(docId).broadcast
@@ -188,6 +195,13 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
         docManager.removeUser(client.id);
         client.emit('users', docManager.users);
       }
+    }
+
+    @SubscribeMessage('refreshDoc')
+    async onRefreshDoc(client : Socket, docId : string) {
+      console.log('refreshing the document for client', client.id);
+      const docManager = this.docManagers[docId];
+      this.emitJoined(client, docManager);
     }
 
     /* Cursors */
@@ -219,16 +233,4 @@ export class EditorGateway implements OnGatewayConnection, OnGatewayDisconnect {
       // apply the change on the server copy of document
       docManager.addChangeToQueue(client, new Change({ ... change, user: user.username }), lastRevision);
     }
-
-    /* Transforming changes and applying them to the doc */
-/*    @SubscribeMessage('docChanged')
-    async onDocChanged(client : Socket, message : { change: Change[]; lastRevision: number; }) {
-      const user = this.clientToUser(client);
-
-       Look up the revisions since the last one they've reported
-
-
-       Send the transformed change to clients
-      client.broadcast.emit('docChanged', message.map(m => { return { ... m, user } }));
-    } */
 }

@@ -1,6 +1,7 @@
 import { Change, ChangeMessage, LiturgicalDocument, User } from '@venite/ldf';
 import { Subject } from 'rxjs';
 import { Socket } from 'socket.io';
+import { WsException } from '@nestjs/websockets';
 
 import * as json0 from 'ot-json0';
 
@@ -60,14 +61,22 @@ export class DocumentManager {
 
       transformsToApply.forEach(transformOp => op = json0.type.transform(op, transformOp, 'right'));
 
-      this.document = json0.type.apply(this.document, op);
-      this.revision_log.push(new Change({ ... change, op }));
+      try {
+        this.document = json0.type.apply(this.document, op);
+        this.revision_log.push(new Change({ ... change, op }));
+      } catch(e) {
+        throw new WsException(e);
+      }
     }
     // otherwise, just apply the change
     else {
       console.log('document = ', this.document)
-      this.document = json0.type.apply(this.document, op);
-      this.revision_log.push(change);
+      try {
+        this.document = json0.type.apply(this.document, op);
+        this.revision_log.push(change);
+      } catch (e) {
+        throw new WsException(e);
+      }
     }
 
     console.log('revision_log = ', this.revision_log);

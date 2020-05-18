@@ -79,6 +79,10 @@ export class EditorComponent {
       this.users = data.users;
       this.hasJoinedDocument = true;
     }));
+    this.subscription.add(EditorService.error.subscribe((data) => {
+      console.warn('Error', data);
+      EditorService.refreshDoc();
+    }));
   }
 
   // Listeners
@@ -321,13 +325,6 @@ export class EditorComponent {
           {/* Editable version of liturgy */}
           {this.obj && <ldf-liturgical-document
             editable={true}
-            path='/'
-            doc={this.obj}>
-          </ldf-liturgical-document>}
-
-          {/* Preview version of liturgy */}
-          {this.obj && <ldf-liturgical-document
-            editable={false}
             path='/'
             doc={this.obj}>
           </ldf-liturgical-document>}
