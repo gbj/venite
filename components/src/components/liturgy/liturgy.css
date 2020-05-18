@@ -1,0 +1,12 @@
+/* Shared animations */
+.visible {
+  opacity: 1;
+  transition: 0.25s;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.25s;
+  visibility: hidden;
+}

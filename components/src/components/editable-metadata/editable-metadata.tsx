@@ -1,5 +1,5 @@
-import { Component, Element, Prop, Watch, State, Host, h } from '@stencil/core';
-import { LiturgicalDocument } from '@venite/ldf';
+import { Component, Element, Prop, Watch, State, Host, FunctionalComponent, h } from '@stencil/core';
+import { LiturgicalDocument, specificClass } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
@@ -13,7 +13,7 @@ export class EditableMetadataComponent {
   // States
   @State() obj : LiturgicalDocument;
   @State() localeStrings: { [x: string]: string; };
-  @State() collapsed : boolean = true;
+  @State() collapsedState : boolean;
 
   // Properties
   /**
@@ -24,9 +24,9 @@ export class EditableMetadataComponent {
   docChanged(newDoc : LiturgicalDocument | string) {
     try {
       if(typeof newDoc == 'string') {
-        this.obj = new LiturgicalDocument(JSON.parse(newDoc));
+        this.obj = specificClass(JSON.parse(newDoc));
       } else {
-        this.obj = new LiturgicalDocument(newDoc);
+        this.obj = specificClass(newDoc);
       }
     } catch(e) {
       console.warn(e);
@@ -40,9 +40,13 @@ export class EditableMetadataComponent {
   /** If `visible` is true, the controls should appear. */
   @Prop() visible : boolean;
 
+  /** If `collapsed` is false, the full set of editable fields will appear. */
+  @Prop() collapsed : boolean;
+
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
+    this.collapsedState = this.collapsed;
     this.loadLocaleStrings();
   }
 
@@ -70,38 +74,35 @@ export class EditableMetadataComponent {
   // Render
   render() {
     const localeStrings = this.localeStrings || {},
-          availableTypes = this.obj.availableTypes() || [];
+          availableTypes = this.obj.availableTypes() || [],
+          availableStyles = this.obj.availableStyles() || [];
+
+    /** <SelectField/> Functional Component */
+    interface SelectFieldProps {
+      field: string;
+      types: ReadonlyArray<string>
+    }
+    const SelectField : FunctionalComponent<SelectFieldProps> = ({ field, types }) => (
+      <fieldset>
+        <label htmlFor={field}>{localeStrings[field]}</label>
+        <ldf-editable-select id={field}
+          path={this.path}
+          property={field}
+          value={this.obj[field]}
+          options={types.map(value => ({ value, label: localeStrings[value] || value }))}>
+        </ldf-editable-select>
+      </fieldset>
+    );
 
     return (
       <Host>
-        {/* Settings/Delete controls — Display on hover */}
-        <ldf-label-bar class={{ hidden: !this.visible, visible: this.visible }}>
-          <div slot='end'>
-            <ion-buttons>
-              <ion-button onClick={() => this.collapsed = !this.collapsed}>
-                <ion-icon name='cog' slot='start'></ion-icon>
-                <ion-label>{localeStrings.settings}</ion-label>
-              </ion-button>
-              <ion-button>
-                <ion-icon name='close' slot='start'></ion-icon>
-                <ion-label>{localeStrings.delete}</ion-label>
-              </ion-button>
-            </ion-buttons>
-          </div>
-        </ldf-label-bar>
-
         {/* Form to Edit Metadata — display when "Settings" button is toggled */}
-        <form class={{ metadata: true, hidden: this.collapsed, visible: !this.collapsed }}>
+        <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
           {/* `type` */}
-          <fieldset>
-            <label htmlFor='type'>{localeStrings.type}</label>
-            <ldf-editable-select id='type'
-              path={this.path}
-              property='type'
-              value={this.obj.type}
-              options={availableTypes.map(value => ({ value, label: localeStrings[value] || value }))}>
-            </ldf-editable-select>
-          </fieldset>
+          <SelectField field='type' types={availableTypes} />
+
+          {/* `style` */}
+          { availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
 
           {/* `label` */}
           <fieldset>

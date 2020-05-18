@@ -24,6 +24,8 @@ export class EditorComponent {
   @State() cursor: Cursor;
   @State() users : User[] = new Array();
 
+  @State() focusObj : LiturgicalDocument;
+
   cursors : {
     [user: string]: Cursor
   } = {};
@@ -131,6 +133,13 @@ export class EditorComponent {
 
     // unsubscribe from all subscriptions to avoid memory leak
     this.subscription.unsubscribe();
+  }
+
+  // listen for `LiturgicalDocumentComponent` to fire `focusPath` events when it is focused
+  @Listen('focusObj')
+  onFocusObj(ev : CustomEvent) {
+    console.log('focusObj', ev.detail);
+    this.focusObj = ev.detail;
   }
 
   // Public methods
@@ -270,57 +279,57 @@ export class EditorComponent {
   render() {
     // TODO #auth -- replace this with real user info
     const user = this.users.find(u => u.username == this.userToken),
-          otherUsers = this.users.filter(u => u.username !== this.userToken);
+          otherUsers = this.users.filter(u => u.username !== this.userToken),
+          focusObj = this.focusObj || new LiturgicalDocument();
 
     return (
       <Host>
-        {/*
-          <p>Doc: {this.docId} | User: {this.userToken}</p>
-          <p>Users: {this.users.map(user =>
-            (<span>
-                <span class='user' style={{
+        {/* Header contains auth toolbar and document toolbar */}
+        <ion-header>
+          {/* "Logged in as" toolbar */}
+          <ldf-label-bar>
+            <div slot='start'>
+              {user && <span>Logged in as <span class='user' style={{
                   backgroundColor: new Values(user.color).tint(40).hexString(),
                   borderColor: new Values(user.color).shade(10).hexString()
-                }}>{user.username}</span>, </span>
-            )
-          )}</p>
-          */}
-        {/* "Logged in as" toolbar */}
-        <ldf-label-bar>
-          <div slot='start'>
-            {user && <span>Logged in as <span class='user' style={{
-                backgroundColor: new Values(user.color).tint(40).hexString(),
-                borderColor: new Values(user.color).shade(10).hexString()
-              }}>{user.username}</span>. </span>}
-            {
-              otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
-                <span>
-                  <span class='user' style={{
-                    backgroundColor: new Values(u.color).tint(40).hexString(),
-                    borderColor: new Values(u.color).shade(10).hexString()
-                  }}>{u.username}</span>
-                </span>
-              ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
-            }
+                }}>{user.username}</span>. </span>}
+              {
+                otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
+                  <span>
+                    <span class='user' style={{
+                      backgroundColor: new Values(u.color).tint(40).hexString(),
+                      borderColor: new Values(u.color).shade(10).hexString()
+                    }}>{u.username}</span>
+                  </span>
+                ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
+              }
             </div>
-          <slot name='controls' slot='end'/>
-        </ldf-label-bar>
+            <slot name='controls' slot='end'/>
+          </ldf-label-bar>
 
-        {/* Cursors */}
-        {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
+          {/* Metadata toolbar for subdocuments */}
+          {focusObj && focusObj.type && <ldf-editable-metadata
+              doc={focusObj}
+              visible={true}
+              collapsed={false}>
+            </ldf-editable-metadata>}
+        </ion-header>
+          {/* Cursors */}
+          {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
 
-        {/* Render the actual liturgy */}
-        {this.obj && <ldf-liturgical-document
-          editable={true}
-          path='/'
-          doc={this.obj}>
-        </ldf-liturgical-document>}
+          {/* Editable version of liturgy */}
+          {this.obj && <ldf-liturgical-document
+            editable={true}
+            path='/'
+            doc={this.obj}>
+          </ldf-liturgical-document>}
 
-        {this.obj && <ldf-liturgical-document
-          editable={false}
-          path='/'
-          doc={this.obj}>
-        </ldf-liturgical-document>}
+          {/* Preview version of liturgy */}
+          {this.obj && <ldf-liturgical-document
+            editable={false}
+            path='/'
+            doc={this.obj}>
+          </ldf-liturgical-document>}
       </Host>
     );
   }

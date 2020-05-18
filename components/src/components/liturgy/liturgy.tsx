@@ -3,6 +3,7 @@ import { Liturgy } from '../../../../ldf/src/liturgy/liturgy';
 
 @Component({
   tag: 'ldf-liturgy',
+  styleUrl: 'liturgy.css',
   shadow: true
 })
 export class LiturgyComponent {
@@ -39,9 +40,6 @@ export class LiturgyComponent {
    */
   @Prop() editable : boolean;
 
-  setFocus(path : string) {
-    this.hasFocus = path;
-  }
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
@@ -62,8 +60,21 @@ export class LiturgyComponent {
           const path = `${basePath}/value/${docIndex}`;
           return (
             <article>
+              {/* 'Add Block' interface */}
               {this.editable && <ldf-editable-add-block visible={this.hasFocus == path} path={path}></ldf-editable-add-block>}
-              {this.editable && <ldf-editable-metadata visible={this.hasFocus == path} path={path} doc={doc}></ldf-editable-metadata>}
+
+              {/* Delete control — Display on hover */}
+              {this.editable && <ldf-label-bar class={{ hidden: this.hasFocus !== path, visible: this.hasFocus == path }}>
+                <div slot='end'>
+                  <ion-buttons>
+                    <ion-button aria-role='button' aria-label='Delete' size='small'>
+                      <ion-icon name='close' slot='icon-only'></ion-icon>
+                    </ion-button>
+                  </ion-buttons>
+                </div>
+              </ldf-label-bar>}
+
+              {/* Render the document */}
               <ldf-liturgical-document doc={doc} path={path} editable={this.editable}></ldf-liturgical-document>
             </article>
           )

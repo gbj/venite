@@ -8,7 +8,6 @@ import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option,
 export class LiturgicalDocumentComponent {
   // States
   @State() obj : LiturgicalDocument;
-  @State() hasFocus : boolean = false;
 
   // Properties
   /**
@@ -39,6 +38,7 @@ export class LiturgicalDocumentComponent {
 
   // Events
   @Event() focusPath : EventEmitter<string>;
+  @Event() focusObj : EventEmitter<LiturgicalDocument>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -56,9 +56,12 @@ export class LiturgicalDocumentComponent {
     this.focusPath.emit(this.path);
   }
 
-  @Listen('click')
+  // Firing the event during the capture phase the most specific LiturgicalDocument will
+  // be handled last, i.e., the `Liturgy` won't override subdocuments
+  @Listen('click', { capture: true })
   onClick() {
     this.focusPath.emit(this.path);
+    this.focusObj.emit(this.obj);
   }
 
 
@@ -66,6 +69,8 @@ export class LiturgicalDocumentComponent {
   //@Method()
   chooseComponent(doc : LiturgicalDocument) : JSX.Element {
     let node : JSX.Element;
+
+    console.log('chooseComponent', doc);
 
     switch(doc.type) {
       case 'liturgy':

@@ -32,12 +32,14 @@ export class EditableSelectComponent {
     const oldValue = this.value,
           newValue = ev.detail.value;
 
-    this.ldfDocShouldChange.emit(new Change({
-      path: this.path,
-      op: [
-        { p: [this.property], od: oldValue, oi: newValue }
-      ]
-    }));
+    if(newValue !== oldValue) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.path,
+        op: [
+          { p: [this.property], od: oldValue, oi: newValue }
+        ]
+      }));
+    }
   }
 
   render() {
