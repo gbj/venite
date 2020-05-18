@@ -314,6 +314,7 @@ export class EditorComponent {
               collapsed={false}>
             </ldf-editable-metadata>}
         </ion-header>
+        <ion-content style={{ height: '100vh', width: '100vw' }}>
           {/* Cursors */}
           {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
 
@@ -330,6 +331,7 @@ export class EditorComponent {
             path='/'
             doc={this.obj}>
           </ldf-liturgical-document>}
+        </ion-content>
       </Host>
     );
   }
