@@ -8,6 +8,7 @@ import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option,
 export class LiturgicalDocumentComponent {
   // States
   @State() obj : LiturgicalDocument;
+  @State() hasFocus : boolean = false;
 
   // Properties
   /**
@@ -31,6 +32,9 @@ export class LiturgicalDocumentComponent {
   /** A JSON Pointer that points to the LiturgicalDocument being edited */
   @Prop({ reflect: true }) path : string;
 
+  /** Index within a larger array, if any */
+  @Prop() index : number;
+
   /**
    * Whether the object is editable
    */
@@ -38,7 +42,7 @@ export class LiturgicalDocumentComponent {
 
   // Events
   @Event() focusPath : EventEmitter<string>;
-  @Event() focusObj : EventEmitter<LiturgicalDocument>;
+  @Event() focusObj : EventEmitter<{obj: LiturgicalDocument; path: string;}>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -46,13 +50,15 @@ export class LiturgicalDocumentComponent {
   }
 
   /** On hover, display Add Block buttons */
-  @Listen('mouseover')
+  @Listen('mouseover', { capture: true })
   onMouseOver() {
+    this.hasFocus = true;
     this.focusPath.emit(this.path);
   }
 
-  @Listen('mouseout')
+  @Listen('mouseout', { capture: true })
   onMouseOut() {
+    this.hasFocus = false;
     this.focusPath.emit(this.path);
   }
 
@@ -60,8 +66,8 @@ export class LiturgicalDocumentComponent {
   // be handled last, i.e., the `Liturgy` won't override subdocuments
   @Listen('click', { capture: true })
   onClick() {
-    this.focusPath.emit(this.path);
-    this.focusObj.emit(this.obj);
+    this.hasFocus = true;
+    this.focusObj.emit({obj: this.obj, path: this.path});
   }
 
 
@@ -69,8 +75,6 @@ export class LiturgicalDocumentComponent {
   //@Method()
   chooseComponent(doc : LiturgicalDocument) : JSX.Element {
     let node : JSX.Element;
-
-    console.log('chooseComponent', doc);
 
     switch(doc.type) {
       case 'liturgy':
@@ -115,6 +119,15 @@ export class LiturgicalDocumentComponent {
   render() {
     return (
       <Host lang={this.obj.language}>
+        {/* Settings/Delete Buttons */}
+        <ldf-editable-metadata-buttons
+          visible={this.hasFocus}
+          base={this.path}
+          index={this.index}
+          obj={this.obj}>
+        </ldf-editable-metadata-buttons>
+
+        {/* Render the Document */}
         {this.chooseComponent(this.obj)}
       </Host>
   );

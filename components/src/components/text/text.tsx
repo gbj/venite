@@ -114,7 +114,11 @@ export class TextComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}></ldf-heading>
+          <ldf-heading
+            editable={this.editable}
+            path={this.path}
+            doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}>
+          </ldf-heading>
 
           {
             compiledValue.map((prayer, prayerIndex) =>

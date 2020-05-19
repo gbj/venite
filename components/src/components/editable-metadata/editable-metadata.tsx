@@ -83,15 +83,15 @@ export class EditableMetadataComponent {
       types: ReadonlyArray<string>
     }
     const SelectField : FunctionalComponent<SelectFieldProps> = ({ field, types }) => (
-      <fieldset>
-        <label htmlFor={field}>{localeStrings[field]}</label>
+      <ion-item lines='none'>
+        <ion-label arial-label={localeStrings[field]} position='stacked'>{localeStrings[field]}</ion-label>
         <ldf-editable-select id={field}
           path={this.path}
           property={field}
           value={this.obj[field]}
           options={types.map(value => ({ value, label: localeStrings[value] || value }))}>
         </ldf-editable-select>
-      </fieldset>
+      </ion-item>
     );
 
     return (
@@ -105,15 +105,15 @@ export class EditableMetadataComponent {
           {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
 
           {/* `label` */}
-          {(!this.obj.label || this.obj.label == '') && <fieldset>
-            <label htmlFor='label'>{localeStrings.label}</label>
+          <ion-item lines='none'>
+            <ion-label aria-label={localeStrings.label} position='stacked'>{localeStrings.label}</ion-label>
             <ldf-editable-text id='label'
               short={true}
               path={`${this.path}/label`}
               text={this.obj.label}
               placeholder={localeStrings.label}>
             </ldf-editable-text>
-          </fieldset>}
+          </ion-item>
         </form>
       </Host>
     );

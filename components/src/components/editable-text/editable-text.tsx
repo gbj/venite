@@ -58,7 +58,7 @@ export class EditableTextComponent {
 
   // Events
   @Event({ bubbles: true }) ldfCursorMoved : EventEmitter<Cursor>;
-  @Event({ bubbles: true }) ldfEditableTextChanged : EventEmitter<Change>;
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   @Listen('beforeinput')
   onBeforeInput() {
@@ -94,7 +94,7 @@ export class EditableTextComponent {
     this.edits = new Array();
 
     // emit and return the new ones
-    this.ldfEditableTextChanged.emit(consolidated);
+    this.ldfDocShouldChange.emit(consolidated);
     return consolidated;
   }
 
@@ -214,10 +214,11 @@ export class EditableTextComponent {
     } else {
       return (
         <Host>
-          <input
-            ref={el => this.textarea = el as HTMLInputElement}
+          <ion-input
+            ref={async el => this.textarea = await el.getInputElement()}
             placeholder={this.placeholder || localeStrings.placeholder}
-            value={this.currentText}/>
+            value={this.currentText}>
+          </ion-input>
         </Host>
       );
     }

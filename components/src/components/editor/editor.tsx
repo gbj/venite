@@ -24,7 +24,7 @@ export class EditorComponent {
   @State() cursor: Cursor;
   @State() users : User[] = new Array();
 
-  @State() focusObj : LiturgicalDocument;
+  @State() focusObj : { obj: LiturgicalDocument; path: string; };
 
   cursors : {
     [user: string]: Cursor
@@ -96,16 +96,10 @@ export class EditorComponent {
     }
   }
 
-  // TODO: simplify this now that model has changed
-  /** docChanged event: the doc has already been changed, but we need to notify the server */
-  @Listen('ldfEditableTextChanged')
-  onEditableTextChanged(ev : CustomEvent) {
-    EditorService.processChange(new Change(ev.detail));
-  }
-
   /** docShouldChange event: we need to notify the server
-    * Will update our doc when we get an ack from the server */
-  @Listen('ldfDocShouldChange')
+    * Will update our doc when we get an ack from the server
+    * Targets `document` because it needs to listen for changes in e.g., modals attached to `document.body` */
+  @Listen('ldfDocShouldChange', { target: 'document' })
   onDocShouldChange(ev : CustomEvent) {
     //this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
     console.log('change = ', ev.detail);
@@ -139,7 +133,7 @@ export class EditorComponent {
     this.subscription.unsubscribe();
   }
 
-  // listen for `LiturgicalDocumentComponent` to fire `focusPath` events when it is focused
+  // listen for `LiturgicalDocumentComponent` to fire `focusObj` and `focusPath` events when it is focused
   @Listen('focusObj')
   onFocusObj(ev : CustomEvent) {
     console.log('focusObj', ev.detail);
@@ -174,6 +168,7 @@ export class EditorComponent {
     this.cursors[data.username] = data.cursor;
     this.cursorToPos(data.cursor, data.username, this.cursorPos);
     this.cursorPos = { ... this.cursorPos};
+    console.log(this.cursors, this.cursorPos);
   }
 
   // mutates cursorPos
@@ -284,51 +279,48 @@ export class EditorComponent {
     // TODO #auth -- replace this with real user info
     const user = this.users.find(u => u.username == this.userToken),
           otherUsers = this.users.filter(u => u.username !== this.userToken),
-          focusObj = this.focusObj || new LiturgicalDocument();
+          focusObj = this.focusObj || {obj: new LiturgicalDocument(), path: ''};
 
     return (
       <Host>
-        {/* Header contains auth toolbar and document toolbar */}
-        <ion-header>
-          {/* "Logged in as" toolbar */}
-          <ldf-label-bar>
-            <div slot='start'>
-              {user && <span>Logged in as <span class='user' style={{
-                  backgroundColor: new Values(user.color).tint(40).hexString(),
-                  borderColor: new Values(user.color).shade(10).hexString()
-                }}>{user.username}</span>. </span>}
-              {
-                otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
-                  <span>
-                    <span class='user' style={{
-                      backgroundColor: new Values(u.color).tint(40).hexString(),
-                      borderColor: new Values(u.color).shade(10).hexString()
-                    }}>{u.username}</span>
-                  </span>
-                ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
-              }
-            </div>
-            <slot name='controls' slot='end'/>
-          </ldf-label-bar>
+        {/* "Logged in as" toolbar */}
+        <ldf-label-bar>
+          <div slot='start'>
+            {user && <span>Logged in as <span class='user' style={{
+                backgroundColor: new Values(user.color).tint(40).hexString(),
+                borderColor: new Values(user.color).shade(10).hexString()
+              }}>{user.username}</span>. </span>}
+            {
+              otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
+                <span>
+                  <span class='user' style={{
+                    backgroundColor: new Values(u.color).tint(40).hexString(),
+                    borderColor: new Values(u.color).shade(10).hexString()
+                  }}>{u.username}</span>
+                </span>
+              ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
+            }
+          </div>
+          <slot name='controls' slot='end'/>
+        </ldf-label-bar>
 
-          {/* Metadata toolbar for subdocuments */}
-          {focusObj && focusObj.type && <ldf-editable-metadata
-              doc={focusObj}
-              visible={true}
-              collapsed={false}>
-            </ldf-editable-metadata>}
-        </ion-header>
-        <ion-content style={{ height: '100vh', width: '100vw' }}>
-          {/* Cursors */}
-          {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
+        {/* Metadata toolbar for subdocuments */}
+        {focusObj?.obj?.type && focusObj?.obj?.type !== 'liturgy' && <ldf-editable-metadata
+            path={focusObj.path}
+            doc={focusObj.obj}
+            visible={true}
+            collapsed={false}>
+          </ldf-editable-metadata>}
 
-          {/* Editable version of liturgy */}
-          {this.obj && <ldf-liturgical-document
-            editable={true}
-            path='/'
-            doc={this.obj}>
-          </ldf-liturgical-document>}
-        </ion-content>
+        {/* Cursors */}
+        {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}
+
+        {/* Editable version of liturgy */}
+        {this.obj && <ldf-liturgical-document
+          editable={true}
+          path='/'
+          doc={this.obj}>
+        </ldf-liturgical-document>}
       </Host>
     );
   }

@@ -20,7 +20,7 @@
 | Event                    | Description | Type                  |
 | ------------------------ | ----------- | --------------------- |
 | `ldfCursorMoved`         |             | `CustomEvent<Cursor>` |
-| `ldfEditableTextChanged` |             | `CustomEvent<Change>` |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
 ## Methods

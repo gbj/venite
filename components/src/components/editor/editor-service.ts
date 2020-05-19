@@ -68,6 +68,7 @@ class EditorServiceController {
 
   /** Send a message that we've moved our cursor */
   public moveCursor(cursor : Cursor) {
+    console.log('moveCursor = ', cursor);
     this.socket.emit('cursorMoved', {
       docId: this.docId,
       lastRevision: this.lastRevision,
@@ -126,6 +127,7 @@ class EditorServiceController {
   // Handles a `docChanged` received from the server
   // Emits pending changes and new revision number to the client via a Subject
   private receivedDocChanged(message : ChangeMessage) {
+    console.log('(receivedDocChanged)', message);
     this.pendingChanges = this.pendingChanges.map(myChange => json0.type.transform(myChange.fullyPathedOp(), message.change.fullyPathedOp()));
     this.lastRevision = message.lastRevision;
     this.docChanged.next(message);
@@ -145,8 +147,14 @@ class EditorServiceController {
     });
 
     // Events from other users => process or emit via RxJS Subjects
-    this.socket.on('cursorMoved', (data) => this.cursorMoved.next(data));
-    this.socket.on('docChanged', (data) => this.receivedDocChanged(data));
+    this.socket.on('cursorMoved', (data : CursorMessage) => {
+      console.log('cursorMoved = ', data.username, data.cursor);
+      this.cursorMoved.next(data)
+    });
+    this.socket.on('docChanged', (data : ChangeMessage) => {
+      console.log('(socket.on docChanged)', data);
+      this.receivedDocChanged(data)
+    });
     this.socket.on('users', (data) => this.users.next(data));
     this.socket.on('ack', (data) => this.ack(data));
 
