@@ -10,15 +10,15 @@ import * as json0 from 'ot-json0';
 import * as Please from 'pleasejs';
 
 const DOCS = {
-  'def456': {type: "heading", metadata: {level: 1 }, label: "Compline"},
+  'def456': {type: "heading", metadata: {level: 1 }, value: ["Compline"]},
   'abc123': {
     type: 'liturgy',
     metadata: {
       preferences: {}
     },
     value: [
-      {type: "heading", metadata: {level: 1 }, label: "Compline"},
-      {type: "heading", metadata: {level: 2 }, label: "Wednesday after the Third Sunday of Easter"},
+      {type: "heading", metadata: {level: 1 }, value: ["Compline"]},
+      {type: "heading", metadata: {level: 2 }, value: ["Wednesday after the Third Sunday of Easter"]},
       {type: "heading", citation: { source: 'BCP', citation: 'p. 127' }},
       {type: "text", metadata: { response: "Amen." }, value: ["The Lord Almighty grant us a peaceful night and a perfect end."]},
       {type: "responsive", style: "preces", value: [

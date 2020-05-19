@@ -12,6 +12,7 @@ export class Heading extends LiturgicalDocument {
     break?: boolean;
   };
 
+  /** Contains the text of the heading */
   value: string[];
 
   //** Constructor takes a Javascript object containing the class's properties */

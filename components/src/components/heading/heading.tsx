@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Host, FunctionalComponent, JSX, h } from '@stencil/core';
 import { Heading, Citation } from '@venite/ldf';
 
 @Component({
@@ -46,35 +46,33 @@ export class HeadingComponent {
 
   // Convert level/text into an H... node
   private headerNode(level : number, text : string) : JSX.Element {
-    let node : JSX.Element;
-    switch(level) {
-      case 1:
-        node = <h1>{this.editable ? this.editableNode(text) : text}</h1>;
-        break;
-      case 2:
-        node = <h2>{this.editable ? this.editableNode(text) : text}</h2>;
-        break;
-      case 3:
-        node = <h3 slot='start'>{this.editable ? this.editableNode(text) : text}</h3>;
-        break;
-      case 4:
-        node = <h4 slot='start'>{this.editable ? this.editableNode(text) : text}</h4>;
-        break;
-      case 5:
-        node = <h5 slot='start'>{this.editable ? this.editableNode(text) : text}</h5>;
-        break;
-    }
-    return node;
-  }
-
-  private editableNode(text : string) : JSX.Element {
-    return (
+    const EditableNode : FunctionalComponent<{ text: string; }> = ({text}) => (
       <ldf-editable-text
         id={`${this.obj.uid || this.obj.slug}-heading`}
         text={text}
         path={`${this.path}/label`}>
       </ldf-editable-text>
     );
+
+    let node : JSX.Element;
+    switch(level) {
+      case 1:
+        node = <h1>{this.editable ? <EditableNode text={text}/> : text}</h1>;
+        break;
+      case 2:
+        node = <h2>{this.editable ? <EditableNode text={text}/> : text}</h2>;
+        break;
+      case 3:
+        node = <h3 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h3>;
+        break;
+      case 4:
+        node = <h4 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h4>;
+        break;
+      case 5:
+        node = <h5 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h5>;
+        break;
+    }
+    return node;
   }
 
   private citationNode(c : string | Citation) : JSX.Element {
@@ -100,10 +98,11 @@ export class HeadingComponent {
   // Render
   render() {
     const level : number = this.obj.metadata ? this.obj.metadata.level : 4,
-          label : string = this.obj.label,
-          hasLabel : boolean = label && label !== '',
           hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined;
 
+    // Functional Components
+
+    // Render
     return (
       <Host lang={this.obj.language}>
         <ldf-label-bar>
@@ -111,18 +110,10 @@ export class HeadingComponent {
         </ldf-label-bar>
 
         <ldf-label-bar>
-          {hasLabel && this.headerNode(level, label)}
-          <slot name='additional'>
-            {this.obj.value && this.obj.value.length > 0 && this.obj.value.map((para, ii) =>
-              this.editable ?
-              <ldf-editable-text
-                id={`${this.obj.uid || this.obj.slug}-${ii}`}
-                text={para}
-                path={`${this.path}/value/${ii}`}
-              ></ldf-editable-text> :
-              <p id={`${this.obj.uid || this.obj.slug}-${ii}`}>{para}</p>
-            )}
-          </slot>
+          {/* `Heading.label` => main header node */}
+          {this.obj?.value?.map(text => this.headerNode(level, text))}
+
+          {/* `Heading.citation` => right-aligned*/}
           {hasCitation && this.citationNode(this.obj.citation)}
         </ldf-label-bar>
       </Host>
