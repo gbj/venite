@@ -12,6 +12,7 @@ ul {
 
 /* Buttons for each possible block */
 button.block {
+  background: none;
   border: none;
   display: block;
   display: flex;
@@ -27,4 +28,8 @@ button.block {
     margin-bottom: 0.25em;
     width: auto;
   }
+}
+
+button:hover {
+  cursor: pointer;
 }

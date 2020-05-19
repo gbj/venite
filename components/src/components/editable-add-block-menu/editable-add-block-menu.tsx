@@ -99,8 +99,10 @@ export class EditableAddBlockMenuComponent {
         </ion-header>
         <ion-content>
           {sections.map(section =>
-            <ion-list>
-              <ion-list-header>{localeStrings[section] || section}</ion-list-header>
+            <ion-card class='ion-padding'>
+              <ion-card-header>
+                <ion-card-subtitle>{localeStrings[section] || section}</ion-card-subtitle>
+              </ion-card-header>
               <ul>
               {this.menu.filter(item => item.section.includes(section) && !item.hidden).map(item =>
                 <li>
@@ -111,7 +113,7 @@ export class EditableAddBlockMenuComponent {
                 </li>
               )}
               </ul>
-            </ion-list>
+            </ion-card>
           )}
         </ion-content>
       </Host>

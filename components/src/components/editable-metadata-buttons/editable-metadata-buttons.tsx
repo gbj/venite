@@ -58,6 +58,7 @@ export class EditableMetadataButtonsComponent {
     modalElement.component = 'ldf-editable-metadata';
     console.log('doc', this.obj, 'path', this.base);
     modalElement.componentProps = {
+      modal: modalElement,
       doc: this.obj,
       path: this.base,
       visible: true,

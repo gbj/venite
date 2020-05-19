@@ -43,6 +43,9 @@ export class EditableMetadataComponent {
   /** If `collapsed` is false, the full set of editable fields will appear. */
   @Prop() collapsed : boolean;
 
+  /** Used to pass in the `IonModal` we will dismiss */
+  @Prop() modal : any;
+
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
@@ -96,25 +99,37 @@ export class EditableMetadataComponent {
 
     return (
       <Host>
-        {/* Form to Edit Metadata — display when "Settings" button is toggled */}
-        <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
-          {/* `type` */}
-          <SelectField field='type' types={availableTypes} />
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>{ localeStrings.modalTitle }</ion-title>
+            <ion-buttons slot="primary">
+              <ion-button onClick={() => this.modal.dismiss(null)}>
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          {/* Form to Edit Metadata — display when "Settings" button is toggled */}
+          <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
+            {/* `type` */}
+            <SelectField field='type' types={availableTypes} />
 
-          {/* `style` */}
-          {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+            {/* `style` */}
+            {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
 
-          {/* `label` */}
-          <ion-item lines='none'>
-            <ion-label aria-label={localeStrings.label} position='stacked'>{localeStrings.label}</ion-label>
-            <ldf-editable-text id='label'
-              short={true}
-              path={`${this.path}/label`}
-              text={this.obj.label}
-              placeholder={localeStrings.label}>
-            </ldf-editable-text>
-          </ion-item>
-        </form>
+            {/* `label` */}
+            <ion-item lines='none'>
+              <ion-label aria-label={localeStrings.label} position='stacked'>{localeStrings.label}</ion-label>
+              <ldf-editable-text id='label'
+                short={true}
+                path={`${this.path}/label`}
+                text={this.obj.label}
+                placeholder={localeStrings.label}>
+              </ldf-editable-text>
+            </ion-item>
+          </form>
+        </ion-content>
       </Host>
     );
   }
