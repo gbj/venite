@@ -10,7 +10,7 @@ import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
 
-const TYPES = ['liturgy', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
+const TYPES = ['liturgy', 'cycle', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
 type TypeTuple = typeof TYPES;
 
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
@@ -100,6 +100,21 @@ export class LiturgicalDocument {
    * Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
    * making it easier to restore or toggle on and off */
   hidden: boolean = false;
+
+  /** Instructs the client to look up more information from the server
+    * @example
+    * // the 1st canticle in the 1979 BCP table for the current `LiturgicalDay`
+    * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp1979', item: 1 }}
+    * @example
+    * // the morning psalms in the 30-day BCP cycle
+    * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp_30day_psalter', item: 'morning_psalms' }}
+    * @example
+    * // the gospel reading in the Revised Common Lectionary
+    * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
+  lookup?: {
+    table: string | { preference: string; };
+    item: string | number;
+  };
 
   /** The content of the document. */
   value: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[];
