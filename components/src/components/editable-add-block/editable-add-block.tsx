@@ -48,22 +48,7 @@ export class EditableAddBlockComponent {
     }
   }
 
-  // Build the `(+)` Button
-  plusButtonNode() : JSX.Element {
-    const classes = {
-      add: true,
-      hidden: !this.visible,
-      visible: this.visible,
-      collapsed: true
-    };
-    return (
-      <button class={classes} onClick={() => this.expand()}>
-        <label class='visually-hidden'>{ (this.localeStrings || {}).add}</label>
-        +
-      </button>
-    );
-  }
-
+  // Pop up the modal with an Add Block Menu inside it
   async expand() {
     const modal = document.createElement('ion-modal');
     modal.component = 'ldf-editable-add-block-menu';
@@ -97,7 +82,15 @@ export class EditableAddBlockComponent {
     return (
       <Host>
         <div class='button-container'>
-          {this.plusButtonNode()}
+          <button class={{
+            add: true,
+            hidden: !this.visible,
+            visible: this.visible,
+            collapsed: true
+          }} onClick={() => this.expand()}>
+            <label class='visually-hidden'>{ (this.localeStrings || {}).add}</label>
+            +
+          </button>
         </div>
 
         <div class={{ underlying: true, hidden: !this.visible, visible: this.visible, collapsed: true }}></div>
