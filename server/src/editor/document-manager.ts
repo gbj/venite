@@ -89,7 +89,7 @@ export class DocumentManager {
         docId: this.docId,
         lastRevision: this.getLastRevision(),
         username: change.user,
-        change: new Change({ ... change, op })
+        change: new Change({ ... change, op: change.fullyPathedOp() })
       }
     });
 
