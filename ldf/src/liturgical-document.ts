@@ -13,6 +13,9 @@ import { Change } from './editing/change';
 const TYPES = ['liturgy', 'cycle', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
 type TypeTuple = typeof TYPES;
 
+const LOOKUP_TYPES = ['lectionary', 'canticle-table', 'category', 'slug'];
+type LookupTypeTuple = typeof LOOKUP_TYPES;
+
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
@@ -112,12 +115,13 @@ export class LiturgicalDocument {
     * // the gospel reading in the Revised Common Lectionary
     * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
   lookup?: {
+    type: LookupTypeTuple[number];
     table: string | { preference: string; };
     item: string | number;
   };
 
   /** The content of the document. */
-  value: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[];
+  value?: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[];
 
   /** Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
    * given the day and assigned preferences  */

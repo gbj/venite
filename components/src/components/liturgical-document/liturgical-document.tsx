@@ -16,17 +16,21 @@ export class LiturgicalDocumentComponent {
    */
   @Prop() doc : LiturgicalDocument | string;
   @Watch('doc')
-  docChanged(newDoc : LiturgicalDocument | string) {
+  async docChanged(newDoc : LiturgicalDocument | string) {
+    let provisionalObj : LiturgicalDocument;
+
     try {
       if(typeof newDoc == 'string') {
-        this.obj = new LiturgicalDocument(JSON.parse(newDoc));
+        provisionalObj = new LiturgicalDocument(JSON.parse(newDoc));
       } else {
-        this.obj = new LiturgicalDocument(newDoc);
+        provisionalObj = new LiturgicalDocument(newDoc);
       }
     } catch(e) {
       console.warn(e);
-      this.obj = new LiturgicalDocument();
+      provisionalObj = new LiturgicalDocument();
     }
+
+    this.obj = await this.compileIfNecessary(provisionalObj);
   }
 
   /** A JSON Pointer that points to the LiturgicalDocument being edited */
@@ -113,6 +117,15 @@ export class LiturgicalDocumentComponent {
     }
 
     return node;
+  }
+
+  // Compile a subdocument
+  async compileIfNecessary(doc : LiturgicalDocument) : Promise<LiturgicalDocument> {
+    if(doc.hasOwnProperty('lookup') && !doc.hasOwnProperty('value')) {
+      return CompileService.compile(doc);
+    } else {
+      return doc;
+    }
   }
 
   // Render
