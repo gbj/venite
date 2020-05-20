@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es6",
+    "module": "es6",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "lib": ["dom", "es6", "es2017"],
+    "declaration": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "tests", "docs"]
+}

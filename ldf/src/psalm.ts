@@ -13,7 +13,7 @@ export class PsalmVerse {
   type: 'psalm-verse';
   number?: string;
   verse: string;
-  halfverse: string;
+  halfverse?: string;
 
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<PsalmVerse> = {}) {
@@ -25,7 +25,6 @@ export class PsalmVerse {
 export class Psalm extends LiturgicalDocument {
   type: 'psalm';
   style: StyleTuple[number];
-  citation: string;
   metadata?: {
     number?: string;
     localname?: string;

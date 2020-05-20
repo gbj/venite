@@ -28,7 +28,7 @@ export class LiturgicalDocument {
   type: TypeTuple[number];
 
   /** An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style. */
-  style?: string;
+  style?: string | null;
 
   /** Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'. */
   category: Category[];
@@ -62,7 +62,7 @@ export class LiturgicalDocument {
    * @example
    * `'Lord’s Prayer (Traditional)'`
    */
-  version_label?: string;
+  version_label?: string | null;
 
   /** Language code (typically an ISO 639-1 two-letter code)
    * @example
@@ -76,11 +76,15 @@ export class LiturgicalDocument {
    */
   version: string;
 
-  /** Source for the document, either as a string or a `Citation` object.
+  /** Biblical or other citation for the document.
    * @example
-   * `John 1:14`, { source: 'bcp1979', 'citation': 'p. 123' }
-   */
-  citation?: string | Citation;
+   * `John 1:14` */
+  citation?: string | null;
+
+  /** Source for the physical resource within which the document can be found
+   * @example
+   * { source: 'bcp1979', 'citation': 'p. 123' } */
+  source?: Citation | null;
 
   /** Optional: A unique identifying string based on the slug, for compiled liturgies with multiple instances of the same prayer.
    * @example

@@ -28,7 +28,7 @@ export class BibleReading extends LiturgicalDocument {
 
       const newValue: any[] = new Array();
 
-      this.metadata.intro.value.forEach((introValue: any) => {
+      this.metadata?.intro?.value?.forEach((introValue: any) => {
         // Intro is presumably a Text or similar
         if (typeof introValue == 'string') {
           newValue.push(
