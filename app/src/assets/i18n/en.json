@@ -9,5 +9,14 @@
     "sign-in-with-apple": "Sign in with Apple",
     "sign-in-with-google": "Sign in with Google",
     "sign-in-with-twitter": "Sign in with Twitter"
+  },
+  "menu": {
+    "pray": "Pray",
+    "meditate": "Meditate",
+    "favorites": "Favorites",
+    "bulletins": "Bulletins",
+    "psalter": "Psalter",
+    "settings": "Settings",
+    "about": "About"
   }
 }

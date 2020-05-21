@@ -24,6 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 // Venite Modules
 import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,7 +44,8 @@ import { AuthModule } from './auth/auth.module';
         },
         defaultLanguage: 'en'
     }),
-    AuthModule
+    AuthModule,
+    SharedModule
   ],
   providers: [
     StatusBar,
