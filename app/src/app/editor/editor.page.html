@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'editor.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ 'editor.title' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ng-container *ngIf="auth.user | async as user">
+    <ldf-editor [userToken]="user.displayName" [docId]="'abc123'"></ldf-editor>
+  </ng-container>
+</ion-content>

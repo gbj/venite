@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     TranslateModule.forChild()
   ],
   exports: [

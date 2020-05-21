@@ -18,5 +18,8 @@
     "psalter": "Psalter",
     "settings": "Settings",
     "about": "About"
+  },
+  "editor": {
+    "title": "Editor"
   }
 }
