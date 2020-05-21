@@ -24,8 +24,9 @@
 - ion-icon
 - ion-searchbar
 - ion-content
-- ion-list
-- ion-list-header
+- ion-card
+- ion-card-header
+- ion-card-subtitle
 
 ### Graph
 ```mermaid
@@ -38,10 +39,12 @@ graph TD;
   ldf-editable-add-block-menu --> ion-icon
   ldf-editable-add-block-menu --> ion-searchbar
   ldf-editable-add-block-menu --> ion-content
-  ldf-editable-add-block-menu --> ion-list
-  ldf-editable-add-block-menu --> ion-list-header
+  ldf-editable-add-block-menu --> ion-card
+  ldf-editable-add-block-menu --> ion-card-header
+  ldf-editable-add-block-menu --> ion-card-subtitle
   ion-button --> ion-ripple-effect
   ion-searchbar --> ion-icon
+  ion-card --> ion-ripple-effect
   style ldf-editable-add-block-menu fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

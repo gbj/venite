@@ -17,9 +17,9 @@
 
 ## Events
 
-| Event                    | Description | Type                  |
-| ------------------------ | ----------- | --------------------- |
-| `ldfCursorMoved`         |             | `CustomEvent<Cursor>` |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfCursorMoved`     |             | `CustomEvent<Cursor>` |
 | `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
@@ -48,9 +48,14 @@ Type: `Promise<Cursor>`
  - [ldf-rubric](../rubric)
  - [ldf-text](../text)
 
+### Depends on
+
+- ion-input
+
 ### Graph
 ```mermaid
 graph TD;
+  ldf-editable-text --> ion-input
   ldf-editable-metadata --> ldf-editable-text
   ldf-heading --> ldf-editable-text
   ldf-psalm --> ldf-editable-text

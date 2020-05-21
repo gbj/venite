@@ -25,7 +25,7 @@
 
 ### Used by
 
- - [ldf-liturgy](../liturgy)
+ - [ldf-editable-metadata-buttons](../editable-metadata-buttons)
 
 ### Depends on
 
@@ -44,7 +44,7 @@ graph TD;
   ion-alert --> ion-ripple-effect
   ion-alert --> ion-backdrop
   ion-button --> ion-ripple-effect
-  ldf-liturgy --> ldf-editable-delete
+  ldf-editable-metadata-buttons --> ldf-editable-delete
   style ldf-editable-delete fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

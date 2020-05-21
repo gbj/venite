@@ -49,6 +49,7 @@ graph TD;
   ldf-text --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-text
   style ldf-text fill:#f9f,stroke:#333,stroke-width:4px
 ```

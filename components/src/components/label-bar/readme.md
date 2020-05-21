@@ -10,9 +10,9 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
+ - [ldf-editable-metadata-buttons](../editable-metadata-buttons)
  - [ldf-editor](../editor)
  - [ldf-heading](../heading)
- - [ldf-liturgy](../liturgy)
  - [ldf-meditation](../meditation)
  - [ldf-option](../option)
  - [ldf-psalm](../psalm)
@@ -25,9 +25,9 @@
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
+  ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editor --> ldf-label-bar
   ldf-heading --> ldf-label-bar
-  ldf-liturgy --> ldf-label-bar
   ldf-meditation --> ldf-label-bar
   ldf-option --> ldf-label-bar
   ldf-psalm --> ldf-label-bar

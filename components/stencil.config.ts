@@ -1,12 +1,17 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-//import * as conic from 'postcss-conic-gradient';
+import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'LDF',
   taskQueue: 'async',
   globalStyle: 'src/global/global.scss',
   outputTargets: [
+    angularOutputTarget({
+      componentCorePackage: '@venite/components',
+      directivesProxyFile: '../angular/src/directives/proxies.ts',
+      //valueAccessorConfigs: angularValueAccessorBindings,
+    }),
     {
       type: 'dist',
       esmLoaderPath: '../loader',

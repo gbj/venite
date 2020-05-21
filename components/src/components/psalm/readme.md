@@ -38,6 +38,7 @@ graph TD;
   ldf-psalm --> ldf-string
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
+  ldf-editable-text --> ion-input
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-liturgical-document --> ldf-psalm

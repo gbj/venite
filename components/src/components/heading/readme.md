@@ -34,6 +34,7 @@
 graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-editable-text --> ion-input
   ldf-bible-reading --> ldf-heading
   ldf-liturgical-document --> ldf-heading
   ldf-psalm --> ldf-heading

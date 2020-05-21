@@ -30,6 +30,7 @@
 graph TD;
   ldf-rubric --> ldf-label-bar
   ldf-rubric --> ldf-editable-text
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-rubric
   style ldf-rubric fill:#f9f,stroke:#333,stroke-width:4px
 ```

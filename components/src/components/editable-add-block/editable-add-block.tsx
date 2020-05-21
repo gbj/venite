@@ -1,4 +1,4 @@
-import { Element, Component, Prop, State, Host, Event, EventEmitter, JSX, h } from '@stencil/core';
+import { Element, Component, Prop, State, Host, Event, EventEmitter, h } from '@stencil/core';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { LiturgicalDocument, Change } from '@venite/ldf';
 import '@ionic/core';

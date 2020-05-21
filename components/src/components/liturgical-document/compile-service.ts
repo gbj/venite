@@ -1,7 +1,10 @@
 import { LiturgicalDocument } from '@venite/ldf';
 
 export class CompileServiceController {
-  async compile(doc : LiturgicalDocument) : Promise<LiturgicalDocument> {
+  async compile(
+    doc : LiturgicalDocument,
+    api : string = 'https://www.venite.app/api'
+  ) : Promise<LiturgicalDocument> {
     const findURL = new URL(`${api}/compile/${doc.lookup?.type}`);
     findURL.searchParams.append('doc', JSON.stringify(doc));
 

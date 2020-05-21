@@ -1,6 +1,9 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
+import { CompileService} from './compile-service';
+
+
 @Component({
   tag: 'ldf-liturgical-document',
   shadow: true

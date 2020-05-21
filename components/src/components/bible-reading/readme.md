@@ -59,24 +59,17 @@ graph TD;
   ldf-bible-reading --> ldf-liturgical-document
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-bible-reading
-  ldf-liturgy --> ldf-label-bar
-  ldf-liturgy --> ldf-editable-delete
   ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
-  ldf-editable-delete --> ion-alert
-  ldf-editable-delete --> ion-buttons
-  ldf-editable-delete --> ion-button
-  ldf-editable-delete --> ion-icon
-  ion-alert --> ion-ripple-effect
-  ion-alert --> ion-backdrop
-  ion-button --> ion-ripple-effect
   ldf-editable-add-block --> ion-modal
   ion-modal --> ion-backdrop
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
+  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label
@@ -102,6 +95,18 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
+  ldf-editable-metadata-buttons --> ion-modal
+  ldf-editable-metadata-buttons --> ldf-label-bar
+  ldf-editable-metadata-buttons --> ion-buttons
+  ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-icon
+  ldf-editable-metadata-buttons --> ldf-editable-delete
+  ldf-editable-delete --> ion-alert
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
   style ldf-bible-reading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
