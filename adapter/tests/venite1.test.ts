@@ -2,7 +2,7 @@ import { venite1toLDF } from '../src/venite1';
 import { Psalm, Heading } from '@venite/ldf';
 
 describe('venite1toLDF', () => {
-  it('transforms ordinary psalms', () => {
+  it('handles ordinary psalms with numbers', () => {
     // define the psalm
     const psalm = {
       "id": "1",
@@ -61,6 +61,67 @@ describe('venite1toLDF', () => {
       value: [[
         { type: 'psalm-verse', number: '1', verse: 'Why are the nations in an uproar? *', halfverse: 'Why do the peoples mutter empty threats?' },
         { type: 'psalm-verse', number: '2', verse: 'Why do the kings of the earth rise up in revolt,\nand the princes plot together, *', halfverse: 'against the LORD and against his Anointed?' },
+      ]]
+    }));
+  });
+
+  it('handles ordinary psalms with no numbers', () => {
+    // define the psalm
+    const psalm = {
+      "id": "1",
+      "slug": "psalm_2",
+      "language": "en",
+      "version": "bcp1979",
+      "number": "2",
+      "label": "Psalm 2",
+      "canticle": false,
+      "invitatory": null,
+      "localname": "Psalm 2",
+      "latinname": "Quare fremuerunt gentes?",
+      "citation": null,
+      "antiphon": null,
+      "value": [
+        [
+          [
+            "Why are the nations in an uproar? *",
+            "Why do the peoples mutter empty threats?"
+          ],
+          [
+            "Why do the kings of the earth rise up in revolt,\nand the princes plot together, *",
+            "against the LORD and against his Anointed?"
+          ]
+        ]
+      ],
+      "omit_antiphon": false,
+      "omit_gloria": null,
+      "version_label": null,
+      "source": "BCP p. 586"
+    };
+
+    // test the function
+    const newObj = venite1toLDF(psalm, 'psalm');
+    expect(newObj).toEqual(new Psalm({
+      type: 'psalm',
+      style: 'psalm',
+      category: [{name: 'Psalm'}],
+      slug: 'psalm_2',
+      hidden: false,
+      label: 'Psalm 2',
+      version_label: null,
+      language: 'en',
+      version: 'bcp1979',
+      citation: null,
+      source: { source: 'bcp1979', citation: 'p. 586', "api": "https://www.venite.app/api" },
+      metadata: {
+        number: '2',
+        localname: 'Psalm 2',
+        latinname: 'Quare fremuerunt gentes?',
+        omit_antiphon: false,
+        omit_gloria: false
+      },
+      value: [[
+        { type: 'psalm-verse', verse: 'Why are the nations in an uproar? *', halfverse: 'Why do the peoples mutter empty threats?' },
+        { type: 'psalm-verse', verse: 'Why do the kings of the earth rise up in revolt,\nand the princes plot together, *', halfverse: 'against the LORD and against his Anointed?' },
       ]]
     }));
   });

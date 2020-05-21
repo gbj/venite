@@ -33,7 +33,7 @@ function psalmToLDF(old : any) : Psalm {
         if(verse.length == 3) {
           return { type: 'psalm-verse', number: verse[0], verse: verse[1], halfverse: verse[2] };
         } else if(verse.length == 2) {
-          return { type: 'psalm-verse', verse: verse[1], halfverse: verse[2] };
+          return { type: 'psalm-verse', verse: verse[0], halfverse: verse[1] };
         } else if(verse.length == 1) {
           return { type: 'psalm-verse', verse: verse[1] };
         }
