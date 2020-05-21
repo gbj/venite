@@ -1,0 +1,45 @@
+.sign-in-block {
+  display: block;
+  margin: auto;
+  min-width: 300px;
+  width: 50vw;
+
+  ion-card {
+    width: 100%;
+
+    ion-card-header {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      ion-img {
+        height: auto;
+        width: 100px;
+      }
+    }
+
+    ion-card-content {
+      .social-providers, .email {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .social-providers {
+        ion-buttons {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        ion-button {
+          width: 35%;
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}

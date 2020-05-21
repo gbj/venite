@@ -1,0 +1,20 @@
+<ion-card *ngIf='auth.user | async as user'>
+  <ion-card-content>
+    <ion-list lines='none'>
+      <ion-item>
+        <ion-avatar slot='start' *ngIf='user.photoURL'>
+          <ion-img [src]='user.photoURL'></ion-img>
+        </ion-avatar>
+        <ion-card-title>{{ user.displayName }}</ion-card-title>
+      </ion-item>
+      <ion-item *ngIf='user.email' href='mailto:{{ user.email }}'>
+        <ion-icon name='mail' slot='start'></ion-icon>
+        <ion-label>{{ user.email }}</ion-label>
+      </ion-item>
+      <ion-item *ngIf='user.phoneNumber' href='tel:{{ user.phoneNumber }}'>
+        <ion-icon name='call' slot='start'></ion-icon>
+        <ion-label>{{ user.phoneNumber }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

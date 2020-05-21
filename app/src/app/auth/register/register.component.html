@@ -1,0 +1,26 @@
+<div class="sign-in-block">
+  <ion-card>
+    <ion-card-header>
+      <ion-img src='/assets/icon/venite.svg'></ion-img>
+      <ion-card-title>{{ 'auth.register' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Register -->
+      <ion-item>
+        <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
+        <ion-input [(ngModel)]='email' required='true'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{ 'auth.password' | translate }}</ion-label>
+        <ion-input [(ngModel)]='password' type='password' required='true'></ion-input>
+        <ion-text *ngIf="error" color="danger">{{ error }}</ion-text>
+      </ion-item>
+      <div class="email">
+        <ion-button (click)="submitEmailAndPassword()">
+          <ion-icon name="log-in" slot="start"></ion-icon>
+          <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>

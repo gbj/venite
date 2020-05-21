@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "venite-2": {
+      "hosting": {
+        "app": [
+          "venite-2"
+        ]
+      }
+    }
+  }
+}
