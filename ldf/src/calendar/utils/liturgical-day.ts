@@ -15,13 +15,50 @@ export function liturgicalDay(
   kalendar : string,
   evening : boolean = false,
   vigil : boolean = false,
-  week : LiturgicalWeek,
-  holydays : HolyDay[]
+  week : LiturgicalWeek
 ) : LiturgicalDay {
-  const slug = buildDaySlug(date, week.slug);
+  const slug = buildDaySlug(date, week.slug),
+        officeYear = dailyOfficeYear(date, week);
 
-  let propersSlug = week.proper ? buildDaySlug(date, week.proper.slug) : slug;
+  return new LiturgicalDay({
+    date: `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
+    kalendar,
+    evening,
+    slug,
+    propers: week.proper ? buildDaySlug(date, week.proper.slug) : slug,
+    week,
+    years: {
+      "bcp1979_daily_office": officeYear,
+      "bcp1979_daily_psalms": officeYear,
+      "rclsunday": rclYear(date, week)
+    },
+    holy_days: [],
+    season: week.season,
+    color: week.color
+  });
+}
 
+/*export function addVigil(day : LiturgicalDay, tomorrowDate : Date, tomorrowWeek : LiturgicalWeek, tomorrowHolyDays : HolyDay[]) : LiturgicalDay {
+  // If observing the vigil of e.g., a Sunday or feast day, move the clock forward by a day
+  const tomorrowSlug : string = buildDaySlug(tomorrowDate, tomorrowWeek.slug),
+
+  observed = observedDay(tomorrowDate, tomorrowWeek, tomorrowHolyDays);
+  // if observed is the same week, i.e., the next weekday in the same week
+  if(observed.slug == day.slug) {
+    observed.slug = tomorrowSlug;
+  }
+  week.propers = tomorrowWeek.propers;
+}*/
+
+interface ObservedInterface {
+  date?: string;
+  slug: string;
+  propers?: string;
+  color?: string | LiturgicalColor;
+  season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
+}
+
+export function addHolyDays(day : LiturgicalDay, evening : boolean, holydays : HolyDay[]) : LiturgicalDay {
   holydays = holydays
     .map(feast => {
       // if a feast has an `evening` field and it's evening, use that
@@ -44,49 +81,31 @@ export function liturgicalDay(
     .filter(feast => !!feast) as HolyDay[];
 
   // Determine whether a holy day takes precedence over the ordinary day
-  let observed = observedDay(date, week, holydays);
+  const observed : ObservedInterface = observedDay(day, holydays);
 
   // overwrite the day's slug with the observed day's slug if they differ
-  const observedSlug = (observed?.slug !== week.slug) ? observed.slug : slug;
-  if(observedSlug !== slug) {
-    propersSlug = observedSlug;
+  const slug = (observed?.slug !== day.slug) ? observed.slug : day.slug;
+
+  let propers = day.propers;
+  if(slug !== day.slug) {
+    propers = slug;
   }
 
-  const color = observed.color || week.color;
-
-  const officeYear = dailyOfficeYear(date, week);
+  const color = observed.color || day.color,
+        season = observed.season || day.season;
 
   return new LiturgicalDay({
-    date: `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
-    kalendar,
-    evening,
-    slug: observedSlug,
-    propers: propersSlug,
-    week,
-    years: {
-      "bcp1979_daily_office": officeYear,
-      "bcp1979_daily_psalms": officeYear,
-      "rclsunday": rclYear(date, week)
-    },
-    holy_days: holydays,
-    season: observed.season,
-    color
-  });
+    ... day,
+    slug,
+    propers,
+    color,
+    season,
+    holy_days: (day.holy_days || new Array()).concat(holydays)
+  })
 }
 
-/*export function addVigil(day : LiturgicalDay, tomorrowDate : Date, tomorrowWeek : LiturgicalWeek, tomorrowHolyDays : HolyDay[]) : LiturgicalDay {
-  // If observing the vigil of e.g., a Sunday or feast day, move the clock forward by a day
-  const tomorrowSlug : string = buildDaySlug(tomorrowDate, tomorrowWeek.slug),
-
-  observed = observedDay(tomorrowDate, tomorrowWeek, tomorrowHolyDays);
-  // if observed is the same week, i.e., the next weekday in the same week
-  if(observed.slug == day.slug) {
-    observed.slug = tomorrowSlug;
-  }
-  week.propers = tomorrowWeek.propers;
-}*/
-
-function observedDay(date : Date, week : LiturgicalWeek, holydays : HolyDay[]) : LiturgicalWeek | HolyDay {
+/** Given a `LiturgicalDay` and a set of `HolyDay`s, it returns whichever option takes precedence */
+function observedDay(day : ObservedInterface, holydays : ObservedInterface[]) : ObservedInterface {
   // rank: Principal Feast (5), Sunday (4), Holy Day (3), random other days (2), ferial weekday (1)
   function getRank(item : any, type: 'holyday' | 'weekday') : number {
     // ranked items => go with rank
@@ -94,7 +113,7 @@ function observedDay(date : Date, week : LiturgicalWeek, holydays : HolyDay[]) :
       return item?.type?.rank || 2;
     } else {
       // Sundays => 4
-      if(date.getDay() == 0) {
+      if(new Date(Date.parse(day.date || '')).getDay() == 0) {
         return 4;
       }
       // weekdays => 1
@@ -106,8 +125,8 @@ function observedDay(date : Date, week : LiturgicalWeek, holydays : HolyDay[]) :
 
   const sorted = holydays
     .map(holyday => ({ rank: getRank(holyday, 'holyday'), obj: holyday}))
-    .concat({ rank: getRank(week, 'weekday'), obj: week })
-    .sort((a, b) => b.rank - a.rank);
+    .concat({ rank: getRank(day, 'weekday'), obj: day })
+    .sort((a: { rank: number; }, b: { rank: number; }) => b.rank - a.rank);
 
   return { ... sorted[0].obj};
 }
