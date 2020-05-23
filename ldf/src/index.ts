@@ -10,8 +10,6 @@ export * from './calendar/liturgical-color';
 export * from './calendar/liturgical-day';
 export * from './calendar/liturgical-week';
 export * from './calendar/proper';
-export * from './calendar/services/holy-day-service.interface';
-export * from './calendar/services/season-service.interface'
 export * from './calendar/utils';
 
 export * from './citation/citation';

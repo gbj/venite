@@ -2,8 +2,6 @@ import { LiturgicalDay } from '../liturgical-day';
 import { LiturgicalWeek } from '../liturgical-week';
 import { LiturgicalColor } from '../liturgical-color';
 import { HolyDay } from '../holy-day';
-import { ISeasonService } from '../services/season-service.interface';
-import { IHolyDayService } from '../services/holy-day-service.interface';
 
 import { liturgicalWeek } from './liturgical-week';
 import { dailyOfficeYear, rclYear } from './lectionary-year';
@@ -54,8 +52,7 @@ export function liturgicalDay(
     propersSlug = observedSlug;
   }
 
-  let color : LiturgicalColor = new LiturgicalColor({});
-  Object.assign(observed.color || week.color, color);
+  const color = observed.color || week.color;
 
   const officeYear = dailyOfficeYear(date, week);
 

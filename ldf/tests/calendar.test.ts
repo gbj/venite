@@ -1,10 +1,9 @@
 import { easterInYear } from '../src/calendar/utils/easter-in-year';
 import { sundayBefore } from '../src/calendar/utils/sunday-before';
-import { ISeasonService } from '../src/calendar/services/season-service.interface';
-import { IHolyDayService } from '../src/calendar/services/holy-day-service.interface';
-import { liturgicalWeek } from '../src/calendar/utils/liturgical-week';
+import { liturgicalWeek, LiturgicalWeekIndex } from '../src/calendar/utils/liturgical-week';
 import { liturgicalDay } from '../src/calendar/utils/liturgical-day';
 import { HolyDay } from '../src/calendar/holy-day';
+import { LiturgicalWeek } from '../src/calendar/liturgical-week';
 
 describe('easterInYear', () => {
   it(('gives the correct date for Easter for arbitrary years'), () => {
@@ -41,21 +40,56 @@ describe('sundayBefore', () => {
 });
 
 describe('liturgicalWeek', () => {
-  it('should consume the service it is passed to find a week', () => {
-    expect(liturgicalWeek(new Date(), SEASON_SERVICE)).toEqual(TEST_WEEK);
+  it('should return indexes in the Advent and Easter cycles', () => {
+    expect(liturgicalWeek(new Date(Date.parse("2020-12-24")))).toEqual({
+      cycle: 'Advent',
+      week: 4,
+      proper: undefined
+    });
+
+    expect(liturgicalWeek(new Date(Date.parse("2020-5-23")))).toEqual({
+      cycle: 'Easter',
+      week: 12,
+      proper: undefined
+    });
+  });
+
+  it('should add propers for the season after Pentecost', () => {
+    expect(liturgicalWeek(new Date(Date.parse("2020-7-25")))).toEqual({
+      cycle: 'Easter',
+      week: 21,
+      proper: 11
+    });
+  });
+
+  it('should not add propers for the last Sunday after the Epiphany', () => {
+    expect(liturgicalWeek(new Date(Date.parse("2021-11-23")))).toEqual({
+      cycle: 'Advent',
+      week: 0,
+      proper: undefined
+    });
+  });
+
+  it('should add propers for the second-to-last Sunday after the Epiphany', () => {
+    expect(liturgicalWeek(new Date(Date.parse("2021-11-16")))).toEqual({
+      cycle: 'Easter',
+      week: 39,
+      proper: 28
+    });
   });
 });
 
 describe('liturgicalDay', () => {
-  it('should build a date from the appropriate week', () => {
-    // Thursday, May 21 2020
-    const date = new Date();
-    date.setFullYear(2020);
-    date.setMonth(4);
-    date.setDate(21);
-    expect(liturgicalDay(date, false, false, SEASON_SERVICE, HOLY_DAY_SERVICE_1)).toEqual({
+  const DATE = new Date();
+  DATE.setFullYear(2020);
+  DATE.setMonth(4);
+  DATE.setDate(21);
+
+  it('should build `LiturgicalDay` object, given all the data', () => {
+    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK, [])).toEqual({
       date: '2020-5-21',
       slug: 'thursday-6th-easter',
+      kalendar: 'bcp1979',
       evening: false,
       week: TEST_WEEK,
       years: {
@@ -65,24 +99,17 @@ describe('liturgicalDay', () => {
       },
       season: 'Easter',
       holy_days: [],
-      color: {
-        name: 'gold',
-        hex: '#a8943f'
-      },
+      color: 'Gold',
       propers: 'thursday-6th-easter'
     });
   });
 
   it('should handle vigils', () => {
-    // Thursday, May 21 2020
-    const date = new Date();
-    date.setFullYear(2020);
-    date.setMonth(4);
-    date.setDate(21);
-    expect(liturgicalDay(date, false, true, SEASON_SERVICE, HOLY_DAY_SERVICE_1)).toEqual({
+    expect(liturgicalDay(DATE, 'bcp1979', true, true, TEST_WEEK, [])).toEqual({
       date: '2020-5-21',
       slug: 'friday-6th-easter',
-      evening: false,
+      kalendar: 'bcp1979',
+      evening: true,
       week: TEST_WEEK,
       years: {
         "bcp1979_daily_office": 2,
@@ -91,23 +118,16 @@ describe('liturgicalDay', () => {
       },
       season: 'Easter',
       holy_days: [],
-      color: {
-        name: 'gold',
-        hex: '#a8943f'
-      },
+      color: 'Gold',
       propers: 'friday-6th-easter'
     });
   });
 
   it('should be overridden by a feast day', () => {
-    // Thursday, May 21 2020
-    const date = new Date();
-    date.setFullYear(2020);
-    date.setMonth(4);
-    date.setDate(21);
-    expect(liturgicalDay(date, false, false, SEASON_SERVICE, HOLY_DAY_SERVICE_2)).toEqual({
+    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK, [ST_BILBO])).toEqual({
       date: '2020-5-21',
       slug: 'st-bilbo',
+      kalendar: 'bcp1979',
       evening: false,
       week: TEST_WEEK,
       years: {
@@ -117,40 +137,47 @@ describe('liturgicalDay', () => {
       },
       season: 'Saints',
       holy_days: [ST_BILBO],
-      color: {
-        name: 'gold',
-        hex: '#a8943f'
-      },
+      color: 'Red',
       propers: 'st-bilbo'
+    });
+  });
+
+  it('should not override Sundays', () => {
+    const sundayDate = new Date();
+    sundayDate.setFullYear(2020);
+    sundayDate.setMonth(4);
+    sundayDate.setDate(24);
+
+    expect(liturgicalDay(sundayDate, 'bcp1979', false, false, TEST_WEEK, [ST_BILBO])).toEqual({
+      date: '2020-5-24',
+      slug: 'sunday-6th-easter',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Easter',
+      holy_days: [ST_BILBO],
+      color: 'Gold',
+      propers: 'sunday-6th-easter'
     });
   });
 });
 
 const TEST_WEEK = {
+  kalendar: 'bcp1979',
   slug: '6th-easter',
-  week: 6,
+  cycle: 'Easter' as 'Easter',
+  week: 12,
   season: 'Easter' as "Easter" | "Advent" | "Christmas" | "Epiphany" | "Lent" | "HolyWeek" | "Pentecost" | "Saints" | "OrdinaryTime",
   name: 'Sixth Sunday of Easter',
-  color: {
-    name: 'gold',
-    hex: '#a8943f'
-  }
-}
-const SEASON_SERVICE : SeasonService = {
-  easterCycle: (index : number) => TEST_WEEK,
-  adventCycle: (index : number) => TEST_WEEK,
-  christmasCycle: (index : number) => TEST_WEEK,
-  epiphanyCycle: (index : number) => TEST_WEEK,
-  color: (name : string) => ({ name: 'gold', hex: '#a8943f' }),
-  christmasCycleWeek: (date : Date) => TEST_WEEK,
-  easterCycleWeek: (date : Date) => TEST_WEEK
-}
-const HOLY_DAY_SERVICE_1 : HolyDayService = {
-  getHolyDays: (slug : string, date : Date) => [],
-  specialDay: (slug : string) => [],
-  feastDate: (date : Date) => []
+  color: 'Gold'
 }
 const ST_BILBO : HolyDay = {
+  kalendar: 'bcp1979',
   slug: 'st-bilbo',
   type: {
     name: 'Feast Day',
@@ -158,10 +185,6 @@ const ST_BILBO : HolyDay = {
   },
   mmdd: '5/21',
   name: 'St. Bilbo’s Day',
-  season: 'Saints'
-}
-const HOLY_DAY_SERVICE_2 : HolyDayService = {
-  getHolyDays: (slug : string, date : Date) => [ST_BILBO],
-  specialDay: (slug : string) => [ST_BILBO],
-  feastDate: (date : Date) => [ST_BILBO]
+  season: 'Saints',
+  color: 'Red'
 }

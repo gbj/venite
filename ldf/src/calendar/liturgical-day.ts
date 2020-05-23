@@ -62,7 +62,7 @@ export class LiturgicalDay {
   holy_days?: HolyDay[];
 
   /** The {@link LiturgicalColor} used for the day */
-  color?: LiturgicalColor;
+  color?: string | LiturgicalColor;
 
   /** The {@link Proper} (i.e., for days after Pentecost) */
   proper?: Proper;
