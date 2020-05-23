@@ -15,9 +15,8 @@ export class HomePage implements OnInit, OnDestroy {
   // Exists to stash Subscriptions and is unsubscribed from OnDestroy
   subscription : Subscription = new Subscription();
 
-
+  // The `LiturgicalDay` that has currently been selected
   liturgicalDay : LiturgicalDay;
-  liturgicalDay$ : Subscription;
 
   // Arguments into the liturgicalDay call, which we need to combine
   date : Subject<Date> = new Subject();
@@ -62,7 +61,6 @@ export class HomePage implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-    this.liturgicalDay$.unsubscribe();
     this.weekQuery$.unsubscribe();
     this.holydayQuery$.unsubscribe();
   }
@@ -86,11 +84,10 @@ export class HomePage implements OnInit, OnDestroy {
   loadLiturgicalDay() {
     // every time `date`, `liturgy`, or `kalendar` changes,
     // we will need to refresh the calculated `LiturgicalDay`
-    if(this.liturgicalDay$) { this.liturgicalDay$.unsubscribe(); }
-    this.liturgicalDay$ = combineLatest(this.date, this.kalendar, this.liturgy, this.vigil, this.week, this.holydays)
+    this.subscription.add(combineLatest(this.date, this.kalendar, this.liturgy, this.vigil, this.week, this.holydays)
       .subscribe(([date, kalendar, liturgy, vigil, week, holydays]) => {
         this.liturgicalDay = liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0], holydays)
       }
-    );
+    ));
   }
 }
