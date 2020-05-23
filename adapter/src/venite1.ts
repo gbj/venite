@@ -1,9 +1,13 @@
-import { LiturgicalDocument, Heading, Psalm, Citation } from '@venite/ldf';
+import { LiturgicalDocument, BibleReading, Heading, Psalm, Citation, Text } from '@venite/ldf';
 
-export function venite1toLDF(old : any, type: string = 'psalm') : LiturgicalDocument {
+export function venite1toLDF(old : any, type: string) : LiturgicalDocument | undefined {
   switch(type) {
     case 'psalm':
       return psalmToLDF(old);
+    case 'collect':
+      return collectToLDF(old);
+    case 'reading':
+      return readingToLDF(old);
     default:
       return new LiturgicalDocument();
   }
@@ -76,6 +80,45 @@ function psalmToLDF(old : any) : Psalm {
   }
 
   return new Psalm(obj);
+}
+
+function collectToLDF(old : { slug: string; language: string; version: string; value: string[] }) : Text {
+  return new Text({
+    type: 'text',
+    style: 'prayer',
+    slug: old.slug,
+    language: old.language,
+    version: old.version,
+    value: old.value,
+    metadata: {
+      response: 'Amen.',
+      omit_response: false
+    }
+  })
+}
+
+function readingToLDF(old: {
+  citation: string;
+  label: string;
+  language: string;
+  version: string;
+  value: string[];
+  verses: { book: string; chapter: string; verse: string; text: string; }[][]
+}) : BibleReading | undefined {
+  if(old.verses && old.verses.flat().length > 0) {
+    return new BibleReading({
+      type: 'bible-reading',
+      style: 'long',
+      language: old.language || 'en',
+      version: old.version || 'NRSV',
+      citation: old.citation,
+      slug: `${old.citation} (${old.language}-${old.version})`,
+      label: old.label,
+      value: old.verses.flat()
+    });
+  } else {
+    return undefined;
+  }
 }
 
 function sourceStringToCitation(sourceString : string) : Citation | undefined {
