@@ -3,11 +3,17 @@ export * from './liturgical-document';
 export * from './bible-reading/bible-reading';
 export * from './bible-reading/bible-reading-verse';
 export * from './category';
+
 export * from './calendar/holy-day';
+export * from './calendar/kalendar';
 export * from './calendar/liturgical-color';
 export * from './calendar/liturgical-day';
 export * from './calendar/liturgical-week';
 export * from './calendar/proper';
+export * from './calendar/services/holy-day-service.interface';
+export * from './calendar/services/season-service.interface'
+export * from './calendar/utils';
+
 export * from './citation/citation';
 export * from './citation/selectable-citation';
 export * from './citation/source';

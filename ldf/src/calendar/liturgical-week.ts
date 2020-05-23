@@ -39,6 +39,9 @@ export class LiturgicalWeek {
   /** The {@link Proper} (i.e., for weeks after Pentecost) */
   proper?: Proper;
 
+  /** Optionally `slug` as an identifier for readings and collects */
+  propers?: string;
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<LiturgicalWeek> = {}) {
     Object.assign(this, data);

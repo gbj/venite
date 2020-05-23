@@ -29,7 +29,7 @@ export class HolyDay {
   name?: string;
 
   /** A machine-readable identifier for the liturgical season */
-  season:
+  season?:
     | 'Advent'
     | 'Christmas'
     | 'Epiphany'
@@ -43,8 +43,8 @@ export class HolyDay {
   /** Optional: Identifies whether it is the Eve of ___ */
   eve?: boolean;
 
-  /** The {@link LiturgicalColor} used for the day */
-  color?: LiturgicalColor;
+  /** The {@link LiturgicalColor} used for the day, or an identifying slug for the color that can be used to look it up */
+  color?: LiturgicalColor | string;
 
   /** Slug of a {@link LiturgicalWeek} after which this is no longer observed. Used for weekdays after Epiphany. */
   stops_at_sunday?: string;
