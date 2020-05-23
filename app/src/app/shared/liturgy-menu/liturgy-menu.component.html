@@ -1,0 +1,8 @@
+<form name="liturgyMenu">
+  <ion-item>
+    <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
+    <ion-select ngDefaultControl name="formLiturgy" [value]="liturgy" (ionChange)="update($event)">
+      <ion-select-option *ngFor="let liturgy of liturgyOptions | async" [value]="liturgy.slug">{{ liturgy.name }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</form>

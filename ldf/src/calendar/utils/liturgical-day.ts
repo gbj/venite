@@ -14,18 +14,15 @@ export const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
 /** Returns the `LiturgicalDay` that a given `Date` falls on */
 export function liturgicalDay(
   date : Date,
+  kalendar : string,
   evening : boolean = false,
   vigil : boolean = false,
-  seasonService : ISeasonService,
-  holydayService : IHolyDayService
+  week : LiturgicalWeek,
+  holydays : HolyDay[]
 ) : LiturgicalDay {
-  const week = liturgicalWeek(date, seasonService),
-        slug = buildDaySlug(date, week.slug);
+  const slug = buildDaySlug(date, week.slug);
 
   let propersSlug = week.proper ? buildDaySlug(date, week.proper.slug) : slug;
-
-  // Filter the set of holy days based on the `evening` param in particular
-  let holydays : HolyDay[] = holydayService.getHolyDays(slug, date);
 
   holydays = holydays
     .map(feast => {
@@ -51,22 +48,6 @@ export function liturgicalDay(
   // Determine whether a holy day takes precedence over the ordinary day
   let observed = observedDay(date, week, holydays);
 
-  // If observing the vigil of e.g., a Sunday or feast day, move the clock forward by a day
-  if(vigil) {
-    const DAY : number = 60 * 60 * 24 * 1000,
-          tomorrowDate : Date = new Date(date.getTime() + DAY),
-          tomorrowWeek : LiturgicalWeek = liturgicalWeek(tomorrowDate, seasonService),
-          tomorrowSlug : string = buildDaySlug(tomorrowDate, tomorrowWeek.slug),
-          tomorrowHolyDays : HolyDay[] = holydayService.getHolyDays(slug, date);
-
-    observed = observedDay(tomorrowDate, tomorrowWeek, tomorrowHolyDays);
-    // if observed is the same week, i.e., the next weekday in the same week
-    if(observed.slug == week.slug) {
-      observed.slug = tomorrowSlug;
-    }
-    week.propers = tomorrowWeek.propers;
-  }
-
   // overwrite the day's slug with the observed day's slug if they differ
   const observedSlug = (observed?.slug !== week.slug) ? observed.slug : slug;
   if(observedSlug !== slug) {
@@ -80,6 +61,7 @@ export function liturgicalDay(
 
   return new LiturgicalDay({
     date: `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
+    kalendar,
     evening,
     slug: observedSlug,
     propers: propersSlug,
@@ -94,6 +76,18 @@ export function liturgicalDay(
     color
   });
 }
+
+/*export function addVigil(day : LiturgicalDay, tomorrowDate : Date, tomorrowWeek : LiturgicalWeek, tomorrowHolyDays : HolyDay[]) : LiturgicalDay {
+  // If observing the vigil of e.g., a Sunday or feast day, move the clock forward by a day
+  const tomorrowSlug : string = buildDaySlug(tomorrowDate, tomorrowWeek.slug),
+
+  observed = observedDay(tomorrowDate, tomorrowWeek, tomorrowHolyDays);
+  // if observed is the same week, i.e., the next weekday in the same week
+  if(observed.slug == day.slug) {
+    observed.slug = tomorrowSlug;
+  }
+  week.propers = tomorrowWeek.propers;
+}*/
 
 function observedDay(date : Date, week : LiturgicalWeek, holydays : HolyDay[]) : LiturgicalWeek | HolyDay {
   // rank: Principal Feast (5), Sunday (4), Holy Day (3), random other days (2), ferial weekday (1)

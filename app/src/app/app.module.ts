@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -33,6 +34,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,

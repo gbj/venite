@@ -9,6 +9,9 @@ export class HolyDay {
    */
   slug: string;
 
+  /** Overarching calendar this is a part of */
+  kalendar: string;
+
   /** Used to determine feast precedence in conflicts, from 1 (ferial weekday) to 5 (Feast of Our Lord) */
   type?: {
     name: string;

@@ -10,12 +10,16 @@ export class LiturgicalWeek {
    */
   slug: string;
 
-  /**
-   * Index within the seasonal cycle
+  /** Overarching calendar this is a part of */
+  kalendar: string;
+
+  /** Seasonal cycle within which it falls */
+  cycle: 'Advent' | 'Christmas' | 'Epiphany' | 'Easter';
+
+  /** Index within the seasonal cycle
    * @example
    * // Last Sunday after Pentecost = 0th week of Advent cycle
-   * 0
-   */
+   * 0 */
   week: number;
 
   /** A machine-readable identifier for the liturgical season */
@@ -34,7 +38,7 @@ export class LiturgicalWeek {
   name: string;
 
   /** The {@link LiturgicalColor} used for the week */
-  color: LiturgicalColor;
+  color: LiturgicalColor | string;
 
   /** The {@link Proper} (i.e., for weeks after Pentecost) */
   proper?: Proper;

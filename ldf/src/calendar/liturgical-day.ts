@@ -18,6 +18,9 @@ export class LiturgicalDay {
    */
   date: string;
 
+  /** Overarching calendar this is a part of */
+  kalendar: string;
+
   /**
    * An identifying slug that distinguishes this day from all others
    * @example
