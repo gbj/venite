@@ -5,7 +5,6 @@ import { Citation } from './citation/citation';
 import { PsalmVerse } from './psalm';
 import { Heading } from './heading';
 import { Sharing } from './sharing/sharing';
-import { Category } from './category';
 import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
@@ -31,7 +30,7 @@ export class LiturgicalDocument {
   style?: string | null;
 
   /** Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'. */
-  category: Category[];
+  category: string[];
 
   /** An array of `Conditions`s determining whether the document should be displayed, given its day. */
   condition: {
