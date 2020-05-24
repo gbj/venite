@@ -3,6 +3,14 @@ import { LiturgicalColor } from './liturgical-color';
 import { LiturgicalWeek } from './liturgical-week';
 import { HolyDay } from './holy-day';
 
+interface ObservedInterface {
+  date?: string;
+  slug: string;
+  propers?: string;
+  color?: string | LiturgicalColor;
+  season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
+}
+
 /**
  * LiturgicalDay represents a particular moment in the liturgical calendar,
  * like "Monday in Holy Week" or "The Eve of the Epiphany."
@@ -90,6 +98,80 @@ export class LiturgicalDay {
     date.setSeconds(0);
     date.setMilliseconds(0);
     return date;
+  }
+
+  /** Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed */
+  addHolyDays(holydays : HolyDay[]) : LiturgicalDay {
+    holydays = holydays
+      .map(feast => {
+        // if a feast has an `evening` field and it's evening, use that
+        if(feast.hasOwnProperty('evening') && this.evening == true) {
+          return feast.evening;
+        }
+        // if a feast has a `morning` field and it's morning, use that
+        else if(feast.hasOwnProperty('morning') && this.evening == false) {
+          return feast.morning;
+        }
+        // if a feast is the eve of something and it's evening, use that feast
+        else if(feast && feast.eve && this.evening == true) {
+          return feast;
+        }
+        // if none of these, just return the feast
+        else {
+          return feast;
+        }
+      })
+      .filter(feast => !!feast) as HolyDay[];
+
+    // Determine whether a holy day takes precedence over the ordinary day
+    const observed : ObservedInterface = this.observedDay(this, holydays);
+
+    // overwrite the day's slug with the observed day's slug if they differ
+    const slug = (observed?.slug !== this.slug) ? observed.slug : this.slug;
+
+    let propers = this.propers;
+    if(slug !== this.slug) {
+      propers = slug;
+    }
+
+    const color = observed.color || this.color,
+          season = observed.season || this.season;
+
+    return new LiturgicalDay({
+      ... this,
+      slug,
+      propers,
+      color,
+      season,
+      holy_days: (this.holy_days || new Array()).concat(holydays)
+    })
+  }
+
+  /** Given a `LiturgicalDay` and a set of `HolyDay`s, it returns whichever option takes precedence */
+  observedDay(day : ObservedInterface, holydays : ObservedInterface[]) : ObservedInterface {
+    // rank: Principal Feast (5), Sunday (4), Holy Day (3), random other days (2), ferial weekday (1)
+    function getRank(item : any, type: 'holyday' | 'weekday') : number {
+      // ranked items => go with rank
+      if(type == 'holyday') {
+        return item?.type?.rank || 2;
+      } else {
+        // Sundays => 4
+        if(new Date(Date.parse(day.date || '')).getDay() == 0) {
+          return 4;
+        }
+        // weekdays => 1
+        else {
+          return 1;
+        }
+      }
+    }
+
+    const sorted = holydays
+      .map(holyday => ({ rank: getRank(holyday, 'holyday'), obj: holyday}))
+      .concat({ rank: getRank(day, 'weekday'), obj: day })
+      .sort((a: { rank: number; }, b: { rank: number; }) => b.rank - a.rank);
+
+    return { ... sorted[0].obj};
   }
 
   //** Constructor takes a Javascript object containing the class's properties */
