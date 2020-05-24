@@ -1,4 +1,14 @@
-import { LiturgicalDocument, BibleReading, Liturgy, Heading, Meditation, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '..';
+import { LiturgicalDocument } from '../liturgical-document';
+import { BibleReading } from '../bible-reading/bible-reading';
+import { Liturgy } from '../liturgy/liturgy';
+import { Heading } from '../heading';
+import { Meditation } from '../meditation';
+import { Option } from '../option';
+import { Psalm } from '../psalm';
+import { Refrain } from '../refrain';
+import { ResponsivePrayer } from '../responsive-prayer';
+import { Rubric } from '../rubric';
+import { Text } from '../text';
 
 /** Transforms a generic `LiturgicalDocument` (either a class instance or an `Object` that matches the type),
   * into an instance of a more-specific inherited class */
