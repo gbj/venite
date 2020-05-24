@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex } from '@venite/ldf';
 
@@ -41,11 +42,36 @@ export class CalendarService {
   }
 
   /** Find feast days on a given date */
-  findFeastDays(kalendar : string, date : Date) : Observable<HolyDay[]> {
-    const mmdd = `${date.getMonth()+1}/${date.getDate()}`;
+  findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('mmdd', '==', mmdd)
     ).valueChanges();
+  }
+
+  /** Find special days for a particular slug
+    * @example
+    * // Ash Wednesday
+    * `wednesday-last-epiphany` */
+  findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
+    return this.afs.collection<HolyDay>('HolyDay', ref =>
+      ref.where('kalendar', '==', kalendar)
+         .where('slug', '==', slug)
+    ).valueChanges();
+  }
+
+  /** Find `HolyDay`s connected to either a date or a slug */
+  addHolyDays(day : LiturgicalDay) : Observable<LiturgicalDay> {
+    // generate query from the `LiturgicalDay`
+    const [y, m, d] = day.date.split('-'),
+          feasts = this.findFeastDays(day.kalendar, `${m}/${d}`),
+          specials = this.findSpecialDays(day.kalendar, day.slug);
+    return combineLatest(feasts, specials)
+      .pipe(
+        // OR together the feasts and specials
+        map(([feasts, specials]) => feasts.concat(specials)),
+        // incorporate them into the `LiturgicalDay`
+        map(holydays => day.addHolyDays(holydays))
+      );
   }
 }

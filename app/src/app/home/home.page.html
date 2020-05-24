@@ -18,7 +18,7 @@
 
   <div id="container">
     <!-- Outputs -->
-    <p *ngIf="liturgicalDay">{{ liturgicalDay | json }}</p>
+    <h2 *ngIf="liturgicalDay | async as day">{{ day.date | date:'EEEE' }} after the {{ day.week?.name }}</h2>
 
     <!-- Choose kalendars -->
     <form name="kalendarForm">

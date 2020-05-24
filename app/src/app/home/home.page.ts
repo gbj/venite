@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BehaviorSubject, Observable, Subject, Subscription, combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
+import { map, switchMap, mergeMap, tap, scan } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, liturgicalWeek, liturgicalDay } from '@venite/ldf';
 
@@ -11,25 +11,21 @@ import { CalendarService } from '../services/calendar.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit, OnDestroy {
-  // Exists to stash Subscriptions and is unsubscribed from OnDestroy
-  subscription : Subscription = new Subscription();
-
-  // The `LiturgicalDay` that has currently been selected
-  liturgicalDay : LiturgicalDay;
+export class HomePage implements OnInit {
+  // The `LiturgicalDay` that has currently been selected, without any holy day information
+  baseDay : Observable<LiturgicalDay>;
+  liturgicalDay : Observable<LiturgicalDay>;
+  liturgicalDay2 : Observable<LiturgicalDay>;
 
   // Arguments into the liturgicalDay call, which we need to combine
   date : Subject<Date> = new Subject();
-  week : Subject<LiturgicalWeek[]> = new Subject();
+  week : Observable<LiturgicalWeek[]>;
   holydays : Subject<HolyDay[]> = new Subject();
   liturgy : Subject<Liturgy> = new Subject();
   kalendar : BehaviorSubject<string> = new BehaviorSubject('bcp1979');   // Backbone of Kalendar: Seasons, Major Feasts
   sanctoral : BehaviorSubject<string> = new BehaviorSubject('bcp1979');  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : Subject<boolean> = new BehaviorSubject(false);
 
-  // Database queries
-  weekQuery$ : Subscription;
-  holydayQuery$ : Subscription;
 
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
@@ -40,54 +36,26 @@ export class HomePage implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.updateWeek(new Date(), this.kalendar.getValue());
-    this.updateHolyDays(new Date(), this.kalendar.getValue());
-
-    this.loadLiturgicalDay();
-
     // load kalendar options
     this.kalendarOptions = this.calendarService.findKalendars();
     this.sanctoralOptions = this.calendarService.findSanctorals();
 
-    // every time `date` or `kalendar` changes, need to recalculate `week`
-    this.subscription.add(
-      combineLatest(this.date, this.kalendar)
-        .subscribe(([date, kalendar]) => {
-          this.updateWeek(date, kalendar);
-          this.updateHolyDays(date, kalendar);
-        })
-    );
-  }
+    // DB queries that depend on date change
+    // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
+    this.week = combineLatest(this.date, this.kalendar)
+      .pipe(
+        switchMap(([date, kalendar]) => this.calendarService.findWeek(kalendar, liturgicalWeek(date)))
+      )
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-    this.weekQuery$.unsubscribe();
-    this.holydayQuery$.unsubscribe();
-  }
-
-  // Methods
-  updateWeek(date : Date, kalendar : string) {
-    if(this.weekQuery$) { this.weekQuery$.unsubscribe(); }
-
-    const query : LiturgicalWeekIndex = liturgicalWeek(date);
-    this.weekQuery$ = this.calendarService.findWeek(kalendar, query)
-      .subscribe(data => this.week.next(data));
-  }
-
-  updateHolyDays(date : Date, kalendar : string) {
-    if(this.holydayQuery$) { this.holydayQuery$.unsubscribe(); }
-
-    this.holydayQuery$ = this.calendarService.findFeastDays(kalendar, date)
-      .subscribe(data => this.holydays.next(data));
-  }
-
-  loadLiturgicalDay() {
-    // every time `date`, `liturgy`, or `kalendar` changes,
-    // we will need to refresh the calculated `LiturgicalDay`
-    this.subscription.add(combineLatest(this.date, this.kalendar, this.liturgy, this.vigil, this.week, this.holydays)
-      .subscribe(([date, kalendar, liturgy, vigil, week, holydays]) => {
-        this.liturgicalDay = liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0], holydays)
-      }
-    ));
+    // main liturgical day observable
+    this.liturgicalDay = combineLatest(this.date, this.kalendar, this.liturgy, this.vigil, this.week)
+      .pipe(
+        // build the liturgical day from the data given
+        map(([date, kalendar, liturgy, vigil, week]) =>
+          liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0])
+        ),
+        // add holy days to that liturgical day
+        switchMap(day => this.calendarService.addHolyDays(day)),
+      );
   }
 }
