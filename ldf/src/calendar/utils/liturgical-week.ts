@@ -1,5 +1,7 @@
 import { easterInYear } from './easter-in-year';
 import { sundayBefore } from './sunday-before';
+import { dateOnly } from './date-only';
+import { dateFromYMD } from './date-from-ymd';
 import { PROPERS } from './propers';
 
 // one week in milliseconds
@@ -102,25 +104,4 @@ function christmasCycleWeek(d : Date) : LiturgicalWeekIndex {
       week: Math.floor(weeksFromEpiphany)
     }
   }
-}
-
-// strip away everything but year, month, day
-function dateOnly(d : Date) : Date {
-  d.setHours(0);
-  d.setMinutes(0);
-  d.setSeconds(0);
-  d.setMilliseconds(0);
-  return d;
-}
-
-// return date from year, month (1-12), and day
-// defaults to today if any of fields are undefined
-function dateFromYMD(year : string, month : string, day : string) : Date {
-  let d : Date = new Date();
-  d = dateOnly(d);
-  if(year && month && day) {
-    d.setFullYear(parseInt(year));
-    d.setMonth(parseInt(month)-1, parseInt(day));
-  }
-  return d;
 }
