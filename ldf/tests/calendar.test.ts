@@ -1,5 +1,6 @@
 import { easterInYear } from '../src/calendar/utils/easter-in-year';
 import { sundayBefore } from '../src/calendar/utils/sunday-before';
+import { dateFromYMD } from '../src/calendar/utils/date-from-ymd';
 import { liturgicalWeek, LiturgicalWeekIndex } from '../src/calendar/utils/liturgical-week';
 import { liturgicalDay } from '../src/calendar/utils/liturgical-day';
 import { HolyDay } from '../src/calendar/holy-day';
@@ -36,6 +37,28 @@ describe('sundayBefore', () => {
     const test3 = sundayBefore(new Date(Date.parse("2020-01-04")));
     expect(test3.getMonth()).toEqual(11);
     expect(test3.getDate()).toEqual(29);
+  });
+});
+
+describe('dateFromYMD', () => {
+  it('should handle valid dates correctly', () => {
+    const date = dateFromYMD('2020', '12', '20');
+    expect(date.getFullYear()).toEqual(2020);
+    expect(date.getMonth()).toEqual(11);
+    expect(date.getDate()).toEqual(20);
+    expect(date.getHours()).toEqual(0);
+    expect(date.getMinutes()).toEqual(0);
+    expect(date.getSeconds()).toEqual(0);
+  });
+
+  it('should handle dates that are too high for month by adding days and moving into next month', () => {
+    const date = dateFromYMD('2020', '2', '30');
+    expect(date.getFullYear()).toEqual(2020);
+    expect(date.getMonth()).toEqual(2);
+    expect(date.getDate()).toEqual(1);
+    expect(date.getHours()).toEqual(0);
+    expect(date.getMinutes()).toEqual(0);
+    expect(date.getSeconds()).toEqual(0);
   });
 });
 
@@ -86,7 +109,7 @@ describe('liturgicalDay', () => {
   DATE.setDate(21);
 
   it('should build `LiturgicalDay` object, given all the data', () => {
-    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK, [])).toEqual({
+    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK)).toEqual({
       date: '2020-5-21',
       slug: 'thursday-6th-easter',
       kalendar: 'bcp1979',
@@ -104,8 +127,8 @@ describe('liturgicalDay', () => {
     });
   });
 
-  it('should handle vigils', () => {
-    expect(liturgicalDay(DATE, 'bcp1979', true, true, TEST_WEEK, [])).toEqual({
+/*  it('should handle vigils', () => {
+    expect(liturgicalDay(DATE, 'bcp1979', true, true, TEST_WEEK)).toEqual({
       date: '2020-5-21',
       slug: 'friday-6th-easter',
       kalendar: 'bcp1979',
@@ -121,10 +144,12 @@ describe('liturgicalDay', () => {
       color: 'Gold',
       propers: 'friday-6th-easter'
     });
-  });
+  });*/
 
   it('should be overridden by a feast day', () => {
-    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK, [ST_BILBO])).toEqual({
+    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+          dayWithHolyDay = day.addHolyDays([ST_BILBO]);
+    expect(dayWithHolyDay).toEqual({
       date: '2020-5-21',
       slug: 'st-bilbo',
       kalendar: 'bcp1979',
@@ -137,6 +162,7 @@ describe('liturgicalDay', () => {
       },
       season: 'Saints',
       holy_days: [ST_BILBO],
+      holy_day_observed: ST_BILBO,
       color: 'Red',
       propers: 'st-bilbo'
     });
@@ -148,7 +174,9 @@ describe('liturgicalDay', () => {
     sundayDate.setMonth(4);
     sundayDate.setDate(24);
 
-    expect(liturgicalDay(sundayDate, 'bcp1979', false, false, TEST_WEEK, [ST_BILBO])).toEqual({
+    const day = liturgicalDay(sundayDate, 'bcp1979', false, false, TEST_WEEK)
+
+    expect(day.addHolyDays([ST_BILBO])).toEqual({
       date: '2020-5-24',
       slug: 'sunday-6th-easter',
       kalendar: 'bcp1979',
@@ -161,8 +189,109 @@ describe('liturgicalDay', () => {
       },
       season: 'Easter',
       holy_days: [ST_BILBO],
+      holy_day_observed: undefined,
       color: 'Gold',
       propers: 'sunday-6th-easter'
+    });
+  });
+
+  it('should not be overridden by a day that doesn’t have its own slug (like a black-letter day)', () => {
+    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+          dayWithHolyDay = day.addHolyDays([ST_MERRY]);
+    expect(dayWithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'thursday-6th-easter',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Easter',
+      holy_days: [ST_MERRY],
+      color: 'Gold',
+      propers: 'thursday-6th-easter'
+    });
+  });
+
+  it('should choose a higher feast over a lower feast, regardless of order they’re called', () => {
+    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+          dayWithHolyDay = day.addHolyDays([ST_MERRY]).addHolyDays([ST_BILBO]);
+    expect(dayWithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'st-bilbo',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Saints',
+      holy_days: [ST_MERRY, ST_BILBO],
+      holy_day_observed: ST_BILBO,
+      color: 'Red',
+      propers: 'st-bilbo'
+    });
+
+    const day2WithHolyDay = day.addHolyDays([ST_BILBO]).addHolyDays([ST_MERRY]);
+    expect(day2WithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'st-bilbo',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Saints',
+      holy_days: [ST_BILBO, ST_MERRY],
+      holy_day_observed: ST_BILBO,
+      color: 'Red',
+      propers: 'st-bilbo'
+    });
+
+    const day3WithHolyDay = day.addHolyDays([ST_MERRY]).addHolyDays([CHRISTMAS]).addHolyDays([ST_BILBO]);
+    expect(day3WithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'christmas',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Christmas',
+      holy_days: [ST_MERRY, CHRISTMAS, ST_BILBO],
+      holy_day_observed: CHRISTMAS,
+      color: 'White',
+      propers: 'christmas'
+    });
+
+    const day4WithHolyDay = day.addHolyDays([ST_MERRY]).addHolyDays([ST_BILBO]).addHolyDays([CHRISTMAS]);
+    expect(day4WithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'christmas',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Christmas',
+      holy_days: [ST_MERRY, ST_BILBO, CHRISTMAS],
+      holy_day_observed: CHRISTMAS,
+      color: 'White',
+      propers: 'christmas'
     });
   });
 });
@@ -187,4 +316,25 @@ const ST_BILBO : HolyDay = {
   name: 'St. Bilbo’s Day',
   season: 'Saints',
   color: 'Red'
+}
+const ST_MERRY : HolyDay = {
+  kalendar: 'bcp1979',
+  type: {
+    name: 'Black-Letter',
+    rank: 2
+  },
+  mmdd: '5/21',
+  name: 'St. Merry’s Day'
+}
+const CHRISTMAS : HolyDay = {
+  kalendar: 'bcp1979',
+  slug: 'christmas',
+  type: {
+    name: 'Feast of Our Lord',
+    rank: 5
+  },
+  mmdd: '5/21',
+  name: 'Christmas',
+  season: 'Christmas',
+  color: 'White'
 }

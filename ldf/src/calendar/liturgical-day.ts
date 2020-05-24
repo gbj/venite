@@ -7,7 +7,7 @@ import { dateFromYMD } from './utils/date-from-ymd';
 
 interface ObservedInterface {
   date?: string;
-  slug: string;
+  slug?: string;
   propers?: string;
   color?: string | LiturgicalColor;
   season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
@@ -129,10 +129,10 @@ export class LiturgicalDay {
       .filter(feast => !!feast) as HolyDay[];
 
     // Determine whether a holy day takes precedence over the ordinary day
-    const observed : ObservedInterface = this.observedDay(this, holydays);
+    const observed : ObservedInterface = this.observedDay(this, (this.holy_days || new Array()).concat(holydays));
 
     // overwrite the day's slug with the observed day's slug if they differ
-    const holy_day_is_observed = (observed?.slug !== day.slug),
+    const holy_day_is_observed = (observed?.slug && observed?.slug !== day.slug),
           slug = holy_day_is_observed ? observed.slug : day.slug;
 
     let propers = this.propers;
@@ -150,7 +150,7 @@ export class LiturgicalDay {
       color,
       season,
       holy_days: (this.holy_days || new Array()).concat(holydays),
-      holy_day_observed: observed as HolyDay
+      holy_day_observed: holy_day_is_observed ? observed as HolyDay : this.holy_day_observed
     })
   }
 

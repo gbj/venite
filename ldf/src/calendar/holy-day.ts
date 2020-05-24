@@ -1,13 +1,13 @@
 import { LiturgicalColor } from './liturgical-color';
 
 export class HolyDay {
-  /**
-   * An identifying slug for the day
+  /** An identifying slug for the day.
+   * @optional
+   * Not required for days that don't have their own propers.
    * @example
    * // Feb. 2, The Presentation
-   * `'the-presentation'`
-   */
-  slug: string;
+   * `'the-presentation'` */
+  slug?: string;
 
   /** Overarching calendar this is a part of */
   kalendar: string;
