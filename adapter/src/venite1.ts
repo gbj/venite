@@ -1,4 +1,7 @@
-import { LiturgicalDocument, BibleReading, Heading, Psalm, Citation, Text } from '@venite/ldf';
+import {
+  LiturgicalDocument, BibleReading, Heading, Psalm, Citation, Text,
+  ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Heading
+} from '@venite/ldf';
 
 export function venite1toLDF(old : any, type: string) : LiturgicalDocument | undefined {
   switch(type) {
@@ -121,6 +124,39 @@ function readingToLDF(old: {
   }
 }
 
+interface Prayer {
+  slug : string;
+  category : string;
+  type : string;
+  language : string;
+  version : string;
+  label : string;
+  version_label : string;
+  citation : string;
+  value : any;
+  response: string;
+  source : string;
+}
+
+function prayerToLDF(old: Prayer) : LiturgicalDocument {
+  const { type, style } = generateTypeAndStyle(old);
+
+  return new LiturgicalDocument({
+    type,
+    style,
+    slug: old.slug,
+    category: new Array(old.category),
+    language: old.language,
+    version: old.version,
+    citation: old.citation,
+    source: sourceStringToCitation(old.source),
+    label: old.label,
+    version_label: old.version_label,
+    metadata: generateMetadata(old),
+    value: generateValue(old)
+  });
+}
+
 function sourceStringToCitation(sourceString : string) : Citation | undefined {
   let source, citation;
   if(sourceString.match(/BCP/)) {
@@ -132,4 +168,105 @@ function sourceStringToCitation(sourceString : string) : Citation | undefined {
   } else {
     return undefined;
   }
+}
+
+function generateTypeAndStyle(old : Prayer) : string{
+  switch(old.type) {
+    case 'text':
+      return { type: 'text', style: 'text' };
+    case 'collect':
+      return { type: 'text', style: 'prayer' };
+    case 'preces':
+    case 'litany':
+    case 'responsive':
+      const isPreces = old.value[0].hasOwnProperty('label'),
+            isLitany = !!old.response || Array.isArray(old.value[0]),
+            ts = { type: 'responsive', type: 'responsive' };
+      if(isPreces) {
+        ts.style = 'preces';
+      }
+      if(isLitany) {
+        ts.style = 'litany';
+      }
+      return ts;
+    case 'rubric':
+      return { type: 'rubric', style: undefined };
+    case 'scripture':
+      return { type: 'bible-reading', style: 'short' };
+    case 'gloria':
+      return { type: 'refrain', style: 'gloria' };
+    case 'antiphon':
+      return { type: 'refrain', style: 'antiphon' };
+    default:
+      console.warn('\n\n*** (generateTypeAndStyle) Type Not Recognized ***\n\n', old, '\n\n*** Type Not Recognized ***\n\n');
+  }
+}
+
+function generateMetadata(old : Prayer) : any {
+  switch(old.type) {
+    case 'rubric':
+      return undefined;
+    case 'text':
+    case 'scripture'
+      return { response: old.response, omit_response: !old.response };
+    case 'collect':
+      return { response: old.response, omit_response: false };
+    case 'preces':
+    case 'litany':
+    case 'responsive':
+      return { response: old.response }
+    case 'gloria':
+    case 'antiphon':
+      return undefined;
+    default:
+      console.warn('\n\n*** (generateMetadata) Type Not Recognized ***\n\n', old, '\n\n*** Type Not Recognized ***\n\n');
+  }
+}
+
+function generateValue(old : Prayer) : LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[]{
+  switch(old.type) {
+    case 'text':
+    case 'collect':
+    case 'rubric':
+    case 'gloria':
+    case 'antiphon':
+      return old.value;
+    case 'preces':
+      return precesValue(old);
+    case 'litany':
+      return litanyValue(old);
+    case 'responsive':
+      const isPreces = old.value[0].hasOwnProperty('label'),
+            isLitany = !!old.response || Array.isArray(old.value[0]);
+      if(isPreces) {
+        return precesValue(old);
+      }
+      if(isLitany) {
+        return litanyValue(old);
+      }
+    case 'scripture':
+      return old.value.map(text => ({ text }));
+    default:
+      console.warn('\n\n*** (generateTypeAndStyle) Type Not Recognized ***\n\n', old, '\n\n*** Type Not Recognized ***\n\n');
+  }
+}
+
+function precesValue(old : Prayer) : ResponsivePrayerLine[] {
+  return old.value.map(line => ({ label: line.label, text: line.text}));
+}
+
+function litanyValue(old : Prayer) : ResponsivePrayerLine[] {
+  return old.value.map(line => {
+    let optional = false;
+    if(line.length == 2 && line[0].match(/^\[/) && line[1].match(/\]$/)) {
+      line[0] = line[0].replace('[', '');
+      line[1] = line[1].replace(']', '');
+      optional = true;
+    }
+    if(line.length == 1 && old.response && line[0].match(/^\[/) && line[0].match(/\]$/)) {
+      line[0] = line[0].replace(/[\[\]]/g, '');
+      optional = true;
+    }
+    return { text: line[0], response: line[1], optional }));
+  });
 }
