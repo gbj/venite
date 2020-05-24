@@ -2,6 +2,8 @@ import { Proper } from './proper';
 import { LiturgicalColor } from './liturgical-color';
 import { LiturgicalWeek } from './liturgical-week';
 import { HolyDay } from './holy-day';
+import { dateOnly } from './utils/date-only';
+import { dateFromYMD } from './utils/date-from-ymd';
 
 interface ObservedInterface {
   date?: string;
@@ -63,11 +65,12 @@ export class LiturgicalDay {
     | 'Saints'
     | 'OrdinaryTime';
 
-  /**
-   * An array of possible {@link HolyDay}s that fall at this moment. It’s up to the consumer
-   * to determine precedence.
-   */
+  /**  An array of possible {@link HolyDay}s that fall at this moment. It’s up to the consumer
+   * to determine precedence. */
   holy_days?: HolyDay[];
+
+  /** exists if one the listed `HolyDay`s is being observed */
+  holy_day_observed? : HolyDay;
 
   /** The {@link LiturgicalColor} used for the day */
   color?: string | LiturgicalColor;
@@ -102,6 +105,8 @@ export class LiturgicalDay {
 
   /** Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed */
   addHolyDays(holydays : HolyDay[]) : LiturgicalDay {
+    const day : LiturgicalDay = this;
+
     holydays = holydays
       .map(feast => {
         // if a feast has an `evening` field and it's evening, use that
@@ -127,7 +132,8 @@ export class LiturgicalDay {
     const observed : ObservedInterface = this.observedDay(this, holydays);
 
     // overwrite the day's slug with the observed day's slug if they differ
-    const slug = (observed?.slug !== this.slug) ? observed.slug : this.slug;
+    const holy_day_is_observed = (observed?.slug !== day.slug),
+          slug = holy_day_is_observed ? observed.slug : day.slug;
 
     let propers = this.propers;
     if(slug !== this.slug) {
@@ -143,7 +149,8 @@ export class LiturgicalDay {
       propers,
       color,
       season,
-      holy_days: (this.holy_days || new Array()).concat(holydays)
+      holy_days: (this.holy_days || new Array()).concat(holydays),
+      holy_day_observed: observed as HolyDay
     })
   }
 
@@ -155,8 +162,17 @@ export class LiturgicalDay {
       if(type == 'holyday') {
         return item?.type?.rank || 2;
       } else {
+        let date;
+
+        // if `day.date` is defined, used it to generate a date
+        if(day.date) {
+          const [y, m, d] = day.date?.split('-');
+          date = dateFromYMD(y, m, d);
+        } else {
+          date = dateOnly(new Date());
+        }
         // Sundays => 4
-        if(new Date(Date.parse(day.date || '')).getDay() == 0) {
+        if(date.getDay() == 0) {
           return 4;
         }
         // weekdays => 1
