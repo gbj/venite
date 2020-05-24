@@ -39,7 +39,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "@venite/ldf": "^0.2.0"
+    "@venite/ldf": "^0.3.0"
   },
   "files": [
     "dist/**/*"
