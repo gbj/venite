@@ -56,8 +56,8 @@ export class HomePage implements OnInit {
       );
   }
 
-  nextLiturgy(l : Liturgy) {
-    console.log('next liturgy!', l);
-    this.liturgy.next(l);
+  updateLiturgy(liturgy : Liturgy) {
+    console.log('(HomePage) updating liturgy', liturgy);
+    this.liturgy.next($event);
   }
 }

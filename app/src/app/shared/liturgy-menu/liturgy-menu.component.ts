@@ -1,8 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, AfterViewInit } from '@angular/core';
 import { LiturgyMenuService } from './liturgy-menu.service';
 
-import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
-import { tap, map, mergeMap } from 'rxjs/operators';
+import { Observable, Subject, combineLatest, of, interval } from 'rxjs';
+import { tap, map, take, mergeMap } from 'rxjs/operators';
 
 import { Liturgy } from '@venite/ldf';
 
@@ -26,14 +26,29 @@ export class LiturgyMenuComponent implements OnInit {
 
   constructor(private liturgyMenu : LiturgyMenuService) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     // grab liturgyOptions observable from the service
     this.liturgyOptions = this.liturgyMenu.findOptions(this.language, this.version);
 
-    // default value is either whatever is Input or whatever is appropriate for the time of day
-    // fire after a timeout so it registers as a change and emits liturgyChange
-    // probably kind of hacky
-    this.liturgy = this.liturgy || this.liturgyOfTheHour(new Date());
+    // This seems insane.
+    // Emit the starting liturgy
+    combineLatest(
+      of(this.liturgy || this.liturgyOfTheHour(new Date())),  // Input as default, or based on time
+      this.liturgyOptions, // search through the observable menu from database query
+      interval(1) // HACKY—delay by 1ms to come in after Angular change detection...
+    )
+      .pipe(
+        take(1),
+        tap(val => console.log('initials', val))
+      )
+      .subscribe(([slug, options]) => this.update(slug, options));
+  }
+
+  /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */
+  update(slug : string, options : Liturgy[]) {
+    console.log('updating by emitting', options.find(option => option.slug == slug));
+    this.liturgy = slug;
+    this.liturgyChange.emit(options.find(option => option.slug == slug));
   }
 
   // Hard-coded default liturgy slug for any given hour
@@ -48,10 +63,5 @@ export class LiturgyMenuComponent implements OnInit {
     } else {
       return "compline"
     }
-  }
-
-  /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */
-  update(slug : string, options : Liturgy[]) {
-    this.liturgyChange.emit(options.find(option => option.slug == slug));
   }
 }
