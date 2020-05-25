@@ -300,6 +300,7 @@ const TEST_WEEK = {
   kalendar: 'bcp1979',
   slug: '6th-easter',
   cycle: 'Easter' as 'Easter',
+  omit_the: false,
   week: 12,
   season: 'Easter' as "Easter" | "Advent" | "Christmas" | "Epiphany" | "Lent" | "HolyWeek" | "Pentecost" | "Saints" | "OrdinaryTime",
   name: 'Sixth Sunday of Easter',
