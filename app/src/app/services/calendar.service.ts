@@ -9,16 +9,8 @@ import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex }
   providedIn: 'root'
 })
 export class CalendarService {
-  // Holy Days
-  private holydayCollection : AngularFirestoreCollection<HolyDay>;
 
-  // Weeks
-  private weekCollection : AngularFirestoreCollection<LiturgicalWeek>;
-
-  constructor(private readonly afs: AngularFirestore) {
-    this.holydayCollection = afs.collection<HolyDay>('HolyDay');
-    this.weekCollection = afs.collection<LiturgicalWeek>('LiturgicalWeek');
-  }
+  constructor(private readonly afs: AngularFirestore) { }
 
   /** Get a menu of available `Kalendar`s that provide a full seasonal cycle */
   findKalendars() : Observable<Kalendar[]> {

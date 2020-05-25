@@ -79,13 +79,23 @@
         </ion-item>
 
         <!-- Pray Button -->
-        <ion-button>
-          <ion-label>{{ 'Pray' | translate }}</ion-label>
-        </ion-button>
+        <ng-container *ngIf="prayData | async as data else notLoaded">
+          <ion-button (click)="pray(data)">
+            <ion-label>{{ 'Pray' | translate }}</ion-label>
+          </ion-button>
+        </ng-container>
+        <ng-template #notLoaded>
+          <ion-button disabled="true">
+            <ion-label>{{ 'Pray' | translate }}</ion-label>
+          </ion-button>
+        </ng-template>
 
         <!-- Preferences -->
         <ng-container *ngIf="liturgy | async as l">
-          <venite-liturgy-preference-menu [preferences]="l.metadata?.preferences"></venite-liturgy-preference-menu>
+          <venite-liturgy-preference-menu
+            [preferences]="l.metadata?.preferences"
+            (clientPreferencesChange)="clientPreferences.next($event)"
+          ></venite-liturgy-preference-menu>
         </ng-container>
       </ion-card-content>
     </ion-card>

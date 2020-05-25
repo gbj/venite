@@ -20,6 +20,10 @@ export class AuthService {
     this.user = afAuth.user;
   }
 
+  currentUser() : User {
+    return auth().currentUser;
+  }
+
   async login(provider : string) {
     if(this.platform.is('capacitor')) {
       console.warn('Auth not set up in Capacitor yet');

@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter, OnInit, AfterViewInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { LiturgyMenuService } from './liturgy-menu.service';
 
-import { Observable, Subject, combineLatest, of, interval } from 'rxjs';
+import { Observable, Subject, Subscription, combineLatest, of, interval } from 'rxjs';
 import { tap, map, take, mergeMap } from 'rxjs/operators';
 
 import { Liturgy } from '@venite/ldf';
@@ -11,7 +11,7 @@ import { Liturgy } from '@venite/ldf';
   templateUrl: './liturgy-menu.component.html',
   styleUrls: ['./liturgy-menu.component.scss'],
 })
-export class LiturgyMenuComponent implements OnInit {
+export class LiturgyMenuComponent implements OnInit, OnDestroy {
   @Input() language : string = 'en';
   @Input() version : string = 'Rite-II';
 
@@ -24,6 +24,9 @@ export class LiturgyMenuComponent implements OnInit {
   // Menu pulled from LiturgyMenuService
   liturgyOptions : Observable<Liturgy[]>;
 
+  // Emits starting liturgy
+  start$ : Subscription;
+
   constructor(private liturgyMenu : LiturgyMenuService) { }
 
   ngOnInit() {
@@ -32,7 +35,7 @@ export class LiturgyMenuComponent implements OnInit {
 
     // This seems insane.
     // Emit the starting liturgy
-    combineLatest(
+    this.start$ = combineLatest(
       of(this.liturgy || this.liturgyOfTheHour(new Date())),  // Input as default, or based on time
       this.liturgyOptions, // search through the observable menu from database query
       interval(1) // HACKY—delay by 1ms to come in after Angular change detection...
@@ -42,6 +45,10 @@ export class LiturgyMenuComponent implements OnInit {
         tap(val => console.log('initials', val))
       )
       .subscribe(([slug, options]) => this.update(slug, options));
+  }
+
+  ngOnDestroy() {
+    this.start$.unsubscribe();
   }
 
   /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */

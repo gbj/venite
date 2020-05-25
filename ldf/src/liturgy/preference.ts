@@ -20,6 +20,18 @@ export class Preference {
   getPreferenceOption(value: string): PreferenceOption | undefined {
     return this.options.find((option) => option.value == value);
   }
+
+  /** Returns the default value for the preference */
+  getDefaultPref() : string {
+    const defaultPref = this.options.filter(opt => opt.default)[0],
+          firstPref = this.options[0];
+    return (defaultPref || firstPref).value;
+  }
+
+  //** Constructor takes a Javascript object containing the class's properties */
+  constructor(data: Partial<Preference> = {}) {
+    Object.assign(this, data);
+  }
 }
 
 export class PreferenceOption {

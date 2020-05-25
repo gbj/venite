@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'firebase/app';
+
 import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
-import { map, switchMap, mergeMap, tap, scan } from 'rxjs/operators';
+import { map, switchMap, mergeMap, tap, scan, shareReplay } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, liturgicalWeek, liturgicalDay } from '@venite/ldf';
+import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ClientPreferences, liturgicalWeek, liturgicalDay } from '@venite/ldf';
 
+import { AuthService } from '../auth/auth.service';
 import { CalendarService } from '../services/calendar.service';
+import { PreferencesService } from '../preferences/preferences.service';
 
 @Component({
   selector: 'venite-home',
@@ -12,6 +16,9 @@ import { CalendarService } from '../services/calendar.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+  // The data the Pray button needs
+  prayData : Observable<[User, Liturgy, LiturgicalDay, ClientPreferences]>;
+
   // The `LiturgicalDay` that has currently been selected, without any holy day information
   liturgicalDay : Observable<LiturgicalDay>;
 
@@ -28,8 +35,13 @@ export class HomePage implements OnInit {
   kalendarOptions : Observable<Kalendar[]>;
   sanctoralOptions : Observable<Kalendar[]>;
 
+  // Preferences
+  clientPreferences : Subject<ClientPreferences> = new Subject();
+
   constructor(
-    public calendarService : CalendarService
+    public calendarService : CalendarService,
+    private preferencesService : PreferencesService,
+    private auth : AuthService
   ) {}
 
   ngOnInit() {
@@ -52,7 +64,22 @@ export class HomePage implements OnInit {
           liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0])
         ),
         // add holy days to that liturgical day
-        mergeMap(day => this.calendarService.addHolyDays(day)),
+        mergeMap(day => this.calendarService.addHolyDays(day))
       );
+
+    // Pray button data
+    this.prayData = combineLatest(this.auth.user, this.liturgy, this.liturgicalDay, this.clientPreferences);
+  }
+
+  pray(args : [User, Liturgy, LiturgicalDay, ClientPreferences]) {
+    const [ user, liturgy, day, prefs ] = args;
+    // update preferences
+    this.savePreferences(user?.uid, prefs);
+  }
+
+  savePreferences(uid : string, prefs : ClientPreferences) {
+    console.log(prefs)
+    Object.entries(prefs)
+      .forEach(([key, value]) => this.preferencesService.set(key, value, uid));
   }
 }
