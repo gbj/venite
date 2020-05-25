@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { LiturgyMenuService } from './liturgy-menu.service';
 
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
+import { tap, map, mergeMap } from 'rxjs/operators';
 
 import { Liturgy } from '@venite/ldf';
 
@@ -14,21 +15,41 @@ export class LiturgyMenuComponent implements OnInit {
   @Input() language : string = 'en';
   @Input() version : string = 'Rite-II';
 
+  /** Slug of default liturgy */
+  @Input() liturgy : string;
+
+  /** Emits the `Liturgy` whenever user's selection changes */
   @Output() liturgyChange : EventEmitter<Liturgy> = new EventEmitter();
 
-  liturgyOptions : Promise<Liturgy[]>;
+  // Menu pulled from LiturgyMenuService
+  liturgyOptions : Observable<Liturgy[]>;
 
   constructor(private liturgyMenu : LiturgyMenuService) { }
 
   async ngOnInit() {
-    this.liturgyOptions = this.liturgyMenu.getOptions(this.language, this.version);
-    console.log(await this.liturgyOptions);
+    // default value is either whatever is Input or whatever is appropriate for the time of day
+    this.liturgy = this.liturgy || this.liturgyOfTheHour(new Date());
+
+    // grab liturgyOptions observable from the service
+    this.liturgyOptions = this.liturgyMenu.findOptions(this.language, this.version);
   }
 
-  async update(event : CustomEvent) {
-    const options = await this.liturgyOptions;
-    const choice = options.find(opt => opt.slug == event.detail.value);
-    this.liturgyChange.emit(choice);
+  // Hard-coded default liturgy slug for any given hour
+  liturgyOfTheHour(now : Date) : string {
+    let hour : number = now.getHours();
+    if(hour > 3 && hour < 11) {
+      return "morning_prayer"
+    } else if(hour >= 11 && hour <= 14) {
+      return "noonday_prayer"
+    } else if(hour >= 14 && hour <= 20) {
+      return "evening_prayer"
+    } else {
+      return "compline"
+    }
   }
 
+  /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */
+  update(slug : string, options : Liturgy[]) {
+    this.liturgyChange.emit(options.find(option => option.slug == slug));
+  }
 }

@@ -1,8 +1,11 @@
-<form name="liturgyMenu">
+<form>
   <ion-item>
     <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
-    <ion-select ngDefaultControl name="formLiturgy" [value]="liturgy" (ionChange)="update($event)">
-      <ion-select-option *ngFor="let liturgy of liturgyOptions | async" [value]="liturgy.slug">{{ liturgy.name }}</ion-select-option>
-    </ion-select>
+    <ng-container *ngIf="liturgyOptions | async as options">
+      <ion-select [value]="liturgy" (ionChange)="update($event.detail.value, options)">
+        <ion-select-option *ngFor="let liturgy of liturgyOptions | async" [value]="liturgy.slug">{{ liturgy.label }}</ion-select-option>
+      </ion-select>
+    </ng-container>
+    <ion-skeleton-text *ngIf="!(liturgyOptions | async)"></ion-skeleton-text>
   </ion-item>
 </form>

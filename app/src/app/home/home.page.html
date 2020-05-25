@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Blank
+      {{ 'Pray the Office' | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,13 +12,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">{{ 'Pray the Office' | translate }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <!-- Outputs -->
-    <h2 *ngIf="liturgicalDay | async as day">{{ day.date | date:'EEEE' }} after the {{ day.week?.name }}</h2>
+    <!-- Title based on Liturgical Day -->
+    <h2>
+      &nbsp;
+      <ng-container *ngIf="liturgicalDay | async as day">
+        <venite-liturgical-day-name [day]="day"></venite-liturgical-day-name>
+      </ng-container>
+    </h2>
+    <ng-container *ngIf="liturgicalDay | async as day">
+      <ul class="feasts" *ngIf="day.holy_days?.length > 0">
+        <li *ngFor="let holy_day of day.holy_days">{{ holy_day.name }}</li>
+      </ul>
+    </ng-container>
 
     <!-- Choose kalendars -->
     <form name="kalendarForm">
@@ -51,5 +61,15 @@
       <ion-label>{{ 'vigil' | translate }}</ion-label>
       <ion-checkbox name="isVigil" [value]="vigil | async" (ionChange)="vigil.next($event.detail.value)"></ion-checkbox>
     </ion-item>
+
+    <!-- Pray Button -->
+    <ion-button>
+      <ion-label>{{ 'Pray' | translate }}</ion-label>
+    </ion-button>
+
+    <!-- Preferences -->
+    <ng-container *ngIf="liturgy | async as l">
+      <venite-liturgy-preference-menu [preferences]="l.metadata?.preferences"></venite-liturgy-preference-menu>
+    </ng-container>
   </div>
 </ion-content>

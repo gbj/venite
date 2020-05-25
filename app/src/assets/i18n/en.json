@@ -3,7 +3,7 @@
     "email": "Email",
     "name": "Name",
     "password": "Password",
-    "register": "Create an account",
+    "register": "Create an Account",
     "sign-in": "Sign In",
     "sign-out": "Sign Out",
     "sign-in-with-apple": "Sign in with Apple",
@@ -41,6 +41,8 @@
   },
   "kalendar": "Liturgical Calendar",
   "liturgy": "Liturgy",
+  "Pray": "Pray",
+  "Pray the Office": "Pray the Office",
   "sanctoral": "Sanctoral Calendar",
   "vigil": "Vigil"
 }

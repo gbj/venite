@@ -1,0 +1,7 @@
+<ng-container *ngIf="day.holy_day_observed">
+  {{ day.holy_day_observed.name }}
+</ng-container>
+<ng-container *ngIf="!day.holy_day_observed">{{ day.date | date:'EEEE' }} after
+  <ng-container *ngIf="!day.week?.omit_the">the</ng-container>
+  {{ day.week?.name }}
+</ng-container>

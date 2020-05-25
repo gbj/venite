@@ -1,0 +1,20 @@
+<div *ngIf="preference_tree && categories">
+  <ng-container *ngFor="let category of categories">
+    <ion-list *ngIf="preference_tree[category].length > 0">
+      <ion-item><h4>{{ category }}</h4></ion-item>
+      <ng-container *ngFor="let item of preference_tree[category]">
+        {{ item | json }}
+        <!--<ion-item *ngIf="item?.options?.length > 1">
+          <ion-label position="stacked">{{ item.label }}</ion-label>
+          <ion-select [name]="TODO" [(ngModel)]="data.preferences[item.key]">
+            <ion-select-option *ngFor="let opt of item.value.options; let ii = index"
+              [value]="opt.value">
+              {{ opt.label }}
+            </ion-select-option>
+          </ion-select>
+          <ion-text class="preference-description" *ngIf="item.value.description" [innerHTML]="item.value.description"></ion-text>
+        </ion-item>-->
+      </ng-container>
+    </ion-list>
+  </ng-container>
+</div>

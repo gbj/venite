@@ -5,14 +5,18 @@ import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+import { LiturgicalDayNameComponent } from './liturgical-day-name/liturgical-day-name.component';
 import { LiturgyMenuComponent } from './liturgy-menu/liturgy-menu.component';
+import { LiturgyPreferenceMenuComponent } from './liturgy-preference-menu/liturgy-preference-menu.component';
 import { MenuComponent } from './menu/menu.component';
 import { DateComponent } from './date/date.component';
 
 @NgModule({
   declarations: [
     DateComponent,
+    LiturgicalDayNameComponent,
     LiturgyMenuComponent,
+    LiturgyPreferenceMenuComponent,
     MenuComponent
   ],
   imports: [
@@ -22,7 +26,9 @@ import { DateComponent } from './date/date.component';
     TranslateModule.forChild()
   ],
   exports: [
+    LiturgicalDayNameComponent,
     LiturgyMenuComponent,
+    LiturgyPreferenceMenuComponent,
     DateComponent,
     MenuComponent
   ]

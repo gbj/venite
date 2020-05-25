@@ -13,9 +13,7 @@ import { CalendarService } from '../services/calendar.service';
 })
 export class HomePage implements OnInit {
   // The `LiturgicalDay` that has currently been selected, without any holy day information
-  baseDay : Observable<LiturgicalDay>;
   liturgicalDay : Observable<LiturgicalDay>;
-  liturgicalDay2 : Observable<LiturgicalDay>;
 
   // Arguments into the liturgicalDay call, which we need to combine
   date : Subject<Date> = new Subject();
@@ -25,7 +23,6 @@ export class HomePage implements OnInit {
   kalendar : BehaviorSubject<string> = new BehaviorSubject('bcp1979');   // Backbone of Kalendar: Seasons, Major Feasts
   sanctoral : BehaviorSubject<string> = new BehaviorSubject('bcp1979');  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : Subject<boolean> = new BehaviorSubject(false);
-
 
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
@@ -44,7 +41,7 @@ export class HomePage implements OnInit {
     // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
     this.week = combineLatest(this.date, this.kalendar)
       .pipe(
-        switchMap(([date, kalendar]) => this.calendarService.findWeek(kalendar, liturgicalWeek(date)))
+        mergeMap(([date, kalendar]) => this.calendarService.findWeek(kalendar, liturgicalWeek(date)))
       )
 
     // main liturgical day observable
@@ -55,7 +52,12 @@ export class HomePage implements OnInit {
           liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0])
         ),
         // add holy days to that liturgical day
-        switchMap(day => this.calendarService.addHolyDays(day)),
+        mergeMap(day => this.calendarService.addHolyDays(day)),
       );
+  }
+
+  nextLiturgy(l : Liturgy) {
+    console.log('next liturgy!', l);
+    this.liturgy.next(l);
   }
 }

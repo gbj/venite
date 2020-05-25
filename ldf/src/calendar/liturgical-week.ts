@@ -37,6 +37,11 @@ export class LiturgicalWeek {
   /** A human-readable name for the week, in English */
   name: string;
 
+  /** Used for English-language formatting, generally when "week" name is the proper name of a Sunday.
+    * @example
+    * // "Thursday after Pentecost", not "Thursday after the Pentecost" */
+  omit_the: boolean = false;
+
   /** The {@link LiturgicalColor} used for the week */
   color: LiturgicalColor | string;
 
