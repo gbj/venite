@@ -27,11 +27,13 @@ export class LiturgyMenuComponent implements OnInit {
   constructor(private liturgyMenu : LiturgyMenuService) { }
 
   async ngOnInit() {
-    // default value is either whatever is Input or whatever is appropriate for the time of day
-    this.liturgy = this.liturgy || this.liturgyOfTheHour(new Date());
-
     // grab liturgyOptions observable from the service
     this.liturgyOptions = this.liturgyMenu.findOptions(this.language, this.version);
+
+    // default value is either whatever is Input or whatever is appropriate for the time of day
+    // fire after a timeout so it registers as a change and emits liturgyChange
+    // probably kind of hacky
+    this.liturgy = this.liturgy || this.liturgyOfTheHour(new Date());
   }
 
   // Hard-coded default liturgy slug for any given hour
