@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 // Venite content
+import { AuthMenuButtonComponent } from './auth-menu-button/auth-menu-button.component';
+import { AuthMenuComponent } from './auth-menu/auth-menu.component';
 import { LoginComponent} from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
@@ -17,11 +19,15 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule.forChild()
   ],
   declarations: [
+    AuthMenuButtonComponent,
+    AuthMenuComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent
   ],
   exports: [
+    AuthMenuButtonComponent,
+    AuthMenuComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent

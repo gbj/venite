@@ -1,29 +1,29 @@
 <form name="dateForm">
   <ion-item>
-    <ion-label position="stacked">{{ 'date.month' | translate }}</ion-label>
+    <ion-label position="stacked">{{ 'month' | translate }}</ion-label>
     <ion-select ngDefaultControl name="formM" [value]="m" (ionChange)="update('m', $event)">
-      <ion-select-option value="1">{{ 'date.January' | translate }}</ion-select-option>
-      <ion-select-option value="2">{{ 'date.February' | translate }}</ion-select-option>
-      <ion-select-option value="3">{{ 'date.March' | translate }}</ion-select-option>
-      <ion-select-option value="4">{{ 'date.April' | translate }}</ion-select-option>
-      <ion-select-option value="5">{{ 'date.May' | translate }}</ion-select-option>
-      <ion-select-option value="6">{{ 'date.June' | translate }}</ion-select-option>
-      <ion-select-option value="7">{{ 'date.July' | translate }}</ion-select-option>
-      <ion-select-option value="8">{{ 'date.August' | translate }}</ion-select-option>
-      <ion-select-option value="9">{{ 'date.September' | translate }}</ion-select-option>
-      <ion-select-option value="10">{{ 'date.October' | translate }}</ion-select-option>
-      <ion-select-option value="11">{{ 'date.November' | translate }}</ion-select-option>
-      <ion-select-option value="12">{{ 'date.December' | translate }}</ion-select-option>
+      <ion-select-option value="1">{{ 'January' | translate }}</ion-select-option>
+      <ion-select-option value="2">{{ 'February' | translate }}</ion-select-option>
+      <ion-select-option value="3">{{ 'March' | translate }}</ion-select-option>
+      <ion-select-option value="4">{{ 'April' | translate }}</ion-select-option>
+      <ion-select-option value="5">{{ 'May' | translate }}</ion-select-option>
+      <ion-select-option value="6">{{ 'June' | translate }}</ion-select-option>
+      <ion-select-option value="7">{{ 'July' | translate }}</ion-select-option>
+      <ion-select-option value="8">{{ 'August' | translate }}</ion-select-option>
+      <ion-select-option value="9">{{ 'September' | translate }}</ion-select-option>
+      <ion-select-option value="10">{{ 'October' | translate }}</ion-select-option>
+      <ion-select-option value="11">{{ 'November' | translate }}</ion-select-option>
+      <ion-select-option value="12">{{ 'December' | translate }}</ion-select-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label position="stacked">{{ 'date.day' | translate }}</ion-label>
+    <ion-label position="stacked">{{ 'day' | translate }}</ion-label>
     <ion-select ngDefaultControl name="formD"  [value]="d" (ionChange)="update('d', $event)">
       <ion-select-option *ngFor="let d of daysInMonth(y, m)" [value]="d.toString()">{{ d }}</ion-select-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label position="stacked">{{ 'date.year' | translate }}</ion-label>
+    <ion-label position="stacked">{{ 'year' | translate }}</ion-label>
     <ion-input ngDefaultControl type="number" name="formY" [(ngModel)]="y" (ionChange)="dateChanged()"></ion-input>
   </ion-item>
 </form>

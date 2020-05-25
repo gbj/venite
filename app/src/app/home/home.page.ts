@@ -55,9 +55,4 @@ export class HomePage implements OnInit {
         mergeMap(day => this.calendarService.addHolyDays(day)),
       );
   }
-
-  updateLiturgy(liturgy : Liturgy) {
-    console.log('(HomePage) updating liturgy', liturgy);
-    this.liturgy.next($event);
-  }
 }

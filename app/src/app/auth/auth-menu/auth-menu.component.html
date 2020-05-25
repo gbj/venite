@@ -1,0 +1,25 @@
+<ion-menu side="end" menuId="auth" content-id="main">
+  <ng-container *ngIf="auth.user | async as user">
+    <ion-header>
+      <ion-toolbar>
+        <ion-item>
+          <ion-avatar *ngIf="user.photoURL" slot="start">
+            <img [src]="user.photoURL">
+          </ion-avatar>
+          <ion-avatar *ngIf="!user.photoURL" slot="start">
+            <img src="/avatar.svg">
+          </ion-avatar>
+          <ion-title>{{ user.displayName }}</ion-title>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item button (click)="auth.logout()">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>{{ 'auth.sign-out' | translate }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-container>
+</ion-menu>
