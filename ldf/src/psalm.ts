@@ -1,4 +1,6 @@
-import { LiturgicalDocument, Heading, Refrain } from '.';
+import { LiturgicalDocument } from './liturgical-document';
+import { Heading } from './heading';
+import { Refrain } from './refrain';
 
 const STYLES = ['psalm', 'canticle', 'invitatory'] as const;
 type StyleTuple = typeof STYLES;

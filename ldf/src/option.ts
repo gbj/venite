@@ -1,4 +1,5 @@
-import { LiturgicalDocument, BibleReading } from '.';
+import { LiturgicalDocument } from './liturgical-document';
+import { BibleReading } from './bible-reading/bible-reading';
 
 const VERSIONS: { [x: string]: string } = {
   ip: 'IP',

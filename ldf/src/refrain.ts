@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from '.';
+import { LiturgicalDocument } from './liturgical-document';
 
 const STYLES = ['normal', 'antiphon', 'gloria'] as const;
 type StyleTuple = typeof STYLES;
