@@ -10,7 +10,7 @@ interface ObservedInterface {
   slug?: string;
   propers?: string;
   color?: string | LiturgicalColor;
-  season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
+  season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Ascension' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
 }
 
 /**
