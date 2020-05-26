@@ -18,11 +18,9 @@ export function liturgicalWeek(d : Date) : LiturgicalWeekIndex {
   const date = new Date(d.getTime()); // avoid overwriting existing Date passed in
   const year : number = date.getFullYear(),
       easter : Date = easterInYear(year),
-      christmas : Date = new Date(year, 11, 25),
       christmasEve : Date = new Date(year, 11, 24),
       last_epiphany : Date = sundayBefore(new Date(easter.getTime()-6.9*ONE_WEEK)),
       fourth_advent : Date = sundayBefore(christmasEve),
-      first_advent : Date = sundayBefore(new Date(fourth_advent.getTime()-2.9*ONE_WEEK)),
       last_pentecost : Date = sundayBefore(new Date(fourth_advent.getTime()-3.9*ONE_WEEK));
 
   if(date >= last_pentecost || date < last_epiphany) {

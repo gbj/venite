@@ -7,23 +7,20 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type     | Default     |
-| ----------- | ------------ | ----------- | -------- | ----------- |
-| `docId`     | `doc-id`     |             | `string` | `undefined` |
-| `userToken` | `user-token` |             | `string` | `undefined` |
+| Property    | Attribute    | Description                            | Type                          | Default     |
+| ----------- | ------------ | -------------------------------------- | ----------------------------- | ----------- |
+| `cursors`   | --           | Cursor positions of active users       | `{ [user: string]: Cursor; }` | `undefined` |
+| `docId`     | `doc-id`     |                                        | `string`                      | `undefined` |
+| `userToken` | `user-token` |                                        | `string`                      | `undefined` |
+| `users`     | --           | Users currently active in the document | `User[]`                      | `undefined` |
 
 
-## Methods
+## Events
 
-### `leave(docId: string) => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Event                   | Description                     | Type                  |
+| ----------------------- | ------------------------------- | --------------------- |
+| `editorCursorMoved`     | User's cursor/selection changed | `CustomEvent<Cursor>` |
+| `editorDocShouldChange` | User has edited the document    | `CustomEvent<Change>` |
 
 
 ## Dependencies

@@ -1,10 +1,8 @@
 import { Component, Element, State, Listen, Host, Prop, Watch, Method, JSX, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
-import { Subscription } from 'rxjs';
 
 import { ChangeMessage, CursorMessage, Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 
-import { EditorService } from './editor-service';
 import { elementFromPath } from './utils/element-from-path';
 import { applyChange } from './utils/apply';
 import getCaretCoordinates from 'textarea-caret';
@@ -22,13 +20,9 @@ export class EditorComponent {
   @State() obj : LiturgicalDocument;
 
   @State() cursor: Cursor;
-  @State() users : User[] = new Array();
 
   @State() focusObj : { obj: LiturgicalDocument; path: string; };
 
-  cursors : {
-    [user: string]: Cursor
-  } = {};
   @State() cursorPos : {
     // indexed by username
     [user: string]: {
@@ -37,11 +31,6 @@ export class EditorComponent {
       target: HTMLTextAreaElement | HTMLInputElement;
     }
   } = {};
-
-  hasJoinedDocument : boolean = false;
-
-  // Store all our Subscriptions here so we can unsubscribe when the component unloads
-  subscription : Subscription = new Subscription();
 
   // Props
   @Prop() docId : string;
@@ -58,52 +47,40 @@ export class EditorComponent {
     this.joinNewDocument();
   }
 
+  /** Users currently active in the document */
+  @Prop() users : User[];
+
+  /** Cursor positions of active users */
+  @Prop() cursors : { [user: string]: Cursor };
+  @Watch('cursors')
+  cursorsChanged() {
+    this.clearCursors();
+    this.resetCursors();
+  }
+
+  // Events
+  /** User's cursor/selection changed */
+  @Event() editorCursorMoved: EventEmitter<Cursor>;
+
+  /** User has edited the document */
+  @Event() editorDocShouldChange : EventEmitter<Change>;
+
   // Life Cycle
   connectedCallback() {
-    // Connect to the server, without logging in or opening a document
-    EditorService.connect();
 
-    // Join a document
-    EditorService.join(this.docId, this.userToken);
-
-    // Subscribe to observables that handle each of the events from the server
-    this.subscription.add(EditorService.cursorMoved.subscribe((data) => this.receivedCursorMoved(data)));
-    this.subscription.add(EditorService.docChanged.subscribe((data) => this.receivedDocChanged(data)));
-    this.subscription.add(EditorService.users.subscribe((data) => {
-      console.log('users = ', data);
-      this.users = data;
-    }));
-    this.subscription.add(EditorService.joined.subscribe((data) => {
-      console.log('`joined` received', data);
-      this.obj = data.doc;
-      this.users = data.users;
-      this.hasJoinedDocument = true;
-    }));
-    this.subscription.add(EditorService.error.subscribe((data) => {
-      console.warn('Error', data);
-      EditorService.refreshDoc();
-    }));
   }
 
   // Listeners
-  // Watch for cursor moves bubbled up from the editable-texts and send them to the server
+  /** Watch for cursor moves bubbled up from the editable-texts and emit them from the editor */
   @Listen('ldfCursorMoved')
   onCursorMoved(ev : CustomEvent) {
-    if(!ev.detail) {
-      EditorService.moveCursor(new Cursor('', 0, 0, undefined));
-    } else {
-      EditorService.moveCursor(ev.detail);
-    }
+    this.editorCursorMoved.emit(ev.detail || new Cursor('', 0, 0, undefined));
   }
 
-  /** docShouldChange event: we need to notify the server
-    * Will update our doc when we get an ack from the server
-    * Targets `document` because it needs to listen for changes in e.g., modals attached to `document.body` */
+  /** Watch for messages that doc should change from child components and emit them from the editor */
   @Listen('ldfDocShouldChange', { target: 'document' })
   onDocShouldChange(ev : CustomEvent) {
-    //this.obj = new LiturgicalDocument(applyChange(this.obj, new Change(ev.detail)));
-    console.log('change = ', ev.detail);
-    EditorService.processChange(new Change(ev.detail));
+    this.editorDocShouldChange.emit(ev.detail);
   }
 
   // Listen for scroll and window resize events and reset the cursors accordingly
@@ -120,35 +97,13 @@ export class EditorComponent {
     this.resetCursors();
   }
 
-  // fires when user is leaving the page
-  @Listen('beforeunload', { target: 'window' })
-  onBeforeUnload() {
-    // leave the 'room' for the doc
-    this.leave(this.docId);
-
-    // disconnect from the server
-    EditorService.disconnect();
-
-    // unsubscribe from all subscriptions to avoid memory leak
-    this.subscription.unsubscribe();
-  }
-
   // listen for `LiturgicalDocumentComponent` to fire `focusObj` and `focusPath` events when it is focused
   @Listen('focusObj')
   onFocusObj(ev : CustomEvent) {
-    console.log('focusObj', ev.detail);
     this.focusObj = ev.detail;
   }
 
-  // Public methods
-  @Method()
-  async leave(docId : string) : Promise<void> {
-    EditorService.leave(docId);
-    this.obj = null;
-  }
-
   // Local Methods
-
   clearCursors() {
     this.cursorPos = {};
   }
@@ -200,22 +155,6 @@ export class EditorComponent {
       // Cursor is nowhere; hide this user's cursor
       cursorPos[user] = undefined;
     }
-  }
-
-  async receivedDocChanged(message : ChangeMessage) {
-    const change = message.change;
-    change.path = undefined; // paths have already been set by server
-    const oldObj = this.obj;
-    this.obj = new LiturgicalDocument(JSON.parse(JSON.stringify(applyChange(this.obj, new Change(change)))));
-    console.log('(rDC)', oldObj, change, this.obj);
-  }
-
-  async joinNewDocument() {
-    if(this.hasJoinedDocument) {
-      EditorService.leave(this.docId);
-      this.hasJoinedDocument = false;
-    }
-    EditorService.join(this.docId, this.userToken);
   }
 
   // Render helpers

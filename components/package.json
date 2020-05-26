@@ -46,8 +46,6 @@
     "json0-ot-diff": "^1.0.5",
     "ot-json0": "^1.1.0",
     "query-selector-shadow-dom": "^0.4.6",
-    "rxjs": "^6.5.5",
-    "socket.io-client": "^2.3.0",
     "textarea-caret": "^3.1.0",
     "values.js": "^1.1.1"
   },

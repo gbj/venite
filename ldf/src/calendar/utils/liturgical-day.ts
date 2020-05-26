@@ -1,11 +1,8 @@
 import { LiturgicalDay } from '../liturgical-day';
 import { LiturgicalWeek } from '../liturgical-week';
-import { LiturgicalColor } from '../liturgical-color';
-import { HolyDay } from '../holy-day';
 
-import { liturgicalWeek } from './liturgical-week';
 import { dailyOfficeYear, rclYear } from './lectionary-year';
-import { PROPERS } from './propers';
+//import { PROPERS } from './propers';
 
 export const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -19,6 +16,8 @@ export function liturgicalDay(
 ) : LiturgicalDay {
   const slug = buildDaySlug(date, week.slug),
         officeYear = dailyOfficeYear(date, week);
+
+  console.log('is vigil', vigil);
 
   return new LiturgicalDay({
     date: `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
