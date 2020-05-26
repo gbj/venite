@@ -9,3 +9,16 @@ ul.feasts {
   li {
   }
 }
+
+#container {
+  display: flex;
+  flex-direction: row;
+
+  .form {
+    width: 70vw;
+  }
+
+  .reports {
+    width: 25vw;
+  }
+}

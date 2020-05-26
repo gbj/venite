@@ -99,5 +99,23 @@
         </ng-container>
       </ion-card-content>
     </ion-card>
+
+    <!-- Reporters -->
+    <ion-card class="reports">
+      <ion-card-content>
+        <ul>
+          <li>prayData: <ng-container *ngIf="prayData | async">yes</ng-container></li>
+          <li>liturgicalDay: <ng-container *ngIf="liturgicalDay | async">yes</ng-container></li>
+          <li>date: <ng-container *ngIf="date | async">yes</ng-container></li>
+          <li>week: <ng-container *ngIf="week | async">yes</ng-container>
+          <li>holydays: <ng-container *ngIf="holydays | async">yes</ng-container></li>
+          <li>liturgy: <ng-container *ngIf="liturgy | async">yes</ng-container></li>
+          <li>kalendar: <ng-container *ngIf="kalendar | async">yes</ng-container></li>
+          <li>sanctoral: <ng-container *ngIf="sanctoral | async">yes</ng-container></li>
+          <li>vigil: <ng-container *ngIf="vigil | async">yes</ng-container></li>
+          <!--<li>clientPreferences: <ng-container *ngIf="clientPreferences | async">yes</ng-container></li>-->
+        </ul>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

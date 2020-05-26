@@ -23,13 +23,13 @@ export class HomePage implements OnInit {
   liturgicalDay : Observable<LiturgicalDay>;
 
   // Arguments into the liturgicalDay call, which we need to combine
-  date : Subject<Date> = new Subject();
+  date : BehaviorSubject<Date> = new BehaviorSubject(new Date());
   week : Observable<LiturgicalWeek[]>;
-  holydays : Subject<HolyDay[]> = new Subject();
+  holydays : BehaviorSubject<HolyDay[]> = new BehaviorSubject([]);
   liturgy : Subject<Liturgy> = new Subject();
   kalendar : BehaviorSubject<string> = new BehaviorSubject('bcp1979');   // Backbone of Kalendar: Seasons, Major Feasts
   sanctoral : BehaviorSubject<string> = new BehaviorSubject('bcp1979');  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
-  vigil : Subject<boolean> = new BehaviorSubject(false);
+  vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
