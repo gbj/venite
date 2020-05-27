@@ -1,5 +1,4 @@
 import { LiturgicalColor } from './liturgical-color';
-import { Proper } from './proper';
 
 export class LiturgicalWeek {
   /**
@@ -45,8 +44,8 @@ export class LiturgicalWeek {
   /** The {@link LiturgicalColor} used for the week */
   color: LiturgicalColor | string;
 
-  /** The {@link Proper} (i.e., for weeks after Pentecost) */
-  proper?: Proper;
+  /** The proper (i.e., for weeks after Pentecost) */
+  proper?: number;
 
   /** Optionally `slug` as an identifier for readings and collects */
   propers?: string;

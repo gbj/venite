@@ -30,6 +30,7 @@ export class LiturgyMenuService {
           slug: 'evening_prayer',
           label: 'Evening Prayer',
           metadata: {
+            evening: true,
             preferences: {
                 "lectionary": {
                   "label": "Lectionary",
@@ -503,6 +504,7 @@ export class LiturgyMenuService {
           slug: 'compline',
           label: 'Compline',
           metadata: {
+            evening: true,
             preferences: {
                 "marian_antiphons": {
                   "label": "Hymns to Mary",

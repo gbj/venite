@@ -31,8 +31,9 @@
           </ng-container>
         </ion-card-title>
         <ion-card-subtitle>
-          <ul class="feasts" *ngIf="day.holy_days?.length > 0">
+          <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
             <li *ngFor="let holy_day of day.holy_days">{{ holy_day.name }}</li>
+            <li *ngIf="day.week?.proper">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
           </ul>
         </ion-card-subtitle>
       </ion-card-header>
@@ -103,13 +104,13 @@
       <ion-card-content>
         <ul>
           <li>prayData: <ng-container *ngIf="prayData | async">yes</ng-container></li>
-          <li>liturgicalDay: <ng-container *ngIf="liturgicalDay | async">yes</ng-container></li>
-          <li>date: <ng-container *ngIf="date | async">yes</ng-container></li>
-          <li>week: <ng-container *ngIf="week | async">yes</ng-container>
-          <li>holydays: <ng-container *ngIf="holydays | async">yes</ng-container></li>
-          <li>liturgy: <ng-container *ngIf="liturgy | async">yes</ng-container></li>
-          <li>kalendar: <ng-container *ngIf="kalendar | async">yes</ng-container></li>
-          <li>sanctoral: <ng-container *ngIf="sanctoral | async">yes</ng-container></li>
+          <li>liturgicalDay: <ng-container *ngIf="liturgicalDay | async as day"><pre>{{ day | json }}</pre></ng-container></li>
+          <li>date: <ng-container *ngIf="date | async as d">{{ d | json }}</ng-container></li>
+          <li>week: <ng-container *ngIf="week | async as w">{{ w | json }}</ng-container>
+          <li>holydays: <ng-container *ngIf="holydays | async as h">{{ h | json }}</ng-container></li>
+          <li>liturgy: <ng-container *ngIf="liturgy | async as l">{{l | json}}</ng-container></li>
+          <li>kalendar: <ng-container *ngIf="kalendar | async as k">{{ k | json }}</ng-container></li>
+          <li>sanctoral: <ng-container *ngIf="sanctoral | async as s">{{ s | json }}</ng-container></li>
           <li>vigil: <ng-container *ngIf="vigil | async as v">{{ v | json}}</ng-container></li>
           <li>clientPreferences: <ng-container *ngIf="clientPreferences | async as prefs">{{ prefs | json}}</ng-container></li>
         </ul>

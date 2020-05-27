@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable, combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, addOneDay, dateFromYMD, dateToYMD } from '@venite/ldf';
 
@@ -30,7 +30,18 @@ export class CalendarService {
       ref.where('kalendar', '==', kalendar)
          .where('cycle', '==', query.cycle)
          .where('week', '==', query.week)
-    ).valueChanges();
+    ).valueChanges()
+    // adjust propers if necessary (season after Pentecost)
+    .pipe(
+      map(weeks => weeks.map(week => query.proper ?
+        new LiturgicalWeek({
+          ... week,
+          proper: query.proper,
+          propers: `proper-${query.proper}`
+        }) :
+        week
+      ))
+    );
   }
 
   /** Find feast days on a given date */

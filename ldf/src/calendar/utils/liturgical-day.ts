@@ -21,7 +21,7 @@ export function liturgicalDay(
     kalendar,
     evening,
     slug,
-    propers: week.proper ? buildDaySlug(date, week.proper.slug) : slug,
+    propers: week.proper ? buildDaySlug(date, `proper-${week.proper}`) : slug,
     week,
     years: {
       "bcp1979_daily_office": officeYear,

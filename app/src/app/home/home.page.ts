@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'firebase/app';
 
 import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
-import { map, switchMap, mergeMap, tap, scan, shareReplay } from 'rxjs/operators';
+import { map, mergeMap, tap, scan, shareReplay } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD } from '@venite/ldf';
 

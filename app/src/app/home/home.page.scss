@@ -14,11 +14,14 @@ ul.feasts {
   display: flex;
   flex-direction: row;
 
-  .form {
-    width: 70vw;
-  }
+  @media(min-width: 768px) {
+    .form {
+      width: 60vw;
+    }
 
-  .reports {
-    width: 25vw;
+    .reports {
+      width: 35vw;
+    }
+
   }
 }

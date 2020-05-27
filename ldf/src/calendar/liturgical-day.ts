@@ -1,4 +1,3 @@
-import { Proper } from './proper';
 import { LiturgicalColor } from './liturgical-color';
 import { LiturgicalWeek } from './liturgical-week';
 import { HolyDay } from './holy-day';
@@ -74,9 +73,6 @@ export class LiturgicalDay {
 
   /** The {@link LiturgicalColor} used for the day */
   color?: string | LiturgicalColor;
-
-  /** The {@link Proper} (i.e., for days after Pentecost) */
-  proper?: Proper;
 
   /** Optionally `slug` as an identifier for readings and collects
    * @example
