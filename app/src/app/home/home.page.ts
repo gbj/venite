@@ -74,12 +74,12 @@ export class HomePage implements OnInit {
   pray(args : [User, Liturgy, LiturgicalDay, ClientPreferences]) {
     const [ user, liturgy, day, prefs ] = args;
     // update preferences
-    this.savePreferences(user?.uid, prefs);
+    this.savePreferences(user?.uid, prefs, liturgy);
   }
 
-  savePreferences(uid : string, prefs : ClientPreferences) {
+  savePreferences(uid : string, prefs : ClientPreferences, liturgy : Liturgy) {
     console.log(prefs)
     Object.entries(prefs)
-      .forEach(([key, value]) => this.preferencesService.set(key, value, uid));
+      .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
   }
 }

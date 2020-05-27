@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
-import { Observable, from } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap, map, tap } from 'rxjs/operators';
 
 import { AuthService } from '../auth/auth.service';
 import { LocalStorageService } from './localstorage.service';
 import { StoredPreference } from './stored-preference';
+
+import { Liturgy } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -22,24 +24,25 @@ export class PreferencesService {
   get(key : string) : Observable<StoredPreference[]> {
     return this.auth.user
       .pipe(
-        tap(user => console.log('user is', user.uid)),
         map(user => [user?.uid, key]),
-        tap(([uid, key]) => console.log('uid is', uid, 'key is ', key)),
         switchMap(([uid, key]) => this.afs.collection<StoredPreference>('Preference', ref =>
           ref.where('uid', '==', uid)
              .where('key', '==', key)
-        ).valueChanges()),
-        tap(pref => console.log('pref is', pref))
+        ).valueChanges())
       );
   }
 
-  set(key : string, value : string, uid: string = undefined, language : string = undefined, version : string = undefined, liturgy : string = undefined) {
+  set(key : string, value : string, uid: string = undefined, liturgy : Liturgy = undefined) {
     if(uid) {
-      const doc = this.afs.doc<StoredPreference>(`Preference/${uid}-${key}`);
+      const ref = liturgy ? `${liturgy.slug}-${liturgy.language}-${liturgy.version}-${key}-${uid}` : `${key}-${uid}`;
+      const doc = this.afs.doc<StoredPreference>(`Preference/${ref}`);
       doc.set({
         uid,
         key,
-        value
+        value,
+        liturgy: liturgy?.slug,
+        language: liturgy?.language,
+        version: liturgy?.version
       });
     } else {
       this.storage.set(key, value);
@@ -48,5 +51,25 @@ export class PreferencesService {
 
   private localStorageKey(key : string) : string {
     return `preference-${key}`;
+  }
+
+  /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version
+    * This allows for smart matching—if I don't have a default Bible translation set for English Rite II Evening Prayer,
+    * see if I have one for English Rite II Morning Prayer  */
+  getPreferencesForLiturgy(liturgy : Liturgy) {
+    if(!liturgy) {
+      console.warn('(getPreferencesForLiturgy) liturgy is', liturgy);
+      return of([]);
+    } else {
+      return this.auth.user
+        .pipe(
+          map(user => [user?.uid, liturgy]),
+          switchMap(([uid, liturgy]) => this.afs.collection<StoredPreference>('Preference', ref =>
+            ref.where('uid', '==', uid)
+               .where('language', '==', (liturgy as Liturgy).language || 'en')
+               .where('version', '==', (liturgy as Liturgy).version || 'Rite-II')
+          ).valueChanges())
+        )
+    }
   }
 }

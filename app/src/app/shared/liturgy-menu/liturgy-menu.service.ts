@@ -25,12 +25,15 @@ export class LiturgyMenuService {
       new Array(
         new Liturgy({
           type: 'liturgy',
+          language: 'en',
+          version: 'Rite-II',
           slug: 'evening_prayer',
           label: 'Evening Prayer',
           metadata: {
             preferences: {
                 "lectionary": {
                   "label": "Lectionary",
+                  "category": "Cycles and Tables",
                   "options": [
                     {
                       "value": "bcp1979_daily_office",
@@ -46,6 +49,7 @@ export class LiturgyMenuService {
                 },
                 "psalter": {
                   "label": "Psalm Cycle",
+                  "category": "Cycles and Tables",
                   "options": [
                     {
                       "value": "bcp1979_daily_psalms",
@@ -66,6 +70,7 @@ export class LiturgyMenuService {
                 },
                 "psalterVersion": {
                   "label": "Psalter Version",
+                  "category": "Translations",
                   "options": [
                     {
                       "value": "bcp1979",
@@ -83,6 +88,7 @@ export class LiturgyMenuService {
                 },
                 "readingA": {
                   "label": "First Reading",
+                  "category": "Readings",
                   "options": [
                     {
                       "value": "first_reading",
@@ -106,6 +112,7 @@ export class LiturgyMenuService {
                 },
                 "readingB": {
                   "label": "Second Reading",
+                  "category": "Readings",
                   "options": [
                     {
                       "value": "none",
@@ -124,6 +131,7 @@ export class LiturgyMenuService {
                 },
                 "readingC": {
                   "label": "Third Reading",
+                  "category": "Readings",
                   "options": [
                     {
                       "value": "none",
@@ -143,6 +151,7 @@ export class LiturgyMenuService {
                 },
                 "bibleVersion": {
                   "label": "Bible Translation",
+                  "category": "Translations",
                   "options": [
                     {
                       "value": "NRSV",
@@ -168,6 +177,7 @@ export class LiturgyMenuService {
                 },
                 "canticleTable": {
                   "label": "Canticle Table",
+                  "category": "Cycles and Tables",
                   "options": [
                     {
                       "value": "Mag+Nunc",
@@ -189,6 +199,7 @@ export class LiturgyMenuService {
                 },
                 "original": {
                   "label": "Include Greek/Hebrew Texts",
+                  "category": "Translations",
                   "options": [
                     {
                       "value": "none",
@@ -256,6 +267,8 @@ export class LiturgyMenuService {
         }),
         new Liturgy({
           type: 'liturgy',
+          language: 'en',
+          version: 'Rite-II',
           slug: 'morning_prayer',
           label: 'Morning Prayer',
           metadata: {

@@ -91,12 +91,10 @@
         </ng-template>
 
         <!-- Preferences -->
-        <ng-container *ngIf="liturgy | async as l">
-          <venite-liturgy-preference-menu
-            [preferences]="l.metadata?.preferences"
-            (clientPreferencesChange)="clientPreferences.next($event)"
-          ></venite-liturgy-preference-menu>
-        </ng-container>
+        <venite-liturgy-preference-menu
+          [liturgy]="liturgy | async"
+          (clientPreferencesChange)="clientPreferences.next($event)"
+        ></venite-liturgy-preference-menu>
       </ion-card-content>
     </ion-card>
 
@@ -113,7 +111,7 @@
           <li>kalendar: <ng-container *ngIf="kalendar | async">yes</ng-container></li>
           <li>sanctoral: <ng-container *ngIf="sanctoral | async">yes</ng-container></li>
           <li>vigil: <ng-container *ngIf="vigil | async">yes</ng-container></li>
-          <!--<li>clientPreferences: <ng-container *ngIf="clientPreferences | async">yes</ng-container></li>-->
+          <li>clientPreferences: <ng-container *ngIf="clientPreferences | async as prefs">{{ prefs | json}}</ng-container></li>
         </ul>
       </ion-card-content>
     </ion-card>
