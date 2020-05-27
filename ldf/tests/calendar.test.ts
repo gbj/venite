@@ -1,3 +1,4 @@
+import { addOneDay } from '../src/calendar/utils/add-one-day';
 import { easterInYear } from '../src/calendar/utils/easter-in-year';
 import { sundayBefore } from '../src/calendar/utils/sunday-before';
 import { dateFromYMD } from '../src/calendar/utils/date-from-ymd';
@@ -102,14 +103,47 @@ describe('liturgicalWeek', () => {
   });
 });
 
+expect('addOneDay', () => {
+  it('should add a day to the date within a month', () => {
+    const date = new Date(Date.parse('2020-02-03 11:00pm EST')),
+          newDate = addOneDay(date);
+    expect(newDate.getFullYear()).toEqual(2020);
+    expect(newDate.getMonth()).toEqual(1);
+    expect(newDate.getDate()).toEqual(4);
+  });
+
+  it('should add a day to the date across months', () => {
+    const date = new Date(Date.parse('2020-03-31 7:00am EST')),
+          newDate = addOneDay(date);
+    expect(newDate.getFullYear()).toEqual(2020);
+    expect(newDate.getMonth()).toEqual(3);
+    expect(newDate.getDate()).toEqual(1);
+  });
+
+  it('should add a day to the date across years', () => {
+    const date = new Date(Date.parse('2020-12-31 9:00pm EST')),
+          newDate = addOneDay(date);
+    expect(newDate.getFullYear()).toEqual(2021);
+    expect(newDate.getMonth()).toEqual(0);
+    expect(newDate.getDate()).toEqual(1);
+  });
+})
+
 describe('liturgicalDay', () => {
+  // Thursday May 21 2020
   const DATE = new Date();
   DATE.setFullYear(2020);
   DATE.setMonth(4);
   DATE.setDate(21);
 
+  // Saturday May 30 2020 -- Eve of Pentecost
+  const DATE2 = new Date();
+  DATE2.setFullYear(2020);
+  DATE2.setMonth(4);
+  DATE2.setDate(30);
+
   it('should build `LiturgicalDay` object, given all the data', () => {
-    expect(liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK)).toEqual({
+    expect(liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK)).toEqual({
       date: '2020-5-21',
       slug: 'thursday-6th-easter',
       kalendar: 'bcp1979',
@@ -127,27 +161,8 @@ describe('liturgicalDay', () => {
     });
   });
 
-/*  it('should handle vigils', () => {
-    expect(liturgicalDay(DATE, 'bcp1979', true, true, TEST_WEEK)).toEqual({
-      date: '2020-5-21',
-      slug: 'friday-6th-easter',
-      kalendar: 'bcp1979',
-      evening: true,
-      week: TEST_WEEK,
-      years: {
-        "bcp1979_daily_office": 2,
-        "bcp1979_daily_psalms": 2,
-        "rclsunday": 'A'
-      },
-      season: 'Easter',
-      holy_days: [],
-      color: 'Gold',
-      propers: 'friday-6th-easter'
-    });
-  });*/
-
   it('should be overridden by a feast day', () => {
-    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+    const day = liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK),
           dayWithHolyDay = day.addHolyDays([ST_BILBO]);
     expect(dayWithHolyDay).toEqual({
       date: '2020-5-21',
@@ -174,7 +189,7 @@ describe('liturgicalDay', () => {
     sundayDate.setMonth(4);
     sundayDate.setDate(24);
 
-    const day = liturgicalDay(sundayDate, 'bcp1979', false, false, TEST_WEEK)
+    const day = liturgicalDay(sundayDate, 'bcp1979', false, TEST_WEEK)
 
     expect(day.addHolyDays([ST_BILBO])).toEqual({
       date: '2020-5-24',
@@ -196,7 +211,7 @@ describe('liturgicalDay', () => {
   });
 
   it('should not be overridden by a day that doesn’t have its own slug (like a black-letter day)', () => {
-    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+    const day = liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK),
           dayWithHolyDay = day.addHolyDays([ST_MERRY]);
     expect(dayWithHolyDay).toEqual({
       date: '2020-5-21',
@@ -217,7 +232,7 @@ describe('liturgicalDay', () => {
   });
 
   it('should choose a higher feast over a lower feast, regardless of order they’re called', () => {
-    const day = liturgicalDay(DATE, 'bcp1979', false, false, TEST_WEEK),
+    const day = liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK),
           dayWithHolyDay = day.addHolyDays([ST_MERRY]).addHolyDays([ST_BILBO]);
     expect(dayWithHolyDay).toEqual({
       date: '2020-5-21',
@@ -305,6 +320,16 @@ const TEST_WEEK = {
   season: 'Easter' as "Easter" | "Advent" | "Christmas" | "Epiphany" | "Lent" | "HolyWeek" | "Pentecost" | "Saints" | "OrdinaryTime",
   name: 'Sixth Sunday of Easter',
   color: 'Gold'
+}
+const TEST_PENTECOST_WEEK = {
+  kalendar: 'bcp1979',
+  slug: 'pentecost',
+  cycle: 'Easter' as 'Easter',
+  omit_the: true,
+  week: 14,
+  season: 'OrdinaryTime' as "Easter" | "Advent" | "Christmas" | "Epiphany" | "Lent" | "HolyWeek" | "Pentecost" | "Saints" | "OrdinaryTime",
+  name: 'Pentecost',
+  color: 'Green'
 }
 const ST_BILBO : HolyDay = {
   kalendar: 'bcp1979',

@@ -4,7 +4,7 @@ import { User } from 'firebase/app';
 import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
 import { map, switchMap, mergeMap, tap, scan, shareReplay } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ClientPreferences, liturgicalWeek, liturgicalDay } from '@venite/ldf';
+import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD } from '@venite/ldf';
 
 import { AuthService } from '../auth/auth.service';
 import { CalendarService } from '../services/calendar.service';
@@ -51,20 +51,28 @@ export class HomePage implements OnInit {
 
     // DB queries that depend on date change
     // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
-    this.week = combineLatest(this.date, this.kalendar)
+    this.week = combineLatest(this.date, this.kalendar, this.vigil)
       .pipe(
-        mergeMap(([date, kalendar]) => this.calendarService.findWeek(kalendar, liturgicalWeek(date)))
+        mergeMap(([date, kalendar, vigil]) => this.calendarService.findWeek(kalendar, liturgicalWeek(vigil ? addOneDay(date) : date)))
       )
 
     // main liturgical day observable
-    this.liturgicalDay = combineLatest(this.date, this.kalendar, this.liturgy, this.vigil, this.week)
+    this.liturgicalDay = combineLatest(this.date, this.kalendar, this.liturgy, this.week, this.vigil)
       .pipe(
         // build the liturgical day from the data given
-        map(([date, kalendar, liturgy, vigil, week]) =>
-          liturgicalDay(date, kalendar, liturgy?.metadata?.evening, vigil, week[0])
-        ),
+        map(([date, kalendar, liturgy, week, vigil]) => ({
+          day: liturgicalDay(vigil ? addOneDay(date) : date, kalendar, liturgy?.metadata?.evening, week[0]),
+          date,
+          vigil
+        })),
+        // if vigil, add the unmodified date back in
+        map(({day, date, vigil}) => ({
+          day: vigil ? new LiturgicalDay({ ... day, date: dateToYMD(date) }) : day,
+          vigil
+        })),
         // add holy days to that liturgical day
-        mergeMap(day => this.calendarService.addHolyDays(day))
+        tap(({ day, vigil }) => console.log('vigil = ', vigil)),
+        mergeMap(({day, vigil}) => this.calendarService.addHolyDays(day, vigil)),
       );
 
     // Pray button data

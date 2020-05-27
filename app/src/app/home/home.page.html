@@ -75,7 +75,7 @@
         <!-- Choose vigil -->
         <ion-item>
           <ion-label>{{ 'vigil' | translate }}</ion-label>
-          <ion-checkbox name="isVigil" [value]="vigil | async" (ionChange)="vigil.next($event.detail.value)"></ion-checkbox>
+          <ion-checkbox name="isVigil" [value]="vigil | async" (ionChange)="vigil.next($event.detail.checked)"></ion-checkbox>
         </ion-item>
 
         <!-- Pray Button -->
@@ -110,7 +110,7 @@
           <li>liturgy: <ng-container *ngIf="liturgy | async">yes</ng-container></li>
           <li>kalendar: <ng-container *ngIf="kalendar | async">yes</ng-container></li>
           <li>sanctoral: <ng-container *ngIf="sanctoral | async">yes</ng-container></li>
-          <li>vigil: <ng-container *ngIf="vigil | async">yes</ng-container></li>
+          <li>vigil: <ng-container *ngIf="vigil | async as v">{{ v | json}}</ng-container></li>
           <li>clientPreferences: <ng-container *ngIf="clientPreferences | async as prefs">{{ prefs | json}}</ng-container></li>
         </ul>
       </ion-card-content>

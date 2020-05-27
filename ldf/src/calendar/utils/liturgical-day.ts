@@ -11,13 +11,10 @@ export function liturgicalDay(
   date : Date,
   kalendar : string,
   evening : boolean = false,
-  vigil : boolean = false,
   week : LiturgicalWeek
 ) : LiturgicalDay {
   const slug = buildDaySlug(date, week.slug),
         officeYear = dailyOfficeYear(date, week);
-
-  console.log('is vigil', vigil);
 
   return new LiturgicalDay({
     date: `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
@@ -36,18 +33,6 @@ export function liturgicalDay(
     color: week.color
   });
 }
-
-/*export function addVigil(day : LiturgicalDay, tomorrowDate : Date, tomorrowWeek : LiturgicalWeek, tomorrowHolyDays : HolyDay[]) : LiturgicalDay {
-  // If observing the vigil of e.g., a Sunday or feast day, move the clock forward by a day
-  const tomorrowSlug : string = buildDaySlug(tomorrowDate, tomorrowWeek.slug),
-
-  observed = observedDay(tomorrowDate, tomorrowWeek, tomorrowHolyDays);
-  // if observed is the same week, i.e., the next weekday in the same week
-  if(observed.slug == day.slug) {
-    observed.slug = tomorrowSlug;
-  }
-  week.propers = tomorrowWeek.propers;
-}*/
 
 function buildDaySlug(date : Date, slug : string) : string {
   return `${WEEKDAYS[date.getDay()].toLowerCase()}-${slug}`;

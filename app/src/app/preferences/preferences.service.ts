@@ -91,14 +91,14 @@ export class PreferencesService {
             else {
               // don't have the ability for a query as with Firestore
               // instead, return all keys that match the local storage key pattern
-              const exampleKey = this.localStorageKey('%%%', liturgy),
+              const exampleKey = this.localStorageKey('%%%', liturgy as Liturgy),
                     baseKey = exampleKey.replace('%%%', ''),
                     // storage returns a Promise, but we're not in an async function
                     // because we need to return an observable; so transform it into an observable
                     allKeys = from(this.storage.keys());
               return allKeys.pipe(
                 // select only keys for this liturgy
-                map(obj => obj.keys.filter(key => key.includes(baseKey))),
+                map(keys => keys.filter(key => key.includes(baseKey))),
                 // map in the value for each key
                 switchMap(keys => from(Promise.all(keys.map(key => this.storage.get(key))))),
               );

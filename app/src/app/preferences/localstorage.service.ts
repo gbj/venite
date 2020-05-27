@@ -36,7 +36,8 @@ export class LocalStorageService {
 
   async keys() : Promise<string[]> {
     if(!this.platform.is('server')) {
-      return Storage.keys();
+      const { keys } = await Storage.keys();
+      return keys;
     }
   }
 }

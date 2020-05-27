@@ -3,7 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex } from '@venite/ldf';
+import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, addOneDay, dateFromYMD, dateToYMD } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -53,10 +53,14 @@ export class CalendarService {
   }
 
   /** Find `HolyDay`s connected to either a date or a slug */
-  addHolyDays(day : LiturgicalDay) : Observable<LiturgicalDay> {
+  addHolyDays(day : LiturgicalDay, vigil : boolean) : Observable<LiturgicalDay> {
     // generate query from the `LiturgicalDay`
     const [y, m, d] = day.date.split('-'),
-          feasts = this.findFeastDays(day.kalendar, `${m}/${d}`),
+          date = dateFromYMD(y, m, d),
+          observedDate = vigil ? addOneDay(date) : date,
+          observedM = observedDate.getMonth()+1,
+          observedD = observedDate.getDate(),
+          feasts = this.findFeastDays(day.kalendar, `${observedM}/${observedD}`),
           specials = this.findSpecialDays(day.kalendar, day.slug);
     return combineLatest(feasts, specials)
       .pipe(

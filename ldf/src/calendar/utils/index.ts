@@ -1,3 +1,4 @@
+export * from './add-one-day';
 export * from './date-from-ymd';
 export * from './date-only';
 export * from './easter-in-year';
