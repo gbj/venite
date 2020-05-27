@@ -33,4 +33,10 @@ export class LocalStorageService {
       return Storage.clear();
     }
   }
+
+  async keys() : Promise<string[]> {
+    if(!this.platform.is('server')) {
+      return Storage.keys();
+    }
+  }
 }
