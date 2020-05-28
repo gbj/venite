@@ -26,7 +26,7 @@
 
 • **ld**? : *any*
 
-*Defined in [editing/change.ts:5](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L5)*
+*Defined in [editing/change.ts:5](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L5)*
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **li**? : *any*
 
-*Defined in [editing/change.ts:3](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L3)*
+*Defined in [editing/change.ts:3](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L3)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **lm**? : *any*
 
-*Defined in [editing/change.ts:4](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L4)*
+*Defined in [editing/change.ts:4](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L4)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **od**? : *any*
 
-*Defined in [editing/change.ts:7](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L7)*
+*Defined in [editing/change.ts:7](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L7)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **oi**? : *any*
 
-*Defined in [editing/change.ts:6](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L6)*
+*Defined in [editing/change.ts:6](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L6)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **om**? : *any*
 
-*Defined in [editing/change.ts:8](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L8)*
+*Defined in [editing/change.ts:8](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L8)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **p**: *undefined | string | number[]*
 
-*Defined in [editing/change.ts:2](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L2)*
+*Defined in [editing/change.ts:2](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L2)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **sd**? : *any*
 
-*Defined in [editing/change.ts:10](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L10)*
+*Defined in [editing/change.ts:10](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L10)*
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 • **si**? : *any*
 
-*Defined in [editing/change.ts:9](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L9)*
+*Defined in [editing/change.ts:9](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L9)*

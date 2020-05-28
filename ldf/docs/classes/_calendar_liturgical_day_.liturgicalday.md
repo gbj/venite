@@ -20,8 +20,9 @@ like "Monday in Holy Week" or "The Eve of the Epiphany."
 * [color](_calendar_liturgical_day_.liturgicalday.md#optional-color)
 * [date](_calendar_liturgical_day_.liturgicalday.md#date)
 * [evening](_calendar_liturgical_day_.liturgicalday.md#evening)
+* [holy_day_observed](_calendar_liturgical_day_.liturgicalday.md#optional-holy_day_observed)
 * [holy_days](_calendar_liturgical_day_.liturgicalday.md#optional-holy_days)
-* [proper](_calendar_liturgical_day_.liturgicalday.md#optional-proper)
+* [kalendar](_calendar_liturgical_day_.liturgicalday.md#kalendar)
 * [propers](_calendar_liturgical_day_.liturgicalday.md#optional-propers)
 * [season](_calendar_liturgical_day_.liturgicalday.md#season)
 * [slug](_calendar_liturgical_day_.liturgicalday.md#slug)
@@ -30,7 +31,9 @@ like "Monday in Holy Week" or "The Eve of the Epiphany."
 
 ### Methods
 
+* [addHolyDays](_calendar_liturgical_day_.liturgicalday.md#addholydays)
 * [getDate](_calendar_liturgical_day_.liturgicalday.md#getdate)
+* [observedDay](_calendar_liturgical_day_.liturgicalday.md#observedday)
 
 ## Constructors
 
@@ -38,7 +41,7 @@ like "Monday in Holy Week" or "The Eve of the Epiphany."
 
 \+ **new LiturgicalDay**(`data`: Partial‹[LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)›): *[LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)*
 
-*Defined in [calendar/liturgical-day.ts:90](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L90)*
+*Defined in [calendar/liturgical-day.ts:187](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L187)*
 
 **Parameters:**
 
@@ -52,9 +55,9 @@ Name | Type | Default |
 
 ### `Optional` color
 
-• **color**? : *[LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md)*
+• **color**? : *string | [LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md)*
 
-*Defined in [calendar/liturgical-day.ts:62](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L62)*
+*Defined in [calendar/liturgical-day.ts:75](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L75)*
 
 The [LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md) used for the day
 
@@ -64,7 +67,7 @@ ___
 
 • **date**: *string*
 
-*Defined in [calendar/liturgical-day.ts:19](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L19)*
+*Defined in [calendar/liturgical-day.ts:28](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L28)*
 
 Dates are always stored as YYYY-MM-DD. No time or timezone information is helpful.
  Date math can be done using a library like js-joda.
@@ -81,9 +84,19 @@ ___
 
 • **evening**: *boolean* = false
 
-*Defined in [calendar/liturgical-day.ts:30](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L30)*
+*Defined in [calendar/liturgical-day.ts:42](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L42)*
 
 True if this moment is the evening. Used to indicate the eve of feasts.
+
+___
+
+### `Optional` holy_day_observed
+
+• **holy_day_observed**? : *[HolyDay](_calendar_holy_day_.holyday.md)*
+
+*Defined in [calendar/liturgical-day.ts:72](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L72)*
+
+exists if one the listed `HolyDay`s is being observed
 
 ___
 
@@ -91,20 +104,20 @@ ___
 
 • **holy_days**? : *[HolyDay](_calendar_holy_day_.holyday.md)[]*
 
-*Defined in [calendar/liturgical-day.ts:59](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L59)*
+*Defined in [calendar/liturgical-day.ts:69](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L69)*
 
 An array of possible [HolyDay](_calendar_holy_day_.holyday.md)s that fall at this moment. It’s up to the consumer
 to determine precedence.
 
 ___
 
-### `Optional` proper
+###  kalendar
 
-• **proper**? : *[Proper](_calendar_proper_.proper.md)*
+• **kalendar**: *string*
 
-*Defined in [calendar/liturgical-day.ts:65](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L65)*
+*Defined in [calendar/liturgical-day.ts:31](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L31)*
 
-The [Proper](_calendar_proper_.proper.md) (i.e., for days after Pentecost)
+Overarching calendar this is a part of
 
 ___
 
@@ -112,7 +125,7 @@ ___
 
 • **propers**? : *undefined | string*
 
-*Defined in [calendar/liturgical-day.ts:76](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L76)*
+*Defined in [calendar/liturgical-day.ts:86](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L86)*
 
 Optionally `slug` as an identifier for readings and collects
 
@@ -130,7 +143,7 @@ ___
 
 • **season**: *"Advent" | "Christmas" | "Epiphany" | "Lent" | "HolyWeek" | "Easter" | "Pentecost" | "Saints" | "OrdinaryTime"*
 
-*Defined in [calendar/liturgical-day.ts:44](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L44)*
+*Defined in [calendar/liturgical-day.ts:56](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L56)*
 
 A machine-readable identifier for the liturgical season
 
@@ -140,7 +153,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [calendar/liturgical-day.ts:27](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L27)*
+*Defined in [calendar/liturgical-day.ts:39](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L39)*
 
 An identifying slug that distinguishes this day from all others
 
@@ -154,7 +167,7 @@ ___
 
 • **week**: *[LiturgicalWeek](_calendar_liturgical_week_.liturgicalweek.md)*
 
-*Defined in [calendar/liturgical-day.ts:33](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L33)*
+*Defined in [calendar/liturgical-day.ts:45](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L45)*
 
 The [LiturgicalWeek](_calendar_liturgical_week_.liturgicalweek.md) during which this moment takes place.
 
@@ -164,7 +177,7 @@ ___
 
 • **years**: *object*
 
-*Defined in [calendar/liturgical-day.ts:41](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L41)*
+*Defined in [calendar/liturgical-day.ts:53](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L53)*
 
 Stores information about where a date falls in various lectionary cycles
 
@@ -178,12 +191,49 @@ Stores information about where a date falls in various lectionary cycles
 
 ## Methods
 
+###  addHolyDays
+
+▸ **addHolyDays**(`holydays`: [HolyDay](_calendar_holy_day_.holyday.md)[]): *[LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)*
+
+*Defined in [calendar/liturgical-day.ts:103](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L103)*
+
+Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`holydays` | [HolyDay](_calendar_holy_day_.holyday.md)[] |
+
+**Returns:** *[LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)*
+
+___
+
 ###  getDate
 
 ▸ **getDate**(): *Date*
 
-*Defined in [calendar/liturgical-day.ts:79](https://github.com/gbj/venite/blob/3d88b83/ldf/src/calendar/liturgical-day.ts#L79)*
+*Defined in [calendar/liturgical-day.ts:89](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L89)*
 
 Returns a native Date from the day's date string
 
 **Returns:** *Date*
+
+___
+
+###  observedDay
+
+▸ **observedDay**(`day`: [ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md), `holydays`: [ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md)[]): *[ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md)*
+
+*Defined in [calendar/liturgical-day.ts:154](https://github.com/gbj/venite/blob/42830fa/ldf/src/calendar/liturgical-day.ts#L154)*
+
+Given a `LiturgicalDay` and a set of `HolyDay`s, it returns whichever option takes precedence
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`day` | [ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md) |
+`holydays` | [ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md)[] |
+
+**Returns:** *[ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md)*

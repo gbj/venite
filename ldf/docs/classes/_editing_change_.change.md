@@ -28,7 +28,7 @@
 
 \+ **new Change**(`data`: Partial‹[Change](_editing_change_.change.md)›): *[Change](_editing_change_.change.md)*
 
-*Defined in [editing/change.ts:28](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L28)*
+*Defined in [editing/change.ts:28](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L28)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type | Default |
 
 • **op**: *[Json0Operation](_editing_change_.json0operation.md)[]*
 
-*Defined in [editing/change.ts:16](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L16)*
+*Defined in [editing/change.ts:16](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L16)*
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [editing/change.ts:15](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L15)*
+*Defined in [editing/change.ts:15](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L15)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **user**? : *undefined | string*
 
-*Defined in [editing/change.ts:14](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L14)*
+*Defined in [editing/change.ts:14](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L14)*
 
 ## Methods
 
@@ -68,6 +68,6 @@ ___
 
 ▸ **fullyPathedOp**(): *object[]*
 
-*Defined in [editing/change.ts:18](https://github.com/gbj/venite/blob/3d88b83/ldf/src/editing/change.ts#L18)*
+*Defined in [editing/change.ts:18](https://github.com/gbj/venite/blob/42830fa/ldf/src/editing/change.ts#L18)*
 
 **Returns:** *object[]*

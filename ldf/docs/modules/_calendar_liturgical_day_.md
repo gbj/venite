@@ -7,3 +7,7 @@
 ### Classes
 
 * [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)
+
+### Interfaces
+
+* [ObservedInterface](../interfaces/_calendar_liturgical_day_.observedinterface.md)

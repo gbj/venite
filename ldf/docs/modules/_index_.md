@@ -8,7 +8,6 @@
 
 * [BibleReading](_index_.md#biblereading)
 * [BibleReadingVerse](_index_.md#biblereadingverse)
-* [Category](_index_.md#category)
 * [Change](_index_.md#change)
 * [ChangeMessage](_index_.md#changemessage)
 * [Citation](_index_.md#citation)
@@ -18,16 +17,19 @@
 * [CursorMessage](_index_.md#cursormessage)
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
+* [Kalendar](_index_.md#kalendar)
 * [LiturgicalColor](_index_.md#liturgicalcolor)
 * [LiturgicalDay](_index_.md#liturgicalday)
 * [LiturgicalDocument](_index_.md#liturgicaldocument)
 * [LiturgicalWeek](_index_.md#liturgicalweek)
+* [LiturgicalWeekIndex](_index_.md#liturgicalweekindex)
 * [Liturgy](_index_.md#liturgy)
 * [Meditation](_index_.md#meditation)
 * [Option](_index_.md#option)
+* [PROPERS](_index_.md#propers)
 * [Preference](_index_.md#preference)
 * [PreferenceOption](_index_.md#preferenceoption)
-* [Proper](_index_.md#proper)
+* [ProperLiturgy](_index_.md#properliturgy)
 * [Psalm](_index_.md#psalm)
 * [PsalmVerse](_index_.md#psalmverse)
 * [Refrain](_index_.md#refrain)
@@ -39,7 +41,18 @@
 * [Source](_index_.md#source)
 * [Text](_index_.md#text)
 * [User](_index_.md#user)
+* [WEEKDAYS](_index_.md#weekdays)
+* [addOneDay](_index_.md#addoneday)
+* [dailyOfficeYear](_index_.md#dailyofficeyear)
+* [dateFromYMD](_index_.md#datefromymd)
+* [dateOnly](_index_.md#dateonly)
+* [dateToYMD](_index_.md#datetoymd)
+* [easterInYear](_index_.md#easterinyear)
+* [liturgicalDay](_index_.md#liturgicalday)
+* [liturgicalWeek](_index_.md#liturgicalweek)
+* [rclYear](_index_.md#rclyear)
 * [specificClass](_index_.md#specificclass)
+* [sundayBefore](_index_.md#sundaybefore)
 
 ## References
 
@@ -52,12 +65,6 @@ ___
 ###  BibleReadingVerse
 
 • **BibleReadingVerse**:
-
-___
-
-###  Category
-
-• **Category**:
 
 ___
 
@@ -115,6 +122,12 @@ ___
 
 ___
 
+###  Kalendar
+
+• **Kalendar**:
+
+___
+
 ###  LiturgicalColor
 
 • **LiturgicalColor**:
@@ -139,6 +152,12 @@ ___
 
 ___
 
+###  LiturgicalWeekIndex
+
+• **LiturgicalWeekIndex**:
+
+___
+
 ###  Liturgy
 
 • **Liturgy**:
@@ -157,6 +176,12 @@ ___
 
 ___
 
+###  PROPERS
+
+• **PROPERS**:
+
+___
+
 ###  Preference
 
 • **Preference**:
@@ -169,9 +194,9 @@ ___
 
 ___
 
-###  Proper
+###  ProperLiturgy
 
-• **Proper**:
+• **ProperLiturgy**:
 
 ___
 
@@ -241,6 +266,72 @@ ___
 
 ___
 
+###  WEEKDAYS
+
+• **WEEKDAYS**:
+
+___
+
+###  addOneDay
+
+• **addOneDay**:
+
+___
+
+###  dailyOfficeYear
+
+• **dailyOfficeYear**:
+
+___
+
+###  dateFromYMD
+
+• **dateFromYMD**:
+
+___
+
+###  dateOnly
+
+• **dateOnly**:
+
+___
+
+###  dateToYMD
+
+• **dateToYMD**:
+
+___
+
+###  easterInYear
+
+• **easterInYear**:
+
+___
+
+###  liturgicalDay
+
+• **liturgicalDay**:
+
+___
+
+###  liturgicalWeek
+
+• **liturgicalWeek**:
+
+___
+
+###  rclYear
+
+• **rclYear**:
+
+___
+
 ###  specificClass
 
 • **specificClass**:
+
+___
+
+###  sundayBefore
+
+• **sundayBefore**:
