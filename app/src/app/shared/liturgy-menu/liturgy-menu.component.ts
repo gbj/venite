@@ -82,19 +82,6 @@ export class LiturgyMenuComponent implements OnInit, OnDestroy {
         // emit a starting value
         tap(({ value, options }) => this.liturgyChange.emit(options.find(opt => opt.slug == value)))
       );
-
-    // This seems insane.
-    // Emit the starting liturgy
-    /*this.start$ = combineLatest(
-      of(this.liturgy || this.liturgyOfTheHour(new Date())),  // Input as default, or based on time
-      this.liturgyOptions, // search through the observable menu from database query
-      interval(1) // HACKY—delay by 1ms to come in after Angular change detection...
-    )
-      .pipe(
-        take(1),
-        tap(val => console.log('initials', val))
-      )
-      .subscribe(([slug, options]) => this.update(slug, options));*/
   }
 
   ngOnChanges(changes : SimpleChanges) {
