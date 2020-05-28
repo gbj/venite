@@ -520,7 +520,7 @@ export class DocumentService {
     ])
   }
 
-  findDocumentBySlug(slug : string) : Observable<LiturgicalDocument[]> {
+  findDocumentsBySlug(slug : string) : Observable<LiturgicalDocument[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('slug', '==', slug)
     ).valueChanges();

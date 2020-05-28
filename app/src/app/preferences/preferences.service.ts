@@ -8,7 +8,7 @@ import { AuthService } from '../auth/auth.service';
 import { LocalStorageService } from './localstorage.service';
 import { StoredPreference } from './stored-preference';
 
-import { Liturgy } from '@venite/ldf';
+import { LiturgicalDocument } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +22,12 @@ export class PreferencesService {
   ) { }
 
   // Generates a key to be used in local storage
-  private localStorageKey(key : string, liturgy : Liturgy = undefined) : string {
+  private localStorageKey(key : string, liturgy : LiturgicalDocument = undefined) : string {
     return liturgy ? `preference-${liturgy.slug}-${liturgy.language}-${liturgy.version}-${key}` : `preference-${key}`;
   }
 
   // Sets a single preference
-  set(key : string, value : string, uid: string = undefined, liturgy : Liturgy = undefined) {
+  set(key : string, value : string, uid: string = undefined, liturgy : LiturgicalDocument = undefined) {
     const prefDoc : StoredPreference = { key, value }
     if(liturgy) {
       prefDoc.liturgy = liturgy.slug;
@@ -70,7 +70,7 @@ export class PreferencesService {
   /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version
     * This allows for smart matching—if I don't have a default Bible translation set for English Rite II Evening Prayer,
     * see if I have one for English Rite II Morning Prayer  */
-  getPreferencesForLiturgy(liturgy : Liturgy) : Observable<any[]> {
+  getPreferencesForLiturgy(liturgy : LiturgicalDocument) : Observable<any[]> {
     if(!liturgy) {
       console.warn('(getPreferencesForLiturgy) liturgy is', liturgy);
       return of([]);
@@ -83,15 +83,15 @@ export class PreferencesService {
             if(uid) {
               return this.afs.collection<StoredPreference>('Preference', ref =>
                 ref.where('uid', '==', uid)
-                   .where('language', '==', (liturgy as Liturgy).language || 'en')
-                   .where('version', '==', (liturgy as Liturgy).version || 'Rite-II')
+                   .where('language', '==', (liturgy as LiturgicalDocument).language || 'en')
+                   .where('version', '==', (liturgy as LiturgicalDocument).version || 'Rite-II')
               ).valueChanges()
             }
             // if not, use local storage
             else {
               // don't have the ability for a query as with Firestore
               // instead, return all keys that match the local storage key pattern
-              const exampleKey = this.localStorageKey('%%%', liturgy as Liturgy),
+              const exampleKey = this.localStorageKey('%%%', liturgy as LiturgicalDocument),
                     baseKey = exampleKey.replace('%%%', ''),
                     // storage returns a Promise, but we're not in an async function
                     // because we need to return an observable; so transform it into an observable

@@ -71,7 +71,7 @@
         <venite-date (dateChange)="date.next($event)"></venite-date>
 
         <!-- Choose liturgy -->
-        <venite-liturgy-menu (liturgyChange)="liturgy.next($event)"></venite-liturgy-menu>
+        <venite-liturgy-menu (liturgyChange)="liturgy.next($event)" [properLiturgy]="properLiturgy | async"></venite-liturgy-menu>
 
         <!-- Choose vigil -->
         <ion-item>
@@ -109,7 +109,7 @@
     <ion-card class="reports">
       <ion-card-content>
         <ul>
-          <li>prayData: <ng-container *ngIf="prayData | async">yes</ng-container></li>
+          <li>prayData: <ng-container *ngIf="prayData | async as p">ok</ng-container></li>
           <li>liturgicalDay: <ng-container *ngIf="liturgicalDay | async as day"><pre>{{ day | json }}</pre></ng-container></li>
           <li>date: <ng-container *ngIf="date | async as d">{{ d | json }}</ng-container></li>
           <li>week: <ng-container *ngIf="week | async as w">{{ w | json }}</ng-container>
