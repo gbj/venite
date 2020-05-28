@@ -4,10 +4,11 @@ import { User } from 'firebase/app';
 import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
 import { map, mergeMap, tap, scan, shareReplay } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD } from '@venite/ldf';
+import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD } from '@venite/ldf';
 
 import { AuthService } from '../auth/auth.service';
 import { CalendarService } from '../services/calendar.service';
+import { DocumentService } from '../services/document.service';
 import { PreferencesService } from '../preferences/preferences.service';
 
 @Component({
@@ -24,12 +25,13 @@ export class HomePage implements OnInit {
 
   // Arguments into the liturgicalDay call, which we need to combine
   date : BehaviorSubject<Date> = new BehaviorSubject(new Date());
-  week : Observable<LiturgicalWeek[]>;
   holydays : BehaviorSubject<HolyDay[]> = new BehaviorSubject([]);
-  liturgy : Subject<Liturgy> = new Subject();
   kalendar : BehaviorSubject<string> = new BehaviorSubject('bcp1979');   // Backbone of Kalendar: Seasons, Major Feasts
+  liturgy : Subject<Liturgy> = new Subject();
+  properLiturgy : BehaviorSubject<ProperLiturgy> = new BehaviorSubject(undefined);
   sanctoral : BehaviorSubject<string> = new BehaviorSubject('bcp1979');  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
+  week : Observable<LiturgicalWeek[]>;
 
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
@@ -39,9 +41,10 @@ export class HomePage implements OnInit {
   clientPreferences : Subject<ClientPreferences> = new Subject();
 
   constructor(
+    private auth : AuthService,
     public calendarService : CalendarService,
-    private preferencesService : PreferencesService,
-    private auth : AuthService
+    public documentService : DocumentService,
+    private preferencesService : PreferencesService
   ) {}
 
   ngOnInit() {
@@ -76,11 +79,26 @@ export class HomePage implements OnInit {
       );
 
     // Pray button data
-    this.prayData = combineLatest(this.auth.user, this.liturgy, this.liturgicalDay, this.clientPreferences);
+    this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences)
+      .pipe(
+        mergeMap(([user, liturgy, properLiturgy, day, prefs]) => ({
+          user,
+          // if the proper liturgy lists a `liturgy` field, find that liturgy
+          liturgy: properLiturgy?.liturgy ?
+            this.documentService
+              .findDocumentsBySlug(properLiturgy.slug)  // array of all liturgies with that slug
+              // make sure it matches the liturgy we already have selected in language and version
+              .find(ltg => ltg.language == liturgy.language && ltg.version == liturgy.version) :
+            liturgy,
+          day,
+          // if there's a proper liturgy and it specifies a `preference`, set that preference to `true`
+          prefs: properLiturgy?.preference ? { ... prefs, [properLiturgy.preference]: true } : prefs
+        }))
+      );
   }
 
-  pray(args : [User, Liturgy, LiturgicalDay, ClientPreferences]) {
-    const [ user, liturgy, day, prefs ] = args;
+  pray(args : { user: User; liturgy: Liturgy; day: LiturgicalDay; prefs: ClientPreferences; }) {
+    const { user, liturgy, day, prefs } = args;
     // update preferences
     this.savePreferences(user?.uid, prefs, liturgy);
   }

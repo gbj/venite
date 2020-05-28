@@ -8,6 +8,7 @@ export * from './calendar/kalendar';
 export * from './calendar/liturgical-color';
 export * from './calendar/liturgical-day';
 export * from './calendar/liturgical-week';
+export * from './calendar/proper-liturgy';
 export * from './calendar/utils';
 
 export * from './citation/citation';

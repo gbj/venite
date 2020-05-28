@@ -3,7 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable, combineLatest } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, addOneDay, dateFromYMD, dateToYMD } from '@venite/ldf';
+import { HolyDay, Kalendar, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, addOneDay, dateFromYMD, dateToYMD } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -60,6 +60,15 @@ export class CalendarService {
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('slug', '==', slug)
+    ).valueChanges();
+  }
+
+  /** Find Proper Liturgies for certain special days */
+  findProperLiturgies(day : LiturgicalDay, language : string) : Observable<ProperLiturgy[]> {
+    console.log('findProperLiturgies', day?.slug, language)
+    return this.afs.collection<ProperLiturgy>('ProperLiturgy', ref =>
+      ref.where('slug', '==', day.slug)
+         .where('language', '==', language)
     ).valueChanges();
   }
 

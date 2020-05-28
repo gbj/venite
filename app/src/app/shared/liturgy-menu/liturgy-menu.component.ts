@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
-import { LiturgyMenuService } from './liturgy-menu.service';
+import { DocumentService } from '../../services/document.service';
 
 import { Observable, Subject, Subscription, combineLatest, of, interval } from 'rxjs';
 import { tap, map, take, mergeMap } from 'rxjs/operators';
@@ -27,11 +27,11 @@ export class LiturgyMenuComponent implements OnInit, OnDestroy {
   // Emits starting liturgy
   start$ : Subscription;
 
-  constructor(private liturgyMenu : LiturgyMenuService) { }
+  constructor(private documents : DocumentService) { }
 
   ngOnInit() {
     // grab liturgyOptions observable from the service
-    this.liturgyOptions = this.liturgyMenu.findOptions(this.language, this.version);
+    this.liturgyOptions = this.documents.getLiturgyOptions(this.language, this.version);
 
     // This seems insane.
     // Emit the starting liturgy

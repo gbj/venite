@@ -79,6 +79,12 @@
           <ion-checkbox name="isVigil" [value]="vigil | async" (ionChange)="vigil.next($event.detail.checked)"></ion-checkbox>
         </ion-item>
 
+        <venite-proper-liturgy-menu
+          [day]="liturgicalDay | async"
+          [language]="(liturgy | async)?.language"
+          (properLiturgyChange)="properLiturgy.next($event)"
+        ></venite-proper-liturgy-menu>
+
         <!-- Pray Button -->
         <ng-container *ngIf="prayData | async as data else notLoaded">
           <ion-button (click)="pray(data)">

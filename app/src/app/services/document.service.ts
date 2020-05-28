@@ -1,26 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Liturgy } from '@venite/ldf';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { Observable, from } from 'rxjs';
+
+import { LiturgicalDocument, Liturgy } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LiturgyMenuService {
+export class DocumentService {
 
-  constructor() { }
+  constructor(private readonly afs: AngularFirestore) { }
 
-  async getOptions(language : string, version : string) : Promise<Liturgy[]> {
-    const findURL = new URL(`https://www.venite.app/api/liturgy/menu`);
-    findURL.searchParams.append('language', language);
-    findURL.searchParams.append('version', version);
-
-    const response = await fetch(findURL.toString());
-    return await response.json();
-  }
-
-  // Mock — to be replaced by Firebase
-  findOptions(language : string, version : string) : Observable<Liturgy[]> {
+  getLiturgyOptions(language : string, version : string) : Observable<Liturgy[]> {
     return from([
       new Array(
         new Liturgy({
@@ -526,5 +518,11 @@ export class LiturgyMenuService {
         })
       )
     ])
+  }
+
+  findDocumentBySlug(slug : string) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('slug', '==', slug)
+    ).valueChanges();
   }
 }
