@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'editor',
     loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
     canActivate: [AngularFireAuthGuard]
+  },
+  {
+    path: 'pray',
+    loadChildren: () => import('./pray/pray.module').then( m => m.PrayPageModule)
   }
 ];
 
