@@ -1,8 +1,4 @@
 <form>
-  <ul>
-    <li>properLiturgyLiturgy: <ng-container *ngIf="selectState | async as state">ok</ng-container></li>
-    <li>selectState: <ng-container *ngIf="selectState | async as state">ok</ng-container></li>
-  </ul>
   <ion-item>
     <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
     <ng-container *ngIf="selectState | async as data">
