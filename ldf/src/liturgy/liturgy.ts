@@ -11,6 +11,13 @@ export class Liturgy extends LiturgicalDocument {
       [x: string]: Preference;
     };
 
+    /** `Preferences` for special liturgies
+     * Should not be saved in between instances of praying this liturgy
+     * e.g., Maundy Thursday `footwashing` preferences */
+    special_preferences: {
+      [x: string]: Preference;
+    }
+
     /** Optional: Alternative versions to be used as a backstop when compiling the liturgy.
      * @example
      * // liturgyversions for `EOW` liturgy

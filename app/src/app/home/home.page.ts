@@ -75,28 +75,11 @@ export class HomePage implements OnInit {
           vigil
         })),
         // add holy days to that liturgical day
-        tap(({ day, vigil }) => console.log('day = ', day, 'vigil = ', vigil)),
         mergeMap(({day, vigil}) => this.calendarService.addHolyDays(day, vigil)),
-        tap(val => console.log('day with holy days = ', val)),
       );
 
     // Pray button data
     this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences)
-/*      .pipe(
-        mergeMap(([user, liturgy, properLiturgy, day, prefs]) => ({
-          user,
-          // if the proper liturgy lists a `liturgy` field, find that liturgy
-          liturgy: properLiturgy?.liturgy ?
-            this.documentService
-              .findDocumentsBySlug(properLiturgy.slug)  // array of all liturgies with that slug
-              // make sure it matches the liturgy we already have selected in language and version
-              .find(ltg => ltg.language == liturgy.language && ltg.version == liturgy.version) :
-            liturgy,
-          day,
-          // if there's a proper liturgy and it specifies a `preference`, set that preference to `true`
-          prefs: properLiturgy?.preference ? { ... prefs, [properLiturgy.preference]: true } : prefs
-        }))
-      );*/
   }
 
   pray(args : { user: User; liturgy: LiturgicalDocument; day: LiturgicalDay; prefs: ClientPreferences; }) {
@@ -106,8 +89,11 @@ export class HomePage implements OnInit {
   }
 
   savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDocument) {
-    console.log(prefs)
     Object.entries(prefs)
+      // take only those properties that are listed in the liturgy's `preferences` metadata field
+      // e.g., Evening Prayer will list `bibleVersion` but not `footwashing`—so don't save `footwashing`
+      .filter(([key, value]) => liturgy.metadata?.preferences.hasOwnProperty(key))
+      // store each key individually in the database
       .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
   }
 }
