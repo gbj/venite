@@ -8,12 +8,18 @@ import { PrayPageRoutingModule } from './pray-routing.module';
 
 import { PrayPage } from './pray.page';
 
+import { TranslateModule } from '@ngx-translate/core';
+
+import { AuthModule } from '../auth/auth.module';
+
 @NgModule({
   imports: [
+    AuthModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    PrayPageRoutingModule
+    PrayPageRoutingModule,
+    TranslateModule
   ],
   declarations: [PrayPage]
 })

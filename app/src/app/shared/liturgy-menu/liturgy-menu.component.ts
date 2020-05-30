@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
 import { DocumentService } from '../../services/document.service';
 
 import { Observable, BehaviorSubject, Subject, Subscription, combineLatest, of, interval } from 'rxjs';
@@ -11,7 +11,7 @@ import { Liturgy, ProperLiturgy, LiturgicalDocument } from '@venite/ldf';
   templateUrl: './liturgy-menu.component.html',
   styleUrls: ['./liturgy-menu.component.scss'],
 })
-export class LiturgyMenuComponent implements OnInit, OnDestroy {
+export class LiturgyMenuComponent implements OnInit {
   @Input() language : string = 'en';
   @Input() version : string = 'Rite-II';
 
@@ -30,9 +30,6 @@ export class LiturgyMenuComponent implements OnInit, OnDestroy {
 
   // Menu pulled from LiturgyMenuService
   liturgyOptions : Observable<LiturgicalDocument[]>;
-
-  // Emits starting liturgy
-  start$ : Subscription;
 
   // Current state of the actual menu
   selectState : Observable<{ value: string; options: LiturgicalDocument[] }>;
@@ -92,13 +89,8 @@ export class LiturgyMenuComponent implements OnInit, OnDestroy {
     this.liturgySubject.next(changes.liturgy?.currentValue);
   }
 
-  ngOnDestroy() {
-    this.start$.unsubscribe();
-  }
-
   /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */
   update(slug : string, options : Liturgy[]) {
-    console.log('updating by emitting', options.find(option => option.slug == slug));
     this.liturgy = slug;
     this.liturgyChange.emit(options.find(option => option.slug == slug));
   }

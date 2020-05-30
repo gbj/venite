@@ -27,7 +27,8 @@ export class ProperLiturgyMenuComponent implements OnInit {
     }
   }
 
-  ngOnChanges() {
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('day', changes.day?.currentValue);
     if(this.day) {
       this.updateLiturgies();
     }
@@ -36,7 +37,7 @@ export class ProperLiturgyMenuComponent implements OnInit {
   updateLiturgies() {
     this.properLiturgies = this.calendarService.findProperLiturgies(
       this.day,
-      this.language
+      this.language || 'en'
     ).pipe(
       tap(val => console.log('updateLiturgies', val))
     );

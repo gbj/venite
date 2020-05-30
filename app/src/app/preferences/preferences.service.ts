@@ -48,6 +48,7 @@ export class PreferencesService {
 
   // Gets a single preference by key
   get(key : string) : Observable<StoredPreference[]> {
+    console.log('get preferences for ', this.auth.user);
     return this.auth.user
       .pipe(
         map(user => [user?.uid, key]),

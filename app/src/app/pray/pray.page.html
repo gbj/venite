@@ -1,9 +1,25 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pray</ion-title>
+    <ion-buttons collapse="true" slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
+    <ion-buttons collapse="true" slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ 'Pray the Office' | translate }}</ion-title>
+      <ion-buttons collapse="true" slot="end">
+        <ion-menu-button menu="auth" slot="start"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
+  <pre>{{ state$ | async | json }} </pre>
 </ion-content>
