@@ -45,7 +45,6 @@ export class PrayPage implements OnInit {
   
     // `LiturgicalDocument`s that match the language/version/slug passed in the URL
     const liturgy$ : Observable<LiturgicalDocument[]> = this.route.params.pipe(
-      tap(val => console.log('building liturgy...')),
       switchMap(({ language, version, liturgy }) =>
         this.documents.findDocuments(liturgy, language, version)
       )
@@ -54,13 +53,11 @@ export class PrayPage implements OnInit {
     // `LiturgicalDay` (via week) that matches the date/kalendar passed in the URL,
     // given the `LiturgicalDocument` found above (for `evening`)
     const week$ : Observable<LiturgicalWeek[]> = this.route.params.pipe(
-      tap(val => console.log('building week...')),
       switchMap(({ language, version, y, m, d, liturgy, kalendar, vigil }) => 
         this.calendarService.buildWeek(of(dateFromYMD(y, m, d)), of(kalendar), of(vigil))
       )
     );
     const day$ = combineLatest(liturgy$, week$, this.route.params).pipe(
-      tap(val => console.log('building day...')),
       switchMap(([liturgy, week, params]) => 
         this.calendarService.buildDay(
           of(dateFromYMD(params.y, params.m, params.d)),
@@ -74,7 +71,6 @@ export class PrayPage implements OnInit {
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$ : Observable<ClientPreferences> = this.route.params.pipe(
-      tap(val => console.log('building prefs...')),
       map(({ prefs }) => JSON.parse(prefs || '{}'))
     );
 
