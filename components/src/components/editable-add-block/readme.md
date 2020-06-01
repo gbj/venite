@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                       | Type      | Default     |
-| --------- | --------- | ----------------------------------------------------------------- | --------- | ----------- |
-| `path`    | `path`    | A JSON Pointer that points to the LiturgicalDocument being edited | `string`  | `undefined` |
-| `visible` | `visible` | If `visible` is true, the button should appear.                   | `boolean` | `undefined` |
+| Property  | Attribute | Description                                                                                 | Type      | Default     |
+| --------- | --------- | ------------------------------------------------------------------------------------------- | --------- | ----------- |
+| `base`    | `base`    | A JSON Pointer that points to the array within which the item to be inserted will be nested | `string`  | `undefined` |
+| `index`   | `index`   | The item's index within that array                                                          | `number`  | `undefined` |
+| `visible` | `visible` | If `visible` is true, the button should appear.                                             | `boolean` | `undefined` |
 
 
 ## Events

@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property    | Attribute    | Description                            | Type                          | Default     |
-| ----------- | ------------ | -------------------------------------- | ----------------------------- | ----------- |
-| `cursors`   | --           | Cursor positions of active users       | `{ [user: string]: Cursor; }` | `undefined` |
-| `docId`     | `doc-id`     |                                        | `string`                      | `undefined` |
-| `userToken` | `user-token` |                                        | `string`                      | `undefined` |
-| `users`     | --           | Users currently active in the document | `User[]`                      | `undefined` |
+| Property   | Attribute  | Description                            | Type                           | Default     |
+| ---------- | ---------- | -------------------------------------- | ------------------------------ | ----------- |
+| `cursors`  | --         | Cursor positions of active users       | `{ [user: string]: Cursor; }`  | `undefined` |
+| `doc`      | `doc`      | An LDF LiturgicalDocument object.      | `LiturgicalDocument \| string` | `undefined` |
+| `username` | `username` | The user editing in this editor        | `string`                       | `undefined` |
+| `users`    | --         | Users currently active in the document | `User[]`                       | `undefined` |
 
 
 ## Events

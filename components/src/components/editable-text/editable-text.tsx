@@ -14,7 +14,6 @@ export class EditableTextComponent {
   @Element() el: HTMLElement;
   private textarea : HTMLTextAreaElement | HTMLInputElement;
   private cursor : Cursor;
-  private edits : Change[] = new Array();
   private previousText : string;
 
   @State() currentText : string;
