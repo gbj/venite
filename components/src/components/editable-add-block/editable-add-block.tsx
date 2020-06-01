@@ -17,8 +17,11 @@ export class EditableAddBlockComponent {
   /** If `visible` is true, the button should appear. */
   @Prop() visible : boolean;
 
-  /**  A JSON Pointer that points to the LiturgicalDocument being edited */
-  @Prop({ reflect: true }) path : string;
+  /** A JSON Pointer that points to the array within which the item to be inserted will be nested */
+  @Prop({ reflect: true }) base: string;
+
+  /** The item's index within that array */
+  @Prop({ reflect: true }) index: number;
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -67,12 +70,15 @@ export class EditableAddBlockComponent {
 
   // Add a block
   add(template : LiturgicalDocument[]) {
-    const p = this.path.split('/').filter(part => part !== '');
     this.ldfDocShouldChange.emit(
       new Change({
-        path: null, // null path, because we're passing the path in the `p` of the json0 op below
+        path: this.base, 
         op: template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
-          .map(doc => ({ p, li: doc }))
+          .map(value => ({
+            type: 'insertAt',
+            index: this.index,
+            value
+          }))
       })
     );
   }

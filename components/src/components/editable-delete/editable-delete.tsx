@@ -51,7 +51,7 @@ export class EditableDeleteComponent {
           console.log('deleting ', this.base, this.index);
           this.ldfDocShouldChange.emit(new Change({
             path: this.base,
-            op: [ { p: [ this.index ], ld: this.obj } ]
+            op: [ { type: 'deleteAt' as 'deleteAt', index: this.index } ]
           }))
         }
       }

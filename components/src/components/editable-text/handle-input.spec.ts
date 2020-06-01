@@ -2,7 +2,7 @@ import { handleInput } from './handle-input';
 import { Cursor, Change } from '@venite/ldf';
 import * as json0 from 'ot-json0';
 
-describe('handleInput', () => {
+/*describe('handleInput', () => {
   it('should generate events to apply an insert to blank string', async () => {
     const original = '';
 
@@ -23,4 +23,4 @@ describe('handleInput', () => {
       { p: [0], si: 'Your' }
     ]));
   });
-})
+})*/

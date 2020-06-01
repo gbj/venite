@@ -1,10 +1,9 @@
-import { Component, Element, State, Listen, Host, Prop, Watch, Method, JSX, h } from '@stencil/core';
+import { Component, Element, State, Listen, Host, Prop, Watch, Event, EventEmitter, JSX, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 
-import { ChangeMessage, CursorMessage, Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
+import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 
 import { elementFromPath } from './utils/element-from-path';
-import { applyChange } from './utils/apply';
 import getCaretCoordinates from 'textarea-caret';
 import Values from 'values.js';
 
@@ -33,22 +32,29 @@ export class EditorComponent {
   } = {};
 
   // Props
-  @Prop() docId : string;
-  @Watch('docId')
-  docIdChanged() {
-    console.log('docId changed');
-    this.joinNewDocument();
-  }
 
-  @Prop() userToken : string;
-  @Watch('userToken')
-  userTokenChanged() {
-    console.log('userToken changed');
-    this.joinNewDocument();
+   /** An LDF LiturgicalDocument object. */
+  @Prop() doc : LiturgicalDocument | string;
+  @Watch('doc')
+  async docChanged(newDoc : LiturgicalDocument | string) {
+    try {
+      if(typeof newDoc == 'string') {
+        this.obj = new LiturgicalDocument(JSON.parse(newDoc));
+      } else {
+        this.obj = new LiturgicalDocument(newDoc);
+      }
+    } catch(e) {
+      console.warn(e);
+      this.obj = new LiturgicalDocument();
+    }
+    console.log('this.obj = ', this.obj);
   }
 
   /** Users currently active in the document */
   @Prop() users : User[];
+
+  /** The user editing in this editor */
+  @Prop() username : string;
 
   /** Cursor positions of active users */
   @Prop() cursors : { [user: string]: Cursor };
@@ -67,7 +73,8 @@ export class EditorComponent {
 
   // Life Cycle
   connectedCallback() {
-
+    // initial document load from property
+    this.docChanged(this.doc);
   }
 
   // Listeners
@@ -80,6 +87,7 @@ export class EditorComponent {
   /** Watch for messages that doc should change from child components and emit them from the editor */
   @Listen('ldfDocShouldChange', { target: 'document' })
   onDocShouldChange(ev : CustomEvent) {
+    console.log('ldf-editor caught ldfDocShouldChange', ev.detail)
     this.editorDocShouldChange.emit(ev.detail);
   }
 
@@ -119,13 +127,6 @@ export class EditorComponent {
     this.cursorPos = newCursorPos;
   }
 
-  receivedCursorMoved(data : CursorMessage) {
-    this.cursors[data.username] = data.cursor;
-    this.cursorToPos(data.cursor, data.username, this.cursorPos);
-    this.cursorPos = { ... this.cursorPos};
-    console.log(this.cursors, this.cursorPos);
-  }
-
   // mutates cursorPos
   cursorToPos(data : Cursor, user : string, cursorPos : any) {
     if(data && data.path) {
@@ -162,9 +163,7 @@ export class EditorComponent {
     const user = this.users.find(u => u.username == username),
           pos = this.cursorPos[username];
 
-    // TODO: filter based on actual username, not userToken, once AuthService is setup
-
-    if(user && pos && this.userToken !== username) {
+    if(user && pos && this.username !== username) {
       const fontSize = getComputedStyle(pos.target).fontSize;
 
       return [
@@ -216,8 +215,9 @@ export class EditorComponent {
 
   render() {
     // TODO #auth -- replace this with real user info
-    const user = this.users.find(u => u.username == this.userToken),
-          otherUsers = this.users.filter(u => u.username !== this.userToken),
+    const users = this.users || new Array(),
+          user = users.find(u => u.username == this.username),
+          otherUsers = users.filter(u => u.username !== this.username),
           focusObj = this.focusObj || {obj: new LiturgicalDocument(), path: ''};
 
     return (

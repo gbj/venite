@@ -30,13 +30,13 @@ export class EditableSelectComponent {
   @Listen('ionChange')
   onChange(ev : CustomEvent) {
     const oldValue = this.value,
-          newValue = ev.detail.value;
+          value = ev.detail.value;
 
-    if(newValue !== oldValue) {
+    if(value !== oldValue) {
       this.ldfDocShouldChange.emit(new Change({
         path: this.path,
         op: [
-          { p: [this.property], od: oldValue, oi: newValue }
+          { type: 'set' as 'set', index: this.property, value }
         ]
       }));
     }

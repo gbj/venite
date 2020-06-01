@@ -11,7 +11,7 @@ describe('ldf-editable-text', () => {
     await page.setContent('<ldf-editable-text text="Keep watch, dear Lord"></ldf-editable-text>');
 
     const textarea = await page.find('ldf-editable-text >>> textarea'),
-          cursor = new Cursor(textarea, 0, 0);
+          cursor = new Cursor('path', 0, 0, undefined);
 
     let value = await textarea.getProperty('value');
     expect(value).toBe('Keep watch, dear Lord');
@@ -23,7 +23,7 @@ describe('ldf-editable-text', () => {
     await page.setContent('<ldf-editable-text text=""></ldf-editable-text>');
 
     const textarea = await page.find('ldf-editable-text >>> textarea'),
-          cursor = new Cursor(textarea, 0, 0);
+          cursor = new Cursor('path', 0, 0, undefined);
 
     let value = await textarea.getProperty('value');
     expect(value).toBe('');
@@ -56,7 +56,7 @@ describe('ldf-editable-text', () => {
     await page.setContent('<ldf-editable-text text=""></ldf-editable-text>');
 
     const textarea = await page.find('ldf-editable-text >>> textarea'),
-          cursor = new Cursor(textarea, 4, 4);
+          cursor = new Cursor('path', 4, 4, undefined);
 
     let value = await textarea.getProperty('value');
     expect(value).toBe('');

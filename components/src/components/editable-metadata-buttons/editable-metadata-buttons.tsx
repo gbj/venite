@@ -72,7 +72,8 @@ export class EditableMetadataButtonsComponent {
 
   // Render
   render() {
-    const localeStrings = this.localeStrings || {};
+    const localeStrings = this.localeStrings || {},
+          hasIndex : boolean = this.index !== undefined && this.index >= 0;
 
     return (
       <ldf-label-bar class={{ hidden: !this.visible, visible: this.visible }}>
@@ -82,7 +83,7 @@ export class EditableMetadataButtonsComponent {
           </ion-button>
 
           {/* Only show 'Delete' if there's an index, i.e., if it appears as part of a `Liturgy.value[]` */}
-          {this.index && <ldf-editable-delete base={this.base} index={this.index} obj={this.obj}></ldf-editable-delete>}
+          {hasIndex && <ldf-editable-delete base={this.base} index={this.index} obj={this.obj}></ldf-editable-delete>}
         </ion-buttons>
       </ldf-label-bar>
     )

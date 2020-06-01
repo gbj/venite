@@ -29,6 +29,7 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "@venite/ldf": "^0.3.0",
+    "automerge": "^0.14.1",
     "firebase": "^7.14.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",

@@ -57,15 +57,14 @@ export class LiturgyComponent {
       <Host lang={this.obj.language}>
         {this.obj.value.map((doc, docIndex) => {
           const valuePath = `${basePath}/value`,
-                path = `${valuePath}/${docIndex}`,
-                afterPath = `${valuePath}/${docIndex + 1}`;
+                path = `${valuePath}/${docIndex}`;
           return (
             <article>
               {/* Render the document */}
               <ldf-liturgical-document doc={doc} path={path} index={docIndex} editable={this.editable}></ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
-              {this.editable && <ldf-editable-add-block visible={this.hasFocus == path} path={afterPath}></ldf-editable-add-block>}
+              {this.editable && <ldf-editable-add-block visible={this.hasFocus == path} base={valuePath} index={docIndex + 1}></ldf-editable-add-block>}
             </article>
           )
         }

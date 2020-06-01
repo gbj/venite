@@ -14,35 +14,12 @@
 </head>
 <body>
     <div id='example'>
-      <ldf-editor doc-id='abc123' user-token=''>
-        <nav slot='controls'>
-          <input type='text' id='docId' placeholder='Document ID' name='docId' value='abc123' />
-          <input type='text' id='userToken' placeholder='User Token' name='userToken' value='Greg' />
-          <button onClick="handleForm()">Join</button>
-          <button onClick="leave()">Leave</button>
-        </nav>
-      </ldf-editor>
+      <ldf-editor
+        doc='{"type": "liturgy", "language": "en", "version": "Rite-II", "label": "Compline", "value":[{"type": "heading", "metadata": { "level": 1 }, "value": ["Compline"]}]}'
+      ></ldf-editor>
     </div>
-
-  <script>
-  function handleForm() {
-    const editNode = document.getElementById('example').querySelector('ldf-editor'),
-          doc = document.getElementById('docId').value,
-          user = document.getElementById('userToken').value;
-    editNode.setAttribute('doc-id', doc);
-    editNode.setAttribute('user-token', user);
-    console.log(editNode);
-  }
-
-  async function leave() {
-    await customElements.whenDefined('ldf-editor');
-    const component = document.querySelector('ldf-editor');
-    await component.leave('abc123');
-  }
-  </script>
 
   <style>
   </style>
-
 </body>
 </html>
