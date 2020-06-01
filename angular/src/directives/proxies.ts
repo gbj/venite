@@ -1169,8 +1169,8 @@ export class LdfBibleReading {
 }
 
 export declare interface LdfEditableAddBlock extends Components.LdfEditableAddBlock {}
-@ProxyCmp({inputs: ['path', 'visible']})
-@Component({ selector: 'ldf-editable-add-block', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'visible'] })
+@ProxyCmp({inputs: ['base', 'index', 'visible']})
+@Component({ selector: 'ldf-editable-add-block', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'visible'] })
 export class LdfEditableAddBlock {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1255,8 +1255,8 @@ export class LdfEditableText {
 }
 
 export declare interface LdfEditor extends Components.LdfEditor {}
-@ProxyCmp({inputs: ['cursors', 'docId', 'userToken', 'users']})
-@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'docId', 'userToken', 'users'] })
+@ProxyCmp({inputs: ['cursors', 'doc', 'username', 'users']})
+@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'username', 'users'] })
 export class LdfEditor {
   editorCursorMoved!: EventEmitter<CustomEvent>;
   editorDocShouldChange!: EventEmitter<CustomEvent>;
