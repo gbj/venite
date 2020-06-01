@@ -3,7 +3,6 @@ import Debounce from 'debounce-decorator';
 
 import { Change, Cursor } from '@venite/ldf';
 import { handleInput } from './handle-input';
-import { consolidateChanges } from './consolidate-changes';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
@@ -71,31 +70,14 @@ export class EditableTextComponent {
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
 
-    // second, determine the appropriate Change event to be sent, depending
-    // on the input type
-
-    // push this particular edit onto the stack
-    this.edits.push(handleInput(this.cursor.path, this.previousText, this.cursor.element.value));
+    // calculate changes to be made
+    const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);
+    
+    // save previous value for diffing purposes on next change
     this.previousText = this.cursor.element.value;
 
-    /* call the processEvents() to emit an event
-     * this method is debounced so that, as we type, new edits will be pushed onto the stack
-     * and will finally be collated and emitted as an event */
-    this.processEdits();
-  }
-
-  /** Reduces the list of edits triggered by input events to as few contiguous edits as possible.
-   *  and emits it as a `docChanged` event  */
-  @Debounce(200)
-  processEdits() : Change {
-    const consolidated = consolidateChanges(this.cursor.path, this.edits);
-
-    // clear out the old edits
-    this.edits = new Array();
-
-    // emit and return the new ones
-    this.ldfDocShouldChange.emit(consolidated);
-    return consolidated;
+    // emit the event
+    this.ldfDocShouldChange.emit(change);
   }
 
   // This textarea no longer has the focus, so we no longer know where the cursor is
