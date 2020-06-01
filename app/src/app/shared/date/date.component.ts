@@ -1,11 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'venite-date',
   templateUrl: './date.component.html',
   styleUrls: ['./date.component.scss'],
 })
-export class DateComponent implements OnInit {
+export class DateComponent implements OnInit, OnChanges {
+  @Input() date : Date;
   @Output() dateChange : EventEmitter<Date> = new EventEmitter();
 
   y: string;
@@ -15,9 +16,18 @@ export class DateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.refreshDates();
+    // set the dates to the date passed in or to the present moment
+    this.refreshDates(this.date || new Date());
   }
 
+  // whenever the Input `date` changes, refresh the dates
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes.date?.currentValue?.getTime() !== changes.date?.previousValue.getTime()) {
+      this.refreshDates(changes.date.currentValue);
+    }
+  }
+
+  // Event handler when a form field changes
   update(field : string, event : CustomEvent) {
     this[field] = event.detail.value;
     this.dateChanged();
@@ -46,9 +56,7 @@ export class DateComponent implements OnInit {
   }
 
   // restore the dates to the current day
-  refreshDates() {
-    console.log('setting dates');
-    const now = new Date();
+  refreshDates(now : Date) {
     this.y = now.getFullYear().toString();
     this.m = (now.getMonth()+1).toString();
     this.d = now.getDate().toString();

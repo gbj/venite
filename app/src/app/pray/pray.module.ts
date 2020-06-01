@@ -21,6 +21,8 @@ import { AuthModule } from '../auth/auth.module';
     PrayPageRoutingModule,
     TranslateModule
   ],
-  declarations: [PrayPage]
+  declarations: [
+    PrayPage
+  ]
 })
 export class PrayPageModule {}

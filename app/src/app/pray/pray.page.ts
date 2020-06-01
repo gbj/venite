@@ -5,6 +5,7 @@ import { mapTo, switchMap, map, tap, filter, take } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek } from '@venite/ldf';
 import { DocumentService } from '../services/document.service';
 import { CalendarService } from '../services/calendar.service';
+import { PrayService } from './pray.service';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -18,15 +19,17 @@ interface PrayState {
   styleUrls: ['./pray.page.scss'],
 })
 export class PrayPage implements OnInit {
+  doc$ : Observable<LiturgicalDocument>;
+
   // Liturgy data to be loaded from the database if we come straight to this page
   state$ : Observable<PrayState>;
-  routerParamState$ : Observable<PrayState>;
 
   constructor(
     private router : Router,
     private route : ActivatedRoute,
     private documents : DocumentService,
-    private calendarService : CalendarService
+    private calendarService : CalendarService,
+    private prayService : PrayService
   ) { }
 
   ngOnInit() {
@@ -76,17 +79,21 @@ export class PrayPage implements OnInit {
     );
 
     // Unifies everything from the router params
-    this.routerParamState$ = combineLatest(liturgy$, day$, prefs$).pipe(
+    const routerParamState$ : Observable<PrayState> = combineLatest(liturgy$, day$, prefs$).pipe(
       map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs }))
     );
 
     // Unite the data passed from the state and the data derived from the route
     // Note that this should never call the observables from the route params
     // if the state is already present, due to the take(1)
-    this.state$ = merge(windowHistoryState$, this.routerParamState$).pipe(
-      tap(val => console.log('state$ val = ', val)),
+    this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
       filter(state => state && state.hasOwnProperty('day') && state.hasOwnProperty('liturgy')),
+ //     take(1)
     )
+
+    this.doc$ = this.state$.pipe(
+      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs))
+    );
   }
 
 }

@@ -68,7 +68,7 @@
         </form>
 
         <!-- Choose date -->
-        <venite-date (dateChange)="date.next($event)"></venite-date>
+        <venite-date [date]="startingDate$ | async" (dateChange)="date.next($event)"></venite-date>
 
         <!-- Choose liturgy -->
         <venite-liturgy-menu (liturgyChange)="liturgy.next($event)" [properLiturgy]="properLiturgy | async"></venite-liturgy-menu>
