@@ -1255,8 +1255,8 @@ export class LdfEditableText {
 }
 
 export declare interface LdfEditor extends Components.LdfEditor {}
-@ProxyCmp({inputs: ['cursors', 'doc', 'username', 'users']})
-@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'username', 'users'] })
+@ProxyCmp({inputs: ['cursors', 'doc', 'uid', 'users']})
+@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'uid', 'users'] })
 export class LdfEditor {
   editorCursorMoved!: EventEmitter<CustomEvent>;
   editorDocShouldChange!: EventEmitter<CustomEvent>;

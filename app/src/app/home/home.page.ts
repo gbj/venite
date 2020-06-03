@@ -79,7 +79,7 @@ export class HomePage implements OnInit {
   // ionViewWillEnter -- each time we return to this page, check last time we prayed and reset menu if necessary
   ionViewWillEnter() {
     if(!this.lastPrayed || (Math.abs(new Date().getTime() - this.lastPrayed.getTime())) > this.REMEMBER_TIME) {
-      this.startingDate.next(new Date());
+      this.startingDate$.next(new Date());
     }
     this.hasStartedNavigating = false;
   }

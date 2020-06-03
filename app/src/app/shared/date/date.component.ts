@@ -22,7 +22,7 @@ export class DateComponent implements OnInit, OnChanges {
 
   // whenever the Input `date` changes, refresh the dates
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.date?.currentValue?.getTime() !== changes.date?.previousValue.getTime()) {
+    if(changes.date?.currentValue?.getTime() !== changes.date?.previousValue?.getTime()) {
       this.refreshDates(changes.date.currentValue);
     }
   }

@@ -5,6 +5,10 @@ import { EditorPage } from './editor.page';
 
 const routes: Routes = [
   {
+    path: ':docId',
+    component: EditorPage
+  },
+  {
     path: '',
     component: EditorPage
   }

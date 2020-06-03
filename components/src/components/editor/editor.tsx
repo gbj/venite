@@ -51,10 +51,10 @@ export class EditorComponent {
   }
 
   /** Users currently active in the document */
-  @Prop() users : User[];
+  @Prop() users : { [uid: string]: User; };
 
-  /** The user editing in this editor */
-  @Prop() username : string;
+  /** Unique ID for the user editing in this editor */
+  @Prop() uid : string;
 
   /** Cursor positions of active users */
   @Prop() cursors : { [user: string]: Cursor };
@@ -160,11 +160,11 @@ export class EditorComponent {
   }
 
   // Render helpers
-  buildCursorMarker(username : string) : JSX.Element[] {
-    const user = this.users.find(u => u.username == username),
-          pos = this.cursorPos[username];
+  buildCursorMarker(uid : string) : JSX.Element[] {
+    const user = this.users[uid],
+          pos = this.cursorPos[uid];
 
-    if(user && pos && this.username !== username) {
+    if(user && pos && this.uid !== uid) {
       const fontSize = getComputedStyle(pos.target).fontSize;
 
       return [
@@ -192,7 +192,7 @@ export class EditorComponent {
           backgroundColor: new Values(user.color).tint(75).hexString(),
           borderColor: new Values(user.color).shade(40).hexString()
         }}
-      >{user.username}</div>
+      >{user.displayName}</div>
     );
   }
 
@@ -216,9 +216,9 @@ export class EditorComponent {
 
   render() {
     // TODO #auth -- replace this with real user info
-    const users = this.users || new Array(),
-          user = users.find(u => u.username == this.username),
-          otherUsers = users.filter(u => u.username !== this.username),
+    const users = this.users || {},
+          user : User = users[this.uid],
+          otherUsers : [string, User][] = Object.entries(users).filter(u => u[0] !== this.uid),
           focusObj = this.focusObj || {obj: new LiturgicalDocument(), path: ''};
 
     return (
@@ -229,16 +229,16 @@ export class EditorComponent {
             {user && <span>Logged in as <span class='user' style={{
                 backgroundColor: new Values(user.color).tint(40).hexString(),
                 borderColor: new Values(user.color).shade(10).hexString()
-              }}>{user.username}</span>. </span>}
+              }}>{user.displayName}</span>. </span>}
             {
-              otherUsers && otherUsers.length > 0 && otherUsers.map(u =>
+              otherUsers && otherUsers.length > 0 && otherUsers.map(([, u]) => (
                 <span>
-                  <span class='user' style={{
-                    backgroundColor: new Values(u.color).tint(40).hexString(),
-                    borderColor: new Values(u.color).shade(10).hexString()
-                  }}>{u.username}</span>
-                </span>
-              ).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
+                <span class='user' style={{
+                  backgroundColor: new Values(u.color).tint(40).hexString(),
+                  borderColor: new Values(u.color).shade(10).hexString()
+                }}>{u.displayName}</span>
+              </span>
+              )).reduce((acc, x) => acc === null ? [x] : [acc, ', ', x], null)
             }
           </div>
           <slot name='controls' slot='end'/>

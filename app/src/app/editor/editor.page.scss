@@ -1,0 +1,20 @@
+article {
+    display: flex;
+    flex-direction: row;
+
+    ldf-editor {
+        width: 80%;
+    }
+    pre {
+        width: 20%;
+    }
+    
+    @media(min-height: 767px) {
+        ldf-editor {
+            width: 70%;
+        }
+        pre {
+            width: 30%;
+        }
+    }
+}

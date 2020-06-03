@@ -20,7 +20,9 @@
     "about": "About"
   },
   "editor": {
-    "title": "Editor"
+    "title": "Editor",
+    "edit-a-document": "Edit a Document",
+    "loading": "Loading Documents..."
   },
   "January": "January",
   "February": "February",

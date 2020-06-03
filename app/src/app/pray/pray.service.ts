@@ -3,7 +3,7 @@ import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences }
 
 import { Observable, of } from 'rxjs';
 import { DocumentService } from '../services/document.service';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class PrayService {
       // if doc has a `lookup` and not a `value`, compile it
       if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
         return of(doc).pipe(
-          switchMap(doc => this.lookup(doc, day, prefs))
+          switchMap(doc => this.lookup(doc, day, prefs, []))
         );
       }
       // otherwise, check whether the doc should be included

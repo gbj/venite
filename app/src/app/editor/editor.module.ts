@@ -10,9 +10,11 @@ import { EditorPage } from './editor.page';
 
 // Community Modules
 import { TranslateModule } from '@ngx-translate/core';
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   imports: [
+    AuthModule,
     CommonModule,
     FormsModule,
     IonicModule,

@@ -46,7 +46,7 @@ export class PrayPage implements OnInit {
     // `LiturgicalDocument`s that match the language/version/slug passed in the URL
     const liturgy$ : Observable<LiturgicalDocument[]> = this.route.params.pipe(
       switchMap(({ language, version, liturgy }) =>
-        this.documents.findDocuments(liturgy, language, version)
+        this.documents.findDocumentsBySlug(liturgy, language, version)
       )
     );
   
