@@ -3,18 +3,18 @@ article {
     flex-direction: row;
 
     ldf-editor {
-        width: 80%;
+        width: 50%;
     }
     pre {
-        width: 20%;
+        width: 50%;
     }
     
     @media(min-height: 767px) {
         ldf-editor {
-            width: 70%;
+            width: 50%;
         }
         pre {
-            width: 30%;
+            width: 50%;
         }
     }
 }

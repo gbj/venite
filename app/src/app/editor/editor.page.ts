@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs'; 
+import { Observable, BehaviorSubject, Subscription, combineLatest } from 'rxjs'; 
 import { switchMap, map, tap, take } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
 import { LiturgicalDocument, User } from '@venite/ldf';
-import { DocumentManager } from './document-manager';
+import { DocumentManager, DocumentManagerChange } from './document-manager';
 import { randomColor } from './random-color';
 
 @Component({
@@ -19,7 +19,7 @@ export class EditorPage implements OnInit, OnDestroy {
   docId$ : Observable<string>;
   manager$ : Observable<DocumentManager>;
   doc$ : Observable<LiturgicalDocument>;
-  builtDoc$ : Observable<any>;//LiturgicalDocument>;
+  changes$ : Observable<DocumentManagerChange[]>;//LiturgicalDocument>;
 
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
@@ -41,12 +41,12 @@ export class EditorPage implements OnInit, OnDestroy {
     this.manager$ = this.docId$.pipe(
       switchMap(docId => this.editorService.join(docId)),
     );
-    this.doc$ = this.manager$.pipe(
-      map(manager => new LiturgicalDocument(manager.doc)),
+    this.changes$ = this.docId$.pipe(
+      switchMap(docId => this.editorService.findChanges(docId))
     );
-    this.builtDoc$ = this.manager$.pipe(
-      map(manager => manager.changes),
-    )
+    this.doc$ = combineLatest(this.manager$, this.changes$).pipe(
+      map(([manager, changes]) => this.editorService.applyExternalChanges(changes)),
+    );
 
     // All docs
     this.docs$ = this.documents.findDocuments();

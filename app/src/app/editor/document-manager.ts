@@ -3,7 +3,7 @@ import * as Automerge from 'automerge';
 
 export class DocumentManager {
     docId : string;
-    doc : Partial<LiturgicalDocument>;
+    doc : string; // Automerge.Doc<LiturgicalDocument> serialized by Automerge.save()
     users?: {
         [uid: string]: User;
     } 
@@ -11,4 +11,10 @@ export class DocumentManager {
         [uid: string]: Cursor;
     };
     changes?: Automerge.Change[];
+}
+
+export class DocumentManagerChange {
+    docId : string;
+    uid : string;
+    changes : Automerge.Change[];
 }

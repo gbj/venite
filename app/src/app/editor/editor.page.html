@@ -22,14 +22,14 @@
   
     <article>
       <ldf-editor
-      [doc]="doc$ | async"
-      [uid]="(auth.user | async)?.uid"
-      [cursors]="manager.cursors"
-      [users]="manager.users"
-      (editorCursorMoved)="updateCursor(manager.docId, $event)"
-      (editorDocShouldChange)="updateDoc(manager.docId, manager.doc, $event)"
-    ></ldf-editor>
-    <pre>{{ builtDoc$ | async | json }}</pre>
+        [doc]="doc$ | async | json"
+        [uid]="(auth.user | async)?.uid"
+        [cursors]="manager.cursors"
+        [users]="manager.users"
+        (editorCursorMoved)="updateCursor(manager.docId, $event)"
+        (editorDocShouldChange)="updateDoc(manager.docId, manager.doc, $event)"
+      ></ldf-editor>
+      <pre>{{ doc$ | async | json }}</pre>
     </article>
   </ion-content>
 </ng-container>

@@ -6,8 +6,8 @@ import * as pointer from 'json-pointer';
 
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { Observable, combineLatest, from } from 'rxjs';
-import { DocumentManager } from './document-manager';
-import { map, tap, switchMap, take } from 'rxjs/operators';
+import { DocumentManager, DocumentManagerChange } from './document-manager';
+import { map, tap, switchMap, take, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { randomColor } from './random-color';
 
@@ -39,7 +39,6 @@ export class EditorService {
         this._docId = docId;
         this._uid = user.uid;
       }),
-      tap(val => console.log(val)),
       map(([exists, doc, user]) => [exists, doc, this.userFromUser(user)]),
       // return observable of the DocumentManager
       switchMap(([exists, doc, user]) => {
@@ -57,7 +56,7 @@ export class EditorService {
         else {
           return from(docManager.set({
             docId,
-            doc: { ... (doc as LiturgicalDocument) },
+            doc: Automerge.save(this.docToAutomergeDoc(doc as LiturgicalDocument)),
             users: {
               [(user as User).uid]: user as User
             }
@@ -95,34 +94,51 @@ export class EditorService {
       })
   }
 
+  docToAutomergeDoc(doc : LiturgicalDocument) : Automerge.Doc<LiturgicalDocument> {
+    return Automerge.from(doc);
+  }
+
+  /** Observable of all changes made to the document by another user, as they come through */
+  findChanges(docId : string) : Observable<DocumentManagerChange[]> {
+    return this.afs.collection<DocumentManagerChange>('DocumentManagerChange', ref =>
+      ref.where('docId', '==', docId)
+    ).snapshotChanges().pipe(
+      map(actions =>
+        actions
+          // take only changes that are being added by another user
+          .filter(changeaction =>
+            changeaction.type == 'added' && changeaction.payload.doc.data().uid !== this._uid
+          )
+          // and return the document itself
+          .map(changeaction => changeaction.payload.doc.data())
+      )
+    );
+  }
+
   /** Applies an LDF `Change` to an LDF `LiturgicalDocument` and stores the Automerge changes in the database */
-  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) : LiturgicalDocument {
-    const oldDoc = this.docToAutomergeDoc(doc);
-    
+  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) : LiturgicalDocument {    
     // translate LDF `Change` into Automerge ops
     const newDoc = this.applyChange(oldDoc, change);
 
     // serialize changes and share them to other clients
     const changes = Automerge.getChanges(oldDoc, newDoc);
-    this.afs.doc<DocumentManager>(`DocumentManager/${docId}`)
-      .update({
-        doc: JSON.parse(JSON.stringify(newDoc)),
-        //@ts-ignore
-        changes: firebase.firestore.FieldValue.arrayUnion(... changes)
-      })
+
+    this.afs.collection<DocumentManagerChange>('DocumentManagerChange').add({
+      docId,
+      uid: this._uid,
+      changes
+    });
 
     return newDoc;
   }
 
-  docToAutomergeDoc(doc : LiturgicalDocument) : Automerge.Doc<LiturgicalDocument> {
-    return Automerge.from(doc);
-  }
-
-  buildDoc(manager : DocumentManager) : any {//Automerge.Doc<LiturgicalDocument> {
-    const base = this.docToAutomergeDoc(new LiturgicalDocument(manager.doc));
-    const newDoc = Automerge.applyChanges(Automerge.from({}), manager.changes);
-    console.log('(buildDoc), base = ', base, 'changes = ', manager.changes, 'newDoc = ', JSON.stringify(newDoc))
-    return Automerge.getHistory(newDoc);
+  applyExternalChanges(changes : DocumentManagerChange[]) : Automerge.Doc<LiturgicalDocument> {
+    console.log('doc = ', this._automergeDoc);
+    console.log('changes = ', changes.map(change => change.changes).flat());
+    console.log('new doc = ', Automerge.applyChanges(this._automergeDoc, changes.map(change => change.changes).flat()));
+    this._automergeDoc = Automerge.applyChanges(this._automergeDoc, changes.map(change => change.changes).flat());
+    
+    return this._automergeDoc;
   }
 
   /** Applies an LDF `Change` to an Automerge `Doc` and returns the new `Doc` */
