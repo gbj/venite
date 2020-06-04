@@ -118,6 +118,13 @@ export class EditorService {
     return Automerge.from(doc);
   }
 
+  buildDoc(manager : DocumentManager) : any {//Automerge.Doc<LiturgicalDocument> {
+    const base = this.docToAutomergeDoc(new LiturgicalDocument(manager.doc));
+    const newDoc = Automerge.applyChanges(Automerge.from({}), manager.changes);
+    console.log('(buildDoc), base = ', base, 'changes = ', manager.changes, 'newDoc = ', JSON.stringify(newDoc))
+    return Automerge.getHistory(newDoc);
+  }
+
   /** Applies an LDF `Change` to an Automerge `Doc` and returns the new `Doc` */
   applyChange(oldDoc : Automerge.Doc<LiturgicalDocument>, change : Change) : Automerge.Doc<LiturgicalDocument> {
     return Automerge.change(oldDoc, doc => {

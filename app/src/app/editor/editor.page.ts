@@ -19,6 +19,7 @@ export class EditorPage implements OnInit, OnDestroy {
   docId$ : Observable<string>;
   manager$ : Observable<DocumentManager>;
   doc$ : Observable<LiturgicalDocument>;
+  builtDoc$ : Observable<any>;//LiturgicalDocument>;
 
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
@@ -43,6 +44,9 @@ export class EditorPage implements OnInit, OnDestroy {
     this.doc$ = this.manager$.pipe(
       map(manager => new LiturgicalDocument(manager.doc)),
     );
+    this.builtDoc$ = this.manager$.pipe(
+      map(manager => manager.changes),
+    )
 
     // All docs
     this.docs$ = this.documents.findDocuments();

@@ -1,5 +1,5 @@
 import { User, Cursor, LiturgicalDocument } from '@venite/ldf';
-import { Change } from 'automerge';
+import * as Automerge from 'automerge';
 
 export class DocumentManager {
     docId : string;
@@ -10,5 +10,5 @@ export class DocumentManager {
     cursors?: {
         [uid: string]: Cursor;
     };
-    changes?: Change[];
+    changes?: Automerge.Change[];
 }
