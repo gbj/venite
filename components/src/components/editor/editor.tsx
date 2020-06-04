@@ -47,7 +47,6 @@ export class EditorComponent {
       console.warn(e);
       this.obj = new LiturgicalDocument();
     }
-    console.log('this.obj = ', this.obj);
   }
 
   /** Users currently active in the document */
@@ -87,7 +86,6 @@ export class EditorComponent {
   /** Watch for messages that doc should change from child components and emit them from the editor */
   @Listen('ldfDocShouldChange', { target: 'document' })
   onDocShouldChange(ev : CustomEvent) {
-    console.log('ldf-editor caught ldfDocShouldChange', ev.detail)
     this.editorDocShouldChange.emit(ev.detail);
   }
 
@@ -165,6 +163,7 @@ export class EditorComponent {
           pos = this.cursorPos[uid];
 
     if(user && pos && this.uid !== uid) {
+      console
       const fontSize = getComputedStyle(pos.target).fontSize;
 
       return [
@@ -176,7 +175,7 @@ export class EditorComponent {
         pos.end.top !== pos.start.top && this.buildCursorRectangle('right-wing', user, false, fontSize, pos.start.left, pos.start.top, parseInt(getComputedStyle(pos.target).width), pos.end.top - pos.start.top, 0),
         // "left-wing" rectangle
         pos.end.top !== pos.start.top && this.buildCursorRectangle('left-wing', user, false, fontSize, pos.target.getBoundingClientRect().x, pos.start.top, pos.start.left, pos.end.top - pos.start.top, 0, 1.5)
-      ];
+      ];;
     } else {
       return [];
     }
@@ -218,8 +217,7 @@ export class EditorComponent {
     // TODO #auth -- replace this with real user info
     const users = this.users || {},
           user : User = users[this.uid],
-          otherUsers : [string, User][] = Object.entries(users).filter(u => u[0] !== this.uid),
-          focusObj = this.focusObj || {obj: new LiturgicalDocument(), path: ''};
+          otherUsers : [string, User][] = Object.entries(users).filter(u => u[0] !== this.uid);
 
     return (
       <Host>
@@ -243,14 +241,6 @@ export class EditorComponent {
           </div>
           <slot name='controls' slot='end'/>
         </ldf-label-bar>
-
-        {/* Metadata toolbar for subdocuments */}
-        {focusObj?.obj?.type && focusObj?.obj?.type !== 'liturgy' && <ldf-editable-metadata
-            path={focusObj.path}
-            doc={focusObj.obj}
-            visible={true}
-            collapsed={false}>
-          </ldf-editable-metadata>}
 
         {/* Cursors */}
         {this.cursorPos && Object.keys(this.cursorPos).map(username => this.buildCursorMarker(username))}

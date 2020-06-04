@@ -31,6 +31,7 @@
     "@venite/ldf": "^0.3.0",
     "automerge": "^0.14.1",
     "firebase": "^7.14.4",
+    "json-pointer": "^0.6.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

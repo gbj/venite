@@ -18,10 +18,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [ldf-editor](../editor)
-
 ### Depends on
 
 - ion-item
@@ -56,7 +52,6 @@ graph TD;
   ldf-editable-select --> ion-select-option
   ion-button --> ion-ripple-effect
   ldf-editable-text --> ion-input
-  ldf-editor --> ldf-editable-metadata
   style ldf-editable-metadata fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

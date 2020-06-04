@@ -28,32 +28,13 @@
 ### Depends on
 
 - [ldf-label-bar](../label-bar)
-- [ldf-editable-metadata](../editable-metadata)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
   ldf-editor --> ldf-label-bar
-  ldf-editor --> ldf-editable-metadata
   ldf-editor --> ldf-liturgical-document
-  ldf-editable-metadata --> ion-item
-  ldf-editable-metadata --> ion-label
-  ldf-editable-metadata --> ldf-editable-select
-  ldf-editable-metadata --> ion-header
-  ldf-editable-metadata --> ion-toolbar
-  ldf-editable-metadata --> ion-title
-  ldf-editable-metadata --> ion-buttons
-  ldf-editable-metadata --> ion-button
-  ldf-editable-metadata --> ion-icon
-  ldf-editable-metadata --> ion-content
-  ldf-editable-metadata --> ldf-editable-text
-  ion-item --> ion-icon
-  ion-item --> ion-ripple-effect
-  ldf-editable-select --> ion-select
-  ldf-editable-select --> ion-select-option
-  ion-button --> ion-ripple-effect
-  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
   ldf-liturgical-document --> ldf-meditation
@@ -71,10 +52,12 @@ graph TD;
   ion-modal --> ion-backdrop
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-editable-text --> ion-input
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
+  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label

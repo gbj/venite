@@ -45,31 +45,31 @@ export class HeadingComponent {
   }
 
   // Convert level/text into an H... node
-  private headerNode(level : number, text : string) : JSX.Element {
-    const EditableNode : FunctionalComponent<{ text: string; }> = ({text}) => (
+  private headerNode(level : number, text : string, index : number) : JSX.Element {
+    const EditableNode : FunctionalComponent<{ text: string; index: number; }> = ({text, index}) => (
       <ldf-editable-text
-        id={`${this.obj.uid || this.obj.slug}-heading`}
+        id={`${this.obj.uid || this.obj.slug}-heading-${index}`}
         text={text}
-        path={`${this.path}/label`}>
+        path={`${this.path}/value/${index}`}>
       </ldf-editable-text>
     );
 
     let node : JSX.Element;
     switch(level) {
       case 1:
-        node = <h1>{this.editable ? <EditableNode text={text}/> : text}</h1>;
+        node = <h1>{this.editable ? <EditableNode text={text} index={index} /> : text}</h1>;
         break;
       case 2:
-        node = <h2>{this.editable ? <EditableNode text={text}/> : text}</h2>;
+        node = <h2>{this.editable ? <EditableNode text={text} index={index}/> : text}</h2>;
         break;
       case 3:
-        node = <h3 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h3>;
+        node = <h3 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h3>;
         break;
       case 4:
-        node = <h4 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h4>;
+        node = <h4 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h4>;
         break;
       case 5:
-        node = <h5 slot='start'>{this.editable ? <EditableNode text={text}/> : text}</h5>;
+        node = <h5 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h5>;
         break;
     }
     return node;
@@ -111,7 +111,7 @@ export class HeadingComponent {
 
         <ldf-label-bar>
           {/* `Heading.label` => main header node */}
-          {this.obj?.value?.map(text => this.headerNode(level, text))}
+          {this.obj?.value?.map((text, index) => this.headerNode(level, text, index))}
 
           {/* `Heading.citation` => right-aligned*/}
           {hasCitation && this.citationNode(this.obj.citation)}

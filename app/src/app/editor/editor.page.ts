@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs'; 
+import { Observable, BehaviorSubject, Subscription } from 'rxjs'; 
 import { switchMap, map, tap, take } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
 import { LiturgicalDocument, User } from '@venite/ldf';
 import { DocumentManager } from './document-manager';
+import { randomColor } from './random-color';
 
 @Component({
   selector: 'venite-editor',
@@ -16,8 +17,8 @@ import { DocumentManager } from './document-manager';
 export class EditorPage implements OnInit, OnDestroy {
   // The document being edited
   docId$ : Observable<string>;
-  doc$ : Observable<LiturgicalDocument>;
   manager$ : Observable<DocumentManager>;
+  doc$ : Observable<LiturgicalDocument>;
 
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
@@ -32,15 +33,15 @@ export class EditorPage implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Current doc
-    this.doc$ = this.route.params.pipe(
-      switchMap(params => this.documents.findDocumentById(params.docId))
-    );
     this.docId$ = this.route.params.pipe(
       // grab the docId from params
       map(params => params.docId)
     );
     this.manager$ = this.docId$.pipe(
       switchMap(docId => this.editorService.join(docId)),
+    );
+    this.doc$ = this.manager$.pipe(
+      map(manager => new LiturgicalDocument(manager.doc)),
     );
 
     // All docs
@@ -50,6 +51,7 @@ export class EditorPage implements OnInit, OnDestroy {
   // OnDestroy -- leave document
   ngOnDestroy() {
     this.editorService.leave();
+  //  this.subscription.unsubscribe();
   }
 
   // Called whenever the user's cursor moves within this editor
@@ -58,8 +60,9 @@ export class EditorPage implements OnInit, OnDestroy {
   }
 
   // Called whenever the user changes a document within this editor
-  updateDoc(docId : string, ev : CustomEvent) {
-    this.editorService.updateDoc(docId, ev.detail);
+  updateDoc(docId : string, doc : LiturgicalDocument, ev : CustomEvent) {
+    const newDoc = this.editorService.updateDoc(docId, doc, ev.detail);
+ //   this.doc$.next(JSON.parse(JSON.stringify(newDoc)));
   }
 
 }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
+import * as Automerge from 'automerge';
+import * as pointer from 'json-pointer';
 
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 import { Observable, combineLatest, from } from 'rxjs';
@@ -15,6 +17,7 @@ import { randomColor } from './random-color';
 export class EditorService {
   private _docId : string;
   private _uid : string;
+  private _automergeDoc : Automerge.Doc<LiturgicalDocument>;
 
   constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
 
@@ -44,9 +47,7 @@ export class EditorService {
         if(exists) {
           return from(docManager.update({
             // TODO: fix typing
-            users: {
-              [(user as User).uid]: user as User
-            }
+            [`users.${(user as User).uid}`]: user
           })).pipe(
             tap(val => console.log('manager = ', val)),
             switchMap(() => docManager.valueChanges())
@@ -90,12 +91,72 @@ export class EditorService {
   updateCursor(docId : string, cursor : Cursor) {
     return this.afs.doc<DocumentManager>(`DocumentManager/${docId}`)
       .update({
-        [`cursors.${this._uid}`]: { ... cursor } // error because we're including a textarea
+        [`cursors.${this._uid}`]: { path: cursor.path, start: cursor.start, end: cursor.end } // error because we're including a textarea
       })
   }
 
-  updateDoc(docId : string, change : Change) {
+  /** Applies an LDF `Change` to an LDF `LiturgicalDocument` and stores the Automerge changes in the database */
+  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) : LiturgicalDocument {
+    const oldDoc = this.docToAutomergeDoc(doc);
+    
+    // translate LDF `Change` into Automerge ops
+    const newDoc = this.applyChange(oldDoc, change);
 
+    // serialize changes and share them to other clients
+    const changes = Automerge.getChanges(oldDoc, newDoc);
+    this.afs.doc<DocumentManager>(`DocumentManager/${docId}`)
+      .update({
+        doc: JSON.parse(JSON.stringify(newDoc)),
+        //@ts-ignore
+        changes: firebase.firestore.FieldValue.arrayUnion(... changes)
+      })
+
+    return newDoc;
   }
 
+  docToAutomergeDoc(doc : LiturgicalDocument) : Automerge.Doc<LiturgicalDocument> {
+    return Automerge.from(doc);
+  }
+
+  /** Applies an LDF `Change` to an Automerge `Doc` and returns the new `Doc` */
+  applyChange(oldDoc : Automerge.Doc<LiturgicalDocument>, change : Change) : Automerge.Doc<LiturgicalDocument> {
+    return Automerge.change(oldDoc, doc => {
+      // grab object being modified using JSON pointer
+      let obj = pointer.get(doc, change.path);
+
+      // iterate over ops and handle by type
+      change.op.forEach(op => {
+        switch(op.type) {
+          case 'insertAt':
+            // if represented as a string, change into Automerge.Text
+            if(typeof obj === 'string') {
+              pointer.set(doc, change.path, new Automerge.Text(obj))
+              obj = pointer.get(doc, change.path);
+            }
+            // if a Text, spread the string `value` into multiple arguments
+            if(typeof op.value === 'string') {
+              obj.insertAt(op.index, ... op.value);
+            }
+            // otherwise, just insert it
+            else {
+              obj.insertAt(op.index, op.value);
+            }
+            break;
+          case 'deleteAt':
+            if(typeof obj === 'string') {
+              pointer.set(doc, change.path, new Automerge.Text(obj))
+              obj = pointer.get(doc, change.path);
+            }
+            obj.deleteAt(op.index);
+            break;
+          case 'set':
+            obj[op.index] = op.value;
+            break;
+          case 'delete':
+            delete obj[op.index];
+            break;
+        }
+      });
+    });
+  }
 }
