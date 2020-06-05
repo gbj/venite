@@ -1,12 +1,12 @@
 <!-- Editor -- if doc$ is available -->
-<ng-container *ngIf="manager$ | async as manager else list">
+<ng-container *ngIf="doc$ | async as doc else list">
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-back-button></ion-back-button>
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title><h1>{{ manager.doc.label }}</h1></ion-title>
+      <ion-title><h1>{{ doc?.label }}</h1></ion-title>
       <ion-buttons collapse="true" slot="end">
         <venite-auth-menu-button></venite-auth-menu-button>
       </ion-buttons>
@@ -16,20 +16,19 @@
   <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
       <ion-toolbar>
-        <ion-title size="large"><h1>{{ manager.doc.label }}</h1></ion-title>
+        <ion-title size="large"><h1>{{ doc?.label }}</h1></ion-title>
       </ion-toolbar>
     </ion-header>
   
-    <article>
+    <article *ngIf="manager$ | async as manager">
       <ldf-editor
-        [doc]="doc$ | async | json"
+        [doc]="doc | json"
         [uid]="(auth.user | async)?.uid"
         [cursors]="manager.cursors"
         [users]="manager.users"
         (editorCursorMoved)="updateCursor(manager.docId, $event)"
-        (editorDocShouldChange)="updateDoc(manager.docId, manager.doc, $event)"
+        (editorDocShouldChange)="updateDoc(manager.docId, doc, $event)"
       ></ldf-editor>
-      <pre>{{ doc$ | async | json }}</pre>
     </article>
   </ion-content>
 </ng-container>

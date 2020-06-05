@@ -5,7 +5,7 @@ import * as Automerge from 'automerge';
 import * as pointer from 'json-pointer';
 
 import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
-import { Observable, combineLatest, from } from 'rxjs';
+import { Observable, Subject, combineLatest, from, BehaviorSubject } from 'rxjs';
 import { DocumentManager, DocumentManagerChange } from './document-manager';
 import { map, tap, switchMap, take, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
@@ -17,18 +17,16 @@ import { randomColor } from './random-color';
 export class EditorService {
   private _docId : string;
   private _uid : string;
-  private _automergeDoc : Automerge.Doc<LiturgicalDocument>;
+  public latestDoc : BehaviorSubject<Automerge.Doc<LiturgicalDocument>> = new BehaviorSubject(undefined);
 
   constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
 
   // TODO: fix typing
   join(docId : string) : Observable<any>  {
-    console.log('join');
     const docManager = this.afs.doc<DocumentManager>(`DocumentManager/${docId}`),
           docManagerExists$ = docManager.snapshotChanges().pipe(
             map(action => action.payload.exists),
           ),
-          docManager$ = docManager.valueChanges(),
           doc = this.afs.doc<LiturgicalDocument>(`Document/${docId}`),
           doc$ = doc.valueChanges();
     return combineLatest(docManagerExists$, doc$, this.auth.user).pipe(
@@ -41,27 +39,33 @@ export class EditorService {
       }),
       map(([exists, doc, user]) => [exists, doc, this.userFromUser(user)]),
       // return observable of the DocumentManager
-      switchMap(([exists, doc, user]) => {
+      switchMap(([exists, doc, user]) => {  
+        // start with an empty node and await changes
+        this.latestDoc.next(Automerge.init());
+  
         // if it exists, update it
         if(exists) {
           return from(docManager.update({
-            // TODO: fix typing
             [`users.${(user as User).uid}`]: user
           })).pipe(
-            tap(val => console.log('manager = ', val)),
             switchMap(() => docManager.valueChanges())
           )
         }
         // if it doesn't exist, create
         else {
+          // push changes to get to current document state
+          const node = Automerge.change(Automerge.init(), initDoc =>
+            Object.assign(initDoc, doc)
+          );
+          this.pushChanges(docId, Automerge.getAllChanges(node));
+          this.latestDoc.next(node);
+
           return from(docManager.set({
             docId,
-            doc: Automerge.save(this.docToAutomergeDoc(doc as LiturgicalDocument)),
             users: {
               [(user as User).uid]: user as User
             }
           })).pipe(
-            tap(val => console.log('manager = ', val)),
             switchMap(() => docManager.valueChanges())
           )
         }
@@ -94,51 +98,36 @@ export class EditorService {
       })
   }
 
-  docToAutomergeDoc(doc : LiturgicalDocument) : Automerge.Doc<LiturgicalDocument> {
-    return Automerge.from(doc);
-  }
-
   /** Observable of all changes made to the document by another user, as they come through */
   findChanges(docId : string) : Observable<DocumentManagerChange[]> {
     return this.afs.collection<DocumentManagerChange>('DocumentManagerChange', ref =>
       ref.where('docId', '==', docId)
-    ).snapshotChanges().pipe(
-      map(actions =>
-        actions
-          // take only changes that are being added by another user
-          .filter(changeaction =>
-            changeaction.type == 'added' && changeaction.payload.doc.data().uid !== this._uid
-          )
-          // and return the document itself
-          .map(changeaction => changeaction.payload.doc.data())
-      )
-    );
+    ).valueChanges();
   }
 
   /** Applies an LDF `Change` to an LDF `LiturgicalDocument` and stores the Automerge changes in the database */
-  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) : LiturgicalDocument {    
+  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) {    
     // translate LDF `Change` into Automerge ops
-    const newDoc = this.applyChange(oldDoc, change);
+    const newDoc = this.applyChange(doc, change);
 
     // serialize changes and share them to other clients
-    const changes = Automerge.getChanges(oldDoc, newDoc);
+    const changes = Automerge.getChanges(doc, newDoc);
 
+    this.pushChanges(docId, changes);
+
+    this.latestDoc.next(newDoc);
+  }
+
+  pushChanges(docId : string, changes : Automerge.Change[]) {
     this.afs.collection<DocumentManagerChange>('DocumentManagerChange').add({
       docId,
       uid: this._uid,
       changes
     });
-
-    return newDoc;
   }
 
-  applyExternalChanges(changes : DocumentManagerChange[]) : Automerge.Doc<LiturgicalDocument> {
-    console.log('doc = ', this._automergeDoc);
-    console.log('changes = ', changes.map(change => change.changes).flat());
-    console.log('new doc = ', Automerge.applyChanges(this._automergeDoc, changes.map(change => change.changes).flat()));
-    this._automergeDoc = Automerge.applyChanges(this._automergeDoc, changes.map(change => change.changes).flat());
-    
-    return this._automergeDoc;
+  applyExternalChanges(doc : Automerge.Doc<LiturgicalDocument>, changes : DocumentManagerChange[]) : Automerge.Doc<LiturgicalDocument>  {
+    return Automerge.applyChanges(Automerge.init(), changes.map(change => change.changes).flat());
   }
 
   /** Applies an LDF `Change` to an Automerge `Doc` and returns the new `Doc` */

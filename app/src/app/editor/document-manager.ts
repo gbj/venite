@@ -3,7 +3,6 @@ import * as Automerge from 'automerge';
 
 export class DocumentManager {
     docId : string;
-    doc : string; // Automerge.Doc<LiturgicalDocument> serialized by Automerge.save()
     users?: {
         [uid: string]: User;
     } 

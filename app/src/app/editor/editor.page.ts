@@ -1,13 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, BehaviorSubject, Subscription, combineLatest } from 'rxjs'; 
-import { switchMap, map, tap, take } from 'rxjs/operators';
+import { Observable, BehaviorSubject, Subscription, combineLatest, merge } from 'rxjs'; 
+import { switchMap, map, tap, take, startWith } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
 import { LiturgicalDocument, User } from '@venite/ldf';
 import { DocumentManager, DocumentManagerChange } from './document-manager';
 import { randomColor } from './random-color';
+import * as Automerge from 'automerge';
 
 @Component({
   selector: 'venite-editor',
@@ -18,7 +19,7 @@ export class EditorPage implements OnInit, OnDestroy {
   // The document being edited
   docId$ : Observable<string>;
   manager$ : Observable<DocumentManager>;
-  doc$ : Observable<LiturgicalDocument>;
+  doc$ : Observable<Automerge.Doc<LiturgicalDocument>>;
   changes$ : Observable<DocumentManagerChange[]>;//LiturgicalDocument>;
 
   // All documents to which the user has access to edit
@@ -38,15 +39,22 @@ export class EditorPage implements OnInit, OnDestroy {
       // grab the docId from params
       map(params => params.docId)
     );
+    // Document manager
     this.manager$ = this.docId$.pipe(
       switchMap(docId => this.editorService.join(docId)),
     );
+    // Changes applied by other users to this document
     this.changes$ = this.docId$.pipe(
-      switchMap(docId => this.editorService.findChanges(docId))
+      switchMap(docId => this.editorService.findChanges(docId)),
     );
-    this.doc$ = combineLatest(this.manager$, this.changes$).pipe(
-      map(([manager, changes]) => this.editorService.applyExternalChanges(changes)),
-    );
+
+    // Latest version of the document
+    this.doc$  =
+      combineLatest(this.editorService.latestDoc, this.changes$).pipe(
+        map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes)),
+        tap(doc => console.log('docWithChanges doc = ', doc))
+      );
+    //this.doc$ = this.editorService.latestDoc;
 
     // All docs
     this.docs$ = this.documents.findDocuments();
