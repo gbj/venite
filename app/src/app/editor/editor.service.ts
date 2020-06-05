@@ -58,7 +58,7 @@ export class EditorService {
             Object.assign(initDoc, doc)
           );
           this.pushChanges(docId, Automerge.getAllChanges(node));
-          this.latestDoc.next(node);
+          this.latestDoc.next(new LiturgicalDocument(node));
 
           return from(docManager.set({
             docId,
