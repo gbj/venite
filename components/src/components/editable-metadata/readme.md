@@ -23,6 +23,7 @@
 - ion-item
 - ion-label
 - [ldf-editable-select](../editable-select)
+- [ldf-editable-text](../editable-text)
 - ion-header
 - ion-toolbar
 - ion-title
@@ -30,7 +31,6 @@
 - ion-button
 - ion-icon
 - ion-content
-- [ldf-editable-text](../editable-text)
 
 ### Graph
 ```mermaid
@@ -38,6 +38,7 @@ graph TD;
   ldf-editable-metadata --> ion-item
   ldf-editable-metadata --> ion-label
   ldf-editable-metadata --> ldf-editable-select
+  ldf-editable-metadata --> ldf-editable-text
   ldf-editable-metadata --> ion-header
   ldf-editable-metadata --> ion-toolbar
   ldf-editable-metadata --> ion-title
@@ -45,13 +46,12 @@ graph TD;
   ldf-editable-metadata --> ion-button
   ldf-editable-metadata --> ion-icon
   ldf-editable-metadata --> ion-content
-  ldf-editable-metadata --> ldf-editable-text
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   ldf-editable-select --> ion-select
   ldf-editable-select --> ion-select-option
-  ion-button --> ion-ripple-effect
   ldf-editable-text --> ion-input
+  ion-button --> ion-ripple-effect
   style ldf-editable-metadata fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

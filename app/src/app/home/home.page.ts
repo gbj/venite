@@ -102,7 +102,14 @@ export class HomePage implements OnInit {
   navigate(root : string, liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences) {
     console.log('navigating', root, liturgy, day, prefs);
     const [y, m, d] = day?.date?.split('-'),
-          commands : string[] = [root, liturgy?.language, liturgy?.version, day?.kalendar, y, m, d, liturgy?.slug];
+          commands : string[] = [
+            root,
+            liturgy?.language,
+            liturgy?.version,
+            day?.kalendar,
+            y, m, d,
+            liturgy?.slug
+          ];
     console.log('commands = ', commands);
     this.router.navigate(commands, { state: { liturgy, day, prefs } });
   }

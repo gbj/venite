@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { LiturgicalDocument, Liturgy } from '@venite/ldf';
@@ -46,5 +46,13 @@ export class DocumentService {
       // extra ID and document data and leave the rest behind
       map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
     );
+  }
+
+  saveDocument(docId : string, doc : LiturgicalDocument) : Observable<any> {
+    return from(this.afs.doc<LiturgicalDocument>(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
+  }
+
+  slugify(doc : LiturgicalDocument) : string {
+    return doc.label?.replace(/\s/g, '-').toLowerCase();
   }
 }

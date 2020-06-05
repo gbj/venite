@@ -30,5 +30,5 @@ export function handleInput(path: string, oldValue: string, newValue: string) : 
     })
   });
 
-  return new Change({ path, op });
+  return new Change({ path: path?.replace('//', '/'), op });
 }

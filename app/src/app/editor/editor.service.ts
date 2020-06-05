@@ -134,7 +134,15 @@ export class EditorService {
   applyChange(oldDoc : Automerge.Doc<LiturgicalDocument>, change : Change) : Automerge.Doc<LiturgicalDocument> {
     return Automerge.change(oldDoc, doc => {
       // grab object being modified using JSON pointer
-      let obj = pointer.get(doc, change.path);
+      console.log('grabbing reference from ', doc, change.path);
+      let obj = doc;
+      try {
+        obj = pointer.get(doc, change.path);
+      } catch(e) {
+        pointer.set(doc, change.path, '');
+        obj = pointer.get(doc, change.path);
+        console.warn(e);
+      }
 
       // iterate over ops and handle by type
       change.op.forEach(op => {

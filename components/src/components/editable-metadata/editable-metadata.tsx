@@ -97,6 +97,18 @@ export class EditableMetadataComponent {
       </ion-item>
     );
 
+    const TextField : FunctionalComponent<{ name }> = ({ name }) => (
+      <ion-item lines='none'>
+        <ion-label aria-label={localeStrings[name]} position='stacked'>{localeStrings[name]}</ion-label>
+        <ldf-editable-text id={name}
+          short={true}
+          path={`${this.path}/${name}`}
+          text={this.obj[name]}
+          placeholder={localeStrings[name]}>
+        </ldf-editable-text>
+      </ion-item>
+    )
+
     return (
       <Host>
         <ion-header>
@@ -119,15 +131,12 @@ export class EditableMetadataComponent {
             {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
 
             {/* `label` */}
-            <ion-item lines='none'>
-              <ion-label aria-label={localeStrings.label} position='stacked'>{localeStrings.label}</ion-label>
-              <ldf-editable-text id='label'
-                short={true}
-                path={`${this.path}/label`}
-                text={this.obj.label}
-                placeholder={localeStrings.label}>
-              </ldf-editable-text>
-            </ion-item>
+            <TextField name="label"/>
+
+            {/* `tradition`, `language` and `version` */}
+            <TextField name="tradition"/>
+            <TextField name="language"/>
+            <TextField name="version"/>
           </form>
         </ion-content>
       </Host>

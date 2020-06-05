@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Listen, Event, EventEmitter, Method, Host, State, Watch, h } from '@stencil/core';
+import { Component, Element, Prop, Listen, Event, EventEmitter, Host, State, Watch, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 
 import { Change, Cursor } from '@venite/ldf';
@@ -26,26 +26,20 @@ export class EditableTextComponent {
   @Prop() text: string;
   @Watch('text')
   textChanged(newText : string) {
-    console.log('newText = ', newText);
     this.currentText = newText;
     if(this.textarea) {
       this.textarea.value = this.currentText;
     }
+    this.autoGrow();
   }
 
-  /**
-   * A JSON Pointer that points to the Collect being edited
-   */
+  /** A JSON Pointer that points to the text field being edited */
   @Prop({ reflect: true }) path: string;
 
-  /**
-   * Displays if text is falsy or an empty string
-   */
+  /** Displays if text is falsy or an empty string */
   @Prop() placeholder: string;
 
-  /**
-   * Whether to display as a short, single-line input
-   */
+  /** Whether to display as a short, single-line input */
   @Prop() short : boolean;
 
   // Life Cycle
@@ -71,7 +65,7 @@ export class EditableTextComponent {
 
     // calculate changes to be made
     const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);
-    
+
     // save previous value for diffing purposes on next change
     this.previousText = this.cursor.element.value;
 
@@ -107,10 +101,9 @@ export class EditableTextComponent {
     this.registerCursor();
   }
 
-  // Public Methods
+  // Private Methods
   /** Sets private cursor field to a Cursor instance and sends it as a `cursor` event */
-  @Method()
-  async registerCursor() : Promise<Cursor> {
+  registerCursor() : Cursor {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
     if(!this.cursor || start !== this.cursor.start || end !== this.cursor.end) {
@@ -120,13 +113,12 @@ export class EditableTextComponent {
     return this.cursor;
   }
 
-  /** Expand the child textarea horizontally to fit its content */
+  /** Expand the child textarea vertically to fit its content */
   autoGrow() {
-    if(!this.short) {
+    if(!this.short && this.textarea) {
       /* this code is cosmetic, not essential, and relies on the global `window`
-       * we can't guarantee that `window` is always available (e.g., in Angular Unievrsal)
-       * so if there’s no window, just do nothing and let the textarea UI be
-       */
+       * we can't guarantee that `window` is always available (e.g., in Angular Universal)
+       * so if there’s no window, just do nothing and let the textarea UI be */
       if(window) {
         // reset the textarea height
         this.textarea.style.height = '1.5em';

@@ -3,10 +3,10 @@ article {
     flex-direction: row;
 
     ldf-editor {
-        width: 50%;
+        width: 100%;
     }
     pre {
-        width: 50%;
+        width: 0%;
     }
     
     @media(min-height: 767px) {

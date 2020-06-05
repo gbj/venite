@@ -24,13 +24,10 @@ interface FormData {
   templateUrl: './liturgy-preference-menu.component.html',
   styleUrls: ['./liturgy-preference-menu.component.scss'],
 })
-export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges, OnDestroy {
+export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   // preferences for a given liturgy
   @Input() liturgy : Liturgy;
   @Output() clientPreferencesChange : EventEmitter<ClientPreferences> = new EventEmitter();
-
-  // stash subscriptions and clean up when we leave
-  subscription : Subscription;
 
   // starts with input, updated on changes
   preferences : BehaviorSubject<{ [x: string]: Preference}> = new BehaviorSubject({});
@@ -65,10 +62,6 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges, OnDest
 
     // since liturgy has changed, preference queries need to be refreshed
     this.formData = this.buildFormData(this.tree, changes.liturgy.currentValue);
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
   buildTree() : Observable<TreeData> {

@@ -1,5 +1,5 @@
 <!-- Editor -- if doc$ is available -->
-<ng-container *ngIf="doc$ | async as doc else list">
+<ng-container *ngIf="doc$ | async as doc else nodoc">
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -7,13 +7,16 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title><h1>{{ doc?.label }}</h1></ion-title>
+      <ion-text *ngIf="docSaved$ | async as docSaved" slot="end">
+        {{ 'Saved at' | translate }} {{ docSaved | date:'shortTime' }} {{ 'on' | translate }} {{ docSaved | date:'shortDate' }}
+      </ion-text>
       <ion-buttons collapse="true" slot="end">
         <venite-auth-menu-button></venite-auth-menu-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content [fullscreen]="true">
+  <ion-content [fullscreen]="true" class="ion-padding">
     <ion-header collapse="condense">
       <ion-toolbar>
         <ion-title size="large"><h1>{{ doc?.label }}</h1></ion-title>
@@ -34,32 +37,37 @@
 </ng-container>
 
 <!-- If doc is not available -- list all documents to edit-->
-<ng-template #list>
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content #list [fullscreen]="true">
-    <ion-header collapse="condense">
+<ng-template #nodoc>
+  <ng-container *ngIf="docId$ | async as docId else list">
+    Loading document...
+  </ng-container>
+  <ng-template #list>
+    <ion-header [translucent]="true">
       <ion-toolbar>
-        <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
       </ion-toolbar>
     </ion-header>
-
-    <ion-list *ngIf="docs$ | async as docs else nodocs">
-      <ion-list-header><h2>{{ 'editor.edit-a-document' | translate }}</h2></ion-list-header>
-      <ion-item *ngFor="let doc of docs" [routerLink]="['.', doc.id]">
-        <ion-label>
-          <h3>{{ doc.data?.label }}</h3>
-          <h4>{{ doc.data?.language }} | {{ doc.data?.version }}</h4>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-    <ng-template #nodocs><p>{{ 'editor.Loading' | translate }}</p></ng-template>
-  </ion-content>
+    <ion-content #list [fullscreen]="true">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
+        </ion-toolbar>
+      </ion-header>
+  
+      <ion-list *ngIf="docs$ | async as docs else nodocs">
+        <ion-list-header><h2>{{ 'editor.edit-a-document' | translate }}</h2></ion-list-header>
+        <ion-item *ngFor="let doc of docs" [routerLink]="['.', doc.id]">
+          <ion-label>
+            <h3>{{ doc.data?.label }}</h3>
+            <h4>{{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ng-template #nodocs><p>{{ 'editor.Loading' | translate }}</p></ng-template>
+    </ion-content>
+  </ng-template>
 </ng-template>

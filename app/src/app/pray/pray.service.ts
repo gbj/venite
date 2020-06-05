@@ -18,7 +18,9 @@ export class PrayService {
   /** Returns the complete and filtered form for a doc within a particular liturgical context
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
-  compile(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+  compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+    const doc = docBase instanceof LiturgicalDocument ? docBase : new LiturgicalDocument(docBase);
+
     // should the doc be included?
     if(doc.include(day, prefs)) {
 

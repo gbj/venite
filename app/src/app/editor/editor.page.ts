@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, BehaviorSubject, Subscription, combineLatest, merge } from 'rxjs'; 
-import { switchMap, map, tap, take, startWith } from 'rxjs/operators';
+import { switchMap, map, tap, take, startWith, throttle, throttleTime, filter, debounceTime } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
@@ -24,7 +24,7 @@ export class EditorPage implements OnInit, OnDestroy {
 
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
-
+  docSaved$ : Observable<Date>;
 
   constructor(
     public auth : AuthService,
@@ -34,9 +34,15 @@ export class EditorPage implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    // If no docId is given, we use this list of all documents
+    // All docs
+    this.docs$ = this.documents.findDocuments();
+
+    // If a docId is given, we used all the below
     // Current doc
     this.docId$ = this.route.params.pipe(
       // grab the docId from params
+      filter(params => params.hasOwnProperty('docId')),
       map(params => params.docId)
     );
     // Document manager
@@ -49,21 +55,21 @@ export class EditorPage implements OnInit, OnDestroy {
     );
 
     // Latest version of the document
-    this.doc$  =
-      combineLatest(this.editorService.latestDoc, this.changes$).pipe(
-        map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes)),
-        tap(doc => console.log('docWithChanges doc = ', doc))
-      );
-    //this.doc$ = this.editorService.latestDoc;
-
-    // All docs
-    this.docs$ = this.documents.findDocuments();
+    this.doc$ = combineLatest(this.editorService.latestDoc, this.changes$).pipe(
+      tap(value => console.log('combineLatest', value)),
+      map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes)),
+    );
+    // update the document once every 5ms
+    this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
+      debounceTime(5000),
+      switchMap(([docId, doc]) => this.documents.saveDocument(docId, JSON.parse(JSON.stringify(doc)))),
+      map(() => new Date())
+    )
   }
 
   // OnDestroy -- leave document
   ngOnDestroy() {
     this.editorService.leave();
-  //  this.subscription.unsubscribe();
   }
 
   // Called whenever the user's cursor moves within this editor
@@ -73,8 +79,7 @@ export class EditorPage implements OnInit, OnDestroy {
 
   // Called whenever the user changes a document within this editor
   updateDoc(docId : string, doc : LiturgicalDocument, ev : CustomEvent) {
-    const newDoc = this.editorService.updateDoc(docId, doc, ev.detail);
- //   this.doc$.next(JSON.parse(JSON.stringify(newDoc)));
+    this.editorService.updateDoc(docId, doc, ev.detail);
   }
 
 }

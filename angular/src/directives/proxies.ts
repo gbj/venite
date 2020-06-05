@@ -1241,7 +1241,7 @@ export class LdfEditableSelect {
 }
 
 export declare interface LdfEditableText extends Components.LdfEditableText {}
-@ProxyCmp({inputs: ['path', 'placeholder', 'short', 'text'], 'methods': ['registerCursor']})
+@ProxyCmp({inputs: ['path', 'placeholder', 'short', 'text']})
 @Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'placeholder', 'short', 'text'] })
 export class LdfEditableText {
   ldfCursorMoved!: EventEmitter<CustomEvent>;
