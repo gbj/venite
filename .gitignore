@@ -11,3 +11,5 @@ node_modules/
 certs/
 */dist/
 design/
+**/.firebaserc
+**/.firebase
