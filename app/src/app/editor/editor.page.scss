@@ -9,7 +9,7 @@ article {
         width: 0%;
     }
     
-    @media(min-height: 767px) {
+    @media(min-width: 767px) {
         ldf-editor {
             width: 50%;
         }

@@ -30,7 +30,7 @@ export class EditorPage implements OnInit, OnDestroy {
     public auth : AuthService,
     private route : ActivatedRoute,
     private documents : DocumentService,
-    private editorService : EditorService,
+    public editorService : EditorService,
   ) { }
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class EditorPage implements OnInit, OnDestroy {
     // All docs
     this.docs$ = this.documents.findDocuments();
 
-    // If a docId is given, we used all the below
+    // If a docId is given, we use all the below
     // Current doc
     this.docId$ = this.route.params.pipe(
       // grab the docId from params
@@ -56,7 +56,6 @@ export class EditorPage implements OnInit, OnDestroy {
 
     // Latest version of the document
     this.doc$ = combineLatest(this.editorService.latestDoc, this.changes$).pipe(
-      tap(value => console.log('combineLatest', value)),
       map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes))
     );
     // update the document once every 5ms

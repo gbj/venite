@@ -32,6 +32,13 @@
         (editorCursorMoved)="updateCursor(manager.docId, $event)"
         (editorDocShouldChange)="updateDoc(manager.docId, doc, $event)"
       ></ldf-editor>
+      <pre>
+      doc: {{ doc | json }}
+        
+      latestDoc: {{ editorService.latestDoc | async | json }}
+
+      changes: {{ changes$ | async | json }}
+      </pre>
     </article>
   </ion-content>
 </ng-container>
