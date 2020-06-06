@@ -57,11 +57,11 @@ export class EditorPage implements OnInit, OnDestroy {
     // Latest version of the document
     this.doc$ = combineLatest(this.editorService.latestDoc, this.changes$).pipe(
       tap(value => console.log('combineLatest', value)),
-      map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes)),
+      map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes))
     );
     // update the document once every 5ms
     this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
-      debounceTime(5000),
+      debounceTime(3000),
       switchMap(([docId, doc]) => this.documents.saveDocument(docId, JSON.parse(JSON.stringify(doc)))),
       map(() => new Date())
     )

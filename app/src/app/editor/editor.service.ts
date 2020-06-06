@@ -17,17 +17,18 @@ import { randomColor } from './random-color';
 export class EditorService {
   private _docId : string;
   private _uid : string;
+  private pendingChanges : {[docId: string]: Automerge.Change[]} = {};
   public latestDoc : BehaviorSubject<Automerge.Doc<LiturgicalDocument>> = new BehaviorSubject(undefined);
 
   constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
 
   // TODO: fix typing
   join(docId : string) : Observable<any>  {
-    const docManager = this.afs.doc<DocumentManager>(`DocumentManager/${docId}`),
+    const docManager = this.afs.doc<DocumentManager>(`DocumentManager/${docId.trim()}`),
           docManagerExists$ = docManager.snapshotChanges().pipe(
             map(action => action.payload.exists),
           ),
-          doc = this.afs.doc<LiturgicalDocument>(`Document/${docId}`),
+          doc = this.afs.doc<LiturgicalDocument>(`Document/${docId.trim()}`),
           doc$ = doc.valueChanges();
     return combineLatest(docManagerExists$, doc$, this.auth.user).pipe(
       // only join once
@@ -119,11 +120,21 @@ export class EditorService {
   }
 
   pushChanges(docId : string, changes : Automerge.Change[]) {
-    this.afs.collection<DocumentManagerChange>('DocumentManagerChange').add({
+    if(!this.pendingChanges[docId]) {
+      this.pendingChanges[docId] = changes;
+    } else {
+      this.pendingChanges[docId] = this.pendingChanges[docId].concat(changes);
+    }
+    this.saveChanges(docId);
+  }
+
+  async saveChanges(docId : string) {
+    await this.afs.collection<DocumentManagerChange>('DocumentManagerChange').add({
       docId,
       uid: this._uid,
-      changes
+      changes: this.pendingChanges[docId]
     });
+    this.pendingChanges[docId] = [];
   }
 
   applyExternalChanges(doc : Automerge.Doc<LiturgicalDocument>, changes : DocumentManagerChange[]) : Automerge.Doc<LiturgicalDocument>  {
@@ -134,18 +145,27 @@ export class EditorService {
   applyChange(oldDoc : Automerge.Doc<LiturgicalDocument>, change : Change) : Automerge.Doc<LiturgicalDocument> {
     return Automerge.change(oldDoc, doc => {
       // grab object being modified using JSON pointer
-      console.log('grabbing reference from ', doc, change.path);
-      let obj = doc;
+      let obj = doc as any;
       try {
         obj = pointer.get(doc, change.path);
       } catch(e) {
-        pointer.set(doc, change.path, '');
+        pointer.set(doc, change.path, null);
         obj = pointer.get(doc, change.path);
         console.warn(e);
       }
 
       // iterate over ops and handle by type
       change.op.forEach(op => {
+        // if reference is null or undefined, make it blank
+        if(obj == null) {
+          if(typeof op.value === 'string') {
+            pointer.set(doc, change.path, new Automerge.Text(''))
+          } else {
+            pointer.set(doc, change.path, [])
+          }
+          obj = pointer.get(doc, change.path);
+        }
+
         switch(op.type) {
           case 'insertAt':
             // if represented as a string, change into Automerge.Text
@@ -153,6 +173,7 @@ export class EditorService {
               pointer.set(doc, change.path, new Automerge.Text(obj))
               obj = pointer.get(doc, change.path);
             }
+
             // if a Text, spread the string `value` into multiple arguments
             if(typeof op.value === 'string') {
               obj.insertAt(op.index, ... op.value);
@@ -163,9 +184,18 @@ export class EditorService {
             }
             break;
           case 'deleteAt':
+            // if it's a string, convert it to Automerge.Text so we can delete
             if(typeof obj === 'string') {
               pointer.set(doc, change.path, new Automerge.Text(obj))
               obj = pointer.get(doc, change.path);
+            }
+            // otherwise it's an array, and we need to pop the index off the end
+            // of the path to access the array itself, and not the object being deleted
+            // i.e., /value/1 => /value
+            else {
+              const pathParts = change.path.split('/'),
+                    path = pathParts.slice(0, pathParts.length - 1).join('/');
+              obj = pointer.get(doc, path);
             }
             obj.deleteAt(op.index);
             break;
