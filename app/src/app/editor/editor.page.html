@@ -1,12 +1,12 @@
 <!-- Editor -- if doc$ is available -->
-<ng-container *ngIf="doc$ | async as doc else nodoc">
+<ng-container *ngIf="localManager$ | async as localManager else nodoc">
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-back-button></ion-back-button>
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title><h1>{{ doc?.label }}</h1></ion-title>
+      <ion-title><h1>{{ localManager.document?.label }}</h1></ion-title>
       <ion-text *ngIf="docSaved$ | async as docSaved" slot="end">
         {{ 'Saved at' | translate }} {{ docSaved | date:'shortTime' }} {{ 'on' | translate }} {{ docSaved | date:'shortDate' }}
       </ion-text>
@@ -19,26 +19,27 @@
   <ion-content [fullscreen]="true" class="ion-padding">
     <ion-header collapse="condense">
       <ion-toolbar>
-        <ion-title size="large"><h1>{{ doc?.label }}</h1></ion-title>
+        <ion-title size="large"><h1>{{ localManager.document?.label }}</h1></ion-title>
       </ion-toolbar>
     </ion-header>
   
-    <article *ngIf="manager$ | async as manager">
+    <article *ngIf="serverManager$ | async as serverManager">
       <ldf-editor
-        [doc]="doc | json"
+        [doc]="localManager.document"
         [uid]="(auth.user | async)?.uid"
-        [cursors]="manager.cursors"
-        [users]="manager.users"
-        (editorCursorMoved)="updateCursor(manager.docId, $event)"
-        (editorDocShouldChange)="updateDoc(manager.docId, doc, $event)"
+        [cursors]="serverManager.cursors"
+        [users]="serverManager.users"
+        (editorCursorMoved)="updateCursor(localManager.docId, $event)"
+        (editorDocShouldChange)="processChange(localManager, $event)"
       ></ldf-editor>
-      <pre>
-      doc: {{ doc | json }}
-        
-      latestDoc: {{ editorService.latestDoc | async | json }}
+      <pre>**local** =
 
-      changes: {{ changes$ | async | json }}
+{{ localManager | json }}
       </pre>
+      <pre>**server** =
+
+        {{ serverManager | json }}
+</pre>
     </article>
   </ion-content>
 </ng-container>

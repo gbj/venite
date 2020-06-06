@@ -6,9 +6,7 @@ import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
 import { LiturgicalDocument, User } from '@venite/ldf';
-import { DocumentManager, DocumentManagerChange } from './document-manager';
-import { randomColor } from './random-color';
-import * as Automerge from 'automerge';
+import { DocumentManagerChange, LocalDocumentManager, ServerDocumentManager } from './document-manager';
 
 @Component({
   selector: 'venite-editor',
@@ -18,9 +16,10 @@ import * as Automerge from 'automerge';
 export class EditorPage implements OnInit, OnDestroy {
   // The document being edited
   docId$ : Observable<string>;
-  manager$ : Observable<DocumentManager>;
-  doc$ : Observable<Automerge.Doc<LiturgicalDocument>>;
-  changes$ : Observable<DocumentManagerChange[]>;//LiturgicalDocument>;
+  private _docId : string; // current value of the docId -- only used to leave
+  localManager$ : Observable<LocalDocumentManager>;
+  serverManager$ : Observable<ServerDocumentManager>;
+  doc$ : Observable<LiturgicalDocument>;
 
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
@@ -43,32 +42,34 @@ export class EditorPage implements OnInit, OnDestroy {
     this.docId$ = this.route.params.pipe(
       // grab the docId from params
       filter(params => params.hasOwnProperty('docId')),
-      map(params => params.docId)
+      map(params => params.docId),
+      tap(docId => this._docId = docId)
     );
     // Document manager
-    this.manager$ = this.docId$.pipe(
+    const managers$ = this.docId$.pipe(
       switchMap(docId => this.editorService.join(docId)),
     );
-    // Changes applied by other users to this document
-    this.changes$ = this.docId$.pipe(
-      switchMap(docId => this.editorService.findChanges(docId)),
+    this.localManager$ = managers$.pipe(map(({ local }) => local));
+    this.serverManager$ = managers$.pipe(
+      map(({ server }) => server),
+      // feed remote changes from server back into local manager
+      tap(serverManager => this.editorService.handleRemoteChanges(serverManager))
     );
-
     // Latest version of the document
-    this.doc$ = combineLatest(this.editorService.latestDoc, this.changes$).pipe(
-      map(([doc, changes]) => this.editorService.applyExternalChanges(doc, changes))
-    );
+    //this.doc$ = this.managers$.pipe(map(managers => managers?.local.document));
+    //this.doc$ = this.docId$.pipe(switchMap(docId => this.documents.findDocumentById(docId)));
+    
     // update the document once every 5ms
-    this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
+    /*this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
       debounceTime(5000),
       switchMap(([docId, doc]) => this.documents.saveDocument(docId, JSON.parse(JSON.stringify(doc)))),
       map(() => new Date())
-    )
+    )*/
   }
 
   // OnDestroy -- leave document
   ngOnDestroy() {
-    this.editorService.leave();
+    this.editorService.leave(this._docId);
   }
 
   // Called whenever the user's cursor moves within this editor
@@ -77,8 +78,8 @@ export class EditorPage implements OnInit, OnDestroy {
   }
 
   // Called whenever the user changes a document within this editor
-  updateDoc(docId : string, doc : LiturgicalDocument, ev : CustomEvent) {
-    this.editorService.updateDoc(docId, doc, ev.detail);
+  processChange(manager : LocalDocumentManager, ev : CustomEvent) {
+    this.editorService.processChange(manager, ev.detail);
   }
 
 }

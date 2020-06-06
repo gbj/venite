@@ -1,7 +1,14 @@
-import { User, Cursor, LiturgicalDocument } from '@venite/ldf';
+import { User, Cursor, LiturgicalDocument, Change } from '@venite/ldf';
 import * as Automerge from 'automerge';
+import * as json1 from 'ot-json1';
 
-export class DocumentManager {
+export class DocumentManagerChange {
+    uid : string;
+    lastRevision : number;
+    op : json1.JSONOp;
+}
+
+export class ServerDocumentManager {
     docId : string;
     users?: {
         [uid: string]: User;
@@ -9,11 +16,16 @@ export class DocumentManager {
     cursors?: {
         [uid: string]: Cursor;
     };
-    changes?: Automerge.Change[];
+    pendingChanges: DocumentManagerChange[];
+    revisionLog: DocumentManagerChange[];
 }
 
-export class DocumentManagerChange {
-    docId : string;
-    uid : string;
-    changes : Automerge.Change[];
+export class LocalDocumentManager {
+    hasBeenAcknowledged: boolean = false;
+    lastSyncedRevision: number = 0;
+    sentChanges: DocumentManagerChange[] = new Array();
+    pendingChanges: DocumentManagerChange[] = new Array();
+    document : LiturgicalDocument;
+
+    constructor(public docId : string) { }
 }
