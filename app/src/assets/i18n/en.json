@@ -1,6 +1,7 @@
 {
   "auth": {
     "email": "Email",
+    "error": "That username and password don’t seem to go together!",
     "name": "Name",
     "password": "Password",
     "register": "Create an Account",
