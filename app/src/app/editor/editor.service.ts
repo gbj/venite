@@ -17,8 +17,6 @@ import { randomColor } from './random-color';
 export class EditorService {
   private _docId : string;
   private _uid : string;
-  private _isUpdating : boolean = false;
-  private changeQueue : {[docId: string]: Change[]} = {};
   private pendingChanges : {[docId: string]: Automerge.Change[]} = {};
   public latestDoc : BehaviorSubject<Automerge.Doc<LiturgicalDocument>> = new BehaviorSubject(undefined);
 
@@ -110,9 +108,9 @@ export class EditorService {
       map(actions =>
         actions
           // take only changes that are being added by another user
-          .filter(changeaction =>
-            changeaction.type == 'added' && changeaction.payload.doc.data().uid !== this._uid
-          )
+          //.filter(changeaction =>
+           // changeaction.type == 'added' && changeaction.payload.doc.data().uid !== this._uid
+          //)
           // and return the document itself
           .map(changeaction => changeaction.payload.doc.data())
       )
@@ -120,33 +118,16 @@ export class EditorService {
   }
 
   /** Applies an LDF `Change` to an LDF `LiturgicalDocument` and stores the Automerge changes in the database */
-  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) {
-    // add change to queue
-    if(!this.changeQueue[docId]) {
-      this.changeQueue[docId] = new Array(change);
-    } else {
-      this.changeQueue[docId].push(change);
-    }
+  updateDoc(docId : string, doc : LiturgicalDocument, change : Change) {    
+    // translate LDF `Change` into Automerge ops
+    const newDoc = this.applyChange(doc, change);
 
-    // if not currently updating, apply changes
-    if(!this._isUpdating) {
-      this._isUpdating = true;
-  
-      // translate LDF `Change` into Automerge ops
-      let newDoc = doc;
-      this.changeQueue[docId].forEach(change => {
-        newDoc = this.applyChange(newDoc, change)
-      });
+    // serialize changes and share them to other clients
+    const changes = Automerge.getChanges(doc, newDoc);
 
-      // serialize changes and share them to other clients
-      const changes = Automerge.getChanges(doc, newDoc);
+    this.pushChanges(docId, changes);
 
-      this.pushChanges(docId, changes);
-
-      this.latestDoc.next(newDoc);
-      console.log('nexted latestDoc', newDoc);
-      this._isUpdating = false;
-    }
+    this.latestDoc.next(newDoc);
   }
 
   pushChanges(docId : string, changes : Automerge.Change[]) {

@@ -49,7 +49,7 @@ export class DocumentService {
   }
 
   saveDocument(docId : string, doc : LiturgicalDocument) : Observable<any> {
-    return from(this.afs.doc<Partial<LiturgicalDocument>>(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
+    return from(this.afs.doc(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
   }
 
   slugify(doc : LiturgicalDocument) : string {

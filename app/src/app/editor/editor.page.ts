@@ -60,7 +60,7 @@ export class EditorPage implements OnInit, OnDestroy {
     );
     // update the document once every 5ms
     this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
-      debounceTime(3000),
+      debounceTime(5000),
       switchMap(([docId, doc]) => this.documents.saveDocument(docId, JSON.parse(JSON.stringify(doc)))),
       map(() => new Date())
     )
