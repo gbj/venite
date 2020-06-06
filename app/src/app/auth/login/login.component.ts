@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'venite-login',
@@ -12,7 +13,10 @@ export class LoginComponent implements OnInit {
   error: string;
   registering : boolean = false;
 
-  constructor(public auth: AuthService) { }
+  constructor(
+    public auth: AuthService,
+    private modal : ModalController
+  ) { }
 
   ngOnInit() {}
 
@@ -27,5 +31,16 @@ export class LoginComponent implements OnInit {
       console.warn(e);
       this.error = e.message;
     }
+  }
+
+  async login(service : string) {
+    const credential = await this.auth.login(service);
+    if(credential) {
+      this.modal.dismiss();
+    }
+  }
+
+  async logout() {
+    this.auth.logout();
   }
 }

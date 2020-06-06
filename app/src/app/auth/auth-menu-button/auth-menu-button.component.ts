@@ -23,7 +23,9 @@ export class AuthMenuButtonComponent implements OnInit {
 
   async signIn() {
     const modal = await this.modal.create({
-      component: LoginComponent
+      component: LoginComponent,
+      swipeToClose: true,
+      showBackdrop: true
     });
     return await modal.present();
   }

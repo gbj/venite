@@ -1,57 +1,59 @@
-<div class="sign-in-block">
-  <ion-card>
-    <ion-card-header>
-      <ion-img src='/assets/icon/venite.svg'></ion-img>
-      <ion-card-title>{{ 'auth.sign-in' | translate }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <!-- Sign in -->
-      <ng-container *ngIf="!(auth.user | async)">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'auth.sign-in' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button aria-role="Button" aria-label="{{ 'Close' | translate }}">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div  class="sign-in-block">
+ <!-- Sign in -->
+ <ng-container *ngIf="!(auth.user | async)">
 
-        <!-- Sign in with Social Providers -->
-        <div class="social-providers">
-          <ion-button (click)="auth.login('Google')">
-            <ion-icon name="logo-google" slot="start"></ion-icon>
-            <ion-label>{{ 'auth.sign-in-with-google' | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="auth.login('Twitter')" color="secondary">
-            <ion-icon name="logo-twitter" slot="start"></ion-icon>
-            <ion-label>{{ 'auth.sign-in-with-twitter' | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="auth.login('Apple')" color="dark">
-            <ion-icon name="logo-apple" slot="start"></ion-icon>
-            <ion-label>{{ 'auth.sign-in-with-apple' | translate }}</ion-label>
-          </ion-button>
-        </div>
+  <!-- Sign in with Social Providers -->
+  <div class="social-providers">
+    <ion-button (click)="login('Google')">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      <ion-label>{{ 'auth.sign-in-with-google' | translate }}</ion-label>
+    </ion-button>
+    <ion-button (click)="login('Twitter')" color="secondary">
+      <ion-icon name="logo-twitter" slot="start"></ion-icon>
+      <ion-label>{{ 'auth.sign-in-with-twitter' | translate }}</ion-label>
+    </ion-button>
+    <ion-button (click)="login('Apple')" color="dark">
+      <ion-icon name="logo-apple" slot="start"></ion-icon>
+      <ion-label>{{ 'auth.sign-in-with-apple' | translate }}</ion-label>
+    </ion-button>
+  </div>
 
-        <ion-item-divider></ion-item-divider>
+  <!-- Sign in with Email -->
+  <ion-item>
+    <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
+    <ion-input type="email" [(ngModel)]='email'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'auth.password' | translate }}</ion-label>
+    <ion-input [(ngModel)]='password' type='password'></ion-input>
+    <ion-text *ngIf="error" color="danger">{{ 'auth.error' | translate }}</ion-text>
+  </ion-item>
+  <div class="email">
+    <ion-button (click)="submitEmailAndPassword()">
+      <ion-icon name="log-in" slot="start"></ion-icon>
+      <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
+    </ion-button>
+    <ion-button fill="clear" [routerLink]="['register']">{{ 'auth.register' | translate }}</ion-button>
+  </div>
+</ng-container>
 
-        <!-- Sign in with Email -->
-        <ion-item>
-          <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
-          <ion-input [(ngModel)]='email'></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">{{ 'auth.password' | translate }}</ion-label>
-          <ion-input [(ngModel)]='password' type='password'></ion-input>
-          <ion-text *ngIf="error" color="danger">{{ error }}</ion-text>
-        </ion-item>
-        <div class="email">
-          <ion-button (click)="submitEmailAndPassword()">
-            <ion-icon name="log-in" slot="start"></ion-icon>
-            <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
-          </ion-button>
-          <ion-button fill="clear" [routerLink]="['register']">{{ 'auth.register' | translate }}</ion-button>
-        </div>
-      </ng-container>
-
-      <!-- Sign Out -->
-      <div *ngIf="auth.user | async" class="sign-out">
-        <ion-button (click)="auth.logout()">
-          <ion-icon name="log-out" slot="start"></ion-icon>
-          <ion-label>{{ 'auth.sign-out' | translate }}</ion-label>
-        </ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card>
+<!-- Sign Out -->
+<div *ngIf="auth.user | async" class="sign-out">
+  <ion-button (click)="logout()">
+    <ion-icon name="log-out" slot="start"></ion-icon>
+    <ion-label>{{ 'auth.sign-out' | translate }}</ion-label>
+  </ion-button>
 </div>
+  </div>
+</ion-content>

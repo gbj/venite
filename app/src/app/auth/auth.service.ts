@@ -24,17 +24,18 @@ export class AuthService {
     return auth().currentUser;
   }
 
-  async login(provider : string) {
+  async login(provider : string) : Promise<auth.UserCredential | null> {
     if(this.platform.is('capacitor')) {
       console.warn('Auth not set up in Capacitor yet');
     } else {
       if(provider == 'Google') {
-        await auth().signInWithPopup(new auth.GoogleAuthProvider());
+        return auth().signInWithPopup(new auth.GoogleAuthProvider());
       } else if(provider == 'Twitter') {
-        await auth().signInWithPopup(new auth.TwitterAuthProvider());
+        return auth().signInWithPopup(new auth.TwitterAuthProvider());
       } else if(provider == 'Apple') {
         //await auth().signInWithPopup(new auth.AppleAuthProvider());
         console.warn('Sign in with Apple needs to be set up in the AuthModule.');
+        return null;
       } else {
         throw `Auth provider "${provider}" not supported.`;
       }
