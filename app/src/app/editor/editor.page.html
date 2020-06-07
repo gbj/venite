@@ -36,9 +36,9 @@
 
 {{ localManager | json }}
       </pre>
-      <pre>**server** =
+      <pre>**changes** =
 
-        {{ serverManager | json }}
+        {{ revisions$ | async | json }}
 </pre>
     </article>
   </ion-content>

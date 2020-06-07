@@ -3,6 +3,7 @@ import * as Automerge from 'automerge';
 import * as json1 from 'ot-json1';
 
 export class DocumentManagerChange {
+    actorId : string;
     uid : string;
     lastRevision : number;
     op : json1.JSONOp;
@@ -16,12 +17,13 @@ export class ServerDocumentManager {
     cursors?: {
         [uid: string]: Cursor;
     };
-    pendingChanges: DocumentManagerChange[];
-    revisionLog: DocumentManagerChange[];
+    lastRevision : number = 0;
+    //pendingChanges: DocumentManagerChange[];
+    revisionLog?: DocumentManagerChange[];
 }
 
 export class LocalDocumentManager {
-    hasBeenAcknowledged: boolean = false;
+    hasBeenAcknowledged: boolean = true;
     lastSyncedRevision: number = 0;
     sentChanges: DocumentManagerChange[] = new Array();
     pendingChanges: DocumentManagerChange[] = new Array();
@@ -29,3 +31,5 @@ export class LocalDocumentManager {
 
     constructor(public docId : string) { }
 }
+
+// get(/databases/$(database)/documents/DocumentManager/$(request.resource.data.docId)).data.

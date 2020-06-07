@@ -21,6 +21,10 @@ export class EditorPage implements OnInit, OnDestroy {
   serverManager$ : Observable<ServerDocumentManager>;
   doc$ : Observable<LiturgicalDocument>;
 
+  // Handle external revisions
+  revisions$ : Observable<DocumentManagerChange[]>;
+  revisionSubscription : Subscription;
+
   // All documents to which the user has access to edit
   docs$ : Observable<IdAndDoc[]>;
   docSaved$ : Observable<Date>;
@@ -51,14 +55,19 @@ export class EditorPage implements OnInit, OnDestroy {
     );
     this.localManager$ = managers$.pipe(map(({ local }) => local));
     this.serverManager$ = managers$.pipe(
-      map(({ server }) => server),
-      // feed remote changes from server back into local manager
-      tap(serverManager => this.editorService.handleRemoteChanges(serverManager))
+      map(({ server }) => server)
     );
-    // Latest version of the document
-    //this.doc$ = this.managers$.pipe(map(managers => managers?.local.document));
-    //this.doc$ = this.docId$.pipe(switchMap(docId => this.documents.findDocumentById(docId)));
-    
+
+    // List of revisions
+    this.revisions$ = this.docId$.pipe(
+      switchMap(docId => this.editorService.findRevisions(docId)),
+    );
+
+    // Apply changes from revisions
+    this.revisionSubscription = combineLatest(this.localManager$, this.revisions$).subscribe(
+      ([localManager, revisions]) => this.editorService.handleRemoteChanges(localManager, revisions)
+    );
+
     // update the document once every 5ms
     /*this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
       debounceTime(5000),
@@ -69,6 +78,9 @@ export class EditorPage implements OnInit, OnDestroy {
 
   // OnDestroy -- leave document
   ngOnDestroy() {
+    if(this.revisionSubscription) {
+      this.revisionSubscription.unsubscribe();
+    }
     this.editorService.leave(this._docId);
   }
 

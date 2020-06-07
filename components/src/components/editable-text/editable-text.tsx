@@ -62,7 +62,12 @@ export class EditableTextComponent {
   async onInput() {
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
+    this.handleInput();
+  }
 
+  // Debounce calculating and emitting the change so we can send multi-character changes
+  @Debounce(200)
+  handleInput() {
     // calculate changes to be made
     const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);
 
