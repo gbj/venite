@@ -7,4 +7,4 @@
 ### Classes
 
 * [Change](../classes/_editing_change_.change.md)
-* [Json0Operation](../classes/_editing_change_.json0operation.md)
+* [Operation](../classes/_editing_change_.operation.md)

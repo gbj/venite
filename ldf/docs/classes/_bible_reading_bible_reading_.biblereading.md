@@ -59,7 +59,7 @@ BibleReading represents liturgical instructions.
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[constructor](_liturgy_liturgy_.liturgy.md#constructor)*
 
-*Defined in [bible-reading/bible-reading.ts:108](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L108)*
+*Defined in [bible-reading/bible-reading.ts:108](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L108)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ Name | Type | Default |
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[api](_responsive_prayer_.responsiveprayer.md#api)*
 
-*Defined in [liturgical-document.ts:43](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L43)*
+*Defined in [liturgical-document.ts:43](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L43)*
 
 The URL (as a string) for the API that provided the document, or against which it can be compiled.
 
@@ -89,7 +89,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[category](_responsive_prayer_.responsiveprayer.md#category)*
 
-*Defined in [liturgical-document.ts:33](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L33)*
+*Defined in [liturgical-document.ts:33](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L33)*
 
 Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'.
 
@@ -101,7 +101,7 @@ ___
 
 *Overrides [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[citation](_responsive_prayer_.responsiveprayer.md#optional-citation)*
 
-*Defined in [bible-reading/bible-reading.ts:13](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L13)*
+*Defined in [bible-reading/bible-reading.ts:13](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L13)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[condition](_responsive_prayer_.responsiveprayer.md#condition)*
 
-*Defined in [liturgical-document.ts:36](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L36)*
+*Defined in [liturgical-document.ts:36](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L36)*
 
 An array of `Conditions`s determining whether the document should be displayed, given its day.
 
@@ -129,7 +129,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[day](_responsive_prayer_.responsiveprayer.md#optional-day)*
 
-*Defined in [liturgical-document.ts:97](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L97)*
+*Defined in [liturgical-document.ts:97](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L97)*
 
 Optional: The liturgical day against which to compile the value, or against which a liturgy has been compiled.
 [LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)
@@ -142,7 +142,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[hidden](_responsive_prayer_.responsiveprayer.md#hidden)*
 
-*Defined in [liturgical-document.ts:108](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L108)*
+*Defined in [liturgical-document.ts:108](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L108)*
 
 Marks a document hidden, so it will not display but will not be deleted
 Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
@@ -156,7 +156,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[id](_responsive_prayer_.responsiveprayer.md#optional-id)*
 
-*Defined in [liturgical-document.ts:21](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L21)*
+*Defined in [liturgical-document.ts:21](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L21)*
 
 If provided from a database, `id` is unique identifier/DB primary key
 
@@ -168,7 +168,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[label](_responsive_prayer_.responsiveprayer.md#label)*
 
-*Defined in [liturgical-document.ts:58](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L58)*
+*Defined in [liturgical-document.ts:58](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L58)*
 
 A human-readable name; either the name of the whole liturgy, or a label for a piece.
 
@@ -183,7 +183,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[language](_responsive_prayer_.responsiveprayer.md#language)*
 
-*Defined in [liturgical-document.ts:70](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L70)*
+*Defined in [liturgical-document.ts:70](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L70)*
 
 Language code (typically an ISO 639-1 two-letter code)
 
@@ -198,7 +198,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[lookup](_responsive_prayer_.responsiveprayer.md#optional-lookup)*
 
-*Defined in [liturgical-document.ts:120](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L120)*
+*Defined in [liturgical-document.ts:120](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L120)*
 
 Instructs the client to look up more information from the server
 
@@ -222,7 +222,7 @@ ___
 
 *Overrides [Refrain](_refrain_.refrain.md).[metadata](_refrain_.refrain.md#optional-metadata)*
 
-*Defined in [bible-reading/bible-reading.ts:14](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L14)*
+*Defined in [bible-reading/bible-reading.ts:14](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L14)*
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[revision_log](_responsive_prayer_.responsiveprayer.md#optional-revision_log)*
 
-*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L24)*
+*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L24)*
 
 Array of changes to arrive at this document state. Important to collaborative editing.
 
@@ -244,7 +244,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[sharing](_responsive_prayer_.responsiveprayer.md#optional-sharing)*
 
-*Defined in [liturgical-document.ts:46](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L46)*
+*Defined in [liturgical-document.ts:46](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L46)*
 
 Permissions for this document: whether it's public, shared with particular individuals, etc.
 
@@ -256,7 +256,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[slug](_responsive_prayer_.responsiveprayer.md#slug)*
 
-*Defined in [liturgical-document.ts:52](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L52)*
+*Defined in [liturgical-document.ts:52](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L52)*
 
 An identifying slug. Given the `slug`, the API should be able to identify this document.
 
@@ -271,7 +271,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[source](_responsive_prayer_.responsiveprayer.md#optional-source)*
 
-*Defined in [liturgical-document.ts:86](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L86)*
+*Defined in [liturgical-document.ts:86](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L86)*
 
 Source for the physical resource within which the document can be found
 
@@ -286,7 +286,7 @@ ___
 
 *Overrides [Heading](_heading_.heading.md).[style](_heading_.heading.md#optional-style)*
 
-*Defined in [bible-reading/bible-reading.ts:12](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L12)*
+*Defined in [bible-reading/bible-reading.ts:12](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L12)*
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[type](_liturgical_document_.liturgicaldocument.md#type)*
 
-*Defined in [bible-reading/bible-reading.ts:11](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L11)*
+*Defined in [bible-reading/bible-reading.ts:11](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L11)*
 
 ___
 
@@ -306,7 +306,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[uid](_responsive_prayer_.responsiveprayer.md#optional-uid)*
 
-*Defined in [liturgical-document.ts:92](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L92)*
+*Defined in [liturgical-document.ts:92](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L92)*
 
 Optional: A unique identifying string based on the slug, for compiled liturgies with multiple instances of the same prayer.
 
@@ -321,7 +321,7 @@ ___
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[value](_liturgical_document_.liturgicaldocument.md#optional-value)*
 
-*Defined in [bible-reading/bible-reading.ts:19](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L19)*
+*Defined in [bible-reading/bible-reading.ts:19](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L19)*
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[version](_responsive_prayer_.responsiveprayer.md#version)*
 
-*Defined in [liturgical-document.ts:76](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L76)*
+*Defined in [liturgical-document.ts:76](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L76)*
 
 Identifying code for the version of a liturgy, prayer, psalm, or Bible reading.
 
@@ -346,7 +346,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[version_label](_responsive_prayer_.responsiveprayer.md#optional-version_label)*
 
-*Defined in [liturgical-document.ts:64](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L64)*
+*Defined in [liturgical-document.ts:64](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L64)*
 
 Optional: A human-readable name for this particular version of a larger category of prayer or liturgy.
 
@@ -359,7 +359,7 @@ Optional: A human-readable name for this particular version of a larger category
 
 ▸ **abbrevFromCitation**(): *string*
 
-*Defined in [bible-reading/bible-reading.ts:64](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L64)*
+*Defined in [bible-reading/bible-reading.ts:64](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L64)*
 
 Generates an abbreviated book name from citation
 
@@ -378,7 +378,7 @@ ___
 
 *Overrides [Heading](_heading_.heading.md).[availableStyles](_heading_.heading.md#availablestyles)*
 
-*Defined in [bible-reading/bible-reading.ts:106](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L106)*
+*Defined in [bible-reading/bible-reading.ts:106](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L106)*
 
 Returns the list of all possible `style` values.
 
@@ -392,7 +392,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[availableTypes](_responsive_prayer_.responsiveprayer.md#availabletypes)*
 
-*Defined in [liturgical-document.ts:151](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L151)*
+*Defined in [liturgical-document.ts:151](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L151)*
 
 Returns the list of all possible `type` values
 
@@ -404,7 +404,7 @@ ___
 
 ▸ **bookCodeFromAbbrev**(`a`: string): *string*
 
-*Defined in [bible-reading/bible-reading.ts:79](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L79)*
+*Defined in [bible-reading/bible-reading.ts:79](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L79)*
 
 Given an abbreviated book name, returns the name of the book
 
@@ -426,7 +426,7 @@ ___
 
 ▸ **compileIntro**(): *void*
 
-*Defined in [bible-reading/bible-reading.ts:22](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L22)*
+*Defined in [bible-reading/bible-reading.ts:22](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L22)*
 
 Replaces ${bookName} or ${fullBookName} in LD passed as intro with appropriate value
 
@@ -440,7 +440,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[include](_responsive_prayer_.responsiveprayer.md#include)*
 
-*Defined in [liturgical-document.ts:131](https://github.com/gbj/venite/blob/42830fa/ldf/src/liturgical-document.ts#L131)*
+*Defined in [liturgical-document.ts:131](https://github.com/gbj/venite/blob/2028f78/ldf/src/liturgical-document.ts#L131)*
 
 Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
 given the day and assigned preferences
@@ -460,7 +460,7 @@ ___
 
 ▸ **longNameFromBookCode**(`bookName`: string, `lang`: string): *string*
 
-*Defined in [bible-reading/bible-reading.ts:91](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L91)*
+*Defined in [bible-reading/bible-reading.ts:91](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L91)*
 
 Given a book name, returns the full name in the language passed; if not found, returns book name given
 
@@ -483,7 +483,7 @@ ___
 
 ▸ **shortNameFromBookCode**(`bookName`: string, `lang`: string): *string*
 
-*Defined in [bible-reading/bible-reading.ts:100](https://github.com/gbj/venite/blob/42830fa/ldf/src/bible-reading/bible-reading.ts#L100)*
+*Defined in [bible-reading/bible-reading.ts:100](https://github.com/gbj/venite/blob/2028f78/ldf/src/bible-reading/bible-reading.ts#L100)*
 
 Given a book name, returns the short name in the language passed; if not found, returns book name given
 

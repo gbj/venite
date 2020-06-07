@@ -23,7 +23,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [psalm.ts:6](https://github.com/gbj/venite/blob/42830fa/ldf/src/psalm.ts#L6)*
+*Defined in [psalm.ts:6](https://github.com/gbj/venite/blob/2028f78/ldf/src/psalm.ts#L6)*
 
 ## Variables
 
@@ -31,4 +31,4 @@
 
 • **STYLES**: *["psalm", "canticle", "invitatory"]* = ['psalm', 'canticle', 'invitatory'] as const
 
-*Defined in [psalm.ts:5](https://github.com/gbj/venite/blob/42830fa/ldf/src/psalm.ts#L5)*
+*Defined in [psalm.ts:5](https://github.com/gbj/venite/blob/2028f78/ldf/src/psalm.ts#L5)*

@@ -4,6 +4,6 @@
 
 ## Index
 
-### Classes
+### Interfaces
 
-* [User](../classes/_editing_user_.user.md)
+* [User](../interfaces/_editing_user_.user.md)
