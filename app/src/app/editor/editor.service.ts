@@ -127,15 +127,40 @@ export class EditorService {
   /** send the next change in the pending queue to the server */ 
   private async sendNextChange(manager : LocalDocumentManager) {
     manager.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
-    const change = manager.pendingChanges.shift(); // takes item from beginning of array and mutates
+    const change = manager.pendingChanges[0]; // takes item from beginning of array but move it out of array yet
 
     // apply optimistically on the local copy
     // save a copy of the old version in case we need to revert
     const beforeChange = new LiturgicalDocument({ ... manager.document});
     manager.document = json1.type.apply(beforeChange, change.op);
 
-    // update the ServerDocumentManager's revisionLog
     try {
+      const newRevision = await this.afs.firestore.runTransaction(async transaction => {
+        const managerRef = this.afs.collection<ServerDocumentManager>('DocumentManager').doc(manager.docId),
+              serverManager = await transaction.get(managerRef.ref),
+              serverLatestRevision = serverManager.data().lastRevision;
+        if(serverLatestRevision > change.lastRevision) {
+          throw `Server's latest revision is ${serverLatestRevision}, change's is ${change.lastRevision}`;
+        }
+        const id = `${manager.docId}-rev-${(change.lastRevision * 100000).toString(16)}`;
+        transaction.update(managerRef.ref, {
+          lastRevision: change.lastRevision,
+          [`revisionLog.${id}`]: change
+        })
+      });
+      console.log('published revision ', newRevision);
+
+      manager.pendingChanges.shift(); // remove item from pending
+      manager.sentChanges.push(change); // add it to sent
+      manager.hasBeenAcknowledged = true;
+    } catch(e) {
+      console.warn('error while sending change', e);
+      manager.document = beforeChange;
+    }
+    
+
+    // update the ServerDocumentManager's revisionLog
+    /*try {
       // security rules are set to prevent `revisionLog` documents from being updated
       // this means that if we use an ID based on the revision #, it will bounce back
       // if that revision has already been logged by another client
@@ -149,15 +174,14 @@ export class EditorService {
                                 .doc(id),
             response = await changeRef.set(change);
 
+      manager.pendingChanges.shift(); // remove item from pending
+      manager.sentChanges.push(change); // add it to sent
       manager.hasBeenAcknowledged = true;
     } catch(error) {
       console.warn('(sendNextChange) ', error);
       manager.document = beforeChange;
       //manager.hasBeenAcknowledged = true;
-    }
-
-    // move it to our list of sent changes
-    manager.sentChanges.push(change);
+    }*/
   }
 
   /** Get revision log for a given document */
@@ -189,16 +213,17 @@ export class EditorService {
             // apply to any pending changes
             localManager.pendingChanges = localManager.pendingChanges.map(change => ({
               ...change,
-              op: json1.type.transform(change.op, op, "left")
+              op: json1.type.transform(change.op, op, "left"),
+              lastRevision: change.lastRevision + 1
             }))
+            localManager.lastSyncedRevision = change.lastRevision;
           } catch(e) {
             console.warn(e);
           }
         })
 
-      localManager.lastSyncedRevision = Math.max(... additionalChanges.map(change => change.lastRevision));
+      //localManager.lastSyncedRevision = Math.max(... additionalChanges.map(change => change.lastRevision));
    }
-    // update the last synced revision #
 
     // take this as an acknowledgment, and send any additional changes
     localManager.hasBeenAcknowledged = true;
