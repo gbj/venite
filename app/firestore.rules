@@ -1,11 +1,56 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow write: if true;
+    match /users/{userId} {
+      allow read, update, delete: if request.auth.uid == userId;
+      allow create: if request.auth.uid != null;
     }
-    match /{document=**} {
-    	allow read: if true;
+
+   match /Preference/{docId} {
+      allow read: if request.auth.uid == resource.data.uid;
+      allow create, update, delete: if request.auth.uid == request.resource.data.uid;
+    }
+
+    match /Document/{docId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth.uid != null;
+    }
+
+    match /DocumentManager/{docId} {
+      allow read: if true;
+      allow create, delete: if request.auth.uid != null;
+      allow update: if request.resource.data.lastRevision >= resource.data.lastRevision;
+    }
+
+    match /DocumentManager/{docId}/revisionLog/{changeId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if false;
+    }
+
+    match /Color/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
+    match /HolyDay/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
+    match /Kalendar/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
+    match /LiturgicalWeek/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
+    match /ProperLiturgy/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
     }
   }
 }

@@ -32,7 +32,10 @@
         (editorCursorMoved)="updateCursor(localManager.docId, $event)"
         (editorDocShouldChange)="processChange(localManager, $event)"
       ></ldf-editor>
-      <pre>**local** =
+      <pre>
+**server last revision** = {{ serverManager.lastRevision }}
+
+**local** =
 
 {{ localManager | json }}
       </pre>

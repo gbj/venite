@@ -3,8 +3,9 @@ import { Change } from '@venite/ldf';
 import DiffMatchPatch from 'diff-match-patch';
 
 export function handleInput(path: string, oldValue: string, newValue: string) : Change {
-  if(oldValue == undefined || oldValue == null) {
-    return new Change({ path: path?.replace('//', '/'), op: [{ type: 'insertAt' as 'insertAt', value: newValue }] });
+  if(oldValue == undefined) {
+    console.log('[ldf-editable-text] previous value was undefined; new value is ', newValue);
+    return new Change({ path: path?.replace('//', '/'), op: [{ type: 'set' as 'set', oldValue, value: newValue }] });
   } else {
     // Build DiffMatchPatch patches from oldValue and newValue
     const dmp = new DiffMatchPatch(),

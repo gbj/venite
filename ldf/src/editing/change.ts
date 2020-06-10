@@ -1,19 +1,8 @@
-/*class Json0Operation {
-  p: (number | string | undefined)[];
-  li?: any;
-  lm?: any;
-  ld?: any;
-  oi?: any;
-  od?: any;
-  om?: any;
-  si?: any;
-  sd?: any;
-}*/
-
 class Operation { 
   p?: (number | string | undefined)[];
   type: 'insertAt' | 'deleteAt' | 'set' | 'delete' | 'edit';
   index?: number | string;
+  oldValue?: any;
   value?: any;
 }
 

@@ -50,13 +50,16 @@ export class EditorPage implements OnInit, OnDestroy {
       tap(docId => this._docId = docId)
     );
     // Document manager
-    const managers$ = this.docId$.pipe(
+    this.serverManager$ = this.docId$.pipe(
       switchMap(docId => this.editorService.join(docId)),
     );
-    this.localManager$ = managers$.pipe(map(({ local }) => local));
-    this.serverManager$ = managers$.pipe(
-      map(({ server }) => server)
+    this.localManager$ = this.serverManager$.pipe(
+      switchMap(serverManager => this.editorService.localManager(serverManager.docId)),
     );
+    //this.localManager$ = managers$.pipe(map(({ local }) => local));
+    /*this.serverManager$ = managers$.pipe(
+      map(({ server }) => server)
+    );*/
 
     // List of revisions
     this.revisions$ = this.docId$.pipe(
@@ -64,16 +67,15 @@ export class EditorPage implements OnInit, OnDestroy {
     );
 
     // Apply changes from revisions
-    this.revisionSubscription = combineLatest(this.localManager$, this.revisions$).subscribe(
-      ([localManager, revisions]) => this.editorService.handleRemoteChanges(localManager, revisions)
-    );
+    this.revisionSubscription = combineLatest(this.localManager$, this.serverManager$, this.revisions$).subscribe(
+      ([localManager, serverManager, revisions]) => this.editorService.applyChanges(localManager, serverManager, revisions));
 
     // update the document once every 5ms
-    /*this.docSaved$ = combineLatest(this.docId$, this.doc$).pipe(
-      debounceTime(5000),
-      switchMap(([docId, doc]) => this.documents.saveDocument(docId, JSON.parse(JSON.stringify(doc)))),
+    this.docSaved$ = this.localManager$.pipe(
+      debounceTime(3000),
+      switchMap(localManager => this.documents.saveDocument(localManager.docId, JSON.parse(JSON.stringify(localManager.document)))),
       map(() => new Date())
-    )*/
+    )
   }
 
   // OnDestroy -- leave document

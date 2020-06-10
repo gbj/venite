@@ -66,7 +66,7 @@ export class EditableTextComponent {
   }
 
   // Debounce calculating and emitting the change so we can send multi-character changes
-  @Debounce(200)
+  @Debounce(500)
   handleInput() {
     // calculate changes to be made
     const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);

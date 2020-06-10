@@ -27,6 +27,7 @@ export class LocalDocumentManager {
     lastSyncedRevision: number = 0;
     sentChanges: DocumentManagerChange[] = new Array();
     pendingChanges: DocumentManagerChange[] = new Array();
+    rejectedChanges: DocumentManagerChange[] = new Array();
     document : LiturgicalDocument;
 
     constructor(public docId : string) { }

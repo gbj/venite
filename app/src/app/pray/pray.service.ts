@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy } from '@venite/ldf';
 
-import { Observable, of } from 'rxjs';
+import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, startWith } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,18 @@ export class PrayService {
 
       // recurse if doc is a `Liturgy` (and therefore contains other, nested docs), 
       if(doc.type == 'liturgy') {
-        // TODO
+        // TODO -- check this
+        return combineLatest(
+          // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
+          // and combine them into a single Observable that fires when any of them changes
+          // startWith(undefined) so it doesn't need to wait for all of them to load
+          ... (docBase as Liturgy).value?.map(child => this.compile(child, day, prefs).pipe(startWith(undefined)))
+        ).pipe(
+          map(compiledChildren => new LiturgicalDocument({
+            ... docBase,
+            value: compiledChildren
+          }))
+        );
       }
 
       // if doc has a `lookup` and not a `value`, compile it

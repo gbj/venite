@@ -9,6 +9,7 @@ import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } fr
 import { map, tap, switchMap, take, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { randomColor } from './random-color';
+import { change } from 'automerge';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,12 @@ import { randomColor } from './random-color';
 export class EditorService {
   private _actorId : string = uuid();
   private _uid : string;
-  private _localManagers : { [docId: string]: LocalDocumentManager } = {};
+  private _localManagers : { [docId: string]: BehaviorSubject<LocalDocumentManager> } = {};
 
   constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
 
   // Join/Leave Functions
-  join(docId : string) : Observable<{server: ServerDocumentManager; local: LocalDocumentManager}>  {
+  join(docId : string) : Observable<ServerDocumentManager> { //<{server: ServerDocumentManager; local: LocalDocumentManager}>  {
     const serverDocManager = this.afs.doc<ServerDocumentManager>(`DocumentManager/${docId}`),
           serverDocManagerExists$ = serverDocManager.snapshotChanges().pipe(
             map(action => action.payload.exists),
@@ -37,7 +38,7 @@ export class EditorService {
 
         const localManager = new LocalDocumentManager(docId);
         localManager.document = doc;
-        this._localManagers[docId] = localManager;
+        this._localManagers[docId] = new BehaviorSubject(localManager);
       }),
       map(([exists, doc, user]) => [exists, doc, this.userFromUser(user)]),
       // set up the ServerDocumentManager and return it as an observable
@@ -64,9 +65,13 @@ export class EditorService {
         }
       }),
       // return the LocalDocumentManager
-      map(server => ({ server: server, local: this._localManagers[server.docId]})),
+      //map(server => ({ server: server, local: this._localManagers[server.docId]})),
       //tap(({ server, local }) => local.hasBeenAcknowledged = true)
     )
+  }
+
+  localManager(docId : string) : BehaviorSubject<LocalDocumentManager> {
+    return this._localManagers[docId];
   }
 
   async leave(docId : string) : Promise<void> {
@@ -106,82 +111,67 @@ export class EditorService {
 
   /** Notify the server that our editing client has changed the document.
   * Every new `Change` from the `EditorComponent` enters through this function */
-  public processChange(manager : LocalDocumentManager, change : Change) {
+  public async processChange(manager : LocalDocumentManager, change : Change) {
     // translate `Change` into operation
     const op = this.opFromChange(change).reduce(json1.type.compose, null);
 
     // add it to our list of pending changes
-    manager.pendingChanges.push({
+    manager.pendingChanges = manager.pendingChanges.concat({
       uid: this._uid,
       actorId: this._actorId,
       op,
       lastRevision: manager.lastSyncedRevision + 1
     });
-
-    // if you've been acknowledged, send the first change in the pending queue
     if(manager.hasBeenAcknowledged) {
-      this.sendNextChange(manager);
+      this.nextLocalManager(manager);
     }
   }
 
   /** send the next change in the pending queue to the server */ 
-  private async sendNextChange(manager : LocalDocumentManager) {
-    manager.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
-    const change = manager.pendingChanges[0]; // takes item from beginning of array but move it out of array yet
-
-    // apply optimistically on the local copy
-    // save a copy of the old version in case we need to revert
-    const beforeChange = new LiturgicalDocument({ ... manager.document});
-    manager.document = json1.type.apply(beforeChange, change.op);
+  async sendNextChange(localManager : LocalDocumentManager) {
+    const manager = { ... localManager },
+          change = manager.pendingChanges.shift(); // takes item from beginning of array
 
     try {
-      const newRevision = await this.afs.firestore.runTransaction(async transaction => {
-        const managerRef = this.afs.collection<ServerDocumentManager>('DocumentManager').doc(manager.docId),
-              serverManager = await transaction.get(managerRef.ref),
-              serverLatestRevision = serverManager.data().lastRevision;
-        if(serverLatestRevision > change.lastRevision) {
-          throw `Server's latest revision is ${serverLatestRevision}, change's is ${change.lastRevision}`;
-        }
-        const id = `${manager.docId}-rev-${(change.lastRevision * 100000).toString(16)}`;
-        transaction.update(managerRef.ref, {
-          lastRevision: change.lastRevision,
-          [`revisionLog.${id}`]: change
-        })
-      });
-      console.log('published revision ', newRevision);
+      if(manager.hasBeenAcknowledged) {
+        manager.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
 
-      manager.pendingChanges.shift(); // remove item from pending
-      manager.sentChanges.push(change); // add it to sent
-      manager.hasBeenAcknowledged = true;
-    } catch(e) {
-      console.warn('error while sending change', e);
-      manager.document = beforeChange;
-    }
-    
-
-    // update the ServerDocumentManager's revisionLog
-    /*try {
-      // security rules are set to prevent `revisionLog` documents from being updated
-      // this means that if we use an ID based on the revision #, it will bounce back
-      // if that revision has already been logged by another client
-      // (lastRevision * 100000).toString(16) generates predictable but non-sequential IDs
-      // to avoid database hotspots
-      console.log('trying to save change ', change.lastRevision);
-      const id = `${manager.docId}-rev-${(change.lastRevision * 100000).toString(16)}`,
-            changeRef = this.afs.collection<ServerDocumentManager>('DocumentManager')
-                                .doc(manager.docId)
-                                .collection<DocumentManagerChange>('revisionLog')
-                                .doc(id),
-            response = await changeRef.set(change);
-
-      manager.pendingChanges.shift(); // remove item from pending
-      manager.sentChanges.push(change); // add it to sent
-      manager.hasBeenAcknowledged = true;
+        /* security rules are set to
+         * 1) prevent `revisionLog` documents from being updated
+         * 2) prevent `DocumentManager.lastRevision` from being <= its current value
+         * because this is a batched write, the whole thing will fail if either part fails
+         * this will signal to us that we need to transform this change instead,
+         * which is handled by the catch below */
+        const batch = this.afs.firestore.batch(),
+              managerRef = this.afs.collection<ServerDocumentManager>('DocumentManager')
+                                   .doc(manager.docId),
+        /* for the change, if we use an ID based on the revision #, it will bounce back
+         * if that revision has already been logged by another client
+         * (lastRevision * 1000000).toString(16) generates predictable but non-sequential IDs
+         * to avoid database hotspots */
+              changeId = `${manager.docId}-rev-${(change.lastRevision * 1000000).toString(16)}`,
+              changeRef = managerRef.collection<DocumentManagerChange>('revisionLog')
+                                    .doc(changeId);
+      
+        batch.update(managerRef.ref, { lastRevision: change.lastRevision });
+        batch.set(changeRef.ref, change);
+        await batch.commit();
+  
+        // apply the change to this document
+        manager.document = json1.type.apply(manager.document, change.op);
+        manager.lastSyncedRevision = change.lastRevision;
+  
+        manager.sentChanges.push(change); // add it to sent
+        manager.hasBeenAcknowledged = true;
+      }
     } catch(error) {
-      console.warn('(sendNextChange) ', error);
-      manager.document = beforeChange;
-      //manager.hasBeenAcknowledged = true;
-    }*/
+      console.warn('The write has been rejected. This is typically because another user has submitted a change with the same revision number, so ours needs to be transformed. Still, here’s the error: \n\n', error);
+
+      manager.rejectedChanges.push(change);
+      manager.hasBeenAcknowledged = true;
+    }
+
+    this.nextLocalManager(manager);
   }
 
   /** Get revision log for a given document */
@@ -192,47 +182,67 @@ export class EditorService {
   }
 
   /** Receive changes from server and apply to client, whenever anything on server changes */ 
-  handleRemoteChanges(localManager : LocalDocumentManager, changes : DocumentManagerChange[]) {
+  applyChanges(localManager : LocalDocumentManager, serverManager : ServerDocumentManager, changes : DocumentManagerChange[]) {    
     // if the server has revisions we don't, apply them to our doc
     const additionalChanges = changes
       // sorted by revision number
       .sort((a, b) => a?.lastRevision - b?.lastRevision)
       // changes where revision # is greater than last synced local revision
-      .filter(change => change.lastRevision > localManager.lastSyncedRevision)
+      .filter(change => change.lastRevision > localManager.lastSyncedRevision);
+    
+    // detect overlapping change numbers between local manager and remote changes
+    // any overlapping changes will need to be transformed on the local copy
+    const localRevisionNumbers : number[] = localManager.rejectedChanges.concat(localManager.pendingChanges)
+      .map(change => change.lastRevision);
+    const overlappingChanges = changes
+      .filter(change => change.uid !== this._uid && localRevisionNumbers.includes(change.lastRevision));
+    if(overlappingChanges) {
+      additionalChanges.unshift(... overlappingChanges);
+    }
 
-    console.log('additional changes: ', additionalChanges?.length);
-    if(additionalChanges?.length > 0) {
-      
+    if(additionalChanges?.length > 0) {      
       additionalChanges
-        .filter(change => change.actorId !== this._actorId) // don't apply my own changes
-        .map(change => change.op)
-        .forEach(op => {
+        .forEach((change, changeIndex) => {
           try {
-            // apply to local document
-            localManager.document = json1.type.apply(localManager.document, op);
-            // apply to any pending changes
-            localManager.pendingChanges = localManager.pendingChanges.map(change => ({
-              ...change,
-              op: json1.type.transform(change.op, op, "left"),
-              lastRevision: change.lastRevision + 1
-            }))
+            // don't apply my own changes
+            if(change.actorId !== this._actorId) {
+              // apply to local document
+              localManager.document = json1.type.apply(localManager.document, change.op);
+              // apply to any pending changes
+              const rejected = localManager.rejectedChanges.map(localChange => ({
+                ...localChange,
+                op: json1.type.transform(localChange.op, change.op, "left"),
+                lastRevision: serverManager.lastRevision + changeIndex + 1
+              }));
+              localManager.pendingChanges = rejected.concat(localManager.pendingChanges.map(localChange => ({
+                ...localChange,
+                op: json1.type.transform(localChange.op, change.op, "left"),
+                lastRevision: serverManager.lastRevision + changeIndex + 1
+              })));
+              localManager.rejectedChanges = [];
+            }
+
+            // update sync number, even for my own changes
             localManager.lastSyncedRevision = change.lastRevision;
           } catch(e) {
             console.warn(e);
           }
         })
-
-      //localManager.lastSyncedRevision = Math.max(... additionalChanges.map(change => change.lastRevision));
    }
 
     // take this as an acknowledgment, and send any additional changes
-    localManager.hasBeenAcknowledged = true;
-    if(localManager.pendingChanges?.length > 0) {
+    // localManager.hasBeenAcknowledged = true;
+    if(localManager.pendingChanges.length > 0) {
       this.sendNextChange(localManager);
     }
   }
 
   // Utility Functions
+  
+  /** Emits the given `LocalDocumentManager` as the next value for that document's local manager */
+  nextLocalManager(next : LocalDocumentManager) {
+    this._localManagers[next.docId].next(next);
+  }
 
   /** Applies an operation to `LocalDocumentManager.document`
    * Can be used optimistically to apply local changes
@@ -256,110 +266,21 @@ export class EditorService {
         case 'edit':
           return json1.editOp(op.p, 'text-unicode', op.value);
         case 'insertAt':
-          return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, op.value);
+          return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, JSON.parse(JSON.stringify(op.value)));
         case 'deleteAt':
           return json1.removeOp(op.p, op.value ?? true);
         case 'set':
-          return json1.replaceOp(op.p, true, op.value);
+          if(op.oldValue == undefined) {
+            console.log('setting value from undefined');
+            return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, JSON.parse(JSON.stringify(op.value)))
+          } else {
+            return json1.replaceOp(op.index ? op.p.concat(op.index) : op.p, op.oldValue, JSON.parse(JSON.stringify(op.value)));
+          }
         case 'delete':
-          return json1.replaceOp(op.p, true, undefined);
+          return json1.replaceOp(op.index ? op.p.concat(op.index) : op.p, op.oldValue, '');
       }
     });
   }
-
-
-
-
-
-
-
-  /** Observable of all changes made to the document by another user, as they come through */
-  /*findChanges(docId : string) : Observable<DocumentManagerChange[]> {
-    return this.afs.collection<DocumentManagerChange>('DocumentManagerChange', ref =>
-      ref.where('docId', '==', docId)
-    ).snapshotChanges().pipe(
-      map(actions =>
-        actions
-          // take only changes that are being added by another user
-          .filter(changeaction =>
-            changeaction.type == 'added' && changeaction.payload.doc.data().uid !== this._uid
-          )
-          // and return the change itself
-          .map(changeaction => changeaction.payload.doc.data())
-      )
-    );
-  }*/
-
-  /** Applies an LDF `Change` to an LDF `LiturgicalDocument` and stores the Automerge changes in the database */
-  /*updateDoc(docId : string, doc : LiturgicalDocument, change : Change) {    
-    // translate LDF `Change` into Automerge ops
-    const op : json1.JSONOp = this.generateChanges(change),
-          newDoc : LiturgicalDocument = json1.type.apply(doc, op);
-
-    this.pushChange(docId, op);
-
-    this.latestDoc.next(newDoc);
-  }
-
-  generateChanges(change : Change) : json1.JSONOp {
-    const ops = this.changeToJson1Op(change);
-    return ops.reduce(json1.type.compose, null);
-  }
-
-  pushChange(docId : string, op : json1.JSONOp) {
-    const change : DocumentManagerChange = { uid: this._uid, docId, op };
-    if(!this.pendingChanges[docId]) {
-      this.pendingChanges[docId] = new Array(change);
-    } else {
-      this.pendingChanges[docId].push(change);
-    }
-    this.saveChanges(docId);
-  }
-
-  async saveChanges(docId : string) {
-    const batch = this.afs.firestore.batch();
-    this.pendingChanges[docId].forEach(change => {
-      console.log('adding to batch', change);
-      const id = this.afs.createId(),
-            changeRef = this.afs.collection<DocumentManagerChange>('DocumentManagerChange').doc(id);
-      console.log('adding to batch the change', change, 'at ref', changeRef.ref)
-      batch.set(changeRef.ref, change);
-    });
-    await batch.commit();
-    this.pendingChanges[docId] = [];
-  }
-
-  applyExternalChanges(doc : LiturgicalDocument, changes : DocumentManagerChange[]) : LiturgicalDocument  {
-    console.log('applyExternalChanges', doc, changes)
-    if(doc) {
-      return json1.type.apply(doc, changes.map(change => change.op).reduce(json1.type.compose, null));
-    } else {
-      return doc;
-    }
-  }
-
-  changeToJson1Op(change : Change) : json1.JSONOp[] {
-    return new Change(change).fullyPathedOp().map(op => {
-      // json1 won't accept '1' as an array index -- convert to a number
-      op.p = op.p.map(p => Number(p) ? Number(p) : p)
-
-      // generate json1 op depending on the type
-      switch(op.type) {
-        case 'edit':
-          return json1.editOp(op.p, 'text-unicode', op.value);
-        case 'insertAt':
-          console.log('insertAt', change.path, op.index, op.p, 'value = ', op.value);
-          return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, op.value);
-        case 'deleteAt':
-          console.log('op.p = ', op.p)
-          return json1.removeOp(op.p, op.value ?? true);
-        case 'set':
-          return json1.replaceOp(op.p, true, op.value);
-        case 'delete':
-          return json1.replaceOp(op.p, true, undefined);
-      }
-    });
-  }*/
 }
 
 function uuid() {
