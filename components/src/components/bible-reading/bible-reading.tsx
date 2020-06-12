@@ -150,7 +150,7 @@ export class BibleReadingComponent {
             </ldf-label-bar>
 
             {/* Heading */}
-            <ldf-heading doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}></ldf-heading>
+            <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
             {/* Introductory text ("A Reading from..." or similar) */}
             {

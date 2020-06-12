@@ -107,7 +107,7 @@ export class ResponsivePrayerComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}></ldf-heading>
+          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
           <table class="preces">
             {this.obj.value.map((line, index) =>
@@ -140,7 +140,7 @@ export class ResponsivePrayerComponent {
         </ldf-label-bar>
 
         {/* Heading */}
-        <ldf-heading doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}></ldf-heading>
+        <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
         {this.obj.value.map((line, index) => {
           // Classes depending on style and whether this line is optional
@@ -194,7 +194,7 @@ export class ResponsivePrayerComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}></ldf-heading>
+          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
           <p class='responsive'>
             {this.obj.value.map((line, index) =>
