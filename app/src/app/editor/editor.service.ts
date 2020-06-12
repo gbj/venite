@@ -3,13 +3,12 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import * as firebase from 'firebase/app';
 import * as json1 from 'ot-json1';
 
-import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
+import { Cursor, Change, Operation, LiturgicalDocument, User } from '@venite/ldf';
 import { Observable, combineLatest, from, BehaviorSubject } from 'rxjs';
 import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } from './document-manager';
-import { map, tap, switchMap, take, filter } from 'rxjs/operators';
+import { map, tap, switchMap, take } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { randomColor } from './random-color';
-import { change } from 'automerge';
 
 @Injectable({
   providedIn: 'root'
@@ -113,7 +112,8 @@ export class EditorService {
   * Every new `Change` from the `EditorComponent` enters through this function */
   public async processChange(manager : LocalDocumentManager, change : Change) {
     // translate `Change` into operation
-    const op = this.opFromChange(change).reduce(json1.type.compose, null);
+    const op = this.opFromChange(change);
+    console.log('op is', op);
 
     // add it to our list of pending changes
     manager.pendingChanges = manager.pendingChanges.concat({
@@ -155,9 +155,11 @@ export class EditorService {
       
         batch.update(managerRef.ref, { lastRevision: change.lastRevision });
         batch.set(changeRef.ref, change);
+
         await batch.commit();
   
         // apply the change to this document
+        console.log(manager.document, change.op);
         manager.document = json1.type.apply(manager.document, change.op);
         manager.lastSyncedRevision = change.lastRevision;
   
@@ -205,7 +207,7 @@ export class EditorService {
         .forEach((change, changeIndex) => {
           try {
             // don't apply my own changes
-            if(change.actorId !== this._actorId) {
+            if(localManager.hasBeenAcknowledged && change.actorId !== this._actorId) {
               // apply to local document
               localManager.document = json1.type.apply(localManager.document, change.op);
               // apply to any pending changes
@@ -232,7 +234,7 @@ export class EditorService {
 
     // take this as an acknowledgment, and send any additional changes
     // localManager.hasBeenAcknowledged = true;
-    if(localManager.pendingChanges.length > 0) {
+    if(localManager.hasBeenAcknowledged && localManager.pendingChanges.length > 0) {
       this.sendNextChange(localManager);
     }
   }
@@ -249,6 +251,7 @@ export class EditorService {
    * or to respond to remote changes */
   applyOp(manager : LocalDocumentManager, op : json1.JSONOp) : void {
     try {
+      console.log(manager.document, op);
       manager.document = json1.type.apply(manager.document, op);
     } catch(e) {
       console.warn(e);
@@ -256,30 +259,37 @@ export class EditorService {
   }
 
   /** Converts a generic LDF `Change` into an array of `json1` operations */
-  opFromChange(change : Change) : json1.JSONOp[] {
-    return new Change(change).fullyPathedOp().map(op => {
-      // json1 won't accept '1' as an array index -- convert to a number
-      op.p = op.p.map(p => Number(p) ? Number(p) : p)
+  opFromChange(change : Change) : json1.JSONOp {
+    return change.fullyPathedOp().map(op => this.buildOp(op)).reduce(json1.type.compose, null);
+  }
 
-      // generate json1 op depending on the type
-      switch(op.type) {
-        case 'edit':
-          return json1.editOp(op.p, 'text-unicode', op.value);
-        case 'insertAt':
-          return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, JSON.parse(JSON.stringify(op.value)));
-        case 'deleteAt':
-          return json1.removeOp(op.p, op.value ?? true);
-        case 'set':
-          if(op.oldValue == undefined) {
-            console.log('setting value from undefined');
-            return json1.insertOp(op.index ? op.p.concat(op.index) : op.p, JSON.parse(JSON.stringify(op.value)))
-          } else {
-            return json1.replaceOp(op.index ? op.p.concat(op.index) : op.p, op.oldValue, JSON.parse(JSON.stringify(op.value)));
-          }
-        case 'delete':
-          return json1.replaceOp(op.index ? op.p.concat(op.index) : op.p, op.oldValue, '');
-      }
-    });
+  buildOp(op : Operation) : json1.JSONOp {
+    /* json1 won't accept strings as array indices; if any of the items in the JSON pointer path
+     * or the additional index given in the `Operation` are numbers encoded as strings, convert to numbers */
+    op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 
+    console.log('op.index = ', op.index);
+    const indexedP = op.index ? op.p.concat(Number(op.index) ? Number(op.index) : op.index) : op.p;
+    console.log('indexedP = ', indexedP);
+
+    // generate json1 op depending on the type
+    switch(op.type) {
+      case 'edit':
+        return json1.editOp(indexedP, 'text-unicode', op.value);
+      case 'insertAt':
+        return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)));
+      case 'deleteAt':
+        console.log('delete', json1.removeOp(indexedP, op.value ?? true))
+        return json1.removeOp(indexedP, op.value ?? true);
+      case 'set':
+        if(op.oldValue == undefined) {
+          console.log('setting value from undefined');
+          return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
+        } else {
+          return json1.replaceOp(indexedP, op.oldValue, JSON.parse(JSON.stringify(op.value)));
+        }
+      case 'delete':
+        return json1.replaceOp(indexedP, op.oldValue, '');
+    }
   }
 }
 

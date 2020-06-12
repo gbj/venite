@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
@@ -56,7 +56,7 @@ export class PrayService {
   }
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
-  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, versions : string[]) : Observable<LiturgicalDocument> {
+  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
     switch(doc.lookup.type) {
       case 'lectionary':
         break;
@@ -64,12 +64,33 @@ export class PrayService {
         break;
       case 'category':
         break;
+
+      /* for lookup's of the `slug` type, return an Observable of either
+       * a) the only document matching the document's language/version, or
+       * b) an LDF `Option` consisting of all matches */
       case 'slug':
       default:
-        return this.documents.findDocumentsBySlug(doc.slug).pipe(
-          // sort by preferred liturgy version
-          map(docs => docs.find(tryDoc => tryDoc.language == doc.language && (tryDoc.version == doc.version || versions.includes(tryDoc.version))))
+        return this.lookupBySlug(
+          doc.slug,
+          doc.language,
+          alternateVersions?.length > 0 ? [ doc.version, ... alternateVersions ] : [ doc.version ]
         );
     }
+  }
+
+  lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
+    return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
+      map(docs => docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))),
+      map(docs => docs.length > 1 ?
+        // if multiple LiturgicalDocuments returned, return an Option made up of them
+        new Option({
+          ... docs[0],
+          'type': 'option',
+          metadata: { selected: 0 },
+          value: docs
+        }) :
+        // if only one LiturgicalDocument returned, return that document 
+        docs[0])
+    );
   }
 }

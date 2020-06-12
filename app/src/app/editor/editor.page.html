@@ -32,7 +32,7 @@
         (editorCursorMoved)="updateCursor(localManager.docId, $event)"
         (editorDocShouldChange)="processChange(localManager, $event)"
       ></ldf-editor>
-      <pre>
+      <!--<pre>
 **server last revision** = {{ serverManager.lastRevision }}
 
 **local** =
@@ -42,7 +42,7 @@
       <pre>**changes** =
 
         {{ revisions$ | async | json }}
-</pre>
+</pre>-->
     </article>
   </ion-content>
 </ng-container>
@@ -60,6 +60,12 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="new()">
+            <ion-icon slot="start" name="create-outline"></ion-icon>
+            <ion-label>{{ 'editor.new' | translate }}</ion-label>
+          </ion-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content #list [fullscreen]="true">

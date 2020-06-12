@@ -31,11 +31,11 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', version : string = 'bcp1979') : Observable<LiturgicalDocument[]> {
+  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('slug', '==', slug)
          .where('language', '==', language)
-         .where('version', '==', version)
+         .where('version', 'in', versions)
     ).valueChanges();
   }
 
@@ -46,6 +46,12 @@ export class DocumentService {
       // extra ID and document data and leave the rest behind
       map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
     );
+  }
+
+  async newDocument(doc : LiturgicalDocument) : Promise<string> {
+    const docId = this.afs.createId();
+    await this.afs.collection('Document').doc(docId).set(JSON.parse(JSON.stringify(doc)));
+    return docId;
   }
 
   saveDocument(docId : string, doc : LiturgicalDocument) : Observable<any> {

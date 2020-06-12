@@ -23,7 +23,8 @@
   "editor": {
     "title": "Editor",
     "edit-a-document": "Edit a Document",
-    "loading": "Loading Documents..."
+    "loading": "Loading Documents...",
+    "new": "Create a New Bulletin"
   },
   "January": "January",
   "February": "February",

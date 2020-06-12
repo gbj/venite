@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, BehaviorSubject, Subscription, combineLatest, merge } from 'rxjs'; 
 import { switchMap, map, tap, take, startWith, throttle, throttleTime, filter, debounceTime } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
@@ -7,6 +7,7 @@ import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './editor.service';
 import { LiturgicalDocument, User } from '@venite/ldf';
 import { DocumentManagerChange, LocalDocumentManager, ServerDocumentManager } from './document-manager';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'venite-editor',
@@ -34,6 +35,8 @@ export class EditorPage implements OnInit, OnDestroy {
     private route : ActivatedRoute,
     private documents : DocumentService,
     public editorService : EditorService,
+    private router : Router,
+    private alert : AlertController
   ) { }
 
   ngOnInit() {
@@ -56,10 +59,6 @@ export class EditorPage implements OnInit, OnDestroy {
     this.localManager$ = this.serverManager$.pipe(
       switchMap(serverManager => this.editorService.localManager(serverManager.docId)),
     );
-    //this.localManager$ = managers$.pipe(map(({ local }) => local));
-    /*this.serverManager$ = managers$.pipe(
-      map(({ server }) => server)
-    );*/
 
     // List of revisions
     this.revisions$ = this.docId$.pipe(
@@ -73,6 +72,7 @@ export class EditorPage implements OnInit, OnDestroy {
     // update the document once every 5ms
     this.docSaved$ = this.localManager$.pipe(
       debounceTime(3000),
+      tap(localManager => console.log(localManager.document)),
       switchMap(localManager => this.documents.saveDocument(localManager.docId, JSON.parse(JSON.stringify(localManager.document)))),
       map(() => new Date())
     )
@@ -96,4 +96,42 @@ export class EditorPage implements OnInit, OnDestroy {
     this.editorService.processChange(manager, ev.detail);
   }
 
+  // Create and navigate to a new document
+  async new() {
+    const alert = await this.alert.create({
+      header: 'Create Document',  // TODO: i18n translate whole alert
+      inputs: [
+        {
+          name: 'label',
+          type: 'text',
+          placeholder: 'Title'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary'
+        }, {
+          text: 'Create',
+          handler: value => this.createNew(value.label)
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async createNew(label : string) {
+    const docId = await this.documents.newDocument(new LiturgicalDocument({
+      'type': 'liturgy',
+      label,
+      'value': [new LiturgicalDocument({
+        'type': 'text',
+        'value': ['']
+      })]
+    }));
+
+    this.router.navigate(['editor', docId]);
+  }
 }
