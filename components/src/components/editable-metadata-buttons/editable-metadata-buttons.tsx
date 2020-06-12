@@ -56,11 +56,11 @@ export class EditableMetadataButtonsComponent {
   async openSettings() {
     const modalElement = document.createElement('ion-modal');
     modalElement.component = 'ldf-editable-metadata';
-    console.log('doc', this.obj, 'path', this.base);
+    console.log('doc', this.obj, 'path', this.base ?? '/');
     modalElement.componentProps = {
       modal: modalElement,
       doc: this.obj,
-      path: this.base,
+      path: this.base ?? '/',
       visible: true,
       collapsed: false
     }

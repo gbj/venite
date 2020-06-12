@@ -113,7 +113,7 @@ export class EditorComponent {
             path: root,
             op: [{
               type: 'insertAt',
-              index: Number(index) ? Number(index) + 1 : undefined,
+              index: Number(index) >= 0 ? Number(index) + 1 : undefined,
               value: ev.detail.template
             }]
           });
@@ -141,7 +141,7 @@ export class EditorComponent {
             // delete the deleted node
             deleteOp = {
               type: 'deleteAt' as 'deleteAt',
-              index: Number(index) ? Number(index) : undefined,
+              index: Number(index) >= 0 ? Number(index) : undefined,
               oldValue: ev.detail.value
             },
             // insert text into the previous node

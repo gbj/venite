@@ -158,6 +158,8 @@ export class EditableTextComponent {
    * 2) Enter in middle of line => add a line break (i.e., normal behavior)
    * 3) Shift + Enter anywhere => add a line break (i.e., normal behavior) */
   checkEnter(event : KeyboardEvent) {
+    console.log('event keyCode', event.keyCode,'cursor', this.cursor.start, '=>', this.cursor.end);
+
     // if this is an Enter key event without the shift key at the end of the textarea
     if(event.keyCode == 13 && !event.shiftKey && this.cursor.start == this.textarea.value.length) {
       event.preventDefault();
