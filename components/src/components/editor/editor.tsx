@@ -93,71 +93,63 @@ export class EditorComponent {
   /** Tells the Editor to add another child after this one in the document */
   @Listen('ldfAddChildAfter')
   onAddChildAfter(ev : CustomEvent) {
-    // ev.detail is a string JSON pointer path, like  // /value/0/value/0
-    const parts = ev.detail.path.split('/'),          // ["", "value", "0", "value", "0"]
-          index = parts.slice(parts.length - 1)[0],   // "0"
-          base = parts.slice(0, parts.length - 1);    // ["", "value", "0", "value"]
+    const { path, index } = this.pathAndIndexFromPath(ev.detail.path);
 
-    // if 'index' is not a number (e.g., if you're in a psalm and pressed Enter in /value/0/value/0/verse),
-    // then drop it and use the preceding parts of the path
-    let root : string;
-    if(Number(index) >= 0) {
-      root = base.join('/');
-    } else {
-      const penultimate = parts.slice(parts.length - 2, parts.length - 1)[0],
-            penultimateBase = parts.slice(0, parts.length - 2);
-      root = [ ... penultimateBase, penultimate].join('/');
-    }
-    console.log(ev.detail.path, parts, base, index);
     const change = new Change({
-            path: root,
+            path,
             op: [{
               type: 'insertAt',
-              index: Number(index) >= 0 ? Number(index) + 1 : undefined,
+              index: index + 1,
               value: ev.detail.template
             }]
           });
+
     console.log('addChildAfter - emit change', change);
+
     this.editorDocShouldChange.emit(change);
   }
 
   /** Tells the Editor to merge this node with the previous one in the value */
   @Listen('ldfMergeWithPrevious')
   onMergeWithPrevious(ev : CustomEvent ) {
-    console.log('mergeWithPrevious', ev.detail.path, ev.detail.value);
-    const path = ev.detail.path,
-          parts = path.split('/'),                    // ["", "value", "0", "value", "0"]
-          index = parts.slice(parts.length - 1)[0],   // "0"
-          base = parts.slice(0, parts.length - 1),    // ["", "value", "0", "value"]
-          root = base.join('/'),
-          previousIndex = Number(index) - 1;
+    const { path, index, previousIndex, field } = this.pathAndIndexFromPath(ev.detail.path),
+          parts = path.split('/'),
+          previousPath = parts
+            //.slice(0, parts.length - 1)
+            .concat(previousIndex.toString())
+            .concat(field)                    // e.g., 'text' or 'verse', if in a complex type
+            .join('/')
+            .replace(/\/$/, '');               // replace trailing / that arises if `field` is `undefined`
+
+    console.log('parts = ', parts);
 
     // if we've fired this on the first element, do nothing
     if(previousIndex >= 0) {
+      console.log('previousPath', previousPath);
       // otherwise, look up the value of the previous element
-      const previousElement = elementFromPath(this.el, `${root}/${previousIndex}`),
+      const previousElement = elementFromPath(this.el, previousPath),
             textarea = previousElement.shadowRoot.querySelector('textarea'),
             previousValue = textarea?.value,
             // delete the deleted node
             deleteOp = {
               type: 'deleteAt' as 'deleteAt',
-              index: Number(index) >= 0 ? Number(index) : undefined,
+              index,
               oldValue: ev.detail.value
             },
             // insert text into the previous node
             editOp = {
               type: 'edit' as 'edit',
-              index: Number(previousIndex),
+              index: previousIndex,
               value: previousValue.length > 0 ? [previousValue.length, ev.detail.value] : [ev.detail.value]
             },
             deleteChange = new Change({
-              path: root,
+              path,
               op: [
                 deleteOp
               ]
             }),
             editChange = new Change({
-              path: root,
+              path,
               op: [
                 editOp
               ]
@@ -166,6 +158,34 @@ export class EditorComponent {
       this.editorDocShouldChange.emit(deleteChange);
       this.editorDocShouldChange.emit(editChange);
     }
+  }
+
+  pathAndIndexFromPath(startPath : string) : { path : string; index : number; previousIndex: number; field: string; } {
+    // path is a string JSON pointer path, like          // /value/0/value/0
+    const parts = startPath.split('/'),                  // ["", "value", "0", "value", "0"]
+          baseIndex = parts.slice(parts.length - 1)[0],  // "0"
+          base = parts.slice(0, parts.length - 1);       // ["", "value", "0", "value"]
+
+    let path : string,
+        index : number,
+        field : string;
+    if(Number(baseIndex) >= 0) {
+      console.log('baseIndex is a number')
+      path = base.join('/');
+      index = Number(baseIndex);
+    }
+    // if 'baseIndex' is not a number (e.g., if you're in a psalm and pressed Enter in /value/0/value/0/verse),
+    // then drop it and use the preceding parts of the path
+    else {
+      console.log('baseIndex is not a number, it is', baseIndex);
+      const penultimate = parts.slice(parts.length - 2, parts.length - 1)[0],
+            penultimateBase = parts.slice(0, parts.length - 2);
+      path = penultimateBase.join('/');
+      index = Number(penultimate);
+      field = baseIndex;
+    }
+
+    return { path, index, previousIndex: Number(index) - 1, field };
   }
 
   // Listen for scroll and window resize events and reset the cursors accordingly
