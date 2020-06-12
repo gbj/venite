@@ -113,7 +113,9 @@ export class HeadingComponent {
           {/* `Heading.label` => main header node */}
           {this.obj?.value?.map((text, index) => this.headerNode(level, text, index))}
 
-          {/* `Heading.citation` => right-aligned*/}
+          <slot name='additional'></slot>
+
+          {/* `Heading.citation` => right-aligned */}
           {hasCitation && this.citationNode(this.obj.citation)}
         </ldf-label-bar>
       </Host>

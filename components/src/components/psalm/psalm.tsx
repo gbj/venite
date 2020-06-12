@@ -89,12 +89,14 @@ export class PsalmComponent {
       label = this.obj.metadata.localname;
     }
     const heading = new Heading({
-      label,
-      citation: this.obj.citation
+      type: 'heading',
+      metadata: { level: 3 },
+      citation: this.obj.citation,
+      value: [label]
     })
     return (
       <ldf-heading doc={heading}>
-        {this.obj.metadata && this.obj.metadata.latinname && <h5 slot='additional'>{this.obj.metadata.latinname}</h5>}
+        {<h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
       </ldf-heading>
     )
   }
