@@ -103,6 +103,21 @@ export class PsalmComponent {
   render() {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
 
+    // create blank psalm verse pattern
+    let pattern;
+    if(this.editable) {
+      const pattern = (this.obj?.value.flat().filter(child => child.type == 'psalm-verse')[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' }) as PsalmVerse;
+      if(pattern.number) {
+        pattern.number = '';
+      }
+      if(pattern.halfverse) {
+        pattern.halfverse = '';
+      }
+      if(pattern.verse) {
+        pattern.verse = '';
+      }
+    }
+
     return (
       <Host lang={this.obj.language}>
         {/* Slot for controls*/}
@@ -137,7 +152,8 @@ export class PsalmComponent {
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-verse`}
                     text={verse.verse}
                     path={`${this.path}/value/${sectionIndex}/${verseIndex}/verse`}
-                    placeholder='Lorem ipsum sit dolor amet, *'>
+                    placeholder='Lorem ipsum sit dolor amet, *'
+                    template={pattern}>
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
@@ -157,7 +173,8 @@ export class PsalmComponent {
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-halfverse`}
                     text={verse.halfverse}
                     path={`${this.path}/value/${sectionIndex}/${verseIndex}/halfverse`}
-                    placeholder='consectetur adipiscing elit.'>
+                    placeholder='consectetur adipiscing elit.'
+                    template={pattern}>
                   </ldf-editable-text> :
                   <ldf-string text={verse.halfverse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
@@ -174,7 +191,8 @@ export class PsalmComponent {
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-number`}
                     text={verse.number}
                     path={`${this.path}/value/${sectionIndex}/${verseIndex}/number`}
-                    placeholder='#'>
+                    placeholder='#'
+                    template={pattern}>
                   </ldf-editable-text> :
                   <sup>{verse.number}</sup>}
                   <div class='text'>{nodes}</div>

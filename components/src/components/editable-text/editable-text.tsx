@@ -1,7 +1,7 @@
 import { Component, Element, Prop, Listen, Event, EventEmitter, Host, State, Watch, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 
-import { Change, Cursor } from '@venite/ldf';
+import { Change, Cursor, ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Heading } from '@venite/ldf';
 import { handleInput } from './handle-input';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -42,6 +42,9 @@ export class EditableTextComponent {
   /** Whether to display as a short, single-line input */
   @Prop() short : boolean;
 
+  /** The base object this expresses as part of `LiturgicalDocument`.value */
+  @Prop() template : ResponsivePrayerLine | BibleReadingVerse | (PsalmVerse | Heading)[] | string = "";
+
   // Life Cycle
   componentDidRender() {
     // After the first render, with text in place, adjust size from minimum
@@ -49,17 +52,24 @@ export class EditableTextComponent {
   }
 
   // Events
+
+  /** Tells the Editor that the cursor has moved within this input */
   @Event({ bubbles: true }) ldfCursorMoved : EventEmitter<Cursor>;
+
+  /** Tell the Editor that a change has been made to the document */
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
-  @Listen('beforeinput')
-  onBeforeInput() {
-    this.previousText = this.cursor.element.value;
-  }
+  /** Tells the Editor to add another child after this one in the document */
+  @Event() ldfAddChildAfter : EventEmitter<{path: string; template: any;}>;
+
+  /** Tells the Editor to merge this node with the previous one in the value */
+  @Event() ldfMergeWithPrevious : EventEmitter<{path: string; value: string;}>;
 
   // Listeners
+
+  /** When the user inputs something, autogrow the textarea and process the input */
   @Listen('input')
-  async onInput() {
+  onInput() {
     // first, update the size of the textarea to match the size of the text
     this.autoGrow();
     this.handleInput();
@@ -143,6 +153,24 @@ export class EditableTextComponent {
     }
   }
 
+  /** Check for one of
+   * 1) Enter at end of textarea => emit an event telling the parent to add another node in its value here
+   * 2) Enter in middle of line => add a line break (i.e., normal behavior)
+   * 3) Shift + Enter anywhere => add a line break (i.e., normal behavior) */
+  checkEnter(event : KeyboardEvent) {
+    // if this is an Enter key event without the shift key at the end of the textarea
+    if(event.keyCode == 13 && !event.shiftKey && this.cursor.start == this.textarea.value.length) {
+      event.preventDefault();
+      this.ldfAddChildAfter.emit({path: this.path, template: this.template});
+    }
+
+    // if this is a Backspace key event at the beginning of the textarea
+    if(event.keyCode == 8 && this.cursor.start == 0 && this.cursor.end == 0) {
+      event.preventDefault();
+      this.ldfMergeWithPrevious.emit({ path: this.path, value: this.currentText});
+    }
+  }
+
   // Lifecycle
   componentWillLoad() {
     this.loadLocaleStrings();
@@ -186,7 +214,8 @@ export class EditableTextComponent {
         <Host>
           <textarea
             ref={el => this.textarea = el as HTMLTextAreaElement}
-            placeholder={this.placeholder || localeStrings.placeholder}>{this.currentText}</textarea>
+            placeholder={this.placeholder || localeStrings.placeholder}
+            onKeyDown={(event : KeyboardEvent) => this.checkEnter(event)}>{this.currentText}</textarea>
         </Host>
       );
     } else {
@@ -195,7 +224,8 @@ export class EditableTextComponent {
           <ion-input
             ref={async el => this.textarea = await el.getInputElement()}
             placeholder={this.placeholder || localeStrings.placeholder}
-            value={this.currentText}>
+            value={this.currentText}
+            onKeyDown={(event : KeyboardEvent) => this.checkEnter(event)}>
           </ion-input>
         </Host>
       );

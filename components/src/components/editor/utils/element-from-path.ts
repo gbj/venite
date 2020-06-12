@@ -15,26 +15,3 @@ export function insertTextInEditableText(start : number, end : number, value : s
   textarea.setSelectionRange(start, end);
   textarea.setRangeText(value);
 }
-
-export function elementFromPath2(root : HTMLElement, remaining : string[] = [], level : number = 0, pathSoFar : string = '') {
-  //const parts = path.split('//');
-
-  if(remaining.length == 1) {
-    console.log('branch A')
-    console.log('remaining', remaining, level, pathSoFar);
-    console.log(`${pathSoFar}//${remaining[0]}`);
-    console.log(root.shadowRoot.querySelector(`[path="${pathSoFar}//${remaining[0]}"]`));
-    return root.shadowRoot.querySelector(`[path="${pathSoFar}//${remaining[0]}"]`);
-  } else {
-    console.log('branch B');
-    console.log('remaining', remaining, level, pathSoFar);
-    console.log(`${pathSoFar}${remaining[0]}`);
-    console.log(root.shadowRoot.querySelector(`[path="${pathSoFar}//${remaining[0]}"]`));
-    return elementFromPath2(
-      root.shadowRoot.querySelector(`[path="${pathSoFar}//${remaining[0]}"]`),
-      remaining.slice(1),
-      level + 1,
-      `${pathSoFar}//${remaining[0]}`
-    );
-  }
-}

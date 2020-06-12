@@ -39,6 +39,9 @@ export class LiturgicalDocumentComponent {
   /** A JSON Pointer that points to the LiturgicalDocument being edited */
   @Prop({ reflect: true }) path : string;
 
+  /** A JSON Pointer that points to the array within which the item is nested*/
+  @Prop({ reflect: true }) base: string;
+
   /** Index within a larger array, if any */
   @Prop() index : number;
 
@@ -138,7 +141,7 @@ export class LiturgicalDocumentComponent {
         {/* Settings/Delete Buttons */}
         {this.editable && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
-          base={this.path}
+          base={this.base}
           index={this.index}
           obj={this.obj}>
         </ldf-editable-metadata-buttons>}

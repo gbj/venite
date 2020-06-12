@@ -90,6 +90,84 @@ export class EditorComponent {
     this.editorDocShouldChange.emit(ev.detail);
   }
 
+  /** Tells the Editor to add another child after this one in the document */
+  @Listen('ldfAddChildAfter')
+  onAddChildAfter(ev : CustomEvent) {
+    // ev.detail is a string JSON pointer path, like  // /value/0/value/0
+    const parts = ev.detail.path.split('/'),          // ["", "value", "0", "value", "0"]
+          index = parts.slice(parts.length - 1)[0],   // "0"
+          base = parts.slice(0, parts.length - 1);    // ["", "value", "0", "value"]
+
+    // if 'index' is not a number (e.g., if you're in a psalm and pressed Enter in /value/0/value/0/verse),
+    // then drop it and use the preceding parts of the path
+    let root : string;
+    if(Number(index) >= 0) {
+      root = base.join('/');
+    } else {
+      const penultimate = parts.slice(parts.length - 2, parts.length - 1)[0],
+            penultimateBase = parts.slice(0, parts.length - 2);
+      root = [ ... penultimateBase, penultimate].join('/');
+    }
+    console.log(ev.detail.path, parts, base, index);
+    const change = new Change({
+            path: root,
+            op: [{
+              type: 'insertAt',
+              index: Number(index) ? Number(index) + 1 : undefined,
+              value: ev.detail.template
+            }]
+          });
+    console.log('addChildAfter - emit change', change);
+    this.editorDocShouldChange.emit(change);
+  }
+
+  /** Tells the Editor to merge this node with the previous one in the value */
+  @Listen('ldfMergeWithPrevious')
+  onMergeWithPrevious(ev : CustomEvent ) {
+    console.log('mergeWithPrevious', ev.detail.path, ev.detail.value);
+    const path = ev.detail.path,
+          parts = path.split('/'),                    // ["", "value", "0", "value", "0"]
+          index = parts.slice(parts.length - 1)[0],   // "0"
+          base = parts.slice(0, parts.length - 1),    // ["", "value", "0", "value"]
+          root = base.join('/'),
+          previousIndex = Number(index) - 1;
+
+    // if we've fired this on the first element, do nothing
+    if(previousIndex >= 0) {
+      // otherwise, look up the value of the previous element
+      const previousElement = elementFromPath(this.el, `${root}/${previousIndex}`),
+            textarea = previousElement.shadowRoot.querySelector('textarea'),
+            previousValue = textarea?.value,
+            // delete the deleted node
+            deleteOp = {
+              type: 'deleteAt' as 'deleteAt',
+              index: Number(index) ? Number(index) : undefined,
+              oldValue: ev.detail.value
+            },
+            // insert text into the previous node
+            editOp = {
+              type: 'edit' as 'edit',
+              index: Number(previousIndex),
+              value: previousValue.length > 0 ? [previousValue.length, ev.detail.value] : [ev.detail.value]
+            },
+            deleteChange = new Change({
+              path: root,
+              op: [
+                deleteOp
+              ]
+            }),
+            editChange = new Change({
+              path: root,
+              op: [
+                editOp
+              ]
+            });
+      console.log('mergeWithPrevious emitting', this.obj, deleteChange, editChange);
+      this.editorDocShouldChange.emit(deleteChange);
+      this.editorDocShouldChange.emit(editChange);
+    }
+  }
+
   // Listen for scroll and window resize events and reset the cursors accordingly
   // (the cursor reset method is debounced)
   @Listen('scroll', { target: 'document' })
