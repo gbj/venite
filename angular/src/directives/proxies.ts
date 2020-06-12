@@ -1241,16 +1241,18 @@ export class LdfEditableSelect {
 }
 
 export declare interface LdfEditableText extends Components.LdfEditableText {}
-@ProxyCmp({inputs: ['path', 'placeholder', 'short', 'text']})
-@Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'placeholder', 'short', 'text'] })
+@ProxyCmp({inputs: ['path', 'placeholder', 'short', 'template', 'text']})
+@Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'placeholder', 'short', 'template', 'text'] })
 export class LdfEditableText {
   ldfCursorMoved!: EventEmitter<CustomEvent>;
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  ldfAddChildAfter!: EventEmitter<CustomEvent>;
+  ldfMergeWithPrevious!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfCursorMoved', 'ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfCursorMoved', 'ldfDocShouldChange', 'ldfAddChildAfter', 'ldfMergeWithPrevious']);
   }
 }
 
@@ -1291,8 +1293,8 @@ export class LdfLabelBar {
 }
 
 export declare interface LdfLiturgicalDocument extends Components.LdfLiturgicalDocument {}
-@ProxyCmp({inputs: ['doc', 'editable', 'index', 'path']})
-@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'index', 'path'] })
+@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'path']})
+@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'path'] })
 export class LdfLiturgicalDocument {
   focusPath!: EventEmitter<CustomEvent>;
   focusObj!: EventEmitter<CustomEvent>;
