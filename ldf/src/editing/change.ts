@@ -1,4 +1,4 @@
-class Operation { 
+export class Operation { 
   p?: (number | string | undefined)[];
   type: 'insertAt' | 'deleteAt' | 'set' | 'delete' | 'edit';
   index?: number | string;
