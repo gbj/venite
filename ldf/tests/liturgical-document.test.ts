@@ -7,6 +7,7 @@ const ASH_WEDNESDAY = new LiturgicalDay({
   propers: 'wednesday-last-epiphany',
   week: {
     week: 0,
+    cycle: 'Epiphany',
     slug: 'last-epiphany',
     season: 'OrdinaryTime' as 'OrdinaryTime',
     name: 'Last Sunday after the Epiphany',
@@ -55,7 +56,8 @@ const ASH_THURSDAY = new LiturgicalDay({
     color: {
       name: 'green',
       hex: '#409940'
-    }
+    },
+    cycle: 'Epiphany'
   },
   years: {
     bcp1979_daily_office: 2,

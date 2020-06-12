@@ -10,7 +10,7 @@ export class LiturgicalWeek {
   slug: string;
 
   /** Overarching calendar this is a part of */
-  kalendar: string;
+  kalendar?: string;
 
   /** Seasonal cycle within which it falls */
   cycle: 'Advent' | 'Christmas' | 'Epiphany' | 'Easter';
@@ -29,6 +29,7 @@ export class LiturgicalWeek {
     | 'Lent'
     | 'HolyWeek'
     | 'Easter'
+    | 'Ascension'
     | 'Pentecost'
     | 'Saints'
     | 'OrdinaryTime';
@@ -39,7 +40,7 @@ export class LiturgicalWeek {
   /** Used for English-language formatting, generally when "week" name is the proper name of a Sunday.
     * @example
     * // "Thursday after Pentecost", not "Thursday after the Pentecost" */
-  omit_the: boolean = false;
+  omit_the?: boolean = false;
 
   /** The {@link LiturgicalColor} used for the week */
   color: LiturgicalColor | string;

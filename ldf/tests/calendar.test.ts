@@ -103,7 +103,7 @@ describe('liturgicalWeek', () => {
   });
 });
 
-expect('addOneDay', () => {
+/*describe('addOneDay', () => {
   it('should add a day to the date within a month', () => {
     const date = new Date(Date.parse('2020-02-03 11:00pm EST')),
           newDate = addOneDay(date);
@@ -127,7 +127,7 @@ expect('addOneDay', () => {
     expect(newDate.getMonth()).toEqual(0);
     expect(newDate.getDate()).toEqual(1);
   });
-})
+})*/
 
 describe('liturgicalDay', () => {
   // Thursday May 21 2020

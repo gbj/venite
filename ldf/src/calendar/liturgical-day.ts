@@ -60,6 +60,7 @@ export class LiturgicalDay {
     | 'Lent'
     | 'HolyWeek'
     | 'Easter'
+    | 'Ascension'
     | 'Pentecost'
     | 'Saints'
     | 'OrdinaryTime';

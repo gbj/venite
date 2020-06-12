@@ -13,7 +13,8 @@ const day = new LiturgicalDay({
     color: {
       name: 'green',
       hex: '#409940'
-    }
+    },
+    cycle: 'Epiphany'
   },
   years: {
     bcp1979_daily_office: 2,
@@ -56,7 +57,8 @@ const annunciation = new LiturgicalDay({
     color: {
       name: 'purple',
       hex: '#800080'
-    }
+    },
+    cycle: 'Easter'
   },
   years: {
     bcp1979_daily_office: 2,
