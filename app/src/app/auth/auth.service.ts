@@ -57,4 +57,8 @@ export class AuthService {
   async createUserWithEmailAndPassword(email : string, password : string) {
     return auth().createUserWithEmailAndPassword(email, password);
   }
+
+  async resetPassword(email : string) {
+    return auth().sendPasswordResetEmail(email);
+  }
 }

@@ -2,9 +2,11 @@
   "auth": {
     "email": "Email",
     "error": "That username and password don’t seem to go together!",
+    "forgot-password": "I forgot my password.",
     "name": "Name",
     "password": "Password",
     "register": "Create an Account",
+    "reset-sent": "We’ve sent you an email with instructions on how to reset your password.",
     "sign-in": "Sign In",
     "sign-out": "Sign Out",
     "sign-in-with-apple": "Sign in with Apple",

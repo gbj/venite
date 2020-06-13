@@ -11,12 +11,14 @@ import { UserComponent } from './user/user.component';
 
 // Community Modules
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    FormsModule
   ],
   declarations: [
     AuthMenuButtonComponent,

@@ -2,58 +2,55 @@
   <ion-toolbar>
     <ion-title>{{ 'auth.sign-in' | translate }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button aria-role="Button" aria-label="{{ 'Close' | translate }}">
+      <ion-button aria-role="Button" aria-label="{{ 'Close' | translate }}" (click)="dismiss()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div  class="sign-in-block">
- <!-- Sign in -->
- <ng-container *ngIf="!(auth.user | async)">
+  <div class="modes">
+    <div [class]="{'sign-in-block': true, 'visible': registering == false, 'hidden': registering == true}">
+      <!-- Sign in with Social Providers -->
+      <div class="social-providers">
+        <ion-button (click)="login('Google')">
+          <ion-icon name="logo-google" slot="start"></ion-icon>
+          <ion-label>{{ 'auth.sign-in-with-google' | translate }}</ion-label>
+        </ion-button>
+        <ion-button (click)="login('Twitter')" color="secondary">
+          <ion-icon name="logo-twitter" slot="start"></ion-icon>
+          <ion-label>{{ 'auth.sign-in-with-twitter' | translate }}</ion-label>
+        </ion-button>
+        <ion-button (click)="login('Apple')" color="dark">
+          <ion-icon name="logo-apple" slot="start"></ion-icon>
+          <ion-label>{{ 'auth.sign-in-with-apple' | translate }}</ion-label>
+        </ion-button>
+      </div>
 
-  <!-- Sign in with Social Providers -->
-  <div class="social-providers">
-    <ion-button (click)="login('Google')">
-      <ion-icon name="logo-google" slot="start"></ion-icon>
-      <ion-label>{{ 'auth.sign-in-with-google' | translate }}</ion-label>
-    </ion-button>
-    <ion-button (click)="login('Twitter')" color="secondary">
-      <ion-icon name="logo-twitter" slot="start"></ion-icon>
-      <ion-label>{{ 'auth.sign-in-with-twitter' | translate }}</ion-label>
-    </ion-button>
-    <ion-button (click)="login('Apple')" color="dark">
-      <ion-icon name="logo-apple" slot="start"></ion-icon>
-      <ion-label>{{ 'auth.sign-in-with-apple' | translate }}</ion-label>
-    </ion-button>
-  </div>
+      <!-- Sign in with Email -->
+      <form>
+        <ion-item>
+          <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
+          <ion-input type="email" name="email" [(ngModel)]='email' ngDefaultControl></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">{{ 'auth.password' | translate }}</ion-label>
+          <ion-input [(ngModel)]='password' name="password" type='password' ngDefaultControl></ion-input>
+          <ion-text *ngIf="error" color="danger">{{ 'auth.error' | translate }}</ion-text>
+        </ion-item>
+        <div class="email">
+          <ion-button (click)="submitEmailAndPassword()">
+            <ion-icon name="log-in" slot="start"></ion-icon>
+            <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
+          </ion-button>
+          <ion-button fill="clear" (click)="toggleRegister()">{{ 'auth.register' | translate }}</ion-button>
+        </div>
+      </form>
+    </div>
 
-  <!-- Sign in with Email -->
-  <ion-item>
-    <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
-    <ion-input type="email" [(ngModel)]='email'></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">{{ 'auth.password' | translate }}</ion-label>
-    <ion-input [(ngModel)]='password' type='password'></ion-input>
-    <ion-text *ngIf="error" color="danger">{{ 'auth.error' | translate }}</ion-text>
-  </ion-item>
-  <div class="email">
-    <ion-button (click)="submitEmailAndPassword()">
-      <ion-icon name="log-in" slot="start"></ion-icon>
-      <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
-    </ion-button>
-    <ion-button fill="clear" [routerLink]="['register']">{{ 'auth.register' | translate }}</ion-button>
-  </div>
-</ng-container>
-
-<!-- Sign Out -->
-<div *ngIf="auth.user | async" class="sign-out">
-  <ion-button (click)="logout()">
-    <ion-icon name="log-out" slot="start"></ion-icon>
-    <ion-label>{{ 'auth.sign-out' | translate }}</ion-label>
-  </ion-button>
-</div>
+    <!-- Registration -->
+    <div [class]="{'register-block': true, 'visible': registering == true, 'hidden': registering == false}">
+      <venite-register (complete)="dismiss()"></venite-register>
+    </div>
   </div>
 </ion-content>

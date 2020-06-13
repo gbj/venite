@@ -1,4 +1,4 @@
-.sign-in-block {
+.sign-in-block, .register-block {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,27 @@
       min-width: 200px;
     }
   }
+}
+
+/* Animation in/out */
+.modes {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+}
+.register-block, .sign-in-block {
+  transition: 0.25s linear;
+  width: 100%;
+}
+.register-block.hidden {
+  transform: translateX(100%);
+}
+.sign-in-block.hidden {
+  transform: translateX(-100%);
+}
+.register-block.visible {
+  transform: translateX(-100%);
+}
+venite-register { 
+  width: 100%;
 }
