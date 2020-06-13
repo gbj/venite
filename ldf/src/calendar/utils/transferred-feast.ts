@@ -87,6 +87,7 @@ export function transferredFeast(
 
     // if today is not empty and today's feast is not observed...
     else {
+        // TODO -- check whether today's feast is observed today or not (don't transfer if it's observed today!)
         console.log('today is ', todayDate)
         console.log('today is not empty, yesterday is empty.');
         console.log('\n\n');

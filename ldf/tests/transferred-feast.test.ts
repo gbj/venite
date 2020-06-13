@@ -7,7 +7,7 @@ const findLiturgicalDay = (d : Date) => LITURGICAL_DAYS[`${d.getFullYear()}/${d.
       findFeastDay = (d : Date) => FEAST_DAYS.find(day => day.mmdd == `${d.getMonth()+1}/${d.getDate()}`);
 
 describe('transferredFeast', () => {
-/*    it(('is undefined if there are no feasts'), () => {
+    it(('is undefined if there are no feasts'), () => {
       expect(transferredFeast(
         findLiturgicalDay,
         findSpecialDay,
@@ -23,7 +23,7 @@ describe('transferredFeast', () => {
           findFeastDay,
           dateFromYMD('2020', '6', '1')
         )?.slug).toEqual('the-visitation');
-    });*/
+    });
 
     it(('transfers both St. Joseph and the Annunciation to Monday and Tuesday of Easter 2 when they fall during Holy Week + Easter in 2008'), () => {
         expect(transferredFeast(
