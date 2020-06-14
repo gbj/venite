@@ -1,4 +1,5 @@
 import { Component, Element, State, Prop, h } from '@stencil/core';
+import { modalController } from '@ionic/core';
 import { LiturgicalDocument } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -54,19 +55,19 @@ export class EditableMetadataButtonsComponent {
 
   /** Display a modal `EditableMetadataComponent` */
   async openSettings() {
-    const modalElement = document.createElement('ion-modal');
-    modalElement.component = 'ldf-editable-metadata';
-    console.log('doc', this.obj, 'path', this.base ?? '/');
-    modalElement.componentProps = {
-      modal: modalElement,
+    const modal = await modalController.create({
+      component: 'ldf-editable-metadata',
+      
+    })
+    modal.componentProps = {
+      modal,
       doc: this.obj,
       path: this.base ?? '/',
       visible: true,
       collapsed: false
     }
     // present the modal
-    document.body.appendChild(modalElement);
-    return modalElement.present();
+    return modal.present();
   }
 
 

@@ -1,4 +1,5 @@
 import { Element, Component, Prop, State, Host, Event, EventEmitter, h } from '@stencil/core';
+import { modalController } from '@ionic/core';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { LiturgicalDocument, Change } from '@venite/ldf';
 import '@ionic/core';
@@ -53,13 +54,14 @@ export class EditableAddBlockComponent {
 
   // Pop up the modal with an Add Block Menu inside it
   async expand() {
-    const modal = document.createElement('ion-modal');
-    modal.component = 'ldf-editable-add-block-menu';
+    const modal = await modalController.create({
+      component: 'ldf-editable-add-block-menu',
+    })
     modal.componentProps = {
-      'modal': modal
+      modal
     };
     modal.swipeToClose = true;
-    document.body.appendChild(modal);
+
     await modal.present();
 
     const { data } = await modal.onDidDismiss();

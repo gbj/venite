@@ -1,4 +1,5 @@
 import { Component, Element, Prop, Listen, Event, EventEmitter, State, h } from '@stencil/core';
+import { alertController } from '@ionic/core';
 import { LiturgicalDocument, Change } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
@@ -35,32 +36,30 @@ export class EditableDeleteComponent {
     }
 
     // show a confirmation alert
-    const alert = document.createElement('ion-alert');
-    alert.header = localeStrings.confirm_header;
-    alert.message = localeStrings.confirm_message;
-    alert.buttons = [
-      {
-        text: localeStrings.cancel,
-        role: 'cancel',
-        cssClass: 'secondary'
-      }, {
-        text: localeStrings.delete,
-        role: 'submit',
-        cssClass: 'danger',
-        handler: () => {
-          console.log('deleting ', this.base, this.index);
-          this.ldfDocShouldChange.emit(new Change({
-            path: this.base,
-            op: [ { type: 'deleteAt' as 'deleteAt', index: this.index } ]
-          }))
+    const alert = await alertController.create({
+      header: localeStrings.confirm_header,
+      message: localeStrings.confirm_message,
+      buttons: [
+        {
+          text: localeStrings.cancel,
+          role: 'cancel',
+          cssClass: 'secondary'
+        }, {
+          text: localeStrings.delete,
+          role: 'submit',
+          cssClass: 'danger',
+          handler: () => {
+            console.log('deleting ', this.base, this.index);
+            this.ldfDocShouldChange.emit(new Change({
+              path: this.base,
+              op: [ { type: 'deleteAt' as 'deleteAt', index: this.index } ]
+            }))
+          }
         }
-      }
-    ]
+      ]
+    });
 
     // show the alert
-    if(document) {
-      document.body.appendChild(alert);
-    }
     return alert.present();
   }
 
