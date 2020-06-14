@@ -70,7 +70,8 @@ export class HomePage implements OnInit {
     this.week = this.calendarService.buildWeek(this.date, this.kalendar, this.vigil);
 
     // main liturgical day observable
-    this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy as Observable<Liturgy>, this.week, this.vigil);
+    this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy as Observable<Liturgy>, this.week, this.vigil)
+      .pipe(tap(day => console.log('day = ', day)));
 
     // Pray button data
     this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences);
