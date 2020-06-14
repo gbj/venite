@@ -1,6 +1,11 @@
-<form>
+<!-- Step One: Register -->
+<form class="register">
   <h3>{{ 'auth.register' | translate }}</h3>
   <!-- Register -->
+  <ion-item>
+    <ion-label position="stacked">{{ 'auth.name' | translate }}</ion-label>
+    <ion-input [(ngModel)]='name' type='text' name='name' required='true' ngDefaultControl></ion-input>
+  </ion-item>
   <ion-item>
     <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
     <ion-input [(ngModel)]='email' type='email' name='email' required='true' ngDefaultControl></ion-input>

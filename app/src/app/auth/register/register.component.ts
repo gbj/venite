@@ -11,6 +11,7 @@ import { AuthService } from '../auth.service';
 export class RegisterComponent implements OnInit {
   @Output() complete : EventEmitter<boolean> = new EventEmitter();
 
+  name: string;
   email: string;
   password: string;
   error: string;
@@ -25,7 +26,10 @@ export class RegisterComponent implements OnInit {
   async submitEmailAndPassword() {
     try {
       const result = await this.auth.createUserWithEmailAndPassword(this.email, this.password);
-      console.log(result);
+      if(result.user) {
+        await result.user.updateProfile({ displayName: this.name, photoURL: '/assets/avatar.svg' });
+        this.complete.emit();
+      }
     } catch(e) {
       console.warn(e);
       this.error = e.message;

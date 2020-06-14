@@ -2,7 +2,7 @@
 <ng-container *ngIf="auth.user | async as user else signin">
   <ng-container *ngIf="user">
     <ion-menu-toggle menu="end">
-      <ion-item button lines="none">
+      <ion-item button lines="none" detail="false">
         <ion-avatar *ngIf="user.photoURL" slot="end">
           <img [src]="user.photoURL" [alt]="user.displayName">
         </ion-avatar>
@@ -13,7 +13,7 @@
 
 <!-- If not logged in, show signin button -->
 <ng-template #signin>
-  <ion-item button (click)="signIn()" lines="none">
+  <ion-item button (click)="signIn()" lines="none" detail="false">
     <ion-avatar>
       <img src="/assets/avatar.svg" alt="Sign In">
     </ion-avatar>

@@ -1,6 +1,6 @@
 <ion-menu side="end" menuId="auth" content-id="main">
   <ng-container *ngIf="auth.user | async as user">
-    <ion-header>
+<!--    <ion-header>
       <ion-toolbar>
         <ion-item lines="none">
           <ion-avatar *ngIf="user.photoURL" slot="start">
@@ -12,14 +12,27 @@
           <ion-title>{{ user.displayName }}</ion-title>
         </ion-item>
       </ion-toolbar>
-    </ion-header>
+    </ion-header>-->
     <ion-content>
-      <ion-list>
-        <ion-item button (click)="auth.logout()">
+      <nav class='auth-menu'>
+        <ion-avatar>
+          <img [src]="user.photoURL || '/avatar.svg'">
+        </ion-avatar>
+        <h2>{{ user.displayName }}</h2>
+
+        <ng-container *ngIf="organizations$ | async as orgs">
+          <pre>{{ orgs | json }}</pre>
+          <ion-list-header *ngIf="orgs?.length > 0">{{ 'auth.organizations' | translate }}</ion-list-header>
+          <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'organization', org.id]">
+            {{ org.name }}
+          </ion-item>
+        </ng-container>
+
+        <ion-button class="logout" (click)="auth.logout()">
           <ion-icon name="log-out" slot="start"></ion-icon>
           <ion-label>{{ 'auth.sign-out' | translate }}</ion-label>
-        </ion-item>
-      </ion-list>
+        </ion-button>
+      </nav>
     </ion-content>
   </ng-container>
 </ion-menu>
