@@ -62,8 +62,6 @@ graph TD;
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgical-document --> ldf-editable-metadata-buttons
   ldf-liturgy --> ldf-liturgical-document
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-editable-text --> ion-input
@@ -92,18 +90,14 @@ graph TD;
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-editable-metadata-buttons --> ion-modal
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
-  ldf-editable-delete --> ion-alert
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
-  ion-alert --> ion-ripple-effect
-  ion-alert --> ion-backdrop
   ldf-editor --> ldf-liturgical-document
   style ldf-liturgical-document fill:#f9f,stroke:#333,stroke-width:4px
 ```

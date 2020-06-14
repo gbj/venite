@@ -23,7 +23,6 @@
 
 ### Depends on
 
-- ion-modal
 - [ldf-label-bar](../label-bar)
 - ion-buttons
 - ion-button
@@ -33,20 +32,15 @@
 ### Graph
 ```mermaid
 graph TD;
-  ldf-editable-metadata-buttons --> ion-modal
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
-  ion-modal --> ion-backdrop
   ion-button --> ion-ripple-effect
-  ldf-editable-delete --> ion-alert
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
-  ion-alert --> ion-ripple-effect
-  ion-alert --> ion-backdrop
   ldf-liturgical-document --> ldf-editable-metadata-buttons
   style ldf-editable-metadata-buttons fill:#f9f,stroke:#333,stroke-width:4px
 ```

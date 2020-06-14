@@ -27,15 +27,9 @@
 
  - [ldf-liturgy](../liturgy)
 
-### Depends on
-
-- ion-modal
-
 ### Graph
 ```mermaid
 graph TD;
-  ldf-editable-add-block --> ion-modal
-  ion-modal --> ion-backdrop
   ldf-liturgy --> ldf-editable-add-block
   style ldf-editable-add-block fill:#f9f,stroke:#333,stroke-width:4px
 ```
