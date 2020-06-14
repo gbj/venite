@@ -1,9 +1,11 @@
 {
   "auth": {
+    "edit-avatar": "Change",
     "email": "Email",
     "error": "That username and password don’t seem to go together!",
     "forgot-password": "I forgot my password.",
     "name": "Name",
+    "organizations": "Your Churches",
     "password": "Password",
     "register": "Create an Account",
     "reset-sent": "We’ve sent you an email with instructions on how to reset your password.",

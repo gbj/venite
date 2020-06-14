@@ -1,0 +1,33 @@
+.avatar {
+    clip-path: circle(45%);
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+
+    > img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.edit-tooltip {
+    background: rgba(0, 0, 0, 0.25);
+    bottom: 3em;
+    color: var(--ion-color-light-tint);
+    height: 3em;
+    opacity: 0;
+    padding: 0.25em;
+    position: relative;
+    transition: 0.25s;
+    text-align: center;
+    width: 100%;
+}
+.edit-tooltip.visible {
+    opacity: 1;
+    transition: 0.25s;
+}

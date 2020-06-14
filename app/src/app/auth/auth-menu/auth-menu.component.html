@@ -15,18 +15,15 @@
     </ion-header>-->
     <ion-content>
       <nav class='auth-menu'>
-        <ion-avatar>
-          <img [src]="user.photoURL || '/avatar.svg'">
-        </ion-avatar>
+        <venite-edit-avatar [user]="user"></venite-edit-avatar>
         <h2>{{ user.displayName }}</h2>
 
-        <ng-container *ngIf="organizations$ | async as orgs">
-          <pre>{{ orgs | json }}</pre>
+        <section *ngIf="organizations$ | async as orgs">
           <ion-list-header *ngIf="orgs?.length > 0">{{ 'auth.organizations' | translate }}</ion-list-header>
           <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'organization', org.id]">
             {{ org.name }}
           </ion-item>
-        </ng-container>
+        </section>
 
         <ion-button class="logout" (click)="auth.logout()">
           <ion-icon name="log-out" slot="start"></ion-icon>

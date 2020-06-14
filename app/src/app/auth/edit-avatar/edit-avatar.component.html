@@ -1,0 +1,9 @@
+<figure class="avatar" (click)="editAvatar()" (mouseenter)="toggleEditTooltip()" (mouseleave)="toggleEditTooltip()">
+  <img [src]="user.photoURL || '/avatar.svg'">
+  <figcaption [class]="{'edit-tooltip': true, 'visible': showEditTooltip}">
+    <ion-label>
+      <ion-icon name="create" slot="start"></ion-icon>
+      {{ 'auth.edit-avatar' | translate }}
+    </ion-label>
+  </figcaption>
+</figure>
