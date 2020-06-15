@@ -24,15 +24,15 @@ export class LoginComponent implements OnInit {
     this.registering = !this.registering;
   }
 
-  dismiss() {
-    this.modal.dismiss();
+  dismiss(loggedIn : boolean = false) {
+    this.modal.dismiss(loggedIn);
   }
 
   async submitEmailAndPassword() {
     try {
       const credential = await this.auth.signInWithEmailAndPassword(this.email, this.password);
       if(credential) {
-        this.dismiss();
+        this.dismiss(true);
       }
     } catch(e) {
       console.warn(e);
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
   async login(service : string) {
     const credential = await this.auth.login(service);
     if(credential) {
-      this.dismiss();
+      this.dismiss(true);
     }
   }
 

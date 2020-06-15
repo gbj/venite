@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Organization, OrganizationService } from '../../organization/organization.module';
 import { switchMap, tap } from 'rxjs/operators';
 import { User } from 'firebase';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'venite-auth-menu',
@@ -16,7 +17,8 @@ export class AuthMenuComponent implements OnInit {
 
   constructor(
     public auth : AuthService,
-    private organizationService : OrganizationService
+    private organizationService : OrganizationService,
+    private menu: MenuController
   ) { }
 
   ngOnInit() {
@@ -29,6 +31,10 @@ export class AuthMenuComponent implements OnInit {
 
   updateUserPhoto(user : User, photoURL : string) {
     user.updateProfile({ photoURL });
+  }
+
+  async logout() {
+    this.auth.logout()
   }
 
 }

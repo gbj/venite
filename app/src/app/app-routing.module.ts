@@ -5,6 +5,7 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthModule } from './auth/auth.module';
+import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
   {
@@ -27,7 +28,7 @@ const routes: Routes = [
   {
     path: 'editor',
     loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
-    canActivate: [AngularFireAuthGuard]
+    canActivate: [LoginGuard]
   },
   {
     path: 'pray',

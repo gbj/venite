@@ -50,7 +50,7 @@
 
     <!-- Registration -->
     <div [class]="{'register-block': true, 'visible': registering == true, 'hidden': registering == false}">
-      <venite-register (complete)="dismiss()"></venite-register>
+      <venite-register (complete)="dismiss($event)"></venite-register>
     </div>
   </div>
 </ion-content>
