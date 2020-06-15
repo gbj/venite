@@ -53,7 +53,7 @@ export class EditAvatarComponent implements OnInit {
 
   uploadAvatar(file : File) {
     this.isUploading = true;
-    const filePath = `users/avatar/${new Date().getTime()}/${file.name}`;
+    const filePath = `users/avatar/${new Date().getTime()}-${file.name}`;
     this.progress$ = this.upload.uploadFile(file, filePath);
 
     // when progress is complete, save the new user image
