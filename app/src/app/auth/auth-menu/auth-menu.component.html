@@ -1,21 +1,8 @@
 <ion-menu side="end" menuId="auth" content-id="main">
   <ng-container *ngIf="auth.user | async as user">
-<!--    <ion-header>
-      <ion-toolbar>
-        <ion-item lines="none">
-          <ion-avatar *ngIf="user.photoURL" slot="start">
-            <img [src]="user.photoURL">
-          </ion-avatar>
-          <ion-avatar *ngIf="!user.photoURL" slot="start">
-            <img src="/avatar.svg">
-          </ion-avatar>
-          <ion-title>{{ user.displayName }}</ion-title>
-        </ion-item>
-      </ion-toolbar>
-    </ion-header>-->
     <ion-content>
       <nav class='auth-menu'>
-        <venite-edit-avatar [user]="user"></venite-edit-avatar>
+        <venite-edit-avatar [user]="user" (photoURLChange)="updateUserPhoto(user, $event)"></venite-edit-avatar>
         <h2>{{ user.displayName }}</h2>
 
         <section *ngIf="organizations$ | async as orgs">

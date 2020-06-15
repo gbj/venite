@@ -1,6 +1,7 @@
 {
   "auth": {
     "edit-avatar": "Change",
+    "edit-avatar-tooltip": "Change your picture",
     "email": "Email",
     "error": "That username and password don’t seem to go together!",
     "forgot-password": "I forgot my password.",
@@ -51,5 +52,6 @@
   "Pray the Office": "Pray the Office",
   "Proper": "Proper",
   "sanctoral": "Sanctoral Calendar",
+  "Uploading": "Uploading...",
   "vigil": "Vigil"
 }

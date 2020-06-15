@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // Community Modules
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -40,6 +41,7 @@ import { SharedModule } from './shared/shared.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule.enablePersistence(),
+    AngularFireStorageModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

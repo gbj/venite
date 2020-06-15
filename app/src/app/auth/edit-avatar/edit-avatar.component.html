@@ -1,9 +1,13 @@
-<figure class="avatar" (click)="editAvatar()" (mouseenter)="toggleEditTooltip()" (mouseleave)="toggleEditTooltip()">
-  <img [src]="user.photoURL || '/avatar.svg'">
+<figure [class]="{'avatar': true, 'uploading': isUploading}" (click)="editAvatar()" (mouseenter)="toggleEditTooltip()" (mouseleave)="toggleEditTooltip()">
+  <img [src]="(preview$ | async) || user.photoURL || '/avatar.svg'">
   <figcaption [class]="{'edit-tooltip': true, 'visible': showEditTooltip}">
-    <ion-label>
+    <ion-label *ngIf="!isUploading">
       <ion-icon name="create" slot="start"></ion-icon>
       {{ 'auth.edit-avatar' | translate }}
     </ion-label>
+    <ion-progress-bar *ngIf="isUploading" [aria-label]="'Uploading' | translate" [value]="progress$ | async"></ion-progress-bar>
   </figcaption>
 </figure>
+<form class="visually-hidden">
+  <input #newAvatarInput type="file" (change)="handleFiles($event)" name="newAvatar" [aria-label]="'edit-avatar-tooltip' | translate"/>
+</form>

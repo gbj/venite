@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.uploading {
+    mask-image: radial-gradient(circle at 100%, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
 .edit-tooltip {
     background: rgba(0, 0, 0, 0.25);
     bottom: 3em;
@@ -30,4 +34,18 @@
 .edit-tooltip.visible {
     opacity: 1;
     transition: 0.25s;
+}
+
+.figcaption {
+    ion-progress-bar {
+        width: 80%;
+    }
+}
+
+/* Touchscreens should always show the tooltip */
+@media (hover: none) {
+    .edit-tooltip {
+        opacity: 1;
+        transition: none;
+    }
 }

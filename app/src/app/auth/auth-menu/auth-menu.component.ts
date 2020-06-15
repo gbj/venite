@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import { Observable } from 'rxjs';
 import { Organization, OrganizationService } from '../../organization/organization.module';
 import { switchMap, tap } from 'rxjs/operators';
+import { User } from 'firebase';
 
 @Component({
   selector: 'venite-auth-menu',
@@ -24,6 +25,10 @@ export class AuthMenuComponent implements OnInit {
       switchMap(user => this.organizationService.organizationsWithOwner(user.uid)),
       tap(orgs => console.log('orgs', orgs)),
     );
+  }
+
+  updateUserPhoto(user : User, photoURL : string) {
+    user.updateProfile({ photoURL });
   }
 
 }
