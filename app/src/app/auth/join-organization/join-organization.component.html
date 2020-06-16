@@ -1,8 +1,28 @@
 <!-- Step One: Register -->
-<form class="register ion-padding">
-  <h3>{{ 'auth.register' | translate }}</h3>
+<form class="find-org ion-padding">
+  <h3>{{ 'auth.find-org' | translate }}</h3>
+  <p>{{ 'auth.find-org-copy' | translate }}</p>
+  <ion-searchbar animated (ionChange)="runSearch($event)"></ion-searchbar>
+  <ion-list class="search-results" *ngIf="matches$ | async as matches">
+    <ion-item button *ngFor="let org of matches; trackBy: trackByFn" (click)="joinOrganization(org)">
+      <ion-avatar *ngIf="org.photoURL" slot="start">
+        <img [src]="org.photoURL">
+      </ion-avatar>
+      <ion-label>
+        <h4>{{ org.name }}</h4>
+        <h5>{{ org.location }}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <div class="buttons" *ngIf="search$ | async as search">
+    <ion-button (click)="submitEmailAndPassword()">
+      <ion-icon name="log-in" slot="start"></ion-icon>
+      <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
+    </ion-button>
+    <ion-button fill="clear" (click)="createOrganization(search)">{{ 'Create' | translate }} “{{ search }}”</ion-button>
+  </div>
   <!-- Register -->
-  <ion-item>
+  <!--<ion-item>
     <ion-label position="stacked">{{ 'auth.name' | translate }}</ion-label>
     <ion-input [(ngModel)]='name' type='text' name='name' required='true' ngDefaultControl></ion-input>
   </ion-item>
@@ -17,10 +37,10 @@
   <ion-text *ngIf="error" color="danger">{{ error }}</ion-text>
   <ion-text *ngIf="reset" color="success">{{ 'auth.reset-sent' | translate }}</ion-text>
   <div class="buttons">
-    <ion-button (click)="submitEmailAndPassword()" [disabled]="processing">
+    <ion-button (click)="submitEmailAndPassword()">
       <ion-icon name="log-in" slot="start"></ion-icon>
       <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
     </ion-button>
     <ion-button fill="clear" (click)="forgotPassword()">{{ 'auth.forgot-password' | translate }}</ion-button>
-  </div>
+  </div>-->
 </form>

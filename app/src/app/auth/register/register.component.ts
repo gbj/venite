@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   password: string;
   error: string;
   reset: boolean = false;
+  processing : boolean;
 
   constructor(
     public auth : AuthService
@@ -24,13 +25,17 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   async submitEmailAndPassword() {
+    this.processing = true;
     try {
       const result = await this.auth.createUserWithEmailAndPassword(this.email, this.password);
       if(result.user) {
         await result.user.updateProfile({ displayName: this.name, photoURL: '/assets/avatar.svg' });
+        await this.auth.createUserProfile(result.user);
+        this.processing = false;
         this.complete.emit();
       }
     } catch(e) {
+      this.processing = false;
       console.warn(e);
       this.error = e.message;
     }

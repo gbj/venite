@@ -13,6 +13,7 @@ import { LoginComponent} from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
+import { JoinOrganizationComponent } from './join-organization/join-organization.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
     AuthMenuButtonComponent,
     AuthMenuComponent,
     EditAvatarComponent,
+    JoinOrganizationComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent
@@ -33,6 +35,7 @@ import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
     AuthMenuButtonComponent,
     AuthMenuComponent,
     EditAvatarComponent,
+    JoinOrganizationComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent

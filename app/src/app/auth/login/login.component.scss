@@ -36,20 +36,26 @@
 .modes {
   display: flex;
   flex-direction: row;
-  width: 200%;
+  width: 300%;
 }
-.register-block, .sign-in-block {
+.register-block, .sign-in-block, .organization-block {
   transition: 0.25s linear;
   width: 100%;
 }
 .register-block.hidden {
   transform: translateX(100%);
 }
+.organization-block.hidden {
+  transform: translateX(200%);
+}
 .sign-in-block.hidden {
   transform: translateX(-100%);
 }
 .register-block.visible {
   transform: translateX(-100%);
+}
+.organization-block.visible {
+  transform: translateX(-200%);
 }
 venite-register { 
   width: 100%;

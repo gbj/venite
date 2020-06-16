@@ -26,13 +26,15 @@ export class AuthService {
   }
 
   async login(provider : string) : Promise<auth.UserCredential | null> {
+    let result : auth.UserCredential;
+
     if(this.platform.is('capacitor')) {
       console.warn('Auth not set up in Capacitor yet');
     } else {
       if(provider == 'Google') {
-        return auth().signInWithPopup(new auth.GoogleAuthProvider());
+        result = await auth().signInWithPopup(new auth.GoogleAuthProvider());
       } else if(provider == 'Twitter') {
-        return auth().signInWithPopup(new auth.TwitterAuthProvider());
+        result = await auth().signInWithPopup(new auth.TwitterAuthProvider());
       } else if(provider == 'Apple') {
         //await auth().signInWithPopup(new auth.AppleAuthProvider());
         console.warn('Sign in with Apple needs to be set up in the AuthModule.');
@@ -41,6 +43,13 @@ export class AuthService {
         throw `Auth provider "${provider}" not supported.`;
       }
     }
+
+    // create profile if necessary
+    if(result.additionalUserInfo?.isNewUser) {
+      this.createUserProfile(result.user);
+    }
+
+    return result;
   }
 
   async logout() {
@@ -65,5 +74,14 @@ export class AuthService {
 
   async updateUserProfile(uid : string, profile : Partial<UserProfile>) : Promise<void> {
     return this.afs.collection('Users').doc(uid).update(profile);
+  }
+
+  async createUserProfile(user : User) : Promise<void> {
+    this.afs.doc<UserProfile>(`Users/${user.uid}`).set({
+      uid: user.uid,
+      ... user.displayName && { displayName: user.displayName },
+      ... user.photoURL && { photoURL: user.photoURL },
+      orgs: []
+    });
   }
 }

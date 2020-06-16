@@ -3,6 +3,9 @@ export class Organization {
     /** Database ID */
     id?: string;
 
+    /** Slug used in URLs */
+    slug: string;
+
     /** Human-readable name
      * @example 'St. Anne’s Episcopal Church' */
     name: string;
@@ -10,6 +13,9 @@ export class Organization {
     /** Human-readable location
      * @example 'Lincoln, MA' */
     location?: string;
+
+    /** URL of an avatar for the organization */
+    photoURL?: string;
 
     /** URL to access their page
      * @example 'www.stanneslincoln.org' */
@@ -20,7 +26,4 @@ export class Organization {
 
     /** Array of UIDs of users who can edit documents the organization owns */
     editors: string[];
-
-    /** Array of UIDs for users who can view documents the organization owns, but not edit */
-    members: string[];
 }

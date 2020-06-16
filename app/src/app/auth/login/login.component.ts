@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   error: string;
-  registering : boolean = false;
+  mode : 'login' | 'register' | 'organization' = 'login';
 
   constructor(
     public auth: AuthService,
@@ -20,8 +20,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
-  toggleRegister() {
-    this.registering = !this.registering;
+  registerView() {
+    this.mode = 'register';
+  }
+
+  organizationView(doSwitch : boolean) {
+    console.log('doSwitch', doSwitch);
+    this.mode = 'organization';
   }
 
   dismiss(loggedIn : boolean = false) {
@@ -31,7 +36,12 @@ export class LoginComponent implements OnInit {
   async submitEmailAndPassword() {
     try {
       const credential = await this.auth.signInWithEmailAndPassword(this.email, this.password);
-      if(credential) {
+      // if it's their first time signing in, sending them to the 'Join Organization' view
+      if(credential.user && credential.additionalUserInfo?.isNewUser) {
+        this.mode = 'organization';
+      }
+      // otherwise just kill the modal
+      else if(credential.user) {
         this.dismiss(true);
       }
     } catch(e) {

@@ -10,7 +10,7 @@
 </ion-header>
 <ion-content>
   <div class="modes">
-    <div [class]="{'sign-in-block': true, 'visible': registering == false, 'hidden': registering == true}">
+    <div [class]="{'sign-in-block': true, 'visible': mode == 'login', 'hidden': mode !== 'login'}">
       <!-- Sign in with Social Providers -->
       <div class="social-providers">
         <ion-button (click)="login('Google')">
@@ -43,14 +43,19 @@
             <ion-icon name="log-in" slot="start"></ion-icon>
             <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
           </ion-button>
-          <ion-button fill="clear" (click)="toggleRegister()">{{ 'auth.register' | translate }}</ion-button>
+          <ion-button fill="clear" (click)="registerView()">{{ 'auth.register' | translate }}</ion-button>
         </div>
       </form>
     </div>
 
     <!-- Registration -->
-    <div [class]="{'register-block': true, 'visible': registering == true, 'hidden': registering == false}">
-      <venite-register (complete)="dismiss($event)"></venite-register>
+    <div [class]="{'register-block': true, 'visible': mode == 'register', 'hidden': mode !== 'register'}">
+      <venite-register (complete)="organizationView($event)"></venite-register>
+    </div>
+
+    <!-- Find Your Church — After Registration -->
+    <div [class]="{'organization-block': true, 'visible': mode == 'organization', 'hidden': mode !== 'organization'}">
+      <venite-join-organization (complete)="dismiss($event)"></venite-join-organization>
     </div>
   </div>
 </ion-content>

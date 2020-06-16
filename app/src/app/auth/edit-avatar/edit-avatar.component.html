@@ -9,5 +9,6 @@
   </figcaption>
 </figure>
 <form class="visually-hidden">
-  <input #newAvatarInput type="file" (change)="handleFiles($event)" name="newAvatar" [aria-label]="'edit-avatar-tooltip' | translate"/>
+  <label for="newAvatar">{{'edit-avatar-tooltip' | translate}}</label>
+  <input #newAvatarInput type="file" (change)="handleFiles($event)" name="newAvatar" id="newAvatar"/>
 </form>
