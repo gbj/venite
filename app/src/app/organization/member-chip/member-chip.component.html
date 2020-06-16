@@ -1,0 +1,15 @@
+<ion-chip *ngIf="user$ | async as user else loading">
+  <ion-avatar>
+    <img [src]="user.photoURL || '/assets/avatar.svg'">
+  </ion-avatar>
+  <ion-label>{{ user.displayName }}</ion-label>
+</ion-chip>
+
+<ng-template #loading>
+  <ion-chip>
+    <ion-avatar>
+      <img src="/assets/avatar.svg">
+    </ion-avatar>
+    <ion-skeleton-text></ion-skeleton-text>
+  </ion-chip>
+</ng-template>

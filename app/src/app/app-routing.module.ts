@@ -35,7 +35,7 @@ const routes: Routes = [
     loadChildren: () => import('./pray/pray.module').then( m => m.PrayPageModule)
   },
   {
-    path: 'organization',
+    path: 'church',
     loadChildren: () => import('./organization/organization.module').then( m => m.OrganizationPageModule)
   }
 ];

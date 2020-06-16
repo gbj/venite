@@ -38,6 +38,13 @@
     "loading": "Loading Documents...",
     "new": "Create a New Bulletin"
   },
+  "organization": {
+    "owner": "Administrator",
+    "editors": "Editors",
+    "members": "Members",
+    "no-editors": "No editors.",
+    "no-members": "No members."
+  },
   "January": "January",
   "February": "February",
   "March": "March",

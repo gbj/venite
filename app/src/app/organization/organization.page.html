@@ -1,9 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>organization</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ng-container *ngIf="organization$ | async as org else loading">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ org.name }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <h1><ion-card-title>{{ org.name }}</ion-card-title></h1>
+        <h2 *ngIf="org.location"><ion-card-subtitle *ngIf="org.location">{{ org.location }}</ion-card-subtitle></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <h3>{{ 'organization.owner' | translate }}</h3>
+        <venite-member-chip [uid]="org.owner"></venite-member-chip>
 
-</ion-content>
+        <h3>{{ 'organization.editors' | translate }}</h3>
+        <venite-member-chip *ngFor="let editor of org.editors" [uid]="editor"></venite-member-chip>
+        <p *ngIf="org.editors?.length == 0">{{ 'organization.no-editors' | translate }}</p>
+      
+        <h3>{{ 'organization.members' | translate }}</h3>
+        <ng-container *ngIf="members$ | async as members">
+          <venite-member-chip *ngFor="let member of members" [uid]="member"></venite-member-chip>
+          <p *ngIf="members?.length == 0">{{ 'organization.no-members' | translate }}</p>
+        </ng-container>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ng-container>
+
+<!-- If org is stil loading-->
+<ng-template #loading>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title><ion-skeleton-text></ion-skeleton-text></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+  </ion-content>
+</ng-template>

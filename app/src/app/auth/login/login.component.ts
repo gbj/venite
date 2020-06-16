@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   password: string;
   error: string;
   mode : 'login' | 'register' | 'organization' = 'login';
+  reset: boolean = false;
 
   constructor(
     public auth: AuthService,
@@ -58,5 +59,16 @@ export class LoginComponent implements OnInit {
 
   async logout() {
     this.auth.logout();
+  }
+
+  async forgotPassword() {
+    if(!this.email) {
+      this.error = 'Please enter your email address to reset your password.'
+    }
+    await this.auth.resetPassword(this.email);
+    this.reset = true;
+    setTimeout(() => {
+      this.dismiss();
+    }, 5000);
   }
 }

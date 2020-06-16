@@ -15,12 +15,10 @@
     <ion-input [(ngModel)]='password' type='password' name='password' required='true' ngDefaultControl></ion-input>
   </ion-item>
   <ion-text *ngIf="error" color="danger">{{ error }}</ion-text>
-  <ion-text *ngIf="reset" color="success">{{ 'auth.reset-sent' | translate }}</ion-text>
   <div class="buttons">
     <ion-button (click)="submitEmailAndPassword()" [disabled]="processing">
       <ion-icon name="log-in" slot="start"></ion-icon>
       <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
     </ion-button>
-    <ion-button fill="clear" (click)="forgotPassword()">{{ 'auth.forgot-password' | translate }}</ion-button>
   </div>
 </form>

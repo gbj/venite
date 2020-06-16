@@ -4,10 +4,9 @@
       <nav class='auth-menu'>
         <venite-edit-avatar [user]="user" (photoURLChange)="updateUserPhoto(user, $event)"></venite-edit-avatar>
         <h2>{{ user.displayName }}</h2>
-
         <section *ngIf="organizations$ | async as orgs">
           <ion-list-header *ngIf="orgs?.length > 0">{{ 'auth.organizations' | translate }}</ion-list-header>
-          <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'organization', org.id]">
+          <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'church', org.id]" lines="none">
             {{ org.name }}
           </ion-item>
         </section>

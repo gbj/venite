@@ -7,15 +7,21 @@ import { IonicModule } from '@ionic/angular';
 import { OrganizationPageRoutingModule } from './organization-routing.module';
 
 import { OrganizationPage } from './organization.page';
+import { TranslateModule } from '@ngx-translate/core';
+import { MemberChipComponent } from './member-chip/member-chip.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OrganizationPageRoutingModule
+    OrganizationPageRoutingModule,
+    TranslateModule.forChild(),
   ],
-  declarations: [OrganizationPage]
+  declarations: [
+    OrganizationPage,
+    MemberChipComponent
+  ]
 })
 export class OrganizationPageModule {}
 

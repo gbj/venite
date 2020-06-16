@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, combineLatest } from 'rxjs';
+import { Observable, combineLatest, of } from 'rxjs';
 import { Organization } from './organization';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
-import { map, switchMap, take } from 'rxjs/operators';
+import { map, switchMap, take, tap } from 'rxjs/operators';
 import { UserProfile } from '../auth/user/user-profile';
-import { firestore } from 'firebase';
+import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
@@ -13,28 +13,35 @@ export class OrganizationService {
 
   constructor(private readonly afs: AngularFirestore) { }
 
-  organizationById(orgId : string) : Observable<Organization> {
-    return this.afs.doc<Organization>(`Organizations/${orgId}`).valueChanges();
+  find(id : string) : Observable<Organization> {
+    return this.afs.doc<Organization>(`Organization/${id}`).valueChanges();
   }
 
   // Enables a user to start following a particular organization
   async join(uid : string, orgId : string) : Promise<void> {
     return await this.afs.doc(`Users/${uid}`).update({
-      ['orgs']: firestore.FieldValue.arrayUnion(orgId)
+      ['orgs']: firebase.firestore.FieldValue.arrayUnion(orgId)
     });
   }
 
-  async create(name : string, ownerUID : string) : Promise<DocumentReference> {
+  async create(name : string, ownerUID : string) : Promise<void> {
+    console.log('trying to create', name);
     const slug = slugify(name);
+    console.log('with slug', slug);
 
     // check uniqueness of slug
     const exists = await this.exists(slug);
+
+    console.log('does it exist?', exists);
+
     if(exists) {
       const [n, inc] = name.split(/-(\d+)/);
       this.create(`${n}${(parseInt(inc) || 0) +1}`, ownerUID);
     }
 
-    return await this.afs.collection<Organization>('Organizations').add({
+    console.log('ready to add');
+
+    return await this.afs.doc<Organization>(`Organization/${slug}`).set({
       slug,
       name,
       owner: ownerUID,
@@ -43,7 +50,7 @@ export class OrganizationService {
   }
 
   async exists(slug : string) : Promise<boolean> {
-    return this.afs.doc<Organization>(`Organizations/${slug}`).snapshotChanges().pipe(
+    return this.afs.doc<Organization>(`Organization/${slug}`).snapshotChanges().pipe(
       take(1),
       map(d => d.payload.exists)
     ).toPromise();
@@ -92,8 +99,23 @@ export class OrganizationService {
       .valueChanges()
       .pipe(
         map(userProfile => userProfile.orgs),
-        switchMap(orgs => combineLatest(orgs.map(this.organizationById)))
+        tap(orgs => console.log('loading orgs = ', orgs)),
+        switchMap(orgs => this.organizationsByIds(orgs))
       )
+  }
+
+  // Given an array of IDs, returns array of Organizations
+  organizationsByIds(orgIds : string[]) : Observable<Organization[]> {
+    return combineLatest(orgIds.map(orgId => 
+      this.afs.doc<Organization>(`Organization/${orgId}`).valueChanges()
+    ));
+  }
+
+  // Given the org ID, find members of that organization
+  members(orgId : string) : Observable<UserProfile[]> {
+    return this.afs.collection<UserProfile>('Users', ref =>
+      ref.where('orgs', 'array-contains', orgId)
+    ).valueChanges();
   }
 }
 

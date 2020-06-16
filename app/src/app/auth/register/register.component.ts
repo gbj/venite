@@ -15,7 +15,6 @@ export class RegisterComponent implements OnInit {
   email: string;
   password: string;
   error: string;
-  reset: boolean = false;
   processing : boolean;
 
   constructor(
@@ -39,16 +38,5 @@ export class RegisterComponent implements OnInit {
       console.warn(e);
       this.error = e.message;
     }
-  }
-
-  async forgotPassword() {
-    if(!this.email) {
-      this.error = 'Please enter your email address to reset your password.'
-    }
-    await this.auth.resetPassword(this.email);
-    this.reset = true;
-    setTimeout(() => {
-      this.complete.emit(true);
-    }, 5000);
   }
 }

@@ -44,6 +44,8 @@
             <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
           </ion-button>
           <ion-button fill="clear" (click)="registerView()">{{ 'auth.register' | translate }}</ion-button>
+          <ion-button fill="clear" color="danger" (click)="forgotPassword()">{{ 'auth.forgot-password' | translate }}</ion-button>
+          <ion-text *ngIf="reset" color="success">{{ 'auth.reset-sent' | translate }}</ion-text>
         </div>
       </form>
     </div>

@@ -84,4 +84,8 @@ export class AuthService {
       orgs: []
     });
   }
+
+  getUserProfile(uid : string) : Observable<UserProfile> {
+    return this.afs.doc<UserProfile>(`Users/${uid}`).valueChanges();
+  }
 }

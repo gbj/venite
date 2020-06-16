@@ -5,7 +5,7 @@ import { OrganizationPage } from './organization.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':orgId',
     component: OrganizationPage
   }
 ];
