@@ -23,14 +23,13 @@ export class AuthMenuComponent implements OnInit {
 
   ngOnInit() {
     this.organizations$ = this.auth.user.pipe(
-      tap(user => console.log('loading orgs', user.uid)),
       switchMap(user => this.organizationService.organizationsWithOwner(user.uid)),
-      tap(orgs => console.log('orgs', orgs)),
     );
   }
 
   updateUserPhoto(user : User, photoURL : string) {
     user.updateProfile({ photoURL });
+    this.auth.updateUserProfile(user.uid, { photoURL });
   }
 
   async logout() {

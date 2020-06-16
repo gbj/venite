@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth, User } from 'firebase/app';
-
-import { environment } from '../../environments/environment';
+import { UserProfile } from './user/user-profile';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,8 @@ export class AuthService {
 
   constructor(
     private platform : Platform,
-    private afAuth : AngularFireAuth
+    private afAuth : AngularFireAuth,
+    private afs : AngularFirestore
   ) {
     this.user = afAuth.user;
   }
@@ -60,5 +61,9 @@ export class AuthService {
 
   async resetPassword(email : string) {
     return auth().sendPasswordResetEmail(email);
+  }
+
+  async updateUserProfile(uid : string, profile : Partial<UserProfile>) : Promise<void> {
+    return this.afs.collection('Users').doc(uid).update(profile);
   }
 }

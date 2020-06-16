@@ -6,8 +6,7 @@ export const saveUserProfile = functions.auth.user().onCreate((user) => {
     admin.firestore().collection('Users').doc(user.uid).set({
         uid: user.uid,
         ... ( user.displayName && { displayName : user.displayName }),
-        ... ( user.photoURL && { photoURL : user.photoURL }),
-        organizations: []
+        ... ( user.photoURL && { photoURL : user.photoURL })
     });
 });
 
