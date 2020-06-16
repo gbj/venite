@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   organizationView(doSwitch : boolean) {
-    console.log('doSwitch', doSwitch);
     this.mode = 'organization';
   }
 
@@ -36,12 +35,7 @@ export class LoginComponent implements OnInit {
   async submitEmailAndPassword() {
     try {
       const credential = await this.auth.signInWithEmailAndPassword(this.email, this.password);
-      // if it's their first time signing in, sending them to the 'Join Organization' view
-      if(credential.user && credential.additionalUserInfo?.isNewUser) {
-        this.mode = 'organization';
-      }
-      // otherwise just kill the modal
-      else if(credential.user) {
+      if(credential?.user) {
         this.dismiss(true);
       }
     } catch(e) {
@@ -52,7 +46,12 @@ export class LoginComponent implements OnInit {
 
   async login(service : string) {
     const credential = await this.auth.login(service);
-    if(credential) {
+    // if it's their first time signing in, sending them to the 'Join Organization' view
+    if(credential?.user && credential?.additionalUserInfo?.isNewUser) {
+      this.mode = 'organization';
+    }
+    // otherwise just kill the modal
+    else if(credential?.user) {
       this.dismiss(true);
     }
   }
