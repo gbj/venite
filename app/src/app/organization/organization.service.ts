@@ -24,6 +24,12 @@ export class OrganizationService {
     });
   }
 
+  async leave(uid : string, orgId : string) : Promise<void> {
+    return await this.afs.doc(`Users/${uid}`).update({
+      ['orgs']: firebase.firestore.FieldValue.arrayRemove(orgId)
+    });
+  }
+
   async create(name : string, ownerUID : string) : Promise<void> {
     console.log('trying to create', name);
     const slug = slugify(name);
@@ -54,6 +60,18 @@ export class OrganizationService {
       take(1),
       map(d => d.payload.exists)
     ).toPromise();
+  }
+
+  addEditor(uid : string, orgId : string) : Promise<void> {
+    return this.afs.doc(`Organization/${orgId}`).update({
+      ['editors']: firebase.firestore.FieldValue.arrayUnion(uid)
+    });
+  }
+
+  removeEditor(uid : string, orgId : string) : Promise<void> {
+    return this.afs.doc(`Organization/${orgId}`).update({
+      ['editors']: firebase.firestore.FieldValue.arrayRemove(uid)
+    });
   }
 
   // Search by string

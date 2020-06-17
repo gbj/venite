@@ -43,7 +43,9 @@
     "editors": "Editors",
     "members": "Members",
     "no-editors": "No editors.",
-    "no-members": "No members."
+    "no-members": "No members.",
+    "member-join": "Join",
+    "member-leave": "Leave"
   },
   "January": "January",
   "February": "February",

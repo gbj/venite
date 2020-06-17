@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { UserProfile } from 'src/app/auth/user/user-profile';
-import { Observable } from 'rxjs';
+import { Observable, merge, of } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'venite-member-chip',
@@ -11,13 +12,18 @@ import { Observable } from 'rxjs';
 export class MemberChipComponent implements OnInit {
   /** UID of a user to be rendered */
   @Input() uid : string;
+  @Input() user : UserProfile;
+
+  @Output() click : EventEmitter<CustomEvent> = new EventEmitter();
 
   user$ : Observable<UserProfile>
 
   constructor(private auth : AuthService) { }
 
   ngOnInit() {
-    this.user$ = this.auth.getUserProfile(this.uid);
+    this.user$ = merge(of(this.user), this.auth.getUserProfile(this.uid)).pipe(
+      filter(profile => !!profile)
+    );
   }
 
 }

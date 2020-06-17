@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../auth.service';
 import { Observable } from 'rxjs';
-import { Organization, OrganizationService } from '../../organization/organization.module';
+import { Organization } from '../../organization/organization';
 import { switchMap, tap } from 'rxjs/operators';
 import { User } from 'firebase';
 import { MenuController } from '@ionic/angular';
+import { OrganizationService } from 'src/app/organization/organization.service';
 
 @Component({
   selector: 'venite-auth-menu',

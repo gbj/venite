@@ -9,6 +9,8 @@ import { OrganizationPageRoutingModule } from './organization-routing.module';
 import { OrganizationPage } from './organization.page';
 import { TranslateModule } from '@ngx-translate/core';
 import { MemberChipComponent } from './member-chip/member-chip.component';
+import { AuthModule } from '../auth/auth.module';
+import { DragDropModule } from '../drag-drop/drag-drop.module';
 
 @NgModule({
   imports: [
@@ -17,6 +19,8 @@ import { MemberChipComponent } from './member-chip/member-chip.component';
     IonicModule,
     OrganizationPageRoutingModule,
     TranslateModule.forChild(),
+    AuthModule,
+    DragDropModule
   ],
   declarations: [
     OrganizationPage,

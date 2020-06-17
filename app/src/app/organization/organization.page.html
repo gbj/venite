@@ -1,32 +1,81 @@
-<ng-container *ngIf="organization$ | async as org else loading">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>{{ org.name }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-card>
-      <ion-card-header>
-        <h1><ion-card-title>{{ org.name }}</ion-card-title></h1>
-        <h2 *ngIf="org.location"><ion-card-subtitle *ngIf="org.location">{{ org.location }}</ion-card-subtitle></h2>
-      </ion-card-header>
-      <ion-card-content>
-        <h3>{{ 'organization.owner' | translate }}</h3>
-        <venite-member-chip [uid]="org.owner"></venite-member-chip>
-
-        <h3>{{ 'organization.editors' | translate }}</h3>
-        <venite-member-chip *ngFor="let editor of org.editors" [uid]="editor"></venite-member-chip>
-        <p *ngIf="org.editors?.length == 0">{{ 'organization.no-editors' | translate }}</p>
-      
-        <h3>{{ 'organization.members' | translate }}</h3>
-        <ng-container *ngIf="members$ | async as members">
-          <venite-member-chip *ngFor="let member of members" [uid]="member"></venite-member-chip>
-          <p *ngIf="members?.length == 0">{{ 'organization.no-members' | translate }}</p>
-        </ng-container>
-      </ion-card-content>
-    </ion-card>
-  </ion-content>
+<ng-container *ngIf="orgId$ | async as orgId else loading">
+  <ng-container *ngIf="organization$ | async as org else loading">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ org.name }}</ion-title>
+        <ion-buttons slot="end">
+          <venite-auth-menu-button></venite-auth-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content *ngIf="role$ | async as role">
+      <ion-card>
+        <ion-card-header>
+          <section>
+            <h1><ion-card-title>{{ org.name }}</ion-card-title></h1>
+            <h2 *ngIf="org.location"><ion-card-subtitle *ngIf="org.location">{{ org.location }}</ion-card-subtitle></h2>  
+          </section>
+        <!-- Join/Leave -->
+          <ng-container>
+            <ion-button *ngIf="role == 'owner'" disabled><ion-label>{{ 'organization.owner' | translate }}</ion-label></ion-button>
+            <ion-button *ngIf="role == 'editor'" disabled><ion-label>{{ 'organization.editor' | translate }}</ion-label></ion-button>
+            <ion-button *ngIf="role == 'member' && auth.user | async as user" (click)="leave(user, orgId)">
+              <ion-icon slot="start" name="person-remove" (click)="leave(user)"></ion-icon>
+              <ion-label>{{ 'organization.member-leave' | translate }}</ion-label>
+            </ion-button>
+            <ion-button *ngIf="role == 'none' && auth.user | async as user" (click)="join(user, orgId)" fill="outline">
+              <ion-icon slot="start" name="person-add"></ion-icon>
+              <ion-label>{{ 'organization.member-join' | translate }}</ion-label>
+            </ion-button>
+          </ng-container>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="roles owner">
+            <h3>{{ 'organization.owner' | translate }}</h3>
+            <venite-member-chip [uid]="org.owner"></venite-member-chip>
+          </div>
+  
+          <venite-droppable #editorDroppable (elementDropped)="addEditor($event, orgId)">
+            <div class="roles editors">
+              <h3>{{ 'organization.editors' | translate }}</h3>
+              <!-- If admin, show X button to remove as editor -->
+              <ng-container *ngIf="role == 'owner'">
+                <venite-member-chip *ngFor="let editor of org.editors"
+                  [uid]="editor"
+                  (click)="removeEditor(editor, orgId)"
+                >
+                  <ion-icon name="close"></ion-icon>
+                </venite-member-chip>
+              </ng-container>
+              <ng-container *ngIf="role !== 'owner'">
+                <venite-member-chip *ngFor="let editor of org.editors" [uid]="editor"></venite-member-chip>
+              </ng-container>
+              <p *ngIf="org.editors?.length == 0">{{ 'organization.no-editors' | translate }}</p>  
+            </div>
+          </venite-droppable>
+ 
+          <div class="roles members">
+            <h3>{{ 'organization.members' | translate }}</h3>
+            <ng-container *ngIf="members$ | async as members">
+              <ng-container *ngFor="let member of members">
+                <!-- If admin, make this draggable-->
+                <venite-draggable *ngIf="role == 'owner'" [droppable]="editorDroppable" [dropData]="member">
+                  <venite-member-chip [user]="member"></venite-member-chip>
+                </venite-draggable>
+                <!-- If not admin, just show the member -->
+                <venite-member-chip *ngIf="role !== 'owner'" [user]="member"></venite-member-chip>
+              </ng-container>
+              <p *ngIf="members?.length == 0">{{ 'organization.no-members' | translate }}</p>
+            </ng-container>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-container>
 </ng-container>
 
 <!-- If org is stil loading-->
@@ -38,6 +87,17 @@
   </ion-header>
 
   <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <h1><ion-card-title><ion-skeleton-text></ion-skeleton-text></ion-card-title></h1>
+      </ion-card-header>
+      <ion-card-content>
+        <h3>{{ 'organization.owner' | translate }}</h3>
 
+        <h3>{{ 'organization.editors' | translate }}</h3>
+      
+        <h3>{{ 'organization.members' | translate }}</h3>
+      </ion-card-content>
+    </ion-card>
   </ion-content>
 </ng-template>

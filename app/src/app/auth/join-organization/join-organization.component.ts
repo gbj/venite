@@ -1,8 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { Organization, OrganizationService } from '../../organization/organization.module';
+import { Organization } from '../../organization/organization';
+
 import { filter, switchMap } from 'rxjs/operators';
 import { AuthService } from '../auth.service';
+import { OrganizationService } from 'src/app/organization/organization.service';
 
 @Component({
   selector: 'venite-join-organization',
