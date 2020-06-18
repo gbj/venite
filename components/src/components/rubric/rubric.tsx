@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, h } from '@stencil/core';
-import { Rubric } from '../../../../ldf/src/rubric';
+import { Rubric } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-rubric',

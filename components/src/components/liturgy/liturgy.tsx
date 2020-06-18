@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, Listen, h } from '@stencil/core';
-import { Liturgy } from '../../../../ldf/src/liturgy/liturgy';
+import { Liturgy } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-liturgy',

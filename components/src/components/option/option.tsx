@@ -1,6 +1,5 @@
 import { Component, Prop, Watch, State, Listen, Method, Host, JSX, h } from '@stencil/core';
-import { Option } from '../../../../ldf/src/option';
-import { LiturgicalDocument } from '../../../../ldf/src/liturgical-document';
+import { Option, LiturgicalDocument } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-option',

@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, h } from '@stencil/core';
-import { Refrain } from '../../../../ldf/src/refrain';
+import { Refrain } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-refrain',

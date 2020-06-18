@@ -1,5 +1,5 @@
 import { newE2EPage } from '@stencil/core/testing';
-import { Psalm, PsalmVerse } from '../../../../ldf/src/psalm';
+import { Psalm } from '@venite/ldf';
 
 const PSALM_80 = {
   api: '',
