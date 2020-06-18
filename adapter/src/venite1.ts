@@ -1,6 +1,6 @@
 import {
   LiturgicalDocument, BibleReading, Heading, Psalm, Citation, Text,
-  ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Heading
+  ResponsivePrayerLine, BibleReadingVerse, PsalmVerse
 } from '@venite/ldf';
 
 export function venite1toLDF(old : any, type: string) : LiturgicalDocument | undefined {
@@ -18,19 +18,19 @@ export function venite1toLDF(old : any, type: string) : LiturgicalDocument | und
 
 function psalmToLDF(old : any) : Psalm {
   let style = 'psalm';
-  const category = [];
+  const category : string[] = [];
 
   // Psalm/Canticle/Invitatory Types
   if(old.canticle) {
     style = 'canticle';
-    category.push({ name: 'Canticle' });
+    category.push('Canticle');
   }
   if(old.invitatory) {
     style = 'invitatory';
-    category.push({ name: 'Invitatory' });
+    category.push('Invitatory');
   }
   if(!old.canticle && !old.invitatory) {
-    category.push({ name: 'Psalm' });
+    category.push('Psalm');
   }
 
   // Value
@@ -170,7 +170,7 @@ function sourceStringToCitation(sourceString : string) : Citation | undefined {
   }
 }
 
-function generateTypeAndStyle(old : Prayer) : string{
+function generateTypeAndStyle(old : Prayer) : { type: "psalm" | "liturgy" | "cycle" | "heading" | "option" | "refrain" | "rubric" | "text" | "responsive" | "bible-reading" | "meditation"; style?: string; } {
   switch(old.type) {
     case 'text':
       return { type: 'text', style: 'text' };
@@ -181,7 +181,7 @@ function generateTypeAndStyle(old : Prayer) : string{
     case 'responsive':
       const isPreces = old.value[0].hasOwnProperty('label'),
             isLitany = !!old.response || Array.isArray(old.value[0]),
-            ts = { type: 'responsive', type: 'responsive' };
+            ts = { type: 'responsive' as 'responsive', style: 'responsive' };
       if(isPreces) {
         ts.style = 'preces';
       }
@@ -190,7 +190,7 @@ function generateTypeAndStyle(old : Prayer) : string{
       }
       return ts;
     case 'rubric':
-      return { type: 'rubric', style: undefined };
+      return { type: 'rubric' };
     case 'scripture':
       return { type: 'bible-reading', style: 'short' };
     case 'gloria':
@@ -199,6 +199,7 @@ function generateTypeAndStyle(old : Prayer) : string{
       return { type: 'refrain', style: 'antiphon' };
     default:
       console.warn('\n\n*** (generateTypeAndStyle) Type Not Recognized ***\n\n', old, '\n\n*** Type Not Recognized ***\n\n');
+      return { type: 'text', style: 'text' };
   }
 }
 
@@ -207,10 +208,10 @@ function generateMetadata(old : Prayer) : any {
     case 'rubric':
       return undefined;
     case 'text':
-    case 'scripture'
-      return { response: old.response, omit_response: !old.response };
+    case 'scripture':
+      return ({ response: old.response, omit_response: !old.response });
     case 'collect':
-      return { response: old.response, omit_response: false };
+      return ({ response: old.response, omit_response: false });
     case 'preces':
     case 'litany':
     case 'responsive':
@@ -245,18 +246,19 @@ function generateValue(old : Prayer) : LiturgicalDocument[] | ResponsivePrayerLi
         return litanyValue(old);
       }
     case 'scripture':
-      return old.value.map(text => ({ text }));
+      return old.value.map((text : string) => ({ text }));
     default:
       console.warn('\n\n*** (generateTypeAndStyle) Type Not Recognized ***\n\n', old, '\n\n*** Type Not Recognized ***\n\n');
+      return [];
   }
 }
 
 function precesValue(old : Prayer) : ResponsivePrayerLine[] {
-  return old.value.map(line => ({ label: line.label, text: line.text}));
+  return old.value.map((line : { label: string; text: string;}) => ({ label: line.label, text: line.text}));
 }
 
 function litanyValue(old : Prayer) : ResponsivePrayerLine[] {
-  return old.value.map(line => {
+  return old.value.map((line: string[]) => {
     let optional = false;
     if(line.length == 2 && line[0].match(/^\[/) && line[1].match(/\]$/)) {
       line[0] = line[0].replace('[', '');
@@ -267,6 +269,6 @@ function litanyValue(old : Prayer) : ResponsivePrayerLine[] {
       line[0] = line[0].replace(/[\[\]]/g, '');
       optional = true;
     }
-    return { text: line[0], response: line[1], optional }));
+    return { text: line[0], response: line[1], optional };
   });
 }

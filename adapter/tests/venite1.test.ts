@@ -42,7 +42,7 @@ describe('venite1toLDF', () => {
     expect(newObj).toEqual(new Psalm({
       type: 'psalm',
       style: 'psalm',
-      category: [{name: 'Psalm'}],
+      category: ['Psalm'],
       slug: 'psalm_2',
       hidden: false,
       label: 'Psalm 2',
@@ -103,7 +103,7 @@ describe('venite1toLDF', () => {
     expect(newObj).toEqual(new Psalm({
       type: 'psalm',
       style: 'psalm',
-      category: [{name: 'Psalm'}],
+      category: ['Psalm'],
       slug: 'psalm_2',
       hidden: false,
       label: 'Psalm 2',
@@ -174,7 +174,7 @@ describe('venite1toLDF', () => {
     expect(newObj).toEqual(new Psalm({
       type: 'psalm',
       style: 'canticle',
-      category: [{name: 'Canticle'}],
+      category: ['Canticle'],
       slug: 'canticle-12',
       hidden: false,
       label: 'Canticle 12: A Song of Creation',
