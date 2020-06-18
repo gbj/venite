@@ -1,8 +1,5 @@
 import { Component, Element, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { Psalm, PsalmVerse } from '../../../../ldf/src/psalm';
-import { Heading } from '../../../../ldf/src/heading';
-import { Refrain } from '../../../../ldf/src/refrain';
-
+import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-psalm',
@@ -15,12 +12,10 @@ export class PsalmComponent {
   // States
   @State() obj : Psalm;
   @State() localeStrings: { [x: string]: string; };
-  @State() filteredValue : (PsalmVerse | Heading)[][];
+  @State() filteredValue : PsalmSection[];
 
   // Properties
-  /**
-   * An LDF Psalm object.
-   */
+  /** The LDF Psalm to be rendered, either as JSON or an Object */
   @Prop() doc : Psalm | string;
   @Watch('doc')
   docChanged(newDoc : Psalm | string) {
@@ -36,14 +31,10 @@ export class PsalmComponent {
     }
   }
 
-  /**
-   * A JSON Pointer that points to the Collect being edited
-   */
+  /** A JSON Pointer that points to the Psalm being edited */
   @Prop({ reflect: true }) path : string;
 
-  /**
-   * Whether the object is editable
-   */
+  /** Whether the object is editable */
   @Prop() editable : boolean;
 
   // Lifecycle events
@@ -81,7 +72,7 @@ export class PsalmComponent {
     }
   }
 
-  headingNode() : JSX.Element {
+  headingNode(value : string = undefined, level : number = 3, showLatinName : boolean = true) : JSX.Element {
     let label : string = this.obj.label;
     if(this.obj.style == 'canticle' && this.obj.metadata && this.obj.metadata.number && this.obj.metadata.localname) {
       label = `${this.obj.metadata.number}. ${this.obj.metadata.localname}`;
@@ -90,13 +81,13 @@ export class PsalmComponent {
     }
     const heading = new Heading({
       type: 'heading',
-      metadata: { level: 3 },
+      metadata: { level },
       citation: this.obj.citation,
-      value: [label]
+      value: [value ?? label]
     })
     return (
       <ldf-heading doc={heading}>
-        {<h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
+        {showLatinName && <h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
       </ldf-heading>
     )
   }
@@ -134,10 +125,13 @@ export class PsalmComponent {
         {includeAntiphon && this.antiphonNode(this.obj.metadata.antiphon)}
 
         {/* render each set of verses */}
-        {this.filteredValue && this.filteredValue.map((section, sectionIndex) =>
+        {this.filteredValue && this.filteredValue.map((section, sectionIndex) => [
+          // render a `Heading`, if this section has a `label`
+          section.label && this.headingNode(section.label, 4, false),
+
           // build a set of verses
           <div class='psalm-set'>
-          {section.map((verse, verseIndex) => {
+          {section.value.map((verse, verseIndex) => {
             // build each verse
             if(verse instanceof Heading) {
               // for e.g., the Benedicite, Heading passed at head of section
@@ -210,7 +204,7 @@ export class PsalmComponent {
           }
           {includeAntiphon && this.antiphonNode(this.obj.metadata && this.obj.metadata.antiphon)}
           </div>
-        )}
+        ])}
 
       {/* include the Gloria Patri */}
       {this.obj.metadata && this.obj.metadata.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
