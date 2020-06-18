@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable, of, from } from 'rxjs';
 import { AuthService } from './auth/auth.service';
 import { ModalController } from '@ionic/angular';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { LoginComponent } from './auth/login/login.component';
-import { from } from 'automerge';
 
 @Injectable({
   providedIn: 'root'
