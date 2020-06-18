@@ -129,6 +129,30 @@ export const SPECIAL_DAYS : HolyDay[] = [
 ]
 
 export const LITURGICAL_DAYS : { [ yyyymmdd : string ] : LiturgicalDay } = {
+  '2020/5/28': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-5-28",
+    "kalendar": "bcp1979",
+    "slug": "thursday-7th-easter",
+    "propers": "thursday-7th-easter",
+    "week": {
+      "slug": "7th-easter",
+      "cycle": "Easter",
+      "color": "Gold",
+      "kalendar": "bcp1979",
+      "season": "Ascension",
+      "name": "Seventh Sunday of Easter",
+      "week": 13
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "Ascension",
+    "color": "Gold"
+  }),
     '2020/5/29': new LiturgicalDay({
         "evening": false,
         "date": "2020-5-29",

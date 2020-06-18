@@ -5,24 +5,6 @@ import { Refrain } from './refrain';
 const STYLES = ['psalm', 'canticle', 'invitatory'] as const;
 type StyleTuple = typeof STYLES;
 
-/** PsalmVerse is a single verse or line
- * @example
- * // 1  The Lord is my shepherd; *
- * //      I shall not be in want.
- * { number: "1", verse: "The Lord is my shepherd; *", halfverse: "I shall not be in want."}
- * */
-export class PsalmVerse {
-  type: 'psalm-verse';
-  number?: string;
-  verse: string;
-  halfverse?: string;
-
-  //** Constructor takes a Javascript object containing the class's properties */
-  constructor(data: Partial<PsalmVerse> = {}) {
-    Object.assign(this, data);
-  }
-}
-
 /** Psalm represents liturgical instructions. */
 export class Psalm extends LiturgicalDocument {
   type: 'psalm';
@@ -38,36 +20,30 @@ export class Psalm extends LiturgicalDocument {
     antiphon?: string | Refrain | { [x: string]: string | Refrain };
     gloria?: string | Refrain;
   };
-  value: (PsalmVerse | Heading)[][];
+  value: PsalmSection[];
 
   /** Returns a filtered list of verses based on citation */
-  filteredVerses(): (PsalmVerse | Heading)[][] {
-    let filtered: (PsalmVerse | Heading)[][] = new Array();
+  filteredVerses(): PsalmSection[] {
+    let filtered: PsalmSection[] = new Array();
 
     if (this.citation && (this.citation.match(/Ps[^\s]*\s*\d+/) || this.citation == '')) {
       const versesInCitation: string[] = this.versesInCitation(this.citation);
 
       if (versesInCitation.length == 0) {
         /* if `versesInCitation` is empty, it's probably because
-         * something like 'Psalm 80' was passed as citation
-         */
+         * something like 'Psalm 80' was passed as citation */
         filtered = this.value;
       } else {
         this.value.forEach((section) => {
           const newSection = new Array();
 
-          section.forEach((verse) => {
-            if (
-              verse instanceof Heading ||
-              ((verse as any).type && (verse as any).type == 'label') ||
-              !verse.number ||
-              versesInCitation.includes(verse.number)
-            ) {
+          section.value.forEach((verse) => {
+            if (!verse.number || versesInCitation.includes(verse.number)) {
               newSection.push(verse);
             }
           });
 
-          filtered.push(newSection);
+          filtered.push({ ...section, value: newSection });
         });
       }
     } else {
@@ -140,5 +116,30 @@ export class Psalm extends LiturgicalDocument {
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<Psalm> = {}) {
     super(data);
+  }
+}
+
+/** Section breaks can be used to introduce a heading, or to indicate a place for an antiphon to be inserted  */
+export class PsalmSection {
+  type: 'psalm-section';
+  label?: string;
+  value: PsalmVerse[];
+}
+
+/** PsalmVerse is a single verse or line
+ * @example
+ * // 1  The Lord is my shepherd; *
+ * //      I shall not be in want.
+ * { number: "1", verse: "The Lord is my shepherd; *", halfverse: "I shall not be in want."}
+ * */
+export class PsalmVerse {
+  type: 'psalm-verse';
+  number?: string;
+  verse: string;
+  halfverse?: string;
+
+  //** Constructor takes a Javascript object containing the class's properties */
+  constructor(data: Partial<PsalmVerse> = {}) {
+    Object.assign(this, data);
   }
 }

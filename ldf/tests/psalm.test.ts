@@ -10,26 +10,29 @@ const PSALM_80 = {
   style: 'psalm' as 'psalm',
   citation: 'Psalm 80',
   value: [
-    [
-      {
-        type: 'psalm-verse' as 'psalm-verse',
-        number: '1',
-        verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
-        halfverse: 'shine forth, you that are enthroned upon the cherubim.'
-      },
-      {
-        type: 'psalm-verse' as 'psalm-verse',
-        number: '2',
-        verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
-        halfverse: 'stir up your strength and come to help us.'
-      },
-      {
-        type: 'psalm-verse' as 'psalm-verse',
-        number: '3',
-        verse: 'Restore us, O God of hosts; *',
-        halfverse: 'show the light of your countenance, and we shall be saved.'
-      }
-    ]
+    {
+      type: 'psalm-section' as 'psalm-section',
+      value: [
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '1',
+          verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+          halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+        },
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '2',
+          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+          halfverse: 'stir up your strength and come to help us.'
+        },
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '3',
+          verse: 'Restore us, O God of hosts; *',
+          halfverse: 'show the light of your countenance, and we shall be saved.'
+        }
+      ]
+    } 
   ]
 };
 
@@ -77,26 +80,29 @@ describe("Psalm.filteredVerses()", () => {
     const verses = psalm.filteredVerses();
 
     expect(verses).toEqual([
-      [
-        {
-          type: 'psalm-verse',
-          number: '1',
-          verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
-          halfverse: 'shine forth, you that are enthroned upon the cherubim.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '2',
-          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
-          halfverse: 'stir up your strength and come to help us.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '3',
-          verse: 'Restore us, O God of hosts; *',
-          halfverse: 'show the light of your countenance, and we shall be saved.'
-        }
-      ]
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '1',
+            verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+            halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '3',
+            verse: 'Restore us, O God of hosts; *',
+            halfverse: 'show the light of your countenance, and we shall be saved.'
+          }
+        ]
+      } 
     ]);
   });
 
@@ -106,26 +112,29 @@ describe("Psalm.filteredVerses()", () => {
     const verses = psalm.filteredVerses();
 
     expect(verses).toEqual([
-      [
-        {
-          type: 'psalm-verse',
-          number: '1',
-          verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
-          halfverse: 'shine forth, you that are enthroned upon the cherubim.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '2',
-          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
-          halfverse: 'stir up your strength and come to help us.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '3',
-          verse: 'Restore us, O God of hosts; *',
-          halfverse: 'show the light of your countenance, and we shall be saved.'
-        }
-      ]
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '1',
+            verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+            halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '3',
+            verse: 'Restore us, O God of hosts; *',
+            halfverse: 'show the light of your countenance, and we shall be saved.'
+          }
+        ]
+      } 
     ]);
   });
 
@@ -135,26 +144,29 @@ describe("Psalm.filteredVerses()", () => {
     const verses = psalm.filteredVerses();
 
     expect(verses).toEqual([
-      [
-        {
-          type: 'psalm-verse',
-          number: '1',
-          verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
-          halfverse: 'shine forth, you that are enthroned upon the cherubim.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '2',
-          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
-          halfverse: 'stir up your strength and come to help us.'
-        },
-        {
-          type: 'psalm-verse',
-          number: '3',
-          verse: 'Restore us, O God of hosts; *',
-          halfverse: 'show the light of your countenance, and we shall be saved.'
-        }
-      ]
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '1',
+            verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+            halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '3',
+            verse: 'Restore us, O God of hosts; *',
+            halfverse: 'show the light of your countenance, and we shall be saved.'
+          }
+        ]
+      } 
     ]);
   });
 
@@ -164,14 +176,17 @@ describe("Psalm.filteredVerses()", () => {
     const verses = psalm.filteredVerses();
 
     expect(verses).toEqual([
-      [
-        {
-          type: 'psalm-verse',
-          number: '2',
-          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
-          halfverse: 'stir up your strength and come to help us.'
-        }
-      ]
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.'
+          }
+        ]
+      } 
     ]);
   });
 

@@ -2,8 +2,7 @@ import { LiturgicalDay } from './calendar/liturgical-day';
 import { ResponsivePrayerLine } from './responsive-prayer';
 import { BibleReadingVerse } from './bible-reading/bible-reading-verse';
 import { Citation } from './citation/citation';
-import { PsalmVerse } from './psalm';
-import { Heading } from './heading';
+import { PsalmSection } from './psalm';
 import { Sharing } from './sharing/sharing';
 import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
@@ -124,7 +123,7 @@ export class LiturgicalDocument {
   };
 
   /** The content of the document. */
-  value?: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[];
+  value?: LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | PsalmSection[] | string[];
 
   /** Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
    * given the day and assigned preferences  */
