@@ -44,7 +44,7 @@
 }
 .register-block, .sign-in-block, .organization-block {
   transition: 0.25s linear;
-  width: 100%;
+  width: 100vw;
 }
 .register-block.hidden {
   transform: translateX(100%);
