@@ -25,12 +25,14 @@
 * [LiturgicalWeekIndex](_index_.md#liturgicalweekindex)
 * [Liturgy](_index_.md#liturgy)
 * [Meditation](_index_.md#meditation)
+* [Operation](_index_.md#operation)
 * [Option](_index_.md#option)
 * [PROPERS](_index_.md#propers)
 * [Preference](_index_.md#preference)
 * [PreferenceOption](_index_.md#preferenceoption)
 * [ProperLiturgy](_index_.md#properliturgy)
 * [Psalm](_index_.md#psalm)
+* [PsalmSection](_index_.md#psalmsection)
 * [PsalmVerse](_index_.md#psalmverse)
 * [Refrain](_index_.md#refrain)
 * [ResponsivePrayer](_index_.md#responsiveprayer)
@@ -52,6 +54,7 @@
 * [liturgicalWeek](_index_.md#liturgicalweek)
 * [rclYear](_index_.md#rclyear)
 * [specificClass](_index_.md#specificclass)
+* [subtractOneDay](_index_.md#subtractoneday)
 * [sundayBefore](_index_.md#sundaybefore)
 
 ## References
@@ -170,6 +173,12 @@ ___
 
 ___
 
+###  Operation
+
+• **Operation**:
+
+___
+
 ###  Option
 
 • **Option**:
@@ -203,6 +212,12 @@ ___
 ###  Psalm
 
 • **Psalm**:
+
+___
+
+###  PsalmSection
+
+• **PsalmSection**:
 
 ___
 
@@ -329,6 +344,12 @@ ___
 ###  specificClass
 
 • **specificClass**:
+
+___
+
+###  subtractOneDay
+
+• **subtractOneDay**:
 
 ___
 

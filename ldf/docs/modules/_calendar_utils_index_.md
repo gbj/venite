@@ -18,6 +18,7 @@
 * [liturgicalDay](_calendar_utils_index_.md#liturgicalday)
 * [liturgicalWeek](_calendar_utils_index_.md#liturgicalweek)
 * [rclYear](_calendar_utils_index_.md#rclyear)
+* [subtractOneDay](_calendar_utils_index_.md#subtractoneday)
 * [sundayBefore](_calendar_utils_index_.md#sundaybefore)
 
 ## References
@@ -91,6 +92,12 @@ ___
 ###  rclYear
 
 • **rclYear**:
+
+___
+
+###  subtractOneDay
+
+• **subtractOneDay**:
 
 ___
 

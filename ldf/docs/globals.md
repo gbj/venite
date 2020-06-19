@@ -26,6 +26,7 @@
 * ["calendar/utils/liturgical-week"](modules/_calendar_utils_liturgical_week_.md)
 * ["calendar/utils/propers"](modules/_calendar_utils_propers_.md)
 * ["calendar/utils/sunday-before"](modules/_calendar_utils_sunday_before_.md)
+* ["calendar/utils/transferred-feast"](modules/_calendar_utils_transferred_feast_.md)
 * ["citation/citation"](modules/_citation_citation_.md)
 * ["citation/selectable-citation"](modules/_citation_selectable_citation_.md)
 * ["citation/source"](modules/_citation_source_.md)

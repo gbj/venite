@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npx jest",
     "docs": "npx typedoc --plugin typedoc-plugin-markdown --out docs src",
-    "build": "tsc",
+    "build": "tsc && npm run docs",
     "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"

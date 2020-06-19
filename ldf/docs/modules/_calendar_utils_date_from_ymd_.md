@@ -15,7 +15,7 @@
 
 ▸ **dateFromYMD**(`year`: string, `month`: string, `day`: string): *Date*
 
-*Defined in [calendar/utils/date-from-ymd.ts:5](https://github.com/gbj/venite/blob/2028f78/ldf/src/calendar/utils/date-from-ymd.ts#L5)*
+*Defined in [calendar/utils/date-from-ymd.ts:5](https://github.com/gbj/venite/blob/461bbe8/ldf/src/calendar/utils/date-from-ymd.ts#L5)*
 
 return date from year, month (1-12), and day
 defaults to today if any of fields are undefined
@@ -36,7 +36,7 @@ ___
 
 ▸ **dateToYMD**(`date`: Date): *string*
 
-*Defined in [calendar/utils/date-from-ymd.ts:16](https://github.com/gbj/venite/blob/2028f78/ldf/src/calendar/utils/date-from-ymd.ts#L16)*
+*Defined in [calendar/utils/date-from-ymd.ts:16](https://github.com/gbj/venite/blob/461bbe8/ldf/src/calendar/utils/date-from-ymd.ts#L16)*
 
 Transform `Date` into YYYY-M-D
 

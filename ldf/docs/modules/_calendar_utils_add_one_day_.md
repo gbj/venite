@@ -7,6 +7,7 @@
 ### Functions
 
 * [addOneDay](_calendar_utils_add_one_day_.md#addoneday)
+* [subtractOneDay](_calendar_utils_add_one_day_.md#subtractoneday)
 
 ## Functions
 
@@ -14,7 +15,23 @@
 
 ▸ **addOneDay**(`date`: Date): *Date*
 
-*Defined in [calendar/utils/add-one-day.ts:1](https://github.com/gbj/venite/blob/2028f78/ldf/src/calendar/utils/add-one-day.ts#L1)*
+*Defined in [calendar/utils/add-one-day.ts:1](https://github.com/gbj/venite/blob/461bbe8/ldf/src/calendar/utils/add-one-day.ts#L1)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`date` | Date |
+
+**Returns:** *Date*
+
+___
+
+###  subtractOneDay
+
+▸ **subtractOneDay**(`date`: Date): *Date*
+
+*Defined in [calendar/utils/add-one-day.ts:5](https://github.com/gbj/venite/blob/461bbe8/ldf/src/calendar/utils/add-one-day.ts#L5)*
 
 **Parameters:**
 
