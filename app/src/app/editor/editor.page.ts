@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, BehaviorSubject, Subscription, combineLatest, merge } from 'rxjs'; 
+import { Observable, BehaviorSubject, Subscription, combineLatest, merge, of } from 'rxjs'; 
 import { switchMap, map, tap, take, startWith, throttle, throttleTime, filter, debounceTime } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
@@ -27,7 +27,10 @@ export class EditorPage implements OnInit, OnDestroy {
   revisionSubscription : Subscription;
 
   // All documents to which the user has access to edit
-  docs$ : Observable<IdAndDoc[]>;
+  search$ : BehaviorSubject<string> = new BehaviorSubject('');
+  myDocs$ : Observable<IdAndDoc[]>;
+  orgDocs$ : Observable<IdAndDoc[]>;
+  sharedDocs$ : Observable<IdAndDoc[]>;
   docSaved$ : Observable<Date>;
 
   constructor(
@@ -42,7 +45,19 @@ export class EditorPage implements OnInit, OnDestroy {
   ngOnInit() {
     // If no docId is given, we use this list of all documents
     // All docs
-    this.docs$ = this.documents.findDocuments();
+    const myUnfilteredDocs$ = this.auth.user.pipe(
+      tap(user => console.log('searching for docs where owner = ', user.uid)),
+      switchMap(user => this.documents.myDocuments(user.uid))
+    );
+    this.myDocs$ = combineLatest(this.search$, myUnfilteredDocs$).pipe(
+      map(([search, docs]) => docs.filter(doc => 
+        doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
+        doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
+        doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
+        doc.data.category.includes(search.toLowerCase())
+      ))
+    )
+    //this.orgDocs$ = this.documents.myOrganizationDocuments();
 
     // If a docId is given, we use all the below
     // Current doc
@@ -133,5 +148,9 @@ export class EditorPage implements OnInit, OnDestroy {
     }));
 
     this.router.navigate(['editor', docId]);
+  }
+
+  trackIdAndDocBy(index : number, item : IdAndDoc) {
+    return item.id || index;
   }
 }

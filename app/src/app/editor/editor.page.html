@@ -49,9 +49,34 @@
 
 <!-- If doc is not available -- list all documents to edit-->
 <ng-template #nodoc>
+  <!-- If we have a docId, but no document yet -- loading-->
   <ng-container *ngIf="docId$ | async as docId else list">
-    Loading document...
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="new()">
+            <ion-icon slot="start" name="create-outline"></ion-icon>
+            <ion-label>{{ 'editor.new' | translate }}</ion-label>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content #list [fullscreen]="true">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <div class="loading">{{ 'editor.loading-document' | translate }}</div>
+    </ion-content>
   </ng-container>
+
+  <!-- List of documents -->
   <ng-template #list>
     <ion-header [translucent]="true">
       <ion-toolbar>
@@ -75,16 +100,18 @@
         </ion-toolbar>
       </ion-header>
   
-      <ion-list *ngIf="docs$ | async as docs else nodocs">
-        <ion-list-header><h2>{{ 'editor.edit-a-document' | translate }}</h2></ion-list-header>
-        <ion-item *ngFor="let doc of docs" [routerLink]="['.', doc.id]">
+      <ion-searchbar (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
+
+      <ion-list *ngIf="myDocs$ | async as docs else nodocs">
+        <ion-list-header><h2>{{ 'editor.mydocs' | translate }}</h2></ion-list-header>
+        <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy" [routerLink]="['.', doc.id]">
           <ion-label>
-            <h3>{{ doc.data?.label }}</h3>
+            <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
             <h4>{{ doc.data?.language }} | {{ doc.data?.version }}</h4>
           </ion-label>
         </ion-item>
       </ion-list>
-      <ng-template #nodocs><p>{{ 'editor.Loading' | translate }}</p></ng-template>
+      <ng-template #nodocs><p>{{ 'editor.loading' | translate }}</p></ng-template>
     </ion-content>
   </ng-template>
 </ng-template>

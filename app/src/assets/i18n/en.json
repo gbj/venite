@@ -36,6 +36,8 @@
     "title": "Editor",
     "edit-a-document": "Edit a Document",
     "loading": "Loading Documents...",
+    "loading-document": "Loading Document...",
+    "mydocs": "My Documents",
     "new": "Create a New Bulletin"
   },
   "organization": {

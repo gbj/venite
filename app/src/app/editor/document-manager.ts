@@ -1,5 +1,4 @@
 import { User, Cursor, LiturgicalDocument, Change } from '@venite/ldf';
-import * as Automerge from 'automerge';
 import * as json1 from 'ot-json1';
 
 export class DocumentManagerChange {
@@ -18,7 +17,6 @@ export class ServerDocumentManager {
         [uid: string]: Cursor;
     };
     lastRevision : number = 0;
-    //pendingChanges: DocumentManagerChange[];
     revisionLog?: DocumentManagerChange[];
 }
 
@@ -32,5 +30,3 @@ export class LocalDocumentManager {
 
     constructor(public docId : string) { }
 }
-
-// get(/databases/$(database)/documents/DocumentManager/$(request.resource.data.docId)).data.

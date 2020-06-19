@@ -48,6 +48,18 @@ export class DocumentService {
     );
   }
 
+  /** All documents 'owned' by a user with `uid` */
+  myDocuments(uid : string) : Observable<IdAndDoc[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.owner', '==', uid)
+    ).snapshotChanges().pipe(
+      // transform from AngularFire `DocumentChangeAction` to `doc`
+      map(changeactions => changeactions.map(action => action?.payload?.doc)),
+      // extra ID and document data and leave the rest behind
+      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+    );
+  }
+
   async newDocument(doc : LiturgicalDocument) : Promise<string> {
     const docId = this.afs.createId();
     await this.afs.collection('Document').doc(docId).set(JSON.parse(JSON.stringify(doc)));
