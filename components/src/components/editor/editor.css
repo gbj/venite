@@ -21,50 +21,6 @@
   font-family: inherit;
 }
 
-.cursor, .cursor-label {
-  opacity: 1;
-  position: fixed;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  border-style: solid;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  margin-left: -2px;
-  opacity: 0.5;
-  padding-left: 2px;
-  padding-right: 0;
-  z-index: 1000;
-}
-
-.cursor-label {
-  border-top-width: 2px;
-  display: block;
-  font-family: sans-serif;
-  font-size: 8pt;
-  height: 1.5em;
-  margin-top: -2px;
-  text-align: center;
-  padding-right: 3px;
-  width: auto;
-}
-
-.collapsed {
-  margin-left: 0;
-  padding-left: 0;
-  padding-right: 0;
-  border-left-width: 2px;
-  border-right-width: 0;
-  animation: 1s blink step-end infinite;
-  opacity: 1;
-}
-
-.left-wing {
-  border-right: none;
-}
-.right-wing {
-  border-right: none;
-}
-
 @keyframes "blink" {
   from, to {
     opacity: 0;
