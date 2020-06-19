@@ -1270,6 +1270,17 @@ export class LdfEditor {
   }
 }
 
+export declare interface LdfEditorCursor extends Components.LdfEditorCursor {}
+@ProxyCmp({inputs: ['cursors', 'uid', 'users']})
+@Component({ selector: 'ldf-editor-cursor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'uid', 'users'] })
+export class LdfEditorCursor {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
 export declare interface LdfHeading extends Components.LdfHeading {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-heading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
