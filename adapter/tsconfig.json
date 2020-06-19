@@ -2,7 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es6",
-    "module": "es6",
+    "module": "commonjs",
     "strict": true,
     "strictPropertyInitialization": false,
     "lib": ["dom", "es6", "es2017", "es2019"],

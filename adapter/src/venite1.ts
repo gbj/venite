@@ -1,6 +1,6 @@
 import {
-  LiturgicalDocument, BibleReading, Heading, Psalm, Citation, Text,
-  ResponsivePrayerLine, BibleReadingVerse, PsalmVerse
+  LiturgicalDocument, BibleReading, Psalm, Citation, Text,
+  ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Sharing
 } from '@venite/ldf';
 
 export function venite1toLDF(old : any, type: string) : LiturgicalDocument | undefined {
@@ -36,21 +36,22 @@ function psalmToLDF(old : any) : Psalm {
   // Value
   const value = old.value.map((section : any) => {
     if(Array.isArray(section)) {
-      return section.map((verse : any) => {
+      let sectionVerses : PsalmVerse[] = section.map((verse : any) => {
         if(verse.length == 3) {
           return { type: 'psalm-verse', number: verse[0], verse: verse[1], halfverse: verse[2] };
         } else if(verse.length == 2) {
           return { type: 'psalm-verse', verse: verse[0], halfverse: verse[1] };
-        } else if(verse.length == 1) {
+        } else {
           return { type: 'psalm-verse', verse: verse[1] };
         }
       });
+      return { type: 'psalm-section', value: sectionVerses }
     } else {
-      return new Array(
-        new Heading({type: 'heading', metadata: { level: 4 }, value: [section.label]})
-      ).concat(
-        section.verses.map((verse : any) => ({ type: 'psalm-verse', verse: verse[0], halfverse: verse[1] }))
-      );
+      return {
+        type: 'psalm-section',
+        label: section.label,
+        value: section.verses.map((verse : any) => ({ type: 'psalm-verse', verse: verse[0], halfverse: verse[1] }))
+      }
     }
   });
 
@@ -90,6 +91,7 @@ function collectToLDF(old : { slug: string; language: string; version: string; v
     type: 'text',
     style: 'prayer',
     slug: old.slug,
+    category: ['Collect', 'Collect of the Day'],
     language: old.language,
     version: old.version,
     value: old.value,
@@ -159,7 +161,7 @@ function prayerToLDF(old: Prayer) : LiturgicalDocument {
 
 function sourceStringToCitation(sourceString : string) : Citation | undefined {
   let source, citation;
-  if(sourceString.match(/BCP/)) {
+  if(sourceString?.match(/BCP/)) {
     source = 'bcp1979';
     citation = sourceString.split('BCP')[1].trim()
   }
@@ -224,7 +226,7 @@ function generateMetadata(old : Prayer) : any {
   }
 }
 
-function generateValue(old : Prayer) : LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | (PsalmVerse | Heading)[][] | string[]{
+function generateValue(old : Prayer) : LiturgicalDocument[] | ResponsivePrayerLine[] | BibleReadingVerse[] | string[]{
   switch(old.type) {
     case 'text':
     case 'collect':
@@ -245,6 +247,8 @@ function generateValue(old : Prayer) : LiturgicalDocument[] | ResponsivePrayerLi
       if(isLitany) {
         return litanyValue(old);
       }
+    case 'psalm':
+      // TODO?
     case 'scripture':
       return old.value.map((text : string) => ({ text }));
     default:
@@ -260,12 +264,12 @@ function precesValue(old : Prayer) : ResponsivePrayerLine[] {
 function litanyValue(old : Prayer) : ResponsivePrayerLine[] {
   return old.value.map((line: string[]) => {
     let optional = false;
-    if(line.length == 2 && line[0].match(/^\[/) && line[1].match(/\]$/)) {
+    if(line.length == 2 && line[0]?.match(/^\[/) && line[1]?.match(/\]$/)) {
       line[0] = line[0].replace('[', '');
       line[1] = line[1].replace(']', '');
       optional = true;
     }
-    if(line.length == 1 && old.response && line[0].match(/^\[/) && line[0].match(/\]$/)) {
+    if(line.length == 1 && old.response && line[0]?.match(/^\[/) && line[0]?.match(/\]$/)) {
       line[0] = line[0].replace(/[\[\]]/g, '');
       optional = true;
     }
