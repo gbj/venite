@@ -53,6 +53,9 @@ export class EditorComponent {
   /** User has edited the document */
   @Event() editorDocShouldChange : EventEmitter<Change>;
 
+  /** User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` */
+  @Event() editorDocShouldAdd : EventEmitter<{ base: string; index: number; }>;
+
   // Life Cycle
   connectedCallback() {
     // initial document load from property
@@ -71,6 +74,12 @@ export class EditorComponent {
   onDocShouldChange(ev : CustomEvent) {
     console.log('ldf-editor is emitting change', ev.detail);
     this.editorDocShouldChange.emit(ev.detail);
+  }
+
+  /** Watch for a request to add a new LiturgicalDocument block and emit it from the editor */
+  @Listen('ldfDocShouldAdd')
+  onDocShouldAdd(ev : CustomEvent) {
+    this.editorDocShouldAdd.emit(ev.detail);
   }
 
   /** Tells the Editor to add another child after this one in the document */
@@ -153,14 +162,12 @@ export class EditorComponent {
         index : number,
         field : string;
     if(Number(baseIndex) >= 0) {
-      console.log('baseIndex is a number')
       path = base.join('/');
       index = Number(baseIndex);
     }
     // if 'baseIndex' is not a number (e.g., if you're in a psalm and pressed Enter in /value/0/value/0/verse),
     // then drop it and use the preceding parts of the path
     else {
-      console.log('baseIndex is not a number, it is', baseIndex);
       const penultimate = parts.slice(parts.length - 2, parts.length - 1)[0],
             penultimateBase = parts.slice(0, parts.length - 2);
       path = penultimateBase.join('/');

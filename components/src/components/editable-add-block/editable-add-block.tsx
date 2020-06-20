@@ -27,6 +27,9 @@ export class EditableAddBlockComponent {
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
+  /** Gives a path to the point in the document at which a new LiturgicalDocument should be added */
+  @Event({ bubbles: true }) ldfDocShouldAdd : EventEmitter<{ base: string; index: number }>;
+
   // Lifecycle events
   async componentWillLoad() {
     this.loadLocaleStrings();
@@ -53,7 +56,7 @@ export class EditableAddBlockComponent {
   }
 
   // Pop up the modal with an Add Block Menu inside it
-  async expand() {
+  /*async expand() {
     const modal = await modalController.create({
       component: 'ldf-editable-add-block-menu',
     })
@@ -68,10 +71,10 @@ export class EditableAddBlockComponent {
     if(data) {
       this.add(data);
     }
-  }
+  }*/
 
   // Add a block
-  add(template : LiturgicalDocument[]) {
+  /*add(template : LiturgicalDocument[]) {
     this.ldfDocShouldChange.emit(
       new Change({
         path: this.base, 
@@ -83,7 +86,7 @@ export class EditableAddBlockComponent {
           }))
       })
     );
-  }
+  }*/
 
   // Render
   render() {
@@ -95,7 +98,7 @@ export class EditableAddBlockComponent {
             hidden: !this.visible,
             visible: this.visible,
             collapsed: true
-          }} onClick={() => this.expand()}>
+          }} onClick={() => this.ldfDocShouldAdd.emit({base: this.base, index: this.index})}>
             <label class='visually-hidden'>{ (this.localeStrings || {}).add}</label>
             +
           </button>

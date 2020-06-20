@@ -16,9 +16,10 @@
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description                                                                                 | Type                                            |
+| -------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `ldfDocShouldAdd`    | Gives a path to the point in the document at which a new LiturgicalDocument should be added | `CustomEvent<{ base: string; index: number; }>` |
+| `ldfDocShouldChange` |                                                                                             | `CustomEvent<Change>`                           |
 
 
 ## Dependencies
