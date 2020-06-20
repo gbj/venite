@@ -4,7 +4,8 @@
   "description": "Angular wrappers for @venite/components",
   "main": "proxies.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/gbj/venite/issues"
   },
-  "homepage": "https://github.com/gbj/venite#readme"
+  "homepage": "https://github.com/gbj/venite#readme",
+  "dependencies": {
+    "@angular/core": "^9.1.11",
+    "@venite/components": "^0.5.0",
+    "@venite/ldf": "^0.5.0",
+    "rxjs": "^6.5.5",
+    "zone.js": "^0.10.3"
+  }
 }
