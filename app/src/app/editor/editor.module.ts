@@ -11,6 +11,9 @@ import { EditorPage } from './editor.page';
 // Community Modules
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthModule } from '../auth/auth.module';
+import { LdfEditorComponent } from './ldf-editor/ldf-editor.component';
+import { CreateDocumentButtonComponent } from './create-document-button/create-document-button.component';
+import { AddBlockComponent } from './add-block/add-block.component';
 
 @NgModule({
   imports: [
@@ -21,7 +24,12 @@ import { AuthModule } from '../auth/auth.module';
     EditorPageRoutingModule,
     TranslateModule
   ],
-  declarations: [EditorPage],
+  declarations: [
+    EditorPage,
+    LdfEditorComponent,
+    CreateDocumentButtonComponent,
+    AddBlockComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class EditorPageModule {}

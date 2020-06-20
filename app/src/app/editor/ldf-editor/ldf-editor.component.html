@@ -1,0 +1,69 @@
+<ng-container *ngIf="localManager$ | async as localManager else nodoc">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title><h1>{{ localManager.document?.label }}</h1></ion-title>
+      <ion-text *ngIf="docSaved$ | async as docSaved" slot="end">
+        {{ 'Saved at' | translate }} {{ docSaved | date:'shortTime' }} {{ 'on' | translate }} {{ docSaved | date:'shortDate' }}
+      </ion-text>
+      <ion-buttons collapse="true" slot="end">
+        <venite-auth-menu-button></venite-auth-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large"><h1>{{ localManager.document?.label }}</h1></ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <article *ngIf="serverManager$ | async as serverManager">
+      <ldf-editor
+        [doc]="localManager.document"
+        [uid]="(auth.user | async)?.uid"
+        [cursors]="serverManager.cursors"
+        [users]="serverManager.users"
+        (editorCursorMoved)="updateCursor(localManager.docId, $event)"
+        (editorDocShouldChange)="processChange(localManager, $event)"
+        (editorDocShouldAdd)="addBlock($event)"
+      ></ldf-editor>
+      <!--<pre>
+**server last revision** = {{ serverManager.lastRevision }}
+
+**local** =
+
+{{ localManager | json }}
+      </pre>
+      <pre>**changes** =
+
+        {{ revisions$ | async | json }}
+</pre>-->
+    </article>
+  </ion-content>
+</ng-container>
+
+<!-- If we have a docId, but no document yet -- loading-->
+<ng-template #nodoc>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content #list [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div class="loading">{{ 'editor.loading-document' | translate }}</div>
+  </ion-content>
+</ng-template>

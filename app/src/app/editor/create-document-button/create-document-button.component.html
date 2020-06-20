@@ -1,0 +1,7 @@
+<ng-container *ngIf="userProfile$ | async as userProfile">
+  <ion-button (click)="new(userProfile)">
+    <ion-icon slot="start" name="create-outline"></ion-icon>
+    <ion-label>{{ 'editor.new' | translate }}</ion-label>
+  </ion-button>
+</ng-container>
+

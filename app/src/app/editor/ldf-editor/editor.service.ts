@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
 import * as json1 from 'ot-json1';
 
@@ -7,7 +7,7 @@ import { Cursor, Change, Operation, LiturgicalDocument, User } from '@venite/ldf
 import { Observable, combineLatest, from, BehaviorSubject } from 'rxjs';
 import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } from './document-manager';
 import { map, tap, switchMap, take } from 'rxjs/operators';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../../auth/auth.service';
 import { randomColor } from './random-color';
 
 @Injectable({

@@ -28,6 +28,7 @@
     "@ionic/angular": "^5.0.0",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@venite/angular": "^0.5.0",
     "@venite/components": "^0.5.0",
     "@venite/ldf": "^0.4.0",
     "firebase": "^7.14.4",
