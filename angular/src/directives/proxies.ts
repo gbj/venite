@@ -1183,13 +1183,15 @@ export class LdfEditableAddBlock {
 }
 
 export declare interface LdfEditableAddBlockMenu extends Components.LdfEditableAddBlockMenu {}
-@ProxyCmp({inputs: ['modal']})
-@Component({ selector: 'ldf-editable-add-block-menu', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal'] })
+
+@Component({ selector: 'ldf-editable-add-block-menu', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
 export class LdfEditableAddBlockMenu {
+  ldfShouldAddBlock!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfShouldAddBlock']);
   }
 }
 

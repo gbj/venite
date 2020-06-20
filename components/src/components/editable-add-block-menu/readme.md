@@ -5,11 +5,11 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Events
 
-| Property | Attribute | Description | Type  | Default     |
-| -------- | --------- | ----------- | ----- | ----------- |
-| `modal`  | `modal`   |             | `any` | `undefined` |
+| Event               | Description | Type                                |
+| ------------------- | ----------- | ----------------------------------- |
+| `ldfShouldAddBlock` |             | `CustomEvent<LiturgicalDocument[]>` |
 
 
 ## Dependencies

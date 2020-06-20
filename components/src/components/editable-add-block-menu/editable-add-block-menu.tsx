@@ -1,4 +1,4 @@
-import { Element, Component, Prop, Host, Listen, State, h } from '@stencil/core';
+import { Element, Component, Prop, Host, Listen, State, Event, EventEmitter, h } from '@stencil/core';
 import { LiturgicalDocument } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
@@ -15,7 +15,9 @@ export class EditableAddBlockMenuComponent {
   @State() localeStrings: { [x: string]: string; };
   @State() menu = [ ... MENU ];
 
-  @Prop() modal : any;
+  //@Prop() modal : any;
+
+  @Event() ldfShouldAddBlock : EventEmitter<LiturgicalDocument[] | null>;
 
   // Listener to capture searchbar changes
   @Listen('ionChange')
@@ -49,7 +51,8 @@ export class EditableAddBlockMenuComponent {
   }
 
   add(template : LiturgicalDocument[]) {
-    this.modal.dismiss(template);
+    //this.modal.dismiss(template);
+    this.ldfShouldAddBlock.emit(template);
   }
 
   /** Mark each item in menu as hidden or not
@@ -88,7 +91,8 @@ export class EditableAddBlockMenuComponent {
           <ion-toolbar>
             <ion-title>{ localeStrings.title }</ion-title>
             <ion-buttons slot="primary">
-              <ion-button onClick={() => this.modal.dismiss(null)}>
+              {/*<ion-button onClick={() => this.modal.dismiss(null)}>*/}
+              <ion-button onClick={() => this.ldfShouldAddBlock.emit(null)}>
                 <ion-icon slot="icon-only" name="close"></ion-icon>
               </ion-button>
             </ion-buttons>

@@ -12,4 +12,8 @@ export class AddBlockComponent implements OnInit {
 
   ngOnInit() {}
 
+  add(ev : CustomEvent) {
+    this.modal.dismiss(ev.detail);
+  }
+
 }
