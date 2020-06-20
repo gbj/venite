@@ -1173,11 +1173,12 @@ export declare interface LdfEditableAddBlock extends Components.LdfEditableAddBl
 @Component({ selector: 'ldf-editable-add-block', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'visible'] })
 export class LdfEditableAddBlock {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  ldfDocShouldAdd!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfDocShouldChange', 'ldfDocShouldAdd']);
   }
 }
 
@@ -1262,11 +1263,12 @@ export declare interface LdfEditor extends Components.LdfEditor {}
 export class LdfEditor {
   editorCursorMoved!: EventEmitter<CustomEvent>;
   editorDocShouldChange!: EventEmitter<CustomEvent>;
+  editorDocShouldAdd!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange']);
+    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd']);
   }
 }
 
