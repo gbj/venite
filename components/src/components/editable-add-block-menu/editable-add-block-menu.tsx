@@ -1,8 +1,7 @@
-import { Element, Component, Prop, Host, Listen, State, Event, EventEmitter, h } from '@stencil/core';
-import { LiturgicalDocument } from '@venite/ldf';
+import { Element, Component, Host, Listen, State, Event, EventEmitter, h } from '@stencil/core';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
-import { MENU } from './menu-options';
+import { MENU, MenuOption } from './menu-options';
 
 @Component({
   tag: 'ldf-editable-add-block-menu',
@@ -17,7 +16,7 @@ export class EditableAddBlockMenuComponent {
 
   //@Prop() modal : any;
 
-  @Event() ldfShouldAddBlock : EventEmitter<LiturgicalDocument[] | null>;
+  @Event() ldfShouldAddBlock : EventEmitter<MenuOption | null>;
 
   // Listener to capture searchbar changes
   @Listen('ionChange')
@@ -50,9 +49,9 @@ export class EditableAddBlockMenuComponent {
     }
   }
 
-  add(template : LiturgicalDocument[]) {
+  add(item : MenuOption) {
     //this.modal.dismiss(template);
-    this.ldfShouldAddBlock.emit(template);
+    this.ldfShouldAddBlock.emit(item);
   }
 
   /** Mark each item in menu as hidden or not
@@ -110,7 +109,7 @@ export class EditableAddBlockMenuComponent {
               <ul>
               {this.menu.filter(item => item.section.includes(section) && !item.hidden).map(item =>
                 <li>
-                  <button onClick={() => this.add(item.template)} class='block'>
+                  <button onClick={() => this.add(item)} class='block'>
                     { (item.icon)() }
                     <label>{ localeStrings[item.label] }</label>
                   </button>
@@ -124,3 +123,4 @@ export class EditableAddBlockMenuComponent {
     )
   }
 }
+

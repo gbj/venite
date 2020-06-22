@@ -19,11 +19,34 @@ export class DocumentService {
 
   constructor(private readonly afs: AngularFirestore) { }
 
+  /** Returns an array of all the public documents that match each of the provided properties of `query` */
+  find(query : Partial<LiturgicalDocument>) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref => {
+      // TODO use reduce and return .where each time to build instead
+      Object.entries(query).forEach(([prop, value]) => {
+        ref.where(prop, '==', value);
+      });
+      console.log('find ref is', ref);
+      return ref.where('sharing.status', '==', 'published').where('sharing.privacy', '==', 'public');
+    }).valueChanges();
+  }
+
+  getVersions(language : string, type : string) : Observable<string[]> {
+    return this.afs.doc<{versions: string[]}>(`Versions/${language}-${type}`)
+      .valueChanges()
+      .pipe(
+        map(doc => doc.versions)
+      );
+  }
+
   getLiturgyOptions(language : string, version : string) : Observable<Liturgy[]> {
     return this.afs.collection<Liturgy>('Document', ref => 
       ref.where('type', '==', 'liturgy')
-         .where('language', '==', language)
-         .where('version', '==', version)
+         //.where('language', '==', language)
+         //.where('version', '==', version)
+         .where('sharing.organization', '==', 'venite')
+         .where('sharing.status', '==', 'published')
+         .where('sharing.privacy', '==', 'public')
     ).valueChanges();
   }
 
@@ -36,6 +59,9 @@ export class DocumentService {
       ref.where('slug', '==', slug)
          .where('language', '==', language)
          .where('version', 'in', versions)
+         .where('sharing.organization', '==', 'venite')
+         .where('sharing.status', '==', 'published')
+         .where('sharing.privacy', '==', 'public')
     ).valueChanges();
   }
 

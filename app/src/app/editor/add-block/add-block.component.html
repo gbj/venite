@@ -1,4 +1,29 @@
-<ldf-editable-add-block-menu
-    (ldfShouldAddBlock)="add($event)"
->
-</ldf-editable-add-block-menu>
+<ion-content>
+  <div class="container">
+    <!-- "Page One": menu of options -->
+    <ldf-editable-add-block-menu
+        (ldfShouldAddBlock)="add($event)"
+        [class]="{ 'visible': !additionalMode, 'hidden': !!additionalMode }"
+    >
+    </ldf-editable-add-block-menu>
+
+    <!-- "Page Two": additional info to look up psalms, canticles, hymns, etc. -->
+    <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">    
+        <ldf-editable-filter-documents *ngSwitchCase="'psalm'"
+            type="psalm"
+            [versions]="additionalVersions | async"
+            [options]="additionalOptions | async"
+            (ldfDocumentSelected)="complete.next([$event.detail])"
+        >
+        </ldf-editable-filter-documents>
+
+        <ldf-editable-filter-documents *ngSwitchCase="'canticle'"
+            type="canticle"
+            [versions]="additionalVersions | async"
+            [options]="additionalOptions | async"
+            (ldfDocumentSelected)="complete.next([$event.detail])"
+        >
+        </ldf-editable-filter-documents>
+    </section>
+  </div>
+</ion-content>

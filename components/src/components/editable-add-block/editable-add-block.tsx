@@ -1,7 +1,6 @@
 import { Element, Component, Prop, State, Host, Event, EventEmitter, h } from '@stencil/core';
-import { modalController } from '@ionic/core';
 import { getLocaleComponentStrings } from '../../utils/locale';
-import { LiturgicalDocument, Change } from '@venite/ldf';
+import { Change } from '@venite/ldf';
 import '@ionic/core';
 
 @Component({

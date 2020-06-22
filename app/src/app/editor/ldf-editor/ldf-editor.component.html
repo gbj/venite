@@ -30,7 +30,7 @@
         [users]="serverManager.users"
         (editorCursorMoved)="updateCursor(localManager.docId, $event)"
         (editorDocShouldChange)="processChange(localManager, $event)"
-        (editorDocShouldAdd)="addBlock($event)"
+        (editorDocShouldAdd)="addBlock(localManager, $event)"
       ></ldf-editor>
       <!--<pre>
 **server last revision** = {{ serverManager.lastRevision }}

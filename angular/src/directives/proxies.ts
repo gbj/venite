@@ -1208,6 +1208,19 @@ export class LdfEditableDelete {
   }
 }
 
+export declare interface LdfEditableFilterDocuments extends Components.LdfEditableFilterDocuments {}
+@ProxyCmp({inputs: ['options', 'type', 'versions']})
+@Component({ selector: 'ldf-editable-filter-documents', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'type', 'versions'] })
+export class LdfEditableFilterDocuments {
+  ldfDocumentSelected!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocumentSelected']);
+  }
+}
+
 export declare interface LdfEditableMetadata extends Components.LdfEditableMetadata {}
 @ProxyCmp({inputs: ['collapsed', 'doc', 'modal', 'path', 'visible']})
 @Component({ selector: 'ldf-editable-metadata', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapsed', 'doc', 'modal', 'path', 'visible'] })

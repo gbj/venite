@@ -7,6 +7,7 @@ export class MenuOption {
   icon: () => JSX.Element;
   template?: LiturgicalDocument[];
   hidden?: boolean;
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn';
 }
 
 export const MENU : MenuOption[] = [
@@ -31,7 +32,8 @@ export const MENU : MenuOption[] = [
     label: 'canticle',
     section: ['Liturgy', 'Propers'],
     icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"></path></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'canticle', value: [ { type: 'psalm-section', label: '', value: [{ type: 'psalm-verse', verse: '', halfverse: '' }]}]}) ]
+    template: [ new Psalm({ type: 'psalm', style: 'canticle' }) ],
+    needsMoreInfo: 'canticle'
   },
   {
     label: 'collect_of_the_day',
@@ -56,8 +58,9 @@ export const MENU : MenuOption[] = [
       <path d="M 452.305 266.272 L 354.918 295.031 C 350.861 296.305 348.099 300.064 348.097 304.317 L 348.097 383.881 C 344.908 383.106 341.639 382.706 338.357 382.687 C 322.226 382.687 309.139 391.41 309.139 402.167 C 309.139 412.923 322.226 421.646 338.357 421.646 C 354.489 421.646 367.576 412.923 367.576 402.167 L 367.576 331.043 L 445.493 308.216 L 445.493 364.404 C 442.304 363.627 439.035 363.226 435.753 363.208 C 419.622 363.208 406.534 371.931 406.534 382.687 C 406.534 393.444 419.622 402.167 435.753 402.167 C 451.884 402.167 464.972 393.447 464.972 382.687 L 464.972 275.552 C 464.966 268.975 458.577 264.295 452.305 266.272 Z" style={{'mix-blend-mode': 'exclusion', 'fill': 'rgb(255, 255, 255)'}}/>
     </svg>),
     template: [
-      new Heading({ type: 'heading', label: 'Hymn', citation: '', value: [''] }),
-    ]
+      new Heading({ type: 'heading', label: 'Hymn', citation: '', value: [''] })
+    ],
+    needsMoreInfo: 'hymn'
   },
   {
     label: 'meditation',
@@ -71,7 +74,8 @@ export const MENU : MenuOption[] = [
     section: ['Propers', 'Reading'],
     /* SVG is Font Awesome 'fa-bible' */
     icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bible" class="svg-inline--fa fa-bible fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 358.4V25.6c0-16-9.6-25.6-25.6-25.6H96C41.6 0 0 41.6 0 96v320c0 54.4 41.6 96 96 96h326.4c12.8 0 25.6-9.6 25.6-25.6v-16c0-6.4-3.2-12.8-9.6-19.2-3.2-16-3.2-60.8 0-73.6 6.4-3.2 9.6-9.6 9.6-19.2zM144 144c0-8.84 7.16-16 16-16h48V80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v48h48c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-48v112c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16V192h-48c-8.84 0-16-7.16-16-16v-32zm236.8 304H96c-19.2 0-32-12.8-32-32s16-32 32-32h284.8v64z"></path></svg>),
-    template: [ new BibleReading({ type: 'bible-reading', style: 'long', lookup: { type: 'lectionary', table: { preference: 'lectionary' }, item: 'first_reading' } }) ]
+    template: [ new BibleReading({ type: 'bible-reading', style: 'long', lookup: { type: 'lectionary', table: { preference: 'lectionary' }, item: 'first_reading' } }) ],
+    needsMoreInfo: 'lectionary'
   },
   {
     label: 'litany',
@@ -103,13 +107,15 @@ export const MENU : MenuOption[] = [
     label: 'psalm',
     section: ['Liturgy', 'Reading'],
     icon: () => (<svg version="1.0" width="1065.000000pt" height="1280.000000pt" viewBox="0 0 1065.000000 1280.000000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">  <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">    <path d="M 2020 12790 C 1990 12785 1918 12777 1860 12770 C 1623 12744 672.669 12273.564 523 12002 C 316.287 11626.935 -405 9634.932 1000 5598.932 C 1837 3196.932 3560 15 3560 10 C 3560 -3 5211 101 5487 166 C 5827 246 6072 380 6161 534 C 6189 583 9162 2764 9755 3855 C 10133 4550 10348 5103 10493 5760 C 10635 6399 10683 7382 10609 8140 C 10541 8842 10287 9670 9914 10400 C 9873 10480 9840 10548 9840 10551 C 9840 10555 9870 10580 9907 10607 C 10066 10723 10186 10867 10280 11051 L 10333 11156 L 9885 11810 C 9639 12170 9429 12473 9420 12484 C 9403 12501 9399 12499 9314 12418 C 9075 12191 8794 12040 8305 11874 C 7675 11659 7197 11560 6790 11560 C 6350 11560 5829 11648 5170 11835 C 4824 11933 4715 11976 3895 12342 C 3247 12632 2966 12722 2576 12765 C 2499 12774 2402 12785 2362 12790 C 2278 12802 2100 12801 2020 12790 Z M 2236.679 11071.163 C 2314.679 11050.163 3527.302 10462.707 3527.302 10450.707 C 3527.302 10427.707 2669.082 8800 2657.082 8800 C 2651.082 8800 2030.847 9568.173 2000 10084.133 C 1982.133 10382.989 2124.679 11102.163 2236.679 11071.163 Z M 4424 10170 C 4424 10170 5001 10049.652 5000 10027.652 C 5000 9996.652 3551.769 7151.685 3536.769 7151.685 C 3526.769 7151.685 3234 7780 3215 7841 C 3209 7860 4408 10172 4424 10170 Z M 6063 9808 C 6141 9796 6762.015 9806 6764.015 9800 C 6767.015 9793 4380.708 5056.389 4374.708 5058.389 C 4369.708 5060.389 4120 5839 4084 5918 L 4020 6060 C 4020 6060 5983 9800 6000 9800 C 6011 9800 5987 9820 6063 9808 Z M 8060 9680 C 8060 9680 8285 9211 8335 8965 C 8429 8497 8435 7764 8348 7230 C 8264 6707 8090 6270 7707 5610 C 7490 5238 7153 4748 6946 4505 C 6481 3958 5998 3541 5472 3230 C 5367 3169 5346 3160 5335 3171 C 5319 3187 5000 3782 5000 3800 C 5000 3807 7817.247 9800 7817.247 9800 L 8060 9680 Z"/>  </g></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'psalm', value: [ { type: 'psalm-section', label: '', value: [{ type: 'psalm-verse', number: '', verse: '', halfverse: '' }]}]}) ]
+    template: [ new Psalm({ type: 'psalm', style: 'psalm', value: [ { type: 'psalm-section', label: '', value: [{ type: 'psalm-verse', number: '', verse: '', halfverse: '' }]}]}) ],
+    needsMoreInfo: 'psalm'
   },
   {
     label: 'psalter',
     section: ['Liturgy', 'Propers', 'Reading'],
     icon: () => (<svg version="1.0" width="1065.000000pt" height="1280.000000pt" viewBox="0 0 1065.000000 1280.000000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">  <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">    <path d="M 2020 12790 C 1990 12785 1918 12777 1860 12770 C 1623 12744 672.669 12273.564 523 12002 C 316.287 11626.935 -405 9634.932 1000 5598.932 C 1837 3196.932 3560 15 3560 10 C 3560 -3 5211 101 5487 166 C 5827 246 6072 380 6161 534 C 6189 583 9162 2764 9755 3855 C 10133 4550 10348 5103 10493 5760 C 10635 6399 10683 7382 10609 8140 C 10541 8842 10287 9670 9914 10400 C 9873 10480 9840 10548 9840 10551 C 9840 10555 9870 10580 9907 10607 C 10066 10723 10186 10867 10280 11051 L 10333 11156 L 9885 11810 C 9639 12170 9429 12473 9420 12484 C 9403 12501 9399 12499 9314 12418 C 9075 12191 8794 12040 8305 11874 C 7675 11659 7197 11560 6790 11560 C 6350 11560 5829 11648 5170 11835 C 4824 11933 4715 11976 3895 12342 C 3247 12632 2966 12722 2576 12765 C 2499 12774 2402 12785 2362 12790 C 2278 12802 2100 12801 2020 12790 Z M 2236.679 11071.163 C 2314.679 11050.163 3527.302 10462.707 3527.302 10450.707 C 3527.302 10427.707 2669.082 8800 2657.082 8800 C 2651.082 8800 2030.847 9568.173 2000 10084.133 C 1982.133 10382.989 2124.679 11102.163 2236.679 11071.163 Z M 4424 10170 C 4424 10170 5001 10049.652 5000 10027.652 C 5000 9996.652 3551.769 7151.685 3536.769 7151.685 C 3526.769 7151.685 3234 7780 3215 7841 C 3209 7860 4408 10172 4424 10170 Z M 6063 9808 C 6141 9796 6762.015 9806 6764.015 9800 C 6767.015 9793 4380.708 5056.389 4374.708 5058.389 C 4369.708 5060.389 4120 5839 4084 5918 L 4020 6060 C 4020 6060 5983 9800 6000 9800 C 6011 9800 5987 9820 6063 9808 Z M 8060 9680 C 8060 9680 8285 9211 8335 8965 C 8429 8497 8435 7764 8348 7230 C 8264 6707 8090 6270 7707 5610 C 7490 5238 7153 4748 6946 4505 C 6481 3958 5998 3541 5472 3230 C 5367 3169 5346 3160 5335 3171 C 5319 3187 5000 3782 5000 3800 C 5000 3807 7817.247 9800 7817.247 9800 L 8060 9680 Z"/>  </g></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'psalm', lookup: { type: 'lectionary', table: { preference: 'psalter' }, item: 'morning_psalms' } }) ]
+    template: [ new Psalm({ type: 'psalm', style: 'psalm', lookup: { type: 'lectionary', table: { preference: 'psalter' }, item: 'morning_psalms' } }) ],
+    needsMoreInfo: 'lectionary'
   },
   {
     label: 'responsive',

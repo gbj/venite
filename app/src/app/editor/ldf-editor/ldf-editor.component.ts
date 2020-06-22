@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Observable, Subscription, combineLatest } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
-import { LiturgicalDocument } from '@venite/ldf';
-import { switchMap } from 'rxjs/operators';
+import { LiturgicalDocument, Change } from '@venite/ldf';
+import { switchMap, debounceTime, tap, map } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -51,12 +51,12 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       ([localManager, serverManager, revisions]) => this.editorService.applyChanges(localManager, serverManager, revisions));
 
     // update the document once every 5ms
-    /*this.docSaved$ = this.localManager$.pipe(
+    this.docSaved$ = this.localManager$.pipe(
       debounceTime(3000),
       tap(localManager => console.log(localManager.document)),
       switchMap(localManager => this.documents.saveDocument(localManager.docId, JSON.parse(JSON.stringify(localManager.document)))),
       map(() => new Date())
-    )*/
+    )
   }
 
   async ngOnDestroy() {
@@ -78,7 +78,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   // Called whenever the user wants to add a new LiturgicalDocument block at JSON pointer `base`/`index`
-  async addBlock(ev : CustomEvent) {
+  async addBlock(manager : LocalDocumentManager, ev : CustomEvent) {
     const { base, index } = ev.detail,
           modal = await this.modal.create({
             component: AddBlockComponent,
@@ -90,8 +90,22 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
     const { data } = await modal.onDidDismiss();
     if(data) {
-      //this.add(data);
+      this.add(manager, base, index, data);
       console.log('added', data);
     }
+  }
+
+  add(manager: LocalDocumentManager, base : string, index: number, template : LiturgicalDocument[]) {
+    const change = new Change({
+      path: base, 
+      op: template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
+        .map(value => ({
+          type: 'insertAt',
+          index: index,
+          value
+        }))
+    });
+    console.log(change);
+    this.editorService.processChange(manager, change);
   }
 }

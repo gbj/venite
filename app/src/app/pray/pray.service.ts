@@ -14,7 +14,6 @@ export class PrayService {
     private documents : DocumentService
   ) { }
 
-  // TODO: build real compiler
   /** Returns the complete and filtered form for a doc within a particular liturgical context
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
@@ -25,13 +24,14 @@ export class PrayService {
     if(doc.include(day, prefs)) {
 
       // recurse if doc is a `Liturgy` (and therefore contains other, nested docs), 
-      if(doc.type == 'liturgy') {
-        // TODO -- check this
+      if(doc.type == 'liturgy' && doc.value?.length > 0) {
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
-          ... (docBase as Liturgy).value?.map(child => this.compile(child, day, prefs).pipe(startWith(undefined)))
+          ... (docBase as Liturgy)
+            .value
+            .map(child => this.compile(child, day, prefs).pipe(startWith(undefined)))
         ).pipe(
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
@@ -42,16 +42,19 @@ export class PrayService {
 
       // if doc has a `lookup` and not a `value`, compile it
       if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
-        return of(doc).pipe(
-          switchMap(doc => this.lookup(doc, day, prefs, []))
-        );
+        return this.lookup(doc, day, prefs, []);
       }
+    
+      // if doc has a `slug` and not a `value`, add `lookup` type of slug and recompile
+      else if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value')) {
+        return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
+      }
+
       // otherwise, check whether the doc should be included
       // if so, return it as an `Observable`
       else {
         return of(doc);
       }
-    
     }
   }
 
@@ -70,15 +73,18 @@ export class PrayService {
        * b) an LDF `Option` consisting of all matches */
       case 'slug':
       default:
+        const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
+
         return this.lookupBySlug(
           doc.slug,
           doc.language,
-          alternateVersions?.length > 0 ? [ doc.version, ... alternateVersions ] : [ doc.version ]
+          versions
         );
     }
   }
 
   lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
+    console.log('slug lookup -- versions = ', versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))),
       map(docs => docs.length > 1 ?

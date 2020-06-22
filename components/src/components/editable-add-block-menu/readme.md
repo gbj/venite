@@ -7,9 +7,9 @@
 
 ## Events
 
-| Event               | Description | Type                                |
-| ------------------- | ----------- | ----------------------------------- |
-| `ldfShouldAddBlock` |             | `CustomEvent<LiturgicalDocument[]>` |
+| Event               | Description | Type                      |
+| ------------------- | ----------- | ------------------------- |
+| `ldfShouldAddBlock` |             | `CustomEvent<MenuOption>` |
 
 
 ## Dependencies
