@@ -57,7 +57,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
         this.additionalMode = 'canticle';
         this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
         this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'canticle' }).pipe(
-          map(psalms => psalms.map(psalm => new LiturgicalDocument({ ... psalm, value: undefined })))
+          map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
         );
         return this.complete;
       case 'hymn':

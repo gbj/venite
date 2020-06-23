@@ -45,9 +45,14 @@ export class PrayService {
         return this.lookup(doc, day, prefs, []);
       }
     
-      // if doc has a `slug` and not a `value`, add `lookup` type of slug and recompile
+      // if doc has a `slug` and not a `value`, add `lookup` type of `slug` and recompile
       else if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value')) {
         return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
+      }
+
+      // if doc has a `category` and not a `value`, add `lookup` type of `category` and recompile
+      else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value')) {
+        return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
       }
 
       // otherwise, check whether the doc should be included
@@ -60,21 +65,25 @@ export class PrayService {
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
   lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
+    const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
+  
     switch(doc.lookup.type) {
       case 'lectionary':
         break;
       case 'canticle-table':
         break;
       case 'category':
-        break;
+        return this.lookupByCategory(
+          doc.category,
+          doc.language,
+          versions
+        );
 
       /* for lookup's of the `slug` type, return an Observable of either
        * a) the only document matching the document's language/version, or
        * b) an LDF `Option` consisting of all matches */
       case 'slug':
       default:
-        const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
-
         return this.lookupBySlug(
           doc.slug,
           doc.language,
@@ -83,9 +92,8 @@ export class PrayService {
     }
   }
 
-  lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
-    console.log('slug lookup -- versions = ', versions);
-    return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
+  docsToDocOrOption(docs$ : Observable<LiturgicalDocument[]>, versions : string[]) : Observable<LiturgicalDocument> {
+    return docs$.pipe(
       map(docs => docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))),
       map(docs => docs.length > 1 ?
         // if multiple LiturgicalDocuments returned, return an Option made up of them
@@ -98,5 +106,13 @@ export class PrayService {
         // if only one LiturgicalDocument returned, return that document 
         docs[0])
     );
+  }
+
+  lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
+    return this.docsToDocOrOption(this.documents.findDocumentsBySlug(slug, language, versions), versions);
+  }
+
+  lookupByCategory(category : string[], language : string, versions : string[]) : Observable<LiturgicalDocument> {
+    return this.docsToDocOrOption(this.documents.findDocumentsByCategory(category, language, versions), versions);
   }
 }

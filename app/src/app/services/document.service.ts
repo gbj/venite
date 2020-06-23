@@ -65,6 +65,17 @@ export class DocumentService {
     ).valueChanges();
   }
 
+  findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('category', 'array-contains-any', category)
+         .where('language', '==', language)
+         .where('version', 'in', versions)
+         .where('sharing.organization', '==', 'venite')
+         .where('sharing.status', '==', 'published')
+         .where('sharing.privacy', '==', 'public')
+    ).valueChanges();
+  }
+
   findDocuments() : Observable<IdAndDoc[]> {
     return this.afs.collection<LiturgicalDocument>('Document').snapshotChanges().pipe(
       // transform from AngularFire `DocumentChangeAction` to `doc`
