@@ -38,6 +38,7 @@
 * ["editing/user"](modules/_editing_user_.md)
 * ["heading"](modules/_heading_.md)
 * ["index"](modules/_index_.md)
+* ["lectionary-entry"](modules/_lectionary_entry_.md)
 * ["liturgical-document"](modules/_liturgical_document_.md)
 * ["liturgy/client-preferences"](modules/_liturgy_client_preferences_.md)
 * ["liturgy/liturgy"](modules/_liturgy_liturgy_.md)

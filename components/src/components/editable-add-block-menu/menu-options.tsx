@@ -12,6 +12,15 @@ export class MenuOption {
 
 export const MENU : MenuOption[] = [
   {
+    label: 'alleluia',
+    section: ['Liturgy'],
+    /* SVG is custom */
+    icon: () => (<svg></svg>),
+    template: [
+      new Text({ type: 'text', style: 'text', slug: 'alleluia' })
+    ]
+  },
+  {
     label: 'anthem',
     section: ['Music'],
     /* SVG is Font Awesome 'fa-music' */
@@ -41,6 +50,15 @@ export const MENU : MenuOption[] = [
     /* SVG is Font Awesome 'fa-book-reader' */
     icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-reader" class="svg-inline--fa fa-book-reader fa-w-16" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">   <path fill="currentColor" d="M352 96c0-53.02-42.98-96-96-96s-96 42.98-96 96 42.98 96 96 96 96-42.98 96-96zM233.59 241.1c-59.33-36.32-155.43-46.3-203.79-49.05C13.55 191.13 0 203.51 0 219.14v222.8c0 14.33 11.59 26.28 26.49 27.05 43.66 2.29 131.99 10.68 193.04 41.43 9.37 4.72 20.48-1.71 20.48-11.87V252.56c-.01-4.67-2.32-8.95-6.42-11.46zm248.61-49.05c-48.35 2.74-144.46 12.73-203.78 49.05-4.1 2.51-6.41 6.96-6.41 11.63v245.79c0 10.19 11.14 16.63 20.54 11.9 61.04-30.72 149.32-39.11 192.97-41.4 14.9-.78 26.49-12.73 26.49-27.06V219.14c-.01-15.63-13.56-28.01-29.81-27.09z"/>   <path d="M 452.305 266.272 L 354.918 295.031 C 350.861 296.305 348.099 300.064 348.097 304.317 L 348.097 383.881 C 344.908 383.106 341.639 382.706 338.357 382.687 C 322.226 382.687 309.139 391.41 309.139 402.167 C 309.139 412.923 322.226 421.646 338.357 421.646 C 354.489 421.646 367.576 412.923 367.576 402.167 L 367.576 331.043 L 445.493 308.216 L 445.493 364.404 C 442.304 363.627 439.035 363.226 435.753 363.208 C 419.622 363.208 406.534 371.931 406.534 382.687 C 406.534 393.444 419.622 402.167 435.753 402.167 C 451.884 402.167 464.972 393.447 464.972 382.687 L 464.972 275.552 C 464.966 268.975 458.577 264.295 452.305 266.272 Z"/> </svg>),
     template: [ new Text({ type: 'text', style: 'prayer', lookup: { type: 'collect' } }) ]
+  },
+  {
+    label: 'Gloria Patri',
+    section: ['Liturgy'],
+    /* SVG is custom */
+    icon: () => (<svg></svg>),
+    template: [
+      new Text({ type: 'text', style: 'text', slug: 'gloria-patri' })
+    ]
   },
   {
     label: 'heading',

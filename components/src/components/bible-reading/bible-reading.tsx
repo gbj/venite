@@ -93,6 +93,7 @@ export class BibleReadingComponent {
   @Method()
   async loadCitation(citation : string = undefined, version : string = undefined) {
     try {
+      console.log(`loading ${citation} (${version})`)
       this.verses = await BibleReadingService.find(
         citation || this.obj.citation,
         version || this.obj.version,
@@ -153,10 +154,7 @@ export class BibleReadingComponent {
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
             {/* Introductory text ("A Reading from..." or similar) */}
-            {
-              this.obj.metadata && this.obj.metadata.intro &&
-                <ldf-liturgical-document doc={this.obj.metadata.intro}></ldf-liturgical-document>
-            }
+            {this.obj?.metadata?.intro && <ldf-liturgical-document doc={this.obj.metadata.intro}></ldf-liturgical-document>}
 
             {/* Bible text */}
             <p lang={this.obj.language}>
@@ -177,7 +175,7 @@ export class BibleReadingComponent {
         );
       }
     } else {
-      return <pre>{this.loadingError}</pre> || <p>{localeStrings.loading}</p>
+      return this.loadingError ? <pre>{this.loadingError}</pre> : <p>{localeStrings.loading}</p>
     }
   }
 }

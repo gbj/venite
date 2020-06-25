@@ -105,8 +105,8 @@ export class HomePage implements OnInit {
     const [y, m, d] = day?.date?.split('-'),
           commands : string[] = [
             root,
-            liturgy?.language,
-            liturgy?.version,
+            liturgy?.language || 'en',
+            liturgy?.version || 'Rite-II',
             day?.kalendar,
             y, m, d,
             liturgy?.slug

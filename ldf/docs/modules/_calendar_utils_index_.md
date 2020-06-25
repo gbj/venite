@@ -12,6 +12,7 @@
 * [addOneDay](_calendar_utils_index_.md#addoneday)
 * [dailyOfficeYear](_calendar_utils_index_.md#dailyofficeyear)
 * [dateFromYMD](_calendar_utils_index_.md#datefromymd)
+* [dateFromYMDString](_calendar_utils_index_.md#datefromymdstring)
 * [dateOnly](_calendar_utils_index_.md#dateonly)
 * [dateToYMD](_calendar_utils_index_.md#datetoymd)
 * [easterInYear](_calendar_utils_index_.md#easterinyear)
@@ -56,6 +57,12 @@ ___
 ###  dateFromYMD
 
 • **dateFromYMD**:
+
+___
+
+###  dateFromYMDString
+
+• **dateFromYMDString**:
 
 ___
 

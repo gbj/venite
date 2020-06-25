@@ -35,10 +35,12 @@
   "editor": {
     "title": "Editor",
     "edit-a-document": "Edit a Document",
+    "lectionary": "Lectionary",
     "loading": "Loading Documents...",
     "loading-document": "Loading Document...",
     "mydocs": "My Documents",
-    "new": "Create a New Bulletin"
+    "new": "Create a New Bulletin",
+    "reading": "Reading"
   },
   "organization": {
     "owner": "Administrator",

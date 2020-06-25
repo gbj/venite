@@ -14,9 +14,15 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   @Input() language : string = 'en';
   @Input() modal : any;
 
+  addition : MenuOption;
   additionalMode : 'psalm' | 'lectionary' | 'canticle' | 'hymn' | undefined;
-  additionalVersions : Observable<string[]>;
+  // used in ldf-editable-filter-documents
+  additionalVersions : Observable<{[key: string]: string}>;
   additionalOptions : Observable<LiturgicalDocument[]>;
+  // used for lectionary select
+  additionalReadingNames : Observable<{[key: string]: string}>;
+
+  // return value
   public complete : Subject<LiturgicalDocument[]> = new Subject();
   completeSubscription : Subscription;
 
@@ -41,6 +47,9 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   }
 
   completeOption(addition : MenuOption) : Observable<LiturgicalDocument[]> {
+    // store the `MenuOption` we're passed in case we need to access it in a callback from one of the forms below
+    this.addition = addition;
+
     // types like Psalm, Canticle, and Lectionary Readings need another component to be completed
     switch(addition.needsMoreInfo) {
       case 'psalm':
@@ -51,7 +60,9 @@ export class AddBlockComponent implements OnInit, OnDestroy {
         );
         return this.complete;
       case 'lectionary':
-        // TODO lectionary
+        this.additionalMode = 'lectionary';
+        this.additionalVersions = this.documentService.getVersions(this.language, 'lectionary');
+        this.additionalReadingNames = this.documentService.getVersions(this.language, 'readings');
         return this.complete;
       case 'canticle':
         this.additionalMode = 'canticle';
@@ -67,6 +78,21 @@ export class AddBlockComponent implements OnInit, OnDestroy {
       default:
         return of(addition.template);
     }
+  }
+
+  readingSelected(selection: { lectionary : string; reading : string; }) {
+    const { lectionary, reading } = selection;
+    this.complete.next(
+      (this.addition.template || [])
+        .map(doc => new LiturgicalDocument({
+          ... doc, 
+          lookup: {
+            type: 'lectionary',
+            table: lectionary,
+            item: reading
+          }
+        }))
+    );
   }
 
 }

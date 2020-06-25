@@ -31,11 +31,11 @@ export class EditableFilterDocumentsComponent {
   @Prop() type: 'psalm' | 'collect' | 'reading';
 
   /** Whether to include a `LiturgicalDocument.version` field with the selection */
-  @Prop() versions: string[] = undefined;
+  @Prop() versions: {[key: string]: string} = {};
   @Watch('versions')
   versionsChange() {
     if(!this.version) {
-      this.version = this.versions[0];
+      this.version = Object.keys(this.versions)[0];
     }
     this.filter(this.search);
   }
@@ -110,8 +110,8 @@ export class EditableFilterDocumentsComponent {
           {this.versions && <ion-item>
             <ion-label>{ localeStrings.version }</ion-label>
             <ion-select value={this.version} onIonChange={(ev : CustomEvent) => this.chooseVersion(ev.detail.value)}>
-              {this.versions.map(version => 
-                <ion-select-option value={version}>{version}</ion-select-option>
+              {Object.entries(this.versions).map(([versionKey, versionLabel]) => 
+                <ion-select-option value={versionKey}>{versionLabel}</ion-select-option>
               )}
             </ion-select>
           </ion-item>}

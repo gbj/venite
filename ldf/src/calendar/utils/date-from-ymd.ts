@@ -12,6 +12,12 @@ export function dateFromYMD(year : string, month : string, day : string) : Date 
   return d;
 }
 
+/** Transforms a string like `YYYY-mm-dd` to a Date */
+export function dateFromYMDString(ymd : string) : Date {
+  const [y, m, d] = ymd.split('-');
+  return dateFromYMD(y, m, d);
+}
+
 /** Transform `Date` into YYYY-M-D */
 export function dateToYMD(date : Date) : string {
   return `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;

@@ -9,6 +9,8 @@
 
     <!-- "Page Two": additional info to look up psalms, canticles, hymns, etc. -->
     <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">    
+        
+        <!-- Psalms -->
         <ldf-editable-filter-documents *ngSwitchCase="'psalm'"
             type="psalm"
             [versions]="additionalVersions | async"
@@ -17,6 +19,7 @@
         >
         </ldf-editable-filter-documents>
 
+        <!-- Canticles-->
         <ldf-editable-filter-documents *ngSwitchCase="'canticle'"
             type="canticle"
             [versions]="additionalVersions | async"
@@ -24,6 +27,14 @@
             (ldfDocumentSelected)="complete.next([$event.detail])"
         >
         </ldf-editable-filter-documents>
+
+        <!-- Lectionary Readings -->
+        <venite-lectionary-select *ngSwitchCase="'lectionary'"
+          [lectionaries]="additionalVersions | async"
+          [readings]="additionalReadingNames | async"
+          (readingSelected)="readingSelected($event)"
+        >
+        </venite-lectionary-select>
     </section>
   </div>
 </ion-content>

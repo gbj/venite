@@ -11,7 +11,7 @@
 | ---------- | --------- | -------------------------------------------------------------------------- | ----------------------------------- | ----------- |
 | `options`  | --        | Options to search through                                                  | `LiturgicalDocument[]`              | `[]`        |
 | `type`     | `type`    |                                                                            | `"collect" \| "psalm" \| "reading"` | `undefined` |
-| `versions` | --        | Whether to include a `LiturgicalDocument.version` field with the selection | `string[]`                          | `undefined` |
+| `versions` | --        | Whether to include a `LiturgicalDocument.version` field with the selection | `{ [key: string]: string; }`        | `{}`        |
 
 
 ## Events

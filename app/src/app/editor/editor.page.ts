@@ -43,9 +43,11 @@ export class EditorPage implements OnInit {
         doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
         doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
         doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
-        doc.data.category.includes(search.toLowerCase())
+        doc.data.category?.includes(search.toLowerCase())
       ))
     )
+
+    // TODO -- not just my docs, but my organization etc.
     //this.orgDocs$ = this.documents.myOrganizationDocuments();
 
     // If a docId is given, we'll pass it down to the `LdfEditorComponent`

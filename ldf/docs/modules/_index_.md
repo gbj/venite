@@ -18,6 +18,7 @@
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
 * [Kalendar](_index_.md#kalendar)
+* [LectionaryEntry](_index_.md#lectionaryentry)
 * [LiturgicalColor](_index_.md#liturgicalcolor)
 * [LiturgicalDay](_index_.md#liturgicalday)
 * [LiturgicalDocument](_index_.md#liturgicaldocument)
@@ -47,6 +48,7 @@
 * [addOneDay](_index_.md#addoneday)
 * [dailyOfficeYear](_index_.md#dailyofficeyear)
 * [dateFromYMD](_index_.md#datefromymd)
+* [dateFromYMDString](_index_.md#datefromymdstring)
 * [dateOnly](_index_.md#dateonly)
 * [dateToYMD](_index_.md#datetoymd)
 * [easterInYear](_index_.md#easterinyear)
@@ -128,6 +130,12 @@ ___
 ###  Kalendar
 
 • **Kalendar**:
+
+___
+
+###  LectionaryEntry
+
+• **LectionaryEntry**:
 
 ___
 
@@ -302,6 +310,12 @@ ___
 ###  dateFromYMD
 
 • **dateFromYMD**:
+
+___
+
+###  dateFromYMDString
+
+• **dateFromYMDString**:
 
 ___
 

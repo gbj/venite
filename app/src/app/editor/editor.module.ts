@@ -14,6 +14,7 @@ import { AuthModule } from '../auth/auth.module';
 import { LdfEditorComponent } from './ldf-editor/ldf-editor.component';
 import { CreateDocumentButtonComponent } from './create-document-button/create-document-button.component';
 import { AddBlockComponent } from './add-block/add-block.component';
+import { LectionarySelectComponent } from './lectionary-select/lectionary-select.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { AddBlockComponent } from './add-block/add-block.component';
     EditorPage,
     LdfEditorComponent,
     CreateDocumentButtonComponent,
-    AddBlockComponent
+    AddBlockComponent,
+    LectionarySelectComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

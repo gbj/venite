@@ -2,7 +2,7 @@ import { LiturgicalColor } from './liturgical-color';
 import { LiturgicalWeek } from './liturgical-week';
 import { HolyDay } from './holy-day';
 import { dateOnly } from './utils/date-only';
-import { dateFromYMD } from './utils/date-from-ymd';
+import { dateFromYMD, dateFromYMDString } from './utils/date-from-ymd';
 
 interface ObservedInterface {
   date?: string;
@@ -159,15 +159,10 @@ export class LiturgicalDay {
       if(type == 'holyday') {
         return item?.type?.rank || 2;
       } else {
-        let date;
-
         // if `day.date` is defined, used it to generate a date
-        if(day.date) {
-          const [y, m, d] = day.date?.split('-');
-          date = dateFromYMD(y, m, d);
-        } else {
-          date = dateOnly(new Date());
-        }
+        // otherwise, use the current date
+        const date = day.date ? dateFromYMDString(day.date) : dateOnly(new Date());
+
         // Sundays => 4
         if(date.getDay() == 0) {
           return 4;

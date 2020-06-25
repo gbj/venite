@@ -21,5 +21,9 @@
     </ion-toolbar>
   </ion-header>
 
+  <!--<ul>
+    <li *ngFor="let child$ of prayService.latestChildren$">{{ child$ | async | json }}</li>
+  </ul>-->
+  <!-- <pre>{{ doc$ | async | json }}</pre> -->
   <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
 </ion-content>

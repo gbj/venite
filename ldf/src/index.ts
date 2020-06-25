@@ -2,6 +2,7 @@ export * from './liturgical-document';
 
 export * from './bible-reading/bible-reading';
 export * from './bible-reading/bible-reading-verse';
+export * from './lectionary-entry';
 
 export * from './calendar/holy-day';
 export * from './calendar/kalendar';

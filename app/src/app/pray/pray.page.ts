@@ -29,7 +29,7 @@ export class PrayPage implements OnInit {
     private route : ActivatedRoute,
     private documents : DocumentService,
     private calendarService : CalendarService,
-    private prayService : PrayService
+    public prayService : PrayService
   ) { }
 
   ngOnInit() {
@@ -88,7 +88,10 @@ export class PrayPage implements OnInit {
     )
 
     this.doc$ = this.state$.pipe(
-      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs))
+      tap(state => console.log('doc$ state', state)),
+      filter(state => state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs')),
+      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs)),
+      tap(compiled => console.log('compiled liturgy = ', compiled))
     );
   }
 

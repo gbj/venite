@@ -1,9 +1,6 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 
-import { CompileService} from './compile-service';
-
-
 @Component({
   tag: 'ldf-liturgical-document',
   shadow: true
@@ -33,7 +30,7 @@ export class LiturgicalDocumentComponent {
       provisionalObj = new LiturgicalDocument();
     }
 
-    this.obj = await this.compileIfNecessary(provisionalObj);
+    this.obj = provisionalObj || new LiturgicalDocument();
   }
 
   /** A JSON Pointer that points to the LiturgicalDocument being edited */
@@ -86,7 +83,7 @@ export class LiturgicalDocumentComponent {
   chooseComponent(doc : LiturgicalDocument) : JSX.Element {
     let node : JSX.Element;
 
-    switch(doc.type) {
+    switch(doc?.type) {
       case 'liturgy':
         node = <ldf-liturgy path={this.path} editable={this.editable} doc={doc as Liturgy}></ldf-liturgy>;
         break;
@@ -125,19 +122,12 @@ export class LiturgicalDocumentComponent {
     return node;
   }
 
-  // Compile a subdocument
-  async compileIfNecessary(doc : LiturgicalDocument) : Promise<LiturgicalDocument> {
-    if(doc.hasOwnProperty('lookup') && !doc.hasOwnProperty('value')) {
-      return CompileService.compile(doc);
-    } else {
-      return doc;
-    }
-  }
-
   // Render
   render() {
+    const node = this.chooseComponent(this.obj);
+
     return (
-      <Host lang={this.obj.language}>
+      node && <Host lang={this.obj?.language}>
         {/* Settings/Delete Buttons */}
         {this.editable && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
@@ -149,6 +139,6 @@ export class LiturgicalDocumentComponent {
         {/* Render the Document */}
         {this.chooseComponent(this.obj)}
       </Host>
-  );
+    );
   }
 }

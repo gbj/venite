@@ -31,8 +31,8 @@ export class DocumentService {
     }).valueChanges();
   }
 
-  getVersions(language : string, type : string) : Observable<string[]> {
-    return this.afs.doc<{versions: string[]}>(`Versions/${language}-${type}`)
+  getVersions(language : string, type : string) : Observable<{[key: string]: string}> {
+    return this.afs.doc<{versions: {[key: string]: string}}>(`Versions/${language}-${type}`)
       .valueChanges()
       .pipe(
         map(doc => doc.versions)
