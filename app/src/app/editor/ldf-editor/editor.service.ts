@@ -185,6 +185,8 @@ export class EditorService {
 
   /** Receive changes from server and apply to client, whenever anything on server changes */ 
   applyChanges(localManager : LocalDocumentManager, serverManager : ServerDocumentManager, changes : DocumentManagerChange[]) {    
+    console.log('(applyChanges', localManager, localManager.lastSyncedRevision, serverManager, serverManager.lastRevision, changes)
+    
     // if the server has revisions we don't, apply them to our doc
     const additionalChanges = changes
       // sorted by revision number
@@ -201,6 +203,8 @@ export class EditorService {
     if(overlappingChanges) {
       additionalChanges.unshift(... overlappingChanges);
     }
+
+    console.log('handling additional changes', additionalChanges);
 
     if(additionalChanges?.length > 0) {      
       additionalChanges

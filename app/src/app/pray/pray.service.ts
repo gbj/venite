@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, Psalm, BibleReading } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
@@ -26,8 +26,8 @@ export class PrayService {
     // should the doc be included?
     if(doc.include(day, prefs)) {
 
-      // recurse if doc is a `Liturgy` (and therefore contains other, nested docs), 
-      if(doc.type == 'liturgy' && doc.value?.length > 0) {
+      // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
+      if((doc.type == 'liturgy' || doc.type == 'option')&& doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
           .value
           .map(child => this.compile(child, day, prefs)));
@@ -80,7 +80,9 @@ export class PrayService {
   
     switch(doc.lookup.type) {
       case 'lectionary':
-        return this.lookupByLectionary(doc, day, prefs);
+        return doc.type == 'psalm'
+          ? this.lookupPsalter(doc, day, prefs)
+          : this.lookupLectionaryReadings(doc, day, prefs);
       case 'canticle-table':
         break;
       case 'category':
@@ -127,7 +129,6 @@ export class PrayService {
     return docs?.length > 1
       // if multiple LiturgicalDocuments returned, return an Option made up of them
       ? new Option({
-        ... docs[0],
         'type': 'option',
         metadata: { selected: 0 },
         value: docs
@@ -148,26 +149,45 @@ export class PrayService {
     );
   }
 
-  lookupByLectionary(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
-    // `lookup.table` is of type string | { preference: string }
-    // if it's a { preference: string } Object, look that up in the preferences
-    const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
-          // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
-          version : string = doc.version || prefs['bibleVersion'] || 'NRSV';
+  lookupLectionaryReadings(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+    // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
+    const version : string = doc.version || prefs['bibleVersion'] || 'NRSV';
 
-    //return this.docsToDocOrOption(
-    return this.lectionaryService.getReadings(lectionary, doc.lookup.item.toString(), day).pipe(
-        map(entries => (entries || []).map(entry => (new LiturgicalDocument({
-          ... doc,
-          citation : entry.citation,
-          version,
-          language : doc.language || 'en',
-          label: entry.citation
-        })))),
-        // TODO -- load Bible reading
-        map(docs => docs ?? doc[0]),
-        map(docs => this.docsToOption(docs))
-      )
-    //);
+    return this.findReadings(doc, day, prefs).pipe(
+      map(entries => (entries || []).map(entry => (new LiturgicalDocument({
+        ... doc,
+        citation : entry.citation,
+        version,
+        language : doc.language || 'en',
+        label: entry.citation
+      })))),
+      map(docs => this.docsToOption(docs))
+    );
+  }
+
+  lookupPsalter(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+    // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
+    const version : string = doc.version || prefs['psalterVersion'] || 'bcp1979';
+
+    return this.findReadings(doc, day, prefs).pipe(
+      map(entries => (entries || []).map(entry => (new LiturgicalDocument({
+        ... doc,
+        style: 'psalm',
+        slug : entry.citation,
+        version,
+        language : doc.language || 'en',
+        lookup: { type: 'slug' }
+      })))),
+      // below code would show all psalms for the day as different choices for one option
+      // that's desired behavior for lectionary reading options, but not for psalms, which should all display
+      map(docs => this.docsToOption(docs)),
+      switchMap(option => this.compile(option, day, prefs))
+    )
+  }
+
+  findReadings(doc, day, prefs) : Observable<LectionaryEntry[]> {
+    const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference];
+
+    return this.lectionaryService.getReadings(lectionary, doc.lookup.item.toString(), day);
   }
 }

@@ -50,7 +50,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.revisionSubscription = combineLatest(this.localManager$, this.serverManager$, this.revisions$).subscribe(
       ([localManager, serverManager, revisions]) => this.editorService.applyChanges(localManager, serverManager, revisions));
 
-    // update the document once every 5ms
+    // update the document once every 3s
     this.docSaved$ = this.localManager$.pipe(
       debounceTime(3000),
       tap(localManager => console.log(localManager.document)),

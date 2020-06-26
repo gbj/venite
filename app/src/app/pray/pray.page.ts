@@ -91,7 +91,6 @@ export class PrayPage implements OnInit {
       tap(state => console.log('doc$ state', state)),
       filter(state => state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs')),
       switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs)),
-      tap(compiled => console.log('compiled liturgy = ', compiled))
     );
   }
 
