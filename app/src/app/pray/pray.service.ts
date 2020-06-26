@@ -75,7 +75,7 @@ export class PrayService {
   }
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
-  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument | LiturgicalDocument[]> {
+  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
     const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
   
     switch(doc.lookup.type) {
@@ -105,23 +105,9 @@ export class PrayService {
     }
   }
 
-  /*docsToDocOrOption(docs$ : Observable<LiturgicalDocument[]>, versions : string[] = undefined) : Observable<LiturgicalDocument> {
-    return docs$.pipe(
-      map(docs => versions ? docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version)) : docs),
-      //tap(docs => console.log('docsToDocOrOption', docs)),
-      filter(docs => docs?.length > 1 && docs[0].hasOwnProperty('type')),
-      map(docs => docs?.length > 1 ?
-        // if multiple LiturgicalDocuments returned, return an Option made up of them
-        new Option({
-          ... docs[0],
-          'type': 'option',
-          metadata: { selected: 0 },
-          value: docs
-        }) :
-        // if only one LiturgicalDocument returned, return that document 
-        docs[0])
-    );
-  }*/
+  /* There are two ways to convert a `LiturgicalDocument[]` to a single `LiturgicalDocument`
+   * Either to include them in parallel as multiples choices with an `Option`
+   * Or to convert them to a `Liturgy`, which will display them all serially */
   docsToOption(docs : LiturgicalDocument[], versions : string[] = undefined) : LiturgicalDocument {
     const sorted = versions?.length > 0
       ? docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))
@@ -148,17 +134,23 @@ export class PrayService {
       : docs[0];
   }
 
+  /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
+
+  /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => this.docsToOption(docs, versions))
     );
   }
 
+  /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
   lookupByCategory(category : string[], language : string, versions : string[]) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
       map(docs => this.docsToOption(docs, versions))
     );
   }
+
+  /* Look up readings or psalms by `LiturgicalDay` and chosen lectionary preference */
 
   lookupLectionaryReadings(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
@@ -189,13 +181,13 @@ export class PrayService {
         language : doc.language || 'en',
         lookup: { type: 'slug' }
       })))),
-      // below code would show all psalms for the day as different choices for one option
-      // that's desired behavior for lectionary reading options, but not for psalms, which should all display
+      // these need to be sorted in increasing order
       map(docs => this.docsToLiturgy(docs)),
       switchMap(option => this.compile(option, day, prefs))
     )
   }
 
+  /** Finds lectionary readings, for either Bible readings or psalter */
   findReadings(doc, day, prefs) : Observable<LectionaryEntry[]> {
     const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference];
 
