@@ -75,7 +75,7 @@ export class PrayService {
   }
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
-  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
+  lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument | LiturgicalDocument[]> {
     const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
   
     switch(doc.lookup.type) {
@@ -122,18 +122,29 @@ export class PrayService {
         docs[0])
     );
   }*/
-  docsToOption(docs : LiturgicalDocument[], versions : string[] = undefined) {
+  docsToOption(docs : LiturgicalDocument[], versions : string[] = undefined) : LiturgicalDocument {
     const sorted = versions?.length > 0
       ? docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))
       : docs;
     return docs?.length > 1
-      // if multiple LiturgicalDocuments returned, return an Option made up of them
+      // if multiple LiturgicalDocuments given, return an Option made up of them
       ? new Option({
         'type': 'option',
         metadata: { selected: 0 },
         value: docs
       })
-      // if only one LiturgicalDocument returned, return that document 
+      // if only one LiturgicalDocument given, return that document 
+      : docs[0];
+  }
+
+  docsToLiturgy(docs : LiturgicalDocument[]) : LiturgicalDocument {
+    return docs?.length > 1
+      // if multiple LiturgicalDocuments given, return a Liturgy made up of them
+      ? new Liturgy({
+        'type': 'liturgy',
+        value: docs
+      })
+      // if only one LiturgicalDocument given, return that document 
       : docs[0];
   }
 
@@ -180,7 +191,7 @@ export class PrayService {
       })))),
       // below code would show all psalms for the day as different choices for one option
       // that's desired behavior for lectionary reading options, but not for psalms, which should all display
-      map(docs => this.docsToOption(docs)),
+      map(docs => this.docsToLiturgy(docs)),
       switchMap(option => this.compile(option, day, prefs))
     )
   }
