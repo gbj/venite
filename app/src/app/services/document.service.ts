@@ -42,8 +42,8 @@ export class DocumentService {
   getLiturgyOptions(language : string, version : string) : Observable<Liturgy[]> {
     return this.afs.collection<Liturgy>('Document', ref => 
       ref.where('type', '==', 'liturgy')
-         //.where('language', '==', language)
-         //.where('version', '==', version)
+         .where('language', '==', language)
+         .where('version', '==', version)
          .where('sharing.organization', '==', 'venite')
          .where('sharing.status', '==', 'published')
          .where('sharing.privacy', '==', 'public')
@@ -69,11 +69,14 @@ export class DocumentService {
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('category', 'array-contains-any', category)
          .where('language', '==', language)
-         .where('version', 'in', versions)
          .where('sharing.organization', '==', 'venite')
          .where('sharing.status', '==', 'published')
          .where('sharing.privacy', '==', 'public')
-    ).valueChanges();
+    ).valueChanges().pipe(
+      // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
+      map(docs => docs.filter(doc => !doc.version || versions.includes(doc.version)))
+      // TODO -- filter on season etc. depending on `lookup` field
+    );
   }
 
   findDocuments() : Observable<IdAndDoc[]> {

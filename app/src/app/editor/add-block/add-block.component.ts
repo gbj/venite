@@ -49,34 +49,37 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   completeOption(addition : MenuOption) : Observable<LiturgicalDocument[]> {
     // store the `MenuOption` we're passed in case we need to access it in a callback from one of the forms below
     this.addition = addition;
-
-    // types like Psalm, Canticle, and Lectionary Readings need another component to be completed
-    switch(addition.needsMoreInfo) {
-      case 'psalm':
-        this.additionalMode = 'psalm';
-        this.additionalVersions = this.documentService.getVersions(this.language, 'psalm')
-        this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'psalm' }).pipe(
-          map(psalms => psalms.map(psalm => new LiturgicalDocument({ ... psalm, value: undefined })))
-        );
-        return this.complete;
-      case 'lectionary':
-        this.additionalMode = 'lectionary';
-        this.additionalVersions = this.documentService.getVersions(this.language, 'lectionary');
-        this.additionalReadingNames = this.documentService.getVersions(this.language, 'readings');
-        return this.complete;
-      case 'canticle':
-        this.additionalMode = 'canticle';
-        this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
-        this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'canticle' }).pipe(
-          map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
-        );
-        return this.complete;
-      case 'hymn':
-        //TODO
-        return this.complete;
-      // otherwise, it's already complete and we can return the original
-      default:
-        return of(addition.template);
+    if(addition) {
+      // types like Psalm, Canticle, and Lectionary Readings need another component to be completed
+      switch(addition.needsMoreInfo) {
+        case 'psalm':
+          this.additionalMode = 'psalm';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'psalm')
+          this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'psalm' }).pipe(
+            map(psalms => psalms.map(psalm => new LiturgicalDocument({ ... psalm, value: undefined })))
+          );
+          return this.complete;
+        case 'lectionary':
+          this.additionalMode = 'lectionary';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'lectionary');
+          this.additionalReadingNames = this.documentService.getVersions(this.language, 'readings');
+          return this.complete;
+        case 'canticle':
+          this.additionalMode = 'canticle';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
+          this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'canticle' }).pipe(
+            map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
+          );
+          return this.complete;
+        case 'hymn':
+          //TODO
+          return this.complete;
+        // otherwise, it's already complete and we can return the original
+        default:
+          return of(addition.template);
+      }
+    } else {
+      this.modal.dismiss(null);
     }
   }
 

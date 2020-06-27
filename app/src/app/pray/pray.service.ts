@@ -76,7 +76,7 @@ export class PrayService {
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
   lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
-    const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version ];
+    const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version || 'bcp1979' ];
   
     switch(doc.lookup.type) {
       case 'lectionary':
@@ -87,7 +87,7 @@ export class PrayService {
         break;
       case 'category':
         return this.lookupByCategory(
-          doc.category,
+          doc.category || new Array(),
           doc.language,
           versions
         );
@@ -146,6 +146,7 @@ export class PrayService {
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
   lookupByCategory(category : string[], language : string, versions : string[]) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
+      // TODO -- filter based on `lookup.filter` map(docs => docs.filter(doc => doc...)),
       map(docs => this.docsToOption(docs, versions))
     );
   }
