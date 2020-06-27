@@ -12,7 +12,7 @@ export function venite1toLDF(old : any, type: string) : LiturgicalDocument | und
     case 'reading':
       return readingToLDF(old);
     default:
-      return new LiturgicalDocument();
+      return prayerToLDF(old);
   }
 }
 
