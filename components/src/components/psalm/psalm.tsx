@@ -82,7 +82,7 @@ export class PsalmComponent {
     const heading = new Heading({
       type: 'heading',
       metadata: { level },
-      citation: this.obj.citation,
+      citation: this.obj.source?.citation || this.obj.citation,
       value: [value ?? label]
     })
     return (
@@ -99,7 +99,7 @@ export class PsalmComponent {
     // create blank psalm verse pattern
     let pattern;
     if(this.editable) {
-      const pattern = (this.obj?.value.flat().filter(child => child.type == 'psalm-verse')[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' }) as PsalmVerse;
+      const pattern : PsalmVerse = (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' });
       if(pattern.number) {
         pattern.number = '';
       }
