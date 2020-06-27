@@ -5,12 +5,14 @@ import { User } from 'firebase/app';
 import { BehaviorSubject, Observable, Subject, combineLatest } from 'rxjs';
 import { map, tap, switchMap } from 'rxjs/operators';
 
-import { HolyDay, Kalendar, LiturgicalDocument, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD, Liturgy } from '@venite/ldf';
+import { HolyDay, Kalendar, LiturgicalDocument, LiturgicalDay, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, ClientPreferences, liturgicalWeek, liturgicalDay, addOneDay, dateToYMD, Liturgy, Preference } from '@venite/ldf';
 
 import { AuthService } from '../auth/auth.service';
 import { CalendarService } from '../services/calendar.service';
 import { DocumentService } from '../services/document.service';
 import { PreferencesService } from '../preferences/preferences.service';
+import { LectionaryService } from '../services/lectionary.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'venite-home',
@@ -19,7 +21,7 @@ import { PreferencesService } from '../preferences/preferences.service';
 })
 export class HomePage implements OnInit {
   // The data the Pray button needs
-  prayData : Observable<[User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences]>;
+  prayData : Observable<[User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, string[]]>;
 
   // The `LiturgicalDay` that has currently been selected, without any holy day information
   liturgicalDay : Observable<LiturgicalDay>;
@@ -34,6 +36,9 @@ export class HomePage implements OnInit {
   sanctoral : BehaviorSubject<string> = new BehaviorSubject('bcp1979');  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
   week : Observable<LiturgicalWeek[]>;
+
+  // Readings available for the selected day
+  availableReadings$ : Observable<string[]>;
 
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
@@ -54,7 +59,9 @@ export class HomePage implements OnInit {
     public calendarService : CalendarService,
     public documentService : DocumentService,
     private preferencesService : PreferencesService,
-    private router : Router
+    private lectionary : LectionaryService,
+    private router : Router,
+    private alert : AlertController
   ) {}
 
   // Lifecycle events
@@ -73,8 +80,17 @@ export class HomePage implements OnInit {
     this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy as Observable<Liturgy>, this.week, this.vigil)
       .pipe(tap(day => console.log('day = ', day)));
 
+    // Check readings
+    this.availableReadings$ = combineLatest(this.liturgicalDay, this.clientPreferences).pipe(
+      switchMap(([day, prefs]) => this.lectionary.getReadings(
+        day,
+        prefs['lectionary']
+      )),
+      map(entries => entries.map(entry => entry.type))
+    )
+
     // Pray button data
-    this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences);
+    this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences, this.availableReadings$);
   }
 
   // ionViewWillEnter -- each time we return to this page, check last time we prayed and reset menu if necessary
@@ -85,10 +101,82 @@ export class HomePage implements OnInit {
     this.hasStartedNavigating = false;
   }
 
-  pray([user, liturgy, properLiturgy, day, prefs]) {
+  pray([user, liturgy, properLiturgy, day, prefs, availableReadings]) {
     // update preferences
     this.savePreferences(user ? user.uid : undefined, prefs, liturgy);
-    this.navigate('/pray', liturgy, day, prefs)
+
+    // check to see if all selected readings are available; if not, notify the user
+    const allReadingsAvailable = this.areReadingsAvailable(liturgy, prefs, availableReadings);
+    if(!allReadingsAvailable) {
+      this.readingsNotAvailableAlert(liturgy, day, prefs, availableReadings);
+    } else {
+      // navigate to the Pray page
+      this.navigate('/pray', liturgy, day, prefs);
+    }
+  }
+
+  areReadingsAvailable(liturgy : Liturgy, prefs : ClientPreferences, availableReadings : string[]) : boolean {
+    const readingPrefKeys = Object.keys(liturgy.metadata?.preferences || {}).filter(p => ['readingA', 'readingB', 'readingC'].includes(p));
+    let allReadingsAvailable : boolean = true;
+    if(readingPrefKeys && readingPrefKeys.length > 0) {
+      allReadingsAvailable = readingPrefKeys
+       .filter(key => prefs[key].toLowerCase() !== 'none')
+       .map(key => availableReadings.includes(prefs[key]))
+       .reduce((a, b) => a && b);
+    }
+    return allReadingsAvailable;
+  }
+
+  async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences, availableReadings : string[]) {
+    const holy_day_readings = availableReadings.filter(reading => reading.match(/holy_day/));
+
+    if(holy_day_readings?.length > 0) {
+      const evening : boolean = liturgy.metadata?.evening,
+            readingA : string = evening ? 'holy_day_evening_1' : 'holy_day_morning_1',
+            readingB : string = evening ? 'holy_day_evening_2' : 'holy_day_morning_2';
+
+      const modifiedPrefs = {
+        ... prefs,
+        'readingA': readingA,
+        'readingB': readingB,
+        'readingC': 'none'
+      };
+
+      const alert = await this.alert.create({
+        header: 'Note: Holy Day Lectionary',
+        message: `Holy Days have their own lectionary cycle, with two morning readings and two evening readings. We’ll load those automatically instead of the preferences you’ve listed below.`,
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          }, {
+            text: 'Continue',
+            handler: () => this.navigate('/pray', liturgy, day, modifiedPrefs)
+          }
+        ]
+      });
+
+      await alert.present();
+    } else {
+      const a : string[] = availableReadings.filter(r => r && r !== ''),
+            availableList : string = `${a.slice(0, -1).join(',')} or ${a.slice(-1)}`;
+
+      const alert = await this.alert.create({
+        header: 'Warning',
+        message: `Not all the readings you’ve selected are available for that day. ${availableList} are available.`,
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          }, {
+            text: 'Continue',
+            handler: () => this.navigate('/pray', liturgy, day, prefs)
+          }
+        ]
+      });
+
+      await alert.present();
+    }
   }
 
   savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDocument) {
@@ -109,9 +197,41 @@ export class HomePage implements OnInit {
             liturgy?.version || 'Rite-II',
             day?.kalendar,
             y, m, d,
-            liturgy?.slug
+            liturgy?.slug,
           ];
-    console.log('commands = ', commands);
+    const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
+    // if any prefs have changed, add them to URL params
+    if(Object.keys(nonDefaultPrefs).length > 0) { // || this.data.isVigil) {
+      commands.push(JSON.stringify(nonDefaultPrefs));
+    }
+    // TODO -- push vigil info as well
+
     this.router.navigate(commands, { state: { liturgy, day, prefs } });
+  }
+
+  nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreferences {
+    const uniquePrefKeys : string[] = Object.keys(liturgy.metadata?.preferences || {})
+        .concat(Object.keys(liturgy.metadata?.special_preferences || {}))
+        .concat(Object.keys(prefs || {}))
+        .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], []);
+    
+    const nonDefaultPrefs = {};
+    
+    for(let key of uniquePrefKeys) {
+      const liturgyPref = new Preference(liturgy.metadata?.preferences[key]),
+          clientPrefValue = prefs[key];
+      let defaultPrefValue : string;
+      try {
+        defaultPrefValue = liturgyPref.getDefaultPref();
+      } catch(e) {
+        console.warn(e);
+      }
+          
+      if(clientPrefValue !== defaultPrefValue) {
+        nonDefaultPrefs[key] = clientPrefValue;
+      }
+    }
+
+    return nonDefaultPrefs;
   }
 }

@@ -187,6 +187,7 @@ export class PrayService {
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs)),
       // sort the psalms by number in increasing order
+      tap(liturgy => console.log('about to sort on', liturgy)),
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
         value: liturgy.value.sort((a, b) => a.metadata?.number - b.metadata?.number)
@@ -196,8 +197,9 @@ export class PrayService {
 
   /** Finds lectionary readings, for either Bible readings or psalter */
   findReadings(doc, day, prefs) : Observable<LectionaryEntry[]> {
-    const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference];
+    const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
+          reading : string = typeof doc.lookup.item === 'string' || doc.lookup.item === 'number' ? doc.lookup.item.toString() : prefs[doc.lookup.item.preference];
 
-    return this.lectionaryService.getReadings(lectionary, doc.lookup.item.toString(), day);
+    return this.lectionaryService.getReadings(day, lectionary, reading);
   }
 }

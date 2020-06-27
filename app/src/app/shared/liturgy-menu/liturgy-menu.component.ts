@@ -99,11 +99,11 @@ export class LiturgyMenuComponent implements OnInit {
   liturgyOfTheHour(now : Date) : string {
     let hour : number = now.getHours();
     if(hour > 3 && hour < 11) {
-      return "morning_prayer"
+      return "morning-prayer"
     } else if(hour >= 11 && hour <= 14) {
-      return "noonday_prayer"
+      return "noonday-prayer"
     } else if(hour >= 14 && hour <= 20) {
-      return "evening_prayer"
+      return "evening-prayer"
     } else {
       return "compline"
     }

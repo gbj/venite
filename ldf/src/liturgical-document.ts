@@ -119,7 +119,7 @@ export class LiturgicalDocument {
   lookup?: {
     type: LookupTypeTuple[number];
     table?: string | { preference: string; };
-    item?: string | number;
+    item?: string | number | { preference: string; };
   };
 
   /** The content of the document. */

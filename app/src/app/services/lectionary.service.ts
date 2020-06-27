@@ -12,7 +12,7 @@ export class LectionaryService {
     private readonly afs : AngularFirestore
     ) { }
 
-  getReadings(lectionaryName : string, readingType : string, day : LiturgicalDay) : Observable<LectionaryEntry[]> {
+  getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined) : Observable<LectionaryEntry[]> {
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl') {
       return this.rcl(dateFromYMDString(day.date));
@@ -20,14 +20,25 @@ export class LectionaryService {
     // search for other readings in our DB
     else {
       const { when, whentype, includeDay } = this.when(lectionaryName, day);
-      console.log('search for readings on ', day.propers || day.slug, 'when lectionary = ', lectionaryName, 'type = ', readingType, 'when = ', when, 'whentype = ', whentype);
+      console.log('when = ', when, whentype, includeDay);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        const allDaysRef = ref.where('lectionary', '==', lectionaryName)
-          .where('type', '==', readingType)
-          .where('when', '==', when)
-          .where('whentype', '==', whentype);
-        return includeDay ? allDaysRef.where('day', '==', day.propers || day.slug) : allDaysRef;
+        let query : firebase.firestore.Query = ref.where('when', '==', when)
+                                                  .where('whentype', '==', whentype);
+
+        if(lectionaryName !== undefined) {
+          query = query.where('lectionary', '==', lectionaryName);
+        }
+        
+        if(readingType !== undefined) {
+          query = query.where('type', '==', readingType);
+        }
+
+        if(includeDay !== false) {
+          query = query.where('day', '==', day.propers || day.slug)
+        }
+
+        return query;
       }).valueChanges();
     }
   }
@@ -39,6 +50,7 @@ export class LectionaryService {
       case 'bcp1979_daily_office':
       case 'bcp1979_daily_psalms':
       default:
+        console.log(day);
         return ({ whentype: 'year', when: day.years['bcp1979_daily_office'].toString(), includeDay: true });
     }
   }

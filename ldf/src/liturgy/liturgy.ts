@@ -6,7 +6,12 @@ export class Liturgy extends LiturgicalDocument {
   type: 'liturgy';
 
   metadata: {
-    /** `Preferences` instance that a liturgy can access while being compiled */
+    /** `Preferences` instance that a liturgy can access while being compiled; some are hard-coded keywords
+     * @example `lectionary` refers to a lectionary for readings
+     * @example `bibleVersion` is a preferred Bible translation
+     * @example `psalterVersion` is a preferred translation of the Psalms
+     * @example `readingA`, `readingB`, `readingC` are the readings to be used in the service
+     */
     preferences: {
       [x: string]: Preference;
     };
