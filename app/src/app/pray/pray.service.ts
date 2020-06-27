@@ -181,9 +181,16 @@ export class PrayService {
         language : doc.language || 'en',
         lookup: { type: 'slug' }
       })))),
-      // these need to be sorted in increasing order
+      // pack these into a `Liturgy` object
       map(docs => this.docsToLiturgy(docs)),
-      switchMap(option => this.compile(option, day, prefs))
+      // compile that `Liturgy` object, which will look up each of its `value` children
+      // (i.e., each psalm) by its slug
+      switchMap(option => this.compile(option, day, prefs)),
+      // sort the psalms by number in increasing order
+      map(liturgy => new LiturgicalDocument({
+        ... liturgy,
+        value: liturgy.value.sort((a, b) => a.metadata?.number - b.metadata?.number)
+      }))
     )
   }
 
