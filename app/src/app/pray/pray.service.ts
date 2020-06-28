@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, Psalm, BibleReading } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, Psalm, BibleReading, dateFromYMDString } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
@@ -89,7 +89,10 @@ export class PrayService {
         return this.lookupByCategory(
           doc.category || new Array(),
           doc.language,
-          versions
+          versions,
+          day,
+          doc.lookup.filter,
+          doc.lookup.rotate
         );
 
       /* for lookup's of the `slug` type, return an Observable of either
@@ -100,7 +103,10 @@ export class PrayService {
         return this.lookupBySlug(
           doc.slug,
           doc.language,
-          versions
+          versions,
+          day,
+          doc.lookup.filter,
+          doc.lookup.rotate
         );
     }
   }
@@ -108,8 +114,9 @@ export class PrayService {
   /* There are two ways to convert a `LiturgicalDocument[]` to a single `LiturgicalDocument`
    * Either to include them in parallel as multiples choices with an `Option`
    * Or to convert them to a `Liturgy`, which will display them all serially */
-  docsToOption(docs : LiturgicalDocument[], versions : string[] = undefined) : LiturgicalDocument {
-    const sorted = versions?.length > 0
+  docsToOption(docs : LiturgicalDocument[] | LiturgicalDocument, versions : string[] = undefined) : LiturgicalDocument {
+    if(Array.isArray(docs)) {
+      const sorted = versions?.length > 0
       ? docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))
       : docs;
     return docs?.length > 1
@@ -121,6 +128,9 @@ export class PrayService {
       })
       // if only one LiturgicalDocument given, return that document 
       : docs[0];
+    } else {
+      return docs;
+    }
   }
 
   docsToLiturgy(docs : LiturgicalDocument[]) : LiturgicalDocument {
@@ -137,18 +147,46 @@ export class PrayService {
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupBySlug(slug : string, language : string, versions : string[]) : Observable<LiturgicalDocument> {
+  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
+      map(docs => this.filter(filterType, day, docs)),
+      map(docs => this.rotate(rotate, day, docs)),
       map(docs => this.docsToOption(docs, versions))
     );
   }
 
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupByCategory(category : string[], language : string, versions : string[]) : Observable<LiturgicalDocument> {
+  lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
-      // TODO -- filter based on `lookup.filter` map(docs => docs.filter(doc => doc...)),
-      map(docs => this.docsToOption(docs, versions))
+      map(docs => this.filter(filterType, day, docs)),
+      map(docs => this.rotate(rotate, day, docs)),
+      map(docs => this.docsToOption(docs, versions)),
     );
+  }
+
+  /** Filters documents depending on whether `doc.category` includes the appropriate `LiturgicalDay.season`, 'Evening', or `LiturgicalDay.slug` */
+  filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
+    switch(filterType) {
+      case 'seasonal':
+        return docs.filter(doc => doc.category?.includes(day.season));
+      case 'evening':
+        return docs.filter(doc => doc.category?.includes('Evening'));
+      case 'day':
+        return docs.filter(doc => doc.category?.includes(day.slug) || doc.category?.includes(day.propers));
+      default:
+        return docs;
+    }
+  }
+
+  /** If `rotate` is `true`, return one of the docs, rotated through by day; if `false`, return them all */
+  rotate(rotate : boolean, day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument | LiturgicalDocument[] {
+    if(rotate) {
+      const date = dateFromYMDString(day.date),
+            diffFromZero = Math.round((date.getTime()-(new Date(0)).getTime())/(1000*60*60*24));
+      return docs[diffFromZero % docs.length];
+    } else {
+      return docs;
+    }
   }
 
   /* Look up readings or psalms by `LiturgicalDay` and chosen lectionary preference */

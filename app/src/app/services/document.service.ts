@@ -75,7 +75,6 @@ export class DocumentService {
     ).valueChanges().pipe(
       // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
       map(docs => docs.filter(doc => !doc.version || versions.includes(doc.version)))
-      // TODO -- filter on season etc. depending on `lookup` field
     );
   }
 

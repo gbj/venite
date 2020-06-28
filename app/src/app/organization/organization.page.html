@@ -24,7 +24,7 @@
             <ion-button *ngIf="role == 'owner'" disabled><ion-label>{{ 'organization.owner' | translate }}</ion-label></ion-button>
             <ion-button *ngIf="role == 'editor'" disabled><ion-label>{{ 'organization.editor' | translate }}</ion-label></ion-button>
             <ion-button *ngIf="role == 'member' && auth.user | async as user" (click)="leave(user, orgId)">
-              <ion-icon slot="start" name="person-remove" (click)="leave(user)"></ion-icon>
+              <ion-icon slot="start" name="person-remove"></ion-icon>
               <ion-label>{{ 'organization.member-leave' | translate }}</ion-label>
             </ion-button>
             <ion-button *ngIf="role == 'none' && auth.user | async as user" (click)="join(user, orgId)" fill="outline">
