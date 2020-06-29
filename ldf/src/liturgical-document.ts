@@ -19,9 +19,6 @@ export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
   id?: number;
 
-  /** Array of changes to arrive at this document state. Important to collaborative editing. */
-  revision_log? : Change[];
-
   /** Indicates the type of document */
   type: TypeTuple[number];
 
@@ -39,10 +36,13 @@ export class LiturgicalDocument {
 
   /** The URL (as a string) for the API that provided the document, or against which it can be compiled.
    */
-  api: string;
+  api?: string;
 
   /** Permissions for this document: whether it's public, shared with particular individuals, etc. */
   sharing?: Sharing;
+
+  /** Version number of the document */
+  lastRevision: number;
 
   /** An identifying slug. Given the `slug`, the API should be able to identify this document.
    * @example
