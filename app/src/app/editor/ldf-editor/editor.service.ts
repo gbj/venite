@@ -37,6 +37,7 @@ export class EditorService {
 
         const localManager = new LocalDocumentManager(docId);
         localManager.document = doc;
+        localManager.lastSyncedRevision = doc.lastRevision || 0;
         this._localManagers[docId] = new BehaviorSubject(localManager);
       }),
       map(([exists, doc, user]) => [exists, doc, this.userFromUser(user)]),
