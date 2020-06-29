@@ -15,7 +15,7 @@
 
 ▸ **isEmpty**(`isSunday`: boolean, `special`: [HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined, `feast`: [HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined): *boolean*
 
-*Defined in [calendar/utils/transferred-feast.ts:104](https://github.com/gbj/venite/blob/d9ef528/ldf/src/calendar/utils/transferred-feast.ts#L104)*
+*Defined in [calendar/utils/transferred-feast.ts:104](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/transferred-feast.ts#L104)*
 
 **Parameters:**
 
@@ -33,7 +33,7 @@ ___
 
 ▸ **transferredFeast**(`liturgicalDayFinder`: function, `specialDayFinder`: function, `feastDayFinder`: function, `todayDate`: Date, `acc`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)[], `openDays`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)[], `originalDay`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md) | undefined): *[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined*
 
-*Defined in [calendar/utils/transferred-feast.ts:6](https://github.com/gbj/venite/blob/d9ef528/ldf/src/calendar/utils/transferred-feast.ts#L6)*
+*Defined in [calendar/utils/transferred-feast.ts:6](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/transferred-feast.ts#L6)*
 
 **Parameters:**
 

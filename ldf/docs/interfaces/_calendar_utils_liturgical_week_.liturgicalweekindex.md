@@ -20,7 +20,7 @@
 
 • **cycle**: *"Advent" | "Christmas" | "Epiphany" | "Easter"*
 
-*Defined in [calendar/utils/liturgical-week.ts:11](https://github.com/gbj/venite/blob/d9ef528/ldf/src/calendar/utils/liturgical-week.ts#L11)*
+*Defined in [calendar/utils/liturgical-week.ts:11](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L11)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **proper**? : *undefined | number*
 
-*Defined in [calendar/utils/liturgical-week.ts:13](https://github.com/gbj/venite/blob/d9ef528/ldf/src/calendar/utils/liturgical-week.ts#L13)*
+*Defined in [calendar/utils/liturgical-week.ts:13](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L13)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **week**: *number*
 
-*Defined in [calendar/utils/liturgical-week.ts:12](https://github.com/gbj/venite/blob/d9ef528/ldf/src/calendar/utils/liturgical-week.ts#L12)*
+*Defined in [calendar/utils/liturgical-week.ts:12](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L12)*
