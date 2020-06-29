@@ -27,7 +27,7 @@
 
 • **ONE_WEEK**: *number* = 7*24*60*60*1000
 
-*Defined in [calendar/utils/liturgical-week.ts:8](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L8)*
+*Defined in [calendar/utils/liturgical-week.ts:8](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L8)*
 
 ## Functions
 
@@ -35,7 +35,7 @@
 
 ▸ **calculateProper**(`date`: Date): *number | undefined*
 
-*Defined in [calendar/utils/liturgical-week.ts:48](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L48)*
+*Defined in [calendar/utils/liturgical-week.ts:48](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L48)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ ___
 
 ▸ **christmasCycleWeek**(`d`: Date): *[LiturgicalWeekIndex](../interfaces/_calendar_utils_liturgical_week_.liturgicalweekindex.md)*
 
-*Defined in [calendar/utils/liturgical-week.ts:71](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L71)*
+*Defined in [calendar/utils/liturgical-week.ts:71](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L71)*
 
 **Parameters:**
 
@@ -67,7 +67,7 @@ ___
 
 ▸ **closerThan**(`date`: Date, `mmdd1`: string, `mmdd2`: string): *boolean*
 
-*Defined in [calendar/utils/liturgical-week.ts:60](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L60)*
+*Defined in [calendar/utils/liturgical-week.ts:60](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L60)*
 
 **Parameters:**
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **easterCycleWeek**(`date`: Date): *[LiturgicalWeekIndex](../interfaces/_calendar_utils_liturgical_week_.liturgicalweekindex.md)*
 
-*Defined in [calendar/utils/liturgical-week.ts:34](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L34)*
+*Defined in [calendar/utils/liturgical-week.ts:34](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L34)*
 
 **Parameters:**
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **liturgicalWeek**(`d`: Date): *[LiturgicalWeekIndex](../interfaces/_calendar_utils_liturgical_week_.liturgicalweekindex.md)*
 
-*Defined in [calendar/utils/liturgical-week.ts:17](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L17)*
+*Defined in [calendar/utils/liturgical-week.ts:17](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L17)*
 
 Returns the cycle and week offset that a given `Date` falls in
 
@@ -119,7 +119,7 @@ ___
 
 ▸ **weeksFromEaster**(`date`: Date): *number*
 
-*Defined in [calendar/utils/liturgical-week.ts:44](https://github.com/gbj/venite/blob/87a9139/ldf/src/calendar/utils/liturgical-week.ts#L44)*
+*Defined in [calendar/utils/liturgical-week.ts:44](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/liturgical-week.ts#L44)*
 
 **Parameters:**
 

@@ -11,6 +11,7 @@ export class Liturgy extends LiturgicalDocument {
      * @example `bibleVersion` is a preferred Bible translation
      * @example `psalterVersion` is a preferred translation of the Psalms
      * @example `readingA`, `readingB`, `readingC` are the readings to be used in the service
+     * @example `canticleTable` is a cycle of canticles to be used in the service
      */
     preferences: {
       [x: string]: Preference;

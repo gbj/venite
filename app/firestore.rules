@@ -94,5 +94,10 @@ service cloud.firestore {
       allow read: if true;
       allow create, update, delete: if false;
     }
+
+    match /CanticleTable/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
   }
 }

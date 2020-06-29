@@ -87,39 +87,26 @@ export class EditableAddBlockMenuComponent {
 
     return (
       <Host>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>{ localeStrings.title }</ion-title>
-            <ion-buttons slot="primary">
-              {/*<ion-button onClick={() => this.modal.dismiss(null)}>*/}
-              <ion-button onClick={() => this.ldfShouldAddBlock.emit(null)}>
-                <ion-icon slot="icon-only" name="close"></ion-icon>
-              </ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-          <ion-toolbar>
-            <ion-searchbar slot="end"></ion-searchbar>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          {sections.map(section =>
-            <ion-card class='ion-padding'>
-              <ion-card-header>
-                <ion-card-subtitle>{localeStrings[section] || section}</ion-card-subtitle>
-              </ion-card-header>
-              <ul>
-              {this.menu.filter(item => item.section.includes(section) && !item.hidden).map(item =>
-                <li>
-                  <button onClick={() => this.add(item)} class='block'>
-                    { (item.icon)() }
-                    <label>{ localeStrings[item.label] }</label>
-                  </button>
-                </li>
-              )}
-              </ul>
-            </ion-card>
-          )}
-        </ion-content>
+        <ion-toolbar>
+          <ion-searchbar slot="end"></ion-searchbar>
+        </ion-toolbar>
+        {sections.map(section =>
+          <ion-card class='ion-padding'>
+            <ion-card-header>
+              <ion-card-subtitle>{localeStrings[section] || section}</ion-card-subtitle>
+            </ion-card-header>
+            <ul>
+            {this.menu.filter(item => item.section.includes(section) && !item.hidden).map(item =>
+              <li>
+                <button onClick={() => this.add(item)} class='block'>
+                  { (item.icon)() }
+                  <label>{ localeStrings[item.label] }</label>
+                </button>
+              </li>
+            )}
+            </ul>
+          </ion-card>
+        )}
       </Host>
     )
   }

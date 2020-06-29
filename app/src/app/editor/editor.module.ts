@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,12 +15,14 @@ import { LdfEditorComponent } from './ldf-editor/ldf-editor.component';
 import { CreateDocumentButtonComponent } from './create-document-button/create-document-button.component';
 import { AddBlockComponent } from './add-block/add-block.component';
 import { LectionarySelectComponent } from './lectionary-select/lectionary-select.component';
+import { CanticleSelectComponent } from './canticle-select/canticle-select.component';
 
 @NgModule({
   imports: [
     AuthModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     EditorPageRoutingModule,
     TranslateModule
@@ -30,7 +32,8 @@ import { LectionarySelectComponent } from './lectionary-select/lectionary-select
     LdfEditorComponent,
     CreateDocumentButtonComponent,
     AddBlockComponent,
-    LectionarySelectComponent
+    LectionarySelectComponent,
+    CanticleSelectComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

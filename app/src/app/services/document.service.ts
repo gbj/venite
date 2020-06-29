@@ -56,15 +56,18 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
-    return this.afs.collection<LiturgicalDocument>('Document', ref =>
-      ref.where('slug', '==', slug)
-         .where('language', '==', language)
-         .where('version', 'in', versions)
-         .where('sharing.organization', '==', 'venite')
-         .where('sharing.status', '==', 'published')
-         .where('sharing.privacy', '==', 'public')
-    ).valueChanges();
+  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref => {
+      let query = ref.where('slug', '==', slug)
+                     .where('language', '==', language)
+                     .where('sharing.organization', '==', 'venite')
+                     .where('sharing.status', '==', 'published')
+                     .where('sharing.privacy', '==', 'public');
+      if(versions?.length > 0) {
+        query = query.where('version', 'in', versions);
+      }
+      return query;
+    }).valueChanges();
   }
 
   findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {

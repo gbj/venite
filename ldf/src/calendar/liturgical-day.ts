@@ -182,6 +182,11 @@ export class LiturgicalDay {
     return { ... sorted[0].obj};
   }
 
+  // whether this day is ranked as a Major Feast
+  isFeast() : boolean {
+    return (this.holy_day_observed?.type?.rank || 1) >= 3;
+  }
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<LiturgicalDay> = {}) {
     Object.assign(this, data);

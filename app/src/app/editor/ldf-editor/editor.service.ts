@@ -162,6 +162,7 @@ export class EditorService {
   
         // apply the change to this document
         console.log(manager.document, change.op);
+        //@ts-ignore
         manager.document = json1.type.apply(manager.document, change.op);
         manager.lastSyncedRevision = change.lastRevision;
   

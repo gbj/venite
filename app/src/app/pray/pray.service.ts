@@ -5,6 +5,7 @@ import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
 import { map, switchMap, startWith, tap, filter } from 'rxjs/operators';
 import { LectionaryService } from '../services/lectionary.service';
+import { CanticleTableService, CanticleTableEntry } from './canticle-table.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ export class PrayService {
 
   constructor(
     private documents : DocumentService,
-    private lectionaryService : LectionaryService
+    private lectionaryService : LectionaryService,
+    private canticleTableService : CanticleTableService
   ) { }
 
   /** Returns the complete and filtered form for a doc within a particular liturgical context
@@ -76,7 +78,9 @@ export class PrayService {
 
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
   lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
-    const versions = alternateVersions?.length > 0 ? [ doc.version || 'bcp1979', ... alternateVersions ] : [ doc.version || 'bcp1979' ];
+    const language = doc.language || 'en',
+          versions = (alternateVersions?.length > 0 ? [ doc.version , ... alternateVersions ] : [ doc.version ])
+                        .filter(version => version !== undefined);
   
     switch(doc.lookup.type) {
       case 'lectionary':
@@ -84,11 +88,18 @@ export class PrayService {
           ? this.lookupPsalter(doc, day, prefs)
           : this.lookupLectionaryReadings(doc, day, prefs);
       case 'canticle-table':
-        break;
+      case 'canticle':
+        return this.lookupFromCanticleTable(
+          day,
+          versions,
+          prefs,
+          typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
+          Number(doc.lookup.item)
+        );
       case 'category':
         return this.lookupByCategory(
           doc.category || new Array(),
-          doc.language,
+          language,
           versions,
           day,
           doc.lookup.filter,
@@ -100,14 +111,19 @@ export class PrayService {
        * b) an LDF `Option` consisting of all matches */
       case 'slug':
       default:
-        return this.lookupBySlug(
-          doc.slug,
-          doc.language,
-          versions,
-          day,
-          doc.lookup.filter,
-          doc.lookup.rotate
-        );
+        if(doc.slug) {
+          return this.lookupBySlug(
+            doc.slug,
+            language,
+            versions,
+            day,
+            doc.lookup.filter,
+            doc.lookup.rotate
+          );
+        } else {
+          console.warn('the following is not a compilable document\n\n', doc);
+          return of(null);
+        }
     }
   }
 
@@ -148,6 +164,7 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+    console.log('(lookupBySlug)', slug, language, versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, day, docs)),
@@ -189,8 +206,7 @@ export class PrayService {
     }
   }
 
-  /* Look up readings or psalms by `LiturgicalDay` and chosen lectionary preference */
-
+  /* Look up readings and chosen lectionary preference */
   lookupLectionaryReadings(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
     const version : string = doc.version || prefs['bibleVersion'] || 'NRSV';
@@ -207,6 +223,7 @@ export class PrayService {
     );
   }
 
+  /** Look up psalms by by `LiturgicalDay` and chosen lectionary preference */
   lookupPsalter(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
     const version : string = doc.version || prefs['psalterVersion'] || 'bcp1979';
@@ -240,5 +257,86 @@ export class PrayService {
           reading : string = typeof doc.lookup.item === 'string' || doc.lookup.item === 'number' ? doc.lookup.item.toString() : prefs[doc.lookup.item.preference];
 
     return this.lectionaryService.getReadings(day, lectionary, reading);
+  }
+
+  /** Finds the appropriate canticle from a given table for this liturgy */
+  lookupFromCanticleTable(day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string = undefined) : Observable<LiturgicalDocument> {
+
+    return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
+      // grab entry for the appropriate weekday
+      map(entries => this.filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable)),
+      switchMap(entries => entries.map(entry => new LiturgicalDocument(
+        {
+          slug: entry.slug,
+          lookup: {
+            type: 'slug'
+          }
+        }
+      ))),
+      map(docs => this.docsToOption(docs, versions)),
+      switchMap(doc => this.compile(doc, day, prefs))
+    )
+  }
+
+  filterCanticleTableEntries(entries : CanticleTableEntry[], day : LiturgicalDay, whichTable : string, nth : number, fallbackTable : string = undefined) : CanticleTableEntry[] {
+    const isFeast : boolean = day.isFeast(),
+          isEvening : boolean = day.evening,
+          date = dateFromYMDString(day.date),
+          dayOfWeek = date.getDay(),
+          days : string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          weekday : string = isFeast ? 'FeastDay' : days[dayOfWeek];
+    
+    const primaryEntries = fallbackTable ? entries.filter(entry => entry.table == whichTable) : entries,
+          primaryWeekdayEntries = primaryEntries.filter(entry => !entry?.weekday || entry?.weekday == weekday),
+          // if not found, try fallback table
+          weekdayEntries = primaryWeekdayEntries.length == 0 && fallbackTable
+            ? primaryEntries.filter(entry => entry?.table == fallbackTable && (!entry?.weekday || entry?.weekday == weekday))
+            : primaryWeekdayEntries,
+          // if entry specifies `season`, `week`, `day`, or `evening`, they must match
+          filteredEntries = weekdayEntries.filter(entry =>
+            entry &&
+            (!entry.season || entry.season == day.season) &&
+            (!entry.week || entry.week == day.week.slug) &&
+            (!entry.day || entry.day == day.slug) &&
+            (entry.evening == isEvening)
+          ),
+          // find based on day with highest precedence, then week, then season, then just take whatever's there
+          dayEntries = filteredEntries.filter(e => e.day == day.slug),
+          weekEntries = filteredEntries.filter(e => e.week == day.week.slug),
+          seasonEntries = filteredEntries.filter(e => e.season == day.season);
+  
+    let preferredEntries = filteredEntries;
+    if(dayEntries?.length > 0) {
+      preferredEntries = dayEntries;
+    } else if(weekEntries?.length > 0) {
+      preferredEntries = weekEntries;
+    } else if(seasonEntries?.length > 0) {
+      preferredEntries = seasonEntries;
+    }
+
+    if(preferredEntries?.length == 0) {
+      return new Array(this.defaultCanticle(isEvening, nth));
+    } else {
+      return preferredEntries;
+    }
+  }
+
+  /** Default to Rite II Mag/Nunc and Te Deum/Benedictus if a canticle-table match can't be found */
+  defaultCanticle(evening : boolean, nth : number) : CanticleTableEntry {
+    const def = new CanticleTableEntry();
+    if(evening) {
+      if(nth == 1) {
+        def.slug = 'canticle-15';
+      } else {
+        def.slug = 'canticle-17';
+      }
+    } else {
+      if(nth == 1) {
+        def.slug = 'canticle-21';
+      } else {
+        def.slug = 'canticle-16';
+      }
+    }
+    return def;
   }
 }

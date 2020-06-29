@@ -33,6 +33,7 @@
     "about": "About"
   },
   "editor": {
+    "add": "Add",
     "title": "Editor",
     "edit-a-document": "Edit a Document",
     "lectionary": "Lectionary",
@@ -40,7 +41,17 @@
     "loading-document": "Loading Document...",
     "mydocs": "My Documents",
     "new": "Create a New Bulletin",
-    "reading": "Reading"
+    "reading": "Reading",
+    "add-block": "Add a Block",
+    "choose-canticle-table": "From a Canticle Table",
+    "canticle-table": "Canticle Table",
+    "canticle-table-preference": "Use the liturgy’s Canticle Table preference",
+    "which-table": "Choose a Canticle Table",
+    "which-canticle": "Choose a Canticle",
+    "first-canticle": "First Canticle",
+    "second-canticle": "Second Canticle",
+    "or": "or",
+    "choose-a-canticle": "Choose a Canticle"
   },
   "organization": {
     "owner": "Administrator",

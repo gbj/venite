@@ -1,0 +1,53 @@
+<!-- Choose a canticle table-->
+<h2>{{ 'editor.choose-canticle-table' | translate }}</h2>
+<form [formGroup]="canticleTableFormGroup">
+  <ion-list>
+    <!-- Grab table from preference-->
+    <ion-list-header>{{ 'editor.canticle-table' | translate }}</ion-list-header>
+    <ion-item>
+      <ion-label>{{ 'editor.canticle-table-preference' | translate }}</ion-label>
+      <ion-checkbox formControlName="useCanticleTablePreference"></ion-checkbox>
+    </ion-item>
+
+    <!-- Choose table manually -->
+    <ng-container *ngIf="!useCanticleTablePreference">
+      <ion-list-header>{{ 'editor.which-table' | translate }}</ion-list-header>
+      <ion-item>
+        <ion-label position="stacked">{{ 'editor.canticle-table' | translate }}</ion-label>
+        <ion-select formControlName="whichTable">
+          <ion-select-option *ngFor="let table of tables | keyvalue" [value]="table.key">{{ table.value }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ng-container>
+
+    <!-- Choose canticle in table-->
+    <ion-list-header>{{ 'editor.which-canticle' | translate }}</ion-list-header>
+    <ion-radio-group formControlName="nth">
+      <ion-item>
+        <ion-label>{{ 'editor.first-canticle' | translate }}</ion-label>
+        <ion-radio slot="end" color="primary" [value]="1"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{ 'editor.second-canticle' | translate }}</ion-label>
+        <ion-radio slot="end" color="primary" [value]="2"></ion-radio>
+      </ion-item>      
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="addFromTable()">
+    <ion-icon name="add" slot="start"></ion-icon>
+    <ion-label>{{ 'editor.add' | translate }}</ion-label>
+  </ion-button>
+</form>
+
+<p class="or">{{ 'editor.or' | translate }}</p>
+
+<!-- Choose Canticles simpliciter -->
+<h2>{{ 'editor.choose-a-canticle' | translate }}</h2>
+<ldf-editable-filter-documents
+  type="canticle"
+  [versions]="versions"
+  [options]="canticles"
+  (ldfDocumentSelected)="emitCanticle($event.detail)"
+>
+</ldf-editable-filter-documents>
