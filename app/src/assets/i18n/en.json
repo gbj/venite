@@ -84,5 +84,15 @@
   "Proper": "Proper",
   "sanctoral": "Sanctoral Calendar",
   "Uploading": "Uploading...",
-  "vigil": "Vigil"
+  "vigil": "Vigil",
+  "home": {
+    "holy_day_alert": {
+      "title": "Note: Holy Day Lectionary",
+      "message": "Holy Days have their own lectionary cycle, with two morning readings and two evening readings. We’ll load those automatically instead of the preferences you’ve listed below."
+    },
+    "missing_reading_alert": {
+      "title": "Warning",
+      "message": "Not all the readings you’ve selected are available for that day. {{availableList}} are available."
+    }
+  }
 }

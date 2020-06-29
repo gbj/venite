@@ -13,6 +13,7 @@ import { DocumentService } from '../services/document.service';
 import { PreferencesService } from '../preferences/preferences.service';
 import { LectionaryService } from '../services/lectionary.service';
 import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'venite-home',
@@ -61,7 +62,8 @@ export class HomePage implements OnInit {
     private preferencesService : PreferencesService,
     private lectionary : LectionaryService,
     private router : Router,
-    private alert : AlertController
+    private alert : AlertController,
+    private translate : TranslateService
   ) {}
 
   // Lifecycle events
@@ -143,8 +145,8 @@ export class HomePage implements OnInit {
       };
 
       const alert = await this.alert.create({
-        header: 'Note: Holy Day Lectionary',
-        message: `Holy Days have their own lectionary cycle, with two morning readings and two evening readings. We’ll load those automatically instead of the preferences you’ve listed below.`,
+        header: this.translate.instant('home.holy_day_alert.title'),
+        message: this.translate.instant('home.holy_day_alert.message'),
         buttons: [
           {
             text: 'Cancel',
@@ -162,8 +164,8 @@ export class HomePage implements OnInit {
             availableList : string = `${a.slice(0, -1).join(',')} or ${a.slice(-1)}`;
 
       const alert = await this.alert.create({
-        header: 'Warning',
-        message: `Not all the readings you’ve selected are available for that day. ${availableList} are available.`,
+        header: this.translate.instant('home.missing_reading_alert.title'),
+        message: this.translate.instant('home.missing_reading_alert.message', { availableList }),
         buttons: [
           {
             text: 'Cancel',
