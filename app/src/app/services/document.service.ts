@@ -5,6 +5,7 @@ import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { LiturgicalDocument, Liturgy } from '@venite/ldf';
+import { DTO } from './dto';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -105,11 +106,11 @@ export class DocumentService {
     return docId;
   }
 
-  saveDocument(docId : string, doc : LiturgicalDocument) : Observable<any> {
+  saveDocument(docId : string, doc : Partial<DTO<LiturgicalDocument>>) : Observable<any> {
     return from(this.afs.doc(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
   }
 
-  slugify(doc : LiturgicalDocument) : string {
+  slugify(doc : Partial<DTO<LiturgicalDocument>>) : string {
     return doc.label?.replace(/\s/g, '-').toLowerCase();
   }
 }

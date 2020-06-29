@@ -53,8 +53,10 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     // update the document once every 3s
     this.docSaved$ = this.localManager$.pipe(
       debounceTime(3000),
-      tap(localManager => console.log(localManager.document)),
-      switchMap(localManager => this.documents.saveDocument(localManager.docId, JSON.parse(JSON.stringify(localManager.document)))),
+      switchMap(localManager => this.documents.saveDocument(localManager.docId, {
+        ... localManager.document,
+        lastRevision: localManager.lastSyncedRevision
+      })),
       map(() => new Date())
     )
   }
