@@ -86,6 +86,7 @@ export class EditableFilterDocumentsComponent {
       // search on label
       && (search ? doc.label?.match(search) : true)
     );
+    console.log('(ldf-editable-filter-documents) filtered documents = ', this.filteredOptions);
   }
 
   chooseVersion(version : string) {

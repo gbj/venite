@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
 import * as json1 from 'ot-json1';
+import { JSONOp } from 'ot-json1/dist/types';
 
 import { Cursor, Change, Operation, LiturgicalDocument, User } from '@venite/ldf';
 import { Observable, combineLatest, from, BehaviorSubject } from 'rxjs';
@@ -186,7 +187,6 @@ export class EditorService {
 
   /** Receive changes from server and apply to client, whenever anything on server changes */ 
   applyChanges(localManager : LocalDocumentManager, serverManager : ServerDocumentManager, changes : DocumentManagerChange[]) {    
-    console.log('(applyChanges', localManager, localManager.lastSyncedRevision, serverManager, serverManager.lastRevision, changes)
     
     // if the server has revisions we don't, apply them to our doc
     const additionalChanges = changes
@@ -205,8 +205,6 @@ export class EditorService {
       additionalChanges.unshift(... overlappingChanges);
     }
 
-    console.log('handling additional changes', additionalChanges);
-
     if(additionalChanges?.length > 0) {      
       additionalChanges
         .forEach((change, changeIndex) => {
@@ -214,6 +212,7 @@ export class EditorService {
             // don't apply my own changes
             if(localManager.hasBeenAcknowledged && change.actorId !== this._actorId) {
               // apply to local document
+              //@ts-ignore
               localManager.document = json1.type.apply(localManager.document, change.op);
               // apply to any pending changes
               const rejected = localManager.rejectedChanges.map(localChange => ({
@@ -254,9 +253,10 @@ export class EditorService {
   /** Applies an operation to `LocalDocumentManager.document`
    * Can be used optimistically to apply local changes
    * or to respond to remote changes */
-  applyOp(manager : LocalDocumentManager, op : json1.JSONOp) : void {
+  applyOp(manager : LocalDocumentManager, op : JSONOp) : void {
     try {
       console.log(manager.document, op);
+      //@ts-ignore
       manager.document = json1.type.apply(manager.document, op);
     } catch(e) {
       console.warn(e);
@@ -264,11 +264,11 @@ export class EditorService {
   }
 
   /** Converts a generic LDF `Change` into an array of `json1` operations */
-  opFromChange(change : Change) : json1.JSONOp {
+  opFromChange(change : Change) : JSONOp {
     return change.fullyPathedOp().map(op => this.buildOp(op)).reduce(json1.type.compose, null);
   }
 
-  buildOp(op : Operation) : json1.JSONOp {
+  buildOp(op : Operation) : JSONOp {
     /* json1 won't accept strings as array indices; if any of the items in the JSON pointer path
      * or the additional index given in the `Operation` are numbers encoded as strings, convert to numbers */
     op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 

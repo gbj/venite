@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription, Subject, of } from 'rxjs';
-import { take, map, tap } from 'rxjs/operators';
+import { take, map, tap, switchMap } from 'rxjs/operators';
 import { LiturgicalDocument } from '@venite/ldf';
 import { MenuOption } from '@venite/components/dist/types/components/editable-add-block-menu/menu-options';
 import { DocumentService } from 'src/app/services/document.service';
@@ -54,10 +54,17 @@ export class AddBlockComponent implements OnInit, OnDestroy {
       switch(addition.needsMoreInfo) {
         case 'psalm':
           this.additionalMode = 'psalm';
-          this.additionalVersions = this.documentService.getVersions(this.language, 'psalm')
-          this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'psalm' }).pipe(
-            map(psalms => psalms.map(psalm => new LiturgicalDocument({ ... psalm, value: undefined })))
+          this.additionalVersions = this.documentService.getVersions(this.language, 'psalm').pipe(
+            tap(versions => console.log('additionalversions = ', versions))
           );
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            tap(versions => console.log('psalm searching for versions', versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(['Psalm'], this.language, versions).pipe(
+              tap(objs => console.log('psalm found objects', objs)),
+              map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
+            ))
+          )
           return this.complete;
         case 'lectionary':
           this.additionalMode = 'lectionary';
@@ -65,11 +72,17 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalReadingNames = this.documentService.getVersions(this.language, 'readings');
           return this.complete;
         case 'canticle':
+          console.log('needs more info -- canticle');
           this.additionalMode = 'canticle';
           this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
-          this.additionalOptions = this.documentService.find({ type: 'psalm', style: 'canticle' }).pipe(
-            map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
-          );
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            tap(versions => console.log('canticle searching for versions', versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(['Canticle'], this.language, versions).pipe(
+              tap(objs => console.log('canticle found objects', objs)),
+              map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
+            ))
+          )
           return this.complete;
         case 'hymn':
           //TODO

@@ -21,14 +21,15 @@ export class DocumentService {
   constructor(private readonly afs: AngularFirestore) { }
 
   /** Returns an array of all the public documents that match each of the provided properties of `query` */
+  // TODO -- returns empty array?
   find(query : Partial<LiturgicalDocument>) : Observable<LiturgicalDocument[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref => {
-      // TODO use reduce and return .where each time to build instead
+      let builtQuery = ref.where('sharing.status', '==', 'published').where('sharing.privacy', '==', 'public');
       Object.entries(query).forEach(([prop, value]) => {
-        ref.where(prop, '==', value);
+        console.log('where ', prop, '==', value);
+        builtQuery = builtQuery.where(prop, '==' , value);
       });
-      console.log('find ref is', ref);
-      return ref.where('sharing.status', '==', 'published').where('sharing.privacy', '==', 'public');
+      return builtQuery;
     }).valueChanges();
   }
 

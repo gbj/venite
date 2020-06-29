@@ -35,6 +35,7 @@ export class BibleReadingComponent {
       console.warn(e);
       this.obj = new BibleReading();
     }
+    this.loadVerses();
   }
 
   /**
@@ -53,13 +54,7 @@ export class BibleReadingComponent {
 
     this.loadLocaleStrings();
 
-    // load reading of value into stateful `verses`
-    if(this.obj.value) {
-      this.verses = this.obj.value;
-    } else {
-      // if passed empty value, try to use BibleReadingService to load content
-      this.loadCitation();
-    }
+    this.loadVerses();
 
     // process intro
     if(this.obj.metadata && this.obj.metadata.intro) {
@@ -101,6 +96,16 @@ export class BibleReadingComponent {
       );
     } catch(e) {
       this.loadingError = e.toString();
+    }
+  }
+
+  loadVerses() {
+    // load reading of value into stateful `verses`
+    if(this.obj.value) {
+      this.verses = this.obj.value;
+    } else {
+      // if passed empty value, try to use BibleReadingService to load content
+      this.loadCitation();
     }
   }
 
