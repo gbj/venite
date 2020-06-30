@@ -18,22 +18,22 @@
 
 ### ▪ **TEC_1979_CALENDAR**: *object*
 
-Defined in calendar/calendar.ts:13
+*Defined in [calendar/calendar.ts:13](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L13)*
 
 ###  christmasCycleBegins
 
 • **christmasCycleBegins**: *number* = 4
 
-Defined in calendar/calendar.ts:16
+*Defined in [calendar/calendar.ts:16](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L16)*
 
 ###  easterCycleBegins
 
 • **easterCycleBegins**: *number* = 7
 
-Defined in calendar/calendar.ts:15
+*Defined in [calendar/calendar.ts:15](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L15)*
 
 ###  julian
 
 • **julian**: *false* = false
 
-Defined in calendar/calendar.ts:14
+*Defined in [calendar/calendar.ts:14](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L14)*

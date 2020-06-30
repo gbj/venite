@@ -8,6 +8,7 @@
 
 * [BibleReading](_index_.md#biblereading)
 * [BibleReadingVerse](_index_.md#biblereadingverse)
+* [CanticleTableEntry](_index_.md#canticletableentry)
 * [Change](_index_.md#change)
 * [ChangeMessage](_index_.md#changemessage)
 * [Citation](_index_.md#citation)
@@ -52,6 +53,7 @@
 * [dateOnly](_index_.md#dateonly)
 * [dateToYMD](_index_.md#datetoymd)
 * [easterInYear](_index_.md#easterinyear)
+* [filterCanticleTableEntries](_index_.md#filtercanticletableentries)
 * [liturgicalDay](_index_.md#liturgicalday)
 * [liturgicalWeek](_index_.md#liturgicalweek)
 * [rclYear](_index_.md#rclyear)
@@ -70,6 +72,12 @@ ___
 ###  BibleReadingVerse
 
 • **BibleReadingVerse**:
+
+___
+
+###  CanticleTableEntry
+
+• **CanticleTableEntry**:
 
 ___
 
@@ -334,6 +342,12 @@ ___
 ###  easterInYear
 
 • **easterInYear**:
+
+___
+
+###  filterCanticleTableEntries
+
+• **filterCanticleTableEntries**:
 
 ___
 

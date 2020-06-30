@@ -12,6 +12,9 @@ export * from './calendar/liturgical-week';
 export * from './calendar/proper-liturgy';
 export * from './calendar/utils';
 
+export * from './canticle-table/canticle-table';
+export * from './canticle-table/filter-canticle-table-entries';
+
 export * from './citation/citation';
 export * from './citation/selectable-citation';
 export * from './citation/source';

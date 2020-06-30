@@ -21,7 +21,7 @@
 
 • **cursor**: *[Cursor](_editing_cursor_.cursor.md)*
 
-*Defined in [editing/cursor-message.ts:7](https://github.com/gbj/venite/blob/8b7f717/ldf/src/editing/cursor-message.ts#L7)*
+*Defined in [editing/cursor-message.ts:7](https://github.com/gbj/venite/blob/0e61e49/ldf/src/editing/cursor-message.ts#L7)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **docId**: *string*
 
-*Defined in [editing/cursor-message.ts:4](https://github.com/gbj/venite/blob/8b7f717/ldf/src/editing/cursor-message.ts#L4)*
+*Defined in [editing/cursor-message.ts:4](https://github.com/gbj/venite/blob/0e61e49/ldf/src/editing/cursor-message.ts#L4)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **lastRevision**: *number*
 
-*Defined in [editing/cursor-message.ts:6](https://github.com/gbj/venite/blob/8b7f717/ldf/src/editing/cursor-message.ts#L6)*
+*Defined in [editing/cursor-message.ts:6](https://github.com/gbj/venite/blob/0e61e49/ldf/src/editing/cursor-message.ts#L6)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **username**? : *undefined | string*
 
-*Defined in [editing/cursor-message.ts:5](https://github.com/gbj/venite/blob/8b7f717/ldf/src/editing/cursor-message.ts#L5)*
+*Defined in [editing/cursor-message.ts:5](https://github.com/gbj/venite/blob/0e61e49/ldf/src/editing/cursor-message.ts#L5)*

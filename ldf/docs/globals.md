@@ -28,6 +28,8 @@
 * ["calendar/utils/propers"](modules/_calendar_utils_propers_.md)
 * ["calendar/utils/sunday-before"](modules/_calendar_utils_sunday_before_.md)
 * ["calendar/utils/transferred-feast"](modules/_calendar_utils_transferred_feast_.md)
+* ["canticle-table/canticle-table"](modules/_canticle_table_canticle_table_.md)
+* ["canticle-table/filter-canticle-table-entries"](modules/_canticle_table_filter_canticle_table_entries_.md)
 * ["citation/citation"](modules/_citation_citation_.md)
 * ["citation/selectable-citation"](modules/_citation_selectable_citation_.md)
 * ["citation/source"](modules/_citation_source_.md)

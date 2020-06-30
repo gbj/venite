@@ -22,7 +22,7 @@ Describes properties of the liturgical calendar used in a particular tradition.
 
 • **christmasCycleBegins**: *number*
 
-Defined in calendar/calendar.ts:10
+*Defined in [calendar/calendar.ts:10](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L10)*
 
 How many weeks before Christmas the Christmas cycle begins in the calendar
 
@@ -32,7 +32,7 @@ ___
 
 • **easterCycleBegins**: *number*
 
-Defined in calendar/calendar.ts:7
+*Defined in [calendar/calendar.ts:7](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L7)*
 
 How many weeks before Easter the Easter cycle begins in the calendar
 
@@ -42,6 +42,6 @@ ___
 
 • **julian**: *boolean*
 
-Defined in calendar/calendar.ts:4
+*Defined in [calendar/calendar.ts:4](https://github.com/gbj/venite/blob/0e61e49/ldf/src/calendar/calendar.ts#L4)*
 
 `true` if this calendar uses the Julian calendar, `false` if Gregorian
