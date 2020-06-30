@@ -40,7 +40,7 @@ export function transferredFeast(
           dayBeforeYesterdayFeast = feastDayFinder(dateFromYMD(dayBeforeYesterdayY, dayBeforeYesterdayM, dayBeforeYesterdayD)),
           dayBeforeYesterdayIsEmpty = isEmpty(dayBeforeYesterdayIsSunday, dayBeforeYesterdaySpecial, dayBeforeYesterdayFeast);
         
-        console.log('today is ', todayDate);
+        /*console.log('today is ', todayDate);
         console.log('today has feasts', todaySpecial?.slug, todayFeast?.slug, 'isSunday = ', todayIsSunday);
         console.log('yesterday has feasts', yesterdaySpecial?.slug, yesterdayFeast?.slug, 'isSunday = ', yesterdayIsSunday);
         console.log('both days are empty.');
@@ -49,7 +49,7 @@ export function transferredFeast(
 
         console.log('day before yesterday has feasts', dayBeforeYesterdaySpecial, dayBeforeYesterdayFeast)
         console.log('day before yesterday is empty?', dayBeforeYesterdayIsEmpty);
-        console.log('open days = ', openDays.map(day => day.slug));
+        console.log('open days = ', openDays.map(day => day.slug));*/
 
         if(dayBeforeYesterdayIsEmpty) {
             const openDaySlugs = openDays.map(day => day.slug),
@@ -71,11 +71,11 @@ export function transferredFeast(
     }
     // if today is empty and yesterday is not empty, recurse back one more day
     else if(todayIsEmpty && !yesterdayIsEmpty) {
-        console.log('today is ', todayDate)
+        /*console.log('today is ', todayDate)
         console.log('today is empty, yesterday is not.');
         console.log('today has feasts', todaySpecial?.slug, todayFeast?.slug, 'isSunday = ', todayIsSunday);
         console.log('yesterday has feasts', yesterdaySpecial?.slug, yesterdayFeast?.slug, 'isSunday = ', yesterdayIsSunday);
-        console.log('\n\n');
+        console.log('\n\n');*/
         return transferredFeast(
             liturgicalDayFinder, specialDayFinder, feastDayFinder,  // pass helpers
             subtractOneDay(todayDate),  // check yesterday
@@ -88,9 +88,9 @@ export function transferredFeast(
     // if today is not empty and today's feast is not observed...
     else {
         // TODO -- check whether today's feast is observed today or not (don't transfer if it's observed today!)
-        console.log('today is ', todayDate)
+        /*console.log('today is ', todayDate)
         console.log('today is not empty, yesterday is empty.');
-        console.log('\n\n');
+        console.log('\n\n');*/
         return transferredFeast(
             liturgicalDayFinder, specialDayFinder, feastDayFinder,  // pass helpers
             subtractOneDay(todayDate),  // check yesterday

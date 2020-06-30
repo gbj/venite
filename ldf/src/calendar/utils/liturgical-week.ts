@@ -3,6 +3,7 @@ import { sundayBefore } from './sunday-before';
 import { dateOnly } from './date-only';
 import { dateFromYMD } from './date-from-ymd';
 import { PROPERS } from './propers';
+import { Calendar, TEC_1979_CALENDAR } from '../calendar';
 
 // one week in milliseconds
 const ONE_WEEK : number = 7*24*60*60*1000;
@@ -14,14 +15,14 @@ export interface LiturgicalWeekIndex {
 }
 
 /** Returns the cycle and week offset that a given `Date` falls in */
-export function liturgicalWeek(d : Date) : LiturgicalWeekIndex {
+export function liturgicalWeek(d : Date, calendar : Calendar = TEC_1979_CALENDAR) : LiturgicalWeekIndex {
   const date = new Date(d.getTime()); // avoid overwriting existing Date passed in
   const year : number = date.getFullYear(),
-      easter : Date = easterInYear(year),
+      easter : Date = easterInYear(year, calendar.julian),
       christmasEve : Date = new Date(year, 11, 24),
-      last_epiphany : Date = sundayBefore(new Date(easter.getTime()-6.9*ONE_WEEK)),
+      last_epiphany : Date = sundayBefore(new Date(easter.getTime()-(calendar.easterCycleBegins - 0.1)*ONE_WEEK)),
       fourth_advent : Date = sundayBefore(christmasEve),
-      last_pentecost : Date = sundayBefore(new Date(fourth_advent.getTime()-3.9*ONE_WEEK));
+      last_pentecost : Date = sundayBefore(new Date(fourth_advent.getTime()-(calendar.christmasCycleBegins - 0.1)*ONE_WEEK));
 
   if(date >= last_pentecost || date < last_epiphany) {
     return christmasCycleWeek(date);

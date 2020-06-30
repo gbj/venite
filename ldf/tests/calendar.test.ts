@@ -22,6 +22,21 @@ describe('easterInYear', () => {
     expect(easterInYear(year3).getMonth()).toEqual(2);
     expect(easterInYear(year3).getDate()).toEqual(28);
   });
+
+  it(('handles the Julian calendar for Orthodox Easter'), () => {
+    const year1 = 2008, // April 14
+          year2 = 2010, // March 22
+          year3 = 2016; // April 18
+
+    expect(easterInYear(year1, true).getMonth()).toEqual(3);
+    expect(easterInYear(year1, true).getDate()).toEqual(14);
+
+    expect(easterInYear(year2, true).getMonth()).toEqual(2);
+    expect(easterInYear(year2, true).getDate()).toEqual(22);
+
+    expect(easterInYear(year3, true).getMonth()).toEqual(3);
+    expect(easterInYear(year3, true).getDate()).toEqual(18);
+  });
 });
 
 describe('sundayBefore', () => {

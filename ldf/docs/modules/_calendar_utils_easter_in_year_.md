@@ -12,16 +12,17 @@
 
 ###  easterInYear
 
-▸ **easterInYear**(`Y`: number): *Date*
+▸ **easterInYear**(`Y`: number, `julian`: boolean): *Date*
 
-*Defined in [calendar/utils/easter-in-year.ts:2](https://github.com/gbj/venite/blob/e99767c/ldf/src/calendar/utils/easter-in-year.ts#L2)*
+*Defined in [calendar/utils/easter-in-year.ts:5](https://github.com/gbj/venite/blob/8b7f717/ldf/src/calendar/utils/easter-in-year.ts#L5)*
 
 Returns the date of Easter in a given year
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`Y` | number |
+Name | Type | Default |
+------ | ------ | ------ |
+`Y` | number | - |
+`julian` | boolean | false |
 
 **Returns:** *Date*

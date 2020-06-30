@@ -88,16 +88,7 @@ export class LiturgicalDay {
 
   /** Returns a native Date from the day's date string */
   getDate(): Date {
-    const [y, m, d] = this.date.split('-'),
-      date = new Date();
-    date.setFullYear(parseInt(y));
-    date.setMonth(parseInt(m) - 1); // months are 0-11, not 1-12
-    date.setDate(parseInt(d));
-    date.setHours(0);
-    date.setMinutes(0);
-    date.setSeconds(0);
-    date.setMilliseconds(0);
-    return date;
+    return dateFromYMDString(this.date);
   }
 
   /** Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed */
