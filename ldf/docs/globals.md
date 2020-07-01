@@ -54,4 +54,7 @@
 * ["rubric"](modules/_rubric_.md)
 * ["sharing/sharing"](modules/_sharing_sharing_.md)
 * ["text"](modules/_text_.md)
+* ["utils/docs-to-liturgy"](modules/_utils_docs_to_liturgy_.md)
+* ["utils/docs-to-option"](modules/_utils_docs_to_option_.md)
+* ["utils/index"](modules/_utils_index_.md)
 * ["utils/specific-class"](modules/_utils_specific_class_.md)

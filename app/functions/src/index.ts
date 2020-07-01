@@ -16,3 +16,7 @@
 /*export const deleteUserProfile = functions.auth.user().onDelete(async (user) => {
     await admin.firestore().collection('Users').doc(user.uid).delete();
 });*/
+/*
+export const rcl = functions.https.onRequest((request, response) => {
+    response.send('Hello from Firebase!\n\n');
+});*/

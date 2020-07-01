@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Observable, Subscription, combineLatest } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
-import { LiturgicalDocument, Change } from '@venite/ldf';
+import { LiturgicalDocument, Change, Option, docsToLiturgy } from '@venite/ldf';
 import { switchMap, debounceTime, tap, map } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
@@ -79,10 +79,39 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.editorService.processChange(manager, ev.detail);
   }
 
+  addBlockDirectly(manager : LocalDocumentManager, ev : CustomEvent) {
+    const { base, index } = ev.detail;
+    this.addBlock((data) => this.add(manager, base, index, data));
+  }
+
+  addBlockAsOption(manager : LocalDocumentManager, ev : CustomEvent) {
+    const { base, index, obj } = ev.detail;
+    // Add an option to an existing `Option`
+    if(obj.type == 'option') {
+      
+    }
+    // Otherwise, add a new doc and convert the whole thing to an `Option`
+    else {
+      this.addBlock((data) =>
+        this.replace(
+          manager, base, index, obj,
+          [
+            new Option({
+              type: 'option',
+              metadata: { selected: 1 },
+              // TODO -- convert to Liturgy if data really has more than one member
+              // do this by moving the docToLiturgy and docToOption stuff into LDF and calling it here and in PrayService
+              value: [ obj, docsToLiturgy(data) ]
+            })
+          ]
+        )
+      )
+    }
+  }
+  
   // Called whenever the user wants to add a new LiturgicalDocument block at JSON pointer `base`/`index`
-  async addBlock(manager : LocalDocumentManager, ev : CustomEvent) {
-    const { base, index } = ev.detail,
-          modal = await this.modal.create({
+  async addBlock(callback : (data) => void) {
+    const modal = await this.modal.create({
             component: AddBlockComponent,
             swipeToClose: true
           });
@@ -92,8 +121,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
     const { data } = await modal.onDidDismiss();
     if(data) {
-      this.add(manager, base, index, data);
-      console.log('added', data);
+      callback(data);
     }
   }
 
@@ -108,6 +136,21 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         }))
     });
     console.log(change);
+    this.editorService.processChange(manager, change);
+  }
+
+  replace(manager : LocalDocumentManager, base : string, index : number,  oldValue : LiturgicalDocument, template : LiturgicalDocument[]) {
+    const path = `${base}/${index}`;
+    console.log('replacing', path, 'with', template[0]);
+    // TODO: handle trying to insert an Array (like a hymn) as an Option field, which won't work unless we pack it up as a Liturgy
+    const change = new Change({
+      path,
+      op: [{
+        type: 'set',
+        oldValue,
+        value: template[0]
+      }]
+    });
     this.editorService.processChange(manager, change);
   }
 }

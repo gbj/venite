@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
@@ -98,6 +98,7 @@ export class PrayService {
           Number(doc.lookup.item)
         );
       case 'category':
+        console.log('(lookup) category = ', doc.category, 'doc = ', doc);
         return this.lookupByCategory(
           doc.category || new Array(),
           language,
@@ -128,39 +129,6 @@ export class PrayService {
     }
   }
 
-  /* There are two ways to convert a `LiturgicalDocument[]` to a single `LiturgicalDocument`
-   * Either to include them in parallel as multiples choices with an `Option`
-   * Or to convert them to a `Liturgy`, which will display them all serially */
-  docsToOption(docs : LiturgicalDocument[] | LiturgicalDocument, versions : string[] = undefined) : LiturgicalDocument {
-    if(Array.isArray(docs)) {
-      const sorted = versions?.length > 0
-      ? docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))
-      : docs;
-    return docs?.length > 1
-      // if multiple LiturgicalDocuments given, return an Option made up of them
-      ? new Option({
-        'type': 'option',
-        metadata: { selected: 0 },
-        value: docs
-      })
-      // if only one LiturgicalDocument given, return that document 
-      : docs[0];
-    } else {
-      return docs;
-    }
-  }
-
-  docsToLiturgy(docs : LiturgicalDocument[]) : LiturgicalDocument {
-    return docs?.length > 1
-      // if multiple LiturgicalDocuments given, return a Liturgy made up of them
-      ? new Liturgy({
-        'type': 'liturgy',
-        value: docs
-      })
-      // if only one LiturgicalDocument given, return that document 
-      : docs[0];
-  }
-
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
@@ -169,16 +137,17 @@ export class PrayService {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, day, docs)),
-      map(docs => this.docsToOption(docs, versions))
+      map(docs => docsToOption(docs, versions))
     );
   }
 
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
   lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+    console.log('(lookupByCategory) category = ', category);
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, day, docs)),
-      map(docs => this.docsToOption(docs, versions)),
+      map(docs => docsToOption(docs, versions)),
     );
   }
 
@@ -186,6 +155,7 @@ export class PrayService {
   filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
     switch(filterType) {
       case 'seasonal':
+        console.log('(filter) running a seasonal filter for ', day.season, 'on ', docs);
         return docs.filter(doc => doc.category?.includes(day.season));
       case 'evening':
         return docs.filter(doc => doc.category?.includes('Evening'));
@@ -220,7 +190,7 @@ export class PrayService {
         language : doc.language || 'en',
         label: entry.citation
       })))),
-      map(docs => this.docsToOption(docs))
+      map(docs => docsToOption(docs))
     );
   }
 
@@ -239,7 +209,7 @@ export class PrayService {
         lookup: { type: 'slug' }
       })))),
       // pack these into a `Liturgy` object
-      map(docs => this.docsToLiturgy(docs)),
+      map(docs => docsToLiturgy(docs)),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs)),
@@ -262,7 +232,6 @@ export class PrayService {
 
   /** Finds the appropriate canticle from a given table for this liturgy */
   lookupFromCanticleTable(day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string = undefined) : Observable<LiturgicalDocument> {
-
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
@@ -274,28 +243,9 @@ export class PrayService {
           }
         }
       ))),
-      map(docs => this.docsToOption(docs, versions)),
+      map(docs => docsToOption(docs, versions)),
       switchMap(doc => this.compile(doc, day, prefs))
     )
-  }
-
-  /** Default to Rite II Mag/Nunc and Te Deum/Benedictus if a canticle-table match can't be found */
-  defaultCanticle(evening : boolean, nth : number) : CanticleTableEntry {
-    const def = new CanticleTableEntry();
-    if(evening) {
-      if(nth == 1) {
-        def.slug = 'canticle-15';
-      } else {
-        def.slug = 'canticle-17';
-      }
-    } else {
-      if(nth == 1) {
-        def.slug = 'canticle-21';
-      } else {
-        def.slug = 'canticle-16';
-      }
-    }
-    return def;
   }
 }
 

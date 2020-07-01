@@ -1,9 +1,10 @@
 import { CanticleTableEntry } from "./canticle-table";
-import { LiturgicalDay, dateFromYMDString } from "..";
+import { LiturgicalDay } from "../calendar/liturgical-day";
+import { dateFromYMDString } from "../calendar/utils/date-from-ymd";
 
 
 export function filterCanticleTableEntries(entries : CanticleTableEntry[], day : LiturgicalDay, whichTable : string, nth : number, fallbackTable : string | undefined = undefined, defaultCanticles : { [time: string]: string[] } | undefined = undefined) : CanticleTableEntry[] {
-  const isFeast : boolean = day.isFeast(),
+  const isFeast : boolean = day instanceof LiturgicalDay ? day.isFeast() : new LiturgicalDay(day).isFeast(),
         isEvening : boolean = day.evening,
         date = dateFromYMDString(day.date),
         dayOfWeek = date.getDay(),

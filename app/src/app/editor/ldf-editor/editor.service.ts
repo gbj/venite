@@ -156,7 +156,7 @@ export class EditorService {
                                     .doc(changeId);
       
         batch.update(managerRef.ref, { lastRevision: change.lastRevision });
-        batch.set(changeRef.ref, change);
+        batch.set(changeRef.ref, JSON.parse(JSON.stringify(change)));
 
         await batch.commit();
   

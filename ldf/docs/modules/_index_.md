@@ -52,6 +52,8 @@
 * [dateFromYMDString](_index_.md#datefromymdstring)
 * [dateOnly](_index_.md#dateonly)
 * [dateToYMD](_index_.md#datetoymd)
+* [docsToLiturgy](_index_.md#docstoliturgy)
+* [docsToOption](_index_.md#docstooption)
 * [easterInYear](_index_.md#easterinyear)
 * [filterCanticleTableEntries](_index_.md#filtercanticletableentries)
 * [liturgicalDay](_index_.md#liturgicalday)
@@ -336,6 +338,18 @@ ___
 ###  dateToYMD
 
 • **dateToYMD**:
+
+___
+
+###  docsToLiturgy
+
+• **docsToLiturgy**:
+
+___
+
+###  docsToOption
+
+• **docsToOption**:
 
 ___
 
