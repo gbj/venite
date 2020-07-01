@@ -45,8 +45,10 @@ Type: `Promise<void>`
 - ion-segment
 - ion-segment-button
 - ion-label
+- ion-toolbar
 - ion-select
 - ion-select-option
+- ion-buttons
 - ion-button
 - ion-icon
 - [ldf-label-bar](../label-bar)
@@ -58,8 +60,10 @@ graph TD;
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label
+  ldf-option --> ion-toolbar
   ldf-option --> ion-select
   ldf-option --> ion-select-option
+  ldf-option --> ion-buttons
   ldf-option --> ion-button
   ldf-option --> ion-icon
   ldf-option --> ldf-label-bar
