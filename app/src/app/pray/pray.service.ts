@@ -30,18 +30,16 @@ export class PrayService {
     if(doc.include(day, prefs)) {
 
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
-      if((doc.type == 'liturgy' || doc.type == 'option')&& doc.value?.length > 0) {
+      if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
           .value
           .map(child => this.compile(child, day, prefs)));
-        console.log('latestChildren', this.latestChildren$);
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
           ... this.latestChildren$
         ).pipe(
-          tap(compiledChildren => console.log('compiledChildren = ', compiledChildren)),
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
             value: compiledChildren
@@ -51,7 +49,10 @@ export class PrayService {
 
       // if doc has a `lookup` and not a `value`, compile it
       if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
-        return this.lookup(doc, day, prefs, []);
+        return this.lookup(doc, day, prefs, []).pipe(
+          // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
+          switchMap(doc => this.compile(doc, day, prefs))
+        );
       }
     
       // if doc has a `slug` and not a `value`, add `lookup` type of `slug` and recompile
@@ -98,7 +99,6 @@ export class PrayService {
           Number(doc.lookup.item)
         );
       case 'category':
-        console.log('(lookup) category = ', doc.category, 'doc = ', doc);
         return this.lookupByCategory(
           doc.category || new Array(),
           language,
@@ -133,7 +133,6 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
-    console.log('(lookupBySlug)', slug, language, versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, day, docs)),
@@ -143,7 +142,6 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
   lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
-    console.log('(lookupByCategory) category = ', category);
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, day, docs)),
@@ -155,7 +153,6 @@ export class PrayService {
   filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
     switch(filterType) {
       case 'seasonal':
-        console.log('(filter) running a seasonal filter for ', day.season, 'on ', docs);
         return docs.filter(doc => doc.category?.includes(day.season));
       case 'evening':
         return docs.filter(doc => doc.category?.includes('Evening'));
@@ -214,7 +211,6 @@ export class PrayService {
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs)),
       // sort the psalms by number in increasing order
-      tap(liturgy => console.log('about to sort on', liturgy)),
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
         value: liturgy.value.sort((a, b) => a.metadata?.number - b.metadata?.number)
