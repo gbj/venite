@@ -2,16 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-export class CanticleTableEntry {
-  table : string;
-  slug : string;
-  weekday : string;
-  evening : boolean;
-  nth : number;
-  season : string;
-  week : string;
-  day : string;
-}
+import { CanticleTableEntry } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'

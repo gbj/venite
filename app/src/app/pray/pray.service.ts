@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { LiturgicalDocument, LiturgicalColor, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, Psalm, BibleReading, dateFromYMDString } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { DocumentService } from '../services/document.service';
 import { map, switchMap, startWith, tap, filter } from 'rxjs/operators';
 import { LectionaryService } from '../services/lectionary.service';
-import { CanticleTableService, CanticleTableEntry } from './canticle-table.service';
+import { CanticleTableService } from './canticle-table.service';
+import { CanticleTableEntry } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -264,7 +265,7 @@ export class PrayService {
 
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
-      map(entries => this.filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable)),
+      map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
       switchMap(entries => entries.map(entry => new LiturgicalDocument(
         {
           slug: entry.slug,
@@ -276,49 +277,6 @@ export class PrayService {
       map(docs => this.docsToOption(docs, versions)),
       switchMap(doc => this.compile(doc, day, prefs))
     )
-  }
-
-  filterCanticleTableEntries(entries : CanticleTableEntry[], day : LiturgicalDay, whichTable : string, nth : number, fallbackTable : string = undefined) : CanticleTableEntry[] {
-    const isFeast : boolean = day.isFeast(),
-          isEvening : boolean = day.evening,
-          date = dateFromYMDString(day.date),
-          dayOfWeek = date.getDay(),
-          days : string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          weekday : string = isFeast ? 'FeastDay' : days[dayOfWeek];
-    
-    const primaryEntries = fallbackTable ? entries.filter(entry => entry.table == whichTable) : entries,
-          primaryWeekdayEntries = primaryEntries.filter(entry => !entry?.weekday || entry?.weekday == weekday),
-          // if not found, try fallback table
-          weekdayEntries = primaryWeekdayEntries.length == 0 && fallbackTable
-            ? primaryEntries.filter(entry => entry?.table == fallbackTable && (!entry?.weekday || entry?.weekday == weekday))
-            : primaryWeekdayEntries,
-          // if entry specifies `season`, `week`, `day`, or `evening`, they must match
-          filteredEntries = weekdayEntries.filter(entry =>
-            entry &&
-            (!entry.season || entry.season == day.season) &&
-            (!entry.week || entry.week == day.week.slug) &&
-            (!entry.day || entry.day == day.slug) &&
-            (entry.evening == isEvening)
-          ),
-          // find based on day with highest precedence, then week, then season, then just take whatever's there
-          dayEntries = filteredEntries.filter(e => e.day == day.slug),
-          weekEntries = filteredEntries.filter(e => e.week == day.week.slug),
-          seasonEntries = filteredEntries.filter(e => e.season == day.season);
-  
-    let preferredEntries = filteredEntries;
-    if(dayEntries?.length > 0) {
-      preferredEntries = dayEntries;
-    } else if(weekEntries?.length > 0) {
-      preferredEntries = weekEntries;
-    } else if(seasonEntries?.length > 0) {
-      preferredEntries = seasonEntries;
-    }
-
-    if(preferredEntries?.length == 0) {
-      return new Array(this.defaultCanticle(isEvening, nth));
-    } else {
-      return preferredEntries;
-    }
   }
 
   /** Default to Rite II Mag/Nunc and Te Deum/Benedictus if a canticle-table match can't be found */
@@ -340,3 +298,8 @@ export class PrayService {
     return def;
   }
 }
+
+const DEFAULT_CANTICLES = {
+  'evening': ['canticle-15', 'canticle-17'],
+  'morning': ['canticle-21', 'canticle-17']
+};
