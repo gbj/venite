@@ -36,11 +36,14 @@ export class LiturgicalDocumentComponent {
   /** A JSON Pointer that points to the LiturgicalDocument being edited */
   @Prop({ reflect: true }) path : string;
 
-  /** A JSON Pointer that points to the array within which the item is nested*/
+  /** A JSON Pointer that points to the array within which the item is nested */
   @Prop({ reflect: true }) base: string;
 
   /** Index within a larger array, if any */
   @Prop() index : number;
+
+  /** Type of the parent `LiturgicalDocument`, if any */
+  @Prop({ reflect: true }) parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null = null;
 
   /**
    * Whether the object is editable
@@ -133,7 +136,8 @@ export class LiturgicalDocumentComponent {
           visible={this.hasFocus}
           base={this.base}
           index={this.index}
-          obj={this.obj}>
+          obj={this.obj}
+          parentType={this.parentType}>
         </ldf-editable-metadata-buttons>}
 
         {/* Render the Document */}

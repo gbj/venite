@@ -62,6 +62,8 @@ graph TD;
   ldf-option --> ion-label
   ldf-option --> ion-select
   ldf-option --> ion-select-option
+  ldf-option --> ion-button
+  ldf-option --> ion-icon
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect

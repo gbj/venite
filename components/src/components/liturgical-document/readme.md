@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                             | Type                           | Default     |
-| ---------- | ---------- | ----------------------------------------------------------------------- | ------------------------------ | ----------- |
-| `base`     | `base`     | A JSON Pointer that points to the array within which the item is nested | `string`                       | `undefined` |
-| `doc`      | `doc`      | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                                          | `boolean`                      | `undefined` |
-| `index`    | `index`    | Index within a larger array, if any                                     | `number`                       | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the LiturgicalDocument being edited       | `string`                       | `undefined` |
+| Property     | Attribute     | Description                                                             | Type                                                                                                                                             | Default     |
+| ------------ | ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested | `string`                                                                                                                                         | `undefined` |
+| `doc`        | `doc`         | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string`                                                                                                                   | `undefined` |
+| `editable`   | `editable`    | Whether the object is editable                                          | `boolean`                                                                                                                                        | `undefined` |
+| `index`      | `index`       | Index within a larger array, if any                                     | `number`                                                                                                                                         | `undefined` |
+| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                         | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `null`      |
+| `path`       | `path`        | A JSON Pointer that points to the LiturgicalDocument being edited       | `string`                                                                                                                                         | `undefined` |
 
 
 ## Events

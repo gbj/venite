@@ -1,7 +1,8 @@
 import { Element, Component, Host, Listen, State, Event, EventEmitter, h } from '@stencil/core';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
-import { MENU, MenuOption } from './menu-options';
+import { MENU } from './menu-options';
+import { MenuOption } from '../../interfaces/menu-option';
 
 @Component({
   tag: 'ldf-editable-add-block-menu',

@@ -1,14 +1,6 @@
-import { JSX, h } from '@stencil/core';
+import { h } from '@stencil/core';
 import { LiturgicalDocument, Text, BibleReading, Meditation, Heading, ResponsivePrayer, Rubric, Psalm } from '@venite/ldf';
-
-export class MenuOption {
-  label: string;
-  section: string[];
-  icon: () => JSX.Element;
-  template?: LiturgicalDocument[];
-  hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn';
-}
+import { MenuOption } from '../../interfaces/menu-option';
 
 export const MENU : MenuOption[] = [
   {

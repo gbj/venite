@@ -61,7 +61,15 @@ export class LiturgyComponent {
           return (
             <article>
               {/* Render the document */}
-              <ldf-liturgical-document doc={doc} path={path} base={valuePath} index={docIndex} editable={this.editable}></ldf-liturgical-document>
+              <ldf-liturgical-document
+                doc={doc}
+                path={path}
+                base={valuePath}
+                index={docIndex}
+                editable={this.editable}
+                parentType='liturgy'
+              >
+              </ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
               {this.editable && <ldf-editable-add-block visible={this.hasFocus == path} base={valuePath} index={docIndex + 1}></ldf-editable-add-block>}

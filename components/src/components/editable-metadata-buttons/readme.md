@@ -7,12 +7,20 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                             | Type                 | Default     |
-| --------- | --------- | ----------------------------------------------------------------------- | -------------------- | ----------- |
-| `base`    | `base`    | A JSON Pointer that points to the array within which the item is nested | `string`             | `undefined` |
-| `index`   | `index`   | The item's index within that array                                      | `number`             | `undefined` |
-| `obj`     | --        | The LiturgicalDocument itself                                           | `LiturgicalDocument` | `undefined` |
-| `visible` | `visible` | Whether to show the buttons                                             | `boolean`            | `undefined` |
+| Property     | Attribute     | Description                                                             | Type                                                                                                                                             | Default     |
+| ------------ | ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested | `string`                                                                                                                                         | `undefined` |
+| `index`      | `index`       | The item's index within that array                                      | `number`                                                                                                                                         | `undefined` |
+| `obj`        | --            | The LiturgicalDocument itself                                           | `LiturgicalDocument`                                                                                                                             | `undefined` |
+| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                         | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `undefined` |
+| `visible`    | `visible`     | Whether to show the buttons                                             | `boolean`                                                                                                                                        | `undefined` |
+
+
+## Events
+
+| Event               | Description | Type                          |
+| ------------------- | ----------- | ----------------------------- |
+| `ldfAddOptionToDoc` |             | `CustomEvent<AddOptionToDoc>` |
 
 
 ## Dependencies

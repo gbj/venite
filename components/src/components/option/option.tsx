@@ -1,5 +1,6 @@
-import { Component, Prop, Watch, State, Listen, Method, Host, JSX, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Listen, Method, Host, JSX, Event, EventEmitter, h } from '@stencil/core';
 import { Option, LiturgicalDocument } from '@venite/ldf';
+import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
 
 @Component({
   tag: 'ldf-option',
@@ -40,6 +41,9 @@ export class OptionComponent {
    */
   @Prop() editable : boolean;
 
+  // Events
+  @Event() ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
+
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
@@ -51,11 +55,20 @@ export class OptionComponent {
 
   /** Display the nth option */
   @Method()
-  async select(index : number) {
-    this.selectedDoc = this.obj.value[index];
-    // sets metadata.selected to new index, and creates objects along the way if undefined
-    // without overriding any other metadata fields
-    Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
+  async select(index : number | 'add') {
+    console.log('select ', index);
+    if(Number(index) >= 0) {
+      this.selectedDoc = this.obj.value[index];
+      // sets metadata.selected to new index, and creates objects along the way if undefined
+      // without overriding any other metadata fields
+      Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
+    } else {
+      this.ldfAddOptionToDoc.emit({
+        base: this.path,
+        index: this.obj?.value?.length,
+        obj: this.obj
+      })
+    }
   }
 
   // Listener for Ionic Select and Segment change events
@@ -91,25 +104,34 @@ export class OptionComponent {
                 <ion-label>{this.obj.getVersionLabel(option)}</ion-label>
               </ion-segment-button>
             )}
+            {/* Add Button if editable */}
+            { this.editable && <ion-segment-button value='add' class='add'>
+                <ion-label>+</ion-label>
+              </ion-segment-button> }
           </ion-segment>
         );
       }
       // >2 options, or options are longish
       else {
-        return (
+        return [
           <ion-select value={currentlySelected}>
             {this.obj.value.map((option, optionIndex) =>
               <ion-select-option value={optionIndex}>
                 <ion-label>{this.obj.getVersionLabel(option)}</ion-label>
               </ion-select-option>
             )}
-          </ion-select>
-        );
+          </ion-select>,
+          this.editable && <ion-button>
+            <ion-icon slot='icon-only' name='add'></ion-icon>
+          </ion-button>
+        ]
+          
+        ;
       }
     }
     // Ionic not availabe
     else {
-      return (
+      return [
         <select onInput={ev => this.onSelectChange(ev)}>
           {this.obj.value.map((option, optionIndex) =>
             <option
@@ -117,8 +139,9 @@ export class OptionComponent {
               selected={optionIndex == currentlySelected}
             >{this.obj.getVersionLabel(option)}</option>
           )}
-        </select>
-      );
+        </select>,
+        this.editable && <button>+</button>
+      ];
     }
   }
 
@@ -130,9 +153,14 @@ export class OptionComponent {
           {/* Can be overwritten by apps that use Ionic or other frameworks */}
           <slot slot='end' name='controls'>{this.selectNode()}</slot>
         </ldf-label-bar>
-        <ldf-liturgical-document doc={this.selectedDoc}
+        <ldf-liturgical-document
+          doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
-          editable={this.editable}>
+          base={`${this.path}/value`}
+          index={this.obj.metadata.selected}
+          editable={this.editable}
+          parentType='option'
+        >
         </ldf-liturgical-document>
       </Host>
     );
