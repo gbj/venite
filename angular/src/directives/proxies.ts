@@ -1233,13 +1233,15 @@ export class LdfEditableMetadata {
 }
 
 export declare interface LdfEditableMetadataButtons extends Components.LdfEditableMetadataButtons {}
-@ProxyCmp({inputs: ['base', 'index', 'obj', 'visible']})
-@Component({ selector: 'ldf-editable-metadata-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'visible'] })
+@ProxyCmp({inputs: ['base', 'index', 'obj', 'parentType', 'visible']})
+@Component({ selector: 'ldf-editable-metadata-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'parentType', 'visible'] })
 export class LdfEditableMetadataButtons {
+  ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc']);
   }
 }
 
@@ -1321,8 +1323,8 @@ export class LdfLabelBar {
 }
 
 export declare interface LdfLiturgicalDocument extends Components.LdfLiturgicalDocument {}
-@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'path']})
-@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'path'] })
+@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path']})
+@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path'] })
 export class LdfLiturgicalDocument {
   focusPath!: EventEmitter<CustomEvent>;
   focusObj!: EventEmitter<CustomEvent>;
@@ -1362,10 +1364,12 @@ export declare interface LdfOption extends Components.LdfOption {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['select']})
 @Component({ selector: 'ldf-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfOption {
+  ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc']);
   }
 }
 
