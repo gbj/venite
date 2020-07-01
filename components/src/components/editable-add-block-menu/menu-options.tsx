@@ -1,5 +1,5 @@
 import { h } from '@stencil/core';
-import { LiturgicalDocument, Text, BibleReading, Meditation, Heading, ResponsivePrayer, Rubric, Psalm } from '@venite/ldf';
+import { LiturgicalDocument, Text, BibleReading, Meditation, Heading, ResponsivePrayer, Rubric, Psalm, Refrain } from '@venite/ldf';
 import { MenuOption } from '../../interfaces/menu-option';
 
 export const MENU : MenuOption[] = [
@@ -9,7 +9,7 @@ export const MENU : MenuOption[] = [
     /* SVG is custom */
     icon: () => (<svg></svg>),
     template: [
-      new Text({ type: 'text', style: 'text', slug: 'alleluia' })
+      new Text({ type: 'text', style: 'text', slug: 'alleluia', lookup: { type: 'slug' } })
     ]
   },
   {
@@ -49,7 +49,7 @@ export const MENU : MenuOption[] = [
     /* SVG is custom */
     icon: () => (<svg></svg>),
     template: [
-      new Text({ type: 'text', style: 'text', slug: 'gloria-patri' })
+      new Refrain({ type: 'refrain', style: 'gloria', slug: 'gloria-patri', lookup: { type: 'slug' } })
     ]
   },
   {
