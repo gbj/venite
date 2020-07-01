@@ -96,7 +96,7 @@ export class OptionComponent {
           .reduce((a, b) => a || b);
 
       // <= 2, short options
-      if(!optionsAreLong) {
+      if(!optionsAreLong && this.obj.value.length <= 2) {
         return (
           <ion-segment color="primary" value={currentlySelected.toString()}>
             {this.obj.value.map((option, optionIndex) =>
@@ -113,35 +113,39 @@ export class OptionComponent {
       }
       // >2 options, or options are longish
       else {
-        return [
-          <ion-select value={currentlySelected}>
-            {this.obj.value.map((option, optionIndex) =>
-              <ion-select-option value={optionIndex}>
-                <ion-label>{this.obj.getVersionLabel(option)}</ion-label>
-              </ion-select-option>
-            )}
-          </ion-select>,
-          this.editable && <ion-button>
-            <ion-icon slot='icon-only' name='add'></ion-icon>
-          </ion-button>
-        ]
-          
-        ;
+        return (
+          <ion-toolbar>
+            <ion-select value={currentlySelected} slot={this.editable ? 'start' : 'end'}>
+              {this.obj.value.map((option, optionIndex) =>
+                <ion-select-option value={optionIndex}>
+                  <ion-label>{this.obj.getVersionLabel(option)}</ion-label>
+                </ion-select-option>
+              )}
+            </ion-select>
+            {this.editable && <ion-buttons slot='end'>
+              <ion-button onClick={() => this.select('add')}>
+                <ion-icon slot='icon-only' name='add'></ion-icon>
+              </ion-button>
+            </ion-buttons>}
+          </ion-toolbar>
+        );
       }
     }
     // Ionic not availabe
     else {
-      return [
-        <select onInput={ev => this.onSelectChange(ev)}>
-          {this.obj.value.map((option, optionIndex) =>
-            <option
-              value={optionIndex}
-              selected={optionIndex == currentlySelected}
-            >{this.obj.getVersionLabel(option)}</option>
-          )}
-        </select>,
-        this.editable && <button>+</button>
-      ];
+      return (
+        <ldf-label-bar>
+          <select onInput={ev => this.onSelectChange(ev)} slot={this.editable ? 'start' : 'end'}>
+            {this.obj.value.map((option, optionIndex) =>
+              <option
+                value={optionIndex}
+                selected={optionIndex == currentlySelected}
+              >{this.obj.getVersionLabel(option)}</option>
+            )}
+          </select>
+        {this.editable && <button slot='end' onClick={() => this.select('add')}>+</button>}
+        </ldf-label-bar>
+      );
     }
   }
 
