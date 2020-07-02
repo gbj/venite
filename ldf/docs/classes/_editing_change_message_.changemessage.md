@@ -21,7 +21,7 @@
 
 • **change**: *[Change](_editing_change_.change.md)*
 
-*Defined in [editing/change-message.ts:7](https://github.com/gbj/venite/blob/33bf7a5/ldf/src/editing/change-message.ts#L7)*
+*Defined in [editing/change-message.ts:7](https://github.com/gbj/venite/blob/28faca1/ldf/src/editing/change-message.ts#L7)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **docId**: *string*
 
-*Defined in [editing/change-message.ts:4](https://github.com/gbj/venite/blob/33bf7a5/ldf/src/editing/change-message.ts#L4)*
+*Defined in [editing/change-message.ts:4](https://github.com/gbj/venite/blob/28faca1/ldf/src/editing/change-message.ts#L4)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **lastRevision**: *number*
 
-*Defined in [editing/change-message.ts:6](https://github.com/gbj/venite/blob/33bf7a5/ldf/src/editing/change-message.ts#L6)*
+*Defined in [editing/change-message.ts:6](https://github.com/gbj/venite/blob/28faca1/ldf/src/editing/change-message.ts#L6)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **username**? : *undefined | string*
 
-*Defined in [editing/change-message.ts:5](https://github.com/gbj/venite/blob/33bf7a5/ldf/src/editing/change-message.ts#L5)*
+*Defined in [editing/change-message.ts:5](https://github.com/gbj/venite/blob/28faca1/ldf/src/editing/change-message.ts#L5)*

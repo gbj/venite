@@ -8,8 +8,8 @@ import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
 
-const TYPES = ['liturgy', 'cycle', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
-type TypeTuple = typeof TYPES;
+const TYPES = ['liturgy', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
+export type TypeTuple = typeof TYPES;
 
 const LOOKUP_TYPES = ['lectionary', 'canticle-table', 'category', 'slug', 'collect'];
 type LookupTypeTuple = typeof LOOKUP_TYPES;

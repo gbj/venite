@@ -2,11 +2,10 @@ import { Component, Element, Prop, Listen, Event, EventEmitter, h } from '@stenc
 import { Change } from '@venite/ldf';
 
 @Component({
-  tag: 'ldf-editable-select',
-  styleUrl: 'editable-select.scss',
+  tag: 'ldf-editable-boolean',
   shadow: true
 })
-export class EditableSelectComponent {
+export class EditableBooleanComponent {
   @Element() el: HTMLElement;
 
   // Properties
@@ -17,11 +16,8 @@ export class EditableSelectComponent {
   /** Property name to edit within the object specified by `path` */
   @Prop({ reflect: true }) property: string;
 
-  /** Options to include in the list */
-  @Prop() options: { value: string | number; label: string; }[];
-
   /** Starting value for editing */
-  @Prop() value: string | number;
+  @Prop() value: boolean;
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -30,7 +26,7 @@ export class EditableSelectComponent {
   @Listen('ionChange')
   onChange(ev : CustomEvent) {
     const oldValue = this.value,
-          value = ev.detail.value;
+          value : boolean = ev.detail.checked;
 
     if(value !== oldValue) {
       this.ldfDocShouldChange.emit(new Change({
@@ -44,11 +40,7 @@ export class EditableSelectComponent {
 
   render() {
     return (
-      <ion-select value={this.value}>
-        {this.options.map(option =>
-          <ion-select-option value={option.value}>{option.label}</ion-select-option>
-        )}
-      </ion-select>
+      <ion-checkbox checked={this.value}></ion-checkbox>
     )
   }
 }

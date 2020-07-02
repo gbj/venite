@@ -4,33 +4,36 @@ import { Change } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
-  tag: 'ldf-editable-add-category',
-  styleUrl: 'editable-add-category.scss',
+  tag: 'ldf-editable-string-list',
+  styleUrl: 'editable-string-list.scss',
   shadow: true
 })
-export class EditableAddCategoryComponent {
+export class EditableStringListComponent {
   @Element() el: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
 
-  // initial @Prop() categories + anything we've added, optimistically
-  @State() optimisticCategories : string[] = new Array();
+  // initial Prop `value` + anything we've added, optimistically
+  @State() optimisticValues : string[] = new Array();
 
-  @State() currentCategoryValue : string;
+  @State() currentValue : string;
 
   // Properties
   /** A JSON Pointer that points to the document */
   @Prop({ reflect: true }) path : string;
 
+  /** The property in that document that we're editing */
+  @Prop({ reflect: true }) property : string;
+
   /** Initial categories */
-  @Prop() categories : string[] = new Array();
+  @Prop() value : string[] = new Array();
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   // Lifecycle events
   async componentWillLoad() {
-    this.optimisticCategories = this.categories || new Array();
+    this.optimisticValues = this.value || new Array();
     this.loadLocaleStrings();
   }
 
@@ -55,7 +58,7 @@ export class EditableAddCategoryComponent {
   }
 
   onInput(ev : CustomEvent<KeyboardEvent>) {
-    this.currentCategoryValue = (ev.target as HTMLInputElement).value;
+    this.currentValue = (ev.target as HTMLInputElement).value;
   }
 
   onKeyDown(ev : KeyboardEvent) {
@@ -68,16 +71,16 @@ export class EditableAddCategoryComponent {
 
   add() {
     const change = new Change({
-      path: `${this.path}/category`,
+      path: `${this.path}/${this.property}`,
       op: [{
         type: 'insertAt',
-        index: this.categories.length - 1,
-        value: this.currentCategoryValue
+        index: this.value.length - 1,
+        value: this.currentValue
       }]
     });
 
-    this.optimisticCategories.push(this.currentCategoryValue);
-    this.currentCategoryValue = '';
+    this.optimisticValues.push(this.currentValue);
+    this.currentValue = '';
 
     console.log('(add) change = ', change);
 
@@ -90,12 +93,12 @@ export class EditableAddCategoryComponent {
       op: [{
         type: 'deleteAt',
         index: ii,
-        oldValue: this.categories[ii]
+        oldValue: this.value[ii]
       }]
     });
 
-    this.optimisticCategories.splice(ii, 1);
-    this.optimisticCategories = [ ... this.optimisticCategories ];
+    this.optimisticValues.splice(ii, 1);
+    this.optimisticValues = [ ... this.optimisticValues ];
 
     console.log('(remove) change = ', change);
 
@@ -103,14 +106,14 @@ export class EditableAddCategoryComponent {
   }
 
   render() {
-    const localeStrings = this.localeStrings || {};
+    const localeStrings = ((this.localeStrings || {})[this.property]) || {};
 
     return (
       <ion-item lines="none">
         <div class="wrapper">
-          <ion-label position="stacked">{localeStrings.categories}</ion-label>
+          <ion-label position="stacked">{localeStrings['list']}</ion-label>
           <ul>
-            {this.optimisticCategories.map((category, ii) =>
+            {this.optimisticValues.map((category, ii) =>
               <li>
                 <ion-chip>
                   <ion-label>{category}</ion-label>
@@ -121,10 +124,10 @@ export class EditableAddCategoryComponent {
           </ul>
           <div class='controls'>
             <ion-input
-              placeholder={localeStrings.addCategory}
+              placeholder={localeStrings['add']}
               onIonInput={(ev) => this.onInput(ev)}
               onKeyDown={(ev) => this.onKeyDown(ev)}
-              value={this.currentCategoryValue}
+              value={this.currentValue}
             ></ion-input>
             <ion-button onClick={() => this.add()}>
               <ion-icon slot="icon-only" name="add"></ion-icon>

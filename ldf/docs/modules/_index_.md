@@ -44,6 +44,7 @@
 * [Sharing](_index_.md#sharing)
 * [Source](_index_.md#source)
 * [Text](_index_.md#text)
+* [TypeTuple](_index_.md#typetuple)
 * [User](_index_.md#user)
 * [WEEKDAYS](_index_.md#weekdays)
 * [addOneDay](_index_.md#addoneday)
@@ -290,6 +291,12 @@ ___
 ###  Text
 
 • **Text**:
+
+___
+
+###  TypeTuple
+
+• **TypeTuple**:
 
 ___
 

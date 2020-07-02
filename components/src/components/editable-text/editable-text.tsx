@@ -4,6 +4,7 @@ import Debounce from 'debounce-decorator';
 import { Change, Cursor, ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Heading } from '@venite/ldf';
 import { handleInput } from './handle-input';
 import { getLocaleComponentStrings } from '../../utils/locale';
+import { TextFieldTypes } from '@ionic/core';
 
 @Component({
   tag: 'ldf-editable-text',
@@ -41,6 +42,9 @@ export class EditableTextComponent {
 
   /** Whether to display as a short, single-line input */
   @Prop() short : boolean;
+
+  /** Type to apply to `<input type=...>`, if `short` is `true` */
+  @Prop() inputType : TextFieldTypes;
 
   /** The base object this expresses as part of `LiturgicalDocument`.value */
   @Prop() template : ResponsivePrayerLine | BibleReadingVerse | (PsalmVerse | Heading)[] | string = "";
@@ -229,7 +233,8 @@ export class EditableTextComponent {
             ref={async el => this.textarea = await el.getInputElement()}
             placeholder={this.placeholder || localeStrings.placeholder}
             value={this.currentText}
-            onKeyDown={(event : KeyboardEvent) => this.checkEnter(event)}>
+            onKeyDown={(event : KeyboardEvent) => this.checkEnter(event)}
+            type={this.inputType || 'text'}>
           </ion-input>
         </Host>
       );

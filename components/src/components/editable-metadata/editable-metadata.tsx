@@ -135,7 +135,10 @@ export class EditableMetadataComponent {
 
               {/* `metadata` */}
               <fieldset>
-                <ion-item><p>Metadata...</p></ion-item>
+                <ldf-editable-metadata-metadata-fields
+                  path={this.path}
+                  doc={this.obj}
+                ></ldf-editable-metadata-metadata-fields>
               </fieldset>
 
               {/* `tradition`, `language` and `version` */}
@@ -153,10 +156,12 @@ export class EditableMetadataComponent {
 
               {/* `category` */}
               <fieldset>
-                <ldf-editable-add-category
+                <ldf-editable-string-list
                   path={this.path}
-                  categories={this.obj.category}
-                ></ldf-editable-add-category>
+                  property="category"
+                  value={this.obj.category}
+                >
+                </ldf-editable-string-list>
               </fieldset>
 
               {/* `condition` */}

@@ -70,7 +70,7 @@ export class EditableMetadataButtonsComponent {
     modal.componentProps = {
       modal,
       doc: this.obj,
-      path: this.base ?? '/',
+      path: this.base && this.index ? `${this.base}/${this.index}` : '/',
       visible: true,
       collapsed: false
     }

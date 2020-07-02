@@ -1,0 +1,10 @@
+{
+  "category": {
+    "add": "Add a Category",
+    "list": "Categories"
+  },
+  "liturgyversions": {
+    "add": "Add a Liturgy Version",
+    "list": "Liturgy Versions"
+  }
+}
