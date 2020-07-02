@@ -2,12 +2,15 @@
   "antiphon": "Antiphon",
   "bible-reading": "Bible Reading",
   "canticle": "Canticle",
+  "category": "Category",
   "citation": "Citation",
+  "condition": "Condition",
   "delete": "Delete",
   "gloria": "Gloria",
   "heading": "Heading",
   "invitatory": "invitatory",
   "label": "Label",
+  "language": "Language",
   "litany": "Litany",
   "liturgy": "Liturgy",
   "long": "Long",
@@ -23,7 +26,11 @@
   "rubric": "Rubric",
   "settings": "Settings",
   "short": "Short",
+  "source": "Source",
   "style": "Style",
   "text": "Text",
-  "type": "Type"
+  "tradition": "Tradition",
+  "type": "Type",
+  "version": "Version",
+  "version_label": "Version Label"
 }

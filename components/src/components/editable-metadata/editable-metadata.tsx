@@ -124,19 +124,52 @@ export class EditableMetadataComponent {
         <ion-content>
           {/* Form to Edit Metadata — display when "Settings" button is toggled */}
           <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
-            {/* `type` */}
-            <SelectField field='type' types={availableTypes} />
+            <ion-list>
 
-            {/* `style` */}
-            {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+              {/* `type` and `style` */}
+              <fieldset>
+                <SelectField field='type' types={availableTypes} />
 
-            {/* `label` */}
-            <TextField name="label"/>
+                {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+              </fieldset>
 
-            {/* `tradition`, `language` and `version` */}
-            <TextField name="tradition"/>
-            <TextField name="language"/>
-            <TextField name="version"/>
+              {/* `metadata` */}
+              <fieldset>
+                <ion-item><p>Metadata...</p></ion-item>
+              </fieldset>
+
+              {/* `tradition`, `language` and `version` */}
+              <fieldset>
+                <TextField name="tradition"/>
+                <TextField name="language"/>
+                <TextField name="version"/>
+              </fieldset>
+
+              {/* `label` and `version_label` */}
+              <fieldset>
+                <TextField name="label"/>
+                <TextField name="version_label"/>
+              </fieldset>
+
+              {/* `category` */}
+              <fieldset>
+                <ldf-editable-add-category
+                  path={this.path}
+                  categories={this.obj.category}
+                ></ldf-editable-add-category>
+              </fieldset>
+
+              {/* `condition` */}
+              <fieldset>
+                <ion-item><p>Condition...</p></ion-item>
+              </fieldset>
+
+              {/* `source` and `citation` */}
+              <fieldset>
+                <ion-item><p>Source...</p></ion-item>
+                <TextField name="citation"/>
+              </fieldset>
+            </ion-list>
           </form>
         </ion-content>
       </Host>

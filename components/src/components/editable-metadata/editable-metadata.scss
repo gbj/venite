@@ -1,13 +1,17 @@
 .metadata {
   /*background-color: var(--ldf-color);
-  color: var(--ldf-background-color);*/
+  color: var(--ldf-background-color);
   display: flex;
-  flex-direction: row;
+  flex-direction: row;*/
 
   fieldset {
     border: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    ion-item {
+      min-width: 100px;
+    }
   }
 }
 
