@@ -12,6 +12,7 @@ export class BibleReading extends LiturgicalDocument {
   style: StyleTuple[number];
   citation: string;
   metadata?: {
+    compiled_intro?: LiturgicalDocument;
     intro?: LiturgicalDocument;
     response?: string;
   };
