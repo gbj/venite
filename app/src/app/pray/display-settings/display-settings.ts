@@ -5,6 +5,7 @@ export class DisplaySettings {
     public repeatAntiphon : 'bracket'|'repeat'|'none' = 'bracket',
     public fontscale : 's'|'m'|'l'|'xl'|'xxl' = 'm',
     public font : 'garamond'|'gill-sans' = 'garamond',
+    public voiceChoice : string = '',
     public voiceRate: number = 0.85,
     public voiceBackground: 'silence'|'seashore'|'garden'|'night'|'silence-short' = 'silence',
     public voiceBackgroundVolume: number = 0.5,

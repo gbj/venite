@@ -108,6 +108,6 @@
   </ion-item>
   <ion-item>
     <ion-label>{{ 'displaySettings.Reading-Verses' | translate }}</ion-label>
-    <ion-checkbox [value]="settings.bibleVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start" (ionChange)="logverses()"></ion-checkbox>
+    <ion-checkbox [value]="settings.bibleVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start"></ion-checkbox>
   </ion-item>
 </ion-content>

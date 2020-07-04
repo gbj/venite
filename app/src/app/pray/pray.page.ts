@@ -109,6 +109,7 @@ export class PrayPage implements OnInit {
       this.grabPreference('repeatAntiphon'),
       this.grabPreference('fontscale'),
       this.grabPreference('font'),
+      this.grabPreference('voiceChoice'),
       this.grabPreference('voiceRate'),
       this.grabPreference('voiceBackground'),
       this.grabPreference('voiceBackgroundVolume'),
