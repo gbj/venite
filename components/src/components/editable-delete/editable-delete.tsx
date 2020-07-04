@@ -1,6 +1,6 @@
 import { Component, Element, Prop, Listen, Event, EventEmitter, State, h } from '@stencil/core';
 import { alertController } from '@ionic/core';
-import { LiturgicalDocument, Change } from '@venite/ldf';
+import { Change } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -20,8 +20,8 @@ export class EditableDeleteComponent {
   /** The item's index within that array */
   @Prop({ reflect: true }) index: number;
 
-  /** The LiturgicalDocument itself */
-  @Prop() obj : LiturgicalDocument;
+  /** The item to be deleted */
+  @Prop() obj : any;
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -52,7 +52,7 @@ export class EditableDeleteComponent {
             console.log('deleting ', this.base, this.index);
             this.ldfDocShouldChange.emit(new Change({
               path: this.base,
-              op: [ { type: 'deleteAt' as 'deleteAt', index: this.index } ]
+              op: [ { type: 'deleteAt' as 'deleteAt', index: this.index, oldValue: this.obj } ]
             }))
           }
         }

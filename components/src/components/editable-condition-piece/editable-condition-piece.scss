@@ -1,0 +1,26 @@
+.type {
+  ul.checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+:root {
+  --ion-color-primary: #69bb7b;
+  --ion-color-primary-rgb: 105,187,123;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0,0,0;
+  --ion-color-primary-shade: #5ca56c;
+  --ion-color-primary-tint: #78c288;
+}
+
+.ion-color-primary {
+  --ion-color-base: #69bb7b, var(--ion-color-primary);
+  --ion-color-base-rgb: var(--ion-color-primary-rgb);
+  --ion-color-contrast: var(--ion-color-primary-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-primary-contrast-rgb);
+  --ion-color-shade: var(--ion-color-primary-shade);
+  --ion-color-tint: var(--ion-color-primary-tint);
+}

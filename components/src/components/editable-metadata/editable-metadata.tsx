@@ -166,7 +166,11 @@ export class EditableMetadataComponent {
 
               {/* `condition` */}
               <fieldset>
-                <ion-item><p>Condition...</p></ion-item>
+                <ldf-editable-condition
+                  path={`${this.path}/condition`}
+                  condition={this.obj.condition}
+                >
+                </ldf-editable-condition>
               </fieldset>
 
               {/* `source` and `citation` */}

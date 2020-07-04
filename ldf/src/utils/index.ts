@@ -1,3 +1,5 @@
+export * from './categories-to-preference-tree';
 export * from './docs-to-liturgy';
 export * from './docs-to-option';
+export * from './preferences-to-categories';
 export * from './specific-class';

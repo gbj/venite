@@ -1,0 +1,10 @@
+{
+  "date": "Date (Month/Day)",
+  "day": "Liturgical Day",
+  "except": "Except",
+  "feastDay": "When it’s a feast day",
+  "only": "Only",
+  "preference": "Preference",
+  "season": "Season",
+  "weekday": "Day of the Week"
+}

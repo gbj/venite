@@ -40,6 +40,8 @@
 * [ResponsivePrayer](_index_.md#responsiveprayer)
 * [ResponsivePrayerLine](_index_.md#responsiveprayerline)
 * [Rubric](_index_.md#rubric)
+* [SEASONS](_index_.md#seasons)
+* [Seasons](_index_.md#seasons)
 * [SelectableCitation](_index_.md#selectablecitation)
 * [Sharing](_index_.md#sharing)
 * [Source](_index_.md#source)
@@ -48,6 +50,7 @@
 * [User](_index_.md#user)
 * [WEEKDAYS](_index_.md#weekdays)
 * [addOneDay](_index_.md#addoneday)
+* [categoriesToPreferenceTree](_index_.md#categoriestopreferencetree)
 * [dailyOfficeYear](_index_.md#dailyofficeyear)
 * [dateFromYMD](_index_.md#datefromymd)
 * [dateFromYMDString](_index_.md#datefromymdstring)
@@ -59,6 +62,7 @@
 * [filterCanticleTableEntries](_index_.md#filtercanticletableentries)
 * [liturgicalDay](_index_.md#liturgicalday)
 * [liturgicalWeek](_index_.md#liturgicalweek)
+* [preferencesToCategories](_index_.md#preferencestocategories)
 * [rclYear](_index_.md#rclyear)
 * [specificClass](_index_.md#specificclass)
 * [subtractOneDay](_index_.md#subtractoneday)
@@ -270,6 +274,18 @@ ___
 
 ___
 
+###  SEASONS
+
+• **SEASONS**:
+
+___
+
+###  Seasons
+
+• **Seasons**:
+
+___
+
 ###  SelectableCitation
 
 • **SelectableCitation**:
@@ -315,6 +331,12 @@ ___
 ###  addOneDay
 
 • **addOneDay**:
+
+___
+
+###  categoriesToPreferenceTree
+
+• **categoriesToPreferenceTree**:
 
 ___
 
@@ -381,6 +403,12 @@ ___
 ###  liturgicalWeek
 
 • **liturgicalWeek**:
+
+___
+
+###  preferencesToCategories
+
+• **preferencesToCategories**:
 
 ___
 

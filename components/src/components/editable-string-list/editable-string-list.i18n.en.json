@@ -3,8 +3,16 @@
     "add": "Add a Category",
     "list": "Categories"
   },
+  "except": {
+    "add": "Except...",
+    "list": "Except the Following"
+  },
   "liturgyversions": {
     "add": "Add a Liturgy Version",
     "list": "Liturgy Versions"
+  },
+  "only": {
+    "add": "Only",
+    "list": "Only the Following"
   }
 }

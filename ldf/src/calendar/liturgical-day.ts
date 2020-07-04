@@ -1,5 +1,5 @@
 import { LiturgicalColor } from './liturgical-color';
-import { LiturgicalWeek } from './liturgical-week';
+import { LiturgicalWeek, Seasons } from './liturgical-week';
 import { HolyDay } from './holy-day';
 import { dateOnly } from './utils/date-only';
 import { dateFromYMD, dateFromYMDString } from './utils/date-from-ymd';
@@ -9,7 +9,7 @@ interface ObservedInterface {
   slug?: string;
   propers?: string;
   color?: string | LiturgicalColor;
-  season?: 'Advent' | 'Christmas' | 'Epiphany' | 'Lent' | 'HolyWeek' | 'Easter' | 'Ascension' | 'Pentecost' | 'Saints' | 'OrdinaryTime' | undefined;
+  season?: Seasons[number] | undefined;
 }
 
 /**
@@ -53,17 +53,7 @@ export class LiturgicalDay {
   years: { [x: string]: any };
 
   /** A machine-readable identifier for the liturgical season */
-  season:
-    | 'Advent'
-    | 'Christmas'
-    | 'Epiphany'
-    | 'Lent'
-    | 'HolyWeek'
-    | 'Easter'
-    | 'Ascension'
-    | 'Pentecost'
-    | 'Saints'
-    | 'OrdinaryTime';
+  season: Seasons[number];
 
   /**  An array of possible {@link HolyDay}s that fall at this moment. It’s up to the consumer
    * to determine precedence. */

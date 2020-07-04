@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                                                          | Type                                                                               | Default     |
-| ------------- | ------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------- |
-| `path`        | `path`        | A JSON Pointer that points to the text field being edited            | `string`                                                                           | `undefined` |
-| `placeholder` | `placeholder` | Displays if text is falsy or an empty string                         | `string`                                                                           | `undefined` |
-| `short`       | `short`       | Whether to display as a short, single-line input                     | `boolean`                                                                          | `undefined` |
-| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `(PsalmVerse \| Heading)[] \| BibleReadingVerse \| ResponsivePrayerLine \| string` | `""`        |
-| `text`        | `text`        | Starting text for editing                                            | `string`                                                                           | `undefined` |
+| Property      | Attribute     | Description                                                          | Type                                                                                            | Default     |
+| ------------- | ------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------- |
+| `inputType`   | `input-type`  | Type to apply to `<input type=...>`, if `short` is `true`            | `"date" \| "email" \| "number" \| "password" \| "search" \| "tel" \| "text" \| "time" \| "url"` | `undefined` |
+| `path`        | `path`        | A JSON Pointer that points to the text field being edited            | `string`                                                                                        | `undefined` |
+| `placeholder` | `placeholder` | Displays if text is falsy or an empty string                         | `string`                                                                                        | `undefined` |
+| `short`       | `short`       | Whether to display as a short, single-line input                     | `boolean`                                                                                       | `undefined` |
+| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `(PsalmVerse \| Heading)[] \| BibleReadingVerse \| ResponsivePrayerLine \| string`              | `""`        |
+| `text`        | `text`        | Starting text for editing                                            | `string`                                                                                        | `undefined` |
 
 
 ## Events
@@ -31,6 +32,7 @@
 ### Used by
 
  - [ldf-editable-metadata](../editable-metadata)
+ - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
  - [ldf-heading](../heading)
  - [ldf-psalm](../psalm)
  - [ldf-refrain](../refrain)
@@ -47,6 +49,7 @@
 graph TD;
   ldf-editable-text --> ion-input
   ldf-editable-metadata --> ldf-editable-text
+  ldf-editable-metadata-metadata-fields --> ldf-editable-text
   ldf-heading --> ldf-editable-text
   ldf-psalm --> ldf-editable-text
   ldf-refrain --> ldf-editable-text

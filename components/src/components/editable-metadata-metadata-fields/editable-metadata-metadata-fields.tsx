@@ -158,9 +158,7 @@ export class EditableMetadataMetadataFieldsComponent {
       switch(field.type) {
         // TODO
         case Field.BibleReadingIntro:
-        
-        case Field.Preferences:
-          nodes.push(<code>{field.field}</code>);
+          nodes.push(<code>Bible Reading Intro</code>)
           break;
 
         // Done
@@ -184,6 +182,15 @@ export class EditableMetadataMetadataFieldsComponent {
               placeholder={placeholder}
               text={currentValue}
             ></ldf-editable-text>
+          );
+          break;
+        case Field.Preferences:
+          nodes.push(
+            <ldf-editable-preferences
+              path={`${this.path}/${field.field}`}
+              preferences={currentValue}
+            >
+            </ldf-editable-preferences>
           );
           break;
         case Field.String:

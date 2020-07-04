@@ -1,5 +1,5 @@
 import { Component, Element, State, Prop, Event, EventEmitter, h } from '@stencil/core';
-import { modalController } from '@ionic/core';
+import { modalController, ComponentProps } from '@ionic/core';
 import { LiturgicalDocument } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
@@ -63,17 +63,34 @@ export class EditableMetadataButtonsComponent {
 
   /** Display a modal `EditableMetadataComponent` */
   async openSettings() {
+    return this.openModal('ldf-editable-metadata');
+  }
+
+  /** Display a modal `EditableConditionComponent` */
+  async openCondition() {
+    return this.openModal(
+      'ldf-editable-condition',
+      `${this.base}/${this.index}/condition`,
+      { condition: this.obj.condition }
+    );
+  }
+
+  async openModal(component: string, componentPath : string = undefined, componentProps : ComponentProps = undefined) {
     const modal = await modalController.create({
-      component: 'ldf-editable-metadata',
-      
+      component
     })
+
+    const path = componentPath || (this.base && this.index >= 0 ? `${this.base}/${this.index}` : '/');
+
     modal.componentProps = {
+      ... componentProps,
       modal,
       doc: this.obj,
-      path: this.base && this.index ? `${this.base}/${this.index}` : '/',
+      path,
       visible: true,
       collapsed: false
     }
+  
     // present the modal
     return modal.present();
   }
@@ -109,6 +126,12 @@ export class EditableMetadataButtonsComponent {
             {/*localeStrings.settings*/}
             <ion-icon slot='icon-only' name='cog'></ion-icon>
           </ion-button>
+
+          {/* "Condition" Button */}
+          {this.base && hasIndex && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
+            {/*localeStrings.condition*/}
+            <ion-icon slot='icon-only' name='calendar'></ion-icon>
+          </ion-button>}
 
           {/* "Delete" Button */}
           {/* Only show 'Delete' if there's an index, i.e., if it appears as part of a `Liturgy.value[]` */}

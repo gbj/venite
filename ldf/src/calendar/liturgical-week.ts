@@ -1,5 +1,8 @@
 import { LiturgicalColor } from './liturgical-color';
 
+export const SEASONS = ['Advent', 'Christmas', 'Epiphany', 'Lent', 'HolyWeek', 'Easter', 'Ascension', 'Pentecost', 'Saints', 'OrdinaryTime'];
+export type Seasons = typeof SEASONS;
+
 export class LiturgicalWeek {
   /**
    * An identifying slug that distinguishes this week from all others
@@ -22,17 +25,7 @@ export class LiturgicalWeek {
   week: number;
 
   /** A machine-readable identifier for the liturgical season */
-  season:
-    | 'Advent'
-    | 'Christmas'
-    | 'Epiphany'
-    | 'Lent'
-    | 'HolyWeek'
-    | 'Easter'
-    | 'Ascension'
-    | 'Pentecost'
-    | 'Saints'
-    | 'OrdinaryTime';
+  season: Seasons[number];
 
   /** A human-readable name for the week, in English */
   name: string;
