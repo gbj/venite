@@ -1195,6 +1195,19 @@ export class LdfEditableAddBlockMenu {
   }
 }
 
+export declare interface LdfEditableBoolean extends Components.LdfEditableBoolean {}
+@ProxyCmp({inputs: ['path', 'property', 'value']})
+@Component({ selector: 'ldf-editable-boolean', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'property', 'value'] })
+export class LdfEditableBoolean {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableDelete extends Components.LdfEditableDelete {}
 @ProxyCmp({inputs: ['base', 'index', 'obj']})
 @Component({ selector: 'ldf-editable-delete', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj'] })
@@ -1245,6 +1258,19 @@ export class LdfEditableMetadataButtons {
   }
 }
 
+export declare interface LdfEditableMetadataMetadataFields extends Components.LdfEditableMetadataMetadataFields {}
+@ProxyCmp({inputs: ['doc', 'path']})
+@Component({ selector: 'ldf-editable-metadata-metadata-fields', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'path'] })
+export class LdfEditableMetadataMetadataFields {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableSelect extends Components.LdfEditableSelect {}
 @ProxyCmp({inputs: ['options', 'path', 'property', 'value']})
 @Component({ selector: 'ldf-editable-select', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'path', 'property', 'value'] })
@@ -1258,9 +1284,22 @@ export class LdfEditableSelect {
   }
 }
 
+export declare interface LdfEditableStringList extends Components.LdfEditableStringList {}
+@ProxyCmp({inputs: ['path', 'property', 'value']})
+@Component({ selector: 'ldf-editable-string-list', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'property', 'value'] })
+export class LdfEditableStringList {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableText extends Components.LdfEditableText {}
-@ProxyCmp({inputs: ['path', 'placeholder', 'short', 'template', 'text']})
-@Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'placeholder', 'short', 'template', 'text'] })
+@ProxyCmp({inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'text']})
+@Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'text'] })
 export class LdfEditableText {
   ldfCursorMoved!: EventEmitter<CustomEvent>;
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
