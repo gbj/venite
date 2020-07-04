@@ -128,7 +128,7 @@ export class EditableMetadataButtonsComponent {
           </ion-button>
 
           {/* "Condition" Button */}
-          {this.base && hasIndex && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
+          {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
             {/*localeStrings.condition*/}
             <ion-icon slot='icon-only' name='calendar'></ion-icon>
           </ion-button>}

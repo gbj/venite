@@ -24,7 +24,7 @@
 
 Ƭ **LookupTypeTuple**: *typeof LOOKUP_TYPES*
 
-*Defined in [liturgical-document.ts:15](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/liturgical-document.ts#L15)*
+*Defined in [liturgical-document.ts:15](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/liturgical-document.ts#L15)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 Ƭ **TypeTuple**: *typeof TYPES*
 
-*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/liturgical-document.ts#L12)*
+*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/liturgical-document.ts#L12)*
 
 ## Variables
 
@@ -40,7 +40,7 @@ ___
 
 • **LOOKUP_TYPES**: *string[]* = ['lectionary', 'canticle-table', 'category', 'slug', 'collect']
 
-*Defined in [liturgical-document.ts:14](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/liturgical-document.ts#L14)*
+*Defined in [liturgical-document.ts:14](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/liturgical-document.ts#L14)*
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 • **TYPES**: *["liturgy", "heading", "option", "refrain", "rubric", "text", "responsive", "bible-reading", "psalm", "meditation"]* = ['liturgy', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const
 
-*Defined in [liturgical-document.ts:11](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/liturgical-document.ts#L11)*
+*Defined in [liturgical-document.ts:11](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/liturgical-document.ts#L11)*

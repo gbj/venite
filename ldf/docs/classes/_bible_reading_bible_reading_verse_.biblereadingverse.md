@@ -21,7 +21,7 @@
 
 • **book**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:2](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/bible-reading/bible-reading-verse.ts#L2)*
+*Defined in [bible-reading/bible-reading-verse.ts:2](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/bible-reading/bible-reading-verse.ts#L2)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **chapter**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:3](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/bible-reading/bible-reading-verse.ts#L3)*
+*Defined in [bible-reading/bible-reading-verse.ts:3](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/bible-reading/bible-reading-verse.ts#L3)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **text**: *string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
+*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **verse**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:4](https://github.com/gbj/venite/blob/9ae5a08/ldf/src/bible-reading/bible-reading-verse.ts#L4)*
+*Defined in [bible-reading/bible-reading-verse.ts:4](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/bible-reading/bible-reading-verse.ts#L4)*
