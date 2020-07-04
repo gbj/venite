@@ -1208,6 +1208,32 @@ export class LdfEditableBoolean {
   }
 }
 
+export declare interface LdfEditableCondition extends Components.LdfEditableCondition {}
+@ProxyCmp({inputs: ['condition', 'modal', 'path']})
+@Component({ selector: 'ldf-editable-condition', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['condition', 'modal', 'path'] })
+export class LdfEditableCondition {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
+export declare interface LdfEditableConditionPiece extends Components.LdfEditableConditionPiece {}
+@ProxyCmp({inputs: ['condition', 'path']})
+@Component({ selector: 'ldf-editable-condition-piece', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['condition', 'path'] })
+export class LdfEditableConditionPiece {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableDelete extends Components.LdfEditableDelete {}
 @ProxyCmp({inputs: ['base', 'index', 'obj']})
 @Component({ selector: 'ldf-editable-delete', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj'] })
@@ -1262,6 +1288,19 @@ export declare interface LdfEditableMetadataMetadataFields extends Components.Ld
 @ProxyCmp({inputs: ['doc', 'path']})
 @Component({ selector: 'ldf-editable-metadata-metadata-fields', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'path'] })
 export class LdfEditableMetadataMetadataFields {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
+export declare interface LdfEditablePreference extends Components.LdfEditablePreference {}
+@ProxyCmp({inputs: ['path', 'preferences']})
+@Component({ selector: 'ldf-editable-preference', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'preferences'] })
+export class LdfEditablePreference {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

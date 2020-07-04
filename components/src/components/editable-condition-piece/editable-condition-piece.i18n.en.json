@@ -2,9 +2,17 @@
   "date": "Date (Month/Day)",
   "day": "Liturgical Day",
   "except": "Except",
-  "feastDay": "When it’s a feast day",
+  "feastDay": "Only on Holy Days and Sundays",
+  "gt": "After",
+  "gte": "On or After",
+  "lt": "Before",
+  "lte": "Before or On",
   "only": "Only",
   "preference": "Preference",
+  "preferenceIs": "=",
+  "preferenceIsNot": "≠",
+  "preferenceKey": "Key",
+  "preferenceValue": "Value",
   "season": "Season",
   "weekday": "Day of the Week"
 }

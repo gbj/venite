@@ -74,7 +74,7 @@ export class EditableStringListComponent {
       path: `${this.path}/${this.property}`,
       op: [{
         type: 'insertAt',
-        index: this.value.length - 1,
+        index: this.value.length,
         value: this.currentValue
       }]
     });

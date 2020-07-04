@@ -1,6 +1,7 @@
 import { Component, Element, Prop, Event, EventEmitter, h, Host, State, Watch } from '@stencil/core';
-import { Change, Condition, SEASONS } from '@venite/ldf';
+import { Change, Condition, SEASONS, WEEKDAYS } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
+import { ExceptOnly } from './except-only';
 
 @Component({
   tag: 'ldf-editable-condition-piece',
@@ -53,42 +54,98 @@ export class EditableConditionComponent {
     }
   }
 
-  // TODO -- emit changes
-  toggleExceptOnly(field : string, subfield : string, value : string) {
-    console.log('toggling', value, 'in', field, subfield);
-    if(!this.workingCondition[field]) {
-      // TODO -- emit change
-      this.workingCondition[field] = {
-        except: new Array(),
-        only: new Array()
-      }
+  // Sets or clears one of the `Condition.___` fields (`season`, `day`, etc.)
+  toggleSubcondition(subcondition : string, active : boolean, template : any) {
+    if(active && this.workingCondition[subcondition] == undefined) {
+      this.workingCondition = new Condition({
+        ... this.workingCondition,
+        [subcondition]: template
+      });
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/${subcondition}`,
+        op: [{
+          type: 'set',
+          value: template
+        }]
+      }));
+    } else {
+      const oldValue = this.workingCondition[subcondition];
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/${subcondition}`,
+        op: [{
+          type: 'delete',
+          oldValue
+        }]
+      }));
+      this.workingCondition[subcondition] = undefined;
+      this.workingCondition = new Condition(this.workingCondition);
     }
+  }
+
+  toggleExceptOnly(field : string, subfield : string, value : string) {
     const list = this.workingCondition[field][subfield],
           index = list.indexOf(value);
     if(index == -1) {
       list.push(value);
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/${field}/${subfield}`,
+        op: [{
+          type: 'insertAt',
+          index: list.length,
+          value
+        }]
+      }));
     } else {
       const index = list.indexOf(value);
       list.splice(index, 1);
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/${field}/${subfield}`,
+        op: [{
+          type: 'deleteAt',
+          index,
+          oldValue: value
+        }]
+      }));
     }
 
     this.workingCondition = new Condition({ ... this.workingCondition });
-
-    console.log(this.workingCondition);
   }
 
-  // Sets or clears one of the `Condition.___` fields (`season`, `day`, etc.)
-  toggleSubcondition(subcondition : string, active : boolean, template : any) {
-    if(active && this.condition[subcondition] == undefined) {
-      this.condition = new Condition({
-        ... this.condition,
-        [subcondition]: template
-      });
-      // TODO emit change
-    } else {
-      this.condition[subcondition] = undefined;
-      this.condition = new Condition(this.condition);
-    }
+  setDateField(field : 'gt' | 'gte' | 'lt' | 'lte', dateString : string) {
+    const date = new Date(Date.parse(dateString)),
+          m = date.getMonth()+1,
+          d = date.getDate(),
+          value = `${m}/${d}`,
+          oldValue = this.workingCondition?.date[field];
+    this.ldfDocShouldChange.emit(new Change({
+      path: `${this.path}/date/${field}`,
+      op: [{
+        type: 'set',
+        value,
+        oldValue
+      }]
+    }));
+  }
+
+  preferenceIs(value : boolean) {
+    const oldValue = this.workingCondition?.preference?.is;
+
+    this.workingCondition = new Condition({
+      ... this.workingCondition,
+      preference: {
+        ... this.workingCondition.preference,
+        is: value
+      }
+    });
+    this.ldfDocShouldChange.emit(new Change({
+      path: `${this.path}/preference`,
+      op: [{
+        type: 'set',
+        index: 'is',
+        value,
+        oldValue
+      }]
+    }));
   }
 
   render() {
@@ -96,35 +153,138 @@ export class EditableConditionComponent {
 
     return (
       <Host>
+        {/* Feast Day */}
+        <ion-item>
+          <ion-label>{localeStrings.feastDay}</ion-label>
+          <ion-toggle
+            checked={this.workingCondition.feastDay !== undefined}
+            onIonChange={(ev) => this.toggleSubcondition('feastDay', ev.detail.checked, ev.detail.checked)}
+          ></ion-toggle>
+        </ion-item>
+
+        {/* Season */}
+        <ExceptOnly
+          field="season"
+          localeStrings={localeStrings}
+          options={SEASONS}
+          currentCondition={this.workingCondition?.season}
+          onToggleSubcondition={(subcondition, active, template) => this.toggleSubcondition(subcondition, active, template)}
+          onToggleValue={(field, subfield, value) => this.toggleExceptOnly(field, subfield, value)}
+        ></ExceptOnly>
+
+        {/* Weekday */}
+        <ExceptOnly
+          field="weekday"
+          localeStrings={localeStrings}
+          options={WEEKDAYS}
+          currentCondition={this.workingCondition?.weekday}
+          onToggleSubcondition={(subcondition, active, template) => this.toggleSubcondition(subcondition, active, template)}
+          onToggleValue={(field, subfield, value) => this.toggleExceptOnly(field, subfield, value)}
+        ></ExceptOnly>
+
+        {/* Date */}
         <article>
           <ion-item>
-            <ion-label>{localeStrings.season}</ion-label>
+            <ion-label>{localeStrings.date}</ion-label>
             <ion-toggle
-              checked={this.condition.season !== undefined}
-              onIonChange={(ev) => this.toggleSubcondition('season', ev.detail.checked, {
+              checked={this.workingCondition.date !== undefined}
+              onIonChange={(ev) => this.toggleSubcondition('date', ev.detail.checked, {})}
+            ></ion-toggle>
+          </ion-item>
+          {this.workingCondition.date !== undefined && <div class="type">
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.lte}</ion-label>
+              <ion-datetime
+                displayFormat="MMMM D"
+                onIonChange={(ev) => this.setDateField('lte', ev.detail.value)}
+              ></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.lt}</ion-label>
+              <ion-datetime
+                displayFormat="MMMM D"
+                onIonChange={(ev) => this.setDateField('lt', ev.detail.value)}
+              ></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.gte}</ion-label>
+              <ion-datetime
+                displayFormat="MMMM D"
+                onIonChange={(ev) => this.setDateField('gte', ev.detail.value)}
+              ></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.gt}</ion-label>
+              <ion-datetime
+                displayFormat="MMMM D"
+                onIonChange={(ev) => this.setDateField('gt', ev.detail.value)}
+              ></ion-datetime>
+            </ion-item>
+          </div>}
+        </article>
+
+        {/* Preference */}
+        <article>
+          <ion-item>
+            <ion-label>{localeStrings.preference}</ion-label>
+            <ion-toggle
+              checked={this.workingCondition.preference !== undefined}
+              onIonChange={(ev) => this.toggleSubcondition('preference', ev.detail.checked, {
+                key: '', is: true, value: ''
+              })}
+            ></ion-toggle>
+          </ion-item>
+          {this.workingCondition.preference !== undefined && <div class="type">
+            <ion-item lines="none">
+              <ldf-editable-text
+                short={true}
+                inputType="text"
+                path={`${this.path}/preference/key`}
+                placeholder={localeStrings.preferenceKey}
+              ></ldf-editable-text>
+              <ion-select
+                value={this.workingCondition.preference.is}
+                onIonChange={(ev) => this.preferenceIs(ev.detail.value)}
+              >
+                <ion-select-option value={true}>{localeStrings.preferenceIs}</ion-select-option>
+                <ion-select-option value={false}>{localeStrings.preferenceIsNot}</ion-select-option>
+              </ion-select>
+              <ldf-editable-text
+                short={true}
+                inputType="text"
+                path={`${this.path}/preference/value`}
+                placeholder={localeStrings.preferenceValue}
+              ></ldf-editable-text>
+            </ion-item>
+          </div>}
+        </article>
+
+        {/* Liturgical Day */}
+        <article>
+          <ion-item>
+            <ion-label>{localeStrings.day}</ion-label>
+            <ion-toggle
+              checked={this.workingCondition.day !== undefined}
+              onIonChange={(ev) => this.toggleSubcondition('day', ev.detail.checked, {
                 except: [], only: []
               })}
             ></ion-toggle>
           </ion-item>
-          {this.condition.season !== undefined && <div class="type">
-              <h4>{localeStrings.only}</h4>
-                {SEASONS.map(season => {
-                  const isSelected = this.workingCondition?.season?.only?.includes(season);
-                  return <ion-chip
-                      onClick={() => this.toggleExceptOnly('season', 'only', season)}
-                      color={isSelected ? 'primary' : 'light'}
-                    >{season}</ion-chip>
-                })}
-              <h4>{localeStrings.except}</h4>
-              {SEASONS.map(season => {
-                  const isSelected = this.workingCondition?.season?.except?.includes(season);
-                  return <ion-chip
-                      onClick={() => this.toggleExceptOnly('season', 'except', season)}
-                      color={isSelected ? 'primary' : 'light'}
-                    >{season}</ion-chip>
-                })}
-            </div>}
-        </article>        
+          {this.workingCondition.day !== undefined && <div class="type">
+            <h4>{localeStrings.except}</h4>
+            <ldf-editable-string-list
+              path={`${this.path}/day`}
+              property='except'
+              value={this.workingCondition.day.except}
+            ></ldf-editable-string-list>
+            <h4>{localeStrings.only}</h4>
+            <ldf-editable-string-list
+              path={`${this.path}/day`}
+              property='only'
+              value={this.workingCondition.day.only}
+            ></ldf-editable-string-list>
+          </div>}
+        </article>
       </Host>
     );
   }

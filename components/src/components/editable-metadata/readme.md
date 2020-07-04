@@ -34,6 +34,7 @@
 - ion-list
 - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
 - [ldf-editable-string-list](../editable-string-list)
+- [ldf-editable-condition](../editable-condition)
 
 ### Graph
 ```mermaid
@@ -52,6 +53,7 @@ graph TD;
   ldf-editable-metadata --> ion-list
   ldf-editable-metadata --> ldf-editable-metadata-metadata-fields
   ldf-editable-metadata --> ldf-editable-string-list
+  ldf-editable-metadata --> ldf-editable-condition
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   ldf-editable-select --> ion-select
@@ -72,6 +74,33 @@ graph TD;
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
   ion-chip --> ion-ripple-effect
+  ldf-editable-condition --> ion-header
+  ldf-editable-condition --> ion-toolbar
+  ldf-editable-condition --> ion-title
+  ldf-editable-condition --> ion-buttons
+  ldf-editable-condition --> ion-button
+  ldf-editable-condition --> ion-icon
+  ldf-editable-condition --> ion-content
+  ldf-editable-condition --> ion-list
+  ldf-editable-condition --> ion-item
+  ldf-editable-condition --> ion-label
+  ldf-editable-condition --> ion-checkbox
+  ldf-editable-condition --> ion-radio-group
+  ldf-editable-condition --> ion-radio
+  ldf-editable-condition --> ldf-editable-delete
+  ldf-editable-condition --> ldf-editable-condition-piece
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
+  ldf-editable-condition-piece --> ion-item
+  ldf-editable-condition-piece --> ion-label
+  ldf-editable-condition-piece --> ion-toggle
+  ldf-editable-condition-piece --> ion-datetime
+  ldf-editable-condition-piece --> ldf-editable-text
+  ldf-editable-condition-piece --> ion-select
+  ldf-editable-condition-piece --> ion-select-option
+  ldf-editable-condition-piece --> ldf-editable-string-list
+  ldf-editable-condition-piece --> ion-chip
   style ldf-editable-metadata fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

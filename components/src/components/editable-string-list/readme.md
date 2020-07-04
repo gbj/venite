@@ -25,6 +25,7 @@
 
 ### Used by
 
+ - [ldf-editable-condition-piece](../editable-condition-piece)
  - [ldf-editable-metadata](../editable-metadata)
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
 
@@ -50,6 +51,7 @@ graph TD;
   ion-item --> ion-ripple-effect
   ion-chip --> ion-ripple-effect
   ion-button --> ion-ripple-effect
+  ldf-editable-condition-piece --> ldf-editable-string-list
   ldf-editable-metadata --> ldf-editable-string-list
   ldf-editable-metadata-metadata-fields --> ldf-editable-string-list
   style ldf-editable-string-list fill:#f9f,stroke:#333,stroke-width:4px

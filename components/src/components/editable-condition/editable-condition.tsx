@@ -84,7 +84,7 @@ export class EditableConditionComponent {
   setAndOr(value : 'and' | 'or') {
     this.currentCondition.mode = value;
     this.ldfDocShouldChange.emit(new Change({
-      path: `${this.path}/condition`,
+      path: `${this.path}`,
       op: [ { type: 'set', index: 'mode', value: value, oldValue: this.currentCondition.mode } ]
     }));
   }
@@ -99,7 +99,7 @@ export class EditableConditionComponent {
     }
     console.log('current conditions', this.currentCondition.conditions);
     this.ldfDocShouldChange.emit(new Change({
-      path: `${this.path}/condition`,
+      path: `${this.path}/conditions`,
       op: [ { type: 'insertAt', index: this.currentCondition.conditions.length, value: new Condition() } ]
     }));
   }
@@ -111,7 +111,7 @@ export class EditableConditionComponent {
       <Host>
         <ion-header>
           <ion-toolbar>
-            <ion-title>{ localeStrings.modalTitle }</ion-title>
+            <ion-title>{ localeStrings.condition }</ion-title>
             <ion-buttons slot="primary">
               <ion-button onClick={() => this.modal.dismiss(null)}>
                 <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -121,8 +121,6 @@ export class EditableConditionComponent {
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-list-header><ion-label>{localeStrings.condition}</ion-label></ion-list-header>
-
             {/* Include any condition? */}
             <ion-item lines="none">
               <ion-label>{localeStrings.hasCondition}</ion-label>
@@ -151,10 +149,11 @@ export class EditableConditionComponent {
 
             {this.currentCondition?.conditions?.map((condition, ii) => [
                   <ion-toolbar>
+                    <ion-title slot="start">{localeStrings.condition} {ii+1}</ion-title>
                     <ion-buttons slot="end">
                       {/* Delete Button */}
                       <ldf-editable-delete slot="end"
-                        base={`${this.path}/condition/conditions`}
+                        base={`${this.path}/conditions`}
                         index={ii}
                         obj={condition}
                       >
@@ -162,7 +161,7 @@ export class EditableConditionComponent {
                     </ion-buttons>
                   </ion-toolbar>,
                   (<ldf-editable-condition-piece
-                    path={`${this.path}/condition/conditions/${ii}`}
+                    path={`${this.path}/conditions/${ii}`}
                     condition={condition}
                   ></ldf-editable-condition-piece>)                   
                 ])
