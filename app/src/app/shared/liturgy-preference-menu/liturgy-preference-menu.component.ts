@@ -6,7 +6,7 @@ import { map, mergeMap, switchMap, tap, filter, share } from 'rxjs/operators';
 
 import { PreferencesService } from '../../preferences/preferences.service';
 
-import { Liturgy, Preference, ClientPreferences } from '@venite/ldf';
+import { Liturgy, Preference, ClientPreferences, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
 
 interface TreeData {
   preferences: [string, Preference][];
@@ -69,30 +69,21 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
       // don't use null values of preferences
       filter(preferences => !!preferences),
 
-      // transform into key-value pairs
-      map(currentValue => Object.entries(currentValue)),
-
       // transform preferences into categories
       map(preferences => ({
         preferences,
-        categories: preferences.map(([key, pref]) => pref.category || 'Preferences')
-          .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], [])
+        categories: preferencesToCategories(preferences)
       })),
       // build preference_tree
       // { "Supplemental Devotions": [...], "Preferences": [...], etc. }
       map(({ preferences, categories }) => ({
         preferences,
         categories,
-        preference_tree: categories.reduce((obj, category) => (
-          {
-            ... obj,
-            [category]: preferences.filter(([key, pref]) => pref.category == category || (!pref.category && category == 'Preferences'))
-          }
-        ), {})
+        preference_tree: categoriesToPreferenceTree(categories, preferences)
       })),
       // sort categories from shortest to longest
       map(({ preferences, categories, preference_tree}) => ({
-        preferences,
+        preferences: Object.entries(preferences),
         categories: categories.sort((a, b) => preference_tree[a].length - preference_tree[b].length),
         preference_tree
       }))

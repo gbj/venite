@@ -27,7 +27,7 @@ export class PrayService {
     const doc = docBase instanceof LiturgicalDocument ? docBase : new LiturgicalDocument(docBase);
 
     // should the doc be included?
-    if(doc.include(day, prefs)) {
+    if(doc.include(new LiturgicalDay(day), prefs)) {
 
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
       if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
@@ -38,7 +38,7 @@ export class PrayService {
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
-          ... this.latestChildren$
+          ... this.latestChildren$.map(child$ => child$.pipe(startWith(undefined)))
         ).pipe(
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
@@ -51,7 +51,14 @@ export class PrayService {
       if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
         return this.lookup(doc, day, prefs, []).pipe(
           // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
-          switchMap(doc => this.compile(doc, day, prefs))
+          map(data => {
+            const doc = new LiturgicalDocument(data);
+            if(doc.include(new LiturgicalDay(day), prefs)) {
+              return doc;
+            } else {
+              return undefined;
+            }
+          })
         );
       }
     

@@ -30,7 +30,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@venite/angular": "^0.5.0",
     "@venite/components": "^0.5.1",
-    "@venite/ldf": "^0.5.3",
+    "@venite/ldf": "^0.6.0",
     "firebase": "^7.14.4",
     "json-pointer": "^0.6.0",
     "ot-json1": "github:ottypes/json1",
