@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
-import { Observable, of, from } from 'rxjs';
-import { switchMap, map, tap } from 'rxjs/operators';
+import { Observable, of, from, merge, Subject } from 'rxjs';
+import { switchMap, map, tap, filter } from 'rxjs/operators';
 
 import { AuthService } from '../auth/auth.service';
 import { LocalStorageService } from './localstorage.service';
@@ -14,6 +14,9 @@ import { LiturgicalDocument } from '@venite/ldf';
   providedIn: 'root'
 })
 export class PreferencesService {
+  private _updated : {
+    [key: string]: Subject<StoredPreference>
+  } = {};
 
   constructor(
     private readonly afs: AngularFirestore,
@@ -44,11 +47,15 @@ export class PreferencesService {
     } else {
       this.storage.set(this.localStorageKey(key, liturgy), prefDoc);
     }
+
+    if(!this._updated[key]) {
+      this._updated[key] = new Subject();
+    }
+    this._updated[key].next(prefDoc);
   }
 
   // Gets a single preference by key
-  get(key : string) : Observable<StoredPreference[]> {
-    console.log('get preferences for ', this.auth.user);
+  getStored(key : string) : Observable<StoredPreference> {
     return this.auth.user
       .pipe(
         map(user => [user?.uid, key]),
@@ -58,7 +65,10 @@ export class PreferencesService {
             return this.afs.collection<StoredPreference>('Preference', ref =>
               ref.where('uid', '==', uid)
                  .where('key', '==', key)
-            ).valueChanges()
+            ).valueChanges().pipe(
+              // take only the first thing returned if multiple for query
+              map(values => values[0])
+            )
           }
           // otherwise use local storage
           else {
@@ -66,6 +76,22 @@ export class PreferencesService {
           }
         })
       );
+  }
+
+  getUpdated(key : string) : Observable<StoredPreference> {
+    if(!this._updated[key]) {
+      this._updated[key] = new Subject();
+    }
+    return this._updated[key];
+  }
+
+  get(key : string) : Observable<StoredPreference> {
+    return merge(
+      this.getUpdated(key),
+      this.getStored(key)
+    ).pipe(
+      filter(value => value !== undefined)
+    );
   }
 
   /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version

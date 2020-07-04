@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, take } from 'rxjs/operators';
+import { mapTo, switchMap, map, tap, filter, take, startWith } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek } from '@venite/ldf';
 import { DocumentService } from '../services/document.service';
 import { CalendarService } from '../services/calendar.service';
 import { PrayService } from './pray.service';
+import { ModalController } from '@ionic/angular';
+import { DisplaySettingsComponent } from './display-settings/display-settings.component';
+import { DisplaySettings } from './display-settings/display-settings';
+import { PreferencesService } from '../preferences/preferences.service';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -24,12 +28,17 @@ export class PrayPage implements OnInit {
   // Liturgy data to be loaded from the database if we come straight to this page
   state$ : Observable<PrayState>;
 
+  // Display settings
+  settings$ : Observable<DisplaySettings>;
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
     private documents : DocumentService,
     private calendarService : CalendarService,
-    public prayService : PrayService
+    public prayService : PrayService,
+    private modal : ModalController,
+    private preferencesService : PreferencesService
   ) { }
 
   ngOnInit() {
@@ -92,6 +101,55 @@ export class PrayPage implements OnInit {
       filter(state => state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs')),
       switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs)),
     );
+
+    // Grab display settings from preferences
+    this.settings$ = combineLatest([
+      this.grabPreference('dropcaps'),
+      this.grabPreference('response'),
+      this.grabPreference('repeatAntiphon'),
+      this.grabPreference('fontscale'),
+      this.grabPreference('font'),
+      this.grabPreference('voiceRate'),
+      this.grabPreference('voiceBackground'),
+      this.grabPreference('voiceBackgroundVolume'),
+      this.grabPreference('psalmVerses'),
+      this.grabPreference('bibleVerses'),
+      this.grabPreference('meditationBell'),
+      this.grabPreference('darkmode')
+    ]).pipe(
+      map(settings => new DisplaySettings( ... settings))
+    );
   }
 
+  /* Display Settings */
+  async openSettings(settings : DisplaySettings) {
+    const modal = await this.modal.create({
+      component: DisplaySettingsComponent,
+    });
+
+    modal.componentProps = {
+      settings,
+      modal
+    };
+
+    await modal.present();
+  }
+
+  grabPreference(key : string) : Observable<any> {
+    return this.preferencesService.get(key).pipe(startWith(undefined)).pipe(
+      map(keyvalue => keyvalue?.value)
+    );
+  }
+
+  processSettings(settings : DisplaySettings) : string[] {
+    return [
+      `dropcaps-${settings.dropcaps}`,
+      `response-${settings.response}`,
+      `repeat-antiphon-${settings.repeatAntiphon}`,
+      `fontscale-${settings.fontscale.toString()}`,
+      `font-${settings.font}`,
+      `psalmverses-${settings.psalmVerses}`,
+      `bibleverses-${settings.bibleVerses}`
+    ];
+  }
 }

@@ -1,0 +1,113 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>{{ 'displaySettings.display-settings' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="uid$ | async as uid">
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.display-mode' | translate }}</ion-label>
+    <ion-segment [value]="settings.darkmode" (ionChange)="updateSetting(uid, 'darkmode', $event)">
+      <ion-segment-button value="auto">{{ 'displaySettings.Auto' | translate }}</ion-segment-button>
+      <ion-segment-button value="light">{{ 'displaySettings.Light' | translate }}</ion-segment-button>
+      <ion-segment-button value="dark">{{ 'displaySettings.Dark' | translate }}</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Voice' | translate }}</ion-label>
+    <ion-select [value]="settings.voiceChoice" (ionChange)="updateSetting(uid, 'voiceChoice', $event)">
+      <ion-select-option *ngFor="let voice of voicesWithNationalities" [value]="voice.voice.name">{{ voice.voice.name }} ({{ voice.nationality }})</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="backgroundEnabled">
+    <ion-label position="stacked">{{ 'displaySettings.Background-Sounds' | translate }}</ion-label>
+    <ion-select [value]="settings.voiceBackground" (ionChange)="updateSetting(uid, 'voiceBackground', $event)">
+      <ion-select-option value="silence">None</ion-select-option>
+      <ion-select-option value="seashore">Seashore</ion-select-option>
+      <ion-select-option value="garden">Garden</ion-select-option>
+      <ion-select-option value="night">Night</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="backgroundEnabled">
+    <ion-range min="0" max="1" step="0.1" snaps="true" ticks="false" [value]="settings.voiceBackgroundVolume" (ionChange)="updateSetting(uid, 'voiceBackgroundVolume', $event)">
+      <ion-label slot="start">
+        <ion-icon name="volume-mute" slot="icon-only"></ion-icon>
+        <span class="display-hidden">{{ 'displaySettings.Low' | translate }}</span>
+      </ion-label>
+      <ion-label slot="end">
+        <ion-icon name="volume-high" slot="icon-only"></ion-icon>
+        <span class="display-hidden">{{ 'displaySettings.High' | translate }}</span>
+      </ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-range min="0.5" max="1.5" step="0.1" snaps="true" ticks="false" [value]="settings.voiceRate" (ionChange)="updateSetting(uid, 'voiceRate', $event)">
+      <ion-label slot="start">0.5x</ion-label>
+      <ion-label slot="end">1.5x</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Meditation-Bell' | translate }}</ion-label>
+    <ion-select [value]="settings.meditationBell" (ionChange)="updateSetting(uid, 'meditationBell', $event)">
+      <ion-select-option value="silence">{{ 'displaySettings.None' | translate }}</ion-select-option>
+      <ion-select-option value="singing-bowl">{{ 'displaySettings.Singing-Bowl' | translate }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Font-Size' | translate }}</ion-label>
+    <ion-select [value]="settings.fontscale" (ionChange)="updateSetting(uid, 'fontscale', $event)">
+      <ion-select-option value="s"><ion-label>{{ 'displaySettings.Size.S' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="m"><ion-label>{{ 'displaySettings.Size.M' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="l"><ion-label>{{ 'displaySettings.Size.L' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="xl"><ion-label>{{ 'displaySettings.Size.XL' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="xxl"><ion-label>{{ 'displaySettings.Size.XXL' | translate }}</ion-label></ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Font' | translate }}</ion-label>
+    <ion-segment [value]="settings.font" (ionChange)="updateSetting(uid, 'font', $event)">
+      <ion-segment-button value="garamond" style="font-family: 'EB Garamond'">Garamond</ion-segment-button>
+      <ion-segment-button value="gill-sans" style="font-family: 'Gill Sans'">Gill Sans</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Dropcaps' | translate }}</ion-label>
+    <ion-segment [value]="settings.dropcaps" (ionChange)="updateSetting(uid, 'dropcaps', $event)">
+      <ion-segment-button value="decorated">
+        <div class="dropcaps-decorated"><span class="drop">A</span></div>
+      </ion-segment-button>
+      <ion-segment-button value="plain">
+        <div class="dropcaps-plain"><span class="drop">A</span></div>
+      </ion-segment-button>
+      <ion-segment-button value="none">A</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Antiphons' | translate }}</ion-label>
+    <ion-select [value]="settings.repeatAntiphon" (ionChange)="updateSetting(uid, 'repeatAntiphon', $event)">
+      <ion-select-option value="bracket">{{ 'displaySettings.Before-After' | translate }}</ion-select-option>
+      <ion-select-option value="repeat">{{ 'displaySettings.After' | translate }}</ion-select-option>
+      <ion-select-option value="none">{{ 'displaySettings.None' | translate }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Responses' | translate }}</ion-label>
+    <ion-segment [value]="settings.response" (ionChange)="updateSetting(uid, 'response', $event)">
+      <ion-segment-button value="bold">{{ 'displaySettings.Bold' | translate }}</ion-segment-button>
+      <ion-segment-button value="italics">{{ 'displaySettings.Italics' | translate }}</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{ 'displaySettings.Psalm-Verses' | translate }}</ion-label>
+    <ion-checkbox [value]="settings.psalmVerses" (ionChange)="updateSetting(uid, 'psalmVerses', $event)" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{ 'displaySettings.Reading-Verses' | translate }}</ion-label>
+    <ion-checkbox [value]="settings.bibleVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start" (ionChange)="logverses()"></ion-checkbox>
+  </ion-item>
+</ion-content>

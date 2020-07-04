@@ -11,6 +11,7 @@ import { PrayPage } from './pray.page';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { AuthModule } from '../auth/auth.module';
+import { DisplaySettingsComponent } from './display-settings/display-settings.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { AuthModule } from '../auth/auth.module';
     TranslateModule
   ],
   declarations: [
-    PrayPage
+    PrayPage,
+    DisplaySettingsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

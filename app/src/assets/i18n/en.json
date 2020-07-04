@@ -32,6 +32,38 @@
     "settings": "Settings",
     "about": "About"
   },
+  "displaySettings": {
+    "display-settings": "Display Settings",
+    "display-mode": "Display Mode",
+    "After": "After each Section",
+    "Antiphons": "Antiphons",
+    "Auto": "Auto",
+    "Background-Sounds": "Background Sounds",
+    "Before-After": "Before/After the Invitatory",
+    "Bold": "Bold",
+    "Dark": "Dark",
+    "Dropcaps": "Dropcaps",
+    "Font": "Font",
+    "Font-Size": "Font Size",
+    "High": "High",
+    "Italics": "Italics",
+    "Light": "Light",
+    "Low": "Low",
+    "Meditation-Bell": "Meditation Bell",
+    "None": "None",
+    "Psalm-Verses": "Verse Numbers for Psalms",
+    "Reading-Verses": "Verse Numbers for Readings",
+    "Responses": "Responses",
+    "Singing-Bowl": "Singing Bowl",
+    "Size": {
+      "S": "S",
+      "M": "M",
+      "L": "L",
+      "XL": "XL",
+      "XXL": "XXL"
+    },
+    "Voice": "Voice"
+  },
   "editor": {
     "add": "Add",
     "title": "Editor",

@@ -6,6 +6,9 @@
     </ion-buttons>
     <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
     <ion-buttons collapse="true" slot="end">
+      <ion-button *ngIf="settings$ | async as settings" (click)="openSettings(settings)">
+        <ion-icon slot="icon-only" name="cog"></ion-icon>
+      </ion-button>
       <venite-auth-menu-button></venite-auth-menu-button>
     </ion-buttons>
   </ion-toolbar>
@@ -20,10 +23,11 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
   <!--<ul>
     <li *ngFor="let child$ of prayService.latestChildren$">{{ child$ | async | json }}</li>
   </ul>-->
   <!-- <pre>{{ doc$ | async | json }}</pre> -->
-  <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
+  <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+    <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
+  </div>
 </ion-content>
