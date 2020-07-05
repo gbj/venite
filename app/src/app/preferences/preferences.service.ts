@@ -97,7 +97,7 @@ export class PreferencesService {
   /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version
     * This allows for smart matching—if I don't have a default Bible translation set for English Rite II Evening Prayer,
     * see if I have one for English Rite II Morning Prayer  */
-  getPreferencesForLiturgy(liturgy : LiturgicalDocument) : Observable<any[]> {
+  getPreferencesForLiturgy(liturgy : LiturgicalDocument) : Observable<StoredPreference[]> {
     if(!liturgy) {
       console.warn('(getPreferencesForLiturgy) liturgy is', liturgy);
       return of([]);

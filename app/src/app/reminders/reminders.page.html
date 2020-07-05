@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'reminders.title' | translate }}</ion-title>
+    <ion-menu-button slot="start"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-text-center">
+      <ion-col>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">{{ 'reminders.presets' | translate }}</ion-label>
+          <ion-select (ionChange)="loadPreset($event.detail.value)">
+            <ion-select-option value="mp-ep">{{ 'reminders.mp-ep' | translate }}</ion-select-option>
+            <ion-select-option value="office">{{ 'reminders.office' | translate }}</ion-select-option>
+            <ion-select-option value="angelus">{{ 'reminders.angelus' | translate }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item *ngFor="let reminder of reminders; let reminderIndex = index">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <ion-datetime displayFormat="h:mm A" [placeholder]="'reminders.time' | translate" [(ngModel)]="reminder.time" (ionChange)="schedule()"></ion-datetime>
+          </ion-col>
+          <ion-col size="7">
+            <ion-input [placeholder]="'reminders.reminder-title' | translate" [(ngModel)]="reminder.title" (ionChange)="schedule()" debounce="500"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-toggle slot="end" [(ngModel)]="reminder.active" (ionChange)="schedule()"></ion-toggle>
+      <ion-button slot="end" (click)="remove(reminderIndex)" fill="clear">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-text-center">
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="addReminder()">
+          <ion-icon name="add" slot="start"></ion-icon>
+          <ion-label>{{ 'reminders.add' | translate }}</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

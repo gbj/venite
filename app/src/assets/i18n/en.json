@@ -94,6 +94,16 @@
     "member-join": "Join",
     "member-leave": "Leave"
   },
+  "reminders": {
+    "add": "Add a Reminder",
+    "title": "Reminders",
+    "presets": "Presets",
+    "mp-ep": "Morning & Evening Prayer",
+    "office": "Daily Office",
+    "angelus": "Angelus Bells",
+    "time": "Time",
+    "reminder-title": "Title"
+  },
   "January": "January",
   "February": "February",
   "March": "March",

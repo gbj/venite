@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'church',
     loadChildren: () => import('./organization/organization.module').then( m => m.OrganizationPageModule)
+  },
+  {
+    path: 'reminders',
+    loadChildren: () => import('./reminders/reminders.module').then( m => m.RemindersPageModule)
   }
 ];
 
