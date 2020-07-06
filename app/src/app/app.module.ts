@@ -31,8 +31,10 @@ import { SharedModule } from './shared/shared.module';
 import { RemindersPageModule } from 'reminders';
 import { BibleService } from './services/bible.service';
 import { PlatformService } from './services/platform.service';
-import { LocalStorageService } from './services/localstorage.service';
-import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE } from 'service-api';
+import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE } from 'service-api';
+import { LocalStorageService } from 'localstorage';
+import { PreferencesService } from './preferences/preferences.service';
+import { DarkmodeModule } from 'darkmode';
 
 @NgModule({
   declarations: [AppComponent],
@@ -63,6 +65,11 @@ import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE } from 'service-api';
         PlatformService,
         LocalStorageService
       ]
+    }),
+    DarkmodeModule.forRoot({
+      providers: [
+        PreferencesService
+      ]
     })
   ],
   providers: [
@@ -73,7 +80,8 @@ import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE } from 'service-api';
     UserTrackingService,
     { provide: BIBLE_SERVICE, useClass: BibleService },
     { provide: PLATFORM_SERVICE, useClass: PlatformService },
-    { provide: LOCAL_STORAGE, useClass: LocalStorageService }
+    { provide: LOCAL_STORAGE, useClass: LocalStorageService },
+    { provide: PREFERENCES_SERVICE, useClass: PreferencesService },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

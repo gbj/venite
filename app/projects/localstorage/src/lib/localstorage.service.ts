@@ -1,15 +1,16 @@
-import { Injectable, InjectionToken } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 const { Storage } = Plugins;
-import { PlatformService } from './platform.service';
-import { LocalStorageServiceInterface } from 'service-api';
+import { LocalStorageServiceInterface, PlatformServiceInterface, PLATFORM_SERVICE } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService implements LocalStorageServiceInterface {
 
-  constructor(private platform : PlatformService) { }
+  constructor(
+    @Inject(PLATFORM_SERVICE) private platform : PlatformServiceInterface
+  ) { }
 
   async set(key: string, data: any): Promise<void> {
     if(!this.platform.is('server')) {

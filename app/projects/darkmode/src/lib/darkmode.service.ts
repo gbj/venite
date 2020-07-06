@@ -1,10 +1,9 @@
-import { Injectable } from '@angular/core';
-import { PreferencesService } from '../preferences/preferences.service';
-import { PlatformService } from './platform.service';
+import { Injectable, Inject } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, from, fromEventPattern, combineLatest } from 'rxjs';
 import { map, startWith, tap } from 'rxjs/operators';
+import { PlatformServiceInterface, PreferencesServiceInterface, PREFERENCES_SERVICE, PLATFORM_SERVICE } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +12,9 @@ export class DarkmodeService {
   public prefersDark : Observable<boolean>;
 
   constructor(
-    private preferences : PreferencesService,
+    @Inject(PREFERENCES_SERVICE) private preferences : PreferencesServiceInterface,
     private alert: AlertController,
-    private platform : PlatformService,
+    @Inject(PLATFORM_SERVICE) private platform : PlatformServiceInterface,
     private translate : TranslateService
   ) {
     if(!this.platform.is('server')) {
@@ -47,7 +46,7 @@ export class DarkmodeService {
           } else if(preference == 'light') {
             return false;
           } else {
-            return mediaQuery?.matches;
+            return !!mediaQuery?.matches; // undefined => false, not true
           }
         })
       )

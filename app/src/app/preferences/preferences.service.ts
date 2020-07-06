@@ -5,7 +5,7 @@ import { Observable, of, from, merge, Subject } from 'rxjs';
 import { switchMap, map, tap, filter } from 'rxjs/operators';
 
 import { AuthService } from '../auth/auth.service';
-import { LocalStorageService } from '../services/localstorage.service';
+import { LocalStorageService } from 'localstorage';
 import { StoredPreference } from './stored-preference';
 
 import { LiturgicalDocument } from '@venite/ldf';

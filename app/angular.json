@@ -302,6 +302,86 @@
           }
         }
       }
+    },
+    "localstorage": {
+      "projectType": "library",
+      "root": "projects/localstorage",
+      "sourceRoot": "projects/localstorage/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/localstorage/tsconfig.lib.json",
+            "project": "projects/localstorage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/localstorage/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/localstorage/src/test.ts",
+            "tsConfig": "projects/localstorage/tsconfig.spec.json",
+            "karmaConfig": "projects/localstorage/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/localstorage/tsconfig.lib.json",
+              "projects/localstorage/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "darkmode": {
+      "projectType": "library",
+      "root": "projects/darkmode",
+      "sourceRoot": "projects/darkmode/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/darkmode/tsconfig.lib.json",
+            "project": "projects/darkmode/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/darkmode/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/darkmode/src/test.ts",
+            "tsConfig": "projects/darkmode/tsconfig.spec.json",
+            "karmaConfig": "projects/darkmode/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/darkmode/tsconfig.lib.json",
+              "projects/darkmode/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
