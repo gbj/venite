@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { BibleReading } from '@venite/ldf';
+import { BibleServiceInterface } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BibleService {
+export class BibleService implements BibleServiceInterface {
 
   constructor() { }
 

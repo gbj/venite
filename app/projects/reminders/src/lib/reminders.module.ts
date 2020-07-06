@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -19,4 +19,8 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   declarations: [RemindersPage]
 })
-export class RemindersPageModule {}
+export class RemindersPageModule {
+  public static forRoot({ providers }) : ModuleWithProviders<RemindersPageModule> {
+    return { ngModule: RemindersPageModule, providers };
+  }
+}

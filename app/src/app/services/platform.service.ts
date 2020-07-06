@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Platform } from '@ionic/angular';
+import { PlatformServiceInterface } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlatformService {
+export class PlatformService implements PlatformServiceInterface {
 
   constructor(
     private platform : Platform,

@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 const { Storage } = Plugins;
-import { PlatformService } from '../services/platform.service';
+import { PlatformService } from './platform.service';
+import { LocalStorageServiceInterface } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LocalStorageService {
+export class LocalStorageService implements LocalStorageServiceInterface {
 
   constructor(private platform : PlatformService) { }
 

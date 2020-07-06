@@ -15,7 +15,21 @@
       "es2019",
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "reminders": [
+        "dist/reminders/reminders",
+        "dist/reminders"
+      ],
+      "interfaces": [
+        "dist/interfaces/interfaces",
+        "dist/interfaces"
+      ],
+      "service-api": [
+        "dist/service-api/service-api",
+        "dist/service-api"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

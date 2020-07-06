@@ -28,6 +28,11 @@ export function HttpLoaderFactory(http: HttpClient) {
 // Venite Modules
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { RemindersPageModule } from 'reminders';
+import { BibleService } from './services/bible.service';
+import { PlatformService } from './services/platform.service';
+import { LocalStorageService } from './services/localstorage.service';
+import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE } from 'service-api';
 
 @NgModule({
   declarations: [AppComponent],
@@ -51,14 +56,24 @@ import { SharedModule } from './shared/shared.module';
         defaultLanguage: 'en'
     }),
     AuthModule,
-    SharedModule
+    SharedModule,
+    RemindersPageModule.forRoot({
+      providers: [
+        BibleService,
+        PlatformService,
+        LocalStorageService
+      ]
+    })
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ScreenTrackingService,
-    UserTrackingService
+    UserTrackingService,
+    { provide: BIBLE_SERVICE, useClass: BibleService },
+    { provide: PLATFORM_SERVICE, useClass: PlatformService },
+    { provide: LOCAL_STORAGE, useClass: LocalStorageService }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

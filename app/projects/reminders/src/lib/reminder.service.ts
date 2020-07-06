@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 
 import { Plugins, LocalNotificationPendingList } from '@capacitor/core';
-import { PlatformService } from '../services/platform.service';
 import { Reminder } from './reminder';
-import { BibleService } from '../services/bible.service';
+import { BibleServiceInterface, PlatformServiceInterface, BIBLE_SERVICE, PLATFORM_SERVICE } from 'service-api';
 const { LocalNotifications } = Plugins;
 
 @Injectable({
@@ -12,7 +11,10 @@ const { LocalNotifications } = Plugins;
 export class ReminderService {
   pending : LocalNotificationPendingList;
 
-  constructor(private bible : BibleService, private platform : PlatformService) {
+  constructor(
+    @Inject(BIBLE_SERVICE) private bible : BibleServiceInterface,
+    @Inject(PLATFORM_SERVICE) private platform : PlatformServiceInterface
+  ) {
     if(!this.platform.is('server') && this.platform.is('capacitor')) {
       this.loadPending();
     }

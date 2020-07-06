@@ -40,7 +40,7 @@ const routes: Routes = [
   },
   {
     path: 'reminders',
-    loadChildren: () => import('./reminders/reminders.module').then( m => m.RemindersPageModule)
+    loadChildren: () => import('reminders').then( m => m.RemindersPageModule)
   }
 ];
 
