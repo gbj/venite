@@ -1,0 +1,24 @@
+#container {
+  display: flex;
+  flex-direction: row;
+
+  .form {
+    width: 100%;
+  }
+
+  .welcome {
+    display: none;
+    width: 0%;
+  }
+
+  @media(min-width: 768px) {
+    .form {
+      width: 60vw;
+    }
+
+    .welcome {
+      width: 35vw;
+    }
+
+  }
+}

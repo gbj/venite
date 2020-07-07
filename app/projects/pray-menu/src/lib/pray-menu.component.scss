@@ -9,28 +9,3 @@ ul.feasts {
   li {
   }
 }
-
-#container {
-  display: flex;
-  flex-direction: row;
-
-  .form {
-    width: 100%;
-  }
-
-  .reports {
-    display: none;
-    width: 0%;
-  }
-
-  @media(min-width: 768px) {
-    .form {
-      width: 60vw;
-    }
-
-    .reports {
-      width: 35vw;
-    }
-
-  }
-}
