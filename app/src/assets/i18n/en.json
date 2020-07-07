@@ -10,7 +10,7 @@
     "find-org-name": "Name",
     "find-org-location": "Location",
     "find-org-website": "Website",
-    "find-org-create": "Create",
+    "find-org-create-button": "Create",
     "forgot-password": "I forgot my password.",
     "name": "Name",
     "organizations": "Your Churches",
@@ -31,6 +31,12 @@
     "psalter": "Psalter",
     "settings": "Settings",
     "about": "About"
+  },
+  "darkmode": {
+    "darkmode": "Dark Mode",
+    "needsAuto": "It looks like your device is in {{deviceMode}}. If you want the app to respond, go to Settings and set the Display Mode to “Auto.”",
+    "dark-mode": "Dark Mode",
+    "light-mode": "Light Mode"
   },
   "displaySettings": {
     "display-settings": "Display Settings",

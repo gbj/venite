@@ -4,7 +4,7 @@ import { Platform, MenuController } from '@ionic/angular';
 
 // Community Modules
 import { TranslateService } from '@ngx-translate/core';
-import { DarkmodeService } from './services/darkmode.service';
+import { DarkmodeService } from 'darkmode';
 
 @Component({
   selector: 'venite-root',

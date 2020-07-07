@@ -1,0 +1,13 @@
+{
+  "name": "pray",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.7",
+    "@angular/core": "^9.1.7",
+    "tslib": "^1.10.0",
+    "@ionic/angular": "^5.0.0",
+    "@venite/ldf": "~0.7.0",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^4.0.0"
+  }
+}

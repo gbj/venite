@@ -15,7 +15,41 @@
       "es2019",
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "reminders": [
+        "dist/reminders/reminders",
+        "dist/reminders"
+      ],
+      "interfaces": [
+        "dist/interfaces/interfaces",
+        "dist/interfaces"
+      ],
+      "service-api": [
+        "dist/service-api/service-api",
+        "dist/service-api"
+      ],
+      "localstorage": [
+        "dist/localstorage/localstorage",
+        "dist/localstorage"
+      ],
+      "darkmode": [
+        "dist/darkmode/darkmode",
+        "dist/darkmode"
+      ],
+      "platform": [
+        "dist/platform/platform",
+        "dist/platform"
+      ],
+      "pray-menu": [
+        "dist/pray-menu/pray-menu",
+        "dist/pray-menu"
+      ],
+      "pray": [
+        "dist/pray/pray",
+        "dist/pray"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

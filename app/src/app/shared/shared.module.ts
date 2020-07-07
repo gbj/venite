@@ -5,21 +5,11 @@ import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { DateComponent } from './date/date.component';
-import { LiturgicalDayNameComponent } from './liturgical-day-name/liturgical-day-name.component';
-import { LiturgyMenuComponent } from './liturgy-menu/liturgy-menu.component';
-import { LiturgyPreferenceMenuComponent } from './liturgy-preference-menu/liturgy-preference-menu.component';
 import { MenuComponent } from './menu/menu.component';
-import { ProperLiturgyMenuComponent } from './proper-liturgy-menu/proper-liturgy-menu.component';
 
 @NgModule({
   declarations: [
-    DateComponent,
-    LiturgicalDayNameComponent,
-    LiturgyMenuComponent,
-    LiturgyPreferenceMenuComponent,
-    MenuComponent,
-    ProperLiturgyMenuComponent
+    MenuComponent
   ],
   imports: [
     CommonModule,
@@ -28,14 +18,6 @@ import { ProperLiturgyMenuComponent } from './proper-liturgy-menu/proper-liturgy
     RouterModule,
     TranslateModule.forChild()
   ],
-  exports: [
-    DateComponent,
-    LiturgicalDayNameComponent,
-    LiturgyMenuComponent,
-    LiturgyPreferenceMenuComponent,
-    MenuComponent,
-    ProperLiturgyMenuComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports: []
 })
 export class SharedModule { }
