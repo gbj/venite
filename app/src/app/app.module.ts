@@ -31,7 +31,7 @@ import { SharedModule } from './shared/shared.module';
 import { RemindersPageModule } from 'reminders';
 import { BibleService } from './services/bible.service';
 import { PlatformService } from 'platform';
-import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE } from 'service-api';
+import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE, CANTICLE_TABLE_SERVICE } from 'service-api';
 import { LocalStorageService } from 'localstorage';
 import { PreferencesService } from './preferences/preferences.service';
 import { DarkmodeModule } from 'darkmode';
@@ -40,6 +40,7 @@ import { AuthService } from './auth/auth.service';
 import { LectionaryService } from './services/lectionary.service';
 import { CalendarService } from './services/calendar.service';
 import { DocumentService } from './services/document.service';
+import { CanticleTableService } from './services/canticle-table.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -97,6 +98,7 @@ import { DocumentService } from './services/document.service';
     { provide: AUTH_SERVICE, useClass: AuthService },
     { provide: BIBLE_SERVICE, useClass: BibleService },
     { provide: CALENDAR_SERVICE, useClass: CalendarService },
+    { provide: CANTICLE_TABLE_SERVICE, useClass: CanticleTableService },
     { provide: DOCUMENT_SERVICE, useClass: DocumentService },
     { provide: PLATFORM_SERVICE, useClass: PlatformService },
     { provide: LECTIONARY_SERVICE, useClass: LectionaryService },

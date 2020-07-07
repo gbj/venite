@@ -1,12 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
-import { DocumentService } from '../services/document.service';
-import { map, switchMap, startWith, tap, filter } from 'rxjs/operators';
-import { LectionaryService } from '../services/lectionary.service';
-import { CanticleTableService } from './canticle-table.service';
-import { CanticleTableEntry } from '@venite/ldf';
+import { map, switchMap, startWith } from 'rxjs/operators';
+import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +12,10 @@ export class PrayService {
   public latestChildren$ : Observable<LiturgicalDocument>[];
 
   constructor(
-    private documents : DocumentService,
-    private lectionaryService : LectionaryService,
-    private canticleTableService : CanticleTableService
+    @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface,
+    @Inject(LECTIONARY_SERVICE) private lectionaryService : LectionaryServiceInterface,
+    @Inject(CANTICLE_TABLE_SERVICE) private canticleTableService : CanticleTableServiceInterface,
+    @Inject(BIBLE_SERVICE) private bibleService : BibleServiceInterface
   ) { }
 
   /** Returns the complete and filtered form for a doc within a particular liturgical context
@@ -70,6 +68,11 @@ export class PrayService {
       // if doc has a `category` and not a `value`, add `lookup` type of `category` and recompile
       else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value')) {
         return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
+      }
+
+      // compile Bible readings if they have no content
+      else if(doc.type == 'bible-reading' && !doc.hasOwnProperty('value') || doc.value.length == 0) {
+        return this.lookupBibleReading(doc);
       }
 
       // otherwise, check whether the doc should be included
@@ -249,6 +252,13 @@ export class PrayService {
       map(docs => docsToOption(docs, versions)),
       switchMap(doc => this.compile(doc, day, prefs))
     )
+  }
+
+  /** Fetches values for Bible readings */
+  lookupBibleReading(doc : LiturgicalDocument) : Observable<LiturgicalDocument> {
+    return this.bibleService.getText(doc.citation, doc.version).pipe(
+      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value }))
+    );
   }
 }
 

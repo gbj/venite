@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { Observable, of, from, merge, Subject } from 'rxjs';
 import { switchMap, map, tap, filter } from 'rxjs/operators';
 
-import { AuthService } from '../auth/auth.service';
+import { AuthServiceInterface, AUTH_SERVICE } from 'service-api';
 import { LocalStorageService } from 'localstorage';
 import { StoredPreference } from 'service-api';
 
@@ -20,7 +20,7 @@ export class PreferencesService {
 
   constructor(
     private readonly afs: AngularFirestore,
-    private readonly auth : AuthService,
+    @Inject(AUTH_SERVICE) private readonly auth : AuthServiceInterface,
     private readonly storage : LocalStorageService
   ) { }
 

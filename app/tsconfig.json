@@ -44,6 +44,10 @@
       "pray-menu": [
         "dist/pray-menu/pray-menu",
         "dist/pray-menu"
+      ],
+      "pray": [
+        "dist/pray/pray",
+        "dist/pray"
       ]
     }
   },

@@ -18,21 +18,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
-  {
     path: 'editor',
     loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
     canActivate: [LoginGuard]
   },
   {
     path: 'pray',
-    loadChildren: () => import('./pray/pray.module').then( m => m.PrayPageModule)
+    loadChildren: () => import('pray').then( m => m.PrayPageModule)
   },
   {
     path: 'church',

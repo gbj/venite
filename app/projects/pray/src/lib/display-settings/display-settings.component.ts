@@ -1,10 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { DisplaySettings } from './display-settings';
-import { SpeechService } from 'src/app/services/speech.service';
-import { PreferencesService } from 'src/app/preferences/preferences.service';
-import { AuthService } from 'src/app/auth/auth.service';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { AuthServiceInterface, AUTH_SERVICE, PREFERENCES_SERVICE, PreferencesServiceInterface } from 'service-api';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'venite-display-settings',
@@ -23,16 +22,16 @@ export class DisplaySettingsComponent implements OnInit {
   uid$ : Observable<string | undefined>;
 
   constructor(
-    private speechService : SpeechService,
-    private preferencesService : PreferencesService,
-    private auth : AuthService
+    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
+    @Inject(AUTH_SERVICE) private auth : AuthServiceInterface,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {
     if(this.hasVoice) {
       this.voicesWithNationalities = this.voiceChoices
         .map(voice => {
-          return { voice, nationality: this.speechService.getNationality(voice) };
+          return { voice, nationality: this.translate.instant(`speech.${voice.lang}`) };
         })
         .sort((a, b) => b.nationality < a.nationality ? 1 : -1);
     }

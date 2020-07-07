@@ -3,11 +3,12 @@ import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { CanticleTableEntry } from '@venite/ldf';
+import { CanticleTableServiceInterface } from 'service-api';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CanticleTableService {
+export class CanticleTableService implements CanticleTableServiceInterface {
 
   constructor(private readonly afs: AngularFirestore) { }
 

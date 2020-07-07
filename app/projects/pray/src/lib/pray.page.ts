@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, take, startWith } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek } from '@venite/ldf';
-import { DocumentService } from '../services/document.service';
-import { CalendarService } from '../services/calendar.service';
 import { PrayService } from './pray.service';
 import { ModalController } from '@ionic/angular';
 import { DisplaySettingsComponent } from './display-settings/display-settings.component';
 import { DisplaySettings } from './display-settings/display-settings';
-import { PreferencesService } from '../preferences/preferences.service';
+import { DOCUMENT_SERVICE, DocumentServiceInterface, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface } from 'service-api';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -34,11 +32,11 @@ export class PrayPage implements OnInit {
   constructor(
     private router : Router,
     private route : ActivatedRoute,
-    private documents : DocumentService,
-    private calendarService : CalendarService,
+    @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface,
+    @Inject(CALENDAR_SERVICE) private calendarService : CalendarServiceInterface,
     public prayService : PrayService,
     private modal : ModalController,
-    private preferencesService : PreferencesService
+    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface
   ) { }
 
   ngOnInit() {

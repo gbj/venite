@@ -9,7 +9,7 @@ import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInte
 import { tap, switchMap, map } from 'rxjs/operators';
 
 @Component({
-  selector: 'lib-pray-menu',
+  selector: 'venite-pray-menu',
   templateUrl: './pray-menu.component.html',
   styleUrls: ['./pray-menu.component.scss'],
 })
