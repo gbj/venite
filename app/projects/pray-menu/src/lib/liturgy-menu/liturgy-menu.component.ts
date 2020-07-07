@@ -1,10 +1,11 @@
-import { Component, Input, Output, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
-import { DocumentService } from '../../services/document.service';
+import { Component, Input, Output, EventEmitter, OnInit, SimpleChanges, Inject } from '@angular/core';
 
 import { Observable, BehaviorSubject, Subject, Subscription, combineLatest, of, interval } from 'rxjs';
 import { tap, map, take, filter, mergeMap, startWith } from 'rxjs/operators';
 
 import { Liturgy, ProperLiturgy, LiturgicalDocument } from '@venite/ldf';
+import { DOCUMENT_SERVICE } from 'service-api';
+import { DocumentServiceInterface } from 'dist/service-api/lib/document-service.interface';
 
 @Component({
   selector: 'venite-liturgy-menu',
@@ -34,7 +35,7 @@ export class LiturgyMenuComponent implements OnInit {
   // Current state of the actual menu
   selectState : Observable<{ value: string; options: LiturgicalDocument[] }>;
 
-  constructor(private documents : DocumentService) { }
+  constructor(@Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface) { }
 
   ngOnInit() {
     this.liturgySubject.next(this.liturgy || this.liturgyOfTheHour(new Date()));
@@ -44,7 +45,7 @@ export class LiturgyMenuComponent implements OnInit {
     // find actual `Liturgy` documents, given the `ProperLiturgy` we're passed
     this.properLiturgyLiturgy = this.properLiturgySubject.pipe(
       filter(proper => proper?.hasOwnProperty('liturgy')),
-      mergeMap(proper => this.documents.findDocumentsBySlug(proper?.liturgy)),
+      mergeMap(proper => this.documents.findDocumentsBySlug(proper?.liturgy, this.language, undefined)),
       // transform from array of all documents with slug to first document found with correct language and version
       // or just the right language
       map(documents => {
@@ -65,13 +66,11 @@ export class LiturgyMenuComponent implements OnInit {
       this.documents.getLiturgyOptions(this.language, this.version)
     ).pipe(
       map(([properLiturgy, liturgyOptions]) => properLiturgy ? new Array(properLiturgy).concat(liturgyOptions) : liturgyOptions),
-      tap(val => console.log('liturgyOptions', val)),
     );
 
     // set state of the menu
     this.selectState = combineLatest(this.liturgySubject, this.liturgyOptions, this.properLiturgyLiturgy.pipe(startWith(null)))
       .pipe(
-        tap(val => console.log('selectState', val)),
         map(([baseLiturgy, options, properLiturgy]) => ({
           value: properLiturgy?.slug || baseLiturgy,
           options: options

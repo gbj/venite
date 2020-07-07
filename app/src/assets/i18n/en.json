@@ -32,6 +32,12 @@
     "settings": "Settings",
     "about": "About"
   },
+  "darkmode": {
+    "darkmode": "Dark Mode",
+    "needsAuto": "It looks like your device is in {{deviceMode}}. If you want the app to respond, go to Settings and set the Display Mode to “Auto.”",
+    "dark-mode": "Dark Mode",
+    "light-mode": "Light Mode"
+  },
   "displaySettings": {
     "display-settings": "Display Settings",
     "display-mode": "Display Mode",

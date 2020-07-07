@@ -6,4 +6,6 @@ export interface PreferencesServiceInterface {
   get : (key : string) => Observable<StoredPreference>;
 
   set : (key : string, value : string, uid: string, liturgy : LiturgicalDocument) => void;
+
+  getPreferencesForLiturgy : (liturgy : LiturgicalDocument) => Observable<StoredPreference[]>;
 }

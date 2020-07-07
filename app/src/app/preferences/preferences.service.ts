@@ -6,7 +6,7 @@ import { switchMap, map, tap, filter } from 'rxjs/operators';
 
 import { AuthService } from '../auth/auth.service';
 import { LocalStorageService } from 'localstorage';
-import { StoredPreference } from './stored-preference';
+import { StoredPreference } from 'service-api';
 
 import { LiturgicalDocument } from '@venite/ldf';
 

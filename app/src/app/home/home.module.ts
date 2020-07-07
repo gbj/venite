@@ -12,17 +12,17 @@ import { TranslateModule } from '@ngx-translate/core';
 // Venite Modules
 import { AuthModule } from '../auth/auth.module';
 import { SharedModule } from '../shared/shared.module';
+import { PrayMenuModule } from 'pray-menu';
 
 @NgModule({
   imports: [
     AuthModule,
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     IonicModule,
     HomePageRoutingModule,
     SharedModule,
-    TranslateModule
+    TranslateModule,
+    PrayMenuModule
   ],
   declarations: [HomePage]
 })

@@ -1,12 +1,11 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, Inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { Observable, BehaviorSubject, Subscription, combineLatest, of } from 'rxjs';
-import { map, mergeMap, switchMap, tap, filter, share } from 'rxjs/operators';
-
-import { PreferencesService } from '../../preferences/preferences.service';
+import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
+import { map, tap, filter } from 'rxjs/operators';
 
 import { Liturgy, Preference, ClientPreferences, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
+import { PreferencesServiceInterface, PREFERENCES_SERVICE } from 'service-api';
 
 interface TreeData {
   preferences: [string, Preference][];
@@ -40,7 +39,7 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   clientPreferences : Observable<ClientPreferences>;
 
   constructor(
-    private preferencesService : PreferencesService,
+    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     private fb : FormBuilder
   ) { }
 

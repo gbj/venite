@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { LiturgicalDay, Liturgy, ProperLiturgy } from '@venite/ldf';
+import { LiturgicalDay, ProperLiturgy } from '@venite/ldf';
 
-import { CalendarService } from '../../services/calendar.service';
+import { CALENDAR_SERVICE, CalendarServiceInterface } from 'service-api';
 
 @Component({
   selector: 'venite-proper-liturgy-menu',
@@ -19,7 +19,7 @@ export class ProperLiturgyMenuComponent implements OnInit {
 
   properLiturgies : Observable<ProperLiturgy[]>;
 
-  constructor(private calendarService : CalendarService) { }
+  constructor(@Inject(CALENDAR_SERVICE) private calendarService : CalendarServiceInterface) { }
 
   ngOnInit() {
     if(this.day) {
@@ -27,8 +27,7 @@ export class ProperLiturgyMenuComponent implements OnInit {
     }
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('day', changes.day?.currentValue);
+  ngOnChanges() {
     if(this.day) {
       this.updateLiturgies();
     }
@@ -37,9 +36,7 @@ export class ProperLiturgyMenuComponent implements OnInit {
   updateLiturgies() {
     this.properLiturgies = this.calendarService.findProperLiturgies(
       this.day,
-      this.language || 'en'
-    ).pipe(
-      tap(val => console.log('updateLiturgies', val))
+      this.language
     );
   }
 

@@ -30,11 +30,16 @@ import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { RemindersPageModule } from 'reminders';
 import { BibleService } from './services/bible.service';
-import { PlatformService } from './services/platform.service';
-import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE } from 'service-api';
+import { PlatformService } from 'platform';
+import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE } from 'service-api';
 import { LocalStorageService } from 'localstorage';
 import { PreferencesService } from './preferences/preferences.service';
 import { DarkmodeModule } from 'darkmode';
+import { PrayMenuModule } from 'projects/pray-menu/src/public-api';
+import { AuthService } from './auth/auth.service';
+import { LectionaryService } from './services/lectionary.service';
+import { CalendarService } from './services/calendar.service';
+import { DocumentService } from './services/document.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -70,6 +75,17 @@ import { DarkmodeModule } from 'darkmode';
       providers: [
         PreferencesService
       ]
+    }),
+    PrayMenuModule.forRoot({
+      config: {
+        defaultKalendar: 'bcp1979'
+      },
+      providers: [
+        AuthService,
+        CalendarService,
+        PreferencesService,
+        LectionaryService
+      ]
     })
   ],
   providers: [
@@ -78,8 +94,12 @@ import { DarkmodeModule } from 'darkmode';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ScreenTrackingService,
     UserTrackingService,
+    { provide: AUTH_SERVICE, useClass: AuthService },
     { provide: BIBLE_SERVICE, useClass: BibleService },
+    { provide: CALENDAR_SERVICE, useClass: CalendarService },
+    { provide: DOCUMENT_SERVICE, useClass: DocumentService },
     { provide: PLATFORM_SERVICE, useClass: PlatformService },
+    { provide: LECTIONARY_SERVICE, useClass: LectionaryService },
     { provide: LOCAL_STORAGE, useClass: LocalStorageService },
     { provide: PREFERENCES_SERVICE, useClass: PreferencesService },
   ],

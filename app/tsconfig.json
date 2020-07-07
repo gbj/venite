@@ -36,6 +36,14 @@
       "darkmode": [
         "dist/darkmode/darkmode",
         "dist/darkmode"
+      ],
+      "platform": [
+        "dist/platform/platform",
+        "dist/platform"
+      ],
+      "pray-menu": [
+        "dist/pray-menu/pray-menu",
+        "dist/pray-menu"
       ]
     }
   },
