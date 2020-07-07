@@ -53,11 +53,10 @@ export class DarkmodeService {
     }
   }
 
-  // TODO translate
   async notifyAlert(deviceDark : boolean) {
     const alert = await this.alert.create({
-      header: 'Dark Mode',
-      message: `It looks like your device is in ${deviceDark ? 'Dark Mode' : 'Light Mode'}. If you want the app to respond, go to Settings and set the Display Mode to “Auto.”`,
+      header: this.translate.instant('darkmode.darkmode'),
+      message: this.translate.instant('darkmode.needsAuto', { deviceMode : deviceDark ? this.translate.instant('darkmode.dark-mode') : this.translate.instant('darkmode.light-mode') }),
       buttons: ['OK']
     });
 
