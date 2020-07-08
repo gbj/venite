@@ -59,6 +59,7 @@ export class BibleReadingComponent {
     if(this.obj.metadata && this.obj.metadata.intro) {
       try {
         this.obj.compileIntro();
+        this.obj = new BibleReading({ ... this.obj });
       } catch(e) {
         console.warn(e);
         console.warn(this.obj);
@@ -142,7 +143,7 @@ export class BibleReadingComponent {
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
             {/* Introductory text ("A Reading from..." or similar) */}
-            {this.obj?.metadata?.intro && <ldf-liturgical-document doc={this.obj.metadata.intro}></ldf-liturgical-document>}
+            {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document doc={this.obj.metadata.compiled_intro}></ldf-liturgical-document>}
 
             {/* Bible text */}
             <p lang={this.obj.language}>

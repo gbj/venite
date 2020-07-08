@@ -18,7 +18,7 @@ export class BibleReading extends LiturgicalDocument {
   };
   value: BibleReadingVerse[];
 
-  /** Replaces ${bookName} or ${fullBookName} in LD passed as intro with appropriate value */
+  /** Replaces ${longName} or ${shortName} in LD passed as intro with appropriate value */
   compileIntro(): void {
     if (this.metadata && this.metadata.intro) {
       const abbrev = this.abbrevFromCitation(),
@@ -53,6 +53,8 @@ export class BibleReading extends LiturgicalDocument {
       });
 
       this.metadata.compiled_intro = new LiturgicalDocument({ ...this.metadata.intro, value: newValue });
+
+      console.log('compiled intro is now', this.metadata.compiled_intro);
     }
   }
 
@@ -64,12 +66,12 @@ export class BibleReading extends LiturgicalDocument {
   abbrevFromCitation(): string {
     let citation: string;
     try {
-      const matches = (this.citation || '').match(/([\w\d\s\.]+)\d+(:\d+)?/);
-      citation = matches && matches.length >= 2 ? matches[1].trim() : '';
+      const matches = (this.citation || '').match(/(\d*\s*[a-zA-Z]+)/);
+      citation = matches ? matches[0] : '';
     } catch (e) {
       citation = this.citation;
     }
-    return citation;
+    return citation.replace(/\./g, '');
   }
 
   /** Given an abbreviated book name, returns the name of the book
@@ -89,8 +91,8 @@ export class BibleReading extends LiturgicalDocument {
    * // returns 'The Book of Genesis'
    * this.longNameFromBookCode('Genesis') */
   longNameFromBookCode(bookName: string, lang: string = 'en'): string {
-    const bookResults = BIBLE_BOOK_NAMES[bookName],
-          searchResults = (bookResults || {})[lang];
+    const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)],
+          searchResult = (bookResult || {})[lang];
     return searchResult ? searchResult.long : bookName;
   }
 
@@ -99,7 +101,8 @@ export class BibleReading extends LiturgicalDocument {
    * // returns 'Genesis'
    * this.shortNameFromBookCode('Genesis') */
   shortNameFromBookCode(bookName: string, lang: string = 'en'): string {
-    const searchResult = BIBLE_BOOK_NAMES[bookName][lang];
+    const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)],
+          searchResult = (bookResult || {})[lang];
     return searchResult ? searchResult.short : bookName;
   }
 

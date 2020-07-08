@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Observable, Subject, BehaviorSubject, combineLatest } from 'rxjs';
-import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar } from '@venite/ldf';
+import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController } from '@ionic/angular';
@@ -188,7 +188,7 @@ navigate(root : string, liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPr
         commands : string[] = [
           root,
           liturgy?.language || 'en',
-          liturgy?.version || 'Rite-II',
+          versionToString(liturgy?.version) || 'Rite-II',
           day?.kalendar,
           y, m, d,
           liturgy?.slug,
