@@ -1,3 +1,9 @@
 h2, .or {
   text-align: center;
 }
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -71,7 +71,6 @@ export class DocumentService {
   }
 
   findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
-    console.log('(findDocumentsByCategory) category = ', category);
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('category', 'array-contains-any', category)
          .where('language', '==', language)

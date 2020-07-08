@@ -3,3 +3,4 @@ export * from './docs-to-liturgy';
 export * from './docs-to-option';
 export * from './preferences-to-categories';
 export * from './specific-class';
+export * from './version-to-string';

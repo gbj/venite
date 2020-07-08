@@ -32,6 +32,8 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   additionalOptions : Observable<LiturgicalDocument[]>;
   // used for lectionary/canticle table select
   additionalTable : Observable<{[key: string]: string}>;
+  // used in lectionary select
+  additionalBibleTranslations : Observable<{[key: string]: string}>;
 
   // return value
   public complete : Subject<LiturgicalDocument[]> = new Subject();
@@ -83,6 +85,8 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalMode = 'lectionary';
           this.additionalVersions = this.documentService.getVersions(this.language, 'lectionary');
           this.additionalTable = this.documentService.getVersions(this.language, 'readings');
+          this.additionalBibleTranslations = this.documentService.getVersions(this.language, 'bible-translation')
+          this.additionalOptions = this.documentService.findDocumentsByCategory(['Bible Reading Introduction'], this.language)
           return this.complete;
         case 'canticle':
           this.additionalMode = 'canticle';
@@ -108,8 +112,8 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     }
   }
 
-  readingSelected(selection: { lectionary : string; reading : string; }) {
-    const { lectionary, reading } = selection;
+  readingSelected(selection: { lectionary : string; reading : string; version: string | { preference: string; }; intro: LiturgicalDocument | null; }) {
+    const { lectionary, reading, version, intro } = selection;
     this.complete.next(
       (this.addition.template || [])
         .map(doc => new LiturgicalDocument({
@@ -118,6 +122,11 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             type: 'lectionary',
             table: lectionary,
             item: reading
+          },
+          version,
+          metadata: {
+            ... doc.metadata,
+            intro
           }
         }))
     );

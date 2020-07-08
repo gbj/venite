@@ -1,5 +1,6 @@
 import { LiturgicalDocument } from "../liturgical-document";
 import { Option } from "../option";
+import { versionToString } from "./version-to-string";
 
 /* Converts a list of documents into a single document showing options in parallel */
 export function docsToOption(docs : LiturgicalDocument[] | LiturgicalDocument, versions : string[] | undefined = undefined) : LiturgicalDocument {
@@ -7,7 +8,7 @@ export function docsToOption(docs : LiturgicalDocument[] | LiturgicalDocument, v
     // sort by preferred version
     let sorted : LiturgicalDocument[];
     if(versions !== undefined && versions.length > 0) {
-      sorted = docs.sort((a, b) => versions.indexOf(a.version) - versions.indexOf(b.version))
+      sorted = docs.sort((a, b) => versions.indexOf(versionToString(a.version)) - versions.indexOf(versionToString(b.version)))
     } else {
       sorted = docs;
     }

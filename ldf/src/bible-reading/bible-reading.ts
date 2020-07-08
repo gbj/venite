@@ -89,7 +89,8 @@ export class BibleReading extends LiturgicalDocument {
    * // returns 'The Book of Genesis'
    * this.longNameFromBookCode('Genesis') */
   longNameFromBookCode(bookName: string, lang: string = 'en'): string {
-    const searchResult = BIBLE_BOOK_NAMES[bookName][lang];
+    const bookResults = BIBLE_BOOK_NAMES[bookName],
+          searchResults = (bookResults || {})[lang];
     return searchResult ? searchResult.long : bookName;
   }
 

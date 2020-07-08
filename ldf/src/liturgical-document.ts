@@ -70,9 +70,9 @@ export class LiturgicalDocument {
 
   /** Identifying code for the version of a liturgy, prayer, psalm, or Bible reading.
    * @example
-   * `'Rite-II'`, `'bcp1979'`, `'coverdale'`, `'NRSV'`
+   * `'Rite-II'`, `'bcp1979'`, `'coverdale'`, `'NRSV'`, `{ preference: "bibleVersion" }`
    */
-  version: string;
+  version: string | { preference: string; };
 
   /** Biblical or other citation for the document.
    * @example

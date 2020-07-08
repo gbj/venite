@@ -1,6 +1,5 @@
 import { Component, Element, Prop, Watch, State, Method, Host, JSX, h } from '@stencil/core';
 import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
-import { BibleReadingService } from './bible-reading-service';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 
@@ -58,7 +57,12 @@ export class BibleReadingComponent {
 
     // process intro
     if(this.obj.metadata && this.obj.metadata.intro) {
-      this.obj.compileIntro();
+      try {
+        this.obj.compileIntro();
+      } catch(e) {
+        console.warn(e);
+        console.warn(this.obj);
+      }
     }
   }
 
@@ -84,29 +88,8 @@ export class BibleReadingComponent {
     }
   }
 
-  /** Load and render a particular Bible passage given by citation from the API */
-  @Method()
-  async loadCitation(citation : string = undefined, version : string = undefined) {
-    try {
-      console.log(`loading ${citation} (${version})`)
-      this.verses = await BibleReadingService.find(
-        citation || this.obj.citation,
-        version || this.obj.version,
-        this.obj.api
-      );
-    } catch(e) {
-      this.loadingError = e.toString();
-    }
-  }
-
   loadVerses() {
-    // load reading of value into stateful `verses`
-    if(this.obj.value) {
-      this.verses = this.obj.value;
-    } else {
-      // if passed empty value, try to use BibleReadingService to load content
-      this.loadCitation();
-    }
+    this.verses = this.obj.value || [];
   }
 
   // Render
