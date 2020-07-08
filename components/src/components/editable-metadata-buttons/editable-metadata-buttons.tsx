@@ -71,7 +71,16 @@ export class EditableMetadataButtonsComponent {
     return this.openModal(
       'ldf-editable-condition',
       `${this.base}/${this.index}/condition`,
-      { condition: this.obj.condition }
+      { condition: this.obj?.condition }
+    );
+  }
+
+  /** Display a modal `EditablePreferencesComponent` */
+  async openPreferences() {
+    return this.openModal(
+      'ldf-editable-preferences',
+      `${this.base}/${this.index}/metadata/preferences`,
+      { preferences: this.obj?.metadata?.preferences }
     );
   }
 
@@ -120,6 +129,12 @@ export class EditableMetadataButtonsComponent {
               <ion-icon slot='icon-only' name='add'></ion-icon>
             </ion-button>
           }
+
+          {/* "Preferences" Button */}
+          {this.obj?.type == 'liturgy' && <ion-button onClick={() => this.openPreferences()} aria-role='button' aria-label={localeStrings.preferences}>
+            {/*localeStrings.settings*/}
+            <ion-icon slot='icon-only' name='list'></ion-icon>
+          </ion-button>}
 
           {/* "Settings" Button */}
           <ion-button onClick={() => this.openSettings()} aria-role='button' aria-label={localeStrings.settings}>

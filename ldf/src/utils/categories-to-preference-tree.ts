@@ -5,7 +5,8 @@ export function categoriesToPreferenceTree(categories : string[], preferences : 
     {
       ... obj,
       [category]: Object.entries(preferences)
-        .filter(([key, pref]) =>
+        .map(([key, pref]) => new Preference({ ... pref, key }))
+        .filter(pref =>
           pref.category == category || (!pref.category && category == 'Preferences')
         )
     }

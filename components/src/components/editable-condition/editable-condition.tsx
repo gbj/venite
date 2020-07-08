@@ -148,23 +148,23 @@ export class EditableConditionComponent {
             }
 
             {this.currentCondition?.conditions?.map((condition, ii) => [
-                  <ion-toolbar>
-                    <ion-title slot="start">{localeStrings.condition} {ii+1}</ion-title>
-                    <ion-buttons slot="end">
-                      {/* Delete Button */}
-                      <ldf-editable-delete slot="end"
-                        base={`${this.path}/conditions`}
-                        index={ii}
-                        obj={condition}
-                      >
-                      </ldf-editable-delete>
-                    </ion-buttons>
-                  </ion-toolbar>,
-                  (<ldf-editable-condition-piece
-                    path={`${this.path}/conditions/${ii}`}
-                    condition={condition}
-                  ></ldf-editable-condition-piece>)                   
-                ])
+                <ion-toolbar>
+                  <ion-title slot="start">{localeStrings.condition} {ii+1}</ion-title>
+                  <ion-buttons slot="end">
+                    {/* Delete Button */}
+                    <ldf-editable-delete slot="end"
+                      base={`${this.path}/conditions`}
+                      index={ii}
+                      obj={condition}
+                    >
+                    </ldf-editable-delete>
+                  </ion-buttons>
+                </ion-toolbar>,
+                (<ldf-editable-condition-piece
+                  path={`${this.path}/conditions/${ii}`}
+                  condition={condition}
+                ></ldf-editable-condition-piece>)                   
+              ])
             }
             {/* Add Button */}
             {this.currentCondition?.conditions && <ion-item lines="none">
