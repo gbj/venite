@@ -4,7 +4,7 @@ import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } fr
 import { Observable, from } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
-import { LiturgicalDocument, Liturgy } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
 
 // Include document ID and data
@@ -71,7 +71,6 @@ export class DocumentService {
   }
 
   findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
-    console.log('(findDocumentsByCategory) category = ', category);
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('category', 'array-contains-any', category)
          .where('language', '==', language)
@@ -80,7 +79,7 @@ export class DocumentService {
          .where('sharing.privacy', '==', 'public')
     ).valueChanges().pipe(
       // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
-      map(docs => docs.filter(doc => versions.length == 0 || !doc.version || versions.includes(doc.version)))
+      map(docs => docs.filter(doc => versions.length == 0 || !doc.version || versions.includes(versionToString(doc.version))))
     );
   }
 

@@ -1,15 +1,43 @@
+<h2>{{ 'editor.lectionary-reading' | translate }}</h2>
 <form>
-  <ion-item>
-    <ion-label position="stacked">{{ 'editor.lectionary' | translate }}</ion-label>
-    <ion-select name="lectionary" ngDefaultControl [(ngModel)]="selectedLectionary">
-      <ion-select-option *ngFor="let opt of lectionaryEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
-    <ion-select name="reading" ngDefaultControl [(ngModel)]="selectedReading">
-      <ion-select-option *ngFor="let opt of readingEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <ion-list>
+    <!-- Lectionary and Reading -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'editor.lectionary' | translate }}</ion-label>
+      <ion-select name="lectionary" ngDefaultControl [(ngModel)]="selectedLectionary">
+        <ion-select-option *ngFor="let opt of lectionaryEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
+      <ion-select name="reading" ngDefaultControl [(ngModel)]="selectedReading">
+        <ion-select-option *ngFor="let opt of readingEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <!-- Translation -->
+    <ion-list-header>{{ 'editor.bible-version' | translate }}</ion-list-header>
+    <ion-item>
+      <ion-label>{{ 'editor.bible-version-preference' | translate }}</ion-label>
+      <ion-checkbox name="useBibleVersionPref" ngDefaultControl [(ngModel)]="useBibleVersionPref"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="!useBibleVersionPref">
+      <ion-label>{{ 'editor.bible-version' | translate }}</ion-label>
+      <ion-select name="version" ngDefaultControl [(ngModel)]="selectedVersion">
+        <ion-select-option *ngFor="let opt of versionEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <!-- Which Intro -->
+    <ion-list-header>{{ 'editor.bible-introduction' | translate }}</ion-list-header>
+    <ion-radio-group [(ngModel)]="selectedIntroduction" name="introduction" ngDefaultControl>
+      <ion-item>
+        <ion-label>{{ 'editor.none' | translate }}</ion-label>
+        <ion-radio [value]="null"></ion-radio>
+      </ion-item>
+      <ion-item *ngFor="let intro of intros">
+        <ion-label>{{ intro.value[0] }}</ion-label>
+        <ion-radio [value]="intro"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
   <ion-button (click)="update()">{{ 'save' | translate }}</ion-button>
 </form>

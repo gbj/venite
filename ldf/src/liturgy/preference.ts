@@ -1,5 +1,8 @@
 /** `Preference` represents a single preference in any given liturgy */
 export class Preference {
+  /** Key of this preference within the parent `Liturgy`’s `preferences` */
+  key?: string;
+
   /** Human-readable label for the preference */
   label: string;
 

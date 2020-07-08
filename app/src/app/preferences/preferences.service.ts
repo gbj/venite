@@ -8,7 +8,7 @@ import { AuthServiceInterface, AUTH_SERVICE } from 'service-api';
 import { LocalStorageService } from 'localstorage';
 import { StoredPreference } from 'service-api';
 
-import { LiturgicalDocument } from '@venite/ldf';
+import { LiturgicalDocument, versionToString } from '@venite/ldf';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +35,7 @@ export class PreferencesService {
     if(liturgy) {
       prefDoc.liturgy = liturgy.slug;
       prefDoc.language = liturgy.language || 'en';
-      prefDoc.version = liturgy.version || 'Rite-II';
+      prefDoc.version = versionToString(liturgy.version) || 'Rite-II';
     }
 
     if(uid) {

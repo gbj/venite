@@ -26,16 +26,6 @@ Type: `Promise<{ [x: string]: string; }>`
 
 
 
-### `loadCitation(citation?: string, version?: string) => Promise<void>`
-
-Load and render a particular Bible passage given by citation from the API
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
 
 ## Dependencies
 

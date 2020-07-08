@@ -12,7 +12,6 @@ enum Field {
   String,
   Bool,
   Number,
-  Preferences,
   StringList,
   BibleReadingIntro,
   TimeInSeconds,
@@ -103,8 +102,6 @@ export class EditableMetadataMetadataFieldsComponent {
 
       case 'liturgy':
         return [
-          { field: 'preferences', type: Field.Preferences },
-          { field: 'special_preferences', type: Field.Preferences },
           { field: 'liturgyversions', type: Field.StringList },
           { field: 'supplement', type: Field.Bool },
           { field: 'evening', type: Field.Bool },
@@ -182,15 +179,6 @@ export class EditableMetadataMetadataFieldsComponent {
               placeholder={placeholder}
               text={currentValue}
             ></ldf-editable-text>
-          );
-          break;
-        case Field.Preferences:
-          nodes.push(
-            <ldf-editable-preferences
-              path={`${this.path}/${field.field}`}
-              preferences={currentValue}
-            >
-            </ldf-editable-preferences>
           );
           break;
         case Field.String:

@@ -29,7 +29,7 @@ One line of a responsive prayer
 
 • **label**? : *undefined | string*
 
-*Defined in [responsive-prayer.ts:33](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/responsive-prayer.ts#L33)*
+*Defined in [responsive-prayer.ts:33](https://github.com/gbj/venite/blob/c832b50/ldf/src/responsive-prayer.ts#L33)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **optional**? : *undefined | false | true*
 
-*Defined in [responsive-prayer.ts:36](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/responsive-prayer.ts#L36)*
+*Defined in [responsive-prayer.ts:36](https://github.com/gbj/venite/blob/c832b50/ldf/src/responsive-prayer.ts#L36)*
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **response**? : *undefined | string*
 
-*Defined in [responsive-prayer.ts:35](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/responsive-prayer.ts#L35)*
+*Defined in [responsive-prayer.ts:35](https://github.com/gbj/venite/blob/c832b50/ldf/src/responsive-prayer.ts#L35)*
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 • **text**: *string*
 
-*Defined in [responsive-prayer.ts:34](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/responsive-prayer.ts#L34)*
+*Defined in [responsive-prayer.ts:34](https://github.com/gbj/venite/blob/c832b50/ldf/src/responsive-prayer.ts#L34)*

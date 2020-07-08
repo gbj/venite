@@ -1,19 +1,22 @@
-import { Component, Element, Prop, Event, EventEmitter, h, State } from '@stencil/core';
+import { Component, Element, Prop, Event, EventEmitter, h, State, Host, Watch } from '@stencil/core';
 import { Change, Preference, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
+import { PreferenceTree } from './preference-tree';
 
 @Component({
-  tag: 'ldf-editable-preference',
+  tag: 'ldf-editable-preferences',
   shadow: true
 })
 export class EditablePreferencesComponent {
   @Element() el: HTMLElement;
 
-  @State() categories : string[];
-
   @State() tree : { [category: string]: Preference[] };
+  @State() specialTree : { [category: string]: Preference[] };
 
   @State() localeStrings: { [x: string]: string; };
+
+  @State() currentPreferences : { [x: string]: Preference };
+  @State() currentSpecialPreferences : { [x: string]: Preference };
 
   // Properties
 
@@ -22,13 +25,33 @@ export class EditablePreferencesComponent {
 
   /** Starting value for editing */
   @Prop() preferences: { [x: string]: Preference };
+  @Watch('preferences')
+  preferencesChange() {
+    this.currentPreferences = this.preferences || {};
+    this.tree = this.buildTree(this.currentPreferences);
+  }
+
+  /** Starting value for editing */
+  @Prop() special_preferences: { [x: string]: Preference };
+  @Watch('special_preferences')
+  specialPreferencesChange() {
+    this.currentSpecialPreferences = this.special_preferences || {};
+    this.specialTree = this.buildTree(this.currentSpecialPreferences);
+  }
+
+  /** Used to pass in the `IonModal` we will dismiss */
+  @Prop() modal : any;
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   componentWillLoad() {
+    this.currentPreferences = this.preferences || {};
+    this.currentSpecialPreferences = this.special_preferences || {};
+    this.tree = this.buildTree(this.currentPreferences);
+    this.specialTree = this.buildTree(this.currentSpecialPreferences);
+
     this.loadLocaleStrings();
-    this.buildTree();
   }
 
   /** Asynchronously return localization strings */
@@ -50,24 +73,59 @@ export class EditablePreferencesComponent {
     }
   }
 
-  buildTree() {
-    const categories = preferencesToCategories(this.preferences);
-    this.categories = categories;
-    this.tree = categoriesToPreferenceTree(categories, this.preferences);
+  buildTree(preferences : { [x: string]: Preference; }) : { [category: string]: Preference[]; } {
+    const categories = preferencesToCategories(preferences);
+    return categoriesToPreferenceTree(categories, preferences);
+  }
+
+  addPreference(key : string) {
+    this.currentPreferences = { ... this.currentPreferences, [key]: new Preference() };
+    this.tree = this.buildTree(this.currentPreferences);
+    // TODO -- emit
+  }
+
+  addSpecialPreference(key : string) {
+    this.currentSpecialPreferences = { ... this.currentSpecialPreferences, [key]: new Preference() };
+    this.specialTree = this.buildTree(this.currentSpecialPreferences);
+    // TODO -- emit
   }
 
   render() {
-    return this.categories.map(category =>
-      {this.tree[category].length >= 0 && <fieldset>
-        <h3>{category}</h3>
-        <ion-list>
-          {this.tree[category].map(item =>
-            <ion-item>
-              <code>{JSON.stringify(item)}</code>
-            </ion-item>
-          )}
-        </ion-list>
-      </fieldset>}
-    )
+    const localeStrings = this.localeStrings || {};
+
+    return (
+      <Host>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>{ localeStrings.preferences }</ion-title>
+            <ion-buttons slot="primary">
+              <ion-button onClick={() => this.modal.dismiss(null)}>
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          {/* Regular Preferences */}
+          <PreferenceTree
+            path={`${this.path}/preferences`}
+            tree={this.tree}
+            label={localeStrings.preferences}
+            newCallback={() => this.addPreference('new')}
+            localeStrings={localeStrings}
+          />
+
+          {/* Special Preferences */}
+          <PreferenceTree
+            path={`${this.path}/special_preferences`}
+            tree={this.specialTree}
+            label={localeStrings.special_preferences}
+            desc={localeStrings.special_preferences_desc}
+            newCallback={() => this.addSpecialPreference('new')}
+            localeStrings={localeStrings}
+          />
+        </ion-content>
+      </Host>
+    );
   }
 }

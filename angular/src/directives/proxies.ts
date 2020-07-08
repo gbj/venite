@@ -1158,7 +1158,7 @@ export class IonVirtualScroll {
 }
 
 export declare interface LdfBibleReading extends Components.LdfBibleReading {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['getLocaleStrings', 'loadCitation']})
+@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['getLocaleStrings']})
 @Component({ selector: 'ldf-bible-reading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfBibleReading {
   protected el: HTMLElement;

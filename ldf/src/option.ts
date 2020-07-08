@@ -1,5 +1,6 @@
 import { LiturgicalDocument } from './liturgical-document';
 import { BibleReading } from './bible-reading/bible-reading';
+import { versionToString } from './utils/version-to-string';
 
 const VERSIONS: { [x: string]: string } = {
   ip: 'IP',
@@ -26,7 +27,7 @@ export class Option extends LiturgicalDocument {
 
   uniqueVersions(): number {
     return this.value
-      .map((o) => o.version)
+      .map((o) => versionToString(o.version))
       .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
@@ -103,7 +104,7 @@ export class Option extends LiturgicalDocument {
     }
     // Canticles and invitatories, if multiple options => Venite (EOW)
     else if (uniqueVersions > 1 && option.metadata && option.metadata.hasOwnProperty('localname') && option.version) {
-      label = `${option.metadata.localname} (${VERSIONS[option.version]})`;
+      label = `${option.metadata.localname} (${VERSIONS[versionToString(option.version)]})`;
     }
     // Version label other than BCP 1979 => EOW
     else if (option.version_label && option.version_label !== 'bcp1979') {
@@ -115,7 +116,7 @@ export class Option extends LiturgicalDocument {
     }
     // If multiple labels and version, then label (version) => Trisagion (BCP), Gloria in Excelsis (EOW)
     else if (option.label && uniqueLabels > 1 && uniqueVersions > 1) {
-      label = `${option.label} (${VERSIONS[option.version]})`;
+      label = `${option.label} (${VERSIONS[versionToString(option.version)]})`;
     }
     // Local name but no version (or version is BCP) => 'The Song of Mary'
     else if (
@@ -127,7 +128,7 @@ export class Option extends LiturgicalDocument {
     }
     // Fall back to a version label
     else if (uniqueVersions > 1 && option.version) {
-      label = VERSIONS[option.version];
+      label = VERSIONS[versionToString(option.version)];
     }
     // Fall back to a citation
     else if (option.citation) {

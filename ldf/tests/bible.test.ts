@@ -7,7 +7,7 @@ describe("Bible Class abbreviation and name functions", () => {
     reading.citation = 'Jn 1:1';
     expect(reading.abbrevFromCitation()).toEqual('Jn');
     reading.citation = '1 Cor. 1:1';
-    expect(reading.abbrevFromCitation()).toEqual('1 Cor.');
+    expect(reading.abbrevFromCitation()).toEqual('1 Cor');
     reading.citation = '2 Kgs 1:1-7';
     expect(reading.abbrevFromCitation()).toEqual('2 Kgs');
     reading.citation = '2 Kgs 1:1-7, 9, 12-14';
@@ -30,6 +30,8 @@ describe("Bible Class abbreviation and name functions", () => {
 
     reading.citation = 'Jn 1:1';
     expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('John');
+    reading.citation = 'Matt. 23:27-39';
+    expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('Matthew');
     reading.citation = '1 Cor. 1:1';
     expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('1 Corinthians');
     reading.citation = '2 Kgs 1:1-7';
@@ -45,6 +47,8 @@ describe("Bible Class abbreviation and name functions", () => {
 
     reading.citation = 'Jn 1:1';
     expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation()))).toEqual('The Gospel According to John');
+    reading.citation = 'Matt. 23:27-39';
+    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation()))).toEqual('The Gospel According to Matthew');
     reading.citation = '1 Cor. 1:1';
     expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation()))).toEqual('The First Letter to the Corinthians');
     reading.citation = '2 Kgs 1:1-7';

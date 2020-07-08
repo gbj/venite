@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
-import { map, switchMap, startWith } from 'rxjs/operators';
+import { map, switchMap, startWith, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from 'service-api';
 
 @Injectable({
@@ -49,12 +49,12 @@ export class PrayService {
       if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
         return this.lookup(doc, day, prefs, []).pipe(
           // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
-          map(data => {
+          switchMap(data => {
             const doc = new LiturgicalDocument(data);
             if(doc.include(new LiturgicalDay(day), prefs)) {
-              return doc;
+              return this.lookupBibleReading(doc, typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version);
             } else {
-              return undefined;
+              return of(undefined);
             }
           })
         );
@@ -72,7 +72,7 @@ export class PrayService {
 
       // compile Bible readings if they have no content
       else if(doc.type == 'bible-reading' && !doc.hasOwnProperty('value') || doc.value.length == 0) {
-        return this.lookupBibleReading(doc);
+        return ;
       }
 
       // otherwise, check whether the doc should be included
@@ -91,8 +91,9 @@ export class PrayService {
   /** Return the complete form of a doc from the database, depending on what is specified in `lookup` property */
   lookup(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, alternateVersions : string[] = undefined) : Observable<LiturgicalDocument> {
     const language = doc.language || 'en',
-          versions = (alternateVersions?.length > 0 ? [ doc.version , ... alternateVersions ] : [ doc.version ])
-                        .filter(version => version !== undefined);
+          versions : string[] = (alternateVersions?.length > 0 ? [ doc.version , ... alternateVersions ] : [ doc.version ])
+                        .filter(version => version !== undefined)
+                        .map(version => typeof version === 'object' ? prefs[version.preference] : version);
   
     switch(doc.lookup.type) {
       case 'lectionary':
@@ -187,7 +188,7 @@ export class PrayService {
   /* Look up readings and chosen lectionary preference */
   lookupLectionaryReadings(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
-    const version : string = doc.version || prefs['bibleVersion'] || 'NRSV';
+    const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['bibleVersion'] || 'NRSV';
 
     return this.findReadings(doc, day, prefs).pipe(
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
@@ -204,7 +205,7 @@ export class PrayService {
   /** Look up psalms by by `LiturgicalDay` and chosen lectionary preference */
   lookupPsalter(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
-    const version : string = doc.version || prefs['psalterVersion'] || 'bcp1979';
+    const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['psalterVersion'] || 'bcp1979';
 
     return this.findReadings(doc, day, prefs).pipe(
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
@@ -255,8 +256,9 @@ export class PrayService {
   }
 
   /** Fetches values for Bible readings */
-  lookupBibleReading(doc : LiturgicalDocument) : Observable<LiturgicalDocument> {
-    return this.bibleService.getText(doc.citation, doc.version).pipe(
+  lookupBibleReading(doc : LiturgicalDocument, version : string) : Observable<LiturgicalDocument> {
+    return this.bibleService.getText(doc.citation, version).pipe(
+      tap(doc => console.log('(lookupBibleReading)', doc.citation, version)),
       map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value }))
     );
   }

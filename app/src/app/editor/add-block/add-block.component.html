@@ -40,8 +40,10 @@
 
       <!-- Lectionary Readings -->
       <venite-lectionary-select *ngSwitchCase="'lectionary'"
-        [lectionaries]="additionalVersions | async"
+        [versions]="additionalBibleTranslations | async"
         [readings]="additionalTable | async"
+        [lectionaries]="additionalVersions | async"
+        [intros]="additionalOptions | async"
         (readingSelected)="readingSelected($event)"
       >
       </venite-lectionary-select>

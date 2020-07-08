@@ -18,34 +18,34 @@
 
 ### ▪ **VERSIONS**: *object*
 
-*Defined in [option.ts:4](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L4)*
+*Defined in [option.ts:5](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L5)*
 
 ###  bcp1979
 
 • **bcp1979**: *string* = "1979"
 
-*Defined in [option.ts:6](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L6)*
+*Defined in [option.ts:7](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L7)*
 
 ###  coverdale
 
 • **coverdale**: *string* = "Coverdale"
 
-*Defined in [option.ts:8](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L8)*
+*Defined in [option.ts:9](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L9)*
 
 ###  eow
 
 • **eow**: *string* = "EOW"
 
-*Defined in [option.ts:7](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L7)*
+*Defined in [option.ts:8](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L8)*
 
 ###  ip
 
 • **ip**: *string* = "IP"
 
-*Defined in [option.ts:5](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L5)*
+*Defined in [option.ts:6](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L6)*
 
 ###  rite_i
 
 • **rite_i**: *string* = "Rite I"
 
-*Defined in [option.ts:9](https://github.com/gbj/venite/blob/2b9f06e/ldf/src/option.ts#L9)*
+*Defined in [option.ts:10](https://github.com/gbj/venite/blob/c832b50/ldf/src/option.ts#L10)*
