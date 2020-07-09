@@ -8,6 +8,7 @@
 
 * [BibleReading](_index_.md#biblereading)
 * [BibleReadingVerse](_index_.md#biblereadingverse)
+* [Calendar](_index_.md#calendar)
 * [CanticleTableEntry](_index_.md#canticletableentry)
 * [Change](_index_.md#change)
 * [ChangeMessage](_index_.md#changemessage)
@@ -45,6 +46,7 @@
 * [SelectableCitation](_index_.md#selectablecitation)
 * [Sharing](_index_.md#sharing)
 * [Source](_index_.md#source)
+* [TEC_1979_CALENDAR](_index_.md#tec_1979_calendar)
 * [Text](_index_.md#text)
 * [TypeTuple](_index_.md#typetuple)
 * [User](_index_.md#user)
@@ -80,6 +82,12 @@ ___
 ###  BibleReadingVerse
 
 • **BibleReadingVerse**:
+
+___
+
+###  Calendar
+
+• **Calendar**:
 
 ___
 
@@ -302,6 +310,12 @@ ___
 ###  Source
 
 • **Source**:
+
+___
+
+###  TEC_1979_CALENDAR
+
+• **TEC_1979_CALENDAR**:
 
 ___
 

@@ -1,9 +1,10 @@
 {
   "name": "@venite/ng-platform",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
-    "tslib": "^1.10.0"
+    "tslib": "^1.10.0",
+    "@venite/ng-service-api": "~0.0.3"
   }
 }

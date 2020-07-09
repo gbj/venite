@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 
 import { Plugins, LocalNotificationPendingList } from '@capacitor/core';
 import { Reminder } from './reminder';
-import { BibleServiceInterface, PlatformServiceInterface, BIBLE_SERVICE, PLATFORM_SERVICE } from 'service-api';
+import { BibleServiceInterface, PlatformServiceInterface, BIBLE_SERVICE, PLATFORM_SERVICE } from '@venite/ng-service-api';
 const { LocalNotifications } = Plugins;
 
 @Injectable({

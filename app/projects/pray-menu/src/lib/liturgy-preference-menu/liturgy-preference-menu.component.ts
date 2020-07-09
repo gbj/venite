@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { map, tap, filter } from 'rxjs/operators';
 
 import { Liturgy, Preference, ClientPreferences, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
-import { PreferencesServiceInterface, PREFERENCES_SERVICE } from 'service-api';
+import { PreferencesServiceInterface, PREFERENCES_SERVICE } from '@venite/ng-service-api';
 
 interface TreeData {
   preferences: [string, Preference][];

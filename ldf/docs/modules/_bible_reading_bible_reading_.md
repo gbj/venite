@@ -22,7 +22,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [bible-reading/bible-reading.ts:7](https://github.com/gbj/venite/blob/0242db9/ldf/src/bible-reading/bible-reading.ts#L7)*
+*Defined in [bible-reading/bible-reading.ts:7](https://github.com/gbj/venite/blob/3dc0c1d/ldf/src/bible-reading/bible-reading.ts#L7)*
 
 ## Variables
 
@@ -30,4 +30,4 @@
 
 • **STYLES**: *["long", "short"]* = ['long', 'short'] as const
 
-*Defined in [bible-reading/bible-reading.ts:6](https://github.com/gbj/venite/blob/0242db9/ldf/src/bible-reading/bible-reading.ts#L6)*
+*Defined in [bible-reading/bible-reading.ts:6](https://github.com/gbj/venite/blob/3dc0c1d/ldf/src/bible-reading/bible-reading.ts#L6)*

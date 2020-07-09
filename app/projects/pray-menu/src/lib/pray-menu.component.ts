@@ -5,7 +5,7 @@ import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInterface, AuthServiceInterface, CalendarServiceInterface, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE } from 'service-api';
+import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInterface, AuthServiceInterface, CalendarServiceInterface, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE } from '@venite/ng-service-api';
 import { tap, switchMap, map } from 'rxjs/operators';
 
 @Component({
@@ -29,7 +29,7 @@ export class PrayMenuComponent implements OnInit {
   properLiturgy : BehaviorSubject<ProperLiturgy> = new BehaviorSubject(undefined);
   sanctoral : BehaviorSubject<string> = new BehaviorSubject(this.config.defaultKalendar);  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
-  week : Observable<LiturgicalWeek[]>;  
+  week : Observable<LiturgicalWeek[]>;
 
   // Readings available for the selected day
   availableReadings$ : Observable<string[]>;
@@ -41,7 +41,7 @@ export class PrayMenuComponent implements OnInit {
   // Preferences
   clientPreferences : BehaviorSubject<ClientPreferences> = new BehaviorSubject({});
 
-  /* Records the last time we entered the page; will only reset the menu if 
+  /* Records the last time we entered the page; will only reset the menu if
     * it's been longer than REMEMBER_TIME */
   lastPrayed : Date = new Date();
   readonly REMEMBER_TIME = 30*60*1000; // default to 30 minutes
@@ -208,9 +208,9 @@ nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreference
       .concat(Object.keys(liturgy.metadata?.special_preferences || {}))
       .concat(Object.keys(prefs || {}))
       .reduce((uniques, item) => uniques.includes(item) ? uniques : [...uniques, item], []);
-  
+
   const nonDefaultPrefs = {};
-  
+
   for(let key of uniquePrefKeys) {
     const liturgyPref = new Preference(liturgy.metadata?.preferences[key]),
         clientPrefValue = prefs[key];
@@ -220,7 +220,7 @@ nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreference
     } catch(e) {
       console.warn(e);
     }
-        
+
     if(clientPrefValue !== defaultPrefValue) {
       nonDefaultPrefs[key] = clientPrefValue;
     }

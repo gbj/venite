@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Reminder } from './reminder';
 import { ReminderService } from './reminder.service';
-import { LocalStorageServiceInterface, LOCAL_STORAGE } from 'service-api';
+import { LocalStorageServiceInterface, LOCAL_STORAGE } from '@venite/ng-service-api';
 
 @Component({
   selector: 'venite-reminders',

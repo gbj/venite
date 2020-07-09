@@ -4,8 +4,7 @@ import { Observable, BehaviorSubject, Subject, Subscription, combineLatest, of, 
 import { tap, map, take, filter, mergeMap, startWith } from 'rxjs/operators';
 
 import { Liturgy, ProperLiturgy, LiturgicalDocument } from '@venite/ldf';
-import { DOCUMENT_SERVICE } from 'service-api';
-import { DocumentServiceInterface } from 'dist/service-api/lib/document-service.interface';
+import { DocumentServiceInterface, DOCUMENT_SERVICE } from '@venite/ng-service-api';
 
 @Component({
   selector: 'venite-liturgy-menu',

@@ -3,7 +3,7 @@ import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, 
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { map, switchMap, startWith, tap } from 'rxjs/operators';
-import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from 'service-api';
+import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
 
 @Injectable({
   providedIn: 'root'

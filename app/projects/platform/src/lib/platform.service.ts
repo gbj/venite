@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import { Platform } from '@ionic/angular';
-import { PlatformServiceInterface } from 'service-api';
+import { PlatformServiceInterface } from '@venite/ng-service-api';
 
 @Injectable({
   providedIn: 'root'

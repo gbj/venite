@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 const { Storage } = Plugins;
-import { LocalStorageServiceInterface, PlatformServiceInterface, PLATFORM_SERVICE } from 'service-api';
+import { LocalStorageServiceInterface, PlatformServiceInterface, PLATFORM_SERVICE } from '@venite/ng-service-api';
 
 @Injectable({
   providedIn: 'root'

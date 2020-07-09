@@ -4,7 +4,7 @@ import { tap } from 'rxjs/operators';
 
 import { LiturgicalDay, ProperLiturgy } from '@venite/ldf';
 
-import { CALENDAR_SERVICE, CalendarServiceInterface } from 'service-api';
+import { CALENDAR_SERVICE, CalendarServiceInterface } from '@venite/ng-service-api';
 
 @Component({
   selector: 'venite-proper-liturgy-menu',

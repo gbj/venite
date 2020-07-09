@@ -3,7 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, from, fromEventPattern, combineLatest } from 'rxjs';
 import { map, startWith, tap } from 'rxjs/operators';
-import { PlatformServiceInterface, PreferencesServiceInterface, PREFERENCES_SERVICE, PLATFORM_SERVICE } from 'service-api';
+import { PlatformServiceInterface, PreferencesServiceInterface, PREFERENCES_SERVICE, PLATFORM_SERVICE } from '@venite/ng-service-api';
 
 @Injectable({
   providedIn: 'root'
