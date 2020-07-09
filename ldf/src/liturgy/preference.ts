@@ -53,11 +53,6 @@ export class PreferenceOption {
 
   /** Can be used to pass additional data that the liturgy compiler will use. */
   metadata?: {
-    /** Used in lectionary preferences
-     * @example
-     * { "value": "rclsunday", "label": "Revised Common Lectionary (RCL)", "metadata": { "whentype": "date" } }  */
-    whentype?: string;
-
     /** Used in reading preferences
      * @example
      * // First Reading in Episcopal Evening Prayer is OT reading for alternate year
