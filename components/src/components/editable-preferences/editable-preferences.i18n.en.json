@@ -1,5 +1,9 @@
 {
   "addPreference": "Add Preference",
+  "cancel": "Cancel",
+  "label": "Label",
+  "new_preference": "New Preference",
+  "ok": "OK",
   "preferences": "Preferences",
   "special_preferences": "Special Preferences",
   "special_preferences_desc": "These won’t be saved between sessions. (For example, you might include a ‘Footwashing’ setting to be used on Maundy Thursday.)"

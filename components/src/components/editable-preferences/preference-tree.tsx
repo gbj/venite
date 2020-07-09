@@ -23,15 +23,27 @@ export const PreferenceTree : FunctionalComponent<PreferenceTreeProps> = ({ path
           <ion-list>
             <ion-list-header>{category}</ion-list-header>
             {/* Each Preference */}
-            {tree[category].map(pref =>
-              <ion-item>
-                {pref.key}
-                <ldf-editable-preference-option
-                  path={path + '/' + pref.key}
+            {tree[category].map(pref => [
+              <ion-toolbar>
+              <ion-title slot="start">{pref.label} (<code>{pref.key}</code>)</ion-title>
+              <ion-buttons slot="end">
+                {/* Delete Button */}
+                <ldf-editable-delete
+                  base={path}
+                  index={pref.key}
+                  type="object"
+                  obj={pref}
                 >
-                </ldf-editable-preference-option>
-              </ion-item>
-            )}
+                </ldf-editable-delete>
+              </ion-buttons>
+            </ion-toolbar>,
+            <ion-item>
+              <ldf-editable-preference
+                path={path + '/' + pref.key}
+                preference={pref}
+              ></ldf-editable-preference>
+            </ion-item>
+            ])}
           </ion-list>
         </section>)}
         {/* After "Preferences" or "Special Preferences," an add button */}

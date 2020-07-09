@@ -34,6 +34,8 @@
  - [ldf-editable-condition-piece](../editable-condition-piece)
  - [ldf-editable-metadata](../editable-metadata)
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
+ - [ldf-editable-preference](../editable-preference)
+ - [ldf-editable-preference-option](../editable-preference-option)
  - [ldf-heading](../heading)
  - [ldf-psalm](../psalm)
  - [ldf-refrain](../refrain)
@@ -52,6 +54,8 @@ graph TD;
   ldf-editable-condition-piece --> ldf-editable-text
   ldf-editable-metadata --> ldf-editable-text
   ldf-editable-metadata-metadata-fields --> ldf-editable-text
+  ldf-editable-preference --> ldf-editable-text
+  ldf-editable-preference-option --> ldf-editable-text
   ldf-heading --> ldf-editable-text
   ldf-psalm --> ldf-editable-text
   ldf-refrain --> ldf-editable-text

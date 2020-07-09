@@ -1,4 +1,5 @@
 import { Component, Element, Prop, Event, EventEmitter, h, State, Host, Watch } from '@stencil/core';
+import { alertController } from '@ionic/core';
 import { Change, Preference, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { PreferenceTree } from './preference-tree';
@@ -78,16 +79,71 @@ export class EditablePreferencesComponent {
     return categoriesToPreferenceTree(categories, preferences);
   }
 
-  addPreference(key : string) {
-    this.currentPreferences = { ... this.currentPreferences, [key]: new Preference() };
+  async addPreference() {
+    const { key, label } = await this.grabKeyFromAlert();
+    this.currentPreferences = { ... this.currentPreferences, [key]: new Preference({ key, label }) };
     this.tree = this.buildTree(this.currentPreferences);
-    // TODO -- emit
+    this.emit(this.preferences, 'preferences', key, this.currentPreferences[key]);
   }
 
-  addSpecialPreference(key : string) {
-    this.currentSpecialPreferences = { ... this.currentSpecialPreferences, [key]: new Preference() };
+  async addSpecialPreference() {
+    const { key, label } = await this.grabKeyFromAlert();
+    this.currentSpecialPreferences = { ... this.currentSpecialPreferences, [key]: new Preference({ key, label }) };
     this.specialTree = this.buildTree(this.currentSpecialPreferences);
-    // TODO -- emit
+    this.emit(this.special_preferences, 'special_preferences', key, this.currentSpecialPreferences[key]);
+  }
+
+  async grabKeyFromAlert() : Promise<{ key: string; label: string; }> {
+    const localeStrings = this.localeStrings || {};
+    const alert = await alertController.create({
+      header: localeStrings.new_preference,
+      inputs: [
+        {
+          name: 'label',
+          type: 'text',
+          placeholder: localeStrings.label
+        },
+      ],
+      buttons: [
+        {
+          text: localeStrings.cancel || 'Cancel',
+          role: 'cancel',
+          cssClass: 'danger'
+        }, {
+          text: localeStrings.ok || 'OK'
+        }
+      ]
+    });
+
+    await alert.present();
+
+    const data = await alert.onDidDismiss(),
+          label = data?.data?.values?.label,
+          // key is camelCase'd
+          key = label.replace(/(?:^\w|[A-Z]|\b\w)/g, (ltr, idx) => idx === 0 ? ltr.toLowerCase() : ltr.toUpperCase()).replace(/\s+/g, '')
+
+    return { key, label };
+  }
+
+  emit(input : {[x: string]: Preference}, tree: 'preferences' | 'special_preferences', key : string, value: any) {
+    if(input == undefined) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.path,
+        op: [{
+          type: 'set',
+          value: { [tree]: { [key]: value } }
+        }]
+      }))
+    } else {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.path,
+        op: [{
+          type: 'set',
+          index: key,
+          value
+        }]
+      }));
+    }
   }
 
   render() {
@@ -111,7 +167,7 @@ export class EditablePreferencesComponent {
             path={`${this.path}/preferences`}
             tree={this.tree}
             label={localeStrings.preferences}
-            newCallback={() => this.addPreference('new')}
+            newCallback={() => this.addPreference()}
             localeStrings={localeStrings}
           />
 
@@ -121,7 +177,7 @@ export class EditablePreferencesComponent {
             tree={this.specialTree}
             label={localeStrings.special_preferences}
             desc={localeStrings.special_preferences_desc}
-            newCallback={() => this.addSpecialPreference('new')}
+            newCallback={() => this.addSpecialPreference()}
             localeStrings={localeStrings}
           />
         </ion-content>

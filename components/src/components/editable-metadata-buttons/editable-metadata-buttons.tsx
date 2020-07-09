@@ -77,9 +77,10 @@ export class EditableMetadataButtonsComponent {
 
   /** Display a modal `EditablePreferencesComponent` */
   async openPreferences() {
+    const path = this.base && this.index ? `${this.base}/${this.index}` : '';
     return this.openModal(
       'ldf-editable-preferences',
-      `${this.base}/${this.index}/metadata/preferences`,
+      `${path}/metadata`,
       { preferences: this.obj?.metadata?.preferences }
     );
   }

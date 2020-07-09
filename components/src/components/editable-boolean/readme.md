@@ -26,6 +26,7 @@
 ### Used by
 
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
+ - [ldf-editable-preference-option](../editable-preference-option)
 
 ### Depends on
 
@@ -36,6 +37,7 @@
 graph TD;
   ldf-editable-boolean --> ion-checkbox
   ldf-editable-metadata-metadata-fields --> ldf-editable-boolean
+  ldf-editable-preference-option --> ldf-editable-boolean
   style ldf-editable-boolean fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

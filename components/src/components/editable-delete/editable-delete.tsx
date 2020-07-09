@@ -14,11 +14,13 @@ export class EditableDeleteComponent {
   @State() localeStrings: { [x: string]: string; };
 
   // Properties
-  /** A JSON Pointer that points to the array within which the item is nested*/
+  /** A JSON Pointer that points to the array or object within which the item is nested*/
   @Prop({ reflect: true }) base: string;
 
-  /** The item's index within that array */
-  @Prop({ reflect: true }) index: number;
+  /** The item's index within that array, or property within that object */
+  @Prop({ reflect: true }) index: number | string;
+
+  @Prop() type : 'array' | 'object' = 'array';
 
   /** The item to be deleted */
   @Prop() obj : any;
@@ -50,10 +52,7 @@ export class EditableDeleteComponent {
           cssClass: 'danger',
           handler: () => {
             console.log('deleting ', this.base, this.index);
-            this.ldfDocShouldChange.emit(new Change({
-              path: this.base,
-              op: [ { type: 'deleteAt' as 'deleteAt', index: this.index, oldValue: this.obj } ]
-            }))
+            this.delete();
           }
         }
       ]
@@ -61,6 +60,20 @@ export class EditableDeleteComponent {
 
     // show the alert
     return alert.present();
+  }
+
+  delete() {
+    if(this.type === 'array') {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.base,
+        op: [ { type: 'deleteAt', index: this.index, oldValue: this.obj } ]
+      }))
+    } else {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.base,
+        op: [ { type: 'delete', index: this.index, oldValue: this.obj } ]
+      }))
+    }
   }
 
   // Lifecycle events

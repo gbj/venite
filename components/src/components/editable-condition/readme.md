@@ -23,10 +23,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [ldf-editable-metadata](../editable-metadata)
-
 ### Depends on
 
 - ion-header
@@ -86,7 +82,6 @@ graph TD;
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
   ion-chip --> ion-ripple-effect
-  ldf-editable-metadata --> ldf-editable-condition
   style ldf-editable-condition fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
