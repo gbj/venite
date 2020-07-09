@@ -27,18 +27,18 @@ export function liturgicalWeek(d : Date, calendar : Calendar = TEC_1979_CALENDAR
   if(date >= last_pentecost || date < last_epiphany) {
     return christmasCycleWeek(date);
   } else {
-    return easterCycleWeek(date);
+    return easterCycleWeek(date, calendar);
   }
 }
 
 // Easter Cycle
-function easterCycleWeek(date : Date) : LiturgicalWeekIndex {
+function easterCycleWeek(date : Date, calendar : Calendar = TEC_1979_CALENDAR) : LiturgicalWeekIndex {
   // weeks from Easter
-  const week : number = Math.round(weeksFromEaster(sundayBefore(date))+7);
+  const week : number = Math.round(weeksFromEaster(sundayBefore(date))+calendar.easterCycleBegins);
   return {
     cycle: 'Easter',
     week,
-    proper: week >= 14 ? calculateProper(date) : undefined
+    proper: week >= 14 && calendar.hasPropers ? calculateProper(date) : undefined
   }
 }
 

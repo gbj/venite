@@ -8,10 +8,14 @@ export class Calendar {
 
   /** How many weeks before Christmas the Christmas cycle begins in the calendar */
   christmasCycleBegins: number;
+
+  /** Use `Proper 1`, `Proper 2`, etc. for weeks after Pentecost */
+  hasPropers: boolean;
 }
 
 export const TEC_1979_CALENDAR : Calendar = {
   julian: false,
   easterCycleBegins: 7,
-  christmasCycleBegins: 4
+  christmasCycleBegins: 4,
+  hasPropers: true
 }
