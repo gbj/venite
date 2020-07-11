@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, InjectionToken } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -28,14 +28,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 // Venite Modules
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { RemindersPageModule } from 'reminders';
+import { RemindersPageModule } from '@venite/ng-reminders';
 import { BibleService } from './services/bible.service';
-import { PlatformService } from 'platform';
-import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE, CANTICLE_TABLE_SERVICE } from 'service-api';
-import { LocalStorageService } from 'localstorage';
+import { PlatformService } from '@venite/ng-platform';
+import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE, CANTICLE_TABLE_SERVICE } from '@venite/ng-service-api';
+import { LocalStorageService } from '@venite/ng-localstorage';
 import { PreferencesService } from './preferences/preferences.service';
-import { DarkmodeModule } from '@venite/ng-darkmode';
-import { PrayMenuModule } from 'projects/pray-menu/src/public-api';
+//import { DarkmodeModule } from '@venite/ng-darkmode';
+import { PrayMenuModule } from '@venite/ng-pray-menu';
 import { AuthService } from './auth/auth.service';
 import { LectionaryService } from './services/lectionary.service';
 import { CalendarService } from './services/calendar.service';
@@ -72,11 +72,11 @@ import { CanticleTableService } from './services/canticle-table.service';
         LocalStorageService
       ]
     }),
-    DarkmodeModule.forRoot({
+    /*DarkmodeModule.forRoot({
       providers: [
         PreferencesService
       ]
-    }),
+    }),*/
     PrayMenuModule.forRoot({
       config: {
         defaultKalendar: 'bcp1979'

@@ -4,9 +4,8 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable, of, from, merge, Subject } from 'rxjs';
 import { switchMap, map, tap, filter } from 'rxjs/operators';
 
-import { AuthServiceInterface, AUTH_SERVICE } from 'service-api';
-import { LocalStorageService } from 'localstorage';
-import { StoredPreference } from 'service-api';
+import { AuthServiceInterface, AUTH_SERVICE, StoredPreference } from '@venite/ng-service-api';
+import { LocalStorageService } from '@venite/ng-localstorage';
 
 import { LiturgicalDocument, versionToString } from '@venite/ldf';
 

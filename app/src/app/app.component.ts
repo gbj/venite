@@ -4,7 +4,7 @@ import { Platform, MenuController } from '@ionic/angular';
 
 // Community Modules
 import { TranslateService } from '@ngx-translate/core';
-import { DarkmodeService } from '@venite/ng-darkmode';
+//import { DarkmodeService } from '@venite/ng-darkmode';
 
 @Component({
   selector: 'venite-root',
@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private translate : TranslateService,
-    private darkMode : DarkmodeService
+//    private darkMode : DarkmodeService
   ) {
     this.initializeApp();
     this.translate.use('en');
@@ -26,10 +26,10 @@ export class AppComponent {
 //      this.statusBar.styleDefault();
 //      this.splashScreen.hide();
 
-      this.darkMode.prefersDark.subscribe(prefersDark => {
+/*      this.darkMode.prefersDark.subscribe(prefersDark => {
         console.log('now prefers dark', prefersDark);
         document.body.classList.toggle('dark', prefersDark);
-      });
+      });*/
     });
   }
 }
