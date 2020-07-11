@@ -13,13 +13,14 @@ export class LectionarySelectComponent implements OnInit, OnChanges {
   @Input() intros : LiturgicalDocument[];
   @Output() readingSelected : EventEmitter<{
     lectionary: string;
-    reading: string;
+    reading: string | { preference: string; };
     version: string | { preference: string; }
     intro: LiturgicalDocument | null;
   }> = new EventEmitter();
 
+  readingTypeFromPreference : boolean = false;
   selectedLectionary : string;
-  selectedReading : string;
+  selectedReading : string | { preference: string; };
   selectedVersion : string;
   selectedIntroduction : LiturgicalDocument;
 

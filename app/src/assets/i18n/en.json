@@ -94,7 +94,11 @@
     "first-canticle": "First Canticle",
     "second-canticle": "Second Canticle",
     "or": "or",
-    "choose-a-canticle": "Choose a Canticle"
+    "choose-a-canticle": "Choose a Canticle",
+    "readingTypeFromPreference": "Choose a reading based on selected preference.",
+    "readingA": "Reading A",
+    "readingB": "Reading B",
+    "readingC": "Reading C"
   },
   "organization": {
     "owner": "Administrator",

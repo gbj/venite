@@ -9,9 +9,21 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
+      <ion-label>{{ 'editor.reading' | translate }}</ion-label>
       <ion-select name="reading" ngDefaultControl [(ngModel)]="selectedReading">
         <ion-select-option *ngFor="let opt of readingEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="!readingTypeFromPreference">
+      <ion-label position="stacked">{{ 'editor.readingTypeFromPreference' | translate }}</ion-label>
+      <ion-checkbox name="readingTypeFromPreference" ngDefaultControl [(ngModel)]="readingTypeFromPreference"></ion-select>
+    </ion-item>
+    <ion-item *ngIf="readingTypeFromPreference">
+      <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
+      <ion-select name="readingPreference" ngDefaultControl [(ngModel)]="selectedReading">
+        <ion-select-option value='{"preference": "readingA"}'>{{ 'editor.readingA' | translate }}</ion-select-option>
+        <ion-select-option value='{"preference": "readingB"}'>{{ 'editor.readingB' | translate }}</ion-select-option>
+        <ion-select-option value='{"preference": "readingC"}'>{{ 'editor.readingC' | translate }}</ion-select-option>
       </ion-select>
     </ion-item>
     <!-- Translation -->
