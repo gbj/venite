@@ -1,6 +1,7 @@
 import { BibleReading, BibleReadingVerse } from '@venite/ldf';
 import { requestHTML } from './request-html';
 import { HTMLElement, NodeType, TextNode } from 'node-html-parser';
+import { consolidateVerses } from './consolidate-verses';
 
 export async function getCEB(citation : string) : Promise<BibleReading> {
   const url = buildCEBURL(citation),
@@ -79,18 +80,9 @@ export function parseCEBResponse(paragraphs : HTMLElement[]) : BibleReadingVerse
     });
 
     // merge duplicate verses
-    const verseTree = verses.reduce((accumulator, currentVerse) => {
-      const ref = `${currentVerse.book}-${currentVerse.chapter}-${currentVerse.verse}`;
-      if(accumulator[ref] === undefined) {
-        return ({ ... accumulator, [ref]: currentVerse })
-      } else {
-        const previousVersionOfVerse = accumulator[ref],
-              newText = previousVersionOfVerse.text + currentVerse.text;
-        return ({ ... accumulator, [ref]: { ... previousVersionOfVerse, text: newText } });
-      }
-    }, {} as { [x: string]: BibleReadingVerse});
+    
 
-    paragraphResults.push(Object.values(verseTree));
+    paragraphResults.push(consolidateVerses(verses));
   });
 
   return paragraphResults
