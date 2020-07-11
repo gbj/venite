@@ -9,7 +9,7 @@ export async function getESV(citation : string) : Promise<BibleReading> {
   const url = buildESVURL(citation),
         resp = await httpsGet(url, { 'Authorization': `Token ${API_TOKEN}`}),
         json = JSON.parse(resp),
-        value = parseESVResponse(citation, json?.data);
+        value = parseESVResponse(citation, json);
 
   return new BibleReading({
     type: 'bible-reading',

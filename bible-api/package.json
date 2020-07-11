@@ -1,6 +1,6 @@
 {
   "name": "@venite/bible-api",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Utility functions for scraping Bible texts from public APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -40,7 +40,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "@venite/ldf": "^0.8.1",
+    "@venite/ldf": "^0.9.0",
     "node-html-parser": "^1.2.20"
   },
   "files": [

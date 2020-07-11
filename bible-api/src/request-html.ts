@@ -1,6 +1,5 @@
-declare const https : any;
-
 import { parse, HTMLElement } from 'node-html-parser';
+import * as https from 'https';
 
 export async function requestHTML(url : string) : Promise<HTMLElement> {
   const raw = await httpsGet(url);

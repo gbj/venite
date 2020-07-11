@@ -2,7 +2,6 @@ import { requestHTML } from "./request-html";
 import { BibleReading, BibleReadingVerse } from "@venite/ldf";
 import { HTMLElement } from 'node-html-parser';
 import { firstVerseOfCitation } from "./parse-citation";
-import { AllHtmlEntities } from 'html-entities';
 import { consolidateVerses } from "./consolidate-verses";
 
 type OremusVersion = 'AV' | 'NRSV' | 'NRSVAE' | 'BCP' | 'CW' | 'LP';
