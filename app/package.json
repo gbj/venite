@@ -31,6 +31,8 @@
     "@venite/angular": "^0.5.0",
     "@venite/components": "^0.8.1",
     "@venite/ldf": "^0.8.0",
+    "@venite/ng-darkmode": "0.0.3",
+    "@venite/ng-service-api": "0.0.3",
     "firebase": "^7.14.4",
     "json-pointer": "^0.6.0",
     "ot-json1": "github:ottypes/json1",
