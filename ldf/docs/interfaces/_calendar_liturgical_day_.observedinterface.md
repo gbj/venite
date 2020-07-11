@@ -22,7 +22,7 @@
 
 • **color**? : *string | [LiturgicalColor](../classes/_calendar_liturgical_color_.liturgicalcolor.md)*
 
-*Defined in [calendar/liturgical-day.ts:11](https://github.com/gbj/venite/blob/59df2c3/ldf/src/calendar/liturgical-day.ts#L11)*
+*Defined in [calendar/liturgical-day.ts:11](https://github.com/gbj/venite/blob/21fbe44/ldf/src/calendar/liturgical-day.ts#L11)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **date**? : *undefined | string*
 
-*Defined in [calendar/liturgical-day.ts:8](https://github.com/gbj/venite/blob/59df2c3/ldf/src/calendar/liturgical-day.ts#L8)*
+*Defined in [calendar/liturgical-day.ts:8](https://github.com/gbj/venite/blob/21fbe44/ldf/src/calendar/liturgical-day.ts#L8)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **propers**? : *undefined | string*
 
-*Defined in [calendar/liturgical-day.ts:10](https://github.com/gbj/venite/blob/59df2c3/ldf/src/calendar/liturgical-day.ts#L10)*
+*Defined in [calendar/liturgical-day.ts:10](https://github.com/gbj/venite/blob/21fbe44/ldf/src/calendar/liturgical-day.ts#L10)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **season**? : *Seasons[number] | undefined*
 
-*Defined in [calendar/liturgical-day.ts:12](https://github.com/gbj/venite/blob/59df2c3/ldf/src/calendar/liturgical-day.ts#L12)*
+*Defined in [calendar/liturgical-day.ts:12](https://github.com/gbj/venite/blob/21fbe44/ldf/src/calendar/liturgical-day.ts#L12)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **slug**? : *undefined | string*
 
-*Defined in [calendar/liturgical-day.ts:9](https://github.com/gbj/venite/blob/59df2c3/ldf/src/calendar/liturgical-day.ts#L9)*
+*Defined in [calendar/liturgical-day.ts:9](https://github.com/gbj/venite/blob/21fbe44/ldf/src/calendar/liturgical-day.ts#L9)*
