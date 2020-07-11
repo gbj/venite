@@ -16,7 +16,7 @@
     </ion-item>
     <ion-item *ngIf="!readingTypeFromPreference">
       <ion-label position="stacked">{{ 'editor.readingTypeFromPreference' | translate }}</ion-label>
-      <ion-checkbox name="readingTypeFromPreference" ngDefaultControl [(ngModel)]="readingTypeFromPreference"></ion-select>
+      <ion-checkbox name="readingTypeFromPreference" ngDefaultControl [(ngModel)]="readingTypeFromPreference"></ion-checkbox>
     </ion-item>
     <ion-item *ngIf="readingTypeFromPreference">
       <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
