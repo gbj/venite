@@ -38,6 +38,7 @@ function easterCycleWeek(date : Date, calendar : Calendar = TEC_1979_CALENDAR) :
   return {
     cycle: 'Easter',
     week,
+    // TODO -- adjust based on calendar.easterCycleBegins
     proper: week >= 14 && calendar.hasPropers ? calculateProper(date) : undefined
   }
 }
@@ -47,6 +48,7 @@ function weeksFromEaster(date : Date) : number {
 }
 
 function calculateProper(date : Date) : number | undefined {
+  // TODO -- adjust based on calendar.easterCycleBegins
   const lastSunday = sundayBefore(date);
   let proper;
   for(let ii = 0; ii < PROPERS.length-1; ii++) {
