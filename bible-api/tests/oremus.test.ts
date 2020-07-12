@@ -5,6 +5,11 @@ describe('parseCEBResponse', () => {
   it('should format ordinary proses verses properly (NRSVAE)', () => {
     expect(parseOremusResponse('John 3:16-21', JOHN_3_16_21_NRSVAE)).toEqual([
       { book: 'John', chapter : "3", verse: "16", text: '&#145;For God so loved the world that he gave his only Son, so that everyone who believes in him may not perish but may have eternal life. ' },
+      {
+        "type": "heading",
+        "hidden": false,
+        "value": [""]
+      },
       { book: 'John', chapter : "3", verse: "17", text: '&#145;Indeed, God did not send the Son into the world to condemn the world, but in order that the world might be saved through him. ' },
       { book: 'John', chapter : "3", verse: "18", text: 'Those who believe in him are not condemned; but those who do not believe are condemned already, because they have not believed in the name of the only Son of God. ' },
       { book: 'John', chapter : "3", verse: "19", text: 'And this is the judgement, that the light has come into the world, and people loved darkness rather than light because their deeds were evil. ' },
@@ -15,7 +20,7 @@ describe('parseCEBResponse', () => {
 
 it('should handle the KJV', () => {
     expect(parseOremusResponse('Isaiah 55:1-2', ISAIAH_55_1_2_AV)).toEqual([
-      { book: 'Isaiah', chapter: '55', verse: '1', text: '&nbsp;Ho, every one that thirsteth, come ye to the waters, and he that hath no money; come ye, buy, and eat; yea, come, buy wine and milk without money and without price. '},
+      { book: 'Isaiah', chapter: '55', verse: '1', text: 'Ho, every one that thirsteth, come ye to the waters, and he that hath no money; come ye, buy, and eat; yea, come, buy wine and milk without money and without price. '},
       { book: 'Isaiah', chapter: '55', verse: '2', text: 'Wherefore do ye spend money for that which is not bread? and your labour for that which satisfieth not? hearken diligently unto me, and eat ye that which is good, and let your soul delight itself in fatness. '}
     ])
   })

@@ -1,4 +1,4 @@
-import { BibleReading, BibleReadingVerse } from "@venite/ldf";
+import { BibleReading, BibleReadingVerse, Heading } from "@venite/ldf";
 import { httpsGet } from "./request-html";
 import { firstVerseOfCitation } from "./parse-citation";
 import { consolidateVerses } from "./consolidate-verses";
@@ -51,7 +51,7 @@ interface PassageMeta {
   next_chapter: number[];
 }
 
-export function parseESVResponse(citation : string, data : ESVJSONResponse) : BibleReadingVerse[] {
+export function parseESVResponse(citation : string, data : ESVJSONResponse) : (BibleReadingVerse | Heading)[] {
 
   let parsedCitation = firstVerseOfCitation(citation),
       {book, chapter, verse} = parsedCitation ? parsedCitation : { book: undefined, chapter: undefined, verse: undefined };
@@ -80,5 +80,5 @@ export function parseESVResponse(citation : string, data : ESVJSONResponse) : Bi
     readingVerses.push(setVerses);
   });
 
-  return consolidateVerses(readingVerses.flat());
+  return consolidateVerses(readingVerses);
 }

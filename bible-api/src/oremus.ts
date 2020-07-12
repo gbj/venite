@@ -1,5 +1,5 @@
 import { requestHTML } from "./request-html";
-import { BibleReading, BibleReadingVerse } from "@venite/ldf";
+import { BibleReading, BibleReadingVerse, Heading } from "@venite/ldf";
 import { HTMLElement } from 'node-html-parser';
 import { firstVerseOfCitation } from "./parse-citation";
 import { consolidateVerses } from "./consolidate-verses";
@@ -33,7 +33,7 @@ export function buildOremusURL(citation : string, version: OremusVersion) : stri
   return `https://bible.oremus.org/?${params.toString()}`;
 }
 
-export function parseOremusResponse(citation : string, textEl : HTMLElement) : BibleReadingVerse[] {
+export function parseOremusResponse(citation : string, textEl : HTMLElement) : (BibleReadingVerse | Heading)[] {
   const nodes = textEl?.childNodes,
         verses : BibleReadingVerse[][] = new Array();
   
@@ -64,13 +64,12 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : B
         verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' '));
       }
     });
-    verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('')});
+    verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('').replace(/&nbsp;/g, ' ')});
     verseTexts = new Array();
     verses[sectionIndex] = verses[sectionIndex].filter(v => !v.text.match(/^\s*$/));
   });
   return consolidateVerses(
     verses
     .filter(section => section && section.length > 0 && !section[0].text.match(/^\s*$/))
-    .flat()
   );
 }

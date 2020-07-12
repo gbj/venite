@@ -1,4 +1,4 @@
-import { BibleReading, BibleReadingVerse } from '@venite/ldf';
+import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
 import { requestHTML } from './request-html';
 import { HTMLElement, NodeType, TextNode } from 'node-html-parser';
 import { consolidateVerses } from './consolidate-verses';
@@ -26,7 +26,7 @@ export function buildCEBURL(citation : string) : string {
   return `https://www.commonenglishbible.com/explore/passage-lookup/?${params.toString()}`;
 }
 
-export function parseCEBResponse(paragraphs : HTMLElement[]) : BibleReadingVerse[] {
+export function parseCEBResponse(paragraphs : HTMLElement[]) : (BibleReadingVerse | Heading)[] {
   let paragraphResults : BibleReadingVerse[][] = new Array();
 
   paragraphs.forEach(paragraph => {
@@ -34,7 +34,7 @@ export function parseCEBResponse(paragraphs : HTMLElement[]) : BibleReadingVerse
     let verses : BibleReadingVerse[] = new Array();
 
     paragraph.childNodes
-    .filter(node => node instanceof TextNode || (node instanceof HTMLElement && (node.classNames.includes('text') || node.tagName === 'br' || node.classNames.includes('indent-1') || node.classNames.includes('indent-2') || node.classNames.includes('chapter-2'))))
+    .filter(node => node instanceof TextNode || (node instanceof HTMLElement && (node.classNames.includes('text') || node.tagName === 'br' || node.classNames.includes('indent-1') || node.classNames.includes('indent-2') || node.rawAttributes?.class?.includes('chapter-'))))
     .forEach(node => {
       if(node instanceof HTMLElement && node.rawAttributes?.class?.includes('chapter-')) {
         node = node.querySelector('.text');
@@ -82,10 +82,9 @@ export function parseCEBResponse(paragraphs : HTMLElement[]) : BibleReadingVerse
     // merge duplicate verses
     
 
-    paragraphResults.push(consolidateVerses(verses));
+    paragraphResults.push(verses);
   });
 
-  return paragraphResults
-    .flat()
-    .filter(verse => verse.book !== undefined || verse.chapter !== undefined || verse.verse !== undefined);
+  return consolidateVerses(paragraphResults)
+    .filter(verse => verse instanceof BibleReadingVerse ? verse.book !== undefined || verse.chapter !== undefined || verse.verse !== undefined : true);
 }
