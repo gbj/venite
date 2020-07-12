@@ -19,12 +19,15 @@ import { getBibleText } from '@venite/bible-api';
 });*/
 
 export const bible = functions.https.onRequest(async (request, response) => {
+  response.set('Access-Control-Allow-Origin', '*'); // CORS allowed
+
   const citation = request.query?.citation?.toString(),
         version = request.query?.version?.toString();
   if(citation && version) {
     try {
       const reading = await getBibleText(citation, version);
       if(reading?.value?.length > 0) {
+        response.set('Cache-Control', 'public, max-age=2592000'); // allow caching for 2,592,000 seconds = 30 days
         response.status(200).send(reading);
       } else {
         response.status(404).send(`${citation} (${version}) not found.`)

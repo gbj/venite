@@ -5,7 +5,8 @@ import { BibleServiceInterface } from 'service-api';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
-interface BibleAPIJSONInterface {
+// Interface for Venite V1
+interface V1BibleAPIJSONInterface {
   citation: string;
   label: string;
   language: string;
@@ -24,11 +25,12 @@ export class BibleService implements BibleServiceInterface {
 
   // TODO
   getText(citation : string, version : string = 'NRSV') : Observable<BibleReading> {
-    return this.http.get<BibleAPIJSONInterface>(`https://www.venite.app/api/bible?citation=${citation}&version=${version}`).pipe(
+    /*return this.http.get<V1BibleAPIJSONInterface>(`https://www.venite.app/api/bible?citation=${citation}&version=${version}`).pipe(
       map(json => new BibleReading({
         ... json,
         value: json.verses.flat()
       }))
-    );
+    );*/
+    return this.http.get<BibleReading>(`https://us-central1-venite-2.cloudfunctions.net/bible`, { params: { citation, version}})
   }
 }

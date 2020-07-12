@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'pray',
-    loadChildren: () => import('pray').then( m => m.PrayPageModule)
+    loadChildren: () => import('@venite/ng-pray').then( m => m.PrayPageModule)
   },
   {
     path: 'church',
@@ -32,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: 'reminders',
-    loadChildren: () => import('reminders').then( m => m.RemindersPageModule)
+    loadChildren: () => import('@venite/ng-reminders').then( m => m.RemindersPageModule)
   }
 ];
 
