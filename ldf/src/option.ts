@@ -1,6 +1,7 @@
 import { LiturgicalDocument } from './liturgical-document';
 import { BibleReading } from './bible-reading/bible-reading';
 import { versionToString } from './utils/version-to-string';
+import { BibleReadingVerse } from './bible-reading/bible-reading-verse';
 
 const VERSIONS: { [x: string]: string } = {
   ip: 'IP',
@@ -76,7 +77,7 @@ export class Option extends LiturgicalDocument {
       option.value &&
       option.value.length > 0
     ) {
-      const text: string = (option as BibleReading).value.map((v) => v.text).join(' ');
+      const text: string = (option as BibleReading).value.map((v) => v.hasOwnProperty('text') ? (v as BibleReadingVerse).text : v.toString()).join(' ');
 
       if (uniqueVersions > 1) {
         label = `${option.citation.toString()} (${option.version}) (“${text}”)`;

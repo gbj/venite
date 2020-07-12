@@ -2,6 +2,7 @@ import { LiturgicalDocument } from '../liturgical-document';
 import { BibleReadingVerse } from './bible-reading-verse';
 import { BIBLE_BOOK_ABBREVIATIONS } from './bible-book-abbreviations';
 import { BIBLE_BOOK_NAMES } from './bible-book-names.i18n';
+import { Heading } from '../heading';
 
 const STYLES = ['long', 'short'] as const;
 type StyleTuple = typeof STYLES;
@@ -16,7 +17,7 @@ export class BibleReading extends LiturgicalDocument {
     intro?: LiturgicalDocument;
     response?: string;
   };
-  value: BibleReadingVerse[];
+  value: (BibleReadingVerse | Heading)[];
 
   /** Replaces ${longName} or ${shortName} in LD passed as intro with appropriate value */
   compileIntro(): void {

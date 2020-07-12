@@ -14,7 +14,7 @@ export class BibleReadingComponent {
   // States
   @State() obj : BibleReading;
   @State() localeStrings: { [x: string]: string; };
-  @State() verses : BibleReadingVerse[];
+  @State() verses : (BibleReadingVerse | Heading)[];
   @State() loadingError : string;
 
   // Properties
@@ -117,10 +117,12 @@ export class BibleReadingComponent {
             {/* Bible text */}
             <p>
               {this.verses.map(verse =>
-                <ldf-string
-                  citation={{book: verse.book, chapter: verse.chapter, verse: verse.verse}}
+                verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
+                ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
+                : <ldf-string
+                  citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
                   id={this.obj.uid}
-                  text={verse.text}>
+                  text={(verse as BibleReadingVerse).text}>
                 </ldf-string>
               )}
               {shortResponse && responseNode}
@@ -148,12 +150,14 @@ export class BibleReadingComponent {
             {/* Bible text */}
             <p lang={this.obj.language}>
             {this.verses.map((verse, verseIndex) =>
-              [
-                <sup>{verse.verse}</sup>,
+              verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
+              ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
+              : [
+                <sup>{(verse as BibleReadingVerse).verse}</sup>,
                 <ldf-string
                   citation={verse}
-                  id={`${verse.chapter}-${verse.book}-${verse.verse}`}
-                  text={verse.text}
+                  id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
+                  text={(verse as BibleReadingVerse).text}
                   index={verseIndex}
                 >
                 </ldf-string>

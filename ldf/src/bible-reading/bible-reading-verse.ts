@@ -3,4 +3,8 @@ export class BibleReadingVerse {
   chapter?: string;
   verse?: string;
   text: string;
+
+  constructor(data: Partial<BibleReadingVerse> = {}) {
+    Object.assign(this, data);
+  }
 }
