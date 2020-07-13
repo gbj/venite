@@ -14,7 +14,7 @@
 
 ▸ **specificClass**(`obj`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/specific-class.ts:15](https://github.com/gbj/venite/blob/d1a46fe/ldf/src/utils/specific-class.ts#L15)*
+*Defined in [utils/specific-class.ts:15](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/utils/specific-class.ts#L15)*
 
 Transforms a generic `LiturgicalDocument` (either a class instance or an `Object` that matches the type),
 into an instance of a more-specific inherited class

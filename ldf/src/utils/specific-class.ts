@@ -11,9 +11,9 @@ import { Rubric } from '../rubric';
 import { Text } from '../text';
 
 /** Transforms a generic `LiturgicalDocument` (either a class instance or an `Object` that matches the type),
-  * into an instance of a more-specific inherited class */
-export function specificClass(obj : LiturgicalDocument) : LiturgicalDocument {
-  switch(obj.type) {
+ * into an instance of a more-specific inherited class */
+export function specificClass(obj: LiturgicalDocument): LiturgicalDocument {
+  switch (obj.type) {
     case 'liturgy':
       return new Liturgy(obj as Liturgy);
     case 'heading':

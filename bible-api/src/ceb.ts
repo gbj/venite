@@ -1,6 +1,6 @@
 import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
 import { requestHTML } from './request-html';
-import { HTMLElement, NodeType, TextNode } from 'node-html-parser';
+import { HTMLElement, TextNode } from 'node-html-parser';
 import { consolidateVerses } from './consolidate-verses';
 
 export async function getCEB(citation : string) : Promise<BibleReading> {

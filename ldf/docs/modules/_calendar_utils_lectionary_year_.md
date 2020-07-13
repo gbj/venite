@@ -15,7 +15,7 @@
 
 ▸ **dailyOfficeYear**(`date`: Date, `week`: [LiturgicalWeek](../classes/_calendar_liturgical_week_.liturgicalweek.md)): *number*
 
-*Defined in [calendar/utils/lectionary-year.ts:3](https://github.com/gbj/venite/blob/d1a46fe/ldf/src/calendar/utils/lectionary-year.ts#L3)*
+*Defined in [calendar/utils/lectionary-year.ts:3](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/utils/lectionary-year.ts#L3)*
 
 **Parameters:**
 
@@ -32,7 +32,7 @@ ___
 
 ▸ **rclYear**(`date`: Date, `week`: [LiturgicalWeek](../classes/_calendar_liturgical_week_.liturgicalweek.md)): *string*
 
-*Defined in [calendar/utils/lectionary-year.ts:20](https://github.com/gbj/venite/blob/d1a46fe/ldf/src/calendar/utils/lectionary-year.ts#L20)*
+*Defined in [calendar/utils/lectionary-year.ts:20](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/utils/lectionary-year.ts#L20)*
 
 **Parameters:**
 

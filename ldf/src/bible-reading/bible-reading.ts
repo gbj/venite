@@ -93,7 +93,7 @@ export class BibleReading extends LiturgicalDocument {
    * this.longNameFromBookCode('Genesis') */
   longNameFromBookCode(bookName: string, lang: string = 'en'): string {
     const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)],
-          searchResult = (bookResult || {})[lang];
+      searchResult = (bookResult || {})[lang];
     return searchResult ? searchResult.long : bookName;
   }
 
@@ -103,12 +103,12 @@ export class BibleReading extends LiturgicalDocument {
    * this.shortNameFromBookCode('Genesis') */
   shortNameFromBookCode(bookName: string, lang: string = 'en'): string {
     const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)],
-          searchResult = (bookResult || {})[lang];
+      searchResult = (bookResult || {})[lang];
     return searchResult ? searchResult.short : bookName;
   }
 
   /** Returns the list of all possible `style` values.  */
-  availableStyles() : ReadonlyArray<string> {
+  availableStyles(): ReadonlyArray<string> {
     return STYLES;
   }
 

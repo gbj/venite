@@ -103,13 +103,13 @@ export class Psalm extends LiturgicalDocument {
       this.includeAntiphon() && // only if there's an antiphon
       (this.style == 'canticle' || this.style == 'invitatory') && // only for canticles and invitatories
       !(
-        metadata.omit_gloria && setIndex == filteredValueLength - 1 // antiphon will repeat after Gloria, so don't include it here as well
+        (metadata.omit_gloria && setIndex == filteredValueLength - 1) // antiphon will repeat after Gloria, so don't include it here as well
       )
     ); // if there's no Gloria, and this is the final set
   }
 
   /** Returns the list of all possible `style` values.  */
-  availableStyles() : ReadonlyArray<string> {
+  availableStyles(): ReadonlyArray<string> {
     return STYLES;
   }
 

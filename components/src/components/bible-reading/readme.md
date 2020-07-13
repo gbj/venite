@@ -36,16 +36,16 @@ Type: `Promise<{ [x: string]: string; }>`
 ### Depends on
 
 - [ldf-label-bar](../label-bar)
-- [ldf-string](../string)
 - [ldf-heading](../heading)
+- [ldf-string](../string)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
-  ldf-bible-reading --> ldf-string
   ldf-bible-reading --> ldf-heading
+  ldf-bible-reading --> ldf-string
   ldf-bible-reading --> ldf-liturgical-document
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar

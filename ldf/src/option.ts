@@ -77,7 +77,9 @@ export class Option extends LiturgicalDocument {
       option.value &&
       option.value.length > 0
     ) {
-      const text: string = (option as BibleReading).value.map((v) => v.hasOwnProperty('text') ? (v as BibleReadingVerse).text : v.toString()).join(' ');
+      const text: string = (option as BibleReading).value
+        .map((v) => (v.hasOwnProperty('text') ? (v as BibleReadingVerse).text : v.toString()))
+        .join(' ');
 
       if (uniqueVersions > 1) {
         label = `${option.citation.toString()} (${option.version}) (“${text}”)`;

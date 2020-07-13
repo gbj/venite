@@ -1,15 +1,17 @@
 {
   "name": "@venite/ldf",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Typescript classes for the Liturgy Document Format (LDF) used by Venite.app",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
     "docs": "npx typedoc --plugin typedoc-plugin-markdown --out docs src",
-    "build": "tsc && npm run docs",
+    "build": "npm run format && npm run build:esm && npm run build:cjs && npm run docs",
+    "build:esm": "tsc --module es2015 --target es6 --outDir dist",
+    "build:cjs": "tsc --module commonjs --target es6 --outDir dist/cjs",
     "prepare": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
   "author": "Greg Johnston <greg@venite.app>",

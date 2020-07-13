@@ -1,7 +1,7 @@
 import { LiturgicalDay } from './calendar/liturgical-day';
 import { ResponsivePrayerLine } from './responsive-prayer';
 import { BibleReadingVerse } from './bible-reading/bible-reading-verse';
-import { Heading } from './heading'; 
+import { Heading } from './heading';
 import { Citation } from './citation/citation';
 import { PsalmSection } from './psalm';
 import { Sharing } from './sharing/sharing';
@@ -9,7 +9,18 @@ import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
 
-const TYPES = ['liturgy', 'heading', 'option', 'refrain', 'rubric', 'text', 'responsive', 'bible-reading', 'psalm', 'meditation'] as const;
+const TYPES = [
+  'liturgy',
+  'heading',
+  'option',
+  'refrain',
+  'rubric',
+  'text',
+  'responsive',
+  'bible-reading',
+  'psalm',
+  'meditation',
+] as const;
 export type TypeTuple = typeof TYPES;
 
 const LOOKUP_TYPES = ['lectionary', 'canticle-table', 'category', 'slug', 'collect'];
@@ -73,7 +84,7 @@ export class LiturgicalDocument {
    * @example
    * `'Rite-II'`, `'bcp1979'`, `'coverdale'`, `'NRSV'`, `{ preference: "bibleVersion" }`
    */
-  version: string | { preference: string; };
+  version: string | { preference: string };
 
   /** Biblical or other citation for the document.
    * @example
@@ -108,22 +119,22 @@ export class LiturgicalDocument {
   hidden: boolean = false;
 
   /** Instructs the client to look up more information from the server
-    * @example
-    * // the 1st canticle in the 1979 BCP table for the current `LiturgicalDay`
-    * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp1979', item: 1 }}
-    * @example
-    * // the morning psalms in the 30-day BCP cycle
-    * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp_30day_psalter', item: 'morning_psalms' }}
-    * @example
-    * // the gospel reading in the Revised Common Lectionary
-    * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
+   * @example
+   * // the 1st canticle in the 1979 BCP table for the current `LiturgicalDay`
+   * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp1979', item: 1 }}
+   * @example
+   * // the morning psalms in the 30-day BCP cycle
+   * { type: 'psalm', style: 'canticle', lookup: { table: 'bcp_30day_psalter', item: 'morning_psalms' }}
+   * @example
+   * // the gospel reading in the Revised Common Lectionary
+   * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
   lookup?: {
     type: LookupTypeTuple[number];
     /** Lectionary or canticle table name */
-    table?: string | { preference: string; };
+    table?: string | { preference: string };
     /** Reading type to search
      * To search on slug or category, use the actual `slug` or `category` of this document */
-    item?: string | number | { preference: string; };
+    item?: string | number | { preference: string };
     /** Filter results based on `LiturgicalDay.season`, `LiturgicalDay.slug`, or `Liturgy.evening` */
     filter?: 'seasonal' | 'evening' | 'day';
     /** If `true`, rotate through the possibilities and gives only one; if `false`, give all as options in random order */
@@ -131,7 +142,7 @@ export class LiturgicalDocument {
   };
 
   /** The content of the document. */
-  value?: LiturgicalDocument[] | ResponsivePrayerLine[] | (BibleReadingVerse|Heading)[] | PsalmSection[] | string[];
+  value?: LiturgicalDocument[] | ResponsivePrayerLine[] | (BibleReadingVerse | Heading)[] | PsalmSection[] | string[];
 
   /** Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
    * given the day and assigned preferences  */
@@ -155,17 +166,17 @@ export class LiturgicalDocument {
   }
 
   /** Returns the list of all possible `type` values */
-  availableTypes() : ReadonlyArray<string> {
+  availableTypes(): ReadonlyArray<string> {
     return TYPES;
   }
 
   /** Returns the list of all possible `style` values. Child classes should override if they have styles available. */
-  availableStyles() : ReadonlyArray<string> {
+  availableStyles(): ReadonlyArray<string> {
     return [];
   }
 
   /** Returns the list of all possible `lookup.type` values */
-  availableLookupTypes() : ReadonlyArray<string> {
+  availableLookupTypes(): ReadonlyArray<string> {
     return LOOKUP_TYPES;
   }
 

@@ -1,5 +1,5 @@
 /** Holds instructions on how to adapt liturgies given the Proper Liturgies for Special Days
-  * e.g., Ash Wednesday, */
+ * e.g., Ash Wednesday, */
 export class ProperLiturgy {
   /** Matches to slug of a LiturgicalDay */
   slug: string;

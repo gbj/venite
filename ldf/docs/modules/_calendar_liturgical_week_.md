@@ -22,12 +22,23 @@
 
 Ƭ **Seasons**: *typeof SEASONS*
 
-*Defined in [calendar/liturgical-week.ts:4](https://github.com/gbj/venite/blob/d1a46fe/ldf/src/calendar/liturgical-week.ts#L4)*
+*Defined in [calendar/liturgical-week.ts:15](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/liturgical-week.ts#L15)*
 
 ## Variables
 
 ### `Const` SEASONS
 
-• **SEASONS**: *string[]* = ['Advent', 'Christmas', 'Epiphany', 'Lent', 'HolyWeek', 'Easter', 'Ascension', 'Pentecost', 'Saints', 'OrdinaryTime']
+• **SEASONS**: *string[]* = [
+  'Advent',
+  'Christmas',
+  'Epiphany',
+  'Lent',
+  'HolyWeek',
+  'Easter',
+  'Ascension',
+  'Pentecost',
+  'Saints',
+  'OrdinaryTime',
+]
 
-*Defined in [calendar/liturgical-week.ts:3](https://github.com/gbj/venite/blob/d1a46fe/ldf/src/calendar/liturgical-week.ts#L3)*
+*Defined in [calendar/liturgical-week.ts:3](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/liturgical-week.ts#L3)*

@@ -1,6 +1,17 @@
 import { LiturgicalColor } from './liturgical-color';
 
-export const SEASONS = ['Advent', 'Christmas', 'Epiphany', 'Lent', 'HolyWeek', 'Easter', 'Ascension', 'Pentecost', 'Saints', 'OrdinaryTime'];
+export const SEASONS = [
+  'Advent',
+  'Christmas',
+  'Epiphany',
+  'Lent',
+  'HolyWeek',
+  'Easter',
+  'Ascension',
+  'Pentecost',
+  'Saints',
+  'OrdinaryTime',
+];
 export type Seasons = typeof SEASONS;
 
 export class LiturgicalWeek {
@@ -31,8 +42,8 @@ export class LiturgicalWeek {
   name: string;
 
   /** Used for English-language formatting, generally when "week" name is the proper name of a Sunday.
-    * @example
-    * // "Thursday after Pentecost", not "Thursday after the Pentecost" */
+   * @example
+   * // "Thursday after Pentecost", not "Thursday after the Pentecost" */
   omit_the?: boolean = false;
 
   /** The {@link LiturgicalColor} used for the week */

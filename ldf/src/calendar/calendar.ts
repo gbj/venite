@@ -1,7 +1,7 @@
 /** Describes properties of the liturgical calendar used in a particular tradition. */
 export class Calendar {
   /** `true` if this calendar uses the Julian calendar, `false` if Gregorian */
-  julian : boolean;
+  julian: boolean;
 
   /** How many weeks before Easter the Easter cycle begins in the calendar */
   easterCycleBegins: number;
@@ -13,9 +13,9 @@ export class Calendar {
   hasPropers: boolean;
 }
 
-export const TEC_1979_CALENDAR : Calendar = {
+export const TEC_1979_CALENDAR: Calendar = {
   julian: false,
   easterCycleBegins: 7,
   christmasCycleBegins: 4,
-  hasPropers: true
-}
+  hasPropers: true,
+};

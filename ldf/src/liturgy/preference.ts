@@ -25,9 +25,9 @@ export class Preference {
   }
 
   /** Returns the default value for the preference */
-  getDefaultPref() : string {
-    const defaultPref = this.options.filter(opt => opt.default)[0],
-          firstPref = this.options[0];
+  getDefaultPref(): string {
+    const defaultPref = this.options.filter((opt) => opt.default)[0],
+      firstPref = this.options[0];
     return (defaultPref || firstPref).value;
   }
 

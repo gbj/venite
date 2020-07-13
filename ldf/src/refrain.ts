@@ -10,7 +10,7 @@ export class Refrain extends LiturgicalDocument {
   value: string[];
 
   /** Returns the list of all possible `style` values. Child classes should override if they have styles available. */
-  availableStyles() : ReadonlyArray<string> {
+  availableStyles(): ReadonlyArray<string> {
     return STYLES;
   }
 

@@ -14,7 +14,7 @@ export class Text extends LiturgicalDocument {
   };
 
   /** Returns the list of all possible `style` values. */
-  availableStyles() : ReadonlyArray<string> {
+  availableStyles(): ReadonlyArray<string> {
     return STYLES;
   }
 

@@ -22,7 +22,7 @@ export class Liturgy extends LiturgicalDocument {
      * e.g., Maundy Thursday `footwashing` preferences */
     special_preferences: {
       [x: string]: Preference;
-    }
+    };
 
     /** Optional: Alternative versions to be used as a backstop when compiling the liturgy.
      * @example

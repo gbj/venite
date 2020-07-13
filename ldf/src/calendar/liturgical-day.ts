@@ -60,7 +60,7 @@ export class LiturgicalDay {
   holy_days?: HolyDay[];
 
   /** exists if one the listed `HolyDay`s is being observed */
-  holy_day_observed? : HolyDay;
+  holy_day_observed?: HolyDay;
 
   /** The {@link LiturgicalColor} used for the day */
   color?: string | LiturgicalColor;
@@ -82,21 +82,21 @@ export class LiturgicalDay {
   }
 
   /** Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed */
-  addHolyDays(holydays : HolyDay[]) : LiturgicalDay {
-    const day : LiturgicalDay = this;
+  addHolyDays(holydays: HolyDay[]): LiturgicalDay {
+    const day: LiturgicalDay = this;
 
     holydays = holydays
-      .map(feast => {
+      .map((feast) => {
         // if a feast has an `evening` field and it's evening, use that
-        if(feast.hasOwnProperty('evening') && this.evening == true) {
+        if (feast.hasOwnProperty('evening') && this.evening == true) {
           return feast.evening;
         }
         // if a feast has a `morning` field and it's morning, use that
-        else if(feast.hasOwnProperty('morning') && this.evening == false) {
+        else if (feast.hasOwnProperty('morning') && this.evening == false) {
           return feast.morning;
         }
         // if a feast is the eve of something and it's evening, use that feast
-        else if(feast && feast.eve && this.evening == true) {
+        else if (feast && feast.eve && this.evening == true) {
           return feast;
         }
         // if none of these, just return the feast
@@ -104,40 +104,40 @@ export class LiturgicalDay {
           return feast;
         }
       })
-      .filter(feast => !!feast) as HolyDay[];
+      .filter((feast) => !!feast) as HolyDay[];
 
     // Determine whether a holy day takes precedence over the ordinary day
-    const observed : ObservedInterface = this.observedDay(this, (this.holy_days || new Array()).concat(holydays));
+    const observed: ObservedInterface = this.observedDay(this, (this.holy_days || new Array()).concat(holydays));
 
     // overwrite the day's slug with the observed day's slug if they differ
-    const holy_day_is_observed = (observed?.slug && observed?.slug !== day.slug),
-          slug = holy_day_is_observed ? observed.slug : day.slug;
+    const holy_day_is_observed = observed?.slug && observed?.slug !== day.slug,
+      slug = holy_day_is_observed ? observed.slug : day.slug;
 
     let propers = this.propers;
-    if(slug !== this.slug) {
+    if (slug !== this.slug) {
       propers = slug;
     }
 
     const color = observed.color || this.color,
-          season = observed.season || this.season;
+      season = observed.season || this.season;
 
     return new LiturgicalDay({
-      ... this,
+      ...this,
       slug,
       propers,
       color,
       season,
       holy_days: (this.holy_days || new Array()).concat(holydays),
-      holy_day_observed: holy_day_is_observed ? observed as HolyDay : this.holy_day_observed
-    })
+      holy_day_observed: holy_day_is_observed ? (observed as HolyDay) : this.holy_day_observed,
+    });
   }
 
   /** Given a `LiturgicalDay` and a set of `HolyDay`s, it returns whichever option takes precedence */
-  observedDay(day : ObservedInterface, holydays : ObservedInterface[]) : ObservedInterface {
+  observedDay(day: ObservedInterface, holydays: ObservedInterface[]): ObservedInterface {
     // rank: Principal Feast (5), Sunday (4), Holy Day (3), random other days (2), ferial weekday (1)
-    function getRank(item : any, type: 'holyday' | 'weekday') : number {
+    function getRank(item: any, type: 'holyday' | 'weekday'): number {
       // ranked items => go with rank
-      if(type == 'holyday') {
+      if (type == 'holyday') {
         return item?.type?.rank || 2;
       } else {
         // if `day.date` is defined, used it to generate a date
@@ -145,7 +145,7 @@ export class LiturgicalDay {
         const date = day.date ? dateFromYMDString(day.date) : dateOnly(new Date());
 
         // Sundays => 4
-        if(date.getDay() == 0) {
+        if (date.getDay() == 0) {
           return 4;
         }
         // weekdays => 1
@@ -156,15 +156,15 @@ export class LiturgicalDay {
     }
 
     const sorted = holydays
-      .map(holyday => ({ rank: getRank(holyday, 'holyday'), obj: holyday}))
+      .map((holyday) => ({ rank: getRank(holyday, 'holyday'), obj: holyday }))
       .concat({ rank: getRank(day, 'weekday'), obj: day })
-      .sort((a: { rank: number; }, b: { rank: number; }) => b.rank - a.rank);
+      .sort((a: { rank: number }, b: { rank: number }) => b.rank - a.rank);
 
-    return { ... sorted[0].obj};
+    return { ...sorted[0].obj };
   }
 
   // whether this day is ranked as a Major Feast
-  isFeast() : boolean {
+  isFeast(): boolean {
     return (this.holy_day_observed?.type?.rank || 1) >= 3;
   }
 
