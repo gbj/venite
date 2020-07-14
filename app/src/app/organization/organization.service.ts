@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, combineLatest, of } from 'rxjs';
 import { Organization } from './organization';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
-import { map, switchMap, take, tap } from 'rxjs/operators';
+import { map, switchMap, take, tap, startWith } from 'rxjs/operators';
 import { UserProfile } from '../auth/user/user-profile';
 import * as firebase from 'firebase/app';
 
@@ -89,11 +89,11 @@ export class OrganizationService {
   /** All organizations in which a given user plays any role */
   organizationsWithUser(uid : string) : Observable<Organization[]> {
     return combineLatest(
-      this.organizationsWithOwner(uid),
-      this.organizationsWithEditor(uid),
-      this.organizationsWithMember(uid)
+      this.organizationsWithOwner(uid).pipe(startWith([])),
+      this.organizationsWithEditor(uid).pipe(startWith([])),
+      this.organizationsWithMember(uid).pipe(startWith([]))
     ).pipe(
-      map(([owner, editor, member]) => owner.concat(editor).concat(member))
+      map(([owner, editor, member]) => owner.concat(editor).concat(member)),
     )
   }
 
@@ -117,7 +117,6 @@ export class OrganizationService {
       .valueChanges()
       .pipe(
         map(userProfile => userProfile.orgs),
-        tap(orgs => console.log('loading orgs = ', orgs)),
         switchMap(orgs => this.organizationsByIds(orgs))
       )
   }

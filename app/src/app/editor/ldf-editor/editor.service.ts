@@ -291,7 +291,10 @@ export class EditorService {
           console.log('setting value from undefined');
           return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
         } else {
-          return json1.replaceOp(indexedP, op.oldValue, JSON.parse(JSON.stringify(op.value)));
+          console.log('setting value from another value');
+          const jsonOp = json1.replaceOp(indexedP, op.oldValue, JSON.parse(JSON.stringify(op.value)));
+          console.log('op is ', jsonOp);
+          return jsonOp;
         }
       case 'delete':
         return json1.replaceOp(indexedP, op.oldValue, '');

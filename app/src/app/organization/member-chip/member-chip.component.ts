@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { UserProfile } from 'src/app/auth/user/user-profile';
 import { Observable, merge, of } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'venite-member-chip',
@@ -22,6 +22,7 @@ export class MemberChipComponent implements OnInit {
 
   ngOnInit() {
     this.user$ = merge(of(this.user), this.auth.getUserProfile(this.uid)).pipe(
+      tap(profile => console.log('member chip, profile = ')),
       filter(profile => !!profile)
     );
   }

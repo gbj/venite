@@ -36,7 +36,7 @@ export class EditableSelectComponent {
       this.ldfDocShouldChange.emit(new Change({
         path: this.path,
         op: [
-          { type: 'set' as 'set', index: this.property, value }
+          { type: 'set' as 'set', index: this.property, oldValue, value }
         ]
       }));
     }

@@ -34,7 +34,7 @@ import { PlatformService } from '@venite/ng-platform';
 import { BIBLE_SERVICE, PLATFORM_SERVICE, LOCAL_STORAGE, PREFERENCES_SERVICE, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE, DOCUMENT_SERVICE, CANTICLE_TABLE_SERVICE } from '@venite/ng-service-api';
 import { LocalStorageService } from '@venite/ng-localstorage';
 import { PreferencesService } from './preferences/preferences.service';
-import { DarkmodeModule } from '@venite/ng-darkmode';
+//import { DarkmodeModule } from '@venite/ng-darkmode';
 import { PrayMenuModule } from '@venite/ng-pray-menu';
 import { AuthService } from './auth/auth.service';
 import { LectionaryService } from './services/lectionary.service';
@@ -65,18 +65,18 @@ import { CanticleTableService } from './services/canticle-table.service';
     }),
     AuthModule,
     SharedModule,
-    RemindersPageModule.forRoot({
+    /*RemindersPageModule.forRoot({
       providers: [
         BibleService,
         PlatformService,
         LocalStorageService
       ]
-    }),
-    DarkmodeModule.forRoot({
+    }),*/
+    /*DarkmodeModule.forRoot({
       providers: [
         PreferencesService
       ]
-    }),
+    }),*/
     PrayMenuModule.forRoot({
       config: {
         defaultKalendar: 'bcp1979'

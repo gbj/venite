@@ -5,7 +5,7 @@ import { AlertController } from '@ionic/angular';
 import { UserProfile } from 'src/app/auth/user/user-profile';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { LiturgicalDocument } from '@venite/ldf';
+import { LiturgicalDocument, Sharing } from '@venite/ldf';
 
 @Component({
   selector: 'venite-create-document-button',
@@ -58,13 +58,13 @@ export class CreateDocumentButtonComponent implements OnInit {
   async createNew(userProfile : UserProfile, label : string) {
     const docId = await this.documents.newDocument(new LiturgicalDocument({
       type: 'liturgy',
-      sharing: {
+      sharing: new Sharing({
         owner: userProfile.uid,
         organization: (userProfile.orgs || [''])[0],
         collaborators: [],
         status: 'draft',
         privacy: 'organization'
-      },
+      }),
       label,
       'value': [new LiturgicalDocument({
         'type': 'text',

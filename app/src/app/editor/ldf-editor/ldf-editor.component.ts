@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Observable, Subscription, combineLatest } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
-import { LiturgicalDocument, Change, Option, docsToLiturgy } from '@venite/ldf';
+import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing } from '@venite/ldf';
 import { switchMap, debounceTime, tap, map } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { ModalController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
 import { AddBlockComponent } from '../add-block/add-block.component';
+import { SharingComponent } from '../sharing/sharing.component';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -107,6 +108,18 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         )
       )
     }
+  }
+
+  async sharingModal(sharing : Sharing) {
+    const modal = await this.modal.create({
+      component: SharingComponent,
+      swipeToClose: true
+    });
+    modal.componentProps = {
+      modal,
+      sharing
+    };
+    await modal.present();
   }
   
   // Called whenever the user wants to add a new LiturgicalDocument block at JSON pointer `base`/`index`

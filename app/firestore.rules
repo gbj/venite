@@ -1,35 +1,41 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    function userInOrg(uid, orgId) {
+      let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
+      let userProfile = get(/databases/$(database)/documents/Users/$(request.auth.uid)).data;
+      return uid == org.owner || uid in org.editors || orgId in userProfile.orgs;
+    }
+
+    function userIsEditor(uid, orgId) {
+      let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
+      return uid in org.editors;
+    }
+
+    function docSharingFromDocId(docId) {
+      let doc = get(/databases/$(database)/documents/Document/$(docId)).data;
+      return doc.sharing;
+    }
+
+    function hasWriteAccess(sharing) {
+      return request.auth.uid != null && (
+        (sharing.owner == request.auth.uid) // user is doc's owner
+        || (sharing.collaborators && request.auth.uid in sharing.collaborators) // user listed under 'collaborators'
+        || (sharing.organization != null && sharing.privacy != 'private' && userIsEditor(request.auth.uid, sharing.organization))
+      );
+    }
+
+    function hasReadAccess(sharing) {
+      return sharing == null // no 'sharing' set on doc
+      || (sharing.privacy == 'public' && sharing.status == 'published') // doc is public and published
+      || (sharing.privacy == 'public') // doc is 'unlisted' and user has the link
+      || (sharing.organization != null && sharing.privacy != 'private' && userInOrg(request.auth.uid, sharing.organization)); // user is a member of 'organization'
+    }
+  
     match /Document/{docId} {
-      function userInOrg(uid, orgId) {
-        let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
-        let userProfile = get(/databases/$(database)/documents/Users/$(request.auth.uid)).data;
-        return uid == org.owner || uid in org.editors || orgId in userProfile.orgs;
-      }
-
-      function userIsEditor(uid, orgId) {
-        let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
-        return uid in org.editors;
-      }
-
-      function hasWriteAccess() {
-        return request.auth.uid != null && (
-          (resource.data.sharing.owner == request.auth.uid) // user is doc's owner
-          || (resource.data.sharing.collaborators && request.auth.uid in resource.data.sharing.collaborators) // user listed under 'collaborators'
-          || (resource.data.sharing.organization != null && resource.data.sharing.privacy != 'private' && userIsEditor(request.auth.uid, resource.data.sharing.organization))
-        );
-      }
-
-      function hasReadAccess() {
-        return resource.data.sharing == null // no 'sharing' set on doc
-        || (resource.data.sharing.privacy == 'public' && resource.data.sharing.status == 'published') // doc is public and published
-        || (resource.data.sharing.privacy == 'unlisted') // doc is 'unlisted' and user has the link
-        || (resource.data.sharing.organization != null && resource.data.sharing.privacy != 'private' && userInOrg(request.auth.uid, resource.data.sharing.organization)); // user is a member of 'organization'
-      }
-
-      allow read: if hasWriteAccess() || hasReadAccess();
-      allow create, update, delete: if request.auth.uid != null;
+      allow read: if hasWriteAccess(resource.data.sharing) || hasReadAccess(resource.data.sharing);
+      allow update, delete: if hasWriteAccess(resource.data.sharing);
+      allow create: if request.auth.uid != null;
     }
 
     match /Users/{userId} {
@@ -49,15 +55,16 @@ service cloud.firestore {
     }
 
     match /DocumentManager/{docId} {
-      allow read: if true;
-      allow create, delete: if request.auth.uid != null;
-      allow update: if request.resource.data.lastRevision >= resource.data.lastRevision;
+      allow read: if hasReadAccess(docSharingFromDocId(docId)) || hasWriteAccess(docSharingFromDocId(docId));
+      allow create: if request.auth.uid != null;
+      allow update: if request.resource.data.lastRevision >= resource.data.lastRevision && hasWriteAccess(docSharingFromDocId(docId));
+      allow delete: if hasWriteAccess(docSharingFromDocId(docId));
     }
 
     match /DocumentManager/{docId}/revisionLog/{changeId} {
-      allow read: if true;
-      allow create: if true;
-      allow update, delete: if false;
+      allow read: if hasReadAccess(docSharingFromDocId(docId));
+      allow create: if request.auth.uid != null;
+      allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
     }
 
     match /Color/{docId} {

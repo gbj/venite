@@ -15,7 +15,7 @@
 
 ▸ **addOneDay**(`date`: Date): *Date*
 
-*Defined in [calendar/utils/add-one-day.ts:1](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/utils/add-one-day.ts#L1)*
+*Defined in [calendar/utils/add-one-day.ts:1](https://github.com/gbj/venite/blob/3dad69a/ldf/src/calendar/utils/add-one-day.ts#L1)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **subtractOneDay**(`date`: Date): *Date*
 
-*Defined in [calendar/utils/add-one-day.ts:5](https://github.com/gbj/venite/blob/29f3fb1/ldf/src/calendar/utils/add-one-day.ts#L5)*
+*Defined in [calendar/utils/add-one-day.ts:5](https://github.com/gbj/venite/blob/3dad69a/ldf/src/calendar/utils/add-one-day.ts#L5)*
 
 **Parameters:**
 

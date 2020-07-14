@@ -84,6 +84,9 @@
     "mydocs": "My Documents",
     "new": "Create a New Bulletin",
     "none": "None",
+    "organization": "Organization",
+    "owner": "Owner",
+    "permissions": "Permissions",
     "reading": "Reading",
     "add-block": "Add a Block",
     "choose-canticle-table": "From a Canticle Table",
@@ -98,7 +101,16 @@
     "readingTypeFromPreference": "Choose a reading based on selected preference.",
     "readingA": "Reading A",
     "readingB": "Reading B",
-    "readingC": "Reading C"
+    "readingC": "Reading C",
+    "share": "share",
+    "share-this": "Share This Document",
+    "published-draft": "The document is",
+    "draft": "Draft",
+    "published": "Published",
+    "can_access": "Who can view this document?",
+    "public": "Anyone with the link",
+    "organization-access": "Anyone in my organization",
+    "private": "Only me"
   },
   "organization": {
     "owner": "Administrator",

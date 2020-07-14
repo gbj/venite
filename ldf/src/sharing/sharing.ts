@@ -8,12 +8,11 @@ export class Sharing {
   /** Drafts only available to owner and collaborators, published to anyone who meets privacy standard */
   status: 'published' | 'draft';
 
-  /** Who has permission to access this document?
+  /** Who has permission to view this document?
    * `public` available to anyone
-   * `unlisted` to those with link
    * `organization` to any user who's part of organization
    * `private` only to owner and collaborators */
-  privacy: 'public' | 'unlisted' | 'organization' | 'private';
+  privacy: 'public' | 'organization' | 'private';
 
   /** Username or API-readable identifying collaborators who have same permissions as owner, except editing collaborators or changing owner */
   collaborators: string[];

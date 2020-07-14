@@ -16,6 +16,7 @@ import { CreateDocumentButtonComponent } from './create-document-button/create-d
 import { AddBlockComponent } from './add-block/add-block.component';
 import { LectionarySelectComponent } from './lectionary-select/lectionary-select.component';
 import { CanticleSelectComponent } from './canticle-select/canticle-select.component';
+import { SharingComponent } from './sharing/sharing.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { CanticleSelectComponent } from './canticle-select/canticle-select.compo
     CreateDocumentButtonComponent,
     AddBlockComponent,
     LectionarySelectComponent,
-    CanticleSelectComponent
+    CanticleSelectComponent,
+    SharingComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

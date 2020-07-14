@@ -10,6 +10,10 @@
         {{ 'Saved at' | translate }} {{ docSaved | date:'shortTime' }} {{ 'on' | translate }} {{ docSaved | date:'shortDate' }}
       </ion-text>
       <ion-buttons collapse="true" slot="end">
+        <ion-button (click)="sharingModal(localManager.document?.sharing)">
+          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-label>{{ 'editor.share' | translate }}</ion-label>
+        </ion-button>
         <venite-auth-menu-button></venite-auth-menu-button>
       </ion-buttons>
     </ion-toolbar>
