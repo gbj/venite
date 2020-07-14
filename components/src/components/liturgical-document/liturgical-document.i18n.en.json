@@ -1,0 +1,17 @@
+{
+  "canticle-1": "The first canticle ",
+  "canticle-2": "The second canticle ",
+  "category": "All items that match the category ",
+  "collect": "The Collect of the Day.",
+  "definedByPreference": " defined by the preference ",
+  "fromCanticleTable": " from the canticle table ",
+  "fromLectionary": " from the lectionary ",
+  "lectionaryReading": "The lectionary reading ",
+  "filter-seasonal": " and the current season",
+  "filter-evening-true": " and are in the evening ",
+  "filter-evening-false": " and are not in the evening ",
+  "filter-day": " and the liturgical day ",
+  "rotate-true": " (rotating by day)",
+  "rotate-false": " (including all possibilities)",
+  "slug": "All items with the slug "
+}

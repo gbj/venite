@@ -36,6 +36,7 @@
 graph TD;
   ldf-editor --> ldf-label-bar
   ldf-editor --> ldf-liturgical-document
+  ldf-liturgical-document --> ion-skeleton-text
   ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
   ldf-liturgical-document --> ldf-meditation

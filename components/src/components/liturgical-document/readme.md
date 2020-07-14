@@ -36,6 +36,7 @@
 
 ### Depends on
 
+- ion-skeleton-text
 - [ldf-liturgy](../liturgy)
 - [ldf-heading](../heading)
 - [ldf-meditation](../meditation)
@@ -51,6 +52,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  ldf-liturgical-document --> ion-skeleton-text
   ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
   ldf-liturgical-document --> ldf-meditation

@@ -23,7 +23,7 @@ const TYPES = [
 ] as const;
 export type TypeTuple = typeof TYPES;
 
-const LOOKUP_TYPES = ['lectionary', 'canticle-table', 'category', 'slug', 'collect'];
+const LOOKUP_TYPES = ['lectionary', 'canticle', 'category', 'slug', 'collect'];
 type LookupTypeTuple = typeof LOOKUP_TYPES;
 
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
