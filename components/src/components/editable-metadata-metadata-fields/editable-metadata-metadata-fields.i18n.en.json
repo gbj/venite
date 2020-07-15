@@ -1,6 +1,8 @@
 {
+  "bible-reading": "Bible Reading",
   "delay": "Delay before Starting",
   "evening": "Evening Liturgy",
+  "heading": "Heading",
   "heading1": "1. Title",
   "heading2": "2. Section Title",
   "heading3": "3. Label",
@@ -9,14 +11,20 @@
   "latinname": "Latin Name",
   "level": "Level",
   "length": "Length of Meditation",
+  "liturgy": "Liturgy",
   "liturgyversions": "Liturgy Versions",
   "localname": "English Name",
+  "meditation": "Meditation",
   "number": "Psalm Number",
   "omit_antiphon": "Omit Antiphon",
   "omit_gloria": "Omit Gloria Patri",
   "omit_response": "Omit Response",
   "preferences": "Preferences",
+  "psalm": "Psalm",
   "response": "Response",
+  "responsive": "Responsive Prayer",
   "special_preferences": "Special Preferences (not saved)",
-  "supplement": "Supplemental Devotion"
+  "supplement": "Supplemental Devotion",
+  "title": "Settings",
+  "text": "Text"
 }

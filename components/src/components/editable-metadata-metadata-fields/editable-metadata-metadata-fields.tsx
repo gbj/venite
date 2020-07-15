@@ -113,7 +113,6 @@ export class EditableMetadataMetadataFieldsComponent {
           { field: 'delay', type: Field.TimeInSeconds }
         ];
 
-      // TODO
       case 'psalm':
         return [
           { field: 'number', type: Field.Number },
@@ -141,99 +140,115 @@ export class EditableMetadataMetadataFieldsComponent {
     }
   }
 
+  fieldToNodes(field : FieldDefinition, localeStrings: { [x: string]: string }) : JSX.Element[] {
+    const nodes : JSX.Element[] = new Array(),
+          currentValue = (this.obj?.metadata || {})[field.field],
+          path = `${this.path}/metadata/${field.field}`,
+          placeholder = localeStrings[field.field];
+    let wrapInItem = true,
+      labelStacked = true;
+
+    switch(field.type) {
+    // TODO
+    case Field.BibleReadingIntro:
+      nodes.push(<code>Bible Reading Intro</code>)
+      break;
+
+    // Done
+    case Field.Bool:
+      nodes.push(
+        <ldf-editable-boolean
+          path={`${this.path}/metadata`}
+          property={field.field}
+          value={currentValue}
+        >
+        </ldf-editable-boolean>
+      )
+      labelStacked = false;
+      break;
+    case Field.Number:
+      nodes.push(
+        <ldf-editable-text
+          short={true}
+          inputType="number"
+          path={path}
+          placeholder={placeholder}
+          text={currentValue}
+        ></ldf-editable-text>
+      );
+      break;
+    case Field.String:
+      nodes.push(
+        <ldf-editable-text
+          short={true}
+          path={path}
+          placeholder={placeholder}
+          text={currentValue}
+        ></ldf-editable-text>
+      );
+      break;
+    case Field.StringList:
+      nodes.push(
+        <ldf-editable-string-list
+          path={path}
+          property={field.field}
+          value={currentValue}
+        >
+        </ldf-editable-string-list>
+      )
+      wrapInItem = false;
+      break;
+    case Field.HeadingLevel:
+      nodes.push(
+        <ldf-editable-select
+          path={`${this.path}/metadata`}
+          property={field.field}
+          options={[
+            { label: localeStrings.heading1, value: 1 },
+            { label: localeStrings.heading2, value: 2 },
+            { label: localeStrings.heading3, value: 3 },
+            { label: localeStrings.heading4, value: 4 }
+          ]}
+          value={currentValue}
+        ></ldf-editable-select>
+      );
+      break;
+    default:
+      console.warn('(ldf-editable-metadata-metadata-fields)', field.type, 'is not a recognized FieldType');
+      break;
+    }
+
+    if(wrapInItem) {
+    return [
+      <ion-item>
+        {labelStacked
+        ? <ion-label position="stacked">{ localeStrings[field.field] }</ion-label>
+        : <ion-label>{ localeStrings[field.field] }</ion-label>}
+        {nodes}
+      </ion-item>
+    ]
+    } else {
+    return nodes;
+    }
+  }
+
   render() {
-    const localeStrings = this.localeStrings || {};
+    const localeStrings = this.localeStrings || {},
+          fieldNodes = this.fields.map(field => this.fieldToNodes(field, localeStrings));
 
-    return this.fields.map(field => {
-      const nodes : JSX.Element[] = new Array(),
-            currentValue = (this.obj?.metadata || {})[field.field],
-            path = `${this.path}/metadata/${field.field}`,
-            placeholder = localeStrings[field.field];
-      let wrapInItem = true,
-          labelStacked = true;
-
-      switch(field.type) {
-        // TODO
-        case Field.BibleReadingIntro:
-          nodes.push(<code>Bible Reading Intro</code>)
-          break;
-
-        // Done
-        case Field.Bool:
-          nodes.push(
-            <ldf-editable-boolean
-              path={`${this.path}/metadata`}
-              property={field.field}
-              value={currentValue}
-            >
-            </ldf-editable-boolean>
-          )
-          labelStacked = false;
-          break;
-        case Field.Number:
-          nodes.push(
-            <ldf-editable-text
-              short={true}
-              inputType="number"
-              path={path}
-              placeholder={placeholder}
-              text={currentValue}
-            ></ldf-editable-text>
-          );
-          break;
-        case Field.String:
-          nodes.push(
-            <ldf-editable-text
-              short={true}
-              path={path}
-              placeholder={placeholder}
-              text={currentValue}
-            ></ldf-editable-text>
-          );
-          break;
-        case Field.StringList:
-          nodes.push(
-            <ldf-editable-string-list
-              path={path}
-              property={field.field}
-              value={currentValue}
-            >
-            </ldf-editable-string-list>
-          )
-          wrapInItem = false;
-          break;
-        case Field.HeadingLevel:
-          nodes.push(
-            <ldf-editable-select
-              path={`${this.path}/metadata`}
-              property={field.field}
-              options={[
-                { label: localeStrings.heading1, value: 1 },
-                { label: localeStrings.heading2, value: 2 },
-                { label: localeStrings.heading3, value: 3 },
-                { label: localeStrings.heading4, value: 4 }
-              ]}
-              value={currentValue}
-            ></ldf-editable-select>
-          );
-          break;
-        default:
-          console.warn('(ldf-editable-metadata-metadata-fields)', field.type, 'is not a recognized FieldType');
-          break;
-      }
-
-      if(wrapInItem) {
-        return (
-          <ion-item lines="none">
-            {labelStacked
-            ? <ion-label position="stacked">{ localeStrings[field.field] }</ion-label>
-            : <ion-label>{ localeStrings[field.field] }</ion-label>}
-            {nodes}
-          </ion-item>
-        )
-      } else {
-        return nodes;
-      }
-    });
+    return (
+      fieldNodes?.length > 0 && <ion-card>
+        <ion-card-header>
+          <ion-card-title>{localeStrings[this.obj.type]} {localeStrings.title}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              {fieldNodes.map((field : JSX.Element[]) => <ion-col size="4">{field}</ion-col>)}
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    );
   }
 }

@@ -124,52 +124,56 @@ export class EditableMetadataComponent {
         <ion-content>
           {/* Form to Edit Metadata — display when "Settings" button is toggled */}
           <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
-            <ion-list>
-
-              {/* `type` and `style` */}
-              <fieldset>
-                <SelectField field='type' types={availableTypes} />
-
-                {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
-              </fieldset>
-
-              {/* `metadata` */}
-              <fieldset>
-                <ldf-editable-metadata-metadata-fields
-                  path={this.path}
-                  doc={this.obj}
-                ></ldf-editable-metadata-metadata-fields>
-              </fieldset>
-
-              {/* `tradition`, `language` and `version` */}
-              <fieldset>
-                <TextField name="tradition"/>
-                <TextField name="language"/>
-                <TextField name="version"/>
-              </fieldset>
-
-              {/* `label` and `version_label` */}
-              <fieldset>
-                <TextField name="label"/>
-                <TextField name="version_label"/>
-              </fieldset>
-
-              {/* `category` */}
-              <fieldset>
-                <ldf-editable-string-list
-                  path={this.path}
-                  property="category"
-                  value={this.obj.category}
-                >
-                </ldf-editable-string-list>
-              </fieldset>
-
-              {/* `source` and `citation` */}
-              <fieldset>
-                <ion-item><p>Source...</p></ion-item>
-                <TextField name="citation"/>
-              </fieldset>
-            </ion-list>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{localeStrings.title}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-grid>
+                  {/* `type` and `style` */}
+                  <ion-row>
+                    <ion-col size="4">
+                      <SelectField field='type' types={availableTypes} />
+                    </ion-col>
+                    <ion-col>
+                      {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+                    </ion-col>
+                  </ion-row>
+                  {/* `tradition`, `language` and `version` */}
+                  <ion-row>
+                    <ion-col><TextField name="tradition"/></ion-col>               
+                    <ion-col><TextField name="language"/></ion-col>
+                    <ion-col><TextField name="version"/></ion-col>
+                  </ion-row>
+                  {/* `label` and `version_label` */}
+                  <ion-row>
+                    <ion-col size="4"><TextField name="label"/></ion-col>
+                    <ion-col><TextField name="version_label"/></ion-col>
+                  </ion-row>
+                  {/* `source` and `citation` */}
+                  <ion-row>
+                    <ion-col size="8"><ion-item lines="none"><p>Source...</p></ion-item></ion-col>
+                    <ion-col><TextField name="citation"/></ion-col>
+                  </ion-row>
+                  {/* `category` */}
+                  <ion-row>
+                    <ion-col size="12">
+                      <ldf-editable-string-list
+                        path={this.path}
+                        property="category"
+                        value={this.obj.category}
+                      >
+                      </ldf-editable-string-list>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-content>
+            </ion-card>
+            {/* `metadata` */}
+            <ldf-editable-metadata-metadata-fields
+              path={this.path}
+              doc={this.obj}
+            ></ldf-editable-metadata-metadata-fields>
           </form>
         </ion-content>
       </Host>
