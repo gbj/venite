@@ -90,14 +90,20 @@ export class EditableConditionComponent {
   }
 
   addCondition() {
+    // create array if not in existence
     if(!Array.isArray(this.currentCondition.conditions)) {
       this.currentCondition.conditions = new Array();
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}`,
+        op: [ { type: 'set', index: 'conditions', value: new Array() } ]
+      }));
     }
+
+    // add to the array
     this.currentCondition = {
       ... this.currentCondition,
       conditions: this.currentCondition.conditions.concat(new Condition())
     }
-    console.log('current conditions', this.currentCondition.conditions);
     this.ldfDocShouldChange.emit(new Change({
       path: `${this.path}/conditions`,
       op: [ { type: 'insertAt', index: this.currentCondition.conditions.length, value: new Condition() } ]
