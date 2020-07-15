@@ -1,4 +1,8 @@
 {
   "amen": "Amen.",
-  "loading": "Loading..."
+  "book": "Book",
+  "chapter": "Chapter",
+  "citation": "Citation (e.g., John 1:1)",
+  "loading": "Loading...",
+  "verse": "Verse"
 }

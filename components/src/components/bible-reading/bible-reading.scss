@@ -30,3 +30,8 @@ sup {
   font-weight: var(--ldf-response-font-weight);
   font-style: var(--ldf-response-font-style);
 }
+
+.verses .verse {
+  display: flex;
+  flex-direction: row;
+}
