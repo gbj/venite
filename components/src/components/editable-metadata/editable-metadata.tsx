@@ -97,17 +97,22 @@ export class EditableMetadataComponent {
       </ion-item>
     );
 
-    const TextField : FunctionalComponent<{ name }> = ({ name }) => (
-      <ion-item lines='none'>
-        <ion-label aria-label={localeStrings[name]} position='stacked'>{localeStrings[name]}</ion-label>
-        <ldf-editable-text id={name}
-          short={true}
-          path={`${this.path}/${name}`}
-          text={this.obj[name]}
-          placeholder={localeStrings[name]}>
-        </ldf-editable-text>
-      </ion-item>
-    )
+    const TextField : FunctionalComponent<{ name: string; }> = ({ name }) => {
+      const bipartiteName = name.includes('/'),
+            nameParts = name.split('/'),
+            text = bipartiteName ? (this.obj[nameParts[0]] || {})[nameParts[1]] : this.obj[name];
+      return (
+        <ion-item lines='none'>
+          <ion-label aria-label={localeStrings[name]} position='stacked'>{localeStrings[name]}</ion-label>
+          <ldf-editable-text id={name}
+            short={true}
+            path={`${this.path}/${name}`}
+            text={text}
+            placeholder={localeStrings[name]}>
+          </ldf-editable-text>
+        </ion-item>
+      )
+    };
 
     return (
       <Host>
@@ -152,7 +157,8 @@ export class EditableMetadataComponent {
                   </ion-row>
                   {/* `source` and `citation` */}
                   <ion-row>
-                    <ion-col size="8"><ion-item lines="none"><p>Source...</p></ion-item></ion-col>
+                    <ion-col><TextField name="source/source"/></ion-col>
+                    <ion-col><TextField name="source/citation"/></ion-col>
                     <ion-col><TextField name="citation"/></ion-col>
                   </ion-row>
                   {/* `category` */}
