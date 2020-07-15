@@ -30,13 +30,12 @@ export class PrayService {
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
       if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
-          .value
-          .map(child => this.compile(child, day, prefs)));
+          .value?.map(child => this.compile(child, day, prefs)));
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
-          ... this.latestChildren$.map(child$ => child$.pipe(startWith(undefined)))
+          ... this.latestChildren$.map(child$ => child$ ? child$?.pipe(startWith(undefined)) : of(undefined))
         ).pipe(
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
@@ -46,7 +45,7 @@ export class PrayService {
       }
 
       // if doc has a `lookup` and not a `value`, compile it
-      if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value.length == 0)) {
+      if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value?.length == 0)) {
         return this.lookup(doc, day, prefs, []).pipe(
           // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
           switchMap(data => {
@@ -71,7 +70,7 @@ export class PrayService {
       }
 
       // compile Bible readings if they have no content
-      else if(doc.type == 'bible-reading' && !doc.hasOwnProperty('value') || doc.value.length == 0) {
+      else if(doc.type == 'bible-reading' && !doc.hasOwnProperty('value') || doc.value?.length == 0) {
         return ;
       }
 
@@ -224,7 +223,7 @@ export class PrayService {
       // sort the psalms by number in increasing order
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
-        value: liturgy.value.sort((a, b) => a.metadata?.number - b.metadata?.number)
+        value: liturgy.value?.sort((a, b) => a.metadata?.number - b.metadata?.number)
       }))
     )
   }
