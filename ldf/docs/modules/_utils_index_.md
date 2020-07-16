@@ -10,6 +10,7 @@
 * [docsToLiturgy](_utils_index_.md#docstoliturgy)
 * [docsToOption](_utils_index_.md#docstooption)
 * [preferencesToCategories](_utils_index_.md#preferencestocategories)
+* [sortPsalms](_utils_index_.md#sortpsalms)
 * [specificClass](_utils_index_.md#specificclass)
 * [versionToString](_utils_index_.md#versiontostring)
 
@@ -36,6 +37,12 @@ ___
 ###  preferencesToCategories
 
 • **preferencesToCategories**:
+
+___
+
+###  sortPsalms
+
+• **sortPsalms**:
 
 ___
 

@@ -59,5 +59,6 @@
 * ["utils/docs-to-option"](modules/_utils_docs_to_option_.md)
 * ["utils/index"](modules/_utils_index_.md)
 * ["utils/preferences-to-categories"](modules/_utils_preferences_to_categories_.md)
+* ["utils/sort-psalms"](modules/_utils_sort_psalms_.md)
 * ["utils/specific-class"](modules/_utils_specific_class_.md)
 * ["utils/version-to-string"](modules/_utils_version_to_string_.md)

@@ -114,9 +114,8 @@ export class TextComponent {
 
           {/* Heading */}
           <ldf-heading
-            editable={this.editable}
             path={this.path}
-            doc={new Heading({ type: 'heading', label: this.obj.label, citation: this.obj.citation})}>
+            doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
           </ldf-heading>
 
           {

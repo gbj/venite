@@ -66,6 +66,7 @@
 * [liturgicalWeek](_index_.md#liturgicalweek)
 * [preferencesToCategories](_index_.md#preferencestocategories)
 * [rclYear](_index_.md#rclyear)
+* [sortPsalms](_index_.md#sortpsalms)
 * [specificClass](_index_.md#specificclass)
 * [subtractOneDay](_index_.md#subtractoneday)
 * [sundayBefore](_index_.md#sundaybefore)
@@ -430,6 +431,12 @@ ___
 ###  rclYear
 
 • **rclYear**:
+
+___
+
+###  sortPsalms
+
+• **sortPsalms**:
 
 ___
 
