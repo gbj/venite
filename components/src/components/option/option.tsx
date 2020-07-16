@@ -42,7 +42,7 @@ export class OptionComponent {
   @Prop() editable : boolean;
 
   // Events
-  @Event() ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
+  @Event({ bubbles: true }) ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -61,6 +61,7 @@ export class OptionComponent {
       // without overriding any other metadata fields
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
     } else {
+      console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
       this.ldfAddOptionToDoc.emit({
         base: this.path,
         index: this.obj?.value?.length,

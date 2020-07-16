@@ -89,7 +89,9 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     const { base, index, obj } = ev.detail;
     // Add an option to an existing `Option`
     if(obj.type == 'option') {
-      
+      this.addBlock((data) =>
+        this.add(manager, `${base}/value`, index, data)
+      );
     }
     // Otherwise, add a new doc and convert the whole thing to an `Option`
     else {
@@ -99,7 +101,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           [
             new Option({
               type: 'option',
-              metadata: { selected: 1 },
+              metadata: { selected: 0 },
               // TODO -- convert to Liturgy if data really has more than one member
               // do this by moving the docToLiturgy and docToOption stuff into LDF and calling it here and in PrayService
               value: [ obj, docsToLiturgy(data) ]
