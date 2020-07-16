@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Observable, Subscription, Subject, of } from 'rxjs';
 import { take, map, tap, switchMap } from 'rxjs/operators';
-import { LiturgicalDocument } from '@venite/ldf';
+import { LiturgicalDocument, sortPsalms, Psalm } from '@venite/ldf';
 //import { MenuOption } from '@venite/components/dist/types/components/editable-add-block-menu/menu-options';
 import { DocumentService } from 'src/app/services/document.service';
 
@@ -75,7 +75,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalOptions = this.additionalVersions.pipe(
             map(versions => Object.keys(versions)),
             switchMap(versions => this.documentService.findDocumentsByCategory(['Psalm'], this.language, versions).pipe(
-              tap(objs => console.log('psalm found objects', objs)),
+              map(objs => objs.sort((a, b) => sortPsalms(a as Psalm, b as Psalm))),
               map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
               // TODO -- sort by psalm number
             ))
