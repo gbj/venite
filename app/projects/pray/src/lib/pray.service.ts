@@ -22,6 +22,7 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+    console.log('(compile)', docBase);
     const doc = docBase instanceof LiturgicalDocument ? docBase : new LiturgicalDocument(docBase);
 
     // should the doc be included?
@@ -35,43 +36,46 @@ export class PrayService {
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
-          ... this.latestChildren$.map(child$ => child$ ? child$?.pipe(startWith(undefined)) : of(undefined))
+          ... this.latestChildren$//.map(child$ => child$ ? child$.pipe(startWith(undefined)) : of(undefined))
         ).pipe(
+          tap(compiledChildren => console.log('compiledChildren', compiledChildren)),
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
             value: compiledChildren
           }))
         );
       }
-
-      // if doc has a `lookup` and not a `value`, compile it
-      if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value?.length == 0)) {
-        return this.lookup(doc, day, prefs, []).pipe(
-          // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
-          switchMap(data => {
-            const doc = new LiturgicalDocument(data);
-            if(doc.include(new LiturgicalDay(day), prefs)) {
-              return this.lookupBibleReading(doc, typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version);
-            } else {
-              return of(undefined);
-            }
-          })
-        );
-      }
     
       // if doc has a `slug` and not a `value`, add `lookup` type of `slug` and recompile
-      else if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value')) {
-        return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
+      if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value')) {
+        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
       }
 
       // if doc has a `category` and not a `value`, add `lookup` type of `category` and recompile
       else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value')) {
-        return this.compile(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
+        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
       }
 
       // compile Bible readings if they have no content
-      else if(doc.type == 'bible-reading' && !doc.hasOwnProperty('value') || doc.value?.length == 0) {
-        return ;
+      else if(doc.type == 'bible-reading' && doc.hasOwnProperty('citation') && !doc.hasOwnProperty('value') || doc.value?.length == 0) {
+        return this.lookupBibleReading(doc, typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version);
+      }
+
+      // if doc has a `lookup` and not a `value`, compile it
+      else if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value?.length == 0)) {
+        return this.lookup(doc, day, prefs, []).pipe(
+          tap(lookedUp => console.log('(lookup)', lookedUp))
+        )/*.pipe(
+          // recursively compile to check `doc.include` and `Liturgy.value`/`Option.value`
+          switchMap(data => {
+            const newDoc = new LiturgicalDocument(data);
+            if(newDoc.include(new LiturgicalDay(day), prefs)) {
+              return this.compile(newDoc, day, prefs);
+            } else {
+              return of(undefined);
+            }
+          })
+        );*/
       }
 
       // otherwise, check whether the doc should be included
@@ -143,9 +147,13 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+    console.log('(lookupBySlug)', slug, language);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
-      map(docs => this.filter(filterType, day, docs)),
-      map(docs => this.rotate(rotate, day, docs)),
+      tap(docs => console.log('lookupBySlug', docs)),
+      map(docs => filterType ? this.filter(filterType, day, docs) : docs),
+      tap(docs => console.log('lookupBySlug', docs)),
+      map(docs => rotate ? this.rotate(rotate, day, docs) : docs),
+      tap(docs => console.log('lookupBySlug', docs)),
       map(docs => docsToOption(docs, versions))
     );
   }
@@ -189,6 +197,7 @@ export class PrayService {
     // Bible Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `bibleVersion`, then c) New Revised Standard Version
     const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['bibleVersion'] || 'NRSV';
 
+    console.log('(lookupLectionaryReadings)', doc);
     return this.findReadings(doc, day, prefs).pipe(
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
         ... doc,
@@ -197,7 +206,9 @@ export class PrayService {
         language : doc.language || 'en',
         label: entry.citation
       })))),
-      map(docs => docsToOption(docs))
+      map(docs => docsToOption(docs)),
+      tap(option => console.log('(lookupLectionaryReadings) compile this: ', option)),
+      switchMap(option => this.compile(option, day, prefs))
     );
   }
 
@@ -205,6 +216,8 @@ export class PrayService {
   lookupPsalter(doc : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
     const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['psalterVersion'] || 'bcp1979';
+
+    console.log('(lookupPsalter)', doc, day, prefs);
 
     return this.findReadings(doc, day, prefs).pipe(
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
@@ -216,7 +229,9 @@ export class PrayService {
         lookup: { type: 'slug' }
       })))),
       // pack these into a `Liturgy` object
+      tap(docs => console.log('(lookupPsalter) docs = ', docs)),
       map(docs => docsToLiturgy(docs)),
+      tap(doc => console.log('(lookupPsalter) Liturgy object = ', doc)),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs)),
@@ -255,9 +270,9 @@ export class PrayService {
   }
 
   /** Fetches values for Bible readings */
-  lookupBibleReading(doc : LiturgicalDocument, version : string) : Observable<LiturgicalDocument> {
+  lookupBibleReading(doc : LiturgicalDocument, version : string = 'NRSV') : Observable<LiturgicalDocument> {
     return this.bibleService.getText(doc.citation, version).pipe(
-      tap(doc => console.log('(lookupBibleReading)', doc.citation, version)),
+      tap(doc => console.log('(lookupBibleReading)', doc, doc.citation, version)),
       map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value }))
     );
   }

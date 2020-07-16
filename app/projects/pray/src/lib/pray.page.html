@@ -26,7 +26,7 @@
   <!--<ul>
     <li *ngFor="let child$ of prayService.latestChildren$">{{ child$ | async | json }}</li>
   </ul>-->
-  <!-- <pre>{{ doc$ | async | json }}</pre> -->
+  <!--<pre>{{ doc$ | async | json }}</pre>-->
   <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
     <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
   </div>
