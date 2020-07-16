@@ -106,7 +106,6 @@ export class MeditationComponent {
     this.secondsRemaining = seconds;
 
     // Start the timer after the delay
-    console.log(this);
     setTimeout(() => {
       this.startTimer();
       this.started = true;
@@ -179,7 +178,6 @@ export class MeditationComponent {
 
   handleControlSubmit(e : Event) {
     e.preventDefault();
-    console.log(e);
   }
 
   handleControlValue(e) {

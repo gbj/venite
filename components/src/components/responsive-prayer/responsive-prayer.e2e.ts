@@ -10,7 +10,6 @@ describe('ldf-responsive-prayer', () => {
 
     const component = await page.find('ldf-responsive-prayer'),
           element = await page.find('ldf-responsive-prayer >>> table');
-    console.log(component)
     expect(element).toBeTruthy();
   });
 

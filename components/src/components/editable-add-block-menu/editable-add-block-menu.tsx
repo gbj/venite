@@ -65,7 +65,6 @@ export class EditableAddBlockMenuComponent {
         const label = (entry.label || '').toLowerCase(),
               localeLabel = ((this.localeStrings || {})[entry.label] || '').toLowerCase(),
               s = search.toLowerCase();
-        console.log(label, localeLabel, s, label.includes(s), localeLabel.includes(s) );
         return {
           ... entry,
           hidden: !(label.includes(s) || localeLabel.includes(s))

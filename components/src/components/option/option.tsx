@@ -49,14 +49,12 @@ export class OptionComponent {
     this.docChanged(this.doc);
 
     const selected : number = this.obj.metadata && this.obj.metadata.selected ? this.obj.metadata.selected : 0;
-    console.log('selected', this.obj.metadata, selected);
     this.select(selected || 0);
   }
 
   /** Display the nth option */
   @Method()
   async select(index : number | 'add') {
-    console.log('select ', index);
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value[index];
       // sets metadata.selected to new index, and creates objects along the way if undefined

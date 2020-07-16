@@ -38,7 +38,6 @@ export class EditableMetadataButtonsComponent {
   // Lifecycle events
   componentWillLoad() {
     this.loadLocaleStrings();
-    console.log('parent type = ', this.parentType)
   }
 
   // Private methods

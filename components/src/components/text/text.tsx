@@ -75,7 +75,6 @@ export class TextComponent {
   render() {
     const localeStrings = this.localeStrings || {},
           compiledValue : string[][] = (this.obj.value || ['']).map(s => {
-            console.log(s);
             return s.match(/[\w‘’“”\n\s]+([^\w‘’“”\n\s])/g);
           });
 
