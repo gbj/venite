@@ -37,16 +37,18 @@ Type: `Promise<{ [x: string]: string; }>`
 
 - [ldf-label-bar](../label-bar)
 - [ldf-heading](../heading)
-- [ldf-string](../string)
+- [ldf-editable-text](../editable-text)
 - [ldf-liturgical-document](../liturgical-document)
+- [ldf-string](../string)
 
 ### Graph
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
   ldf-bible-reading --> ldf-heading
-  ldf-bible-reading --> ldf-string
+  ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-editable-text --> ion-input

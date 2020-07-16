@@ -94,8 +94,9 @@ graph TD;
   ldf-responsive-prayer --> ldf-heading
   ldf-bible-reading --> ldf-label-bar
   ldf-bible-reading --> ldf-heading
-  ldf-bible-reading --> ldf-string
+  ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-string
   ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
