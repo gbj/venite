@@ -82,11 +82,13 @@ export class EditableTextComponent {
   // Debounce calculating and emitting the change so we can send multi-character changes
   @Debounce(500)
   handleInput() {
+    this.registerCursor();
+  
     // calculate changes to be made
     const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);
 
     // save previous value for diffing purposes on next change
-    this.previousText = this.cursor.element.value;
+    this.previousText = this.cursor?.element?.value || '';
 
     // emit the event
     this.ldfDocShouldChange.emit(change);
@@ -125,10 +127,11 @@ export class EditableTextComponent {
   registerCursor() : Cursor {
     const start = this.textarea.selectionStart,
           end = this.textarea.selectionEnd;
-    if(!this.cursor || start !== this.cursor.start || end !== this.cursor.end) {
+    if(!this.cursor || start !== this.cursor?.start || end !== this.cursor?.end) {
       this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
       this.emitCursor(this.cursor);
     }
+    console.debug('cursor is at', this.cursor?.start, this.cursor?.end)
     return this.cursor;
   }
 
@@ -165,13 +168,13 @@ export class EditableTextComponent {
     this.registerCursor();
 
     // if this is an Enter key event without the shift key at the end of the textarea
-    if(event.keyCode == 13 && !event.shiftKey && this.cursor.start == this.textarea.value.length) {
+    if(event.keyCode == 13 && !event.shiftKey && this.cursor?.start == this.textarea.value.length) {
       event.preventDefault();
       this.ldfAddChildAfter.emit({path: this.path, template: this.template});
     }
 
     // if this is a Backspace key event at the beginning of the textarea
-    if(event.keyCode == 8 && this.cursor.start == 0 && this.cursor.end == 0) {
+    if(event.keyCode == 8 && this.cursor?.start == 0 && this.cursor?.end == 0) {
       event.preventDefault();
       this.ldfMergeWithPrevious.emit({ path: this.path, value: this.currentText});
     }
