@@ -78,10 +78,10 @@ graph TD;
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
   ion-chip --> ion-ripple-effect
+  ldf-editable-metadata-metadata-fields --> ldf-editable-select
   ldf-editable-metadata-metadata-fields --> ldf-editable-boolean
   ldf-editable-metadata-metadata-fields --> ldf-editable-text
   ldf-editable-metadata-metadata-fields --> ldf-editable-string-list
-  ldf-editable-metadata-metadata-fields --> ldf-editable-select
   ldf-editable-metadata-metadata-fields --> ion-item
   ldf-editable-metadata-metadata-fields --> ion-label
   ldf-editable-metadata-metadata-fields --> ion-card

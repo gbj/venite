@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                 | Type                                            | Default     |
-| ---------- | ---------- | ----------------------------------------------------------- | ----------------------------------------------- | ----------- |
-| `options`  | --         | Options to include in the list                              | `{ value: string \| number; label: string; }[]` | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the object being edited       | `string`                                        | `undefined` |
-| `property` | `property` | Property name to edit within the object specified by `path` | `string`                                        | `undefined` |
-| `value`    | `value`    | Starting value for editing                                  | `number \| string`                              | `undefined` |
+| Property   | Attribute  | Description                                                 | Type                               | Default     |
+| ---------- | ---------- | ----------------------------------------------------------- | ---------------------------------- | ----------- |
+| `options`  | --         | Options to include in the list                              | `{ value: any; label: string; }[]` | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the object being edited       | `string`                           | `undefined` |
+| `property` | `property` | Property name to edit within the object specified by `path` | `string`                           | `undefined` |
+| `value`    | `value`    | Starting value for editing                                  | `any`                              | `undefined` |
 
 
 ## Events
