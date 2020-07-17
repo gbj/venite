@@ -1285,15 +1285,16 @@ export class LdfEditableMetadataButtons {
 }
 
 export declare interface LdfEditableMetadataMetadataFields extends Components.LdfEditableMetadataMetadataFields {}
-@ProxyCmp({inputs: ['doc', 'path']})
-@Component({ selector: 'ldf-editable-metadata-metadata-fields', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'path'] })
+@ProxyCmp({inputs: ['bibleReadingIntros', 'doc', 'path'], 'methods': ['setBibleReadingIntros']})
+@Component({ selector: 'ldf-editable-metadata-metadata-fields', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['bibleReadingIntros', 'doc', 'path'] })
 export class LdfEditableMetadataMetadataFields {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  ldfAskForBibleIntros!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfDocShouldChange', 'ldfAskForBibleIntros']);
   }
 }
 
