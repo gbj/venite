@@ -147,7 +147,7 @@ export class PsalmComponent {
                   <ldf-editable-text
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-verse`}
                     text={verse.verse}
-                    path={`${this.path}/value/${sectionIndex}/${verseIndex}/verse`}
+                    path={`${this.path}/value/${sectionIndex}/value/${verseIndex}/verse`}
                     placeholder='Lorem ipsum sit dolor amet, *'
                     template={pattern}>
                   </ldf-editable-text> :
@@ -168,7 +168,7 @@ export class PsalmComponent {
                   <ldf-editable-text
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-halfverse`}
                     text={verse.halfverse}
-                    path={`${this.path}/value/${sectionIndex}/${verseIndex}/halfverse`}
+                    path={`${this.path}/value/${sectionIndex}/value/${verseIndex}/halfverse`}
                     placeholder='consectetur adipiscing elit.'
                     template={pattern}>
                   </ldf-editable-text> :
@@ -186,7 +186,7 @@ export class PsalmComponent {
                   <ldf-editable-text
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-number`}
                     text={verse.number}
-                    path={`${this.path}/value/${sectionIndex}/${verseIndex}/number`}
+                    path={`${this.path}/value/${sectionIndex}/value/${verseIndex}/number`}
                     placeholder='#'
                     template={pattern}>
                   </ldf-editable-text> :
