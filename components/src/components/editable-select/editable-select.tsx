@@ -18,10 +18,10 @@ export class EditableSelectComponent {
   @Prop({ reflect: true }) property: string;
 
   /** Options to include in the list */
-  @Prop() options: { value: string | number; label: string; }[];
+  @Prop() options: { value: any; label: string; }[];
 
   /** Starting value for editing */
-  @Prop() value: string | number;
+  @Prop() value: any;
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;

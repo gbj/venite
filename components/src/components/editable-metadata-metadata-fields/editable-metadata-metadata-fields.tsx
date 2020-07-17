@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, JSX } from '@stencil/core';
+import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, JSX, Method } from '@stencil/core';
 import { Change, TypeTuple, LiturgicalDocument, specificClass } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
@@ -32,6 +32,8 @@ export class EditableMetadataMetadataFieldsComponent {
 
   @State() obj : LiturgicalDocument;
 
+  @State() currentBibleReadingIntros : LiturgicalDocument[] = new Array();
+
   // State
 
   // Properties
@@ -56,14 +58,40 @@ export class EditableMetadataMetadataFieldsComponent {
     }
   }
 
+  /** Options for introductions to a Bible reading */
+  @Prop({ reflect: true }) bibleReadingIntros : LiturgicalDocument[] = new Array();
+  @Watch('bibleReadingIntros')
+  introsChanged() {
+    console.log('bibleReadingIntros changed to ', this.bibleReadingIntros);
+    this.currentBibleReadingIntros = [ ... this.bibleReadingIntros ];
+  }
+
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+
+  @Event({ bubbles: true }) ldfAskForBibleIntros : EventEmitter<void>;
+
+  /** Set the list of Bible reading introductions */
+  @Method()
+  async setBibleReadingIntros(intros : LiturgicalDocument[] | string) : Promise<void> {
+    if(typeof intros === 'string') {
+      this.currentBibleReadingIntros = JSON.parse(intros);
+    } else {
+      this.currentBibleReadingIntros = intros;
+    }
+  }
 
   // Lifecycle events
   async componentWillLoad() {
     this.docChanged(this.doc);
     this.loadLocaleStrings();
     this.fields = this.fieldsFromType(this.obj?.type);
+
+    // if necessary, ask for Bible reading intros
+    const hasBibleReadingIntroField : boolean = !!this.fields.find(field => field.type == Field.BibleReadingIntro);
+    if(hasBibleReadingIntroField) {
+      this.ldfAskForBibleIntros.emit();
+    }
   }
 
   // Methods
@@ -151,7 +179,17 @@ export class EditableMetadataMetadataFieldsComponent {
     switch(field.type) {
     // TODO
     case Field.BibleReadingIntro:
-      nodes.push(<code>Bible Reading Intro</code>)
+      nodes.push(
+        <ldf-editable-select
+          path={`${this.path}/metadata`}
+          property={field.field}
+          options={[
+            { label: localeStrings.none, value: null },
+            ... this.currentBibleReadingIntros.map(intro => ({ label: intro.value[0].toString(), value: intro }))
+          ]}
+          value={currentValue}
+        ></ldf-editable-select>
+      )
       break;
 
     // Done
@@ -220,7 +258,7 @@ export class EditableMetadataMetadataFieldsComponent {
 
     if(wrapInItem) {
     return [
-      <ion-item>
+      <ion-item lines="none">
         {labelStacked
         ? <ion-label position="stacked">{ localeStrings[field.field] }</ion-label>
         : <ion-label>{ localeStrings[field.field] }</ion-label>}
