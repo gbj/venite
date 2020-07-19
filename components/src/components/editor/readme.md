@@ -17,11 +17,12 @@
 
 ## Events
 
-| Event                   | Description                                                                                  | Type                                            |
-| ----------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| `editorCursorMoved`     | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                           |
-| `editorDocShouldAdd`    | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>` |
-| `editorDocShouldChange` | User has edited the document                                                                 | `CustomEvent<Change>`                           |
+| Event                     | Description                                                                                  | Type                                            |
+| ------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `editorAskForBibleIntros` |                                                                                              | `CustomEvent<EventTarget>`                      |
+| `editorCursorMoved`       | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                           |
+| `editorDocShouldAdd`      | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>` |
+| `editorDocShouldChange`   | User has edited the document                                                                 | `CustomEvent<Change>`                           |
 
 
 ## Dependencies

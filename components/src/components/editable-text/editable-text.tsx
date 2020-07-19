@@ -47,7 +47,7 @@ export class EditableTextComponent {
   @Prop() inputType : TextFieldTypes;
 
   /** The base object this expresses as part of `LiturgicalDocument`.value */
-  @Prop() template : ResponsivePrayerLine | BibleReadingVerse | (PsalmVerse | Heading)[] | string = "";
+  @Prop() template : ResponsivePrayerLine | BibleReadingVerse | PsalmVerse | Heading | string = "";
 
   // Life Cycle
   componentDidRender() {

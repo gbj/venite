@@ -56,6 +56,8 @@ export class EditorComponent {
   /** User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` */
   @Event() editorDocShouldAdd : EventEmitter<{ base: string; index: number; }>;
 
+  @Event() editorAskForBibleIntros : EventEmitter<EventTarget>;
+
   // Life Cycle
   connectedCallback() {
     // initial document load from property
@@ -150,6 +152,11 @@ export class EditorComponent {
       this.editorDocShouldChange.emit(deleteChange);
       this.editorDocShouldChange.emit(editChange);
     }
+  }
+
+  @Listen('ldfAskForBibleIntros', { target: 'document' })
+  onAskForBibleIntros(ev : CustomEvent) {
+    this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields'));
   }
 
   pathAndIndexFromPath(startPath : string) : { path : string; index : number; previousIndex: number; field: string; } {
