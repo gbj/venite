@@ -8,7 +8,7 @@ export function sortPsalms(a: Psalm, b: Psalm): number {
     return Number(firstNumber) || 0;
   }
 
-  let result : number;
+  let result: number;
   try {
     const sortByNum = Number(a?.metadata?.number) - Number(b?.metadata?.number);
     let sortByVerse: number | undefined = undefined;
@@ -19,8 +19,8 @@ export function sortPsalms(a: Psalm, b: Psalm): number {
       sortByVerse = firstVerseOfA - firstVerseOfB;
     }
     result = sortByVerse || sortByNum;
-  } catch(e) {
-    console.warn("sortPsalms was unable to determine which of these two psalms should be placed first: ", a, b)
+  } catch (e) {
+    console.warn('sortPsalms was unable to determine which of these two psalms should be placed first: ', a, b);
     console.warn(e);
     result = 0;
   }
