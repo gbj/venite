@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, take, startWith } from 'rxjs/operators';
-import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek } from '@venite/ldf';
+import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference } from '@venite/ldf';
 import { PrayService } from './pray.service';
 import { ModalController } from '@ionic/angular';
 import { DisplaySettingsComponent } from './display-settings/display-settings.component';
@@ -77,8 +77,21 @@ export class PrayPage implements OnInit {
     )
 
     // `prefs` are passed as a JSON-encoded string in the param
-    const prefs$ : Observable<ClientPreferences> = this.route.params.pipe(
-      map(({ prefs }) => JSON.parse(prefs || '{}'))
+    const prefs$ : Observable<ClientPreferences> = combineLatest(liturgy$, this.route.params).pipe(
+      map(([liturgy, { prefs }]) => ({liturgy, prefs: JSON.parse(prefs || '{}')})),
+      map(({liturgy, prefs}) => liturgy[0] && liturgy[0].type == 'liturgy'
+        ? Object.assign(
+          (
+            // convert `Liturgy` preference tree into a key-default value object
+            Object.values((liturgy[0] as Liturgy).metadata?.preferences || {})
+              .reduce((acc, curr) => {
+                acc[curr.key] = new Preference(curr).getDefaultPref();
+                return acc;
+              }, {})
+          )
+          , prefs)
+        : prefs
+      )
     );
 
     // Unifies everything from the router params

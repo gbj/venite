@@ -245,6 +245,7 @@ export class PrayService {
 
   /** Finds lectionary readings, for either Bible readings or psalter */
   findReadings(doc, day, prefs) : Observable<LectionaryEntry[]> {
+    console.log('(findReadings) prefs = ', prefs);
     const lectionary : string = typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
           reading : string = typeof doc.lookup.item === 'string' || doc.lookup.item === 'number' ? doc.lookup.item.toString() : prefs[doc.lookup.item.preference];
 
