@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Observable, Subscription, combineLatest } from 'rxjs';
+import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
 import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing } from '@venite/ldf';
-import { switchMap, debounceTime, tap, map } from 'rxjs/operators';
+import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -19,9 +19,12 @@ import { SharingComponent } from '../sharing/sharing.component';
 export class LdfEditorComponent implements OnInit, OnDestroy {
   @Input() docId : string;
 
-  localManager$ : Observable<LocalDocumentManager>;
-  serverManager$ : Observable<ServerDocumentManager>;
-  doc$ : Observable<LiturgicalDocument>;
+  state$ : Observable<{
+    localManager: LocalDocumentManager,
+    serverManager: ServerDocumentManager,
+    docSaved : Date
+    bibleIntros: LiturgicalDocument[],
+  }>;
 
   // Handle external revisions
   revisions$ : Observable<DocumentManagerChange[]>;
@@ -38,27 +41,48 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Document manager
-    this.serverManager$ = this.editorService.join(this.docId);
+    const serverManager$ = this.editorService.join(this.docId);
 
-    this.localManager$ = this.serverManager$.pipe(
+    const localManager$ = serverManager$.pipe(
       switchMap(serverManager => this.editorService.localManager(serverManager.docId)),
     );
 
     // List of revisions
-    this.revisions$ = this.editorService.findRevisions(this.docId);
-
+    const revisions$ = this.editorService.findRevisions(this.docId);
+  
     // Apply changes from revisions
-    this.revisionSubscription = combineLatest(this.localManager$, this.serverManager$, this.revisions$).subscribe(
+    this.revisionSubscription = combineLatest(localManager$, serverManager$, revisions$).subscribe(
       ([localManager, serverManager, revisions]) => this.editorService.applyChanges(localManager, serverManager, revisions));
 
     // update the document once every 3s
-    this.docSaved$ = this.localManager$.pipe(
+    const docSaved$ = localManager$.pipe(
       debounceTime(3000),
       switchMap(localManager => this.documents.saveDocument(localManager.docId, {
         ... localManager.document,
         lastRevision: localManager.lastSyncedRevision
       })),
-      map(() => new Date())
+      mapTo(new Date())
+    );
+
+    // Pull Bible reading introduction options based on language of document we're editing
+    const bibleIntros$ = localManager$.pipe(
+      map(localManager => localManager?.document),
+      filter(doc => doc !== undefined),
+      switchMap(doc => this.documents.findDocumentsByCategory(['Bible Reading Introduction'], doc.language))//, [ ... typeof doc.version === 'string' ? doc.version : undefined]))
+    );
+
+    this.state$ = combineLatest(
+      serverManager$.pipe(startWith(undefined)),
+      localManager$.pipe(startWith(undefined)), 
+      docSaved$.pipe(startWith(undefined)),
+      bibleIntros$.pipe(startWith([]))
+    ).pipe(
+      map(([serverManager, localManager, docSaved, bibleIntros]) => ({
+        localManager,
+        serverManager,
+        docSaved,
+        bibleIntros
+      }))
     )
   }
 
@@ -167,5 +191,13 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       }]
     });
     this.editorService.processChange(manager, change);
+  }
+
+  // ldf-editable-metadata-metadata-fields might emit an ldfAskForBibleIntros event
+  // in response, we should call the setBibleIntros methods of that component
+  sendBibleIntros(ev : CustomEvent, intros : LiturgicalDocument[] = []) {
+    ev.detail.setBibleReadingIntros(intros);
+    console.log('(sendBibleIntros)')
+    console.log(ev.detail, intros);
   }
 }
