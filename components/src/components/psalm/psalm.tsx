@@ -97,9 +97,9 @@ export class PsalmComponent {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
 
     // create blank psalm verse pattern
-    let pattern;
+    let pattern : PsalmVerse;
     if(this.editable) {
-      const pattern : PsalmVerse = (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' });
+      pattern = (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' });
       if(pattern.number) {
         pattern.number = '';
       }
@@ -110,6 +110,7 @@ export class PsalmComponent {
         pattern.verse = '';
       }
     }
+    console.log('psalm pattern = ', pattern);
 
     return (
       <Host lang={this.obj.language}>
