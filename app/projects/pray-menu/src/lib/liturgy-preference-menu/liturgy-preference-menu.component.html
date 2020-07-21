@@ -5,15 +5,15 @@
         <ion-item><h3>{{ category }}</h3></ion-item>
         <ng-container *ngFor="let item of data.preference_tree[category]">
           <!-- item[0] is the key, item[1] is the Preference -->
-          <ion-item *ngIf="item[1]?.options?.length > 1">
-            <ion-label position="stacked">{{ item[1].label }}</ion-label>
-            <ion-select ngDefaultControl [formControlName]="item[0]" (ionChange)="update(data.form, item[0], $event.detail.value)">
-              <ion-select-option *ngFor="let opt of item[1]?.options; let ii = index"
+          <ion-item *ngIf="item?.options?.length > 1">
+            <ion-label position="stacked">{{ item?.label }}</ion-label>
+            <ion-select ngDefaultControl [formControlName]="item?.key" (ionChange)="update(data?.form, item?.key, $event.detail.value)">
+              <ion-select-option *ngFor="let opt of item?.options; let ii = index"
                 [value]="opt.value">
                 {{ opt.label }}
               </ion-select-option>
             </ion-select>
-            <ion-text class="preference-description" *ngIf="item[1]?.description" [innerHTML]="item.value.description"></ion-text>
+            <ion-text class="preference-description" *ngIf="item?.description" [innerHTML]="item?.description"></ion-text>
           </ion-item>
         </ng-container>
       </ion-list>
