@@ -13,7 +13,7 @@
 | `path`        | `path`        | A JSON Pointer that points to the text field being edited            | `string`                                                                                        | `undefined` |
 | `placeholder` | `placeholder` | Displays if text is falsy or an empty string                         | `string`                                                                                        | `undefined` |
 | `short`       | `short`       | Whether to display as a short, single-line input                     | `boolean`                                                                                       | `undefined` |
-| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `(PsalmVerse \| Heading)[] \| BibleReadingVerse \| ResponsivePrayerLine \| string`              | `""`        |
+| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `BibleReadingVerse \| Heading \| PsalmVerse \| ResponsivePrayerLine \| string`                  | `""`        |
 | `text`        | `text`        | Starting text for editing                                            | `string`                                                                                        | `undefined` |
 
 

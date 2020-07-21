@@ -1386,11 +1386,12 @@ export class LdfEditor {
   editorCursorMoved!: EventEmitter<CustomEvent>;
   editorDocShouldChange!: EventEmitter<CustomEvent>;
   editorDocShouldAdd!: EventEmitter<CustomEvent>;
+  editorAskForBibleIntros!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd']);
+    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros']);
   }
 }
 

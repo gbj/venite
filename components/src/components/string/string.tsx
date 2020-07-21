@@ -49,9 +49,10 @@ export class StringComponent {
 
   // Private methods
   processString() {
-    let processed : (string|JSX.Element)[] = new Array(this.text);
+    const withoutEntities : string = this.processEntities(this.text);
+    let processed : (string|JSX.Element)[] = new Array(withoutEntities);
     if(this.replaceTetragrammaton) {
-      processed = this.processTetragrammaton(this.text);
+      processed = new Array(this.processTetragrammaton(withoutEntities));
     }
     if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
       processed = this.processDropcap(processed);
@@ -59,23 +60,34 @@ export class StringComponent {
     this.processedString = processed;
   }
 
+  processEntities(str : string) : string {
+    try {
+      const e = document.createElement('textarea');
+      e.innerHTML = str;
+      // handle case of empty input
+      return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    } catch(e) {
+      console.warn(`(processEntities) error while processing "${str}": `, e);
+    }
+  }
+
   processTetragrammaton(s : string) : (string|JSX.Element)[] {
     if(s) {
       const replacements = {
-        '\n': <br/>,
-        'LORD’S': 'LORD’s',
-        "LORD'S": 'LORD’s',
-        'LORD': <span class="tetragrammaton">Lord</span>,
-        'Lord GOD': <span>Lord <span class="tetragrammaton">God</span></span>,
-        'GOD': <span class="tetragrammaton">God</span>,
-        'YHWH': <span class="tetragrammaton">Yhwh</span>,
-        'Yhwh': <span class="tetragrammaton">Yhwh</span>,
-        'YAHWEH': <span class="tetragrammaton">Yhwh</span>,
-        'Yahweh': <span class="tetragrammaton">Yhwh</span>
+        '\n': () => <br/>,
+        'LORD’S': () => 'LORD’s',
+        "LORD'S": () => 'LORD’s',
+        'LORD': () => <span class="tetragrammaton">Lord</span>,
+        'Lord GOD': () => <span>Lord <span class="tetragrammaton">God</span></span>,
+        'GOD': () => <span class="tetragrammaton">God</span>,
+        'YHWH': () => <span class="tetragrammaton">Yhwh</span>,
+        'Yhwh': () => <span class="tetragrammaton">Yhwh</span>,
+        'YAHWEH': () => <span class="tetragrammaton">Yhwh</span>,
+        'Yahweh': () => <span class="tetragrammaton">Yhwh</span>
       };
 
       const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh)/g);
-      return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase] : phrase);
+      return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
     } else {
       return new Array();
     }
