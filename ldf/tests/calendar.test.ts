@@ -198,6 +198,28 @@ describe('liturgicalDay', () => {
     });
   });
 
+  it('should not override slug/propers with a black-letter day', () => {
+    const day = liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK),
+          dayWithHolyDay = day.addHolyDays([ST_MERRY]);
+    expect(dayWithHolyDay).toEqual({
+      date: '2020-5-21',
+      slug: 'thursday-6th-easter',
+      kalendar: 'bcp1979',
+      evening: false,
+      week: TEST_WEEK,
+      years: {
+        "bcp1979_daily_office": 2,
+        "bcp1979_daily_psalms": 2,
+        "rclsunday": 'A'
+      },
+      season: 'Easter',
+      holy_days: [ST_MERRY],
+      holy_day_observed: ST_MERRY,
+      color: 'Gold',
+      propers: 'thursday-6th-easter'
+    });
+  });
+
   it('should not override Sundays', () => {
     const sundayDate = new Date();
     sundayDate.setFullYear(2020);
@@ -222,27 +244,6 @@ describe('liturgicalDay', () => {
       holy_day_observed: undefined,
       color: 'Gold',
       propers: 'sunday-6th-easter'
-    });
-  });
-
-  it('should not be overridden by a day that doesn’t have its own slug (like a black-letter day)', () => {
-    const day = liturgicalDay(DATE, 'bcp1979', false, TEST_WEEK),
-          dayWithHolyDay = day.addHolyDays([ST_MERRY]);
-    expect(dayWithHolyDay).toEqual({
-      date: '2020-5-21',
-      slug: 'thursday-6th-easter',
-      kalendar: 'bcp1979',
-      evening: false,
-      week: TEST_WEEK,
-      years: {
-        "bcp1979_daily_office": 2,
-        "bcp1979_daily_psalms": 2,
-        "rclsunday": 'A'
-      },
-      season: 'Easter',
-      holy_days: [ST_MERRY],
-      color: 'Gold',
-      propers: 'thursday-6th-easter'
     });
   });
 
@@ -359,6 +360,7 @@ const ST_BILBO : HolyDay = {
   color: 'Red'
 }
 const ST_MERRY : HolyDay = {
+  slug: 'st-merry',
   kalendar: 'bcp1979',
   type: {
     name: 'Black-Letter',
