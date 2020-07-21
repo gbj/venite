@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'venite-date',
@@ -9,15 +12,21 @@ export class DateComponent implements OnInit, OnChanges {
   @Input() date : Date;
   @Output() dateChange : EventEmitter<Date> = new EventEmitter();
 
+  translationsLoaded$ : Observable<boolean>;
+
   y: string;
   m: string;
   d: string;
 
-  constructor() { }
+  constructor(private translateService : TranslateService) { }
 
   ngOnInit() {
     // set the dates to the date passed in or to the present moment
     this.refreshDates(this.date || new Date());
+
+    // whether translations have loaded yet
+    // if we render the ion-select before they have, it won't update after the translations do load
+    this.translationsLoaded$ = this.translateService.get('January').pipe(map(translation => Boolean(translation)));
   }
 
   // whenever the Input `date` changes, refresh the dates

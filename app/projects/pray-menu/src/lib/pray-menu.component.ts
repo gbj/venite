@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { Observable, Subject, BehaviorSubject, combineLatest } from 'rxjs';
 import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
@@ -14,6 +14,8 @@ import { tap, switchMap, map } from 'rxjs/operators';
   styleUrls: ['./pray-menu.component.scss'],
 })
 export class PrayMenuComponent implements OnInit {
+  @Input() showVigil : boolean = true;
+
   // The data the Pray button needs
   prayData : Observable<[User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, string[]]>;
 

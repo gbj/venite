@@ -51,7 +51,7 @@
     <venite-liturgy-menu (liturgyChange)="liturgy.next($event)" [properLiturgy]="properLiturgy | async"></venite-liturgy-menu>
 
     <!-- Choose vigil -->
-    <ion-item>
+    <ion-item *ngIf="showVigil">
       <ion-label>{{ 'vigil' | translate }}</ion-label>
       <ion-checkbox name="isVigil" [value]="vigil | async" (ionChange)="vigil.next($event.detail.checked)"></ion-checkbox>
     </ion-item>

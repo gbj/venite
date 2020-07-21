@@ -1,7 +1,7 @@
 <form name="dateForm">
   <ion-item>
     <ion-label position="stacked">{{ 'month' | translate }}</ion-label>
-    <ion-select ngDefaultControl name="formM" [value]="m" (ionChange)="update('m', $event)">
+    <ion-select ngDefaultControl name="formM" [value]="m" (ionChange)="update('m', $event)" *ngIf="translationsLoaded$ | async else loading">
       <ion-select-option value="1">{{ 'January' | translate }}</ion-select-option>
       <ion-select-option value="2">{{ 'February' | translate }}</ion-select-option>
       <ion-select-option value="3">{{ 'March' | translate }}</ion-select-option>
@@ -27,3 +27,7 @@
     <ion-input ngDefaultControl type="number" name="formY" [(ngModel)]="y" (ionChange)="dateChanged()"></ion-input>
   </ion-item>
 </form>
+
+<ng-template #loading>
+  <ion-skeleton-text></ion-skeleton-text>
+</ng-template>
