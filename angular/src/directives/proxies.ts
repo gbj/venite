@@ -1168,6 +1168,17 @@ export class LdfBibleReading {
   }
 }
 
+export declare interface LdfDayName extends Components.LdfDayName {}
+@ProxyCmp({inputs: ['day']})
+@Component({ selector: 'ldf-day-name', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['day'] })
+export class LdfDayName {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
 export declare interface LdfEditableAddBlock extends Components.LdfEditableAddBlock {}
 @ProxyCmp({inputs: ['base', 'index', 'visible']})
 @Component({ selector: 'ldf-editable-add-block', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'visible'] })
