@@ -51,14 +51,14 @@ export const MENU : MenuOption[] = [
     label: 'canticle',
     section: ['Propers', 'Liturgy'],
     icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"></path></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'canticle' }) ],
+    template: [ new Psalm({ type: 'psalm', style: 'canticle', lookup: { type: 'slug' }}) ],
     needsMoreInfo: 'canticle'
   },
   {
     label: 'canticle-blank',
     section: ['Propers', 'Liturgy'],
     icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"></path></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'canticle', value: [{ type: 'psalm-section', value: [{ type: 'psalm-verse', verse: '', halfverse: ''}]}] }) ],
+    template: [ new Psalm({ type: 'psalm', style: 'canticle', value: [{ type: 'psalm-section', value: [{ type: 'psalm-verse', number: '', verse: '', halfverse: ''}]}] }) ],
   },
   {
     label: 'collect_of_the_day',
@@ -148,7 +148,7 @@ export const MENU : MenuOption[] = [
     label: 'psalm',
     section: ['Liturgy', 'Reading'],
     icon: () => (<svg version="1.0" width="1065.000000pt" height="1280.000000pt" viewBox="0 0 1065.000000 1280.000000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">  <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">    <path d="M 2020 12790 C 1990 12785 1918 12777 1860 12770 C 1623 12744 672.669 12273.564 523 12002 C 316.287 11626.935 -405 9634.932 1000 5598.932 C 1837 3196.932 3560 15 3560 10 C 3560 -3 5211 101 5487 166 C 5827 246 6072 380 6161 534 C 6189 583 9162 2764 9755 3855 C 10133 4550 10348 5103 10493 5760 C 10635 6399 10683 7382 10609 8140 C 10541 8842 10287 9670 9914 10400 C 9873 10480 9840 10548 9840 10551 C 9840 10555 9870 10580 9907 10607 C 10066 10723 10186 10867 10280 11051 L 10333 11156 L 9885 11810 C 9639 12170 9429 12473 9420 12484 C 9403 12501 9399 12499 9314 12418 C 9075 12191 8794 12040 8305 11874 C 7675 11659 7197 11560 6790 11560 C 6350 11560 5829 11648 5170 11835 C 4824 11933 4715 11976 3895 12342 C 3247 12632 2966 12722 2576 12765 C 2499 12774 2402 12785 2362 12790 C 2278 12802 2100 12801 2020 12790 Z M 2236.679 11071.163 C 2314.679 11050.163 3527.302 10462.707 3527.302 10450.707 C 3527.302 10427.707 2669.082 8800 2657.082 8800 C 2651.082 8800 2030.847 9568.173 2000 10084.133 C 1982.133 10382.989 2124.679 11102.163 2236.679 11071.163 Z M 4424 10170 C 4424 10170 5001 10049.652 5000 10027.652 C 5000 9996.652 3551.769 7151.685 3536.769 7151.685 C 3526.769 7151.685 3234 7780 3215 7841 C 3209 7860 4408 10172 4424 10170 Z M 6063 9808 C 6141 9796 6762.015 9806 6764.015 9800 C 6767.015 9793 4380.708 5056.389 4374.708 5058.389 C 4369.708 5060.389 4120 5839 4084 5918 L 4020 6060 C 4020 6060 5983 9800 6000 9800 C 6011 9800 5987 9820 6063 9808 Z M 8060 9680 C 8060 9680 8285 9211 8335 8965 C 8429 8497 8435 7764 8348 7230 C 8264 6707 8090 6270 7707 5610 C 7490 5238 7153 4748 6946 4505 C 6481 3958 5998 3541 5472 3230 C 5367 3169 5346 3160 5335 3171 C 5319 3187 5000 3782 5000 3800 C 5000 3807 7817.247 9800 7817.247 9800 L 8060 9680 Z"/>  </g></svg>),
-    template: [ new Psalm({ type: 'psalm', style: 'psalm', value: [ { type: 'psalm-section', label: '', value: [{ type: 'psalm-verse', number: '', verse: '', halfverse: '' }]}]}) ],
+    template: [ new Psalm({ type: 'psalm', style: 'psalm', lookup: { type: 'slug' }, value: [ { type: 'psalm-section', label: '', value: [{ type: 'psalm-verse', number: '', verse: '', halfverse: '' }]}]}) ],
     needsMoreInfo: 'psalm'
   },
   {
