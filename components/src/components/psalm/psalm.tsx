@@ -25,6 +25,7 @@ export class PsalmComponent {
       } else {
         this.obj = new Psalm(newDoc);
       }
+      this.filter();
     } catch(e) {
       console.warn(e);
       this.obj = new Psalm();
@@ -110,7 +111,6 @@ export class PsalmComponent {
         pattern.verse = '';
       }
     }
-    console.log('psalm pattern = ', pattern);
 
     return (
       <Host lang={this.obj.language}>
@@ -126,7 +126,7 @@ export class PsalmComponent {
         {includeAntiphon && this.antiphonNode(this.obj.metadata.antiphon)}
 
         {/* render each set of verses */}
-        {this.filteredValue && this.filteredValue.map((section, sectionIndex) => [
+        {((this.editable ? this.obj.value : this.filteredValue) || []).map((section, sectionIndex) => [
           // render a `Heading`, if this section has a `label`
           section.label && this.headingNode(section.label, 4, false),
 
