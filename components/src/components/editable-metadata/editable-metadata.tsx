@@ -129,6 +129,11 @@ export class EditableMetadataComponent {
         <ion-content>
           {/* Form to Edit Metadata — display when "Settings" button is toggled */}
           <form class={{ metadata: true, hidden: this.collapsedState, visible: !this.collapsedState }}>
+            {/* `metadata` */}
+            <ldf-editable-metadata-metadata-fields
+              path={this.path}
+              doc={this.obj}
+            ></ldf-editable-metadata-metadata-fields>
             <ion-card>
               <ion-card-header>
                 <ion-card-title>{localeStrings.title}</ion-card-title>
@@ -142,6 +147,9 @@ export class EditableMetadataComponent {
                     </ion-col>
                     <ion-col>
                       {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+                    </ion-col>
+                    <ion-col>
+                      <TextField name="slug"/>
                     </ion-col>
                   </ion-row>
                   {/* `tradition`, `language` and `version` */}
@@ -175,11 +183,6 @@ export class EditableMetadataComponent {
                 </ion-grid>
               </ion-card-content>
             </ion-card>
-            {/* `metadata` */}
-            <ldf-editable-metadata-metadata-fields
-              path={this.path}
-              doc={this.obj}
-            ></ldf-editable-metadata-metadata-fields>
           </form>
         </ion-content>
       </Host>
