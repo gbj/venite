@@ -81,6 +81,9 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -31,6 +31,7 @@
 - ion-button
 - ion-icon
 - ion-content
+- [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
 - ion-card
 - ion-card-header
 - ion-card-title
@@ -39,7 +40,6 @@
 - ion-row
 - ion-col
 - [ldf-editable-string-list](../editable-string-list)
-- [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
 
 ### Graph
 ```mermaid
@@ -55,6 +55,7 @@ graph TD;
   ldf-editable-metadata --> ion-button
   ldf-editable-metadata --> ion-icon
   ldf-editable-metadata --> ion-content
+  ldf-editable-metadata --> ldf-editable-metadata-metadata-fields
   ldf-editable-metadata --> ion-card
   ldf-editable-metadata --> ion-card-header
   ldf-editable-metadata --> ion-card-title
@@ -63,21 +64,12 @@ graph TD;
   ldf-editable-metadata --> ion-row
   ldf-editable-metadata --> ion-col
   ldf-editable-metadata --> ldf-editable-string-list
-  ldf-editable-metadata --> ldf-editable-metadata-metadata-fields
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   ldf-editable-select --> ion-select
   ldf-editable-select --> ion-select-option
   ldf-editable-text --> ion-input
   ion-button --> ion-ripple-effect
-  ion-card --> ion-ripple-effect
-  ldf-editable-string-list --> ion-item
-  ldf-editable-string-list --> ion-label
-  ldf-editable-string-list --> ion-chip
-  ldf-editable-string-list --> ion-icon
-  ldf-editable-string-list --> ion-input
-  ldf-editable-string-list --> ion-button
-  ion-chip --> ion-ripple-effect
   ldf-editable-metadata-metadata-fields --> ldf-editable-select
   ldf-editable-metadata-metadata-fields --> ldf-editable-boolean
   ldf-editable-metadata-metadata-fields --> ldf-editable-text
@@ -92,6 +84,14 @@ graph TD;
   ldf-editable-metadata-metadata-fields --> ion-row
   ldf-editable-metadata-metadata-fields --> ion-col
   ldf-editable-boolean --> ion-checkbox
+  ldf-editable-string-list --> ion-item
+  ldf-editable-string-list --> ion-label
+  ldf-editable-string-list --> ion-chip
+  ldf-editable-string-list --> ion-icon
+  ldf-editable-string-list --> ion-input
+  ldf-editable-string-list --> ion-button
+  ion-chip --> ion-ripple-effect
+  ion-card --> ion-ripple-effect
   style ldf-editable-metadata fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

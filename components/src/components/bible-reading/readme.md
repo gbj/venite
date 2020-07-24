@@ -55,11 +55,14 @@ graph TD;
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
-  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label

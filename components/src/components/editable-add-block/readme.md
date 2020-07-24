@@ -28,9 +28,19 @@
 
  - [ldf-liturgy](../liturgy)
 
+### Depends on
+
+- ion-button
+- ion-icon
+- ion-label
+
 ### Graph
 ```mermaid
 graph TD;
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-liturgy --> ldf-editable-add-block
   style ldf-editable-add-block fill:#f9f,stroke:#333,stroke-width:4px
 ```

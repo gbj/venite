@@ -65,6 +65,10 @@ graph TD;
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgical-document --> ldf-editable-metadata-buttons
   ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-editable-text --> ion-input
@@ -72,7 +76,6 @@ graph TD;
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-label-bar
-  ion-button --> ion-ripple-effect
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect
   ldf-refrain --> ldf-label-bar
