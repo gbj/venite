@@ -83,6 +83,7 @@ export class LiturgicalDocumentComponent {
   @Listen('click', { capture: true })
   onClick() {
     this.hasFocus = true;
+    this.focusPath.emit(this.path);
     this.focusObj.emit({obj: this.obj, path: this.path});
   }
 

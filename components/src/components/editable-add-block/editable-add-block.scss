@@ -1,4 +1,7 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 
   /* Center buttons within button container */
@@ -23,25 +26,14 @@
   }
 
   /* Shared animations */
-  button.visible {
+  .visible {
     opacity: 1;
     transition: 0.25s;
   }
 
-  button.hidden {
+  .hidden {
     opacity: 0;
     transition: 0.25s;
-  }
-
-  /* Circular (+) Add Button */
-  button.add {
-    border: 1px solid #808080;
-    border-radius: 50%;
-    box-shadow: 0 0 5px #cccccc;
-    height: 1.5em;
-    width: 1.5em;
-    color: #808080;
-    font-size: 2em;
   }
 
   /* Add Block */

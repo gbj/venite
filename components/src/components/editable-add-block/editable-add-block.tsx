@@ -54,56 +54,23 @@ export class EditableAddBlockComponent {
     }
   }
 
-  // Pop up the modal with an Add Block Menu inside it
-  /*async expand() {
-    const modal = await modalController.create({
-      component: 'ldf-editable-add-block-menu',
-    })
-    modal.componentProps = {
-      modal
-    };
-    modal.swipeToClose = true;
-
-    await modal.present();
-
-    const { data } = await modal.onDidDismiss();
-    if(data) {
-      this.add(data);
-    }
-  }*/
-
-  // Add a block
-  /*add(template : LiturgicalDocument[]) {
-    this.ldfDocShouldChange.emit(
-      new Change({
-        path: this.base, 
-        op: template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
-          .map(value => ({
-            type: 'insertAt',
-            index: this.index,
-            value
-          }))
-      })
-    );
-  }*/
-
   // Render
   render() {
+    const localeStrings = this.localeStrings || {};
     return (
       <Host>
-        <div class='button-container'>
-          <button class={{
+        <ion-button aria-role="button" fill="outline"
+          class={{
             add: true,
             hidden: !this.visible,
             visible: this.visible,
             collapsed: true
-          }} onClick={() => this.ldfDocShouldAdd.emit({base: this.base, index: this.index})}>
-            <label class='visually-hidden'>{ (this.localeStrings || {}).add}</label>
-            +
-          </button>
-        </div>
-
-        <div class={{ underlying: true, hidden: !this.visible, visible: this.visible, collapsed: true }}></div>
+          }}
+          onClick={() => this.ldfDocShouldAdd.emit({base: this.base, index: this.index})}
+        >
+          <ion-icon name="add" slot="icon-only"></ion-icon>
+          <ion-label class="visually-hidden">{localeStrings.add}</ion-label>
+        </ion-button>
       </Host>
     );
   }
