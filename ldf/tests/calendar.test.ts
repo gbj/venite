@@ -6,6 +6,7 @@ import { liturgicalWeek, LiturgicalWeekIndex } from '../src/calendar/utils/litur
 import { liturgicalDay } from '../src/calendar/utils/liturgical-day';
 import { HolyDay } from '../src/calendar/holy-day';
 import { LiturgicalWeek } from '../src/calendar/liturgical-week';
+import { LiturgicalDay } from '../src/calendar/liturgical-day';
 
 describe('easterInYear', () => {
   it(('gives the correct date for Easter for arbitrary years'), () => {
@@ -219,6 +220,43 @@ describe('liturgicalDay', () => {
       propers: 'thursday-6th-easter'
     });
   });
+
+  it('should observe special days', () => {
+    const day = new LiturgicalDay({
+            "evening": false,
+            "date": "2020-4-9",
+            "kalendar": "bcp1962",
+            "slug": "thursday-palm-sunday",
+            "propers": "thursday-palm-sunday",
+            "week": {
+              "cycle": "Easter",
+              "week": 8,
+              "season": "HolyWeek",
+              "name": "Palm Sunday",
+              "slug": "palm-sunday",
+              "omit_the": true,
+              "color": "Red"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "HolyWeek"
+          }),
+          specialDay = new HolyDay({
+            "slug": "wednesday-quinquagesima",
+            "name": "Ash Wednesday",
+            "season": "Lent",
+            "type": {
+              "name": "Fast",
+              "rank": 3
+            },
+            "color": 'Red'
+          });
+    expect(day.addHolyDays([specialDay]).holy_day_observed).toEqual(specialDay);
+  })
 
   it('should not override Sundays', () => {
     const sundayDate = new Date();

@@ -70,6 +70,7 @@
 * [specificClass](_index_.md#specificclass)
 * [subtractOneDay](_index_.md#subtractoneday)
 * [sundayBefore](_index_.md#sundaybefore)
+* [transferredFeast](_index_.md#transferredfeast)
 * [versionToString](_index_.md#versiontostring)
 
 ## References
@@ -455,6 +456,12 @@ ___
 ###  sundayBefore
 
 • **sundayBefore**:
+
+___
+
+###  transferredFeast
+
+• **transferredFeast**:
 
 ___
 

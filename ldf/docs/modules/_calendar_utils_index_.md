@@ -21,6 +21,7 @@
 * [rclYear](_calendar_utils_index_.md#rclyear)
 * [subtractOneDay](_calendar_utils_index_.md#subtractoneday)
 * [sundayBefore](_calendar_utils_index_.md#sundaybefore)
+* [transferredFeast](_calendar_utils_index_.md#transferredfeast)
 
 ## References
 
@@ -111,3 +112,9 @@ ___
 ###  sundayBefore
 
 • **sundayBefore**:
+
+___
+
+###  transferredFeast
+
+• **transferredFeast**:

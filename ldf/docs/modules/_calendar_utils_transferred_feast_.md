@@ -15,7 +15,7 @@
 
 ▸ **isEmpty**(`isSunday`: boolean, `special`: [HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined, `feast`: [HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined): *boolean*
 
-*Defined in [calendar/utils/transferred-feast.ts:117](https://github.com/gbj/venite/blob/5cf469a/ldf/src/calendar/utils/transferred-feast.ts#L117)*
+*Defined in [calendar/utils/transferred-feast.ts:91](https://github.com/gbj/venite/blob/944535b/ldf/src/calendar/utils/transferred-feast.ts#L91)*
 
 **Parameters:**
 
@@ -31,15 +31,15 @@ ___
 
 ###  transferredFeast
 
-▸ **transferredFeast**(`liturgicalDayFinder`: function, `specialDayFinder`: function, `feastDayFinder`: function, `todayDate`: Date, `acc`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)[], `openDays`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)[], `originalDay`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md) | undefined): *[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined*
+▸ **transferredFeast**(`liturgicalDayFinder`: function, `specialDayFinder`: function, `feastDayFinder`: function, `todayDate`: Date, `acc`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)[], `openDays`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)[], `originalDay`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md) | undefined): *Promise‹[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined›*
 
-*Defined in [calendar/utils/transferred-feast.ts:6](https://github.com/gbj/venite/blob/5cf469a/ldf/src/calendar/utils/transferred-feast.ts#L6)*
+*Defined in [calendar/utils/transferred-feast.ts:6](https://github.com/gbj/venite/blob/944535b/ldf/src/calendar/utils/transferred-feast.ts#L6)*
 
 **Parameters:**
 
 ▪ **liturgicalDayFinder**: *function*
 
-▸ (`d`: Date): *[LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)*
+▸ (`d`: Date): *Promise‹[LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)›*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 ▪ **specialDayFinder**: *function*
 
-▸ (`slug`: string): *[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined*
+▸ (`slug`: string): *Promise‹[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined›*
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ Name | Type |
 
 ▪ **feastDayFinder**: *function*
 
-▸ (`d`: Date): *[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined*
+▸ (`d`: Date): *Promise‹[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined›*
 
 **Parameters:**
 
@@ -75,4 +75,4 @@ Name | Type |
 
 ▪`Default value`  **originalDay**: *[LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md) | undefined*= undefined
 
-**Returns:** *[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined*
+**Returns:** *Promise‹[HolyDay](../classes/_calendar_holy_day_.holyday.md) | undefined›*

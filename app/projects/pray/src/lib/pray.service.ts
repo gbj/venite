@@ -46,13 +46,13 @@ export class PrayService {
         );
       }
     
-      // if doc has a `slug` and not a `value`, add `lookup` type of `slug` and recompile
-      if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value')) {
+      // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
+      if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('value')) {
         return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
       }
 
-      // if doc has a `category` and not a `value`, add `lookup` type of `category` and recompile
-      else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value')) {
+      // if doc has a `category` and not a `value` or `lookup`, add `lookup` type of `category` and recompile
+      else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('lookup')) {
         return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
       }
 
@@ -113,6 +113,7 @@ export class PrayService {
           Number(doc.lookup.item)
         );
       case 'category':
+        console.log('we will look up by category', doc.category, doc.lookup, doc.lookup.filter, doc.lookup.rotate);
         return this.lookupByCategory(
           doc.category || new Array(),
           language,
@@ -147,13 +148,9 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
-    console.log('(lookupBySlug)', slug, language);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
-      tap(docs => console.log('lookupBySlug', docs)),
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
-      tap(docs => console.log('lookupBySlug', docs)),
       map(docs => rotate ? this.rotate(rotate, day, docs) : docs),
-      tap(docs => console.log('lookupBySlug', docs)),
       map(docs => docsToOption(docs, versions))
     );
   }
@@ -169,13 +166,14 @@ export class PrayService {
 
   /** Filters documents depending on whether `doc.category` includes the appropriate `LiturgicalDay.season`, 'Evening', or `LiturgicalDay.slug` */
   filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
+    console.log('(PrayService) (filter) ', filterType, 'filter ', docs, ' on ', day?.season);
     switch(filterType) {
       case 'seasonal':
-        return docs.filter(doc => doc.category?.includes(day.season));
+        return docs.filter(doc => doc.category?.includes(day?.season));
       case 'evening':
         return docs.filter(doc => doc.category?.includes('Evening'));
       case 'day':
-        return docs.filter(doc => doc.category?.includes(day.slug) || doc.category?.includes(day.propers));
+        return docs.filter(doc => doc.category?.includes(day?.slug) || doc.category?.includes(day?.propers));
       default:
         return docs;
     }

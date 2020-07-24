@@ -7,3 +7,4 @@ export * from './liturgical-day';
 export * from './liturgical-week';
 export * from './propers';
 export * from './sunday-before';
+export * from './transferred-feast';

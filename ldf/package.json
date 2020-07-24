@@ -1,6 +1,6 @@
 {
   "name": "@venite/ldf",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Typescript classes for the Liturgy Document Format (LDF) used by Venite.app",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
