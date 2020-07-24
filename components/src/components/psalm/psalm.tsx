@@ -126,7 +126,7 @@ export class PsalmComponent {
         {includeAntiphon && this.antiphonNode(this.obj.metadata.antiphon)}
 
         {/* render each set of verses */}
-        {((this.editable ? this.obj.value : this.filteredValue) || []).map((section, sectionIndex) => [
+        {this.filteredValue?.map((section, sectionIndex) => [
           // render a `Heading`, if this section has a `label`
           section.label && this.headingNode(section.label, 4, false),
 
