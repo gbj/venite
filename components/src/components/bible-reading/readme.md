@@ -51,6 +51,7 @@ graph TD;
   ldf-bible-reading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-heading --> ldf-day-name
   ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgy --> ldf-liturgical-document

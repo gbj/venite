@@ -1,5 +1,6 @@
-import { Component, Prop, Watch, State, Host, FunctionalComponent, JSX, h } from '@stencil/core';
-import { Heading, Citation } from '@venite/ldf';
+import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
+import { Heading, Citation, dateFromYMDString } from '@venite/ldf';
+import { EditableNode } from './editable-node';
 
 @Component({
   tag: 'ldf-heading',
@@ -7,6 +8,8 @@ import { Heading, Citation } from '@venite/ldf';
   shadow: true
 })
 export class HeadingComponent {
+  @Element() el : HTMLElement;
+
   // States
   @State() obj : Heading;
 
@@ -45,34 +48,41 @@ export class HeadingComponent {
   }
 
   // Convert level/text into an H... node
-  private headerNode(level : number, text : string, index : number) : JSX.Element {
-    const EditableNode : FunctionalComponent<{ text: string; index: number; }> = ({text, index}) => (
-      <ldf-editable-text
-        id={`${this.obj.uid || this.obj.slug}-heading-${index}`}
-        text={text}
-        path={`${this.path}/value/${index}`}>
-      </ldf-editable-text>
-    );
-
+  private headerNode(level : number, contentNode : JSX.Element) : JSX.Element {
     let node : JSX.Element;
     switch(level) {
       case 1:
-        node = <h1>{this.editable ? <EditableNode text={text} index={index} /> : text}</h1>;
+        node = <h1>{contentNode}</h1>;
         break;
       case 2:
-        node = <h2>{this.editable ? <EditableNode text={text} index={index}/> : text}</h2>;
+        node = <h2>{contentNode}</h2>;
         break;
       case 3:
-        node = <h3 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h3>;
+        node = <h3 slot='start'>{contentNode}</h3>;
         break;
       case 4:
-        node = <h4 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h4>;
+        node = <h4 slot='start'>{contentNode}</h4>;
         break;
       case 5:
-        node = <h5 slot='start'>{this.editable ? <EditableNode text={text} index={index}/> : text}</h5>;
+        node = <h5 slot='start'>{contentNode}</h5>;
         break;
     }
     return node;
+  }
+
+  private textNode(text : string, index : number) : JSX.Element {
+    return this.editable ? <EditableNode text={text} index={index} /> : text;
+  }
+
+  private dateNode() : JSX.Element {
+    const hasDate = !!this.obj?.day?.date;
+    if(hasDate) {
+      const date = dateFromYMDString(this.obj?.day?.date),
+            locale : string = (this.el?.closest('[lang]') as HTMLElement)?.lang || 'en';
+      return date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
+    } else {
+      return [];
+    }
   }
 
   private citationNode(c : string | Citation) : JSX.Element {
@@ -98,10 +108,11 @@ export class HeadingComponent {
   // Render
   render() {
     const level : number = this.obj.metadata ? this.obj.metadata.level : 4,
-          hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined;
-
-    // Functional Components
-
+          hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined,
+          isText = this.obj?.style == undefined || this.obj?.style == 'text',
+          isDate = this.obj?.style == 'date',
+          isDay = this.obj?.style == 'day';
+    
     // Render
     return (
       <Host lang={this.obj.language}>
@@ -110,8 +121,11 @@ export class HeadingComponent {
         </ldf-label-bar>
 
         <ldf-label-bar>
+          {isText} {isDate} {isDay}
           {/* `Heading.label` => main header node */}
-          {this.obj?.value?.map((text, index) => this.headerNode(level, text, index))}
+          {isText && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index)))}
+          {isDate && this.headerNode(level, this.dateNode())}
+          {isDay && this.headerNode(level, <ldf-day-name day={this.obj?.day}></ldf-day-name>)}
 
           <slot name='additional'></slot>
 

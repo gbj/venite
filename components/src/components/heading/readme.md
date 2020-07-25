@@ -28,12 +28,14 @@
 
 - [ldf-editable-text](../editable-text)
 - [ldf-label-bar](../label-bar)
+- [ldf-day-name](../day-name)
 
 ### Graph
 ```mermaid
 graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-heading --> ldf-day-name
   ldf-editable-text --> ion-input
   ldf-bible-reading --> ldf-heading
   ldf-liturgical-document --> ldf-heading

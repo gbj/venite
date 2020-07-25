@@ -41,6 +41,7 @@ graph TD;
   ldf-editable-text --> ion-input
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-heading --> ldf-day-name
   ldf-liturgical-document --> ldf-psalm
   style ldf-psalm fill:#f9f,stroke:#333,stroke-width:4px
 ```

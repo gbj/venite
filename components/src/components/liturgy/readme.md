@@ -33,6 +33,7 @@ graph TD;
   ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
+  ldf-heading --> ldf-day-name
   ldf-editable-text --> ion-input
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
