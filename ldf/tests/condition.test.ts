@@ -125,6 +125,11 @@ describe('Condition', () => {
     expect(include).toEqual(false);
   });
 
+  it('should handle multiple seasons', () => {
+    const condition = new Condition({ season: { except: [ 'Easter', 'Ascension' ], only: [] }});
+    expect(condition.include(day, new ClientPreferences())).toEqual(true);
+  });
+
   it('should recognize feast days', () => {
     const condition = new Condition();
 

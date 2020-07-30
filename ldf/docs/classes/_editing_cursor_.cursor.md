@@ -26,7 +26,7 @@
 
 \+ **new Cursor**(`path`: string, `start`: number, `end`: number, `element`: HTMLTextAreaElement | HTMLInputElement): *[Cursor](_editing_cursor_.cursor.md)*
 
-*Defined in [editing/cursor.ts:6](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L6)*
+*Defined in [editing/cursor.ts:6](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L6)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type |
 
 • **element**: *HTMLTextAreaElement | HTMLInputElement*
 
-*Defined in [editing/cursor.ts:6](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L6)*
+*Defined in [editing/cursor.ts:6](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L6)*
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **end**: *number*
 
-*Defined in [editing/cursor.ts:5](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L5)*
+*Defined in [editing/cursor.ts:5](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L5)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **path**: *string*
 
-*Defined in [editing/cursor.ts:3](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L3)*
+*Defined in [editing/cursor.ts:3](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L3)*
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **start**: *number*
 
-*Defined in [editing/cursor.ts:4](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L4)*
+*Defined in [editing/cursor.ts:4](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L4)*
 
 ___
 
@@ -77,4 +77,4 @@ ___
 
 • **user**? : *undefined | string*
 
-*Defined in [editing/cursor.ts:2](https://github.com/gbj/venite/blob/215b296/ldf/src/editing/cursor.ts#L2)*
+*Defined in [editing/cursor.ts:2](https://github.com/gbj/venite/blob/e18895c/ldf/src/editing/cursor.ts#L2)*

@@ -57,7 +57,7 @@ export class Option extends LiturgicalDocument {
     if (
       option.type == 'psalm' &&
       uniqueVersions == 1 &&
-      (option.slug.match(/psalm_119_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+119/)))
+      (option.slug?.match(/psalm_119_/) || option.citation?.toString().match(/Ps[^\d]+119/))
     ) {
       label = option.label;
     }
@@ -65,7 +65,7 @@ export class Option extends LiturgicalDocument {
     else if (
       option.type == 'psalm' &&
       uniqueVersions == 1 &&
-      (option.slug.match(/psalm_/) || (option.citation && option.citation.toString().match(/Ps[^\d]+\d+/)))
+      (option.slug?.match(/psalm_/) || option.citation?.toString().match(/Ps[^\d]+\d+/))
     ) {
       label = option.citation ? option.citation.toString() : `Psalm ${option.metadata.number}`;
     }
@@ -138,11 +138,13 @@ export class Option extends LiturgicalDocument {
       label = option.citation.toString();
     }
     // Fallback: stripped version of JSON of value
-    else {
+    else if (option.value) {
       label = `“${JSON.stringify(option.value)
         .replace(/[\[\]\{\}\"\'\:]/g, ' ')
         .replace(/\\n/g, ' ')
         .trim()}”`;
+    } else {
+      throw `Unable to generate a label from ${JSON.stringify(option)}`;
     }
 
     label = label.length > maxLength ? label.substring(0, maxLength) + '...' : label;

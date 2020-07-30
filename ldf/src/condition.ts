@@ -64,11 +64,11 @@ export class Condition {
     // `season`: is day.week.season (the 'base season' for e.g., a saints' day in Lent)
     // or day.season (the actual season being observed) in the `only` list (and not in `except`)?
     if (this.hasOwnProperty('season') && this.season !== undefined) {
-      if (this.season.except !== undefined) {
+      if (this.season.except !== undefined && this.season.except.length > 0) {
         evaluatedConditions.push(!this.season.except.includes(day.season));
         evaluatedConditions.push(!this.season.except.includes(day.week.season));
       }
-      if (this.season.only !== undefined) {
+      if (this.season.only !== undefined && this.season.only.length > 0) {
         evaluatedConditions.push(this.season.only.includes(day.season) || this.season.only.includes(day.week.season));
       }
     }

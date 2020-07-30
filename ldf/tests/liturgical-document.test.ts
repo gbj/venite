@@ -136,4 +136,30 @@ describe('LiturgicalDocument.include()', () => {
     expect(ld.include(ASH_WEDNESDAY)).toEqual(true);
     expect(ld.include(ASH_THURSDAY)).toEqual(true);
   });
+  
+  it('should handle seasons', () => {
+    const ld = new Text({
+      "hidden": false,
+      "value": [
+        "Preserve us, O Lord, waking, and guard us sleeping, that awake we may watch with Christ, and asleep we may rest in peace."
+      ],
+      "type": "text",
+      "condition": {
+        "mode": "or",
+        "conditions": [
+          new Condition({
+            "season": {
+              "except": [
+                "Easter",
+                "Ascension"
+              ],
+              "only": []
+            }
+          })
+        ]
+      }
+    });
+
+    expect(ld.include(ASH_WEDNESDAY, {})).toEqual(true);
+  })
 });
