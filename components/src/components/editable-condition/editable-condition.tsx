@@ -68,13 +68,13 @@ export class EditableConditionComponent {
       this.currentCondition = { mode: "and", conditions: new Array() };
       change = new Change({
         path: this.path,
-        op: [ { type: 'set', index: 'condition', value: this.currentCondition } ]
+        op: [ { type: 'set', value: this.currentCondition } ]
       });
     } else {
       this.currentCondition = undefined;
       change = new Change({
         path: this.path,
-        op: [ { type: 'delete', index: 'condition', oldValue: this.currentCondition } ]
+        op: [ { type: 'delete', oldValue: this.currentCondition } ]
       });
     }
 
@@ -94,7 +94,7 @@ export class EditableConditionComponent {
     if(!Array.isArray(this.currentCondition.conditions)) {
       this.currentCondition.conditions = new Array();
       this.ldfDocShouldChange.emit(new Change({
-        path: `${this.path}`,
+        path: this.path,
         op: [ { type: 'set', index: 'conditions', value: new Array() } ]
       }));
     }
