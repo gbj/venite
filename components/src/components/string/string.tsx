@@ -50,12 +50,12 @@ export class StringComponent {
   // Private methods
   processString() {
     const withoutEntities : string = this.processEntities(this.text);
-    let processed : (string|JSX.Element)[] = new Array(withoutEntities);
+    let processed : JSX.Element[] = this.processMarkdownSubset(withoutEntities);
     if(this.replaceTetragrammaton) {
-      processed = new Array(this.processTetragrammaton(withoutEntities));
+      processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node);
     }
     if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
-      processed = this.processDropcap(processed);
+      processed = processed.map(node => typeof node === 'string' ? this.processDropcap(node) : node);
     }
     this.processedString = processed;
   }
@@ -71,7 +71,15 @@ export class StringComponent {
     }
   }
 
-  processTetragrammaton(s : string) : (string|JSX.Element)[] {
+  processMarkdownSubset(s : string) : JSX.Element[] {
+    console.log('process markdown', s, s.replace(/\*([^\*]*)\*/g, <em>$1</em>));
+    const nodes = s.split(/(\*[^\*]*\*)/g)
+      .map(node => node.startsWith('*') ? <em>{node.slice(1, node.length - 1)}</em> : node);
+    console.log('process markdown', s, nodes);
+    return nodes;
+  }
+
+  processTetragrammaton(s : string) : JSX.Element {
     if(s) {
       const replacements = {
         '\n': () => <br/>,
@@ -93,7 +101,7 @@ export class StringComponent {
     }
   }
 
-  processDropcap(processed : (string|JSX.Element)[]) : (string|JSX.Element)[] {
+  processDropcap(processed : (string|JSX.Element[])) : JSX.Element {
     const firstChunk = processed[0];
     if(typeof firstChunk === 'string') {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),

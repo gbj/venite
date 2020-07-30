@@ -75,7 +75,7 @@ export class TextComponent {
   render() {
     const localeStrings = this.localeStrings || {},
           compiledValue : string[][] = (this.obj.value || ['']).map(s => {
-            return s.match(/[\w‘’“”\n\s]+([^\w‘’“”\n\s])/g);
+            return s.match(/[\*\w‘’“”\n\s]+([^\*\w‘’“”\n\s])/g);
           });
 
     if(this.editable) {
