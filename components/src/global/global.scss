@@ -50,13 +50,23 @@
   --ldf-rubric-font-weight: normal;
   --ldf-rubric-font-size: 90%;
 
+  /* Bible Reading styling */
+  --ldf-bible-reading-citation-float: inherit;
+
   /* Psalm/Refrain shared styling */
   --ldf-antiphon-font-style: italic;
   --ldf-antiphon-font-weight: normal;
-  --ldf-psalm-number-display: inline-block;
+  --ldf-psalm-number-display: inline;
   --ldf-psalm-grid-display: grid;
   --ldf-psalm-grid-template-columns: 1.5em 1fr;
   --ldf-psalm-grid-template-areas: "number verse";
+  --ldf-psalm-line-break-display: block;
+  --ldf-psalm-halfverse-margin-left: 1.5em;
+  --ldf-psalm-text-grid-area: verse;
+  --ldf-psalm-number-grid-area: number;
+  --ldf-psalm-text-display: block;
+  --ldf-psalm-verse-display: block;
+  --ldf-psalm-number-margin-right: 0;
 
   .psalmverses-false {
     --ldf-psalm-number-display: none;

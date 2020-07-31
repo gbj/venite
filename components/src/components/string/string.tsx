@@ -52,10 +52,10 @@ export class StringComponent {
     const withoutEntities : string = this.processEntities(this.text);
     let processed : JSX.Element[] = this.processMarkup(withoutEntities);
     if(this.replaceTetragrammaton) {
-      processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node);
+      processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
     }
     if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
-      processed = processed.map(node => typeof node === 'string' ? this.processDropcap(node) : node);
+      processed = this.processDropcap(processed);
     }
     this.processedString = processed;
   }
@@ -108,8 +108,8 @@ export class StringComponent {
     }
   }
 
-  processDropcap(processed : (string|JSX.Element[])) : JSX.Element {
-    const firstChunk = processed[0];
+  processDropcap(processed : (string|JSX.Element)[]) : JSX.Element[] {
+    const firstChunk = typeof processed === 'string' ? processed : processed[0];
     if(typeof firstChunk === 'string') {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord : string = splitTest ? splitTest[0] : '',
