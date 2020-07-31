@@ -15,17 +15,24 @@
   grid-template-areas: var(--ldf-psalm-grid-template-areas);
   margin: 0;
 
+  br {
+    display: var(--ldf-psalm-line-break-display);
+  }
+
   sup {
     display: var(--ldf-psalm-number-display);
-    grid-area: number;
+    grid-area: var(--ldf-psalm-number-grid-area);
+    margin-right: var(--ldf-psalm-number-margin-right);
   }
   .text {
-    grid-area: verse;
+    display: var(--ldf-psalm-text-display);
+    grid-area: var(--ldf-psalm-text-grid-area);
   }
   .halfverse {
-    margin-left: 1.5em;
+    margin-left: var(--ldf-psalm-halfverse-margin-left);
   }
   .verse, .halfverse {
+    display: var(--ldf-psalm-verse-display);
     display: inline;
   }
 }

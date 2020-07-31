@@ -50,7 +50,7 @@ export class StringComponent {
   // Private methods
   processString() {
     const withoutEntities : string = this.processEntities(this.text);
-    let processed : JSX.Element[] = this.processMarkdownSubset(withoutEntities);
+    let processed : JSX.Element[] = this.processMarkup(withoutEntities);
     if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node);
     }
@@ -71,11 +71,18 @@ export class StringComponent {
     }
   }
 
-  processMarkdownSubset(s : string) : JSX.Element[] {
-    console.log('process markdown', s, s.replace(/\*([^\*]*)\*/g, <em>$1</em>));
-    const nodes = s.split(/(\*[^\*]*\*)/g)
-      .map(node => node.startsWith('*') ? <em>{node.slice(1, node.length - 1)}</em> : node);
-    console.log('process markdown', s, nodes);
+  processMarkup(s : string) : JSX.Element[] {
+    const nodes = s.replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^
+      .split(/([\*\^][^\*\^]*[\*\^])/g)  // markdown ** => italics
+      .map(node => {
+        if(node.startsWith('*') && node.endsWith('*')) {
+          return <em>{node.slice(1, node.length - 1)}</em>;
+        } else if(node.startsWith('^') && node.endsWith('^')) {
+          return <span class="sc">{node[1]}{node.slice(2, node.length - 1).toLowerCase()}</span>;
+        } else {
+          return node;
+        }
+      });
     return nodes;
   }
 
@@ -85,13 +92,13 @@ export class StringComponent {
         '\n': () => <br/>,
         'LORD’S': () => 'LORD’s',
         "LORD'S": () => 'LORD’s',
-        'LORD': () => <span class="tetragrammaton">Lord</span>,
-        'Lord GOD': () => <span>Lord <span class="tetragrammaton">God</span></span>,
-        'GOD': () => <span class="tetragrammaton">God</span>,
-        'YHWH': () => <span class="tetragrammaton">Yhwh</span>,
-        'Yhwh': () => <span class="tetragrammaton">Yhwh</span>,
-        'YAHWEH': () => <span class="tetragrammaton">Yhwh</span>,
-        'Yahweh': () => <span class="tetragrammaton">Yhwh</span>
+        'LORD': () => <span class="sc">Lord</span>,
+        'Lord GOD': () => <span>Lord <span class="sc">God</span></span>,
+        'GOD': () => <span class="sc">God</span>,
+        'YHWH': () => <span class="sc">Yhwh</span>,
+        'Yhwh': () => <span class="sc">Yhwh</span>,
+        'YAHWEH': () => <span class="sc">Yhwh</span>,
+        'Yahweh': () => <span class="sc">Yhwh</span>
       };
 
       const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh)/g);
