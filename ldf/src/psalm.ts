@@ -16,7 +16,8 @@ export class Psalm extends LiturgicalDocument {
     omit_antiphon?: boolean;
     omit_gloria?: boolean;
 
-    // Helper LDFs packed in by compiled
+    // Helper LDFs packed in by compiler
+    insert_seasonal_antiphon?: boolean;
     antiphon?: string | Refrain | { [x: string]: string | Refrain };
     gloria?: string | Refrain;
   };
