@@ -167,7 +167,7 @@ export class BibleReadingComponent {
         const shortResponse : boolean = (!this.obj.metadata || (this.obj.metadata.response && this.obj.metadata.response.length <= 5));
 
         let responseNode : JSX.Element;
-        if(!(this.obj.metadata && this.obj.metadata.response)) {
+        if(!this.obj?.metadata?.response) {
           responseNode = <span class="response"> {localeStrings.amen}</span>;
         } else {
           responseNode = <span class="response"> {this.obj.metadata.response}</span>;
@@ -189,10 +189,10 @@ export class BibleReadingComponent {
                   text={(verse as BibleReadingVerse).text}>
                 </ldf-string>
               )}
-              {shortResponse && responseNode}
+              {shortResponse && !this.obj?.metadata?.omit_response && responseNode}
               <span class="citation">{ this.obj.citation }</span>
             </p>
-            {!shortResponse && <p>{responseNode}</p>}
+            {!shortResponse && !this.obj?.metadata?.omit_response && <p>{responseNode}</p>}
           </Host>
         );
       }

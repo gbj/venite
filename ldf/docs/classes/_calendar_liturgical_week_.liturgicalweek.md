@@ -31,7 +31,7 @@
 
 \+ **new LiturgicalWeek**(`data`: Partial‹[LiturgicalWeek](_calendar_liturgical_week_.liturgicalweek.md)›): *[LiturgicalWeek](_calendar_liturgical_week_.liturgicalweek.md)*
 
-*Defined in [calendar/liturgical-week.ts:56](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L56)*
+*Defined in [calendar/liturgical-week.ts:56](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L56)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type | Default |
 
 • **color**: *[LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md) | string*
 
-*Defined in [calendar/liturgical-week.ts:50](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L50)*
+*Defined in [calendar/liturgical-week.ts:50](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L50)*
 
 The [LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md) used for the week
 
@@ -57,7 +57,7 @@ ___
 
 • **cycle**: *"Advent" | "Christmas" | "Epiphany" | "Easter"*
 
-*Defined in [calendar/liturgical-week.ts:30](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L30)*
+*Defined in [calendar/liturgical-week.ts:30](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L30)*
 
 Seasonal cycle within which it falls
 
@@ -67,7 +67,7 @@ ___
 
 • **kalendar**? : *undefined | string*
 
-*Defined in [calendar/liturgical-week.ts:27](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L27)*
+*Defined in [calendar/liturgical-week.ts:27](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L27)*
 
 Overarching calendar this is a part of
 
@@ -77,7 +77,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [calendar/liturgical-week.ts:42](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L42)*
+*Defined in [calendar/liturgical-week.ts:42](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L42)*
 
 A human-readable name for the week, in English
 
@@ -87,7 +87,7 @@ ___
 
 • **omit_the**? : *undefined | false | true* = false
 
-*Defined in [calendar/liturgical-week.ts:47](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L47)*
+*Defined in [calendar/liturgical-week.ts:47](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L47)*
 
 Used for English-language formatting, generally when "week" name is the proper name of a Sunday.
 
@@ -100,7 +100,7 @@ ___
 
 • **proper**? : *undefined | number*
 
-*Defined in [calendar/liturgical-week.ts:53](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L53)*
+*Defined in [calendar/liturgical-week.ts:53](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L53)*
 
 The proper (i.e., for weeks after Pentecost)
 
@@ -110,7 +110,7 @@ ___
 
 • **propers**? : *undefined | string*
 
-*Defined in [calendar/liturgical-week.ts:56](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L56)*
+*Defined in [calendar/liturgical-week.ts:56](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L56)*
 
 Optionally `slug` as an identifier for readings and collects
 
@@ -120,7 +120,7 @@ ___
 
 • **season**: *Seasons[number]*
 
-*Defined in [calendar/liturgical-week.ts:39](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L39)*
+*Defined in [calendar/liturgical-week.ts:39](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L39)*
 
 A machine-readable identifier for the liturgical season
 
@@ -130,7 +130,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [calendar/liturgical-week.ts:24](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L24)*
+*Defined in [calendar/liturgical-week.ts:24](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L24)*
 
 An identifying slug that distinguishes this week from all others
 
@@ -144,7 +144,7 @@ ___
 
 • **week**: *number*
 
-*Defined in [calendar/liturgical-week.ts:36](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L36)*
+*Defined in [calendar/liturgical-week.ts:36](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L36)*
 
 Index within the seasonal cycle
 

@@ -16,6 +16,7 @@ export class BibleReading extends LiturgicalDocument {
     compiled_intro?: LiturgicalDocument;
     intro?: LiturgicalDocument;
     response?: string;
+    omit_response?: boolean;
   };
   value: (BibleReadingVerse | Heading)[];
 

@@ -22,7 +22,7 @@
 
 Ƭ **Seasons**: *typeof SEASONS*
 
-*Defined in [calendar/liturgical-week.ts:15](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L15)*
+*Defined in [calendar/liturgical-week.ts:15](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L15)*
 
 ## Variables
 
@@ -41,4 +41,4 @@
   'OrdinaryTime',
 ]
 
-*Defined in [calendar/liturgical-week.ts:3](https://github.com/gbj/venite/blob/ba3869d/ldf/src/calendar/liturgical-week.ts#L3)*
+*Defined in [calendar/liturgical-week.ts:3](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L3)*
