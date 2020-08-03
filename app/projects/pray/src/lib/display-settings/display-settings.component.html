@@ -68,11 +68,10 @@
       <ion-select-option value="xxl"><ion-label>{{ 'displaySettings.Size.XXL' | translate }}</ion-label></ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-item>
+  <ion-item *ngIf="config.fonts">
     <ion-label position="stacked">{{ 'displaySettings.Font' | translate }}</ion-label>
     <ion-segment [value]="settings.font" (ionChange)="updateSetting(uid, 'font', $event)">
-      <ion-segment-button value="garamond" style="font-family: 'EB Garamond'">Garamond</ion-segment-button>
-      <ion-segment-button value="gill-sans" style="font-family: 'Gill Sans'">Gill Sans</ion-segment-button>
+      <ion-segment-button *ngFor="let font of config.fonts" value="font.value" style="font-family: '{{font.label}}'">{{ font.label }}</ion-segment-button>
     </ion-segment>
   </ion-item>
   <ion-item>

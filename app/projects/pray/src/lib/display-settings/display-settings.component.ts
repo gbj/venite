@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 import { AuthServiceInterface, AUTH_SERVICE, PREFERENCES_SERVICE, PreferencesServiceInterface } from '@venite/ng-service-api';
 import { TranslateService } from '@ngx-translate/core';
+import { DisplaySettingsConfig } from './display-settings-config';
 
 @Component({
   selector: 'venite-display-settings',
@@ -22,6 +23,7 @@ export class DisplaySettingsComponent implements OnInit {
   uid$ : Observable<string | undefined>;
 
   constructor(
+    @Inject('displaySettingsConfig') public config : DisplaySettingsConfig,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     @Inject(AUTH_SERVICE) private auth : AuthServiceInterface,
     private translate : TranslateService
