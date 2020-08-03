@@ -123,6 +123,13 @@ describe('Condition', () => {
     condition.season = {except: ['Lent']};
     include = condition.include(day, new ClientPreferences());
     expect(include).toEqual(false);
+
+    const condition2 = new Condition({
+        "season": {
+          "only": ["Advent", "Lent", "HolyWeek", "Ember", "Rogation"]
+        }
+      });
+    expect(condition2.include(day, {})).toEqual(true);
   });
 
   it('should handle multiple seasons', () => {
