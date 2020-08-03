@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
-import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading } from '@venite/ldf';
+import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-psalm',
@@ -59,7 +59,7 @@ export class PsalmComponent {
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // { '12/23': '...', '12/24': '...' }
-      const date = this.obj.day ? new Date(Date.parse(this.obj.day.date)) : new Date();
+      const date = this.obj.day ? dateFromYMDString(this.obj?.day?.date) : new Date();
       return this.antiphonNode(antiphon[`${date.getMonth()+1}/${date.getDate()}`]);
     }
   }
@@ -201,17 +201,17 @@ export class PsalmComponent {
           {/* at the end of each set, repeat the antiphon */}
           {
             this.obj.repeatAntiphon(sectionIndex, this.filteredValue.length)
-            && <div class='repeat-antiphon'>{this.antiphonNode(this.obj.metadata && this.obj.metadata.antiphon)}</div>
+            && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>
           }
-          {includeAntiphon && this.antiphonNode(this.obj.metadata && this.obj.metadata.antiphon)}
+          {includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
           </div>
         ])}
 
       {/* include the Gloria Patri */}
-      {this.obj.metadata && this.obj.metadata.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
+      {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
 
       {/* include closing antiphon */}
-      {includeAntiphon && this.antiphonNode(this.obj.metadata && this.obj.metadata.antiphon)}
+      {includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
       </Host>
     )
   }
