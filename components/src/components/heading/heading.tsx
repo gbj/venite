@@ -130,7 +130,7 @@ export class HeadingComponent {
           <slot name='additional'></slot>
 
           {/* `Heading.citation` => right-aligned */}
-          <slot name='citation'>{hasCitation && this.citationNode(this.obj.citation)}</slot>
+          <slot name='citation' slot='end'>{hasCitation && this.citationNode(this.obj.citation)}</slot>
         </ldf-label-bar>
       </Host>
     );

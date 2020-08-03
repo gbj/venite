@@ -16,8 +16,8 @@
 }
 
 sup {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0;
+  margin-right: 0.25em;
 }
 
 .citation {
@@ -35,4 +35,9 @@ sup {
 .verses .verse {
   display: flex;
   flex-direction: row;
+}
+
+/* Hide/show first dropcaps to avoid interfering with the dropcap */
+sup:first-of-type {
+  display: var(--ldf-drop-early-verses-display);
 }

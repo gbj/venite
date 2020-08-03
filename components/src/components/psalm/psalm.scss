@@ -45,6 +45,13 @@
   margin-top: 0.5em;
 }
 
+/* Hide/show first dropcaps to avoid interfering with the dropcap */
+.psalm:nth-child(0), .psalm:nth-child(1), .psalm:nth-child(2) {
+  sup {
+    display: var(--ldf-drop-early-verses-display);
+  }
+}
+
 .repeat-antiphon {
   display: var(--ldf-psalm-repeat-antiphon-display);
 }

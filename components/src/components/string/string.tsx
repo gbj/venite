@@ -72,7 +72,8 @@ export class StringComponent {
   }
 
   processMarkup(s : string) : JSX.Element[] {
-    const nodes = s.replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^
+    const nodes = s
+      .replace(/!^([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
       .split(/([\*\^][^\*\^]*[\*\^])/g)  // markdown ** => italics
       .map(node => {
         if(node.startsWith('*') && node.endsWith('*')) {
@@ -108,8 +109,9 @@ export class StringComponent {
     }
   }
 
-  processDropcap(processed : (string|JSX.Element)[]) : JSX.Element[] {
-    const firstChunk = typeof processed === 'string' ? processed : processed[0];
+  processDropcap(processed : JSX.Element[]) : JSX.Element[] {
+    console.log('processing dropcap on ', processed);
+    const firstChunk = processed[0];
     if(typeof firstChunk === 'string') {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord : string = splitTest ? splitTest[0] : '',
@@ -118,8 +120,10 @@ export class StringComponent {
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
 
+      console.log(firstWord, match1, match2, nextWord);
+
       processed = new Array(
-        <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2}</span>
+        <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
       )
         .concat(nextWord)
         .concat(processed.slice(1));

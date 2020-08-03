@@ -46,3 +46,7 @@
     text-transform: var(--ldf-h5-text-transform);
   }
 }
+
+::slotted[slot="citation"] {
+  text-align: right;
+}

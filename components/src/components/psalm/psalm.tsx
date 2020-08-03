@@ -191,7 +191,7 @@ export class PsalmComponent {
                     placeholder='#'
                     template={pattern}>
                   </ldf-editable-text> :
-                  <sup>{verse.number}</sup>}
+                  (verse.number && <sup>{verse.number}</sup>)}
                   <div class='text'>{nodes}</div>
                 </p>
               );

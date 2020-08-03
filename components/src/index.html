@@ -23,7 +23,7 @@
   --ldf-psalm-grid-template-columns: 1.5em 1fr;
   --ldf-psalm-grid-template-areas: "number verse";
   --ldf-psalm-line-break-display: none;
-  --ldf-psalm-halfverse-margin-left: 0.25em;
+  --ldf-psalm-halfverse-margin-left: 0;
   --ldf-psalm-text-grid-area: verse;
   --ldf-psalm-number-grid-area: number;
   --ldf-psalm-text-display: inline;
@@ -48,28 +48,32 @@
   </style>
 </head>
 <body>
-    <ion-content id='example' class="ion-padding">
-      <ldf-text doc='{"type":"text","style":"text","value":["OUR is a *test* of this *system*."]}'></ldf-text>
-      <!--<ldf-option doc='{  "type": "option",  "value": [    {      "version_label": "Proper Psalms",      "condition": {        "mode": "and",        "conditions": [          {            "key": "properPsalms",            "value": "yes",            "is": true          }        ]      },      "metadata": {},      "style": "psalm",      "lookup": {        "table": "proper_psalms",        "item": "morning_psalms",        "type": "lectionary"      },      "hidden": false,      "type": "psalm"    },    {      "version_label": "Proper Psalms",      "condition": {        "mode": "and",        "conditions": [          {            "key": "properPsalms",            "value": "yes",            "is": false          }        ]      },      "metadata": {},      "style": "psalm",      "lookup": {        "table": {          "preference": "psalmCycle"        },        "item": "morning_psalms",        "type": "lectionary"      },      "hidden": false,      "type": "psalm"    }  , {"type":"bible-reading","style":"short","label":"John 1:1","value":[{"book":"John","chapter":"1","verse":"1","text":"In the beginning..."}]}]}'></ldf-option>
+    <ion-content id='example' class="ion-padding dropcaps-plain">
+      <ldf-liturgical-document doc=''></ldf-liturgical-document>
+
+
+
+      <!--<ldf-text doc='{"type":"text","style":"text","value":["OUR is a *test* of this *system*."]}'></ldf-text>
+      --><!--<ldf-option doc='{  "type": "option",  "value": [    {      "version_label": "Proper Psalms",      "condition": {        "mode": "and",        "conditions": [          {            "key": "properPsalms",            "value": "yes",            "is": true          }        ]      },      "metadata": {},      "style": "psalm",      "lookup": {        "table": "proper_psalms",        "item": "morning_psalms",        "type": "lectionary"      },      "hidden": false,      "type": "psalm"    },    {      "version_label": "Proper Psalms",      "condition": {        "mode": "and",        "conditions": [          {            "key": "properPsalms",            "value": "yes",            "is": false          }        ]      },      "metadata": {},      "style": "psalm",      "lookup": {        "table": {          "preference": "psalmCycle"        },        "item": "morning_psalms",        "type": "lectionary"      },      "hidden": false,      "type": "psalm"    }  , {"type":"bible-reading","style":"short","label":"John 1:1","value":[{"book":"John","chapter":"1","verse":"1","text":"In the beginning..."}]}]}'></ldf-option>
       <hr>-->
-      <ldf-heading doc='{"type":"heading","style":"text","metadata":{"level":1},"value":["Morning Prayer"]}'></ldf-heading>
+      <!--<ldf-heading doc='{"type":"heading","style":"text","metadata":{"level":1},"value":["Morning Prayer"]}'></ldf-heading>
       <ldf-heading doc='{"type":"heading","style":"day","metadata":{"level":2},"day":{  "evening": false,  "date": "2020-7-24",  "kalendar": "bcp1979",  "slug": "friday-7th-pentecost",  "propers": "friday-proper-11",  "week": {    "omit_the": false,    "season": "OrdinaryTime",    "slug": "7th-pentecost",    "kalendar": "bcp1979",    "color": "Green",    "cycle": "Easter",    "name": "Seventh Sunday after Pentecost",    "week": 21,    "proper": 11,    "propers": "proper-11"  },  "years": {    "bcp1979_daily_office": 2,    "bcp1979_daily_psalms": 2,    "rclsunday": "A"  },  "holy_days": [    {      "kalendar": "bcp1979",      "name": "Thomas a Kempis, Priest, 1471",      "type": {        "rank": 2,        "name": "Black Letter"      },      "mmdd": "7/24"    }  ],  "season": "OrdinaryTime",  "color": "Green"}}'></ldf-heading>
       <ldf-heading doc='{"type":"heading","style":"date","metadata":{"level":3},"day":{  "evening": false,  "date": "2020-7-24",  "kalendar": "bcp1979",  "slug": "friday-7th-pentecost",  "propers": "friday-proper-11",  "week": {    "omit_the": false,    "season": "OrdinaryTime",    "slug": "7th-pentecost",    "kalendar": "bcp1979",    "color": "Green",    "cycle": "Easter",    "name": "Seventh Sunday after Pentecost",    "week": 21,    "proper": 11,    "propers": "proper-11"  },  "years": {    "bcp1979_daily_office": 2,    "bcp1979_daily_psalms": 2,    "rclsunday": "A"  },  "holy_days": [    {      "kalendar": "bcp1979",      "name": "Thomas a Kempis, Priest, 1471",      "type": {        "rank": 2,        "name": "Black Letter"      },      "mmdd": "7/24"    }  ],  "season": "OrdinaryTime",  "color": "Green"}}'></ldf-heading>
       <ldf-text doc='{"type":"text","style":"text","value":["O beloved brethen, lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"]}'></ldf-text>
-      <!--<ldf-day-name day='{"evening":false,"date":"2020-7-21","kalendar":"bcp1979","slug":"tuesday-7th-pentecost","propers":"tuesday-proper-11","week":{"omit_the":false,"season":"OrdinaryTime","slug":"7th-pentecost","kalendar":"bcp1979","color":"Green","cycle":"Easter","name":"Seventh Sunday after Pentecost","week":21,"proper":11,"propers":"proper-11"},"years":{"bcp1979_daily_office":2,"bcp1979_daily_psalms":2,"rclsunday":"A"},"holy_days":[],"season":"OrdinaryTime","color":"Green"}'></ldf-day-name>
+      --><!--<ldf-day-name day='{"evening":false,"date":"2020-7-21","kalendar":"bcp1979","slug":"tuesday-7th-pentecost","propers":"tuesday-proper-11","week":{"omit_the":false,"season":"OrdinaryTime","slug":"7th-pentecost","kalendar":"bcp1979","color":"Green","cycle":"Easter","name":"Seventh Sunday after Pentecost","week":21,"proper":11,"propers":"proper-11"},"years":{"bcp1979_daily_office":2,"bcp1979_daily_psalms":2,"rclsunday":"A"},"holy_days":[],"season":"OrdinaryTime","color":"Green"}'></ldf-day-name>
       <br><ldf-day-name day='{  "evening": false,  "date": "2020-7-22",  "kalendar": "bcp1979",  "slug": "st-mary-magdalene",  "propers": "st-mary-magdalene",  "week": {    "omit_the": false,    "season": "OrdinaryTime",    "slug": "7th-pentecost",    "kalendar": "bcp1979",    "color": "Green",    "cycle": "Easter",    "name": "Seventh Sunday after Pentecost",    "week": 21,    "proper": 11,    "propers": "proper-11"  },  "years": {    "bcp1979_daily_office": 2,    "bcp1979_daily_psalms": 2,    "rclsunday": "A"  },  "holy_days": [    {      "image": "http://www.monasteryicons.com/graphics/products/large/728.jpg",      "type": {        "rank": 3,        "name": "Holy Days"      },      "kalendar": "bcp1979",      "name": "St. Mary Magdalene",      "season": "Saints",      "mmdd": "7/22",      "slug": "st-mary-magdalene",      "color": "White"    }  ],  "season": "Saints",  "color": "White",  "holy_day_observed": {    "image": "http://www.monasteryicons.com/graphics/products/large/728.jpg",    "type": {      "rank": 3,      "name": "Holy Days"    },    "kalendar": "bcp1979",    "name": "St. Mary Magdalene",    "season": "Saints",    "mmdd": "7/22",    "slug": "st-mary-magdalene",    "color": "White"  }}'></ldf-day-name>
       <br><ldf-day-name day='{  "evening": false,  "date": "2020-7-26",  "kalendar": "bcp1979",  "slug": "sunday-8th-pentecost",  "propers": "sunday-proper-12",  "week": {    "omit_the": false,    "cycle": "Easter",    "color": "Green",    "slug": "8th-pentecost",    "week": 22,    "season": "OrdinaryTime",    "name": "Eighth Sunday after Pentecost",    "kalendar": "bcp1979",    "proper": 12,    "propers": "proper-12"  },  "years": {    "bcp1979_daily_office": 2,    "bcp1979_daily_psalms": 2,    "rclsunday": "A"  },  "holy_days": [    {      "kalendar": "bcp1979",      "name": "The Parents of the Blessed Virgin Mary",      "type": {        "name": "Black Letter",        "rank": 2      },      "mmdd": "7/26"    }  ],  "season": "OrdinaryTime",  "color": "Green"}'></ldf-day-name>
       <br><ldf-day-name day='{  "evening": false,  "date": "2020-7-17",  "kalendar": "bcp1979",  "slug": "friday-6th-pentecost",  "propers": "friday-proper-10",  "week": {    "omit_the": false,    "week": 20,    "slug": "6th-pentecost",    "season": "OrdinaryTime",    "color": "Green",    "name": "Sixth Sunday after Pentecost",    "cycle": "Easter",    "kalendar": "bcp1979",    "proper": 10,    "propers": "proper-10"  },  "years": {    "bcp1979_daily_office": 2,    "bcp1979_daily_psalms": 2,    "rclsunday": "A"  },  "holy_days": [    {      "mmdd": "7/17",      "name": "William White, Bishop of Pennsylvania, 1836",      "type": {        "rank": 2,        "name": "Black Letter"      },      "kalendar": "bcp1979"    }  ],  "season": "OrdinaryTime",  "color": "Green"}'></ldf-day-name>
       --><!--<ldf-psalm editable="true" doc='{"type":"psalm","style":"canticle","label":"The Song of Mary","value":[{"type":"psalm-section","value":[{"type":"psalm-verse","number":"","halfverse":"","verse":""}]}]}'></ldf-psalm>
-      --><ldf-liturgical-document path='/' doc='{"type":"bible-reading","style":"short","citation":"St. Matthew 3. 2","value":[{"book":"John","chapter":"1","verse":"1","text":"Repent ye; lorem ipsum sit dolor amet, for the kingdom of heaven is at hand."}]}'></ldf-liturgical-document>
-      <!--<ldf-liturgical-document editable="true" doc='{"type":"bible-reading","lookup":{"type":"lectionary","table":{"preference":"lectionary"},"item":{"preference":"readingA"}}}'></ldf-liturgical-document>
+      --><!--<ldf-liturgical-document path='/' doc='{"type":"bible-reading","style":"short","citation":"St. Matthew 3. 2","value":[{"book":"John","chapter":"1","verse":"1","text":"Repent ye; lorem ipsum sit dolor amet, for the kingdom of heaven is at hand."}]}'></ldf-liturgical-document>
+      --><!--<ldf-liturgical-document editable="true" doc='{"type":"bible-reading","lookup":{"type":"lectionary","table":{"preference":"lectionary"},"item":{"preference":"readingA"}}}'></ldf-liturgical-document>
       <ldf-liturgical-document editable="true" doc='{"type":"bible-reading","lookup":{"type":"lectionary","table":{"preference":"lectionary"},"item":"first_reading"}}'></ldf-liturgical-document>
       -->
       <!--<ldf-editable-metadata editable="true" doc='{"type":"psalm","style":"canticle","lookup":{"type":"canticle-table","table":"bcp1979","item":1}}'></ldf-editable-metadata>
       <ldf-liturgical-document editable="true" doc='{"type":"bible-reading","lookup":{"type":"category","table":{"preference":"lectionary"},"item":"Opening Sentence","filter":"seasonal","rotate":"true"}}'></ldf-liturgical-document>
       -->
-      <ldf-psalm doc='{ "sharing": { "organization": "venite", "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2", "privacy": "public", "collaborators": [], "status": "published" }, "category": [ "Psalm" ], "citation": null, "style": "psalm", "hidden": false, "source": { "source": "bcp1979", "citation": "p. 781", "api": "https://www.venite.app/api" }, "version_label": null, "slug": "psalm_124", "metadata": { "omit_gloria": false, "omit_antiphon": false, "localname": "Psalm 124", "latinname": "Nisi quia Dominus", "number": "124" }, "type": "psalm", "value": [ { "value": [ { "type": "psalm-verse", "number": "1", "verse": "If the LORD had not been on our side, *", "halfverse": "let Israel now say;" }, { "halfverse": "when enemies rose up against us;", "verse": "If the LORD had not been on our side, *", "type": "psalm-verse", "number": "2" }, { "type": "psalm-verse", "number": "3", "verse": "Then would they have swallowed us up alive *", "halfverse": "in their fierce anger toward us;" }, { "number": "4", "halfverse": "and the torrent gone over us;", "verse": "Then would the waters have overwhelmed us *", "type": "psalm-verse" }, { "halfverse": "have gone right over us.", "type": "psalm-verse", "verse": "Then would the raging waters *", "number": "5" }, { "verse": "Blessed be the LORD! *", "number": "6", "type": "psalm-verse", "halfverse": "he has not given us over to be a prey for their teeth." }, { "verse": "We have escaped like a bird from the snare of the fowler; *", "type": "psalm-verse", "halfverse": "the snare is broken, and we have escaped.", "number": "7" }, { "halfverse": "the maker of heaven and earth.", "type": "psalm-verse", "verse": "Our help is in the Name of the LORD, *", "number": "8" } ], "type": "psalm-section" } ], "version": "bcp1979", "language": "en", "label": "Psalm 124" }'></ldf-psalm>-->
-    --><!--<ldf-editable-metadata doc='{"label":"Compline","type":"liturgy","value":[{"type":"option","metadata":{"selected":0},"value":[{"type":"text","value":["Option 1"]},{"type":"text","value":["Option 2"]},{"type":"text","value":["Option 3"]},{"type":"text","value":["Option 4"]}]},{"value":["An Order for Compline"],"hidden":false,"metadata":{"level":1},"type":"heading"},{"hidden":false,"type":"rubric","value":["This Service may be used when Evening Prayer has been previously said.","All standing up, the Minister shall say:"]},{"hidden":false,"type":"text","style":"prayer","metadata":{"response":"Amen."},"value":["The Lord Almighty grant us a quiet night and a perfect end."]},{"hidden":false,"type":"responsive","style":"preces","value":[{"label":"Minister.","text":"O God, make speed to save us;"},{"label":"Answer.","text":"O Lord, make haste to help us."},{"label":"Minister.","text":"Glory be to the Father, and to the Son, and to the Holy Ghost;"},{"label":"Answer.","text":"As it was in the beginning, is now, and ever shall be, world without end. Amen."},{"label":"Minister.","text":"Praise ye the Lord;"},{"label":"Answer.","text":"The Lord’s Name be praised."},{"label":"","text":"","response":""}]},{"hidden":false,"type":"rubric","value":["Then shall be said or sung one or more of the following Psalms: Psalm 4; Psalm 31. 1-6; Psalm 91; Psalm 134; or any other Psalm or Psalms."]},{"type":"psalm","style":"Psalm","label":"Psalm 4","metadata":{"latinname":"Cum invocarem."},"value":[{"type":"psalm-section","label":"I. Fake Label","value":[{"type":"psalm-verse","number":1,"verse":"Hear me when I call, O God of my righteousness /","halfverse":"thou hast set me at liberty when I was in trouble; have mercy upon me, and hearken unto my prayer."},{"type":"psalm-verse","number":2,"verse":"O ye sons of men, how long will ye blaspheme mine honour /","halfverse":"and have such pleasure in vanity, and seek after leasing?"},{"type":"psalm-verse","verse":"Know this also, that the Lord hath chosen to himself the man that is godly /","halfverse":"when I call upon the Lord, he will hear me."}]}]}],"hidden":false}'></ldf-editable-metadata>
+      <!--<ldf-psalm doc='{ "sharing": { "organization": "venite", "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2", "privacy": "public", "collaborators": [], "status": "published" }, "category": [ "Psalm" ], "citation": null, "style": "psalm", "hidden": false, "source": { "source": "bcp1979", "citation": "p. 781", "api": "https://www.venite.app/api" }, "version_label": null, "slug": "psalm_124", "metadata": { "omit_gloria": false, "omit_antiphon": false, "localname": "Psalm 124", "latinname": "Nisi quia Dominus", "number": "124" }, "type": "psalm", "value": [ { "value": [ { "type": "psalm-verse", "number": "1", "verse": "If the LORD had not been on our side, *", "halfverse": "let Israel now say;" }, { "halfverse": "when enemies rose up against us;", "verse": "If the LORD had not been on our side, *", "type": "psalm-verse", "number": "2" }, { "type": "psalm-verse", "number": "3", "verse": "Then would they have swallowed us up alive *", "halfverse": "in their fierce anger toward us;" }, { "number": "4", "halfverse": "and the torrent gone over us;", "verse": "Then would the waters have overwhelmed us *", "type": "psalm-verse" }, { "halfverse": "have gone right over us.", "type": "psalm-verse", "verse": "Then would the raging waters *", "number": "5" }, { "verse": "Blessed be the LORD! *", "number": "6", "type": "psalm-verse", "halfverse": "he has not given us over to be a prey for their teeth." }, { "verse": "We have escaped like a bird from the snare of the fowler; *", "type": "psalm-verse", "halfverse": "the snare is broken, and we have escaped.", "number": "7" }, { "halfverse": "the maker of heaven and earth.", "type": "psalm-verse", "verse": "Our help is in the Name of the LORD, *", "number": "8" } ], "type": "psalm-section" } ], "version": "bcp1979", "language": "en", "label": "Psalm 124" }'></ldf-psalm>-->
+    <!--<ldf-editable-metadata doc='{"label":"Compline","type":"liturgy","value":[{"type":"option","metadata":{"selected":0},"value":[{"type":"text","value":["Option 1"]},{"type":"text","value":["Option 2"]},{"type":"text","value":["Option 3"]},{"type":"text","value":["Option 4"]}]},{"value":["An Order for Compline"],"hidden":false,"metadata":{"level":1},"type":"heading"},{"hidden":false,"type":"rubric","value":["This Service may be used when Evening Prayer has been previously said.","All standing up, the Minister shall say:"]},{"hidden":false,"type":"text","style":"prayer","metadata":{"response":"Amen."},"value":["The Lord Almighty grant us a quiet night and a perfect end."]},{"hidden":false,"type":"responsive","style":"preces","value":[{"label":"Minister.","text":"O God, make speed to save us;"},{"label":"Answer.","text":"O Lord, make haste to help us."},{"label":"Minister.","text":"Glory be to the Father, and to the Son, and to the Holy Ghost;"},{"label":"Answer.","text":"As it was in the beginning, is now, and ever shall be, world without end. Amen."},{"label":"Minister.","text":"Praise ye the Lord;"},{"label":"Answer.","text":"The Lord’s Name be praised."},{"label":"","text":"","response":""}]},{"hidden":false,"type":"rubric","value":["Then shall be said or sung one or more of the following Psalms: Psalm 4; Psalm 31. 1-6; Psalm 91; Psalm 134; or any other Psalm or Psalms."]},{"type":"psalm","style":"Psalm","label":"Psalm 4","metadata":{"latinname":"Cum invocarem."},"value":[{"type":"psalm-section","label":"I. Fake Label","value":[{"type":"psalm-verse","number":1,"verse":"Hear me when I call, O God of my righteousness /","halfverse":"thou hast set me at liberty when I was in trouble; have mercy upon me, and hearken unto my prayer."},{"type":"psalm-verse","number":2,"verse":"O ye sons of men, how long will ye blaspheme mine honour /","halfverse":"and have such pleasure in vanity, and seek after leasing?"},{"type":"psalm-verse","verse":"Know this also, that the Lord hath chosen to himself the man that is godly /","halfverse":"when I call upon the Lord, he will hear me."}]}]}],"hidden":false}'></ldf-editable-metadata>
       --><!--<ldf-liturgical-document editable="true" doc='{"label":"Compline","type":"liturgy","value":[{"type":"text","style":"text","value":[""]},{"value":["An Order for Compline"],"hidden":false,"metadata":{"level":1},"type":"heading"},{"hidden":false,"type":"rubric","value":["This Service may be used when Evening Prayer has been previously said.","All standing up, the Minister shall say:"]},{"hidden":false,"type":"text","style":"prayer","label":"Opening Sentence","metadata":{"response":"Amen."},"value":["The Lord Almighty grant us a quiet night and a perfect end."]},{"hidden":false,"type":"responsive","style":"preces","value":[{"label":"Minister.","text":"O God, make speed to save us;"},{"label":"Answer.","text":"O Lord, make haste to help us."},{"label":"Minister.","text":"Glory be to the Father, and to the Son, and to the Holy Ghost;"},{"label":"Answer.","text":"As it was in the beginning, is now, and ever shall be, world without end. Amen."},{"label":"Minister.","text":"Praise ye the Lord;"},{"label":"Answer.","text":"The Lord’s Name be praised."},{"label":"","text":"","response":""}]},{"hidden":false,"type":"rubric","value":["Then shall be said or sung one or more of the following Psalms: Psalm 4; Psalm 31. 1-6; Psalm 91; Psalm 134; or any other Psalm or Psalms."]},{"type":"psalm","style":"Psalm","label":"Psalm 4","metadata":{"latinname":"Cum invocarem."},"value":[{"type":"psalm-section","label":"I. Fake Label","value":[{"type":"psalm-verse","number":1,"verse":"Hear me when I call, O God of my righteousness /","halfverse":"thou hast set me at liberty when I was in trouble; have mercy upon me, and hearken unto my prayer."},{"type":"psalm-verse","number":2,"verse":"O ye sons of men, how long will ye blaspheme mine honour /","halfverse":"and have such pleasure in vanity, and seek after leasing?"},{"type":"psalm-verse","verse":"Know this also, that the Lord hath chosen to himself the man that is godly /","halfverse":"when I call upon the Lord, he will hear me."}]}]}],"hidden":false}'></ldf-liturgical-document>
       -->
     </ion-content>
@@ -79,7 +83,7 @@
     node.doc = {"hidden":false,"type":"bible-reading","style":"long","citation":"Gen. 44","label":"A Reading from Gen. 44 (AV)","language":"en","version":"KJV","value":[{"book":"Gen.","chapter":"44","verse":"1","text":"And the LORD commanded the steward of his house, saying, Fill the men&#146;s sacks with food, as much as they can carry, and put every man&#146;s money in his sack&#146;s mouth. "},{"book":"Gen.","chapter":"44","verse":"2","text":"And put my cup, the silver cup, in the sack&#146;s mouth of the youngest, and his corn money. And he did according to the word that Joseph had spoken. "},{"book":"Gen.","chapter":"44","verse":"3","text":"As soon as the morning was light, the men were sent away, they and their asses. "},{"book":"Gen.","chapter":"44","verse":"4","text":"And when they were gone out of the city, and not yet far off, Joseph said unto his steward, Up, follow after the men; and when thou dost overtake them, say unto them, Wherefore have ye rewarded evil for good? "},{"book":"Gen.","chapter":"44","verse":"5","text":"Is not this it in which my lord drinketh, and whereby indeed he divineth? ye have done evil in so doing. "},{"book":"Gen.","chapter":"44","verse":"6","text":"And he overtook them, and he spake unto them these same words. "},{"book":"Gen.","chapter":"44","verse":"7","text":"And they said unto him, Wherefore saith my lord these words? God forbid that thy servants should do according to this thing: "},{"book":"Gen.","chapter":"44","verse":"8","text":"Behold, the money, which we found in our sacks&#146; mouths, we brought again unto thee out of the land of Canaan: how then should we steal out of thy lord&#146;s house silver or gold? "},{"book":"Gen.","chapter":"44","verse":"9","text":"With whomsoever of thy servants it be found, both let him die, and we also will be my lord&#146;s bondmen. "},{"book":"Gen.","chapter":"44","verse":"10","text":"And he said, Now also let it be according unto your words: he with whom it is found shall be my servant; and ye shall be blameless. "},{"book":"Gen.","chapter":"44","verse":"11","text":"Then they speedily took down every man his sack to the ground, and opened every man his sack. "},{"book":"Gen.","chapter":"44","verse":"12","text":"And he searched, and began at the eldest, and left at the youngest: and the cup was found in Benjamin&#146;s sack. "},{"book":"Gen.","chapter":"44","verse":"13","text":"Then they rent their clothes, and laded every man his ass, and returned to the city. "},{"book":"Gen.","chapter":"44","verse":"14","text":"And Judah and his brethren came to Joseph&#146;s house; for he was yet there: and they fell before him on the ground. "},{"book":"Gen.","chapter":"44","verse":"15","text":"And Joseph said unto them, What deed is this that ye have done? wot ye not that such a man as I can certainly divine? "},{"book":"Gen.","chapter":"44","verse":"16","text":"And Judah said, What shall we say unto my lord? what shall we speak? or how shall we clear ourselves? God hath found out the iniquity of thy servants: behold, we are my lord&#146;s servants, both we, and he also with whom the cup is found. "},{"book":"Gen.","chapter":"44","verse":"17","text":"And he said, God forbid that I should do so: but the man in whose hand the cup is found, he shall be my servant; and as for you, get you up in peace unto your father. "},{"book":"Gen.","chapter":"44","verse":"18","text":"Then Judah came near unto him, and said, Oh my lord, let thy servant, I pray thee, speak a word in my lord&#146;s ears, and let not thine anger burn against thy servant: for thou art even as Pharaoh. "},{"book":"Gen.","chapter":"44","verse":"19","text":"My lord asked his servants, saying, Have ye a father, or a brother? "},{"book":"Gen.","chapter":"44","verse":"20","text":"And we said unto my lord, We have a father, an old man, and a child of his old age, a little one; and his brother is dead, and he alone is left of his mother, and his father loveth him. "},{"book":"Gen.","chapter":"44","verse":"21","text":"And thou saidst unto thy servants, Bring him down unto me, that I may set mine eyes upon him. "},{"book":"Gen.","chapter":"44","verse":"22","text":"And we said unto my lord, The lad cannot leave his father: for if he should leave his father, his father would die. "},{"book":"Gen.","chapter":"44","verse":"23","text":"And thou saidst unto thy servants, Except your youngest brother come down with you, ye shall see my face no more. "},{"book":"Gen.","chapter":"44","verse":"24","text":"And it came to pass when we came up unto thy servant my father, we told him the words of my lord. "},{"book":"Gen.","chapter":"44","verse":"25","text":"And our father said, Go again, and buy us a little food. "},{"book":"Gen.","chapter":"44","verse":"26","text":"And we said, We cannot go down: if our youngest brother be with us, then will we go down: for we may not see the man&#146;s face, except our youngest brother be with us. "},{"book":"Gen.","chapter":"44","verse":"27","text":"And thy servant my father said unto us, Ye know that my wife bare me two sons: "},{"book":"Gen.","chapter":"44","verse":"28","text":"And the one went out from me, and I said, Surely he is torn in pieces; and I saw him not since: "},{"book":"Gen.","chapter":"44","verse":"29","text":"And if ye take this also from me, and mischief befall him, ye shall bring down my gray hairs with sorrow to the grave. "},{"book":"Gen.","chapter":"44","verse":"30","text":"Now therefore when I come to thy servant my father, and the lad be not with us; seeing that his life is bound up in the lad&#146;s life; "},{"book":"Gen.","chapter":"44","verse":"31","text":"It shall come to pass, when he seeth that the lad is not with us, that he will die: and thy servants shall bring down the gray hairs of thy servant our father with sorrow to the grave. "},{"book":"Gen.","chapter":"44","verse":"32","text":"For thy servant became surety for the lad unto my father, saying, If I bring him not unto thee, then I shall bear the blame to my father for ever. "},{"book":"Gen.","chapter":"44","verse":"33","text":"Now therefore, I pray thee, let thy servant abide instead of the lad a bondman to my lord; and let the lad go up with his brethren. "},{"book":"Gen.","chapter":"44","verse":"34","text":"For how shall I go up to my father, and the lad be not with me? lest peradventure I see the evil that shall come on my father. "}]}
     document.querySelector('#example').appendChild(node);*/
 
-    const editor = document.createElement('ldf-editor');
+    /*const editor = document.createElement('ldf-editor');
     editor.doc = { "type": "liturgy", "value": [{ "type": "text", "style": "text", "value": ["Editor text 1."]},{ "type": "text", "style": "text", "value": ["Editor text 2."]}]}
     document.querySelector('#example').appendChild(editor);
     document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
@@ -90,7 +94,1799 @@
       ev.originalTarget.setBibleReadingIntros([
         { "type": "text", "style": "text", "value": ["A Reading from ${shortName}."]}
       ]);
-    });
+    });*/
+
+    const LITURGY = {
+  "hidden": false,
+  "lastRevision": 2,
+  "label": "Morning Prayer",
+  "value": [
+    {
+      "hidden": false,
+      "value": [
+        "Morning Prayer"
+      ],
+      "type": "heading",
+      "metadata": {
+        "level": 1
+      }
+    },
+    {
+      "hidden": false,
+      "type": "heading",
+      "style": "date",
+      "metadata": {
+        "level": 2
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-12-12",
+        "kalendar": "bcp1962",
+        "slug": "saturday-second-sunday-in-advent",
+        "propers": "saturday-second-sunday-in-advent",
+        "week": {
+          "cycle": "Advent",
+          "week": 2,
+          "season": "Advent",
+          "name": "Second Sunday in Advent",
+          "slug": "second-sunday-in-advent"
+        },
+        "years": {
+          "bcp1979_daily_office": 1,
+          "bcp1979_daily_psalms": 1,
+          "rclsunday": "B"
+        },
+        "holy_days": [],
+        "season": "Advent"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "heading",
+      "style": "day",
+      "metadata": {
+        "level": 2
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-12-12",
+        "kalendar": "bcp1962",
+        "slug": "saturday-second-sunday-in-advent",
+        "propers": "saturday-second-sunday-in-advent",
+        "week": {
+          "cycle": "Advent",
+          "week": 2,
+          "season": "Advent",
+          "name": "Second Sunday in Advent",
+          "slug": "second-sunday-in-advent"
+        },
+        "years": {
+          "bcp1979_daily_office": 1,
+          "bcp1979_daily_psalms": 1,
+          "rclsunday": "B"
+        },
+        "holy_days": [],
+        "season": "Advent"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "The Minister shall read aloud one or more of these Sentences of the Scriptures that follow."
+      ]
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "bible-reading",
+      "style": "short",
+      "citation": "St. Matthew 3. 2.",
+      "value": [
+        {
+          "book": "Matthew",
+          "chapter": "3",
+          "verse": "2",
+          "text": "Repent ye; for the kingdom of heaven is at hand."
+        }
+      ],
+      "category": [
+        "Opening Sentence",
+        "Advent"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "The Minister, turning to the people, shall say the Exhortation in the form following. Occasionally the second paragraph may be omitted."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "text",
+          "value": [
+            "Dearly beloved brethren, the Scripture moveth us in sundry places to acknowledge and confess our manifold sins and wickedness; and that we should not dissemble nor cloke them before the face of Almighty God our heavenly Father; but confess them with an humble, lowly, penitent, and obedient heart; to the end that we may obtain forgiveness of the same, by his infinite goodness and mercy.",
+            "And although we ought at all times humbly to acknowledge our sins before God; yet ought we most chiefly so to do, when we assemble and meet together to render thanks for the great benefits that we have received at his hands, to set forth his most worthy praise, to hear his most holy Word, and to ask those things which are requisite and necessary, as well for the body as the soul.",
+            "Wherefore I pray and beseech you, as many as are here present, to accompany me with a pure heart and humble voice unto the throne of the heavenly grace."
+          ]
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "text",
+          "value": [
+            "Let us humbly confess our sins to Almighty God."
+          ]
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "A general Confession to be said of the whole Congregation with the Minister, all kneeling."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Almighty and most merciful Father, We have erred and strayed from thy ways like lost sheep, We have followed too much the devices and desires of our own hearts, We have offended against thy holy laws, We have left undone those things which we ought to have done, And we have done those things which we ought not to have done; And there is no health in us. But thou, O Lord, have mercy upon us, miserable offenders. Spare thou them, O God, which confess their faults. Restore thou them that are penitent; According to thy promises declared unto mankind in Christ Jesu our Lord. And grant, O most merciful Father, for his sake, That we may hereafter live a godly, righteous, and sober life, To the glory of thy holy Name."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "The Absolution, or Remission of sins, to be pronounced by the Priest alone, standing: the people still kneeling."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Almighty God, the Father of our Lord Jesus Christ, who desireth not the death of a sinner, but rather that he may turn from his wickedness, and live, hath given power and commandment to his Ministers, to declare and pronounce to his people, being penitent, the Absolution and Remission of their sins.",
+        "He pardoneth and absolveth all them that truly repent and unfeignedly believe his holy Gospel.",
+        "Wherefore we beseech him to grant us true repentance and his Holy Spirit, that those things may please him which we do at this present, and that the rest of our life hereafter may be pure and holy; so that at the last we may come to his eternal joy; through Jesus Christ our Lord."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here the Lord’s Prayer may be said; the people repeating it with the Minister."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Our Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil. For thine is the kingdom, the power, and the glory, For ever and ever. "
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "Minister.",
+          "text": "O Lord, open thou our lips;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "And our mouth shall show forth thy praise."
+        },
+        {
+          "label": "Minister.",
+          "text": "O God, make speed to save us;"
+        },
+        {
+          "label": "People.",
+          "text": "O Lord, make haste to help us."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here, all standing up, the Minister shall say:"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "",
+          "text": "Glory be to the Father, and to the Son, and to the Holy Ghost;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        },
+        {
+          "label": "Minister.",
+          "text": "Praise ye the Lord."
+        },
+        {
+          "label": "People.",
+          "text": "The Lord’s Name be praised."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall be said or sung this Psalm following; except on days for which Proper Anthems are provided. On the nineteenth day of the month, this Psalm shall be omitted in the ordinary course of the Psalms.",
+        "At the discretion of the Minister the last four verses may be omitted. ",
+        "Invitatories may be said or sung before this Psalm and after the Gloria Patri which follows it, as provided on page 25. "
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "psalm",
+      "style": "psalm",
+      "metadata": {
+        "number": "95",
+        "latinname": "Venite, exultemus."
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "O COME, let us sing unto the LORD: / ",
+              "halfverse": "let us heartily rejoice in the strength of our salvation."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "verse": "Let us come before his presence with thanksgiving, / ",
+              "halfverse": "and show ourselves glad in him with psalms."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "3",
+              "verse": "For the LORD is a great God, / ",
+              "halfverse": "and a great King above all gods."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "In his hand are all the corners of the earth: / ",
+              "halfverse": "and the strength of the hills is his also."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "The sea is his, and he made it: / ",
+              "halfverse": "and his hands prepared the dry land."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "verse": "O COME, let us worship, and fall down, / ",
+              "halfverse": "and kneel before the LORD our Maker."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "verse": "For he is the Lord our God; / ",
+              "halfverse": "and we are the people of his pasture, and the sheep of his hand."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "verse": "TO-DAY, O that ye would hear his voice: / ",
+              "halfverse": "‘Harden not your hearts as in  of Temptation in the wilderness;"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "When your fathers tempted me, / ",
+              "halfverse": "proved me, and saw my works."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "Forty years long was I grieved with that generation, and said, / ",
+              "halfverse": "“It is a people that do err in their hearts, for they have not known my ways”;"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "11",
+              "verse": "Unto whom I sware in my wrath, / ",
+              "halfverse": "that they should not enter into my rest.’"
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_95",
+      "label": "Venite, Exultemus Domino. Psalm 95."
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall follow THE PSALMS. "
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "type": "liturgy",
+          "value": [
+            {
+              "hidden": false,
+              "type": "psalm",
+              "style": "psalm",
+              "metadata": {
+                "number": "62",
+                "latinname": "Nonne Deo?"
+              },
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "MY soul truly waiteth in silence upon God; / ",
+                      "halfverse": "for of him cometh my salvation."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "verse": "He verily is my strength and my salvation; / ",
+                      "halfverse": "he is my defence, so that I shall not greatly fall."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "3",
+                      "verse": "How long will ye set upon a man, battering him, all of you, / ",
+                      "halfverse": "like a tottering wall, and like a broken fence?"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "verse": "Their device is only how to put him out whom God will exalt; / ",
+                      "halfverse": "their delight is in lies; they give good words with their mouth, but curse with their heart."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "5",
+                      "verse": "NEVERTHELESS my soul, wait thou in silence upon God; / ",
+                      "halfverse": "for my hope is in him."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "verse": "He truly is my strength and my salvation; / ",
+                      "halfverse": "he is my defence, so that I shall not fall."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "verse": "In God is my health and my glory: / ",
+                      "halfverse": "the rock of my might, and in God is my trust."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "8",
+                      "verse": "O put your trust in him alway, ye people: / ",
+                      "halfverse": "pour out your hearts before him, for God is our hope."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "verse": "As for the sons of men, they are but vanity; yea, the sons of men are a deceit; / ",
+                      "halfverse": "upon the scales they are altogether lighter than vanity itself."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "10",
+                      "verse": "O trust not in wrong and robbery, give not yourselves unto vanity; / ",
+                      "halfverse": "if riches increase, set not your heart upon them."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "11",
+                      "verse": "God spake once, and twice I have also heard the same, / ",
+                      "halfverse": "that power belongeth unto God;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "12",
+                      "verse": "And that thou, Lord, art merciful; / ",
+                      "halfverse": "for thou renderest unto every man according to his work."
+                    }
+                  ]
+                }
+              ],
+              "slug": "psalm_62",
+              "label": "Psalm 62"
+            },
+            {
+              "hidden": false,
+              "type": "psalm",
+              "style": "psalm",
+              "metadata": {
+                "number": "63",
+                "latinname": "Deus, Deus meus."
+              },
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "O GOD, thou art my God; / ",
+                      "halfverse": "early will I seek thee."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "verse": "My soul thirsteth for thee, my flesh also longeth after thee, / ",
+                      "halfverse": "in a barren and dry land, where no water is."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "3",
+                      "verse": "Thus have I looked upon thee in the sanctuary, / ",
+                      "halfverse": "that I might behold thy power and glory."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "verse": "For thy loving-kindness is better than the life itself: / ",
+                      "halfverse": "my lips shall praise thee."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "5",
+                      "verse": "As long as I live will I magnify thee in this manner, / ",
+                      "halfverse": "and lift up my hands in thy Name."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "verse": "My soul shall be satisfied, even as it were with marrow and fatness; / ",
+                      "halfverse": "and my mouth shall praise thee with joyful lips."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "verse": "When I remember thee upon my bed, / ",
+                      "halfverse": "I meditate upon thee in the night-watches;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "8",
+                      "verse": "Because thou hast been my helper; / ",
+                      "halfverse": "and under the shadow of thy wings will I rejoice."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "verse": "My soul cleaveth unto thee; / ",
+                      "halfverse": "thy right hand upholdeth me."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "10",
+                      "verse": "THESE also that seek the hurt of my soul, / ",
+                      "halfverse": "they shall go into the depths of the earth."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "11",
+                      "verse": "They shall be given over to the power of the sword, / ",
+                      "halfverse": "that they may be a portion for foxes."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "12",
+                      "verse": "But the king shall rejoice in God; all they that swear by him shall be glad; / ",
+                      "halfverse": "for the mouth of them that speak lies shall be stopped."
+                    }
+                  ]
+                }
+              ],
+              "slug": "psalm_63",
+              "label": "Psalm 63"
+            },
+            {
+              "hidden": false,
+              "type": "psalm",
+              "style": "psalm",
+              "metadata": {
+                "number": "64",
+                "latinname": "Exaudi, Deus."
+              },
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "HEAR my voice, O God, in my prayer: / ",
+                      "halfverse": "preserve my life from fear of the enemy."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "verse": "Hide me from the secret council of the wicked, / ",
+                      "halfverse": "and from the throng of evil doers;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "3",
+                      "verse": "Who have whet their tongue like a sword, / ",
+                      "halfverse": "and aimed their arrows, even bitter words;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "verse": "That they may privily shoot at him that is perfect: / ",
+                      "halfverse": "suddenly do they shoot at him and fear not."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "5",
+                      "verse": "They encourage themselves in mischief, / ",
+                      "halfverse": "and commune among themselves how they may lay snares, and say that no man shall see them."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "verse": "They imagine wickedness, and practise it; / ",
+                      "halfverse": "and the inward thought and heart of every one of them is deep."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "verse": "BUT God shall shoot at them with a swift arrow, / ",
+                      "halfverse": "and suddenly shall they be smitten."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "8",
+                      "verse": "Yea, their own tongue shall make them fall; / ",
+                      "halfverse": "insomuch that whoso seeth them shall laugh them to scorn."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "verse": "And all men shall fear, and they shall tell what God hath done; / ",
+                      "halfverse": "for they shall perceive that it is his work."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "10",
+                      "verse": "The righteous shall rejoice in the LORD, and put his trust in him; / ",
+                      "halfverse": "and all they that are true of heart shall be glad."
+                    }
+                  ]
+                }
+              ],
+              "slug": "psalm_64",
+              "label": "Psalm 64"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall be read THE FIRST LESSON as appointed, and before each Lesson the Minister shall say, The First [or Second] Lesson is written in such a book, in such a chapter, beginning at such a verse. And after the Lesson he shall say, Here endeth the First [or Second] Lesson."
+      ]
+    },
+    {
+      "hidden": false,
+      "label": "The First Reading",
+      "type": "bible-reading",
+      "style": "long",
+      "lookup": {
+        "type": "lectionary",
+        "table": "readings",
+        "item": "morning_first_reading"
+      },
+      "version": "KJV",
+      "metadata": {
+        "intro": {
+          "style": "text",
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "language": "en",
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "value": [
+            "A Reading from ${longName}."
+          ]
+        },
+        "compiled_intro": {
+          "hidden": false,
+          "style": "text",
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "language": "en",
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "value": [
+            "A Reading from the Prophet Isaiah."
+          ]
+        }
+      },
+      "citation": "Isa. 40. 12-end",
+      "language": "en",
+      "value": [
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "12",
+          "text": "Who hath measured the waters in the hollow of his hand, and meted out heaven with the span, and comprehended the dust of the earth in a measure, and weighed the mountains in scales, and the hills in a balance? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "13",
+          "text": "Who hath directed the Spirit of the LORD, or being his counsellor hath taught him? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "14",
+          "text": "With whom took he counsel, and who instructed him, and taught him in the path of judgment, and taught him knowledge, and shewed to him the way of understanding? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "15",
+          "text": "Behold, the nations are as a drop of a bucket, and are counted as the small dust of the balance: behold, he taketh up the isles as a very little thing. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "16",
+          "text": "And Lebanon is not sufficient to burn, nor the beasts thereof sufficient for a burnt offering. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "17",
+          "text": "All nations before him are as nothing; and they are counted to him less than nothing, and vanity. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "18",
+          "text": "To whom then will ye liken God? or what likeness will ye compare unto him? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "19",
+          "text": "The workman melteth a graven image, and the goldsmith spreadeth it over with gold, and casteth silver chains. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "20",
+          "text": "He that is so impoverished that he hath no oblation chooseth a tree that will not rot; he seeketh unto him a cunning workman to prepare a graven image, that shall not be moved. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "21",
+          "text": "Have ye not known? have ye not heard? hath it not been told you from the beginning? have ye not understood from the foundations of the earth? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "22",
+          "text": "It is he that sitteth upon the circle of the earth, and the inhabitants thereof are as grasshoppers; that stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in: "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "23",
+          "text": "That bringeth the princes to nothing; he maketh the judges of the earth as vanity. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "24",
+          "text": "Yea, they shall not be planted; yea, they shall not be sown: yea, their stock shall not take root in the earth: and he shall also blow upon them, and they shall wither, and the whirlwind shall take them away as stubble. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "25",
+          "text": "To whom then will ye liken me, or shall I be equal? saith the Holy One. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "26",
+          "text": "Lift up your eyes on high, and behold who hath created these things, that bringeth out their host by number: he calleth them all by names by the greatness of his might, for that he is strong in power; not one faileth. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "27",
+          "text": "Why sayest thou, O Jacob, and speakest, O Israel, My way is hid from the LORD, and my judgment is passed over from my God? "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "28",
+          "text": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary? there is no searching of his understanding. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "29",
+          "text": "He giveth power to the faint; and to them that have no might he increaseth strength. "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "30",
+          "text": "Even the youths shall faint and be weary, and the young men shall utterly fall: "
+        },
+        {
+          "book": "Isa.",
+          "chapter": "40",
+          "verse": "31",
+          "text": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint. "
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "After the First Lesson shall be sung or said the Hymn Te Deum Laudamus. But the Canticle Benedicite, Omnia Opera, page 26, is suitable of use in Advent, in Lent, on Ember Days (except those in Whitsun Week), on Rogation Days, and when the third chapter of Daniel is read as the First Lesson. ",
+        "At the discretion of the Minister, the third section of Te Deum may be omitted. "
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "type": "psalm",
+          "style": "canticle",
+          "slug": "benedicite",
+          "label": "Benedicite, Omnia Opera. The Song of the Three Children.",
+          "condition": {
+            "mode": "or",
+            "conditions": [
+              {
+                "season": {
+                  "only": [
+                    "Advent",
+                    "Lent",
+                    "HolyWeek",
+                    "Ember",
+                    "Rogation"
+                  ]
+                }
+              },
+              {
+                "day": {
+                  "only": [
+                    "sunday-fourteenth-sunday-after-trinity",
+                    "wednesday-third-sunday-in-advent",
+                    "friday-third-sunday-in-advent",
+                    "saturday-third-sunday-in-advent",
+                    "wednesday-first-sunday-in-lent",
+                    "friday-first-sunday-in-lent",
+                    "saturday-first-sunday-in-lent",
+                    "wednesday-whitsunday",
+                    "friday-whitsunday",
+                    "saturday-whitsunday",
+                    "monday-fifth-sunday-after-easter",
+                    "tuesday-fifth-sunday-after-easter",
+                    "wednesday-fifth-sunday-after-easter"
+                  ]
+                }
+              }
+            ]
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ALL ye Works of the Lord, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Angels of the Lord, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O YE Heavens, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Waters that be above the Firmament, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O all ye Powers of the Lord, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Sun and Moon, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Stars of Heaven, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Showers and Dew, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Winds of God, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Fire and Heat, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Winter and Summer, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Dews and Frosts, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Frost and Cold, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Ice and Snow, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Nights and Days, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Light and Darkness, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Lightnings and Clouds, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O LET the Earth bless the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Mountains and Hills, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O all ye Green Things upon the Earth, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Wells, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Seas and Floods, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Whales, and all that move in the Waters, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O all ye Fowls of the Air, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O all ye Beasts and Cattle, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Children of Men, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O LET Israel bless the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Priests of the Lord, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Servants of the Lord, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye Spirits and Souls of the Righteous, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O ye holy and humble Men of heart, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "O Ananias, Azarias, and Misael, bless ye the Lord: /",
+                  "halfverse": " praise him, and magnify him for ever."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "GLORY be to the Father, and to the Son, /",
+                  "halfverse": " and to the Holy Ghost;"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "verse": "As it was in the beginning, is now, and ever shall be, /",
+                  "halfverse": " world without end. Amen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "text",
+          "value": [
+            "We praise thee, O God; we acknowledge thee to be the Lord.\nAll the earth doth worship thee, the Father everlasting.\nTo thee all Angels cry aloud, the Heavens and all the Powers therein.\nTo thee Cherubim and Seraphim continually do cry,\nHoly, Holy, Holy, Lord God of hosts;\nHeaven and earth are full of the Majesty of thy glory.\nThe glorious company of the Apostles praise thee;\nThe goodly fellowship of the Prophets praise thee;\nThe noble army of Martyrs praise thee;\nThe holy Church throughout all the world doth acknowledge thee,\nThe Father, of an infinite Majesty;\nThine honourable, true, and only Son;\nAlso the Holy Ghost, the Comforter.",
+            "Thou art the King of Glory, O Christ.\nThou art the everlasting Son of the Father.\nWhen thou tookest upon thee to deliver man, thou didst not abhor the Virgin’s womb.\nWhen thou hadst overcome the sharpness of death, thou didst open the kingdom of heaven to all believers.\nThou sittest at the right hand of God, in the glory of the Father.\nWe believe that thou shalt come to be our Judge.\nWe therefore pray thee, help thy servants, whom thou hast redeemed with thy precious blood.\nMake them to be numbered with thy Saints, in glory everlasting.",
+            "O LORD, save thy people, and bless thine heritage;\nGovern them, and lift them up for ever.\nDay by day we magnify thee;\nAnd we worship thy Name, ever world without end.\nVouchsafe, O Lord, to keep us this day without sin.\nO Lord, have mercy upon us, have mercy upon us.\nO Lord, let thy mercy lighten upon us, as our trust is in thee.\nO Lord, in thee have I trusted: let me never be confounded."
+          ],
+          "label": "TE DEUM LAUDAMUS."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall be read in like manner THE SECOND LESSON as appointed; and after that the following Canticle, except when it forms part of the Gospel or Second Lesson appointed for the day."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "bible-reading",
+      "style": "long",
+      "label": "The Second Reading",
+      "lookup": {
+        "type": "lectionary",
+        "table": "readings",
+        "item": "morning_second_reading"
+      },
+      "version": "KJV",
+      "metadata": {
+        "intro": {
+          "style": "text",
+          "language": "en",
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "value": [
+            "A Reading from ${longName}."
+          ]
+        },
+        "compiled_intro": {
+          "hidden": false,
+          "style": "text",
+          "language": "en",
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "value": [
+            "A Reading from the Gospel According to Mark."
+          ]
+        }
+      },
+      "citation": "Mark 6. 30-end",
+      "language": "en",
+      "value": [
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "30",
+          "text": "And the apostles gathered themselves together unto Jesus, and told him all things, both what they had done, and what they had taught. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "31",
+          "text": "And he said unto them, Come ye yourselves apart into a desert place, and rest a while: for there were many coming and going, and they had no leisure so much as to eat. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "32",
+          "text": "And they departed into a desert place by ship privately. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "33",
+          "text": "And the people saw them departing, and many knew him, and ran afoot thither out of all cities, and outwent them, and came together unto him. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "34",
+          "text": "And Jesus, when he came out, saw much people, and was moved with compassion toward them, because they were as sheep not having a shepherd: and he began to teach them many things. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "35",
+          "text": "And when the day was now far spent, his disciples came unto him, and said, This is a desert place, and now the time is far passed: "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "36",
+          "text": "Send them away, that they may go into the country round about, and into the villages, and buy themselves bread: for they have nothing to eat. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "37",
+          "text": "He answered and said unto them, Give ye them to eat. And they say unto him, Shall we go and buy two hundred pennyworth of bread, and give them to eat? "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "38",
+          "text": "He saith unto them, How many loaves have ye? go and see. And when they knew, they say, Five, and two fishes. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "39",
+          "text": "And he commanded them to make all sit down by companies upon the green grass. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "40",
+          "text": "And they sat down in ranks, by hundreds, and by fifties. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "41",
+          "text": "And when he had taken the five loaves and the two fishes, he looked up to heaven, and blessed, and brake the loaves, and gave them to his disciples to set before them; and the two fishes divided he among them all. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "42",
+          "text": "And they did all eat, and were filled. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "43",
+          "text": "And they took up twelve baskets full of the fragments, and of the fishes. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "44",
+          "text": "And they that did eat of the loaves were about five thousand men. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "45",
+          "text": "And straightway he constrained his disciples to get into the ship, and to go to the other side before unto Bethsaida, while he sent away the people. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "46",
+          "text": "And when he had sent them away, he departed into a mountain to pray. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "47",
+          "text": "And when even was come, the ship was in the midst of the sea, and he alone on the land. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "48",
+          "text": "And he saw them toiling in rowing; for the wind was contrary unto them: and about the fourth watch of the night he cometh unto them, walking upon the sea, and would have passed by them. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "49",
+          "text": "But when they saw him walking upon the sea, they supposed it had been a spirit, and cried out: "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "50",
+          "text": "For they all saw him, and were troubled. And immediately he talked with them, and saith unto them, Be of good cheer: it is I; be not afraid. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "51",
+          "text": "And he went up unto them into the ship; and the wind ceased: and they were sore amazed in themselves beyond measure, and wondered. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "52",
+          "text": "For they considered not the miracle of the loaves: for their heart was hardened. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "53",
+          "text": "And when they had passed over, they came into the land of Gennesaret, and drew to the shore. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "54",
+          "text": "And when they were come out of the ship, straightway they knew him, "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "55",
+          "text": "And ran through that whole region round about, and began to carry about in beds those that were sick, where they heard he was. "
+        },
+        {
+          "book": "Mark",
+          "chapter": "6",
+          "verse": "56",
+          "text": "And whithersoever he entered, into villages, or cities, or country, they laid the sick in the streets, and besought him that they might touch if it were but the border of his garment: and as many as touched him were made whole. "
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "day": {
+                  "except": [
+                    "saturday-fourth-sunday-after-trinity"
+                  ]
+                }
+              }
+            ]
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "for he hath visited and redeemed his people;",
+                  "verse": "BLESSED be the Lord God of Israel; / ",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "And hath raised up a mighty salvation for us, /",
+                  "halfverse": "in the house of his servant David;"
+                },
+                {
+                  "halfverse": "which have been since the world began;",
+                  "type": "psalm-verse",
+                  "verse": "As he spake by the mouth of his holy Prophets, /"
+                },
+                {
+                  "halfverse": "and from the hands of all that hate us;",
+                  "type": "psalm-verse",
+                  "verse": "That we should be saved from our enemies, /"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and to remember his holy covenant;",
+                  "verse": "To perform the mercy promised to our forefathers,"
+                },
+                {
+                  "halfverse": "that he would grant us",
+                  "verse": "To perform the oath which he sware to our forefather Abraham, /",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "That we being delivered out of the hands of our enemies /",
+                  "type": "psalm-verse",
+                  "halfverse": "might serve him without fear,"
+                },
+                {
+                  "verse": "In holiness and righteousness before him, /",
+                  "halfverse": "all the days of our life.",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "for thou shalt go before the face of the Lord to prepare his ways;",
+                  "verse": "AND thou, child, shalt be called the Prophet of the Highest: /",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "for the remission of their sins;",
+                  "verse": "To give knowledge of salvation unto his people / ",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "whereby the day-spring from on high hath visited us;",
+                  "verse": "Through the tender mercy of our God; /",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and to guide our feet into the way of peace.",
+                  "verse": "To give light to them that sit in darkness, and in the shadow of death, /",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and to the Holy Ghost;",
+                  "verse": "GLORY be to the Father, and to the Son, / ",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "As it was in the beginning, is now, and ever shall be, / ",
+                  "halfverse": "world without end. Amen."
+                }
+              ]
+            }
+          ],
+          "label": "Benedictus. St Luke 1:68",
+          "type": "psalm",
+          "style": "canticle"
+        },
+        {
+          "hidden": false,
+          "type": "psalm",
+          "style": "psalm",
+          "metadata": {
+            "number": "100",
+            "latinname": "Jubilate Deo."
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "number": "1",
+                  "verse": "O BE joyful in the LORD, all ye lands: / ",
+                  "halfverse": "serve the LORD with gladness, and come before his presence with a song."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "2",
+                  "verse": "Be ye sure that the LORD he is God; / ",
+                  "halfverse": "it is he that hath made us, and not we ourselves; we are his people, and the sheep of his pasture."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "3",
+                  "verse": "O go your way into his gates with thanksgiving, and into his courts with praise; / ",
+                  "halfverse": "be thankful unto him, and speak good of his Name."
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "verse": "For the LORD is gracious, his mercy is everlasting; / ",
+                  "halfverse": "and his truth endureth from generation to generation"
+                }
+              ]
+            }
+          ],
+          "slug": "psalm_100",
+          "label": "Psalm 100"
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall be said or sung the Confession of the Faith, called the Apostles’ Creed. "
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "I BELIEVE in God the Father Almighty, Maker of heaven and earth:",
+        "And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead; He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead.",
+        "I believe in the Holy Ghost; The holy Catholic Church; The Communion of Saints; The Forgiveness of sins; The Resurrection of the body, And the Life everlasting."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "And after the Creed these prayers following, all devoutly kneeling, the Minister first pronouncing:"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "",
+          "text": "The Lord be with you;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "And with thy spirit."
+        },
+        {
+          "label": "Minister.",
+          "text": "Let us pray."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "responsive",
+      "value": [
+        {
+          "label": "",
+          "text": "Lord, have mercy upon us.",
+          "response": "Christ, have mercy upon us."
+        },
+        {
+          "text": "Lord, have mercy upon us.",
+          "response": ""
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then the Priest standing up shall say:"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "",
+          "text": "O Lord, show thy mercy upon us;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "And grant us thy salvation."
+        },
+        {
+          "label": "Priest.",
+          "text": "O Lord, save the Queen;"
+        },
+        {
+          "label": "People.",
+          "text": "And mercifully hear us when we call upon thee."
+        },
+        {
+          "label": "Priest.",
+          "text": "Endue thy Ministers with righteousness;"
+        },
+        {
+          "label": "People.",
+          "text": "And make thy chosen people joyful."
+        },
+        {
+          "label": "Priest.",
+          "text": "O Lord, save thy people;"
+        },
+        {
+          "label": "People.",
+          "text": "And bless thine inheritance."
+        },
+        {
+          "label": "Priest.",
+          "text": "Give peace in our time, O Lord;"
+        },
+        {
+          "label": "People.",
+          "text": "And evermore mightily defend us."
+        },
+        {
+          "label": "Priest.",
+          "text": "O God, make clean our hearts within us;"
+        },
+        {
+          "label": "People.",
+          "text": "And take not thy Holy Spirit from us."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall follow THE COLLECT OF THE DAY, together with any other Collects appointed to be said, and these two prayers in order."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "label": "The Collect of the Day",
+      "category": [
+        "Collect",
+        "Collect of the Day"
+      ],
+      "slug": "second-sunday-in-advent",
+      "value": [
+        "BLESSED Lord, who hast caused all holy Scriptures to be written for our learning: Grant that we may in such wise hear them, read, mark, learn, and inwardly digest them, that by patience and comfort of thy holy Word, we may embrace and ever hold fast the blessed hope of everlasting life, which thou hast given us in our Saviour Jesus Christ."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "O GOD, who art the author of peace and lover of concord, in knowledge of whom standeth our eternal life, whose service is perfect freedom: Defend us thy humble servants in all assaults of our enemies; that we, surely trusting in thy defence, may not fear the power of any adversaries; through the might of Jesus Christ our Lord."
+      ],
+      "label": "The Second Collect, for Peace."
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "O LORD our heavenly Father, Almighty and everlasting God, who hast safely brought us to the beginning of this day: Defend us in the same with thy mighty power; and grant that this day we fall into no sin, neither run into any kind of danger; but that all our doings may be ordered by thy governance, to do always that is righteous in thy sight; through Jesus Christ our Lord."
+      ],
+      "label": "The Third Collect, for Grace."
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here may follow an Anthem or an Hymn.",
+        "Then shall be read one of the Prayers for the Queen, and the Prayer for the Clergy and People."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O LORD our heavenly Father, high and mighty, King of kings, Lord of lords, the only Ruler of princes, who dost from thy throne behold all the dwellers upon earth: Most heartily we beseech thee with thy favour to behold our most gracious Sovereign Lady, Queen ELIZABETH; and so replenish her with the grace of thy Holy Spirit, that she may alway incline to thy will, and walk in thy way: Endue her plenteously with heavenly gifts; grant her in health and wealth long to live; strengthen her that she may vanquish and overcome all her enemies, and finally after this life she may attain everlasting joy and felicity; through Jesus Christ our Lord."
+          ],
+          "label": "A Prayer for the Queen’s Majesty."
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "ALMIGHTY God, the fountain of all goodness, we humbly beseech thee to bless our Sovereign Lady, Queen ELIZABETH, the Parliaments of the Commonwealth, and all who are set in authority under her; that they may order all things in wisdom, righteousness, and peace, to the honour of thy holy Name, and the good of thy Church and people; through Jesus Christ our Lord."
+          ],
+          "label": "A Prayer for the Queen and the Commonwealth."
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O LORD God Almighty, who rulest the nations of the earth, we humbly beseech thee with thy favour to behold our Sovereign Lady, Queen ELIZABETH, that in all things she may be led by thy guidance and protected by thy power. We pray thee also to bless [*……..] and all the Royal Family. Endue with wisdom the Governor-General of this Dominion, the Lieutanant-Governors of the Provinces, the Legislators of the Commonwealth and Empire, and all who are set in authority; that all things may be so ordered and settled by their endeavours upon the best and surest foundations, that peace and happiness, truth and justice, religion and piety, may be established among us for all generations; through Jesus Christ our Lord."
+          ],
+          "label": "A Prayer for the Queen and all in Authority."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "ALMIGHTY and everlasting God, from whom cometh every good and perfect gift: Send down upon our Bishops and Clergy, and all Congregations committed to their charge, the healthful Spirit of thy grace; and that they may truly please thee, pour upon them the continual dew of thy blessing. Grant this, O Lord, for the honour of our Advocate and Mediator, Jesus Christ."
+      ],
+      "label": "A Prayer for the Clergy and People."
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then may be read any of the Occasional Prayers or Thanksgivings, or any prayers sanctioned by the Ordinary, always ending with the Prayer of St Chrysostom and the Grace; and before any of the prayers may be said Let us pray for —, and before any of the thanksgivings, Let us give thanks for —."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "O GOD, the Creator and Preserver of all mankind, we humbly beseech thee for all sorts and conditions of men; that thou wouldest be pleased to make thy ways known unto them, thy saving health unto all nations. More especially we pray for the good estate of the Catholic Church; that it may be so guided and governed by thy good Spirit, that all who profess and call themselves Christians may be led into the way of truth, and hold the faith in unity of spirit, in the bond of peace, and in righteousness of life. Finally we commend to thy fatherly goodness all those, who are any ways afflicted or distressed in mind, body, or estate; [* especially those for whom our prayers are desired;] that it may please thee to comfort and relieve them, according to their several necessities, giving them patience under their sufferings, and a happy issue out of all their afflictions. And this we beg for Jesus Christ his sake."
+      ],
+      "label": "A Prayer for all Conditions of men."
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "ALMIGHTY God, Father of all mercies, We thine unworthy servants do give thee most humble and hearty thanks For all thy goodness and loving-kindness To us and to all men; [* particularly to those who desire now to offer up their praises and thanksgivings.] We bless thee for our creation, preservation, and all the blessings of this life; But above all for thine inestimable love In the redemption of the world by our Lord Jesus Christ; For the means of grace, And for the hope of glory. And we beseech thee, give us that due sense of all thy mercies, That our hearts may be unfeignedly thankful, And that we show forth thy praise, Not only with our lips, but in our lives; By giving up ourselves to thy service, And by walking before thee in holiness and righteousness all our days; Through Jesus Christ our Lord, To whom, with thee and the Holy Ghost, be all honour and glory, world without end."
+      ],
+      "label": "A General Thanksgiving"
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "ALMIGHTY God, who hast given us grace at this time with one accord to make our common supplications unto thee; and dost promise that when two or three are gathered together in thy Name thou wilt grant their requests: Fulfil now, O Lord, the desires and petitions of thy servants, as may be most expedient for them; granting us in this world knowledge of thy truth, and in the world to come life everlasting."
+      ],
+      "label": " A Prayer of Saint Chrysostom."
+    },
+    {
+      "hidden": false,
+      "type": "bible-reading",
+      "style": "short",
+      "citation": "2 Corinthians 13:14",
+      "metadata": {
+        "response": "Amen."
+      },
+      "value": [
+        {
+          "book": "2 Corinthians",
+          "chapter": "13",
+          "verse": "14",
+          "text": "THE grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Ghost, be with us all evermore."
+        }
+      ]
+    }
+  ],
+  "sharing": {
+    "collaborators": [],
+    "privacy": "organization",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "status": "draft"
+  },
+  "type": "liturgy",
+  "slug": "morning-prayer",
+  "metadata": {
+    "preferences": {
+      "bibleVersion": {
+        "key": "bibleVersion",
+        "label": "Bible Version",
+        "options": [
+          {
+            "value": "KJV",
+            "label": "King James Version (KJV)",
+            "default": true
+          },
+          {
+            "value": "ESV",
+            "label": "English Standard Version (ESV)"
+          },
+          {
+            "value": "NRSV",
+            "label": "New Revised Standard Version"
+          },
+          {
+            "value": "CEB",
+            "label": "Common English Bible (CEB)"
+          }
+        ]
+      },
+      "psalmCycle": {
+        "key": "psalmCycle",
+        "options": [
+          {
+            "value": "30day_psalter",
+            "label": "More (30-day cycle)",
+            "default": true
+          },
+          {
+            "value": "60day_psalter",
+            "label": "Fewer (60-day cycle)"
+          }
+        ],
+        "label": "How many psalms should we include?"
+      },
+      "properPsalms": {
+        "key": "properPsalms",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes (use the proper psalms)",
+            "default": true
+          },
+          {
+            "value": "no",
+            "label": "No (use the psalm cycle I select)"
+          }
+        ],
+        "label": "Should we use the proper psalms for Sundays and holy days?"
+      }
+    }
+  }
+};
+const node = document.createElement('ldf-liturgical-document');
+    node.doc = LITURGY;
+    document.querySelector('#example').appendChild(node);
   </script>
 </body>
 </html>

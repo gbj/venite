@@ -18,11 +18,13 @@
 }
 
 .drop {
-  float: left;
+  float: var(--ldf-drop-float);
   font-family: var(--ldf-drop-font-family);
   font-size: var(--ldf-drop-font-size);
   margin-right: var(--ldf-drop-margin-right);
+  margin-top: var(--ldf-drop-margin-top);
   line-height: var(--ldf-drop-line-height);
+  color: var(--ldf-drop-color);
 }
 
 :host[dir='rtl'] .drop {

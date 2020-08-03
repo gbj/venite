@@ -86,13 +86,22 @@
   /* Dropcap styling */
   --ldf-drop-firstword-font-variant: small-caps;
   --ldf-drop-font-family: 'EB Garamond Initials', 'EB Garamond', 'Garamond', serif;
+  --ldf-drop-float: left;
   --ldf-drop-font-size: 2.5em;
   --ldf-drop-margin-right: 0.05em;
   --ldf-drop-line-height: 1em;
 
+  /* Hide numbers of first two verses (for dropcap purposes) */
+  --ldf-drop-early-verses-display: none;
+
   .dropcaps-none {
     --ldf-drop-firstword-font-variant: normal;
     --ldf-drop-font-family: var(--ldf-font-face);
+    --ldf-drop-font-size: 1em;
+    --ldf-drop-margin-right: 0;
+    --ldf-drop-margin-top: 0;
+    --ldf-drop-float: none;
+    --ldf-drop-early-verses-display: var(--ldf-psalm-number-display);
   }
 
   .dropcaps-plain {

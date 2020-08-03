@@ -220,6 +220,7 @@ export class BibleReadingComponent {
                 <sup>{(verse as BibleReadingVerse).verse}</sup>,
                 <ldf-string
                   citation={verse}
+                  dropcap={verseIndex == 0 ? 'force' : 'enabled'}
                   id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
                   text={(verse as BibleReadingVerse).text}
                   index={verseIndex}
