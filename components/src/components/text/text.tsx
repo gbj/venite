@@ -125,13 +125,13 @@ export class TextComponent {
                     <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                       <ldf-string text={chunk}
                         citation={{label: this.obj.label}}
-                        dropcap={this.obj.value[prayerIndex].length > 200 && chunkIndex == 0 ? 'force' : 'enabled'}
+                        dropcap={(this.obj.value[prayerIndex].length > 200 && prayerIndex == 0 && chunkIndex == 0) || (prayerIndex == 0 && chunkIndex == 0 && this.obj.value.length > 1) ? 'force' : 'enabled'}
                         index={prayerIndex + chunkIndex}>
                       </ldf-string>
                     </span>
                   )}
-                  {this.obj.metadata && this.obj.metadata.response && <span class="response"> {this.obj.metadata.response}</span>}
-                  {(!(this.obj.metadata && this.obj.metadata.response) && this.obj.style == 'prayer') && <span class="response"> {localeStrings.amen}</span>}
+                  {this.obj?.metadata?.response && prayerIndex == this.obj.value.length - 1 && <span class="response"> {this.obj.metadata.response}</span>}
+                  {!this.obj?.metadata?.response && this.obj.style == 'prayer' && prayerIndex == this.obj.value.length - 1 && <span class="response"> {localeStrings.amen}</span>}
               </p>
             )
           }

@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
   <style>
+    .content {
+      max-width: 800px;
+    }
 :root {
   --ion-color-primary: #69bb7b;
   --ion-color-primary-rgb: 105,187,123;
@@ -45,10 +48,120 @@
   --ion-color-shade: var(--ion-color-primary-shade);
   --ion-color-tint: var(--ion-color-primary-tint);
 }
+
+/* LDF global styles */
+:root {
+	--ldf-background-color: #ffffff;
+	--ldf-color: #121212;
+	--ldf-font-face: "Times New Roman", serif;
+	--ldf-controls-font-family: "Roboto", sans-serif;
+	--ldf-title-text-align: center;
+	--ldf-title-font-weight: bold;
+	--ldf-title-font-style: normal;
+	--ldf-title-font-variant: small-caps;
+	--ldf-title-font-size: 2em;
+	--ldf-subtitle-font-style: italic;
+	--ldf-subtitle-font-weight: normal;
+	--ldf-subtitle-font-variant: normal;
+	--ldf-subtitle-font-size: 1em;
+	--ldf-response-font-weight: bold;
+	--ldf-response-font-style: normal;
+	--ldf-text-border-width: 1px;
+	--ldf-text-border-bottom-width: 3px;
+	--ldf-text-border-radius: 4px;
+	--ldf-rubric-color: rgb(252, 13, 27);
+	--ldf-rubric-font-style: italic;
+	--ldf-rubric-font-weight: normal;
+	--ldf-rubric-font-size: 90%;
+	--ldf-antiphon-font-style: italic;
+	--ldf-antiphon-font-weight: normal;
+  --ldf-psalm-grid-display: block;
+  --ldf-psalm-grid-template-columns: 1.5em 1fr;
+  --ldf-psalm-grid-template-areas: "number verse";
+  --ldf-psalm-line-break-display: none;
+  --ldf-psalm-halfverse-margin-left: 0.125em;
+  --ldf-psalm-text-grid-area: verse;
+  --ldf-psalm-number-grid-area: number;
+  --ldf-psalm-text-display: inline;
+  --ldf-psalm-verse-display: inline;
+  --ldf-psalm-verse-indentation: 0.5em;
+  --ldf-psalm-number-margin-right: 0.5em;
+	--ldf-psalm-antiphon-display: block;
+	--ldf-psalm-repeat-antiphon-display: none;
+	--ldf-drop-firstword-font-variant: small-caps;
+	--ldf-drop-font-family: "Times New Roman", serif;
+	--ldf-drop-font-size: 2.3em;
+	--ldf-drop-margin-right: 0.05em;
+	--ldf-drop-line-height: 1em;
+	--ldf-title-text-transform: uppercase;
+  --ldf-bible-reading-citation-float: right;
+  --ldf-h3-text-align: center;
+  --ldf-h3-font-variant: small-caps;
+}
+
+:root .dark {
+	--ldf-background-color: #ffffff;
+	--ldf-color: #121212
+}
+
+:root .font-gill-sans {
+	--ldf-font-face: "Gill Sans", sans-serif
+}
+
+:root .response-italics {
+	--ldf-response-font-weight: normal;
+	--ldf-response-font-style: italic
+}
+
+:root .psalmverses-false {
+	--ldf-psalm-number-display: none;
+	--ldf-psalm-grid-display: block
+}
+
+:root .repeat-antiphon-repeat {
+	--ldf-psalm-repeat-antiphon-display: block
+}
+
+:root .repeat-antiphon-none {
+	--ldf-psalm-antiphon-display: none
+}
+
+:root .dropcaps-none {
+	--ldf-drop-firstword-font-variant: normal;
+	--ldf-drop-font-family: var(--ldf-font-face)
+}
+
+:root .dropcaps-plain {
+	--ldf-drop-font-family: "Times New Roman";
+	--ldf-drop-font-size: 2.7em;
+	--ldf-drop-margin-right: 0.05em;
+	--ldf-drop-margin-top: -0.05em
+}
+
+@media (min-width: 767px) {
+	:root {
+		--ldf-drop-font-size: 3em;
+		--ldf-drop-margin-right: 0.05em;
+		--ldf-drop-margin-top: 0;
+		--ldf-drop-line-height: .8em
+	}
+	:root .dropcaps-plain {
+		--ldf-drop-font-size: 3em;
+		--ldf-drop-margin-right: 0.05em;
+		--ldf-drop-margin-top: -0.05em;
+		--ldf-drop-line-height: .8em
+	}
+}
+
+
+/* Re-style LDF components to match Canadian style */
+ldf-psalm .psalm br {
+		display: none;
+}
   </style>
 </head>
 <body>
-    <ion-content id='example' class="ion-padding dropcaps-plain">
+    <ion-content id='example' class="content ion-padding dropcaps-plain">
       <ldf-liturgical-document doc=''></ldf-liturgical-document>
 
 

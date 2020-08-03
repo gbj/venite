@@ -4,7 +4,7 @@ import { SelectableCitation } from '@venite/ldf';
 @Component({
   tag: 'ldf-string',
   styleUrl: 'string.scss',
-  shadow: true
+  scoped: true
 })
 export class StringComponent {
   @Element() element: HTMLElement;
@@ -73,9 +73,11 @@ export class StringComponent {
 
   processMarkup(s : string) : JSX.Element[] {
     const nodes = s
-      .replace(/!^([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
+      .replace(/^([A-Z]{2,})/, (match) => match[0] + match.slice(1).toLowerCase())
+      .replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
       .split(/([\*\^][^\*\^]*[\*\^])/g)  // markdown ** => italics
       .map(node => {
+        console.log(node);
         if(node.startsWith('*') && node.endsWith('*')) {
           return <em>{node.slice(1, node.length - 1)}</em>;
         } else if(node.startsWith('^') && node.endsWith('^')) {
@@ -110,9 +112,11 @@ export class StringComponent {
   }
 
   processDropcap(processed : JSX.Element[]) : JSX.Element[] {
-    console.log('processing dropcap on ', processed);
-    const firstChunk = processed[0];
-    if(typeof firstChunk === 'string') {
+    const first = processed[0],
+          firstChunk = typeof first === 'string' ? first : '';
+    let final = processed;
+
+    if(firstChunk) {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord : string = splitTest ? splitTest[0] : '',
             re : RegExp = firstWord.length > 2 ? /^([\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
@@ -120,15 +124,14 @@ export class StringComponent {
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
 
-      console.log(firstWord, match1, match2, nextWord);
 
-      processed = new Array(
+      final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
       )
         .concat(nextWord)
         .concat(processed.slice(1));
     }
-    return processed;
+    return final;
   }
 
   // Lifecycle events
