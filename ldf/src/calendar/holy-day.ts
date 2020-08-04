@@ -1,4 +1,5 @@
 import { LiturgicalColor } from './liturgical-color';
+import { Seasons } from './seasons';
 
 export class HolyDay {
   /** An identifying slug for the day.
@@ -32,16 +33,7 @@ export class HolyDay {
   name?: string;
 
   /** A machine-readable identifier for the liturgical season */
-  season?:
-    | 'Advent'
-    | 'Christmas'
-    | 'Epiphany'
-    | 'Lent'
-    | 'HolyWeek'
-    | 'Easter'
-    | 'Pentecost'
-    | 'Saints'
-    | 'OrdinaryTime';
+  season?: Seasons[number];
 
   /** Optional: Identifies whether it is the Eve of ___ */
   eve?: boolean;

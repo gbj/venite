@@ -7,38 +7,3 @@
 ### Classes
 
 * [LiturgicalWeek](../classes/_calendar_liturgical_week_.liturgicalweek.md)
-
-### Type aliases
-
-* [Seasons](_calendar_liturgical_week_.md#seasons)
-
-### Variables
-
-* [SEASONS](_calendar_liturgical_week_.md#const-seasons)
-
-## Type aliases
-
-###  Seasons
-
-Ƭ **Seasons**: *typeof SEASONS*
-
-*Defined in [calendar/liturgical-week.ts:15](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L15)*
-
-## Variables
-
-### `Const` SEASONS
-
-• **SEASONS**: *string[]* = [
-  'Advent',
-  'Christmas',
-  'Epiphany',
-  'Lent',
-  'HolyWeek',
-  'Easter',
-  'Ascension',
-  'Pentecost',
-  'Saints',
-  'OrdinaryTime',
-]
-
-*Defined in [calendar/liturgical-week.ts:3](https://github.com/gbj/venite/blob/589cd56/ldf/src/calendar/liturgical-week.ts#L3)*

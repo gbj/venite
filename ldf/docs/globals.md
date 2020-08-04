@@ -17,6 +17,7 @@
 * ["calendar/liturgical-day"](modules/_calendar_liturgical_day_.md)
 * ["calendar/liturgical-week"](modules/_calendar_liturgical_week_.md)
 * ["calendar/proper-liturgy"](modules/_calendar_proper_liturgy_.md)
+* ["calendar/seasons"](modules/_calendar_seasons_.md)
 * ["calendar/utils/add-one-day"](modules/_calendar_utils_add_one_day_.md)
 * ["calendar/utils/date-from-ymd"](modules/_calendar_utils_date_from_ymd_.md)
 * ["calendar/utils/date-only"](modules/_calendar_utils_date_only_.md)

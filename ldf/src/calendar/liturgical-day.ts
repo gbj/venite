@@ -1,5 +1,6 @@
 import { LiturgicalColor } from './liturgical-color';
-import { LiturgicalWeek, Seasons } from './liturgical-week';
+import { LiturgicalWeek } from './liturgical-week';
+import { Seasons } from './seasons';
 import { HolyDay } from './holy-day';
 import { dateOnly } from './utils/date-only';
 import { dateFromYMD, dateFromYMDString } from './utils/date-from-ymd';

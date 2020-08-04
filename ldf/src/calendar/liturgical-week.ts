@@ -1,18 +1,5 @@
 import { LiturgicalColor } from './liturgical-color';
-
-export const SEASONS = [
-  'Advent',
-  'Christmas',
-  'Epiphany',
-  'Lent',
-  'HolyWeek',
-  'Easter',
-  'Ascension',
-  'Pentecost',
-  'Saints',
-  'OrdinaryTime',
-];
-export type Seasons = typeof SEASONS;
+import { Seasons } from './seasons';
 
 export class LiturgicalWeek {
   /**
