@@ -8,13 +8,13 @@ export interface CalendarServiceInterface {
 
   findWeek : (kalendar : string, query : LiturgicalWeekIndex) => Observable<LiturgicalWeek[]>;
 
-  findFeastDays : (kalendar : string, mmdd : string) => Observable<HolyDay[]>;
+  findFeastDays : (kalendar : string, mmdd : string, evening : boolean) => Observable<HolyDay[]>;
 
-  findSpecialDays : (kalendar : string, slug : string) => Observable<HolyDay[]>;
+  findSpecialDays : (kalendar : string, slug : string, evening : boolean) => Observable<HolyDay[]>;
 
   findProperLiturgies : (day : LiturgicalDay, language : string) => Observable<ProperLiturgy[]>;
 
-  addHolyDays : (day : LiturgicalDay, vigil : boolean) => Observable<LiturgicalDay>;
+  addHolyDays : (day : LiturgicalDay, vigil : boolean, evening : boolean) => Observable<LiturgicalDay>;
 
   buildWeek : (date : Observable<Date>, kalendar : Observable<string>, vigil : Observable<boolean>) => Observable<LiturgicalWeek[]>;
 
