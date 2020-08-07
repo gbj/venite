@@ -48,6 +48,18 @@ export class PrayService {
           tap(doc => console.log('latest compiled form is', doc))
         );
       }
+
+      // insert antiphon if necessary
+      // seasonal antiphon
+      if(doc.type == 'psalm' && doc.metadata?.insert_seasonal_antiphon) {
+        return this.insertAntiphon(doc, day).pipe(
+          switchMap(docWithAntiphon => this.compile(docWithAntiphon, day, prefs))
+        );
+      }
+      // antiphon by date => add day to document
+      if(doc.type == 'psalm' && doc.metadata?.antiphon && typeof doc.metadata.antiphon == 'object' && !doc.metadata.antiphon.hasOwnProperty('type')) {
+        doc.day = day;
+      }
     
       // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
       if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('value')) {
@@ -267,6 +279,31 @@ export class PrayService {
     return this.bibleService.getText(doc.citation, version).pipe(
       map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value })),
     );
+  }
+
+  /** Finds and inserts an appropriate seasonal antiphon */
+  insertAntiphon(doc : LiturgicalDocument, day : LiturgicalDay) : Observable<LiturgicalDocument> {
+    return this.documents.findDocumentsByCategory(['Seasonal Antiphon'], doc.language || 'en', []).pipe(
+      // filter antiphons to find the appropriate one
+      map(antiphons => {
+        const antiphonsForDay = antiphons.filter(antiphon => antiphon.category.includes(day.propers || day.slug));
+        if(antiphonsForDay.length == 0) {
+          const antiphonsForSeason = antiphons.filter(antiphon => antiphon.category.includes(day.season || day.week?.season));
+          return docsToOption(antiphonsForSeason);
+        } else {
+          return docsToOption(antiphonsForDay);
+        }
+      }),
+      map(antiphon => new LiturgicalDocument({
+        ... doc,
+        metadata: {
+          ... doc.metadata,
+          insert_seasonal_antiphon: false,
+          antiphon
+        }
+      })),
+      tap(doc => console.log('doc with antiphon', doc))
+    )
   }
 }
 
