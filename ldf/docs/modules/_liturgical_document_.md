@@ -24,7 +24,7 @@
 
 Ƭ **LookupTypeTuple**: *typeof LOOKUP_TYPES*
 
-*Defined in [liturgical-document.ts:27](https://github.com/gbj/venite/blob/9f3c8d5/ldf/src/liturgical-document.ts#L27)*
+*Defined in [liturgical-document.ts:27](https://github.com/gbj/venite/blob/87c8209/ldf/src/liturgical-document.ts#L27)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 Ƭ **TypeTuple**: *typeof TYPES*
 
-*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/9f3c8d5/ldf/src/liturgical-document.ts#L24)*
+*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/87c8209/ldf/src/liturgical-document.ts#L24)*
 
 ## Variables
 
@@ -40,7 +40,7 @@ ___
 
 • **LOOKUP_TYPES**: *string[]* = ['lectionary', 'canticle', 'category', 'slug', 'collect']
 
-*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/9f3c8d5/ldf/src/liturgical-document.ts#L26)*
+*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/87c8209/ldf/src/liturgical-document.ts#L26)*
 
 ___
 
@@ -59,4 +59,4 @@ ___
   'meditation',
 ] as const
 
-*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/9f3c8d5/ldf/src/liturgical-document.ts#L12)*
+*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/87c8209/ldf/src/liturgical-document.ts#L12)*
