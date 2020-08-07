@@ -41,6 +41,8 @@
 * [ResponsivePrayer](_index_.md#responsiveprayer)
 * [ResponsivePrayerLine](_index_.md#responsiveprayerline)
 * [Rubric](_index_.md#rubric)
+* [SEASONS](_index_.md#seasons)
+* [Seasons](_index_.md#seasons)
 * [SelectableCitation](_index_.md#selectablecitation)
 * [Sharing](_index_.md#sharing)
 * [Source](_index_.md#source)
@@ -280,6 +282,18 @@ ___
 ###  Rubric
 
 • **Rubric**:
+
+___
+
+###  SEASONS
+
+• **SEASONS**:
+
+___
+
+###  Seasons
+
+• **Seasons**:
 
 ___
 

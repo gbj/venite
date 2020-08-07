@@ -11,6 +11,7 @@ export * from './calendar/liturgical-color';
 export * from './calendar/liturgical-day';
 export * from './calendar/liturgical-week';
 export * from './calendar/proper-liturgy';
+export * from './calendar/seasons';
 export * from './calendar/utils';
 
 export * from './canticle-table/canticle-table';
