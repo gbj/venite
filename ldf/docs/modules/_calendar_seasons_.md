@@ -18,7 +18,7 @@
 
 Ƭ **Seasons**: *typeof SEASONS*
 
-*Defined in [calendar/seasons.ts:16](https://github.com/gbj/venite/blob/87c8209/ldf/src/calendar/seasons.ts#L16)*
+*Defined in [calendar/seasons.ts:16](https://github.com/gbj/venite/blob/204eab7/ldf/src/calendar/seasons.ts#L16)*
 
 ## Variables
 
@@ -40,4 +40,4 @@
   'Rogation',
 ]
 
-*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/87c8209/ldf/src/calendar/seasons.ts#L1)*
+*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/204eab7/ldf/src/calendar/seasons.ts#L1)*

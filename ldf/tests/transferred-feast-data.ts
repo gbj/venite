@@ -48,9 +48,30 @@ export const FEAST_DAYS : HolyDay[] = [
             rank: 3
         },
         mmdd: "5/31"
-    }
+    },
     // 5/31 also happened to be pentecost
     // 6/1 empty
+    /* For phony transfers */
+    {
+      "mmdd": "8/6",
+      "kalendar": "bcp1962",
+      "name": "The Transfiguration of our Lord.",
+      "slug": "transfiguration",
+      "type": {
+        "name": "Red-Letter",
+        "rank": 5
+      }
+    },
+    {
+      "mmdd": "8/7",
+      "kalendar": "bcp1962",
+      "name": "The Name of Jesus.",
+      "slug": "name-of-jesus",
+      "type": {
+        "name": "Black-Letter",
+        "rank": 2
+      }
+    }
 ]
 
 export const SPECIAL_DAYS : HolyDay[] = [
@@ -129,6 +150,278 @@ export const SPECIAL_DAYS : HolyDay[] = [
 ]
 
 export const LITURGICAL_DAYS : { [ yyyymmdd : string ] : LiturgicalDay } = {
+  '2020/7/31': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-7-31",
+    "kalendar": "bcp1962",
+    "slug": "friday-seventh-sunday-after-trinity",
+    "propers": "friday-seventh-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 24,
+      "season": "OrdinaryTime",
+      "name": "Seventh Sunday after Trinity",
+      "slug": "seventh-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/1': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-1",
+    "kalendar": "bcp1962",
+    "slug": "saturday-seventh-sunday-after-trinity",
+    "propers": "saturday-seventh-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 24,
+      "season": "OrdinaryTime",
+      "name": "Seventh Sunday after Trinity",
+      "slug": "seventh-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/1",
+        "kalendar": "bcp1962",
+        "name": "Lammas Day.",
+        "slug": "lammas-day.",
+        "type": {
+          "name": "Black-Letter",
+          "rank": 2
+        }
+      },
+      {
+        "mmdd": "8/1",
+        "kalendar": "bcp1962",
+        "name": "The Maccabean Martyrs.",
+        "slug": "the-maccabean-martyrs.",
+        "type": {
+          "name": "Black-Letter",
+          "rank": 2
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "holy_day_observed": {
+      "mmdd": "8/1",
+      "kalendar": "bcp1962",
+      "name": "Lammas Day.",
+      "slug": "lammas-day.",
+      "type": {
+        "name": "Black-Letter",
+        "rank": 2
+      }
+    }
+  }),
+  '2020/8/2': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-2",
+    "kalendar": "bcp1962",
+    "slug": "sunday-eighth-sunday-after-trinity",
+    "propers": "sunday-eighth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/3': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-3",
+    "kalendar": "bcp1962",
+    "slug": "monday-eighth-sunday-after-trinity",
+    "propers": "monday-eighth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/4': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-4",
+    "kalendar": "bcp1962",
+    "slug": "tuesday-eighth-sunday-after-trinity",
+    "propers": "tuesday-eighth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/5': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-5",
+    "kalendar": "bcp1962",
+    "slug": "wednesday-eighth-sunday-after-trinity",
+    "propers": "wednesday-eighth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/5",
+        "kalendar": "bcp1962",
+        "name": "Oswald, King of Northumbria, Martyr 641.",
+        "slug": "oswald",
+        "type": {
+          "name": "Black-Letter",
+          "rank": 2
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "holy_day_observed": {
+      "mmdd": "8/5",
+      "kalendar": "bcp1962",
+      "name": "Oswald, King of Northumbria, Martyr 641.",
+      "slug": "oswald",
+      "type": {
+        "name": "Black-Letter",
+        "rank": 2
+      }
+    }
+  }),
+  '2020/8/6': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-6",
+    "kalendar": "bcp1962",
+    "slug": "transfiguration",
+    "propers": "transfiguration",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/6",
+        "kalendar": "bcp1962",
+        "name": "The Transfiguration of our Lord.",
+        "slug": "transfiguration",
+        "type": {
+          "name": "Red-Letter",
+          "rank": 5
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "holy_day_observed": {
+      "mmdd": "8/6",
+      "kalendar": "bcp1962",
+      "name": "The Transfiguration of our Lord.",
+      "slug": "transfiguration",
+      "type": {
+        "name": "Red-Letter",
+        "rank": 5
+      }
+    }
+  }),
+  '2020/8/7': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-7",
+    "kalendar": "bcp1962",
+    "slug": "transfiguration",
+    "propers": "transfiguration",
+    "week": {
+      "cycle": "Easter",
+      "week": 25,
+      "season": "OrdinaryTime",
+      "name": "Eighth Sunday after Trinity",
+      "slug": "eighth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/7",
+        "kalendar": "bcp1962",
+        "name": "The Name of Jesus.",
+        "slug": "name-of-jesus",
+        "type": {
+          "name": "Black-Letter",
+          "rank": 2
+        }
+      },
+      {
+        "mmdd": "8/6",
+        "kalendar": "bcp1962",
+        "name": "The Transfiguration of our Lord.",
+        "slug": "transfiguration",
+        "type": {
+          "name": "Red-Letter",
+          "rank": 5
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "holy_day_observed": {
+      "mmdd": "8/6",
+      "kalendar": "bcp1962",
+      "name": "The Transfiguration of our Lord.",
+      "slug": "transfiguration",
+      "type": {
+        "name": "Red-Letter",
+        "rank": 5
+      }
+    }
+  }),
   '2020/5/28': new LiturgicalDay({
     "evening": false,
     "date": "2020-5-28",

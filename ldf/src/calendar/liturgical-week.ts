@@ -34,7 +34,7 @@ export class LiturgicalWeek {
   omit_the?: boolean = false;
 
   /** The {@link LiturgicalColor} used for the week */
-  color: LiturgicalColor | string;
+  color?: LiturgicalColor | string;
 
   /** The proper (i.e., for weeks after Pentecost) */
   proper?: number;

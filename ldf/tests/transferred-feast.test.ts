@@ -16,6 +16,15 @@ describe('transferredFeast', () => {
       )).toBeUndefined();
     });
 
+    it(('does not transfer observed red-letter days forward'), async () => {
+      expect(await transferredFeast(
+        findLiturgicalDay,
+        findSpecialDay,
+        findFeastDay,
+        dateFromYMD('2020', '8', '7')
+      )).toBeUndefined();
+    });
+
     it(('transfers Visitation to Monday when it overlaps with Pentecost the day before'), async () => {
         expect((await transferredFeast(
           findLiturgicalDay,

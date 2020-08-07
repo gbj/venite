@@ -55,8 +55,6 @@ export class BibleReading extends LiturgicalDocument {
       });
 
       this.metadata.compiled_intro = new LiturgicalDocument({ ...this.metadata.intro, value: newValue });
-
-      console.log('compiled intro is now', this.metadata.compiled_intro);
     }
   }
 
