@@ -5,7 +5,6 @@ import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
   tag: 'ldf-option',
-//  styleUrl: 'option.scss',
   shadow: true
 })
 export class OptionComponent {
@@ -110,7 +109,12 @@ export class OptionComponent {
   }
 
   filterOptions() {
-    this.filteredOptions = this.obj.value.filter(opt => opt?.value !== undefined);
+    if(this.obj) {
+      this.obj = new Option({
+        ... this.obj,
+        value: (this.obj?.value || []).filter(entry => Boolean(entry))
+      });
+    }
   }
 
   // Render helpers
@@ -118,17 +122,17 @@ export class OptionComponent {
   selectNode() : JSX.Element {
     const currentlySelected : number = this.obj.metadata.selected;
 
-    if(this.filteredOptions?.length > 1) {
+    if(this.obj?.value?.length > 1) {
       // Ionic available and
       if(customElements && !!customElements.get('ion-select')) {
-        const optionsAreLong : boolean = this.filteredOptions?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 15)
+        const optionsAreLong : boolean = this.obj?.value?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 15)
             .reduce((a, b) => a || b);
 
         // <= 2, short options
-        if(!optionsAreLong && this.filteredOptions.length <= 2) {
+        if(!optionsAreLong && this.obj?.value.length <= 2) {
           return (
             <ion-segment color="primary" value={currentlySelected.toString()}>
-              {this.filteredOptions.map((option, optionIndex) =>
+              {this.obj?.value.map((option, optionIndex) =>
                 <ion-segment-button value={optionIndex.toString()}>
                   <ion-label>{this.versionLabel(option, optionIndex)}</ion-label>
                 </ion-segment-button>
@@ -145,7 +149,7 @@ export class OptionComponent {
           return (
             <ion-toolbar>
               <ion-select value={currentlySelected} slot={this.editable ? 'start' : 'end'}>
-                {this.filteredOptions.map((option, optionIndex) =>
+                {this.obj?.value.map((option, optionIndex) =>
                   <ion-select-option value={optionIndex}>
                     <ion-label>{this.versionLabel(option, optionIndex)}</ion-label>
                   </ion-select-option>
@@ -165,7 +169,7 @@ export class OptionComponent {
         return (
           <ldf-label-bar>
             <select onInput={ev => this.onSelectChange(ev)} slot={this.editable ? 'start' : 'end'}>
-              {this.filteredOptions.map((option, optionIndex) =>
+              {this.obj?.value.map((option, optionIndex) =>
                 <option
                   value={optionIndex}
                   selected={optionIndex == currentlySelected}
