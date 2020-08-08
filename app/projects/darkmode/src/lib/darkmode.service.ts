@@ -19,6 +19,7 @@ export class DarkmodeService {
   ) {
     if(!this.platform.is('server')) {
       const preference$ : Observable<string> = this.preferences.get('darkmode').pipe(
+        tap(storedPreference => console.log('darkmode stored preference = ', storedPreference)),
         map(storedPreference => storedPreference ? storedPreference.value : 'auto')
       );
 
@@ -35,7 +36,8 @@ export class DarkmodeService {
         tap(([preference, mediaQuery]) => console.log('darkmode pref = ', preference)),
         // give an explanatory alert if we're not going to change the setting
         tap(([preference, mediaQuery]) => {
-          if(preference == 'dark' && !mediaQuery?.matches || preference == 'light' && mediaQuery?.matches) {
+          if(mediaQuery !== undefined && (preference == 'dark' && !mediaQuery?.matches || preference == 'light' && mediaQuery?.matches)) {
+            console.log('mediaQuery = ', mediaQuery);
             this.notifyAlert(!!mediaQuery?.matches);
           }
         }),
