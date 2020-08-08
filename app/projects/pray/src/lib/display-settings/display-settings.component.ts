@@ -22,6 +22,9 @@ export class DisplaySettingsComponent implements OnInit {
 
   uid$ : Observable<string | undefined>;
 
+  configFonts : { value: string; label: string; style: string; }[] = new Array();
+  configDrops : { value: string; label: string; class: string; }[] = new Array();
+
   constructor(
     @Inject('displaySettingsConfig') public config : DisplaySettingsConfig,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
@@ -30,6 +33,18 @@ export class DisplaySettingsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.configFonts = this.config.fonts.map(({ value, label }) => ({
+      value,
+      label,
+      style: `font-family: "${value}"`
+    }));
+
+    this.configDrops = this.config.dropcaps.map(({ value, label }) => ({
+      value,
+      label,
+      class: `dropcaps-${value}`
+    }));
+
     if(this.hasVoice) {
       this.voicesWithNationalities = this.voiceChoices
         .map(voice => {
@@ -52,7 +67,7 @@ export class DisplaySettingsComponent implements OnInit {
 
   updateSetting(uid : string, settingName : string, ev : CustomEvent) {
     const realUID = uid == 'LOGGED-OUT'  ? undefined : uid;
-    this.preferencesService.set(settingName, ev.detail.value, realUID);
+    this.preferencesService.set(settingName, ev.detail.checked || ev.detail.value, realUID);
   }
 
 }

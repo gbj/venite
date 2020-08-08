@@ -1,3 +1,7 @@
 export class DisplaySettingsConfig {
-  fonts?: { value: string; label: string; }[] = [{value: 'garamond', label: 'EB Garamond'}, {value: 'gill-sans', label: 'Gill Sans' }];
+  audio: boolean;
+  meditation: boolean;
+  antiphons: boolean;
+  fonts: { value: string; label: string; }[] = [{value: 'garamond', label: 'EB Garamond'}, {value: 'gill-sans', label: 'Gill Sans' }];
+  dropcaps: { value: string; label: string; }[];
 }
