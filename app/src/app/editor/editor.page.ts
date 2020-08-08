@@ -7,6 +7,7 @@ import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './ldf-editor/editor.service';
 import { LiturgicalDocument } from '@venite/ldf';
 import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'venite-editor',
@@ -29,7 +30,8 @@ export class EditorPage implements OnInit {
     private documents : DocumentService,
     public editorService : EditorService,
     private router : Router,
-    private alert : AlertController
+    private alert : AlertController,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {
@@ -70,15 +72,15 @@ export class EditorPage implements OnInit {
   async delete(docId : string, label : string) {
     console.log('delete ', docId);
     const alert = await this.alert.create({
-      header: `Delete “${label}”`,
-      message: 'Are you sure you want to delete this document?',
+      header: this.translate.instant('editor.confirm_deletion_header', { label }),
+      message: this.translate.instant('editor.confirm_deletion'), // 'Are you sure you want to delete this document?',
       buttons: [
         {
-          text: 'Cancel',
+          text: this.translate.instant('editor.cancel'), //'Cancel',
           role: 'cancel',
           cssClass: 'secondary'
         }, {
-          text: 'Delete',
+          text: this.translate.instant('editor.delete'), // 'Delete',
           handler: () => this.documents.deleteDocument(docId)
         }
       ]
