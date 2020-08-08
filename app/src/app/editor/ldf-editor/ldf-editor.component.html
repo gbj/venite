@@ -26,8 +26,14 @@
           <ion-title size="large"><h1>{{ state?.localManager.document?.label }}</h1></ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <article>
+
+      <ion-segment [(ngModel)]="mode">
+        <ion-segment-button value="edit">{{ 'editor.edit' | translate}}</ion-segment-button>
+        <ion-segment-button value="code">{{ 'editor.code' | translate}}</ion-segment-button>
+        <ion-segment-button value="preview">{{ 'editor.preview' | translate}}</ion-segment-button>
+      </ion-segment>
+
+      <ng-container *ngIf="mode == 'edit'">
         <ldf-editor
           [doc]="state?.localManager.document"
           [uid]="(auth.user | async)?.uid"
@@ -39,10 +45,15 @@
           (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
           (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
         ></ldf-editor>
-        <pre>
-  {{ state?.localManager?.document | json }}
-        </pre>
-      </article>
+      </ng-container>
+
+      <ng-container *ngIf="mode == 'code'">
+        <pre>{{ state?.localManager?.document | json }}</pre>
+      </ng-container>
+
+      <ng-container *ngIf="mode == 'preview'">
+        <ldf-liturgical-document [doc]="state?.localManager.document"></ldf-liturgical-document>
+      </ng-container>      
     </ion-content>
   </ng-container>
 </ng-container>

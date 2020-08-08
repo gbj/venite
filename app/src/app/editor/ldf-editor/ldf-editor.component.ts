@@ -19,6 +19,8 @@ import { SharingComponent } from '../sharing/sharing.component';
 export class LdfEditorComponent implements OnInit, OnDestroy {
   @Input() docId : string;
 
+  mode : 'edit' | 'code' | 'preview' = 'edit';
+
   state$ : Observable<{
     localManager: LocalDocumentManager,
     serverManager: ServerDocumentManager,
