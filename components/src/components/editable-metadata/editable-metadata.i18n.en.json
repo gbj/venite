@@ -26,6 +26,7 @@
   "rubric": "Rubric",
   "settings": "Settings",
   "short": "Short",
+  "slug": "Slug",
   "source/source": "Source",
   "source/citation": "Citation within Source",
   "style": "Style",
