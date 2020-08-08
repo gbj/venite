@@ -5,6 +5,8 @@
     <ion-item>
       <ion-label position="stacked">{{ 'editor.lectionary' | translate }}</ion-label>
       <ion-select name="lectionary" ngDefaultControl [(ngModel)]="selectedLectionary">
+        <ion-select-option [value]="{preference:'lectionary'}">{{ 'editor.lectionary-preference' | translate }}</ion-select-option>
+        <ion-select-option [value]="{preference:'psalmCycle'}">{{ 'editor.psalm-cycle-preference' | translate }}</ion-select-option>
         <ion-select-option *ngFor="let opt of lectionaryEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>
       </ion-select>
     </ion-item>
