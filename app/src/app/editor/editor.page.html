@@ -28,11 +28,16 @@
 
     <ion-list *ngIf="myDocs$ | async as docs else nodocs">
       <ion-list-header><h2>{{ 'editor.mydocs' | translate }}</h2></ion-list-header>
-      <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy" [routerLink]="['.', doc.id]">
-        <ion-label>
+      <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+        <ion-label [routerLink]="['.', doc.id]">
           <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
-          <h4>{{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+          <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
         </ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
       </ion-item>
     </ion-list>
     <ng-template #nodocs><p>{{ 'editor.loading' | translate }}</p></ng-template>

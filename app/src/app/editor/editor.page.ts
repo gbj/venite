@@ -29,6 +29,7 @@ export class EditorPage implements OnInit {
     private documents : DocumentService,
     public editorService : EditorService,
     private router : Router,
+    private alert : AlertController
   ) { }
 
   ngOnInit() {
@@ -64,5 +65,26 @@ export class EditorPage implements OnInit {
 
   trackIdAndDocBy(index : number, item : IdAndDoc) {
     return item.id || index;
+  }
+
+  async delete(docId : string, label : string) {
+    console.log('delete ', docId);
+    const alert = await this.alert.create({
+      header: `Delete “${label}”`,
+      message: 'Are you sure you want to delete this document?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary'
+        }, {
+          text: 'Delete',
+          handler: () => this.documents.deleteDocument(docId)
+        }
+      ]
+    });
+
+    await alert.present();
+
   }
 }
