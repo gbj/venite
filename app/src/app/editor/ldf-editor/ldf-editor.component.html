@@ -39,17 +39,9 @@
           (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
           (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
         ></ldf-editor>
-        <!--<pre>
-  **server last revision** = {{ serverManager.lastRevision }}
-  
-  **local** =
-  
-  {{ localManager | json }}
+        <pre>
+  {{ state?.localManager?.document | json }}
         </pre>
-        <pre>**changes** =
-  
-          {{ revisions$ | async | json }}
-  </pre>-->
       </article>
     </ion-content>
   </ng-container>

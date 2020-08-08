@@ -22,15 +22,13 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   state$ : Observable<{
     localManager: LocalDocumentManager,
     serverManager: ServerDocumentManager,
-    docSaved : Date
+    docSaved : Date,
     bibleIntros: LiturgicalDocument[],
   }>;
 
   // Handle external revisions
   revisions$ : Observable<DocumentManagerChange[]>;
   revisionSubscription : Subscription;
-
-  docSaved$ : Observable<Date>;
 
   constructor(
     public auth : AuthService,
@@ -52,12 +50,15 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   
     // Apply changes from revisions
     this.revisionSubscription = combineLatest(localManager$, serverManager$, revisions$).subscribe(
-      ([localManager, serverManager, revisions]) => this.editorService.applyChanges(localManager, serverManager, revisions));
+      ([localManager, serverManager, revisions]) => {
+        this.editorService.applyChanges(localManager, serverManager, revisions);
+      });
 
     // update the document once every 3s
-    const docSaved$ = localManager$.pipe(
+    const docSaved$ = combineLatest(localManager$, revisions$).pipe(
+      tap(([localManager, revisions]) => console.log('change made, saving')),
       debounceTime(3000),
-      switchMap(localManager => this.documents.saveDocument(localManager.docId, {
+      switchMap(([localManager, ]) => this.documents.saveDocument(localManager.docId, {
         ... localManager.document,
         lastRevision: localManager.lastSyncedRevision
       })),

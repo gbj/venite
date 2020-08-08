@@ -76,8 +76,12 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             map(versions => Object.keys(versions)),
             switchMap(versions => this.documentService.findDocumentsByCategory(['Psalm'], this.language, versions).pipe(
               map(objs => objs.sort((a, b) => sortPsalms(a as Psalm, b as Psalm))),
-              map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
-              // TODO -- sort by psalm number
+              map(objs => objs.map(obj => new LiturgicalDocument({
+                ... obj,
+                // strip out value, which can be looked up asynchronously rather than storing it
+                value: undefined,
+                lookup: { type: "slug" }
+              })))
             ))
           )
           return this.complete;
@@ -94,7 +98,11 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalOptions = this.additionalVersions.pipe(
             map(versions => Object.keys(versions)),
             switchMap(versions => this.documentService.findDocumentsByCategory(['Canticle'], this.language, versions).pipe(
-              map(objs => objs.map(obj => new LiturgicalDocument({ ... obj, value: undefined })))
+              map(objs => objs.map(obj => new LiturgicalDocument({
+                ... obj,
+                value: undefined,
+                lookup: { type: "slug" }
+              })))
               // TODO -- sort by canticle #
             ))
           );

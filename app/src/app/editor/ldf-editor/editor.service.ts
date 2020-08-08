@@ -4,7 +4,7 @@ import * as firebase from 'firebase/app';
 import * as json1 from 'ot-json1';
 import { JSONOp } from 'ot-json1/dist/types';
 
-import { Cursor, Change, Operation, LiturgicalDocument, User } from '@venite/ldf';
+import { Cursor, Change, Operation, LiturgicalDocument, User, LiturgicalColor } from '@venite/ldf';
 import { Observable, combineLatest, from, BehaviorSubject } from 'rxjs';
 import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } from './document-manager';
 import { map, tap, switchMap, take } from 'rxjs/operators';
@@ -115,7 +115,6 @@ export class EditorService {
   public async processChange(manager : LocalDocumentManager, change : Change) {
     // translate `Change` into operation
     const op = this.opFromChange(change);
-    console.log('op is', op);
 
     // add it to our list of pending changes
     manager.pendingChanges = manager.pendingChanges.concat({
@@ -160,10 +159,11 @@ export class EditorService {
 
         await batch.commit();
   
-        // apply the change to this document
-        console.log(manager.document, change.op);
         //@ts-ignore
-        manager.document = json1.type.apply(manager.document, change.op);
+        console.log('old state of document is', manager.document);
+        console.log('op is', change.op);
+        manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
+        console.log('new state of document after change is ', manager.document, 'from op', change.op);
         manager.lastSyncedRevision = change.lastRevision;
   
         manager.sentChanges.push(change); // add it to sent
@@ -188,7 +188,6 @@ export class EditorService {
 
   /** Receive changes from server and apply to client, whenever anything on server changes */ 
   applyChanges(localManager : LocalDocumentManager, serverManager : ServerDocumentManager, changes : DocumentManagerChange[]) {    
-    
     // if the server has revisions we don't, apply them to our doc
     const additionalChanges = changes
       // sorted by revision number
@@ -256,7 +255,6 @@ export class EditorService {
    * or to respond to remote changes */
   applyOp(manager : LocalDocumentManager, op : JSONOp) : void {
     try {
-      console.log(manager.document, op);
       //@ts-ignore
       manager.document = json1.type.apply(manager.document, op);
     } catch(e) {
@@ -273,9 +271,7 @@ export class EditorService {
     /* json1 won't accept strings as array indices; if any of the items in the JSON pointer path
      * or the additional index given in the `Operation` are numbers encoded as strings, convert to numbers */
     op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 
-    console.log('op.index = ', op.index);
     const indexedP = op.index ? op.p.concat(Number(op.index) ? Number(op.index) : op.index) : op.p;
-    console.log('indexedP = ', indexedP);
 
     // generate json1 op depending on the type
     switch(op.type) {
@@ -284,16 +280,13 @@ export class EditorService {
       case 'insertAt':
         return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)));
       case 'deleteAt':
-        console.log('delete', json1.removeOp(indexedP, op.value ?? true))
         return json1.removeOp(indexedP, op.value ?? true);
       case 'set':
         if(op.oldValue == undefined) {
           console.log('setting value from undefined');
           return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
         } else {
-          console.log('setting value from another value');
           const jsonOp = json1.replaceOp(indexedP, op.oldValue, JSON.parse(JSON.stringify(op.value)));
-          console.log('op is ', jsonOp);
           return jsonOp;
         }
       case 'delete':
