@@ -114,6 +114,10 @@ export class DocumentService {
     return from(this.afs.doc(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
   }
 
+  deleteDocument(docId : string) : Promise<void> {
+    return this.afs.collection('Document').doc(docId).delete();
+  }
+
   slugify(doc : Partial<DTO<LiturgicalDocument>>) : string {
     return doc.label?.replace(/\s/g, '-').toLowerCase();
   }
