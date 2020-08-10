@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, take, startWith } from 'rxjs/operators';
-import { Liturgy, ClientPreferences, dateFromYMD, liturgicalDay, liturgicalWeek, addOneDay, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference } from '@venite/ldf';
+import { mapTo, switchMap, map, tap, filter, startWith } from 'rxjs/operators';
+import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference } from '@venite/ldf';
 import { PrayService } from './pray.service';
 import { ModalController } from '@ionic/angular';
 import { DisplaySettingsComponent } from './display-settings/display-settings.component';
