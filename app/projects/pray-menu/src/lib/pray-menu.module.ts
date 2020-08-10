@@ -32,7 +32,13 @@ interface PrayMenuRootConfig {
     IonicModule,
     TranslateModule
   ],
-  exports: [ PrayMenuComponent ],
+  exports: [
+    PrayMenuComponent,
+    LiturgyPreferenceMenuComponent,
+    DateComponent,
+    LiturgicalDayNameComponent,
+    ProperLiturgyMenuComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PrayMenuModule {
