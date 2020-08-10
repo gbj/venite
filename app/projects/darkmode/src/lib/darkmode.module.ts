@@ -16,6 +16,6 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class DarkmodeModule {
   public static forRoot({ providers }) : ModuleWithProviders<DarkmodeModule> {
-    return { ngModule: DarkmodeModule, providers };
+    return { ngModule: DarkmodeModule, providers: providers || new Array() };
   }
 }
