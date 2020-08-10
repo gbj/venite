@@ -30,6 +30,10 @@ interface PrayRootConfig {
     PrayPage,
     DisplaySettingsComponent
   ],
+  exports: [
+    PrayPage,
+    DisplaySettingsComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PrayPageModule {
