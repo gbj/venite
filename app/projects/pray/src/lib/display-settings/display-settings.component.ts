@@ -18,6 +18,7 @@ export class DisplaySettingsComponent implements OnInit {
   @Input() hasMeditation : boolean = true;
   @Input() backgroundEnabled : boolean = true;
   @Input() voiceChoices : SpeechSynthesisVoice[] = new Array();
+  @Input() isModal : boolean = true;
   voicesWithNationalities : { voice: SpeechSynthesisVoice; nationality: string }[];
 
   uid$ : Observable<string | undefined>;
@@ -36,7 +37,7 @@ export class DisplaySettingsComponent implements OnInit {
     this.configFonts = this.config.fonts.map(({ value, label }) => ({
       value,
       label,
-      style: `font-family: "${value}"`
+      style: `font-family: "${label}"`
     }));
 
     this.configDrops = this.config.dropcaps.map(({ value, label }) => ({

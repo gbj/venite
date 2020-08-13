@@ -1,3 +1,5 @@
 .drop {
-  font-size: 2em;
+  font-size: var(--ldf-drop-font-size);
+  font-variant: var(--ldf-drop-firstword-font-variant);
+  font-family: var(--ldf-drop-font-family);
 }
