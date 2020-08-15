@@ -8,7 +8,7 @@
     "@angular/router": "~9.1.6",
     "@ionic/angular": "^5.0.0",
     "tslib": "^1.10.0",
-    "@venite/ng-service-api": "0.0.2",
+    "@venite/ng-service-api": "0.0.5",
     "@ngx-translate/core": "^13.0.0",
     "rxjs": "~6.5.1"
   }

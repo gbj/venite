@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input } from '@angular/core';
-import { Observable, Subject, BehaviorSubject, combineLatest } from 'rxjs';
+import { Observable, Subject, BehaviorSubject, combineLatest, of } from 'rxjs';
 import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
@@ -7,6 +7,8 @@ import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInterface, AuthServiceInterface, CalendarServiceInterface, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE } from '@venite/ng-service-api';
 import { tap, switchMap, map } from 'rxjs/operators';
+import { DOCUMENT_SERVICE } from '@venite/ng-service-api';
+import { DocumentServiceInterface } from '@venite/ng-service-api';
 
 @Component({
   selector: 'venite-pray-menu',
@@ -21,6 +23,13 @@ export class PrayMenuComponent implements OnInit {
 
   // The `LiturgicalDay` that has currently been selected, without any holy day information
   liturgicalDay : Observable<LiturgicalDay>;
+
+  // `language` and `version` used to filter Liturgies to display as options
+  language$ : BehaviorSubject<string>;
+  version$ : BehaviorSubject<string>;
+  liturgyOptions$ : BehaviorSubject<LiturgicalDocument[]> = new BehaviorSubject([]);
+  languageOptions$ : Observable<{ value: string; label: string; }[]>;
+  versionOptions$ : Observable<{ value: string; label: string; }[]>;
 
   // Arguments into the liturgicalDay call, which we need to combine
   startingDate$ : Subject<Date> = new Subject();
@@ -56,13 +65,27 @@ export class PrayMenuComponent implements OnInit {
     @Inject(CALENDAR_SERVICE) public calendarService : CalendarServiceInterface,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     @Inject(LECTIONARY_SERVICE) private lectionary : LectionaryServiceInterface,
+    @Inject(DOCUMENT_SERVICE) private documentService : DocumentServiceInterface,
     private router : Router,
     private alert : AlertController,
     private translate : TranslateService
-  ) { }
+  ) {
+    this.language$ = new BehaviorSubject(config.defaultLanguage);
+    this.version$ = new BehaviorSubject(config.defaultVersion);
+  }
 
  // ngOnInit() -- set up initial menu state
  ngOnInit() {
+  // init with default language and version
+  this.languageOptions$ = this.liturgyOptions$.pipe(
+    map(liturgies => Array.from(new Set(liturgies.map(liturgy => liturgy.language || 'en')))),
+    map(languages => languages.map(language => ({
+      value: language,
+      label: this.translate.instant(`language.${language}`) as string || language
+    })))
+  );
+  this.versionOptions$ = of(this.config.versionOptions);
+
   // load kalendar options
   this.kalendarOptions = this.calendarService.findKalendars();
   this.sanctoralOptions = this.calendarService.findSanctorals();
@@ -112,7 +135,7 @@ pray([user, liturgy, properLiturgy, day, prefs, availableReadings]) {
 }
 
 areReadingsAvailable(liturgy : Liturgy, prefs : ClientPreferences, availableReadings : string[]) : boolean {
-  const readingPrefKeys = Object.keys(liturgy.metadata?.preferences || {}).filter(p => ['readingA', 'readingB', 'readingC'].includes(p));
+  const readingPrefKeys = Object.keys(liturgy?.metadata?.preferences || {}).filter(p => ['readingA', 'readingB', 'readingC'].includes(p));
   let allReadingsAvailable : boolean = true;
   if(readingPrefKeys && readingPrefKeys.length > 0) {
     allReadingsAvailable = readingPrefKeys
@@ -179,13 +202,12 @@ savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDoc
   Object.entries(prefs)
     // take only those properties that are listed in the liturgy's `preferences` metadata field
     // e.g., Evening Prayer will list `bibleVersion` but not `footwashing`—so don't save `footwashing`
-    .filter(([key, value]) => liturgy.metadata?.preferences.hasOwnProperty(key))
+    .filter(([key, value]) => liturgy?.metadata?.preferences?.hasOwnProperty(key))
     // store each key individually in the database
     .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
 }
 
 navigate(root : string, liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences) {
-  console.log('navigating', root, liturgy, day, prefs);
   const [y, m, d] = day?.date?.split('-'),
         commands : string[] = [
           root,

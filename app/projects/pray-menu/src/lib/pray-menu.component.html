@@ -2,7 +2,7 @@
   <!-- Header based on Liturgical Day -->
   <ion-card-header *ngIf="liturgicalDay | async as day else blankHeader">
     <ion-card-title>
-      <ldf-day-name [day]="day"></ldf-day-name>
+      <h1><ldf-day-name [day]="day"></ldf-day-name></h1>
     </ion-card-title>
     <ion-card-subtitle>
       <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
@@ -10,6 +10,7 @@
         <li *ngIf="day.week?.proper">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
       </ul>
     </ion-card-subtitle>
+    <h2 *ngIf="liturgy | async as l">{{ l?.label }}</h2>
   </ion-card-header>
   <!-- Header if liturgical day has not loaded -->
   <ng-template #blankHeader>
@@ -21,6 +22,25 @@
 
   <!-- Form -->
   <ion-card-content>
+    <form name="languageVersionForm">
+      <ng-container *ngIf="languageOptions$ | async as options">
+        <ion-item *ngIf="options.length > 1">
+          <ion-label position="stacked">{{ 'language' | translate }}</ion-label>
+          <ion-select name="language" [value]="language$ | async" (ionChange)="language$.next($event.detail.value)">
+            <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ng-container>
+      <ng-container *ngIf="versionOptions$ | async as options">
+        <ion-item *ngIf="options.length > 1">
+          <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
+          <ion-select name="version" [value]="version$ | async" (ionChange)="version$.next($event.detail.value)">
+            <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ng-container>
+    </form>    
+
     <!-- Choose kalendars -->
     <form name="kalendarForm">
       <ng-container *ngIf="kalendarOptions | async as options">
@@ -45,7 +65,14 @@
     <venite-date [date]="startingDate$ | async" (dateChange)="date.next($event)"></venite-date>
 
     <!-- Choose liturgy -->
-    <venite-liturgy-menu (liturgyChange)="liturgy.next($event)" [properLiturgy]="properLiturgy | async"></venite-liturgy-menu>
+    <venite-liturgy-menu
+      (liturgyChange)="liturgy.next($event)"
+      (liturgyOptionsChange)="liturgyOptions$.next($event)"
+      [language]="language$ | async"
+      [version]="version$ | async"
+      [properLiturgy]="properLiturgy | async"
+    >
+    </venite-liturgy-menu>
 
     <!-- Choose vigil -->
     <ion-item *ngIf="showVigil">

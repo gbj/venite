@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter, OnInit, SimpleChanges, Inject } from '@angular/core';
 
 import { Observable, BehaviorSubject, Subject, Subscription, combineLatest, of, interval } from 'rxjs';
-import { tap, map, take, filter, mergeMap, startWith } from 'rxjs/operators';
+import { tap, map, take, filter, mergeMap, startWith, switchMap } from 'rxjs/operators';
 
 import { Liturgy, ProperLiturgy, LiturgicalDocument } from '@venite/ldf';
 import { DocumentServiceInterface, DOCUMENT_SERVICE } from '@venite/ng-service-api';
+import { PrayMenuConfig } from '../pray-menu-config';
 
 @Component({
   selector: 'venite-liturgy-menu',
@@ -28,16 +29,36 @@ export class LiturgyMenuComponent implements OnInit {
   /** Emits the `Liturgy` whenever user's selection changes */
   @Output() liturgyChange : EventEmitter<LiturgicalDocument> = new EventEmitter();
 
+  /** Emits `Liturgy[]` when menu is loaded */
+  @Output() liturgyOptionsChange : EventEmitter<LiturgicalDocument[]> = new EventEmitter();
+
+  // Liturgies depending on language and version
+  language$ : Subject<string> = new Subject();
+  version$ : Subject<string> = new Subject();
+  languageVersionLiturgies$ : Observable<LiturgicalDocument[]>;
+
   // Menu pulled from LiturgyMenuService
   liturgyOptions : Observable<LiturgicalDocument[]>;
 
   // Current state of the actual menu
   selectState : Observable<{ value: string; options: LiturgicalDocument[] }>;
 
-  constructor(@Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface) { }
+  constructor(
+    @Inject('config') private config : PrayMenuConfig,
+    @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface
+  ) { }
 
   ngOnInit() {
-    this.liturgySubject.next(this.liturgy || this.liturgyOfTheHour(new Date()));
+    console.log('LiturgyMenu onInit', this.language, this.version);
+    this.languageVersionLiturgies$ = combineLatest(
+      this.language$.pipe(startWith(this.language || this.config.defaultLanguage)),
+      this.version$.pipe(startWith(this.version || this.config.defaultVersion))
+    ).pipe(
+      tap(vals => console.log('languageVersionLiturgies', vals)),
+      switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version))
+    );
+    this.language$.next(this.language);
+    this.version$.next(this.version);
 
     this.properLiturgySubject.next(this.properLiturgy);
 
@@ -62,9 +83,12 @@ export class LiturgyMenuComponent implements OnInit {
     // combine properLiturgy input liturgyOptions observable from the service
     this.liturgyOptions = combineLatest(
       this.properLiturgyLiturgy.pipe(startWith(null)),  // startWith allows us to combine even if no proper liturgy
-      this.documents.getLiturgyOptions(this.language, this.version)
+      this.languageVersionLiturgies$.pipe(startWith([]))
     ).pipe(
+      tap(options => console.log('LiturgyMenu', options)),
       map(([properLiturgy, liturgyOptions]) => properLiturgy ? new Array(properLiturgy).concat(liturgyOptions) : liturgyOptions),
+      tap(options => this.liturgyOptionsChange.emit(options)),
+      tap(() => this.liturgySubject.next(this.liturgy || this.liturgyOfTheHour(new Date())))
     );
 
     // set state of the menu
@@ -82,6 +106,14 @@ export class LiturgyMenuComponent implements OnInit {
   ngOnChanges(changes : SimpleChanges) {
     if(changes.properLiturgy?.currentValue !== changes.properLiturgy?.previousValue) {
       this.properLiturgySubject.next(changes.properLiturgy.currentValue);
+    }
+
+    if(changes.language?.currentValue !== changes.language?.previousValue) {
+      this.language$.next(changes.language.currentValue);
+    }
+
+    if(changes.version?.currentValue !== changes.version?.previousValue) {
+      this.version$.next(changes.version.currentValue);
     }
 
     this.liturgySubject.next(changes.liturgy?.currentValue);
