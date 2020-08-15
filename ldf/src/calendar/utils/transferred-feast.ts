@@ -34,9 +34,9 @@ export async function transferredFeast(
     dayBeforeYesterdayFeast = await feastDayFinder(dateFromYMDString(dayBeforeYesterday?.date)),
     dayBeforeYesterdayIsEmpty = isEmpty(dayBeforeYesterdayIsSunday, dayBeforeYesterdaySpecial, dayBeforeYesterdayFeast);
 
-  console.log('\n\ntoday is ', today.date);
+  //console.log('\n\ntoday is ', today.date);
   //console.log('acc is', acc);
-  //console.log('openDays is ', openDays.map(day => day.slug));
+  //console.log('openDays is ', openDays.map((day) => day.slug));
 
   // if both days are empty
   if (todayIsEmpty && yesterdayIsEmpty) {
@@ -85,7 +85,7 @@ export async function transferredFeast(
       // if today is observed today don't transfer
       const observed = todayFeast ? today.observedDay(today, [todayFeast]) : today;
       if (observed.slug == todayFeast?.slug) {
-        //console.log('    and the feast is observed today')
+        //console.log('    and the feast is observed today');
         return transferredFeast(
           liturgicalDayFinder,
           specialDayFinder,
@@ -109,12 +109,16 @@ export async function transferredFeast(
       }
     } else {
       //console.log('  yesterday is not empty');
+      const observed = todayFeast ? today.observedDay(today, [todayFeast]) : today,
+        isObserved = observed.slug === todayFeast?.slug;
       return transferredFeast(
         liturgicalDayFinder,
         specialDayFinder,
         feastDayFinder, // pass helpers
         subtractOneDay(todayDate), // check yesterday
-        todayFeast && !todayFeast.eve && Number(todayFeast?.type?.rank) >= 3 ? [...acc, todayFeast] : acc, // include today's feast, but don't transfer "Eve of..."
+        todayFeast && !todayFeast.eve && !isObserved && Number(todayFeast?.type?.rank) >= 3
+          ? [...acc, todayFeast]
+          : acc, // include today's feast, but don't transfer "Eve of..."
         openDays,
         originalDay || today,
       );
