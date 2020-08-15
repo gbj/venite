@@ -34,7 +34,7 @@ export async function transferredFeast(
     dayBeforeYesterdayFeast = await feastDayFinder(dateFromYMDString(dayBeforeYesterday?.date)),
     dayBeforeYesterdayIsEmpty = isEmpty(dayBeforeYesterdayIsSunday, dayBeforeYesterdaySpecial, dayBeforeYesterdayFeast);
 
-  //console.log('\n\ntoday is ', today.date);
+  console.log('\n\ntoday is ', today.date);
   //console.log('acc is', acc);
   //console.log('openDays is ', openDays.map(day => day.slug));
 

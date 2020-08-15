@@ -150,6 +150,175 @@ export const SPECIAL_DAYS : HolyDay[] = [
 ]
 
 export const LITURGICAL_DAYS : { [ yyyymmdd : string ] : LiturgicalDay } = {
+  '2020/8/20': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-20",
+    "kalendar": "bcp1962",
+    "slug": "thursday-tenth-sunday-after-trinity",
+    "propers": "thursday-tenth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 27,
+      "season": "OrdinaryTime",
+      "name": "Tenth Sunday after Trinity",
+      "slug": "tenth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/20",
+        "kalendar": "bcp1962",
+        "name": "Bernard, Abbot of Clairvaux, France, Doctor and Poet, 1153.",
+        "slug": "bernard",
+        "type": {
+          "name": "Black-Letter",
+          "rank": 2
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "holy_day_observed": {
+      "mmdd": "8/20",
+      "kalendar": "bcp1962",
+      "name": "Bernard, Abbot of Clairvaux, France, Doctor and Poet, 1153.",
+      "slug": "bernard",
+      "type": {
+        "name": "Black-Letter",
+        "rank": 2
+      }
+    }
+  }),
+  '2020/8/21': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-21",
+    "kalendar": "bcp1962",
+    "slug": "friday-tenth-sunday-after-trinity",
+    "propers": "friday-tenth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 27,
+      "season": "OrdinaryTime",
+      "name": "Tenth Sunday after Trinity",
+      "slug": "tenth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/22': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-22",
+    "kalendar": "bcp1962",
+    "slug": "saturday-tenth-sunday-after-trinity",
+    "propers": "saturday-tenth-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 27,
+      "season": "OrdinaryTime",
+      "name": "Tenth Sunday after Trinity",
+      "slug": "tenth-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/23': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-23",
+    "kalendar": "bcp1962",
+    "slug": "sunday-eleventh-sunday-after-trinity",
+    "propers": "sunday-eleventh-sunday-after-trinity",
+    "week": {
+      "cycle": "Easter",
+      "week": 28,
+      "season": "OrdinaryTime",
+      "name": "Eleventh Sunday after Trinity",
+      "slug": "eleventh-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [],
+    "season": "OrdinaryTime"
+  }),
+  '2020/8/24': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-24",
+    "kalendar": "bcp1962",
+    "slug": "st-bartholomew",
+    "propers": "st-bartholomew",
+    "week": {
+      "cycle": "Easter",
+      "week": 28,
+      "season": "OrdinaryTime",
+      "name": "Eleventh Sunday after Trinity",
+      "slug": "eleventh-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "8/24",
+        "kalendar": "bcp1962",
+        "name": "St Bartholomew the Apostle.",
+        "slug": "st-bartholomew",
+        "type": {
+          "name": "Red-Letter",
+          "rank": 3
+        },
+        "season": "Saints"
+      }
+    ],
+    "season": "Saints",
+    "holy_day_observed": {
+      "mmdd": "8/24",
+      "kalendar": "bcp1962",
+      "name": "St Bartholomew the Apostle.",
+      "slug": "st-bartholomew",
+      "type": {
+        "name": "Red-Letter",
+        "rank": 3
+      },
+      "season": "Saints"
+    }
+  }),
+  '2020/8/25': new LiturgicalDay({
+    "evening": false,
+    "date": "2020-8-25",
+    "kalendar": "bcp1962",
+    "slug": "st-bartholomew",
+    "propers": "st-bartholomew",
+    "week": {
+      "cycle": "Easter",
+      "week": 28,
+      "season": "OrdinaryTime",
+      "name": "Eleventh Sunday after Trinity",
+      "slug": "eleventh-sunday-after-trinity"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "season": "Saints"
+  }),
   '2020/7/31': new LiturgicalDay({
     "evening": false,
     "date": "2020-7-31",
