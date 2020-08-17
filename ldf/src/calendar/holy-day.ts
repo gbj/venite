@@ -35,6 +35,12 @@ export class HolyDay {
   /** A machine-readable identifier for the liturgical season */
   season?: Seasons[number];
 
+  /** Categories for this feast that are not liturgical seasons
+   * @example
+   * ["Bishop", "Martyr"]
+   */
+  category?: string[];
+
   /** Optional: Identifies whether it is the Eve of ___ */
   eve?: boolean;
 
