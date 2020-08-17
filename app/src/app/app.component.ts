@@ -12,6 +12,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  remindersEnabled : boolean = false;
+
   constructor(
     private platform: Platform,
     private translate : TranslateService,
@@ -23,6 +25,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.remindersEnabled = this.platform.is('capacitor');
 //      this.statusBar.styleDefault();
 //      this.splashScreen.hide();
 

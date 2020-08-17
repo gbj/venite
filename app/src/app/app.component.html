@@ -1,5 +1,35 @@
 <ion-app>
-  <venite-menu></venite-menu>
+  <!-- Main Menu-->
+  <ion-menu side="start" menuId="menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-thumbnail slot="start">
+          <img src="/assets/icon/venite.svg">
+        </ion-thumbnail>
+        <ion-title>Venite</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/">
+          <ion-icon name="book" slot="start"></ion-icon>
+          <ion-label>{{ 'menu.pray' | translate }}</ion-label>
+        </ion-item>
+        <ion-item routerLink="/reminders" *ngIf="remindersEnabled">
+          <ion-icon name="notifications" slot="start"></ion-icon>
+          <ion-label>{{ 'menu.reminders' | translate }}</ion-label>
+        </ion-item>
+        <ion-item button routerLink="/editor">
+          <ion-icon name="link" slot="start"></ion-icon>
+          <ion-label>{{ 'menu.bulletins' | translate }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Content -->
   <ion-router-outlet id="main"></ion-router-outlet>
+
+  <!-- Auth Menu -->
   <venite-auth-menu></venite-auth-menu>
 </ion-app>
