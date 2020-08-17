@@ -3,6 +3,8 @@ import { Injectable, Inject } from '@angular/core';
 import { Plugins, LocalNotificationPendingList } from '@capacitor/core';
 import { Reminder } from './reminder';
 import { BibleServiceInterface, PlatformServiceInterface, BIBLE_SERVICE, PLATFORM_SERVICE } from '@venite/ng-service-api';
+import { RemindersConfig } from './reminders-config';
+import { BibleReadingVerse } from '@venite/ldf';
 const { LocalNotifications } = Plugins;
 
 @Injectable({
@@ -12,6 +14,7 @@ export class ReminderService {
   pending : LocalNotificationPendingList;
 
   constructor(
+    @Inject('config') private config : RemindersConfig,
     @Inject(BIBLE_SERVICE) private bible : BibleServiceInterface,
     @Inject(PLATFORM_SERVICE) private platform : PlatformServiceInterface
   ) {
@@ -66,8 +69,8 @@ export class ReminderService {
     try {
       const verses = VERSES[timeOfDay],
             randomVerse = verses[Math.floor(Math.random() * verses.length)],
-            bibleReading = await this.bible.getText(randomVerse, 'ESV').toPromise(),
-            bibleText = bibleReading.value?.flat().map(verse => verse.text).join('').replace('(ESV)', '').replace(/\s+/g, ' ').trim();
+            bibleReading = await this.bible.getText(randomVerse, this.config?.bibleVersion || 'ESV').toPromise(),
+            bibleText = bibleReading.value?.flat().map(verse => verse.hasOwnProperty('text') && (verse as BibleReadingVerse).text).join('').replace('(ESV)', '').replace(/\s+/g, ' ').trim();
       return `“${bibleText}” – ${randomVerse}`;
     } catch(e) {
       console.warn(e);
