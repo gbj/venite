@@ -1,8 +1,8 @@
 import { Injectable, Inject } from '@angular/core';
-import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Option, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
-import { map, switchMap, startWith, tap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
 
 @Injectable({
@@ -287,11 +287,20 @@ export class PrayService {
       // filter antiphons to find the appropriate one
       map(antiphons => {
         const antiphonsForDay = antiphons.filter(antiphon => antiphon.category.includes(day.propers || day.slug));
+
+        /* prepends antiphons for a season that matches an unobserved black-letter day
+         * this is specifically used in e.g., the Canadian 1962 book, which has black-letter
+         * Marian feasts that call for a certain antiphon, but do not have their own propers
+         * and therefore should not be the observed holy day */
+        const blackLetterDays = (day.holy_days || []).filter(holyDay => holyDay.type?.rank < 3),
+              highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
+              antiphonsForBlackLetterDays = antiphons.filter(antiphon => antiphon.category.includes(highestBlackLetter?.season));
+
         if(antiphonsForDay.length == 0) {
           const antiphonsForSeason = antiphons.filter(antiphon => antiphon.category.includes(day.season || day.week?.season));
-          return docsToOption(antiphonsForSeason);
+          return antiphonsForBlackLetterDays.concat(antiphonsForSeason)[0];
         } else {
-          return docsToOption(antiphonsForDay);
+          return antiphonsForDay[0];
         }
       }),
       map(antiphon => new LiturgicalDocument({
