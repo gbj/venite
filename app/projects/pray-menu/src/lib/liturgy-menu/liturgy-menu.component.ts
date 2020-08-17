@@ -49,12 +49,10 @@ export class LiturgyMenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('LiturgyMenu onInit', this.language, this.version);
     this.languageVersionLiturgies$ = combineLatest(
       this.language$.pipe(startWith(this.language || this.config.defaultLanguage)),
       this.version$.pipe(startWith(this.version || this.config.defaultVersion))
     ).pipe(
-      tap(vals => console.log('languageVersionLiturgies', vals)),
       switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version))
     );
     this.language$.next(this.language);
@@ -85,7 +83,6 @@ export class LiturgyMenuComponent implements OnInit {
       this.properLiturgyLiturgy.pipe(startWith(null)),  // startWith allows us to combine even if no proper liturgy
       this.languageVersionLiturgies$.pipe(startWith([]))
     ).pipe(
-      tap(options => console.log('LiturgyMenu', options)),
       map(([properLiturgy, liturgyOptions]) => properLiturgy ? new Array(properLiturgy).concat(liturgyOptions) : liturgyOptions),
       tap(options => this.liturgyOptionsChange.emit(options)),
       tap(() => this.liturgySubject.next(this.liturgy || this.liturgyOfTheHour(new Date())))
