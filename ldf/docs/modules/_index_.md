@@ -50,6 +50,8 @@
 * [Text](_index_.md#text)
 * [TypeTuple](_index_.md#typetuple)
 * [User](_index_.md#user)
+* [Value](_index_.md#value)
+* [ValuePiece](_index_.md#valuepiece)
 * [WEEKDAYS](_index_.md#weekdays)
 * [addOneDay](_index_.md#addoneday)
 * [categoriesToPreferenceTree](_index_.md#categoriestopreferencetree)
@@ -62,9 +64,11 @@
 * [docsToOption](_index_.md#docstooption)
 * [easterInYear](_index_.md#easterinyear)
 * [filterCanticleTableEntries](_index_.md#filtercanticletableentries)
+* [findCollect](_index_.md#findcollect)
 * [liturgicalDay](_index_.md#liturgicalday)
 * [liturgicalWeek](_index_.md#liturgicalweek)
 * [preferencesToCategories](_index_.md#preferencestocategories)
+* [processCollectText](_index_.md#processcollecttext)
 * [rclYear](_index_.md#rclyear)
 * [sortPsalms](_index_.md#sortpsalms)
 * [specificClass](_index_.md#specificclass)
@@ -339,6 +343,18 @@ ___
 
 ___
 
+###  Value
+
+• **Value**:
+
+___
+
+###  ValuePiece
+
+• **ValuePiece**:
+
+___
+
 ###  WEEKDAYS
 
 • **WEEKDAYS**:
@@ -411,6 +427,12 @@ ___
 
 ___
 
+###  findCollect
+
+• **findCollect**:
+
+___
+
 ###  liturgicalDay
 
 • **liturgicalDay**:
@@ -426,6 +448,12 @@ ___
 ###  preferencesToCategories
 
 • **preferencesToCategories**:
+
+___
+
+###  processCollectText
+
+• **processCollectText**:
 
 ___
 

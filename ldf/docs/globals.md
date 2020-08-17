@@ -58,6 +58,7 @@
 * ["utils/categories-to-preference-tree"](modules/_utils_categories_to_preference_tree_.md)
 * ["utils/docs-to-liturgy"](modules/_utils_docs_to_liturgy_.md)
 * ["utils/docs-to-option"](modules/_utils_docs_to_option_.md)
+* ["utils/find-collect"](modules/_utils_find_collect_.md)
 * ["utils/index"](modules/_utils_index_.md)
 * ["utils/preferences-to-categories"](modules/_utils_preferences_to_categories_.md)
 * ["utils/sort-psalms"](modules/_utils_sort_psalms_.md)

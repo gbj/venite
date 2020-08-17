@@ -9,7 +9,9 @@
 * [categoriesToPreferenceTree](_utils_index_.md#categoriestopreferencetree)
 * [docsToLiturgy](_utils_index_.md#docstoliturgy)
 * [docsToOption](_utils_index_.md#docstooption)
+* [findCollect](_utils_index_.md#findcollect)
 * [preferencesToCategories](_utils_index_.md#preferencestocategories)
+* [processCollectText](_utils_index_.md#processcollecttext)
 * [sortPsalms](_utils_index_.md#sortpsalms)
 * [specificClass](_utils_index_.md#specificclass)
 * [versionToString](_utils_index_.md#versiontostring)
@@ -34,9 +36,21 @@ ___
 
 ___
 
+###  findCollect
+
+• **findCollect**:
+
+___
+
 ###  preferencesToCategories
 
 • **preferencesToCategories**:
+
+___
+
+###  processCollectText
+
+• **processCollectText**:
 
 ___
 

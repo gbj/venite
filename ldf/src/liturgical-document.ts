@@ -26,8 +26,19 @@ export type TypeTuple = typeof TYPES;
 const LOOKUP_TYPES = ['lectionary', 'canticle', 'category', 'slug', 'collect'];
 type LookupTypeTuple = typeof LOOKUP_TYPES;
 
-export type Value = LiturgicalDocument[] | ResponsivePrayerLine[] | (BibleReadingVerse | Heading)[] | PsalmSection[] | string[];
-export type ValuePiece = LiturgicalDocument | ResponsivePrayerLine | BibleReadingVerse | Heading | PsalmSection | string;
+export type Value =
+  | LiturgicalDocument[]
+  | ResponsivePrayerLine[]
+  | (BibleReadingVerse | Heading)[]
+  | PsalmSection[]
+  | string[];
+export type ValuePiece =
+  | LiturgicalDocument
+  | ResponsivePrayerLine
+  | BibleReadingVerse
+  | Heading
+  | PsalmSection
+  | string;
 
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
