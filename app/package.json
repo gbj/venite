@@ -37,7 +37,7 @@
     "@venite/ng-pray": "^0.1.0",
     "@venite/ng-pray-menu": "0.0.7",
     "@venite/ng-reminders": "0.0.2",
-    "@venite/ng-service-api": "0.0.4",
+    "@venite/ng-service-api": "0.0.5",
     "firebase": "^7.14.4",
     "json-pointer": "^0.6.0",
     "ot-json1": "github:ottypes/json1",
