@@ -72,16 +72,16 @@ graph TD;
   ldf-editable-condition-piece --> ldf-editable-text
   ldf-editable-condition-piece --> ion-select
   ldf-editable-condition-piece --> ion-select-option
-  ldf-editable-condition-piece --> ldf-editable-string-list
   ldf-editable-condition-piece --> ion-chip
+  ldf-editable-condition-piece --> ldf-editable-string-list
   ldf-editable-text --> ion-input
+  ion-chip --> ion-ripple-effect
   ldf-editable-string-list --> ion-item
   ldf-editable-string-list --> ion-label
   ldf-editable-string-list --> ion-chip
   ldf-editable-string-list --> ion-icon
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
-  ion-chip --> ion-ripple-effect
   style ldf-editable-condition fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
