@@ -12,5 +12,6 @@ export const SEASONS = [
   'Ember',
   'National',
   'Rogation',
+  'Mary',
 ];
 export type Seasons = typeof SEASONS;

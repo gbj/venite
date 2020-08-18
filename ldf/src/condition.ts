@@ -26,6 +26,12 @@ export class Condition {
     only?: string[];
   };
 
+  // Day is during a particular week
+  week?: {
+    except?: string[];
+    only?: string[];
+  };
+
   // Day is before or after a certain date (less than, less than or equal, etc.)
   date?: {
     lt?: string; // each stored as 'MM/DD'
@@ -53,6 +59,9 @@ export class Condition {
 
     // `day`: is day.slug in the `only` list (and not in the `except` list)?
     this.exceptOnlyFactory('day' as 'day', day.slug, evaluatedConditions);
+
+    // `week`: is day.week.slug in the `only` list (and not in the `except` list)?
+    this.exceptOnlyFactory('week' as 'week', day.week?.slug, evaluatedConditions);
 
     // `weekday`:
     this.exceptOnlyFactory(
@@ -122,7 +131,7 @@ export class Condition {
     return evaluatedConditions.reduce((a, b) => a && b);
   }
 
-  exceptOnlyFactory(property: 'day' | 'season' | 'weekday', include: string, evaluatedConditions: boolean[]) {
+  exceptOnlyFactory(property: 'day' | 'season' | 'weekday' | 'week', include: string, evaluatedConditions: boolean[]) {
     const obj = this[property];
 
     if (obj !== undefined) {

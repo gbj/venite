@@ -101,6 +101,18 @@ describe('Condition', () => {
     expect(include).toEqual(false);
   });
 
+  it('should match weeks', () => {
+    const condition = new Condition();
+
+    condition.week = {only: ['4th-lent']};
+    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    expect(include).toEqual(true);
+
+    condition.week = {except: ['4th-lent']};
+    include = condition.include(annunciation, new ClientPreferences());
+    expect(include).toEqual(false);
+  });
+
   it('should match weekdays', () => {
     const condition = new Condition();
 

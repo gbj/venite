@@ -19,6 +19,7 @@
 * [feastDay](_condition_.condition.md#optional-feastday)
 * [preference](_condition_.condition.md#optional-preference)
 * [season](_condition_.condition.md#optional-season)
+* [week](_condition_.condition.md#optional-week)
 * [weekday](_condition_.condition.md#optional-weekday)
 
 ### Methods
@@ -32,7 +33,7 @@
 
 \+ **new Condition**(`data`: Partial‹[Condition](_condition_.condition.md)›): *[Condition](_condition_.condition.md)*
 
-*Defined in [condition.ts:136](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L136)*
+*Defined in [condition.ts:145](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L145)*
 
 **Parameters:**
 
@@ -48,7 +49,7 @@ Name | Type | Default |
 
 • **date**? : *undefined | object*
 
-*Defined in [condition.ts:30](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L30)*
+*Defined in [condition.ts:36](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L36)*
 
 ___
 
@@ -56,7 +57,7 @@ ___
 
 • **day**? : *undefined | object*
 
-*Defined in [condition.ts:8](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L8)*
+*Defined in [condition.ts:8](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L8)*
 
 ___
 
@@ -64,7 +65,7 @@ ___
 
 • **feastDay**? : *undefined | false | true*
 
-*Defined in [condition.ts:20](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L20)*
+*Defined in [condition.ts:20](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L20)*
 
 ___
 
@@ -72,7 +73,7 @@ ___
 
 • **preference**? : *undefined | object*
 
-*Defined in [condition.ts:38](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L38)*
+*Defined in [condition.ts:44](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L44)*
 
 ___
 
@@ -80,7 +81,15 @@ ___
 
 • **season**? : *undefined | object*
 
-*Defined in [condition.ts:14](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L14)*
+*Defined in [condition.ts:14](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L14)*
+
+___
+
+### `Optional` week
+
+• **week**? : *undefined | object*
+
+*Defined in [condition.ts:30](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L30)*
 
 ___
 
@@ -88,21 +97,21 @@ ___
 
 • **weekday**? : *undefined | object*
 
-*Defined in [condition.ts:24](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L24)*
+*Defined in [condition.ts:24](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L24)*
 
 ## Methods
 
 ###  exceptOnlyFactory
 
-▸ **exceptOnlyFactory**(`property`: "day" | "season" | "weekday", `include`: string, `evaluatedConditions`: boolean[]): *void*
+▸ **exceptOnlyFactory**(`property`: "day" | "season" | "weekday" | "week", `include`: string, `evaluatedConditions`: boolean[]): *void*
 
-*Defined in [condition.ts:125](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L125)*
+*Defined in [condition.ts:134](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L134)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`property` | "day" &#124; "season" &#124; "weekday" |
+`property` | "day" &#124; "season" &#124; "weekday" &#124; "week" |
 `include` | string |
 `evaluatedConditions` | boolean[] |
 
@@ -114,7 +123,7 @@ ___
 
 ▸ **include**(`day`: [LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md), `prefs`: [ClientPreferences](_liturgy_client_preferences_.clientpreferences.md)): *boolean*
 
-*Defined in [condition.ts:45](https://github.com/gbj/venite/blob/390b340/ldf/src/condition.ts#L45)*
+*Defined in [condition.ts:51](https://github.com/gbj/venite/blob/bb76e32/ldf/src/condition.ts#L51)*
 
 Given a liturgical day and a set of preferences, evaluates whether the condition should be included
 

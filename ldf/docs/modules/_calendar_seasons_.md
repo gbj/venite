@@ -18,7 +18,7 @@
 
 Ƭ **Seasons**: *typeof SEASONS*
 
-*Defined in [calendar/seasons.ts:16](https://github.com/gbj/venite/blob/390b340/ldf/src/calendar/seasons.ts#L16)*
+*Defined in [calendar/seasons.ts:17](https://github.com/gbj/venite/blob/bb76e32/ldf/src/calendar/seasons.ts#L17)*
 
 ## Variables
 
@@ -38,6 +38,7 @@
   'Ember',
   'National',
   'Rogation',
+  'Mary',
 ]
 
-*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/390b340/ldf/src/calendar/seasons.ts#L1)*
+*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/bb76e32/ldf/src/calendar/seasons.ts#L1)*
