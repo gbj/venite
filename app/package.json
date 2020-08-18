@@ -30,7 +30,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@venite/angular": "^0.5.0",
     "@venite/components": "^0.9.18",
-    "@venite/ldf": "^0.9.11",
+    "@venite/ldf": "^0.10.0",
     "@venite/ng-darkmode": "0.0.7",
     "@venite/ng-localstorage": "0.0.3",
     "@venite/ng-platform": "0.0.2",
