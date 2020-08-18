@@ -41,7 +41,7 @@
   "license": "MIT",
   "dependencies": {
     "@ionic/core": "^5.1.0",
-    "@venite/ldf": "^0.9.9",
+    "@venite/ldf": "^0.10.2",
     "diff-match-patch": "^1.0.4",
     "query-selector-shadow-dom": "^0.4.6",
     "textarea-caret": "^3.1.0",

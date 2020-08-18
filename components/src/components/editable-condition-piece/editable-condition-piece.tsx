@@ -2,6 +2,7 @@ import { Component, Element, Prop, Event, EventEmitter, h, Host, State, Watch } 
 import { Change, Condition, SEASONS, WEEKDAYS } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { ExceptOnly } from './except-only';
+import { ExceptOnlyStrings } from './except-only-strings';
 
 @Component({
   tag: 'ldf-editable-condition-piece',
@@ -260,31 +261,20 @@ export class EditableConditionComponent {
         </article>
 
         {/* Liturgical Day */}
-        <article>
-          <ion-item>
-            <ion-label>{localeStrings.day}</ion-label>
-            <ion-toggle
-              checked={this.workingCondition.day !== undefined}
-              onIonChange={(ev) => this.toggleSubcondition('day', ev.detail.checked, {
-                except: [], only: []
-              })}
-            ></ion-toggle>
-          </ion-item>
-          {this.workingCondition.day !== undefined && <div class="type">
-            <h4>{localeStrings.except}</h4>
-            <ldf-editable-string-list
-              path={`${this.path}/day`}
-              property='except'
-              value={this.workingCondition.day.except}
-            ></ldf-editable-string-list>
-            <h4>{localeStrings.only}</h4>
-            <ldf-editable-string-list
-              path={`${this.path}/day`}
-              property='only'
-              value={this.workingCondition.day.only}
-            ></ldf-editable-string-list>
-          </div>}
-        </article>
+        <ExceptOnlyStrings
+          field="day"
+          localeStrings={localeStrings}
+          currentCondition={this.workingCondition.day}
+          onToggleSubcondition={(subcondition, active, template) => this.toggleSubcondition(subcondition, active, template)}
+        />
+
+        {/* Liturgical Week */}
+        <ExceptOnlyStrings
+          field="week"
+          localeStrings={localeStrings}
+          currentCondition={this.workingCondition.week}
+          onToggleSubcondition={(subcondition, active, template) => this.toggleSubcondition(subcondition, active, template)}
+        />
       </Host>
     );
   }
