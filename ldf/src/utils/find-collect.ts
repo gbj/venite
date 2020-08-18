@@ -18,15 +18,17 @@ export function findCollect(
     sundayCollects = collects.filter((collect) => collect.slug == sundaySlug),
     sundayCollect = sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
     blackLetterDays = (day.holy_days || []).filter((feast) => feast.type && feast.type.rank < 3),
-    blackLetterCollects = blackLetterDays
-      .map((holyday) =>
-        (holyday.category || []).map((category) =>
-          collects
-            .filter((collect) => collect.slug === category)
-            .map((collect) => (collect.type === 'text' ? processCollectText(collect as Text, holyday) : collect)),
-        ),
-      )
-      .flat(2),
+    blackLetterCollects = blackLetterDays.map((holyday) =>
+      docsToOption(
+        (holyday.category || [])
+          .map((category) =>
+            collects
+              .filter((collect) => collect.slug === category)
+              .map((collect) => (collect.type === 'text' ? processCollectText(collect as Text, holyday) : collect)),
+          )
+          .flat(),
+      ),
+    ),
     redLetterOrSunday = redLetterCollect || sundayCollect;
 
   if (redLetterOrSunday || blackLetterCollects.length > 0) {
