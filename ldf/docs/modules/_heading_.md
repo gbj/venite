@@ -22,7 +22,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [heading.ts:4](https://github.com/gbj/venite/blob/bb76e32/ldf/src/heading.ts#L4)*
+*Defined in [heading.ts:4](https://github.com/gbj/venite/blob/3f1ddc3/ldf/src/heading.ts#L4)*
 
 ## Variables
 
@@ -30,4 +30,4 @@
 
 • **STYLES**: *["text", "day", "date"]* = ['text', 'day', 'date'] as const
 
-*Defined in [heading.ts:3](https://github.com/gbj/venite/blob/bb76e32/ldf/src/heading.ts#L3)*
+*Defined in [heading.ts:3](https://github.com/gbj/venite/blob/3f1ddc3/ldf/src/heading.ts#L3)*
