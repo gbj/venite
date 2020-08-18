@@ -198,6 +198,18 @@ export class BibleReadingComponent {
       }
       /* `long` render a typical Bible reading in the liturgy */
       else {
+        const paragraphs : (BibleReadingVerse | Heading)[][] = new Array();
+        let currentParagraph : (BibleReadingVerse | Heading)[] = new Array();
+        this.verses.forEach(verse => {
+          if(verse.hasOwnProperty('type') && (verse as Heading).type === 'heading') {
+            paragraphs.push(currentParagraph);
+            currentParagraph = new Array();
+          } else {
+            currentParagraph.push(verse);
+          }
+        });
+        paragraphs.push(currentParagraph);
+
         return (
           <Host>
             {/* Slot for controls */}
@@ -212,23 +224,23 @@ export class BibleReadingComponent {
             {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document doc={this.obj.metadata.compiled_intro}></ldf-liturgical-document>}
 
             {/* Bible text */}
-            <p lang={this.obj.language}>
-            {this.verses.map((verse, verseIndex) =>
-              verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
-              ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
-              : [
-                <sup>{(verse as BibleReadingVerse).verse}</sup>,
-                <ldf-string
-                  citation={verse}
-                  dropcap={verseIndex == 0 ? 'force' : 'enabled'}
-                  id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
-                  text={(verse as BibleReadingVerse).text}
-                  index={verseIndex}
-                >
-                </ldf-string>
-              ]
-            )}
-            </p>
+            {paragraphs.map(paragraph => <p lang={this.obj.language}>
+              {paragraph.map((verse, verseIndex) =>
+                verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
+                ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
+                : [
+                  <sup>{(verse as BibleReadingVerse).verse}</sup>,
+                  <ldf-string
+                    citation={verse}
+                    dropcap={verseIndex == 0 ? 'force' : 'enabled'}
+                    id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
+                    text={(verse as BibleReadingVerse).text}
+                    index={verseIndex}
+                  >
+                  </ldf-string>
+                ]
+              )}
+            </p>)}
           </Host>
         );
       }
