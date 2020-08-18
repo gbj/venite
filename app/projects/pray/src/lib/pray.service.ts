@@ -1,9 +1,10 @@
 import { Injectable, Inject } from '@angular/core';
-import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
+import { LiturgyConfig } from './liturgy-config';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class PrayService {
   public latestChildren$ : Observable<LiturgicalDocument>[];
 
   constructor(
+    @Inject('liturgyConfig') private config : LiturgyConfig,
     @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface,
     @Inject(LECTIONARY_SERVICE) private lectionaryService : LectionaryServiceInterface,
     @Inject(CANTICLE_TABLE_SERVICE) private canticleTableService : CanticleTableServiceInterface,
@@ -126,15 +128,7 @@ export class PrayService {
       case 'collect':
         return this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', alternateVersions).pipe(
           // filter collects to find the appropriate one
-          map(collects => {
-            const collectsForDay = collects.filter(collect => collect.slug == (day.propers || day.slug));
-            if(collectsForDay.length == 0) {
-              const collectsForWeek = collects.filter(collect => collect.slug == (day.week?.propers || day.week?.slug));
-              return docsToOption(collectsForWeek);
-            } else {
-              return docsToOption(collectsForDay);
-            }
-          })
+          map(collects => findCollect(collects, day, this.config.sundayCollectsFirst))
         )
 
       /* for lookup's of the `slug` type, return an Observable of either

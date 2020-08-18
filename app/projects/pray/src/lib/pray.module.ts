@@ -12,10 +12,12 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { DisplaySettingsComponent } from './display-settings/display-settings.component';
 import { DisplaySettingsConfig } from './display-settings/display-settings-config';
+import { LiturgyConfig } from './liturgy-config';
 
 interface PrayRootConfig {
   providers: Provider[];
   displaySettings: DisplaySettingsConfig;
+  liturgySettings: LiturgyConfig;
 }
 
 @NgModule({
@@ -42,7 +44,8 @@ export class PrayPageModule {
       ngModule: PrayPageModule,
       providers: [
         ... args.providers,
-        { provide: 'displaySettingsConfig', useValue: args.displaySettings }
+        { provide: 'displaySettingsConfig', useValue: args.displaySettings },
+        { provide: 'liturgyConfig', useValue: args.liturgySettings }
       ]
     };
   }
