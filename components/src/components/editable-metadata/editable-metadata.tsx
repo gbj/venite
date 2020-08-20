@@ -87,7 +87,6 @@ export class EditableMetadataComponent {
     }
   }
 
-
   // Render
   render() {
     const localeStrings = this.localeStrings || {},

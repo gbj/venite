@@ -16,6 +16,13 @@
 | `visible`   | `visible`   | If `visible` is true, the controls should appear.                     | `boolean`                      | `undefined` |
 
 
+## Events
+
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+
+
 ## Dependencies
 
 ### Depends on
