@@ -26,7 +26,7 @@
 
 Ƭ **LookupTypeTuple**: *typeof LOOKUP_TYPES*
 
-*Defined in [liturgical-document.ts:27](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L27)*
+*Defined in [liturgical-document.ts:27](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L27)*
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Ƭ **TypeTuple**: *typeof TYPES*
 
-*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L24)*
+*Defined in [liturgical-document.ts:24](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L24)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 Ƭ **Value**: *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[] | [ResponsivePrayerLine](../classes/_responsive_prayer_.responsiveprayerline.md)[] | [BibleReadingVerse](../classes/_bible_reading_bible_reading_verse_.biblereadingverse.md)‹› | [Heading](../classes/_heading_.heading.md)‹›[] | [PsalmSection](../classes/_psalm_.psalmsection.md)[] | string[]*
 
-*Defined in [liturgical-document.ts:29](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L29)*
+*Defined in [liturgical-document.ts:29](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L29)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 Ƭ **ValuePiece**: *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | [ResponsivePrayerLine](../classes/_responsive_prayer_.responsiveprayerline.md) | [BibleReadingVerse](../classes/_bible_reading_bible_reading_verse_.biblereadingverse.md) | [Heading](../classes/_heading_.heading.md) | [PsalmSection](../classes/_psalm_.psalmsection.md) | string*
 
-*Defined in [liturgical-document.ts:35](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L35)*
+*Defined in [liturgical-document.ts:35](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L35)*
 
 ## Variables
 
@@ -58,7 +58,7 @@ ___
 
 • **LOOKUP_TYPES**: *string[]* = ['lectionary', 'canticle', 'category', 'slug', 'collect']
 
-*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L26)*
+*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L26)*
 
 ___
 
@@ -77,4 +77,4 @@ ___
   'meditation',
 ] as const
 
-*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/liturgical-document.ts#L12)*
+*Defined in [liturgical-document.ts:12](https://github.com/gbj/venite/blob/554e2aa/ldf/src/liturgical-document.ts#L12)*
