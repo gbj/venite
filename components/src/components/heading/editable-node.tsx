@@ -1,9 +1,10 @@
 import { FunctionalComponent, h } from '@stencil/core';
 
-export const EditableNode : FunctionalComponent<{ text: string; index: number; }> = ({text, index}) => (
+export const EditableNode : FunctionalComponent<{ uidOrSlug: string; path: string; text: string; index: number; }> = ({uidOrSlug, path, text, index}) => 
   <ldf-editable-text
-    id={`${this.obj.uid || this.obj.slug}-heading-${index}`}
+    id={`${uidOrSlug}-heading-${index}`}
     text={text}
-    path={`${this.path}/value/${index}`}>
+    path={`${path}/value/${index}`}
+    short={true}
+    inputType="text">
   </ldf-editable-text>
-);

@@ -1,6 +1,7 @@
 import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
 import { Heading, Citation, dateFromYMDString } from '@venite/ldf';
 import { EditableNode } from './editable-node';
+import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
   tag: 'ldf-heading',
@@ -12,6 +13,7 @@ export class HeadingComponent {
 
   // States
   @State() obj : Heading;
+  @State() localeStrings: { [x: string]: string; };
 
   // Properties
   /**
@@ -27,7 +29,7 @@ export class HeadingComponent {
         this.obj = new Heading(newDoc);
       }
     } catch(e) {
-      console.warn(e);
+      console.warn('HEADING ERROR', e);
       this.obj = new Heading();
     }
   }
@@ -45,6 +47,26 @@ export class HeadingComponent {
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
+    this.loadLocaleStrings();
+  }
+
+  /** Asynchronously return localization strings */
+  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
+    if(!this.localeStrings) {
+      await this.loadLocaleStrings();
+      return this.localeStrings;
+    } else {
+      return this.localeStrings;
+    }
+  }
+
+  /** Asynchronously load localization strings */
+  async loadLocaleStrings() : Promise<void> {
+    try {
+      this.localeStrings = await getLocaleComponentStrings(this.el);
+    } catch(e) {
+      console.warn(e);
+    }
   }
 
   // Convert level/text into an H... node
@@ -66,12 +88,14 @@ export class HeadingComponent {
       case 5:
         node = <h5 slot='start'>{contentNode}</h5>;
         break;
+      default:
+        node = <h6>{contentNode}</h6>
     }
     return node;
   }
 
   private textNode(text : string, index : number) : JSX.Element {
-    return this.editable ? <EditableNode text={text} index={index} /> : text;
+    return this.editable ? <EditableNode uidOrSlug={this.obj.uid || this.obj.slug || ''} path={this.path} text={text} index={index} /> : text;
   }
 
   private dateNode() : JSX.Element {
@@ -107,25 +131,35 @@ export class HeadingComponent {
 
   // Render
   render() {
+    const localeStrings = this.localeStrings || {};
+
     const level : number = this.obj.metadata ? this.obj.metadata.level : 4,
           hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined,
-          isText = this.obj?.style == undefined || this.obj?.style == 'text',
           isDate = this.obj?.style == 'date',
-          isDay = this.obj?.style == 'day';
+          isDay = this.obj?.style == 'day',
+          isText = this.obj?.style == undefined || this.obj?.style == 'text' || (!isDate && !isDay);
     
     // Render
     return (
-      <Host lang={this.obj.language}>
+      <Host lang={this.obj?.language || 'en'}>
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
 
         <ldf-label-bar>
-          {isText} {isDate} {isDay}
           {/* `Heading.label` => main header node */}
           {isText && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index)))}
-          {isDate && this.headerNode(level, this.dateNode())}
-          {isDay && this.headerNode(level, <ldf-day-name day={this.obj?.day}></ldf-day-name>)}
+
+          {isDate && !this.editable && this.headerNode(level, this.dateNode())}
+          {isDate && this.editable && <code class="lookup">{localeStrings.day}</code>}
+
+          {isDay && !this.editable && this.headerNode(level, <ldf-day-name day={this.obj?.day}></ldf-day-name>)}
+          {isDay && !this.editable && this.obj?.day?.holy_days?.length > 0 && <ul class="holy-days">
+            {this.obj?.day?.holy_days
+              .filter(day => day.type?.rank < 3)
+              .map(day => <li class="holy-day">{day.name}</li>)}
+          </ul>}
+          {isDay && this.editable && <code class="lookup">{localeStrings.date}</code>}
 
           <slot name='additional'></slot>
 
