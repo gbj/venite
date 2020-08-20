@@ -3,6 +3,7 @@ import { BibleReadingVerse } from './bible-reading-verse';
 import { BIBLE_BOOK_ABBREVIATIONS } from './bible-book-abbreviations';
 import { BIBLE_BOOK_NAMES } from './bible-book-names.i18n';
 import { Heading } from '../heading';
+import { ordinalSuffix } from './ordinal-suffix';
 
 const STYLES = ['long', 'short'] as const;
 type StyleTuple = typeof STYLES;
@@ -26,35 +27,40 @@ export class BibleReading extends LiturgicalDocument {
       const abbrev = this.abbrevFromCitation(),
         bookCode = this.bookCodeFromAbbrev(abbrev),
         longName = this.longNameFromBookCode(bookCode),
-        shortName = this.shortNameFromBookCode(bookCode);
+        shortName = this.shortNameFromBookCode(bookCode),
+        chapter = this.chapterFromCitation(),
+        verse = this.verseFromCitation();
 
       const newValue: any[] = new Array();
+
+      const process = (s: string) =>
+        s
+          .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
+          .replace(/\$\{shortName\}/g, shortName)
+          .replace(/\$\{chapter\}/g, chapter ? `${ordinalSuffix(Number(chapter))}` : '___')
+          .replace(/\$\{verse\}/g, verse ? `${ordinalSuffix(Number(verse))}` : '___');
 
       this.metadata?.intro?.value?.forEach((introValue: any) => {
         // Intro is presumably a Text or similar
         if (typeof introValue == 'string') {
-          newValue.push(
-            introValue
-              .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
-              .replace(/\$\{shortName\}/g, shortName),
-          );
+          newValue.push(process(introValue));
         }
         // Intro is presumably a ResponsivePrayer or similar
         else if (introValue.hasOwnProperty('text')) {
           newValue.push({
             ...introValue,
-            text: introValue.text
-              .replace(/\$\{longName\}/g, longName.replace('The', 'the'))
-              .replace(/\$\{shortName\}/g, shortName),
+            text: process(introValue.text),
           });
         }
         // if it's neither of those, do nothing at all to it
         else {
-          newValue.push(introValue);
+          newValue.push(process(introValue));
         }
       });
 
       this.metadata.compiled_intro = new LiturgicalDocument({ ...this.metadata.intro, value: newValue });
+
+      console.log('compiled intro = ', this.metadata.compiled_intro);
     }
   }
 
@@ -72,6 +78,28 @@ export class BibleReading extends LiturgicalDocument {
       citation = this.citation;
     }
     return citation.replace(/\./g, '');
+  }
+
+  /** Gives number of first chapter of citation */
+  chapterFromCitation(): string | undefined {
+    const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
+    if (matches) {
+      const [chapter] = matches;
+      return chapter.trim().replace(/[\.,:]/g, '');
+    } else {
+      return undefined;
+    }
+  }
+
+  /** Gives number of first verse of citation */
+  verseFromCitation(): string | undefined {
+    const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
+    if (matches) {
+      const [, verse] = matches;
+      return verse.trim().replace(/[\.,:]/g, '');
+    } else {
+      return undefined;
+    }
   }
 
   /** Given an abbreviated book name, returns the name of the book
