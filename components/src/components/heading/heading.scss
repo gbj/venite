@@ -10,7 +10,7 @@
     text-transform: var(--ldf-title-text-transform);
   }
 
-  h2 {
+  h2, .holy-day {
     text-align: var(--ldf-subtitle-text-align);
     font-weight: var(--ldf-subtitle-font-weight);
     font-style: var(--ldf-subtitle-font-style);
@@ -45,6 +45,25 @@
     font-size: var(--ldf-h5-font-size);
     text-transform: var(--ldf-h5-text-transform);
   }
+
+  .holy-days {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .holy-day {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.lookup {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 1em;
+  width: 100%;
 }
 
 ::slotted[slot="citation"] {
