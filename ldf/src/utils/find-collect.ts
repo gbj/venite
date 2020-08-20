@@ -5,7 +5,7 @@ import { docsToOption } from './docs-to-option';
 import { HolyDay } from '../calendar/holy-day';
 import { docsToLiturgy } from './docs-to-liturgy';
 
-const FAKE_SEASONS = ['Saints', 'Mary', 'Ember', 'National', 'Rogation'];
+const FAKE_SEASONS = ['Saints', 'Mary'];
 
 /** Given a set of all possible collects and a `LiturgicalDay`, returns a `LiturgicalDocument` of the correct collect or sequence of collects */
 export function findCollect(
