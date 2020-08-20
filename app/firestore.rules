@@ -54,18 +54,31 @@ service cloud.firestore {
       allow create, update, delete: if request.auth.uid == request.resource.data.uid;
     }
 
+    //match /DocumentManager/{docId} {
+    //  allow read: if hasReadAccess(docSharingFromDocId(docId)) || hasWriteAccess(docSharingFromDocId(docId));
+    //  allow create: if request.auth.uid != null;
+    //  allow update: if request.resource.data.lastRevision >= resource.data.lastRevision && hasWriteAccess(docSharingFromDocId(docId));
+    //  allow delete: if hasWriteAccess(docSharingFromDocId(docId));
+    //}
+
+    //match /DocumentManager/{docId}/revisionLog/{changeId} {
+    //  allow read: if hasReadAccess(docSharingFromDocId(docId));
+    //  allow create: if request.auth.uid != null;
+    //  allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
+    // }
+
     match /DocumentManager/{docId} {
-      allow read: if hasReadAccess(docSharingFromDocId(docId)) || hasWriteAccess(docSharingFromDocId(docId));
+      allow read: if request.auth.uid != null;
       allow create: if request.auth.uid != null;
       allow update: if request.resource.data.lastRevision >= resource.data.lastRevision && hasWriteAccess(docSharingFromDocId(docId));
-      allow delete: if hasWriteAccess(docSharingFromDocId(docId));
+      allow delete: if request.auth.uid != null;
     }
 
     match /DocumentManager/{docId}/revisionLog/{changeId} {
-      allow read: if hasReadAccess(docSharingFromDocId(docId));
-      allow create: if request.auth.uid != null;
-      allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
-    }
+    //  allow read: if hasReadAccess(docSharingFromDocId(docId));
+      allow create, read, update, delete: if request.auth.uid != null;
+    //  allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
+     }
 
     match /Color/{docId} {
       allow read: if true;
