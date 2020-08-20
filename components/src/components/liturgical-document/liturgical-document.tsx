@@ -173,7 +173,8 @@ export class LiturgicalDocumentComponent {
         ];
         break;
       case 'collect':
-        desc = localeStrings.collect;
+        desc = <code>{localeStrings.collect}</code>;
+        break;
       default:
         desc = JSON.stringify(doc.lookup);
         break;
@@ -232,7 +233,7 @@ export class LiturgicalDocumentComponent {
     const node = this.nodeFromDoc(this.obj);
 
     return (
-      node && <Host lang={this.obj?.language}>
+      node && <Host lang={this.obj?.language || 'en'}>
         {/* Settings/Delete Buttons */}
         {this.editable && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
