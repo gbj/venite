@@ -1,5 +1,5 @@
-import { Component, Element, Prop, Watch, State, Host, FunctionalComponent, h } from '@stencil/core';
-import { LiturgicalDocument, specificClass } from '@venite/ldf';
+import { Component, Element, Prop, Watch, State, Host, FunctionalComponent, Event, EventEmitter, h } from '@stencil/core';
+import { LiturgicalDocument, specificClass, Change } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
@@ -46,11 +46,15 @@ export class EditableMetadataComponent {
   /** Used to pass in the `IonModal` we will dismiss */
   @Prop() modal : any;
 
+  // Events
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
     this.collapsedState = this.collapsed;
     this.loadLocaleStrings();
+    this.initializeMetadata(); 
   }
 
   // Private methods
@@ -70,6 +74,16 @@ export class EditableMetadataComponent {
       this.localeStrings = await getLocaleComponentStrings(this.element);
     } catch(e) {
       console.warn(e);
+    }
+  }
+
+  initializeMetadata() {
+    if(!this.obj.metadata) {
+      this.obj.metadata = {};
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.base,
+        op: [ { type: 'delete', index: this.index, oldValue: this.obj } ]
+      }))
     }
   }
 
