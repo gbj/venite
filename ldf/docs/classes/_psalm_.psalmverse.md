@@ -32,7 +32,7 @@ PsalmVerse is a single verse or line
 
 \+ **new PsalmVerse**(`data`: Partial‹[PsalmVerse](_psalm_.psalmverse.md)›): *[PsalmVerse](_psalm_.psalmverse.md)*
 
-*Defined in [psalm.ts:140](https://github.com/gbj/venite/blob/06f53f7/ldf/src/psalm.ts#L140)*
+*Defined in [psalm.ts:140](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/psalm.ts#L140)*
 
 **Parameters:**
 
@@ -48,7 +48,7 @@ Name | Type | Default |
 
 • **halfverse**? : *undefined | string*
 
-*Defined in [psalm.ts:140](https://github.com/gbj/venite/blob/06f53f7/ldf/src/psalm.ts#L140)*
+*Defined in [psalm.ts:140](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/psalm.ts#L140)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **number**? : *undefined | string*
 
-*Defined in [psalm.ts:138](https://github.com/gbj/venite/blob/06f53f7/ldf/src/psalm.ts#L138)*
+*Defined in [psalm.ts:138](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/psalm.ts#L138)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **type**: *"psalm-verse"*
 
-*Defined in [psalm.ts:137](https://github.com/gbj/venite/blob/06f53f7/ldf/src/psalm.ts#L137)*
+*Defined in [psalm.ts:137](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/psalm.ts#L137)*
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 • **verse**: *string*
 
-*Defined in [psalm.ts:139](https://github.com/gbj/venite/blob/06f53f7/ldf/src/psalm.ts#L139)*
+*Defined in [psalm.ts:139](https://github.com/gbj/venite/blob/ab34c2e/ldf/src/psalm.ts#L139)*

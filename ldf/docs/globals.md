@@ -10,6 +10,7 @@
 * ["bible-reading/bible-book-names.i18n"](modules/_bible_reading_bible_book_names_i18n_.md)
 * ["bible-reading/bible-reading"](modules/_bible_reading_bible_reading_.md)
 * ["bible-reading/bible-reading-verse"](modules/_bible_reading_bible_reading_verse_.md)
+* ["bible-reading/ordinal-suffix"](modules/_bible_reading_ordinal_suffix_.md)
 * ["calendar/calendar"](modules/_calendar_calendar_.md)
 * ["calendar/holy-day"](modules/_calendar_holy_day_.md)
 * ["calendar/kalendar"](modules/_calendar_kalendar_.md)
