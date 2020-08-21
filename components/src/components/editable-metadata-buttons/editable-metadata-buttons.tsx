@@ -90,6 +90,7 @@ export class EditableMetadataButtonsComponent {
     })
 
     const path = componentPath || (this.base && this.index >= 0 ? `${this.base}/${this.index}` : '/');
+    console.log('opening modal for path', path);
 
     modal.componentProps = {
       ... componentProps,

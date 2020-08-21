@@ -8,7 +8,7 @@
   } 
 
   export const ExceptOnlyStrings : FunctionalComponent<ExceptOnlyStringsProp> = ({ field, localeStrings, currentCondition, onToggleSubcondition }) => 
-  <article>
+  currentCondition && <article>
     <ion-item>
       <ion-label>{localeStrings[field]}</ion-label>
       <ion-toggle

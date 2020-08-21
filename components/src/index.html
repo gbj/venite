@@ -199,7 +199,7 @@ ldf-psalm .psalm br {
     /*const editor = document.createElement('ldf-editor');
     editor.doc = { "type": "liturgy", "value": [{ "type": "text", "style": "text", "value": ["Editor text 1."]},{ "type": "text", "style": "text", "value": ["Editor text 2."]}]}
     document.querySelector('#example').appendChild(editor);
-    document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
+    */document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
     document.addEventListener('ldfDocShouldChange', (ev) => console.log('(ldfDocShouldChange)', ev));
     document.addEventListener('ldfAddChildAfter', (ev) => console.log('(ldfAddChildAfter)', ev));
     document.addEventListener('ldfAskForBibleIntros', (ev) => { 
@@ -207,7 +207,7 @@ ldf-psalm .psalm br {
       ev.originalTarget.setBibleReadingIntros([
         { "type": "text", "style": "text", "value": ["A Reading from ${shortName}."]}
       ]);
-    });*/
+    });
 
     const LITURGY2 = {
   "hidden": false,
@@ -220,10 +220,7 @@ ldf-psalm .psalm br {
         "Morning Prayer"
       ],
       "type": "heading",
-      "style": "text",
-      "metadata": {
-        "level": 1
-      }
+      "style": "text"
     },
     {
       "hidden": false,
@@ -3531,6 +3528,7 @@ ldf-psalm .psalm br {
 };
 const node = document.createElement('ldf-liturgical-document');
 node.setAttribute('editable', true);
+node.setAttribute('path', '/');
     node.doc = LITURGY2;
     document.querySelector('#example').appendChild(node);
   </script>
