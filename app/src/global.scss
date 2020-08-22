@@ -27,6 +27,52 @@
 
 /** Venite LDF CSS Variables — defined in @venite/components */
 :root {
+	--ldf-background-color: #ffffff;
+	--ldf-color: #121212;
+	--ldf-drop-float: left;
+	--ldf-drop-early-verses-display: none;
+	--ldf-gloria-indent: 0;
+	--ldf-title-text-align: center;
+	--ldf-title-font-weight: bold;
+	--ldf-title-font-style: normal;
+	--ldf-title-font-variant: small-caps;
+	--ldf-title-font-size: 2em;
+	--ldf-subtitle-font-style: italic;
+	--ldf-subtitle-font-weight: normal;
+	--ldf-subtitle-font-variant: normal;
+	--ldf-subtitle-font-size: 1em;
+	--ldf-response-font-weight: bold;
+	--ldf-response-font-style: normal;
+	--ldf-text-border-width: 1px;
+	--ldf-text-border-bottom-width: 3px;
+	--ldf-text-border-radius: 4px;
+	--ldf-rubric-color: rgb(252, 13, 27);
+	--ldf-rubric-font-style: italic;
+	--ldf-rubric-font-weight: normal;
+	--ldf-rubric-font-size: 90%;
+	--ldf-antiphon-font-style: italic;
+	--ldf-antiphon-font-weight: normal;
+  --ldf-psalm-grid-display: block;
+  --ldf-psalm-grid-template-columns: 1.5em 1fr;
+  --ldf-psalm-grid-template-areas: "number verse";
+  --ldf-psalm-halfverse-margin-left: 0.125em;
+  --ldf-psalm-text-grid-area: verse;
+  --ldf-psalm-number-grid-area: number;
+  --ldf-psalm-verse-indentation: 0.5em;
+  --ldf-psalm-number-margin-right: 0.5em;
+	--ldf-psalm-antiphon-display: block;
+	--ldf-psalm-repeat-antiphon-display: none;
+	--ldf-drop-firstword-font-variant: small-caps;
+	--ldf-drop-font-size: 2.3em;
+	--ldf-drop-margin-right: 0.05em;
+  --ldf-drop-line-height: 1em;
+  --ldf-subtitle-text-align: center;
+  --ldf-title-text-transform: uppercase;
+  --ldf-bible-reading-verse-number-display: inline;
+  --ldf-bible-reading-citation-float: right;
+  --ldf-h3-text-align: center;
+  --ldf-h3-font-variant: small-caps;
+
   /* Globals/Dark Mode */
   --ldf-background-color: #ffffff;
   --ldf-color: #121212;

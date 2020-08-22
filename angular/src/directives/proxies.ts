@@ -1275,10 +1275,12 @@ export declare interface LdfEditableMetadata extends Components.LdfEditableMetad
 @ProxyCmp({inputs: ['collapsed', 'doc', 'modal', 'path', 'visible']})
 @Component({ selector: 'ldf-editable-metadata', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapsed', 'doc', 'modal', 'path', 'visible'] })
 export class LdfEditableMetadata {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
   }
 }
 

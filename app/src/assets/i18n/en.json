@@ -1,4 +1,9 @@
 {
+  "language": {
+    "en": "English"
+  },
+  "version": "Version",
+  "date": "Date",
   "auth": {
     "edit-avatar": "Change",
     "edit-avatar-tooltip": "Change your picture",

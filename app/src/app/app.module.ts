@@ -41,6 +41,7 @@ import { LectionaryService } from './services/lectionary.service';
 import { CalendarService } from './services/calendar.service';
 import { DocumentService } from './services/document.service';
 import { CanticleTableService } from './services/canticle-table.service';
+import { PrayPageModule } from '@venite/ng-pray';
 
 @NgModule({
   declarations: [AppComponent],
@@ -79,7 +80,14 @@ import { CanticleTableService } from './services/canticle-table.service';
     }),*/
     PrayMenuModule.forRoot({
       config: {
-        defaultKalendar: 'bcp1979'
+        defaultKalendar: 'bcp1979',
+        defaultLanguage: 'en',
+        defaultVersion: 'Rite-II',
+        versionOptions: [
+          { value: 'Rite-II', label: 'Rite II' },
+          { value: 'Rite-I', label: 'Rite I' },
+          { value: 'EOW', label: 'Enriching Our Worship' },
+        ]
       },
       providers: [
         AuthService,
@@ -87,7 +95,27 @@ import { CanticleTableService } from './services/canticle-table.service';
         PreferencesService,
         LectionaryService
       ]
-    })
+    }),
+    PrayPageModule.forRoot({
+      providers: [],
+      displaySettings: {
+        audio: false,
+        meditation: false,
+        antiphons: false,
+        fonts: [
+          { value: 'times-new-roman', label: 'Times New Roman' },
+          { value: 'gill-sans', label: 'Gill Sans' }
+        ],
+        dropcaps: [
+          { value: 'decorated', label: 'A' },
+          { value: 'plain', label: 'A' },
+          { value: 'none', label: 'a' }
+        ]
+      },
+      liturgySettings: {
+        sundayCollectsFirst: true
+      }
+    }),
   ],
   providers: [
     StatusBar,

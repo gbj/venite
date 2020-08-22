@@ -133,7 +133,10 @@ export class EditorService {
     const manager = { ... localManager },
           change = manager.pendingChanges.shift(); // takes item from beginning of array
 
+    console.log('change = ', change);
+
     try {
+      console.log('change = hasBeenAcknowledged = ', manager.hasBeenAcknowledged);
       if(manager.hasBeenAcknowledged) {
         manager.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
 
