@@ -111,7 +111,9 @@ export class EditableFilterDocumentsComponent {
           {this.versions && <ion-item>
             <ion-label>{ localeStrings.version }</ion-label>
             <ion-select value={this.version} onIonChange={(ev : CustomEvent) => this.chooseVersion(ev.detail.value)}>
-              {Object.entries(this.versions).map(([versionKey, versionLabel]) => 
+              {Object.entries(this.versions)
+                .sort((a, b) => a[0] > b[0] ? 1 : -1)
+                .map(([versionKey, versionLabel]) => 
                 <ion-select-option value={versionKey}>{versionLabel}</ion-select-option>
               )}
             </ion-select>

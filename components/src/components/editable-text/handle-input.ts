@@ -1,11 +1,18 @@
 import { Change } from '@venite/ldf';
+import { TextFieldTypes } from '@ionic/core';
 
 import DiffMatchPatch from 'diff-match-patch';
 
-export function handleInput(path: string, oldValue: string, newValue: string) : Change {
-  if(oldValue == undefined) {
+export function handleInput(inPath: string, oldValue: string, newValue: string, inputType: TextFieldTypes) : Change {
+  const path = inPath?.replace('//', '/');
+
+  console.log('handleInput', inPath, '\n\noldValue: ', oldValue, '\n\nnewValue:', newValue);
+
+  if(!oldValue) {
     console.log('[ldf-editable-text] previous value was undefined; new value is ', newValue);
-    return new Change({ path: path?.replace('//', '/'), op: [{ type: 'set' as 'set', oldValue, value: newValue }] });
+    return new Change({ path, op: [{ type: 'set' as 'set', oldValue, value: newValue }] });
+  } else if(typeof oldValue === 'number' || inputType == 'number') {
+    return new Change({ path, op: [{ type: 'set' as 'set', oldValue: Number(oldValue), value: Number(newValue) }]});
   } else {
     // Build DiffMatchPatch patches from oldValue and newValue
     const dmp = new DiffMatchPatch(),
@@ -45,6 +52,6 @@ export function handleInput(path: string, oldValue: string, newValue: string) : 
       op.push({ type: 'edit', value: values });
     });
 
-    return new Change({ path: path?.replace('//', '/'), op });
+    return new Change({ path, op });
   }
 }

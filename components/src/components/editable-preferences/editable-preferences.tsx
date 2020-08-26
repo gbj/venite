@@ -126,20 +126,20 @@ export class EditablePreferencesComponent {
   }
 
   emit(input : {[x: string]: Preference}, tree: 'preferences' | 'special_preferences', key : string, value: any) {
+    const path = `${this.path}/${tree}`;
     if(input == undefined) {
       this.ldfDocShouldChange.emit(new Change({
-        path: this.path,
+        path,
         op: [{
           type: 'set',
-          value: { [tree]: { [key]: value } }
+          value: { [key]: value }
         }]
       }))
     } else {
       this.ldfDocShouldChange.emit(new Change({
-        path: this.path,
+        path: `${path}/${key}`,
         op: [{
           type: 'set',
-          index: key,
           value
         }]
       }));

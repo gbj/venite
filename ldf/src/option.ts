@@ -53,10 +53,14 @@ export class Option extends LiturgicalDocument {
 
     let label: string;
 
+    if (option.type == 'liturgy') {
+      label = option.label || option.version_label || 'Option';
+    }
     // Psalm 119 parts => Psalm 119: Aleph
-    if (
+    else if (
       option.type == 'psalm' &&
       uniqueVersions == 1 &&
+      option.label &&
       (option.slug?.match(/psalm_119_/) || option.citation?.toString().match(/Ps[^\d]+119/))
     ) {
       label = option.label;
@@ -64,8 +68,9 @@ export class Option extends LiturgicalDocument {
     // Other psalms: Psalm 121
     else if (
       option.type == 'psalm' &&
-      uniqueVersions == 1 &&
-      (option.slug?.match(/psalm_/) || option.citation?.toString().match(/Ps[^\d]+\d+/))
+      option.style == 'psalm' &&
+      (option.citation || option.metadata?.number) &&
+      uniqueVersions == 1
     ) {
       label = option.citation ? option.citation.toString() : `Psalm ${option.metadata.number}`;
     }

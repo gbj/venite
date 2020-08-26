@@ -74,10 +74,10 @@ export class TextComponent {
   // Render
   render() {
     const localeStrings = this.localeStrings || {},
-          compiledValue : string[][] = (this.obj.value || ['']).map(s => {
-            return s.match(/[\*\w‘’“”\n\s]+([^\*\w‘’“”\n\s])/g);
+          compiledValue : string[][] = (this.obj?.value || []).map(s => {
+            return s.split(/([\*\w\n\s,;\.“”‘”]+([^\*\w\n\s,;\.“”‘”]))/g);
           });
-
+      
     if(this.editable) {
       return (
         <Host lang={this.obj.language}>
@@ -121,7 +121,7 @@ export class TextComponent {
           {
             compiledValue.map((prayer, prayerIndex) =>
               <p id={`${this.obj.uid || this.obj.slug}-prayerIndex`}>
-                  {prayer.map((chunk, chunkIndex) =>
+                  {prayer?.map((chunk, chunkIndex) =>
                     <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                       <ldf-string text={chunk}
                         citation={{label: this.obj.label}}

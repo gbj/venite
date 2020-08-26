@@ -19,7 +19,6 @@ export class MeditationComponent {
 
   timerId;
 
-
   // Properties
   /**
    * An LDF Meditation object.
@@ -50,7 +49,7 @@ export class MeditationComponent {
   @Prop() editable : boolean;
 
   /** Liturgical color to use in display */
-  @Prop() color : string;
+  @Prop() color : string = "#3333ff";
 
   /** Whether the timer should start playing automatically */
   @Prop() autostart : boolean;
@@ -225,14 +224,14 @@ export class MeditationComponent {
     const localeStrings = this.localeStrings || {};
 
     const progressAmount : number = this.secondsRemaining / this.obj.metadata.length,
-          progressPercent : number = Math.round(progressAmount * 100);
+          progressPercent : number = progressAmount * 100;
 
     return (
       <Host>
         <ldf-label-bar>
           <div class={{'hidden': !!this.secondsRemaining}}>
             <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
-              {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid')}
+              {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid', 'small')}
               <input type='number' value={this.obj.metadata.length / 60} onInput={(e) => this.handleControlValue(e)} />
               <span>{localeStrings.minutes}</span>
             </form>

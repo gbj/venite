@@ -100,7 +100,7 @@ export class PsalmComponent {
     // create blank psalm verse pattern
     let pattern : PsalmVerse;
     if(this.editable) {
-      pattern = (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' });
+      pattern = { ... (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' }) };
       if(pattern.number) {
         pattern.number = '';
       }
@@ -203,7 +203,7 @@ export class PsalmComponent {
             this.obj.repeatAntiphon(sectionIndex, this.filteredValue.length)
             && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>
           }
-          {includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
+          {includeAntiphon && <div class='repeat-antiphon'>this.antiphonNode(this.obj?.metadata?.antiphon)</div>}
           </div>
         ])}
 

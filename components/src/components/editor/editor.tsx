@@ -51,7 +51,7 @@ export class EditorComponent {
   @Event() editorCursorMoved: EventEmitter<Cursor>;
 
   /** User has edited the document */
-  @Event() editorDocShouldChange : EventEmitter<Change>;
+  @Event() editorDocShouldChange : EventEmitter<Change | Change[]>;
 
   /** User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` */
   @Event() editorDocShouldAdd : EventEmitter<{ base: string; index: number; }>;
@@ -121,6 +121,7 @@ export class EditorComponent {
     if(previousIndex >= 0) {
       console.log('previousPath', previousPath);
       // otherwise, look up the value of the previous element
+      debugger;
       const previousElement = elementFromPath(this.el, previousPath),
             textarea = previousElement.shadowRoot.querySelector('textarea'),
             previousValue = textarea?.value,
@@ -143,14 +144,12 @@ export class EditorComponent {
               ]
             }),
             editChange = new Change({
-              path,
+              path: `${path}/${previousIndex}`,
               op: [
                 editOp
               ]
             });
-      console.log('mergeWithPrevious emitting', this.obj, deleteChange, editChange);
-      this.editorDocShouldChange.emit(deleteChange);
-      this.editorDocShouldChange.emit(editChange);
+      this.editorDocShouldChange.emit([deleteChange, editChange]);
     }
   }
 

@@ -28,6 +28,7 @@ export class EditableTextComponent {
   @Watch('text')
   textChanged(newText : string) {
     this.currentText = newText;
+    this.previousText = this.currentText;
     if(this.textarea) {
       this.textarea.value = this.currentText;
     }
@@ -85,7 +86,7 @@ export class EditableTextComponent {
     this.registerCursor();
   
     // calculate changes to be made
-    const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value);
+    const change = handleInput(this.cursor.path, this.previousText, this.cursor.element.value, this.inputType);
 
     // save previous value for diffing purposes on next change
     this.previousText = this.cursor?.element?.value || '';
@@ -131,7 +132,6 @@ export class EditableTextComponent {
       this.cursor = new Cursor(this.path, this.textarea.selectionStart, this.textarea.selectionEnd, this.textarea);
       this.emitCursor(this.cursor);
     }
-    console.debug('cursor is at', this.cursor?.start, this.cursor?.end)
     return this.cursor;
   }
 

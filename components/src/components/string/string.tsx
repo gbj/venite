@@ -77,7 +77,6 @@ export class StringComponent {
       .replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
       .split(/([\*\^][^\*\^]*[\*\^])/g)  // markdown ** => italics
       .map(node => {
-        console.log(node);
         if(node.startsWith('*') && node.endsWith('*')) {
           return <em>{node.slice(1, node.length - 1)}</em>;
         } else if(node.startsWith('^') && node.endsWith('^')) {
@@ -118,12 +117,11 @@ export class StringComponent {
 
     if(firstChunk) {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
-            firstWord : string = splitTest ? splitTest[0] : '',
-            re : RegExp = firstWord.length > 2 ? /^([\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
-            buffer : boolean = firstWord.length == 1,
+            firstWord = splitTest ? splitTest[0] : '',
+            re = firstWord.length > 2 ? /^([“”‘’\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([“”‘’\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+            buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
-
 
       final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
@@ -131,6 +129,7 @@ export class StringComponent {
         .concat(nextWord)
         .concat(processed.slice(1));
     }
+
     return final;
   }
 

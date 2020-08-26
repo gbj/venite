@@ -10,7 +10,7 @@
 | Property    | Attribute   | Description                                               | Type                   | Default     |
 | ----------- | ----------- | --------------------------------------------------------- | ---------------------- | ----------- |
 | `autostart` | `autostart` | Whether the timer should start playing automatically      | `boolean`              | `undefined` |
-| `color`     | `color`     | Liturgical color to use in display                        | `string`               | `undefined` |
+| `color`     | `color`     | Liturgical color to use in display                        | `string`               | `"#3333ff"` |
 | `doc`       | `doc`       | An LDF Meditation object.                                 | `Meditation \| string` | `undefined` |
 | `editable`  | `editable`  | Whether the object is editable                            | `boolean`              | `undefined` |
 | `path`      | `path`      | A JSON Pointer that points to the Meditation being edited | `string`               | `undefined` |

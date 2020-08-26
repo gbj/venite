@@ -177,83 +177,94 @@ export class EditableMetadataMetadataFieldsComponent {
       labelStacked = true;
 
     switch(field.type) {
-    // TODO
-    case Field.BibleReadingIntro:
-      nodes.push(
-        <ldf-editable-select
-          path={`${this.path}/metadata`}
-          property={field.field}
-          options={[
-            { label: localeStrings.none, value: null },
-            ... this.currentBibleReadingIntros.map(intro => ({ label: intro.value[0].toString(), value: intro }))
-          ]}
-          value={currentValue}
-        ></ldf-editable-select>
-      )
-      break;
+      case Field.BibleReadingIntro:
+        nodes.push(
+          <ldf-editable-select
+            path={`${this.path}/metadata`}
+            property={field.field}
+            options={[
+              { label: localeStrings.none, value: null },
+              ... this.currentBibleReadingIntros.map(intro => ({ label: intro.value[0].toString(), value: intro }))
+            ]}
+            value={currentValue}
+          ></ldf-editable-select>
+        )
+        break;
 
-    // Done
-    case Field.Bool:
-      nodes.push(
-        <ldf-editable-boolean
-          path={`${this.path}/metadata`}
-          property={field.field}
-          value={currentValue}
-        >
-        </ldf-editable-boolean>
-      )
-      labelStacked = false;
-      break;
-    case Field.Number:
-      nodes.push(
-        <ldf-editable-text
-          short={true}
-          inputType="number"
-          path={path}
-          placeholder={placeholder}
-          text={currentValue}
-        ></ldf-editable-text>
-      );
-      break;
-    case Field.String:
-      nodes.push(
-        <ldf-editable-text
-          short={true}
-          path={path}
-          placeholder={placeholder}
-          text={currentValue}
-        ></ldf-editable-text>
-      );
-      break;
-    case Field.StringList:
-      nodes.push(
-        <ldf-editable-string-list
-          path={path}
-          property={field.field}
-          value={currentValue}
-        >
-        </ldf-editable-string-list>
-      )
-      wrapInItem = false;
-      break;
-    case Field.HeadingLevel:
-      nodes.push(
-        <ldf-editable-select
-          path={`${this.path}/metadata`}
-          property={field.field}
-          options={[
-            { label: localeStrings.heading1, value: 1 },
-            { label: localeStrings.heading2, value: 2 },
-            { label: localeStrings.heading3, value: 3 },
-            { label: localeStrings.heading4, value: 4 }
-          ]}
-          value={currentValue}
-        ></ldf-editable-select>
-      );
-      break;
-    default:
-      console.warn('(ldf-editable-metadata-metadata-fields)', field.type, 'is not a recognized FieldType');
-      break;
+      // Done
+      case Field.Bool:
+        nodes.push(
+          <ldf-editable-boolean
+            path={`${this.path}/metadata`}
+            property={field.field}
+            value={currentValue}
+          >
+          </ldf-editable-boolean>
+        )
+        labelStacked = false;
+        break;
+      case Field.Number:
+        nodes.push(
+          <ldf-editable-text
+            short={true}
+            inputType="number"
+            path={path}
+            placeholder={placeholder}
+            text={currentValue}
+          ></ldf-editable-text>
+        );
+        break;
+      case Field.String:
+        nodes.push(
+          <ldf-editable-text
+            short={true}
+            path={path}
+            placeholder={placeholder}
+            text={currentValue}
+          ></ldf-editable-text>
+        );
+        break;
+      case Field.StringList:
+        nodes.push({
+          node: <ldf-editable-string-list
+            path={path}
+            property={field.field}
+            value={currentValue}
+          >
+          </ldf-editable-string-list>,
+          size: 12
+        })
+        wrapInItem = false;
+        break;
+      case Field.HeadingLevel:
+        nodes.push(
+          <ldf-editable-select
+            path={`${this.path}/metadata`}
+            property={field.field}
+            options={[
+              { label: localeStrings.heading1, value: 1 },
+              { label: localeStrings.heading2, value: 2 },
+              { label: localeStrings.heading3, value: 3 },
+              { label: localeStrings.heading4, value: 4 }
+            ]}
+            value={currentValue}
+          ></ldf-editable-select>
+        );
+        break;
+      case Field.TimeInSeconds:
+        nodes.push(
+          <ldf-editable-text
+            inputType="number"
+            short={true}
+            path={path}
+            placeholder={placeholder}
+            text={currentValue}
+          ></ldf-editable-text>
+        )
+        break;
+      default:
+        ((type : never) => console.warn('(ldf-editable-metadata-metadata-fields)', type, 'is not a recognized FieldType'))(field.type);
+        break;
     }
 
     if(wrapInItem) {
@@ -282,7 +293,13 @@ export class EditableMetadataMetadataFieldsComponent {
         <ion-card-content>
           <ion-grid>
             <ion-row>
-              {fieldNodes.map((field : JSX.Element[]) => <ion-col size="4">{field}</ion-col>)}
+              {fieldNodes.map((fields : ({node: JSX.Element; size: number;} | JSX.Element)[]) =>
+                fields.map(field =>
+                  field.hasOwnProperty('size') ? 
+                  <ion-col size={field['size']}>{field['node']}</ion-col> :
+                  <ion-col size="4">{field}</ion-col>
+                )
+              )}
             </ion-row>
           </ion-grid>
         </ion-card-content>
