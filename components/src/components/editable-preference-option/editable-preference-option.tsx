@@ -77,14 +77,6 @@ export class EditablePreferenceOptionComponent {
               text={this.currentOption?.label}
             ></ldf-editable-text>
           </ion-item>
-          <ion-item>
-            <ion-label>{localeStrings.default}</ion-label>
-            <ldf-editable-boolean
-              path={this.path}
-              property="default"
-              value={this.currentOption?.default}
-            ></ldf-editable-boolean>
-          </ion-item>
           <ion-list-header>{localeStrings.additional}</ion-list-header>
           <ion-item>
             <ion-label>{localeStrings.default}</ion-label>
