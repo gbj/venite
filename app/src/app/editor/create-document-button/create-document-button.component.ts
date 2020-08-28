@@ -58,6 +58,10 @@ export class CreateDocumentButtonComponent implements OnInit {
   async createNew(userProfile : UserProfile, label : string) {
     const docId = await this.documents.newDocument(new LiturgicalDocument({
       type: 'liturgy',
+      metadata: {
+        preferences: {},
+        special_preferences: {}
+      },
       sharing: new Sharing({
         owner: userProfile.uid,
         organization: (userProfile.orgs || [''])[0],
@@ -67,8 +71,12 @@ export class CreateDocumentButtonComponent implements OnInit {
       }),
       label,
       'value': [new LiturgicalDocument({
-        'type': 'text',
-        'value': ['']
+        'type': 'heading',
+        'style': 'text',
+        'metadata': {
+          'level': 1
+        },
+        'value': [label]
       })]
     }));
 
