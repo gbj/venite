@@ -112,7 +112,7 @@ export class EditorService {
 
   /** Notify the server that our editing client has changed the document.
   * Every new `Change` from the `EditorComponent` enters through this function */
-  public async processChange(manager : LocalDocumentManager, change : Change) {
+  public async processChange(manager : LocalDocumentManager, change : Change | Change[]) {
     // translate `Change` into operation
     const op = this.opFromChange(change);
 
@@ -131,6 +131,7 @@ export class EditorService {
   /** send the next change in the pending queue to the server */ 
   async sendNextChange(localManager : LocalDocumentManager) {
     const manager = { ... localManager },
+          docBeforeChange = new LiturgicalDocument({ ... manager.document }),
           change = manager.pendingChanges.shift(); // takes item from beginning of array
 
     console.log('change = ', change);
@@ -160,12 +161,15 @@ export class EditorService {
         batch.update(managerRef.ref, { lastRevision: change.lastRevision });
         batch.set(changeRef.ref, JSON.parse(JSON.stringify(change)));
 
+        // optimistically update the doc
+        manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
+
         await batch.commit();
   
         //@ts-ignore
         console.log('old state of document is', manager.document);
         console.log('op is', change.op);
-        manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
+        //manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
         console.log('new state of document after change is ', manager.document, 'from op', change.op);
         manager.lastSyncedRevision = change.lastRevision;
   
@@ -175,6 +179,8 @@ export class EditorService {
     } catch(error) {
       console.warn('The write has been rejected. This is typically because another user has submitted a change with the same revision number, so ours needs to be transformed. Still, here’s the error: \n\n', error);
 
+      // revert to document before change
+      manager.document = docBeforeChange;
       manager.rejectedChanges.push(change);
       manager.hasBeenAcknowledged = true;
     }
@@ -266,8 +272,15 @@ export class EditorService {
   }
 
   /** Converts a generic LDF `Change` into an array of `json1` operations */
-  opFromChange(change : Change) : JSONOp {
-    return change.fullyPathedOp().map(op => this.buildOp(op)).reduce(json1.type.compose, null);
+  opFromChange(change : Change | Change[]) : JSONOp {
+    if(!Array.isArray(change)) {
+      return change.fullyPathedOp().map(op => this.buildOp(op)).reduce(json1.type.compose, null);
+    } else {
+      return change
+        .map(subchange => subchange.fullyPathedOp().map(op => this.buildOp(op)))
+        .flat()
+        .reduce(json1.type.compose, null);
+    }
   }
 
   buildOp(op : Operation) : JSONOp {
