@@ -227,7 +227,7 @@ export class EditableMetadataMetadataFieldsComponent {
       case Field.StringList:
         nodes.push({
           node: <ldf-editable-string-list
-            path={path}
+            path={`${this.path}/metadata`}
             property={field.field}
             value={currentValue}
           >

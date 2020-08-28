@@ -71,7 +71,7 @@ export class EditableStringListComponent {
 
   add() {
     const change = new Change({
-      path: `${this.path}`,
+      path: `${this.path}/${this.property}`,
       op: [{
         type: 'insertAt',
         index: this.value.length,
@@ -89,7 +89,7 @@ export class EditableStringListComponent {
 
   remove(ii : number) {
     const change = new Change({
-      path: `${this.path}`,
+      path: `${this.path}/${this.property}`,
       op: [{
         type: 'deleteAt',
         index: ii,
