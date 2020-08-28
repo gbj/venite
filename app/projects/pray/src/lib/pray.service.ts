@@ -23,7 +23,7 @@ export class PrayService {
   /** Returns the complete and filtered form for a doc within a particular liturgical context
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
-  compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences) : Observable<LiturgicalDocument> {
+  compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[] = []) : Observable<LiturgicalDocument> {
     const doc = docBase instanceof LiturgicalDocument ? docBase : new LiturgicalDocument(docBase);
 
     // should the doc be included?
@@ -36,7 +36,7 @@ export class PrayService {
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
       if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
-          .value?.map(child => this.compile(child, day, prefs)));
+          .value?.map(child => this.compile(child, day, prefs, docBase?.metadata?.liturgyversions)));
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
@@ -65,12 +65,12 @@ export class PrayService {
     
       // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
       if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('value')) {
-        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs);
+        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs, liturgyversions);
       }
 
       // if doc has a `category` and not a `value` or `lookup`, add `lookup` type of `category` and recompile
       else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('lookup')) {
-        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs);
+        return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs, liturgyversions);
       }
 
       // compile Bible readings if they have no content
@@ -80,7 +80,7 @@ export class PrayService {
 
       // if doc has a `lookup` and not a `value`, compile it
       else if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value?.length == 0)) {
-        return this.lookup(doc, day, prefs, []);
+        return this.lookup(doc, day, prefs, liturgyversions);
       }
 
       // otherwise, return it as an `Observable`
@@ -102,14 +102,16 @@ export class PrayService {
                         .filter(version => version !== undefined)
                         .map(version => typeof version === 'object' ? prefs[version.preference] : version);
   
+    let result : Observable<LiturgicalDocument | null>;
+
     switch(doc.lookup.type) {
       case 'lectionary':
-        return doc.type == 'psalm'
+        result = doc.type == 'psalm'
           ? this.lookupPsalter(doc, day, prefs)
           : this.lookupLectionaryReadings(doc, day, prefs);
       case 'canticle-table':
       case 'canticle':
-        return this.lookupFromCanticleTable(
+        result = this.lookupFromCanticleTable(
           day,
           versions,
           prefs,
@@ -117,7 +119,7 @@ export class PrayService {
           Number(doc.lookup.item)
         );
       case 'category':
-        return this.lookupByCategory(
+        result = this.lookupByCategory(
           doc.category || new Array(),
           language,
           versions,
@@ -126,7 +128,7 @@ export class PrayService {
           doc.lookup.rotate
         );
       case 'collect':
-        return this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', alternateVersions).pipe(
+        result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', alternateVersions).pipe(
           // filter collects to find the appropriate one
           map(collects => findCollect(collects, day, this.config.sundayCollectsFirst))
         )
@@ -137,7 +139,8 @@ export class PrayService {
       case 'slug':
       default:
         if(doc.slug) {
-          return this.lookupBySlug(
+          console.log('lookup versions = ', versions);
+          result = this.lookupBySlug(
             doc.slug,
             language,
             versions,
@@ -147,15 +150,21 @@ export class PrayService {
           );
         } else {
           console.warn('the following is not a compilable document\n\n', doc);
-          return of(null);
+          result = of(null);
         }
     }
+
+    // make sure the result we're getting from lookup should be included
+    return result.pipe(
+      map(doc => doc && new LiturgicalDocument(doc).include(new LiturgicalDay(day), prefs) ? doc : null)
+    );
   }
 
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+    console.log('lookupBySlug versions = ', versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
       map(docs => rotate ? this.rotate(rotate, day, docs) : docs),
@@ -230,7 +239,7 @@ export class PrayService {
         lookup: { type: 'slug' }
       })))),
       // pack these into a `Liturgy` object
-      map(docs => docsToLiturgy(docs)),
+      map(docs => Object.assign(doc, { ... docsToLiturgy(docs), lookup: undefined })),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs)),

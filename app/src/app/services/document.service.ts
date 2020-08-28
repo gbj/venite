@@ -67,7 +67,13 @@ export class DocumentService {
         query = query.where('version', 'in', versions);
       }
       return query;
-    }).valueChanges();
+    }).valueChanges().pipe(
+      map(docs => docs.sort((a, b) => {
+        const aIndex = (versions || []).indexOf(versionToString(a.version));
+        const bIndex = (versions || []).indexOf(versionToString(b.version));
+        return aIndex < bIndex ? -1 : 1;
+      }))
+    );
   }
 
   findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
