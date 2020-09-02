@@ -10,7 +10,6 @@
         <li *ngIf="day.week?.proper">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
       </ul>
     </ion-card-subtitle>
-    <h2 *ngIf="liturgy | async as l">{{ l?.label }}</h2>
   </ion-card-header>
   <!-- Header if liturgical day has not loaded -->
   <ng-template #blankHeader>
@@ -87,16 +86,23 @@
     ></venite-proper-liturgy-menu>
 
     <!-- Pray Button -->
-    <ng-container *ngIf="prayData | async as data else notLoaded">
-      <ion-button (click)="pray(data)">
-        <ion-label>{{ 'Pray' | translate }}</ion-label>
-      </ion-button>
-    </ng-container>
-    <ng-template #notLoaded>
-      <ion-button disabled="true">
-        <ion-label>{{ 'Pray' | translate }}</ion-label>
-      </ion-button>
-    </ng-template>
+    <div class="pray-buttons">
+      <ng-container *ngIf="prayData | async as data else notLoaded">
+        <ion-button (click)="pray(data)">
+          <ion-label>{{ 'Pray' | translate }}</ion-label>
+        </ion-button>
+      </ng-container>
+      <ng-template #notLoaded>
+        <ion-button disabled="true">
+          <ion-label>{{ 'Pray' | translate }}</ion-label>
+        </ion-button>
+      </ng-template>
+      <ng-container *ngIf="config?.prayersAndThanksgivings?.preset">
+        <ion-button (click)="prayersAndThanksgivings()">
+          <ion-label>{{ 'Choose Prayers and Thanksgivings' | translate }}</ion-label>
+        </ion-button>
+      </ng-container>
+    </div>
 
     <!-- Preferences -->
     <venite-liturgy-preference-menu

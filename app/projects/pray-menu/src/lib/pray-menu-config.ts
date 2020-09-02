@@ -3,4 +3,8 @@ export interface PrayMenuConfig {
   defaultVersion: string;
   defaultKalendar: string;
   versionOptions: { value: string; label: string; }[];
+  prayersAndThanksgivings?: {
+    preset: boolean;
+    component: any;
+  }
 }

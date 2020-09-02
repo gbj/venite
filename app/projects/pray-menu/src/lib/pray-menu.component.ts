@@ -3,7 +3,7 @@ import { Observable, Subject, BehaviorSubject, combineLatest, of } from 'rxjs';
 import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInterface, AuthServiceInterface, CalendarServiceInterface, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE } from '@venite/ng-service-api';
 import { tap, switchMap, map } from 'rxjs/operators';
@@ -60,7 +60,7 @@ export class PrayMenuComponent implements OnInit {
   hasStartedNavigating : boolean = false;
 
   constructor(
-    @Inject('config') private config : PrayMenuConfig,
+    @Inject('config') public config : PrayMenuConfig,
     @Inject(AUTH_SERVICE) private auth : AuthServiceInterface,
     @Inject(CALENDAR_SERVICE) public calendarService : CalendarServiceInterface,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
@@ -68,7 +68,8 @@ export class PrayMenuComponent implements OnInit {
     @Inject(DOCUMENT_SERVICE) private documentService : DocumentServiceInterface,
     private router : Router,
     private alert : AlertController,
-    private translate : TranslateService
+    private translate : TranslateService,
+    private modal : ModalController
   ) {
     this.language$ = new BehaviorSubject(config.defaultLanguage);
     this.version$ = new BehaviorSubject(config.defaultVersion);
@@ -144,6 +145,18 @@ areReadingsAvailable(liturgy : Liturgy, prefs : ClientPreferences, availableRead
      .reduce((a, b) => a && b);
   }
   return allReadingsAvailable;
+}
+
+async prayersAndThanksgivings() {
+  if(this.config?.prayersAndThanksgivings?.component) {
+    const modal = await this.modal.create({
+      component: this.config.prayersAndThanksgivings.component
+    });
+    modal.componentProps = {
+      modal
+    };
+    await modal.present();
+  }
 }
 
 async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences, availableReadings : string[]) {
