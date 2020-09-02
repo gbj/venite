@@ -18,3 +18,14 @@ article {
         }
     }
 }
+
+.button-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    venite-create-document-button {
+        max-width: 50%;
+    }
+}

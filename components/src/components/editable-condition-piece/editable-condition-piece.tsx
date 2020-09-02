@@ -235,13 +235,13 @@ export class EditableConditionComponent {
               })}
             ></ion-toggle>
           </ion-item>
-          {this.workingCondition.preference !== undefined && <div class="type">
-            <ion-item lines="none">
+          {this.workingCondition.preference !== undefined && <div class="type row">
               <ldf-editable-text
                 short={true}
                 inputType="text"
                 path={`${this.path}/preference/key`}
                 placeholder={localeStrings.preferenceKey}
+                text={this.workingCondition.preference.key}
               ></ldf-editable-text>
               <ion-select
                 value={this.workingCondition.preference.is}
@@ -255,8 +255,8 @@ export class EditableConditionComponent {
                 inputType="text"
                 path={`${this.path}/preference/value`}
                 placeholder={localeStrings.preferenceValue}
+                text={this.workingCondition.preference.value}
               ></ldf-editable-text>
-            </ion-item>
           </div>}
         </article>
 

@@ -2,10 +2,14 @@
   /* Globals/Dark Mode */
   --ldf-background-color: #ffffff;
   --ldf-color: #121212;
+  --ldf-editable-lookup-background-color: #f0f0f0;
+  --ldf-editable-lookup-color: #121212;
 
   .dark {
     --ldf-background-color: #ffffff;
     --ldf-color: #121212;
+    --ldf-editable-lookup-background-color: #242424;
+    --ldf-editable-lookup-color: #f0f0f0;
   }
 
   /* Font preference */

@@ -8,7 +8,7 @@ export function handleInput(inPath: string, oldValue: string, newValue: string, 
 
   console.log('handleInput', inPath, '\n\noldValue: ', oldValue, '\n\nnewValue:', newValue);
 
-  if(!oldValue) {
+  if(oldValue == undefined || oldValue == null) {
     console.log('[ldf-editable-text] previous value was undefined; new value is ', newValue);
     return new Change({ path, op: [{ type: 'set' as 'set', oldValue, value: newValue }] });
   } else if(typeof oldValue === 'number' || inputType == 'number') {

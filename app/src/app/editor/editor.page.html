@@ -12,9 +12,6 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
-      <ion-buttons slot="end">
-        <venite-create-document-button (newDoc)="joinDocument($event)"></venite-create-document-button>
-      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-content #list [fullscreen]="true">
@@ -23,6 +20,23 @@
         <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
       </ion-toolbar>
     </ion-header>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ 'editor.create-a-document' | translate }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="button-layout">
+          <ng-container *ngFor="let template of templates$ | async">
+            <venite-create-document-button 
+              [label]="template.label"
+              [template]="template.factory"
+              (newDoc)="joinDocument($event)">
+            </venite-create-document-button>
+          </ng-container>
+        </div>
+      </ion-card-content>
+    </ion-card>
 
     <ion-searchbar (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
 

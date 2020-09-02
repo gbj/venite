@@ -29,6 +29,15 @@
       >
       </ldf-editable-filter-documents>
 
+      <!-- Liturgies -->
+      <ldf-editable-filter-documents *ngSwitchCase="'liturgy'"
+        type="liturgy"
+        [versions]="additionalVersions | async"
+        [options]="additionalOptions | async"
+        (ldfDocumentSelected)="complete.next([$event.detail])"
+      >
+      </ldf-editable-filter-documents>
+
       <!-- Canticles-->
       <venite-canticle-select *ngSwitchCase="'canticle'"
         [tables]="additionalTable | async"

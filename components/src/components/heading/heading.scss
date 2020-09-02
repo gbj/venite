@@ -60,7 +60,8 @@
 }
 
 .lookup {
-  background-color: #f0f0f0;
+  background-color: var(--ldf-editable-lookup-background-color);
+  color: var(--ldf-editable-lookup-color);
   border-radius: 4px;
   padding: 1em;
   width: 100%;

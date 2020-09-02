@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                      | Type       | Default       |
-| ---------- | ---------- | ------------------------------------------------ | ---------- | ------------- |
-| `path`     | `path`     | A JSON Pointer that points to the document       | `string`   | `undefined`   |
-| `property` | `property` | The property in that document that we're editing | `string`   | `undefined`   |
-| `value`    | --         | Initial categories                               | `string[]` | `new Array()` |
+| Property   | Attribute  | Description                                      | Type       | Default     |
+| ---------- | ---------- | ------------------------------------------------ | ---------- | ----------- |
+| `path`     | `path`     | A JSON Pointer that points to the document       | `string`   | `undefined` |
+| `property` | `property` | The property in that document that we're editing | `string`   | `undefined` |
+| `value`    | --         | Initial categories                               | `string[]` | `undefined` |
 
 
 ## Events

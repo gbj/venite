@@ -290,6 +290,7 @@ export class EditorService {
     const indexedP = op.index ? op.p.concat(Number(op.index) ? Number(op.index) : op.index) : op.p;
 
     // generate json1 op depending on the type
+    console.log('op.type = ', op.type);
     switch(op.type) {
       case 'edit':
         return json1.editOp(indexedP, 'text-unicode', op.value);
@@ -299,7 +300,6 @@ export class EditorService {
         return json1.removeOp(indexedP, op.value ?? true);
       case 'set':
         if(op.oldValue == undefined) {
-          console.log('setting value from undefined');
           return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
         } else {
           const jsonOp = json1.replaceOp(indexedP, op.oldValue, JSON.parse(JSON.stringify(op.value)));

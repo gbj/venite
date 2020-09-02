@@ -11,7 +11,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy';
 }
 
 @Component({
@@ -26,7 +26,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   @ViewChild('additional') additionalElement;
 
   addition : MenuOption;
-  additionalMode : 'psalm' | 'lectionary' | 'canticle' | 'hymn' | undefined;
+  additionalMode : 'psalm' | 'lectionary' | 'canticle' | 'hymn' | 'liturgy' | undefined;
   // used in ldf-editable-filter-documents
   additionalVersions : Observable<{[key: string]: string}>;
   additionalOptions : Observable<LiturgicalDocument[]>;
@@ -111,7 +111,21 @@ export class AddBlockComponent implements OnInit, OnDestroy {
         case 'hymn':
           //TODO
           return this.complete;
-        // otherwise, it's already complete and we can return the original
+        case 'liturgy':
+          this.additionalMode = 'liturgy';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy-versions');
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            switchMap(versions => this.documentService.find({ type: 'liturgy' }).pipe(
+              map(objs => objs.map(obj => new LiturgicalDocument({
+                ... obj,
+                // strip out value, which can be looked up asynchronously rather than storing it
+                value: undefined,
+                lookup: { type: "slug" }
+              })))
+            )),
+          );
+          return this.complete;        // otherwise, it's already complete and we can return the original
         default:
           return of(addition.template);
       }

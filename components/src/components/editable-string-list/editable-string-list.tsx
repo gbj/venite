@@ -26,7 +26,7 @@ export class EditableStringListComponent {
   @Prop({ reflect: true }) property : string;
 
   /** Initial categories */
-  @Prop() value : string[] = new Array();
+  @Prop() value : string[];
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -35,6 +35,16 @@ export class EditableStringListComponent {
   async componentWillLoad() {
     this.optimisticValues = this.value || new Array();
     this.loadLocaleStrings();
+
+    if(!this.value || !Array.isArray(this.value)) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/${this.property}`,
+        op: [{
+          type: 'set',
+          value: new Array()
+        }]
+      }));
+    }
   }
 
   // Methods

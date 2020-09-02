@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, BehaviorSubject, combineLatest } from 'rxjs'; 
+import { Observable, BehaviorSubject, combineLatest, of } from 'rxjs'; 
 import { switchMap, map, tap, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './ldf-editor/editor.service';
-import { LiturgicalDocument } from '@venite/ldf';
+import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text } from '@venite/ldf';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -23,6 +23,50 @@ export class EditorPage implements OnInit {
   myDocs$ : Observable<IdAndDoc[]>;
   orgDocs$ : Observable<IdAndDoc[]>;
   sharedDocs$ : Observable<IdAndDoc[]>;
+
+  // Templates for new documents
+  templates$: Observable<{ label: string; factory: (string) => LiturgicalDocument}[]> = of([
+    {
+      label: "Liturgy",
+      factory: (label) => new LiturgicalDocument({
+        type: 'liturgy',
+        metadata: {
+          preferences: {},
+          special_preferences: {}
+        },
+        label,
+        value: [new LiturgicalDocument({
+          type: 'heading',
+          style: 'text',
+          metadata: {
+            level: 1
+          },
+          value: [label]
+        })]
+      })
+    },
+    {
+      label: "Prayer",
+      factory: (label) => new Text({
+        type: 'text',
+        style: 'prayer',
+        label,
+        value: ['']
+      })
+    },
+    {
+      label: "Bible Reading",
+      factory: (label) => new BibleReading({
+        type: 'bible-reading',
+        style: 'short',
+        value: [
+          new BibleReadingVerse({
+            book: '', chapter: '', verse: '', text: ''
+          })
+        ]
+      })
+    },
+  ]);
 
   constructor(
     public auth : AuthService,
