@@ -211,7 +211,7 @@ export class PsalmComponent {
       {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
 
       {/* include closing antiphon */}
-      {includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
+      {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
       </Host>
     )
   }

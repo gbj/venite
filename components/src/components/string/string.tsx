@@ -72,17 +72,20 @@ export class StringComponent {
   }
 
   processMarkup(s : string) : JSX.Element[] {
+    console.log('process markup', s)
     const nodes = s
       .replace(/^([A-Z]{2,})/, (match) => match[0] + match.slice(1).toLowerCase())
       .replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
-      .split(/([\*\^][^\*\^]*[\*\^])/g)  // markdown ** => italics
+      .replace(/\[\*/g, '__BRACKET_ASTERISK')
+      .split(/([\*\^\%][^\*\^\%]*[\*\^\%])/g)  // markdown ** => italics
       .map(node => {
-        if(node.startsWith('*') && node.endsWith('*')) {
+        console.log('node = ', node);
+        if((node.startsWith('*') && node.endsWith('*')) || node.startsWith('%') && node.endsWith('%')) {
           return <em>{node.slice(1, node.length - 1)}</em>;
         } else if(node.startsWith('^') && node.endsWith('^')) {
           return <span class="sc">{node[1]}{node.slice(2, node.length - 1).toLowerCase()}</span>;
         } else {
-          return node;
+          return node.replace(/__BRACKET_ASTERISK/g, '[*');
         }
       });
     return nodes;
@@ -118,7 +121,7 @@ export class StringComponent {
     if(firstChunk) {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord = splitTest ? splitTest[0] : '',
-            re = firstWord.length > 2 ? /^([“”‘’\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([“”‘’\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+            re = firstWord.length > 2 ? /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
