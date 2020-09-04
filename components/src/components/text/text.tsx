@@ -75,7 +75,7 @@ export class TextComponent {
   render() {
     const localeStrings = this.localeStrings || {},
           compiledValue : string[][] = (this.obj?.value || []).map(s => {
-            return s.split(/([\*\w\n\s,;\.“”‘”\[\]\%]+([^\*\w\n\s,;\.“”‘”\[\]\%]))/g);
+            return s.split(/([\*\w\n\s,:;\.“”‘”\[\]\%]+([^\*\w\n\s,;:\.“”‘”\[\]\%]))/g);
           });
       
     if(this.editable) {
