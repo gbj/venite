@@ -47,6 +47,7 @@ graph TD;
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name

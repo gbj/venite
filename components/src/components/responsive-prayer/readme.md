@@ -35,6 +35,7 @@ graph TD;
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
   ldf-editable-text --> ion-input
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name

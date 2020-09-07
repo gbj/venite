@@ -39,6 +39,7 @@ graph TD;
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-editable-text --> ion-input
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name

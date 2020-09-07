@@ -4,7 +4,7 @@ import { Liturgy } from '../liturgy/liturgy';
 /* Converts a list of documents into a single document including all the documents in serial */
 export function docsToLiturgy(docs: LiturgicalDocument[]): LiturgicalDocument {
   const uniqueLabels = docs
-    .map((o) => o.label)
+    .map((o) => o?.label)
     .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
 
   return docs?.length > 1

@@ -212,316 +212,310 @@ ldf-psalm .psalm br {
     });
 
     const LITURGY = {
-    "hidden": false,
-    "lastRevision": 33,
-    "type": "liturgy",
-    "metadata": {
-      "preferences": {}
+  "hidden": false,
+  "type": "liturgy",
+  "condition": {
+    "mode": "and",
+    "conditions": [
+      {
+        "preference": {
+          "key": "litany",
+          "value": "no",
+          "is": true
+        }
+      }
+    ]
+  },
+  "value": [
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "And after the Creed these prayers following, all devoutly kneeling, the Minister first pronouncing:"
+      ]
     },
-    "label": "The Litany",
-    "language": "en",
-    "slug": "litany",
-    "value": [
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "",
+          "text": "The Lord be with you;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "And with thy spirit."
+        },
+        {
+          "label": "Minister.",
+          "text": "Let us pray."
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "responsive",
+      "value": [
+        {
+          "label": "",
+          "text": "Lord, have mercy upon us.",
+          "response": "Christ, have mercy upon us."
+        },
+        {
+          "text": "Lord, have mercy upon us.",
+          "response": ""
+        }
+      ]
+    },
     {
       "hidden": false,
       "type": "text",
       "style": "prayer",
       "value": [
-        "I BELIEVE in God the Father Almighty, Maker of heaven and earth:",
-        "And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead; He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead.",
-        "I believe in the Holy Ghost; The holy Catholic Church; The Communion of Saints; The Forgiveness of sins; The Resurrection of the body, And the Life everlasting."
+        "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil."
       ]
     },
-      {
-        "style": "text",
-        "type": "heading",
-        "value": [
-          "The Litany"
-        ],
-        "hidden": false,
-        "metadata": {
-          "level": 1
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then the Priest standing up shall say:"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "",
+          "text": "O Lord, show thy mercy upon us;",
+          "response": ""
+        },
+        {
+          "label": "People.",
+          "text": "And grant us thy salvation."
+        },
+        {
+          "label": "Priest.",
+          "text": "O Lord, save the Queen;"
+        },
+        {
+          "label": "People.",
+          "text": "And mercifully hear us when we call upon thee."
+        },
+        {
+          "label": "Priest.",
+          "text": "Endue thy Ministers with righteousness;"
+        },
+        {
+          "label": "People.",
+          "text": "And make thy chosen people joyful."
+        },
+        {
+          "label": "Priest.",
+          "text": "O Lord, save thy people;"
+        },
+        {
+          "label": "People.",
+          "text": "And bless thine inheritance."
+        },
+        {
+          "label": "Priest.",
+          "text": "Give peace in our time, O Lord;"
+        },
+        {
+          "label": "People.",
+          "text": "And evermore mightily defend us."
+        },
+        {
+          "label": "Priest.",
+          "text": "O God, make clean our hearts within us;"
+        },
+        {
+          "label": "People.",
+          "text": "And take not thy Holy Spirit from us."
         }
-      },
-      {
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then shall follow THE COLLECT OF THE DAY, together with any other Collects appointed to be said, and these two prayers in order."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "label": "The Collect of the Day",
+      "category": [
+        "Collect",
+        "Collect of the Day"
+      ],
+      "slug": "eleventh-sunday-after-trinity",
+      "value": [
+        "O GOD, who declarest thy almighty power most chiefly in showing mercy and pity: Mercifully grant unto us such a measure of thy grace, that we, running the way of thy commandments, may obtain thy gracious promises, and be made partakers of thy heavenly treasure; through Jesus Christ our Lord."
+      ]
+    },
+    null,
+    null,
+    {
       "hidden": false,
       "type": "text",
       "style": "prayer",
       "value": [
-        "O GOD, the Creator and Preserver of all mankind, we humbly beseech thee for all sorts and conditions of men; that thou wouldest be pleased to make thy ways known unto them, thy saving health unto all nations. More especially we pray for the good estate of the Catholic Church; that it may be so guided and governed by thy good Spirit, that all who profess and call themselves Christians may be led into the way of truth, and hold the faith in unity of spirit, in the bond of peace, and in righteousness of life. Finally we commend to thy fatherly goodness all those, who are any ways afflicted or distressed in mind, body, or estate; [* %especially those for whom our prayers are desired% ;] that it may please thee to comfort and relieve them, according to their several necessities, giving them patience under their sufferings, and a happy issue out of all their afflictions. And this we beg for Jesus Christ his sake."
+        "O GOD, from whom all holy desires, all good counsels, and all just works do proceed: Give unto thy servants that peace which the world cannot give; that our hearts may be set to obey thy commandments, and also that by thee we being defended from the fear of our enemies may pass our time in rest and quietness; through the merits of Jesus Christ our Saviour."
       ],
-      "label": "A Prayer for all Conditions of men."
-    }/*,
-      {
-        "type": "text",
-        "style": "text",
-        "value": [        "O LORD God Almighty, who rulest the nations of the earth, we humbly beseech thee with thy favour to behold our Sovereign Lady, Queen ELIZABETH, that in all things she may be led by thy guidance and protected by thy power. We pray thee also to bless [*……..] and all the Royal Family. Endue with wisdom the Governor-General of this Dominion, the Lieutanant-Governors of the Provinces, the Legislators of the Commonwealth and Empire, and all who are set in authority; that all things may be so ordered and settled by their endeavours upon the best and surest foundations, that peace and happiness, truth and justice, religion and piety, may be established among us for all generations; through Jesus Christ our Lord."
-]
-      },
-      {
-        "type": "responsive",
-        "value": [
+      "label": "The Second Collect, for Peace."
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "LIGHTEN our darkness, we beseech thee, O Lord; and by thy great mercy defend us from all perils and dangers of this night; for the love of thy only Son, our Saviour Jesus Christ."
+      ],
+      "label": "The Third Collect, for Aid against all Perils."
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here may follow an Anthem or an Hymn."
+      ]
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "liturgy",
+      "condition": {
+        "mode": "and",
+        "conditions": [
           {
-            "text": "O GOD the Father, Creator of heaven and earth : have mercy upon us.",
-            "response": "O God the Father, [* Creator of heaven and earth ] : have mercy upon us.",
-            "label": ""
-          },
-          {
-            "response": "O God the Son, Redeemer of the world : have mercy upon us",
-            "text": "O God the Son, Redeemer of the world : have mercy upon us."
-          },
-          {
-            "text": "O God the Holy Ghost, Sanctifier of the faithful: have mercy upon us.",
-            "response": "O God the Holy Ghost, Sanctifier of the faithful: have mercy upon us."
-          },
-          {
-            "response": "O holy, blessed, and glorious Trinity, three Persons and one God : have mercy upon us.",
-            "text": "O holy, blessed, and glorious Trinity, three Persons and one God : have mercy upon us."
-          },
-          {
-            "text": "REMEMBER not, Lord, our offences, nor the offences of our forefathers; spare us, good Lord, spare thy people, whom thou hast redeemed with thy most precious blood.",
-            "response": "Spare us, good Lord."
+            "preference": {
+              "key": "matinsPrayers",
+              "value": "yes",
+              "is": "true"
+            }
           }
-        ],
-        "style": "litany",
-        "hidden": false
+        ]
       },
-      {
-        "type": "responsive",
-        "style": "litany",
-        "metadata": {
-          "response": "Good Lord, deliver us."
+      "value": [
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "Here may be said the prayers found at this point in Morning Prayer or selections from the Prayers and Thanksgivings or such other prayers as are contained in this Book or set forth by lawful authority, always ending with the Prayer of St Chrysostom and the Grace."
+          ]
         },
-        "value": [
-          {
-            "text": "FROM all evil and mischief; from sin, from the crafts and assaults of the devil; from thy wrath, and from everlasting condemnation,",
-            "response": "",
-            "label": ""
+        {
+          "hidden": false,
+          "type": "option",
+          "metadata": {
+            "selected": 0
           },
-          {
-            "text": "From all blindness of heart; from pride, vainglory, and hypocrisy; from envy, hatred, and malice, and all uncharitableness,",
-            "response": ""
-          },
-          {
-            "text": "From all uncleanness in thought, word, and deed; and from all the deceits of the world, the flesh, and the devil,",
-            "response": ""
-          },
-          {
-            "text": "From lightning and tempest; from earthquake, fire, and flood; from plague, pestilence, and famine; from battle and murder, and from sudden death,",
-            "response": ""
-          },
-          {
-            "text": "From all sedition, conspiracy, and rebellion; from all false doctrine, heresy, and schism; from hardness of heart, and contempt of thy Word and Commandment,",
-            "response": ""
-          },
-          {
-            "text": "By the mystery of thy holy Incarnation; by thy holy Nativity; by thy Baptism, Fasting, and Temptation,",
-            "response": ""
-          },
-          {
-            "text": "By thine Agony and bloody Sweat; by thy Cross and Passion; by thy precious Death and Burial,",
-            "response": ""
-          },
-          {
-            "text": "By thy glorious Resurrection and Ascension; by thy sending of the Holy Spirit; by thy heavenly Intercession; and by thy Coming again in glory,",
-            "response": ""
-          },
-          {
-            "text": "In all times of tribulation; in all times of prosperity; in the hour of death, and in the day of judgement,",
-            "response": ""
-          }
-        ],
-        "hidden": false
-      },
-      {
-        "hidden": false,
-        "type": "responsive",
-        "style": "litany",
-        "metadata": {
-          "response": "We beseech thee, good Lord."
+          "value": [
+            {
+              "hidden": false,
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "O LORD our heavenly Father, high and mighty, King of kings, Lord of lords, the only Ruler of princes, who dost from thy throne behold all the dwellers upon earth: Most heartily we beseech thee with thy favour to behold our most gracious Sovereign Lady, Queen ELIZABETH; and so replenish her with the grace of thy Holy Spirit, that she may alway incline to thy will, and walk in thy way: Endue her plenteously with heavenly gifts; grant her in health and wealth long to live; strengthen her that she may vanquish and overcome all her enemies, and finally after this life she may attain everlasting joy and felicity; through Jesus Christ our Lord."
+              ],
+              "label": "A Prayer for the Queen’s Majesty."
+            },
+            {
+              "hidden": false,
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "ALMIGHTY God, the fountain of all goodness, we humbly beseech thee to bless our Sovereign Lady, Queen ELIZABETH, the Parliaments of the Commonwealth, and all who are set in authority under her; that they may order all things in wisdom, righteousness, and peace, to the honour of thy holy Name, and the good of thy Church and people; through Jesus Christ our Lord."
+              ],
+              "label": "A Prayer for the Queen and the Commonwealth."
+            },
+            {
+              "hidden": false,
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "O LORD God Almighty, who rulest the nations of the earth, we humbly beseech thee with thy favour to behold our Sovereign Lady, Queen ELIZABETH, that in all things she may be led by thy guidance and protected by thy power. We pray thee also to bless [*……..] and all the Royal Family. Endue with wisdom the Governor-General of this Dominion, the Lieutanant-Governors of the Provinces, the Legislators of the Commonwealth and Empire, and all who are set in authority; that all things may be so ordered and settled by their endeavours upon the best and surest foundations, that peace and happiness, truth and justice, religion and piety, may be established among us for all generations; through Jesus Christ our Lord."
+              ],
+              "label": "A Prayer for the Queen and all in Authority."
+            }
+          ]
         },
-        "value": [
-          {
-            "label": "",
-            "text": "WE sinners do beseech thee to hear us, O Lord God: and that it may please thee to rule and govern thy holy Church universal in the right way.",
-            "response": ""
-          },
-          {
-            "text": "To keep and strengthen in the true worshipping of thee, in holiness of life, and in devotion to her people, thy servant ELIZABETH, our most gracious Queen and Governor, ",
-            "response": ""
-          },
-          {
-            "text": "To be her defender and keeper, giving her the victory over all her enemies,",
-            "response": ""
-          },
-          {
-            "text": "To bless and preserve [*………] and all the Royal Family,",
-            "response": ""
-          },
-          {
-            "text": "To give to all Bishops, Priests, and Deacons, true knowledge and understanding of thy Word; and that both by their preaching and living they may set it forth and show it accordingly,",
-            "response": ""
-          },
-          {
-            "text": "[To bless thy servants at this time to be admitted to the Order of Deacons or of Priests, and to pour thy grace upon them; that they may duly execute their office to the edifying of thy Church, and to the glory of thy holy Name,",
-            "response": "We beseech thee, good Lord.]"
-          },
-          {
-            "text": "To send forth labourers into thy harvest; to prosper their work by thy Holy Spirit; to make thy saving health known unto all nations; and to hasten thy kingdom,",
-            "response": ""
-          },
-          {
-            "text": "To bless the people of our Country and the Commonwealth, and to endue those set in authority with grace, wisdom, and understanding,",
-            "response": ""
-          },
-          {
-            "text": "To bless and guide the Judges and Magistrates, giving them grace to execute justice, and to maintain truth,",
-            "response": ""
-          },
-          {
-            "text": "To bless and keep the Queen’s forces by sea, and land, and air, and to shield them in all dangers and adversities,",
-            "response": ""
-          },
-          {
-            "text": "To give to all nations unity, peace, and concord, that they may serve thee without fear,",
-            "response": ""
-          },
-          {
-            "text": "To bless and protect all who serve mankind by their labour and learning,",
-            "response": ""
-          },
-          {
-            "text": "To preserve all that travel, all women labouring of child, all sick persons and young children; and to show thy pity upon all prisoners and captives,",
-            "response": ""
-          },
-          {
-            "text": "To defend, and provide for, all widows and orphans, and all who are desolate and oppressed,",
-            "response": ""
-          },
-          {
-            "text": "To bless and keep all thy people,",
-            "response": ""
-          },
-          {
-            "text": "To give to all thy people increase of grace, to hear meekly thy Word, and to receive it with pure affection, and to bring forth the fruit of the Spirit,",
-            "response": ""
-          },
-          {
-            "text": "To bring into the way of truth all who have erred and are deceived,",
-            "response": ""
-          },
-          {
-            "text": "To strengthen such as do stand; to encourage the faint-hearted; to raise up those who fall; and finally to beat down Satan under our feet,",
-            "response": ""
-          },
-          {
-            "text": "To succour, help, and comfort all that are in danger, necessity, and tribulation,",
-            "response": ""
-          },
-          {
-            "text": "To have mercy upon all men,",
-            "response": ""
-          },
-          {
-            "text": "To give and preserve to our use the kindly fruits of the earth, so that in due time we may enjoy them,",
-            "response": ""
-          },
-          {
-            "text": "To forgive our enemies, persecutors, and slanderers, and to turn their hearts,",
-            "response": ""
-          },
-          {
-            "text": "To give us true repentance; to forgive us all our sins, negligences, and ignorances; and to endue us with the grace of thy Holy Spirit, to amend our lives according to thy holy Word,",
-            "response": ""
-          }
-        ]
-      },
-      {
-        "hidden": false,
-        "type": "responsive",
-        "style": "litany",
-        "value": [
-          {
-            "label": "",
-            "text": "SON of God, we beseech thee to hear us.",
-            "response": "SON of God, we beseech thee to hear us."
-          },
-          {
-            "text": "O Lamb of God, that takest away the sin of the world;",
-            "response": "Have mercy upon us."
-          },
-          {
-            "text": "O Lamb of God, that takest away the sin of the world;",
-            "response": "Grant us thy peace."
-          },
-          {
-            "text": "O Christ, hear us.",
-            "response": "O Christ, hear us."
-          }
-        ]
-      },
-      {
-        "hidden": false,
-        "type": "responsive",
-        "style": "responsive",
-        "value": [
-          {
-            "label": "",
-            "text": "Lord, have mercy upon us.",
-            "response": "Christ, have mercy upon us."
-          },
-          {
-            "text": "Lord, have mercy upon us.",
-            "response": ""
-          }
-        ]
-      },
-      {
-        "hidden": false,
-        "type": "text",
-        "style": "prayer",
-        "value": [
-          "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil. "
-        ]
-      },
-      {
-        "hidden": false,
-        "type": "text",
-        "style": "prayer",
-        "lookup": {
-          "type": "collect"
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "ALMIGHTY and everlasting God, from whom cometh every good and perfect gift: Send down upon our Bishops and Clergy, and all Congregations committed to their charge, the healthful Spirit of thy grace; and that they may truly please thee, pour upon them the continual dew of thy blessing. Grant this, O Lord, for the honour of our Advocate and Mediator, Jesus Christ."
+          ],
+          "label": "A Prayer for the Clergy and People."
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "Then may be read any of the Occasional Prayers or Thanksgivings, or any prayers sanctioned by the Ordinary, always ending with the Prayer of St Chrysostom and the Grace; and before any of the prayers may be said Let us pray for —, and before any of the thanksgivings, Let us give thanks for —."
+          ]
+        },
+        null,
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O GOD, the Creator and Preserver of all mankind, we humbly beseech thee for all sorts and conditions of men; that thou wouldest be pleased to make thy ways known unto them, thy saving health unto all nations. More especially we pray for the good estate of the Catholic Church; that it may be so guided and governed by thy good Spirit, that all who profess and call themselves Christians may be led into the way of truth, and hold the faith in unity of spirit, in the bond of peace, and in righteousness of life. Finally we commend to thy fatherly goodness all those, who are any ways afflicted or distressed in mind, body, or estate; [* especially those for whom our prayers are desired;] that it may please thee to comfort and relieve them, according to their several necessities, giving them patience under their sufferings, and a happy issue out of all their afflictions. And this we beg for Jesus Christ his sake."
+          ],
+          "label": "A Prayer for all Conditions of men."
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "ALMIGHTY God, Father of all mercies, We thine unworthy servants do give thee most humble and hearty thanks For all thy goodness and loving-kindness To us and to all men; [* particularly to those who desire now to offer up their praises and thanksgivings.] We bless thee for our creation, preservation, and all the blessings of this life; But above all for thine inestimable love In the redemption of the world by our Lord Jesus Christ; For the means of grace, And for the hope of glory. And we beseech thee, give us that due sense of all thy mercies, That our hearts may be unfeignedly thankful, And that we show forth thy praise, Not only with our lips, but in our lives; By giving up ourselves to thy service, And by walking before thee in holiness and righteousness all our days; Through Jesus Christ our Lord, To whom, with thee and the Holy Ghost, be all honour and glory, world without end."
+          ],
+          "label": "A General Thanksgiving"
         }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "ALMIGHTY God, who hast given us grace at this time with one accord to make our common supplications unto thee; and dost promise that when two or three are gathered together in thy Name thou wilt grant their requests: Fulfil now, O Lord, the desires and petitions of thy servants, as may be most expedient for them; granting us in this world knowledge of thy truth, and in the world to come life everlasting."
+      ],
+      "label": " A Prayer of Saint Chrysostom."
+    },
+    {
+      "hidden": false,
+      "type": "bible-reading",
+      "style": "short",
+      "citation": "2 Corinthians 13:14",
+      "metadata": {
+        "response": "Amen."
       },
-      {
-        "hidden": false,
-        "type": "text",
-        "style": "prayer",
-        "value": [
-          "ALMIGHTY God, who hast given us grace at this time with one accord to make our common supplications unto thee; and dost promise that when two or three are gathered together in thy Name thou wilt grant their requests: Fulfil now, O Lord, the desires and petitions of thy servants, as may be most expedient for them; granting us in this world knowledge of thy truth, and in the world to come life everlasting."
-        ],
-        "label": "A Prayer of St. Chrysostom"
-      },
-      {
-        "hidden": false,
-        "type": "bible-reading",
-        "style": "short",
-        "citation": "2 Corinthians 13. 14.",
-        "metadata": {
-          "response": "Amen."
-        },
-        "value": [
-          {
-            "book": "2 Corinthians",
-            "chapter": "13",
-            "verse": "14",
-            "text": "THE grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Ghost, be with us all evermore."
-          }
-        ]
-      }*/
-    ],
-    "version": "BCP1962"
-  };
-const node = document.createElement('ldf-liturgical-document');
+      "value": [
+        {
+          "book": "2 Corinthians",
+          "chapter": "13",
+          "verse": "14",
+          "text": "THE grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Ghost, be with us all evermore."
+        }
+      ]
+    }
+  ]
+};
+
+    const node = document.createElement('ldf-liturgical-document');
 node.setAttribute('editable', false);
 node.setAttribute('path', '/');
     node.doc = LITURGY;

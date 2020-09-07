@@ -121,10 +121,13 @@ export class StringComponent {
     if(firstChunk) {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord = splitTest ? splitTest[0] : '',
-            re = firstWord.length > 2 ? /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/ : /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+            re = firstWord.length > 2
+              ? /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
+            console.log('match1', match1, 'match2', match2, 'nextWord', nextWord);
 
       final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
@@ -143,8 +146,6 @@ export class StringComponent {
 
   // Render
   render() {
-    return (
-      <span>{this.processedString}</span>
-    );
+    return this.text && <span>{this.processedString}</span>;
   }
 }

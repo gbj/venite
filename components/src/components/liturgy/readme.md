@@ -31,6 +31,7 @@ graph TD;
   ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
   ldf-liturgical-document --> ldf-liturgy
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name

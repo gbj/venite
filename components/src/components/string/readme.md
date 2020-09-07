@@ -22,6 +22,7 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
+ - [ldf-heading](../heading)
  - [ldf-psalm](../psalm)
  - [ldf-responsive-prayer](../responsive-prayer)
  - [ldf-text](../text)
@@ -30,6 +31,7 @@
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-string
+  ldf-heading --> ldf-string
   ldf-psalm --> ldf-string
   ldf-responsive-prayer --> ldf-string
   ldf-text --> ldf-string

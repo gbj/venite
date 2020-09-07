@@ -49,6 +49,7 @@ graph TD;
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
   ldf-bible-reading --> ldf-string
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name

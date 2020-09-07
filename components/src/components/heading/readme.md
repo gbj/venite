@@ -26,6 +26,7 @@
 
 ### Depends on
 
+- [ldf-string](../string)
 - [ldf-editable-text](../editable-text)
 - [ldf-label-bar](../label-bar)
 - [ldf-day-name](../day-name)
@@ -33,6 +34,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
