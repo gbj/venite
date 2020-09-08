@@ -21,7 +21,6 @@ export function findCollect(
     sundayCollect = sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
     season = !FAKE_SEASONS.includes(day.season) ? day.season : day.week?.season || day.season,
     seasonalCollects = collects.filter((collect) => collect.slug === season),
-    seasonalCollect = seasonalCollects.length > 0 ? docsToOption(seasonalCollects) : null,
     blackLetterDays = (day.holy_days || []).filter((feast) => feast.type && feast.type.rank < 3),
     blackLetterCollects = blackLetterDays.map((holyday) =>
       docsToOption(
@@ -36,21 +35,27 @@ export function findCollect(
     ),
     redLetterOrSunday = redLetterCollect || sundayCollect,
     // don't include the seasonal collect if it's the same as the Sunday, i.e., on the First Sunday of Advent
-    observedSeasonalCollect =
-      seasonalCollects && JSON.stringify(seasonalCollect?.value) !== JSON.stringify(redLetterOrSunday?.value)
-        ? seasonalCollect
-        : null;
+    observedSeasonalCollect = seasonalCollects
+      ? docsToLiturgy(
+          seasonalCollects.filter(
+            (collect) => JSON.stringify(collect.value) !== JSON.stringify(redLetterOrSunday?.value),
+          ),
+        )
+      : null;
 
   if (redLetterOrSunday || blackLetterCollects.length > 0) {
     if (sundayFirst) {
       const collects = [redLetterCollect || sundayCollect, ...blackLetterCollects, observedSeasonalCollect].filter(
-        (collect): collect is LiturgicalDocument => collect !== null,
+        (collect): collect is LiturgicalDocument => !!collect,
       );
       return docsToLiturgy(collects);
     } else {
-      const collects = [...blackLetterCollects, redLetterCollect || sundayCollect, observedSeasonalCollect].filter(
-        (collect): collect is LiturgicalDocument => collect !== null,
-      );
+      const collects = [
+        redLetterCollect,
+        ...blackLetterCollects,
+        redLetterCollect ? undefined : sundayCollect,
+        observedSeasonalCollect,
+      ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);
     }
   } else {
