@@ -109,6 +109,7 @@ export class PrayService {
         result = doc.type == 'psalm'
           ? this.lookupPsalter(doc, day, prefs)
           : this.lookupLectionaryReadings(doc, day, prefs);
+        break;
       case 'canticle-table':
       case 'canticle':
         result = this.lookupFromCanticleTable(
@@ -118,6 +119,7 @@ export class PrayService {
           typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
           Number(doc.lookup.item)
         );
+        break;
       case 'category':
         result = this.lookupByCategory(
           doc.category || new Array(),
@@ -127,19 +129,24 @@ export class PrayService {
           doc.lookup.filter,
           doc.lookup.rotate
         );
+        break;
       case 'collect':
         result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', alternateVersions).pipe(
           // filter collects to find the appropriate one
           map(collects => findCollect(collects, day, this.config.sundayCollectsFirst))
         )
+        break;
 
       /* for lookup's of the `slug` type, return an Observable of either
        * a) the only document matching the document's language/version, or
        * b) an LDF `Option` consisting of all matches */
       case 'slug':
       default:
-        if(doc.slug) {
-          console.log('lookup versions = ', versions);
+        if(doc.slug && doc.type == 'liturgy') {
+          result = this.documents.findDocumentsBySlug(doc.slug, language, versions).pipe(
+            switchMap(doc => this.compile(docsToOption(doc), day, prefs, versions))
+          );
+        } else if(doc.slug) {
           result = this.lookupBySlug(
             doc.slug,
             language,
@@ -164,11 +171,10 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
-    console.log('lookupBySlug versions = ', versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
       map(docs => rotate ? this.rotate(rotate, day, docs) : docs),
-      map(docs => docsToOption(docs, versions))
+      map(docs => docsToOption(docs, versions)),
     );
   }
 
@@ -185,7 +191,9 @@ export class PrayService {
   filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
     switch(filterType) {
       case 'seasonal':
-        return docs.filter(doc => doc.category?.includes(day?.season));
+        const filteredByDaySeason = docs.filter(doc => doc.category?.includes(day?.season)),
+          filteredByWeekSeason = docs.filter(doc => doc.category?.includes(day?.week?.season));
+        return filteredByDaySeason?.length == 0 ? filteredByWeekSeason : filteredByDaySeason;
       case 'evening':
         return docs.filter(doc => doc.category?.includes('Evening'));
       case 'day':
