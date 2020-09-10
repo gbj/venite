@@ -196,21 +196,12 @@ export class EditableMetadataComponent {
                   {/* `lookup` */}
                   <ion-row>
                     <ion-col size="12">
-                      <ion-item>
-                        <ion-label position="stacked">{localeStrings.lookup}</ion-label>
-                        <ldf-editable-select
-                          path={this.path}
-                          property="lookup"
-                          options={new Array({ value: undefined, label: "—"}).concat(
-                            this.obj.availableLookupTypes().map(lookupType => ({
-                              value: lookupType,
-                              label: localeStrings[lookupType] || lookupType
-                            }))
-                          )}
-                          value={this.obj.lookup}
-                        >
-                        </ldf-editable-select>
-                      </ion-item>
+                      <ldf-editable-lookup
+                        path={`${this.path}/lookup`}
+                        lookup={this.obj?.lookup}
+                        types={this.obj?.availableLookupTypes()}
+                      >
+                      </ldf-editable-lookup>
                     </ion-col>
                   </ion-row>
                 </ion-grid>
