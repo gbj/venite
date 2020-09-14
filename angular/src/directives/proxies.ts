@@ -1271,6 +1271,19 @@ export class LdfEditableFilterDocuments {
   }
 }
 
+export declare interface LdfEditableLookup extends Components.LdfEditableLookup {}
+@ProxyCmp({inputs: ['lookup', 'path', 'types']})
+@Component({ selector: 'ldf-editable-lookup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['lookup', 'path', 'types'] })
+export class LdfEditableLookup {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableMetadata extends Components.LdfEditableMetadata {}
 @ProxyCmp({inputs: ['collapsed', 'doc', 'modal', 'path', 'visible']})
 @Component({ selector: 'ldf-editable-metadata', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapsed', 'doc', 'modal', 'path', 'visible'] })

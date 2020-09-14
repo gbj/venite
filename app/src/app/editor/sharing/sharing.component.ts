@@ -31,7 +31,8 @@ export class SharingComponent implements OnInit {
     this.owner$ = this.auth.getUserProfile(this.sharing.owner);
     this.orgOptions$ = this.owner$.pipe(
       switchMap(owner => this.organizationService.organizationsWithUser(owner.uid)),
-      map(orgs => orgs.map(org => ({ label: org.name, value: org.slug })))
+      map(orgs => orgs.map(org => ({ label: org.name, value: org.slug }))),
+      startWith([])
     )
     this.statusOptions = [
       { value: 'draft', label: this.translate.instant('editor.draft') },

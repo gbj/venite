@@ -82,8 +82,15 @@ export class EditableMetadataComponent {
       this.obj.metadata = {};
       this.ldfDocShouldChange.emit(new Change({
         path: `${this.path}/metadata`,
-        op: [ { type: 'set', value: {} } ]
+        op: [ { type: 'set', value: { } } ]
       }))
+    }
+    if(!this.obj.source) {
+      this.obj.source = { api: '', source: '', citation: '' };
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/source`,
+        op: [ { type: 'set', value: { api: '', source: '', citation: '' } } ]
+      }));
     }
   }
 

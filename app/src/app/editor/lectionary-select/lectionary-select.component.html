@@ -23,18 +23,22 @@
     <ion-item *ngIf="readingTypeFromPreference">
       <ion-label position="stacked">{{ 'editor.reading' | translate }}</ion-label>
       <ion-select name="readingPreference" ngDefaultControl [(ngModel)]="selectedReading">
-        <ion-select-option value='{"preference": "readingA"}'>{{ 'editor.readingA' | translate }}</ion-select-option>
-        <ion-select-option value='{"preference": "readingB"}'>{{ 'editor.readingB' | translate }}</ion-select-option>
-        <ion-select-option value='{"preference": "readingC"}'>{{ 'editor.readingC' | translate }}</ion-select-option>
+        <ion-select-option [value]='{"preference": "readingA"}'>{{ 'editor.readingA' | translate }}</ion-select-option>
+        <ion-select-option [value]='{"preference": "readingB"}'>{{ 'editor.readingB' | translate }}</ion-select-option>
+        <ion-select-option [value]='{"preference": "readingC"}'>{{ 'editor.readingC' | translate }}</ion-select-option>
       </ion-select>
     </ion-item>
     <!-- Translation -->
     <ion-list-header>{{ 'editor.bible-version' | translate }}</ion-list-header>
     <ion-item>
+      <ion-label>{{ 'editor.psalter-version-preference' | translate }}</ion-label>
+      <ion-checkbox name="usePsalterVersionPref" ngDefaultControl [(ngModel)]="usePsalterVersionPref"></ion-checkbox>
+    </ion-item>
+    <ion-item>
       <ion-label>{{ 'editor.bible-version-preference' | translate }}</ion-label>
       <ion-checkbox name="useBibleVersionPref" ngDefaultControl [(ngModel)]="useBibleVersionPref"></ion-checkbox>
     </ion-item>
-    <ion-item *ngIf="!useBibleVersionPref">
+    <ion-item *ngIf="!useBibleVersionPref && !usePsalterVersionPref">
       <ion-label>{{ 'editor.bible-version' | translate }}</ion-label>
       <ion-select name="version" ngDefaultControl [(ngModel)]="selectedVersion">
         <ion-select-option *ngFor="let opt of versionEntries" [value]="opt[0]">{{ opt[1] }}</ion-select-option>

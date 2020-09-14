@@ -70,7 +70,7 @@ export class HeadingComponent {
   }
 
   // Convert level/text into an H... node
-  private headerNode(level : number, contentNode : JSX.Element) : JSX.Element {
+  private headerNode(level : number, contentNode : JSX.Element, display: boolean = true) : JSX.Element {
     let node : JSX.Element;
     switch(level) {
       case 1:
@@ -91,7 +91,7 @@ export class HeadingComponent {
       default:
         node = <h6>{contentNode}</h6>
     }
-    return node;
+    return display && node;
   }
 
   private textNode(text : string, index : number) : JSX.Element {
@@ -111,21 +111,42 @@ export class HeadingComponent {
     }
   }
 
-  private citationNode(c : string | Citation) : JSX.Element {
-    const citation : string = typeof c == 'string' ?
-      c :
-      new Citation(c).toString();
-
+  private citationNode(c : string) : JSX.Element {
     return (
       <div class='citation' slot='end'>
         {
           this.editable ?
           <ldf-editable-text
             id={`${this.obj.uid || this.obj.slug}-citation`}
-            text={citation}
+            text={c}
             path={`${this.path}/citation`}>
           </ldf-editable-text> :
-          citation
+          c
+        }
+      </div>
+    )
+  }
+
+  private sourceNode(c : Citation) : JSX.Element {
+    const text = new Citation(c).toString();
+
+    return (
+      <div class='citation' slot='end'>
+        {
+          this.editable ?
+          [
+            <ldf-editable-text
+              id={`${this.obj.uid || this.obj.slug}-source-source`}
+              text={c?.source}
+              path={`${this.path}/source/source`}>
+            </ldf-editable-text>,
+            <ldf-editable-text
+              id={`${this.obj.uid || this.obj.slug}-source-citation`}
+              text={c?.citation}
+              path={`${this.path}/source/citation`}>
+            </ldf-editable-text>,
+          ] :
+          text
         }
       </div>
     )
@@ -136,7 +157,8 @@ export class HeadingComponent {
     const localeStrings = this.localeStrings || {};
 
     const level : number = this.obj.metadata ? this.obj.metadata.level : 4,
-          hasCitation : boolean = this.obj.hasOwnProperty('citation') && this.obj.citation !== undefined,
+          hasCitation = Boolean(this.obj?.citation),
+          hasSource = Boolean(this.obj?.source),
           isDate = this.obj?.style == 'date',
           isDay = this.obj?.style == 'day',
           isText = this.obj?.style == undefined || this.obj?.style == 'text' || (!isDate && !isDay);
@@ -148,9 +170,11 @@ export class HeadingComponent {
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
 
-        <ldf-label-bar>
+        <ldf-label-bar class={{
+          'text': isText && (this?.obj?.value || []).filter(n => Boolean(n)).length > 0
+        }}>
           {/* `Heading.label` => main header node */}
-          {isText && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index)))}
+          {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), Boolean(text)))}
 
           {isDate && !this.editable && this.headerNode(level, this.dateNode())}
           {isDate && this.editable && <code class="lookup">{localeStrings.day}</code>}
@@ -166,7 +190,10 @@ export class HeadingComponent {
           <slot name='additional'></slot>
 
           {/* `Heading.citation` => right-aligned */}
-          <slot name='citation' slot='end'>{hasCitation && this.citationNode(this.obj.citation)}</slot>
+          <slot name='citation' slot='end'>
+            {hasSource && this.sourceNode(this.obj.source)}
+            {hasCitation && this.citationNode(this.obj.citation)}
+          </slot>
         </ldf-label-bar>
       </Host>
     );

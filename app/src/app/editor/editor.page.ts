@@ -5,9 +5,10 @@ import { switchMap, map, tap, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './ldf-editor/editor.service';
-import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text } from '@venite/ldf';
+import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text, Sharing } from '@venite/ldf';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { UserProfile } from '../auth/user/user-profile';
 
 @Component({
   selector: 'venite-editor',
@@ -15,6 +16,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./editor.page.scss'],
 })
 export class EditorPage implements OnInit {
+  userProfile$ : Observable<UserProfile>;
+
   // The document being edited
   docId$ : Observable<string>;
 
@@ -23,6 +26,7 @@ export class EditorPage implements OnInit {
   myDocs$ : Observable<IdAndDoc[]>;
   orgDocs$ : Observable<IdAndDoc[]>;
   sharedDocs$ : Observable<IdAndDoc[]>;
+  searchResults$ : Observable<IdAndDoc[]> = of([]);
 
   // Templates for new documents
   templates$: Observable<{ label: string; factory: (string) => LiturgicalDocument}[]> = of([
@@ -82,17 +86,25 @@ export class EditorPage implements OnInit {
     // If no docId is given, we use this list of all documents
     // All docs
     const myUnfilteredDocs$ = this.auth.user.pipe(
-      tap(user => console.log('searching for docs where owner = ', user.uid)),
-      switchMap(user => this.documents.myDocuments(user.uid))
+      switchMap(user => this.documents.myLiturgies(user.uid))
     );
-    this.myDocs$ = combineLatest(this.search$, myUnfilteredDocs$).pipe(
+  
+    this.myDocs$ = combineLatest([this.search$, myUnfilteredDocs$]).pipe(
       map(([search, docs]) => docs.filter(doc => 
         doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
         doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
         doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
         doc.data.category?.includes(search.toLowerCase())
       ))
-    )
+    );
+
+    this.searchResults$ = combineLatest([this.auth.user, this.search$]).pipe(
+      switchMap(([user, search]) => Boolean(search) ? this.documents.search(user.uid, search) : [])
+    );
+
+    this.userProfile$ = this.auth.user.pipe(
+      switchMap(user => this.auth.getUserProfile(user.uid))
+    );
 
     // TODO -- not just my docs, but my organization etc.
     //this.orgDocs$ = this.documents.myOrganizationDocuments();
@@ -113,8 +125,12 @@ export class EditorPage implements OnInit {
     return item.id || index;
   }
 
+  async copy(userProfile : UserProfile, doc : LiturgicalDocument) {
+    const newDocId = await this.documents.newDocument(doc);
+    this.joinDocument(newDocId);
+  }
+
   async delete(docId : string, label : string) {
-    console.log('delete ', docId);
     const alert = await this.alert.create({
       header: this.translate.instant('editor.confirm_deletion_header', { label }),
       message: this.translate.instant('editor.confirm_deletion'), // 'Are you sure you want to delete this document?',

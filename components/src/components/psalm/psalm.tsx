@@ -83,8 +83,9 @@ export class PsalmComponent {
     const heading = new Heading({
       type: 'heading',
       metadata: { level },
-      citation: this.obj.source?.citation || this.obj.citation,
-      value: [value ?? label]
+      citation: this.obj?.citation,
+      value: [value ?? label],
+      source: this.obj?.source
     })
     return (
       <ldf-heading doc={heading}>
@@ -154,7 +155,7 @@ export class PsalmComponent {
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
-                    dropcap={verseIndex == 0 ? 'force' : 'disabled'}
+                    dropcap={sectionIndex == 0 && verseIndex == 0 ? 'force' : 'disabled'}
                     index={verseIndex}>
                   </ldf-string>}
                 </div>

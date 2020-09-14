@@ -36,6 +36,10 @@
   padding-right: calc(var(--ldf-string-border-width) + 4px);
 }
 
+ion-input {
+  --ion-font-family: var(--ldf-font-face);
+}
+
 /*:host textarea:focus {
   border-top-left-radius: var(--ldf-string-border-radius);
   border-top-right-radius: var(--ldf-string-border-radius);

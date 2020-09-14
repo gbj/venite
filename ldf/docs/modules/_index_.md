@@ -27,6 +27,7 @@
 * [LiturgicalWeek](_index_.md#liturgicalweek)
 * [LiturgicalWeekIndex](_index_.md#liturgicalweekindex)
 * [Liturgy](_index_.md#liturgy)
+* [Lookup](_index_.md#lookup)
 * [Meditation](_index_.md#meditation)
 * [Operation](_index_.md#operation)
 * [Option](_index_.md#option)
@@ -202,6 +203,12 @@ ___
 ###  Liturgy
 
 • **Liturgy**:
+
+___
+
+###  Lookup
+
+• **Lookup**:
 
 ___
 

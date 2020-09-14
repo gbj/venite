@@ -64,22 +64,22 @@ export class PrayService {
       }
     
       // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
-      if(doc.hasOwnProperty('slug') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('value')) {
+      if(Boolean(doc.slug) && !Boolean(doc.value) && !Boolean(doc.lookup)) {
         return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs, liturgyversions);
       }
 
       // if doc has a `category` and not a `value` or `lookup`, add `lookup` type of `category` and recompile
-      else if(doc.hasOwnProperty('category') && !doc.hasOwnProperty('value') && !doc.hasOwnProperty('lookup')) {
+      else if(Boolean(doc.category) && !Boolean(doc.value) && !Boolean(doc.lookup)) {
         return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'category' } }), day, prefs, liturgyversions);
       }
 
       // compile Bible readings if they have no content
-      else if(doc.type == 'bible-reading' && doc.hasOwnProperty('citation') && !doc.hasOwnProperty('value') || doc.value?.length == 0) {
+      else if(doc.type == 'bible-reading' && Boolean(doc.citation) && (!Boolean(doc.value) || doc.value?.length == 0)) {
         return this.lookupBibleReading(doc, typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version);
       }
 
       // if doc has a `lookup` and not a `value`, compile it
-      else if(doc.hasOwnProperty('lookup') && (!doc.value || doc.value?.length == 0)) {
+      else if(Boolean(doc.lookup) && (!doc.value || doc.value?.length == 0)) {
         return this.lookup(doc, day, prefs, liturgyversions);
       }
 

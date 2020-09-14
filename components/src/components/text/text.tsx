@@ -86,7 +86,7 @@ export class TextComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
+          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>
 
           {this.obj.value.map((prayer, prayerIndex) =>
             <ldf-editable-text
@@ -106,6 +106,14 @@ export class TextComponent {
         </Host>
       );
     } else {
+      let firstTextLongEnoughForDropcap = -1;
+      if(this.obj?.value?.length > 0) {
+        const firstDropcappableChild = this.obj.value.find(piece => 
+          piece.length >= 150
+        );
+        firstTextLongEnoughForDropcap = this.obj.value.indexOf(firstDropcappableChild);
+      }
+
       return (
         <Host lang={this.obj.language}>
           <ldf-label-bar>
@@ -125,7 +133,7 @@ export class TextComponent {
                     <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                       <ldf-string text={chunk}
                         citation={{label: this.obj.label}}
-                        dropcap={(this.obj.value[prayerIndex].length > 200 && prayerIndex == 0 && chunkIndex == 0) || (prayerIndex == 0 && chunkIndex == 0 && this.obj.value.length > 1) ? 'force' : 'enabled'}
+                        dropcap={prayerIndex === firstTextLongEnoughForDropcap && chunkIndex <= 1 ? "force" : "disabled"}
                         index={prayerIndex + chunkIndex}>
                       </ldf-string>
                     </span>

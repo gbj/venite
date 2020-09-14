@@ -28,7 +28,8 @@ export class LectionarySelectComponent implements OnInit, OnChanges {
   readingEntries : ([string, string])[];
   versionEntries : ([string, string])[];
 
-  useBibleVersionPref : boolean = true;
+  usePsalterVersionPref : boolean = false;
+  useBibleVersionPref : boolean = false;
 
   constructor() { }
 
@@ -51,10 +52,16 @@ export class LectionarySelectComponent implements OnInit, OnChanges {
   }
 
   update() {
+    let version : string | { preference: string } = this.selectedVersion;
+    if(this.usePsalterVersionPref) {
+      version = { preference: "psalterVersion" };
+    } else if(this.useBibleVersionPref) {
+      version = { preference: "bibleVersion" };
+    }
     this.readingSelected.emit({
       lectionary: this.selectedLectionary,
       reading: this.selectedReading,
-      version: this.useBibleVersionPref ? { preference: "bibleVersion" } : this.selectedVersion,
+      version,
       intro: this.selectedIntroduction
     });
   }

@@ -51,6 +51,7 @@ export class EditableLookupComponent {
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   componentWillLoad() {
+    this.currentLookup = this.lookup;
   }
 
   toggle() {

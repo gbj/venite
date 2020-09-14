@@ -110,7 +110,7 @@ export class LiturgicalDocumentComponent {
   nodeFromDoc(doc : LiturgicalDocument) : JSX.Element {
     if(doc == undefined) {
       return customElements && customElements.get('ion-skeleton-text') ? <ion-skeleton-text></ion-skeleton-text> : <p>...</p>
-    } else if(this.editable && (!doc.value || Array.isArray(doc.value) && doc.value?.length == 0) && doc.lookup) {
+    } else if(this.editable && doc.lookup) {
       return this.lookupNode(doc);
     } else {
       return this.chooseComponent(doc);

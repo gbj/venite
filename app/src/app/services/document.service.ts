@@ -99,6 +99,18 @@ export class DocumentService {
   }
 
   /** All documents 'owned' by a user with `uid` */
+  myLiturgies(uid : string) : Observable<IdAndDoc[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.owner', '==', uid)
+         .where('type', '==', 'liturgy')
+    ).snapshotChanges().pipe(
+      // transform from AngularFire `DocumentChangeAction` to `doc`
+      map(changeactions => changeactions.map(action => action?.payload?.doc)),
+      // extra ID and document data and leave the rest behind
+      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+    );
+  }
+
   myDocuments(uid : string) : Observable<IdAndDoc[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.owner', '==', uid)
@@ -110,6 +122,12 @@ export class DocumentService {
     );
   }
 
+  search(uid : string, search : string) : Observable<IdAndDoc[]> {
+    return this.myDocuments(uid).pipe(
+      map(docs => docs.filter(doc => JSON.stringify({ ... doc, value: undefined }).includes(search)))
+    );
+  }
+
   async newDocument(doc : LiturgicalDocument) : Promise<string> {
     const docId = this.afs.createId();
     await this.afs.collection('Document').doc(docId).set(JSON.parse(JSON.stringify(doc)));
@@ -117,7 +135,7 @@ export class DocumentService {
   }
 
   saveDocument(docId : string, doc : Partial<DTO<LiturgicalDocument>>) : Observable<any> {
-    return from(this.afs.doc(`Document/${docId}`).set({ ... doc, slug : doc.slug || this.slugify(doc)}));
+    return from(this.afs.doc(`Document/${docId}`).set(JSON.parse(JSON.stringify({ ... doc, slug : doc.slug || this.slugify(doc)}))));
   }
 
   deleteDocument(docId : string) : Promise<void> {

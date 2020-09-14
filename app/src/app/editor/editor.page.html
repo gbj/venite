@@ -43,17 +43,39 @@
     <ion-list *ngIf="myDocs$ | async as docs else nodocs">
       <ion-list-header><h2>{{ 'editor.mydocs' | translate }}</h2></ion-list-header>
       <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
-        <ion-label [routerLink]="['.', doc.id]">
+        <ion-label class="doc-link" [routerLink]="['.', doc.id]">
           <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
           <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
         </ion-label>
-        <ion-buttons slot="end">
+        <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+          <ion-button (click)="copy(userProfile, doc.data)">
+            <ion-icon slot="icon-only" name="copy"></ion-icon>
+          </ion-button>
           <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-item>
     </ion-list>
+    <ng-container *ngIf="searchResults$ | async as docs">
+      <ion-list *ngIf="docs.length > 0">
+        <ion-list-header><h2>{{ 'editor.search-results' | translate }}</h2></ion-list-header>
+        <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+          <ion-label class="doc-link" [routerLink]="['.', doc.id]">
+            <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
+            <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+          </ion-label>
+          <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+            <ion-button (click)="copy(userProfile, doc.data)">
+              <ion-icon slot="icon-only" name="copy"></ion-icon>
+            </ion-button>
+            <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-list>
+    </ng-container>
     <ng-template #nodocs><p>{{ 'editor.loading' | translate }}</p></ng-template>
   </ion-content>
 </ng-template>

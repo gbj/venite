@@ -33,6 +33,7 @@
 
  - [ldf-bible-reading](../bible-reading)
  - [ldf-editable-condition-piece](../editable-condition-piece)
+ - [ldf-editable-lookup](../editable-lookup)
  - [ldf-editable-metadata](../editable-metadata)
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
  - [ldf-editable-preference](../editable-preference)
@@ -54,6 +55,7 @@ graph TD;
   ldf-editable-text --> ion-input
   ldf-bible-reading --> ldf-editable-text
   ldf-editable-condition-piece --> ldf-editable-text
+  ldf-editable-lookup --> ldf-editable-text
   ldf-editable-metadata --> ldf-editable-text
   ldf-editable-metadata-metadata-fields --> ldf-editable-text
   ldf-editable-preference --> ldf-editable-text

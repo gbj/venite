@@ -11,7 +11,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory';
 }
 
 @Component({
@@ -26,7 +26,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   @ViewChild('additional') additionalElement;
 
   addition : MenuOption;
-  additionalMode : 'psalm' | 'lectionary' | 'canticle' | 'hymn' | 'liturgy' | undefined;
+  additionalMode : 'psalm' | 'lectionary' | 'canticle' | 'hymn' | 'liturgy' | 'invitatory' | undefined;
   // used in ldf-editable-filter-documents
   additionalVersions : Observable<{[key: string]: string}>;
   additionalOptions : Observable<LiturgicalDocument[]>;
@@ -85,6 +85,14 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             ))
           )
           return this.complete;
+        case 'invitatory':
+          this.additionalMode = 'invitatory';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(['Invitatory'], this.language, versions))
+          );
+          return this.complete; 
         case 'lectionary':
           this.additionalMode = 'lectionary';
           this.additionalVersions = this.documentService.getVersions(this.language, 'lectionary');

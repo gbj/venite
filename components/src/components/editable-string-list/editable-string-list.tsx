@@ -80,19 +80,28 @@ export class EditableStringListComponent {
   }
 
   add() {
-    const change = new Change({
-      path: `${this.path}/${this.property}`,
-      op: [{
-        type: 'insertAt',
-        index: this.value.length,
-        value: this.currentValue
-      }]
-    });
+    let change : Change;
+    if(this.optimisticValues) {
+      change = new Change({
+        path: `${this.path}/${this.property}`,
+        op: [{
+          type: 'insertAt',
+          index: this.optimisticValues.length,
+          value: this.currentValue
+        }]
+      });
+    } else {
+      change = new Change({
+        path: `${this.path}/${this.property}`,
+        op: [{
+          type: 'set',
+          value: new Array(this.currentValue)
+        }]
+      });
+    }
 
     this.optimisticValues.push(this.currentValue);
     this.currentValue = '';
-
-    console.log('(add) change = ', change);
 
     this.ldfDocShouldChange.emit(change);
   }
@@ -103,14 +112,12 @@ export class EditableStringListComponent {
       op: [{
         type: 'deleteAt',
         index: ii,
-        oldValue: this.value[ii]
+        oldValue: this.optimisticValues[ii]
       }]
     });
 
     this.optimisticValues.splice(ii, 1);
     this.optimisticValues = [ ... this.optimisticValues ];
-
-    console.log('(remove) change = ', change);
 
     this.ldfDocShouldChange.emit(change);
   }

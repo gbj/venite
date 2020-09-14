@@ -6,6 +6,7 @@ import { PreferenceTree } from './preference-tree';
 
 @Component({
   tag: 'ldf-editable-preferences',
+  styleUrl: 'editable-preferences.scss',
   shadow: true
 })
 export class EditablePreferencesComponent {
@@ -51,6 +52,25 @@ export class EditablePreferencesComponent {
     this.currentSpecialPreferences = this.special_preferences || {};
     this.tree = this.buildTree(this.currentPreferences);
     this.specialTree = this.buildTree(this.currentSpecialPreferences);
+
+    if(!this.preferences) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/preferences`,
+        op: [{
+          type: 'set',
+          value: {}
+        }]
+      }));
+    }
+    if(!this.special_preferences) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/special_preferences`,
+        op: [{
+          type: 'set',
+          value: {}
+        }]
+      }));
+    }
 
     this.loadLocaleStrings();
   }

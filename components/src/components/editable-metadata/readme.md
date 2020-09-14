@@ -47,6 +47,7 @@
 - ion-row
 - ion-col
 - [ldf-editable-string-list](../editable-string-list)
+- [ldf-editable-lookup](../editable-lookup)
 
 ### Graph
 ```mermaid
@@ -71,6 +72,7 @@ graph TD;
   ldf-editable-metadata --> ion-row
   ldf-editable-metadata --> ion-col
   ldf-editable-metadata --> ldf-editable-string-list
+  ldf-editable-metadata --> ldf-editable-lookup
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   ldf-editable-select --> ion-select
@@ -99,6 +101,13 @@ graph TD;
   ldf-editable-string-list --> ion-button
   ion-chip --> ion-ripple-effect
   ion-card --> ion-ripple-effect
+  ldf-editable-lookup --> ion-item
+  ldf-editable-lookup --> ion-label
+  ldf-editable-lookup --> ion-checkbox
+  ldf-editable-lookup --> ldf-editable-text
+  ldf-editable-lookup --> ion-list
+  ldf-editable-lookup --> ldf-editable-select
+  ldf-editable-lookup --> ldf-editable-boolean
   style ldf-editable-metadata fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -22,16 +22,18 @@
             <img [src]="owner.photoURL || '/assets/avatar.svg'">
           </ion-avatar>
         </ion-item>
-        <ion-item>
-          <ion-label>{{ 'editor.organization' | translate }}</ion-label>
-          <ldf-editable-select
-            path="/sharing"
-            property="organization"
-            [options]="orgOptions$ | async"
-            [value]="sharing.organization"
-          >
-          </ldf-editable-select>
-        </ion-item>
+        <ng-container *ngIf="orgOptions$ | async as orgs">
+          <ion-item *ngIf="orgs?.length > 1">
+            <ion-label>{{ 'editor.organization' | translate }}</ion-label>
+            <ldf-editable-select
+              path="/sharing"
+              property="organization"
+              [options]="orgOptions$ | async"
+              [value]="sharing.organization"
+            >
+            </ldf-editable-select>
+          </ion-item>
+        </ng-container>
         <ion-list-header><h2>{{ 'editor.permissions' | translate }}</h2></ion-list-header>
         <ion-item>
           <ion-label>{{ 'editor.published-draft' | translate }}</ion-label>

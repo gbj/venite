@@ -72,7 +72,7 @@ export class LiturgyComponent {
               </ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
-              {this.editable && <ldf-editable-add-block visible={this.hasFocus == path} base={valuePath} index={docIndex + 1}></ldf-editable-add-block>}
+              {this.editable && <ldf-editable-add-block visible={this.hasFocus == path || docIndex == ((this.obj?.value?.length || 0) - 1)} base={valuePath} index={docIndex + 1}></ldf-editable-add-block>}
             </article>
           )
         }

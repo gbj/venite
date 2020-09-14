@@ -26,6 +26,19 @@ export type TypeTuple = typeof TYPES;
 const LOOKUP_TYPES = ['lectionary', 'canticle', 'category', 'slug', 'collect'];
 type LookupTypeTuple = typeof LOOKUP_TYPES;
 
+export type Lookup = {
+  type: LookupTypeTuple[number];
+  /** Lectionary or canticle table name */
+  table?: string | { preference: string };
+  /** Reading type to search
+   * To search on slug or category, use the actual `slug` or `category` of this document */
+  item?: string | number | { preference: string };
+  /** Filter results based on `LiturgicalDay.season`, `LiturgicalDay.slug`, or `Liturgy.evening` */
+  filter?: 'seasonal' | 'evening' | 'day';
+  /** If `true`, rotate through the possibilities and gives only one; if `false`, give all as options in random order */
+  rotate?: boolean;
+};
+
 export type Value =
   | LiturgicalDocument[]
   | ResponsivePrayerLine[]
@@ -142,18 +155,7 @@ export class LiturgicalDocument {
    * @example
    * // the gospel reading in the Revised Common Lectionary
    * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
-  lookup?: {
-    type: LookupTypeTuple[number];
-    /** Lectionary or canticle table name */
-    table?: string | { preference: string };
-    /** Reading type to search
-     * To search on slug or category, use the actual `slug` or `category` of this document */
-    item?: string | number | { preference: string };
-    /** Filter results based on `LiturgicalDay.season`, `LiturgicalDay.slug`, or `Liturgy.evening` */
-    filter?: 'seasonal' | 'evening' | 'day';
-    /** If `true`, rotate through the possibilities and gives only one; if `false`, give all as options in random order */
-    rotate?: boolean;
-  };
+  lookup?: Lookup;
 
   /** The content of the document. */
   value?: Value;

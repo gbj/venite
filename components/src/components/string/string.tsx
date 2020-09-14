@@ -122,8 +122,8 @@ export class StringComponent {
       const splitTest = (firstChunk || '').split(/[\s.!?\\-]/),
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2
-              ? /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
-              : /^([“”‘’\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+              ? /^([“”‘’\!\?\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : /^([“”‘’\!\?\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?\\-]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;

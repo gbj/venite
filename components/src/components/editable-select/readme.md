@@ -26,6 +26,7 @@
 
 ### Used by
 
+ - [ldf-editable-lookup](../editable-lookup)
  - [ldf-editable-metadata](../editable-metadata)
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
 
@@ -39,6 +40,7 @@
 graph TD;
   ldf-editable-select --> ion-select
   ldf-editable-select --> ion-select-option
+  ldf-editable-lookup --> ldf-editable-select
   ldf-editable-metadata --> ldf-editable-select
   ldf-editable-metadata-metadata-fields --> ldf-editable-select
   style ldf-editable-select fill:#f9f,stroke:#333,stroke-width:4px

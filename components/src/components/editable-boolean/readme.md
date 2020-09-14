@@ -25,6 +25,7 @@
 
 ### Used by
 
+ - [ldf-editable-lookup](../editable-lookup)
  - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
  - [ldf-editable-preference-option](../editable-preference-option)
 
@@ -36,6 +37,7 @@
 ```mermaid
 graph TD;
   ldf-editable-boolean --> ion-checkbox
+  ldf-editable-lookup --> ldf-editable-boolean
   ldf-editable-metadata-metadata-fields --> ldf-editable-boolean
   ldf-editable-preference-option --> ldf-editable-boolean
   style ldf-editable-boolean fill:#f9f,stroke:#333,stroke-width:4px
