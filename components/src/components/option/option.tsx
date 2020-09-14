@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Listen, Method, Host, JSX, Event, EventEmitter, Element, h } from '@stencil/core';
-import { Option, LiturgicalDocument } from '@venite/ldf';
+import { Option, LiturgicalDocument, Change } from '@venite/ldf';
 import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -47,14 +47,17 @@ export class OptionComponent {
 
   // Events
   @Event({ bubbles: true }) ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
     this.loadLocaleStrings();
 
-    const selected : number = this.obj.metadata && this.obj.metadata.selected ? this.obj.metadata.selected : 0;
-    this.select(selected || 0);
+    const selected : number = this.editable
+      ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0
+      : this.obj?.metadata?.selected || 0;
+    this.select(selected);
 
     if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
       this.selectFirstDefined();
@@ -74,18 +77,42 @@ export class OptionComponent {
   /** Display the nth option */
   @Method()
   async select(index : number | 'add') {
+    const hadMetadata = Boolean(this.obj?.metadata);
+  
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value[index];
       // sets metadata.selected to new index, and creates objects along the way if undefined
       // without overriding any other metadata fields
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
+      Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
+      if(this.editable) {
+        if(hadMetadata) {
+          this.ldfDocShouldChange.emit(new Change({
+            path: `${this.path}/metadata`,
+            op: [{
+              type: 'set',
+              index: 'editor_selected',
+              value: index
+            }]
+          }));
+        } else {
+          this.ldfDocShouldChange.emit(new Change({
+            path: `${this.path}`,
+            op: [{
+              type: 'set',
+              index: 'metadata',
+              value: { editor_selected: index }
+            }]
+          }));
+        }
+      }
     } else {
       console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
       this.ldfAddOptionToDoc.emit({
         base: this.path,
         index: this.obj?.value?.length,
         obj: this.obj
-      })
+      });
     }
   }
 

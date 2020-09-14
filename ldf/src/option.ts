@@ -17,6 +17,10 @@ export class Option extends LiturgicalDocument {
   metadata: {
     /** The nth item in `this.value` is displayed; the others are alternative options */
     selected: number;
+
+    /** Can be used to mark which field is being edited, without overwriting which one is selected by default
+     * Prevents the editor from flipping continuously back and forth between fields */
+    editor_selected?: number;
   };
 
   value: LiturgicalDocument[];
