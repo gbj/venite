@@ -80,7 +80,10 @@ export class EditableMetadataButtonsComponent {
     return this.openModal(
       'ldf-editable-preferences',
       `${path}/metadata`,
-      { preferences: this.obj?.metadata?.preferences }
+      {
+        preferences: this.obj?.metadata?.preferences,
+        special_preferences: this.obj?.metadata?.special_preferences,
+      },
     );
   }
 

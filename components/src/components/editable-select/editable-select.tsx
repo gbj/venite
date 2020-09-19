@@ -23,6 +23,9 @@ export class EditableSelectComponent {
   /** Starting value for editing */
   @Prop() value: any;
 
+  /** Optional callback when it emits a change */
+  @Prop() onValueChange: (value: any) => void = () => {}; 
+
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
@@ -39,6 +42,8 @@ export class EditableSelectComponent {
           { type: 'set' as 'set', index: this.property, oldValue, value }
         ]
       }));
+
+      this.onValueChange(value);
     }
   }
 

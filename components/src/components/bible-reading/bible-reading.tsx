@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Watch, State, Method, Host, JSX, h } from '@stencil/core';
+import { Component, Element, Prop, Watch, State, Method, JSX, h } from '@stencil/core';
 import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -101,7 +101,7 @@ export class BibleReadingComponent {
       /* Editable version */
       if(this.editable) {
         return (
-          <Host lang={this.obj?.language}>
+          <div lang={this.obj?.language} class={`editable bible-reading ${this.obj?.display_format || 'default'}`}>
             <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
             </ldf-label-bar>
@@ -159,7 +159,7 @@ export class BibleReadingComponent {
                   </div>
               ])}
             </section>
-          </Host>
+          </div>
         );
       }
       /* `short` renders a few verses, with a response and citation. */
@@ -174,7 +174,7 @@ export class BibleReadingComponent {
         }
 
         return (
-          <Host lang={this.obj.language}>
+          <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
             <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
             </ldf-label-bar>
@@ -193,7 +193,7 @@ export class BibleReadingComponent {
               <span class="citation">{ this.obj.citation }</span>
             </p>
             {!shortResponse && !this.obj?.metadata?.omit_response && <p>{responseNode}</p>}
-          </Host>
+          </div>
         );
       }
       /* `long` render a typical Bible reading in the liturgy */
@@ -211,7 +211,7 @@ export class BibleReadingComponent {
         paragraphs.push(currentParagraph);
 
         return (
-          <Host>
+          <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
             {/* Slot for controls */}
             <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
@@ -241,7 +241,7 @@ export class BibleReadingComponent {
                 ]
               )}
             </p>)}
-          </Host>
+          </div>
         );
       }
     } else {

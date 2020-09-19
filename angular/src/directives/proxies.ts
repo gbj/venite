@@ -1497,11 +1497,12 @@ export declare interface LdfOption extends Components.LdfOption {}
 @Component({ selector: 'ldf-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfOption {
   ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfAddOptionToDoc']);
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfDocShouldChange']);
   }
 }
 

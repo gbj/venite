@@ -147,7 +147,7 @@ export class OptionComponent {
   // Render helpers
   /** Return an Ionic Select or Segment element if available, otherwise a vanilla HTML Select Element */
   selectNode() : JSX.Element {
-    const currentlySelected : number = this.obj.metadata.selected;
+    const currentlySelected : number = this.editable ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0 : this.obj?.metadata?.selected || 0;
 
     if(this.obj?.value?.length > 1) {
       // Ionic available and

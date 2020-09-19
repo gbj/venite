@@ -98,21 +98,27 @@ export class EditableMetadataComponent {
   render() {
     const localeStrings = this.localeStrings || {},
           availableTypes = this.obj.availableTypes() || [],
-          availableStyles = this.obj.availableStyles() || [];
+          availableStyles = this.obj.availableStyles() || [],
+          availableDisplayFormats = this.obj.availableDisplayFormats() || [];
+
+    console.log(this.obj, 'type = ', this.obj.type, 'availableTypes = ', availableTypes, 'availableStyles = ', availableStyles);
 
     /** <SelectField/> Functional Component */
     interface SelectFieldProps {
       field: string;
-      types: ReadonlyArray<string>
+      types: ReadonlyArray<string>;
+      onChange?: (value: any) => void;
     }
-    const SelectField : FunctionalComponent<SelectFieldProps> = ({ field, types }) => (
+    const SelectField : FunctionalComponent<SelectFieldProps> = ({ field, types, onChange }) => (
       <ion-item lines='none'>
         <ion-label arial-label={localeStrings[field]} position='stacked'>{localeStrings[field]}</ion-label>
         <ldf-editable-select id={field}
           path={this.path}
           property={field}
           value={this.obj[field]}
-          options={types.map(value => ({ value, label: localeStrings[value] || value }))}>
+          options={types.map(value => ({ value, label: localeStrings[value] || value }))}
+          onValueChange={onChange}
+        >
         </ldf-editable-select>
       </ion-item>
     );
@@ -163,13 +169,17 @@ export class EditableMetadataComponent {
                   {/* `type` and `style` */}
                   <ion-row>
                     <ion-col size="4">
-                      <SelectField field='type' types={availableTypes} />
+                      <SelectField
+                        field='type'
+                        types={availableTypes}
+                        onChange={(type) => this.obj = specificClass(new LiturgicalDocument({ ... this.obj, type }))}
+                      />
                     </ion-col>
                     <ion-col>
-                      {availableStyles && availableStyles.length > 0 && <SelectField field='style' types={availableStyles} />}
+                      {availableStyles?.length > 0 && <SelectField field='style' types={availableStyles} />}
                     </ion-col>
                     <ion-col>
-                      <TextField name="slug"/>
+                      {availableDisplayFormats?.length > 0 && <SelectField field='display_format' types={availableDisplayFormats} />}
                     </ion-col>
                   </ion-row>
                   {/* `tradition`, `language` and `version` */}
@@ -180,8 +190,9 @@ export class EditableMetadataComponent {
                   </ion-row>
                   {/* `label` and `version_label` */}
                   <ion-row>
-                    <ion-col size="4"><TextField name="label"/></ion-col>
+                    <ion-col><TextField name="label"/></ion-col>
                     <ion-col><TextField name="version_label"/></ion-col>
+                    <ion-col><TextField name="slug"/></ion-col>
                   </ion-row>
                   {/* `source` and `citation` */}
                   <ion-row>

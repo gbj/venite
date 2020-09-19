@@ -1,4 +1,5 @@
 {
+  "abbreviated": "Abbreviated",
   "antiphon": "Antiphon",
   "bible-reading": "Bible Reading",
   "canticle": "Canticle",
@@ -6,8 +7,11 @@
   "citation": "Biblical Citation",
   "collect": "Collect",
   "condition": "Condition",
+  "default": "Default",
   "delete": "Delete",
+  "display_format": "Display Format",
   "gloria": "Gloria",
+  "halfverse": "By Half-Verse",
   "heading": "Heading",
   "invitatory": "Invitatory",
   "label": "Label",
@@ -19,6 +23,7 @@
   "meditation": "Meditation",
   "modalTitle": "Edit Settings",
   "normal": "Normal",
+  "omit": "Omit Text",
   "option": "Option",
   "prayer": "Prayer",
   "preces": "Preces",
@@ -36,6 +41,8 @@
   "title": "General Settings",
   "tradition": "Tradition",
   "type": "Type",
+  "unison": "Unison",
   "version": "Version",
-  "version_label": "Version Label"
+  "version_label": "Version Label",
+  "wholeverse": "By Whole Verse"
 }

@@ -3,7 +3,7 @@
   white-space: pre-wrap;
 }
 
-:host[lang="he"] {
+.bible-reading[lang="he"] {
   text-align: right;
   direction: rtl;
   font-size: 1.5em;
@@ -13,6 +13,19 @@
       float: right !important;
       font-family: "Times New Roman" !important;
     }
+}
+
+.bible-reading.omit {
+  .verses {
+    display: none;
+  }
+}
+
+.editable.bible-reading {
+  .verses {
+    display: block;
+    color: var(--ldf-greyed-out-text-color);
+  }
 }
 
 sup {

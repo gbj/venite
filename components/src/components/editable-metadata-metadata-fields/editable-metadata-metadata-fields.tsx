@@ -52,6 +52,13 @@ export class EditableMetadataMetadataFieldsComponent {
       } else {
         this.obj = specificClass(newDoc);
       }
+      this.fields = this.fieldsFromType(this.obj?.type);
+
+      // if necessary, ask for Bible reading intros
+      const hasBibleReadingIntroField : boolean = !!this.fields.find(field => field.type == Field.BibleReadingIntro);
+      if(hasBibleReadingIntroField) {
+        this.ldfAskForBibleIntros.emit();
+      }
     } catch(e) {
       console.warn(e);
       this.obj = new LiturgicalDocument();
@@ -85,13 +92,6 @@ export class EditableMetadataMetadataFieldsComponent {
   async componentWillLoad() {
     this.docChanged(this.doc);
     this.loadLocaleStrings();
-    this.fields = this.fieldsFromType(this.obj?.type);
-
-    // if necessary, ask for Bible reading intros
-    const hasBibleReadingIntroField : boolean = !!this.fields.find(field => field.type == Field.BibleReadingIntro);
-    if(hasBibleReadingIntroField) {
-      this.ldfAskForBibleIntros.emit();
-    }
   }
 
   // Methods

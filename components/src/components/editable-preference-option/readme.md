@@ -32,8 +32,8 @@
 - ion-item
 - ion-label
 - [ldf-editable-text](../editable-text)
-- ion-list-header
 - [ldf-editable-boolean](../editable-boolean)
+- ion-list-header
 
 ### Graph
 ```mermaid
@@ -42,8 +42,8 @@ graph TD;
   ldf-editable-preference-option --> ion-item
   ldf-editable-preference-option --> ion-label
   ldf-editable-preference-option --> ldf-editable-text
-  ldf-editable-preference-option --> ion-list-header
   ldf-editable-preference-option --> ldf-editable-boolean
+  ldf-editable-preference-option --> ion-list-header
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   ldf-editable-text --> ion-input

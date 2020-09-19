@@ -16,9 +16,10 @@
 
 ## Events
 
-| Event               | Description | Type                          |
-| ------------------- | ----------- | ----------------------------- |
-| `ldfAddOptionToDoc` |             | `CustomEvent<AddOptionToDoc>` |
+| Event                | Description | Type                          |
+| -------------------- | ----------- | ----------------------------- |
+| `ldfAddOptionToDoc`  |             | `CustomEvent<AddOptionToDoc>` |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>`         |
 
 
 ## Methods

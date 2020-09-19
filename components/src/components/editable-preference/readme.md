@@ -66,8 +66,8 @@ graph TD;
   ldf-editable-preference-option --> ion-item
   ldf-editable-preference-option --> ion-label
   ldf-editable-preference-option --> ldf-editable-text
-  ldf-editable-preference-option --> ion-list-header
   ldf-editable-preference-option --> ldf-editable-boolean
+  ldf-editable-preference-option --> ion-list-header
   ldf-editable-boolean --> ion-checkbox
   ldf-editable-preferences --> ldf-editable-preference
   style ldf-editable-preference fill:#f9f,stroke:#333,stroke-width:4px
