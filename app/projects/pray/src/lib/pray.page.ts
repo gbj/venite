@@ -22,6 +22,7 @@ interface PrayState {
 })
 export class PrayPage implements OnInit {
   doc$ : Observable<LiturgicalDocument>;
+  color$ : Observable<string | null>;
 
   // Liturgy data to be loaded from the database if we come straight to this page
   state$ : Observable<PrayState>;
@@ -36,7 +37,8 @@ export class PrayPage implements OnInit {
     @Inject(CALENDAR_SERVICE) private calendarService : CalendarServiceInterface,
     public prayService : PrayService,
     private modal : ModalController,
-    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface
+    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
+    @Inject('useBackgroundColor') public useBackgroundColor : boolean
   ) { }
 
   ngOnInit() {
@@ -113,6 +115,11 @@ export class PrayPage implements OnInit {
       switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs)),
     );
 
+    this.color$ = combineLatest([of(this.useBackgroundColor), this.doc$]).pipe(
+      map(([useBackgroundColor, doc]) => useBackgroundColor && doc?.day?.color ? doc.day.color : null),
+      switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
+    )
+
     // Grab display settings from preferences
     this.settings$ = combineLatest([
       this.grabPreference('dropcaps'),
@@ -155,6 +162,7 @@ export class PrayPage implements OnInit {
 
   processSettings(settings : DisplaySettings) : string[] {
     return [
+      `ldf-wrapper`,
       `dropcaps-${settings.dropcaps}`,
       `response-${settings.response}`,
       `repeat-antiphon-${settings.repeatAntiphon}`,

@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { LiturgicalDocument, Liturgy } from '@venite/ldf';
+import { LiturgicalColor, LiturgicalDocument, Liturgy } from '@venite/ldf';
 
 export interface DocumentServiceInterface {
   findDocumentsBySlug : (slug : string, language : string, versions : string[] | undefined) => Observable<LiturgicalDocument[]>;
@@ -9,4 +9,6 @@ export interface DocumentServiceInterface {
   getLiturgyOptions : (language : string, version : string) => Observable<Liturgy[]>;
 
   getVersions : (language : string, type : string) => Observable<{[key: string]: string}>;
+
+  getColor : (color : string | LiturgicalColor) => Observable<string>;
 }

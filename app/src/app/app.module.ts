@@ -114,7 +114,8 @@ import { PrayPageModule } from '@venite/ng-pray';
       },
       liturgySettings: {
         sundayCollectsFirst: true
-      }
+      },
+      useBackgroundColor: true
     }),
   ],
   providers: [

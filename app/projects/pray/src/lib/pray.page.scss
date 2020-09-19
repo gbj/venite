@@ -1,0 +1,21 @@
+.loading {
+  display: block;
+  margin: auto;
+}
+
+.bordered {
+  border-left: 1em solid var(--ion-background-color, #fff);
+  border-right: 1em solid var(--ion-background-color, #fff);
+}
+
+@media(min-width: 767px) {
+  .bordered {
+    border-width: 3em;
+  }
+}
+
+@media(min-width: 1024px) {
+  .bordered {
+    border-width: 6em;
+  }
+}

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
-import { Observable, from } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
-import { LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
+import { LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
 
 // Include document ID and data
@@ -144,5 +144,17 @@ export class DocumentService {
 
   slugify(doc : Partial<DTO<LiturgicalDocument>>) : string {
     return doc.label?.replace(/\s/g, '-').toLowerCase();
+  }
+
+  getColor(color : string | LiturgicalColor) : Observable<string> {
+    if(typeof color !== 'string') {
+      return of(color.hex);
+    } else {
+      return this.afs.collection<LiturgicalColor>('Color', ref =>
+        ref.where('name', '==', color)
+      ).valueChanges().pipe(
+        map(colors => colors.length > 0 ? colors[0].hex : color)
+      );
+    }
   }
 }

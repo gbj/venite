@@ -18,6 +18,7 @@ interface PrayRootConfig {
   providers: Provider[];
   displaySettings: DisplaySettingsConfig;
   liturgySettings: LiturgyConfig;
+  useBackgroundColor?: boolean | undefined;
 }
 
 @NgModule({
@@ -45,7 +46,8 @@ export class PrayPageModule {
       providers: [
         ... args.providers,
         { provide: 'displaySettingsConfig', useValue: args.displaySettings },
-        { provide: 'liturgyConfig', useValue: args.liturgySettings }
+        { provide: 'liturgyConfig', useValue: args.liturgySettings },
+        { provide: 'useBackgroundColor', useValue: Boolean(args.useBackgroundColor) }
       ]
     };
   }
