@@ -65,3 +65,26 @@ h5 {
   font-weight: normal;
   margin-right: 1em;
 }
+
+.psalm.unison .text {
+  font-weight: var(--ldf-response-font-weight);
+  font-style: var(--ldf-response-font-style);
+}
+
+.psalm.omit .text {
+  display: none;
+}
+
+.psalm.wholeverse {
+  .psalm:nth-child(even) {
+    font-weight: var(--ldf-response-font-weight);
+    font-style: var(--ldf-response-font-style);
+  }
+}
+
+.psalm.halfverse {
+  .halfverse {
+    font-weight: var(--ldf-response-font-weight);
+    font-style: var(--ldf-response-font-style);
+  }
+}

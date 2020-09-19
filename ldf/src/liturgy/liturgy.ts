@@ -40,4 +40,9 @@ export class Liturgy extends LiturgicalDocument {
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */
   value: LiturgicalDocument[];
+
+  /** No meaningful differences in display format for liturgies */
+  availableDisplayFormats() {
+    return [];
+  }
 }

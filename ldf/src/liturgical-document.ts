@@ -53,6 +53,10 @@ export type ValuePiece =
   | PsalmSection
   | string;
 
+const DISPLAY_FORMATS = ['default', 'omit', 'unison', 'abbreviated'];
+type DisplayFormatTuple = typeof DISPLAY_FORMATS;
+export type DisplayFormat = DisplayFormatTuple[number];
+
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
@@ -63,6 +67,14 @@ export class LiturgicalDocument {
 
   /** An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style. */
   style?: string | null;
+
+  /** Specify how the text should be displayed
+   * Unison: the entire text is a congregational response
+   * Abbreviated: only the beginning and end of the text should be displayed
+   * Responsive: alternating parts (for psalms, by verse)
+   * Antiphonal: alternating parts (for psalms, by half-verse)
+   */
+  display_format?: DisplayFormat;
 
   /** Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'. */
   category: string[];
@@ -196,6 +208,11 @@ export class LiturgicalDocument {
   /** Returns the list of all possible `lookup.type` values */
   availableLookupTypes(): ReadonlyArray<string> {
     return LOOKUP_TYPES;
+  }
+
+  /** Returns the list of all available `display_format` values */
+  availableDisplayFormats(): ReadonlyArray<string> {
+    return DISPLAY_FORMATS;
   }
 
   //** Constructor takes a Javascript object containing the class's properties */

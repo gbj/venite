@@ -8,3 +8,14 @@ p {
   font-weight: var(--ldf-response-font-weight);
   font-style: var(--ldf-response-font-style);
 }
+
+.text.omit p {
+  display: none;
+}
+
+.text.unison p {
+  font-weight: var(--ldf-response-font-weight);
+  font-style: var(--ldf-response-font-style);
+}
+
+/* .text.abbreviated is handled in the DOM itself, in the component */

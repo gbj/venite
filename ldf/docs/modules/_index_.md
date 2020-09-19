@@ -17,6 +17,7 @@
 * [Condition](_index_.md#condition)
 * [Cursor](_index_.md#cursor)
 * [CursorMessage](_index_.md#cursormessage)
+* [DisplayFormat](_index_.md#displayformat)
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
 * [Kalendar](_index_.md#kalendar)
@@ -143,6 +144,12 @@ ___
 ###  CursorMessage
 
 • **CursorMessage**:
+
+___
+
+###  DisplayFormat
+
+• **DisplayFormat**:
 
 ___
 

@@ -114,6 +114,11 @@ export class Psalm extends LiturgicalDocument {
     return STYLES;
   }
 
+  /** Returns the list ofall possible `display_format` values. */
+  availableDisplayFormats(): ReadonlyArray<string> {
+    return ['default', 'omit', 'unison', 'wholeverse', 'halfverse'];
+  }
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<Psalm> = {}) {
     super(data);

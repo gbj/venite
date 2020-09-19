@@ -139,6 +139,11 @@ export class BibleReading extends LiturgicalDocument {
     return STYLES;
   }
 
+  /** No meaningful difference in display formats for this type */
+  availableDisplayFormats() {
+    return ['default', 'omit'];
+  }
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<BibleReading> = {}) {
     super(data);

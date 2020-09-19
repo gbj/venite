@@ -14,6 +14,10 @@ export class Refrain extends LiturgicalDocument {
     return STYLES;
   }
 
+  availableDisplayFormats() {
+    return [];
+  }
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<Refrain> = {}) {
     super(data);

@@ -23,6 +23,7 @@ Psalm represents liturgical instructions.
 * [citation](_psalm_.psalm.md#optional-citation)
 * [condition](_psalm_.psalm.md#condition)
 * [day](_psalm_.psalm.md#optional-day)
+* [display_format](_psalm_.psalm.md#optional-display_format)
 * [hidden](_psalm_.psalm.md#hidden)
 * [id](_psalm_.psalm.md#optional-id)
 * [label](_psalm_.psalm.md#label)
@@ -42,6 +43,7 @@ Psalm represents liturgical instructions.
 
 ### Methods
 
+* [availableDisplayFormats](_psalm_.psalm.md#availabledisplayformats)
 * [availableLookupTypes](_psalm_.psalm.md#availablelookuptypes)
 * [availableStyles](_psalm_.psalm.md#availablestyles)
 * [availableTypes](_psalm_.psalm.md#availabletypes)
@@ -59,7 +61,7 @@ Psalm represents liturgical instructions.
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[constructor](_liturgy_liturgy_.liturgy.md#constructor)*
 
-*Defined in [psalm.ts:115](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L115)*
+*Defined in [psalm.ts:120](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L120)*
 
 **Parameters:**
 
@@ -77,7 +79,7 @@ Name | Type | Default |
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[api](_responsive_prayer_.responsiveprayer.md#optional-api)*
 
-*Defined in [liturgical-document.ts:78](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L78)*
+*Defined in [liturgical-document.ts:90](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L90)*
 
 The URL (as a string) for the API that provided the document, or against which it can be compiled.
 
@@ -89,7 +91,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[category](_responsive_prayer_.responsiveprayer.md#category)*
 
-*Defined in [liturgical-document.ts:68](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L68)*
+*Defined in [liturgical-document.ts:80](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L80)*
 
 Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'.
 
@@ -101,7 +103,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[citation](_responsive_prayer_.responsiveprayer.md#optional-citation)*
 
-*Defined in [liturgical-document.ts:119](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L119)*
+*Defined in [liturgical-document.ts:131](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L131)*
 
 Biblical or other citation for the document.
 
@@ -116,7 +118,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[condition](_responsive_prayer_.responsiveprayer.md#condition)*
 
-*Defined in [liturgical-document.ts:71](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L71)*
+*Defined in [liturgical-document.ts:83](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L83)*
 
 An array of `Conditions`s determining whether the document should be displayed, given its day.
 
@@ -134,10 +136,26 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[day](_responsive_prayer_.responsiveprayer.md#optional-day)*
 
-*Defined in [liturgical-document.ts:135](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L135)*
+*Defined in [liturgical-document.ts:147](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L147)*
 
 Optional: The liturgical day against which to compile the value, or against which a liturgy has been compiled.
 [LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)
+
+___
+
+### `Optional` display_format
+
+• **display_format**? : *[DisplayFormat](../modules/_index_.md#displayformat)*
+
+*Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[display_format](_responsive_prayer_.responsiveprayer.md#optional-display_format)*
+
+*Defined in [liturgical-document.ts:77](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L77)*
+
+Specify how the text should be displayed
+Unison: the entire text is a congregational response
+Abbreviated: only the beginning and end of the text should be displayed
+Responsive: alternating parts (for psalms, by verse)
+Antiphonal: alternating parts (for psalms, by half-verse)
 
 ___
 
@@ -147,7 +165,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[hidden](_responsive_prayer_.responsiveprayer.md#hidden)*
 
-*Defined in [liturgical-document.ts:146](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L146)*
+*Defined in [liturgical-document.ts:158](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L158)*
 
 Marks a document hidden, so it will not display but will not be deleted
 Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
@@ -161,7 +179,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[id](_responsive_prayer_.responsiveprayer.md#optional-id)*
 
-*Defined in [liturgical-document.ts:59](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L59)*
+*Defined in [liturgical-document.ts:63](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L63)*
 
 If provided from a database, `id` is unique identifier/DB primary key
 
@@ -173,7 +191,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[label](_responsive_prayer_.responsiveprayer.md#label)*
 
-*Defined in [liturgical-document.ts:96](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L96)*
+*Defined in [liturgical-document.ts:108](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L108)*
 
 A human-readable name; either the name of the whole liturgy, or a label for a piece.
 
@@ -188,7 +206,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[language](_responsive_prayer_.responsiveprayer.md#language)*
 
-*Defined in [liturgical-document.ts:108](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L108)*
+*Defined in [liturgical-document.ts:120](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L120)*
 
 Language code (typically an ISO 639-1 two-letter code)
 
@@ -203,7 +221,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[lastRevision](_responsive_prayer_.responsiveprayer.md#lastrevision)*
 
-*Defined in [liturgical-document.ts:84](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L84)*
+*Defined in [liturgical-document.ts:96](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L96)*
 
 Version number of the document
 
@@ -215,7 +233,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[lookup](_responsive_prayer_.responsiveprayer.md#optional-lookup)*
 
-*Defined in [liturgical-document.ts:158](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L158)*
+*Defined in [liturgical-document.ts:170](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L170)*
 
 Instructs the client to look up more information from the server
 
@@ -239,7 +257,7 @@ ___
 
 *Overrides [Refrain](_refrain_.refrain.md).[metadata](_refrain_.refrain.md#optional-metadata)*
 
-*Defined in [psalm.ts:12](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L12)*
+*Defined in [psalm.ts:12](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L12)*
 
 ___
 
@@ -249,7 +267,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[sharing](_responsive_prayer_.responsiveprayer.md#optional-sharing)*
 
-*Defined in [liturgical-document.ts:81](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L81)*
+*Defined in [liturgical-document.ts:93](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L93)*
 
 Permissions for this document: whether it's public, shared with particular individuals, etc.
 
@@ -261,7 +279,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[slug](_responsive_prayer_.responsiveprayer.md#slug)*
 
-*Defined in [liturgical-document.ts:90](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L90)*
+*Defined in [liturgical-document.ts:102](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L102)*
 
 An identifying slug. Given the `slug`, the API should be able to identify this document.
 
@@ -276,7 +294,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[source](_responsive_prayer_.responsiveprayer.md#optional-source)*
 
-*Defined in [liturgical-document.ts:124](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L124)*
+*Defined in [liturgical-document.ts:136](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L136)*
 
 Source for the physical resource within which the document can be found
 
@@ -291,7 +309,7 @@ ___
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[style](_liturgy_liturgy_.liturgy.md#optional-style)*
 
-*Defined in [psalm.ts:11](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L11)*
+*Defined in [psalm.ts:11](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L11)*
 
 ___
 
@@ -301,7 +319,7 @@ ___
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[type](_liturgical_document_.liturgicaldocument.md#type)*
 
-*Defined in [psalm.ts:10](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L10)*
+*Defined in [psalm.ts:10](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L10)*
 
 ___
 
@@ -311,7 +329,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[uid](_responsive_prayer_.responsiveprayer.md#optional-uid)*
 
-*Defined in [liturgical-document.ts:130](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L130)*
+*Defined in [liturgical-document.ts:142](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L142)*
 
 Optional: A unique identifying string based on the slug, for compiled liturgies with multiple instances of the same prayer.
 
@@ -326,7 +344,7 @@ ___
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[value](_liturgical_document_.liturgicaldocument.md#optional-value)*
 
-*Defined in [psalm.ts:24](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L24)*
+*Defined in [psalm.ts:24](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L24)*
 
 ___
 
@@ -336,7 +354,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[version](_responsive_prayer_.responsiveprayer.md#version)*
 
-*Defined in [liturgical-document.ts:114](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L114)*
+*Defined in [liturgical-document.ts:126](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L126)*
 
 Identifying code for the version of a liturgy, prayer, psalm, or Bible reading.
 
@@ -351,7 +369,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[version_label](_responsive_prayer_.responsiveprayer.md#optional-version_label)*
 
-*Defined in [liturgical-document.ts:102](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L102)*
+*Defined in [liturgical-document.ts:114](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L114)*
 
 Optional: A human-readable name for this particular version of a larger category of prayer or liturgy.
 
@@ -360,13 +378,27 @@ Optional: A human-readable name for this particular version of a larger category
 
 ## Methods
 
+###  availableDisplayFormats
+
+▸ **availableDisplayFormats**(): *ReadonlyArray‹string›*
+
+*Overrides [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[availableDisplayFormats](_responsive_prayer_.responsiveprayer.md#availabledisplayformats)*
+
+*Defined in [psalm.ts:118](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L118)*
+
+Returns the list ofall possible `display_format` values.
+
+**Returns:** *ReadonlyArray‹string›*
+
+___
+
 ###  availableLookupTypes
 
 ▸ **availableLookupTypes**(): *ReadonlyArray‹string›*
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[availableLookupTypes](_responsive_prayer_.responsiveprayer.md#availablelookuptypes)*
 
-*Defined in [liturgical-document.ts:197](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L197)*
+*Defined in [liturgical-document.ts:209](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L209)*
 
 Returns the list of all possible `lookup.type` values
 
@@ -380,7 +412,7 @@ ___
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[availableStyles](_liturgy_liturgy_.liturgy.md#availablestyles)*
 
-*Defined in [psalm.ts:113](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L113)*
+*Defined in [psalm.ts:113](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L113)*
 
 Returns the list of all possible `style` values.
 
@@ -394,7 +426,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[availableTypes](_responsive_prayer_.responsiveprayer.md#availabletypes)*
 
-*Defined in [liturgical-document.ts:187](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L187)*
+*Defined in [liturgical-document.ts:199](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L199)*
 
 Returns the list of all possible `type` values
 
@@ -406,7 +438,7 @@ ___
 
 ▸ **filteredVerses**(): *[PsalmSection](_psalm_.psalmsection.md)[]*
 
-*Defined in [psalm.ts:27](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L27)*
+*Defined in [psalm.ts:27](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L27)*
 
 Returns a filtered list of verses based on citation
 
@@ -420,7 +452,7 @@ ___
 
 *Inherited from [ResponsivePrayer](_responsive_prayer_.responsiveprayer.md).[include](_responsive_prayer_.responsiveprayer.md#include)*
 
-*Defined in [liturgical-document.ts:165](https://github.com/gbj/venite/blob/fb377a2/ldf/src/liturgical-document.ts#L165)*
+*Defined in [liturgical-document.ts:177](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/liturgical-document.ts#L177)*
 
 Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
 given the day and assigned preferences
@@ -440,7 +472,7 @@ ___
 
 ▸ **includeAntiphon**(): *boolean*
 
-*Defined in [psalm.ts:87](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L87)*
+*Defined in [psalm.ts:87](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L87)*
 
 Whether the antiphon should be included
 
@@ -452,7 +484,7 @@ ___
 
 ▸ **repeatAntiphon**(`setIndex`: number, `filteredValueLength`: number): *boolean*
 
-*Defined in [psalm.ts:96](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L96)*
+*Defined in [psalm.ts:96](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L96)*
 
 Whether the antiphon should be repeated after a section of the given index
 
@@ -471,7 +503,7 @@ ___
 
 ▸ **versesInCitation**(`citation`: string): *string[]*
 
-*Defined in [psalm.ts:62](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L62)*
+*Defined in [psalm.ts:62](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L62)*
 
 Transforms an ordinary citation into a list of included verse numbers
 

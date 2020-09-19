@@ -27,6 +27,11 @@ export class Heading extends LiturgicalDocument {
     return STYLES;
   }
 
+  /** No meaningful difference in display formats for this type */
+  availableDisplayFormats() {
+    return [];
+  }
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<Heading> = {}) {
     super(data);

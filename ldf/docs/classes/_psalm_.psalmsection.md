@@ -22,7 +22,7 @@ Section breaks can be used to introduce a heading, or to indicate a place for an
 
 • **label**? : *undefined | string*
 
-*Defined in [psalm.ts:126](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L126)*
+*Defined in [psalm.ts:131](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L131)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **type**: *"psalm-section"*
 
-*Defined in [psalm.ts:125](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L125)*
+*Defined in [psalm.ts:130](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L130)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **value**: *[PsalmVerse](_psalm_.psalmverse.md)[]*
 
-*Defined in [psalm.ts:127](https://github.com/gbj/venite/blob/fb377a2/ldf/src/psalm.ts#L127)*
+*Defined in [psalm.ts:132](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/psalm.ts#L132)*

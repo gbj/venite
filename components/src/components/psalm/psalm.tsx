@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Watch, State, Host, JSX, h } from '@stencil/core';
+import { Component, Element, Prop, Watch, State, JSX, h } from '@stencil/core';
 import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString } from '@venite/ldf';
 
 @Component({
@@ -114,8 +114,8 @@ export class PsalmComponent {
     }
 
     return (
-      <Host lang={this.obj.language}>
-        {/* Slot for controls*/}
+      <div lang={this.obj?.language || 'en'} class={`psalm ${this.obj?.display_format || 'default'}`}>
+      {/* Slot for controls*/}
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
@@ -213,7 +213,7 @@ export class PsalmComponent {
 
       {/* include closing antiphon */}
       {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
-      </Host>
+      </div>
     )
   }
 }

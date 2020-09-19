@@ -9,4 +9,8 @@ export class Rubric extends LiturgicalDocument {
   constructor(data: Partial<Rubric> = {}) {
     super(data);
   }
+
+  availableDisplayFormats() {
+    return [];
+  }
 }

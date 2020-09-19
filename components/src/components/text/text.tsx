@@ -71,12 +71,33 @@ export class TextComponent {
     }
   }
 
+  truncate(s : string, last : boolean = false, words : number = 20) : string {
+    const keepPieces = words * 2,
+      split = s.split(/([^\w])/g);
+    if(!last) {
+      return split.slice(0, keepPieces).concat('...').join("")
+    } else {
+      return new Array('...').concat(split.slice(split.length - keepPieces)).join("")
+    }
+  }
+
   // Render
   render() {
-    const localeStrings = this.localeStrings || {},
-          compiledValue : string[][] = (this.obj?.value || []).map(s => {
-            return s.split(/([\*\w\n\s,:;\.“”‘’”\[\]\%]+([^\*\w\n\s,;:\.“”‘’”\[\]\%]))/g);
-          });
+    const localeStrings = this.localeStrings || {};
+    let compiledValue : string[][] = (this.obj?.value || []).map(s => {
+      return s.split(/([\*\w\n\s,:;\.“”‘’\!\?”\[\]\%]+([^\*\w\n\s,;:\.“”‘’”\!\?\[\]\%]))/g);
+    })
+    if(!this.editable && this.obj?.display_format === 'abbreviated') {
+      const firstSection = compiledValue[0],
+        lastSection = compiledValue[compiledValue.length - 1];
+      //let firstChunk : string, lastChunk : string;
+      const firstChunk = this.truncate(firstSection[0]),
+        lastChunk = this.truncate(lastSection[lastSection.length - 1], true);
+      console.log('firstChunk = ', firstChunk, 'lastChunk = ', lastChunk);
+      compiledValue = [[firstChunk], [lastChunk]];
+      console.log('abbreviated compiled Value to ', compiledValue);
+    }
+     
       
     if(this.editable) {
       return (
@@ -115,7 +136,7 @@ export class TextComponent {
       }
 
       return (
-        <Host lang={this.obj.language}>
+        <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
           <ldf-label-bar>
             <slot slot='end' name='controls'></slot>
           </ldf-label-bar>
@@ -138,12 +159,12 @@ export class TextComponent {
                       </ldf-string>
                     </span>
                   )}
-                  {this.obj?.metadata?.response && prayerIndex == this.obj.value.length - 1 && <span class="response"> {this.obj.metadata.response}</span>}
-                  {!this.obj?.metadata?.response && this.obj.style == 'prayer' && prayerIndex == this.obj.value.length - 1 && <span class="response"> {localeStrings.amen}</span>}
+                  {this.obj?.metadata?.response && prayerIndex == compiledValue.length - 1 && <span class="response"> {this.obj.metadata.response}</span>}
+                  {!this.obj?.metadata?.response && this.obj.style == 'prayer' && prayerIndex == compiledValue.length - 1 && <span class="response"> {localeStrings.amen}</span>}
               </p>
             )
           }
-        </Host>
+        </div>
       );
     }
   }

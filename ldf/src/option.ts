@@ -30,6 +30,10 @@ export class Option extends LiturgicalDocument {
     super(data);
   }
 
+  availableDisplayFormats() {
+    return [];
+  }
+
   uniqueVersions(): number {
     return this.value
       .map((o) => versionToString(o.version))
