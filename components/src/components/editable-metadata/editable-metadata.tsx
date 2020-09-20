@@ -117,7 +117,7 @@ export class EditableMetadataComponent {
           property={field}
           value={this.obj[field]}
           options={types.map(value => ({ value, label: localeStrings[value] || value }))}
-          onValueChange={onChange}
+          onChange={(ev : CustomEvent) => onChange(ev.detail)}
         >
         </ldf-editable-select>
       </ion-item>

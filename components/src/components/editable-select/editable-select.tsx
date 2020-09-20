@@ -24,7 +24,7 @@ export class EditableSelectComponent {
   @Prop() value: any;
 
   /** Optional callback when it emits a change */
-  @Prop() onValueChange: (value: any) => void = () => {}; 
+  @Event() change: any; 
 
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -43,7 +43,7 @@ export class EditableSelectComponent {
         ]
       }));
 
-      this.onValueChange(value);
+      this.change.emit(value);
     }
   }
 
