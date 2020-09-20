@@ -90,6 +90,7 @@ export class PsalmComponent {
     return (
       <ldf-heading doc={heading}>
         {showLatinName && <h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
+        {this.obj?.citation && this.obj?.source && <h5 slot='additional'>{this.obj.citation}</h5>}
       </ldf-heading>
     )
   }

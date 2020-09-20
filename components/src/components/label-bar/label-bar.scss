@@ -2,10 +2,20 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   slot {
     display: block;
+    margin-left: 2em;
+  }
+  
+  slot:first-of-type {
+    margin-left: 0;
+  }
+
+  slot:last-of-type {
+    margin-left: auto;
+    text-align: right;
   }
 
   ::slotted[slot="end"] {

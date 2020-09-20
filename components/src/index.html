@@ -16,12 +16,6 @@
       max-width: 800px;
     }
 :root {
-  --ion-color-primary: #69bb7b;
-  --ion-color-primary-rgb: 105,187,123;
-  --ion-color-primary-contrast: #000000;
-  --ion-color-primary-contrast-rgb: 0,0,0;
-  --ion-color-primary-shade: #5ca56c;
-  --ion-color-primary-tint: #78c288;
   --ldf-psalm-grid-display: block;
   --ldf-psalm-grid-template-columns: 1.5em 1fr;
   --ldf-psalm-grid-template-areas: "number verse";
@@ -216,979 +210,218 @@ ldf-psalm .psalm br {
 
 const LITURGY = {
   "hidden": false,
-  "language": "en",
-  "version": "BCP1962",
   "value": [
     {
       "hidden": false,
-      "label": "Evening Prayer",
-      "value": [
-        "Evening Prayer"
-      ],
-      "type": "heading",
-      "style": "text",
       "metadata": {
         "level": 1
-      }
-    },
-    {
-      "hidden": false,
+      },
       "type": "heading",
-      "style": "date",
-      "metadata": {
-        "level": 2
-      },
-      "day": {
-        "evening": true,
-        "date": "2020-9-14",
-        "kalendar": "bcp1962",
-        "slug": "monday-fourteenth-sunday-after-trinity",
-        "propers": "monday-fourteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 31,
-          "season": "OrdinaryTime",
-          "name": "Fourteenth Sunday after Trinity",
-          "slug": "fourteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [
-          {
-            "mmdd": "9/14",
-            "kalendar": "bcp1962",
-            "name": "Holy Cross Day.",
-            "slug": "holy-cross-day",
-            "type": {
-              "name": "Black-Letter",
-              "rank": 2
-            },
-            "category": [
-              "holy-cross-day"
-            ]
-          }
-        ],
-        "season": "HolyWeek",
-        "holy_day_observed": {
-          "mmdd": "9/14",
-          "kalendar": "bcp1962",
-          "name": "Holy Cross Day.",
-          "slug": "holy-cross-day",
-          "type": {
-            "name": "Black-Letter",
-            "rank": 2
-          },
-          "category": [
-            "holy-cross-day"
-          ]
-        }
-      }
-    },
-    {
-      "hidden": false,
-      "type": "heading",
-      "style": "day",
-      "metadata": {
-        "level": 2
-      },
-      "day": {
-        "evening": true,
-        "date": "2020-9-14",
-        "kalendar": "bcp1962",
-        "slug": "monday-fourteenth-sunday-after-trinity",
-        "propers": "monday-fourteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 31,
-          "season": "OrdinaryTime",
-          "name": "Fourteenth Sunday after Trinity",
-          "slug": "fourteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [
-          {
-            "mmdd": "9/14",
-            "kalendar": "bcp1962",
-            "name": "Holy Cross Day.",
-            "slug": "holy-cross-day",
-            "type": {
-              "name": "Black-Letter",
-              "rank": 2
-            },
-            "category": [
-              "holy-cross-day"
-            ]
-          }
-        ],
-        "season": "HolyWeek",
-        "holy_day_observed": {
-          "mmdd": "9/14",
-          "kalendar": "bcp1962",
-          "name": "Holy Cross Day.",
-          "slug": "holy-cross-day",
-          "type": {
-            "name": "Black-Letter",
-            "rank": 2
-          },
-          "category": [
-            "holy-cross-day"
-          ]
-        }
-      }
-    },
-    {
-      "hidden": false,
-      "value": [
-        "The Minister shall read aloud one or more of these Sentences of the Scriptures that follow, or at special seasons the appropriate Sentences in Morning Prayer."
-      ],
-      "type": "rubric"
-    },
-    null,
-    {
-      "hidden": false,
-      "type": "bible-reading",
-      "style": "short",
-      "citation": "Romans 5. 8.",
-      "metadata": {
-        "omit_response": true
-      },
-      "value": [
-        {
-          "book": "Romans",
-          "chapter": "5",
-          "verse": "8",
-          "text": "God commendeth his love toward us, in that, while we were yet sinners, Christ died for us."
-        }
-      ],
-      "category": [
-        "Opening Sentence",
-        "HolyWeek"
-      ]
-    },
-    {
-      "hidden": false,
-      "type": "liturgy",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "key": "confessionIntro",
-              "value": "long",
-              "is": true
-            }
-          }
-        ]
-      },
-      "value": [
-        {
-          "hidden": false,
-          "type": "rubric",
-          "value": [
-            "The Minister, turning to the people, shall say the Exhortation in the form following. Occasionally the second paragraph may be omitted."
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "text",
-          "style": "text",
-          "label": "The Exhortation",
-          "value": [
-            "Dearly beloved brethren, the Scripture moveth us in sundry places to acknowledge and confess our manifold sins and wickedness; and that we should not dissemble nor cloke them before the face of Almighty God our heavenly Father; but confess them with an humble, lowly, penitent, and obedient heart; to the end that we may obtain forgiveness of the same, by his infinite goodness and mercy.",
-            "And although we ought at all times humbly to acknowledge our sins before God; yet ought we most chiefly so to do, when we assemble and meet together to render thanks for the great benefits that we have received at his hands, to set forth his most worthy praise, to hear his most holy Word, and to ask those things which are requisite and necessary, as well for the body as the soul.",
-            "Wherefore I pray and beseech you, as many as are here present, to accompany me with a pure heart and humble voice unto the throne of the heavenly grace."
-          ]
-        }
-      ]
-    },
-    null,
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [
-        "A general Confession to be said of the whole Congregation with the Minister, all kneeling."
-      ]
-    },
-    {
-      "hidden": false,
-      "value": [
-        "ALMIGHTY and most merciful Father, We have erred and strayed from thy ways like lost sheep, We have followed too much the devices and desires of our own hearts, We have offended against thy holy laws, We have left undone those things which we ought to have done, And we have done those things which we ought not to have done; And there is no health in us. But thou, O Lord, have mercy upon us, miserable offenders. Spare thou them, O God, which confess their faults. Restore thou them that are penitent; According to thy promises declared unto mankind in Christ Jesu our Lord. And grant, O most merciful Father, for his sake, That we may hereafter live a godly, righteous, and sober life, To the glory of thy holy Name."
-      ],
-      "type": "text",
-      "style": "prayer",
-      "display_format": "abbreviated",
-      "label": "The Confession"
-    },
-    null,
-    null,
-    {
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "key": "absolution",
-              "value": "trinity-24",
-              "is": true
-            }
-          }
-        ]
-      },
-      "value": [
-        "O LORD, we beseech thee, absolve thy people from their offences; that through thy bountiful goodness we may all be delivered from the bands of those sins, which by our frailty we have committed. Grant this, O heavenly Father, for Jesus Christ’s sake, our blessed Lord and Saviour. "
-      ]
-    },
-    null,
-    {
-      "hidden": false,
-      "value": [
-        "Here the Lord’s Prayer may be said; the people repeating it with the Minister."
-      ],
-      "type": "rubric"
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "value": [
-        "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil. For thine is the kingdom, the power, and the glory, For ever and ever. "
-      ],
-      "style": "prayer"
-    },
-    {
-      "hidden": false,
-      "value": [
-        {
-          "label": "Minister.",
-          "text": "O Lord, open thou our lips;",
-          "response": ""
-        },
-        {
-          "label": "People.",
-          "text": "And our mouth shall show forth thy praise."
-        },
-        {
-          "text": "O God, make speed to save us.",
-          "label": "Minister."
-        },
-        {
-          "label": "People.",
-          "text": "O Lord, make haste to help us."
-        }
-      ],
-      "style": "preces",
-      "type": "responsive"
-    },
-    {
-      "hidden": false,
-      "value": [
-        "Here, all standing up, the Minister shall say:"
-      ],
-      "type": "rubric"
-    },
-    {
-      "hidden": false,
-      "type": "responsive",
-      "style": "preces",
-      "value": [
-        {
-          "text": "GLORY be to the Father, and to the Son, and to the Holy Ghost;",
-          "response": "",
-          "label": ""
-        },
-        {
-          "label": "People.",
-          "text": "As it was in the beginning, is now, and ever shall be, world without end. Amen."
-        },
-        {
-          "label": "Minister.",
-          "text": "Praise ye the Lord;"
-        },
-        {
-          "label": "People.",
-          "text": "The Lord’s name be praised."
-        }
-      ]
-    },
-    {
-      "hidden": false,
-      "type": "option",
-      "value": [
-        null,
-        null,
-        {
-          "hidden": false,
-          "version_label": "Daily Psalms",
-          "metadata": {},
-          "style": "psalm",
-          "type": "liturgy",
-          "value": [
-            {
-              "hidden": false,
-              "type": "psalm",
-              "style": "psalm",
-              "metadata": {
-                "number": "73",
-                "latinname": "Quam bonus Israel!",
-                "gloria": {
-                  "hidden": false,
-                  "type": "refrain",
-                  "style": "gloria",
-                  "value": [
-                    "GLORY be to the Father, and to the Son, / and to the Holy Ghost;",
-                    "As it was in the beginning, is now, and ever shall be, / world without end. Amen."
-                  ]
-                }
-              },
-              "value": [
-                {
-                  "type": "psalm-section",
-                  "value": [
-                    {
-                      "type": "psalm-verse",
-                      "number": "1",
-                      "verse": "TRULY God is loving unto Israel: / ",
-                      "halfverse": "even unto such as are of a clean heart."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "2",
-                      "verse": "Nevertheless, my feet were almost gone; / ",
-                      "halfverse": "my treadings had well-nigh slipt."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "3",
-                      "verse": "And why? I was grieved at the wicked: / ",
-                      "halfverse": "I do also see the ungodly in such prosperity."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "4",
-                      "verse": "For they have no torments, / ",
-                      "halfverse": "but are lusty and strong."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "5",
-                      "verse": "They come in no misfortune like other folk; / ",
-                      "halfverse": "neither are they plagued like other men."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "6",
-                      "verse": "Therefore pride is as a chain about their neck, / ",
-                      "halfverse": "and violence covereth them as a garment."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "7",
-                      "verse": "Their iniquity cometh forth from the heart, / ",
-                      "halfverse": "and the imaginations of their mind overflow."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "8",
-                      "verse": "They scoff and speak of evil, / ",
-                      "halfverse": "and talk proudly of oppression."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "9",
-                      "verse": "They stretch forth their mouth unto the heavens, / ",
-                      "halfverse": "and their tongue goeth through the world."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "10",
-                      "verse": "Therefore turn the people unto them, / ",
-                      "halfverse": "and find no fault in them."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "11",
-                      "verse": "‘Tush,’ say they, ‘how should God perceive it? / ",
-                      "halfverse": "is there knowledge in the Most High?’"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "12",
-                      "verse": "Lo, these are the ungodly; / ",
-                      "halfverse": "they are alway at ease, and get riches in possession."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "13",
-                      "verse": "Then surely in vain have I cleansed my heart, / ",
-                      "halfverse": "and washed my hands in innocency."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "14",
-                      "verse": "For all the day long have I been punished, / ",
-                      "halfverse": "and chastened every morning."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "15",
-                      "verse": "If I had said, ‘I will speak thus’, / ",
-                      "halfverse": "lo, then I should have condemned the generation of thy children."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "16",
-                      "verse": "THEN thought I to understand this, / ",
-                      "halfverse": "but it was too hard for me,"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "17",
-                      "verse": "Until I went into the sanctuary of God, / ",
-                      "halfverse": "and considered the end of these men;"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "18",
-                      "verse": "For surely thou dost set them in slippery places, / ",
-                      "halfverse": "and castest them down, and destroyest them."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "19",
-                      "verse": "Oh, how suddenly do they consume, / ",
-                      "halfverse": "perish, and come to a fearful end!"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "20",
-                      "verse": "Yea, even like as a dream when one awaketh, / ",
-                      "halfverse": "so, O Lord, when thou awakest, thou shalt despise their image."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "21",
-                      "verse": "Thus my soul was grieved, / ",
-                      "halfverse": "and my heart within me was stricken."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "22",
-                      "verse": "So foolish was I, and ignorant, / ",
-                      "halfverse": "even as it were a beast before thee."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "23",
-                      "verse": "NEVERTHELESS, I am alway by thee; / ",
-                      "halfverse": "for thou hast holden me by my right hand."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "24",
-                      "verse": "Thou shalt guide me with thy counsel, / ",
-                      "halfverse": "and after that receive me with glory."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "25",
-                      "verse": "Whom have I in heaven but thee? / ",
-                      "halfverse": "and there is none upon earth that I desire in comparison of thee."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "26",
-                      "verse": "My flesh and my heart faileth; / ",
-                      "halfverse": "but God is the strength of my heart, and my portion for ever."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "27",
-                      "verse": "For lo, they that forsake thee shall perish: / ",
-                      "halfverse": "thou destroyest all them that are unfaithful unto thee."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "28",
-                      "verse": "But it is good for me to hold me fast by God, to put my trust in the Lord GOD, / ",
-                      "halfverse": "and to speak of all thy works in the gates of the daughter of Sion."
-                    }
-                  ]
-                }
-              ],
-              "slug": "psalm_73",
-              "label": "Psalm 73"
-            },
-            {
-              "hidden": false,
-              "type": "psalm",
-              "style": "psalm",
-              "metadata": {
-                "number": "74",
-                "latinname": "Ut quid, Deus?",
-                "gloria": {
-                  "hidden": false,
-                  "type": "refrain",
-                  "style": "gloria",
-                  "value": [
-                    "GLORY be to the Father, and to the Son, / and to the Holy Ghost;",
-                    "As it was in the beginning, is now, and ever shall be, / world without end. Amen."
-                  ]
-                }
-              },
-              "value": [
-                {
-                  "type": "psalm-section",
-                  "value": [
-                    {
-                      "type": "psalm-verse",
-                      "number": "1",
-                      "verse": "O GOD, wherefore hast thou cast us off for ever? / ",
-                      "halfverse": "why is thy wrath so hot against the sheep of thy pasture?"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "2",
-                      "verse": "O think upon thy congregation, / ",
-                      "halfverse": "which thou hast purchased of old;"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "3",
-                      "verse": "Which thou hast redeemed to be the tribe of thine inheritance: / ",
-                      "halfverse": "think upon mount Sion, wherein thou hast dwelt."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "4",
-                      "verse": "Direct thy steps unto the perpetual ruins: / ",
-                      "halfverse": "all the evil that the enemy hath done in the sanctuary."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "5",
-                      "verse": "Thine adversaries roar in the midst of thy congregation, / ",
-                      "halfverse": "and set up their banners for tokens."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "6",
-                      "verse": "They seem like men that lift up axes upon a grove of trees; / ",
-                      "halfverse": "for now they break down all the carved work thereof with axes and hammers."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "7",
-                      "verse": "They have set thy sanctuary on fire, / ",
-                      "halfverse": "and have defiled the dwelling-place of thy Name, even unto the ground."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "8",
-                      "verse": "Yea, they said in their hearts, ‘Let us make havoc of them altogether’: / ",
-                      "halfverse": "thus have they burnt up all the houses of God in the land."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "9",
-                      "verse": "We see not our tokens; there is no more any prophet: / ",
-                      "halfverse": "no, not one is there among us that knoweth how long."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "10",
-                      "verse": "O God, how long shall the adversary do this dishonour? / ",
-                      "halfverse": "shall the enemy blaspheme thy Name for ever?"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "11",
-                      "verse": "Why dost thou draw back thy hand, / ",
-                      "halfverse": "and keep thy right hand in thy bosom?"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "12",
-                      "verse": "YET God is my King of old: / ",
-                      "halfverse": "the help that is done upon earth, he doeth it himself."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "13",
-                      "verse": "Thou didst divide the sea through thy power: / ",
-                      "halfverse": "thou didst break the heads of the dragons in the waters."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "14",
-                      "verse": "Thou didst crush the heads of Leviathan, / ",
-                      "halfverse": "and gavest him to be food for the creatures of the wilderness."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "15",
-                      "verse": "Thou didst cleave open fountain and flood: / ",
-                      "halfverse": "thou driedst up ever-flowing streams."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "16",
-                      "verse": "The day is thine, and the night is thine: / ",
-                      "halfverse": "thou hast prepared the light and the sun."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "17",
-                      "verse": "Thou hast set all the borders of the earth: / ",
-                      "halfverse": "thou hast made summer and winter."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "18",
-                      "verse": "REMEMBER this, O LORD, how the enemy hath reproached, / ",
-                      "halfverse": "and how a foolish people hath blasphemed thy Name."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "19",
-                      "verse": "O deliver not the soul of thy turtle-dove unto the wild beast: / ",
-                      "halfverse": "and forget not the life of thy poor for ever."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "20",
-                      "verse": "Look upon the covenant; / ",
-                      "halfverse": "for the dark places of the earth are full of the habitations of cruelty."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "21",
-                      "verse": "O let not the oppressed go away ashamed; / ",
-                      "halfverse": "but let the poor and needy give praise unto thy Name."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "22",
-                      "verse": "Arise, O God, maintain thine own cause: / ",
-                      "halfverse": "remember how  long."
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "number": "23",
-                      "verse": "Forget not the voice of thine enemies: / ",
-                      "halfverse": "the tumult of them that hate thee increaseth ever more and more."
-                    }
-                  ]
-                }
-              ],
-              "slug": "psalm_74",
-              "label": "Psalm 74"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "hidden": false,
-      "style": "long",
-      "label": "The First Lesson",
-      "version": "KJV",
-      "metadata": {
-        "intro": {
-          "style": "text",
-          "language": "en",
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "type": "text",
-          "value": [
-            "The First Lesson is written in ${shortName}, in the ${chapter} chapter, beginning at the ${verse} verse."
-          ]
-        },
-        "compiled_intro": {
-          "hidden": false,
-          "style": "text",
-          "language": "en",
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "type": "text",
-          "value": [
-            "The First Lesson is written in 2 Kings, in the 23rd chapter, beginning at the 1st verse."
-          ]
-        }
-      },
-      "type": "bible-reading",
-      "lookup": {
-        "table": "readings",
-        "type": "lectionary",
-        "item": "evening_first_reading"
-      },
-      "citation": "2 Kings 23. 1-20",
-      "language": "en",
-      "value": [
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "1",
-          "text": "And the king sent, and they gathered unto him all the elders of Judah and of Jerusalem. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "2",
-          "text": "And the king went up into the house of the LORD, and all the men of Judah and all the inhabitants of Jerusalem with him, and the priests, and the prophets, and all the people, both small and great: and he read in their ears all the words of the book of the covenant which was found in the house of the LORD. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "3",
-          "text": "And the king stood by a pillar, and made a covenant before the LORD, to walk after the LORD, and to keep his commandments and his testimonies and his statutes with all their heart and all their soul, to perform the words of this covenant that were written in this book. And all the people stood to the covenant. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "4",
-          "text": "And the king commanded Hilkiah the high priest, and the priests of the second order, and the keepers of the door, to bring forth out of the temple of the LORD all the vessels that were made for Baal, and for the grove, and for all the host of heaven: and he burned them without Jerusalem in the fields of Kidron, and carried the ashes of them unto Bethel. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "5",
-          "text": "And he put down the idolatrous priests, whom the kings of Judah had ordained to burn incense in the high places in the cities of Judah, and in the places round about Jerusalem; them also that burned incense unto Baal, to the sun, and to the moon, and to the planets, and to all the host of heaven. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "6",
-          "text": "And he brought out the grove from the house of the LORD, without Jerusalem, unto the brook Kidron, and burned it at the brook Kidron, and stamped it small to powder, and cast the powder thereof upon the graves of the children of the people. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "7",
-          "text": "And he brake down the houses of the sodomites, that were by the house of the LORD, where the women wove hangings for the grove. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "8",
-          "text": "And he brought all the priests out of the cities of Judah, and defiled the high places where the priests had burned incense, from Geba to Beersheba, and brake down the high places of the gates that were in the entering in of the gate of Joshua the governor of the city, which were on a man&#146;s left hand at the gate of the city. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "9",
-          "text": "Nevertheless the priests of the high places came not up to the altar of the LORD in Jerusalem, but they did eat of the unleavened bread among their brethren. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "10",
-          "text": "And he defiled Topheth, which is in the valley of the children of Hinnom, that no man might make his son or his daughter to pass through the fire to Molech. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "11",
-          "text": "And he took away the horses that the kings of Judah had given to the sun, at the entering in of the house of the LORD, by the chamber of Nathanmelech the chamberlain, which was in the suburbs, and burned the chariots of the sun with fire. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "12",
-          "text": "And the altars that were on the top of the upper chamber of Ahaz, which the kings of Judah had made, and the altars which Manasseh had made in the two courts of the house of the LORD, did the king beat down, and brake them down from thence, and cast the dust of them into the brook Kidron. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "13",
-          "text": "And the high places that were before Jerusalem, which were on the right hand of the mount of corruption, which Solomon the king of Israel had builded for Ashtoreth the abomination of the Zidonians, and for Chemosh the abomination of the Moabites, and for Milcom the abomination of the children of Ammon, did the king defile. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "14",
-          "text": "And he brake in pieces the images, and cut down the groves, and filled their places with the bones of men. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "15",
-          "text": "Moreover the altar that was at Bethel, and the high place which Jeroboam the son of Nebat, who made Israel to sin, had made, both that altar and the high place he brake down, and burned the high place, and stamped it small to powder, and burned the grove. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "16",
-          "text": "And as Josiah turned himself, he spied the sepulchres that were there in the mount, and sent, and took the bones out of the sepulchres, and burned them upon the altar, and polluted it, according to the word of the LORD which the man of God proclaimed, who proclaimed these words. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "17",
-          "text": "Then he said, What title is that that I see? And the men of the city told him, It is the sepulchre of the man of God, which came from Judah, and proclaimed these things that thou hast done against the altar of Bethel. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "18",
-          "text": "And he said, Let him alone; let no man move his bones. So they let his bones alone, with the bones of the prophet that came out of Samaria. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "19",
-          "text": "And all the houses also of the high places that were in the cities of Samaria, which the kings of Israel had made to provoke the Lord to anger, Josiah took away, and did to them according to all the acts that he had done in Bethel. "
-        },
-        {
-          "book": "2 Kings",
-          "chapter": "23",
-          "verse": "20",
-          "text": "And he slew all the priests of the high places that were there upon the altars, and burned men&#146;s bones upon them, and returned to Jerusalem. "
-        }
-      ]
-    },
-    {
-      "hidden": false,
-      "type": "text",
       "style": "text",
       "value": [
-        "Here endeth the First Lesson."
-      ]
+        "Morning Prayer"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "category": [],
+      "value": [
+        ""
+      ],
+      "metadata": {
+        "level": 2
+      },
+      "type": "heading",
+      "style": "date",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        ""
+      ],
+      "metadata": {
+        "level": 2
+      },
+      "category": [],
+      "type": "heading",
+      "style": "day",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    null,
+    {
+      "hidden": false,
+      "version": "bcp1979",
+      "label": null,
+      "type": "bible-reading",
+      "language": "en",
+      "slug": "opening_sentence",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "category": [
+        "OrdinaryTime",
+        "Opening Sentence"
+      ],
+      "version_label": null,
+      "sharing": {
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "status": "published"
+      },
+      "value": [
+        {
+          "text": "Grace to you and peace from God our Father and the Lord Jesus Christ."
+        }
+      ],
+      "citation": "Philippians 1:2",
+      "style": "short"
     },
     {
       "hidden": false,
       "type": "option",
       "value": [
-        null,
         {
           "hidden": false,
-          "condition": {
-            "mode": "and",
-            "conditions": [
-              {
-                "preference": {
-                  "key": "oAntiphons",
-                  "value": "dec16",
-                  "is": true
-                }
-              }
-            ]
-          },
+          "style": "text",
+          "metadata": {},
+          "version_label": "Short",
+          "category": [],
+          "type": "text",
+          "label": "Confession of Sin",
           "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "number": "",
-                  "halfverse": "and my spirit hath rejoiced in God my Saviour.",
-                  "verse": "MY soul doth magnify the Lord, /",
-                  "type": "psalm-verse"
-                },
-                {
-                  "halfverse": "the lowliness of his handmaiden.",
-                  "verse": "For he hath regarded /",
-                  "number": "",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "For behold, from henceforth / ",
-                  "halfverse": "all generations shall call me blessed."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "For he that is mighty hath magnified me; /",
-                  "halfverse": "and holy is his Name."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "And his mercy is on them that fear him /",
-                  "halfverse": "throughout all generations."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "He hath showed strength with his arm; /",
-                  "halfverse": "he hath scattered the proud in the imagination of their hearts."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "He hath put down the mighty from their seat, /",
-                  "halfverse": "and hath exalted the humble and meek."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "He hath filled the hungry with good things; /",
-                  "halfverse": "and the rich he hath sent empty away."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "He remembering his mercy /",
-                  "halfverse": "hath holpen his servant Israel;"
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "As he promised to our forefathers, /",
-                  "halfverse": "Abraham and his seed for ever."
-                }
-              ]
-            }
+            "Let us confess our sins against God and our neighbor."
           ],
-          "type": "psalm",
-          "label": "MAGNIFICAT. ST. LUKE 1:46",
-          "slug": "magnificat",
-          "version_label": "Magnificat",
-          "style": "canticle",
-          "metadata": {
-            "selected": 0,
-            "antiphon": {
-              "12/16": "O Wisdom, who didst issue out of the mouth of the most High, and do stretch from one end of the world to the other, mightily and sweetly ordering all things: Come and teach us the way of prudence.",
-              "12/17": "O Lord and Ruler of the house of Israel, who didst appear to Moses in a burning bush, and didst give him the law on Sinai: Come and deliver us with an outstretched arm.",
-              "12/18": "O Root of Jesse, who standest for an ensign to the peoples, at whom kings shall shut their mouths, and to whom the Gentiles shall pray: Come and deliver us, and do not delay.",
-              "12/19": "O Key of David, and Sceptre of the house of Israel; who openest and no one shutteth, who shuttest and no one openeth: come and bring the prisoners out of the dungeon, from the prison those who sit in darkness and the shadow of death.",
-              "12/20": "O Day-Spring, radiant everlasting Light, and Sun of Righteousness: Come and enlighten those who sit in darkness and the shadow of death.",
-              "12/21": "O King of the Nations, and their Desire; the Cornerstone who dost unite the divided into one: Come and save mankind, whom thou didst create out of clay",
-              "12/22": "O Emmanuel, our King and Lawgiver, the One whom the Gentiles expect, and their Salvation: Come and save us, O Lord our God.",
-              "12/23": "O Virgin of virgins, how shall this be? For neither before thee was any like thee, nor shall there be any after. Daughters of Jerusalem, why marvel ye at me? The thing which ye behold is a divine Mystery."
-            },
-            "gloria": {
-              "type": "refrain",
-              "style": "gloria",
-              "value": [
-                "GLORY be to the Father, and to the Son, / and to the Holy Ghost;",
-                "As it was in the beginning, is now, and ever shall be, / world without end. Amen."
-              ]
-            }
-          },
           "day": {
-            "evening": true,
-            "date": "2020-9-14",
-            "kalendar": "bcp1962",
-            "slug": "monday-fourteenth-sunday-after-trinity",
-            "propers": "monday-fourteenth-sunday-after-trinity",
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
             "week": {
-              "cycle": "Easter",
-              "week": 31,
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
               "season": "OrdinaryTime",
-              "name": "Fourteenth Sunday after Trinity",
-              "slug": "fourteenth-sunday-after-trinity"
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
             },
             "years": {
               "bcp1979_daily_office": 2,
@@ -1197,298 +430,1622 @@ const LITURGY = {
             },
             "holy_days": [
               {
-                "mmdd": "9/14",
-                "kalendar": "bcp1962",
-                "name": "Holy Cross Day.",
-                "slug": "holy-cross-day",
+                "kalendar": "bcp1979",
                 "type": {
-                  "name": "Black-Letter",
-                  "rank": 2
+                  "rank": 2,
+                  "name": "Black Letter"
                 },
-                "category": [
-                  "holy-cross-day"
-                ]
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
               }
             ],
-            "season": "HolyWeek",
-            "holy_day_observed": {
-              "mmdd": "9/14",
-              "kalendar": "bcp1962",
-              "name": "Holy Cross Day.",
-              "slug": "holy-cross-day",
-              "type": {
-                "name": "Black-Letter",
-                "rank": 2
-              },
-              "category": [
-                "holy-cross-day"
-              ]
-            }
+            "season": "OrdinaryTime",
+            "color": "Green"
           }
         },
         {
           "hidden": false,
-          "type": "psalm",
-          "style": "psalm",
-          "metadata": {
-            "number": "98",
-            "latinname": "Cantate Domino.",
-            "gloria": {
-              "hidden": false,
-              "type": "refrain",
-              "style": "gloria",
-              "value": [
-                "GLORY be to the Father, and to the Son, / and to the Holy Ghost;",
-                "As it was in the beginning, is now, and ever shall be, / world without end. Amen."
-              ]
+          "version_label": "Long",
+          "category": [],
+          "style": "text",
+          "value": [
+            "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
+          ],
+          "metadata": {},
+          "label": "Confession of Sin",
+          "type": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "is": false,
+              "value": "yes",
+              "key": "omitForeOffice"
             }
+          }
+        ]
+      },
+      "metadata": {
+        "selected": 0,
+        "editor_selected": 0
+      },
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "category": [],
+          "version_label": "Rite II",
+          "style": "prayer",
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ],
+          "type": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "version_label": "EOW",
+          "category": [],
+          "value": [
+            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
+          ],
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "key": "omitForeOffice",
+              "is": false,
+              "value": "yes"
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "hidden": false,
+          "type": "text",
+          "category": [],
+          "value": [
+            "Almighty God have mercy on us, forgive us all our sins through the grace of Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
+          ],
+          "style": "prayer",
+          "version_label": "Layperson/Deacon",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "category": [],
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "version_label": "Priest",
+          "style": "prayer",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "metadata": {
+        "selected": 0,
+        "editor_selected": 0
+      },
+      "type": "option",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "value": "yes",
+              "key": "omitForeOffice",
+              "is": false
+            }
+          }
+        ]
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "heading",
+      "value": [
+        "The Invitatory and Psalter"
+      ],
+      "style": "text",
+      "metadata": {
+        "level": 2
+      },
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "All stand"
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "text": "Lord, open our lips.",
+          "label": "Officiant",
+          "response": ""
+        },
+        {
+          "text": "And our mouth shall proclaim your praise.",
+          "label": "People"
+        }
+      ],
+      "style": "preces",
+      "type": "responsive",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Officiant and People"
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      },
+      "hidden": false,
+      "type": "refrain",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "language": "en",
+      "style": "gloria",
+      "label": null,
+      "version_label": "Rite II",
+      "citation": null,
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "category": [
+        null
+      ]
+    },
+    null,
+    null,
+    {
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "citation": "Psalm 95:1-7",
+          "slug": "venite",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": [],
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
           },
+          "metadata": {
+            "latinname": null,
+            "localname": "Venite",
+            "omit_gloria": false,
+            "number": null,
+            "omit_antiphon": false
+          },
+          "style": "invitatory",
           "value": [
             {
               "type": "psalm-section",
               "value": [
                 {
+                  "verse": "Come, let us sing to the Lord; *",
                   "type": "psalm-verse",
+                  "halfverse": "let us shout for joy to the Rock of our salvation."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "verse": "Let us come before his presence with thanksgiving *"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and a great King above all gods.",
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is a great God, *"
+                },
+                {
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and his hands have molded the dry land.",
+                  "verse": "The sea is his, for he made it, *",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and kneel before the Lord our Maker.",
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "type": "psalm-verse",
+                  "halfverse": "Oh, that today you would hearken to his voice!"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": []
+            }
+          ],
+          "version": "bcp1979",
+          "language": "en",
+          "version_label": "Venite (BCP)",
+          "category": [
+            "Invitatory"
+          ],
+          "label": "Venite",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 82",
+            "api": "https://www.venite.app/api"
+          },
+          "type": "psalm",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "style": "invitatory",
+          "version_label": "Jubilate (BCP)",
+          "sharing": {
+            "organization": "venite",
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public"
+          },
+          "version": "bcp1979",
+          "type": "psalm",
+          "label": "Jubilate",
+          "slug": "jubilate",
+          "metadata": {
+            "number": null,
+            "omit_antiphon": false,
+            "localname": "Jubilate",
+            "latinname": null,
+            "omit_gloria": false
+          },
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "type": "psalm-verse",
+                  "verse": "Be joyful in the Lord, all you lands; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture.",
+                  "verse": "Know this: The Lord himself is God; *"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                  "halfverse": "give thanks to him and call upon his Name."
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "halfverse": "and his faithfulness endures from age to age.",
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [],
+              "type": "psalm-section"
+            }
+          ],
+          "category": [
+            "Invitatory"
+          ],
+          "language": "en",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 82",
+            "api": "https://www.venite.app/api"
+          },
+          "citation": "Psalm 100",
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "label": "Psalm 95",
+          "style": "psalm",
+          "language": "en",
+          "value": [
+            {
+              "value": [
+                {
                   "number": "1",
-                  "verse": "O SING unto the LORD a new song; / ",
-                  "halfverse": "for he hath done marvellous things."
+                  "type": "psalm-verse",
+                  "verse": "Come, let us sing to the LORD; *",
+                  "halfverse": "let us shout for joy to the Rock of our salvation."
                 },
                 {
                   "type": "psalm-verse",
-                  "number": "2",
-                  "verse": "With his own right hand, and with his holy arm, / ",
-                  "halfverse": "hath he gotten himself the victory."
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "number": "2"
                 },
                 {
-                  "type": "psalm-verse",
                   "number": "3",
-                  "verse": "The LORD hath declared his salvation: / ",
-                  "halfverse": "his righteousness hath he openly shown in the sight of the nations."
-                },
-                {
                   "type": "psalm-verse",
-                  "number": "4",
-                  "verse": "He hath remembered his mercy and his faithfulness toward the house of Israel; / ",
-                  "halfverse": "and all the ends of the world have seen the salvation of our God."
+                  "verse": "For the LORD is a great God, *",
+                  "halfverse": "and a great King above all gods."
                 },
                 {
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also.",
+                  "type": "psalm-verse",
+                  "number": "4"
+                },
+                {
+                  "verse": "The sea is his, for he made it, *",
                   "type": "psalm-verse",
                   "number": "5",
-                  "verse": "SHOW yourselves joyful unto the LORD, all ye lands: / ",
-                  "halfverse": "sing, rejoice, and give thanks."
+                  "halfverse": "and his hands have molded the dry land."
                 },
                 {
-                  "type": "psalm-verse",
                   "number": "6",
-                  "verse": "Praise the LORD upon the harp: / ",
-                  "halfverse": "sing to the harp with a psalm of thanksgiving."
+                  "halfverse": "and kneel before the LORD our Maker.",
+                  "type": "psalm-verse",
+                  "verse": "Come, let us bow down, and bend the knee, *"
                 },
                 {
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "halfverse": "Oh, that today you would hearken to his voice!",
                   "type": "psalm-verse",
-                  "number": "7",
-                  "verse": "With trumpets also and the sound of the horn, / ",
-                  "halfverse": "O show yourselves joyful before the LORD, the King."
+                  "number": "7"
                 },
                 {
-                  "type": "psalm-verse",
+                  "verse": "Harden not your hearts,\nas your forebears did in the wilderness, *",
                   "number": "8",
-                  "verse": "LET the sea make a noise, and all that is therein; / ",
-                  "halfverse": "the round world, and they that dwell therein."
+                  "type": "psalm-verse",
+                  "halfverse": "at Meribah, and on that day at Massah,\n when they tempted me."
                 },
                 {
-                  "type": "psalm-verse",
                   "number": "9",
-                  "verse": "Let the floods clap their hands, and let the hills be joyful together before the LORD; / ",
-                  "halfverse": "for he is come to judge the earth."
+                  "type": "psalm-verse",
+                  "verse": "They put me to the test, *",
+                  "halfverse": "though they had seen my works."
+                },
+                {
+                  "number": "10",
+                  "verse": "Forty years long I detested that generation and said, *",
+                  "halfverse": "“This people are wayward in their hearts;\n they do not know my ways.”",
+                  "type": "psalm-verse"
                 },
                 {
                   "type": "psalm-verse",
+                  "number": "11",
+                  "halfverse": "“They shall not enter into my rest.”",
+                  "verse": "So I swore in my wrath, *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": [],
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "category": [
+            "Psalm"
+          ],
+          "slug": "psalm_95",
+          "citation": null,
+          "version_label": "Ps. 95 (BCP)",
+          "hidden": false,
+          "metadata": {
+            "localname": "Psalm 95",
+            "number": "95",
+            "omit_antiphon": false,
+            "latinname": "Venite, exultemus",
+            "omit_gloria": false
+          },
+          "type": "psalm",
+          "version": "bcp1979",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 724",
+            "api": "https://www.venite.app/api"
+          }
+        }
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "liturgy",
+      "style": "psalm",
+      "version": {
+        "preference": "psalterVersion"
+      },
+      "metadata": {},
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "the LORD has put on his apparel\n and girded himself with strength.",
+                  "verse": "The LORD is King;\nhe has put on splendid apparel; *",
+                  "number": "1",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "that it cannot be moved;",
+                  "verse": "He has made the whole world so sure *",
+                  "number": "2"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "you are from everlasting.",
+                  "number": "3",
+                  "verse": "Ever since the world began, your throne has been established; *"
+                },
+                {
+                  "number": "4",
+                  "halfverse": "the waters have lifted up their pounding waves.",
+                  "type": "psalm-verse",
+                  "verse": "The waters have lifted up, O LORD,\nthe waters have lifted up their voice; *"
+                },
+                {
+                  "halfverse": "mightier is the LORD who dwells on high.",
+                  "number": "5",
+                  "verse": "Mightier than the sound of many waters,\nmightier than the breakers of the sea, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Your testimonies are very sure, *",
+                  "number": "6",
+                  "halfverse": "and holiness adorns your house, O LORD,\n for ever and for evermore."
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "hidden": false,
+          "version_label": null,
+          "sharing": {
+            "status": "published",
+            "collaborators": [],
+            "privacy": "public",
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "language": "en",
+          "category": [
+            "Psalm"
+          ],
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 722",
+            "source": "bcp1979"
+          },
+          "metadata": {
+            "omit_gloria": false,
+            "latinname": "Dominus regnavit",
+            "localname": "Psalm 93",
+            "number": "93",
+            "omit_antiphon": false
+          },
+          "citation": null,
+          "type": "psalm",
+          "style": "psalm",
+          "slug": "psalm_93",
+          "label": "Psalm 93",
+          "version": "bcp1979"
+        },
+        {
+          "category": [
+            "Psalm"
+          ],
+          "version_label": null,
+          "sharing": {
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": []
+          },
+          "slug": "psalm_96",
+          "label": "Psalm 96",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "number": "1",
+                  "verse": "Sing to the LORD a new song; *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing to the LORD, all the whole earth."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Sing to the LORD and bless his Name; *",
+                  "halfverse": "proclaim the good news of his salvation from day to day.",
+                  "number": "2"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and his wonders among all peoples.",
+                  "number": "3",
+                  "verse": "Declare his glory among the nations *"
+                },
+                {
+                  "verse": "For great is the LORD and greatly to be praised; *",
+                  "halfverse": "he is more to be feared than all gods.",
+                  "type": "psalm-verse",
+                  "number": "4"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "but it is the LORD who made the heavens.",
+                  "number": "5",
+                  "verse": "As for all the gods of the nations, they are but idols; *"
+                },
+                {
+                  "halfverse": "Oh, the power and the splendor of his sanctuary!",
+                  "number": "6",
+                  "verse": "Oh, the majesty and magnificence of his presence! *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "ascribe to the LORD honor and power.",
+                  "verse": "Ascribe to the LORD, you families of the peoples; *",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "bring offerings and come into his courts.",
+                  "verse": "Ascribe to the LORD the honor due his Name; *",
+                  "number": "8",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "let the whole earth tremble before him.",
+                  "verse": "Worship the LORD in the beauty of holiness; *",
+                  "number": "9",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "he has made the world so firm that it cannot be moved;\n he will judge the peoples with equity.”",
                   "number": "10",
-                  "verse": "With righteousness shall he judge the world, / ",
-                  "halfverse": "and the peoples with equity."
+                  "verse": "Tell it out among the nations: “The LORD is King! *"
+                },
+                {
+                  "number": "11",
+                  "type": "psalm-verse",
+                  "verse": "Let the heavens rejoice, and let the earth be glad;\nlet the sea thunder and all that is in it; *",
+                  "halfverse": "let the field be joyful and all that is therein."
+                },
+                {
+                  "halfverse": "when he comes to judge the earth.",
+                  "number": "12",
+                  "verse": "Then shall all the trees of the wood shout for joy\nbefore the LORD when he comes, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "He will judge the world with righteousness *",
+                  "halfverse": "and the peoples with his truth.",
+                  "type": "psalm-verse",
+                  "number": "13"
                 }
               ]
             }
           ],
-          "slug": "psalm_98",
-          "label": "Psalm 98"
+          "hidden": false,
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 725",
+            "api": "https://www.venite.app/api"
+          },
+          "type": "psalm",
+          "version": "bcp1979",
+          "citation": null,
+          "metadata": {
+            "number": "96",
+            "latinname": "Cantate Domino",
+            "omit_antiphon": false,
+            "localname": "Psalm 96",
+            "omit_gloria": false
+          },
+          "style": "psalm",
+          "language": "en"
         }
       ]
     },
     {
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      },
       "hidden": false,
+      "type": "refrain",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "language": "en",
+      "style": "gloria",
+      "label": null,
+      "version_label": "Rite II",
+      "citation": null,
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "category": [
+        null
+      ]
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "level": 2
+      },
+      "style": "text",
+      "category": [],
+      "type": "heading",
+      "value": [
+        "The Lessons"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "lookup": {
+        "type": "lectionary",
+        "table": {
+          "preference": "lectionary"
+        },
+        "item": {
+          "preference": "readingA"
+        }
+      },
       "type": "bible-reading",
-      "label": "The Second Lesson",
+      "category": [],
+      "style": "long",
+      "version": "NRSV",
       "metadata": {
         "intro": {
           "style": "text",
+          "type": "text",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
           "language": "en",
           "category": [
             "Bible Reading Introduction"
           ],
-          "type": "text",
           "value": [
-            "The Second Lesson is written in ${shortName}, in the ${chapter} chapter, beginning at the ${verse} verse."
+            "A Reading from ${longName}."
           ]
         },
         "compiled_intro": {
           "hidden": false,
           "style": "text",
+          "type": "text",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
           "language": "en",
           "category": [
             "Bible Reading Introduction"
           ],
-          "type": "text",
           "value": [
-            "The Second Lesson is written in John, in the 6th chapter, beginning at the 1st verse."
+            "A Reading from the Book of Esther."
           ]
         }
       },
-      "version": "KJV",
-      "style": "long",
-      "lookup": {
-        "table": "readings",
-        "item": "evening_second_reading",
-        "type": "lectionary"
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
       },
-      "citation": "John 6. 1-21",
+      "citation": "Esther 3:1-4:3",
       "language": "en",
+      "label": "Esther 3:1-4:3",
       "value": [
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "1",
-          "text": "After these things Jesus went over the sea of Galilee, which is the sea of Tiberias. "
+          "text": "After these things King Ahasuerus promoted Haman son of Hammedatha the Agagite, and advanced him and set his seat above all the officials who were with him. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "2",
-          "text": "And a great multitude followed him, because they saw his miracles which he did on them that were diseased. "
+          "text": "And all the king&#146;s servants who were at the king&#146;s gate bowed down and did obeisance to Haman; for the king had so commanded concerning him. But Mordecai did not bow down or do obeisance. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "3",
-          "text": "And Jesus went up into a mountain, and there he sat with his disciples. "
+          "text": "Then the king&#146;s servants who were at the king&#146;s gate said to Mordecai, &#147;Why do you disobey the king&#146;s command?&#148; "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "4",
-          "text": "And the passover, a feast of the Jews, was nigh. "
+          "text": "When they spoke to him day after day and he would not listen to them, they told Haman, in order to see whether Mordecai&#146;s words would avail; for he had told them that he was a Jew. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "5",
-          "text": "When Jesus then lifted up his eyes, and saw a great company come unto him, he saith unto Philip, Whence shall we buy bread, that these may eat? "
+          "text": "When Haman saw that Mordecai did not bow down or do obeisance to him, Haman was infuriated. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "6",
-          "text": "And this he said to prove him: for he himself knew what he would do. "
+          "text": "But he thought it beneath him to lay hands on Mordecai alone. So, having been told who Mordecai&#146;s people were, Haman plotted to destroy all the Jews, the people of Mordecai, throughout the whole kingdom of Ahasuerus. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Esther",
+          "chapter": "3",
           "verse": "7",
-          "text": "Philip answered him, Two hundred pennyworth of bread is not sufficient for them, that every one of them may take a little. "
+          "text": "In the first month, which is the month of Nisan, in the twelfth year of King Ahasuerus, they cast Pur&#151;which means &#147;the lot&#148; &#151;before Haman for the day and for the month, and the lot fell on the thirteenth day of the twelfth month, which is the month of Adar. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "8",
-          "text": "One of his disciples, Andrew, Simon Peter&#146;s brother, saith unto him, "
+          "text": "Then Haman said to King Ahasuerus, &#147;There is a certain people scattered and separated among the peoples in all the provinces of your kingdom; their laws are different from those of every other people, and they do not keep the king&#146;s laws, so that it is not appropriate for the king to tolerate them. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "9",
-          "text": "There is a lad here, which hath five barley loaves, and two small fishes: but what are they among so many? "
+          "text": "If it pleases the king, let a decree be issued for their destruction, and I will pay ten thousand talents of silver into the hands of those who have charge of the king&#146;s business, so that they may put it into the king&#146;s treasuries.&#148; "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "10",
-          "text": "And Jesus said, Make the men sit down. Now there was much grass in the place. So the men sat down, in number about five thousand. "
+          "text": "So the king took his signet ring from his hand and gave it to Haman son of Hammedatha the Agagite, the enemy of the Jews. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "11",
-          "text": "And Jesus took the loaves; and when he had given thanks, he distributed to the disciples, and the disciples to them that were set down; and likewise of the fishes as much as they would. "
+          "text": "The king said to Haman, &#147;The money is given to you, and the people as well, to do with them as it seems good to you.&#148; "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "12",
-          "text": "When they were filled, he said unto his disciples, Gather up the fragments that remain, that nothing be lost. "
+          "text": "Then the king&#146;s secretaries were summoned on the thirteenth day of the first month, and an edict, according to all that Haman commanded, was written to the king&#146;s satraps and to the governors over all the provinces and to the officials of all the peoples, to every province in its own script and every people in its own language; it was written in the name of King Ahasuerus and sealed with the king&#146;s ring. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "13",
-          "text": "Therefore they gathered them together, and filled twelve baskets with the fragments of the five barley loaves, which remained over and above unto them that had eaten. "
+          "text": "Letters were sent by couriers to all the king&#146;s provinces, giving orders to destroy, to kill, and to annihilate all Jews, young and old, women and children, in one day, the thirteenth day of the twelfth month, which is the month of Adar, and to plunder their goods. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "14",
-          "text": "Then those men, when they had seen the miracle that Jesus did, said, This is of a truth that prophet that should come into the world. "
+          "text": "A copy of the document was to be issued as a decree in every province by proclamation, calling on all the peoples to be ready for that day. "
         },
         {
-          "book": "John",
-          "chapter": "6",
+          "book": "Esther",
+          "chapter": "3",
           "verse": "15",
-          "text": "When Jesus therefore perceived that they would come and take him by force, to make him a king, he departed again into a mountain himself alone. "
+          "text": "The couriers went quickly by order of the king, and the decree was issued in the citadel of Susa. The king and Haman sat down to drink; but the city of Susa was thrown into confusion. "
         },
         {
-          "book": "John",
-          "chapter": "6",
-          "verse": "16",
-          "text": "And when even was now come, his disciples went down unto the sea, "
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
         },
         {
-          "book": "John",
-          "chapter": "6",
-          "verse": "17",
-          "text": "And entered into a ship, and went over the sea toward Capernaum. And it was now dark, and Jesus was not come to them. "
+          "book": "Esther",
+          "chapter": "4",
+          "verse": "1",
+          "text": "When Mordecai learned all that had been done, Mordecai tore his clothes and put on sackcloth and ashes, and went through the city, wailing with a loud and bitter cry; "
         },
         {
-          "book": "John",
-          "chapter": "6",
-          "verse": "18",
-          "text": "And the sea arose by reason of a great wind that blew. "
+          "book": "Esther",
+          "chapter": "4",
+          "verse": "2",
+          "text": "he went up to the entrance of the king&#146;s gate, for no one might enter the king&#146;s gate clothed with sackcloth. "
         },
         {
-          "book": "John",
-          "chapter": "6",
-          "verse": "19",
-          "text": "So when they had rowed about five and twenty or thirty furlongs, they see Jesus walking on the sea, and drawing nigh unto the ship: and they were afraid. "
-        },
-        {
-          "book": "John",
-          "chapter": "6",
-          "verse": "20",
-          "text": "But he saith unto them, It is I; be not afraid. "
-        },
-        {
-          "book": "John",
-          "chapter": "6",
-          "verse": "21",
-          "text": "Then they willingly received him into the ship: and immediately the ship was at the land whither they went. "
+          "book": "Esther",
+          "chapter": "4",
+          "verse": "3",
+          "text": "In every province, wherever the king&#146;s command and his decree came, there was great mourning among the Jews, with fasting and weeping and lamenting, and most of them lay in sackcloth and ashes. "
         }
       ]
     },
     {
       "hidden": false,
-      "type": "text",
-      "style": "text",
+      "style": "responsive",
       "value": [
-        "Here endeth the Second Lesson."
-      ]
+        {
+          "response": "Thanks be to God.",
+          "text": "The Word of the Lord.",
+          "label": ""
+        }
+      ],
+      "type": "responsive",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
       "hidden": false,
@@ -1498,572 +2055,1839 @@ const LITURGY = {
       },
       "value": [
         {
-          "hidden": false,
-          "type": "psalm",
-          "style": "canticle",
-          "slug": "nunc",
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "LORD, now lettest thou thy servant depart in peace, /",
-                  "halfverse": "according to thy word."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "For mine eyes have seen thy salvation, /",
-                  "halfverse": "which thou hast prepared before the face of all people;"
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "To be a light to lighten the Gentiles, /",
-                  "halfverse": "and to be the glory of thy people Israel."
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "GLORY be to the Father, and to the Son, /",
-                  "halfverse": "and to the Holy Ghost;"
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "",
-                  "verse": "As it was in the beginning, is now, and ever shall be, ",
-                  "halfverse": "world without end. Amen."
-                }
-              ]
-            }
+          "sharing": {
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published"
+          },
+          "category": [
+            "Canticle"
           ],
-          "label": "NUNC DIMITTIS.",
-          "version_label": "Nunc Dimittis"
-        },
-        {
+          "version": "bcp1979",
+          "style": "canticle",
           "hidden": false,
-          "type": "psalm",
-          "style": "psalm",
           "metadata": {
-            "number": "67",
-            "latinname": "Deus misereatur.",
-            "gloria": {
-              "hidden": false,
-              "type": "refrain",
-              "style": "gloria",
-              "value": [
-                "GLORY be to the Father, and to the Son, / and to the Holy Ghost;",
-                "As it was in the beginning, is now, and ever shall be, / world without end. Amen."
-              ]
-            }
+            "omit_gloria": false,
+            "localname": "The Song of Zechariah",
+            "omit_antiphon": false,
+            "latinname": "Benedictus Dominus Deus",
+            "number": "16"
           },
           "value": [
             {
-              "type": "psalm-section",
               "value": [
                 {
+                  "halfverse": "he has come to his people and set them free.",
+                  "verse": "Blessed be the Lord, the God of Israel; *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "born of the house of his servant David.",
                   "type": "psalm-verse",
-                  "number": "1",
-                  "verse": "GOD be merciful unto us, and bless us, / ",
-                  "halfverse": "and show us the light of his countenance, and be merciful unto us;"
+                  "verse": "He has raised up for us a mighty savior, *"
+                },
+                {
+                  "verse": "Through his holy prophets he promised of old,\nthat he would save us from our enemies, *",
+                  "halfverse": "from the hands of all who hate us.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "He promised to show mercy to our fathers *",
+                  "type": "psalm-verse",
+                  "halfverse": "and to remember his holy covenant."
+                },
+                {
+                  "halfverse": "to set us free from the hands of our enemies,",
+                  "verse": "This was the oath he swore to our father Abraham, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Free to worship him without fear, *",
+                  "type": "psalm-verse",
+                  "halfverse": "holy and righteous in his sight\nall the days of our life."
                 },
                 {
                   "type": "psalm-verse",
-                  "number": "2",
-                  "verse": "That thy way may be known upon earth, / ",
-                  "halfverse": "thy saving health among all nations."
+                  "halfverse": "for you will go before the Lord to prepare his way,",
+                  "verse": "You, my child, shall be called the prophet of the Most High, *"
                 },
                 {
-                  "type": "psalm-verse",
-                  "number": "3",
-                  "verse": "Let the people praise thee, O God; / ",
-                  "halfverse": "yea, let all the people praise thee."
+                  "verse": "To give his people knowledge of salvation *",
+                  "halfverse": "by the forgiveness of their sins.",
+                  "type": "psalm-verse"
                 },
                 {
+                  "verse": "In the tender compassion of our God *",
                   "type": "psalm-verse",
-                  "number": "4",
-                  "verse": "O LET the nations rejoice and be glad; / ",
-                  "halfverse": "for thou shalt judge the folk righteously, and govern the nations upon earth."
+                  "halfverse": "the dawn from on high shall break upon us,"
                 },
                 {
+                  "halfverse": "and to guide our feet into the way of peace.",
                   "type": "psalm-verse",
-                  "number": "5",
-                  "verse": "Let the people praise thee, O God; / ",
-                  "halfverse": "yea, let all the people praise thee."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "6",
-                  "verse": "THE earth hath brought forth her increase; / ",
-                  "halfverse": "and God, even our own God, shall give us his blessing."
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "7",
-                  "verse": "God shall bless us; / ",
-                  "halfverse": "and all the ends of the world shall fear him."
+                  "verse": "To shine on those who dwell in darkness and the shadow of death, *"
                 }
-              ]
+              ],
+              "type": "psalm-section"
             }
           ],
-          "slug": "psalm_67",
-          "label": "Psalm 67"
+          "type": "psalm",
+          "version_label": null,
+          "label": "Canticle 16: The Song of Zechariah",
+          "slug": "canticle-16",
+          "citation": "Luke 1: 68-79",
+          "language": "en"
+        },
+        {
+          "category": [
+            "Canticle"
+          ],
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "you have come to your people and set them free.",
+                  "type": "psalm-verse",
+                  "verse": "Blessed be the Lord, the God of Israel; *"
+                },
+                {
+                  "halfverse": "born of the house of your servant David.",
+                  "type": "psalm-verse",
+                  "verse": "You have raised up for us a mighty savior, *"
+                },
+                {
+                  "halfverse": "from the hands of all who hate us.",
+                  "type": "psalm-verse",
+                  "verse": "Through your holy prophets you promised of old,\nthat you would save us from our enemies, *"
+                },
+                {
+                  "verse": "To show mercy to our forebears *",
+                  "halfverse": "and to remember your holy covenant.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "to set us free from the hands of our enemies,",
+                  "type": "psalm-verse",
+                  "verse": "This was the oath you swore to our father Abraham, *"
+                },
+                {
+                  "verse": "Free to worship you without fear, *",
+                  "halfverse": "holy and righteous before you,\nall the days of our life.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "for you will go before the Lord to prepare the way,",
+                  "type": "psalm-verse",
+                  "verse": "And you, child, shall be called the prophet of the Most High, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "To give God’s people knowledge of salvation *",
+                  "halfverse": "by the forgiveness of their sins."
+                },
+                {
+                  "halfverse": "the dawn from on high shall break upon us,",
+                  "verse": "In the tender compassion of our God *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and to guide our feet into the way of peace.",
+                  "type": "psalm-verse",
+                  "verse": "To shine on those who dwell in darkness\nand the shadow of death, *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "type": "psalm",
+          "language": "en",
+          "slug": "canticle-16",
+          "version": "eow",
+          "metadata": {
+            "omit_antiphon": false,
+            "latinname": "Benedictus Dominus Deus",
+            "localname": "The Song of Zechariah",
+            "omit_gloria": false,
+            "number": "16"
+          },
+          "style": "canticle",
+          "sharing": {
+            "status": "published",
+            "collaborators": [],
+            "organization": "venite",
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "label": "Canticle 16: The Song of Zechariah",
+          "citation": "Luke 1: 68-79",
+          "hidden": false,
+          "version_label": null
+        },
+        {
+          "hidden": false,
+          "version": "rite_i",
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "for he hath visited and redeemed his people;",
+                  "verse": "Blessed be the Lord God of Israel, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "And hath raised up a mighty salvation for us *",
+                  "type": "psalm-verse",
+                  "halfverse": "in the house of his servant David,"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "As he spake by the mouth of his holy prophets, *",
+                  "halfverse": "which have been since the world began:"
+                },
+                {
+                  "verse": "That we should be saved from our enemies, *",
+                  "halfverse": "and from the hand of all that hate us;",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "To perform the mercy promised to our forefathers, *",
+                  "halfverse": "and to remember his holy covenant;",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "that he would give us,",
+                  "verse": "To perform the oath which he sware to our forefather Abraham, *"
+                },
+                {
+                  "verse": "That we being delivered out of the hand of our enemies *",
+                  "type": "psalm-verse",
+                  "halfverse": "might serve him without fear,"
+                },
+                {
+                  "verse": "In holiness and righteousness before him, *",
+                  "halfverse": "all the days of our life.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "And thou, child, shalt be called the prophet of the Highest, *",
+                  "halfverse": "for thou shalt go before the face of the Lord to prepare his ways;",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": " To give knowledge of salvation unto his people *",
+                  "halfverse": "for the remission of their sins,",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "whereby the dayspring from on high hath visited us;",
+                  "type": "psalm-verse",
+                  "verse": "Through the tender mercy of our God, *"
+                },
+                {
+                  "halfverse": "and to guide our feet into the way of peace.",
+                  "type": "psalm-verse",
+                  "verse": "To give light to them that sit in darkness\nand in the shadow of death, *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "label": "Canticle 16",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": [],
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "category": [
+            "Canticle"
+          ],
+          "citation": "Luke 1: 68-79",
+          "type": "psalm",
+          "version_label": null,
+          "slug": "canticle-16",
+          "language": "en",
+          "style": "canticle",
+          "metadata": {
+            "omit_antiphon": false,
+            "omit_gloria": false,
+            "latinname": "Benedictus Dominus Deus",
+            "number": "16",
+            "localname": "The Song of Zechariah"
+          }
         }
       ]
     },
     {
       "hidden": false,
-      "type": "rubric",
+      "style": "long",
+      "category": [],
+      "version": "NRSV",
+      "type": "bible-reading",
+      "metadata": {
+        "intro": {
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "style": "text",
+          "language": "en",
+          "value": [
+            "A Reading from ${longName}."
+          ]
+        },
+        "compiled_intro": {
+          "hidden": false,
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "type": "text",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "style": "text",
+          "language": "en",
+          "value": [
+            "A Reading from the Gospel According to Matthew."
+          ]
+        }
+      },
+      "lookup": {
+        "type": "lectionary",
+        "item": {
+          "preference": "readingB"
+        },
+        "table": {
+          "preference": "lectionary"
+        }
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      },
+      "citation": "Matt. 6:1-6,16-18",
+      "language": "en",
+      "label": "Matt. 6:1-6,16-18",
       "value": [
-        "Then shall be said or sung the Confession of the Faith, called the Apostles’ Creed. "
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "1",
+          "text": "&#147;Beware of practicing your piety before others in order to be seen by them; for then you have no reward from your Father in heaven. "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "2",
+          "text": "&#147;So whenever you give alms, do not sound a trumpet before you, as the hypocrites do in the synagogues and in the streets, so that they may be praised by others. Truly I tell you, they have received their reward. "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "3",
+          "text": "But when you give alms, do not let your left hand know what your right hand is doing, "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "4",
+          "text": "so that your alms may be done in secret; and your Father who sees in secret will reward you. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "5",
+          "text": "&#147;And whenever you pray, do not be like the hypocrites; for they love to stand and pray in the synagogues and at the street corners, so that they may be seen by others. Truly I tell you, they have received their reward. "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "6",
+          "text": "But whenever you pray, go into your room and shut the door and pray to your Father who is in secret; and your Father who sees in secret will reward you. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "16",
+          "text": "&#147;And whenever you fast, do not look dismal, like the hypocrites, for they disfigure their faces so as to show others that they are fasting. Truly I tell you, they have received their reward. "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "17",
+          "text": "But when you fast, put oil on your head and wash your face, "
+        },
+        {
+          "book": "Matt.",
+          "chapter": "6",
+          "verse": "18",
+          "text": "so that your fasting may be seen not by others but by your Father who is in secret; and your Father who sees in secret will reward you. "
+        }
       ]
     },
     {
       "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "value": [
-        "I BELIEVE in God the Father Almighty, Maker of heaven and earth:",
-        "And in Jesus Christ his only Son our Lord, Who was conceived by the Holy Ghost, Born of the Virgin Mary, Suffered under Pontius Pilate, Was crucified, dead, and buried: He descended into hell; The third day he rose again from the dead; He ascended into heaven, And sitteth on the right hand of God the Father Almighty; From thence he shall come to judge the quick and the dead.",
-        "I believe in the Holy Ghost; The holy Catholic Church; The Communion of Saints; The Forgiveness of sins; The Resurrection of the body, And the Life everlasting."
-      ]
-    },
-    {
-      "hidden": false,
-      "type": "liturgy",
       "condition": {
         "mode": "and",
         "conditions": [
           {
             "preference": {
-              "key": "litany",
-              "value": "no",
-              "is": true
+              "key": "readingB",
+              "is": false,
+              "value": "none"
             }
           }
         ]
+      },
+      "style": "responsive",
+      "type": "responsive",
+      "value": [
+        {
+          "response": "Thanks be to God.",
+          "text": "The Word of the Lord.",
+          "label": ""
+        }
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0
       },
       "value": [
         {
-          "hidden": false,
-          "type": "rubric",
-          "value": [
-            "And after the Creed these prayers following, all devoutly kneeling, the Minister first pronouncing:"
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "responsive",
-          "style": "preces",
-          "value": [
-            {
-              "label": "",
-              "text": "The Lord be with you;",
-              "response": ""
-            },
-            {
-              "label": "People.",
-              "text": "And with thy spirit."
-            },
-            {
-              "label": "Minister.",
-              "text": "Let us pray."
-            }
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "responsive",
-          "style": "responsive",
-          "value": [
-            {
-              "label": "",
-              "text": "Lord, have mercy upon us.",
-              "response": "Christ, have mercy upon us."
-            },
-            {
-              "text": "Lord, have mercy upon us.",
-              "response": ""
-            }
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "text",
-          "style": "prayer",
-          "value": [
-            "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil."
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "rubric",
-          "value": [
-            "Then the Priest standing up shall say:"
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "responsive",
-          "style": "preces",
-          "value": [
-            {
-              "label": "",
-              "text": "O Lord, show thy mercy upon us;",
-              "response": ""
-            },
-            {
-              "label": "People.",
-              "text": "And grant us thy salvation."
-            },
-            {
-              "label": "Priest.",
-              "text": "O Lord, save the Queen;"
-            },
-            {
-              "label": "People.",
-              "text": "And mercifully hear us when we call upon thee."
-            },
-            {
-              "label": "Priest.",
-              "text": "Endue thy Ministers with righteousness;"
-            },
-            {
-              "label": "People.",
-              "text": "And make thy chosen people joyful."
-            },
-            {
-              "label": "Priest.",
-              "text": "O Lord, save thy people;"
-            },
-            {
-              "label": "People.",
-              "text": "And bless thine inheritance."
-            },
-            {
-              "label": "Priest.",
-              "text": "Give peace in our time, O Lord;"
-            },
-            {
-              "label": "People.",
-              "text": "And evermore mightily defend us."
-            },
-            {
-              "label": "Priest.",
-              "text": "O God, make clean our hearts within us;"
-            },
-            {
-              "label": "People.",
-              "text": "And take not thy Holy Spirit from us."
-            }
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "rubric",
-          "value": [
-            "Then shall follow THE COLLECT OF THE DAY, together with any other Collects appointed to be said, and these two prayers in order."
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "liturgy",
-          "value": [
-            {
-              "hidden": false,
-              "type": "text",
-              "style": "prayer",
-              "label": "Of Holy Cross Day.",
-              "category": [
-                "Collect",
-                "Collect of the Day"
-              ],
-              "slug": "holy-cross-day",
-              "value": [
-                "O BLESSED Saviour, who by thy cross and passion hast given life unto the world: Grant that we thy servants may be given grace to take up the cross and follow thee through life and death; whom with the Father and the Holy Spirit we worship and glorify, one God, for ever and ever."
-              ]
-            },
-            {
-              "hidden": false,
-              "type": "text",
-              "style": "prayer",
-              "label": "The Collect of the Day",
-              "category": [
-                "Collect",
-                "Collect of the Day"
-              ],
-              "slug": "fourteenth-sunday-after-trinity",
-              "value": [
-                "ALMIGHTY and everlasting God, give unto us the increase of faith, hope, and charity; and, that we may obtain that which thou dost promise, make us to love that which thou dost command; through Jesus Christ our Lord."
-              ]
-            }
-          ],
-          "label": "Of Holy Cross Day."
-        },
-        null,
-        null,
-        {
-          "hidden": false,
-          "type": "text",
-          "style": "prayer",
-          "value": [
-            "O GOD, from whom all holy desires, all good counsels, and all just works do proceed: Give unto thy servants that peace which the world cannot give; that our hearts may be set to obey thy commandments, and also that by thee we being defended from the fear of our enemies may pass our time in rest and quietness; through the merits of Jesus Christ our Saviour."
-          ],
-          "label": "The Second Collect, for Peace."
-        },
-        {
-          "hidden": false,
-          "type": "text",
-          "style": "prayer",
-          "value": [
-            "LIGHTEN our darkness, we beseech thee, O Lord; and by thy great mercy defend us from all perils and dangers of this night; for the love of thy only Son, our Saviour Jesus Christ."
-          ],
-          "label": "The Third Collect, for Aid against all Perils."
-        },
-        {
-          "hidden": false,
-          "type": "rubric",
-          "value": [
-            "Here may follow an Anthem or an Hymn."
-          ]
-        },
-        {
-          "hidden": false,
-          "type": "liturgy",
-          "condition": {
-            "mode": "and",
-            "conditions": [
-              {
-                "preference": {
-                  "key": "matinsPrayers",
-                  "value": "no",
-                  "is": "true"
-                }
-              }
-            ]
+          "sharing": {
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "organization": "venite",
+            "collaborators": []
           },
-          "value": [
-            {
-              "hidden": false,
-              "type": "rubric",
-              "value": [
-                "Here may be said the prayers found at this point in Morning Prayer or selections from the Prayers and Thanksgivings or such other prayers as are contained in this Book or set forth by lawful authority, always ending with the Prayer of St Chrysostom and the Grace."
-              ]
-            },
-            {
-              "hidden": false,
-              "type": "text",
-              "style": "prayer",
-              "label": "46. At Eventide.",
-              "category": [
-                "Prayers",
-                "General"
-              ],
-              "value": [
-                "O LORD, support us all the day long of this troublous life, until the shadows lengthen and the evening comes, the busy world is hushed, the fever of life is over, and our work is done. Then, Lord, in thy mercy, grant us safe lodging, a holy rest, and peace at the last; through Jesus Christ our Lord. "
-              ]
-            }
-          ]
-        },
-        null,
-        {
-          "hidden": false,
-          "type": "text",
-          "style": "prayer",
-          "value": [
-            "ALMIGHTY God, who hast given us grace at this time with one accord to make our common supplications unto thee; and dost promise that when two or three are gathered together in thy Name thou wilt grant their requests: Fulfil now, O Lord, the desires and petitions of thy servants, as may be most expedient for them; granting us in this world knowledge of thy truth, and in the world to come life everlasting."
+          "style": "canticle",
+          "version_label": null,
+          "category": [
+            "Canticle"
           ],
-          "label": " A Prayer of Saint Chrysostom."
-        },
-        {
-          "hidden": false,
-          "type": "bible-reading",
-          "style": "short",
-          "citation": "2 Corinthians 13:14",
           "metadata": {
-            "response": "Amen."
+            "omit_gloria": false,
+            "number": "21",
+            "localname": "You are God",
+            "omit_antiphon": false,
+            "latinname": "Te Deum laudamus"
           },
+          "language": "en",
+          "label": "Canticle 21: Te Deum",
           "value": [
             {
-              "book": "2 Corinthians",
-              "chapter": "13",
-              "verse": "14",
-              "text": "THE grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Ghost, be with us all evermore."
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "We praise you, O God, \nwe acclaim you as Lord; \nall creation worships you, \nthe  Father  everlasting. \nTo you all angels, all the powers of heaven, \nthe cherubim and seraphim, sing in endless praise: \n\tHoly, holy, holy Lord, God of power and might, \n\theaven and earth are full of your glory. \nThe glorious company of apostles praise you. \nThe noble fellowship of prophets praise you. \nThe white-robed army of martyrs praise you. \nThroughout the world the holy Church acclaims you: \n\tFather, of majesty unbounded, \n\tyour true and only Son, worthy of all worship, \n\tand the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory, \nthe eternal Son of the Father. \nWhen you took our flesh to set us free \nyou humbly chose the Virgin’s womb. \nYou overcame the sting of death \nand opened the kingdom of heaven to all believers. \nYou are seated at God’s right hand in glory. \nWe believe that you will come to be our judge. \n\tCome then, Lord, and help your people, \n\tbought with the price of your own blood, \n\tand bring us with your saints \n\tto glory everlasting."
+                }
+              ],
+              "type": "psalm-section"
             }
-          ]
+          ],
+          "lastRevision": 4,
+          "type": "psalm",
+          "hidden": false,
+          "version": "eow",
+          "slug": "canticle-21",
+          "citation": null
+        },
+        {
+          "citation": null,
+          "style": "canticle",
+          "category": [
+            "Canticle"
+          ],
+          "hidden": false,
+          "label": "Canticle 21: Te Deum",
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "type": "psalm",
+          "language": "en",
+          "version": "bcp1979",
+          "slug": "canticle-21",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "You are God: we praise you;\nYou are the Lord; we acclaim you;\nYou are the eternal Father:\nAll creation worships you.\nTo you all angels, all the powers of heaven,\nCherubim and Seraphim, sing in endless praise:\n    Holy, holy, holy Lord, God of power and might,\n    heaven and earth are full of your glory.\nThe glorious company of apostles praise you.\nThe noble fellowship of prophets praise you.\nThe white-robed army of martyrs praise you.\nThroughout the world the holy Church acclaims you;\n    Father, of majesty unbounded,\n    your true and only Son, worthy of all worship,\n    and the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory,\nthe eternal Son of the Father.\nWhen you became man to set us free\nyou did not shun the Virgin's womb.\nYou overcame the sting of death\nand opened the kingdom of heaven to all believers.\nYou are seated at God's right hand in glory.\nWe believe that you will come and be our judge.\n    Come then, Lord, and help your people,\n    bought with the price of your own blood,\n    and bring us with your saints\n    to glory everlasting. "
+                }
+              ]
+            }
+          ],
+          "lastRevision": 4,
+          "version_label": null,
+          "metadata": {
+            "latinname": "Te Deum laudamus",
+            "number": "21",
+            "omit_gloria": false,
+            "localname": "You are God",
+            "omit_antiphon": false
+          }
         }
       ]
     },
-    null
-  ],
-  "label": "Evening Prayer",
-  "slug": "evening-prayer",
-  "lastRevision": 93,
-  "type": "liturgy",
-  "metadata": {
-    "evening": true,
-    "preferences": {
-      "matinsPrayers": {
-        "key": "matinsPrayers",
-        "category": "Advanced Settings",
-        "options": [
+    {
+      "hidden": false,
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
           {
-            "value": "no",
-            "label": "No",
-            "default": true
-          },
-          {
-            "value": "yes",
-            "label": "Yes"
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
           }
         ],
-        "label": "Should we include additional prayers from Morning Prayer?"
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    null,
+    null,
+    {
+      "hidden": false,
+      "value": [
+        "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
+      ],
+      "type": "text",
+      "label": "The Apostles’ Creed",
+      "category": [],
+      "style": "prayer",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "category": [],
+      "metadata": {
+        "level": 2
       },
-      "oAntiphons": {
-        "key": "oAntiphons",
-        "category": "Advanced Settings",
-        "label": "O antiphons in Advent begin on...",
+      "value": [
+        "The Prayers"
+      ],
+      "style": "text",
+      "type": "heading",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "label": "Officiant",
+          "text": "The Lord be with you.",
+          "response": ""
+        },
+        {
+          "text": "And also with you.",
+          "label": "People"
+        },
+        {
+          "label": "Officiant",
+          "text": "Let us pray."
+        }
+      ],
+      "type": "responsive",
+      "style": "preces",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "label": "The Lord’s Prayer",
+          "style": "prayer",
+          "type": "text",
+          "version_label": "Traditional",
+          "value": [
+            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+          ],
+          "category": [],
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "version_label": "Contemporary",
+          "metadata": {},
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "label": "The Lord’s Prayer",
+          "style": "prayer",
+          "type": "text",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "category": [],
+          "day": {
+            "evening": false,
+            "date": "2020-9-20",
+            "kalendar": "bcp1979",
+            "slug": "sunday-16th-pentecost",
+            "propers": "sunday-proper-20",
+            "week": {
+              "omit_the": false,
+              "color": "Green",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "name": "Sixteenth Sunday after Pentecost",
+              "week": 30,
+              "slug": "16th-pentecost",
+              "proper": 20,
+              "propers": "proper-20"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                },
+                "mmdd": "9/20",
+                "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "text": "Show us your mercy, O Lord;",
+          "response": "",
+          "label": "V."
+        },
+        {
+          "text": "And grant us your salvation.",
+          "label": "R."
+        },
+        {
+          "label": "V.",
+          "text": "Clothe your ministers with righteousness;"
+        },
+        {
+          "label": "R.",
+          "text": "Let your people sing with joy."
+        },
+        {
+          "text": "Give peace, O Lord, in all the world;",
+          "label": "V."
+        },
+        {
+          "label": "R.",
+          "text": "For only in you can we live in safety."
+        },
+        {
+          "text": "Lord, keep this nation under your care;",
+          "label": "V."
+        },
+        {
+          "text": "And guide us in the way of justice and truth.",
+          "label": "R."
+        },
+        {
+          "text": "Let your way be known upon earth;",
+          "label": "V."
+        },
+        {
+          "text": "Your saving help among all nations.",
+          "label": "R."
+        },
+        {
+          "text": "Let not the needy, O Lord, be forgotten;",
+          "label": "V."
+        },
+        {
+          "text": "Nor the hope of the poor be taken away.",
+          "label": "R."
+        },
+        {
+          "label": "V.",
+          "text": "Create in us clean hearts, O God;"
+        },
+        {
+          "text": "And sustain us with your Holy Spirit.",
+          "label": "R."
+        }
+      ],
+      "style": "preces",
+      "type": "responsive",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "text",
+      "category": [],
+      "metadata": {
+        "level": 3
+      },
+      "value": [
+        "The Collect of the Day"
+      ],
+      "type": "heading",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "category": [
+        "Collect",
+        "Collect of the Day"
+      ],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "collaborators": [],
+        "status": "published",
+        "organization": "venite"
+      },
+      "version": "bcp1979",
+      "style": "prayer",
+      "slug": "proper-20",
+      "value": [
+        "Grant us, Lord, not to be anxious about earthly things, but to love things heavenly; and even now, while we are placed among things that are passing away, to hold fast to those that shall endure; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+      ],
+      "language": "en",
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false
+    },
+    null,
+    {
+      "hidden": false,
+      "label": "A Collect for Sundays",
+      "condition": {
+        "conditions": [
+          {
+            "weekday": {
+              "except": [],
+              "only": [
+                "Sunday"
+              ]
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "type": "text",
+      "category": [],
+      "value": [
+        "O God, you make us glad with the weekly remembrance of the glorious resurrection of your Son our Lord: Give us this day such blessing through our worship of you, that the week to come may be spent in your favor; through Jesus Christ our Lord."
+      ],
+      "style": "prayer",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    null,
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then, unless the Eucharist or a form of general intercession is to follow, one of these prayers for mission is added"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    null,
+    {
+      "hidden": false,
+      "value": [
+        "Here may be sung a hymn or anthem."
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Authorized intercessions and thanksgivings may follow."
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Before the close of the Office one or both of the following may be used"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
+        "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages."
+      ],
+      "style": "prayer",
+      "label": "The General Thanksgiving",
+      "category": [],
+      "type": "text",
+      "metadata": {},
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "metadata": {},
+      "label": "A Prayer of St. Chrysostom",
+      "style": "prayer",
+      "category": [],
+      "value": [
+        "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "text": "Let us bless the Lord",
+          "response": "Thanks be to God.",
+          "label": ""
+        }
+      ],
+      "style": "responsive",
+      "day": {
+        "evening": false,
+        "date": "2020-9-20",
+        "kalendar": "bcp1979",
+        "slug": "sunday-16th-pentecost",
+        "propers": "sunday-proper-20",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "name": "Sixteenth Sunday after Pentecost",
+          "week": 30,
+          "slug": "16th-pentecost",
+          "proper": 20,
+          "propers": "proper-20"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            },
+            "mmdd": "9/20",
+            "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null
+  ],
+  "language": "en",
+  "sharing": {
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "organization": "venite",
+    "privacy": "public",
+    "status": "published",
+    "collaborators": []
+  },
+  "type": "liturgy",
+  "category": [],
+  "version": "Rite-II",
+  "slug": "morning-prayer",
+  "metadata": {
+    "liturgyversions": [
+      "bcp1979",
+      "usccb"
+    ],
+    "special_preferences": {
+      "omitForeOffice": "",
+      "palms": {
         "options": [
           {
-            "value": "dec16",
-            "label": "December 16"
+            "label": "—",
+            "value": "no",
+            "metadata": {}
           },
           {
-            "value": "dec17",
-            "label": "December 17"
+            "metadata": {},
+            "value": "before",
+            "label": "Before the Office"
           }
-        ]
+        ],
+        "key": "palms",
+        "label": "Palms"
+      }
+    },
+    "preferences": {
+      "canticleTable": {
+        "label": "Canticle Table",
+        "options": [
+          {
+            "label": "1979 Table of Suggested Canticles",
+            "metadata": {},
+            "value": "bcp1979"
+          },
+          {
+            "value": "tdb",
+            "metadata": {},
+            "label": "Te Deum/Benedictus"
+          },
+          {
+            "label": "Enriching Our Worship",
+            "value": "eow",
+            "metadata": {}
+          },
+          {
+            "metadata": {},
+            "value": "ojn",
+            "label": "Order of St. Julian of Norwich"
+          }
+        ],
+        "key": "canticleTable"
+      },
+      "readingB": {
+        "options": [
+          {
+            "value": "none",
+            "label": "—",
+            "metadata": {}
+          },
+          {
+            "label": "OT/First Reading",
+            "value": "first_reading",
+            "metadata": {}
+          },
+          {
+            "metadata": {},
+            "value": "second_reading",
+            "label": "Epistle/Second Reading"
+          },
+          {
+            "value": "gospel",
+            "label": "Gospel",
+            "metadata": {}
+          }
+        ],
+        "key": "readingB",
+        "label": "Second Reading"
+      },
+      "readingA": {
+        "key": "readingA",
+        "options": [
+          {
+            "value": "first_reading",
+            "default": false,
+            "label": "OT/First Reading",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "value": "second_reading",
+            "metadata": {},
+            "label": "Epistle/Second Reading"
+          },
+          {
+            "value": "gospel",
+            "label": "Gospel",
+            "metadata": {}
+          }
+        ],
+        "label": "First Reading"
+      },
+      "lectionary": {
+        "options": [
+          {
+            "value": "bcp1979_daily_office",
+            "label": "Daily Office Lectionary",
+            "metadata": {}
+          },
+          {
+            "value": "rclsunday",
+            "label": "Revised Common Lectionary (RCL)",
+            "metadata": {}
+          }
+        ],
+        "label": "Lectionary",
+        "key": "lectionary"
+      },
+      "psalterVersion": {
+        "label": "Psalter Version",
+        "options": [
+          {
+            "label": "1979 Book of Common Prayer",
+            "value": "bcp1979",
+            "metadata": {}
+          },
+          {
+            "value": "ip",
+            "label": "Inclusive Psalter",
+            "metadata": {}
+          },
+          {
+            "label": "Coverdale (1662 BCP)",
+            "metadata": {},
+            "value": "coverdale"
+          }
+        ],
+        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology.",
+        "key": "psalterVersion"
+      },
+      "psalter": {
+        "options": [
+          {
+            "label": "Lectionary Cycle",
+            "metadata": {},
+            "value": "bcp1979_daily_psalms"
+          },
+          {
+            "metadata": {},
+            "label": "30-day Cycle",
+            "value": "bcp1979_30day_psalter"
+          },
+          {
+            "value": "rclsunday",
+            "metadata": {},
+            "label": "Revised Common Lectionary (RCL)"
+          }
+        ],
+        "key": "psalter",
+        "label": "Psalm Cycle"
+      },
+      "lancelotAndrewes’SPrivatePrayers": {
+        "label": "Lancelot Andrewes’s Private Prayers",
+        "options": [
+          {
+            "value": "none",
+            "label": "—",
+            "metadata": {}
+          },
+          {
+            "value": "after",
+            "label": "After the Office",
+            "metadata": {}
+          }
+        ],
+        "category": "Supplemental Devotions",
+        "key": "lancelotAndrewes’SPrivatePrayers"
+      },
+      "readingC": {
+        "key": "readingC",
+        "options": [
+          {
+            "metadata": {},
+            "label": "—",
+            "value": "none"
+          },
+          {
+            "value": "first_reading",
+            "label": "OT/First Reading",
+            "metadata": {}
+          },
+          {
+            "value": "second_reading",
+            "metadata": {},
+            "label": "Epistle/Second Reading"
+          },
+          {
+            "label": "Gospel",
+            "value": "gospel",
+            "metadata": {}
+          }
+        ],
+        "label": "Third Reading"
+      },
+      "angelus": {
+        "key": "angelus",
+        "options": [
+          {
+            "value": "none",
+            "label": "—",
+            "metadata": {}
+          },
+          {
+            "label": "Before the Office",
+            "metadata": {},
+            "value": "before"
+          },
+          {
+            "metadata": {},
+            "label": "After the Office",
+            "value": "after"
+          }
+        ],
+        "label": "Angelus",
+        "category": "Supplemental Devotions"
+      },
+      "sermon": {
+        "options": [
+          {
+            "metadata": {},
+            "value": "none",
+            "label": "—"
+          },
+          {
+            "value": "after_office",
+            "label": "After the Office",
+            "metadata": {}
+          },
+          {
+            "label": "After the Readings",
+            "value": "after_readings",
+            "metadata": {}
+          },
+          {
+            "metadata": {},
+            "value": "after_collects",
+            "label": "After the Collects"
+          }
+        ],
+        "label": "Sermon",
+        "key": "sermon"
       },
       "bibleVersion": {
-        "key": "bibleVersion",
         "label": "Bible Version",
-        "category": "Basic Settings",
-        "description": "ESV/NRSV are available only if you are connected to the Internet. KJV is available online or offline.",
         "options": [
+          {
+            "label": "New Revised Standard Version (NRSV)",
+            "metadata": {},
+            "value": "NRSV"
+          },
+          {
+            "metadata": {},
+            "label": "Common English Bible (CEB)",
+            "value": "CEB"
+          },
+          {
+            "label": "English Standard Version (ESV)",
+            "metadata": {},
+            "value": "ESV"
+          },
           {
             "value": "KJV",
             "label": "King James Version (KJV)",
-            "default": true
-          },
-          {
-            "value": "ESV",
-            "label": "English Standard Version (ESV)"
-          },
-          {
-            "value": "NRSV",
-            "label": "New Revised Standard Version"
-          }
-        ]
-      },
-      "psalmCycle": {
-        "category": "Basic Settings",
-        "key": "psalmCycle",
-        "options": [
-          {
-            "value": "30day_psalter",
-            "label": "More (30-day cycle)",
-            "default": true
-          },
-          {
-            "value": "60day_psalter",
-            "label": "Fewer (60-day cycle)"
+            "metadata": {}
           }
         ],
-        "label": "How many psalms should we include?"
+        "key": "bibleVersion"
       },
-      "litany": {
-        "category": "Advanced Settings",
-        "key": "litany",
+      "omitForeOffice": {
         "options": [
           {
-            "value": "no",
-            "label": "No"
+            "label": "No",
+            "value": "no"
           },
           {
-            "value": "yes",
-            "label": "Yes"
+            "label": "Yes",
+            "value": "yes"
           }
         ],
-        "label": "Should we include the Litany at the end of the service?"
-      },
-      "absolution": {
-        "category": "Basic Settings",
-        "key": "absolution",
-        "label": "The absolution after the Confession should be one said by a...",
-        "options": [
-          {
-            "value": "trinity-24",
-            "label": "Layperson — “O LORD, we beseech thee, absolve thy people from their offences...”"
-          },
-          {
-            "value": "cross",
-            "label": "Layperson — “Grant that through his Cross our sins may be put away...”"
-          },
-          {
-            "value": "priest",
-            "label": "Priest"
-          }
-        ]
-      },
-      "confessionIntro": {
-        "category": "Basic Settings",
-        "key": "confessionIntro",
-        "label": "The introduction to the Confession should be...",
-        "options": [
-          {
-            "value": "long",
-            "label": "Longer (“Dearly beloved brethren...”)"
-          },
-          {
-            "value": "short",
-            "label": "Shorter (“Let us humbly confess...”)"
-          }
-        ]
-      },
-      "properPsalmsSundays": {
-        "category": "Advanced Settings",
-        "key": "properPsalmsSundays",
-        "options": [
-          {
-            "value": "yes",
-            "label": "Yes (use the proper psalms for a Sunday)",
-            "default": true
-          },
-          {
-            "value": "no",
-            "label": "No (use the selected daily psalm cycle)"
-          }
-        ],
-        "label": "Should we use the proper psalms for Sundays?"
-      },
-      "properPsalmsHolyDays": {
-        "category": "Advanced Settings",
-        "key": "properPsalmsHolyDays",
-        "options": [
-          {
-            "value": "yes",
-            "label": "Yes (use the proper psalms for a Holy Day)",
-            "default": true
-          },
-          {
-            "value": "no",
-            "label": "No (use the selected daily psalm cycle)"
-          }
-        ],
-        "label": "Should we use the proper psalms for Holy Days?"
+        "key": "omitForeOffice",
+        "label": "Omit Fore-Office"
       }
     }
+  },
+  "lastRevision": 597,
+  "label": "Morning Prayer",
+  "day": {
+    "evening": false,
+    "date": "2020-9-20",
+    "kalendar": "bcp1979",
+    "slug": "sunday-16th-pentecost",
+    "propers": "sunday-proper-20",
+    "week": {
+      "omit_the": false,
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Easter",
+      "name": "Sixteenth Sunday after Pentecost",
+      "week": 30,
+      "slug": "16th-pentecost",
+      "proper": 20,
+      "propers": "proper-20"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "kalendar": "bcp1979",
+        "type": {
+          "rank": 2,
+          "name": "Black Letter"
+        },
+        "mmdd": "9/20",
+        "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871"
+      }
+    ],
+    "season": "OrdinaryTime",
+    "color": "Green"
   }
 }
-
-    const node = document.createElement('ldf-liturgical-document');
+const node = document.createElement('ldf-liturgical-document');
 node.setAttribute('editable', false);
 node.setAttribute('path', '/');
     node.doc = LITURGY;

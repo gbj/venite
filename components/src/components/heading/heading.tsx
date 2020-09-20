@@ -111,9 +111,9 @@ export class HeadingComponent {
     }
   }
 
-  private citationNode(c : string) : JSX.Element {
+  private citationNode(c : string, slot : string = 'end') : JSX.Element {
     return (
-      <div class='citation' slot='end'>
+      <div class='citation' slot={slot}>
         {
           this.editable ?
           <ldf-editable-text
@@ -128,7 +128,7 @@ export class HeadingComponent {
   }
 
   private sourceNode(c : Citation) : JSX.Element {
-    const text = new Citation(c).toString();
+    const text = new Citation(c).toString().replace('bcp1979', 'BCP');
 
     return (
       <div class='citation' slot='end'>
@@ -192,7 +192,7 @@ export class HeadingComponent {
           {/* `Heading.citation` => right-aligned */}
           <slot name='citation' slot='end'>
             {hasSource && this.sourceNode(this.obj.source)}
-            {hasCitation && this.citationNode(this.obj.citation)}
+            {hasCitation && !hasSource && this.obj.citation !== this.obj.value[0] && this.citationNode(this.obj.citation)}
           </slot>
         </ldf-label-bar>
       </Host>

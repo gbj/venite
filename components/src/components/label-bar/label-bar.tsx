@@ -10,9 +10,9 @@ export class LabelBarComponent {
   render() {
     return (
       <Host>
-        <slot name='start'></slot> {/* &nbsp; so they render and main slot always centered */}
+        <slot name='start'></slot>
         <slot></slot>
-        <slot name='end'></slot>   {/* &nbsp; so they render and main slot always centered */}
+        <slot name='end'></slot>
       </Host>
     );
   }
