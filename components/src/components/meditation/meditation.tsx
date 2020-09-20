@@ -205,7 +205,7 @@ export class MeditationComponent {
 
     if(customElements && !!customElements.get('ion-button')) {
       return (
-        <ion-button onClick={handler} fill={fill} style={{color: this.color}} size={size}>
+        <ion-button onClick={handler} fill={fill} size={size}>
           <ion-icon name={icon} slot='start'></ion-icon>
           <ion-label>{localeStrings[label]}</ion-label>
         </ion-button>
