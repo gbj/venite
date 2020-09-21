@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'ldf-label-bar',
@@ -6,14 +6,26 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true
 })
 export class LabelBarComponent {
+  @Prop({ reflect: true }) center : boolean = false;
+
   // Render
   render() {
-    return (
-      <Host>
-        <slot name='start'></slot>
-        <slot></slot>
-        <slot name='end'></slot>
-      </Host>
-    );
+    if(this.center) {
+      return (
+        <div class='label-bar center'>
+          <slot name='start'></slot>
+          <slot></slot>
+          <slot name='end'></slot>
+        </div>
+      );
+    } else {
+      return (
+        <div class='label-bar left'>
+          <slot name='start'></slot>
+          <slot></slot>
+          <slot name='end'></slot>
+        </div>
+      );
+    }
   }
 }

@@ -1,7 +1,10 @@
-:host {
+.label-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.label-bar.left {
   justify-content: flex-start;
 
   slot {
@@ -20,5 +23,17 @@
 
   ::slotted[slot="end"] {
     text-align: right;
+  }
+}
+
+.label-bar.center {
+  justify-content: space-between;
+
+  slot {
+    display: block;
+  }
+
+  slot:nth-child(1) {
+    text-align: center;
   }
 }

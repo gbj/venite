@@ -170,9 +170,12 @@ export class HeadingComponent {
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
 
-        <ldf-label-bar class={{
-          'text': isText && (this?.obj?.value || []).filter(n => Boolean(n)).length > 0
-        }}>
+        <ldf-label-bar
+          center={this.obj?.metadata?.level <= 2}
+          class={{
+            'text': isText && (this?.obj?.value || []).filter(n => Boolean(n)).length > 0
+          }}
+        >
           {/* `Heading.label` => main header node */}
           {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), Boolean(text)))}
 
