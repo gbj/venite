@@ -85,7 +85,7 @@ export class BibleReading extends LiturgicalDocument {
     const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
     if (matches) {
       const [chapter] = matches;
-      return chapter.trim().replace(/[\.,:]/g, '');
+      return typeof chapter === 'string' ? chapter.trim().replace(/[\.,:]/g, '') : undefined;
     } else {
       return undefined;
     }
@@ -96,7 +96,7 @@ export class BibleReading extends LiturgicalDocument {
     const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
     if (matches) {
       const [, verse] = matches;
-      return verse.trim().replace(/[\.,:]/g, '');
+      return typeof verse === 'string' ? verse.trim().replace(/[\.,:]/g, '') : undefined;
     } else {
       return undefined;
     }

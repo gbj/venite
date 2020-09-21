@@ -60,6 +60,8 @@ describe("Bible Class abbreviation and name functions", () => {
     expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('2 Kings');
     reading.citation = 'Sir 1:4-2:1';
     expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('Sirach');
+    reading.citation = 'Jer. 24';
+    expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation())).toEqual('Jeremiah');
   });
 
   it("should find full book names", () => {

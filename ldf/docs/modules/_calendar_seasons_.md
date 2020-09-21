@@ -18,7 +18,7 @@
 
 Ƭ **Seasons**: *typeof SEASONS*
 
-*Defined in [calendar/seasons.ts:17](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/calendar/seasons.ts#L17)*
+*Defined in [calendar/seasons.ts:17](https://github.com/gbj/venite/blob/8cf9e9f/ldf/src/calendar/seasons.ts#L17)*
 
 ## Variables
 
@@ -41,4 +41,4 @@
   'Mary',
 ]
 
-*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/f2cee0d/ldf/src/calendar/seasons.ts#L1)*
+*Defined in [calendar/seasons.ts:1](https://github.com/gbj/venite/blob/8cf9e9f/ldf/src/calendar/seasons.ts#L1)*
