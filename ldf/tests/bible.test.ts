@@ -205,5 +205,21 @@ describe("Bible Class abbreviation and name functions", () => {
         }
       }
     });
+
+    reading.metadata.intro = new Text({
+      "type": "text",
+      "value": [
+        "The First Lesson is written in ${shortName}, in the ${chapter} chapter, beginning at the ${verse} verse."
+      ]
+    });
+    reading.citation = "Jer. 24";
+    reading.compileIntro();
+    expect(reading.metadata.compiled_intro).toEqual({
+        hidden: false,
+        type: 'text',
+        value: [
+          "The First Lesson is written in Jeremiah, in the 24th chapter, beginning at the 1st verse."
+        ]
+    })
   });
 });
