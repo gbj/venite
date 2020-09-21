@@ -12,6 +12,7 @@ export function findCollect(
   collects: LiturgicalDocument[],
   day: LiturgicalDay,
   sundayFirst: boolean = true,
+  emberDayPrecedesSunday: boolean = false,
 ): LiturgicalDocument | null {
   const observedDay = day.propers || day.slug,
     redLetterCollects = collects.filter((collect) => collect.slug === observedDay),
@@ -51,10 +52,12 @@ export function findCollect(
       return docsToLiturgy(collects);
     } else {
       const collects = [
+        // Ember Day seasonal collects precede Sunday collects, others follow (Canada)
+        emberDayPrecedesSunday && (day.season || '').includes('Ember') ? observedSeasonalCollect : null,
         redLetterCollect,
         ...blackLetterCollects,
         redLetterCollect ? undefined : sundayCollect,
-        observedSeasonalCollect,
+        !emberDayPrecedesSunday || !(day.season || '').includes('Ember') ? observedSeasonalCollect : null,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);
     }
