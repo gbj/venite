@@ -18,28 +18,28 @@
 
 ### ▪ **TEC_1979_CALENDAR**: *object*
 
-*Defined in [calendar/calendar.ts:16](https://github.com/gbj/venite/blob/44b21bf/ldf/src/calendar/calendar.ts#L16)*
+*Defined in [calendar/calendar.ts:16](https://github.com/gbj/venite/blob/a81c9f0/ldf/src/calendar/calendar.ts#L16)*
 
 ###  christmasCycleBegins
 
 • **christmasCycleBegins**: *number* = 4
 
-*Defined in [calendar/calendar.ts:19](https://github.com/gbj/venite/blob/44b21bf/ldf/src/calendar/calendar.ts#L19)*
+*Defined in [calendar/calendar.ts:19](https://github.com/gbj/venite/blob/a81c9f0/ldf/src/calendar/calendar.ts#L19)*
 
 ###  easterCycleBegins
 
 • **easterCycleBegins**: *number* = 7
 
-*Defined in [calendar/calendar.ts:18](https://github.com/gbj/venite/blob/44b21bf/ldf/src/calendar/calendar.ts#L18)*
+*Defined in [calendar/calendar.ts:18](https://github.com/gbj/venite/blob/a81c9f0/ldf/src/calendar/calendar.ts#L18)*
 
 ###  hasPropers
 
 • **hasPropers**: *true* = true
 
-*Defined in [calendar/calendar.ts:20](https://github.com/gbj/venite/blob/44b21bf/ldf/src/calendar/calendar.ts#L20)*
+*Defined in [calendar/calendar.ts:20](https://github.com/gbj/venite/blob/a81c9f0/ldf/src/calendar/calendar.ts#L20)*
 
 ###  julian
 
 • **julian**: *false* = false
 
-*Defined in [calendar/calendar.ts:17](https://github.com/gbj/venite/blob/44b21bf/ldf/src/calendar/calendar.ts#L17)*
+*Defined in [calendar/calendar.ts:17](https://github.com/gbj/venite/blob/a81c9f0/ldf/src/calendar/calendar.ts#L17)*
