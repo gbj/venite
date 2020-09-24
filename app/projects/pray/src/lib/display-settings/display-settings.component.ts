@@ -68,7 +68,7 @@ export class DisplaySettingsComponent implements OnInit {
 
   updateSetting(uid : string, settingName : string, ev : CustomEvent) {
     const realUID = uid == 'LOGGED-OUT'  ? undefined : uid;
-    this.preferencesService.set(settingName, ev.detail.checked || ev.detail.value, realUID);
+    this.preferencesService.set(settingName, ev.detail.hasOwnProperty('checked') ? Boolean(ev.detail.checked) : ev.detail.value, realUID);
   }
 
 }
