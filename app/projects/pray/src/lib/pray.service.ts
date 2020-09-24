@@ -128,7 +128,8 @@ export class PrayService {
           versions,
           day,
           doc.lookup.filter,
-          doc.lookup.rotate
+          Boolean(doc.lookup.rotate),
+          Boolean(doc.lookup.random)
         );
         break;
       case 'collect':
@@ -154,7 +155,8 @@ export class PrayService {
             versions,
             day,
             doc.lookup.filter,
-            doc.lookup.rotate
+            Boolean(doc.lookup.rotate),
+            Boolean(doc.lookup.random)
           );
         } else {
           console.warn('the following is not a compilable document\n\n', doc);
@@ -171,19 +173,19 @@ export class PrayService {
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
-      map(docs => rotate ? this.rotate(rotate, day, docs) : docs),
+      map(docs => rotate ? this.rotate(rotate, random, day, docs) : docs),
       map(docs => docsToOption(docs, versions)),
     );
   }
 
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean) : Observable<LiturgicalDocument> {
+  lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsByCategory(category, language, versions).pipe(
       map(docs => this.filter(filterType, day, docs)),
-      map(docs => this.rotate(rotate, day, docs)),
+      map(docs => this.rotate(rotate, random, day, docs)),
       map(docs => docsToOption(docs, versions)),
     );
   }
@@ -205,14 +207,50 @@ export class PrayService {
   }
 
   /** If `rotate` is `true`, return one of the docs, rotated through by day; if `false`, return them all */
-  rotate(rotate : boolean, day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument | LiturgicalDocument[] {
+  rotate(rotate : boolean, random : boolean, day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument | LiturgicalDocument[] {
     if(rotate) {
-      const date = dateFromYMDString(day.date),
-            diffFromZero = Math.round((date.getTime()-(new Date(0)).getTime())/(1000*60*60*24));
-      return docs[diffFromZero % docs.length];
+      const date = dateFromYMDString(day.date);
+      if(random) {
+        return this.randomize(date, day.evening, docs);
+      } else {
+        const diffFromZero = Math.round((date.getTime()-(new Date(0)).getTime())/(1000*60*60*24));
+        return docs[diffFromZero % docs.length];
+      }
     } else {
       return docs;
     }
+  }
+
+  randomize(date : Date, evening : boolean, docs : LiturgicalDocument[]) : LiturgicalDocument {
+    const UINT32_MAX = 4294967295;
+
+    const genSeed = (now : number) => {
+      const x = now % UINT32_MAX;
+      const y = now << now >>> 0 % UINT32_MAX;
+      const z = y * 11 % UINT32_MAX;
+      const w = x * now % UINT32_MAX;
+      return [x,y,z,w];
+    }
+  
+    // Marsaglia, George (July 2003). "Xorshift RNGs". Journal of Statistical Software 8 (14).
+    // https://github.com/Risto-Stevcev/pure-random/blob/master/src/pure-random.js
+    const xorshift = (seed : number[]) => {
+      var x = seed[0], y = seed[1], z = seed[2], w = seed[3];
+      var t = x;
+      t = (t ^ (t << 11)) >>> 0;
+      t = (t ^ (t >>> 8)) >>> 0;
+      x = y; y = z; z = w;
+      w = (w ^ (w >>> 19)) >>> 0;
+      w = (w ^ t) >>> 0;
+      return w;
+    }
+
+    const rand = (seed : number[], min : number, max : number) => Math.floor(min + xorshift(seed) / 4294967295 * (max - min));
+
+    const seed = genSeed(Number(`${evening ? 1 : 0}${date.getMonth()}${date.getDate()}${date.getFullYear()}`)),
+      index = rand(seed, 0, docs.length);
+
+    return docs[index];
   }
 
   /* Look up readings and chosen lectionary preference */
