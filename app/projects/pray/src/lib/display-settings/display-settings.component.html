@@ -112,11 +112,11 @@
     </ion-item>
     <ion-item>
       <ion-label>{{ 'displaySettings.Psalm-Verses' | translate }}</ion-label>
-      <ion-checkbox [value]="settings.psalmVerses" (ionChange)="updateSetting(uid, 'psalmVerses', $event)" slot="start"></ion-checkbox>
+      <ion-checkbox [value]="settings.psalmVerses" [checked]="settings.psalmVerses" (ionChange)="updateSetting(uid, 'psalmVerses', $event)" slot="start"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'displaySettings.Reading-Verses' | translate }}</ion-label>
-      <ion-checkbox [value]="settings.bibleVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start"></ion-checkbox>
+      <ion-checkbox [value]="settings.bibleVerses" [checked]="settings.psalmVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start"></ion-checkbox>
     </ion-item>
   </ng-container>
 </ng-template>
