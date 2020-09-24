@@ -35,8 +35,10 @@ export type Lookup = {
   item?: string | number | { preference: string };
   /** Filter results based on `LiturgicalDay.season`, `LiturgicalDay.slug`, or `Liturgy.evening` */
   filter?: 'seasonal' | 'evening' | 'day';
-  /** If `true`, rotate through the possibilities and gives only one; if `false`, give all as options in random order */
+  /** If `true`, rotate through the possibilities and gives only one, rotating by day */
   rotate?: boolean;
+  /** If `true` and `rotate` == true, rotate pseudo-randomly */
+  random?: boolean;
 };
 
 export type Value =
