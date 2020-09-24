@@ -134,7 +134,7 @@ export class PrayService {
       case 'collect':
         result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', alternateVersions).pipe(
           // filter collects to find the appropriate one
-          map(collects => findCollect(collects, day, this.config.sundayCollectsFirst))
+          map(collects => findCollect(collects, day, this.config.sundayCollectsFirst, this.config.emberDayCollectPrecedesSunday))
         )
         break;
 
