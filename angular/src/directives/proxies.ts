@@ -1367,12 +1367,13 @@ export declare interface LdfEditableSelect extends Components.LdfEditableSelect 
 @ProxyCmp({inputs: ['options', 'path', 'property', 'value']})
 @Component({ selector: 'ldf-editable-select', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'path', 'property', 'value'] })
 export class LdfEditableSelect {
+  ldfChange!: EventEmitter<CustomEvent>;
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfChange', 'ldfDocShouldChange']);
   }
 }
 
@@ -1444,8 +1445,8 @@ export class LdfHeading {
 }
 
 export declare interface LdfLabelBar extends Components.LdfLabelBar {}
-
-@Component({ selector: 'ldf-label-bar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@ProxyCmp({inputs: ['center']})
+@Component({ selector: 'ldf-label-bar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['center'] })
 export class LdfLabelBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

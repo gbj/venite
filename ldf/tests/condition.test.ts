@@ -232,5 +232,8 @@ describe('Condition', () => {
     };
     let include : boolean = condition.include(annunciation, {'angelus': 'before'});
     expect(include).toEqual(false);
+
+    include = condition.include(annunciation, {});
+    expect(include).toEqual(true);
   });
 });

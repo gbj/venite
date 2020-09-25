@@ -52,6 +52,7 @@ export class PrayService {
         );
       }
 
+      /** Preprocess psalms */
       // insert antiphon if necessary
       // seasonal antiphon
       if(doc.type == 'psalm' && doc.metadata?.insert_seasonal_antiphon) {
@@ -63,7 +64,13 @@ export class PrayService {
       if(doc.type == 'psalm' && doc.metadata?.antiphon && typeof doc.metadata.antiphon == 'object' && !doc.metadata.antiphon.hasOwnProperty('type')) {
         doc.day = day;
       }
-    
+      // if psalm with Gloria inserted, condition-check the provided Gloria
+      if(doc.metadata?.gloria && !(new LiturgicalDocument(doc.metadata.gloria).include(day, prefs))) {
+        doc.metadata.gloria = undefined;
+      }
+
+
+      /** Lookup and return, or simply return */
       // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
       if(Boolean(doc.slug) && !Boolean(doc.value) && !Boolean(doc.lookup)) {
         return this.lookup(new LiturgicalDocument({ ...doc, lookup: { type: 'slug' } }), day, prefs, liturgyversions);
@@ -154,6 +161,7 @@ export class PrayService {
             language,
             versions,
             day,
+            prefs,
             doc.lookup.filter,
             Boolean(doc.lookup.rotate),
             Boolean(doc.lookup.random)
@@ -173,9 +181,16 @@ export class PrayService {
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
+  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
+      // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
+      // Gloria condition check
+      map(entries => entries.map(entry => (entry?.metadata?.gloria && !(new LiturgicalDocument(entry.metadata.gloria).include(day, prefs)))
+        ? new LiturgicalDocument({ ... entry, metadata: { ...entry.metadata, gloria: undefined }})
+        : entry
+      )),
+      // rotate and merge
       map(docs => rotate ? this.rotate(rotate, random, day, docs) : docs),
       map(docs => docsToOption(docs, versions)),
     );

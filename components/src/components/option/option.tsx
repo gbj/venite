@@ -33,6 +33,16 @@ export class OptionComponent {
       console.warn(e);
       this.obj = new Option();
     }
+
+    const selected : number = this.editable
+      ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0
+      : this.obj?.metadata?.selected || 0;
+    this.select(selected);
+
+    if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
+      this.selectFirstDefined();
+    }
+    this.filterOptions();
   }
 
   /**
@@ -53,16 +63,6 @@ export class OptionComponent {
   componentWillLoad() {
     this.docChanged(this.doc);
     this.loadLocaleStrings();
-
-    const selected : number = this.editable
-      ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0
-      : this.obj?.metadata?.selected || 0;
-    this.select(selected);
-
-    if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
-      this.selectFirstDefined();
-    }
-    this.filterOptions();
   }
 
   /** Asynchronously load localization strings */
@@ -77,7 +77,8 @@ export class OptionComponent {
   /** Display the nth option */
   @Method()
   async select(index : number | 'add') {
-    const hadMetadata = Boolean(this.obj?.metadata);
+    const hadMetadata = Boolean(this.obj?.metadata),
+      oldValue = this.obj?.metadata?.editor_selected || 0;
   
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value[index];
@@ -87,15 +88,18 @@ export class OptionComponent {
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
       if(this.editable) {
         if(hadMetadata) {
+          console.log('had metadata. emitting change with oldValue = ', oldValue)
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}/metadata`,
             op: [{
               type: 'set',
               index: 'editor_selected',
+              oldValue,
               value: index
             }]
           }));
         } else {
+          console.log('did not have metadata')
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}`,
             op: [{
@@ -231,7 +235,7 @@ export class OptionComponent {
           {/* Can be overwritten by apps that use Ionic or other frameworks */}
           <slot slot='end' name='controls'>{this.selectNode()}</slot>
         </ldf-label-bar>
-        <ldf-liturgical-document
+        {this.selectedDoc && <ldf-liturgical-document
           doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}
@@ -239,7 +243,7 @@ export class OptionComponent {
           editable={this.editable}
           parentType='option'
         >
-        </ldf-liturgical-document>
+        </ldf-liturgical-document>}
       </Host>
     );
   }

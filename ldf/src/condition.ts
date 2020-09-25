@@ -66,7 +66,9 @@ export class Condition {
     // `weekday`:
     this.exceptOnlyFactory(
       'weekday' as 'weekday',
-      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][day.getDate().getDay()],
+      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][
+        new LiturgicalDay(day).getDate().getDay()
+      ],
       evaluatedConditions,
     );
 

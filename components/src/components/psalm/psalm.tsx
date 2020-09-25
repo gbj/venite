@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Watch, State, JSX, h } from '@stencil/core';
+import { Component, Element, Prop, Watch, State, JSX, h, Host } from '@stencil/core';
 import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString } from '@venite/ldf';
 
 @Component({
@@ -115,7 +115,8 @@ export class PsalmComponent {
     }
 
     return (
-      <div lang={this.obj?.language || 'en'} class={`psalm ${this.obj?.display_format || 'default'}`}>
+      <Host lang={this.obj?.language || 'en'}>
+        <div class={`psalm ${this.obj?.display_format || 'default'}`}>
       {/* Slot for controls*/}
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
@@ -138,7 +139,7 @@ export class PsalmComponent {
             // build each verse
             if(verse instanceof Heading) {
               // for e.g., the Benedicite, Heading passed at head of section
-              return <ldf-label doc={verse}></ldf-label>;
+              return <ldf-heading doc={verse}></ldf-heading>;
             } else {
               // otherwise, it's a normal psalm verse
               const nodes : JSX.Element[] = new Array();
@@ -205,16 +206,19 @@ export class PsalmComponent {
             this.obj.repeatAntiphon(sectionIndex, this.filteredValue.length)
             && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>
           }
-          {includeAntiphon && <div class='repeat-antiphon'>this.antiphonNode(this.obj?.metadata?.antiphon)</div>}
+          {includeAntiphon && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>}
           </div>
         ])}
 
       {/* include the Gloria Patri */}
       {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
 
-      {/* include closing antiphon */}
-      {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
+      {/* include closing antiphon if
+        * 1) there IS and Gloria, and it hasn't been omitted, or 
+        * 2) there ISN'T a Gloria, and it HAS been omitted, which suggests it was removed seasonally */}
+      {((this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria) || (this.obj?.metadata?.gloria === undefined && Boolean(this.obj?.metadata?.omit_gloria))) && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
       </div>
+        </Host>
     )
   }
 }

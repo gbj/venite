@@ -8,7 +8,7 @@
 }
 
 /* Psalm grid display */
-.psalm {
+.psalm-set .psalm {
   display: var(--ldf-psalm-grid-display);
   grid-template-columns: var(--ldf-psalm-grid-template-columns);
   grid-template-rows: auto;
@@ -38,21 +38,23 @@
   }
 }
 
+.psalm-set {
+  /* Hide/show first dropcaps to avoid interfering with the dropcap */
+  .psalm:nth-child(0), .psalm:nth-child(1), .psalm:nth-child(2) {
+    text-indent: 0;
+
+    sup {
+      display: var(--ldf-drop-early-verses-display);
+    }
+  }
+}
+
 /* Antiphon display */
 .antiphon {
   display: var(--ldf-psalm-antiphon-display);
   font-style: var(--ldf-antiphon-font-style);
   font-weight: var(--ldf-antiphon-font-weight);
   margin-top: 0.5em;
-}
-
-/* Hide/show first dropcaps to avoid interfering with the dropcap */
-.psalm:nth-child(0), .psalm:nth-child(1), .psalm:nth-child(2) {
-  text-indent: 0;
-
-  sup {
-    display: var(--ldf-drop-early-verses-display);
-  }
 }
 
 .repeat-antiphon {
