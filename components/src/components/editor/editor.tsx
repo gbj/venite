@@ -121,19 +121,18 @@ export class EditorComponent {
     if(previousIndex >= 0) {
       console.log('previousPath', previousPath);
       // otherwise, look up the value of the previous element
-      debugger;
       const previousElement = elementFromPath(this.el, previousPath),
             textarea = previousElement.shadowRoot.querySelector('textarea'),
             previousValue = textarea?.value,
             // delete the deleted node
             deleteOp = {
-              type: 'deleteAt' as 'deleteAt',
+              type: 'deleteAt' as const,
               index,
               oldValue: ev.detail.value
             },
             // insert text into the previous node
             editOp = {
-              type: 'edit' as 'edit',
+              type: 'edit' as const,
               index: previousIndex,
               value: previousValue.length > 0 ? [previousValue.length, ev.detail.value] : [ev.detail.value]
             },
@@ -144,12 +143,13 @@ export class EditorComponent {
               ]
             }),
             editChange = new Change({
-              path: `${path}/${previousIndex}`,
+              path: previousPath,
               op: [
                 editOp
               ]
             });
-      this.editorDocShouldChange.emit([deleteChange, editChange]);
+      this.editorDocShouldChange.emit(editChange);
+      this.editorDocShouldChange.emit(deleteChange);
     }
   }
 

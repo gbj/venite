@@ -29,7 +29,7 @@ export class EditorService {
           ),
           doc = this.afs.doc<LiturgicalDocument>(`Document/${docId.trim()}`),
           doc$ = doc.valueChanges();
-    return combineLatest(serverDocManagerExists$, doc$, this.auth.user).pipe(
+    return combineLatest([serverDocManagerExists$, doc$, this.auth.user]).pipe(
       // only join once
       take(1),
       // set up localManager and store User ID
@@ -112,7 +112,7 @@ export class EditorService {
 
   /** Notify the server that our editing client has changed the document.
   * Every new `Change` from the `EditorComponent` enters through this function */
-  public async processChange(manager : LocalDocumentManager, change : Change | Change[]) {
+  public processChange(manager : LocalDocumentManager, change : Change | Change[]) {
     // translate `Change` into operation
     const op = this.opFromChange(change);
 
@@ -123,8 +123,10 @@ export class EditorService {
       op,
       lastRevision: manager.lastSyncedRevision + 1
     });
+
     if(manager.hasBeenAcknowledged) {
-      this.nextLocalManager(manager);
+      //this.nextLocalManager(manager);
+      this.sendNextChange(manager);
     }
   }
 
@@ -132,12 +134,9 @@ export class EditorService {
   async sendNextChange(localManager : LocalDocumentManager) {
     const manager = { ... localManager },
           docBeforeChange = new LiturgicalDocument({ ... manager.document }),
-          change = manager.pendingChanges.shift(); // takes item from beginning of array
-
-    console.log('change = ', change);
+          change = manager.pendingChanges[0]; // takes item from beginning of array
 
     try {
-      console.log('change = hasBeenAcknowledged = ', manager.hasBeenAcknowledged);
       if(manager.hasBeenAcknowledged) {
         manager.hasBeenAcknowledged = false; // change we are about to send has not been acknowledged yet
 
@@ -164,17 +163,21 @@ export class EditorService {
         // optimistically update the doc
         manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
 
-        await batch.commit();
-  
-        //@ts-ignore
         console.log('old state of document is', manager.document);
         console.log('op is', change.op);
-        //manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
         console.log('new state of document after change is ', manager.document, 'from op', change.op);
+
         manager.lastSyncedRevision = change.lastRevision;
-  
+
         manager.sentChanges.push(change); // add it to sent
+
+        this.nextLocalManager(manager);
+
+        await batch.commit();
+        
         manager.hasBeenAcknowledged = true;
+        manager.pendingChanges.shift();
+        this.nextLocalManager(manager);    
       }
     } catch(error) {
       console.warn('The write has been rejected. This is typically because another user has submitted a change with the same revision number, so ours needs to be transformed. Still, here’s the error: \n\n', error);
@@ -185,7 +188,6 @@ export class EditorService {
       manager.hasBeenAcknowledged = true;
     }
 
-    this.nextLocalManager(manager);
   }
 
   /** Get revision log for a given document */
@@ -248,7 +250,9 @@ export class EditorService {
     // take this as an acknowledgment, and send any additional changes
     // localManager.hasBeenAcknowledged = true;
     if(localManager.hasBeenAcknowledged && localManager.pendingChanges.length > 0) {
-      this.sendNextChange(localManager);
+      console.log('sending next change from applyChanges')
+      console.log('starting point value for next document change', localManager.document.value)
+      setTimeout(() => this.sendNextChange(localManager), 1);
     }
   }
 
