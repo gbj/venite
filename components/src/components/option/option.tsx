@@ -78,16 +78,14 @@ export class OptionComponent {
   @Method()
   async select(index : number | 'add') {
     const hadMetadata = Boolean(this.obj?.metadata),
-      oldValue = this.obj?.metadata?.editor_selected || 0;
+      oldValue = this.obj?.metadata?.editor_selected;
   
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value[index];
-      // sets metadata.selected to new index, and creates objects along the way if undefined
-      // without overriding any other metadata fields
-      Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
-      Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
+
       if(this.editable) {
-        if(hadMetadata) {
+        console.log('hadMetadata = ', hadMetadata, '\noldValue = ', oldValue);
+        if(hadMetadata && index !== oldValue) {
           console.log('had metadata. emitting change with oldValue = ', oldValue)
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}/metadata`,
@@ -95,21 +93,26 @@ export class OptionComponent {
               type: 'set',
               index: 'editor_selected',
               oldValue,
-              value: index
+              value: Number(index)
             }]
           }));
-        } else {
+        } else if(!hadMetadata && index !== oldValue) {
           console.log('did not have metadata')
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}`,
             op: [{
               type: 'set',
               index: 'metadata',
-              value: { editor_selected: index }
+              value: { editor_selected: Number(index) }
             }]
           }));
         }
       }
+
+      // sets metadata.selected to new index, and creates objects along the way if undefined
+      // without overriding any other metadata fields
+      Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
+      Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
     } else {
       console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
       this.ldfAddOptionToDoc.emit({
@@ -153,7 +156,7 @@ export class OptionComponent {
   selectNode() : JSX.Element {
     const currentlySelected : number = this.editable ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0 : this.obj?.metadata?.selected || 0;
 
-    if(this.obj?.value?.length > 1) {
+    if(this.obj?.value?.length > 1 || this.editable) {
       // Ionic available and
       if(customElements && !!customElements.get('ion-select')) {
         const optionsAreLong : boolean = this.obj?.value?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 15)
@@ -239,7 +242,7 @@ export class OptionComponent {
           doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}
-          index={this.obj.metadata.selected}
+          index={this.obj.metadata.editor_selected || this.obj.metadata.selected}
           editable={this.editable}
           parentType='option'
         >

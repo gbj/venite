@@ -5,7 +5,7 @@ import { switchMap, map, tap, filter } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './ldf-editor/editor.service';
-import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text, Sharing } from '@venite/ldf';
+import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text, Sharing, ResponsivePrayer } from '@venite/ldf';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { UserProfile } from '../auth/user/user-profile';
@@ -56,6 +56,18 @@ export class EditorPage implements OnInit {
         style: 'prayer',
         label,
         value: ['']
+      })
+    },
+    {
+      label: "Responsive Prayer",
+      factory: (label) => new ResponsivePrayer({
+        type: 'responsive',
+        style: 'responsive',
+        label,
+        value: [{
+          text: '',
+          response: ''
+        }]
       })
     },
     {

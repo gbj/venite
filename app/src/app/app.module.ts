@@ -66,14 +66,14 @@ import { PrayPageModule } from '@venite/ng-pray';
     }),
     AuthModule,
     SharedModule,
-    /*RemindersPageModule.forRoot({
+    RemindersPageModule.forRoot({
       providers: [
         BibleService,
         PlatformService,
         LocalStorageService
       ]
     }),
-    DarkmodeModule.forRoot({
+    /*DarkmodeModule.forRoot({
       providers: [
         PreferencesService
       ]
@@ -113,7 +113,8 @@ import { PrayPageModule } from '@venite/ng-pray';
         ]
       },
       liturgySettings: {
-        sundayCollectsFirst: true
+        sundayCollectsFirst: true,
+        emberDayCollectPrecedesSunday: false
       },
       useBackgroundColor: true
     }),

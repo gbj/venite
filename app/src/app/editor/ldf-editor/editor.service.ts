@@ -180,10 +180,15 @@ export class EditorService {
         this.nextLocalManager(manager);    
       }
     } catch(error) {
+      console.warn('Rejected op: ', change)
+
       console.warn('The write has been rejected. This is typically because another user has submitted a change with the same revision number, so ours needs to be transformed. Still, here’s the error: \n\n', error);
 
       // revert to document before change
       manager.document = docBeforeChange;
+
+      // remove change from pending and put it in rejected
+      manager.pendingChanges.shift();
       manager.rejectedChanges.push(change);
       manager.hasBeenAcknowledged = true;
     }
@@ -294,7 +299,6 @@ export class EditorService {
     const indexedP = op.index ? op.p.concat(Number(op.index) ? Number(op.index) : op.index) : op.p;
 
     // generate json1 op depending on the type
-    console.log('op.type = ', op.type);
     switch(op.type) {
       case 'edit':
         return json1.editOp(indexedP, 'text-unicode', op.value);

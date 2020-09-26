@@ -6,6 +6,7 @@ export class DocumentManagerChange {
     uid : string;
     lastRevision : number;
     op : JSONOp;
+    originalChange?: Change | Change[];
 }
 
 export class ServerDocumentManager {

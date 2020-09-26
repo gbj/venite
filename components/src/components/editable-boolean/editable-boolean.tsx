@@ -22,6 +22,21 @@ export class EditableBooleanComponent {
   // Events
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
+  // Lifecycle methods
+  componentWillLoad() {
+    if(this.value == undefined) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: this.path,
+        op: [{
+          type: 'set',
+          index: this.property,
+          oldValue: undefined,
+          value: false
+        }]
+      }))
+    }
+  }
+
   // Listeners
   @Listen('ionChange')
   onChange(ev : CustomEvent) {
@@ -32,7 +47,7 @@ export class EditableBooleanComponent {
       this.ldfDocShouldChange.emit(new Change({
         path: this.path,
         op: [
-          { type: 'set' as 'set', index: this.property, oldValue, value }
+          { type: 'set', index: this.property, oldValue, value }
         ]
       }));
     }

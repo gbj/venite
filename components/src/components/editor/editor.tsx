@@ -150,6 +150,11 @@ export class EditorComponent {
             });
       this.editorDocShouldChange.emit(editChange);
       this.editorDocShouldChange.emit(deleteChange);
+
+      /** Move textarea cursor into previous element */
+      textarea.focus();
+      textarea.selectionStart = previousValue.length;
+      textarea.selectionEnd = previousValue.length;
     }
   }
 
