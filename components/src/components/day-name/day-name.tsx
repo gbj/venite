@@ -74,13 +74,17 @@ export class DayNameComponent {
     
       // Sunday => name of week
       if(date.getDay() == 0) {
-        return day?.week?.name
+        const the = localeStrings.the || ' the ';
+        return [
+          day?.week?.omit_the ? '' : ` ${the[1].toUpperCase()}${the.slice(2, localeStrings.the.length)} `,          ,
+          day?.week?.name
+        ];
       }
       // weekday => [weekday] after (the) [Sunday]
       else {
         return [
           date.toLocaleDateString(locale, { weekday: 'long' }),
-          localeStrings.after,
+          localeStrings.after || ' after the ',
           day?.week?.omit_the ? '' : localeStrings.the,
           day?.week?.name
         ];
@@ -91,7 +95,7 @@ export class DayNameComponent {
   render() {
     return (
       <Host>
-        {this.dayToNodes(this.obj, this.localeStrings || {})}
+        {this.localeStrings && this.dayToNodes(this.obj, this.localeStrings)}
       </Host>
     )
   }
