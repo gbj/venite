@@ -199,7 +199,7 @@ export class EditableLookupComponent {
               slot="end"
               path={this.path}
               property="rotate"
-              value={this.currentLookup?.rotate || false}
+              value={this.currentLookup?.rotate}
             >
             </ldf-editable-boolean>
           </ion-item>
