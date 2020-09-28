@@ -1,4 +1,5 @@
 import { LiturgicalDay, ClientPreferences } from '.';
+import { dateFromYMD, dateFromYMDString } from './calendar/utils';
 
 export class Condition {
   // `only` is only an array of values, any of which makes the condition true
@@ -67,7 +68,7 @@ export class Condition {
     this.exceptOnlyFactory(
       'weekday' as 'weekday',
       ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][
-        new LiturgicalDay(day).getDate().getDay()
+        dateFromYMDString(day.date).getDay()
       ],
       evaluatedConditions,
     );
@@ -92,14 +93,14 @@ export class Condition {
             .filter((a) => !!a) // exclude any null or undefined from array
             .map((a) => (a && a.type && a.type.rank ? a.type.rank : 3)), // if rank is undefined, holy days default to 3
         ),
-        isSunday: boolean = day.getDate().getDay() == 0,
+        isSunday: boolean = dateFromYMDString(day.date).getDay() == 0,
         isFeast: boolean = highestFeastRank >= 3 || isSunday;
       evaluatedConditions.push(isFeast == this.feastDay);
     }
 
     // `date`
     if (this.hasOwnProperty('date') && this.date !== undefined) {
-      const liturgyDate = day.getDate();
+      const liturgyDate = dateFromYMDString(day.date);
 
       for (const property in this.date) {
         try {
