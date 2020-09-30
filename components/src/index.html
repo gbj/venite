@@ -754,6 +754,9 @@ ldf-psalm .psalm br {
               "is": true,
               "value": "no"
             }
+          },
+          {
+            "feastDay": true
           }
         ]
       },
@@ -2733,9 +2736,9 @@ const LITURGY2 = {
 
 
 const node = document.createElement('ldf-liturgical-document');
-node.setAttribute('editable', false);
+node.setAttribute('editable', true);
 node.setAttribute('path', '/');
-    node.doc = LITURGY2;
+    node.doc = LITURGY;
     document.querySelector('#example').appendChild(node);
   </script>
 </body>

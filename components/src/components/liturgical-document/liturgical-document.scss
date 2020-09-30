@@ -9,3 +9,15 @@
     font-weight: bold;
   }
 }
+
+.condition {
+  background-color: var(--ldf-editable-condition-background-color);
+  color: var(--ldf-editable-condition-color);
+  border-radius: 4px;
+  padding: 1em;
+  width: 100%;
+
+  code {
+    font-weight: bold;
+  }
+}

@@ -1,6 +1,8 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, LiturgicalColor } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
+import { ConditionNode } from './condition-node';
+import { LookupNode } from './lookup-node';
 
 @Component({
   tag: 'ldf-liturgical-document',
@@ -110,78 +112,29 @@ export class LiturgicalDocumentComponent {
   nodeFromDoc(doc : LiturgicalDocument) : JSX.Element {
     if(doc == undefined) {
       return customElements && customElements.get('ion-skeleton-text') ? <ion-skeleton-text></ion-skeleton-text> : <p>...</p>
-    } else if(this.editable && doc.lookup) {
-      return this.lookupNode(doc);
+    } else if(this.editable) {
+      return this.editableNode(doc);
     } else {
       return this.chooseComponent(doc);
     }
   }
 
-  /** For editable views with a lookup, give a description rather than `undefined` for the value */
-  lookupNode(doc : LiturgicalDocument): JSX.Element {
+  editableNode(doc : LiturgicalDocument) : JSX.Element {
     const localeStrings = this.localeStrings || {};
 
-    function valueOrPreference(x : string | number | { preference: string }) {
-      if(typeof x === 'object') {
-        return <span>{localeStrings.definedByPreference} <code>{x.preference}</code></span>
-      } else {
-        return <code>{x}</code>;
-      }
+    if(doc.condition && !doc.lookup) {
+      return <ConditionNode doc={doc} localeStrings={localeStrings}>
+        {this.chooseComponent(doc)}
+      </ConditionNode>;
+    } else if(doc.condition && doc.lookup) {
+      return <ConditionNode doc={doc} localeStrings={localeStrings}>
+        <LookupNode doc={doc} localeStrings={localeStrings}/>
+      </ConditionNode>
+    } else if(!doc.condition && doc.lookup) {
+      return <LookupNode doc={doc} localeStrings={localeStrings}/>;
+    } else {
+      return this.chooseComponent(doc);
     }
-
-    let desc : JSX.Element;
-    switch(doc.lookup?.type) {
-      case 'lectionary':
-        desc = [
-          localeStrings.lectionaryReading,
-          valueOrPreference(doc.lookup?.item),
-          localeStrings.fromLectionary,
-          valueOrPreference(doc.lookup?.table),
-          "."
-        ];
-        break;
-      case 'canticle':
-        desc = [
-          localeStrings[`canticle-${doc.lookup?.item}`],
-          localeStrings.fromCanticleTable,
-          valueOrPreference(doc.lookup?.table),
-          "."
-        ];
-        break;
-      case 'category':
-        desc = [
-          localeStrings.category,
-          doc.category.map(category => <code>{category}</code>),
-          doc.lookup?.filter && doc.lookup?.filter == 'seasonal' && localeStrings['filter-seasonal'],
-          doc.lookup?.filter && doc.lookup?.filter == 'evening' && localeStrings[`filter-evening-${doc.lookup?.item || true}`],
-          doc.lookup?.filter && doc.lookup?.filter == 'day' && localeStrings[`filter-day`],
-          doc.lookup?.filter && doc.lookup?.filter == 'day' && <code>{doc.lookup?.item}</code>,
-          doc.lookup?.hasOwnProperty('rotate') && localeStrings[`rotate-${doc.lookup?.rotate}`],
-          "."
-        ];
-        break;
-      case 'slug':
-        desc = [
-          localeStrings.slug,
-          <code>{doc.slug}</code>,
-          doc.lookup?.filter && doc.lookup?.filter == 'seasonal' && localeStrings['filter-seasonal'],
-          doc.lookup?.filter && doc.lookup?.filter == 'evening' && localeStrings[`filter-evening-${doc.lookup?.item || true}`],
-          doc.lookup?.filter && doc.lookup?.filter == 'day' && localeStrings[`filter-day`],
-          doc.lookup?.filter && doc.lookup?.filter == 'day' && <code>{doc.lookup?.item}</code>,
-          doc.lookup?.hasOwnProperty('rotate') && localeStrings[`rotate-${doc.lookup?.rotate}`],
-          "."
-        ];
-        break;
-      case 'collect':
-        desc = <code>{localeStrings.collect}</code>;
-        break;
-      default:
-        desc = JSON.stringify(doc.lookup);
-        break;
-    }
-    return (
-      <article class="lookup">{desc}</article>
-    )
   }
 
   /** Processes generic LiturgicalDocument into component of the appropriate type */
