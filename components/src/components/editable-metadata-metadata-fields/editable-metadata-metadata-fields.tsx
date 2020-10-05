@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, JSX, Method } from '@stencil/core';
-import { Change, TypeTuple, LiturgicalDocument, specificClass } from '@venite/ldf';
+import { Change, TypeTuple, LiturgicalDocument, specificClass, versionToString } from '@venite/ldf';
 
 import { getLocaleComponentStrings } from '../../utils/locale';
 
@@ -15,12 +15,13 @@ enum Field {
   StringList,
   BibleReadingIntro,
   TimeInSeconds,
-  HeadingLevel
+  HeadingLevel,
+  Gloria,
+  Antiphon
 }
 
 @Component({
   tag: 'ldf-editable-metadata-metadata-fields',
-  //styleUrl: 'editable-add-category.scss',
   shadow: true
 })
 export class EditableMetadataMetadataFieldsComponent {
@@ -77,6 +78,8 @@ export class EditableMetadataMetadataFieldsComponent {
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   @Event({ bubbles: true }) ldfAskForBibleIntros : EventEmitter<void>;
+
+  @Event({ bubbles: true }) ldfShouldAddGloriaPatri : EventEmitter<{ path: string; language: string; version: string; oldValue: LiturgicalDocument | undefined; }>;
 
   /** Set the list of Bible reading introductions */
   @Method()
@@ -146,8 +149,11 @@ export class EditableMetadataMetadataFieldsComponent {
           { field: 'number', type: Field.Number },
           { field: 'localname', type: Field.String },
           { field: 'latinname', type: Field.String },
-          { field: 'omit_antiphon', type: Field.Bool },
-          { field: 'omit_gloria', type: Field.Bool }
+          //{ field: 'omit_antiphon', type: Field.Bool },
+          //{ field: 'omit_gloria', type: Field.Bool },
+          //{ field: 'insert_seasonal_antiphon', type: Field.Bool },
+          { field: 'antiphon', type: Field.Antiphon },
+          { field: 'gloria', type: Field.Gloria },
         ]
       
       case 'responsive':
@@ -169,7 +175,7 @@ export class EditableMetadataMetadataFieldsComponent {
   }
 
   fieldToNodes(field : FieldDefinition, localeStrings: { [x: string]: string }) : JSX.Element[] {
-    const nodes : JSX.Element[] = new Array(),
+    const nodes : (JSX.Element | { size: number; node: JSX.Element})[] = new Array(),
           currentValue = (this.obj?.metadata || {})[field.field],
           path = `${this.path}/metadata/${field.field}`,
           placeholder = localeStrings[field.field];
@@ -262,22 +268,89 @@ export class EditableMetadataMetadataFieldsComponent {
           ></ldf-editable-text>
         )
         break;
+      case Field.Gloria:
+        wrapInItem = false;
+        nodes.push({
+          node: <ion-item lines="none">
+              <ion-label>{localeStrings.insert_gloria}</ion-label>
+              <ion-checkbox
+                checked={Boolean(this.obj?.metadata?.gloria)}
+                onIonChange={(e) => {
+                  if(e.detail.checked) {
+                    this.ldfShouldAddGloriaPatri.emit({
+                      path: this.path,
+                      language: this.obj?.language,
+                      version: versionToString(this.obj?.version),
+                      oldValue: this.obj?.metadata?.gloria
+                    });
+                    if(this.obj?.metadata?.omit_gloria !== false) {
+                      this.ldfDocShouldChange.emit(new Change({
+                        path: `${this.path}/metadata`,
+                        op: [{
+                          type: 'set',
+                          index: 'omit_gloria',
+                          oldValue: this.obj?.metadata?.omit_gloria,
+                          value: false
+                        }]
+                      }));
+                    }
+                  } else {
+                    this.ldfDocShouldChange.emit(new Change({
+                      path: `${this.path}/metadata`,
+                      op: [{
+                        type: 'deleteAt',
+                        index: 'gloria',
+                        oldValue: this.obj?.metadata?.gloria
+                      }]
+                    }));
+                    if(this.obj?.metadata?.omit_gloria !== true) {
+                      this.ldfDocShouldChange.emit(new Change({
+                        path: `${this.path}/metadata`,
+                        op: [{
+                          type: 'set',
+                          index: 'omit_gloria',
+                          oldValue: this.obj?.metadata?.omit_gloria,
+                          value: true
+                        }]
+                      }));
+                    }
+                  }
+                }}
+              ></ion-checkbox>
+            </ion-item>,
+          size: 12
+        })
+        break;
+      case Field.Antiphon: 
+        wrapInItem = false;
+        nodes.push({
+          node: <ldf-editable-antiphon-field
+            path={this.path}
+            antiphon={this.obj?.metadata?.antiphon}
+            omit_antiphon={this.obj?.metadata?.omit_antiphon}
+            insert_antiphon={this.obj?.metadata?.insert_seasonal_antiphon}
+          ></ldf-editable-antiphon-field>,
+          size: 12
+        });
+        break;
       default:
         ((type : never) => console.warn('(ldf-editable-metadata-metadata-fields)', type, 'is not a recognized FieldType'))(field.type);
         break;
     }
 
     if(wrapInItem) {
-    return [
-      <ion-item lines="none">
-        {labelStacked
-        ? <ion-label position="stacked">{ localeStrings[field.field] }</ion-label>
-        : <ion-label>{ localeStrings[field.field] }</ion-label>}
-        {nodes}
-      </ion-item>
-    ]
+      return [
+        <ion-item lines="none">
+          {labelStacked
+          ? <ion-label position="stacked">{ localeStrings[field.field] }</ion-label>
+          : <ion-label>{ localeStrings[field.field] }</ion-label>}
+          {nodes.map(field => field.hasOwnProperty('size') ? 
+            <ion-col size={field['size']}>{field['node']}</ion-col> :
+            <ion-col size="4">{field}</ion-col>)}
+        </ion-item>
+      ]
     } else {
-    return nodes;
+      return nodes;
     }
   }
 
@@ -294,11 +367,11 @@ export class EditableMetadataMetadataFieldsComponent {
           <ion-grid>
             <ion-row>
               {fieldNodes.map((fields : ({node: JSX.Element; size: number;} | JSX.Element)[]) =>
-                fields.map(field =>
-                  field.hasOwnProperty('size') ? 
+                fields.map(field => {
+                  return field.hasOwnProperty('size') ? 
                   <ion-col size={field['size']}>{field['node']}</ion-col> :
                   <ion-col size="4">{field}</ion-col>
-                )
+                })
               )}
             </ion-row>
           </ion-grid>

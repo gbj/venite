@@ -7,6 +7,8 @@
   "heading2": "2. Section Title",
   "heading3": "3. Label",
   "heading4": "4. Sub-Section Label",
+  "insert_seasonal_antiphon": "Insert Seasonal Antiphon",
+  "insert_gloria": "Insert Gloria Patri",
   "intro": "Introduction",
   "latinname": "Latin Name",
   "level": "Level",
@@ -27,5 +29,8 @@
   "special_preferences": "Special Preferences (not saved)",
   "supplement": "Supplemental Devotion",
   "title": "Settings",
-  "text": "Text"
+  "text": "Text",
+  "gloria": "Gloria Patri",
+  "insert_gloria_patri": "Insert the Gloria Patri",
+  "antiphon": "Antiphon"
 }

@@ -53,9 +53,9 @@ export class PsalmComponent {
   antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain }) : JSX.Element {
     if(typeof antiphon == 'string') {
       const refrain = new Refrain({ value: [ antiphon ], style: 'antiphon' });
-      return <ldf-refrain doc={ refrain }></ldf-refrain>
+      return <ldf-liturgical-document doc={ refrain } editable={this.editable}></ldf-liturgical-document>
     } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
-      return <ldf-refrain doc={ antiphon as Refrain }></ldf-refrain>
+      return <ldf-liturgical-document doc={ antiphon as Refrain } editable={this.editable}></ldf-liturgical-document>
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // { '12/23': '...', '12/24': '...' }
@@ -67,9 +67,9 @@ export class PsalmComponent {
   gloriaNode(gloria : string | Refrain) : JSX.Element {
     if(typeof gloria == 'string') {
       const refrain = new Refrain({ value: [ gloria ], style: 'gloria' });
-      return <ldf-refrain doc={ refrain }></ldf-refrain>
+      return <ldf-liturgical-document doc={ refrain } editable={this.editable}></ldf-liturgical-document>
     } else {
-      return <ldf-refrain doc={ gloria }></ldf-refrain>
+      return <ldf-liturgical-document doc={ gloria } editable={this.editable}></ldf-liturgical-document>
     }
   }
 
@@ -214,7 +214,7 @@ export class PsalmComponent {
       {this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria && this.gloriaNode(this.obj.metadata.gloria)}
 
       {/* include closing antiphon if
-        * 1) there IS and Gloria, and it hasn't been omitted, or 
+        * 1) there IS a Gloria, and it hasn't been omitted, or 
         * 2) there ISN'T a Gloria, and it HAS been omitted, which suggests it was removed seasonally */}
       {((this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria) || (this.obj?.metadata?.gloria === undefined && Boolean(this.obj?.metadata?.omit_gloria))) && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
       </div>

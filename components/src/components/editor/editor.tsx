@@ -58,6 +58,8 @@ export class EditorComponent {
 
   @Event() editorAskForBibleIntros : EventEmitter<EventTarget>;
 
+  @Event() editorShouldAddGloriaPatri : EventEmitter<{ path: string; language: string; version: string; oldValue: LiturgicalDocument | undefined; }>;
+
   // Life Cycle
   connectedCallback() {
     // initial document load from property
@@ -161,6 +163,11 @@ export class EditorComponent {
   @Listen('ldfAskForBibleIntros', { target: 'document' })
   onAskForBibleIntros(ev : CustomEvent) {
     this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields'));
+  }
+
+  @Listen('ldfShouldAddGloriaPatri', { target: 'document' })
+  onShouldAddGloriaPatri(ev : CustomEvent) {
+    this.editorShouldAddGloriaPatri.emit(ev.detail);
   }
 
   pathAndIndexFromPath(startPath : string) : { path : string; index : number; previousIndex: number; field: string; } {

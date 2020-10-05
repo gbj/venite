@@ -202,335 +202,224 @@ ldf-psalm .psalm br {
     });
 
     const LITURGY = {
-  "type": "liturgy",
-  "language": "en",
+  "hidden": false,
   "metadata": {
-    "liturgyversions": [],
+    "supplement": false,
+    "liturgyversions": [
+      "bcp1979"
+    ],
+    "evening": false,
     "preferences": {
-      "psalter": {
-        "options": [
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "Daily Office Lectionary",
-            "value": "bcp1979_daily_psalms",
-            "default": false
-          },
-          {
-            "value": "bcp1979_30day_psalter",
-            "label": "30-day Cycle",
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            }
-          },
-          {
-            "label": "RCL Track 1",
-            "value": "rclsundayTrack1",
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            }
-          },
-          {
-            "default": false,
-            "label": "RCL Track 2",
-            "metadata": {
-              "alternateYear": false
-            },
-            "value": "rclsunday"
-          }
-        ],
-        "category": "Cycles",
-        "key": "psalter",
-        "label": "Psalm Cycle"
-      },
-      "sermon": {
-        "key": "sermon",
-        "category": "Advanced",
-        "options": [
-          {
-            "value": "none",
-            "default": false,
-            "label": "—",
-            "metadata": {}
-          },
-          {
-            "value": "after_office",
-            "metadata": {},
-            "label": "After the Office"
-          },
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "After the Readings",
-            "value": "after_readings"
-          },
-          {
-            "value": "after_collects",
-            "metadata": {},
-            "label": "After the Collects"
-          }
-        ],
-        "label": "Sermon"
-      },
-      "psalterVersion": {
-        "options": [
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "1979 Book of Common Prayer",
-            "value": "bcp1979",
-            "default": false
-          },
-          {
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            },
-            "value": "ip",
-            "label": "Inclusive Psalter"
-          },
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "Coverdale (1662 BCP)",
-            "value": "coverdale",
-            "default": false
-          }
-        ],
-        "key": "psalterVersion",
-        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology.",
-        "label": "Psalter Version",
-        "category": "Translations"
-      },
-      "omitForeOffice": {
-        "key": "omitForeOffice",
-        "category": "Advanced",
-        "label": "Omit Fore-Office",
-        "options": [
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "value": "no",
-            "default": false,
-            "label": "No"
-          },
-          {
-            "metadata": {},
-            "value": "yes",
-            "default": false,
-            "label": "Yes"
-          }
-        ]
-      },
       "andrewes": {
-        "category": "Supplemental Devotions",
         "options": [
-          {
-            "default": false,
-            "value": "noo",
-            "label": "—",
-            "metadata": {
-              "alternateYear": false
-            }
-          },
           {
             "metadata": {
               "alternateYear": false
             },
+            "label": "—",
+            "default": false,
+            "value": "noo"
+          },
+          {
+            "label": "After the Office",
             "value": "after",
             "default": false,
-            "label": "After the Office"
+            "metadata": {
+              "alternateYear": false
+            }
           },
           {
             "label": "After the Office",
             "default": false,
-            "value": "after",
             "metadata": {
               "alternateYear": false
-            }
+            },
+            "value": "after"
           }
         ],
-        "label": "Lancelot Aancelot’s Private Prayers’s Private Prayers Andrewes’s Private Prayers",
-        "key": "andrewes"
+        "key": "andrewes",
+        "category": "Supplemental Devotions",
+        "label": "Lancelot Aancelot’s Private Prayers’s Private Prayers Andrewes’s Private Prayers"
       },
       "lectionary": {
-        "key": "lectionary",
-        "category": "Cycles",
         "options": [
           {
             "value": "bcp1979_daily_office",
+            "label": "Daily Office Lectionary",
             "default": false,
             "metadata": {
               "alternateYear": false
-            },
-            "label": "Daily Office Lectionary"
+            }
           },
           {
-            "label": "RCL Track 1",
-            "default": false,
             "value": "rclsundayTrack1",
             "metadata": {
               "alternateYear": false
-            }
+            },
+            "default": false,
+            "label": "RCL Track 1"
           },
           {
-            "label": "RCL Track 2",
-            "value": "rclsunday",
             "metadata": {
               "alternateYear": false
             },
-            "default": false
+            "default": false,
+            "label": "RCL Track 2",
+            "value": "rclsunday"
           }
         ],
-        "label": "Lectionary"
+        "label": "Lectionary",
+        "category": "Cycles",
+        "key": "lectionary"
       },
       "readingB": {
         "category": "Readings",
+        "key": "readingB",
         "options": [
           {
+            "label": "—",
             "metadata": {
               "alternateYear": false
             },
-            "label": "—",
-            "value": "none",
-            "default": false
+            "default": false,
+            "value": "none"
           },
           {
-            "default": false,
-            "label": "OT/First Reading",
             "value": "first_reading",
             "metadata": {
               "alternateYear": false
-            }
-          },
-          {
-            "metadata": {
-              "alternateYear": false
             },
-            "label": "Epistle/Second Reading",
             "default": false,
-            "value": "second_reading"
-          },
-          {
-            "value": "gospel",
-            "label": "Gospel",
-            "default": true,
-            "metadata": {
-              "alternateYear": false
-            }
-          }
-        ],
-        "label": "Second Reading",
-        "key": "readingB"
-      },
-      "readingC": {
-        "options": [
-          {
-            "value": "none",
-            "label": "—",
-            "default": true,
-            "metadata": {
-              "alternateYear": false
-            }
-          },
-          {
-            "value": "first_reading",
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            },
             "label": "OT/First Reading"
           },
           {
-            "default": false,
-            "value": "second_reading",
             "label": "Epistle/Second Reading",
-            "metadata": {
-              "alternateYear": false
-            }
-          },
-          {
+            "default": false,
             "metadata": {
               "alternateYear": false
             },
+            "value": "second_reading"
+          },
+          {
+            "label": "Gospel",
             "value": "gospel",
-            "default": false,
-            "label": "Gospel"
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": true
           }
         ],
-        "category": "Readings",
-        "label": "Third Reading",
-        "key": "readingC"
+        "label": "Second Reading"
       },
-      "angelus": {
-        "category": "Supplemental Devotions",
+      "psalter": {
+        "category": "Cycles",
         "options": [
+          {
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "bcp1979_daily_psalms",
+            "label": "Daily Office Lectionary"
+          },
+          {
+            "default": false,
+            "value": "bcp1979_30day_psalter",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "30-day Cycle"
+          },
           {
             "metadata": {
               "alternateYear": false
             },
-            "label": "—",
-            "default": false,
-            "value": "no"
+            "label": "RCL Track 1",
+            "value": "rclsundayTrack1",
+            "default": false
           },
           {
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "rclsunday",
             "default": false,
-            "label": "Before the Office",
-            "value": "before",
+            "label": "RCL Track 2"
+          }
+        ],
+        "label": "Psalm Cycle",
+        "key": "psalter"
+      },
+      "bibleVersion": {
+        "options": [
+          {
+            "default": false,
+            "value": "NRSV",
+            "label": "New Revised Standard Version (NRSV)",
             "metadata": {
               "alternateYear": false
             }
           },
           {
-            "value": "after",
-            "label": "After the Office",
             "metadata": {
               "alternateYear": false
             },
+            "default": false,
+            "value": "CEB",
+            "label": "Common English Bible (CEB)"
+          },
+          {
+            "value": "ESV",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "English Standard Version (ESV)"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "KJV",
+            "label": "King James Version (KJV)",
             "default": false
           }
         ],
-        "key": "angelus",
-        "label": "Angelus"
+        "label": "Bible Version",
+        "category": "Translations",
+        "key": "bibleVersion"
       },
       "canticleTable": {
         "label": "Canticle Table",
         "key": "canticleTable",
         "options": [
           {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "1979 Table of Suggested Canticles",
+            "default": false,
             "value": "bcp1979",
-            "default": false
+            "label": "1979 Table of Suggested Canticles",
+            "metadata": {
+              "alternateYear": false
+            }
           },
           {
+            "value": "tdb",
             "metadata": {
               "alternateYear": false
             },
-            "label": "Te Deum/Benedictus",
             "default": false,
-            "value": "tdb"
+            "label": "Te Deum/Benedictus"
           },
           {
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
             "label": "Enriching Our Worship",
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            },
             "value": "eow"
           },
           {
-            "label": "Order of St. Julian of Norwich",
             "default": false,
+            "label": "Order of St. Julian of Norwich",
             "value": "ojn",
             "metadata": {
               "alternateYear": false
@@ -541,663 +430,993 @@ ldf-psalm .psalm br {
       },
       "readingA": {
         "label": "First Reading",
+        "key": "readingA",
         "options": [
           {
             "value": "first_reading",
+            "metadata": {
+              "alternateYear": false
+            },
             "label": "OT/First Reading",
+            "default": true
+          },
+          {
+            "value": "second_reading",
+            "default": false,
+            "label": "Epistle/Second Reading",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "Gospel",
+            "value": "gospel",
+            "default": false
+          }
+        ],
+        "category": "Readings"
+      },
+      "readingC": {
+        "label": "Third Reading",
+        "key": "readingC",
+        "options": [
+          {
+            "value": "none",
+            "metadata": {
+              "alternateYear": false
+            },
             "default": true,
+            "label": "—"
+          },
+          {
+            "value": "first_reading",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "OT/First Reading"
+          },
+          {
+            "value": "second_reading",
+            "default": false,
+            "label": "Epistle/Second Reading",
             "metadata": {
               "alternateYear": false
             }
           },
           {
             "default": false,
-            "metadata": {
-              "alternateYear": false
-            },
-            "value": "second_reading",
-            "label": "Epistle/Second Reading"
-          },
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "value": "gospel",
             "label": "Gospel",
-            "default": false
+            "value": "gospel",
+            "metadata": {
+              "alternateYear": false
+            }
           }
         ],
-        "key": "readingA",
         "category": "Readings"
       },
-      "bibleVersion": {
-        "label": "Bible Version",
-        "key": "bibleVersion",
+      "sermon": {
         "options": [
           {
-            "metadata": {
-              "alternateYear": false
-            },
+            "metadata": {},
+            "label": "—",
             "default": false,
-            "label": "New Revised Standard Version (NRSV)",
-            "value": "NRSV"
+            "value": "none"
           },
           {
-            "value": "CEB",
-            "default": false,
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "Common English Bible (CEB)"
+            "label": "After the Office",
+            "value": "after_office",
+            "metadata": {}
           },
           {
-            "label": "English Standard Version (ESV)",
+            "value": "after_readings",
+            "label": "After the Readings",
             "metadata": {
               "alternateYear": false
-            },
-            "value": "ESV",
-            "default": false
+            }
           },
           {
-            "value": "KJV",
-            "metadata": {
-              "alternateYear": false
-            },
-            "default": false,
-            "label": "King James Version (KJV)"
+            "label": "After the Collects",
+            "metadata": {},
+            "value": "after_collects"
           }
         ],
+        "label": "Sermon",
+        "key": "sermon",
+        "category": "Advanced"
+      },
+      "psalterVersion": {
+        "key": "psalterVersion",
+        "label": "Psalter Version",
+        "options": [
+          {
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "1979 Book of Common Prayer",
+            "value": "bcp1979"
+          },
+          {
+            "label": "Inclusive Psalter",
+            "default": false,
+            "value": "ip",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "label": "Coverdale (1662 BCP)",
+            "value": "coverdale",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false
+          }
+        ],
+        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology.",
         "category": "Translations"
-      }
-    },
-    "special_preferences": {
-      "palms": {
-        "key": "palms",
+      },
+      "angelus": {
+        "category": "Supplemental Devotions",
+        "label": "Angelus",
         "options": [
           {
             "label": "—",
             "value": "no",
-            "metadata": {}
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false
+          },
+          {
+            "default": false,
+            "value": "before",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "Before the Office"
+          },
+          {
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "After the Office",
+            "value": "after"
+          }
+        ],
+        "key": "angelus"
+      },
+      "omitForeOffice": {
+        "key": "omitForeOffice",
+        "label": "Omit Fore-Office",
+        "options": [
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "label": "No",
+            "value": "no"
           },
           {
             "metadata": {},
-            "label": "Before the Office",
+            "value": "yes",
             "default": false,
+            "label": "Yes"
+          }
+        ],
+        "category": "Advanced"
+      }
+    },
+    "special_preferences": {
+      "palms": {
+        "label": "Palms",
+        "key": "palms",
+        "options": [
+          {
+            "label": "—",
+            "metadata": {},
+            "value": "no"
+          },
+          {
+            "default": false,
+            "label": "Before the Office",
+            "metadata": {},
             "value": "before"
           },
           {
-            "value": "before",
             "label": "Before the Office",
-            "metadata": {}
+            "metadata": {},
+            "value": "before"
           }
-        ],
-        "label": "Palms"
+        ]
       }
     }
   },
+  "version": "Rite-II",
+  "language": "en",
+  "source": {
+    "source": "",
+    "citation": "",
+    "api": ""
+  },
+  "lastRevision": 454,
   "sharing": {
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "status": "published",
     "collaborators": [],
     "organization": "venite",
-    "privacy": "public",
-    "status": "published",
-    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    "privacy": "public"
   },
-  "lastRevision": 444,
-  "category": [],
-  "label": "Morning Prayer",
   "slug": "morning-prayer",
-  "hidden": false,
+  "category": [],
   "value": [
     {
+      "hidden": false,
+      "type": "heading",
+      "style": "text",
       "metadata": {
         "level": 1
       },
       "value": [
         "Morning Prayer"
       ],
-      "hidden": false,
-      "type": "heading",
-      "style": "text"
-    },
-    {
-      "label": "The Angelus",
-      "language": "en",
-      "type": "liturgy",
-      "slug": "the-angelus",
-      "metadata": {
-        "liturgyversions": []
-      },
-      "source": {
-        "citation": "",
-        "api": "",
-        "source": ""
-      },
-      "version": "Rite-II",
-      "lookup": {
-        "type": "slug"
-      },
-      "sharing": {
-        "privacy": "public",
-        "collaborators": [],
-        "organization": "venite",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "status": "published"
-      },
-      "lastRevision": 61,
-      "hidden": false,
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "value": "before",
-              "key": "angelus",
-              "is": true
-            }
-          }
-        ]
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       }
     },
+    null,
+    null,
     {
-      "sharing": {
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": [],
-        "organization": "venite",
-        "privacy": "public",
-        "status": "published"
-      },
       "metadata": {
-        "liturgyversions": []
+        "response": null,
+        "omit_response": true
       },
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "value": "before",
-              "key": "palms",
-              "is": true
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
-      "label": "The Angelus",
-      "lastRevision": 61,
-      "version": "Rite-II",
-      "language": "en",
-      "type": "liturgy",
+      "version": "bcp1979",
+      "label": null,
+      "version_label": null,
       "hidden": false,
-      "lookup": {
-        "type": "slug"
-      },
-      "slug": "palms"
-    },
-    {
-      "hidden": false,
-      "lookup": {
-        "filter": "seasonal",
-        "type": "category",
-        "rotate": true
-      },
-      "style": "short",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "key": "omitForeOffice",
-              "is": true,
-              "value": "no"
-            }
-          },
-          {
-            "feastDay": true
-          }
-        ]
-      },
       "category": [
+        "OrdinaryTime",
         "Opening Sentence"
       ],
-      "type": "bible-reading"
+      "style": "short",
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "Let the words of my mouth and the meditation of my heart be acceptable in your sight, O Lord, my strength and my redeemer."
+        }
+      ],
+      "slug": "opening_sentence",
+      "citation": "Psalm 19:14",
+      "sharing": {
+        "organization": "venite",
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "language": "en"
     },
     {
       "hidden": false,
-      "category": [],
-      "source": {
-        "source": "bcp1979",
-        "citation": "p. 79",
-        "api": ""
-      },
-      "metadata": {
-        "selected": 0,
-        "editor_selected": 0
-      },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "key": "omitForeOffice",
-              "value": "no",
-              "is": true
-            }
-          }
-        ]
-      },
-      "type": "option",
       "value": [
         {
+          "hidden": false,
           "style": "text",
-          "metadata": {},
-          "source": {
-            "source": "",
-            "citation": "",
-            "api": ""
-          },
           "value": [
             "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
           ],
-          "type": "text",
-          "version_label": "Long",
           "category": [],
-          "hidden": false,
-          "label": "Confession of Sin"
-        },
-        {
-          "value": [
-            "Let us confess our sins against God and our neighbor."
-          ],
+          "version_label": "Long",
+          "metadata": {},
           "source": {
             "api": "",
             "source": "",
             "citation": ""
           },
           "label": "Confession of Sin",
-          "metadata": {},
+          "type": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "category": [],
           "type": "text",
           "style": "text",
+          "metadata": {},
           "version_label": "Short",
-          "hidden": false,
-          "category": []
+          "value": [
+            "Let us confess our sins against God and our neighbor."
+          ],
+          "label": "Confession of Sin",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         }
-      ]
-    },
-    {
-      "value": [
-        "Silence may be kept.",
-        "Officiant and People together, all kneeling"
       ],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 79",
+        "api": ""
+      },
       "condition": {
         "conditions": [
           {
             "preference": {
-              "key": "omitForeOffice",
+              "value": "no",
               "is": true,
-              "value": "no"
+              "key": "omitForeOffice"
             }
           }
         ],
         "mode": "and"
       },
-      "hidden": false,
-      "type": "rubric"
+      "category": [],
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
-      "metadata": {
-        "selected": 0,
-        "editor_selected": 0
+      "hidden": false,
+      "value": [
+        "Silence may be kept.",
+        "Officiant and People together, all kneeling"
+      ],
+      "type": "rubric",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "is": true,
+              "value": "no",
+              "key": "omitForeOffice"
+            }
+          }
+        ]
       },
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
       "value": [
         {
-          "category": [],
-          "type": "text",
+          "hidden": false,
           "value": [
             "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
           ],
-          "hidden": false,
+          "metadata": {},
+          "style": "prayer",
+          "type": "text",
           "source": {
             "api": "",
             "source": "",
             "citation": ""
           },
           "version_label": "Rite II",
-          "style": "prayer",
-          "metadata": {}
+          "category": [],
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         },
         {
+          "hidden": false,
           "metadata": {},
-          "version_label": "EOW",
-          "category": [],
           "value": [
             "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
           ],
-          "type": "text",
-          "hidden": false,
-          "style": "text",
-          "source": {
-            "source": "",
-            "api": "",
-            "citation": ""
-          }
-        }
-      ],
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "value": "no",
-              "key": "omitForeOffice",
-              "is": true
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "hidden": false,
-      "type": "option"
-    },
-    {
-      "value": [
-        {
-          "source": {
-            "source": "",
-            "api": "",
-            "citation": ""
-          },
-          "version_label": "Lay/Deacon",
-          "style": "prayer",
-          "value": [
-            "Almighty God have mercy on us, forgive us all our sins through our Lord Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
-          ],
-          "category": [],
-          "metadata": {},
-          "type": "text",
-          "hidden": false
-        },
-        {
-          "style": "prayer",
-          "version_label": "Priest",
-          "category": [],
-          "hidden": false,
-          "value": [
-            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
-          ],
-          "type": "text",
-          "metadata": {},
-          "source": {
-            "api": "",
-            "source": "",
-            "citation": ""
-          }
-        },
-        {
           "category": [],
           "source": {
-            "api": "",
             "citation": "",
-            "source": ""
+            "source": "",
+            "api": ""
           },
-          "version_label": "EOW",
-          "metadata": {},
-          "value": [
-            "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
-          ],
-          "hidden": false,
           "type": "text",
-          "style": "prayer"
+          "version_label": "EOW",
+          "style": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         }
       ],
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
       "condition": {
         "conditions": [
           {
             "preference": {
-              "value": "no",
+              "is": true,
               "key": "omitForeOffice",
-              "is": true
+              "value": "no"
             }
           }
         ],
         "mode": "and"
       },
       "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
       "metadata": {
         "editor_selected": 0,
         "selected": 0
       },
-      "hidden": false
+      "value": [
+        {
+          "hidden": false,
+          "category": [],
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "value": [
+            "Almighty God have mercy on us, forgive us all our sins through our Lord Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
+          ],
+          "type": "text",
+          "metadata": {},
+          "version_label": "Lay/Deacon",
+          "style": "prayer",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "category": [],
+          "style": "prayer",
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "version_label": "Priest",
+          "type": "text",
+          "metadata": {},
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "metadata": {},
+          "version_label": "EOW",
+          "type": "text",
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "category": [],
+          "style": "prayer",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "type": "option",
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "value": "no",
+              "key": "omitForeOffice",
+              "is": true
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
-      "category": [],
-      "metadata": {
-        "level": 2
-      },
-      "style": "text",
-      "source": {
-        "source": "",
-        "citation": "",
-        "api": ""
-      },
       "hidden": false,
-      "value": [
-        "Invitatory and Psalter"
-      ],
-      "type": "heading"
-    },
-    {
-      "value": [
-        "All stand"
-      ],
-      "metadata": {},
+      "type": "heading",
       "source": {
         "source": "",
         "api": "",
         "citation": ""
       },
+      "style": "text",
+      "value": [
+        "Invitatory and Psalter"
+      ],
+      "metadata": {
+        "level": 2
+      },
       "category": [],
-      "hidden": false,
-      "type": "rubric"
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
+      "hidden": false,
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "value": [
+        "All stand"
+      ],
+      "category": [],
+      "type": "rubric",
+      "metadata": {},
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "source": {
+        "citation": "p. 80",
+        "source": "bcp1979",
+        "api": ""
+      },
+      "category": [],
+      "type": "responsive",
+      "style": "preces",
+      "metadata": {},
       "value": [
         {
+          "text": "Lord, open our lips.",
           "label": "Officiant",
-          "response": "",
-          "text": "Lord, open our lips."
+          "response": ""
         },
         {
           "text": "And our mouth shall proclaim your praise.",
           "label": "People"
         }
       ],
-      "metadata": {},
-      "hidden": false,
-      "type": "responsive",
-      "style": "preces",
-      "category": [],
-      "source": {
-        "citation": "p. 80",
-        "api": "",
-        "source": "bcp1979"
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       }
     },
     {
-      "style": "gloria",
-      "hidden": false,
-      "slug": "gloria-patri",
-      "type": "refrain",
-      "lookup": {
-        "type": "slug"
-      }
-    },
-    {
-      "slug": "alleluia",
-      "hidden": false,
-      "style": "text",
-      "lookup": {
-        "type": "slug"
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
       },
-      "type": "text"
+      "hidden": false,
+      "type": "refrain",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "language": "en",
+      "style": "gloria",
+      "label": null,
+      "version_label": "Rite II",
+      "citation": null,
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "category": [
+        null
+      ]
     },
+    null,
     {
+      "hidden": false,
       "metadata": {
-        "selected": 0,
-        "editor_selected": 0
+        "editor_selected": 0,
+        "selected": 0
       },
       "value": [
+        null,
         {
-          "type": "psalm",
-          "language": "en",
-          "category": [
-            "Invitatory"
-          ],
-          "metadata": {
-            "omit_gloria": true,
-            "localname": "Christ our Passover",
-            "number": null,
-            "omit_antiphon": false,
-            "latinname": "Pascha Nostrum"
-          },
-          "slug": "pascha_nostrum",
-          "sharing": {
-            "privacy": "public",
-            "collaborators": [],
-            "status": "published",
-            "organization": "venite",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-          },
-          "version": "bcp1979",
-          "source": {
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 83"
-          },
-          "label": "Christ our Passover",
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *",
-                  "halfverse": "therefore let us keep the feast,"
-                },
-                {
-                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
-                  "type": "psalm-verse",
-                  "verse": "Not with the old leaven, the leaven of malice and evil, *"
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "death no longer has dominion over him.",
-                  "type": "psalm-verse",
-                  "verse": "Christ being raised from the dead will never die again; *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "but the life he lives, he lives to God.",
-                  "verse": "The death that he died, he died to sin, once for all; *"
-                },
-                {
-                  "verse": "So also consider yourselves dead to sin, *",
-                  "type": "psalm-verse",
-                  "halfverse": "and alive to God in Jesus Christ our Lord. Alleluia."
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "the first fruits of those who have fallen asleep.",
-                  "verse": "Christ has been raised from the dead, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "verse": "For since by a man came death, * ",
-                  "halfverse": "by a man has come also the resurrection of the dead."
-                },
-                {
-                  "halfverse": "so also in Christ shall all be made alive. Alleluia.",
-                  "verse": "For as in Adam all die, *",
-                  "type": "psalm-verse"
-                }
-              ]
-            }
-          ],
           "hidden": false,
-          "version_label": null,
-          "lastRevision": 0,
-          "condition": {
-            "conditions": [
-              {
-                "season": {
-                  "only": [
-                    "Easter",
-                    "Ascension",
-                    "Pentecost"
-                  ],
-                  "except": []
-                }
-              }
-            ],
-            "mode": "and"
-          },
-          "style": "invitatory",
-          "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22"
-        },
-        {
           "category": [
             "Invitatory"
           ],
-          "label": "Venite",
-          "source": {
-            "source": "bcp1979",
-            "citation": "p. 82",
-            "api": "https://www.venite.app/api"
-          },
-          "type": "psalm",
+          "version_label": "Venite (BCP)",
           "value": [
             {
-              "type": "psalm-section",
               "value": [
                 {
-                  "verse": "Come, let us sing to the Lord; *",
-                  "halfverse": "let us shout for joy to the Rock of our salvation.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "halfverse": "and raise a loud shout to him with psalms.",
-                  "verse": "Let us come before his presence with thanksgiving *",
-                  "type": "psalm-verse"
-                }
-              ]
-            },
-            {
-              "value": [
-                {
-                  "verse": "For the Lord is a great God, *",
-                  "halfverse": "and a great King above all gods.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "In his hand are the caverns of the earth, *",
                   "type": "psalm-verse",
-                  "halfverse": "and the heights of the hills are his also."
+                  "halfverse": "let us shout for joy to the Rock of our salvation.",
+                  "verse": "Come, let us sing to the Lord; *"
                 },
                 {
-                  "verse": "The sea is his, for he made it, *",
-                  "halfverse": "and his hands have molded the dry land.",
-                  "type": "psalm-verse"
+                  "type": "psalm-verse",
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "verse": "Let us come before his presence with thanksgiving *"
                 }
               ],
               "type": "psalm-section"
@@ -1206,14 +1425,34 @@ ldf-psalm .psalm br {
               "type": "psalm-section",
               "value": [
                 {
+                  "verse": "For the Lord is a great God, *",
                   "type": "psalm-verse",
-                  "halfverse": "and kneel before the Lord our Maker.",
-                  "verse": "Come, let us bow down, and bend the knee, *"
+                  "halfverse": "and a great King above all gods."
                 },
                 {
-                  "halfverse": "Oh, that today you would hearken to his voice!",
-                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "type": "psalm-verse",
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "The sea is his, for he made it, *",
+                  "halfverse": "and his hands have molded the dry land."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the Lord our Maker.",
                   "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "halfverse": "Oh, that today you would hearken to his voice!"
                 }
               ]
             },
@@ -1222,42 +1461,105 @@ ldf-psalm .psalm br {
               "type": "psalm-section"
             }
           ],
-          "slug": "venite",
-          "version": "bcp1979",
-          "version_label": "Venite (BCP)",
-          "hidden": false,
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "status": "published",
-            "privacy": "public",
-            "collaborators": [],
-            "organization": "venite"
-          },
           "language": "en",
+          "slug": "venite",
+          "sharing": {
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "status": "published"
+          },
+          "type": "psalm",
+          "label": "Venite",
           "style": "invitatory",
-          "citation": "Psalm 95:1-7",
           "metadata": {
-            "localname": "Venite",
+            "insert_seasonal_antiphon": false,
+            "omit_gloria": false,
+            "number": null,
             "omit_antiphon": false,
             "latinname": null,
-            "number": null,
-            "omit_gloria": false
+            "localname": "Venite",
+            "antiphon": {
+              "value": [
+                "Worship the Lord in the beauty of holiness: Come let us adore him. "
+              ],
+              "slug": "",
+              "language": "en",
+              "version": "bcp1979",
+              "category": [
+                "Seasonal Antiphon",
+                "OrdinaryTime"
+              ],
+              "lastRevision": 19,
+              "hidden": false,
+              "label": "",
+              "metadata": {
+                "omit_response": false
+              },
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "privacy": "public",
+                "collaborators": []
+              },
+              "type": "refrain",
+              "source": {
+                "api": "",
+                "source": "",
+                "citation": ""
+              },
+              "style": "antiphon"
+            }
+          },
+          "version": "bcp1979",
+          "citation": "Psalm 95:1-7",
+          "source": {
+            "citation": "p. 82",
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api"
+          },
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
           }
         },
         {
-          "citation": "Psalm 100",
           "hidden": false,
-          "version": "bcp1979",
           "value": [
             {
+              "type": "psalm-section",
               "value": [
                 {
                   "type": "psalm-verse",
-                  "verse": "Be joyful in the Lord, all you lands; *",
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song."
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "verse": "Be joyful in the Lord, all you lands; *"
                 }
-              ],
-              "type": "psalm-section"
+              ]
             },
             {
               "type": "psalm-section",
@@ -1272,9 +1574,9 @@ ldf-psalm .psalm br {
             {
               "value": [
                 {
+                  "type": "psalm-verse",
                   "halfverse": "give thanks to him and call upon his Name.",
-                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
-                  "type": "psalm-verse"
+                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *"
                 }
               ],
               "type": "psalm-section"
@@ -1283,239 +1585,994 @@ ldf-psalm .psalm br {
               "type": "psalm-section",
               "value": [
                 {
-                  "halfverse": "and his faithfulness endures from age to age.",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
                   "type": "psalm-verse",
-                  "verse": "For the Lord is good;\nhis mercy is everlasting; *"
+                  "halfverse": "and his faithfulness endures from age to age."
                 }
               ]
             },
             {
-              "value": [],
-              "type": "psalm-section"
+              "type": "psalm-section",
+              "value": []
             }
           ],
-          "language": "en",
           "sharing": {
-            "status": "published",
             "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "collaborators": [],
+            "privacy": "public",
             "organization": "venite",
-            "privacy": "public"
+            "status": "published"
           },
-          "type": "psalm",
-          "source": {
-            "citation": "p. 82",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
+          "label": "Jubilate",
+          "category": [
+            "Invitatory"
+          ],
+          "language": "en",
+          "citation": "Psalm 100",
+          "style": "invitatory",
           "metadata": {
+            "latinname": null,
             "omit_gloria": false,
             "number": null,
             "localname": "Jubilate",
             "omit_antiphon": false,
-            "latinname": null
+            "insert_seasonal_antiphon": false,
+            "antiphon": {
+              "value": [
+                "Worship the Lord in the beauty of holiness: Come let us adore him. "
+              ],
+              "slug": "",
+              "language": "en",
+              "version": "bcp1979",
+              "category": [
+                "Seasonal Antiphon",
+                "OrdinaryTime"
+              ],
+              "lastRevision": 19,
+              "hidden": false,
+              "label": "",
+              "metadata": {
+                "omit_response": false
+              },
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "privacy": "public",
+                "collaborators": []
+              },
+              "type": "refrain",
+              "source": {
+                "api": "",
+                "source": "",
+                "citation": ""
+              },
+              "style": "antiphon"
+            }
           },
+          "version_label": "Jubilate (BCP)",
+          "version": "bcp1979",
+          "source": {
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979",
+            "citation": "p. 82"
+          },
+          "type": "psalm",
           "slug": "jubilate",
-          "category": [
-            "Invitatory"
-          ],
-          "label": "Jubilate",
-          "style": "invitatory",
-          "version_label": "Jubilate (BCP)"
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         },
         {
+          "hidden": false,
+          "label": "Psalm 95",
+          "style": "psalm",
           "language": "en",
+          "value": [
+            {
+              "value": [
+                {
+                  "number": "1",
+                  "type": "psalm-verse",
+                  "verse": "Come, let us sing to the LORD; *",
+                  "halfverse": "let us shout for joy to the Rock of our salvation."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "number": "2"
+                },
+                {
+                  "number": "3",
+                  "type": "psalm-verse",
+                  "verse": "For the LORD is a great God, *",
+                  "halfverse": "and a great King above all gods."
+                },
+                {
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also.",
+                  "type": "psalm-verse",
+                  "number": "4"
+                },
+                {
+                  "verse": "The sea is his, for he made it, *",
+                  "type": "psalm-verse",
+                  "number": "5",
+                  "halfverse": "and his hands have molded the dry land."
+                },
+                {
+                  "number": "6",
+                  "halfverse": "and kneel before the LORD our Maker.",
+                  "type": "psalm-verse",
+                  "verse": "Come, let us bow down, and bend the knee, *"
+                },
+                {
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "halfverse": "Oh, that today you would hearken to his voice!",
+                  "type": "psalm-verse",
+                  "number": "7"
+                },
+                {
+                  "verse": "Harden not your hearts,\nas your forebears did in the wilderness, *",
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "halfverse": "at Meribah, and on that day at Massah,\n when they tempted me."
+                },
+                {
+                  "number": "9",
+                  "type": "psalm-verse",
+                  "verse": "They put me to the test, *",
+                  "halfverse": "though they had seen my works."
+                },
+                {
+                  "number": "10",
+                  "verse": "Forty years long I detested that generation and said, *",
+                  "halfverse": "“This people are wayward in their hearts;\n they do not know my ways.”",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "11",
+                  "halfverse": "“They shall not enter into my rest.”",
+                  "verse": "So I swore in my wrath, *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": [],
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
           "category": [
             "Psalm"
           ],
-          "style": "psalm",
+          "slug": "psalm_95",
+          "citation": null,
+          "version_label": "Ps. 95 (BCP)",
           "metadata": {
-            "latinname": "Venite, exultemus",
             "localname": "Psalm 95",
             "number": "95",
+            "omit_antiphon": false,
+            "latinname": "Venite, exultemus",
             "omit_gloria": false,
-            "omit_antiphon": false
+            "gloria": {
+              "sharing": {
+                "privacy": "public",
+                "organization": "venite",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published"
+              },
+              "hidden": false,
+              "type": "refrain",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "language": "en",
+              "style": "gloria",
+              "label": null,
+              "version_label": "Rite II",
+              "citation": null,
+              "version": "bcp1979",
+              "slug": "gloria-patri",
+              "category": [
+                null
+              ]
+            }
           },
-          "version_label": "Ps. 95 (BCP)",
-          "slug": "psalm_95",
-          "hidden": false,
-          "label": "Psalm 95",
+          "type": "psalm",
+          "version": "bcp1979",
           "source": {
             "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 724"
-          },
-          "lookup": {
-            "type": "slug"
-          },
+            "citation": "p. 724",
+            "api": "https://www.venite.app/api"
+          }
+        }
+      ],
+      "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "label": "Psalm 102",
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 731"
+      },
+      "sharing": {
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "status": "published"
+      },
+      "metadata": {
+        "latinname": "Domine, exaudi",
+        "omit_antiphon": false,
+        "number": "102",
+        "localname": "Psalm 102",
+        "omit_gloria": false,
+        "gloria": {
           "sharing": {
             "privacy": "public",
             "organization": "venite",
-            "status": "published",
+            "collaborators": [],
             "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "collaborators": []
+            "status": "published"
           },
-          "version": "bcp1979",
+          "hidden": false,
+          "type": "refrain",
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ],
+          "language": "en",
+          "style": "gloria",
+          "label": null,
+          "version_label": "Rite II",
           "citation": null,
-          "type": "psalm"
+          "version": "bcp1979",
+          "slug": "gloria-patri",
+          "category": [
+            null
+          ]
+        }
+      },
+      "category": [
+        "Psalm"
+      ],
+      "type": "psalm",
+      "slug": "psalm_102",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "hide not your face from me in the day of my trouble.",
+              "verse": "LORD, hear my prayer, and let my cry come before you; *"
+            },
+            {
+              "number": "2",
+              "verse": "Incline your ear to me; *",
+              "halfverse": "when I call, make haste to answer me,",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For my days drift away like smoke, *",
+              "halfverse": "and my bones are hot as burning coals.",
+              "number": "3"
+            },
+            {
+              "halfverse": "so that I forget to eat my bread.",
+              "verse": "My heart is smitten like grass and withered, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "Because of the voice of my groaning *",
+              "halfverse": "I am but skin and bones."
+            },
+            {
+              "halfverse": "like an owl among the ruins.",
+              "type": "psalm-verse",
+              "verse": "I have become like a vulture in the wilderness, *",
+              "number": "6"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I lie awake and groan; *",
+              "number": "7",
+              "halfverse": "I am like a sparrow, lonely on a house-top."
+            },
+            {
+              "verse": "My enemies revile me all day long, *",
+              "number": "8",
+              "halfverse": "and those who scoff at me have taken an oath against me.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "For I have eaten ashes for bread *",
+              "halfverse": "and mingled my drink with weeping."
+            },
+            {
+              "halfverse": "you have lifted me up and thrown me away.",
+              "verse": "Because of your indignation and wrath *",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and I wither like the grass.",
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "My days pass away like a shadow, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "But you, O LORD, endure for ever, *",
+              "number": "12",
+              "halfverse": "and your Name from age to age."
+            },
+            {
+              "number": "13",
+              "halfverse": "indeed, the appointed time has come.",
+              "verse": "You will arise and have compassion on Zion,\nfor it is time to have mercy upon her; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "14",
+              "verse": "For your servants love her very rubble, *",
+              "halfverse": "and are moved to pity even for her dust.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "15",
+              "verse": "The nations shall fear your Name, O LORD, *",
+              "halfverse": "and all the kings of the earth your glory.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "16",
+              "halfverse": "and his glory will appear.",
+              "verse": "For the LORD will build up Zion, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he will not despise their plea.",
+              "number": "17",
+              "verse": "He will look with favor on the prayer of the homeless; *"
+            },
+            {
+              "halfverse": "so that a people yet unborn may praise the LORD.",
+              "number": "18",
+              "verse": "Let this be written for a future generation, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "19",
+              "halfverse": "from the heavens he beheld the earth;",
+              "verse": "For the LORD looked down from his holy place on high; *"
+            },
+            {
+              "verse": "That he might hear the groan of the captive *",
+              "type": "psalm-verse",
+              "number": "20",
+              "halfverse": "and set free those condemned to die;"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "verse": "That they may declare in Zion the Name of the LORD, *",
+              "halfverse": "and his praise in Jerusalem;"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "verse": "When the peoples are gathered together, *",
+              "halfverse": "and the kingdoms also, to serve the LORD."
+            },
+            {
+              "verse": "He has brought down my strength before my time; *",
+              "type": "psalm-verse",
+              "number": "23",
+              "halfverse": "he has shortened the number of my days;"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "And I said, “O my God,\ndo not take me away in the midst of my days; *",
+              "number": "24",
+              "halfverse": "your years endure throughout all generations."
+            },
+            {
+              "halfverse": "and the heavens are the work of your hands;",
+              "number": "25",
+              "type": "psalm-verse",
+              "verse": "In the beginning, O LORD, you laid the foundations of the earth, *"
+            },
+            {
+              "halfverse": "as clothing you will change them,\n and they shall be changed;",
+              "number": "26",
+              "type": "psalm-verse",
+              "verse": "They shall perish, but you will endure;\nthey all shall wear out like a garment; *"
+            },
+            {
+              "verse": "But you are always the same, *",
+              "halfverse": "and your years will never end.",
+              "number": "27",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and their offspring shall stand fast in your sight.”",
+              "number": "28",
+              "type": "psalm-verse",
+              "verse": "The children of your servants shall continue, *"
+            }
+          ]
         }
       ],
-      "hidden": false,
-      "type": "option"
-    },
-    {
-      "version": {
-        "preference": "psalterVersion"
-      },
-      "lookup": {
-        "table": {
-          "preference": "psalmCycle"
-        },
-        "item": "morning_psalms",
-        "type": "lectionary"
-      },
       "style": "psalm",
-      "metadata": {},
-      "type": "psalm",
-      "hidden": false
+      "version_label": null,
+      "language": "en",
+      "version": "bcp1979"
+    },
+    {
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      },
+      "hidden": false,
+      "type": "refrain",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "language": "en",
+      "style": "gloria",
+      "label": null,
+      "version_label": "Rite II",
+      "citation": null,
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "category": [
+        null
+      ]
     },
     {
       "hidden": false,
-      "slug": "gloria-patri",
-      "type": "refrain",
-      "lookup": {
-        "type": "slug"
-      },
-      "style": "gloria"
-    },
-    {
       "value": [
         "The Lessons"
       ],
-      "hidden": false,
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
       "type": "heading",
       "metadata": {
         "level": 2
       },
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
       "category": [],
-      "style": "text"
+      "style": "text",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
+      "hidden": false,
+      "label": "The First Lesson",
+      "version": "NRSV",
+      "category": [],
       "lookup": {
-        "table": {
-          "preference": "lectionary"
-        },
+        "type": "lectionary",
         "item": {
           "preference": "readingA"
         },
-        "type": "lectionary"
+        "table": {
+          "preference": "lectionary"
+        }
+      },
+      "metadata": {
+        "intro": {
+          "type": "text",
+          "style": "text",
+          "value": [
+            "A Reading from ${longName}."
+          ],
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "language": "en"
+        },
+        "compiled_intro": {
+          "hidden": false,
+          "type": "text",
+          "style": "text",
+          "value": [
+            "A Reading from the Prophet Hosea."
+          ],
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "language": "en"
+        }
+      },
+      "source": {
+        "citation": "",
+        "source": "",
+        "api": ""
       },
       "style": "long",
       "type": "bible-reading",
-      "version": {
-        "preference": "bibleVersion"
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       },
-      "label": "The First Lesson",
-      "category": [],
+      "citation": "Hosea 10:1-15",
+      "language": "en",
+      "value": [
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "1",
+          "text": "Israel is a luxuriant vine that yields its fruit. The more his fruit increased the more altars he built; as his country improved, he improved his pillars. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "2",
+          "text": "Their heart is false; now they must bear their guilt. The LORD will break down their altars, and destroy their pillars. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "3",
+          "text": "For now they will say: &#147;We have no king, for we do not fear the LORD, and a king&#151;what could he do for us?&#148; "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "4",
+          "text": "They utter mere words; with empty oaths they make covenants; so litigation springs up like poisonous weeds in the furrows of the field. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "5",
+          "text": "The inhabitants of Samaria tremble for the calf of Beth-aven. Its people shall mourn for it, and its idolatrous priests shall wail over it, over its glory that has departed from it. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "6",
+          "text": "The thing itself shall be carried to Assyria as tribute to the great king. Ephraim shall be put to shame, and Israel shall be ashamed of his idol. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "7",
+          "text": "Samaria&#146;s king shall perish like a chip on the face of the waters. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "8",
+          "text": "The high places of Aven, the sin of Israel, shall be destroyed. Thorn and thistle shall grow up on their altars. They shall say to the mountains, Cover us, and to the hills, Fall on us. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "9",
+          "text": "Since the days of Gibeah you have sinned, O Israel; there they have continued. Shall not war overtake them in Gibeah? "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "10",
+          "text": "I will come against the wayward people to punish them; and nations shall be gathered against them when they are punished for their double iniquity. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "11",
+          "text": "Ephraim was a trained heifer that loved to thresh, and I spared her fair neck; but I will make Ephraim break the ground; Judah must plow; Jacob must harrow for himself. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "12",
+          "text": "Sow for yourselves righteousness; reap steadfast love; break up your fallow ground; for it is time to seek the LORD, that he may come and rain righteousness upon you. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "13",
+          "text": "You have plowed wickedness, you have reaped injustice, you have eaten the fruit of lies. Because you have trusted in your power and in the multitude of your warriors, "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "14",
+          "text": "therefore the tumult of war shall rise against your people, and all your fortresses shall be destroyed, as Shalman destroyed Beth-arbel on the day of battle when mothers were dashed in pieces with their children. "
+        },
+        {
+          "book": "Hosea",
+          "chapter": "10",
+          "verse": "15",
+          "text": "Thus it shall be done to you, O Bethel, because of your great wickedness. At dawn the king of Israel shall be utterly cut off. "
+        }
+      ]
+    },
+    {
       "hidden": false,
+      "type": "option",
       "metadata": {
-        "intro": {
+        "selected": 0
+      },
+      "value": [
+        {
+          "label": "",
+          "style": "text",
+          "language": "en",
+          "value": [
+            "Here ends the Reading."
+          ],
+          "lastRevision": 14,
+          "source": {
+            "citation": "",
+            "api": "",
+            "source": ""
+          },
+          "version": "bcp1979",
+          "slug": "word-of-the-lord",
+          "metadata": {},
+          "type": "text",
+          "hidden": false,
           "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public",
+            "status": "published"
+          },
+          "category": []
+        },
+        {
+          "value": [
+            {
+              "text": "The Word of the Lord.",
+              "response": "Thanks be to God."
+            }
+          ],
+          "slug": "word-of-the-lord",
+          "category": [],
+          "version_label": "The Word of the Lord",
+          "style": "responsive",
+          "type": "responsive",
+          "lastRevision": 12,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "privacy": "public",
             "organization": "venite",
             "status": "published"
           },
           "language": "en",
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "style": "text",
-          "value": [
-            "A Reading from ${longName}."
-          ],
-          "type": "text"
+          "metadata": {},
+          "version": "bcp1979",
+          "label": "",
+          "hidden": false,
+          "source": {
+            "citation": "",
+            "api": "",
+            "source": ""
+          }
         }
-      },
-      "source": {
-        "source": "",
-        "citation": "",
-        "api": ""
-      }
-    },
-    {
-      "source": {
-        "citation": "",
-        "api": "",
-        "source": ""
-      },
-      "lookup": {
-        "type": "slug"
-      },
-      "category": [],
-      "slug": "word-of-the-lord",
-      "type": "text",
-      "metadata": {},
-      "style": "text",
-      "hidden": false
+      ]
     },
     {
       "hidden": false,
-      "lookup": {
-        "item": 1,
-        "table": {
-          "preference": "canticleTable"
-        },
-        "type": "canticle"
-      }
+      "metadata": {
+        "number": "10",
+        "omit_antiphon": false,
+        "latinname": "Quaerite Dominum",
+        "localname": "The Second Song of Isaiah",
+        "omit_gloria": false,
+        "gloria": {
+          "hidden": false,
+          "type": "option",
+          "metadata": {
+            "selected": 0
+          },
+          "value": [
+            {
+              "sharing": {
+                "privacy": "public",
+                "organization": "venite",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published"
+              },
+              "hidden": false,
+              "type": "refrain",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "language": "en",
+              "style": "gloria",
+              "label": null,
+              "version_label": "Rite II",
+              "citation": null,
+              "version": "bcp1979",
+              "slug": "gloria-patri",
+              "category": [
+                null
+              ]
+            },
+            {
+              "slug": "gloria-patri",
+              "style": "gloria",
+              "value": [
+                "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+                "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+              ],
+              "type": "refrain",
+              "version": "rite_i",
+              "category": [
+                null
+              ],
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": [],
+                "organization": "venite"
+              },
+              "language": "en",
+              "citation": null,
+              "hidden": false,
+              "label": null,
+              "version_label": ""
+            },
+            {
+              "type": "refrain",
+              "citation": null,
+              "value": [
+                "Praise to the holy and undivided Trinity, one God:  ",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "version": "eow",
+              "hidden": false,
+              "slug": "gloria-patri",
+              "category": [
+                null
+              ],
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "collaborators": [],
+                "privacy": "public"
+              },
+              "style": "gloria",
+              "label": null,
+              "language": "en",
+              "version_label": "EOW"
+            }
+          ]
+        }
+      },
+      "slug": "canticle-10",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Seek the Lord while he wills to be found; *",
+              "halfverse": "call upon him when he draws near.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let the wicked forsake their ways *",
+              "halfverse": "and the evil ones their thoughts;",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and to our God, for he will richly pardon.",
+              "type": "psalm-verse",
+              "verse": "And let them turn to the Lord, and he will have compassion, *"
+            },
+            {
+              "verse": "For my thoughts are not your thoughts, *",
+              "halfverse": "nor your ways my ways, says the Lord.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For as the heavens are higher than the earth, *",
+              "type": "psalm-verse",
+              "halfverse": "so are my ways higher than your ways,\nand my thoughts than your thoughts."
+            },
+            {
+              "halfverse": "and return not again, but water the earth,",
+              "type": "psalm-verse",
+              "verse": "For as rain and snow fall from the heavens *"
+            },
+            {
+              "verse": "Bringing forth life and giving growth, *",
+              "halfverse": "seed for sowing and bread for eating,",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "it will not return to me empty;",
+              "type": "psalm-verse",
+              "verse": "So is my word that goes forth from my mouth; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and prosper in that for which I sent it.",
+              "verse": "But it will accomplish that which I have purposed, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "label": "Canticle 10: The Second Song of Isaiah",
+      "version": "bcp1979",
+      "type": "psalm",
+      "category": [
+        "Canticle"
+      ],
+      "style": "canticle",
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "collaborators": [],
+        "organization": "venite",
+        "status": "published"
+      },
+      "citation": "Isaiah 55:6-11",
+      "version_label": null
     },
     {
-      "style": "long",
-      "type": "bible-reading",
       "hidden": false,
       "label": "The Second Lesson",
-      "version": {
-        "preference": "bibleVersion"
-      },
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "is": false,
-              "key": "readingB",
-              "value": "none"
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "metadata": {
-        "intro": {
-          "language": "en",
-          "value": [
-            "A Reading from ${longName}."
-          ],
-          "style": "text",
-          "type": "text",
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "sharing": {
-            "status": "published",
-            "privacy": "public",
-            "organization": "venite"
-          }
-        }
-      },
-      "source": {
-        "citation": "",
-        "source": "",
-        "api": ""
-      },
+      "type": "bible-reading",
+      "version": "NRSV",
+      "category": [],
+      "style": "long",
       "lookup": {
         "type": "lectionary",
         "item": {
@@ -1525,278 +2582,837 @@ ldf-psalm .psalm br {
           "preference": "lectionary"
         }
       },
-      "category": []
-    },
-    {
-      "type": "text",
-      "hidden": false,
-      "lookup": {
-        "type": "slug"
-      },
-      "metadata": {},
-      "category": [],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "value": "none",
-              "key": "readingB",
-              "is": false
-            }
-          }
-        ]
-      },
       "source": {
-        "citation": "",
+        "source": "",
         "api": "",
-        "source": ""
+        "citation": ""
       },
-      "slug": "word-of-the-lord",
-      "style": "text"
-    },
-    {
-      "hidden": false,
-      "lookup": {
-        "item": 2,
-        "table": {
-          "preference": "canticleTable"
-        },
-        "type": "canticle"
-      },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "key": "readingB",
-              "is": false,
-              "value": "none"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "label": "The Third Lesson",
-      "hidden": false,
-      "type": "bible-reading",
-      "lookup": {
-        "item": {
-          "preference": "readingC"
-        },
-        "type": "lectionary",
-        "table": {
-          "preference": "lectionary"
-        }
-      },
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "key": "readingC",
-              "value": "none",
-              "is": false
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "category": [],
       "metadata": {
         "intro": {
-          "language": "en",
-          "type": "text",
-          "sharing": {
-            "organization": "venite",
-            "status": "published",
-            "privacy": "public"
-          },
+          "style": "text",
           "category": [
             "Bible Reading Introduction"
           ],
           "value": [
             "A Reading from ${longName}."
           ],
-          "style": "text"
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "type": "text",
+          "language": "en"
+        },
+        "compiled_intro": {
+          "hidden": false,
+          "style": "text",
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "value": [
+            "A Reading from the Gospel According to Luke."
+          ],
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public"
+          },
+          "type": "text",
+          "language": "en"
         }
       },
-      "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
-      },
-      "version": {
-        "preference": "bibleVersion"
-      },
-      "style": "long"
-    },
-    {
-      "category": [],
-      "style": "gloria",
-      "slug": "holy_saturday_reading",
-      "lookup": {
-        "type": "slug"
-      },
-      "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
-      },
-      "type": "refrain",
-      "hidden": false,
-      "metadata": {},
-      "condition": {
-        "conditions": [
-          {
-            "weekday": {
-              "except": [],
-              "only": [
-                "Saturday"
-              ]
-            },
-            "season": {
-              "only": [
-                "HolyWeek"
-              ],
-              "except": []
-            }
-          }
-        ],
-        "mode": "and"
-      }
-    },
-    {
-      "category": [],
-      "style": "text",
-      "metadata": {
-        "level": 3
-      },
-      "type": "heading",
       "condition": {
         "conditions": [
           {
             "preference": {
-              "key": "sermon",
-              "is": true,
-              "value": "after_readings"
+              "key": "readingB",
+              "value": "none",
+              "is": false
             }
           }
         ],
         "mode": "and"
       },
-      "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       },
-      "hidden": false,
+      "citation": "Luke 6:12-26",
+      "language": "en",
       "value": [
-        "The Sermon"
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "12",
+          "text": "Now during those days he went out to the mountain to pray; and he spent the night in prayer to God. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "13",
+          "text": "And when day came, he called his disciples and chose twelve of them, whom he also named apostles: "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "14",
+          "text": "Simon, whom he named Peter, and his brother Andrew, and James, and John, and Philip, and Bartholomew, "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "15",
+          "text": "and Matthew, and Thomas, and James son of Alphaeus, and Simon, who was called the Zealot, "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "16",
+          "text": "and Judas son of James, and Judas Iscariot, who became a traitor. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "17",
+          "text": "He came down with them and stood on a level place, with a great crowd of his disciples and a great multitude of people from all Judea, Jerusalem, and the coast of Tyre and Sidon. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "18",
+          "text": "They had come to hear him and to be healed of their diseases; and those who were troubled with unclean spirits were cured. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "19",
+          "text": "And all in the crowd were trying to touch him, for power came out from him and healed all of them. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "20",
+          "text": "Then he looked up at his disciples and said: &#147;Blessed are you who are poor, for yours is the kingdom of God. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "21",
+          "text": "&#147;Blessed are you who are hungry now, for you will be filled. &#147;Blessed are you who weep now, for you will laugh. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "22",
+          "text": "&#147;Blessed are you when people hate you, and when they exclude you, revile you, and defame you on account of the Son of Man. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "23",
+          "text": "Rejoice in that day and leap for joy, for surely your reward is great in heaven; for that is what their ancestors did to the prophets. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "24",
+          "text": "&#147;But woe to you who are rich, for you have received your consolation. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "25",
+          "text": "&#147;Woe to you who are full now, for you will be hungry. &#147;Woe to you who are laughing now, for you will mourn and weep. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "6",
+          "verse": "26",
+          "text": "&#147;Woe to you when all speak well of you, for that is what their ancestors did to the false prophets. "
+        }
       ]
     },
     {
       "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0
+      },
+      "value": [
+        {
+          "label": "",
+          "style": "text",
+          "language": "en",
+          "value": [
+            "Here ends the Reading."
+          ],
+          "lastRevision": 14,
+          "source": {
+            "citation": "",
+            "api": "",
+            "source": ""
+          },
+          "version": "bcp1979",
+          "slug": "word-of-the-lord",
+          "metadata": {},
+          "type": "text",
+          "hidden": false,
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public",
+            "status": "published"
+          },
+          "category": []
+        },
+        {
+          "value": [
+            {
+              "text": "The Word of the Lord.",
+              "response": "Thanks be to God."
+            }
+          ],
+          "slug": "word-of-the-lord",
+          "category": [],
+          "version_label": "The Word of the Lord",
+          "style": "responsive",
+          "type": "responsive",
+          "lastRevision": 12,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "language": "en",
+          "metadata": {},
+          "version": "bcp1979",
+          "label": "",
+          "hidden": false,
+          "source": {
+            "citation": "",
+            "api": "",
+            "source": ""
+          }
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "type": "psalm",
+          "citation": "Revelation 4:11, 5:9-10, 13",
+          "label": "Canticle 18: A Song to the Lamb",
+          "version": "bcp1979",
+          "language": "en",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published"
+          },
+          "version_label": null,
+          "style": "canticle",
+          "metadata": {
+            "omit_antiphon": false,
+            "number": "18",
+            "latinname": "Dignus es",
+            "localname": "A Song to the Lamb",
+            "omit_gloria": false,
+            "gloria": {
+              "hidden": false,
+              "type": "option",
+              "metadata": {
+                "selected": 0
+              },
+              "value": [
+                {
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "collaborators": [],
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "status": "published"
+                  },
+                  "hidden": false,
+                  "type": "refrain",
+                  "value": [
+                    "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                    "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+                  ],
+                  "language": "en",
+                  "style": "gloria",
+                  "label": null,
+                  "version_label": "Rite II",
+                  "citation": null,
+                  "version": "bcp1979",
+                  "slug": "gloria-patri",
+                  "category": [
+                    null
+                  ]
+                },
+                {
+                  "slug": "gloria-patri",
+                  "style": "gloria",
+                  "value": [
+                    "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+                    "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+                  ],
+                  "type": "refrain",
+                  "version": "rite_i",
+                  "category": [
+                    null
+                  ],
+                  "sharing": {
+                    "privacy": "public",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": [],
+                    "organization": "venite"
+                  },
+                  "language": "en",
+                  "citation": null,
+                  "hidden": false,
+                  "label": null,
+                  "version_label": ""
+                },
+                {
+                  "type": "refrain",
+                  "citation": null,
+                  "value": [
+                    "Praise to the holy and undivided Trinity, one God:  ",
+                    "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+                  ],
+                  "version": "eow",
+                  "hidden": false,
+                  "slug": "gloria-patri",
+                  "category": [
+                    null
+                  ],
+                  "sharing": {
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "organization": "venite",
+                    "status": "published",
+                    "collaborators": [],
+                    "privacy": "public"
+                  },
+                  "style": "gloria",
+                  "label": null,
+                  "language": "en",
+                  "version_label": "EOW"
+                }
+              ]
+            }
+          },
+          "category": [
+            "Canticle"
+          ],
+          "slug": "canticle-18",
+          "value": [
+            {
+              "value": [
+                {
+                  "verse": "Splendor and honor and kingly power *",
+                  "halfverse": "are yours by right, O Lord our God,",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and by your will they were created and have their being;",
+                  "type": "psalm-verse",
+                  "verse": "For you created everything that is, *"
+                },
+                {
+                  "halfverse": "for with your blood you have redeemed for God,",
+                  "type": "psalm-verse",
+                  "verse": "And yours by right, O Lamb that was slain, *"
+                },
+                {
+                  "verse": "From every family, language, people, and nation, *",
+                  "type": "psalm-verse",
+                  "halfverse": "a kingdom of priests to serve our God."
+                },
+                {
+                  "verse": "And so, to him who sits upon the throne, *",
+                  "halfverse": "and to Christ the Lamb,",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Be worship and praise, dominion and splendor, *",
+                  "halfverse": "for ever and for evermore."
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ]
+        },
+        {
+          "hidden": false,
+          "sharing": {
+            "status": "published",
+            "collaborators": [],
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public"
+          },
+          "language": "en",
+          "style": "canticle",
+          "slug": "canticle-18",
+          "category": [
+            "Canticle"
+          ],
+          "version": "eow",
+          "label": "Canticle 18: A Song to the Lamb",
+          "citation": "Revelation 4:11, 5:9-10, 13",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "are yours by right, O God Most High,",
+                  "verse": "Splendor and honor and royal power *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and by your will they were created and have their being;",
+                  "verse": "For you created everything that is, *"
+                },
+                {
+                  "halfverse": "for with your blood you have redeemed for God,",
+                  "verse": "And yours by right, O Lamb that was slain, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "From every family, language, people, and nation, *",
+                  "type": "psalm-verse",
+                  "halfverse": "a royal priesthood to serve our God."
+                },
+                {
+                  "verse": "And so, to the One who sits upon the throne, *",
+                  "type": "psalm-verse",
+                  "halfverse": "and to Christ the Lamb,"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Be worship and praise, dominion and splendor, *",
+                  "halfverse": "for ever and for evermore."
+                }
+              ]
+            }
+          ],
+          "type": "psalm",
+          "version_label": null,
+          "metadata": {
+            "omit_gloria": false,
+            "omit_antiphon": false,
+            "latinname": "Dignus es",
+            "localname": "A Song to the Lamb",
+            "number": "18",
+            "gloria": {
+              "hidden": false,
+              "type": "option",
+              "metadata": {
+                "selected": 0
+              },
+              "value": [
+                {
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "collaborators": [],
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "status": "published"
+                  },
+                  "hidden": false,
+                  "type": "refrain",
+                  "value": [
+                    "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                    "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+                  ],
+                  "language": "en",
+                  "style": "gloria",
+                  "label": null,
+                  "version_label": "Rite II",
+                  "citation": null,
+                  "version": "bcp1979",
+                  "slug": "gloria-patri",
+                  "category": [
+                    null
+                  ]
+                },
+                {
+                  "slug": "gloria-patri",
+                  "style": "gloria",
+                  "value": [
+                    "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+                    "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+                  ],
+                  "type": "refrain",
+                  "version": "rite_i",
+                  "category": [
+                    null
+                  ],
+                  "sharing": {
+                    "privacy": "public",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": [],
+                    "organization": "venite"
+                  },
+                  "language": "en",
+                  "citation": null,
+                  "hidden": false,
+                  "label": null,
+                  "version_label": ""
+                },
+                {
+                  "type": "refrain",
+                  "citation": null,
+                  "value": [
+                    "Praise to the holy and undivided Trinity, one God:  ",
+                    "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+                  ],
+                  "version": "eow",
+                  "hidden": false,
+                  "slug": "gloria-patri",
+                  "category": [
+                    null
+                  ],
+                  "sharing": {
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "organization": "venite",
+                    "status": "published",
+                    "collaborators": [],
+                    "privacy": "public"
+                  },
+                  "style": "gloria",
+                  "label": null,
+                  "language": "en",
+                  "version_label": "EOW"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    null,
+    null,
+    null,
+    {
+      "hidden": false,
+      "response": "Amen.",
+      "type": "text",
       "style": "text",
-      "label": "The Apostles’ Creed",
-      "metadata": {},
+      "category": [],
+      "value": [
+        "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
+      ],
       "source": {
         "citation": "p. 96",
         "source": "bcp1979",
         "api": ""
       },
-      "type": "text",
-      "response": "Amen.",
-      "value": [
-        "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
-      ],
-      "category": []
+      "metadata": {},
+      "label": "The Apostles’ Creed",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
       "hidden": false,
-      "type": "heading",
       "metadata": {
         "level": 2
       },
       "style": "text",
+      "type": "heading",
+      "category": [],
       "value": [
         "The Prayers"
       ],
       "source": {
         "source": "",
-        "citation": "",
-        "api": ""
+        "api": "",
+        "citation": ""
       },
-      "category": []
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
       "hidden": false,
+      "style": "preces",
+      "type": "responsive",
       "value": [
         {
-          "response": "",
           "text": "The Lord be with you.",
+          "response": "",
           "label": "Officiant"
         },
         {
-          "text": "And also with you.",
-          "label": "People"
+          "label": "People",
+          "text": "And also with you."
         },
         {
           "text": "Let us pray.",
           "label": "Officiant"
         }
       ],
-      "style": "preces",
-      "type": "responsive"
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 1,
+        "selected": 0
+      },
       "value": [
         {
           "hidden": false,
-          "source": {
-            "source": "",
-            "api": "",
-            "citation": ""
-          },
-          "style": "prayer",
-          "label": "The Lord’s Prayer",
           "value": [
             "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
           ],
-          "metadata": {},
           "category": [],
+          "style": "prayer",
+          "metadata": {},
+          "type": "text",
           "version_label": "Traditional",
-          "type": "text"
-        },
-        {
-          "hidden": false,
-          "value": [
-            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
-          ],
-          "version_label": "Contemporary",
-          "metadata": {},
-          "category": [],
           "source": {
             "citation": "",
             "api": "",
             "source": ""
           },
+          "label": "The Lord’s Prayer",
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "category": [],
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "metadata": {},
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "version_label": "Contemporary",
           "style": "prayer",
-          "type": "text"
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         }
       ],
-      "hidden": false,
       "type": "option",
-      "metadata": {
-        "selected": 0,
-        "editor_selected": 1
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       }
     },
     {
       "hidden": false,
-      "type": "option",
       "value": [
         {
+          "hidden": false,
+          "style": "preces",
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "label": "Suffrages A",
+          "category": [],
+          "metadata": {},
           "value": [
             {
               "text": "Show us your mercy, O Lord;",
@@ -1804,12 +3420,12 @@ ldf-psalm .psalm br {
               "label": "V."
             },
             {
-              "label": "R.",
-              "text": "And grant us your salvation."
+              "text": "And grant us your salvation.",
+              "label": "R."
             },
             {
-              "label": "V.",
-              "text": "Clothe your ministers with righteousness;"
+              "text": "Clothe your ministers with righteousness;",
+              "label": "V."
             },
             {
               "label": "R.",
@@ -1820,16 +3436,16 @@ ldf-psalm .psalm br {
               "text": "Give peace, O Lord, in all the world;"
             },
             {
-              "label": "R.",
-              "text": "For only in you can we live in safety."
+              "text": "For only in you can we live in safety.",
+              "label": "R."
             },
             {
               "label": "V.",
               "text": "Lord, keep this nation under your care; "
             },
             {
-              "text": "And guide us in the way of justice and truth.",
-              "label": "R."
+              "label": "R.",
+              "text": "And guide us in the way of justice and truth."
             },
             {
               "label": "V.",
@@ -1840,8 +3456,8 @@ ldf-psalm .psalm br {
               "text": "Your saving health among all nations."
             },
             {
-              "label": "V.",
-              "text": "Let not the needy, O Lord, be forgotten;"
+              "text": "Let not the needy, O Lord, be forgotten;",
+              "label": "V."
             },
             {
               "label": "R.",
@@ -1852,46 +3468,60 @@ ldf-psalm .psalm br {
               "text": "Create in us clean hearts, O God;"
             },
             {
-              "label": "R.",
-              "text": "And sustain us with your Holy Spirit."
+              "text": "And sustain us with your Holy Spirit.",
+              "label": "R."
             }
           ],
-          "category": [],
-          "hidden": false,
-          "metadata": {},
-          "label": "Suffrages A",
-          "source": {
-            "api": "",
-            "citation": "",
-            "source": ""
-          },
           "type": "responsive",
-          "style": "preces"
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         },
         {
-          "source": {
-            "citation": "",
-            "api": "",
-            "source": ""
-          },
           "hidden": false,
+          "metadata": {},
+          "style": "preces",
           "value": [
             {
-              "text": "Save your people, Lord, and bless your inheritance;",
+              "response": "",
               "label": "V.",
-              "response": ""
+              "text": "Save your people, Lord, and bless your inheritance;"
             },
             {
-              "text": "Govern and uphold them, now and always.",
-              "label": "R."
+              "label": "R.",
+              "text": "Govern and uphold them, now and always."
             },
             {
               "text": "Day by day we bless you;",
               "label": "V."
             },
             {
-              "text": "We praise your name for ever.",
-              "label": "R."
+              "label": "R.",
+              "text": "We praise your name for ever."
             },
             {
               "label": "V.",
@@ -1906,12 +3536,12 @@ ldf-psalm .psalm br {
               "label": "V."
             },
             {
-              "label": "R.",
-              "text": "For we put our trust in you."
+              "text": "For we put our trust in you.",
+              "label": "R."
             },
             {
-              "text": "In you, Lord, is our hope;",
-              "label": "V."
+              "label": "V.",
+              "text": "In you, Lord, is our hope;"
             },
             {
               "label": "R.",
@@ -1919,84 +3549,112 @@ ldf-psalm .psalm br {
             }
           ],
           "label": "Suffrages B",
-          "style": "preces",
+          "type": "responsive",
+          "source": {
+            "api": "",
+            "source": "",
+            "citation": ""
+          },
           "category": [],
-          "metadata": {},
-          "type": "responsive"
+          "day": {
+            "evening": false,
+            "date": "2020-10-2",
+            "kalendar": "bcp1979",
+            "slug": "friday-17th-pentecost",
+            "propers": "friday-proper-21",
+            "week": {
+              "omit_the": false,
+              "name": "Seventeenth Sunday after Pentecost",
+              "slug": "17th-pentecost",
+              "kalendar": "bcp1979",
+              "season": "OrdinaryTime",
+              "cycle": "Easter",
+              "week": 31,
+              "color": "Green",
+              "proper": 21,
+              "propers": "proper-21"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
         }
       ],
+      "type": "option",
       "metadata": {
         "editor_selected": 1,
         "selected": 0
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       }
     },
     {
+      "hidden": false,
+      "value": [
+        "O God, you declare your almighty power chiefly in showing mercy and pity:  Grant us the fullness of your grace, that we, running to obtain your promises, may become partakers of your heavenly treasure; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": [
+        "Collect",
+        "Collect of the Day"
+      ],
+      "slug": "proper-21",
       "style": "prayer",
       "metadata": {
-        "omit_response": false
-      },
-      "hidden": false,
-      "language": "en",
-      "label": "The Collect of the Day",
-      "source": {
-        "citation": "",
-        "source": "",
-        "api": ""
+        "omit_response": false,
+        "response": "Amen."
       },
       "version": "bcp1979",
+      "language": "en",
       "type": "text",
-      "lookup": {
-        "type": "collect"
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite",
+        "status": "published",
+        "collaborators": []
       },
-      "category": []
+      "label": "The Collect of the Day"
     },
+    null,
     {
-      "metadata": {
-        "omit_response": false
-      },
-      "slug": "mp_daily_collect",
-      "type": "text",
-      "condition": {
-        "conditions": [
-          {
-            "weekday": {
-              "only": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday"
-              ],
-              "except": []
-            }
-          }
-        ],
-        "mode": "and"
-      },
       "hidden": false,
-      "language": "en",
-      "version": "bcp1979",
-      "lookup": {
-        "rotate": true,
-        "filter": "—",
-        "type": "slug"
-      },
-      "category": [],
-      "value": [
-        ""
-      ],
       "source": {
-        "citation": "",
         "api": "",
-        "source": ""
+        "source": "",
+        "citation": ""
       },
-      "style": "prayer"
-    },
-    {
-      "value": [
-        "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other than the way of life and peace; through Jesus Christ our Lord."
-      ],
+      "style": "prayer",
       "condition": {
-        "mode": "and",
         "conditions": [
           {
             "weekday": {
@@ -2006,188 +3664,265 @@ ldf-psalm .psalm br {
               "except": []
             }
           }
-        ]
-      },
-      "style": "prayer",
-      "category": [],
-      "type": "text",
-      "label": "A Collect for Fridays",
-      "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
-      },
-      "hidden": false,
-      "metadata": {}
-    },
-    {
-      "value": [
-        "Almighty God, who after the creation of the world rested from all your works and sanctified a day of rest for all your creatures: Grant that we, putting away all earthly anxieties, may be duly prepared for the service of your sanctuary, and that our rest here upon earth may be a preparation for the eternal rest promised to your people in heaven; through Jesus Christ our Lord."
-      ],
-      "metadata": {},
-      "label": "A Collect for Saturdays",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "weekday": {
-              "only": [
-                "Saturday"
-              ],
-              "except": []
-            }
-          }
-        ]
-      },
-      "type": "text",
-      "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
-      },
-      "style": "prayer",
-      "category": [],
-      "hidden": false
-    },
-    {
-      "source": {
-        "citation": "",
-        "source": "",
-        "api": ""
-      },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "weekday": {
-              "except": [],
-              "only": [
-                "Sunday"
-              ]
-            }
-          }
-        ]
-      },
-      "value": [
-        "O God, you make us glad with the weekly remembrance of the glorious resurrection of your Son our Lord: Give us this day such blessing through our worship of you, that the week to come may be spent in your favor; through Jesus Christ our Lord."
-      ],
-      "category": [],
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "metadata": {},
-      "label": "A Collect for Sundays"
-    },
-    {
-      "version": "bcp1979",
-      "type": "text",
-      "language": "en",
-      "category": [],
-      "slug": "mp_prayers_for_mission",
-      "value": [
-        ""
-      ],
-      "style": "prayer",
-      "hidden": false,
-      "metadata": {
-        "omit_response": false
-      },
-      "lookup": {
-        "type": "slug",
-        "rotate": true
-      },
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      }
-    },
-    {
-      "category": [],
-      "value": [
-        "The Sermon"
-      ],
-      "style": "text",
-      "type": "heading",
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "value": "after_collects",
-              "is": true,
-              "key": "sermon"
-            }
-          }
         ],
         "mode": "and"
       },
-      "metadata": {
-        "level": 3
-      },
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
-      "hidden": false
+      "type": "text",
+      "value": [
+        "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other than the way of life and peace; through Jesus Christ our Lord."
+      ],
+      "label": "A Collect for Fridays",
+      "category": [],
+      "metadata": {},
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
+    null,
+    null,
     {
-      "type": "rubric",
+      "language": "en",
+      "lastRevision": 30,
+      "type": "text",
+      "category": [],
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "style": "prayer",
+      "version": "bcp1979",
+      "slug": "mp_prayers_for_mission",
       "hidden": false,
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public"
+      },
+      "label": "A Prayer for Mission",
+      "value": [
+        "Lord Jesus Christ, you stretched out your arms of love on the hard wood of the cross that everyone might come within the reach of your saving embrace: So clothe us in your Spirit that we, reaching forth our hands in love, may bring those who do not know you to the knowledge and love of you; for the honor of your Name."
+      ]
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "rubric",
       "value": [
         "Here may be sung a hymn or anthem.",
         "Authorized intercessions and thanksgivings may follow."
-      ]
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
+      "hidden": false,
+      "type": "rubric",
       "value": [
         "Before the close of the Office one or both of the following may be used"
       ],
-      "type": "rubric",
-      "hidden": false
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
-      "source": {
-        "source": "bcp1979",
-        "api": "",
-        "citation": "p. 101"
-      },
       "hidden": false,
-      "metadata": {},
+      "category": [],
       "value": [
         "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
         "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages. "
       ],
-      "label": "The General Thanksgiving",
-      "category": [],
+      "metadata": {},
       "type": "text",
-      "style": "prayer"
+      "source": {
+        "api": "",
+        "source": "bcp1979",
+        "citation": "p. 101"
+      },
+      "label": "The General Thanksgiving",
+      "style": "prayer",
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
-      "type": "text",
-      "category": [],
-      "style": "prayer",
       "hidden": false,
-      "metadata": {},
-      "source": {
-        "citation": "p. 102",
-        "source": "bcp1979",
-        "api": ""
-      },
+      "category": [],
+      "type": "text",
+      "label": "A Prayer of St. Chrysostom",
       "value": [
         "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
       ],
-      "label": "A Prayer of St. Chrysostom"
+      "metadata": {},
+      "style": "prayer",
+      "source": {
+        "source": "bcp1979",
+        "api": "",
+        "citation": "p. 102"
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
+      "hidden": false,
       "value": [
         "Then may be said"
       ],
       "type": "rubric",
-      "hidden": false
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
     },
     {
-      "type": "responsive",
+      "hidden": false,
       "condition": {
         "mode": "and",
         "conditions": [
@@ -2204,524 +3939,134 @@ ldf-psalm .psalm br {
         ]
       },
       "style": "responsive",
-      "hidden": false,
+      "type": "responsive",
       "value": [
         {
           "label": "",
-          "text": "Let us bless the Lord.",
-          "response": "Thanks be to God."
-        }
-      ]
-    },
-    {
-      "value": [
-        {
-          "text": "Let us bless the Lord. Alleluia, alleluia.",
-          "response": "Thanks be to God. Alleluia, alleluia",
-          "label": ""
+          "response": "Thanks be to God.",
+          "text": "Let us bless the Lord."
         }
       ],
-      "type": "responsive",
-      "style": "responsive",
-      "hidden": false,
-      "condition": {
-        "conditions": [
-          {
-            "season": {
-              "only": [
-                "Easter",
-                "Ascension",
-                "Pentecost"
-              ],
-              "except": []
-            }
-          }
-        ],
-        "mode": "and"
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
       }
     },
+    null,
     {
+      "hidden": false,
+      "type": "rubric",
       "value": [
         "The Officiant may then conclude with one of the following"
       ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-2",
+        "kalendar": "bcp1979",
+        "slug": "friday-17th-pentecost",
+        "propers": "friday-proper-21",
+        "week": {
+          "omit_the": false,
+          "name": "Seventeenth Sunday after Pentecost",
+          "slug": "17th-pentecost",
+          "kalendar": "bcp1979",
+          "season": "OrdinaryTime",
+          "cycle": "Easter",
+          "week": 31,
+          "color": "Green",
+          "proper": 21,
+          "propers": "proper-21"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
       "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "style": "short",
-      "lookup": {
-        "rotate": true,
-        "type": "category"
-      },
-      "type": "bible-reading",
-      "category": [
-        "Closing Sentence"
-      ],
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
-      "metadata": {
-        "level": 3,
-        "omit_response": false
-      },
-      "style": "text",
-      "category": [],
-      "type": "heading",
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "is": true,
-              "key": "sermon",
-              "value": "after_office"
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "value": [
-        "The Sermon"
-      ]
-    },
-    {
-      "language": "en",
       "metadata": {},
-      "hidden": false,
-      "lastRevision": 61,
-      "label": "The Angelus",
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "key": "angelus",
-              "value": "after",
-              "is": true
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "slug": "the-angelus",
-      "lookup": {
-        "type": "slug"
-      },
-      "type": "liturgy",
-      "version": "Rite-II",
+      "type": "bible-reading",
+      "version": "bcp1979",
       "sharing": {
         "status": "published",
         "collaborators": [],
         "organization": "venite",
         "privacy": "public",
         "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-      }
-    },
-    {
-      "label": "The Angelus",
-      "slug": "andrewes-morning",
-      "language": "en",
-      "sharing": {
-        "organization": "venite",
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "status": "published",
-        "collaborators": []
       },
-      "type": "liturgy",
-      "lookup": {
-        "type": "slug"
-      },
-      "lastRevision": 61,
-      "version": "Rite-II",
-      "category": [],
+      "slug": "closing_sentence",
+      "category": [
+        "Closing Sentence"
+      ],
+      "style": "short",
+      "value": [
+        {
+          "book": "Romans",
+          "verse": "13",
+          "text": "May the God of hope fill us with all joy and peace in believing through the power of the Holy Spirit.",
+          "chapter": "15"
+        }
+      ],
+      "citation": "Romans 15:13",
+      "lastRevision": 20,
       "source": {
-        "api": "",
         "citation": "",
+        "api": "",
         "source": ""
       },
-      "metadata": {
-        "evening": false,
-        "liturgyversions": [],
-        "supplement": false
-      },
-      "hidden": false,
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "value": "after",
-              "is": true,
-              "key": "andrewes"
-            }
-          }
-        ]
-      }
-    }
+      "language": "en"
+    },
+    null,
+    null,
+    null
   ],
-  "source": {
-    "source": "",
-    "api": "",
-    "citation": ""
-  },
-  "version": "Rite-II"
-}
-
-const LITURGY2 = {
-  "hidden": false,
-  "language": "en",
-  "version": "BCP1962",
-  "slug": "noonday-prayer",
-  "value": [
-    {
-      "hidden": false,
-      "value": [
-        "Prayers at Mid-Day"
-      ],
-      "metadata": {
-        "level": 1
-      },
-      "type": "heading",
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "heading",
-      "metadata": {
-        "level": 2
-      },
-      "value": [
-        "For Missions"
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "heading",
-      "style": "date",
-      "metadata": {
-        "level": 2
-      },
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "heading",
-      "style": "day",
-      "metadata": {
-        "level": 2
-      },
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "value": [
-        "Our Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil. For thine is the kingdom, the power, and the glory, For ever and ever."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "refrain",
-      "style": "antiphon",
-      "value": [
-        "And I, if I be lifted up, will draw all men unto me."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "value": [
-        "Blessed Saviour, who at this hour didst hang upon the cross stretching out thy loving arms: Grant that all mankind may look unto thee and be saved; who livest and reignest with the Father and the Holy Ghost, ever one God, world without end."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "refrain",
-      "style": "antiphon",
-      "value": [
-        "At mid-day, O king, I saw a light above the brightness of the sun."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "value": [
-        "Almighty Saviour, who at mid-day didst call thy servant Saint Paul to be an Apostle to the Gentiles: We beseech thee to illumine the world with the radiance of thy glory, that all nations may come and worship thee; who art, with the Father and the Holy Ghost, one God, world without end."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "refrain",
-      "style": "antiphon",
-      "value": [
-        "Peter went up upon the house-top to pray, about the sixth hour."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "value": [
-        "Father of mercies, who to thine Apostle Saint Peter didst reveal in three-fold vision thy boundless compassion: Forgive, we pray thee, our unbelief, and so enlarge our hearts, and enkindle our zeal, that we may fervently desire the salvation of all men, and with more ready diligence labour in the extension of thy kingdom; for his sake, who gave himself for the life of the world, thy Son our Saviour Jesus Christ."
-      ],
-      "day": {
-        "evening": false,
-        "date": "2020-9-27",
-        "kalendar": "bcp1962",
-        "slug": "sunday-sixteenth-sunday-after-trinity",
-        "propers": "sunday-sixteenth-sunday-after-trinity",
-        "week": {
-          "cycle": "Easter",
-          "week": 33,
-          "season": "OrdinaryTime",
-          "name": "Sixteenth Sunday after Trinity",
-          "slug": "sixteenth-sunday-after-trinity"
-        },
-        "years": {
-          "bcp1979_daily_office": 2,
-          "bcp1979_daily_psalms": 2,
-          "rclsunday": "A"
-        },
-        "holy_days": [],
-        "season": "SundayOrdinaryTime"
-      }
-    }
-  ],
-  "label": "Prayers at Mid-Day",
-  "sharing": {
-    "privacy": "organization",
-    "collaborators": [],
-    "status": "draft",
-    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-  },
   "type": "liturgy",
+  "label": "Morning Prayer",
   "day": {
     "evening": false,
-    "date": "2020-9-27",
-    "kalendar": "bcp1962",
-    "slug": "sunday-sixteenth-sunday-after-trinity",
-    "propers": "sunday-sixteenth-sunday-after-trinity",
+    "date": "2020-10-2",
+    "kalendar": "bcp1979",
+    "slug": "friday-17th-pentecost",
+    "propers": "friday-proper-21",
     "week": {
-      "cycle": "Easter",
-      "week": 33,
+      "omit_the": false,
+      "name": "Seventeenth Sunday after Pentecost",
+      "slug": "17th-pentecost",
+      "kalendar": "bcp1979",
       "season": "OrdinaryTime",
-      "name": "Sixteenth Sunday after Trinity",
-      "slug": "sixteenth-sunday-after-trinity"
+      "cycle": "Easter",
+      "week": 31,
+      "color": "Green",
+      "proper": 21,
+      "propers": "proper-21"
     },
     "years": {
       "bcp1979_daily_office": 2,
@@ -2729,10 +4074,10 @@ const LITURGY2 = {
       "rclsunday": "A"
     },
     "holy_days": [],
-    "season": "SundayOrdinaryTime"
+    "season": "OrdinaryTime",
+    "color": "Green"
   }
 }
-
 
 
 const node = document.createElement('ldf-liturgical-document');

@@ -22,7 +22,7 @@
 
 ### Depends on
 
-- [ldf-refrain](../refrain)
+- [ldf-liturgical-document](../liturgical-document)
 - [ldf-heading](../heading)
 - [ldf-label-bar](../label-bar)
 - [ldf-editable-text](../editable-text)
@@ -31,19 +31,64 @@
 ### Graph
 ```mermaid
 graph TD;
-  ldf-psalm --> ldf-refrain
+  ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-refrain --> ldf-label-bar
-  ldf-refrain --> ldf-editable-text
-  ldf-editable-text --> ion-input
+  ldf-liturgical-document --> ldf-psalm
+  ldf-liturgy --> ldf-liturgical-document
+  ldf-liturgy --> ldf-editable-add-block
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
-  ldf-liturgical-document --> ldf-psalm
+  ldf-editable-text --> ion-input
+  ldf-meditation --> ion-button
+  ldf-meditation --> ion-icon
+  ldf-meditation --> ion-label
+  ldf-meditation --> ldf-label-bar
+  ldf-option --> ion-segment
+  ldf-option --> ion-segment-button
+  ldf-option --> ion-label
+  ldf-option --> ion-toolbar
+  ldf-option --> ion-select
+  ldf-option --> ion-select-option
+  ldf-option --> ion-buttons
+  ldf-option --> ion-button
+  ldf-option --> ion-icon
+  ldf-option --> ldf-label-bar
+  ldf-option --> ldf-liturgical-document
+  ion-segment-button --> ion-ripple-effect
+  ldf-refrain --> ldf-label-bar
+  ldf-refrain --> ldf-editable-text
+  ldf-rubric --> ldf-label-bar
+  ldf-rubric --> ldf-editable-text
+  ldf-text --> ldf-label-bar
+  ldf-text --> ldf-heading
+  ldf-text --> ldf-editable-text
+  ldf-text --> ldf-string
+  ldf-responsive-prayer --> ldf-editable-text
+  ldf-responsive-prayer --> ldf-string
+  ldf-responsive-prayer --> ldf-label-bar
+  ldf-responsive-prayer --> ldf-heading
+  ldf-bible-reading --> ldf-label-bar
+  ldf-bible-reading --> ldf-heading
+  ldf-bible-reading --> ldf-editable-text
+  ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-string
+  ldf-editable-metadata-buttons --> ldf-label-bar
+  ldf-editable-metadata-buttons --> ion-buttons
+  ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-icon
+  ldf-editable-metadata-buttons --> ldf-editable-delete
+  ldf-editable-delete --> ion-buttons
+  ldf-editable-delete --> ion-button
+  ldf-editable-delete --> ion-icon
   style ldf-psalm fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

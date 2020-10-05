@@ -32,6 +32,7 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
+ - [ldf-editable-antiphon-field](../editable-antiphon-field)
  - [ldf-editable-condition-piece](../editable-condition-piece)
  - [ldf-editable-lookup](../editable-lookup)
  - [ldf-editable-metadata](../editable-metadata)
@@ -54,6 +55,7 @@
 graph TD;
   ldf-editable-text --> ion-input
   ldf-bible-reading --> ldf-editable-text
+  ldf-editable-antiphon-field --> ldf-editable-text
   ldf-editable-condition-piece --> ldf-editable-text
   ldf-editable-lookup --> ldf-editable-text
   ldf-editable-metadata --> ldf-editable-text

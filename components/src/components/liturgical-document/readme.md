@@ -30,9 +30,11 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
+ - [ldf-editable-antiphon-field](../editable-antiphon-field)
  - [ldf-editor](../editor)
  - [ldf-liturgy](../liturgy)
  - [ldf-option](../option)
+ - [ldf-psalm](../psalm)
 
 ### Depends on
 
@@ -93,11 +95,7 @@ graph TD;
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
   ldf-bible-reading --> ldf-liturgical-document
-  ldf-psalm --> ldf-refrain
-  ldf-psalm --> ldf-heading
-  ldf-psalm --> ldf-label-bar
-  ldf-psalm --> ldf-editable-text
-  ldf-psalm --> ldf-string
+  ldf-psalm --> ldf-liturgical-document
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
@@ -106,6 +104,7 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
+  ldf-editable-antiphon-field --> ldf-liturgical-document
   ldf-editor --> ldf-liturgical-document
   style ldf-liturgical-document fill:#f9f,stroke:#333,stroke-width:4px
 ```

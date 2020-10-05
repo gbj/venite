@@ -1,4 +1,4 @@
-# my-component
+# ldf-editable-antiphon-field
 
 
 
@@ -7,37 +7,65 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                             | Type                           | Default     |
-| --------- | --------- | ----------------------------------------------------------------------- | ------------------------------ | ----------- |
-| `cursors` | --        | Cursor positions of active users. Drills down to `<ldf-editor-cursors>` | `{ [user: string]: Cursor; }`  | `undefined` |
-| `doc`     | `doc`     | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string` | `undefined` |
-| `uid`     | `uid`     | Unique ID for the user editing in this editor                           | `string`                       | `undefined` |
-| `users`   | --        | Users currently active in the document                                  | `{ [uid: string]: User; }`     | `undefined` |
+| Property          | Attribute         | Description                                             | Type                                                       | Default     |
+| ----------------- | ----------------- | ------------------------------------------------------- | ---------------------------------------------------------- | ----------- |
+| `antiphon`        | `antiphon`        | Starting value for editing                              | `Refrain \| string \| { [x: string]: string \| Refrain; }` | `undefined` |
+| `insert_antiphon` | `insert_antiphon` |                                                         | `boolean`                                                  | `undefined` |
+| `omit_antiphon`   | `omit_antiphon`   |                                                         | `boolean`                                                  | `undefined` |
+| `path`            | `path`            | A JSON Pointer that points to the document being edited | `string`                                                   | `undefined` |
 
 
 ## Events
 
-| Event                        | Description                                                                                  | Type                                                                                              |
-| ---------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `editorAskForBibleIntros`    |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
-| `editorCursorMoved`          | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
-| `editorDocShouldAdd`         | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
-| `editorDocShouldChange`      | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
-| `editorShouldAddGloriaPatri` |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
 ## Dependencies
 
+### Used by
+
+ - [ldf-editable-metadata-metadata-fields](../editable-metadata-metadata-fields)
+
 ### Depends on
 
-- [ldf-label-bar](../label-bar)
+- ion-radio-group
+- ion-list-header
+- ion-label
+- ion-item
+- ion-radio
+- ion-grid
+- ion-row
+- ion-col
+- ion-toolbar
+- ion-buttons
+- ion-button
+- ion-icon
+- [ldf-editable-text](../editable-text)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
-  ldf-editor --> ldf-label-bar
-  ldf-editor --> ldf-liturgical-document
+  ldf-editable-antiphon-field --> ion-radio-group
+  ldf-editable-antiphon-field --> ion-list-header
+  ldf-editable-antiphon-field --> ion-label
+  ldf-editable-antiphon-field --> ion-item
+  ldf-editable-antiphon-field --> ion-radio
+  ldf-editable-antiphon-field --> ion-grid
+  ldf-editable-antiphon-field --> ion-row
+  ldf-editable-antiphon-field --> ion-col
+  ldf-editable-antiphon-field --> ion-toolbar
+  ldf-editable-antiphon-field --> ion-buttons
+  ldf-editable-antiphon-field --> ion-button
+  ldf-editable-antiphon-field --> ion-icon
+  ldf-editable-antiphon-field --> ldf-editable-text
+  ldf-editable-antiphon-field --> ldf-liturgical-document
+  ion-item --> ion-icon
+  ion-item --> ion-ripple-effect
+  ion-button --> ion-ripple-effect
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ion-skeleton-text
   ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
@@ -55,12 +83,10 @@ graph TD;
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label
-  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
-  ldf-editable-text --> ion-input
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
@@ -107,7 +133,8 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
-  style ldf-editor fill:#f9f,stroke:#333,stroke-width:4px
+  ldf-editable-metadata-metadata-fields --> ldf-editable-antiphon-field
+  style ldf-editable-antiphon-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
