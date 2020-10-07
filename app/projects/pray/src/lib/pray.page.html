@@ -15,18 +15,16 @@
 </ion-header>
 
 <ng-container *ngIf="doc$ | async as doc else loading">
-  <ng-container *ngIf="color$ | async as color else noborder">
-    <ion-content [fullscreen]="true" class="ion-padding bordered" [style.background]="color" [style.border-color]="color">
-      <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
-        <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
-      </div>
-    </ion-content>
-  </ng-container>
+  <ion-content *ngIf="useBackgroundColor" [fullscreen]="true" class="ion-padding bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
+    <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+      <ldf-liturgical-document [doc]="doc" [editable]="false"></ldf-liturgical-document>
+    </div>
+  </ion-content>
 
   <ng-template #noborder>
     <ion-content *ngIf="!useBackgroundColor || !(doc?.day?.color?.hex || doc?.day?.color)" [fullscreen]="true" class="ion-padding">
       <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
-        <ldf-liturgical-document [doc]="doc$ | async" [editable]="false"></ldf-liturgical-document>
+        <ldf-liturgical-document [doc]="doc" [editable]="false"></ldf-liturgical-document>
       </div>
     </ion-content>
   </ng-template>
