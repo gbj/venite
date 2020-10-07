@@ -1,9 +1,13 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
+
+interface DarkmodeRootConfig {
+  providers: Provider[];
+}
 
 @NgModule({
   imports: [
@@ -15,7 +19,12 @@ import { TranslateModule } from '@ngx-translate/core';
   declarations: []
 })
 export class DarkmodeModule {
-  public static forRoot({ providers }) : ModuleWithProviders<DarkmodeModule> {
-    return { ngModule: DarkmodeModule, providers: providers || new Array() };
+  public static forRoot(args : DarkmodeRootConfig) : ModuleWithProviders<DarkmodeModule> {
+    return {
+      ngModule: DarkmodeModule,
+      providers: [
+        ... args.providers
+      ]
+    };
   }
 }
