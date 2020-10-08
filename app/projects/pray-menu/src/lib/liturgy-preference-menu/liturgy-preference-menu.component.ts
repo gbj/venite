@@ -38,6 +38,8 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   // watches the form for changes
   clientPreferences : Observable<ClientPreferences>;
 
+  advancedSettingsShown : boolean = false;
+
   constructor(
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     private fb : FormBuilder
@@ -61,6 +63,10 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
     // since liturgy has changed, preference queries need to be refreshed
     this.formData = this.buildFormData(this.tree, changes.liturgy.currentValue);
+  }
+
+  toggleAdvancedSettingsShown() {
+    this.advancedSettingsShown = !this.advancedSettingsShown;
   }
 
   buildTree() : Observable<TreeData> {
