@@ -75,7 +75,6 @@ export class PrayService {
         doc.metadata.gloria = undefined;
       }
 
-
       /** Lookup and return, or simply return */
       // if doc has a `slug` and not a `value` or `lookup`, add `lookup` type of `slug` and recompile
       if(Boolean(doc.slug) && emptyValue(doc) && !Boolean(doc.lookup)) {
@@ -196,11 +195,20 @@ export class PrayService {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
-      // Gloria condition check
+      // Gloria condition checks
+      // run `include` on the Gloria itself
       map(entries => entries.map(entry => (entry?.metadata?.gloria && !(new LiturgicalDocument(entry.metadata.gloria).include(day, prefs)))
         ? new LiturgicalDocument({ ... entry, metadata: { ...entry.metadata, gloria: undefined }})
         : entry
       )),
+      // omit Gloria Patri if `insertGloria` === 'false'
+      map(entries => entries.map(entry => !(entry.type == 'psalm' && entry.style == 'psalm') ? entry : new LiturgicalDocument({
+        ... entry,
+        metadata: {
+          ... entry.metadata,
+          omit_gloria: Boolean(prefs['insertGloria'] == 'false')
+        }
+      }))),
       // rotate and merge
       map(docs => rotate ? this.rotate(rotate, random, day, docs) : docs),
       map(docs => docsToOption(docs, versions)),

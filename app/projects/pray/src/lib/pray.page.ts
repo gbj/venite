@@ -114,8 +114,8 @@ export class PrayPage implements OnInit {
       switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version])),
     );
 
-    this.color$ = combineLatest([of(this.useBackgroundColor), this.doc$]).pipe(
-      map(([useBackgroundColor, doc]) => useBackgroundColor && doc?.day?.color ? doc.day.color : null),
+    this.color$ = combineLatest([of(this.useBackgroundColor), this.state$]).pipe(
+      map(([useBackgroundColor, state]) => useBackgroundColor && state?.day?.color ? state.day.color : null),
       switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
       startWith('var(--ldf-background-color)')
     )
