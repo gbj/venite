@@ -7,18 +7,18 @@
 
 ## Properties
 
-| Property | Attribute | Description                                           | Type                                                                                                                                                                                              | Default     |
-| -------- | --------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `lookup` | --        | Starting value for editing                            | `{ type: string; table?: string \| { preference: string; }; item?: string \| number \| { preference: string; }; filter?: "seasonal" \| "evening" \| "day"; rotate?: boolean; random?: boolean; }` | `undefined` |
-| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`                                                                                                                                                                                          | `undefined` |
-| `types`  | --        | Available lookup types                                | `readonly string[]`                                                                                                                                                                               | `undefined` |
+| Property | Attribute | Description                                           | Type                | Default     |
+| -------- | --------- | ----------------------------------------------------- | ------------------- | ----------- |
+| `lookup` | `lookup`  | Starting value for editing                            | `any`               | `undefined` |
+| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`            | `undefined` |
+| `types`  | --        | Available lookup types                                | `readonly string[]` | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description | Type               |
+| -------------------- | ----------- | ------------------ |
+| `ldfDocShouldChange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                     | Type                      | Default     |
-| -------- | --------- | ------------------------------- | ------------------------- | ----------- |
-| `day`    | `day`     | The day to be rendered as text. | `LiturgicalDay \| string` | `undefined` |
+| Property | Attribute | Description                     | Type  | Default     |
+| -------- | --------- | ------------------------------- | ----- | ----------- |
+| `day`    | `day`     | The day to be rendered as text. | `any` | `undefined` |
 
 
 ## Dependencies

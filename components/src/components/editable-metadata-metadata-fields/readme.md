@@ -7,25 +7,25 @@
 
 ## Properties
 
-| Property             | Attribute | Description                                  | Type                           | Default       |
-| -------------------- | --------- | -------------------------------------------- | ------------------------------ | ------------- |
-| `bibleReadingIntros` | --        | Options for introductions to a Bible reading | `LiturgicalDocument[]`         | `new Array()` |
-| `doc`                | `doc`     | An LDF LiturgicalDocument object             | `LiturgicalDocument \| string` | `undefined`   |
-| `path`               | `path`    | A JSON Pointer that points to the document   | `string`                       | `undefined`   |
+| Property             | Attribute | Description                                  | Type     | Default       |
+| -------------------- | --------- | -------------------------------------------- | -------- | ------------- |
+| `bibleReadingIntros` | --        | Options for introductions to a Bible reading | `any[]`  | `new Array()` |
+| `doc`                | `doc`     | An LDF LiturgicalDocument object             | `any`    | `undefined`   |
+| `path`               | `path`    | A JSON Pointer that points to the document   | `string` | `undefined`   |
 
 
 ## Events
 
-| Event                     | Description | Type                                                                                              |
-| ------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| `ldfAskForBibleIntros`    |             | `CustomEvent<void>`                                                                               |
-| `ldfDocShouldChange`      |             | `CustomEvent<Change>`                                                                             |
-| `ldfShouldAddGloriaPatri` |             | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
+| Event                     | Description | Type                                                                               |
+| ------------------------- | ----------- | ---------------------------------------------------------------------------------- |
+| `ldfAskForBibleIntros`    |             | `CustomEvent<void>`                                                                |
+| `ldfDocShouldChange`      |             | `CustomEvent<any>`                                                                 |
+| `ldfShouldAddGloriaPatri` |             | `CustomEvent<{ path: string; language: string; version: string; oldValue: any; }>` |
 
 
 ## Methods
 
-### `setBibleReadingIntros(intros: string | LiturgicalDocument[]) => Promise<void>`
+### `setBibleReadingIntros(intros: string | any[]) => Promise<void>`
 
 Set the list of Bible reading introductions
 

@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                         | Type             | Default     |
-| ---------- | ---------- | --------------------------------------------------- | ---------------- | ----------- |
-| `doc`      | `doc`      | An LDF Text object.                                 | `Text \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                      | `boolean`        | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Text being edited | `string`         | `undefined` |
+| Property   | Attribute  | Description                                         | Type      | Default     |
+| ---------- | ---------- | --------------------------------------------------- | --------- | ----------- |
+| `doc`      | `doc`      | An LDF Text object.                                 | `any`     | `undefined` |
+| `editable` | `editable` | Whether the object is editable                      | `boolean` | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Text being edited | `string`  | `undefined` |
 
 
 ## Methods
