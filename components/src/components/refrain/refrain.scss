@@ -18,7 +18,7 @@
   text-indent: calc(var(--ldf-gloria-indent) / -2);
 }
 
-@media (min-width: 767px) {
+@media (min-width: 450px) {
   .gloria {
     margin-left: var(--ldf-gloria-indent);
     text-indent: calc(var(--ldf-gloria-indent) * -1);
