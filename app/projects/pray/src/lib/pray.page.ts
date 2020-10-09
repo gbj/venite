@@ -111,7 +111,7 @@ export class PrayPage implements OnInit {
 
     this.doc$ = this.state$.pipe(
       filter(state => state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs')),
-      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version])),
+      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
     );
 
     this.color$ = combineLatest([of(this.useBackgroundColor), this.state$]).pipe(
