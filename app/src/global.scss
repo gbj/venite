@@ -31,16 +31,12 @@
   --ldf-color: #121212;
   --ldf-editable-lookup-background-color: #f0f0f0;
   --ldf-editable-lookup-color: #121212;
+  --ldf-editable-condition-background-color: #ffffc3;
+  --ldf-editable-condition-color: #121212;
 
-  .dark {
-    --ldf-background-color: #ffffff;
-    --ldf-color: #121212;
-    --ldf-editable-lookup-background-color: #242424;
-    --ldf-editable-lookup-color: #f0f0f0;
-  }
 	--ldf-drop-float: left;
 	--ldf-drop-early-verses-display: none;
-	--ldf-gloria-indent: 1em;
+	--ldf-gloria-indent: 2em;
 	--ldf-response-font-weight: bold;
   --ldf-response-font-style: normal;
 	--ldf-text-border-width: 1px;
@@ -70,6 +66,10 @@
   .dark {
     --ldf-background-color: #ffffff;
     --ldf-color: #121212;
+    --ldf-editable-lookup-background-color: #242424;
+    --ldf-editable-lookup-color: #f0f0f0;
+    --ldf-editable-condition-background-color: #525242;
+    --ldf-editable-condition-color: #f0f0f0;
   }
 
   /* Font preference */
@@ -141,6 +141,10 @@
     --ldf-psalm-grid-display: block;
   }
 
+  .bibleverses-false {
+    --ldf-bible-reading-verse-number-display: none;
+  }
+
   --ldf-psalm-antiphon-display: block;
   --ldf-psalm-repeat-antiphon-display: none;
 
@@ -198,4 +202,25 @@
 venite-pray ion-content div {
   max-width: 600px;
   margin: auto;
+}
+
+/* Font Sizes */
+.fontscale-s {
+  font-size: 75%;
+}
+
+.fontscale-m {
+  font-size: 100%;
+}
+
+.fontscale-l {
+  font-size: 125%;
+}
+
+.fontscale-xl {
+  font-size: 150%;
+}
+
+.fontscale-xxl {
+  font-size: 200%;
 }
