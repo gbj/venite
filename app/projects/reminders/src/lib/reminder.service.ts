@@ -37,13 +37,13 @@ export class ReminderService {
   async schedule(reminders : Reminder[]) {
     this.clear();
     let notifications = await Promise.all(reminders.filter(reminder => !!reminder.active)
-      .map(async (reminder, ii) => {
+      .map(async (reminder) => {
         // reminder.time is an ISO 8601 format like 2020-03-02T11:51:37.265-05:00
         const [hour, minute] = reminder.time.split(':');
         return {
           title: reminder.title,
           body: await this.getMessage(parseInt(hour)),
-          id: ii,
+          id: new Date().getTime(),
           schedule: {
            on: {
               hour: parseInt(hour),
@@ -53,7 +53,11 @@ export class ReminderService {
         }
       }));
 
-    await LocalNotifications.schedule({ notifications });
+    console.log(`scheduling notifications: ${JSON.stringify(notifications)}`);
+
+    await LocalNotifications.requestPermission();
+
+    const scheduled = await LocalNotifications.schedule({ notifications });
   }
 
   async getMessage(hour : number) : Promise<string> {
