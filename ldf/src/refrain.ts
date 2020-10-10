@@ -7,6 +7,9 @@ type StyleTuple = typeof STYLES;
 export class Refrain extends LiturgicalDocument {
   type: 'refrain';
   style: StyleTuple[number];
+  metadata: {
+    align?: 'left' | 'right' | 'center';
+  };
   value: string[];
 
   /** Returns the list of all possible `style` values. Child classes should override if they have styles available. */
