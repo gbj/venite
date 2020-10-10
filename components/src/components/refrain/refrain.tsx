@@ -51,7 +51,7 @@ export class RefrainComponent {
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
-        <div class={this.obj ? this.obj.style : ''}>
+        <div class={`${this.obj?.style || ''} ${this.obj?.metadata?.align || ''}`}>
         {this.obj.value && this.obj.value.map((para, ii) =>
           this.editable ?
           <ldf-editable-text

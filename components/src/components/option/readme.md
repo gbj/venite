@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                           | Type      | Default     |
-| ---------- | ---------- | ----------------------------------------------------- | --------- | ----------- |
-| `doc`      | `doc`      | An LDF Option object.                                 | `any`     | `undefined` |
-| `editable` | `editable` | Whether the object is editable                        | `boolean` | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Option being edited | `string`  | `undefined` |
+| Property   | Attribute  | Description                                           | Type               | Default     |
+| ---------- | ---------- | ----------------------------------------------------- | ------------------ | ----------- |
+| `doc`      | `doc`      | An LDF Option object.                                 | `Option \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                        | `boolean`          | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Option being edited | `string`           | `undefined` |
 
 
 ## Events
@@ -19,7 +19,7 @@
 | Event                | Description | Type                          |
 | -------------------- | ----------- | ----------------------------- |
 | `ldfAddOptionToDoc`  |             | `CustomEvent<AddOptionToDoc>` |
-| `ldfDocShouldChange` |             | `CustomEvent<any>`            |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>`         |
 
 
 ## Methods

@@ -13,7 +13,7 @@
 | `path`        | `path`        | A JSON Pointer that points to the text field being edited            | `string`                                                                                        | `undefined` |
 | `placeholder` | `placeholder` | Displays if text is falsy or an empty string                         | `string`                                                                                        | `undefined` |
 | `short`       | `short`       | Whether to display as a short, single-line input                     | `boolean`                                                                                       | `undefined` |
-| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `any`                                                                                           | `""`        |
+| `template`    | `template`    | The base object this expresses as part of `LiturgicalDocument`.value | `BibleReadingVerse \| Heading \| PsalmVerse \| ResponsivePrayerLine \| string`                  | `""`        |
 | `text`        | `text`        | Starting text for editing                                            | `string`                                                                                        | `undefined` |
 
 
@@ -22,8 +22,8 @@
 | Event                  | Description                                                            | Type                                            |
 | ---------------------- | ---------------------------------------------------------------------- | ----------------------------------------------- |
 | `ldfAddChildAfter`     | Tells the Editor to add another child after this one in the document   | `CustomEvent<{ path: string; template: any; }>` |
-| `ldfCursorMoved`       | Tells the Editor that the cursor has moved within this input           | `CustomEvent<any>`                              |
-| `ldfDocShouldChange`   | Tell the Editor that a change has been made to the document            | `CustomEvent<any>`                              |
+| `ldfCursorMoved`       | Tells the Editor that the cursor has moved within this input           | `CustomEvent<Cursor>`                           |
+| `ldfDocShouldChange`   | Tell the Editor that a change has been made to the document            | `CustomEvent<Change>`                           |
 | `ldfMergeWithPrevious` | Tells the Editor to merge this node with the previous one in the value | `CustomEvent<{ path: string; value: string; }>` |
 
 
