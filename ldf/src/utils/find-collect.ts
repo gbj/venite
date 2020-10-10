@@ -70,7 +70,7 @@ export function findCollect(
 export function processCollectText(collect: Text, day: HolyDay): LiturgicalDocument {
   const saintName = (day.name || '').split(',')[0],
     oldValue: string[] = collect.value || new Array(),
-    value = oldValue.map((piece) => piece.replace(/N\./g, saintName));
+    value = oldValue.map((piece) => piece.replace(/N\./g, saintName).replace(/[\[\]]/g, ''));
   return new Text({
     ...collect,
     value,
