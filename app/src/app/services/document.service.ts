@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
-import { Observable, from, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, from, of, combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-import { LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
+import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
 
 // Include document ID and data
@@ -56,8 +56,8 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {
-    return this.afs.collection<LiturgicalDocument>('Document', ref => {
+  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {    
+    const docQuery = this.afs.collection<LiturgicalDocument>('Document', ref => {
       let query = ref.where('slug', '==', slug)
                      .where('language', '==', language)
                      .where('sharing.organization', '==', 'venite')
@@ -67,7 +67,20 @@ export class DocumentService {
         query = query.where('version', 'in', versions);
       }
       return query;
-    }).valueChanges().pipe(
+    }).valueChanges();
+
+    const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
+
+    return combineLatest([docQuery, gloriaQuery]).pipe(
+      // add Gloria to psalms, canticles, invitatories
+      map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm' ? doc : new LiturgicalDocument({
+        ... doc,
+        metadata: {
+          ... doc.metadata,
+          gloria: docsToOption(gloria)
+        }
+      }))),
+      // order by version
       map(docs => docs.sort((a, b) => {
         const aIndex = (versions || []).indexOf(versionToString(a.version));
         const bIndex = (versions || []).indexOf(versionToString(b.version));
@@ -76,7 +89,7 @@ export class DocumentService {
     );
   }
 
-  findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = ['bcp1979']) : Observable<LiturgicalDocument[]> {
+  findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('category', 'array-contains-any', category)
          .where('language', '==', language)
@@ -85,7 +98,13 @@ export class DocumentService {
          .where('sharing.privacy', '==', 'public')
     ).valueChanges().pipe(
       // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
-      map(docs => docs.filter(doc => versions.length == 0 || !doc.version || versions.includes(versionToString(doc.version))))
+      map(docs => {
+        if(versions?.length > 0) {
+          return docs.filter(doc => versions.includes(versionToString(doc.version)));
+        } else {
+          return docs;
+        }
+      })
     );
   }
 

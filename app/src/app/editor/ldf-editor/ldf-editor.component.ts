@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
-import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing } from '@venite/ldf';
+import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption } from '@venite/ldf';
 import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
@@ -31,6 +31,10 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // Handle external revisions
   revisions$ : Observable<DocumentManagerChange[]>;
   revisionSubscription : Subscription;
+
+  // For Gloria Patri requests
+  glorias : Record<string, LiturgicalDocument> = {};
+  gloriaSubscription : Subscription;
 
   constructor(
     public auth : AuthService,
@@ -93,6 +97,9 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     if(this.revisionSubscription) {
       this.revisionSubscription.unsubscribe();
     }
+    if(this.gloriaSubscription) {
+      this.gloriaSubscription.unsubscribe();
+    }
     await this.editorService.leave(this.docId);
   }
 
@@ -136,6 +143,38 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           ]
         )
       )
+    }
+  }
+
+  addGloriaPatri(manager: LocalDocumentManager, ev : CustomEvent) {
+    console.log('ADD GLORIA PATRI');
+    const { path, language, version, oldValue } = ev.detail;
+    if(this.gloriaSubscription) {
+      this.gloriaSubscription.unsubscribe();
+    }
+    if(this.glorias[`${language}-${version}`]) {
+      this.editorService.processChange(manager, new Change({
+        path: `${path}/metadata/gloria`,
+        op: [{
+          type: 'set',
+          oldValue,
+          value: this.glorias[`${language}-${version}`]
+        }]
+      }));
+    } else {
+      this.gloriaSubscription = this.documents.findDocumentsBySlug('gloria-patri', language, [version]).subscribe({
+        next: (value) => {
+          this.editorService.processChange(manager, new Change({
+            path: `${path}/metadata/gloria`,
+            op: [{
+              type: 'set',
+              oldValue,
+              value: docsToOption(value)
+            }]
+          }));
+          this.glorias[`${language}-${version}`] = docsToOption(value);
+        }
+      });
     }
   }
 

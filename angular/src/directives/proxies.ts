@@ -1206,6 +1206,19 @@ export class LdfEditableAddBlockMenu {
   }
 }
 
+export declare interface LdfEditableAntiphonField extends Components.LdfEditableAntiphonField {}
+@ProxyCmp({inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path']})
+@Component({ selector: 'ldf-editable-antiphon-field', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path'] })
+export class LdfEditableAntiphonField {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+  }
+}
+
 export declare interface LdfEditableBoolean extends Components.LdfEditableBoolean {}
 @ProxyCmp({inputs: ['path', 'property', 'value']})
 @Component({ selector: 'ldf-editable-boolean', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'property', 'value'] })
@@ -1316,11 +1329,12 @@ export declare interface LdfEditableMetadataMetadataFields extends Components.Ld
 export class LdfEditableMetadataMetadataFields {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   ldfAskForBibleIntros!: EventEmitter<CustomEvent>;
+  ldfShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfDocShouldChange', 'ldfAskForBibleIntros']);
+    proxyOutputs(this, this.el, ['ldfDocShouldChange', 'ldfAskForBibleIntros', 'ldfShouldAddGloriaPatri']);
   }
 }
 
@@ -1414,11 +1428,12 @@ export class LdfEditor {
   editorDocShouldChange!: EventEmitter<CustomEvent>;
   editorDocShouldAdd!: EventEmitter<CustomEvent>;
   editorAskForBibleIntros!: EventEmitter<CustomEvent>;
+  editorShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros']);
+    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorShouldAddGloriaPatri']);
   }
 }
 
