@@ -37,14 +37,14 @@ export class PreferencesService {
       prefDoc.version = versionToString(liturgy.version) || 'Rite-II';
     }
 
+    this.storage.set(this.localStorageKey(key, liturgy), prefDoc);
+
     if(uid) {
       prefDoc.uid = uid;
 
       const ref = liturgy ? `${liturgy.slug}-${liturgy.language}-${liturgy.version}-${key}-${uid}` : `${key}-${uid}`;
       const doc = this.afs.doc<StoredPreference>(`Preference/${ref}`);
       doc.set(prefDoc);
-    } else {
-      this.storage.set(this.localStorageKey(key, liturgy), prefDoc);
     }
 
     if(!this._updated[key]) {
@@ -69,10 +69,6 @@ export class PreferencesService {
               map(values => values[0])
             )
           }
-          // otherwise use local storage
-          else {
-            return from(this.storage.get(this.localStorageKey(key)))
-          }
         })
       );
   }
@@ -86,8 +82,9 @@ export class PreferencesService {
 
   get(key : string) : Observable<StoredPreference> {
     return merge(
-      this.getUpdated(key),
-      this.getStored(key)
+      from(this.storage.get(this.localStorageKey(key))), // value initially stored in local storage
+      this.getUpdated(key), // local value updated recently by user
+      this.getStored(key) // observable of Firebase stored preference
     ).pipe(
       filter(value => value !== undefined)
     );
