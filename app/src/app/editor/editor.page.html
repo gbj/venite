@@ -12,6 +12,9 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
+      <ion-buttons slot="end">
+        <venite-auth-menu-button></venite-auth-menu-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-content #list [fullscreen]="true">
@@ -40,6 +43,7 @@
 
     <ion-searchbar (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
 
+    <!-- My Documents -->
     <ion-list *ngIf="myDocs$ | async as docs else nodocs">
       <ion-list-header><h2>{{ 'editor.mydocs' | translate }}</h2></ion-list-header>
       <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
@@ -57,6 +61,27 @@
         </ion-buttons>
       </ion-item>
     </ion-list>
+
+    <!-- Organization Documents -->
+    <ion-list *ngIf="orgDocs$ | async as docs else nodocs">
+      <ion-list-header><h2>{{ 'editor.orgDocs' | translate }}</h2></ion-list-header>
+      <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+        <ion-label class="doc-link" [routerLink]="['.', doc.id]">
+          <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
+          <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+        </ion-label>
+        <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+          <ion-button (click)="copy(userProfile, doc.data)">
+            <ion-icon slot="icon-only" name="copy"></ion-icon>
+          </ion-button>
+          <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+
+    <!-- Search Results -->
     <ng-container *ngIf="searchResults$ | async as docs">
       <ion-list *ngIf="docs.length > 0">
         <ion-list-header><h2>{{ 'editor.search-results' | translate }}</h2></ion-list-header>

@@ -31,12 +31,14 @@
 ### Depends on
 
 - [ldf-label-bar](../label-bar)
+- [ldf-editor-cursors](../editor-cursors)
 - [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
   ldf-editor --> ldf-label-bar
+  ldf-editor --> ldf-editor-cursors
   ldf-editor --> ldf-liturgical-document
   ldf-liturgical-document --> ion-skeleton-text
   ldf-liturgical-document --> ldf-liturgy

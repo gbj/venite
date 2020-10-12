@@ -14,6 +14,19 @@
 | `users`   | --        | Users currently active in the document        | `{ [uid: string]: User; }`    | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [ldf-editor](../editor)
+
+### Graph
+```mermaid
+graph TD;
+  ldf-editor --> ldf-editor-cursors
+  style ldf-editor-cursors fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

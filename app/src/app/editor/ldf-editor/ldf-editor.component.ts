@@ -106,6 +106,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
   // Called whenever the user's cursor moves within this editor
   updateCursor(docId : string, ev : CustomEvent) {
+    console.log('update cursor', docId, ev.detail);
     this.editorService.updateCursor(docId, ev.detail);
   }
 

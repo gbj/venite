@@ -9,6 +9,14 @@ import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text, Sharing, Res
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { UserProfile } from '../auth/user/user-profile';
+import { OrganizationService } from '../organization/organization.module';
+
+const docSearch = ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc => 
+  doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
+  doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
+  doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
+  doc.data.category?.includes(search.toLowerCase())
+)
 
 @Component({
   selector: 'venite-editor',
@@ -91,7 +99,8 @@ export class EditorPage implements OnInit {
     public editorService : EditorService,
     private router : Router,
     private alert : AlertController,
-    private translate : TranslateService
+    private translate : TranslateService,
+    private organizationService : OrganizationService
   ) { }
 
   ngOnInit() {
@@ -102,12 +111,14 @@ export class EditorPage implements OnInit {
     );
   
     this.myDocs$ = combineLatest([this.search$, myUnfilteredDocs$]).pipe(
-      map(([search, docs]) => docs.filter(doc => 
-        doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
-        doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
-        doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
-        doc.data.category?.includes(search.toLowerCase())
-      ))
+      map(docSearch)
+    );
+
+    this.orgDocs$ = combineLatest([this.search$, this.auth.user.pipe(
+      switchMap(user => this.organizationService.organizationsWithUser(user.uid)),
+      switchMap(orgs => this.documents.myOrganizationDocuments(orgs))
+    )]).pipe(
+      map(docSearch)
     );
 
     this.searchResults$ = combineLatest([this.auth.user, this.search$]).pipe(
@@ -117,9 +128,6 @@ export class EditorPage implements OnInit {
     this.userProfile$ = this.auth.user.pipe(
       switchMap(user => this.auth.getUserProfile(user.uid))
     );
-
-    // TODO -- not just my docs, but my organization etc.
-    //this.orgDocs$ = this.documents.myOrganizationDocuments();
 
     // If a docId is given, we'll pass it down to the `LdfEditorComponent`
     this.docId$ = this.route.params.pipe(

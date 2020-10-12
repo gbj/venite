@@ -4,6 +4,11 @@ import { Platform, MenuController } from '@ionic/angular';
 
 // Community Modules
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { AuthService } from './auth/auth.service';
+import { Organization } from './organization/organization';
+import { OrganizationService } from './organization/organization.module';
 //import { DarkmodeService } from '@venite/ng-darkmode';
 
 @Component({
@@ -13,10 +18,13 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   remindersEnabled : boolean = false;
+  organizations$ : Observable<Organization[]>;
 
   constructor(
-    private platform: Platform,
+    private platform : Platform,
     private translate : TranslateService,
+    private auth : AuthService,
+    private organizationService : OrganizationService
 //    private darkMode : DarkmodeService
   ) {
     this.initializeApp();
@@ -26,6 +34,10 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.remindersEnabled = this.platform.is('capacitor');
+
+      this.organizations$ = this.auth.user.pipe(
+        switchMap(user => this.organizationService.organizationsWithUser(user.uid)),
+      );
 //      this.statusBar.styleDefault();
 //      this.splashScreen.hide();
 

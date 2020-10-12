@@ -23,6 +23,12 @@
           <ion-icon name="link" slot="start"></ion-icon>
           <ion-label>{{ 'menu.bulletins' | translate }}</ion-label>
         </ion-item>
+        <ng-container *ngIf="organizations$ | async as orgs">
+          <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'church', org.slug]">
+            <img slot="start" src="/assets/church.svg"> 
+            <ion-label>{{ org.name }}</ion-label>
+          </ion-item>
+        </ng-container>
       </ion-list>
     </ion-content>
   </ion-menu>

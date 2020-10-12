@@ -8,8 +8,8 @@ import { Cursor, User } from '@venite/ldf';
 import getCaretCoordinates from 'textarea-caret';
 
 @Component({
-  tag: 'ldf-editor-cursor',
-  styleUrl: 'editor-cursor.css',
+  tag: 'ldf-editor-cursors',
+  styleUrl: 'editor-cursors.css',
   shadow: true
 })
 export class EditorComponent {
@@ -25,21 +25,24 @@ export class EditorComponent {
   } = {};
 
   /** Users currently active in the document */
-  @Prop() users : { [uid: string]: User; };
+  @Prop({ reflect: true }) users : { [uid: string]: User; };
 
   /** Unique ID for the user editing in this editor */
-  @Prop() uid : string;
+  @Prop({ reflect: true }) uid : string;
 
   /** Cursor positions of active users */
-  @Prop() cursors : { [user: string]: Cursor };
+  @Prop({ reflect: true }) cursors : { [user: string]: Cursor };
   @Watch('cursors')
   cursorsChanged() {
     this.clearCursors();
     this.resetCursors();
+    console.log('(ldf-editor-cursors) cursors updated, to ', this.cursors, ' now ', this.cursorPos);
   }
 
   // Life Cycle
-  connectedCallback() {
+  componentWillLoad() {
+    console.log('(ldf-editor-cursors) initial cursor load, cursors = ', this.cursors);
+    this.cursorsChanged();
   }
 
   // Listen for scroll and window resize events and reset the cursors accordingly
@@ -59,6 +62,7 @@ export class EditorComponent {
   // Debounce resetCursors() for e.g., scroll
   @Debounce(20)
   resetCursors() {
+    console.log('resetting cursors from ', this.cursors);
     const newCursorPos = {},
           cursors = this.cursors || {};
     Object.keys(cursors).forEach(username => {
@@ -66,6 +70,7 @@ export class EditorComponent {
       this.cursorToPos(cursor, username, newCursorPos)
     });
     this.cursorPos = newCursorPos;
+    console.log('reset to ', this.cursorPos);
   }
 
   clearCursors() {
@@ -77,6 +82,7 @@ export class EditorComponent {
     if(data && data.path) {
       // Cursor is somewhere
       const target : HTMLElement = elementFromPath(this.el, data.path);
+      console.log('(cursorToPos)', data, user, cursorPos, '\n\n', target);
       if(target) {
         let textarea : HTMLTextAreaElement | HTMLInputElement = target.shadowRoot.querySelector('textarea');
         if(!textarea) {

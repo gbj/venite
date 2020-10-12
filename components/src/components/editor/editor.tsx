@@ -20,6 +20,15 @@ export class EditorComponent {
 
   @State() focusObj : { obj: LiturgicalDocument; path: string; };
 
+  /** Users currently active in the document */
+  @State() usersState : { [uid: string]: User; };
+
+  /** Unique ID for the user editing in this editor */
+  @State() uidState : string;
+
+  /** Cursor positions of active users. Drills down to `<ldf-editor-cursors>` */
+  @State() cursorsState : { [user: string]: Cursor };
+
   // Props
   /** An LDF LiturgicalDocument object. */
   @Prop() doc : LiturgicalDocument | string;
@@ -39,12 +48,25 @@ export class EditorComponent {
 
   /** Users currently active in the document */
   @Prop() users : { [uid: string]: User; };
+  @Watch('users')
+  usersChange() {
+    this.usersState = { ... this.users };
+  }
 
   /** Unique ID for the user editing in this editor */
   @Prop() uid : string;
+  @Watch('uid')
+  uidChange() {
+    this.uidState = this.uid;
+  }
 
   /** Cursor positions of active users. Drills down to `<ldf-editor-cursors>` */
   @Prop() cursors : { [user: string]: Cursor };
+  @Watch('cursors')
+  cursorsChange() {
+    this.cursorsState = { ... this.cursors };
+    console.log('(ldf-editor) new cursors ', this.cursorsState);
+  }
 
   // Events
   /** User's cursor/selection changed */
@@ -61,9 +83,12 @@ export class EditorComponent {
   @Event() editorShouldAddGloriaPatri : EventEmitter<{ path: string; language: string; version: string; oldValue: LiturgicalDocument | undefined; }>;
 
   // Life Cycle
-  connectedCallback() {
+  componentWillLoad() {
     // initial document load from property
     this.docChanged(this.doc);
+    this.uidChange();
+    this.usersChange();
+    this.cursorsChange();
   }
 
   // Listeners
@@ -232,9 +257,9 @@ export class EditorComponent {
         </ldf-label-bar>
 
         <ldf-editor-cursors
-          cursors={this.cursors}
-          users={this.users}
-          uid={this.uid}
+          cursors={this.cursorsState}
+          users={this.usersState}
+          uid={this.uidState}
         ></ldf-editor-cursors>
 
         {/* Editable version of liturgy */}

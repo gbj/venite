@@ -71,13 +71,16 @@ import { PrayPageModule } from '@venite/ng-pray';
         BibleService,
         PlatformService,
         LocalStorageService
+      ],
+      config: {
+        bibleVersion: 'ESV'
+      }
+    }),
+    DarkmodeModule.forRoot({
+      providers: [
+        { provide: PREFERENCES_SERVICE, useClass: PreferencesService }
       ]
     }),
-    /*DarkmodeModule.forRoot({
-      providers: [
-        PreferencesService
-      ]
-    }),*/
     PrayMenuModule.forRoot({
       config: {
         defaultKalendar: 'bcp1979',

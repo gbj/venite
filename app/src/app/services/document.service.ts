@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
+import { Organization } from '../organization/organization';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -139,6 +140,21 @@ export class DocumentService {
       // extra ID and document data and leave the rest behind
       map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
     );
+  }
+
+  myOrganizationDocuments(orgs : Organization[]) : Observable<IdAndDoc[]> {
+    if(orgs?.length > 0) {
+      return this.afs.collection<LiturgicalDocument>('Document', ref =>
+        ref.where('sharing.organization', 'in', orgs.map(org => org.slug))
+      ).snapshotChanges().pipe(
+        // transform from AngularFire `DocumentChangeAction` to `doc`
+        map(changeactions => changeactions.map(action => action?.payload?.doc)),
+        // extra ID and document data and leave the rest behind
+        map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+      );
+    } else {
+      return of([]);
+    }
   }
 
   search(uid : string, search : string) : Observable<IdAndDoc[]> {
