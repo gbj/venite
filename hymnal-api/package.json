@@ -1,0 +1,29 @@
+{
+  "name": "@venite/hymnal-api",
+  "version": "0.1.0",
+  "description": "Interface for Hymnary.org indices, text content, and images",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbj/venite.git"
+  },
+  "author": "Greg Johnston <greg@venite.app>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gbj/venite/issues"
+  },
+  "homepage": "https://github.com/gbj/venite#readme",
+  "dependencies": {
+    "@venite/http": "^0.1.0"
+  },
+  "devDependencies": {
+    "firebase-admin": "^9.2.0"
+  }
+}
