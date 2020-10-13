@@ -19,7 +19,11 @@
 
     <!-- "Page Two": additional info to look up psalms, canticles, hymns, etc. -->
     <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">    
-    
+      <!-- Hymns -->
+      <venite-hymn-selector
+        (hymnSelected)="complete.next([$event])"
+      ></venite-hymn-selector>
+
       <!-- Psalms -->
       <ldf-editable-filter-documents *ngSwitchCase="'psalm'"
           type="psalm"

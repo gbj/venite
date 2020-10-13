@@ -111,13 +111,13 @@ export class AddBlockComponent implements OnInit, OnDestroy {
                 value: undefined,
                 lookup: { type: "slug" }
               })))
-              // TODO -- sort by canticle #
             ))
           );
           this.additionalTable = this.documentService.getVersions(this.language, 'canticle-table');
           return this.complete;
         case 'hymn':
-          //TODO
+          console.log('loading a hymn!');
+          this.additionalMode = 'hymn';
           return this.complete;
         case 'liturgy':
           this.additionalMode = 'liturgy';
