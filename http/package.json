@@ -1,0 +1,24 @@
+{
+  "name": "@venite/http",
+  "version": "0.1.1",
+  "description": "Simple functions for HTTPS request and HTML parsing with few dependencies in Node",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbj/venite.git"
+  },
+  "author": "Greg Johnston <greg@venite.app>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^14.11.8",
+    "node-html-parser": "^1.3.1"
+  }
+}
