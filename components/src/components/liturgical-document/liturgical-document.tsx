@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
-import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, LiturgicalColor } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor } from '@venite/ldf';
 import { getLocaleComponentStrings } from '../../utils/locale';
 import { ConditionNode } from './condition-node';
 import { LookupNode } from './lookup-node';
@@ -148,6 +148,9 @@ export class LiturgicalDocumentComponent {
         break;
       case 'heading':
         node = <ldf-heading path={this.path} editable={this.editable} doc={doc as Heading}></ldf-heading>;
+        break;
+      case 'image':
+        node = <ldf-image path={this.path} editable={this.editable} doc={doc as Image}></ldf-image>
         break;
       case 'meditation':
         const color = this.obj?.day?.color,
