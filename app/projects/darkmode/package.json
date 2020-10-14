@@ -1,6 +1,6 @@
 {
   "name": "@venite/ng-darkmode",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
@@ -8,5 +8,6 @@
     "@ionic/angular": "^5.0.0",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0"
-  }
+  },
+  "dependencies": {}
 }

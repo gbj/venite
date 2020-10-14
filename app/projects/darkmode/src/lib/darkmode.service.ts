@@ -33,22 +33,26 @@ export class DarkmodeService {
         preference$.pipe(startWith('auto')),
         mediaQuery$.pipe(startWith(undefined))
       ).pipe(
-        tap(([preference, mediaQuery]) => console.log('darkmode pref = ', preference)),
         // give an explanatory alert if we're not going to change the setting
         tap(([preference, mediaQuery]) => {
           if(mediaQuery !== undefined && (preference == 'dark' && !mediaQuery?.matches || preference == 'light' && mediaQuery?.matches)) {
-            console.log('mediaQuery = ', mediaQuery);
             this.notifyAlert(!!mediaQuery?.matches);
           }
         }),
         // preferences 'dark' or 'light' override the device setting
-        map(([preference, mediaQuery]) => {
+        map(([preference, mediaQuery]) => {                  
           if(preference == 'dark') {
             return true;
           } else if(preference == 'light') {
             return false;
           } else {
-            return !!mediaQuery?.matches; // undefined => false, not true
+            // Android fix for enabling dark mode, see native implementation in MainActivity.java
+            let forceDarkMode = false;
+            if (this.platform.is('android') && this.platform.is('capacitor') && window.navigator.userAgent.includes('AndroidDarkMode')) {
+              forceDarkMode = true;
+            }
+
+            return forceDarkMode || !!mediaQuery?.matches; // undefined => false, not true
           }
         })
       )
