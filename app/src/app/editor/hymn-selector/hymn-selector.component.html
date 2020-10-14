@@ -1,13 +1,29 @@
 <h2>{{ 'editor.hymn' | translate }}</h2>
 <form>
   <ion-searchbar (ionChange)="filter($event.detail.value)"></ion-searchbar>
+  <ion-radio-group>
+
+  </ion-radio-group>
   <ion-list *ngIf="hymns$ | async as hymns else loading">
     <!-- Lectionary and Reading -->
-    <ion-item *ngFor="let hymn of hymns" (click)="chooseHymn(hymn)">
+    <ion-item *ngFor="let hymn of hymns">
       {{ hymn.source }} {{ hymn.number }} {{ hymn.title }} <ng-container *ngIf="hymn.tune">({{ hymn.tune }})</ng-container>
+      <ion-buttons slot="end">
+        <ion-button *ngIf="hymn.imageUrl && !hymn.imageUrl.endsWith('null')" (click)="chooseHymn(hymn, 'scan')">
+          <ion-icon name="camera" slot="icon-only"></ion-icon>
+          <ion-label class="visually-hidden">{{ 'editor.include-image' | translate }}</ion-label>
+        </ion-button>
+        <ion-button *ngIf="hymn.textUrl && !hymn.textUrl.endsWith('null')"  (click)="chooseHymn(hymn, 'text')">
+          <ion-icon name="document-text" slot="icon-only"></ion-icon>
+          <ion-label class="visually-hidden">{{ 'editor.include-text' | translate }}</ion-label>
+        </ion-button>
+        <ion-button (click)="chooseHymn(hymn, 'title')">
+          <ion-icon name="text" slot="icon-only"></ion-icon>
+          <ion-label class="visually-hidden">{{ 'editor.include-title' | translate }}</ion-label>
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
-  <ion-button (click)="update()">{{ 'save' | translate }}</ion-button>
 </form>
 
 <ng-template #loading>{{ 'loading' | translate }}</ng-template>

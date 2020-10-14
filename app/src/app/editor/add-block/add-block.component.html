@@ -20,7 +20,7 @@
     <!-- "Page Two": additional info to look up psalms, canticles, hymns, etc. -->
     <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">    
       <!-- Hymns -->
-      <venite-hymn-selector
+      <venite-hymn-selector *ngSwitchCase="'hymn'"
         (hymnSelected)="complete.next([$event])"
       ></venite-hymn-selector>
 

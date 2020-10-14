@@ -18,6 +18,7 @@ export class EditorService {
   private _actorId : string = uuid();
   private _uid : string;
   private _localManagers : { [docId: string]: BehaviorSubject<LocalDocumentManager> } = {};
+  private _onlineListener : () => void;
 
   constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
 
@@ -29,6 +30,7 @@ export class EditorService {
           ),
           doc = this.afs.doc<LiturgicalDocument>(`Document/${docId.trim()}`),
           doc$ = doc.valueChanges();
+
     return combineLatest([serverDocManagerExists$, doc$, this.auth.user]).pipe(
       // only join once
       take(1),
@@ -66,8 +68,17 @@ export class EditorService {
         }
       }),
       // return the LocalDocumentManager
-      //map(server => ({ server: server, local: this._localManagers[server.docId]})),
-      //tap(({ server, local }) => local.hasBeenAcknowledged = true)
+      /*map(server => ({ server: server, local: this._localManagers[server.docId]})),
+      tap(({ server, local }) => {
+        // if we lose connection, try to resend last
+        this._onlineListener = () => {
+          console.log('back online');
+          console.log(local.value.hasBeenAcknowledged);
+          this.sendNextChange(local.value);
+        };
+        window?.addEventListener('online', this._onlineListener)
+      }),
+      map(({ server }) => server)*/
     )
   }
 
@@ -125,7 +136,6 @@ export class EditorService {
     });
 
     if(manager.hasBeenAcknowledged) {
-      //this.nextLocalManager(manager);
       this.sendNextChange(manager);
     }
   }

@@ -17,6 +17,7 @@ import { AddBlockComponent } from './add-block/add-block.component';
 import { LectionarySelectComponent } from './lectionary-select/lectionary-select.component';
 import { CanticleSelectComponent } from './canticle-select/canticle-select.component';
 import { SharingComponent } from './sharing/sharing.component';
+import { HymnSelectorComponent } from './hymn-selector/hymn-selector.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { SharingComponent } from './sharing/sharing.component';
     AddBlockComponent,
     LectionarySelectComponent,
     CanticleSelectComponent,
-    SharingComponent
+    SharingComponent,
+    HymnSelectorComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

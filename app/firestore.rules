@@ -90,6 +90,11 @@ service cloud.firestore {
       allow create, update, delete: if false;
     }
 
+    match /Hymns/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+
     match /Kalendar/{docId} {
       allow read: if true;
       allow create, update, delete: if false;

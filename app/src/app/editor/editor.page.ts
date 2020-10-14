@@ -114,15 +114,18 @@ export class EditorPage implements OnInit {
       map(docSearch)
     );
 
-    this.orgDocs$ = combineLatest([this.search$, this.auth.user.pipe(
-      switchMap(user => this.organizationService.organizationsWithUser(user.uid)),
+    const orgs$ = this.auth.user.pipe(
+      switchMap(user => this.organizationService.organizationsWithUser(user.uid))
+    );
+
+    this.orgDocs$ = combineLatest([this.search$, orgs$.pipe(
       switchMap(orgs => this.documents.myOrganizationDocuments(orgs))
     )]).pipe(
       map(docSearch)
     );
 
-    this.searchResults$ = combineLatest([this.auth.user, this.search$]).pipe(
-      switchMap(([user, search]) => Boolean(search) ? this.documents.search(user.uid, search) : [])
+    this.searchResults$ = combineLatest([this.auth.user, this.search$, orgs$]).pipe(
+      switchMap(([user, search, orgs]) => Boolean(search) ? this.documents.search(user.uid, search, orgs) : [])
     );
 
     this.userProfile$ = this.auth.user.pipe(

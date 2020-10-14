@@ -157,9 +157,12 @@ export class DocumentService {
     }
   }
 
-  search(uid : string, search : string) : Observable<IdAndDoc[]> {
-    return this.myDocuments(uid).pipe(
-      map(docs => docs.filter(doc => JSON.stringify({ ... doc, value: undefined }).includes(search)))
+  search(uid : string, search : string, orgs : Organization[]) : Observable<IdAndDoc[]> {
+    return combineLatest([
+      this.myDocuments(uid),
+      this.myOrganizationDocuments(orgs)
+    ]).pipe(
+      map(([docs, orgDocs]) => docs.concat(orgDocs).filter(doc => JSON.stringify({ ... doc, value: undefined }).includes(search)))
     );
   }
 

@@ -63,7 +63,7 @@
     </ion-list>
 
     <!-- Organization Documents -->
-    <ion-list *ngIf="orgDocs$ | async as docs else nodocs">
+    <!--<ion-list *ngIf="orgDocs$ | async as docs else nodocs">
       <ion-list-header><h2>{{ 'editor.orgDocs' | translate }}</h2></ion-list-header>
       <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
         <ion-label class="doc-link" [routerLink]="['.', doc.id]">
@@ -79,7 +79,7 @@
           </ion-button>
         </ion-buttons>
       </ion-item>
-    </ion-list>
+    </ion-list>-->
 
     <!-- Search Results -->
     <ng-container *ngIf="searchResults$ | async as docs">

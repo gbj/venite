@@ -128,7 +128,16 @@
     "can_access": "Who can view this document?",
     "public": "Anyone with the link",
     "organization-access": "Anyone in my organization",
-    "private": "Only me"
+    "private": "Only me",
+    "hymn": "Choose a Hymn",
+    "hymnal": "Hymnal",
+    "number": "Number",
+    "tune": "Tune",
+    "text-available": "Text Available",
+    "scan-available": "Scan Available",
+    "include-title": "Include Title",
+    "include-text": "Include Text",
+    "include-image": "Include Image"
   },
   "organization": {
     "owner": "Administrator",
