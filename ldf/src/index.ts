@@ -22,6 +22,7 @@ export * from './citation/selectable-citation';
 export * from './citation/source';
 export * from './condition';
 export * from './heading';
+export * from './image';
 export * from './liturgy/liturgy';
 export * from './liturgy/preference';
 export * from './liturgy/client-preferences';

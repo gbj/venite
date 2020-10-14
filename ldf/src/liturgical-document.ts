@@ -20,6 +20,7 @@ const TYPES = [
   'bible-reading',
   'psalm',
   'meditation',
+  'image',
 ] as const;
 export type TypeTuple = typeof TYPES;
 

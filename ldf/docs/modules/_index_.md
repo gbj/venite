@@ -20,6 +20,7 @@
 * [DisplayFormat](_index_.md#displayformat)
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
+* [Image](_index_.md#image)
 * [Kalendar](_index_.md#kalendar)
 * [LectionaryEntry](_index_.md#lectionaryentry)
 * [LiturgicalColor](_index_.md#liturgicalcolor)
@@ -162,6 +163,12 @@ ___
 ###  HolyDay
 
 • **HolyDay**:
+
+___
+
+###  Image
+
+• **Image**:
 
 ___
 

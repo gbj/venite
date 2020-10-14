@@ -42,6 +42,7 @@
 * ["editing/cursor-message"](modules/_editing_cursor_message_.md)
 * ["editing/user"](modules/_editing_user_.md)
 * ["heading"](modules/_heading_.md)
+* ["image"](modules/_image_.md)
 * ["index"](modules/_index_.md)
 * ["lectionary-entry"](modules/_lectionary_entry_.md)
 * ["liturgical-document"](modules/_liturgical_document_.md)

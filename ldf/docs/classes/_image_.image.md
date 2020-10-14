@@ -1,69 +1,71 @@
-[@venite/ldf](../README.md) › [Globals](../globals.md) › ["heading"](../modules/_heading_.md) › [Heading](_heading_.heading.md)
+[@venite/ldf](../README.md) › [Globals](../globals.md) › ["image"](../modules/_image_.md) › [Image](_image_.image.md)
 
-# Class: Heading
+# Class: Image
+
+Refrain represents a short text like the Gloria Patri, Hail Mary, or an Antiphon
 
 ## Hierarchy
 
 * [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md)
 
-  ↳ **Heading**
+  ↳ **Image**
 
 ## Index
 
 ### Constructors
 
-* [constructor](_heading_.heading.md#constructor)
+* [constructor](_image_.image.md#constructor)
 
 ### Properties
 
-* [api](_heading_.heading.md#optional-api)
-* [category](_heading_.heading.md#category)
-* [citation](_heading_.heading.md#optional-citation)
-* [condition](_heading_.heading.md#condition)
-* [day](_heading_.heading.md#optional-day)
-* [display_format](_heading_.heading.md#optional-display_format)
-* [hidden](_heading_.heading.md#hidden)
-* [id](_heading_.heading.md#optional-id)
-* [label](_heading_.heading.md#label)
-* [language](_heading_.heading.md#language)
-* [lastRevision](_heading_.heading.md#lastrevision)
-* [lookup](_heading_.heading.md#optional-lookup)
-* [metadata](_heading_.heading.md#metadata)
-* [sharing](_heading_.heading.md#optional-sharing)
-* [slug](_heading_.heading.md#slug)
-* [source](_heading_.heading.md#optional-source)
-* [style](_heading_.heading.md#style)
-* [type](_heading_.heading.md#type)
-* [uid](_heading_.heading.md#optional-uid)
-* [value](_heading_.heading.md#value)
-* [version](_heading_.heading.md#version)
-* [version_label](_heading_.heading.md#optional-version_label)
+* [api](_image_.image.md#optional-api)
+* [category](_image_.image.md#category)
+* [citation](_image_.image.md#optional-citation)
+* [condition](_image_.image.md#condition)
+* [day](_image_.image.md#optional-day)
+* [display_format](_image_.image.md#optional-display_format)
+* [hidden](_image_.image.md#hidden)
+* [id](_image_.image.md#optional-id)
+* [label](_image_.image.md#label)
+* [language](_image_.image.md#language)
+* [lastRevision](_image_.image.md#lastrevision)
+* [lookup](_image_.image.md#optional-lookup)
+* [metadata](_image_.image.md#metadata)
+* [sharing](_image_.image.md#optional-sharing)
+* [slug](_image_.image.md#slug)
+* [source](_image_.image.md#optional-source)
+* [style](_image_.image.md#style)
+* [type](_image_.image.md#type)
+* [uid](_image_.image.md#optional-uid)
+* [value](_image_.image.md#value)
+* [version](_image_.image.md#version)
+* [version_label](_image_.image.md#optional-version_label)
 
 ### Methods
 
-* [availableDisplayFormats](_heading_.heading.md#availabledisplayformats)
-* [availableLookupTypes](_heading_.heading.md#availablelookuptypes)
-* [availableStyles](_heading_.heading.md#availablestyles)
-* [availableTypes](_heading_.heading.md#availabletypes)
-* [include](_heading_.heading.md#include)
+* [availableDisplayFormats](_image_.image.md#availabledisplayformats)
+* [availableLookupTypes](_image_.image.md#availablelookuptypes)
+* [availableStyles](_image_.image.md#availablestyles)
+* [availableTypes](_image_.image.md#availabletypes)
+* [include](_image_.image.md#include)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Heading**(`data`: Partial‹[Heading](_heading_.heading.md)›): *[Heading](_heading_.heading.md)*
+\+ **new Image**(`data`: Partial‹[Image](_image_.image.md)›): *[Image](_image_.image.md)*
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[constructor](_liturgy_liturgy_.liturgy.md#constructor)*
 
-*Defined in [heading.ts:33](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L33)*
+Defined in image.ts:25
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`data` | Partial‹[Heading](_heading_.heading.md)› | {} |
+`data` | Partial‹[Image](_image_.image.md)› | {} |
 
-**Returns:** *[Heading](_heading_.heading.md)*
+**Returns:** *[Image](_image_.image.md)*
 
 ## Properties
 
@@ -251,11 +253,15 @@ ___
 
 *Overrides [Rubric](_rubric_.rubric.md).[metadata](_rubric_.rubric.md#optional-metadata)*
 
-*Defined in [heading.ts:16](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L16)*
+Defined in image.ts:10
 
 #### Type declaration:
 
-* **level**? : *undefined | number*
+* **align**: *"left" | "right" | "center"*
+
+* **height**: *number*
+
+* **width**: *number*
 
 ___
 
@@ -307,22 +313,17 @@ ___
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[style](_liturgy_liturgy_.liturgy.md#optional-style)*
 
-*Defined in [heading.ts:14](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L14)*
-
-What kind of value to display
-If `text`, displays plain text stored in `value`
-If `day`, displays name of `LiturgicalDay` stored in `day`
-If `date`, displays localized version of `Date` determined by `dateFromYMDString(day.date)`
+Defined in image.ts:9
 
 ___
 
 ###  type
 
-• **type**: *"heading"*
+• **type**: *"image"*
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[type](_liturgical_document_.liturgicaldocument.md#type)*
 
-*Defined in [heading.ts:7](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L7)*
+Defined in image.ts:8
 
 ___
 
@@ -347,9 +348,9 @@ ___
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[value](_liturgical_document_.liturgicaldocument.md#optional-value)*
 
-*Defined in [heading.ts:23](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L23)*
+Defined in image.ts:16
 
-Contains the text of the heading
+Array of image URLs, including (possibly) base-64-encoded images
 
 ___
 
@@ -389,9 +390,7 @@ Optional: A human-readable name for this particular version of a larger category
 
 *Overrides [Meditation](_meditation_.meditation.md).[availableDisplayFormats](_meditation_.meditation.md#availabledisplayformats)*
 
-*Defined in [heading.ts:31](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L31)*
-
-No meaningful difference in display formats for this type
+Defined in image.ts:23
 
 **Returns:** *never[]*
 
@@ -417,9 +416,9 @@ ___
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[availableStyles](_liturgy_liturgy_.liturgy.md#availablestyles)*
 
-*Defined in [heading.ts:26](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/heading.ts#L26)*
+Defined in image.ts:19
 
-Returns the list of all possible `style` values.
+Returns the list of all possible `style` values. Child classes should override if they have styles available.
 
 **Returns:** *ReadonlyArray‹string›*
 
