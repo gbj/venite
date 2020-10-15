@@ -1,5 +1,5 @@
 import { getNRSV } from "./nrsv";
-import { BibleReading } from "@venite/ldf";
+import { BibleReading } from "@venite/ldf/dist/cjs";
 import { getESV } from "./esv";
 import { getCEB } from "./ceb";
 import { getKJV } from "./kjv";

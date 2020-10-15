@@ -1,12 +1,12 @@
-import { BibleReadingVerse, BibleReading, Heading } from "@venite/ldf";
+import { BibleReadingVerse, BibleReading, Heading } from "@venite/ldf/dist/cjs";
 
 export function consolidateVerses(verses : BibleReadingVerse[][]) : (BibleReadingVerse | Heading)[] {
   let existingVerses : { [ref: string]: BibleReadingVerse } = {},
       consolidated : (BibleReadingVerse | Heading)[] = new Array();
   
-  verses.forEach((section, sectionIndex) => {
+  (verses || []).forEach((section, sectionIndex) => {
     // handle each verse within section
-    section.forEach(verse => {
+    (section || []).forEach(verse => {
       const ref = `${verse.book}-${verse.chapter}-${verse.verse}`;
       // if the verse has not been encountered before, add it to `consolidated` and to `existingVerses`
       if(!existingVerses[ref]) {

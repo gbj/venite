@@ -1,4 +1,4 @@
-import { BibleReading, BibleReadingVerse, Heading } from "@venite/ldf";
+import { BibleReading, BibleReadingVerse, Heading } from "@venite/ldf/dist/cjs";
 import { httpsGet } from "./request-html";
 import { firstVerseOfCitation } from "./parse-citation";
 import { consolidateVerses } from "./consolidate-verses";
