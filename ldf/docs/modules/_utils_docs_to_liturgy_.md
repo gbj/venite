@@ -14,7 +14,7 @@
 
 ▸ **docsToLiturgy**(`docs`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[]): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/docs-to-liturgy.ts:5](https://github.com/gbj/venite/blob/3ee4ad9/ldf/src/utils/docs-to-liturgy.ts#L5)*
+*Defined in [utils/docs-to-liturgy.ts:5](https://github.com/gbj/venite/blob/9629897/ldf/src/utils/docs-to-liturgy.ts#L5)*
 
 **Parameters:**
 
