@@ -2,8 +2,13 @@
   font-family: var(--ldf-font-face);
   font-weight: inherit;
   font-style: inherit;
-  white-space: pre-wrap;
+  /*white-space: pre-wrap;*/
   text-align: justify;
+}
+
+.tab {
+  display: inline;
+  margin-left: 1em;
 }
 
 .sc {

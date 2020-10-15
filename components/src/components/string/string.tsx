@@ -104,10 +104,11 @@ export class StringComponent {
         'YHWH': () => <span class="sc">Yhwh</span>,
         'Yhwh': () => <span class="sc">Yhwh</span>,
         'YAHWEH': () => <span class="sc">Yhwh</span>,
-        'Yahweh': () => <span class="sc">Yhwh</span>
+        'Yahweh': () => <span class="sc">Yhwh</span>,
+        '\t': () => <span class='tab'>&nbsp;</span>
       };
 
-      const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh)/g);
+      const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
     } else {
       return new Array();
@@ -123,8 +124,8 @@ export class StringComponent {
       const splitTest = (firstChunk || '').split(/[\s.!?\\]/),
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2
-              ? /^([“”‘’\!\?\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
-              : /^([“”‘’\!\?\[\]\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+              ? /^([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : /^([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;

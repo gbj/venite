@@ -61,6 +61,8 @@ graph TD;
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label
   ion-button --> ion-ripple-effect
+  ldf-image --> ldf-label-bar
+  ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
