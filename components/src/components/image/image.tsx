@@ -55,7 +55,7 @@ export class ImageComponent {
           {this.obj.value && this.obj.value.map((url, ii) =>
             this.editable ?
             <figure>
-              <img />
+              <img src={url} />
               <figcaption>
                 <ldf-editable-text
                 id={`${this.obj.uid || this.obj.slug}-${ii}`}

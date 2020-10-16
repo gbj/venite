@@ -1,4 +1,4 @@
-import { Component, Element, State, Listen, Prop, Watch, JSX, h } from '@stencil/core';
+import { Component, State, Listen, Prop, Watch, JSX, h } from '@stencil/core';
 import Debounce from 'debounce-decorator';
 import { elementFromPath } from '../../utils/element-from-path';
 import Values from 'values.js';
@@ -13,8 +13,6 @@ import getCaretCoordinates from 'textarea-caret';
   shadow: true
 })
 export class EditorComponent {
-  @Element() el: HTMLElement;
-
   @State() cursorPos : {
     // indexed by username
     [user: string]: {
@@ -23,6 +21,8 @@ export class EditorComponent {
       target: HTMLTextAreaElement | HTMLInputElement;
     }
   } = {};
+
+  @Prop() parent : HTMLElement;
 
   /** Users currently active in the document */
   @Prop({ reflect: true }) users : { [uid: string]: User; };
@@ -81,8 +81,7 @@ export class EditorComponent {
   cursorToPos(data : Cursor, user : string, cursorPos : any) {
     if(data && data.path) {
       // Cursor is somewhere
-      const target : HTMLElement = elementFromPath(this.el, data.path);
-      console.log('(cursorToPos)', data, user, cursorPos, '\n\n', target);
+      const target : HTMLElement = elementFromPath(this.parent, data.path);
       if(target) {
         let textarea : HTMLTextAreaElement | HTMLInputElement = target.shadowRoot.querySelector('textarea');
         if(!textarea) {

@@ -48,6 +48,8 @@ graph TD;
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
   ldf-editable-text --> ion-input
+  ldf-image --> ldf-label-bar
+  ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label

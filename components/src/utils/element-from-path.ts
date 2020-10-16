@@ -1,8 +1,7 @@
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 export function elementFromPath(root : HTMLElement, path : string) : HTMLElement {
-  console.log('(elementFromPath)', root, path);
-  return querySelectorDeep(`[path="${path}"]`, document);
+  return querySelectorDeep(`[path="${path}"]`, root);
 }
 
 export function insertTextInEditableText(start : number, end : number, value : string) {

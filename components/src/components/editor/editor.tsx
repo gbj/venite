@@ -20,15 +20,6 @@ export class EditorComponent {
 
   @State() focusObj : { obj: LiturgicalDocument; path: string; };
 
-  /** Users currently active in the document */
-  @State() usersState : { [uid: string]: User; };
-
-  /** Unique ID for the user editing in this editor */
-  @State() uidState : string;
-
-  /** Cursor positions of active users. Drills down to `<ldf-editor-cursors>` */
-  @State() cursorsState : { [user: string]: Cursor };
-
   // Props
   /** An LDF LiturgicalDocument object. */
   @Prop() doc : LiturgicalDocument | string;
@@ -48,25 +39,11 @@ export class EditorComponent {
 
   /** Users currently active in the document */
   @Prop() users : { [uid: string]: User; };
-  @Watch('users')
-  usersChange() {
-    this.usersState = { ... this.users };
-  }
 
   /** Unique ID for the user editing in this editor */
   @Prop() uid : string;
-  @Watch('uid')
-  uidChange() {
-    this.uidState = this.uid;
-  }
-
   /** Cursor positions of active users. Drills down to `<ldf-editor-cursors>` */
   @Prop() cursors : { [user: string]: Cursor };
-  @Watch('cursors')
-  cursorsChange() {
-    this.cursorsState = { ... this.cursors };
-    console.log('(ldf-editor) new cursors ', this.cursorsState);
-  }
 
   // Events
   /** User's cursor/selection changed */
@@ -86,9 +63,6 @@ export class EditorComponent {
   componentWillLoad() {
     // initial document load from property
     this.docChanged(this.doc);
-    this.uidChange();
-    this.usersChange();
-    this.cursorsChange();
   }
 
   // Listeners
@@ -125,8 +99,6 @@ export class EditorComponent {
             }]
           });
 
-    console.log('addChildAfter - emit change', change);
-
     this.editorDocShouldChange.emit(change);
   }
 
@@ -142,11 +114,8 @@ export class EditorComponent {
             .join('/')
             .replace(/\/$/, '');               // replace trailing / that arises if `field` is `undefined`
 
-    console.log('parts = ', parts);
-
     // if we've fired this on the first element, do nothing
     if(previousIndex >= 0) {
-      console.log('previousPath', previousPath);
       // otherwise, look up the value of the previous element
       const previousElement = elementFromPath(this.el, previousPath),
             textarea = previousElement.shadowRoot.querySelector('textarea'),
@@ -257,9 +226,10 @@ export class EditorComponent {
         </ldf-label-bar>
 
         <ldf-editor-cursors
-          cursors={this.cursorsState}
-          users={this.usersState}
-          uid={this.uidState}
+          parent={this.el}
+          cursors={this.cursors}
+          users={this.users}
+          uid={this.uid}
         ></ldf-editor-cursors>
 
         {/* Editable version of liturgy */}

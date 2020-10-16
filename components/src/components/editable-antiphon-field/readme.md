@@ -69,6 +69,7 @@ graph TD;
   ldf-liturgical-document --> ion-skeleton-text
   ldf-liturgical-document --> ldf-liturgy
   ldf-liturgical-document --> ldf-heading
+  ldf-liturgical-document --> ldf-image
   ldf-liturgical-document --> ldf-meditation
   ldf-liturgical-document --> ldf-option
   ldf-liturgical-document --> ldf-refrain
@@ -87,6 +88,8 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
+  ldf-image --> ldf-label-bar
+  ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label

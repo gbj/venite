@@ -20,6 +20,7 @@
  - [ldf-editable-metadata-buttons](../editable-metadata-buttons)
  - [ldf-editor](../editor)
  - [ldf-heading](../heading)
+ - [ldf-image](../image)
  - [ldf-meditation](../meditation)
  - [ldf-option](../option)
  - [ldf-psalm](../psalm)
@@ -35,6 +36,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editor --> ldf-label-bar
   ldf-heading --> ldf-label-bar
+  ldf-image --> ldf-label-bar
   ldf-meditation --> ldf-label-bar
   ldf-option --> ldf-label-bar
   ldf-psalm --> ldf-label-bar

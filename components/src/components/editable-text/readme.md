@@ -40,6 +40,7 @@
  - [ldf-editable-preference](../editable-preference)
  - [ldf-editable-preference-option](../editable-preference-option)
  - [ldf-heading](../heading)
+ - [ldf-image](../image)
  - [ldf-psalm](../psalm)
  - [ldf-refrain](../refrain)
  - [ldf-responsive-prayer](../responsive-prayer)
@@ -63,6 +64,7 @@ graph TD;
   ldf-editable-preference --> ldf-editable-text
   ldf-editable-preference-option --> ldf-editable-text
   ldf-heading --> ldf-editable-text
+  ldf-image --> ldf-editable-text
   ldf-psalm --> ldf-editable-text
   ldf-refrain --> ldf-editable-text
   ldf-responsive-prayer --> ldf-editable-text
