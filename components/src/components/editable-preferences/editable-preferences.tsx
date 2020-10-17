@@ -1,8 +1,12 @@
 import { Component, Element, Prop, Event, EventEmitter, h, State, Host, Watch } from '@stencil/core';
 import { alertController } from '@ionic/core';
 import { Change, Preference, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
-import { PreferenceTree } from './preference-tree';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './editable-preferences.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};import { PreferenceTree } from './preference-tree';
 
 @Component({
   tag: 'ldf-editable-preferences',
@@ -10,7 +14,7 @@ import { PreferenceTree } from './preference-tree';
   shadow: true
 })
 export class EditablePreferencesComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   @State() tree : { [category: string]: Preference[] };
   @State() specialTree : { [category: string]: Preference[] };
@@ -75,20 +79,9 @@ export class EditablePreferencesComponent {
     this.loadLocaleStrings();
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

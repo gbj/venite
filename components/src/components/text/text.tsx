@@ -1,7 +1,13 @@
-import { Component, Prop, Watch, State, Element, Host, Method, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Element, Host, h } from '@stencil/core';
 import { Text, Heading } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './text.i18n.en.json';
+import ES from './text.i18n.es.json';
+const LOCALE = {
+  'en': EN,
+  'es': ES
+};
 @Component({
   tag: 'ldf-text',
   styleUrl: 'text.scss',
@@ -49,23 +55,10 @@ export class TextComponent {
     this.loadLocaleStrings();
   }
 
-  // Public methods
-  /** Asynchronously return localization strings */
-  @Method()
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
   // Private methods
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }
@@ -116,7 +109,7 @@ export class TextComponent {
               path={`${this.path}/value/${prayerIndex}`}>
             </ldf-editable-text>
           )}
-          {!(this.obj.metadata && this.obj.metadata.omit_response) && <span class='response'>
+          {!(this.obj?.style === 'prayer' || (this.obj?.metadata?.response && !this.obj?.metadata?.omit_response)) && <span class='response'>
             <ldf-editable-text
               id={`${this.obj.uid || this.obj.slug}-response`}
               text={this.obj.metadata && this.obj.metadata.response}

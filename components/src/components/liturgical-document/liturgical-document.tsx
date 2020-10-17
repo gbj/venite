@@ -1,7 +1,11 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
 import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
-import { ConditionNode } from './condition-node';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './liturgical-document.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};import { ConditionNode } from './condition-node';
 import { LookupNode } from './lookup-node';
 
 @Component({
@@ -10,7 +14,7 @@ import { LookupNode } from './lookup-node';
   shadow: true
 })
 export class LiturgicalDocumentComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   // States
   @State() obj : LiturgicalDocument;
@@ -89,20 +93,9 @@ export class LiturgicalDocumentComponent {
     this.focusObj.emit({obj: this.obj, path: this.path});
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

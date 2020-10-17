@@ -1,8 +1,12 @@
 import { Component, Element, State, Prop, Event, EventEmitter, h } from '@stencil/core';
 import { modalController, ComponentProps } from '@ionic/core';
 import { LiturgicalDocument } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
-import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './editable-metadata-buttons.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
 
 @Component({
   tag: 'ldf-editable-metadata-buttons',
@@ -41,20 +45,9 @@ export class EditableMetadataButtonsComponent {
   }
 
   // Private methods
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

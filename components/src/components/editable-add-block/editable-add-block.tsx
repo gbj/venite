@@ -1,7 +1,14 @@
 import { Element, Component, Prop, State, Host, Event, EventEmitter, h } from '@stencil/core';
-import { getLocaleComponentStrings } from '../../utils/locale';
 import { Change } from '@venite/ldf';
 import '@ionic/core';
+
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './editable-add-block.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
+
 
 @Component({
   tag: 'ldf-editable-add-block',
@@ -35,20 +42,9 @@ export class EditableAddBlockComponent {
   }
 
   // Methods
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

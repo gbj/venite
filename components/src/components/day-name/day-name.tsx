@@ -1,6 +1,12 @@
 import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
 import { LiturgicalDay, dateFromYMDString } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './day-name.i18n.en.json';
+const LOCALE = {
+  'en': EN,
+};
+
 
 @Component({
   tag: 'ldf-day-name',
@@ -44,20 +50,9 @@ export class DayNameComponent {
     this.dayChange(this.day);
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.el)];
     } catch(e) {
       console.warn(e);
     }

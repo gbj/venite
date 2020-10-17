@@ -1,7 +1,11 @@
 import { Component, Prop, Watch, State, Method, Element, Event, EventEmitter, Host, JSX, h } from '@stencil/core';
 import { Meditation } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './meditation.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-meditation',
   styleUrl: 'meditation.scss',
@@ -70,12 +74,7 @@ export class MeditationComponent {
     // parse doc we're passed
     this.docChanged(this.doc);
 
-    // load locale strings
-    try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
-    } catch(e) {
-      console.warn(e);
-    }
+    this.loadLocaleStrings();
 
     // start the timer
     if(this.autostart) {
@@ -85,17 +84,6 @@ export class MeditationComponent {
   }
 
   // Public methods
-  /** Asynchronously return localization strings */
-  @Method()
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
   /** Start the timer, either with a given value of seconds or with the number passed in the Meditation object metadata */
   @Method()
   async start(value : number = undefined) {
@@ -141,10 +129,9 @@ export class MeditationComponent {
   }
 
   // Private methods
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

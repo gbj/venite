@@ -1,8 +1,12 @@
 import { Component, Prop, Watch, State, Listen, Method, Host, JSX, Event, EventEmitter, Element, h } from '@stencil/core';
 import { Option, LiturgicalDocument, Change } from '@venite/ldf';
 import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './option.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-option',
   shadow: true
@@ -68,7 +72,7 @@ export class OptionComponent {
   /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.el)];
     } catch(e) {
       console.warn(e);
     }

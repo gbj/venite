@@ -25,18 +25,20 @@ export const config: Config = {
     },
     {
       type: 'www',
-      copy: [{
-        src: "**/*.i18n.*.json",
-        dest: "i18n"
-      }],
+      // uncomment lines below if we go back to fetching static JSON
+      //copy: [{
+      //  src: "**/*.i18n.*.json",
+      //  dest: "i18n"
+      //}],
       serviceWorker: null // disable service workers
     }
   ],
   plugins: [
     sass()
   ],
-  copy: [{
-    src: "**/*.i18n.*.json",
-    dest: "i18n"
-  }]
+  // uncomment lines below if we go back to fetching static JSON
+  //copy: [{
+  //  src: "**/*.i18n.*.json",
+  //  dest: "i18n"
+  //}]
 };

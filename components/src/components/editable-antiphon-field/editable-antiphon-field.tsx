@@ -1,8 +1,12 @@
 import { alertController } from '@ionic/core';
 import { Component, Element, Prop, Event, EventEmitter, h, Host, State, Watch } from '@stencil/core';
 import { Change, Refrain } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './editable-antiphon-field.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 type Mode = 'default' | 'string' | 'refrain' | 'table';
 
 type EditableStringOrAntiphonProps = {
@@ -32,7 +36,7 @@ const EditableStringOrAntiphon = ({ mode, path, value } : EditableStringOrAntiph
   shadow: true
 })
 export class EditableAntiphonFieldComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
 
@@ -94,20 +98,9 @@ export class EditableAntiphonFieldComponent {
     }
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

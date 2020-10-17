@@ -1,13 +1,17 @@
 import { Component, Element, Prop, Event, EventEmitter, h, Host, State, Watch } from '@stencil/core';
 import { Change, Condition } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './editable-condition.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-editable-condition',
   shadow: true
 })
 export class EditableConditionComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
 
@@ -43,20 +47,9 @@ export class EditableConditionComponent {
     this.currentCondition = this.condition;
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

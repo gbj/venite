@@ -14,19 +14,6 @@
 | `path`     | `path`     | A JSON Pointer that points to the Collect being edited | `string`                 | `undefined` |
 
 
-## Methods
-
-### `getLocaleStrings() => Promise<{ [x: string]: string; }>`
-
-Asynchronously return localization strings
-
-#### Returns
-
-Type: `Promise<{ [x: string]: string; }>`
-
-
-
-
 ## Dependencies
 
 ### Used by

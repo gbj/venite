@@ -1,8 +1,13 @@
 import { Element, Component, Host, Listen, State, Event, EventEmitter, h } from '@stencil/core';
-
-import { getLocaleComponentStrings } from '../../utils/locale';
 import { MENU } from './menu-options';
 import { MenuOption } from '../../interfaces/menu-option';
+
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './editable-add-block-menu.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 
 @Component({
   tag: 'ldf-editable-add-block-menu',
@@ -31,20 +36,9 @@ export class EditableAddBlockMenuComponent {
     this.filter('');
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

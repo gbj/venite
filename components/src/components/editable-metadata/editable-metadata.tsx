@@ -1,7 +1,11 @@
 import { Component, Element, Prop, Watch, State, Host, FunctionalComponent, Event, EventEmitter, h } from '@stencil/core';
 import { LiturgicalDocument, specificClass, Change } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './editable-metadata.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-editable-metadata',
   styleUrl: 'editable-metadata.scss',
@@ -58,20 +62,9 @@ export class EditableMetadataComponent {
   }
 
   // Private methods
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

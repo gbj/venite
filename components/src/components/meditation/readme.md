@@ -25,16 +25,6 @@
 
 ## Methods
 
-### `getLocaleStrings() => Promise<{ [x: string]: string; }>`
-
-Asynchronously return localization strings
-
-#### Returns
-
-Type: `Promise<{ [x: string]: string; }>`
-
-
-
 ### `pause() => Promise<void>`
 
 Pause the timer

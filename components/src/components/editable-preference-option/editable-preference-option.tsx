@@ -1,13 +1,17 @@
 import { Component, Element, Prop, Event, EventEmitter, h, State, Host, Watch } from '@stencil/core';
 import { Change, PreferenceOption } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './editable-preference-option.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-editable-preference-option',
   shadow: true
 })
 export class EditablePreferenceOptionComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
 
@@ -45,20 +49,9 @@ export class EditablePreferenceOptionComponent {
     this.loadLocaleStrings();
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

@@ -2,14 +2,18 @@ import { Component, Element, Prop, Listen, Event, EventEmitter, State, h } from 
 import { alertController } from '@ionic/core';
 import { Change } from '@venite/ldf';
 
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './editable-delete.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-editable-delete',
   shadow: true
 })
 export class EditableDeleteComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   @State() localeStrings: { [x: string]: string; };
 
@@ -31,23 +35,17 @@ export class EditableDeleteComponent {
   // Listeners
   @Listen('click')
   async onClick() {
-    // make sure locale strings are loaded
-    let localeStrings = this.localeStrings;
-    if(!localeStrings) {
-      localeStrings = await this.getLocaleStrings();
-    }
-
     // show a confirmation alert
     const alert = await alertController.create({
-      header: localeStrings.confirm_header,
-      message: localeStrings.confirm_message,
+      header: this.localeStrings.confirm_header,
+      message: this.localeStrings.confirm_message,
       buttons: [
         {
-          text: localeStrings.cancel,
+          text: this.localeStrings.cancel,
           role: 'cancel',
           cssClass: 'secondary'
         }, {
-          text: localeStrings.delete,
+          text: this.localeStrings.delete,
           role: 'submit',
           cssClass: 'danger',
           handler: () => {
@@ -82,20 +80,9 @@ export class EditableDeleteComponent {
   }
 
   // Methods
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

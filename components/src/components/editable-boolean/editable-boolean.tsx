@@ -6,7 +6,7 @@ import { Change } from '@venite/ldf';
   shadow: true
 })
 export class EditableBooleanComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   // Properties
 

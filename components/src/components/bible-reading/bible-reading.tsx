@@ -1,7 +1,13 @@
-import { Component, Element, Prop, Watch, State, Method, JSX, h } from '@stencil/core';
+import { Component, Element, Prop, Watch, State, JSX, h } from '@stencil/core';
 import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './bible-reading.i18n.en.json';
+import ES from './bible-reading.i18n.es.json';
+const LOCALE = {
+  'en': EN,
+  'es': ES
+};
 
 @Component({
   tag: 'ldf-bible-reading',
@@ -67,23 +73,10 @@ export class BibleReadingComponent {
     }
   }
 
-  // Public methods
-  /** Asynchronously return localization strings */
-  @Method()
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
   // Private methods
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.element);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

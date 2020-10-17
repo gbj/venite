@@ -7,7 +7,7 @@ import { Change } from '@venite/ldf';
   shadow: true
 })
 export class EditableSelectComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
 
   // Properties
 

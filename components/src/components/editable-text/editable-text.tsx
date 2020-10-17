@@ -3,8 +3,12 @@ import Debounce from 'debounce-decorator';
 
 import { Change, Cursor, ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Heading } from '@venite/ldf';
 import { handleInput } from './handle-input';
-import { getLocaleComponentStrings } from '../../utils/locale';
-import { TextFieldTypes } from '@ionic/core';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './editable-text.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};import { TextFieldTypes } from '@ionic/core';
 
 @Component({
   tag: 'ldf-editable-text',
@@ -12,7 +16,7 @@ import { TextFieldTypes } from '@ionic/core';
   shadow: true
 })
 export class EditableTextComponent {
-  @Element() el: HTMLElement;
+  @Element() element: HTMLElement;
   private textarea : HTMLTextAreaElement | HTMLInputElement;
   private cursor : Cursor;
   private previousText : string;
@@ -195,20 +199,9 @@ export class EditableTextComponent {
     this.ldfCursorMoved.emit(cursor);
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }

@@ -1,15 +1,19 @@
 import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
 import { Heading, Citation, dateFromYMDString } from '@venite/ldf';
 import { EditableNode } from './editable-node';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { getComponentClosestLanguage } from '../../utils/locale';
 
+import EN from './heading.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 @Component({
   tag: 'ldf-heading',
   styleUrl: 'heading.scss',
   shadow: true
 })
 export class HeadingComponent {
-  @Element() el : HTMLElement;
+  @Element() element : HTMLElement;
 
   // States
   @State() obj : Heading;
@@ -50,20 +54,9 @@ export class HeadingComponent {
     this.loadLocaleStrings();
   }
 
-  /** Asynchronously return localization strings */
-  async getLocaleStrings() : Promise<{ [x: string]: string; }> {
-    if(!this.localeStrings) {
-      await this.loadLocaleStrings();
-      return this.localeStrings;
-    } else {
-      return this.localeStrings;
-    }
-  }
-
-  /** Asynchronously load localization strings */
   async loadLocaleStrings() : Promise<void> {
     try {
-      this.localeStrings = await getLocaleComponentStrings(this.el);
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
     }
@@ -104,7 +97,7 @@ export class HeadingComponent {
     const hasDate = !!this.obj?.day?.date;
     if(hasDate) {
       const date = dateFromYMDString(this.obj?.day?.date),
-            locale : string = (this.el?.closest('[lang]') as HTMLElement)?.lang || 'en';
+            locale : string = (this.element?.closest('[lang]') as HTMLElement)?.lang || 'en';
       return date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
     } else {
       return [];
