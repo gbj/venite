@@ -26,3 +26,16 @@
 .litany {
   white-space: pre-wrap;
 }
+
+.preces {
+  tr, .row {
+    display: table-row;
+    display: var(--ldf-preces-tr-display);
+
+    td, .cell {
+      display: table-cell;
+      display: var(--ldf-preces-td-display);
+      margin-left: var(--ldf-preces-td-margin-left);
+    }
+  }
+}
