@@ -49,7 +49,7 @@ export class StringComponent {
 
   // Private methods
   processString() {
-    const withoutEntities : string = this.processEntities(this.text);
+    const withoutEntities : string = this.processEntities(this.text.trim());
     let processed : JSX.Element[] = this.processMarkup(withoutEntities);
     if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
@@ -72,7 +72,6 @@ export class StringComponent {
   }
 
   processMarkup(s : string) : JSX.Element[] {
-    console.log('process markup', s)
     const nodes = s
       .replace(/^([A-Z]{2,})/, (match) => match[0] + match.slice(1).toLowerCase())
       .replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
@@ -129,7 +128,6 @@ export class StringComponent {
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
-            console.log('match1', match1, 'match2', match2, 'nextWord', nextWord);
 
       final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
