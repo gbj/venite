@@ -173,7 +173,7 @@ export class HeadingComponent {
           {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), Boolean(text)))}
 
           {isDate && !this.editable && this.headerNode(level, this.dateNode())}
-          {isDate && this.editable && <code class="lookup">{localeStrings.day}</code>}
+          {isDate && this.editable && <code class="lookup">{localeStrings.date}</code>}
 
           {isDay && !this.editable && this.headerNode(level, <ldf-day-name day={this.obj?.day}></ldf-day-name>)}
           {isDay && !this.editable && this.obj?.day?.holy_days?.length > 0 && <ul class="holy-days">
@@ -181,7 +181,7 @@ export class HeadingComponent {
               .filter(day => day.type?.rank < 3)
               .map(day => <li class="holy-day">{day.name}</li>)}
           </ul>}
-          {isDay && this.editable && <code class="lookup">{localeStrings.date}</code>}
+          {isDay && this.editable && <code class="lookup">{localeStrings.day}</code>}
 
           <slot name='additional'></slot>
 
