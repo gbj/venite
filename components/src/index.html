@@ -270,6 +270,19 @@ const LITURGY = {
       }
     },
     {
+      "type": "image",
+      "value": [
+        "https://www.stjohns02129.org/wp-content/uploads/2017/08/St-Johns-banner.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "style": "markdown",
+      "value": [
+        "This *is* a **test** of the Markdown web component."
+      ]
+    },
+    {
       "hidden": false,
       "type": "heading",
       "style": "date",
@@ -4749,10 +4762,10 @@ const LITURGY = {
   }
 }
 const node = document.createElement('ldf-liturgical-document');
-node.setAttribute('editable', true);
+node.setAttribute('editable', false);
 node.setAttribute('path', '/');
     node.doc = LITURGY;
-    //document.querySelector('#example').appendChild(node);
+    document.querySelector('#example').appendChild(node);
   </script>
 </body>
 </html>

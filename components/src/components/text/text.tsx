@@ -1,6 +1,7 @@
 import { Component, Prop, Watch, State, Element, Host, h } from '@stencil/core';
 import { Text, Heading } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
+import '@vanillawc/wc-markdown';
 
 import EN from './text.i18n.en.json';
 import ES from './text.i18n.es.json';
@@ -119,46 +120,54 @@ export class TextComponent {
           </span>}
         </Host>
       );
-    } else {
-      let firstTextLongEnoughForDropcap = -1;
-      if(this.obj?.value?.length > 0) {
-        const firstDropcappableChild = this.obj.value.find(piece => 
-          piece.length >= 150
-        );
-        firstTextLongEnoughForDropcap = this.obj.value.indexOf(firstDropcappableChild);
+    }
+    else {
+      /** `markdown` types */
+      if(this.obj?.style === 'markdown') {
+        return (this.obj?.value || []).map(value => <wc-markdown>{value}</wc-markdown>);
       }
-
-      return (
-        <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
-          <ldf-label-bar>
-            <slot slot='end' name='controls'></slot>
-          </ldf-label-bar>
-
-          {/* Heading */}
-          <ldf-heading
-            path={this.path}
-            doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
-          </ldf-heading>
-
-          {
-            compiledValue.map((prayer, prayerIndex) =>
-              <p id={`${this.obj.uid || this.obj.slug}-prayerIndex`}>
-                  {prayer?.map((chunk, chunkIndex) =>
-                    <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
-                      <ldf-string text={chunk}
-                        citation={{label: this.obj.label}}
-                        dropcap={prayerIndex === firstTextLongEnoughForDropcap && chunkIndex <= 1 ? "force" : "disabled"}
-                        index={prayerIndex + chunkIndex}>
-                      </ldf-string>
-                    </span>
-                  )}
-                  {this.obj?.metadata?.response && prayerIndex == compiledValue.length - 1 && <span class="response"> {this.obj.metadata.response}</span>}
-                  {!this.obj?.metadata?.response && this.obj.style == 'prayer' && prayerIndex == compiledValue.length - 1 && <span class="response"> {localeStrings.amen}</span>}
-              </p>
-            )
-          }
-        </div>
-      );
+      /** `text` and `prayer` types */
+      else {
+        let firstTextLongEnoughForDropcap = -1;
+        if(this.obj?.value?.length > 0) {
+          const firstDropcappableChild = this.obj.value.find(piece => 
+            piece.length >= 150
+          );
+          firstTextLongEnoughForDropcap = this.obj.value.indexOf(firstDropcappableChild);
+        }
+  
+        return (
+          <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
+            <ldf-label-bar>
+              <slot slot='end' name='controls'></slot>
+            </ldf-label-bar>
+  
+            {/* Heading */}
+            <ldf-heading
+              path={this.path}
+              doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
+            </ldf-heading>
+  
+            {
+              compiledValue.map((prayer, prayerIndex) =>
+                <p id={`${this.obj.uid || this.obj.slug}-prayerIndex`}>
+                    {prayer?.map((chunk, chunkIndex) =>
+                      <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
+                        <ldf-string text={chunk}
+                          citation={{label: this.obj.label}}
+                          dropcap={prayerIndex === firstTextLongEnoughForDropcap && chunkIndex <= 1 ? "force" : "disabled"}
+                          index={prayerIndex + chunkIndex}>
+                        </ldf-string>
+                      </span>
+                    )}
+                    {this.obj?.metadata?.response && prayerIndex == compiledValue.length - 1 && <span class="response"> {this.obj.metadata.response}</span>}
+                    {!this.obj?.metadata?.response && this.obj.style == 'prayer' && prayerIndex == compiledValue.length - 1 && <span class="response"> {localeStrings.amen}</span>}
+                </p>
+              )
+            }
+          </div>
+        );
+      }
     }
   }
 }

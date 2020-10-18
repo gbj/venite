@@ -98,7 +98,7 @@ export class HeadingComponent {
     if(hasDate) {
       const date = dateFromYMDString(this.obj?.day?.date),
             locale : string = (this.element?.closest('[lang]') as HTMLElement)?.lang || 'en';
-      return date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
+      return <div class="date">{date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}</div>;
     } else {
       return [];
     }
@@ -172,10 +172,10 @@ export class HeadingComponent {
           {/* `Heading.label` => main header node */}
           {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), Boolean(text)))}
 
-          {isDate && !this.editable && this.headerNode(level, this.dateNode())}
+          {isDate && !this.editable && this.dateNode()}
           {isDate && this.editable && <code class="lookup">{localeStrings.date}</code>}
 
-          {isDay && !this.editable && this.headerNode(level, <ldf-day-name day={this.obj?.day}></ldf-day-name>)}
+          {isDay && !this.editable && <div class="date"><ldf-day-name day={this.obj?.day}></ldf-day-name></div>}
           {isDay && !this.editable && this.obj?.day?.holy_days?.length > 0 && <ul class="holy-days">
             {this.obj?.day?.holy_days
               .filter(day => day.type?.rank < 3)

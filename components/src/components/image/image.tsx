@@ -1,5 +1,12 @@
-import { Component, Prop, Watch, State, Host, h } from '@stencil/core';
+import { Element, Component, Prop, Watch, State, Host, h } from '@stencil/core';
 import { Image } from '@venite/ldf';
+
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './image.i18n.en.json';
+const LOCALE = {
+  'en': EN
+};
 
 @Component({
   tag: 'ldf-image',
@@ -7,8 +14,12 @@ import { Image } from '@venite/ldf';
   shadow: true
 })
 export class ImageComponent {
+  @Element() element : HTMLElement;
+
   // States
   @State() obj : Image;
+
+  @State() localeStrings : Record<string, string>;
 
   // Properties
   /**
@@ -42,10 +53,21 @@ export class ImageComponent {
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
+    this.loadLocaleStrings();
+  }
+
+  async loadLocaleStrings() : Promise<void> {
+    try {
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
+    } catch(e) {
+      console.warn(e);
+    }
   }
 
   // Render
   render() {
+    const localeStrings = this.localeStrings || {};
+
     return (
       <Host lang={this.obj.language}>
         <ldf-label-bar>
@@ -57,6 +79,7 @@ export class ImageComponent {
             <figure>
               <img src={url} />
               <figcaption>
+                <code>{localeStrings.url}</code>
                 <ldf-editable-text
                 id={`${this.obj.uid || this.obj.slug}-${ii}`}
                 text={url}

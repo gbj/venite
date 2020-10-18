@@ -5,7 +5,9 @@ import { getComponentClosestLanguage } from '../../utils/locale';
 import EN from './liturgical-document.i18n.en.json';
 const LOCALE = {
   'en': EN
-};import { ConditionNode } from './condition-node';
+};
+
+import { ConditionNode } from './condition-node';
 import { LookupNode } from './lookup-node';
 
 @Component({

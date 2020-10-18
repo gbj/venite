@@ -2,3 +2,12 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+figcaption {
+  background-color: var(--ldf-editable-lookup-background-color);
+  border-radius: 4px;
+  color: var(--ldf-editable-lookup-color);
+  display: block;
+  margin: auto;
+  text-align: center;
+}

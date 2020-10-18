@@ -50,6 +50,13 @@
     text-transform: var(--ldf-h5-text-transform);
   }
 
+  .date, .holy-days {
+    font-size: var(--ldf-date-font-size);
+    text-transform: var(--ldf-date-text-transform);
+    text-align: var(--ldf-date-text-align);
+    font-style: var(--ldf-date-font-style);
+  }
+
   .holy-days {
     list-style-type: none;
     margin: 0;

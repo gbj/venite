@@ -1,5 +1,5 @@
 import { h } from '@stencil/core';
-import { LiturgicalDocument, Text, BibleReading, Meditation, Heading, ResponsivePrayer, Rubric, Psalm, Refrain, Liturgy } from '@venite/ldf';
+import { LiturgicalDocument, Text, BibleReading, Meditation, Heading, ResponsivePrayer, Rubric, Psalm, Refrain, Liturgy, Image } from '@venite/ldf';
 import { MenuOption } from '../../interfaces/menu-option';
 
 export const MENU : MenuOption[] = [
@@ -111,6 +111,16 @@ export const MENU : MenuOption[] = [
     needsMoreInfo: 'hymn'
   },
   {
+    label: 'image',
+    section: ['Content'],
+    /* SVG is Font Awesome 'fa-image' */
+    icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="image" class="svg-inline--fa fa-image fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM112 120c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56zM64 384h384V272l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L208 320l-55.515-55.515c-4.686-4.686-12.284-4.686-16.971 0L64 336v48z"></path></svg>),
+    template: [
+      new Image({ type: 'image', value: ['']})
+    ],
+    needsMoreInfo: 'image'
+  },
+  {
     label: 'invitatory',
     section: ['Liturgy'],
     icon: () => (<svg version="1.0" width="1065.000000pt" height="1280.000000pt" viewBox="0 0 1065.000000 1280.000000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">  <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">    <path d="M 2020 12790 C 1990 12785 1918 12777 1860 12770 C 1623 12744 672.669 12273.564 523 12002 C 316.287 11626.935 -405 9634.932 1000 5598.932 C 1837 3196.932 3560 15 3560 10 C 3560 -3 5211 101 5487 166 C 5827 246 6072 380 6161 534 C 6189 583 9162 2764 9755 3855 C 10133 4550 10348 5103 10493 5760 C 10635 6399 10683 7382 10609 8140 C 10541 8842 10287 9670 9914 10400 C 9873 10480 9840 10548 9840 10551 C 9840 10555 9870 10580 9907 10607 C 10066 10723 10186 10867 10280 11051 L 10333 11156 L 9885 11810 C 9639 12170 9429 12473 9420 12484 C 9403 12501 9399 12499 9314 12418 C 9075 12191 8794 12040 8305 11874 C 7675 11659 7197 11560 6790 11560 C 6350 11560 5829 11648 5170 11835 C 4824 11933 4715 11976 3895 12342 C 3247 12632 2966 12722 2576 12765 C 2499 12774 2402 12785 2362 12790 C 2278 12802 2100 12801 2020 12790 Z M 2236.679 11071.163 C 2314.679 11050.163 3527.302 10462.707 3527.302 10450.707 C 3527.302 10427.707 2669.082 8800 2657.082 8800 C 2651.082 8800 2030.847 9568.173 2000 10084.133 C 1982.133 10382.989 2124.679 11102.163 2236.679 11071.163 Z M 4424 10170 C 4424 10170 5001 10049.652 5000 10027.652 C 5000 9996.652 3551.769 7151.685 3536.769 7151.685 C 3526.769 7151.685 3234 7780 3215 7841 C 3209 7860 4408 10172 4424 10170 Z M 6063 9808 C 6141 9796 6762.015 9806 6764.015 9800 C 6767.015 9793 4380.708 5056.389 4374.708 5058.389 C 4369.708 5060.389 4120 5839 4084 5918 L 4020 6060 C 4020 6060 5983 9800 6000 9800 C 6011 9800 5987 9820 6063 9808 Z M 8060 9680 C 8060 9680 8285 9211 8335 8965 C 8429 8497 8435 7764 8348 7230 C 8264 6707 8090 6270 7707 5610 C 7490 5238 7153 4748 6946 4505 C 6481 3958 5998 3541 5472 3230 C 5367 3169 5346 3160 5335 3171 C 5319 3187 5000 3782 5000 3800 C 5000 3807 7817.247 9800 7817.247 9800 L 8060 9680 Z"/>  </g></svg>),
@@ -202,6 +212,13 @@ export const MENU : MenuOption[] = [
       <path fill="currentColor" d="M 12.83 160 L 275.17 160 C 282.258 159.994 288.006 165.742 288 172.83 L 288 211.17 C 288.006 218.258 282.258 224.006 275.17 224 L 12.83 224 C 5.742 224.006 -0.006 218.258 0 211.17 L 0 172.83 C -0.006 165.742 5.742 159.994 12.83 160 Z M 12.83 416 L 275.17 416 C 282.258 415.994 288.006 421.742 288 428.83 L 288 467.17 C 288.006 474.258 282.258 480.006 275.17 480 L 12.83 480 C 5.742 480.006 -0.006 474.258 0 467.17 L 0 428.83 C -0.006 421.742 5.742 415.994 12.83 416 Z M 432 352 L 16 352 C 7.163 352 0 344.837 0 336 L 0 304 C 0 295.163 7.163 288 16 288 L 432 288 C 440.837 288 448 295.163 448 304 L 448 336 C 448 344.837 440.837 352 432 352 Z M 432 96 L 16 96 C 7.163 96 0 88.837 0 80 L 0 48 C 0 39.163 7.163 32 16 32 L 432 32 C 440.837 32 448 39.163 448 48 L 448 80 C 448 88.837 440.837 96 432 96 Z"/>
     </svg>),
     template: [ new ResponsivePrayer({ type: 'responsive', style: 'responsive', value: [ { label: '', text: '', response: '' } ] }) ]
+  },
+  {
+    label: 'rich-text',
+    section: ['Content'],
+    /* SVG is Font Awesome 'fa-file' */
+    icon: () => (<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>),
+    template: [ new Text({ type: 'text', style: 'markdown', value: [''] })]
   },
   {
     label: 'rubric',
