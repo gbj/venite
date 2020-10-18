@@ -65,6 +65,10 @@ export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
   id?: number;
 
+  /** Timestamps for document creation and modification */
+  date_created?: any;
+  date_modified?: any;
+
   /** Indicates the type of document */
   type: TypeTuple[number];
 

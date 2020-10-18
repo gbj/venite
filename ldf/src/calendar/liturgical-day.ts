@@ -11,6 +11,7 @@ interface ObservedInterface {
   propers?: string;
   color?: string | LiturgicalColor;
   season?: Seasons[number] | undefined;
+  octave?: string | undefined;
 }
 
 /**
@@ -55,6 +56,9 @@ export class LiturgicalDay {
 
   /** A machine-readable identifier for the liturgical season */
   season: Seasons[number];
+
+  /** A machine-readable identifier day within the octave of which a day falls */
+  octave?: string | undefined;
 
   /**  An array of possible {@link HolyDay}s that fall at this moment. It’s up to the consumer
    * to determine precedence. */
@@ -121,7 +125,8 @@ export class LiturgicalDay {
     }
 
     const color = observed.color || this.color,
-      season = observed.season || this.season;
+      season = observed.season || this.season,
+      octave = observed.octave || this.octave;
 
     return new LiturgicalDay({
       ...this,
@@ -129,6 +134,7 @@ export class LiturgicalDay {
       propers,
       color,
       season,
+      octave,
       holy_days: (this.holy_days || new Array()).concat(holydays),
       holy_day_observed: holy_day_is_observed ? (observed as HolyDay) : this.holy_day_observed,
     });

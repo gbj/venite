@@ -35,6 +35,9 @@ export class HolyDay {
   /** A machine-readable identifier for the liturgical season */
   season?: Seasons[number];
 
+  /** A machine-readable identifier day within the octave of which a day falls */
+  octave?: string | undefined;
+
   /** Categories for this feast that are not liturgical seasons
    * @example
    * ["Bishop", "Martyr"]

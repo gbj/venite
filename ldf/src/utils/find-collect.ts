@@ -22,6 +22,7 @@ export function findCollect(
     sundayCollect = sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
     season = !FAKE_SEASONS.includes(day.season) ? day.season : day.week?.season || day.season,
     seasonalCollects = collects.filter((collect) => collect.slug === season),
+    octaveCollect = day.octave ? docsToOption(collects.filter((collect) => collect.slug === day.octave)) : null,
     blackLetterDays = (day.holy_days || []).filter((feast) => feast.type && feast.type.rank < 3),
     blackLetterCollects = blackLetterDays.map((holyday) =>
       docsToOption(
@@ -46,9 +47,12 @@ export function findCollect(
 
   if (redLetterOrSunday || blackLetterCollects.length > 0) {
     if (sundayFirst) {
-      const collects = [redLetterCollect || sundayCollect, ...blackLetterCollects, observedSeasonalCollect].filter(
-        (collect): collect is LiturgicalDocument => !!collect,
-      );
+      const collects = [
+        redLetterCollect || sundayCollect,
+        ...blackLetterCollects,
+        octaveCollect,
+        observedSeasonalCollect,
+      ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);
     } else {
       const collects = [
@@ -57,6 +61,7 @@ export function findCollect(
         redLetterCollect,
         ...blackLetterCollects,
         redLetterCollect ? undefined : sundayCollect,
+        octaveCollect,
         !emberDayPrecedesSunday || !(day.season || '').includes('Ember') ? observedSeasonalCollect : null,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);
