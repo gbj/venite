@@ -77,7 +77,7 @@ Represents a liturgy of any scope and concreteness, from a complete bullletin to
 
 \+ **new LiturgicalDocument**(`data`: Partial‹[LiturgicalDocument](_liturgical_document_.liturgicaldocument.md)›): *[LiturgicalDocument](_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [liturgical-document.ts:223](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L223)*
+*Defined in [liturgical-document.ts:223](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L223)*
 
 **Parameters:**
 
@@ -93,7 +93,7 @@ Name | Type | Default |
 
 • **api**? : *undefined | string*
 
-*Defined in [liturgical-document.ts:97](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L97)*
+*Defined in [liturgical-document.ts:97](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L97)*
 
 The URL (as a string) for the API that provided the document, or against which it can be compiled.
 
@@ -103,7 +103,7 @@ ___
 
 • **category**: *string[]*
 
-*Defined in [liturgical-document.ts:87](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L87)*
+*Defined in [liturgical-document.ts:87](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L87)*
 
 Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'.
 
@@ -113,7 +113,7 @@ ___
 
 • **citation**? : *string | null*
 
-*Defined in [liturgical-document.ts:138](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L138)*
+*Defined in [liturgical-document.ts:138](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L138)*
 
 Biblical or other citation for the document.
 
@@ -126,7 +126,7 @@ ___
 
 • **condition**: *object*
 
-*Defined in [liturgical-document.ts:90](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L90)*
+*Defined in [liturgical-document.ts:90](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L90)*
 
 An array of `Conditions`s determining whether the document should be displayed, given its day.
 
@@ -142,7 +142,7 @@ ___
 
 • **date_created**? : *any*
 
-*Defined in [liturgical-document.ts:69](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L69)*
+*Defined in [liturgical-document.ts:69](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L69)*
 
 Timestamps for document creation and modification
 
@@ -152,7 +152,7 @@ ___
 
 • **date_modified**? : *any*
 
-*Defined in [liturgical-document.ts:70](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L70)*
+*Defined in [liturgical-document.ts:70](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L70)*
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 • **day**? : *[LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)*
 
-*Defined in [liturgical-document.ts:154](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L154)*
+*Defined in [liturgical-document.ts:154](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L154)*
 
 Optional: The liturgical day against which to compile the value, or against which a liturgy has been compiled.
 [LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md)
@@ -171,7 +171,7 @@ ___
 
 • **display_format**? : *[DisplayFormat](../modules/_liturgical_document_.md#displayformat)*
 
-*Defined in [liturgical-document.ts:84](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L84)*
+*Defined in [liturgical-document.ts:84](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L84)*
 
 Specify how the text should be displayed
 Unison: the entire text is a congregational response
@@ -185,7 +185,7 @@ ___
 
 • **hidden**: *boolean* = false
 
-*Defined in [liturgical-document.ts:165](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L165)*
+*Defined in [liturgical-document.ts:165](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L165)*
 
 Marks a document hidden, so it will not display but will not be deleted
 Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
@@ -197,7 +197,7 @@ ___
 
 • **id**? : *undefined | number*
 
-*Defined in [liturgical-document.ts:66](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L66)*
+*Defined in [liturgical-document.ts:66](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L66)*
 
 If provided from a database, `id` is unique identifier/DB primary key
 
@@ -207,7 +207,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [liturgical-document.ts:115](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L115)*
+*Defined in [liturgical-document.ts:115](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L115)*
 
 A human-readable name; either the name of the whole liturgy, or a label for a piece.
 
@@ -220,7 +220,7 @@ ___
 
 • **language**: *string*
 
-*Defined in [liturgical-document.ts:127](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L127)*
+*Defined in [liturgical-document.ts:127](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L127)*
 
 Language code (typically an ISO 639-1 two-letter code)
 
@@ -233,7 +233,7 @@ ___
 
 • **lastRevision**: *number*
 
-*Defined in [liturgical-document.ts:103](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L103)*
+*Defined in [liturgical-document.ts:103](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L103)*
 
 Version number of the document
 
@@ -243,7 +243,7 @@ ___
 
 • **lookup**? : *[Lookup](../modules/_liturgical_document_.md#lookup)*
 
-*Defined in [liturgical-document.ts:177](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L177)*
+*Defined in [liturgical-document.ts:177](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L177)*
 
 Instructs the client to look up more information from the server
 
@@ -265,7 +265,7 @@ ___
 
 • **metadata**? : *any*
 
-*Defined in [liturgical-document.ts:160](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L160)*
+*Defined in [liturgical-document.ts:160](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L160)*
 
 Optional: Child classes can store any additional properties they need within the `metadata` object.
 
@@ -278,7 +278,7 @@ ___
 
 • **sharing**? : *[Sharing](_sharing_sharing_.sharing.md)*
 
-*Defined in [liturgical-document.ts:100](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L100)*
+*Defined in [liturgical-document.ts:100](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L100)*
 
 Permissions for this document: whether it's public, shared with particular individuals, etc.
 
@@ -288,7 +288,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [liturgical-document.ts:109](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L109)*
+*Defined in [liturgical-document.ts:109](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L109)*
 
 An identifying slug. Given the `slug`, the API should be able to identify this document.
 
@@ -301,7 +301,7 @@ ___
 
 • **source**? : *[Citation](_citation_citation_.citation.md) | null*
 
-*Defined in [liturgical-document.ts:143](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L143)*
+*Defined in [liturgical-document.ts:143](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L143)*
 
 Source for the physical resource within which the document can be found
 
@@ -314,7 +314,7 @@ ___
 
 • **style**? : *string | null*
 
-*Defined in [liturgical-document.ts:76](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L76)*
+*Defined in [liturgical-document.ts:76](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L76)*
 
 An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style.
 
@@ -324,7 +324,7 @@ ___
 
 • **type**: *TypeTuple[number]*
 
-*Defined in [liturgical-document.ts:73](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L73)*
+*Defined in [liturgical-document.ts:73](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L73)*
 
 Indicates the type of document
 
@@ -334,7 +334,7 @@ ___
 
 • **uid**? : *undefined | string*
 
-*Defined in [liturgical-document.ts:149](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L149)*
+*Defined in [liturgical-document.ts:149](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L149)*
 
 Optional: A unique identifying string based on the slug, for compiled liturgies with multiple instances of the same prayer.
 
@@ -347,7 +347,7 @@ ___
 
 • **value**? : *[Value](../modules/_liturgical_document_.md#value)*
 
-*Defined in [liturgical-document.ts:180](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L180)*
+*Defined in [liturgical-document.ts:180](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L180)*
 
 The content of the document.
 
@@ -357,7 +357,7 @@ ___
 
 • **version**: *string | object*
 
-*Defined in [liturgical-document.ts:133](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L133)*
+*Defined in [liturgical-document.ts:133](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L133)*
 
 Identifying code for the version of a liturgy, prayer, psalm, or Bible reading.
 
@@ -370,7 +370,7 @@ ___
 
 • **version_label**? : *string | null*
 
-*Defined in [liturgical-document.ts:121](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L121)*
+*Defined in [liturgical-document.ts:121](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L121)*
 
 Optional: A human-readable name for this particular version of a larger category of prayer or liturgy.
 
@@ -383,7 +383,7 @@ Optional: A human-readable name for this particular version of a larger category
 
 ▸ **availableDisplayFormats**(): *ReadonlyArray‹string›*
 
-*Defined in [liturgical-document.ts:221](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L221)*
+*Defined in [liturgical-document.ts:221](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L221)*
 
 Returns the list of all available `display_format` values
 
@@ -395,7 +395,7 @@ ___
 
 ▸ **availableLookupTypes**(): *ReadonlyArray‹string›*
 
-*Defined in [liturgical-document.ts:216](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L216)*
+*Defined in [liturgical-document.ts:216](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L216)*
 
 Returns the list of all possible `lookup.type` values
 
@@ -407,7 +407,7 @@ ___
 
 ▸ **availableStyles**(): *ReadonlyArray‹string›*
 
-*Defined in [liturgical-document.ts:211](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L211)*
+*Defined in [liturgical-document.ts:211](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L211)*
 
 Returns the list of all possible `style` values. Child classes should override if they have styles available.
 
@@ -419,7 +419,7 @@ ___
 
 ▸ **availableTypes**(): *ReadonlyArray‹string›*
 
-*Defined in [liturgical-document.ts:206](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L206)*
+*Defined in [liturgical-document.ts:206](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L206)*
 
 Returns the list of all possible `type` values
 
@@ -431,7 +431,7 @@ ___
 
 ▸ **include**(`day`: [LiturgicalDay](_calendar_liturgical_day_.liturgicalday.md), `prefs`: [ClientPreferences](_liturgy_client_preferences_.clientpreferences.md)): *boolean*
 
-*Defined in [liturgical-document.ts:184](https://github.com/gbj/venite/blob/a5a4cc2/ldf/src/liturgical-document.ts#L184)*
+*Defined in [liturgical-document.ts:184](https://github.com/gbj/venite/blob/c54ff8d/ldf/src/liturgical-document.ts#L184)*
 
 Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
 given the day and assigned preferences

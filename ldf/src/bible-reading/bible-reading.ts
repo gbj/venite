@@ -26,8 +26,8 @@ export class BibleReading extends LiturgicalDocument {
     if (this.metadata && this.metadata.intro) {
       const abbrev = this.abbrevFromCitation(),
         bookCode = this.bookCodeFromAbbrev(abbrev),
-        longName = this.longNameFromBookCode(bookCode),
-        shortName = this.shortNameFromBookCode(bookCode),
+        longName = this.longNameFromBookCode(bookCode, this.language || 'en'),
+        shortName = this.shortNameFromBookCode(bookCode, this.language || 'en'),
         chapter = this.chapterFromCitation(),
         verse = this.verseFromCitation();
 
@@ -119,8 +119,12 @@ export class BibleReading extends LiturgicalDocument {
    * // returns 'The Book of Genesis'
    * this.longNameFromBookCode('Genesis') */
   longNameFromBookCode(bookName: string, lang: string = 'en'): string {
-    const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)],
-      searchResult = (bookResult || {})[lang];
+    console.log('(longNameFromBookCode)', bookName, lang);
+    const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)];
+    let searchResult = (bookResult || {})[lang];
+    if (!searchResult) {
+      searchResult = (bookResult || {})['en'];
+    }
     return searchResult ? searchResult.long : bookName;
   }
 
