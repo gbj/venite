@@ -6,10 +6,12 @@ import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxj
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
 import { AddBlockComponent } from '../add-block/add-block.component';
 import { SharingComponent } from '../sharing/sharing.component';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -40,7 +42,9 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     public auth : AuthService,
     private documents : DocumentService,
     private editorService : EditorService,
-    private modal : ModalController
+    private modal : ModalController,
+    private router : Router,
+    private alert : AlertController
   ) { }
 
   ngOnInit() {
@@ -242,5 +246,48 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     ev.detail.setBibleReadingIntros(intros);
     console.log('(sendBibleIntros)')
     console.log(ev.detail, intros);
+  }
+
+  async shareLink(manager : LocalDocumentManager, doc : LiturgicalDocument) {
+    this.editorService.processChange(manager, new Change({
+      path: '/sharing',
+      op: [{
+        type: 'set',
+        index: 'status',
+        value: 'published',
+        oldValue: doc?.sharing?.status
+      }]
+    }));
+    this.editorService.processChange(manager, new Change({
+      path: '/sharing',
+      op: [{
+        type: 'set',
+        index: 'privacy',
+        value: 'public',
+        oldValue: doc?.sharing?.privacy
+      }]
+    }));
+
+    const orgId = doc?.sharing?.organization,
+      slug = doc?.slug;
+    console.log('Publishing\n\n', orgId, slug);
+    if(orgId && slug) {
+      const alert = await this.alert.create({
+        header: 'Bulletin Published',
+        message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${orgId}/${slug}\n\n`,
+        buttons: [
+          {
+            text: 'Keep Editing',
+            role: 'cancel'
+          },
+          {
+            text: 'Go',
+            handler: () => this.router.navigate(['pray', orgId, slug])
+          }
+        ]
+      });
+
+      await alert.present();
+    }
   }
 }

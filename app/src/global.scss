@@ -187,6 +187,66 @@
       --ldf-drop-line-height: .8em;
     }
   }
+
+    /* Date Headings */
+    --ldf-date-font-size: 1em;
+    --ldf-date-text-transform: none;
+    --ldf-date-text-align: center;
+    --ldf-date-font-style: italic;
+
+    /* Font Sizes */
+    --ldf-max-width: 500px;
+    --ldf-preces-tr-display: table-row;
+    --ldf-preces-td-display: table-cell;
+
+  .fontscale-s {
+    font-size: 75%;
+  }
+
+  .fontscale-m {
+    font-size: 100%;
+  }
+
+  .fontscale-l {
+    --ldf-max-width: 600px;
+    font-size: 125%;
+  }
+
+  .fontscale-xl {
+    --ldf-max-width: 800px;
+    font-size: 150%;
+  }
+
+  .fontscale-xxl {
+    --ldf-max-width: 1000px;
+    font-size: 200%;
+  }
+
+  @media(min-width: 767px) {
+    .fontscale-s {
+      font-size: 100%;
+    }
+
+    .fontscale-m {
+      --ldf-max-width: 600px;
+      font-size: 125%;
+    }
+
+    .fontscale-l {
+      --ldf-max-width: 700px;
+      font-size: 150%;
+    }
+
+    .fontscale-xl {
+      --ldf-max-width: 800px;
+      font-size: 175%;
+    }
+
+    .fontscale-xxl {
+      --ldf-max-width: 1000px;
+      font-size: 200%;
+    }
+  }
 }
 
 .visually-hidden { 
@@ -202,25 +262,4 @@
 venite-pray ion-content div {
   max-width: 600px;
   margin: auto;
-}
-
-/* Font Sizes */
-.fontscale-s {
-  font-size: 75%;
-}
-
-.fontscale-m {
-  font-size: 100%;
-}
-
-.fontscale-l {
-  font-size: 125%;
-}
-
-.fontscale-xl {
-  font-size: 150%;
-}
-
-.fontscale-xxl {
-  font-size: 200%;
 }

@@ -1158,7 +1158,7 @@ export class IonVirtualScroll {
 }
 
 export declare interface LdfBibleReading extends Components.LdfBibleReading {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['getLocaleStrings']})
+@ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-bible-reading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfBibleReading {
   protected el: HTMLElement;
@@ -1438,8 +1438,8 @@ export class LdfEditor {
 }
 
 export declare interface LdfEditorCursors extends Components.LdfEditorCursors {}
-@ProxyCmp({inputs: ['cursors', 'uid', 'users']})
-@Component({ selector: 'ldf-editor-cursors', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'uid', 'users'] })
+@ProxyCmp({inputs: ['cursors', 'parent', 'uid', 'users']})
+@Component({ selector: 'ldf-editor-cursors', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'parent', 'uid', 'users'] })
 export class LdfEditorCursors {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1452,6 +1452,17 @@ export declare interface LdfHeading extends Components.LdfHeading {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-heading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfHeading {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+export declare interface LdfImage extends Components.LdfImage {}
+@ProxyCmp({inputs: ['doc', 'editable', 'path']})
+@Component({ selector: 'ldf-image', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+export class LdfImage {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1496,7 +1507,7 @@ export class LdfLiturgy {
 }
 
 export declare interface LdfMeditation extends Components.LdfMeditation {}
-@ProxyCmp({inputs: ['autostart', 'color', 'doc', 'editable', 'path'], 'methods': ['getLocaleStrings', 'start', 'pause', 'resume', 'rewind']})
+@ProxyCmp({inputs: ['autostart', 'color', 'doc', 'editable', 'path'], 'methods': ['start', 'pause', 'resume', 'rewind']})
 @Component({ selector: 'ldf-meditation', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['autostart', 'color', 'doc', 'editable', 'path'] })
 export class LdfMeditation {
   timerChanged!: EventEmitter<CustomEvent>;
@@ -1578,7 +1589,7 @@ export class LdfString {
 }
 
 export declare interface LdfText extends Components.LdfText {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['getLocaleStrings']})
+@ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfText {
   protected el: HTMLElement;

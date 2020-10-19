@@ -12,13 +12,18 @@
   <div class="container">
     <!-- "Page One": menu of options -->
     <ldf-editable-add-block-menu
-    (ldfShouldAddBlock)="add($event)"
-    [class]="{ 'visible': !additionalMode, 'hidden': !!additionalMode }"
+      (ldfShouldAddBlock)="add($event)"
+      [class]="{ 'visible': !additionalMode, 'hidden': !!additionalMode }"
     >
     </ldf-editable-add-block-menu>
 
     <!-- "Page Two": additional info to look up psalms, canticles, hymns, etc. -->
-    <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">    
+    <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">          
+      <!-- Image -->
+      <venite-upload-image *ngSwitchCase="'image'"
+        (imageUploaded)="complete.next([$event])"
+      ></venite-upload-image>
+      
       <!-- Hymns -->
       <venite-hymn-selector *ngSwitchCase="'hymn'"
         (hymnSelected)="complete.next([$event])"

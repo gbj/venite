@@ -7,13 +7,14 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title><h1>{{ state?.localManager?.document?.label }}</h1></ion-title>
-        <ion-text *ngIf="state?.docSaved" slot="end">
-          {{ 'Saved at' | translate }} {{ state?.docSaved | date:'shortTime' }} {{ 'on' | translate }} {{ state?.docSaved | date:'shortDate' }}
-        </ion-text>
         <ion-buttons collapse="true" slot="end">
           <ion-button (click)="sharingModal(state?.localManager.document?.sharing)">
             <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
             <ion-label>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
+          </ion-button>
+          <ion-button (click)="shareLink(state?.localManager, state?.localManager.document)">
+            <ion-icon name="share" slot="start"></ion-icon>
+            <ion-label>{{ 'editor.publish' | translate }}</ion-label>
           </ion-button>
           <venite-auth-menu-button></venite-auth-menu-button>
         </ion-buttons>

@@ -45,8 +45,8 @@ export function indexFromPage(url : string, page : HTMLElement) : Hymn[] {
         number,
         title,
         tune,
-        textUrl: `${baseUrl.origin}${textUrl}`,
-        imageUrl: `${baseUrl.origin}${imageUrl}`
+        textUrl: textUrl ? `${baseUrl.origin}${textUrl}` : null,
+        imageUrl: imageUrl ? `${baseUrl.origin}${imageUrl} : null`
       };
     })
 }

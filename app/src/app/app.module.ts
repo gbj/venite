@@ -102,25 +102,23 @@ import { PrayPageModule } from '@venite/ng-pray';
     PrayPageModule.forRoot({
       providers: [],
       displaySettings: {
-        audio: false,
-        meditation: false,
-        antiphons: false,
+        audio: true,
+        meditation: true,
+        antiphons: true,
         fonts: [
-          { value: 'times-new-roman', label: 'Times New Roman' },
+          { value: 'garamond', label: 'Garamond' },
           { value: 'gill-sans', label: 'Gill Sans' }
         ],
         dropcaps: [
-          { value: 'decorated', label: 'A' },
-          { value: 'plain', label: 'A' },
-          { value: 'none', label: 'a' }
+          { value: 'plain', label: 'Y' },
+          { value: 'none', label: 'N' }
         ]
       },
       liturgySettings: {
         sundayCollectsFirst: true,
         emberDayCollectPrecedesSunday: false
-      },
-      useBackgroundColor: true
-    }),
+      }
+    })
   ],
   providers: [
     StatusBar,

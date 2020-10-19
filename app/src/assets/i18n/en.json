@@ -137,7 +137,17 @@
     "scan-available": "Scan Available",
     "include-title": "Include Title",
     "include-text": "Include Text",
-    "include-image": "Include Image"
+    "include-image": "Include Image",
+    "search-for-hymns": "Try searching for a hymn. Begin by typing a hymn number or title in the search bar above.",
+    "modified": "Edited",
+    "publish": "Publish",
+    "download": "Download",
+    "copy": "Copy",
+    "import": "Import",
+    "image": {
+      "title": "Upload an Image",
+      "select-image": "Select an Image"
+    }
   },
   "organization": {
     "owner": "Administrator",

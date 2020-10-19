@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { LiturgicalDocument } from '@venite/ldf';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Hymn } from './hymn';
 import { HymnService } from './hymn.service';
@@ -21,7 +21,7 @@ export class HymnSelectorComponent implements OnInit {
 
   ngOnInit() {
     this.hymns$ = this.search$.pipe(
-      switchMap(search => this.hymnService.search(search))
+      switchMap(search => search ? this.hymnService.search(search) : of([]))
     );
   }
 

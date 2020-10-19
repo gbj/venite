@@ -34,6 +34,9 @@ export class PrayService {
 
     // should the doc be included?
     if(doc.include(new LiturgicalDay(day), prefs)) {
+      // clear out condition info
+      doc.condition = undefined;
+
       // pass in the `LiturgicalDay` to a `Heading` that needs it
       if(doc.type == 'heading' && (doc.style == 'date' || doc.style == 'day')) {
         doc.day = day;
@@ -73,6 +76,7 @@ export class PrayService {
       // if psalm with Gloria inserted, condition-check the provided Gloria
       if(doc.metadata?.gloria && !(new LiturgicalDocument(doc.metadata.gloria).include(day, prefs))) {
         doc.metadata.gloria = undefined;
+        doc.metadata.gloria.condition = undefined;
       }
 
       /** Lookup and return, or simply return */
@@ -185,7 +189,14 @@ export class PrayService {
 
     // make sure the result we're getting from lookup should be included
     return result.pipe(
-      map(doc => doc && new LiturgicalDocument(doc).include(new LiturgicalDay(day), prefs) ? doc : null)
+      map(doc => doc && new LiturgicalDocument(doc).include(new LiturgicalDay(day), prefs)
+        ? new LiturgicalDocument({
+          ... doc,
+          condition: undefined,
+          lookup: undefined
+        })
+        : null
+      )
     );
   }
 

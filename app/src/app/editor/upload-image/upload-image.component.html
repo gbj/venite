@@ -1,0 +1,17 @@
+<ion-content class="ion-padding">
+  <h2>{{ 'editor.image.title' | translate }}</h2>
+  <form>
+    <ion-item>
+      <ion-label position="stacked">{{ 'editor.image.select-image' | translate }}</ion-label>
+      <input type="file" (change)="handleFiles($event)">
+    </ion-item>
+  </form>
+  <figure *ngIf="preview$ | async as preview">
+    <img [src]="preview">
+    <figcaption>
+      <ion-progress-bar *ngIf="isUploading" [aria-label]="'Uploading' | translate" [value]="progress$ | async"></ion-progress-bar>
+    </figcaption>
+  </figure>
+  
+  <ng-template #loading>{{ 'loading' | translate }}</ng-template>
+</ion-content>

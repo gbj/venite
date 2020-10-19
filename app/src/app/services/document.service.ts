@@ -7,11 +7,12 @@ import { map } from 'rxjs/operators';
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
 import { Organization } from '../organization/organization';
+import * as firebase from 'firebase';
 
 // Include document ID and data
 export interface IdAndDoc {
   id: string;
-  data: LiturgicalDocument
+  data: LiturgicalDocument;
 }
 
 @Injectable({
@@ -50,6 +51,15 @@ export class DocumentService {
          .where('sharing.organization', '==', 'venite')
          .where('sharing.status', '==', 'published')
          .where('sharing.privacy', '==', 'public')
+    ).valueChanges();
+  }
+
+  findOrganizationLiturgy(orgId : string, slug : string) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<Liturgy>('Document', ref => 
+      ref.where('slug', '==', slug)
+        .where('sharing.organization', '==', orgId)
+        .where('sharing.status', '==', 'published')
+        .where('sharing.privacy', '==', 'public')
     ).valueChanges();
   }
 
@@ -127,7 +137,10 @@ export class DocumentService {
       // transform from AngularFire `DocumentChangeAction` to `doc`
       map(changeactions => changeactions.map(action => action?.payload?.doc)),
       // extra ID and document data and leave the rest behind
-      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+      map(docs => docs.map(doc => ({
+        id: doc.id,
+        data: doc.data()
+      })))
     );
   }
 
@@ -168,12 +181,19 @@ export class DocumentService {
 
   async newDocument(doc : LiturgicalDocument) : Promise<string> {
     const docId = this.afs.createId();
-    await this.afs.collection('Document').doc(docId).set(JSON.parse(JSON.stringify(doc)));
+    await this.afs.collection('Document').doc(docId).set({
+      ... JSON.parse(JSON.stringify(doc)),
+      date_created: firebase.firestore.Timestamp.now(),
+      date_modified: firebase.firestore.Timestamp.now()
+    });
     return docId;
   }
 
   saveDocument(docId : string, doc : Partial<DTO<LiturgicalDocument>>) : Observable<any> {
-    return from(this.afs.doc(`Document/${docId}`).set(JSON.parse(JSON.stringify({ ... doc, slug : doc.slug || this.slugify(doc)}))));
+    return from(this.afs.doc(`Document/${docId}`).set({
+      ... JSON.parse(JSON.stringify({ ... doc, slug : doc.slug || this.slugify(doc)})),
+      date_modified: firebase.firestore.Timestamp.now()
+    }));
   }
 
   deleteDocument(docId : string) : Promise<void> {

@@ -17,7 +17,7 @@ export const bible = functions.https.onRequest(async (request, response) => {
         response.status(404).send(`${citation} (${version}) not found.`)
       }
     } catch(e) {
-      response.status(400).send(e.toString());
+      response.status(400).send(`[Error] ${e.toString()}`);
     }
   } else {
     response.status(400).send("'Citation' and 'Version' parameters are required.")

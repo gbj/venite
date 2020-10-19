@@ -1,6 +1,6 @@
 {
   "name": "@venite/hymnal-api",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Interface for Hymnary.org indices, text content, and images",
   "main": "dist/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/gbj/venite#readme",
   "dependencies": {
-    "@venite/http": "^0.1.0"
+    "@venite/http": "^0.1.1"
   },
   "devDependencies": {
     "firebase-admin": "^9.2.0"

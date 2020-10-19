@@ -18,6 +18,7 @@ import { LectionarySelectComponent } from './lectionary-select/lectionary-select
 import { CanticleSelectComponent } from './canticle-select/canticle-select.component';
 import { SharingComponent } from './sharing/sharing.component';
 import { HymnSelectorComponent } from './hymn-selector/hymn-selector.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { HymnSelectorComponent } from './hymn-selector/hymn-selector.component';
     LectionarySelectComponent,
     CanticleSelectComponent,
     SharingComponent,
-    HymnSelectorComponent
+    HymnSelectorComponent,
+    UploadImageComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

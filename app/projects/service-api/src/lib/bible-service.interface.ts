@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
-import { BibleReading } from '@venite/ldf';
+import { LiturgicalDocument } from '@venite/ldf';
 
 export interface BibleServiceInterface {
-  getText : (citation : string, version : string) => Observable<BibleReading>;
+  getText : (citation : string, version : string) => Observable<LiturgicalDocument>;
 }

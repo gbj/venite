@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, BehaviorSubject, combineLatest, of } from 'rxjs'; 
 import { switchMap, map, tap, filter } from 'rxjs/operators';
@@ -10,13 +10,14 @@ import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { UserProfile } from '../auth/user/user-profile';
 import { OrganizationService } from '../organization/organization.module';
+import { DownloadService } from '../services/download.service';
 
 const docSearch = ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc => 
   doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
   doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
   doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
   doc.data.category?.includes(search.toLowerCase())
-)
+);
 
 @Component({
   selector: 'venite-editor',
@@ -100,8 +101,11 @@ export class EditorPage implements OnInit {
     private router : Router,
     private alert : AlertController,
     private translate : TranslateService,
-    private organizationService : OrganizationService
+    private organizationService : OrganizationService,
+    private downloadService : DownloadService
   ) { }
+
+  @ViewChild('importInput') importInput;
 
   ngOnInit() {
     // If no docId is given, we use this list of all documents
@@ -170,6 +174,42 @@ export class EditorPage implements OnInit {
     });
 
     await alert.present();
+  }
 
+  async download(doc : LiturgicalDocument) {
+    this.downloadService.download(
+      new Blob([JSON.stringify(doc)], { type: 'application/json' }),
+      `${doc.slug}.ldf.json`,
+      'application/json'
+    )
+  }
+
+  import() {
+    this.importInput.nativeElement.click();
+  }
+
+  async handleImport(event : Event) {
+    const files = (<HTMLInputElement>event.target).files;
+    Array.from(files).forEach(file => {
+      if(file.type === 'application/json') {
+        const reader = new FileReader();
+        reader.onload = async e => {
+          const doc = JSON.parse(e.target.result.toString()),
+            docId = await this.documents.newDocument(doc);
+          this.joinDocument(docId);
+        };
+        reader.readAsText(file);
+      }
+    })
+    /*if(file.type.startsWith('image')) {
+
+      // create and load a preview
+      const reader = new FileReader();
+      reader.onload = e => this.preview$ = of(e.target.result.toString());
+      reader.readAsDataURL(file);
+
+      // upload to Firebase
+      this.uploadAvatar(file);
+    }*/
   }
 }

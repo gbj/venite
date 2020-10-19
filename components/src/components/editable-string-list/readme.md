@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description | Type               |
+| -------------------- | ----------- | ------------------ |
+| `ldfDocShouldChange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

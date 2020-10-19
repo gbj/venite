@@ -1,11 +1,10 @@
 <h2>{{ 'editor.hymn' | translate }}</h2>
 <form>
   <ion-searchbar (ionChange)="filter($event.detail.value)"></ion-searchbar>
-  <ion-radio-group>
-
-  </ion-radio-group>
   <ion-list *ngIf="hymns$ | async as hymns else loading">
-    <!-- Lectionary and Reading -->
+    <ion-item *ngIf="hymns?.length == 0" lines="none">
+      {{ 'editor.search-for-hymns' | translate}}
+    </ion-item>
     <ion-item *ngFor="let hymn of hymns">
       {{ hymn.source }} {{ hymn.number }} {{ hymn.title }} <ng-container *ngIf="hymn.tune">({{ hymn.tune }})</ng-container>
       <ion-buttons slot="end">

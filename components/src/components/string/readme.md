@@ -9,7 +9,7 @@
 
 | Property                | Attribute                | Description                                                        | Type                                 | Default     |
 | ----------------------- | ------------------------ | ------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| `citation`              | --                       | Citation (used in Share and Favorite APIs)                         | `SelectableCitation`                 | `undefined` |
+| `citation`              | `citation`               | Citation (used in Share and Favorite APIs)                         | `any`                                | `undefined` |
 | `dropcap`               | `dropcap`                | Enable, disable, or force dropcap on the first letter of the text. | `"disabled" \| "enabled" \| "force"` | `'enabled'` |
 | `dropcapMinLength`      | `dropcap-min-length`     | Minimum length (in characters) a string must be to have a dropcap. | `number`                             | `200`       |
 | `index`                 | `index`                  | String's index within its parent.                                  | `number`                             | `undefined` |

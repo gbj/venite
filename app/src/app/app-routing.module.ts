@@ -22,10 +22,10 @@ const routes: Routes = [
     loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
     canActivate: [LoginGuard]
   },
-  {
+  /*{
     path: 'pray',
     loadChildren: () => import('@venite/ng-pray').then( m => m.PrayPageModule)
-  },
+  },*/
   {
     path: 'church',
     loadChildren: () => import('./organization/organization.module').then( m => m.OrganizationPageModule)
@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'reminders',
     loadChildren: () => import('@venite/ng-reminders').then( m => m.RemindersPageModule)
+  },
+  {
+    path: 'pray',
+    loadChildren: () => import('./pray/pray.module').then( m => m.PrayPageModule)
   }
 ];
 

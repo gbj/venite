@@ -44,7 +44,7 @@
 }
 .register-block, .sign-in-block, .organization-block {
   transition: 0.25s linear;
-  width: 100vw;
+  width: 33%;
 }
 .register-block.hidden {
   transform: translateX(100%);
@@ -56,10 +56,10 @@
   transform: translateX(-100%);
 }
 .register-block.visible {
-  transform: translateX(-100%);
+  transform: translateX(0%);
 }
 .organization-block.visible {
-  transform: translateX(-200%);
+  transform: translateX(0%);
 }
 venite-register { 
   width: 100%;
