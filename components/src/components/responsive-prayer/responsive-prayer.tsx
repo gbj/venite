@@ -111,14 +111,14 @@ export class ResponsivePrayerComponent {
 
           <table class="preces">
             {this.obj.value.map((line, index) =>
-              <div class="row">
-                <div class="cell">
+              <tr class="row">
+                <td class="cell">
                   {this.editable ? this.editableNode(line, index, 'label', template) : this.stringNode(line, index, 'label')}
-                </div>
-                <div class={index % 2 == 0 ? 'cell' : 'cell response'}>
+                </td>
+                <td class={index % 2 == 0 ? 'cell' : 'cell response'}>
                   {this.editable ? this.editableNode(line, index, 'text', template) : this.stringNode(line, index, 'text')}
-                </div>
-              </div>
+                </td>
+              </tr>
             )}
           </table>
         </Host>

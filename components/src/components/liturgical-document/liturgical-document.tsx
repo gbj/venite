@@ -106,7 +106,7 @@ export class LiturgicalDocumentComponent {
   /** Gives a loading view, a description of the document (if editing and has a lookup), or the component of the correct type */
   nodeFromDoc(doc : LiturgicalDocument) : JSX.Element {
     if(doc == undefined) {
-      return customElements && customElements.get('ion-skeleton-text') ? <ion-skeleton-text></ion-skeleton-text> : <p>...</p>
+      return customElements?.get('ion-skeleton-text') ? <ion-skeleton-text></ion-skeleton-text> : <p>...</p>
     } else if(this.editable) {
       return this.editableNode(doc);
     } else {
@@ -117,18 +117,22 @@ export class LiturgicalDocumentComponent {
   editableNode(doc : LiturgicalDocument) : JSX.Element {
     const localeStrings = this.localeStrings || {};
 
-    if(doc.condition && !doc.lookup) {
-      return <ConditionNode doc={doc} localeStrings={localeStrings}>
-        {this.chooseComponent(doc)}
-      </ConditionNode>;
-    } else if(doc.condition && doc.lookup) {
-      return <ConditionNode doc={doc} localeStrings={localeStrings}>
-        <LookupNode doc={doc} localeStrings={localeStrings}/>
-      </ConditionNode>
-    } else if(!doc.condition && doc.lookup) {
-      return <LookupNode doc={doc} localeStrings={localeStrings}/>;
-    } else {
+    if(doc.value?.length > 0 && Boolean(doc.value[0])) {
       return this.chooseComponent(doc);
+    } else {
+      if(doc.condition && !doc.lookup) {
+        return <ConditionNode doc={doc} localeStrings={localeStrings}>
+          {this.chooseComponent(doc)}
+        </ConditionNode>;
+      } else if(doc.condition && doc.lookup) {
+        return <ConditionNode doc={doc} localeStrings={localeStrings}>
+          <LookupNode doc={doc} localeStrings={localeStrings}/>
+        </ConditionNode>
+      } else if(!doc.condition && doc.lookup) {
+        return <LookupNode doc={doc} localeStrings={localeStrings}/>;
+      } else {
+        return this.chooseComponent(doc);
+      }
     }
   }
 
