@@ -126,7 +126,11 @@ export class LiturgicalDay {
 
     const color = observed.color || this.color,
       season = observed.season || this.season,
-      octave = observed.octave || this.octave;
+      octave = (this.holy_days || [])
+        ?.concat(holydays)
+        ?.map((holyday) => holyday.octave)
+        .filter((octave) => Boolean(octave))
+        .reduce((acc, curr) => (acc ? acc : curr || acc), undefined);
 
     return new LiturgicalDay({
       ...this,
