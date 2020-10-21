@@ -1,15 +1,19 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable, of, combineLatest, merge } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith } from 'rxjs/operators';
-import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
+import { Observable, of, combineLatest, merge, BehaviorSubject, interval } from 'rxjs';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom } from 'rxjs/operators';
+import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
 import { ModalController } from '@ionic/angular';
-import { DOCUMENT_SERVICE, DocumentServiceInterface, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
+import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, PrayService, DisplaySettingsComponent } from '@venite/ng-pray';
 import { AuthService } from '../auth/auth.service';
-import { User } from 'firebase';
 import { DocumentService } from '../services/document.service';
 import { UserProfile } from '../auth/user/user-profile';
+import { Organization } from '../organization/organization';
+import { OrganizationService } from '../organization/organization.module';
+import { EditorService } from '../editor/ldf-editor/editor.service';
+import * as json1 from 'ot-json1';
+import { Subject } from 'rxjs/internal/Subject';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -26,6 +30,8 @@ export class PrayPage implements OnInit {
   doc$ : Observable<LiturgicalDocument>;
   color$ : Observable<string | null>;
   userProfile$ : Observable<UserProfile | null>;
+  userOrgs$ : Observable<Organization[]>;
+  modifiedDoc$ : BehaviorSubject<LiturgicalDocument | null> = new BehaviorSubject(null);
 
   // Liturgy data to be loaded from the database if we come straight to this page
   state$ : Observable<PrayState>;
@@ -41,7 +47,9 @@ export class PrayPage implements OnInit {
     public prayService : PrayService,
     private modal : ModalController,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
-    @Inject(AUTH_SERVICE) public auth : AuthService
+    @Inject(AUTH_SERVICE) public auth : AuthService,
+    private organizationService : OrganizationService,
+    private editorService : EditorService
   ) { }
 
   ngOnInit() {
@@ -68,6 +76,7 @@ export class PrayPage implements OnInit {
     // `LiturgicalDay` (via week) that matches the date/kalendar passed in the URL,
     // given the `LiturgicalDocument` found above (for `evening`)
     const week$ : Observable<LiturgicalWeek[]> = combineLatest([this.route.params, liturgy$]).pipe(
+      tap(data => console.log('building week$', data)),
       switchMap(([{ y, m, d, kalendar, vigil }, liturgies]) => 
         liturgies[0] && liturgies[0].day
         ? of(new Array(liturgies[0].day.week))
@@ -119,10 +128,13 @@ export class PrayPage implements OnInit {
  //     take(1)
     )
 
-    this.doc$ = this.state$.pipe(
-      filter(state => state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs')),
+    const stateDoc$ = this.state$.pipe(
+      filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
       switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
+      tap(doc => console.log('doc$ = ', doc))
     );
+
+    this.doc$ = stateDoc$;
 
     this.color$ = combineLatest([
       of(true),
@@ -154,6 +166,9 @@ export class PrayPage implements OnInit {
 
     this.userProfile$ = this.auth.user.pipe(
       switchMap(user => user ? this.auth.getUserProfile(user.uid) : null)
+    );
+    this.userOrgs$ = this.userProfile$.pipe(
+      switchMap(user => this.organizationService.organizationsWithUser(user.uid))
     );
   }
 
@@ -190,21 +205,31 @@ export class PrayPage implements OnInit {
     ];
   }
 
-  async editBulletin(userProfile : UserProfile, doc : LiturgicalDocument) {
+  async editBulletin(userProfile : UserProfile, doc : LiturgicalDocument, orgs : Organization[]) {
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
-      formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null;
-    console.log('editBulletin -- date is', docDate, formattedDocDate);
+      formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
+      prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null;
+    console.log('editBulletin  doc = ', doc);
     const id = await this.documents.newDocument(new LiturgicalDocument({
-      ... doc,
-      slug : formattedDocDate ? `${doc.slug}-${formattedDocDate}` : doc.slug,
+      ... unwrapOptions(doc),
+      label: prettyDocDate ? `${doc.label} (${prettyDocDate})` : doc.slug,
+      slug: formattedDocDate ? `${doc.slug}-${formattedDocDate}` : doc.slug,
       sharing: new Sharing({
         owner: userProfile.uid,
-        organization: (userProfile.orgs || [''])[0],
+        organization: (orgs[0]).slug,
         collaborators: [],
         status: 'draft',
         privacy: 'organization'
       })
     }));
     this.router.navigate(['editor', id]);
+  }
+
+  changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
+    console.log('changeDoc');
+    const op = this.editorService.opFromChange(event.detail);
+    const newValue = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(doc)), op) as Partial<LiturgicalDocument>);
+    console.log('newValue = ', newValue)
+    this.modifiedDoc$.next(newValue);
   }
 }

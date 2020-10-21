@@ -5,4 +5,5 @@ export * from './find-collect';
 export * from './preferences-to-categories';
 export * from './sort-psalms';
 export * from './specific-class';
+export * from './unwrap-options';
 export * from './version-to-string';

@@ -14,6 +14,7 @@
 * [processCollectText](_utils_index_.md#processcollecttext)
 * [sortPsalms](_utils_index_.md#sortpsalms)
 * [specificClass](_utils_index_.md#specificclass)
+* [unwrapOptions](_utils_index_.md#unwrapoptions)
 * [versionToString](_utils_index_.md#versiontostring)
 
 ## References
@@ -63,6 +64,12 @@ ___
 ###  specificClass
 
 • **specificClass**:
+
+___
+
+###  unwrapOptions
+
+• **unwrapOptions**:
 
 ___
 

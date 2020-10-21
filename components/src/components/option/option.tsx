@@ -80,17 +80,30 @@ export class OptionComponent {
 
   /** Display the nth option */
   @Method()
-  async select(index : number | 'add') {
+  async select(index : number | 'add', resultedFromUserAction : boolean = false) {
     const hadMetadata = Boolean(this.obj?.metadata),
       oldValue = this.obj?.metadata?.editor_selected;
   
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value[index];
+      this.obj.metadata.selected = Number(index);
+
+      console.log('ldf-option select() -- this.obj.metadata = ', this.obj.metadata, resultedFromUserAction);
+
+      if(resultedFromUserAction) {
+        this.ldfDocShouldChange.emit(new Change({
+          path: `${this.path}/metadata`,
+          op: [{
+            type: 'set',
+            index: 'selected',
+            oldValue,
+            value: Number(index)
+          }]
+        }));
+      }
 
       if(this.editable) {
-        console.log('hadMetadata = ', hadMetadata, '\noldValue = ', oldValue);
         if(hadMetadata && index !== oldValue) {
-          console.log('had metadata. emitting change with oldValue = ', oldValue)
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}/metadata`,
             op: [{
@@ -101,7 +114,6 @@ export class OptionComponent {
             }]
           }));
         } else if(!hadMetadata && index !== oldValue) {
-          console.log('did not have metadata')
           this.ldfDocShouldChange.emit(new Change({
             path: `${this.path}`,
             op: [{
@@ -130,14 +142,15 @@ export class OptionComponent {
   // Listener for Ionic Select and Segment change events
   @Listen('ionChange')
   onIonChange(ev) {
-    this.select(ev.detail.value);
+    console.log('ionChange');
+    this.select(ev.detail.value, true);
   }
 
   // Private methods
   onSelectChange(ev : Event) {
     const target : HTMLSelectElement = ev.target as HTMLSelectElement,
           value : number = parseInt(target.value);
-    this.select(value);
+    this.select(value, true);
   }
 
   selectFirstDefined() {
@@ -194,7 +207,7 @@ export class OptionComponent {
                 )}
               </ion-select>
               {this.editable && <ion-buttons slot='end'>
-                <ion-button onClick={() => this.select('add')}>
+                <ion-button onClick={() => this.select('add', true)}>
                   <ion-icon slot='icon-only' name='add'></ion-icon>
                 </ion-button>
               </ion-buttons>}
@@ -214,7 +227,7 @@ export class OptionComponent {
                 >{this.versionLabel(option, optionIndex)}</option>
               )}
             </select>
-          {this.editable && <button slot='end' onClick={() => this.select('add')}>+</button>}
+          {this.editable && <button slot='end' onClick={() => this.select('add', true)}>+</button>}
           </ldf-label-bar>
         );
       }
@@ -234,8 +247,6 @@ export class OptionComponent {
 
   // Render
   render() {
-    console.log('current option values = ', this.obj.value);
-
     return (
       <Host lang={this.obj.language}>
         <ldf-label-bar>
@@ -246,7 +257,7 @@ export class OptionComponent {
           doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}
-          index={this.obj.metadata.editor_selected || this.obj.metadata.selected}
+          index={this.editable ? this.obj.metadata.editor_selected || this.obj.metadata.selected : this.obj.metadata.selected}
           editable={this.editable}
           parentType='option'
         >

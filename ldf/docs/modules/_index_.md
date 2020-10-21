@@ -78,6 +78,7 @@
 * [subtractOneDay](_index_.md#subtractoneday)
 * [sundayBefore](_index_.md#sundaybefore)
 * [transferredFeast](_index_.md#transferredfeast)
+* [unwrapOptions](_index_.md#unwrapoptions)
 * [versionToString](_index_.md#versiontostring)
 
 ## References
@@ -511,6 +512,12 @@ ___
 ###  transferredFeast
 
 • **transferredFeast**:
+
+___
+
+###  unwrapOptions
+
+• **unwrapOptions**:
 
 ___
 

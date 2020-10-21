@@ -4,6 +4,7 @@ import { LiturgicalDay } from '../calendar/liturgical-day';
 import { docsToOption } from './docs-to-option';
 import { HolyDay } from '../calendar/holy-day';
 import { docsToLiturgy } from './docs-to-liturgy';
+import { dateFromYMDString } from '../calendar/utils';
 
 const FAKE_SEASONS = ['Saints', 'Mary'];
 
@@ -13,13 +14,21 @@ export function findCollect(
   day: LiturgicalDay,
   sundayFirst: boolean = true,
   emberDayPrecedesSunday: boolean = false,
+  allSaintsSuppressesCollectOfTheDayUnlessSunday: boolean = false,
+  allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday: boolean = false,
 ): LiturgicalDocument | null {
-  const observedDay = day.propers || day.slug,
+  const date = dateFromYMDString(day.date),
+    observedDay = day.propers || day.slug,
+    isAllSaintsOctave = date.getMonth() === 10 && date.getDate() === 8,
+    isInOctaveOfAllSaints = date.getMonth() === 10 && date.getDate() >= 1 && date.getDate() <= 8,
+    suppressSundayCollect =
+      (allSaintsSuppressesCollectOfTheDayUnlessSunday && isInOctaveOfAllSaints && date.getDay() !== 0) ||
+      (allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday && isAllSaintsOctave && date.getDay() !== 0),
     redLetterCollects = collects.filter((collect) => collect.slug === observedDay),
     redLetterCollect = redLetterCollects.length > 0 ? docsToOption(redLetterCollects) : null,
     sundaySlug = day.week?.propers || day.week?.slug,
     sundayCollects = collects.filter((collect) => collect.slug === sundaySlug),
-    sundayCollect = sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
+    sundayCollect = !suppressSundayCollect && sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
     season = !FAKE_SEASONS.includes(day.season) ? day.season : day.week?.season || day.season,
     seasonalCollects = collects.filter((collect) => collect.slug === season),
     octaveCollect = day.octave ? docsToOption(collects.filter((collect) => collect.slug === day.octave)) : null,
@@ -43,14 +52,21 @@ export function findCollect(
             (collect) => JSON.stringify(collect.value) !== JSON.stringify(redLetterOrSunday?.value),
           ),
         )
-      : null;
+      : null,
+    // don't include the octave collect if it's the same as the collect of the day
+    observedOctaveCollect =
+      octaveCollect && JSON.stringify(octaveCollect.value) !== JSON.stringify(redLetterOrSunday?.value)
+        ? octaveCollect
+        : null;
+
+  console.log('observed octave collect = ', observedOctaveCollect);
 
   if (redLetterOrSunday || blackLetterCollects.length > 0) {
-    if (sundayFirst) {
+    if (sundayFirst || date.getDay() === 0) {
       const collects = [
         redLetterCollect || sundayCollect,
         ...blackLetterCollects,
-        octaveCollect,
+        observedOctaveCollect,
         observedSeasonalCollect,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);
@@ -61,7 +77,7 @@ export function findCollect(
         redLetterCollect,
         ...blackLetterCollects,
         redLetterCollect ? undefined : sundayCollect,
-        octaveCollect,
+        observedOctaveCollect,
         !emberDayPrecedesSunday || !(day.season || '').includes('Ember') ? observedSeasonalCollect : null,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
       return docsToLiturgy(collects);

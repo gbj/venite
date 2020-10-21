@@ -65,4 +65,5 @@
 * ["utils/preferences-to-categories"](modules/_utils_preferences_to_categories_.md)
 * ["utils/sort-psalms"](modules/_utils_sort_psalms_.md)
 * ["utils/specific-class"](modules/_utils_specific_class_.md)
+* ["utils/unwrap-options"](modules/_utils_unwrap_options_.md)
 * ["utils/version-to-string"](modules/_utils_version_to_string_.md)
