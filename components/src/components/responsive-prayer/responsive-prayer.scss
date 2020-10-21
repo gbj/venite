@@ -3,6 +3,10 @@
   font-style: var(--ldf-response-font-style);
 }
 
+.preces td {
+  text-align: var(--ldf-text-align);
+}
+
 .preces td:first-child {
   font-style: italic;
   text-align: left;

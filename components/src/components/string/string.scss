@@ -3,7 +3,7 @@
   font-weight: inherit;
   font-style: inherit;
   /*white-space: pre-wrap;*/
-  text-align: justify;
+  text-align: var(--ldf-text-align);
 }
 
 .tab {
