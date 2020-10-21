@@ -157,7 +157,14 @@ export class PrayService {
         result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', versions).pipe(
           map(collects => collects.map(collect => new LiturgicalDocument({ ... collect, label: collect.label || "The Collect of the Day" }))),
           // filter collects to find the appropriate one
-          map(collects => findCollect(collects, day, this.config.sundayCollectsFirst, this.config.emberDayCollectPrecedesSunday))
+          map(collects => findCollect(
+            collects,
+            day,
+            this.config.sundayCollectsFirst,
+            this.config.emberDayCollectPrecedesSunday,
+            this.config.allSaintsSuppressesCollectOfTheDayUnlessSunday,
+            this.config.allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday
+          ))
         )
         break;
 
