@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from '@venite/ldf';
@@ -10,18 +11,18 @@ import { tap } from 'rxjs/operators';
 export class LectionaryService {
 
   constructor(
-    private readonly afs : AngularFirestore
-    ) { }
+    private readonly afs : AngularFirestore,
+    private http : HttpClient
+  ) { }
 
   getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {
     // handle RCL readings separately via LectServe API
-    if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl') {
-      return this.rcl(dateFromYMDString(day.date));
+    if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
+      return this.rcl(dateFromYMDString(day.date), lectionaryName, day.propers, day.years['rclsunday'], day.slug);
     }
     // search for other readings in our DB
     else {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
-      console.log('when = ', when, whentype, includeDay);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
         let query : firebase.firestore.Query = ref.where('when', '==', when)
@@ -63,9 +64,12 @@ export class LectionaryService {
     }
   }
 
-  rcl(date : Date) : Observable<LectionaryEntry[]> {
-    // TODO hook up to LectServe API
-    return of([]);
+  rcl(date : Date, lectionary : string, propers : string, year : string, day : string) : Observable<LectionaryEntry[]> {
+    // TODO integrate RCL API into a Cloud Function
+    const y = date.getFullYear(),
+      m = date.getMonth() + 1,
+      d = date.getDate();
+    return this.http.get<LectionaryEntry[]>(`https://www.venite.app/api/lectionary/reading/?y=${y}&m=${m}&d=${d}&lectionary=${lectionary}&propers=${propers}&year=${year}&day=${day}`);
   }
 
 }
