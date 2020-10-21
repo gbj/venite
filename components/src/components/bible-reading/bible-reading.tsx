@@ -86,6 +86,21 @@ export class BibleReadingComponent {
     this.verses = this.obj.value || [];
   }
 
+  paragraphs() : (BibleReadingVerse | Heading)[][] {
+   const paragraphs : (BibleReadingVerse | Heading)[][] = new Array();
+        let currentParagraph : (BibleReadingVerse | Heading)[] = new Array();
+        this.verses.forEach(verse => {
+          if(verse.hasOwnProperty('type') && (verse as Heading).type === 'heading') {
+            paragraphs.push(currentParagraph);
+            currentParagraph = new Array();
+          } else {
+            currentParagraph.push(verse);
+          }
+        });
+        paragraphs.push(currentParagraph);
+    return paragraphs;
+  }
+
   // Render
   render() {
     const localeStrings = this.localeStrings || {};
@@ -115,38 +130,40 @@ export class BibleReadingComponent {
             <section class="verses">
               {this.verses.map((verse, verseIndex) => [
                 verse.hasOwnProperty('type') && (verse as Heading).type === 'heading'
-                ? undefined// TODO heading
-                : <div class="verse">
-                    <ldf-editable-text slot="citation"
-                      id={`verse-${verseIndex}-book`}
-                      text={(verse as BibleReadingVerse).book}
-                      path={`${this.path}/value/${verseIndex}/book`}
-                      placeholder={localeStrings.book}
-                      short={true}
-                    >
-                    </ldf-editable-text>
-                  <ldf-editable-text slot="citation"
-                      id={`verse-${verseIndex}-chapter`}
-                      text={(verse as BibleReadingVerse).chapter}
-                      path={`${this.path}/value/${verseIndex}/chapter`}
-                      placeholder={localeStrings.chapter}
-                      short={true}
-                    >
-                    </ldf-editable-text>
-                    <ldf-editable-text slot="citation"
-                      id={`verse-${verseIndex}-verse`}
-                      text={(verse as BibleReadingVerse).verse}
-                      path={`${this.path}/value/${verseIndex}/verse`}
-                      placeholder={localeStrings.verse}
-                      short={true}
-                    >
-                    </ldf-editable-text>
-                    <ldf-editable-text slot="citation"
+                ? <ldf-heading editable={true} doc={verse as Heading} path={`${this.path}/value/${verseIndex}`}></ldf-heading>
+                : <div class="editable-verse">
+                    <div class="editable-citation">
+                      <ldf-editable-text
+                        class="book"
+                        id={`verse-${verseIndex}-book`}
+                        text={(verse as BibleReadingVerse).book}
+                        path={`${this.path}/value/${verseIndex}/book`}
+                        placeholder={localeStrings.book}
+                        short={true}
+                      >
+                      </ldf-editable-text>
+                      <ldf-editable-text
+                        id={`verse-${verseIndex}-chapter`}
+                        text={(verse as BibleReadingVerse).chapter}
+                        path={`${this.path}/value/${verseIndex}/chapter`}
+                        placeholder={localeStrings.chapter}
+                        short={true}
+                      >
+                      </ldf-editable-text> :
+                      <ldf-editable-text
+                        id={`verse-${verseIndex}-verse`}
+                        text={(verse as BibleReadingVerse).verse}
+                        path={`${this.path}/value/${verseIndex}/verse`}
+                        placeholder={localeStrings.verse}
+                        short={true}
+                      ></ldf-editable-text>
+                    </div>
+                    <ldf-editable-text
                       id={`verse-${verseIndex}-text`}
                       text={(verse as BibleReadingVerse).text}
                       path={`${this.path}/value/${verseIndex}/text`}
                       placeholder={localeStrings.text}
-                      short={true}
+                      short={false}
                     >
                     </ldf-editable-text>
                   </div>
@@ -191,17 +208,7 @@ export class BibleReadingComponent {
       }
       /* `long` render a typical Bible reading in the liturgy */
       else {
-        const paragraphs : (BibleReadingVerse | Heading)[][] = new Array();
-        let currentParagraph : (BibleReadingVerse | Heading)[] = new Array();
-        this.verses.forEach(verse => {
-          if(verse.hasOwnProperty('type') && (verse as Heading).type === 'heading') {
-            paragraphs.push(currentParagraph);
-            currentParagraph = new Array();
-          } else {
-            currentParagraph.push(verse);
-          }
-        });
-        paragraphs.push(currentParagraph);
+        const paragraphs = this.paragraphs();
 
         return (
           <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>

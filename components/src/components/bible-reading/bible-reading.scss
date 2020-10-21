@@ -55,3 +55,21 @@ sup {
 sup:first-of-type {
   display: var(--ldf-drop-early-verses-display);
 }
+
+.editable-verse {
+  display: inline;
+}
+
+.editable-citation {
+  display: inline;
+  width: 100%;
+
+  ldf-editable-text {
+    display: inline-block;
+    width: 25px;
+  }
+
+  ldf-editable-text.book {
+    width: 75px;
+  }
+}
