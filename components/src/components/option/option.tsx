@@ -44,6 +44,7 @@ export class OptionComponent {
     this.select(selected);
 
     if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
+      console.log('ldf-option selecting first defined')
       this.selectFirstDefined();
     }
     this.filterOptions();
@@ -85,11 +86,14 @@ export class OptionComponent {
       oldValue = this.obj?.metadata?.editor_selected;
   
     if(Number(index) >= 0) {
-      this.selectedDoc = this.obj.value[index];
-      this.obj.metadata.selected = Number(index);
-
-      console.log('ldf-option select() -- this.obj.metadata = ', this.obj.metadata, resultedFromUserAction);
-
+      this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];
+      console.log('ldf-option new selectedDoc = ', this.selectedDoc);
+      if(this.obj?.metadata) {
+        this.obj.metadata.selected = Number(index);
+      } else {
+        this.obj.metadata = { selected: Number(index) }
+      }
+  
       if(resultedFromUserAction) {
         this.ldfDocShouldChange.emit(new Change({
           path: `${this.path}/metadata`,
@@ -155,7 +159,8 @@ export class OptionComponent {
 
   selectFirstDefined() {
     const first = this.obj.value.find(opt => opt?.value !== undefined),
-          index = this.obj.value.indexOf(first);
+          index = this.obj.value.filter(child => Boolean(child)).indexOf(first);
+    console.log('ldf-option selectFirstDefined', first, index);
     this.select(index);
   }
 
@@ -247,6 +252,8 @@ export class OptionComponent {
 
   // Render
   render() {
+    console.log('ldf-option (render) ', this.obj?.metadata.selected, this.obj.value, this.selectedDoc)
+
     return (
       <Host lang={this.obj.language}>
         <ldf-label-bar>
