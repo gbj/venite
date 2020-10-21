@@ -201,15 +201,5 @@ export class EditorPage implements OnInit {
         reader.readAsText(file);
       }
     })
-    /*if(file.type.startsWith('image')) {
-
-      // create and load a preview
-      const reader = new FileReader();
-      reader.onload = e => this.preview$ = of(e.target.result.toString());
-      reader.readAsDataURL(file);
-
-      // upload to Firebase
-      this.uploadAvatar(file);
-    }*/
   }
 }
