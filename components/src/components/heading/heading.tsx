@@ -124,7 +124,7 @@ export class HeadingComponent {
     const text = new Citation(c).toString().replace('bcp1979', 'BCP');
 
     return (
-      <div class='citation' slot='end'>
+      <div slot='end'>
         {
           this.editable ?
           [
@@ -191,6 +191,8 @@ export class HeadingComponent {
             {hasCitation && !hasSource && this.obj.citation !== this.obj.value[0] && this.citationNode(this.obj.citation)}
           </slot>
         </ldf-label-bar>
+
+        <div>{hasSource && hasCitation && this.citationNode(this.obj.citation, 'none')}</div>
       </Host>
     );
   }

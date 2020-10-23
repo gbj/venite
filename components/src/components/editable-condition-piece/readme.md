@@ -7,17 +7,17 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                                           | Type     | Default     |
-| ----------- | ----------- | ----------------------------------------------------- | -------- | ----------- |
-| `condition` | `condition` | Starting value for editing                            | `any`    | `undefined` |
-| `path`      | `path`      | A JSON Pointer that points to the object being edited | `string` | `undefined` |
+| Property    | Attribute | Description                                           | Type        | Default     |
+| ----------- | --------- | ----------------------------------------------------- | ----------- | ----------- |
+| `condition` | --        | Starting value for editing                            | `Condition` | `undefined` |
+| `path`      | `path`    | A JSON Pointer that points to the object being edited | `string`    | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type               |
-| -------------------- | ----------- | ------------------ |
-| `ldfDocShouldChange` |             | `CustomEvent<any>` |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
 ## Dependencies

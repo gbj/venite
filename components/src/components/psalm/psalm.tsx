@@ -53,9 +53,9 @@ export class PsalmComponent {
   antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain }) : JSX.Element {
     if(typeof antiphon == 'string') {
       const refrain = new Refrain({ value: [ antiphon ], style: 'antiphon' });
-      return <ldf-liturgical-document doc={ refrain } editable={this.editable}></ldf-liturgical-document>
+      return <ldf-liturgical-document class='antiphon' doc={ refrain } editable={this.editable}></ldf-liturgical-document>
     } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
-      return <ldf-liturgical-document doc={ antiphon as Refrain } editable={this.editable}></ldf-liturgical-document>
+      return <ldf-liturgical-document class='antiphon' doc={ antiphon as Refrain } editable={this.editable}></ldf-liturgical-document>
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // { '12/23': '...', '12/24': '...' }
@@ -90,7 +90,6 @@ export class PsalmComponent {
     return (
       <ldf-heading doc={heading}>
         {showLatinName && <h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
-        {this.obj?.citation && this.obj?.source && <h5 slot='additional'>{this.obj.citation}</h5>}
       </ldf-heading>
     )
   }
@@ -114,10 +113,15 @@ export class PsalmComponent {
       }
     }
 
+    const noNumbers = (this.obj?.value || [])
+      .map(section => section.value.map(verse => !Boolean(verse.number)))
+      .flat()
+      .reduce((a, b) => a || b, false);
+
     return (
       <Host lang={this.obj?.language || 'en'}>
-        <div class={`psalm ${this.obj?.display_format || 'default'}`}>
-      {/* Slot for controls*/}
+        <div class={`psalm-parent ${this.obj?.display_format || 'default'} ${noNumbers ? 'no-numbers' : ''}`}>
+        {/* Slot for controls*/}
         <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
         </ldf-label-bar>
@@ -132,7 +136,7 @@ export class PsalmComponent {
         {this.filteredValue?.map((section, sectionIndex) => [
           // render a `Heading`, if this section has a `label`
           section.label && this.headingNode(section.label, 4, false),
-
+  
           // build a set of verses
           <div class='psalm-set'>
           {section.value.map((verse, verseIndex) => {
@@ -206,7 +210,6 @@ export class PsalmComponent {
             this.obj.repeatAntiphon(sectionIndex, this.filteredValue.length)
             && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>
           }
-          {includeAntiphon && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>}
           </div>
         ])}
 

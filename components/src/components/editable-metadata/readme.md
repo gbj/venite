@@ -7,20 +7,20 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                                                           | Type      | Default     |
-| ----------- | ----------- | --------------------------------------------------------------------- | --------- | ----------- |
-| `collapsed` | `collapsed` | If `collapsed` is false, the full set of editable fields will appear. | `boolean` | `undefined` |
-| `doc`       | `doc`       | An LDF LiturgicalDocument object                                      | `any`     | `undefined` |
-| `modal`     | `modal`     | Used to pass in the `IonModal` we will dismiss                        | `any`     | `undefined` |
-| `path`      | `path`      | A JSON Pointer that points to the LiturgicalDocument being edited     | `string`  | `undefined` |
-| `visible`   | `visible`   | If `visible` is true, the controls should appear.                     | `boolean` | `undefined` |
+| Property    | Attribute   | Description                                                           | Type                           | Default     |
+| ----------- | ----------- | --------------------------------------------------------------------- | ------------------------------ | ----------- |
+| `collapsed` | `collapsed` | If `collapsed` is false, the full set of editable fields will appear. | `boolean`                      | `undefined` |
+| `doc`       | `doc`       | An LDF LiturgicalDocument object                                      | `LiturgicalDocument \| string` | `undefined` |
+| `modal`     | `modal`     | Used to pass in the `IonModal` we will dismiss                        | `any`                          | `undefined` |
+| `path`      | `path`      | A JSON Pointer that points to the LiturgicalDocument being edited     | `string`                       | `undefined` |
+| `visible`   | `visible`   | If `visible` is true, the controls should appear.                     | `boolean`                      | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type               |
-| -------------------- | ----------- | ------------------ |
-| `ldfDocShouldChange` |             | `CustomEvent<any>` |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
 ## Dependencies

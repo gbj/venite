@@ -7,23 +7,23 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                             | Type                       | Default     |
-| --------- | --------- | ----------------------------------------------------------------------- | -------------------------- | ----------- |
-| `cursors` | --        | Cursor positions of active users. Drills down to `<ldf-editor-cursors>` | `{ [user: string]: any; }` | `undefined` |
-| `doc`     | `doc`     | An LDF LiturgicalDocument object.                                       | `any`                      | `undefined` |
-| `uid`     | `uid`     | Unique ID for the user editing in this editor                           | `string`                   | `undefined` |
-| `users`   | --        | Users currently active in the document                                  | `{ [uid: string]: any; }`  | `undefined` |
+| Property  | Attribute | Description                                                             | Type                           | Default     |
+| --------- | --------- | ----------------------------------------------------------------------- | ------------------------------ | ----------- |
+| `cursors` | --        | Cursor positions of active users. Drills down to `<ldf-editor-cursors>` | `{ [user: string]: Cursor; }`  | `undefined` |
+| `doc`     | `doc`     | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string` | `undefined` |
+| `uid`     | `uid`     | Unique ID for the user editing in this editor                           | `string`                       | `undefined` |
+| `users`   | --        | Users currently active in the document                                  | `{ [uid: string]: User; }`     | `undefined` |
 
 
 ## Events
 
-| Event                        | Description                                                                                  | Type                                                                               |
-| ---------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `editorAskForBibleIntros`    |                                                                                              | `CustomEvent<EventTarget>`                                                         |
-| `editorCursorMoved`          | User's cursor/selection changed                                                              | `CustomEvent<any>`                                                                 |
-| `editorDocShouldAdd`         | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                    |
-| `editorDocShouldChange`      | User has edited the document                                                                 | `CustomEvent<any>`                                                                 |
-| `editorShouldAddGloriaPatri` |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: any; }>` |
+| Event                        | Description                                                                                  | Type                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `editorAskForBibleIntros`    |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorCursorMoved`          | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
+| `editorDocShouldAdd`         | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
+| `editorDocShouldChange`      | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
+| `editorShouldAddGloriaPatri` |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
 
 
 ## Dependencies

@@ -34,7 +34,29 @@
   }
   .verse, .halfverse {
     display: var(--ldf-psalm-verse-display);
-    display: inline;
+    display: var(--ldf-psalm-verse-display);
+  }
+}
+
+.psalm-parent.no-numbers {
+  display: block;
+  text-align: left;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  grid-template-areas: none;
+
+  .psalm {
+    display: block;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-template-areas: none;
+
+    .text {
+      text-align: left;
+      grid-area: none;
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -58,7 +80,7 @@
 }
 
 .repeat-antiphon {
-  display: var(--ldf-psalm-repeat-antiphon-display);
+  display: block; /*var(--ldf-psalm-repeat-antiphon-display);*/
 }
 
 h5 {

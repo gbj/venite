@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                               | Type      | Default     |
-| ---------- | ---------- | --------------------------------------------------------- | --------- | ----------- |
-| `doc`      | `doc`      | The LDF Psalm to be rendered, either as JSON or an Object | `any`     | `undefined` |
-| `editable` | `editable` | Whether the object is editable                            | `boolean` | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Psalm being edited      | `string`  | `undefined` |
+| Property   | Attribute  | Description                                               | Type              | Default     |
+| ---------- | ---------- | --------------------------------------------------------- | ----------------- | ----------- |
+| `doc`      | `doc`      | The LDF Psalm to be rendered, either as JSON or an Object | `Psalm \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                            | `boolean`         | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Psalm being edited      | `string`          | `undefined` |
 
 
 ## Dependencies
