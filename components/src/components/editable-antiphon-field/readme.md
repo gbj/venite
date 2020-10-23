@@ -7,19 +7,19 @@
 
 ## Properties
 
-| Property          | Attribute         | Description                                             | Type                                                       | Default     |
-| ----------------- | ----------------- | ------------------------------------------------------- | ---------------------------------------------------------- | ----------- |
-| `antiphon`        | `antiphon`        | Starting value for editing                              | `Refrain \| string \| { [x: string]: string \| Refrain; }` | `undefined` |
-| `insert_antiphon` | `insert_antiphon` |                                                         | `boolean`                                                  | `undefined` |
-| `omit_antiphon`   | `omit_antiphon`   |                                                         | `boolean`                                                  | `undefined` |
-| `path`            | `path`            | A JSON Pointer that points to the document being edited | `string`                                                   | `undefined` |
+| Property          | Attribute         | Description                                             | Type      | Default     |
+| ----------------- | ----------------- | ------------------------------------------------------- | --------- | ----------- |
+| `antiphon`        | `antiphon`        | Starting value for editing                              | `any`     | `undefined` |
+| `insert_antiphon` | `insert_antiphon` |                                                         | `boolean` | `undefined` |
+| `omit_antiphon`   | `omit_antiphon`   |                                                         | `boolean` | `undefined` |
+| `path`            | `path`            | A JSON Pointer that points to the document being edited | `string`  | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description | Type               |
+| -------------------- | ----------- | ------------------ |
+| `ldfDocShouldChange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

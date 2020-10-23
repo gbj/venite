@@ -9,16 +9,16 @@
 
 | Property   | Attribute | Description                                                                | Type                                | Default     |
 | ---------- | --------- | -------------------------------------------------------------------------- | ----------------------------------- | ----------- |
-| `options`  | --        | Options to search through                                                  | `LiturgicalDocument[]`              | `[]`        |
+| `options`  | --        | Options to search through                                                  | `any[]`                             | `[]`        |
 | `type`     | `type`    |                                                                            | `"collect" \| "psalm" \| "reading"` | `undefined` |
 | `versions` | --        | Whether to include a `LiturgicalDocument.version` field with the selection | `{ [key: string]: string; }`        | `{}`        |
 
 
 ## Events
 
-| Event                 | Description | Type                              |
-| --------------------- | ----------- | --------------------------------- |
-| `ldfDocumentSelected` |             | `CustomEvent<LiturgicalDocument>` |
+| Event                 | Description | Type               |
+| --------------------- | ----------- | ------------------ |
+| `ldfDocumentSelected` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

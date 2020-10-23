@@ -7,18 +7,18 @@
 
 ## Properties
 
-| Property     | Attribute | Description                                           | Type         | Default     |
-| ------------ | --------- | ----------------------------------------------------- | ------------ | ----------- |
-| `modal`      | `modal`   | Used to pass in the `IonModal` we will dismiss        | `any`        | `undefined` |
-| `path`       | `path`    | A JSON Pointer that points to the object being edited | `string`     | `undefined` |
-| `preference` | --        | Starting value for editing                            | `Preference` | `undefined` |
+| Property     | Attribute    | Description                                           | Type     | Default     |
+| ------------ | ------------ | ----------------------------------------------------- | -------- | ----------- |
+| `modal`      | `modal`      | Used to pass in the `IonModal` we will dismiss        | `any`    | `undefined` |
+| `path`       | `path`       | A JSON Pointer that points to the object being edited | `string` | `undefined` |
+| `preference` | `preference` | Starting value for editing                            | `any`    | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+| Event                | Description | Type               |
+| -------------------- | ----------- | ------------------ |
+| `ldfDocShouldChange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies
