@@ -11,11 +11,11 @@
 ### Properties
 
 * [citation](_lectionary_entry_.lectionaryentry.md#citation)
-* [day](_lectionary_entry_.lectionaryentry.md#day)
-* [lectionary](_lectionary_entry_.lectionaryentry.md#lectionary)
-* [type](_lectionary_entry_.lectionaryentry.md#type)
-* [when](_lectionary_entry_.lectionaryentry.md#when)
-* [whentype](_lectionary_entry_.lectionaryentry.md#whentype)
+* [day](_lectionary_entry_.lectionaryentry.md#optional-day)
+* [lectionary](_lectionary_entry_.lectionaryentry.md#optional-lectionary)
+* [type](_lectionary_entry_.lectionaryentry.md#optional-type)
+* [when](_lectionary_entry_.lectionaryentry.md#optional-when)
+* [whentype](_lectionary_entry_.lectionaryentry.md#optional-whentype)
 
 ## Properties
 
@@ -23,44 +23,44 @@
 
 • **citation**: *string*
 
-*Defined in [lectionary-entry.ts:3](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L3)*
+*Defined in [lectionary-entry.ts:3](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L3)*
 
 ___
 
-###  day
+### `Optional` day
 
-• **day**: *string*
+• **day**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:4](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L4)*
-
-___
-
-###  lectionary
-
-• **lectionary**: *string*
-
-*Defined in [lectionary-entry.ts:2](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L2)*
+*Defined in [lectionary-entry.ts:4](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L4)*
 
 ___
 
-###  type
+### `Optional` lectionary
 
-• **type**: *string*
+• **lectionary**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:5](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L5)*
-
-___
-
-###  when
-
-• **when**: *number*
-
-*Defined in [lectionary-entry.ts:7](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L7)*
+*Defined in [lectionary-entry.ts:2](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L2)*
 
 ___
 
-###  whentype
+### `Optional` type
 
-• **whentype**: *string*
+• **type**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:6](https://github.com/gbj/venite/blob/0a93b96/ldf/src/lectionary-entry.ts#L6)*
+*Defined in [lectionary-entry.ts:5](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L5)*
+
+___
+
+### `Optional` when
+
+• **when**? : *undefined | number*
+
+*Defined in [lectionary-entry.ts:7](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L7)*
+
+___
+
+### `Optional` whentype
+
+• **whentype**? : *undefined | string*
+
+*Defined in [lectionary-entry.ts:6](https://github.com/gbj/venite/blob/73c8732/ldf/src/lectionary-entry.ts#L6)*
