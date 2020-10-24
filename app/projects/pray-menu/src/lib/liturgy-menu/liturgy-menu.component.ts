@@ -53,7 +53,8 @@ export class LiturgyMenuComponent implements OnInit {
       this.language$.pipe(startWith(this.language || this.config.defaultLanguage)),
       this.version$.pipe(startWith(this.version || this.config.defaultVersion))
     ).pipe(
-      switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version))
+      switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version)),
+      map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
     );
     this.language$.next(this.language);
     this.version$.next(this.version);
@@ -124,7 +125,7 @@ export class LiturgyMenuComponent implements OnInit {
 
   // Hard-coded default liturgy slug for any given hour
   liturgyOfTheHour(now : Date) : string {
-    let hour : number = now.getHours();
+    const hour : number = now.getHours();
     if(hour > 3 && hour < 11) {
       return "morning-prayer"
     } else if(hour >= 11 && hour <= 14) {
