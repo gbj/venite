@@ -85,16 +85,21 @@ export class OptionComponent {
     const hadMetadata = Boolean(this.obj?.metadata),
       oldValue = this.obj?.metadata?.editor_selected;
   
+    console.log('selected A = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
+
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];
       console.log('ldf-option new selectedDoc = ', this.selectedDoc);
       if(this.obj?.metadata) {
         this.obj.metadata.selected = Number(index);
+        this.obj.metadata.editor_selected = Number(index);
       } else {
-        this.obj.metadata = { selected: Number(index) }
+        this.obj.metadata = { selected: Number(index), editor_selected: Number(index) }
       }
+
+      console.log('selected B = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
   
-      if(resultedFromUserAction) {
+      if(resultedFromUserAction && !this.editable) {
         this.ldfDocShouldChange.emit(new Change({
           path: `${this.path}/metadata`,
           op: [{
@@ -133,6 +138,8 @@ export class OptionComponent {
       // without overriding any other metadata fields
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
+
+      console.log('selected C = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
     } else {
       console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
       this.ldfAddOptionToDoc.emit({
