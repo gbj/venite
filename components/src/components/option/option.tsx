@@ -39,8 +39,8 @@ export class OptionComponent {
     }
 
     const selected : number = this.editable
-      ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0
-      : this.obj?.metadata?.selected || 0;
+      ? this.obj?.metadata?.editor_selected ?? this.obj?.metadata?.selected ?? 0
+      : this.obj?.metadata?.selected ?? 0;
     this.select(selected);
 
     if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
@@ -176,7 +176,7 @@ export class OptionComponent {
   // Render helpers
   /** Return an Ionic Select or Segment element if available, otherwise a vanilla HTML Select Element */
   selectNode() : JSX.Element {
-    const currentlySelected : number = this.editable ? this.obj?.metadata?.editor_selected || this.obj?.metadata?.selected || 0 : this.obj?.metadata?.selected || 0;
+    const currentlySelected : number = this.editable ? this.obj?.metadata?.editor_selected ?? this.obj?.metadata?.selected ?? 0 : this.obj?.metadata?.selected ?? 0;
 
     if(this.obj?.value?.length > 1 || this.editable) {
       // Ionic available and
@@ -264,7 +264,7 @@ export class OptionComponent {
           doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}
-          index={this.editable ? this.obj.metadata.editor_selected || this.obj.metadata.selected : this.obj.metadata.selected}
+          index={this.editable ? this.obj.metadata.editor_selected ?? this.obj.metadata.selected : this.obj.metadata.selected}
           editable={this.editable}
           parentType='option'
         >
