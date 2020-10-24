@@ -1,14 +1,24 @@
 import { Component, OnInit, Inject, Input } from '@angular/core';
 import { Observable, Subject, BehaviorSubject, combineLatest, of } from 'rxjs';
-import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString } from '@venite/ldf';
+import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString, dateFromYMDString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInterface, AuthServiceInterface, CalendarServiceInterface, AUTH_SERVICE, CALENDAR_SERVICE, LECTIONARY_SERVICE } from '@venite/ng-service-api';
-import { tap, switchMap, map } from 'rxjs/operators';
+import { tap, switchMap, map, startWith } from 'rxjs/operators';
 import { DOCUMENT_SERVICE } from '@venite/ng-service-api';
 import { DocumentServiceInterface } from '@venite/ng-service-api';
+
+type PrayData = {
+  user: User;
+  liturgy: LiturgicalDocument;
+  date: Date;
+  properLiturgy: ProperLiturgy,
+  liturgicalDay: LiturgicalDay;
+  clientPreferences: ClientPreferences;
+  availableReadings: string[];
+}
 
 @Component({
   selector: 'venite-pray-menu',
@@ -19,10 +29,10 @@ export class PrayMenuComponent implements OnInit {
   @Input() showVigil : boolean = true;
 
   // The data the Pray button needs
-  prayData : Observable<[User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, string[]]>;
+  prayData : Observable<PrayData>;
 
   // The `LiturgicalDay` that has currently been selected, without any holy day information
-  liturgicalDay : Observable<LiturgicalDay>;
+  liturgicalDay : Observable<LiturgicalDay | null>;
 
   // `language` and `version` used to filter Liturgies to display as options
   language$ : BehaviorSubject<string>;
@@ -37,7 +47,7 @@ export class PrayMenuComponent implements OnInit {
   holydays : BehaviorSubject<HolyDay[]> = new BehaviorSubject([]);
   kalendar : BehaviorSubject<string> = new BehaviorSubject(this.config.defaultKalendar);   // Backbone of Kalendar: Seasons, Major Feasts
   liturgy : Subject<LiturgicalDocument> = new Subject();
-  properLiturgy : BehaviorSubject<ProperLiturgy> = new BehaviorSubject(undefined);
+  properLiturgy : BehaviorSubject<ProperLiturgy | null> = new BehaviorSubject(undefined);
   sanctoral : BehaviorSubject<string> = new BehaviorSubject(this.config.defaultKalendar);  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
   week : Observable<LiturgicalWeek[]>;
@@ -110,7 +120,25 @@ export class PrayMenuComponent implements OnInit {
   )
 
   // Pray button data
-  this.prayData = combineLatest(this.auth.user, this.liturgy, this.properLiturgy, this.liturgicalDay, this.clientPreferences, this.availableReadings$);
+  this.prayData = combineLatest([
+    this.auth.user,
+    this.liturgy,
+    this.date,
+    this.properLiturgy.pipe(startWith(null)),
+    this.liturgicalDay.pipe(startWith(null)),
+    this.clientPreferences.pipe(startWith({})),
+    this.availableReadings$.pipe(startWith([]))
+  ]).pipe(
+    map(([user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings]) => ({
+      user: user as User,
+      liturgy: liturgy as LiturgicalDocument,
+      date: date as Date,
+      properLiturgy: properLiturgy as ProperLiturgy,
+      liturgicalDay: liturgicalDay as LiturgicalDay,
+      clientPreferences: clientPreferences as ClientPreferences,
+      availableReadings: availableReadings as string[]
+    }))
+  )
 }
 
 // ionViewWillEnter -- each time we return to this page, check last time we prayed and reset menu if necessary
@@ -121,17 +149,17 @@ ionViewWillEnter() {
   this.hasStartedNavigating = false;
 }
 
-pray([user, liturgy, properLiturgy, day, prefs, availableReadings]) {
+pray({user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings} : PrayData) {
   // update preferences
-  this.savePreferences(user ? user.uid : undefined, prefs, liturgy);
+  this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy);
 
   // check to see if all selected readings are available; if not, notify the user
-  const allReadingsAvailable = this.areReadingsAvailable(liturgy, prefs, availableReadings);
+  const allReadingsAvailable = this.areReadingsAvailable(new Liturgy(liturgy), clientPreferences, availableReadings);
   if(!allReadingsAvailable) {
-    this.readingsNotAvailableAlert(liturgy, day, prefs, availableReadings);
+    this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings);
   } else {
     // navigate to the Pray page
-    this.navigate('/pray', liturgy, day, prefs);
+    this.navigate('/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
   }
 }
 
@@ -160,7 +188,8 @@ async prayersAndThanksgivings() {
 }
 
 async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences, availableReadings : string[]) {
-  const holy_day_readings = availableReadings.filter(reading => reading.match(/holy_day/));
+  const holy_day_readings = availableReadings.filter(reading => reading.match(/holy_day/)),
+    date = dateFromYMDString(day?.date);
 
   if(holy_day_readings?.length > 0) {
     const evening : boolean = liturgy.metadata?.evening,
@@ -183,7 +212,7 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
           role: 'cancel',
         }, {
           text: 'Continue',
-          handler: () => this.navigate('/pray', liturgy, day, modifiedPrefs)
+          handler: () => this.navigate('/pray', liturgy, date, day, modifiedPrefs)
         }
       ]
     });
@@ -202,7 +231,7 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
           role: 'cancel',
         }, {
           text: 'Continue',
-          handler: () => this.navigate('/pray', liturgy, day, prefs)
+          handler: () => this.navigate('/pray', liturgy, date, day, prefs)
         }
       ]
     });
@@ -220,23 +249,24 @@ savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDoc
     .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
 }
 
-navigate(root : string, liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences) {
-  const [y, m, d] = day?.date?.split('-'),
-        commands : string[] = [
-          root,
-          liturgy?.language || 'en',
-          versionToString(liturgy?.version) || 'Rite-II',
-          day?.kalendar,
-          y, m, d,
-          liturgy?.slug,
-        ];
+navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences) {
+  const y = date.getFullYear().toString(),
+    m = (date.getMonth() + 1).toString(),
+    d = date.getDate().toString(),
+    commands : string[] = [
+      root,
+      liturgy?.language || this.config.defaultLanguage,
+      versionToString(liturgy?.version) || this.config.defaultVersion,
+      day?.kalendar || this.config.defaultKalendar,
+      y, m, d,
+      liturgy?.slug,
+    ];
   const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
   // if any prefs have changed, add them to URL params
   if(Object.keys(nonDefaultPrefs).length > 0) { // || this.data.isVigil) {
     commands.push(JSON.stringify(nonDefaultPrefs));
   }
   // TODO -- push vigil info as well
-
   this.router.navigate(commands, { state: { liturgy, day, prefs } });
 }
 
