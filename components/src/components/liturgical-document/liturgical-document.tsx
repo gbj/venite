@@ -118,7 +118,13 @@ export class LiturgicalDocumentComponent {
     const localeStrings = this.localeStrings || {};
 
     if(doc.value?.length > 0 && Boolean(doc.value[0])) {
-      return this.chooseComponent(doc);
+      if(doc.condition) {
+        return <ConditionNode doc={doc} localeStrings={localeStrings}>
+          {this.chooseComponent(doc)}
+        </ConditionNode>;
+      } else {
+        return this.chooseComponent(doc);
+      }
     } else {
       if(doc.condition && !doc.lookup) {
         return <ConditionNode doc={doc} localeStrings={localeStrings}>

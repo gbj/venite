@@ -49,7 +49,7 @@ export class StringComponent {
 
   // Private methods
   processString() {
-    const withoutEntities : string = this.processEntities(this.text.trim());
+    const withoutEntities : string = this.processEntities(this.text);
     let processed : JSX.Element[] = this.processMarkup(withoutEntities);
     if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
@@ -106,6 +106,8 @@ export class StringComponent {
         'Yahweh': () => <span class="sc">Yhwh</span>,
         '\t': () => <span class='tab'>&nbsp;</span>
       };
+
+      console.log('processTetragrammaton', s);
 
       const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);

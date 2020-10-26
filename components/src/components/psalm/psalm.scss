@@ -71,6 +71,16 @@
   }
 }
 
+.psalm-set:nth-of-type(0) {
+  .psalm:nth-of-type(0) {
+    .text:nth-of-type(0) {
+      .verse:nth-of-type(0) {
+        display: var(--ldf-psalm-first-verse-display);
+      }
+    }
+  }
+}
+
 /* Antiphon display */
 .antiphon {
   display: var(--ldf-psalm-antiphon-display);
