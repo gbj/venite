@@ -1,7 +1,7 @@
 import {
   LiturgicalDocument, BibleReading, Psalm, Citation, Text,
   ResponsivePrayerLine, BibleReadingVerse, PsalmVerse, Sharing
-} from '@venite/ldf';
+} from '@venite/ldf/dist/cjs';
 
 export function venite1toLDF(old : any, type: string) : LiturgicalDocument | undefined {
   switch(type) {
@@ -172,7 +172,7 @@ function sourceStringToCitation(sourceString : string) : Citation | undefined {
   }
 }
 
-function generateTypeAndStyle(old : Prayer) : { type: "psalm" | "liturgy" | "cycle" | "heading" | "option" | "refrain" | "rubric" | "text" | "responsive" | "bible-reading" | "meditation"; style?: string; } {
+function generateTypeAndStyle(old : Prayer) : { type: "psalm" | "liturgy" | "heading" | "option" | "refrain" | "rubric" | "text" | "responsive" | "bible-reading" | "meditation"; style?: string; } {
   switch(old.type) {
     case 'text':
       return { type: 'text', style: 'text' };
