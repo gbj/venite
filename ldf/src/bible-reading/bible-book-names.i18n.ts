@@ -278,7 +278,11 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
   Sirach: {
     en: {
       short: 'Sirach',
-      long: 'The Wisdom of Ben Sira (or Ecclesiasticus)',
+      long: 'The Wisdom of Ben Sira',
+    },
+    'en-CA': {
+      short: 'Sirach',
+      long: 'The Book of Ecclesiasticus',
     },
   },
   Matthew: {
