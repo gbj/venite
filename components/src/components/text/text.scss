@@ -4,6 +4,10 @@ p {
   text-justify: inter-character;
 }
 
+li, h1, h2, h3, h4, h5, h6, ol, span, em, strong {
+  font-family: var(--ldf-font-face);
+}
+
 .response {
   font-weight: var(--ldf-response-font-weight);
   font-style: var(--ldf-response-font-style);
