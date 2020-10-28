@@ -8,11 +8,11 @@
 
 .tab {
   display: inline;
-  margin-left: 1em;
+  margin-left: var(--ldf-tab-width);
 }
 .half-tab {
   display: inline;
-  margin-left: 0.25em;
+  margin-left: var(--ldf-half-tab-width);
 }
 
 .sc {
