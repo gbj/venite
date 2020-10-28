@@ -547,4 +547,16 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Second Book of Esdras',
     },
   },
+  Bel: {
+    en: {
+      short: 'Bel',
+      long: 'Bel and the Dragon',
+    },
+  },
+  'Letter of Jeremiah': {
+    en: {
+      short: 'Letter of Jeremiah',
+      long: 'The Letter of Jeremiah',
+    },
+  },
 };

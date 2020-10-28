@@ -96,6 +96,10 @@ export const BIBLE_BOOK_ABBREVIATIONS = [
     aliases: ['Jer', 'Jeremiah'],
   },
   {
+    name: 'Letter of Jeremiah',
+    aliases: ['EJer', 'EpJer', 'Epistle of Jeremiah'],
+  },
+  {
     name: 'Lamentations',
     aliases: ['Lam', 'Lamentations'],
   },
@@ -182,6 +186,18 @@ export const BIBLE_BOOK_ABBREVIATIONS = [
   {
     name: 'Sirach',
     aliases: ['Sir', 'Ecclus', 'Ben Sira', 'Ecclesiasticus'],
+  },
+  {
+    name: '1 Esdras',
+    aliases: ['1 Esdr', '1 Esdras', '1 Esd', '1Esdras', '1Esdr', '1Esd'],
+  },
+  {
+    name: '2 Esdras',
+    aliases: ['2 Esdr', '2 Esdras', '2 Esd', '2Esdras', '2Esdr', '2Esd'],
+  },
+  {
+    name: 'Bel',
+    aliases: ['Bel', 'Bel & the Dragon'],
   },
   {
     name: 'Matthew',
