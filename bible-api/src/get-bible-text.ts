@@ -1,4 +1,4 @@
-import { getNRSV } from "./nrsv";
+import { getNRSV, getNRSVAE } from "./nrsv";
 import { BibleReading } from "@venite/ldf/dist/cjs";
 import { getESV } from "./esv";
 import { getCEB } from "./ceb";
@@ -9,6 +9,9 @@ export async function getBibleText(citation : string, version : string) : Promis
     case 'NRSV':
     case 'nrsv':
       return getNRSV(citation);
+    case 'NRSVAE':
+    case 'nrsvae':
+      return getNRSVAE(citation);
     case 'ESV':
     case 'esv':
       return getESV(citation);
