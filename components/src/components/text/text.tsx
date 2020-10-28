@@ -79,17 +79,14 @@ export class TextComponent {
   render() {
     const localeStrings = this.localeStrings || {};
     let compiledValue : string[][] = (this.obj?.value || []).map(s => {
-      return s.split(/([\*\w\n\s,:;\.“”‘’\!\?”\[\]\%]+([^\*\w\n\s,;:\.“”‘’”\!\?\[\]\%]))/g);
+      return s.split(/([\*\w\n\s,:;\.“”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.“”‘’”\!\?\[\]\%\(\)]))/g);
     })
     if(!this.editable && this.obj?.display_format === 'abbreviated') {
       const firstSection = compiledValue[0],
         lastSection = compiledValue[compiledValue.length - 1];
-      //let firstChunk : string, lastChunk : string;
       const firstChunk = this.truncate(firstSection[0]),
         lastChunk = this.truncate(lastSection[lastSection.length - 1], true);
-      console.log('firstChunk = ', firstChunk, 'lastChunk = ', lastChunk);
       compiledValue = [[firstChunk], [lastChunk]];
-      console.log('abbreviated compiled Value to ', compiledValue);
     }
      
       
