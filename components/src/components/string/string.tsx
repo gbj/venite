@@ -73,7 +73,7 @@ export class StringComponent {
 
   processMarkup(s : string) : JSX.Element[] {
     const nodes = s
-      .replace(/^([A-Z]{2,})/, (match) => match[0] + match.slice(1).toLowerCase())
+      .replace(/^([A-Z]{2,})/, (match) => this.maintainCasing(match) ? match : match[0] + match.slice(1).toLowerCase())
       .replace(/([A-Z]{2,})/g, '^$1^') // all caps => ^...^; don't match if first word, as these should become dropcaps
       .replace(/\[\*/g, '__BRACKET_ASTERISK')
       .split(/([\*\^\%][^\*\^\%]*[\*\^\%])/g)  // markdown ** => italics
@@ -83,11 +83,16 @@ export class StringComponent {
         } else if((node.startsWith('*') && node.endsWith('*')) || node.startsWith('%') && node.endsWith('%')) {
           return <em>{node.slice(1, node.length - 1)}</em>;
         } else if(node.startsWith('^') && node.endsWith('^')) {
-          return <span class="sc">{node[1]}{node.slice(2, node.length - 1).toLowerCase()}</span>;
+          if(this.maintainCasing(node)) {
+            return node.replace(/\^/g, '');
+          } else {
+            return <span class="sc">{node[1]}{node.slice(2, node.length - 1).toLowerCase()}</span>;
+          }
         } else {
           return node.replace(/__BRACKET_ASTERISK/g, '[*');
         }
       });
+    console.log('nodes = ', nodes);
     return nodes;
   }
 
@@ -104,16 +109,23 @@ export class StringComponent {
         'Yhwh': () => <span class="sc">Yhwh</span>,
         'YAHWEH': () => <span class="sc">Yhwh</span>,
         'Yahweh': () => <span class="sc">Yhwh</span>,
-        '\t': () => <span class='tab'>&nbsp;</span>
+        '\t': () => <span class='tab'>&nbsp;</span>,
+        '  ': () => <span class='half-tab'>&nbsp;</span>
       };
 
       console.log('processTetragrammaton', s);
 
-      const split = s.split(/(\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
+      const split = s.split(/((  )|\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
     } else {
       return new Array();
     }
+  }
+
+  maintainCasing(st : string | undefined) : boolean {
+    // God and Roman numerals
+    const s = st.replace(/\^/g, '');
+    return s?.toLowerCase() == ' god' || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s);
   }
 
   processDropcap(processed : JSX.Element[]) : JSX.Element[] {
@@ -131,8 +143,10 @@ export class StringComponent {
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
 
+      console.log(`match2 = "${match2}"`)
+
       final = new Array(
-        <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{match2?.toLowerCase()}</span>
+        <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
       )
         .concat(nextWord)
         .concat(processed.slice(1));
