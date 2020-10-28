@@ -66,6 +66,7 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : (
         } else if(child instanceof HTMLElement && child.tagName == 'a') {
         } else if(child instanceof HTMLElement && child.classNames.includes('sc')) {
           verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' ').toUpperCase());
+        } else if(child.text?.length < 20 && child.text?.endsWith('-->')) {
         } else {
           verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' '));
         }
