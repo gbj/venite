@@ -535,4 +535,16 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Revelation to St. John the Divine',
     },
   },
+  '1 Esdras': {
+    en: {
+      short: '1 Esdras',
+      long: 'The Second Book of Esdras',
+    },
+  },
+  '2 Esdras': {
+    en: {
+      short: '2 Esdras',
+      long: 'The Second Book of Esdras',
+    },
+  },
 };
