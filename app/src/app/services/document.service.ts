@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
 import { Observable, from, of, combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { filter, map, startWith, switchMap, tap } from 'rxjs/operators';
 
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
 import { DTO } from './dto';
 import { Organization } from '../organization/organization';
 import * as firebase from 'firebase';
+import { AuthService } from '../auth/auth.service';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -20,7 +21,10 @@ export interface IdAndDoc {
 })
 export class DocumentService {
 
-  constructor(private readonly afs: AngularFirestore) { }
+  constructor(
+    private readonly afs: AngularFirestore,
+    private auth : AuthService
+  ) { }
 
   /** Returns an array of all the public documents that match each of the provided properties of `query` */
   // TODO -- returns empty array?
@@ -44,13 +48,36 @@ export class DocumentService {
   }
 
   getLiturgyOptions(language : string, version : string) : Observable<Liturgy[]> {
+    const veniteLiturgies$ = this.afs.collection<Liturgy>('Document', ref => 
+      ref.where('type', '==', 'liturgy')
+        .where('language', '==', language)
+        .where('version', '==', version)
+        .where('sharing.organization', '==', 'venite')
+        .where('sharing.status', '==', 'published')
+        .where('sharing.privacy', '==', 'public')
+    ).valueChanges();
+
+    const myLiturgies$ = this.auth.user.pipe(
+      filter(user => Boolean(user?.uid)),
+      switchMap(user => this.myDocuments(user?.uid)),
+      map(idsAndDocs => idsAndDocs
+        .map(idAndDoc => idAndDoc.data)
+        .filter(doc => doc.type === 'liturgy' && !Boolean(doc.day)) as Liturgy[]
+      ),
+      startWith([] as Liturgy[])
+    );
+
+    return combineLatest([myLiturgies$, veniteLiturgies$]).pipe(
+      map(([mine, venite]) => mine.concat(venite))
+    )
+  }
+
+  getAllLiturgyOptions() : Observable<Liturgy[]> {
     return this.afs.collection<Liturgy>('Document', ref => 
       ref.where('type', '==', 'liturgy')
-         .where('language', '==', language)
-         .where('version', '==', version)
-         .where('sharing.organization', '==', 'venite')
-         .where('sharing.status', '==', 'published')
-         .where('sharing.privacy', '==', 'public')
+        .where('sharing.organization', '==', 'venite')
+        .where('sharing.status', '==', 'published')
+        .where('sharing.privacy', '==', 'public')
     ).valueChanges();
   }
 
@@ -172,10 +199,10 @@ export class DocumentService {
 
   search(uid : string, search : string, orgs : Organization[]) : Observable<IdAndDoc[]> {
     return combineLatest([
-      this.myDocuments(uid),
-      this.myOrganizationDocuments(orgs)
+      this.myDocuments(uid).pipe(startWith([])),
+      of([])//this.myOrganizationDocuments(orgs).pipe(startWith([]))
     ]).pipe(
-      map(([docs, orgDocs]) => docs.concat(orgDocs).filter(doc => JSON.stringify({ ... doc, value: undefined }).includes(search)))
+      map(([docs, orgDocs]) => docs.concat(orgDocs).filter(doc => JSON.stringify({ ... doc }).includes(search)))
     );
   }
 
@@ -204,15 +231,19 @@ export class DocumentService {
     return doc.label?.replace(/\s/g, '-').toLowerCase();
   }
 
-  getColor(color : string | LiturgicalColor) : Observable<string> {
-    if(typeof color !== 'string') {
-      return of(color.hex);
+  getColor(color : string | LiturgicalColor | null) : Observable<string> {
+    if(color) {
+      if(typeof color !== 'string') {
+        return of(color.hex);
+      } else {
+        return this.afs.collection<LiturgicalColor>('Color', ref =>
+          ref.where('name', '==', color)
+        ).valueChanges().pipe(
+          map(colors => colors.length > 0 ? colors[0].hex : color)
+        );
+      }
     } else {
-      return this.afs.collection<LiturgicalColor>('Color', ref =>
-        ref.where('name', '==', color)
-      ).valueChanges().pipe(
-        map(colors => colors.length > 0 ? colors[0].hex : color)
-      );
+      return of('var(--ldf-background-color)')
     }
   }
 }

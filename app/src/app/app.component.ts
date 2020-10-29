@@ -36,7 +36,7 @@ export class AppComponent {
       this.remindersEnabled = this.platform.is('capacitor');
 
       this.organizations$ = this.auth.user.pipe(
-        switchMap(user => this.organizationService.organizationsWithUser(user.uid)),
+        switchMap(user => user ? this.organizationService.organizationsWithUser(user.uid) : []),
       );
 //      this.statusBar.styleDefault();
 //      this.splashScreen.hide();

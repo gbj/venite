@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Plugins } from '@capacitor/core';
+const { Clipboard } = Plugins;
+import * as clipboardPolyfill from 'clipboard-polyfill';
 import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
 import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption } from '@venite/ldf';
@@ -22,6 +25,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   @Input() docId : string;
 
   mode : 'edit' | 'code' | 'preview' = 'edit';
+  clipboardStatus : 'idle' | 'success' | 'error';
 
   state$ : Observable<{
     localManager: LocalDocumentManager,
@@ -152,7 +156,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   addGloriaPatri(manager: LocalDocumentManager, ev : CustomEvent) {
-    console.log('ADD GLORIA PATRI');
     const { path, language, version, oldValue } = ev.detail;
     if(this.gloriaSubscription) {
       this.gloriaSubscription.unsubscribe();
@@ -277,8 +280,20 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${orgId}/${slug}\n\n`,
         buttons: [
           {
-            text: 'Keep Editing',
+            text: 'Cancel',
             role: 'cancel'
+          },
+          {
+            text: 'Copy Link',
+            handler: () => {
+              const link = `${environment.baseUrl}pray/${orgId}/${slug}`;
+              Clipboard.write({ url: link }).then(() => this.clipboardStatus = 'success')
+                .catch(() => {
+                  clipboardPolyfill.writeText(link)
+                    .then(() => this.clipboardStatus = 'success')
+                    .catch(() => this.clipboardStatus = 'error');
+                });
+            }
           },
           {
             text: 'Go',

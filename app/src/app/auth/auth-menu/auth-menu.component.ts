@@ -24,7 +24,7 @@ export class AuthMenuComponent implements OnInit {
 
   ngOnInit() {
     this.organizations$ = this.auth.user.pipe(
-      switchMap(user => this.organizationService.organizationsWithUser(user.uid)),
+      switchMap(user => user ? this.organizationService.organizationsWithUser(user.uid) : []),
     );
   }
 

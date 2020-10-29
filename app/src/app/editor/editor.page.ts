@@ -1,22 +1,32 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, BehaviorSubject, combineLatest, of } from 'rxjs'; 
-import { switchMap, map, tap, filter } from 'rxjs/operators';
+import { switchMap, map, filter, startWith } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService, IdAndDoc } from '../services/document.service';
 import { EditorService } from './ldf-editor/editor.service';
-import { LiturgicalDocument, BibleReadingVerse, BibleReading, Text, Sharing, ResponsivePrayer } from '@venite/ldf';
+import { LiturgicalDocument } from '@venite/ldf';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { UserProfile } from '../auth/user/user-profile';
 import { OrganizationService } from '../organization/organization.module';
 import { DownloadService } from '../services/download.service';
+import { BLANK_TEMPLATES } from './blank-templates';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { IFormGroup, IFormBuilder } from "@rxweb/types";
 
-const docSearch = ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc => 
-  doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
-  doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
-  doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
-  doc.data.category?.includes(search.toLowerCase())
+const docSearch =  (includeBulletins : boolean, includeTemplates : boolean, includeFragments : boolean) => ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc =>
+  (
+    (includeBulletins || !Boolean(doc.data.day)) &&
+    (includeTemplates || Boolean(doc.data.day)) &&
+    (includeFragments || !Boolean(doc.data.metadata?.supplement))
+  ) &&
+  (
+    doc.data.label?.toLowerCase().includes(search.toLowerCase()) || 
+    doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
+    doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
+    doc.data.category?.includes(search.toLowerCase())
+  )
 );
 
 @Component({
@@ -38,60 +48,10 @@ export class EditorPage implements OnInit {
   searchResults$ : Observable<IdAndDoc[]> = of([]);
 
   // Templates for new documents
-  templates$: Observable<{ label: string; factory: (string) => LiturgicalDocument}[]> = of([
-    {
-      label: "Liturgy",
-      factory: (label) => new LiturgicalDocument({
-        type: 'liturgy',
-        metadata: {
-          preferences: {},
-          special_preferences: {}
-        },
-        label,
-        value: [new LiturgicalDocument({
-          type: 'heading',
-          style: 'text',
-          metadata: {
-            level: 1
-          },
-          value: [label]
-        })]
-      })
-    },
-    {
-      label: "Prayer",
-      factory: (label) => new Text({
-        type: 'text',
-        style: 'prayer',
-        label,
-        value: ['']
-      })
-    },
-    {
-      label: "Responsive Prayer",
-      factory: (label) => new ResponsivePrayer({
-        type: 'responsive',
-        style: 'responsive',
-        label,
-        value: [{
-          text: '',
-          response: ''
-        }]
-      })
-    },
-    {
-      label: "Bible Reading",
-      factory: (label) => new BibleReading({
-        type: 'bible-reading',
-        style: 'short',
-        value: [
-          new BibleReadingVerse({
-            book: '', chapter: '', verse: '', text: ''
-          })
-        ]
-      })
-    },
-  ]);
+  templates$: Observable<{ label: string; factory: (string) => LiturgicalDocument}[]>;
+  templatesToggled : boolean = false;
+  includeForm : IFormGroup<{ bulletins: boolean; templates: boolean; fragments: boolean; }>;
+  form : IFormBuilder;
 
   constructor(
     public auth : AuthService,
@@ -102,30 +62,62 @@ export class EditorPage implements OnInit {
     private alert : AlertController,
     private translate : TranslateService,
     private organizationService : OrganizationService,
-    private downloadService : DownloadService
-  ) { }
+    private downloadService : DownloadService,
+    form : FormBuilder
+  ) {
+    this.form = form;
+  }
 
   @ViewChild('importInput') importInput;
 
   ngOnInit() {
+    this.includeForm = this.form.group<{ bulletins: boolean; templates: boolean; fragments: boolean; }>({
+      bulletins: true,
+      templates: true,
+      fragments: true
+    });
+
+    this.templates$ = combineLatest(
+      of(BLANK_TEMPLATES),
+      this.documents.getAllLiturgyOptions().pipe(
+        map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
+      )
+    ).pipe(
+      map(([templates, liturgies]) => liturgies
+        .map(liturgy => ({
+          label: liturgy.label,
+          factory: (label : any) => new LiturgicalDocument({
+            ... liturgy,
+            slug: 
+            label
+          })
+        }))
+        .concat(templates)
+      )
+    )
+
+    const includeForm$ = this.includeForm.valueChanges.pipe(
+      startWith(this.includeForm.value)
+    );
+
     // If no docId is given, we use this list of all documents
     // All docs
     const myUnfilteredDocs$ = this.auth.user.pipe(
       switchMap(user => this.documents.myLiturgies(user.uid))
     );
   
-    this.myDocs$ = combineLatest([this.search$, myUnfilteredDocs$]).pipe(
-      map(docSearch)
+    this.myDocs$ = combineLatest([this.search$, includeForm$, myUnfilteredDocs$]).pipe(
+      map(([search, valueChanges, docs]) => docSearch(valueChanges.bulletins, valueChanges.templates, valueChanges.fragments)([search, docs]))
     );
 
     const orgs$ = this.auth.user.pipe(
       switchMap(user => this.organizationService.organizationsWithUser(user.uid))
     );
 
-    this.orgDocs$ = combineLatest([this.search$, orgs$.pipe(
+    this.orgDocs$ = combineLatest([this.search$, includeForm$, orgs$.pipe(
       switchMap(orgs => this.documents.myOrganizationDocuments(orgs))
     )]).pipe(
-      map(docSearch)
+      map(([search, valueChanges, docs]) => docSearch(valueChanges.bulletins, valueChanges.templates, valueChanges.fragments)([search, docs]))
     );
 
     this.searchResults$ = combineLatest([this.auth.user, this.search$, orgs$]).pipe(
@@ -201,5 +193,9 @@ export class EditorPage implements OnInit {
         reader.readAsText(file);
       }
     })
+  }
+
+  toggleTemplates() {
+    this.templatesToggled = !this.templatesToggled;
   }
 }

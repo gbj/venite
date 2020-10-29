@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom } from 'rxjs/operators';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
 import { ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
@@ -39,6 +39,8 @@ export class PrayPage implements OnInit {
   // Display settings
   settings$ : Observable<DisplaySettings>;
 
+  day$ : Observable<LiturgicalDay>;
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
@@ -57,7 +59,8 @@ export class PrayPage implements OnInit {
     // This probably means we came from the home page and clicked Pray, so the liturgy
     // and liturgical day had been preloaded
     const windowHistoryState$ : Observable<PrayState> = this.router.events.pipe(
-      mapTo(window && window.history.state)
+      mapTo(window && window.history.state),
+      tap(windowHistoryState => console.log('windowHistoryState', windowHistoryState)),
     );
 
     // If passed as router params (e.g., arrived at page from a link or refresh),
@@ -65,37 +68,52 @@ export class PrayPage implements OnInit {
   
     // `LiturgicalDocument`s that match the language/version/slug passed in the URL
     const liturgy$ : Observable<LiturgicalDocument[]> = this.route.params.pipe(
-      tap(({ orgId, slug, language, version, liturgy }) => console.log('params = ', orgId, slug, language, version, liturgy)),
       switchMap(({ orgId, slug, language, version, liturgy }) =>
         orgId && slug
         ? this.documents.findOrganizationLiturgy(orgId, slug)
         : this.documents.findDocumentsBySlug(liturgy, language, new Array(version))
-      )
+      ),
+      startWith([])
     );
   
     // `LiturgicalDay` (via week) that matches the date/kalendar passed in the URL,
     // given the `LiturgicalDocument` found above (for `evening`)
     const week$ : Observable<LiturgicalWeek[]> = combineLatest([this.route.params, liturgy$]).pipe(
-      tap(data => console.log('building week$', data)),
-      switchMap(([{ y, m, d, kalendar, vigil }, liturgies]) => 
-        liturgies[0] && liturgies[0].day
-        ? of(new Array(liturgies[0].day.week))
-        : this.calendarService.buildWeek(of(dateFromYMD(y, m, d)), of(kalendar), of(vigil))
-      )
+      switchMap(([{ y, m, d, kalendar, vigil }, liturgies]) => {
+        if(liturgies[0] && liturgies[0].day) {
+          return of(new Array(liturgies[0].day?.week));
+        } else if(y && m && d) {
+          return this.calendarService.buildWeek(of(dateFromYMD(y, m, d)), of(kalendar), of(vigil));
+        } else {
+          return of([]);
+        }
+      })
     );
-    const day$ = combineLatest(liturgy$, week$, this.route.params).pipe(
-      switchMap(([liturgy, week, params]) =>
-        liturgy[0] && liturgy[0].day
-        ? of(liturgy[0].day)
-        : this.calendarService.buildDay(
-          of(dateFromYMD(params.y, params.m, params.d)),
-          of(params.kalendar),
-          of(liturgy).pipe(map(x => x[0])),
-          of(week),
-          of(params.vigil),
-        )
-      )
-    )
+
+    const day$ = merge(
+      windowHistoryState$.pipe(map(state => state.day)),
+      combineLatest(liturgy$, week$, this.route.params).pipe(
+        tap(([liturgy, week, params]) => console.log('day$ A', liturgy, week, params)),
+        switchMap(([liturgy, week, params]) => {
+          if(liturgy[0] && liturgy[0].day) {
+            return of(liturgy[0].day);
+          } else if(params.y && params.m && params.d) {
+            return this.calendarService.buildDay(
+              of(dateFromYMD(params.y, params.m, params.d)),
+              of(params.kalendar),
+              of(liturgy).pipe(map(x => x[0])),
+              of(week),
+              of(params.vigil)
+            );
+          } else {
+            return of(undefined);
+          }
+        })
+      ),
+    ).pipe(
+      tap(day => console.log('day$ B = ', day)),
+    );
+    this.day$ = day$;
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$ : Observable<ClientPreferences> = combineLatest(liturgy$, this.route.params).pipe(
@@ -121,28 +139,24 @@ export class PrayPage implements OnInit {
     );
 
     // Unite the data passed from the state and the data derived from the route
-    // Note that this should never call the observables from the route params
-    // if the state is already present, due to the take(1)
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
-      filter(state => state && state.hasOwnProperty('day') && state.hasOwnProperty('liturgy')),
- //     take(1)
+      filter(state => state && Boolean(state.liturgy) && (Boolean(state.day) || Boolean(state.liturgy.day))),
     )
 
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
-      switchMap(state => this.prayService.compile(state.liturgy, state.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
-      tap(doc => console.log('doc$ = ', doc))
+      switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
     );
 
-    this.doc$ = stateDoc$;
+    this.doc$ = merge(
+      stateDoc$,
+      this.modifiedDoc$
+    );
 
-    this.color$ = combineLatest([
-      of(true),
-      merge(windowHistoryState$, routerParamState$)]
-    ).pipe(
-      map(([useBackgroundColor, state]) => useBackgroundColor && state?.day?.color ? state.day.color : null),
+    this.color$ = this.day$.pipe(
+      map(day => day?.color),
       switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
-      startWith('var(--ldf-background-color)')
+      startWith('var(--ldf-background-color)'),
     )
 
     // Grab display settings from preferences
@@ -168,7 +182,7 @@ export class PrayPage implements OnInit {
       switchMap(user => user ? this.auth.getUserProfile(user.uid) : null)
     );
     this.userOrgs$ = this.userProfile$.pipe(
-      switchMap(user => this.organizationService.organizationsWithUser(user.uid))
+      switchMap(user => user ? this.organizationService.organizationsWithUser(user?.uid) : [])
     );
   }
 

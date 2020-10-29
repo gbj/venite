@@ -25,7 +25,7 @@
         </ion-item>
         <ng-container *ngIf="organizations$ | async as orgs">
           <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'church', org.slug]">
-            <img slot="start" src="/assets/church.svg"> 
+            <ion-icon slot="start" src="/assets/church.svg"></ion-icon>
             <ion-label>{{ org.name }}</ion-label>
           </ion-item>
         </ng-container>

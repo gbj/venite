@@ -116,7 +116,7 @@ export class OrganizationService {
     return this.afs.doc<UserProfile>(`Users/${uid}`)
       .valueChanges()
       .pipe(
-        map(userProfile => userProfile.orgs),
+        map(userProfile => userProfile?.orgs),
         switchMap(orgs => this.organizationsByIds(orgs))
       )
   }

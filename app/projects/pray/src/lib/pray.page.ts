@@ -98,14 +98,14 @@ export class PrayPage implements OnInit {
 
     // Unifies everything from the router params
     const routerParamState$ : Observable<PrayState> = combineLatest(liturgy$, day$, prefs$).pipe(
-      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs }))
+      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day: liturgy[0]?.day || day, prefs }))
     );
 
     // Unite the data passed from the state and the data derived from the route
     // Note that this should never call the observables from the route params
     // if the state is already present, due to the take(1)
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
-      filter(state => state && state.hasOwnProperty('day') && state.hasOwnProperty('liturgy')),
+      filter(state => state && Boolean(state.day) && Boolean(state.liturgy)),
  //     take(1)
     )
 

@@ -116,7 +116,9 @@ import { PrayPageModule } from '@venite/ng-pray';
       },
       liturgySettings: {
         sundayCollectsFirst: true,
-        emberDayCollectPrecedesSunday: false
+        emberDayCollectPrecedesSunday: false,
+        allSaintsSuppressesCollectOfTheDayUnlessSunday: false,
+        allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday: false
       }
     })
   ],

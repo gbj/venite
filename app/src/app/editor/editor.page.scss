@@ -21,15 +21,20 @@ article {
 
 .button-layout {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
 
     venite-create-document-button {
         max-width: 50%;
+        min-width: 25%;
     }
 }
 
 .doc-link:hover {
     cursor: pointer;
+}
+
+.visually-hidden {
+    height: 0px;
+    max-height: 1000px;
+    transition: height 0.5s;
 }

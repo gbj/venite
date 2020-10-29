@@ -1,4 +1,4 @@
-<ng-container *ngIf="doc$ | async as doc else loading">
+<ng-container>
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-buttons collapse="true" slot="start">
@@ -6,13 +6,10 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
-      <ion-buttons collapse="true" slot="end">
+      <ion-buttons collapse="true" slot="end" *ngIf="doc$ | async as doc">
         <ng-container *ngIf="userProfile$ | async as user">
           <ng-container *ngIf="userOrgs$ | async as orgs">
-            <ion-button *ngIf="modifiedDoc$ | async as modifiedDoc" (click)="editBulletin(user, modifiedDoc, orgs)" aria-label="Edit">
-              <ion-icon slot="icon-only" name="create"></ion-icon>
-            </ion-button>
-            <ion-button *ngIf="!(modifiedDoc$ | async)" (click)="editBulletin(user, doc, orgs)" aria-label="Edit">
+            <ion-button (click)="editBulletin(user, doc, orgs)" aria-label="Edit">
               <ion-icon slot="icon-only" name="create"></ion-icon>
             </ion-button>
           </ng-container>
@@ -27,19 +24,12 @@
   <ion-content [fullscreen]="true" class="ion-padding bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
     <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
       <ldf-liturgical-document
-        *ngIf="!(modifiedDoc$ | async)"
+        *ngIf="doc$ | async as doc else loading"
         path="/"
         [doc]="doc"
         [editable]="false"
         (ldfDocShouldChange)="changeDoc(doc, $event)"
       ></ldf-liturgical-document>
-      <ldf-liturgical-document
-        *ngIf="modifiedDoc$ | async as modifiedDoc"
-        path="/"
-        [doc]="modifiedDoc"
-        [editable]="false"
-        (ldfDocShouldChange)="changeDoc(modifiedDoc, $event)"
-    ></ldf-liturgical-document>
     </div>
   </ion-content>
 </ng-container>

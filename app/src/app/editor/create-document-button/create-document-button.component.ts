@@ -38,7 +38,7 @@ export class CreateDocumentButtonComponent implements OnInit {
    // Create and navigate to a new document
    async new(userProfile : UserProfile) {
     const alert = await this.alert.create({
-      header: 'Create Document',  // TODO: i18n translate whole alert
+      header: 'Create a Template',  // TODO: i18n translate whole alert
       inputs: [
         {
           name: 'label',

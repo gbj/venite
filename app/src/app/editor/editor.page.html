@@ -26,9 +26,17 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-title>{{ 'editor.create-a-document' | translate }}</ion-card-title>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="toggleTemplates()">
+              <ion-icon *ngIf="!templatesToggled" name="chevron-forward-outline"></ion-icon>
+              <ion-icon *ngIf="templatesToggled" name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-card-title>{{ 'editor.create-a-new-template' | translate }}</ion-card-title>
+        </ion-toolbar>
       </ion-card-header>
-      <ion-card-content>
+      <ion-card-content [class]="{'visually-hidden':!templatesToggled}">
         <div class="button-layout">
           <ng-container *ngFor="let template of templates$ | async">
             <venite-create-document-button 
@@ -42,6 +50,37 @@
     </ion-card>
 
     <ion-searchbar (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
+
+    <form [formGroup]="includeForm">
+      <ion-grid class="include-buttons">
+        <ion-row>
+          <ion-col size="12" size-sm="4">
+            <ion-item lines="none">
+              <ion-label>
+                {{ 'editor.include-templates' | translate }}
+              </ion-label>
+              <ion-checkbox formControlName="templates"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <ion-item lines="none">
+              <ion-label>
+                {{ 'editor.include-bulletins' | translate }}
+              </ion-label>
+              <ion-checkbox formControlName="bulletins"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <ion-item lines="none">
+              <ion-label>
+                {{ 'editor.include-fragments' | translate }}
+              </ion-label>
+              <ion-checkbox formControlName="fragments"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
 
     <!-- My Documents -->
     <ion-list *ngIf="myDocs$ | async as docs else nodocs">
@@ -122,6 +161,6 @@
         </ion-item>
       </ion-list>
     </ng-container>
-    <ng-template #nodocs><p>{{ 'editor.loading' | translate }}</p></ng-template>
+    <ng-template #nodocs><p class="loading">{{ 'editor.loading' | translate }}</p></ng-template>
   </ion-content>
 </ng-template>

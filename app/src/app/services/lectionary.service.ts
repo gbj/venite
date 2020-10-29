@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from '@venite/ldf';
 import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,9 @@ export class LectionaryService {
   getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
-      return this.rcl(dateFromYMDString(day.date), lectionaryName, day.propers, day.years['rclsunday'], day.slug);
+      return this.rcl(dateFromYMDString(day.date), lectionaryName, day.propers, day.years['rclsunday'], day.slug).pipe(
+        map(readings => readings.filter(reading => reading.type === readingType))
+      );
     }
     // search for other readings in our DB
     else {

@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { BibleReading } from '@venite/ldf';
 import { BibleServiceInterface } from 'service-api';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 // Interface for Venite V1
 interface V1BibleAPIJSONInterface {
@@ -31,6 +31,8 @@ export class BibleService implements BibleServiceInterface {
         value: json.verses.flat()
       }))
     );*/
-    return this.http.get<BibleReading>(`https://us-central1-venite-2.cloudfunctions.net/bible`, { params: { citation, version}})
+    return this.http.get<BibleReading>(`https://us-central1-venite-2.cloudfunctions.net/bible`, { params: { citation, version}}).pipe(
+      catchError(() => version === 'NRSV' ? of(undefined) : this.getText(citation, 'NRSV'))
+    )
   }
 }
