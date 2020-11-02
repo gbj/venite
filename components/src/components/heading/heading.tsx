@@ -170,7 +170,7 @@ export class HeadingComponent {
           }}
         >
           {/* `Heading.label` => main header node */}
-          {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), Boolean(text)))}
+          {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), index == 0 || Boolean(text)))}
 
           {isDate && !this.editable && this.dateNode()}
           {isDate && this.editable && <code class="lookup">{localeStrings.date}</code>}
