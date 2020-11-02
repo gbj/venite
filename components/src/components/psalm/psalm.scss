@@ -79,7 +79,7 @@
 }
 
 .repeat-antiphon {
-  display: block; /*var(--ldf-psalm-repeat-antiphon-display);*/
+  display: var(--ldf-psalm-repeat-antiphon-display);
 }
 
 h5 {
