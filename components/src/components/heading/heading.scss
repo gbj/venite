@@ -14,7 +14,7 @@
     text-transform: var(--ldf-title-text-transform);
   }
 
-  h2, .holy-day {
+  h2 {
     text-align: var(--ldf-subtitle-text-align);
     font-weight: var(--ldf-subtitle-font-weight);
     font-style: var(--ldf-subtitle-font-style);
@@ -50,7 +50,7 @@
     text-transform: var(--ldf-h5-text-transform);
   }
 
-  .date, .holy-days {
+  .date, .holy-days, .holy-day {
     font-size: var(--ldf-date-font-size);
     text-transform: var(--ldf-date-text-transform);
     text-align: var(--ldf-date-text-align);
