@@ -306,7 +306,7 @@ export class EditorService {
     /* json1 won't accept strings as array indices; if any of the items in the JSON pointer path
      * or the additional index given in the `Operation` are numbers encoded as strings, convert to numbers */
     op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 
-    const indexedP = op.index ? op.p.concat(Number(op.index) ? Number(op.index) : op.index) : op.p;
+    const indexedP = op.index !== undefined ? op.p.concat(Number(op.index) >= 0 ? Number(op.index) : op.index) : op.p;
 
     // generate json1 op depending on the type
     switch(op.type) {
