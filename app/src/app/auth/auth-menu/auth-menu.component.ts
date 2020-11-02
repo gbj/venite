@@ -34,7 +34,8 @@ export class AuthMenuComponent implements OnInit {
   }
 
   async logout() {
-    this.auth.logout()
+    this.auth.logout();
+    this.menu.close('auth');
   }
 
 }
