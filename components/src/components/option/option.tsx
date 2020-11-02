@@ -9,6 +9,7 @@ const LOCALE = {
 };
 @Component({
   tag: 'ldf-option',
+  styleUrl: 'option.scss',
   shadow: true
 })
 export class OptionComponent {
@@ -263,10 +264,12 @@ export class OptionComponent {
 
     return (
       <Host lang={this.obj.language}>
-        <ldf-label-bar>
-          {/* Can be overwritten by apps that use Ionic or other frameworks */}
-          <slot slot='end' name='controls'>{this.selectNode()}</slot>
-        </ldf-label-bar>
+        <div class='select-control'>
+          <ldf-label-bar>
+            {/* Can be overwritten by apps that use Ionic or other frameworks */}
+            <slot slot='end' name='controls'>{this.selectNode()}</slot>
+          </ldf-label-bar>
+        </div>
         {this.selectedDoc && <ldf-liturgical-document
           doc={this.selectedDoc}
           path={`${this.path}/value/${this.obj.metadata.selected}`}

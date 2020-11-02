@@ -21,6 +21,7 @@
   }
 
   sup {
+    float: var(--ldf-psalm-number-float);
     display: var(--ldf-psalm-number-display);
     grid-area: var(--ldf-psalm-number-grid-area);
     margin-right: var(--ldf-psalm-number-margin-right);
