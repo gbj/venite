@@ -14,7 +14,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@venite/bible-api": "0.0.10",
+    "@venite/bible-api": "0.0.14",
     "@venite/http": "^0.1.1",
     "@venite/hymnal-api": "^0.1.2",
     "firebase-admin": "^8.10.0",

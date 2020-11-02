@@ -70,7 +70,7 @@ export class CreateDocumentButtonComponent implements OnInit {
         collaborators: [],
         status: 'draft',
         privacy: 'organization'
-      })
+      }),
     }));
 
     this.newDoc.emit(docId);

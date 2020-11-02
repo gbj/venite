@@ -1,4 +1,7 @@
 {
+  "draft": "Draft",
+  "published": "Published",
+  "login-to-continue": "Log in to continue using the app.",
   "language": {
     "en": "English"
   },

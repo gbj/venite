@@ -1,6 +1,6 @@
 <ng-container *ngIf="state$ | async as state else nodoc">
   <ng-container *ngIf="state.localManager else nodoc">
-    <ion-header [translucent]="true">
+    <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
           <ion-back-button></ion-back-button>
@@ -8,6 +8,19 @@
         </ion-buttons>
         <ion-title><h1>{{ state?.localManager?.document?.label }}</h1></ion-title>
         <ion-buttons collapse="true" slot="end">
+          <ion-button (click)="sharingModal(state?.localManager.document?.sharing)" class="sm-hidden">
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-label>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
+          </ion-button>
+          <ion-button (click)="shareLink(state?.localManager, state?.localManager.document)" class="sm-hidden">
+            <ion-icon name="share" slot="start"></ion-icon>
+            <ion-label>{{ 'editor.publish' | translate }}</ion-label>
+          </ion-button>
+          <venite-auth-menu-button></venite-auth-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar class="sm-only">
+        <ion-buttons slot="end">
           <ion-button (click)="sharingModal(state?.localManager.document?.sharing)">
             <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
             <ion-label>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
@@ -16,18 +29,11 @@
             <ion-icon name="share" slot="start"></ion-icon>
             <ion-label>{{ 'editor.publish' | translate }}</ion-label>
           </ion-button>
-          <venite-auth-menu-button></venite-auth-menu-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
   
     <ion-content [fullscreen]="true" class="ion-padding">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large"><h1>{{ state?.localManager.document?.label }}</h1></ion-title>
-        </ion-toolbar>
-      </ion-header>
-
       <ion-segment [(ngModel)]="mode">
         <ion-segment-button value="edit">{{ 'editor.edit' | translate}}</ion-segment-button>
         <ion-segment-button value="code">{{ 'editor.code' | translate}}</ion-segment-button>

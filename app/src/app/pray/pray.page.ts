@@ -68,11 +68,17 @@ export class PrayPage implements OnInit {
   
     // `LiturgicalDocument`s that match the language/version/slug passed in the URL
     const liturgy$ : Observable<LiturgicalDocument[]> = this.route.params.pipe(
-      switchMap(({ orgId, slug, language, version, liturgy }) =>
-        orgId && slug
-        ? this.documents.findOrganizationLiturgy(orgId, slug)
-        : this.documents.findDocumentsBySlug(liturgy, language, new Array(version))
-      ),
+      switchMap(({ docId, orgId, slug, language, version, liturgy }) => {
+        if(docId) {
+          return this.documents.findDocumentById(docId).pipe(
+            map(doc => [doc])
+          );
+        } else if(orgId && slug) {
+          return this.documents.findOrganizationLiturgy(orgId, slug);
+        } else {
+          return this.documents.findDocumentsBySlug(liturgy, language, new Array(version));
+        }
+      }),
       startWith([])
     );
   
@@ -135,7 +141,8 @@ export class PrayPage implements OnInit {
 
     // Unifies everything from the router params
     const routerParamState$ : Observable<PrayState> = combineLatest(liturgy$, day$, prefs$).pipe(
-      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs }))
+      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs })),
+      tap(state => console.log('routerParamState', state))
     );
 
     // Unite the data passed from the state and the data derived from the route
@@ -223,14 +230,13 @@ export class PrayPage implements OnInit {
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null;
-    console.log('editBulletin  doc = ', doc);
     const id = await this.documents.newDocument(new LiturgicalDocument({
       ... unwrapOptions(doc),
       label: prettyDocDate ? `${doc.label} (${prettyDocDate})` : doc.slug,
       slug: formattedDocDate ? `${doc.slug}-${formattedDocDate}` : doc.slug,
       sharing: new Sharing({
         owner: userProfile.uid,
-        organization: (orgs[0]).slug,
+        organization: (orgs[0])?.slug,
         collaborators: [],
         status: 'draft',
         privacy: 'organization'
@@ -240,10 +246,8 @@ export class PrayPage implements OnInit {
   }
 
   changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
-    console.log('changeDoc');
     const op = this.editorService.opFromChange(event.detail);
     const newValue = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(doc)), op) as Partial<LiturgicalDocument>);
-    console.log('newValue = ', newValue)
     this.modifiedDoc$.next(newValue);
   }
 }

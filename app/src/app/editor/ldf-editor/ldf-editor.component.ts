@@ -274,35 +274,36 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     const orgId = doc?.sharing?.organization,
       slug = doc?.slug;
     console.log('Publishing\n\n', orgId, slug);
-    if(orgId && slug) {
-      const alert = await this.alert.create({
-        header: 'Bulletin Published',
-        message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${orgId}/${slug}\n\n`,
-        buttons: [
-          {
-            text: 'Cancel',
-            role: 'cancel'
-          },
-          {
-            text: 'Copy Link',
-            handler: () => {
-              const link = `${environment.baseUrl}pray/${orgId}/${slug}`;
-              Clipboard.write({ url: link }).then(() => this.clipboardStatus = 'success')
-                .catch(() => {
-                  clipboardPolyfill.writeText(link)
-                    .then(() => this.clipboardStatus = 'success')
-                    .catch(() => this.clipboardStatus = 'error');
-                });
-            }
-          },
-          {
-            text: 'Go',
-            handler: () => this.router.navigate(['pray', orgId, slug])
+    let docUrl = orgId && slug ? `${orgId}/${slug}` : `b/${manager.docId}`;
+    const alert = await this.alert.create({
+      header: 'Bulletin Published',
+      message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${docUrl}\n\n`,
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Copy Link',
+          handler: () => {
+            const link = `${environment.baseUrl}pray/${docUrl}`;
+            Clipboard.write({ url: link }).then(() => this.clipboardStatus = 'success')
+              .catch(() => {
+                clipboardPolyfill.writeText(link)
+                  .then(() => this.clipboardStatus = 'success')
+                  .catch(() => this.clipboardStatus = 'error');
+              });
           }
-        ]
-      });
+        },
+        {
+          text: 'Go',
+          handler: () => orgId && slug
+            ? this.router.navigate(['pray', orgId, slug])
+            : this.router.navigate(['pray', 'b', manager.docId])
+        }
+      ]
+    });
 
-      await alert.present();
-    }
+    await alert.present();
   }
 }

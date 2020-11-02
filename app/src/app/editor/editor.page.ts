@@ -14,6 +14,7 @@ import { DownloadService } from '../services/download.service';
 import { BLANK_TEMPLATES } from './blank-templates';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { IFormGroup, IFormBuilder } from "@rxweb/types";
+import { slugify } from '../slugify';
 
 const docSearch =  (includeBulletins : boolean, includeTemplates : boolean, includeFragments : boolean) => ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc =>
   (
@@ -88,7 +89,7 @@ export class EditorPage implements OnInit {
           label: liturgy.label,
           factory: (label : any) => new LiturgicalDocument({
             ... liturgy,
-            slug: 
+            slug: slugify(label),
             label
           })
         }))
@@ -103,7 +104,8 @@ export class EditorPage implements OnInit {
     // If no docId is given, we use this list of all documents
     // All docs
     const myUnfilteredDocs$ = this.auth.user.pipe(
-      switchMap(user => this.documents.myLiturgies(user.uid))
+      filter(user => user !== null),
+      switchMap(user => this.documents.myLiturgies(user?.uid))
     );
   
     this.myDocs$ = combineLatest([this.search$, includeForm$, myUnfilteredDocs$]).pipe(
@@ -111,7 +113,8 @@ export class EditorPage implements OnInit {
     );
 
     const orgs$ = this.auth.user.pipe(
-      switchMap(user => this.organizationService.organizationsWithUser(user.uid))
+      filter(user => user !== null),
+      switchMap(user => this.organizationService.organizationsWithUser(user?.uid))
     );
 
     this.orgDocs$ = combineLatest([this.search$, includeForm$, orgs$.pipe(
@@ -121,11 +124,11 @@ export class EditorPage implements OnInit {
     );
 
     this.searchResults$ = combineLatest([this.auth.user, this.search$, orgs$]).pipe(
-      switchMap(([user, search, orgs]) => Boolean(search) ? this.documents.search(user.uid, search, orgs) : [])
+      switchMap(([user, search, orgs]) => Boolean(search) ? this.documents.search(user?.uid, search, orgs) : [])
     );
 
     this.userProfile$ = this.auth.user.pipe(
-      switchMap(user => this.auth.getUserProfile(user.uid))
+      switchMap(user => this.auth.getUserProfile(user?.uid))
     );
 
     // If a docId is given, we'll pass it down to the `LdfEditorComponent`

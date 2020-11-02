@@ -10,5 +10,5 @@ export const environment = {
     appId: "1:666828168362:web:fa4dce3782692d30b204d3",
     measurementId: "G-5P8B67RK8D"
   },
-  baseUrl: 'https://venite-2.web.app/'
+  baseUrl: 'https://beta.venite.app/'
 };

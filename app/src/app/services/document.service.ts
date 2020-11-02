@@ -67,8 +67,14 @@ export class DocumentService {
       startWith([] as Liturgy[])
     );
 
-    return combineLatest([myLiturgies$, veniteLiturgies$]).pipe(
-      map(([mine, venite]) => mine.concat(venite))
+    return combineLatest([this.auth.user, myLiturgies$, veniteLiturgies$]).pipe(
+      map(([user, mine, venite]) => user
+        ? mine.concat(
+          // filter out anything I own
+          venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
+        )
+        : mine.concat(venite)
+      )
     )
   }
 
@@ -95,7 +101,7 @@ export class DocumentService {
   }
 
   findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {    
-    const docQuery = this.afs.collection<LiturgicalDocument>('Document', ref => {
+    const veniteLiturgies$ = this.afs.collection<LiturgicalDocument>('Document', ref => {
       let query = ref.where('slug', '==', slug)
                      .where('language', '==', language)
                      .where('sharing.organization', '==', 'venite')
@@ -107,9 +113,32 @@ export class DocumentService {
       return query;
     }).valueChanges();
 
+    const myDocs$ = this.auth.user.pipe(
+      switchMap(user => {
+        return this.afs.collection<LiturgicalDocument>('Document', ref => {
+          let query = ref.where('slug', '==', slug)
+            .where('language', '==', language)
+            .where('sharing.owner', '==', user?.uid)
+          if(versions?.length > 0) {
+            query = query.where('version', 'in', versions);
+          }
+          return query;
+        }).valueChanges()
+      })
+    );
+
     const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
 
-    return combineLatest([docQuery, gloriaQuery]).pipe(
+    return combineLatest([this.auth.user, veniteLiturgies$, myDocs$, gloriaQuery]).pipe(
+      map(([user, venite, mine, gloria]) => [
+        user
+        ? mine.concat(
+          // filter out anything I own
+          venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
+        )
+        : mine.concat(venite),
+        gloria
+      ]),
       // add Gloria to psalms, canticles, invitatories
       map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm' ? doc : new LiturgicalDocument({
         ... doc,

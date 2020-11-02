@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable, combineLatest } from 'rxjs';
+import { Observable, combineLatest, of } from 'rxjs';
 import { map, tap, switchMap } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, addOneDay, dateFromYMD, dateToYMD, liturgicalWeek, liturgicalDay } from '@venite/ldf';
@@ -82,10 +82,18 @@ export class CalendarService {
           observedD = observedDate.getDate(),
           feasts = this.findFeastDays(day.kalendar, `${observedM}/${observedD}`),
           specials = this.findSpecialDays(day.kalendar, day.slug);
-    return combineLatest(feasts, specials)
+
+    // Thanksgiving Day
+    const isNovember = date.getMonth() === 10, // January is 0, Feb 1, etc., so Sept is 8 
+      isThursday = date.getDay() === 4, // Sunday is 0, Monday is 1
+      nthWeekOfMonth = Math.ceil(date.getDate() / 7),
+      thanksgiving = isNovember && isThursday && nthWeekOfMonth == 4 ? this.findSpecialDays(day.kalendar, 'thanksgiving-day') : of([]);
+
+    return combineLatest(feasts, specials, thanksgiving)
       .pipe(
+        tap(holydays => console.log('holydayzz', holydays)),
         // OR together the feasts and specials
-        map(([feasts, specials]) => feasts.concat(specials)),
+        map(([feasts, specials, thanksgiving]) => feasts.concat(specials).concat(thanksgiving)),
         // incorporate them into the `LiturgicalDay`
         map(holydays => day.addHolyDays(holydays))
       );

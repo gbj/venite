@@ -2,25 +2,16 @@
   display: flex;
   flex-direction: row;
   height: 100%;
-  width: 200%;
-}
-
-ldf-editable-add-block-menu, .additional {
-  display: block;
-  height: 80%;
   width: 100%;
 }
 
-ldf-editable-add-block-menu.hidden {
-  transform: translateX(-100%);
+ldf-editable-add-block-menu.visible, .additional.visible {
+  display: block;
+  width: 100%;
 }
 
 .additional.visible { 
-  transform: translateX(-100%);
-}
-
-.additional.hidden {
-  width: 100%;
+  display: block;
 }
 
 .visible, .hidden {
@@ -28,5 +19,7 @@ ldf-editable-add-block-menu.hidden {
 }
 
 .hidden {
+  display: none;
   height: 0;
+  width: 0;
 }

@@ -29,10 +29,13 @@
 :root {
   --ldf-background-color: #ffffff;
   --ldf-color: #121212;
+  --ldf-text-align: justify;
   --ldf-editable-lookup-background-color: #f0f0f0;
   --ldf-editable-lookup-color: #121212;
   --ldf-editable-condition-background-color: #ffffc3;
   --ldf-editable-condition-color: #121212;
+  --ldf-tab-width: 0.5em;
+  --ldf-half-tab-width: 0.25em;
 
 	--ldf-drop-float: left;
 	--ldf-drop-early-verses-display: none;

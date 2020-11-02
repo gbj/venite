@@ -5,6 +5,7 @@ import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { map, switchMap, take, tap, startWith } from 'rxjs/operators';
 import { UserProfile } from '../auth/user/user-profile';
 import * as firebase from 'firebase/app';
+import { slugify } from '../slugify';
 
 @Injectable({
   providedIn: 'root'
@@ -134,16 +135,4 @@ export class OrganizationService {
       ref.where('orgs', 'array-contains', orgId)
     ).valueChanges();
   }
-}
-
-function slugify(string) {
-  const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-  const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-  const p = new RegExp(a.split('').join('|'), 'g')
-
-  return string.toString().toLowerCase()
-    .replace(/\s+/g, '') // Replace spaces with ''
-    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-    .replace(/&/g, 'and') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
 }
