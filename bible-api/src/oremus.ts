@@ -63,10 +63,10 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : (
           verseTexts = new Array();
           verse = child.text?.trim();
         } else if(child instanceof HTMLElement && (child.classNames.includes('sectVis') || child.classNames.includes('passageref')) ) {
-        } else if(child instanceof HTMLElement && child.tagName == 'a') {
+        } else if(child instanceof HTMLElement && child.tagName.toLowerCase() == 'a') {
         } else if(child instanceof HTMLElement && child.classNames.includes('sc')) {
           verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' ').toUpperCase());
-        } else if(child instanceof HTMLElement && child.tagName == 'br') {
+        } else if(child instanceof HTMLElement && child.tagName.toLowerCase() == 'br') {
           verseTexts.push('\n');
         } else if(child.text?.length < 20 && child.text?.endsWith('-->')) {
         } else {
