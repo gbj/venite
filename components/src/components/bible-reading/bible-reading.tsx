@@ -224,7 +224,7 @@ export class BibleReadingComponent {
             {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document doc={this.obj.metadata.compiled_intro}></ldf-liturgical-document>}
 
             {/* Bible text */}
-            {paragraphs.map(paragraph => <p lang={this.obj.language}>
+            {paragraphs.map((paragraph, paragraphIndex) => <p lang={this.obj.language}>
               {paragraph.map((verse, verseIndex) =>
                 verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
                 ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
@@ -232,7 +232,7 @@ export class BibleReadingComponent {
                   <sup>{(verse as BibleReadingVerse).verse}</sup>,
                   <ldf-string
                     citation={verse}
-                    dropcap={verseIndex == 0 ? 'force' : 'enabled'}
+                    dropcap={paragraphIndex == 0 && verseIndex == 0 ? 'force' : 'disabled'}
                     id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
                     text={(verse as BibleReadingVerse).text}
                     index={verseIndex}
