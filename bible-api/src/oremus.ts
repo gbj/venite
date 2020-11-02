@@ -70,7 +70,7 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : (
           verseTexts.push('\n');
         } else if(child.text?.length < 20 && child.text?.endsWith('-->')) {
         } else {
-          verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' '));
+          verseTexts.push(child.text);
         }
       });
       verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('').replace(/&nbsp;/g, ' ')});
