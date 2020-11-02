@@ -100,17 +100,28 @@ export class EditableStringListComponent {
   }
 
   remove(ii : number) {
-    const change = new Change({
-      path: `${this.path}/${this.property}`,
-      op: [{
-        type: 'deleteAt',
-        index: ii,
-        oldValue: this.optimisticValues[ii]
-      }]
-    });
+    const oldValue = this.optimisticValues[ii];
 
     this.optimisticValues.splice(ii, 1);
     this.optimisticValues = [ ... this.optimisticValues ];
+  
+    const change = this.optimisticValues.length > 0
+      ? new Change({
+        path: `${this.path}/${this.property}`,
+        op: [{
+          type: 'deleteAt',
+          index: ii,
+          oldValue
+        }]
+      })
+      : new Change({
+        path: `${this.path}/${this.property}`,
+        op: [{
+          type: 'set',
+          value: [],
+          oldValue: [oldValue]
+        }]
+      });
 
     this.ldfDocShouldChange.emit(change);
   }
