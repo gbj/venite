@@ -16,6 +16,12 @@
             <ion-icon name="share" slot="start"></ion-icon>
             <ion-label>{{ 'editor.publish' | translate }}</ion-label>
           </ion-button>
+          <ng-container *ngIf="editorService.status | async as status">
+            <ion-icon *ngIf="status.code === 'Idle'"></ion-icon>
+            <ion-icon class="status pending" *ngIf="status.code === 'Pending'" name="cloud-upload"></ion-icon>
+            <ion-icon class="status success" *ngIf="status.code === editorStatusCode.Success" name="checkmark"></ion-icon>
+            <ion-icon class="status error" *ngIf="status.code === 'Error'" name="warning"></ion-icon>
+          </ng-container>
           <venite-auth-menu-button></venite-auth-menu-button>
         </ion-buttons>
       </ion-toolbar>

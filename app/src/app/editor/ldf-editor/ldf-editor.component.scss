@@ -34,3 +34,14 @@ ldf-editor {
     white-space: nowrap; /* added line */
   }
 }
+
+.status.pending {
+  color: #a0a0a0;
+}
+
+.status.success{
+  color: green;
+}
+.status.error {
+  color: red;
+}

@@ -10,6 +10,19 @@ import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } fr
 import { map, tap, switchMap, take } from 'rxjs/operators';
 import { AuthService } from '../../auth/auth.service';
 import { randomColor } from './random-color';
+import { ToastController } from '@ionic/angular';
+
+export type EditorStatus = {
+  code: EditorStatusCode;
+  payload?: string;
+}
+
+export enum EditorStatusCode {
+  Idle = 'Idle',
+  Pending = 'Pending',
+  Success = 'Success',
+  Error = 'Error'
+};
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +33,13 @@ export class EditorService {
   private _localManagers : { [docId: string]: BehaviorSubject<LocalDocumentManager> } = {};
   private _onlineListener : () => void;
 
-  constructor(private readonly afs: AngularFirestore, private readonly auth : AuthService) { }
+  public status : BehaviorSubject<EditorStatus> = new BehaviorSubject({code: EditorStatusCode.Idle});
+
+  constructor(
+    private readonly afs: AngularFirestore,
+    private readonly auth : AuthService,
+    private toast : ToastController
+  ) { }
 
   // Join/Leave Functions
   join(docId : string) : Observable<ServerDocumentManager> { //<{server: ServerDocumentManager; local: LocalDocumentManager}>  {
@@ -142,6 +161,8 @@ export class EditorService {
 
   /** send the next change in the pending queue to the server */ 
   async sendNextChange(localManager : LocalDocumentManager) {
+    this.status.next({ code: EditorStatusCode.Pending })
+
     const manager = { ... localManager },
           docBeforeChange = new LiturgicalDocument({ ... manager.document }),
           change = manager.pendingChanges[0]; // takes item from beginning of array
@@ -184,6 +205,10 @@ export class EditorService {
         this.nextLocalManager(manager);
 
         await batch.commit();
+
+        // send a Success code for UI, fading after 2 seconds
+        this.status.next({ code: EditorStatusCode.Success });
+        setTimeout(() => this.status.next({ code: EditorStatusCode.Idle }), 2000);
         
         manager.hasBeenAcknowledged = true;
         manager.pendingChanges.shift();
@@ -201,6 +226,15 @@ export class EditorService {
       manager.pendingChanges.shift();
       manager.rejectedChanges.push(change);
       manager.hasBeenAcknowledged = true;
+
+      // send error codes to UI
+      this.status.next({ code: EditorStatusCode.Error, payload: error });
+      await this.toast.create({
+        message: error,
+        position: 'bottom',
+        duration: 3000,
+        color: 'danger'
+      })
     }
 
   }
