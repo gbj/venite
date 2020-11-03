@@ -53,11 +53,15 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : (
       }
       let verseTexts : string[] = new Array();
       paragraph.childNodes?.forEach((child, childIndex) => {
+        console.log(child instanceof HTMLElement && `"${child.tagName}"`, child instanceof HTMLElement && child.tagName.toLowerCase() == 'br')
         if(child instanceof HTMLElement && child.classNames.includes('cc')) {
           verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('')});
           verseTexts = new Array();
           chapter = child.text
           verse = "1";
+        } else if(child instanceof HTMLElement && child.tagName.toLowerCase() == 'br') {
+          verseTexts.push('\n');
+          console.log(verseTexts, '\n');
         } else if(child instanceof HTMLElement && (child.classNames.includes('ww') || child.classNames.includes('ii') || child.classNames.includes('vnumVis'))) {
           verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('')});
           verseTexts = new Array();
@@ -66,11 +70,10 @@ export function parseOremusResponse(citation : string, textEl : HTMLElement) : (
         } else if(child instanceof HTMLElement && child.tagName.toLowerCase() == 'a') {
         } else if(child instanceof HTMLElement && child.classNames.includes('sc')) {
           verseTexts.push(child.text.replace(/\n$/, ' ').replace(/\s+/g, ' ').toUpperCase());
-        } else if(child instanceof HTMLElement && child.tagName.toLowerCase() == 'br') {
-          verseTexts.push('\n');
         } else if(child.text?.length < 20 && child.text?.endsWith('-->')) {
         } else {
-          verseTexts.push(child.text);
+          console.log('> text\n')
+          verseTexts.push(child.text.replace(/\n$/, ' '));
         }
       });
       verses[sectionIndex].push({book, chapter, verse, text: verseTexts.join('').replace(/&nbsp;/g, ' ')});
