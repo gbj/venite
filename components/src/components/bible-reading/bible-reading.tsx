@@ -65,6 +65,7 @@ export class BibleReadingComponent {
     if(this.obj.metadata && this.obj.metadata.intro) {
       try {
         this.obj.compileIntro();
+        console.log('compileIntro', this.obj.metadata.compiled_intro);
         this.obj = new BibleReading({ ... this.obj });
       } catch(e) {
         console.warn(e);

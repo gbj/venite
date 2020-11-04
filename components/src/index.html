@@ -2006,6 +2006,7 @@ ul {
       "style": "long",
       "category": [],
       "type": "bible-reading",
+      "language": "en-CA",
       "metadata": {
         "intro": {
           "sharing": {
@@ -2016,23 +2017,6 @@ ul {
           "type": "text",
           "value": [
             "A Reading from ${longName}."
-          ],
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "language": "en",
-          "style": "text"
-        },
-        "compiled_intro": {
-          "hidden": false,
-          "sharing": {
-            "privacy": "public",
-            "organization": "venite",
-            "status": "published"
-          },
-          "type": "text",
-          "value": [
-            "A Reading from the Wisdom of Ben Sira (or Ecclesiasticus)."
           ],
           "category": [
             "Bible Reading Introduction"
@@ -2086,7 +2070,7 @@ ul {
         "color": "Green"
       },
       "citation": "Ecclus. 31:12-18,25-32:2",
-      "language": "en",
+      "language": "en-CA",
       "value": [
         {
           "book": "Ecclus.",
@@ -2295,23 +2279,6 @@ ul {
             "privacy": "public",
             "organization": "venite"
           }
-        },
-        "compiled_intro": {
-          "hidden": false,
-          "style": "text",
-          "value": [
-            "A Reading from the Gospel According to Luke."
-          ],
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "language": "en",
-          "type": "text",
-          "sharing": {
-            "status": "published",
-            "privacy": "public",
-            "organization": "venite"
-          }
         }
       },
       "category": [],
@@ -2354,7 +2321,7 @@ ul {
         "color": "Green"
       },
       "citation": "Luke 11:53-12:12",
-      "language": "en",
+      "language": "en-CA",
       "value": [
         {
           "book": "Luke",
@@ -4085,7 +4052,7 @@ ul {
   }
 }
   const node = document.createElement('ldf-liturgical-document');
-node.setAttribute('editable', true);
+node.setAttribute('editable', false);
 node.setAttribute('path', '/');
     node.doc = LITURGY;
     document.querySelector('#example').appendChild(node);
