@@ -1,6 +1,6 @@
 {
   "name": "@venite/components",
-  "version": "0.11.23",
+  "version": "0.11.24",
   "description": "Rendering components for the Venite.app Liturgical Document Format (LDF)",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -42,7 +42,7 @@
   "dependencies": {
     "@ionic/core": "^5.1.0",
     "@vanillawc/wc-markdown": "^1.6.3",
-    "@venite/ldf": "^0.13.6",
+    "@venite/ldf": "^0.13.7",
     "diff-match-patch": "^1.0.4",
     "query-selector-shadow-dom": "^0.4.6",
     "textarea-caret": "^3.1.0",
