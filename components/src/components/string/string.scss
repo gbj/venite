@@ -37,6 +37,10 @@
   color: var(--ldf-drop-color);
 }
 
+.buffered-drop {
+  margin-right: var(--ldf-buffered-drop-margin-right);
+}
+
 :host[dir='rtl'] .drop {
   float: right;
   font-family: 'Times New Roman';

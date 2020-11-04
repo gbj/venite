@@ -1,5 +1,6 @@
 :host {
   font-family: var(--ldf-font-face);
+  --ldf-drop-margin-right: var(--ldf-drop-psalm-margin-right);
 }
 
 .psalm-set {
@@ -66,7 +67,7 @@
     sup {
       display: var(--ldf-psalm-first-verse-number-display);
     }
-    
+
     .text:nth-of-type(1) {
       .verse:nth-of-type(1) {
         display: var(--ldf-psalm-first-verse-display);
