@@ -7,7 +7,7 @@ import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } fr
 import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption } from '@venite/ldf';
 import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
-import { EditorService, EditorStatusCode } from './editor.service';
+import { EditorService, EditorStatus, EditorStatusCode } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AlertController, ModalController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
@@ -24,6 +24,7 @@ import { environment } from 'src/environments/environment';
 export class LdfEditorComponent implements OnInit, OnDestroy {
   @Input() docId : string;
 
+  editorStatus : Observable<EditorStatus>;
   editorStatusCode = EditorStatusCode;
 
   mode : 'edit' | 'code' | 'preview' = 'edit';
@@ -54,6 +55,8 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.editorStatus = this.editorService.status;
+
     // Document manager
     const serverManager$ = this.editorService.join(this.docId);
 
