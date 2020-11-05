@@ -13,7 +13,6 @@ export class CanticleTableService implements CanticleTableServiceInterface {
   constructor(private readonly afs: AngularFirestore) { }
 
   findEntry(table : string, nth : number, fallbackTable : string = undefined) : Observable<CanticleTableEntry[]> {
-    
     return this.afs.collection<CanticleTableEntry>('CanticleTable', ref =>
       fallbackTable 
       ? ref.where('table', 'in', [table, fallbackTable])
