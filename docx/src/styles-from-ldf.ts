@@ -93,7 +93,8 @@ const STYLES = {
           spacing: {
               after: 240,
               before: 240
-          }
+          },
+          alignment: AlignmentType.CENTER
       }
     },
     {
@@ -109,7 +110,8 @@ const STYLES = {
           spacing: {
               after: 240,
               before: 240
-          }
+          },
+          alignment: AlignmentType.CENTER
       }
     },
     {
@@ -137,7 +139,16 @@ const STYLES = {
       }
     },
     {
-      id: 'Rubric',
+      id: LDFStyles.Refrain,
+      name: 'Refrain',
+      basedOn: 'Normal',
+      next: 'Normal',
+      run: {
+        italics: true
+      }
+    },
+    {
+      id: LDFStyles.Rubric,
       name: 'Rubric',
       basedOn: 'Normal',
       next: 'Normal',

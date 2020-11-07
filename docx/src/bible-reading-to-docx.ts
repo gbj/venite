@@ -33,9 +33,9 @@ export function bibleReadingToDocx(doc : BibleReading, displaySettings : Display
       ps = paragraphs(doc),
       p = includeResponse && shortResponse 
         ? ps.slice(0, ps.length - 1).map(p => paragraph(p, displaySettings, localeStrings))
-            .concat(paragraph(ps[ps.length-1], displaySettings, localeStrings, [responseNode]))
+            .concat(paragraph(ps[ps.length-1], displaySettings, localeStrings, false, [responseNode]))
             .flat()
-        : ps.map(p => paragraph(p, displaySettings, localeStrings)).flat();
+        : ps.map(p => paragraph(p, displaySettings, localeStrings, false)).flat();
 
     return [
       ... p,
@@ -106,14 +106,14 @@ function paragraphs(doc : BibleReading) : (BibleReadingVerse | Heading)[][] {
    return paragraphs;
  }
 
-function paragraph(p : (BibleReadingVerse | Heading)[], displaySettings : DisplaySettings, localeStrings : LocaleStrings, addlRuns : TextRun[] = []) : DocxChild[] {
+function paragraph(p : (BibleReadingVerse | Heading)[], displaySettings : DisplaySettings, localeStrings : LocaleStrings, includeVerseNumbers : boolean = true, addlRuns : TextRun[] = []) : DocxChild[] {
   let children : DocxChild[] = [],
     verses : BibleReadingVerse[] = [];
 
   function saveVerses(final : boolean = false) {
     children.push(new Paragraph({
       children: verses.map(v => [
-        displaySettings.bibleVerses && v.verse
+        displaySettings.bibleVerses && includeVerseNumbers && v.verse
         ? new TextRun({
           text: v.verse?.toString()+' ' || '',
           style: LDFStyles.VerseNumber
