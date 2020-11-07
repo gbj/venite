@@ -1,0 +1,3742 @@
+{
+  "hidden": false,
+  "source": {
+    "source": "",
+    "api": "",
+    "citation": ""
+  },
+  "version": "Rite-II",
+  "label": "Morning Prayer",
+  "value": [
+    {
+      "type": "heading",
+      "style": "text",
+      "value": [""]
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "level": 1
+      },
+      "type": "heading",
+      "style": "text",
+      "value": [
+        "Morning Prayer"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "date",
+      "metadata": {
+        "level": 1
+      },
+      "value": [
+        ""
+      ],
+      "type": "heading",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "day",
+      "value": [
+        ""
+      ],
+      "type": "heading",
+      "metadata": {
+        "level": 1
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    null,
+    {
+      "hidden": false,
+      "version_label": null,
+      "type": "bible-reading",
+      "style": "short",
+      "sharing": {
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "citation": "Isaiah 57:15",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "value": [
+        {
+          "text": "Thus says the high and lofty One who inhabits eternity, whose name is Holy, “I dwell in the high and holy place and also with the one who has a contrite and humble spirit, to revive the spirit of the humble and to revive the heart of the contrite.”"
+        }
+      ],
+      "category": [
+        "OrdinaryTime",
+        "Opening Sentence"
+      ],
+      "language": "en",
+      "label": null,
+      "slug": "opening_sentence",
+      "version": "bcp1979"
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "value": "no",
+              "key": "omitForeOffice",
+              "is": true
+            }
+          }
+        ]
+      },
+      "source": {
+        "citation": "p. 79",
+        "api": "",
+        "source": "bcp1979"
+      },
+      "metadata": {
+        "selected": 1,
+        "editor_selected": 1
+      },
+      "value": [
+        {
+          "hidden": false,
+          "version_label": "Long",
+          "label": "Confession of Sin",
+          "value": [
+            "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
+          ],
+          "metadata": {},
+          "type": "text",
+          "category": [],
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "style": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "category": [],
+          "type": "text",
+          "style": "text",
+          "value": [
+            "Let us confess our sins against God and our neighbor."
+          ],
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "version_label": "Short",
+          "metadata": {},
+          "label": "Confession of Sin",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Silence may be kept.",
+        "Officiant and People together, all kneeling"
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "key": "omitForeOffice",
+              "is": true,
+              "value": "no"
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "display_format": "unison",
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ],
+          "style": "prayer",
+          "metadata": {
+            "omit_response": false
+          },
+          "category": [],
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "version_label": "Rite II",
+          "type": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "metadata": {
+            "omit_response": false
+          },
+          "type": "text",
+          "display_format": "unison",
+          "category": [],
+          "value": [
+            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
+          ],
+          "source": {
+            "api": "",
+            "source": "",
+            "citation": ""
+          },
+          "style": "text",
+          "version_label": "EOW",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "category": [],
+          "metadata": {},
+          "type": "text",
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "version_label": "Lay/Deacon",
+          "style": "prayer",
+          "value": [
+            "Almighty God have mercy on us, forgive us all our sins through our Lord Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
+          ],
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "category": [],
+          "style": "prayer",
+          "metadata": {},
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "type": "text",
+          "version_label": "Priest",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "category": [],
+          "type": "text",
+          "style": "prayer",
+          "version_label": "EOW",
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "metadata": {},
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "metadata": {
+        "selected": 0,
+        "editor_selected": 0
+      },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "key": "omitForeOffice",
+              "value": "no",
+              "is": true
+            }
+          }
+        ]
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "text",
+      "value": [
+        "Invitatory and Psalter"
+      ],
+      "category": [],
+      "type": "heading",
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "metadata": {
+        "level": 2
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "metadata": {},
+      "type": "rubric",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "value": [
+        "All stand"
+      ],
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "label": "Officiant",
+          "response": "",
+          "text": "Lord, open our lips."
+        },
+        {
+          "label": "People",
+          "text": "And our mouth shall proclaim your praise."
+        }
+      ],
+      "metadata": {},
+      "style": "preces",
+      "type": "responsive",
+      "source": {
+        "citation": "p. 80",
+        "api": "",
+        "source": "bcp1979"
+      },
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "category": [
+        null
+      ],
+      "citation": null,
+      "label": null,
+      "type": "refrain",
+      "style": "gloria",
+      "version_label": "Rite II",
+      "language": "en",
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ]
+    },
+    {
+      "hidden": false,
+      "style": "text",
+      "type": "text",
+      "value": [
+        "Alleluia."
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        null,
+        {
+          "hidden": false,
+          "category": [
+            "Invitatory"
+          ],
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "metadata": {
+            "number": null,
+            "insert_seasonal_antiphon": false,
+            "omit_antiphon": false,
+            "omit_gloria": false,
+            "latinname": null,
+            "localname": "Venite",
+            "gloria": {
+              "version": "bcp1979",
+              "label": null,
+              "slug": "gloria-patri",
+              "citation": null,
+              "language": "en",
+              "hidden": false,
+              "type": "refrain",
+              "version_label": "Rite II",
+              "category": [
+                null
+              ],
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public",
+                "status": "published",
+                "organization": "venite",
+                "collaborators": []
+              },
+              "style": "gloria",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ]
+            },
+            "antiphon": {
+              "language": "en",
+              "value": [
+                "Worship the Lord in the beauty of holiness: Come let us adore him. "
+              ],
+              "hidden": false,
+              "lastRevision": 19,
+              "source": {
+                "api": "",
+                "citation": "",
+                "source": ""
+              },
+              "sharing": {
+                "collaborators": [],
+                "organization": "venite",
+                "privacy": "public",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published"
+              },
+              "type": "refrain",
+              "category": [
+                "Seasonal Antiphon",
+                "OrdinaryTime"
+              ],
+              "metadata": {
+                "omit_response": false
+              },
+              "label": "",
+              "version": "bcp1979",
+              "slug": "",
+              "style": "antiphon"
+            }
+          },
+          "citation": "Psalm 95:1-7",
+          "style": "invitatory",
+          "type": "psalm",
+          "language": "en",
+          "source": {
+            "citation": "p. 82",
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api"
+          },
+          "version": "bcp1979",
+          "version_label": "Venite (BCP)",
+          "label": "Venite",
+          "slug": "venite",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Come, let us sing to the Lord; *",
+                  "halfverse": "let us shout for joy to the Rock of our salvation.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "type": "psalm-verse",
+                  "verse": "Let us come before his presence with thanksgiving *"
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is a great God, *",
+                  "halfverse": "and a great King above all gods."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also."
+                },
+                {
+                  "halfverse": "and his hands have molded the dry land.",
+                  "verse": "The sea is his, for he made it, *",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the Lord our Maker."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "Oh, that today you would hearken to his voice!",
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *"
+                }
+              ]
+            }
+          ],
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "version_label": "Jubilate (BCP)",
+          "style": "invitatory",
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 82",
+            "source": "bcp1979"
+          },
+          "label": "Jubilate",
+          "type": "psalm",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Be joyful in the Lord, all you lands; *",
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture.",
+                  "verse": "Know this: The Lord himself is God; *"
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                  "type": "psalm-verse",
+                  "halfverse": "give thanks to him and call upon his Name."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "halfverse": "and his faithfulness endures from age to age.",
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": []
+            }
+          ],
+          "category": [
+            "Invitatory"
+          ],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "status": "published",
+            "privacy": "public"
+          },
+          "citation": "Psalm 100",
+          "version": "bcp1979",
+          "slug": "jubilate",
+          "language": "en",
+          "metadata": {
+            "localname": "Jubilate",
+            "omit_antiphon": false,
+            "number": null,
+            "omit_gloria": false,
+            "latinname": null,
+            "insert_seasonal_antiphon": false,
+            "gloria": {
+              "hidden": false,
+              "label": null,
+              "category": [
+                null
+              ],
+              "language": "en",
+              "sharing": {
+                "privacy": "public",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published",
+                "collaborators": []
+              },
+              "type": "refrain",
+              "version": "bcp1979",
+              "slug": "gloria-patri",
+              "style": "gloria",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "version_label": "Rite II",
+              "citation": null
+            },
+            "antiphon": {
+              "language": "en",
+              "value": [
+                "Worship the Lord in the beauty of holiness: Come let us adore him. "
+              ],
+              "hidden": false,
+              "lastRevision": 19,
+              "source": {
+                "api": "",
+                "citation": "",
+                "source": ""
+              },
+              "sharing": {
+                "collaborators": [],
+                "organization": "venite",
+                "privacy": "public",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published"
+              },
+              "type": "refrain",
+              "category": [
+                "Seasonal Antiphon",
+                "OrdinaryTime"
+              ],
+              "metadata": {
+                "omit_response": false
+              },
+              "label": "",
+              "version": "bcp1979",
+              "slug": "",
+              "style": "antiphon"
+            }
+          },
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Come, let us sing to the LORD; *",
+                  "number": "1",
+                  "type": "psalm-verse",
+                  "halfverse": "let us shout for joy to the Rock of our salvation."
+                },
+                {
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "halfverse": "and raise a loud shout to him with psalms.",
+                  "number": "2",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and a great King above all gods.",
+                  "verse": "For the LORD is a great God, *",
+                  "type": "psalm-verse",
+                  "number": "3"
+                },
+                {
+                  "halfverse": "and the heights of the hills are his also.",
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "number": "4",
+                  "type": "psalm-verse"
+                },
+                {
+                  "number": "5",
+                  "halfverse": "and his hands have molded the dry land.",
+                  "type": "psalm-verse",
+                  "verse": "The sea is his, for he made it, *"
+                },
+                {
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the LORD our Maker.",
+                  "type": "psalm-verse",
+                  "number": "6"
+                },
+                {
+                  "number": "7",
+                  "halfverse": "Oh, that today you would hearken to his voice!",
+                  "type": "psalm-verse",
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *"
+                },
+                {
+                  "number": "8",
+                  "verse": "Harden not your hearts,\nas your forebears did in the wilderness, *",
+                  "type": "psalm-verse",
+                  "halfverse": "at Meribah, and on that day at Massah,\n when they tempted me."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "They put me to the test, *",
+                  "halfverse": "though they had seen my works.",
+                  "number": "9"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Forty years long I detested that generation and said, *",
+                  "number": "10",
+                  "halfverse": "“This people are wayward in their hearts;\n they do not know my ways.”"
+                },
+                {
+                  "verse": "So I swore in my wrath, *",
+                  "type": "psalm-verse",
+                  "number": "11",
+                  "halfverse": "“They shall not enter into my rest.”"
+                }
+              ]
+            }
+          ],
+          "label": "Psalm 95",
+          "style": "psalm",
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "collaborators": [],
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "category": [
+            "Psalm"
+          ],
+          "type": "psalm",
+          "slug": "psalm_95",
+          "language": "en",
+          "source": {
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api",
+            "citation": "p. 724"
+          },
+          "version_label": "Ps. 95 (BCP)",
+          "metadata": {
+            "omit_gloria": true,
+            "latinname": "Venite, exultemus",
+            "omit_antiphon": false,
+            "localname": "Psalm 95",
+            "number": "95",
+            "gloria": {
+              "category": [
+                null
+              ],
+              "citation": null,
+              "label": null,
+              "hidden": false,
+              "type": "refrain",
+              "style": "gloria",
+              "version_label": "Rite II",
+              "language": "en",
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "collaborators": [],
+                "privacy": "public",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+              },
+              "version": "bcp1979",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ]
+            }
+          },
+          "version": "bcp1979",
+          "citation": null
+        }
+      ],
+      "type": "option",
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "metadata": {},
+      "version": {
+        "preference": "psalterVersion"
+      },
+      "style": "psalm",
+      "type": "psalm",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "category": [
+        null
+      ],
+      "citation": null,
+      "label": null,
+      "type": "refrain",
+      "style": "gloria",
+      "version_label": "Rite II",
+      "language": "en",
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ]
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "level": 2
+      },
+      "type": "heading",
+      "category": [],
+      "value": [
+        "The Lessons"
+      ],
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "style": "text",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "long",
+      "category": [],
+      "type": "bible-reading",
+      "language": "en-CA",
+      "metadata": {
+        "intro": {
+          "sharing": {
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "type": "text",
+          "value": [
+            "A Reading from ${longName}."
+          ],
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "language": "en",
+          "style": "text"
+        }
+      },
+      "version": "NRSV",
+      "label": "The First Lesson",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      },
+      "citation": "Ecclus. 31:12-18,25-32:2",
+      "language": "en-CA",
+      "value": [
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "12",
+          "text": " Are you seated at the table of the great?&nbsp;&nbsp;&nbsp;Do not be greedy at it,&nbsp;&nbsp;&nbsp;and do not say, &#145;How much food there is here!&#146; "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "13",
+          "text": "Remember that a greedy eye is a bad thing.&nbsp;&nbsp;&nbsp;What has been created more greedy than the eye?&nbsp;&nbsp;&nbsp;Therefore it sheds tears for any reason. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "14",
+          "text": " Do not reach out your hand for everything you see,&nbsp;&nbsp;&nbsp;and do not crowd your neighbour at the dish. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "15",
+          "text": " Judge your neighbour&#146;s feelings by your own,&nbsp;&nbsp;&nbsp;and in every matter be thoughtful. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "16",
+          "text": " Eat what is set before you like a well-bred person,&nbsp;&nbsp;&nbsp;and do not chew greedily, or you will give offence. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "17",
+          "text": " Be the first to stop, as befits good manners,&nbsp;&nbsp;&nbsp;and do not be insatiable, or you will give offence. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "18",
+          "text": " If you are seated among many others,   do not help yourself before they do. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "25",
+          "text": " Do not try to prove your strength by wine-drinking,&nbsp;&nbsp;&nbsp;for wine has destroyed many. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "26",
+          "text": " As the furnace tests the work of the smith,&nbsp;&nbsp;&nbsp;so wine tests hearts when the insolent quarrel. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "27",
+          "text": " Wine is very life to human beings&nbsp;&nbsp;&nbsp;if taken in moderation.What is life to one who is without wine?&nbsp;&nbsp;&nbsp;It has been created to make people happy. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "28",
+          "text": " Wine drunk at the proper time and in moderation&nbsp;&nbsp;&nbsp;is rejoicing of heart and gladness of soul. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "29",
+          "text": " Wine drunk to excess leads to bitterness of spirit,&nbsp;&nbsp;&nbsp;to quarrels and stumbling. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "30",
+          "text": " Drunkenness increases the anger of a fool to his own hurt,&nbsp;&nbsp;&nbsp;reducing his strength and adding wounds. "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "31",
+          "verse": "31",
+          "text": " Do not reprove your neighbour at a banquet of wine,   and do not despise him in his merrymaking;speak no word of reproach to him,   and do not distress him by making demands of him. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "32",
+          "verse": "1",
+          "text": "If they make you master of the feast, do not exalt yourself;&nbsp;&nbsp;&nbsp;be among them as one of their number.Take care of them first and then sit down; "
+        },
+        {
+          "book": "Ecclus.",
+          "chapter": "32",
+          "verse": "2",
+          "text": "   when you have fulfilled all your duties, take your place,so that you may be merry along with them   and receive a garland for your excellent leadership. "
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0,
+        "editor_selected": 0
+      },
+      "value": [
+        {
+          "version": "bcp1979",
+          "language": "en",
+          "value": [
+            "Here ends the Reading."
+          ],
+          "metadata": {},
+          "slug": "word-of-the-lord",
+          "lastRevision": 14,
+          "type": "text",
+          "category": [],
+          "sharing": {
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "label": "",
+          "hidden": false,
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "style": "text"
+        },
+        {
+          "label": "",
+          "version": "bcp1979",
+          "category": [],
+          "language": "en",
+          "value": [
+            {
+              "text": "The Word of the Lord.",
+              "response": "Thanks be to God."
+            }
+          ],
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "metadata": {},
+          "type": "responsive",
+          "lastRevision": 12,
+          "style": "responsive",
+          "slug": "word-of-the-lord",
+          "hidden": false,
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "version_label": "The Word of the Lord"
+        }
+      ]
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "bible-reading",
+      "style": "long",
+      "version": "NRSV",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "metadata": {
+        "intro": {
+          "style": "text",
+          "value": [
+            "A Reading from ${longName}."
+          ],
+          "category": [
+            "Bible Reading Introduction"
+          ],
+          "language": "en",
+          "type": "text",
+          "sharing": {
+            "status": "published",
+            "privacy": "public",
+            "organization": "venite"
+          }
+        }
+      },
+      "category": [],
+      "label": "The Second Lesson",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      },
+      "citation": "Luke 11:53-12:12",
+      "language": "en-CA",
+      "value": [
+        {
+          "book": "Luke",
+          "chapter": "11",
+          "verse": "53",
+          "text": "When he went outside, the scribes and the Pharisees began to be very hostile toward him and to cross-examine him about many things, "
+        },
+        {
+          "book": "Luke",
+          "chapter": "11",
+          "verse": "54",
+          "text": "lying in wait for him, to catch him in something he might say. "
+        },
+        {
+          "hidden": false,
+          "type": "heading",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "1",
+          "text": "Meanwhile, when the crowd gathered by the thousands, so that they trampled on one another, he began to speak first to his disciples, &#147;Beware of the yeast of the Pharisees, that is, their hypocrisy. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "2",
+          "text": "Nothing is covered up that will not be uncovered, and nothing secret that will not become known. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "3",
+          "text": "Therefore whatever you have said in the dark will be heard in the light, and what you have whispered behind closed doors will be proclaimed from the housetops. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "4",
+          "text": "&#147;I tell you, my friends, do not fear those who kill the body, and after that can do nothing more. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "5",
+          "text": "But I will warn you whom to fear: fear him who, after he has killed, has authority to cast into hell. Yes, I tell you, fear him! "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "6",
+          "text": "Are not five sparrows sold for two pennies? Yet not one of them is forgotten in God&#146;s sight. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "7",
+          "text": "But even the hairs of your head are all counted. Do not be afraid; you are of more value than many sparrows. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "8",
+          "text": "&#147;And I tell you, everyone who acknowledges me before others, the Son of Man also will acknowledge before the angels of God; "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "9",
+          "text": "but whoever denies me before others will be denied before the angels of God. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "10",
+          "text": "And everyone who speaks a word against the Son of Man will be forgiven; but whoever blasphemes against the Holy Spirit will not be forgiven. "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "11",
+          "text": "When they bring you before the synagogues, the rulers, and the authorities, do not worry about how you are to defend yourselves or what you are to say; "
+        },
+        {
+          "book": "Luke",
+          "chapter": "12",
+          "verse": "12",
+          "text": "for the Holy Spirit will teach you at that very hour what you ought to say.&#148; "
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "metadata": {
+        "selected": 0,
+        "editor_selected": 0
+      },
+      "value": [
+        {
+          "version": "bcp1979",
+          "language": "en",
+          "value": [
+            "Here ends the Reading."
+          ],
+          "metadata": {},
+          "slug": "word-of-the-lord",
+          "lastRevision": 14,
+          "type": "text",
+          "category": [],
+          "sharing": {
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "label": "",
+          "hidden": false,
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "style": "text"
+        },
+        {
+          "label": "",
+          "version": "bcp1979",
+          "category": [],
+          "language": "en",
+          "value": [
+            {
+              "text": "The Word of the Lord.",
+              "response": "Thanks be to God."
+            }
+          ],
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "metadata": {},
+          "type": "responsive",
+          "lastRevision": 12,
+          "style": "responsive",
+          "slug": "word-of-the-lord",
+          "hidden": false,
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "version_label": "The Word of the Lord"
+        }
+      ]
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+      "hidden": false,
+      "style": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": [],
+      "label": "The Apostles’ Creed",
+      "source": {
+        "api": "",
+        "source": "bcp1979",
+        "citation": "p. 96"
+      },
+      "value": [
+        "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
+      ],
+      "type": "text",
+      "display_format": "unison",
+      "response": "Amen.",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "text",
+      "value": [
+        "The Prayers"
+      ],
+      "type": "heading",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "metadata": {
+        "level": 2
+      },
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "text": "The Lord be with you.",
+          "response": "",
+          "label": "Officiant"
+        },
+        {
+          "label": "People",
+          "text": "And also with you."
+        },
+        {
+          "text": "Let us pray.",
+          "label": "Officiant"
+        }
+      ],
+      "type": "responsive",
+      "style": "preces",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "hidden": false,
+          "metadata": {},
+          "value": [
+            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+          ],
+          "label": "The Lord’s Prayer",
+          "style": "prayer",
+          "source": {
+            "api": "",
+            "citation": "",
+            "source": ""
+          },
+          "version_label": "Traditional",
+          "category": [],
+          "display_format": "unison",
+          "type": "text",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "metadata": {
+            "omit_response": false
+          },
+          "category": [],
+          "style": "prayer",
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "display_format": "unison",
+          "label": "The Lord’s Prayer",
+          "type": "text",
+          "version_label": "Contemporary",
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "value": [
+        {
+          "hidden": false,
+          "metadata": {},
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "style": "preces",
+          "category": [],
+          "type": "responsive",
+          "value": [
+            {
+              "text": "Show us your mercy, O Lord;",
+              "response": "",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "And grant us your salvation."
+            },
+            {
+              "label": "V.",
+              "text": "Clothe your ministers with righteousness;"
+            },
+            {
+              "label": "R.",
+              "text": "Let your people sing with joy."
+            },
+            {
+              "text": "Give peace, O Lord, in all the world;",
+              "label": "V."
+            },
+            {
+              "text": "For only in you can we live in safety.",
+              "label": "R."
+            },
+            {
+              "text": "Lord, keep this nation under your care; ",
+              "label": "V."
+            },
+            {
+              "text": "And guide us in the way of justice and truth.",
+              "label": "R."
+            },
+            {
+              "text": "Let your way be known upon earth;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Your saving health among all nations."
+            },
+            {
+              "label": "V.",
+              "text": "Let not the needy, O Lord, be forgotten;"
+            },
+            {
+              "label": "R.",
+              "text": "Nor the hope of the poor be taken away."
+            },
+            {
+              "text": "Create in us clean hearts, O God;",
+              "label": "V."
+            },
+            {
+              "text": "And sustain us with your Holy Spirit.",
+              "label": "R."
+            }
+          ],
+          "label": "Suffrages A",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "text": "Save your people, Lord, and bless your inheritance;",
+              "response": "",
+              "label": "V."
+            },
+            {
+              "text": "Govern and uphold them, now and always.",
+              "label": "R."
+            },
+            {
+              "text": "Day by day we bless you;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "We praise your name for ever."
+            },
+            {
+              "text": "Lord, keep us from all sin today;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Have mercy on us, Lord, have mercy."
+            },
+            {
+              "text": "Lord, show us your love and mercy;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "For we put our trust in you."
+            },
+            {
+              "label": "V.",
+              "text": "In you, Lord, is our hope;"
+            },
+            {
+              "text": "And we shall never hope in vain.",
+              "label": "R."
+            }
+          ],
+          "metadata": {},
+          "label": "Suffrages B",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "category": [],
+          "style": "preces",
+          "type": "responsive",
+          "day": {
+            "evening": false,
+            "date": "2020-10-29",
+            "kalendar": "bcp1979",
+            "slug": "thursday-21st-pentecost",
+            "propers": "thursday-proper-25",
+            "week": {
+              "omit_the": false,
+              "week": 35,
+              "season": "OrdinaryTime",
+              "kalendar": "bcp1979",
+              "slug": "21st-pentecost",
+              "name": "Twenty-First Sunday after Pentecost",
+              "cycle": "Easter",
+              "color": "Green",
+              "proper": 25,
+              "propers": "proper-25"
+            },
+            "years": {
+              "bcp1979_daily_office": 2,
+              "bcp1979_daily_psalms": 2,
+              "rclsunday": "A"
+            },
+            "holy_days": [
+              {
+                "mmdd": "10/29",
+                "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+                "kalendar": "bcp1979",
+                "type": {
+                  "rank": 2,
+                  "name": "Black Letter"
+                }
+              }
+            ],
+            "season": "OrdinaryTime",
+            "color": "Green"
+          }
+        }
+      ],
+      "type": "option",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "bcp1979",
+      "language": "en",
+      "value": [
+        "Almighty and everlasting God, increase in us the gifts of faith, hope, and charity; and, that we may obtain what you promise, make us love what you command; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+      ],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "collaborators": [],
+        "privacy": "public",
+        "status": "published"
+      },
+      "category": [
+        "Collect",
+        "Collect of the Day"
+      ],
+      "slug": "proper-25",
+      "type": "text",
+      "label": "The Collect of the Day"
+    },
+    {
+      "hidden": false,
+      "style": "prayer",
+      "value": [
+        "Heavenly Father, in you we live and move and have our being: We humbly pray you so to guide and govern us by your Holy Spirit, that in all the cares and occupations of our life we may not forget you, but may remember that we are ever walking in your sight; through Jesus Christ our Lord. "
+      ],
+      "type": "text",
+      "category": [],
+      "label": "A Collect for Guidance",
+      "lastRevision": 24,
+      "language": "en",
+      "sharing": {
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "status": "published",
+        "collaborators": []
+      },
+      "slug": "mp_daily_collect",
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "version": "bcp1979",
+      "metadata": {}
+    },
+    null,
+    null,
+    null,
+    {
+      "hidden": false,
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "lastRevision": 30,
+      "style": "prayer",
+      "type": "text",
+      "label": "A Prayer for Mission",
+      "category": [],
+      "language": "en",
+      "value": [
+        "Lord Jesus Christ, you stretched out your arms of love on the hard wood of the cross that everyone might come within the reach of your saving embrace: So clothe us in your Spirit that we, reaching forth our hands in love, may bring those who do not know you to the knowledge and love of you; for the honor of your Name."
+      ],
+      "version": "bcp1979",
+      "slug": "mp_prayers_for_mission",
+      "sharing": {
+        "status": "published",
+        "collaborators": [],
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public"
+      }
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here may be sung a hymn or anthem.",
+        "Authorized intercessions and thanksgivings may follow."
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Before the close of the Office one or both of the following may be used"
+      ],
+      "type": "rubric",
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "metadata": {},
+      "style": "prayer",
+      "value": [
+        "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
+        "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages. "
+      ],
+      "category": [],
+      "label": "The General Thanksgiving",
+      "source": {
+        "source": "bcp1979",
+        "api": "",
+        "citation": "p. 101"
+      },
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "label": "A Prayer of St. Chrysostom",
+      "style": "prayer",
+      "type": "text",
+      "value": [
+        "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
+      ],
+      "source": {
+        "api": "",
+        "citation": "p. 102",
+        "source": "bcp1979"
+      },
+      "metadata": {},
+      "category": [],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Then may be said"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "style": "responsive",
+      "type": "responsive",
+      "value": [
+        {
+          "response": "Thanks be to God.",
+          "text": "Let us bless the Lord.",
+          "label": ""
+        }
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    null,
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "The Officiant may then conclude with one of the following"
+      ],
+      "day": {
+        "evening": false,
+        "date": "2020-10-29",
+        "kalendar": "bcp1979",
+        "slug": "thursday-21st-pentecost",
+        "propers": "thursday-proper-25",
+        "week": {
+          "omit_the": false,
+          "week": 35,
+          "season": "OrdinaryTime",
+          "kalendar": "bcp1979",
+          "slug": "21st-pentecost",
+          "name": "Twenty-First Sunday after Pentecost",
+          "cycle": "Easter",
+          "color": "Green",
+          "proper": 25,
+          "propers": "proper-25"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "A"
+        },
+        "holy_days": [
+          {
+            "mmdd": "10/29",
+            "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+            "kalendar": "bcp1979",
+            "type": {
+              "rank": 2,
+              "name": "Black Letter"
+            }
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green"
+      }
+    },
+    {
+      "hidden": false,
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "type": "bible-reading",
+      "style": "short",
+      "category": [
+        "Closing Sentence"
+      ],
+      "slug": "closing_sentence",
+      "value": [
+        {
+          "book": "Romans",
+          "verse": "13",
+          "text": "May the God of hope fill us with all joy and peace in believing through the power of the Holy Spirit.",
+          "chapter": "15"
+        }
+      ],
+      "language": "en",
+      "lastRevision": 20,
+      "citation": "Romans 15:13",
+      "metadata": {},
+      "version": "bcp1979",
+      "sharing": {
+        "status": "published",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "privacy": "public"
+      }
+    },
+    null,
+    null,
+    null
+  ],
+  "sharing": {
+    "collaborators": [],
+    "status": "published",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "privacy": "public",
+    "organization": "venite"
+  },
+  "language": "en",
+  "metadata": {
+    "supplement": false,
+    "preferences": {
+      "sermon": {
+        "category": "Advanced",
+        "label": "Sermon",
+        "key": "sermon",
+        "options": [
+          {
+            "label": "—",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "value": "none"
+          },
+          {
+            "value": "after_office",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "After the Office",
+            "default": false
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "After the Readings",
+            "value": "after_readings",
+            "default": false
+          },
+          {
+            "label": "After the Collects",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "after_collects"
+          }
+        ]
+      },
+      "readingC": {
+        "options": [
+          {
+            "default": true,
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "—",
+            "value": "none"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "label": "OT/First Reading",
+            "value": "first_reading"
+          },
+          {
+            "default": false,
+            "label": "Epistle/Second Reading",
+            "value": "second_reading",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "default": false,
+            "value": "gospel",
+            "label": "Gospel",
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "key": "readingC",
+        "label": "Third Reading",
+        "category": "Readings"
+      },
+      "omitForeOffice": {
+        "category": "Advanced",
+        "key": "omitForeOffice",
+        "options": [
+          {
+            "default": false,
+            "value": "no",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "No"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "value": "yes",
+            "label": "Yes"
+          }
+        ],
+        "label": "Omit Fore-Office"
+      },
+      "canticleTable": {
+        "key": "canticleTable",
+        "category": "Cycles",
+        "label": "Canticle Table",
+        "options": [
+          {
+            "label": "1979 Table of Suggested Canticles",
+            "value": "bcp1979",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "tdb",
+            "default": false,
+            "label": "Te Deum/Benedictus"
+          },
+          {
+            "default": false,
+            "label": "Enriching Our Worship",
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "eow"
+          },
+          {
+            "value": "ojn",
+            "label": "Order of St. Julian of Norwich",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ]
+      },
+      "psalmCycle": {
+        "options": [
+          {
+            "label": "Daily Office Lectionary",
+            "default": false,
+            "value": "bcp1979_daily_office",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "label": "30-day Cycle",
+            "default": false,
+            "value": "bcp1979_30day_psalter",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "default": false,
+            "value": "rclsundayTrack1",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "RCL (Track 1)"
+          },
+          {
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "category": "Cycles",
+        "label": "Psalm Cycle",
+        "key": "psalmCycle"
+      },
+      "psalterVersion": {
+        "options": [
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "value": "bcp1979",
+            "label": "1979 Book of Common Prayer"
+          },
+          {
+            "default": false,
+            "value": "ip",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "Inclusive Psalter"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "label": "Coverdale (1662 BCP)",
+            "value": "coverdale"
+          }
+        ],
+        "label": "Psalter Version",
+        "category": "Translations",
+        "key": "psalterVersion",
+        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology."
+      },
+      "readingA": {
+        "label": "First Reading",
+        "category": "Readings",
+        "options": [
+          {
+            "value": "first_reading",
+            "label": "OT/First Reading",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": true
+          },
+          {
+            "value": "second_reading",
+            "default": false,
+            "label": "Epistle/Second Reading",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "default": false,
+            "label": "Gospel",
+            "value": "gospel",
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "key": "readingA"
+      },
+      "bibleVersion": {
+        "key": "bibleVersion",
+        "category": "Translations",
+        "label": "Bible Version",
+        "options": [
+          {
+            "value": "NRSV",
+            "default": false,
+            "label": "New Revised Standard Version (NRSV)",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "value": "CEB",
+            "default": false,
+            "label": "Common English Bible (CEB)",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "default": false,
+            "label": "English Standard Version (ESV)",
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "ESV"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "value": "KJV",
+            "label": "King James Version (KJV)"
+          }
+        ]
+      },
+      "readingB": {
+        "key": "readingB",
+        "label": "Second Reading",
+        "options": [
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "none",
+            "label": "—",
+            "default": false
+          },
+          {
+            "default": false,
+            "label": "OT/First Reading",
+            "value": "first_reading",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "label": "Epistle/Second Reading",
+            "value": "second_reading"
+          },
+          {
+            "default": true,
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "gospel",
+            "label": "Gospel"
+          }
+        ],
+        "category": "Readings"
+      },
+      "andrewes": {
+        "key": "andrewes",
+        "category": "Supplemental Devotions",
+        "options": [
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false,
+            "label": "—",
+            "value": "noo"
+          },
+          {
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "After the Office",
+            "value": "after",
+            "default": false
+          },
+          {
+            "label": "After the Office",
+            "value": "after",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "label": "Lancelot Andrewes’s Private Prayers"
+      },
+      "insertGloria": {
+        "category": "Advanced",
+        "key": "insertGloria",
+        "label": "Insert Gloria Patri after each Psalm",
+        "options": [
+          {
+            "value": "false",
+            "label": "No",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false
+          },
+          {
+            "label": "Yes",
+            "default": false,
+            "value": "true",
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ]
+      },
+      "lectionary": {
+        "category": "Cycles",
+        "options": [
+          {
+            "label": "Daily Office Lectionary",
+            "value": "bcp1979_daily_office",
+            "metadata": {
+              "alternateYear": false
+            },
+            "default": false
+          },
+          {
+            "label": "RCL Track 1",
+            "value": "rclsundayTrack1",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "value": "rclsunday",
+            "label": "RCL Track 2",
+            "default": false,
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "label": "Lectionary",
+        "key": "lectionary"
+      },
+      "angelus": {
+        "key": "angelus",
+        "label": "Angelus",
+        "options": [
+          {
+            "label": "—",
+            "default": false,
+            "value": "no",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "label": "Before the Office",
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "before",
+            "default": false
+          },
+          {
+            "label": "After the Office",
+            "default": false,
+            "value": "after",
+            "metadata": {
+              "alternateYear": false
+            }
+          }
+        ],
+        "category": "Supplemental Devotions"
+      }
+    },
+    "liturgyversions": [
+      "bcp1979"
+    ],
+    "evening": false,
+    "special_preferences": {
+      "insertGloria": "",
+      "palms": {
+        "options": [
+          {
+            "default": false,
+            "label": "—",
+            "metadata": {
+              "alternateYear": false
+            },
+            "value": "no"
+          },
+          {
+            "label": "Before the Office",
+            "default": false,
+            "value": "before",
+            "metadata": {
+              "alternateYear": false
+            }
+          },
+          {
+            "value": "before",
+            "metadata": {
+              "alternateYear": false
+            },
+            "label": "Before the Office",
+            "default": false
+          }
+        ],
+        "key": "palms",
+        "label": "Palms"
+      }
+    }
+  },
+  "slug": "morning-prayer",
+  "date_modified": {
+    "seconds": 1603747874,
+    "nanoseconds": 225000000
+  },
+  "type": "liturgy",
+  "category": [],
+  "lastRevision": 545,
+  "day": {
+    "evening": false,
+    "date": "2020-10-29",
+    "kalendar": "bcp1979",
+    "slug": "thursday-21st-pentecost",
+    "propers": "thursday-proper-25",
+    "week": {
+      "omit_the": false,
+      "week": 35,
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "slug": "21st-pentecost",
+      "name": "Twenty-First Sunday after Pentecost",
+      "cycle": "Easter",
+      "color": "Green",
+      "proper": 25,
+      "propers": "proper-25"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "A"
+    },
+    "holy_days": [
+      {
+        "mmdd": "10/29",
+        "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885",
+        "kalendar": "bcp1979",
+        "type": {
+          "rank": 2,
+          "name": "Black Letter"
+        }
+      }
+    ],
+    "season": "OrdinaryTime",
+    "color": "Green"
+  }
+}
