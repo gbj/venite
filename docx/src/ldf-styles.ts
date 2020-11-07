@@ -1,7 +1,8 @@
 export enum LDFStyles {
+  Antiphon = 'Antiphon',
   Citation = 'Citation',
+  Image = 'Image',
   Normal = 'Normal',
-  Refrain = 'Refrain',
   Response = 'Response',
   Rubric = 'Rubric',
   VerseNumber = 'VerseNumber',

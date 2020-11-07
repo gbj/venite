@@ -52,7 +52,7 @@ const STYLES = {
       }
     },
     {
-      id: 'Antiphon',
+      id: LDFStyles.Antiphon,
       name: 'Antiphon',
       run: {
         font: 'Garamond',
@@ -73,6 +73,16 @@ const STYLES = {
         size: 56,
         color: '000000',
       },
+      paragraph: {
+          spacing: {
+              after: 240
+          },
+          alignment: AlignmentType.CENTER
+      }
+    },
+    {
+      id: LDFStyles.Image,
+      name: 'Title',
       paragraph: {
           spacing: {
               after: 240
@@ -139,8 +149,8 @@ const STYLES = {
       }
     },
     {
-      id: LDFStyles.Refrain,
-      name: 'Refrain',
+      id: LDFStyles.Antiphon,
+      name: 'Antiphon',
       basedOn: 'Normal',
       next: 'Normal',
       run: {

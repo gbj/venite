@@ -10,13 +10,14 @@ import { notEmpty } from "./not-empty";
 import { LDFStyles } from "./ldf-styles";
 import { processText } from "./process-text";
 import { LocaleStrings } from "./locale-strings";
+import { headingToDocx } from "./heading-to-docx";
 
-export function bibleReadingToDocx(doc : BibleReading, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : DocxChild[] {
+export async function bibleReadingToDocx(doc : BibleReading, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : Promise<DocxChild[]> {
 
   if(doc.style === 'long') {
     const p = paragraphs(doc).map(p => paragraph(p, displaySettings, localeStrings)).flat(),
       heading = headingLine(doc),
-      intro = introLine(doc, displaySettings, localeStrings);
+      intro = await introLine(doc, displaySettings, localeStrings);
 
     return [
       heading,
@@ -40,7 +41,7 @@ export function bibleReadingToDocx(doc : BibleReading, displaySettings : Display
     return [
       ... p,
       citationLine(doc.citation),
-      includeResponse && !shortResponse ? new Paragraph({ children: [responseNode] }) : null
+      includeResponse && !shortResponse ? new Paragraph({ children: [new TextRun(' '), responseNode] }) : null
     ].filter(notEmpty);
   }
 }
@@ -76,13 +77,13 @@ function citationLine(citation : string) : Paragraph {
   })
 }
 
-function introLine(inDoc : BibleReading, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : DocxChild[] {
+async function introLine(inDoc : BibleReading, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : Promise<DocxChild[]> {
   const doc = new BibleReading(inDoc);
 
   if(doc?.metadata?.intro) {
     doc.compileIntro();
     if(doc.metadata.compiled_intro) {
-      return docxChildrenFromLDF(doc.metadata?.compiled_intro, displaySettings, localeStrings);
+      return await docxChildrenFromLDF(doc.metadata?.compiled_intro, displaySettings, localeStrings);
     } else {
       return [];
     }
@@ -131,7 +132,7 @@ function paragraph(p : (BibleReadingVerse | Heading)[], displaySettings : Displa
       if(verses.length > 0) {
         saveVerses();
       }
-      children = children.concat(docxChildrenFromLDF(v as Heading, displaySettings, localeStrings));
+      children = children.concat(headingToDocx(v as Heading, displaySettings, localeStrings));
     } else {
       verses.push(v as BibleReadingVerse);
     }

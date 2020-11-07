@@ -10,15 +10,16 @@ try {
   displaySettings.psalmVerses = true;
 
   const data = fs.readFileSync('./doc1.json', 'utf8'),
-    inDoc : LiturgicalDocument = JSON.parse(data),
-    outDoc = ldfToDocx(
-      inDoc,
-      displaySettings
+    inDoc : LiturgicalDocument = JSON.parse(data);
+
+  ldfToDocx(
+    inDoc,
+    displaySettings
+  ).then(outDoc => {
+    Packer.toBuffer(outDoc).then(buffer => 
+      fs.writeFileSync('./doc1.docx', buffer)
     );
-  
-  Packer.toBuffer(outDoc).then(buffer => 
-    fs.writeFileSync('./doc1.docx', buffer)
-  );
+  });
 
 } catch (err) {
   console.error(err)

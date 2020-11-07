@@ -1,3 +1,6 @@
+/* TODO
+ * Source/citation */
+
 import { dateFromYMDString, Heading, LiturgicalDay } from "@venite/ldf/dist/cjs";
 import { Paragraph, TextRun } from "docx";
 import { DisplaySettings } from "./display-settings";

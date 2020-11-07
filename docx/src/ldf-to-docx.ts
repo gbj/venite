@@ -1,4 +1,4 @@
-import { LiturgicalDocument, Liturgy, Option, BibleReading, Heading, Refrain, Rubric, Text } from "@venite/ldf/dist/cjs";
+import { LiturgicalDocument, Liturgy, Option, BibleReading, Heading, Image, Refrain, Rubric, Text } from "@venite/ldf/dist/cjs";
 import { DisplaySettings } from "./display-settings";
 import { Document, HyperlinkRef, Paragraph, Table, TableOfContents } from "docx";
 import { bibleReadingToDocx } from "./bible-reading-to-docx";
@@ -7,12 +7,13 @@ import { stylesFromLDF } from "./styles-from-ldf";
 import { LocaleStrings, LOCALE_STRINGS } from "./locale-strings";
 import { genericTextToDocx } from "./generic-text-to-docx";
 import { LDFStyles } from "./ldf-styles";
+import { imageToDocx } from "./image-to-docx";
 
-export function ldfToDocx(inDoc : LiturgicalDocument, displaySettings : DisplaySettings) : Document {
+export async function ldfToDocx(inDoc : LiturgicalDocument, displaySettings : DisplaySettings) : Promise<Document> {
   const styles = stylesFromLDF(inDoc),
     outDoc = new Document({ styles }),
     localeStrings = LOCALE_STRINGS['en'],
-    children = docxChildrenFromLDF(inDoc, displaySettings, localeStrings);
+    children = await docxChildrenFromLDF(inDoc, displaySettings, localeStrings, outDoc);
     
   outDoc.addSection({ children });
 
@@ -21,12 +22,13 @@ export function ldfToDocx(inDoc : LiturgicalDocument, displaySettings : DisplayS
 
 export type DocxChild = (Paragraph | Table | TableOfContents | HyperlinkRef);
 
-export function docxChildrenFromLDF(inDoc : LiturgicalDocument, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : DocxChild[] {
+export async function docxChildrenFromLDF(inDoc : LiturgicalDocument, displaySettings : DisplaySettings, localeStrings : LocaleStrings, docxDoc? : Document) : Promise<DocxChild[]> {
   switch(inDoc?.type) {
     case "liturgy":
-      return ((inDoc as Liturgy).value || [])
-        .map((subDoc : LiturgicalDocument) => docxChildrenFromLDF(subDoc, displaySettings, localeStrings))
-        .flat();
+      return (await Promise.all(
+        ((inDoc as Liturgy).value || [])
+        .map(async (subDoc : LiturgicalDocument) => await docxChildrenFromLDF(subDoc, displaySettings, localeStrings, docxDoc))
+      )).flat();
     case "option":
       const selected = (inDoc as Option).value[inDoc.metadata?.selected ?? 0];
       return docxChildrenFromLDF(selected, displaySettings, localeStrings);
@@ -34,8 +36,18 @@ export function docxChildrenFromLDF(inDoc : LiturgicalDocument, displaySettings 
       return bibleReadingToDocx(inDoc as BibleReading, displaySettings, localeStrings);
     case "heading":
       return headingToDocx(inDoc as Heading, displaySettings, localeStrings);
+    case "meditation":
+      return []
+    case "image":
+      console.log('image', docxDoc);
+      return docxDoc ? await imageToDocx(docxDoc, inDoc as Image, displaySettings, localeStrings) : [];
+    case "psalm":
+    case "responsive":
+      console.warn(`${inDoc.type} not implemented yet`);
+      return [];
+    /** Text fields with various styles */
     case "refrain":
-      return genericTextToDocx(inDoc as Refrain, LDFStyles.Refrain, displaySettings, localeStrings);
+      return genericTextToDocx(inDoc as Refrain, inDoc.style == 'antiphon' ? LDFStyles.Antiphon : LDFStyles.Normal, displaySettings, localeStrings);
     case "rubric":
       return genericTextToDocx(inDoc as Rubric, LDFStyles.Rubric, displaySettings, localeStrings);
     case "text":

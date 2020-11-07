@@ -6,6 +6,12 @@
   "label": "Morning Prayer",
   "value": [
     {
+      "type": "image",
+      "value": [
+        "https://pray1962.web.app/assets/icon/pbsc.png"
+      ]
+    },
+    {
       "hidden": false,
       "value": [
         "Morning Prayer"
