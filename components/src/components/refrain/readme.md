@@ -19,6 +19,7 @@
 ### Used by
 
  - [ldf-liturgical-document](../liturgical-document)
+ - [ldf-psalm](../psalm)
 
 ### Depends on
 
@@ -32,6 +33,7 @@ graph TD;
   ldf-refrain --> ldf-editable-text
   ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-refrain
+  ldf-psalm --> ldf-refrain
   style ldf-refrain fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

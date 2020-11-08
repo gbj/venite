@@ -53,13 +53,14 @@ export class PsalmComponent {
   antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain }) : JSX.Element {
     if(typeof antiphon == 'string') {
       const refrain = new Refrain({ value: [ antiphon ], style: 'antiphon' });
-      return <ldf-liturgical-document class='antiphon' doc={ refrain } editable={this.editable}></ldf-liturgical-document>
+      return <ldf-refrain class='antiphon' doc={ refrain } editable={this.editable}></ldf-refrain>
     } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
       return <ldf-liturgical-document class='antiphon' doc={ antiphon as Refrain } editable={this.editable}></ldf-liturgical-document>
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // { '12/23': '...', '12/24': '...' }
       const date = this.obj.day ? dateFromYMDString(this.obj?.day?.date) : new Date();
+      console.log('antiphon is an object', date, antiphon[`${date.getMonth()+1}/${date.getDate()}`])
       return this.antiphonNode(antiphon[`${date.getMonth()+1}/${date.getDate()}`]);
     }
   }

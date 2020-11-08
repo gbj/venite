@@ -22,6 +22,7 @@
 
 ### Depends on
 
+- [ldf-refrain](../refrain)
 - [ldf-liturgical-document](../liturgical-document)
 - [ldf-heading](../heading)
 - [ldf-label-bar](../label-bar)
@@ -31,11 +32,15 @@
 ### Graph
 ```mermaid
 graph TD;
+  ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
+  ldf-refrain --> ldf-label-bar
+  ldf-refrain --> ldf-editable-text
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
@@ -47,7 +52,6 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
-  ldf-editable-text --> ion-input
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
@@ -66,8 +70,6 @@ graph TD;
   ldf-option --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect
-  ldf-refrain --> ldf-label-bar
-  ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar
   ldf-rubric --> ldf-editable-text
   ldf-text --> ldf-label-bar

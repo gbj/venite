@@ -123,6 +123,7 @@ graph TD;
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
   ldf-bible-reading --> ldf-string
+  ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar

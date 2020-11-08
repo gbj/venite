@@ -78,6 +78,7 @@ graph TD;
   ldf-responsive-prayer --> ldf-string
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
+  ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
