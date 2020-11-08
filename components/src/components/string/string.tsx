@@ -92,7 +92,6 @@ export class StringComponent {
           return node.replace(/__BRACKET_ASTERISK/g, '[*');
         }
       });
-    console.log('nodes = ', nodes);
     return nodes;
   }
 
@@ -112,8 +111,6 @@ export class StringComponent {
         '\t': () => <span class='tab'>&nbsp;</span>,
         '  ': () => <span class='half-tab'>&nbsp;</span>
       };
-
-      console.log('processTetragrammaton', s);
 
       const split = s.split(/((  )|\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
@@ -142,8 +139,6 @@ export class StringComponent {
             buffer = firstWord.length == 1,
             split = firstChunk.split(re).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
-
-      console.log(`match2 = "${match2}"`)
 
       final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
