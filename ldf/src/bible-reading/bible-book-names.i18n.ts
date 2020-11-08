@@ -332,7 +332,7 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     },
     'en-CA': {
       short: 'Matthew',
-      long: 'The Book of Acts of the Apostles',
+      long: 'The Book of the Acts of the Apostles',
     },
   },
   Romans: {
