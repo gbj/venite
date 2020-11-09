@@ -169,8 +169,8 @@ export class HeadingComponent {
             'text': isText && (this?.obj?.value || []).filter(n => Boolean(n)).length > 0
           }}
         >
-          {/* `Heading.label` => main header node */}
-          {isText && this.obj?.value?.length > 0 && this.obj?.value?.map((text, index) => this.headerNode(level, this.textNode(text, index), index == 0 || Boolean(text)))}
+          {/* `Heading.value` => main header node */}
+          {isText && this.obj?.value?.length > 0 && this.headerNode(level, this.textNode(this.obj.value[0], 0), true)}
 
           {isDate && !this.editable && this.dateNode()}
           {isDate && this.editable && <code class="lookup">{localeStrings.date}</code>}
@@ -183,6 +183,8 @@ export class HeadingComponent {
           </ul>}
           {isDay && this.editable && <code class="lookup">{localeStrings.day}</code>}
 
+          {/* `Heading.label` => centered */}
+          {this.obj?.value?.length > 1 && this.textNode(this.obj.value[1], 1)}
           <slot name='additional'></slot>
 
           {/* `Heading.citation` => right-aligned */}
@@ -193,6 +195,7 @@ export class HeadingComponent {
         </ldf-label-bar>
 
         <div>{hasSource && hasCitation && this.citationNode(this.obj.citation, 'none')}</div>
+        {this.obj?.value?.length > 2 && this.obj.value.slice(2, this.obj.value.length).map((text, index) => this.textNode(text, index + 2))}
       </Host>
     );
   }

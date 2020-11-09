@@ -315,6 +315,14 @@ ul {
   "version": "BCP1962",
   "value": [
     {
+      "type": "heading",
+      "style": "text",
+      "label": "Anthem",
+      "citation": "Composer",
+      "metadata": { level: 3 },
+      "value": ["Anthem", "*Title*", ""]
+    },
+    {
       "hidden": false,
       "label": "Evening Prayer",
       "value": [
@@ -4677,7 +4685,7 @@ ul {
     
     
     const node = document.createElement('ldf-liturgical-document');
-node.setAttribute('editable', false);
+node.setAttribute('editable', true);
 node.setAttribute('path', '/');
     node.doc = LITURGY;
     document.querySelector('#example').appendChild(node);
