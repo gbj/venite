@@ -62,7 +62,7 @@ export class Psalm extends LiturgicalDocument {
   versesInCitation(citation: string): string[] {
     // comments assume versesInCitation('Psalm 100:1-3,6-7, 11a')
     // search = [ "Psalm 100", "1-3", "6-7", "11a" ]
-    const search = citation.split(/\s*[,:]\s*/),
+    const search = citation.split(/\s*[,:\s]\s*/),
       // whole = 'Psalm 100', psalm = 'Psalm', number = '100'
       // [whole, psalm, number] = search[0].match(/(Ps[^\s]*)\s(\d+)/),
       // verseRanges = [ "1-3", "6-7", "11a" ]
@@ -70,7 +70,7 @@ export class Psalm extends LiturgicalDocument {
 
     let verses = new Array();
     verseRanges.forEach((range) => {
-      const [first, last] = range.replace(/a-zA-Z/g, '').split('-');
+      const [first, last] = range.replace(/a-zA-Z/g, '').split(/-|–/);
       if (first && last) {
         for (let ii = parseInt(first); ii <= parseInt(last); ii++) {
           verses.push(ii.toString());

@@ -1,4 +1,4 @@
-import { Psalm } from '../src';
+import { Psalm, Refrain } from '../src';
 
 const PSALM_80 = {
   api: '',
