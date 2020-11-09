@@ -131,15 +131,18 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalOptions = this.additionalVersions.pipe(
             map(versions => Object.keys(versions)),
             switchMap(versions => this.documentService.find({ type: 'liturgy' }).pipe(
-              map(objs => objs.map(obj => new LiturgicalDocument({
-                ... obj,
-                // strip out value, which can be looked up asynchronously rather than storing it
-                value: undefined,
-                lookup: { type: "slug" }
-              })))
+              map(objs => objs
+                .filter(obj => !obj.day)
+                  .map(obj => new LiturgicalDocument({
+                  ... obj,
+                  // strip out value, which can be looked up asynchronously rather than storing it
+                  value: undefined,
+                  lookup: { type: "slug" }
+                }))
+              )
             )),
           );
-          return this.complete;        // otherwise, it's already complete and we can return the original
+          return this.complete; // otherwise, it's already complete and we can return the original
         default:
           return of(addition.template);
       }
