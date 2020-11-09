@@ -3,13 +3,11 @@
 
 import { dateFromYMDString, Heading, LiturgicalDay } from "@venite/ldf/dist/cjs";
 import { Paragraph, TextRun } from "docx";
-import { DisplaySettings } from "./display-settings";
-import { LDFStyles } from "./ldf-styles";
 import { DocxChild } from "./ldf-to-docx";
 import { LocaleStrings } from "./locale-strings";
 import { notEmpty } from "./not-empty";
 
-export function headingToDocx(doc : Heading, displaySettings : DisplaySettings, localeStrings : LocaleStrings) : DocxChild[] {
+export function headingToDocx(doc : Heading, localeStrings : LocaleStrings) : DocxChild[] {
   const level : number = doc.metadata?.level ? doc.metadata.level : 4,
     hasCitation = Boolean(doc?.citation),
     hasSource = Boolean(doc?.source),
@@ -69,7 +67,7 @@ export function headingToDocx(doc : Heading, displaySettings : DisplaySettings, 
   }
 
   const text = isText && doc?.value?.length > 0
-      ? doc?.value?.map((text, index) => headerNode(level, [textNode(text)], index == 0 || Boolean(text))).filter(notEmpty)
+      ? (doc?.value || []).map((text, index) => text ? headerNode(level, [textNode(text)], index == 0 || Boolean(text)) : null).filter(notEmpty)
       : null,
     date = isDate ? dateNode() : null,
     day = isDay && doc.day ? dayNode(doc.day) : null;

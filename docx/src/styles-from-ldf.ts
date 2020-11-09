@@ -23,14 +23,14 @@ const STYLES = {
       }
     },
     {
-      id: 'ResponsivePrayerLabel',
+      id: LDFStyles.ResponsivePrayerLabel,
       name: 'Responsive Prayer Label',
       run: {
         italics: true
       }
     },
     {
-      id: 'VerseNumber',
+      id: LDFStyles.VerseNumber,
       name: 'Verse Number',
       run: {
         superScript: true
@@ -66,7 +66,7 @@ const STYLES = {
       }
     },
     {
-      id: 'Title',
+      id: LDFStyles.Title,
       name: 'Title',
       run: {
         font: 'Garamond',
@@ -102,7 +102,7 @@ const STYLES = {
       paragraph: {
           spacing: {
               after: 240,
-              before: 240
+              before: 480
           },
           alignment: AlignmentType.CENTER
       }
@@ -119,7 +119,7 @@ const STYLES = {
       paragraph: {
           spacing: {
               after: 240,
-              before: 240
+              before: 480
           },
           alignment: AlignmentType.CENTER
       }
@@ -135,7 +135,8 @@ const STYLES = {
       },
       paragraph: {
           spacing: {
-              after: 240
+            after: 240,
+            before: 480
           }
       }
     },
@@ -168,12 +169,13 @@ const STYLES = {
       },
       paragraph: {
           spacing: {
+              before: 120,
               after: 120
           }
       }
     },
     {
-      id: 'Psalm',
+      id: LDFStyles.Psalm,
       name: 'Psalm',
       basedOn: 'Normal',
       next: 'Normal',
@@ -188,7 +190,7 @@ const STYLES = {
       }
     },
     {
-      id: 'Gloria',
+      id: LDFStyles.Gloria,
       name: 'Gloria Patri',
       basedOn: 'Normal',
       next: 'Normal',
@@ -198,6 +200,7 @@ const STYLES = {
               hanging: 240
           },
           spacing: {
+              before: 240,
               after: 0
           }
       }

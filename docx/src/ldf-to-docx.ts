@@ -1,4 +1,4 @@
-import { LiturgicalDocument, Liturgy, Option, BibleReading, Heading, Image, Refrain, Rubric, Text } from "@venite/ldf/dist/cjs";
+import { LiturgicalDocument, Liturgy, Option, BibleReading, Heading, Image, Refrain, Rubric, Text, Psalm, ResponsivePrayer } from "@venite/ldf/dist/cjs";
 import { DisplaySettings } from "./display-settings";
 import { Document, HyperlinkRef, Paragraph, Table, TableOfContents } from "docx";
 import { bibleReadingToDocx } from "./bible-reading-to-docx";
@@ -8,6 +8,9 @@ import { LocaleStrings, LOCALE_STRINGS } from "./locale-strings";
 import { genericTextToDocx } from "./generic-text-to-docx";
 import { LDFStyles } from "./ldf-styles";
 import { imageToDocx } from "./image-to-docx";
+import { psalmToDocx } from "./psalm-to-docx";
+import { refrainToDocx } from "./refrain-to-docx";
+import { responsivePrayerToDocx } from "./responsive-prayer-to-docx";
 
 export async function ldfToDocx(inDoc : LiturgicalDocument, displaySettings : DisplaySettings) : Promise<Document> {
   const styles = stylesFromLDF(inDoc),
@@ -35,19 +38,18 @@ export async function docxChildrenFromLDF(inDoc : LiturgicalDocument, displaySet
     case "bible-reading":
       return bibleReadingToDocx(inDoc as BibleReading, displaySettings, localeStrings);
     case "heading":
-      return headingToDocx(inDoc as Heading, displaySettings, localeStrings);
+      return headingToDocx(inDoc as Heading, localeStrings);
     case "meditation":
       return []
     case "image":
-      console.log('image', docxDoc);
       return docxDoc ? await imageToDocx(docxDoc, inDoc as Image, displaySettings, localeStrings) : [];
     case "psalm":
+      return psalmToDocx(inDoc as Psalm, displaySettings, localeStrings);
     case "responsive":
-      console.warn(`${inDoc.type} not implemented yet`);
-      return [];
+      return responsivePrayerToDocx(inDoc as ResponsivePrayer, displaySettings, localeStrings);
     /** Text fields with various styles */
     case "refrain":
-      return genericTextToDocx(inDoc as Refrain, inDoc.style == 'antiphon' ? LDFStyles.Antiphon : LDFStyles.Normal, displaySettings, localeStrings);
+      return refrainToDocx(inDoc as Refrain, displaySettings, localeStrings);
     case "rubric":
       return genericTextToDocx(inDoc as Rubric, LDFStyles.Rubric, displaySettings, localeStrings);
     case "text":

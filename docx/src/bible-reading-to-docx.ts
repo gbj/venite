@@ -27,7 +27,7 @@ export async function bibleReadingToDocx(doc : BibleReading, displaySettings : D
   } else {
     const shortResponse : boolean = (doc?.metadata?.response?.length || 0) <= 5,
       responseNode = new TextRun({
-        text: doc?.metadata?.response ?? localeStrings.amen,
+        text: ` ${doc?.metadata?.response ?? localeStrings.amen}`,
         style: LDFStyles.Response
       }),
       includeResponse = !doc?.metadata?.omit_response,
@@ -132,7 +132,7 @@ function paragraph(p : (BibleReadingVerse | Heading)[], displaySettings : Displa
       if(verses.length > 0) {
         saveVerses();
       }
-      children = children.concat(headingToDocx(v as Heading, displaySettings, localeStrings));
+      children = children.concat(headingToDocx(v as Heading, localeStrings));
     } else {
       verses.push(v as BibleReadingVerse);
     }
