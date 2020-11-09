@@ -19,6 +19,9 @@ describe("Bible Class abbreviation and name functions", () => {
   it("should find chapter and verse numbers for book names", () => {
     const reading = new BibleReading();
 
+    reading.citation = 'Eccles. 11; 12';
+    expect(reading.chapterFromCitation()).toEqual('11');
+    expect(reading.verseFromCitation()).toEqual(undefined);
     reading.citation = 'Jn 1:1';
     expect(reading.chapterFromCitation()).toEqual('1');
     expect(reading.verseFromCitation()).toEqual('1');

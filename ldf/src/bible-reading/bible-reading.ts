@@ -59,8 +59,6 @@ export class BibleReading extends LiturgicalDocument {
       });
 
       this.metadata.compiled_intro = new LiturgicalDocument({ ...this.metadata.intro, value: newValue });
-
-      console.log('compiled intro = ', this.metadata.compiled_intro);
     }
   }
 
@@ -82,7 +80,7 @@ export class BibleReading extends LiturgicalDocument {
 
   /** Gives number of first chapter of citation */
   chapterFromCitation(): string | undefined {
-    const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
+    const matches = (this.citation || '').split(';')[0]?.match(/[\s\.:](\d+)/g);
     if (matches) {
       const [chapter] = matches;
       return typeof chapter === 'string' ? chapter.trim().replace(/[\.,:]/g, '') : undefined;
@@ -93,7 +91,7 @@ export class BibleReading extends LiturgicalDocument {
 
   /** Gives number of first verse of citation */
   verseFromCitation(): string | undefined {
-    const matches = (this.citation || '').match(/[\s\.:](\d+)/g);
+    const matches = (this.citation || '').split(';')[0]?.match(/[\s\.:](\d+)/g);
     if (matches) {
       const [, verse] = matches;
       return typeof verse === 'string' ? verse.trim().replace(/[\.,:]/g, '') : undefined;
@@ -119,7 +117,6 @@ export class BibleReading extends LiturgicalDocument {
    * // returns 'The Book of Genesis'
    * this.longNameFromBookCode('Genesis') */
   longNameFromBookCode(bookName: string, lang: string = 'en'): string {
-    console.log('(longNameFromBookCode)', bookName, lang);
     const bookResult = BIBLE_BOOK_NAMES[this.bookCodeFromAbbrev(bookName)];
     let searchResult = (bookResult || {})[lang];
     if (!searchResult) {
