@@ -1,6 +1,9 @@
 import * as functions from 'firebase-functions';
 import { getBibleText } from '@venite/bible-api';
 import { loadText, loadScore } from '@venite/hymnal-api';
+import { ldfToDocx } from '@venite/docx';
+import { Packer } from 'docx';
+import { Readable } from 'stream';
 
 export const bible = functions.https.onRequest(async (request, response) => {
   response.set('Access-Control-Allow-Origin', '*'); // CORS allowed
@@ -67,3 +70,28 @@ export const hymnImages = functions.https.onRequest(async (request, response) =>
     response.status(400).send("'URL' parameter is required.")
   }
 });
+
+export const docx = functions.https.onRequest(async(request, response) => {
+  response.set('Access-Control-Allow-Origin', '*'); // CORS allowed
+  response.set('Accept', 'application/json');
+  response.set('Access-Control-Allow-Headers', 'Content-Type');
+
+  console.log(request.body);
+
+  const dto = request.body,
+    doc = dto.doc,
+    settings = dto.settings;
+
+  // build the data
+  const file = await ldfToDocx(doc, settings),
+    buffer = await Packer.toBuffer(file);
+
+  // stream the data
+  const stream : Readable = new Readable();
+  stream.push(buffer);
+  stream.push(null);
+  response.set({
+    'Content-Length': buffer.length
+  });
+  stream.pipe(response);
+})
