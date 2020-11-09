@@ -200,7 +200,6 @@ const STYLES = {
               hanging: 240
           },
           spacing: {
-              before: 240,
               after: 0
           }
       }
