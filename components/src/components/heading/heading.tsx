@@ -169,7 +169,7 @@ export class HeadingComponent {
             'text': isText && (this?.obj?.value || []).filter(n => Boolean(n)).length > 0
           }}
         >
-          {/* `Heading.value` => main header node */}
+          {/* `Heading.value[0]` => main header node */}
           {isText && this.obj?.value?.length > 0 && this.headerNode(level, this.textNode(this.obj.value[0], 0), true)}
 
           {isDate && !this.editable && this.dateNode()}
@@ -183,7 +183,7 @@ export class HeadingComponent {
           </ul>}
           {isDay && this.editable && <code class="lookup">{localeStrings.day}</code>}
 
-          {/* `Heading.label` => centered */}
+          {/* `Heading.value[1]` => indented */}
           {this.obj?.value?.length > 1 && this.textNode(this.obj.value[1], 1)}
           <slot name='additional'></slot>
 
@@ -195,6 +195,8 @@ export class HeadingComponent {
         </ldf-label-bar>
 
         <div>{hasSource && hasCitation && this.citationNode(this.obj.citation, 'none')}</div>
+
+        {/* `Heading.value[2..]` => on a new line` */}
         {this.obj?.value?.length > 2 && this.obj.value.slice(2, this.obj.value.length).map((text, index) => this.textNode(text, index + 2))}
       </Host>
     );

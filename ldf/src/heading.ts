@@ -19,7 +19,11 @@ export class Heading extends LiturgicalDocument {
     level?: number;
   };
 
-  /** Contains the text of the heading */
+  /** Contains the text of the heading
+    * value[0] appears as the main heading
+    * value[1] is indented
+    * value[2..] appear as paragraphs below the heading
+  */
   value: string[];
 
   /** Returns the list of all possible `style` values.  */

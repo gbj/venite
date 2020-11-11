@@ -3,6 +3,7 @@
 
 import { dateFromYMDString, Heading, LiturgicalDay } from "@venite/ldf/dist/cjs";
 import { Paragraph, TextRun } from "docx";
+import { LDFStyles } from "./ldf-styles";
 import { DocxChild } from "./ldf-to-docx";
 import { LocaleStrings } from "./locale-strings";
 import { notEmpty } from "./not-empty";
@@ -14,6 +15,30 @@ export function headingToDocx(doc : Heading, localeStrings : LocaleStrings) : Do
     isDate = doc?.style == 'date',
     isDay = doc?.style == 'day',
     isText = doc?.style == undefined || doc?.style == 'text' || (!isDate && !isDay);
+
+  function texts() : DocxChild[] {
+    const value = doc?.value ?? [];
+
+    const children : DocxChild[] = [
+      headerNode(
+        doc?.metadata?.level ?? 3,
+        [
+          value[0] ? new TextRun(doc.value[0]) : null,
+          value[1] ? new TextRun(`\t${doc.value[1]}`) : null,
+          doc?.citation
+            ? new TextRun({
+              style: LDFStyles.Citation,
+              text: `\t\t${doc.citation}`
+            })
+            : null
+        ].filter(notEmpty),
+        true
+      ),
+      ... value.slice(2, value.length).map(text => new Paragraph({ style: LDFStyles.Normal, text }))
+    ].filter(notEmpty);
+    //(doc?.value || []).map((text, index) => text ? headerNode(level, [textNode(text)], index == 0 || Boolean(text)) : null).filter(notEmpty)
+    return children;
+  }
 
   function headerNode(level : number, children : TextRun[], display : boolean) : Paragraph | null {
     return display
@@ -67,7 +92,7 @@ export function headingToDocx(doc : Heading, localeStrings : LocaleStrings) : Do
   }
 
   const text = isText && doc?.value?.length > 0
-      ? (doc?.value || []).map((text, index) => text ? headerNode(level, [textNode(text)], index == 0 || Boolean(text)) : null).filter(notEmpty)
+      ? texts()
       : null,
     date = isDate ? dateNode() : null,
     day = isDay && doc.day ? dayNode(doc.day) : null;
