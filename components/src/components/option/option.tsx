@@ -189,11 +189,11 @@ export class OptionComponent {
     if(this.obj?.value?.length > 1 || this.editable) {
       // Ionic available and
       if(customElements && !!customElements.get('ion-select')) {
-        const optionsAreLong : boolean = this.obj?.value?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 20)
+        const optionsAreLong : boolean = this.obj?.value?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 25)
             .reduce((a, b) => a || b);
 
-        // <= 2, short options
-        if(!optionsAreLong && this.obj?.value.length <= 2) {
+        // <= 3, short options
+        if(!optionsAreLong && this.obj?.value.length <= 3) {
           return (
             <ion-segment color="primary" value={currentlySelected.toString()}>
               {this.obj?.value.map((option, optionIndex) =>
