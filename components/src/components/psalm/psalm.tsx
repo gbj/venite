@@ -219,8 +219,9 @@ export class PsalmComponent {
 
       {/* include closing antiphon if
         * 1) there IS a Gloria, and it hasn't been omitted, or 
-        * 2) there ISN'T a Gloria, and it HAS been omitted, which suggests it was removed seasonally */}
-      {((this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria) || (this.obj?.metadata?.gloria === undefined && Boolean(this.obj?.metadata?.omit_gloria))) && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
+        * 2) there ISN'T a Gloria, or
+        * 3) it HAS been omitted */}
+      {((this.obj?.metadata?.gloria && !this.obj.metadata.omit_gloria) || (this.obj?.metadata?.gloria === undefined || Boolean(this.obj?.metadata?.omit_gloria))) && includeAntiphon && this.antiphonNode(this.obj?.metadata?.antiphon)}
       </div>
         </Host>
     )
