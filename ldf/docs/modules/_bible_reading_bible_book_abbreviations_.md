@@ -214,6 +214,10 @@
     aliases: ['Bel', 'Bel & the Dragon'],
   },
   {
+    name: 'Azariah',
+    aliases: ['Azariah', 'Song of the Three Young Men', 'Song of the Three Childr.', 'Song of the Three Children'],
+  },
+  {
     name: 'Matthew',
     aliases: ['Matt', 'Matthew', 'Mt'],
   },
@@ -323,4 +327,4 @@
   },
 ]
 
-*Defined in [bible-reading/bible-book-abbreviations.ts:1](https://github.com/gbj/venite/blob/244321b/ldf/src/bible-reading/bible-book-abbreviations.ts#L1)*
+*Defined in [bible-reading/bible-book-abbreviations.ts:1](https://github.com/gbj/venite/blob/7d26fef/ldf/src/bible-reading/bible-book-abbreviations.ts#L1)*

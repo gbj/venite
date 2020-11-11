@@ -200,6 +200,10 @@ export const BIBLE_BOOK_ABBREVIATIONS = [
     aliases: ['Bel', 'Bel & the Dragon'],
   },
   {
+    name: 'Azariah',
+    aliases: ['Azariah', 'Song of the Three Young Men', 'Song of the Three Childr.', 'Song of the Three Children'],
+  },
+  {
     name: 'Matthew',
     aliases: ['Matt', 'Matthew', 'Mt'],
   },

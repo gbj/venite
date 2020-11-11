@@ -245,6 +245,12 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Book of Tobit',
     },
   },
+  Azariah: {
+    en: {
+      short: 'The Song of the Three Children',
+      long: 'The Song of the Three Children',
+    },
+  },
   Judith: {
     en: {
       short: 'Judith',
