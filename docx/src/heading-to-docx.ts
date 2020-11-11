@@ -2,7 +2,7 @@
  * Source/citation */
 
 import { dateFromYMDString, Heading, LiturgicalDay } from "@venite/ldf/dist/cjs";
-import { Paragraph, TextRun } from "docx";
+import { Paragraph, TextRun, TabStopType, TabStopPosition } from "docx";
 import { LDFStyles } from "./ldf-styles";
 import { DocxChild } from "./ldf-to-docx";
 import { LocaleStrings } from "./locale-strings";
@@ -28,7 +28,7 @@ export function headingToDocx(doc : Heading, localeStrings : LocaleStrings) : Do
           doc?.citation
             ? new TextRun({
               style: LDFStyles.Citation,
-              text: `\t\t${doc.citation}`
+              text: value[1] ? `\t${doc.citation}` : `\t\t${doc.citation}`
             })
             : null
         ].filter(notEmpty),
@@ -44,7 +44,17 @@ export function headingToDocx(doc : Heading, localeStrings : LocaleStrings) : Do
     return display
       ? new Paragraph({
         style: `Heading_${level}`,
-        children
+        children,
+        tabStops: [
+          {
+            type: TabStopType.CENTER,
+            position: TabStopPosition.MAX / 2,
+          },
+          {
+            type: TabStopType.RIGHT,
+            position: TabStopPosition.MAX,
+          },
+        ]
       })
       : null;
   }

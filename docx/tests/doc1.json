@@ -12,6 +12,16 @@
       ]
     },
     {
+      "type": "heading",
+      "style": "text",
+      "citation": "Composer",
+      "value": [
+        "Anthem",
+        "*Title*",
+        "Text of the anthem"
+      ]
+    },
+    {
       "hidden": false,
       "value": [
         "Morning Prayer"
