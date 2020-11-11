@@ -85,6 +85,6 @@ export function psalmToDocx(doc : Psalm, displaySettings : DisplaySettings, loca
       ... displaySettings.repeatAntiphon == "repeat" ? antiphonNode(obj?.metadata?.antiphon) : []
     ]).flat(),
     ... obj?.metadata?.gloria && !obj?.metadata?.omit_gloria ? gloriaNode(obj?.metadata?.gloria) : [],
-    ... ((obj?.metadata?.gloria && !obj.metadata.omit_gloria) || (obj?.metadata?.gloria === undefined && Boolean(obj?.metadata?.omit_gloria))) && includeAntiphon ? antiphonNode(obj?.metadata?.antiphon) : []
+    ... ((obj?.metadata?.gloria && !obj.metadata.omit_gloria) || (obj?.metadata?.gloria === undefined || Boolean(obj?.metadata?.omit_gloria))) && includeAntiphon ? antiphonNode(obj?.metadata?.antiphon) : []
   ].filter(notEmpty);
 }
