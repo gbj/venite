@@ -30,7 +30,7 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
-    console.log('(compile)', docBase);
+    console.log('(compile)', docBase, 'versions = ', liturgyversions);
     const doc = new LiturgicalDocument({ ... docBase, day });
 
     // should the doc be included?
@@ -46,13 +46,18 @@ export class PrayService {
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
       if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
-          .value?.map(child => this.compile(child, day, prefs, docBase?.metadata?.liturgyversions, originalPrefs || doc.metadata?.preferences)));
+          .value?.map(child => this.compile(child, day, prefs, liturgyversions.concat(docBase?.metadata?.liturgyversions || []), originalPrefs || doc.metadata?.preferences)));
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
           this.latestChildren$.map(child$ => child$ ? child$.pipe(startWith(null)) : of(null))
         ).pipe(
+          // if one of the options in an Option is an Option, take the child Option and spread its values into the parent
+          map(compiledChildren => compiledChildren.map(
+              child => docBase?.type === 'option' && child?.type === 'option' ? child?.value : [child]
+            ).reduce((acc, cur) => acc.concat(cur), [])
+          ),
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
             day,
@@ -77,7 +82,6 @@ export class PrayService {
       // if psalm with Gloria inserted, condition-check the provided Gloria
       if(doc.metadata?.gloria && !(new LiturgicalDocument(doc.metadata.gloria).include(day, prefs))) {
         doc.metadata.gloria = undefined;
-        doc.metadata.gloria.condition = undefined;
       }
 
       /** Lookup and return, or simply return */
@@ -115,6 +119,8 @@ export class PrayService {
                         .filter(version => version !== undefined)
                         .map(version => typeof version === 'object' ? prefs[version.preference] : version);
   
+    console.log('(lookup) versions = ', versions);
+
     let result : Observable<LiturgicalDocument | null>;
 
     switch(doc.lookup.type) {
@@ -204,6 +210,7 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
+    console.log('lookupBySlug versions = ', versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
@@ -361,6 +368,7 @@ export class PrayService {
   lookupFromCanticleTable(day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
+      tap(entries => console.log('canticle table filtering', entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
       switchMap(entries => entries.map(entry => new LiturgicalDocument(
         {
@@ -370,6 +378,7 @@ export class PrayService {
           }
         }
       ))),
+      tap(docs => console.log('canticle table lookup', docs)),
       map(docs => docsToOption(docs, versions)),
       switchMap(doc => this.compile(doc, day, prefs, versions, originalPrefs))
     )
@@ -379,7 +388,11 @@ export class PrayService {
   lookupBibleReading(doc : LiturgicalDocument, version : string = 'NRSV') : Observable<LiturgicalDocument> {
     return this.bibleService.getText(doc.citation, version).pipe(
       startWith(new BibleReading()),
-      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value })),
+      map(versionWithText => new LiturgicalDocument({
+        ... doc,
+        citation: versionWithText.citation ? versionWithText.citation : doc.citation,
+        value: versionWithText.value
+      })),
     );
   }
 
@@ -393,10 +406,13 @@ export class PrayService {
         /* prepends antiphons for a season that matches an unobserved black-letter day
          * this is specifically used in e.g., the Canadian 1962 book, which has black-letter
          * Marian feasts that call for a certain antiphon, but do not have their own propers
-         * and therefore should not be the observed holy day */
-        const blackLetterDays = (day.holy_days || []).filter(holyDay => holyDay.type?.rank < 3),
-              highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
-              antiphonsForBlackLetterDays = antiphons.filter(antiphon => antiphon.category.includes(highestBlackLetter?.season));
+         * and therefore should not be the observed holy day
+         * But it should not be applied on Sundays or Holy Days, i.e., when rank >= 4 */
+        const blackLetterDays = day?.holy_day_observed?.type?.rank >= 4 || dateFromYMDString(day.date).getDay() == 0
+            ? [] 
+            : (day.holy_days || []).filter(holyDay => holyDay.type?.rank < 3),
+          highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
+          antiphonsForBlackLetterDays = antiphons.filter(antiphon => antiphon.category.includes(highestBlackLetter?.season));
 
         if(antiphonsForDay.length == 0) {
           const antiphonsForSeason = antiphons.filter(antiphon => antiphon.category.includes(day.season || day.week?.season));
@@ -418,6 +434,6 @@ export class PrayService {
 }
 
 const DEFAULT_CANTICLES = {
-  'evening': ['canticle-15', 'canticle-17'],
-  'morning': ['canticle-21', 'canticle-17']
+  'evening': [, 'canticle-15', 'canticle-17'],
+  'morning': [, 'canticle-21', 'canticle-16']
 };
