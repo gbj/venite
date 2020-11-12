@@ -50,7 +50,9 @@ export class StringComponent {
   // Private methods
   processString() {
     const withoutEntities : string = this.processEntities(this.text);
+    console.log('##1 - withoutEntities\t', withoutEntities);
     let processed : JSX.Element[] = this.processMarkup(withoutEntities);
+    console.log('##2 - processed\t', processed);
     if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
     }
@@ -121,8 +123,11 @@ export class StringComponent {
 
   maintainCasing(st : string | undefined) : boolean {
     // God and Roman numerals
+    console.log(`st = "${st}"`)
     const s = st.replace(/\^/g, '');
-    return s?.toLowerCase() == ' god' || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s);
+    return s?.toLowerCase() == ' god'
+      || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s)
+      || s?.toLowerCase() == 'i ';
   }
 
   processDropcap(processed : JSX.Element[]) : JSX.Element[] {
@@ -134,11 +139,16 @@ export class StringComponent {
       const splitTest = (firstChunk || '').split(/[\s.!?\\]/),
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2
-              ? /^([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
-              : /^([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+            reIncludingPunctuation = firstWord[0]?.match(/[“”‘’\!\?\[\]\(\)]/)
+              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff]{2})([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : re,
             buffer = firstWord.length == 1,
-            split = firstChunk.split(re).filter(s => s !== ''),
+            split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
+
+      console.log('firstWordMatch = ', firstWord, firstWord[0]?.match(/[“”‘’\!\?\[\]\(\)]/))
 
       final = new Array(
         <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>

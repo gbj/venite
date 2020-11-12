@@ -79,7 +79,7 @@ export class TextComponent {
   render() {
     const localeStrings = this.localeStrings || {};
     let compiledValue : string[][] = (this.obj?.value || []).map(s => {
-      return s.split(/([\*\w\n\s,:;\.“”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.“”‘’”\!\?\[\]\%\(\)]))/g);
+      return s.split(/([\*\w\n\s,:;\.\-–—“”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.“”‘’”\-–—\!\?\[\]\%\(\)]))/g);
     })
     if(!this.editable && this.obj?.display_format === 'abbreviated') {
       const firstSection = compiledValue[0],
@@ -124,15 +124,7 @@ export class TextComponent {
         return (this.obj?.value || []).map(value => <wc-markdown>{value}</wc-markdown>);
       }
       /** `text` and `prayer` types */
-      else {
-        let firstTextLongEnoughForDropcap = -1;
-        if(this.obj?.value?.length > 0) {
-          const firstDropcappableChild = this.obj.value.find(piece => 
-            piece.length >= 150
-          );
-          firstTextLongEnoughForDropcap = this.obj.value.indexOf(firstDropcappableChild);
-        }
-  
+      else {  
         return (
           <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
             <ldf-label-bar>
@@ -152,7 +144,7 @@ export class TextComponent {
                       <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                         <ldf-string text={chunk}
                           citation={{label: this.obj.label}}
-                          dropcap={prayerIndex === firstTextLongEnoughForDropcap && chunkIndex <= 1 ? "force" : "disabled"}
+                          dropcap={prayerIndex === 0 && chunkIndex <= 1 ? "enabled" : "disabled"}
                           index={prayerIndex + chunkIndex}>
                         </ldf-string>
                       </span>
