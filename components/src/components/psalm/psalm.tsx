@@ -123,9 +123,9 @@ export class PsalmComponent {
       <Host lang={this.obj?.language || 'en'}>
         <div class={`psalm-parent ${this.obj?.display_format || 'default'} ${noNumbers ? 'no-numbers' : ''}`}>
         {/* Slot for controls*/}
-        <ldf-label-bar>
+        { this.editable && <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
-        </ldf-label-bar>
+        </ldf-label-bar> }
 
         {/* Heading */}
         {this.headingNode()}

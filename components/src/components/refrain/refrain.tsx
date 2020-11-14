@@ -48,9 +48,9 @@ export class RefrainComponent {
   render() {
     return (
       <Host lang={this.obj.language}>
-        <ldf-label-bar>
+        { this.editable && <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
-        </ldf-label-bar>
+        </ldf-label-bar> }
         <div class={`${this.obj?.style || ''} ${this.obj?.metadata?.align || ''}`}>
         {this.obj.value && this.obj.value.map((para, ii) =>
           this.editable ?

@@ -207,7 +207,7 @@ export class LiturgicalDocumentComponent {
         </ldf-editable-metadata-buttons>}
 
         {/* Render the Document */}
-        {node}
+        <div class='doc'>{node}</div>
       </Host>
     );
   }

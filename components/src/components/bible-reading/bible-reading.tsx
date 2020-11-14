@@ -111,9 +111,9 @@ export class BibleReadingComponent {
       if(this.editable) {
         return (
           <div lang={this.obj?.language} class={`editable bible-reading ${this.obj?.display_format || 'default'}`}>
-            <ldf-label-bar>
+            {this.editable && <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>
+            </ldf-label-bar>}
             {/* Heading */}
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label]})}>
               <ldf-editable-text slot="citation"
@@ -186,9 +186,9 @@ export class BibleReadingComponent {
 
         return (
           <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
-            <ldf-label-bar>
+            {this.editable && <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>
+            </ldf-label-bar>}
             {/* Bible text */}
             <p>
               {this.verses.map(verse =>
@@ -214,9 +214,9 @@ export class BibleReadingComponent {
         return (
           <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
             {/* Slot for controls */}
-            <ldf-label-bar>
+            {this.editable && <ldf-label-bar>
               <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>
+            </ldf-label-bar>}
 
             {/* Heading */}
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>

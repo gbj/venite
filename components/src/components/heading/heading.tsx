@@ -159,9 +159,9 @@ export class HeadingComponent {
     // Render
     return (
       <Host lang={this.obj?.language || 'en'}>
-        <ldf-label-bar>
+        { this.editable && <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
-        </ldf-label-bar>
+        </ldf-label-bar> }
 
         <ldf-label-bar
           center={this.obj?.metadata?.level <= 2}

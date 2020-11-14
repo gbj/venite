@@ -107,7 +107,7 @@ export class ResponsivePrayerComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>
+          {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading> }
 
           <table class="preces">
             {this.obj.value.map((line, index) =>
@@ -135,12 +135,12 @@ export class ResponsivePrayerComponent {
 
       return (
         <Host class={this.obj.style} lang={this.obj.language}>
-        <ldf-label-bar>
+        { this.editable && <ldf-label-bar>
           <slot slot='end' name='controls'></slot>
-        </ldf-label-bar>
+        </ldf-label-bar> }
 
         {/* Heading */}
-        <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source})}></ldf-heading>
+        {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source})}></ldf-heading>}
 
         {this.obj.value.map((line, index) => {
           // Classes depending on style and whether this line is optional
@@ -189,12 +189,9 @@ export class ResponsivePrayerComponent {
 
       return (
         <Host class={this.obj.style} lang={this.obj.language}>
-          <ldf-label-bar>
-            <slot slot='end' name='controls'></slot>
-          </ldf-label-bar>
 
           {/* Heading */}
-          <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>
+          {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>}
 
           <p class='responsive'>
             {this.obj.value.map((line, index) =>

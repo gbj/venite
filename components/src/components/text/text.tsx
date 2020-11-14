@@ -127,10 +127,6 @@ export class TextComponent {
       else {  
         return (
           <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
-            <ldf-label-bar>
-              <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>
-  
             {/* Heading */}
             {this.obj?.label || this.obj?.citation && <ldf-heading
               path={this.path}
