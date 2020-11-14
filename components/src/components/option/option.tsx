@@ -139,8 +139,6 @@ export class OptionComponent {
       // without overriding any other metadata fields
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
-
-      console.log('selected C = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
     } else {
       console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
       this.ldfAddOptionToDoc.emit({
@@ -176,7 +174,10 @@ export class OptionComponent {
     if(this.obj) {
       this.obj = new Option({
         ... this.obj,
-        value: (this.obj?.value || []).filter(entry => Boolean(entry))
+        value: (this.obj?.value || []).filter(entry => {
+          console.log('filtering entries', entry?.type, entry?.type == 'liturgy' && entry?.value?.length)
+          return Boolean(entry) && Boolean(entry.value);
+        })
       });
     }
   }

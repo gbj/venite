@@ -132,10 +132,10 @@ export class TextComponent {
             </ldf-label-bar>
   
             {/* Heading */}
-            <ldf-heading
+            {this.obj?.label || this.obj?.citation && <ldf-heading
               path={this.path}
               doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
-            </ldf-heading>
+            </ldf-heading>}
   
             {
               compiledValue.map((prayer, prayerIndex) =>
