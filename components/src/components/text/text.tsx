@@ -128,7 +128,7 @@ export class TextComponent {
         return (
           <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
             {/* Heading */}
-            {this.obj?.label || this.obj?.citation && <ldf-heading
+            {(this.obj?.label || this.obj?.citation) && <ldf-heading
               path={this.path}
               doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
             </ldf-heading>}
