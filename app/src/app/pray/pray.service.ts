@@ -4,7 +4,7 @@ import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, Lectiona
 import { Observable, of, combineLatest } from 'rxjs';
 import { map, startWith, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
-import { LiturgyConfig } from './liturgy-config';
+import { LiturgyConfig } from '@venite/ng-pray/lib/liturgy-config';
 
 const emptyValue = (doc : LiturgicalDocument) => 
   !Boolean(doc.value) ||
@@ -388,11 +388,7 @@ export class PrayService {
   lookupBibleReading(doc : LiturgicalDocument, version : string = 'NRSV') : Observable<LiturgicalDocument> {
     return this.bibleService.getText(doc.citation, version).pipe(
       startWith(new BibleReading()),
-      map(versionWithText => new LiturgicalDocument({
-        ... doc,
-        citation: versionWithText.citation ? versionWithText.citation : doc.citation,
-        value: versionWithText.value
-      })),
+      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value })),
     );
   }
 
@@ -406,13 +402,10 @@ export class PrayService {
         /* prepends antiphons for a season that matches an unobserved black-letter day
          * this is specifically used in e.g., the Canadian 1962 book, which has black-letter
          * Marian feasts that call for a certain antiphon, but do not have their own propers
-         * and therefore should not be the observed holy day
-         * But it should not be applied on Sundays or Holy Days, i.e., when rank >= 4 */
-        const blackLetterDays = day?.holy_day_observed?.type?.rank >= 4 || dateFromYMDString(day.date).getDay() == 0
-            ? [] 
-            : (day.holy_days || []).filter(holyDay => holyDay.type?.rank < 3),
-          highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
-          antiphonsForBlackLetterDays = antiphons.filter(antiphon => (antiphon?.category || []).includes(highestBlackLetter?.season));
+         * and therefore should not be the observed holy day */
+        const blackLetterDays = (day.holy_days || []).filter(holyDay => holyDay.type?.rank < 3),
+              highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
+              antiphonsForBlackLetterDays = antiphons.filter(antiphon => (antiphon?.category || []).includes(highestBlackLetter?.season));
 
         if(antiphonsForDay.length == 0) {
           const antiphonsForSeason = antiphons.filter(antiphon => (antiphon?.category || []).includes(day.season || day.week?.season));

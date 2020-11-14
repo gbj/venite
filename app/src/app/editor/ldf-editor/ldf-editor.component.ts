@@ -220,7 +220,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   add(manager: LocalDocumentManager, base : string, index: number, template : LiturgicalDocument[]) {
-    const change = new Change({
+    /*const change = new Change({
       path: base, 
       op: template.reverse() // list inserts are *before* an index, so if we reverse the array it'll end up in the right order
         .map(value => ({
@@ -230,7 +230,20 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         }))
     });
     console.log(change);
-    this.editorService.processChange(manager, change);
+    this.editorService.processChange(manager, change);*/
+    template.reverse().forEach(value => {
+      this.editorService.processChange(
+        manager,
+        new Change({
+          path: base,
+          op: [{
+            type: 'insertAt',
+            index,
+            value
+          }]
+        })
+      )
+    })
   }
 
   replace(manager : LocalDocumentManager, base : string, index : number,  oldValue : LiturgicalDocument, template : LiturgicalDocument[]) {

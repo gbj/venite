@@ -15,6 +15,7 @@
 </ion-header>
 
 <ng-container *ngIf="doc$ | async as doc else loading">
+  <pre>{{ doc | json }} </pre>
   <ion-content *ngIf="useBackgroundColor" [fullscreen]="true" class="ion-padding bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
     <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
       <ldf-liturgical-document [doc]="doc" [editable]="false"></ldf-liturgical-document>

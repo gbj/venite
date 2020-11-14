@@ -5,37 +5,33 @@
         <ion-back-button></ion-back-button>
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
+      <ion-title *ngIf="doc$ | async as doc else prayTheOffice">{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
       <ion-buttons collapse="true" slot="end" *ngIf="doc$ | async as doc">
-        <ng-container *ngIf="userProfile$ | async as user">
-          <ng-container *ngIf="userOrgs$ | async as orgs">
-            <ion-button (click)="editBulletin(user, doc, orgs)" aria-label="Edit">
-              <ion-icon slot="icon-only" name="create"></ion-icon>
-            </ion-button>
-          </ng-container>
-        </ng-container>
-        <ion-button *ngIf="settings$ | async as settings" (click)="openSettings(settings)" aria-label="Settings">
-          <ion-icon slot="icon-only" name="cog"></ion-icon>
-        </ion-button>
         <venite-auth-menu-button></venite-auth-menu-button>
+        <ion-button *ngIf="actionSheetData$ | async as data" (click)="actionSheet(data)" aria-label="More Actions">
+          <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+        </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-content [fullscreen]="true" class="ion-padding bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
-    <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
-      <ldf-liturgical-document
-        *ngIf="doc$ | async as doc else loading"
-        path="/"
-        [doc]="doc"
-        [editable]="false"
-        (ldfDocShouldChange)="changeDoc(doc, $event)"
-      ></ldf-liturgical-document>
-    </div>
+    <ng-container *ngIf="doc$ | async as doc else loading">
+      <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+        <ldf-liturgical-document
+          path="/"
+          [doc]="doc"
+          [editable]="false"
+          (ldfDocShouldChange)="changeDoc(doc, $event)"
+        ></ldf-liturgical-document>
+      </div>
+    </ng-container>
   </ion-content>
 </ng-container>
   
 <ng-template #loading>
-  <ion-content>
-    <div class="loading">{{ 'Loading' | translate }}</div>
-  </ion-content>
+  <div class="loading">{{ 'Loading' | translate }}</div>
+</ng-template>
+
+<ng-template #prayTheOffice>
+  <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
 </ng-template>

@@ -106,13 +106,16 @@ import { PrayPageModule } from '@venite/ng-pray';
         meditation: true,
         antiphons: true,
         fonts: [
-          { value: 'garamond', label: 'Garamond' },
+          { value: 'garamond', label: 'Cormorant Garamond' },
+          { value: 'eb-garamond', label: 'EB Garamond' },
           { value: 'gill-sans', label: 'Gill Sans' }
         ],
         dropcaps: [
           { value: 'plain', label: 'Y' },
+          { value: 'decorated', label: 'D' },
           { value: 'none', label: 'N' }
-        ]
+        ],
+        ask_about_unison_texts: true
       },
       liturgySettings: {
         sundayCollectsFirst: true,

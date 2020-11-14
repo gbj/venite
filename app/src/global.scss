@@ -27,6 +27,7 @@
 
 /** Venite LDF CSS Variables — defined in @venite/components */
 :root {
+  --ldf-liturgical-document-margin-top: 1em;
   --ldf-background-color: #ffffff;
   --ldf-color: #121212;
   --ldf-text-align: justify;
@@ -55,6 +56,7 @@
 	--ldf-drop-font-size: 2.3em;
 	--ldf-drop-margin-right: 0.05em;
   --ldf-drop-line-height: 1em;
+  --ldf-buffered-drop-margin-right: 0.15em;
   --ldf-bible-reading-verse-number-display: inline;
   --ldf-bible-reading-citation-float: right;
   --ldf-h3-text-align: left;
@@ -76,8 +78,12 @@
   }
 
   /* Font preference */
-  --ldf-font-face: 'EB Garamond', 'Garamond', serif;
+  --ldf-font-face: 'Cormorant Garamond', 'Garamond', serif;
   --ldf-controls-font-family: 'Roboto', sans-serif;
+
+  .font-eb-garamond {
+    --ldf-font-face: 'EB Garamond', 'Garamond', serif;
+  }
 
   .font-gill-sans {
     --ldf-font-face: 'Gill Sans', sans-serif;
@@ -111,6 +117,38 @@
     --ldf-response-font-style: italic;
   }
 
+  /* Unison Styling */
+  .bolded-both {
+    --ldf-unison-font-weight: var(--ldf-response-font-weight);
+    --ldf-unison-font-style: var(--ldf-response-font-style);
+  }
+
+  .bolded-none {
+    --ldf-unison-font-weight: normal;
+    --ldf-unison-font-style: normal;
+    --ldf-response-font-weight: normal;
+    --ldf-response-font-style: normal;
+  }
+
+  .bolded-response {
+    --ldf-unison-font-weight: normal;
+    --ldf-unison-font-style: normal;
+  }
+
+  .bolded-unison.response-bold {
+    --ldf-unison-font-weight: bold;
+    --ldf-unison-font-style: normal;
+    --ldf-response-font-weight: normal;
+    --ldf-response-font-style: normal;
+  }
+
+  .bolded-unison.response-italics {
+    --ldf-unison-font-weight: normal;
+    --ldf-unison-font-style: italic;
+    --ldf-response-font-weight: normal;
+    --ldf-response-font-style: normal;
+  }
+
   /* Editable Text */
   --ldf-text-border-width: 1px;
   --ldf-text-border-bottom-width: 3px;
@@ -127,6 +165,7 @@
   /* Psalm/Refrain shared styling */
   --ldf-antiphon-font-style: italic;
   --ldf-antiphon-font-weight: normal;
+  --ldf-psalm-first-verse-number-display: none;
   --ldf-psalm-number-display: inline-block;
   --ldf-psalm-grid-display: grid;
   --ldf-psalm-grid-template-columns: 2em 1fr;
@@ -163,7 +202,7 @@
 
   /* Dropcap styling */
   --ldf-drop-firstword-font-variant: small-caps;
-  --ldf-drop-font-family: 'EB Garamond Initials', 'EB Garamond', 'Garamond', serif;
+  --ldf-drop-font-family: 'Cormorant Garamond Initials', 'Cormorant Garamond', 'Garamond', serif;
   --ldf-drop-font-size: 2.5em;
   --ldf-drop-margin-right: 0.05em;
 
@@ -176,11 +215,19 @@
   }
 
   .dropcaps-plain {
-    --ldf-drop-font-family: 'EB Garamond';
+    --ldf-drop-font-family: var(--ldf-font-face);
     --ldf-drop-font-size: 2.7em;
     --ldf-drop-margin-right: 0.05em;
-    --ldf-drop-margin-top: -0.05em;
-    --ldf-drop-line-height: 1em;
+    --ldf-drop-margin-top: 0.15em;
+    --ldf-drop-line-height: 0.6em;
+  }
+
+  .dropcaps-decorated {
+    --ldf-drop-font-family: 'EB Garamond Initials';
+    --ldf-drop-font-size: 2.7em;
+    --ldf-drop-margin-right: 0.05em;
+    --ldf-drop-margin-top: 0.15em;
+    --ldf-drop-line-height: 0.6em;
   }
 
   @media(min-width: 767px) {
@@ -192,8 +239,15 @@
     .dropcaps-plain{
       --ldf-drop-font-size: 3.5em;
       --ldf-drop-margin-right: 0.05em;
-      --ldf-drop-margin-top: -0.05em;
-      --ldf-drop-line-height: .8em;
+      --ldf-drop-margin-top: 0.1em;
+      --ldf-drop-line-height: 0.5em;
+    }
+
+    .dropcaps-decorated {
+      --ldf-drop-font-size: 3.5em;
+      --ldf-drop-margin-right: 0.05em;
+      --ldf-drop-margin-top: 0.1em;
+      --ldf-drop-line-height: 0.5em;
     }
 
     .dropcaps-none {

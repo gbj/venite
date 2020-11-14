@@ -9,6 +9,7 @@ import { PREFERENCES_SERVICE, PreferencesServiceInterface, LectionaryServiceInte
 import { tap, switchMap, map, startWith } from 'rxjs/operators';
 import { DOCUMENT_SERVICE } from '@venite/ng-service-api';
 import { DocumentServiceInterface } from '@venite/ng-service-api';
+import { PrayService } from '@venite/ng-pray';
 
 type PrayData = {
   user: User;
@@ -76,6 +77,7 @@ export class PrayMenuComponent implements OnInit {
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     @Inject(LECTIONARY_SERVICE) private lectionary : LectionaryServiceInterface,
     @Inject(DOCUMENT_SERVICE) private documentService : DocumentServiceInterface,
+    private prayService : PrayService,
     private router : Router,
     private alert : AlertController,
     private translate : TranslateService,
@@ -124,10 +126,10 @@ export class PrayMenuComponent implements OnInit {
     this.auth.user,
     this.liturgy,
     this.date,
-    this.properLiturgy.pipe(startWith(null)),
-    this.liturgicalDay.pipe(startWith(null)),
-    this.clientPreferences.pipe(startWith({})),
-    this.availableReadings$.pipe(startWith([]))
+    this.properLiturgy,
+    this.liturgicalDay,
+    this.clientPreferences,
+    this.availableReadings$
   ]).pipe(
     map(([user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings]) => ({
       user: user as User,

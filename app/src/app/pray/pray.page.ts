@@ -3,9 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
-import { ModalController } from '@ionic/angular';
+import { ActionSheetController, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
-import { DisplaySettings, PrayService, DisplaySettingsComponent } from '@venite/ng-pray';
+import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
+import { PrayService } from './pray.service';
 import { AuthService } from '../auth/auth.service';
 import { DocumentService } from '../services/document.service';
 import { UserProfile } from '../auth/user/user-profile';
@@ -13,12 +14,20 @@ import { Organization } from '../organization/organization';
 import { OrganizationService } from '../organization/organization.module';
 import { EditorService } from '../editor/ldf-editor/editor.service';
 import * as json1 from 'ot-json1';
-import { Subject } from 'rxjs/internal/Subject';
+import { TranslateService } from '@ngx-translate/core';
+import { DownloadService } from '../services/download.service';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
   day: LiturgicalDay;
   prefs: ClientPreferences;
+}
+
+type ActionSheetData = {
+  doc: LiturgicalDocument;
+  settings: DisplaySettings;
+  userProfile: UserProfile | null;
+  userOrgs: Organization[];
 }
 
 @Component({
@@ -41,17 +50,23 @@ export class PrayPage implements OnInit {
 
   day$ : Observable<LiturgicalDay>;
 
+  actionSheetData$ : Observable<ActionSheetData>;
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
     @Inject(DOCUMENT_SERVICE) private documents : DocumentService,
     @Inject(CALENDAR_SERVICE) private calendarService : CalendarServiceInterface,
     public prayService : PrayService,
+    //public prayService : PrayService,
     private modal : ModalController,
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
     @Inject(AUTH_SERVICE) public auth : AuthService,
     private organizationService : OrganizationService,
-    private editorService : EditorService
+    private editorService : EditorService,
+    private translate : TranslateService,
+    private downloadService : DownloadService,
+    private actionSheetController : ActionSheetController
   ) { }
 
   ngOnInit() {
@@ -59,7 +74,7 @@ export class PrayPage implements OnInit {
     // This probably means we came from the home page and clicked Pray, so the liturgy
     // and liturgical day had been preloaded
     const windowHistoryState$ : Observable<PrayState> = this.router.events.pipe(
-      mapTo(window && window.history.state),
+      mapTo(window?.history?.state),
       tap(windowHistoryState => console.log('windowHistoryState', windowHistoryState)),
     );
 
@@ -148,7 +163,8 @@ export class PrayPage implements OnInit {
     // Unite the data passed from the state and the data derived from the route
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
       filter(state => state && Boolean(state.liturgy) && (Boolean(state.day) || Boolean(state.liturgy.day))),
-    )
+      take(1)
+    );
 
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
@@ -180,7 +196,8 @@ export class PrayPage implements OnInit {
       this.grabPreference('psalmVerses'),
       this.grabPreference('bibleVerses'),
       this.grabPreference('meditationBell'),
-      this.grabPreference('darkmode')
+      this.grabPreference('darkmode'),
+      this.grabPreference('bolded')
     ]).pipe(
       map(settings => new DisplaySettings( ... settings))
     );
@@ -191,6 +208,20 @@ export class PrayPage implements OnInit {
     this.userOrgs$ = this.userProfile$.pipe(
       switchMap(user => user ? this.organizationService.organizationsWithUser(user?.uid) : [])
     );
+
+    this.actionSheetData$ = combineLatest([
+      this.doc$.pipe(startWith(new LiturgicalDocument())),
+      this.settings$.pipe(startWith(new DisplaySettings())),
+      this.userOrgs$.pipe(startWith([])),
+      this.userProfile$.pipe(startWith(null))
+    ]).pipe(
+      map(([doc, settings, userOrgs, userProfile]) => ({
+        doc,
+        settings,
+        userOrgs,
+        userProfile
+      }))
+    )
   }
 
   /* Display Settings */
@@ -222,7 +253,8 @@ export class PrayPage implements OnInit {
       `fontscale-${settings.fontscale.toString()}`,
       `font-${settings.font}`,
       `psalmverses-${settings.psalmVerses}`,
-      `bibleverses-${settings.bibleVerses}`
+      `bibleverses-${settings.bibleVerses}`,
+      `bolded-${settings.bolded}`
     ];
   }
 
@@ -249,5 +281,100 @@ export class PrayPage implements OnInit {
     const op = this.editorService.opFromChange(event.detail);
     const newValue = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(doc)), op) as Partial<LiturgicalDocument>);
     this.modifiedDoc$.next(newValue);
+  }
+
+  async convertToDocx(doc : LiturgicalDocument, settings : DisplaySettings) {
+    console.log('(convertToDocx)', doc, settings);
+    const filename = `${doc.label}${doc?.day?.date ? ` - ${doc.day.date}` : ''}.docx`,
+      resp = await fetch(`https://us-central1-venite-2.cloudfunctions.net/docx`, {
+        method: 'POST',
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ doc, settings })
+      }),
+      blob = await resp.blob();
+    this.downloadService.download(blob, filename);
+  }
+
+  async actionSheet(data : ActionSheetData) {
+    const canDownloadWord = !!URL.createObjectURL;
+
+    // Action Sheet
+    let buttons : any[] = [
+      {
+        text: this.translate.instant('Cancel'),
+        icon: 'close',
+        role: 'cancel'
+      }
+    ];
+    /*if(this.voiceChoices && !this.speechPlaying && !this.hasPending) {
+      buttons.push({
+        text: 'Read Aloud',
+        icon: 'headset',
+        handler: () => this.speak()
+      })
+    }*/
+    if(canDownloadWord) {
+      buttons.push({
+        text: this.translate.instant('Open in Word'),
+        icon: 'document',
+        handler: () => this.convertToDocx(data.doc, data.settings)
+      });
+    }
+    /*if(this.isBulletin && !this.bulletinDraftId) {
+      buttons.push({
+        text: 'Bookmark this Bulletin',
+        icon: 'bookmark',
+        handler: async () => {
+          this.bulletin.bookmarkBulletin(this.loadedBulletin).then(async () => {
+            const toast = await this.toast.create({
+              message: 'The bulletin has been bookmarked and will appear in the Bulletins page.',
+              duration: 2000
+            });
+            toast.present();
+          });
+        }
+      });
+    }
+    buttons.push({
+      text: 'Pray Together',
+      icon: 'chatbubbles',
+      //@ts-ignore
+      handler: async () => TogetherJS()
+    });*/
+    buttons = buttons.concat([
+      {
+        text: 'Show Settings',
+        icon: 'cog',
+        handler: () => {
+          this.actionSheetController.dismiss();
+          this.openSettings(data.settings);
+        }
+      },
+      {
+        text: 'Edit Bulletin',
+        icon: 'create',
+        handler: () => {
+          this.actionSheetController.dismiss();
+          this.editBulletin(data.userProfile, data.doc, data.userOrgs);
+        }
+      },
+      /*{
+        text: 'Share Bulletin Link',
+        icon: 'link',
+        handler: () => {
+          this.actionsheet.dismiss();
+          this.saveBulletin();
+        }
+      }*/
+    ]);
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Actions',
+      buttons
+    });
+    await actionSheet.present();
   }
 }

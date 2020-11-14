@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from '@venite/ldf';
-import { Observable, of } from 'rxjs';
+import { ReplaySubject, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LectionaryService {
+  private _cached_rcl : Record<string, ReplaySubject<LectionaryEntry[]>> = {};
 
   constructor(
     private readonly afs : AngularFirestore,
@@ -19,7 +20,7 @@ export class LectionaryService {
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
       return this.rcl(dateFromYMDString(day.date), lectionaryName, day.propers, day.years['rclsunday'], day.slug).pipe(
-        map(readings => readings.filter(reading => reading.type === readingType))
+        map(readings => readings.filter(reading => !readingType || reading.type === readingType)),
       );
     }
     // search for other readings in our DB
@@ -70,8 +71,17 @@ export class LectionaryService {
     // TODO integrate RCL API into a Cloud Function
     const y = date.getFullYear(),
       m = date.getMonth() + 1,
-      d = date.getDate();
-    return this.http.get<LectionaryEntry[]>(`https://www.venite.app/api/lectionary/reading/?y=${y}&m=${m}&d=${d}&lectionary=${lectionary}&propers=${propers}&year=${year}&day=${day}`);
+      d = date.getDate(),
+      slug = `${y}-${m}-${d}-${lectionary}-${propers}-${year}-${day}`;
+    if(this._cached_rcl[slug]) {
+      return this._cached_rcl[slug];
+    } else {
+      this._cached_rcl[slug] = new ReplaySubject();
+      this.http.get<LectionaryEntry[]>(`https://www.venite.app/api/lectionary/reading/?y=${y}&m=${m}&d=${d}&lectionary=${lectionary}&propers=${propers}&year=${year}&day=${day}`).subscribe(
+        data => this._cached_rcl[slug].next(data)
+      );
+      return this._cached_rcl[slug];
+    }
   }
 
 }

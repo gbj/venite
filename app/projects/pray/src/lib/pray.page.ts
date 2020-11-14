@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith } from 'rxjs/operators';
+import { mapTo, switchMap, map, tap, filter, startWith, take } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference } from '@venite/ldf';
 import { PrayService } from './pray.service';
 import { ModalController } from '@ionic/angular';
@@ -106,7 +106,7 @@ export class PrayPage implements OnInit {
     // if the state is already present, due to the take(1)
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
       filter(state => state && Boolean(state.day) && Boolean(state.liturgy)),
- //     take(1)
+      take(1)
     )
 
     this.doc$ = this.state$.pipe(
@@ -172,7 +172,8 @@ export class PrayPage implements OnInit {
       `fontscale-${settings.fontscale.toString()}`,
       `font-${settings.font}`,
       `psalmverses-${settings.psalmVerses}`,
-      `bibleverses-${settings.bibleVerses}`
+      `bibleverses-${settings.bibleVerses}`,
+      `bolded-${settings.bolded}`
     ];
   }
 }

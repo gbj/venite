@@ -76,7 +76,9 @@
       "XL": "XL",
       "XXL": "XXL"
     },
-    "Voice": "Voice"
+    "Voice": "Voice",
+    "Response-and-Unison-Bolded": "Responses & Unison",
+    "Unison": "Unison"
   },
   "editor": {
     "confirm_deletion_header": "Delete “{{label}}”",

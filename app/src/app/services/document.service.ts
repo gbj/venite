@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
 import { Observable, from, of, combineLatest } from 'rxjs';
-import { filter, map, startWith, switchMap, tap } from 'rxjs/operators';
+import { catchError, filter, map, startWith, switchMap, tap } from 'rxjs/operators';
 
-import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString } from '@venite/ldf';
+import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString, Text } from '@venite/ldf';
 import { DTO } from './dto';
 import { Organization } from '../organization/organization';
 import * as firebase from 'firebase';
@@ -16,6 +16,19 @@ export interface IdAndDoc {
   data: LiturgicalDocument;
 }
 
+const LOADING = new Text({
+  type: 'text',
+  style: 'text',
+  value: ['Loading...']
+});
+
+const ERROR = new Text({
+  type: 'text',
+  style: 'text',
+  display_format: 'unison',
+  value: ['*An error has occurred while trying to load part of this liturgy. It has been logged automatically. Sorry for the inconvenience!*']
+})
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,8 +39,17 @@ export class DocumentService {
     private auth : AuthService
   ) { }
 
+  handleError(error : any) {
+    this.logError(error);
+    return of([ERROR]);
+  }
+
+  // TODO
+  logError(error : any) {
+    console.warn('Caught Error', error);
+  }
+
   /** Returns an array of all the public documents that match each of the provided properties of `query` */
-  // TODO -- returns empty array?
   find(query : Partial<LiturgicalDocument>) : Observable<LiturgicalDocument[]> {
     return this.afs.collection<LiturgicalDocument>('Document', ref => {
       let builtQuery = ref.where('sharing.status', '==', 'published').where('sharing.privacy', '==', 'public');
@@ -115,15 +137,19 @@ export class DocumentService {
 
     const myDocs$ = this.auth.user.pipe(
       switchMap(user => {
-        return this.afs.collection<LiturgicalDocument>('Document', ref => {
-          let query = ref.where('slug', '==', slug)
-            .where('language', '==', language)
-            .where('sharing.owner', '==', user?.uid)
-          if(versions?.length > 0) {
-            query = query.where('version', 'in', versions);
-          }
-          return query;
-        }).valueChanges()
+        if(user?.uid) {
+          return this.afs.collection<LiturgicalDocument>('Document', ref => {
+            let query = ref.where('slug', '==', slug)
+              .where('language', '==', language)
+              .where('sharing.owner', '==', user?.uid)
+            if(versions?.length > 0) {
+              query = query.where('version', 'in', versions);
+            }
+            return query;
+          }).valueChanges()
+        } else {
+          return of([]);
+        }
       })
     );
 
@@ -152,7 +178,9 @@ export class DocumentService {
         const aIndex = (versions || []).indexOf(versionToString(a.version));
         const bIndex = (versions || []).indexOf(versionToString(b.version));
         return aIndex < bIndex ? -1 : 1;
-      }))
+      })),
+      startWith([LOADING]),
+      catchError((error) => this.handleError(error))
     );
   }
 
@@ -171,7 +199,9 @@ export class DocumentService {
         } else {
           return docs;
         }
-      })
+      }),
+      startWith([LOADING]),
+      catchError((error) => this.handleError(error))
     );
   }
 

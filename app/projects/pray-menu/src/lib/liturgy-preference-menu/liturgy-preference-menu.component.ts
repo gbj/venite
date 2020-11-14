@@ -2,10 +2,12 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChange
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
-import { map, tap, filter } from 'rxjs/operators';
+import { map, tap, filter, startWith } from 'rxjs/operators';
 
 import { Liturgy, Preference, ClientPreferences, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
 import { PreferencesServiceInterface, PREFERENCES_SERVICE } from '@venite/ng-service-api';
+import { AUTH_SERVICE } from '@venite/ng-service-api';
+import { AuthServiceInterface } from '@venite/ng-service-api';
 
 interface TreeData {
   preferences: [string, Preference][];
@@ -28,6 +30,8 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   @Input() liturgy : Liturgy;
   @Output() clientPreferencesChange : EventEmitter<ClientPreferences> = new EventEmitter();
 
+  uid$ : Observable<string>;
+
   // starts with input, updated on changes
   preferences : BehaviorSubject<{ [x: string]: Preference}> = new BehaviorSubject({});
 
@@ -42,10 +46,16 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
   constructor(
     @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
-    private fb : FormBuilder
+    private fb : FormBuilder,
+    @Inject(AUTH_SERVICE) private auth : AuthServiceInterface
   ) { }
 
   ngOnInit() {
+    this.uid$ = this.auth.user.pipe(
+      startWith(undefined),
+      map(user => user?.uid || 'none'),
+    )
+
     // `tree` provides `categories` and `preference_tree`
     this.tree = this.buildTree();
 
@@ -110,13 +120,15 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
         }), {}))
       })),
       // emit the initial value
-      tap(({ categories, preference_tree, form}) => this.clientPreferencesChange.emit(form.value))
+      tap(({ form }) => this.clientPreferencesChange.emit(form.value))
     )
   }
 
   // fired by a form control
-  update(form : FormGroup, key : string, value : string) {
+  update(form : FormGroup, key : string, value : string, uid : string) {
     form.controls[key].setValue(value);
     this.clientPreferencesChange.emit(form.value);
+    this.preferencesService.set(key, value, uid, this.liturgy);
+    console.log('updated preference', key, ' to ', value);
   }
 }
