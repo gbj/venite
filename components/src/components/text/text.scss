@@ -22,8 +22,8 @@ li, h1, h2, h3, h4, h5, h6, ol, span, em, strong {
 }
 
 .text.unison p {
-  font-weight: var(--ldf-response-font-weight);
-  font-style: var(--ldf-response-font-style);
+  font-weight: var(--ldf-unison-font-weight);
+  font-style: var(--ldf-unison-font-style);
 }
 
 /* .text.abbreviated is handled in the DOM itself, in the component */
