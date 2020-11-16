@@ -42,6 +42,7 @@
   '11/9',
   '11/16',
   '11/23',
+  '11/30',
 ]
 
-*Defined in [calendar/utils/propers.ts:1](https://github.com/gbj/venite/blob/7d26fef/ldf/src/calendar/utils/propers.ts#L1)*
+*Defined in [calendar/utils/propers.ts:1](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/utils/propers.ts#L1)*
