@@ -28,4 +28,5 @@ export const PROPERS: string[] = [
   '11/9',
   '11/16',
   '11/23',
+  '11/30'
 ];
