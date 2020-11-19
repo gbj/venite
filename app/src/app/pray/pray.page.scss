@@ -11,6 +11,7 @@
 .bordered {
   border-left: 1em solid var(--ion-background-color, #fff);
   border-right: 1em solid var(--ion-background-color, #fff);
+  transition: all 0.5s ease;
 }
 
 @media(min-width: 767px) {
@@ -23,4 +24,16 @@
   .bordered {
     border-width: 6em;
   }
+}
+
+.display-hidden {
+  visibility: hidden;
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

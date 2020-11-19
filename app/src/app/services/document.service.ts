@@ -296,7 +296,7 @@ export class DocumentService {
         return of(color.hex);
       } else {
         return this.afs.collection<LiturgicalColor>('Color', ref =>
-          ref.where('name', '==', color)
+          ref.where('name', '==', color.toLowerCase())
         ).valueChanges().pipe(
           map(colors => colors.length > 0 ? colors[0].hex : color)
         );
