@@ -86,7 +86,8 @@ export class PreferencesService {
       this.getUpdated(key), // local value updated recently by user
       this.getStored(key) // observable of Firebase stored preference
     ).pipe(
-      filter(value => value !== undefined)
+      filter(value => value !== undefined),
+      tap(value => console.log('preference ', key, 'is', value))
     );
   }
 

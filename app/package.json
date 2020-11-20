@@ -34,7 +34,7 @@
     "@venite/bible-api": "0.0.12",
     "@venite/components": "^0.11.38",
     "@venite/ldf": "^0.13.12",
-    "@venite/ng-darkmode": "0.0.8",
+    "@venite/ng-darkmode": "0.0.9",
     "@venite/ng-localstorage": "0.0.3",
     "@venite/ng-platform": "0.0.2",
     "@venite/ng-pray": "^0.5.11",

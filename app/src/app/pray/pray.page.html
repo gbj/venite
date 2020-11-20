@@ -15,7 +15,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content #content [fullscreen]="true">
-    <div *ngIf="color$ | async as color" class="bordered"  [style.background]="color$ | async" [style.border-color]="color$ | async">
+    <div class="bordered"  [style.background]="color$ | async" [style.border-color]="color$ | async">
       <ng-container *ngIf="doc$ | async as doc else loading">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
           <ldf-liturgical-document

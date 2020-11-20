@@ -36,7 +36,7 @@ body {
 /** Venite LDF CSS Variables — defined in @venite/components */
 :root {
   --ldf-liturgical-document-margin-top: 1em;
-  --ldf-background-color: #ffffff;
+  --ldf-background-color: #fafafa;
   --ldf-color: #121212;
   --ldf-text-align: justify;
   --ldf-editable-lookup-background-color: #f0f0f0;
@@ -71,19 +71,6 @@ body {
   --ldf-h3-font-variant: normal;
   --ldf-h3-font-weight: bold;
   --ldf-heading-margin-top: 3em;
-
-  /* Globals/Dark Mode */
-  --ldf-background-color: #ffffff;
-  --ldf-color: #121212;
-
-  .dark {
-    --ldf-background-color: #ffffff;
-    --ldf-color: #121212;
-    --ldf-editable-lookup-background-color: #242424;
-    --ldf-editable-lookup-color: #f0f0f0;
-    --ldf-editable-condition-background-color: #525242;
-    --ldf-editable-condition-color: #f0f0f0;
-  }
 
   /* Font preference */
   --ldf-font-face: 'Cormorant Garamond', 'Garamond', serif;
@@ -335,13 +322,11 @@ body {
   white-space: nowrap; /* added line */
 }
 
-venite-pray ion-content div.ldf-wrapper {
-  max-width: calc(600px + 2em);
-  margin: auto;
-  background-color: var(--ldf-background-color);
-  padding: 2em;
-}
-
 ul {
   font-family: inherit;
+}
+
+.dark .bordered {
+  border-width: 0 !important;
+  background-color: var(--ldf-background-color) !important;
 }

@@ -4,6 +4,7 @@ import { Platform, MenuController } from '@ionic/angular';
 
 // Community Modules
 import { TranslateService } from '@ngx-translate/core';
+import { DarkmodeService } from '@venite/ng-darkmode';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { AuthService } from './auth/auth.service';
@@ -24,8 +25,8 @@ export class AppComponent {
     private platform : Platform,
     private translate : TranslateService,
     private auth : AuthService,
-    private organizationService : OrganizationService
-//    private darkMode : DarkmodeService
+    private organizationService : OrganizationService,
+    private darkMode : DarkmodeService
   ) {
     this.initializeApp();
     this.translate.use('en');
@@ -41,10 +42,10 @@ export class AppComponent {
 //      this.statusBar.styleDefault();
 //      this.splashScreen.hide();
 
-/*      this.darkMode.prefersDark.subscribe(prefersDark => {
+      this.darkMode.prefersDark.subscribe(prefersDark => {
         console.log('now prefers dark', prefersDark);
         document.body.classList.toggle('dark', prefersDark);
-      });*/
+      });
     });
   }
 }

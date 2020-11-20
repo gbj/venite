@@ -3,6 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-background-color: #fafafa;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -299,7 +301,14 @@ body.dark {
   --venite-color-text: #f0f0f0;
   --venite-background-color: #000000;
   --apple-button-background: #ffffff;
-  --apple-button-color: #121212
+  --apple-button-color: #121212;
+
+  --ldf-background-color: var(--ion-item-background);
+  --ldf-color: #f0f0f0;
+  --ldf-editable-lookup-background-color: #242424;
+  --ldf-editable-lookup-color: #f0f0f0;
+  --ldf-editable-condition-background-color: #525242;
+  --ldf-editable-condition-color: #f0f0f0;
 }
 
 /*
@@ -338,6 +347,13 @@ body.dark {
 
   --ion-item-background: #1c1c1c;
   --ion-item-background-activated: #313131;
+
+  --ldf-background-color: var(--ion-item-background);
+  --ldf-color: #f0f0f0;
+  --ldf-editable-lookup-background-color: #242424;
+  --ldf-editable-lookup-color: #f0f0f0;
+  --ldf-editable-condition-background-color: #525242;
+  --ldf-editable-condition-color: #f0f0f0;
 }
 
 
@@ -376,4 +392,11 @@ body.dark {
   --ion-color-step-950: #f3f3f3;
 
   --ion-item-background: #1A1B1E;
+
+  --ldf-background-color: var(--ion-item-background);
+  --ldf-color: #f0f0f0;
+  --ldf-editable-lookup-background-color: #242424;
+  --ldf-editable-lookup-color: #f0f0f0;
+  --ldf-editable-condition-background-color: #525242;
+  --ldf-editable-condition-color: #f0f0f0;
 }
