@@ -145,8 +145,13 @@ export class PrayPage implements OnInit {
 
   /* Display Settings */
   async openSettings(settings : DisplaySettings) {
+    const voiceChoices = window?.speechSynthesis?.getVoices() ?? [];
+  
     const modal = await this.modal.create({
       component: DisplaySettingsComponent,
+      componentProps: {
+        voiceChoices
+      }
     });
 
     modal.componentProps = {

@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable, of, combineLatest, merge, BehaviorSubject, interval } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay } from 'rxjs/operators';
+import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
-import { ActionSheetController, ModalController } from '@ionic/angular';
+import { ActionSheetController, IonContent, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
 import { PrayService } from './pray.service';
@@ -16,6 +16,8 @@ import { EditorService } from '../editor/ldf-editor/editor.service';
 import * as json1 from 'ot-json1';
 import { TranslateService } from '@ngx-translate/core';
 import { DownloadService } from '../services/download.service';
+import { SpeechService, SpeechServiceTracking } from '../services/speech.service';
+import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -52,6 +54,14 @@ export class PrayPage implements OnInit {
 
   actionSheetData$ : Observable<ActionSheetData>;
 
+  // TTS
+  speechPlaying : boolean = false;
+  speechSubscription : Subscription;
+  speechPlayingSubDoc : number = 0;
+  speechPlayingUtterance : number = 0;
+  speechUtteranceAtStartOfSubDoc : number = 0;
+  @ViewChild(IonContent, {read: IonContent, static: false}) contentEl: IonContent;
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
@@ -66,7 +76,8 @@ export class PrayPage implements OnInit {
     private editorService : EditorService,
     private translate : TranslateService,
     private downloadService : DownloadService,
-    private actionSheetController : ActionSheetController
+    private actionSheetController : ActionSheetController,
+    public speechService : SpeechService
   ) { }
 
   ngOnInit() {
@@ -225,14 +236,18 @@ export class PrayPage implements OnInit {
   }
 
   /* Display Settings */
-  async openSettings(settings : DisplaySettings) {
+  async openSettings(doc : LiturgicalDocument, settings : DisplaySettings) {
     const modal = await this.modal.create({
       component: DisplaySettingsComponent,
     });
 
+    const voiceChoices = (window?.speechSynthesis?.getVoices() ?? [])
+      .filter(voice => voice.lang.startsWith(doc.language ?? 'en'));
+
     modal.componentProps = {
       settings,
-      modal
+      modal,
+      voiceChoices
     };
 
     await modal.present();
@@ -310,13 +325,14 @@ export class PrayPage implements OnInit {
         role: 'cancel'
       }
     ];
-    /*if(this.voiceChoices && !this.speechPlaying && !this.hasPending) {
+    // TODO — when should Speech option be displayed?
+    if(true) { //this.voiceChoices && !this.speechPlaying && !this.hasPending) {
       buttons.push({
         text: 'Read Aloud',
         icon: 'headset',
-        handler: () => this.speak()
+        handler: () => this.startSpeechAt(data.doc, data.settings, 0, 0)
       })
-    }*/
+    }
     if(canDownloadWord) {
       buttons.push({
         text: this.translate.instant('Open in Word'),
@@ -351,7 +367,7 @@ export class PrayPage implements OnInit {
         icon: 'cog',
         handler: () => {
           this.actionSheetController.dismiss();
-          this.openSettings(data.settings);
+          this.openSettings(data.doc, data.settings);
         }
       },
       {
@@ -376,5 +392,77 @@ export class PrayPage implements OnInit {
       buttons
     });
     await actionSheet.present();
+  }
+
+  // TTS
+  startSpeechAt(doc : LiturgicalDocument, settings : DisplaySettings, subdoc : number = 0, utterance : number = 0) {
+    this.speechPlaying = true;
+    this.speechPlayingSubDoc = subdoc;
+    this.speechPlayingUtterance = utterance;
+    this.scrollToSubdoc(subdoc);
+    const utterances$ = //this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? subdoc, this.speechPlayingUtterance ?? utterance);
+    combineLatest([this.doc$, this.settings$]).pipe(
+      filter(([doc, settings]) => Boolean(doc && settings)),
+      //any time the document or settings change, 
+      // cancels the previous TTS reading and restarts it with the new document
+      // and/or settings, starting at the sub-document/utterance indices that had been reached 
+      switchMap(([doc, settings]) => this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? 0, this.speechPlayingUtterance ?? 0)),
+      catchError(e => { console.warn('Caught error', e); return of({subdoc: 0, utterance: 0, data: null})})
+    );
+    this.speechSubscription = utterances$
+    .subscribe(
+      (data : SpeechServiceTracking) => {
+        console.log('(speech) speechService', data);
+        if(this.speechPlayingSubDoc !== data.subdoc) {
+          this.speechUtteranceAtStartOfSubDoc = data.utterance;
+        }
+
+        if(this.speechPlayingSubDoc !== data.subdoc) {
+          this.scrollToSubdoc(data.subdoc);
+        }
+
+        this.speechPlayingSubDoc = data.subdoc ?? 0;
+        this.speechPlayingUtterance = data.utterance ?? 0;
+      },
+      // TODO
+      error => {
+
+      },
+      // TODO: Complete
+      () => {
+
+      }
+    )
+  }
+  scrollToSubdoc(subdoc : number) {
+    const domRepresentation = querySelectorDeep(`[path='/value/${subdoc}']`);
+    console.log('scrolling to subdoc', subdoc, domRepresentation, domRepresentation.getBoundingClientRect());
+    if(domRepresentation) {
+      const y = domRepresentation.getBoundingClientRect().top;
+      this.contentEl.scrollByPoint(0, y - 100, 50);
+    }
+  }
+  pauseSpeech() {
+    this.speechSubscription.unsubscribe();
+    this.speechService.pause();
+  }
+  resumeSpeech(doc : LiturgicalDocument, settings : DisplaySettings) {
+    this.startSpeechAt(doc, settings, this.speechPlayingSubDoc, this.speechPlayingUtterance);
+    this.speechService.resume();
+  }
+  rewind(doc : LiturgicalDocument, settings : DisplaySettings) {
+    this.speechSubscription.unsubscribe();
+    if(this.speechPlayingUtterance - this.speechUtteranceAtStartOfSubDoc < 5) {
+      console.log('rewind to previous doc')
+      this.startSpeechAt(doc, settings, this.speechPlayingSubDoc - 2 >= 0 ? this.speechPlayingSubDoc - 2 : 0);
+    } else {
+      console.log('rewind to beginning of this doc')
+      this.startSpeechAt(doc, settings, this.speechPlayingSubDoc);
+    }
+  }
+  fastForward(doc : LiturgicalDocument, settings : DisplaySettings) {
+    this.speechSubscription.unsubscribe();
+    console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
+    this.startSpeechAt(doc, settings, this.speechPlayingSubDoc + 1);
   }
 }

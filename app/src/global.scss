@@ -25,6 +25,14 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* Allow text selection */
+body {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 /** Venite LDF CSS Variables — defined in @venite/components */
 :root {
   --ldf-liturgical-document-margin-top: 1em;
@@ -327,9 +335,11 @@
   white-space: nowrap; /* added line */
 }
 
-venite-pray ion-content div {
-  max-width: 600px;
+venite-pray ion-content div.ldf-wrapper {
+  max-width: calc(600px + 2em);
   margin: auto;
+  background-color: var(--ldf-background-color);
+  padding: 2em;
 }
 
 ul {

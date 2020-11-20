@@ -12,11 +12,12 @@
   border-left: 1em solid var(--ion-background-color, #fff);
   border-right: 1em solid var(--ion-background-color, #fff);
   transition: all 0.5s ease;
+  width: 100vw;
 }
 
 @media(min-width: 767px) {
   .bordered {
-    border-width: 3em;
+    border-width: 2em;
   }
 }
 

@@ -208,5 +208,20 @@
       "title": "Warning",
       "message": "Not all the readings you’ve selected are available for that day. {{availableList}} are available."
     }
+  },
+  "speech": {
+    "en-AU": "Australian",
+    "en-GB": "British",
+    "en-IE": "Irish",
+    "en-ZA": "South African",
+    "en-US": "American",
+    "en-CA": "Canadian",
+    "en-IN": "Indian",
+    "en-NZ": "New Zealand",
+    "en-scotland": "Scottish",
+    "Rewind": "Rewind",
+    "Pause": "Pause",
+    "Resume": "Resume",
+    "Fast-Forward": "Fast Forward"
   }
 }
