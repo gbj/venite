@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError } from 'rxjs/operators';
@@ -37,7 +37,7 @@ type ActionSheetData = {
   templateUrl: './pray.page.html',
   styleUrls: ['./pray.page.scss'],
 })
-export class PrayPage implements OnInit {
+export class PrayPage implements OnInit, OnDestroy {
   doc$ : Observable<LiturgicalDocument>;
   color$ : Observable<string | null>;
   userProfile$ : Observable<UserProfile | null>;
@@ -79,6 +79,12 @@ export class PrayPage implements OnInit {
     private actionSheetController : ActionSheetController,
     public speechService : SpeechService
   ) { }
+
+  ngOnDestroy() {
+    if(this.speechSubscription) {
+      this.speechSubscription.unsubscribe();
+    }
+  }
 
   ngOnInit() {
     // If passed through router state, it's simply a synchronous `PrayState` object
