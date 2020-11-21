@@ -94,8 +94,6 @@ export class EditableMetadataComponent {
           availableStyles = this.obj.availableStyles() || [],
           availableDisplayFormats = this.obj.availableDisplayFormats() || [];
 
-    console.log(this.obj, 'type = ', this.obj.type, 'availableTypes = ', availableTypes, 'availableStyles = ', availableStyles);
-
     /** <SelectField/> Functional Component */
     interface SelectFieldProps {
       field: string;

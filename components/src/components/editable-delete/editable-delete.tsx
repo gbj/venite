@@ -49,7 +49,6 @@ export class EditableDeleteComponent {
           role: 'submit',
           cssClass: 'danger',
           handler: () => {
-            console.log('deleting ', this.base, this.index);
             this.delete();
           }
         }

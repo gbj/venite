@@ -74,7 +74,6 @@ export class EditableMetadataMetadataFieldsComponent {
   @Prop({ reflect: true }) bibleReadingIntros : LiturgicalDocument[] = new Array();
   @Watch('bibleReadingIntros')
   introsChanged() {
-    console.log('bibleReadingIntros changed to ', this.bibleReadingIntros);
     this.currentBibleReadingIntros = [ ... this.bibleReadingIntros ];
   }
 

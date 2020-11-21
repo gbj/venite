@@ -23,25 +23,20 @@ export class DayNameComponent {
   @Prop() day: LiturgicalDay | string;
   @Watch('day')
   dayChange(newDay : LiturgicalDay | string) {
-    console.log('newDay = ', newDay);
     let provisionalObj : LiturgicalDay;
 
     try {
       if(typeof newDay == 'string') {
         provisionalObj = new LiturgicalDay(JSON.parse(newDay));
-        console.log('A. provisionalObj = ', provisionalObj);
       } else {
         provisionalObj = new LiturgicalDay(newDay);
-        console.log('B. provisionalObj = ', provisionalObj);
       }
     } catch(e) {
-      console.log(e);
+      console.warn('(ldf-day-name)', e);
       provisionalObj = new LiturgicalDay();
-      console.log('C. provisionalObj = ', provisionalObj);
     }
 
     this.obj = provisionalObj || new LiturgicalDay();
-    console.log('this.obj = ', this.obj);
   }
 
   // Lifecycle events

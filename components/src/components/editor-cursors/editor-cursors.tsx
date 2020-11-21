@@ -62,16 +62,14 @@ export class EditorComponent {
   // Debounce resetCursors() for e.g., scroll
   @Debounce(20)
   resetCursors() {
-    console.log('resetting cursors from ', this.cursors);
-    const newCursorPos = {},
+        const newCursorPos = {},
           cursors = this.cursors || {};
     Object.keys(cursors).forEach(username => {
       const cursor = cursors[username];
       this.cursorToPos(cursor, username, newCursorPos)
     });
     this.cursorPos = newCursorPos;
-    console.log('reset to ', this.cursorPos);
-  }
+      }
 
   clearCursors() {
     this.cursorPos = {};

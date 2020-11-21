@@ -33,7 +33,6 @@ export class EditableConditionComponent {
   @Watch('condition')
   conditionChange() {
     this.currentCondition = this.condition;
-    console.log('currentCondition = ', this.currentCondition);
   }
 
   /** Used to pass in the `IonModal` we will dismiss */

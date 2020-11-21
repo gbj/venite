@@ -45,8 +45,6 @@ export class EditableAddBlockMenuComponent {
   }
 
   add(item : MenuOption) {
-    //this.modal.dismiss(template);
-    console.log('(ldf-editable-add-block-menu) adding item ', item);
     this.ldfShouldAddBlock.emit(item);
   }
 

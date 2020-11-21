@@ -75,8 +75,7 @@ export class EditorComponent {
   /** Watch for messages that doc should change from child components and emit them from the editor */
   @Listen('ldfDocShouldChange', { target: 'document' })
   onDocShouldChange(ev : CustomEvent) {
-    console.log('ldf-editor is emitting change', ev.detail);
-    this.editorDocShouldChange.emit(ev.detail);
+        this.editorDocShouldChange.emit(ev.detail);
   }
 
   /** Watch for a request to add a new LiturgicalDocument block and emit it from the editor */

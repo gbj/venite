@@ -50,10 +50,8 @@ export class StringComponent {
   // Private methods
   processString() {
     const withoutEntities : string = this.processEntities(this.text);
-    console.log('##1 - withoutEntities\t', withoutEntities);
-    let processed : JSX.Element[] = this.processMarkup(withoutEntities);
-    console.log('##2 - processed\t', processed);
-    if(this.replaceTetragrammaton) {
+        let processed : JSX.Element[] = this.processMarkup(withoutEntities);
+        if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
     }
     if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
@@ -123,8 +121,7 @@ export class StringComponent {
 
   maintainCasing(st : string | undefined) : boolean {
     // God and Roman numerals
-    console.log(`st = "${st}"`)
-    const s = st.replace(/\^/g, '');
+        const s = st.replace(/\^/g, '');
     return s?.toLowerCase() == ' god'
       || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s)
       || s?.toLowerCase() == 'i ';

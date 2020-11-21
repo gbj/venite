@@ -45,8 +45,7 @@ export class OptionComponent {
     this.select(selected);
 
     if(!this.obj?.value || !this.obj.value[selected] || !this.obj.value[selected].value) {
-      console.log('ldf-option selecting first defined')
-      this.selectFirstDefined();
+            this.selectFirstDefined();
     }
     this.filterOptions();
   }
@@ -86,20 +85,17 @@ export class OptionComponent {
     const hadMetadata = Boolean(this.obj?.metadata),
       oldValue = this.obj?.metadata?.editor_selected;
   
-    console.log('selected A = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
-
+    
     if(Number(index) >= 0) {
       this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];
-      console.log('ldf-option new selectedDoc = ', this.selectedDoc);
-      if(this.obj?.metadata) {
+            if(this.obj?.metadata) {
         this.obj.metadata.selected = Number(index);
         this.obj.metadata.editor_selected = Number(index);
       } else {
         this.obj.metadata = { selected: Number(index), editor_selected: Number(index) }
       }
 
-      console.log('selected B = ', this.obj?.metadata?.selected, this.obj?.metadata?.editor_selected);
-  
+        
       if(resultedFromUserAction && !this.editable) {
         this.ldfDocShouldChange.emit(new Change({
           path: `${this.path}/metadata`,
@@ -140,8 +136,7 @@ export class OptionComponent {
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
     } else {
-      console.log('adding another option to Option', this.path, this.obj?.value?.length, this.obj)
-      this.ldfAddOptionToDoc.emit({
+            this.ldfAddOptionToDoc.emit({
         base: this.path,
         index: this.obj?.value?.length,
         obj: this.obj
@@ -152,8 +147,7 @@ export class OptionComponent {
   // Listener for Ionic Select and Segment change events
   @Listen('ionChange')
   onIonChange(ev) {
-    console.log('ionChange');
-    this.select(ev.detail.value, true);
+        this.select(ev.detail.value, true);
   }
 
   // Private methods
@@ -166,8 +160,7 @@ export class OptionComponent {
   selectFirstDefined() {
     const first = this.obj.value.find(opt => opt?.value !== undefined),
           index = this.obj.value.filter(child => Boolean(child)).indexOf(first);
-    console.log('ldf-option selectFirstDefined', first, index);
-    this.select(index);
+        this.select(index);
   }
 
   filterOptions() {
@@ -175,8 +168,7 @@ export class OptionComponent {
       this.obj = new Option({
         ... this.obj,
         value: (this.obj?.value || []).filter(entry => {
-          console.log('filtering entries', entry?.type, entry?.type == 'liturgy' && entry?.value?.length)
-          return Boolean(entry) && Boolean(entry.value);
+                    return Boolean(entry) && Boolean(entry.value);
         })
       });
     }

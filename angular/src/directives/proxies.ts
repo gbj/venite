@@ -1161,10 +1161,12 @@ export declare interface LdfBibleReading extends Components.LdfBibleReading {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-bible-reading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfBibleReading {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
   }
 }
 

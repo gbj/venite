@@ -70,7 +70,6 @@ export class BibleReadingComponent {
     if(this.obj.metadata && this.obj.metadata.intro) {
       try {
         this.obj.compileIntro();
-        console.log('compileIntro', this.obj.metadata.compiled_intro);
         this.obj = new BibleReading({ ... this.obj });
       } catch(e) {
         console.warn(e);
@@ -109,8 +108,6 @@ export class BibleReadingComponent {
         }, {
           text: localeStrings.ok,
           handler: async (data) => {
-            console.log(data);
-
             this.ldfDocShouldChange.emit(new Change({
               path: this.path,
               op: [
