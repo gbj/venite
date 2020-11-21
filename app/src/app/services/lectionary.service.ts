@@ -36,7 +36,10 @@ export class LectionaryService {
         }
         
         if(readingType !== undefined) {
-          query = query.where('type', '==', readingType);
+          // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
+          // so its value is set to 'first_reading_alt'
+          // but it still needs to search for 'first_reading'
+          query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
         }
 
         if(includeDay !== false) {

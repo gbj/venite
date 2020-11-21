@@ -171,7 +171,10 @@ areReadingsAvailable(liturgy : Liturgy, prefs : ClientPreferences, availableRead
   if(readingPrefKeys && readingPrefKeys.length > 0) {
     allReadingsAvailable = readingPrefKeys
      .filter(key => prefs[key].toLowerCase() !== 'none')
-     .map(key => availableReadings.includes(prefs[key]))
+     .map(key => {
+       const t = prefs[key]?.endsWith('_alt') ? prefs[key].replace('_alt', '') : prefs[key];
+       return availableReadings.includes(t);
+     })
      .reduce((a, b) => a && b);
   }
   return allReadingsAvailable;
