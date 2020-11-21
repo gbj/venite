@@ -266,9 +266,6 @@ export class BibleReadingComponent {
 
         return (
           <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
-            {this.editable && <ldf-label-bar>
-              <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>}
             {/* Bible text */}
             <p>
               {this.verses.map(verse =>
@@ -293,11 +290,6 @@ export class BibleReadingComponent {
 
         return (
           <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
-            {/* Slot for controls */}
-            {this.editable && <ldf-label-bar>
-              <slot slot='end' name='controls'></slot>
-            </ldf-label-bar>}
-
             {/* Heading */}
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label], citation: this.obj.citation})}></ldf-heading>
 
