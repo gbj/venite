@@ -111,6 +111,18 @@ export class BibleReadingComponent {
           handler: async (data) => {
             console.log(data);
 
+            this.ldfDocShouldChange.emit(new Change({
+              path: this.path,
+              op: [
+                {
+                  type: 'set',
+                  index: 'citation',
+                  oldValue: this.obj?.citation,
+                  value: data?.citation
+                }
+              ]
+            }));
+
             const loading = await loadingController.create({
               message: localeStrings.loading
             });
@@ -125,20 +137,12 @@ export class BibleReadingComponent {
 
             this.ldfDocShouldChange.emit(new Change({
               path: this.path,
-              op: [
-                {
-                  type: 'set',
-                  index: 'citation',
-                  oldValue: this.obj?.citation,
-                  value: data?.citation
-                },
-                {
-                  type: 'set',
-                  index: 'value',
-                  oldValue: this.obj?.value,
-                  value: newReading?.value || []
-                }
-              ]
+              op: [{
+                type: 'set',
+                index: 'value',
+                oldValue: this.obj?.value,
+                value: newReading?.value || []
+              }]
             }));
 
             this.obj = new BibleReading({
