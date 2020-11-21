@@ -21,6 +21,7 @@
     <section class="additional" [ngSwitch]="additionalMode" [class]="{ 'visible': !!additionalMode, 'hidden': !additionalMode }">          
       <!-- Image -->
       <venite-upload-image *ngSwitchCase="'image'"
+        [uploadPath]="(auth?.user | async)?.uid || 'user'"
         (imageUploaded)="complete.next([$event])"
       ></venite-upload-image>
       

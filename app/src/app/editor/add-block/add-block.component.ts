@@ -1,9 +1,11 @@
-import { Component, Input, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ViewChild, Inject } from '@angular/core';
 import { Observable, Subscription, Subject, of } from 'rxjs';
 import { take, map, tap, switchMap } from 'rxjs/operators';
 import { LiturgicalDocument, sortPsalms, Psalm } from '@venite/ldf';
 //import { MenuOption } from '@venite/components/dist/types/components/editable-add-block-menu/menu-options';
 import { DocumentService } from 'src/app/services/document.service';
+import { AuthServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
+import { AuthService } from 'src/app/auth/auth.service';
 
 class MenuOption {
   label: string;
@@ -40,7 +42,8 @@ export class AddBlockComponent implements OnInit, OnDestroy {
   completeSubscription : Subscription;
 
   constructor(
-    private documentService : DocumentService
+    private documentService : DocumentService,
+    public auth : AuthService
   ) { }
 
   ngOnInit() {}

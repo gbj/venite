@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Image, LiturgicalDocument } from '@venite/ldf';
 import { Observable, of } from 'rxjs';
 import { finalize } from 'rxjs/operators';
@@ -10,6 +10,7 @@ import { UploadService } from 'src/app/services/upload.service';
   styleUrls: ['./upload-image.component.scss'],
 })
 export class UploadImageComponent implements OnInit {
+  @Input() uploadPath : string = 'users/avatar';
   @Output() imageUploaded : EventEmitter<LiturgicalDocument> = new EventEmitter();
 
   isUploading : boolean = false;
@@ -44,7 +45,7 @@ export class UploadImageComponent implements OnInit {
 
   uploadImage(file : File) {
     this.isUploading = true;
-    const filePath = `users/avatar/${new Date().getTime()}-${file.name}`;
+    const filePath = `${this.uploadPath}/${new Date().getTime()}-${file.name}`;
     this.progress$ = this.upload.uploadFile(file, filePath);
 
     // when progress is complete, save the new user image
@@ -54,10 +55,7 @@ export class UploadImageComponent implements OnInit {
         this.isUploading = false;
         // messy but works
         this.preview$.subscribe(
-          (value) => {
-            console.log('newly uploaded image URL = ', value);
-            this.imageUploaded.emit(new Image({ type: 'image', value: [value]}))
-          },
+          (value) => this.imageUploaded.emit(new Image({ type: 'image', value: [value]})),
           (error) => this.error = error.toString()
         );
       })
