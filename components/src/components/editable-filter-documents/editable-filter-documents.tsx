@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Event, EventEmitter, State, h, Watch } from '@stencil/core';
+import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, Method, Host } from '@stencil/core';
 import { LiturgicalDocument } from '@venite/ldf';
 
 import { getComponentClosestLanguage } from '../../utils/locale';
@@ -32,10 +32,13 @@ export class EditableFilterDocumentsComponent {
   search : string;
 
   // Properties
-  @Prop() type: 'psalm' | 'collect' | 'reading';
+  /** ion-modal */
+  @Prop() modal?: any;
+
+  @Prop() type: 'psalm' | 'canticle' | 'collect' | 'reading';
 
   /** Whether to include a `LiturgicalDocument.version` field with the selection */
-  @Prop() versions: {[key: string]: string} = {};
+  @Prop() versions: Record<string, string> = {};
   @Watch('versions')
   versionsChange() {
     if(!this.version) {
@@ -51,8 +54,26 @@ export class EditableFilterDocumentsComponent {
     this.filter(this.search);
   }
 
+  /* Optional callback on a selection */
+  @Prop() changeCallback?: (doc : LiturgicalDocument) => void;
+
   // Events
   @Event() ldfDocumentSelected : EventEmitter<LiturgicalDocument>;
+
+  // Public Methods
+
+  /** Set the list of liturgy versions */
+  @Method()
+  async setVersions(versions : Record<string, string>): Promise<void> {
+    this.versions = { ... versions };
+  }
+
+  /** Set the list of liturgy versions */
+  @Method()
+  async setOptions(options : LiturgicalDocument[]): Promise<void> {
+    this.options = options;
+    this.optionsChange();
+  }
 
   // Lifecycle events
   async componentWillLoad() {
@@ -90,42 +111,62 @@ export class EditableFilterDocumentsComponent {
   }
 
   choose() {
+    if(this.changeCallback) {
+      this.changeCallback(this.doc);
+    }
     this.ldfDocumentSelected.emit(this.doc);
+    if(this.modal) {
+      this.modal.dismiss();
+    }
   }
 
   render() {
     const localeStrings = this.localeStrings || {};
 
     return (
-      <form>
-        <ion-list>
-          {/* Versions, for e.g., psalms */}
-          {this.versions && <ion-item>
-            <ion-label>{ localeStrings.version }</ion-label>
-            <ion-select value={this.version} onIonChange={(ev : CustomEvent) => this.chooseVersion(ev.detail.value)}>
-              {Object.entries(this.versions)
-                .sort((a, b) => a[0] > b[0] ? 1 : -1)
-                .map(([versionKey, versionLabel]) => 
-                <ion-select-option value={versionKey}>{versionLabel}</ion-select-option>
+      <Host>
+        {this.modal && <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button onClick={() => this.modal.dismiss()}>
+                <ion-icon name="close" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>}
+
+        <ion-content>
+          <form>
+            <ion-list>
+              {/* Versions, for e.g., psalms */}
+              {this.versions && <ion-item>
+                <ion-label>{ localeStrings.version }</ion-label>
+                <ion-select value={this.version} onIonChange={(ev : CustomEvent) => this.chooseVersion(ev.detail.value)}>
+                  {Object.entries(this.versions)
+                    .sort((a, b) => a[0] > b[0] ? 1 : -1)
+                    .map(([versionKey, versionLabel]) => 
+                    <ion-select-option value={versionKey}>{versionLabel}</ion-select-option>
+                  )}
+                </ion-select>
+              </ion-item>}
+
+              {/* Search bar to filter the objects */}
+              <ion-searchbar onIonChange={(ev: CustomEvent) => this.filter(ev.detail.value)}></ion-searchbar>
+
+              {/* The objects themselves */}
+              {this.filteredOptions && this.filteredOptions.map(doc =>
+                <ion-item
+                  button
+                  onClick={() => { this.chooseDoc(doc); this.choose(); }}
+                  color={doc == this.doc ? 'primary' : undefined}
+                >
+                  {doc.label}
+                </ion-item>
               )}
-            </ion-select>
-          </ion-item>}
-
-          {/* Search bar to filter the objects */}
-          <ion-searchbar onIonChange={(ev: CustomEvent) => this.filter(ev.detail.value)}></ion-searchbar>
-
-          {/* The objects themselves */}
-          {this.filteredOptions && this.filteredOptions.map(doc =>
-            <ion-item
-              button
-              onClick={() => { this.chooseDoc(doc); this.choose(); }}
-              color={doc == this.doc ? 'primary' : undefined}
-            >
-              {doc.label}
-            </ion-item>
-          )}
-        </ion-list>
-      </form>
+            </ion-list>
+          </form>
+        </ion-content>
+      </Host>
     )
   }
 }

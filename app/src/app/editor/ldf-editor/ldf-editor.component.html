@@ -58,6 +58,7 @@
           (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
           (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
           (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
+          (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
         ></ldf-editor>
       </ng-container>
 

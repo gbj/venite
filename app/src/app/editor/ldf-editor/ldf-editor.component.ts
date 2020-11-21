@@ -91,17 +91,31 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       switchMap(doc => this.documents.findDocumentsByCategory(['Bible Reading Introduction'], doc.language))//, [ ... typeof doc.version === 'string' ? doc.version : undefined]))
     );
 
+    // TODO — include these and sort them by the doc's own type?
+    const liturgyVersions$ = of({}); /*localManager$.pipe(
+      map(localManager => localManager?.document?.language),
+      switchMap(language => this.documents.getVersions(language ?? 'en', 'liturgy-versions'))
+    );*/
+
+    const canticleOptions$ = this.documents.find({
+      style: 'canticle'
+    });
+
     this.state$ = combineLatest(
       serverManager$.pipe(startWith(undefined)),
       localManager$.pipe(startWith(undefined)), 
       docSaved$.pipe(startWith(undefined)),
-      bibleIntros$.pipe(startWith([]))
+      bibleIntros$.pipe(startWith([])),
+      liturgyVersions$,
+      canticleOptions$
     ).pipe(
-      map(([serverManager, localManager, docSaved, bibleIntros]) => ({
+      map(([serverManager, localManager, docSaved, bibleIntros, liturgyVersions, canticleOptions]) => ({
         localManager,
         serverManager,
         docSaved,
-        bibleIntros
+        bibleIntros,
+        liturgyVersions,
+        canticleOptions
       }))
     )
   }
@@ -265,8 +279,15 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // in response, we should call the setBibleIntros methods of that component
   sendBibleIntros(ev : CustomEvent, intros : LiturgicalDocument[] = []) {
     ev.detail.setBibleReadingIntros(intros);
-    console.log('(sendBibleIntros)')
-    console.log(ev.detail, intros);
+  }
+
+  // ldf-psalm might emit an ldfAskForCanticleOptions event
+  // in response, we should call the setVersions and setOptions methods of that component
+  // setVersions(Record<string, string>) and setOptions(LiturgicalDocument[])
+  sendCanticleOptions(ev : CustomEvent, versions : Record<string, string>, options : LiturgicalDocument[]) {
+    console.log('sendCanticleOptions', versions, options)
+    ev.detail.setVersions(versions);
+    ev.detail.setOptions(options);
   }
 
   async shareLink(manager : LocalDocumentManager, doc : LiturgicalDocument) {

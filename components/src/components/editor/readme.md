@@ -17,13 +17,14 @@
 
 ## Events
 
-| Event                        | Description                                                                                  | Type                                                                                              |
-| ---------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `editorAskForBibleIntros`    |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
-| `editorCursorMoved`          | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
-| `editorDocShouldAdd`         | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
-| `editorDocShouldChange`      | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
-| `editorShouldAddGloriaPatri` |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
+| Event                         | Description                                                                                  | Type                                                                                              |
+| ----------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `editorAskForBibleIntros`     |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorAskForCanticleOptions` |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorCursorMoved`           | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
+| `editorDocShouldAdd`          | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
+| `editorDocShouldChange`       | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
+| `editorShouldAddGloriaPatri`  |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
 
 
 ## Dependencies
@@ -107,6 +108,10 @@ graph TD;
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
+  ldf-psalm --> ion-buttons
+  ldf-psalm --> ion-button
+  ldf-psalm --> ion-icon
+  ldf-psalm --> ion-label
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
   ldf-editable-metadata-buttons --> ldf-label-bar

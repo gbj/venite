@@ -4,6 +4,7 @@ import { Cursor, Change, LiturgicalDocument, User } from '@venite/ldf';
 
 import { elementFromPath } from '../../utils/element-from-path';
 import Values from 'values.js';
+import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 @Component({
   tag: 'ldf-editor',
@@ -56,6 +57,8 @@ export class EditorComponent {
   @Event() editorDocShouldAdd : EventEmitter<{ base: string; index: number; }>;
 
   @Event() editorAskForBibleIntros : EventEmitter<EventTarget>;
+
+  @Event() editorAskForCanticleOptions : EventEmitter<EventTarget>;
 
   @Event() editorShouldAddGloriaPatri : EventEmitter<{ path: string; language: string; version: string; oldValue: LiturgicalDocument | undefined; }>;
 
@@ -156,6 +159,15 @@ export class EditorComponent {
   @Listen('ldfAskForBibleIntros', { target: 'document' })
   onAskForBibleIntros(ev : CustomEvent) {
     this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields'));
+  }
+
+  @Listen('ldfAskForCanticleOptions', { target: 'document' })
+  onAskForCanticleOptions(ev : CustomEvent) {
+    //const target = elementFromPath(ev.target as HTMLElement, ev.detail);
+    //console.log('onAskFor...', ev)
+    const target = querySelectorDeep('ldf-editable-filter-documents', ev.target);
+    console.log('onAskFor...', target)
+    this.editorAskForCanticleOptions.emit(querySelectorDeep('ldf-editable-filter-documents'));
   }
 
   @Listen('ldfShouldAddGloriaPatri', { target: 'document' })

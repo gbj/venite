@@ -1274,8 +1274,8 @@ export class LdfEditableDelete {
 }
 
 export declare interface LdfEditableFilterDocuments extends Components.LdfEditableFilterDocuments {}
-@ProxyCmp({inputs: ['options', 'type', 'versions']})
-@Component({ selector: 'ldf-editable-filter-documents', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'type', 'versions'] })
+@ProxyCmp({inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'], 'methods': ['setVersions', 'setOptions']})
+@Component({ selector: 'ldf-editable-filter-documents', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'] })
 export class LdfEditableFilterDocuments {
   ldfDocumentSelected!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1430,12 +1430,13 @@ export class LdfEditor {
   editorDocShouldChange!: EventEmitter<CustomEvent>;
   editorDocShouldAdd!: EventEmitter<CustomEvent>;
   editorAskForBibleIntros!: EventEmitter<CustomEvent>;
+  editorAskForCanticleOptions!: EventEmitter<CustomEvent>;
   editorShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorShouldAddGloriaPatri']);
+    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorAskForCanticleOptions', 'editorShouldAddGloriaPatri']);
   }
 }
 
@@ -1539,10 +1540,13 @@ export declare interface LdfPsalm extends Components.LdfPsalm {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-psalm', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfPsalm {
+  ldfAskForCanticleOptions!: EventEmitter<CustomEvent>;
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfAskForCanticleOptions', 'ldfDocShouldChange']);
   }
 }
 

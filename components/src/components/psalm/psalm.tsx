@@ -1,5 +1,12 @@
-import { Component, Element, Prop, Watch, State, JSX, h, Host } from '@stencil/core';
-import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString } from '@venite/ldf';
+import { modalController } from '@ionic/core';
+import { Component, Element, Prop, Event, Watch, State, JSX, h, Host, EventEmitter } from '@stencil/core';
+import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString, LiturgicalDocument, Change } from '@venite/ldf';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './psalm.i18n.en.json';
+const LOCALE = {
+  'en': EN,
+};
 
 @Component({
   tag: 'ldf-psalm',
@@ -38,13 +45,52 @@ export class PsalmComponent {
   /** Whether the object is editable */
   @Prop() editable : boolean;
 
+  // Events
+  @Event({ bubbles: true }) ldfAskForCanticleOptions : EventEmitter<string>;
+
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+
   // Lifecycle events
   async componentWillLoad() {
     this.docChanged(this.doc);
+    this.loadLocaleStrings();
     this.filter();
   }
 
   // Private methods
+  async loadLocaleStrings() : Promise<void> {
+    try {
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
+    } catch(e) {
+      console.warn(e);
+    }
+  }
+
+  async changeCanticle() {
+    console.log('emitting for ', this.path)
+    const modal = await modalController.create({
+      component: 'ldf-editable-filter-documents',
+    });
+    modal.componentProps = {
+      modal,
+      type: "canticle",
+      changeCallback: (doc : LiturgicalDocument) => {
+        this.ldfDocShouldChange.emit(new Change({
+          path: this.path,
+          op: [{
+            type: 'set',
+            oldValue: this.obj,
+            value: doc
+          }]
+        }))
+      }
+    }
+
+    await modal.present();
+
+    this.ldfAskForCanticleOptions.emit(this.path);
+  }
+
   async filter() {
     this.filteredValue = this.obj.filteredVerses();
   }
@@ -119,12 +165,25 @@ export class PsalmComponent {
       .flat()
       .reduce((a, b) => a || b, false);
 
+    const localeStrings = this.localeStrings || {};
+
     return (
       <Host lang={this.obj?.language || 'en'}>
         <div class={`psalm-parent ${this.obj?.display_format || 'default'} ${noNumbers ? 'no-numbers' : ''}`}>
         {/* Slot for controls*/}
-        { this.editable && <ldf-label-bar>
-          <slot slot='end' name='controls'></slot>
+        { (this.editable || this.obj?.style === 'canticle') && <ldf-label-bar>
+          <slot slot='end' name='controls'>
+            {this.obj?.style === 'canticle' && <ldf-label-bar>
+              <slot slot='end' name='controls'>
+                <ion-buttons>
+                  <ion-button onClick={() => this.changeCanticle()}>
+                    <ion-icon name="swap-horizontal" slot="start"></ion-icon>
+                    <ion-label>{localeStrings.changeCanticle}</ion-label>
+                  </ion-button>
+                </ion-buttons>
+              </slot>
+            </ldf-label-bar>}
+          </slot>
         </ldf-label-bar> }
 
         {/* Heading */}

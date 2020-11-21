@@ -11,289 +11,6 @@
   <script nomodule src="/build/ldf.js"></script>
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
-  <style>
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
-
-/* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
-
-/** Venite LDF CSS Variables — defined in @venite/components */
-:root {
-  --ldf-background-color: #ffffff;
-  --ldf-color: #121212;
-  --ldf-editable-lookup-background-color: #f0f0f0;
-  --ldf-editable-lookup-color: #121212;
-  --ldf-editable-condition-background-color: #ffffc3;
-  --ldf-editable-condition-color: #121212;
-
-	--ldf-drop-float: left;
-	--ldf-drop-early-verses-display: none;
-	--ldf-gloria-indent: 2em;
-	--ldf-response-font-weight: bold;
-  --ldf-response-font-style: normal;
-	--ldf-text-border-width: 1px;
-	--ldf-text-border-bottom-width: 3px;
-	--ldf-text-border-radius: 4px;
-	--ldf-rubric-color: rgb(252, 13, 27);
-	--ldf-rubric-font-style: italic;
-	--ldf-rubric-font-weight: normal;
-	--ldf-rubric-font-size: 90%;
-	--ldf-antiphon-font-style: italic;
-	--ldf-antiphon-font-weight: normal;
-	--ldf-drop-firstword-font-variant: small-caps;
-	--ldf-drop-font-size: 2.3em;
-	--ldf-drop-margin-right: 0.05em;
-  --ldf-drop-line-height: 1em;
-  --ldf-bible-reading-verse-number-display: inline;
-  --ldf-bible-reading-citation-float: right;
-  --ldf-h3-text-align: left;
-  --ldf-h3-font-variant: normal;
-  --ldf-h3-font-weight: bold;
-  --ldf-heading-margin-top: 3em;
-  --ldf-text-align: justify;
-
-  /* Globals/Dark Mode */
-  --ldf-background-color: #ffffff;
-  --ldf-color: #121212;
-
-  .dark {
-    --ldf-background-color: #ffffff;
-    --ldf-color: #121212;
-    --ldf-editable-lookup-background-color: #242424;
-    --ldf-editable-lookup-color: #f0f0f0;
-    --ldf-editable-condition-background-color: #525242;
-    --ldf-editable-condition-color: #f0f0f0;
-  }
-
-  /* Font preference */
-  --ldf-font-face: 'EB Garamond', 'Garamond', serif;
-  --ldf-controls-font-family: 'Roboto', sans-serif;
-
-  .font-gill-sans {
-    --ldf-font-face: 'Gill Sans', sans-serif;
-  }
-
-  /* Label/Header Styling */
-  --ldf-title-text-align: center;
-  --ldf-title-font-weight: bold;
-  --ldf-title-font-style: normal;
-  --ldf-title-font-variant: small-caps;
-  --ldf-title-font-size: 2em;
-
-	--ldf-title-text-align: center;
-	--ldf-title-font-weight: bold;
-	--ldf-title-font-style: normal;
-	--ldf-title-font-variant: small-caps;
-  --ldf-title-font-size: 2em;
-  
-	--ldf-subtitle-font-style: normal;
-	--ldf-subtitle-font-weight: normal;
-	--ldf-subtitle-font-variant: normal;
-  --ldf-subtitle-font-size: 1.5em;
-  --ldf-subtitle-text-align: left;
-
-  /* Response styling */
-  --ldf-response-font-weight: bold;
-  --ldf-response-font-style: normal;
-
-  .response-italics {
-    --ldf-response-font-weight: normal;
-    --ldf-response-font-style: italic;
-  }
-
-  /* Editable Text */
-  --ldf-text-border-width: 1px;
-  --ldf-text-border-bottom-width: 3px;
-  --ldf-text-border-radius: 4px;
-  --ldf-text-focus-border: var(--ldf-text-border-width) solid grey;
-  --ldf-text-focus-border-bottom: var(--ldf-text-border-bottom-width) solid green;
-
-  /* Rubric styling */
-  --ldf-rubric-color: red;
-  --ldf-rubric-font-style: italic;
-  --ldf-rubric-font-weight: normal;
-  --ldf-rubric-font-size: 90%;
-
-  /* Psalm/Refrain shared styling */
-  --ldf-antiphon-font-style: italic;
-  --ldf-antiphon-font-weight: normal;
-  --ldf-psalm-number-display: inline-block;
-  --ldf-psalm-grid-display: grid;
-  --ldf-psalm-grid-template-columns: 2em 1fr;
-  --ldf-psalm-grid-template-areas: "number verse";
-  --ldf-psalm-halfverse-margin-left: 1em;
-  --ldf-psalm-text-grid-area: verse;
-  --ldf-psalm-number-grid-area: number;
-  --ldf-psalm-verse-indentation: 0;
-  --ldf-psalm-text-display: block;
-  --ldf-psalm-verse-display: inline-block;
-  --ldf-psalm-first-verse-display: inline;
-  --ldf-psalm-number-margin-right: 0.5em;
-	--ldf-psalm-antiphon-display: block;
-	--ldf-psalm-repeat-antiphon-display: block;
-
-  .psalmverses-false {
-    --ldf-psalm-number-display: none;
-    --ldf-psalm-grid-display: block;
-  }
-
-  .bibleverses-false {
-    --ldf-bible-reading-verse-number-display: none;
-  }
-
-  --ldf-psalm-antiphon-display: block;
-  --ldf-psalm-repeat-antiphon-display: none;
-
-  .repeat-antiphon-repeat {
-    --ldf-psalm-repeat-antiphon-display: block;
-  }
-  .repeat-antiphon-none {
-    --ldf-psalm-antiphon-display: none;
-  }
-
-  /* Dropcap styling */
-  --ldf-drop-firstword-font-variant: small-caps;
-  --ldf-drop-font-family: 'EB Garamond Initials', 'EB Garamond', 'Garamond', serif;
-  --ldf-drop-font-size: 2.5em;
-  --ldf-drop-margin-right: 0.05em;
-
-  .dropcaps-none {
-    --ldf-drop-font-size: 1em;
-    --ldf-drop-margin-right: none;
-    --ldf-drop-firstword-font-variant: normal;
-    --ldf-drop-font-family: var(--ldf-font-face);
-    --ldf-drop-float: none;
-  }
-
-  .dropcaps-plain {
-    --ldf-drop-font-family: 'EB Garamond';
-    --ldf-drop-font-size: 2.7em;
-    --ldf-drop-margin-right: 0.05em;
-    --ldf-drop-margin-top: -0.05em;
-    --ldf-drop-line-height: 1em;
-  }
-
-  @media(min-width: 767px) {
-    --ldf-drop-font-size: 3.2em;
-    --ldf-drop-margin-right: 0.05em;
-    --ldf-drop-margin-top: 0;
-    --ldf-drop-line-height: .8em;
-
-    .dropcaps-plain{
-      --ldf-drop-font-size: 3.5em;
-      --ldf-drop-margin-right: 0.05em;
-      --ldf-drop-margin-top: -0.05em;
-      --ldf-drop-line-height: .8em;
-    }
-
-    .dropcaps-none {
-      --ldf-drop-font-size: 1em;
-      --ldf-drop-margin-right: none;
-    }
-  }
-
-    /* Date Headings */
-    --ldf-date-font-size: 1em;
-    --ldf-date-text-transform: none;
-    --ldf-date-text-align: center;
-    --ldf-date-font-style: italic;
-
-    /* Font Sizes */
-    --ldf-max-width: 500px;
-    --ldf-preces-tr-display: table-row;
-    --ldf-preces-td-display: table-cell;
-
-  .fontscale-s {
-    font-size: 75%;
-  }
-
-  .fontscale-m {
-    font-size: 100%;
-  }
-
-  .fontscale-l {
-    --ldf-max-width: 600px;
-    font-size: 125%;
-  }
-
-  .fontscale-xl {
-    --ldf-max-width: 800px;
-    font-size: 150%;
-  }
-
-  .fontscale-xxl {
-    --ldf-max-width: 1000px;
-    font-size: 200%;
-  }
-
-  @media(min-width: 767px) {
-    .fontscale-s {
-      font-size: 100%;
-    }
-
-    .fontscale-m {
-      --ldf-max-width: 600px;
-      font-size: 125%;
-    }
-
-    .fontscale-l {
-      --ldf-max-width: 700px;
-      font-size: 150%;
-    }
-
-    .fontscale-xl {
-      --ldf-max-width: 800px;
-      font-size: 175%;
-    }
-
-    .fontscale-xxl {
-      --ldf-max-width: 1000px;
-      font-size: 200%;
-    }
-  }
-}
-
-.visually-hidden { 
-  position: absolute !important;
-  height: 1px; 
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap; /* added line */
-}
-
-venite-pray ion-content div {
-  max-width: 600px;
-  margin: auto;
-}
-
-ul {
-  font-family: inherit;
-}
-  </style>
 </head>
 <body>
     <ion-content id='example' class="content ion-padding dropcaps-plain psalmverses-true bibleverses-false">
@@ -308,6 +25,20 @@ ul {
       ev.originalTarget.setBibleReadingIntros([
         { "type": "text", "style": "text", "value": ["A Reading from ${shortName}."]}
       ]);
+    });
+    document.addEventListener('editorAskForCanticleOptions', (ev) => { 
+      console.log('(editorAskForCanticleOptions)', ev.detail);
+      ev.detail.setVersions({
+        "bcp1979": "Rite II",
+        "rite_i": "Rite I"
+      })
+      ev.detail.setOptions([{
+        type: "psalm",
+        style: "canticle",
+        label: "Canticle 16. Benedictus",
+        version: "bcp1979",
+        value: []
+      }])
     });
 
     const LITURGY = {
@@ -781,7 +512,7 @@ ul {
       "category": [
         "Psalm"
       ],
-      "style": "psalm",
+      "style": "canticle",
       "version_label": null,
       "source": {
         "source": "bcp1979",
@@ -1782,7 +1513,7 @@ ul {
 }
 
 
-    const node = document.createElement('ldf-liturgical-document');
+    const node = document.createElement('ldf-editor');
 node.setAttribute('editable', true);
 node.setAttribute('path', '/');
     node.doc = LITURGY;

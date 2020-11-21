@@ -14,6 +14,14 @@
 | `path`     | `path`     | A JSON Pointer that points to the Psalm being edited      | `string`          | `undefined` |
 
 
+## Events
+
+| Event                      | Description | Type                  |
+| -------------------------- | ----------- | --------------------- |
+| `ldfAskForCanticleOptions` |             | `CustomEvent<string>` |
+| `ldfDocShouldChange`       |             | `CustomEvent<Change>` |
+
+
 ## Dependencies
 
 ### Used by
@@ -26,6 +34,10 @@
 - [ldf-liturgical-document](../liturgical-document)
 - [ldf-heading](../heading)
 - [ldf-label-bar](../label-bar)
+- ion-buttons
+- ion-button
+- ion-icon
+- ion-label
 - [ldf-editable-text](../editable-text)
 - [ldf-string](../string)
 
@@ -36,6 +48,10 @@ graph TD;
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
+  ldf-psalm --> ion-buttons
+  ldf-psalm --> ion-button
+  ldf-psalm --> ion-icon
+  ldf-psalm --> ion-label
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
   ldf-refrain --> ldf-label-bar

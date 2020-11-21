@@ -97,6 +97,10 @@ graph TD;
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
+  ldf-psalm --> ion-buttons
+  ldf-psalm --> ion-button
+  ldf-psalm --> ion-icon
+  ldf-psalm --> ion-label
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
   ldf-editable-metadata-buttons --> ldf-label-bar
