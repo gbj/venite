@@ -1,9 +1,11 @@
-import { Component, Element, Prop, Watch, State, JSX, h } from '@stencil/core';
-import { BibleReading, BibleReadingVerse, Heading } from '@venite/ldf';
+import { alertController, loadingController } from '@ionic/core';
+import { Component, Element, Prop, Event, Watch, State, JSX, h, EventEmitter } from '@stencil/core';
+import { BibleReading, BibleReadingVerse, Change, Heading, versionToString } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './bible-reading.i18n.en.json';
 import ES from './bible-reading.i18n.es.json';
+import { fetchReading } from './fetch-reading';
 const LOCALE = {
   'en': EN,
   'es': ES
@@ -53,6 +55,9 @@ export class BibleReadingComponent {
    */
   @Prop() editable : boolean;
 
+  // Events
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+
   // Lifecycle events
   async componentWillLoad() {
     this.docChanged(this.doc);
@@ -81,6 +86,73 @@ export class BibleReadingComponent {
     } catch(e) {
       console.warn(e);
     }
+  }
+
+  async changeReading() {
+    const localeStrings = this.localeStrings || {};
+  
+    const alert = await alertController.create({
+      header: localeStrings.changeReading,
+      inputs: [
+        {
+          name: 'citation',
+          type: 'text',
+          value: this.obj?.citation,
+          placeholder: localeStrings.newCitation
+        },
+      ],
+      buttons: [
+        {
+          text: localeStrings.cancel,
+          role: 'cancel',
+          cssClass: 'secondary'
+        }, {
+          text: localeStrings.ok,
+          handler: async (data) => {
+            console.log(data);
+
+            const loading = await loadingController.create({
+              message: localeStrings.loading
+            });
+            await loading.present();
+
+            const newReading = await fetchReading(
+              data.citation,
+              versionToString(this.obj?.version)
+            );
+
+            await loading.dismiss();
+
+            this.ldfDocShouldChange.emit(new Change({
+              path: this.path,
+              op: [
+                {
+                  type: 'set',
+                  index: 'citation',
+                  oldValue: this.obj?.citation,
+                  value: data?.citation
+                },
+                {
+                  type: 'set',
+                  index: 'value',
+                  oldValue: this.obj?.value,
+                  value: newReading?.value || []
+                }
+              ]
+            }));
+
+            this.obj = new BibleReading({
+              ... this.obj,
+              citation: data?.citation,
+              value: newReading?.value || []
+            });
+            this.loadVerses();
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   loadVerses() {
@@ -112,7 +184,14 @@ export class BibleReadingComponent {
         return (
           <div lang={this.obj?.language} class={`editable bible-reading ${this.obj?.display_format || 'default'}`}>
             {this.editable && <ldf-label-bar>
-              <slot slot='end' name='controls'></slot>
+              <slot slot='end' name='controls'>
+                <ion-buttons>
+                  <ion-button onClick={() => this.changeReading()}>
+                    <ion-icon name="swap-horizontal" slot="start"></ion-icon>
+                    <ion-label>{localeStrings.changeReading}</ion-label>
+                  </ion-button>
+                </ion-buttons>
+              </slot>
             </ldf-label-bar>}
             {/* Heading */}
             <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label]})}>

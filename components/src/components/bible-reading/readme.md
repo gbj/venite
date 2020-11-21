@@ -14,6 +14,13 @@
 | `path`     | `path`     | A JSON Pointer that points to the Collect being edited | `string`                 | `undefined` |
 
 
+## Events
+
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
+
+
 ## Dependencies
 
 ### Used by
@@ -23,6 +30,10 @@
 ### Depends on
 
 - [ldf-label-bar](../label-bar)
+- ion-buttons
+- ion-button
+- ion-icon
+- ion-label
 - [ldf-heading](../heading)
 - [ldf-editable-text](../editable-text)
 - [ldf-liturgical-document](../liturgical-document)
@@ -32,10 +43,15 @@
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
+  ldf-bible-reading --> ion-buttons
+  ldf-bible-reading --> ion-button
+  ldf-bible-reading --> ion-icon
+  ldf-bible-reading --> ion-label
   ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
   ldf-bible-reading --> ldf-string
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
@@ -47,7 +63,6 @@ graph TD;
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label
-  ion-button --> ion-ripple-effect
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button

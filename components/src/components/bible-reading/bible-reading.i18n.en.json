@@ -4,5 +4,9 @@
   "chapter": "Chapter",
   "citation": "Citation (e.g., John 1:1)",
   "loading": "Loading...",
-  "verse": "Verse"
+  "verse": "Verse",
+  "changeReading": "Change Reading",
+  "newCitation": "Biblical citation.",
+  "cancel": "Cancel",
+  "ok": "OK"
 }

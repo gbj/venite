@@ -101,6 +101,10 @@ graph TD;
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
   ldf-bible-reading --> ldf-label-bar
+  ldf-bible-reading --> ion-buttons
+  ldf-bible-reading --> ion-button
+  ldf-bible-reading --> ion-icon
+  ldf-bible-reading --> ion-label
   ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
