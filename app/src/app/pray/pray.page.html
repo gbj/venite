@@ -18,12 +18,15 @@
     <div class="bordered"  [style.background]="color$ | async" [style.border-color]="color$ | async">
       <ng-container *ngIf="doc$ | async as doc else loading">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
-          <ldf-liturgical-document
-            path="/"
-            [doc]="doc"
-            [editable]="false"
-            (ldfDocShouldChange)="changeDoc(doc, $event)"
-          ></ldf-liturgical-document>
+          <ng-container *ngIf="canticleData$ | async as canticleData">
+            <ldf-liturgical-document
+              path="/"
+              [doc]="doc"
+              [editable]="false"
+              (ldfDocShouldChange)="changeDoc(doc, $event)"
+              (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
+            ></ldf-liturgical-document>
+          </ng-container>
         </div>
       </ng-container>
     </div>

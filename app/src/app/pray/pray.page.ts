@@ -32,6 +32,8 @@ type ActionSheetData = {
   userOrgs: Organization[];
 }
 
+type CanticleData = { liturgyVersions: Record<string, string>; canticleOptions: LiturgicalDocument[]};
+
 @Component({
   selector: 'venite-pray',
   templateUrl: './pray.page.html',
@@ -61,6 +63,9 @@ export class PrayPage implements OnInit, OnDestroy {
   speechPlayingUtterance : number = 0;
   speechUtteranceAtStartOfSubDoc : number = 0;
   @ViewChild(IonContent, {read: IonContent, static: false}) contentEl: IonContent;
+
+  // Canticle Swap
+  canticleData$ : Observable<CanticleData>;
 
   constructor(
     private router : Router,
@@ -239,6 +244,25 @@ export class PrayPage implements OnInit, OnDestroy {
         userProfile
       }))
     )
+
+    // Canticle Options
+    const liturgyVersions$ = this.doc$.pipe(
+      switchMap(doc => this.documents.getVersions(doc?.language ?? 'en', 'liturgy-versions'))
+    );
+
+    const canticleOptions$ = this.doc$.pipe(
+      switchMap(doc => this.documents.find({
+        language: doc?.language || 'en',
+        style: 'canticle'
+      }))
+    );
+
+    this.canticleData$ = combineLatest([liturgyVersions$, canticleOptions$]).pipe(
+      map(([liturgyVersions, canticleOptions]) => ({
+        liturgyVersions,
+        canticleOptions
+      }))
+    );
   }
 
   /* Display Settings */
@@ -470,5 +494,18 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechSubscription.unsubscribe();
     console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
     this.startSpeechAt(doc, settings, this.speechPlayingSubDoc + 1);
+  }
+
+  // Canticle swap
+  // TODO -- add logic onPrayPage
+  /*     // Canticle swapper
+    */
+  sendCanticleOptions(ev : any, data : CanticleData) : void {
+    const target = querySelectorDeep('ldf-editable-filter-documents');
+    if(target) {
+      // TODO
+      // target.setVersions(data.liturgyVersions);
+      target.setOptions(data.canticleOptions);
+    }
   }
 }

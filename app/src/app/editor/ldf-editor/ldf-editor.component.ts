@@ -55,6 +55,8 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    document.addEventListener('editorAskForCanticleOptions', (e) => console.log('editorAskForCanticleOptions', e))
+
     this.editorStatus = this.editorService.status;
 
     // Document manager
@@ -91,11 +93,11 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       switchMap(doc => this.documents.findDocumentsByCategory(['Bible Reading Introduction'], doc.language))//, [ ... typeof doc.version === 'string' ? doc.version : undefined]))
     );
 
-    // TODO — include these and sort them by the doc's own type?
-    const liturgyVersions$ = of({}); /*localManager$.pipe(
+    // Canticle swapper
+    const liturgyVersions$ = localManager$.pipe(
       map(localManager => localManager?.document?.language),
       switchMap(language => this.documents.getVersions(language ?? 'en', 'liturgy-versions'))
-    );*/
+    );
 
     const canticleOptions$ = this.documents.find({
       style: 'canticle'
