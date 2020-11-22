@@ -23,7 +23,7 @@
           </ion-avatar>
         </ion-item>
         <ng-container *ngIf="orgOptions$ | async as orgs">
-          <ion-item *ngIf="orgs?.length > 1">
+          <ion-item>
             <ion-label>{{ 'editor.organization' | translate }}</ion-label>
             <ldf-editable-select
               path="/sharing"
@@ -32,10 +32,6 @@
               [value]="sharing.organization"
             >
             </ldf-editable-select>
-          </ion-item>
-          <ion-item *ngIf="orgs?.length == 1">
-            <ion-label>{{ 'editor.organization' | translate }}</ion-label>
-            <p>{{ orgs[0].label }}</p>
           </ion-item>
         </ng-container>
         <ion-list-header><h2>{{ 'editor.permissions' | translate }}</h2></ion-list-header>

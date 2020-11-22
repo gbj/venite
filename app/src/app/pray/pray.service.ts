@@ -176,6 +176,20 @@ export class PrayService {
           result = this.documents.findDocumentsBySlug(doc.slug, language, versions).pipe(
             switchMap(doc => this.compile(docsToOption(doc), day, prefs, versions, originalPrefs))
           );
+        } else if(doc.type == 'psalm' && doc.slug?.match(/Psalm \d+/g)) {
+          const number = doc.slug.match(/\d+/)[0],
+            slug = doc.slug.split(':')[0].replace(' ', '_').toLowerCase();
+
+            result = this.lookupBySlug(
+              slug,
+              language,
+              versions,
+              day,
+              prefs,
+              doc.lookup.filter,
+              Boolean(doc.lookup.rotate),
+              Boolean(doc.lookup.random)
+            );
         } else if(doc.slug) {
           result = this.lookupBySlug(
             doc.slug,
@@ -210,7 +224,6 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
-    console.log('lookupBySlug versions = ', versions);
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
@@ -330,7 +343,6 @@ export class PrayService {
     const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['psalterVersion'] || 'bcp1979';
 
     return this.findReadings(doc, day, prefs, originalPrefs).pipe(
-      startWith([]),
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
         ... doc,
         style: 'psalm',
@@ -340,14 +352,14 @@ export class PrayService {
         lookup: { type: 'slug' }
       })))),
       // pack these into a `Liturgy` object
-      map(docs => Object.assign(doc, { ... docsToLiturgy(docs), lookup: undefined })),
+      map(docs => new Liturgy({ ... docsToLiturgy(docs), lookup: undefined })),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs, [version], originalPrefs)),
       // sort the psalms by number in increasing order
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
-        value: liturgy.value?.sort((a, b) => a?.metadata?.number - b?.metadata?.number)
+        value: (liturgy?.value || []).sort((a, b) => a?.metadata?.number - b?.metadata?.number)
       }))
     )
   }
@@ -358,17 +370,14 @@ export class PrayService {
           readingPrefName : string | null = typeof doc.lookup?.item === 'string' || typeof doc.lookup?.item === 'number' ? null : doc.lookup.item.preference,
           reading : string = readingPrefName ? prefs[readingPrefName] : doc.lookup.item.toString(),
           alternateYear = Boolean(((originalPrefs[readingPrefName])?.options || []).find(option => option.value == reading)?.metadata?.alternateYear);
-    
-    return this.lectionaryService.getReadings(day, lectionary, reading, alternateYear).pipe(
-      startWith([]),
-    );
+  
+    return this.lectionaryService.getReadings(day, lectionary, reading, alternateYear);
   }
 
   /** Finds the appropriate canticle from a given table for this liturgy */
   lookupFromCanticleTable(day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
-      tap(entries => console.log('canticle table filtering', entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
       switchMap(entries => entries.map(entry => new LiturgicalDocument(
         {
@@ -378,7 +387,6 @@ export class PrayService {
           }
         }
       ))),
-      tap(docs => console.log('canticle table lookup', docs)),
       map(docs => docsToOption(docs, versions)),
       switchMap(doc => this.compile(doc, day, prefs, versions, originalPrefs))
     )

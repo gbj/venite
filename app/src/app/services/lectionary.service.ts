@@ -20,7 +20,9 @@ export class LectionaryService {
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
       return this.rcl(dateFromYMDString(day.date), lectionaryName, day.propers, day.years['rclsunday'], day.slug).pipe(
-        map(readings => readings.filter(reading => !readingType || reading.type === readingType)),
+        map(
+          readings => uniqueBy(readings.filter(reading => !readingType || reading.type === readingType), e => e.citation)
+        ),
       );
     }
     // search for other readings in our DB
@@ -47,9 +49,7 @@ export class LectionaryService {
         }
 
         return query;
-      }).valueChanges().pipe(
-        tap(readings => console.log('(getReadings) lectionaryName = ', lectionaryName, 'readings = ', readings))
-      );
+      }).valueChanges();
     }
   }
 
@@ -62,7 +62,6 @@ export class LectionaryService {
       default:
         if(alternateYear) {
           const year = Number(day.years['bcp1979_daily_office']);
-          console.log('[alternateYear]', year, (year % 2) + 1)
           return ({ whentype: 'year', when: ((year % 2) + 1).toString(), includeDay: true });
         } else {
           return ({ whentype: 'year', when: day.years['bcp1979_daily_office'].toString(), includeDay: true });
@@ -87,4 +86,12 @@ export class LectionaryService {
     }
   }
 
+}
+
+function uniqueBy<T>(a : T[], key : (item : T) => string) : T[] {
+  var seen = {};
+  return a.filter(function(item) {
+      var k = key(item);
+      return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+  })
 }
