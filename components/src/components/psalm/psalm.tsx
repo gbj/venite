@@ -145,7 +145,8 @@ export class PsalmComponent {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
 
     // create blank psalm verse pattern
-    let pattern : PsalmVerse;
+    let pattern : PsalmVerse,
+      templateMaker : (text : string) => PsalmVerse = (verse : string) => ({ type: 'psalm-verse', number: '', halfverse: '', verse });
     if(this.editable) {
       pattern = { ... (this.obj?.value[0]?.value[0] || { type: 'psalm-verse', number: '', halfverse: '', verse: '' }) };
       if(pattern.number) {
@@ -216,7 +217,8 @@ export class PsalmComponent {
                     text={verse.verse}
                     path={`${this.path}/value/${sectionIndex}/value/${verseIndex}/verse`}
                     placeholder='Lorem ipsum sit dolor amet, *'
-                    template={pattern}>
+                    template={pattern}
+                    templateMaker={templateMaker}>
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}

@@ -11,6 +11,7 @@
 .bordered {
   border-left: 1em solid var(--ion-background-color, #fff);
   border-right: 1em solid var(--ion-background-color, #fff);
+  border-width: 1em;
   transition: all 0.5s ease;
   width: 100vw;
 }
@@ -43,5 +44,17 @@
   max-width: calc(600px + 2em);
   margin: auto;
   background-color: var(--ldf-background-color);
-  padding: 2em;
+  padding: 1em;
+}
+
+@media(min-width: 767px) {
+  .ldf-wrapper {
+    padding: 2em;
+  }
+}
+
+@media(min-width: 1024px) {
+  .ldf-wrapper {
+    padding: 3em;
+  }
 }

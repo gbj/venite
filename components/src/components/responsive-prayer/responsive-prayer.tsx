@@ -49,13 +49,15 @@ export class ResponsivePrayerComponent {
 
   // Render helpers
   /** renders a `ResponsivePrayerLine` as an `ldf-editable-text` */
-  editableNode(line : ResponsivePrayerLine, index : number, part : 'label' | 'text' | 'response', template : ResponsivePrayerLine | undefined = undefined) : JSX.Element {
+  editableNode(line : ResponsivePrayerLine, index : number, part : 'label' | 'text' | 'response', template : ResponsivePrayerLine | undefined = undefined, templateMaker : (s : string) => ResponsivePrayerLine) : JSX.Element {
     return (
       <ldf-editable-text
         id={`${this.obj.uid}-${index}-${part}`}
         text={line[part]}
         path={`${this.path}/value/${index}/${part}`}
-        template={template}>
+        template={template}
+        templateMaker={templateMaker}
+      >
       </ldf-editable-text>
     )
   }
@@ -99,7 +101,9 @@ export class ResponsivePrayerComponent {
       /* `preces` type returns a table like
        *    V.  O Lord, open our lips.
        *    R.  And our mouth shall proclaim thy praise. */
-      const template = { label: '', text: '' };
+      const template = { label: '', text: '' },
+        templateMaker = (text : string) => ({ label: '', text });
+
       return (
         <Host class={this.obj.style} lang={this.obj.language}>
           <ldf-label-bar>
@@ -113,10 +117,10 @@ export class ResponsivePrayerComponent {
             {this.obj.value.map((line, index) =>
               <tr class="row">
                 <td class="cell">
-                  {this.editable ? this.editableNode(line, index, 'label', template) : this.stringNode(line, index, 'label')}
+                  {this.editable ? this.editableNode(line, index, 'label', template, templateMaker) : this.stringNode(line, index, 'label')}
                 </td>
                 <td class={index % 2 == 0 ? 'cell' : 'cell response'}>
-                  {this.editable ? this.editableNode(line, index, 'text', template) : this.stringNode(line, index, 'text')}
+                  {this.editable ? this.editableNode(line, index, 'text', template, templateMaker) : this.stringNode(line, index, 'text')}
                 </td>
               </tr>
             )}
@@ -131,7 +135,8 @@ export class ResponsivePrayerComponent {
        *    That your holy angels may lead us in paths of peace and goodwill,
        *    We entreat you, O Lord. */
 
-      const template = { text: '', response: this.obj.metadata?.response || '' };
+      const template = { text: '', response: this.obj.metadata?.response || '' },
+        templateMaker = (text : string) => ({ text, response: this.obj.metadata?.response || '' });
 
       return (
         <Host class={this.obj.style} lang={this.obj.language}>
@@ -153,12 +158,12 @@ export class ResponsivePrayerComponent {
           return (
             <p class={classes.join(' ')}>
               {/* render the text of the main line*/}
-              {this.editable ? this.editableNode(line, index, 'text', template) : this.stringNode(line, index, 'text')}
+              {this.editable ? this.editableNode(line, index, 'text', template, templateMaker) : this.stringNode(line, index, 'text')}
 
               {/* if the `ResponsivePrayerLine` has a `response` property, render it*/}
               {line.response && (
                 this.editable ?
-                <span class='response'>{this.editableNode(line, index, 'response', template)}</span> :
+                <span class='response'>{this.editableNode(line, index, 'response', template, templateMaker)}</span> :
                 [<br/>, this.litanyResponseStringNode(line, index)]
               )}
 
@@ -185,7 +190,8 @@ export class ResponsivePrayerComponent {
        *    Lord, hear our prayer.
        *    And let our cry come to you.
        *    Let us pray. */
-      const template = { text: '', response: this.obj.metadata?.response || '' };
+      const template = { text: '', response: this.obj.metadata?.response || '' },
+        templateMaker = (text : string) => ({ text, response: this.obj.metadata?.response || '' });
 
       return (
         <Host class={this.obj.style} lang={this.obj.language}>
@@ -197,10 +203,10 @@ export class ResponsivePrayerComponent {
             {this.obj.value.map((line, index) =>
               [
                 this.editable ?
-                  <div>{this.editableNode(line, index, 'text', template)}</div> :
+                  <div>{this.editableNode(line, index, 'text', template, templateMaker)}</div> :
                   <div>{this.stringNode(line, index, 'text')}</div>,
                 this.editable ?
-                  <div class='response'>{this.editableNode(line, index, 'response', template)}</div> :
+                  <div class='response'>{this.editableNode(line, index, 'response', template, templateMaker)}</div> :
                   <div class='response'>{this.stringNode(line, index, 'response')}</div>
               ]
             )}

@@ -54,6 +54,9 @@ export class EditableTextComponent {
   /** The base object this expresses as part of `LiturgicalDocument`.value */
   @Prop() template : ResponsivePrayerLine | BibleReadingVerse | PsalmVerse | Heading | string = "";
 
+  /** Function that converts a text node into a `template` — used when a node is split */
+  @Prop() templateMaker : (s : string) => ResponsivePrayerLine | BibleReadingVerse | PsalmVerse | Heading | string = (s) => s;
+
   // Life Cycle
   componentDidRender() {
     // After the first render, with text in place, adjust size from minimum
@@ -171,10 +174,22 @@ export class EditableTextComponent {
   checkEnter(event : KeyboardEvent) {
     this.registerCursor();
 
-    // if this is an Enter key event without the shift key at the end of the textarea
-    if(event.keyCode == 13 && !event.shiftKey && this.cursor?.start == this.textarea.value.length) {
-      event.preventDefault();
-      this.ldfAddChildAfter.emit({path: this.path, template: this.template});
+    // if this is an Enter key event without the shift key
+    if(event.keyCode == 13 && !event.shiftKey) {
+      // at the end of the textarea — add child after
+      if(this.cursor?.start == this.textarea.value.length) {
+        event.preventDefault();
+        this.ldfAddChildAfter.emit({path: this.path, template: this.template});
+      }
+      // in the middle of the textarea — split the node
+      else {
+        event.preventDefault();
+        const unsplitValue = this.textarea.value,
+          firstHalf = unsplitValue.slice(0, this.cursor?.start ?? 0),
+          secondHalf = unsplitValue.slice(this.cursor?.start ?? 0, this.textarea.value.length);
+        this.ldfDocShouldChange.emit(new Change({path: this.path, op: [{ type: 'set', oldValue: unsplitValue, value: firstHalf }]}));
+        this.ldfAddChildAfter.emit({path: this.path, template: this.templateMaker(secondHalf)});
+      }
     }
 
     // if this is a Backspace key event at the beginning of the textarea

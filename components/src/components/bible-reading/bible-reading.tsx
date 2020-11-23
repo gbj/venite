@@ -182,6 +182,9 @@ export class BibleReadingComponent {
     if(this.verses) {
       /* Editable version */
       if(this.editable) {
+        const template : BibleReadingVerse = { ...this.verses[0], text: '' },
+          templateMaker : (text: string) => BibleReadingVerse = (text : string) => ({ ...template, text });
+
         return (
           <div lang={this.obj?.language} class={`editable bible-reading ${this.obj?.display_format || 'default'}`}>
             {this.editable && <ldf-label-bar>
@@ -245,6 +248,8 @@ export class BibleReadingComponent {
                       path={`${this.path}/value/${verseIndex}/text`}
                       placeholder={localeStrings.text}
                       short={false}
+                      template={template}
+                      templateMaker={templateMaker}
                     >
                     </ldf-editable-text>
                   </div>

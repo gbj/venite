@@ -43,8 +43,14 @@ body {
   --ldf-editable-lookup-color: #121212;
   --ldf-editable-condition-background-color: #ffffc3;
   --ldf-editable-condition-color: #121212;
-  --ldf-tab-width: 0.5em;
-  --ldf-half-tab-width: 0.25em;
+
+  --ldf-tab-width: 0.25em;
+  --ldf-half-tab-width: 0.125em;
+
+  @media(min-width: 767px) {
+    --ldf-tab-width: 0.5em;
+    --ldf-half-tab-width: 0.25em;
+  }
 
 	--ldf-drop-float: left;
 	--ldf-drop-early-verses-display: none;
@@ -302,6 +308,32 @@ body {
 
     .fontscale-xl {
       --ldf-max-width: 800px;
+      font-size: 175%;
+    }
+
+    .fontscale-xxl {
+      --ldf-max-width: 1000px;
+      font-size: 200%;
+    }
+  }
+
+  @media(min-width: 1068px) {
+    .fontscale-s {
+      font-size: 100%;
+    }
+
+    .fontscale-m {
+      --ldf-max-width: 850px;
+      font-size: 125%;
+    }
+
+    .fontscale-l {
+      --ldf-max-width: 900px;
+      font-size: 150%;
+    }
+
+    .fontscale-xl {
+      --ldf-max-width: 950px;
       font-size: 175%;
     }
 
