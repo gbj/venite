@@ -18,6 +18,7 @@
 * [Cursor](_index_.md#cursor)
 * [CursorMessage](_index_.md#cursormessage)
 * [DisplayFormat](_index_.md#displayformat)
+* [DisplaySettings](_index_.md#displaysettings)
 * [Heading](_index_.md#heading)
 * [HolyDay](_index_.md#holyday)
 * [Image](_index_.md#image)
@@ -152,6 +153,12 @@ ___
 ###  DisplayFormat
 
 • **DisplayFormat**:
+
+___
+
+###  DisplaySettings
+
+• **DisplaySettings**:
 
 ___
 

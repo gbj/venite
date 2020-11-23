@@ -35,7 +35,7 @@
 
 \+ **new HolyDay**(`data`: Partial‹[HolyDay](_calendar_holy_day_.holyday.md)›): *[HolyDay](_calendar_holy_day_.holyday.md)*
 
-*Defined in [calendar/holy-day.ts:60](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L60)*
+*Defined in [calendar/holy-day.ts:60](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L60)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ Name | Type | Default |
 
 • **category**? : *string[]*
 
-*Defined in [calendar/holy-day.ts:45](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L45)*
+*Defined in [calendar/holy-day.ts:45](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L45)*
 
 Categories for this feast that are not liturgical seasons
 
@@ -64,7 +64,7 @@ ___
 
 • **color**? : *[LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md) | string*
 
-*Defined in [calendar/holy-day.ts:51](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L51)*
+*Defined in [calendar/holy-day.ts:51](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L51)*
 
 The [LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md) used for the day, or an identifying slug for the color that can be used to look it up
 
@@ -74,7 +74,7 @@ ___
 
 • **eve**? : *undefined | false | true*
 
-*Defined in [calendar/holy-day.ts:48](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L48)*
+*Defined in [calendar/holy-day.ts:48](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L48)*
 
 Optional: Identifies whether it is the Eve of ___
 
@@ -84,7 +84,7 @@ ___
 
 • **evening**? : *[HolyDay](_calendar_holy_day_.holyday.md)*
 
-*Defined in [calendar/holy-day.ts:60](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L60)*
+*Defined in [calendar/holy-day.ts:60](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L60)*
 
 Allows inclusion of alternate holy days for morning and evening. Used for transition from Christmas season to Epiphany on 1/5
 
@@ -94,7 +94,7 @@ ___
 
 • **kalendar**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:14](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L14)*
+*Defined in [calendar/holy-day.ts:14](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L14)*
 
 Overarching calendar this is a part of
 
@@ -104,7 +104,7 @@ ___
 
 • **mmdd**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:27](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L27)*
+*Defined in [calendar/holy-day.ts:27](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L27)*
 
 Optional: Identifies the month/date of the feast
 
@@ -118,7 +118,7 @@ ___
 
 • **morning**? : *[HolyDay](_calendar_holy_day_.holyday.md)*
 
-*Defined in [calendar/holy-day.ts:57](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L57)*
+*Defined in [calendar/holy-day.ts:57](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L57)*
 
 Allows inclusion of alternate holy days for morning and evening. Used for transition from Christmas season to Epiphany on 1/5
 
@@ -128,7 +128,7 @@ ___
 
 • **name**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:33](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L33)*
+*Defined in [calendar/holy-day.ts:33](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L33)*
 
 Optional: Human-readable name of the feast
 
@@ -138,7 +138,7 @@ ___
 
 • **octave**? : *string | undefined*
 
-*Defined in [calendar/holy-day.ts:39](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L39)*
+*Defined in [calendar/holy-day.ts:39](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L39)*
 
 A machine-readable identifier day within the octave of which a day falls
 
@@ -148,7 +148,7 @@ ___
 
 • **readings**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:30](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L30)*
+*Defined in [calendar/holy-day.ts:30](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L30)*
 
 Optional: Slug used to find readings in the API, if different from `slug` property
 
@@ -158,7 +158,7 @@ ___
 
 • **season**? : *Seasons[number]*
 
-*Defined in [calendar/holy-day.ts:36](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L36)*
+*Defined in [calendar/holy-day.ts:36](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L36)*
 
 A machine-readable identifier for the liturgical season
 
@@ -168,7 +168,7 @@ ___
 
 • **slug**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:11](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L11)*
+*Defined in [calendar/holy-day.ts:11](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L11)*
 
 An identifying slug for the day.
 
@@ -185,7 +185,7 @@ ___
 
 • **stops_at_sunday**? : *undefined | string*
 
-*Defined in [calendar/holy-day.ts:54](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L54)*
+*Defined in [calendar/holy-day.ts:54](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L54)*
 
 Slug of a [LiturgicalWeek](_calendar_liturgical_week_.liturgicalweek.md) after which this is no longer observed. Used for weekdays after Epiphany.
 
@@ -195,6 +195,6 @@ ___
 
 • **type**? : *undefined | object*
 
-*Defined in [calendar/holy-day.ts:17](https://github.com/gbj/venite/blob/b189404/ldf/src/calendar/holy-day.ts#L17)*
+*Defined in [calendar/holy-day.ts:17](https://github.com/gbj/venite/blob/a445f5e/ldf/src/calendar/holy-day.ts#L17)*
 
 Used to determine feast precedence in conflicts, from 1 (ferial weekday) to 5 (Feast of Our Lord)

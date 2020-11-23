@@ -36,6 +36,7 @@
 * ["citation/selectable-citation"](modules/_citation_selectable_citation_.md)
 * ["citation/source"](modules/_citation_source_.md)
 * ["condition"](modules/_condition_.md)
+* ["display-settings"](modules/_display_settings_.md)
 * ["editing/change"](modules/_editing_change_.md)
 * ["editing/change-message"](modules/_editing_change_message_.md)
 * ["editing/cursor"](modules/_editing_cursor_.md)

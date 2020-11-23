@@ -35,6 +35,8 @@ export * from './rubric';
 export * from './sharing/sharing';
 export * from './text';
 
+export * from './display-settings';
+
 export * from './editing/cursor';
 export * from './editing/change';
 export * from './editing/change-message';

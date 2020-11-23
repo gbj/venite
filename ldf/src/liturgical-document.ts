@@ -8,6 +8,7 @@ import { Sharing } from './sharing/sharing';
 import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
 import { Change } from './editing/change';
+import { DisplaySettings } from './display-settings';
 
 const TYPES = [
   'liturgy',
@@ -82,6 +83,9 @@ export class LiturgicalDocument {
    * Antiphonal: alternating parts (for psalms, by half-verse)
    */
   display_format?: DisplayFormat;
+
+  /** Display Settings (font, etc.) to be applied to the document as a whole */
+  display_settings?: DisplaySettings;
 
   /** Category tags allow searches for things like 'Psalm', 'Canticle', 'Confession', 'Eucharist'. */
   category: string[];
