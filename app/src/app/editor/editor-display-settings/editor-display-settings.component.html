@@ -1,0 +1,76 @@
+<ng-container *ngIf="isModal">
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>{{ 'displaySettings.display-settings' | translate }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismiss()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ng-container *ngTemplateOutlet="body"></ng-container>
+  </ion-content>
+</ng-container>
+
+<ng-container *ngIf="!isModal">
+  <ng-container *ngTemplateOutlet="body"></ng-container>
+</ng-container>
+
+<ng-template #body>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Font-Size' | translate }}</ion-label>
+    <ion-select [value]="settings.fontscale" (ionChange)="updateSetting('fontscale', $event)">
+      <ion-select-option value="s"><ion-label>{{ 'displaySettings.Size.S' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="m"><ion-label>{{ 'displaySettings.Size.M' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="l"><ion-label>{{ 'displaySettings.Size.L' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="xl"><ion-label>{{ 'displaySettings.Size.XL' | translate }}</ion-label></ion-select-option>
+      <ion-select-option value="xxl"><ion-label>{{ 'displaySettings.Size.XXL' | translate }}</ion-label></ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="config.fonts">
+    <ion-label position="stacked">{{ 'displaySettings.Font' | translate }}</ion-label>
+    <ion-segment [value]="settings.font" (ionChange)="updateSetting('font', $event)">
+      <ion-segment-button *ngFor="let font of configFonts" [value]="font.value" [style]="font.style">{{ font.label }}</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Dropcaps' | translate }}</ion-label>
+    <ion-segment [value]="settings.dropcaps" (ionChange)="updateSetting('dropcaps', $event)">
+      <ion-segment-button *ngFor="let setting of configDrops" [value]="setting.value">
+        <div [class]="setting.class"><span class="drop">{{ setting.label }}</span></div>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item *ngIf="config.antiphons">
+    <ion-label position="stacked">{{ 'displaySettings.Antiphons' | translate }}</ion-label>
+    <ion-select [value]="settings.repeatAntiphon" (ionChange)="updateSetting('repeatAntiphon', $event)">
+      <ion-select-option value="bracket">{{ 'displaySettings.Before-After' | translate }}</ion-select-option>
+      <ion-select-option value="repeat">{{ 'displaySettings.After' | translate }}</ion-select-option>
+      <ion-select-option value="none">{{ 'displaySettings.None' | translate }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">{{ 'displaySettings.Responses' | translate }}</ion-label>
+    <ion-segment [value]="settings.response" (ionChange)="updateSetting('response', $event)">
+      <ion-segment-button value="bold">{{ 'displaySettings.Bold' | translate }}</ion-segment-button>
+      <ion-segment-button value="italics">{{ 'displaySettings.Italics' | translate }}</ion-segment-button>
+    </ion-segment>
+    <ion-segment *ngIf="config.ask_about_unison_texts" [value]="settings.bolded" (ionChange)="updateSetting('bolded', $event)">
+      <ion-segment-button value="both">{{ 'displaySettings.Response-and-Unison-Bolded' | translate }}</ion-segment-button>
+      <ion-segment-button value="responses">{{ 'displaySettings.Responses' | translate }}</ion-segment-button>
+      <ion-segment-button value="unison">{{ 'displaySettings.Unison' | translate }}</ion-segment-button>
+      <ion-segment-button value="none">{{ 'displaySettings.None' | translate }}</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{ 'displaySettings.Psalm-Verses' | translate }}</ion-label>
+    <ion-checkbox [value]="settings.psalmVerses" [checked]="settings.psalmVerses" (ionChange)="updateSetting('psalmVerses', $event)" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{ 'displaySettings.Reading-Verses' | translate }}</ion-label>
+    <ion-checkbox [value]="settings.bibleVerses" [checked]="settings.bibleVerses" (ionChange)="updateSetting('bibleVerses', $event)" slot="start"></ion-checkbox>
+  </ion-item>
+</ng-template>

@@ -205,7 +205,7 @@ export class PrayPage implements OnInit, OnDestroy {
     )
 
     // Grab display settings from preferences
-    this.settings$ = combineLatest([
+    const prefSettings$ = combineLatest([
       this.grabPreference('dropcaps'),
       this.grabPreference('response'),
       this.grabPreference('repeatAntiphon'),
@@ -218,11 +218,18 @@ export class PrayPage implements OnInit, OnDestroy {
       this.grabPreference('psalmVerses'),
       this.grabPreference('bibleVerses'),
       this.grabPreference('meditationBell'),
-      this.grabPreference('darkmode'),
-      this.grabPreference('bolded')
+      this.grabPreference('darkmode')
     ]).pipe(
       map(settings => new DisplaySettings( ... settings))
     );
+
+    const docSettings$ = this.doc$.pipe(
+      map(doc => doc?.display_settings)
+    )
+
+    this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
+      map(([prefSettings, docSettings]) => docSettings ?? prefSettings)
+    )
 
     this.userProfile$ = this.auth.user.pipe(
       switchMap(user => user ? this.auth.getUserProfile(user.uid) : null)
@@ -406,6 +413,17 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: () => {
           this.actionSheetController.dismiss();
           this.editBulletin(data.userProfile, data.doc, data.userOrgs);
+        }
+      },
+      {
+        text: 'Download JSON',
+        icon: 'download',
+        handler: () => {
+          this.downloadService.download(
+            new Blob([JSON.stringify(data.doc)], { type: 'application/json' }),
+            `${data.doc.slug}.ldf.json`,
+            'application/json'
+          )
         }
       },
       /*{

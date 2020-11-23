@@ -96,9 +96,9 @@
             <ion-icon name="cloud-upload" slot="start"></ion-icon>
             <ion-label>{{ 'editor.import' | translate }}</ion-label>
           </ion-button>
-          <form class="visually-hidden">
+          <form class="visually-hidden" *ngIf="userProfile$ | async as userProfile">
             <label for="importFile">{{'editor.import' | translate}}</label>
-            <input #importInput type="file" (change)="handleImport($event)" name="importFile" id="importFile"/>
+            <input #importInput type="file" (change)="handleImport($event, userProfile)" name="importFile" id="importFile"/>
           </form>
         </ion-buttons>
       </ion-toolbar>

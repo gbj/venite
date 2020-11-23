@@ -124,7 +124,7 @@ export class PrayPage implements OnInit {
     )
 
     // Grab display settings from preferences
-    this.settings$ = combineLatest([
+    const prefSettings$ = combineLatest([
       this.grabPreference('dropcaps'),
       this.grabPreference('response'),
       this.grabPreference('repeatAntiphon'),
@@ -141,6 +141,14 @@ export class PrayPage implements OnInit {
     ]).pipe(
       map(settings => new DisplaySettings( ... settings))
     );
+
+    const docSettings$ = this.doc$.pipe(
+      map(doc => doc?.display_settings)
+    )
+
+    this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
+      map(([prefSettings, docSettings]) => docSettings ?? prefSettings)
+    )
   }
 
   /* Display Settings */

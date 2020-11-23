@@ -183,14 +183,16 @@ export class EditorPage implements OnInit {
     this.importInput.nativeElement.click();
   }
 
-  async handleImport(event : Event) {
+  async handleImport(event : Event, userProfile : UserProfile) {
     const files = (<HTMLInputElement>event.target).files;
     Array.from(files).forEach(file => {
       if(file.type === 'application/json') {
         const reader = new FileReader();
         reader.onload = async e => {
-          const doc = JSON.parse(e.target.result.toString()),
-            docId = await this.documents.newDocument(doc);
+          const doc : LiturgicalDocument = JSON.parse(e.target.result.toString());
+          doc.sharing.owner = userProfile.uid;
+          doc.sharing.organization = (userProfile.orgs || [])[0];
+          const docId = await this.documents.newDocument(doc);
           this.joinDocument(docId);
         };
         reader.readAsText(file);

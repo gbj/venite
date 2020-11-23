@@ -19,6 +19,7 @@ import { CanticleSelectComponent } from './canticle-select/canticle-select.compo
 import { SharingComponent } from './sharing/sharing.component';
 import { HymnSelectorComponent } from './hymn-selector/hymn-selector.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { EditorDisplaySettingsComponent } from './editor-display-settings/editor-display-settings.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     CanticleSelectComponent,
     SharingComponent,
     HymnSelectorComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    EditorDisplaySettingsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

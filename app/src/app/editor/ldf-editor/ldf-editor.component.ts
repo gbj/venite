@@ -1,20 +1,21 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, EventEmitter } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 const { Clipboard } = Plugins;
 import * as clipboardPolyfill from 'clipboard-polyfill';
 import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
-import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption } from '@venite/ldf';
+import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption, DisplaySettings } from '@venite/ldf';
 import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService, EditorStatus, EditorStatusCode } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController, LoadingController, ModalController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
 import { AddBlockComponent } from '../add-block/add-block.component';
 import { SharingComponent } from '../sharing/sharing.component';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -51,7 +52,8 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     private editorService : EditorService,
     private modal : ModalController,
     private router : Router,
-    private alert : AlertController
+    private alert : AlertController,
+    private loading : LoadingController
   ) { }
 
   ngOnInit() {
@@ -346,5 +348,46 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     });
 
     await alert.present();
+  }
+
+  async displaySettings(manager : LocalDocumentManager, doc : LiturgicalDocument) {
+    const modal = await this.modal.create({
+      component: EditorDisplaySettingsComponent
+    });
+
+    const prefUpdated = new EventEmitter<{ key: string; value: any; }>();
+    prefUpdated.subscribe((data : { key: string; value: any; }) => {
+      if(!doc.display_settings) {
+        const value = new DisplaySettings();
+        value[data.key] = data.value;
+        this.editorService.processChange(manager, new Change({
+          path: '/display_settings',
+          op: [{
+            type: 'set',
+            value,
+            oldValue: doc.display_settings
+          }]
+        }));
+      } else {
+        this.editorService.processChange(manager, new Change({
+          path: '/display_settings',
+          op: [{
+            type: 'set',
+            index: data.key,
+            value: data.value,
+            oldValue: (doc?.display_settings || {})[data.key]
+          }]
+        }));
+      }
+    });
+
+    modal.componentProps = {
+      modal,
+      isModal: true,
+      settings: doc.display_settings || new DisplaySettings(),
+      prefUpdated
+    };
+
+    await modal.present();
   }
 }

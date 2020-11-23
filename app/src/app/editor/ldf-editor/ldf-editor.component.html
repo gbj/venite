@@ -16,6 +16,10 @@
             <ion-icon name="share" slot="start"></ion-icon>
             <ion-label>{{ 'editor.publish' | translate }}</ion-label>
           </ion-button>
+          <ion-button (click)="displaySettings(state?.localManager, state?.localManager.document)" class="sm-hidden">
+            <ion-icon name="cog" slot="start"></ion-icon>
+            <ion-label class="visually-hidden">{{ 'displaySettings.display-settings' | translate }}</ion-label>
+          </ion-button>
           <ng-container *ngIf="editorStatus | async as status">
             <ion-icon *ngIf="status.code === 'Idle'"></ion-icon>
             <ion-icon class="status pending" *ngIf="status.code === 'Pending'" name="cloud-upload"></ion-icon>
@@ -34,6 +38,10 @@
           <ion-button (click)="shareLink(state?.localManager, state?.localManager.document)">
             <ion-icon name="share" slot="start"></ion-icon>
             <ion-label>{{ 'editor.publish' | translate }}</ion-label>
+          </ion-button>
+          <ion-button (click)="displaySettings(state?.localManager, state?.localManager.document)">
+            <ion-icon name="cog" slot="start"></ion-icon>
+            <ion-label class="visually-hidden">{{ 'displaySettings.display-settings' | translate }}</ion-label>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>

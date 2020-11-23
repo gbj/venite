@@ -67,7 +67,6 @@ export class PsalmComponent {
   }
 
   async changeCanticle() {
-    console.log('emitting for ', this.path)
     const modal = await modalController.create({
       component: 'ldf-editable-filter-documents',
     });
