@@ -87,7 +87,7 @@ export class MeditationComponent {
   /** Start the timer, either with a given value of seconds or with the number passed in the Meditation object metadata */
   @Method()
   async start(value : number = undefined) {
-    const metadata = this.obj && this.obj.metadata ? this.obj.metadata : { length: 60, delay: 0},
+    const metadata = this.obj?.metadata ?? { length: 300, delay: 0},
           seconds : number = value || metadata.length,
           delay : number = metadata.delay;
     this.secondsRemaining = seconds;
@@ -184,7 +184,7 @@ export class MeditationComponent {
       }
     );
     this.obj = new Meditation(this.obj);
-    this.secondsRemaining = this.obj.metadata.length;
+    this.secondsRemaining = this.obj?.metadata?.length ?? 0;
   }
 
   buttonNode(handler, label : string, icon : string, fill : 'clear' | 'outline' | 'solid' | 'default' = 'clear', size : 'default' | 'large' | 'small' = 'large') : JSX.Element {
@@ -210,20 +210,21 @@ export class MeditationComponent {
   render() {
     const localeStrings = this.localeStrings || {};
 
-    const progressAmount : number = this.secondsRemaining / this.obj.metadata.length,
-          progressPercent : number = progressAmount * 100;
+    const length = this.obj?.metadata?.length ?? 300,
+      progressAmount : number = this.secondsRemaining / length,
+      progressPercent : number = progressAmount * 100;
+  
+    console.log('meditation', length, progressAmount, progressPercent)
 
     return (
       <Host>
-        <ldf-label-bar>
-          <div class={{'hidden': !!this.secondsRemaining}}>
-            <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
-              {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid', 'small')}
-              <input type='number' value={this.obj.metadata.length / 60} onInput={(e) => this.handleControlValue(e)} />
-              <span>{localeStrings.minutes}</span>
-            </form>
-          </div>
-        </ldf-label-bar>
+        <div class={{'control-container': true, 'hidden': !!this.secondsRemaining}}>
+          <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
+            {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid', 'small')}
+            <input type='number' value={length / 60} onInput={(e) => this.handleControlValue(e)} />
+            <span>{localeStrings.minutes}</span>
+          </form>
+        </div>
 
         {/* Progress Circle */}
         <div class={{'hidden': !this.secondsRemaining}}>
