@@ -30,26 +30,37 @@ export class LectionaryService {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        let query : firebase.firestore.Query = ref.where('when', '==', when)
-                                                  .where('whentype', '==', whentype);
+        if(day.holy_day_observed && day.slug) {
+          let query = ref.where('day', '==', day.slug);
+          if(readingType !== undefined) {
+            query = query.where('type', '==', readingType);
+          }
+          return query;
+        } else {
+          let query : firebase.firestore.Query = ref
+            .where('when', '==', when)
+            .where('whentype', '==', whentype);
 
-        if(lectionaryName !== undefined) {
-          query = query.where('lectionary', '==', lectionaryName);
-        }
-        
-        if(readingType !== undefined) {
-          // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
-          // so its value is set to 'first_reading_alt'
-          // but it still needs to search for 'first_reading'
-          query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
-        }
+          if(lectionaryName !== undefined) {
+            query = query.where('lectionary', '==', lectionaryName);
+          }
 
-        if(includeDay !== false) {
-          query = query.where('day', '==', day.propers || day.slug)
-        }
+          if(readingType !== undefined) {
+            // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
+            // so its value is set to 'first_reading_alt'
+            // but it still needs to search for 'first_reading'
+            query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
+          }
 
-        return query;
-      }).valueChanges();
+          if(includeDay !== false) {
+            query = query.where('day', '==', day.propers || day.slug)
+          }
+
+          return query;
+        }
+      }).valueChanges().pipe(
+        tap(entries => console.log('getReadings =>', entries))
+      );
     }
   }
 
