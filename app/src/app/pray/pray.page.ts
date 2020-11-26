@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
-import { ActionSheetController, IonContent, ModalController } from '@ionic/angular';
+import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
 import { PrayService } from './pray.service';
@@ -82,7 +82,8 @@ export class PrayPage implements OnInit, OnDestroy {
     private translate : TranslateService,
     private downloadService : DownloadService,
     private actionSheetController : ActionSheetController,
-    public speechService : SpeechService
+    public speechService : SpeechService,
+    private loadingController : LoadingController
   ) { }
 
   ngOnDestroy() {
@@ -228,7 +229,14 @@ export class PrayPage implements OnInit, OnDestroy {
     )
 
     this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
-      map(([prefSettings, docSettings]) => docSettings ?? prefSettings)
+      map(([prefSettings, docSettings]) =>
+        // basically — use the document's settings for everything except font size and dark mode
+        ({
+          ...(docSettings ?? prefSettings),
+          darkmode: prefSettings.darkmode ?? docSettings.darkmode ?? "auto",
+          fontscale: prefSettings.fontscale ?? docSettings.fontscale ?? "m",
+        })
+      )
     )
 
     this.userProfile$ = this.auth.user.pipe(
@@ -336,7 +344,11 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   async convertToDocx(doc : LiturgicalDocument, settings : DisplaySettings) {
-    console.log('(convertToDocx)', doc, settings);
+    // show loading
+    const loading = await this.loadingController.create();
+    await loading.present();
+
+    // post data to create blob
     const filename = `${doc.label}${doc?.day?.date ? ` - ${doc.day.date}` : ''}.docx`,
       resp = await fetch(`https://us-central1-venite-2.cloudfunctions.net/docx`, {
         method: 'POST',
@@ -348,7 +360,12 @@ export class PrayPage implements OnInit, OnDestroy {
         body: JSON.stringify({ doc, settings })
       }),
       blob = await resp.blob();
-    this.downloadService.download(blob, filename);
+
+    // download the blob
+    await this.downloadService.download(blob, filename, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+
+    // hide loading
+    await loading.dismiss();
   }
 
   async actionSheet(data : ActionSheetData) {
