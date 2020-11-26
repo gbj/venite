@@ -165,14 +165,17 @@ export class DocumentService {
         : mine.concat(venite),
         gloria
       ]),
-      // add Gloria to psalms, canticles, invitatories
-      map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm' ? doc : new LiturgicalDocument({
-        ... doc,
-        metadata: {
-          ... doc.metadata,
-          gloria: docsToOption(gloria)
-        }
-      }))),
+      // add Gloria to psalms, canticles, invitatories, if they don't have 
+      map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm'
+        ? doc
+        : new LiturgicalDocument({
+          ... doc,
+          metadata: {
+            ... doc.metadata,
+            gloria: docsToOption(gloria)
+          }
+        }))
+      ),
       // order by version
       map(docs => docs.sort((a, b) => {
         const aIndex = (versions || []).indexOf(versionToString(a.version));

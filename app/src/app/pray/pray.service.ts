@@ -30,7 +30,6 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
-    console.log('(compile)', docBase, 'versions = ', liturgyversions);
     const doc = new LiturgicalDocument({ ... docBase, day });
 
     // should the doc be included?
@@ -181,6 +180,7 @@ export class PrayService {
             slug = doc.slug.split(':')[0].replace(' ', '_').toLowerCase();
 
             result = this.lookupBySlug(
+              doc,
               slug,
               language,
               versions,
@@ -192,6 +192,7 @@ export class PrayService {
             );
         } else if(doc.slug) {
           result = this.lookupBySlug(
+            doc,
             doc.slug,
             language,
             versions,
@@ -200,6 +201,8 @@ export class PrayService {
             doc.lookup.filter,
             Boolean(doc.lookup.rotate),
             Boolean(doc.lookup.random)
+          ).pipe(
+            tap(doc2 => console.log(doc2.slug, 'omit_gloria = ', doc.metadata?.omit_gloria, '=>', doc2.metadata?.omit_gloria))
           );
         } else {
           console.warn('the following is not a compilable document\n\n', doc);
@@ -211,7 +214,7 @@ export class PrayService {
     return result.pipe(
       map(doc => doc && new LiturgicalDocument(doc).include(new LiturgicalDay(day), prefs)
         ? new LiturgicalDocument({
-          ... doc,
+          ...doc,
           condition: undefined,
           lookup: undefined
         })
@@ -223,7 +226,7 @@ export class PrayService {
   /* Look up documents (either single, as options, or rotating) by `slug` or `category` */
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
-  lookupBySlug(slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
+  lookupBySlug(docBase : LiturgicalDocument, slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
     return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
       // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
@@ -233,12 +236,15 @@ export class PrayService {
         ? new LiturgicalDocument({ ... entry, metadata: { ...entry?.metadata, gloria: undefined }})
         : entry
       )),
-      // omit Gloria Patri if `insertGloria` === 'false'
-      map(entries => entries.map(entry => !(entry?.type == 'psalm' && entry?.style == 'psalm') ? entry : new LiturgicalDocument({
-        ... entry,
+      // insert all omit_ preferences from different document types
+      map(docs => docs.map(doc => new LiturgicalDocument({
+        ...doc,
         metadata: {
-          ... entry?.metadata,
-          omit_gloria: Boolean(prefs['insertGloria'] == 'false')
+          ...doc.metadata,
+          omit_antiphon: docBase?.metadata?.omit_antiphon,
+          // also omit Gloria Patri if `insertGloria` === 'false'
+          omit_gloria: docBase?.metadata?.omit_gloria ?? Boolean(prefs['insertGloria'] == 'false'),
+          omit_response: docBase?.metadata?.omit_response
         }
       }))),
       // rotate and merge
@@ -352,7 +358,7 @@ export class PrayService {
         lookup: { type: 'slug' }
       })))),
       // pack these into a `Liturgy` object
-      map(docs => new Liturgy({ ... docsToLiturgy(docs), lookup: undefined })),
+      map(docs => new LiturgicalDocument({ ... docsToLiturgy(docs), lookup: undefined })),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
       switchMap(option => this.compile(option, day, prefs, [version], originalPrefs)),
@@ -360,7 +366,7 @@ export class PrayService {
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
         value: (liturgy?.value || []).sort((a, b) => a?.metadata?.number - b?.metadata?.number)
-      }))
+      })),
     )
   }
 
@@ -429,7 +435,7 @@ export class PrayService {
           insert_seasonal_antiphon: false,
           antiphon
         }
-      })),
+      }))
     )
   }
 }
