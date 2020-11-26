@@ -1513,9 +1513,9 @@
 }
 
 
-    const node = document.createElement('ldf-editor');
-node.setAttribute('editable', true);
-node.setAttribute('path', '/');
+    const node = document.createElement('ldf-liturgical-document');
+    node.setAttribute('editable', false);
+    node.setAttribute('path', '/');
     node.doc = LITURGY;
     document.querySelector('#example').appendChild(node);
   </script>

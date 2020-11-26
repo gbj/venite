@@ -72,6 +72,10 @@
       .verse:nth-of-type(1) {
         display: var(--ldf-psalm-first-verse-display);
       }
+
+      .halfverse:nth-of-type(2) {
+        display: var(--ldf-psalm-first-half-verse-display, inline-block);
+      }
     }
   }
 }

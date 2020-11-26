@@ -221,6 +221,7 @@ body {
     --ldf-drop-margin-right: 0.05em;
     --ldf-drop-margin-top: 0.15em;
     --ldf-drop-line-height: 0.6em;
+    --ldf-psalm-first-half-verse-display: inline;
   }
 
   .dropcaps-decorated {
@@ -229,6 +230,7 @@ body {
     --ldf-drop-margin-right: 0.05em;
     --ldf-drop-margin-top: 0.15em;
     --ldf-drop-line-height: 0.6em;
+    --ldf-psalm-first-half-verse-display: inline;
   }
 
   @media(min-width: 767px) {
@@ -242,6 +244,7 @@ body {
       --ldf-drop-margin-right: 0.05em;
       --ldf-drop-margin-top: 0.1em;
       --ldf-drop-line-height: 0.5em;
+      --ldf-psalm-first-half-verse-display: inline-block;
     }
 
     .dropcaps-decorated {
@@ -249,6 +252,7 @@ body {
       --ldf-drop-margin-right: 0.05em;
       --ldf-drop-margin-top: 0.1em;
       --ldf-drop-line-height: 0.5em;
+      --ldf-psalm-first-half-verse-display: inline-block;
     }
 
     .dropcaps-none {
@@ -297,7 +301,7 @@ body {
     }
 
     .fontscale-m {
-      --ldf-max-width: 600px;
+      --ldf-max-width: 650px;
       font-size: 125%;
     }
 
