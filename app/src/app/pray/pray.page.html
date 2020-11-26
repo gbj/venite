@@ -8,9 +8,11 @@
       <ion-title *ngIf="doc$ | async as doc else prayTheOffice">{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
       <ion-buttons collapse="true" slot="end" *ngIf="doc$ | async as doc">
         <venite-auth-menu-button></venite-auth-menu-button>
-        <ion-button *ngIf="actionSheetData$ | async as data" (click)="actionSheet(data)" aria-label="More Actions">
-          <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
-        </ion-button>
+        <ng-container *ngIf="actionSheetData$ | async as data">
+          <ion-button *ngIf="data.doc"(click)="actionSheet(data)" aria-label="More Actions">
+            <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+          </ion-button>
+        </ng-container>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
