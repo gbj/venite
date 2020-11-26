@@ -127,7 +127,7 @@ export class SpeechService {
         ? docToUtterances(doc?.metadata?.compiled_intro)
         : [],
         // text
-        ... (doc as BibleReading).value.map(verse =>
+        ... ((doc as BibleReading).value || []).map(verse =>
           verse.hasOwnProperty('type') && (verse as Heading).type === 'heading'
           ? docToUtterances(verse as Heading)
           : processText((verse as BibleReadingVerse).text).split(/[^\w \t]/g)
