@@ -120,7 +120,10 @@ export class SpeechService {
       }
     }
   
-    function bibleReadingToUtterances(doc : BibleReading) : (number | string)[] {
+    function bibleReadingToUtterances(d : BibleReading) : (number | string)[] {
+      const doc = new BibleReading(d);
+      doc.compileIntro();
+
       return [
         // compiled intro
         ... doc?.metadata?.compiled_intro
@@ -190,8 +193,7 @@ export class SpeechService {
       }
   
       return [
-        ... doc.style === 'psalm' ? [doc.label] : [],
-        ... doc.style === 'canticle' && doc.label ? [`Canticle ${doc.label}`] : [],
+        ... doc.label ? [doc.label] : [],
         ... includeAntiphon ? antiphonNode(obj?.metadata?.antiphon) : [],
         ... (filteredValue || doc.value).map(section => [
           ... section.label ? headingNode(section.label, 4, false) : [],
