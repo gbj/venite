@@ -38,6 +38,7 @@
 
 ion-input {
   --ion-font-family: var(--ldf-font-face);
+  min-height: 2em !important;
 }
 
 /*:host textarea:focus {

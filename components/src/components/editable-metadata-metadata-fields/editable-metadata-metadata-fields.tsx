@@ -141,9 +141,9 @@ export class EditableMetadataMetadataFieldsComponent {
           { field: 'number', type: Field.Number },
           { field: 'localname', type: Field.String },
           { field: 'latinname', type: Field.String },
-          //{ field: 'omit_antiphon', type: Field.Bool },
-          //{ field: 'omit_gloria', type: Field.Bool },
-          //{ field: 'insert_seasonal_antiphon', type: Field.Bool },
+          { field: 'omit_antiphon', type: Field.Bool },
+          { field: 'omit_gloria', type: Field.Bool },
+          { field: 'insert_seasonal_antiphon', type: Field.Bool },
           { field: 'antiphon', type: Field.Antiphon },
           { field: 'gloria', type: Field.Gloria },
         ]
@@ -338,7 +338,7 @@ export class EditableMetadataMetadataFieldsComponent {
           : <ion-label>{ localeStrings[field.field] }</ion-label>}
           {nodes.map(field => field.hasOwnProperty('size') ? 
             <ion-col size={field['size']}>{field['node']}</ion-col> :
-            <ion-col size="4">{field}</ion-col>)}
+            <ion-col>{field}</ion-col>)}
         </ion-item>
       ]
     } else {
@@ -356,17 +356,24 @@ export class EditableMetadataMetadataFieldsComponent {
           <ion-card-title>{localeStrings[this.obj.type]} {localeStrings.title}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-grid>
+          {/* {<ion-grid>
             <ion-row>
               {fieldNodes.map((fields : ({node: JSX.Element; size: number;} | JSX.Element)[]) =>
                 fields.map(field => {
                   return field.hasOwnProperty('size') ? 
                   <ion-col size={field['size']}>{field['node']}</ion-col> :
-                  <ion-col size="4">{field}</ion-col>
+                  <ion-col size="12">{field}</ion-col>
                 })
               )}
             </ion-row>
-          </ion-grid>
+          </ion-grid>} */}
+          {fieldNodes.map((fields : ({node: JSX.Element; size: number;} | JSX.Element)[]) =>
+              fields.map(field => {
+                return field.hasOwnProperty('size') ? 
+                <div>{field['node']}</div> :
+                <div>{field}</div>
+              })
+            )}
         </ion-card-content>
       </ion-card>
     );
