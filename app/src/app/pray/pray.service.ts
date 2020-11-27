@@ -242,7 +242,7 @@ export class PrayService {
           ...doc.metadata,
           omit_antiphon: docBase?.metadata?.omit_antiphon,
           // also omit Gloria Patri if `insertGloria` === 'false'
-          omit_gloria: docBase?.metadata?.omit_gloria ?? Boolean(prefs['insertGloria'] == 'false'),
+          omit_gloria: docBase?.metadata?.omit_gloria ?? (docBase?.style === 'psalm' && Boolean(prefs['insertGloria'] == 'false')),
           omit_response: docBase?.metadata?.omit_response,
           changeable: docBase?.metadata?.changeable
         }
