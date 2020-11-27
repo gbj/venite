@@ -18,6 +18,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { DownloadService } from '../services/download.service';
 import { SpeechService, SpeechServiceTracking } from '../services/speech.service';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { LoginComponent } from '../auth/login/login.component';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -94,7 +95,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
   ngOnInit() {
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
-    // bulletin mode (i.e., include all possibilities as options rather than randomizing or rotating)
+    // bulletin mode (i.e., include all possibilities as options)
     this.prayService.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'))
 
     // If passed through router state, it's simply a synchronous `PrayState` object
@@ -398,11 +399,33 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: () => this.startSpeechAt(data.doc, data.settings, 0, 0)
       })
     }
+
     if(canDownloadWord) {
       buttons.push({
         text: this.translate.instant('Open in Word'),
         icon: 'document',
         handler: () => this.convertToDocx(data.doc, data.settings)
+      });
+    }
+
+    // Edit Bulletin if logged in
+    if(data.userProfile) {
+      buttons.push({
+        text: 'Edit Bulletin',
+        icon: 'create',
+        handler: () => {
+          this.actionSheetController.dismiss();
+          this.editBulletin(data.userProfile, data.doc, data.userOrgs);
+        }
+      })
+    } else {
+      buttons.push({
+        text: 'Log in to Edit Bulletin',
+        icon: 'create',
+        handler: async () => {
+          const login = await this.modal.create({ component: LoginComponent });
+          await login.present();
+        }
       });
     }
     /*if(this.isBulletin && !this.bulletinDraftId) {
@@ -433,14 +456,6 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: () => {
           this.actionSheetController.dismiss();
           this.openSettings(data.doc, data.settings);
-        }
-      },
-      {
-        text: 'Edit Bulletin',
-        icon: 'create',
-        handler: () => {
-          this.actionSheetController.dismiss();
-          this.editBulletin(data.userProfile, data.doc, data.userOrgs);
         }
       },
       {
