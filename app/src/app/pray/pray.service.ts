@@ -120,8 +120,6 @@ export class PrayService {
                         .filter(version => version !== undefined)
                         .map(version => typeof version === 'object' ? prefs[version.preference] : version);
   
-    console.log('(lookup) versions = ', versions);
-
     let result : Observable<LiturgicalDocument | null>;
 
     switch(doc.lookup.type) {
@@ -203,8 +201,6 @@ export class PrayService {
             doc.lookup.filter,
             Boolean(doc.lookup.rotate),
             Boolean(doc.lookup.random)
-          ).pipe(
-            tap(doc2 => console.log(doc2.slug, 'omit_gloria = ', doc.metadata?.omit_gloria, '=>', doc2.metadata?.omit_gloria))
           );
         } else {
           console.warn('the following is not a compilable document\n\n', doc);
