@@ -17,6 +17,10 @@
     flex-grow: 2;
   }
 
+  slot:nth-of-type(2) {
+    flex-grow: 2;
+  }
+
   slot:last-of-type {
     margin-left: auto;
     text-align: right;
