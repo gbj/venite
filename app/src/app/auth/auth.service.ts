@@ -15,7 +15,7 @@ export class AuthService {
 
   constructor(
     private platform : Platform,
-    private afAuth : AngularFireAuth,
+    afAuth : AngularFireAuth,
     private afs : AngularFirestore
   ) {
     this.user = afAuth.user;
