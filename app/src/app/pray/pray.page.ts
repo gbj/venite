@@ -319,6 +319,10 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   async editBulletin(userProfile : UserProfile, doc : LiturgicalDocument, orgs : Organization[]) {
+    const loading = await this.loadingController.create();
+
+    await loading.present();
+
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null;
@@ -334,6 +338,9 @@ export class PrayPage implements OnInit, OnDestroy {
         privacy: 'organization'
       })
     }));
+
+    await loading.dismiss();
+
     this.router.navigate(['editor', id]);
   }
 
