@@ -28,7 +28,7 @@
 
 \+ **new Citation**(`data`: Partial‹[Citation](_citation_citation_.citation.md)›): *[Citation](_citation_citation_.citation.md)*
 
-*Defined in [citation/citation.ts:16](https://github.com/gbj/venite/blob/a445f5e/ldf/src/citation/citation.ts#L16)*
+*Defined in [citation/citation.ts:16](https://github.com/gbj/venite/blob/eb28588/ldf/src/citation/citation.ts#L16)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type | Default |
 
 • **api**: *string* = "https://www.venite.app/api"
 
-*Defined in [citation/citation.ts:3](https://github.com/gbj/venite/blob/a445f5e/ldf/src/citation/citation.ts#L3)*
+*Defined in [citation/citation.ts:3](https://github.com/gbj/venite/blob/eb28588/ldf/src/citation/citation.ts#L3)*
 
 The URL (as a string) for the API from which more information about the source can be found
 
@@ -54,7 +54,7 @@ ___
 
 • **citation**: *string*
 
-*Defined in [citation/citation.ts:11](https://github.com/gbj/venite/blob/a445f5e/ldf/src/citation/citation.ts#L11)*
+*Defined in [citation/citation.ts:11](https://github.com/gbj/venite/blob/eb28588/ldf/src/citation/citation.ts#L11)*
 
 Citation within that source
 
@@ -67,7 +67,7 @@ ___
 
 • **source**: *string*
 
-*Defined in [citation/citation.ts:6](https://github.com/gbj/venite/blob/a445f5e/ldf/src/citation/citation.ts#L6)*
+*Defined in [citation/citation.ts:6](https://github.com/gbj/venite/blob/eb28588/ldf/src/citation/citation.ts#L6)*
 
 A machine-readable unique identifying slug for the source
 
@@ -77,7 +77,7 @@ A machine-readable unique identifying slug for the source
 
 ▸ **toString**(`suppressSource`: boolean): *string*
 
-*Defined in [citation/citation.ts:14](https://github.com/gbj/venite/blob/a445f5e/ldf/src/citation/citation.ts#L14)*
+*Defined in [citation/citation.ts:14](https://github.com/gbj/venite/blob/eb28588/ldf/src/citation/citation.ts#L14)*
 
 Provides a human-readable string form of the citation
 

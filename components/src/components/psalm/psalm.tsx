@@ -173,7 +173,7 @@ export class PsalmComponent {
         {/* Slot for controls*/}
         { (this.editable || this.obj?.style === 'canticle') && <ldf-label-bar>
           <slot slot='end' name='controls'>
-            {this.obj?.style === 'canticle' && <ldf-label-bar>
+            {this.obj?.style === 'canticle' && this.obj?.metadata?.changeable && <ldf-label-bar>
               <slot slot='end' name='controls'>
                 <ion-buttons>
                   <ion-button onClick={() => this.changeCanticle()}>

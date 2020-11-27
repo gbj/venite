@@ -20,6 +20,9 @@ export class Psalm extends LiturgicalDocument {
     insert_seasonal_antiphon?: boolean;
     antiphon?: string | Refrain | { [x: string]: string | Refrain };
     gloria?: string | Refrain;
+
+    /** Whether it should be possible to swap this for another psalm/canticle in the UI */
+    changeable?: boolean | undefined;
   };
   value: PsalmSection[];
 

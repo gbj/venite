@@ -131,6 +131,7 @@ export class PrayService {
       case 'canticle-table':
       case 'canticle':
         result = this.lookupFromCanticleTable(
+          doc,
           day,
           versions,
           prefs,
@@ -242,7 +243,8 @@ export class PrayService {
           omit_antiphon: docBase?.metadata?.omit_antiphon,
           // also omit Gloria Patri if `insertGloria` === 'false'
           omit_gloria: docBase?.metadata?.omit_gloria ?? Boolean(prefs['insertGloria'] == 'false'),
-          omit_response: docBase?.metadata?.omit_response
+          omit_response: docBase?.metadata?.omit_response,
+          changeable: docBase?.metadata?.changeable
         }
       }))),
       // rotate and merge
@@ -384,7 +386,7 @@ export class PrayService {
   }
 
   /** Finds the appropriate canticle from a given table for this liturgy */
-  lookupFromCanticleTable(day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
+  lookupFromCanticleTable(doc : LiturgicalDocument, day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
@@ -393,11 +395,14 @@ export class PrayService {
           slug: entry.slug,
           lookup: {
             type: 'slug'
+          },
+          metadata: {
+            changeable: doc?.metadata?.changeable
           }
         }
       ))),
       map(docs => docsToOption(docs, versions)),
-      switchMap(doc => this.compile(doc, day, prefs, versions, originalPrefs))
+      switchMap(doc => this.compile(doc, day, prefs, versions, originalPrefs)),
     )
   }
 

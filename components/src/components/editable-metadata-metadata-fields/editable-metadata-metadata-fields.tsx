@@ -146,6 +146,7 @@ export class EditableMetadataMetadataFieldsComponent {
           { field: 'insert_seasonal_antiphon', type: Field.Bool },
           { field: 'antiphon', type: Field.Antiphon },
           { field: 'gloria', type: Field.Gloria },
+          { field: 'changeable', type: Field.Bool }
         ]
       
       case 'responsive':
