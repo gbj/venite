@@ -1,11 +1,12 @@
 import { Component, Input, OnInit, OnDestroy, ViewChild, Inject } from '@angular/core';
-import { Observable, Subscription, Subject, of } from 'rxjs';
+import { Observable, Subscription, Subject, of, from } from 'rxjs';
 import { take, map, tap, switchMap } from 'rxjs/operators';
 import { LiturgicalDocument, sortPsalms, Psalm } from '@venite/ldf';
-//import { MenuOption } from '@venite/components/dist/types/components/editable-add-block-menu/menu-options';
 import { DocumentService } from 'src/app/services/document.service';
 import { AuthServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { AuthService } from 'src/app/auth/auth.service';
+import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 class MenuOption {
   label: string;
@@ -13,7 +14,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'eucharistic-prayer' | 'response';
 }
 
 @Component({
@@ -43,7 +44,9 @@ export class AddBlockComponent implements OnInit, OnDestroy {
 
   constructor(
     private documentService : DocumentService,
-    public auth : AuthService
+    public auth : AuthService,
+    private translate : TranslateService,
+    private alert : AlertController
   ) { }
 
   ngOnInit() {}
@@ -142,10 +145,34 @@ export class AddBlockComponent implements OnInit, OnDestroy {
                   value: undefined,
                   lookup: { type: "slug" }
                 }))
+                .sort((a, b) => a.label > b.label ? 1 : -1)
               )
             )),
           );
-          return this.complete; // otherwise, it's already complete and we can return the original
+          return this.complete; 
+        case 'eucharistic-prayer':
+          this.additionalMode = 'liturgy';
+          this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy-versions');
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(['Eucharistic Prayer'], this.language, versions)),
+            map(docs => docs.sort((a, b) => a.label > b.label ? 1 : -1))
+          );
+          return this.complete;
+        case 'response':
+          return from(this.responseAlert()).pipe(
+            map(response => response
+              ? addition.template.map(d => new LiturgicalDocument({
+                ...d,
+                metadata: {
+                  ...d.metadata,
+                  response
+                }
+              }))
+              : undefined
+            )
+          );
+        // otherwise, it's already complete and we can return the original
         default:
           return of(addition.template);
       }
@@ -174,4 +201,24 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     );
   }
 
+  async responseAlert() : Promise<string | undefined> {
+    const alert = await this.alert.create({
+      header: this.translate.instant('editor.response'),
+      inputs: [{
+        name: 'response',
+        placeholder: this.translate.instant('editor.response')
+      }],
+      buttons: [{
+        text: this.translate.instant('editor.cancel'),
+        role: 'cancel'
+      }, {
+        text: this.translate.instant('editor.add')
+      }]
+    });
+    
+    await alert.present();
+
+    const data = await alert.onDidDismiss();
+    return data?.data?.values?.response;
+  }
 }

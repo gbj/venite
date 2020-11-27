@@ -203,6 +203,7 @@ export class DocumentService {
           return docs;
         }
       }),
+      map(docs => docs.sort((a, b) => a.label > b.label ? 1 : -1)),
       startWith([LOADING]),
       catchError((error) => this.handleError(error))
     );
