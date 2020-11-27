@@ -262,7 +262,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
     // Canticle Options
     const liturgyVersions$ = this.doc$.pipe(
-      switchMap(doc => this.documents.getVersions(doc?.language ?? 'en', 'liturgy-versions'))
+      switchMap(doc => this.documents.getVersions(doc?.language ?? 'en', 'liturgy'))
     );
 
     const canticleOptions$ = this.doc$.pipe(
@@ -539,8 +539,18 @@ export class PrayPage implements OnInit, OnDestroy {
     const target = querySelectorDeep('ldf-editable-filter-documents');
     if(target) {
       // TODO
-      // target.setVersions(data.liturgyVersions);
-      target.setOptions(data.canticleOptions);
+      console.log('liturgyVersions = ', data.liturgyVersions);
+      target.setVersions(data.liturgyVersions);
+      target.setOptions(
+        data.canticleOptions
+        .sort((a, b) => (a?.metadata?.number > b?.metadata?.number) ? 1 : -1).sort((a, b) => {
+            try {
+              return (parseInt(a?.metadata?.number) > parseInt(b?.metadata?.number)) ? 1 : -1;
+            } catch(e) {
+              return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
+            }
+          })
+      );
     }
   }
 }
