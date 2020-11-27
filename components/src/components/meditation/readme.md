@@ -77,7 +77,6 @@ Type: `Promise<void>`
 - ion-button
 - ion-icon
 - ion-label
-- [ldf-label-bar](../label-bar)
 
 ### Graph
 ```mermaid
@@ -85,7 +84,6 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
-  ldf-meditation --> ldf-label-bar
   ion-button --> ion-ripple-effect
   ldf-liturgical-document --> ldf-meditation
   style ldf-meditation fill:#f9f,stroke:#333,stroke-width:4px

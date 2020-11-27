@@ -83,7 +83,6 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
-  ldf-meditation --> ldf-label-bar
   ldf-option --> ldf-liturgical-document
   ion-segment-button --> ion-ripple-effect
   ldf-refrain --> ldf-label-bar

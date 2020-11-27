@@ -92,8 +92,6 @@ graph TD;
   ldf-editable-metadata-metadata-fields --> ion-card-header
   ldf-editable-metadata-metadata-fields --> ion-card-title
   ldf-editable-metadata-metadata-fields --> ion-card-content
-  ldf-editable-metadata-metadata-fields --> ion-grid
-  ldf-editable-metadata-metadata-fields --> ion-row
   ldf-editable-boolean --> ion-checkbox
   ldf-editable-string-list --> ion-item
   ldf-editable-string-list --> ion-label
@@ -143,7 +141,6 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
-  ldf-meditation --> ldf-label-bar
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label

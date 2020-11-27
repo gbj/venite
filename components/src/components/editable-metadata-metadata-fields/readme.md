@@ -57,8 +57,6 @@ Type: `Promise<void>`
 - ion-card-header
 - ion-card-title
 - ion-card-content
-- ion-grid
-- ion-row
 
 ### Graph
 ```mermaid
@@ -76,8 +74,6 @@ graph TD;
   ldf-editable-metadata-metadata-fields --> ion-card-header
   ldf-editable-metadata-metadata-fields --> ion-card-title
   ldf-editable-metadata-metadata-fields --> ion-card-content
-  ldf-editable-metadata-metadata-fields --> ion-grid
-  ldf-editable-metadata-metadata-fields --> ion-row
   ldf-editable-select --> ion-select
   ldf-editable-select --> ion-select-option
   ldf-editable-boolean --> ion-checkbox
@@ -133,7 +129,6 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
-  ldf-meditation --> ldf-label-bar
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label

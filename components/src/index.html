@@ -125,12 +125,15 @@
   "slug": "noonday-prayer",
   "value": [
     {
+      "type": "meditation"
+    },
+    {
       "hidden": false,
       "value": [
         "Noonday Prayer"
       ],
       "metadata": {
-        "level": 1
+        "level": 3
       },
       "type": "heading",
       "day": {
@@ -1370,13 +1373,18 @@
         "privacy": "public",
         "collaborators": []
       },
-      "label": "",
+      "label": "Collect with an extremely long name that's going to run into the next thing and will eventually grow to be very very big and will wrap around at some point",
       "language": "en",
       "slug": "noonday_collect",
       "style": "prayer",
       "metadata": {},
       "lastRevision": 22,
-      "type": "text"
+      "type": "text",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 772"
+      },
     },
     {
       "hidden": false,
@@ -1513,7 +1521,7 @@
 }
 
 
-    const node = document.createElement('ldf-liturgical-document');
+    const node = document.createElement('ldf-editable-add-block-menu');
     node.setAttribute('editable', false);
     node.setAttribute('path', '/');
     node.doc = LITURGY;
