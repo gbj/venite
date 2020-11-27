@@ -151,7 +151,7 @@ ionViewWillEnter() {
   this.hasStartedNavigating = false;
 }
 
-pray({user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings} : PrayData) {
+pray({user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings} : PrayData, bulletinMode : boolean = false) {
   // update preferences
   this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy);
 
@@ -161,7 +161,7 @@ pray({user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, avai
     this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings);
   } else {
     // navigate to the Pray page
-    this.navigate('/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
+    this.navigate(bulletinMode ? '/bulletin' : '/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
   }
 }
 

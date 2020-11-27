@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError } from 'rxjs/operators';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
 import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
@@ -93,6 +93,10 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
+    // bulletin mode (i.e., include all possibilities as options rather than randomizing or rotating)
+    this.prayService.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'))
+
     // If passed through router state, it's simply a synchronous `PrayState` object
     // This probably means we came from the home page and clicked Pray, so the liturgy
     // and liturgical day had been preloaded

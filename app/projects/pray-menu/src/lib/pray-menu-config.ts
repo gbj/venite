@@ -6,5 +6,6 @@ export interface PrayMenuConfig {
   prayersAndThanksgivings?: {
     preset: boolean;
     component: any;
-  }
+  },
+  hasBulletinMode: boolean;
 }

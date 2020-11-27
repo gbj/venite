@@ -97,8 +97,13 @@
           <ion-label>{{ 'Pray' | translate }}</ion-label>
         </ion-button>
       </ng-template>
+      <ng-container *ngIf="config?.hasBulletinMode">
+        <ion-button *ngIf="prayData | async as data" fill="clear" (click)="pray(data, true)">
+          <ion-label>{{ 'Create a Bulletin' | translate }}</ion-label>
+        </ion-button>
+      </ng-container>
       <ng-container *ngIf="config?.prayersAndThanksgivings?.preset">
-        <ion-button (click)="prayersAndThanksgivings()" fill="outline">
+        <ion-button (click)="prayersAndThanksgivings()" fill="clear">
           <ion-label>{{ 'Choose Prayers and Thanksgivings' | translate }}</ion-label>
         </ion-button>
       </ng-container>

@@ -16,6 +16,8 @@ const emptyValue = (doc : LiturgicalDocument) =>
   providedIn: 'root'
 })
 export class PrayService {
+  public bulletinMode : boolean = false;
+
   public latestChildren$ : Observable<LiturgicalDocument>[];
 
   constructor(
@@ -280,7 +282,7 @@ export class PrayService {
 
   /** If `rotate` is `true`, return one of the docs, rotated through by day; if `false`, return them all */
   rotate(rotate : boolean, random : boolean, day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument | LiturgicalDocument[] {
-    if(rotate) {
+    if(rotate && !this.bulletinMode) {
       const date = dateFromYMDString(day.date);
       if(random) {
         return this.randomize(date, day.evening, docs);
@@ -293,36 +295,41 @@ export class PrayService {
     }
   }
 
-  randomize(date : Date, evening : boolean, docs : LiturgicalDocument[]) : LiturgicalDocument {
-    const UINT32_MAX = 4294967295;
+  // randomizes by day
+  randomize(date : Date, evening : boolean, docs : LiturgicalDocument[]) : LiturgicalDocument | LiturgicalDocument[] {
+    if(!this.bulletinMode) {
+      const UINT32_MAX = 4294967295;
 
-    const genSeed = (now : number) => {
-      const x = now % UINT32_MAX;
-      const y = now << now >>> 0 % UINT32_MAX;
-      const z = y * 11 % UINT32_MAX;
-      const w = x * now % UINT32_MAX;
-      return [x,y,z,w];
-    }
+      const genSeed = (now : number) => {
+        const x = now % UINT32_MAX;
+        const y = now << now >>> 0 % UINT32_MAX;
+        const z = y * 11 % UINT32_MAX;
+        const w = x * now % UINT32_MAX;
+        return [x,y,z,w];
+      }
+    
+      // Marsaglia, George (July 2003). "Xorshift RNGs". Journal of Statistical Software 8 (14).
+      // https://github.com/Risto-Stevcev/pure-random/blob/master/src/pure-random.js
+      const xorshift = (seed : number[]) => {
+        var x = seed[0], y = seed[1], z = seed[2], w = seed[3];
+        var t = x;
+        t = (t ^ (t << 11)) >>> 0;
+        t = (t ^ (t >>> 8)) >>> 0;
+        x = y; y = z; z = w;
+        w = (w ^ (w >>> 19)) >>> 0;
+        w = (w ^ t) >>> 0;
+        return w;
+      }
   
-    // Marsaglia, George (July 2003). "Xorshift RNGs". Journal of Statistical Software 8 (14).
-    // https://github.com/Risto-Stevcev/pure-random/blob/master/src/pure-random.js
-    const xorshift = (seed : number[]) => {
-      var x = seed[0], y = seed[1], z = seed[2], w = seed[3];
-      var t = x;
-      t = (t ^ (t << 11)) >>> 0;
-      t = (t ^ (t >>> 8)) >>> 0;
-      x = y; y = z; z = w;
-      w = (w ^ (w >>> 19)) >>> 0;
-      w = (w ^ t) >>> 0;
-      return w;
+      const rand = (seed : number[], min : number, max : number) => Math.floor(min + xorshift(seed) / 4294967295 * (max - min));
+  
+      const seed = genSeed(Number(`${evening ? 1 : 0}${date.getMonth()}${date.getDate()}${date.getFullYear()}`)),
+        index = rand(seed, 0, docs.length);
+  
+      return docs[index];
+    } else {
+      return docsToOption(docs);
     }
-
-    const rand = (seed : number[], min : number, max : number) => Math.floor(min + xorshift(seed) / 4294967295 * (max - min));
-
-    const seed = genSeed(Number(`${evening ? 1 : 0}${date.getMonth()}${date.getDate()}${date.getFullYear()}`)),
-      index = rand(seed, 0, docs.length);
-
-    return docs[index];
   }
 
   /* Look up readings and chosen lectionary preference */

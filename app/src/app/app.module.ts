@@ -90,7 +90,12 @@ import { PrayPageModule } from '@venite/ng-pray';
           { value: 'Rite-II', label: 'Rite II' },
           { value: 'Rite-I', label: 'Rite I' },
           { value: 'EOW', label: 'Enriching Our Worship' },
-        ]
+        ],
+        prayersAndThanksgivings: {
+          preset: false,
+          component: false
+        },
+        hasBulletinMode: true
       },
       providers: [
         AuthService,
