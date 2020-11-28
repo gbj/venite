@@ -12,4 +12,16 @@ ion-menu {
     .logout {
         margin-top: 3em;
     }
+
+    .orgs {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 1em;
+        }
+    }
 }

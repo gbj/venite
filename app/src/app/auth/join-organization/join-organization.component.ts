@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Organization } from '../../organization/organization';
 
@@ -12,6 +12,7 @@ import { OrganizationService } from 'src/app/organization/organization.service';
   styleUrls: ['./join-organization.component.scss'],
 })
 export class JoinOrganizationComponent implements OnInit {
+  @Input() modal : any = null;
   @Output() complete : EventEmitter<boolean> = new EventEmitter();
 
   // the text to be searched
@@ -52,5 +53,9 @@ export class JoinOrganizationComponent implements OnInit {
     console.log('creating organization with user', user);
     await this.organizationService.create(name, user.uid);
     this.complete.emit(true);
+  }
+
+  dismiss() {
+    this.modal.dismiss();
   }
 }

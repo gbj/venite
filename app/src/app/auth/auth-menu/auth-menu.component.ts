@@ -5,8 +5,9 @@ import { Observable } from 'rxjs';
 import { Organization } from '../../organization/organization';
 import { switchMap, tap } from 'rxjs/operators';
 import { User } from 'firebase';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
 import { OrganizationService } from 'src/app/organization/organization.service';
+import { JoinOrganizationComponent } from '../join-organization/join-organization.component';
 
 @Component({
   selector: 'venite-auth-menu',
@@ -19,7 +20,8 @@ export class AuthMenuComponent implements OnInit {
   constructor(
     public auth : AuthService,
     private organizationService : OrganizationService,
-    private menu: MenuController
+    private menu : MenuController,
+    private modal : ModalController
   ) { }
 
   ngOnInit() {
@@ -36,6 +38,16 @@ export class AuthMenuComponent implements OnInit {
   async logout() {
     this.auth.logout();
     this.menu.close('auth');
+  }
+
+  async addChurch() {
+    const modal = await this.modal.create({
+      component: JoinOrganizationComponent
+    });
+    modal.componentProps = {
+      modal
+    };
+    await modal.present();
   }
 
 }
