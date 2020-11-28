@@ -30,8 +30,8 @@ export class DarkmodeService {
       );
 
       this.prefersDark = combineLatest(
-        preference$.pipe(startWith('auto')),
-        mediaQuery$.pipe(startWith(undefined))
+        preference$,
+        mediaQuery$
       ).pipe(
         // give an explanatory alert if we're not going to change the setting
         tap(([preference, mediaQuery]) => {
