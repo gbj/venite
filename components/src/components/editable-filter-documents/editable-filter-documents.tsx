@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, Method, Host } from '@stencil/core';
-import { docsToOption, LiturgicalDocument } from '@venite/ldf';
+import { BibleReadingVerse, docsToOption, LiturgicalDocument } from '@venite/ldf';
 
 import { getComponentClosestLanguage } from '../../utils/locale';
 
@@ -165,7 +165,7 @@ export class EditableFilterDocumentsComponent {
                   onClick={() => { this.chooseDoc(doc); this.choose(); }}
                   color={doc == this.doc ? 'primary' : undefined}
                 >
-                  {doc.label ?? doc.version_label ?? `${doc.citation} ${doc.value[0] ?? ''}`}
+                  {doc.label ?? doc.version_label ?? `${doc.citation ?? ''} ${(((doc.value[0] || {}) as BibleReadingVerse).text) ?? doc.value[0] ?? ''}`.trim()}
                 </ion-item>
               )}
             </ion-list>
