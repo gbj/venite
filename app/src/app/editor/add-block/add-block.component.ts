@@ -14,7 +14,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'eucharistic-prayer' | 'response';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response';
 }
 
 @Component({
@@ -150,12 +150,17 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             )),
           );
           return this.complete; 
-        case 'eucharistic-prayer':
+        case 'category':
+          const tplDoc = new LiturgicalDocument(addition.template[0] || {});
           this.additionalMode = 'liturgy';
-          this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy-versions');
+          this.additionalVersions = tplDoc.type === 'liturgy'
+            // versions like Rite-II, etc.
+            ? this.documentService.getVersions(this.language, 'liturgy-versions')
+            // versions like bcp1979, etc.
+            : this.documentService.getVersions(this.language, 'liturgy');
           this.additionalOptions = this.additionalVersions.pipe(
             map(versions => Object.keys(versions)),
-            switchMap(versions => this.documentService.findDocumentsByCategory(['Eucharistic Prayer'], this.language, versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(tplDoc.category, this.language, versions)),
             map(docs => docs.sort((a, b) => a.label > b.label ? 1 : -1))
           );
           return this.complete;
