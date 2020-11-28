@@ -28,7 +28,7 @@
       </div>
 
       <!-- Sign in with Email -->
-      <form>
+      <form (submit)="submitEmailAndPassword()">
         <ion-item>
           <ion-label position="stacked">{{ 'auth.email' | translate }}</ion-label>
           <ion-input type="email" name="email" [(ngModel)]='email' ngDefaultControl></ion-input>
@@ -38,8 +38,9 @@
           <ion-input [(ngModel)]='password' name="password" type='password' ngDefaultControl></ion-input>
           <ion-text *ngIf="error" color="danger">{{ 'auth.error' | translate }}</ion-text>
         </ion-item>
+        <input type="submit" class="visually-hidden" />
         <div class="email">
-          <ion-button (click)="submitEmailAndPassword()">
+          <ion-button type="submit">
             <ion-icon name="log-in" slot="start"></ion-icon>
             <ion-label>{{ 'auth.sign-in' | translate }}</ion-label>
           </ion-button>
