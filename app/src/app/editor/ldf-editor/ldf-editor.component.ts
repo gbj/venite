@@ -104,13 +104,23 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     const canticleOptions$ = this.documents.find({
       style: 'canticle'
     }).pipe(
-      map(options => options.sort((a, b) => (a?.metadata?.number > b?.metadata?.number) ? 1 : -1).sort((a, b) => {
-        try {
-          return (parseInt(a?.metadata?.number) > parseInt(b?.metadata?.number)) ? 1 : -1;
-        } catch(e) {
-          return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
-        }
-      }))
+      map(options => options
+        .map(doc => new LiturgicalDocument({
+          ...doc,
+          metadata: {
+            ...doc.metadata,
+            changeable: true
+          }
+        }))
+        .sort((a, b) => (a?.metadata?.number > b?.metadata?.number) ? 1 : -1)
+        .sort((a, b) => {
+          try {
+            return (parseInt(a?.metadata?.number) > parseInt(b?.metadata?.number)) ? 1 : -1;
+          } catch(e) {
+            return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
+          }
+        })
+      )
     );
 
     this.state$ = combineLatest(

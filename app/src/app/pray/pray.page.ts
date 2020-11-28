@@ -274,7 +274,14 @@ export class PrayPage implements OnInit, OnDestroy {
       switchMap(doc => this.documents.find({
         language: doc?.language || 'en',
         style: 'canticle'
-      }))
+      })),
+      map(docs => docs.map(doc => new LiturgicalDocument({
+        ...doc,
+        metadata: {
+          ...doc.metadata,
+          changeable: true
+        }
+      })))
     );
 
     this.canticleData$ = combineLatest([liturgyVersions$, canticleOptions$]).pipe(
