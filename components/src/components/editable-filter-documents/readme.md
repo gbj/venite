@@ -57,8 +57,8 @@ Type: `Promise<void>`
 - ion-icon
 - ion-content
 - ion-list
-- ion-item
 - ion-label
+- ion-item
 - ion-select
 - ion-select-option
 - ion-searchbar
@@ -73,8 +73,8 @@ graph TD;
   ldf-editable-filter-documents --> ion-icon
   ldf-editable-filter-documents --> ion-content
   ldf-editable-filter-documents --> ion-list
-  ldf-editable-filter-documents --> ion-item
   ldf-editable-filter-documents --> ion-label
+  ldf-editable-filter-documents --> ion-item
   ldf-editable-filter-documents --> ion-select
   ldf-editable-filter-documents --> ion-select-option
   ldf-editable-filter-documents --> ion-searchbar
