@@ -165,7 +165,7 @@ export class EditableFilterDocumentsComponent {
                   onClick={() => { this.chooseDoc(doc); this.choose(); }}
                   color={doc == this.doc ? 'primary' : undefined}
                 >
-                  {doc.label ?? doc.version_label ?? `${doc.citation ?? ''} ${(((doc.value[0] || {}) as BibleReadingVerse).text) ?? doc.value[0] ?? ''}`.trim()}
+                  {doc.label ?? doc.version_label ?? `${(((doc.value[0] || {}) as BibleReadingVerse).text) ?? doc.value[0] ?? ''}${doc.citation ? ` (${doc.citation})` : ''}`}
                 </ion-item>
               )}
             </ion-list>
