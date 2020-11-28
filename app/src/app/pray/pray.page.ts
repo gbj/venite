@@ -330,11 +330,14 @@ export class PrayPage implements OnInit, OnDestroy {
 
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
-      prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null;
+      prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null,
+      label = (prettyDocDate ? `${doc?.label} (${prettyDocDate})` : doc?.slug) ?? 'Bulletin',
+      slug = (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
+
     const id = await this.documents.newDocument(new LiturgicalDocument({
       ... unwrapOptions(doc),
-      label: prettyDocDate ? `${doc.label} (${prettyDocDate})` : doc.slug,
-      slug: formattedDocDate ? `${doc.slug}-${formattedDocDate}` : doc.slug,
+      label,
+      slug,
       sharing: new Sharing({
         owner: userProfile.uid,
         organization: (orgs[0])?.slug,
@@ -464,7 +467,7 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: () => {
           this.downloadService.download(
             new Blob([JSON.stringify(data.doc)], { type: 'application/json' }),
-            `${data.doc.slug}.ldf.json`,
+            `${data.doc?.slug}.ldf.json`,
             'application/json'
           )
         }

@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'bulletin',
     loadChildren: () => import('./pray/pray.module').then( m => m.PrayPageModule)
+  },
+  {
+    path: 'tutorials',
+    loadChildren: () => import('./tutorials/tutorials.module').then( m => m.TutorialsPageModule)
   }
 ];
 

@@ -109,13 +109,17 @@ export class DocumentService {
     ).valueChanges();
   }
 
-  findOrganizationLiturgy(orgId : string, slug : string) : Observable<LiturgicalDocument[]> {
-    return this.afs.collection<Liturgy>('Document', ref => 
-      ref.where('slug', '==', slug)
-        .where('sharing.organization', '==', orgId)
+  findOrganizationLiturgy(orgId : string, slug : string | undefined = undefined) : Observable<LiturgicalDocument[]> {
+    return this.afs.collection<Liturgy>('Document', ref => {
+      const query = ref.where('sharing.organization', '==', orgId)
         .where('sharing.status', '==', 'published')
-        .where('sharing.privacy', '==', 'public')
-    ).valueChanges();
+        .where('sharing.privacy', '==', 'public');
+      if(slug) {
+        return query.where('slug', '==', slug);
+      } else {
+        return query;
+      }
+    }).valueChanges();
   }
 
   findDocumentById(docId : string) : Observable<LiturgicalDocument> {

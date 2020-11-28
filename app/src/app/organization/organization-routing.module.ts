@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: ':orgId',
     component: OrganizationPage
+  },
+  {
+    path: ':orgId/latest',
+    component: OrganizationPage
   }
 ];
 

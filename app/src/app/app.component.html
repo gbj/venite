@@ -29,6 +29,10 @@
             <ion-label>{{ org.name }}</ion-label>
           </ion-item>
         </ng-container>
+        <ion-item button routerLink="/tutorials">
+          <ion-icon name="videocam" slot="start"></ion-icon>
+          <ion-label>{{ 'menu.tutorials' | translate }}</ion-label>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>

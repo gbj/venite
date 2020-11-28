@@ -32,21 +32,15 @@ export class OrganizationService {
   }
 
   async create(name : string, ownerUID : string) : Promise<void> {
-    console.log('trying to create', name);
     const slug = slugify(name);
-    console.log('with slug', slug);
-
+  
     // check uniqueness of slug
     const exists = await this.exists(slug);
-
-    console.log('does it exist?', exists);
 
     if(exists) {
       const [n, inc] = name.split(/-(\d+)/);
       this.create(`${n}${(parseInt(inc) || 0) +1}`, ownerUID);
     }
-
-    console.log('ready to add');
 
     return await this.afs.doc<Organization>(`Organization/${slug}`).set({
       slug,
@@ -117,7 +111,7 @@ export class OrganizationService {
     return this.afs.doc<UserProfile>(`Users/${uid}`)
       .valueChanges()
       .pipe(
-        map(userProfile => userProfile?.orgs),
+        map(userProfile => userProfile?.orgs ?? []),
         switchMap(orgs => this.organizationsByIds(orgs))
       )
   }

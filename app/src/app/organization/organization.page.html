@@ -74,6 +74,28 @@
           </div>
         </ion-card-content>
       </ion-card>
+
+      <ion-card *ngIf="bulletins$ | async as bulletins else loading">
+        <ion-card-header>
+          <section>
+            <ion-card-title>{{ 'organization.published-bulletins' | translate}}</ion-card-title>
+          </section>
+          <ion-button *ngIf="bulletins?.length > 0" [routerLink]="['/', 'pray', org.slug, bulletins[0].slug]">
+            <ion-label>{{ 'organization.latest' | translate }}</ion-label>
+          </ion-button>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let doc of bulletins" [routerLink]="['/', 'pray', org.slug, doc.slug]">
+              <ion-label class="doc-link">
+                <h3>{{ doc.label || doc.slug }}</h3>
+                <h4>{{ doc.sharing?.status }} | {{ doc.type }} | {{ doc.language }} | {{ doc.version }}</h4>
+                <p *ngIf="doc.date_modified && doc.date_modified.toDate">{{ 'editor.modified' | translate }} {{ doc.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-content>
   </ng-container>
 </ng-container>

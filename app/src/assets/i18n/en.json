@@ -38,7 +38,8 @@
     "bulletins": "Bulletins",
     "psalter": "Psalter",
     "settings": "Settings",
-    "about": "About"
+    "about": "About",
+    "tutorials": "Tutorials"
   },
   "darkmode": {
     "darkmode": "Dark Mode",
@@ -161,11 +162,13 @@
   "organization": {
     "owner": "Administrator",
     "editors": "Editors",
+    "latest": "Latest",
     "members": "Members",
     "no-editors": "No editors.",
     "no-members": "No members.",
     "member-join": "Join",
-    "member-leave": "Leave"
+    "member-leave": "Leave",
+    "published-bulletins": "Published Bulletins"
   },
   "reminders": {
     "add": "Add a Reminder",
