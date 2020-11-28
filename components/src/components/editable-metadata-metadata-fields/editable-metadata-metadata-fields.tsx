@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Event, EventEmitter, State, h, Watch, JSX, Method } from '@stencil/core';
-import { Change, TypeTuple, LiturgicalDocument, specificClass, versionToString } from '@venite/ldf';
+import { Change, TypeTuple, LiturgicalDocument, specificClass, versionToString, ResponsivePrayerLine } from '@venite/ldf';
 
 import { getComponentClosestLanguage } from '../../utils/locale';
 
@@ -183,7 +183,10 @@ export class EditableMetadataMetadataFieldsComponent {
             property={field.field}
             options={[
               { label: localeStrings.none, value: null },
-              ... this.currentBibleReadingIntros.map(intro => ({ label: intro.value[0].toString(), value: intro }))
+              ... this.currentBibleReadingIntros.map(intro => ({
+                label: intro.type === 'responsive' ? (intro.value[0] as ResponsivePrayerLine).text?.toString() : intro.value[0].toString(),
+                value: intro
+              }))
             ]}
             value={currentValue}
           ></ldf-editable-select>
