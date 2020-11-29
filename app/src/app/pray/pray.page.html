@@ -1,6 +1,6 @@
 <ng-container>
   <ion-header [translucent]="true">
-    <ion-toolbar>
+    <ion-toolbar [veniteScrollVanish]="content">
       <ion-buttons collapse="true" slot="start">
         <ion-back-button></ion-back-button>
         <ion-menu-button></ion-menu-button>
@@ -16,7 +16,7 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content #content [fullscreen]="true">
+  <ion-content #content [fullscreen]="true" [scrollEvents]="!prayService.bulletinMode">
     <div class="bordered"  [style.background]="color$ | async" [style.border-color]="color$ | async">
       <ng-container *ngIf="doc$ | async as doc else loading">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">

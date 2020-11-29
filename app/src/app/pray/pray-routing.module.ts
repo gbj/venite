@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PrayPage } from './pray.page';
+import { ScrollVanishDirective } from './scroll-vanish.directive';
 
 const routes: Routes = [
   { path: 'b/:docId', component: PrayPage },
@@ -17,6 +18,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class PrayPageRoutingModule {}

@@ -9,6 +9,7 @@ import { PrayPageRoutingModule } from './pray-routing.module';
 
 import { PrayPage } from './pray.page';
 import { AuthModule } from '../auth/auth.module';
+import { ScrollVanishDirective } from './scroll-vanish.directive';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { AuthModule } from '../auth/auth.module';
     AuthModule,
     PrayPageRoutingModule
   ],
-  declarations: [PrayPage],
+  declarations: [PrayPage, ScrollVanishDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PrayPageModule {}
