@@ -3,10 +3,12 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { DocumentService } from 'src/app/services/document.service';
 import { AlertController } from '@ionic/angular';
 import { UserProfile } from 'src/app/auth/user/user-profile';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { combineLatest, Observable, of } from 'rxjs';
+import { map, switchMap, take, tap } from 'rxjs/operators';
 import { LiturgicalDocument, Sharing } from '@venite/ldf';
 import { TranslateService } from '@ngx-translate/core';
+import { slugify } from 'src/app/slugify';
+import { Organization, OrganizationService } from 'src/app/organization/organization.module';
 
 @Component({
   selector: 'venite-create-document-button',
@@ -15,28 +17,37 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class CreateDocumentButtonComponent implements OnInit {
   @Input() label : string = "Create a New Document";
-  @Input() template: (string) => LiturgicalDocument;
+  @Input() template: (string) => Promise<LiturgicalDocument>;
   @Input() icon;
   @Output() newDoc : EventEmitter<string> = new EventEmitter;
 
-  userProfile$ : Observable<UserProfile>;
+  userData$ : Observable<{ profile: UserProfile; uid: string; orgs: Organization[]}>;
 
 
   constructor(
     private alert : AlertController,
     private auth : AuthService,
     private documents: DocumentService,
+    private organizationService : OrganizationService,
     private translate : TranslateService
   ) { }
 
   ngOnInit() {
-    this.userProfile$ = this.auth.user.pipe(
-      switchMap(user => this.auth.getUserProfile(user.uid))
+    const userProfile$ = this.auth.user.pipe(
+      switchMap(user => this.auth.getUserProfile(user?.uid))
+    );
+
+    const orgs$ = this.auth.user.pipe(
+      switchMap(user => this.organizationService.organizationsWithUser(user?.uid))
+    );
+
+    this.userData$ = combineLatest([userProfile$, this.auth.user, orgs$]).pipe(
+      map(([profile, user, orgs]) => ({ profile, uid: user?.uid, orgs }))
     );
   }
 
    // Create and navigate to a new document
-   async new(userProfile : UserProfile) {
+   async new(userProfile : UserProfile, uid : string, orgs : Organization[]) {
     const alert = await this.alert.create({
       header: 'Create a Template',  // TODO: i18n translate whole alert
       inputs: [
@@ -53,7 +64,7 @@ export class CreateDocumentButtonComponent implements OnInit {
           cssClass: 'secondary'
         }, {
           text: 'Create',
-          handler: value => this.createNew(userProfile, value.label)
+          handler: value => this.createNew(userProfile, uid, orgs, value.label)
         }
       ]
     });
@@ -61,19 +72,44 @@ export class CreateDocumentButtonComponent implements OnInit {
     await alert.present();
   }
 
-  async createNew(userProfile : UserProfile, label : string) {
-    const docId = await this.documents.newDocument(new LiturgicalDocument({
-      ... this.template(label),
-      sharing: new Sharing({
-        owner: userProfile.uid,
-        organization: (userProfile.orgs || [''])[0],
-        collaborators: [],
-        status: 'draft',
-        privacy: 'organization'
-      }),
-    }));
+  async createNew(userProfile : UserProfile, uid : string, orgs : Organization[], label : string) {
+    const template = await this.template(label);//,
+      //slug = await ;
 
-    this.newDoc.emit(docId);
+    this.uniqueSlugify(orgs[0]?.slug, uid, template.slug).subscribe(
+      async slug => {
+        const docId = await this.documents.newDocument(new LiturgicalDocument({
+          ...template,
+          slug,
+          sharing: new Sharing({
+            owner: userProfile.uid,
+            organization: (userProfile.orgs || [''])[0],
+            collaborators: [],
+            status: 'draft',
+            privacy: 'organization'
+          }),
+        }));
+    
+        this.newDoc.emit(docId);
+      }
+    )
+  }
+
+  uniqueSlugify(org : string, uid : string, s : string) : Observable<string> {
+    const slugified = slugify(s); 
+  
+    return this.documents.myOrgDocExists(org, uid, s).pipe(
+      take(1),
+      tap(exists => console.log('uniqueSlugify', org, s, uid, 'exists?', exists)),
+      switchMap(exists => {
+        if(exists) {
+          const [n, inc] = s.split(/-(\d+)/);
+          return this.uniqueSlugify(org, uid, `${n}-${(parseInt(inc) || 1) +1}`);
+        } else {
+          return of(slugified);
+        }
+      })
+    )
   }
 
 }

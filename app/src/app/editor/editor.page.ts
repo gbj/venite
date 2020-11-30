@@ -78,25 +78,6 @@ export class EditorPage implements OnInit {
       fragments: true
     });
 
-    this.templates$ = combineLatest(
-      of(BLANK_TEMPLATES),
-      this.documents.getAllLiturgyOptions().pipe(
-        map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
-      )
-    ).pipe(
-      map(([templates, liturgies]) => liturgies
-        .map(liturgy => ({
-          label: liturgy.label,
-          factory: (label : any) => new LiturgicalDocument({
-            ... liturgy,
-            slug: slugify(label),
-            label
-          })
-        }))
-        .concat(templates)
-      )
-    )
-
     const includeForm$ = this.includeForm.valueChanges.pipe(
       startWith(this.includeForm.value)
     );
@@ -137,6 +118,26 @@ export class EditorPage implements OnInit {
       filter(params => params.hasOwnProperty('docId')),
       map(params => params.docId),
     );
+
+    this.templates$ = combineLatest(
+      of(BLANK_TEMPLATES),
+      this.documents.getAllLiturgyOptions().pipe(
+        map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
+      ),
+      orgs$
+    ).pipe(
+      switchMap(async ([templates, liturgies, orgs]) => liturgies
+        .map(liturgy => ({
+          label: liturgy.label,
+          factory: (label : any) => new LiturgicalDocument({
+            ... liturgy,
+            slug: slugify(label),
+            label
+          })
+        }))
+        .concat(templates)
+      )
+    )
   }
 
   joinDocument(docId : string) {

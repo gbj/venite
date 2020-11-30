@@ -341,18 +341,26 @@ export class PrayPage implements OnInit, OnDestroy {
       label = (prettyDocDate ? `${doc?.label} (${prettyDocDate})` : doc?.slug) ?? 'Bulletin',
       slug = (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
 
-    const id = await this.documents.newDocument(new LiturgicalDocument({
-      ... unwrapOptions(doc),
-      label,
-      slug,
-      sharing: new Sharing({
-        owner: userProfile.uid,
-        organization: (orgs[0])?.slug,
-        collaborators: [],
-        status: 'draft',
-        privacy: 'organization'
-      })
-    }));
+    // if the document already exists in the database, just open it in the editor
+    let id : string;
+    if(doc.id) {
+      id = doc.id.toString();
+    }
+    // otherwise, create a new document
+    else {
+      id = await this.documents.newDocument(new LiturgicalDocument({
+        ... unwrapOptions(doc),
+        label,
+        slug,
+        sharing: new Sharing({
+          owner: userProfile.uid,
+          organization: (orgs[0])?.slug,
+          collaborators: [],
+          status: 'draft',
+          privacy: 'organization'
+        })
+      }));
+    }
 
     await loading.dismiss();
 

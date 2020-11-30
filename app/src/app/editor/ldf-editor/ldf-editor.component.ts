@@ -5,17 +5,18 @@ import * as clipboardPolyfill from 'clipboard-polyfill';
 import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
 import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption, DisplaySettings } from '@venite/ldf';
-import { switchMap, debounceTime, tap, map, mapTo, startWith, filter } from 'rxjs/operators';
+import { switchMap, debounceTime, tap, map, mapTo, startWith, filter, catchError } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService, EditorStatus, EditorStatusCode } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
-import { AlertController, LoadingController, ModalController } from '@ionic/angular';
+import { AlertController, LoadingController, ModalController, NavController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
 import { AddBlockComponent } from '../add-block/add-block.component';
 import { SharingComponent } from '../sharing/sharing.component';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -53,8 +54,25 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     private modal : ModalController,
     private router : Router,
     private alert : AlertController,
-    private loading : LoadingController
+    private loading : LoadingController,
+    private translate : TranslateService,
+    private navCtrl : NavController
   ) { }
+
+  async permissionDenied() : Promise<null> {
+    const alert = await this.alert.create({
+      header: this.translate.instant('editor.permission-denied-header'),
+      message: this.translate.instant('editor.permission-denied'),
+      buttons: [
+        {
+          text: this.translate.instant('editor.go-back'),
+          handler: () => this.navCtrl.back()
+        }
+      ]
+    });
+    await alert.present();
+    return null;
+  }
 
   ngOnInit() {
     document.addEventListener('editorAskForCanticleOptions', (e) => console.log('editorAskForCanticleOptions', e))
@@ -62,10 +80,15 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.editorStatus = this.editorService.status;
 
     // Document manager
-    const serverManager$ = this.editorService.join(this.docId);
+    const serverManager$ = this.editorService.join(this.docId).pipe(
+      //catchError(() => this.permissionDenied()),
+      filter(manager => Boolean(manager))
+    );
 
     const localManager$ = serverManager$.pipe(
-      switchMap(serverManager => this.editorService.localManager(serverManager.docId)),
+      switchMap(serverManager => this.editorService.localManager(serverManager?.docId)),
+      catchError(() => this.permissionDenied()),
+      filter(manager => Boolean(manager))
     );
 
     // List of revisions

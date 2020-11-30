@@ -39,7 +39,7 @@ export class OrganizationService {
 
     if(exists) {
       const [n, inc] = name.split(/-(\d+)/);
-      this.create(`${n}${(parseInt(inc) || 0) +1}`, ownerUID);
+      this.create(`${n}-${(parseInt(inc) || 1) +1}`, ownerUID);
     }
 
     return await this.afs.doc<Organization>(`Organization/${slug}`).set({

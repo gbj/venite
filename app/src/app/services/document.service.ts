@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
 import { Observable, from, of, combineLatest } from 'rxjs';
-import { catchError, filter, map, startWith, switchMap, tap } from 'rxjs/operators';
+import { catchError, filter, map, startWith, switchMap, take, tap } from 'rxjs/operators';
 
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString, Text } from '@venite/ldf';
 import { DTO } from './dto';
@@ -264,6 +264,33 @@ export class DocumentService {
     }
   }
 
+  myOrgDocExists(org : string, uid : string, slug : string) : Observable<boolean> {
+    /*const orgDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.organization', '==', org)
+        // this shouldn't be necessary — TODO check against all organization documents
+        .where('sharing.owner', '==', uid)
+        .where('slug', '==', slug)
+    ).valueChanges();
+
+    const myDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.owner', '==', uid)
+        .where('slug', '==', slug)
+    ).valueChanges();
+
+    return combineLatest([orgDocs$, myDocs$]).pipe(
+      map(([orgDocs, myDocs]) => orgDocs.concat(myDocs).length > 0)
+    );*/
+
+    const myDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.owner', '==', uid)
+        .where('slug', '==', slug)
+    ).valueChanges();
+    
+    return myDocs$.pipe(
+      map(docs => docs?.length > 0)
+    );
+  }
+
   search(uid : string, search : string, orgs : Organization[]) : Observable<IdAndDoc[]> {
     return combineLatest([
       this.myDocuments(uid).pipe(startWith([])),
@@ -277,6 +304,7 @@ export class DocumentService {
     const docId = this.afs.createId();
     await this.afs.collection('Document').doc(docId).set({
       ... JSON.parse(JSON.stringify(doc)),
+      id: docId,
       date_created: firebase.firestore.Timestamp.now(),
       date_modified: firebase.firestore.Timestamp.now()
     });
