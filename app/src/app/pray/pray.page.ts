@@ -414,7 +414,7 @@ export class PrayPage implements OnInit, OnDestroy {
       buttons.push({
         text: 'Read Aloud',
         icon: 'headset',
-        handler: () => this.startSpeechAt(data.doc, data.settings, 0, 0)
+        handler: () => this.startSpeechAt(data.doc, data.settings, 0, 0, true)
       })
     }
 
@@ -504,7 +504,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // TTS
-  startSpeechAt(doc : LiturgicalDocument, settings : DisplaySettings, subdoc : number = 0, utterance : number = 0) {
+  startSpeechAt(doc : LiturgicalDocument, settings : DisplaySettings, subdoc : number = 0, utterance : number = 0, firstTime : boolean = false) {
     this.speechPlaying = true;
     this.speechPlayingSubDoc = subdoc;
     this.speechPlayingUtterance = utterance;
@@ -512,10 +512,23 @@ export class PrayPage implements OnInit, OnDestroy {
     const utterances$ = //this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? subdoc, this.speechPlayingUtterance ?? utterance);
     combineLatest([this.doc$, this.settings$]).pipe(
       filter(([doc, settings]) => Boolean(doc && settings)),
-      //any time the document or settings change, 
+      // any time the document or settings change, 
       // cancels the previous TTS reading and restarts it with the new document
       // and/or settings, starting at the sub-document/utterance indices that had been reached 
-      switchMap(([doc, settings]) => this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? 0, this.speechPlayingUtterance ?? 0)),
+      switchMap(([doc, settings]) => this.speechService.speakDoc(
+        // insert saints' biographies at the beginning, if relevant
+        firstTime && (doc?.day?.holy_days || []).map(day => day?.bio).filter(bio => bio?.length > 0)?.length > 0
+        ? new Liturgy({ type: "liturgy", value: [
+          ...doc.day.holy_days.map(day => new LiturgicalDocument({ type: "text", style: "text", value:day.bio})),
+          doc.type === 'liturgy'
+          ? (doc as Liturgy).value
+          : doc
+        ].flat()})
+        : doc,
+        settings,
+        this.speechPlayingSubDoc ?? 0,
+        this.speechPlayingUtterance ?? 0)
+      ),
       catchError(e => { console.warn('Caught error', e); return of({subdoc: 0, utterance: 0, data: null})})
     );
     this.speechSubscription = utterances$
