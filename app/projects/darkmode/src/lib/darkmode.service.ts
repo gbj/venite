@@ -11,6 +11,9 @@ import { PlatformServiceInterface, PreferencesServiceInterface, PREFERENCES_SERV
 export class DarkmodeService {
   public prefersDark : Observable<boolean>;
 
+  storedPref : string;
+  storedMatch : boolean;
+
   constructor(
     @Inject(PREFERENCES_SERVICE) private preferences : PreferencesServiceInterface,
     private alert: AlertController,
@@ -31,12 +34,18 @@ export class DarkmodeService {
 
       this.prefersDark = combineLatest(
         preference$,
-        mediaQuery$
+        mediaQuery$.pipe(startWith(window.matchMedia('(prefers-color-scheme: dark)')))
       ).pipe(
         // give an explanatory alert if we're not going to change the setting
         tap(([preference, mediaQuery]) => {
           if(mediaQuery !== undefined && (preference == 'dark' && !mediaQuery?.matches || preference == 'light' && mediaQuery?.matches)) {
-            this.notifyAlert(!!mediaQuery?.matches);
+            if(this.storedPref === preference && this.storedMatch === mediaQuery?.matches) {
+              this.alert.dismiss();
+            } else {
+              this.storedMatch = Boolean(mediaQuery?.matches);
+              this.storedPref = preference;
+            }
+            this.notifyAlert(Boolean(mediaQuery?.matches));
           }
         }),
         // preferences 'dark' or 'light' override the device setting
@@ -51,7 +60,6 @@ export class DarkmodeService {
             if (this.platform.is('android') && this.platform.is('capacitor') && window.navigator.userAgent.includes('AndroidDarkMode')) {
               forceDarkMode = true;
             }
-
             return forceDarkMode || !!mediaQuery?.matches; // undefined => false, not true
           }
         })
@@ -60,12 +68,16 @@ export class DarkmodeService {
   }
 
   async notifyAlert(deviceDark : boolean) {
-    const alert = await this.alert.create({
-      header: this.translate.instant('darkmode.darkmode'),
-      message: this.translate.instant('darkmode.needsAuto', { deviceMode : deviceDark ? this.translate.instant('darkmode.dark-mode') : this.translate.instant('darkmode.light-mode') }),
-      buttons: ['OK']
-    });
-
-    await alert.present();
+    combineLatest(this.translate.get('darkmode.darkmode'), this.translate.get('darkmode.needsAuto')).subscribe(
+      async ([header, message]) => {
+        const alert = await this.alert.create({
+          header: this.translate.instant('darkmode.darkmode'),
+          message: this.translate.instant('darkmode.needsAuto', { deviceMode : deviceDark ? this.translate.instant('darkmode.dark-mode') : this.translate.instant('darkmode.light-mode') }),
+          buttons: ['OK']
+        });
+    
+        await alert.present();
+      }
+    )
   }
 }
