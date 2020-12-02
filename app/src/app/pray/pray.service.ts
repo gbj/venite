@@ -341,6 +341,20 @@ export class PrayService {
     const version : string = typeof doc.version === 'object' ? prefs[doc.version.preference] : doc.version || prefs['bibleVersion'] || 'NRSV';
 
     return this.findReadings(doc, day, prefs, originalPrefs).pipe(
+      // if no entries found, check for holy day readings
+      switchMap(entries => entries?.length > 0 
+        ? of(entries)
+        : this.findReadings(
+          doc,
+          day,
+          {
+            ...prefs,
+            readingA: HOLY_DAY_READINGS[doc?.day?.evening ? 'evening' : 'morning']['readingA'],
+            readingB: HOLY_DAY_READINGS[doc?.day?.evening ? 'evening' : 'morning']['readingB']
+          } ,
+          originalPrefs)
+      ),
+      // convert lectionary entries to empty docs
       map(entries => (entries || []).map(entry => (new LiturgicalDocument({
         ... doc,
         citation : entry.citation,
@@ -348,6 +362,7 @@ export class PrayService {
         language : doc.language || 'en',
         label: doc.label || entry.citation
       })))),
+      // bind them into an option and compile it
       map(docs => docsToOption(docs)),
       switchMap(option => this.compile(option, day, prefs, [version], originalPrefs)),
     );
@@ -457,6 +472,17 @@ const DEFAULT_CANTICLES = {
   'evening': [, 'canticle-15', 'canticle-17'],
   'morning': [, 'canticle-21', 'canticle-16']
 };
+
+const HOLY_DAY_READINGS = {
+  'morning': {
+    'readingA': 'holy_day_morning_1',
+    'readingB': 'holy_day_morning_2'
+  },
+  'evening': {
+    'readingA': 'holy_day_evening_1',
+    'readingB': 'holy_day_evening_2'
+  }
+}
 
 function titleCase(str : string | undefined) {
   if(str) {
