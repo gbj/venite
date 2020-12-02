@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
-import { map, startWith, switchMap, tap } from 'rxjs/operators';
+import { first, map, startWith, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
 import { LiturgyConfig } from '@venite/ng-pray/lib/liturgy-config';
 
@@ -154,7 +154,12 @@ export class PrayService {
         break;
       case 'collect':
         result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', versions).pipe(
-          map(collects => collects.map(collect => new LiturgicalDocument({ ... collect, label: collect.label || "The Collect of the Day" }))),
+          map(collects => collects.map(collect => {
+            const label = (day.holy_days || []).map(day => day.slug).includes(collect.slug)
+              ? titleCase(day.holy_days.find(day => day.slug === collect.slug)?.name) || collect.label || "The Collect of the Day"
+              : collect.label || "The Collect of the Day";
+            return new LiturgicalDocument({ ... collect, label });
+          })),
           // filter collects to find the appropriate one
           map(collects => findCollect(
             collects,
@@ -163,7 +168,7 @@ export class PrayService {
             this.config.emberDayCollectPrecedesSunday,
             this.config.allSaintsSuppressesCollectOfTheDayUnlessSunday,
             this.config.allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday
-          ))
+          )),
         )
         break;
 
@@ -452,3 +457,14 @@ const DEFAULT_CANTICLES = {
   'evening': [, 'canticle-15', 'canticle-17'],
   'morning': [, 'canticle-21', 'canticle-16']
 };
+
+function titleCase(str : string | undefined) {
+  if(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+      const firstLetter = word.startsWith('[') ? word[1] : word[0];
+      return !['de', 'of', 'the', 'in', 'and', 'with', 'by'].includes(word.trim()) ? word.replace(firstLetter, firstLetter.toUpperCase()) : word;
+    }).join(' ');
+  } else {
+    return null;
+  }
+}

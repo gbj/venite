@@ -39,6 +39,11 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
+  ldf-heading --> ldf-text
+  ldf-text --> ldf-label-bar
+  ldf-text --> ldf-heading
+  ldf-text --> ldf-editable-text
+  ldf-text --> ldf-string
   ldf-liturgical-document --> ldf-responsive-prayer
   style ldf-responsive-prayer fill:#f9f,stroke:#333,stroke-width:4px
 ```

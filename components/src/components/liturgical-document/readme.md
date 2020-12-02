@@ -77,7 +77,12 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
+  ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
+  ldf-text --> ldf-label-bar
+  ldf-text --> ldf-heading
+  ldf-text --> ldf-editable-text
+  ldf-text --> ldf-string
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
@@ -89,10 +94,6 @@ graph TD;
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar
   ldf-rubric --> ldf-editable-text
-  ldf-text --> ldf-label-bar
-  ldf-text --> ldf-heading
-  ldf-text --> ldf-editable-text
-  ldf-text --> ldf-string
   ldf-responsive-prayer --> ldf-editable-text
   ldf-responsive-prayer --> ldf-string
   ldf-responsive-prayer --> ldf-label-bar

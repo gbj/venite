@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
-import { Heading, Citation, dateFromYMDString } from '@venite/ldf';
+import { Heading, Citation, dateFromYMDString, Text } from '@venite/ldf';
 import { EditableNode } from './editable-node';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
@@ -179,7 +179,15 @@ export class HeadingComponent {
           {isDay && !this.editable && this.obj?.day?.holy_days?.length > 0 && <ul class="holy-days">
             {this.obj?.day?.holy_days
               .filter(day => day.type?.rank < 3)
-              .map(day => <li class="holy-day">{day.name}</li>)}
+              .map(day => 
+                day.bio
+                ? <li class="holy-day">
+                  <details>
+                    <summary>{day.name}</summary>
+                    <ldf-text doc={new Text({type: "text", style: "text", value: day.bio})}></ldf-text>
+                  </details>
+                </li>
+                : <li class="holy-day">{day.name}</li>)}
           </ul>}
           {isDay && this.editable && <code class="lookup">{localeStrings.day}</code>}
 

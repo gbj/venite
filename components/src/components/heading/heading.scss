@@ -65,7 +65,7 @@
   }
 
   .holy-day {
-    margin: 0;
+    margin: var(--ldf-holy-day-margin);
     padding: 0;
   }
 }

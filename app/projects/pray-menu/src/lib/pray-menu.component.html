@@ -50,14 +50,14 @@
           </ion-select>
         </ion-item>
       </ng-container>
-      <ng-container *ngIf="sanctoralOptions | async as options">
+      <!--<ng-container *ngIf="sanctoralOptions | async as options">
         <ion-item *ngIf="options.length > 1">
           <ion-label position="stacked">{{ 'sanctoral' | translate }}</ion-label>
           <ion-select ngDefaultControl name="formSanctoral" [value]="sanctoral | async" (ionChange)="sanctoral.next($event.detail.value)">
             <ion-select-option *ngFor="let opt of options" [value]="opt.slug">{{ opt.name }}</ion-select-option>
           </ion-select>
         </ion-item>
-      </ng-container>
+      </ng-container>-->
     </form>
 
     <!-- Choose date -->

@@ -18,6 +18,7 @@
 
 ### Used by
 
+ - [ldf-heading](../heading)
  - [ldf-liturgical-document](../liturgical-document)
 
 ### Depends on
@@ -34,10 +35,7 @@ graph TD;
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
-  ldf-heading --> ldf-string
-  ldf-heading --> ldf-editable-text
-  ldf-heading --> ldf-label-bar
-  ldf-heading --> ldf-day-name
+  ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-text
   style ldf-text fill:#f9f,stroke:#333,stroke-width:4px

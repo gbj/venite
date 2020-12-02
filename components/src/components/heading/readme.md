@@ -30,6 +30,7 @@
 - [ldf-editable-text](../editable-text)
 - [ldf-label-bar](../label-bar)
 - [ldf-day-name](../day-name)
+- [ldf-text](../text)
 
 ### Graph
 ```mermaid
@@ -38,12 +39,13 @@ graph TD;
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
+  ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
+  ldf-text --> ldf-heading
   ldf-bible-reading --> ldf-heading
   ldf-liturgical-document --> ldf-heading
   ldf-psalm --> ldf-heading
   ldf-responsive-prayer --> ldf-heading
-  ldf-text --> ldf-heading
   style ldf-heading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

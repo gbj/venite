@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable, combineLatest, of } from 'rxjs';
-import { map, tap, switchMap } from 'rxjs/operators';
+import { map, tap, switchMap, filter } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, addOneDay, dateFromYMD, dateToYMD, liturgicalWeek, liturgicalDay } from '@venite/ldf';
 
@@ -46,10 +46,13 @@ export class CalendarService {
 
   /** Find feast days on a given date */
   findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
+    console.log('findFeastDays', mmdd, kalendar);
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('mmdd', '==', mmdd)
-    ).valueChanges();
+    ).valueChanges().pipe(
+      tap(entries => console.log('findFeastDays', kalendar, mmdd, entries))
+    );
   }
 
   /** Find special days for a particular slug
@@ -57,6 +60,7 @@ export class CalendarService {
     * // Ash Wednesday
     * `wednesday-last-epiphany` */
   findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
+    console.log('findSpecialDays', kalendar);
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('slug', '==', slug)
@@ -102,13 +106,14 @@ export class CalendarService {
   buildWeek(date : Observable<Date>, kalendar : Observable<string>, vigil : Observable<boolean>) : Observable<LiturgicalWeek[]> {
     return combineLatest(date, kalendar, vigil)
       .pipe(
-        switchMap(([date, kalendar, vigil]) => this.findWeek(kalendar, liturgicalWeek(vigil ? addOneDay(date) : date)))
+        switchMap(([date, kalendar, vigil]) => this.findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)))
       );
   }
 
   buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) {
     return combineLatest(date, kalendar, liturgy, week, vigil)
       .pipe(
+        filter(([date, kalendar, liturgy, week, vigil]) => week?.length > 0),
         // build the liturgical day from the data given
         map(([date, kalendar, liturgy, week, vigil]) => ({
           day: liturgicalDay(vigil ? addOneDay(date) : date, kalendar, liturgy?.metadata?.evening, week[0]),
