@@ -10,6 +10,9 @@ export class HolyDay {
    * `'the-presentation'` */
   slug?: string;
 
+  /** Optional hagiography */
+  bio?: string[];
+
   /** Overarching calendar this is a part of */
   kalendar?: string;
 
