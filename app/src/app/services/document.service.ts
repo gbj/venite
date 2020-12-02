@@ -126,13 +126,21 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {    
+  findDocumentsBySlug(slug : string, language : string = 'en', rawVersions : string[] = undefined) : Observable<LiturgicalDocument[]> {    
+    // deduplicate versions -- max of 10 (for Firebase query)
+    const uniqueVersions = Array.from(new Set(rawVersions)),
+      versions = uniqueVersions?.length <= 10 ? uniqueVersions : uniqueVersions.slice(0, 10);
+    if(uniqueVersions?.length > 10) {
+      console.warn('(DocumentService) (findDocumentsBySlug) Firebase can only handle up to 10 unique versions to search. You searched for ', rawVersions);
+    }
+
     const veniteLiturgies$ = this.afs.collection<LiturgicalDocument>('Document', ref => {
       let query = ref.where('slug', '==', slug)
                      .where('language', '==', language)
                      .where('sharing.organization', '==', 'venite')
                      .where('sharing.status', '==', 'published')
                      .where('sharing.privacy', '==', 'public');
+      
       if(versions?.length > 0) {
         query = query.where('version', 'in', versions);
       }
@@ -281,13 +289,20 @@ export class DocumentService {
       map(([orgDocs, myDocs]) => orgDocs.concat(myDocs).length > 0)
     );*/
 
+    const veniteDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.organization', '==', 'venite')
+         .where('sharing.status', '==', 'published')
+         .where('sharing.privacy', '==', 'public')
+         .where('slug', '==', slug)
+    ).valueChanges();
+
     const myDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.owner', '==', uid)
-        .where('slug', '==', slug)
+         .where('slug', '==', slug)
     ).valueChanges();
     
-    return myDocs$.pipe(
-      map(docs => docs?.length > 0)
+    return combineLatest([veniteDocs$, myDocs$]).pipe(
+      map(([veniteDocs, myDocs]) => veniteDocs.concat(myDocs).length > 0)
     );
   }
 
