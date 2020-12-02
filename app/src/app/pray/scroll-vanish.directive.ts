@@ -1,5 +1,6 @@
 import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 import { DomController } from '@ionic/angular';
+import { debounceTime } from 'rxjs/operators';
 
 const TOOLBAR_HEIGHT = "56px";
 
@@ -23,8 +24,13 @@ export class ScrollVanishDirective {
   ngOnInit() {
     this.initStyles();
 
-    this.scrollArea.ionScroll.subscribe(scrollEvent => {
-      console.log(scrollEvent);
+    this.scrollArea.ionScroll.pipe(
+      // animation time is 200ms, and scroll events fire continuously, 
+      // so debounce so you don't have stuttering animations while scrolling
+      debounceTime(50)
+    )
+    .subscribe(scrollEvent => {
+      console.log('scrollVanish', scrollEvent);
       const delta = scrollEvent.detail.deltaY;
 
       if (scrollEvent.detail.currentY === 0 && this.hidden) {
@@ -48,7 +54,8 @@ export class ScrollVanishDirective {
         "transition",
         "0.2s linear"
       );
-      this.renderer.setStyle(this.element.nativeElement, "height", TOOLBAR_HEIGHT);
+      this.renderer.setStyle(this.element.nativeElement, "height", "var(--min-height)");
+      this.renderer.setStyle(this.element.nativeElement, "position", 'fixed');
     });
   }
 
@@ -65,7 +72,7 @@ export class ScrollVanishDirective {
 
   show() {
     this.domCtrl.write(() => {
-      this.renderer.setStyle(this.element.nativeElement, "min-height", TOOLBAR_HEIGHT);
+      this.renderer.setStyle(this.element.nativeElement, "min-height", "var(--min-height)");
       this.renderer.removeStyle(this.element.nativeElement, "opacity");
       this.renderer.removeStyle(this.element.nativeElement, "padding");
     });
