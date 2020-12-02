@@ -41,6 +41,7 @@ export function findCollect(
               .filter((collect) => collect.slug === category)
               .map((collect) => (collect.type === 'text' ? processCollectText(collect as Text, holyday) : collect)),
           )
+          .concat(collects.filter((collect) => collect.slug === holyday.slug))
           .flat(),
       ),
     ),
@@ -58,8 +59,6 @@ export function findCollect(
       octaveCollect && JSON.stringify(octaveCollect.value) !== JSON.stringify(redLetterOrSunday?.value)
         ? octaveCollect
         : null;
-
-  console.log('observed octave collect = ', observedOctaveCollect);
 
   if (redLetterOrSunday || blackLetterCollects.length > 0) {
     if (sundayFirst || date.getDay() === 0) {

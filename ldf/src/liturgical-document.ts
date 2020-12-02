@@ -64,7 +64,7 @@ export type DisplayFormat = DisplayFormatTuple[number];
 /** Represents a liturgy of any scope and concreteness, from a complete bullletin to a single prayer. */
 export class LiturgicalDocument {
   /** If provided from a database, `id` is unique identifier/DB primary key */
-  id?: number;
+  id?: number | string;
 
   /** Timestamps for document creation and modification */
   date_created?: any;
