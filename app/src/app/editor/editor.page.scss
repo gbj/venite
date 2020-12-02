@@ -45,3 +45,7 @@ article {
     width: 100%;
     text-align: center;
 }
+
+ion-card-header ion-toolbar, ion-list ion-toolbar { 
+    --background: inherit;
+}  

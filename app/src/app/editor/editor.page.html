@@ -18,15 +18,6 @@
     </ion-toolbar>
   </ion-header>
   <ion-content #list [fullscreen]="true" *ngIf="auth.user | async as user else needlogin">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
-        <ion-buttons slot="end">
-          <venite-auth-menu-button></venite-auth-menu-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-
     <ion-card>
       <ion-card-header>
         <ion-toolbar>
