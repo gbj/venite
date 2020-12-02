@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { DocumentService } from 'src/app/services/document.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { UserProfile } from 'src/app/auth/user/user-profile';
 import { combineLatest, Observable, of } from 'rxjs';
 import { map, switchMap, take, tap } from 'rxjs/operators';
@@ -29,7 +29,8 @@ export class CreateDocumentButtonComponent implements OnInit {
     private auth : AuthService,
     private documents: DocumentService,
     private organizationService : OrganizationService,
-    private translate : TranslateService
+    private translate : TranslateService,
+    private loading : LoadingController
   ) { }
 
   ngOnInit() {
@@ -73,6 +74,9 @@ export class CreateDocumentButtonComponent implements OnInit {
   }
 
   async createNew(userProfile : UserProfile, uid : string, orgs : Organization[], label : string) {
+    const loading = await this.loading.create();
+    await loading.present();
+
     const template = await this.template(label);//,
       //slug = await ;
 
@@ -90,6 +94,8 @@ export class CreateDocumentButtonComponent implements OnInit {
           }),
         }));
     
+        this.loading.dismiss();
+
         this.newDoc.emit(docId);
       }
     )
