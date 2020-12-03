@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap } from 'rxjs/operators';
-import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString } from '@venite/ldf';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile } from 'rxjs/operators';
+import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option } from '@venite/ldf';
 import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
@@ -96,7 +96,8 @@ export class PrayPage implements OnInit, OnDestroy {
   ngOnInit() {
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
     // bulletin mode (i.e., include all possibilities as options)
-    this.prayService.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'))
+    const bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'));
+    this.prayService.bulletinMode = bulletinMode;
 
     // If passed through router state, it's simply a synchronous `PrayState` object
     // This probably means we came from the home page and clicked Pray, so the liturgy
@@ -199,10 +200,16 @@ export class PrayPage implements OnInit, OnDestroy {
       switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
     );
 
-    this.doc$ = merge(
-      stateDoc$,
-      this.modifiedDoc$
-    );
+    if(bulletinMode) {
+      this.launchBulletinMode(stateDoc$);
+    } else {
+      // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
+      // e.g., "Change Canticle" button
+      this.doc$ = merge(
+        stateDoc$,
+        this.modifiedDoc$
+      );
+    }
 
     this.color$ = this.day$.pipe(
       map(day => day?.color),
@@ -308,6 +315,31 @@ export class PrayPage implements OnInit, OnDestroy {
     };
 
     await modal.present();
+  }
+
+  launchBulletinMode(stateDoc$ : Observable<LiturgicalDocument>) {
+    this.loadingController.create().then(loading => loading.present());
+
+    // in bulletin mode, show a loading screen until the doc is fully compiled,
+    // then create an and join an editing session
+    const doc$ = stateDoc$.pipe(
+      takeWhile(doc => !isCompletelyCompiled(doc)),
+    );
+    this.doc$ = doc$;
+
+    let latestDoc : null | LiturgicalDocument = null;
+    const subscription = doc$.subscribe(
+      // next
+      doc => latestDoc = doc,
+      // error — TODO
+      e => console.warn('CPL caught error', e),
+      // complete
+      () => {
+        console.log('CPL (doc$ is complete)', latestDoc);
+        subscription.unsubscribe();
+        this.loadingController.dismiss();
+      }
+    );
   }
 
   grabPreference(key : string) : Observable<any> {
@@ -589,14 +621,9 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // Canticle swap
-  // TODO -- add logic onPrayPage
-  /*     // Canticle swapper
-    */
   sendCanticleOptions(ev : any, data : CanticleData) : void {
     const target = querySelectorDeep('ldf-editable-filter-documents');
     if(target) {
-      // TODO
-      console.log('liturgyVersions = ', data.liturgyVersions);
       target.setVersions(data.liturgyVersions);
       target.setOptions(
         data.canticleOptions
@@ -610,4 +637,22 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     }
   }
+}
+
+function isCompletelyCompiled(doc : LiturgicalDocument | undefined) : boolean {
+  let isCompiled : boolean;
+  if(!doc?.type) {
+    isCompiled = true;
+  } else if(doc?.type === 'liturgy') {
+    isCompiled = ((doc as Liturgy).value || [])
+      .map(subDoc => isCompletelyCompiled(subDoc))
+      .reduce((a, b) => a && b);
+  } else if(doc?.type === 'option') {
+    isCompiled = isCompletelyCompiled(((doc as Option).value || [])[(doc as Option)?.metadata?.selected]);
+  } else if(doc?.type === 'meditation') {
+    isCompiled = true;
+  } else {
+    isCompiled = Boolean(doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
+  }
+  return isCompiled;
 }
