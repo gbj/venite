@@ -1,8 +1,11 @@
 ion-button {
-  height: 40px;
-}
+  ion-avatar {
+    height: 100%;
+    width: 100%;
 
-ion-avatar {
-  height: 100%;
-  width: auto;
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
 }
