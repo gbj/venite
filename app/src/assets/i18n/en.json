@@ -166,7 +166,9 @@
   "organization": {
     "owner": "Administrator",
     "editors": "Editors",
+    "editor": "Editor",
     "latest": "Latest",
+    "member": "Member",
     "members": "Members",
     "no-editors": "No editors.",
     "no-members": "No members.",
