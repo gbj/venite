@@ -81,6 +81,7 @@ export class CalendarService {
     // generate query from the `LiturgicalDay`
     const [y, m, d] = day.date.split('-'),
           date = dateFromYMD(y, m, d),
+          isSunday = date.getDay() === 0,
           observedDate = vigil ? addOneDay(date) : date,
           observedM = observedDate.getMonth()+1,
           observedD = observedDate.getDate(),
@@ -95,9 +96,19 @@ export class CalendarService {
 
     return combineLatest(feasts, specials, thanksgiving)
       .pipe(
-        tap(holydays => console.log('holydayzz', holydays)),
         // OR together the feasts and specials
         map(([feasts, specials, thanksgiving]) => feasts.concat(specials).concat(thanksgiving)),
+        // remove black-letter days that fall on a major feast
+        map(holydays => {
+          const highestHolyDayRank = Math.max(... holydays.map(holyday => holyday.type?.rank));
+          if(highestHolyDayRank >= 4) {
+            return holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= highestHolyDayRank);
+          } else if(isSunday) {
+            return holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4);
+          } else {
+            return holydays;
+          }
+        }),
         // incorporate them into the `LiturgicalDay`
         map(holydays => day.addHolyDays(holydays))
       );
