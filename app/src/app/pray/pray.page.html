@@ -1,4 +1,5 @@
 <ion-header [veniteScrollVanish]="content">
+  <!-- Pray Mode Toolbar -->
   <ion-toolbar *ngIf="!bulletinMode" [veniteScrollVanish]="content">
     <ion-buttons collapse="true" slot="start">
       <ion-back-button></ion-back-button>
@@ -16,6 +17,8 @@
       </ion-buttons>
     </ng-container>
   </ion-toolbar>
+
+  <!-- Bulletin Mode Toolbar -->
   <ion-toolbar *ngIf="bulletinMode">
     <ion-buttons collapse="true" slot="start">
       <ion-back-button></ion-back-button>
@@ -28,6 +31,11 @@
         [status]="editorStatus$ | async"
         [includeAuthButton]="true"
       ></venite-editor-buttons>
+      <ion-buttons slot="end" *ngIf="actionSheetData$ | async as data">
+        <ion-button *ngIf="data.doc"(click)="actionSheet(data)" aria-label="More Actions">
+          <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ng-container>
   </ion-toolbar>
 </ion-header>
@@ -41,13 +49,6 @@
             [preview]="true"
           ></venite-ldf-editor>
         </div>
-        <!--<ldf-liturgical-document
-              path="/"
-              [doc]="doc$ | async"
-              [editable]="true"
-              (ldfDocShouldChange)="changeDoc(doc, $event)"
-              (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
-            ></ldf-liturgical-document>-->
       </ng-container>
       <ng-container *ngIf="!bulletinMode">
         <ng-container *ngIf="doc$ | async as doc else loading">
