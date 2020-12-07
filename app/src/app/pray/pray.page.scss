@@ -16,6 +16,10 @@
   width: 100vw;
 }
 
+.bordered, .ldf-wrapper {
+  min-height: 100vh;
+}
+
 @media(min-width: 767px) {
   .bordered {
     border-width: 2em;
@@ -58,4 +62,8 @@
   .ldf-wrapper {
     padding: 3em;
   }
+}
+
+.editor-wrapper {
+  padding-top: 56px;
 }

@@ -1,11 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
-
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { AuthModule } from './auth/auth.module';
-import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
   {
@@ -17,15 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'editor',
-    loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
-    canActivate: [LoginGuard]
-  },
-  /*{
-    path: 'pray',
-    loadChildren: () => import('@venite/ng-pray').then( m => m.PrayPageModule)
-  },*/
   {
     path: 'church',
     loadChildren: () => import('./organization/organization.module').then( m => m.OrganizationPageModule)
@@ -45,6 +30,18 @@ const routes: Routes = [
   {
     path: 'tutorials',
     loadChildren: () => import('./tutorials/tutorials.module').then( m => m.TutorialsPageModule)
+  },
+  {
+    path: 'bulletins',
+    loadChildren: () => import('./bulletins/bulletins.module').then( m => m.BulletinsPageModule)
+  },
+  {
+    path: 'templates',
+    loadChildren: () => import('./bulletins/bulletins.module').then( m => m.BulletinsPageModule)
+  },
+  {
+    path: 'template',
+    loadChildren: () => import('./template/template.module').then( m => m.TemplatePageModule)
   }
 ];
 

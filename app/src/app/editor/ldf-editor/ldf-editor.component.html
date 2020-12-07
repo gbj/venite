@@ -1,103 +1,17 @@
-<ng-container *ngIf="state$ | async as state else nodoc">
-  <ng-container *ngIf="state.localManager else nodoc">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title><h1>{{ state?.localManager?.document?.label }}</h1></ion-title>
-        <ion-buttons collapse="true" slot="end">
-          <ion-button (click)="sharingModal(state?.localManager.document?.sharing)" class="sm-hidden">
-            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-            <ion-label>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="shareLink(state?.localManager, state?.localManager.document)" class="sm-hidden">
-            <ion-icon name="share" slot="start"></ion-icon>
-            <ion-label>{{ 'editor.publish' | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="displaySettings(state?.localManager, state?.localManager.document)" class="sm-hidden">
-            <ion-icon name="cog" slot="start"></ion-icon>
-            <ion-label class="visually-hidden">{{ 'displaySettings.display-settings' | translate }}</ion-label>
-          </ion-button>
-          <ng-container *ngIf="editorStatus | async as status">
-            <ion-icon *ngIf="status.code === 'Idle'"></ion-icon>
-            <ion-icon class="status pending" *ngIf="status.code === 'Pending'" name="cloud-upload"></ion-icon>
-            <ion-icon class="status success" *ngIf="status.code === editorStatusCode.Success" name="checkmark"></ion-icon>
-            <ion-icon class="status error" *ngIf="status.code === 'Error'" name="warning"></ion-icon>
-          </ng-container>
-          <venite-auth-menu-button></venite-auth-menu-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar class="sm-only">
-        <ion-buttons slot="end">
-          <ion-button (click)="sharingModal(state?.localManager.document?.sharing)">
-            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-            <ion-label>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="shareLink(state?.localManager, state?.localManager.document)">
-            <ion-icon name="share" slot="start"></ion-icon>
-            <ion-label>{{ 'editor.publish' | translate }}</ion-label>
-          </ion-button>
-          <ion-button (click)="displaySettings(state?.localManager, state?.localManager.document)">
-            <ion-icon name="cog" slot="start"></ion-icon>
-            <ion-label class="visually-hidden">{{ 'displaySettings.display-settings' | translate }}</ion-label>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-  
-    <ion-content [fullscreen]="true" class="ion-padding">
-      <ion-segment [(ngModel)]="mode">
-        <ion-segment-button value="edit">{{ 'editor.edit' | translate}}</ion-segment-button>
-        <ion-segment-button value="code">{{ 'editor.code' | translate}}</ion-segment-button>
-        <ion-segment-button value="preview">{{ 'editor.preview' | translate}}</ion-segment-button>
-      </ion-segment>
-
-      <ng-container *ngIf="mode == 'edit'">
-        <ldf-editor
-          [doc]="state?.localManager.document"
-          [uid]="(auth.user | async)?.uid"
-          [cursors]="state?.serverManager?.cursors"
-          [users]="state?.serverManager?.users"
-          (editorCursorMoved)="updateCursor(state?.localManager.docId, $event)"
-          (editorDocShouldChange)="processChange(state?.localManager, $event)"
-          (editorDocShouldAdd)="addBlockDirectly(state?.localManager, $event)"
-          (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
-          (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
-          (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
-          (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
-        ></ldf-editor>
-      </ng-container>
-
-      <ng-container *ngIf="mode == 'code'">
-        <pre>{{ state?.localManager?.document | json }}</pre>
-      </ng-container>
-
-      <ng-container *ngIf="mode == 'preview'">
-        <ldf-liturgical-document [doc]="state?.localManager.document"></ldf-liturgical-document>
-      </ng-container>      
-    </ion-content>
-  </ng-container>
+<ng-container *ngIf="state$ | async as state">
+  <ldf-editor
+    [doc]="state?.localManager.document"
+    [preview]="preview"
+    [uid]="(auth.user | async)?.uid"
+    [cursors]="state?.serverManager?.cursors"
+    [users]="state?.serverManager?.users"
+    [listUsers]="false"
+    (editorCursorMoved)="updateCursor(state?.localManager.docId, $event)"
+    (editorDocShouldChange)="processChange(state?.localManager, $event)"
+    (editorDocShouldAdd)="addBlockDirectly(state?.localManager, $event)"
+    (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
+    (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
+    (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
+    (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
+  ></ldf-editor>
 </ng-container>
-
-<!-- If we have a docId, but no document yet -- loading-->
-<ng-template #nodoc>
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title><h1>{{ 'editor.title' | translate}}</h1></ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content #list [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large"><h1>{{ 'editor.title' | translate }}</h1></ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <div class="loading ion-padding">{{ 'editor.loading-document' | translate }}</div>
-  </ion-content>
-</ng-template>

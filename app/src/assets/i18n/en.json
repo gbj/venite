@@ -37,10 +37,16 @@
     "meditate": "Meditate",
     "favorites": "Favorites",
     "bulletins": "Bulletins",
+    "templates": "Templates",
     "psalter": "Psalter",
     "settings": "Settings",
     "about": "About",
     "tutorials": "Tutorials"
+  },
+  "bulletins": {
+    "bulletins": "Bulletins",
+    "templates": "Templates",
+    "create-a-bulletin": "Create a Bulletin"
   },
   "darkmode": {
     "darkmode": "Dark Mode",

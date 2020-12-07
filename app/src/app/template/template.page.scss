@@ -1,0 +1,42 @@
+@media(max-width: 767px) {
+  .sm-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
+}
+
+@media(min-width: 767px) {
+  .sm-only {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
+}
+
+venite-ldf-editor {
+  display: block;
+  max-width: calc(600px + 2em);
+  margin: auto;
+  background-color: var(--ldf-background-color);
+  padding: 1em;
+  box-shadow: 5px;
+}
+
+.bordered {
+  background: var(--ldf-editable-lookup-background-color);
+  border-color: var(--ldf-editable-lookup-background-color);
+  border-left: 1em solid var(--ion-background-color, #fff);
+  border-right: 1em solid var(--ion-background-color, #fff);
+  border-width: 1em;
+  transition: all 0.5s ease;
+  width: 100vw;
+}

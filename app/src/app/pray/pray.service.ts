@@ -5,6 +5,7 @@ import { Observable, of, combineLatest } from 'rxjs';
 import { first, map, startWith, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
 import { LiturgyConfig } from '@venite/ng-pray/lib/liturgy-config';
+import { isCompletelyCompiled } from './is-completely-rendered';
 
 const emptyValue = (doc : LiturgicalDocument) => 
   !Boolean(doc.value) ||
@@ -32,7 +33,11 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
-    const doc = new LiturgicalDocument({ ... docBase, day });
+    const doc = new LiturgicalDocument({
+      ...docBase,
+      // insert the day, for conditions
+      day
+    });
 
     // should the doc be included?
     if(doc.include(new LiturgicalDay(day), prefs)) {
@@ -52,7 +57,14 @@ export class PrayService {
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
           // startWith(undefined) so it doesn't need to wait for all of them to load
-          this.latestChildren$.map(child$ => child$ ? child$.pipe(startWith(null)) : of(null))
+          this.latestChildren$.map(child$ => child$
+            ? child$.pipe(
+              startWith(null),
+              switchMap(child => child && child?.include(day, prefs) && !isCompletelyCompiled(child) 
+                ? this.compile(child, day, prefs, liturgyversions, originalPrefs)
+                : of(child))
+            )
+            : of(null))
         ).pipe(
           // if one of the options in an Option is an Option, take the child Option and spread its values into the parent
           map(compiledChildren => compiledChildren.map(

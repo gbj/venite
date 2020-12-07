@@ -46,6 +46,12 @@ export class EditorComponent {
   /** Cursor positions of active users. Drills down to `<ldf-editor-cursors>` */
   @Prop() cursors : { [user: string]: Cursor };
 
+  /** Whether to list users who are active in the editing session */
+  @Prop() listUsers : boolean = true;
+
+  /** Editors in `preview` mode will show a preview of each document, unless explicitly prompted to edit that document */
+  @Prop() preview : boolean = false;
+
   // Events
   /** User's cursor/selection changed */
   @Event() editorCursorMoved: EventEmitter<Cursor>;
@@ -216,7 +222,7 @@ export class EditorComponent {
     return (
       <Host>
         {/* "Logged in as" toolbar */}
-        <ldf-label-bar>
+        {this.listUsers && <ldf-label-bar>
           <div slot='start'>
             {user && <span>Logged in as <span class='user' style={{
                 backgroundColor: new Values(user.color).tint(40).hexString(),
@@ -234,7 +240,7 @@ export class EditorComponent {
             }
           </div>
           <slot name='controls' slot='end'/>
-        </ldf-label-bar>
+        </ldf-label-bar>}
 
         <ldf-editor-cursors
           parent={this.el}
@@ -246,6 +252,7 @@ export class EditorComponent {
         {/* Editable version of liturgy */}
         {this.obj && <ldf-liturgical-document
           editable={true}
+          preview={this.preview}
           path='/'
           doc={this.obj}>
         </ldf-liturgical-document>}

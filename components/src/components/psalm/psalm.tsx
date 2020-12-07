@@ -169,7 +169,7 @@ export class PsalmComponent {
 
     return (
       <Host lang={this.obj?.language || 'en'}>
-        <div class={`psalm-parent ${this.obj?.display_format || 'default'} ${noNumbers ? 'no-numbers' : ''}`}>
+        <div class={`psalm-parent ${this.editable ? 'editable' : ''} ${this.obj?.display_format || 'default'} ${noNumbers ? 'no-numbers' : ''}`}>
         {/* Slot for controls*/}
         { (this.editable || this.obj?.style === 'canticle') && <ldf-label-bar>
           <slot slot='end' name='controls'>

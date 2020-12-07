@@ -46,7 +46,11 @@ export class LiturgyMenuComponent implements OnInit {
   constructor(
     @Inject('config') private config : PrayMenuConfig,
     @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface
-  ) { }
+  ) {
+    this.properLiturgySubject.next(this.properLiturgy);
+    this.language$.next(this.language);
+    this.version$.next(this.version);
+  }
 
   ngOnInit() {
     this.languageVersionLiturgies$ = combineLatest(
@@ -56,10 +60,6 @@ export class LiturgyMenuComponent implements OnInit {
       switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version)),
       map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
     );
-    this.language$.next(this.language);
-    this.version$.next(this.version);
-
-    this.properLiturgySubject.next(this.properLiturgy);
 
     // find actual `Liturgy` documents, given the `ProperLiturgy` we're passed
     this.properLiturgyLiturgy = this.properLiturgySubject.pipe(
@@ -81,7 +81,7 @@ export class LiturgyMenuComponent implements OnInit {
 
     // combine properLiturgy input liturgyOptions observable from the service
     this.liturgyOptions = combineLatest(
-      this.properLiturgyLiturgy.pipe(startWith(null)),  // startWith allows us to combine even if no proper liturgy
+      this.properLiturgyLiturgy.pipe(startWith(undefined)),  // startWith allows us to combine even if no proper liturgy
       this.languageVersionLiturgies$.pipe(startWith([]))
     ).pipe(
       map(([properLiturgy, liturgyOptions]) => properLiturgy ? new Array(properLiturgy).concat(liturgyOptions) : liturgyOptions),
@@ -90,14 +90,19 @@ export class LiturgyMenuComponent implements OnInit {
     );
 
     // set state of the menu
-    this.selectState = combineLatest(this.liturgySubject, this.liturgyOptions, this.properLiturgyLiturgy.pipe(startWith(null)))
+    this.selectState = combineLatest(this.liturgySubject, this.liturgyOptions, this.properLiturgyLiturgy.pipe(startWith(undefined)))
       .pipe(
         map(([baseLiturgy, options, properLiturgy]) => ({
           value: properLiturgy?.slug || baseLiturgy,
           options: options
         })),
         // emit a starting value
-        tap(({ value, options }) => this.liturgyChange.emit(options.find(opt => opt.slug == value)))
+        tap(({ value, options }) => {
+          const liturgy = options.find(opt => opt.slug == value);
+          if(liturgy) {
+            this.liturgyChange.emit(liturgy);
+          }
+        })
       );
   }
 

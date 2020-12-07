@@ -87,7 +87,6 @@ export class PreferencesService {
       this.getStored(key) // observable of Firebase stored preference
     ).pipe(
       filter(value => value !== undefined),
-      tap(value => console.log('preference ', key, 'is', value))
     );
   }
 
@@ -96,7 +95,6 @@ export class PreferencesService {
     * see if I have one for English Rite II Morning Prayer  */
   getPreferencesForLiturgy(liturgy : LiturgicalDocument) : Observable<StoredPreference[]> {
     if(!liturgy) {
-      console.warn('(getPreferencesForLiturgy) liturgy is', liturgy);
       return of([]);
     } else {
       return this.auth.user

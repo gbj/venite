@@ -1,0 +1,41 @@
+<ng-container *ngIf="state$ | async as state">
+  <ng-container *ngIf="state.localManager">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ state?.localManager?.document?.label }}</ion-title>
+        <venite-editor-buttons
+          class="sm-hidden"
+          slot="end" [state]="state"
+          [publishButton]="false"
+          [status]="editorStatus | async"
+          [collapse]="true"
+          [includeAuthButton]="true"
+        ></venite-editor-buttons>
+        <ion-buttons slot="end" class="sm-only">
+          <venite-auth-menu-button></venite-auth-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar class="sm-only">
+        <venite-editor-buttons
+          slot="end"
+          [state]="state"
+          [status]="editorStatus | async"
+          [publishButton]="false"
+        ></venite-editor-buttons>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content [fullscreen]="true" *ngIf="docId$ | async as docId">
+      <div class="bordered">
+        <venite-ldf-editor
+          [docId]="docId"
+          [preview]="false"
+        ></venite-ldf-editor>
+      </div>
+    </ion-content>
+  </ng-container>
+</ng-container>

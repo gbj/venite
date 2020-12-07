@@ -39,6 +39,9 @@ export class LiturgyComponent {
    */
   @Prop() editable : boolean;
 
+  /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
+  @Prop() preview : boolean = false;
+
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
@@ -67,12 +70,16 @@ export class LiturgyComponent {
                 base={valuePath}
                 index={docIndex}
                 editable={this.editable}
+                preview={this.preview}
                 parentType='liturgy'
               >
               </ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
-              {this.editable && <ldf-editable-add-block visible={this.hasFocus == path || docIndex == ((this.obj?.value?.length || 0) - 1)} base={valuePath} index={docIndex + 1}></ldf-editable-add-block>}
+              {(this.editable || this.preview) && <ldf-editable-add-block
+                visible={this.hasFocus == path || docIndex == ((this.obj?.value?.length || 0) - 1)}
+                base={valuePath} index={docIndex + 1}
+              ></ldf-editable-add-block>}
             </article>
           )
         }

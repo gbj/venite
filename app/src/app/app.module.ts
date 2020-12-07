@@ -41,7 +41,8 @@ import { LectionaryService } from './services/lectionary.service';
 import { CalendarService } from './services/calendar.service';
 import { DocumentService } from './services/document.service';
 import { CanticleTableService } from './services/canticle-table.service';
-import { PrayPageModule } from '@venite/ng-pray';
+import { PrayPageModule } from './pray/pray.module';
+//import { PrayPageModule } from '@venite/ng-pray';
 
 @NgModule({
   declarations: [AppComponent],
@@ -95,7 +96,7 @@ import { PrayPageModule } from '@venite/ng-pray';
           preset: false,
           component: false
         },
-        hasBulletinMode: true
+        hasBulletinMode: false
       },
       providers: [
         AuthService,

@@ -2,5 +2,7 @@
   "addOption": "Add an Option",
   "condition": "Conditions",
   "preferences": "Preferences",
-  "settings": "Settings"
+  "settings": "Settings",
+  "edit": "Edit",
+  "preview": "Preview"
 }

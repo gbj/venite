@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <venite-pray-menu
+    [prayButton]="false"
+    [bulletinButton]="true"
+    (dayChosen)="dayChosen($event)"
+  ></venite-pray-menu>
+</ion-content>

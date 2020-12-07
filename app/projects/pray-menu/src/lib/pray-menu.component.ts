@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { Component, OnInit, Inject, Input, EventEmitter, Output } from '@angular/core';
 import { Observable, Subject, BehaviorSubject, combineLatest, of } from 'rxjs';
 import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString, dateFromYMDString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
@@ -28,6 +28,10 @@ type PrayData = {
 })
 export class PrayMenuComponent implements OnInit {
   @Input() showVigil : boolean = true;
+  @Input() prayButton : boolean = true;
+  @Input() bulletinButton : boolean = false;
+
+  @Output() dayChosen : EventEmitter<PrayData> = new EventEmitter();
 
   // The data the Pray button needs
   prayData : Observable<PrayData>;
@@ -64,7 +68,7 @@ export class PrayMenuComponent implements OnInit {
   clientPreferences : BehaviorSubject<ClientPreferences> = new BehaviorSubject({});
 
   /* Records the last time we entered the page; will only reset the menu if
-    * it's been longer than REMEMBER_TIME */
+   * it's been longer than REMEMBER_TIME */
   lastPrayed : Date = new Date();
   readonly REMEMBER_TIME = 30*60*1000; // default to 30 minutes
 
@@ -151,7 +155,11 @@ ionViewWillEnter() {
   this.hasStartedNavigating = false;
 }
 
-pray({user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings} : PrayData, bulletinMode : boolean = false) {
+pray(data : PrayData, bulletinMode : boolean = false) {
+  this.dayChosen.emit(data);
+  
+  const { user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings } = data;
+
   // update preferences
   this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy);
 

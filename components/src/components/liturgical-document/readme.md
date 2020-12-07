@@ -7,14 +7,15 @@
 
 ## Properties
 
-| Property     | Attribute     | Description                                                             | Type                                                                                                                                             | Default     |
-| ------------ | ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested | `string`                                                                                                                                         | `undefined` |
-| `doc`        | `doc`         | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string`                                                                                                                   | `undefined` |
-| `editable`   | `editable`    | Whether the object is editable                                          | `boolean`                                                                                                                                        | `undefined` |
-| `index`      | `index`       | Index within a larger array, if any                                     | `number`                                                                                                                                         | `undefined` |
-| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                         | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `null`      |
-| `path`       | `path`        | A JSON Pointer that points to the LiturgicalDocument being edited       | `string`                                                                                                                                         | `undefined` |
+| Property     | Attribute     | Description                                                                                                          | Type                                                                                                                                             | Default     |
+| ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested                                              | `string`                                                                                                                                         | `undefined` |
+| `doc`        | `doc`         | An LDF LiturgicalDocument object.                                                                                    | `LiturgicalDocument \| string`                                                                                                                   | `undefined` |
+| `editable`   | `editable`    | Whether the object is editable                                                                                       | `boolean`                                                                                                                                        | `undefined` |
+| `index`      | `index`       | Index within a larger array, if any                                                                                  | `number`                                                                                                                                         | `undefined` |
+| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                                                                      | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `null`      |
+| `path`       | `path`        | A JSON Pointer that points to the LiturgicalDocument being edited                                                    | `string`                                                                                                                                         | `undefined` |
+| `preview`    | `preview`     | Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them | `boolean`                                                                                                                                        | `false`     |
 
 
 ## Events
@@ -103,6 +104,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
   ldf-editable-delete --> ion-buttons

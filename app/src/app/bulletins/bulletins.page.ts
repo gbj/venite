@@ -1,22 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, BehaviorSubject, combineLatest, of } from 'rxjs'; 
-import { switchMap, map, filter, startWith } from 'rxjs/operators';
-import { AuthService } from '../auth/auth.service';
-import { DocumentService, IdAndDoc } from '../services/document.service';
-import { EditorService } from './ldf-editor/editor.service';
-import { LiturgicalDocument } from '@venite/ldf';
-import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AlertController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { LiturgicalDocument } from '@venite/ldf';
+import { Observable, BehaviorSubject, of, combineLatest } from 'rxjs';
+import { filter, switchMap, map, tap } from 'rxjs/operators';
+import { AuthService } from '../auth/auth.service';
 import { UserProfile } from '../auth/user/user-profile';
+import { BLANK_TEMPLATES } from '../editor/blank-templates';
+import { EditorService } from '../editor/ldf-editor/editor.service';
 import { OrganizationService } from '../organization/organization.module';
+import { DocumentService, IdAndDoc } from '../services/document.service';
 import { DownloadService } from '../services/download.service';
-import { BLANK_TEMPLATES } from './blank-templates';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { IFormGroup, IFormBuilder } from "@rxweb/types";
 import { slugify } from '../slugify';
+import { CreateBulletinModalComponent } from './create-bulletin-modal/create-bulletin-modal.component';
 
-const docSearch =  (includeBulletins : boolean, includeTemplates : boolean, includeFragments : boolean) => ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc =>
+const docSearch = (includeBulletins : boolean, includeTemplates : boolean, includeFragments : boolean) => ([search, docs] : [string, IdAndDoc[]]) => docs.filter(doc =>
   (
     (includeBulletins || !Boolean(doc.data.day)) &&
     (includeTemplates || Boolean(doc.data.day)) &&
@@ -31,32 +30,31 @@ const docSearch =  (includeBulletins : boolean, includeTemplates : boolean, incl
 );
 
 @Component({
-  selector: 'venite-editor',
-  templateUrl: './editor.page.html',
-  styleUrls: ['./editor.page.scss'],
+  selector: 'venite-bulletins',
+  templateUrl: './bulletins.page.html',
+  styleUrls: ['./bulletins.page.scss'],
 })
-export class EditorPage implements OnInit {
+export class BulletinsPage implements OnInit {
+  mode : 'bulletins' | 'templates' = 'bulletins';
+
   userProfile$ : Observable<UserProfile>;
 
-  // The document being edited
-  docId$ : Observable<string>;
-
-  // All documents to which the user has access to edit
+  // All documents to which the user has edit access
   search$ : BehaviorSubject<string> = new BehaviorSubject('');
   myDocs$ : Observable<IdAndDoc[]>;
   orgDocs$ : Observable<IdAndDoc[]>;
   sharedDocs$ : Observable<IdAndDoc[]>;
   searchResults$ : Observable<IdAndDoc[]> = of([]);
 
-  // Templates for new documents
+  // Templates
   templates$: Observable<{ label: string; factory: (string) => LiturgicalDocument}[]>;
   templatesToggled : boolean = false;
-  includeForm : IFormGroup<{ bulletins: boolean; templates: boolean; fragments: boolean; }>;
-  form : IFormBuilder;
+
+  // Document import
+  @ViewChild('importInput') importInput;
 
   constructor(
     public auth : AuthService,
-    private route : ActivatedRoute,
     private documents : DocumentService,
     public editorService : EditorService,
     private router : Router,
@@ -64,33 +62,21 @@ export class EditorPage implements OnInit {
     private translate : TranslateService,
     private organizationService : OrganizationService,
     private downloadService : DownloadService,
-    form : FormBuilder
-  ) {
-    this.form = form;
-  }
-
-  @ViewChild('importInput') importInput;
+    private modal : ModalController
+  ) { }
 
   ngOnInit() {
-    this.includeForm = this.form.group<{ bulletins: boolean; templates: boolean; fragments: boolean; }>({
-      bulletins: true,
-      templates: true,
-      fragments: true
-    });
+    this.mode = Boolean(location?.pathname?.startsWith('/bulletins')) ? 'bulletins' : 'templates';
 
-    const includeForm$ = this.includeForm.valueChanges.pipe(
-      startWith(this.includeForm.value)
-    );
-
-    // If no docId is given, we use this list of all documents
+        // If no docId is given, we use this list of all documents
     // All docs
     const myUnfilteredDocs$ = this.auth.user.pipe(
       filter(user => user !== null),
       switchMap(user => this.documents.myLiturgies(user?.uid))
     );
   
-    this.myDocs$ = combineLatest([this.search$, includeForm$, myUnfilteredDocs$]).pipe(
-      map(([search, valueChanges, docs]) => docSearch(valueChanges.bulletins, valueChanges.templates, valueChanges.fragments)([search, docs]))
+    this.myDocs$ = combineLatest([this.search$,  myUnfilteredDocs$]).pipe(
+      map(([search, docs]) => docSearch(this.mode === 'bulletins', this.mode === 'templates', this.mode === 'templates')([search, docs]))
     );
 
     const orgs$ = this.auth.user.pipe(
@@ -98,10 +84,12 @@ export class EditorPage implements OnInit {
       switchMap(user => this.organizationService.organizationsWithUser(user?.uid))
     );
 
-    this.orgDocs$ = combineLatest([this.search$, includeForm$, orgs$.pipe(
+    this.orgDocs$ = combineLatest([this.search$, this.auth.user, orgs$.pipe(
       switchMap(orgs => this.documents.myOrganizationDocuments(orgs))
     )]).pipe(
-      map(([search, valueChanges, docs]) => docSearch(valueChanges.bulletins, valueChanges.templates, valueChanges.fragments)([search, docs]))
+      map(([search, user, docs]) => docSearch(this.mode === 'bulletins', this.mode === 'templates', this.mode === 'templates')([search, docs])
+        .filter(doc => doc?.data?.sharing?.owner !== user?.uid)
+      )
     );
 
     this.searchResults$ = combineLatest([this.auth.user, this.search$, orgs$]).pipe(
@@ -110,13 +98,6 @@ export class EditorPage implements OnInit {
 
     this.userProfile$ = this.auth.user.pipe(
       switchMap(user => this.auth.getUserProfile(user?.uid))
-    );
-
-    // If a docId is given, we'll pass it down to the `LdfEditorComponent`
-    this.docId$ = this.route.params.pipe(
-      // grab the docId from params
-      filter(params => params.hasOwnProperty('docId')),
-      map(params => params.docId),
     );
 
     this.templates$ = combineLatest(
@@ -136,7 +117,8 @@ export class EditorPage implements OnInit {
           })
         }))
         .concat(templates)
-      )
+      ),
+      tap(tpls => console.log('templates = ', tpls))
     )
   }
 
@@ -146,6 +128,16 @@ export class EditorPage implements OnInit {
 
   trackIdAndDocBy(index : number, item : IdAndDoc) {
     return item.id || index;
+  }
+
+  async createBulletin() {
+    const modal = await this.modal.create({
+      component: CreateBulletinModalComponent
+    });
+    modal.componentProps = {
+      modal
+    };
+    await modal.present();
   }
 
   async copy(userProfile : UserProfile, doc : LiturgicalDocument) {
@@ -204,4 +196,5 @@ export class EditorPage implements OnInit {
   toggleTemplates() {
     this.templatesToggled = !this.templatesToggled;
   }
+
 }

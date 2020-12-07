@@ -151,16 +151,30 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           );
           return this.complete; 
         case 'category':
-          const tplDoc = new LiturgicalDocument(addition.template[0] || {});
+          const tplCatDoc = new LiturgicalDocument(addition.template[0] || {});
           this.additionalMode = 'liturgy';
-          this.additionalVersions = tplDoc.type === 'liturgy'
+          this.additionalVersions = tplCatDoc.type === 'liturgy'
             // versions like Rite-II, etc.
             ? this.documentService.getVersions(this.language, 'liturgy-versions')
             // versions like bcp1979, etc.
             : this.documentService.getVersions(this.language, 'liturgy');
           this.additionalOptions = this.additionalVersions.pipe(
             map(versions => Object.keys(versions)),
-            switchMap(versions => this.documentService.findDocumentsByCategory(tplDoc.category, this.language, versions)),
+            switchMap(versions => this.documentService.findDocumentsByCategory(tplCatDoc.category, this.language, versions)),
+            map(docs => docs.sort((a, b) => a.label > b.label ? 1 : -1))
+          );
+          return this.complete;
+        case 'slug':
+          const tplSlugDoc = new LiturgicalDocument(addition.template[0] || {});
+          this.additionalMode = 'liturgy';
+          this.additionalVersions = tplSlugDoc.type === 'liturgy'
+            // versions like Rite-II, etc.
+            ? this.documentService.getVersions(this.language, 'liturgy-versions')
+            // versions like bcp1979, etc.
+            : this.documentService.getVersions(this.language, 'liturgy');
+          this.additionalOptions = this.additionalVersions.pipe(
+            map(versions => Object.keys(versions)),
+            switchMap(versions => this.documentService.findDocumentsBySlug(tplSlugDoc.slug, this.language, versions)),
             map(docs => docs.sort((a, b) => a.label > b.label ? 1 : -1))
           );
           return this.complete;

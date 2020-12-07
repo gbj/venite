@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Event, EventEmitter, h } from '@stencil/core';
+import { Component, Element, State, Prop, Event, EventEmitter, h, Host } from '@stencil/core';
 import { modalController, ComponentProps } from '@ionic/core';
 import { LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
@@ -36,8 +36,13 @@ export class EditableMetadataButtonsComponent {
   /** Type of the parent `LiturgicalDocument`, if any */
   @Prop() parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null;
 
+  /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
+  @Prop() preview : boolean = false;
+
   // Events
   @Event() ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
+
+  @Event() ldfTogglePreview : EventEmitter<boolean>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -114,9 +119,24 @@ export class EditableMetadataButtonsComponent {
     const localeStrings = this.localeStrings || {},
           hasIndex : boolean = this.index !== undefined && this.index >= 0;
 
-    return (
+    return <Host>
+     {/* Preview Buttons */}
       <ldf-label-bar class={{ hidden: !this.visible, visible: this.visible }}>
-        <ion-buttons slot='end'>
+        {/* Preview Buttons */}
+        {this.preview && <ion-buttons slot="end" >
+          <ion-button onClick={() => this.ldfTogglePreview.emit(false)}>
+            <ion-label>{this.localeStrings?.edit}</ion-label>
+            <ion-icon slot="end" name="create"></ion-icon>
+          </ion-button>
+        </ion-buttons>}
+
+        {/* Editable Buttons */}
+        {!this.preview && <ion-buttons slot='end'>
+          <ion-button onClick={() => this.ldfTogglePreview.emit(true)}>
+            <ion-label>{this.localeStrings?.preview}</ion-label>
+            <ion-icon slot="end" name="eye"></ion-icon>
+          </ion-button>
+
           {/* "Add Option" Button */}
           {/* Don't show "Add Option" button if `obj` is already an `Option` or a child of an `Option`; they have their own interface for this */}
           {this.obj?.type !== 'option' && this.parentType !== 'option' && this.base &&
@@ -149,8 +169,8 @@ export class EditableMetadataButtonsComponent {
           { hasIndex &&
             <ldf-editable-delete base={this.base} index={this.index} obj={this.obj}></ldf-editable-delete>
           }
-        </ion-buttons>
+        </ion-buttons>}
       </ldf-label-bar>
-    )
+    </Host>
   }
 }

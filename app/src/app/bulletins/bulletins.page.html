@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="mode === 'bulletins'">{{ 'bulletins.bulletins' | translate }}</ion-title>
+    <ion-title *ngIf="mode === 'templates'">{{ 'bulletins.templates' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #list [fullscreen]="true" *ngIf="auth.user | async as user else needlogin">
+  <!-- Template Buttons -->
+  <ion-card *ngIf="mode === 'templates'">
+    <ion-card-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="toggleTemplates()">
+            <ion-icon *ngIf="!templatesToggled" name="chevron-forward-outline"></ion-icon>
+            <ion-icon *ngIf="templatesToggled" name="chevron-down-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-card-title>{{ 'editor.create-a-new-template' | translate }}</ion-card-title>
+      </ion-toolbar>
+    </ion-card-header>
+    <ion-card-content [class]="{'visually-hidden': !templatesToggled}">
+      <div class="button-layout">
+        <ng-container *ngFor="let template of templates$ | async">
+          <venite-create-document-button 
+            [label]="template.label"
+            [template]="template.factory"
+            (newDoc)="joinDocument($event)">
+          </venite-create-document-button>
+        </ng-container>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Search -->
+  <ion-searchbar (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
+
+  <!-- Menu for Bulletin -->
+  <ion-button *ngIf="mode === 'bulletins'" class="create-bulletin-btn" (click)="createBulletin()">
+    <ion-icon slot="start" name="add"></ion-icon>
+    <ion-label>{{ 'bulletins.create-a-bulletin' | translate }}</ion-label>
+  </ion-button>
+
+  <!-- Bulletins/Templates -->
+  <ion-list *ngIf="myDocs$ | async as docs else nodocs">
+    <ion-toolbar>
+      <ion-list-header slot="start">
+        <h2>{{ 'editor.mydocs' | translate }}</h2>
+      </ion-list-header>
+      <ion-buttons slot="end">
+        <ion-button (click)="import()" fill="clear">
+          <ion-icon name="cloud-upload" slot="start"></ion-icon>
+          <ion-label>{{ 'editor.import' | translate }}</ion-label>
+        </ion-button>
+        <form class="visually-hidden" *ngIf="userProfile$ | async as userProfile">
+          <label for="importFile">{{'editor.import' | translate}}</label>
+          <input #importInput type="file" (change)="handleImport($event, userProfile)" name="importFile" id="importFile"/>
+        </form>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+      <ion-label class="doc-link" [routerLink]="mode === 'bulletins' ? ['/', 'bulletin', 'b', doc.id] : ['/', 'template', doc.id]">
+        <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
+        <h4>{{ doc.data?.sharing?.status }} | {{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+        <p *ngIf="doc.data?.date_modified && doc.data.date_modified.toDate">{{ 'editor.modified' | translate }} {{ doc.data?.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+      </ion-label>
+      <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+        <ion-button (click)="download(doc.data)">
+          <ion-label class="visually-hidden">{{ 'editor.download' | translate }}</ion-label>
+          <ion-icon slot="icon-only" name="download"></ion-icon>
+        </ion-button>
+        <ion-button (click)="copy(userProfile, doc.data)">
+          <ion-label class="visually-hidden">{{ 'editor.copy' | translate }}</ion-label>
+          <ion-icon slot="icon-only" name="copy"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+          <ion-label class="visually-hidden">{{ 'editor.delete' | translate }}</ion-label>
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <!-- Organization Documents -->
+  <ion-list *ngIf="orgDocs$ | async as docs else nodocs">
+    <ion-list-header><h2>{{ 'editor.orgDocs' | translate }}</h2></ion-list-header>
+    <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+      <ion-label class="doc-link" [routerLink]="mode === 'bulletins' ? ['/', 'bulletin', 'b', doc.id] : ['/', 'template', doc.id]">
+        <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
+        <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+      </ion-label>
+      <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+        <ion-button (click)="copy(userProfile, doc.data)">
+          <ion-icon slot="icon-only" name="copy"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <!-- Search Results -->
+  <ng-container *ngIf="searchResults$ | async as docs">
+    <ion-list *ngIf="docs.length > 0">
+      <ion-list-header><h2>{{ 'editor.search-results' | translate }}</h2></ion-list-header>
+      <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">
+        <ion-label class="doc-link" [routerLink]="mode === 'bulletins' ? ['/', 'bulletin', 'b', doc.id] : ['/', 'template', doc.id]">
+          <h3>{{ doc.data?.label || doc.data?.slug }}</h3>
+          <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
+        </ion-label>
+        <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+          <ion-button (click)="copy(userProfile, doc.data)">
+            <ion-icon slot="icon-only" name="copy"></ion-icon>
+          </ion-button>
+          <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+  <ng-template #nodocs><p class="loading">{{ 'editor.loading' | translate }}</p></ng-template>
+</ion-content>
+
+
+<ng-template #needlogin>
+  <p class="loading">{{ 'login-to-continue' | translate }}</p>
+</ng-template>

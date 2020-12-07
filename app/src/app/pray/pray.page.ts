@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer } from 'rxjs';
+import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer, from } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile } from 'rxjs/operators';
 import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option } from '@venite/ldf';
 import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
@@ -12,13 +12,15 @@ import { DocumentService } from '../services/document.service';
 import { UserProfile } from '../auth/user/user-profile';
 import { Organization } from '../organization/organization';
 import { OrganizationService } from '../organization/organization.module';
-import { EditorService } from '../editor/ldf-editor/editor.service';
+import { EditorService, EditorStatus } from '../editor/ldf-editor/editor.service';
 import * as json1 from 'ot-json1';
 import { TranslateService } from '@ngx-translate/core';
 import { DownloadService } from '../services/download.service';
 import { SpeechService, SpeechServiceTracking } from '../services/speech.service';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { LoginComponent } from '../auth/login/login.component';
+import { EditorState } from '../editor/ldf-editor/editor-state';
+import { isCompletelyCompiled } from './is-completely-rendered';
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -53,8 +55,6 @@ export class PrayPage implements OnInit, OnDestroy {
   // Display settings
   settings$ : Observable<DisplaySettings>;
 
-  day$ : Observable<LiturgicalDay>;
-
   actionSheetData$ : Observable<ActionSheetData>;
 
   // TTS
@@ -67,6 +67,13 @@ export class PrayPage implements OnInit, OnDestroy {
 
   // Canticle Swap
   canticleData$ : Observable<CanticleData>;
+
+  // Bulletin editor
+  bulletinMode : boolean = false;
+  bulletinDocId$ : BehaviorSubject<string | null> = new BehaviorSubject(null);
+  editorState$ : Observable<EditorState>;
+  editorStatus$ : Observable<EditorStatus>;
+  latestDoc : LiturgicalDocument | undefined;
 
   constructor(
     private router : Router,
@@ -84,7 +91,7 @@ export class PrayPage implements OnInit, OnDestroy {
     private downloadService : DownloadService,
     private actionSheetController : ActionSheetController,
     public speechService : SpeechService,
-    private loadingController : LoadingController
+    private loadingController : LoadingController,
   ) { }
 
   ngOnDestroy() {
@@ -96,15 +103,14 @@ export class PrayPage implements OnInit, OnDestroy {
   ngOnInit() {
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
     // bulletin mode (i.e., include all possibilities as options)
-    const bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'));
-    this.prayService.bulletinMode = bulletinMode;
+    this.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'));
+    this.prayService.bulletinMode = this.bulletinMode;
 
     // If passed through router state, it's simply a synchronous `PrayState` object
     // This probably means we came from the home page and clicked Pray, so the liturgy
     // and liturgical day had been preloaded
     const windowHistoryState$ : Observable<PrayState> = this.router.events.pipe(
       mapTo(window?.history?.state),
-      tap(windowHistoryState => console.log('windowHistoryState', windowHistoryState)),
     );
 
     // If passed as router params (e.g., arrived at page from a link or refresh),
@@ -117,10 +123,13 @@ export class PrayPage implements OnInit, OnDestroy {
           return this.documents.findDocumentById(docId).pipe(
             map(doc => [doc])
           );
-        } else if(orgId && slug) {
+        }
+        else if(orgId && slug) {
           return this.documents.findOrganizationLiturgy(orgId, slug);
         } else {
-          return this.documents.findDocumentsBySlug(liturgy, language, new Array(version));
+          return this.documents.findDocumentsBySlug(liturgy, language, new Array(version)).pipe(
+            map(docs => docs.map(doc => docId ? doc : new LiturgicalDocument({...doc, id: undefined})))
+          );
         }
       }),
       startWith([])
@@ -143,7 +152,6 @@ export class PrayPage implements OnInit, OnDestroy {
     const day$ = merge(
       windowHistoryState$.pipe(map(state => state.day)),
       combineLatest(liturgy$, week$, this.route.params).pipe(
-        tap(([liturgy, week, params]) => console.log('day$ A', liturgy, week, params)),
         switchMap(([liturgy, week, params]) => {
           if(liturgy[0] && liturgy[0].day) {
             return of(liturgy[0].day);
@@ -160,14 +168,12 @@ export class PrayPage implements OnInit, OnDestroy {
           }
         })
       ),
-    ).pipe(
-      tap(day => console.log('day$ B = ', day)),
     );
-    this.day$ = day$;
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$ : Observable<ClientPreferences> = combineLatest(liturgy$, this.route.params).pipe(
-      map(([liturgy, { prefs }]) => ({liturgy, prefs: JSON.parse(prefs || '{}')})),
+      tap(data => console.log('prefs$ prefs = ', data)),
+      map(([liturgy, { prefs }]) => ({liturgy, prefs })),
       map(({liturgy, prefs}) => liturgy[0] && liturgy[0].type == 'liturgy'
         ? Object.assign(
           (
@@ -198,10 +204,11 @@ export class PrayPage implements OnInit, OnDestroy {
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
       switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
+      tap(doc => console.log('CPL stateDoc$', doc))
     );
 
-    if(bulletinMode) {
-      this.launchBulletinMode(stateDoc$);
+    if(this.bulletinMode) {
+      this.doc$ = from(this.launchBulletinMode(stateDoc$)).pipe(switchMap(doc$ => doc$));
     } else {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
@@ -211,7 +218,7 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     }
 
-    this.color$ = this.day$.pipe(
+    this.color$ = day$.pipe(
       map(day => day?.color),
       switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
       startWith('var(--ldf-background-color)'),
@@ -317,31 +324,6 @@ export class PrayPage implements OnInit, OnDestroy {
     await modal.present();
   }
 
-  launchBulletinMode(stateDoc$ : Observable<LiturgicalDocument>) {
-    this.loadingController.create().then(loading => loading.present());
-
-    // in bulletin mode, show a loading screen until the doc is fully compiled,
-    // then create an and join an editing session
-    const doc$ = stateDoc$.pipe(
-      takeWhile(doc => !isCompletelyCompiled(doc)),
-    );
-    this.doc$ = doc$;
-
-    let latestDoc : null | LiturgicalDocument = null;
-    const subscription = doc$.subscribe(
-      // next
-      doc => latestDoc = doc,
-      // error — TODO
-      e => console.warn('CPL caught error', e),
-      // complete
-      () => {
-        console.log('CPL (doc$ is complete)', latestDoc);
-        subscription.unsubscribe();
-        this.loadingController.dismiss();
-      }
-    );
-  }
-
   grabPreference(key : string) : Observable<any> {
     return this.preferencesService.get(key).pipe(startWith(undefined)).pipe(
       map(keyvalue => keyvalue?.value)
@@ -362,7 +344,48 @@ export class PrayPage implements OnInit, OnDestroy {
     ];
   }
 
-  async editBulletin(userProfile : UserProfile, doc : LiturgicalDocument, orgs : Organization[]) {
+  /* Bulletin Editing */
+  async launchBulletinMode(stateDoc$ : Observable<LiturgicalDocument>) : Promise<Observable<LiturgicalDocument>> {
+    const loading = await this.loadingController.create();
+    await loading.present();
+
+    // in bulletin mode, show a loading screen until the doc is fully compiled,
+    // then create an and join an editing session
+    let latestDoc : null | LiturgicalDocument = null;
+
+    const doc$ = stateDoc$.pipe(
+      tap(doc => {
+        console.log('stateDoc$ = ', doc);
+        latestDoc = doc;
+      }),
+      takeWhile(doc => !isCompletelyCompiled(doc), true),
+    );
+
+    const subscription = doc$.subscribe(
+      // next
+      doc => {
+        latestDoc = doc;
+        console.log('CPL (doc$ is complete?)', isCompletelyCompiled(doc))
+      },
+      // error — TODO
+      e => console.warn('CPL caught error', e),
+      // complete
+      () => {
+        console.log('CPL (doc$ is complete)', latestDoc);
+        subscription.unsubscribe();
+        this.loadingController.dismiss();
+        console.log('CPL complete doc.id = ', latestDoc.id)
+        loading.dismiss();
+        this.beginEditing(latestDoc);
+      }
+    );
+
+    return doc$;
+  }
+
+  async beginEditing(doc : LiturgicalDocument) {
+    this.latestDoc = doc;
+
     const loading = await this.loadingController.create();
 
     await loading.present();
@@ -374,29 +397,44 @@ export class PrayPage implements OnInit, OnDestroy {
       slug = (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
 
     // if the document already exists in the database, just open it in the editor
-    let id : string;
+    this.editorState$ = this.bulletinDocId$.pipe(
+      switchMap(docId => this.editorService.editorState(docId))
+    );
+    this.editorStatus$ = this.editorService.status;
+
     if(doc.id) {
-      id = doc.id.toString();
+      console.log('has doc.id', doc.id)
+      this.bulletinDocId$.next(doc.id.toString());
+      loading.dismiss();
     }
     // otherwise, create a new document
     else {
-      id = await this.documents.newDocument(new LiturgicalDocument({
-        ... unwrapOptions(doc),
-        label,
-        slug,
-        sharing: new Sharing({
-          owner: userProfile.uid,
-          organization: (orgs[0])?.slug,
-          collaborators: [],
-          status: 'draft',
-          privacy: 'organization'
-        })
-      }));
+      combineLatest([this.userProfile$, this.userOrgs$]).pipe(
+        switchMap(async ([userProfile, orgs]) => 
+          this.documents.newDocument(new LiturgicalDocument({
+            ... unwrapOptions(doc),
+            label,
+            slug,
+            sharing: new Sharing({
+              owner: userProfile.uid,
+              organization: (orgs[0])?.slug,
+              collaborators: [],
+              status: 'draft',
+              privacy: 'organization'
+            })
+          }))
+        )
+      ).subscribe(
+        docId => {
+          loading.dismiss();
+          this.router.navigate(['/', 'bulletin', 'b', docId]);
+        }
+      );
     }
+  }
 
-    await loading.dismiss();
-
-    this.router.navigate(['editor', id]);
+  async editBulletin(doc : LiturgicalDocument) {
+    this.router.navigate(['bulletin', 'b', doc?.id]);
   }
 
   changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
@@ -458,47 +496,17 @@ export class PrayPage implements OnInit, OnDestroy {
       });
     }
 
-    // Edit Bulletin if logged in
-    if(data.userProfile) {
+    // Edit Bulletin if it is one
+    if(data.doc?.id && data.doc?.day) {
       buttons.push({
         text: 'Edit Bulletin',
         icon: 'create',
         handler: () => {
           this.actionSheetController.dismiss();
-          this.editBulletin(data.userProfile, data.doc, data.userOrgs);
+          this.editBulletin(data.doc);
         }
       })
-    } else {
-      buttons.push({
-        text: 'Log in to Edit Bulletin',
-        icon: 'create',
-        handler: async () => {
-          const login = await this.modal.create({ component: LoginComponent });
-          await login.present();
-        }
-      });
     }
-    /*if(this.isBulletin && !this.bulletinDraftId) {
-      buttons.push({
-        text: 'Bookmark this Bulletin',
-        icon: 'bookmark',
-        handler: async () => {
-          this.bulletin.bookmarkBulletin(this.loadedBulletin).then(async () => {
-            const toast = await this.toast.create({
-              message: 'The bulletin has been bookmarked and will appear in the Bulletins page.',
-              duration: 2000
-            });
-            toast.present();
-          });
-        }
-      });
-    }
-    buttons.push({
-      text: 'Pray Together',
-      icon: 'chatbubbles',
-      //@ts-ignore
-      handler: async () => TogetherJS()
-    });*/
     buttons = buttons.concat([
       {
         text: 'Show Settings',
@@ -637,22 +645,4 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     }
   }
-}
-
-function isCompletelyCompiled(doc : LiturgicalDocument | undefined) : boolean {
-  let isCompiled : boolean;
-  if(!doc?.type) {
-    isCompiled = true;
-  } else if(doc?.type === 'liturgy') {
-    isCompiled = ((doc as Liturgy).value || [])
-      .map(subDoc => isCompletelyCompiled(subDoc))
-      .reduce((a, b) => a && b);
-  } else if(doc?.type === 'option') {
-    isCompiled = isCompletelyCompiled(((doc as Option).value || [])[(doc as Option)?.metadata?.selected]);
-  } else if(doc?.type === 'meditation') {
-    isCompiled = true;
-  } else {
-    isCompiled = Boolean(doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
-  }
-  return isCompiled;
 }

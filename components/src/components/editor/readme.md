@@ -7,12 +7,14 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                             | Type                           | Default     |
-| --------- | --------- | ----------------------------------------------------------------------- | ------------------------------ | ----------- |
-| `cursors` | --        | Cursor positions of active users. Drills down to `<ldf-editor-cursors>` | `{ [user: string]: Cursor; }`  | `undefined` |
-| `doc`     | `doc`     | An LDF LiturgicalDocument object.                                       | `LiturgicalDocument \| string` | `undefined` |
-| `uid`     | `uid`     | Unique ID for the user editing in this editor                           | `string`                       | `undefined` |
-| `users`   | --        | Users currently active in the document                                  | `{ [uid: string]: User; }`     | `undefined` |
+| Property    | Attribute    | Description                                                                                                      | Type                           | Default     |
+| ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------ | ----------- |
+| `cursors`   | --           | Cursor positions of active users. Drills down to `<ldf-editor-cursors>`                                          | `{ [user: string]: Cursor; }`  | `undefined` |
+| `doc`       | `doc`        | An LDF LiturgicalDocument object.                                                                                | `LiturgicalDocument \| string` | `undefined` |
+| `listUsers` | `list-users` | Whether to list users who are active in the editing session                                                      | `boolean`                      | `true`      |
+| `preview`   | `preview`    | Editors in `preview` mode will show a preview of each document, unless explicitly prompted to edit that document | `boolean`                      | `false`     |
+| `uid`       | `uid`        | Unique ID for the user editing in this editor                                                                    | `string`                       | `undefined` |
+| `users`     | --           | Users currently active in the document                                                                           | `{ [uid: string]: User; }`     | `undefined` |
 
 
 ## Events
@@ -117,6 +119,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
   ldf-editable-delete --> ion-buttons

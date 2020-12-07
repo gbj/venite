@@ -87,18 +87,20 @@
 
     <!-- Pray Button -->
     <div class="pray-buttons">
-      <ng-container *ngIf="prayData | async as data else notLoaded">
-        <ion-button (click)="pray(data)">
-          <ion-label>{{ 'Pray' | translate }}</ion-label>
-        </ion-button>
+      <ng-container *ngIf="prayButton">
+        <ng-container *ngIf="prayData | async as data else notLoaded">
+          <ion-button (click)="pray(data)">
+            <ion-label>{{ 'Pray' | translate }}</ion-label>
+          </ion-button>
+        </ng-container>
+        <ng-template #notLoaded>
+          <ion-button disabled="true">
+            <ion-label>{{ 'Pray' | translate }}</ion-label>
+          </ion-button>
+        </ng-template>
       </ng-container>
-      <ng-template #notLoaded>
-        <ion-button disabled="true">
-          <ion-label>{{ 'Pray' | translate }}</ion-label>
-        </ion-button>
-      </ng-template>
-      <ng-container *ngIf="config?.hasBulletinMode">
-        <ion-button *ngIf="prayData | async as data" fill="clear" (click)="pray(data, true)">
+      <ng-container *ngIf="config?.hasBulletinMode || bulletinButton">
+        <ion-button *ngIf="prayData | async as data" (click)="pray(data, true)">
           <ion-label>{{ 'Create a Bulletin' | translate }}</ion-label>
         </ion-button>
       </ng-container>

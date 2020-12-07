@@ -32,6 +32,8 @@
 }
 
 .preces {
+  width: 100%; 
+
   tr, .row {
     display: table-row;
     display: var(--ldf-preces-tr-display);

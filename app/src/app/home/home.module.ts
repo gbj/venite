@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 
@@ -12,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 // Venite Modules
 import { AuthModule } from '../auth/auth.module';
 import { SharedModule } from '../shared/shared.module';
-import { PrayMenuModule } from 'pray-menu';
+import { PrayMenuModule } from '@venite/ng-pray-menu';
 
 @NgModule({
   imports: [

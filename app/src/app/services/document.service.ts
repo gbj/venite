@@ -83,7 +83,7 @@ export class DocumentService {
       filter(user => Boolean(user?.uid)),
       switchMap(user => this.myDocuments(user?.uid)),
       map(idsAndDocs => idsAndDocs
-        .map(idAndDoc => idAndDoc.data)
+        .map(idAndDoc => new Liturgy(idAndDoc.data))
         .filter(doc => doc.type === 'liturgy' && !Boolean(doc.day)) as Liturgy[]
       ),
       startWith([] as Liturgy[])
@@ -96,7 +96,8 @@ export class DocumentService {
           venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
         )
         : mine.concat(venite)
-      )
+      ),
+      map(docs => docs.map(doc => new Liturgy({...doc, id: undefined})))
     )
   }
 

@@ -40,6 +40,12 @@
   }
 }
 
+.editable {
+  .verse, .halfverse {
+    width: 100%;
+  }
+}
+
 .psalm-parent.no-numbers {
   display: block;
   text-align: left;

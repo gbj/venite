@@ -58,10 +58,11 @@ export class LiturgicalDocumentComponent {
   /** Type of the parent `LiturgicalDocument`, if any */
   @Prop({ reflect: true }) parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null = null;
 
-  /**
-   * Whether the object is editable
-   */
+  /** Whether the object is editable */
   @Prop() editable : boolean;
+
+  /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
+  @Prop() preview : boolean = false;
 
   // Events
   @Event() focusPath : EventEmitter<string>;
@@ -104,10 +105,10 @@ export class LiturgicalDocumentComponent {
   }
 
   /** Gives a loading view, a description of the document (if editing and has a lookup), or the component of the correct type */
-  nodeFromDoc(doc : LiturgicalDocument) : JSX.Element {
+  nodeFromDoc(doc : LiturgicalDocument, forceEditable : boolean | undefined = undefined) : JSX.Element {
     if(doc == undefined) {
       return customElements?.get('ion-skeleton-text') ? <ion-skeleton-text></ion-skeleton-text> : <p>...</p>
-    } else if(this.editable) {
+    } else if(this.editable || forceEditable) {
       return this.editableNode(doc);
     } else {
       return this.chooseComponent(doc);
@@ -147,41 +148,43 @@ export class LiturgicalDocumentComponent {
   chooseComponent(doc : LiturgicalDocument) : JSX.Element {
     let node : JSX.Element;
 
+    const editable = this.editable && !this.preview;
+
     switch(doc?.type) {
       case 'liturgy':
-        node = <ldf-liturgy path={this.path} editable={this.editable} doc={doc as Liturgy}></ldf-liturgy>;
+        node = <ldf-liturgy path={this.path} editable={editable} preview={this.preview} doc={doc as Liturgy}></ldf-liturgy>;
         break;
       case 'heading':
-        node = <ldf-heading path={this.path} editable={this.editable} doc={doc as Heading}></ldf-heading>;
+        node = <ldf-heading path={this.path} editable={editable} doc={doc as Heading}></ldf-heading>;
         break;
       case 'image':
-        node = <ldf-image path={this.path} editable={this.editable} doc={doc as Image}></ldf-image>
+        node = <ldf-image path={this.path} editable={editable} doc={doc as Image}></ldf-image>
         break;
       case 'meditation':
         const color = this.obj?.day?.color,
           colorValue = color?.hasOwnProperty('hex') ? (color as LiturgicalColor).hex : (color as string) || '#3489eb';
-        node = <ldf-meditation path={this.path} editable={this.editable} doc={doc as Meditation} color={colorValue}></ldf-meditation>;
+        node = <ldf-meditation path={this.path} editable={editable} doc={doc as Meditation} color={colorValue}></ldf-meditation>;
         break;
       case 'option':
-        node = <ldf-option path={this.path} editable={this.editable} doc={doc as Option}></ldf-option>;
+        node = <ldf-option path={this.path} editable={editable} doc={doc as Option}></ldf-option>;
         break;
       case 'refrain':
-        node = <ldf-refrain path={this.path} editable={this.editable} doc={doc as Refrain}></ldf-refrain>;
+        node = <ldf-refrain path={this.path} editable={editable} doc={doc as Refrain}></ldf-refrain>;
         break;
       case 'rubric':
-        node = <ldf-rubric path={this.path} editable={this.editable} doc={doc as Rubric}></ldf-rubric>;
+        node = <ldf-rubric path={this.path} editable={editable} doc={doc as Rubric}></ldf-rubric>;
         break;
       case 'text':
-        node = <ldf-text path={this.path} editable={this.editable} doc={doc as Text}></ldf-text>
+        node = <ldf-text path={this.path} editable={editable} doc={doc as Text}></ldf-text>
         break;
       case 'responsive':
-        node = <ldf-responsive-prayer path={this.path} editable={this.editable} doc={doc as ResponsivePrayer}></ldf-responsive-prayer>
+        node = <ldf-responsive-prayer path={this.path} editable={editable} doc={doc as ResponsivePrayer}></ldf-responsive-prayer>
         break;
       case 'bible-reading':
-        node = <ldf-bible-reading path={this.path} editable={this.editable} doc={doc as BibleReading}></ldf-bible-reading>
+        node = <ldf-bible-reading path={this.path} editable={editable} doc={doc as BibleReading}></ldf-bible-reading>
         break;
       case 'psalm':
-        node = <ldf-psalm path={this.path} editable={this.editable} doc={doc as Psalm}></ldf-psalm>
+        node = <ldf-psalm path={this.path} editable={editable} doc={doc as Psalm}></ldf-psalm>
         break;
       default:
         console.warn('invalid type for document', doc);
@@ -197,13 +200,21 @@ export class LiturgicalDocumentComponent {
 
     return (
       node && <Host lang={this.obj?.language || 'en'}>
-        {/* Settings/Delete Buttons */}
-        {this.editable && <ldf-editable-metadata-buttons
+        {/* Settings/Delete/Edit Buttons */}
+        {(this.editable || this.preview) && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
           base={this.base}
           index={this.index}
           obj={this.obj}
-          parentType={this.parentType}>
+          parentType={this.parentType}
+          preview={this.preview}
+          onLdfTogglePreview={(e : CustomEvent) => {
+            console.log(e);
+            const preview = e.detail;
+            this.preview = preview;
+            this.editable = true;
+          }}
+        >
         </ldf-editable-metadata-buttons>}
 
         {/* Render the Document */}

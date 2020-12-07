@@ -1,0 +1,25 @@
+<ion-buttons [collapse]="collapse">
+  <ion-button (click)="sharingModal(state?.localManager.document?.sharing)">
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-label class="sm-hidden"l>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>
+  </ion-button>
+  <ion-button *ngIf="publishButton" (click)="shareLink(state?.localManager, state?.localManager.document)">
+    <ion-icon name="share" slot="start"></ion-icon>
+    <ion-label class="sm-hidden">{{ 'editor.publish' | translate }}</ion-label>
+  </ion-button>
+  <ion-button (click)="displaySettings(state?.localManager, state?.localManager.document)">
+    <ion-icon name="cog" slot="start"></ion-icon>
+    <ion-label class="visually-hidden">{{ 'displaySettings.display-settings' | translate }}</ion-label>
+  </ion-button>
+  
+  <ng-container *ngIf="status">
+    <ion-icon *ngIf="status.code === 'Idle'"></ion-icon>
+    <ion-icon class="status pending" *ngIf="status.code === 'Pending'" name="cloud-upload"></ion-icon>
+    <ion-icon class="status success" *ngIf="status.code === 'Success'" name="checkmark"></ion-icon>
+    <ion-icon class="status error" *ngIf="status.code === 'Error'" name="warning"></ion-icon>
+  </ng-container>
+
+  <ng-container *ngIf="includeAuthButton">
+    <venite-auth-menu-button></venite-auth-menu-button>
+  </ng-container>
+</ion-buttons>

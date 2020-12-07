@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property     | Attribute     | Description                                                             | Type                                                                                                                                             | Default     |
-| ------------ | ------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested | `string`                                                                                                                                         | `undefined` |
-| `index`      | `index`       | The item's index within that array                                      | `number`                                                                                                                                         | `undefined` |
-| `obj`        | --            | The LiturgicalDocument itself                                           | `LiturgicalDocument`                                                                                                                             | `undefined` |
-| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                         | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `undefined` |
-| `visible`    | `visible`     | Whether to show the buttons                                             | `boolean`                                                                                                                                        | `undefined` |
+| Property     | Attribute     | Description                                                                                                          | Type                                                                                                                                             | Default     |
+| ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `base`       | `base`        | A JSON Pointer that points to the array within which the item is nested                                              | `string`                                                                                                                                         | `undefined` |
+| `index`      | `index`       | The item's index within that array                                                                                   | `number`                                                                                                                                         | `undefined` |
+| `obj`        | --            | The LiturgicalDocument itself                                                                                        | `LiturgicalDocument`                                                                                                                             | `undefined` |
+| `parentType` | `parent-type` | Type of the parent `LiturgicalDocument`, if any                                                                      | `"bible-reading" \| "cycle" \| "heading" \| "liturgy" \| "meditation" \| "option" \| "psalm" \| "refrain" \| "responsive" \| "rubric" \| "text"` | `undefined` |
+| `preview`    | `preview`     | Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them | `boolean`                                                                                                                                        | `false`     |
+| `visible`    | `visible`     | Whether to show the buttons                                                                                          | `boolean`                                                                                                                                        | `undefined` |
 
 
 ## Events
@@ -21,6 +22,7 @@
 | Event               | Description | Type                          |
 | ------------------- | ----------- | ----------------------------- |
 | `ldfAddOptionToDoc` |             | `CustomEvent<AddOptionToDoc>` |
+| `ldfTogglePreview`  |             | `CustomEvent<boolean>`        |
 
 
 ## Dependencies
@@ -34,6 +36,7 @@
 - [ldf-label-bar](../label-bar)
 - ion-buttons
 - ion-button
+- ion-label
 - ion-icon
 - [ldf-editable-delete](../editable-delete)
 
@@ -43,6 +46,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
   ion-button --> ion-ripple-effect

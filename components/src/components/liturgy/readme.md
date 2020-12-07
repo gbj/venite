@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                            | Type                | Default     |
-| ---------- | ---------- | ------------------------------------------------------ | ------------------- | ----------- |
-| `doc`      | `doc`      | An LDF Liturgy object.                                 | `Liturgy \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                         | `boolean`           | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Liturgy being edited | `string`            | `undefined` |
+| Property   | Attribute  | Description                                                                                                          | Type                | Default     |
+| ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------- |
+| `doc`      | `doc`      | An LDF Liturgy object.                                                                                               | `Liturgy \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                                                                                       | `boolean`           | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Liturgy being edited                                                               | `string`            | `undefined` |
+| `preview`  | `preview`  | Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them | `boolean`           | `false`     |
 
 
 ## Dependencies
@@ -89,6 +90,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
   ldf-editable-delete --> ion-buttons

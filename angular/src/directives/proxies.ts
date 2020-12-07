@@ -1313,15 +1313,16 @@ export class LdfEditableMetadata {
 }
 
 export declare interface LdfEditableMetadataButtons extends Components.LdfEditableMetadataButtons {}
-@ProxyCmp({inputs: ['base', 'index', 'obj', 'parentType', 'visible']})
-@Component({ selector: 'ldf-editable-metadata-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'parentType', 'visible'] })
+@ProxyCmp({inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible']})
+@Component({ selector: 'ldf-editable-metadata-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible'] })
 export class LdfEditableMetadataButtons {
   ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
+  ldfTogglePreview!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfAddOptionToDoc']);
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfTogglePreview']);
   }
 }
 
@@ -1423,8 +1424,8 @@ export class LdfEditableText {
 }
 
 export declare interface LdfEditor extends Components.LdfEditor {}
-@ProxyCmp({inputs: ['cursors', 'doc', 'uid', 'users']})
-@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'uid', 'users'] })
+@ProxyCmp({inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users']})
+@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users'] })
 export class LdfEditor {
   editorCursorMoved!: EventEmitter<CustomEvent>;
   editorDocShouldChange!: EventEmitter<CustomEvent>;
@@ -1485,8 +1486,8 @@ export class LdfLabelBar {
 }
 
 export declare interface LdfLiturgicalDocument extends Components.LdfLiturgicalDocument {}
-@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path']})
-@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path'] })
+@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview']})
+@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview'] })
 export class LdfLiturgicalDocument {
   focusPath!: EventEmitter<CustomEvent>;
   focusObj!: EventEmitter<CustomEvent>;
@@ -1499,8 +1500,8 @@ export class LdfLiturgicalDocument {
 }
 
 export declare interface LdfLiturgy extends Components.LdfLiturgy {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-liturgy', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({inputs: ['doc', 'editable', 'path', 'preview']})
+@Component({ selector: 'ldf-liturgy', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path', 'preview'] })
 export class LdfLiturgy {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

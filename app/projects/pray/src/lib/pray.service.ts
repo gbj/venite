@@ -30,7 +30,6 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
-    console.log('(compile)', docBase, 'versions = ', liturgyversions);
     const doc = new LiturgicalDocument({ ... docBase, day });
 
     // should the doc be included?

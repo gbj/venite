@@ -5,12 +5,14 @@ import * as json1 from 'ot-json1';
 import { JSONOp } from 'ot-json1/dist/types';
 
 import { Cursor, Change, Operation, LiturgicalDocument, User, LiturgicalColor } from '@venite/ldf';
-import { Observable, combineLatest, from, BehaviorSubject } from 'rxjs';
+import { Observable, combineLatest, from, BehaviorSubject, Subscription } from 'rxjs';
 import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } from './document-manager';
-import { map, tap, switchMap, take } from 'rxjs/operators';
+import { map, tap, switchMap, take, catchError, debounceTime, filter, mapTo, startWith } from 'rxjs/operators';
 import { AuthService } from '../../auth/auth.service';
 import { randomColor } from './random-color';
 import { ToastController } from '@ionic/angular';
+import { EditorState } from './editor-state';
+import { DocumentService } from 'src/app/services/document.service';
 
 export type EditorStatus = {
   code: EditorStatusCode;
@@ -35,11 +37,101 @@ export class EditorService {
 
   public status : BehaviorSubject<EditorStatus> = new BehaviorSubject({code: EditorStatusCode.Idle});
 
+  // Handle external revisions
+  revisions$ : Observable<DocumentManagerChange[]>;
+  revisionSubscription : Subscription;
+
   constructor(
     private readonly afs: AngularFirestore,
     private readonly auth : AuthService,
-    private toast : ToastController
+    private toast : ToastController,
+    private documents : DocumentService
   ) { }
+
+  editorState(docId : string) : Observable<EditorState> {
+        // Document manager
+        const serverManager$ = this.join(docId).pipe(
+          filter(manager => Boolean(manager))
+        );
+    
+        const localManager$ = serverManager$.pipe(
+          switchMap(serverManager => this.localManager(serverManager?.docId)),
+          filter(manager => Boolean(manager)),
+        );
+    
+        // List of revisions
+        const revisions$ = this.findRevisions(docId);
+      
+        // Apply changes from revisions
+        this.revisionSubscription = combineLatest(localManager$, serverManager$, revisions$).subscribe(
+          ([localManager, serverManager, revisions]) => {
+            this.applyChanges(localManager, serverManager, revisions);
+          });
+    
+        // update the document once every 3s
+        const docSaved$ = combineLatest(localManager$, revisions$).pipe(
+          tap(([localManager, revisions]) => console.log('change made, saving')),
+          debounceTime(3000),
+          switchMap(([localManager, ]) => this.documents.saveDocument(localManager.docId, {
+            ... localManager.document,
+            lastRevision: localManager.lastSyncedRevision
+          })),
+          mapTo(new Date())
+        );
+    
+        // Pull Bible reading introduction options based on language of document we're editing
+        const bibleIntros$ = localManager$.pipe(
+          map(localManager => localManager?.document),
+          filter(doc => doc !== undefined),
+          switchMap(doc => this.documents.findDocumentsByCategory(['Bible Reading Introduction'], doc.language))//, [ ... typeof doc.version === 'string' ? doc.version : undefined]))
+        );
+    
+        // Canticle swapper
+        const liturgyVersions$ = localManager$.pipe(
+          map(localManager => localManager?.document?.language),
+          switchMap(language => this.documents.getVersions(language ?? 'en', 'liturgy'))
+        );
+    
+        const canticleOptions$ = this.documents.find({
+          style: 'canticle'
+        }).pipe(
+          map(options => options
+            .map(doc => new LiturgicalDocument({
+              ...doc,
+              metadata: {
+                ...doc.metadata,
+                changeable: true
+              }
+            }))
+            .sort((a, b) => (a?.metadata?.number > b?.metadata?.number) ? 1 : -1)
+            .sort((a, b) => {
+              try {
+                return (parseInt(a?.metadata?.number) > parseInt(b?.metadata?.number)) ? 1 : -1;
+              } catch(e) {
+                return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
+              }
+            })
+          )
+        );
+        
+    return combineLatest([
+      serverManager$.pipe(startWith(undefined)),
+      localManager$.pipe(startWith(undefined)), 
+      docSaved$.pipe(startWith(undefined)),
+      bibleIntros$.pipe(startWith([])),
+      liturgyVersions$,
+      canticleOptions$
+    ]).pipe(
+      map(([serverManager, localManager, docSaved, bibleIntros, liturgyVersions, canticleOptions]) => ({
+        localManager,
+        serverManager,
+        docSaved,
+        bibleIntros,
+        liturgyVersions,
+        canticleOptions
+      }))
+    )
+  }
 
   // Join/Leave Functions
   join(docId : string) : Observable<ServerDocumentManager> { //<{server: ServerDocumentManager; local: LocalDocumentManager}>  {

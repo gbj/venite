@@ -1,7 +1,4 @@
 import { Component, OnInit, Input, OnDestroy, EventEmitter } from '@angular/core';
-import { Plugins } from '@capacitor/core';
-const { Clipboard } = Plugins;
-import * as clipboardPolyfill from 'clipboard-polyfill';
 import { Observable, Subscription, combineLatest, of } from 'rxjs';
 import { LocalDocumentManager, ServerDocumentManager, DocumentManagerChange } from './document-manager';
 import { LiturgicalDocument, Change, Option, docsToLiturgy, Sharing, docsToOption, DisplaySettings } from '@venite/ldf';
@@ -17,6 +14,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
 import { TranslateService } from '@ngx-translate/core';
+import { EditorState } from './editor-state';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -25,23 +23,15 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LdfEditorComponent implements OnInit, OnDestroy {
   @Input() docId : string;
+  @Input() state : EditorState;
+  @Input() serverManager : ServerDocumentManager;
+  @Input() preview : boolean = false;
+  @Input() includeToolbar : boolean = false;
 
   editorStatus : Observable<EditorStatus>;
   editorStatusCode = EditorStatusCode;
 
-  mode : 'edit' | 'code' | 'preview' = 'edit';
-  clipboardStatus : 'idle' | 'success' | 'error';
-
-  state$ : Observable<{
-    localManager: LocalDocumentManager,
-    serverManager: ServerDocumentManager,
-    docSaved : Date,
-    bibleIntros: LiturgicalDocument[],
-  }>;
-
-  // Handle external revisions
-  revisions$ : Observable<DocumentManagerChange[]>;
-  revisionSubscription : Subscription;
+  state$ : Observable<EditorState>;
 
   // For Gloria Patri requests
   glorias : Record<string, LiturgicalDocument> = {};
@@ -52,11 +42,10 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     private documents : DocumentService,
     private editorService : EditorService,
     private modal : ModalController,
-    private router : Router,
     private alert : AlertController,
-    private loading : LoadingController,
     private translate : TranslateService,
-    private navCtrl : NavController
+    private navCtrl : NavController,
+    private loading : LoadingController
   ) { }
 
   async permissionDenied() : Promise<null> {
@@ -75,104 +64,28 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.showLoading();
+
     document.addEventListener('editorAskForCanticleOptions', (e) => console.log('editorAskForCanticleOptions', e))
 
     this.editorStatus = this.editorService.status;
 
-    // Document manager
-    const serverManager$ = this.editorService.join(this.docId).pipe(
-      //catchError(() => this.permissionDenied()),
-      filter(manager => Boolean(manager))
-    );
-
-    const localManager$ = serverManager$.pipe(
-      switchMap(serverManager => this.editorService.localManager(serverManager?.docId)),
+    this.state$ = this.editorService.editorState(this.docId).pipe(
       catchError(() => this.permissionDenied()),
-      filter(manager => Boolean(manager))
+      tap(() => this.loading.dismiss())
     );
-
-    // List of revisions
-    const revisions$ = this.editorService.findRevisions(this.docId);
-  
-    // Apply changes from revisions
-    this.revisionSubscription = combineLatest(localManager$, serverManager$, revisions$).subscribe(
-      ([localManager, serverManager, revisions]) => {
-        this.editorService.applyChanges(localManager, serverManager, revisions);
-      });
-
-    // update the document once every 3s
-    const docSaved$ = combineLatest(localManager$, revisions$).pipe(
-      tap(([localManager, revisions]) => console.log('change made, saving')),
-      debounceTime(3000),
-      switchMap(([localManager, ]) => this.documents.saveDocument(localManager.docId, {
-        ... localManager.document,
-        lastRevision: localManager.lastSyncedRevision
-      })),
-      mapTo(new Date())
-    );
-
-    // Pull Bible reading introduction options based on language of document we're editing
-    const bibleIntros$ = localManager$.pipe(
-      map(localManager => localManager?.document),
-      filter(doc => doc !== undefined),
-      switchMap(doc => this.documents.findDocumentsByCategory(['Bible Reading Introduction'], doc.language))//, [ ... typeof doc.version === 'string' ? doc.version : undefined]))
-    );
-
-    // Canticle swapper
-    const liturgyVersions$ = localManager$.pipe(
-      map(localManager => localManager?.document?.language),
-      switchMap(language => this.documents.getVersions(language ?? 'en', 'liturgy'))
-    );
-
-    const canticleOptions$ = this.documents.find({
-      style: 'canticle'
-    }).pipe(
-      map(options => options
-        .map(doc => new LiturgicalDocument({
-          ...doc,
-          metadata: {
-            ...doc.metadata,
-            changeable: true
-          }
-        }))
-        .sort((a, b) => (a?.metadata?.number > b?.metadata?.number) ? 1 : -1)
-        .sort((a, b) => {
-          try {
-            return (parseInt(a?.metadata?.number) > parseInt(b?.metadata?.number)) ? 1 : -1;
-          } catch(e) {
-            return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
-          }
-        })
-      )
-    );
-
-    this.state$ = combineLatest(
-      serverManager$.pipe(startWith(undefined)),
-      localManager$.pipe(startWith(undefined)), 
-      docSaved$.pipe(startWith(undefined)),
-      bibleIntros$.pipe(startWith([])),
-      liturgyVersions$,
-      canticleOptions$
-    ).pipe(
-      map(([serverManager, localManager, docSaved, bibleIntros, liturgyVersions, canticleOptions]) => ({
-        localManager,
-        serverManager,
-        docSaved,
-        bibleIntros,
-        liturgyVersions,
-        canticleOptions
-      }))
-    )
   }
 
   async ngOnDestroy() {
-    if(this.revisionSubscription) {
-      this.revisionSubscription.unsubscribe();
-    }
     if(this.gloriaSubscription) {
       this.gloriaSubscription.unsubscribe();
     }
     await this.editorService.leave(this.docId);
+  }
+
+  async showLoading() {
+    const loading = await this.loading.create();
+    await loading.present();
   }
 
 
@@ -249,18 +162,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       });
     }
   }
-
-  async sharingModal(sharing : Sharing) {
-    const modal = await this.modal.create({
-      component: SharingComponent,
-      swipeToClose: true
-    });
-    modal.componentProps = {
-      modal,
-      sharing
-    };
-    await modal.present();
-  }
   
   // Called whenever the user wants to add a new LiturgicalDocument block at JSON pointer `base`/`index`
   async addBlock(callback : (data) => void) {
@@ -333,102 +234,5 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     console.log('sendCanticleOptions', versions, options)
     ev.detail.setVersions(versions);
     ev.detail.setOptions(options);
-  }
-
-  async shareLink(manager : LocalDocumentManager, doc : LiturgicalDocument) {
-    this.editorService.processChange(manager, new Change({
-      path: '/sharing',
-      op: [{
-        type: 'set',
-        index: 'status',
-        value: 'published',
-        oldValue: doc?.sharing?.status
-      }]
-    }));
-    this.editorService.processChange(manager, new Change({
-      path: '/sharing',
-      op: [{
-        type: 'set',
-        index: 'privacy',
-        value: 'public',
-        oldValue: doc?.sharing?.privacy
-      }]
-    }));
-
-    const orgId = doc?.sharing?.organization,
-      slug = doc?.slug;
-    console.log('Publishing\n\n', orgId, slug);
-    let docUrl = orgId && slug ? `${orgId}/${slug}` : `b/${manager.docId}`;
-    const alert = await this.alert.create({
-      header: 'Bulletin Published',
-      message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${docUrl}\n\n`,
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        },
-        {
-          text: 'Copy Link',
-          handler: () => {
-            const link = `${environment.baseUrl}pray/${docUrl}`;
-            Clipboard.write({ url: link }).then(() => this.clipboardStatus = 'success')
-              .catch(() => {
-                clipboardPolyfill.writeText(link)
-                  .then(() => this.clipboardStatus = 'success')
-                  .catch(() => this.clipboardStatus = 'error');
-              });
-          }
-        },
-        {
-          text: 'Go',
-          handler: () => orgId && slug
-            ? this.router.navigate(['pray', orgId, slug])
-            : this.router.navigate(['pray', 'b', manager.docId])
-        }
-      ]
-    });
-
-    await alert.present();
-  }
-
-  async displaySettings(manager : LocalDocumentManager, doc : LiturgicalDocument) {
-    const modal = await this.modal.create({
-      component: EditorDisplaySettingsComponent
-    });
-
-    const prefUpdated = new EventEmitter<{ key: string; value: any; }>();
-    prefUpdated.subscribe((data : { key: string; value: any; }) => {
-      if(!doc.display_settings) {
-        const value = new DisplaySettings();
-        value[data.key] = data.value;
-        this.editorService.processChange(manager, new Change({
-          path: '/display_settings',
-          op: [{
-            type: 'set',
-            value,
-            oldValue: doc.display_settings
-          }]
-        }));
-      } else {
-        this.editorService.processChange(manager, new Change({
-          path: '/display_settings',
-          op: [{
-            type: 'set',
-            index: data.key,
-            value: data.value,
-            oldValue: (doc?.display_settings || {})[data.key]
-          }]
-        }));
-      }
-    });
-
-    modal.componentProps = {
-      modal,
-      isModal: true,
-      settings: doc.display_settings || new DisplaySettings(),
-      prefUpdated
-    };
-
-    await modal.present();
   }
 }

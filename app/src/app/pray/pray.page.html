@@ -1,11 +1,11 @@
-<ng-container>
-  <ion-header [translucent]="true" [veniteScrollVanish]="content">
-    <ion-toolbar [veniteScrollVanish]="content">
-      <ion-buttons collapse="true" slot="start">
-        <ion-back-button></ion-back-button>
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title *ngIf="doc$ | async as doc else prayTheOffice">{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
+<ion-header [veniteScrollVanish]="content">
+  <ion-toolbar *ngIf="!bulletinMode" [veniteScrollVanish]="content">
+    <ion-buttons collapse="true" slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ng-container *ngIf="doc$ | async as doc">
+      <ion-title>{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
       <ion-buttons collapse="true" slot="end" *ngIf="doc$ | async as doc">
         <venite-auth-menu-button></venite-auth-menu-button>
         <ng-container *ngIf="actionSheetData$ | async as data">
@@ -14,12 +14,43 @@
           </ion-button>
         </ng-container>
       </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content #content [fullscreen]="true" [scrollEvents]="!prayService.bulletinMode">
-    <div class="bordered"  [style.background]="color$ | async" [style.border-color]="color$ | async">
-      <ng-container *ngIf="doc$ | async as doc else loading">
-        <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+    </ng-container>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="bulletinMode">
+    <ion-buttons collapse="true" slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ng-container *ngIf="editorState$ | async as state">
+      <venite-editor-buttons
+        slot="end"
+        [state]="state"
+        [status]="editorStatus$ | async"
+        [includeAuthButton]="true"
+      ></venite-editor-buttons>
+    </ng-container>
+  </ion-toolbar>
+</ion-header>
+<ion-content #content [fullscreen]="true" [scrollEvents]="!bulletinMode">
+  <div class="bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
+    <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+      <ng-container *ngIf="bulletinMode">
+        <div class="editor-wrapper" *ngIf="bulletinDocId$ | async as bulletinDocId">
+          <venite-ldf-editor
+            [docId]="bulletinDocId"
+            [preview]="true"
+          ></venite-ldf-editor>
+        </div>
+        <!--<ldf-liturgical-document
+              path="/"
+              [doc]="doc$ | async"
+              [editable]="true"
+              (ldfDocShouldChange)="changeDoc(doc, $event)"
+              (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
+            ></ldf-liturgical-document>-->
+      </ng-container>
+      <ng-container *ngIf="!bulletinMode">
+        <ng-container *ngIf="doc$ | async as doc else loading">
           <ng-container *ngIf="canticleData$ | async as canticleData">
             <ldf-liturgical-document
               path="/"
@@ -29,11 +60,11 @@
               (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
             ></ldf-liturgical-document>
           </ng-container>
-        </div>
+        </ng-container>
       </ng-container>
     </div>
-  </ion-content>
-</ng-container>
+  </div>
+</ion-content>
   
 <ion-footer>
   <ion-toolbar *ngIf="speechPlaying">

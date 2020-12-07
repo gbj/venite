@@ -186,6 +186,25 @@
       },
       "label": "",
       "citation": "",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "key": "properPsalmsSundays",
+              "value": "yes",
+              "is": true
+            }
+          },
+          {
+            "weekday": {
+              "only": [
+                "Sunday"
+              ]
+            }
+          }
+        ]
+      },
       "day": {
         "evening": false,
         "date": "2020-11-14",
@@ -1521,10 +1540,11 @@
 }
 
 
-    const node = document.createElement('ldf-editable-add-block-menu');
-    node.setAttribute('editable', false);
+    const node = document.createElement('ldf-liturgical-document');
+    node.setAttribute('doc', JSON.stringify(LITURGY));
+    node.setAttribute('editable', true);
+    node.setAttribute('preview', true);
     node.setAttribute('path', '/');
-    node.doc = LITURGY;
     document.querySelector('#example').appendChild(node);
   </script>
 </body>

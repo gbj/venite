@@ -176,6 +176,7 @@ graph TD;
   ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
+  ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
   ldf-editable-metadata-buttons --> ldf-editable-delete
   ldf-editable-delete --> ion-buttons
