@@ -60,7 +60,9 @@ export class LiturgyComponent {
       <Host lang={this.obj.language}>
         {this.obj.value.map((doc, docIndex) => {
           const valuePath = `${basePath}/value`,
-                path = `${valuePath}/${docIndex}`;
+                path = `${valuePath}/${docIndex}`,
+                buttonVisible = this.hasFocus == path || docIndex == ((this.obj?.value?.length || 0) - 1);
+
           return (
             <article>
               {/* Render the document */}
@@ -76,8 +78,8 @@ export class LiturgyComponent {
               </ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
-              {(this.editable || this.preview) && <ldf-editable-add-block
-                visible={this.hasFocus == path || docIndex == ((this.obj?.value?.length || 0) - 1)}
+              {(this.editable || (this.preview && buttonVisible)) && <ldf-editable-add-block
+                visible={buttonVisible}
                 base={valuePath} index={docIndex + 1}
               ></ldf-editable-add-block>}
             </article>

@@ -25,3 +25,10 @@
 .doc {
   margin-top: var(--ldf-liturgical-document-margin-top);
 }
+
+ldf-editable-metadata-buttons {
+  display: block;
+  z-index: 10;
+  background: var(--ldf-background);
+  opacity: 0.8;
+}

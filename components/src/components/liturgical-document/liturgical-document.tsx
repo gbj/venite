@@ -201,7 +201,7 @@ export class LiturgicalDocumentComponent {
     return (
       node && <Host lang={this.obj?.language || 'en'}>
         {/* Settings/Delete/Edit Buttons */}
-        {(this.editable || this.preview) && <ldf-editable-metadata-buttons
+        {(this.editable || (this.preview && this.hasFocus)) && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
           base={this.base}
           index={this.index}
