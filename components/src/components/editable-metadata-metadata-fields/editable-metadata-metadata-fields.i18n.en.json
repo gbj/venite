@@ -33,5 +33,11 @@
   "text": "Text",
   "gloria": "Gloria Patri",
   "insert_gloria_patri": "Insert the Gloria Patri",
-  "antiphon": "Antiphon"
+  "antiphon": "Antiphon",
+  "left": "Left",
+  "center": "Center",
+  "right": "Right",
+  "align": "Alignment",
+  "height": "Height",
+  "width": "Width"
 }

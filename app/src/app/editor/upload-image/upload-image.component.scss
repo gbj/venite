@@ -1,0 +1,19 @@
+ul.media-library {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  li {
+    margin: 0;
+    padding: 0;
+    max-width: 30%;
+
+    button {
+      background: none;
+    }
+  }
+}

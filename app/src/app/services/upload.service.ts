@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,21 @@ export class UploadService {
   getDownloadURL(filePath : string) : Observable<string> {
     const fileRef = this.storage.ref(filePath);
     return fileRef.getDownloadURL();
+  }
+
+  listFiles(filePath : string) : Observable<string[]> {
+    console.log('(listFiles) filePath = ', filePath);
+    const ref = this.storage.ref(filePath),
+      listResult$ = ref.listAll(),
+      imageRefs$ = listResult$.pipe(
+        map(result => result.items),
+      ),
+      imageUrls$ = imageRefs$.pipe(
+        tap(refs => console.log('(listFiles) refs = ', refs)),
+        switchMap(refs => Promise.all(refs.map(async ref => await ref.getDownloadURL()))),
+        tap(urls => console.log('(listFiles) urls = ', urls))
+      );
+
+    return imageUrls$;
   }
 }

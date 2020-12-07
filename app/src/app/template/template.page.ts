@@ -15,6 +15,8 @@ export class TemplatePage implements OnInit {
   docId$ : Observable<string>;
   state$ : Observable<EditorState>;
 
+  loadingInstance : any;
+
   constructor(
     private route : ActivatedRoute,
     private loading : LoadingController,
@@ -29,13 +31,18 @@ export class TemplatePage implements OnInit {
     );
 
     this.state$ =  this.docId$.pipe(
-      switchMap(docId =>this.editorService.editorState(docId))
+      switchMap(docId =>this.editorService.editorState(docId)),
+      tap(() => {
+        if(this.loadingInstance) {
+          this.loadingInstance.dismiss();
+        }
+      })
     );
   }
 
   async showLoading() {
-    const loading = await this.loading.create();
-    await loading.present();
+    this.loadingInstance = await this.loading.create();
+    await this.loadingInstance.present();
   }
 
 }

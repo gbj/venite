@@ -63,6 +63,10 @@
           <label for="importFile">{{'editor.import' | translate}}</label>
           <input #importInput type="file" (change)="handleImport($event, userProfile)" name="importFile" id="importFile"/>
         </form>
+        <ion-button *ngIf="mode === 'bulletins'" class="clear-bulletin-btn" (click)="clearBulletins(docs)" color="danger">
+          <ion-icon slot="start" name="trash"></ion-icon>
+          <ion-label>Delete All Bulletins</ion-label>
+        </ion-button>
       </ion-buttons>
     </ion-toolbar>
     <ion-item *ngFor="let doc of docs; trackBy: trackIdAndDocBy">

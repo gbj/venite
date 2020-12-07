@@ -16,6 +16,7 @@
 | `template`      | `template`    | The base object this expresses as part of `LiturgicalDocument`.value             | `BibleReadingVerse \| Heading \| PsalmVerse \| ResponsivePrayerLine \| string`                  | `""`        |
 | `templateMaker` | --            | Function that converts a text node into a `template` — used when a node is split | `(s: string) => string \| ResponsivePrayerLine \| BibleReadingVerse \| PsalmVerse \| Heading`   | `(s) => s`  |
 | `text`          | `text`        | Starting text for editing                                                        | `string`                                                                                        | `undefined` |
+| `unit`          | `unit`        | Optional unit information (e.g., 'px') to add after the input                    | `string`                                                                                        | `undefined` |
 
 
 ## Events

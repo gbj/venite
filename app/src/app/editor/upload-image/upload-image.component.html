@@ -1,5 +1,6 @@
 <ion-content class="ion-padding">
   <h2>{{ 'editor.image.title' | translate }}</h2>
+
   <form>
     <ion-item>
       <ion-label position="stacked">{{ 'editor.image.select-image' | translate }}</ion-label>
@@ -12,6 +13,15 @@
       <ion-progress-bar *ngIf="isUploading" [aria-label]="'Uploading' | translate" [value]="progress$ | async"></ion-progress-bar>
     </figcaption>
   </figure>
-  
-  <ng-template #loading>{{ 'loading' | translate }}</ng-template>
+
+  <ng-container *ngIf="myImages$ | async as images">
+    <h3 *ngIf="images?.length > 0">{{ 'editor.media-library' | translate }}</h3>
+    <ul *ngIf="images?.length > 0" class="media-library">
+      <li *ngFor="let url of images">
+        <button (click)="sendImage(url)">
+          <img [src]="url">
+        </button>
+      </li>
+    </ul>
+  </ng-container>
 </ion-content>

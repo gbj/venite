@@ -386,10 +386,6 @@ export class PrayPage implements OnInit, OnDestroy {
   async beginEditing(doc : LiturgicalDocument) {
     this.latestDoc = doc;
 
-    const loading = await this.loadingController.create();
-
-    await loading.present();
-
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null,
@@ -403,9 +399,8 @@ export class PrayPage implements OnInit, OnDestroy {
     this.editorStatus$ = this.editorService.status;
 
     if(doc.id) {
-      console.log('has doc.id', doc.id)
+      console.log('has doc.id', doc.id);
       this.bulletinDocId$.next(doc.id.toString());
-      loading.dismiss();
     }
     // otherwise, create a new document
     else {
@@ -426,7 +421,6 @@ export class PrayPage implements OnInit, OnDestroy {
         )
       ).subscribe(
         docId => {
-          loading.dismiss();
           this.router.navigate(['/', 'bulletin', 'b', docId]);
         }
       );

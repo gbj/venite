@@ -48,6 +48,9 @@ export class EditableTextComponent {
   /** Whether to display as a short, single-line input */
   @Prop() short : boolean;
 
+  /** Optional unit information (e.g., 'px') to add after the input */
+  @Prop() unit? : string;
+
   /** Type to apply to `<input type=...>`, if `short` is `true` */
   @Prop() inputType : TextFieldTypes;
 
@@ -245,6 +248,7 @@ export class EditableTextComponent {
             onKeyDown={(event : KeyboardEvent) => this.checkEnter(event)}
             type={this.inputType || 'text'}>
           </ion-input>
+          {this.unit && this.unit}
         </Host>
       );
     }

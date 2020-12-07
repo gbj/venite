@@ -122,6 +122,29 @@ export class BulletinsPage implements OnInit {
     )
   }
 
+  async clearBulletins(docs : LiturgicalDocument[]) {
+    const alert = await this.alert.create({
+      header: "Are you sure you want to delete everything?",
+      message: "This will delete every one of the bulletins listed on this page. It's only intended for testing.",
+      buttons: [
+        {
+          role: 'cancel',
+          text: 'Cancel'
+        },
+        {
+          text: 'Delete',
+          role: 'destructive',
+          handler: () => docs.forEach(doc => {
+            if(doc.id) {
+              this.documents.deleteDocument(doc.id?.toString());
+            }
+          })
+        }
+      ]
+    });
+    await alert.present();
+  }
+
   joinDocument(docId : string) {
     this.router.navigate(['editor', docId]);
   }

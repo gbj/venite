@@ -77,7 +77,10 @@ export class ImageComponent {
           {this.obj.value && this.obj.value.map((url, ii) =>
             this.editable ?
             <figure>
-              <img src={url} />
+              <img src={url} style={{
+                height: this.obj?.metadata?.height ? `${this.obj.metadata.height}px` : 'auto',
+                width: this.obj?.metadata?.width ? `${this.obj.metadata.width}px` : 'auto'
+              }} />
               <figcaption>
                 <code>{localeStrings.url}</code>
                 <ldf-editable-text

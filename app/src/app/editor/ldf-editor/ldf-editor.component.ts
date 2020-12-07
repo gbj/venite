@@ -64,15 +64,12 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.showLoading();
-
     document.addEventListener('editorAskForCanticleOptions', (e) => console.log('editorAskForCanticleOptions', e))
 
     this.editorStatus = this.editorService.status;
 
     this.state$ = this.editorService.editorState(this.docId).pipe(
       catchError(() => this.permissionDenied()),
-      tap(() => this.loading.dismiss())
     );
   }
 
@@ -82,12 +79,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     }
     await this.editorService.leave(this.docId);
   }
-
-  async showLoading() {
-    const loading = await this.loading.create();
-    await loading.present();
-  }
-
 
   // Called whenever the user's cursor moves within this editor
   updateCursor(docId : string, ev : CustomEvent) {

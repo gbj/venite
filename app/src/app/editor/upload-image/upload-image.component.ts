@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Image, LiturgicalDocument } from '@venite/ldf';
 import { Observable, of } from 'rxjs';
 import { finalize } from 'rxjs/operators';
@@ -21,11 +21,20 @@ export class UploadImageComponent implements OnInit {
   preview$ : Observable<string>;
   progress$ : Observable<number>;
 
+  // Previous images I've uploaded
+  myImages$ : Observable<string[]>;
+
   constructor(
     private upload: UploadService
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  ngOnChanges(changes : SimpleChanges) {
+    if(changes.uploadPath) {
+      this.myImages$ = this.upload.listFiles(changes.uploadPath.currentValue);
+    }
+  }
 
   handleFiles(event : Event) {
     console.log('handleFiles', event);
@@ -43,6 +52,10 @@ export class UploadImageComponent implements OnInit {
     }
   }
 
+  sendImage(url : string) {
+    this.imageUploaded.emit(new Image({ type: 'image', value: [url]}))
+  }
+
   uploadImage(file : File) {
     this.isUploading = true;
     const filePath = `${this.uploadPath}/${new Date().getTime()}-${file.name}`;
@@ -55,7 +68,7 @@ export class UploadImageComponent implements OnInit {
         this.isUploading = false;
         // messy but works
         this.preview$.subscribe(
-          (value) => this.imageUploaded.emit(new Image({ type: 'image', value: [value]})),
+          (value) => this.sendImage(value),
           (error) => this.error = error.toString()
         );
       })

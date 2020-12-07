@@ -10,9 +10,11 @@ const LOCALE = {
 interface FieldDefinition {
   field: string;
   type: Field;
+  unit?: string | undefined;
 }
 
 enum Field {
+  Alignment,
   String,
   Bool,
   Number,
@@ -122,6 +124,13 @@ export class EditableMetadataMetadataFieldsComponent {
         return [
           { field: 'level', type: Field.HeadingLevel },
         ];
+      
+      case 'image':
+        return [
+          { field: 'height', type: Field.Number, unit: 'px' },
+          { field: 'width', type: Field.Number, unit: 'px' },
+          { field: 'align', type: Field.Alignment }
+        ]
 
       case 'liturgy':
         return [
@@ -213,6 +222,7 @@ export class EditableMetadataMetadataFieldsComponent {
             path={path}
             placeholder={placeholder}
             text={currentValue}
+            unit={field.unit}
           ></ldf-editable-text>
         );
         break;
@@ -328,6 +338,20 @@ export class EditableMetadataMetadataFieldsComponent {
           ></ldf-editable-antiphon-field>,
           size: 12
         });
+        break;
+      case Field.Alignment:
+        nodes.push(
+          <ldf-editable-select
+            path={`${this.path}/metadata`}
+            property={field.field}
+            options={[
+              { label: localeStrings.left, value: 'left' },
+              { label: localeStrings.center, value: 'center' },
+              { label: localeStrings.right, value: 'right' },
+            ]}
+            value={currentValue}
+          ></ldf-editable-select>
+        )
         break;
       default:
         ((type : never) => console.warn('(ldf-editable-metadata-metadata-fields)', type, 'is not a recognized FieldType'))(field.type);
