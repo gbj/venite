@@ -277,7 +277,7 @@ export class PrayPage implements OnInit, OnDestroy {
         userOrgs,
         userProfile
       }))
-    )
+    );
 
     // Canticle Options
     const liturgyVersions$ = this.doc$.pipe(
@@ -386,6 +386,10 @@ export class PrayPage implements OnInit, OnDestroy {
   async beginEditing(doc : LiturgicalDocument) {
     this.latestDoc = doc;
 
+    const loading = await this.loadingController.create();
+
+    await loading.present();
+
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null,
@@ -393,18 +397,19 @@ export class PrayPage implements OnInit, OnDestroy {
       slug = (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
 
     // if the document already exists in the database, just open it in the editor
-    this.editorState$ = this.bulletinDocId$.pipe(
-      switchMap(docId => this.editorService.editorState(docId))
-    );
-    this.editorStatus$ = this.editorService.status;
-
     if(doc.id) {
-      console.log('has doc.id', doc.id);
+      await loading.dismiss();
       this.bulletinDocId$.next(doc.id.toString());
+      this.editorState$ = this.bulletinDocId$.pipe(
+        switchMap(docId => this.editorService.editorState(docId))
+      );
+      this.editorStatus$ = this.editorService.status;
     }
     // otherwise, create a new document
     else {
       combineLatest([this.userProfile$, this.userOrgs$]).pipe(
+        filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
+        takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
         switchMap(async ([userProfile, orgs]) => 
           this.documents.newDocument(new LiturgicalDocument({
             ... unwrapOptions(doc),
@@ -421,6 +426,7 @@ export class PrayPage implements OnInit, OnDestroy {
         )
       ).subscribe(
         docId => {
+          loading.dismiss();
           this.router.navigate(['/', 'bulletin', 'b', docId]);
         }
       );
@@ -474,7 +480,7 @@ export class PrayPage implements OnInit, OnDestroy {
       }
     ];
     // TODO — when should Speech option be displayed?
-    if(true) { //this.voiceChoices && !this.speechPlaying && !this.hasPending) {
+    if(!this.bulletinMode) { //this.voiceChoices && !this.speechPlaying && !this.hasPending) {
       buttons.push({
         text: 'Read Aloud',
         icon: 'headset',
@@ -491,7 +497,7 @@ export class PrayPage implements OnInit, OnDestroy {
     }
 
     // Edit Bulletin if it is one
-    if(data.doc?.id && data.doc?.day) {
+    if(data.doc?.id && data.doc?.day && !this.bulletinMode) {
       buttons.push({
         text: 'Edit Bulletin',
         icon: 'create',
@@ -501,15 +507,17 @@ export class PrayPage implements OnInit, OnDestroy {
         }
       })
     }
-    buttons = buttons.concat([
-      {
+    if(!this.bulletinMode) {
+      buttons.push({
         text: 'Show Settings',
         icon: 'cog',
         handler: () => {
           this.actionSheetController.dismiss();
           this.openSettings(data.doc, data.settings);
         }
-      },
+      });
+    }
+    buttons = buttons.concat([
       {
         text: 'Download JSON',
         icon: 'download',
@@ -580,11 +588,11 @@ export class PrayPage implements OnInit, OnDestroy {
         this.speechPlayingSubDoc = data.subdoc ?? 0;
         this.speechPlayingUtterance = data.utterance ?? 0;
       },
-      // TODO
+      // TODO: speech errors
       error => {
 
       },
-      // TODO: Complete
+      // TODO: speech complete
       () => {
 
       }
