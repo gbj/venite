@@ -11,32 +11,35 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item routerLink="/">
-          <ion-icon name="book" slot="start"></ion-icon>
-          <ion-label>{{ 'menu.pray' | translate }}</ion-label>
-        </ion-item>
-        <ion-item routerLink="/reminders" *ngIf="remindersEnabled">
-          <ion-icon name="notifications" slot="start"></ion-icon>
-          <ion-label>{{ 'menu.reminders' | translate }}</ion-label>
-        </ion-item>
-        <ion-item routerLink="/bulletins">
-          <ion-icon name="document" slot="start"></ion-icon>
-          <ion-label>{{ 'menu.bulletins' | translate }}</ion-label>
-        </ion-item>
-        <ion-item routerLink="/templates">
-          <ion-icon name="document-outline" slot="start"></ion-icon>
-          <ion-label>{{ 'menu.templates' | translate }}</ion-label>
-        </ion-item>
-        <ng-container *ngIf="organizations$ | async as orgs">
-          <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'church', org.slug]">
-            <ion-icon slot="start" src="/assets/church.svg"></ion-icon>
-            <ion-label>{{ org.name }}</ion-label>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item routerLink="/">
+            <ion-icon name="book" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.pray' | translate }}</ion-label>
           </ion-item>
-        </ng-container>
-        <ion-item button routerLink="/tutorials">
-          <ion-icon name="videocam" slot="start"></ion-icon>
-          <ion-label>{{ 'menu.tutorials' | translate }}</ion-label>
-        </ion-item>
+          <ion-item routerLink="/reminders" *ngIf="remindersEnabled">
+            <ion-icon name="notifications" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.reminders' | translate }}</ion-label>
+          </ion-item>
+          <ion-item routerLink="/bulletins">
+            <ion-icon name="document" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.bulletins' | translate }}</ion-label>
+          </ion-item>
+          <ion-item routerLink="/templates">
+            <ion-icon name="document-outline" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.templates' | translate }}</ion-label>
+          </ion-item>
+          <ng-container *ngIf="organizations$ | async as orgs">
+            <ion-item *ngFor="let org of orgs" [routerLink]="['/', 'church', org.slug]">
+              <ion-icon slot="start" src="/assets/church.svg"></ion-icon>
+              <ion-label>{{ org.name }}</ion-label>
+            </ion-item>
+          </ng-container>
+          <!--<ion-item button routerLink="/tutorials">
+            <ion-icon name="videocam" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.tutorials' | translate }}</ion-label>
+          </ion-item>-->
+        </ion-menu-toggle>
+
       </ion-list>
     </ion-content>
   </ion-menu>
