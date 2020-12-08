@@ -4,7 +4,7 @@ import { LoadingController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { EditorState } from '../editor/ldf-editor/editor-state';
-import { EditorService } from '../editor/ldf-editor/editor.service';
+import { EditorService, EditorStatus } from '../editor/ldf-editor/editor.service';
 
 @Component({
   selector: 'venite-template',
@@ -14,6 +14,7 @@ import { EditorService } from '../editor/ldf-editor/editor.service';
 export class TemplatePage implements OnInit {
   docId$ : Observable<string>;
   state$ : Observable<EditorState>;
+  editorStatus$ : Observable<EditorStatus>;
 
   loadingInstance : any;
 
@@ -38,6 +39,8 @@ export class TemplatePage implements OnInit {
         }
       })
     );
+
+    this.editorStatus$ = this.editorService.status;
   }
 
   async showLoading() {

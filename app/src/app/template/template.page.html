@@ -11,7 +11,7 @@
           class="sm-hidden"
           slot="end" [state]="state"
           [publishButton]="false"
-          [status]="editorStatus | async"
+          [status]="editorStatus$ | async"
           [collapse]="true"
           [includeAuthButton]="true"
         ></venite-editor-buttons>
@@ -23,7 +23,7 @@
         <venite-editor-buttons
           slot="end"
           [state]="state"
-          [status]="editorStatus | async"
+          [status]="editorStatus$ | async"
           [publishButton]="false"
         ></venite-editor-buttons>
       </ion-toolbar>
