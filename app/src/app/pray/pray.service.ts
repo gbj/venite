@@ -253,17 +253,19 @@ export class PrayService {
         : entry
       )),
       // insert all omit_ preferences from different document types
-      map(docs => docs.map(doc => new LiturgicalDocument({
+      map(docs => docs.map(doc => 
+        new LiturgicalDocument({
         ...doc,
         metadata: {
           ...doc.metadata,
-          omit_antiphon: doc?.metadata?.omit_antiphon ?? docBase?.metadata?.omit_antiphon,
+          omit_antiphon: doc?.metadata?.omit_antiphon || docBase?.metadata?.omit_antiphon,
           // also omit Gloria Patri if `insertGloria` === 'false'
-          omit_gloria: (docBase?.style === 'psalm' && Boolean(prefs['insertGloria'] == 'false')) ?? doc?.metadata?.omit_gloria ?? docBase?.metadata?.omit_gloria,
-          omit_response: doc?.metadata?.omit_response ?? docBase?.metadata?.omit_response,
-          changeable: doc?.metadata?.changeable ?? docBase?.metadata?.changeable
+          omit_gloria: (docBase?.style === 'psalm' && Boolean(prefs['insertGloria'] == 'false')) || doc?.metadata?.omit_gloria || docBase?.metadata?.omit_gloria,
+          omit_response: doc?.metadata?.omit_response || docBase?.metadata?.omit_response,
+          changeable: doc?.metadata?.changeable || docBase?.metadata?.changeable
         }
-      }))),
+      })
+    )),
       // rotate and merge
       map(docs => rotate ? this.rotate(rotate, random, day, docs) : docs),
       map(docs => docsToOption(docs, versions)),
