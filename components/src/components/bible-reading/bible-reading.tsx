@@ -1,5 +1,5 @@
 import { alertController, loadingController } from '@ionic/core';
-import { Component, Element, Prop, Event, Watch, State, JSX, h, EventEmitter } from '@stencil/core';
+import { Component, Element, Prop, Event, Watch, State, JSX, h, EventEmitter, Host } from '@stencil/core';
 import { BibleReading, BibleReadingVerse, Change, Heading, versionToString } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
@@ -270,23 +270,26 @@ export class BibleReadingComponent {
         }
 
         return (
-          <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
-            {/* Bible text */}
-            <p>
-              {this.verses.map(verse =>
-                verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
-                ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
-                : <ldf-string
-                  citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
-                  id={this.obj.uid}
-                  text={(verse as BibleReadingVerse).text}>
-                </ldf-string>
-              )}
-              {shortResponse && !this.obj?.metadata?.omit_response && responseNode}
-              <span class="citation">{ this.obj.citation }</span>
-            </p>
-            {!shortResponse && !this.obj?.metadata?.omit_response && <p>{responseNode}</p>}
-          </div>
+          <Host>
+            {this.obj?.label && <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label]})}></ldf-heading>}
+            <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
+              {/* Bible text */}
+              <p>
+                {this.verses.map(verse =>
+                  verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
+                  ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
+                  : <ldf-string
+                    citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
+                    id={this.obj.uid}
+                    text={(verse as BibleReadingVerse).text}>
+                  </ldf-string>
+                )}
+                {shortResponse && !this.obj?.metadata?.omit_response && responseNode}
+                <span class="citation">{ this.obj.citation }</span>
+              </p>
+              {!shortResponse && !this.obj?.metadata?.omit_response && <p>{responseNode}</p>}
+            </div>
+          </Host>
         );
       }
       /* `long` render a typical Bible reading in the liturgy */
