@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, combineLatest, of } from 'rxjs';
 import { Organization } from './organization';
-import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
-import { map, switchMap, take, tap, startWith } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { map, switchMap, take, startWith, filter } from 'rxjs/operators';
 import { UserProfile } from '../auth/user/user-profile';
 import * as firebase from 'firebase/app';
 import { slugify } from '../slugify';
@@ -84,11 +84,18 @@ export class OrganizationService {
   /** All organizations in which a given user plays any role */
   organizationsWithUser(uid : string) : Observable<Organization[]> {
     return combineLatest(
-      this.organizationsWithOwner(uid).pipe(startWith([])),
-      this.organizationsWithEditor(uid).pipe(startWith([])),
-      this.organizationsWithMember(uid).pipe(startWith([]))
+      this.organizationsWithOwner(uid).pipe(startWith(null)),
+      this.organizationsWithEditor(uid).pipe(startWith(null)),
+      this.organizationsWithMember(uid).pipe(startWith(null))
     ).pipe(
-      map(([owner, editor, member]) => owner.concat(editor).concat(member)),
+      filter(([owner, editor, member]) => Boolean(owner) && Boolean(editor) && Boolean(member)),
+      map(([owner, editor, member]) => owner
+        .concat(editor)
+        .concat(member)
+        .reduce((uniques, item) => uniques.map(item => JSON.stringify(item)).includes(JSON.stringify(item))
+          ? uniques
+          : [...uniques, item], [])
+      ),
     )
   }
 
@@ -118,9 +125,13 @@ export class OrganizationService {
 
   // Given an array of IDs, returns array of Organizations
   organizationsByIds(orgIds : string[]) : Observable<Organization[]> {
-    return combineLatest(orgIds.map(orgId => 
-      this.afs.doc<Organization>(`Organization/${orgId}`).valueChanges()
-    ));
+    if(orgIds?.length == 0) {
+      return of([]);
+    } else {
+      return combineLatest(orgIds.map(orgId => 
+        this.afs.doc<Organization>(`Organization/${orgId}`).valueChanges()
+      ));
+    }
   }
 
   // Given the org ID, find members of that organization
