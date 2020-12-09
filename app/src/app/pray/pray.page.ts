@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@an
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer, from } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile } from 'rxjs/operators';
-import { unwrapOptions, Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option } from '@venite/ldf';
+import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option, Change, unwrapOptions } from '@venite/ldf';
 import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
@@ -33,6 +33,7 @@ type ActionSheetData = {
   settings: DisplaySettings;
   userProfile: UserProfile | null;
   userOrgs: Organization[];
+  editorState: EditorState | null;
 }
 
 type CanticleData = { liturgyVersions: Record<string, string>; canticleOptions: LiturgicalDocument[]};
@@ -262,20 +263,25 @@ export class PrayPage implements OnInit, OnDestroy {
       switchMap(user => user ? this.auth.getUserProfile(user.uid) : null)
     );
     this.userOrgs$ = this.userProfile$.pipe(
-      switchMap(user => user ? this.organizationService.organizationsWithUser(user?.uid) : [])
+      filter(user => Boolean(user)),
+      switchMap(user => this.organizationService.organizationsWithUser(user?.uid)),
     );
 
     this.actionSheetData$ = combineLatest([
       this.doc$.pipe(startWith(new LiturgicalDocument())),
       this.settings$.pipe(startWith(new DisplaySettings())),
       this.userOrgs$.pipe(startWith([])),
-      this.userProfile$.pipe(startWith(null))
+      this.userProfile$.pipe(startWith(null)),
+      this.doc$.pipe(
+        switchMap(doc => doc?.id && this.bulletinMode ? this.editorService.editorState(doc.id.toString()) : of(null))
+      )
     ]).pipe(
-      map(([doc, settings, userOrgs, userProfile]) => ({
+      map(([doc, settings, userOrgs, userProfile, editorState]) => ({
         doc,
         settings,
         userOrgs,
-        userProfile
+        userProfile,
+        editorState
       }))
     );
 
@@ -410,14 +416,16 @@ export class PrayPage implements OnInit, OnDestroy {
       combineLatest([this.userProfile$, this.userOrgs$]).pipe(
         filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
         takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
-        switchMap(async ([userProfile, orgs]) => 
+        switchMap(async ([userProfile, orgs]) =>
           this.documents.newDocument(new LiturgicalDocument({
-            ... unwrapOptions(doc),
+            // don't unwrap choices if we're not making them beforehand
+            //... unwrapOptions(doc),
+            ...doc,
             label,
             slug,
             sharing: new Sharing({
               owner: userProfile.uid,
-              organization: (orgs[0])?.slug,
+              organization: ((orgs || [])[0])?.slug,
               collaborators: [],
               status: 'draft',
               privacy: 'organization'
@@ -504,6 +512,25 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: () => {
           this.actionSheetController.dismiss();
           this.editBulletin(data.doc);
+        }
+      });
+    }
+    if(this.bulletinMode) {
+      buttons.push({
+        text: 'Remove Unused Options',
+        icon: 'trash',
+        handler: () => {
+          this.editorService.processChange(
+            data.editorState?.localManager,
+            new Change({
+              path: '/',
+              op: [{
+                type: 'set',
+                oldValue: data.doc,
+                value: unwrapOptions(data.doc)
+              }]
+            })
+          )
         }
       })
     }
