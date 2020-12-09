@@ -85,7 +85,7 @@ export class BulletinsPage implements OnInit {
     );
 
     this.orgDocs$ = combineLatest([this.search$, this.auth.user, orgs$.pipe(
-      switchMap(orgs => this.documents.myOrganizationDocuments(orgs))
+      switchMap(orgs => orgs?.length > 0 ? this.documents.myOrganizationDocuments(orgs) : of([]))
     )]).pipe(
       map(([search, user, docs]) => docSearch(this.mode === 'bulletins', this.mode === 'templates', this.mode === 'templates')([search, docs])
         .filter(doc => doc?.data?.sharing?.owner !== user?.uid)
@@ -146,7 +146,7 @@ export class BulletinsPage implements OnInit {
   }
 
   joinDocument(docId : string) {
-    this.router.navigate(['editor', docId]);
+    this.router.navigate([this.mode === 'bulletins' ? 'bulletin' : 'template', docId]);
   }
 
   trackIdAndDocBy(index : number, item : IdAndDoc) {
