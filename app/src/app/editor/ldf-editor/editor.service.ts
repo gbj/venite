@@ -434,6 +434,8 @@ export class EditorService {
     op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 
     const indexedP = op.index !== undefined ? op.p.concat(Number(op.index) >= 0 ? Number(op.index) : op.index) : op.p;
 
+    console.log('(EditorService) buildOp', op);
+
     // generate json1 op depending on the type
     switch(op.type) {
       case 'edit':
@@ -443,10 +445,10 @@ export class EditorService {
       case 'deleteAt':
         return json1.removeOp(indexedP, op.value ?? true);
       case 'set':
-        if(op.oldValue == undefined) {
+        if(op.oldValue === undefined) {
           return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
         }
-        else if(op.value == undefined) {
+        else if(op.value === undefined) {
           return json1.removeOp(indexedP, op.value)
         } else {
           const jsonOp = json1.replaceOp(indexedP, JSON.parse(JSON.stringify(op.oldValue)), JSON.parse(JSON.stringify(op.value)));
