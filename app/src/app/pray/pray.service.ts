@@ -2,10 +2,16 @@ import { Injectable, Inject } from '@angular/core';
 import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
-import { first, map, startWith, switchMap, tap } from 'rxjs/operators';
+import { filter, first, map, startWith, switchMap, tap } from 'rxjs/operators';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, CANTICLE_TABLE_SERVICE, CanticleTableServiceInterface, BIBLE_SERVICE, BibleServiceInterface } from '@venite/ng-service-api';
 import { LiturgyConfig } from '@venite/ng-pray/lib/liturgy-config';
 import { isCompletelyCompiled } from './is-completely-rendered';
+
+const LOADING = new LiturgicalDocument({
+  type: 'text',
+  style: 'text',
+  value: ['Loading...']
+});
 
 const emptyValue = (doc : LiturgicalDocument) => 
   !Boolean(doc.value) ||
@@ -59,7 +65,7 @@ export class PrayService {
           // startWith(undefined) so it doesn't need to wait for all of them to load
           this.latestChildren$.map(child$ => child$
             ? child$.pipe(
-              startWith(null),
+              startWith(LOADING),
               switchMap(child => child && child?.include(day, prefs) && !isCompletelyCompiled(child) 
                 ? this.compile(child, day, prefs, liturgyversions, originalPrefs)
                 : of(child))
@@ -172,6 +178,8 @@ export class PrayService {
               : collect.label || "The Collect of the Day";
             return new LiturgicalDocument({ ... collect, label });
           })),
+          // ignore the initial "Loading..."
+          filter(collects => collects?.length > 1 || (collects.length === 1 && JSON.stringify(collects[0].value) !== JSON.stringify(["Loading..."]))),
           // filter collects to find the appropriate one
           map(collects => findCollect(
             collects,
@@ -234,7 +242,7 @@ export class PrayService {
           condition: undefined,
           lookup: undefined
         })
-        : null
+        : undefined
       )
     );
   }

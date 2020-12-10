@@ -360,10 +360,10 @@ export class PrayPage implements OnInit, OnDestroy {
     let latestDoc : null | LiturgicalDocument = null;
 
     const doc$ = stateDoc$.pipe(
-      tap(doc => {
+      /*tap(doc => {
         console.log('stateDoc$ = ', doc);
         latestDoc = doc;
-      }),
+      }),*/
       takeWhile(doc => !isCompletelyCompiled(doc), true),
     );
 
@@ -515,6 +515,18 @@ export class PrayPage implements OnInit, OnDestroy {
         }
       });
     }
+    // Create bulletin if it's not one
+    if(!this.bulletinMode) {
+      buttons.push({
+        text: 'Create Bulletin',
+        icon: 'create',
+        handler: () => {
+          this.actionSheetController.dismiss();
+          this.beginEditing(data.doc);
+        }
+      });
+    }
+
     if(this.bulletinMode) {
       buttons.push({
         text: 'Remove Unused Options',

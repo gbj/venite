@@ -443,6 +443,7 @@ export class EditorService {
       case 'insertAt':
         return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)));
       case 'deleteAt':
+      case 'delete':
         return json1.removeOp(indexedP, op.value ?? true);
       case 'set':
         if(op.oldValue === undefined) {
