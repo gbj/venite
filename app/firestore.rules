@@ -21,19 +21,20 @@ service cloud.firestore {
       return request.auth.uid != null && (
         (sharing.owner == request.auth.uid) // user is doc's owner
         || (sharing.collaborators && request.auth.uid in sharing.collaborators) // user listed under 'collaborators'
-        || (sharing.organization != null && sharing.privacy != 'private' && userIsEditor(request.auth.uid, sharing.organization))
+        || (sharing.organization != null && userInOrg(request.auth.uid, sharing.organization))
       );
     }
 
     function hasReadAccess(sharing) {
       return sharing == null // no 'sharing' set on doc
+      || (sharing.owner == request.auth.uid)
       || (sharing.privacy == 'public' && sharing.status == 'published') // doc is public and published
       || (sharing.privacy == 'public') // doc is 'unlisted' and user has the link
-      || (sharing.organization != null && sharing.privacy != 'private' && userInOrg(request.auth.uid, sharing.organization)); // user is a member of 'organization'
+      || (sharing.organization != null && userInOrg(request.auth.uid, sharing.organization)); // user is a member of 'organization'
     }
   
     match /Document/{docId} {
-      allow read: if hasWriteAccess(resource.data.sharing) || hasReadAccess(resource.data.sharing);
+      allow read: if true; //hasReadAccess(resource.data.sharing);
       allow update, delete: if hasWriteAccess(resource.data.sharing);
       allow create: if request.auth.uid != null;
     }
@@ -75,9 +76,9 @@ service cloud.firestore {
     }
 
     match /DocumentManager/{docId}/revisionLog/{changeId} {
-      allow read: if hasReadAccess(docSharingFromDocId(docId));
-    //  allow create, read, update, delete: if request.auth.uid != null;
-      allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
+      //allow read: if hasReadAccess(docSharingFromDocId(docId));
+      allow create, read, update, delete: if request.auth.uid != null;
+      //allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
      }
 
     match /Color/{docId} {
@@ -89,7 +90,7 @@ service cloud.firestore {
       allow read: if true;
       allow create, update, delete: if false;
     }
-
+    
     match /Hymns/{docId} {
       allow read: if true;
       allow create, update, delete: if false;
