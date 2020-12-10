@@ -21,6 +21,15 @@ type PrayData = {
   availableReadings: string[];
 }
 
+export type BulletinCommands = {
+  commands: string[];
+  state:{
+    liturgy: LiturgicalDocument;
+    day: LiturgicalDay;
+    prefs: ClientPreferences;
+  }
+}
+
 @Component({
   selector: 'venite-pray-menu',
   templateUrl: './pray-menu.component.html',
@@ -32,6 +41,7 @@ export class PrayMenuComponent implements OnInit {
   @Input() bulletinButton : boolean = false;
 
   @Output() dayChosen : EventEmitter<PrayData> = new EventEmitter();
+  @Output() createBulletin : EventEmitter<BulletinCommands> = new EventEmitter();
 
   // The data the Pray button needs
   prayData : Observable<PrayData>;
@@ -169,7 +179,11 @@ pray(data : PrayData, bulletinMode : boolean = false) {
     this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings);
   } else {
     // navigate to the Pray page
-    this.navigate(bulletinMode ? '/bulletin' : '/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
+    if(bulletinMode) {
+      this.navigate('/bulletin', new Liturgy(liturgy), date, liturgicalDay, clientPreferences, true);
+    } else {
+      this.navigate('/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
+    }
   }
 }
 
@@ -262,7 +276,7 @@ savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDoc
     .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
 }
 
-navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences) {
+navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences, bulletinMode : boolean = false) {
   const y = date.getFullYear().toString(),
     m = (date.getMonth() + 1).toString(),
     d = date.getDate().toString(),
@@ -280,7 +294,11 @@ navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, pre
     commands.push(JSON.stringify(nonDefaultPrefs));
   }
   // TODO -- push vigil info as well
-  this.router.navigate(commands, { state: { liturgy, day, prefs } });
+  if(bulletinMode) {
+    this.createBulletin.emit({ commands, state: { liturgy, day, prefs } });
+  } else {
+    this.router.navigate(commands, { state: { liturgy, day, prefs } });
+  }
 }
 
 nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreferences {

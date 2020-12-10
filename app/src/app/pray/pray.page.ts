@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer, from } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option, Change, unwrapOptions } from '@venite/ldf';
-import { ActionSheetController, IonContent, LoadingController, ModalController } from '@ionic/angular';
+import { ActionSheetController, IonContent, LoadingController, ModalController, NavController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
 import { PrayService } from './pray.service';
@@ -93,6 +93,7 @@ export class PrayPage implements OnInit, OnDestroy {
     private actionSheetController : ActionSheetController,
     public speechService : SpeechService,
     private loadingController : LoadingController,
+    private navCtrl : NavController
   ) { }
 
   ngOnDestroy() {
@@ -435,14 +436,14 @@ export class PrayPage implements OnInit, OnDestroy {
       ).subscribe(
         docId => {
           loading.dismiss();
-          this.router.navigate(['/', 'bulletin', 'b', docId]);
+          this.editBulletin(docId);
         }
       );
     }
   }
 
-  async editBulletin(doc : LiturgicalDocument) {
-    this.router.navigate(['bulletin', 'b', doc?.id]);
+  async editBulletin(docId : string) {
+    this.router.navigate(['bulletin', 'b', docId]);
   }
 
   changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
@@ -511,7 +512,7 @@ export class PrayPage implements OnInit, OnDestroy {
         icon: 'create',
         handler: () => {
           this.actionSheetController.dismiss();
-          this.editBulletin(data.doc);
+          this.editBulletin(data.doc.id.toString());
         }
       });
     }

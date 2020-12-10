@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { BulletinCommands } from '@venite/ng-pray-menu';
 
 @Component({
   selector: 'venite-create-bulletin-modal',
@@ -8,6 +9,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class CreateBulletinModalComponent implements OnInit {
   @Input() modal : any;
+
+  constructor(
+    private router : Router
+  ) {}
   
   ngOnInit() {}
 
@@ -15,7 +20,14 @@ export class CreateBulletinModalComponent implements OnInit {
     this.modal.dismiss();
   }
 
-  dayChosen(event : any) {
+  createBulletin(event : BulletinCommands) {
+    this.router.navigate(
+      event.commands,
+      {
+        state: event.state,
+        skipLocationChange: true
+      }
+    )
     this.dismiss();
   }
 }
