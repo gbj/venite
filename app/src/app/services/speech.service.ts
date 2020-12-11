@@ -57,10 +57,22 @@ export class SpeechService {
       BETWEEN_PSALM_VERSE = 1000 * (1/settings.voiceRate);
 
     function processText(s : string) : string {
-      return s.replace(/&nbsp;/g, ' ')
+      return processEntities(s)
+        .replace(/&nbsp;/g, ' ')
         .replace(/YHWH/g, 'Addo-nigh')
         .replace(/Venite/g, 'ven-EAT-aye')
         .replace(/Compline/g, 'COMP-linn');
+    }
+
+    function processEntities(str : string) : string {
+      try {
+        const e = document.createElement('textarea');
+        e.innerHTML = str;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+      } catch(e) {
+        console.warn(`(processEntities) error while processing "${str}": `, e);
+      }
     }
 
     function docToUtterances(doc : LiturgicalDocument) : (number | string)[] {
