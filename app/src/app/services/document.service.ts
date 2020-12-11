@@ -9,6 +9,7 @@ import { DTO } from './dto';
 import { Organization } from '../organization/organization';
 import * as firebase from 'firebase';
 import { AuthService } from '../auth/auth.service';
+import { OrganizationService } from '../organization/organization.service';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -36,7 +37,8 @@ export class DocumentService {
 
   constructor(
     private readonly afs: AngularFirestore,
-    private auth : AuthService
+    private auth : AuthService,
+    private organizationService : OrganizationService
   ) { }
 
   handleError(error : any) {
@@ -89,12 +91,28 @@ export class DocumentService {
       startWith([] as Liturgy[])
     );
 
-    return combineLatest([this.auth.user, myLiturgies$, veniteLiturgies$]).pipe(
-      map(([user, mine, venite]) => user
-        ? mine.concat(
-          // filter out anything I own
-          venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
-        )
+    const myOrganizationLiturgies$ = this.auth.user.pipe(
+      filter(user => Boolean(user?.uid)),
+      switchMap(user => combineLatest([this.organizationService.organizationsWithEditor(user?.uid), this.organizationService.organizationsWithOwner(user?.uid)])),
+      map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
+      switchMap(orgs => this.myOrganizationDocuments(orgs)),
+      map(idsAndDocs => idsAndDocs
+        .map(idAndDoc => new Liturgy(idAndDoc.data))
+        .filter(doc => doc.type === 'liturgy' && !Boolean(doc.day)) as Liturgy[]
+      ),
+      startWith([] as Liturgy[])
+    );
+
+    return combineLatest([this.auth.user, myLiturgies$, myOrganizationLiturgies$, veniteLiturgies$]).pipe(
+      map(([user, mine, organization, venite]) => user
+        ? mine
+          .concat(
+            organization.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
+          )
+          .concat(
+            // filter out anything I own
+            venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
+          )
         : mine.concat(venite)
       ),
       map(docs => docs.map(doc => new Liturgy({...doc, id: undefined})))
