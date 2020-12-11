@@ -7,7 +7,7 @@ export function unwrapOptions(doc: LiturgicalDocument): LiturgicalDocument {
     case 'option':
       console.log('unwrapOptions -- option -- selected is ', doc.metadata.selected, doc.metadata);
       const selectedDoc = (doc as Option).value[doc.metadata?.selected || 0];
-      return new LiturgicalDocument(selectedDoc);
+      return unwrapOptions(new LiturgicalDocument(selectedDoc));
     case 'liturgy':
       return new Liturgy({
         ...doc,

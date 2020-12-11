@@ -419,7 +419,7 @@ export class PrayPage implements OnInit, OnDestroy {
         takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
         switchMap(async ([userProfile, orgs]) =>
           this.documents.newDocument(new LiturgicalDocument({
-            // don't unwrap choices if we're not making them beforehand
+            // don't unwrap choices when creating a bulletin from Bulletins page, because we're not making them beforehand
             //... unwrapOptions(doc),
             ...doc,
             label,

@@ -12,21 +12,21 @@
   border-left: 1em solid var(--ion-background-color, #fff);
   border-right: 1em solid var(--ion-background-color, #fff);
   border-width: 1em;
-  transition: all 0.5s ease;
   width: 100vw;
 }
 
-.bordered, .ldf-wrapper {
+.bordered,
+.ldf-wrapper {
   min-height: 100vh;
 }
 
-@media(min-width: 767px) {
+@media (min-width: 767px) {
   .bordered {
     border-width: 2em;
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .bordered {
     border-width: 6em;
   }
@@ -52,13 +52,13 @@
   box-shadow: 5px;
 }
 
-@media(min-width: 767px) {
+@media (min-width: 767px) {
   .ldf-wrapper {
     padding: 2em;
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .ldf-wrapper {
     padding: 3em;
   }
