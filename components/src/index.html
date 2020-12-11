@@ -11,6 +11,12 @@
   <script nomodule src="/build/ldf.js"></script>
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
+  <style>
+    :root {
+      --ldf-unison-font-weight: bold;
+      --ldf-response-font-weight: bold;
+    }
+  </style>
 </head>
 <body>
     <ion-content id='example' class="content ion-padding dropcaps-plain psalmverses-true bibleverses-false">
@@ -597,6 +603,7 @@
         }
       ],
       "citation": null,
+      "display_format": "wholeverse",
       "type": "psalm"
     },
     {
@@ -1543,7 +1550,7 @@
     const node = document.createElement('ldf-liturgical-document');
     node.setAttribute('doc', JSON.stringify(LITURGY));
     node.setAttribute('editable', true);
-    node.setAttribute('preview', true);
+    node.setAttribute('preview', false);
     node.setAttribute('path', '/');
     document.querySelector('#example').appendChild(node);
   </script>

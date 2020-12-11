@@ -100,21 +100,23 @@ export class TextComponent {
           {/* Heading */}
           <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>
 
-          {this.obj.value.map((prayer, prayerIndex) =>
-            <ldf-editable-text
-              id={`${this.obj.uid || this.obj.slug}-${prayerIndex}`}
-              text={prayer}
-              path={`${this.path}/value/${prayerIndex}`}>
-            </ldf-editable-text>
-          )}
-          {(this.obj?.style === 'prayer' || (this.obj?.metadata?.response && !this.obj?.metadata?.omit_response)) && <span class='response'>
-            <ldf-editable-text
-              id={`${this.obj.uid || this.obj.slug}-response`}
-              text={this.obj.metadata && this.obj.metadata.response}
-              path={`${this.path}/response`}
-              placeholder={localeStrings.amen}>
-            </ldf-editable-text>
-          </span>}
+          <div class={`text ${this.editable ? 'editable' : ''} ${this.obj?.display_format || 'default'}`}>
+            {this.obj.value.map((prayer, prayerIndex) =>
+              <ldf-editable-text
+                id={`${this.obj.uid || this.obj.slug}-${prayerIndex}`}
+                text={prayer}
+                path={`${this.path}/value/${prayerIndex}`}>
+              </ldf-editable-text>
+            )}
+            {(this.obj?.style === 'prayer' || (this.obj?.metadata?.response && !this.obj?.metadata?.omit_response)) && <span class='response'>
+              <ldf-editable-text
+                id={`${this.obj.uid || this.obj.slug}-response`}
+                text={this.obj.metadata && this.obj.metadata.response}
+                path={`${this.path}/response`}
+                placeholder={localeStrings.amen}>
+              </ldf-editable-text>
+            </span>}
+          </div>
         </Host>
       );
     }

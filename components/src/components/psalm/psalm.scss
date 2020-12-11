@@ -34,14 +34,16 @@
   .halfverse {
     margin-left: var(--ldf-psalm-halfverse-margin-left);
   }
-  .verse, .halfverse {
+  .verse,
+  .halfverse {
     display: var(--ldf-psalm-verse-display);
     display: var(--ldf-psalm-verse-display);
   }
 }
 
 .editable {
-  .verse, .halfverse {
+  .verse,
+  .halfverse {
     width: 100%;
   }
 }
@@ -114,14 +116,16 @@ h5 {
   display: none;
 }
 
-.psalm.wholeverse {
+.psalm.wholeverse,
+.psalm-parent.wholeverse {
   .psalm:nth-child(even) {
     font-weight: var(--ldf-response-font-weight);
     font-style: var(--ldf-response-font-style);
   }
 }
 
-.psalm.halfverse {
+.psalm.halfverse,
+.psalm-parent.halfverse {
   .halfverse {
     font-weight: var(--ldf-response-font-weight);
     font-style: var(--ldf-response-font-style);

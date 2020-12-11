@@ -8,7 +8,17 @@ p {
   text-justify: inter-character;
 }
 
-li, h1, h2, h3, h4, h5, h6, ol, span, em, strong {
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+span,
+em,
+strong {
   font-family: var(--ldf-font-face);
 }
 
@@ -17,11 +27,15 @@ li, h1, h2, h3, h4, h5, h6, ol, span, em, strong {
   font-style: var(--ldf-response-font-style);
 }
 
-.text.omit p {
+.text.omit {
   display: none;
 }
 
-.text.unison p {
+.text.editable.omit {
+  display: block;
+}
+
+.text.unison {
   font-weight: var(--ldf-unison-font-weight);
   font-style: var(--ldf-unison-font-style);
 }
