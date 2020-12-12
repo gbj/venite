@@ -42,10 +42,10 @@
 - ion-card
 - ion-card-header
 - ion-card-title
-- ion-card-content
 - ion-grid
 - ion-row
 - ion-col
+- ion-card-content
 - [ldf-editable-string-list](../editable-string-list)
 - [ldf-editable-lookup](../editable-lookup)
 
@@ -67,10 +67,10 @@ graph TD;
   ldf-editable-metadata --> ion-card
   ldf-editable-metadata --> ion-card-header
   ldf-editable-metadata --> ion-card-title
-  ldf-editable-metadata --> ion-card-content
   ldf-editable-metadata --> ion-grid
   ldf-editable-metadata --> ion-row
   ldf-editable-metadata --> ion-col
+  ldf-editable-metadata --> ion-card-content
   ldf-editable-metadata --> ldf-editable-string-list
   ldf-editable-metadata --> ldf-editable-lookup
   ion-item --> ion-icon
