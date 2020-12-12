@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
 import { TranslateService } from '@ngx-translate/core';
 import { EditorState } from './editor-state';
+import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -94,6 +95,11 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   addBlockDirectly(manager : LocalDocumentManager, ev : CustomEvent) {
     const { base, index } = ev.detail;
     this.addBlock((data) => this.add(manager, base, index, data));
+    const path = `${base}/${index}`,
+      el = querySelectorDeep(`[path="${path}"]`);
+    el.setAttribute("editable", "true");
+    el.setAttribute("preview", "false");
+    //console.log('added at', path, );
   }
 
   addBlockAsOption(manager : LocalDocumentManager, ev : CustomEvent) {

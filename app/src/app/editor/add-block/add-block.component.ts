@@ -61,7 +61,9 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     const completed = this.completeOption(ev.detail);
     this.completeSubscription = completed.pipe(
       take(1),
-      tap(val => console.log('completeSubscription', val))
+      tap(val => {
+        console.log('completeSubscription', val)
+      })
     ).subscribe(addition => this.modal.dismiss(addition));
   }
 
