@@ -18,6 +18,7 @@ export class EditableMetadataComponent {
   @State() obj : LiturgicalDocument;
   @State() localeStrings: { [x: string]: string; };
   @State() collapsedState : boolean;
+  @State() showAdvanced : boolean = false;
 
   // Properties
   /**
@@ -155,7 +156,38 @@ export class EditableMetadataComponent {
               <ion-card-header>
                 <ion-card-title>{localeStrings.title}</ion-card-title>
               </ion-card-header>
-              <ion-card-content>
+              <ion-card>
+                <ion-grid>
+                  <ion-row>
+                    {/* Label */}
+                    <ion-col><TextField name="label"/></ion-col>
+                    {/* Display Format */}
+                    <ion-col>
+                      {availableDisplayFormats?.length > 0 && <SelectField field='display_format' types={availableDisplayFormats} />}
+                    </ion-col>
+                  </ion-row>
+                  {/* `source` and `citation` */}
+                  <ion-row>
+                    <ion-col><TextField name="source/source"/></ion-col>
+                    <ion-col><TextField name="source/citation"/></ion-col>
+                    <ion-col><TextField name="citation"/></ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card>
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-button onClick={() => this.showAdvanced = !this.showAdvanced}>
+                      {!this.showAdvanced && <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>}
+                      {this.showAdvanced && <ion-icon slot="icon-only" name="chevron-down"></ion-icon>}
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-card-title>{localeStrings.advanced}</ion-card-title>
+                </ion-toolbar>
+              </ion-card-header>
+              {this.showAdvanced && <ion-card-content>
                 <ion-grid>
                   {/* `type` and `style` */}
                   <ion-row>
@@ -169,9 +201,6 @@ export class EditableMetadataComponent {
                     <ion-col>
                       {availableStyles?.length > 0 && <SelectField field='style' types={availableStyles} />}
                     </ion-col>
-                    <ion-col>
-                      {availableDisplayFormats?.length > 0 && <SelectField field='display_format' types={availableDisplayFormats} />}
-                    </ion-col>
                   </ion-row>
                   {/* `tradition`, `language` and `version` */}
                   <ion-row>
@@ -181,15 +210,8 @@ export class EditableMetadataComponent {
                   </ion-row>
                   {/* `label` and `version_label` */}
                   <ion-row>
-                    <ion-col><TextField name="label"/></ion-col>
                     <ion-col><TextField name="version_label"/></ion-col>
                     <ion-col><TextField name="slug"/></ion-col>
-                  </ion-row>
-                  {/* `source` and `citation` */}
-                  <ion-row>
-                    <ion-col><TextField name="source/source"/></ion-col>
-                    <ion-col><TextField name="source/citation"/></ion-col>
-                    <ion-col><TextField name="citation"/></ion-col>
                   </ion-row>
                   {/* `category` */}
                   <ion-row>
@@ -214,7 +236,7 @@ export class EditableMetadataComponent {
                     </ion-col>
                   </ion-row>
                 </ion-grid>
-              </ion-card-content>
+              </ion-card-content>}
             </ion-card>
           </form>
         </ion-content>
