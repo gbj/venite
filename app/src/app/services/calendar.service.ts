@@ -46,13 +46,10 @@ export class CalendarService {
 
   /** Find feast days on a given date */
   findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
-    console.log('findFeastDays', mmdd, kalendar);
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('mmdd', '==', mmdd)
-    ).valueChanges().pipe(
-      tap(entries => console.log('findFeastDays', kalendar, mmdd, entries))
-    );
+    ).valueChanges();
   }
 
   /** Find special days for a particular slug
@@ -60,7 +57,6 @@ export class CalendarService {
     * // Ash Wednesday
     * `wednesday-last-epiphany` */
   findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
-    console.log('findSpecialDays', kalendar);
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('slug', '==', slug)

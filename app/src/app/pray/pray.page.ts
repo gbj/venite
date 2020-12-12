@@ -175,7 +175,7 @@ export class PrayPage implements OnInit, OnDestroy {
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$ : Observable<ClientPreferences> = combineLatest(liturgy$, this.route.params).pipe(
       tap(data => console.log('prefs$ prefs = ', data)),
-      map(([liturgy, { prefs }]) => ({liturgy, prefs })),
+      map(([liturgy, { prefs }]) => ({liturgy, prefs: JSON.parse(prefs ?? '{}') })),
       map(({liturgy, prefs}) => liturgy[0] && liturgy[0].type == 'liturgy'
         ? Object.assign(
           (

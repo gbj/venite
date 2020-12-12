@@ -57,11 +57,12 @@ export class SpeechService {
       BETWEEN_PSALM_VERSE = 1000 * (1/settings.voiceRate);
 
     function processText(s : string) : string {
-      return processEntities(s)
+      return processEntities(s
         .replace(/&nbsp;/g, ' ')
         .replace(/YHWH/g, 'Addo-nigh')
         .replace(/Venite/g, 'ven-EAT-aye')
-        .replace(/Compline/g, 'COMP-linn');
+        .replace(/Compline/g, 'COMP-linn')
+      );
     }
 
     function processEntities(str : string) : string {

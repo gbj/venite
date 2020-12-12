@@ -17,7 +17,10 @@ export class LectionaryService {
   ) { }
 
   getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {
-    console.log('getReadings', lectionaryName, day, readingType);
+    // lectionaries that include readings for black-letter days
+    const BLACK_LETTER_LECTIONARIES = ['lff2018'];
+
+    console.log('getReadings lectionary = ', lectionaryName);
     
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
@@ -25,6 +28,27 @@ export class LectionaryService {
         map(
           readings => uniqueBy(readings.filter(reading => !readingType || reading.type === readingType), e => e.citation)
         ),
+      );
+    }
+    // if lectionary is a "black-letter lectionary"
+    else if(BLACK_LETTER_LECTIONARIES.includes(lectionaryName)) {
+      const days = (day.holy_days || []).map(holyDay => holyDay.slug).filter(slug => slug !== undefined)
+      console.log('getReadings - black-letter lectionary', lectionaryName, day, days, readingType)
+
+      return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
+        let query : firebase.firestore.Query = ref.where('lectionary', '==', lectionaryName)
+          .where('day', 'in', Array.from(new Set(days.concat(day.propers ?? day.slug))));
+
+        if(readingType !== undefined) {
+          // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
+          // so its value is set to 'first_reading_alt'
+          // but it still needs to search for 'first_reading'
+          query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
+        }
+
+        return query;
+      }).valueChanges().pipe(
+        tap(entries => console.log('getReadings black-letter =>', entries))
       );
     }
     // search for other readings in our DB
