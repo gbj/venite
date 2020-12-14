@@ -32,9 +32,11 @@ ldf-editable-metadata-buttons {
   z-index: 10;
   background: var(--ldf-background);
   opacity: 0.8;
+  width: 100%;
+  position: relative;
 }
 
 .doc.editable {
-  margin-top: calc(-4em + var(--ldf-liturgical-document-margin-top, 0));
+  margin-top: calc(-2em + var(--ldf-liturgical-document-margin-top, 0));
   padding-top: 2em;
 }

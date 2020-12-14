@@ -8,6 +8,11 @@
   justify-content: end;
   opacity: 1;
   transition: all 0.25s;
+
+  ion-buttons {
+    background-color: var(--ion-color-light, #f4f5f8);
+    border-radius: 3px;
+  }
 }
 
 /* Shared animations */
