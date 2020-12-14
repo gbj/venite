@@ -291,6 +291,18 @@ export class DocumentService {
     }
   }
 
+  myOrganizationDocumentsWithSlug(org : string, slug : string) : Observable<IdAndDoc[]> {
+    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+      ref.where('sharing.organization', '==', org)
+         .where('slug', '==', slug)
+    ).snapshotChanges().pipe(
+      // transform from AngularFire `DocumentChangeAction` to `doc`
+      map(changeactions => changeactions.map(action => action?.payload?.doc)),
+      // extra ID and document data and leave the rest behind
+      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+    );
+  }
+
   myOrgDocExists(org : string, uid : string, slug : string) : Observable<boolean> {
     /*const orgDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.organization', '==', org)

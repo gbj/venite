@@ -42,11 +42,17 @@
     "settings": "Settings",
     "about": "About",
     "tutorials": "Tutorials"
-  },
+},
   "bulletins": {
     "bulletins": "Bulletins",
     "templates": "Templates",
-    "create-a-bulletin": "Create a Bulletin"
+    "create-a-bulletin": "Create a Bulletin",
+    "title-url-message": "Set a title and URL for your bulletin. URLs follow the format {{base}}/____.",
+    "title": "Bulletin Title",
+    "url": "URL ({{base}}/____)",
+    "ok": "OK",
+    "conflict-found": "URL Conflict Found",
+    "conflict-found-message": "You already have a bulletin at that same URL. Should we rename the old bulletin, so you can use the URL for this new one?"
   },
   "darkmode": {
     "darkmode": "Dark Mode",
@@ -96,6 +102,7 @@
     "edit": "Edit",
     "code": "View Code",
     "preview": "Preview",
+    "create": "Create",
     "add": "Add",
     "bible-introduction": "Introduction",
     "bible-version": "Translation",

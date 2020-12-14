@@ -400,8 +400,8 @@ export class PrayPage implements OnInit, OnDestroy {
     const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null,
-      label = (prettyDocDate ? `${doc?.label} (${prettyDocDate})` : doc?.slug) ?? 'Bulletin',
-      slug = (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
+      label = doc.label ?? (prettyDocDate ? `${doc?.label} (${prettyDocDate})` : doc?.slug) ?? 'Bulletin',
+      slug = doc.slug ?? (formattedDocDate ? `${doc?.slug}-${formattedDocDate}` : doc?.slug) ?? 'bulletin';
 
     // if the document already exists in the database, just open it in the editor
     if(doc.id) {
