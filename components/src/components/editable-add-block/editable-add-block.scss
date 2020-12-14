@@ -27,11 +27,13 @@
 
   /* Shared animations */
   .visible {
+    height: 0;
     opacity: 1;
     transition: 0.25s;
   }
 
   .hidden {
+    height: 0;
     opacity: 0;
     transition: 0.25s;
   }
@@ -79,4 +81,22 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap; /* added line */
   }
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.25s;
+}
+
+/* Shared animations */
+.hidden {
+  display: none;
+  height: 0;
+  opacity: 0;
+  transition: all 0.25s;
 }

@@ -3,5 +3,6 @@
   "pause": "Pause",
   "resume": "Resume",
   "meditate": "Meditate for",
-  "minutes": "minutes."
+  "minutes": "minutes.",
+  "seconds": " seconds. "
 }

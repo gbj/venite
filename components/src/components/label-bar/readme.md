@@ -17,7 +17,6 @@
 ### Used by
 
  - [ldf-bible-reading](../bible-reading)
- - [ldf-editable-metadata-buttons](../editable-metadata-buttons)
  - [ldf-editor](../editor)
  - [ldf-heading](../heading)
  - [ldf-image](../image)
@@ -32,7 +31,6 @@
 ```mermaid
 graph TD;
   ldf-bible-reading --> ldf-label-bar
-  ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editor --> ldf-label-bar
   ldf-heading --> ldf-label-bar
   ldf-image --> ldf-label-bar

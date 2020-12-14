@@ -55,18 +55,17 @@ export class EditableAddBlockComponent {
     const localeStrings = this.localeStrings || {};
     return (
       <Host>
-        <ion-button aria-role="button" fill="outline"
-          class={{
-            add: true,
-            hidden: !this.visible,
-            visible: this.visible,
-            collapsed: true
-          }}
-          onClick={() => this.ldfDocShouldAdd.emit({base: this.base, index: this.index})}
-        >
-          <ion-icon name="add" slot="icon-only"></ion-icon>
-          <ion-label class="visually-hidden">{localeStrings.add}</ion-label>
-        </ion-button>
+        <div class={{
+          button: true,
+          hidden: !this.visible,
+        }}>
+          <ion-button aria-role="button" fill="outline"
+            onClick={() => this.ldfDocShouldAdd.emit({base: this.base, index: this.index})}
+          >
+            <ion-icon name="add" slot="icon-only"></ion-icon>
+            <ion-label class="visually-hidden">{localeStrings.add}</ion-label>
+          </ion-button>
+        </div>
       </Host>
     );
   }

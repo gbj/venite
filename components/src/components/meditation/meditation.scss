@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     width: 100%;
 
     input {
@@ -16,7 +17,7 @@
     }
   }
 
-  @media(min-width: 767px) {
+  @media (min-width: 767px) {
     .controls {
       flex-direction: row;
     }

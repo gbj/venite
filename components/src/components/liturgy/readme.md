@@ -47,6 +47,7 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
+  ldf-meditation --> ldf-editable-text
   ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
@@ -87,7 +88,6 @@ graph TD;
   ldf-psalm --> ion-label
   ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
-  ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
   ldf-editable-metadata-buttons --> ion-label

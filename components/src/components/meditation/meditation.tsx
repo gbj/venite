@@ -217,7 +217,21 @@ export class MeditationComponent {
     console.log('meditation', length, progressAmount, progressPercent)
 
     return (
-      <Host>
+      this.editable
+      ? <Host>
+          <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
+            <span>{localeStrings.meditate}</span>
+            <ldf-editable-text
+              inputType="number"
+              short={true}
+              path={`${this.path}/metadata/length`}
+              text={(this.obj?.metadata?.length ?? 300)?.toString()}
+            ></ldf-editable-text>
+            <span>{localeStrings.seconds}</span>
+            <span>({Math.floor(length / 60)}:{Math.floor(length % 60).toString().padStart(2, '0')})</span>
+        </form>
+      </Host>
+      : <Host>
         <div class={{'control-container': true, 'hidden': !!this.secondsRemaining}}>
           <form class='controls' onSubmit={(e) => this.handleControlSubmit(e)}>
             {this.buttonNode(() => this.start(), 'meditate', 'sunny', 'solid', 'small')}

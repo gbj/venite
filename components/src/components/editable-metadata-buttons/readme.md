@@ -33,7 +33,6 @@
 
 ### Depends on
 
-- [ldf-label-bar](../label-bar)
 - ion-buttons
 - ion-button
 - ion-label
@@ -43,7 +42,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  ldf-editable-metadata-buttons --> ldf-label-bar
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button
   ldf-editable-metadata-buttons --> ion-label

@@ -163,7 +163,7 @@ export class LiturgicalDocumentComponent {
       case 'meditation':
         const color = this.obj?.day?.color,
           colorValue = color?.hasOwnProperty('hex') ? (color as LiturgicalColor).hex : (color as string) || '#3489eb';
-        node = <ldf-meditation path={this.path} editable={editable} doc={doc as Meditation} color={colorValue}></ldf-meditation>;
+        node = <ldf-meditation path={this.path} editable={this.editable || this.preview} doc={doc as Meditation} color={colorValue}></ldf-meditation>;
         break;
       case 'option':
         node = <ldf-option path={this.path} editable={editable} doc={doc as Option}></ldf-option>;
@@ -201,7 +201,7 @@ export class LiturgicalDocumentComponent {
     return (
       node && <Host lang={this.obj?.language || 'en'}>
         {/* Settings/Delete/Edit Buttons */}
-        {(this.editable || (this.preview && this.hasFocus)) && <ldf-editable-metadata-buttons
+        {(this.editable || this.preview) && <ldf-editable-metadata-buttons
           visible={this.hasFocus}
           base={this.base}
           index={this.index}
@@ -218,7 +218,12 @@ export class LiturgicalDocumentComponent {
         </ldf-editable-metadata-buttons>}
 
         {/* Render the Document */}
-        <div class='doc'>{node}</div>
+        <div class={{
+          doc: true,
+          editable: this.editable || this.preview
+        }}>
+          {node}
+        </div>
       </Host>
     );
   }

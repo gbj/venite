@@ -77,6 +77,7 @@ Type: `Promise<void>`
 - ion-button
 - ion-icon
 - ion-label
+- [ldf-editable-text](../editable-text)
 
 ### Graph
 ```mermaid
@@ -84,7 +85,9 @@ graph TD;
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
+  ldf-meditation --> ldf-editable-text
   ion-button --> ion-ripple-effect
+  ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-meditation
   style ldf-meditation fill:#f9f,stroke:#333,stroke-width:4px
 ```

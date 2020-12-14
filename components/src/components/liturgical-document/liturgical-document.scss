@@ -27,8 +27,14 @@
 }
 
 ldf-editable-metadata-buttons {
+  height: none;
   display: block;
   z-index: 10;
   background: var(--ldf-background);
   opacity: 0.8;
+}
+
+.doc.editable {
+  margin-top: calc(-4em + var(--ldf-liturgical-document-margin-top, 0));
+  padding-top: 2em;
 }

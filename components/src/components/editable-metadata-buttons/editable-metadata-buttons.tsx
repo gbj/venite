@@ -121,17 +121,18 @@ export class EditableMetadataButtonsComponent {
 
     return <Host>
      {/* Preview Buttons */}
-      <ldf-label-bar class={{ hidden: !this.visible, visible: this.visible }}>
+      <div class={{ buttons: true, hidden: !this.visible || !this.preview }}>
         {/* Preview Buttons */}
-        {this.preview && <ion-buttons slot="end" >
+        {<ion-buttons slot="end" >
           <ion-button onClick={() => this.ldfTogglePreview.emit(false)}>
             <ion-label>{this.localeStrings?.edit}</ion-label>
             <ion-icon slot="end" name="create"></ion-icon>
           </ion-button>
         </ion-buttons>}
-
+      </div>
+      <div class={{ buttons: true, hidden: !this.visible || this.preview }}>
         {/* Editable Buttons */}
-        {!this.preview && <ion-buttons slot='end'>
+        {<ion-buttons slot='end'>
           <ion-button onClick={() => this.ldfTogglePreview.emit(true)}>
             <ion-label>{this.localeStrings?.preview}</ion-label>
             <ion-icon slot="end" name="eye"></ion-icon>
@@ -170,7 +171,7 @@ export class EditableMetadataButtonsComponent {
             <ldf-editable-delete base={this.base} index={this.index} obj={this.obj}></ldf-editable-delete>
           }
         </ion-buttons>}
-      </ldf-label-bar>
+      </div>
     </Host>
   }
 }
