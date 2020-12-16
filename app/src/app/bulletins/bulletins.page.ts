@@ -27,7 +27,13 @@ const docSearch = (includeBulletins : boolean, includeTemplates : boolean, inclu
     doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
     doc.data.category?.includes(search.toLowerCase())
   )
-);
+)
+.sort((a, b) => {
+  const aDate = a.data.date_modified?.toDate(),
+    bDate = b.data.date_modified?.toDate();
+  console.log('dates = ', aDate > bDate, aDate, bDate, a, b)
+  return aDate > bDate ? -1 : 1;
+});
 
 @Component({
   selector: 'venite-bulletins',
