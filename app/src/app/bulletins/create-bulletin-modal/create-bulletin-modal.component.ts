@@ -47,7 +47,7 @@ export class CreateBulletinModalComponent implements OnInit {
         if(org) {
           const alert = await this.alert.create({
             header: this.translate.instant("bulletins.create-a-bulletin"),
-            message: this.translate.instant("bulletins.title-url-message", {base: `/${org}`}),
+            message: this.translate.instant("bulletins.title-url-message", {base: `/${org}/pray`}),
             inputs: [
               {
                 name: 'label',
@@ -58,7 +58,7 @@ export class CreateBulletinModalComponent implements OnInit {
               org && {
                 name: 'slug',
                 type: 'text',
-                placeholder: this.translate.instant("bulletins.url", {base: `/${org}`}),
+                placeholder: this.translate.instant("bulletins.url", {base: `/${org}/pray`}),
                 value: liturgy?.slug
               }
             ],
