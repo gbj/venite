@@ -18,7 +18,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { DownloadService } from '../services/download.service';
 import { SpeechService, SpeechServiceTracking } from '../services/speech.service';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { LoginComponent } from '../auth/login/login.component';
 import { EditorState } from '../editor/ldf-editor/editor-state';
 import { isCompletelyCompiled } from './is-completely-rendered';
 
@@ -75,6 +74,8 @@ export class PrayPage implements OnInit, OnDestroy {
   editorState$ : Observable<EditorState>;
   editorStatus$ : Observable<EditorStatus>;
   latestDoc : LiturgicalDocument | undefined;
+  newSlug : string | undefined;
+  newLabel : string | undefined;
 
   constructor(
     private router : Router,
@@ -120,7 +121,9 @@ export class PrayPage implements OnInit, OnDestroy {
   
     // `LiturgicalDocument`s that match the language/version/slug passed in the URL
     const liturgy$ : Observable<LiturgicalDocument[]> = this.route.params.pipe(
-      switchMap(({ docId, orgId, slug, language, version, liturgy }) => {
+      switchMap(({ docId, orgId, slug, language, version, liturgy, newSlug, newLabel }) => {
+        this.newSlug = newSlug;
+        this.newLabel = newLabel;
         if(docId) {
           return this.documents.findDocumentById(docId).pipe(
             map(doc => [doc])
@@ -372,16 +375,15 @@ export class PrayPage implements OnInit, OnDestroy {
       // next
       doc => {
         latestDoc = doc;
-        console.log('CPL (doc$ is complete?)', isCompletelyCompiled(doc))
       },
       // error — TODO
       e => console.warn('CPL caught error', e),
       // complete
       () => {
-        console.log('CPL (doc$ is complete)', latestDoc);
         subscription.unsubscribe();
         this.loadingController.dismiss();
-        console.log('CPL complete doc.id = ', latestDoc.id)
+        latestDoc.slug = this.newSlug;
+        latestDoc.label = this.newLabel;
         loading.dismiss();
         this.beginEditing(latestDoc);
       }
@@ -415,6 +417,7 @@ export class PrayPage implements OnInit, OnDestroy {
     // otherwise, create a new document
     else {
       combineLatest([this.userProfile$, this.userOrgs$]).pipe(
+        tap(data => console.log('beginEditing data =', data)),
         filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
         takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
         switchMap(async ([userProfile, orgs]) =>

@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: ':language/:version/:kalendar/:y/:m/:d/:liturgy', component: PrayPage },
   { path: ':language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs', component: PrayPage },
   { path: ':language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs/:vigil', component: PrayPage },
+  { path: ':language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs/:newSlug/:newLabel', component: PrayPage },
   {
     path: '',
     component: PrayPage

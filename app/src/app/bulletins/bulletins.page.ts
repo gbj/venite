@@ -31,7 +31,6 @@ const docSearch = (includeBulletins : boolean, includeTemplates : boolean, inclu
 .sort((a, b) => {
   const aDate = a.data.date_modified?.toDate(),
     bDate = b.data.date_modified?.toDate();
-  console.log('dates = ', aDate > bDate, aDate, bDate, a, b)
   return aDate > bDate ? -1 : 1;
 });
 

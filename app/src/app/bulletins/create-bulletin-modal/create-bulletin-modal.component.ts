@@ -67,10 +67,8 @@ export class CreateBulletinModalComponent implements OnInit {
                 text: this.translate.instant("editor.cancel"),
                 role: 'cancel',
                 cssClass: 'secondary',
-                handler: () => console.log('cancel')
               }, {
                 text: this.translate.instant("editor.create"),
-                handler: () => console.log('ok')
               }
             ]
           });
@@ -110,6 +108,7 @@ export class CreateBulletinModalComponent implements OnInit {
                         })
                       });
 
+                      console.log('liturgy now = ', event.state.liturgy);
                       this.router.navigate(
                         event.commands,
                         {
@@ -124,19 +123,14 @@ export class CreateBulletinModalComponent implements OnInit {
               });
     
               await alert.present();
-            } else {
-              console.log('no duplicates');
             }
           }
         }
     
         // navigate to the newly-created bulletin
-        console.log('proceed', proceed);
-
         if(proceed) {
-          console.log('proceed');
           this.router.navigate(
-            event.commands,
+            event.commands.concat([event.state.liturgy.slug, event.state.liturgy.label]),
             {
               state: event.state,
               skipLocationChange: true
