@@ -77,15 +77,15 @@
       </ion-label>
       <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
         <ion-button (click)="download(doc.data)">
-          <ion-label class="visually-hidden">{{ 'editor.download' | translate }}</ion-label>
-          <ion-icon slot="icon-only" name="download"></ion-icon>
+          <ion-label slot="start" class="sm-hidden">{{ 'editor.download' | translate }}</ion-label>
+          <ion-icon slot="end" name="download"></ion-icon>
         </ion-button>
         <ion-button (click)="copy(userProfile, doc.data)">
-          <ion-label class="visually-hidden">{{ 'editor.copy' | translate }}</ion-label>
-          <ion-icon slot="icon-only" name="copy"></ion-icon>
+          <ion-label slot="start" class="sm-hidden">{{ 'editor.copy' | translate }}</ion-label>
+          <ion-icon slot="end" name="copy"></ion-icon>
         </ion-button>
         <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
-          <ion-label class="visually-hidden">{{ 'editor.delete' | translate }}</ion-label>
+          <ion-label slot="start" class="visually-hidden">{{ 'editor.delete' | translate }}</ion-label>
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -104,15 +104,15 @@
         </ion-label>
         <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
           <ion-button (click)="download(doc.data)">
-            <ion-label class="sm-hidden">{{ 'editor.download' | translate }}</ion-label>
-            <ion-icon slot="icon-only" name="download"></ion-icon>
+            <ion-label slot="start" class="sm-hidden">{{ 'editor.download' | translate }}</ion-label>
+            <ion-icon slot="end" name="download"></ion-icon>
           </ion-button>
           <ion-button (click)="copy(userProfile, doc.data)">
-            <ion-label class="sm-hidden">{{ 'editor.copy' | translate }}</ion-label>
-            <ion-icon slot="icon-only" name="copy"></ion-icon>
+            <ion-label slot="start" class="sm-hidden">{{ 'editor.copy' | translate }}</ion-label>
+            <ion-icon slot="end" name="copy"></ion-icon>
           </ion-button>
           <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
-            <ion-label class="sm-hidden">{{ 'editor.delete' | translate }}</ion-label>
+            <ion-label class="visually-hidden">{{ 'editor.delete' | translate }}</ion-label>
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -131,9 +131,11 @@
         </ion-label>
         <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
           <ion-button (click)="copy(userProfile, doc.data)">
-            <ion-icon slot="icon-only" name="copy"></ion-icon>
+            <ion-label slot="start" class="sm-hidden">{{ 'editor.copy' | translate }}</ion-label>
+            <ion-icon slot="end" name="copy"></ion-icon>
           </ion-button>
           <ion-button (click)="delete(doc.id, doc.data?.label || doc.data?.slug)">
+            <ion-label slot="start" class="visually-hidden">{{ 'editor.delete' | translate }}</ion-label>
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>
         </ion-buttons>
