@@ -30,7 +30,7 @@ export class ScrollVanishDirective {
       debounceTime(50)
     )
     .subscribe(scrollEvent => {
-      console.log('scrollVanish', scrollEvent);
+      //console.log('scrollVanish', scrollEvent);
       const delta = scrollEvent.detail.deltaY;
 
       if (scrollEvent.detail.currentY === 0 && this.hidden) {

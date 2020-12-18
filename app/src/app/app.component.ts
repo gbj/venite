@@ -43,7 +43,7 @@ export class AppComponent {
 //      this.splashScreen.hide();
 
       this.darkMode.prefersDark.subscribe(prefersDark => {
-        console.log('now prefers dark', prefersDark);
+        //console.log('now prefers dark', prefersDark);
         document.body.classList.toggle('dark', prefersDark);
       });
     });

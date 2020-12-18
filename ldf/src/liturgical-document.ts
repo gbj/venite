@@ -194,7 +194,7 @@ export class LiturgicalDocument {
         return condition.include(day || this.day, prefs);
       });
 
-      console.log(evaluatedConditions);
+      //console.log(evaluatedConditions);
 
       if (this.condition.mode == 'or') {
         return evaluatedConditions.reduce((a, b) => a || b);

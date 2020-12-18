@@ -214,7 +214,7 @@ export class MeditationComponent {
       progressAmount : number = this.secondsRemaining / length,
       progressPercent : number = progressAmount * 100;
   
-    console.log('meditation', length, progressAmount, progressPercent)
+    //console.log('meditation', length, progressAmount, progressPercent)
 
     return (
       this.editable

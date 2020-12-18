@@ -123,7 +123,7 @@ export class BulletinsPage implements OnInit {
         }))
         .concat(templates)
       ),
-      tap(tpls => console.log('templates = ', tpls))
+      //tap(tpls => //console.log('templates = ', tpls))
     )
   }
 

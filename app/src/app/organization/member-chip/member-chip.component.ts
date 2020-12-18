@@ -22,7 +22,7 @@ export class MemberChipComponent implements OnInit {
 
   ngOnInit() {
     this.user$ = merge(of(this.user), this.auth.getUserProfile(this.uid)).pipe(
-      tap(profile => console.log('member chip, profile = ')),
+      //tap(profile => //console.log('member chip, profile = ')),
       filter(profile => !!profile)
     );
   }

@@ -82,7 +82,7 @@ export class PrayService {
             day,
             value: compiledChildren
           })),
-          tap(doc => console.log('latest compiled form is', doc))
+          //tap(doc => //console.log('latest compiled form is', doc))
         );
       }
 

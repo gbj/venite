@@ -253,7 +253,7 @@ export class OptionComponent {
 
   // Render
   render() {
-    console.log('ldf-option (render) ', this.obj?.metadata.selected, this.obj.value, this.selectedDoc)
+    //console.log('ldf-option (render) ', this.obj?.metadata.selected, this.obj.value, this.selectedDoc)
 
     return (
       <Host lang={this.obj.language}>

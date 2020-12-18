@@ -48,7 +48,7 @@ export class DownloadService {
           let binaryString = await this.readAsBinaryString(blob);
           let base64String = btoa(binaryString);
 
-          console.log(FilesystemDirectory.Documents, filename)
+          //console.log(FilesystemDirectory.Documents, filename)
           const writeFileResult = await Filesystem.writeFile({
             path: filename,
             data: base64String,
@@ -60,7 +60,7 @@ export class DownloadService {
           });
 
           /*this.fileOpener.open(uri.uri, filetype)
-            .then(() => console.log('File is opened'))
+            .then(() => //console.log('File is opened'))
             .catch(async e => {
               const toast = await this.toast.create({
                 header: 'Trouble opening the Word document!',

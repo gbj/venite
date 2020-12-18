@@ -65,8 +65,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    document.addEventListener('editorAskForCanticleOptions', (e) => console.log('editorAskForCanticleOptions', e))
-
     this.editorStatus = this.editorService.status;
 
     this.state$ = this.editorService.editorState(this.docId).pipe(
@@ -83,7 +81,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
   // Called whenever the user's cursor moves within this editor
   updateCursor(docId : string, ev : CustomEvent) {
-    console.log('update cursor', docId, ev.detail);
+    //console.log('update cursor', docId, ev.detail);
     this.editorService.updateCursor(docId, ev.detail);
   }
 
@@ -99,7 +97,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       el = querySelectorDeep(`[path="${path}"]`);
     el.setAttribute("editable", "true");
     el.setAttribute("preview", "false");
-    //console.log('added at', path, );
+    ////console.log('added at', path, );
   }
 
   addBlockAsOption(manager : LocalDocumentManager, ev : CustomEvent) {
@@ -186,7 +184,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           value
         }))
     });
-    console.log(change);
+    //console.log(change);
     this.editorService.processChange(manager, change);*/
     template.reverse().forEach(value => {
       this.editorService.processChange(
@@ -205,7 +203,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
   replace(manager : LocalDocumentManager, base : string, index : number,  oldValue : LiturgicalDocument, template : LiturgicalDocument[]) {
     const path = `${base}/${index}`;
-    console.log('replacing', path, 'with', template[0]);
+    //console.log('replacing', path, 'with', template[0]);
     // TODO: handle trying to insert an Array (like a hymn) as an Option field, which won't work unless we pack it up as a Liturgy
     const change = new Change({
       path,
@@ -228,7 +226,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // in response, we should call the setVersions and setOptions methods of that component
   // setVersions(Record<string, string>) and setOptions(LiturgicalDocument[])
   sendCanticleOptions(ev : CustomEvent, versions : Record<string, string>, options : LiturgicalDocument[]) {
-    console.log('sendCanticleOptions', versions, options)
+    //console.log('sendCanticleOptions', versions, options)
     ev.detail.setVersions(versions);
     ev.detail.setOptions(options);
   }

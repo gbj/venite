@@ -62,7 +62,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     this.completeSubscription = completed.pipe(
       take(1),
       tap(val => {
-        console.log('completeSubscription', val)
+        //console.log('completeSubscription', val)
       })
     ).subscribe(addition => this.modal.dismiss(addition));
   }
@@ -130,7 +130,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalTable = this.documentService.getVersions(this.language, 'canticle-table');
           return this.complete;
         case 'hymn':
-          console.log('loading a hymn!');
+          //console.log('loading a hymn!');
           this.additionalMode = 'hymn';
           return this.complete;
         case 'liturgy':

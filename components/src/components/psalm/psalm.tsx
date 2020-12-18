@@ -105,7 +105,7 @@ export class PsalmComponent {
       // antiphon is something like an O antiphon tree:
       // { '12/23': '...', '12/24': '...' }
       const date = this.obj.day ? dateFromYMDString(this.obj?.day?.date) : new Date();
-      console.log('antiphon is an object', date, antiphon[`${date.getMonth()+1}/${date.getDate()}`])
+      //console.log('antiphon is an object', date, antiphon[`${date.getMonth()+1}/${date.getDate()}`])
       return this.antiphonNode(antiphon[`${date.getMonth()+1}/${date.getDate()}`]);
     }
   }

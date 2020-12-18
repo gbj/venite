@@ -20,7 +20,7 @@ export class LectionaryService {
     // lectionaries that include readings for black-letter days
     const BLACK_LETTER_LECTIONARIES = ['lff2018'];
 
-    console.log('getReadings lectionary = ', lectionaryName);
+    //console.log('getReadings lectionary = ', lectionaryName);
     
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
@@ -32,8 +32,7 @@ export class LectionaryService {
     }
     // if lectionary is a "black-letter lectionary"
     else if(BLACK_LETTER_LECTIONARIES.includes(lectionaryName)) {
-      const days = (day.holy_days || []).map(holyDay => holyDay.slug).filter(slug => slug !== undefined)
-      console.log('getReadings - black-letter lectionary', lectionaryName, day, days, readingType)
+      const days = (day.holy_days || []).map(holyDay => holyDay.slug).filter(slug => slug !== undefined);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
         let query : firebase.firestore.Query = ref.where('lectionary', '==', lectionaryName)
@@ -47,9 +46,7 @@ export class LectionaryService {
         }
 
         return query;
-      }).valueChanges().pipe(
-        tap(entries => console.log('getReadings black-letter =>', entries))
-      );
+      }).valueChanges();
     }
     // search for other readings in our DB
     else {
@@ -84,9 +81,7 @@ export class LectionaryService {
 
           return query;
         }
-      }).valueChanges().pipe(
-        tap(entries => console.log('getReadings =>', entries))
-      );
+      }).valueChanges();
     }
   }
 

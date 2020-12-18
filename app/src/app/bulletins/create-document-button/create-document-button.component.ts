@@ -106,7 +106,7 @@ export class CreateDocumentButtonComponent implements OnInit {
   
     return this.documents.myOrgDocExists(org, uid, s).pipe(
       take(1),
-      tap(exists => console.log('uniqueSlugify', org, s, uid, 'exists?', exists)),
+      //tap(exists => //console.log('uniqueSlugify', org, s, uid, 'exists?', exists)),
       switchMap(exists => {
         if(exists) {
           const [n, inc] = s.split(/-(\d+)/);

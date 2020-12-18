@@ -13,7 +13,7 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+  .catch(err => console.warn(err));
 
 // load Venite custom elements
 applyPolyfills().then(() => {

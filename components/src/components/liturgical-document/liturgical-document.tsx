@@ -209,7 +209,7 @@ export class LiturgicalDocumentComponent {
           parentType={this.parentType}
           preview={this.preview}
           onLdfTogglePreview={(e : CustomEvent) => {
-            console.log(e);
+            //console.log(e);
             const preview = e.detail;
             this.preview = preview;
             this.editable = true;

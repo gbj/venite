@@ -50,7 +50,7 @@ export class JoinOrganizationComponent implements OnInit {
 
   async createOrganization(name : string) {
     const user = this.auth.currentUser();
-    console.log('creating organization with user', user);
+    //console.log('creating organization with user', user);
     await this.organizationService.create(name, user.uid);
     this.complete.emit(true);
   }

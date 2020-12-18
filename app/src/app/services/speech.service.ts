@@ -243,7 +243,7 @@ export class SpeechService {
         )
       )
       .flat();
-    console.log('(speech) speakDoc', utterances);
+    //console.log('(speech) speakDoc', utterances);
     return concat(
       ... utterances
     );

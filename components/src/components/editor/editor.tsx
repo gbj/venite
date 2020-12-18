@@ -168,11 +168,11 @@ export class EditorComponent {
   }
 
   @Listen('ldfAskForCanticleOptions', { target: 'document' })
-  onAskForCanticleOptions(ev : CustomEvent) {
+  onAskForCanticleOptions(/*ev : CustomEvent*/) {
     //const target = elementFromPath(ev.target as HTMLElement, ev.detail);
-    //console.log('onAskFor...', ev)
-    const target = querySelectorDeep('ldf-editable-filter-documents', ev.target);
-    console.log('onAskFor...', target)
+    ////console.log('onAskFor...', ev)
+    //const target = querySelectorDeep('ldf-editable-filter-documents', ev.target);
+    //console.log('onAskFor...', target)
     this.editorAskForCanticleOptions.emit(querySelectorDeep('ldf-editable-filter-documents'));
   }
 

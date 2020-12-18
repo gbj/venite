@@ -108,7 +108,7 @@ export class CreateBulletinModalComponent implements OnInit {
                         })
                       });
 
-                      console.log('liturgy now = ', event.state.liturgy);
+                      //console.log('liturgy now = ', event.state.liturgy);
                       this.router.navigate(
                         event.commands,
                         {

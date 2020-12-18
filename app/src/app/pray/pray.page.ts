@@ -177,7 +177,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$ : Observable<ClientPreferences> = combineLatest(liturgy$, this.route.params).pipe(
-      tap(data => console.log('prefs$ prefs = ', data)),
+      //tap(data => //console.log('prefs$ prefs = ', data)),
       map(([liturgy, { prefs }]) => ({liturgy, prefs: JSON.parse(prefs ?? '{}') })),
       map(({liturgy, prefs}) => liturgy[0] && liturgy[0].type == 'liturgy'
         ? Object.assign(
@@ -197,7 +197,7 @@ export class PrayPage implements OnInit, OnDestroy {
     // Unifies everything from the router params
     const routerParamState$ : Observable<PrayState> = combineLatest(liturgy$, day$, prefs$).pipe(
       map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs })),
-      tap(state => console.log('routerParamState', state))
+      //tap(state => //console.log('routerParamState', state))
     );
 
     // Unite the data passed from the state and the data derived from the route
@@ -209,7 +209,7 @@ export class PrayPage implements OnInit, OnDestroy {
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
       switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
-      tap(doc => console.log('CPL stateDoc$', doc))
+      //tap(doc => //console.log('CPL stateDoc$', doc))
     );
 
     if(this.bulletinMode) {
@@ -365,7 +365,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
     const doc$ = stateDoc$.pipe(
       /*tap(doc => {
-        console.log('stateDoc$ = ', doc);
+        //console.log('stateDoc$ = ', doc);
         latestDoc = doc;
       }),*/
       takeWhile(doc => !isCompletelyCompiled(doc), true),
@@ -417,7 +417,7 @@ export class PrayPage implements OnInit, OnDestroy {
     // otherwise, create a new document
     else {
       combineLatest([this.userProfile$, this.userOrgs$]).pipe(
-        tap(data => console.log('beginEditing data =', data)),
+        //tap(data => //console.log('beginEditing data =', data)),
         filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
         takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
         switchMap(async ([userProfile, orgs]) =>
@@ -619,7 +619,7 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechSubscription = utterances$
     .subscribe(
       (data : SpeechServiceTracking) => {
-        console.log('(speech) speechService', data);
+        //console.log('(speech) speechService', data);
         if(this.speechPlayingSubDoc !== data.subdoc) {
           this.speechUtteranceAtStartOfSubDoc = data.utterance;
         }
@@ -643,7 +643,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
   scrollToSubdoc(subdoc : number) {
     const domRepresentation = querySelectorDeep(`[path='/value/${subdoc}']`);
-    console.log('scrolling to subdoc', subdoc, domRepresentation, domRepresentation.getBoundingClientRect());
+    //console.log('scrolling to subdoc', subdoc, domRepresentation, domRepresentation.getBoundingClientRect());
     if(domRepresentation) {
       const y = domRepresentation.getBoundingClientRect().top;
       this.contentEl.scrollByPoint(0, y - 100, 50);
@@ -660,16 +660,16 @@ export class PrayPage implements OnInit, OnDestroy {
   rewind(doc : LiturgicalDocument, settings : DisplaySettings) {
     this.speechSubscription.unsubscribe();
     if(this.speechPlayingUtterance - this.speechUtteranceAtStartOfSubDoc < 5) {
-      console.log('rewind to previous doc')
+      //console.log('rewind to previous doc')
       this.startSpeechAt(doc, settings, this.speechPlayingSubDoc - 2 >= 0 ? this.speechPlayingSubDoc - 2 : 0);
     } else {
-      console.log('rewind to beginning of this doc')
+      //console.log('rewind to beginning of this doc')
       this.startSpeechAt(doc, settings, this.speechPlayingSubDoc);
     }
   }
   fastForward(doc : LiturgicalDocument, settings : DisplaySettings) {
     this.speechSubscription.unsubscribe();
-    console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
+    //console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
     this.startSpeechAt(doc, settings, this.speechPlayingSubDoc + 1);
   }
 

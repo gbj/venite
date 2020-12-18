@@ -37,7 +37,7 @@ export class UploadImageComponent implements OnInit {
   }
 
   handleFiles(event : Event) {
-    console.log('handleFiles', event);
+    //console.log('handleFiles', event);
     
     const file = (<HTMLInputElement>event.target).files[0];
     if(file.type.startsWith('image')) {

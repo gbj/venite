@@ -56,7 +56,7 @@ export class DocumentService {
     return this.afs.collection<LiturgicalDocument>('Document', ref => {
       let builtQuery = ref.where('sharing.status', '==', 'published').where('sharing.privacy', '==', 'public');
       Object.entries(query).forEach(([prop, value]) => {
-        console.log('where ', prop, '==', value);
+        //console.log('where ', prop, '==', value);
         builtQuery = builtQuery.where(prop, '==' , value);
       });
       return builtQuery;

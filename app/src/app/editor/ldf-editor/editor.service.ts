@@ -70,7 +70,7 @@ export class EditorService {
     
         // update the document once every 3s
         const docSaved$ = combineLatest(localManager$, revisions$).pipe(
-          tap(([localManager, revisions]) => console.log('change made, saving')),
+          //tap(([localManager, revisions]) => //console.log('change made, saving')),
           debounceTime(3000),
           switchMap(([localManager, ]) => this.documents.saveDocument(localManager.docId, {
             ... localManager.document,
@@ -183,8 +183,8 @@ export class EditorService {
       tap(({ server, local }) => {
         // if we lose connection, try to resend last
         this._onlineListener = () => {
-          console.log('back online');
-          console.log(local.value.hasBeenAcknowledged);
+          //console.log('back online');
+          //console.log(local.value.hasBeenAcknowledged);
           this.sendNextChange(local.value);
         };
         window?.addEventListener('online', this._onlineListener)
@@ -286,9 +286,9 @@ export class EditorService {
         // optimistically update the doc
         manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
 
-        console.log('old state of document is', manager.document);
-        console.log('op is', change.op);
-        console.log('new state of document after change is ', manager.document, 'from op', change.op);
+        //console.log('old state of document is', manager.document);
+        //console.log('op is', change.op);
+        //console.log('new state of document after change is ', manager.document, 'from op', change.op);
 
         manager.lastSyncedRevision = change.lastRevision;
 
@@ -391,8 +391,8 @@ export class EditorService {
     // take this as an acknowledgment, and send any additional changes
     // localManager.hasBeenAcknowledged = true;
     if(localManager.hasBeenAcknowledged && localManager.pendingChanges.length > 0) {
-      console.log('sending next change from applyChanges')
-      console.log('starting point value for next document change', localManager.document.value)
+      //console.log('sending next change from applyChanges')
+      //console.log('starting point value for next document change', localManager.document.value)
       setTimeout(() => this.sendNextChange(localManager), 1);
     }
   }
@@ -434,7 +434,7 @@ export class EditorService {
     op.p = op.p.map(p => Number(p) >= 0 ? Number(p) : p); 
     const indexedP = op.index !== undefined ? op.p.concat(Number(op.index) >= 0 ? Number(op.index) : op.index) : op.p;
 
-    console.log('(EditorService) buildOp', op);
+    //console.log('(EditorService) buildOp', op);
 
     // generate json1 op depending on the type
     switch(op.type) {

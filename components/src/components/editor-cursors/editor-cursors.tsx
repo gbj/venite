@@ -36,12 +36,12 @@ export class EditorComponent {
   cursorsChanged() {
     this.clearCursors();
     this.resetCursors();
-    console.log('(ldf-editor-cursors) cursors updated, to ', this.cursors, ' now ', this.cursorPos);
+    //console.log('(ldf-editor-cursors) cursors updated, to ', this.cursors, ' now ', this.cursorPos);
   }
 
   // Life Cycle
   componentWillLoad() {
-    console.log('(ldf-editor-cursors) initial cursor load, cursors = ', this.cursors);
+    //console.log('(ldf-editor-cursors) initial cursor load, cursors = ', this.cursors);
     this.cursorsChanged();
   }
 
