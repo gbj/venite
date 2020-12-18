@@ -451,6 +451,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
+    console.log('changeDoc', event.detail);
     const op = this.editorService.opFromChange(event.detail);
     const newValue = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(doc)), op) as Partial<LiturgicalDocument>);
     this.modifiedDoc$.next(newValue);

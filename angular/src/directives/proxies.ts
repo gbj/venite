@@ -1524,8 +1524,8 @@ export class LdfMeditation {
 }
 
 export declare interface LdfOption extends Components.LdfOption {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['select']})
-@Component({ selector: 'ldf-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({inputs: ['doc', 'editable', 'path', 'preview'], 'methods': ['select']})
+@Component({ selector: 'ldf-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path', 'preview'] })
 export class LdfOption {
   ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
   ldfDocShouldChange!: EventEmitter<CustomEvent>;

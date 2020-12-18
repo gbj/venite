@@ -12,6 +12,7 @@
 | `doc`      | `doc`      | An LDF Option object.                                 | `Option \| string` | `undefined` |
 | `editable` | `editable` | Whether the object is editable                        | `boolean`          | `undefined` |
 | `path`     | `path`     | A JSON Pointer that points to the Option being edited | `string`           | `undefined` |
+| `preview`  | `preview`  | Whether the object is in preview mode                 | `boolean`          | `undefined` |
 
 
 ## Events

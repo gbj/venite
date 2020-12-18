@@ -166,7 +166,7 @@ export class LiturgicalDocumentComponent {
         node = <ldf-meditation path={this.path} editable={this.editable || this.preview} doc={doc as Meditation} color={colorValue}></ldf-meditation>;
         break;
       case 'option':
-        node = <ldf-option path={this.path} editable={editable} doc={doc as Option}></ldf-option>;
+        node = <ldf-option path={this.path} editable={editable} preview={this.preview} doc={doc as Option}></ldf-option>;
         break;
       case 'refrain':
         node = <ldf-refrain path={this.path} editable={editable} doc={doc as Refrain}></ldf-refrain>;

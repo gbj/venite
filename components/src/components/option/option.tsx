@@ -60,6 +60,11 @@ export class OptionComponent {
    */
   @Prop() editable : boolean;
 
+  /**
+   * Whether the object is in preview mode
+   */
+  @Prop() preview : boolean;
+
   // Events
   @Event({ bubbles: true }) ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
@@ -95,8 +100,9 @@ export class OptionComponent {
         this.obj.metadata = { selected: Number(index), editor_selected: Number(index) }
       }
 
-        
-      if(resultedFromUserAction && !this.editable) {
+      // only change the selection at this point if it's not editable
+      // if it's editable, the editor will control when it changes
+      if(resultedFromUserAction && !this.editable && !this.preview) {
         this.ldfDocShouldChange.emit(new Change({
           path: `${this.path}/metadata`,
           op: [{
