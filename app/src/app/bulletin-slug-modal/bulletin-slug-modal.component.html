@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">{{ 'bulletins.create-a-bulletin' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="org$ | async as org">
+  <p *ngIf="!templateMode">{{ 'bulletins.title-url-message' | translate:{base: '/pray/'+org} }}</p>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">{{'bulletins.title' | translate }}</ion-label>
+      <ion-input [(ngModel)]="label"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!templateMode">
+      <ion-label position="stacked">{{'bulletins.url' | translate:{base: '/pray/'+org} }}</ion-label>
+      <ion-input [(ngModel)]="slug"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="templateMode">
+      <ion-label position="stacked">{{'bulletins.slug' | translate }}</ion-label>
+      <ion-input [(ngModel)]="slug"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="dismiss()">
+        <ion-label>{{ 'editor.cancel' | translate }}</ion-label>
+      </ion-button>
+      <ion-button fill="clear" (click)="confirm()">
+        <ion-label>{{ 'editor.create' | translate }}</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-content>

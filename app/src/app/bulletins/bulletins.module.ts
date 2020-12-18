@@ -12,6 +12,7 @@ import { AuthModule } from '../auth/auth.module';
 import { CreateDocumentButtonComponent } from './create-document-button/create-document-button.component';
 import { PrayMenuModule } from '@venite/ng-pray-menu';
 import { CreateBulletinModalComponent } from './create-bulletin-modal/create-bulletin-modal.component';
+import { BulletinSlugModalComponent } from '../bulletin-slug-modal/bulletin-slug-modal.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,6 @@ import { CreateBulletinModalComponent } from './create-bulletin-modal/create-bul
     AuthModule,
     PrayMenuModule
   ],
-  declarations: [BulletinsPage, CreateDocumentButtonComponent, CreateBulletinModalComponent]
+  declarations: [BulletinsPage, CreateDocumentButtonComponent, CreateBulletinModalComponent, BulletinSlugModalComponent]
 })
 export class BulletinsPageModule {}

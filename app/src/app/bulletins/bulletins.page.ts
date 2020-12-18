@@ -7,6 +7,7 @@ import { Observable, BehaviorSubject, of, combineLatest } from 'rxjs';
 import { filter, switchMap, map, tap } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { UserProfile } from '../auth/user/user-profile';
+import { BulletinSlugModalComponent } from '../bulletin-slug-modal/bulletin-slug-modal.component';
 import { BLANK_TEMPLATES } from '../editor/blank-templates';
 import { EditorService } from '../editor/ldf-editor/editor.service';
 import { OrganizationService } from '../organization/organization.module';
@@ -169,8 +170,22 @@ export class BulletinsPage implements OnInit {
   }
 
   async copy(userProfile : UserProfile, doc : LiturgicalDocument) {
-    const newDocId = await this.documents.newDocument(doc);
-    this.joinDocument(newDocId);
+    const modal = await this.modal.create({ component: BulletinSlugModalComponent });
+    modal.componentProps = {
+      modal,
+      slug: doc.slug,
+      label: doc.label,
+      templateMode: this.mode === 'templates'
+    }
+    await modal.present();
+    const response = await modal.onDidDismiss();
+    if(response?.data) {
+      const { slug, label } = response.data;
+      doc.slug = slug;
+      doc.label = label; 
+      const newDocId = await this.documents.newDocument(doc);
+      this.joinDocument(newDocId);
+    }
   }
 
   async delete(docId : string, label : string) {
