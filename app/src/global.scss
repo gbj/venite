@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -47,28 +47,28 @@ body {
   --ldf-tab-width: 0.25em;
   --ldf-half-tab-width: 0.125em;
 
-  @media(min-width: 767px) {
+  @media (min-width: 767px) {
     --ldf-tab-width: 0.5em;
     --ldf-half-tab-width: 0.25em;
   }
 
-	--ldf-drop-float: left;
-	--ldf-drop-early-verses-display: none;
-	--ldf-gloria-indent: 2em;
-	--ldf-response-font-weight: bold;
+  --ldf-drop-float: left;
+  --ldf-drop-early-verses-display: none;
+  --ldf-gloria-indent: 2em;
+  --ldf-response-font-weight: bold;
   --ldf-response-font-style: normal;
-	--ldf-text-border-width: 1px;
-	--ldf-text-border-bottom-width: 3px;
-	--ldf-text-border-radius: 4px;
-	--ldf-rubric-color: rgb(252, 13, 27);
-	--ldf-rubric-font-style: italic;
-	--ldf-rubric-font-weight: normal;
-	--ldf-rubric-font-size: 90%;
-	--ldf-antiphon-font-style: italic;
-	--ldf-antiphon-font-weight: normal;
-	--ldf-drop-firstword-font-variant: small-caps;
-	--ldf-drop-font-size: 2.3em;
-	--ldf-drop-margin-right: 0.05em;
+  --ldf-text-border-width: 1px;
+  --ldf-text-border-bottom-width: 3px;
+  --ldf-text-border-radius: 4px;
+  --ldf-rubric-color: rgb(252, 13, 27);
+  --ldf-rubric-font-style: italic;
+  --ldf-rubric-font-weight: normal;
+  --ldf-rubric-font-size: 90%;
+  --ldf-antiphon-font-style: italic;
+  --ldf-antiphon-font-weight: normal;
+  --ldf-drop-firstword-font-variant: small-caps;
+  --ldf-drop-font-size: 2.3em;
+  --ldf-drop-margin-right: 0.05em;
   --ldf-drop-line-height: 1em;
   --ldf-buffered-drop-margin-right: 0.15em;
   --ldf-bible-reading-verse-number-display: inline;
@@ -79,15 +79,15 @@ body {
   --ldf-heading-margin-top: 3em;
 
   /* Font preference */
-  --ldf-font-face: 'Cormorant Garamond', 'Garamond', serif;
-  --ldf-controls-font-family: 'Roboto', sans-serif;
+  --ldf-font-face: "Cormorant Garamond", "Garamond", serif;
+  --ldf-controls-font-family: "Roboto", sans-serif;
 
   .font-eb-garamond {
-    --ldf-font-face: 'EB Garamond', 'Garamond', serif;
+    --ldf-font-face: "EB Garamond", "Garamond", serif;
   }
 
   .font-gill-sans {
-    --ldf-font-face: 'Gill Sans', sans-serif;
+    --ldf-font-face: "Gill Sans", sans-serif;
   }
 
   /* Label/Header Styling */
@@ -97,15 +97,15 @@ body {
   --ldf-title-font-variant: small-caps;
   --ldf-title-font-size: 2em;
 
-	--ldf-title-text-align: center;
-	--ldf-title-font-weight: bold;
-	--ldf-title-font-style: normal;
-	--ldf-title-font-variant: small-caps;
+  --ldf-title-text-align: center;
+  --ldf-title-font-weight: bold;
+  --ldf-title-font-style: normal;
+  --ldf-title-font-variant: small-caps;
   --ldf-title-font-size: 2em;
-  
-	--ldf-subtitle-font-style: normal;
-	--ldf-subtitle-font-weight: normal;
-	--ldf-subtitle-font-variant: normal;
+
+  --ldf-subtitle-font-style: normal;
+  --ldf-subtitle-font-weight: normal;
+  --ldf-subtitle-font-variant: normal;
   --ldf-subtitle-font-size: 1.5em;
   --ldf-subtitle-text-align: left;
 
@@ -158,7 +158,8 @@ body {
   --ldf-text-border-bottom-width: 3px;
   --ldf-text-border-radius: 4px;
   --ldf-text-focus-border: var(--ldf-text-border-width) solid grey;
-  --ldf-text-focus-border-bottom: var(--ldf-text-border-bottom-width) solid green;
+  --ldf-text-focus-border-bottom: var(--ldf-text-border-bottom-width) solid
+    green;
 
   /* Rubric styling */
   --ldf-rubric-color: red;
@@ -182,8 +183,8 @@ body {
   --ldf-psalm-verse-display: inline-block;
   --ldf-psalm-first-verse-display: inline;
   --ldf-psalm-number-margin-right: 0.5em;
-	--ldf-psalm-antiphon-display: block;
-	--ldf-psalm-repeat-antiphon-display: block;
+  --ldf-psalm-antiphon-display: block;
+  --ldf-psalm-repeat-antiphon-display: block;
 
   .psalmverses-false {
     --ldf-psalm-number-display: none;
@@ -206,7 +207,8 @@ body {
 
   /* Dropcap styling */
   --ldf-drop-firstword-font-variant: small-caps;
-  --ldf-drop-font-family: 'Cormorant Garamond Initials', 'Cormorant Garamond', 'Garamond', serif;
+  --ldf-drop-font-family: "Cormorant Garamond Initials", "Cormorant Garamond",
+    "Garamond", serif;
   --ldf-drop-font-size: 2.5em;
   --ldf-drop-margin-right: 0.05em;
 
@@ -228,7 +230,7 @@ body {
   }
 
   .dropcaps-decorated {
-    --ldf-drop-font-family: 'EB Garamond Initials';
+    --ldf-drop-font-family: "EB Garamond Initials";
     --ldf-drop-font-size: 2.7em;
     --ldf-drop-margin-right: 0.05em;
     --ldf-drop-margin-top: 0.15em;
@@ -236,13 +238,13 @@ body {
     --ldf-psalm-first-half-verse-display: inline;
   }
 
-  @media(min-width: 767px) {
+  @media (min-width: 767px) {
     --ldf-drop-font-size: 3.2em;
     --ldf-drop-margin-right: 0.05em;
     --ldf-drop-margin-top: 0;
-    --ldf-drop-line-height: .8em;
+    --ldf-drop-line-height: 0.8em;
 
-    .dropcaps-plain{
+    .dropcaps-plain {
       --ldf-drop-font-size: 3.5em;
       --ldf-drop-margin-right: 0.05em;
       --ldf-drop-margin-top: 0.1em;
@@ -264,16 +266,16 @@ body {
     }
   }
 
-    /* Date Headings */
-    --ldf-date-font-size: 1em;
-    --ldf-date-text-transform: none;
-    --ldf-date-text-align: center;
-    --ldf-date-font-style: italic;
+  /* Date Headings */
+  --ldf-date-font-size: 1em;
+  --ldf-date-text-transform: none;
+  --ldf-date-text-align: center;
+  --ldf-date-font-style: italic;
 
-    /* Font Sizes */
-    --ldf-max-width: 500px;
-    --ldf-preces-tr-display: table-row;
-    --ldf-preces-td-display: table-cell;
+  /* Font Sizes */
+  --ldf-max-width: 500px;
+  --ldf-preces-tr-display: table-row;
+  --ldf-preces-td-display: table-cell;
 
   .fontscale-s {
     font-size: 75%;
@@ -298,7 +300,7 @@ body {
     font-size: 200%;
   }
 
-  @media(min-width: 767px) {
+  @media (min-width: 767px) {
     .fontscale-s {
       font-size: 100%;
     }
@@ -324,7 +326,7 @@ body {
     }
   }
 
-  @media(min-width: 1068px) {
+  @media (min-width: 1068px) {
     .fontscale-s {
       font-size: 100%;
     }
@@ -351,9 +353,9 @@ body {
   }
 }
 
-.visually-hidden { 
+.visually-hidden {
   position: absolute !important;
-  height: 1px; 
+  height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -368,4 +370,16 @@ ul {
 .dark .bordered {
   border-width: 0 !important;
   background-color: var(--ldf-background-color) !important;
+}
+
+@media (max-width: 767px) {
+  .sm-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
 }
