@@ -7,7 +7,8 @@ import { catchError, filter, map, startWith, switchMap, take, tap } from 'rxjs/o
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString, Text } from '@venite/ldf';
 import { DTO } from './dto';
 import { Organization } from '../organization/organization';
-import * as firestore from 'firebase/firestore';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import { AuthService } from '../auth/auth.service';
 import { OrganizationService } from '../organization/organization.service';
 
@@ -351,8 +352,8 @@ export class DocumentService {
     await this.afs.collection('Document').doc(docId).set({
       ... JSON.parse(JSON.stringify(doc)),
       id: docId,
-      date_created: firestore.Timestamp.now(),
-      date_modified: firestore.Timestamp.now()
+      date_created: firebase.firestore.Timestamp.now(),
+      date_modified: firebase.firestore.Timestamp.now()
     });
     return docId;
   }
@@ -360,7 +361,7 @@ export class DocumentService {
   saveDocument(docId : string, doc : Partial<DTO<LiturgicalDocument>>) : Observable<any> {
     return from(this.afs.doc(`Document/${docId}`).set({
       ... JSON.parse(JSON.stringify({ ... doc, slug : doc.slug || this.slugify(doc)})),
-      date_modified: firestore.Timestamp.now()
+      date_modified: firebase.firestore.Timestamp.now()
     }));
   }
 
