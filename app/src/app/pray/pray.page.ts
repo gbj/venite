@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer, from } from 'rxjs';
-import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile } from 'rxjs/operators';
+import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile, distinct } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option, Change, unwrapOptions } from '@venite/ldf';
 import { ActionSheetController, IonContent, LoadingController, ModalController, NavController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
@@ -227,6 +227,7 @@ export class PrayPage implements OnInit, OnDestroy {
       map(day => day?.color),
       switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
       startWith('var(--ldf-background-color)'),
+      distinct()
     )
 
     // Grab display settings from preferences
