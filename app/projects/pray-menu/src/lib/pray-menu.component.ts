@@ -117,13 +117,22 @@ export class PrayMenuComponent implements OnInit {
   this.kalendarOptions = this.calendarService.findKalendars();
   this.sanctoralOptions = this.calendarService.findSanctorals();
 
-  // DB queries that depend on date change
-  // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
-  this.week = this.calendarService.buildWeek(this.date, this.kalendar, this.vigil);
+  if(!this.config.serverReturnsDate) {
+    // DB queries that depend on date change
+    // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
+    this.week = this.calendarService.buildWeek(this.date, this.kalendar, this.vigil);
 
-  // main liturgical day observable
-  this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy, this.week, this.vigil)
-    .pipe(tap(day => console.log('day = ', day)));
+    // main liturgical day observable
+    this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy, this.week, this.vigil);
+  } else {
+    this.liturgicalDay = this.calendarService.buildDay(
+      this.date,
+      this.kalendar,
+      this.liturgy.pipe(startWith(new Liturgy({ metadata: { evening: false }}))),
+      of([]),
+      this.vigil
+    )
+  }
 
   // Check readings
   this.availableReadings$ = combineLatest(this.liturgicalDay, this.clientPreferences).pipe(

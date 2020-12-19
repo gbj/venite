@@ -8,4 +8,5 @@ export interface PrayMenuConfig {
     component: any;
   },
   hasBulletinMode: boolean;
+  serverReturnsDate: boolean;
 }

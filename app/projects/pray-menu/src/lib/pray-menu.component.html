@@ -1,16 +1,18 @@
 <ion-card class="form">
   <!-- Header based on Liturgical Day -->
-  <ion-card-header *ngIf="liturgicalDay | async as day else blankHeader">
-    <ion-card-title>
-      <h1><ldf-day-name [day]="day"></ldf-day-name></h1>
-    </ion-card-title>
-    <ion-card-subtitle>
-      <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
-        <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
-        <li *ngIf="day.week?.proper">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
-      </ul>
-    </ion-card-subtitle>
-  </ion-card-header>
+  <ng-container *ngIf="liturgicalDay | async as day else blankHeader">
+    <ion-card-header>
+      <ion-card-title>
+        <h1><ldf-day-name [day]="day"></ldf-day-name></h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
+          <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
+          <li *ngIf="day.week?.proper">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
+        </ul>
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ng-container>
   <!-- Header if liturgical day has not loaded -->
   <ng-template #blankHeader>
     <ion-card-header>

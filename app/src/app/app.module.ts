@@ -96,7 +96,8 @@ import { PrayPageModule } from './pray/pray.module';
           preset: false,
           component: false
         },
-        hasBulletinMode: false
+        hasBulletinMode: false,
+        serverReturnsDate: true,
       },
       providers: [
         AuthService,
