@@ -48,7 +48,7 @@ export class PrayService {
     });
 
     // should the doc be included?
-    if(doc.include(new LiturgicalDay(day ?? this.day), prefs)) {
+    if(doc.include(new LiturgicalDay(this.day), prefs)) {
       // clear out condition info
       doc.condition = undefined;
 
@@ -84,7 +84,7 @@ export class PrayService {
             day: docBase.type === 'liturgy' ? day : undefined,
             value: compiledChildren
           })),
-          //tap(doc => console.log('latest compiled form is', doc))
+          //tap(doc => isCompletelyCompiled(doc) ? console.log('latest compiled form is', doc) : null)
         );
       }
 
@@ -454,7 +454,7 @@ export class PrayService {
   lookupBibleReading(doc : LiturgicalDocument, version : string = 'NRSV') : Observable<LiturgicalDocument> {
     return this.bibleService.getText(doc.citation, version).pipe(
       startWith(new BibleReading()),
-      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText.value })),
+      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText?.value })),
     );
   }
 

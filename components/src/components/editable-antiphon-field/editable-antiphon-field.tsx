@@ -163,13 +163,14 @@ export class EditableAntiphonFieldComponent {
           text: this.localeStrings.ok,
           handler: ({mmdd}) => {
             if(typeof this.currentAntiphon === 'object') {
+              const oldValue = this.currentAntiphon[mmdd];
               this.currentAntiphon[mmdd] = '';
               this.ldfDocShouldChange.emit(new Change({
                 path: `${this.path}/metadata/antiphon`,
                 op: [{
                   type: 'set',
                   index: mmdd,
-                  oldValue: this.currentAntiphon[mmdd],
+                  oldValue,
                   value: ''
                 }]
               }));
@@ -193,6 +194,23 @@ export class EditableAntiphonFieldComponent {
     });
 
     await alert.present();
+  }
+
+  async removeTableValue(mmdd : string) {
+    if(typeof this.currentAntiphon === 'object') {
+      this.currentAntiphon[mmdd] = undefined;
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/metadata/antiphon`,
+        op: [{
+          type: 'deleteAt',
+          index: mmdd,
+          oldValue: this.currentAntiphon[mmdd],
+        }]
+      }));
+      this.currentAntiphon = {
+        ... this.currentAntiphon
+      } as Record<string, string | Refrain>;
+    }
   }
 
   render() {
@@ -247,7 +265,7 @@ export class EditableAntiphonFieldComponent {
         />}
         {typeof this.currentAntiphon === 'object' && !Boolean(this.currentAntiphon.type) && <ion-item lines="none">
           <ion-grid>
-            {Object.keys(this.currentAntiphon).map(mmdd => <ion-row>
+            {Object.keys(this.currentAntiphon).map(mmdd => <ion-row key={mmdd}>
               {/* TODO
                 * Alert to get MM/DD (don't have an editable-text for MM/DD because it's an Object property)
                 * Delete at end of each row */}
@@ -261,17 +279,28 @@ export class EditableAntiphonFieldComponent {
                   value={this.currentAntiphon[mmdd]}
                 />
               </ion-col>
+              <ion-col size="1">
+                <ion-buttons>
+                  <ion-button fill="clear" onClick={() => this.removeTableValue(mmdd)}>
+                    <ion-label>
+                      <ion-icon slot="icon-only" name="trash"></ion-icon>
+                    </ion-label>
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
             </ion-row>)}
+            <ion-row>
+              <ion-toolbar>
+                <ion-buttons slot="end">
+                  <ion-button onClick={() => this.addTableValue()}>
+                    <ion-label>
+                      <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-label>
+                  </ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-row>
           </ion-grid>
-          <ion-toolbar>
-            <ion-buttons slot="end">
-              <ion-button onClick={() => this.addTableValue()}>
-                <ion-label>
-                  <ion-icon slot="icon-only" name="add"></ion-icon>
-                </ion-label>
-              </ion-button>
-            </ion-buttons>
-          </ion-toolbar>
         </ion-item>}
       </Host>
     );

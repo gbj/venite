@@ -5,7 +5,7 @@
   "text": "Text",
   "table": "Table",
   "add_table_value_header": "Add Antiphon for Date",
-  "add_table_value_message": "What date should the antiphon appear? (Month/Day)",
+  "add_table_value_message": "What date should the antiphon appear? (MM-DD)",
   "cancel": "Cancel",
   "ok": "Okay"
 }

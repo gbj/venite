@@ -96,10 +96,10 @@ graph TD;
   ldf-editable-antiphon-field --> ion-grid
   ldf-editable-antiphon-field --> ion-row
   ldf-editable-antiphon-field --> ion-col
-  ldf-editable-antiphon-field --> ion-toolbar
   ldf-editable-antiphon-field --> ion-buttons
   ldf-editable-antiphon-field --> ion-button
   ldf-editable-antiphon-field --> ion-icon
+  ldf-editable-antiphon-field --> ion-toolbar
   ldf-editable-antiphon-field --> ldf-editable-text
   ldf-editable-antiphon-field --> ldf-liturgical-document
   ldf-liturgical-document --> ion-skeleton-text

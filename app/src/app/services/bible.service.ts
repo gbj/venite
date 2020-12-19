@@ -25,7 +25,11 @@ export class BibleService implements BibleServiceInterface {
   getText(citation : string, version : string = 'NRSV') : Observable<BibleReading> {
     return this.http.get<BibleReading>(`https://us-central1-venite-2.cloudfunctions.net/bible`, { params: { citation, version}}).pipe(
       startWith(LOADING),
-      catchError(() => version === 'NRSV' ? of(undefined) : this.getText(citation, 'NRSV'))
+      catchError(e => {
+        console.warn(`(BibleService) error loading ${citation} (${version})`, e);
+        return of(undefined);
+        //return version === 'NRSV' || citation.startsWith('psalm_') ? of(undefined) : this.getText(citation, 'NRSV');
+      })
     )
   }
 }

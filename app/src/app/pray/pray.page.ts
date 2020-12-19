@@ -133,7 +133,7 @@ export class PrayPage implements OnInit, OnDestroy {
           return this.documents.findOrganizationLiturgy(orgId, slug);
         } else {
           return this.documents.findDocumentsBySlug(liturgy, language, new Array(version)).pipe(
-            map(docs => docs.map(doc => docId ? doc : new LiturgicalDocument({...doc, id: undefined})))
+            map(docs => docs.map(doc => docId ? doc : new LiturgicalDocument({...doc, id: undefined}))),
           );
         }
       }),
@@ -197,13 +197,12 @@ export class PrayPage implements OnInit, OnDestroy {
     // Unifies everything from the router params
     const routerParamState$ : Observable<PrayState> = combineLatest(liturgy$, day$, prefs$).pipe(
       map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs })),
-      //tap(state => //console.log('routerParamState', state))
     );
 
     // Unite the data passed from the state and the data derived from the route
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
-      filter(state => state && Boolean(state.liturgy) && (Boolean(state.day) || Boolean(state.liturgy.day))),
-      take(1)
+      filter(state => state && Boolean(state.liturgy) && state.liturgy.value && state.liturgy.value[0] !== "Loading..." && (Boolean(state.day) || Boolean(state.liturgy.day))),
+      //take(2)
     );
 
     const stateDoc$ = this.state$.pipe(

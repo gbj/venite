@@ -447,11 +447,13 @@ export class EditorService {
         return json1.removeOp(indexedP, op.value ?? true);
       case 'set':
         if(op.oldValue === undefined) {
+          console.log('op.oldValue === undefined — op.oldValue is', op.value);
           return json1.insertOp(indexedP, JSON.parse(JSON.stringify(op.value)))
         }
         else if(op.value === undefined) {
           return json1.removeOp(indexedP, op.value)
         } else {
+          console.log('op.value !== undefined — op.value is', op.value);
           const jsonOp = json1.replaceOp(indexedP, JSON.parse(JSON.stringify(op.oldValue)), JSON.parse(JSON.stringify(op.value)));
           return jsonOp;
         }
