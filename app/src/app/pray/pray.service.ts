@@ -27,6 +27,8 @@ export class PrayService {
 
   public latestChildren$ : Observable<LiturgicalDocument>[];
 
+  day : LiturgicalDay | undefined = undefined;
+
   constructor(
     @Inject('liturgyConfig') private config : LiturgyConfig,
     @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface,
@@ -39,14 +41,14 @@ export class PrayService {
    * If it should not be included given its day and condition, filter it out
    * If it is incomplete, find its complete form in the database */
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
+    this.day = day ?? this.day;
+    
     const doc = new LiturgicalDocument({
-      ...docBase,
-      // insert the day, for conditions
-      day
+      ...docBase
     });
 
     // should the doc be included?
-    if(doc.include(new LiturgicalDay(day), prefs)) {
+    if(doc.include(new LiturgicalDay(day ?? this.day), prefs)) {
       // clear out condition info
       doc.condition = undefined;
 
@@ -79,10 +81,10 @@ export class PrayService {
           ),
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
-            day,
+            day: docBase.type === 'liturgy' ? day : undefined,
             value: compiledChildren
           })),
-          //tap(doc => //console.log('latest compiled form is', doc))
+          //tap(doc => console.log('latest compiled form is', doc))
         );
       }
 

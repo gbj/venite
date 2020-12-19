@@ -4,6 +4,8 @@ import { loadText, loadScore } from '@venite/hymnal-api';
 import { ldfToDocx } from '@venite/docx';
 import { Packer } from 'docx';
 import { Readable } from 'stream';
+import { addOneDay, dateFromYMD, liturgicalDay, liturgicalWeek, LiturgicalWeek, LiturgicalWeekIndex } from '@venite/ldf/dist/cjs';
+import * as admin from 'firebase-admin';
 
 export const bible = functions.https.onRequest(async (request, response) => {
   response.set('Access-Control-Allow-Origin', '*'); // CORS allowed
@@ -95,3 +97,50 @@ export const docx = functions.https.onRequest(async(request, response) => {
   });
   stream.pipe(response);
 })
+
+export const calendar = functions.https.onRequest(async (request, response) => {
+  response.set('Access-Control-Allow-Origin', '*'); // CORS allowed
+
+  // Initialize Firestore
+  admin.initializeApp();
+  const db = admin.firestore();
+
+  // Params
+  const today = new Date();
+  const y = request.query?.y?.toString() ?? today.getFullYear().toString(),
+        m = request.query?.m?.toString() ?? (today.getMonth() + 1).toString(),
+        d = request.query?.d?.toString() ?? today.getDate().toString(),
+        kalendar = request.query?.kalendar?.toString() ?? 'bcp1979',
+        evening = request.query?.evening?.toString() === 'false' ? false : true,
+        vigil = request.query?.vigil?.toString() === 'false' ? false : true;
+
+  // findWeek
+  async function findWeek(kalendar : string, query : LiturgicalWeekIndex) : Promise<LiturgicalWeek[]> {
+    const weekQuery = await db.collection('LiturgicalWeek')
+      .where('kalendar', '==', kalendar)
+      .where('cycle', '==', query.cycle)
+      .where('week', '==', query.week)
+      .get();
+    const weeks = weekQuery.docs
+      .map(doc => doc.data() as LiturgicalWeek)
+      .map(week => query.proper ?
+        new LiturgicalWeek({
+          ... week,
+          proper: query.proper,
+          propers: `proper-${query.proper}`
+        }) :
+        week);
+    return weeks;
+  }
+
+  // Body
+  try {
+    const date = dateFromYMD(y, m, d),
+      weeks = await findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)),
+      day = liturgicalDay(vigil ? addOneDay(date) : date, kalendar, evening, weeks[0]);
+      //response.set('Cache-Control', 'public, max-age=2592000'); // allow caching for 2,592,000 seconds = 30 days
+    response.status(200).send(day);
+  } catch(e) {
+    response.status(400).send(`[Error] ${e.toString()}`);
+  }
+});

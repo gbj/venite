@@ -209,7 +209,6 @@ export class PrayPage implements OnInit, OnDestroy {
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
       switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
-      //tap(doc => //console.log('CPL stateDoc$', doc))
     );
 
     if(this.bulletinMode) {
