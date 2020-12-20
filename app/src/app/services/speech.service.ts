@@ -158,7 +158,7 @@ export class SpeechService {
         
       function antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain } | undefined) : (number | string)[] {
         if(typeof antiphon == 'string') {
-          const refrain = new Refrain({ value: [ antiphon ], style: 'antiphon' });
+          const refrain = new Refrain({ type: 'refrain', value: [ antiphon ], style: 'antiphon' });
           return docToUtterances(refrain);
         } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
           return docToUtterances(antiphon as Refrain);
