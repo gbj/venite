@@ -15,7 +15,7 @@ export function isCompletelyCompiled(doc : LiturgicalDocument | undefined, recur
   } else if(doc?.type === 'meditation') {
     isCompiled = true;
   } else {
-    isCompiled = Boolean(doc?.day && doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
+    isCompiled = Boolean(doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
     //console.log('isCompletelyCompiled', isCompiled, doc);
   }
 

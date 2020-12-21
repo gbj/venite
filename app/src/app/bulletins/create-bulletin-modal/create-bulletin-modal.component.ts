@@ -129,6 +129,9 @@ export class CreateBulletinModalComponent implements OnInit {
     
         // navigate to the newly-created bulletin
         if(proceed) {
+          // if it all default preferences are selected, add {} so the slug/label don't cause it to hang
+          event.commands.push('{}');
+          //console.log(event.commands, event.state.liturgy.slug, event.state.liturgy.label);
           this.router.navigate(
             event.commands.concat([event.state.liturgy.slug, event.state.liturgy.label]),
             {
