@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Listen, Method, Host, JSX, Event, EventEmitter, Element, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Method, Host, JSX, Event, EventEmitter, Element, h } from '@stencil/core';
 import { Option, LiturgicalDocument, Change } from '@venite/ldf';
 import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
 import { getComponentClosestLanguage } from '../../utils/locale';
@@ -18,7 +18,7 @@ export class OptionComponent {
   // States
   @State() obj : Option;
   @State() localeStrings: { [x: string]: string; };
-  @State() selectedDoc : LiturgicalDocument;
+  //@State() selectedDoc : LiturgicalDocument;
   @State() filteredOptions : LiturgicalDocument[];
 
   // Properties
@@ -92,13 +92,14 @@ export class OptionComponent {
   
     
     if(Number(index) >= 0) {
-      this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];
-            if(this.obj?.metadata) {
+      //this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];
+      if(this.obj?.metadata) {
         this.obj.metadata.selected = Number(index);
         this.obj.metadata.editor_selected = Number(index);
       } else {
         this.obj.metadata = { selected: Number(index), editor_selected: Number(index) }
       }
+      this.obj = new Option({...this.obj});
 
       // only change the selection at this point if it's not editable
       // if it's editable, the editor will control when it changes
@@ -150,12 +151,6 @@ export class OptionComponent {
     }
   }
 
-  // Listener for Ionic Select and Segment change events
-  @Listen('ionChange')
-  onIonChange(ev) {
-        this.select(ev.detail.value, true);
-  }
-
   // Private methods
   onSelectChange(ev : Event) {
     const target : HTMLSelectElement = ev.target as HTMLSelectElement,
@@ -196,7 +191,7 @@ export class OptionComponent {
           return (
             <ion-segment color="primary" value={currentlySelected.toString()}>
               {this.obj?.value.map((option, optionIndex) =>
-                <ion-segment-button value={optionIndex.toString()}>
+                <ion-segment-button value={optionIndex.toString()} onClick={() => this.select(optionIndex, true)}>
                   <ion-label>{this.versionLabel(option, optionIndex)}</ion-label>
                 </ion-segment-button>
               )}
@@ -260,6 +255,7 @@ export class OptionComponent {
   // Render
   render() {
     //console.log('ldf-option (render) ', this.obj?.metadata.selected, this.obj.value, this.selectedDoc)
+    const selectedIndex = this.editable ? this.obj.metadata.editor_selected ?? this.obj.metadata.selected : this.obj.metadata.selected;
 
     return (
       <Host lang={this.obj.language}>
@@ -269,11 +265,11 @@ export class OptionComponent {
             <slot slot='end' name='controls'>{this.selectNode()}</slot>
           </ldf-label-bar>
         </div>
-        {this.selectedDoc && <ldf-liturgical-document
-          doc={this.selectedDoc}
+        {this.obj.value && <ldf-liturgical-document
+          doc={this.obj.value[selectedIndex]}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}
-          index={this.editable ? this.obj.metadata.editor_selected ?? this.obj.metadata.selected : this.obj.metadata.selected}
+          index={selectedIndex}
           editable={this.editable}
           parentType='option'
         >
