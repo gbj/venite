@@ -7,5 +7,5 @@ export class MenuOption {
   icon: () => JSX.Element;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response' | 'reading';
 }

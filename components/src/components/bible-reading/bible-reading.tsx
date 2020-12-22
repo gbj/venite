@@ -1,5 +1,5 @@
 import { alertController, loadingController } from '@ionic/core';
-import { Component, Element, Prop, Event, Watch, State, JSX, h, EventEmitter, Host } from '@stencil/core';
+import { Component, Element, Prop, Event, Watch, State, JSX, h, EventEmitter, Host, Method } from '@stencil/core';
 import { BibleReading, BibleReadingVerse, Change, Heading, versionToString } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
@@ -87,6 +87,7 @@ export class BibleReadingComponent {
     }
   }
 
+  @Method()
   async changeReading() {
     const localeStrings = this.localeStrings || {};
   

@@ -96,6 +96,7 @@
     "Unison": "Unison"
   },
   "editor": {
+    "bible_version": "Version",
     "confirm_deletion_header": "Delete “{{label}}”",
     "confirm_deletion": "Are you sure you want to delete this document?",
     "cancel": "Cancel",
@@ -177,7 +178,9 @@
     "image": {
       "title": "Upload an Image",
       "select-image": "Select an Image"
-    }
+    },
+    "reading_adder": "Add a Reading",
+    "citation": "Biblical Citation"
   },
   "organization": {
     "owner": "Administrator",

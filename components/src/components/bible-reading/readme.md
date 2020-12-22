@@ -21,6 +21,19 @@
 | `ldfDocShouldChange` |             | `CustomEvent<Change>` |
 
 
+## Methods
+
+### `changeReading() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Used by

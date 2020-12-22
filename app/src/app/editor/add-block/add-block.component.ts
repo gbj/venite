@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, OnDestroy, ViewChild, Inject } from '@angular/core';
 import { Observable, Subscription, Subject, of, from } from 'rxjs';
 import { take, map, tap, switchMap } from 'rxjs/operators';
-import { LiturgicalDocument, sortPsalms, Psalm } from '@venite/ldf';
+import { LiturgicalDocument, sortPsalms, Psalm, BibleReading } from '@venite/ldf';
 import { DocumentService } from 'src/app/services/document.service';
 import { AuthServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { AuthService } from 'src/app/auth/auth.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
 class MenuOption {
@@ -14,7 +14,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response' | 'reading';
 }
 
 @Component({
@@ -46,7 +46,8 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     private documentService : DocumentService,
     public auth : AuthService,
     private translate : TranslateService,
-    private alert : AlertController
+    private alert : AlertController,
+    private loading : LoadingController
   ) { }
 
   ngOnInit() {}
@@ -93,6 +94,10 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             ))
           )
           return this.complete;
+        case 'reading':
+          return from(this.readingAlert()).pipe(
+            map(response => [response])
+          );
         case 'invitatory':
           this.additionalMode = 'invitatory';
           this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy');
@@ -124,7 +129,6 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalTable = this.documentService.getVersions(this.language, 'canticle-table');
           return this.complete;
         case 'hymn':
-          //console.log('loading a hymn!');
           this.additionalMode = 'hymn';
           return this.complete;
         case 'liturgy':
@@ -235,5 +239,57 @@ export class AddBlockComponent implements OnInit, OnDestroy {
 
     const data = await alert.onDidDismiss();
     return data?.data?.values?.response;
+  }
+
+  async readingAlert() : Promise<BibleReading> {
+    const alert = await this.alert.create({
+      header: this.translate.instant('editor.reading_adder'),
+      inputs: [{
+        name: 'citation',
+        placeholder: this.translate.instant('editor.citation')
+      },
+      {
+        name: 'version',
+        placeholder: this.translate.instant('editor.bible_version'),
+        value: 'NRSV'
+      }],
+      buttons: [{
+        text: this.translate.instant('editor.cancel'),
+        role: 'cancel'
+      }, {
+        text: this.translate.instant('editor.add')
+      }]
+    });
+    
+    await alert.present();
+
+    const data = await alert.onDidDismiss();
+    const { citation, version } = data?.data?.values;
+
+    const loading = await this.loading.create();
+
+    const reading = await this.fetchReading(citation, version);
+
+    loading.dismiss();
+
+    return reading;
+  }
+
+  async fetchReading(
+    citation : string,
+    version : string,
+    api : string = 'https://us-central1-venite-2.cloudfunctions.net'
+  ) : Promise<BibleReading> {
+    const findURL = new URL(`${api}/bible`);
+    findURL.searchParams.append('citation', citation);
+    findURL.searchParams.append('version', version);
+  
+    const response = await fetch(findURL.toString()),
+      body = await response.text();
+    try {
+      return JSON.parse(body);
+    } catch {
+      throw new Error(body);
+    }
   }
 }
