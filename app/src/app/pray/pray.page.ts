@@ -505,7 +505,7 @@ export class PrayPage implements OnInit, OnDestroy {
       buttons.push({
         text: this.translate.instant('Open in Word'),
         icon: 'document',
-        handler: () => this.convertToDocx(data.doc, data.settings)
+        handler: () => this.convertToDocx(data.editorState?.localManager?.document ?? data.doc, data.settings)
       });
     }
 
@@ -544,7 +544,7 @@ export class PrayPage implements OnInit, OnDestroy {
               op: [{
                 type: 'set',
                 oldValue: data.doc,
-                value: unwrapOptions(data.doc)
+                value: unwrapOptions(data.editorState.localManager.document)
               }]
             })
           )
@@ -566,9 +566,10 @@ export class PrayPage implements OnInit, OnDestroy {
         text: 'Download JSON',
         icon: 'download',
         handler: () => {
+          const doc = data.editorState?.localManager?.document ?? data.doc;
           this.downloadService.download(
-            new Blob([JSON.stringify(data.doc)], { type: 'application/json' }),
-            `${data.doc?.slug}.ldf.json`,
+            new Blob([JSON.stringify(doc)], { type: 'application/json' }),
+            `${doc?.slug}.ldf.json`,
             'application/json'
           )
         }
