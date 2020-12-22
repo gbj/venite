@@ -228,8 +228,9 @@ export class BulletinsPage implements OnInit {
           const doc : LiturgicalDocument = JSON.parse(e.target.result.toString());
           doc.sharing.owner = userProfile.uid;
           doc.sharing.organization = (userProfile.orgs || [])[0];
-          const docId = await this.documents.newDocument(doc);
-          this.joinDocument(docId);
+          // TODO seems to hang if you immediately join new document; works if you join it from Bulletins page later
+          /*const docId = */await this.documents.newDocument(doc);
+          //this.joinDocument(docId);
         };
         reader.readAsText(file);
       }
