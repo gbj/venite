@@ -90,12 +90,6 @@ export class AddBlockComponent implements OnInit, OnDestroy {
             map(versions => Object.keys(versions)),
             switchMap(versions => this.documentService.findDocumentsByCategory(['Psalm'], this.language, versions).pipe(
               map(objs => objs.sort((a, b) => sortPsalms(a as Psalm, b as Psalm))),
-              map(objs => objs.map(obj => new LiturgicalDocument({
-                ... obj,
-                // strip out value, which can be looked up asynchronously rather than storing it
-                value: undefined,
-                lookup: { type: "slug" }
-              })))
             ))
           )
           return this.complete;
