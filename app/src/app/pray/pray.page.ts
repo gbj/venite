@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, of, combineLatest, merge, BehaviorSubject, interval, Subscription, concat, timer, from } from 'rxjs';
 import { mapTo, switchMap, map, tap, filter, startWith, withLatestFrom, take, shareReplay, mergeMap, share, catchError, flatMap, takeUntil, takeWhile, distinct } from 'rxjs/operators';
 import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Preference, Sharing, dateFromYMDString, Option, Change, unwrapOptions } from '@venite/ldf';
-import { ActionSheetController, IonContent, LoadingController, ModalController, NavController } from '@ionic/angular';
+import { ActionSheetController, IonContent, LoadingController, ModalController, NavController, ToastController } from '@ionic/angular';
 import { DOCUMENT_SERVICE, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
 import { DisplaySettings, DisplaySettingsComponent } from '@venite/ng-pray';
 import { PrayService } from './pray.service';
@@ -94,7 +94,7 @@ export class PrayPage implements OnInit, OnDestroy {
     private actionSheetController : ActionSheetController,
     public speechService : SpeechService,
     private loadingController : LoadingController,
-    private navCtrl : NavController
+    private toast : ToastController
   ) { }
 
   ngOnDestroy() {
@@ -378,7 +378,22 @@ export class PrayPage implements OnInit, OnDestroy {
         //console.log('CPL still compiling', doc);
       },
       // error — TODO
-      e => console.warn('CPL caught error', e),
+      async e => {
+        const toast = await this.toast.create({
+          message: this.translate.instant("editor.bulletin-creation-error"),
+          color: 'warning',
+          duration: 10000
+        });
+        await toast.present();
+
+        // load as in `complete`
+        subscription.unsubscribe();
+        this.loadingController.dismiss();
+        latestDoc.slug = this.newSlug;
+        latestDoc.label = this.newLabel;
+        loading.dismiss();
+        this.beginEditing(latestDoc);
+      },
       // complete
       () => {
         subscription.unsubscribe();
@@ -447,6 +462,8 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   async editBulletin(docId : string) {
+    const sleep = m => new Promise(r => setTimeout(r, m));
+    await sleep(1000);
     this.router.navigate(['bulletin', 'b', docId]);
   }
 
