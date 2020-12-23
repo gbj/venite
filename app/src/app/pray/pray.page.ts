@@ -242,7 +242,8 @@ export class PrayPage implements OnInit, OnDestroy {
       this.grabPreference('psalmVerses'),
       this.grabPreference('bibleVerses'),
       this.grabPreference('meditationBell'),
-      this.grabPreference('darkmode')
+      this.grabPreference('darkmode'),
+      this.grabPreference('bolded')
     ]).pipe(
       map(settings => new DisplaySettings( ... settings))
     );
