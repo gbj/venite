@@ -425,8 +425,19 @@ export class PrayService {
           readingPrefName : string | null = typeof doc.lookup?.item === 'string' || typeof doc.lookup?.item === 'number' ? null : doc.lookup.item.preference,
           reading : string = readingPrefName ? prefs[readingPrefName] : doc.lookup.item.toString(),
           alternateYear = Boolean(((originalPrefs[readingPrefName])?.options || []).find(option => option.value == reading)?.metadata?.alternateYear);
-  
-    return this.lectionaryService.getReadings(day, lectionary, reading, alternateYear);
+
+    return this.lectionaryService.getReadings(day, lectionary, reading, alternateYear).pipe(
+      map(entries => {
+        function uniqueBy(a, key) {
+          var seen = {};
+          return a.filter(function(item) {
+              var k = key(item);
+              return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+          })
+        };
+        return uniqueBy(entries, entry => entry.citation);
+      })
+    );
   }
 
   /** Finds the appropriate canticle from a given table for this liturgy */
