@@ -19,8 +19,6 @@ export class LectionaryService {
   getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {
     // lectionaries that include readings for black-letter days
     const BLACK_LETTER_LECTIONARIES = ['lff2018'];
-
-    //console.log('getReadings lectionary = ', lectionaryName);
     
     // handle RCL readings separately via LectServe API
     if(lectionaryName == 'rclsunday' || lectionaryName == 'rcl' || lectionaryName == 'rclsundayTrack1') {
@@ -53,7 +51,7 @@ export class LectionaryService {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        if(day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank >= 3) {
+        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank >= 3) {
           let query = ref.where('day', '==', day.slug);
           if(readingType !== undefined) {
             query = query.where('type', '==', readingType);
