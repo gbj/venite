@@ -206,7 +206,7 @@ export class OptionComponent {
         else {
           return (
             <ion-toolbar>
-              <ion-select value={currentlySelected} slot={this.editable ? 'start' : 'end'}>
+              <ion-select value={currentlySelected} slot={this.editable ? 'start' : 'end'} onIonChange={e => this.select(Number(e.detail.value), true)}>
                 {this.obj?.value.map((option, optionIndex) =>
                   <ion-select-option value={optionIndex}>
                     <ion-label>{this.versionLabel(option, optionIndex)}</ion-label>
