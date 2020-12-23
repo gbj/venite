@@ -463,7 +463,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
   async editBulletin(docId : string) {
     const sleep = m => new Promise(r => setTimeout(r, m));
-    await sleep(1000);
+    await sleep(50);
     this.router.navigate(['bulletin', 'b', docId]);
   }
 
