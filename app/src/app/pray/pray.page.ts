@@ -433,7 +433,6 @@ export class PrayPage implements OnInit, OnDestroy {
     // otherwise, create a new document
     else {
       combineLatest([this.userProfile$, this.userOrgs$]).pipe(
-        //tap(data => //console.log('beginEditing data =', data)),
         filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
         takeWhile(([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0), true),
         switchMap(async ([userProfile, orgs]) =>
