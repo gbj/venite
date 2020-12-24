@@ -145,7 +145,9 @@ export class CalendarService {
 
   buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) : Observable<LiturgicalDay> {
     return combineLatest(date, kalendar, liturgy, vigil).pipe(
-      switchMap(([date, kalendar, liturgy, vigil]) => this.http.get<LiturgicalDay>(`https://us-central1-venite-2.cloudfunctions.net/calendar?y=${date.getFullYear()}&m=${date.getMonth() + 1}&d=${date.getDate()}&vigil=${vigil}&evening=${Boolean(liturgy?.metadata?.evening)}&kalendar=${kalendar}`)),
+      filter(([date, kalendar, liturgy, vigil]) => liturgy?.type === 'liturgy' || (liturgy.value && !liturgy.value[0].toString().includes("Loading..."))),
+      switchMap(([date, kalendar, liturgy, vigil]) => this.http.get<LiturgicalDay>(`https://us-central1-venite-2.cloudfunctions.net/calendar?y=${date.getFullYear()}&m=${date.getMonth() + 1}&d=${date.getDate()}&vigil=${Boolean(vigil)}&evening=${Boolean(liturgy?.metadata?.evening)}&kalendar=${kalendar}`)),
+      tap(day => console.log('day is = ', day))
     )
   }
   
