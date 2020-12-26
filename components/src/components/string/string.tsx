@@ -51,7 +51,7 @@ export class StringComponent {
   processString() {
     const withoutEntities : string = this.processEntities(this.text);
         let processed : JSX.Element[] = this.processMarkup(withoutEntities);
-        if(this.replaceTetragrammaton) {
+    if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
     }
     if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
@@ -96,9 +96,12 @@ export class StringComponent {
   }
 
   processTetragrammaton(s : string) : JSX.Element {
+    console.log('processTetragrammaton: s =', s);
     if(s) {
       const replacements = {
         '\n': () => <br/>,
+        '’S': () => '’s',
+        '\'S': () => '’s',
         'LORD’S': () => 'LORD’s',
         "LORD'S": () => 'LORD’s',
         'LORD': () => <span class="sc">Lord</span>,
@@ -112,7 +115,8 @@ export class StringComponent {
         '  ': () => <span class='half-tab'>&nbsp;</span>
       };
 
-      const split = s.split(/((  )|\n|LORD[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
+      const split = s.split(/((  )|\n|LORD[\'’]S|[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
+      console.log('split = ', split)
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
     } else {
       return new Array();
