@@ -82,8 +82,6 @@ export const docx = functions.https.onRequest(async(request, response) => {
   response.set('Accept', 'application/json');
   response.set('Access-Control-Allow-Headers', 'Content-Type');
 
-  console.log(request.body);
-
   const dto = request.body,
     doc = dto.doc,
     settings = dto.settings;
@@ -138,7 +136,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       .where('kalendar', '==', kalendar)
       .where('slug', '==', slug)
       .get();
-    return days.docs.map(doc => doc.data()) as HolyDay[];
+    return (days.docs.map(doc => doc.data()) as HolyDay[]).filter(hd => !hd.eve || evening);
   }
 
   async function findFeastDays(mmdd : string) : Promise<HolyDay[]> {
@@ -146,7 +144,15 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       .where('kalendar', '==', kalendar)
       .where('mmdd', '==', mmdd)
       .get();
-    return days.docs.map(doc => doc.data()) as HolyDay[];
+    return (days.docs.map(doc => doc.data()) as HolyDay[])
+      // morning/evening — January 5
+      .map(hd => hd.morning && hd.evening
+        ? evening ? hd.evening : hd.morning
+        : hd
+      )
+      // original holy days defaulted to rank 3, so if no rank present opt for 3
+      .map(hd => hd?.type?.rank ? hd : {...hd, type: { rank: 3 }})
+      .filter(hd => !hd.eve || evening);
   }
 
   // addHolyDays
@@ -166,7 +172,12 @@ export const calendar = functions.https.onRequest(async (request, response) => {
         isThursday = date.getDay() === 4, // Sunday is 0, Monday is 1
         nthWeekOfMonth = Math.ceil(date.getDate() / 7),
         thanksgiving = isNovember && isThursday && nthWeekOfMonth == 4 ? await findSpecialDays('thanksgiving-day') : [],
-        allHolyDays = (await db.collection('HolyDay').where('kalendar', '==', kalendar).get()).docs.map(doc => doc.data() as HolyDay),
+        allHolyDays = (await db.collection('HolyDay').where('kalendar', '==', kalendar).get())
+          .docs
+          .map(doc => doc.data() as HolyDay)
+          .filter(hd => !hd?.type?.rank || hd?.type?.rank >= 3)
+          // original holy days defaulted to rank 3, so if no rank present opt for 3
+          .map(hd => hd?.type?.rank ? hd : {...hd, type: { rank: 3 }}),
         // add transferred feast days
         transferred = await transferredFeast(
           async (dfd : Date) => {
@@ -179,6 +190,9 @@ export const calendar = functions.https.onRequest(async (request, response) => {
         );
   
       let holydays = feasts.concat(transferred ? [transferred] : []).concat(specials).concat(thanksgiving);
+
+      console.log('transferred = ', transferred, '\n\nholydays = ', holydays);
+
       const highestHolyDayRank = Math.max(... holydays.map(holyday => holyday.type?.rank ?? 3));
       if(highestHolyDayRank >= 4) {
         holydays = holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= highestHolyDayRank);
@@ -195,7 +209,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       weeks = await findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)),
       day = liturgicalDay(vigil ? addOneDay(date) : date, kalendar, evening, weeks[0]),
       dayWithHolyDays = await addHolyDays(day);
-    response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
+    //response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
     response.status(200).send(dayWithHolyDays);
   } catch(e) {
     response.status(400).send(`[Error] ${e.toString()}`);

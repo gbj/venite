@@ -51,7 +51,7 @@ export class LectionaryService {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank >= 3) {
+        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank >= 3 && !['first_reading', 'second_reading', 'gospel'].includes(readingType)) {
           let query = ref.where('day', '==', day.slug);
           if(readingType !== undefined) {
             query = query.where('type', '==', readingType);

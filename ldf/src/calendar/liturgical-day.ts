@@ -12,6 +12,7 @@ interface ObservedInterface {
   color?: string | LiturgicalColor;
   season?: Seasons[number] | undefined;
   octave?: string | undefined;
+  mmdd?: string;
 }
 
 /**
@@ -170,7 +171,22 @@ export class LiturgicalDay {
     const sorted = holydays
       .map((holyday) => ({ rank: getRank(holyday, 'holyday'), obj: holyday }))
       .concat({ rank: getRank(day, 'weekday'), obj: day })
-      .sort((a: { rank: number }, b: { rank: number }) => b.rank - a.rank);
+      .sort((a, b) => {
+        // equal rank => choose earlier feast (probably )
+        if (a.rank === b.rank && a.obj.mmdd && b.obj.mmdd) {
+          const [bMM, bDD] = b.obj.mmdd.split('/'),
+            [aMM, aDD] = a.obj.mmdd.split('/'),
+            bDate = new Date(),
+            aDate = new Date();
+          bDate.setMonth(parseInt(bMM) - 1);
+          bDate.setDate(parseInt(bDD));
+          aDate.setMonth(parseInt(aMM) - 1);
+          aDate.setDate(parseInt(aDD));
+          return aDate.getTime() - bDate.getTime();
+        } else {
+          return b.rank - a.rank;
+        }
+      });
 
     return { ...sorted[0].obj };
   }

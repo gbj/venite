@@ -17,7 +17,7 @@ export async function transferredFeast(
     todayIsSunday = today?.slug?.startsWith('sunday-'),
     todaySpecial = await specialDayFinder(today.slug),
     todayFeast = await feastDayFinder(dateFromYMDString(today.date)),
-    todayIsEmpty = isEmpty(todayIsSunday, todaySpecial, todayFeast);
+    todayIsEmpty = isEmpty(acc[0], todayIsSunday, todaySpecial, todayFeast);
 
   // yesterday
   const yesterdayDate = subtractOneDay(todayDate),
@@ -25,23 +25,32 @@ export async function transferredFeast(
     yesterdayIsSunday = yesterday?.slug?.startsWith('sunday-'),
     yesterdaySpecial = await specialDayFinder(yesterday.slug),
     yesterdayFeast = await feastDayFinder(dateFromYMDString(yesterday.date)),
-    yesterdayIsEmpty = isEmpty(yesterdayIsSunday, yesterdaySpecial, yesterdayFeast);
+    yesterdayIsEmpty = isEmpty(acc[0], yesterdayIsSunday, yesterdaySpecial, yesterdayFeast);
 
   const dayBeforeYesterdayDate = subtractOneDay(yesterdayDate),
     dayBeforeYesterday = await liturgicalDayFinder(dayBeforeYesterdayDate),
     dayBeforeYesterdayIsSunday = dayBeforeYesterday?.slug?.startsWith('sunday-'),
     dayBeforeYesterdaySpecial = await specialDayFinder(dayBeforeYesterday?.slug),
     dayBeforeYesterdayFeast = await feastDayFinder(dateFromYMDString(dayBeforeYesterday?.date)),
-    dayBeforeYesterdayIsEmpty = isEmpty(dayBeforeYesterdayIsSunday, dayBeforeYesterdaySpecial, dayBeforeYesterdayFeast);
+    dayBeforeYesterdayIsEmpty = isEmpty(
+      acc[0],
+      dayBeforeYesterdayIsSunday,
+      dayBeforeYesterdaySpecial,
+      dayBeforeYesterdayFeast,
+    );
 
   //console.log('\n\ntoday is ', today.date);
-  //console.log('acc is', acc);
+  //console.log('acc is', acc.map(hd => hd.slug));
   //console.log('openDays is ', openDays.map((day) => day.slug));
 
   // if both days are empty
   if (todayIsEmpty && yesterdayIsEmpty) {
     //console.log('today is empty and yesterday is empty');
-    // check ONE more day -- we will never need to transfer more than two days, but it does happen around Easter Week sometimes
+    
+    // in Christmastide, we need to check an extra day, for the cases in which Christmas is Sunday and feasts can be transferred several days
+    const isChristmastide = todayDate.getMonth() === 11 && todayDate.getDate() > 25;
+
+    // check ONE more day -- we will rarely need to transfer more than two days, but it does happen around Easter Week sometimes
     if (dayBeforeYesterdayIsEmpty) {
       //console.log('  and the day before yesterday is empty');
       const openDaySlugs = openDays.map((day) => day.slug),
@@ -49,7 +58,8 @@ export async function transferredFeast(
           openDaySlugs
             .reverse() // because accumulate moving backwards
             .indexOf(originalDay?.slug || '') || 0;
-      return acc.reverse()[originalDayIndex]; // reverse because accumulate moving backwards
+      //console.log('yielding a transferred feast, which is the ', originalDayIndex < 0 ? 0 : originalDayIndex, originalDay?.slug, 'th item in ', acc.map(hd => hd.slug));
+      return acc.reverse()[originalDayIndex < 0 ? 0 : originalDayIndex]; // reverse because accumulate moving backwards
     } else {
       //console.log('  and the day before yesterday is not empty');
       return transferredFeast(
@@ -66,12 +76,15 @@ export async function transferredFeast(
   // if today is empty and yesterday is not empty, recurse back one more day
   else if (todayIsEmpty && !yesterdayIsEmpty) {
     //console.log('today is empty and yesterday is not empty');
+    const observed = todayFeast ? today.observedDay(today, [todayFeast, yesterdayFeast || todayFeast]) : today,
+      isObserved = observed.slug === todayFeast?.slug;
+    //console.log('is today’s feast observed today?', isObserved);
     return transferredFeast(
       liturgicalDayFinder,
       specialDayFinder,
       feastDayFinder, // pass helpers
       subtractOneDay(todayDate), // check yesterday
-      acc,
+      todayFeast && !todayFeast.eve && !isObserved && Number(todayFeast?.type?.rank) >= 3 ? [...acc, todayFeast] : acc, // include today's feast, but don't transfer "Eve of...",
       [...openDays, today],
       originalDay || today,
     );
@@ -111,6 +124,7 @@ export async function transferredFeast(
       //console.log('  yesterday is not empty');
       const observed = todayFeast ? today.observedDay(today, [todayFeast]) : today,
         isObserved = observed.slug === todayFeast?.slug;
+      //console.log('     is today’s feast observed?', isObserved);
       return transferredFeast(
         liturgicalDayFinder,
         specialDayFinder,
@@ -126,10 +140,15 @@ export async function transferredFeast(
   }
 }
 
-function isEmpty(isSunday: boolean, special: HolyDay | undefined, feast: HolyDay | undefined): boolean {
+function isEmpty(
+  forFeast: HolyDay | undefined,
+  isSunday: boolean,
+  special: HolyDay | undefined,
+  feast: HolyDay | undefined,
+): boolean {
   const isEmptyCheckList = [special, feast]
     .concat(isSunday ? { type: { rank: 4 } } : undefined) // if it's a Sunday, it's a 4 by default
     .map((day) => day?.type?.rank)
-    .filter((rank) => rank && rank > 2);
+    .filter((rank) => rank && rank > (forFeast?.type?.rank ?? 3));
   return isEmptyCheckList.length == 0;
 }
