@@ -250,9 +250,10 @@ export class PrayPage implements OnInit, OnDestroy {
 
     const docSettings$ = this.doc$.pipe(
       map(doc => doc?.display_settings)
-    )
+    );
 
     this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
+      tap(([prefSettings, docSettings]) => console.log('settings$', docSettings)),
       map(([prefSettings, docSettings]) =>
         // basically — use the document's settings for everything except font size and dark mode
         ({

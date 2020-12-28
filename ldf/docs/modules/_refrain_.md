@@ -22,7 +22,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [refrain.ts:4](https://github.com/gbj/venite/blob/88dea34/ldf/src/refrain.ts#L4)*
+*Defined in [refrain.ts:4](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/refrain.ts#L4)*
 
 ## Variables
 
@@ -30,4 +30,4 @@
 
 • **STYLES**: *["normal", "antiphon", "gloria"]* = ['normal', 'antiphon', 'gloria'] as const
 
-*Defined in [refrain.ts:3](https://github.com/gbj/venite/blob/88dea34/ldf/src/refrain.ts#L3)*
+*Defined in [refrain.ts:3](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/refrain.ts#L3)*

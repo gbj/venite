@@ -46,7 +46,7 @@ export async function transferredFeast(
   // if both days are empty
   if (todayIsEmpty && yesterdayIsEmpty) {
     //console.log('today is empty and yesterday is empty');
-    
+
     // in Christmastide, we need to check an extra day, for the cases in which Christmas is Sunday and feasts can be transferred several days
     const isChristmastide = todayDate.getMonth() === 11 && todayDate.getDate() > 25;
 

@@ -42,6 +42,7 @@
 <ion-content #content [fullscreen]="true" [scrollEvents]="!bulletinMode">
   <div class="bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
     <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+      <pre>{{ settings | json }}</pre>
       <ng-container *ngIf="bulletinMode">
         <div class="editor-wrapper" *ngIf="bulletinDocId$ | async as bulletinDocId">
           <venite-ldf-editor

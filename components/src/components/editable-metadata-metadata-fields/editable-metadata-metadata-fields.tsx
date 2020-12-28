@@ -169,7 +169,8 @@ export class EditableMetadataMetadataFieldsComponent {
       case 'text':
         return [
           { field: 'response', type: Field.String },
-          { field: 'omit_response', type: Field.Bool }
+          { field: 'omit_response', type: Field.Bool },
+          { field: 'rollup', type: Field.Bool }
         ];
       default:
         console.warn('(ldf-editable-metadata-metadata-fields)', type, 'is not a recognized type');

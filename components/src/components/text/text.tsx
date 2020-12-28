@@ -78,7 +78,10 @@ export class TextComponent {
   // Render
   render() {
     const localeStrings = this.localeStrings || {};
-    let compiledValue : string[][] = (this.obj?.value || []).map(s => {
+    let value = this.obj?.metadata?.rollup
+      ? (this.obj?.value || []).map(s => s.replace(/\s+/g, ' '))
+      : (this.obj?.value || []);
+    let compiledValue : string[][] = value.map(s => {
       return s.split(/([\*\w\n\s,:;\.\-–—“”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.“”‘’”\-–—\!\?\[\]\%\(\)]))/g);
     })
     if(!this.editable && this.obj?.display_format === 'abbreviated') {

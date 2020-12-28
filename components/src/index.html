@@ -50,35 +50,54 @@
     const MAGNIFICAT = {"type":"psalm","style":"canticle","metadata":{"antiphon": {}},"value":[]};
     
     const LITURGY = {
-  "label": "Psalm 148",
+  "label": "The Apostles’ Creed",
+  "type": "text",
+      "style": "text",
+      "metadata": {
+      },
   "value": [
-    {
-      "type": "psalm-section",
-      "value": [
-        {
-          "number": "1",
-          "verse": "Hallelujah!\nPraise the LORD’S from the heavens; *",
-          "halfverse": "praise him in the heights.",
-          "type": "psalm-verse"
-        }
-      ]
+
+  `We believe in one God,
+    the Father, the Almighty,
+    maker of heaven and earth,
+    of all that is, seen and unseen.`,
+`We believe in one Lord, Jesus Christ,
+    the only Son of God,
+    eternally begotten of the Father,
+    God from God, Light from Light,
+    true God from true God,
+    begotten, not made,
+    of one Being with the Father.
+    Through him all things were made.
+    For us and for our salvation
+        he came down from heaven:
+    by the power of the Holy Spirit
+        he became incarnate from the Virgin Mary,
+        and was made man.
+    For our sake he was crucified under Pontius Pilate;
+        he suffered death and was buried.
+        On the third day he rose again
+            in accordance with the Scriptures;
+        he ascended into heaven
+            and is seated at the right hand of the Father.
+    He will come again in glory to judge the living and the dead,
+        and his kingdom will have no end.`,
+`We believe in the Holy Spirit, the Lord, the giver of life,
+    who proceeds from the Father and the Son.
+    With the Father and the Son he is worshiped and glorified.
+    He has spoken through the Prophets.
+    We believe in one holy catholic and apostolic Church.
+    We acknowledge one baptism for the forgiveness of sins.
+    We look for the resurrection of the dead,
+        and the life of the world to come. Amen.`
+
+  ]
     }
-  ],
-  "type": "psalm",
-  "slug": "psalm_148",
-  "category": [
-    "Psalm"
-  ],
-  "source": {
-    "citation": "p. 805",
-    "api": "https://www.venite.app/api",
-    "source": "bcp1979"
-  }
-};
+;
 
     const node = document.createElement('ldf-liturgical-document');
     node.setAttribute('doc', JSON.stringify(LITURGY));
-    node.setAttribute('editable', false);
+    node.setAttribute('editable', true);
     node.setAttribute('preview', true);
     node.setAttribute('path', '/');
     document.querySelector('#example').appendChild(node);

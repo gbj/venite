@@ -11,6 +11,7 @@ export class Text extends LiturgicalDocument {
   metadata?: {
     response: string;
     omit_response: boolean;
+    rollup: boolean;
   };
 
   /** Returns the list of all possible `style` values. */

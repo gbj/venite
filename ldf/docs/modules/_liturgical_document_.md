@@ -30,7 +30,7 @@
 
 Ƭ **DisplayFormat**: *DisplayFormatTuple[number]*
 
-*Defined in [liturgical-document.ts:62](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L62)*
+*Defined in [liturgical-document.ts:62](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L62)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 Ƭ **DisplayFormatTuple**: *typeof DISPLAY_FORMATS*
 
-*Defined in [liturgical-document.ts:61](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L61)*
+*Defined in [liturgical-document.ts:61](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L61)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 Ƭ **Lookup**: *object*
 
-*Defined in [liturgical-document.ts:31](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L31)*
+*Defined in [liturgical-document.ts:31](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L31)*
 
 #### Type declaration:
 
@@ -68,7 +68,7 @@ ___
 
 Ƭ **LookupTypeTuple**: *typeof LOOKUP_TYPES*
 
-*Defined in [liturgical-document.ts:29](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L29)*
+*Defined in [liturgical-document.ts:29](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L29)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 Ƭ **TypeTuple**: *typeof TYPES*
 
-*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L26)*
+*Defined in [liturgical-document.ts:26](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L26)*
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 Ƭ **Value**: *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[] | [ResponsivePrayerLine](../classes/_responsive_prayer_.responsiveprayerline.md)[] | [BibleReadingVerse](../classes/_bible_reading_bible_reading_verse_.biblereadingverse.md)‹› | [Heading](../classes/_heading_.heading.md)‹›[] | [PsalmSection](../classes/_psalm_.psalmsection.md)[] | string[]*
 
-*Defined in [liturgical-document.ts:46](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L46)*
+*Defined in [liturgical-document.ts:46](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L46)*
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 Ƭ **ValuePiece**: *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | [ResponsivePrayerLine](../classes/_responsive_prayer_.responsiveprayerline.md) | [BibleReadingVerse](../classes/_bible_reading_bible_reading_verse_.biblereadingverse.md) | [Heading](../classes/_heading_.heading.md) | [PsalmSection](../classes/_psalm_.psalmsection.md) | string*
 
-*Defined in [liturgical-document.ts:52](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L52)*
+*Defined in [liturgical-document.ts:52](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L52)*
 
 ## Variables
 
@@ -100,7 +100,7 @@ ___
 
 • **DISPLAY_FORMATS**: *string[]* = ['default', 'omit', 'unison', 'abbreviated']
 
-*Defined in [liturgical-document.ts:60](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L60)*
+*Defined in [liturgical-document.ts:60](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L60)*
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 • **LOOKUP_TYPES**: *string[]* = ['lectionary', 'canticle', 'category', 'slug', 'collect']
 
-*Defined in [liturgical-document.ts:28](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L28)*
+*Defined in [liturgical-document.ts:28](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L28)*
 
 ___
 
@@ -128,4 +128,4 @@ ___
   'image',
 ] as const
 
-*Defined in [liturgical-document.ts:13](https://github.com/gbj/venite/blob/88dea34/ldf/src/liturgical-document.ts#L13)*
+*Defined in [liturgical-document.ts:13](https://github.com/gbj/venite/blob/5dd8c6a/ldf/src/liturgical-document.ts#L13)*
