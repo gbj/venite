@@ -27,10 +27,12 @@
 
 /* Allow text selection */
 body {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  ion-app {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text !important;
+  }
 }
 
 /** Venite LDF CSS Variables — defined in @venite/components */
