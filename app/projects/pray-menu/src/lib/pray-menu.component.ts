@@ -118,9 +118,9 @@ export class PrayMenuComponent implements OnInit {
   this.sanctoralOptions = this.calendarService.findSanctorals();
 
   // start out with language, version, kalendar from preferences
-  this.preferencesService.get("language").subscribe(p => { if(p?.value) { this.language$.next(p.value) } });
-  this.preferencesService.get("version").subscribe(p => { if(p?.value) { this.version$.next(p.value) } });
-  this.preferencesService.get("kalendar").subscribe(p => { if(p?.value) { this.kalendar.next(p.value) } });
+  this.preferencesService.get("language").subscribe(p => { if(p?.value) { this.language$.next(p.value); } });
+  this.preferencesService.get("version").subscribe(p => { if(p?.value) { this.version$.next(p.value); } });
+  this.preferencesService.get("kalendar").subscribe(p => { if(p?.value) { this.kalendar.next(p.value); } });
 
   if(!this.config.serverReturnsDate) {
     // DB queries that depend on date change

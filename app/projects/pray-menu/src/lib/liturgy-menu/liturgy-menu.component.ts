@@ -119,7 +119,9 @@ export class LiturgyMenuComponent implements OnInit {
       this.version$.next(changes.version.currentValue);
     }
 
-    this.liturgySubject.next(changes.liturgy?.currentValue);
+    if(changes.liturgy?.currentValue) {
+      this.liturgySubject.next(changes.liturgy?.currentValue);
+    }
   }
 
   /** Emits liturgyChange() by searching on options for a Liturgy with the slug given */
