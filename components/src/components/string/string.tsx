@@ -96,7 +96,6 @@ export class StringComponent {
   }
 
   processTetragrammaton(s : string) : JSX.Element {
-    console.log('processTetragrammaton: s =', s);
     if(s) {
       const replacements = {
         '\n': () => <br/>,
@@ -116,7 +115,6 @@ export class StringComponent {
       };
 
       const split = s.split(/((  )|\n|LORD[\'’]S|[\'’]S|LORD|Lord GOD|GOD|YHWH|YAHWEH|Yhwh|Yahweh|\t)/g);
-      console.log('split = ', split)
       return split.map(phrase => replacements.hasOwnProperty(phrase) ? replacements[phrase]() : phrase);
     } else {
       return new Array();
