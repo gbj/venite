@@ -10,9 +10,10 @@ import { ServerDocumentManager, DocumentManagerChange, LocalDocumentManager } fr
 import { map, tap, switchMap, take, catchError, debounceTime, filter, mapTo, startWith } from 'rxjs/operators';
 import { AuthService } from '../../auth/auth.service';
 import { randomColor } from './random-color';
-import { ToastController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { EditorState } from './editor-state';
 import { DocumentService } from 'src/app/services/document.service';
+import { TranslateService } from '@ngx-translate/core';
 
 export type EditorStatus = {
   code: EditorStatusCode;
@@ -45,7 +46,9 @@ export class EditorService {
     private readonly afs: AngularFirestore,
     private readonly auth : AuthService,
     private toast : ToastController,
-    private documents : DocumentService
+    private documents : DocumentService,
+    private alert : AlertController,
+    private translate : TranslateService
   ) { }
 
   editorState(docId : string) : Observable<EditorState> {
@@ -253,7 +256,7 @@ export class EditorService {
 
   /** send the next change in the pending queue to the server */ 
   async sendNextChange(localManager : LocalDocumentManager) {
-    this.status.next({ code: EditorStatusCode.Pending })
+    this.status.next({ code: EditorStatusCode.Pending });
 
     const manager = { ... localManager },
           docBeforeChange = new LiturgicalDocument({ ... manager.document }),
@@ -296,6 +299,10 @@ export class EditorService {
 
         this.nextLocalManager(manager);
 
+        // if change is still pending, give a notification after 5 seconds
+        setTimeout(() => this.checkIfPending(), 5000);
+
+        // commit the change
         await batch.commit();
 
         // send a Success code for UI, fading after 2 seconds
@@ -307,9 +314,7 @@ export class EditorService {
         this.nextLocalManager(manager);    
       }
     } catch(error) {
-      console.warn('Rejected op: ', change)
-
-      console.warn('The write has been rejected. This is typically because another user has submitted a change with the same revision number, so ours needs to be transformed. Still, here’s the error: \n\n', error);
+      console.warn('Rejected op: ', change, error)
 
       // revert to document before change
       manager.document = docBeforeChange;
@@ -321,14 +326,49 @@ export class EditorService {
 
       // send error codes to UI
       this.status.next({ code: EditorStatusCode.Error, payload: error });
-      await this.toast.create({
-        message: error,
-        position: 'bottom',
-        duration: 3000,
-        color: 'danger'
-      })
+      this.editorStatusError();
     }
 
+  }
+
+  async checkIfPending() {
+    if(this.status.getValue()?.code === EditorStatusCode.Pending) {
+      const warningToast = await this.toast.create({
+        message: this.translate.instant("editor.pending-warning.message"),
+        duration: 15000,
+        color: "warning",
+        buttons: [
+          {
+            side: 'end',
+            text: this.translate.instant("editor.pending-warning.reload-now"),
+            handler: () => window.location.reload()
+          },
+          {
+            side: 'end',
+            icon: 'close',
+            role: 'cancel'
+          }
+        ]
+      });
+      await warningToast.present();
+    }
+  }
+
+  async editorStatusError() {
+    const alert = await this.alert.create({
+      header: this.translate.instant("editor.error.header"),
+      message: this.translate.instant("editor.error.message"),
+      buttons: [
+        {
+          role: "cancel",
+          text: this.translate.instant("editor.error.ignore")
+        },
+        {
+          text: this.translate.instant("editor.error.reload"),
+          handler: () => window.location.reload()
+        }
+      ]
+    })
   }
 
   /** Get revision log for a given document */

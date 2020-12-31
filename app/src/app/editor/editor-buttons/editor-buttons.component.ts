@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Change, DisplaySettings, LiturgicalDocument, Sharing } from '@venite/ldf';
@@ -6,13 +6,14 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { environment } from 'src/environments/environment';
 import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
 import { LocalDocumentManager } from '../ldf-editor/document-manager';
-import { EditorService, EditorStatus } from '../ldf-editor/editor.service';
+import { EditorService, EditorStatus, EditorStatusCode } from '../ldf-editor/editor.service';
 import { SharingComponent } from '../sharing/sharing.component';
 
 import { Plugins } from '@capacitor/core';
 const { Clipboard } = Plugins;
 import * as clipboardPolyfill from 'clipboard-polyfill';
 import { EditorState } from '../ldf-editor/editor-state';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'venite-editor-buttons',
@@ -34,6 +35,7 @@ export class EditorButtonsComponent implements OnInit {
     private modal : ModalController,
     private router : Router,
     private alert : AlertController,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {}

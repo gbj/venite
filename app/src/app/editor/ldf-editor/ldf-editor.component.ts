@@ -6,7 +6,7 @@ import { switchMap, debounceTime, tap, map, mapTo, startWith, filter, catchError
 import { DocumentService } from 'src/app/services/document.service';
 import { EditorService, EditorStatus, EditorStatusCode } from './editor.service';
 import { AuthService } from 'src/app/auth/auth.service';
-import { AlertController, LoadingController, ModalController, NavController } from '@ionic/angular';
+import { AlertController, LoadingController, ModalController, NavController, ToastController } from '@ionic/angular';
 //import { LdfEditableAddBlockMenu } from '@venite/angular/src/directives/proxies';
 import { AddBlockComponent } from '../add-block/add-block.component';
 import { SharingComponent } from '../sharing/sharing.component';
@@ -16,6 +16,7 @@ import { EditorDisplaySettingsComponent } from '../editor-display-settings/edito
 import { TranslateService } from '@ngx-translate/core';
 import { EditorState } from './editor-state';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { isOnline } from './is-online';
 
 @Component({
   selector: 'venite-ldf-editor',
@@ -46,7 +47,8 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     private alert : AlertController,
     private translate : TranslateService,
     private navCtrl : NavController,
-    private loading : LoadingController
+    private loading : LoadingController,
+    private toast : ToastController
   ) { }
 
   async permissionDenied() : Promise<null> {
@@ -70,6 +72,22 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.state$ = this.editorService.editorState(this.docId).pipe(
       catchError(() => this.permissionDenied()),
     );
+
+    this.setupOnlineListener();
+  }
+
+  async setupOnlineListener() {
+    let toast;
+    isOnline().subscribe(async isOnline => {
+      if(isOnline && toast) {
+        toast.dismiss();
+      } else if(!isOnline) {
+        toast = await this.toast.create({
+          message: this.translate.instant("editor.offline")
+        });
+        await toast.present();
+      }
+    })
   }
 
   async ngOnDestroy() {

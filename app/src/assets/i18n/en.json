@@ -181,7 +181,18 @@
       "select-image": "Select an Image"
     },
     "reading_adder": "Add a Reading",
-    "citation": "Biblical Citation"
+    "citation": "Biblical Citation",
+    "error": {
+      "header": "Error",
+      "message": "There was an error saving your last change. You may need to reload the editor to make sure you don’t lose any work. Should we do that automatically?",
+      "ignore": "Ignore",
+      "reload": "OK"
+    },
+    "pending-warning": {
+      "message": "It looks like the editor is having trouble making this edit on the server. You may need to reload the editor to make sure you don’t lose any work.",
+      "reload-now": "Reload Now"
+    },
+    "offline": "You are not connected to the Internet. You can continue editing a bulletin you have open, but your changes will not be saved until you’re back online."
   },
   "organization": {
     "owner": "Administrator",
