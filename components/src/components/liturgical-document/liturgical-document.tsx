@@ -83,8 +83,10 @@ export class LiturgicalDocumentComponent {
 
   @Listen('mouseout', { capture: true })
   onMouseOut() {
-    this.hasFocus = false;
-    this.focusPath.emit(this.path);
+    setTimeout(() => {
+      this.hasFocus = false;
+      this.focusPath.emit(this.path);
+    }, 1000);
   }
 
   // Firing the event during the capture phase the most specific LiturgicalDocument will
@@ -194,6 +196,11 @@ export class LiturgicalDocumentComponent {
     return node;
   }
 
+  setPreview(preview: boolean) {
+      this.preview = preview;
+      this.editable = true;
+  }
+
   // Render
   render() {
     const node = this.nodeFromDoc(this.obj);
@@ -208,20 +215,18 @@ export class LiturgicalDocumentComponent {
           obj={this.obj}
           parentType={this.parentType}
           preview={this.preview}
-          onLdfTogglePreview={(e : CustomEvent) => {
-            //console.log(e);
-            const preview = e.detail;
-            this.preview = preview;
-            this.editable = true;
-          }}
+          onLdfTogglePreview={(e : CustomEvent) => this.setPreview(e.detail)}
         >
         </ldf-editable-metadata-buttons>}
 
         {/* Render the Document */}
-        <div class={{
-          doc: true,
-          editable: this.editable || this.preview
-        }}>
+        <div
+          class={{
+            doc: true,
+            editable: this.editable || this.preview
+          }}
+          onDblClick={() => { if(this.editable || this.preview) { this.setPreview(!this.preview); }}}
+        >
           {node}
         </div>
       </Host>

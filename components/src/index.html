@@ -49,7 +49,8 @@
 
     const MAGNIFICAT = {"type":"psalm","style":"canticle","metadata":{"antiphon": {}},"value":[]};
     
-    const LITURGY = {
+    const LITURGY = {"type": "liturgy", "value": [{"type": "rubric", "value":["Lorem ipsum sit dolor amet."]},
+    {
   "label": "The Apostles’ Creed",
   "type": "text",
       "style": "text",
@@ -92,7 +93,7 @@
         and the life of the world to come. Amen.`
 
   ]
-    }
+    }]}
 ;
 
     const node = document.createElement('ldf-liturgical-document');
