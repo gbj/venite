@@ -80,7 +80,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     let toast;
     isOnline().subscribe(async isOnline => {
       if(isOnline && toast) {
-        toast.dismiss();
+        await toast.dismiss();
       } else if(!isOnline) {
         toast = await this.toast.create({
           message: this.translate.instant("editor.offline")
