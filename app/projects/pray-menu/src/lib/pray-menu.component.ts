@@ -117,6 +117,11 @@ export class PrayMenuComponent implements OnInit {
   this.kalendarOptions = this.calendarService.findKalendars();
   this.sanctoralOptions = this.calendarService.findSanctorals();
 
+  // start out with language, version, kalendar from preferences
+  this.preferencesService.get("language").subscribe(p => { if(p?.value) { this.language$.next(p.value) } });
+  this.preferencesService.get("version").subscribe(p => { if(p?.value) { this.version$.next(p.value) } });
+  this.preferencesService.get("kalendar").subscribe(p => { if(p?.value) { this.kalendar.next(p.value) } });
+
   if(!this.config.serverReturnsDate) {
     // DB queries that depend on date change
     // every time `date` or `kalendar` changes, need to send new querys to database for `week` and `holydays`
@@ -180,12 +185,12 @@ pray(data : PrayData, bulletinMode : boolean = false) {
   const { user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings } = data;
 
   // update preferences
-  this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy);
+  this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy, this.language$.getValue(), this.version$.getValue(), this.kalendar.getValue());
 
   // check to see if all selected readings are available; if not, notify the user
   const allReadingsAvailable = this.areReadingsAvailable(new Liturgy(liturgy), clientPreferences, availableReadings);
   if(!allReadingsAvailable) {
-    this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings);
+    this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings, bulletinMode);
   } else {
     // navigate to the Pray page
     if(bulletinMode) {
@@ -223,7 +228,7 @@ async prayersAndThanksgivings() {
   }
 }
 
-async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences, availableReadings : string[]) {
+async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : ClientPreferences, availableReadings : string[], bulletinMode: boolean) {
   const holy_day_readings = availableReadings.filter(reading => reading.match(/holy_day/)),
     date = dateFromYMDString(day?.date);
 
@@ -248,7 +253,13 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
           role: 'cancel',
         }, {
           text: 'Continue',
-          handler: () => this.navigate('/pray', liturgy, date, day, modifiedPrefs)
+          handler: () => {
+            if(bulletinMode) {
+              this.navigate('/bulletin', liturgy, date, day, modifiedPrefs, true);
+            } else {
+              this.navigate('/pray', liturgy, date, day, modifiedPrefs);
+            }
+          }
         }
       ]
     });
@@ -267,7 +278,13 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
           role: 'cancel',
         }, {
           text: 'Continue',
-          handler: () => this.navigate('/pray', liturgy, date, day, prefs)
+          handler: () => {
+            if(bulletinMode) {
+              this.navigate('/bulletin', liturgy, date, day, prefs, true);
+            } else {
+              this.navigate('/pray', liturgy, date, day, prefs);
+            }
+          }
         }
       ]
     });
@@ -276,13 +293,17 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
   }
 }
 
-savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDocument) {
+savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDocument, language : string, version: string, kalendar: string) {
   Object.entries(prefs)
     // take only those properties that are listed in the liturgy's `preferences` metadata field
     // e.g., Evening Prayer will list `bibleVersion` but not `footwashing`—so don't save `footwashing`
     .filter(([key, value]) => liturgy?.metadata?.preferences?.hasOwnProperty(key))
     // store each key individually in the database
     .forEach(([key, value]) => this.preferencesService.set(key, value, uid, liturgy));
+  
+  this.preferencesService.set("language", language, uid);
+  this.preferencesService.set("version", version, uid);
+  this.preferencesService.set("kalendar", kalendar, uid);
 }
 
 navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences, bulletinMode : boolean = false) {
