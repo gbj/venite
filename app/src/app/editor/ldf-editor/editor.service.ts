@@ -299,8 +299,8 @@ export class EditorService {
 
         this.nextLocalManager(manager);
 
-        // if change is still pending, give a notification after 5 seconds
-        setTimeout(() => this.checkIfPending(), 5000);
+        // if change is still pending, give a notification after 10 seconds
+        setTimeout(() => this.checkIfPending(), 10000);
 
         // commit the change
         await batch.commit();
