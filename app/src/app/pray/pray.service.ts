@@ -521,10 +521,11 @@ const HOLY_DAY_READINGS = {
 
 function titleCase(str : string | undefined) {
   if(str) {
-    return str.toLowerCase().split(' ').map(function(word) {
+    const s = str.toLowerCase().split(' ').map(function(word) {
       const firstLetter = word.startsWith('[') ? word[1] : word[0];
       return !['de', 'of', 'the', 'in', 'and', 'with', 'by'].includes(word.trim()) ? word.replace(firstLetter, firstLetter.toUpperCase()) : word;
     }).join(' ');
+    return `${s[0].toUpperCase()}${s.slice(1)}`
   } else {
     return null;
   }
