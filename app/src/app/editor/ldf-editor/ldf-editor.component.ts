@@ -34,6 +34,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   editorStatusCode = EditorStatusCode;
 
   state$ : Observable<EditorState>;
+  settingsClasses$ : Observable<string>;
 
   // For Gloria Patri requests
   glorias : Record<string, LiturgicalDocument> = {};
@@ -72,6 +73,23 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.state$ = this.editorService.editorState(this.docId).pipe(
       catchError(() => this.permissionDenied()),
     );
+
+    this.settingsClasses$ = this.state$.pipe(
+      map(state => state?.localManager?.document?.display_settings),
+      filter(settings => Boolean(settings)),
+      map(settings => [
+        'ldf-wrapper',
+        settings.dropcaps ? `dropcaps-${settings.dropcaps}` : '',
+        settings.response ? `response-${settings.response}` : '',
+        settings.repeatAntiphon ? `repeat-antiphon-${settings.repeatAntiphon}` : '',
+        settings.fontscale ? `fontscale-${settings.fontscale.toString()}` : '',
+        settings.font ? `font-${settings.font}` : '',
+        settings.psalmVerses ? `psalmverses-${settings.psalmVerses}` : '',
+        settings.bibleVerses ? `bibleverses-${settings.bibleVerses}` : '',
+        settings.bolded ? `bolded-${settings.bolded}` : ''
+      ].join(' ')),
+      startWith('')
+    )
 
     this.setupOnlineListener();
   }

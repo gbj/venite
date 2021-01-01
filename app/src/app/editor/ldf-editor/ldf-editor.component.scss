@@ -11,10 +11,10 @@ ldf-editor {
   text-align: center;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .sm-hidden {
     position: absolute !important;
-    height: 1px; 
+    height: 1px;
     width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -23,10 +23,10 @@ ldf-editor {
   }
 }
 
-@media(min-width: 767px) {
+@media (min-width: 767px) {
   .sm-only {
     position: absolute !important;
-    height: 1px; 
+    height: 1px;
     width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -39,9 +39,29 @@ ldf-editor {
   color: #a0a0a0;
 }
 
-.status.success{
+.status.success {
   color: green;
 }
 .status.error {
   color: red;
+}
+
+.ldf-wrapper {
+  max-width: calc(600px + 2em);
+  margin: auto;
+  background-color: var(--ldf-background-color);
+  padding: 1em;
+  box-shadow: 5px;
+}
+
+@media (min-width: 767px) {
+  .ldf-wrapper {
+    padding: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ldf-wrapper {
+    padding: 3em;
+  }
 }

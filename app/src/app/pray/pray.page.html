@@ -41,7 +41,6 @@
 </ion-header>
 <ion-content #content [fullscreen]="true" [scrollEvents]="!bulletinMode">
   <div class="bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
-    <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
       <ng-container *ngIf="bulletinMode">
         <div class="editor-wrapper" *ngIf="bulletinDocId$ | async as bulletinDocId">
           <venite-ldf-editor
@@ -51,19 +50,20 @@
         </div>
       </ng-container>
       <ng-container *ngIf="!bulletinMode">
-        <ng-container *ngIf="doc$ | async as doc else loading">
-          <ng-container *ngIf="canticleData$ | async as canticleData">
-            <ldf-liturgical-document
-              path="/"
-              [doc]="doc"
-              [editable]="false"
-              (ldfDocShouldChange)="changeDoc(doc, $event)"
-              (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
-            ></ldf-liturgical-document>
+        <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+          <ng-container *ngIf="doc$ | async as doc else loading">
+            <ng-container *ngIf="canticleData$ | async as canticleData">
+              <ldf-liturgical-document
+                path="/"
+                [doc]="doc"
+                [editable]="false"
+                (ldfDocShouldChange)="changeDoc(doc, $event)"
+                (ldfAskForCanticleOptions)="sendCanticleOptions($event, canticleData)"
+              ></ldf-liturgical-document>
+            </ng-container>
           </ng-container>
-        </ng-container>
+        </div>
       </ng-container>
-    </div>
   </div>
 </ion-content>
   

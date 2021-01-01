@@ -539,7 +539,7 @@ export class PrayPage implements OnInit, OnDestroy {
       });
     }
     // Create bulletin if it's not one
-    if(!this.bulletinMode) {
+    if(!this.bulletinMode && !(data.doc?.id && data.doc?.day)) {
       buttons.push({
         text: 'Create Bulletin',
         icon: 'create',
