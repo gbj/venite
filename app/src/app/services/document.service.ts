@@ -293,6 +293,7 @@ export class DocumentService {
   }
 
   myOrganizationDocumentsWithSlug(org : string, slug : string) : Observable<IdAndDoc[]> {
+    console.log('(myOrganizationDocumentsWithSlug) searching for organization documents: ', org, slug);
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.organization', '==', org)
          .where('slug', '==', slug)
@@ -300,7 +301,8 @@ export class DocumentService {
       // transform from AngularFire `DocumentChangeAction` to `doc`
       map(changeactions => changeactions.map(action => action?.payload?.doc)),
       // extra ID and document data and leave the rest behind
-      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() })))
+      map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() }))),
+      tap(docs => console.log('(myOrganizationDocumentsWithSlug) found', docs))
     );
   }
 

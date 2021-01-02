@@ -88,7 +88,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         settings.bibleVerses ? `bibleverses-${settings.bibleVerses}` : '',
         settings.bolded ? `bolded-${settings.bolded}` : ''
       ].join(' ')),
-      startWith('')
+      startWith('ldf-wrapper')
     )
 
     this.setupOnlineListener();
