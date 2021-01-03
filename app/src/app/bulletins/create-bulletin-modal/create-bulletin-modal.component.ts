@@ -99,6 +99,7 @@ export class CreateBulletinModalComponent implements OnInit {
                   }, {
                     text: this.translate.instant("bulletins.ok"),
                     handler: () => {
+                      window.alert("slug is "+ slug);
                       liturgy.slug = slug;
 
                       others.forEach(other => {
