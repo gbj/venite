@@ -6,21 +6,23 @@
       {{ 'editor.search-for-hymns' | translate}}
     </ion-item>
     <ion-item *ngFor="let hymn of hymns">
-      {{ hymn.source }} {{ hymn.number }} {{ hymn.title }} <ng-container *ngIf="hymn.tune">({{ hymn.tune }})</ng-container>
-      <ion-buttons slot="end">
-        <ion-button *ngIf="hymn.imageUrl && !hymn.imageUrl.endsWith('null')" (click)="chooseHymn(hymn, 'scan')">
-          <ion-icon name="camera" slot="icon-only"></ion-icon>
-          <ion-label class="visually-hidden">{{ 'editor.include-image' | translate }}</ion-label>
-        </ion-button>
-        <ion-button *ngIf="hymn.textUrl && !hymn.textUrl.endsWith('null')"  (click)="chooseHymn(hymn, 'text')">
-          <ion-icon name="document-text" slot="icon-only"></ion-icon>
-          <ion-label class="visually-hidden">{{ 'editor.include-text' | translate }}</ion-label>
-        </ion-button>
-        <ion-button (click)="chooseHymn(hymn, 'title')">
-          <ion-icon name="text" slot="icon-only"></ion-icon>
-          <ion-label class="visually-hidden">{{ 'editor.include-title' | translate }}</ion-label>
-        </ion-button>
-      </ion-buttons>
+      <ion-label>
+        <p>{{ hymn.source }} {{ hymn.number }} {{ hymn.title }} <ng-container *ngIf="hymn.tune">({{ hymn.tune }})</ng-container></p>
+        <div>
+          <ion-button fill="clear" (click)="chooseHymn(hymn, 'title')">
+            <ion-icon name="text" slot="start"></ion-icon>
+            <ion-label class="sm-hidden">{{ 'editor.include-title' | translate }}</ion-label>
+          </ion-button>
+          <ion-button fill="clear" *ngIf="hymn.textUrl && !hymn.textUrl.endsWith('null')"  (click)="chooseHymn(hymn, 'text')">
+            <ion-icon name="document-text" slot="start"></ion-icon>
+            <ion-label class="sm-hidden">{{ 'editor.include-text' | translate }}</ion-label>
+          </ion-button>
+          <ion-button fill="clear" *ngIf="hymn.imageUrl && !hymn.imageUrl.endsWith('null')" (click)="chooseHymn(hymn, 'scan')">
+            <ion-icon name="camera" slot="start"></ion-icon>
+            <ion-label class="sm-hidden">{{ 'editor.include-image' | translate }}</ion-label>
+          </ion-button>
+        </div>
+      </ion-label>
     </ion-item>
   </ion-list>
 </form>
