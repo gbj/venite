@@ -103,7 +103,7 @@ export class OptionComponent {
 
       // only change the selection at this point if it's not editable
       // if it's editable, the editor will control when it changes
-      if(resultedFromUserAction && !this.editable && !this.preview) {
+      if(resultedFromUserAction && !this.editable) {
         this.ldfDocShouldChange.emit(new Change({
           path: `${this.path}/metadata`,
           op: [{
