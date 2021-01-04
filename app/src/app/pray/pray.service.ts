@@ -60,7 +60,16 @@ export class PrayService {
       // recurse if doc is a `Liturgy` or an `Option` (and therefore contains other, nested docs), 
       if((doc.type == 'liturgy' || doc.type == 'option') && doc.value?.length > 0) {
         this.latestChildren$ = ((docBase as Liturgy)
-          .value?.map(child => this.compile(child, day, prefs, liturgyversions.concat(docBase?.metadata?.liturgyversions || []), originalPrefs || doc.metadata?.preferences)));
+          .value?.map(
+            child => this.compile(
+              child,
+              day,
+              prefs,
+              liturgyversions.concat(docBase?.metadata?.liturgyversions || []),
+              originalPrefs || doc.metadata?.preferences
+            ).pipe(startWith(LOADING))
+          )
+        );
         return combineLatest(
           // convert each child document in `Liturgy.value` into its own compiled Observable<LiturgicalDocument>
           // and combine them into a single Observable that fires when any of them changes
@@ -295,13 +304,13 @@ export class PrayService {
   filter(filterType : 'seasonal' | 'evening' | 'day', day : LiturgicalDay, docs : LiturgicalDocument[]) : LiturgicalDocument[] {
     switch(filterType) {
       case 'seasonal':
-        const filteredByDaySeason = docs.filter(doc => doc.category?.includes(day?.season)),
-          filteredByWeekSeason = docs.filter(doc => doc.category?.includes(day?.week?.season));
+        const filteredByDaySeason = docs.filter(doc => doc.category?.includes(day?.season) || isLoading(doc)),
+          filteredByWeekSeason = docs.filter(doc => doc.category?.includes(day?.week?.season) || isLoading(doc));
         return filteredByDaySeason?.length == 0 ? filteredByWeekSeason : filteredByDaySeason;
       case 'evening':
-        return docs.filter(doc => doc.category?.includes('Evening'));
+        return docs.filter(doc => doc.category?.includes('Evening') || isLoading(doc));
       case 'day':
-        return docs.filter(doc => doc.category?.includes(day?.slug) || doc.category?.includes(day?.propers));
+        return docs.filter(doc => doc.category?.includes(day?.slug) || doc.category?.includes(day?.propers) || isLoading(doc));
       default:
         return docs;
     }
@@ -529,4 +538,8 @@ function titleCase(str : string | undefined) {
   } else {
     return null;
   }
+}
+
+function isLoading(doc : LiturgicalDocument) : boolean {
+  return JSON.stringify(doc) === JSON.stringify(LOADING);
 }

@@ -376,7 +376,6 @@ export class PrayPage implements OnInit, OnDestroy {
       // next
       doc => {
         latestDoc = doc;
-        //console.log('CPL still compiling', doc);
       },
       // error — TODO
       async e => {
