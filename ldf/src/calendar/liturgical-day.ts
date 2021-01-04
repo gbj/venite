@@ -92,6 +92,9 @@ export class LiturgicalDay {
     const day: LiturgicalDay = this;
 
     holydays = holydays
+      // filter out days that are supposed to stop after a certain Sunday
+      // viz., the 1979 daily lectionary for January 8, 9, 10, 11, etc., stops at the 1st Sunday after the Epiphany
+      .filter((feast) => feast.stops_at_sunday !== day.week.slug)
       .map((feast) => {
         // if a feast has an `evening` field and it's evening, use that
         if (feast.hasOwnProperty('evening') && this.evening == true) {
