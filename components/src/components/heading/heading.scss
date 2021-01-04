@@ -50,7 +50,9 @@
     text-transform: var(--ldf-h5-text-transform);
   }
 
-  .date, .holy-days, .holy-day {
+  .date,
+  .holy-days,
+  .holy-day {
     font-size: var(--ldf-date-font-size);
     text-transform: var(--ldf-date-text-transform);
     text-align: var(--ldf-date-text-align);
@@ -84,5 +86,4 @@
 
 .citation {
   font-style: italic;
-  margin-bottom: 0.5em;
 }
