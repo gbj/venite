@@ -3,7 +3,7 @@
   color: var(--ldf-editable-lookup-color);
   border-radius: 4px;
   padding: 1em;
-  width: 100%;
+  width: calc(100% - 2em);
 
   code {
     font-weight: bold;
@@ -15,7 +15,7 @@
   color: var(--ldf-editable-condition-color);
   border-radius: 4px;
   padding: 1em;
-  width: 100%;
+  width: calc(100% - 2em);
 
   code {
     font-weight: bold;
