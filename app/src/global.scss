@@ -25,6 +25,32 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* EB Garamond Initials */
+@font-face {
+  font-family: "EB Garamond Initials";
+  src: url("./assets/EBGaramond-Initials.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EB Garamond Initials";
+  src: url("./assets/EBGaramond-Initials.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EB Garamond Initials";
+  src: url("./assets/EBGaramond-Initials.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "EB Garamond Initials";
+  src: url("./assets/EBGaramond-Initials.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Allow text selection */
 body {
   ion-app {
@@ -209,8 +235,7 @@ body {
 
   /* Dropcap styling */
   --ldf-drop-firstword-font-variant: small-caps;
-  --ldf-drop-font-family: "Cormorant Garamond Initials", "Cormorant Garamond",
-    "Garamond", serif;
+  --ldf-drop-font-family: "Cormorant Garamond", "Garamond", serif;
   --ldf-drop-font-size: 2.5em;
   --ldf-drop-margin-right: 0.05em;
 
