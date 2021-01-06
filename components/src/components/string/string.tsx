@@ -147,10 +147,8 @@ export class StringComponent {
             split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
 
-      //console.log('firstWordMatch = ', firstWord, firstWord[0]?.match(/[“”‘’\!\?\[\]\(\)]/))
-
       final = new Array(
-        <span class='firstword'><span class={buffer ? 'drop buffered-drop' : 'drop'}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
+        <span class='firstword'><span class={buffer ? `drop buffered-drop drop-${match1}` : `drop drop-${match1}`}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
       )
         .concat(nextWord)
         .concat(processed.slice(1));

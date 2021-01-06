@@ -41,7 +41,12 @@
   margin-right: var(--ldf-buffered-drop-margin-right);
 }
 
-:host[dir='rtl'] .drop {
+:host[dir="rtl"] .drop {
   float: right;
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
+}
+
+.drop-J {
+  margin-top: 0;
+  line-height: clamp(0.5em, calc(var(--ldf-drop-line-height) + 0.3em), 1em);
 }
