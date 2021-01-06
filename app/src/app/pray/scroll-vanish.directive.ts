@@ -55,7 +55,6 @@ export class ScrollVanishDirective {
         "0.2s linear"
       );
       this.renderer.setStyle(this.element.nativeElement, "height", "var(--min-height)");
-      this.renderer.setStyle(this.element.nativeElement, "position", 'fixed');
     });
   }
 
