@@ -120,8 +120,8 @@ export class LiturgicalDay {
 
     // overwrite the day's slug with the observed day's slug if they differ
     const holy_day_rank = Number((observed as HolyDay)?.type?.rank),
-      holy_day_is_observed = observed?.slug && (observed?.slug !== day.slug || holy_day_rank >= 3),
-      slug = holy_day_is_observed && holy_day_rank >= 3 ? observed.slug : day.slug;
+      holy_day_is_observed = observed?.slug && (observed?.slug !== day.slug || holy_day_rank > 2),
+      slug = holy_day_is_observed && holy_day_rank > 2 ? observed.slug : day.slug;
 
     let propers = this.propers;
     if (slug !== this.slug) {
