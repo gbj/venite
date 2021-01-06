@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable, combineLatest, of } from 'rxjs';
-import { map, tap, switchMap, filter, startWith } from 'rxjs/operators';
+import { map, tap, switchMap, filter, startWith, shareReplay } from 'rxjs/operators';
 
 import { HolyDay, Kalendar, Liturgy, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, LiturgicalWeekIndex, ProperLiturgy, addOneDay, dateFromYMD, dateToYMD, liturgicalWeek, liturgicalDay } from '@venite/ldf';
 import { CalendarServiceInterface } from '@venite/ng-service-api';
@@ -147,7 +147,7 @@ export class CalendarService {
     return combineLatest(date, kalendar, liturgy, vigil).pipe(
       filter(([date, kalendar, liturgy, vigil]) => liturgy?.type === 'liturgy' || (liturgy.value && !liturgy.value[0].toString().includes("Loading..."))),
       switchMap(([date, kalendar, liturgy, vigil]) => this.http.get<LiturgicalDay>(`https://us-central1-venite-2.cloudfunctions.net/calendar?y=${date.getFullYear()}&m=${date.getMonth() + 1}&d=${date.getDate()}&vigil=${Boolean(vigil)}&evening=${Boolean(liturgy?.metadata?.evening)}&kalendar=${kalendar}`)),
-      tap(day => console.log('day is = ', day))
+      shareReplay()
     )
   }
   
