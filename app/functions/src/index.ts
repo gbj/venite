@@ -133,7 +133,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
 
   async function findSpecialDays(slug : string) : Promise<HolyDay[]> {
     const days = await db.collection('HolyDay')
-      .where('kalendar', '==', kalendar)
+      .where('kalendar', 'in', [kalendar, 'bcp1979'])
       .where('slug', '==', slug)
       .get();
     return (days.docs.map(doc => doc.data()) as HolyDay[]).filter(hd => !hd.eve || evening);
@@ -141,7 +141,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
 
   async function findFeastDays(mmdd : string) : Promise<HolyDay[]> {
     const days = await db.collection('HolyDay')
-      .where('kalendar', '==', kalendar)
+      .where('kalendar', 'in', [kalendar, 'bcp1979'])
       .where('mmdd', '==', mmdd)
       .get();
     return (days.docs.map(doc => doc.data()) as HolyDay[])
@@ -175,7 +175,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
         allHolyDays = (await db.collection('HolyDay').where('kalendar', '==', kalendar).get())
           .docs
           .map(doc => doc.data() as HolyDay)
-          .filter(hd => !hd?.type?.rank || hd?.type?.rank >= 3)
+          .filter(hd => !hd?.type?.rank || hd?.type?.rank > 2)
           // original holy days defaulted to rank 3, so if no rank present opt for 3
           .map(hd => hd?.type?.rank ? hd : {...hd, type: { rank: 3 }}),
         // add transferred feast days
@@ -209,7 +209,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       weeks = await findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)),
       day = liturgicalDay(vigil ? addOneDay(date) : date, kalendar, evening, weeks[0]),
       dayWithHolyDays = await addHolyDays(day);
-    response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
+    //response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
     response.status(200).send(dayWithHolyDays);
   } catch(e) {
     response.status(400).send(`[Error] ${e.toString()}`);
