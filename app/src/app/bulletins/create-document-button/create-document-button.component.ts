@@ -80,7 +80,7 @@ export class CreateDocumentButtonComponent implements OnInit {
     const template = await this.template(label);//,
       //slug = await ;
 
-    this.uniqueSlugify(orgs[0]?.slug, uid, template.slug).subscribe(
+    this.uniqueSlugify(orgs[0]?.slug, uid, template.slug || slugify(template.label)).subscribe(
       async slug => {
         const docId = await this.documents.newDocument(new LiturgicalDocument({
           ...template,
