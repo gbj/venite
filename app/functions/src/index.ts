@@ -209,7 +209,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       weeks = await findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)),
       day = liturgicalDay(vigil ? addOneDay(date) : date, kalendar, evening, weeks[0]),
       dayWithHolyDays = await addHolyDays(day);
-    //response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
+    response.set('Cache-Control', 'public, max-age=6048000'); // allow caching for 604,8000 seconds = 7 days
     response.status(200).send(dayWithHolyDays);
   } catch(e) {
     response.status(400).send(`[Error] ${e.toString()}`);
