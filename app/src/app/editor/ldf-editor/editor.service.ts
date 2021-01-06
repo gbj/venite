@@ -35,6 +35,7 @@ export class EditorService {
   private _uid : string;
   private _localManagers : { [docId: string]: BehaviorSubject<LocalDocumentManager> } = {};
   private _onlineListener : () => void;
+  private _pendingChange : number | undefined;
 
   public status : BehaviorSubject<EditorStatus> = new BehaviorSubject({code: EditorStatusCode.Idle});
 
@@ -300,12 +301,14 @@ export class EditorService {
         this.nextLocalManager(manager);
 
         // if change is still pending, give a notification after 10 seconds
-        setTimeout(() => this.checkIfPending(), 10000);
+        setTimeout(() => this.checkIfPending(change.lastRevision), 5000);
+        this._pendingChange = change.lastRevision;
 
         // commit the change
         await batch.commit();
 
         // send a Success code for UI, fading after 2 seconds
+        this._pendingChange = undefined;
         this.status.next({ code: EditorStatusCode.Success });
         setTimeout(() => this.status.next({ code: EditorStatusCode.Idle }), 2000);
         
@@ -331,8 +334,8 @@ export class EditorService {
 
   }
 
-  async checkIfPending() {
-    if(this.status.getValue()?.code === EditorStatusCode.Pending) {
+  async checkIfPending(changeRevision : number) {
+    if(this.status.getValue()?.code === EditorStatusCode.Pending && this._pendingChange == changeRevision) {
       const warningToast = await this.toast.create({
         message: this.translate.instant("editor.pending-warning.message"),
         duration: 15000,
