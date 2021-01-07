@@ -376,6 +376,7 @@ export class PrayPage implements OnInit, OnDestroy {
       // next
       doc => {
         latestDoc = doc;
+        //console.log('latest = ', doc);
       },
       // error — TODO
       async e => {
@@ -401,6 +402,7 @@ export class PrayPage implements OnInit, OnDestroy {
         latestDoc.slug = this.newSlug;
         latestDoc.label = this.newLabel;
         loading.dismiss();
+        console.log('completed');
         this.beginEditing(latestDoc);
       }
     );
