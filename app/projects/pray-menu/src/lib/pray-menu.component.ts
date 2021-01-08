@@ -151,13 +151,13 @@ export class PrayMenuComponent implements OnInit {
 
   // Pray button data
   this.prayData = combineLatest([
-    this.auth.user,
+    this.auth.user.pipe(startWith(undefined)),
     this.liturgy,
-    this.date,
-    this.properLiturgy,
-    this.liturgicalDay,
-    this.clientPreferences,
-    this.availableReadings$
+    this.date.pipe(startWith(new Date())),
+    this.properLiturgy.pipe(startWith(undefined)),
+    this.liturgicalDay.pipe(startWith(undefined)),
+    this.clientPreferences.pipe(startWith({})),
+    this.availableReadings$.pipe(startWith([]))
   ]).pipe(
     map(([user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings]) => ({
       user: user as User,
@@ -179,7 +179,7 @@ ionViewWillEnter() {
   this.hasStartedNavigating = false;
 }
 
-pray(data : PrayData, bulletinMode : boolean = false) {
+pray(data : PrayData | undefined, bulletinMode : boolean = false) {
   this.dayChosen.emit(data);
   
   const { user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings } = data;
