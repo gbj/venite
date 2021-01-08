@@ -16,7 +16,7 @@ export class LectionaryService {
     private http : HttpClient
   ) { }
 
-  getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {
+  getReadings(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean) : Observable<LectionaryEntry[]> {    
     // lectionaries that include readings for black-letter days
     const BLACK_LETTER_LECTIONARIES = ['lff2018'];
     
@@ -51,7 +51,7 @@ export class LectionaryService {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank >= 3 && !['first_reading', 'second_reading', 'gospel'].includes(readingType)) {
+        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading', 'second_reading', 'gospel'].includes(readingType)) {
           let query = ref.where('day', '==', day.slug);
           if(readingType !== undefined) {
             query = query.where('type', '==', readingType);
@@ -77,9 +77,11 @@ export class LectionaryService {
             query = query.where('day', '==', day.propers || day.slug)
           }
 
+          console.log('getReadings query = ', query);
+
           return query;
         }
-      }).valueChanges();
+      }).valueChanges().pipe(tap(entries => console.log('getReadings => ', entries)));
     }
   }
 
