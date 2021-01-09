@@ -202,7 +202,8 @@ export class PrayPage implements OnInit, OnDestroy {
     // Unite the data passed from the state and the data derived from the route
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
       filter(state => state && Boolean(state.liturgy) && state.liturgy.value && state.liturgy.value[0] !== "Loading..." && (Boolean(state.day) || Boolean(state.liturgy.day))),
-      take(2)
+      take(this.bulletinMode ? 2 : 1000),
+      //take(2)
     );
 
     const stateDoc$ = this.state$.pipe(
@@ -372,11 +373,13 @@ export class PrayPage implements OnInit, OnDestroy {
       takeWhile(doc => !isCompletelyCompiled(doc), true),
     );
 
+    this.bulletinMode = true;
+
     const subscription = doc$.subscribe(
       // next
       doc => {
         latestDoc = doc;
-        //console.log('latest = ', doc);
+        console.log('latest = ', doc);
       },
       // error — TODO
       async e => {
