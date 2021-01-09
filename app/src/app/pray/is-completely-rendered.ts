@@ -2,7 +2,7 @@ import {  LiturgicalDocument, Liturgy, Option } from '@venite/ldf';
 
 export function isCompletelyCompiled(doc : LiturgicalDocument | undefined, recursionLevel : number = 0) : boolean {
   let isCompiled : boolean = false;
-  if(doc == undefined || recursionLevel > 5 || (doc.condition == undefined && doc.hidden == false && !doc.value)) {
+  if(doc == undefined || recursionLevel > 5 || (doc.condition == undefined && doc.hidden == false && (!doc.value || (Array.isArray(doc.value) && doc.value.length === 0)))) {
     //console.log('isCompletelyCompiled -- undefined', isCompiled, doc);
     isCompiled = true;
   } else if(doc?.type === 'liturgy') {
@@ -16,7 +16,9 @@ export function isCompletelyCompiled(doc : LiturgicalDocument | undefined, recur
     isCompiled = true;
   } else {
     isCompiled = Boolean(doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
-    //console.log('isCompletelyCompiled', isCompiled, doc);
+    /*if(!isCompiled) {
+      console.log('isCompletelyCompiled', isCompiled, doc);
+    }*/
   }
 
   return isCompiled;
