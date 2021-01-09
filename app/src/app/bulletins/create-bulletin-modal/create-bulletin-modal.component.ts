@@ -59,7 +59,7 @@ export class CreateBulletinModalComponent implements OnInit {
                 name: 'slug',
                 type: 'text',
                 placeholder: this.translate.instant("bulletins.url", {base: `/${org}/pray`}),
-                value: liturgy?.slug
+                value: event.state?.day?.date ? `${(liturgy?.slug || 'bulletin')}-${event.state?.day?.date}` : liturgy?.slug
               }
             ],
             buttons: [
@@ -98,18 +98,20 @@ export class CreateBulletinModalComponent implements OnInit {
                     cssClass: 'secondary'
                   }, {
                     text: this.translate.instant("bulletins.ok"),
-                    handler: () => {
-                      window.alert("slug is "+ slug);
+                    handler: async () => {
+                      //window.alert("slug is "+ slug);
                       liturgy.slug = slug;
 
-                      others.forEach(other => {
-                        this.documents.saveDocument(other.id, {
+                      await Promise.all(others.map(async other => {
+                        console.log('renaming ', other.id);
+                        return this.documents.saveDocument(other.id, {
                           ...other.data,
-                          slug: `${other.data.slug}-${other.data.day?.date || 'template'}`
-                        })
-                      });
+                          slug: `${(other.data.slug || 'bulletin')}-${other.data.day?.date || 'template'}`
+                        }).toPromise()
+                      }
+                      ));
 
-                      //console.log('liturgy now = ', event.state.liturgy);
+                      console.log('now navigating');
                       this.router.navigate(
                         event.commands,
                         {
