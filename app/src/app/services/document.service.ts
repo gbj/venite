@@ -87,7 +87,7 @@ export class DocumentService {
       switchMap(user => this.myDocuments(user?.uid)),
       map(idsAndDocs => idsAndDocs
         .map(idAndDoc => new Liturgy(idAndDoc.data))
-        .filter(doc => doc.type === 'liturgy' && !Boolean(doc.day)) as Liturgy[]
+        .filter(doc => doc.type === 'liturgy' && !Boolean(doc.day) && doc.version === version) as Liturgy[]
       ),
       startWith([] as Liturgy[])
     );
