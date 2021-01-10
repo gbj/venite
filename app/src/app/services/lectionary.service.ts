@@ -51,7 +51,7 @@ export class LectionaryService {
       const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
 
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
-        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading', 'second_reading', 'gospel'].includes(readingType)) {
+        if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading_alt', 'first_reading', 'second_reading', 'gospel'].includes(readingType)) {
           let query = ref.where('day', '==', day.slug);
           if(readingType !== undefined) {
             query = query.where('type', '==', readingType);
@@ -70,6 +70,7 @@ export class LectionaryService {
             // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
             // so its value is set to 'first_reading_alt'
             // but it still needs to search for 'first_reading'
+            console.log('readingType is', readingType);
             query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
           }
 
@@ -77,11 +78,9 @@ export class LectionaryService {
             query = query.where('day', '==', day.propers || day.slug)
           }
 
-          console.log('getReadings query = ', query);
-
           return query;
         }
-      }).valueChanges().pipe(tap(entries => console.log('getReadings => ', entries)));
+      }).valueChanges().pipe(tap(entries => console.log('getReadings => ', day.propers, readingType, entries)));
     }
   }
 
