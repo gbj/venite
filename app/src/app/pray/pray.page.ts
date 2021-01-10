@@ -202,7 +202,9 @@ export class PrayPage implements OnInit, OnDestroy {
     // Unite the data passed from the state and the data derived from the route
     this.state$ = merge(windowHistoryState$, routerParamState$).pipe(
       filter(state => state && Boolean(state.liturgy) && state.liturgy.value && state.liturgy.value[0] !== "Loading..." && (Boolean(state.day) || Boolean(state.liturgy.day))),
-      take(this.bulletinMode ? 2 : 1000),
+      // allow more changes if orgId is in the URL (i.e., it's a published bulletin)
+      // to prevent issues with caching old bulletins with same URL
+      take(this.route.snapshot.params['orgId'] ? 1000 : 2),
       //take(2)
     );
 
