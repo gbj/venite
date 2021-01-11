@@ -11,6 +11,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { AuthService } from '../auth/auth.service';
 import { OrganizationService } from '../organization/organization.service';
+import { version } from 'process';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -214,6 +215,10 @@ export class DocumentService {
         const bIndex = (versions || []).indexOf(versionToString(b.version));
         return aIndex < bIndex ? -1 : 1;
       })),
+      switchMap(docs => docs.length === 0 && !versions.includes('bcp1979')
+        ? this.findDocumentsBySlug(slug, language, versions.concat('bcp1979'))
+        : of(docs)
+      ),
       startWith([LOADING]),
       catchError((error) => this.handleError(error))
     );

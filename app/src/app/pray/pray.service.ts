@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, dateFromYMDString, filterCanticleTableEntries, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, filterCanticleTableEntries, dateFromYMDString, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference, CanticleTableEntry } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { filter, first, map, startWith, switchMap, tap } from 'rxjs/operators';
@@ -159,6 +159,9 @@ export class PrayService {
         break;
       case 'canticle-table':
       case 'canticle':
+        const table = typeof doc.lookup.table === 'string'
+          ? undefined
+          : (originalPrefs[doc.lookup.table.preference].options || []).find(item => item.value === prefs[doc.lookup.table['preference']]);
         result = this.lookupFromCanticleTable(
           doc,
           day,
@@ -166,7 +169,7 @@ export class PrayService {
           prefs,
           typeof doc.lookup.table === 'string' ? doc.lookup.table : prefs[doc.lookup.table.preference],
           Number(doc.lookup.item),
-          undefined,
+          table?.metadata?.fallback,
           originalPrefs
         );
         break;
@@ -454,7 +457,9 @@ export class PrayService {
   lookupFromCanticleTable(doc : LiturgicalDocument, day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
+      tap(entries => console.log('filtered canticle table entries A = ', entries)),
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
+      tap(entries => console.log('filtered canticle table entries B = ', entries)),
       switchMap(entries => entries.map(entry => new LiturgicalDocument(
         {
           slug: entry.slug,
