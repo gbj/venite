@@ -49,7 +49,9 @@ export function filterCanticleTableEntries(
     preferredEntries = seasonEntries;
   }
 
-  if (preferredEntries?.length == 0 && defaultCanticles !== undefined) {
+  if (preferredEntries?.length == 0 && fallbackTable) {
+    return filterCanticleTableEntries(entries, day, fallbackTable, nth, undefined, defaultCanticles);
+  } else if (preferredEntries?.length == 0 && defaultCanticles !== undefined) {
     const defaultCanticle = new CanticleTableEntry();
     return new Array({
       ...defaultCanticle,
