@@ -64,7 +64,7 @@ export class LiturgyMenuComponent implements OnInit {
     // find actual `Liturgy` documents, given the `ProperLiturgy` we're passed
     this.properLiturgyLiturgy = this.properLiturgySubject.pipe(
       filter(proper => proper?.hasOwnProperty('liturgy')),
-      mergeMap(proper => this.documents.findDocumentsBySlug(proper?.liturgy, this.language, undefined)),
+      switchMap(proper => this.documents.findDocumentsBySlug(proper?.liturgy, this.language, undefined)),
       // transform from array of all documents with slug to first document found with correct language and version
       // or just the right language
       map(documents => {

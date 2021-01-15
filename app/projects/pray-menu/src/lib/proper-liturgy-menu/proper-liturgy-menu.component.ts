@@ -14,6 +14,7 @@ import { CALENDAR_SERVICE, CalendarServiceInterface } from '@venite/ng-service-a
 export class ProperLiturgyMenuComponent implements OnInit {
   @Input() day : LiturgicalDay;
   @Input() language : string = 'en';
+  @Input() properLiturgySelected : string | undefined = undefined;
 
   @Output() properLiturgyChange : EventEmitter<ProperLiturgy> = new EventEmitter();
 
@@ -27,8 +28,8 @@ export class ProperLiturgyMenuComponent implements OnInit {
     }
   }
 
-  ngOnChanges() {
-    if(this.day) {
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes.day && !this.properLiturgySelected) {
       this.updateLiturgies();
     }
   }

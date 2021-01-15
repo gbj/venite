@@ -84,7 +84,8 @@
     <venite-proper-liturgy-menu
       [day]="liturgicalDay | async"
       [language]="(liturgy | async)?.language"
-      (properLiturgyChange)="properLiturgy.next($event)"
+      [properLiturgySelected]="(properLiturgy | async)?.liturgy"
+      (properLiturgyChange)="setProperLiturgy($event)"
     ></venite-proper-liturgy-menu>
 
     <!-- Pray Button -->

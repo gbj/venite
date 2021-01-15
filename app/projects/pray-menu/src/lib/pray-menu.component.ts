@@ -357,4 +357,8 @@ nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreference
   return nonDefaultPrefs;
 }
 
+  setProperLiturgy(properLiturgy : ProperLiturgy) {
+    this.properLiturgy.next(properLiturgy);
+  }
+
 }

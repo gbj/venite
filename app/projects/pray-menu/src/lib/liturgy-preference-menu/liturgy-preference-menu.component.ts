@@ -129,6 +129,5 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
     form.controls[key].setValue(value);
     this.clientPreferencesChange.emit(form.value);
     this.preferencesService.set(key, value, uid, this.liturgy);
-    console.log('updated preference', key, ' to ', value);
   }
 }
