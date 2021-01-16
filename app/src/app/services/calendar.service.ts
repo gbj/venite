@@ -29,10 +29,14 @@ export class CalendarService {
 
   /** Find Proper Liturgies for certain special days */
   findProperLiturgies(day : LiturgicalDay, language : string) : Observable<ProperLiturgy[]> {
-    return this.afs.collection<ProperLiturgy>('ProperLiturgy', ref =>
-      ref.where('slug', '==', day.slug)
-         .where('language', '==', language)
-    ).valueChanges();
+    if(day) {
+      return this.afs.collection<ProperLiturgy>('ProperLiturgy', ref =>
+        ref.where('slug', '==', day.slug)
+          .where('language', '==', language ?? 'en')
+      ).valueChanges();
+    } else {
+      return of([]);
+    }
   }
 
   // These function have been moved into a Cloud Function to speed them up (by calculating on the client side rather than making round trips
