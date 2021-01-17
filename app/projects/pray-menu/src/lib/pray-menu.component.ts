@@ -187,6 +187,12 @@ pray(data : PrayData | undefined, bulletinMode : boolean = false) {
   // update preferences
   this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy, this.language$.getValue(), this.version$.getValue(), this.kalendar.getValue());
 
+  // if proper liturgy is selected, use its preference value
+  // e.g., Maundy Thursday `footwashing` preference
+  if(properLiturgy?.preference) {
+    clientPreferences[properLiturgy.preference] = "true";
+  }
+
   // check to see if all selected readings are available; if not, notify the user
   const allReadingsAvailable = this.areReadingsAvailable(new Liturgy(liturgy), clientPreferences, availableReadings);
   if(!allReadingsAvailable) {
