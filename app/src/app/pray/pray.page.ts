@@ -422,7 +422,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
     await loading.present();
 
-    const docDate = doc.day?.date ? dateFromYMDString(doc.day.date) : null,
+    const docDate = doc.day?.date ? dateFromYMDString(doc?.day?.date) : null,
       formattedDocDate = docDate ? `${docDate.getFullYear()}-${docDate.getMonth()+1}-${docDate.getDate()}` : null,
       prettyDocDate = docDate ? `${docDate.getMonth()+1}/${docDate.getDate()}/${docDate.getFullYear()}` : null,
       label = doc.label ?? (prettyDocDate ? `${doc?.label} (${prettyDocDate})` : doc?.slug) ?? 'Bulletin',
@@ -474,7 +474,6 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   changeDoc(doc : LiturgicalDocument, event : CustomEvent) {
-    console.log('changeDoc', event.detail);
     const op = this.editorService.opFromChange(event.detail);
     const newValue = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(doc)), op) as Partial<LiturgicalDocument>);
     this.modifiedDoc$.next(newValue);

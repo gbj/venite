@@ -206,7 +206,7 @@ areReadingsAvailable(liturgy : Liturgy, prefs : ClientPreferences, availableRead
   let allReadingsAvailable : boolean = true;
   if(readingPrefKeys && readingPrefKeys.length > 0) {
     allReadingsAvailable = readingPrefKeys
-     .filter(key => prefs[key].toLowerCase() !== 'none')
+     .filter(key => prefs[key]?.toLowerCase() !== 'none')
      .map(key => {
        const t = prefs[key]?.endsWith('_alt') ? prefs[key].replace('_alt', '') : prefs[key];
        return availableReadings.includes(t);
@@ -232,64 +232,66 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
   const holy_day_readings = availableReadings.filter(reading => reading.match(/holy_day/)),
     date = dateFromYMDString(day?.date);
 
-  if(holy_day_readings?.length > 0) {
-    const evening : boolean = liturgy.metadata?.evening,
-          readingA : string = evening ? 'holy_day_evening_1' : 'holy_day_morning_1',
-          readingB : string = evening ? 'holy_day_evening_2' : 'holy_day_morning_2';
-
-    const modifiedPrefs = {
-      ... prefs,
-      'readingA': readingA,
-      'readingB': readingB,
-      'readingC': 'none'
-    };
-
-    const alert = await this.alert.create({
-      header: this.translate.instant('home.holy_day_alert.title'),
-      message: this.translate.instant('home.holy_day_alert.message'),
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-        }, {
-          text: 'Continue',
-          handler: () => {
-            if(bulletinMode) {
-              this.navigate('/bulletin', liturgy, date, day, modifiedPrefs, true);
-            } else {
-              this.navigate('/pray', liturgy, date, day, modifiedPrefs);
+  if(day) {
+    if(holy_day_readings?.length > 0) {
+      const evening : boolean = liturgy.metadata?.evening,
+            readingA : string = evening ? 'holy_day_evening_1' : 'holy_day_morning_1',
+            readingB : string = evening ? 'holy_day_evening_2' : 'holy_day_morning_2';
+  
+      const modifiedPrefs = {
+        ... prefs,
+        'readingA': readingA,
+        'readingB': readingB,
+        'readingC': 'none'
+      };
+  
+      const alert = await this.alert.create({
+        header: this.translate.instant('home.holy_day_alert.title'),
+        message: this.translate.instant('home.holy_day_alert.message'),
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          }, {
+            text: 'Continue',
+            handler: () => {
+              if(bulletinMode) {
+                this.navigate('/bulletin', liturgy, date, day, modifiedPrefs, true);
+              } else {
+                this.navigate('/pray', liturgy, date, day, modifiedPrefs);
+              }
             }
           }
-        }
-      ]
-    });
-
-    await alert.present();
-  } else {
-    const a : string[] = availableReadings.filter(r => r && r !== ''),
-          availableList : string = `${a.slice(0, -1).join(',')} or ${a.slice(-1)}`;
-
-    const alert = await this.alert.create({
-      header: this.translate.instant('home.missing_reading_alert.title'),
-      message: this.translate.instant('home.missing_reading_alert.message', { availableList }),
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-        }, {
-          text: 'Continue',
-          handler: () => {
-            if(bulletinMode) {
-              this.navigate('/bulletin', liturgy, date, day, prefs, true);
-            } else {
-              this.navigate('/pray', liturgy, date, day, prefs);
+        ]
+      });
+  
+      await alert.present();
+    } else {
+      const a : string[] = availableReadings.filter(r => r && r !== ''),
+            availableList : string = `${a.slice(0, -1).join(',')} or ${a.slice(-1)}`;
+  
+      const alert = await this.alert.create({
+        header: this.translate.instant('home.missing_reading_alert.title'),
+        message: this.translate.instant('home.missing_reading_alert.message', { availableList }),
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          }, {
+            text: 'Continue',
+            handler: () => {
+              if(bulletinMode) {
+                this.navigate('/bulletin', liturgy, date, day, prefs, true);
+              } else {
+                this.navigate('/pray', liturgy, date, day, prefs);
+              }
             }
           }
-        }
-      ]
-    });
-
-    await alert.present();
+        ]
+      });
+  
+      await alert.present();
+    }
   }
 }
 
