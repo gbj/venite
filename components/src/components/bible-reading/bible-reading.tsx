@@ -38,6 +38,7 @@ export class BibleReadingComponent {
       } else {
         this.obj = new BibleReading(newDoc);
       }
+      this.processIntro();
     } catch(e) {
       console.warn(e);
       this.obj = new BibleReading();
@@ -66,8 +67,12 @@ export class BibleReadingComponent {
 
     this.loadVerses();
 
+    this.processIntro();
+  }
+
+  processIntro() {
     // process intro
-    if(this.obj.metadata && this.obj.metadata.intro) {
+    if(this.obj?.metadata?.intro) {
       try {
         this.obj.compileIntro();
         this.obj = new BibleReading({ ... this.obj });
