@@ -286,7 +286,8 @@ export class PrayService {
           omit_gloria: (docBase?.style === 'psalm' && Boolean(prefs['insertGloria'] == 'false')) || doc?.metadata?.omit_gloria || docBase?.metadata?.omit_gloria,
           omit_response: doc?.metadata?.omit_response || docBase?.metadata?.omit_response,
           changeable: doc?.metadata?.changeable || docBase?.metadata?.changeable
-        }
+        },
+        citation: doc.citation || docBase.citation
       })
     )),
       // rotate and merge
