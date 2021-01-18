@@ -87,6 +87,7 @@ export class OptionComponent {
   /** Display the nth option */
   @Method()
   async select(index : number | 'add', resultedFromUserAction : boolean = false) {
+    console.log('select ', index);
     const hadMetadata = Boolean(this.obj?.metadata),
       oldValue = this.obj?.metadata?.editor_selected;
   
@@ -142,8 +143,8 @@ export class OptionComponent {
       // without overriding any other metadata fields
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, selected: index }});
       Object.assign(this.obj, { metadata: { ...this.obj.metadata, editor_selected: index }});
-    } else {
-            this.ldfAddOptionToDoc.emit({
+    } else if(index === 'add') {
+      this.ldfAddOptionToDoc.emit({
         base: this.path,
         index: this.obj?.value?.length,
         obj: this.obj
@@ -169,7 +170,7 @@ export class OptionComponent {
       this.obj = new Option({
         ... this.obj,
         value: (this.obj?.value || []).filter(entry => {
-                    return Boolean(entry) && Boolean(entry.value);
+                    return Boolean(entry) && (Boolean(entry.value) || Boolean(entry?.type === "bible-reading" && entry.citation));
         })
       });
     }
@@ -183,8 +184,9 @@ export class OptionComponent {
     if(this.obj?.value?.length > 1 || this.editable) {
       // Ionic available and
       if(customElements && !!customElements.get('ion-select')) {
-        const optionsAreLong : boolean = this.obj?.value?.map((option, optionIndex) => this.versionLabel(option, optionIndex).length > 25)
-            .reduce((a, b) => a || b);
+        const optionsAreLong : boolean = (this.obj?.value || [])
+            .map((option, optionIndex) => this.versionLabel(option, optionIndex)?.length > 25)
+            .reduce((a, b) => a || b, false);
 
         // <= 3, short options
         if(!optionsAreLong && this.obj?.value.length <= 3) {
@@ -196,7 +198,7 @@ export class OptionComponent {
                 </ion-segment-button>
               )}
               {/* Add Button if editable */}
-              { this.editable && <ion-segment-button value='add' class='add'>
+              { this.editable && <ion-segment-button value='add' class='add' onClick={() => this.select('add', true)}>
                   <ion-label>+</ion-label>
                 </ion-segment-button> }
             </ion-segment>
@@ -204,6 +206,8 @@ export class OptionComponent {
         }
         // >2 options, or options are longish
         else {
+          console.log('>2 or longish');
+
           return (
             <ion-toolbar>
               <ion-select value={currentlySelected} slot={this.editable ? 'start' : 'end'} onIonChange={e => this.select(Number(e.detail.value), true)}>
@@ -265,7 +269,8 @@ export class OptionComponent {
             <slot slot='end' name='controls'>{this.selectNode()}</slot>
           </ldf-label-bar>
         </div>
-        {this.obj.value && <ldf-liturgical-document
+        
+        {(this.obj.value || this.editable) && <ldf-liturgical-document
           doc={this.obj.value[selectedIndex]}
           path={`${this.path}/value/${this.obj.metadata.selected}`}
           base={`${this.path}/value`}

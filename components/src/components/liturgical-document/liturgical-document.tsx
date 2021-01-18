@@ -139,6 +139,8 @@ export class LiturgicalDocumentComponent {
         </ConditionNode>
       } else if(!doc.condition && doc.lookup) {
         return <LookupNode doc={doc} localeStrings={localeStrings}/>;
+      } else if(doc.type === "bible-reading") {
+        return <LookupNode doc={doc} localeStrings={localeStrings}/>;
       } else {
         return this.chooseComponent(doc);
       }

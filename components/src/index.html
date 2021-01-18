@@ -25,6 +25,7 @@
   <script>
     document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
     document.addEventListener('ldfDocShouldChange', (ev) => console.log('(ldfDocShouldChange)', ev));
+    document.addEventListener('ldfAddOptionToDoc', (ev) => console.log('(ldfAddOptionToDoc)', ev));
     document.addEventListener('ldfAddChildAfter', (ev) => console.log('(ldfAddChildAfter)', ev));
     document.addEventListener('ldfAskForBibleIntros', (ev) => { 
       console.log('(ldfAskForBibleIntros)', ev.originalTarget);
@@ -47,58 +48,7 @@
       }])
     });
 
-    const MAGNIFICAT = {"type":"psalm","style":"canticle","metadata":{"antiphon": {}},"value":[]};
-    
-    const LITURGY = {"type": "liturgy", "value": [
-      {"type":"text","style":"text","lookup":{"type":"slug"},"condition":{"mode":"and","conditions":[{only: ['wednesday-last-epiphany']}]}},
-      {"type":"psalm","style":"canticle","label":"16. The Song of Zechariah","citation":"Luke xx:y","metadata":{"latinname":"Benedictus"}},
-    {"hidden":false,"type":"bible-reading","style":"long","citation":"John 7:53-8:11","label":"A Reading from John 7:53-8:11 (ESV)","language":"en","version":"ESV","value":[{"book":"John","chapter":"7","verse":"53","text":""},{"book":"John","chapter":"8","verse":"1","text":"but Jesus went to the Mount of Olives. "},{"book":"John","chapter":"8","verse":"2","text":"Early in the morning he came again to the temple. All the people came to him, and he sat down and taught them. "},{"book":"John","chapter":"8","verse":"3","text":"The scribes and the Pharisees brought a woman who had been caught in adultery, and placing her in the midst "},{"book":"John","chapter":"8","verse":"4","text":"they said to him, “Teacher, this woman has been caught in the act of adultery. "},{"book":"John","chapter":"8","verse":"5","text":"Now in the Law, Moses commanded us to stone such women. So what do you say?” "},{"book":"John","chapter":"8","verse":"6","text":"This they said to test him, that they might have some charge to bring against him. Jesus bent down and wrote with his finger on the ground. "},{"book":"John","chapter":"8","verse":"7","text":"And as they continued to ask him, he stood up and said to them, “Let him who is without sin among you be the first to throw a stone at her.” "},{"book":"John","chapter":"8","verse":"8","text":"And once more he bent down and wrote on the ground. "},{"book":"John","chapter":"8","verse":"9","text":"But when they heard it, they went away one by one, beginning with the older ones, and Jesus was left alone with the woman standing before him. "},{"book":"John","chapter":"8","verse":"10","text":"Jesus stood up and said to her, “Woman, where are they? Has no one condemned you?” "},{"book":"John","chapter":"8","verse":"11","text":"She said, “No one, Lord.” And Jesus said, “Neither do I condemn you; go, and from now on sin no more.”]] "}]},  
-    {"type": "option", "value": [{"type": "rubric", "value":["Option 1: Lorem ipsum sit dolor amet."]},{"type": "rubric", "value":["Option 2: Lorem ipsum sit dolor amet."]},]},
-    {
-  "label": "The Apostles’ Creed",
-  "type": "text",
-      "style": "text",
-      "metadata": {
-      },
-  "value": [
-
-  `We believe in one God,
-    the Father, the Almighty,
-    maker of heaven and earth,
-    of all that is, seen and unseen.`,
-`We believe in one Lord, Jesus Christ,
-    the only Son of God,
-    eternally begotten of the Father,
-    God from God, Light from Light,
-    true God from true God,
-    begotten, not made,
-    of one Being with the Father.
-    Through him all things were made.
-    For us and for our salvation
-        he came down from heaven:
-    by the power of the Holy Spirit
-        he became incarnate from the Virgin Mary,
-        and was made man.
-    For our sake he was crucified under Pontius Pilate;
-        he suffered death and was buried.
-        On the third day he rose again
-            in accordance with the Scriptures;
-        he ascended into heaven
-            and is seated at the right hand of the Father.
-    He will come again in glory to judge the living and the dead,
-        and his kingdom will have no end.`,
-`We believe in the Holy Spirit, the Lord, the giver of life,
-    who proceeds from the Father and the Son.
-    With the Father and the Son he is worshiped and glorified.
-    He has spoken through the Prophets.
-    We believe in one holy catholic and apostolic Church.
-    We acknowledge one baptism for the forgiveness of sins.
-    We look for the resurrection of the dead,
-        and the life of the world to come. Amen.`
-
-  ]
-    }]}
-;
+  const LITURGY = {"type":"option","metadata":{"editor_selected":0,"selected":0},"hidden":false,"value":[{"hidden":false,"citation":"Isaiah 52:13-53:12","metadata":{},"source":{"source":"","citation":"","api":""},"type":"bible-reading","label":"The First Lesson","style":"long","version":{"preference":"bibleVersion"}},{"citation":"Genesis 22:1-18","hidden":false,"style":"long","type":"bible-reading","version":{"preference":"bibleVersion"}}]};
 
     const node = document.createElement('ldf-liturgical-document');
     node.setAttribute('doc', JSON.stringify(LITURGY));

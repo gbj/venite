@@ -1,4 +1,5 @@
 {
+  "bible_version": " in the version ",
   "canticle-1": "The first canticle ",
   "canticle-2": "The second canticle ",
   "category": "All items that match the category ",
@@ -31,6 +32,7 @@
   "except": " anything but: ",
   "except_1": " not ",
   "the_preference": "the preference ",
+  "the_preference_specified": "chosen in the preference ",
   "the_date": "the date ",
   "lte": " ≤ ",
   "lt": " < ",

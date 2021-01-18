@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy, ViewChild, Inject } from '@angular/core';
 import { Observable, Subscription, Subject, of, from } from 'rxjs';
-import { take, map, tap, switchMap } from 'rxjs/operators';
+import { take, map, tap, switchMap, filter } from 'rxjs/operators';
 import { LiturgicalDocument, sortPsalms, Psalm, BibleReading } from '@venite/ldf';
 import { DocumentService } from 'src/app/services/document.service';
 import { AuthServiceInterface, AUTH_SERVICE } from '@venite/ng-service-api';
@@ -96,6 +96,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           return this.complete;
         case 'reading':
           return from(this.readingAlert()).pipe(
+            filter(response => Boolean(response)),
             map(response => [response])
           );
         case 'invitatory':
@@ -241,7 +242,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     return data?.data?.values?.response;
   }
 
-  async readingAlert() : Promise<BibleReading> {
+  async readingAlert() : Promise<BibleReading | null> {
     const alert = await this.alert.create({
       header: this.translate.instant('editor.reading_adder'),
       inputs: [{
@@ -266,13 +267,31 @@ export class AddBlockComponent implements OnInit, OnDestroy {
     const data = await alert.onDidDismiss();
     const { citation, version } = data?.data?.values;
 
-    const loading = await this.loading.create();
+    // citation + version => load and insert
+    if(citation && version) {
+      const loading = await this.loading.create();
 
-    const reading = await this.fetchReading(citation, version);
-
-    loading.dismiss();
-
-    return reading;
+      const reading = await this.fetchReading(citation, version);
+  
+      loading.dismiss();
+  
+      return reading;
+    }
+    // citation but not version => insert a lookup by `bibleVersion` pref
+    else if(citation) {
+      return new BibleReading({
+        type: "bible-reading",
+        style: "long",
+        citation,
+        version: {
+          preference: "bibleVersion"
+        }
+      })
+    }
+    // neither => dismiss
+    else {
+      return null;
+    }
   }
 
   async fetchReading(
