@@ -151,6 +151,7 @@ export class DocumentService {
     // deduplicate versions -- max of 10 (for Firebase query)
     const uniqueVersions = Array.from(new Set(rawVersions)),
       versions = uniqueVersions?.length <= 10 ? uniqueVersions : uniqueVersions.slice(0, 10);
+    
     if(uniqueVersions?.length > 10) {
       console.warn('(DocumentService) (findDocumentsBySlug) Firebase can only handle up to 10 unique versions to search. You searched for ', rawVersions);
     }
@@ -163,7 +164,7 @@ export class DocumentService {
                      .where('sharing.privacy', '==', 'public');
       
       if(versions?.length > 0) {
-        query = query.where('version', 'in', versions);
+        query = query.where('version', 'in', versions.filter(v => Boolean(v)));
       }
       return query;
     }).valueChanges();
@@ -174,9 +175,9 @@ export class DocumentService {
           return this.afs.collection<LiturgicalDocument>('Document', ref => {
             let query = ref.where('slug', '==', slug)
               .where('language', '==', language)
-              .where('sharing.owner', '==', user?.uid)
+              .where('sharing.owner', '==', user?.uid || '')
             if(versions?.length > 0) {
-              query = query.where('version', 'in', versions);
+              query = query.where('version', 'in', versions.filter(v => Boolean(v)));
             }
             return query;
           }).valueChanges()

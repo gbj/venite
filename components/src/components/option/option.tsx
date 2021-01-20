@@ -170,7 +170,7 @@ export class OptionComponent {
       this.obj = new Option({
         ... this.obj,
         value: (this.obj?.value || []).filter(entry => {
-                    return Boolean(entry) && (Boolean(entry.value) || Boolean(entry?.type === "bible-reading" && entry.citation));
+                    return this.editable || (Boolean(entry) && (Boolean(entry.value) || Boolean(entry?.type === "bible-reading" && entry.citation)));
         })
       });
     }
