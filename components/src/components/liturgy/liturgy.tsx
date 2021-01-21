@@ -63,7 +63,7 @@ export class LiturgyComponent {
                 path = `${valuePath}/${docIndex}`,
                 buttonVisible = this.hasFocus == path // button appears if this doc is focused
                   || docIndex == ((this.obj?.value?.length || 0) - 1) // or it it's the last doc in the liturgy
-                  || (doc.type === 'option' && this.hasFocus.startsWith(path)); // or if it's an option and one of its children is focused
+                  || (doc?.type === 'option' && this.hasFocus?.startsWith(path)); // or if it's an option and one of its children is focused
 
           return (
             <article>
