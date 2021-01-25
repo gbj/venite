@@ -147,7 +147,9 @@ export class SpeechService {
           verse.hasOwnProperty('type') && (verse as Heading).type === 'heading'
           ? docToUtterances(verse as Heading)
           : processText((verse as BibleReadingVerse).text).split(/[^\w \t]/g)
-        ).flat()
+        ).flat(),
+        // response
+        ... !doc.metadata?.response ? ["Amen."] : null
       ].filter(n => n !== null);
     }
   
