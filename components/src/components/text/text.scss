@@ -27,15 +27,15 @@ strong {
   font-style: var(--ldf-response-font-style);
 }
 
-.text.omit {
+.text.omit .text-body {
   display: none;
 }
 
-.text.editable.omit {
+.text.editable.omit .text-body {
   display: block;
 }
 
-.text.unison {
+.text.unison .text-body {
   font-weight: var(--ldf-unison-font-weight);
   font-style: var(--ldf-unison-font-style);
 }

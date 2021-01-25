@@ -140,7 +140,7 @@ export class TextComponent {
   
             {
               compiledValue.map((prayer, prayerIndex) =>
-                <p id={`${this.obj.uid || this.obj.slug}-prayerIndex`}>
+                <p class="text-body" id={`${this.obj.uid || this.obj.slug}-prayerIndex`}>
                     {prayer?.map((chunk, chunkIndex) =>
                       <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                         <ldf-string text={chunk}
