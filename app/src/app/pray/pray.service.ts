@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, filterCanticleTableEntries, dateFromYMDString, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference, CanticleTableEntry } from '@venite/ldf';
+import { LiturgicalDocument, LiturgicalDay, ClientPreferences, Liturgy, LectionaryEntry, findCollect, filterCanticleTableEntries, dateFromYMDString, docsToLiturgy, docsToOption, HolyDay, BibleReading, Preference, CanticleTableEntry, Psalm } from '@venite/ldf';
 
 import { Observable, of, combineLatest } from 'rxjs';
 import { filter, first, map, startWith, switchMap, tap } from 'rxjs/operators';
@@ -428,7 +428,9 @@ export class PrayService {
       // sort the psalms by number in increasing order
       map(liturgy => new LiturgicalDocument({
         ... liturgy,
-        value: (liturgy?.value || []).sort((a, b) => a?.metadata?.number - b?.metadata?.number)
+        value: (liturgy?.value || []).sort((a, b) => a.type === "psalm" && b.type === "psalm" && a?.metadata?.number === b?.metadata?.number
+          ? Number((a as Psalm).value[0].value[0].number) - Number((b as Psalm).value[0].value[0].number)
+          : a?.metadata?.number - b?.metadata?.number)
       })),
     )
   }
