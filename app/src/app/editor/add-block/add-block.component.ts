@@ -14,7 +14,7 @@ class MenuOption {
   icon: () => any;
   template?: LiturgicalDocument[];
   hidden?: boolean;
-  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'invitatory' | 'image' | 'category' | 'slug' | 'response' | 'reading';
+  needsMoreInfo?: 'psalm' | 'canticle' | 'lectionary' | 'hymn' | 'liturgy' | 'liturgy-inline' | 'invitatory' | 'image' | 'category' | 'slug' | 'response' | 'reading';
 }
 
 @Component({
@@ -133,6 +133,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
           this.additionalMode = 'hymn';
           return this.complete;
         case 'liturgy':
+        case 'liturgy-inline':
           this.additionalMode = 'liturgy';
           this.additionalVersions = this.documentService.getVersions(this.language, 'liturgy-versions');
           this.additionalOptions = this.additionalVersions.pipe(
@@ -142,8 +143,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
                 .filter(obj => !obj.day)
                   .map(obj => new LiturgicalDocument({
                   ... obj,
-                  // strip out value, which can be looked up asynchronously rather than storing it
-                  value: undefined,
+                  value: addition.needsMoreInfo === 'liturgy' ? undefined : obj.value,
                   lookup: { type: "slug" }
                 }))
                 .sort((a, b) => a.label > b.label ? 1 : -1)
