@@ -1,6 +1,6 @@
 <ion-card class="form">
   <!-- Header based on Liturgical Day -->
-  <ng-container *ngIf="liturgicalDay | async as day else blankHeader">
+  <ng-container *ngIf="liturgicalDayForMenu | async as day else blankHeader">
     <ion-card-header>
       <ion-card-title>
         <h1><ldf-day-name [day]="day"></ldf-day-name></h1>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input, EventEmitter, Output } from '@angular/core';
-import { Observable, Subject, BehaviorSubject, combineLatest, of } from 'rxjs';
+import { Observable, Subject, BehaviorSubject, combineLatest, of, merge } from 'rxjs';
 import { User, LiturgicalDocument, ProperLiturgy, LiturgicalDay, ClientPreferences, HolyDay, LiturgicalWeek, Preference, Liturgy, Kalendar, versionToString, dateFromYMDString } from '@venite/ldf';
 import { PrayMenuConfig } from './pray-menu-config';
 import { TranslateService } from '@ngx-translate/core';
@@ -48,6 +48,8 @@ export class PrayMenuComponent implements OnInit {
 
   // The `LiturgicalDay` that has currently been selected, without any holy day information
   liturgicalDay : Observable<LiturgicalDay | null>;
+  liturgicalDayForMenu : Observable<LiturgicalDay | null>;
+  loadingLiturgicalDay : Subject<null> = new Subject();
 
   // `language` and `version` used to filter Liturgies to display as options
   language$ : BehaviorSubject<string>;
@@ -62,7 +64,7 @@ export class PrayMenuComponent implements OnInit {
   holydays : BehaviorSubject<HolyDay[]> = new BehaviorSubject([]);
   kalendar : BehaviorSubject<string> = new BehaviorSubject(this.config.defaultKalendar);   // Backbone of Kalendar: Seasons, Major Feasts
   liturgy : Subject<LiturgicalDocument> = new Subject();
-  properLiturgy : BehaviorSubject<ProperLiturgy | null> = new BehaviorSubject(undefined);
+  properLiturgy : BehaviorSubject<ProperLiturgy | null> = new BehaviorSubject(null);
   sanctoral : BehaviorSubject<string> = new BehaviorSubject(this.config.defaultKalendar);  // Holy Days ('79, LFF, HWHM, GCOW, etc.)
   vigil : BehaviorSubject<boolean> = new BehaviorSubject(false);
   week : Observable<LiturgicalWeek[]>;
@@ -121,6 +123,7 @@ export class PrayMenuComponent implements OnInit {
   this.preferencesService.get("language").subscribe(p => { if(p?.value) { this.language$.next(p.value); } });
   this.preferencesService.get("version").subscribe(p => { if(p?.value) { this.version$.next(p.value); } });
   this.preferencesService.get("kalendar").subscribe(p => { if(p?.value) { this.kalendar.next(p.value); } });
+  this.date.subscribe(() => this.loadingLiturgicalDay.next(null));
 
   if(!this.config.serverReturnsDate) {
     // DB queries that depend on date change
@@ -128,6 +131,7 @@ export class PrayMenuComponent implements OnInit {
     this.week = this.calendarService.buildWeek(this.date, this.kalendar, this.vigil);
 
     // main liturgical day observable
+    //this.liturgicalDay = merge(this.loadingLiturgicalDay, this.calendarService.buildDay(this.date, this.kalendar, this.liturgy, this.week, this.vigil));
     this.liturgicalDay = this.calendarService.buildDay(this.date, this.kalendar, this.liturgy, this.week, this.vigil);
   } else {
     this.liturgicalDay = this.calendarService.buildDay(
@@ -136,8 +140,9 @@ export class PrayMenuComponent implements OnInit {
       this.liturgy.pipe(startWith(new Liturgy({ metadata: { evening: false }}))),
       of([]),
       this.vigil
-    )
+    );
   }
+  this.liturgicalDayForMenu = merge(this.loadingLiturgicalDay, this.liturgicalDay);
 
   // Check readings
   this.availableReadings$ = combineLatest(this.liturgicalDay, this.clientPreferences).pipe(
@@ -151,13 +156,13 @@ export class PrayMenuComponent implements OnInit {
 
   // Pray button data
   this.prayData = combineLatest([
-    this.auth.user.pipe(startWith(undefined)),
+    this.auth.user,
     this.liturgy,
-    this.date.pipe(startWith(new Date())),
-    this.properLiturgy.pipe(startWith(undefined)),
-    this.liturgicalDay.pipe(startWith(undefined)),
-    this.clientPreferences.pipe(startWith({})),
-    this.availableReadings$.pipe(startWith([]))
+    this.date,
+    this.properLiturgy,
+    merge(this.liturgicalDay.pipe(startWith(null)), this.loadingLiturgicalDay),
+    this.clientPreferences,
+    this.availableReadings$.pipe(startWith([])),
   ]).pipe(
     map(([user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings]) => ({
       user: user as User,
@@ -183,6 +188,8 @@ pray(data : PrayData | undefined, bulletinMode : boolean = false) {
   this.dayChosen.emit(data);
   
   const { user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings } = data;
+
+  console.log('prayData = ', data);
 
   // update preferences
   this.savePreferences(user ? user.uid : undefined, clientPreferences, liturgy, this.language$.getValue(), this.version$.getValue(), this.kalendar.getValue());
@@ -276,27 +283,36 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
       const a : string[] = availableReadings.filter(r => r && r !== ''),
             availableList : string = `${a.slice(0, -1).join(',')} or ${a.slice(-1)}`;
   
-      const alert = await this.alert.create({
-        header: this.translate.instant('home.missing_reading_alert.title'),
-        message: this.translate.instant('home.missing_reading_alert.message', { availableList }),
-        buttons: [
-          {
-            text: 'Cancel',
-            role: 'cancel',
-          }, {
-            text: 'Continue',
-            handler: () => {
-              if(bulletinMode) {
-                this.navigate('/bulletin', liturgy, date, day, prefs, true);
-              } else {
-                this.navigate('/pray', liturgy, date, day, prefs);
+      if(a.length > 0) {
+        const alert = await this.alert.create({
+          header: this.translate.instant('home.missing_reading_alert.title'),
+          message: this.translate.instant('home.missing_reading_alert.message', { availableList }),
+          buttons: [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+            }, {
+              text: 'Continue',
+              handler: () => {
+                if(bulletinMode) {
+                  this.navigate('/bulletin', liturgy, date, day, prefs, true);
+                } else {
+                  this.navigate('/pray', liturgy, date, day, prefs);
+                }
               }
             }
-          }
-        ]
-      });
+          ]
+        });
+
+        await alert.present();
+      } else {
+        if(bulletinMode) {
+          this.navigate('/bulletin', liturgy, date, day, prefs, true);
+        } else {
+          this.navigate('/pray', liturgy, date, day, prefs);
+        }
+      }
   
-      await alert.present();
     }
   }
 }
@@ -315,6 +331,7 @@ savePreferences(uid : string, prefs : ClientPreferences, liturgy : LiturgicalDoc
 }
 
 navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences, bulletinMode : boolean = false) {
+  console.log('navigate to date', date);
   const y = date.getFullYear().toString(),
     m = (date.getMonth() + 1).toString(),
     d = date.getDate().toString(),
