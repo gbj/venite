@@ -460,10 +460,8 @@ export class PrayService {
   lookupFromCanticleTable(doc : LiturgicalDocument, day : LiturgicalDay, versions : string[], prefs : ClientPreferences, whichTable : string, nth : number = 1, fallbackTable : string | undefined, originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     return this.canticleTableService.findEntry(whichTable, nth, fallbackTable).pipe(
       // grab entry for the appropriate weekday
-      tap(entries => console.log('filtered canticle table entries A = ', entries)),
       map(entries => filterCanticleTableEntries(entries, day, whichTable, nth, fallbackTable, DEFAULT_CANTICLES)),
-      tap(entries => console.log('filtered canticle table entries B = ', entries)),
-      switchMap(entries => entries.map(entry => new LiturgicalDocument(
+      map(entries => entries.map(entry => new LiturgicalDocument(
         {
           slug: entry.slug,
           lookup: {
