@@ -149,7 +149,7 @@ export class SpeechService {
           : processText((verse as BibleReadingVerse).text).split(/[^\w \t]/g)
         ).flat(),
         // response
-        ... !doc.metadata?.response ? ["Amen."] : null
+        ... doc.style == 'short' && !doc.metadata?.omit_response ? [doc.metadata?.response ?? "Amen."] : []
       ].filter(n => n !== null);
     }
   
