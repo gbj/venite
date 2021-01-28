@@ -66,7 +66,7 @@ export class LiturgyComponent {
                   || (doc?.type === 'option' && this.hasFocus?.startsWith(path)); // or if it's an option and one of its children is focused
 
           return (
-            <article>
+            <article style={{ padding: this.editable ? '1em' : '0'}}>
               {/* Render the document */}
               <ldf-liturgical-document
                 doc={doc}
@@ -80,7 +80,7 @@ export class LiturgyComponent {
               </ldf-liturgical-document>
 
               {/* 'Add Block' interface */}
-              {(this.editable || (this.preview && buttonVisible)) && <ldf-editable-add-block
+              {(this.editable || this.preview) && <ldf-editable-add-block
                 visible={buttonVisible}
                 base={valuePath} index={docIndex + 1}
               ></ldf-editable-add-block>}
