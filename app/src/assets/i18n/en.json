@@ -49,6 +49,8 @@
     "templates": "Templates",
     "create-a-bulletin": "Create a Bulletin",
     "title-url-message": "Set a title and URL for your bulletin. URLs follow the format {{base}}/____.",
+    "url-problem-header": "There’s a problem with this URL.",
+    "url-problem-message": "The URL you entered contained special characters like '/' or spaces. It will appear as {{base}}/{{encoded}}. Are you sure you want to use this?",
     "title": "Bulletin Title",
     "url": "URL ({{base}}/____)",
     "ok": "OK",

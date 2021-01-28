@@ -75,7 +75,7 @@ export class EditorButtonsComponent implements OnInit {
     const orgId = doc?.sharing?.organization,
       slug = doc?.slug;
     //console.log('Publishing\n\n', orgId, slug);
-    let docUrl = orgId && slug ? `${orgId}/${slug}` : `b/${manager.docId}`;
+    let docUrl = orgId && slug ? `${orgId}/${encodeURIComponent(slug)}` : `b/${manager.docId}`;
     const alert = await this.alert.create({
       header: 'Bulletin Published',
       message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${docUrl}\n\n`,

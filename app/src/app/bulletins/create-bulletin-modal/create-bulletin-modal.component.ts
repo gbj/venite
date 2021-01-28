@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { LiturgicalDay, LiturgicalDocument } from '@venite/ldf';
 import { BulletinCommands } from '@venite/ng-pray-menu';
 import { switchMap, take } from 'rxjs/operators';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -32,6 +33,65 @@ export class CreateBulletinModalComponent implements OnInit {
     this.modal.dismiss();
   }
 
+  async labelSlugAlert(liturgy: LiturgicalDocument, org : string, day : LiturgicalDay) : Promise<{ label: string; slug: string; }> {
+    const alert = await this.alert.create({
+      header: this.translate.instant("bulletins.create-a-bulletin"),
+      message: this.translate.instant("bulletins.title-url-message", {base: `/${org}/pray`}),
+      inputs: [
+        {
+          name: 'label',
+          type: 'text',
+          placeholder: this.translate.instant("bulletins.title"),
+          value: liturgy?.label
+        },
+        org && {
+          name: 'slug',
+          type: 'text',
+          placeholder: this.translate.instant("bulletins.url", {base: `/${org}/pray`}),
+          value: day?.date ? `${(liturgy?.slug || 'bulletin')}-${day?.date}` : liturgy?.slug
+        }
+      ],
+      buttons: [
+        {
+          text: this.translate.instant("editor.cancel"),
+          role: 'cancel',
+          cssClass: 'secondary',
+        }, {
+          text: this.translate.instant("editor.create"),
+        }
+      ]
+    });
+
+    await alert.present();
+
+    const { data } = await alert.onDidDismiss();
+    let { values } = data;
+    let problem = false;
+
+    if(encodeURIComponent(values.slug) !== values.slug) {
+        const url_problem_alert = await this.alert.create({
+          header: this.translate.instant("bulletins.url-problem-header"),
+          message: this.translate.instant("bulletins.url-problem-message", {base: `/${org}/pray`, encoded: encodeURIComponent(values.slug)}),
+          buttons: [
+            {
+              text: this.translate.instant("editor.cancel"),
+              role: 'cancel',
+              cssClass: 'secondary',
+              handler: async () => problem = true
+            }, {
+              text: this.translate.instant("editor.create"),
+              handler: () => {}
+            }
+          ]
+        });
+
+        await url_problem_alert.present();
+        await url_problem_alert.onDidDismiss();
+      }
+    
+    return problem ? this.labelSlugAlert(liturgy, org, day) : values;
+  }
+
   async createBulletin(event : BulletinCommands) {
     // ask for a title and URL slug for this bulletin
     const liturgy = event?.state?.liturgy,
@@ -45,45 +105,15 @@ export class CreateBulletinModalComponent implements OnInit {
         let proceed = true;
 
         if(org) {
-          const alert = await this.alert.create({
-            header: this.translate.instant("bulletins.create-a-bulletin"),
-            message: this.translate.instant("bulletins.title-url-message", {base: `/${org}/pray`}),
-            inputs: [
-              {
-                name: 'label',
-                type: 'text',
-                placeholder: this.translate.instant("bulletins.title"),
-                value: liturgy?.label
-              },
-              org && {
-                name: 'slug',
-                type: 'text',
-                placeholder: this.translate.instant("bulletins.url", {base: `/${org}/pray`}),
-                value: event.state?.day?.date ? `${(liturgy?.slug || 'bulletin')}-${event.state?.day?.date}` : liturgy?.slug
-              }
-            ],
-            buttons: [
-              {
-                text: this.translate.instant("editor.cancel"),
-                role: 'cancel',
-                cssClass: 'secondary',
-              }, {
-                text: this.translate.instant("editor.create"),
-              }
-            ]
-          });
-      
-          await alert.present();
-      
-          const { data } = await alert.onDidDismiss(),
-            { values } = data,
-            { label, slug } = values;
+          let { label, slug } = await this.labelSlugAlert(liturgy, org, event?.state?.day);
+
+          console.log('reached point of continuing now')
       
           event.state.liturgy.label = label;
           event.state.liturgy.slug = slug;
           
           // deduplicate slug
-          if(slug) {
+          if(proceed && slug) {
             const others = await this.documents.myOrganizationDocumentsWithSlug(org, slug).pipe(take(1)).toPromise();
             if(others?.length > 0 && proceed) {
               proceed = false;
