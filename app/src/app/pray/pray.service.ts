@@ -387,8 +387,8 @@ export class PrayService {
           day,
           {
             ...prefs,
-            readingA: HOLY_DAY_READINGS[doc?.day?.evening ? 'evening' : 'morning']['readingA'],
-            readingB: HOLY_DAY_READINGS[doc?.day?.evening ? 'evening' : 'morning']['readingB']
+            readingA: HOLY_DAY_READINGS[day.evening ? 'evening' : 'morning']['readingA'],
+            readingB: HOLY_DAY_READINGS[day.evening ? 'evening' : 'morning']['readingB']
           } ,
           originalPrefs)
       ),
