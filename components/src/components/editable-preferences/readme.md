@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property              | Attribute | Description                                           | Type                           | Default     |
-| --------------------- | --------- | ----------------------------------------------------- | ------------------------------ | ----------- |
-| `modal`               | `modal`   | Used to pass in the `IonModal` we will dismiss        | `any`                          | `undefined` |
-| `path`                | `path`    | A JSON Pointer that points to the object being edited | `string`                       | `undefined` |
-| `preferences`         | --        | Starting value for editing                            | `{ [x: string]: Preference; }` | `undefined` |
-| `special_preferences` | --        | Starting value for editing                            | `{ [x: string]: Preference; }` | `undefined` |
+| Property | Attribute | Description                                           | Type                 | Default     |
+| -------- | --------- | ----------------------------------------------------- | -------------------- | ----------- |
+| `modal`  | `modal`   | Used to pass in the `IonModal` we will dismiss        | `any`                | `undefined` |
+| `obj`    | --        | Starting value for editing                            | `LiturgicalDocument` | `undefined` |
+| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`             | `undefined` |
 
 
 ## Events

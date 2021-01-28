@@ -1,6 +1,6 @@
 import { Component, Element, Prop, Event, EventEmitter, h, State, Host, Watch } from '@stencil/core';
 import { alertController } from '@ionic/core';
-import { Change, Preference, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
+import { Change, Preference, preferencesToCategories, categoriesToPreferenceTree, LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './editable-preferences.i18n.en.json';
@@ -30,21 +30,15 @@ export class EditablePreferencesComponent {
   @Prop({ reflect: true }) path: string;
 
   /** Starting value for editing */
-  @Prop() preferences: { [x: string]: Preference };
-  @Watch('preferences')
-  preferencesChange() {
-    this.currentPreferences = this.preferences || {};
+  @Prop() obj : LiturgicalDocument;
+  @Watch('obj')
+  objChange() {
+    console.log('(EditablePreferences) obj changed, rebuilding trees');
+    this.currentPreferences = this.obj?.metadata?.preferences || {};
     this.tree = this.buildTree(this.currentPreferences);
-  }
-
-  /** Starting value for editing */
-  @Prop() special_preferences: { [x: string]: Preference };
-  @Watch('special_preferences')
-  specialPreferencesChange() {
-    this.currentSpecialPreferences = this.special_preferences || {};
+    this.currentSpecialPreferences = this.obj?.metadata?.special_preferences || {};
     this.specialTree = this.buildTree(this.currentSpecialPreferences);
   }
-
   /** Used to pass in the `IonModal` we will dismiss */
   @Prop() modal : any;
 
@@ -52,12 +46,12 @@ export class EditablePreferencesComponent {
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
 
   componentWillLoad() {
-    this.currentPreferences = this.preferences || {};
-    this.currentSpecialPreferences = this.special_preferences || {};
+    this.currentPreferences = this.obj?.metadata?.preferences || {};
+    this.currentSpecialPreferences = this.obj?.metadata?.special_preferences || {};
     this.tree = this.buildTree(this.currentPreferences);
     this.specialTree = this.buildTree(this.currentSpecialPreferences);
 
-    if(!this.preferences) {
+    if(!this.obj?.metadata?.preferences) {
       this.ldfDocShouldChange.emit(new Change({
         path: `${this.path}/preferences`,
         op: [{
@@ -66,7 +60,7 @@ export class EditablePreferencesComponent {
         }]
       }));
     }
-    if(!this.special_preferences) {
+    if(!this.obj?.metadata?.special_preferences) {
       this.ldfDocShouldChange.emit(new Change({
         path: `${this.path}/special_preferences`,
         op: [{
@@ -96,14 +90,14 @@ export class EditablePreferencesComponent {
     const { key, label } = await this.grabKeyFromAlert();
     this.currentPreferences = { ... this.currentPreferences, [key]: new Preference({ key, label }) };
     this.tree = this.buildTree(this.currentPreferences);
-    this.emit(this.preferences, 'preferences', key, this.currentPreferences[key]);
+    this.emit(this.obj?.metadata?.preferences, 'preferences', key, this.currentPreferences[key]);
   }
 
   async addSpecialPreference() {
     const { key, label } = await this.grabKeyFromAlert();
     this.currentSpecialPreferences = { ... this.currentSpecialPreferences, [key]: new Preference({ key, label }) };
     this.specialTree = this.buildTree(this.currentSpecialPreferences);
-    this.emit(this.special_preferences, 'special_preferences', key, this.currentSpecialPreferences[key]);
+    this.emit(this.obj?.metadata?.special_preferences, 'special_preferences', key, this.currentSpecialPreferences[key]);
   }
 
   async grabKeyFromAlert() : Promise<{ key: string; label: string; }> {

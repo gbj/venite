@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Event, EventEmitter, h, Host } from '@stencil/core';
+import { Component, Element, State, Prop, Event, EventEmitter, h, Host, Watch } from '@stencil/core';
 import { modalController, ComponentProps } from '@ionic/core';
 import { LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
@@ -20,6 +20,8 @@ export class EditableMetadataButtonsComponent {
   @State() localeStrings: { [x: string]: string; };
   @State() collapsedState : boolean;
 
+  @State() modal : HTMLIonModalElement;
+
   // Properties
   /** Whether to show the buttons */
   @Prop() visible : boolean;
@@ -32,6 +34,13 @@ export class EditableMetadataButtonsComponent {
 
   /** The LiturgicalDocument itself */
   @Prop() obj : LiturgicalDocument;
+  @Watch('obj')
+  objChange(newObj : LiturgicalDocument) {
+    if(this.modal) {
+      console.log('(EditableMetadataButtons) updating modal props');
+      this.modal.componentProps = { ... this.modal.componentProps, obj: newObj };
+    }
+  }
 
   /** Type of the parent `LiturgicalDocument`, if any */
   @Prop() parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null;
@@ -60,27 +69,26 @@ export class EditableMetadataButtonsComponent {
 
   /** Display a modal `EditableMetadataComponent` */
   async openSettings() {
-    return this.openModal('ldf-editable-metadata');
+    this.modal = await this.openModal('ldf-editable-metadata');
   }
 
   /** Display a modal `EditableConditionComponent` */
   async openCondition() {
-    return this.openModal(
+    this.modal = await this.openModal(
       'ldf-editable-condition',
       `${this.base}/${this.index}/condition`,
-      { condition: this.obj?.condition }
+      { obj: this.obj }
     );
   }
 
   /** Display a modal `EditablePreferencesComponent` */
   async openPreferences() {
     const path = this.base && this.index ? `${this.base}/${this.index}` : '';
-    return this.openModal(
+    this.modal = await this.openModal(
       'ldf-editable-preferences',
       `${path}/metadata`,
       {
-        preferences: this.obj?.metadata?.preferences,
-        special_preferences: this.obj?.metadata?.special_preferences,
+        obj: this.obj
       },
     );
   }
@@ -102,7 +110,9 @@ export class EditableMetadataButtonsComponent {
     }
   
     // present the modal
-    return modal.present();
+    await modal.present();
+
+    return modal;
   }
 
   /** Emit an event with information about this document’s location in the tree and current state */

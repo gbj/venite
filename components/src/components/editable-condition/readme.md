@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute | Description                                           | Type                                                | Default     |
-| ----------- | --------- | ----------------------------------------------------- | --------------------------------------------------- | ----------- |
-| `condition` | --        | Starting value for editing                            | `{ mode: "and" \| "or"; conditions: Condition[]; }` | `undefined` |
-| `modal`     | `modal`   | Used to pass in the `IonModal` we will dismiss        | `any`                                               | `undefined` |
-| `path`      | `path`    | A JSON Pointer that points to the object being edited | `string`                                            | `undefined` |
+| Property | Attribute | Description                                           | Type                 | Default     |
+| -------- | --------- | ----------------------------------------------------- | -------------------- | ----------- |
+| `modal`  | `modal`   | Used to pass in the `IonModal` we will dismiss        | `any`                | `undefined` |
+| `obj`    | --        | Starting value for editing                            | `LiturgicalDocument` | `undefined` |
+| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`             | `undefined` |
 
 
 ## Events

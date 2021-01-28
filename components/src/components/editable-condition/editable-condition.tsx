@@ -1,5 +1,5 @@
 import { Component, Element, Prop, Event, EventEmitter, h, Host, State, Watch } from '@stencil/core';
-import { Change, Condition } from '@venite/ldf';
+import { Change, Condition, LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './editable-condition.i18n.en.json';
@@ -26,13 +26,10 @@ export class EditableConditionComponent {
   @Prop({ reflect: true }) path: string;
 
   /** Starting value for editing */
-  @Prop() condition: {
-    mode: 'and' | 'or';
-    conditions: Condition[];
-  } | undefined;
-  @Watch('condition')
-  conditionChange() {
-    this.currentCondition = this.condition;
+  @Prop() obj: LiturgicalDocument;
+  @Watch('obj')
+  objChange() {
+    this.currentCondition = this.obj?.condition;
   }
 
   /** Used to pass in the `IonModal` we will dismiss */
@@ -43,7 +40,7 @@ export class EditableConditionComponent {
 
   componentWillLoad() {
     this.loadLocaleStrings();
-    this.currentCondition = this.condition;
+    this.currentCondition = this.obj?.condition;
   }
 
   async loadLocaleStrings() : Promise<void> {
