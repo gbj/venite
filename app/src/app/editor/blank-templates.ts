@@ -10,6 +10,8 @@ export const BLANK_TEMPLATES = [
         special_preferences: {}
       },
       label,
+      language: "en",
+      version: "Rite-II",
       value: [new LiturgicalDocument({
         type: 'heading',
         style: 'text',
