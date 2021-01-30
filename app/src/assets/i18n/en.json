@@ -1,4 +1,6 @@
 {
+  "cancel": "Cancel",
+  "ok": "OK",
   "draft": "Draft",
   "published": "Published",
   "login-to-continue": "Log in to continue using the app.",
@@ -13,12 +15,14 @@
     "email": "Email",
     "error": "That username and password don’t seem to go together!",
     "add-org": "Add a Church",
+    "org-url": "Venite URL for Church Page",
     "find-org": "Find Your Church",
     "find-org-copy": "To find your church’s worship bulletins, join a prayer group, or start editing bulletins, try typing its name into the search bar below.",
-    "find-org-create": "It looks like you're the first one! You can create your church’s page by entering some simple information",
+    "find-org-create": "You can create your church’s page by entering some simple information. A page will be created for your church with a URL like {{base}}/church/{{url}}, but you can change this to something shorter if you’d like.",
     "find-org-name": "Name",
     "find-org-location": "Location",
     "find-org-website": "Website",
+    "find-org-url-exists": "This URL is already taken. Try another one!",
     "find-org-create-button": "Create",
     "forgot-password": "I forgot my password.",
     "name": "Name",
@@ -267,5 +271,6 @@
     "Pause": "Pause",
     "Resume": "Resume",
     "Fast-Forward": "Fast Forward"
-  }
+  },
+  "Skip This": "Skip This"
 }

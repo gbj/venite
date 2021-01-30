@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "auth.add-org" | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <p>{{ "auth.find-org-create" | translate:{url: slugify(name), base: base } }}</p>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label position="stacked">{{ "auth.find-org-name" | translate }}</ion-label>
+      <ion-input [(ngModel)]="name" ngDefaultControl></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="url-label">{{ base }}/church/</ion-label>
+      <ion-input [(ngModel)]="url" (ionChange)="validateURL($event.detail.value)" ngDefaultControl></ion-input>
+      <ion-text class="error ion-padding" *ngIf="urlExists" color="danger">{{ "auth.find-org-url-exists" | translate }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ "auth.find-org-location" | translate }}</ion-label>
+      <ion-input [(ngModel)]="location" ngDefaultControl></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ "auth.find-org-website" | translate }}</ion-label>
+      <ion-input [(ngModel)]="website" ngDefaultControl></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">{{ "cancel" | translate }}</ion-button>
+      <ion-button (click)="create()" [disabled]="urlExists">{{ "auth.find-org-create-button" | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-content>

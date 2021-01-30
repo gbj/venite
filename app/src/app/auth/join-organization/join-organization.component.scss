@@ -1,11 +1,16 @@
-form, .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+form,
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .buttons {
-    padding-top: 2em;
+  padding-top: 2em;
+}
+
+ion-list {
+  width: 100%;
 }

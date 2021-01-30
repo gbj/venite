@@ -75,7 +75,9 @@ export class OrganizationService {
       // transform from AngularFire `DocumentChangeAction` to `doc`
       map(changeactions => changeactions.map(action => action?.payload?.doc)),
       // extra ID and document data and leave the rest behind
-      map(orgs => orgs.map(doc => ({ ... doc.data(), id: doc.id })))
+      map(orgs => orgs.map(doc => ({ ... doc.data(), id: doc.id }))),
+      // search for organization
+      map(orgs => orgs.filter(org => search === '' || org?.name?.toLowerCase().includes(search?.toLowerCase()) || org?.slug?.toLowerCase().includes(search?.toLowerCase())))
     );
   }
 

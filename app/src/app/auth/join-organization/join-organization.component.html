@@ -1,5 +1,5 @@
 <ng-container *ngIf="modal else form">
-  <ion-content>
+  <ion-header>
     <ion-toolbar>
       <ion-buttons slot="end">
         <ion-button (click)="dismiss()">
@@ -7,6 +7,8 @@
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
+  </ion-header>
+  <ion-content>
     <ng-template *ngIf="true then form"></ng-template>
   </ion-content>
 </ng-container>
@@ -14,8 +16,12 @@
 <ng-template #form>
   <form class="find-org ion-padding">
     <h3>{{ 'auth.find-org' | translate }}</h3>
-    <p>{{ 'auth.find-org-copy' | translate }}</p>
-    <ion-searchbar animated (ionChange)="runSearch($event)"></ion-searchbar>
+    <p [innerHTML]="'auth.find-org-copy' | translate"></p>
+    <ion-searchbar animated (ionChange)="search$.next($event.detail.value)"></ion-searchbar>
+    <div class="buttons">
+      <ion-button fill="clear" color="danger" (click)="dismiss()">{{ 'Skip This' | translate }}</ion-button>
+      <ion-button *ngIf="search$ | async as search" fill="clear" (click)="createOrganization(search)">{{ 'Create' | translate }} “{{ search }}”</ion-button>
+    </div>
     <ion-list class="search-results" *ngIf="matches$ | async as matches">
       <ion-item button *ngFor="let org of matches; trackBy: trackByFn" (click)="joinOrganization(org)">
         <ion-avatar *ngIf="org.photoURL" slot="start">
@@ -27,9 +33,6 @@
         </ion-label>
       </ion-item>
     </ion-list>
-    <div class="buttons" *ngIf="search$ | async as search">
-      <ion-button fill="clear" (click)="createOrganization(search)">{{ 'Create' | translate }} “{{ search }}”</ion-button>
-    </div>
   </form>
 </ng-template>
 

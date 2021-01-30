@@ -20,11 +20,11 @@ import { DragDropModule } from '../drag-drop/drag-drop.module';
     OrganizationPageRoutingModule,
     TranslateModule.forChild(),
     AuthModule,
-    DragDropModule
+    DragDropModule,
   ],
   declarations: [
     OrganizationPage,
-    MemberChipComponent
+    MemberChipComponent,
   ]
 })
 export class OrganizationPageModule {}

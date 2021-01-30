@@ -14,22 +14,24 @@ import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { EditAvatarComponent } from './edit-avatar/edit-avatar.component';
 import { JoinOrganizationComponent } from './join-organization/join-organization.component';
+import { CreateOrganizationComponent } from './create-organization/create-organization.component';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
     TranslateModule.forChild(),
-    FormsModule
+    FormsModule,
   ],
   declarations: [
     AuthMenuButtonComponent,
     AuthMenuComponent,
     EditAvatarComponent,
     JoinOrganizationComponent,
+    CreateOrganizationComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
   ],
   exports: [
     AuthMenuButtonComponent,

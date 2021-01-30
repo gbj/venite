@@ -1,10 +1,13 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Component, OnInit, Output, EventEmitter, Input, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { Observable, BehaviorSubject, Subject, fromEvent, of } from 'rxjs';
 import { Organization } from '../../organization/organization';
 
-import { filter, switchMap } from 'rxjs/operators';
+import { filter, map, startWith, switchMap, tap } from 'rxjs/operators';
 import { AuthService } from '../auth.service';
 import { OrganizationService } from 'src/app/organization/organization.service';
+import { AlertController, IonSearchbar, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { CreateOrganizationComponent } from '../create-organization/create-organization.component';
 
 @Component({
   selector: 'venite-join-organization',
@@ -15,8 +18,10 @@ export class JoinOrganizationComponent implements OnInit {
   @Input() modal : any = null;
   @Output() complete : EventEmitter<boolean> = new EventEmitter();
 
+  @ViewChildren("searchBar") searchBar: QueryList<IonSearchbar>;
+
   // the text to be searched
-  search$ : BehaviorSubject<string> = new BehaviorSubject('');
+  search$ : Subject<string> = new Subject();
 
   // organizations that match the search
   matches$ : Observable<Organization[]>;
@@ -24,14 +29,16 @@ export class JoinOrganizationComponent implements OnInit {
 
   constructor(
     private auth : AuthService,
-    private organizationService : OrganizationService
+    private organizationService : OrganizationService,
+    private modalController: ModalController,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
     this.matches$ = this.search$.pipe(
-      //filter(search => !!search),
-      switchMap(search => this.organizationService.organizationsMatching(search))
-    );
+      startWith(""),
+      switchMap(search => this.organizationService.organizationsMatching(search)),
+    )
   }
 
   runSearch(event : CustomEvent) {
@@ -50,8 +57,21 @@ export class JoinOrganizationComponent implements OnInit {
 
   async createOrganization(name : string) {
     const user = this.auth.currentUser();
-    //console.log('creating organization with user', user);
-    await this.organizationService.create(name, user.uid);
+
+    const modal = await this.modalController.create({
+      component: CreateOrganizationComponent
+    });
+    modal.componentProps = {
+      modal,
+      name
+    };
+    await modal.present();
+
+    const { data } = await modal.onDidDismiss();
+    if(data) {
+      await this.organizationService.create(name, user.uid);
+    }
+
     this.complete.emit(true);
   }
 
