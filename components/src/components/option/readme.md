@@ -84,6 +84,7 @@ graph TD;
   ldf-heading --> ldf-day-name
   ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
+  ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text

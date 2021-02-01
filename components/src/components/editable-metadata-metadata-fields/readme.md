@@ -125,6 +125,7 @@ graph TD;
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
   ldf-heading --> ldf-text
+  ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text

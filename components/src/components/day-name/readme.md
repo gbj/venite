@@ -18,10 +18,20 @@
 
  - [ldf-heading](../heading)
 
+### Depends on
+
+- [ldf-text](../text)
+
 ### Graph
 ```mermaid
 graph TD;
+  ldf-day-name --> ldf-text
+  ldf-text --> ldf-label-bar
+  ldf-text --> ldf-heading
+  ldf-text --> ldf-editable-text
+  ldf-text --> ldf-string
   ldf-heading --> ldf-day-name
+  ldf-editable-text --> ion-input
   style ldf-day-name fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

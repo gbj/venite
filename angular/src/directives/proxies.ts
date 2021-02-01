@@ -1235,8 +1235,8 @@ export class LdfEditableBoolean {
 }
 
 export declare interface LdfEditableCondition extends Components.LdfEditableCondition {}
-@ProxyCmp({inputs: ['condition', 'modal', 'path']})
-@Component({ selector: 'ldf-editable-condition', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['condition', 'modal', 'path'] })
+@ProxyCmp({inputs: ['modal', 'obj', 'path']})
+@Component({ selector: 'ldf-editable-condition', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'obj', 'path'] })
 export class LdfEditableCondition {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1368,8 +1368,8 @@ export class LdfEditablePreferenceOption {
 }
 
 export declare interface LdfEditablePreferences extends Components.LdfEditablePreferences {}
-@ProxyCmp({inputs: ['modal', 'path', 'preferences', 'special_preferences']})
-@Component({ selector: 'ldf-editable-preferences', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'path', 'preferences', 'special_preferences'] })
+@ProxyCmp({inputs: ['modal', 'obj', 'path']})
+@Component({ selector: 'ldf-editable-preferences', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'obj', 'path'] })
 export class LdfEditablePreferences {
   ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;

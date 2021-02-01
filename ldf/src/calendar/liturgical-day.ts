@@ -13,6 +13,7 @@ interface ObservedInterface {
   season?: Seasons[number] | undefined;
   octave?: string | undefined;
   mmdd?: string;
+  kalendar?: string;
 }
 
 /**
@@ -185,7 +186,11 @@ export class LiturgicalDay {
           bDate.setDate(parseInt(bDD));
           aDate.setMonth(parseInt(aMM) - 1);
           aDate.setDate(parseInt(aDD));
-          return aDate.getTime() - bDate.getTime();
+          return a.obj.mmdd === b.obj.mmdd && a.obj.kalendar !== b.obj.kalendar
+            ? a.obj.kalendar === day.kalendar
+              ? -1
+              : 1
+            : aDate.getTime() - bDate.getTime();
         } else {
           return b.rank - a.rank;
         }

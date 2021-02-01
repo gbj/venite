@@ -155,6 +155,14 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       .filter(hd => !hd.eve || evening);
   }
 
+  function dateFromMMDD(mmdd : string) : Date {
+    const dateResult = new Date();
+    const [mm, dd] = mmdd.split('/');
+    dateResult.setMonth(Number(mm) - 1);
+    dateResult.setDate(Number(dd));
+    return dateResult;
+  }
+
   // addHolyDays
   /** Find `HolyDay`s connected to either a date or a slug */
   async function addHolyDays(day : LiturgicalDay) : Promise<LiturgicalDay> {
@@ -171,7 +179,7 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       const isNovember = date.getMonth() === 10, // January is 0, Feb 1, etc., so Sept is 8 
         isThursday = date.getDay() === 4, // Sunday is 0, Monday is 1
         nthWeekOfMonth = Math.ceil(date.getDate() / 7),
-        thanksgiving = isNovember && isThursday && nthWeekOfMonth == 4 ? await findSpecialDays('thanksgiving-day') : [],
+        thanksgiving = isNovember && isThursday && nthWeekOfMonth === 4 ? await findSpecialDays('thanksgiving-day') : [],
         allHolyDays = (await db.collection('HolyDay').where('kalendar', '==', kalendar).get())
           .docs
           .map(doc => doc.data() as HolyDay)
@@ -198,6 +206,16 @@ export const calendar = functions.https.onRequest(async (request, response) => {
         holydays = holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= highestHolyDayRank);
       } else if(isSunday) {
         holydays = holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4);
+      }
+
+      // if some calendar other than bcp1979, sort them so that calendar's options come first, dates being equal
+      if(kalendar !== "bcp1979") {
+        holydays = holydays.sort((a, b) => a.mmdd && b.mmdd && a.mmdd !== b.mmdd
+          ? dateFromMMDD(a.mmdd).getTime() - dateFromMMDD(b.mmdd).getTime()
+          : a.kalendar === kalendar
+            ? -1
+            : 1
+          )
       }
 
       return day.addHolyDays(holydays);

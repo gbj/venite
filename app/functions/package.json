@@ -18,7 +18,7 @@
     "@venite/docx": "^0.1.1",
     "@venite/http": "^0.1.1",
     "@venite/hymnal-api": "^0.1.2",
-    "@venite/ldf": "^0.16.0",
+    "@venite/ldf": "^0.16.2",
     "docx": "^5.4.0",
     "firebase-admin": "^8.10.0",
     "firebase-functions": "^3.6.1"

@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, JSX, Element, h } from '@stencil/core';
-import { LiturgicalDay, dateFromYMDString } from '@venite/ldf';
+import { LiturgicalDay, dateFromYMDString, Text } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './day-name.i18n.en.json';
@@ -57,7 +57,12 @@ export class DayNameComponent {
   dayToNodes(day : LiturgicalDay, localeStrings : {[x: string]: string}) : JSX.Element {
     // Holy Day => name of day
     if(day?.holy_day_observed?.name && day?.holy_day_observed?.type?.rank >= 3) {
-      return day?.holy_day_observed?.name;
+      return !day.holy_day_observed.bio 
+        ? day?.holy_day_observed?.name
+        : <details>
+            <summary>{day.holy_day_observed.name}</summary>
+            <ldf-text doc={new Text({type: "text", style: "text", value: day.holy_day_observed.bio})}></ldf-text>
+          </details>;
     } else {
       const date = dateFromYMDString(day?.date),
             locale : string = (this.el?.closest('[lang]') as HTMLElement)?.lang || 'en';
