@@ -202,8 +202,8 @@ export const calendar = functions.https.onRequest(async (request, response) => {
 
       // if some calendar other than bcp1979, filter out duplicate slugs
       if(kalendar !== "bcp1979") {
-        const preferredCalendarSlugs = holydays.filter(day => day.kalendar === kalendar && day.slug).map(day => day.slug);
-        holydays = holydays.filter(day => day.kalendar === kalendar || !preferredCalendarSlugs.includes(day.slug));
+        const preferredCalendarSlugs = holydays.filter(holyday => holyday.kalendar === kalendar && holyday.slug).map(holyday => holyday.slug);
+        holydays = holydays.filter(holyday => holyday.kalendar === kalendar || !preferredCalendarSlugs.includes(holyday.slug));
       }
 
       return day.addHolyDays(holydays);
