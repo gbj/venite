@@ -185,7 +185,6 @@ export class PrayService {
         );
         break;
       case 'collect':
-        console.log('finding collect with versions', versions);
         result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', versions).pipe(
           map(collects => collects.map(collect => {
             const label = (day.holy_days || []).map(day => day.slug).includes(collect.slug)

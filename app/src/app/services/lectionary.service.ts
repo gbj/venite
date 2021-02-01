@@ -70,7 +70,6 @@ export class LectionaryService {
             // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
             // so its value is set to 'first_reading_alt'
             // but it still needs to search for 'first_reading'
-            console.log('readingType is', readingType);
             query = query.where('type', '==', readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType);
           }
 
@@ -80,7 +79,7 @@ export class LectionaryService {
 
           return query;
         }
-      }).valueChanges().pipe(tap(entries => console.log('getReadings => ', day.propers, readingType, entries)));
+      }).valueChanges();
     }
   }
 
