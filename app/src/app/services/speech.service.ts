@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BibleReading, BibleReadingVerse, dateFromYMDString, Heading, LiturgicalDocument, Liturgy, Option, Psalm, PsalmVerse, Refrain, ResponsivePrayer, Rubric, Text } from '@venite/ldf';
 import { PlatformService } from '@venite/ng-platform';
-import { DisplaySettings } from '@venite/ng-pray';
+import { DisplaySettings } from '@venite/ldf';
 import { concat, Observable, timer } from 'rxjs';
 import { speak, SpeechSynthesisUtteranceConfig } from 'rxjs-tts';
 import { delay, map } from 'rxjs/operators';
@@ -54,7 +54,7 @@ export class SpeechService {
   speakDoc(doc : LiturgicalDocument, settings : DisplaySettings, index : number = 0, startingUtteranceIndex : number = 0) : Observable<SpeechServiceTracking> {
     const BETWEEN_DOCS = 500 * (1/settings.voiceRate),
       SILENCE = 4000 * (1/settings.voiceRate),
-      BETWEEN_PSALM_VERSE = 1000 * (1/settings.voiceRate);
+      BETWEEN_PSALM_VERSE = (settings.psalmPause ?? 1000) * (1/settings.voiceRate);
 
     function processText(s : string) : string {
       return processEntities(s
@@ -229,6 +229,7 @@ export class SpeechService {
     const subdocs = doc?.type === 'liturgy' ? (doc as Liturgy).value : [doc],
       unskippedSubdocs = subdocs.slice(index),
       utterances = unskippedSubdocs.map((sd, subdocIdx) => docToUtterances(sd)
+        .slice(startingUtteranceIndex)
         .filter(value => Boolean(value))
         .map((value, utteranceIdx) =>
           typeof value === 'string'

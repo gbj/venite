@@ -110,6 +110,7 @@ import { PrayPageModule } from './pray/pray.module';
       providers: [],
       displaySettings: {
         audio: true,
+        audio_background: false,
         meditation: true,
         antiphons: true,
         fonts: [
@@ -122,7 +123,8 @@ import { PrayPageModule } from './pray/pray.module';
           { value: 'decorated', label: 'D' },
           { value: 'none', label: 'N' }
         ],
-        ask_about_unison_texts: true
+        ask_about_unison_texts: true,
+        psalm_pause: true
       },
       liturgySettings: {
         sundayCollectsFirst: true,

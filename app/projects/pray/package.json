@@ -1,12 +1,12 @@
 {
   "name": "@venite/ng-pray",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
     "tslib": "^1.10.0",
     "@ionic/angular": "^5.0.0",
-    "@venite/ldf": "~0.15.7",
+    "@venite/ldf": "^0.16.3",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0"
   }

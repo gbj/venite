@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { DisplaySettings } from './display-settings';
+import { DisplaySettings } from '@venite/ldf';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 import { AuthServiceInterface, AUTH_SERVICE, PREFERENCES_SERVICE, PreferencesServiceInterface } from '@venite/ng-service-api';

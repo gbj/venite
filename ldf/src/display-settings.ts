@@ -14,5 +14,6 @@ export class DisplaySettings {
     public meditationBell: 'silence' | 'singing-bowl' = 'singing-bowl',
     public darkmode: 'auto' | 'dark' | 'light' = 'auto',
     public bolded: 'both' | 'unison' | 'response' | 'none' = 'both',
+    public psalmPause: number = 1000,
   ) {}
 }

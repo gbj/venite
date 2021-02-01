@@ -6,7 +6,7 @@ import { Liturgy, ClientPreferences, dateFromYMD, LiturgicalDay, LiturgicalDocum
 import { PrayService } from './pray.service';
 import { ModalController } from '@ionic/angular';
 import { DisplaySettingsComponent } from './display-settings/display-settings.component';
-import { DisplaySettings } from './display-settings/display-settings';
+import { DisplaySettings } from '@venite/ldf';
 import { DOCUMENT_SERVICE, DocumentServiceInterface, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface } from '@venite/ng-service-api';
 
 interface PrayState {

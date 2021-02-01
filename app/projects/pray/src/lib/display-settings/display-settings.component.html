@@ -36,7 +36,7 @@
           <ion-select-option *ngFor="let voice of voicesWithNationalities" [value]="voice.voice.name">{{ voice.voice.name }} ({{ voice.nationality }})</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-item *ngIf="backgroundEnabled">
+      <ion-item *ngIf="backgroundEnabled && config.audio_background">
         <ion-label position="stacked">{{ 'displaySettings.Background-Sounds' | translate }}</ion-label>
         <ion-select [value]="settings.voiceBackground" (ionChange)="updateSetting(uid, 'voiceBackground', $event)">
           <ion-select-option value="silence">None</ion-select-option>
@@ -61,6 +61,13 @@
         <ion-range min="0.5" max="1.5" step="0.1" snaps="true" ticks="false" [value]="settings.voiceRate" (ionChange)="updateSetting(uid, 'voiceRate', $event)">
           <ion-label slot="start">0.5x</ion-label>
           <ion-label slot="end">1.5x</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item *ngIf="hasVoice && config.psalm_pause">
+        <ion-label position="stacked">{{ 'displaySettings.Psalm-Pause' | translate }}</ion-label>
+        <ion-range min="0" max="3000" step="50" snaps="false" ticks="false" [value]="settings.psalmPause" (ionChange)="updateSetting(uid, 'psalmPause', $event)">
+          <ion-label slot="start">0s</ion-label>
+          <ion-label slot="end">3s</ion-label>
         </ion-range>
       </ion-item>
     </ng-container>

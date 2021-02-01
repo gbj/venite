@@ -43,8 +43,6 @@ export class PrayService {
   compile(docBase : LiturgicalDocument, day : LiturgicalDay, prefs : ClientPreferences, liturgyversions : string[], originalPrefs : Record<string, Preference> | undefined) : Observable<LiturgicalDocument> {
     this.day = day ?? this.day;
     
-    console.log(this.day);
-
     const doc = new LiturgicalDocument({
       ...docBase
     });
