@@ -155,14 +155,6 @@ export const calendar = functions.https.onRequest(async (request, response) => {
       .filter(hd => !hd.eve || evening);
   }
 
-  function dateFromMMDD(mmdd : string) : Date {
-    const dateResult = new Date();
-    const [mm, dd] = mmdd.split('/');
-    dateResult.setMonth(Number(mm) - 1);
-    dateResult.setDate(Number(dd));
-    return dateResult;
-  }
-
   // addHolyDays
   /** Find `HolyDay`s connected to either a date or a slug */
   async function addHolyDays(day : LiturgicalDay) : Promise<LiturgicalDay> {
@@ -208,14 +200,10 @@ export const calendar = functions.https.onRequest(async (request, response) => {
         holydays = holydays.filter(holyday => holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4);
       }
 
-      // if some calendar other than bcp1979, sort them so that calendar's options come first, dates being equal
+      // if some calendar other than bcp1979, filter out duplicate slugs
       if(kalendar !== "bcp1979") {
-        holydays = holydays.sort((a, b) => a.mmdd && b.mmdd && a.mmdd !== b.mmdd
-          ? dateFromMMDD(a.mmdd).getTime() - dateFromMMDD(b.mmdd).getTime()
-          : a.kalendar === kalendar
-            ? -1
-            : 1
-          )
+        const preferredCalendarSlugs = holydays.filter(day => day.kalendar === kalendar && day.slug).map(day => day.slug);
+        holydays = holydays.filter(day => day.kalendar === kalendar || !preferredCalendarSlugs.includes(day.slug));
       }
 
       return day.addHolyDays(holydays);

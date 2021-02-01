@@ -251,12 +251,18 @@ async readingsNotAvailableAlert(liturgy : Liturgy, day : LiturgicalDay, prefs : 
             readingA : string = evening ? 'holy_day_evening_1' : 'holy_day_morning_1',
             readingB : string = evening ? 'holy_day_evening_2' : 'holy_day_morning_2';
   
+      console.log('availableReadings = ', availableReadings);
+
+      console.log('holy_day_readings = ', holy_day_readings);
+
       const modifiedPrefs = {
         ... prefs,
-        'readingA': readingA,
-        'readingB': readingB,
-        'readingC': 'none'
+        'readingA': availableReadings.includes(readingA) ? readingA : prefs['readingA'],
+        'readingB': availableReadings.includes(readingB) ? readingB : prefs['readingB'],
+        'readingC': ['morning-prayer', 'evening-prayer'].includes(liturgy?.slug) ? 'none' : prefs['readingC']
       };
+
+      console.log('modifiedPrefs = ', modifiedPrefs);
   
       const alert = await this.alert.create({
         header: this.translate.instant('home.holy_day_alert.title'),
