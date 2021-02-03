@@ -24,7 +24,7 @@
 
   <script>
     document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
-    document.addEventListener('ldfDocShouldChange', (ev) => console.log('(ldfDocShouldChange)', ev));
+    document.addEventListener('ldfDocShouldChange', (ev) => console.log('(ldfDocShouldChange)', ev.detail));
     document.addEventListener('ldfAddOptionToDoc', (ev) => console.log('(ldfAddOptionToDoc)', ev));
     document.addEventListener('ldfAddChildAfter', (ev) => console.log('(ldfAddChildAfter)', ev));
     document.addEventListener('ldfAskForBibleIntros', (ev) => { 

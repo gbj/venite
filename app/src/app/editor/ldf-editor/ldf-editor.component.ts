@@ -126,14 +126,27 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     this.editorService.processChange(manager, ev.detail);
   }
 
-  addBlockDirectly(manager : LocalDocumentManager, ev : CustomEvent) {
+  async addBlockDirectly(manager : LocalDocumentManager, ev : CustomEvent) {
     const { base, index } = ev.detail;
-    this.addBlock((data) => this.add(manager, base, index, data));
-    const path = `${base}/${index}`,
+    this.addBlock((data) => {
+      this.add(manager, base, index, data);
+      const path = `${base}/${index}`,
       el = querySelectorDeep(`[path="${path}"]`);
+      // make the block editable now, or wait a tick then try
+      if(el) {
+        this.makeBlockEditable(base, index);
+      } else {
+        setTimeout(() => this.makeBlockEditable(base, index), 10);
+      }
+    });
+  }
+
+  makeBlockEditable(base : string, index : number) {
+    const path = `${base}/${index}`,
+    el = querySelectorDeep(`[path="${path}"]`);
+    console.log('addBlockDirectly path is', path, el);
     el.setAttribute("editable", "true");
     el.setAttribute("preview", "false");
-    ////console.log('added at', path, );
   }
 
   addBlockAsOption(manager : LocalDocumentManager, ev : CustomEvent) {
