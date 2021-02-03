@@ -47,7 +47,7 @@ export class EditableBooleanComponent {
       this.ldfDocShouldChange.emit(new Change({
         path: this.path,
         op: [
-          { type: 'set', index: this.property, oldValue, value }
+          { type: 'set', index: this.property, oldValue: oldValue === undefined ? false : oldValue, value }
         ]
       }));
     }
