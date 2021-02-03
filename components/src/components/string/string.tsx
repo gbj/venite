@@ -141,11 +141,13 @@ export class StringComponent {
               ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
               : /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
             reIncludingPunctuation = firstWord[0]?.match(/[“”‘’\!\?\[\]\(\)]/)
-              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff]{2})([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff]{2})\s*([\w\u0590-\u05ff\u0370-\u03ff]*)/
               : re,
             buffer = firstWord.length == 1,
             split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
+
+      console.log('match1 = ', firstChunk, match1, match2);
 
       final = new Array(
         <span class='firstword'><span class={buffer ? `drop buffered-drop drop-${match1}` : `drop drop-${match1}`}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
