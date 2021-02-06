@@ -27,9 +27,11 @@
 graph TD;
   ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-day-name
   ldf-editable-text --> ion-input
   style ldf-day-name fill:#f9f,stroke:#333,stroke-width:4px

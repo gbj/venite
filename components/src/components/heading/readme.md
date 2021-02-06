@@ -43,6 +43,7 @@ graph TD;
   ldf-editable-text --> ion-input
   ldf-day-name --> ldf-text
   ldf-text --> ldf-heading
+  ion-button --> ion-ripple-effect
   ldf-bible-reading --> ldf-heading
   ldf-liturgical-document --> ldf-heading
   ldf-psalm --> ldf-heading

@@ -275,8 +275,16 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // in response, we should call the setVersions and setOptions methods of that component
   // setVersions(Record<string, string>) and setOptions(LiturgicalDocument[])
   sendCanticleOptions(ev : CustomEvent, versions : Record<string, string>, options : LiturgicalDocument[]) {
-    //console.log('sendCanticleOptions', versions, options)
     ev.detail.setVersions(versions);
     ev.detail.setOptions(options);
+  }
+
+  // ldf-prayers-and-thanksgivings might emit an ldfAskForPrayersAndThanksgivings event
+  // in response, we should call the setOptions method of that component
+  async sendPrayersAndThanksgivings(ev : CustomEvent, versions : Record<string, string>, options: LiturgicalDocument[]) {
+    //const options = await this.documents.findDocumentsByCategory(["Prayers and Thanksgivings"], "en", ["bcp1979"]).toPromise();
+    console.log('sendP&T', options);
+    ev.detail.setOptions(options);
+    //ev.detail.setVersions(versions);
   }
 }

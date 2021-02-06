@@ -1,5 +1,5 @@
-import { Component, Prop, Watch, State, Element, Host, h } from '@stencil/core';
-import { Text, Heading } from '@venite/ldf';
+import { Component, Prop, Watch, State, Element, Host, Event, h, EventEmitter } from '@stencil/core';
+import { Text, Heading, Change } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 import '@vanillawc/wc-markdown';
 
@@ -52,6 +52,9 @@ export class TextComponent {
    */
   @Prop() editable : boolean;
 
+  /** Used to add Prayers and Thanksgivings */
+  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+
   // Lifecycle events
   async componentWillLoad() {
     this.docChanged(this.doc);
@@ -84,7 +87,8 @@ export class TextComponent {
     modal.componentProps = {
       base,
       index,
-      modal
+      modal,
+      parent: this
     }
     await modal.present();
   }

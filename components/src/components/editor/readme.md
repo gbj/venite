@@ -19,14 +19,15 @@
 
 ## Events
 
-| Event                         | Description                                                                                  | Type                                                                                              |
-| ----------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `editorAskForBibleIntros`     |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
-| `editorAskForCanticleOptions` |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
-| `editorCursorMoved`           | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
-| `editorDocShouldAdd`          | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
-| `editorDocShouldChange`       | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
-| `editorShouldAddGloriaPatri`  |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
+| Event                                 | Description                                                                                  | Type                                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `editorAskForBibleIntros`             |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorAskForCanticleOptions`         |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorAskForPrayersAndThanksgivings` |                                                                                              | `CustomEvent<EventTarget>`                                                                        |
+| `editorCursorMoved`                   | User's cursor/selection changed                                                              | `CustomEvent<Cursor>`                                                                             |
+| `editorDocShouldAdd`                  | User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` | `CustomEvent<{ base: string; index: number; }>`                                                   |
+| `editorDocShouldChange`               | User has edited the document                                                                 | `CustomEvent<Change \| Change[]>`                                                                 |
+| `editorShouldAddGloriaPatri`          |                                                                                              | `CustomEvent<{ path: string; language: string; version: string; oldValue: LiturgicalDocument; }>` |
 
 
 ## Dependencies
@@ -70,6 +71,7 @@ graph TD;
   ldf-editable-text --> ion-input
   ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string

@@ -14,6 +14,7 @@
       (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
       (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
       (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
+      (editorAskForPrayersAndThanksgivings)="sendPrayersAndThanksgivings($event, state?.liturgyVersions, state?.pAndT)"
     ></ldf-editor>
   </div>
 </ng-container>

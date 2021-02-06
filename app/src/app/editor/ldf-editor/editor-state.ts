@@ -6,4 +6,6 @@ export type EditorState = {
   serverManager: ServerDocumentManager,
   docSaved : Date,
   bibleIntros: LiturgicalDocument[],
+  canticleOptions: LiturgicalDocument[]
+  pAndT: Text[]
 }

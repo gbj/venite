@@ -127,6 +127,7 @@ graph TD;
   ldf-heading --> ldf-text
   ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string

@@ -40,16 +40,17 @@ graph TD;
   ldf-editable-text --> ion-input
   ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
+  ion-button --> ion-ripple-effect
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-editable-text
-  ion-button --> ion-ripple-effect
   ldf-option --> ion-segment
   ldf-option --> ion-segment-button
   ldf-option --> ion-label

@@ -1,6 +1,6 @@
 import { LiturgicalDocument } from './liturgical-document';
 
-const STYLES = ['text', 'prayer', 'markdown'] as const;
+const STYLES = ['text', 'prayer', 'markdown', 'authorized-prayers'] as const;
 type StyleTuple = typeof STYLES;
 
 /** Text represents collect or any other short prayer. */

@@ -14,6 +14,13 @@
 | `path`     | `path`     | A JSON Pointer that points to the Text being edited | `string`         | `undefined` |
 
 
+## Events
+
+| Event                | Description                           | Type                  |
+| -------------------- | ------------------------------------- | --------------------- |
+| `ldfDocShouldChange` | Used to add Prayers and Thanksgivings | `CustomEvent<Change>` |
+
+
 ## Dependencies
 
 ### Used by
@@ -25,6 +32,7 @@
 ### Depends on
 
 - [ldf-label-bar](../label-bar)
+- ion-button
 - [ldf-heading](../heading)
 - [ldf-editable-text](../editable-text)
 - [ldf-string](../string)
@@ -33,9 +41,11 @@
 ```mermaid
 graph TD;
   ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
   ldf-day-name --> ldf-text

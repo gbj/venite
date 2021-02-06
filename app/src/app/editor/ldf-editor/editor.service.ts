@@ -117,22 +117,30 @@ export class EditorService {
             })
           )
         );
-        
+
+        const pAndT$ = localManager$.pipe(
+          map(localManager => [localManager?.document?.language, (localManager?.document?.metadata?.liturgyversions || []).concat(localManager?.document?.version)]),
+          switchMap(([language, version]) => this.documents.findDocumentsByCategory(["Prayers and Thanksgivings"], language ?? 'en', ['bcp1979']))
+        );
+    
+    //@ts-ignore
     return combineLatest([
       serverManager$.pipe(startWith(undefined)),
       localManager$.pipe(startWith(undefined)), 
       docSaved$.pipe(startWith(undefined)),
       bibleIntros$.pipe(startWith([])),
       liturgyVersions$,
-      canticleOptions$
+      canticleOptions$,
+      pAndT$.pipe(startWith([]))
     ]).pipe(
-      map(([serverManager, localManager, docSaved, bibleIntros, liturgyVersions, canticleOptions]) => ({
+      map(([serverManager, localManager, docSaved, bibleIntros, liturgyVersions, canticleOptions, pAndT]) => ({
         localManager,
         serverManager,
         docSaved,
         bibleIntros,
         liturgyVersions,
-        canticleOptions
+        canticleOptions,
+        pAndT
       }))
     )
   }

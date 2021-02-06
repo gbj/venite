@@ -66,6 +66,8 @@ export class EditorComponent {
 
   @Event() editorAskForCanticleOptions : EventEmitter<EventTarget>;
 
+  @Event() editorAskForPrayersAndThanksgivings : EventEmitter<EventTarget>;
+
   @Event() editorShouldAddGloriaPatri : EventEmitter<{ path: string; language: string; version: string; oldValue: LiturgicalDocument | undefined; }>;
 
   // Life Cycle
@@ -168,12 +170,13 @@ export class EditorComponent {
   }
 
   @Listen('ldfAskForCanticleOptions', { target: 'document' })
-  onAskForCanticleOptions(/*ev : CustomEvent*/) {
-    //const target = elementFromPath(ev.target as HTMLElement, ev.detail);
-    ////console.log('onAskFor...', ev)
-    //const target = querySelectorDeep('ldf-editable-filter-documents', ev.target);
-    //console.log('onAskFor...', target)
+  onAskForCanticleOptions() {
     this.editorAskForCanticleOptions.emit(querySelectorDeep('ldf-editable-filter-documents'));
+  }
+
+  @Listen('ldfAskForPrayersAndThanksgivings', { target: 'document' })
+  onAskForPT(/*ev : CustomEvent*/) {
+    this.editorAskForPrayersAndThanksgivings.emit(querySelectorDeep('ldf-prayers-and-thanksgivings'));
   }
 
   @Listen('ldfShouldAddGloriaPatri', { target: 'document' })

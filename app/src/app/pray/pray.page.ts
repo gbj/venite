@@ -36,11 +36,15 @@ type ActionSheetData = {
 }
 
 type CanticleData = { liturgyVersions: Record<string, string>; canticleOptions: LiturgicalDocument[]};
+type PAndTData = LiturgicalDocument[];
 
 @Component({
   selector: 'venite-pray',
   templateUrl: './pray.page.html',
   styleUrls: ['./pray.page.scss'],
+  host: {
+    '(document:ldfAskForPrayersAndThanksgivings)': 'sendPAndTs($event)'
+  }
 })
 export class PrayPage implements OnInit, OnDestroy {
   doc$ : Observable<LiturgicalDocument>;
@@ -65,8 +69,8 @@ export class PrayPage implements OnInit, OnDestroy {
   speechUtteranceAtStartOfSubDoc : number = 0;
   @ViewChild(IonContent, {read: IonContent, static: false}) contentEl: IonContent;
 
-  // Canticle Swap
-  canticleData$ : Observable<CanticleData>;
+  // Canticle Swap/Prayers & Thanksgivings
+  swapData$ : Observable<[CanticleData, PAndTData]>;
 
   // Bulletin editor
   bulletinMode : boolean = false;
@@ -313,11 +317,18 @@ export class PrayPage implements OnInit, OnDestroy {
       })))
     );
 
-    this.canticleData$ = combineLatest([liturgyVersions$, canticleOptions$]).pipe(
-      map(([liturgyVersions, canticleOptions]) => ({
-        liturgyVersions,
-        canticleOptions
-      }))
+    const pAndTs$ = this.doc$.pipe(
+      switchMap(doc => this.documents.findDocumentsByCategory(["Prayers and Thanksgivings"], doc?.language ?? 'en', ['bcp1979']))
+    );
+
+    this.swapData$ = combineLatest([liturgyVersions$, canticleOptions$, pAndTs$]).pipe(
+      map(([liturgyVersions, canticleOptions, pAndTs]) => [
+        {
+          liturgyVersions,
+          canticleOptions
+        },
+        pAndTs
+      ])
     );
   }
 
@@ -713,6 +724,20 @@ export class PrayPage implements OnInit, OnDestroy {
               return (a?.metadata?.number > b?.metadata?.number) ? 1 : -1;
             }
           })
+      );
+    }
+  }
+
+  // Prayers and Thanksgivings
+  sendPAndTs(ev : any, data : LiturgicalDocument[] | undefined) : void {
+    if(data) {
+      ev.target.setOptions(data);
+    } else {
+      this.swapData$.pipe(
+        map(([, pAndTs]) => pAndTs),
+        take(2)
+      ).subscribe(
+        data => ev.target.setOptions(data)
       );
     }
   }

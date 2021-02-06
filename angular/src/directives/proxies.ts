@@ -1432,12 +1432,13 @@ export class LdfEditor {
   editorDocShouldAdd!: EventEmitter<CustomEvent>;
   editorAskForBibleIntros!: EventEmitter<CustomEvent>;
   editorAskForCanticleOptions!: EventEmitter<CustomEvent>;
+  editorAskForPrayersAndThanksgivings!: EventEmitter<CustomEvent>;
   editorShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorAskForCanticleOptions', 'editorShouldAddGloriaPatri']);
+    proxyOutputs(this, this.el, ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorAskForCanticleOptions', 'editorAskForPrayersAndThanksgivings', 'editorShouldAddGloriaPatri']);
   }
 }
 
@@ -1537,6 +1538,19 @@ export class LdfOption {
   }
 }
 
+export declare interface LdfPrayersAndThanksgivings extends Components.LdfPrayersAndThanksgivings {}
+@ProxyCmp({inputs: ['base', 'index', 'modal', 'options', 'parent'], 'methods': ['setOptions']})
+@Component({ selector: 'ldf-prayers-and-thanksgivings', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'modal', 'options', 'parent'] })
+export class LdfPrayersAndThanksgivings {
+  ldfAskForPrayersAndThanksgivings!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfAskForPrayersAndThanksgivings']);
+  }
+}
+
 export declare interface LdfPsalm extends Components.LdfPsalm {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-psalm', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
@@ -1599,9 +1613,11 @@ export declare interface LdfText extends Components.LdfText {}
 @ProxyCmp({inputs: ['doc', 'editable', 'path']})
 @Component({ selector: 'ldf-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
 export class LdfText {
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
   }
 }
