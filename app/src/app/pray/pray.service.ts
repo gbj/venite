@@ -190,7 +190,7 @@ export class PrayService {
             const label = (day.holy_days || []).map(day => day.slug).includes(collect.slug)
               ? titleCase(day.holy_days.find(day => day.slug === collect.slug)?.name) || collect.label || "The Collect of the Day"
               : collect.label || "The Collect of the Day";
-            return new LiturgicalDocument({ ... collect, label });
+            return new LiturgicalDocument({ ... collect, metadata: {...doc.metadata, ...collect.metadata}, label });
           })),
           // ignore the initial "Loading..."
           filter(collects => collects?.length > 1 || (collects.length === 1 && JSON.stringify(collects[0].value) !== JSON.stringify(["Loading..."]))),
@@ -284,6 +284,7 @@ export class PrayService {
           // also omit Gloria Patri if `insertGloria` === 'false'
           omit_gloria: (docBase?.style === 'psalm' && Boolean(prefs['insertGloria'] == 'false')) || doc?.metadata?.omit_gloria || docBase?.metadata?.omit_gloria,
           omit_response: doc?.metadata?.omit_response || docBase?.metadata?.omit_response,
+          omit_label: doc?.metadata?.omit_label || docBase?.metadata?.omit_label,
           changeable: doc?.metadata?.changeable || docBase?.metadata?.changeable
         },
         citation: doc.citation || docBase.citation

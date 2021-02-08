@@ -170,6 +170,7 @@ export class EditableMetadataMetadataFieldsComponent {
         return [
           { field: 'response', type: Field.String },
           { field: 'omit_response', type: Field.Bool },
+          { field: 'omit_label', type: Field.Bool },
           { field: 'rollup', type: Field.Bool }
         ];
       default:

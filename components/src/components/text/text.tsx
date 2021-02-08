@@ -132,14 +132,14 @@ export class TextComponent {
             {/* Heading */}
             {!this.editable && <ldf-heading path={`${this.path}/label`} doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>}
             {this.editable && <ldf-label-bar>
-              <h3 class="editable-label" slot="start">
+              {!this.obj?.metadata?.omit_label && <h3 class="editable-label" slot="start">
                 <ldf-editable-text
                   id={`${this.obj.uid || this.obj.slug}-label`}
                   text={this.obj?.label}
                   placeholder={localeStrings.label}
                   path={`${this.path}/label`}>
                 </ldf-editable-text>
-              </h3>
+              </h3>}
               <ldf-editable-text slot="end"
                 id="source-source"
                 text={this.obj?.source?.source}
@@ -186,9 +186,9 @@ export class TextComponent {
           return (
             <div lang={this.obj?.language || 'en'} class={`text ${this.obj?.display_format || 'default'}`}>
               {/* Heading */}
-              {(this.obj?.label || this.obj?.citation) && <ldf-heading
+              {((this.obj?.label && !this.obj?.metadata?.omit_label) || this.obj?.citation) && <ldf-heading
                 path={this.path}
-                doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation})}>
+                doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.metadata?.omit_label ? '' : this.obj.label], citation: this.obj.citation})}>
               </ldf-heading>}
     
               {
