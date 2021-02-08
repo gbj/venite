@@ -3,7 +3,7 @@ import { Observable, combineLatest } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OrganizationService } from './organization.service';
 import { Organization } from './organization';
-import { switchMap, tap, map } from 'rxjs/operators';
+import { switchMap, tap, map, filter, startWith } from 'rxjs/operators';
 import { AuthService } from '../auth/auth.service';
 import { UserProfile } from '../auth/user/user-profile';
 import { User } from 'firebase/app';
@@ -36,7 +36,8 @@ export class OrganizationPage implements OnInit {
     );
 
     const userProfile$ = this.auth.user.pipe(
-      switchMap(user => this.auth.getUserProfile(user.uid))
+      filter(user => Boolean(user)),
+      switchMap(user => this.auth.getUserProfile(user?.uid))
     );
 
     this.organization$ = this.orgId$.pipe(
@@ -51,13 +52,13 @@ export class OrganizationPage implements OnInit {
       map(docs => docs.sort((a, b) => dateFromYMDString(a?.day?.date) < dateFromYMDString(b?.day?.date) ? 1 : -1))
     )
 
-    this.role$ = combineLatest(this.auth.user, userProfile$, this.orgId$, this.organization$).pipe(
+    this.role$ = combineLatest(this.auth.user, userProfile$.pipe(startWith(null)), this.orgId$, this.organization$).pipe(
       map(([user, userProfile, orgId, org]) => {
-        if(user.uid == org.owner) {
+        if(user?.uid == org.owner) {
           return 'owner';
-        } else if(org.editors.includes(user.uid)) {
+        } else if(org.editors.includes(user?.uid)) {
           return 'editor';
-        } else if(userProfile.orgs.includes(orgId)) {
+        } else if((userProfile?.orgs || []).includes(orgId)) {
           return 'member';
         } else {
           return 'none';

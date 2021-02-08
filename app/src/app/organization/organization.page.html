@@ -58,7 +58,7 @@
             </div>
           </venite-droppable>
  
-          <div class="roles members">
+          <div class="roles members" *ngIf="role !== 'none'">
             <h3>{{ 'organization.members' | translate }}</h3>
             <ng-container *ngIf="members$ | async as members">
               <ng-container *ngFor="let member of members">
