@@ -1,3 +1,4 @@
+import { modalController } from '@ionic/core';
 import { Element, Component, Prop, Watch, State, Host, h } from '@stencil/core';
 import { Image } from '@venite/ldf';
 
@@ -45,10 +46,11 @@ export class ImageComponent {
    */
   @Prop({ reflect: true }) path : string;
 
-  /**
-   * Whether the object is editable
-   */
+  /** Whether the object is editable */
   @Prop() editable : boolean;
+
+  /** If the image is being shown in a modal, pass the modal here */
+  @Prop() modal : any;
 
   // Lifecycle events
   componentWillLoad() {
@@ -64,46 +66,76 @@ export class ImageComponent {
     }
   }
 
+  async showZoomed() {
+    const modal = await modalController.create({
+      component: 'ldf-image'
+    });
+    modal.componentProps = {
+      modal,
+      doc: this.obj
+    };
+    await modal.present();
+  }
+
   // Render
   render() {
     const localeStrings = this.localeStrings || {};
 
-    return (
-      <Host lang={this.obj.language}>
-        { this.editable && <ldf-label-bar>
-          <slot slot='end' name='controls'></slot>
-        </ldf-label-bar> }
-        <div class={`${this.obj?.style || ''} ${this.obj?.metadata?.align || ''}`}>
-          {this.obj.value && this.obj.value.map((url, ii) =>
-            this.editable ?
-            <figure>
-              <img src={url}
-                alt={this.obj?.label}
-                style={{
-                  height: this.obj?.metadata?.height ? `${this.obj.metadata.height}px` : 'auto',
-                  width: this.obj?.metadata?.width ? `${this.obj.metadata.width}px` : 'auto'
-                }}
-              />
-              <figcaption>
-                <code>{localeStrings.url}</code>
-                <ldf-editable-text
-                id={`${this.obj.uid || this.obj.slug}-${ii}`}
-                text={url}
-                path={`${this.path}/value/${ii}`}
-              ></ldf-editable-text>
-              </figcaption>
-            </figure>
-             :
-            <img
-              src={url}
+    const imageDisplay = [
+      this.editable && <ldf-label-bar>
+        <slot slot='end' name='controls'></slot>
+      </ldf-label-bar>,
+      <div class={`${this.obj?.style || ''} ${this.obj?.metadata?.align || ''}`}>
+        {this.obj.value && this.obj.value.map((url, ii) =>
+          this.editable ?
+          <figure>
+            <img src={url}
+              alt={this.obj?.label}
               style={{
                 height: this.obj?.metadata?.height ? `${this.obj.metadata.height}px` : 'auto',
                 width: this.obj?.metadata?.width ? `${this.obj.metadata.width}px` : 'auto'
               }}
             />
-          )}
-        </div>
-      </Host>
-    );
+            <figcaption>
+              <code>{localeStrings.url}</code>
+              <ldf-editable-text
+              id={`${this.obj.uid || this.obj.slug}-${ii}`}
+              text={url}
+              path={`${this.path}/value/${ii}`}
+            ></ldf-editable-text>
+            </figcaption>
+          </figure>
+          :
+          <img
+            src={url}
+            onClick={() =>this.showZoomed()}
+            style={{
+              height: this.obj?.metadata?.height ? `${this.obj.metadata.height}px` : 'auto',
+              width: this.obj?.metadata?.width ? `${this.obj.metadata.width}px` : 'auto'
+            }}
+          />
+        )}
+      </div>
+    ];
+
+    if(!this.modal) {
+      return <Host lang={this.obj?.language}>{imageDisplay}</Host>;
+    } else {
+      return [
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button onClick={() => this.modal.dismiss()}>
+                <ion-label slot="start">{localeStrings.close}</ion-label>
+                <ion-icon slot="end" name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>,
+        <ion-content class="ion-padding" scrollX={true} lang={this.obj?.language}>
+          {imageDisplay}
+        </ion-content>
+      ];
+    }
   }
 }
