@@ -8,10 +8,11 @@
   justify-content: flex-start;
 
   slot {
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin-left: 2em;
   }
-  
+
   slot:first-of-type {
     margin-left: 0;
     flex-grow: 2;

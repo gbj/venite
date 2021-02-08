@@ -9,10 +9,10 @@
   font-size: 1.5em;
   font-family: "Times New Roman" !important;
 
-    .drop {
-      float: right !important;
-      font-family: "Times New Roman" !important;
-    }
+  .drop {
+    float: right !important;
+    font-family: "Times New Roman" !important;
+  }
 }
 
 .bible-reading.omit {
@@ -72,4 +72,13 @@ sup:first-of-type {
   ldf-editable-text.book {
     width: 75px;
   }
+}
+
+h3.editable-label {
+  text-align: var(--ldf-h3-text-align);
+  font-weight: var(--ldf-h3-font-weight);
+  font-style: var(--ldf-h3-font-style);
+  font-variant: var(--ldf-h3-font-variant);
+  font-size: var(--ldf-h3-font-size);
+  text-transform: var(--ldf-h3-text-transform);
 }

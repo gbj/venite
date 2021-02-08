@@ -134,7 +134,52 @@ export class PsalmComponent {
       source: this.obj?.source
     })
     return (
-      <ldf-heading doc={heading}>
+      this.editable
+      ? [
+        <ldf-label-bar>
+          <h3 slot="start" class="editable-label">
+            <ldf-editable-text
+              id="label"
+              text={this.obj?.label}
+              path={`${this.path}/label`}
+              placeholder={this.localeStrings?.label}
+            >
+            </ldf-editable-text>
+          </h3>
+          {this.obj?.metadata && <ldf-editable-text
+            id="latinname"
+            text={this.obj?.metadata?.latinname}
+            path={`${this.path}/metadata/latinname`}
+            placeholder={this.localeStrings?.latinname}
+          >
+          </ldf-editable-text>}
+          <ldf-editable-text slot="end"
+            id="source-source"
+            text={this.obj?.source?.source}
+            path={`${this.path}/source/source`}
+            placeholder={this.localeStrings?.source}
+          >
+          </ldf-editable-text>
+          <ldf-editable-text slot="end"
+            id="source-citation"
+            text={this.obj?.source?.citation}
+            path={`${this.path}/source/citation`}
+            placeholder={this.localeStrings?.source_citation}
+          >
+          </ldf-editable-text>
+        </ldf-label-bar>,
+        <ldf-label-bar>
+          <ldf-editable-text
+            slot="start"
+            id="citation"
+            text={this.obj?.citation}
+            path={`${this.path}/citation`}
+            placeholder={this.localeStrings?.citation}
+          >
+          </ldf-editable-text>
+        </ldf-label-bar>
+      ]
+      : <ldf-heading doc={heading}>
         {showLatinName && <h5 slot='additional'>{this.obj?.metadata?.latinname}</h5>}
       </ldf-heading>
     )

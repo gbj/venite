@@ -130,7 +130,31 @@ export class TextComponent {
             </ldf-label-bar>
 
             {/* Heading */}
-            <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>
+            {!this.editable && <ldf-heading path={`${this.path}/label`} doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>}
+            {this.editable && <ldf-label-bar>
+              <h3 class="editable-label" slot="start">
+                <ldf-editable-text
+                  id={`${this.obj.uid || this.obj.slug}-label`}
+                  text={this.obj?.label}
+                  placeholder={localeStrings.label}
+                  path={`${this.path}/label`}>
+                </ldf-editable-text>
+              </h3>
+              <ldf-editable-text slot="end"
+                id="source-source"
+                text={this.obj?.source?.source}
+                path={`${this.path}/source/source`}
+                placeholder={this.localeStrings?.source}
+              >
+              </ldf-editable-text>
+              <ldf-editable-text slot="end"
+                id="source-citation"
+                text={this.obj?.source?.citation}
+                path={`${this.path}/source/citation`}
+                placeholder={this.localeStrings?.source_citation}
+              >
+              </ldf-editable-text>
+            </ldf-label-bar>}
 
             <div class={`text ${this.editable ? 'editable' : ''} ${this.obj?.display_format || 'default'}`}>
               {this.obj.value.map((prayer, prayerIndex) =>

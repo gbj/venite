@@ -32,16 +32,27 @@
 }
 
 .preces {
-  width: 100%; 
+  width: 100%;
 
-  tr, .row {
+  tr,
+  .row {
     display: table-row;
     display: var(--ldf-preces-tr-display);
 
-    td, .cell {
+    td,
+    .cell {
       display: table-cell;
       display: var(--ldf-preces-td-display);
       margin-left: var(--ldf-preces-td-margin-left);
     }
   }
+}
+
+h3.editable-label {
+  text-align: var(--ldf-h3-text-align);
+  font-weight: var(--ldf-h3-font-weight);
+  font-style: var(--ldf-h3-font-style);
+  font-variant: var(--ldf-h3-font-variant);
+  font-size: var(--ldf-h3-font-size);
+  text-transform: var(--ldf-h3-text-transform);
 }

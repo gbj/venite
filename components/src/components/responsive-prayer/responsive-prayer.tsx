@@ -1,5 +1,11 @@
 import { Component, Prop, Watch, State, Element, Host, JSX, h } from '@stencil/core';
 import { ResponsivePrayer, ResponsivePrayerLine, Heading } from '@venite/ldf';
+import { getComponentClosestLanguage } from '../../utils/locale';
+
+import EN from './responsive-prayer.i18n.en.json';
+const LOCALE = {
+  'en': EN,
+};
 
 @Component({
   tag: 'ldf-responsive-prayer',
@@ -45,6 +51,15 @@ export class ResponsivePrayerComponent {
   // Lifecycle events
   async componentWillLoad() {
     this.docChanged(this.doc);
+    this.loadLocaleStrings();
+  }
+
+  async loadLocaleStrings() : Promise<void> {
+    try {
+      this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
+    } catch(e) {
+      console.warn(e);
+    }
   }
 
   // Render helpers
@@ -96,9 +111,39 @@ export class ResponsivePrayerComponent {
     }
   }
 
+  editableHeader() {
+    return <ldf-label-bar>
+      <h3 slot="start" class="editable-label">
+        <ldf-editable-text
+          id="label"
+          text={this.obj?.label}
+          path={`${this.path}/label`}
+          placeholder={this.localeStrings?.label}
+        >
+        </ldf-editable-text>
+      </h3>
+      <ldf-editable-text slot="end"
+        id="source-source"
+        text={this.obj?.source?.source}
+        path={`${this.path}/source/source`}
+        placeholder={this.localeStrings?.source}
+      >
+      </ldf-editable-text>
+      <ldf-editable-text slot="end"
+        id="source-citation"
+        text={this.obj?.source?.citation}
+        path={`${this.path}/source/citation`}
+        placeholder={this.localeStrings?.citation}
+      >
+      </ldf-editable-text>
+    </ldf-label-bar>
+  }
+
 
   // Render
   render() {
+    const needsHeader = this.obj?.label || this.obj?.citation || this.obj?.source;
+
     if(this.obj.style == 'preces') {
       /* `preces` type returns a table like
        *    V.  O Lord, open our lips.
@@ -113,7 +158,8 @@ export class ResponsivePrayerComponent {
           </ldf-label-bar>
 
           {/* Heading */}
-          {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading> }
+          {!this.editable && needsHeader && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading> }
+          {this.editable && needsHeader && this.editableHeader()}
 
           <table class="preces">
             {this.obj.value.map((line, index) =>
@@ -147,7 +193,8 @@ export class ResponsivePrayerComponent {
         </ldf-label-bar> }
 
         {/* Heading */}
-        {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source})}></ldf-heading>}
+        {!this.editable && needsHeader && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source})}></ldf-heading>}
+        {this.editable && needsHeader && this.editableHeader()}
 
         {this.obj.value.map((line, index) => {
           // Classes depending on style and whether this line is optional
@@ -199,7 +246,8 @@ export class ResponsivePrayerComponent {
         <Host class={this.obj.style} lang={this.obj.language}>
 
           {/* Heading */}
-          {(this.obj?.label || this.obj?.citation || this.obj?.source) && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>}
+          {!this.editableHeader && needsHeader && <ldf-heading doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.label], citation: this.obj.citation, source: this.obj.source })}></ldf-heading>}
+          {this.editable && needsHeader && this.editableHeader()}
 
           <p class='responsive'>
             {this.obj.value.map((line, index) =>

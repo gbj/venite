@@ -131,3 +131,12 @@ h5 {
     font-style: var(--ldf-response-font-style);
   }
 }
+
+h3.editable-label {
+  text-align: var(--ldf-h3-text-align);
+  font-weight: var(--ldf-h3-font-weight);
+  font-style: var(--ldf-h3-font-style);
+  font-variant: var(--ldf-h3-font-variant);
+  font-size: var(--ldf-h3-font-size);
+  text-transform: var(--ldf-h3-text-transform);
+}

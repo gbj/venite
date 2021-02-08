@@ -40,4 +40,13 @@ strong {
   font-style: var(--ldf-unison-font-style);
 }
 
+h3.editable-label {
+  text-align: var(--ldf-h3-text-align);
+  font-weight: var(--ldf-h3-font-weight);
+  font-style: var(--ldf-h3-font-style);
+  font-variant: var(--ldf-h3-font-variant);
+  font-size: var(--ldf-h3-font-size);
+  text-transform: var(--ldf-h3-text-transform);
+}
+
 /* .text.abbreviated is handled in the DOM itself, in the component */

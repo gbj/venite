@@ -204,15 +204,24 @@ export class BibleReadingComponent {
               </slot>
             </ldf-label-bar>}
             {/* Heading */}
-            <ldf-heading doc={new Heading({ type: 'heading', metadata: {level: 3}, value: [this.obj.label]})}>
-              <ldf-editable-text slot="citation"
-                id="citation"
-                text={this.obj?.citation}
-                path={`${this.path}/citation`}
-                placeholder={localeStrings.citation}
-              >
-              </ldf-editable-text>
-            </ldf-heading>
+            <ldf-label-bar>
+              <h3 class="editable-label" slot="start">
+                  <ldf-editable-text
+                    id="label"
+                    text={this.obj?.label}
+                    path={`${this.path}/label`}
+                    placeholder={localeStrings.label}
+                  >
+                  </ldf-editable-text>
+              </h3>
+              <ldf-editable-text slot="end"
+                  id="citation"
+                  text={this.obj?.citation}
+                  path={`${this.path}/citation`}
+                  placeholder={localeStrings.citation}
+                >
+                </ldf-editable-text>
+            </ldf-label-bar>
 
             {/* Introductory text ("A Reading from..." or similar) */}
             {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document editable={true} doc={this.obj.metadata.compiled_intro}></ldf-liturgical-document>}

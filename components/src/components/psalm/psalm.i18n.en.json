@@ -1,3 +1,8 @@
 {
-  "changeCanticle": "Change Canticle"
+  "changeCanticle": "Change Canticle",
+  "citation": "Biblical Citation",
+  "label": "Label",
+  "latinname": "Latin Name",
+  "source": "Source",
+  "source_citation": "Citation"
 }

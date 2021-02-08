@@ -1,4 +1,7 @@
 {
   "amen": "Amen.",
-  "authorized_prayers": "Prayers and Thanksgivings"
+  "authorized_prayers": "Prayers and Thanksgivings",
+  "label": "Label",
+  "source": "Source",
+  "source_citation": "Citation"
 }
