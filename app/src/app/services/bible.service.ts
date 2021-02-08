@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { BibleReading } from '@venite/ldf';
 import { BibleServiceInterface } from 'service-api';
 import { HttpClient } from '@angular/common/http';
-import { catchError, startWith } from 'rxjs/operators';
+import { catchError, map, startWith, tap } from 'rxjs/operators';
 
 const LOADING = new BibleReading({
   type: "bible-reading",
@@ -23,7 +23,30 @@ export class BibleService implements BibleServiceInterface {
   ) { }
 
   getText(citation : string, version : string = 'NRSV') : Observable<BibleReading> {
+    let didSwitchVersion = false; 
+
+    // check for ESV apocrypha
+    const r = new BibleReading({
+        type: 'bible-reading',
+        style: 'long',
+        citation,
+        version
+      }),
+      abbrev = r.abbrevFromCitation(),
+      code = r.bookCodeFromAbbrev(abbrev),
+      isApocrypha = [
+        'Tobit', 'Judith', 'Baruch', '1 Maccabees',
+        '2 Maccabees', 'Wisdom', 'Sirach', '1 Esdras',
+        '2 Esdras', 'Bel', 'Azariah'
+      ].includes(code);
+
+    if(version === 'ESV' && isApocrypha) {
+      didSwitchVersion = true;
+      version = 'NRSV';
+    }
+
     return this.http.get<BibleReading>(`https://us-central1-venite-2.cloudfunctions.net/bible`, { params: { citation, version}}).pipe(
+      map(doc => !didSwitchVersion ? doc : new BibleReading({ ...doc, citation: `${citation} (${version})` })),
       startWith(LOADING),
       catchError(e => {
         console.warn(`(BibleService) error loading ${citation} (${version})`, e);

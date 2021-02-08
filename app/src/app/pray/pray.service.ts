@@ -480,7 +480,12 @@ export class PrayService {
   lookupBibleReading(doc : LiturgicalDocument, version : string = 'NRSV') : Observable<LiturgicalDocument> {
     return this.bibleService.getText(doc.citation, version).pipe(
       startWith(new BibleReading()),
-      map(versionWithText => new LiturgicalDocument({ ... doc, value: versionWithText?.value })),
+      map(versionWithText => new LiturgicalDocument({
+        ...doc,
+        version: versionWithText?.version || doc.version,
+        citation: versionWithText?.citation || doc.citation,
+        value: versionWithText?.value || []
+      })),
     );
   }
 
