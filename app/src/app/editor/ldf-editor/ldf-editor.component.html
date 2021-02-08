@@ -11,6 +11,7 @@
       (editorDocShouldChange)="processChange(state?.localManager, $event)"
       (editorDocShouldAdd)="addBlockDirectly(state?.localManager, $event)"
       (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
+      (ldfDocShouldMove)="moveSubDoc(state?.localManager, $event)"
       (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
       (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
       (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"

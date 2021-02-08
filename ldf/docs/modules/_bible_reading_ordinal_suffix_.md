@@ -14,7 +14,7 @@
 
 ▸ **ordinalSuffix**(`i`: number): *string*
 
-*Defined in [bible-reading/ordinal-suffix.ts:1](https://github.com/gbj/venite/blob/59a3431/ldf/src/bible-reading/ordinal-suffix.ts#L1)*
+*Defined in [bible-reading/ordinal-suffix.ts:1](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/bible-reading/ordinal-suffix.ts#L1)*
 
 **Parameters:**
 

@@ -22,7 +22,7 @@
 
 • **index**? : *number | string*
 
-*Defined in [editing/change.ts:4](https://github.com/gbj/venite/blob/59a3431/ldf/src/editing/change.ts#L4)*
+*Defined in [editing/change.ts:4](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/editing/change.ts#L4)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **oldValue**? : *any*
 
-*Defined in [editing/change.ts:5](https://github.com/gbj/venite/blob/59a3431/ldf/src/editing/change.ts#L5)*
+*Defined in [editing/change.ts:5](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/editing/change.ts#L5)*
 
 ___
 
@@ -38,15 +38,15 @@ ___
 
 • **p**? : *undefined | string | number[]*
 
-*Defined in [editing/change.ts:2](https://github.com/gbj/venite/blob/59a3431/ldf/src/editing/change.ts#L2)*
+*Defined in [editing/change.ts:2](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/editing/change.ts#L2)*
 
 ___
 
 ###  type
 
-• **type**: *"insertAt" | "deleteAt" | "set" | "delete" | "edit"*
+• **type**: *"insertAt" | "deleteAt" | "set" | "delete" | "edit" | "move"*
 
-*Defined in [editing/change.ts:3](https://github.com/gbj/venite/blob/59a3431/ldf/src/editing/change.ts#L3)*
+*Defined in [editing/change.ts:3](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/editing/change.ts#L3)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **value**? : *any*
 
-*Defined in [editing/change.ts:6](https://github.com/gbj/venite/blob/59a3431/ldf/src/editing/change.ts#L6)*
+*Defined in [editing/change.ts:6](https://github.com/gbj/venite/blob/4a12bb3/ldf/src/editing/change.ts#L6)*

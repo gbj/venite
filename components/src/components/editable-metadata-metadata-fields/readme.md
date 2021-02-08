@@ -133,6 +133,13 @@ graph TD;
   ldf-text --> ldf-string
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
+  ldf-image --> ion-header
+  ldf-image --> ion-toolbar
+  ldf-image --> ion-buttons
+  ldf-image --> ion-button
+  ldf-image --> ion-label
+  ldf-image --> ion-icon
+  ldf-image --> ion-content
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
@@ -162,19 +169,19 @@ graph TD;
   ldf-bible-reading --> ion-button
   ldf-bible-reading --> ion-icon
   ldf-bible-reading --> ion-label
-  ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-string
   ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
-  ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
+  ldf-psalm --> ldf-editable-text
+  ldf-psalm --> ldf-heading
   ldf-psalm --> ion-buttons
   ldf-psalm --> ion-button
   ldf-psalm --> ion-icon
   ldf-psalm --> ion-label
-  ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button

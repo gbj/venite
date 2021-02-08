@@ -1,6 +1,6 @@
 export class Operation {
   p?: (number | string | undefined)[];
-  type: 'insertAt' | 'deleteAt' | 'set' | 'delete' | 'edit';
+  type: 'insertAt' | 'deleteAt' | 'set' | 'delete' | 'edit' | 'move';
   index?: number | string;
   oldValue?: any;
   value?: any;

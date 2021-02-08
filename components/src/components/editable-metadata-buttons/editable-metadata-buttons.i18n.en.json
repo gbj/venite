@@ -1,6 +1,8 @@
 {
   "addOption": "Add an Option",
   "condition": "Conditions",
+  "move_down": "Move Down",
+  "move_up": "Move Up",
   "preferences": "Preferences",
   "settings": "Settings",
   "edit": "Edit",

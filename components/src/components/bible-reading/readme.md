@@ -47,9 +47,9 @@ Type: `Promise<void>`
 - ion-button
 - ion-icon
 - ion-label
-- [ldf-heading](../heading)
 - [ldf-editable-text](../editable-text)
 - [ldf-liturgical-document](../liturgical-document)
+- [ldf-heading](../heading)
 - [ldf-string](../string)
 
 ### Graph
@@ -60,31 +60,38 @@ graph TD;
   ldf-bible-reading --> ion-button
   ldf-bible-reading --> ion-icon
   ldf-bible-reading --> ion-label
-  ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-editable-text
   ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-heading
   ldf-bible-reading --> ldf-string
   ion-button --> ion-ripple-effect
-  ldf-heading --> ldf-string
-  ldf-heading --> ldf-editable-text
-  ldf-heading --> ldf-label-bar
-  ldf-heading --> ldf-day-name
-  ldf-heading --> ldf-text
   ldf-editable-text --> ion-input
-  ldf-day-name --> ldf-text
-  ldf-text --> ldf-label-bar
-  ldf-text --> ion-button
-  ldf-text --> ldf-heading
-  ldf-text --> ldf-editable-text
-  ldf-text --> ldf-string
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label
+  ldf-heading --> ldf-string
+  ldf-heading --> ldf-editable-text
+  ldf-heading --> ldf-label-bar
+  ldf-heading --> ldf-day-name
+  ldf-heading --> ldf-text
+  ldf-day-name --> ldf-text
+  ldf-text --> ldf-label-bar
+  ldf-text --> ion-button
+  ldf-text --> ldf-heading
+  ldf-text --> ldf-editable-text
+  ldf-text --> ldf-string
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
+  ldf-image --> ion-header
+  ldf-image --> ion-toolbar
+  ldf-image --> ion-buttons
+  ldf-image --> ion-button
+  ldf-image --> ion-label
+  ldf-image --> ion-icon
+  ldf-image --> ion-content
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
@@ -111,13 +118,13 @@ graph TD;
   ldf-responsive-prayer --> ldf-heading
   ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
-  ldf-psalm --> ldf-heading
   ldf-psalm --> ldf-label-bar
+  ldf-psalm --> ldf-editable-text
+  ldf-psalm --> ldf-heading
   ldf-psalm --> ion-buttons
   ldf-psalm --> ion-button
   ldf-psalm --> ion-icon
   ldf-psalm --> ion-label
-  ldf-psalm --> ldf-editable-text
   ldf-psalm --> ldf-string
   ldf-editable-metadata-buttons --> ion-buttons
   ldf-editable-metadata-buttons --> ion-button

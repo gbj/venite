@@ -19,10 +19,11 @@
 
 ## Events
 
-| Event               | Description | Type                          |
-| ------------------- | ----------- | ----------------------------- |
-| `ldfAddOptionToDoc` |             | `CustomEvent<AddOptionToDoc>` |
-| `ldfTogglePreview`  |             | `CustomEvent<boolean>`        |
+| Event               | Description | Type                                                             |
+| ------------------- | ----------- | ---------------------------------------------------------------- |
+| `ldfAddOptionToDoc` |             | `CustomEvent<AddOptionToDoc>`                                    |
+| `ldfDocShouldMove`  |             | `CustomEvent<{ base: string; oldIndex: number; diff: number; }>` |
+| `ldfTogglePreview`  |             | `CustomEvent<boolean>`                                           |
 
 
 ## Dependencies

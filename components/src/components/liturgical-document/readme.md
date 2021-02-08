@@ -88,6 +88,13 @@ graph TD;
   ldf-text --> ldf-string
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
+  ldf-image --> ion-header
+  ldf-image --> ion-toolbar
+  ldf-image --> ion-buttons
+  ldf-image --> ion-button
+  ldf-image --> ion-label
+  ldf-image --> ion-icon
+  ldf-image --> ion-content
   ldf-meditation --> ion-button
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label

@@ -37,7 +37,6 @@ export class EditableMetadataButtonsComponent {
   @Watch('obj')
   objChange(newObj : LiturgicalDocument) {
     if(this.modal) {
-      console.log('(EditableMetadataButtons) updating modal props');
       this.modal.componentProps = { ... this.modal.componentProps, obj: newObj };
     }
   }
@@ -52,6 +51,8 @@ export class EditableMetadataButtonsComponent {
   @Event() ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
 
   @Event() ldfTogglePreview : EventEmitter<boolean>;
+
+  @Event() ldfDocShouldMove : EventEmitter<{ base: string; oldIndex: number; diff: number; }>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -124,6 +125,14 @@ export class EditableMetadataButtonsComponent {
     });
   }
 
+  move(diff : 1 | -1) {
+    this.ldfDocShouldMove.emit({
+      base: this.base,
+      oldIndex: this.index,
+      diff
+    });
+  }
+
   // Render
   render() {
     const localeStrings = this.localeStrings || {},
@@ -152,27 +161,31 @@ export class EditableMetadataButtonsComponent {
           {/* Don't show "Add Option" button if `obj` is already an `Option` or a child of an `Option`; they have their own interface for this */}
           {this.obj?.type !== 'option' && this.parentType !== 'option' && this.base &&
             <ion-button onClick={() => this.addOption()} aria-role='button' aria-label={localeStrings.addOption}>
-              {/*localeStrings.addOption*/}
               <ion-icon slot='icon-only' name='add'></ion-icon>
             </ion-button>
           }
 
           {/* "Preferences" Button */}
           {this.obj?.type == 'liturgy' && <ion-button onClick={() => this.openPreferences()} aria-role='button' aria-label={localeStrings.preferences}>
-            {/*localeStrings.settings*/}
             <ion-icon slot='icon-only' name='list'></ion-icon>
           </ion-button>}
 
           {/* "Settings" Button */}
           <ion-button onClick={() => this.openSettings()} aria-role='button' aria-label={localeStrings.settings}>
-            {/*localeStrings.settings*/}
             <ion-icon slot='icon-only' name='cog'></ion-icon>
           </ion-button>
 
           {/* "Condition" Button */}
           {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
-            {/*localeStrings.condition*/}
             <ion-icon slot='icon-only' name='calendar'></ion-icon>
+          </ion-button>}
+
+          {/* "Move" Buttons — Move and item up or down */}
+          {(this.base && hasIndex && this.index > 0) && <ion-button onClick={() => this.move(-1)} aria-role='button' aria-label={localeStrings.move_up}>
+            <ion-icon slot='icon-only' name='arrow-up'></ion-icon>
+          </ion-button>}
+          {(this.base && hasIndex) && <ion-button onClick={() => this.move(1)} aria-role='button' aria-label={localeStrings.move_down}>
+            <ion-icon slot='icon-only' name='arrow-down'></ion-icon>
           </ion-button>}
 
           {/* "Delete" Button */}

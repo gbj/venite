@@ -293,7 +293,7 @@ export class EditorService {
                                     .doc(changeId);
       
         batch.update(managerRef.ref, { lastRevision: change.lastRevision });
-        batch.set(changeRef.ref, JSON.parse(JSON.stringify(change)));
+        batch.set(changeRef.ref, JSON.parse(JSON.stringify({...change, op: JSON.stringify(change.op)})));
 
         // optimistically update the doc
         manager.document = new LiturgicalDocument(json1.type.apply(JSON.parse(JSON.stringify(manager.document)), change.op) as Partial<LiturgicalDocument>);
@@ -470,10 +470,10 @@ export class EditorService {
   /** Converts a generic LDF `Change` into an array of `json1` operations */
   opFromChange(change : Change | Change[]) : JSONOp {
     if(!Array.isArray(change)) {
-      return change.fullyPathedOp().map(op => this.buildOp(op)).reduce(json1.type.compose, null);
+      return change.fullyPathedOp().map(op => typeof op === "string" ? this.buildOp(JSON.parse(op)) : this.buildOp(op)).reduce(json1.type.compose, null);
     } else {
       return change
-        .map(subchange => subchange.fullyPathedOp().map(op => this.buildOp(op)))
+        .map(subchange => subchange.fullyPathedOp().map(op => typeof op === "string" ? this.buildOp(JSON.parse(op)) : this.buildOp(op)))
         .flat()
         .reduce(json1.type.compose, null);
     }
@@ -510,6 +510,8 @@ export class EditorService {
         }
       case 'delete':
         return json1.replaceOp(indexedP, op.oldValue, '');
+      case 'move':
+        return json1.moveOp([...indexedP, op.oldValue], [...indexedP, op.value]);
     }
   }
 }

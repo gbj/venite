@@ -287,4 +287,17 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     ev.detail.setOptions(options);
     //ev.detail.setVersions(versions);
   }
+
+  // one of the arrow keys in a sub-doc has been clicked, so it should move up or down in the parent doc's `value`
+  moveSubDoc(manager: LocalDocumentManager, ev : CustomEvent<{ base: string; oldIndex: number; diff: number; }>) {
+    console.log('moveSubDoc ', ev.detail.base, ev.detail.oldIndex, ev.detail.diff);
+    this.editorService.processChange(manager, new Change({
+      path: ev.detail.base,
+      op: [{
+        type: 'move',
+        oldValue: ev.detail.oldIndex,
+        value: ev.detail.oldIndex + ev.detail.diff
+      }]
+    }));
+  }
 }

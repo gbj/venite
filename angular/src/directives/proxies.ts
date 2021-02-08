@@ -1318,11 +1318,12 @@ export declare interface LdfEditableMetadataButtons extends Components.LdfEditab
 export class LdfEditableMetadataButtons {
   ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
   ldfTogglePreview!: EventEmitter<CustomEvent>;
+  ldfDocShouldMove!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfTogglePreview']);
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfTogglePreview', 'ldfDocShouldMove']);
   }
 }
 
@@ -1465,8 +1466,8 @@ export class LdfHeading {
 }
 
 export declare interface LdfImage extends Components.LdfImage {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-image', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({inputs: ['doc', 'editable', 'modal', 'path']})
+@Component({ selector: 'ldf-image', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'modal', 'path'] })
 export class LdfImage {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
