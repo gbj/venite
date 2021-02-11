@@ -15,6 +15,13 @@
 | `path`     | `path`     | A JSON Pointer that points to the Collect being edited      | `string`          | `undefined` |
 
 
+## Events
+
+| Event                | Description                                                 | Type                  |
+| -------------------- | ----------------------------------------------------------- | --------------------- |
+| `ldfDocShouldChange` | Tell the Editor that a change has been made to the document | `CustomEvent<Change>` |
+
+
 ## Dependencies
 
 ### Used by

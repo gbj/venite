@@ -33,7 +33,7 @@
     "@types/firebase": "^3.2.1",
     "@venite/angular": "^0.5.0",
     "@venite/bible-api": "0.0.12",
-    "@venite/components": "^0.12.22",
+    "@venite/components": "^0.12.23",
     "@venite/ldf": "^0.16.7",
     "@venite/ng-darkmode": "0.0.11",
     "@venite/ng-localstorage": "0.0.3",
