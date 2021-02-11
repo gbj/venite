@@ -39,6 +39,7 @@ button.resize {
   width: 30px;
   margin: 0;
   padding: 0;
+  background-color: var(--ldf-editable-lookup-background-color);
   border-radius: 50%;
   border: 3px solid var(--ldf-color);
 }

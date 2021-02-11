@@ -93,30 +93,50 @@ export class ImageComponent {
     await modal.present();
   }
 
-  startResizing(corner: Direction, ev: MouseEvent) {
-    console.log('start resizing');
+  startResizing(corner: Direction, x: number, y: number) {
     this.resizingCorner = corner;
-    this.resizingStartPoint = { x: ev.clientX, y: ev.clientY };
+    this.resizingStartPoint = { x, y };
   }
 
   @Listen('mouseup', { target: 'document' })
   stopResizing() {
     // clear status of resizing
+    console.log('stopResizing');
     this.resizingCorner = null;
   }
 
   @Listen('mousemove', { target: 'window' })
   resizingMove(ev: MouseEvent) {
     if(this.resizingCorner && this.resizingStartPoint) {
-      const { x } = this.resizingStartPoint;
-      const xDiff = x - ev.clientX;
-      this.resizingStartPoint = { x: ev.clientX, y: ev.clientY };
-  
-      // force fixed aspect ratio by nulling out `height`
-      this.width = this.imgElement.clientWidth - xDiff;
-      this.height = null;
+      this.processResizingMove(this.resizingCorner, ev.clientX, ev.clientY);
+    }
+  }
 
-      this.updateDoc();
+  processResizingMove(corner: Direction, clientX: number, clientY: number) {
+    const { x } = this.resizingStartPoint;
+    const xDiff = corner === 'nw' || corner === 'sw' ? clientX - x : x - clientX;
+    this.resizingStartPoint = { x: clientX, y: clientY };
+
+    // force fixed aspect ratio by nulling out `height`
+    this.width = this.imgElement.clientWidth - xDiff;
+    this.height = null;
+
+    this.updateDoc();
+  }
+
+  touchStart(corner: Direction, ev: TouchEvent) {
+    ev.preventDefault();
+    const touch = ev.touches[0];
+    if(touch) {
+      this.startResizing(corner, touch.clientX, touch.clientY);
+    }
+  }
+
+  touchMove(corner: Direction, ev: TouchEvent) {
+    ev.preventDefault();
+    const touch = ev.touches[0];
+    if(touch) {
+      this.processResizingMove(corner, touch.clientX, touch.clientY);
     }
   }
 
@@ -171,16 +191,28 @@ export class ImageComponent {
                 class="editable"
               />
               <button class="resize top-left"
-                onMouseDown={(ev) => this.startResizing('nw', ev)}
+                onMouseDown={(ev) => this.startResizing('nw', ev.clientX, ev.clientY)}
+                onTouchStart={(ev) => this.touchStart('nw', ev)}
+                onTouchMove={(ev) => this.touchMove('nw', ev)}
+                onTouchEnd={() => this.stopResizing()}
               ></button>
               <button class="resize bottom-left"
-                onMouseDown={(ev) => this.startResizing('sw', ev)}
+                onMouseDown={(ev) => this.startResizing('sw', ev.clientX, ev.clientY)}
+                onTouchStart={(ev) => this.touchStart('sw', ev)}
+                onTouchMove={(ev) => this.touchMove('sw', ev)}
+                onTouchEnd={() => this.stopResizing()}
               ></button>
               <button class="resize top-right"
-                onMouseDown={(ev) => this.startResizing('ne', ev)}
+                onMouseDown={(ev) => this.startResizing('ne', ev.clientX, ev.clientY)}
+                onTouchStart={(ev) => this.touchStart('ne', ev)}
+                onTouchMove={(ev) => this.touchMove('ne', ev)}
+                onTouchEnd={() => this.stopResizing()}
               ></button>
               <button class="resize bottom-right"
-                onMouseDown={(ev) => this.startResizing('se', ev)}
+                onMouseDown={(ev) => this.startResizing('se', ev.clientX, ev.clientY)}
+                onTouchStart={(ev) => this.touchStart('se', ev)}
+                onTouchMove={(ev) => this.touchMove('se', ev)}
+                onTouchEnd={() => this.stopResizing()}
               ></button>
             </div>
             <figcaption>
