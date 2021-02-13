@@ -185,7 +185,7 @@ export class OptionComponent {
       // Ionic available and
       if(customElements && !!customElements.get('ion-select')) {
         const optionsAreLong : boolean = (this.obj?.value || [])
-            .map((option, optionIndex) => this.versionLabel(option, optionIndex)?.length > 25)
+            .map((option, optionIndex) => this.versionLabel(option, optionIndex)?.length > 20)
             .reduce((a, b) => a || b, false);
 
         // <= 3, short options
