@@ -14,7 +14,7 @@
 
 ▸ **dateOnly**(`d`: Date): *Date*
 
-*Defined in [calendar/utils/date-only.ts:2](https://github.com/gbj/venite/blob/cfa2644b/ldf/src/calendar/utils/date-only.ts#L2)*
+*Defined in [calendar/utils/date-only.ts:2](https://github.com/gbj/venite/blob/1cc76cd2/ldf/src/calendar/utils/date-only.ts#L2)*
 
 **Parameters:**
 

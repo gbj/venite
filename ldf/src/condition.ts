@@ -131,7 +131,7 @@ export class Condition {
       }
     }
 
-    return evaluatedConditions.reduce((a, b) => a && b);
+    return evaluatedConditions.reduce((a, b) => a && b, true);
   }
 
   exceptOnlyFactory(property: 'day' | 'season' | 'weekday' | 'week', include: string, evaluatedConditions: boolean[]) {
