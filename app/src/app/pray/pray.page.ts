@@ -228,8 +228,8 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     }
 
-    this.color$ = day$.pipe(
-      map(day => day?.color),
+    this.color$ = combineLatest(day$, this.doc$).pipe(
+      map(([day, doc]) => doc?.metadata?.color ?? day?.color),
       switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
       startWith('var(--ldf-background-color)'),
       distinct()
