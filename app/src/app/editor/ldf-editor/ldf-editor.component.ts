@@ -84,8 +84,8 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         settings.repeatAntiphon ? `repeat-antiphon-${settings.repeatAntiphon}` : '',
         settings.fontscale ? `fontscale-${settings.fontscale.toString()}` : '',
         settings.font ? `font-${settings.font}` : '',
-        settings.psalmVerses ? `psalmverses-${settings.psalmVerses}` : '',
-        settings.bibleVerses ? `bibleverses-${settings.bibleVerses}` : '',
+        `psalmverses-${settings.psalmVerses}`,
+        `bibleverses-${settings.bibleVerses}`,
         settings.bolded ? `bolded-${settings.bolded}` : ''
       ].join(' ')),
       startWith('ldf-wrapper')
