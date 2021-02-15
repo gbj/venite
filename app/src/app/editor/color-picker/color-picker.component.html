@@ -16,7 +16,7 @@
         {{ color.name }}
       </ion-label>
     </ion-item>
-    <ion-item button (click)="selectColor(undefined)">
+    <ion-item button (click)="selectColor('var(--ldf-background-color)')">
       <ion-avatar slot="start" [ngStyle]="{'background-color': 'var(--ldf-background-color', 'border': '1px solid red'}"></ion-avatar>
       <ion-label>{{ 'editor.no-color' | translate }}</ion-label>
     </ion-item>
