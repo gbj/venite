@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
-import { Change, DisplaySettings, LiturgicalDocument, Sharing } from '@venite/ldf';
+import { Change, DisplaySettings, LiturgicalColor, LiturgicalDocument, Sharing, Liturgy } from '@venite/ldf';
 import { AuthService } from 'src/app/auth/auth.service';
 import { environment } from 'src/environments/environment';
 import { EditorDisplaySettingsComponent } from '../editor-display-settings/editor-display-settings.component';
@@ -14,6 +14,10 @@ const { Clipboard } = Plugins;
 import * as clipboardPolyfill from 'clipboard-polyfill';
 import { EditorState } from '../ldf-editor/editor-state';
 import { TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { DocumentService } from 'src/app/services/document.service';
+import { ColorPickerComponent } from '../color-picker/color-picker.component';
 
 @Component({
   selector: 'venite-editor-buttons',
@@ -27,6 +31,9 @@ export class EditorButtonsComponent implements OnInit {
   @Input() includeAuthButton : boolean = false;
   @Input() publishButton : boolean = true;
 
+  colorName$ : BehaviorSubject<null | string | LiturgicalColor> = new BehaviorSubject(null);
+  color$ : Observable<string>;
+
   clipboardStatus : 'idle' | 'success' | 'error';
 
   constructor(
@@ -35,10 +42,36 @@ export class EditorButtonsComponent implements OnInit {
     private modal : ModalController,
     private router : Router,
     private alert : AlertController,
-    private translate : TranslateService
+    private translate : TranslateService,
+    private documents : DocumentService
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.color$ = this.colorName$.pipe(
+      switchMap(color => this.documents.getColor(color))
+    );
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes.state) {
+      const doc : Liturgy = changes.state.currentValue.localManager.document,
+        color = doc?.metadata?.color || doc?.day?.color || null;
+
+      this.colorName$.next(color);
+    }
+  }
+
+  async colorPicker(color : string) {
+    const modal = await this.modal.create({
+      component: ColorPickerComponent
+    });
+    modal.componentProps = {
+      modal,
+      color,
+      localManager: this.state.localManager
+    };
+    await modal.present();
+  }
 
   async sharingModal(sharing : Sharing) {
     const modal = await this.modal.create({

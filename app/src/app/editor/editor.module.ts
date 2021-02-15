@@ -16,6 +16,7 @@ import { HymnSelectorComponent } from './hymn-selector/hymn-selector.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { EditorDisplaySettingsComponent } from './editor-display-settings/editor-display-settings.component';
 import { EditorButtonsComponent } from './editor-buttons/editor-buttons.component';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { EditorButtonsComponent } from './editor-buttons/editor-buttons.componen
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    TranslateModule
+    TranslateModule,
   ],
   exports: [
     LdfEditorComponent,
@@ -39,7 +40,8 @@ import { EditorButtonsComponent } from './editor-buttons/editor-buttons.componen
     HymnSelectorComponent,
     UploadImageComponent,
     EditorDisplaySettingsComponent,
-    EditorButtonsComponent
+    EditorButtonsComponent,
+    ColorPickerComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

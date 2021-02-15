@@ -1,3 +1,4 @@
+import { LiturgicalColor } from '../calendar/liturgical-color';
 import { LiturgicalDocument } from '../liturgical-document';
 import { Preference } from './preference';
 
@@ -36,6 +37,9 @@ export class Liturgy extends LiturgicalDocument {
 
     /** True if this is inherently an evening liturgy, like Evening Prayer or Compline */
     evening: boolean;
+
+    /** A color to be used for the service. This will override the liturgical color of the day. Useful for e.g., the Burial service, which is white no matter the day. */
+    color?: string | LiturgicalColor;
   };
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */

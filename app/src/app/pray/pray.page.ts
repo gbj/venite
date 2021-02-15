@@ -228,12 +228,25 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     }
 
-    this.color$ = combineLatest(day$, this.doc$).pipe(
-      map(([day, doc]) => doc?.metadata?.color ?? day?.color),
-      switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
-      startWith('var(--ldf-background-color)'),
-      distinct()
-    )
+    if(this.bulletinMode) {
+      this.color$ = combineLatest(day$, this.bulletinDocId$.pipe(
+        filter(id => Boolean(id)),
+        switchMap(id => this.editorService.editorState(id)),
+        map(state => state.localManager.document)
+      )).pipe(
+        map(([day, doc]) => doc?.metadata?.color ?? day?.color),
+        switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
+        startWith('var(--ldf-background-color)'),
+        distinct()
+      );
+    } else {
+      this.color$ = combineLatest(day$, this.doc$).pipe(
+        map(([day, doc]) => doc?.metadata?.color ?? day?.color),
+        switchMap(color => this.documents.getColor(color).pipe(startWith(null))),
+        startWith('var(--ldf-background-color)'),
+        distinct()
+      )
+    }
 
     // Grab display settings from preferences
     const prefSettings$ = combineLatest([

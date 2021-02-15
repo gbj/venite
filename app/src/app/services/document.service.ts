@@ -396,4 +396,8 @@ export class DocumentService {
       return of('var(--ldf-background-color)')
     }
   }
+
+  getColors() : Observable<LiturgicalColor[]> {
+    return this.afs.collection<LiturgicalColor>('Color').valueChanges();
+  }
 }

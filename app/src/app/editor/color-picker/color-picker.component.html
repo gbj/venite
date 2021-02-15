@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'editor.border-color' | translate }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list *ngIf="colors$ | async as colors else loading">
+    <ion-item button *ngFor="let color of colors"  (click)="selectColor(color.hex)">
+      <ion-avatar slot="start" [ngStyle]="{'background-color': color.hex}"></ion-avatar>
+      <ion-label>
+        {{ color.name }}
+      </ion-label>
+    </ion-item>
+    <ion-item button (click)="selectColor(undefined)">
+      <ion-avatar slot="start" [ngStyle]="{'background-color': 'var(--ldf-background-color', 'border': '1px solid red'}"></ion-avatar>
+      <ion-label>{{ 'editor.no-color' | translate }}</ion-label>
+    </ion-item>
+    <ion-item button (click)="openColorPicker()">
+      <ion-avatar slot="start" [ngStyle]="{'background': 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)'}"></ion-avatar>
+      <ion-label>{{ 'editor.custom-color' | translate }}</ion-label>
+      <input #colorPicker type="color" class="visually-hidden" (change)="selectColor($event.target.value)" />
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ng-template #loading>
+  <p class="loading">{{ 'editor.loading-colors' | translate }}</p>
+</ng-template>
