@@ -41,6 +41,8 @@ export type Lookup = {
   rotate?: boolean;
   /** If `true` and `rotate` == true, rotate pseudo-randomly */
   random?: boolean;
+  /** If `true`, allows multiple options; if `false`, returns the first option (used for collects at the Eucharist) */
+  allow_multiple?: boolean;
 };
 
 export type Value =

@@ -201,7 +201,8 @@ export class PrayService {
             this.config.sundayCollectsFirst,
             this.config.emberDayCollectPrecedesSunday,
             this.config.allSaintsSuppressesCollectOfTheDayUnlessSunday,
-            this.config.allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday
+            this.config.allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday,
+            Boolean(doc?.lookup?.allow_multiple)
           )),
         )
         break;

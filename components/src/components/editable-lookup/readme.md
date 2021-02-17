@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description                                           | Type                                                                                                                                                                                              | Default     |
-| -------- | --------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `lookup` | --        | Starting value for editing                            | `{ type: string; table?: string \| { preference: string; }; item?: string \| number \| { preference: string; }; filter?: "seasonal" \| "evening" \| "day"; rotate?: boolean; random?: boolean; }` | `undefined` |
-| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`                                                                                                                                                                                          | `undefined` |
-| `types`  | --        | Available lookup types                                | `readonly string[]`                                                                                                                                                                               | `undefined` |
+| Property | Attribute | Description                                           | Type                                                                                                                                                                                                                        | Default     |
+| -------- | --------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `lookup` | --        | Starting value for editing                            | `{ type: string; table?: string \| { preference: string; }; item?: string \| number \| { preference: string; }; filter?: "seasonal" \| "evening" \| "day"; rotate?: boolean; random?: boolean; allow_multiple?: boolean; }` | `undefined` |
+| `path`   | `path`    | A JSON Pointer that points to the object being edited | `string`                                                                                                                                                                                                                    | `undefined` |
+| `types`  | --        | Available lookup types                                | `readonly string[]`                                                                                                                                                                                                         | `undefined` |
 
 
 ## Events

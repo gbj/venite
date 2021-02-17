@@ -2,6 +2,7 @@ import { Component, Prop, Event, EventEmitter, h, State, Host, Watch } from '@st
 import { Lookup, Change } from '@venite/ldf';
 
 const LOCALE_STRINGS = {
+  "allowMultiple": "Allow multiple options",
   "lookup": "Look this document up from the database.",
   "type": "Type",
   "lectionary": "Lectionary",
@@ -200,6 +201,16 @@ export class EditableLookupComponent {
               path={this.path}
               property="rotate"
               value={this.currentLookup?.rotate}
+            >
+            </ldf-editable-boolean>
+          </ion-item>
+          <ion-item>
+            <ion-label>{LOCALE_STRINGS.allowMultiple}</ion-label>
+            <ldf-editable-boolean
+              slot="end"
+              path={this.path}
+              property="allow_multiple"
+              value={this.currentLookup?.allow_multiple}
             >
             </ldf-editable-boolean>
           </ion-item>
