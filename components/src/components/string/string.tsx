@@ -122,10 +122,12 @@ export class StringComponent {
   }
 
   maintainCasing(st : string | undefined) : boolean {
-    // God and Roman numerals
         const s = st.replace(/\^/g, '');
-    return s?.toLowerCase() == ' god'
+      // don't lower-case if only the first letter is capitalized but others aren't (e.g., God, Lord)
+    return !(s.split("").map(char => char >= 'A' && char <= 'Z').reduce((a, b) => a && b, true))
+      // or if it's a Roman numeral
       || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s)
+      // or if it's the word "I"
       || s?.toLowerCase() == 'i ';
   }
 
