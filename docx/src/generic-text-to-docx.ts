@@ -14,7 +14,7 @@ export function genericTextToDocx(doc : Refrain | Text | Rubric, style : LDFStyl
       ? [new TextRun(' '), new TextRun({ style: LDFStyles.Response, text: doc.metadata?.response || localeStrings.amen })]
       : [];
   
-  return doc.value.map((p, ii) => new Paragraph({
+  return (doc.value || []).map((p, ii) => new Paragraph({
     style,
     children: ii == doc.value.length - 1
       ? processText(p).concat(response)

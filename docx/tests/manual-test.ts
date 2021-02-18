@@ -9,7 +9,7 @@ try {
   displaySettings.bibleVerses = true;
   displaySettings.psalmVerses = true;
 
-  const data = fs.readFileSync('./doc1.json', 'utf8'),
+  const data = fs.readFileSync('./doc2.json', 'utf8'),
     inDoc : LiturgicalDocument = JSON.parse(data);
 
   ldfToDocx(
@@ -17,7 +17,7 @@ try {
     displaySettings
   ).then(outDoc => {
     Packer.toBuffer(outDoc).then(buffer => 
-      fs.writeFileSync('./doc1.docx', buffer)
+      fs.writeFileSync('./doc2.docx', buffer)
     );
   });
 
