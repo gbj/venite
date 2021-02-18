@@ -1,6 +1,6 @@
 import { Component, Element, State, Prop, Event, EventEmitter, h, Host, Watch } from '@stencil/core';
-import { modalController, ComponentProps } from '@ionic/core';
-import { LiturgicalDocument } from '@venite/ldf';
+import { modalController, ComponentProps, alertController } from '@ionic/core';
+import { Change, LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './editable-metadata-buttons.i18n.en.json';
@@ -53,6 +53,8 @@ export class EditableMetadataButtonsComponent {
   @Event() ldfTogglePreview : EventEmitter<boolean>;
 
   @Event() ldfDocShouldMove : EventEmitter<{ base: string; oldIndex: number; diff: number; }>;
+
+  @Event() ldfDocShouldChange : EventEmitter<Change>;
 
   // Lifecycle events
   componentWillLoad() {
@@ -133,6 +135,69 @@ export class EditableMetadataButtonsComponent {
     });
   }
 
+  async headingLevel() {
+    const alert = await alertController.create({
+      header: this.localeStrings?.heading,
+      inputs: [
+        {
+          name: 'level',
+          type: 'radio',
+          value: 1,
+          label: this.localeStrings?.heading1
+        },
+        {
+          name: 'level',
+          type: 'radio',
+          value: 2,
+          label: this.localeStrings?.heading2
+        },
+        {
+          name: 'level',
+          type: 'radio',
+          value: 3,
+          label: this.localeStrings?.heading3
+        },
+        {
+          name: 'level',
+          type: 'radio',
+          value: 4,
+          label: this.localeStrings?.heading4
+        },
+      ],
+      buttons: [
+        {
+          text: this.localeStrings?.cancel,
+          role: 'cancel',
+          cssClass: 'secondary'
+        },
+        {
+          text: this.localeStrings?.ok,
+        }
+      ]
+    });
+    await alert.present();
+    const { data } = await alert.onDidDismiss(),
+      { values } = data;
+    if(this.obj?.metadata) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.base}/${this.index}/metadata/level`,
+        op: [{
+          type: 'set',
+          value: values,
+          oldValue: this.obj?.metadata?.level
+        }]
+      }));
+    } else {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.base}/${this.index}/metadata`,
+        op: [{
+          type: 'set',
+          value: { level: values }
+        }]
+      }));
+    }
+  }
+
   // Render
   render() {
     const localeStrings = this.localeStrings || {},
@@ -168,6 +233,11 @@ export class EditableMetadataButtonsComponent {
           {/* "Preferences" Button */}
           {this.obj?.type == 'liturgy' && <ion-button onClick={() => this.openPreferences()} aria-role='button' aria-label={localeStrings.preferences}>
             <ion-icon slot='icon-only' name='list'></ion-icon>
+          </ion-button>}
+
+          {/* for headings -- level */}
+          {this.obj?.type == 'heading' && <ion-button onClick={() => this.headingLevel()}>
+            <ion-label>{localeStrings[`heading${this.obj?.metadata?.level || 3}`] || 'Heading'}</ion-label>
           </ion-button>}
 
           {/* "Settings" Button */}
