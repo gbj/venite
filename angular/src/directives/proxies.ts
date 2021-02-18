@@ -1319,11 +1319,12 @@ export class LdfEditableMetadataButtons {
   ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
   ldfTogglePreview!: EventEmitter<CustomEvent>;
   ldfDocShouldMove!: EventEmitter<CustomEvent>;
+  ldfDocShouldChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfTogglePreview', 'ldfDocShouldMove']);
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfTogglePreview', 'ldfDocShouldMove', 'ldfDocShouldChange']);
   }
 }
 
