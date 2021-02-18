@@ -764,7 +764,10 @@ export class PrayPage implements OnInit, OnDestroy {
         map(([, pAndTs]) => pAndTs),
         take(2)
       ).subscribe(
-        data => ev.target.setOptions(data)
+        data => {
+          this.loadingController.dismiss();
+          ev.target.setOptions(data);
+        }
       );
     }
   }
