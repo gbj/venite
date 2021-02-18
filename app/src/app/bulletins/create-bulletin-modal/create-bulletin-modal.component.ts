@@ -129,8 +129,8 @@ export class CreateBulletinModalComponent implements OnInit {
                   }, {
                     text: this.translate.instant("bulletins.ok"),
                     handler: async () => {
-                      //window.alert("slug is "+ slug);
                       liturgy.slug = slug;
+                      console.log('slug is now ', liturgy.slug);
 
                       await Promise.all(others.map(async other => {
                         console.log('renaming ', other.id);
@@ -141,14 +141,18 @@ export class CreateBulletinModalComponent implements OnInit {
                       }
                       ));
 
-                      console.log('now navigating');
+                      console.log('navigating, with hope that window.history.state = ', event.state);
+                      console.log(event.commands, event.state);
+                      if(event.commands.length === 8) {
+                        event.commands.push('{}');
+                      }
                       this.router.navigate(
-                        event.commands,
+                        event.commands.concat([event.state.liturgy.slug, event.state.liturgy.label]),
                         {
                           state: event.state,
                           skipLocationChange: true
                         }
-                      )
+                      );
                       this.dismiss();
                     }
                   }
@@ -166,7 +170,6 @@ export class CreateBulletinModalComponent implements OnInit {
           if(event.commands.length === 8) {
             event.commands.push('{}');
           }
-          //console.log(event.commands, event.state.liturgy.slug, event.state.liturgy.label);
           this.router.navigate(
             event.commands.concat([event.state.liturgy.slug, event.state.liturgy.label]),
             {

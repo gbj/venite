@@ -80,6 +80,8 @@ export class PrayPage implements OnInit, OnDestroy {
   latestDoc : LiturgicalDocument | undefined;
   newSlug : string | undefined;
   newLabel : string | undefined;
+  bulletinLabel : string | undefined;
+  bulletinSlug : string | undefined;
 
   constructor(
     private router : Router,
@@ -108,6 +110,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log('window.history.state = ', window.history.state);
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
     // bulletin mode (i.e., include all possibilities as options)
     this.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'));
@@ -118,6 +121,14 @@ export class PrayPage implements OnInit, OnDestroy {
     // and liturgical day had been preloaded
     const windowHistoryState$ : Observable<PrayState> = this.router.events.pipe(
       mapTo(window?.history?.state),
+      // store bulletin slug and label from router state, to override whatever's loaded from server
+      tap((state : PrayState) => {
+        if(this.bulletinMode) {
+          this.bulletinLabel = state?.liturgy?.label;
+          this.bulletinSlug = state?.liturgy?.slug;
+          console.log('this.bulletinSlug = ', this.bulletinSlug);
+        }
+      })
     );
 
     // If passed as router params (e.g., arrived at page from a link or refresh),
@@ -433,6 +444,9 @@ export class PrayPage implements OnInit, OnDestroy {
         latestDoc.label = this.newLabel;
         loading.dismiss();
         console.log('completed');
+        latestDoc.slug = this.bulletinSlug || latestDoc.slug;
+        latestDoc.label = this.bulletinLabel || latestDoc.label;
+        console.log('bulletinSlug = ', this.bulletinSlug);
         this.beginEditing(latestDoc);
       }
     );
