@@ -26,6 +26,10 @@ export class LiturgyMenuComponent implements OnInit {
   // The actual liturgy pointed to in the properLiturgy input
   properLiturgyLiturgy : Observable<LiturgicalDocument>;
 
+  /** Proper liturgies that are *available* for this day (even if not selected), so shouldn't be filtered out */
+  @Input() availableProperLiturgies : ProperLiturgy[];
+  availableProperLiturgies$ : BehaviorSubject<ProperLiturgy[]> = new BehaviorSubject([]);
+
   /** Emits the `Liturgy` whenever user's selection changes */
   @Output() liturgyChange : EventEmitter<LiturgicalDocument> = new EventEmitter();
 
@@ -53,12 +57,24 @@ export class LiturgyMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.languageVersionLiturgies$ = combineLatest(
+    const allLiturgies$ = combineLatest(
       this.language$.pipe(startWith(this.language || this.config.defaultLanguage)),
-      this.version$.pipe(startWith(this.version || this.config.defaultVersion))
+      this.version$.pipe(startWith(this.version || this.config.defaultVersion)),
     ).pipe(
-      switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version)),
-      map(liturgies => liturgies.filter(liturgy => !Boolean(liturgy?.metadata?.supplement)))
+      switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version))
+    );
+
+    this.languageVersionLiturgies$ = combineLatest(
+      allLiturgies$,
+      this.properLiturgySubject,
+      this.availableProperLiturgies$
+    ).pipe(
+      map(([liturgies, properLiturgy, availableProperLiturgies]) => liturgies.filter(
+        liturgy => !Boolean(liturgy?.metadata?.supplement)
+          || properLiturgy?.liturgy == liturgy.slug
+          || availableProperLiturgies.map(l => l.slug).includes(liturgy?.slug)
+        )
+      )
     );
 
     // find actual `Liturgy` documents, given the `ProperLiturgy` we're passed
@@ -121,6 +137,10 @@ export class LiturgyMenuComponent implements OnInit {
 
     if(changes.liturgy?.currentValue) {
       this.liturgySubject.next(changes.liturgy?.currentValue);
+    }
+
+    if(changes.availableProperLiturgies?.currentValue) {
+      this.availableProperLiturgies$.next(changes.availableProperLiturgies?.currentValue);
     }
   }
 

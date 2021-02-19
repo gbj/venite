@@ -210,6 +210,18 @@ describe('Condition', () => {
     expect(include).toEqual(false);
   });
 
+  it('should handle day_of_month eq/neq', () => {
+    const condition = new Condition();
+
+    condition.day_of_month = { eq: 25 };
+    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    expect(include).toEqual(true);
+
+    condition.day_of_month = { neq: 25 };
+    include = condition.include(annunciation, new ClientPreferences());
+    expect(include).toEqual(false);
+  });
+
   it('should match preference', () => {
     const condition = new Condition();
 

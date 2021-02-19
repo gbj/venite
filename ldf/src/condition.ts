@@ -41,6 +41,12 @@ export class Condition {
     gte?: string;
   };
 
+  // Day of month = or != a particular value
+  day_of_month?: {
+    eq?: number;
+    neq?: number;
+  };
+
   // The value of the preference `key` is `value`. If `is == false`, true if the preference is *not* that value.
   preference?: {
     key: string;
@@ -118,6 +124,20 @@ export class Condition {
           }
         } catch (e) {
           throw 'Date is formatted incorrectly (should be MM/DD).';
+        }
+      }
+    }
+
+    // `day_of_month`
+    if (this.hasOwnProperty('day_of_month') && this.day_of_month !== undefined) {
+      const liturgyDate = dateFromYMDString(day.date),
+        liturgyDayOfMonth = liturgyDate.getDate();
+
+      for (const property in this.day_of_month) {
+        if (property == 'eq') {
+          evaluatedConditions.push(liturgyDayOfMonth == Number(this.day_of_month.eq));
+        } else if (property == 'neq') {
+          evaluatedConditions.push(liturgyDayOfMonth != Number(this.day_of_month.neq));
         }
       }
     }

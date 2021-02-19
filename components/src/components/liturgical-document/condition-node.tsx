@@ -43,6 +43,14 @@ const ConditionPiece : FunctionalComponent<ConditionPieceProps> = ({ condition, 
     nodes = nodes.concat(<ExceptOnly condition={condition} field='weekday' localeStrings={localeStrings} />)
   }
 
+  if(condition.day_of_month) {
+    nodes.push([
+      localeStrings.day_of_month_1,
+      ordinal_suffix_of(Number(condition.day_of_month)),
+      localeStrings.day_of_month_2
+    ]) 
+  }
+
   if(condition.hasOwnProperty('feastDay')) {
     nodes.push([
       localeStrings.the_day,
@@ -93,4 +101,19 @@ const ExceptOnly = ({ condition, field, localeStrings } : ExceptOnlyProps) => {
     condition[field].only.join(', ')
   ]);
   return nodes;
+}
+
+function ordinal_suffix_of(i : number) : string {
+  var j = i % 10,
+      k = i % 100;
+  if (j == 1 && k != 11) {
+      return i + "st";
+  }
+  if (j == 2 && k != 12) {
+      return i + "nd";
+  }
+  if (j == 3 && k != 13) {
+      return i + "rd";
+  }
+  return i + "th";
 }

@@ -1,6 +1,9 @@
 {
   "date": "Date (Month/Day)",
   "day": "Liturgical Day",
+  "dayOfMonth": "Day of Month",
+  "dayOfMonthIs": "Day of Month Is",
+  "dayOfMonthIsNot": "Day of Month Is Not",
   "except": "Except",
   "feastDay": "Only on Holy Days and Sundays",
   "gt": "After",

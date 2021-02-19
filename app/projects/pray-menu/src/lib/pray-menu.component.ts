@@ -72,6 +72,9 @@ export class PrayMenuComponent implements OnInit {
   // Readings available for the selected day
   availableReadings$ : Observable<string[]>;
 
+  // Proper liturgies available on the selected day
+  availableProperLiturgies$ : BehaviorSubject<ProperLiturgy[]> = new BehaviorSubject([]);
+
   // UI options
   kalendarOptions : Observable<Kalendar[]>;
   sanctoralOptions : Observable<Kalendar[]>;
@@ -392,4 +395,7 @@ nonDefaultPrefs(liturgy : Liturgy, prefs : ClientPreferences) : ClientPreference
     this.properLiturgy.next(properLiturgy);
   }
 
+  makeProperLiturgiesAvailable(liturgies : ProperLiturgy[]) {
+    this.availableProperLiturgies$.next(liturgies);
+  }
 }

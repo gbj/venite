@@ -72,6 +72,7 @@
       [language]="language$ | async"
       [version]="version$ | async"
       [properLiturgy]="properLiturgy | async"
+      [availableProperLiturgies]="availableProperLiturgies$ | async"
     >
     </venite-liturgy-menu>
 
@@ -85,6 +86,7 @@
       [day]="liturgicalDay | async"
       [language]="(liturgy | async)?.language"
       [properLiturgySelected]="(properLiturgy | async)?.liturgy"
+      (properLiturgiesAvailable)="makeProperLiturgiesAvailable($event)"
       (properLiturgyChange)="setProperLiturgy($event)"
     ></venite-proper-liturgy-menu>
 

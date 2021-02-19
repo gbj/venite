@@ -50,9 +50,15 @@ export function findCollect(
     // don't include the seasonal collect if it's the same as the Sunday, i.e., on the First Sunday of Advent
     observedSeasonalCollect = seasonalCollects
       ? docsToLiturgy(
-          seasonalCollects.filter(
-            (collect) => JSON.stringify(collect.value) !== JSON.stringify(redLetterOrSunday?.value),
-          ),
+          seasonalCollects.filter((collect) => {
+            const collectValue = JSON.stringify(collect.value);
+            return (
+              collectValue !== JSON.stringify(redLetterOrSunday?.value) &&
+              blackLetterCollects
+                .map((blCollect) => JSON.stringify(blCollect.value))
+                .reduce((prev: boolean, curr) => prev && curr !== collectValue, true)
+            );
+          }),
         )
       : null,
     // don't include the octave collect if it's the same as the collect of the day

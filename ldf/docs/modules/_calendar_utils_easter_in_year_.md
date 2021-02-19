@@ -14,7 +14,7 @@
 
 ▸ **easterInYear**(`Y`: number, `julian`: boolean): *Date*
 
-*Defined in [calendar/utils/easter-in-year.ts:5](https://github.com/gbj/venite/blob/b1a915e1/ldf/src/calendar/utils/easter-in-year.ts#L5)*
+*Defined in [calendar/utils/easter-in-year.ts:5](https://github.com/gbj/venite/blob/bdb8a8a5/ldf/src/calendar/utils/easter-in-year.ts#L5)*
 
 Returns the date of Easter in a given year
 

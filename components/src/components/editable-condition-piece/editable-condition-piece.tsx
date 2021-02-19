@@ -217,6 +217,39 @@ export class EditableConditionComponent {
           </div>}
         </article>
 
+        {/* Day of Month */}
+        <article>
+          <ion-item>
+            <ion-label>{localeStrings.dayOfMonth}</ion-label>
+            <ion-toggle
+              checked={this.workingCondition.day_of_month !== undefined}
+              onIonChange={(ev) => this.toggleSubcondition('day_of_month', ev.detail.checked, {})}
+            ></ion-toggle>
+          </ion-item>
+          {this.workingCondition.day_of_month !== undefined && <div class="type row">
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.dayOfMonthIs}</ion-label>
+              <ldf-editable-text
+                short={true}
+                inputType="number"
+                path={`${this.path}/day_of_month/eq`}
+                placeholder={localeStrings.dayOfMonth}
+                text={this.workingCondition.day_of_month.eq?.toString()}
+              ></ldf-editable-text>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-label position="stacked">{localeStrings.dayOfMonthIsNot}</ion-label>
+              <ldf-editable-text
+                short={true}
+                inputType="number"
+                path={`${this.path}/day_of_month/neq`}
+                placeholder={localeStrings.dayOfMonth}
+                text={this.workingCondition.day_of_month.eq?.toString()}
+              ></ldf-editable-text>
+            </ion-item>
+          </div>}
+        </article>
+
         {/* Preference */}
         <article>
           <ion-item>
