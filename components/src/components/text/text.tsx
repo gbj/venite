@@ -36,14 +36,6 @@ export class TextComponent {
       } else {
         this.obj = new Text(newDoc);
       }
-      if(this.editable && !this.obj?.source) {
-        this.ldfDocShouldChange.emit(new Change({
-          path: this.path,
-          op: [
-            { type: 'set', index: 'source', value: {} }
-          ]
-        }))
-      }
     } catch(e) {
       console.warn(e);
       this.obj = new Text();
