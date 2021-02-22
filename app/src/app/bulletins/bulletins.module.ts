@@ -13,6 +13,7 @@ import { CreateDocumentButtonComponent } from './create-document-button/create-d
 import { PrayMenuModule } from '@venite/ng-pray-menu';
 import { CreateBulletinModalComponent } from './create-bulletin-modal/create-bulletin-modal.component';
 import { BulletinSlugModalComponent } from '../bulletin-slug-modal/bulletin-slug-modal.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { BulletinSlugModalComponent } from '../bulletin-slug-modal/bulletin-slug
     BulletinsPageRoutingModule,
     TranslateModule,
     AuthModule,
-    PrayMenuModule
+    PrayMenuModule,
+    SharedModule
   ],
   declarations: [BulletinsPage, CreateDocumentButtonComponent, CreateBulletinModalComponent, BulletinSlugModalComponent]
 })
