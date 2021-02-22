@@ -36,6 +36,42 @@ const PSALM_80 = {
   ]
 };
 
+const PSALM_3_BUT_REALLY_ITS_80 = {
+  api: '',
+  slug: 'psalm_3',
+  label: 'Psalm 3',
+  language: 'en',
+  version: 'bcp1979',
+  type: 'psalm' as 'psalm',
+  style: 'psalm' as 'psalm',
+  citation: 'Psalm 3',
+  value: [
+    {
+      type: 'psalm-section' as 'psalm-section',
+      value: [
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '1',
+          verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+          halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+        },
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '2',
+          verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+          halfverse: 'stir up your strength and come to help us.'
+        },
+        {
+          type: 'psalm-verse' as 'psalm-verse',
+          number: '3',
+          verse: 'Restore us, O God of hosts; *',
+          halfverse: 'show the light of your countenance, and we shall be saved.'
+        }
+      ]
+    } 
+  ]
+};
+
 describe("Psalm.versesInCitation()", () => {
   it("should parse a single verse", () => {
     const psalm = new Psalm(PSALM_80);
@@ -100,6 +136,32 @@ describe("Psalm.filteredVerses()", () => {
             number: '3',
             verse: 'Restore us, O God of hosts; *',
             halfverse: 'show the light of your countenance, and we shall be saved.'
+          }
+        ]
+      } 
+    ]);
+  });
+
+  it("should ignore the chapter number and use only the verse numbers", () => {
+    const psalm = new Psalm(PSALM_3_BUT_REALLY_ITS_80);
+    psalm.citation = 'Psalm 3:1-2'
+    const verses = psalm.filteredVerses();
+
+    expect(verses).toEqual([
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '1',
+            verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+            halfverse: 'shine forth, you that are enthroned upon the cherubim.'
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.'
           }
         ]
       } 

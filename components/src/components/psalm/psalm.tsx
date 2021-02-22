@@ -97,18 +97,18 @@ export class PsalmComponent {
   }
 
   // Render helpers
-  antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain }) : JSX.Element {
+  antiphonNode(antiphon : string | Refrain | { [x: string]: string | Refrain }, notEditable : boolean = false) : JSX.Element {
     if(typeof antiphon == 'string') {
       const refrain = new Refrain({ type: 'refrain', value: [ antiphon ], style: 'antiphon' });
-      return <ldf-refrain class='antiphon' doc={ refrain } editable={this.editable}></ldf-refrain>
+      return <ldf-refrain class='antiphon' doc={ refrain } editable={this.editable && !notEditable} path={`${this.path}/metadata/antiphon`}></ldf-refrain>
     } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
-      return <ldf-liturgical-document class='antiphon' doc={ antiphon as Refrain } editable={this.editable}></ldf-liturgical-document>
+      return <ldf-liturgical-document class='antiphon' doc={ antiphon as Refrain } path={`${this.path}/metadata/antiphon`} editable={this.editable && !notEditable}></ldf-liturgical-document>
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // dates can be either MM/DD or MM-DD
       // { '12/23': '...', '12/24': '...' }
       const date = this.obj.day ? dateFromYMDString(this.obj?.day?.date) : new Date();
-      return this.antiphonNode(antiphon[`${date.getMonth()+1}/${date.getDate()}`] || antiphon[`${date.getMonth() + 1}-${date.getDate()}`]);
+      return this.antiphonNode(antiphon[`${date.getMonth()+1}/${date.getDate()}`] || antiphon[`${date.getMonth() + 1}-${date.getDate()}`], true);
     }
   }
 

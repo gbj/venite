@@ -34,7 +34,7 @@ describe('transferredFeast', () => {
         ))?.slug).toEqual('the-visitation');
     });
 
-    it('transfers both St. Joseph and the Annunciation to Monday and Tuesday of Easter 2 when they fall during Holy Week + Easter in 2008', async () => {
+    /*it('transfers both St. Joseph and the Annunciation to Monday and Tuesday of Easter 2 when they fall during Holy Week + Easter in 2008', async () => {
         expect((await transferredFeast(
             findLiturgicalDay,
             findSpecialDay,
@@ -48,7 +48,7 @@ describe('transferredFeast', () => {
             findFeastDay,
             dateFromYMD('2008', '4', '1')
             ))?.slug).toEqual('annunciation');
-        });
+        });*/
     
     it('does not transfer Monday feasts observed on Monday as if Sunday had blocked them', async () => {
 
