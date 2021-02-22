@@ -106,6 +106,30 @@ import { PrayPageModule } from './pray/pray.module';
         LectionaryService
       ]
     }),
+    SharedModule.forRoot({
+      config: {
+        defaultKalendar: 'bcp1979',
+        defaultLanguage: 'en',
+        defaultVersion: 'Rite-II',
+        versionOptions: [
+          { value: 'Rite-II', label: 'Rite II' },
+          { value: 'Rite-I', label: 'Rite I' },
+          { value: 'EOW', label: 'Enriching Our Worship' },
+        ],
+        prayersAndThanksgivings: {
+          preset: false,
+          component: false
+        },
+        hasBulletinMode: false,
+        serverReturnsDate: true,
+      },
+      providers: [
+        AuthService,
+        CalendarService,
+        PreferencesService,
+        LectionaryService
+      ]
+    }),
     PrayPageModule.forRoot({
       providers: [],
       displaySettings: {
