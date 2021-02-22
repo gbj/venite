@@ -105,7 +105,6 @@ export class Psalm extends LiturgicalDocument {
 
     return (
       this.includeAntiphon() && // only if there's an antiphon
-      (this.style == 'canticle' || this.style == 'invitatory') && // only for canticles and invitatories
       !(
         (metadata.omit_gloria && setIndex == filteredValueLength - 1) // antiphon will repeat after Gloria, so don't include it here as well
       )

@@ -20,6 +20,8 @@ export class PsalmComponent {
   @State() obj : Psalm;
   @State() localeStrings: { [x: string]: string; };
   @State() filteredValue : PsalmSection[];
+  @State() focusedVerse : number | undefined = undefined;
+  @State() focusedSection : number | undefined = undefined;
 
   // Properties
   /** The LDF Psalm to be rendered, either as JSON or an Object */
@@ -185,6 +187,53 @@ export class PsalmComponent {
     )
   }
 
+  insertSectionBreakAfterVerse(sectionIndex : number, verseIndex : number) {
+    const section = this.obj.value[sectionIndex],
+      remainingVerses = section.value.slice(0, verseIndex + 1),
+      movingVerses = section.value.slice(verseIndex + 1);
+    this.ldfDocShouldChange.emit(new Change({
+      path: `${this.path}/value/${sectionIndex}`,
+      op: [{
+        type: 'set',
+        oldValue: section,
+        value: {...section, value: remainingVerses}
+      }]
+    }));
+    this.ldfDocShouldChange.emit(new Change({
+      path: `${this.path}/value`,
+      op: [{
+        type: 'insertAt',
+        index: sectionIndex + 1,
+        oldValue: section,
+        value: {...section, value: movingVerses}
+      }]
+    }));
+  }
+
+  removeSectionBreakAfter(sectionIndex : number) {
+    const thisSection = this.obj.value[sectionIndex],
+      nextSection = this.obj.value[sectionIndex + 1];
+    if(thisSection && nextSection) {
+      const combinedValue = thisSection.value.concat(nextSection.value);
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/value/${sectionIndex}/value`,
+        op: [{
+          type: 'set',
+          oldValue: thisSection.value,
+          value: combinedValue
+        }]
+      }));
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.path}/value`,
+        op: [{
+          type: 'deleteAt',
+          index: sectionIndex + 1,
+          oldValue: nextSection
+        }]
+      }));
+    }
+  }
+
   // Render
   render() {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
@@ -295,7 +344,10 @@ export class PsalmComponent {
 
               // render the verse
               return (
-                <p class={this.editable ? 'psalm editable' : 'psalm'}>
+                <p class={this.editable ? 'psalm editable' : 'psalm'} onClick={() => {
+                  this.focusedVerse = verseIndex;
+                  this.focusedSection = sectionIndex;
+                }}>
                   {this.editable ?
                   <ldf-editable-text
                     id={`${this.obj.uid || this.obj.slug}-${sectionIndex}-${verseIndex}-number`}
@@ -305,7 +357,15 @@ export class PsalmComponent {
                     template={pattern}>
                   </ldf-editable-text> :
                   (verse.number && <sup>{verse.number}</sup>)}
-                  <div class='text'>{nodes}</div>
+                  <div class='text'>
+                    {nodes}
+                    {/* + section break button */}
+                    {this.editable && <ion-button fill="clear" class={{"section-break": true, "hidden": this.focusedVerse !== verseIndex || this.focusedSection !== sectionIndex}}
+                      onClick={() => this.insertSectionBreakAfterVerse(sectionIndex, verseIndex)}
+                    >
+                      {localeStrings.section_break_insert}
+                    </ion-button>}
+                  </div>
                 </p>
               );
             }
@@ -316,6 +376,11 @@ export class PsalmComponent {
             this.obj.repeatAntiphon(sectionIndex, this.filteredValue.length)
             && <div class='repeat-antiphon'>{this.antiphonNode(this.obj?.metadata?.antiphon)}</div>
           }
+
+          {/* button to remove section break if editable */}
+          { this.editable && this.obj.value.length > (sectionIndex + 1) && <ion-button fill="clear" class="section-break"
+            onClick={() => this.removeSectionBreakAfter(sectionIndex)}
+          >{localeStrings.section_break_remove}</ion-button> }
           </div>
         ])}
 

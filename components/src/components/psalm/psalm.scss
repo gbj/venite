@@ -140,3 +140,14 @@ h3.editable-label {
   font-size: var(--ldf-h3-font-size);
   text-transform: var(--ldf-h3-text-transform);
 }
+
+/* Section break buttons */
+.section-break {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.section-break.hidden {
+  display: none;
+}

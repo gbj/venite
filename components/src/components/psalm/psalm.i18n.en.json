@@ -1,8 +1,10 @@
 {
   "changeCanticle": "Change Canticle",
-  "citation": "Biblical Citation",
+  "citation": "(Biblical) Citation",
   "label": "Label",
   "latinname": "Latin Name",
+  "section_break_insert": "+ insert section break",
+  "section_break_remove": "x remove section break",
   "source": "Source",
   "source_citation": "Citation"
 }
