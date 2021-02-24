@@ -23,7 +23,7 @@
     <ion-item button (click)="openColorPicker()">
       <ion-avatar slot="start" [ngStyle]="{'background': 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)'}"></ion-avatar>
       <ion-label>{{ 'editor.custom-color' | translate }}</ion-label>
-      <input #colorPicker type="color" class="visually-hidden" (change)="selectColor($event.target.value)" />
+      <input #colorPicker type="color" [class]="colorPickerClass" (change)="selectColor($event.target.value)" />
     </ion-item>
   </ion-list>
 </ion-content>

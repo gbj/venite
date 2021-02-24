@@ -7,6 +7,7 @@ import { DocumentService } from 'src/app/services/document.service';
 import { LocalDocumentManager } from '../ldf-editor/document-manager';
 import { EditorService } from '../ldf-editor/editor.service';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { PlatformService } from '@venite/ng-platform';
 
 @Component({
   selector: 'venite-color-picker',
@@ -18,17 +19,23 @@ export class ColorPickerComponent implements OnInit {
   @Input() color: string;
   @Input() localManager: LocalDocumentManager;
 
+  colorPickerClass : string = 'visually-hidden';
+
   @ViewChild('colorPicker') colorPicker : ElementRef;
 
   colors$ : Observable<LiturgicalColor[]>;
 
   constructor(
     private documents: DocumentService,
-    private editorService: EditorService
+    private editorService: EditorService,
+    private platform: PlatformService
   ) { }
 
   ngOnInit() {
     this.colors$ = this.documents.getColors().pipe(map(colors => colors.map(color => ({...color, name: color.name[0].toUpperCase() + color.name.slice(1)}))));
+    if(this.platform.is('ios')) {
+      this.colorPickerClass = '';
+    }
   }
 
   dismiss() {
