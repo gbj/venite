@@ -25,7 +25,7 @@
     <ng-container *ngIf="languageOptions$ | async as options">
       <ion-item *ngIf="options.length > 1">
         <ion-label position="stacked">{{ 'language' | translate }}</ion-label>
-        <ion-select name="language" formControlName="language" ngDefaultControl>
+        <ion-select name="language" formControlName="language" ngDefaultControl (ionChange)="form.controls.language.setValue($event.detail.value)">
           <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -33,7 +33,7 @@
     <ng-container *ngIf="versionOptions$ | async as options">
       <ion-item *ngIf="options.length > 1">
         <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
-        <ion-select name="version" formControlName="version" ngDefaultControl>
+        <ion-select name="version" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
           <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -41,7 +41,7 @@
     <ng-container *ngIf="kalendarOptions$ | async as options">
       <ion-item *ngIf="options.length > 1">
         <ion-label position="stacked">{{ 'kalendar' | translate }}</ion-label>
-        <ion-select ngDefaultControl formControlName="kalendar">
+        <ion-select ngDefaultControl formControlName="kalendar" (ionChange)="form.controls.kalendar.setValue($event.detail.value)">
           <ion-select-option *ngFor="let opt of options" [value]="opt.slug">{{ opt.name }}</ion-select-option>
         </ion-select>
       </ion-item>

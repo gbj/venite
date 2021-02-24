@@ -452,7 +452,6 @@ export class LiturgySelectComponent implements OnInit {
   }
 
   navigate(root : string, liturgy : Liturgy, date : Date, day : LiturgicalDay, prefs : ClientPreferences, bulletinMode : boolean = false) {
-    console.log('navigate to date', date);
     const y = date.getFullYear().toString(),
       m = (date.getMonth() + 1).toString(),
       d = date.getDate().toString(),
