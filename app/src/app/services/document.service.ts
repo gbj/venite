@@ -202,6 +202,7 @@ export class DocumentService {
         }
       }),
       filter(orgDocs => orgDocs?.length > 0),
+      startWith([])
     );
 
     const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
@@ -239,7 +240,6 @@ export class DocumentService {
       ),
       startWith([LOADING]),
       catchError((error) => this.handleError(error)),
-      tap(data => console.log('findDocumentsBySlug', data))
     );
   }
 
@@ -317,7 +317,6 @@ export class DocumentService {
   }
 
   myOrganizationDocumentsWithSlug(org : string, slug : string) : Observable<IdAndDoc[]> {
-    console.log('(myOrganizationDocumentsWithSlug) searching for organization documents: ', org, slug);
     return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.organization', '==', org)
          .where('slug', '==', slug)
@@ -326,27 +325,10 @@ export class DocumentService {
       map(changeactions => changeactions.map(action => action?.payload?.doc)),
       // extra ID and document data and leave the rest behind
       map(docs => docs.map(doc => ({ id: doc.id, data: doc.data() }))),
-      tap(docs => console.log('(myOrganizationDocumentsWithSlug) found', docs))
     );
   }
 
   myOrgDocExists(org : string, uid : string, slug : string) : Observable<boolean> {
-    /*const orgDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
-      ref.where('sharing.organization', '==', org)
-        // this shouldn't be necessary — TODO check against all organization documents
-        .where('sharing.owner', '==', uid)
-        .where('slug', '==', slug)
-    ).valueChanges();
-
-    const myDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
-      ref.where('sharing.owner', '==', uid)
-        .where('slug', '==', slug)
-    ).valueChanges();
-
-    return combineLatest([orgDocs$, myDocs$]).pipe(
-      map(([orgDocs, myDocs]) => orgDocs.concat(myDocs).length > 0)
-    );*/
-
     const veniteDocs$ = this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('sharing.organization', '==', 'venite')
          .where('sharing.status', '==', 'published')

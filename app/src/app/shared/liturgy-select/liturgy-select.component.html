@@ -132,5 +132,5 @@
 <!-- Preferences -->
 <venite-liturgy-preference-menu
   [liturgy]="liturgy$ | async"
-  (clientPreferencesChange)="clientPreferences$.next($event)"
+  (clientPreferencesChange)="menuPreferences$.next($event)"
 ></venite-liturgy-preference-menu>

@@ -77,7 +77,9 @@ export class LiturgySelectComponent implements OnInit {
   daysInMonth$ : Observable<number[]>;
 
   // Preferences
-  clientPreferences$ : BehaviorSubject<ClientPreferences> = new BehaviorSubject({});
+  clientPreferences$ : Observable<ClientPreferences>;
+  menuPreferences$ : BehaviorSubject<ClientPreferences> = new BehaviorSubject({});
+  properLiturgyPreference$ : BehaviorSubject<ClientPreferences> = new BehaviorSubject({});
 
   // Readings available for the selected day
   availableReadings$ : Observable<string[]>;
@@ -127,6 +129,10 @@ export class LiturgySelectComponent implements OnInit {
       this.version$.pipe(startWith(this.config.defaultVersion)),
     ]).pipe(
       switchMap(([language, version]) => this.documents.getLiturgyOptions(language, version))
+    );
+
+    this.clientPreferences$ = combineLatest([this.menuPreferences$, this.properLiturgyPreference$]).pipe(
+      map(([menu, proper]) => ({...menu, ...proper }))
     );
 
     const availableProperLiturgiesLiturgies$ = this.availableProperLiturgies$.pipe(
@@ -287,9 +293,27 @@ export class LiturgySelectComponent implements OnInit {
 
   setProperLiturgy(properLiturgy : ProperLiturgy, event : CustomEvent) {
     if(event.detail.checked) {
-      this.form.controls.liturgy.setValue(properLiturgy.liturgy);
+      // if it has a liturgy, set the liturgy to that
+      if(properLiturgy.liturgy) {
+        this.form.controls.liturgy.setValue(properLiturgy.liturgy);
+      }
+      // if it has a preference, set that preference
+      if(properLiturgy.preference) {
+        const prefs = new ClientPreferences();
+        prefs[properLiturgy.preference] = "true";
+        this.properLiturgyPreference$.next(prefs);
+      }
     } else {
-      this.form.controls.liturgy.setValue(liturgyOfTheHour(new Date()));
+      // if it had a liturgy, reset to the default for this time
+      if(properLiturgy.liturgy) {
+        this.form.controls.liturgy.setValue(liturgyOfTheHour(new Date()));
+      }
+      // if it had a preference, clear it
+      if(properLiturgy.preference) {
+        const prefs = new ClientPreferences();
+        prefs[properLiturgy.preference] = "false";
+        this.properLiturgyPreference$.next(prefs);
+      }
     }
   }
 
