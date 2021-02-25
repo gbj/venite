@@ -269,6 +269,12 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // in response, we should call the setBibleIntros methods of that component
   sendBibleIntros(ev : CustomEvent, intros : LiturgicalDocument[] = []) {
     ev.detail.setBibleReadingIntros(intros);
+    if(!(intros?.length > 0) || intros?.length == 1 && intros[0].value[0] == "Loading...") {
+      // todo fix language/version here
+      this.documents.findDocumentsByCategory(['Bible Reading Introduction'], 'en').subscribe(
+        data => ev.detail.setBibleReadingIntros(data)
+      );
+    }
   }
 
   // ldf-psalm might emit an ldfAskForCanticleOptions event
