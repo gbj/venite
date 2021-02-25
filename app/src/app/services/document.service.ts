@@ -187,12 +187,29 @@ export class DocumentService {
       })
     );
 
+    const myOrganizationLiturgies$ = this.auth.user.pipe(
+      filter(user => Boolean(user?.uid)),
+      switchMap(user => combineLatest([this.organizationService.organizationsWithEditor(user?.uid), this.organizationService.organizationsWithOwner(user?.uid)])),
+      map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
+      switchMap(orgs => {
+        if(orgs?.length > 0) {
+          return this.afs.collection<LiturgicalDocument>('Document', ref =>
+            ref.where('sharing.organization', 'in', orgs.map(org => org.slug))
+               .where('slug', '==', slug)
+          ).valueChanges();
+        } else {
+          return of([]);
+        }
+      }),
+      filter(orgDocs => orgDocs?.length > 0),
+    );
+
     const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
 
-    return combineLatest([this.auth.user, veniteLiturgies$, myDocs$, gloriaQuery]).pipe(
-      map(([user, venite, mine, gloria]) => [
+    return combineLatest([this.auth.user, veniteLiturgies$, myDocs$, myOrganizationLiturgies$, gloriaQuery]).pipe(
+      map(([user, venite, mine, org, gloria]) => [
         user
-        ? mine.concat(
+        ? mine.concat(org).concat(
           // filter out anything I own
           venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
         )
@@ -221,7 +238,8 @@ export class DocumentService {
         : of(docs)
       ),
       startWith([LOADING]),
-      catchError((error) => this.handleError(error))
+      catchError((error) => this.handleError(error)),
+      tap(data => console.log('findDocumentsBySlug', data))
     );
   }
 

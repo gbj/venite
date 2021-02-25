@@ -99,6 +99,8 @@ export class CreateBulletinModalComponent implements OnInit {
         switchMap(user => user ? this.organizationService.organizationsWithUser(user.uid) : []),
       );
     
+    console.log('createBulletin liturgy = ', liturgy);
+
     orgs$.subscribe(
       async orgs => {
         const org = orgs.map(org => org.slug)[0];
@@ -106,8 +108,6 @@ export class CreateBulletinModalComponent implements OnInit {
 
         if(org) {
           let { label, slug } = await this.labelSlugAlert(liturgy, org, event?.state?.day);
-
-          console.log('reached point of continuing now')
       
           event.state.liturgy.label = label;
           event.state.liturgy.slug = slug;
@@ -170,6 +170,7 @@ export class CreateBulletinModalComponent implements OnInit {
           if(event.commands.length === 8) {
             event.commands.push('{}');
           }
+
           this.router.navigate(
             event.commands.concat([event.state.liturgy.slug, event.state.liturgy.label]),
             {
