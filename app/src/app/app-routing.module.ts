@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'psalter',
+    loadChildren: () => import('./psalter/psalter.module').then( m => m.PsalterPageModule)
   }
 ];
 

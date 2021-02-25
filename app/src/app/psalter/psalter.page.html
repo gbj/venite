@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Psalter</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="settings$ | async as settings" (click)="openSettings(settings)">
+        <ion-icon slot="icon-only" name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button *ngIf="number.value > 1" (click)="modifyPsalmNumber(-1)">
+          <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">{{ 'psalter.PsalmNumber' | translate }}</ion-label>
+          <ion-input type="number" [formControl]="number" ngDefaultControl></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ng-container *ngIf="languageOptions$ | async as options">
+          <ion-item *ngIf="options?.length > 1" lines="none">
+            <ion-label position="stacked">{{'Language' | translate }}</ion-label>
+            <ion-select [formControl]="language" ngDefaultControl (ionChange)="setLanguage($event.detail.value)">
+              <ion-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ng-container>
+        <ng-container *ngIf="versionOptions$ | async as options">
+          <ion-item *ngIf="options?.length > 1" lines="none">
+            <ion-label position="stacked">{{'version' | translate }}</ion-label>
+            <ion-select [formControl]="version" ngDefaultControl (ionChange)="setVersion($event.detail.value)">
+              <ion-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ng-container>
+      </ion-col>
+      <ion-col>
+        <ion-button *ngIf="number.value < 150" (click)="modifyPsalmNumber(1)">
+          <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div [ngClass]="processSettings(settings$ | async)">
+    <ng-container *ngIf="psalm$ | async as psalm">
+      <div [@swiping]="isSwiping" class="psalm">
+        <ldf-liturgical-document [doc]="psalm"></ldf-liturgical-document>
+      </div>
+    </ng-container>
+  </div>
+</ion-content>
