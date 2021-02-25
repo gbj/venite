@@ -424,3 +424,9 @@ ul {
     white-space: nowrap; /* added line */
   }
 }
+
+/* Make alerts wider */
+ion-alert {
+  --width: 400px !important;
+  --max-width: 80vw !important;
+}
