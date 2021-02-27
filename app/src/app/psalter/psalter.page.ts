@@ -11,7 +11,7 @@ import { PreferencesService } from '../preferences/preferences.service';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-psalter',
+  selector: 'venite-psalter',
   templateUrl: './psalter.page.html',
   styleUrls: ['./psalter.page.scss'],
   animations: [

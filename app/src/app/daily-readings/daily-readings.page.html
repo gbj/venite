@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "menu.daily-readings" | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="liturgy$ | async as liturgy else loading">
+    <ion-card-header>
+      <form>
+        <ion-segment [value]="timeOfDay.value" (ionChange)="timeOfDay.setValue($event.detail.value)">
+          <ion-segment-button value="morning">
+            <ion-label>{{ "daily-readings.mp" | translate }}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="evening">
+            <ion-label>{{ "daily-readings.ep" | translate }}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-segment [value]="psalmCycle.value" (ionChange)="psalmCycle.setValue($event.detail.value)">
+          <ion-segment-button value="bcp1979_daily_psalms">
+            <ion-label>{{ "daily-readings.lectionary-cycle" | translate }}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="bcp1979_30day_psalter">
+            <ion-label>{{ "daily-readings.30day" | translate }}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-segment [value]="kalendar.value" (ionChange)="kalendar.setValue($event.detail.value)">
+          <ion-segment-button value="bcp1979">
+            <ion-label>{{ "daily-readings.bcp1979" | translate }}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="lff2018">
+            <ion-label>{{ "daily-readings.lff2018" | translate }}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </form>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+        <h2>{{ today | date:'longDate' }}</h2>
+        <ng-container *ngIf="day$ | async as day else loading">
+          <ldf-day-name [day]="day"></ldf-day-name>
+          <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
+            <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
+            <li *ngIf="day.week?.proper">(Proper {{ day.week.proper }})</li>
+          </ul>
+        </ng-container>
+            <h3>{{ "daily-readings.psalms" | translate }}</h3>
+            <ng-container *ngIf="psalms$ | async as psalms else loading2">
+              <details *ngFor="let psalm of psalms">
+                <summary>{{ psalm.label }}</summary>
+                <ldf-psalm [doc]="psalm"></ldf-psalm>
+              </details>
+            </ng-container>
+            <h3>Lessons</h3>
+            <ng-container *ngFor="let reading of readings$ | async">
+              <details>
+                <summary>{{ reading.citation }}</summary>
+                <ldf-bible-reading [doc]="reading"></ldf-bible-reading>
+              </details>
+            </ng-container>
+        <ng-container *ngIf="collects$ | async as collects else loading2">
+          <h3>{{ "daily-readings.collects" | translate }}</h3>
+          <details *ngFor="let collect of collects">
+            <summary>{{ collect?.type === 'option' ? collect.value[0].label : collect?.label }}</summary>
+            <ldf-liturgical-document [doc]="collect"></ldf-liturgical-document>
+          </details>
+        </ng-container>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ng-template #loading>
+  <div class="loading">Loading...</div>
+</ng-template>
+
+<ng-template #loading2>Loading...<br/></ng-template>

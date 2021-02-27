@@ -13,6 +13,17 @@
   },
   "version": "Version",
   "date": "Date",
+  "daily-readings": {
+    "mp": "Morning Prayer",
+    "ep": "Evening Prayer",
+    "psalms": "Psalms",
+    "lectionary-cycle": "Lectionary Psalms",
+    "30day": "30-Day Cycle",
+    "lessons": "Lessons",
+    "collects": "Collects",
+    "bcp1979": "BCP (1979)",
+    "lff2018": "Lesser Feasts & Fasts (2018)"
+  },
   "auth": {
     "edit-avatar": "Change",
     "edit-avatar-tooltip": "Change your picture",
@@ -50,7 +61,8 @@
     "psalter": "Psalter",
     "settings": "Settings",
     "about": "About",
-    "tutorials": "Tutorials"
+    "tutorials": "Tutorials",
+    "daily-readings": "Daily Readings"
 },
   "bulletins": {
     "bulletins": "Bulletins",

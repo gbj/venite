@@ -1,0 +1,58 @@
+h2,
+h3,
+ldf-day-name,
+ion-card-title {
+  display: block;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1em;
+}
+
+ion-card-content {
+  display: block;
+  max-width: var(--ldf-max-width);
+  margin: auto;
+}
+
+ul.feasts {
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+ion-card-title {
+  text-align: center;
+}
+
+.loading {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+details {
+  color: var(--ldf-color);
+
+  ldf-bible-reading,
+  ldf-psalm,
+  ldf-liturgical-document {
+    font-size: 1.25em;
+  }
+}

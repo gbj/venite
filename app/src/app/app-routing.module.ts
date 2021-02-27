@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'psalter',
     loadChildren: () => import('./psalter/psalter.module').then( m => m.PsalterPageModule)
+  },
+  {
+    path: 'daily-readings',
+    loadChildren: () => import('./daily-readings/daily-readings.module').then( m => m.DailyReadingsPageModule)
   }
 ];
 

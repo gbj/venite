@@ -196,7 +196,13 @@ export class DocumentService {
           return this.afs.collection<LiturgicalDocument>('Document', ref =>
             ref.where('sharing.organization', 'in', orgs.map(org => org.slug))
                .where('slug', '==', slug)
-          ).valueChanges();
+               .where('language', '==', language)
+          ).valueChanges().pipe(
+            map(docs => versions?.length > 0
+              ? docs.filter(doc => versions.includes(versionToString(doc.version)))
+              : docs
+            )
+          );
         } else {
           return of([]);
         }
