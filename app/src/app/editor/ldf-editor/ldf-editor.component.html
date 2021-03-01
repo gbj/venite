@@ -1,21 +1,23 @@
 <ng-container *ngIf="state$ | async as state">
   <div [class]="settingsClasses$ | async">
-    <ldf-editor
-      [doc]="state?.localManager.document"
-      [preview]="preview"
-      [uid]="(auth.user | async)?.uid"
-      [cursors]="state?.serverManager?.cursors"
-      [users]="state?.serverManager?.users"
-      [listUsers]="false"
-      (editorCursorMoved)="updateCursor(state?.localManager.docId, $event)"
-      (editorDocShouldChange)="processChange(state?.localManager, $event)"
-      (editorDocShouldAdd)="addBlockDirectly(state?.localManager, $event)"
-      (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
-      (ldfDocShouldMove)="moveSubDoc(state?.localManager, $event)"
-      (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
-      (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
-      (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
-      (editorAskForPrayersAndThanksgivings)="sendPrayersAndThanksgivings($event, state?.liturgyVersions, state?.pAndT)"
-    ></ldf-editor>
+    <div style="--ldf-font-face: {{state?.localManager?.document?.metadata?.font}}">
+      <ldf-editor
+        [doc]="state?.localManager.document"
+        [preview]="preview"
+        [uid]="(auth.user | async)?.uid"
+        [cursors]="state?.serverManager?.cursors"
+        [users]="state?.serverManager?.users"
+        [listUsers]="false"
+        (editorCursorMoved)="updateCursor(state?.localManager.docId, $event)"
+        (editorDocShouldChange)="processChange(state?.localManager, $event)"
+        (editorDocShouldAdd)="addBlockDirectly(state?.localManager, $event)"
+        (ldfAddOptionToDoc)="addBlockAsOption(state?.localManager, $event)"
+        (ldfDocShouldMove)="moveSubDoc(state?.localManager, $event)"
+        (editorShouldAddGloriaPatri)="addGloriaPatri(state?.localManager, $event)"
+        (editorAskForBibleIntros)="sendBibleIntros($event, state?.bibleIntros)"
+        (editorAskForCanticleOptions)="sendCanticleOptions($event, state?.liturgyVersions, state?.canticleOptions)"
+        (editorAskForPrayersAndThanksgivings)="sendPrayersAndThanksgivings($event, state?.liturgyVersions, state?.pAndT)"
+      ></ldf-editor>
+    </div>
   </div>
 </ng-container>

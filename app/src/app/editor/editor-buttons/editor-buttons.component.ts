@@ -18,6 +18,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { DocumentService } from 'src/app/services/document.service';
 import { ColorPickerComponent } from '../color-picker/color-picker.component';
+import { FontPickerComponent } from '../font-picker/font-picker.component';
 
 @Component({
   selector: 'venite-editor-buttons',
@@ -180,6 +181,32 @@ export class EditorButtonsComponent implements OnInit {
     };
 
     await modal.present();
+  }
+
+  async fontModal(manager : LocalDocumentManager) {
+    const modal = await this.modal.create({
+      component: FontPickerComponent
+    });
+
+    modal.componentProps = {
+      modal,
+    };
+
+    await modal.present();
+
+    // string | undefined, giving the font name
+    const { data } = await modal.onDidDismiss();
+    if(data !== undefined) {
+      console.log('setting font to ', data);
+      this.editorService.processChange(manager, new Change({
+        path: '/metadata/font',
+        op: [{
+          type: 'set',
+          oldValue: manager.document.metadata?.font,
+          value: data == null ? undefined : data
+        }]
+      }))
+    }
   }
 
 }

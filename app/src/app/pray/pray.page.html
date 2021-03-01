@@ -41,7 +41,7 @@
 </ion-header>
 <ion-content #content [fullscreen]="true" [scrollEvents]="!bulletinMode">
   <div class="bordered" [style.background]="color$ | async" [style.border-color]="color$ | async">
-      <ng-container *ngIf="bulletinMode">
+    <ng-container *ngIf="bulletinMode">
         <div class="editor-wrapper" *ngIf="bulletinDocId$ | async as bulletinDocId">
           <venite-ldf-editor
             [docId]="bulletinDocId"
@@ -52,16 +52,18 @@
       <ng-container *ngIf="!bulletinMode">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
           <ng-container *ngIf="doc$ | async as doc else loading">
-            <ng-container *ngIf="swapData$ | async as data else withoutSwapData">
-              <ldf-liturgical-document
-                path="/"
-                [doc]="doc"
-                [editable]="false"
-                (ldfDocShouldChange)="changeDoc(doc, $event)"
-                (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
-                (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
-              ></ldf-liturgical-document>
-            </ng-container>
+            <div style="--ldf-font-face: {{doc?.metadata?.font}}">
+              <ng-container *ngIf="swapData$ | async as data">
+                <ldf-liturgical-document
+                  path="/"
+                  [doc]="doc"
+                  [editable]="false"
+                  (ldfDocShouldChange)="changeDoc(doc, $event)"
+                  (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
+                  (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
+                ></ldf-liturgical-document>
+              </ng-container>
+            </div>
           </ng-container>
         </div>
       </ng-container>
@@ -102,13 +104,4 @@
 
 <ng-template #prayTheOffice>
   <ion-title>{{ 'Pray the Office' | translate }}</ion-title>
-</ng-template>
-
-<ng-template #withoutSwapData>
-  <ldf-liturgical-document
-    path="/"
-    [doc]="doc"
-    [editable]="false"
-    (ldfDocShouldChange)="changeDoc(doc, $event)">
-  </ldf-liturgical-document>
 </ng-template>

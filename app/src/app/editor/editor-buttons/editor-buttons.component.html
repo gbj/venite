@@ -2,6 +2,10 @@
   <button *ngIf="color$ | async as color" class="color-button" [ngStyle]="{'background-color': color}" (click)="colorPicker(color)">
     <ion-label class="visually-hidden">{{ 'editor.bulletin-color' | translate }}</ion-label>
   </button>
+  <ion-button (click)="fontModal(state?.localManager)">
+    <ion-label class="visually-hidden">{{ 'editor.font.edit-font' | translate }}</ion-label>
+    <ion-icon slot="icon-only" name="text-outline"></ion-icon>
+  </ion-button>
   <ion-button (click)="sharingModal(state?.localManager.document?.sharing)">
     <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
     <ion-label class="sm-hidden"l>{{ (state?.localManager?.document?.sharing?.status || 'editor.share') | translate }}</ion-label>

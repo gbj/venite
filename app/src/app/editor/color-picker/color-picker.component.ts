@@ -47,7 +47,8 @@ export class ColorPickerComponent implements OnInit {
   }
 
   selectColor(hex: string | undefined) {
-    const change = new Change({
+    const change = hex
+    ? new Change({
       path: '/metadata',
       op: [{
         type: 'set',
@@ -55,12 +56,19 @@ export class ColorPickerComponent implements OnInit {
         oldValue: this.localManager?.document?.metadata?.color,
         value: hex
       }]
+    })
+    : new Change({
+      path: '/metadata',
+      op: [{
+        type: 'deleteAt',
+        index: 'color',
+        oldValue: this.localManager?.document?.metadata?.color
+      }]
     });
     const editor = querySelectorDeep('ldf-editor');
     const event = new CustomEvent('editorDocShouldChange', { detail: change });
     editor.dispatchEvent(event);
 
-    //this.editorService.processChange(this.localManager, );
     this.dismiss();
   }
 }

@@ -221,7 +221,14 @@
       "message": "It looks like the editor is having trouble making this edit on the server. You may need to reload the editor to make sure you don’t lose any work.",
       "reload-now": "Reload Now"
     },
-    "offline": "You are not connected to the Internet. You can continue editing a bulletin you have open, but your changes will not be saved until you’re back online."
+    "offline": "You are not connected to the Internet. You can continue editing a bulletin you have open, but your changes will not be saved until you’re back online.",
+    "font": {
+      "edit-font": "Change Font",
+      "clear": "Clear Font Settings (use default font)",
+      "custom-font": "Custom Font",
+      "venite-fonts": "Venite Fonts",
+      "web-fonts": "Web Fonts"
+    }
   },
   "organization": {
     "owner": "Administrator",

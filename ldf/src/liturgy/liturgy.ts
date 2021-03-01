@@ -40,6 +40,9 @@ export class Liturgy extends LiturgicalDocument {
 
     /** A color to be used for the service. This will override the liturgical color of the day. Useful for e.g., the Burial service, which is white no matter the day. */
     color?: string | LiturgicalColor;
+
+    /** A font to be used for the service. Will override user font choice. */
+    font?: string | undefined;
   };
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */
