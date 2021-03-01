@@ -52,7 +52,7 @@
       <ng-container *ngIf="!bulletinMode">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
           <ng-container *ngIf="doc$ | async as doc else loading">
-            <div style="--ldf-font-face: {{doc?.metadata?.font}}; --ldf-drop-font: {{doc?.metadata?.font}};">
+            <div style="--ldf-font-face: {{doc?.metadata?.font}}; --ldf-drop-font-family: {{doc?.metadata?.font}};">
               <ng-container *ngIf="swapData$ | async as data">
                 <ldf-liturgical-document
                   path="/"
