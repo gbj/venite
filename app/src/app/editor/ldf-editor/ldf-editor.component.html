@@ -1,6 +1,6 @@
 <ng-container *ngIf="state$ | async as state">
   <div [class]="settingsClasses$ | async">
-    <div style="--ldf-font-face: {{state?.localManager?.document?.metadata?.font}}">
+    <div style="--ldf-font-face: {{state?.localManager?.document?.metadata?.font}}; --ldf-drop-font: {{state?.localManager?.document?.metadata?.font}}">
       <ldf-editor
         [doc]="state?.localManager.document"
         [preview]="preview"
