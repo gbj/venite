@@ -8,6 +8,9 @@ import { CalendarServiceInterface } from '@venite/ng-service-api';
 import { HttpClient } from '@angular/common/http';
 import { LoadingController } from '@ionic/angular';
 
+import WEEKS from '../../offline/weeks.json';
+import KALENDAR from '../../offline/kalendar.json';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -39,11 +42,45 @@ export class CalendarService {
     }
   }
 
-  // These function have been moved into a Cloud Function to speed them up (by calculating on the client side rather than making round trips
-  // back and forth to the server) and to enable caching across users, as they are pure functions
+  /** Get the appropriate `LiturgicalWeek` for a calculated week index */
+  findWeek(kalendar : string, query : LiturgicalWeekIndex) : Observable<LiturgicalWeek[]> {
+    return of(
+      WEEKS[kalendar].filter(week => week.cycle == query.cycle && week.week == query.week)
+        .map(week => query.proper
+          ? new LiturgicalWeek({
+            ... week,
+            proper: query.proper,
+            propers: `proper-${query.proper}`
+          })
+          : week
+        )
+    );
+  }
+
+  /** Find feast days on a given date */
+  findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
+    return of(
+      KALENDAR[kalendar].filter(day => day.mmdd == mmdd)
+    )
+  }
+
+  /** Find special days for a particular slug
+    * @example
+    * // Ash Wednesday
+    * `wednesday-last-epiphany` */
+  findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
+    return of(
+      KALENDAR[kalendar].filter(day => day.slug == slug)
+    )
+  }
+
+  // These function had been moved into a Cloud Function to speed them up (by calculating on the client side rather than making round trips
+  // back and forth to the server) and to enable caching across users, as they are pure functions.
+  
+  // I've now rewritten them above using local JSON instead of a cloud function.
 
   /** Get the appropriate `LiturgicalWeek` for a calculated week index */
-   findWeek(kalendar : string, query : LiturgicalWeekIndex) : Observable<LiturgicalWeek[]> {
+  /* findWeek(kalendar : string, query : LiturgicalWeekIndex) : Observable<LiturgicalWeek[]> {
     return this.afs.collection<LiturgicalWeek>('LiturgicalWeek', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('cycle', '==', query.cycle)
@@ -60,26 +97,26 @@ export class CalendarService {
         week
       ))
     );
-  }
+  } */
 
   /** Find feast days on a given date */
-   findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
+  /* findFeastDays(kalendar : string, mmdd : string) : Observable<HolyDay[]> {
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('mmdd', '==', mmdd)
     ).valueChanges();
-  }
+  } */
 
   /** Find special days for a particular slug
     * @example
     * // Ash Wednesday
     * `wednesday-last-epiphany` */
-   findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
+   /* findSpecialDays(kalendar : string, slug : string) : Observable<HolyDay[]> {
     return this.afs.collection<HolyDay>('HolyDay', ref =>
       ref.where('kalendar', '==', kalendar)
          .where('slug', '==', slug)
     ).valueChanges();
-  }
+  } */
 
   /** Find `HolyDay`s connected to either a date or a slug */
    addHolyDays(day : LiturgicalDay, vigil : boolean) : Observable<LiturgicalDay> {
@@ -119,14 +156,14 @@ export class CalendarService {
       );
   }
 
-   buildWeek(date : Observable<Date>, kalendar : Observable<string>, vigil : Observable<boolean>) : Observable<LiturgicalWeek[]> {
+  buildWeek(date : Observable<Date>, kalendar : Observable<string>, vigil : Observable<boolean>) : Observable<LiturgicalWeek[]> {
     return combineLatest(date, kalendar, vigil)
       .pipe(
-        switchMap(([date, kalendar, vigil]) => this.findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date)))
+        switchMap(([date, kalendar, vigil]) => this.findWeek('bcp1979', liturgicalWeek(vigil ? addOneDay(date) : date))),
       );
   }
 
-/*   buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) {
+   buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) {
     return combineLatest(date, kalendar, liturgy, week, vigil)
       .pipe(
         filter(([date, kalendar, liturgy, week, vigil]) => week?.length > 0),
@@ -144,14 +181,14 @@ export class CalendarService {
         // add holy days to that liturgical day
         switchMap(({day, vigil}) => this.addHolyDays(day, vigil)),
       );
-  } */
+  }
 
-  buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) : Observable<LiturgicalDay> {
+  /*buildDay(date : Observable<Date>, kalendar : Observable<string>, liturgy: Observable<Liturgy|LiturgicalDocument>, week : Observable<LiturgicalWeek[]>, vigil : Observable<boolean>) : Observable<LiturgicalDay> {
     return combineLatest(date, kalendar, liturgy, vigil).pipe(
       filter(([date, kalendar, liturgy, vigil]) => liturgy?.type === 'liturgy' || (liturgy?.value && !liturgy.value[0].toString().includes("Loading..."))),
       switchMap(([date, kalendar, liturgy, vigil]) => this.http.get<LiturgicalDay>(`https://us-central1-venite-2.cloudfunctions.net/calendar?y=${date.getFullYear()}&m=${date.getMonth() + 1}&d=${date.getDate()}&vigil=${Boolean(vigil)}&evening=${Boolean(liturgy?.metadata?.evening)}&kalendar=${kalendar}`)),
       shareReplay()
     )
-  }
+  }*/
   
  }

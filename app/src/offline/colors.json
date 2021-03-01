@@ -1,0 +1,26 @@
+{
+  "blue": {
+    "name": "Blue",
+    "hex": "#213a5e"
+  },
+  "gold": {
+    "name": "Gold",
+    "hex": "#a8943f"
+  },
+  "green": {
+    "name": "Green",
+    "hex": "#409940"
+  },
+  "purple": {
+    "name": "Purple",
+    "hex": "#800080"
+  },
+  "red": {
+    "name": "Red",
+    "hex": "#ff1133"
+  },
+  "white": {
+    "name": "White",
+    "hex": "#eeeee0"
+  }
+}

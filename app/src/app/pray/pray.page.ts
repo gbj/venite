@@ -219,13 +219,22 @@ export class PrayPage implements OnInit, OnDestroy {
       filter(state => state && Boolean(state.liturgy) && state.liturgy.value && state.liturgy.value[0] !== "Loading..." && (Boolean(state.day) || Boolean(state.liturgy.day))),
       // allow more changes if orgId is in the URL (i.e., it's a published bulletin)
       // to prevent issues with caching old bulletins with same URL
-      take(this.route.snapshot.params['orgId'] ? 1000 : 2),
+      take(this.route.snapshot.params['orgId'] ? 1000 : 4),
       //take(2)
     );
 
     const stateDoc$ = this.state$.pipe(
       filter(state => (state.hasOwnProperty('liturgy') && state.hasOwnProperty('day') && state.hasOwnProperty('prefs'))),
-      switchMap(state => this.prayService.compile(state.liturgy, state.day || state.liturgy?.day, state.prefs, state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version], state.liturgy?.metadata?.preferences)),
+      switchMap(state => {
+        console.log('state.prefs = ', state.prefs);
+        return this.prayService.compile(
+          state.liturgy,
+          state.day || state.liturgy?.day,
+          state.prefs,
+          state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version],
+          state.liturgy?.metadata?.preferences
+        )
+      }),
     );
 
     if(this.bulletinMode) {
@@ -238,7 +247,7 @@ export class PrayPage implements OnInit, OnDestroy {
         this.modifiedDoc$
       );
     }
-
+    
     if(this.bulletinMode) {
       this.color$ = combineLatest(day$, this.bulletinDocId$.pipe(
         filter(id => Boolean(id)),
@@ -328,10 +337,12 @@ export class PrayPage implements OnInit, OnDestroy {
     );
 
     const canticleOptions$ = this.doc$.pipe(
-      switchMap(doc => this.documents.find({
+      // replaced with category search to enable offline mode
+      /*switchMap(doc => this.documents.find({
         language: doc?.language || 'en',
         style: 'canticle'
-      })),
+      })),*/
+      switchMap(doc => this.documents.findDocumentsByCategory(["Canticle"], doc?.language || 'en', ['bcp1979', 'rite_i', 'eow'])),
       map(docs => docs.map(doc => new LiturgicalDocument({
         ...doc,
         metadata: {
@@ -342,7 +353,8 @@ export class PrayPage implements OnInit, OnDestroy {
     );
 
     const pAndTs$ = this.doc$.pipe(
-      switchMap(doc => this.documents.findDocumentsByCategory(["Prayers and Thanksgivings"], doc?.language ?? 'en', ['bcp1979']))
+      switchMap(doc => this.documents.findDocumentsByCategory(["Prayers and Thanksgivings"], doc?.language ?? 'en', ['bcp1979'])),
+      map(docs => docs.sort((a, b) => a.slug <= b.slug ? -1 : 1))
     );
 
     this.swapData$ = combineLatest([liturgyVersions$, canticleOptions$, pAndTs$]).pipe(

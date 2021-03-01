@@ -8,6 +8,7 @@ import { AuthServiceInterface, AUTH_SERVICE, StoredPreference } from '@venite/ng
 import { LocalStorageService } from '@venite/ng-localstorage';
 
 import { LiturgicalDocument, versionToString } from '@venite/ldf';
+import { isOnline } from '../editor/ldf-editor/is-online';
 
 @Injectable({
   providedIn: 'root'
@@ -84,7 +85,11 @@ export class PreferencesService {
     return merge(
       from(this.storage.get(this.localStorageKey(key))), // value initially stored in local storage
       this.getUpdated(key), // local value updated recently by user
-      this.getStored(key) // observable of Firebase stored preference
+      // observable of Firebase stored preference, only if online
+      isOnline().pipe(
+        filter(online => online),
+        switchMap(() => this.getStored(key)
+      ))
     ).pipe(
       filter(value => value !== undefined),
     );

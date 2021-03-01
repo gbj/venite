@@ -99,7 +99,7 @@ import { PrayPageModule } from './pray/pray.module';
           component: false
         },
         hasBulletinMode: false,
-        serverReturnsDate: true,
+        serverReturnsDate: false,
       },
       providers: [
         AuthService,
@@ -123,7 +123,7 @@ import { PrayPageModule } from './pray/pray.module';
           component: false
         },
         hasBulletinMode: false,
-        serverReturnsDate: true,
+        serverReturnsDate: false,
       },
       providers: [
         AuthService,

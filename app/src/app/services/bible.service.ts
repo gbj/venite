@@ -50,8 +50,8 @@ export class BibleService implements BibleServiceInterface {
       startWith(LOADING),
       catchError(e => {
         console.warn(`(BibleService) error loading ${citation} (${version})`, e);
-        return of(undefined);
-        //return version === 'NRSV' || citation.startsWith('psalm_') ? of(undefined) : this.getText(citation, 'NRSV');
+        //return of(undefined);
+        return version === 'NRSV' || citation.startsWith('psalm_') ? of(undefined) : this.getText(citation, 'NRSV');
       })
     )
   }
