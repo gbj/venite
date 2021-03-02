@@ -43,6 +43,7 @@ import { CalendarService } from './services/calendar.service';
 import { DocumentService } from './services/document.service';
 import { CanticleTableService } from './services/canticle-table.service';
 import { PrayPageModule } from './pray/pray.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 //import { PrayPageModule } from '@venite/ng-pray';
 
 @NgModule({
@@ -158,7 +159,8 @@ import { PrayPageModule } from './pray/pray.module';
         allSaintsSuppressesCollectOfTheDayUnlessSunday: false,
         allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday: false
       }
-    })
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     StatusBar,
