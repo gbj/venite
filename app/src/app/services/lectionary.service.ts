@@ -85,7 +85,7 @@ export class LectionaryService {
                 halfFiltered = halfFiltered.filter(entry => entry.day == (day.propers || day.slug))
               }
   
-              return halfFiltered.filter(entry => entry.type == readingType);
+              return halfFiltered;
             }
           })
         ).toPromise();
