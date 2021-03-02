@@ -40,6 +40,7 @@
                 "input": "node_modules/@venite/components/dist/collection/i18n",
                 "output": "i18n"
               },
+              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ],
             "styles": [
@@ -72,8 +73,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 }
               ],
               "serviceWorker": true,
@@ -124,6 +125,7 @@
                 "input": "src/assets",
                 "output": "/assets"
               },
+              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ]
           },
