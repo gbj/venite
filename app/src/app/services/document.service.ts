@@ -188,7 +188,7 @@ export class DocumentService {
     // first, try JSON database
     if(!disableOffline) {
       if(['morning-prayer', 'noonday-prayer', 'evening-prayer', 'compline'].includes(slug)) {
-        const key = `/offline/liturgy/${language}-${rawVersions[0]}-${slug}.ldf.json`;
+        const key = `/offline/liturgy/${language}-${versions[0] || 'Rite-II'}-${slug}.ldf.json`;
         if(!this._cache[key]) {
           this._cache[key] = this.http.get<LiturgicalDocument>(key).pipe(
             map(doc => [doc]),

@@ -44,8 +44,6 @@ export class DailyReadingsPage implements OnInit {
   ngOnInit() {
     this.today = new Date();
 
-    this.initFormFromPref();
-
     this.currentLiturgy$.next(this.today.getHours() <= 14 ? 'morning-prayer' : 'evening-prayer')
 
     this.liturgy$ = this.currentLiturgy$.pipe(
@@ -70,27 +68,27 @@ export class DailyReadingsPage implements OnInit {
         undefined,
         false
       )),
+      map(entries => entries.sort((a, b) => readingOrder(a) <= readingOrder(b) ? -1 : 1)),
       map(entries => entries.map(entry => this.prayService.lookupBibleReading(new BibleReading({
         type: "bible-reading",
         style: "long",
         citation: entry.citation
       }), this.bibleVersion.value))),
-      switchMap(readings => combineLatest(readings))
+      switchMap(readings => combineLatest(readings)),
     );
 
     this.psalms$ = combineLatest([
-      this.psalmCycle.valueChanges.pipe(startWith(this.psalmCycle.value)),
-      this.timeOfDay.valueChanges.pipe(startWith(this.timeOfDay.value)),
+      this.psalmCycle.valueChanges.pipe(startWith(undefined)),
+      this.timeOfDay.valueChanges.pipe(startWith(undefined)),
       this.day$
     ]).pipe(
-      tap(data => console.log('psalms$', data)),
       switchMap(([table, timeOfDay, day]) => this.prayService.lookupPsalter(
         new Psalm({
           type: "psalm",
           style: "psalm",
           lookup: {
-            table,
-            item: `${timeOfDay}_psalms`,
+            table: table || this.psalmCycle.value,
+            item: `${timeOfDay || this.timeOfDay.value}_psalms`,
             type: "lectionary"
           }
         }),
@@ -144,6 +142,8 @@ export class DailyReadingsPage implements OnInit {
     ]).pipe(
       map(settings => new DisplaySettings( ... settings))
     );
+
+    this.initFormFromPref();
   }
 
   async initFormFromPref() {
@@ -158,6 +158,7 @@ export class DailyReadingsPage implements OnInit {
       }),
       take(1)
     ).subscribe(data => {
+      console.log('psalmCycle pref is', data.value);
       if(data?.value) {
         this.psalmCycle.setValue(data.value);
       }
@@ -203,6 +204,24 @@ export class DailyReadingsPage implements OnInit {
           )
         )
       );
+  }
+}
+
+function readingOrder(entry : LectionaryEntry) : number {
+  switch (entry.type) {
+    case "first_reading":
+    case "holy_day_morning_1":
+      return 1;
+    case "second_reading":
+    case "holy_day_morning_2":
+      return 2;
+    case "gospel":
+    case "holy_day_evening_1":
+      return 3;
+    case "holy_day_evening_4":
+      return 5;
+    default:
+      return 6;
   }
 }
 
