@@ -180,7 +180,37 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', rawVersions : string[] = undefined, disableOffline : boolean = false, bulletinMode : boolean = false) : Observable<LiturgicalDocument[]> {    
+  findDocumentsBySlug(slug : string, language : string = 'en', rawVersions : string[] = undefined, disableOffline : boolean = false, bulletinMode : boolean = false) : Observable<LiturgicalDocument[]> {        
+    const processDocs = (docs$ : Observable<LiturgicalDocument[]>, versions : string[]) => {
+      // add Gloria to psalms, canticles, invitatories, if they don't have 
+      const gloriaQuery$ : Observable<LiturgicalDocument[]> = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
+      return combineLatest([docs$, gloriaQuery$]).pipe(
+        map(([docs, gloria]) => docs.map(
+          doc => doc.type !== 'psalm'
+          ? doc
+          : new LiturgicalDocument({
+            ... doc,
+            metadata: {
+              ... doc.metadata,
+              gloria: docsToOption(gloria)
+            }
+          })
+        )),
+        // order by version
+        map(docs => docs.sort((a, b) => {
+          const aIndex = (versions || []).indexOf(versionToString(a.version));
+          const bIndex = (versions || []).indexOf(versionToString(b.version));
+          return aIndex < bIndex ? -1 : 1;
+        })),
+        switchMap(docs => docs.length === 0 && !versions.includes('bcp1979')
+          ? this.findDocumentsBySlug(slug, language, versions.concat('bcp1979'))
+          : of(docs)
+        ),
+        startWith([LOADING]),
+        catchError((error) => this.handleError(error))
+      );
+    }
+    
     // deduplicate versions -- max of 10 (for Firebase query)
     const uniqueVersions = Array.from(new Set(rawVersions?.length == 0 ? ['bcp1979'] : rawVersions)),
     versions = uniqueVersions?.length <= 10 ? uniqueVersions : uniqueVersions.slice(0, 10);
@@ -207,7 +237,7 @@ export class DocumentService {
             filter(online => online && bulletinMode),
             switchMap(() => this.findDocumentsBySlug(slug, language, rawVersions, true))
           );
-          return merge(of(attempt), firebaseVersions$);
+          return merge(processDocs(of(attempt), versions), firebaseVersions$);
         } else {
           return this.findDocumentsBySlug(slug, language, rawVersions, true);
         }
@@ -274,42 +304,17 @@ export class DocumentService {
         startWith([])
       );
 
-      const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
-
-      return combineLatest([this.auth.user, veniteLiturgies$, myDocs$, myOrganizationLiturgies$, gloriaQuery]).pipe(
-        map(([user, venite, mine, org, gloria]) => [
-          user
+      const docs$ = combineLatest([this.auth.user, veniteLiturgies$, myDocs$, myOrganizationLiturgies$]).pipe(
+        map(([user, venite, mine, org]) => user
           ? mine.concat(org).concat(
             // filter out anything I own
             venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
           )
-          : mine.concat(venite),
-          gloria
-        ]),
-        // add Gloria to psalms, canticles, invitatories, if they don't have 
-        map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm'
-          ? doc
-          : new LiturgicalDocument({
-            ... doc,
-            metadata: {
-              ... doc.metadata,
-              gloria: docsToOption(gloria)
-            }
-          }))
-        ),
-        // order by version
-        map(docs => docs.sort((a, b) => {
-          const aIndex = (versions || []).indexOf(versionToString(a.version));
-          const bIndex = (versions || []).indexOf(versionToString(b.version));
-          return aIndex < bIndex ? -1 : 1;
-        })),
-        switchMap(docs => docs.length === 0 && !versions.includes('bcp1979')
-          ? this.findDocumentsBySlug(slug, language, versions.concat('bcp1979'))
-          : of(docs)
-        ),
-        startWith([LOADING]),
-        catchError((error) => this.handleError(error)),
+          : mine.concat(venite)
+        )
       );
+
+      return processDocs(docs$, versions);
     }
   }
 
