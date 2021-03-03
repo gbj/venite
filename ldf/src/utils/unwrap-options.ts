@@ -5,9 +5,16 @@ import { Option } from '../option';
 export function unwrapOptions(doc: LiturgicalDocument): LiturgicalDocument {
   switch (doc?.type) {
     case 'option':
-      //console.log('unwrapOptions -- option -- selected is ', doc.metadata.selected, doc.metadata);
-      const selectedDoc = (doc as Option).value[doc.metadata?.selected || 0];
-      return unwrapOptions(new LiturgicalDocument(selectedDoc));
+      const filtered = ((doc as Option).value || []).filter(
+        (entry) =>
+          Boolean(entry) && (Boolean(entry.value) || Boolean(entry?.type === 'bible-reading' && entry.citation)),
+      );
+      console.log(
+        'unwrapOptions -- option -- selected is ',
+        doc.metadata.selected,
+        filtered[doc.metadata?.selected ?? 0],
+      );
+      return unwrapOptions(new LiturgicalDocument(filtered[doc.metadata?.selected ?? 0]));
     case 'liturgy':
       return new Liturgy({
         ...doc,

@@ -1,4 +1,4 @@
-import {  LiturgicalDocument, Liturgy, Option } from '@venite/ldf';
+import {  LiturgicalDocument, Liturgy, Option, Psalm } from '@venite/ldf';
 
 export function isCompletelyCompiled(doc : LiturgicalDocument | undefined, recursionLevel : number = 0) : boolean {
   let isCompiled : boolean = false;
@@ -14,6 +14,8 @@ export function isCompletelyCompiled(doc : LiturgicalDocument | undefined, recur
     isCompiled = isCompletelyCompiled(((doc as Option).value || [])[(doc as Option)?.metadata?.selected], recursionLevel + 1);
   } else if(doc?.type === 'meditation') {
     isCompiled = true;
+  } else if(doc?.type === 'psalm' && doc?.metadata?.insert_seasonal_antiphon && !(doc as Psalm).metadata.antiphon) {
+    isCompiled = false;
   } else {
     isCompiled = Boolean(doc?.value && doc?.value?.length > 0 && !JSON.stringify(doc.value).includes("Loading..."));
     /*if(!isCompiled) {
