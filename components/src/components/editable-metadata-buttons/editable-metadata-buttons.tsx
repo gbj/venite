@@ -209,7 +209,7 @@ export class EditableMetadataButtonsComponent {
         {/* Preview Buttons */}
         {<ion-buttons slot="end" >
           <ion-button onClick={() => this.ldfTogglePreview.emit(false)}>
-            <ion-label>{this.localeStrings?.edit}</ion-label>
+            <ion-label class="sm-hidden">{this.localeStrings?.edit}</ion-label>
             <ion-icon slot="end" name="create"></ion-icon>
           </ion-button>
         </ion-buttons>}
@@ -218,7 +218,7 @@ export class EditableMetadataButtonsComponent {
         {/* Editable Buttons */}
         {<ion-buttons slot='end'>
           <ion-button onClick={() => this.ldfTogglePreview.emit(true)}>
-            <ion-label>{this.localeStrings?.preview}</ion-label>
+            <ion-label class="sm-hidden">{this.localeStrings?.preview}</ion-label>
             <ion-icon slot="end" name="eye"></ion-icon>
           </ion-button>
 
