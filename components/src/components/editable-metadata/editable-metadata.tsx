@@ -176,16 +176,14 @@ export class EditableMetadataComponent {
               </ion-card>
             </ion-card>
             <ion-card>
-              <ion-card-header>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-button onClick={() => this.showAdvanced = !this.showAdvanced}>
-                      {!this.showAdvanced && <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>}
-                      {this.showAdvanced && <ion-icon slot="icon-only" name="chevron-down"></ion-icon>}
-                    </ion-button>
-                  </ion-buttons>
-                  <ion-card-title>{localeStrings.advanced}</ion-card-title>
-                </ion-toolbar>
+              <ion-card-header class="advanced" onClick={() => this.showAdvanced = !this.showAdvanced}>
+                <ion-buttons>
+                  <ion-button>
+                    {!this.showAdvanced && <ion-icon slot="icon-only" name="chevron-forward"></ion-icon>}
+                    {this.showAdvanced && <ion-icon slot="icon-only" name="chevron-down"></ion-icon>}
+                  </ion-button>
+                </ion-buttons>
+                <ion-card-title>{localeStrings.advanced}</ion-card-title>
               </ion-card-header>
               {this.showAdvanced && <ion-card-content>
                 <ion-grid>

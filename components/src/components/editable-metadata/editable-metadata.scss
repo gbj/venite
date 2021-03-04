@@ -39,3 +39,8 @@
   opacity: 1;
   transition: 0.125s;
 }
+
+ion-card-header.advanced {
+  display: flex;
+  flex-direction: row;
+}
