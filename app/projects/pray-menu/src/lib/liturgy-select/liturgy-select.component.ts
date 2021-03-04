@@ -4,21 +4,11 @@ import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { ClientPreferences, dateFromYMDString, Kalendar, LiturgicalDay, LiturgicalDocument, LiturgicalWeek, Liturgy, Preference, ProperLiturgy, User, versionToString } from '@venite/ldf';
-import { PrayMenuConfig } from '@venite/ng-pray-menu/lib/pray-menu-config';
-import { BulletinCommands } from '@venite/ng-pray-menu/public-api';
+import { PrayMenuConfig } from '../pray-menu-config';
+import { BulletinCommands } from '../bulletin-commands';
+import { AUTH_SERVICE, AuthServiceInterface, CALENDAR_SERVICE, CalendarServiceInterface, PREFERENCES_SERVICE, PreferencesServiceInterface, LECTIONARY_SERVICE, LectionaryServiceInterface, DOCUMENT_SERVICE, DocumentServiceInterface } from '@venite/ng-service-api';
 import { BehaviorSubject, combineLatest, Observable, of, Subject, merge } from 'rxjs';
 import { distinctUntilKeyChanged, map, startWith, switchMap, tap } from 'rxjs/operators';
-import { AuthService } from 'src/app/auth/auth.service';
-import { PreferencesService } from 'src/app/preferences/preferences.service';
-import { CalendarService } from 'src/app/services/calendar.service';
-import { DocumentService } from 'src/app/services/document.service';
-import { LectionaryService } from 'src/app/services/lectionary.service';
-
-type LanguageVersionKalendarValues = {
-  language: string;
-  version: string;
-  kalendar: string;
-}
 
 type DateValues = {
   year: string;
@@ -99,14 +89,14 @@ export class LiturgySelectComponent implements OnInit {
   constructor(
     @Inject('config') public config : PrayMenuConfig,
     private translate : TranslateService,
-    private calendarService : CalendarService,
-    private documents : DocumentService,
-    private auth : AuthService,
-    private lectionary : LectionaryService,
-    private preferencesService : PreferencesService,
     private modal : ModalController,
     private alert : AlertController,
     private router : Router,
+    @Inject(AUTH_SERVICE) private auth : AuthServiceInterface,
+    @Inject(CALENDAR_SERVICE) public calendarService : CalendarServiceInterface,
+    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
+    @Inject(LECTIONARY_SERVICE) private lectionary : LectionaryServiceInterface,
+    @Inject(DOCUMENT_SERVICE) private documents : DocumentServiceInterface,
   ) {
     const today = new Date();
     this.form = new FormGroup({
