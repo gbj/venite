@@ -56,14 +56,11 @@ export class LectionaryService {
   possiblyOfflineQuery(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean, disableOffline : boolean = false) : Observable<LectionaryEntry[]> { 
     const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
     
-    console.log('possiblyOfflineQuery', day.slug, lectionaryName, readingType);
 
     // if possible, look for it in the JSON lectionary files
     if(!disableOffline && ['bcp1979_30day_psalter', 'bcp1979_daily_office', 'bcp1979_daily_psalms'].includes(lectionaryName)) {
       const key = `${day.date}-${lectionaryName}-${readingType}-${alternateYear}`;
-      console.log('looking for reading ', key);
       if(!this._cache[key]) {
-        console.log('not cached, so loading it')
         this._cache[key] = this.http.get<LectionaryEntry[]>(`/offline/lectionary/${lectionaryName}.json`).pipe(
           map(entries => {
             if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading_alt', 'first_reading', 'second_reading', 'gospel'].includes(readingType)) {

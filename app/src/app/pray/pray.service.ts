@@ -94,7 +94,6 @@ export class PrayService {
             day: docBase.type === 'liturgy' ? day : undefined,
             value: compiledChildren.filter(child => Boolean(child))
           })),
-          tap(doc => console.log('latest compiled form is', doc))
         );
       }
 

@@ -49,6 +49,8 @@ export class LiturgySelectComponent implements OnInit {
   @Output() dayChosen : EventEmitter<PrayData> = new EventEmitter();
   @Output() createBulletin : EventEmitter<BulletinCommands> = new EventEmitter();
 
+  isNavigating : boolean = false;
+
   week$ : Observable<LiturgicalWeek[]>;
   day$ : Observable<LiturgicalDay>;
   form : FormGroup;
@@ -319,6 +321,8 @@ export class LiturgySelectComponent implements OnInit {
 
   // ionViewWillEnter -- each time we return to this page, check last time we prayed and reset menu if necessary
   ionViewWillEnter() {
+    this.isNavigating = false; 
+
     if(!this.lastPrayed || (Math.abs(new Date().getTime() - this.lastPrayed.getTime())) > this.REMEMBER_TIME) {
       this.startingDate$.next(new Date());
     }
@@ -326,6 +330,8 @@ export class LiturgySelectComponent implements OnInit {
   }
 
   pray(data : PrayData | undefined, bulletinMode : boolean = false) {
+    this.isNavigating = true;
+
     this.dayChosen.emit(data);
     
     const { user, liturgy, date, properLiturgy, liturgicalDay, clientPreferences, availableReadings } = data;
@@ -342,6 +348,7 @@ export class LiturgySelectComponent implements OnInit {
     // check to see if all selected readings are available; if not, notify the user
     const allReadingsAvailable = this.areReadingsAvailable(new Liturgy(liturgy), clientPreferences, availableReadings);
     if(!allReadingsAvailable) {
+      this.isNavigating = false;
       this.readingsNotAvailableAlert(new Liturgy(liturgy), liturgicalDay, clientPreferences, availableReadings, bulletinMode);
     } else {
       // navigate to the Pray page
@@ -350,6 +357,7 @@ export class LiturgySelectComponent implements OnInit {
       } else {
         this.navigate('/pray', new Liturgy(liturgy), date, liturgicalDay, clientPreferences);
       }
+      this.isNavigating = false;
     }
   }
 
@@ -488,8 +496,12 @@ export class LiturgySelectComponent implements OnInit {
         liturgy?.slug,
       ];
     const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
+    // in bulletin mode, send all prefs
+    if(bulletinMode) {
+      commands.push(JSON.stringify(prefs));
+    }
     // if any prefs have changed, add them to URL params
-    if(Object.keys(nonDefaultPrefs).length > 0) { // || this.data.isVigil) {
+    else if(Object.keys(nonDefaultPrefs).length > 0) { // || this.data.isVigil) {
       commands.push(JSON.stringify(nonDefaultPrefs));
     }
     // TODO -- push vigil info as well
