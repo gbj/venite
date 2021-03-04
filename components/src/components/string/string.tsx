@@ -149,8 +149,6 @@ export class StringComponent {
             split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
             [match1, match2, nextWord] = split;
 
-      console.log('match1 = ', firstChunk, match1, match2);
-
       final = new Array(
         <span class='firstword'><span class={buffer ? `drop buffered-drop drop-${match1}` : `drop drop-${match1}`}>{match1}</span>{this.maintainCasing(match2) ? match2 : match2?.toLowerCase()}</span>
       )

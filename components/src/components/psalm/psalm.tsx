@@ -101,8 +101,8 @@ export class PsalmComponent {
     if(typeof antiphon == 'string') {
       const refrain = new Refrain({ type: 'refrain', value: [ antiphon ], style: 'antiphon' });
       return <ldf-refrain class='antiphon' doc={ refrain } editable={this.editable && !notEditable} path={`${this.path}/metadata/antiphon`}></ldf-refrain>
-    } else if(antiphon instanceof Refrain || (typeof antiphon == 'object' && antiphon.type && antiphon.type == 'refrain')) {
-      return <ldf-liturgical-document class='antiphon' doc={ antiphon as Refrain } path={`${this.path}/metadata/antiphon`} editable={this.editable && !notEditable}></ldf-liturgical-document>
+    } else if(antiphon?.type) {
+      return <ldf-liturgical-document class='antiphon' doc={(antiphon as LiturgicalDocument)} path={`${this.path}/metadata/antiphon`} editable={this.editable && !notEditable}></ldf-liturgical-document>
     } else if(typeof antiphon == 'object') {
       // antiphon is something like an O antiphon tree:
       // dates can be either MM/DD or MM-DD
@@ -237,6 +237,8 @@ export class PsalmComponent {
   // Render
   render() {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
+
+    console.log('includeAntiphon = ', includeAntiphon);
 
     // create blank psalm verse pattern
     let pattern : PsalmVerse,

@@ -79,7 +79,8 @@ export class PrayService {
               startWith(LOADING),
               switchMap(child => child && child?.include(day, prefs) && !isCompletelyCompiled(child) 
                 ? this.compile(child, day, prefs, liturgyversions, originalPrefs)
-                : of(child))
+                : of(child)
+              )
             )
             : of(null))
         ).pipe(
@@ -91,9 +92,9 @@ export class PrayService {
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
             day: docBase.type === 'liturgy' ? day : undefined,
-            value: compiledChildren
+            value: compiledChildren.filter(child => Boolean(child))
           })),
-          //tap(doc => isCompletelyCompiled(doc) ? console.log('latest compiled form is', doc) : null)
+          tap(doc => console.log('latest compiled form is', doc))
         );
       }
 
@@ -443,8 +444,6 @@ export class PrayService {
           reading : string = readingPrefName ? prefs[readingPrefName] : doc.lookup.item.toString(),
           alternateYear = Boolean(((originalPrefs[readingPrefName])?.options || []).find(option => option.value == reading)?.metadata?.alternateYear);
 
-    console.log('(PrayService) findReadings', doc.lookup, lectionary, reading);
-
     return this.lectionaryService.getReadings(day, lectionary, reading, alternateYear).pipe(
       map(entries => {
         function uniqueBy(a, key) {
@@ -508,8 +507,10 @@ export class PrayService {
               highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
               antiphonsForBlackLetterDays = antiphons.filter(antiphon => (antiphon?.category || []).includes(highestBlackLetter?.season));
 
+        let antiphon : LiturgicalDocument;
         if(antiphonsForDay.length == 0) {
           const antiphonsForSeason = antiphons.filter(antiphon => (antiphon?.category || []).includes(day.season || day.week?.season));
+
           return this.randomize(dateFromYMDString(day.date), day.evening, antiphonsForBlackLetterDays.concat(antiphonsForSeason));
         } else {
           return antiphonsForDay[0];
@@ -519,10 +520,10 @@ export class PrayService {
         ... doc,
         metadata: {
           ... doc.metadata,
-          insert_seasonal_antiphon: false,
+          insert_seasonal_antiphon: undefined,
           antiphon
         }
-      }))
+      })),
     )
   }
 }

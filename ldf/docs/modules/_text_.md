@@ -22,7 +22,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [text.ts:4](https://github.com/gbj/venite/blob/178b8ec8/ldf/src/text.ts#L4)*
+*Defined in [text.ts:4](https://github.com/gbj/venite/blob/b383164b/ldf/src/text.ts#L4)*
 
 ## Variables
 
@@ -30,4 +30,4 @@
 
 • **STYLES**: *["text", "prayer", "markdown", "authorized-prayers"]* = ['text', 'prayer', 'markdown', 'authorized-prayers'] as const
 
-*Defined in [text.ts:3](https://github.com/gbj/venite/blob/178b8ec8/ldf/src/text.ts#L3)*
+*Defined in [text.ts:3](https://github.com/gbj/venite/blob/b383164b/ldf/src/text.ts#L3)*

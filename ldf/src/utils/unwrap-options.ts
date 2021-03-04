@@ -9,17 +9,20 @@ export function unwrapOptions(doc: LiturgicalDocument): LiturgicalDocument {
         (entry) =>
           Boolean(entry) && (Boolean(entry.value) || Boolean(entry?.type === 'bible-reading' && entry.citation)),
       );
-      console.log(
-        'unwrapOptions -- option -- selected is ',
-        doc.metadata.selected,
-        filtered[doc.metadata?.selected ?? 0],
-      );
       return unwrapOptions(new LiturgicalDocument(filtered[doc.metadata?.selected ?? 0]));
     case 'liturgy':
       return new Liturgy({
         ...doc,
         value: ((doc as Liturgy).value || []).map((subDoc) => unwrapOptions(subDoc)),
       });
+    case 'psalm':
+      if (doc?.metadata?.gloria?.type) {
+        doc.metadata.gloria = unwrapOptions(doc.metadata.gloria);
+      }
+      if (doc?.metadata?.antiphon?.type) {
+        doc.metadata.antiphon = unwrapOptions(doc.metadata.antiphon);
+      }
+      return doc;
     default:
       return doc;
   }
