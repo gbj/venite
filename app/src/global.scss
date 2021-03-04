@@ -430,3 +430,22 @@ ion-alert {
   --width: 400px !important;
   --max-width: 80vw !important;
 }
+
+.ecru,
+.dark.ecru {
+  --ecru: rgb(249, 249, 242);
+
+  --ion-background-color: var(--ecru);
+  --ldf-background-color: var(--ecru);
+
+  --ion-color-primary: #d3ac41;
+  --ion-color-primary-rgb: 211, 172, 65;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #ba9739;
+  --ion-color-primary-tint: #d7b454;
+
+  .bordered {
+    background-color: var(--ecru) !important;
+  }
+}

@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
-import { Platform, MenuController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 // Community Modules
 import { TranslateService } from '@ngx-translate/core';
 import { DarkmodeService } from '@venite/ng-darkmode';
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 import { AuthService } from './auth/auth.service';
 import { Organization } from './organization/organization';
 import { OrganizationService } from './organization/organization.module';
-//import { DarkmodeService } from '@venite/ng-darkmode';
+import { PreferencesService } from './preferences/preferences.service';
 
 @Component({
   selector: 'venite-root',
@@ -26,7 +26,8 @@ export class AppComponent {
     private translate : TranslateService,
     private auth : AuthService,
     private organizationService : OrganizationService,
-    private darkMode : DarkmodeService
+    private darkMode : DarkmodeService,
+    private preferences : PreferencesService
   ) {
     this.initializeApp();
     this.translate.use('en');
@@ -39,13 +40,18 @@ export class AppComponent {
       this.organizations$ = this.auth.user.pipe(
         switchMap(user => user ? this.organizationService.organizationsWithUser(user.uid) : []),
       );
-//      this.statusBar.styleDefault();
-//      this.splashScreen.hide();
 
+      // dark mode
       this.darkMode.prefersDark.subscribe(prefersDark => {
-        //console.log('now prefers dark', prefersDark);
         document.body.classList.toggle('dark', prefersDark);
       });
+
+      // sepia/ecru mode
+      this.preferences.get('darkmode').pipe(
+        map(storedPreference => storedPreference ? storedPreference.value : 'auto')
+      ).subscribe(
+        value => document.body.classList.toggle('ecru', value == 'ecru')
+      );
     });
   }
 }

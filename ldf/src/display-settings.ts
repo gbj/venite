@@ -12,7 +12,7 @@ export class DisplaySettings {
     public psalmVerses: boolean = false,
     public bibleVerses: boolean = false,
     public meditationBell: 'silence' | 'singing-bowl' = 'singing-bowl',
-    public darkmode: 'auto' | 'dark' | 'light' = 'auto',
+    public darkmode: 'auto' | 'dark' | 'light' | 'ecru' = 'auto',
     public bolded: 'both' | 'unison' | 'response' | 'none' = 'both',
     public psalmPause: number = 1000,
   ) {}
