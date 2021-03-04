@@ -1,0 +1,65 @@
+{
+  "en-bible-translation": {
+    "versions": {
+      "CEB": "Common English Bible (CEB)",
+      "KJV": "King James Version (KJV)",
+      "NRSV": "New Revised Standard Version (NRSV)",
+      "ESV": "English Standard Version (ESV)"
+    }
+  },
+  "en-canticle-table": {
+    "versions": {
+      "bcp1979": "1979 BCP Table of Suggested Canticles",
+      "tdb_i": "Te Deum and Benedictus (Rite I)",
+      "tdb": "Te Deum and Benedictus",
+      "magnunc_i": "Magnificat & Nunc Dimittis (Rite I)",
+      "magnunc": "Magnificat & Nunc Dimittis",
+      "ojn": "Order of St. Julian of Norwich",
+      "rite_i": "1979 BCP Table of Suggested Canticles (Rite I)",
+      "eow": "Enriching Our Worship"
+    }
+  },
+  "en-lectionary": {
+    "versions": {
+      "rclsunday": "Revised Common Lectionary",
+      "bcp1979_daily_psalms": "1979 Daily Psalms",
+      "bcp1979_30day_psalter": "1979 30-Day Psalter",
+      "bcp1979_daily_office": "1979 Daily Lectionary"
+    }
+  },
+  "en-liturgy": {
+    "versions": {
+      "eow": "Enriching Our Worship",
+      "bcp1979": "Rite II",
+      "rite_i": "Rite I"
+    }
+  },
+  "en-liturgy-versions": {
+    "versions": {
+      "EOW": "Enriching Our Worship",
+      "Rite-II": "Rite II",
+      "Rite-I": "Rite I"
+    }
+  },
+  "en-psalm": {
+    "versions": {
+      "coverdale": "Coverdale",
+      "bcp1979": "BCP 1979",
+      "ip": "Inclusive Psalter"
+    }
+  },
+  "en-readings": {
+    "evening_psalms": "Evening Psalms",
+    "versions": {
+      "morning_psalms": "Morning Psalms",
+      "second_reading": "Second Reading",
+      "first_reading": "First Reading",
+      "gospel": "Gospel",
+      "evening_psalms": "Evening Psalms"
+    },
+    "gospel": "Gospel",
+    "morning_psalms": "Morning Psalms",
+    "first_reading": "First Reading",
+    "second_reading": "Second Reading"
+  }
+}

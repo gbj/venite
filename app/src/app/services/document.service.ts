@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
-import { Observable, from, of, combineLatest } from 'rxjs';
+import { Observable, from, of, combineLatest, merge, concat } from 'rxjs';
 import { catchError, filter, map, startWith, switchMap, take, tap } from 'rxjs/operators';
 
 import { docsToOption, LiturgicalColor, LiturgicalDocument, Liturgy, versionToString, Text } from '@venite/ldf';
@@ -11,7 +11,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { AuthService } from '../auth/auth.service';
 import { OrganizationService } from '../organization/organization.service';
-import { version } from 'process';
+
+import BY_SLUG from '../../offline/by_slug.json';
+import BY_CATEGORY from '../../offline/by_category.json';
+import COLORS from '../../offline/colors.json';
+import VERSIONS from '../../offline/versions.json';
+import { HttpClient } from '@angular/common/http';
+import { isOnline } from '../editor/ldf-editor/is-online';
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -36,11 +42,13 @@ const ERROR = new Text({
   providedIn: 'root'
 })
 export class DocumentService {
+  _cache : Record<string, Promise<LiturgicalDocument[]>> = {};
 
   constructor(
     private readonly afs: AngularFirestore,
     private auth : AuthService,
-    private organizationService : OrganizationService
+    private organizationService : OrganizationService,
+    private http : HttpClient
   ) { }
 
   handleError(error : any) {
@@ -66,11 +74,13 @@ export class DocumentService {
   }
 
   getVersions(language : string, type : string) : Observable<{[key: string]: string}> {
-    return this.afs.doc<{versions: {[key: string]: string}}>(`Versions/${language}-${type}`)
+    return of(VERSIONS[`${language}-${type}`]?.versions);
+    // removed to enable offline mode and cut down on reads
+    /*return this.afs.doc<{versions: {[key: string]: string}}>(`Versions/${language}-${type}`)
       .valueChanges()
       .pipe(
         map(doc => doc.versions)
-      );
+      );*/
   }
 
   getLiturgyOptions(language : string, version : string) : Observable<Liturgy[]> {
@@ -105,7 +115,7 @@ export class DocumentService {
       startWith([] as Liturgy[])
     );
 
-    return combineLatest([this.auth.user, myLiturgies$, myOrganizationLiturgies$, veniteLiturgies$]).pipe(
+    const onlineLiturgies$ = combineLatest([this.auth.user, myLiturgies$, myOrganizationLiturgies$, veniteLiturgies$]).pipe(
       map(([user, mine, organization, venite]) => user
         ? mine
           .concat(
@@ -118,7 +128,30 @@ export class DocumentService {
         : mine.concat(venite)
       ),
       map(docs => docs.map(doc => new Liturgy({...doc, id: undefined})))
-    )
+    );
+
+    // load from JSON for quicker load + offline access (but won't include your/org liturgies)
+    const loadLiturgy = (language : string, version : string, slug : string) => this.http.get<Liturgy>(`/offline/liturgy/${language}-${version}-${slug}.ldf.json`)
+    const offlineLiturgies$ = combineLatest([
+      loadLiturgy('en', 'Rite-II', 'morning-prayer'),
+      loadLiturgy('en', 'Rite-II', 'noonday-prayer'),
+      loadLiturgy('en', 'Rite-II', 'evening-prayer'),
+      loadLiturgy('en', 'Rite-II', 'compline'),
+      loadLiturgy('en', 'Rite-I', 'morning-prayer'),
+      loadLiturgy('en', 'Rite-I', 'evening-prayer'),
+      loadLiturgy('en', 'EOW', 'morning-prayer'),
+      loadLiturgy('en', 'EOW', 'evening-prayer'),
+    ]);
+
+    return concat(
+      // first, load JSON liturgies
+      offlineLiturgies$,
+      // then, load from DB, but only if online
+      isOnline().pipe(
+        filter(online => Boolean(online)),
+        switchMap(() => onlineLiturgies$)
+      )
+    );
   }
 
   getAllLiturgyOptions() : Observable<Liturgy[]> {
@@ -147,110 +180,162 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
-  findDocumentsBySlug(slug : string, language : string = 'en', rawVersions : string[] = undefined) : Observable<LiturgicalDocument[]> {    
-    // deduplicate versions -- max of 10 (for Firebase query)
-    const uniqueVersions = Array.from(new Set(rawVersions)),
-      versions = uniqueVersions?.length <= 10 ? uniqueVersions : uniqueVersions.slice(0, 10);
+  findDocumentsBySlug(slug : string, language : string = 'en', rawVersions : string[] = undefined, disableOffline : boolean = false, bulletinMode : boolean = false) : Observable<LiturgicalDocument[]> {        
+    const processDocs = (docs$ : Observable<LiturgicalDocument[]>, versions : string[]) => {
+      // add Gloria to psalms, canticles, invitatories, if they don't have 
+      const gloriaQuery$ : Observable<LiturgicalDocument[]> = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
+      return combineLatest([docs$, gloriaQuery$]).pipe(
+        map(([docs, gloria]) => docs.map(
+          doc => doc.type !== 'psalm'
+          ? doc
+          : new LiturgicalDocument({
+            ... doc,
+            metadata: {
+              ... doc.metadata,
+              gloria: docsToOption(gloria)
+            }
+          })
+        )),
+        // order by version
+        map(docs => docs.sort((a, b) => {
+          const aIndex = (versions || []).indexOf(versionToString(a.version));
+          const bIndex = (versions || []).indexOf(versionToString(b.version));
+          return aIndex < bIndex ? -1 : 1;
+        })),
+        switchMap(docs => docs.length === 0 && !versions.includes('bcp1979')
+          ? this.findDocumentsBySlug(slug, language, versions.concat('bcp1979'))
+          : of(docs)
+        ),
+        startWith([LOADING]),
+        catchError((error) => this.handleError(error))
+      );
+    }
     
-    if(uniqueVersions?.length > 10) {
-      console.warn('(DocumentService) (findDocumentsBySlug) Firebase can only handle up to 10 unique versions to search. You searched for ', rawVersions);
+    // deduplicate versions -- max of 10 (for Firebase query)
+    const uniqueVersions = Array.from(new Set(rawVersions?.length == 0 ? ['bcp1979'] : rawVersions)),
+    versions = uniqueVersions?.length <= 10 ? uniqueVersions : uniqueVersions.slice(0, 10);
+    
+    // first, try JSON database
+    if(!disableOffline) {
+      if(['morning-prayer', 'noonday-prayer', 'evening-prayer', 'compline'].includes(slug)) {
+        const key = `/offline/liturgy/${language}-${versions[0] || 'Rite-II'}-${slug}.ldf.json`;
+        if(!this._cache[key]) {
+          this._cache[key] = this.http.get<LiturgicalDocument>(key).pipe(
+            map(doc => [doc]),
+            catchError(() => this.findDocumentsBySlug(slug, language, rawVersions, true))
+          ).toPromise();
+        }
+        return from(this._cache[key]);
+      } else {
+        const attempt = versions.map(version => BY_SLUG[`${language}-${version}-${slug}`])
+          .flat()
+          .filter(doc => Boolean(doc));
+        // TODO need to include Firebase ones AS WELL, in case I have my own with same slug
+        if(attempt?.length > 0) {
+          // also send Firebase version, if online and in bulletin mode
+          const firebaseVersions$ = isOnline().pipe(
+            filter(online => online && bulletinMode),
+            switchMap(() => this.findDocumentsBySlug(slug, language, rawVersions, true))
+          );
+          return merge(processDocs(of(attempt), versions), firebaseVersions$);
+        } else {
+          return this.findDocumentsBySlug(slug, language, rawVersions, true);
+        }
+      }
     }
 
-    const veniteLiturgies$ = this.afs.collection<LiturgicalDocument>('Document', ref => {
-      let query = ref.where('slug', '==', slug)
-                     .where('language', '==', language)
-                     .where('sharing.organization', '==', 'venite')
-                     .where('sharing.status', '==', 'published')
-                     .where('sharing.privacy', '==', 'public');
-      
-      if(versions?.length > 0) {
-        query = query.where('version', 'in', versions.filter(v => Boolean(v)));
+    else {      
+      if(uniqueVersions?.length > 10) {
+        console.warn('(DocumentService) (findDocumentsBySlug) Firebase can only handle up to 10 unique versions to search. You searched for ', rawVersions);
       }
-      return query;
-    }).valueChanges();
 
-    const myDocs$ = this.auth.user.pipe(
-      switchMap(user => {
-        if(user?.uid) {
-          return this.afs.collection<LiturgicalDocument>('Document', ref => {
-            let query = ref.where('slug', '==', slug)
-              .where('language', '==', language)
-              .where('sharing.owner', '==', user?.uid || '')
-            if(versions?.length > 0) {
-              query = query.where('version', 'in', versions.filter(v => Boolean(v)));
-            }
-            return query;
-          }).valueChanges()
-        } else {
-          return of([]);
+      const veniteLiturgies$ = this.afs.collection<LiturgicalDocument>('Document', ref => {
+        let query = ref.where('slug', '==', slug)
+                      .where('language', '==', language)
+                      .where('sharing.organization', '==', 'venite')
+                      .where('sharing.status', '==', 'published')
+                      .where('sharing.privacy', '==', 'public');
+        
+        if(versions?.length > 0) {
+          query = query.where('version', 'in', versions.filter(v => Boolean(v)));
         }
-      })
-    );
+        return query;
+      }).valueChanges();
 
-    const myOrganizationLiturgies$ = this.auth.user.pipe(
-      filter(user => Boolean(user?.uid)),
-      switchMap(user => combineLatest([this.organizationService.organizationsWithEditor(user?.uid), this.organizationService.organizationsWithOwner(user?.uid)])),
-      map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
-      switchMap(orgs => {
-        if(orgs?.length > 0) {
-          return this.afs.collection<LiturgicalDocument>('Document', ref =>
-            ref.where('sharing.organization', 'in', orgs.map(org => org.slug))
-               .where('slug', '==', slug)
-               .where('language', '==', language)
-          ).valueChanges().pipe(
-            map(docs => versions?.length > 0
-              ? docs.filter(doc => versions.includes(versionToString(doc.version)))
-              : docs
-            )
-          );
-        } else {
-          return of([]);
-        }
-      }),
-      filter(orgDocs => orgDocs?.length > 0),
-      startWith([])
-    );
-
-    const gloriaQuery = slug !== 'gloria-patri' ? this.findDocumentsBySlug('gloria-patri', language, versions) : of([]);
-
-    return combineLatest([this.auth.user, veniteLiturgies$, myDocs$, myOrganizationLiturgies$, gloriaQuery]).pipe(
-      map(([user, venite, mine, org, gloria]) => [
-        user
-        ? mine.concat(org).concat(
-          // filter out anything I own
-          venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
-        )
-        : mine.concat(venite),
-        gloria
-      ]),
-      // add Gloria to psalms, canticles, invitatories, if they don't have 
-      map(([docs, gloria]) => docs.map(doc => doc.type !== 'psalm'
-        ? doc
-        : new LiturgicalDocument({
-          ... doc,
-          metadata: {
-            ... doc.metadata,
-            gloria: docsToOption(gloria)
+      const myDocs$ = this.auth.user.pipe(
+        switchMap(user => {
+          if(user?.uid) {
+            return this.afs.collection<LiturgicalDocument>('Document', ref => {
+              let query = ref.where('slug', '==', slug)
+                .where('language', '==', language)
+                .where('sharing.owner', '==', user?.uid || '')
+              if(versions?.length > 0) {
+                query = query.where('version', 'in', versions.filter(v => Boolean(v)));
+              }
+              return query;
+            }).valueChanges()
+          } else {
+            return of([]);
           }
-        }))
-      ),
-      // order by version
-      map(docs => docs.sort((a, b) => {
-        const aIndex = (versions || []).indexOf(versionToString(a.version));
-        const bIndex = (versions || []).indexOf(versionToString(b.version));
-        return aIndex < bIndex ? -1 : 1;
-      })),
-      switchMap(docs => docs.length === 0 && !versions.includes('bcp1979')
-        ? this.findDocumentsBySlug(slug, language, versions.concat('bcp1979'))
-        : of(docs)
-      ),
-      startWith([LOADING]),
-      catchError((error) => this.handleError(error)),
-    );
+        })
+      );
+
+      const myOrganizationLiturgies$ = this.auth.user.pipe(
+        filter(user => Boolean(user?.uid)),
+        switchMap(user => combineLatest([this.organizationService.organizationsWithEditor(user?.uid), this.organizationService.organizationsWithOwner(user?.uid)])),
+        map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
+        switchMap(orgs => {
+          if(orgs?.length > 0) {
+            return this.afs.collection<LiturgicalDocument>('Document', ref =>
+              ref.where('sharing.organization', 'in', orgs.map(org => org.slug))
+                .where('slug', '==', slug)
+                .where('language', '==', language)
+            ).valueChanges().pipe(
+              map(docs => versions?.length > 0
+                ? docs.filter(doc => versions.includes(versionToString(doc.version)))
+                : docs
+              )
+            );
+          } else {
+            return of([]);
+          }
+        }),
+        filter(orgDocs => orgDocs?.length > 0),
+        startWith([])
+      );
+
+      const docs$ = combineLatest([this.auth.user, veniteLiturgies$, myDocs$, myOrganizationLiturgies$]).pipe(
+        map(([user, venite, mine, org]) => user
+          ? mine.concat(org).concat(
+            // filter out anything I own
+            venite.filter(doc => doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true)
+          )
+          : mine.concat(venite)
+        )
+      );
+
+      return processDocs(docs$, versions);
+    }
   }
 
-  findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = undefined) : Observable<LiturgicalDocument[]> {
-    return this.afs.collection<LiturgicalDocument>('Document', ref =>
+  findDocumentsByCategory(category : string[], language : string = 'en', versions : string[] = undefined, disableOffline : boolean = false, bulletinMode : boolean = false) : Observable<LiturgicalDocument[]> {
+    if(!disableOffline) {
+      const attempt = Array.from(new Set(versions)).map(version => BY_CATEGORY[`${language}-${version}`])
+        .flat()
+        .filter(doc => (doc?.category || []).some(r => category.indexOf(r) >= 0));
+      // TODO need to include Firebase ones AS WELL, in case I have my own with same category
+      if(attempt?.length > 0) {
+        // also send Firebase version, if online and in bulletin mode
+        const firebaseVersions$ = isOnline().pipe(
+          filter(online => online && bulletinMode),
+          switchMap(() => this.findDocumentsByCategory(category, language, versions, true))
+        );
+        return merge(of(attempt), firebaseVersions$);
+      } else {
+        return this.findDocumentsByCategory(category, language, versions, true);
+      }
+    } else {
+      return this.afs.collection<LiturgicalDocument>('Document', ref =>
       ref.where('category', 'array-contains-any', category)
          .where('language', '==', language)
          .where('sharing.organization', '==', 'venite')
@@ -269,6 +354,7 @@ export class DocumentService {
       startWith([LOADING]),
       catchError((error) => this.handleError(error))
     );
+    }
   }
 
   findDocuments() : Observable<IdAndDoc[]> {
@@ -392,11 +478,14 @@ export class DocumentService {
       if(typeof color !== 'string') {
         return of(color.hex);
       } else {
-        return this.afs.collection<LiturgicalColor>('Color', ref =>
+        const colorValue = COLORS[color.toLowerCase()];
+        return of(colorValue?.hex || color);
+        // COLORS switched to offline mode
+        /*return this.afs.collection<LiturgicalColor>('Color', ref =>
           ref.where('name', '==', color.toLowerCase())
         ).valueChanges().pipe(
           map(colors => colors.length > 0 ? colors[0].hex : color)
-        );
+        );*/
       }
     } else {
       return of('var(--ldf-background-color)')

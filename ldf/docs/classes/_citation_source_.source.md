@@ -24,7 +24,7 @@
 
 • **author**? : *undefined | string*
 
-*Defined in [citation/source.ts:7](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L7)*
+*Defined in [citation/source.ts:7](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L7)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **city**? : *undefined | string*
 
-*Defined in [citation/source.ts:9](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L9)*
+*Defined in [citation/source.ts:9](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L9)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **date**? : *undefined | string*
 
-*Defined in [citation/source.ts:10](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L10)*
+*Defined in [citation/source.ts:10](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L10)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **license**? : *undefined | string*
 
-*Defined in [citation/source.ts:6](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L6)*
+*Defined in [citation/source.ts:6](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L6)*
 
 Copyright metadata
 
@@ -58,7 +58,7 @@ ___
 
 • **publisher**? : *undefined | string*
 
-*Defined in [citation/source.ts:8](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L8)*
+*Defined in [citation/source.ts:8](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L8)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [citation/source.ts:3](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L3)*
+*Defined in [citation/source.ts:3](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L3)*
 
 A machine-readable unique identifying slug for the source
 
@@ -76,4 +76,4 @@ ___
 
 • **url**? : *undefined | string*
 
-*Defined in [citation/source.ts:11](https://github.com/gbj/venite/blob/c7c091c2/ldf/src/citation/source.ts#L11)*
+*Defined in [citation/source.ts:11](https://github.com/gbj/venite/blob/b383164b/ldf/src/citation/source.ts#L11)*

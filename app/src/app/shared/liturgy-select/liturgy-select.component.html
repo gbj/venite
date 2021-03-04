@@ -81,9 +81,13 @@
     <!-- Liturgy -->
     <ion-item>
       <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
-      <ng-container>
-        <ion-select formControlName="liturgy" ngDefaultControl (ionChange)="form.controls.liturgy.setValue($event.detail.value)">
-          <ion-select-option *ngFor="let liturgy of liturgyOptions$ | async" [value]="liturgy.slug">{{ liturgy.label }}</ion-select-option>
+      <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
+        <ion-select *ngIf="options?.length > 0 else skeleton"
+            formControlName="liturgy"
+            ngDefaultControl
+            (ionChange)="form.controls.liturgy.setValue($event.detail.value)"
+        >
+          <ion-select-option *ngFor="let liturgy of options" [value]="liturgy.slug">{{ liturgy.label }}</ion-select-option>
         </ion-select>
       </ng-container>
     </ion-item>
@@ -134,3 +138,7 @@
   [liturgy]="liturgy$ | async"
   (clientPreferencesChange)="menuPreferences$.next($event)"
 ></venite-liturgy-preference-menu>
+
+<ng-template #skeleton>
+  <ion-skeleton-text class="select"></ion-skeleton-text>
+</ng-template>

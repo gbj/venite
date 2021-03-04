@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from '@venite/ldf';
-import { ReplaySubject, Observable } from 'rxjs';
+import { ReplaySubject, Observable, from } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LectionaryService {
+  private _cache : Record<string, Promise<LectionaryEntry[]>> = {};
   private _cached_rcl : Record<string, ReplaySubject<LectionaryEntry[]>> = {};
 
   constructor(
@@ -48,8 +49,51 @@ export class LectionaryService {
     }
     // search for other readings in our DB
     else {
-      const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
+      return this.possiblyOfflineQuery(day, lectionaryName, readingType, alternateYear);
+    }
+  }
 
+  possiblyOfflineQuery(day : LiturgicalDay, lectionaryName : string = undefined, readingType : string = undefined, alternateYear : boolean, disableOffline : boolean = false) : Observable<LectionaryEntry[]> { 
+    const { when, whentype, includeDay } = this.when(lectionaryName, day, alternateYear);
+    
+    console.log('possiblyOfflineQuery', day.slug, lectionaryName, readingType);
+
+    // if possible, look for it in the JSON lectionary files
+    if(!disableOffline && ['bcp1979_30day_psalter', 'bcp1979_daily_office', 'bcp1979_daily_psalms'].includes(lectionaryName)) {
+      const key = `${day.date}-${lectionaryName}-${readingType}-${alternateYear}`;
+      console.log('looking for reading ', key);
+      if(!this._cache[key]) {
+        console.log('not cached, so loading it')
+        this._cache[key] = this.http.get<LectionaryEntry[]>(`/offline/lectionary/${lectionaryName}.json`).pipe(
+          map(entries => {
+            if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading_alt', 'first_reading', 'second_reading', 'gospel'].includes(readingType)) {
+              return entries.filter(entry => entry.day == day.slug && entry.type == readingType);
+            } else {
+              let halfFiltered = entries.filter(entry => entry.when.toString() == when.toString() && entry.whentype == whentype);
+              if(lectionaryName !== undefined) {
+                halfFiltered = halfFiltered.filter(entry => entry.lectionary == lectionaryName);
+              }
+    
+              if(readingType !== undefined) {
+                // for UI reasons, 'first_reading' with alternateYear = true needs to have a different `value` for the select
+                // so its value is set to 'first_reading_alt'
+                // but it still needs to search for 'first_reading'
+                halfFiltered = halfFiltered.filter(entry => entry.type == (readingType?.endsWith('_alt') ? readingType.replace('_alt', '') : readingType))
+              }
+    
+              if(includeDay !== false) {
+                halfFiltered = halfFiltered.filter(entry => entry.day == (day.propers || day.slug))
+              }
+  
+              return halfFiltered;
+            }
+          })
+        ).toPromise();
+      }
+      return from(this._cache[key]);
+    }
+    // otherwise go to the server-side DB
+    else {
       return this.afs.collection<LectionaryEntry>('LectionaryEntry', ref => {
         if(includeDay && day.holy_day_observed && day.slug && day.holy_day_observed?.type?.rank > 2 && !['first_reading_alt', 'first_reading', 'second_reading', 'gospel'].includes(readingType)) {
           let query = ref.where('day', '==', day.slug);

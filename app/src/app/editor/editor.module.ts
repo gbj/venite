@@ -17,6 +17,7 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 import { EditorDisplaySettingsComponent } from './editor-display-settings/editor-display-settings.component';
 import { EditorButtonsComponent } from './editor-buttons/editor-buttons.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { FontPickerComponent } from './font-picker/font-picker.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
     UploadImageComponent,
     EditorDisplaySettingsComponent,
     EditorButtonsComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    FontPickerComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

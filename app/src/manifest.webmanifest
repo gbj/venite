@@ -1,11 +1,11 @@
 {
   "name": "Venite",
   "short_name": "Venite",
-  "theme_color": "#1976d2",
+  "theme_color": "#fafafa",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "./",
+  "start_url": "./",
   "icons": [
     {
       "src": "assets/icon/icon-16x16.png",

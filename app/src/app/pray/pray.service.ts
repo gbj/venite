@@ -79,7 +79,8 @@ export class PrayService {
               startWith(LOADING),
               switchMap(child => child && child?.include(day, prefs) && !isCompletelyCompiled(child) 
                 ? this.compile(child, day, prefs, liturgyversions, originalPrefs)
-                : of(child))
+                : of(child)
+              )
             )
             : of(null))
         ).pipe(
@@ -91,9 +92,9 @@ export class PrayService {
           map(compiledChildren => new LiturgicalDocument({
             ... docBase,
             day: docBase.type === 'liturgy' ? day : undefined,
-            value: compiledChildren
+            value: compiledChildren.filter(child => Boolean(child))
           })),
-          //tap(doc => isCompletelyCompiled(doc) ? console.log('latest compiled form is', doc) : null)
+          tap(doc => console.log('latest compiled form is', doc))
         );
       }
 
@@ -185,7 +186,7 @@ export class PrayService {
         );
         break;
       case 'collect':
-        result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', versions).pipe(
+        result = this.documents.findDocumentsByCategory(['Collect of the Day'], doc.language || 'en', versions, false, this.bulletinMode).pipe(
           map(collects => collects.map(collect => {
             const label = (day.holy_days || []).map(day => day.slug).includes(collect.slug)
               ? titleCase(day.holy_days.find(day => day.slug === collect.slug)?.name) || collect.label || "The Collect of the Day"
@@ -213,7 +214,7 @@ export class PrayService {
       case 'slug':
       default:
         if(doc.slug && doc.type == 'liturgy') {
-          result = this.documents.findDocumentsBySlug(doc.slug, language, versions).pipe(
+          result = this.documents.findDocumentsBySlug(doc.slug, language, versions, false, this.bulletinMode).pipe(
             switchMap(doc => this.compile(docsToOption(doc), day, prefs, versions, originalPrefs))
           );
         } else if(doc.type == 'psalm' && doc.slug?.match(/Psalm \d+/g)) {
@@ -266,7 +267,7 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that slug, or (if multiple matches) an `Option` of all the possibilities  */
   lookupBySlug(docBase : LiturgicalDocument, slug : string, language : string, versions : string[], day : LiturgicalDay, prefs : ClientPreferences, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
-    return this.documents.findDocumentsBySlug(slug, language, versions).pipe(
+    return this.documents.findDocumentsBySlug(slug, language, versions, false, this.bulletinMode).pipe(
       // filter seasonally etc.
       map(docs => filterType ? this.filter(filterType, day, docs) : docs),
       // Gloria condition checks
@@ -299,7 +300,7 @@ export class PrayService {
 
   /** Gives either a single `LiturgicalDocument` matching that category, or (if multiple matches) an `Option` of all the possibilities  */
   lookupByCategory(category : string[], language : string, versions : string[], day : LiturgicalDay, filterType : 'seasonal' | 'evening' | 'day', rotate : boolean, random : boolean) : Observable<LiturgicalDocument> {
-    return this.documents.findDocumentsByCategory(category, language, versions).pipe(
+    return this.documents.findDocumentsByCategory(category, language, versions, false, this.bulletinMode).pipe(
       map(docs => this.filter(filterType, day, docs)),
       map(docs => this.rotate(rotate, random, day, docs)),
       map(docs => docsToOption(docs, versions)),
@@ -493,7 +494,7 @@ export class PrayService {
 
   /** Finds and inserts an appropriate seasonal antiphon */
   insertAntiphon(doc : LiturgicalDocument, day : LiturgicalDay, versions : string[]) : Observable<LiturgicalDocument> {
-    return this.documents.findDocumentsByCategory(['Seasonal Antiphon'], doc.language || 'en', versions).pipe(
+    return this.documents.findDocumentsByCategory(['Seasonal Antiphon'], doc.language || 'en', versions, false, this.bulletinMode).pipe(
       // filter antiphons to find the appropriate one
       map(antiphons => {
         const antiphonsForDay = antiphons.filter(antiphon => (antiphon?.category || []).includes(day.propers || day.slug));
@@ -506,8 +507,10 @@ export class PrayService {
               highestBlackLetter : HolyDay | undefined = blackLetterDays.sort((a, b) => b.type?.rank - a.type?.rank)[0],
               antiphonsForBlackLetterDays = antiphons.filter(antiphon => (antiphon?.category || []).includes(highestBlackLetter?.season));
 
+        let antiphon : LiturgicalDocument;
         if(antiphonsForDay.length == 0) {
           const antiphonsForSeason = antiphons.filter(antiphon => (antiphon?.category || []).includes(day.season || day.week?.season));
+
           return this.randomize(dateFromYMDString(day.date), day.evening, antiphonsForBlackLetterDays.concat(antiphonsForSeason));
         } else {
           return antiphonsForDay[0];
@@ -517,10 +520,10 @@ export class PrayService {
         ... doc,
         metadata: {
           ... doc.metadata,
-          insert_seasonal_antiphon: false,
+          insert_seasonal_antiphon: undefined,
           antiphon
         }
-      }))
+      })),
     )
   }
 }
