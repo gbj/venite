@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'displaySettings.display-settings' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <venite-display-settings *ngIf="settings$ | async as settings"
+    [settings]="settings"
+    [isModal]="false"
+  ></venite-display-settings>
+</ion-content>

@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'daily-readings',
     loadChildren: () => import('./daily-readings/daily-readings.module').then( m => m.DailyReadingsPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   }
 ];
 
