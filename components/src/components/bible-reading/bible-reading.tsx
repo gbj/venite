@@ -296,7 +296,9 @@ export class BibleReadingComponent {
                   : <ldf-string
                     citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
                     id={this.obj.uid}
-                    text={(verse as BibleReadingVerse).text}>
+                    text={(verse as BibleReadingVerse).text}
+                    fragment={this.path}
+                  >
                   </ldf-string>
                 )}
                 {shortResponse && !this.obj?.metadata?.omit_response && responseNode}
@@ -332,6 +334,7 @@ export class BibleReadingComponent {
                     id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
                     text={(verse as BibleReadingVerse).text}
                     index={verseIndex}
+                    fragment={this.path}
                   >
                   </ldf-string>
                 ]

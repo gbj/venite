@@ -1,0 +1,12 @@
+<ng-container *ngIf="auth.user | async as user else login">
+  <ion-button (click)="toggleFavorite(selection)" tappable>
+    <ion-icon [@heart]="favoriteMarked ? 'liked' : 'unliked'" [name]="favoriteMarked ? 'heart' : 'heart-outline'"></ion-icon>
+    <ion-label class="visually-hidden">{{'favorites.MarkAsFavorite' | translate }}</ion-label>
+  </ion-button>
+</ng-container>
+
+<ng-template #login>
+  <ion-button (click)="signIn()" color="primary">
+    Log in to <ion-icon name="heart-outline" slot="end"></ion-icon><ion-label class="visually-hidden">{{'favorites.Like' | translate}}</ion-label>
+  </ion-button>
+</ng-template>

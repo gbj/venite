@@ -90,7 +90,7 @@ export class HeadingComponent {
   private textNode(text : string, index : number) : JSX.Element {
     return this.editable
       ? <EditableNode uidOrSlug={this.obj.uid || this.obj.slug || ''} path={this.path} text={text} index={index} />
-      : <ldf-string text={text}></ldf-string>;
+      : <ldf-string text={text} fragment={this.path}></ldf-string>;
   }
 
   private dateNode() : JSX.Element {

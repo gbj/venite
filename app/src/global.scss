@@ -449,3 +449,14 @@ ion-alert {
     background-color: var(--ecru) !important;
   }
 }
+
+/* Selections/Favorites */
+:root {
+  --ldf-selected-background: #d4e7ff;
+  --ldf-liked-background: #ffc0cb;
+}
+
+.dark {
+  --ldf-selected-background: #315781;
+  --ldf-liked-background: #bb7b86;
+}

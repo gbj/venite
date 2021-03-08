@@ -1,0 +1,10 @@
+<ion-content class="ion-padding">
+  <div class="ion-padding favorite-text">
+    <ion-textarea autoGrow *ngIf="favorited" (ionChange)="updateFavoriteText($event)" debounce="500" [placeholder]="'favorites.why' | translate">
+    </ion-textarea><br>
+    <ion-label *ngIf="textUpdated">
+      <ion-text *ngIf="textUpdated == 'saving'">{{'favorites.Saving' | translate}}</ion-text>
+      <ion-text *ngIf="textUpdated == 'saved'" color="success">{{'favorites.Saved' | translate}}</ion-text>
+    </ion-label>
+  </div>
+</ion-content>

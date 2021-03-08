@@ -1603,13 +1603,15 @@ export class LdfRubric {
 }
 
 export declare interface LdfString extends Components.LdfString {}
-@ProxyCmp({inputs: ['citation', 'dropcap', 'dropcapMinLength', 'index', 'replaceTetragrammaton', 'text']})
-@Component({ selector: 'ldf-string', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['citation', 'dropcap', 'dropcapMinLength', 'index', 'replaceTetragrammaton', 'text'] })
+@ProxyCmp({inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text']})
+@Component({ selector: 'ldf-string', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text'] })
 export class LdfString {
+  ldfStringClicked!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfStringClicked']);
   }
 }
 

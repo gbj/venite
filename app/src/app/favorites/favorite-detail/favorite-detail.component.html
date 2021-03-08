@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title routerLink="/">{{'menu.favorites' | translate}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" *ngIf="obj$ | async as obj">
+      <ion-button (click)="delete(obj.id, obj.data)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+        <ion-label class="visually-hidden">Delete</ion-label>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="obj$ | async as obj else loading">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title *ngIf="obj.data.citation">{{ obj.data.citation}}</ion-card-title>
+      <ion-card-subtitle *ngIf="obj.data.date_created">{{ obj.data.date_created.toDate() | date:'shortDate' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ obj.data.text }}</p>
+      <ion-textarea autoGrow [value]="obj.data.note" (ionChange)="updateFavoriteText(obj, $event)" debounce="500" placeholder="Why did you like it? You can use #hashtags">
+      </ion-textarea>
+      <ion-item lines="none">
+        <ion-label slot="start">
+          <p *ngIf="obj.data.tags && obj.data.tags.length > 0">Tags:
+            <ng-container *ngFor="let tag of obj.data.tags; let index = index">
+              <a [routerLink]="['..']" [fragment]="tag | fragment" class="tag">{{tag}}</a>
+              <span *ngIf="index < obj.data.tags.length - 1"> | </span>
+            </ng-container>
+          </p>
+        </ion-label>
+        <ion-button [routerLink]="obj.data.url" [fragment]="obj.data.fragment || ''" slot="end" fill="clear">
+          <ion-label>Show in Context</ion-label>
+          <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ng-template #loading>
+  <p class="loading">{{ 'Loading' | translate }}</p>
+</ng-template>

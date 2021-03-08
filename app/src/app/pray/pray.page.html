@@ -4,6 +4,17 @@
     <ion-buttons collapse="true" slot="start">
       <ion-back-button></ion-back-button>
       <ion-menu-button></ion-menu-button>
+      <!-- Selection Undo/Redo -->
+      <ng-container *ngIf="!bulletinMode">
+        <ion-button (click)="selections.undo()" *ngIf="selections.canUndo$ | async">
+          <ion-icon name="arrow-undo" slot="icon-only"></ion-icon>
+          <ion-label class="display-hidden">{{'selection.Undo' | translate}}</ion-label>
+        </ion-button>
+        <ion-button (click)="selections.redo()" *ngIf="selections.canRedo$ | async">
+          <ion-icon name="arrow-redo" slot="icon-only"></ion-icon>
+          <ion-label class="display-hidden">{{'selection.Redo' | translate}}</ion-label>
+        </ion-button>
+      </ng-container>
     </ion-buttons>
     <ng-container *ngIf="doc$ | async as doc">
       <ion-title>{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
@@ -55,6 +66,7 @@
             <div style="--ldf-font-face: {{doc?.metadata?.font}}; --ldf-drop-font-family: {{doc?.metadata?.font}};">
               <ng-container *ngIf="swapData$ | async as data">
                 <ldf-liturgical-document
+                  (document:ldfStringClicked)="selectText($event)"
                   path="/"
                   [doc]="doc"
                   [editable]="false"
@@ -96,6 +108,30 @@
     </ng-container>
     <!--<ion-text>{{ audioText | async }}</ion-text>-->
   </ion-toolbar>
+  <ng-container *ngIf="doc$ | async as doc">
+    <ng-container *ngIf="selections.selection$ | async as selection">
+      <ion-toolbar *ngIf="selection.text">
+        <ion-buttons slot="start">
+          <ion-button *ngIf="canShare && selection?.text else clipboard" (click)="share(doc, selection)">
+            <ion-icon name="share"></ion-icon>
+            <ion-label class="display-hidden">{{'selection.Share' | translate}}</ion-label>
+          </ion-button>
+          <ng-template #clipboard>
+            <ion-button (click)="copy(doc, selection)">
+              <ion-icon [name]="clipboardIcon"></ion-icon>
+              <ion-label class="display-hidden">{{'selection.CopyToClipboard' | translate}}</ion-label>
+            </ion-button>
+          </ng-template>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <venite-mark-favorite *ngIf="selection"
+            [selection]="selection"
+            [favoriteMarked]="false"
+          ></venite-mark-favorite>
+        </ion-buttons>
+      </ion-toolbar>
+    </ng-container>
+  </ng-container>
 </ion-footer>
 
 <ng-template #loading>

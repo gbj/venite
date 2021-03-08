@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'menu.favorites' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="auth.user | async as user else needlogin">
+    <ng-container *ngIf="objects$ | async as objects else loading">
+      <ion-toolbar>
+        <ion-searchbar *ngIf="objects" slot="start" [formControl]="search" ngDefaultControl></ion-searchbar>
+      </ion-toolbar>
+      <ion-list>
+        <div *ngIf="!objects || (objects?.length == 0 && !search.value)" class="tutorial">
+          <h1>Looks like you haven’t <span class="like">liked</span> any verses.</h1>
+          <p><a routerLink='/'>Pray</a> one of the Offices. Select a verse you liked. Click the <ion-icon name="heart-outline" aria-label="heart" class="like"></ion-icon> and add some notes to remind yourself why you loved it.</p>
+          <p>Then come back to this page and remind yourself of all the ways God has spoken to you over the years!</p>
+        </div>
+        <ng-container *ngIf="objects && objects.length > 0">
+          <ion-item *ngFor="let obj of objects" [routerLink]="obj.id">
+            <ion-label>
+              <h2 *ngIf="obj.data.citation">{{ obj.data.citation}}</h2>
+              <h3>{{ obj.data?.date_created?.toDate() | date:'MM/dd/yyyy' }}</h3>
+              <p>{{ obj.data.text }}</p>
+              <p class="note">{{ obj.data.note }}</p>
+              <p *ngIf="obj.data.tags && obj.data.tags.length > 0">Tags:
+                <ng-container *ngFor="let tag of obj.data.tags; let index = index">
+                  <a (click)="search.setValue(tag)" class="tag">{{tag}}</a>
+                  <span *ngIf="index < obj.data.tags.length - 1"> | </span>
+                </ng-container>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </ng-container>
+  </ng-container>
+</ion-content>
+
+<ng-template #loading>
+  <p class="loading">{{ 'Loading' | translate }}</p>
+</ng-template>
+
+<ng-template #needlogin>
+  <p class="loading">{{ 'login-to-continue' | translate }}</p>
+</ng-template>

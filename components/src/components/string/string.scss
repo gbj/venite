@@ -50,3 +50,11 @@
   margin-top: 0;
   line-height: clamp(0.5em, calc(var(--ldf-drop-line-height) + 0.3em), 1em);
 }
+
+.selected {
+  background-color: var(--ldf-selected-background);
+}
+
+.liked {
+  background-color: var(--ldf-liked-background);
+}

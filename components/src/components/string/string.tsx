@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Element, JSX, h } from '@stencil/core';
+import { Component, Prop, Watch, State, Element, JSX, Event, EventEmitter, h } from '@stencil/core';
 import { SelectableCitation } from '@venite/ldf';
 
 @Component({
@@ -46,6 +46,12 @@ export class StringComponent {
    * String's index within its parent.
    */
   @Prop() index : number;
+
+  /** A URL fragment that can be used to access this string uniquely */
+  @Prop() fragment : string | undefined;
+
+  /** Emitted when text is clicked (used for Share/Favorite) */
+  @Event({ bubbles: true }) ldfStringClicked : EventEmitter<{ target: HTMLElement; text: string; citation: SelectableCitation; fragment?: string; }>;
 
   // Private methods
   processString() {
@@ -166,6 +172,8 @@ export class StringComponent {
 
   // Render
   render() {
-    return this.text && <span>{this.processedString}</span>;
+    return this.text && <span onClick={() => this.ldfStringClicked.emit({ target: this.element, text: this.text, citation: this.citation, fragment: this.fragment })}>
+      {this.processedString}
+    </span>;
   }
 }

@@ -1,0 +1,31 @@
+.tutorial {
+  max-width: 600px;
+  padding: 1em;
+  margin: auto;
+
+  h1 {
+    font-weight: normal;
+  }
+
+  .like {
+    font-weight: bold;
+    color: red;
+    fill: red;
+  }
+}
+
+a.tag:hover {
+  cursor: pointer;
+}
+
+.note {
+  font-style: italic;
+}
+
+.loading {
+  display: block;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+  margin-top: 30%;
+}

@@ -302,5 +302,20 @@
     "Resume": "Resume",
     "Fast-Forward": "Fast Forward"
   },
-  "Skip This": "Skip This"
+  "Skip This": "Skip This",
+  "selection": {
+    "Undo": "Undo",
+    "Redo": "Redo",
+    "Share": "Share",
+    "Like": "Like",
+    "CopyToClipboard": "Copy to Clipboard",
+    "shareTitle": "Share your Prayer"
+  },
+  "favorites": {
+    "MarkAsFavorite": "Mark as Favorite",
+    "Like": "Like",
+    "Saving": "Saving...",
+    "Saved": "Saved.",
+    "why": "Why did you like it? You can use #hashtags"
+  }
 }

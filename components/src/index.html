@@ -50,6 +50,10 @@
       }])
     });
 
+    document.addEventListener('ldfStringClicked', (ev) => {
+      console.log('ldfStringClicked', ev);
+    })
+
 
     const LITURGY = {
   "label": "Morning Prayer",
@@ -3456,7 +3460,7 @@
   }
 }
 
-    const node = document.createElement('ldf-editor');
+    const node = document.createElement('ldf-liturgical-document');
     node.setAttribute('doc', JSON.stringify(LITURGY));
     node.setAttribute('editable', false);
     node.setAttribute('preview', false);

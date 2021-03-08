@@ -223,6 +223,7 @@ export class LiturgicalDocumentComponent {
 
         {/* Render the Document */}
         <div
+          id={(this.path || '').replace(/\//g, '-')}
           class={{
             doc: true,
             editable: this.editable || this.preview

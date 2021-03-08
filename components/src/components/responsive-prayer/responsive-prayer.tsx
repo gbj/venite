@@ -85,6 +85,7 @@ export class ResponsivePrayerComponent {
         id={`${this.obj.uid}-${index}-${part}`}
         text={line[part]}
         dropcap={index == 0 ? "enabled" : "disabled"}
+        fragment={this.path}
       >
       </ldf-string>
     )
@@ -104,7 +105,9 @@ export class ResponsivePrayerComponent {
           <ldf-string
             citation={{label: this.obj.label}}
             id={`${this.obj.uid}-${index}-response`}
-            text={text}>
+            text={text}
+            fragment={this.path}
+          >
           </ldf-string>
         </span>
       );

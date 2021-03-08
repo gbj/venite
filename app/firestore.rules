@@ -80,6 +80,11 @@ service cloud.firestore {
       allow create, read, update, delete: if request.auth.uid != null;
       //allow update, delete: if hasWriteAccess(docSharingFromDocId(docId));
      }
+     
+     match /Favorites/{docId} {
+      allow read, update, delete: if request.auth.uid == resource.data.user;
+      allow create: if request.auth.uid == request.resource.auth.uid;
+    }
 
     match /Color/{docId} {
       allow read: if true;

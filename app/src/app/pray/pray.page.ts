@@ -20,6 +20,12 @@ import { SpeechService, SpeechServiceTracking } from '../services/speech.service
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { EditorState } from '../editor/ldf-editor/editor-state';
 import { isCompletelyCompiled } from './is-completely-rendered';
+import { SelectedTextEvent, SelectionService } from './selection.service';
+import { PlatformService } from '@venite/ng-platform';
+import { Location } from '@angular/common';
+
+import { Plugins } from '@capacitor/core';
+const { Share, Clipboard } = Plugins;
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -83,6 +89,10 @@ export class PrayPage implements OnInit, OnDestroy {
   bulletinLabel : string | undefined;
   bulletinSlug : string | undefined;
 
+  // Sharing
+  canShare : boolean = false;
+  clipboardIcon : string = "clipboard";
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
@@ -100,7 +110,10 @@ export class PrayPage implements OnInit, OnDestroy {
     private actionSheetController : ActionSheetController,
     public speechService : SpeechService,
     private loadingController : LoadingController,
-    private toast : ToastController
+    private toast : ToastController,
+    public selections : SelectionService,
+    private platform: PlatformService,
+    private location : Location
   ) { }
 
   ngOnDestroy() {
@@ -110,7 +123,8 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log('window.history.state = ', window.history.state);
+    this.canShare = Boolean((navigator as any).share) || this.platform.is('capacitor');
+
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
     // bulletin mode (i.e., include all possibilities as options)
     this.bulletinMode = Boolean(location?.pathname?.startsWith('/bulletin'));
@@ -246,6 +260,19 @@ export class PrayPage implements OnInit, OnDestroy {
         stateDoc$,
         this.modifiedDoc$
       );
+      stateDoc$.subscribe(() => {
+        const hash = window?.location?.hash;
+
+        // TODO kludgey
+        setTimeout(() => {
+          if(hash) {
+            const el = querySelectorDeep(hash.replace(/\//g, '-'));
+            if(el) {
+              el.scrollIntoView();
+            }
+          }
+        }, 1000);
+     })
     }
     
     if(this.bulletinMode) {
@@ -782,5 +809,49 @@ export class PrayPage implements OnInit, OnDestroy {
         }
       );
     }
+  }
+
+  // Selection
+  selectText(ev : CustomEvent) {
+    this.selections.add(ev.detail);
+  }
+
+  shareTextFormat(doc : LiturgicalDocument, selection : SelectedTextEvent) : { title: string; url: string; cite: string; hashtag: string } {
+    const baseUrl = this.location.path(),
+      anchor = selection.fragment ? `#${selection.fragment}` : '',
+      url = `https://beta.venite.app${baseUrl}${anchor}`,
+      date = dateFromYMDString(doc.day.date),
+      cite = selection.citation ? `- ${selection.citation}` : '',
+      hashtag = `#${doc.label.replace(/\s/g, '')}`,
+      title = `${doc.label} - ${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`;
+    return { title, url, cite, hashtag };
+  }
+
+  async share(doc : LiturgicalDocument, selection : SelectedTextEvent) {
+    const { title, url, cite, hashtag } = this.shareTextFormat(doc, selection);
+
+    this.selections.clear();
+
+    Share.share({
+      title,
+      text: `“${selection.text}” ${cite} ${hashtag}`,
+      url,
+      dialogTitle: this.translate.instant('selection.shareTitle')
+    });
+  }
+
+  async copy(doc : LiturgicalDocument, selection : SelectedTextEvent) {
+    const { url, cite, hashtag } = this.shareTextFormat(doc, selection);
+
+    this.selections.clear();
+
+    Clipboard.write({
+      string: `“${selection.text}” ${cite} ${hashtag} ${url}`
+    }).then(() => {
+      this.clipboardIcon = "checkmark";
+
+      setTimeout(() => this.clipboardIcon = "clipboard", 1000);
+    })
+      .catch(() => this.clipboardIcon = "close")
   }
 }

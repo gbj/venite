@@ -13,6 +13,9 @@ import { ScrollVanishDirective } from './scroll-vanish.directive';
 import { EditorPageModule } from '../editor/editor.module';
 import { DisplaySettingsConfig } from 'dist/pray/lib/display-settings/display-settings-config';
 import { LiturgyConfig } from 'dist/pray/lib/liturgy-config';
+import { MarkFavoriteComponent } from './mark-favorite/mark-favorite.component';
+import { FavoriteTextComponent } from './favorite-text/favorite-text.component';
+import { FavoritesPageModule } from '../favorites/favorites.module';
 
 interface PrayRootConfig {
   providers: Provider[];
@@ -29,9 +32,9 @@ interface PrayRootConfig {
     TranslateModule,
     AuthModule,
     PrayPageRoutingModule,
-    EditorPageModule
+    EditorPageModule,
   ],
-  declarations: [PrayPage, ScrollVanishDirective],
+  declarations: [PrayPage, ScrollVanishDirective, MarkFavoriteComponent, FavoriteTextComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PrayPageModule {

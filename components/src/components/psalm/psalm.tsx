@@ -319,7 +319,9 @@ export class PsalmComponent {
                   <ldf-string text={verse.verse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
                     dropcap={sectionIndex == 0 && verseIndex == 0 ? 'force' : 'disabled'}
-                    index={verseIndex}>
+                    index={verseIndex}
+                    fragment={this.path}
+                  >
                   </ldf-string>}
                 </div>
               );
@@ -339,7 +341,9 @@ export class PsalmComponent {
                   </ldf-editable-text> :
                   <ldf-string text={verse.halfverse}
                     citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
-                    dropcap='disabled'>
+                    dropcap='disabled'
+                    fragment={this.path}
+                  >
                   </ldf-string>}
                 </div>
               );
