@@ -14,7 +14,7 @@
 
 ▸ **sundayBefore**(`date`: Date): *Date*
 
-*Defined in [calendar/utils/sunday-before.ts:2](https://github.com/gbj/venite/blob/a8a1a2e2/ldf/src/calendar/utils/sunday-before.ts#L2)*
+*Defined in [calendar/utils/sunday-before.ts:2](https://github.com/gbj/venite/blob/f52da2b3/ldf/src/calendar/utils/sunday-before.ts#L2)*
 
 Return `Date` of the Sunday before the given `Date`, stripped of time info
 

@@ -22,7 +22,7 @@ Represents a particular liturgical or sanctoral calendar
 
 • **name**: *string*
 
-*Defined in [calendar/kalendar.ts:4](https://github.com/gbj/venite/blob/a8a1a2e2/ldf/src/calendar/kalendar.ts#L4)*
+*Defined in [calendar/kalendar.ts:4](https://github.com/gbj/venite/blob/f52da2b3/ldf/src/calendar/kalendar.ts#L4)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **sanctoral**: *boolean*
 
-*Defined in [calendar/kalendar.ts:7](https://github.com/gbj/venite/blob/a8a1a2e2/ldf/src/calendar/kalendar.ts#L7)*
+*Defined in [calendar/kalendar.ts:7](https://github.com/gbj/venite/blob/f52da2b3/ldf/src/calendar/kalendar.ts#L7)*
 
 `true` if the `Kalendar` is only for saints’ days and does not include a full cycle of seasons
 
@@ -40,4 +40,4 @@ ___
 
 • **slug**: *string*
 
-*Defined in [calendar/kalendar.ts:3](https://github.com/gbj/venite/blob/a8a1a2e2/ldf/src/calendar/kalendar.ts#L3)*
+*Defined in [calendar/kalendar.ts:3](https://github.com/gbj/venite/blob/f52da2b3/ldf/src/calendar/kalendar.ts#L3)*

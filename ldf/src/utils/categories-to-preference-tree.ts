@@ -9,7 +9,8 @@ export function categoriesToPreferenceTree(
       ...obj,
       [category]: Object.entries(preferences)
         .map(([key, pref]) => new Preference({ ...pref, key }))
-        .filter((pref) => pref.category == category || (!pref.category && category == 'Preferences')),
+        .filter((pref) => pref.category == category || (!pref.category && category == 'Preferences'))
+        .sort((a, b) => (a.label < b.label ? -1 : 1)),
     }),
     {},
   );
