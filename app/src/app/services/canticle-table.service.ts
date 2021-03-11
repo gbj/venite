@@ -1,29 +1,43 @@
-import { Injectable } from '@angular/core';
-import { from, Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { Injectable } from "@angular/core";
+import { from, Observable } from "rxjs";
+import { AngularFirestore } from "@angular/fire/firestore";
 
-import { CanticleTableEntry } from '@venite/ldf';
-import { CanticleTableServiceInterface } from 'service-api';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { CanticleTableEntry } from "@venite/ldf";
+import { CanticleTableServiceInterface } from "service-api";
+import { HttpClient } from "@angular/common/http";
+import { map } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CanticleTableService implements CanticleTableServiceInterface {
-  private _cached : Promise<Record<string, CanticleTableEntry[]>>;
+  private _cached: Promise<Record<string, CanticleTableEntry[]>>;
 
-  constructor(private readonly afs: AngularFirestore, private http : HttpClient) { }
+  constructor(
+    private readonly afs: AngularFirestore,
+    private http: HttpClient
+  ) {}
 
-  findEntry(table : string, nth : number, fallbackTable : string = undefined) : Observable<CanticleTableEntry[]> {
+  findEntry(
+    table: string,
+    nth: number,
+    fallbackTable: string = undefined
+  ): Observable<CanticleTableEntry[]> {
     const key = `${table}-${nth}`;
-    if(!this._cached) {
-      this._cached = this.http.get<Record<string, CanticleTableEntry[]>>('/offline/canticle_table.json').toPromise();
+    if (!this._cached) {
+      this._cached = this.http
+        .get<Record<string, CanticleTableEntry[]>>(
+          "/offline/canticle_table.json"
+        )
+        .toPromise();
     }
     return from(this._cached).pipe(
-      map(entries => fallbackTable
-        ? (entries[`${table ?? 'bcp1979'}-${nth}`] || []).concat(entries[`${fallbackTable}-${nth}`] || [])
-        : entries[`${table ?? 'bcp1979'}-${nth}`] || []
+      map((entries) =>
+        fallbackTable
+          ? (entries[`${table ?? "bcp1979"}-${nth}`] || []).concat(
+              entries[`${fallbackTable}-${nth}`] || []
+            )
+          : entries[`${table ?? "bcp1979"}-${nth}`] || []
       )
     );
 
@@ -36,5 +50,4 @@ export class CanticleTableService implements CanticleTableServiceInterface {
            .where('nth', '==', nth)
     ).valueChanges();*/
   }
-
 }

@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { CanticleTableService } from './canticle-table.service';
+import { CanticleTableService } from "./canticle-table.service";
 
-describe('CanticleTableService', () => {
+describe("CanticleTableService", () => {
   let service: CanticleTableService;
 
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('CanticleTableService', () => {
     service = TestBed.inject(CanticleTableService);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { PsalterPage } from './psalter.page';
+import { PsalterPage } from "./psalter.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: PsalterPage
-  }
+    path: "",
+    component: PsalterPage,
+  },
 ];
 
 @NgModule({

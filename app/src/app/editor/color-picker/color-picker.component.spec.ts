@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { ColorPickerComponent } from './color-picker.component';
+import { ColorPickerComponent } from "./color-picker.component";
 
-describe('ColorPickerComponent', () => {
+describe("ColorPickerComponent", () => {
   let component: ColorPickerComponent;
   let fixture: ComponentFixture<ColorPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColorPickerComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [ColorPickerComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ColorPickerComponent);
@@ -18,7 +18,7 @@ describe('ColorPickerComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

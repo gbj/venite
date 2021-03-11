@@ -1,58 +1,58 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "../auth.service";
+import { ModalController } from "@ionic/angular";
 
 @Component({
-  selector: 'venite-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: "venite-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
   error: string;
-  mode : 'login' | 'register' | 'organization' = 'login';
+  mode: "login" | "register" | "organization" = "login";
   reset: boolean = false;
 
-  constructor(
-    public auth: AuthService,
-    private modal : ModalController
-  ) { }
+  constructor(public auth: AuthService, private modal: ModalController) {}
 
   ngOnInit() {}
 
   registerView() {
-    this.mode = 'register';
+    this.mode = "register";
   }
 
-  organizationView(doSwitch : boolean) {
-    this.mode = 'organization';
+  organizationView(doSwitch: boolean) {
+    this.mode = "organization";
   }
 
-  dismiss(loggedIn : boolean = false) {
+  dismiss(loggedIn: boolean = false) {
     this.modal.dismiss(loggedIn);
   }
 
   async submitEmailAndPassword() {
     try {
-      const credential = await this.auth.signInWithEmailAndPassword(this.email, this.password);
-      if(credential?.user) {
+      const credential = await this.auth.signInWithEmailAndPassword(
+        this.email,
+        this.password
+      );
+      if (credential?.user) {
         this.dismiss(true);
       }
-    } catch(e) {
+    } catch (e) {
       console.warn(e);
       this.error = e.message;
     }
   }
 
-  async login(service : string) {
+  async login(service: string) {
     const credential = await this.auth.login(service);
     // if it's their first time signing in, sending them to the 'Join Organization' view
-    if(credential?.user && credential?.additionalUserInfo?.isNewUser) {
-      this.mode = 'organization';
+    if (credential?.user && credential?.additionalUserInfo?.isNewUser) {
+      this.mode = "organization";
     }
     // otherwise just kill the modal
-    else if(credential?.user) {
+    else if (credential?.user) {
       this.dismiss(true);
     }
   }
@@ -62,8 +62,8 @@ export class LoginComponent implements OnInit {
   }
 
   async forgotPassword() {
-    if(!this.email) {
-      this.error = 'Please enter your email address to reset your password.'
+    if (!this.email) {
+      this.error = "Please enter your email address to reset your password.";
     }
     await this.auth.resetPassword(this.email);
     this.reset = true;

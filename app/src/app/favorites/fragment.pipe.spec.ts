@@ -1,7 +1,7 @@
-import { FragmentPipe } from './fragment.pipe';
+import { FragmentPipe } from "./fragment.pipe";
 
-describe('FragmentPipe', () => {
-  it('create an instance', () => {
+describe("FragmentPipe", () => {
+  it("create an instance", () => {
     const pipe = new FragmentPipe();
     expect(pipe).toBeTruthy();
   });

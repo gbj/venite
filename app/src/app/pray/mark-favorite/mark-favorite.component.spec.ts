@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { MarkFavoriteComponent } from './mark-favorite.component';
+import { MarkFavoriteComponent } from "./mark-favorite.component";
 
-describe('MarkFavoriteComponent', () => {
+describe("MarkFavoriteComponent", () => {
   let component: MarkFavoriteComponent;
   let fixture: ComponentFixture<MarkFavoriteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarkFavoriteComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [MarkFavoriteComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MarkFavoriteComponent);
@@ -18,7 +18,7 @@ describe('MarkFavoriteComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

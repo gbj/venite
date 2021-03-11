@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { UploadImageComponent } from './upload-image.component';
+import { UploadImageComponent } from "./upload-image.component";
 
-describe('UploadImageComponent', () => {
+describe("UploadImageComponent", () => {
   let component: UploadImageComponent;
   let fixture: ComponentFixture<UploadImageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UploadImageComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [UploadImageComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(UploadImageComponent);
@@ -18,7 +18,7 @@ describe('UploadImageComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,23 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit } from "@angular/core";
+import { ModalController } from "@ionic/angular";
 
-import { AuthService } from '../auth.service';
-import { LoginComponent } from '../login/login.component';
+import { AuthService } from "../auth.service";
+import { LoginComponent } from "../login/login.component";
 
-import { Subscription } from 'rxjs';
+import { Subscription } from "rxjs";
 
 @Component({
-  selector: 'venite-auth-menu-button',
-  templateUrl: './auth-menu-button.component.html',
-  styleUrls: ['./auth-menu-button.component.scss'],
+  selector: "venite-auth-menu-button",
+  templateUrl: "./auth-menu-button.component.html",
+  styleUrls: ["./auth-menu-button.component.scss"],
 })
 export class AuthMenuButtonComponent implements OnInit {
-  user$ : Subscription;
+  user$: Subscription;
 
-  constructor(
-    public auth : AuthService,
-    private modal : ModalController
-  ) { }
+  constructor(public auth: AuthService, private modal: ModalController) {}
 
   ngOnInit() {}
 
@@ -25,7 +22,7 @@ export class AuthMenuButtonComponent implements OnInit {
     const modal = await this.modal.create({
       component: LoginComponent,
       swipeToClose: true,
-      showBackdrop: true
+      showBackdrop: true,
     });
     return await modal.present();
   }

@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { CanticleSelectComponent } from './canticle-select.component';
+import { CanticleSelectComponent } from "./canticle-select.component";
 
-describe('CanticleSelectComponent', () => {
+describe("CanticleSelectComponent", () => {
   let component: CanticleSelectComponent;
   let fixture: ComponentFixture<CanticleSelectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CanticleSelectComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [CanticleSelectComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CanticleSelectComponent);
@@ -18,7 +18,7 @@ describe('CanticleSelectComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

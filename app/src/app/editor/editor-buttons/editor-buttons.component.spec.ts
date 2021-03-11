@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { EditorButtonsComponent } from './editor-buttons.component';
+import { EditorButtonsComponent } from "./editor-buttons.component";
 
-describe('EditorButtonsComponent', () => {
+describe("EditorButtonsComponent", () => {
   let component: EditorButtonsComponent;
   let fixture: ComponentFixture<EditorButtonsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditorButtonsComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [EditorButtonsComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EditorButtonsComponent);
@@ -18,7 +18,7 @@ describe('EditorButtonsComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,27 +1,34 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '@angular/core';
-import { GestureController, Gesture } from '@ionic/angular';
-import { DroppableComponent } from '../droppable/droppable.component';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  AfterViewInit,
+} from "@angular/core";
+import { GestureController, Gesture } from "@ionic/angular";
+import { DroppableComponent } from "../droppable/droppable.component";
 
 /* Adapted from Josh Morony's Stencil version
  * https://www.joshmorony.com/create-your-own-drag-and-drop-functionality-using-ionic-gestures/ */
 
 @Component({
-  selector: 'venite-draggable',
-  templateUrl: './draggable.component.html',
-  styleUrls: ['./draggable.component.scss'],
+  selector: "venite-draggable",
+  templateUrl: "./draggable.component.html",
+  styleUrls: ["./draggable.component.scss"],
 })
 export class DraggableComponent implements OnInit, AfterViewInit {
-  @Input() droppable : DroppableComponent;
-  @Input() dropData : any;
+  @Input() droppable: DroppableComponent;
+  @Input() dropData: any;
   @ViewChild("draggable") draggable: ElementRef;
 
-  constructor(private gestureCtrl : GestureController) { }
+  constructor(private gestureCtrl: GestureController) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     const style = this.draggable.nativeElement.style;
-  
+
     const dragGesture: Gesture = this.gestureCtrl.create({
       el: this.draggable.nativeElement,
       gestureName: "draggable",
@@ -44,5 +51,4 @@ export class DraggableComponent implements OnInit, AfterViewInit {
 
     dragGesture.enable();
   }
-
 }

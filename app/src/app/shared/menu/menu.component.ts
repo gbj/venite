@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { PlatformService } from 'platform';
+import { Component, OnInit } from "@angular/core";
+import { PlatformService } from "platform";
 
 @Component({
-  selector: 'venite-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: "venite-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.scss"],
 })
 export class MenuComponent {
-  remindersEnabled : boolean = false;
+  remindersEnabled: boolean = false;
 
-  constructor(
-    private platform : PlatformService
-  ) { }
+  constructor(private platform: PlatformService) {}
 
   async ngOnInit() {
-    this.remindersEnabled = this.platform.is('capacitor');
+    this.remindersEnabled = this.platform.is("capacitor");
   }
-
 }

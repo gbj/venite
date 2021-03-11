@@ -8,4 +8,4 @@ export type Favorite = {
   text: string;
   note: string;
   tags: string[];
-}
+};

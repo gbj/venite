@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { LectionarySelectComponent } from './lectionary-select.component';
+import { LectionarySelectComponent } from "./lectionary-select.component";
 
-describe('LectionarySelectComponent', () => {
+describe("LectionarySelectComponent", () => {
   let component: LectionarySelectComponent;
   let fixture: ComponentFixture<LectionarySelectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LectionarySelectComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [LectionarySelectComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LectionarySelectComponent);
@@ -18,7 +18,7 @@ describe('LectionarySelectComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

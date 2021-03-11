@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { SettingsPageRoutingModule } from './settings-routing.module';
+import { SettingsPageRoutingModule } from "./settings-routing.module";
 
-import { SettingsPage } from './settings.page';
-import { PrayPageModule } from '@venite/ng-pray';
-import { TranslateModule } from '@ngx-translate/core';
+import { SettingsPage } from "./settings.page";
+import { PrayPageModule } from "@venite/ng-pray";
+import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
   imports: [
@@ -17,8 +17,8 @@ import { TranslateModule } from '@ngx-translate/core';
     IonicModule,
     SettingsPageRoutingModule,
     PrayPageModule,
-    TranslateModule
+    TranslateModule,
   ],
-  declarations: [SettingsPage]
+  declarations: [SettingsPage],
 })
 export class SettingsPageModule {}

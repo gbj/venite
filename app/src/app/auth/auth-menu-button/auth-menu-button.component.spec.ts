@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { AuthMenuButtonComponent } from './auth-menu-button.component';
+import { AuthMenuButtonComponent } from "./auth-menu-button.component";
 
-describe('AuthMenuButtonComponent', () => {
+describe("AuthMenuButtonComponent", () => {
   let component: AuthMenuButtonComponent;
   let fixture: ComponentFixture<AuthMenuButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthMenuButtonComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [AuthMenuButtonComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AuthMenuButtonComponent);
@@ -18,7 +18,7 @@ describe('AuthMenuButtonComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,31 +1,38 @@
-import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
-import { User } from 'firebase';
-import { Observable, of } from 'rxjs';
-import { finalize } from 'rxjs/operators';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  Output,
+  EventEmitter,
+} from "@angular/core";
+import { User } from "firebase";
+import { Observable, of } from "rxjs";
+import { finalize } from "rxjs/operators";
 
-import { UploadService } from 'src/app/services/upload.service';
+import { UploadService } from "src/app/services/upload.service";
 
 @Component({
-  selector: 'venite-edit-avatar',
-  templateUrl: './edit-avatar.component.html',
-  styleUrls: ['./edit-avatar.component.scss'],
+  selector: "venite-edit-avatar",
+  templateUrl: "./edit-avatar.component.html",
+  styleUrls: ["./edit-avatar.component.scss"],
 })
 export class EditAvatarComponent implements OnInit {
-  @Input() user : User;
-  @Output() photoURLChange : EventEmitter<string> = new EventEmitter();
+  @Input() user: User;
+  @Output() photoURLChange: EventEmitter<string> = new EventEmitter();
 
   error: string;
 
-  showEditTooltip : boolean = false;
-  isUploading : boolean = false;
+  showEditTooltip: boolean = false;
+  isUploading: boolean = false;
 
   // Contains a Data URL of a new image
-  preview$ : Observable<string>;
-  progress$ : Observable<number>;
+  preview$: Observable<string>;
+  progress$: Observable<number>;
 
-  @ViewChild('newAvatarInput') avatarInput;
+  @ViewChild("newAvatarInput") avatarInput;
 
-  constructor(private upload : UploadService) { }
+  constructor(private upload: UploadService) {}
 
   ngOnInit() {}
 
@@ -37,13 +44,12 @@ export class EditAvatarComponent implements OnInit {
     this.avatarInput.nativeElement.click();
   }
 
-  handleFiles(event : Event) {
+  handleFiles(event: Event) {
     const file = (<HTMLInputElement>event.target).files[0];
-    if(file.type.startsWith('image')) {
-
+    if (file.type.startsWith("image")) {
       // create and load a preview
       const reader = new FileReader();
-      reader.onload = e => this.preview$ = of(e.target.result.toString());
+      reader.onload = (e) => (this.preview$ = of(e.target.result.toString()));
       reader.readAsDataURL(file);
 
       // upload to Firebase
@@ -51,22 +57,24 @@ export class EditAvatarComponent implements OnInit {
     }
   }
 
-  uploadAvatar(file : File) {
+  uploadAvatar(file: File) {
     this.isUploading = true;
     const filePath = `users/avatar/${new Date().getTime()}-${file.name}`;
     this.progress$ = this.upload.uploadFile(file, filePath);
 
     // when progress is complete, save the new user image
-    this.progress$.pipe(
-      finalize(() => {
-        this.preview$ = this.upload.getDownloadURL(filePath);
-        this.isUploading = false;
-        // messy but works
-        this.preview$.subscribe(
-          (value) => this.photoURLChange.emit(value),
-          (error) => this.error = error.toString()
-        );
-      })
-    ).subscribe();
+    this.progress$
+      .pipe(
+        finalize(() => {
+          this.preview$ = this.upload.getDownloadURL(filePath);
+          this.isUploading = false;
+          // messy but works
+          this.preview$.subscribe(
+            (value) => this.photoURLChange.emit(value),
+            (error) => (this.error = error.toString())
+          );
+        })
+      )
+      .subscribe();
   }
 }

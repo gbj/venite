@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { AuthMenuComponent } from './auth-menu.component';
+import { AuthMenuComponent } from "./auth-menu.component";
 
-describe('AuthMenuComponent', () => {
+describe("AuthMenuComponent", () => {
   let component: AuthMenuComponent;
   let fixture: ComponentFixture<AuthMenuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthMenuComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [AuthMenuComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AuthMenuComponent);
@@ -18,7 +18,7 @@ describe('AuthMenuComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

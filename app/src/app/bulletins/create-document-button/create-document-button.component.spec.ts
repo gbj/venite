@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { CreateDocumentButtonComponent } from './create-document-button.component';
+import { CreateDocumentButtonComponent } from "./create-document-button.component";
 
-describe('CreateDocumentButtonComponent', () => {
+describe("CreateDocumentButtonComponent", () => {
   let component: CreateDocumentButtonComponent;
   let fixture: ComponentFixture<CreateDocumentButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateDocumentButtonComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [CreateDocumentButtonComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CreateDocumentButtonComponent);
@@ -18,7 +18,7 @@ describe('CreateDocumentButtonComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

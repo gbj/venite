@@ -28,5 +28,5 @@ export const WEB_FONTS = [
   "Segoe UI",
   "Tahoma",
   "Trebuchet MS",
-  "Verdana"
+  "Verdana",
 ];

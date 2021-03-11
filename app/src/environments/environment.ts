@@ -12,9 +12,9 @@ export const environment = {
     storageBucket: "venite-2.appspot.com",
     messagingSenderId: "666828168362",
     appId: "1:666828168362:web:fa4dce3782692d30b204d3",
-    measurementId: "G-5P8B67RK8D"
+    measurementId: "G-5P8B67RK8D",
   },
-  baseUrl: 'https://localhost:8100/'
+  baseUrl: "https://localhost:8100/",
 };
 
 /*

@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { SelectableCitation } from '@venite/ldf';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { SelectableCitation } from "@venite/ldf";
+import { BehaviorSubject } from "rxjs";
 
 type SelectionData = {
   target: HTMLElement;
@@ -13,19 +13,21 @@ export type SelectedTextEvent = {
   fragment: string;
   citation: string;
   els: HTMLElement[];
-}
+};
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SelectionService {
-  public selection$ : BehaviorSubject<SelectedTextEvent | null> = new BehaviorSubject(null);
-  public selections : SelectionData[] = [];
-  undone : SelectionData[] = [];
-  public canUndo$ : BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public canRedo$ : BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public selection$: BehaviorSubject<SelectedTextEvent | null> = new BehaviorSubject(
+    null
+  );
+  public selections: SelectionData[] = [];
+  undone: SelectionData[] = [];
+  public canUndo$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public canRedo$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  constructor() { }
+  constructor() {}
 
   clear() {
     this.selections = [];
@@ -35,15 +37,15 @@ export class SelectionService {
     this.canUndo$.next(this.selections.length > 0);
   }
 
-  add(data : SelectionData) {
+  add(data: SelectionData) {
     // if this element is not already in the list, add it
-    const there = this.selections.find(test => test.target == data.target);
-    if(!there) {
+    const there = this.selections.find((test) => test.target == data.target);
+    if (!there) {
       this.selections.push(data);
     }
     // otherwise, undo it
     else {
-      this.selections = this.selections.filter(data => data != there);
+      this.selections = this.selections.filter((data) => data != there);
       this.undone.push(there);
     }
     this.selections.sort(this.documentPositionComparator);
@@ -69,105 +71,126 @@ export class SelectionService {
   }
 
   updateSelection() {
-    const els = this.selections.map(s => s.target),
-      text = this.selections.map(s => s.text).join(' '),
-      fragment = this.selections.map(s => s.fragment).filter(s => !!s)[0], // TODO
+    const els = this.selections.map((s) => s.target),
+      text = this.selections.map((s) => s.text).join(" "),
+      fragment = this.selections.map((s) => s.fragment).filter((s) => !!s)[0], // TODO
       citation = this.getCitation(this.selections);
 
-    this.undone.forEach(s => {
-      s.target.shadowRoot.querySelector('span').classList.remove('selected')
+    this.undone.forEach((s) => {
+      s.target.shadowRoot.querySelector("span").classList.remove("selected");
     });
-    this.selections.forEach(s => {
-      s.target.shadowRoot.querySelector('span').classList.add('selected')
+    this.selections.forEach((s) => {
+      s.target.shadowRoot.querySelector("span").classList.add("selected");
     });
 
-    this.selection$.next({text, fragment, citation, els});
+    this.selection$.next({ text, fragment, citation, els });
   }
 
-  documentPositionComparator(aSel : SelectionData, bSel : SelectionData) {
-      const a = aSel.target, b = bSel.target;
+  documentPositionComparator(aSel: SelectionData, bSel: SelectionData) {
+    const a = aSel.target,
+      b = bSel.target;
 
-      if (a === b) {
-        return 0;
-      }
+    if (a === b) {
+      return 0;
+    }
 
-      const position = a.compareDocumentPosition(b);
+    const position = a.compareDocumentPosition(b);
 
-      if (position & Node.DOCUMENT_POSITION_FOLLOWING || position & Node.DOCUMENT_POSITION_CONTAINED_BY) {
-        return -1;
-      } else if (position & Node.DOCUMENT_POSITION_PRECEDING || position & Node.DOCUMENT_POSITION_CONTAINS) {
-        return 1;
-      } else {
-        return 0;
-      }
+    if (
+      position & Node.DOCUMENT_POSITION_FOLLOWING ||
+      position & Node.DOCUMENT_POSITION_CONTAINED_BY
+    ) {
+      return -1;
+    } else if (
+      position & Node.DOCUMENT_POSITION_PRECEDING ||
+      position & Node.DOCUMENT_POSITION_CONTAINS
+    ) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 
-  getCitation(selects : SelectionData[]) : string {
-    const citations : SelectableCitation[] = selects.map(s => s.citation);
+  getCitation(selects: SelectionData[]): string {
+    const citations: SelectableCitation[] = selects.map((s) => s.citation);
 
-    let currentBook : string,
-        startingChapter : string,
-        startingVerse : string,
-        compiledCitations : string[] = new Array(),
-        bookFrags : string[] = new Array(),
-        chapterFrags : string[] = new Array();
+    let currentBook: string,
+      startingChapter: string,
+      startingVerse: string,
+      compiledCitations: string[] = new Array(),
+      bookFrags: string[] = new Array(),
+      chapterFrags: string[] = new Array();
     citations.forEach((cite, index) => {
-      if(!cite.hasOwnProperty('book')) {
+      if (!cite.hasOwnProperty("book")) {
         compiledCitations.push(cite.string || cite.label || null);
 
-        if(bookFrags && chapterFrags && bookFrags.length > 0 && chapterFrags.length > 0) {
-          bookFrags.push(`${startingChapter}:${chapterFrags.join(', ')}`);
-          compiledCitations.push(`${currentBook} ${bookFrags.join('; ')}`);
+        if (
+          bookFrags &&
+          chapterFrags &&
+          bookFrags.length > 0 &&
+          chapterFrags.length > 0
+        ) {
+          bookFrags.push(`${startingChapter}:${chapterFrags.join(", ")}`);
+          compiledCitations.push(`${currentBook} ${bookFrags.join("; ")}`);
         }
 
         currentBook = startingChapter = startingVerse = undefined;
         chapterFrags = new Array();
         bookFrags = new Array();
       } else {
-        if(!currentBook) {
+        if (!currentBook) {
           currentBook = cite.book;
         }
-        if(!startingChapter) {
+        if (!startingChapter) {
           startingChapter = cite.chapter;
         }
-        if(!startingVerse) {
+        if (!startingVerse) {
           startingVerse = cite.verse;
         }
 
-        if(cite.book !== currentBook) {
-          bookFrags.push(`${startingChapter}:${chapterFrags.join(', ')}`);
-          compiledCitations.push(`${currentBook} ${bookFrags.join('; ')}`);
+        if (cite.book !== currentBook) {
+          bookFrags.push(`${startingChapter}:${chapterFrags.join(", ")}`);
+          compiledCitations.push(`${currentBook} ${bookFrags.join("; ")}`);
           currentBook = cite.book;
           startingChapter = cite.chapter;
           startingVerse = cite.verse;
           chapterFrags = new Array();
           bookFrags = new Array();
         }
-        if(cite.chapter !== startingChapter) {
-          bookFrags.push(`${startingChapter}:${chapterFrags.join(', ')}`);
+        if (cite.chapter !== startingChapter) {
+          bookFrags.push(`${startingChapter}:${chapterFrags.join(", ")}`);
           startingVerse = cite.verse;
           startingChapter = cite.chapter;
           chapterFrags = new Array();
         }
 
-        let range : string = cite.verse == startingVerse ? cite.verse : `${startingVerse}-${cite.verse}`;
+        let range: string =
+          cite.verse == startingVerse
+            ? cite.verse
+            : `${startingVerse}-${cite.verse}`;
         let nextVerse = citations[index + 1];
-        if(!nextVerse) {
+        if (!nextVerse) {
           chapterFrags.push(range);
-          bookFrags.push(`${startingChapter}:${chapterFrags.join(', ')}`);
-        } else if(parseInt(nextVerse.verse) - parseInt(cite.verse) > 1 || nextVerse.chapter !== startingChapter) {
+          bookFrags.push(`${startingChapter}:${chapterFrags.join(", ")}`);
+        } else if (
+          parseInt(nextVerse.verse) - parseInt(cite.verse) > 1 ||
+          nextVerse.chapter !== startingChapter
+        ) {
           chapterFrags.push(range);
           startingVerse = undefined;
         }
       }
     });
-    if(currentBook && bookFrags && bookFrags.length > 0) {
-      compiledCitations.push(`${currentBook} ${bookFrags.join('; ')}`)
+    if (currentBook && bookFrags && bookFrags.length > 0) {
+      compiledCitations.push(`${currentBook} ${bookFrags.join("; ")}`);
     }
 
     return compiledCitations
-      .filter(s => !!s)
-      .reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], [])
-      .join('; ');
+      .filter((s) => !!s)
+      .reduce(
+        (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
+        []
+      )
+      .join("; ");
   }
 }

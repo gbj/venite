@@ -1,40 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
-import { Observable } from 'rxjs';
-import { map, switchMap, tap } from 'rxjs/operators';
-import { EditorState } from '../editor/ldf-editor/editor-state';
-import { EditorService, EditorStatus } from '../editor/ldf-editor/editor.service';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { LoadingController } from "@ionic/angular";
+import { Observable } from "rxjs";
+import { map, switchMap, tap } from "rxjs/operators";
+import { EditorState } from "../editor/ldf-editor/editor-state";
+import {
+  EditorService,
+  EditorStatus,
+} from "../editor/ldf-editor/editor.service";
 
 @Component({
-  selector: 'venite-template',
-  templateUrl: './template.page.html',
-  styleUrls: ['./template.page.scss'],
+  selector: "venite-template",
+  templateUrl: "./template.page.html",
+  styleUrls: ["./template.page.scss"],
 })
 export class TemplatePage implements OnInit {
-  docId$ : Observable<string>;
-  state$ : Observable<EditorState>;
-  editorStatus$ : Observable<EditorStatus>;
+  docId$: Observable<string>;
+  state$: Observable<EditorState>;
+  editorStatus$: Observable<EditorStatus>;
 
-  loadingInstance : any;
+  loadingInstance: any;
 
   constructor(
-    private route : ActivatedRoute,
-    private loading : LoadingController,
-    private editorService : EditorService
-  ) { }
+    private route: ActivatedRoute,
+    private loading: LoadingController,
+    private editorService: EditorService
+  ) {}
 
   ngOnInit() {
     this.showLoading();
 
-    this.docId$ = this.route.params.pipe(
-      map(({ docId }) => docId)
-    );
+    this.docId$ = this.route.params.pipe(map(({ docId }) => docId));
 
-    this.state$ =  this.docId$.pipe(
-      switchMap(docId =>this.editorService.editorState(docId)),
+    this.state$ = this.docId$.pipe(
+      switchMap((docId) => this.editorService.editorState(docId)),
       tap(() => {
-        if(this.loadingInstance) {
+        if (this.loadingInstance) {
           this.loadingInstance.dismiss();
         }
       })
@@ -47,5 +48,4 @@ export class TemplatePage implements OnInit {
     this.loadingInstance = await this.loading.create();
     await this.loadingInstance.present();
   }
-
 }

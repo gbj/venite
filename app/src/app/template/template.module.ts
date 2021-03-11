@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { TemplatePageRoutingModule } from './template-routing.module';
+import { TemplatePageRoutingModule } from "./template-routing.module";
 
-import { TemplatePage } from './template.page';
-import { EditorPageModule } from '../editor/editor.module';
-import { TranslateModule } from '@ngx-translate/core';
-import { AuthModule } from '../auth/auth.module';
+import { TemplatePage } from "./template.page";
+import { EditorPageModule } from "../editor/editor.module";
+import { TranslateModule } from "@ngx-translate/core";
+import { AuthModule } from "../auth/auth.module";
 
 @NgModule({
   imports: [
@@ -19,8 +19,8 @@ import { AuthModule } from '../auth/auth.module';
     TemplatePageRoutingModule,
     EditorPageModule,
     TranslateModule,
-    AuthModule
+    AuthModule,
   ],
-  declarations: [TemplatePage]
+  declarations: [TemplatePage],
 })
 export class TemplatePageModule {}

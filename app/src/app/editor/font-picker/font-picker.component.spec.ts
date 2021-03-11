@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { FontPickerComponent } from './font-picker.component';
+import { FontPickerComponent } from "./font-picker.component";
 
-describe('FontPickerComponent', () => {
+describe("FontPickerComponent", () => {
   let component: FontPickerComponent;
   let fixture: ComponentFixture<FontPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FontPickerComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [FontPickerComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FontPickerComponent);
@@ -18,7 +18,7 @@ describe('FontPickerComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

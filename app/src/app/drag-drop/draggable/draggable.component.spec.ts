@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { DraggableComponent } from './draggable.component';
+import { DraggableComponent } from "./draggable.component";
 
-describe('DraggableComponent', () => {
+describe("DraggableComponent", () => {
   let component: DraggableComponent;
   let fixture: ComponentFixture<DraggableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DraggableComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [DraggableComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DraggableComponent);
@@ -18,7 +18,7 @@ describe('DraggableComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

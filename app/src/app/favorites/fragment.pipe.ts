@@ -1,12 +1,10 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'fragment'
+  name: "fragment",
 })
 export class FragmentPipe implements PipeTransform {
-
   transform(value: any, ...args: any[]): any {
-    return value.replace('#', '');
+    return value.replace("#", "");
   }
-
 }

@@ -1,118 +1,131 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
-import { LiturgicalDocument } from '@venite/ldf';
-import { BehaviorSubject, Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
-import { Hymn } from './hymn';
-import { HymnService } from './hymn.service';
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { LoadingController } from "@ionic/angular";
+import { LiturgicalDocument } from "@venite/ldf";
+import { BehaviorSubject, Observable, of } from "rxjs";
+import { switchMap } from "rxjs/operators";
+import { Hymn } from "./hymn";
+import { HymnService } from "./hymn.service";
 
 @Component({
-  selector: 'venite-hymn-selector',
-  templateUrl: './hymn-selector.component.html',
-  styleUrls: ['./hymn-selector.component.scss'],
+  selector: "venite-hymn-selector",
+  templateUrl: "./hymn-selector.component.html",
+  styleUrls: ["./hymn-selector.component.scss"],
 })
 export class HymnSelectorComponent implements OnInit {
-  @Output() hymnSelected : EventEmitter<LiturgicalDocument> = new EventEmitter();
+  @Output() hymnSelected: EventEmitter<LiturgicalDocument> = new EventEmitter();
 
-  search$ : BehaviorSubject<string> = new BehaviorSubject('');
-  hymns$ : Observable<Hymn[]>;
+  search$: BehaviorSubject<string> = new BehaviorSubject("");
+  hymns$: Observable<Hymn[]>;
 
-  constructor(private hymnService : HymnService, private loading : LoadingController) { }
+  constructor(
+    private hymnService: HymnService,
+    private loading: LoadingController
+  ) {}
 
   ngOnInit() {
     this.hymns$ = this.search$.pipe(
-      switchMap(search => search ? this.hymnService.search(search) : of([]))
+      switchMap((search) => (search ? this.hymnService.search(search) : of([])))
     );
   }
 
-  filter(search : string) {
+  filter(search: string) {
     this.search$.next(search);
   }
 
-  async chooseHymn(hymn : Hymn, mode : 'title' | 'text' | 'scan') {
-    let value : string[] = [];
+  async chooseHymn(hymn: Hymn, mode: "title" | "text" | "scan") {
+    let value: string[] = [];
 
-    if(mode === 'title') {
-      this.hymnSelected.next(new LiturgicalDocument({
-        type: 'text',
-        style: 'text',
-        label: hymn.title,
-        citation: hymn.tune,
-        source: {
-          api: 'venite',
-          source: hymn.source,
-          citation: hymn.number
-        },
-        value
-      }))
-    } else if(mode === 'text') {
-      if(hymn.textUrl) {
+    if (mode === "title") {
+      this.hymnSelected.next(
+        new LiturgicalDocument({
+          type: "text",
+          style: "text",
+          label: hymn.title,
+          citation: hymn.tune,
+          source: {
+            api: "venite",
+            source: hymn.source,
+            citation: hymn.number,
+          },
+          value,
+        })
+      );
+    } else if (mode === "text") {
+      if (hymn.textUrl) {
         const loading = await this.loading.create({
-          message: 'Loading Hymn Text...',
+          message: "Loading Hymn Text...",
         });
         await loading.present();
-    
+
         try {
-          const resp = await fetch(`https://us-central1-venite-2.cloudfunctions.net/hymnText?url=${hymn.textUrl}`);
-          const text : string[] = await resp.json(); 
-          if(Array.isArray(text)) {
+          const resp = await fetch(
+            `https://us-central1-venite-2.cloudfunctions.net/hymnText?url=${hymn.textUrl}`
+          );
+          const text: string[] = await resp.json();
+          if (Array.isArray(text)) {
             value = text;
           } else {
-            console.warn('(chooseHymn) invalid hymn-text response: ', text);
+            console.warn("(chooseHymn) invalid hymn-text response: ", text);
           }
-        } catch(e) {
-          console.warn('(chooseHymn) error while loading hymn text ', e);
+        } catch (e) {
+          console.warn("(chooseHymn) error while loading hymn text ", e);
         }
-  
+
         await loading.dismiss();
       }
-    
-      this.hymnSelected.next(new LiturgicalDocument({
-        type: 'text',
-        style: 'text',
-        label: hymn.title,
-        citation: hymn.tune,
-        source: {
-          api: 'venite',
-          source: hymn.source,
-          citation: hymn.number
-        },
-        value
-      }));
-    } else if(mode === 'scan') {
-      if(hymn.textUrl) {
+
+      this.hymnSelected.next(
+        new LiturgicalDocument({
+          type: "text",
+          style: "text",
+          label: hymn.title,
+          citation: hymn.tune,
+          source: {
+            api: "venite",
+            source: hymn.source,
+            citation: hymn.number,
+          },
+          value,
+        })
+      );
+    } else if (mode === "scan") {
+      if (hymn.textUrl) {
         const loading = await this.loading.create({
-          message: 'Loading Page Scans...',
+          message: "Loading Page Scans...",
         });
         await loading.present();
-    
+
         try {
-          const resp = await fetch(`https://us-central1-venite-2.cloudfunctions.net/hymnImages?url=${hymn.textUrl}`);
-          const text : string[] = await resp.json(); 
-          if(Array.isArray(text)) {
+          const resp = await fetch(
+            `https://us-central1-venite-2.cloudfunctions.net/hymnImages?url=${hymn.textUrl}`
+          );
+          const text: string[] = await resp.json();
+          if (Array.isArray(text)) {
             value = text;
           } else {
-            console.warn('(chooseHymn) invalid hymn-image response: ', text);
+            console.warn("(chooseHymn) invalid hymn-image response: ", text);
           }
-        } catch(e) {
-          console.warn('(chooseHymn) error while loading hymn images ', e);
+        } catch (e) {
+          console.warn("(chooseHymn) error while loading hymn images ", e);
         }
-  
+
         await loading.dismiss();
       }
-    
-      this.hymnSelected.next(new LiturgicalDocument({
-        type: 'image',
-        style: 'normal',
-        label: hymn.title,
-        citation: hymn.tune,
-        source: {
-          api: 'venite',
-          source: hymn.source,
-          citation: hymn.number
-        },
-        value
-      }));
+
+      this.hymnSelected.next(
+        new LiturgicalDocument({
+          type: "image",
+          style: "normal",
+          label: hymn.title,
+          citation: hymn.tune,
+          source: {
+            api: "venite",
+            source: hymn.source,
+            citation: hymn.number,
+          },
+          value,
+        })
+      );
     }
   }
 }
