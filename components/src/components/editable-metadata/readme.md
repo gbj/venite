@@ -176,6 +176,7 @@ graph TD;
   ldf-responsive-prayer --> ldf-string
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
+  ldf-responsive-prayer --> ldf-editable-boolean
   ldf-bible-reading --> ldf-label-bar
   ldf-bible-reading --> ion-buttons
   ldf-bible-reading --> ion-button

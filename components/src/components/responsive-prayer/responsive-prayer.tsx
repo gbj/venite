@@ -207,10 +207,12 @@ export class ResponsivePrayerComponent {
           }
 
           // Render the line
-          return (
+          return <div class="line">
             <p class={classes.join(' ')}>
               {/* render the text of the main line*/}
-              {this.editable ? this.editableNode(line, index, 'text', template, templateMaker) : this.stringNode(line, index, 'text')}
+              {this.editable 
+                ? this.editableNode(line, index, 'text', template, templateMaker)
+                : this.stringNode(line, index, 'text')}
 
               {/* if the `ResponsivePrayerLine` has a `response` property, render it*/}
               {line.response && (
@@ -233,7 +235,9 @@ export class ResponsivePrayerComponent {
                 [<br/>, this.litanyResponseStringNode(line, index)]
               )}
             </p>
-          )
+            {this.editable && <label class="optional-label" htmlFor={`optional-${index}`}>{this.localeStrings?.optional}</label>}
+            {this.editable && <ldf-editable-boolean id={`optional-${index}`} slot="start" path={`${this.path}/value/${index}/optional`} value={line.optional}></ldf-editable-boolean>}
+          </div>;
         })}
         </Host>
       );

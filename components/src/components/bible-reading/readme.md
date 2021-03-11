@@ -116,6 +116,8 @@ graph TD;
   ldf-responsive-prayer --> ldf-string
   ldf-responsive-prayer --> ldf-label-bar
   ldf-responsive-prayer --> ldf-heading
+  ldf-responsive-prayer --> ldf-editable-boolean
+  ldf-editable-boolean --> ion-checkbox
   ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-label-bar

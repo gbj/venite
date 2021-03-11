@@ -1,5 +1,7 @@
 {
   "label": "Label",
   "source": "Source",
-  "citation": "Citation"
+  "citation": "Citation",
+  "makeOptional": "Make Optional",
+  "optional": "Optional"
 }
