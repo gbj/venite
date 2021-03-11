@@ -8,6 +8,7 @@ import { DailyReadingsPageRoutingModule } from "./daily-readings-routing.module"
 
 import { DailyReadingsPage } from "./daily-readings.page";
 import { TranslateModule } from "@ngx-translate/core";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { TranslateModule } from "@ngx-translate/core";
     DailyReadingsPageRoutingModule,
     ReactiveFormsModule,
     TranslateModule,
+    SharedModule,
   ],
   declarations: [DailyReadingsPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

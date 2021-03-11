@@ -21,6 +21,7 @@ import { LiturgyConfig } from "dist/pray/lib/liturgy-config";
 import { MarkFavoriteComponent } from "./mark-favorite/mark-favorite.component";
 import { FavoriteTextComponent } from "./favorite-text/favorite-text.component";
 import { FavoritesPageModule } from "../favorites/favorites.module";
+import { SharedModule } from "../shared/shared.module";
 
 interface PrayRootConfig {
   providers: Provider[];
@@ -38,6 +39,7 @@ interface PrayRootConfig {
     AuthModule,
     PrayPageRoutingModule,
     EditorPageModule,
+    SharedModule,
   ],
   declarations: [
     PrayPage,

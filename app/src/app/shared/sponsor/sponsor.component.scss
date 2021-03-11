@@ -1,0 +1,19 @@
+.sponsorship {
+  width: 100%;
+  background: var(--ion-background-color);
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 80%;
+  color: var(--ldf-color);
+  text-decoration: none;
+  position: sticky;
+  top: 100%;
+}
+
+.sponsor-logo, .sponsor-logo-dark {
+  max-width: 100px;
+  height: auto;
+}

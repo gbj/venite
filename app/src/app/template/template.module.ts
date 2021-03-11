@@ -10,6 +10,7 @@ import { TemplatePage } from "./template.page";
 import { EditorPageModule } from "../editor/editor.module";
 import { TranslateModule } from "@ngx-translate/core";
 import { AuthModule } from "../auth/auth.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { AuthModule } from "../auth/auth.module";
     EditorPageModule,
     TranslateModule,
     AuthModule,
+    SharedModule,
   ],
   declarations: [TemplatePage],
 })

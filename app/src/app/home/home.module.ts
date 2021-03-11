@@ -22,6 +22,7 @@ import { PrayMenuModule } from "@venite/ng-pray-menu";
     SharedModule,
     TranslateModule,
     PrayMenuModule,
+    SharedModule,
   ],
   declarations: [HomePage],
 })

@@ -8,6 +8,7 @@ import { PsalterPageRoutingModule } from "./psalter-routing.module";
 
 import { PsalterPage } from "./psalter.page";
 import { TranslateModule } from "@ngx-translate/core";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { TranslateModule } from "@ngx-translate/core";
     PsalterPageRoutingModule,
     ReactiveFormsModule,
     TranslateModule,
+    SharedModule,
   ],
   declarations: [PsalterPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

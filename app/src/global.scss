@@ -416,6 +416,18 @@ ul {
   background-color: var(--ldf-background-color) !important;
 }
 
+.sponsor-logo-dark {
+  display: none;
+}
+.dark {
+  .sponsor-logo {
+    display: none;
+  }
+  .sponsor-logo-dark {
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
   .sm-hidden {
     position: absolute !important;

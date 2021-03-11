@@ -11,6 +11,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import { FavoriteDetailComponent } from "./favorite-detail/favorite-detail.component";
 import { FragmentPipe } from "./fragment.pipe";
 import { AuthModule } from "../auth/auth.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { AuthModule } from "../auth/auth.module";
     TranslateModule,
     ReactiveFormsModule,
     AuthModule,
+    SharedModule,
   ],
   declarations: [FavoritesPage, FavoriteDetailComponent, FragmentPipe],
 })
