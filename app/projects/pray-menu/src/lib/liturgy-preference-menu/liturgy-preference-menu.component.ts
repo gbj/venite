@@ -1,60 +1,82 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, Inject } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  Inject,
+} from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
-import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
-import { map, tap, filter, startWith } from 'rxjs/operators';
+import { Observable, BehaviorSubject, combineLatest, Subscription } from "rxjs";
+import { map, tap, filter, startWith } from "rxjs/operators";
 
-import { Liturgy, Preference, ClientPreferences, preferencesToCategories, categoriesToPreferenceTree } from '@venite/ldf';
-import { PreferencesServiceInterface, PREFERENCES_SERVICE } from '@venite/ng-service-api';
-import { AUTH_SERVICE } from '@venite/ng-service-api';
-import { AuthServiceInterface } from '@venite/ng-service-api';
+import {
+  Liturgy,
+  Preference,
+  ClientPreferences,
+  preferencesToCategories,
+  categoriesToPreferenceTree,
+} from "@venite/ldf";
+import {
+  PreferencesServiceInterface,
+  PREFERENCES_SERVICE,
+} from "@venite/ng-service-api";
+import { AUTH_SERVICE } from "@venite/ng-service-api";
+import { AuthServiceInterface } from "@venite/ng-service-api";
 
 interface TreeData {
   preferences: [string, Preference][];
-  preference_tree: { [category: string]: Preference[]; };
+  preference_tree: { [category: string]: Preference[] };
   categories: string[];
 }
 interface FormData {
   form: FormGroup;
-  preference_tree: { [category: string]: Preference[]; };
+  preference_tree: { [category: string]: Preference[] };
   categories: string[];
 }
 
 @Component({
-  selector: 'venite-liturgy-preference-menu',
-  templateUrl: './liturgy-preference-menu.component.html',
-  styleUrls: ['./liturgy-preference-menu.component.scss'],
+  selector: "venite-liturgy-preference-menu",
+  templateUrl: "./liturgy-preference-menu.component.html",
+  styleUrls: ["./liturgy-preference-menu.component.scss"],
 })
 export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   // preferences for a given liturgy
-  @Input() liturgy : Liturgy;
-  @Output() clientPreferencesChange : EventEmitter<ClientPreferences> = new EventEmitter();
+  @Input() liturgy: Liturgy;
+  @Output()
+  clientPreferencesChange: EventEmitter<ClientPreferences> = new EventEmitter();
+  @Output() preferencesLoaded: EventEmitter<boolean> = new EventEmitter();
 
-  uid$ : Observable<string>;
+  uid$: Observable<string>;
 
   // starts with input, updated on changes
-  preferences : BehaviorSubject<{ [x: string]: Preference}> = new BehaviorSubject({});
+  preferences: BehaviorSubject<{
+    [x: string]: Preference;
+  }> = new BehaviorSubject({});
 
   // intermediate step to building the formData
-  tree : Observable<TreeData>;
+  tree: Observable<TreeData>;
   // defines display for and controls the form itself
-  formData : Observable<FormData>;
+  formData: Observable<FormData>;
   // watches the form for changes
-  clientPreferences : Observable<ClientPreferences>;
+  clientPreferences: Observable<ClientPreferences>;
 
-  advancedSettingsShown : boolean = false;
+  advancedSettingsShown: boolean = false;
+
+  subscription: Subscription;
 
   constructor(
-    @Inject(PREFERENCES_SERVICE) private preferencesService : PreferencesServiceInterface,
-    private fb : FormBuilder,
-    @Inject(AUTH_SERVICE) private auth : AuthServiceInterface
-  ) { }
+    @Inject(PREFERENCES_SERVICE)
+    private preferencesService: PreferencesServiceInterface,
+    private fb: FormBuilder,
+    @Inject(AUTH_SERVICE) private auth: AuthServiceInterface
+  ) {}
 
   ngOnInit() {
-    this.uid$ = this.auth.user.pipe(
-      startWith(undefined),
-      map(user => user?.uid || 'none'),
-    )
+    this.preferencesLoaded.emit(false);
 
     // `tree` provides `categories` and `preference_tree`
     this.tree = this.buildTree();
@@ -64,70 +86,123 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
     // send initial value from input Liturgy into preferences Subject
     this.preferences.next(this.liturgy?.metadata?.preferences);
+
+    this.subscription = this.formData.subscribe((data) => {
+      console.log("formData = ", data);
+      this.preferencesLoaded.emit(Boolean(data));
+    });
   }
 
   // when `preferences` input changes, we need to reload the whole preferences menu,
   // because it means that a new liturgy has been selected
-  ngOnChanges(changes : SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges) {
+    this.preferencesLoaded.emit(false);
+
     this.preferences.next(changes.liturgy.currentValue?.metadata?.preferences);
 
     // since liturgy has changed, preference queries need to be refreshed
     this.formData = this.buildFormData(this.tree, changes.liturgy.currentValue);
+
+    // emit "preferencesLoaded" event
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    this.subscription = this.formData.subscribe((data) => {
+      console.log("formData = ", data);
+      this.preferencesLoaded.emit(Boolean(data));
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   toggleAdvancedSettingsShown() {
     this.advancedSettingsShown = !this.advancedSettingsShown;
   }
 
-  buildTree() : Observable<TreeData> {
+  buildTree(): Observable<TreeData> {
     return this.preferences.pipe(
       // don't use null values of preferences
-      filter(preferences => !!preferences),
+      filter((preferences) => !!preferences),
 
       // transform preferences into categories
-      map(preferences => ({
+      map((preferences) => ({
         preferences,
-        categories: preferencesToCategories(preferences)
+        categories: preferencesToCategories(preferences),
       })),
       // build preference_tree
       // { "Supplemental Devotions": [...], "Preferences": [...], etc. }
       map(({ preferences, categories }) => ({
         preferences,
         categories,
-        preference_tree: categoriesToPreferenceTree(categories, preferences)
+        preference_tree: categoriesToPreferenceTree(categories, preferences),
       })),
       // sort categories from shortest to longest
-      map(({ preferences, categories, preference_tree}) => ({
+      map(({ preferences, categories, preference_tree }) => ({
         preferences: Object.entries(preferences),
-        categories: categories.sort((a, b) => preference_tree[a].length - preference_tree[b].length),
-        preference_tree
+        categories: categories.sort(
+          (a, b) => preference_tree[a].length - preference_tree[b].length
+        ),
+        preference_tree,
       }))
     );
   }
 
-  buildFormData(tree : Observable<TreeData>, liturgy : Liturgy) : Observable<FormData> {
-    return combineLatest(tree, this.preferencesService.getPreferencesForLiturgy(liturgy)).pipe(
-      map(([{ preferences, preference_tree, categories}, storedPreferences]) => ({
-        categories,
-        preference_tree,
-        // build form defaults
-        // final form should be { [key: string]: string[]; }
-        form: this.fb.group(preferences.reduce((obj, [key, pref]) => ({
-          ... obj,
-          [key]: storedPreferences.find(pref => pref.key == key && pref.liturgy == liturgy.slug && pref.language == liturgy.language && pref.version == liturgy.version)?.value
-            || storedPreferences.find(pref => pref.key == key && pref.language == liturgy.language && pref.version == liturgy.version)?.value
-            || new Preference(pref).getDefaultPref()
-        }), {}))
-      })),
+  buildFormData(
+    tree: Observable<TreeData>,
+    liturgy: Liturgy
+  ): Observable<FormData> {
+    return combineLatest(
+      tree,
+      this.preferencesService.getPreferencesForLiturgy(liturgy)
+    ).pipe(
+      map(
+        ([
+          { preferences, preference_tree, categories },
+          storedPreferences,
+        ]) => ({
+          categories,
+          preference_tree,
+          // build form defaults
+          // final form should be { [key: string]: string[]; }
+          form: this.fb.group(
+            preferences.reduce(
+              (obj, [key, pref]) => ({
+                ...obj,
+                [key]:
+                  storedPreferences.find(
+                    (pref) =>
+                      pref.key == key &&
+                      pref.liturgy == liturgy.slug &&
+                      pref.language == liturgy.language &&
+                      pref.version == liturgy.version
+                  )?.value ||
+                  storedPreferences.find(
+                    (pref) =>
+                      pref.key == key &&
+                      pref.language == liturgy.language &&
+                      pref.version == liturgy.version
+                  )?.value ||
+                  new Preference(pref).getDefaultPref(),
+              }),
+              {}
+            )
+          ),
+        })
+      ),
       // emit the initial value
       tap(({ form }) => this.clientPreferencesChange.emit(form.value))
-    )
+    );
   }
 
   // fired by a form control
-  update(form : FormGroup, key : string, value : string, uid : string) {
+  update(form: FormGroup, key: string, value: string) {
     form.controls[key].setValue(value);
     this.clientPreferencesChange.emit(form.value);
-    this.preferencesService.set(key, value, uid, this.liturgy);
+    const user = this.auth.currentUser();
+    this.preferencesService.set(key, value, user?.uid, this.liturgy);
   }
 }

@@ -1,5 +1,5 @@
 <ng-container *ngIf="formData | async as data">
-  <form [formGroup]="data.form" *ngIf="uid$ | async as uid">
+  <form [formGroup]="data.form">
     <ng-container *ngFor="let category of data.categories">
       <ion-list *ngIf="data.preference_tree[category].length > 0">
         <ion-item *ngIf="category !== 'Advanced Settings'">
@@ -17,7 +17,7 @@
             <!-- item[0] is the key, item[1] is the Preference -->
             <ion-item *ngIf="item?.options?.length > 1">
               <ion-label position="stacked">{{ item?.label }}</ion-label>
-              <ion-select ngDefaultControl [formControlName]="item?.key" (ionChange)="update(data?.form, item?.key, $event.detail.value, uid)">
+              <ion-select ngDefaultControl [formControlName]="item?.key" (ionChange)="update(data?.form, item?.key, $event.detail.value)">
                 <ion-select-option *ngFor="let opt of item?.options; let ii = index"
                   [value]="opt.value">
                   {{ opt.label }}

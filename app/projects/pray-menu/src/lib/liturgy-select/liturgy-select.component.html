@@ -111,9 +111,11 @@
 <div class="pray-buttons">
   <ng-container *ngIf="prayButton">
     <ng-container *ngIf="prayData$ | async as data else notLoaded">
-      <ion-button (click)="pray(data)" [disabled]="isNavigating">
-        <ion-label>{{ 'Pray' | translate }}</ion-label>
-      </ion-button>
+      <ng-container *ngIf="preferencesLoaded$ | async else notLoaded">
+        <ion-button (click)="pray(data)" [disabled]="isNavigating">
+          <ion-label>{{ 'Pray' | translate }}</ion-label>
+        </ion-button>
+      </ng-container>
     </ng-container>
     <ng-template #notLoaded>
       <ion-button disabled="true">
@@ -137,6 +139,7 @@
 <venite-liturgy-preference-menu
   [liturgy]="liturgy$ | async"
   (clientPreferencesChange)="menuPreferences$.next($event)"
+  (preferencesLoaded)="preferencesLoaded$.next($event)"
 ></venite-liturgy-preference-menu>
 
 <ng-template #skeleton>

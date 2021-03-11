@@ -1,6 +1,6 @@
 {
   "name": "@venite/ng-service-api",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",

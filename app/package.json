@@ -44,7 +44,7 @@
     "@venite/ng-pray": "^0.5.14",
     "@venite/ng-pray-menu": "^0.4.1",
     "@venite/ng-reminders": "0.0.4",
-    "@venite/ng-service-api": "^0.5.0",
+    "@venite/ng-service-api": "^0.6.1",
     "clipboard-polyfill": "^3.0.1",
     "cordova-plugin-file-opener2": "^3.0.5",
     "firebase": "^7.14.4",

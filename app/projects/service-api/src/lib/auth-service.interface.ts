@@ -1,6 +1,8 @@
-import { Observable } from 'rxjs';
-import { User } from '@venite/ldf';
+import { Observable } from "rxjs";
+import { User } from "@venite/ldf";
 
 export interface AuthServiceInterface {
-  user : Observable<User | null>;
+  user: Observable<User | null>;
+
+  currentUser: () => User;
 }
