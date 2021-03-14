@@ -228,7 +228,6 @@ export class LiturgicalDocumentComponent {
             doc: true,
             editable: this.editable || this.preview
           }}
-          onDblClick={() => { if(this.obj?.type !== "liturgy" &&(this.editable || this.preview)) { this.setPreview(!this.preview); }}}
         >
           {node}
         </div>
