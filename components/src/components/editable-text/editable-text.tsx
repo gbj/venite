@@ -91,7 +91,7 @@ export class EditableTextComponent {
   }
 
   // Debounce calculating and emitting the change so we can send multi-character changes
-  @Debounce(500)
+  @Debounce(1250)
   handleInput() {
     this.registerCursor();
   
@@ -212,7 +212,7 @@ export class EditableTextComponent {
   // Debounce emitting the change, not registering the change
   // That means the cursor will also be in the right place when edits need to refer to it,
   // but also that we won't be sending cursor updates to the server constantly as we type
-  @Debounce(200)
+  @Debounce(500)
   emitCursor(cursor : Cursor) {
     this.ldfCursorMoved.emit(cursor);
   }
