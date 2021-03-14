@@ -66,7 +66,13 @@ export class ScrollVanishDirective {
   hide() {
     this.domCtrl.write(() => {
       this.renderer.setStyle(this.element.nativeElement, "min-height", "0px");
-      this.renderer.setStyle(this.element.nativeElement, "height", "0px");
+      //this.renderer.setStyle(this.element.nativeElement, "height", "0px");
+      this.renderer.setStyle(this.element.nativeElement, "z-index", "-100");
+      this.renderer.setStyle(
+        document.querySelector("venite-pray ion-content"),
+        "z-index",
+        10
+      );
       this.renderer.setStyle(this.element.nativeElement, "opacity", "0");
       this.renderer.setStyle(this.element.nativeElement, "padding", "0");
     });
@@ -80,6 +86,12 @@ export class ScrollVanishDirective {
         this.element.nativeElement,
         "min-height",
         "var(--min-height)"
+      );
+      this.renderer.setStyle(this.element.nativeElement, "z-index", "auto");
+      this.renderer.setStyle(
+        document.querySelector("venite-pray ion-content"),
+        "z-index",
+        "auto"
       );
       this.renderer.removeStyle(this.element.nativeElement, "opacity");
       this.renderer.removeStyle(this.element.nativeElement, "padding");
