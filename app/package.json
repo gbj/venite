@@ -23,6 +23,7 @@
     "@angular/router": "~9.1.6",
     "@angular/service-worker": "~9.1.6",
     "@capacitor/core": "2.4.2",
+    "@capacitor/ios": "^2.4.2",
     "@ionic-native/core": "^5.29.0",
     "@ionic-native/file-opener": "^5.29.0",
     "@ionic-native/media": "^5.29.0",
