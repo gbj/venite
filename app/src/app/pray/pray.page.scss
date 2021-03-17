@@ -14,6 +14,7 @@
   border-width: 1em;
   width: 100vw;
   padding-bottom: 3em;
+  padding-top: 0.5em;
 }
 
 .bordered,
@@ -50,7 +51,8 @@
   margin: auto;
   background-color: var(--ldf-background-color);
   padding: 1em;
-  box-shadow: 5px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 @media (min-width: 767px) {
@@ -67,4 +69,16 @@
 
 .editor-wrapper {
   padding-top: 56px;
+}
+
+venite-sponsor {
+  margin-top: 1em;
+  width: 250px;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  text-align: center;
+  background: var(--ldf-background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
