@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "app.venite",
+               "sha256_cert_fingerprints": [":F3:20:E2          SHA256: 83:D8:76:1D:BB:07:2C:34:FD:AA:17:60:55:FC:06:9C:6E:09:D7:A7:0E:35:C2:AE:7D:AA:B7:E0:58:5E:AF:01"] }
+}]

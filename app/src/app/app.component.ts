@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, NgZone } from "@angular/core";
 
 import { Platform } from "@ionic/angular";
 
@@ -6,11 +6,15 @@ import { Platform } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { DarkmodeService } from "@venite/ng-darkmode";
 import { Observable } from "rxjs";
-import { filter, map, switchMap } from "rxjs/operators";
+import { map, switchMap } from "rxjs/operators";
 import { AuthService } from "./auth/auth.service";
 import { Organization } from "./organization/organization";
 import { OrganizationService } from "./organization/organization.module";
 import { PreferencesService } from "./preferences/preferences.service";
+
+import { Router } from "@angular/router";
+import { Plugins } from "@capacitor/core";
+const { App } = Plugins;
 
 @Component({
   selector: "venite-root",
@@ -27,7 +31,9 @@ export class AppComponent {
     private auth: AuthService,
     private organizationService: OrganizationService,
     private darkMode: DarkmodeService,
-    private preferences: PreferencesService
+    private preferences: PreferencesService,
+    private zone: NgZone,
+    private router: Router
   ) {
     this.initializeApp();
     this.translate.use("en");
@@ -35,8 +41,20 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      // deep links
+      App.addListener("appUrlOpen", (data: { url: string }) => {
+        this.zone.run(() => {
+          const slug = data.url.split(".app").pop();
+          if (slug) {
+            this.router.navigateByUrl(slug);
+          }
+        });
+      });
+
+      // reminders page
       this.remindersEnabled = this.platform.is("capacitor");
 
+      // organizations for auth menu
       this.organizations$ = this.auth.user.pipe(
         switchMap((user) =>
           user ? this.organizationService.organizationsWithUser(user.uid) : []

@@ -1,8 +1,8 @@
 {
-  "name": "venite",
+  "name": "Venite",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Greg Johnston <greg@venite.app>",
+  "homepage": "https://www.venite.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
