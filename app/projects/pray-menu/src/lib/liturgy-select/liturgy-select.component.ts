@@ -46,11 +46,12 @@ import {
   merge,
 } from "rxjs";
 import {
-  distinct,
   distinctUntilKeyChanged,
+  filter,
   map,
   startWith,
   switchMap,
+  take,
   tap,
 } from "rxjs/operators";
 
@@ -221,9 +222,11 @@ export class LiturgySelectComponent implements OnInit {
 
     this.liturgyOptions$ = combineLatest(
       allLiturgies$,
-      availableProperLiturgiesLiturgies$
+      availableProperLiturgiesLiturgies$,
+      this.language$,
+      this.version$
     ).pipe(
-      map(([liturgies, availableProperLiturgies]) =>
+      map(([liturgies, availableProperLiturgies, language, version]) =>
         availableProperLiturgies
           ? [availableProperLiturgies].concat(
               liturgies.filter(
@@ -231,7 +234,10 @@ export class LiturgySelectComponent implements OnInit {
               )
             )
           : liturgies.filter(
-              (liturgy) => !Boolean(liturgy?.metadata?.supplement)
+              (liturgy) =>
+                !Boolean(liturgy?.metadata?.supplement) &&
+                (!language || liturgy.language === language) &&
+                (!version || liturgy.version === version)
             )
       )
     );
@@ -385,6 +391,36 @@ export class LiturgySelectComponent implements OnInit {
         })
       )
     );
+
+    // Load language/version/kalendar from preferences
+    this.preferencesService
+      .get("language")
+      .pipe(
+        filter((pref) => Boolean(pref?.value)),
+        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
+        take(1)
+      )
+      .subscribe((pref) => {
+        this.form.controls.language.setValue(pref.value);
+      });
+    this.preferencesService
+      .get("version")
+      .pipe(
+        filter((pref) => Boolean(pref?.value)),
+        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
+        take(1)
+      )
+      .subscribe((pref) => {
+        this.form.controls.version.setValue(pref.value);
+      });
+    this.preferencesService
+      .get("kalendar")
+      .pipe(
+        filter((pref) => Boolean(pref?.value)),
+        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
+        take(1)
+      )
+      .subscribe((pref) => this.form.controls.kalendar.setValue(pref.value));
   }
 
   setMonth(value: string) {

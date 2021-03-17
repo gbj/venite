@@ -42,7 +42,7 @@
     "@venite/ng-localstorage": "0.0.3",
     "@venite/ng-platform": "0.0.2",
     "@venite/ng-pray": "^0.5.14",
-    "@venite/ng-pray-menu": "^0.4.1",
+    "@venite/ng-pray-menu": "^0.4.4",
     "@venite/ng-reminders": "0.0.4",
     "@venite/ng-service-api": "^0.6.1",
     "clipboard-polyfill": "^3.0.1",
