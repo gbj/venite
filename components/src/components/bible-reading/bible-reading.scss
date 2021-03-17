@@ -82,3 +82,10 @@ h3.editable-label {
   font-size: var(--ldf-h3-font-size);
   text-transform: var(--ldf-h3-text-transform);
 }
+
+.citation-button {
+  background: none;
+  border: 0;
+  font-family: var(--ldf-font-face);
+  font-size: inherit;
+}

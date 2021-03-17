@@ -214,13 +214,20 @@ export class BibleReadingComponent {
                   >
                   </ldf-editable-text>
               </h3>
-              <ldf-editable-text slot="end"
+              {this.obj?.citation && <button
+                class="citation-button"
+                slot="end"
+                onClick={() => this.changeReading()}
+              >
+                {this.obj.citation}
+              </button>}
+              {/*<ldf-editable-text slot="end"
                   id="citation"
                   text={this.obj?.citation}
                   path={`${this.path}/citation`}
                   placeholder={localeStrings.citation}
                 >
-                </ldf-editable-text>
+                </ldf-editable-text>*/}
             </ldf-label-bar>
 
             {/* Introductory text ("A Reading from..." or similar) */}
