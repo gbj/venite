@@ -62,7 +62,8 @@
     "settings": "Settings",
     "about": "About",
     "tutorials": "Tutorials",
-    "daily-readings": "Daily Readings"
+    "daily-readings": "Daily Readings",
+    "reminders": "Reminders"
 },
   "bulletins": {
     "bulletins": "Bulletins",
