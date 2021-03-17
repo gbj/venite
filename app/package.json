@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
     "@angular/service-worker": "~9.1.6",
+    "@capacitor/android": "^2.4.2",
     "@capacitor/core": "2.4.2",
     "@capacitor/ios": "^2.4.2",
     "@ionic-native/core": "^5.29.0",
