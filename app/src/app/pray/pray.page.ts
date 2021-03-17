@@ -198,6 +198,15 @@ export class PrayPage implements OnInit, OnDestroy {
     }
   }
 
+  ionViewWillLeave() {
+    if (this.bulletinMode) {
+      this.editorState$.pipe(take(1)).subscribe((state) => {
+        this.editorService.leave(state.localManager.docId);
+        this.bulletinDocId$.next(null);
+      });
+    }
+  }
+
   ngOnInit() {
     this.canShare =
       Boolean((navigator as any).share) || this.platform.is("capacitor");
@@ -822,7 +831,11 @@ export class PrayPage implements OnInit, OnDestroy {
       });
     }
     // Create bulletin if it's not one
-    if (!this.bulletinMode && !(data.doc?.id && data.doc?.day)) {
+    if (
+      !this.bulletinMode &&
+      !(data.doc?.id && data.doc?.day) &&
+      this.auth.currentUser()?.uid
+    ) {
       buttons.push({
         text: "Create Bulletin",
         icon: "create",
@@ -905,7 +918,8 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechPlayingSubDoc = subdoc;
     this.speechPlayingUtterance = utterance;
     this.scrollToSubdoc(subdoc);
-    const utterances$ = combineLatest([this.doc$, this.settings$]).pipe( //this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? subdoc, this.speechPlayingUtterance ?? utterance);
+    const utterances$ = combineLatest([this.doc$, this.settings$]).pipe(
+      //this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? subdoc, this.speechPlayingUtterance ?? utterance);
       filter(([doc, settings]) => Boolean(doc && settings)),
       // any time the document or settings change,
       // cancels the previous TTS reading and restarts it with the new document
