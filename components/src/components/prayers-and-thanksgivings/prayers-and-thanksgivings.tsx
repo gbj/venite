@@ -1,4 +1,3 @@
-import { loadingController } from '@ionic/core';
 import { Component, Prop, Watch, State, Element, h, EventEmitter, Event, Method } from '@stencil/core';
 import { Text, Change } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
@@ -55,7 +54,6 @@ export class PrayersAndThanksgivingsComponent {
 
   // Lifecycle events
   async componentWillLoad() {
-    this.showLoading();
     this.ldfAskForPrayersAndThanksgivings.emit(true);
     this.loadLocaleStrings();
   }
@@ -79,13 +77,6 @@ export class PrayersAndThanksgivingsComponent {
       }]
     }));
     this.modal?.dismiss();
-  }
-
-  async showLoading() {
-    this.loading = await loadingController.create({
-      backdropDismiss: true
-    });
-    await this.loading.present();
   }
 
   buildTree() : [any, any][][] {

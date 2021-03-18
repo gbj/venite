@@ -4,7 +4,8 @@ import { SelectableCitation } from '@venite/ldf';
 @Component({
   tag: 'ldf-string',
   styleUrl: 'string.scss',
-  shadow: true
+  shadow: false,
+  scoped: true
 })
 export class StringComponent {
   @Element() element: HTMLElement;
