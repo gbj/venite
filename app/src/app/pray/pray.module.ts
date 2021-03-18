@@ -22,6 +22,8 @@ import { MarkFavoriteComponent } from "./mark-favorite/mark-favorite.component";
 import { FavoriteTextComponent } from "./favorite-text/favorite-text.component";
 import { FavoritesPageModule } from "../favorites/favorites.module";
 import { SharedModule } from "../shared/shared.module";
+import { AudioService } from "./audio.service";
+import { Media } from "@ionic-native/media/ngx";
 
 interface PrayRootConfig {
   providers: Provider[];
@@ -48,6 +50,7 @@ interface PrayRootConfig {
     FavoriteTextComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [AudioService, Media],
 })
 export class PrayPageModule {
   public static forRoot(

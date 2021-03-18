@@ -17,8 +17,8 @@ import {
 import { PlatformService } from "@venite/ng-platform";
 import { DisplaySettings } from "@venite/ldf";
 import { concat, Observable, timer } from "rxjs";
-import { speak, SpeechSynthesisUtteranceConfig } from "rxjs-tts";
-import { delay, map } from "rxjs/operators";
+import { speak } from "rxjs-tts";
+import { map } from "rxjs/operators";
 
 export type SpeechServiceTracking = {
   subdoc: number;
@@ -66,13 +66,13 @@ export class SpeechService {
   }
 
   // TODO need to handle all SpeechService preferences
-
   speakDoc(
     doc: LiturgicalDocument,
     settings: DisplaySettings,
     index: number = 0,
     startingUtteranceIndex: number = 0
   ): Observable<SpeechServiceTracking> {
+    // init TTS
     const BETWEEN_DOCS = 500 * (1 / settings.voiceRate),
       SILENCE = 4000 * (1 / settings.voiceRate),
       BETWEEN_PSALM_VERSE =

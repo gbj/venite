@@ -5,6 +5,7 @@ import {
   ViewChild,
   ElementRef,
   OnDestroy,
+  NgZone,
 } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import {
@@ -94,7 +95,10 @@ import { PlatformService } from "@venite/ng-platform";
 import { Location } from "@angular/common";
 
 import { Plugins } from "@capacitor/core";
-const { Share, Clipboard } = Plugins;
+import "capacitor-media-session";
+import { MediaAction } from "capacitor-media-session";
+import { AudioService } from "./audio.service";
+const { Share, Clipboard, MediaSession } = Plugins;
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -142,6 +146,7 @@ export class PrayPage implements OnInit, OnDestroy {
   actionSheetData$: Observable<ActionSheetData>;
 
   // TTS
+  docLabel: string | null = null;
   speechPlaying: boolean = false;
   speechSubscription: Subscription;
   speechPlayingSubDoc: number = 0;
@@ -189,7 +194,9 @@ export class PrayPage implements OnInit, OnDestroy {
     private toast: ToastController,
     public selections: SelectionService,
     private platform: PlatformService,
-    private location: Location
+    private location: Location,
+    private zone: NgZone,
+    private audio: AudioService
   ) {}
 
   ngOnDestroy() {
@@ -907,6 +914,68 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // TTS
+  initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
+    this.audio.create("/assets/audio/silence-short.mp3");
+    this.audio.play();
+    this.docLabel = doc.label || "";
+    MediaSession.init({
+      play: true,
+      pause: true,
+      nexttrack: true,
+      previoustrack: true,
+    });
+
+    MediaSession.setMetadata({
+      artist: "Venite",
+      album: this.docLabel || "",
+      title: doc.label,
+      artwork: [
+        {
+          src: "/assets/icon/icon-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    });
+
+    //@ts-ignore
+    MediaSession.addListener("play", () =>
+      this.zone.run(() => this.resumeSpeech(doc, settings))
+    );
+    //@ts-ignore
+    MediaSession.addListener("pause", () =>
+      this.zone.run(() => this.pauseSpeech())
+    );
+    //@ts-ignore
+    MediaSession.addListener("nexttrack", () => {
+      this.zone.run(() => this.fastForward(doc, settings));
+    });
+    //@ts-ignore
+    MediaSession.addListener("previoustrack", () => {
+      this.zone.run(() => this.rewind(doc, settings));
+    });
+  }
+
+  destroyMediaSession() {
+    this.audio.pause();
+    this.audio.destroy();
+    MediaSession.destroy();
+  }
+
+  valueToText(doc: LiturgicalDocument): string {
+    let base: string;
+    if (doc.value && Array.isArray(doc.value)) {
+      if (doc.value[0].hasOwnProperty("text")) {
+        base = (doc.value[0] as any).text;
+      } else {
+        base = doc.value[0] as string;
+      }
+    }
+    return JSON.stringify(base)
+      .replace(/[\[\]\{\}\,\"]/g, "")
+      .replace(/\&nbsp\;/g, " ");
+  }
+
   startSpeechAt(
     doc: LiturgicalDocument,
     settings: DisplaySettings,
@@ -914,6 +983,14 @@ export class PrayPage implements OnInit, OnDestroy {
     utterance: number = 0,
     firstTime: boolean = false
   ) {
+    if (
+      (firstTime && navigator.mediaSession) ||
+      this.platform.is("capacitor")
+    ) {
+      this.initMediaSession(doc, settings);
+    }
+
+    // init speech
     this.speechPlaying = true;
     this.speechPlayingSubDoc = subdoc;
     this.speechPlayingUtterance = utterance;
@@ -958,7 +1035,6 @@ export class PrayPage implements OnInit, OnDestroy {
     );
     this.speechSubscription = utterances$.subscribe(
       (data: SpeechServiceTracking) => {
-        //console.log('(speech) speechService', data);
         if (this.speechPlayingSubDoc !== data.subdoc) {
           this.speechUtteranceAtStartOfSubDoc = data.utterance;
         }
@@ -969,6 +1045,23 @@ export class PrayPage implements OnInit, OnDestroy {
 
         this.speechPlayingSubDoc = data.subdoc ?? 0;
         this.speechPlayingUtterance = data.utterance ?? 0;
+
+        // update metadata for doc
+        const utterance = (data.data as SpeechSynthesisEvent).utterance;
+        if (utterance) {
+          MediaSession.setMetadata({
+            artist: "Venite",
+            album: this.docLabel || "",
+            title: utterance.text,
+            artwork: [
+              {
+                src: "/assets/icon/icon-512x512.png",
+                sizes: "512x512",
+                type: "image/png",
+              },
+            ],
+          });
+        }
       },
       // TODO: speech errors
       (error) => {},
@@ -985,8 +1078,10 @@ export class PrayPage implements OnInit, OnDestroy {
     }
   }
   pauseSpeech() {
+    this.zone;
     this.speechSubscription.unsubscribe();
     this.speechService.pause();
+    this.audio?.pause();
   }
   resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
     this.startSpeechAt(
@@ -996,6 +1091,7 @@ export class PrayPage implements OnInit, OnDestroy {
       this.speechPlayingUtterance
     );
     this.speechService.resume();
+    this.audio?.play();
   }
   rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
     this.speechSubscription.unsubscribe();
