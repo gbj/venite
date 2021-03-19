@@ -5,7 +5,7 @@ import { Platform } from "@ionic/angular";
 // Community Modules
 import { TranslateService } from "@ngx-translate/core";
 import { DarkmodeService } from "@venite/ng-darkmode";
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
 import { map, switchMap } from "rxjs/operators";
 import { AuthService } from "./auth/auth.service";
 import { Organization } from "./organization/organization";
@@ -57,7 +57,9 @@ export class AppComponent {
       // organizations for auth menu
       this.organizations$ = this.auth.user.pipe(
         switchMap((user) =>
-          user ? this.organizationService.organizationsWithUser(user.uid) : []
+          user
+            ? this.organizationService.organizationsWithUser(user.uid)
+            : of([])
         )
       );
 

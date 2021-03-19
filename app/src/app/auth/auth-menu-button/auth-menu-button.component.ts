@@ -12,8 +12,6 @@ import { Subscription } from "rxjs";
   styleUrls: ["./auth-menu-button.component.scss"],
 })
 export class AuthMenuButtonComponent implements OnInit {
-  user$: Subscription;
-
   constructor(public auth: AuthService, private modal: ModalController) {}
 
   ngOnInit() {}

@@ -38,5 +38,7 @@ import { TranslateService } from "@ngx-translate/core";
 export class HomePage implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("(HomePage) ngOnInit");
+  }
 }

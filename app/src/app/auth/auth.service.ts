@@ -6,6 +6,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { auth, User } from "firebase/app";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -18,7 +19,9 @@ export class AuthService {
     afAuth: AngularFireAuth,
     private afs: AngularFirestore
   ) {
-    this.user = afAuth.user;
+    this.user = afAuth.user.pipe(
+      tap((user) => console.log("(AuthService) user = ", user))
+    );
   }
 
   currentUser(): User {

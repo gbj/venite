@@ -384,6 +384,7 @@ export class DocumentService {
         .valueChanges();
 
       const myDocs$ = this.auth.user.pipe(
+        filter((user) => Boolean(user)),
         switchMap((user) => {
           if (user?.uid) {
             return this.afs

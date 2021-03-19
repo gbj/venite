@@ -168,8 +168,12 @@ export class LiturgySelectComponent implements OnInit {
     });
 
     // Liturgy options
-    this.language$ = this.form.controls.language.valueChanges;
-    this.version$ = this.form.controls.version.valueChanges;
+    this.language$ = this.form.controls.language.valueChanges.pipe(
+      startWith(this.form.controls.language.value)
+    );
+    this.version$ = this.form.controls.version.valueChanges.pipe(
+      startWith(this.form.controls.version.value)
+    );
 
     const allLiturgies$ = combineLatest([
       this.language$.pipe(startWith(this.config.defaultLanguage)),

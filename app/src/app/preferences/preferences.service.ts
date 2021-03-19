@@ -1,4 +1,4 @@
-import { Injectable, Inject } from "@angular/core";
+import { Injectable, Inject, ComponentFactoryResolver } from "@angular/core";
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -89,6 +89,10 @@ export class PreferencesService {
               // take only the first thing returned if multiple for query
               map((values) => values[0])
             );
+        } else {
+          return from(this.storage.get(this.localStorageKey(key))).pipe(
+            tap((data) => console.log("getStored", data))
+          );
         }
       })
     );
