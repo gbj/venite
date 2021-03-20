@@ -8,6 +8,9 @@
 
 * [BibleReading](_index_.md#biblereading)
 * [BibleReadingVerse](_index_.md#biblereadingverse)
+* [BibleReferenceQuery](_index_.md#biblereferencequery)
+* [BibleReferenceRange](_index_.md#biblereferencerange)
+* [Book](_index_.md#book)
 * [Calendar](_index_.md#calendar)
 * [CanticleTableEntry](_index_.md#canticletableentry)
 * [Change](_index_.md#change)
@@ -71,6 +74,7 @@
 * [findCollect](_index_.md#findcollect)
 * [liturgicalDay](_index_.md#liturgicalday)
 * [liturgicalWeek](_index_.md#liturgicalweek)
+* [parseReference](_index_.md#parsereference)
 * [preferencesToCategories](_index_.md#preferencestocategories)
 * [processCollectText](_index_.md#processcollecttext)
 * [rclYear](_index_.md#rclyear)
@@ -93,6 +97,24 @@ ___
 ###  BibleReadingVerse
 
 • **BibleReadingVerse**:
+
+___
+
+###  BibleReferenceQuery
+
+• **BibleReferenceQuery**:
+
+___
+
+###  BibleReferenceRange
+
+• **BibleReferenceRange**:
+
+___
+
+###  Book
+
+• **Book**:
 
 ___
 
@@ -471,6 +493,12 @@ ___
 ###  liturgicalWeek
 
 • **liturgicalWeek**:
+
+___
+
+###  parseReference
+
+• **parseReference**:
 
 ___
 
