@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { User } from "firebase/app";
 
 import { BehaviorSubject, Observable, Subject, combineLatest } from "rxjs";
 import { map, tap, switchMap } from "rxjs/operators";
@@ -38,7 +37,5 @@ import { TranslateService } from "@ngx-translate/core";
 export class HomePage implements OnInit {
   constructor() {}
 
-  ngOnInit() {
-    console.log("(HomePage) ngOnInit");
-  }
+  ngOnInit() {}
 }

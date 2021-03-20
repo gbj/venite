@@ -3,7 +3,7 @@ import { Platform } from "@ionic/angular";
 import { Observable } from "rxjs";
 
 import { AngularFireAuth } from "@angular/fire/auth";
-import { auth, User } from "firebase/app";
+import firebase from "firebase/app";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { tap } from "rxjs/operators";
@@ -12,38 +12,43 @@ import { tap } from "rxjs/operators";
   providedIn: "root",
 })
 export class AuthService {
-  public user: Observable<User | null>;
+  public user: Observable<firebase.User | null>;
 
   constructor(
     private platform: Platform,
     afAuth: AngularFireAuth,
     private afs: AngularFirestore
   ) {
-    this.user = afAuth.user.pipe(
-      tap((user) => console.log("(AuthService) user = ", user))
-    );
+    this.user = afAuth.user;
   }
 
-  currentUser(): User {
-    return auth().currentUser;
+  currentUser(): firebase.User {
+    return firebase.auth().currentUser;
   }
 
-  async login(provider: string): Promise<auth.UserCredential | null> {
-    let result: auth.UserCredential;
+  async login(provider: string): Promise<firebase.auth.UserCredential | null> {
+    let result: firebase.auth.UserCredential;
 
     if (this.platform.is("capacitor")) {
       console.warn("Auth not set up in Capacitor yet");
     } else {
       if (provider == "Google") {
-        result = await auth().signInWithPopup(new auth.GoogleAuthProvider());
+        result = await firebase
+          .auth()
+          .signInWithPopup(new firebase.auth.GoogleAuthProvider());
       } else if (provider == "Twitter") {
-        result = await auth().signInWithPopup(new auth.TwitterAuthProvider());
+        result = await firebase
+          .auth()
+          .signInWithPopup(new firebase.auth.TwitterAuthProvider());
       } else if (provider == "Apple") {
-        //await auth().signInWithPopup(new auth.AppleAuthProvider());
-        console.warn(
-          "Sign in with Apple needs to be set up in the AuthModule."
-        );
-        return null;
+        const provider = new firebase.auth.OAuthProvider("apple.com");
+        provider.addScope("email");
+        provider.addScope("name");
+        try {
+          result = await firebase.auth().signInWithPopup(provider);
+        } catch (e) {
+          console.warn("(AuthService => login) Error: ", e);
+        }
       } else {
         throw `Auth provider "${provider}" not supported.`;
       }
@@ -61,20 +66,20 @@ export class AuthService {
     if (this.platform.is("capacitor")) {
       console.warn("Auth not set up in Capacitor yet");
     } else {
-      return await auth().signOut();
+      return await firebase.auth().signOut();
     }
   }
 
   async signInWithEmailAndPassword(email: string, password: string) {
-    return auth().signInWithEmailAndPassword(email, password);
+    return firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
   async createUserWithEmailAndPassword(email: string, password: string) {
-    return auth().createUserWithEmailAndPassword(email, password);
+    return firebase.auth().createUserWithEmailAndPassword(email, password);
   }
 
   async resetPassword(email: string) {
-    return auth().sendPasswordResetEmail(email);
+    return firebase.auth().sendPasswordResetEmail(email);
   }
 
   async updateUserProfile(
@@ -84,7 +89,7 @@ export class AuthService {
     return this.afs.collection("Users").doc(uid).update(profile);
   }
 
-  async createUserProfile(user: User): Promise<void> {
+  async createUserProfile(user: firebase.User): Promise<void> {
     this.afs.doc<UserProfile>(`Users/${user.uid}`).set({
       uid: user.uid,
       ...(user.displayName && { displayName: user.displayName }),

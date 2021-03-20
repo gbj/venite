@@ -87,6 +87,10 @@ export class JoinOrganizationComponent implements OnInit {
   }
 
   dismiss() {
-    this.modal.dismiss();
+    if (this.modal) {
+      this.modal.dismiss();
+    } else {
+      this.modalController.dismiss();
+    }
   }
 }

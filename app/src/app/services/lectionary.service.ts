@@ -3,7 +3,8 @@ import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from "@venite/ldf";
 import { ReplaySubject, Observable, from } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
+import firebase from "firebase/app";
 
 @Injectable({
   providedIn: "root",

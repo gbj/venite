@@ -6,6 +6,9 @@
         <ion-avatar *ngIf="user.photoURL" slot="end">
           <img [src]="user.photoURL" [alt]="user.displayName">
         </ion-avatar>
+        <ion-avatar *ngIf="!user.photoURL" slot="end">
+          <img src="/assets/avatar.svg" [alt]="user.displayName">
+        </ion-avatar>
       </ion-button>
     </ion-menu-toggle>
   </ng-container>

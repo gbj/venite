@@ -100,8 +100,16 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
     this.preferences.next(changes.liturgy.currentValue?.metadata?.preferences);
 
-    // since liturgy has changed, preference queries need to be refreshed
-    this.formData = this.buildFormData(this.tree, changes.liturgy.currentValue);
+    // since liturgy has changed, preferences may need to be refreshed
+    const oldPreferences = changes.liturgy.previousValue?.metadata?.preferences,
+      newPreferences = changes.liturgy.currentValue?.metadata?.preferences;
+
+    if (!deepEqual(oldPreferences, newPreferences)) {
+      this.formData = this.buildFormData(
+        this.tree,
+        changes.liturgy.currentValue
+      );
+    }
 
     // emit "preferencesLoaded" event
     if (this.subscription) {
@@ -125,6 +133,7 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
   buildTree(): Observable<TreeData> {
     return this.preferences.pipe(
+      startWith({}),
       // don't use null values of preferences
       filter((preferences) => !!preferences),
 
@@ -206,3 +215,25 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
     this.preferencesService.set(key, value, user?.uid, this.liturgy);
   }
 }
+
+const deepEqual = (v1, v2) => {
+  if (v1 == v2) return true;
+
+  if (
+    v1 == null ||
+    v2 == null ||
+    typeof v1 != "object" ||
+    typeof v2 != "object"
+  )
+    return false;
+
+  let v1keys = Object.keys(v1);
+  let v2keys = Object.keys(v2);
+
+  if (v1keys.length != v2keys.length) return false;
+
+  for (let key of v1keys) {
+    if (!v2keys.includes(key) || !deepEqual(v1[key], v2[key])) return false;
+  }
+  return true;
+};

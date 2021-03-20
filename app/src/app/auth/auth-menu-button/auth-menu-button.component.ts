@@ -14,7 +14,11 @@ import { Subscription } from "rxjs";
 export class AuthMenuButtonComponent implements OnInit {
   constructor(public auth: AuthService, private modal: ModalController) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.auth.user.subscribe((data) =>
+      console.log("(AuthMenuButton) user = ", data)
+    );
+  }
 
   async signIn() {
     const modal = await this.modal.create({

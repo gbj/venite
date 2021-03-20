@@ -6,9 +6,9 @@ import {
   Output,
   EventEmitter,
 } from "@angular/core";
-import { User } from "firebase";
 import { Observable, of } from "rxjs";
 import { finalize } from "rxjs/operators";
+import firebase from "firebase/app";
 
 import { UploadService } from "src/app/services/upload.service";
 
@@ -18,7 +18,7 @@ import { UploadService } from "src/app/services/upload.service";
   styleUrls: ["./edit-avatar.component.scss"],
 })
 export class EditAvatarComponent implements OnInit {
-  @Input() user: User;
+  @Input() user: firebase.User;
   @Output() photoURLChange: EventEmitter<string> = new EventEmitter();
 
   error: string;

@@ -4,7 +4,7 @@ import { Organization } from "./organization";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { map, switchMap, take, startWith, filter } from "rxjs/operators";
 import { UserProfile } from "../auth/user/user-profile";
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import { slugify } from "../slugify";
 
 @Injectable({

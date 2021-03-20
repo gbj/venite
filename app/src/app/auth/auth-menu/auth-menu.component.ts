@@ -3,11 +3,11 @@ import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
 import { Observable } from "rxjs";
 import { Organization } from "../../organization/organization";
-import { switchMap, tap } from "rxjs/operators";
-import { User } from "firebase";
+import { switchMap } from "rxjs/operators";
 import { MenuController, ModalController } from "@ionic/angular";
 import { OrganizationService } from "src/app/organization/organization.service";
 import { JoinOrganizationComponent } from "../join-organization/join-organization.component";
+import firebase from "firebase/app";
 
 @Component({
   selector: "venite-auth-menu",
@@ -32,7 +32,7 @@ export class AuthMenuComponent implements OnInit {
     );
   }
 
-  updateUserPhoto(user: User, photoURL: string) {
+  updateUserPhoto(user: firebase.User, photoURL: string) {
     user.updateProfile({ photoURL });
     this.auth.updateUserProfile(user.uid, { photoURL });
   }

@@ -3,11 +3,10 @@ import { Observable, combineLatest } from "rxjs";
 import { ActivatedRoute, Router } from "@angular/router";
 import { OrganizationService } from "./organization.service";
 import { Organization } from "./organization";
-import { switchMap, tap, map, filter, startWith } from "rxjs/operators";
+import { switchMap, map, filter, startWith } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
 import { UserProfile } from "../auth/user/user-profile";
-import { User } from "firebase/app";
-import { dateFromYMDString, LiturgicalDocument } from "@venite/ldf";
+import { dateFromYMDString, LiturgicalDocument, User } from "@venite/ldf";
 import { DocumentService } from "../services/document.service";
 
 @Component({
