@@ -1,5 +1,6 @@
 import { Directive, ElementRef, Input, Renderer2 } from "@angular/core";
 import { DomController } from "@ionic/angular";
+import { PlatformService } from "@venite/ng-platform";
 import { debounceTime } from "rxjs/operators";
 
 const TOOLBAR_HEIGHT = "56px";
@@ -18,34 +19,38 @@ export class ScrollVanishDirective {
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
-    private domCtrl: DomController
+    private domCtrl: DomController,
+    private platform: PlatformService
   ) {}
 
   ngOnInit() {
-    this.initStyles();
+    // only hide the header in the web version
+    if (!this.platform.is("capacitor") && !this.platform.is("pwa")) {
+      this.initStyles();
 
-    this.scrollArea.ionScroll
-      .pipe(
-        // animation time is 200ms, and scroll events fire continuously,
-        // so debounce so you don't have stuttering animations while scrolling
-        debounceTime(50)
-      )
-      .subscribe((scrollEvent) => {
-        //console.log('scrollVanish', scrollEvent);
-        const delta = scrollEvent.detail.deltaY;
+      this.scrollArea.ionScroll
+        .pipe(
+          // animation time is 200ms, and scroll events fire continuously,
+          // so debounce so you don't have stuttering animations while scrolling
+          debounceTime(50)
+        )
+        .subscribe((scrollEvent) => {
+          //console.log('scrollVanish', scrollEvent);
+          const delta = scrollEvent.detail.deltaY;
 
-        if (scrollEvent.detail.currentY === 0 && this.hidden) {
-          this.show();
-        } else if (!this.hidden && delta > this.triggerDistance) {
-          this.hide();
-        } else if (this.hidden && delta < -this.triggerDistance) {
-          this.show();
-        } else if (scrollEvent.detail.currentY < this.currentY) {
-          this.show();
-        }
+          if (scrollEvent.detail.currentY === 0 && this.hidden) {
+            this.show();
+          } else if (!this.hidden && delta > this.triggerDistance) {
+            this.hide();
+          } else if (this.hidden && delta < -this.triggerDistance) {
+            this.show();
+          } else if (scrollEvent.detail.currentY < this.currentY) {
+            this.show();
+          }
 
-        this.currentY = scrollEvent.detail.currentY;
-      });
+          this.currentY = scrollEvent.detail.currentY;
+        });
+    }
   }
 
   initStyles() {
