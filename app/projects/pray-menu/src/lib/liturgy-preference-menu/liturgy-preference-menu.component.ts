@@ -104,7 +104,7 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
     const oldPreferences = changes.liturgy.previousValue?.metadata?.preferences,
       newPreferences = changes.liturgy.currentValue?.metadata?.preferences;
 
-    if (!deepEqual(oldPreferences, newPreferences)) {
+    if (!oldPreferences || !deepEqual(oldPreferences, newPreferences)) {
       this.formData = this.buildFormData(
         this.tree,
         changes.liturgy.currentValue

@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from "@venite/ldf";
 import { ReplaySubject, Observable, from } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 import firebase from "firebase/app";
 
 @Injectable({
@@ -90,6 +90,10 @@ export class LectionaryService {
         lectionaryName,
         readingType,
         alternateYear
+      ).pipe(
+        tap((entries) =>
+          console.log("getReadings possiblyOfflineQuery entries = ", entries)
+        )
       );
     }
   }
@@ -134,8 +138,18 @@ export class LectionaryService {
                   "gospel",
                 ].includes(readingType)
               ) {
+                console.log(
+                  "(possiblyOfflineQuery) returning ",
+                  entries.filter(
+                    (entry) =>
+                      entry.day == day.slug &&
+                      (!readingType || entry.type == readingType)
+                  )
+                );
                 return entries.filter(
-                  (entry) => entry.day == day.slug && entry.type == readingType
+                  (entry) =>
+                    entry.day == day.slug &&
+                    (!readingType || entry.type == readingType)
                 );
               } else {
                 let halfFiltered = entries.filter(

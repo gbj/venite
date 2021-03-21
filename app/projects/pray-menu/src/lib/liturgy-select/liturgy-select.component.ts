@@ -602,10 +602,6 @@ export class LiturgySelectComponent implements OnInit {
             ? "holy_day_evening_2"
             : "holy_day_morning_2";
 
-        console.log("availableReadings = ", availableReadings);
-
-        console.log("holy_day_readings = ", holy_day_readings);
-
         const modifiedPrefs = {
           ...prefs,
           readingA: availableReadings.includes(readingA)
@@ -618,8 +614,6 @@ export class LiturgySelectComponent implements OnInit {
             ? "none"
             : prefs["readingC"],
         };
-
-        console.log("modifiedPrefs = ", modifiedPrefs);
 
         const alert = await this.alert.create({
           header: this.translate.instant("home.holy_day_alert.title"),
