@@ -1,12 +1,17 @@
 import { Injectable } from "@angular/core";
-import { Platform } from "@ionic/angular";
+import { LoadingController, Platform } from "@ionic/angular";
 import { Observable } from "rxjs";
 
 import { AngularFireAuth } from "@angular/fire/auth";
 import firebase from "firebase/app";
+import {
+  cfaSignIn,
+  cfaSignOut,
+  SignInResult,
+} from "capacitor-firebase-auth/alternative";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { tap } from "rxjs/operators";
+import { User } from "@venite/ldf";
 
 @Injectable({
   providedIn: "root",
@@ -17,7 +22,8 @@ export class AuthService {
   constructor(
     private platform: Platform,
     afAuth: AngularFireAuth,
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private loading: LoadingController
   ) {
     this.user = afAuth.user;
   }
@@ -30,8 +36,29 @@ export class AuthService {
     let result: firebase.auth.UserCredential;
 
     if (this.platform.is("capacitor")) {
-      console.warn("Auth not set up in Capacitor yet");
+      let target;
+      switch (provider) {
+        case "Google":
+          target = "google.com";
+          break;
+        case "Twitter":
+          target = "twitter.com";
+          break;
+        case "Apple":
+          target = "apple.com";
+          break;
+      }
+      if (target) {
+        const loading = await this.loading.create();
+        await loading.present();
+        const user = await cfaSignIn(target).toPromise();
+        loading.dismiss();
+        return user.userCredential;
+      }
     } else {
+      const loading = await this.loading.create();
+      await loading.present();
+
       if (provider == "Google") {
         result = await firebase
           .auth()
@@ -52,6 +79,8 @@ export class AuthService {
       } else {
         throw `Auth provider "${provider}" not supported.`;
       }
+
+      loading.dismiss();
     }
 
     // create profile if necessary
@@ -64,22 +93,38 @@ export class AuthService {
 
   async logout() {
     if (this.platform.is("capacitor")) {
-      console.warn("Auth not set up in Capacitor yet");
+      cfaSignOut().subscribe();
     } else {
       return await firebase.auth().signOut();
     }
   }
 
   async signInWithEmailAndPassword(email: string, password: string) {
-    return firebase.auth().signInWithEmailAndPassword(email, password);
+    const loading = await this.loading.create();
+    await loading.present();
+    const res = await firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password);
+    await loading.dismiss();
+    return res;
   }
 
   async createUserWithEmailAndPassword(email: string, password: string) {
-    return firebase.auth().createUserWithEmailAndPassword(email, password);
+    const loading = await this.loading.create();
+    await loading.present();
+    const res = await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password);
+    await loading.dismiss();
+    return res;
   }
 
   async resetPassword(email: string) {
-    return firebase.auth().sendPasswordResetEmail(email);
+    const loading = await this.loading.create();
+    await loading.present();
+    const res = await firebase.auth().sendPasswordResetEmail(email);
+    await loading.dismiss();
+    return res;
   }
 
   async updateUserProfile(
