@@ -55,12 +55,18 @@ export class LiturgyComponent {
 
   // Render
   render() {
-    const basePath : string = this.path == '/' ? '' : `${this.path}/`;
+    const basePath : string = this.path == '/' ? '' : `${this.path}/`,
+      valuePath = `${basePath}/value`;
     return (
-      <Host lang={this.obj.language}>
+        <Host lang={this.obj.language}>
+        {/* 'Add Block' interface */}
+        {(this.editable || this.preview) && <ldf-editable-add-block
+          visible={true}
+          base={valuePath} index={0}
+        ></ldf-editable-add-block>}
+
         {this.obj.value.map((doc, docIndex) => {
-          const valuePath = `${basePath}/value`,
-                path = `${valuePath}/${docIndex}`,
+              const path = `${valuePath}/${docIndex}`,
                 buttonVisible = this.hasFocus == path // button appears if this doc is focused
                   || docIndex == ((this.obj?.value?.length || 0) - 1) // or it it's the last doc in the liturgy
                   || (doc?.type === 'option' && this.hasFocus?.startsWith(path)); // or if it's an option and one of its children is focused
