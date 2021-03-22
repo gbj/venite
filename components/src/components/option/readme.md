@@ -73,8 +73,8 @@ graph TD;
   ion-segment-button --> ion-ripple-effect
   ion-button --> ion-ripple-effect
   ldf-liturgical-document --> ldf-option
-  ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label

@@ -115,8 +115,8 @@ graph TD;
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgical-document --> ldf-editable-metadata-buttons
-  ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label

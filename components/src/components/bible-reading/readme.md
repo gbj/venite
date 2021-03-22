@@ -67,8 +67,8 @@ graph TD;
   ion-button --> ion-ripple-effect
   ldf-editable-text --> ion-input
   ldf-liturgical-document --> ldf-bible-reading
-  ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label

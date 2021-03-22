@@ -4,6 +4,7 @@
   "ok": "OK",
   "draft": "Draft",
   "published": "Published",
+  "loading-preferences": "Loading Preferences...",
   "login-to-continue": "Log in to continue using the app.",
   "language": {
     "en": "English"
@@ -122,6 +123,7 @@
     "Unison": "Unison"
   },
   "editor": {
+    "psalm_not_found": "We had trouble finding that psalm. Double-check the citation and try again.",
     "bible_version": "Version",
     "bulletin-color": "Change Liturgical Color",
     "bulletin-creation-error": "There was an error creating your bulletin. We’ll continue with the best version we had before the error.",
@@ -230,7 +232,9 @@
       "custom-font": "Custom Font",
       "venite-fonts": "Venite Fonts",
       "web-fonts": "Web Fonts"
-    }
+    },
+    "psalmCitation": "Psalm Citation",
+    "psalmCitationExample": "e.g., Psalm 51:1-4"
   },
   "organization": {
     "owner": "Administrator",

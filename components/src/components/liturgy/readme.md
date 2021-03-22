@@ -23,14 +23,18 @@
 
 ### Depends on
 
-- [ldf-liturgical-document](../liturgical-document)
 - [ldf-editable-add-block](../editable-add-block)
+- [ldf-liturgical-document](../liturgical-document)
 
 ### Graph
 ```mermaid
 graph TD;
-  ldf-liturgy --> ldf-liturgical-document
   ldf-liturgy --> ldf-editable-add-block
+  ldf-liturgy --> ldf-liturgical-document
+  ldf-editable-add-block --> ion-button
+  ldf-editable-add-block --> ion-icon
+  ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-liturgical-document --> ldf-liturgy
   ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
@@ -44,7 +48,6 @@ graph TD;
   ldf-text --> ldf-heading
   ldf-text --> ldf-editable-text
   ldf-text --> ldf-string
-  ion-button --> ion-ripple-effect
   ldf-image --> ldf-label-bar
   ldf-image --> ldf-editable-text
   ldf-image --> ion-header
@@ -107,9 +110,6 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
-  ldf-editable-add-block --> ion-button
-  ldf-editable-add-block --> ion-icon
-  ldf-editable-add-block --> ion-label
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
