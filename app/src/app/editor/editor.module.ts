@@ -18,6 +18,7 @@ import { EditorDisplaySettingsComponent } from "./editor-display-settings/editor
 import { EditorButtonsComponent } from "./editor-buttons/editor-buttons.component";
 import { ColorPickerComponent } from "./color-picker/color-picker.component";
 import { FontPickerComponent } from "./font-picker/font-picker.component";
+import { PsalmSelectComponent } from "./psalm-select/psalm-select.component";
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { FontPickerComponent } from "./font-picker/font-picker.component";
     AddBlockComponent,
     LectionarySelectComponent,
     CanticleSelectComponent,
+    PsalmSelectComponent,
     SharingComponent,
     HymnSelectorComponent,
     UploadImageComponent,

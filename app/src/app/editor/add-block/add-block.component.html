@@ -31,13 +31,21 @@
       ></venite-hymn-selector>
 
       <!-- Psalms -->
-      <ldf-editable-filter-documents *ngSwitchCase="'psalm'"
+      <ng-container *ngSwitchCase="'psalm'">
+        <venite-psalm-select
+          [options]="additionalOptions | async"
+          (psalmSelected)="complete.next([$event])"
+        >
+        </venite-psalm-select>
+
+        <ldf-editable-filter-documents 
           type="psalm"
           [versions]="additionalVersions | async"
           [options]="additionalOptions | async"
           (ldfDocumentSelected)="complete.next([$event.detail])"
       >
       </ldf-editable-filter-documents>
+      </ng-container>
 
       <!-- Invitatories -->
       <ldf-editable-filter-documents *ngSwitchCase="'invitatory'"
