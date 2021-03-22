@@ -109,16 +109,16 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
         this.tree,
         changes.liturgy.currentValue
       );
-    }
 
-    // emit "preferencesLoaded" event
-    if (this.subscription) {
-      this.subscription.unsubscribe();
+      // emit "preferencesLoaded" event
+      if (this.subscription) {
+        this.subscription.unsubscribe();
+      }
+      this.subscription = this.formData.subscribe((data) => {
+        console.log("formData = ", data);
+        this.preferencesLoaded.emit(Boolean(data));
+      });
     }
-    this.subscription = this.formData.subscribe((data) => {
-      console.log("formData = ", data);
-      this.preferencesLoaded.emit(Boolean(data));
-    });
   }
 
   ngOnDestroy() {

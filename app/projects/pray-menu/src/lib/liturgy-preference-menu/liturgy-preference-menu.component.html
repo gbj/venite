@@ -1,4 +1,4 @@
-<ng-container *ngIf="formData | async as data">
+<ng-container *ngIf="formData | async as data else loading">
   <form [formGroup]="data.form">
     <ng-container *ngFor="let category of data.categories">
       <ion-list *ngIf="data.preference_tree[category].length > 0">
@@ -31,3 +31,7 @@
     </ng-container>
   </form>
 </ng-container>
+
+<ng-template #loading>
+  <div class="loading">{{ 'loading-preferences' | translate }}</div>
+</ng-template>
