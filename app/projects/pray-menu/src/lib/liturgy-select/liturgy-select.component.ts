@@ -478,71 +478,73 @@ export class LiturgySelectComponent implements OnInit {
   pray(data: PrayData | undefined, bulletinMode: boolean = false) {
     this.isNavigating = true;
 
-    this.dayChosen.emit(data);
+    window.requestAnimationFrame(() => {
+      this.dayChosen.emit(data);
 
-    const {
-      user,
-      liturgy,
-      date,
-      properLiturgy,
-      liturgicalDay,
-      clientPreferences,
-      availableReadings,
-    } = data;
-
-    // update preferences
-    this.savePreferences(
-      user ? user.uid : undefined,
-      clientPreferences,
-      liturgy,
-      this.form.controls.language.value,
-      this.form.controls.version.value,
-      this.form.controls.kalendar.value
-    );
-
-    // if proper liturgy is selected, use its preference value
-    // e.g., Maundy Thursday `footwashing` preference
-    if (properLiturgy?.preference) {
-      clientPreferences[properLiturgy.preference] = "true";
-    }
-
-    // check to see if all selected readings are available; if not, notify the user
-    const allReadingsAvailable = this.areReadingsAvailable(
-      new Liturgy(liturgy),
-      clientPreferences,
-      availableReadings
-    );
-    if (!allReadingsAvailable) {
-      this.isNavigating = false;
-      this.readingsNotAvailableAlert(
-        new Liturgy(liturgy),
+      const {
+        user,
+        liturgy,
+        date,
+        properLiturgy,
         liturgicalDay,
         clientPreferences,
         availableReadings,
-        bulletinMode
+      } = data;
+
+      // update preferences
+      this.savePreferences(
+        user ? user.uid : undefined,
+        clientPreferences,
+        liturgy,
+        this.form.controls.language.value,
+        this.form.controls.version.value,
+        this.form.controls.kalendar.value
       );
-    } else {
-      // navigate to the Pray page
-      if (bulletinMode) {
-        this.navigate(
-          "/bulletin",
+
+      // if proper liturgy is selected, use its preference value
+      // e.g., Maundy Thursday `footwashing` preference
+      if (properLiturgy?.preference) {
+        clientPreferences[properLiturgy.preference] = "true";
+      }
+
+      // check to see if all selected readings are available; if not, notify the user
+      const allReadingsAvailable = this.areReadingsAvailable(
+        new Liturgy(liturgy),
+        clientPreferences,
+        availableReadings
+      );
+      if (!allReadingsAvailable) {
+        this.isNavigating = false;
+        this.readingsNotAvailableAlert(
           new Liturgy(liturgy),
-          date,
           liturgicalDay,
           clientPreferences,
-          true
+          availableReadings,
+          bulletinMode
         );
       } else {
-        this.navigate(
-          "/pray",
-          new Liturgy(liturgy),
-          date,
-          liturgicalDay,
-          clientPreferences
-        );
+        // navigate to the Pray page
+        if (bulletinMode) {
+          this.navigate(
+            "/bulletin",
+            new Liturgy(liturgy),
+            date,
+            liturgicalDay,
+            clientPreferences,
+            true
+          );
+        } else {
+          this.navigate(
+            "/pray",
+            new Liturgy(liturgy),
+            date,
+            liturgicalDay,
+            clientPreferences
+          );
+        }
+        this.isNavigating = false;
       }
-      this.isNavigating = false;
-    }
+    });
   }
 
   areReadingsAvailable(
