@@ -34,7 +34,14 @@ ldf-editable-metadata-buttons {
   background: var(--ldf-background);
   opacity: 0.8;
   width: 100%;
+  position: sticky;
+  top: 1em;
+  /*position: relative;*/
+}
+
+ldf-editable-metadata-buttons.top-level {
   position: relative;
+  top: 0;
 }
 
 .doc.editable {

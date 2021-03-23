@@ -218,6 +218,7 @@ export class LiturgicalDocumentComponent {
           parentType={this.parentType}
           preview={this.preview}
           onLdfTogglePreview={(e : CustomEvent) => this.setPreview(e.detail)}
+          class={{'top-level': this.obj?.type === 'liturgy' || this.obj?.type === 'option'}}
         >
         </ldf-editable-metadata-buttons>}
 
