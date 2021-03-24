@@ -25,7 +25,7 @@
 
 \+ **new BibleReadingVerse**(`data`: Partial‹[BibleReadingVerse](_bible_reading_bible_reading_verse_.biblereadingverse.md)›): *[BibleReadingVerse](_bible_reading_bible_reading_verse_.biblereadingverse.md)*
 
-*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
+*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
 
 **Parameters:**
 
@@ -41,7 +41,7 @@ Name | Type | Default |
 
 • **book**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:2](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/bible-reading/bible-reading-verse.ts#L2)*
+*Defined in [bible-reading/bible-reading-verse.ts:2](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reading/bible-reading-verse.ts#L2)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **chapter**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:3](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/bible-reading/bible-reading-verse.ts#L3)*
+*Defined in [bible-reading/bible-reading-verse.ts:3](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reading/bible-reading-verse.ts#L3)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **text**: *string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
+*Defined in [bible-reading/bible-reading-verse.ts:5](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reading/bible-reading-verse.ts#L5)*
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 • **verse**? : *undefined | string*
 
-*Defined in [bible-reading/bible-reading-verse.ts:4](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/bible-reading/bible-reading-verse.ts#L4)*
+*Defined in [bible-reading/bible-reading-verse.ts:4](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reading/bible-reading-verse.ts#L4)*

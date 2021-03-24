@@ -20,7 +20,6 @@ import {
   transferredFeast,
 } from "@venite/ldf";
 import { CalendarServiceInterface } from "@venite/ng-service-api";
-import { HttpClient } from "@angular/common/http";
 
 import WEEKS from "../../offline/weeks.json";
 import KALENDAR from "../../offline/kalendar.json";
@@ -29,10 +28,7 @@ import KALENDAR from "../../offline/kalendar.json";
   providedIn: "root",
 })
 export class CalendarService implements CalendarServiceInterface {
-  constructor(
-    private readonly afs: AngularFirestore,
-    private http: HttpClient
-  ) {}
+  constructor(private readonly afs: AngularFirestore) {}
 
   /** Get a menu of available `Kalendar`s that provide a full seasonal cycle */
   findKalendars(): Observable<Kalendar[]> {
@@ -88,7 +84,14 @@ export class CalendarService implements CalendarServiceInterface {
 
   /** Find feast days on a given date */
   findFeastDays(kalendar: string, mmdd: string): Observable<HolyDay[]> {
-    return of(KALENDAR[kalendar].filter((day) => day.mmdd == mmdd));
+    const feastDayToday: HolyDay[] = KALENDAR[kalendar].filter(
+        (day) => day.mmdd == mmdd
+      ),
+      eveToday =
+        kalendar === "lff2018"
+          ? KALENDAR["bcp1979"].filter((day) => day.mmdd == mmdd && day.eve)
+          : [];
+    return of(feastDayToday.concat(eveToday));
   }
 
   /** Find special days for a particular slug
@@ -236,6 +239,7 @@ export class CalendarService implements CalendarServiceInterface {
         }
 
         // incorporate them into the `LiturgicalDay`
+        console.log("addingHolyDays", day, holydays);
         return day.addHolyDays(holydays);
       })
     );

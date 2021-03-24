@@ -106,4 +106,4 @@
   ['Apocalypse', Book.Revelation],
 ]
 
-Defined in bible-reference/books.ts:3
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/books.ts#L3)*

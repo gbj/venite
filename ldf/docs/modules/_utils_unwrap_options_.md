@@ -14,7 +14,7 @@
 
 ▸ **unwrapOptions**(`doc`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/unwrap-options.ts:5](https://github.com/gbj/venite/blob/dd6607c9/ldf/src/utils/unwrap-options.ts#L5)*
+*Defined in [utils/unwrap-options.ts:5](https://github.com/gbj/venite/blob/928223fe/ldf/src/utils/unwrap-options.ts#L5)*
 
 **Parameters:**
 
