@@ -1,8 +1,8 @@
-ldf-editor {
+ldf-editor, :host {
   display: block;
 }
 
-ldf-editor textarea {
+:host textarea {
   display: block;
 
   width: 100%;
