@@ -13,7 +13,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-add-block',
   styleUrl: 'editable-add-block.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableAddBlockComponent {
   @Element() element: HTMLElement;

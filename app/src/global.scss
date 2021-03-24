@@ -163,13 +163,11 @@
 }
 
 /* Allow text selection */
-body {
-  ion-app {
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text !important;
-  }
+body * {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .alert-radio-group::-webkit-scrollbar {
@@ -187,7 +185,7 @@ body {
 }
 
 /** Venite LDF CSS Variables — defined in @venite/components */
-:root {
+:root, body {
   --ldf-liturgical-document-margin-top: 1em;
   --ldf-background-color: #ffffff;
   --ldf-color: #121212;

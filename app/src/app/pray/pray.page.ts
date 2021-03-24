@@ -52,6 +52,7 @@ import {
   Change,
   unwrapOptions,
   DisplaySettings,
+  SelectableCitation,
 } from "@venite/ldf";
 import {
   ActionSheetController,
@@ -90,7 +91,6 @@ import {
 import { querySelectorDeep } from "query-selector-shadow-dom";
 import { EditorState } from "../editor/ldf-editor/editor-state";
 import { isCompletelyCompiled } from "./is-completely-rendered";
-import { SelectedTextEvent, SelectionService } from "./selection.service";
 import { PlatformService } from "@venite/ng-platform";
 import { Location } from "@angular/common";
 
@@ -98,6 +98,8 @@ import { Plugins } from "@capacitor/core";
 import "capacitor-media-session";
 import { MediaAction } from "capacitor-media-session";
 import { AudioService } from "./audio.service";
+import { selectableCitationToString } from "./selectable-citation-to-string";
+import { SelectedTextEvent } from "./selected-text-event";
 const { Share, Clipboard, MediaSession } = Plugins;
 
 interface PrayState {
@@ -119,6 +121,13 @@ type CanticleData = {
   canticleOptions: LiturgicalDocument[];
 };
 type PAndTData = LiturgicalDocument[];
+
+type SelectionData = {
+  target: HTMLElement;
+  text: string;
+  citation: SelectableCitation;
+  fragment: string;
+};
 
 @Component({
   selector: "venite-pray",
@@ -173,6 +182,8 @@ export class PrayPage implements OnInit, OnDestroy {
   canShare: boolean = false;
   clipboardIcon: string = "clipboard";
 
+  selection: SelectionData;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -192,7 +203,6 @@ export class PrayPage implements OnInit, OnDestroy {
     public speechService: SpeechService,
     private loadingController: LoadingController,
     private toast: ToastController,
-    public selections: SelectionService,
     private platform: PlatformService,
     private location: Location,
     private zone: NgZone,
@@ -202,6 +212,24 @@ export class PrayPage implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.speechSubscription) {
       this.speechSubscription.unsubscribe();
+    }
+  }
+
+  ionViewWillEnter() {
+    if (!this.bulletinMode) {
+      this.doc$.subscribe(() => {
+        const hash = window?.location?.hash;
+
+        // TODO kludgey
+        setTimeout(() => {
+          if (hash) {
+            const el = querySelectorDeep(hash.replace(/\//g, "-"));
+            if (el) {
+              el.scrollIntoView();
+            }
+          }
+        }, 1000);
+      });
     }
   }
 
@@ -400,19 +428,6 @@ export class PrayPage implements OnInit, OnDestroy {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
       this.doc$ = merge(stateDoc$, this.modifiedDoc$);
-      stateDoc$.subscribe(() => {
-        const hash = window?.location?.hash;
-
-        // TODO kludgey
-        setTimeout(() => {
-          if (hash) {
-            const el = querySelectorDeep(hash.replace(/\//g, "-"));
-            if (el) {
-              el.scrollIntoView();
-            }
-          }
-        }, 1000);
-      });
     }
 
     if (this.bulletinMode) {
@@ -1153,8 +1168,8 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // Selection
-  selectText(ev: CustomEvent) {
-    this.selections.add(ev.detail);
+  selectionChange(ev: CustomEvent<SelectionData>) {
+    this.selection = ev.detail;
   }
 
   shareTextFormat(
@@ -1165,7 +1180,8 @@ export class PrayPage implements OnInit, OnDestroy {
       anchor = selection.fragment ? `#${selection.fragment}` : "",
       url = `https://beta.venite.app${baseUrl}${anchor}`,
       date = dateFromYMDString(doc.day.date),
-      cite = selection.citation ? `- ${selection.citation}` : "",
+      citation = selectableCitationToString(selection.citation),
+      cite = citation ? `${citation ? "- " : ""}${citation}` : "",
       hashtag = `#${doc.label.replace(/\s/g, "")}`,
       title = `${doc.label} - ${
         date.getMonth() + 1
@@ -1175,8 +1191,6 @@ export class PrayPage implements OnInit, OnDestroy {
 
   async share(doc: LiturgicalDocument, selection: SelectedTextEvent) {
     const { title, url, cite, hashtag } = this.shareTextFormat(doc, selection);
-
-    this.selections.clear();
 
     Share.share({
       title,
@@ -1188,8 +1202,6 @@ export class PrayPage implements OnInit, OnDestroy {
 
   async copy(doc: LiturgicalDocument, selection: SelectedTextEvent) {
     const { url, cite, hashtag } = this.shareTextFormat(doc, selection);
-
-    this.selections.clear();
 
     Clipboard.write({
       string: `“${selection.text}” ${cite} ${hashtag} ${url}`,

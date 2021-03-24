@@ -4,7 +4,7 @@ import { Rubric } from '@venite/ldf';
 @Component({
   tag: 'ldf-rubric',
   styleUrl: 'rubric.scss',
-  shadow: true
+  scoped: true
 })
 export class RubricComponent {
   // States

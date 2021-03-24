@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-heading',
   styleUrl: 'heading.scss',
-  shadow: true
+  scoped: true
 })
 export class HeadingComponent {
   @Element() element : HTMLElement;

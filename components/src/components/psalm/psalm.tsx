@@ -11,7 +11,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-psalm',
   styleUrl: 'psalm.scss',
-  shadow: true
+  scoped: true
 })
 export class PsalmComponent {
   @Element() element : HTMLElement;

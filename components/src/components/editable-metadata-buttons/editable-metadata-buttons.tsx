@@ -11,7 +11,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-metadata-buttons',
   styleUrl: 'editable-metadata-buttons.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableMetadataButtonsComponent {
   @Element() element : HTMLElement;

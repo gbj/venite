@@ -9,7 +9,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-metadata',
   styleUrl: 'editable-metadata.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableMetadataComponent {
   @Element() element : HTMLElement;

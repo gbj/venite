@@ -8,7 +8,7 @@ const LOCALE = {
 };
 @Component({
   tag: 'ldf-editable-preference',
-  shadow: true
+  scoped: true
 })
 export class EditablePreferenceComponent {
   @Element() element: HTMLElement;

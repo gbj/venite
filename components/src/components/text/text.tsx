@@ -14,7 +14,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-text',
   styleUrl: 'text.scss',
-  shadow: true
+  scoped: true
 })
 export class TextComponent {
   @Element() element: HTMLElement;

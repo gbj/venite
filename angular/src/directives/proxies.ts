@@ -1,56 +1,32 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
+import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
-export const proxyInputs = (Cmp: any, inputs: string[]) => {
-  const Prototype = Cmp.prototype;
-  inputs.forEach(item => {
-    Object.defineProperty(Prototype, item, {
-      get() { return this.el[item]; },
-      set(val: any) { this.z.runOutsideAngular(() => (this.el[item] = val)); }
-    });
-  });
-};
+import { Components } from '@venite/components';
 
-export const proxyMethods = (Cmp: any, methods: string[]) => {
-  const Prototype = Cmp.prototype;
-  methods.forEach(methodName => {
-    Prototype[methodName] = function () {
-      const args = arguments;
-      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));
-    };
-  });
-};
-
-export const proxyOutputs = (instance: any, el: any, events: string[]) => {
-  events.forEach(eventName => instance[eventName] = fromEvent(el, eventName));
-}
-
-// tslint:disable-next-line: only-arrow-functions
-export function ProxyCmp(opts: { inputs?: any; methods?: any }) {
-  const decorator =  function(cls: any){
-    if (opts.inputs) {
-      proxyInputs(cls, opts.inputs);
-    }
-    if (opts.methods) {
-      proxyMethods(cls, opts.methods);
-    }
-    return cls;
-  };
-  return decorator;
-}
-
-import { Components } from '@venite/components'
-
+import { ActionSheet as IActionSheet } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/action-sheet/action-sheet';
 export declare interface IonActionSheet extends Components.IonActionSheet {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-action-sheet', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-action-sheet',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
+  outputs: ['ionActionSheetDidPresent', 'ionActionSheetWillPresent', 'ionActionSheetWillDismiss', 'ionActionSheetDidDismiss']
+})
 export class IonActionSheet {
-  ionActionSheetDidPresent!: EventEmitter<CustomEvent>;
-  ionActionSheetWillPresent!: EventEmitter<CustomEvent>;
-  ionActionSheetWillDismiss!: EventEmitter<CustomEvent>;
-  ionActionSheetDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the alert has presented. */
+  ionActionSheetDidPresent!: IActionSheet['didPresent'];
+  /** Emitted before the alert has presented. */
+  ionActionSheetWillPresent!: IActionSheet['willPresent'];
+  /** Emitted before the alert has dismissed. */
+  ionActionSheetWillDismiss!: IActionSheet['willDismiss'];
+  /** Emitted after the alert has dismissed. */
+  ionActionSheetDidDismiss!: IActionSheet['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -59,14 +35,28 @@ export class IonActionSheet {
   }
 }
 
+import { Alert as IAlert } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/alert/alert';
 export declare interface IonAlert extends Components.IonAlert {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-alert', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-alert',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
+  outputs: ['ionAlertDidPresent', 'ionAlertWillPresent', 'ionAlertWillDismiss', 'ionAlertDidDismiss']
+})
 export class IonAlert {
-  ionAlertDidPresent!: EventEmitter<CustomEvent>;
-  ionAlertWillPresent!: EventEmitter<CustomEvent>;
-  ionAlertWillDismiss!: EventEmitter<CustomEvent>;
-  ionAlertDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the alert has presented. */
+  ionAlertDidPresent!: IAlert['didPresent'];
+  /** Emitted before the alert has presented. */
+  ionAlertWillPresent!: IAlert['willPresent'];
+  /** Emitted before the alert has dismissed. */
+  ionAlertWillDismiss!: IAlert['willDismiss'];
+  /** Emitted after the alert has dismissed. */
+  ionAlertDidDismiss!: IAlert['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -75,9 +65,14 @@ export class IonAlert {
   }
 }
 
+
 export declare interface IonApp extends Components.IonApp {}
 
-@Component({ selector: 'ion-app', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-app',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonApp {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -86,9 +81,14 @@ export class IonApp {
   }
 }
 
+
 export declare interface IonAvatar extends Components.IonAvatar {}
 
-@Component({ selector: 'ion-avatar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-avatar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonAvatar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -97,9 +97,17 @@ export class IonAvatar {
   }
 }
 
+
 export declare interface IonBackButton extends Components.IonBackButton {}
-@ProxyCmp({inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type']})
-@Component({ selector: 'ion-back-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type'] })
+@ProxyCmp({
+  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type']
+})
+@Component({
+  selector: 'ion-back-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type']
+})
 export class IonBackButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -108,11 +116,21 @@ export class IonBackButton {
   }
 }
 
+import { Backdrop as IBackdrop } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/backdrop/backdrop';
 export declare interface IonBackdrop extends Components.IonBackdrop {}
-@ProxyCmp({inputs: ['stopPropagation', 'tappable', 'visible']})
-@Component({ selector: 'ion-backdrop', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['stopPropagation', 'tappable', 'visible'] })
+@ProxyCmp({
+  inputs: ['stopPropagation', 'tappable', 'visible']
+})
+@Component({
+  selector: 'ion-backdrop',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['stopPropagation', 'tappable', 'visible'],
+  outputs: ['ionBackdropTap']
+})
 export class IonBackdrop {
-  ionBackdropTap!: EventEmitter<CustomEvent>;
+  /** Emitted when the backdrop is tapped. */
+  ionBackdropTap!: IBackdrop['ionBackdropTap'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -121,9 +139,17 @@ export class IonBackdrop {
   }
 }
 
+
 export declare interface IonBadge extends Components.IonBadge {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-badge', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-badge',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -132,12 +158,23 @@ export class IonBadge {
   }
 }
 
+import { Button as IButton } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/button/button';
 export declare interface IonButton extends Components.IonButton {}
-@ProxyCmp({inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type']})
-@Component({ selector: 'ion-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type'] })
+@ProxyCmp({
+  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type']
+})
+@Component({
+  selector: 'ion-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type'],
+  outputs: ['ionFocus', 'ionBlur']
+})
 export class IonButton {
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the button has focus. */
+  ionFocus!: IButton['ionFocus'];
+  /** Emitted when the button loses focus. */
+  ionBlur!: IButton['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -146,9 +183,17 @@ export class IonButton {
   }
 }
 
+
 export declare interface IonButtons extends Components.IonButtons {}
-@ProxyCmp({inputs: ['collapse']})
-@Component({ selector: 'ion-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapse'] })
+@ProxyCmp({
+  inputs: ['collapse']
+})
+@Component({
+  selector: 'ion-buttons',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['collapse']
+})
 export class IonButtons {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -157,9 +202,17 @@ export class IonButtons {
   }
 }
 
+
 export declare interface IonCard extends Components.IonCard {}
-@ProxyCmp({inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type']})
-@Component({ selector: 'ion-card', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type'] })
+@ProxyCmp({
+  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type']
+})
+@Component({
+  selector: 'ion-card',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type']
+})
 export class IonCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -168,9 +221,14 @@ export class IonCard {
   }
 }
 
+
 export declare interface IonCardContent extends Components.IonCardContent {}
 
-@Component({ selector: 'ion-card-content', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-card-content',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonCardContent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -179,9 +237,17 @@ export class IonCardContent {
   }
 }
 
+
 export declare interface IonCardHeader extends Components.IonCardHeader {}
-@ProxyCmp({inputs: ['color', 'translucent']})
-@Component({ selector: 'ion-card-header', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'translucent'] })
+@ProxyCmp({
+  inputs: ['color', 'translucent']
+})
+@Component({
+  selector: 'ion-card-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'translucent']
+})
 export class IonCardHeader {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -190,9 +256,17 @@ export class IonCardHeader {
   }
 }
 
+
 export declare interface IonCardSubtitle extends Components.IonCardSubtitle {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-card-subtitle', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-card-subtitle',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonCardSubtitle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -201,9 +275,17 @@ export class IonCardSubtitle {
   }
 }
 
+
 export declare interface IonCardTitle extends Components.IonCardTitle {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-card-title', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-card-title',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonCardTitle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -212,13 +294,25 @@ export class IonCardTitle {
   }
 }
 
+import { Checkbox as ICheckbox } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/checkbox/checkbox';
 export declare interface IonCheckbox extends Components.IonCheckbox {}
-@ProxyCmp({inputs: ['checked', 'color', 'disabled', 'indeterminate', 'name', 'value']})
-@Component({ selector: 'ion-checkbox', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['checked', 'color', 'disabled', 'indeterminate', 'name', 'value'] })
+@ProxyCmp({
+  inputs: ['checked', 'color', 'disabled', 'indeterminate', 'name', 'value']
+})
+@Component({
+  selector: 'ion-checkbox',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['checked', 'color', 'disabled', 'indeterminate', 'name', 'value'],
+  outputs: ['ionChange', 'ionFocus', 'ionBlur']
+})
 export class IonCheckbox {
-  ionChange!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the checked property has changed. */
+  ionChange!: ICheckbox['ionChange'];
+  /** Emitted when the toggle has focus. */
+  ionFocus!: ICheckbox['ionFocus'];
+  /** Emitted when the toggle loses focus. */
+  ionBlur!: ICheckbox['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -227,9 +321,17 @@ export class IonCheckbox {
   }
 }
 
+
 export declare interface IonChip extends Components.IonChip {}
-@ProxyCmp({inputs: ['color', 'outline']})
-@Component({ selector: 'ion-chip', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'outline'] })
+@ProxyCmp({
+  inputs: ['color', 'outline']
+})
+@Component({
+  selector: 'ion-chip',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'outline']
+})
 export class IonChip {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -238,9 +340,17 @@ export class IonChip {
   }
 }
 
+
 export declare interface IonCol extends Components.IonCol {}
-@ProxyCmp({inputs: ['offset', 'offsetLg', 'offsetMd', 'offsetSm', 'offsetXl', 'offsetXs', 'pull', 'pullLg', 'pullMd', 'pullSm', 'pullXl', 'pullXs', 'push', 'pushLg', 'pushMd', 'pushSm', 'pushXl', 'pushXs', 'size', 'sizeLg', 'sizeMd', 'sizeSm', 'sizeXl', 'sizeXs']})
-@Component({ selector: 'ion-col', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['offset', 'offsetLg', 'offsetMd', 'offsetSm', 'offsetXl', 'offsetXs', 'pull', 'pullLg', 'pullMd', 'pullSm', 'pullXl', 'pullXs', 'push', 'pushLg', 'pushMd', 'pushSm', 'pushXl', 'pushXs', 'size', 'sizeLg', 'sizeMd', 'sizeSm', 'sizeXl', 'sizeXs'] })
+@ProxyCmp({
+  inputs: ['offset', 'offsetLg', 'offsetMd', 'offsetSm', 'offsetXl', 'offsetXs', 'pull', 'pullLg', 'pullMd', 'pullSm', 'pullXl', 'pullXs', 'push', 'pushLg', 'pushMd', 'pushSm', 'pushXl', 'pushXs', 'size', 'sizeLg', 'sizeMd', 'sizeSm', 'sizeXl', 'sizeXs']
+})
+@Component({
+  selector: 'ion-col',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['offset', 'offsetLg', 'offsetMd', 'offsetSm', 'offsetXl', 'offsetXs', 'pull', 'pullLg', 'pullMd', 'pullSm', 'pullXl', 'pullXs', 'push', 'pushLg', 'pushMd', 'pushSm', 'pushXl', 'pushXs', 'size', 'sizeLg', 'sizeMd', 'sizeSm', 'sizeXl', 'sizeXs']
+})
 export class IonCol {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -249,13 +359,27 @@ export class IonCol {
   }
 }
 
+import { Content as IContent } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/content/content';
 export declare interface IonContent extends Components.IonContent {}
-@ProxyCmp({inputs: ['color', 'forceOverscroll', 'fullscreen', 'scrollEvents', 'scrollX', 'scrollY'], 'methods': ['getScrollElement', 'scrollToTop', 'scrollToBottom', 'scrollByPoint', 'scrollToPoint']})
-@Component({ selector: 'ion-content', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'forceOverscroll', 'fullscreen', 'scrollEvents', 'scrollX', 'scrollY'] })
+@ProxyCmp({
+  inputs: ['color', 'forceOverscroll', 'fullscreen', 'scrollEvents', 'scrollX', 'scrollY'],
+  methods: ['getScrollElement', 'scrollToTop', 'scrollToBottom', 'scrollByPoint', 'scrollToPoint']
+})
+@Component({
+  selector: 'ion-content',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'forceOverscroll', 'fullscreen', 'scrollEvents', 'scrollX', 'scrollY'],
+  outputs: ['ionScrollStart', 'ionScroll', 'ionScrollEnd']
+})
 export class IonContent {
-  ionScrollStart!: EventEmitter<CustomEvent>;
-  ionScroll!: EventEmitter<CustomEvent>;
-  ionScrollEnd!: EventEmitter<CustomEvent>;
+  /** Emitted when the scroll has started. */
+  ionScrollStart!: IContent['ionScrollStart'];
+  /** Emitted while scrolling. This event is disabled by default.
+Look at the property: `scrollEvents` */
+  ionScroll!: IContent['ionScroll'];
+  /** Emitted when the scroll has ended. */
+  ionScrollEnd!: IContent['ionScrollEnd'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -264,14 +388,28 @@ export class IonContent {
   }
 }
 
+import { Datetime as IDatetime } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/datetime/datetime';
 export declare interface IonDatetime extends Components.IonDatetime {}
-@ProxyCmp({inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'], 'methods': ['open']})
-@Component({ selector: 'ion-datetime', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'] })
+@ProxyCmp({
+  inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'],
+  methods: ['open']
+})
+@Component({
+  selector: 'ion-datetime',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'],
+  outputs: ['ionCancel', 'ionChange', 'ionFocus', 'ionBlur']
+})
 export class IonDatetime {
-  ionCancel!: EventEmitter<CustomEvent>;
-  ionChange!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the datetime selection was cancelled. */
+  ionCancel!: IDatetime['ionCancel'];
+  /** Emitted when the value (selected date) has changed. */
+  ionChange!: IDatetime['ionChange'];
+  /** Emitted when the datetime has focus. */
+  ionFocus!: IDatetime['ionFocus'];
+  /** Emitted when the datetime loses focus. */
+  ionBlur!: IDatetime['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -280,9 +418,18 @@ export class IonDatetime {
   }
 }
 
+
 export declare interface IonFab extends Components.IonFab {}
-@ProxyCmp({inputs: ['activated', 'edge', 'horizontal', 'vertical'], 'methods': ['close']})
-@Component({ selector: 'ion-fab', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['activated', 'edge', 'horizontal', 'vertical'] })
+@ProxyCmp({
+  inputs: ['activated', 'edge', 'horizontal', 'vertical'],
+  methods: ['close']
+})
+@Component({
+  selector: 'ion-fab',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['activated', 'edge', 'horizontal', 'vertical']
+})
 export class IonFab {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -291,12 +438,23 @@ export class IonFab {
   }
 }
 
+import { FabButton as IFabButton } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/fab-button/fab-button';
 export declare interface IonFabButton extends Components.IonFabButton {}
-@ProxyCmp({inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type']})
-@Component({ selector: 'ion-fab-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type'] })
+@ProxyCmp({
+  inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type']
+})
+@Component({
+  selector: 'ion-fab-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type'],
+  outputs: ['ionFocus', 'ionBlur']
+})
 export class IonFabButton {
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the button has focus. */
+  ionFocus!: IFabButton['ionFocus'];
+  /** Emitted when the button loses focus. */
+  ionBlur!: IFabButton['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -305,9 +463,17 @@ export class IonFabButton {
   }
 }
 
+
 export declare interface IonFabList extends Components.IonFabList {}
-@ProxyCmp({inputs: ['activated', 'side']})
-@Component({ selector: 'ion-fab-list', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['activated', 'side'] })
+@ProxyCmp({
+  inputs: ['activated', 'side']
+})
+@Component({
+  selector: 'ion-fab-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['activated', 'side']
+})
 export class IonFabList {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -316,9 +482,17 @@ export class IonFabList {
   }
 }
 
+
 export declare interface IonFooter extends Components.IonFooter {}
-@ProxyCmp({inputs: ['translucent']})
-@Component({ selector: 'ion-footer', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['translucent'] })
+@ProxyCmp({
+  inputs: ['translucent']
+})
+@Component({
+  selector: 'ion-footer',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['translucent']
+})
 export class IonFooter {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -327,9 +501,17 @@ export class IonFooter {
   }
 }
 
+
 export declare interface IonGrid extends Components.IonGrid {}
-@ProxyCmp({inputs: ['fixed']})
-@Component({ selector: 'ion-grid', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['fixed'] })
+@ProxyCmp({
+  inputs: ['fixed']
+})
+@Component({
+  selector: 'ion-grid',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['fixed']
+})
 export class IonGrid {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -338,9 +520,17 @@ export class IonGrid {
   }
 }
 
+
 export declare interface IonHeader extends Components.IonHeader {}
-@ProxyCmp({inputs: ['collapse', 'translucent']})
-@Component({ selector: 'ion-header', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapse', 'translucent'] })
+@ProxyCmp({
+  inputs: ['collapse', 'translucent']
+})
+@Component({
+  selector: 'ion-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['collapse', 'translucent']
+})
 export class IonHeader {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -349,9 +539,17 @@ export class IonHeader {
   }
 }
 
+
 export declare interface IonIcon extends Components.IonIcon {}
-@ProxyCmp({inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src']})
-@Component({ selector: 'ion-icon', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src'] })
+@ProxyCmp({
+  inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src']
+})
+@Component({
+  selector: 'ion-icon',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src']
+})
 export class IonIcon {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -360,13 +558,25 @@ export class IonIcon {
   }
 }
 
+import { Img as IImg } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/img/img';
 export declare interface IonImg extends Components.IonImg {}
-@ProxyCmp({inputs: ['alt', 'src']})
-@Component({ selector: 'ion-img', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['alt', 'src'] })
+@ProxyCmp({
+  inputs: ['alt', 'src']
+})
+@Component({
+  selector: 'ion-img',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['alt', 'src'],
+  outputs: ['ionImgWillLoad', 'ionImgDidLoad', 'ionError']
+})
 export class IonImg {
-  ionImgWillLoad!: EventEmitter<CustomEvent>;
-  ionImgDidLoad!: EventEmitter<CustomEvent>;
-  ionError!: EventEmitter<CustomEvent>;
+  /** Emitted when the img src has been set */
+  ionImgWillLoad!: IImg['ionImgWillLoad'];
+  /** Emitted when the image has finished loading */
+  ionImgDidLoad!: IImg['ionImgDidLoad'];
+  /** Emitted when the img fails to load */
+  ionError!: IImg['ionError'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -375,11 +585,25 @@ export class IonImg {
   }
 }
 
+import { InfiniteScroll as IInfiniteScroll } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/infinite-scroll/infinite-scroll';
 export declare interface IonInfiniteScroll extends Components.IonInfiniteScroll {}
-@ProxyCmp({inputs: ['disabled', 'position', 'threshold'], 'methods': ['complete']})
-@Component({ selector: 'ion-infinite-scroll', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled', 'position', 'threshold'] })
+@ProxyCmp({
+  inputs: ['disabled', 'position', 'threshold'],
+  methods: ['complete']
+})
+@Component({
+  selector: 'ion-infinite-scroll',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'position', 'threshold'],
+  outputs: ['ionInfinite']
+})
 export class IonInfiniteScroll {
-  ionInfinite!: EventEmitter<CustomEvent>;
+  /** Emitted when the scroll reaches
+the threshold distance. From within your infinite handler,
+you must call the infinite scroll's `complete()` method when
+your async operation has completed. */
+  ionInfinite!: IInfiniteScroll['ionInfinite'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -388,9 +612,17 @@ export class IonInfiniteScroll {
   }
 }
 
+
 export declare interface IonInfiniteScrollContent extends Components.IonInfiniteScrollContent {}
-@ProxyCmp({inputs: ['loadingSpinner', 'loadingText']})
-@Component({ selector: 'ion-infinite-scroll-content', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['loadingSpinner', 'loadingText'] })
+@ProxyCmp({
+  inputs: ['loadingSpinner', 'loadingText']
+})
+@Component({
+  selector: 'ion-infinite-scroll-content',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['loadingSpinner', 'loadingText']
+})
 export class IonInfiniteScrollContent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -399,14 +631,28 @@ export class IonInfiniteScrollContent {
   }
 }
 
+import { Input as IInput } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/input/input';
 export declare interface IonInput extends Components.IonInput {}
-@ProxyCmp({inputs: ['accept', 'autocapitalize', 'autocomplete', 'autocorrect', 'autofocus', 'clearInput', 'clearOnEdit', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'max', 'maxlength', 'min', 'minlength', 'multiple', 'name', 'pattern', 'placeholder', 'readonly', 'required', 'size', 'spellcheck', 'step', 'type', 'value'], 'methods': ['setFocus', 'getInputElement']})
-@Component({ selector: 'ion-input', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['accept', 'autocapitalize', 'autocomplete', 'autocorrect', 'autofocus', 'clearInput', 'clearOnEdit', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'max', 'maxlength', 'min', 'minlength', 'multiple', 'name', 'pattern', 'placeholder', 'readonly', 'required', 'size', 'spellcheck', 'step', 'type', 'value'] })
+@ProxyCmp({
+  inputs: ['accept', 'autocapitalize', 'autocomplete', 'autocorrect', 'autofocus', 'clearInput', 'clearOnEdit', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'max', 'maxlength', 'min', 'minlength', 'multiple', 'name', 'pattern', 'placeholder', 'readonly', 'required', 'size', 'spellcheck', 'step', 'type', 'value'],
+  methods: ['setFocus', 'getInputElement']
+})
+@Component({
+  selector: 'ion-input',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['accept', 'autocapitalize', 'autocomplete', 'autocorrect', 'autofocus', 'clearInput', 'clearOnEdit', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'max', 'maxlength', 'min', 'minlength', 'multiple', 'name', 'pattern', 'placeholder', 'readonly', 'required', 'size', 'spellcheck', 'step', 'type', 'value'],
+  outputs: ['ionInput', 'ionChange', 'ionBlur', 'ionFocus']
+})
 export class IonInput {
-  ionInput!: EventEmitter<CustomEvent>;
-  ionChange!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
+  /** Emitted when a keyboard input occurred. */
+  ionInput!: IInput['ionInput'];
+  /** Emitted when the value has changed. */
+  ionChange!: IInput['ionChange'];
+  /** Emitted when the input loses focus. */
+  ionBlur!: IInput['ionBlur'];
+  /** Emitted when the input has focus. */
+  ionFocus!: IInput['ionFocus'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -415,9 +661,17 @@ export class IonInput {
   }
 }
 
+
 export declare interface IonItem extends Components.IonItem {}
-@ProxyCmp({inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type']})
-@Component({ selector: 'ion-item', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type'] })
+@ProxyCmp({
+  inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type']
+})
+@Component({
+  selector: 'ion-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type']
+})
 export class IonItem {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -426,9 +680,17 @@ export class IonItem {
   }
 }
 
+
 export declare interface IonItemDivider extends Components.IonItemDivider {}
-@ProxyCmp({inputs: ['color', 'sticky']})
-@Component({ selector: 'ion-item-divider', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'sticky'] })
+@ProxyCmp({
+  inputs: ['color', 'sticky']
+})
+@Component({
+  selector: 'ion-item-divider',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'sticky']
+})
 export class IonItemDivider {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -437,9 +699,14 @@ export class IonItemDivider {
   }
 }
 
+
 export declare interface IonItemGroup extends Components.IonItemGroup {}
 
-@Component({ selector: 'ion-item-group', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-item-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonItemGroup {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -448,9 +715,17 @@ export class IonItemGroup {
   }
 }
 
+
 export declare interface IonItemOption extends Components.IonItemOption {}
-@ProxyCmp({inputs: ['color', 'disabled', 'download', 'expandable', 'href', 'rel', 'target', 'type']})
-@Component({ selector: 'ion-item-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'disabled', 'download', 'expandable', 'href', 'rel', 'target', 'type'] })
+@ProxyCmp({
+  inputs: ['color', 'disabled', 'download', 'expandable', 'href', 'rel', 'target', 'type']
+})
+@Component({
+  selector: 'ion-item-option',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'disabled', 'download', 'expandable', 'href', 'rel', 'target', 'type']
+})
 export class IonItemOption {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -459,11 +734,21 @@ export class IonItemOption {
   }
 }
 
+import { ItemOptions as IItemOptions } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/item-options/item-options';
 export declare interface IonItemOptions extends Components.IonItemOptions {}
-@ProxyCmp({inputs: ['side']})
-@Component({ selector: 'ion-item-options', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['side'] })
+@ProxyCmp({
+  inputs: ['side']
+})
+@Component({
+  selector: 'ion-item-options',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['side'],
+  outputs: ['ionSwipe']
+})
 export class IonItemOptions {
-  ionSwipe!: EventEmitter<CustomEvent>;
+  /** Emitted when the item has been fully swiped. */
+  ionSwipe!: IItemOptions['ionSwipe'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -472,11 +757,22 @@ export class IonItemOptions {
   }
 }
 
+import { ItemSliding as IItemSliding } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/item-sliding/item-sliding';
 export declare interface IonItemSliding extends Components.IonItemSliding {}
-@ProxyCmp({inputs: ['disabled'], 'methods': ['getOpenAmount', 'getSlidingRatio', 'open', 'close', 'closeOpened']})
-@Component({ selector: 'ion-item-sliding', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled'] })
+@ProxyCmp({
+  inputs: ['disabled'],
+  methods: ['getOpenAmount', 'getSlidingRatio', 'open', 'close', 'closeOpened']
+})
+@Component({
+  selector: 'ion-item-sliding',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled'],
+  outputs: ['ionDrag']
+})
 export class IonItemSliding {
-  ionDrag!: EventEmitter<CustomEvent>;
+  /** Emitted when the sliding position changes. */
+  ionDrag!: IItemSliding['ionDrag'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -485,9 +781,17 @@ export class IonItemSliding {
   }
 }
 
+
 export declare interface IonLabel extends Components.IonLabel {}
-@ProxyCmp({inputs: ['color', 'position']})
-@Component({ selector: 'ion-label', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'position'] })
+@ProxyCmp({
+  inputs: ['color', 'position']
+})
+@Component({
+  selector: 'ion-label',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'position']
+})
 export class IonLabel {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -496,9 +800,18 @@ export class IonLabel {
   }
 }
 
+
 export declare interface IonList extends Components.IonList {}
-@ProxyCmp({inputs: ['inset', 'lines'], 'methods': ['closeSlidingItems']})
-@Component({ selector: 'ion-list', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['inset', 'lines'] })
+@ProxyCmp({
+  inputs: ['inset', 'lines'],
+  methods: ['closeSlidingItems']
+})
+@Component({
+  selector: 'ion-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['inset', 'lines']
+})
 export class IonList {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -507,9 +820,17 @@ export class IonList {
   }
 }
 
+
 export declare interface IonListHeader extends Components.IonListHeader {}
-@ProxyCmp({inputs: ['color', 'lines']})
-@Component({ selector: 'ion-list-header', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'lines'] })
+@ProxyCmp({
+  inputs: ['color', 'lines']
+})
+@Component({
+  selector: 'ion-list-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'lines']
+})
 export class IonListHeader {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -518,14 +839,28 @@ export class IonListHeader {
   }
 }
 
+import { Loading as ILoading } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/loading/loading';
 export declare interface IonLoading extends Components.IonLoading {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-loading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-loading',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
+  outputs: ['ionLoadingDidPresent', 'ionLoadingWillPresent', 'ionLoadingWillDismiss', 'ionLoadingDidDismiss']
+})
 export class IonLoading {
-  ionLoadingDidPresent!: EventEmitter<CustomEvent>;
-  ionLoadingWillPresent!: EventEmitter<CustomEvent>;
-  ionLoadingWillDismiss!: EventEmitter<CustomEvent>;
-  ionLoadingDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the loading has presented. */
+  ionLoadingDidPresent!: ILoading['didPresent'];
+  /** Emitted before the loading has presented. */
+  ionLoadingWillPresent!: ILoading['willPresent'];
+  /** Emitted before the loading has dismissed. */
+  ionLoadingWillDismiss!: ILoading['willDismiss'];
+  /** Emitted after the loading has dismissed. */
+  ionLoadingDidDismiss!: ILoading['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -534,14 +869,28 @@ export class IonLoading {
   }
 }
 
+import { Menu as IMenu } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/menu/menu';
 export declare interface IonMenu extends Components.IonMenu {}
-@ProxyCmp({inputs: ['contentId', 'disabled', 'maxEdgeStart', 'menuId', 'side', 'swipeGesture', 'type'], 'methods': ['isOpen', 'isActive', 'open', 'close', 'toggle', 'setOpen']})
-@Component({ selector: 'ion-menu', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['contentId', 'disabled', 'maxEdgeStart', 'menuId', 'side', 'swipeGesture', 'type'] })
+@ProxyCmp({
+  inputs: ['contentId', 'disabled', 'maxEdgeStart', 'menuId', 'side', 'swipeGesture', 'type'],
+  methods: ['isOpen', 'isActive', 'open', 'close', 'toggle', 'setOpen']
+})
+@Component({
+  selector: 'ion-menu',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['contentId', 'disabled', 'maxEdgeStart', 'menuId', 'side', 'swipeGesture', 'type'],
+  outputs: ['ionWillOpen', 'ionWillClose', 'ionDidOpen', 'ionDidClose']
+})
 export class IonMenu {
-  ionWillOpen!: EventEmitter<CustomEvent>;
-  ionWillClose!: EventEmitter<CustomEvent>;
-  ionDidOpen!: EventEmitter<CustomEvent>;
-  ionDidClose!: EventEmitter<CustomEvent>;
+  /** Emitted when the menu is about to be opened. */
+  ionWillOpen!: IMenu['ionWillOpen'];
+  /** Emitted when the menu is about to be closed. */
+  ionWillClose!: IMenu['ionWillClose'];
+  /** Emitted when the menu is open. */
+  ionDidOpen!: IMenu['ionDidOpen'];
+  /** Emitted when the menu is closed. */
+  ionDidClose!: IMenu['ionDidClose'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -550,9 +899,17 @@ export class IonMenu {
   }
 }
 
+
 export declare interface IonMenuButton extends Components.IonMenuButton {}
-@ProxyCmp({inputs: ['autoHide', 'color', 'disabled', 'menu', 'type']})
-@Component({ selector: 'ion-menu-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['autoHide', 'color', 'disabled', 'menu', 'type'] })
+@ProxyCmp({
+  inputs: ['autoHide', 'color', 'disabled', 'menu', 'type']
+})
+@Component({
+  selector: 'ion-menu-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['autoHide', 'color', 'disabled', 'menu', 'type']
+})
 export class IonMenuButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -561,9 +918,17 @@ export class IonMenuButton {
   }
 }
 
+
 export declare interface IonMenuToggle extends Components.IonMenuToggle {}
-@ProxyCmp({inputs: ['autoHide', 'menu']})
-@Component({ selector: 'ion-menu-toggle', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['autoHide', 'menu'] })
+@ProxyCmp({
+  inputs: ['autoHide', 'menu']
+})
+@Component({
+  selector: 'ion-menu-toggle',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['autoHide', 'menu']
+})
 export class IonMenuToggle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -572,14 +937,28 @@ export class IonMenuToggle {
   }
 }
 
+import { Modal as IModal } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/modal/modal';
 export declare interface IonModal extends Components.IonModal {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-modal', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-modal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'],
+  outputs: ['ionModalDidPresent', 'ionModalWillPresent', 'ionModalWillDismiss', 'ionModalDidDismiss']
+})
 export class IonModal {
-  ionModalDidPresent!: EventEmitter<CustomEvent>;
-  ionModalWillPresent!: EventEmitter<CustomEvent>;
-  ionModalWillDismiss!: EventEmitter<CustomEvent>;
-  ionModalDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the modal has presented. */
+  ionModalDidPresent!: IModal['didPresent'];
+  /** Emitted before the modal has presented. */
+  ionModalWillPresent!: IModal['willPresent'];
+  /** Emitted before the modal has dismissed. */
+  ionModalWillDismiss!: IModal['willDismiss'];
+  /** Emitted after the modal has dismissed. */
+  ionModalDidDismiss!: IModal['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -588,12 +967,24 @@ export class IonModal {
   }
 }
 
+import { Nav as INav } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/nav/nav';
 export declare interface IonNav extends Components.IonNav {}
-@ProxyCmp({inputs: ['animated', 'animation', 'root', 'rootParams', 'swipeGesture'], 'methods': ['push', 'insert', 'insertPages', 'pop', 'popTo', 'popToRoot', 'removeIndex', 'setRoot', 'setPages', 'getActive', 'getByIndex', 'canGoBack', 'getPrevious']})
-@Component({ selector: 'ion-nav', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'animation', 'root', 'rootParams', 'swipeGesture'] })
+@ProxyCmp({
+  inputs: ['animated', 'animation', 'root', 'rootParams', 'swipeGesture'],
+  methods: ['push', 'insert', 'insertPages', 'pop', 'popTo', 'popToRoot', 'removeIndex', 'setRoot', 'setPages', 'getActive', 'getByIndex', 'canGoBack', 'getPrevious']
+})
+@Component({
+  selector: 'ion-nav',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'animation', 'root', 'rootParams', 'swipeGesture'],
+  outputs: ['ionNavWillChange', 'ionNavDidChange']
+})
 export class IonNav {
-  ionNavWillChange!: EventEmitter<CustomEvent>;
-  ionNavDidChange!: EventEmitter<CustomEvent>;
+  /** Event fired when the nav will change components */
+  ionNavWillChange!: INav['ionNavWillChange'];
+  /** Event fired when the nav has changed components */
+  ionNavDidChange!: INav['ionNavDidChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -602,9 +993,17 @@ export class IonNav {
   }
 }
 
+
 export declare interface IonNavLink extends Components.IonNavLink {}
-@ProxyCmp({inputs: ['component', 'componentProps', 'routerDirection']})
-@Component({ selector: 'ion-nav-link', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['component', 'componentProps', 'routerDirection'] })
+@ProxyCmp({
+  inputs: ['component', 'componentProps', 'routerDirection']
+})
+@Component({
+  selector: 'ion-nav-link',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['component', 'componentProps', 'routerDirection']
+})
 export class IonNavLink {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -613,9 +1012,17 @@ export class IonNavLink {
   }
 }
 
+
 export declare interface IonNote extends Components.IonNote {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-note', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-note',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonNote {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -624,14 +1031,28 @@ export class IonNote {
   }
 }
 
+import { Picker as IPicker } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/picker/picker';
 export declare interface IonPicker extends Components.IonPicker {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss', 'getColumn']})
-@Component({ selector: 'ion-picker', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss', 'getColumn']
+})
+@Component({
+  selector: 'ion-picker',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
+  outputs: ['ionPickerDidPresent', 'ionPickerWillPresent', 'ionPickerWillDismiss', 'ionPickerDidDismiss']
+})
 export class IonPicker {
-  ionPickerDidPresent!: EventEmitter<CustomEvent>;
-  ionPickerWillPresent!: EventEmitter<CustomEvent>;
-  ionPickerWillDismiss!: EventEmitter<CustomEvent>;
-  ionPickerDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the picker has presented. */
+  ionPickerDidPresent!: IPicker['didPresent'];
+  /** Emitted before the picker has presented. */
+  ionPickerWillPresent!: IPicker['willPresent'];
+  /** Emitted before the picker has dismissed. */
+  ionPickerWillDismiss!: IPicker['willDismiss'];
+  /** Emitted after the picker has dismissed. */
+  ionPickerDidDismiss!: IPicker['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -640,9 +1061,17 @@ export class IonPicker {
   }
 }
 
+
 export declare interface IonPickerColumn extends Components.IonPickerColumn {}
-@ProxyCmp({inputs: ['col']})
-@Component({ selector: 'ion-picker-column', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['col'] })
+@ProxyCmp({
+  inputs: ['col']
+})
+@Component({
+  selector: 'ion-picker-column',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['col']
+})
 export class IonPickerColumn {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -651,14 +1080,28 @@ export class IonPickerColumn {
   }
 }
 
+import { Popover as IPopover } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/popover/popover';
 export declare interface IonPopover extends Components.IonPopover {}
-@ProxyCmp({inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-popover', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'] })
+@ProxyCmp({
+  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-popover',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'],
+  outputs: ['ionPopoverDidPresent', 'ionPopoverWillPresent', 'ionPopoverWillDismiss', 'ionPopoverDidDismiss']
+})
 export class IonPopover {
-  ionPopoverDidPresent!: EventEmitter<CustomEvent>;
-  ionPopoverWillPresent!: EventEmitter<CustomEvent>;
-  ionPopoverWillDismiss!: EventEmitter<CustomEvent>;
-  ionPopoverDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the popover has presented. */
+  ionPopoverDidPresent!: IPopover['didPresent'];
+  /** Emitted before the popover has presented. */
+  ionPopoverWillPresent!: IPopover['willPresent'];
+  /** Emitted before the popover has dismissed. */
+  ionPopoverWillDismiss!: IPopover['willDismiss'];
+  /** Emitted after the popover has dismissed. */
+  ionPopoverDidDismiss!: IPopover['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -667,9 +1110,17 @@ export class IonPopover {
   }
 }
 
+
 export declare interface IonProgressBar extends Components.IonProgressBar {}
-@ProxyCmp({inputs: ['buffer', 'color', 'reversed', 'type', 'value']})
-@Component({ selector: 'ion-progress-bar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['buffer', 'color', 'reversed', 'type', 'value'] })
+@ProxyCmp({
+  inputs: ['buffer', 'color', 'reversed', 'type', 'value']
+})
+@Component({
+  selector: 'ion-progress-bar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['buffer', 'color', 'reversed', 'type', 'value']
+})
 export class IonProgressBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -678,12 +1129,23 @@ export class IonProgressBar {
   }
 }
 
+import { Radio as IRadio } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/radio/radio';
 export declare interface IonRadio extends Components.IonRadio {}
-@ProxyCmp({inputs: ['color', 'disabled', 'name', 'value']})
-@Component({ selector: 'ion-radio', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'disabled', 'name', 'value'] })
+@ProxyCmp({
+  inputs: ['color', 'disabled', 'name', 'value']
+})
+@Component({
+  selector: 'ion-radio',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'disabled', 'name', 'value'],
+  outputs: ['ionFocus', 'ionBlur']
+})
 export class IonRadio {
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the radio button has focus. */
+  ionFocus!: IRadio['ionFocus'];
+  /** Emitted when the radio button loses focus. */
+  ionBlur!: IRadio['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -692,11 +1154,21 @@ export class IonRadio {
   }
 }
 
+import { RadioGroup as IRadioGroup } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/radio-group/radio-group';
 export declare interface IonRadioGroup extends Components.IonRadioGroup {}
-@ProxyCmp({inputs: ['allowEmptySelection', 'name', 'value']})
-@Component({ selector: 'ion-radio-group', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['allowEmptySelection', 'name', 'value'] })
+@ProxyCmp({
+  inputs: ['allowEmptySelection', 'name', 'value']
+})
+@Component({
+  selector: 'ion-radio-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['allowEmptySelection', 'name', 'value'],
+  outputs: ['ionChange']
+})
 export class IonRadioGroup {
-  ionChange!: EventEmitter<CustomEvent>;
+  /** Emitted when the value has changed. */
+  ionChange!: IRadioGroup['ionChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -705,13 +1177,25 @@ export class IonRadioGroup {
   }
 }
 
+import { Range as IRange } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/range/range';
 export declare interface IonRange extends Components.IonRange {}
-@ProxyCmp({inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value']})
-@Component({ selector: 'ion-range', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value'] })
+@ProxyCmp({
+  inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value']
+})
+@Component({
+  selector: 'ion-range',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value'],
+  outputs: ['ionChange', 'ionFocus', 'ionBlur']
+})
 export class IonRange {
-  ionChange!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the value property has changed. */
+  ionChange!: IRange['ionChange'];
+  /** Emitted when the range has focus. */
+  ionFocus!: IRange['ionFocus'];
+  /** Emitted when the range loses focus. */
+  ionBlur!: IRange['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -720,13 +1204,29 @@ export class IonRange {
   }
 }
 
+import { Refresher as IRefresher } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/refresher/refresher';
 export declare interface IonRefresher extends Components.IonRefresher {}
-@ProxyCmp({inputs: ['closeDuration', 'disabled', 'pullFactor', 'pullMax', 'pullMin', 'snapbackDuration'], 'methods': ['complete', 'cancel', 'getProgress']})
-@Component({ selector: 'ion-refresher', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['closeDuration', 'disabled', 'pullFactor', 'pullMax', 'pullMin', 'snapbackDuration'] })
+@ProxyCmp({
+  inputs: ['closeDuration', 'disabled', 'pullFactor', 'pullMax', 'pullMin', 'snapbackDuration'],
+  methods: ['complete', 'cancel', 'getProgress']
+})
+@Component({
+  selector: 'ion-refresher',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['closeDuration', 'disabled', 'pullFactor', 'pullMax', 'pullMin', 'snapbackDuration'],
+  outputs: ['ionRefresh', 'ionPull', 'ionStart']
+})
 export class IonRefresher {
-  ionRefresh!: EventEmitter<CustomEvent>;
-  ionPull!: EventEmitter<CustomEvent>;
-  ionStart!: EventEmitter<CustomEvent>;
+  /** Emitted when the user lets go of the content and has pulled down
+further than the `pullMin` or pulls the content down and exceeds the pullMax.
+Updates the refresher state to `refreshing`. The `complete()` method should be
+called when the async operation has completed. */
+  ionRefresh!: IRefresher['ionRefresh'];
+  /** Emitted while the user is pulling down the content and exposing the refresher. */
+  ionPull!: IRefresher['ionPull'];
+  /** Emitted when the user begins to start pulling down. */
+  ionStart!: IRefresher['ionStart'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -735,9 +1235,17 @@ export class IonRefresher {
   }
 }
 
+
 export declare interface IonRefresherContent extends Components.IonRefresherContent {}
-@ProxyCmp({inputs: ['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText']})
-@Component({ selector: 'ion-refresher-content', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText'] })
+@ProxyCmp({
+  inputs: ['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText']
+})
+@Component({
+  selector: 'ion-refresher-content',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText']
+})
 export class IonRefresherContent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -746,9 +1254,14 @@ export class IonRefresherContent {
   }
 }
 
+
 export declare interface IonReorder extends Components.IonReorder {}
 
-@Component({ selector: 'ion-reorder', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-reorder',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonReorder {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -757,11 +1270,24 @@ export class IonReorder {
   }
 }
 
+import { ReorderGroup as IReorderGroup } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/reorder-group/reorder-group';
 export declare interface IonReorderGroup extends Components.IonReorderGroup {}
-@ProxyCmp({inputs: ['disabled'], 'methods': ['complete']})
-@Component({ selector: 'ion-reorder-group', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled'] })
+@ProxyCmp({
+  inputs: ['disabled'],
+  methods: ['complete']
+})
+@Component({
+  selector: 'ion-reorder-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled'],
+  outputs: ['ionItemReorder']
+})
 export class IonReorderGroup {
-  ionItemReorder!: EventEmitter<CustomEvent>;
+  /** Event that needs to be listened to in order to complete the reorder action.
+Once the event has been emitted, the `complete()` method then needs
+to be called in order to finalize the reorder action. */
+  ionItemReorder!: IReorderGroup['ionItemReorder'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -770,9 +1296,18 @@ export class IonReorderGroup {
   }
 }
 
+
 export declare interface IonRippleEffect extends Components.IonRippleEffect {}
-@ProxyCmp({inputs: ['type'], 'methods': ['addRipple']})
-@Component({ selector: 'ion-ripple-effect', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['type'] })
+@ProxyCmp({
+  inputs: ['type'],
+  methods: ['addRipple']
+})
+@Component({
+  selector: 'ion-ripple-effect',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['type']
+})
 export class IonRippleEffect {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -781,11 +1316,21 @@ export class IonRippleEffect {
   }
 }
 
+import { Route as IRoute } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/route/route';
 export declare interface IonRoute extends Components.IonRoute {}
-@ProxyCmp({inputs: ['component', 'componentProps', 'url']})
-@Component({ selector: 'ion-route', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['component', 'componentProps', 'url'] })
+@ProxyCmp({
+  inputs: ['component', 'componentProps', 'url']
+})
+@Component({
+  selector: 'ion-route',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['component', 'componentProps', 'url'],
+  outputs: ['ionRouteDataChanged']
+})
 export class IonRoute {
-  ionRouteDataChanged!: EventEmitter<CustomEvent>;
+  /** Used internally by `ion-router` to know when this route did change. */
+  ionRouteDataChanged!: IRoute['ionRouteDataChanged'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -794,11 +1339,24 @@ export class IonRoute {
   }
 }
 
+import { RouteRedirect as IRouteRedirect } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/route-redirect/route-redirect';
 export declare interface IonRouteRedirect extends Components.IonRouteRedirect {}
-@ProxyCmp({inputs: ['from', 'to']})
-@Component({ selector: 'ion-route-redirect', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['from', 'to'] })
+@ProxyCmp({
+  inputs: ['from', 'to']
+})
+@Component({
+  selector: 'ion-route-redirect',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['from', 'to'],
+  outputs: ['ionRouteRedirectChanged']
+})
 export class IonRouteRedirect {
-  ionRouteRedirectChanged!: EventEmitter<CustomEvent>;
+  /** Internal event that fires when any value of this rule is added/removed from the DOM,
+or any of his public properties changes.
+
+`ion-router` captures this event in order to update his internal registry of router rules. */
+  ionRouteRedirectChanged!: IRouteRedirect['ionRouteRedirectChanged'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -807,12 +1365,24 @@ export class IonRouteRedirect {
   }
 }
 
+import { Router as IRouter } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/router/router';
 export declare interface IonRouter extends Components.IonRouter {}
-@ProxyCmp({inputs: ['root', 'useHash'], 'methods': ['push', 'back']})
-@Component({ selector: 'ion-router', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['root', 'useHash'] })
+@ProxyCmp({
+  inputs: ['root', 'useHash'],
+  methods: ['push', 'back']
+})
+@Component({
+  selector: 'ion-router',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['root', 'useHash'],
+  outputs: ['ionRouteWillChange', 'ionRouteDidChange']
+})
 export class IonRouter {
-  ionRouteWillChange!: EventEmitter<CustomEvent>;
-  ionRouteDidChange!: EventEmitter<CustomEvent>;
+  /** Event emitted when the route is about to change */
+  ionRouteWillChange!: IRouter['ionRouteWillChange'];
+  /** Emitted when the route had changed */
+  ionRouteDidChange!: IRouter['ionRouteDidChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -821,9 +1391,17 @@ export class IonRouter {
   }
 }
 
+
 export declare interface IonRouterLink extends Components.IonRouterLink {}
-@ProxyCmp({inputs: ['color', 'href', 'rel', 'routerDirection', 'target']})
-@Component({ selector: 'ion-router-link', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'href', 'rel', 'routerDirection', 'target'] })
+@ProxyCmp({
+  inputs: ['color', 'href', 'rel', 'routerDirection', 'target']
+})
+@Component({
+  selector: 'ion-router-link',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'href', 'rel', 'routerDirection', 'target']
+})
 export class IonRouterLink {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -832,9 +1410,17 @@ export class IonRouterLink {
   }
 }
 
+
 export declare interface IonRouterOutlet extends Components.IonRouterOutlet {}
-@ProxyCmp({inputs: ['animated', 'animation', 'mode']})
-@Component({ selector: 'ion-router-outlet', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'animation', 'mode'] })
+@ProxyCmp({
+  inputs: ['animated', 'animation', 'mode']
+})
+@Component({
+  selector: 'ion-router-outlet',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'animation', 'mode']
+})
 export class IonRouterOutlet {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -843,9 +1429,14 @@ export class IonRouterOutlet {
   }
 }
 
+
 export declare interface IonRow extends Components.IonRow {}
 
-@Component({ selector: 'ion-row', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-row',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonRow {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -854,16 +1445,32 @@ export class IonRow {
   }
 }
 
+import { Searchbar as ISearchbar } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/searchbar/searchbar';
 export declare interface IonSearchbar extends Components.IonSearchbar {}
-@ProxyCmp({inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'], 'methods': ['setFocus', 'getInputElement']})
-@Component({ selector: 'ion-searchbar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'] })
+@ProxyCmp({
+  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'],
+  methods: ['setFocus', 'getInputElement']
+})
+@Component({
+  selector: 'ion-searchbar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'],
+  outputs: ['ionInput', 'ionChange', 'ionCancel', 'ionClear', 'ionBlur', 'ionFocus']
+})
 export class IonSearchbar {
-  ionInput!: EventEmitter<CustomEvent>;
-  ionChange!: EventEmitter<CustomEvent>;
-  ionCancel!: EventEmitter<CustomEvent>;
-  ionClear!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
+  /** Emitted when a keyboard input occurred. */
+  ionInput!: ISearchbar['ionInput'];
+  /** Emitted when the value has changed. */
+  ionChange!: ISearchbar['ionChange'];
+  /** Emitted when the cancel button is clicked. */
+  ionCancel!: ISearchbar['ionCancel'];
+  /** Emitted when the clear input button is clicked. */
+  ionClear!: ISearchbar['ionClear'];
+  /** Emitted when the input loses focus. */
+  ionBlur!: ISearchbar['ionBlur'];
+  /** Emitted when the input has focus. */
+  ionFocus!: ISearchbar['ionFocus'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -872,11 +1479,22 @@ export class IonSearchbar {
   }
 }
 
+import { Segment as ISegment } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/segment/segment';
 export declare interface IonSegment extends Components.IonSegment {}
-@ProxyCmp({inputs: ['color', 'disabled', 'scrollable', 'value']})
-@Component({ selector: 'ion-segment', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'disabled', 'scrollable', 'value'] })
+@ProxyCmp({
+  inputs: ['color', 'disabled', 'scrollable', 'value']
+})
+@Component({
+  selector: 'ion-segment',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'disabled', 'scrollable', 'value'],
+  outputs: ['ionChange']
+})
 export class IonSegment {
-  ionChange!: EventEmitter<CustomEvent>;
+  /** Emitted when the value property has changed and any
+dragging pointer has been released from `ion-segment`. */
+  ionChange!: ISegment['ionChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -885,9 +1503,17 @@ export class IonSegment {
   }
 }
 
+
 export declare interface IonSegmentButton extends Components.IonSegmentButton {}
-@ProxyCmp({inputs: ['disabled', 'layout', 'type', 'value']})
-@Component({ selector: 'ion-segment-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled', 'layout', 'type', 'value'] })
+@ProxyCmp({
+  inputs: ['disabled', 'layout', 'type', 'value']
+})
+@Component({
+  selector: 'ion-segment-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'layout', 'type', 'value']
+})
 export class IonSegmentButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -896,14 +1522,28 @@ export class IonSegmentButton {
   }
 }
 
+import { Select as ISelect } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/select/select';
 export declare interface IonSelect extends Components.IonSelect {}
-@ProxyCmp({inputs: ['cancelText', 'compareWith', 'disabled', 'interface', 'interfaceOptions', 'multiple', 'name', 'okText', 'placeholder', 'selectedText', 'value'], 'methods': ['open']})
-@Component({ selector: 'ion-select', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cancelText', 'compareWith', 'disabled', 'interface', 'interfaceOptions', 'multiple', 'name', 'okText', 'placeholder', 'selectedText', 'value'] })
+@ProxyCmp({
+  inputs: ['cancelText', 'compareWith', 'disabled', 'interface', 'interfaceOptions', 'multiple', 'name', 'okText', 'placeholder', 'selectedText', 'value'],
+  methods: ['open']
+})
+@Component({
+  selector: 'ion-select',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['cancelText', 'compareWith', 'disabled', 'interface', 'interfaceOptions', 'multiple', 'name', 'okText', 'placeholder', 'selectedText', 'value'],
+  outputs: ['ionChange', 'ionCancel', 'ionFocus', 'ionBlur']
+})
 export class IonSelect {
-  ionChange!: EventEmitter<CustomEvent>;
-  ionCancel!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the value has changed. */
+  ionChange!: ISelect['ionChange'];
+  /** Emitted when the selection is cancelled. */
+  ionCancel!: ISelect['ionCancel'];
+  /** Emitted when the select has focus. */
+  ionFocus!: ISelect['ionFocus'];
+  /** Emitted when the select loses focus. */
+  ionBlur!: ISelect['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -912,9 +1552,17 @@ export class IonSelect {
   }
 }
 
+
 export declare interface IonSelectOption extends Components.IonSelectOption {}
-@ProxyCmp({inputs: ['disabled', 'value']})
-@Component({ selector: 'ion-select-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled', 'value'] })
+@ProxyCmp({
+  inputs: ['disabled', 'value']
+})
+@Component({
+  selector: 'ion-select-option',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'value']
+})
 export class IonSelectOption {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -923,9 +1571,17 @@ export class IonSelectOption {
   }
 }
 
+
 export declare interface IonSelectPopover extends Components.IonSelectPopover {}
-@ProxyCmp({inputs: ['header', 'message', 'options', 'subHeader']})
-@Component({ selector: 'ion-select-popover', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['header', 'message', 'options', 'subHeader'] })
+@ProxyCmp({
+  inputs: ['header', 'message', 'options', 'subHeader']
+})
+@Component({
+  selector: 'ion-select-popover',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['header', 'message', 'options', 'subHeader']
+})
 export class IonSelectPopover {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -934,9 +1590,17 @@ export class IonSelectPopover {
   }
 }
 
+
 export declare interface IonSkeletonText extends Components.IonSkeletonText {}
-@ProxyCmp({inputs: ['animated']})
-@Component({ selector: 'ion-skeleton-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated'] })
+@ProxyCmp({
+  inputs: ['animated']
+})
+@Component({
+  selector: 'ion-skeleton-text',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated']
+})
 export class IonSkeletonText {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -945,9 +1609,14 @@ export class IonSkeletonText {
   }
 }
 
+
 export declare interface IonSlide extends Components.IonSlide {}
 
-@Component({ selector: 'ion-slide', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-slide',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonSlide {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -956,26 +1625,52 @@ export class IonSlide {
   }
 }
 
+import { Slides as ISlides } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/slides/slides';
 export declare interface IonSlides extends Components.IonSlides {}
-@ProxyCmp({inputs: ['options', 'pager', 'scrollbar'], 'methods': ['update', 'updateAutoHeight', 'slideTo', 'slideNext', 'slidePrev', 'getActiveIndex', 'getPreviousIndex', 'length', 'isEnd', 'isBeginning', 'startAutoplay', 'stopAutoplay', 'lockSwipeToNext', 'lockSwipeToPrev', 'lockSwipes', 'getSwiper']})
-@Component({ selector: 'ion-slides', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'pager', 'scrollbar'] })
+@ProxyCmp({
+  inputs: ['options', 'pager', 'scrollbar'],
+  methods: ['update', 'updateAutoHeight', 'slideTo', 'slideNext', 'slidePrev', 'getActiveIndex', 'getPreviousIndex', 'length', 'isEnd', 'isBeginning', 'startAutoplay', 'stopAutoplay', 'lockSwipeToNext', 'lockSwipeToPrev', 'lockSwipes', 'getSwiper']
+})
+@Component({
+  selector: 'ion-slides',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['options', 'pager', 'scrollbar'],
+  outputs: ['ionSlidesDidLoad', 'ionSlideTap', 'ionSlideDoubleTap', 'ionSlideWillChange', 'ionSlideDidChange', 'ionSlideNextStart', 'ionSlidePrevStart', 'ionSlideNextEnd', 'ionSlidePrevEnd', 'ionSlideTransitionStart', 'ionSlideTransitionEnd', 'ionSlideDrag', 'ionSlideReachStart', 'ionSlideReachEnd', 'ionSlideTouchStart', 'ionSlideTouchEnd']
+})
 export class IonSlides {
-  ionSlidesDidLoad!: EventEmitter<CustomEvent>;
-  ionSlideTap!: EventEmitter<CustomEvent>;
-  ionSlideDoubleTap!: EventEmitter<CustomEvent>;
-  ionSlideWillChange!: EventEmitter<CustomEvent>;
-  ionSlideDidChange!: EventEmitter<CustomEvent>;
-  ionSlideNextStart!: EventEmitter<CustomEvent>;
-  ionSlidePrevStart!: EventEmitter<CustomEvent>;
-  ionSlideNextEnd!: EventEmitter<CustomEvent>;
-  ionSlidePrevEnd!: EventEmitter<CustomEvent>;
-  ionSlideTransitionStart!: EventEmitter<CustomEvent>;
-  ionSlideTransitionEnd!: EventEmitter<CustomEvent>;
-  ionSlideDrag!: EventEmitter<CustomEvent>;
-  ionSlideReachStart!: EventEmitter<CustomEvent>;
-  ionSlideReachEnd!: EventEmitter<CustomEvent>;
-  ionSlideTouchStart!: EventEmitter<CustomEvent>;
-  ionSlideTouchEnd!: EventEmitter<CustomEvent>;
+  /** Emitted after Swiper initialization */
+  ionSlidesDidLoad!: ISlides['ionSlidesDidLoad'];
+  /** Emitted when the user taps/clicks on the slide's container. */
+  ionSlideTap!: ISlides['ionSlideTap'];
+  /** Emitted when the user double taps on the slide's container. */
+  ionSlideDoubleTap!: ISlides['ionSlideDoubleTap'];
+  /** Emitted before the active slide has changed. */
+  ionSlideWillChange!: ISlides['ionSlideWillChange'];
+  /** Emitted after the active slide has changed. */
+  ionSlideDidChange!: ISlides['ionSlideDidChange'];
+  /** Emitted when the next slide has started. */
+  ionSlideNextStart!: ISlides['ionSlideNextStart'];
+  /** Emitted when the previous slide has started. */
+  ionSlidePrevStart!: ISlides['ionSlidePrevStart'];
+  /** Emitted when the next slide has ended. */
+  ionSlideNextEnd!: ISlides['ionSlideNextEnd'];
+  /** Emitted when the previous slide has ended. */
+  ionSlidePrevEnd!: ISlides['ionSlidePrevEnd'];
+  /** Emitted when the slide transition has started. */
+  ionSlideTransitionStart!: ISlides['ionSlideTransitionStart'];
+  /** Emitted when the slide transition has ended. */
+  ionSlideTransitionEnd!: ISlides['ionSlideTransitionEnd'];
+  /** Emitted when the slider is actively being moved. */
+  ionSlideDrag!: ISlides['ionSlideDrag'];
+  /** Emitted when the slider is at its initial position. */
+  ionSlideReachStart!: ISlides['ionSlideReachStart'];
+  /** Emitted when the slider is at the last slide. */
+  ionSlideReachEnd!: ISlides['ionSlideReachEnd'];
+  /** Emitted when the user first touches the slider. */
+  ionSlideTouchStart!: ISlides['ionSlideTouchStart'];
+  /** Emitted when the user releases the touch. */
+  ionSlideTouchEnd!: ISlides['ionSlideTouchEnd'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -984,9 +1679,17 @@ export class IonSlides {
   }
 }
 
+
 export declare interface IonSpinner extends Components.IonSpinner {}
-@ProxyCmp({inputs: ['color', 'duration', 'name', 'paused']})
-@Component({ selector: 'ion-spinner', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'duration', 'name', 'paused'] })
+@ProxyCmp({
+  inputs: ['color', 'duration', 'name', 'paused']
+})
+@Component({
+  selector: 'ion-spinner',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'duration', 'name', 'paused']
+})
 export class IonSpinner {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -995,11 +1698,21 @@ export class IonSpinner {
   }
 }
 
+import { SplitPane as ISplitPane } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/split-pane/split-pane';
 export declare interface IonSplitPane extends Components.IonSplitPane {}
-@ProxyCmp({inputs: ['contentId', 'disabled', 'when']})
-@Component({ selector: 'ion-split-pane', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['contentId', 'disabled', 'when'] })
+@ProxyCmp({
+  inputs: ['contentId', 'disabled', 'when']
+})
+@Component({
+  selector: 'ion-split-pane',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['contentId', 'disabled', 'when'],
+  outputs: ['ionSplitPaneVisible']
+})
 export class IonSplitPane {
-  ionSplitPaneVisible!: EventEmitter<CustomEvent>;
+  /** Expression to be called when the split-pane visibility has changed */
+  ionSplitPaneVisible!: ISplitPane['ionSplitPaneVisible'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1008,9 +1721,18 @@ export class IonSplitPane {
   }
 }
 
+
 export declare interface IonTab extends Components.IonTab {}
-@ProxyCmp({inputs: ['component', 'tab'], 'methods': ['setActive']})
-@Component({ selector: 'ion-tab', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['component', 'tab'] })
+@ProxyCmp({
+  inputs: ['component', 'tab'],
+  methods: ['setActive']
+})
+@Component({
+  selector: 'ion-tab',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['component', 'tab']
+})
 export class IonTab {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1019,9 +1741,17 @@ export class IonTab {
   }
 }
 
+
 export declare interface IonTabBar extends Components.IonTabBar {}
-@ProxyCmp({inputs: ['color', 'selectedTab', 'translucent']})
-@Component({ selector: 'ion-tab-bar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'selectedTab', 'translucent'] })
+@ProxyCmp({
+  inputs: ['color', 'selectedTab', 'translucent']
+})
+@Component({
+  selector: 'ion-tab-bar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'selectedTab', 'translucent']
+})
 export class IonTabBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1030,9 +1760,17 @@ export class IonTabBar {
   }
 }
 
+
 export declare interface IonTabButton extends Components.IonTabButton {}
-@ProxyCmp({inputs: ['disabled', 'download', 'href', 'layout', 'rel', 'selected', 'tab', 'target']})
-@Component({ selector: 'ion-tab-button', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['disabled', 'download', 'href', 'layout', 'rel', 'selected', 'tab', 'target'] })
+@ProxyCmp({
+  inputs: ['disabled', 'download', 'href', 'layout', 'rel', 'selected', 'tab', 'target']
+})
+@Component({
+  selector: 'ion-tab-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'download', 'href', 'layout', 'rel', 'selected', 'tab', 'target']
+})
 export class IonTabButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1041,12 +1779,22 @@ export class IonTabButton {
   }
 }
 
+import { Tabs as ITabs } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/tabs/tabs';
 export declare interface IonTabs extends Components.IonTabs {}
-@ProxyCmp({'methods': ['select', 'getTab', 'getSelected']})
-@Component({ selector: 'ion-tabs', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@ProxyCmp({
+  methods: ['select', 'getTab', 'getSelected']
+})
+@Component({
+  selector: 'ion-tabs',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  outputs: ['ionTabsWillChange', 'ionTabsDidChange']
+})
 export class IonTabs {
-  ionTabsWillChange!: EventEmitter<CustomEvent>;
-  ionTabsDidChange!: EventEmitter<CustomEvent>;
+  /** Emitted when the navigation is about to transition to a new component. */
+  ionTabsWillChange!: ITabs['ionTabsWillChange'];
+  /** Emitted when the navigation has finished transitioning to a new component. */
+  ionTabsDidChange!: ITabs['ionTabsDidChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1055,9 +1803,17 @@ export class IonTabs {
   }
 }
 
+
 export declare interface IonText extends Components.IonText {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-text',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonText {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1066,14 +1822,28 @@ export class IonText {
   }
 }
 
+import { Textarea as ITextarea } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/textarea/textarea';
 export declare interface IonTextarea extends Components.IonTextarea {}
-@ProxyCmp({inputs: ['autoGrow', 'autocapitalize', 'autofocus', 'clearOnEdit', 'color', 'cols', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'maxlength', 'minlength', 'name', 'placeholder', 'readonly', 'required', 'rows', 'spellcheck', 'value', 'wrap'], 'methods': ['setFocus', 'getInputElement']})
-@Component({ selector: 'ion-textarea', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['autoGrow', 'autocapitalize', 'autofocus', 'clearOnEdit', 'color', 'cols', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'maxlength', 'minlength', 'name', 'placeholder', 'readonly', 'required', 'rows', 'spellcheck', 'value', 'wrap'] })
+@ProxyCmp({
+  inputs: ['autoGrow', 'autocapitalize', 'autofocus', 'clearOnEdit', 'color', 'cols', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'maxlength', 'minlength', 'name', 'placeholder', 'readonly', 'required', 'rows', 'spellcheck', 'value', 'wrap'],
+  methods: ['setFocus', 'getInputElement']
+})
+@Component({
+  selector: 'ion-textarea',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['autoGrow', 'autocapitalize', 'autofocus', 'clearOnEdit', 'color', 'cols', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'maxlength', 'minlength', 'name', 'placeholder', 'readonly', 'required', 'rows', 'spellcheck', 'value', 'wrap'],
+  outputs: ['ionChange', 'ionInput', 'ionBlur', 'ionFocus']
+})
 export class IonTextarea {
-  ionChange!: EventEmitter<CustomEvent>;
-  ionInput!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
+  /** Emitted when the input value has changed. */
+  ionChange!: ITextarea['ionChange'];
+  /** Emitted when a keyboard input occurred. */
+  ionInput!: ITextarea['ionInput'];
+  /** Emitted when the input loses focus. */
+  ionBlur!: ITextarea['ionBlur'];
+  /** Emitted when the input has focus. */
+  ionFocus!: ITextarea['ionFocus'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1082,9 +1852,14 @@ export class IonTextarea {
   }
 }
 
+
 export declare interface IonThumbnail extends Components.IonThumbnail {}
 
-@Component({ selector: 'ion-thumbnail', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ion-thumbnail',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>'
+})
 export class IonThumbnail {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1093,9 +1868,17 @@ export class IonThumbnail {
   }
 }
 
+
 export declare interface IonTitle extends Components.IonTitle {}
-@ProxyCmp({inputs: ['color', 'size']})
-@Component({ selector: 'ion-title', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color', 'size'] })
+@ProxyCmp({
+  inputs: ['color', 'size']
+})
+@Component({
+  selector: 'ion-title',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'size']
+})
 export class IonTitle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1104,14 +1887,28 @@ export class IonTitle {
   }
 }
 
+import { Toast as IToast } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/toast/toast';
 export declare interface IonToast extends Components.IonToast {}
-@ProxyCmp({inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'], 'methods': ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']})
-@Component({ selector: 'ion-toast', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'] })
+@ProxyCmp({
+  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+})
+@Component({
+  selector: 'ion-toast',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
+  outputs: ['ionToastDidPresent', 'ionToastWillPresent', 'ionToastWillDismiss', 'ionToastDidDismiss']
+})
 export class IonToast {
-  ionToastDidPresent!: EventEmitter<CustomEvent>;
-  ionToastWillPresent!: EventEmitter<CustomEvent>;
-  ionToastWillDismiss!: EventEmitter<CustomEvent>;
-  ionToastDidDismiss!: EventEmitter<CustomEvent>;
+  /** Emitted after the toast has presented. */
+  ionToastDidPresent!: IToast['didPresent'];
+  /** Emitted before the toast has presented. */
+  ionToastWillPresent!: IToast['willPresent'];
+  /** Emitted before the toast has dismissed. */
+  ionToastWillDismiss!: IToast['willDismiss'];
+  /** Emitted after the toast has dismissed. */
+  ionToastDidDismiss!: IToast['didDismiss'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1120,13 +1917,25 @@ export class IonToast {
   }
 }
 
+import { Toggle as IToggle } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/toggle/toggle';
 export declare interface IonToggle extends Components.IonToggle {}
-@ProxyCmp({inputs: ['checked', 'color', 'disabled', 'name', 'value']})
-@Component({ selector: 'ion-toggle', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['checked', 'color', 'disabled', 'name', 'value'] })
+@ProxyCmp({
+  inputs: ['checked', 'color', 'disabled', 'name', 'value']
+})
+@Component({
+  selector: 'ion-toggle',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['checked', 'color', 'disabled', 'name', 'value'],
+  outputs: ['ionChange', 'ionFocus', 'ionBlur']
+})
 export class IonToggle {
-  ionChange!: EventEmitter<CustomEvent>;
-  ionFocus!: EventEmitter<CustomEvent>;
-  ionBlur!: EventEmitter<CustomEvent>;
+  /** Emitted when the value property has changed. */
+  ionChange!: IToggle['ionChange'];
+  /** Emitted when the toggle has focus. */
+  ionFocus!: IToggle['ionFocus'];
+  /** Emitted when the toggle loses focus. */
+  ionBlur!: IToggle['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1135,9 +1944,17 @@ export class IonToggle {
   }
 }
 
+
 export declare interface IonToolbar extends Components.IonToolbar {}
-@ProxyCmp({inputs: ['color']})
-@Component({ selector: 'ion-toolbar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['color'] })
+@ProxyCmp({
+  inputs: ['color']
+})
+@Component({
+  selector: 'ion-toolbar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color']
+})
 export class IonToolbar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1146,9 +1963,18 @@ export class IonToolbar {
   }
 }
 
+
 export declare interface IonVirtualScroll extends Components.IonVirtualScroll {}
-@ProxyCmp({inputs: ['approxFooterHeight', 'approxHeaderHeight', 'approxItemHeight', 'footerFn', 'footerHeight', 'headerFn', 'headerHeight', 'itemHeight', 'items', 'nodeRender', 'renderFooter', 'renderHeader', 'renderItem'], 'methods': ['positionForItem', 'checkRange', 'checkEnd']})
-@Component({ selector: 'ion-virtual-scroll', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['approxFooterHeight', 'approxHeaderHeight', 'approxItemHeight', 'footerFn', 'footerHeight', 'headerFn', 'headerHeight', 'itemHeight', 'items', 'nodeRender', 'renderFooter', 'renderHeader', 'renderItem'] })
+@ProxyCmp({
+  inputs: ['approxFooterHeight', 'approxHeaderHeight', 'approxItemHeight', 'footerFn', 'footerHeight', 'headerFn', 'headerHeight', 'itemHeight', 'items', 'nodeRender', 'renderFooter', 'renderHeader', 'renderItem'],
+  methods: ['positionForItem', 'checkRange', 'checkEnd']
+})
+@Component({
+  selector: 'ion-virtual-scroll',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['approxFooterHeight', 'approxHeaderHeight', 'approxItemHeight', 'footerFn', 'footerHeight', 'headerFn', 'headerHeight', 'itemHeight', 'items', 'nodeRender', 'renderFooter', 'renderHeader', 'renderItem']
+})
 export class IonVirtualScroll {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1157,11 +1983,22 @@ export class IonVirtualScroll {
   }
 }
 
+import { BibleReadingComponent as IBibleReadingComponent } from '@venite/components/dist/types/components/bible-reading/bible-reading';
 export declare interface LdfBibleReading extends Components.LdfBibleReading {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path'], 'methods': ['changeReading']})
-@Component({ selector: 'ldf-bible-reading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path'],
+  methods: ['changeReading']
+})
+@Component({
+  selector: 'ldf-bible-reading',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfBibleReading {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IBibleReadingComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1170,9 +2007,17 @@ export class LdfBibleReading {
   }
 }
 
+
 export declare interface LdfDayName extends Components.LdfDayName {}
-@ProxyCmp({inputs: ['day']})
-@Component({ selector: 'ldf-day-name', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['day'] })
+@ProxyCmp({
+  inputs: ['day']
+})
+@Component({
+  selector: 'ldf-day-name',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['day']
+})
 export class LdfDayName {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1181,12 +2026,23 @@ export class LdfDayName {
   }
 }
 
+import { EditableAddBlockComponent as IEditableAddBlockComponent } from '@venite/components/dist/types/components/editable-add-block/editable-add-block';
 export declare interface LdfEditableAddBlock extends Components.LdfEditableAddBlock {}
-@ProxyCmp({inputs: ['base', 'index', 'visible']})
-@Component({ selector: 'ldf-editable-add-block', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'visible'] })
+@ProxyCmp({
+  inputs: ['base', 'index', 'visible']
+})
+@Component({
+  selector: 'ldf-editable-add-block',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['base', 'index', 'visible'],
+  outputs: ['ldfDocShouldChange', 'ldfDocShouldAdd']
+})
 export class LdfEditableAddBlock {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
-  ldfDocShouldAdd!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableAddBlockComponent['ldfDocShouldChange'];
+  /** Gives a path to the point in the document at which a new LiturgicalDocument should be added */
+  ldfDocShouldAdd!: IEditableAddBlockComponent['ldfDocShouldAdd'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1195,11 +2051,18 @@ export class LdfEditableAddBlock {
   }
 }
 
+import { EditableAddBlockMenuComponent as IEditableAddBlockMenuComponent } from '@venite/components/dist/types/components/editable-add-block-menu/editable-add-block-menu';
 export declare interface LdfEditableAddBlockMenu extends Components.LdfEditableAddBlockMenu {}
 
-@Component({ selector: 'ldf-editable-add-block-menu', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>' })
+@Component({
+  selector: 'ldf-editable-add-block-menu',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  outputs: ['ldfShouldAddBlock']
+})
 export class LdfEditableAddBlockMenu {
-  ldfShouldAddBlock!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfShouldAddBlock!: IEditableAddBlockMenuComponent['ldfShouldAddBlock'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1208,11 +2071,21 @@ export class LdfEditableAddBlockMenu {
   }
 }
 
+import { EditableAntiphonFieldComponent as IEditableAntiphonFieldComponent } from '@venite/components/dist/types/components/editable-antiphon-field/editable-antiphon-field';
 export declare interface LdfEditableAntiphonField extends Components.LdfEditableAntiphonField {}
-@ProxyCmp({inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path']})
-@Component({ selector: 'ldf-editable-antiphon-field', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path'] })
+@ProxyCmp({
+  inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path']
+})
+@Component({
+  selector: 'ldf-editable-antiphon-field',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['antiphon', 'insert_antiphon', 'omit_antiphon', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableAntiphonField {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableAntiphonFieldComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1221,11 +2094,21 @@ export class LdfEditableAntiphonField {
   }
 }
 
+import { EditableBooleanComponent as IEditableBooleanComponent } from '@venite/components/dist/types/components/editable-boolean/editable-boolean';
 export declare interface LdfEditableBoolean extends Components.LdfEditableBoolean {}
-@ProxyCmp({inputs: ['path', 'property', 'value']})
-@Component({ selector: 'ldf-editable-boolean', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'property', 'value'] })
+@ProxyCmp({
+  inputs: ['path', 'property', 'value']
+})
+@Component({
+  selector: 'ldf-editable-boolean',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['path', 'property', 'value'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableBoolean {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableBooleanComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1234,11 +2117,21 @@ export class LdfEditableBoolean {
   }
 }
 
+import { EditableConditionComponent as IEditableConditionComponent } from '@venite/components/dist/types/components/editable-condition/editable-condition';
 export declare interface LdfEditableCondition extends Components.LdfEditableCondition {}
-@ProxyCmp({inputs: ['modal', 'obj', 'path']})
-@Component({ selector: 'ldf-editable-condition', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'obj', 'path'] })
+@ProxyCmp({
+  inputs: ['modal', 'obj', 'path']
+})
+@Component({
+  selector: 'ldf-editable-condition',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['modal', 'obj', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableCondition {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableConditionComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1247,11 +2140,21 @@ export class LdfEditableCondition {
   }
 }
 
+import { EditableConditionComponent as IEditableConditionComponent } from '@venite/components/dist/types/components/editable-condition-piece/editable-condition-piece';
 export declare interface LdfEditableConditionPiece extends Components.LdfEditableConditionPiece {}
-@ProxyCmp({inputs: ['condition', 'path']})
-@Component({ selector: 'ldf-editable-condition-piece', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['condition', 'path'] })
+@ProxyCmp({
+  inputs: ['condition', 'path']
+})
+@Component({
+  selector: 'ldf-editable-condition-piece',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['condition', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableConditionPiece {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableConditionComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1260,11 +2163,21 @@ export class LdfEditableConditionPiece {
   }
 }
 
+import { EditableDeleteComponent as IEditableDeleteComponent } from '@venite/components/dist/types/components/editable-delete/editable-delete';
 export declare interface LdfEditableDelete extends Components.LdfEditableDelete {}
-@ProxyCmp({inputs: ['base', 'index', 'obj', 'type']})
-@Component({ selector: 'ldf-editable-delete', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'type'] })
+@ProxyCmp({
+  inputs: ['base', 'index', 'obj', 'type']
+})
+@Component({
+  selector: 'ldf-editable-delete',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['base', 'index', 'obj', 'type'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableDelete {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableDeleteComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1273,11 +2186,22 @@ export class LdfEditableDelete {
   }
 }
 
+import { EditableFilterDocumentsComponent as IEditableFilterDocumentsComponent } from '@venite/components/dist/types/components/editable-filter-documents/editable-filter-documents';
 export declare interface LdfEditableFilterDocuments extends Components.LdfEditableFilterDocuments {}
-@ProxyCmp({inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'], 'methods': ['setVersions', 'setOptions']})
-@Component({ selector: 'ldf-editable-filter-documents', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'] })
+@ProxyCmp({
+  inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'],
+  methods: ['setVersions', 'setOptions']
+})
+@Component({
+  selector: 'ldf-editable-filter-documents',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'],
+  outputs: ['ldfDocumentSelected']
+})
 export class LdfEditableFilterDocuments {
-  ldfDocumentSelected!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocumentSelected!: IEditableFilterDocumentsComponent['ldfDocumentSelected'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1286,11 +2210,21 @@ export class LdfEditableFilterDocuments {
   }
 }
 
+import { EditableLookupComponent as IEditableLookupComponent } from '@venite/components/dist/types/components/editable-lookup/editable-lookup';
 export declare interface LdfEditableLookup extends Components.LdfEditableLookup {}
-@ProxyCmp({inputs: ['lookup', 'path', 'types']})
-@Component({ selector: 'ldf-editable-lookup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['lookup', 'path', 'types'] })
+@ProxyCmp({
+  inputs: ['lookup', 'path', 'types']
+})
+@Component({
+  selector: 'ldf-editable-lookup',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['lookup', 'path', 'types'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableLookup {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableLookupComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1299,11 +2233,21 @@ export class LdfEditableLookup {
   }
 }
 
+import { EditableMetadataComponent as IEditableMetadataComponent } from '@venite/components/dist/types/components/editable-metadata/editable-metadata';
 export declare interface LdfEditableMetadata extends Components.LdfEditableMetadata {}
-@ProxyCmp({inputs: ['collapsed', 'doc', 'modal', 'path', 'visible']})
-@Component({ selector: 'ldf-editable-metadata', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['collapsed', 'doc', 'modal', 'path', 'visible'] })
+@ProxyCmp({
+  inputs: ['collapsed', 'doc', 'modal', 'path', 'visible']
+})
+@Component({
+  selector: 'ldf-editable-metadata',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['collapsed', 'doc', 'modal', 'path', 'visible'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableMetadata {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableMetadataComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1312,14 +2256,27 @@ export class LdfEditableMetadata {
   }
 }
 
+import { EditableMetadataButtonsComponent as IEditableMetadataButtonsComponent } from '@venite/components/dist/types/components/editable-metadata-buttons/editable-metadata-buttons';
 export declare interface LdfEditableMetadataButtons extends Components.LdfEditableMetadataButtons {}
-@ProxyCmp({inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible']})
-@Component({ selector: 'ldf-editable-metadata-buttons', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible'] })
+@ProxyCmp({
+  inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible']
+})
+@Component({
+  selector: 'ldf-editable-metadata-buttons',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['base', 'index', 'obj', 'parentType', 'preview', 'visible'],
+  outputs: ['ldfAddOptionToDoc', 'ldfTogglePreview', 'ldfDocShouldMove', 'ldfDocShouldChange']
+})
 export class LdfEditableMetadataButtons {
-  ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
-  ldfTogglePreview!: EventEmitter<CustomEvent>;
-  ldfDocShouldMove!: EventEmitter<CustomEvent>;
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfAddOptionToDoc!: IEditableMetadataButtonsComponent['ldfAddOptionToDoc'];
+  /**  */
+  ldfTogglePreview!: IEditableMetadataButtonsComponent['ldfTogglePreview'];
+  /**  */
+  ldfDocShouldMove!: IEditableMetadataButtonsComponent['ldfDocShouldMove'];
+  /**  */
+  ldfDocShouldChange!: IEditableMetadataButtonsComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1328,13 +2285,26 @@ export class LdfEditableMetadataButtons {
   }
 }
 
+import { EditableMetadataMetadataFieldsComponent as IEditableMetadataMetadataFieldsComponent } from '@venite/components/dist/types/components/editable-metadata-metadata-fields/editable-metadata-metadata-fields';
 export declare interface LdfEditableMetadataMetadataFields extends Components.LdfEditableMetadataMetadataFields {}
-@ProxyCmp({inputs: ['bibleReadingIntros', 'doc', 'path'], 'methods': ['setBibleReadingIntros']})
-@Component({ selector: 'ldf-editable-metadata-metadata-fields', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['bibleReadingIntros', 'doc', 'path'] })
+@ProxyCmp({
+  inputs: ['bibleReadingIntros', 'doc', 'path'],
+  methods: ['setBibleReadingIntros']
+})
+@Component({
+  selector: 'ldf-editable-metadata-metadata-fields',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['bibleReadingIntros', 'doc', 'path'],
+  outputs: ['ldfDocShouldChange', 'ldfAskForBibleIntros', 'ldfShouldAddGloriaPatri']
+})
 export class LdfEditableMetadataMetadataFields {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
-  ldfAskForBibleIntros!: EventEmitter<CustomEvent>;
-  ldfShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableMetadataMetadataFieldsComponent['ldfDocShouldChange'];
+  /**  */
+  ldfAskForBibleIntros!: IEditableMetadataMetadataFieldsComponent['ldfAskForBibleIntros'];
+  /**  */
+  ldfShouldAddGloriaPatri!: IEditableMetadataMetadataFieldsComponent['ldfShouldAddGloriaPatri'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1343,11 +2313,21 @@ export class LdfEditableMetadataMetadataFields {
   }
 }
 
+import { EditablePreferenceComponent as IEditablePreferenceComponent } from '@venite/components/dist/types/components/editable-preference/editable-preference';
 export declare interface LdfEditablePreference extends Components.LdfEditablePreference {}
-@ProxyCmp({inputs: ['modal', 'path', 'preference']})
-@Component({ selector: 'ldf-editable-preference', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'path', 'preference'] })
+@ProxyCmp({
+  inputs: ['modal', 'path', 'preference']
+})
+@Component({
+  selector: 'ldf-editable-preference',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['modal', 'path', 'preference'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditablePreference {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditablePreferenceComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1356,11 +2336,21 @@ export class LdfEditablePreference {
   }
 }
 
+import { EditablePreferenceOptionComponent as IEditablePreferenceOptionComponent } from '@venite/components/dist/types/components/editable-preference-option/editable-preference-option';
 export declare interface LdfEditablePreferenceOption extends Components.LdfEditablePreferenceOption {}
-@ProxyCmp({inputs: ['option', 'path']})
-@Component({ selector: 'ldf-editable-preference-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['option', 'path'] })
+@ProxyCmp({
+  inputs: ['option', 'path']
+})
+@Component({
+  selector: 'ldf-editable-preference-option',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['option', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditablePreferenceOption {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditablePreferenceOptionComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1369,11 +2359,21 @@ export class LdfEditablePreferenceOption {
   }
 }
 
+import { EditablePreferencesComponent as IEditablePreferencesComponent } from '@venite/components/dist/types/components/editable-preferences/editable-preferences';
 export declare interface LdfEditablePreferences extends Components.LdfEditablePreferences {}
-@ProxyCmp({inputs: ['modal', 'obj', 'path']})
-@Component({ selector: 'ldf-editable-preferences', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['modal', 'obj', 'path'] })
+@ProxyCmp({
+  inputs: ['modal', 'obj', 'path']
+})
+@Component({
+  selector: 'ldf-editable-preferences',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['modal', 'obj', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditablePreferences {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditablePreferencesComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1382,12 +2382,23 @@ export class LdfEditablePreferences {
   }
 }
 
+import { EditableSelectComponent as IEditableSelectComponent } from '@venite/components/dist/types/components/editable-select/editable-select';
 export declare interface LdfEditableSelect extends Components.LdfEditableSelect {}
-@ProxyCmp({inputs: ['options', 'path', 'property', 'value']})
-@Component({ selector: 'ldf-editable-select', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['options', 'path', 'property', 'value'] })
+@ProxyCmp({
+  inputs: ['options', 'path', 'property', 'value']
+})
+@Component({
+  selector: 'ldf-editable-select',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['options', 'path', 'property', 'value'],
+  outputs: ['ldfChange', 'ldfDocShouldChange']
+})
 export class LdfEditableSelect {
-  ldfChange!: EventEmitter<CustomEvent>;
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /** Optional callback when it emits a change */
+  ldfChange!: IEditableSelectComponent['ldfChange'];
+  /**  */
+  ldfDocShouldChange!: IEditableSelectComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1396,11 +2407,21 @@ export class LdfEditableSelect {
   }
 }
 
+import { EditableStringListComponent as IEditableStringListComponent } from '@venite/components/dist/types/components/editable-string-list/editable-string-list';
 export declare interface LdfEditableStringList extends Components.LdfEditableStringList {}
-@ProxyCmp({inputs: ['path', 'property', 'value']})
-@Component({ selector: 'ldf-editable-string-list', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['path', 'property', 'value'] })
+@ProxyCmp({
+  inputs: ['path', 'property', 'value']
+})
+@Component({
+  selector: 'ldf-editable-string-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['path', 'property', 'value'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfEditableStringList {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfDocShouldChange!: IEditableStringListComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1409,14 +2430,27 @@ export class LdfEditableStringList {
   }
 }
 
+import { EditableTextComponent as IEditableTextComponent } from '@venite/components/dist/types/components/editable-text/editable-text';
 export declare interface LdfEditableText extends Components.LdfEditableText {}
-@ProxyCmp({inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'templateMaker', 'text', 'unit']})
-@Component({ selector: 'ldf-editable-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'templateMaker', 'text', 'unit'] })
+@ProxyCmp({
+  inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'templateMaker', 'text', 'unit']
+})
+@Component({
+  selector: 'ldf-editable-text',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['inputType', 'path', 'placeholder', 'short', 'template', 'templateMaker', 'text', 'unit'],
+  outputs: ['ldfCursorMoved', 'ldfDocShouldChange', 'ldfAddChildAfter', 'ldfMergeWithPrevious']
+})
 export class LdfEditableText {
-  ldfCursorMoved!: EventEmitter<CustomEvent>;
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
-  ldfAddChildAfter!: EventEmitter<CustomEvent>;
-  ldfMergeWithPrevious!: EventEmitter<CustomEvent>;
+  /** Tells the Editor that the cursor has moved within this input */
+  ldfCursorMoved!: IEditableTextComponent['ldfCursorMoved'];
+  /** Tell the Editor that a change has been made to the document */
+  ldfDocShouldChange!: IEditableTextComponent['ldfDocShouldChange'];
+  /** Tells the Editor to add another child after this one in the document */
+  ldfAddChildAfter!: IEditableTextComponent['ldfAddChildAfter'];
+  /** Tells the Editor to merge this node with the previous one in the value */
+  ldfMergeWithPrevious!: IEditableTextComponent['ldfMergeWithPrevious'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1425,17 +2459,33 @@ export class LdfEditableText {
   }
 }
 
+import { EditorComponent as IEditorComponent } from '@venite/components/dist/types/components/editor/editor';
 export declare interface LdfEditor extends Components.LdfEditor {}
-@ProxyCmp({inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users']})
-@Component({ selector: 'ldf-editor', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users'] })
+@ProxyCmp({
+  inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users']
+})
+@Component({
+  selector: 'ldf-editor',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['cursors', 'doc', 'listUsers', 'preview', 'uid', 'users'],
+  outputs: ['editorCursorMoved', 'editorDocShouldChange', 'editorDocShouldAdd', 'editorAskForBibleIntros', 'editorAskForCanticleOptions', 'editorAskForPrayersAndThanksgivings', 'editorShouldAddGloriaPatri']
+})
 export class LdfEditor {
-  editorCursorMoved!: EventEmitter<CustomEvent>;
-  editorDocShouldChange!: EventEmitter<CustomEvent>;
-  editorDocShouldAdd!: EventEmitter<CustomEvent>;
-  editorAskForBibleIntros!: EventEmitter<CustomEvent>;
-  editorAskForCanticleOptions!: EventEmitter<CustomEvent>;
-  editorAskForPrayersAndThanksgivings!: EventEmitter<CustomEvent>;
-  editorShouldAddGloriaPatri!: EventEmitter<CustomEvent>;
+  /** User's cursor/selection changed */
+  editorCursorMoved!: IEditorComponent['editorCursorMoved'];
+  /** User has edited the document */
+  editorDocShouldChange!: IEditorComponent['editorDocShouldChange'];
+  /** User is requesting we add a new LiturgicalDocument block at JSON pointer path `base`/`index` */
+  editorDocShouldAdd!: IEditorComponent['editorDocShouldAdd'];
+  /**  */
+  editorAskForBibleIntros!: IEditorComponent['editorAskForBibleIntros'];
+  /**  */
+  editorAskForCanticleOptions!: IEditorComponent['editorAskForCanticleOptions'];
+  /**  */
+  editorAskForPrayersAndThanksgivings!: IEditorComponent['editorAskForPrayersAndThanksgivings'];
+  /**  */
+  editorShouldAddGloriaPatri!: IEditorComponent['editorShouldAddGloriaPatri'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1444,9 +2494,17 @@ export class LdfEditor {
   }
 }
 
+
 export declare interface LdfEditorCursors extends Components.LdfEditorCursors {}
-@ProxyCmp({inputs: ['cursors', 'parent', 'uid', 'users']})
-@Component({ selector: 'ldf-editor-cursors', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['cursors', 'parent', 'uid', 'users'] })
+@ProxyCmp({
+  inputs: ['cursors', 'parent', 'uid', 'users']
+})
+@Component({
+  selector: 'ldf-editor-cursors',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['cursors', 'parent', 'uid', 'users']
+})
 export class LdfEditorCursors {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1455,9 +2513,17 @@ export class LdfEditorCursors {
   }
 }
 
+
 export declare interface LdfHeading extends Components.LdfHeading {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-heading', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-heading',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path']
+})
 export class LdfHeading {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1466,11 +2532,21 @@ export class LdfHeading {
   }
 }
 
+import { ImageComponent as IImageComponent } from '@venite/components/dist/types/components/image/image';
 export declare interface LdfImage extends Components.LdfImage {}
-@ProxyCmp({inputs: ['doc', 'editable', 'modal', 'path']})
-@Component({ selector: 'ldf-image', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'modal', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'modal', 'path']
+})
+@Component({
+  selector: 'ldf-image',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'modal', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfImage {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /** Tell the Editor that a change has been made to the document */
+  ldfDocShouldChange!: IImageComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1479,9 +2555,17 @@ export class LdfImage {
   }
 }
 
+
 export declare interface LdfLabelBar extends Components.LdfLabelBar {}
-@ProxyCmp({inputs: ['center']})
-@Component({ selector: 'ldf-label-bar', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['center'] })
+@ProxyCmp({
+  inputs: ['center']
+})
+@Component({
+  selector: 'ldf-label-bar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['center']
+})
 export class LdfLabelBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1490,23 +2574,44 @@ export class LdfLabelBar {
   }
 }
 
+import { LiturgicalDocumentComponent as ILiturgicalDocumentComponent } from '@venite/components/dist/types/components/liturgical-document/liturgical-document';
 export declare interface LdfLiturgicalDocument extends Components.LdfLiturgicalDocument {}
-@ProxyCmp({inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview']})
-@Component({ selector: 'ldf-liturgical-document', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview'] })
+@ProxyCmp({
+  inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview']
+})
+@Component({
+  selector: 'ldf-liturgical-document',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview'],
+  outputs: ['focusPath', 'focusObj', 'ldfSelectionChange']
+})
 export class LdfLiturgicalDocument {
-  focusPath!: EventEmitter<CustomEvent>;
-  focusObj!: EventEmitter<CustomEvent>;
+  /**  */
+  focusPath!: ILiturgicalDocumentComponent['focusPath'];
+  /**  */
+  focusObj!: ILiturgicalDocumentComponent['focusObj'];
+  /**  */
+  ldfSelectionChange!: ILiturgicalDocumentComponent['ldfSelectionChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['focusPath', 'focusObj']);
+    proxyOutputs(this, this.el, ['focusPath', 'focusObj', 'ldfSelectionChange']);
   }
 }
 
+
 export declare interface LdfLiturgy extends Components.LdfLiturgy {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path', 'preview']})
-@Component({ selector: 'ldf-liturgy', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path', 'preview'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path', 'preview']
+})
+@Component({
+  selector: 'ldf-liturgy',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path', 'preview']
+})
 export class LdfLiturgy {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1515,11 +2620,22 @@ export class LdfLiturgy {
   }
 }
 
+import { MeditationComponent as IMeditationComponent } from '@venite/components/dist/types/components/meditation/meditation';
 export declare interface LdfMeditation extends Components.LdfMeditation {}
-@ProxyCmp({inputs: ['autostart', 'color', 'doc', 'editable', 'path'], 'methods': ['start', 'pause', 'resume', 'rewind']})
-@Component({ selector: 'ldf-meditation', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['autostart', 'color', 'doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['autostart', 'color', 'doc', 'editable', 'path'],
+  methods: ['start', 'pause', 'resume', 'rewind']
+})
+@Component({
+  selector: 'ldf-meditation',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['autostart', 'color', 'doc', 'editable', 'path'],
+  outputs: ['timerChanged']
+})
 export class LdfMeditation {
-  timerChanged!: EventEmitter<CustomEvent>;
+  /**  */
+  timerChanged!: IMeditationComponent['timerChanged'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1528,12 +2644,24 @@ export class LdfMeditation {
   }
 }
 
+import { OptionComponent as IOptionComponent } from '@venite/components/dist/types/components/option/option';
 export declare interface LdfOption extends Components.LdfOption {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path', 'preview'], 'methods': ['select']})
-@Component({ selector: 'ldf-option', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path', 'preview'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path', 'preview'],
+  methods: ['select']
+})
+@Component({
+  selector: 'ldf-option',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path', 'preview'],
+  outputs: ['ldfAddOptionToDoc', 'ldfDocShouldChange']
+})
 export class LdfOption {
-  ldfAddOptionToDoc!: EventEmitter<CustomEvent>;
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfAddOptionToDoc!: IOptionComponent['ldfAddOptionToDoc'];
+  /**  */
+  ldfDocShouldChange!: IOptionComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1542,11 +2670,22 @@ export class LdfOption {
   }
 }
 
+import { PrayersAndThanksgivingsComponent as IPrayersAndThanksgivingsComponent } from '@venite/components/dist/types/components/prayers-and-thanksgivings/prayers-and-thanksgivings';
 export declare interface LdfPrayersAndThanksgivings extends Components.LdfPrayersAndThanksgivings {}
-@ProxyCmp({inputs: ['base', 'index', 'modal', 'options', 'parent'], 'methods': ['setOptions']})
-@Component({ selector: 'ldf-prayers-and-thanksgivings', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['base', 'index', 'modal', 'options', 'parent'] })
+@ProxyCmp({
+  inputs: ['base', 'index', 'modal', 'options', 'parent'],
+  methods: ['setOptions']
+})
+@Component({
+  selector: 'ldf-prayers-and-thanksgivings',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['base', 'index', 'modal', 'options', 'parent'],
+  outputs: ['ldfAskForPrayersAndThanksgivings']
+})
 export class LdfPrayersAndThanksgivings {
-  ldfAskForPrayersAndThanksgivings!: EventEmitter<CustomEvent>;
+  /** Requests a list of possible Prayers and Thanksgivings */
+  ldfAskForPrayersAndThanksgivings!: IPrayersAndThanksgivingsComponent['ldfAskForPrayersAndThanksgivings'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1555,12 +2694,23 @@ export class LdfPrayersAndThanksgivings {
   }
 }
 
+import { PsalmComponent as IPsalmComponent } from '@venite/components/dist/types/components/psalm/psalm';
 export declare interface LdfPsalm extends Components.LdfPsalm {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-psalm', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-psalm',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path'],
+  outputs: ['ldfAskForCanticleOptions', 'ldfDocShouldChange']
+})
 export class LdfPsalm {
-  ldfAskForCanticleOptions!: EventEmitter<CustomEvent>;
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /**  */
+  ldfAskForCanticleOptions!: IPsalmComponent['ldfAskForCanticleOptions'];
+  /**  */
+  ldfDocShouldChange!: IPsalmComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1569,9 +2719,17 @@ export class LdfPsalm {
   }
 }
 
+
 export declare interface LdfRefrain extends Components.LdfRefrain {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-refrain', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-refrain',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path']
+})
 export class LdfRefrain {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1580,9 +2738,17 @@ export class LdfRefrain {
   }
 }
 
+
 export declare interface LdfResponsivePrayer extends Components.LdfResponsivePrayer {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-responsive-prayer', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-responsive-prayer',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path']
+})
 export class LdfResponsivePrayer {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1591,9 +2757,17 @@ export class LdfResponsivePrayer {
   }
 }
 
+
 export declare interface LdfRubric extends Components.LdfRubric {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-rubric', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-rubric',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path']
+})
 export class LdfRubric {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1602,11 +2776,21 @@ export class LdfRubric {
   }
 }
 
+import { StringComponent as IStringComponent } from '@venite/components/dist/types/components/string/string';
 export declare interface LdfString extends Components.LdfString {}
-@ProxyCmp({inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text']})
-@Component({ selector: 'ldf-string', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text'] })
+@ProxyCmp({
+  inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text']
+})
+@Component({
+  selector: 'ldf-string',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['citation', 'dropcap', 'dropcapMinLength', 'fragment', 'index', 'replaceTetragrammaton', 'text'],
+  outputs: ['ldfStringClicked']
+})
 export class LdfString {
-  ldfStringClicked!: EventEmitter<CustomEvent>;
+  /** Emitted when text is clicked (used for Share/Favorite) */
+  ldfStringClicked!: IStringComponent['ldfStringClicked'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1615,11 +2799,21 @@ export class LdfString {
   }
 }
 
+import { TextComponent as ITextComponent } from '@venite/components/dist/types/components/text/text';
 export declare interface LdfText extends Components.LdfText {}
-@ProxyCmp({inputs: ['doc', 'editable', 'path']})
-@Component({ selector: 'ldf-text', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['doc', 'editable', 'path'] })
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path']
+})
+@Component({
+  selector: 'ldf-text',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path'],
+  outputs: ['ldfDocShouldChange']
+})
 export class LdfText {
-  ldfDocShouldChange!: EventEmitter<CustomEvent>;
+  /** Used to add Prayers and Thanksgivings */
+  ldfDocShouldChange!: ITextComponent['ldfDocShouldChange'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

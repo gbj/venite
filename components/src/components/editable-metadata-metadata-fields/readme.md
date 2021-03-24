@@ -25,7 +25,7 @@
 
 ## Methods
 
-### `setBibleReadingIntros(intros: string | LiturgicalDocument[]) => Promise<void>`
+### `setBibleReadingIntros(intros: LiturgicalDocument[] | string) => Promise<void>`
 
 Set the list of Bible reading introductions
 

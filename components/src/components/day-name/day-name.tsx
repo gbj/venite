@@ -10,7 +10,7 @@ const LOCALE = {
 
 @Component({
   tag: 'ldf-day-name',
-  shadow: true
+  scoped: true
 })
 export class DayNameComponent {
   @Element() el: HTMLElement;

@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-string-list',
   styleUrl: 'editable-string-list.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableStringListComponent {
   @Element() element: HTMLElement;

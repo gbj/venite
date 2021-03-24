@@ -11,7 +11,7 @@ import { ExceptOnlyStrings } from './except-only-strings';
 @Component({
   tag: 'ldf-editable-condition-piece',
   styleUrl: 'editable-condition-piece.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableConditionComponent {
   @Element() element: HTMLElement;
@@ -288,6 +288,7 @@ export class EditableConditionComponent {
 
         {/* Liturgical Day */}
         <ExceptOnlyStrings
+          path={this.path}
           field="day"
           localeStrings={localeStrings}
           currentCondition={this.workingCondition.day}
@@ -296,6 +297,7 @@ export class EditableConditionComponent {
 
         {/* Liturgical Week */}
         <ExceptOnlyStrings
+          path={this.path}
           field="week"
           localeStrings={localeStrings}
           currentCondition={this.workingCondition.week}

@@ -11,7 +11,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-preferences',
   styleUrl: 'editable-preferences.scss',
-  shadow: true
+  scoped: true
 })
 export class EditablePreferencesComponent {
   @Element() element: HTMLElement;

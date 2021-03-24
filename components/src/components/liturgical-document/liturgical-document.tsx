@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
-import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor, SelectableCitation } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './liturgical-document.i18n.en.json';
@@ -13,7 +13,7 @@ import { LookupNode } from './lookup-node';
 @Component({
   tag: 'ldf-liturgical-document',
   styleUrl: 'liturgical-document.scss',
-  shadow: true
+  scoped: true
 })
 export class LiturgicalDocumentComponent {
   @Element() element: HTMLElement;
@@ -67,6 +67,23 @@ export class LiturgicalDocumentComponent {
   // Events
   @Event() focusPath : EventEmitter<string>;
   @Event() focusObj : EventEmitter<{obj: LiturgicalDocument; path: string;}>;
+  @Event() ldfSelectionChange : EventEmitter<{ target: HTMLElement; text: string; citation: SelectableCitation; fragment: string; }>;
+
+  @Listen('selectionchange', { target: 'document' })
+  selectionChangeHandler() {
+    const selection = document.getSelection(),
+      anchorNode = selection.anchorNode,
+      citation = anchorNode?.parentElement?.closest('ldf-string')?.citation;
+    if(this.element.contains(anchorNode)) {
+      const text = selection.toString();
+      this.ldfSelectionChange.emit({
+        target: this.element,
+        text,
+        citation,
+        fragment: this.path
+      })
+    }
+  }
 
   // Lifecycle events
   componentWillLoad() {

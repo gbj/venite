@@ -28,7 +28,7 @@ const DEFAULT_LOOKUP : Lookup = {
 
 @Component({
   tag: 'ldf-editable-lookup',
-  shadow: true
+  scoped: true
 })
 export class EditableLookupComponent {
   @State() currentLookup : Lookup;

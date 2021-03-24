@@ -13,7 +13,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-text',
   styleUrl: 'editable-text.css',
-  shadow: true
+  scoped: true
 })
 export class EditableTextComponent {
   @Element() element: HTMLElement;

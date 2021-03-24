@@ -8,7 +8,7 @@ const LOCALE = {
 };
 @Component({
   tag: 'ldf-editable-condition',
-  shadow: true
+  scoped: true
 })
 export class EditableConditionComponent {
   @Element() element: HTMLElement;

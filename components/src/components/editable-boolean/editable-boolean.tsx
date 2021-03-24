@@ -3,7 +3,7 @@ import { Change } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-editable-boolean',
-  shadow: true
+  scoped: true
 })
 export class EditableBooleanComponent {
   @Element() element: HTMLElement;

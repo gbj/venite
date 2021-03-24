@@ -33,7 +33,7 @@ const EditableStringOrAntiphon = ({ mode, path, value } : EditableStringOrAntiph
 @Component({
   tag: 'ldf-editable-antiphon-field',
   styleUrl: 'ldf-editable-antiphon-field.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableAntiphonFieldComponent {
   @Element() element: HTMLElement;

@@ -25,7 +25,7 @@
 
 ## Methods
 
-### `select(index: number | "add", resultedFromUserAction?: boolean) => Promise<void>`
+### `select(index: number | 'add', resultedFromUserAction?: boolean) => Promise<void>`
 
 Display the nth option
 

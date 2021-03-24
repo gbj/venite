@@ -28,7 +28,7 @@ enum Field {
 
 @Component({
   tag: 'ldf-editable-metadata-metadata-fields',
-  shadow: true
+  scoped: true
 })
 export class EditableMetadataMetadataFieldsComponent {
   @Element() element: HTMLElement;

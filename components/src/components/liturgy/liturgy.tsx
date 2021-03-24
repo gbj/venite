@@ -3,7 +3,7 @@ import { Liturgy } from '@venite/ldf';
 
 @Component({
   tag: 'ldf-liturgy',
-  shadow: true
+  scoped: true
 })
 export class LiturgyComponent {
   // States

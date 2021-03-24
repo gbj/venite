@@ -26,7 +26,7 @@ export class StringComponent {
   /**
    * Citation (used in Share and Favorite APIs)
    */
-  @Prop() citation : SelectableCitation;
+  @Prop({ reflect: true }) citation : SelectableCitation;
 
   /**
    * Enable, disable, or force dropcap on the first letter of the text.

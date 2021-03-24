@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Location } from "@angular/common";
-import { ToastController, PopoverController } from "@ionic/angular";
+import { PopoverController } from "@ionic/angular";
 
 import { FavoriteTextComponent } from "../favorite-text/favorite-text.component";
 
@@ -13,8 +13,9 @@ import {
 } from "@angular/animations";
 import { AuthService } from "src/app/auth/auth.service";
 import { Favorite } from "src/app/favorites/favorite";
-import { SelectedTextEvent, SelectionService } from "../selection.service";
 import { FavoritesService } from "src/app/favorites/favorites.service";
+import { selectableCitationToString } from "../selectable-citation-to-string";
+import { SelectedTextEvent } from "../selected-text-event";
 
 @Component({
   selector: "venite-mark-favorite",
@@ -54,8 +55,7 @@ export class MarkFavoriteComponent {
     private popover: PopoverController,
     public auth: AuthService,
     public favoriteService: FavoritesService,
-    private location: Location,
-    private selections: SelectionService
+    private location: Location
   ) {}
 
   ngOnInit() {}
@@ -76,13 +76,13 @@ export class MarkFavoriteComponent {
       user,
       url: decodeURI(this.location.path()),
       fragment: selection.fragment || null,
-      citation: selection.citation,
+      citation: selectableCitationToString(selection.citation),
       text: selection.text,
       note: null,
       tags: [],
     };
 
-    selection.els.forEach((el) => {
+    (selection.els || []).forEach((el) => {
       const span = el.shadowRoot.querySelector("span");
       span.classList.remove("selected");
       span.classList.add("liked");
@@ -106,8 +106,6 @@ export class MarkFavoriteComponent {
       });
 
       await popover.present();
-
-      this.selections.clear();
     } catch {
       this.favoriteMarked = false;
     }

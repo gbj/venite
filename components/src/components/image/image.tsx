@@ -15,7 +15,7 @@ type Direction = 'ne' | 'nw' | 'se' | 'sw';
 @Component({
   tag: 'ldf-image',
   styleUrl: 'image.scss',
-  shadow: true
+  scoped: true
 })
 export class ImageComponent {
   @Element() element : HTMLElement;

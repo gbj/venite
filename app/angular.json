@@ -41,6 +41,11 @@
                 "output": "./svg"
               },
               {
+                "glob": "ldf.css",
+                "input": "node_modules/@venite/components/www/build",
+                "output": "assets"
+              },
+              {
                 "glob": "**/*.i18n.*.json",
                 "input": "node_modules/@venite/components/dist/collection/i18n",
                 "output": "i18n"

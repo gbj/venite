@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-responsive-prayer',
   styleUrl: 'responsive-prayer.scss',
-  shadow: true
+  scoped: true
 })
 export class ResponsivePrayerComponent {
   @Element() element: HTMLElement;

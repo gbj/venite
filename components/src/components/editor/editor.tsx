@@ -9,7 +9,7 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 @Component({
   tag: 'ldf-editor',
   styleUrl: 'editor.css',
-  shadow: true
+  scoped: true
 })
 export class EditorComponent {
   @Element() el: HTMLElement;

@@ -1,3 +1,7 @@
+ldf-liturgical-document, :host {
+  font-family: var(--ldf-font-face);
+}
+
 .lookup {
   background-color: var(--ldf-editable-lookup-background-color);
   color: var(--ldf-editable-lookup-color);

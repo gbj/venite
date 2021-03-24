@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-option',
   styleUrl: 'option.scss',
-  shadow: true
+  scoped: true
 })
 export class OptionComponent {
   @Element() el : HTMLElement;

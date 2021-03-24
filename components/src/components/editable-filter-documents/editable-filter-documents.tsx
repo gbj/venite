@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-filter-documents',
   styleUrl: 'editable-filter-documents.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableFilterDocumentsComponent {
   @Element() element: HTMLElement;

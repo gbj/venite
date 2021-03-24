@@ -10,7 +10,7 @@ const LOCALE = {
 };
 @Component({
   tag: 'ldf-editable-delete',
-  shadow: true
+  scoped: true
 })
 export class EditableDeleteComponent {
   @Element() element: HTMLElement;

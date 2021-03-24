@@ -10,7 +10,7 @@ import getCaretCoordinates from 'textarea-caret';
 @Component({
   tag: 'ldf-editor-cursors',
   styleUrl: 'editor-cursors.css',
-  shadow: true
+  scoped: true
 })
 export class EditorComponent {
   @State() cursorPos : {

@@ -4,7 +4,7 @@ import { Refrain } from '@venite/ldf';
 @Component({
   tag: 'ldf-refrain',
   styleUrl: 'refrain.scss',
-  shadow: true
+  scoped: true
 })
 export class RefrainComponent {
   // States

@@ -12,7 +12,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-editable-add-block-menu',
   styleUrl: 'editable-add-block-menu.scss',
-  shadow: true
+  scoped: true
 })
 export class EditableAddBlockMenuComponent {
   @Element() element: HTMLElement;

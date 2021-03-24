@@ -14,7 +14,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-bible-reading',
   styleUrl: 'bible-reading.scss',
-  shadow: true
+  scoped: true
 })
 export class BibleReadingComponent {
   @Element() element : HTMLElement;

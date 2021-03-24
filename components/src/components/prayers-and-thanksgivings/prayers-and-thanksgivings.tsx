@@ -9,7 +9,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-prayers-and-thanksgivings',
   styleUrl: 'prayers-and-thanksgivings.scss',
-  shadow: true
+  scoped: true
 })
 export class PrayersAndThanksgivingsComponent {
   @Element() element: HTMLElement;

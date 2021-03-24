@@ -9,7 +9,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-meditation',
   styleUrl: 'meditation.scss',
-  shadow: true
+  scoped: true
 })
 export class MeditationComponent {
   @Element() element: HTMLElement;

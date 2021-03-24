@@ -20,10 +20,11 @@
 
 ## Events
 
-| Event       | Description | Type                                                      |
-| ----------- | ----------- | --------------------------------------------------------- |
-| `focusObj`  |             | `CustomEvent<{ obj: LiturgicalDocument; path: string; }>` |
-| `focusPath` |             | `CustomEvent<string>`                                     |
+| Event                | Description | Type                                                                                                  |
+| -------------------- | ----------- | ----------------------------------------------------------------------------------------------------- |
+| `focusObj`           |             | `CustomEvent<{ obj: LiturgicalDocument; path: string; }>`                                             |
+| `focusPath`          |             | `CustomEvent<string>`                                                                                 |
+| `ldfSelectionChange` |             | `CustomEvent<{ target: HTMLElement; text: string; citation: SelectableCitation; fragment: string; }>` |
 
 
 ## Dependencies
