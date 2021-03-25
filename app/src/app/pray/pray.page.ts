@@ -53,6 +53,7 @@ import {
   unwrapOptions,
   DisplaySettings,
   SelectableCitation,
+  docsToLiturgy,
 } from "@venite/ldf";
 import {
   ActionSheetController,
@@ -427,7 +428,10 @@ export class PrayPage implements OnInit, OnDestroy {
     } else {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
-      this.doc$ = merge(stateDoc$, this.modifiedDoc$);
+      this.doc$ = merge(stateDoc$, this.modifiedDoc$).pipe(
+        // flatten for TTS purposes
+        map((doc) => docsToLiturgy(this.flattenDoc(doc)))
+      );
     }
 
     if (this.bulletinMode) {
@@ -479,9 +483,6 @@ export class PrayPage implements OnInit, OnDestroy {
     const docSettings$ = this.doc$.pipe(map((doc) => doc?.display_settings));
 
     this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
-      tap(([prefSettings, docSettings]) =>
-        console.log("settings$", docSettings)
-      ),
       map(([prefSettings, docSettings]) =>
         // basically — use the document's settings for everything except font size and dark mode
         ({
@@ -601,6 +602,18 @@ export class PrayPage implements OnInit, OnDestroy {
     };
 
     await modal.present();
+  }
+
+  flattenDoc(doc: LiturgicalDocument | undefined): LiturgicalDocument[] {
+    if (!doc) {
+      return [];
+    } else if (doc.type === "liturgy") {
+      return ((doc as Liturgy).value || [])
+        .map((doc) => this.flattenDoc(doc))
+        .flat();
+    } else {
+      return [doc];
+    }
   }
 
   grabPreference(key: string): Observable<any> {
@@ -1064,10 +1077,28 @@ export class PrayPage implements OnInit, OnDestroy {
         // update metadata for doc
         const utterance = (data.data as SpeechSynthesisEvent).utterance;
         if (utterance) {
+          const docLabel = (doc: LiturgicalDocument) => {
+            try {
+              return subdoc?.type === "option"
+                ? docLabel(
+                    (subdoc as Option).value[subdoc?.metadata?.selected ?? 0]
+                  )
+                : subdoc?.citation || subdoc?.label || utterance.text;
+            } catch (e) {
+              return utterance.text;
+            }
+          };
+          const subdoc = (doc.value[data.subdoc]?.hasOwnProperty("type")
+              ? doc.value[data.subdoc]
+              : undefined) as LiturgicalDocument,
+            title = docLabel(subdoc);
+
+          console.log(title);
+
           MediaSession.setMetadata({
             artist: "Venite",
             album: this.docLabel || "",
-            title: utterance.text,
+            title,
             artwork: [
               {
                 src: "/assets/icon/icon-512x512.png",
@@ -1086,7 +1117,6 @@ export class PrayPage implements OnInit, OnDestroy {
   }
   scrollToSubdoc(subdoc: number) {
     const domRepresentation = querySelectorDeep(`[path='/value/${subdoc}']`);
-    //console.log('scrolling to subdoc', subdoc, domRepresentation, domRepresentation.getBoundingClientRect());
     if (domRepresentation) {
       const y = domRepresentation.getBoundingClientRect().top;
       this.contentEl.scrollByPoint(0, y - 100, 50);
@@ -1174,7 +1204,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
   shareTextFormat(
     doc: LiturgicalDocument,
-    selection: SelectedTextEvent
+    selection: SelectionData
   ): { title: string; url: string; cite: string; hashtag: string } {
     const baseUrl = this.location.path(),
       anchor = selection.fragment ? `#${selection.fragment}` : "",
@@ -1189,7 +1219,7 @@ export class PrayPage implements OnInit, OnDestroy {
     return { title, url, cite, hashtag };
   }
 
-  async share(doc: LiturgicalDocument, selection: SelectedTextEvent) {
+  async share(doc: LiturgicalDocument, selection: SelectionData) {
     const { title, url, cite, hashtag } = this.shareTextFormat(doc, selection);
 
     Share.share({
@@ -1200,7 +1230,7 @@ export class PrayPage implements OnInit, OnDestroy {
     });
   }
 
-  async copy(doc: LiturgicalDocument, selection: SelectedTextEvent) {
+  async copy(doc: LiturgicalDocument, selection: SelectionData) {
     const { url, cite, hashtag } = this.shareTextFormat(doc, selection);
 
     Clipboard.write({
