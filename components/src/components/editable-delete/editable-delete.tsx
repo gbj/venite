@@ -92,7 +92,7 @@ export class EditableDeleteComponent {
 
     return (
       <ion-buttons>
-        <ion-button aria-role='button' aria-label={localeStrings.delete} size='small' color='light'>
+        <ion-button aria-role='button' aria-label={localeStrings.delete} size='small'>
           <ion-icon name='trash' slot='icon-only'></ion-icon>
         </ion-button>
       </ion-buttons>
