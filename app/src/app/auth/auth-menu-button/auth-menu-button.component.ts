@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ModalController } from "@ionic/angular";
+import { LoadingController, ModalController } from "@ionic/angular";
 
 import { AuthService } from "../auth.service";
 import { LoginComponent } from "../login/login.component";
@@ -12,16 +12,26 @@ import { Subscription } from "rxjs";
   styleUrls: ["./auth-menu-button.component.scss"],
 })
 export class AuthMenuButtonComponent implements OnInit {
-  constructor(public auth: AuthService, private modal: ModalController) {}
+  constructor(
+    public auth: AuthService,
+    private modal: ModalController,
+    private loading: LoadingController
+  ) {}
 
   ngOnInit() {}
 
   async signIn() {
+    // show loading because the modal widget can sometimes be slow to load the first time
+    const loading = await this.loading.create();
+    await loading.present();
+
     const modal = await this.modal.create({
       component: LoginComponent,
       swipeToClose: true,
       showBackdrop: true,
     });
-    return await modal.present();
+    await modal.present();
+
+    await loading.dismiss();
   }
 }
