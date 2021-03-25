@@ -102,7 +102,7 @@ function fillOut(query: BibleReferenceQuery | null, template: BibleReferenceQuer
 }
 
 // Use Jaro-algorithm string-similarities to determine book name
-function book_name_to_book(book_name: string): Book | null {
+export function book_name_to_book(book_name: string): Book | null {
   const scores = BOOKS.map(([key]) => jaro(key, book_name, { caseSensitive: false })),
     highest = Math.max(...scores),
     indexOfHighest = scores.indexOf(highest),

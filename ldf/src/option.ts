@@ -94,10 +94,12 @@ export class Option extends LiturgicalDocument {
         .map((v) => (v.hasOwnProperty('text') ? (v as BibleReadingVerse).text : v.toString()))
         .join(' ');
 
+      const formattedText = option.style == 'short' ? ` (“${text}”)` : '';
+
       if (uniqueVersions > 1) {
-        label = `${option.citation.toString()} (${option.version}) (“${text}”)`;
+        label = `${option.citation.toString()} (${option.version})${formattedText}`;
       } else {
-        label = `${option.citation.toString()} (“${text}”)`;
+        label = `${option.citation.toString()}${formattedText}`;
       }
     }
     // Readings with one version => John 1:1-4

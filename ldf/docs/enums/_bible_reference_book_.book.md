@@ -8,23 +8,32 @@
 
 * [Acts](_bible_reference_book_.book.md#acts)
 * [Amos](_bible_reference_book_.book.md#amos)
+* [Baruch](_bible_reference_book_.book.md#baruch)
+* [Bel](_bible_reference_book_.book.md#bel)
 * [Colossians](_bible_reference_book_.book.md#colossians)
 * [Daniel](_bible_reference_book_.book.md#daniel)
 * [Deuteronomy](_bible_reference_book_.book.md#deuteronomy)
 * [Ecclesiastes](_bible_reference_book_.book.md#ecclesiastes)
+* [Ecclesiasticus](_bible_reference_book_.book.md#ecclesiasticus)
 * [Ephesians](_bible_reference_book_.book.md#ephesians)
+* [EpistleJeremiah](_bible_reference_book_.book.md#epistlejeremiah)
+* [Ester](_bible_reference_book_.book.md#ester)
 * [Esther](_bible_reference_book_.book.md#esther)
 * [Exodus](_bible_reference_book_.book.md#exodus)
 * [Ezekiel](_bible_reference_book_.book.md#ezekiel)
 * [Ezra](_bible_reference_book_.book.md#ezra)
 * [FirstChronicles](_bible_reference_book_.book.md#firstchronicles)
 * [FirstCorinthians](_bible_reference_book_.book.md#firstcorinthians)
+* [FirstEsdras](_bible_reference_book_.book.md#firstesdras)
 * [FirstJohn](_bible_reference_book_.book.md#firstjohn)
 * [FirstKings](_bible_reference_book_.book.md#firstkings)
+* [FirstMaccabees](_bible_reference_book_.book.md#firstmaccabees)
 * [FirstPeter](_bible_reference_book_.book.md#firstpeter)
 * [FirstSamuel](_bible_reference_book_.book.md#firstsamuel)
 * [FirstThessalonians](_bible_reference_book_.book.md#firstthessalonians)
 * [FirstTimothy](_bible_reference_book_.book.md#firsttimothy)
+* [FourthEsdras](_bible_reference_book_.book.md#fourthesdras)
+* [FourthMaccabees](_bible_reference_book_.book.md#fourthmaccabees)
 * [Galatians](_bible_reference_book_.book.md#galatians)
 * [Genesis](_bible_reference_book_.book.md#genesis)
 * [Habakkuk](_bible_reference_book_.book.md#habakkuk)
@@ -41,6 +50,7 @@
 * [Joshua](_bible_reference_book_.book.md#joshua)
 * [Jude](_bible_reference_book_.book.md#jude)
 * [Judges](_bible_reference_book_.book.md#judges)
+* [Judith](_bible_reference_book_.book.md#judith)
 * [Lamentations](_bible_reference_book_.book.md#lamentations)
 * [Leviticus](_bible_reference_book_.book.md#leviticus)
 * [Luke](_bible_reference_book_.book.md#luke)
@@ -55,22 +65,30 @@
 * [Obadiah](_bible_reference_book_.book.md#obadiah)
 * [Philemon](_bible_reference_book_.book.md#philemon)
 * [Philippians](_bible_reference_book_.book.md#philippians)
+* [PrayerOfAzariah](_bible_reference_book_.book.md#prayerofazariah)
 * [Proverbs](_bible_reference_book_.book.md#proverbs)
+* [Psalm151](_bible_reference_book_.book.md#psalm151)
 * [Psalms](_bible_reference_book_.book.md#psalms)
 * [Revelation](_bible_reference_book_.book.md#revelation)
 * [Romans](_bible_reference_book_.book.md#romans)
 * [Ruth](_bible_reference_book_.book.md#ruth)
 * [SecondChronicles](_bible_reference_book_.book.md#secondchronicles)
 * [SecondCorinthians](_bible_reference_book_.book.md#secondcorinthians)
+* [SecondEsdras](_bible_reference_book_.book.md#secondesdras)
 * [SecondJohn](_bible_reference_book_.book.md#secondjohn)
 * [SecondKings](_bible_reference_book_.book.md#secondkings)
+* [SecondMaccabees](_bible_reference_book_.book.md#secondmaccabees)
 * [SecondPeter](_bible_reference_book_.book.md#secondpeter)
 * [SecondSamuel](_bible_reference_book_.book.md#secondsamuel)
 * [SecondThessalonians](_bible_reference_book_.book.md#secondthessalonians)
 * [SecondTimothy](_bible_reference_book_.book.md#secondtimothy)
 * [SongOfSolomon](_bible_reference_book_.book.md#songofsolomon)
+* [Susanna](_bible_reference_book_.book.md#susanna)
 * [ThirdJohn](_bible_reference_book_.book.md#thirdjohn)
+* [ThirdMaccabees](_bible_reference_book_.book.md#thirdmaccabees)
 * [Titus](_bible_reference_book_.book.md#titus)
+* [Tobit](_bible_reference_book_.book.md#tobit)
+* [Wisdom](_bible_reference_book_.book.md#wisdom)
 * [Zechariah](_bible_reference_book_.book.md#zechariah)
 * [Zephaniah](_bible_reference_book_.book.md#zephaniah)
 
@@ -80,7 +98,7 @@
 
 • **Acts**: = "Acts"
 
-*Defined in [bible-reference/book.ts:45](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L45)*
+*Defined in [bible-reference/book.ts:45](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L45)*
 
 ___
 
@@ -88,7 +106,23 @@ ___
 
 • **Amos**: = "Amos"
 
-*Defined in [bible-reference/book.ts:31](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L31)*
+*Defined in [bible-reference/book.ts:31](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L31)*
+
+___
+
+###  Baruch
+
+• **Baruch**: = "Baruch"
+
+*Defined in [bible-reference/book.ts:74](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L74)*
+
+___
+
+###  Bel
+
+• **Bel**: = "Bel"
+
+*Defined in [bible-reference/book.ts:86](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L86)*
 
 ___
 
@@ -96,7 +130,7 @@ ___
 
 • **Colossians**: = "Colossians"
 
-*Defined in [bible-reference/book.ts:52](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L52)*
+*Defined in [bible-reference/book.ts:52](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L52)*
 
 ___
 
@@ -104,7 +138,7 @@ ___
 
 • **Daniel**: = "Daniel"
 
-*Defined in [bible-reference/book.ts:28](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L28)*
+*Defined in [bible-reference/book.ts:28](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L28)*
 
 ___
 
@@ -112,7 +146,7 @@ ___
 
 • **Deuteronomy**: = "Deuteronomy"
 
-*Defined in [bible-reference/book.ts:6](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L6)*
+*Defined in [bible-reference/book.ts:6](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L6)*
 
 ___
 
@@ -120,7 +154,15 @@ ___
 
 • **Ecclesiastes**: = "Ecclesiastes"
 
-*Defined in [bible-reference/book.ts:22](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L22)*
+*Defined in [bible-reference/book.ts:22](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L22)*
+
+___
+
+###  Ecclesiasticus
+
+• **Ecclesiasticus**: = "Ecclesiasticus"
+
+*Defined in [bible-reference/book.ts:73](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L73)*
 
 ___
 
@@ -128,7 +170,23 @@ ___
 
 • **Ephesians**: = "Ephesians"
 
-*Defined in [bible-reference/book.ts:50](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L50)*
+*Defined in [bible-reference/book.ts:50](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L50)*
+
+___
+
+###  EpistleJeremiah
+
+• **EpistleJeremiah**: = "EpistleJeremiah"
+
+*Defined in [bible-reference/book.ts:75](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L75)*
+
+___
+
+###  Ester
+
+• **Ester**: = "Ester"
+
+*Defined in [bible-reference/book.ts:71](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L71)*
 
 ___
 
@@ -136,7 +194,7 @@ ___
 
 • **Esther**: = "Esther"
 
-*Defined in [bible-reference/book.ts:18](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L18)*
+*Defined in [bible-reference/book.ts:18](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L18)*
 
 ___
 
@@ -144,7 +202,7 @@ ___
 
 • **Exodus**: = "Exodus"
 
-*Defined in [bible-reference/book.ts:3](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L3)*
+*Defined in [bible-reference/book.ts:3](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L3)*
 
 ___
 
@@ -152,7 +210,7 @@ ___
 
 • **Ezekiel**: = "Ezekiel"
 
-*Defined in [bible-reference/book.ts:27](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L27)*
+*Defined in [bible-reference/book.ts:27](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L27)*
 
 ___
 
@@ -160,7 +218,7 @@ ___
 
 • **Ezra**: = "Ezra"
 
-*Defined in [bible-reference/book.ts:16](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L16)*
+*Defined in [bible-reference/book.ts:16](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L16)*
 
 ___
 
@@ -168,7 +226,7 @@ ___
 
 • **FirstChronicles**: = "FirstChronicles"
 
-*Defined in [bible-reference/book.ts:14](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L14)*
+*Defined in [bible-reference/book.ts:14](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L14)*
 
 ___
 
@@ -176,7 +234,15 @@ ___
 
 • **FirstCorinthians**: = "FirstCorinthians"
 
-*Defined in [bible-reference/book.ts:47](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L47)*
+*Defined in [bible-reference/book.ts:47](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L47)*
+
+___
+
+###  FirstEsdras
+
+• **FirstEsdras**: = "FirstEsdras"
+
+*Defined in [bible-reference/book.ts:80](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L80)*
 
 ___
 
@@ -184,7 +250,7 @@ ___
 
 • **FirstJohn**: = "FirstJohn"
 
-*Defined in [bible-reference/book.ts:63](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L63)*
+*Defined in [bible-reference/book.ts:63](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L63)*
 
 ___
 
@@ -192,7 +258,15 @@ ___
 
 • **FirstKings**: = "FirstKings"
 
-*Defined in [bible-reference/book.ts:12](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L12)*
+*Defined in [bible-reference/book.ts:12](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L12)*
+
+___
+
+###  FirstMaccabees
+
+• **FirstMaccabees**: = "FirstMaccabees"
+
+*Defined in [bible-reference/book.ts:78](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L78)*
 
 ___
 
@@ -200,7 +274,7 @@ ___
 
 • **FirstPeter**: = "FirstPeter"
 
-*Defined in [bible-reference/book.ts:61](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L61)*
+*Defined in [bible-reference/book.ts:61](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L61)*
 
 ___
 
@@ -208,7 +282,7 @@ ___
 
 • **FirstSamuel**: = "FirstSamuel"
 
-*Defined in [bible-reference/book.ts:10](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L10)*
+*Defined in [bible-reference/book.ts:10](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L10)*
 
 ___
 
@@ -216,7 +290,7 @@ ___
 
 • **FirstThessalonians**: = "FirstThessalonians"
 
-*Defined in [bible-reference/book.ts:53](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L53)*
+*Defined in [bible-reference/book.ts:53](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L53)*
 
 ___
 
@@ -224,7 +298,23 @@ ___
 
 • **FirstTimothy**: = "FirstTimothy"
 
-*Defined in [bible-reference/book.ts:55](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L55)*
+*Defined in [bible-reference/book.ts:55](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L55)*
+
+___
+
+###  FourthEsdras
+
+• **FourthEsdras**: = "FourthEsdras"
+
+*Defined in [bible-reference/book.ts:82](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L82)*
+
+___
+
+###  FourthMaccabees
+
+• **FourthMaccabees**: = "FourthMaccabees"
+
+*Defined in [bible-reference/book.ts:85](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L85)*
 
 ___
 
@@ -232,7 +322,7 @@ ___
 
 • **Galatians**: = "Galatians"
 
-*Defined in [bible-reference/book.ts:49](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L49)*
+*Defined in [bible-reference/book.ts:49](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L49)*
 
 ___
 
@@ -240,7 +330,7 @@ ___
 
 • **Genesis**: = "Genesis"
 
-*Defined in [bible-reference/book.ts:2](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L2)*
+*Defined in [bible-reference/book.ts:2](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L2)*
 
 ___
 
@@ -248,7 +338,7 @@ ___
 
 • **Habakkuk**: = "Habakkuk"
 
-*Defined in [bible-reference/book.ts:36](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L36)*
+*Defined in [bible-reference/book.ts:36](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L36)*
 
 ___
 
@@ -256,7 +346,7 @@ ___
 
 • **Haggai**: = "Haggai"
 
-*Defined in [bible-reference/book.ts:38](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L38)*
+*Defined in [bible-reference/book.ts:38](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L38)*
 
 ___
 
@@ -264,7 +354,7 @@ ___
 
 • **Hebrews**: = "Hebrews"
 
-*Defined in [bible-reference/book.ts:59](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L59)*
+*Defined in [bible-reference/book.ts:59](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L59)*
 
 ___
 
@@ -272,7 +362,7 @@ ___
 
 • **Hosea**: = "Hosea"
 
-*Defined in [bible-reference/book.ts:29](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L29)*
+*Defined in [bible-reference/book.ts:29](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L29)*
 
 ___
 
@@ -280,7 +370,7 @@ ___
 
 • **Isaiah**: = "Isaiah"
 
-*Defined in [bible-reference/book.ts:24](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L24)*
+*Defined in [bible-reference/book.ts:24](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L24)*
 
 ___
 
@@ -288,7 +378,7 @@ ___
 
 • **James**: = "James"
 
-*Defined in [bible-reference/book.ts:60](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L60)*
+*Defined in [bible-reference/book.ts:60](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L60)*
 
 ___
 
@@ -296,7 +386,7 @@ ___
 
 • **Jeremiah**: = "Jeremiah"
 
-*Defined in [bible-reference/book.ts:25](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L25)*
+*Defined in [bible-reference/book.ts:25](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L25)*
 
 ___
 
@@ -304,7 +394,7 @@ ___
 
 • **Job**: = "Job"
 
-*Defined in [bible-reference/book.ts:19](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L19)*
+*Defined in [bible-reference/book.ts:19](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L19)*
 
 ___
 
@@ -312,7 +402,7 @@ ___
 
 • **Joel**: = "Joel"
 
-*Defined in [bible-reference/book.ts:30](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L30)*
+*Defined in [bible-reference/book.ts:30](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L30)*
 
 ___
 
@@ -320,7 +410,7 @@ ___
 
 • **John**: = "John"
 
-*Defined in [bible-reference/book.ts:44](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L44)*
+*Defined in [bible-reference/book.ts:44](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L44)*
 
 ___
 
@@ -328,7 +418,7 @@ ___
 
 • **Jonah**: = "Jonah"
 
-*Defined in [bible-reference/book.ts:33](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L33)*
+*Defined in [bible-reference/book.ts:33](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L33)*
 
 ___
 
@@ -336,7 +426,7 @@ ___
 
 • **Joshua**: = "Joshua"
 
-*Defined in [bible-reference/book.ts:7](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L7)*
+*Defined in [bible-reference/book.ts:7](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L7)*
 
 ___
 
@@ -344,7 +434,7 @@ ___
 
 • **Jude**: = "Jude"
 
-*Defined in [bible-reference/book.ts:66](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L66)*
+*Defined in [bible-reference/book.ts:66](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L66)*
 
 ___
 
@@ -352,7 +442,15 @@ ___
 
 • **Judges**: = "Judges"
 
-*Defined in [bible-reference/book.ts:8](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L8)*
+*Defined in [bible-reference/book.ts:8](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L8)*
+
+___
+
+###  Judith
+
+• **Judith**: = "Judith"
+
+*Defined in [bible-reference/book.ts:70](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L70)*
 
 ___
 
@@ -360,7 +458,7 @@ ___
 
 • **Lamentations**: = "Lamentations"
 
-*Defined in [bible-reference/book.ts:26](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L26)*
+*Defined in [bible-reference/book.ts:26](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L26)*
 
 ___
 
@@ -368,7 +466,7 @@ ___
 
 • **Leviticus**: = "Leviticus"
 
-*Defined in [bible-reference/book.ts:4](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L4)*
+*Defined in [bible-reference/book.ts:4](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L4)*
 
 ___
 
@@ -376,7 +474,7 @@ ___
 
 • **Luke**: = "Luke"
 
-*Defined in [bible-reference/book.ts:43](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L43)*
+*Defined in [bible-reference/book.ts:43](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L43)*
 
 ___
 
@@ -384,7 +482,7 @@ ___
 
 • **Malachi**: = "Malachi"
 
-*Defined in [bible-reference/book.ts:40](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L40)*
+*Defined in [bible-reference/book.ts:40](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L40)*
 
 ___
 
@@ -392,7 +490,7 @@ ___
 
 • **Mark**: = "Mark"
 
-*Defined in [bible-reference/book.ts:42](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L42)*
+*Defined in [bible-reference/book.ts:42](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L42)*
 
 ___
 
@@ -400,7 +498,7 @@ ___
 
 • **Matthew**: = "Matthew"
 
-*Defined in [bible-reference/book.ts:41](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L41)*
+*Defined in [bible-reference/book.ts:41](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L41)*
 
 ___
 
@@ -408,7 +506,7 @@ ___
 
 • **Micah**: = "Micah"
 
-*Defined in [bible-reference/book.ts:34](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L34)*
+*Defined in [bible-reference/book.ts:34](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L34)*
 
 ___
 
@@ -416,7 +514,7 @@ ___
 
 • **Nahum**: = "Nahum"
 
-*Defined in [bible-reference/book.ts:35](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L35)*
+*Defined in [bible-reference/book.ts:35](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L35)*
 
 ___
 
@@ -424,7 +522,7 @@ ___
 
 • **Nehemiah**: = "Nehemiah"
 
-*Defined in [bible-reference/book.ts:17](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L17)*
+*Defined in [bible-reference/book.ts:17](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L17)*
 
 ___
 
@@ -432,7 +530,7 @@ ___
 
 • **None**: = "None"
 
-*Defined in [bible-reference/book.ts:68](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L68)*
+*Defined in [bible-reference/book.ts:68](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L68)*
 
 ___
 
@@ -440,7 +538,7 @@ ___
 
 • **Numbers**: = "Numbers"
 
-*Defined in [bible-reference/book.ts:5](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L5)*
+*Defined in [bible-reference/book.ts:5](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L5)*
 
 ___
 
@@ -448,7 +546,7 @@ ___
 
 • **Obadiah**: = "Obadiah"
 
-*Defined in [bible-reference/book.ts:32](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L32)*
+*Defined in [bible-reference/book.ts:32](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L32)*
 
 ___
 
@@ -456,7 +554,7 @@ ___
 
 • **Philemon**: = "Philemon"
 
-*Defined in [bible-reference/book.ts:58](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L58)*
+*Defined in [bible-reference/book.ts:58](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L58)*
 
 ___
 
@@ -464,7 +562,15 @@ ___
 
 • **Philippians**: = "Philippians"
 
-*Defined in [bible-reference/book.ts:51](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L51)*
+*Defined in [bible-reference/book.ts:51](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L51)*
+
+___
+
+###  PrayerOfAzariah
+
+• **PrayerOfAzariah**: = "PrayerOfAzariah"
+
+*Defined in [bible-reference/book.ts:76](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L76)*
 
 ___
 
@@ -472,7 +578,15 @@ ___
 
 • **Proverbs**: = "Proverbs"
 
-*Defined in [bible-reference/book.ts:21](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L21)*
+*Defined in [bible-reference/book.ts:21](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L21)*
+
+___
+
+###  Psalm151
+
+• **Psalm151**: = "Psalm151"
+
+*Defined in [bible-reference/book.ts:83](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L83)*
 
 ___
 
@@ -480,7 +594,7 @@ ___
 
 • **Psalms**: = "Psalms"
 
-*Defined in [bible-reference/book.ts:20](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L20)*
+*Defined in [bible-reference/book.ts:20](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L20)*
 
 ___
 
@@ -488,7 +602,7 @@ ___
 
 • **Revelation**: = "Revelation"
 
-*Defined in [bible-reference/book.ts:67](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L67)*
+*Defined in [bible-reference/book.ts:67](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L67)*
 
 ___
 
@@ -496,7 +610,7 @@ ___
 
 • **Romans**: = "Romans"
 
-*Defined in [bible-reference/book.ts:46](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L46)*
+*Defined in [bible-reference/book.ts:46](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L46)*
 
 ___
 
@@ -504,7 +618,7 @@ ___
 
 • **Ruth**: = "Ruth"
 
-*Defined in [bible-reference/book.ts:9](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L9)*
+*Defined in [bible-reference/book.ts:9](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L9)*
 
 ___
 
@@ -512,7 +626,7 @@ ___
 
 • **SecondChronicles**: = "SecondChronicles"
 
-*Defined in [bible-reference/book.ts:15](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L15)*
+*Defined in [bible-reference/book.ts:15](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L15)*
 
 ___
 
@@ -520,7 +634,15 @@ ___
 
 • **SecondCorinthians**: = "SecondCorinthians"
 
-*Defined in [bible-reference/book.ts:48](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L48)*
+*Defined in [bible-reference/book.ts:48](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L48)*
+
+___
+
+###  SecondEsdras
+
+• **SecondEsdras**: = "SecondEsdras"
+
+*Defined in [bible-reference/book.ts:81](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L81)*
 
 ___
 
@@ -528,7 +650,7 @@ ___
 
 • **SecondJohn**: = "SecondJohn"
 
-*Defined in [bible-reference/book.ts:64](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L64)*
+*Defined in [bible-reference/book.ts:64](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L64)*
 
 ___
 
@@ -536,7 +658,15 @@ ___
 
 • **SecondKings**: = "SecondKings"
 
-*Defined in [bible-reference/book.ts:13](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L13)*
+*Defined in [bible-reference/book.ts:13](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L13)*
+
+___
+
+###  SecondMaccabees
+
+• **SecondMaccabees**: = "SecondMaccabees"
+
+*Defined in [bible-reference/book.ts:79](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L79)*
 
 ___
 
@@ -544,7 +674,7 @@ ___
 
 • **SecondPeter**: = "SecondPeter"
 
-*Defined in [bible-reference/book.ts:62](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L62)*
+*Defined in [bible-reference/book.ts:62](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L62)*
 
 ___
 
@@ -552,7 +682,7 @@ ___
 
 • **SecondSamuel**: = "SecondSamuel"
 
-*Defined in [bible-reference/book.ts:11](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L11)*
+*Defined in [bible-reference/book.ts:11](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L11)*
 
 ___
 
@@ -560,7 +690,7 @@ ___
 
 • **SecondThessalonians**: = "SecondThessalonians"
 
-*Defined in [bible-reference/book.ts:54](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L54)*
+*Defined in [bible-reference/book.ts:54](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L54)*
 
 ___
 
@@ -568,7 +698,7 @@ ___
 
 • **SecondTimothy**: = "SecondTimothy"
 
-*Defined in [bible-reference/book.ts:56](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L56)*
+*Defined in [bible-reference/book.ts:56](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L56)*
 
 ___
 
@@ -576,7 +706,15 @@ ___
 
 • **SongOfSolomon**: = "SongOfSolomon"
 
-*Defined in [bible-reference/book.ts:23](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L23)*
+*Defined in [bible-reference/book.ts:23](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L23)*
+
+___
+
+###  Susanna
+
+• **Susanna**: = "Susanna"
+
+*Defined in [bible-reference/book.ts:77](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L77)*
 
 ___
 
@@ -584,7 +722,15 @@ ___
 
 • **ThirdJohn**: = "ThirdJohn"
 
-*Defined in [bible-reference/book.ts:65](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L65)*
+*Defined in [bible-reference/book.ts:65](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L65)*
+
+___
+
+###  ThirdMaccabees
+
+• **ThirdMaccabees**: = "ThirdMaccabees"
+
+*Defined in [bible-reference/book.ts:84](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L84)*
 
 ___
 
@@ -592,7 +738,23 @@ ___
 
 • **Titus**: = "Titus"
 
-*Defined in [bible-reference/book.ts:57](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L57)*
+*Defined in [bible-reference/book.ts:57](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L57)*
+
+___
+
+###  Tobit
+
+• **Tobit**: = "Tobit"
+
+*Defined in [bible-reference/book.ts:69](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L69)*
+
+___
+
+###  Wisdom
+
+• **Wisdom**: = "Wisdom"
+
+*Defined in [bible-reference/book.ts:72](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L72)*
 
 ___
 
@@ -600,7 +762,7 @@ ___
 
 • **Zechariah**: = "Zechariah"
 
-*Defined in [bible-reference/book.ts:39](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L39)*
+*Defined in [bible-reference/book.ts:39](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L39)*
 
 ___
 
@@ -608,4 +770,4 @@ ___
 
 • **Zephaniah**: = "Zephaniah"
 
-*Defined in [bible-reference/book.ts:37](https://github.com/gbj/venite/blob/928223fe/ldf/src/bible-reference/book.ts#L37)*
+*Defined in [bible-reference/book.ts:37](https://github.com/gbj/venite/blob/84b8078d/ldf/src/bible-reference/book.ts#L37)*

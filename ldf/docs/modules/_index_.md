@@ -61,6 +61,7 @@
 * [ValuePiece](_index_.md#valuepiece)
 * [WEEKDAYS](_index_.md#weekdays)
 * [addOneDay](_index_.md#addoneday)
+* [book_name_to_book](_index_.md#book_name_to_book)
 * [categoriesToPreferenceTree](_index_.md#categoriestopreferencetree)
 * [dailyOfficeYear](_index_.md#dailyofficeyear)
 * [dateFromYMD](_index_.md#datefromymd)
@@ -415,6 +416,12 @@ ___
 ###  addOneDay
 
 • **addOneDay**:
+
+___
+
+###  book_name_to_book
+
+• **book_name_to_book**:
 
 ___
 
