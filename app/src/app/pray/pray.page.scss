@@ -82,3 +82,7 @@ venite-sponsor {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
+
+.icon-visible {
+  --ldf-icon-display: block;
+}

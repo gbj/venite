@@ -10,6 +10,7 @@ const LOCALE = {
 
 @Component({
   tag: 'ldf-day-name',
+  styleUrl: 'day-name.scss',
   scoped: true
 })
 export class DayNameComponent {
@@ -88,9 +89,15 @@ export class DayNameComponent {
   }
 
   render() {
+    const image = (typeof this.obj?.color !== 'string' && this.obj?.color?.image) || this.obj.image || this.obj.holy_day_observed?.image,
+      imageUrl = (typeof this.obj?.color !== 'string' && this.obj?.color?.imageUrl) || this.obj.imageURL || this.obj['imageUrl'];
+
     return (
       <Host>
         {this.localeStrings && this.dayToNodes(this.obj, this.localeStrings)}
+
+        {image && imageUrl && <a href={imageUrl} target="_system"><img class="icon" src={image}/></a>}
+        {image && !imageUrl && <img class="icon" src={image}/>}
       </Host>
     )
   }

@@ -72,6 +72,12 @@ export class LiturgicalDay {
   /** The {@link LiturgicalColor} used for the day */
   color?: string | LiturgicalColor;
 
+  /** URL for an image of an icon for the day */
+  image?: string;
+
+  /** Citation URL for an image */
+  imageURL?: string;
+
   /** Optionally `slug` as an identifier for readings and collects
    * @example
    * // June 25, 2020

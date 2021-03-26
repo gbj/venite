@@ -22,7 +22,7 @@
 
 • **book**? : *undefined | string*
 
-*Defined in [citation/selectable-citation.ts:2](https://github.com/gbj/venite/blob/84b8078d/ldf/src/citation/selectable-citation.ts#L2)*
+*Defined in [citation/selectable-citation.ts:2](https://github.com/gbj/venite/blob/b674975c/ldf/src/citation/selectable-citation.ts#L2)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **chapter**? : *undefined | string*
 
-*Defined in [citation/selectable-citation.ts:3](https://github.com/gbj/venite/blob/84b8078d/ldf/src/citation/selectable-citation.ts#L3)*
+*Defined in [citation/selectable-citation.ts:3](https://github.com/gbj/venite/blob/b674975c/ldf/src/citation/selectable-citation.ts#L3)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **label**? : *undefined | string*
 
-*Defined in [citation/selectable-citation.ts:5](https://github.com/gbj/venite/blob/84b8078d/ldf/src/citation/selectable-citation.ts#L5)*
+*Defined in [citation/selectable-citation.ts:5](https://github.com/gbj/venite/blob/b674975c/ldf/src/citation/selectable-citation.ts#L5)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **string**? : *undefined | string*
 
-*Defined in [citation/selectable-citation.ts:6](https://github.com/gbj/venite/blob/84b8078d/ldf/src/citation/selectable-citation.ts#L6)*
+*Defined in [citation/selectable-citation.ts:6](https://github.com/gbj/venite/blob/b674975c/ldf/src/citation/selectable-citation.ts#L6)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **verse**? : *undefined | string*
 
-*Defined in [citation/selectable-citation.ts:4](https://github.com/gbj/venite/blob/84b8078d/ldf/src/citation/selectable-citation.ts#L4)*
+*Defined in [citation/selectable-citation.ts:4](https://github.com/gbj/venite/blob/b674975c/ldf/src/citation/selectable-citation.ts#L4)*

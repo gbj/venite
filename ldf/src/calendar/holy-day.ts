@@ -62,6 +62,12 @@ export class HolyDay {
   /** Allows inclusion of alternate holy days for morning and evening. Used for transition from Christmas season to Epiphany on 1/5*/
   evening?: HolyDay;
 
+  /** URL for an image of an icon for the day */
+  image?: string;
+
+  /** Citation URL for an image */
+  imageURL?: string;
+
   //** Constructor takes a Javascript object containing the class's properties */
   constructor(data: Partial<HolyDay> = {}) {
     Object.assign(this, data);

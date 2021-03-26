@@ -3,7 +3,6 @@ import {
   OnInit,
   Inject,
   ViewChild,
-  ElementRef,
   OnDestroy,
   NgZone,
 } from "@angular/core";
@@ -14,10 +13,7 @@ import {
   combineLatest,
   merge,
   BehaviorSubject,
-  interval,
   Subscription,
-  concat,
-  timer,
   from,
 } from "rxjs";
 import {
@@ -27,14 +23,8 @@ import {
   tap,
   filter,
   startWith,
-  withLatestFrom,
   take,
-  shareReplay,
-  mergeMap,
-  share,
   catchError,
-  flatMap,
-  takeUntil,
   takeWhile,
   distinct,
 } from "rxjs/operators";
@@ -60,7 +50,6 @@ import {
   IonContent,
   LoadingController,
   ModalController,
-  NavController,
   ToastController,
 } from "@ionic/angular";
 import {
@@ -178,6 +167,7 @@ export class PrayPage implements OnInit, OnDestroy {
   newLabel: string | undefined;
   bulletinLabel: string | undefined;
   bulletinSlug: string | undefined;
+  isBulletin: boolean = false;
 
   // Sharing
   canShare: boolean = false;
@@ -262,7 +252,6 @@ export class PrayPage implements OnInit, OnDestroy {
         if (this.bulletinMode) {
           this.bulletinLabel = state?.liturgy?.label;
           this.bulletinSlug = state?.liturgy?.slug;
-          console.log("this.bulletinSlug = ", this.bulletinSlug);
         }
       })
     );
@@ -286,6 +275,7 @@ export class PrayPage implements OnInit, OnDestroy {
           this.newSlug = newSlug;
           this.newLabel = newLabel;
           if (docId) {
+            this.isBulletin = true;
             return this.documents
               .findDocumentById(docId)
               .pipe(map((doc) => [doc]));
@@ -430,7 +420,13 @@ export class PrayPage implements OnInit, OnDestroy {
       // e.g., "Change Canticle" button
       this.doc$ = merge(stateDoc$, this.modifiedDoc$).pipe(
         // flatten for TTS purposes
-        map((doc) => docsToLiturgy(this.flattenDoc(doc)))
+        map((doc) => {
+          const flattened = docsToLiturgy(this.flattenDoc(doc));
+          return new LiturgicalDocument({
+            ...doc,
+            value: flattened?.value || doc?.value,
+          });
+        })
       );
     }
 
@@ -1209,7 +1205,7 @@ export class PrayPage implements OnInit, OnDestroy {
     const baseUrl = this.location.path(),
       anchor = selection.fragment ? `#${selection.fragment}` : "",
       url = `https://beta.venite.app${baseUrl}${anchor}`,
-      date = dateFromYMDString(doc.day.date),
+      date = dateFromYMDString(doc?.day?.date),
       citation = selectableCitationToString(selection.citation),
       cite = citation ? `${citation ? "- " : ""}${citation}` : "",
       hashtag = `#${doc.label.replace(/\s/g, "")}`,
