@@ -231,7 +231,7 @@ export class BibleReadingComponent {
             </ldf-label-bar>
 
             {/* Introductory text ("A Reading from..." or similar) */}
-            {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document editable={true} doc={this.obj.metadata.compiled_intro}></ldf-liturgical-document>}
+            {this.obj?.metadata?.compiled_intro && <ldf-liturgical-document editable={true} doc={this.obj.metadata.compiled_intro} path={`${this.path}/metadata/intro`}></ldf-liturgical-document>}
 
             <section class="verses">
               {this.verses.map((verse, verseIndex) => [

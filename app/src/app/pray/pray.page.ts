@@ -280,6 +280,7 @@ export class PrayPage implements OnInit, OnDestroy {
               .findDocumentById(docId)
               .pipe(map((doc) => [doc]));
           } else if (orgId && slug) {
+            this.isBulletin = true;
             return this.documents.findOrganizationLiturgy(orgId, slug);
           } else {
             return this.documents
