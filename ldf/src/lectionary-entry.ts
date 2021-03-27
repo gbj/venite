@@ -4,5 +4,5 @@ export class LectionaryEntry {
   day?: string;
   type?: string; //'first_reading'|'second_reading'|'gospel'|'morning_psalm'|'evening_psalm'
   whentype?: string; //'year'|'date'|'time';
-  when?: number;
+  when?: number | string;
 }

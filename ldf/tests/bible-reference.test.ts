@@ -57,5 +57,9 @@ describe('parseReference', () => {
       { start: { book: Book.Philippians, chapter: 1, verse: null }, end: null },
     ]);
     expect(parseReference('Rom 1')).toEqual([{ start: { book: Book.Romans, chapter: 1, verse: null }, end: null }]);
+    expect(parseReference('2 Samuel 7:4, 8-16')).toEqual([
+      { start: { book: Book.SecondSamuel, chapter: 7, verse: 4 }, end: null },
+      { start: { book: null, chapter: null, verse: 8 }, end: { book: null, chapter: null, verse: 16 } },
+    ]);
   });
 });

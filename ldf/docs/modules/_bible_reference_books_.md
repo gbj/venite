@@ -68,8 +68,10 @@
   ['John', Book.John],
   ['Acts', Book.Acts],
   ['Romans', Book.Romans],
+  ['1 Cor.', Book.FirstCorinthians],
   ['1 Corinthians', Book.FirstCorinthians],
   ['First Corinthians', Book.FirstCorinthians],
+  ['2 Cor.', Book.SecondCorinthians],
   ['2 Corinthians', Book.SecondCorinthians],
   ['Second Corinthians', Book.SecondCorinthians],
   ['Galatians', Book.Galatians],
@@ -77,6 +79,7 @@
   ['Philippians', Book.Ephesians],
   ['Phil', Book.Philippians],
   ['Colossians', Book.Colossians],
+  ['Col.', Book.Colossians],
   ['1 Thessalonians', Book.FirstThessalonians],
   ['First Thessalonians', Book.FirstThessalonians],
   ['2 Thessalonians', Book.SecondThessalonians],
@@ -136,4 +139,4 @@
   ['Bel and the Dragon', Book.Bel],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/b674975c/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/7d540cc1/ldf/src/bible-reference/books.ts#L3)*
