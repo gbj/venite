@@ -23,6 +23,9 @@ export class LiturgicalDocumentComponent {
   @State() localeStrings: { [x: string]: string; };
   @State() hasFocus : boolean = false;
 
+  buttonsSelected : boolean = false;
+  interrupt : boolean = false;
+
   // Properties
   /**
    * An LDF LiturgicalDocument object.
@@ -99,11 +102,14 @@ export class LiturgicalDocumentComponent {
   }
 
   @Listen('mouseout', { capture: true })
-  onMouseOut() {
-    setTimeout(() => {
-      this.hasFocus = false;
-      this.focusPath.emit(this.path);
-    }, 1000);
+  onMouseOut(ev : MouseEvent) {
+    const elDiv = this.element.querySelector('div.container');
+    if(ev.relatedTarget == elDiv) {
+      setTimeout(() => {
+          this.hasFocus = false;
+          this.focusPath.emit(this.path);
+      }, 500);
+    }
   }
 
   // Firing the event during the capture phase the most specific LiturgicalDocument will
@@ -226,28 +232,30 @@ export class LiturgicalDocumentComponent {
 
     return (
       node && <Host lang={this.obj?.language || 'en'}>
-        {/* Settings/Delete/Edit Buttons */}
-        {(this.editable || this.preview) && <ldf-editable-metadata-buttons
-          visible={this.hasFocus}
-          base={this.base}
-          index={this.index}
-          obj={this.obj}
-          parentType={this.parentType}
-          preview={this.preview}
-          onLdfTogglePreview={(e : CustomEvent) => this.setPreview(e.detail)}
-          class={{'top-level': this.obj?.type === 'liturgy' || this.obj?.type === 'option'}}
-        >
-        </ldf-editable-metadata-buttons>}
+        <div class={{container: true, editable: this.editable || this.preview}}>
+          {/* Settings/Delete/Edit Buttons */}
+          {(this.editable || this.preview) && <ldf-editable-metadata-buttons
+            visible={this.hasFocus}
+            base={this.base}
+            index={this.index}
+            obj={this.obj}
+            parentType={this.parentType}
+            preview={this.preview}
+            onLdfTogglePreview={(e : CustomEvent) => this.setPreview(e.detail)}
+            class={{'top-level': this.obj?.type === 'liturgy' || this.obj?.type === 'option'}}
+          >
+          </ldf-editable-metadata-buttons>}
 
-        {/* Render the Document */}
-        <div
-          id={(this.path || '').replace(/\//g, '-')}
-          class={{
-            doc: true,
-            editable: this.editable || this.preview
-          }}
-        >
-          {node}
+          {/* Render the Document */}
+          <div
+            id={(this.path || '').replace(/\//g, '-')}
+            class={{
+              doc: true,
+              editable: this.editable || this.preview
+            }}
+          >
+            {node}
+          </div>
         </div>
       </Host>
     );

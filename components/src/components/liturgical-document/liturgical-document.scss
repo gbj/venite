@@ -1,5 +1,10 @@
 ldf-liturgical-document, :host {
   font-family: var(--ldf-font-face);
+  display: block;
+}
+
+.container.editable {
+  padding-top: 1.5em;
 }
 
 .lookup {
@@ -39,16 +44,11 @@ ldf-editable-metadata-buttons {
   opacity: 0.8;
   width: 100%;
   position: sticky;
-  top: 1em;
+  top: 2em;
   /*position: relative;*/
 }
 
 ldf-editable-metadata-buttons.top-level {
   position: relative;
   top: 0;
-}
-
-.doc.editable {
-  margin-top: calc(-2em + var(--ldf-liturgical-document-margin-top, 0));
-  padding-top: 2em;
 }
