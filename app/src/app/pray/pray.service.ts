@@ -470,7 +470,12 @@ export class PrayService {
                   changeable:
                     doc?.metadata?.changeable || docBase?.metadata?.changeable,
                 },
-                citation: doc.citation || docBase.citation,
+                citation:
+                  doc.citation ||
+                  docBase.citation ||
+                  (doc.type === "psalm" && doc.slug.startsWith("Psalm ")
+                    ? doc.slug
+                    : undefined),
               })
           )
         ),
@@ -693,6 +698,9 @@ export class PrayService {
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
+              citation: entry.citation.startsWith("Psalm ")
+                ? entry.citation
+                : undefined,
             })
         )
       ),
