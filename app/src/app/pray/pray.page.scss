@@ -15,6 +15,10 @@
   width: 100vw;
   padding-bottom: 3em;
   padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .bordered,
@@ -75,8 +79,7 @@ venite-sponsor {
   margin-top: 1em;
   width: 250px;
   display: block;
-  margin: auto;
-  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
   background: var(--ldf-background-color);
   border-radius: var(--border-radius);

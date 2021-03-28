@@ -46,10 +46,6 @@ import {
   ToastController,
 } from "@ionic/angular";
 import { AddBlockComponent } from "../add-block/add-block.component";
-import { SharingComponent } from "../sharing/sharing.component";
-import { Router } from "@angular/router";
-import { environment } from "src/environments/environment";
-import { EditorDisplaySettingsComponent } from "../editor-display-settings/editor-display-settings.component";
 import { TranslateService } from "@ngx-translate/core";
 import { EditorState } from "./editor-state";
 import { querySelectorDeep } from "query-selector-shadow-dom";

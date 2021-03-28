@@ -27,21 +27,18 @@ export class ColorPickerComponent implements OnInit {
 
   constructor(
     private documents: DocumentService,
-    private editorService: EditorService,
     private platform: PlatformService
   ) {}
 
   ngOnInit() {
-    this.colors$ = this.documents
-      .getColors()
-      .pipe(
-        map((colors) =>
-          colors.map((color) => ({
-            ...color,
-            name: color.name[0].toUpperCase() + color.name.slice(1),
-          }))
-        )
-      );
+    this.colors$ = this.documents.getColors().pipe(
+      map((colors) =>
+        colors.map((color) => ({
+          ...color,
+          name: color.name[0].toUpperCase() + color.name.slice(1),
+        }))
+      )
+    );
     if (this.platform.is("ios")) {
       this.colorPickerClass = "";
     }

@@ -239,7 +239,6 @@ export class CalendarService implements CalendarServiceInterface {
         }
 
         // incorporate them into the `LiturgicalDay`
-        console.log("addingHolyDays", day, holydays);
         return day.addHolyDays(holydays);
       })
     );

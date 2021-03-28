@@ -1,5 +1,5 @@
 <ion-buttons [collapse]="collapse">
-  <button *ngIf="color$ | async as color" class="color-button" [ngStyle]="{'background-color': color}" (click)="colorPicker(color)">
+  <button *ngIf="color$ | async as color" class="color-button" [ngStyle]="{'background-color': color, 'border': border(color)}" (click)="colorPicker(color)">
     <ion-label class="visually-hidden">{{ 'editor.bulletin-color' | translate }}</ion-label>
   </button>
   <ion-button (click)="fontModal(state?.localManager)">

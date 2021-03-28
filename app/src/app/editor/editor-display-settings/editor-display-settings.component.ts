@@ -24,10 +24,7 @@ export class EditorDisplaySettingsComponent implements OnInit {
   configFonts: { value: string; label: string; style: string }[] = new Array();
   configDrops: { value: string; label: string; class: string }[] = new Array();
 
-  constructor(
-    @Inject("displaySettingsConfig") public config: any,
-    private translate: TranslateService
-  ) {}
+  constructor(@Inject("displaySettingsConfig") public config: any) {}
 
   ngOnInit() {
     this.configFonts = this.config.fonts.map(({ value, label }) => ({
@@ -48,11 +45,13 @@ export class EditorDisplaySettingsComponent implements OnInit {
   }
 
   updateSetting(settingName: string, ev: CustomEvent) {
-    this.prefUpdated.emit({
-      key: settingName,
-      value: ev.detail.hasOwnProperty("checked")
-        ? Boolean(ev.detail.checked)
-        : ev.detail.value,
-    });
+    if (this.settings[settingName] !== ev.detail.value) {
+      this.prefUpdated.emit({
+        key: settingName,
+        value: ev.detail.hasOwnProperty("checked")
+          ? Boolean(ev.detail.checked)
+          : ev.detail.value,
+      });
+    }
   }
 }

@@ -94,6 +94,14 @@ export class EditorButtonsComponent implements OnInit {
     await modal.present();
   }
 
+  border(color: string) {
+    if (color === "var(--ldf-background-color)") {
+      return `1px solid red`;
+    } else {
+      return `1px solid ${color}`;
+    }
+  }
+
   async sharingModal(sharing: Sharing) {
     const modal = await this.modal.create({
       component: SharingComponent,
@@ -189,7 +197,7 @@ export class EditorButtonsComponent implements OnInit {
     const prefUpdated = new EventEmitter<{ key: string; value: any }>();
     prefUpdated.subscribe((data: { key: string; value: any }) => {
       if (!doc.display_settings) {
-        const value = new DisplaySettings();
+        const value = {};
         value[data.key] = data.value;
         this.editorService.processChange(
           manager,
@@ -205,6 +213,7 @@ export class EditorButtonsComponent implements OnInit {
           })
         );
       } else {
+        console.log("setting displaysetting", data.key, "to", data.value);
         this.editorService.processChange(
           manager,
           new Change({

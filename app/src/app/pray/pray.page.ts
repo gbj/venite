@@ -441,20 +441,14 @@ export class PrayPage implements OnInit, OnDestroy {
         )
       ).pipe(
         map(([day, doc]) => doc?.metadata?.color ?? day?.color),
-        switchMap((color) =>
-          this.documents.getColor(color).pipe(startWith(null))
-        ),
-        startWith("var(--ldf-background-color)"),
-        distinct()
+        switchMap((color) => this.documents.getColor(color))
       );
     } else {
       this.color$ = combineLatest(day$, this.doc$).pipe(
         map(([day, doc]) => doc?.metadata?.color ?? day?.color),
         switchMap((color) =>
           this.documents.getColor(color).pipe(startWith(null))
-        ),
-        startWith("var(--ldf-background-color)"),
-        distinct()
+        )
       );
     }
 
@@ -477,7 +471,10 @@ export class PrayPage implements OnInit, OnDestroy {
       this.grabPreference("psalmPause"),
     ]).pipe(map((settings) => new DisplaySettings(...settings)));
 
-    const docSettings$ = this.doc$.pipe(map((doc) => doc?.display_settings));
+    const docSettings$ = this.doc$.pipe(
+      map((doc) => doc?.display_settings),
+      tap((settings) => console.log("new doc settings = ", settings))
+    );
 
     this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
       map(([prefSettings, docSettings]) =>
@@ -646,10 +643,6 @@ export class PrayPage implements OnInit, OnDestroy {
     let latestDoc: null | LiturgicalDocument = null;
 
     const doc$ = stateDoc$.pipe(
-      /*tap(doc => {
-        //console.log('stateDoc$ = ', doc);
-        latestDoc = doc;
-      }),*/
       takeWhile((doc) => !isCompletelyCompiled(doc), true)
     );
 
@@ -659,7 +652,6 @@ export class PrayPage implements OnInit, OnDestroy {
       // next
       (doc) => {
         latestDoc = doc;
-        console.log("latest = ", doc);
       },
       // error — TODO
       async (e) => {
@@ -685,10 +677,8 @@ export class PrayPage implements OnInit, OnDestroy {
         latestDoc.slug = this.newSlug;
         latestDoc.label = this.newLabel;
         loading.dismiss();
-        console.log("completed");
         latestDoc.slug = this.bulletinSlug || latestDoc.slug;
         latestDoc.label = this.bulletinLabel || latestDoc.label;
-        console.log("bulletinSlug = ", this.bulletinSlug);
         this.beginEditing(latestDoc);
       }
     );
