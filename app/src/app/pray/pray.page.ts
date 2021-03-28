@@ -471,10 +471,7 @@ export class PrayPage implements OnInit, OnDestroy {
       this.grabPreference("psalmPause"),
     ]).pipe(map((settings) => new DisplaySettings(...settings)));
 
-    const docSettings$ = this.doc$.pipe(
-      map((doc) => doc?.display_settings),
-      tap((settings) => console.log("new doc settings = ", settings))
-    );
+    const docSettings$ = this.doc$.pipe(map((doc) => doc?.display_settings));
 
     this.settings$ = combineLatest([prefSettings$, docSettings$]).pipe(
       map(([prefSettings, docSettings]) =>

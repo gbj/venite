@@ -27,31 +27,8 @@ export class LectionaryService {
     // lectionaries that include readings for black-letter days
     const BLACK_LETTER_LECTIONARIES = ["lff2018"];
 
-    // handle RCL readings separately via LectServe API
-    if (
-      lectionaryName == "rclsunday" ||
-      lectionaryName == "rcl" ||
-      lectionaryName == "rclsundayTrack1"
-    ) {
-      return this.rcl(
-        dateFromYMDString(day.date),
-        lectionaryName,
-        day.propers,
-        day.years["rclsunday"],
-        day.slug
-      ).pipe(
-        map((readings) =>
-          uniqueBy(
-            readings.filter(
-              (reading) => !readingType || reading.type === readingType
-            ),
-            (e) => e.citation
-          )
-        )
-      );
-    }
     // if lectionary is a "black-letter lectionary"
-    else if (BLACK_LETTER_LECTIONARIES.includes(lectionaryName)) {
+    if (BLACK_LETTER_LECTIONARIES.includes(lectionaryName)) {
       const days = (day.holy_days || [])
         .map((holyDay) => holyDay.slug)
         .filter((slug) => slug !== undefined);
@@ -90,10 +67,6 @@ export class LectionaryService {
         lectionaryName,
         readingType,
         alternateYear
-      ).pipe(
-        tap((entries) =>
-          console.log("getReadings possiblyOfflineQuery entries = ", entries)
-        )
       );
     }
   }
@@ -118,6 +91,8 @@ export class LectionaryService {
         "bcp1979_30day_psalter",
         "bcp1979_daily_office",
         "bcp1979_daily_psalms",
+        "rclsunday",
+        "rclsundayTrack1",
       ].includes(lectionaryName)
     ) {
       const key = `${day.date}-${lectionaryName}-${readingType}-${alternateYear}`;
@@ -134,12 +109,14 @@ export class LectionaryService {
                 ![
                   "first_reading_alt",
                   "first_reading",
+                  "morning_psalms",
                   "second_reading",
                   "gospel",
                 ].includes(readingType)
               ) {
                 console.log(
-                  "(possiblyOfflineQuery) returning ",
+                  "lectionaryService A returning entries.filter",
+                  readingType,
                   entries.filter(
                     (entry) =>
                       entry.day == day.slug &&
@@ -152,6 +129,7 @@ export class LectionaryService {
                     (!readingType || entry.type == readingType)
                 );
               } else {
+                console.log("lectionaryService filtering readings now");
                 let halfFiltered = entries.filter(
                   (entry) =>
                     entry.when.toString() == when.toString() &&
@@ -160,6 +138,10 @@ export class LectionaryService {
                 if (lectionaryName !== undefined) {
                   halfFiltered = halfFiltered.filter(
                     (entry) => entry.lectionary == lectionaryName
+                  );
+                  console.log(
+                    "lectionaryService filtered by lectionary to ",
+                    halfFiltered
                   );
                 }
 
@@ -174,12 +156,49 @@ export class LectionaryService {
                         ? readingType.replace("_alt", "")
                         : readingType)
                   );
+                  console.log(
+                    "lectionaryService filtered by readingType to ",
+                    readingType,
+                    halfFiltered
+                  );
                 }
 
                 if (includeDay !== false) {
+                  const beforeFiltering = [...halfFiltered];
+
+                  // by day or (if RCL and not a holy day) by Sunday
                   halfFiltered = halfFiltered.filter(
-                    (entry) => entry.day == (day.propers || day.slug)
+                    (entry) =>
+                      entry.day == (day.propers || day.slug) ||
+                      ((lectionaryName === "rclsunday" ||
+                        lectionaryName === "rclsundayTrack1") &&
+                        !day.holy_day_observed &&
+                        entry.day === day.week?.slug)
                   );
+
+                  // if none found for day or (RCL) Sunday, try RCL Proper ___ Sunday
+                  if (halfFiltered?.length == 0) {
+                    halfFiltered = beforeFiltering.filter(
+                      (entry) =>
+                        entry.day == (day.propers || day.slug) ||
+                        ((lectionaryName === "rclsunday" ||
+                          lectionaryName === "rclsundayTrack1") &&
+                          !day.holy_day_observed &&
+                          (entry.day === day.week?.slug ||
+                            entry.day === day.week?.propers))
+                    );
+                  }
+
+                  // if still nothing, perhaps it's an RCL Holy Day that's listed under the Sunday (like Palm Sunday)
+                  if (halfFiltered?.length == 0) {
+                    halfFiltered = beforeFiltering.filter(
+                      (entry) =>
+                        entry.day == (day.propers || day.slug) ||
+                        ((lectionaryName === "rclsunday" ||
+                          lectionaryName === "rclsundayTrack1") &&
+                          entry.day === day.week?.slug)
+                    );
+                  }
                 }
 
                 return halfFiltered;
@@ -234,6 +253,10 @@ export class LectionaryService {
             }
 
             if (includeDay !== false) {
+              console.log(
+                "lectionaryService Firestore query where day ==",
+                day.propers || day.slug
+              );
               query = query.where("day", "==", day.propers || day.slug);
             }
 
@@ -256,6 +279,14 @@ export class LectionaryService {
           when: dateFromYMDString(day.date).getDate().toString(),
           includeDay: false,
         };
+      case "rclsunday":
+      case "rclsundayTrack1":
+        console.log("day.years = ", day.years["rclsunday"]);
+        return {
+          whentype: "year",
+          when: day.years["rclsunday"].toString(),
+          includeDay: true,
+        };
       case "bcp1979_daily_office":
       case "bcp1979_daily_psalms":
       default:
@@ -273,31 +304,6 @@ export class LectionaryService {
             includeDay: true,
           };
         }
-    }
-  }
-
-  rcl(
-    date: Date,
-    lectionary: string,
-    propers: string,
-    year: string,
-    day: string
-  ): Observable<LectionaryEntry[]> {
-    // TODO integrate RCL API into a Cloud Function
-    const y = date.getFullYear(),
-      m = date.getMonth() + 1,
-      d = date.getDate(),
-      slug = `${y}-${m}-${d}-${lectionary}-${propers}-${year}-${day}`;
-    if (this._cached_rcl[slug]) {
-      return this._cached_rcl[slug];
-    } else {
-      this._cached_rcl[slug] = new ReplaySubject();
-      this.http
-        .get<LectionaryEntry[]>(
-          `https://www.venite.app/api/lectionary/reading/?y=${y}&m=${m}&d=${d}&lectionary=${lectionary}&propers=${propers}&year=${year}&day=${day}`
-        )
-        .subscribe((data) => this._cached_rcl[slug].next(data));
-      return this._cached_rcl[slug];
     }
   }
 }
