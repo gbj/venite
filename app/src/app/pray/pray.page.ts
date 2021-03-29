@@ -401,11 +401,25 @@ export class PrayPage implements OnInit, OnDestroy {
           state.hasOwnProperty("prefs")
       ),
       switchMap((state) => {
-        console.log("state.prefs = ", state.prefs);
+        // get default preferences
+        const basePrefs = Object.entries(
+          state.liturgy.type === "liturgy"
+            ? (state.liturgy as Liturgy).metadata?.preferences
+            : {} || {}
+        )
+          .map(([key, pref]) => [
+            key,
+            (
+              pref.options.find((opt) => Boolean(opt.default)) ||
+              pref.options[0]
+            )?.value,
+          ])
+          .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
         return this.prayService.compile(
           state.liturgy,
           state.day || state.liturgy?.day,
-          state.prefs,
+          { ...basePrefs, ...state.prefs },
           state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version],
           state.liturgy?.metadata?.preferences
         );

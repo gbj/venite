@@ -2,8 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from "@venite/ldf";
-import { ReplaySubject, Observable, from } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { ReplaySubject, Observable, from, of } from "rxjs";
+import { map, switchMap, tap } from "rxjs/operators";
 import firebase from "firebase/app";
 
 @Injectable({
@@ -114,34 +114,21 @@ export class LectionaryService {
                   "gospel",
                 ].includes(readingType)
               ) {
-                console.log(
-                  "lectionaryService A returning entries.filter",
-                  readingType,
-                  entries.filter(
-                    (entry) =>
-                      entry.day == day.slug &&
-                      (!readingType || entry.type == readingType)
-                  )
-                );
                 return entries.filter(
                   (entry) =>
                     entry.day == day.slug &&
                     (!readingType || entry.type == readingType)
                 );
               } else {
-                console.log("lectionaryService filtering readings now");
                 let halfFiltered = entries.filter(
                   (entry) =>
                     entry.when.toString() == when.toString() &&
                     entry.whentype == whentype
                 );
+
                 if (lectionaryName !== undefined) {
                   halfFiltered = halfFiltered.filter(
                     (entry) => entry.lectionary == lectionaryName
-                  );
-                  console.log(
-                    "lectionaryService filtered by lectionary to ",
-                    halfFiltered
                   );
                 }
 
@@ -155,11 +142,6 @@ export class LectionaryService {
                       (readingType?.endsWith("_alt")
                         ? readingType.replace("_alt", "")
                         : readingType)
-                  );
-                  console.log(
-                    "lectionaryService filtered by readingType to ",
-                    readingType,
-                    halfFiltered
                   );
                 }
 
@@ -202,6 +184,20 @@ export class LectionaryService {
                 }
 
                 return halfFiltered;
+              }
+            }),
+            switchMap((entries) => {
+              // fall back to RCL Track "2" (contains all the weeks that are not Proper ____)
+              if (entries?.length == 0 && lectionaryName == "rclsundayTrack1") {
+                return this.possiblyOfflineQuery(
+                  day,
+                  "rclsunday",
+                  readingType,
+                  alternateYear,
+                  disableOffline
+                );
+              } else {
+                return of(entries);
               }
             })
           )
@@ -253,10 +249,6 @@ export class LectionaryService {
             }
 
             if (includeDay !== false) {
-              console.log(
-                "lectionaryService Firestore query where day ==",
-                day.propers || day.slug
-              );
               query = query.where("day", "==", day.propers || day.slug);
             }
 
@@ -281,7 +273,6 @@ export class LectionaryService {
         };
       case "rclsunday":
       case "rclsundayTrack1":
-        console.log("day.years = ", day.years["rclsunday"]);
         return {
           whentype: "year",
           when: day.years["rclsunday"].toString(),
