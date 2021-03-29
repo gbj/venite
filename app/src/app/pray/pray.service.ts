@@ -452,7 +452,7 @@ export class PrayService {
               new LiturgicalDocument({
                 ...doc,
                 metadata: {
-                  ...doc.metadata,
+                  ...(doc?.metadata || {}),
                   omit_antiphon:
                     doc?.metadata?.omit_antiphon ||
                     docBase?.metadata?.omit_antiphon,
@@ -471,9 +471,9 @@ export class PrayService {
                     doc?.metadata?.changeable || docBase?.metadata?.changeable,
                 },
                 citation:
-                  doc.citation ||
-                  docBase.citation ||
-                  (doc.type === "psalm" && doc.slug.startsWith("Psalm ")
+                  doc?.citation ||
+                  docBase?.citation ||
+                  (doc?.type === "psalm" && doc?.slug?.startsWith("Psalm ")
                     ? doc.slug
                     : undefined),
               })
@@ -698,7 +698,7 @@ export class PrayService {
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
-              citation: entry.citation.startsWith("Psalm ")
+              citation: entry?.citation?.startsWith("Psalm ")
                 ? entry.citation
                 : undefined,
             })
@@ -722,7 +722,9 @@ export class PrayService {
             value: (liturgy?.value || []).sort((a, b) =>
               a.type === "psalm" &&
               b.type === "psalm" &&
-              a?.metadata?.number === b?.metadata?.number
+              a?.metadata?.number === b?.metadata?.number &&
+              a.value &&
+              b.value
                 ? Number((a as Psalm).value[0].value[0].number) -
                   Number((b as Psalm).value[0].value[0].number)
                 : a?.metadata?.number - b?.metadata?.number

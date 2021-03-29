@@ -713,7 +713,9 @@ export class PrayService {
             value: (liturgy?.value || []).sort((a, b) =>
               a.type === "psalm" &&
               b.type === "psalm" &&
-              a?.metadata?.number === b?.metadata?.number
+              a?.metadata?.number === b?.metadata?.number &&
+              a.value &&
+              b.value
                 ? Number((a as Psalm).value[0].value[0].number) -
                   Number((b as Psalm).value[0].value[0].number)
                 : a?.metadata?.number - b?.metadata?.number

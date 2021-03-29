@@ -42,7 +42,9 @@ export function findCollect(
               .filter((collect) => collect.slug === category)
               .map((collect) => (collect.type === 'text' ? processCollectText(collect as Text, holyday) : collect)),
           )
-          .concat(collects.filter((collect) => collect.slug === holyday.slug))
+          .concat(
+            collects.filter((collect) => collect.slug === holyday.slug && !holyday.category?.includes(holyday.slug)),
+          )
           .flat(),
       ),
     ),
@@ -55,6 +57,7 @@ export function findCollect(
             return (
               collectValue !== JSON.stringify(redLetterOrSunday?.value) &&
               blackLetterCollects
+                .filter((blCollect) => Boolean(blCollect))
                 .map((blCollect) => JSON.stringify(blCollect.value))
                 .reduce((prev: boolean, curr) => prev && curr !== collectValue, true)
             );
@@ -103,7 +106,7 @@ function filterMultiple(collects: LiturgicalDocument[], allowMultiple: boolean):
 }
 
 export function processCollectText(collect: Text, day: HolyDay): LiturgicalDocument {
-  const saintName = (day.name || '').split(',')[0],
+  const saintName = (day.name || '').split(/[,;]/)[0],
     oldValue: string[] = collect.value || new Array(),
     value = oldValue.map((piece) => piece.replace(/N\./g, saintName).replace(/[\[\]]/g, ''));
   return new Text({
