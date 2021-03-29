@@ -209,7 +209,11 @@ export class LiturgicalDay {
 
   // whether this day is ranked as a Major Feast
   isFeast(): boolean {
-    return (this.holy_day_observed?.type?.rank || 1) >= 3;
+    const isSunday = this.getDate().getDay() === 0,
+      hasRank = (this.holy_day_observed?.type?.rank || 1) >= 3,
+      holyWeek = this.slug?.includes('holy-week'),
+      easterWeek = this.week?.slug === 'easter';
+    return isSunday || (hasRank && !holyWeek && !easterWeek);
   }
 
   //** Constructor takes a Javascript object containing the class's properties */
