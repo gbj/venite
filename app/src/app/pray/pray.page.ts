@@ -47,6 +47,7 @@ import {
 } from "@venite/ldf";
 import {
   ActionSheetController,
+  AlertController,
   IonContent,
   LoadingController,
   ModalController,
@@ -197,7 +198,8 @@ export class PrayPage implements OnInit, OnDestroy {
     private platform: PlatformService,
     private location: Location,
     private zone: NgZone,
-    private audio: AudioService
+    private audio: AudioService,
+    private alert: AlertController
   ) {}
 
   ngOnDestroy() {
@@ -830,6 +832,7 @@ export class PrayPage implements OnInit, OnDestroy {
         role: "cancel",
       },
     ];
+
     // TODO — when should Speech option be displayed?
     if (!this.bulletinMode) {
       //this.voiceChoices && !this.speechPlaying && !this.hasPending) {
@@ -840,6 +843,7 @@ export class PrayPage implements OnInit, OnDestroy {
       });
     }
 
+    // Word
     if (canDownloadWord) {
       buttons.push({
         text: this.translate.instant("Open in Word"),
@@ -851,6 +855,16 @@ export class PrayPage implements OnInit, OnDestroy {
           ),
       });
     }
+
+    // Share Readings
+    buttons.push({
+      text: this.translate.instant("share-readings.Share Readings"),
+      icon: "book",
+      handler: () =>
+        this.shareReadings(
+          data.editorState?.localManager?.document ?? data.doc
+        ),
+    });
 
     // Edit Bulletin if it is one
     if (data.doc?.id && data.doc?.day && !this.bulletinMode) {
@@ -1240,5 +1254,94 @@ export class PrayPage implements OnInit, OnDestroy {
         setTimeout(() => (this.clipboardIcon = "clipboard"), 1000);
       })
       .catch(() => (this.clipboardIcon = "close"));
+  }
+
+  async shareReadings(doc: LiturgicalDocument) {
+    console.log(this.flattenDoc(doc));
+    const readings = (this.flattenDoc(doc) || []).filter(
+      (subdoc) => subdoc.type === "bible-reading" && subdoc.style === "long"
+    );
+    const alert = await this.alert.create({
+      header: this.translate.instant("Share Readings"),
+      inputs: readings.map((reading, readingIndex) => ({
+        name: "readings",
+        type: "checkbox",
+        value: readingIndex,
+        label: reading.citation,
+      })),
+      buttons: [
+        {
+          text: this.translate.instant("Cancel"),
+          role: "cancel",
+          cssClass: "secondary",
+        },
+        {
+          text: this.translate.instant("Ok"),
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { data } = await alert.onDidDismiss();
+    const { values } = data;
+    if (values) {
+      function decode(str) {
+        return str.replace(/&#(\d+);/g, function (match, dec) {
+          return String.fromCharCode(dec);
+        });
+      }
+
+      const readingsToShare = values.map((index) => readings[index]);
+
+      console.log(readingsToShare);
+
+      const title = `${this.translate.instant(
+        "share-readings.Readings for "
+      )} ${doc.label} (${doc.day?.date})`;
+
+      const text = readingsToShare
+        .map(
+          (reading) =>
+            `${reading.citation}\n\n${reading.value
+              .map((piece) =>
+                piece.type === "heading" ? "\n\n" : decode(piece.text)
+              )
+              .join("")}`
+        )
+        .join("\n\n\n\n");
+
+      if (this.canShare) {
+        Share.share({
+          title,
+          text,
+          url: window.location.toString(),
+          dialogTitle: this.translate.instant("share-readings.Share Readings"),
+        });
+      } else {
+        Clipboard.write({
+          string: text,
+          url: window.location.toString(),
+        })
+          .then(async () => {
+            const toast = await this.toast.create({
+              message: this.translate.instant(
+                "share-readings.clipboard-success"
+              ),
+              color: "success",
+              duration: 2000,
+            });
+            await toast.present();
+          })
+          .catch(async () => {
+            const toast = await this.toast.create({
+              message: this.translate.instant("share-readings.clipboard-error"),
+              color: "danger",
+              duration: 4000,
+            });
+            await toast.present();
+          });
+      }
+    }
   }
 }

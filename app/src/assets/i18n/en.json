@@ -323,5 +323,12 @@
     "Saved": "Saved.",
     "why": "Why did you like it? You can use #hashtags"
   },
-  "sponsor": "Sponsored by Forward Movement"
+  "sponsor": "Sponsored by Forward Movement",
+  "Open in Word": "Open in Word",
+  "share-readings": {
+    "Share Readings": "Share Readings",
+    "Readings for ": "Readings for ",
+    "clipboard-success": "The text has been copied to your clipboard.",
+    "clipboard-error": "We weren’t able to copy this text to your clipboard. Sorry!"
+  }
 }
