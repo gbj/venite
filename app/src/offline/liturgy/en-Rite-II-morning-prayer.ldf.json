@@ -2201,6 +2201,160 @@
     {
       "value": [
         {
+          "type": "responsive",
+          "label": "Suffrages B",
+          "value": [
+            {
+              "response": "",
+              "text": "Save your people, Lord, and bless your inheritance;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Govern and uphold them, now and always."
+            },
+            {
+              "text": "Day by day we bless you;",
+              "label": "V."
+            },
+            {
+              "text": "We praise your name for ever.",
+              "label": "R."
+            },
+            {
+              "text": "Lord, keep us from all sin today;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Have mercy on us, Lord, have mercy."
+            },
+            {
+              "label": "V.",
+              "text": "Lord, show us your love and mercy;"
+            },
+            {
+              "text": "For we put our trust in you.",
+              "label": "R."
+            },
+            {
+              "label": "V.",
+              "text": "In you, Lord, is our hope;"
+            },
+            {
+              "label": "R.",
+              "text": "And we shall never hope in vain."
+            }
+          ],
+          "hidden": false,
+          "category": [],
+          "style": "preces",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "metadata": {}
+        },
+        {
+          "category": [],
+          "style": "preces",
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Show us your mercy, O Lord;"
+            },
+            {
+              "label": "R.",
+              "text": "And grant us your salvation."
+            },
+            {
+              "text": "Clothe your ministers with righteousness;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Let your people sing with joy."
+            },
+            {
+              "label": "V.",
+              "text": "Give peace, O Lord, in all the world;"
+            },
+            {
+              "label": "R.",
+              "text": "For only in you can we live in safety."
+            },
+            {
+              "text": "Lord, keep this nation under your care; ",
+              "label": "V."
+            },
+            {
+              "text": "And guide us in the way of justice and truth.",
+              "label": "R."
+            },
+            {
+              "text": "Let your way be known upon earth;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Your saving health among all nations."
+            },
+            {
+              "label": "V.",
+              "text": "Let not the needy, O Lord, be forgotten;"
+            },
+            {
+              "label": "R.",
+              "text": "Nor the hope of the poor be taken away."
+            },
+            {
+              "label": "V.",
+              "text": "Create in us clean hearts, O God;"
+            },
+            {
+              "label": "R.",
+              "text": "And sustain us with your Holy Spirit."
+            }
+          ],
+          "label": "Suffrages A",
+          "source": {
+            "citation": "",
+            "api": "",
+            "source": ""
+          },
+          "hidden": false,
+          "metadata": {}
+        }
+      ],
+      "type": "option",
+      "hidden": false,
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "feastDay": true
+          }
+        ]
+      }
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "feastDay": false
+          }
+        ]
+      },
+      "value": [
+        {
           "category": [],
           "style": "preces",
           "type": "responsive",
