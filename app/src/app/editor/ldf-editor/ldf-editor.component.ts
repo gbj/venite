@@ -173,10 +173,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
     // if in bulletin mode, and not template mode, compile the addition first
     this.addBlock((data: LiturgicalDocument[]) => {
-      console.log(
-        "liturgyversions = ",
-        manager.document.metadata?.liturgyversions
-      );
       const compiled$ = manager.document.day
         ? this.prayService.compile(
             docsToLiturgy(data),
@@ -188,12 +184,10 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         : of(docsToLiturgy(data));
       compiled$
         .pipe(
-          tap((doc) => console.log("compiled$", data, doc)),
           filter((doc) => isCompletelyCompiled(doc)),
           first()
         )
         .subscribe((data) => {
-          console.log("compiled$ final data is ", data);
           if (data) {
             this.add(manager, base, index, [data]);
             const path = `${base}/${index}`,
@@ -399,12 +393,6 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     manager: LocalDocumentManager,
     ev: CustomEvent<{ base: string; oldIndex: number; diff: number }>
   ) {
-    console.log(
-      "moveSubDoc ",
-      ev.detail.base,
-      ev.detail.oldIndex,
-      ev.detail.diff
-    );
     this.editorService.processChange(
       manager,
       new Change({
@@ -417,6 +405,15 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           },
         ],
       })
+    );
+
+    setTimeout(
+      () =>
+        this.makeBlockEditable(
+          ev.detail.base,
+          ev.detail.oldIndex + ev.detail.diff
+        ),
+      10
     );
   }
 }
