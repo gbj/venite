@@ -81,7 +81,7 @@ import {
 } from "../services/speech.service";
 import { querySelectorDeep } from "query-selector-shadow-dom";
 import { EditorState } from "../editor/ldf-editor/editor-state";
-import { isCompletelyCompiled } from "./is-completely-rendered";
+import { isCompletelyCompiled } from "./is-completely-compiled";
 import { PlatformService } from "@venite/ng-platform";
 import { Location } from "@angular/common";
 

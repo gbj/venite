@@ -28,7 +28,7 @@ import {
   BIBLE_SERVICE,
   BibleServiceInterface,
 } from "@venite/ng-service-api";
-import { LiturgyConfig } from "./liturgy-config";
+import { LiturgyConfig } from "@venite/ng-pray/lib/liturgy-config";
 import { isCompletelyCompiled } from "./is-completely-compiled";
 
 const LOADING = new LiturgicalDocument({
@@ -451,7 +451,7 @@ export class PrayService {
               new LiturgicalDocument({
                 ...doc,
                 metadata: {
-                  ...doc.metadata,
+                  ...(doc?.metadata || {}),
                   omit_antiphon:
                     doc?.metadata?.omit_antiphon ||
                     docBase?.metadata?.omit_antiphon,
@@ -469,7 +469,12 @@ export class PrayService {
                   changeable:
                     doc?.metadata?.changeable || docBase?.metadata?.changeable,
                 },
-                citation: doc.citation || docBase.citation,
+                citation:
+                  doc?.citation ||
+                  docBase?.citation ||
+                  (doc?.type === "psalm" && doc?.slug?.startsWith("Psalm ")
+                    ? doc.slug
+                    : undefined),
               })
           )
         ),
@@ -692,6 +697,9 @@ export class PrayService {
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
+              citation: entry?.citation?.startsWith("Psalm ")
+                ? entry.citation
+                : undefined,
             })
         )
       ),

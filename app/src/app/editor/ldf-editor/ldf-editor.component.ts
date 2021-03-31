@@ -51,7 +51,7 @@ import { EditorState } from "./editor-state";
 import { querySelectorDeep } from "query-selector-shadow-dom";
 import { isOnline } from "./is-online";
 import { PrayService } from "../../pray/pray.service";
-import { isCompletelyCompiled } from "src/app/pray/is-completely-rendered";
+import { isCompletelyCompiled } from "src/app/pray/is-completely-compiled";
 
 @Component({
   selector: "venite-ldf-editor",

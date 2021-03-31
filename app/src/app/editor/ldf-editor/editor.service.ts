@@ -74,6 +74,9 @@ export class EditorService {
   revisions$: Observable<DocumentManagerChange[]>;
   revisionSubscription: Subscription;
 
+  // Notification if server is not responding
+  changePendingTimer;
+
   constructor(
     private readonly afs: AngularFirestore,
     private readonly auth: AuthService,
@@ -410,7 +413,14 @@ export class EditorService {
         this.nextLocalManager(manager);
 
         // if change is still pending, give a notification after 10 seconds
-        setTimeout(() => this.checkIfPending(change.lastRevision), 5000);
+        if (this.changePendingTimer) {
+          clearTimeout(this.changePendingTimer);
+          this.changePendingTimer = undefined;
+        }
+        this.changePendingTimer = setTimeout(
+          () => this.checkIfPending(change.lastRevision),
+          10000
+        );
         this._pendingChange = change.lastRevision;
 
         // commit the change

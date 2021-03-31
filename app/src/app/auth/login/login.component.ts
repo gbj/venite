@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
-import { ModalController } from "@ionic/angular";
+import { LoadingController, ModalController } from "@ionic/angular";
 
 @Component({
   selector: "venite-login",
@@ -14,7 +14,11 @@ export class LoginComponent implements OnInit {
   mode: "login" | "register" | "organization" = "login";
   reset: boolean = false;
 
-  constructor(public auth: AuthService, private modal: ModalController) {}
+  constructor(
+    public auth: AuthService,
+    private modal: ModalController,
+    private loading: LoadingController
+  ) {}
 
   ngOnInit() {}
 
@@ -41,6 +45,7 @@ export class LoginComponent implements OnInit {
       }
     } catch (e) {
       console.warn(e);
+      this.loading.dismiss();
       this.error = e.message;
     }
   }

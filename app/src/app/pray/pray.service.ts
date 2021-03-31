@@ -13,12 +13,11 @@ import {
   HolyDay,
   BibleReading,
   Preference,
-  CanticleTableEntry,
   Psalm,
 } from "@venite/ldf";
 
 import { Observable, of, combineLatest } from "rxjs";
-import { filter, first, map, startWith, switchMap, tap } from "rxjs/operators";
+import { filter, map, startWith, switchMap } from "rxjs/operators";
 import {
   DOCUMENT_SERVICE,
   DocumentServiceInterface,
@@ -30,7 +29,7 @@ import {
   BibleServiceInterface,
 } from "@venite/ng-service-api";
 import { LiturgyConfig } from "@venite/ng-pray/lib/liturgy-config";
-import { isCompletelyCompiled } from "./is-completely-rendered";
+import { isCompletelyCompiled } from "./is-completely-compiled";
 
 const LOADING = new LiturgicalDocument({
   type: "text",
