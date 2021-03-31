@@ -4,7 +4,7 @@ ldf-liturgical-document, :host {
 }
 
 .container.editable {
-  padding-top: 1.5em;
+  padding-top: 0;
 }
 
 .lookup {
@@ -46,6 +46,8 @@ ldf-editable-metadata-buttons {
   position: sticky;
   top: 2em;
   /*position: relative;*/
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 ldf-editable-metadata-buttons.top-level {
