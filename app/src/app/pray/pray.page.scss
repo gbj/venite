@@ -51,8 +51,8 @@
 }
 
 .ldf-wrapper {
-  min-width: var(--ldf-max-width);
-  max-width: calc(600px + 2em);
+  width: var(--ldf-max-width);
+  max-width: calc(100vw - 2em);
   margin: auto;
   background-color: var(--ldf-background-color);
   padding: 1em;
