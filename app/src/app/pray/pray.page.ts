@@ -457,14 +457,17 @@ export class PrayPage implements OnInit, OnDestroy {
         )
       ).pipe(
         map(([day, doc]) => doc?.metadata?.color ?? day?.color),
-        switchMap((color) => this.documents.getColor(color))
+        switchMap((color) => this.documents.getColor(color)),
+        distinct()
       );
     } else {
       this.color$ = combineLatest(day$, this.doc$).pipe(
         map(([day, doc]) => doc?.metadata?.color ?? day?.color),
+        filter((color) => Boolean(color)),
         switchMap((color) =>
           this.documents.getColor(color).pipe(startWith(null))
-        )
+        ),
+        distinct()
       );
     }
 
@@ -1257,7 +1260,6 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   async shareReadings(doc: LiturgicalDocument) {
-    console.log(this.flattenDoc(doc));
     const readings = (this.flattenDoc(doc) || []).filter(
       (subdoc) => subdoc.type === "bible-reading" && subdoc.style === "long"
     );
