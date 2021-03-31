@@ -1,6 +1,6 @@
 export class DisplaySettings {
   constructor(
-    public dropcaps: 'decorated' | 'plain' | 'none' = 'decorated',
+    public dropcaps: 'decorated' | 'plain' | 'none' = 'plain',
     public response: 'bold' | 'italics' = 'bold',
     public repeatAntiphon: 'bracket' | 'repeat' | 'none' = 'bracket',
     public fontscale: 's' | 'm' | 'l' | 'xl' | 'xxl' = 'm',
