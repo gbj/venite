@@ -26,7 +26,7 @@ const docSearch = (
       (doc) =>
         (includeBulletins || !Boolean(doc.data.day)) &&
         (includeTemplates || Boolean(doc.data.day)) &&
-        (includeFragments || !Boolean(doc.data.metadata?.supplement)) &&
+        //(includeFragments || !Boolean(doc.data.metadata?.supplement)) &&
         (doc.data.label?.toLowerCase().includes(search.toLowerCase()) ||
           doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
           doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
