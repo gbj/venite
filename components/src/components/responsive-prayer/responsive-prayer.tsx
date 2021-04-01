@@ -207,7 +207,7 @@ export class ResponsivePrayerComponent {
           }
 
           // Render the line
-          return <div class="line">
+          return <div class={{"line": true, "editable": this.editable}}>
             <p class={classes.join(' ')}>
               {/* render the text of the main line*/}
               {this.editable 
