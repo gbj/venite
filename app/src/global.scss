@@ -222,7 +222,7 @@ body * {
   --ldf-drop-margin-right: 0.05em;
   --ldf-drop-line-height: 1em;
   --ldf-buffered-drop-margin-right: 0.15em;
-  --ldf-bible-reading-verse-number-display: inline;
+  --ldf-bible-reading-verse-number-display: none;
   --ldf-bible-reading-citation-float: right;
   --ldf-h3-text-align: left;
   --ldf-h3-font-variant: normal;
@@ -276,10 +276,8 @@ body * {
   }
 
   /* Unison Styling */
-  .bolded-both {
-    --ldf-unison-font-weight: var(--ldf-response-font-weight);
-    --ldf-unison-font-style: var(--ldf-response-font-style);
-  }
+  --ldf-unison-font-weight: var(--ldf-response-font-weight);
+  --ldf-unison-font-style: var(--ldf-response-font-style);
 
   .bolded-none {
     --ldf-unison-font-weight: normal;
@@ -325,8 +323,8 @@ body * {
   --ldf-antiphon-font-style: italic;
   --ldf-antiphon-font-weight: normal;
   --ldf-psalm-first-verse-number-display: none;
-  --ldf-psalm-number-display: inline-block;
-  --ldf-psalm-grid-display: grid;
+  --ldf-psalm-number-display: none;
+  --ldf-psalm-grid-display: block;
   --ldf-psalm-grid-template-columns: 2em 1fr;
   --ldf-psalm-grid-template-areas: "number verse";
   --ldf-psalm-halfverse-margin-left: 1em;
@@ -345,8 +343,13 @@ body * {
     --ldf-psalm-grid-display: block;
   }
 
-  .bibleverses-false {
-    --ldf-bible-reading-verse-number-display: none;
+  .psalmverses-true {
+    --ldf-psalm-number-display: inline-block;
+    --ldf-psalm-grid-display: grid;
+  }
+
+  .bibleverses-true {
+    --ldf-bible-reading-verse-number-display: inline;
   }
 
   --ldf-psalm-antiphon-display: block;
