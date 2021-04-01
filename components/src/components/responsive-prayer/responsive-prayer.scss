@@ -1,3 +1,8 @@
+:host {
+  text-align: var(--ldf-text-align);
+  text-justify: inter-character;
+}
+
 .response {
   font-weight: var(--ldf-response-font-weight);
   font-style: var(--ldf-response-font-style);
@@ -23,6 +28,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  > * {
+    text-align: var(--ldf-text-align);
+  }
 
   ldf-editable-boolean {
     width: 2em;

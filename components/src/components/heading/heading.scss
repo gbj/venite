@@ -1,6 +1,11 @@
 ldf-heading, :host {
   font-family: var(--ldf-font-face);
 
+  ldf-string {
+    display: block;
+    text-align: var(--ldf-text-align);
+  }
+
   ldf-label-bar.text {
     margin-top: var(--ldf-heading-margin-top);
   }
