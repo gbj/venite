@@ -91,6 +91,7 @@ import { MediaAction } from "capacitor-media-session";
 import { AudioService } from "./audio.service";
 import { selectableCitationToString } from "./selectable-citation-to-string";
 import { SelectedTextEvent } from "./selected-text-event";
+import { environment } from "src/environments/environment";
 const { Share, Clipboard, MediaSession } = Plugins;
 
 interface PrayState {
@@ -227,7 +228,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   ionViewWillLeave() {
-    if (this.bulletinMode) {
+    if (this.bulletinMode && this.editorState$) {
       this.editorState$.pipe(take(1)).subscribe((state) => {
         this.editorService.leave(state.localManager.docId);
         this.bulletinDocId$.next(null);
@@ -1302,22 +1303,23 @@ export class PrayPage implements OnInit, OnDestroy {
         "share-readings.Readings for "
       )} ${doc.label} (${doc.day?.date})`;
 
-      const text = readingsToShare
-        .map(
-          (reading) =>
-            `${reading.citation}\n\n${reading.value
-              .map((piece) =>
-                piece.type === "heading" ? "\n\n" : decode(piece.text)
-              )
-              .join("")}`
-        )
-        .join("\n\n\n\n");
+      const text =
+        readingsToShare
+          .map(
+            (reading) =>
+              `${reading.citation}\n\n${reading.value
+                .map((piece) =>
+                  piece.type === "heading" ? "\n\n" : decode(piece.text)
+                )
+                .join("")}`
+          )
+          .join("\n\n\n\n") + "\n\n";
 
       if (this.canShare) {
         Share.share({
           title,
           text,
-          url: window.location.toString(),
+          url: `${environment.baseUrl}${window.location.pathname}`,
           dialogTitle: this.translate.instant("share-readings.Share Readings"),
         });
       } else {
