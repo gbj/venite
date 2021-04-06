@@ -383,31 +383,33 @@ export class DocumentService {
         })
         .valueChanges();
 
-      const myDocs$ = this.auth.user.pipe(
-        filter((user) => Boolean(user)),
-        switchMap((user) => {
-          if (user?.uid) {
-            return this.afs
-              .collection<LiturgicalDocument>("Document", (ref) => {
-                let query = ref
-                  .where("slug", "==", slug)
-                  .where("language", "==", language)
-                  .where("sharing.owner", "==", user?.uid || "");
-                if (versions?.length > 0) {
-                  query = query.where(
-                    "version",
-                    "in",
-                    versions.filter((v) => Boolean(v))
-                  );
-                }
-                return query;
-              })
-              .valueChanges();
-          } else {
-            return of([]);
-          }
-        })
-      );
+      const myDocs$ = this.auth.user
+        .pipe(
+          filter((user) => Boolean(user)),
+          switchMap((user) => {
+            if (user?.uid) {
+              return this.afs
+                .collection<LiturgicalDocument>("Document", (ref) => {
+                  let query = ref
+                    .where("slug", "==", slug)
+                    .where("language", "==", language)
+                    .where("sharing.owner", "==", user?.uid || "");
+                  if (versions?.length > 0) {
+                    query = query.where(
+                      "version",
+                      "in",
+                      versions.filter((v) => Boolean(v))
+                    );
+                  }
+                  return query;
+                })
+                .valueChanges();
+            } else {
+              return of([]);
+            }
+          })
+        )
+        .pipe(startWith([]));
 
       const myOrganizationLiturgies$ = this.auth.user.pipe(
         filter((user) => Boolean(user?.uid)),
@@ -679,14 +681,43 @@ export class DocumentService {
     docId: string,
     doc: Partial<DTO<LiturgicalDocument>>
   ): Observable<any> {
-    return from(
+    /*return from(
       this.afs.doc(`Document/${docId}`).set({
         ...JSON.parse(
           JSON.stringify({ ...doc, slug: doc.slug || this.slugify(doc) })
         ),
         date_modified: firebase.firestore.Timestamp.now(),
       })
-    );
+    );*/
+    this.auth
+      .currentUser()
+      .getIdToken()
+      .then((token) => {
+        fetch(
+          `https://us-central1-venite-2.cloudfunctions.net/saveDocument?id=${docId}`,
+          //`http://localhost:5002/venite-2/us-central1/saveDocument?id=${docId}`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              ...doc,
+              slug: doc.slug || this.slugify(doc),
+            }),
+            headers: {
+              "Content-type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+      });
+    return of(null);
+    /*return from(
+      this.afs.doc(`Document/${docId}`).set({
+        ...JSON.parse(
+          JSON.stringify({ ...doc, slug: doc.slug || this.slugify(doc) })
+        ),
+        date_modified: firebase.firestore.Timestamp.now(),
+      })
+    );*/
   }
 
   deleteDocument(docId: string): Promise<void> {

@@ -34,7 +34,7 @@ service cloud.firestore {
     }
   
     match /Document/{docId} {
-      allow read: if true; //hasReadAccess(resource.data.sharing);
+      allow read: if true; //hasReadAccess(resource.data.sharing); // TODO fix
       allow update, delete: if hasWriteAccess(resource.data.sharing);
       allow create: if request.auth.uid != null;
     }

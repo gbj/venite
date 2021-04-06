@@ -32,11 +32,13 @@ const docSearch = (
           doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
           doc.data.category?.includes(search.toLowerCase()))
     )
-    .sort((a, b) => {
-      const aDate = a.data.date_modified?.toDate(),
-        bDate = b.data.date_modified?.toDate();
-      return aDate > bDate ? -1 : 1;
-    });
+    .sort((a, b) =>
+      a.data.date_modified?.toDate &&
+      b.data.date_modified?.toDate &&
+      a.data.date_modified?.toDate() > b.data.date_modified?.toDate()
+        ? -1
+        : 1
+    );
 
 @Component({
   selector: "venite-bulletins",

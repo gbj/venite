@@ -189,7 +189,9 @@ export class LiturgySelectComponent implements OnInit {
       this.properLiturgyPreference$,
     ]).pipe(map(([menu, proper]) => ({ ...menu, ...proper })));
 
-    const availableProperLiturgiesLiturgies$ = this.availableProperLiturgies$.pipe(
+    const availableProperLiturgiesLiturgies$: Observable<
+      LiturgicalDocument[] | undefined
+    > = this.availableProperLiturgies$.pipe(
       switchMap((liturgies) => {
         return combineLatest(
           liturgies
@@ -213,11 +215,10 @@ export class LiturgySelectComponent implements OnInit {
           (doc) => doc.language == language && doc.version == version
         );
         if (!matchesLanguageAndVersion) {
-          const matchesLanguage = documents.find(
-              (doc) => doc.language == language
-            ),
-            firstOption = documents[0];
-          return matchesLanguage || firstOption;
+          const matchesLanguage = documents.filter(
+            (doc) => doc.language == language
+          );
+          return matchesLanguage?.length > 0 ? matchesLanguage : docs;
         } else {
           return matchesLanguageAndVersion;
         }
@@ -230,9 +231,12 @@ export class LiturgySelectComponent implements OnInit {
       this.language$,
       this.version$
     ).pipe(
-      map(([liturgies, availableProperLiturgies, language, version]) =>
-        availableProperLiturgies
-          ? [availableProperLiturgies].concat(
+      map(([liturgies, availableProperLiturgies, language, version]) => {
+        return availableProperLiturgies
+          ? (Array.isArray(availableProperLiturgies)
+              ? availableProperLiturgies
+              : [availableProperLiturgies]
+            ).concat(
               liturgies.filter(
                 (liturgy) => !Boolean(liturgy?.metadata?.supplement)
               )
@@ -242,8 +246,8 @@ export class LiturgySelectComponent implements OnInit {
                 !Boolean(liturgy?.metadata?.supplement) &&
                 (!language || liturgy.language === language) &&
                 (!version || liturgy.version === version)
-            )
-      )
+            );
+      })
     );
 
     // Language, version, kalendar
@@ -325,15 +329,13 @@ export class LiturgySelectComponent implements OnInit {
         this.vigil$
       );
     } else {
-      this.day$ = this.calendarService
-        .buildDay(
-          this.date$,
-          this.kalendar$,
-          this.liturgy$,
-          of([]),
-          this.vigil$
-        )
-        .pipe(tap(() => console.log("day$ changed")));
+      this.day$ = this.calendarService.buildDay(
+        this.date$,
+        this.kalendar$,
+        this.liturgy$,
+        of([]),
+        this.vigil$
+      );
     }
     this.dayName$ = merge(this.day$, this.dayReset$);
 
@@ -393,7 +395,10 @@ export class LiturgySelectComponent implements OnInit {
           clientPreferences: clientPreferences as ClientPreferences,
           availableReadings: availableReadings as string[],
         })
-      )
+      ),
+      // any time any of the data changes, set isNavigating to false;
+      // so, for example, if we change date or liturgy the button is no longer disabled
+      tap(() => (this.isNavigating = false))
     );
 
     // Load language/version/kalendar from preferences
@@ -401,7 +406,6 @@ export class LiturgySelectComponent implements OnInit {
       .get("language")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
         take(1)
       )
       .subscribe((pref) => {
@@ -411,7 +415,6 @@ export class LiturgySelectComponent implements OnInit {
       .get("version")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
         take(1)
       )
       .subscribe((pref) => {
@@ -421,7 +424,6 @@ export class LiturgySelectComponent implements OnInit {
       .get("kalendar")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        tap((pref) => console.log("pref ", pref.key, "is", pref.value)),
         take(1)
       )
       .subscribe((pref) => this.form.controls.kalendar.setValue(pref.value));

@@ -81,10 +81,9 @@ export class EditorComponent {
       // Cursor is somewhere
       const target : HTMLElement = elementFromPath(this.parent, data.path);
       if(target) {
-        let textarea : HTMLTextAreaElement | HTMLInputElement = target.shadowRoot.querySelector('textarea');
-        if(!textarea) {
-          textarea = target.shadowRoot.querySelector('input');
-        }
+        const textarea : HTMLElement = target.shadowRoot
+          ? target.shadowRoot.querySelector('textarea') || target.shadowRoot.querySelector('input') || target.shadowRoot.querySelector('> *')
+          : target.querySelector('textarea') || target.querySelector('input') || target.querySelector('> *');
 
         const rect = textarea.getBoundingClientRect();
 

@@ -56,7 +56,12 @@ export class CalendarService implements CalendarServiceInterface {
             .where("slug", "==", day.slug)
             .where("language", "==", language ?? "en")
         )
-        .valueChanges();
+        .valueChanges()
+        .pipe(
+          tap((liturgies) =>
+            console.log("(CalendarService) findProperLiturgies", liturgies)
+          )
+        );
     } else {
       return of([]);
     }

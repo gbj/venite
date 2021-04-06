@@ -4,6 +4,24 @@ import firebase from "firebase/app";
 import * as json1 from "ot-json1";
 import { JSONOp } from "ot-json1/dist/types";
 
+function subscriberCount<T>(
+  sourceObservable: Observable<T>,
+  description: string
+) {
+  let counter = 0;
+  return Observable.create((subscriber: Subscriber<T>) => {
+    const subscription = sourceObservable.subscribe(subscriber);
+    counter++;
+    console.log(`${description} subscriptions: ${counter}`);
+
+    return () => {
+      subscription.unsubscribe();
+      counter--;
+      console.log(`${description} subscriptions: ${counter}`);
+    };
+  });
+}
+
 import {
   Cursor,
   Change,
@@ -18,6 +36,7 @@ import {
   from,
   BehaviorSubject,
   Subscription,
+  Subscriber,
 } from "rxjs";
 import {
   ServerDocumentManager,
@@ -34,6 +53,12 @@ import {
   filter,
   mapTo,
   startWith,
+  distinct,
+  distinctUntilChanged,
+  pairwise,
+  throttleTime,
+  shareReplay,
+  distinctUntilKeyChanged,
 } from "rxjs/operators";
 import { AuthService } from "../../auth/auth.service";
 import { randomColor } from "./random-color";
@@ -110,17 +135,31 @@ export class EditorService {
     });
 
     // update the document once every 3s
-    const docSaved$ = combineLatest(localManager$, revisions$).pipe(
-      //tap(([localManager, revisions]) => //console.log('change made, saving')),
-      debounceTime(3000),
-      switchMap(([localManager]) =>
+    const docSaved$ =
+      /*combineLatest(localManager$, revisions$)*/
+      localManager$.pipe(
+        /*distinctUntilKeyChanged("lastSyncedRevision"),
+        tap((manager) =>
+          console.log("saving filtered revision", manager.lastSyncedRevision)
+        ),*/
+        //filter(([, revisions]) => revisions?.length > 0),
+        /*distinctUntilChanged(
+        ([localManagerA], [localManagerB]) =>
+          JSON.stringify(localManagerA.document) !==
+          JSON.stringify(localManagerB.document)
+      ),*/
+        /*shareReplay(),
+        tap((document) =>
+          console.log("saving ", JSON.stringify(document).length, "bytes")
+        ),*/
+        /*switchMap(([localManager]) =>
         this.documents.saveDocument(localManager.docId, {
           ...localManager.document,
           lastRevision: localManager.lastSyncedRevision,
         })
-      ),
-      mapTo(new Date())
-    );
+      ),*/
+        mapTo(new Date())
+      );
 
     // Pull Bible reading introduction options based on language of document we're editing
     const bibleIntros$ = localManager$.pipe(
@@ -402,6 +441,12 @@ export class EditorService {
           ) as Partial<LiturgicalDocument>
         );
 
+        // optimistically save the document
+        this.documents.saveDocument(manager.docId, {
+          ...manager.document,
+          lastRevision: manager.lastSyncedRevision,
+        });
+
         //console.log('old state of document is', manager.document);
         //console.log('op is', change.op);
         //console.log('new state of document after change is ', manager.document, 'from op', change.op);
@@ -444,9 +489,16 @@ export class EditorService {
       // revert to document before change
       manager.document = docBeforeChange;
 
+      // save reverted version of document
+      this.documents.saveDocument(manager.docId, {
+        ...manager.document,
+        lastRevision: manager.lastSyncedRevision,
+      });
+
       // remove change from pending and put it in rejected
       manager.pendingChanges.shift();
-      manager.rejectedChanges.push(change);
+      // TODO only push to rejectedChanges if it's a "Missing permissions" error
+      // manager.rejectedChanges.push(change);
       manager.hasBeenAcknowledged = true;
 
       // send error codes to UI
@@ -544,25 +596,27 @@ export class EditorService {
             localManager.hasBeenAcknowledged &&
             change.actorId !== this._actorId
           ) {
+            const op =
+              typeof change.op === "string" ? JSON.parse(change.op) : change.op;
             // apply to local document
             //@ts-ignore
             localManager.document = json1.type.apply(
               //@ts-ignore
               localManager.document,
-              change.op
+              op
             );
             // apply to any pending changes
             const rejected = localManager.rejectedChanges.map(
               (localChange) => ({
                 ...localChange,
-                op: json1.type.transform(localChange.op, change.op, "left"),
+                op: json1.type.transform(localChange.op, op, "left"),
                 lastRevision: serverManager.lastRevision + changeIndex + 1,
               })
             );
             localManager.pendingChanges = rejected.concat(
               localManager.pendingChanges.map((localChange) => ({
                 ...localChange,
-                op: json1.type.transform(localChange.op, change.op, "left"),
+                op: json1.type.transform(localChange.op, op, "left"),
                 lastRevision: serverManager.lastRevision + changeIndex + 1,
               }))
             );
