@@ -1319,7 +1319,10 @@ export class PrayPage implements OnInit, OnDestroy {
         Share.share({
           title,
           text,
-          url: `${environment.baseUrl}${window.location.pathname}`,
+          url: `${environment.baseUrl}${window.location.pathname}`.replace(
+            "//",
+            "/"
+          ),
           dialogTitle: this.translate.instant("share-readings.Share Readings"),
         });
       } else {
