@@ -703,10 +703,17 @@ export class PrayService {
             })
         )
       ),
-      // pack these into a `Liturgy` object
+      // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
+      // in which case multiple entries means multiples options, as in the RCL
       map(
         (docs) =>
-          new LiturgicalDocument({ ...docsToLiturgy(docs), lookup: undefined })
+          new LiturgicalDocument({
+            ...(doc?.lookup?.allow_multiple === undefined ||
+            Boolean(doc?.lookup?.allow_multiple)
+              ? docsToLiturgy(docs)
+              : docsToOption(docs)),
+            lookup: undefined,
+          })
       ),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
