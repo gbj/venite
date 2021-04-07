@@ -317,7 +317,7 @@ export class PsalmComponent {
                     templateMaker={templateMaker}>
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
-                    citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
+                    citation={{label: this.obj?.label, book: this.obj?.style === 'psalm' ? 'Psalm' : undefined, chapter: this.obj?.metadata?.number, verse: verse.number}}
                     dropcap={sectionIndex == 0 && verseIndex == 0 ? 'force' : 'disabled'}
                     index={verseIndex}
                     fragment={this.path}
@@ -340,7 +340,7 @@ export class PsalmComponent {
                     template={pattern}>
                   </ldf-editable-text> :
                   <ldf-string text={verse.halfverse}
-                    citation={{book: 'Psalm', chapter: this.obj.metadata && this.obj.metadata.number, verse: verse.number}}
+                    citation={{label: this.obj?.label, book: this.obj?.style === 'psalm' ? 'Psalm' : undefined, chapter: this.obj?.metadata?.number, verse: verse.number}}
                     dropcap='disabled'
                     fragment={this.path}
                   >

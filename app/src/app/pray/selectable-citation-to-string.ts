@@ -5,8 +5,8 @@ export function selectableCitationToString(
 ): string {
   return typeof citation === "string"
     ? citation
-    : citation?.label ??
-        (citation?.book &&
-          `${citation?.book} ${citation?.chapter}:${citation?.verse}`) ??
+    : (citation?.book &&
+        `${citation?.book} ${citation?.chapter}:${citation?.verse}`) ??
+        citation?.label ??
         undefined;
 }
