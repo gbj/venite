@@ -1091,25 +1091,29 @@ export class PrayPage implements OnInit, OnDestroy {
         this.speechPlayingUtterance = data.utterance ?? 0;
 
         // update metadata for doc
-        const utterance = (data.data as SpeechSynthesisEvent).utterance;
+        const utterance: SpeechSynthesisUtterance =
+          (data.data as SpeechSynthesisEvent).utterance || data.data.target;
         if (utterance) {
-          const docLabel = (doc: LiturgicalDocument) => {
+          const docLabel = (childDoc: LiturgicalDocument) => {
             try {
-              return subdoc?.type === "option"
+              return childDoc?.type === "option"
                 ? docLabel(
-                    (subdoc as Option).value[subdoc?.metadata?.selected ?? 0]
+                    (childDoc as Option).value[
+                      childDoc?.metadata?.selected ?? 0
+                    ]
                   )
-                : subdoc?.citation || subdoc?.label || utterance.text;
+                : childDoc?.citation ||
+                    childDoc?.label ||
+                    utterance?.text ||
+                    doc?.label;
             } catch (e) {
-              return utterance.text;
+              return utterance?.text || doc?.label;
             }
           };
           const subdoc = (doc.value[data.subdoc]?.hasOwnProperty("type")
               ? doc.value[data.subdoc]
               : undefined) as LiturgicalDocument,
             title = docLabel(subdoc);
-
-          console.log(title);
 
           MediaSession.setMetadata({
             artist: "Venite",
@@ -1145,6 +1149,11 @@ export class PrayPage implements OnInit, OnDestroy {
     this.audio?.pause();
   }
   resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
+    console.log(
+      "resuming",
+      this.speechPlayingSubDoc,
+      this.speechPlayingUtterance
+    );
     this.startSpeechAt(
       doc,
       settings,
@@ -1156,6 +1165,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
   rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
     this.speechSubscription.unsubscribe();
+    this.speechPlayingUtterance = 0;
     if (this.speechPlayingUtterance - this.speechUtteranceAtStartOfSubDoc < 5) {
       //console.log('rewind to previous doc')
       this.startSpeechAt(
@@ -1171,6 +1181,7 @@ export class PrayPage implements OnInit, OnDestroy {
   fastForward(doc: LiturgicalDocument, settings: DisplaySettings) {
     this.speechSubscription.unsubscribe();
     //console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
+    this.speechPlayingUtterance = 0;
     this.startSpeechAt(doc, settings, this.speechPlayingSubDoc + 1);
   }
 

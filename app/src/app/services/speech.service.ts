@@ -315,38 +315,39 @@ export class SpeechService {
     // speakDoc() body
     this.isPlaying = true;
     const subdocs = doc?.type === "liturgy" ? (doc as Liturgy).value : [doc],
-      unskippedSubdocs = subdocs.slice(index),
-      utterances = unskippedSubdocs
-        .map((sd, subdocIdx) =>
-          docToUtterances(sd)
-            .slice(startingUtteranceIndex)
-            .filter((value) => Boolean(value))
-            .map((value, utteranceIdx) =>
-              typeof value === "string"
-                ? speak(
-                    this.utteranceFromText(
-                      processText(value),
-                      doc.language ?? "en",
-                      settings
-                    )
-                  ).pipe(
-                    map((data) => ({
-                      subdoc: subdocIdx + index,
-                      utterance: utteranceIdx + startingUtteranceIndex,
-                      data,
-                    }))
+      unskippedSubdocs = subdocs.slice(index);
+    const utterances = unskippedSubdocs
+      .map((sd, subdocIdx) =>
+        docToUtterances(sd)
+          // start at the given offset, but only for the first subdoc
+          // (i.e., if we paused at v. 3 of the psalm, start at v 3 -- but don't slice other docs)
+          .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
+          .filter((value) => Boolean(value))
+          .map((value, utteranceIdx) =>
+            typeof value === "string"
+              ? speak(
+                  this.utteranceFromText(
+                    processText(value),
+                    doc.language ?? "en",
+                    settings
                   )
-                : timer(value).pipe(
-                    map((data) => ({
-                      subdoc: subdocIdx + index,
-                      utterance: utteranceIdx + startingUtteranceIndex,
-                      data,
-                    }))
-                  )
-            )
-        )
-        .flat();
-    //console.log('(speech) speakDoc', utterances);
+                ).pipe(
+                  map((data) => ({
+                    subdoc: subdocIdx + index,
+                    utterance: utteranceIdx + startingUtteranceIndex,
+                    data,
+                  }))
+                )
+              : timer(value).pipe(
+                  map((data) => ({
+                    subdoc: subdocIdx + index,
+                    utterance: utteranceIdx + startingUtteranceIndex,
+                    data,
+                  }))
+                )
+          )
+      )
+      .flat();
     return concat(...utterances);
   }
 
