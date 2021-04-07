@@ -29,7 +29,9 @@ export class PsalmSelectComponent implements OnInit {
     this.error = undefined;
     const citation = this.entry.value,
       match = citation.replace(/Ps[\w\.]*\s*/g, "").split(/\s*[,:\s]\s*/),
-      psalm = this.options.find((p) => p.slug === `psalm_${match[0]}`);
+      psalm = this.options.find(
+        (p) => p.slug === `psalm_${match[0]}` && p.version === "bcp1979"
+      );
     if (psalm) {
       psalm.citation = citation;
       this.psalmSelected.emit(psalm);
