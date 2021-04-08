@@ -112,6 +112,7 @@ export class LectionaryService {
                   "morning_psalms",
                   "second_reading",
                   "gospel",
+                  "palms_gospel",
                 ].includes(readingType)
               ) {
                 return entries.filter(
