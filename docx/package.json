@@ -1,6 +1,6 @@
 {
   "name": "@venite/docx",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Convert Liturgical Document Format (LDF) JSON spec in @venite/ldf to DOCX files",
   "main": "dist/index.js",
   "scripts": {

@@ -634,6 +634,7 @@
       "hidden": false,
       "type": "text",
       "style": "text",
+      "label": "The Lord’s Prayer",
       "value": [
         "OUR Father who art in heaven, Hallowed be thy Name, Thy kingdom come, Thy will be done, on earth as it is in heaven. Give us this day our daily bread; And forgive us our trespasses, As we forgive them that trespass against us; And lead us not into temptation, But deliver us from evil. For thine is the kingdom, the power, and the glory, For ever and ever. Amen."
       ],
@@ -926,6 +927,7 @@
       "type": "psalm",
       "style": "psalm",
       "label": "Venite, Exultemus Domino. Psalm 95.",
+      "display_format": "wholeverse",
       "metadata": {
         "insert_seasonal_antiphon": false,
         "number": "95",
@@ -1201,6 +1203,7 @@
               "hidden": false,
               "type": "psalm",
               "style": "psalm",
+              "display_format": "halfverse",
               "metadata": {
                 "number": "1",
                 "latinname": "Beatus vir, qui non abiit.",

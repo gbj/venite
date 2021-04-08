@@ -6,25 +6,24 @@ import { DocxChild, docxChildrenFromLDF } from "./ldf-to-docx";
 import { LocaleStrings } from "./locale-strings";
 import { processText } from "./process-text";
 
-export function genericTextToDocx(
+export async function genericTextToDocx(
   doc: Refrain | Text | Rubric,
   style: LDFStyles,
   displaySettings: DisplaySettings,
   localeStrings: LocaleStrings
-): DocxChild[] {
-  const heading =
-      doc.label || doc.citation
-        ? docxChildrenFromLDF(
-            new Heading({
-              type: "heading",
-              metadata: { level: 3 },
-              value: [doc.label],
-              citation: doc.citation,
-            }),
-            displaySettings,
-            localeStrings
-          )
-        : [],
+): Promise<DocxChild[]> {
+  const heading = await (doc.label || doc.citation
+      ? docxChildrenFromLDF(
+          new Heading({
+            type: "heading",
+            metadata: { level: 3 },
+            value: [doc.label],
+            citation: doc.citation,
+          }),
+          displaySettings,
+          localeStrings
+        )
+      : Promise.resolve([])),
     response =
       (doc.metadata?.response || doc.style == "prayer") &&
       !doc.metadata?.omit_response
@@ -37,14 +36,16 @@ export function genericTextToDocx(
           ]
         : [];
 
-  return (doc.value || []).map(
-    (p, ii) =>
-      new Paragraph({
-        style,
-        children:
-          ii == doc.value.length - 1
-            ? processText(p).concat(response)
-            : processText(p),
-      })
+  return heading.concat(
+    (doc.value || []).map(
+      (p, ii) =>
+        new Paragraph({
+          style,
+          children:
+            ii == doc.value.length - 1
+              ? processText(p).concat(response)
+              : processText(p),
+        })
+    )
   );
 }

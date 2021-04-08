@@ -800,18 +800,15 @@ export class PrayPage implements OnInit, OnDestroy {
     const filename = `${doc.label}${
         doc?.day?.date ? ` - ${doc.day.date}` : ""
       }.docx`,
-      resp = await fetch(
-        `https://us-central1-venite-2.cloudfunctions.net/docx`,
-        {
-          method: "POST",
-          cache: "no-cache",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({ doc, settings }),
-        }
-      ),
+      resp = await fetch(`http://localhost:5002/venite-2/us-central1/docx`, {
+        method: "POST",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ doc, settings }),
+      }),
       blob = await resp.blob();
 
     // download the blob

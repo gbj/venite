@@ -115,7 +115,9 @@ export async function docxChildrenFromLDF(
     case "text":
       return genericTextToDocx(
         inDoc as Text,
-        LDFStyles.Normal,
+        inDoc?.display_format === "unison"
+          ? LDFStyles.Unison
+          : LDFStyles.Normal,
         displaySettings,
         localeStrings
       );
