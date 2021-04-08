@@ -10,7 +10,7 @@ const LOCALE = {
 @Component({
   tag: 'ldf-heading',
   styleUrl: 'heading.scss',
-  scoped: true
+  shadow: true
 })
 export class HeadingComponent {
   @Element() element : HTMLElement;
@@ -198,11 +198,11 @@ export class HeadingComponent {
           {/* `Heading.citation` => right-aligned */}
           <slot name='citation' slot='end'>
             {hasSource && this.sourceNode(this.obj.source)}
-            {hasCitation && !hasSource && this.obj.citation !== this.obj.value[0] && this.citationNode(this.obj.citation)}
+            {hasCitation && !hasSource && this.obj.citation !== this.obj.label && this.obj.citation !== this.obj.value[0] && this.citationNode(this.obj.citation)}
           </slot>
         </ldf-label-bar>
 
-        <div>{hasSource && hasCitation && this.citationNode(this.obj.citation, 'none')}</div>
+        <div>{hasSource && hasCitation && this.obj.citation !== this.obj.label && this.citationNode(this.obj.citation, 'none')}</div>
 
         {/* `Heading.value[2..]` => on a new line` */}
         {this.obj?.value?.length > 2 && this.obj.value.slice(2, this.obj.value.length).map((text, index) => this.textNode(text, index + 2))}

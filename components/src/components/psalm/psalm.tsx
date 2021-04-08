@@ -131,7 +131,7 @@ export class PsalmComponent {
     const heading = new Heading({
       type: 'heading',
       metadata: { level },
-      citation: !omitCitation ? this.obj?.citation : undefined,
+      citation: !omitCitation && this.obj?.citation !== this.obj?.label ? this.obj?.citation : undefined,
       value: [value ?? label],
       source: this.obj?.source
     })
