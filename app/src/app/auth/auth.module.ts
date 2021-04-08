@@ -7,7 +7,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import { FormsModule } from "@angular/forms";
 
 // Venite content
-import { AuthMenuButtonComponent } from "./auth-menu-button/auth-menu-button.component";
+import { AuthMenuButtonComponent } from "../shared/auth-menu-button/auth-menu-button.component";
 import { AuthMenuComponent } from "./auth-menu/auth-menu.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
@@ -24,7 +24,6 @@ import { CreateOrganizationComponent } from "./create-organization/create-organi
     FormsModule,
   ],
   declarations: [
-    AuthMenuButtonComponent,
     AuthMenuComponent,
     EditAvatarComponent,
     JoinOrganizationComponent,
@@ -34,7 +33,6 @@ import { CreateOrganizationComponent } from "./create-organization/create-organi
     UserComponent,
   ],
   exports: [
-    AuthMenuButtonComponent,
     AuthMenuComponent,
     EditAvatarComponent,
     JoinOrganizationComponent,

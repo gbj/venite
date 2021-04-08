@@ -11,6 +11,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import { MemberChipComponent } from "./member-chip/member-chip.component";
 import { AuthModule } from "../auth/auth.module";
 import { DragDropModule } from "../drag-drop/drag-drop.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -19,8 +20,8 @@ import { DragDropModule } from "../drag-drop/drag-drop.module";
     IonicModule,
     OrganizationPageRoutingModule,
     TranslateModule.forChild(),
-    AuthModule,
     DragDropModule,
+    SharedModule,
   ],
   declarations: [OrganizationPage, MemberChipComponent],
 })

@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { LoadingController, ModalController } from "@ionic/angular";
 
-import { AuthService } from "../auth.service";
-import { LoginComponent } from "../login/login.component";
+import { AuthService } from "../../auth/auth.service";
+import { LoginComponent } from "../../auth/login/login.component";
 
 import { Subscription } from "rxjs";
 
