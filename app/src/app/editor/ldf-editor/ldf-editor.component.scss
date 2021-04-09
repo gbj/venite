@@ -2,7 +2,7 @@ ldf-editor {
   display: block;
   margin: auto;
   padding-bottom: 2em;
-  max-width: 800px;
+  max-width: var(--ldf-max-width);
 }
 
 .loading {
@@ -47,7 +47,7 @@ ldf-editor {
 }
 
 .ldf-wrapper {
-  max-width: calc(600px + 2em);
+  max-width: calc(100vw - 2em);
   margin: auto;
   background-color: var(--ldf-background-color);
   padding: 1em;
