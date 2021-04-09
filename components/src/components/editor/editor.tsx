@@ -128,7 +128,7 @@ export class EditorComponent {
     if(previousIndex >= 0) {
       // otherwise, look up the value of the previous element
       const previousElement = elementFromPath(this.el, previousPath),
-            textarea = previousElement.shadowRoot.querySelector('textarea'),
+            textarea = previousElement.shadowRoot?.querySelector('textarea') || previousElement.querySelector('textarea'),
             previousValue = textarea?.value,
             // delete the deleted node
             deleteOp = {
@@ -166,7 +166,7 @@ export class EditorComponent {
 
   @Listen('ldfAskForBibleIntros', { target: 'document' })
   onAskForBibleIntros(ev : CustomEvent) {
-    this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields'));
+    this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields') || (ev.target as HTMLElement).querySelector('ldf-editable-metadata-metadata-fields'));
   }
 
   @Listen('ldfAskForCanticleOptions', { target: 'document' })
