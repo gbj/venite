@@ -15,6 +15,7 @@ import { DocumentService, IdAndDoc } from "../services/document.service";
 import { DownloadService } from "../services/download.service";
 import { slugify } from "../slugify";
 import { CreateBulletinModalComponent } from "./create-bulletin-modal/create-bulletin-modal.component";
+import firebase from "firebase/app";
 
 const docSearch = (
   includeBulletins: boolean,
@@ -32,9 +33,23 @@ const docSearch = (
           doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
           doc.data.category?.includes(search.toLowerCase()))
     )
+    .map((a) =>
+      a.data.date_modified && !a.data.date_modified?.toDate
+        ? {
+            ...a,
+            data: new LiturgicalDocument({
+              ...a.data,
+              date_modified: new firebase.firestore.Timestamp(
+                a.data.date_modified.seconds,
+                a.data.date_modified.nanoseconds
+              ),
+            }),
+          }
+        : a
+    )
     .sort((a, b) =>
-      a.data.date_modified?.toDate &&
-      b.data.date_modified?.toDate &&
+      !a.data.date_modified?.toDate ||
+      !b.data.date_modified?.toDate ||
       a.data.date_modified?.toDate() > b.data.date_modified?.toDate()
         ? -1
         : 1

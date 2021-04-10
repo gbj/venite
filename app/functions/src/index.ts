@@ -77,7 +77,10 @@ export const saveDocument = functions.https.onRequest(
                   (data?.sharing?.organization &&
                     userInOrg(uid, data.sharing.organization)))
               ) {
-                await ref.set(request.body);
+                await ref.set({
+                  ...request.body,
+                  date_modified: admin.firestore.Timestamp.now(),
+                });
                 response.status(200).send("Updated document");
               } else {
                 response

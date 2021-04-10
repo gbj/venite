@@ -74,6 +74,7 @@
         <h3>{{ doc.data?.label || doc.data?.slug }} <ng-container *ngIf="doc.data?.day">({{ doc.data?.day?.date }})</ng-container></h3>
         <h4>{{ doc.data?.sharing?.status }} | {{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
         <p *ngIf="doc.data?.date_modified && doc.data.date_modified.toDate">{{ 'editor.modified' | translate }} {{ doc.data?.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+        <ion-badge *ngIf="doc.data.day" [style]="{'--background': doc.data.day?.color}">{{ doc.data.day?.season }}</ion-badge>
       </ion-label>
       <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
         <ion-button (click)="download(doc.data)">
