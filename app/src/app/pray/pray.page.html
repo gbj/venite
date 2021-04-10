@@ -63,20 +63,28 @@
       <ng-container *ngIf="!bulletinMode">
         <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
           <ng-container *ngIf="doc$ | async as doc else loading">
-            <div style="--ldf-font-face: {{doc?.metadata?.font}}; --ldf-drop-font-family: {{doc?.metadata?.font}};">
-              <ng-container *ngIf="swapData$ | async as data">
-                <ldf-liturgical-document
-                  (document:ldfSelectionChange)="selectionChange($event)"
-                  [class]="{'icon-visible': !isBulletin}"
-                  path="/"
-                  [doc]="doc"
-                  [editable]="false"
-                  (ldfDocShouldChange)="changeDoc(doc, $event)"
-                  (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
-                  (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
-                ></ldf-liturgical-document>
-              </ng-container>
-            </div>
+            <ng-container *ngIf="doc.slug == 'LDF_ERROR_NOT_FOUND'">
+              <div class="not-found">
+                <ion-icon color="danger" name="alert-circle-outline"></ion-icon>
+                <ion-text color="danger"><h1>{{ 'bulletins.not-found' | translate }}</h1><p>{{ 'bulletins.not-found-message' | translate }}</p></ion-text>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="doc.slug !== 'LDF_ERROR_NOT_FOUND'">
+              <div style="--ldf-font-face: {{doc?.metadata?.font}}; --ldf-drop-font-family: {{doc?.metadata?.font}};">
+                <ng-container *ngIf="swapData$ | async as data">
+                  <ldf-liturgical-document
+                    (document:ldfSelectionChange)="selectionChange($event)"
+                    [class]="{'icon-visible': !isBulletin}"
+                    path="/"
+                    [doc]="doc"
+                    [editable]="false"
+                    (ldfDocShouldChange)="changeDoc(doc, $event)"
+                    (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
+                    (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
+                  ></ldf-liturgical-document>
+                </ng-container>
+              </div>
+            </ng-container>
           </ng-container>
         </div>
       </ng-container>

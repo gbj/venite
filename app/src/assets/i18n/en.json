@@ -78,7 +78,9 @@
     "ok": "OK",
     "conflict-found": "URL Conflict Found",
     "conflict-found-message": "You already have a bulletin at that same URL. Should we rename the old bulletin, so you can use the URL for this new one?",
-    "slug": "Nickname"
+    "slug": "Nickname",
+    "not-found": "Bulletin Not Found",
+    "not-found-message": "Something’s gone wrong. It’s possible you followed a broken link, or another error has occurred in loading this liturgy."
   },
   "darkmode": {
     "darkmode": "Dark Mode",

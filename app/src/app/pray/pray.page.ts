@@ -15,6 +15,7 @@ import {
   BehaviorSubject,
   Subscription,
   from,
+  Subject,
 } from "rxjs";
 import {
   mapTo,
@@ -134,9 +135,10 @@ export class PrayPage implements OnInit, OnDestroy {
   color$: Observable<string | null>;
   userProfile$: Observable<UserProfile | null>;
   userOrgs$: Observable<Organization[]>;
-  modifiedDoc$: BehaviorSubject<LiturgicalDocument | null> = new BehaviorSubject(
-    null
-  );
+  modifiedDoc$: BehaviorSubject<
+    LiturgicalDocument | undefined | null
+  > = new BehaviorSubject(undefined);
+  docNotFound$: Subject<null> = new Subject();
 
   // Liturgy data to be loaded from the database if we come straight to this page
   state$: Observable<PrayState>;
@@ -284,7 +286,13 @@ export class PrayPage implements OnInit, OnDestroy {
               .pipe(map((doc) => [doc]));
           } else if (orgId && slug) {
             this.isBulletin = true;
-            return this.documents.findOrganizationLiturgy(orgId, slug);
+            return this.documents.findOrganizationLiturgy(orgId, slug).pipe(
+              tap((docs) => {
+                if (docs?.length == 0) {
+                  this.docNotFound$.next(null);
+                }
+              })
+            );
           } else {
             return this.documents
               .findDocumentsBySlug(liturgy, language, new Array(version))
@@ -436,14 +444,23 @@ export class PrayPage implements OnInit, OnDestroy {
     } else {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
-      this.doc$ = merge(stateDoc$, this.modifiedDoc$).pipe(
+      this.doc$ = merge(stateDoc$, this.modifiedDoc$, this.docNotFound$).pipe(
         // flatten for TTS purposes
         map((doc) => {
-          const flattened = docsToLiturgy(this.flattenDoc(doc));
-          return new LiturgicalDocument({
-            ...doc,
-            value: flattened?.value || doc?.value,
-          });
+          if (doc) {
+            const flattened = docsToLiturgy(this.flattenDoc(doc));
+            return new LiturgicalDocument({
+              ...doc,
+              value: flattened?.value || doc?.value,
+            });
+          } else if (doc === null) {
+            return new LiturgicalDocument({
+              type: "liturgy",
+              slug: "LDF_ERROR_NOT_FOUND",
+            });
+          } else {
+            return undefined;
+          }
         })
       );
     }
