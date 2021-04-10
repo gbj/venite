@@ -1099,10 +1099,12 @@ export class PrayPage implements OnInit, OnDestroy {
                       childDoc?.metadata?.selected ?? 0
                     ]
                   )
+                : childDoc?.style === "canticle"
+                ? childDoc.label
                 : childDoc?.citation ||
-                    childDoc?.label ||
-                    utterance?.text ||
-                    doc?.label;
+                  childDoc?.label ||
+                  utterance?.text ||
+                  doc?.label;
             } catch (e) {
               return utterance?.text || doc?.label;
             }
