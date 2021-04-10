@@ -19,6 +19,7 @@ export async function genericTextToDocx(
             metadata: { level: 3 },
             value: [doc.label],
             citation: doc.citation,
+            source: doc.source,
           }),
           displaySettings,
           localeStrings

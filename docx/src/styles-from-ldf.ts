@@ -139,7 +139,25 @@ const STYLES = {
         font: "Garamond",
         size: 24,
         color: "000000",
+        italics: false,
+        bold: true,
+      },
+      paragraph: {
+        spacing: {
+          after: 240,
+          before: 480,
+        },
+      },
+    },
+    {
+      id: "Heading_4",
+      name: "Heading 4",
+      run: {
+        font: "Garamond",
+        size: 24,
+        color: "000000",
         italics: true,
+        bold: false,
       },
       paragraph: {
         spacing: {

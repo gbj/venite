@@ -26,7 +26,8 @@ export async function psalmToDocx(
   function headingNode(
     value: string | undefined = undefined,
     level: number = 3,
-    showLatinName: boolean = true
+    showLatinName: boolean = true,
+    showCitation: boolean = true
   ): DocxChild[] {
     let label: string = obj.label;
     if (
@@ -46,9 +47,9 @@ export async function psalmToDocx(
     const heading = new Heading({
       type: "heading",
       metadata: { level },
-      citation: obj?.citation,
+      citation: showCitation ? obj?.citation : undefined,
       value: [value ?? label],
-      source: obj?.source,
+      source: showCitation ? obj?.source : undefined,
     });
     return headingToDocx(heading, localeStrings);
   }
@@ -136,7 +137,7 @@ export async function psalmToDocx(
     ...(includeAntiphon ? await antiphonNode(obj?.metadata?.antiphon) : []),
     ...filteredValue
       .map((section) => [
-        ...(section.label ? headingNode(section.label, 4, false) : []),
+        ...(section.label ? headingNode(section.label, 4, false, false) : []),
         ...section.value
           .map((verse: any) => [
             ...(verse.hasOwnProperty("type") && verse.type === "heading"
