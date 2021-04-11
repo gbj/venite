@@ -1,10 +1,7 @@
-import { Injectable, Inject, ComponentFactoryResolver } from "@angular/core";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from "@angular/fire/firestore";
+import { Injectable, Inject } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/firestore";
 
-import { Observable, of, from, merge, Subject } from "rxjs";
+import { Observable, of, from, merge, Subject, combineLatest } from "rxjs";
 import { switchMap, map, tap, filter } from "rxjs/operators";
 
 import {
@@ -14,13 +11,32 @@ import {
 } from "@venite/ng-service-api";
 import { LocalStorageService } from "@venite/ng-localstorage";
 
-import { LiturgicalDocument, versionToString } from "@venite/ldf";
+import {
+  DisplaySettings,
+  LiturgicalDocument,
+  versionToString,
+} from "@venite/ldf";
 import { isOnline } from "../editor/ldf-editor/is-online";
+
+type OldPreferences = {
+  defaultLanguage?: string;
+  defaultVersion?: string;
+  displaySettings?: DisplaySettings;
+  preferences?: {
+    [language: string]: {
+      [version: string]: {
+        [slug: string]: Record<string, string>;
+      };
+    };
+  };
+};
 
 @Injectable({
   providedIn: "root",
 })
 export class PreferencesService {
+  private _oldVenitePreferences: Promise<OldPreferences>;
+
   private _updated: {
     [key: string]: Subject<StoredPreference>;
   } = {};
@@ -29,7 +45,66 @@ export class PreferencesService {
     private readonly afs: AngularFirestore,
     @Inject(AUTH_SERVICE) private readonly auth: AuthServiceInterface,
     private readonly storage: LocalStorageService
-  ) {}
+  ) {
+    this._oldVenitePreferences = this.loadOldPreferences();
+  }
+
+  private async loadOldPreferences() {
+    const oldPrefs = await this.storage.get("preferences");
+    if (oldPrefs) {
+      try {
+        this._oldVenitePreferences = JSON.parse(oldPrefs);
+      } catch (e) {
+        console.warn(e);
+      }
+    }
+    return oldPrefs;
+  }
+
+  private async getOldPref(
+    key: string,
+    liturgy: LiturgicalDocument = undefined
+  ): Promise<StoredPreference> {
+    const old = await this._oldVenitePreferences;
+    console.log("getOldPref", key, old);
+    if (key === "language") {
+      return { key: "language", value: old.defaultLanguage };
+    } else if (key === "version") {
+      return { key: "version", value: old.defaultVersion };
+    } else {
+      if (liturgy) {
+        const value = (((old[liturgy.language] || {})[
+          versionToString(liturgy.version)
+        ] || {})[liturgy.slug?.replace("-", "_")] || {})[key];
+        return { key, value };
+      } else {
+        return { key, value: (old.displaySettings || {})[key] };
+      }
+    }
+  }
+
+  private async getOldPrefsForLiturgy(
+    liturgy: LiturgicalDocument
+  ): Promise<StoredPreference[]> {
+    const old = await this._oldVenitePreferences,
+      language = liturgy.language,
+      version = versionToString(liturgy.version),
+      slug = liturgy.slug.replace("-", "_");
+    const p = (((old.preferences || {})[language] || {})[
+      versionToString(version)
+    ] || {})[slug];
+    if (p) {
+      return Object.entries(p).map(([key, value]) => ({
+        key,
+        value,
+        language,
+        version,
+        liturgy: slug,
+      }));
+    } else {
+      return [];
+    }
+  }
 
   // Generates a key to be used in local storage
   private localStorageKey(
@@ -106,7 +181,11 @@ export class PreferencesService {
   }
 
   get(key: string): Observable<StoredPreference> {
-    return merge(
+    console.log("getting preference", key);
+
+    const oldPref$ = this.getOldPref(key);
+
+    const newPref$ = merge(
       from(this.storage.get(this.localStorageKey(key))), // value initially stored in local storage
       this.getUpdated(key), // local value updated recently by user
       // observable of Firebase stored preference, only if online
@@ -114,7 +193,12 @@ export class PreferencesService {
         filter((online) => online),
         switchMap(() => this.getStored(key))
       )
-    ).pipe(filter((value) => value !== undefined));
+    );
+
+    return combineLatest([oldPref$, newPref$]).pipe(
+      map(([oldPref, newPref]) => (newPref ? newPref : oldPref)),
+      filter((value) => value !== undefined)
+    );
   }
 
   /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version
@@ -126,50 +210,57 @@ export class PreferencesService {
     if (!liturgy) {
       return of([]);
     } else {
-      return this.auth.user.pipe(
-        map((user) => [user?.uid, liturgy]),
-        switchMap(([uid, liturgy]) => {
-          // if logged in, use Firestore
-          if (uid) {
-            return this.afs
-              .collection<StoredPreference>("Preference", (ref) =>
-                ref
-                  .where("uid", "==", uid)
-                  .where(
-                    "language",
-                    "==",
-                    (liturgy as LiturgicalDocument).language || "en"
-                  )
-                  .where(
-                    "version",
-                    "==",
-                    (liturgy as LiturgicalDocument).version || "Rite-II"
-                  )
-              )
-              .valueChanges();
-          }
-          // if not, use local storage
-          else {
-            // don't have the ability for a query as with Firestore
-            // instead, return all keys that match the local storage key pattern
-            const exampleKey = this.localStorageKey(
-                "%%%",
-                liturgy as LiturgicalDocument
-              ),
-              baseKey = exampleKey.replace("%%%", ""),
-              // storage returns a Promise, but we're not in an async function
-              // because we need to return an observable; so transform it into an observable
-              allKeys = from(this.storage.keys());
-            return allKeys.pipe(
-              // select only keys for this liturgy
-              map((keys) => keys.filter((key) => key.includes(baseKey))),
-              // map in the value for each key
-              switchMap((keys) =>
-                from(Promise.all(keys.map((key) => this.storage.get(key))))
-              )
-            );
-          }
-        })
+      const oldPrefs$ = from(this.getOldPrefsForLiturgy(liturgy)),
+        newPrefs$ = this.auth.user.pipe(
+          map((user) => [user?.uid, liturgy]),
+          switchMap(([uid, liturgy]) => {
+            // if logged in, use Firestore
+            if (uid) {
+              return this.afs
+                .collection<StoredPreference>("Preference", (ref) =>
+                  ref
+                    .where("uid", "==", uid)
+                    .where(
+                      "language",
+                      "==",
+                      (liturgy as LiturgicalDocument).language || "en"
+                    )
+                    .where(
+                      "version",
+                      "==",
+                      (liturgy as LiturgicalDocument).version || "Rite-II"
+                    )
+                )
+                .valueChanges();
+            }
+            // if not, use local storage
+            else {
+              // don't have the ability for a query as with Firestore
+              // instead, return all keys that match the local storage key pattern
+              const exampleKey = this.localStorageKey(
+                  "%%%",
+                  liturgy as LiturgicalDocument
+                ),
+                baseKey = exampleKey.replace("%%%", ""),
+                // storage returns a Promise, but we're not in an async function
+                // because we need to return an observable; so transform it into an observable
+                allKeys = from(this.storage.keys());
+              return allKeys.pipe(
+                // select only keys for this liturgy
+                map((keys) => keys.filter((key) => key.includes(baseKey))),
+                // map in the value for each key
+                switchMap((keys) =>
+                  from(Promise.all(keys.map((key) => this.storage.get(key))))
+                )
+              );
+            }
+          })
+        );
+      return combineLatest([oldPrefs$, newPrefs$]).pipe(
+        map(([oldPrefs, newPrefs]) =>
+          newPrefs?.length > 0 ? newPrefs : oldPrefs
+        ),
+        tap((value) => console.log("prefs for liturgy", value))
       );
     }
   }
