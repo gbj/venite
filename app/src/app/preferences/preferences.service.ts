@@ -67,12 +67,12 @@ export class PreferencesService {
   ): Promise<StoredPreference> {
     const old = await this._oldVenitePreferences;
     if (key === "language") {
-      return { key: "language", value: old.defaultLanguage };
+      return { key: "language", value: old?.defaultLanguage };
     } else if (key === "version") {
-      return { key: "version", value: old.defaultVersion };
+      return { key: "version", value: old?.defaultVersion };
     } else {
       if (liturgy) {
-        const value = (((old[liturgy.language] || {})[
+        const value = ((((old || {})[liturgy.language] || {})[
           versionToString(liturgy.version)
         ] || {})[liturgy.slug?.replace("-", "_")] || {})[key];
         return { key, value };
@@ -89,7 +89,7 @@ export class PreferencesService {
       language = liturgy.language,
       version = versionToString(liturgy.version),
       slug = liturgy.slug.replace("-", "_");
-    const p = (((old.preferences || {})[language] || {})[
+    const p = (((old?.preferences || {})[language] || {})[
       versionToString(version)
     ] || {})[slug];
     if (p) {
