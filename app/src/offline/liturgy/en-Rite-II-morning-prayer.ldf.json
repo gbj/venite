@@ -425,12 +425,18 @@
           {
             "label": "No",
             "default": true,
-            "value": "no"
+            "value": "no",
+            "metadata": {
+              "alternateYear": false
+            }
           },
           {
             "label": "Yes",
             "default": false,
-            "value": "yes"
+            "value": "yes",
+            "metadata": {
+              "alternateYear": false
+            }
           }
         ]
       },
