@@ -204,14 +204,9 @@ export class DocumentService {
       loadLiturgy("en", "EOW", "evening-prayer"),
     ]);
 
-    return merge(
-      // first, load JSON liturgies
-      offlineLiturgies$,
-      // then, load from DB, but only if online
-      isOnline().pipe(
-        filter((online) => Boolean(online)),
-        switchMap(() => onlineLiturgies$)
-      )
+    // only load either the offline or the online liturgies, to prevent screen from flickering by switching to newly-loaded set
+    return isOnline().pipe(
+      switchMap((online) => (online ? onlineLiturgies$ : offlineLiturgies$))
     );
   }
 
