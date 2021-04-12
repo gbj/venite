@@ -104,20 +104,28 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
     const oldPreferences = changes.liturgy.previousValue?.metadata?.preferences,
       newPreferences = changes.liturgy.currentValue?.metadata?.preferences;
 
-    if (!oldPreferences || !deepEqual(oldPreferences, newPreferences)) {
-      this.formData = this.buildFormData(
-        this.tree,
-        changes.liturgy.currentValue
+    if (changes.liturgy) {
+      console.log(
+        "(LiturgyPreferenceMenuComponent) liturgy has changed",
+        oldPreferences,
+        newPreferences,
+        deepEqual(oldPreferences, newPreferences)
       );
+      if (!oldPreferences || !deepEqual(oldPreferences, newPreferences)) {
+        this.formData = this.buildFormData(
+          this.tree,
+          changes.liturgy.currentValue
+        );
 
-      // emit "preferencesLoaded" event
-      if (this.subscription) {
-        this.subscription.unsubscribe();
+        // emit "preferencesLoaded" event
+        if (this.subscription) {
+          this.subscription.unsubscribe();
+        }
+        this.subscription = this.formData.subscribe((data) => {
+          console.log("formData = ", data);
+          this.preferencesLoaded.emit(Boolean(data));
+        });
       }
-      this.subscription = this.formData.subscribe((data) => {
-        console.log("formData = ", data);
-        this.preferencesLoaded.emit(Boolean(data));
-      });
     }
   }
 
@@ -224,16 +232,21 @@ const deepEqual = (v1, v2) => {
     v2 == null ||
     typeof v1 != "object" ||
     typeof v2 != "object"
-  )
+  ) {
     return false;
+  }
 
-  let v1keys = Object.keys(v1);
-  let v2keys = Object.keys(v2);
+  const v1keys = Object.keys(v1);
+  const v2keys = Object.keys(v2);
 
-  if (v1keys.length != v2keys.length) return false;
+  if (v1keys.length != v2keys.length) {
+    return false;
+  }
 
   for (let key of v1keys) {
-    if (!v2keys.includes(key) || !deepEqual(v1[key], v2[key])) return false;
+    if (!v2keys.includes(key) || !deepEqual(v1[key], v2[key])) {
+      return false;
+    }
   }
   return true;
 };
