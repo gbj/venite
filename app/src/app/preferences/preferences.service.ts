@@ -66,7 +66,6 @@ export class PreferencesService {
     liturgy: LiturgicalDocument = undefined
   ): Promise<StoredPreference> {
     const old = await this._oldVenitePreferences;
-    console.log("getOldPref", key, old);
     if (key === "language") {
       return { key: "language", value: old.defaultLanguage };
     } else if (key === "version") {
@@ -78,7 +77,7 @@ export class PreferencesService {
         ] || {})[liturgy.slug?.replace("-", "_")] || {})[key];
         return { key, value };
       } else {
-        return { key, value: (old.displaySettings || {})[key] };
+        return { key, value: (old?.displaySettings || {})[key] };
       }
     }
   }
