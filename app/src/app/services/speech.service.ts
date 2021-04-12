@@ -183,7 +183,7 @@ export class SpeechService {
             (verse as Heading).type === "heading"
               ? docToUtterances(verse as Heading)
               : processText((verse as BibleReadingVerse).text).split(
-                  /[^\w \t]/g
+                  /[^\w \t’']/g
                 )
           )
           .flat(),
