@@ -87,8 +87,13 @@ ldf-heading, :host {
 
 ::slotted[slot="citation"] {
   text-align: right;
+  width: 100%;
 }
 
 .citation {
   font-style: italic;
+}
+
+.source {
+  width: 100%;
 }

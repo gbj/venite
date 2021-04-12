@@ -1,7 +1,9 @@
 .label-bar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  max-width: 100%;
 }
 
 .label-bar.left {
@@ -10,7 +12,7 @@
   slot {
     display: flex;
     flex-direction: row;
-    margin-left: 2em;
+    margin-left: 0;
   }
 
   slot:first-of-type {

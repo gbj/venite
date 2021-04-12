@@ -124,7 +124,7 @@ export class HeadingComponent {
     const text = new Citation(c).toString().replace('bcp1979', 'BCP');
 
     return (
-      <div slot='end'>
+      <div slot='end' class='source'>
         {
           this.editable ?
           [
