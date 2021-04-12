@@ -4,10 +4,10 @@
     <ion-menu-toggle menu="end">
       <ion-button fill="clear">
         <ion-avatar *ngIf="user.photoURL" slot="end">
-          <img [src]="user.photoURL" [alt]="user.displayName">
+          <img [src]="user.photoURL" [alt]="user.displayName || ''">
         </ion-avatar>
         <ion-avatar *ngIf="!user.photoURL" slot="end">
-          <img src="/assets/avatar.svg" [alt]="user.displayName">
+          <img src="/assets/avatar.svg" [alt]="user.displayName || ''">
         </ion-avatar>
       </ion-button>
     </ion-menu-toggle>
