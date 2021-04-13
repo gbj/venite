@@ -19,6 +19,9 @@ export class Preference {
    * Defaults to first in array if `PreferenceOption.default` is not set.  */
   options: PreferenceOption[];
 
+  /** Index for ordering within a set of preferences in the UI. (If not present, defaults to alphabet order.) */
+  index?: number;
+
   /** Given a `value` for the preference, returns the full option */
   getPreferenceOption(value: string): PreferenceOption | undefined {
     return this.options.find((option) => option.value == value);

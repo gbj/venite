@@ -10,7 +10,7 @@ export function categoriesToPreferenceTree(
       [category]: Object.entries(preferences)
         .map(([key, pref]) => new Preference({ ...pref, key }))
         .filter((pref) => pref.category == category || (!pref.category && category == 'Preferences'))
-        .sort((a, b) => (a.label < b.label ? -1 : 1)),
+        .sort((a, b) => (a.index && b.index ? (a.index < b.index ? -1 : 1) : a.label < b.label ? -1 : 1)),
     }),
     {},
   );
