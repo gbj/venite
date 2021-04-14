@@ -3,19 +3,17 @@ import { PLATFORM_SERVICE } from "@venite/ng-service-api";
 import { PlatformService } from "@venite/ng-platform";
 
 import { Plugins, FilesystemDirectory } from "@capacitor/core";
-import { ToastController } from "@ionic/angular";
-const { Filesystem } = Plugins;
 import { FileOpener } from "@ionic-native/file-opener/ngx";
+const { Filesystem } = Plugins;
 
 @Injectable({
   providedIn: "root",
 })
 export class DownloadService {
   constructor(
-    @Inject(PLATFORM_SERVICE) private platform: PlatformService
-  ) //private toast : ToastController,
-  //private fileOpener : FileOpener
-  {}
+    @Inject(PLATFORM_SERVICE) private platform: PlatformService,
+    private fileOpener: FileOpener
+  ) {}
 
   readAsBinaryString(file: Blob): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -47,32 +45,31 @@ export class DownloadService {
     filetype: string = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   ) {
     if (this.platform.is("capacitor")) {
+      console.log("trying to download file in Capacitor");
       try {
         let binaryString = await this.readAsBinaryString(blob);
         let base64String = btoa(binaryString);
 
-        //console.log(FilesystemDirectory.Documents, filename)
+        console.log("reading binary string");
+
+        const directory = this.platform.is("ios")
+          ? FilesystemDirectory.Documents
+          : FilesystemDirectory.Data;
+
         const writeFileResult = await Filesystem.writeFile({
           path: filename,
           data: base64String,
-          directory: FilesystemDirectory.Documents,
-        });
-        const uri = await Filesystem.getUri({
-          path: filename,
-          directory: FilesystemDirectory.Documents,
+          directory,
         });
 
-        /*this.fileOpener.open(uri.uri, filetype)
-            .then(() => //console.log('File is opened'))
-            .catch(async e => {
-              const toast = await this.toast.create({
-                header: 'Trouble opening the Word document!',
-                message: 'We exported your liturgy to a Word document, but had trouble opening it. Are you sure you have Microsoft Word installed?',
-                position: 'bottom',
-                duration: 10000
-              });
-              toast.present();
-            });*/
+        const { uri } = await Filesystem.getUri({
+          path: filename,
+          directory,
+        });
+
+        // TODO how to handle case in which no Intent is installed to open that file? (Android)
+
+        return this.fileOpener.open(uri, filetype);
       } catch (error) {
         console.error(error);
       }
