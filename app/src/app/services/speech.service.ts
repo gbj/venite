@@ -16,9 +16,12 @@ import {
 } from "@venite/ldf";
 import { PlatformService } from "@venite/ng-platform";
 import { DisplaySettings } from "@venite/ldf";
-import { concat, Observable, timer } from "rxjs";
+import { concat, from, Observable, timer } from "rxjs";
 import { speak } from "rxjs-tts";
-import { map } from "rxjs/operators";
+import { map, switchMap } from "rxjs/operators";
+import { Plugins } from "@capacitor/core";
+import "@capacitor-community/text-to-speech";
+const { TextToSpeech } = Plugins;
 
 export type SpeechServiceTracking = {
   subdoc: number;
@@ -325,13 +328,14 @@ export class SpeechService {
           .filter((value) => Boolean(value))
           .map((value, utteranceIdx) =>
             typeof value === "string"
-              ? speak(
+              ? from(
                   this.utteranceFromText(
                     processText(value),
                     doc.language ?? "en",
                     settings
                   )
                 ).pipe(
+                  switchMap((utterance) => this.speak(utterance)),
                   map((data) => ({
                     subdoc: subdocIdx + index,
                     utterance: utteranceIdx + startingUtteranceIndex,
@@ -351,15 +355,37 @@ export class SpeechService {
     return concat(...utterances);
   }
 
-  utteranceFromText(
+  speak(utterance: SpeechSynthesisUtterance): Observable<any> {
+    console.log("SpeechService speak");
+    if (this.platform.is("capacitor") && this.platform.is("android")) {
+      const text = utterance.text;
+      console.log("TextToSpeech speaking", text);
+      return from(
+        TextToSpeech.speak({
+          text,
+          locale: utterance.lang || "en",
+          speechRate: utterance.rate,
+          pitchRate: utterance.pitch,
+          volume: utterance.volume,
+        })
+      );
+    } else {
+      return speak(utterance);
+    }
+  }
+
+  async utteranceFromText(
     text: string,
     lang: string,
     settings: DisplaySettings
-  ): SpeechSynthesisUtterance {
-    const voices = window?.speechSynthesis?.getVoices() ?? [],
+  ): Promise<SpeechSynthesisUtterance> {
+    const voices = await this.getVoices(),
       chosenVoice = voices.find((voice) => voice.name === settings.voiceChoice);
 
-    const u = new SpeechSynthesisUtterance(text);
+    const u: SpeechSynthesisUtterance =
+      this.platform.is("capacitor") && this.platform.is("android")
+        ? ({} as SpeechSynthesisUtterance)
+        : new SpeechSynthesisUtterance(text);
     if (chosenVoice) {
       u.voice = chosenVoice;
     } else {
@@ -370,5 +396,14 @@ export class SpeechService {
     u.volume = settings.voiceBackgroundVolume ?? 1;
 
     return u;
+  }
+
+  async getVoices(): Promise<SpeechSynthesisVoice[]> {
+    if (this.platform.is("capacitor") && this.platform.is("android")) {
+      const { voices } = await TextToSpeech.getSupportedVoices();
+      return voices;
+    } else {
+      return window?.speechSynthesis?.getVoices() ?? [];
+    }
   }
 }

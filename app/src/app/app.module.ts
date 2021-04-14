@@ -62,6 +62,7 @@ import { DocumentService } from "./services/document.service";
 import { CanticleTableService } from "./services/canticle-table.service";
 import { PrayPageModule } from "./pray/pray.module";
 import { ServiceWorkerModule } from "@angular/service-worker";
+import { FileOpener } from "@ionic-native/file-opener/ngx";
 //import { PrayPageModule } from '@venite/ng-pray';
 
 @NgModule({
@@ -168,6 +169,7 @@ import { ServiceWorkerModule } from "@angular/service-worker";
     { provide: LECTIONARY_SERVICE, useClass: LectionaryService },
     { provide: LOCAL_STORAGE, useClass: LocalStorageService },
     { provide: PREFERENCES_SERVICE, useClass: PreferencesService },
+    FileOpener,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

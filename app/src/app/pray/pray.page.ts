@@ -620,7 +620,7 @@ export class PrayPage implements OnInit, OnDestroy {
     });
 
     const voiceChoices = (
-      window?.speechSynthesis?.getVoices() ?? []
+      await this.speechService.getVoices()
     ).filter((voice) => voice.lang.startsWith(doc.language ?? "en"));
 
     modal.componentProps = {
@@ -817,16 +817,21 @@ export class PrayPage implements OnInit, OnDestroy {
     const filename = `${doc.label}${
         doc?.day?.date ? ` - ${doc.day.date}` : ""
       }.docx`,
-      resp = await fetch(`http://localhost:5002/venite-2/us-central1/docx`, {
-        method: "POST",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ doc, settings }),
-      }),
+      resp = await fetch(
+        `https://us-central1-venite-2.cloudfunctions.net/docx`,
+        {
+          method: "POST",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({ doc, settings }),
+        }
+      ),
       blob = await resp.blob();
+
+    console.log("PrayPage generated DOCX blob");
 
     // download the blob
     await this.downloadService.download(
