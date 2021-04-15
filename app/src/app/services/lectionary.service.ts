@@ -188,7 +188,6 @@ export class LectionaryService {
               }
             }),
             switchMap((entries) => {
-              console.log("day = ", day);
               // fall back to RCL Track "2" (contains all the weeks that are not Proper ____)
               if (
                 (entries?.length == 0 ||
