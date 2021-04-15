@@ -89,6 +89,11 @@ export class LiturgicalDay {
    */
   propers?: string;
 
+  /** Optionally `slug` as an identifier for a collect only, but not readings
+   *  Used for e.g., Saturday evenings as first vespers of a Sunday
+   */
+  collect?: string;
+
   /** Returns a native Date from the day's date string */
   getDate(): Date {
     return dateFromYMDString(this.date);

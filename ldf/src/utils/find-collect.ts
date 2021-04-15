@@ -19,7 +19,7 @@ export function findCollect(
   allowMultiple: boolean = true,
 ): LiturgicalDocument | null {
   const date = dateFromYMDString(day.date),
-    observedDay = day.propers || day.slug,
+    observedDay = day.collect || day.propers || day.slug,
     isAllSaintsOctave = date.getMonth() === 10 && date.getDate() === 8,
     isInOctaveOfAllSaints = date.getMonth() === 10 && date.getDate() >= 1 && date.getDate() <= 8,
     suppressSundayCollect =
