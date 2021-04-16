@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">app</string>
-    <string name="title_activity_main">app</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">Venite</string>
+    <string name="title_activity_main">Venite</string>
+    <string name="package_name">app.venite</string>
+    <string name="custom_url_scheme">app.venite</string>
 </resources>

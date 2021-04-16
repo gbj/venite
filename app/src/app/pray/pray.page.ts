@@ -363,20 +363,39 @@ export class PrayPage implements OnInit, OnDestroy {
         liturgy,
         prefs: JSON.parse(prefs ?? "{}"),
       })),
-      map(({ liturgy, prefs }) =>
-        liturgy[0] && liturgy[0].type == "liturgy"
-          ? Object.assign(
-              // convert `Liturgy` preference tree into a key-default value object
-              Object.values(
-                (liturgy[0] as Liturgy).metadata?.preferences || {}
-              ).reduce((acc, curr) => {
-                acc[curr.key] = new Preference(curr).getDefaultPref();
-                return acc;
-              }, {}),
-              prefs
-            )
-          : prefs
-      )
+      switchMap(({ liturgy, prefs }) => {
+        let userPrefs = prefs;
+
+        const liturgyDefaults =
+            liturgy[0] && liturgy[0].type == "liturgy"
+              ? // convert `Liturgy` preference tree into a key-default value object
+                Object.values(
+                  (liturgy[0] as Liturgy).metadata?.preferences || {}
+                ).reduce((acc, curr) => {
+                  acc[curr.key] = new Preference(curr).getDefaultPref();
+                  return acc;
+                }, {})
+              : {},
+          chosenPrefs: ClientPreferences = Object.assign(
+            liturgyDefaults,
+            prefs || {}
+          );
+
+        if (!userPrefs || JSON.stringify(userPrefs) === "{}") {
+          return this.preferencesService
+            .getPreferencesForLiturgy(liturgy[0])
+            .pipe(
+              map((prefs) =>
+                prefs.reduce(
+                  (acc, curr) => ({ ...acc, [curr.key]: curr.value }),
+                  {} as ClientPreferences
+                )
+              )
+            );
+        } else {
+          return of(chosenPrefs);
+        }
+      })
     );
 
     // Unifies everything from the router params

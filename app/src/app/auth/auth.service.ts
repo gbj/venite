@@ -4,14 +4,9 @@ import { Observable } from "rxjs";
 
 import { AngularFireAuth } from "@angular/fire/auth";
 import firebase from "firebase/app";
-import {
-  cfaSignIn,
-  cfaSignOut,
-  SignInResult,
-} from "capacitor-firebase-auth/alternative";
+import { cfaSignIn, cfaSignOut } from "capacitor-firebase-auth/alternative";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { User } from "@venite/ldf";
 
 @Injectable({
   providedIn: "root",

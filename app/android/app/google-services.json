@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "666828168362",
+    "firebase_url": "https://venite-2.firebaseio.com",
+    "project_id": "venite-2",
+    "storage_bucket": "venite-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666828168362:android:3f9e9f2363b2327ab204d3",
+        "android_client_info": {
+          "package_name": "app.venite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666828168362-hjr124efk5fi298cv2nctv5lpu8l5j3j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.venite",
+            "certificate_hash": "6c6d0db6c0501f4fafd70bd7e6cfe7d1baf320e2"
+          }
+        },
+        {
+          "client_id": "666828168362-ntn5p8a9qu48n7l65vo0f4ib5fmlidck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGFFuSH5AwnsCTnhm3k0ou2rndNDeBoS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666828168362-ntn5p8a9qu48n7l65vo0f4ib5fmlidck.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "666828168362-9beke9q54gc34nalgh07bi085bd0cl5c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.venite",
+                "app_store_id": "1502034358"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

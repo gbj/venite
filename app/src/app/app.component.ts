@@ -5,8 +5,8 @@ import { Platform } from "@ionic/angular";
 // Community Modules
 import { TranslateService } from "@ngx-translate/core";
 import { DarkmodeService } from "@venite/ng-darkmode";
-import { Observable, of } from "rxjs";
-import { map, switchMap } from "rxjs/operators";
+import { combineLatest, Observable, of } from "rxjs";
+import { map, startWith, switchMap } from "rxjs/operators";
 import { AuthService } from "./auth/auth.service";
 import { Organization } from "./organization/organization";
 import { OrganizationService } from "./organization/organization.module";
@@ -63,22 +63,24 @@ export class AppComponent {
         )
       );
 
-      // dark mode
-      this.darkMode.prefersDark.subscribe((prefersDark) => {
-        document.body.classList.toggle("dark", prefersDark);
-      });
-
-      // sepia/ecru mode
-      this.preferences
-        .get("darkmode")
-        .pipe(
+      // dark mode + ecru
+      combineLatest([
+        this.darkMode.prefersDark.pipe(startWith(false)),
+        this.preferences.get("darkmode").pipe(
           map((storedPreference) =>
             storedPreference ? storedPreference.value : "auto"
-          )
-        )
-        .subscribe((value) =>
-          document.body.classList.toggle("ecru", value == "ecru")
-        );
+          ),
+          startWith("auto")
+        ),
+      ]).subscribe(([prefersDark, pref]) => {
+        document.body.classList.toggle("ecru", pref == "ecru");
+
+        if (prefersDark && pref !== "ecru") {
+          document.body.classList.toggle("dark", true);
+        } else {
+          document.body.classList.toggle("dark", false);
+        }
+      });
     });
   }
 }

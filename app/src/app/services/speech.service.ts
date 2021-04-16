@@ -16,11 +16,28 @@ import {
 } from "@venite/ldf";
 import { PlatformService } from "@venite/ng-platform";
 import { DisplaySettings } from "@venite/ldf";
-import { concat, from, Observable, timer } from "rxjs";
+import {
+  concat,
+  from,
+  fromEvent,
+  merge,
+  Observable,
+  of,
+  throwError,
+  timer,
+} from "rxjs";
 import { speak } from "rxjs-tts";
-import { map, switchMap } from "rxjs/operators";
+import {
+  map,
+  mapTo,
+  switchMap,
+  switchMapTo,
+  takeUntil,
+  tap,
+} from "rxjs/operators";
 import { Plugins } from "@capacitor/core";
 import "@capacitor-community/text-to-speech";
+import { TranslateService } from "@ngx-translate/core";
 const { TextToSpeech } = Plugins;
 
 export type SpeechServiceTracking = {
@@ -36,7 +53,12 @@ export class SpeechService {
   public isPlaying: boolean = false;
   background: "silence" | "seashore" | "garden" | "night" | "silence-short";
 
-  constructor(private platform: PlatformService) {}
+  private _voices: SpeechSynthesisVoice[] | undefined;
+
+  constructor(
+    private platform: PlatformService,
+    private translate: TranslateService
+  ) {}
 
   // Localized strings for nationalities are handled in localization files
   getNationality(voice: SpeechSynthesisVoice): string {
@@ -46,26 +68,17 @@ export class SpeechService {
   // Controls
   cancel() {
     this.isPlaying = false;
-    const synth = window?.speechSynthesis;
-    if (synth) {
-      synth.cancel();
-    }
+    TextToSpeech.stop();
   }
 
   pause() {
     this.isPlaying = false;
-    const synth = window?.speechSynthesis;
-    if (synth) {
-      synth.pause();
-    }
+    TextToSpeech.stop();
   }
 
   resume() {
     this.isPlaying = true;
-    const synth = window?.speechSynthesis;
-    if (synth) {
-      synth.resume();
-    }
+    // noop with new TTS engine
   }
 
   // TODO need to handle all SpeechService preferences
@@ -356,22 +369,38 @@ export class SpeechService {
   }
 
   speak(utterance: SpeechSynthesisUtterance): Observable<any> {
-    console.log("SpeechService speak");
-    if (this.platform.is("capacitor") && this.platform.is("android")) {
-      const text = utterance.text;
-      console.log("TextToSpeech speaking", text);
-      return from(
+    const voice$ = new Observable((observer) => {
+      const end$ = from(
         TextToSpeech.speak({
-          text,
-          locale: utterance.lang || "en",
-          speechRate: utterance.rate,
+          text: utterance.text,
           pitchRate: utterance.pitch,
-          volume: utterance.volume,
+          speechRate: utterance.rate,
+          locale: utterance.lang,
+          category: "playback",
         })
       );
-    } else {
-      return speak(utterance);
-    }
+
+      const subscription = merge(of(), end$)
+        .pipe(
+          takeUntil(end$),
+          mapTo({
+            utterance,
+            target: utterance,
+          }),
+          tap((data) => console.log("SpeechService", data))
+        )
+        .subscribe(observer);
+
+      // cancel all utterances on unsubscribe
+      /*subscription.add(() => {
+        TextToSpeech.stop();
+      });*/
+
+      return subscription;
+    });
+
+    // make a pause to let speechSynthesis.cancel pass
+    return timer(4).pipe(switchMapTo(voice$));
   }
 
   async utteranceFromText(
@@ -386,11 +415,10 @@ export class SpeechService {
       this.platform.is("capacitor") && this.platform.is("android")
         ? ({} as SpeechSynthesisUtterance)
         : new SpeechSynthesisUtterance(text);
-    if (chosenVoice) {
+    if (chosenVoice && chosenVoice.voiceURI) {
       u.voice = chosenVoice;
-    } else {
-      u.lang = lang;
     }
+    u.lang = chosenVoice?.lang || lang;
     u.pitch = 1;
     u.rate = settings.voiceRate ?? 1;
     u.volume = settings.voiceBackgroundVolume ?? 1;
@@ -399,11 +427,25 @@ export class SpeechService {
   }
 
   async getVoices(): Promise<SpeechSynthesisVoice[]> {
-    if (this.platform.is("capacitor") && this.platform.is("android")) {
+    if (!this._voices) {
       const { voices } = await TextToSpeech.getSupportedVoices();
-      return voices;
-    } else {
-      return window?.speechSynthesis?.getVoices() ?? [];
+      this._voices = voices;
+
+      if (!this._voices || this._voices?.length === 0) {
+        const { languages } = await TextToSpeech.getSupportedLanguages();
+        console.log("languages = ", languages);
+        const voices = languages
+          .filter((lang) => lang.startsWith("en"))
+          .map((lang) => ({
+            lang,
+            name: this.translate.instant(`speech.${lang}`),
+            default: false,
+            localService: null,
+            voiceURI: null,
+          }));
+        this._voices = voices;
+      }
     }
+    return this._voices;
   }
 }
