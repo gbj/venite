@@ -332,5 +332,12 @@
     "Readings for ": "Readings for ",
     "clipboard-success": "The text has been copied to your clipboard.",
     "clipboard-error": "We weren’t able to copy this text to your clipboard. Sorry!"
+  },
+  "versions": {
+    "Rite-I": "Rite I",
+    "Rite-II": "Rite II",
+    "EOW": "EOW",
+    "Daily-Devotion": "Daily Devotions",
+    "Template": "Other Templates"
   }
 }
