@@ -2,9 +2,8 @@ import { Inject, Injectable } from "@angular/core";
 import { PLATFORM_SERVICE } from "@venite/ng-service-api";
 import { PlatformService } from "@venite/ng-platform";
 
-import { Plugins, FilesystemDirectory } from "@capacitor/core";
 import { FileOpener } from "@ionic-native/file-opener/ngx";
-const { Filesystem } = Plugins;
+import { Filesystem, FilesystemDirectory } from "@capacitor/filesystem";
 
 @Injectable({
   providedIn: "root",

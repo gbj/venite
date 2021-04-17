@@ -86,14 +86,12 @@ import { isCompletelyCompiled } from "./is-completely-compiled";
 import { PlatformService } from "@venite/ng-platform";
 import { Location } from "@angular/common";
 
-import { Plugins } from "@capacitor/core";
-import "capacitor-media-session";
-import { MediaAction } from "capacitor-media-session";
 import { AudioService } from "./audio.service";
 import { selectableCitationToString } from "./selectable-citation-to-string";
-import { SelectedTextEvent } from "./selected-text-event";
 import { environment } from "src/environments/environment";
-const { Share, Clipboard, MediaSession } = Plugins;
+import { Share } from "@capacitor/share";
+import { Clipboard } from "@capacitor/clipboard";
+import { MediaSession } from "capacitor-media-session";
 
 interface PrayState {
   liturgy: LiturgicalDocument;

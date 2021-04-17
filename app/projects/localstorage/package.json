@@ -1,10 +1,11 @@
 {
   "name": "@venite/ng-localstorage",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
-    "@capacitor/core": "^2.1.0",
+    "@capacitor/core": "^3.0.0",
+    "@capacitor/storage": "^0.3.6",
     "tslib": "^1.10.0",
     "@venite/ng-service-api": "~0.0.3"
   }

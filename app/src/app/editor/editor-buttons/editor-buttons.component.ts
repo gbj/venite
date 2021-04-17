@@ -27,8 +27,7 @@ import {
 } from "../ldf-editor/editor.service";
 import { SharingComponent } from "../sharing/sharing.component";
 
-import { Plugins } from "@capacitor/core";
-const { Clipboard } = Plugins;
+import { Clipboard } from "@capacitor/clipboard";
 import * as clipboardPolyfill from "clipboard-polyfill";
 import { EditorState } from "../ldf-editor/editor-state";
 import { TranslateService } from "@ngx-translate/core";

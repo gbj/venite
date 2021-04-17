@@ -1,17 +1,10 @@
 package app.venite;
 
-import android.os.Bundle;
-
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
 import com.getcapacitor.BridgeActivity;
-import com.getcapacitor.Plugin;
-import com.getcapacitor.community.firebaseanalytics.FirebaseAnalytics;
-import com.getcapacitor.community.tts.TextToSpeech;
-
-import java.util.ArrayList;
 
 public class MainActivity extends BridgeActivity {
-  @Override
+  // Not necessary in Capacitor 3.0
+  /*@Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
@@ -23,5 +16,5 @@ public class MainActivity extends BridgeActivity {
       add(CapacitorFirebaseAuth.class);
       add(TextToSpeech.class);
     }});
-  }
+  }*/
 }

@@ -1,18 +1,22 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "app",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    },
-    "CapacitorFirebaseAuth": {
-      "providers": ["google.com", "twitter.com", "apple.com"],
-      "languageCode": "en",
-      "nativeAuth": false
-    }
-  },
-  "cordova": {}
+	"appId": "io.ionic.starter",
+	"appName": "app",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "www",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		},
+		"CapacitorFirebaseAuth": {
+			"providers": [
+				"google.com",
+				"twitter.com",
+				"apple.com"
+			],
+			"languageCode": "en",
+			"nativeAuth": false
+		}
+	},
+	"cordova": {}
 }

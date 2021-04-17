@@ -35,10 +35,8 @@ import {
   takeUntil,
   tap,
 } from "rxjs/operators";
-import { Plugins } from "@capacitor/core";
-import "@capacitor-community/text-to-speech";
+import { TextToSpeech } from "@capacitor-community/text-to-speech";
 import { TranslateService } from "@ngx-translate/core";
-const { TextToSpeech } = Plugins;
 
 export type SpeechServiceTracking = {
   subdoc: number;
@@ -373,9 +371,9 @@ export class SpeechService {
       const end$ = from(
         TextToSpeech.speak({
           text: utterance.text,
-          pitchRate: utterance.pitch,
-          speechRate: utterance.rate,
-          locale: utterance.lang,
+          pitch: utterance.pitch,
+          rate: utterance.rate,
+          lang: utterance.lang,
           category: "playback",
         })
       );

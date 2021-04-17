@@ -13,8 +13,7 @@ import { OrganizationService } from "./organization/organization.module";
 import { PreferencesService } from "./preferences/preferences.service";
 
 import { Router } from "@angular/router";
-import { Plugins } from "@capacitor/core";
-const { App } = Plugins;
+import { App } from "@capacitor/app";
 
 @Component({
   selector: "venite-root",
