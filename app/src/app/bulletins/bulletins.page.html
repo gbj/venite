@@ -27,7 +27,7 @@
       </ion-toolbar>
     </ion-card-header>
     <ion-card-content [class]="{'visually-hidden': !templatesToggled}">
-      <div class="button-layout">
+      <!--<div class="button-layout">
         <ng-container *ngFor="let template of templates$ | async">
           <venite-create-document-button 
             [label]="template.label"
@@ -35,6 +35,18 @@
             (newDoc)="joinDocument($event)">
           </venite-create-document-button>
         </ng-container>
+      </div>-->
+      <div class="button-layout">
+        <ion-list *ngFor="let templateCategory of templates$ | async">
+          <ion-list-header>{{ templateCategory.label }}</ion-list-header>
+          <ng-container *ngFor="let template of templateCategory.templates">
+            <venite-create-document-button 
+              [label]="template.label"
+              [template]="template.factory"
+              (newDoc)="joinDocument($event)">
+            </venite-create-document-button>
+          </ng-container>
+        </ion-list>
       </div>
     </ion-card-content>
   </ion-card>

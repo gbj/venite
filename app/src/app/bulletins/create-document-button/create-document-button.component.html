@@ -1,10 +1,10 @@
 <ng-container *ngIf="userData$ | async as userData">
-    <button (click)="new(userData.profile, userData.uid, userData.orgs)">
-      <ng-container *ngIf="icon; else pencil">
-        {{ icon }}
-      </ng-container>
-      <ion-label>{{ label }}</ion-label>
-    </button>
+  <ion-item button (click)="new(userData.profile, userData.uid, userData.orgs)">
+    <ng-container *ngIf="icon; else pencil">
+      {{ icon }}
+    </ng-container>
+    <ion-label>{{ label }}</ion-label>
+  </ion-item>
 </ng-container>
 
 <ng-template #pencil>

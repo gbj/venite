@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { AlertController, ModalController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
-import { LiturgicalDocument } from "@venite/ldf";
+import { LiturgicalDocument, versionToString } from "@venite/ldf";
 import { Observable, BehaviorSubject, of, combineLatest } from "rxjs";
 import { filter, switchMap, map, tap } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
@@ -16,6 +16,17 @@ import { DownloadService } from "../services/download.service";
 import { slugify } from "../slugify";
 import { CreateBulletinModalComponent } from "./create-bulletin-modal/create-bulletin-modal.component";
 import firebase from "firebase/app";
+
+type Template = {
+  label: string;
+  version: string;
+  factory: (string) => LiturgicalDocument;
+};
+
+type TemplateCategory = {
+  label: string;
+  templates: Template[];
+};
 
 const docSearch = (
   includeBulletins: boolean,
@@ -73,9 +84,7 @@ export class BulletinsPage implements OnInit {
   searchResults$: Observable<IdAndDoc[]> = of([]);
 
   // Templates
-  templates$: Observable<
-    { label: string; factory: (string) => LiturgicalDocument }[]
-  >;
+  templates$: Observable<TemplateCategory[]>;
   templatesToggled: boolean = false;
 
   // Document import
@@ -159,7 +168,12 @@ export class BulletinsPage implements OnInit {
     );
 
     this.templates$ = combineLatest(
-      of(BLANK_TEMPLATES),
+      of(
+        BLANK_TEMPLATES.map((template) => ({
+          ...template,
+          version: "Template",
+        }))
+      ),
       this.documents
         .getAllLiturgyOptions()
         .pipe(
@@ -172,17 +186,34 @@ export class BulletinsPage implements OnInit {
       orgs$
     ).pipe(
       switchMap(async ([templates, liturgies, orgs]) =>
-        liturgies
-          .map((liturgy) => ({
-            label: liturgy.label,
-            factory: (label: any) =>
-              new LiturgicalDocument({
-                ...liturgy,
-                slug: slugify(label),
-                label,
-              }),
-          }))
-          .concat(templates)
+        Object.entries(
+          liturgies
+            .map((liturgy) => ({
+              label: liturgy.label,
+              version: versionToString(liturgy.version),
+              factory: (label: any) =>
+                new LiturgicalDocument({
+                  ...liturgy,
+                  slug: slugify(label),
+                  label,
+                }),
+            }))
+            .concat(templates)
+            .reduce((prev, curr) => {
+              const version = curr.version;
+              if (prev[version]) {
+                return {
+                  ...prev,
+                  [version]: prev[version].concat(curr),
+                };
+              } else {
+                return { ...prev, [version]: [curr] };
+              }
+            }, {} as Record<string, Template[]>)
+        ).map(([label, templates]) => ({
+          label: this.translate.instant(`versions.${label}`),
+          templates,
+        }))
       )
       //tap(tpls => //console.log('templates = ', tpls))
     );

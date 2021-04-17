@@ -23,9 +23,14 @@ article {
   display: flex;
   flex-wrap: wrap;
 
-  venite-create-document-button {
-      max-width: 50%;
-      min-width: 25%;
+  ion-list {
+    width: 100%;
+  }
+
+  @media(min-width: 767px) {
+    ion-list {
+      width: 50%;
+    }
   }
 }
 
