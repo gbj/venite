@@ -222,6 +222,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         this.replace(manager, base, index, obj, [
           new Option({
             type: "option",
+            condition: obj?.condition,
             metadata: { selected: 0 },
             // TODO -- convert to Liturgy if data really has more than one member
             // do this by moving the docToLiturgy and docToOption stuff into LDF and calling it here and in PrayService
