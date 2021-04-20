@@ -189,7 +189,7 @@ export class LiturgicalDocument {
    * given the day and assigned preferences  */
   include(day: LiturgicalDay, prefs: ClientPreferences = {}): boolean {
     if (this.condition !== undefined) {
-      const evaluatedConditions: boolean[] = this.condition.conditions.map((condition) => {
+      const evaluatedConditions: boolean[] = (this.condition.conditions || []).map((condition) => {
         if (!(condition instanceof Condition)) {
           condition = new Condition(condition);
         }
@@ -199,9 +199,9 @@ export class LiturgicalDocument {
       //console.log(evaluatedConditions);
 
       if (this.condition.mode == 'or') {
-        return evaluatedConditions.reduce((a, b) => a || b);
+        return evaluatedConditions.reduce((a, b) => a || b, false);
       } else {
-        return evaluatedConditions.reduce((a, b) => a && b);
+        return evaluatedConditions.reduce((a, b) => a && b, true);
       }
     } else {
       return true;
