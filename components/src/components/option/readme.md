@@ -17,10 +17,12 @@
 
 ## Events
 
-| Event                | Description | Type                          |
-| -------------------- | ----------- | ----------------------------- |
-| `ldfAddOptionToDoc`  |             | `CustomEvent<AddOptionToDoc>` |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>`         |
+| Event                            | Description | Type                                            |
+| -------------------------------- | ----------- | ----------------------------------------------- |
+| `ldfAddOptionToDoc`              |             | `CustomEvent<AddOptionToDoc>`                   |
+| `ldfDocShouldChange`             |             | `CustomEvent<Change>`                           |
+| `ldfOptionAskForStoredSelection` |             | `CustomEvent<{ el: HTMLElement; }>`             |
+| `ldfOptionMakeSelection`         |             | `CustomEvent<{ slug: string; index: number; }>` |
 
 
 ## Methods

@@ -68,11 +68,14 @@ export class OptionComponent {
   // Events
   @Event({ bubbles: true }) ldfAddOptionToDoc : EventEmitter<AddOptionToDoc>;
   @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+  @Event({ bubbles: true }) ldfOptionAskForStoredSelection : EventEmitter<{ el: HTMLElement }>;
+  @Event({ bubbles: true }) ldfOptionMakeSelection : EventEmitter<{ slug: string; index: number; }>;
 
   // Lifecycle events
   componentWillLoad() {
     this.docChanged(this.doc);
     this.loadLocaleStrings();
+    this.ldfOptionAskForStoredSelection.emit({ el: this.el });
   }
 
   /** Asynchronously load localization strings */
@@ -87,10 +90,13 @@ export class OptionComponent {
   /** Display the nth option */
   @Method()
   async select(index : number | 'add', resultedFromUserAction : boolean = false) {
-    console.log('select ', index);
+    if(this.obj?.slug && typeof index === 'number' && resultedFromUserAction) {
+      this.ldfOptionMakeSelection.emit({ slug: this.obj?.slug, index });
+    }
+
     const hadMetadata = Boolean(this.obj?.metadata),
       oldValue = this.obj?.metadata?.editor_selected;
-  
+
     
     if(Number(index) >= 0) {
       //this.selectedDoc = this.obj.value.filter(child => Boolean(child))[index];

@@ -61,6 +61,8 @@ import {
   PREFERENCES_SERVICE,
   PreferencesServiceInterface,
   AUTH_SERVICE,
+  LOCAL_STORAGE,
+  LocalStorageServiceInterface,
 } from "@venite/ng-service-api";
 import { DisplaySettingsComponent } from "@venite/ng-pray";
 import { PrayService } from "./pray.service";
@@ -200,7 +202,8 @@ export class PrayPage implements OnInit, OnDestroy {
     private location: Location,
     private zone: NgZone,
     private audio: AudioService,
-    private alert: AlertController
+    private alert: AlertController,
+    @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface
   ) {}
 
   ngOnDestroy() {
@@ -1399,5 +1402,20 @@ export class PrayPage implements OnInit, OnDestroy {
           });
       }
     }
+  }
+
+  async optionSendStoredSelection(ev: CustomEvent) {
+    const doc: LiturgicalDocument | undefined = ev.detail.el?.doc;
+    if (doc?.slug) {
+      const stored = await this.storage.get(`option-selected-${doc.slug}`);
+      if (stored) {
+        setTimeout(() => ev.detail.el.select(Number(stored)), 50);
+      }
+    }
+  }
+
+  async optionSaveSelection(ev: CustomEvent) {
+    const { slug, index } = ev.detail;
+    await this.storage.set(`option-selected-${slug}`, index.toString());
   }
 }
