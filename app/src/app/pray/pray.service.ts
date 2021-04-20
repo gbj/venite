@@ -96,7 +96,7 @@ export class PrayService {
         (doc.type == "liturgy" || doc.type == "option") &&
         doc.value?.length > 0
       ) {
-        this.latestChildren$ = (docBase as Liturgy).value?.map((child) =>
+        this.latestChildren$ = ((docBase as Liturgy).value || []).map((child) =>
           this.compile(
             child,
             day,
