@@ -26,20 +26,14 @@
   </ion-grid>
   <ion-list>
     <ion-item *ngFor="let reminder of reminders; let reminderIndex = index">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="5">
-            <ion-datetime displayFormat="h:mm A" [placeholder]="'reminders.time' | translate" [(ngModel)]="reminder.time" (ionChange)="schedule()"></ion-datetime>
-          </ion-col>
-          <ion-col size="7">
-            <ion-input [placeholder]="'reminders.reminder-title' | translate" [(ngModel)]="reminder.title" (ionChange)="schedule()" debounce="500"></ion-input>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-toggle slot="end" [(ngModel)]="reminder.active" (ionChange)="schedule()"></ion-toggle>
-      <ion-button slot="end" (click)="remove(reminderIndex)" fill="clear">
-        <ion-icon slot="icon-only" name="close"></ion-icon>
-      </ion-button>
+      <div class="time">
+        <ion-datetime displayFormat="h:mm A" [placeholder]="'reminders.time' | translate" [(ngModel)]="reminder.time" (ionChange)="schedule()"></ion-datetime>
+        <ion-input [placeholder]="'reminders.reminder-title' | translate" [(ngModel)]="reminder.title" (ionChange)="schedule()" debounce="500"></ion-input>
+        <ion-toggle slot="end" [(ngModel)]="reminder.active" (ionChange)="schedule()"></ion-toggle>
+        <ion-button slot="end" (click)="remove(reminderIndex)" fill="clear">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </div>
     </ion-item>
   </ion-list>
   <ion-grid>

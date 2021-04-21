@@ -1,0 +1,33 @@
+.time {
+  display: grid;
+  grid-template-columns: 1fr 60px 50px;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  grid-template-areas: "time toggle close" "label label label";
+
+  > ion-datetime {
+    grid-area: time;
+  }
+
+  > ion-toggle {
+    grid-area: toggle;
+  }
+
+  > ion-button {
+    grid-area: close;
+  }
+
+  > ion-input {
+    grid-area: label;
+    margin-left: 1.25em;
+  }
+}
+
+@media(min-width: 767px) {
+  .time {
+    display: grid;
+    grid-template-columns: 150px 1fr 60px 50px;
+    width: 100%;
+    grid-template-areas: "time label toggle close";
+  }
+}
