@@ -20,6 +20,7 @@ import {
   concat,
   from,
   fromEvent,
+  interval,
   merge,
   Observable,
   of,
@@ -28,6 +29,7 @@ import {
 } from "rxjs";
 import { speak } from "rxjs-tts";
 import {
+  first,
   map,
   mapTo,
   switchMap,
@@ -44,6 +46,11 @@ export type SpeechServiceTracking = {
   data: any;
 };
 
+export enum TTSState {
+  Starting = "Starting",
+  Ending = "Ending",
+}
+
 @Injectable({
   providedIn: "root",
 })
@@ -51,7 +58,8 @@ export class SpeechService {
   public isPlaying: boolean = false;
   background: "silence" | "seashore" | "garden" | "night" | "silence-short";
 
-  private _voices: SpeechSynthesisVoice[] | undefined;
+  private _voices: Promise<{ voices: SpeechSynthesisVoice[] }>;
+  private _languages: Promise<{ languages: string[] }>;
 
   constructor(
     private platform: PlatformService,
@@ -81,11 +89,14 @@ export class SpeechService {
 
   // TODO need to handle all SpeechService preferences
   speakDoc(
+    voices: SpeechSynthesisVoice[],
     doc: LiturgicalDocument,
     settings: DisplaySettings,
     index: number = 0,
     startingUtteranceIndex: number = 0
   ): Observable<SpeechServiceTracking> {
+    TextToSpeech.stop();
+
     // init TTS
     const BETWEEN_DOCS = 500 * (1 / settings.voiceRate),
       SILENCE = 4000 * (1 / settings.voiceRate),
@@ -197,7 +208,7 @@ export class SpeechService {
             (verse as Heading).type === "heading"
               ? docToUtterances(verse as Heading)
               : processText((verse as BibleReadingVerse).text).split(
-                  /[^\w \t’']/g
+                  /[^\w \t’'-]/g
                 )
           )
           .flat(),
@@ -331,68 +342,83 @@ export class SpeechService {
     const subdocs = doc?.type === "liturgy" ? (doc as Liturgy).value : [doc],
       unskippedSubdocs = subdocs.slice(index);
     const utterances = unskippedSubdocs
-      .map((sd, subdocIdx) =>
-        docToUtterances(sd)
-          // start at the given offset, but only for the first subdoc
-          // (i.e., if we paused at v. 3 of the psalm, start at v 3 -- but don't slice other docs)
-          .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
-          .filter((value) => Boolean(value))
-          .map((value, utteranceIdx) =>
-            typeof value === "string"
-              ? from(
-                  this.utteranceFromText(
-                    processText(value),
-                    doc.language ?? "en",
-                    settings
+      .map((sd, subdocIdx) => {
+        const u = docToUtterances(sd);
+        return (
+          docToUtterances(sd)
+            // start at the given offset, but only for the first subdoc
+            // (i.e., if we paused at v. 3 of the psalm, start at v 3 -- but don't slice other docs)
+            .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
+            .filter((value) => value || " ")
+            .map((value, utteranceIdx) =>
+              typeof value === "string"
+                ? from(
+                    this.utteranceFromText(
+                      processText(value),
+                      doc.language ?? "en",
+                      settings
+                    )
+                  ).pipe(
+                    switchMap((utterance) => this.speak(utterance, voices)),
+                    map((data) => ({
+                      subdoc: subdocIdx + index,
+                      utterance: utteranceIdx + startingUtteranceIndex,
+                      data,
+                    }))
                   )
-                ).pipe(
-                  switchMap((utterance) => this.speak(utterance)),
-                  map((data) => ({
-                    subdoc: subdocIdx + index,
-                    utterance: utteranceIdx + startingUtteranceIndex,
-                    data,
-                  }))
-                )
-              : timer(value).pipe(
-                  map((data) => ({
-                    subdoc: subdocIdx + index,
-                    utterance: utteranceIdx + startingUtteranceIndex,
-                    data,
-                  }))
-                )
-          )
-      )
+                : timer(value).pipe(
+                    map((data) => ({
+                      subdoc: subdocIdx + index,
+                      utterance: utteranceIdx + startingUtteranceIndex,
+                      data,
+                    }))
+                  )
+            )
+        );
+      })
       .flat();
     return concat(...utterances);
   }
 
-  speak(utterance: SpeechSynthesisUtterance): Observable<any> {
+  speak(
+    utterance: SpeechSynthesisUtterance,
+    voices: SpeechSynthesisVoice[]
+  ): Observable<any> {
+    const voiceIdx = voices.indexOf(
+      voices.find((voice) => voice.voiceURI === utterance.voice?.voiceURI) ||
+        voices.find((voice) => voice.lang === utterance.lang)
+    );
+
     const voice$ = new Observable((observer) => {
       const end$ = from(
         TextToSpeech.speak({
-          text: utterance.text,
+          text: utterance.text || " ",
           pitch: utterance.pitch,
           rate: utterance.rate,
           lang: utterance.lang,
+          voice: voiceIdx,
           category: "playback",
         })
       );
 
-      const subscription = merge(of(), end$)
+      const subscription = merge(
+        interval(1).pipe(first(), mapTo(TTSState.Starting)),
+        end$.pipe(mapTo(TTSState.Ending))
+      )
         .pipe(
           takeUntil(end$),
-          mapTo({
+          map((state) => ({
+            state,
             utterance,
             target: utterance,
-          }),
-          tap((data) => console.log("SpeechService", data))
+          }))
         )
         .subscribe(observer);
 
       // cancel all utterances on unsubscribe
-      /*subscription.add(() => {
+      subscription.add(() => {
         TextToSpeech.stop();
-      });*/
+      });
 
       return subscription;
     });
@@ -418,32 +444,24 @@ export class SpeechService {
     }
     u.lang = chosenVoice?.lang || lang;
     u.pitch = 1;
-    u.rate = settings.voiceRate ?? 1;
+    u.rate =
+      (settings.voiceRate ?? 0.75) *
+      // iOS needs to sloooooow down.
+      (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
     u.volume = settings.voiceBackgroundVolume ?? 1;
 
     return u;
   }
 
   async getVoices(): Promise<SpeechSynthesisVoice[]> {
+    // load voices as Promise once (only calls native API once)
     if (!this._voices) {
-      const { voices } = await TextToSpeech.getSupportedVoices();
-      this._voices = voices;
-
-      if (!this._voices || this._voices?.length === 0) {
-        const { languages } = await TextToSpeech.getSupportedLanguages();
-        console.log("languages = ", languages);
-        const voices = languages
-          .filter((lang) => lang.startsWith("en"))
-          .map((lang) => ({
-            lang,
-            name: this.translate.instant(`speech.${lang}`),
-            default: false,
-            localService: null,
-            voiceURI: null,
-          }));
-        this._voices = voices;
-      }
+      this._voices = TextToSpeech.getSupportedVoices();
     }
-    return this._voices;
+
+    // and wait for that Promise to resolve on any call
+    const { voices } = await this._voices;
+
+    return voices;
   }
 }
