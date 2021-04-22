@@ -2655,18 +2655,22 @@ export declare interface LdfOption extends Components.LdfOption {}
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   inputs: ['doc', 'editable', 'path', 'preview'],
-  outputs: ['ldfAddOptionToDoc', 'ldfDocShouldChange']
+  outputs: ['ldfAddOptionToDoc', 'ldfDocShouldChange', 'ldfOptionAskForStoredSelection', 'ldfOptionMakeSelection']
 })
 export class LdfOption {
   /**  */
   ldfAddOptionToDoc!: IOptionComponent['ldfAddOptionToDoc'];
   /**  */
   ldfDocShouldChange!: IOptionComponent['ldfDocShouldChange'];
+  /**  */
+  ldfOptionAskForStoredSelection!: IOptionComponent['ldfOptionAskForStoredSelection'];
+  /**  */
+  ldfOptionMakeSelection!: IOptionComponent['ldfOptionMakeSelection'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfDocShouldChange', 'ldfOptionAskForStoredSelection', 'ldfOptionMakeSelection']);
   }
 }
 
