@@ -11,6 +11,10 @@
     <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2"/>
   </feature>
 
+  <feature name="IonicCordovaCommon">
+    <param name="android-package" value="com.ionicframework.common.IonicCordovaCommon" onload="true"/>
+  </feature>
+
   <feature name="Media">
     <param name="android-package" value="org.apache.cordova.media.AudioHandler"/>
   </feature>

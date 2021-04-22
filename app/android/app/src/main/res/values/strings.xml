@@ -1,7 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Venite</string>
-    <string name="title_activity_main">Venite</string>
-    <string name="package_name">app.venite</string>
-    <string name="custom_url_scheme">app.venite</string>
+  <string name="app_name">Venite</string>
+  <string name="title_activity_main">Venite</string>
+  <string name="package_name">app.venite</string>
+  <string name="custom_url_scheme">app.venite</string>
+  <string name="ionic_app_id">9a37f920</string>
+  <string name="ionic_channel_name">Production</string>
+  <string name="ionic_update_method">background</string>
+  <string name="ionic_max_versions">2</string>
+  <string name="ionic_min_background_duration">30</string>
+  <string name="ionic_update_api">https://api.ionicjs.com</string>
 </resources>

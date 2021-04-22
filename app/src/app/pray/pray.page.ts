@@ -878,11 +878,13 @@ export class PrayPage implements OnInit, OnDestroy {
 
     // TODO — when should Speech option be displayed?
     if (!this.bulletinMode) {
+      const voices = await this.speechService.getVoices();
       //this.voiceChoices && !this.speechPlaying && !this.hasPending) {
       buttons.push({
         text: "Read Aloud",
         icon: "headset",
-        handler: () => this.startSpeechAt(data.doc, data.settings, 0, 0, true),
+        handler: () =>
+          this.startSpeechAt(voices, data.doc, data.settings, 0, 0, true),
       });
     }
 
@@ -1060,6 +1062,7 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   startSpeechAt(
+    voices: SpeechSynthesisVoice[],
     doc: LiturgicalDocument,
     settings: DisplaySettings,
     subdoc: number = 0,
@@ -1079,13 +1082,17 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechPlayingUtterance = utterance;
     this.scrollToSubdoc(subdoc);
     const utterances$ = combineLatest([this.doc$, this.settings$]).pipe(
-      //this.speechService.speakDoc(doc, settings, this.speechPlayingSubDoc ?? subdoc, this.speechPlayingUtterance ?? utterance);
       filter(([doc, settings]) => Boolean(doc && settings)),
+      map(([doc, settings]) => ({
+        doc: docsToLiturgy(this.flattenDoc(doc)),
+        settings,
+      })),
       // any time the document or settings change,
       // cancels the previous TTS reading and restarts it with the new document
       // and/or settings, starting at the sub-document/utterance indices that had been reached
-      switchMap(([doc, settings]) =>
+      switchMap(({ doc, settings }) =>
         this.speechService.speakDoc(
+          voices,
           // insert saints' biographies at the beginning, if relevant
           firstTime &&
             (doc?.day?.holy_days || [])
@@ -1184,18 +1191,17 @@ export class PrayPage implements OnInit, OnDestroy {
     }
   }
   pauseSpeech() {
-    this.zone;
-    this.speechSubscription.unsubscribe();
-    this.speechService.pause();
-    this.audio?.pause();
+    console.log("pause speech");
+    this.zone.run(() => {
+      this.speechSubscription.unsubscribe();
+      this.speechService.pause();
+      this.audio?.pause();
+    });
   }
-  resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
-    console.log(
-      "resuming",
-      this.speechPlayingSubDoc,
-      this.speechPlayingUtterance
-    );
+  async resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
+    const voices = await this.speechService.getVoices();
     this.startSpeechAt(
+      voices,
       doc,
       settings,
       this.speechPlayingSubDoc,
@@ -1204,26 +1210,38 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechService.resume();
     this.audio?.play();
   }
-  rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
-    this.speechSubscription.unsubscribe();
-    this.speechPlayingUtterance = 0;
-    if (this.speechPlayingUtterance - this.speechUtteranceAtStartOfSubDoc < 5) {
-      //console.log('rewind to previous doc')
-      this.startSpeechAt(
-        doc,
-        settings,
-        this.speechPlayingSubDoc - 2 >= 0 ? this.speechPlayingSubDoc - 2 : 0
-      );
-    } else {
-      //console.log('rewind to beginning of this doc')
-      this.startSpeechAt(doc, settings, this.speechPlayingSubDoc);
-    }
+  async rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
+    const voices = await this.speechService.getVoices();
+    this.zone.run(() => {
+      this.speechSubscription?.unsubscribe();
+      this.speechService.pause();
+      this.speechPlayingUtterance = 0;
+      if (
+        this.speechPlayingUtterance - this.speechUtteranceAtStartOfSubDoc <
+        5
+      ) {
+        //console.log('rewind to previous doc')
+        this.startSpeechAt(
+          voices,
+          doc,
+          settings,
+          this.speechPlayingSubDoc - 1 >= 0 ? this.speechPlayingSubDoc - 1 : 0
+        );
+      } else {
+        //console.log('rewind to beginning of this doc')
+        this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc);
+      }
+    });
   }
-  fastForward(doc: LiturgicalDocument, settings: DisplaySettings) {
-    this.speechSubscription.unsubscribe();
-    //console.log('skipping ahead to ', this.speechPlayingSubDoc + 1)
-    this.speechPlayingUtterance = 0;
-    this.startSpeechAt(doc, settings, this.speechPlayingSubDoc + 1);
+  async fastForward(doc: LiturgicalDocument, settings: DisplaySettings) {
+    const voices = await this.speechService.getVoices();
+
+    this.zone.run(() => {
+      this.speechSubscription?.unsubscribe();
+      this.speechService.pause();
+      this.speechPlayingUtterance = 0;
+      this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc + 1);
+    });
   }
 
   // Canticle swap

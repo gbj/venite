@@ -1,21 +1,8 @@
 import { Injectable } from "@angular/core";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  DocumentChangeAction,
-} from "@angular/fire/firestore";
+import { AngularFirestore } from "@angular/fire/firestore";
 
-import { Observable, from, of, combineLatest, merge, concat } from "rxjs";
-import {
-  catchError,
-  distinct,
-  filter,
-  map,
-  startWith,
-  switchMap,
-  take,
-  tap,
-} from "rxjs/operators";
+import { Observable, from, of, combineLatest, merge } from "rxjs";
+import { catchError, filter, map, startWith, switchMap } from "rxjs/operators";
 
 import {
   docsToOption,
@@ -205,9 +192,7 @@ export class DocumentService {
     ]);
 
     // only load either the offline or the online liturgies, to prevent screen from flickering by switching to newly-loaded set
-    return isOnline().pipe(
-      switchMap((online) => (online ? onlineLiturgies$ : offlineLiturgies$))
-    );
+    return merge(offlineLiturgies$, onlineLiturgies$);
   }
 
   getAllLiturgyOptions(): Observable<Liturgy[]> {

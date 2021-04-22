@@ -2,6 +2,9 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
+include ':capacitor-community-firebase-analytics'
+project(':capacitor-community-firebase-analytics').projectDir = new File('../node_modules/@capacitor-community/firebase-analytics/android')
+
 include ':capacitor-community-text-to-speech'
 project(':capacitor-community-text-to-speech').projectDir = new File('../node_modules/@capacitor-community/text-to-speech/android')
 
@@ -33,4 +36,4 @@ include ':capacitor-firebase-auth'
 project(':capacitor-firebase-auth').projectDir = new File('../node_modules/capacitor-firebase-auth/android')
 
 include ':capacitor-media-session'
-project(':capacitor-media-session').projectDir = new File('../../../Projects/fwdmvmt/day-by-day/capacitor-media-session/android')
+project(':capacitor-media-session').projectDir = new File('../node_modules/capacitor-media-session/android')

@@ -15,6 +15,9 @@ import { PreferencesService } from "./preferences/preferences.service";
 import { Router } from "@angular/router";
 import { App } from "@capacitor/app";
 
+import { FirebaseAnalytics } from "@capacitor-community/firebase-analytics";
+import { environment } from "../environments/environment";
+
 @Component({
   selector: "venite-root",
   templateUrl: "app.component.html",
@@ -23,6 +26,7 @@ import { App } from "@capacitor/app";
 export class AppComponent {
   remindersEnabled: boolean = false;
   organizations$: Observable<Organization[]>;
+  canDonate: boolean = true;
 
   constructor(
     private platform: Platform,
@@ -39,6 +43,8 @@ export class AppComponent {
   }
 
   initializeApp() {
+    this.canDonate = !this.platform.is("capacitor");
+
     this.platform.ready().then(() => {
       // deep links
       App.addListener("appUrlOpen", (data: { url: string }) => {
@@ -81,5 +87,12 @@ export class AppComponent {
         }
       });
     });
+
+    if (this.platform.is("capacitor")) {
+      FirebaseAnalytics.initializeFirebase(environment.firebase);
+      FirebaseAnalytics.setCollectionEnabled({
+        enabled: true,
+      });
+    }
   }
 }
