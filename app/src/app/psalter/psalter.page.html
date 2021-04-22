@@ -9,6 +9,7 @@
       <ion-button *ngIf="settings$ | async as settings" (click)="openSettings(settings)">
         <ion-icon slot="icon-only" name="cog"></ion-icon>
       </ion-button>
+      <venite-auth-menu-button></venite-auth-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
