@@ -4,17 +4,6 @@
     <ion-buttons collapse="true" slot="start">
       <ion-back-button></ion-back-button>
       <ion-menu-button></ion-menu-button>
-      <!-- Selection Undo/Redo -->
-      <!--<ng-container *ngIf="!bulletinMode">
-        <ion-button (click)="selections.undo()" *ngIf="selections.canUndo$ | async">
-          <ion-icon name="arrow-undo" slot="icon-only"></ion-icon>
-          <ion-label class="display-hidden">{{'selection.Undo' | translate}}</ion-label>
-        </ion-button>
-        <ion-button (click)="selections.redo()" *ngIf="selections.canRedo$ | async">
-          <ion-icon name="arrow-redo" slot="icon-only"></ion-icon>
-          <ion-label class="display-hidden">{{'selection.Redo' | translate}}</ion-label>
-        </ion-button>
-      </ng-container>-->
     </ion-buttons>
     <ng-container *ngIf="doc$ | async as doc">
       <ion-title>{{ doc?.label || ('Pray the Office' | translate)}}</ion-title>
@@ -81,6 +70,8 @@
                     (ldfDocShouldChange)="changeDoc(doc, $event)"
                     (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
                     (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
+                    (window:ldfOptionAskForStoredSelection)="optionSendStoredSelection($event)"
+                    (window:ldfOptionMakeSelection)="optionSaveSelection($event)"
                   ></ldf-liturgical-document>
                 </ng-container>
               </div>
