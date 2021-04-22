@@ -11,7 +11,7 @@
 .bordered {
   border-left: 1em solid var(--ion-background-color, #fff);
   border-right: 1em solid var(--ion-background-color, #fff);
-  border-width: 1em;
+  border-width: 0;
   width: 100vw;
   padding-bottom: 3em;
   padding-top: 0.5em;
@@ -52,7 +52,7 @@
 
 .ldf-wrapper {
   width: var(--ldf-max-width);
-  max-width: calc(100vw - 2em);
+  max-width: calc(100vw - 1em);
   margin: auto;
   background-color: var(--ldf-background-color);
   padding: 1em;
