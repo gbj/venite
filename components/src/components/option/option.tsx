@@ -272,7 +272,7 @@ export class OptionComponent {
         <div class='select-control'>
           <ldf-label-bar>
             {/* Can be overwritten by apps that use Ionic or other frameworks */}
-            <slot slot='end' name='controls'>{this.selectNode()}</slot>
+            {this.selectNode()}
           </ldf-label-bar>
         </div>
         
