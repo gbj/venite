@@ -18,6 +18,7 @@ import { App } from "@capacitor/app";
 import { FirebaseAnalytics } from "@capacitor-community/firebase-analytics";
 import { environment } from "../environments/environment";
 import { IssueComponent } from "./shared/issue/issue.component";
+import { IssueService } from "./issues/issue.service";
 
 @Component({
   selector: "venite-root",
@@ -28,6 +29,8 @@ export class AppComponent {
   remindersEnabled: boolean = false;
   organizations$: Observable<Organization[]>;
   canDonate: boolean = true;
+  issueManager$: Observable<boolean>;
+  issues$: Observable<number | null>;
 
   constructor(
     private platform: Platform,
@@ -38,7 +41,8 @@ export class AppComponent {
     private preferences: PreferencesService,
     private zone: NgZone,
     private router: Router,
-    private modal: ModalController
+    private modal: ModalController,
+    private issues: IssueService
   ) {
     this.initializeApp();
     this.translate.use("en");
@@ -96,6 +100,21 @@ export class AppComponent {
         enabled: true,
       });
     }
+
+    this.issueManager$ = combineLatest([
+      this.auth.user,
+      this.organizationService.find("venite"),
+    ]).pipe(
+      map(
+        ([user, org]) =>
+          org.owner === user?.uid || org.editors.includes(user?.uid)
+      )
+    );
+    this.issues$ = this.issueManager$.pipe(
+      switchMap((isManager) =>
+        isManager ? this.issues.numberOpen() : of(null)
+      )
+    );
   }
 
   async reportIssue() {

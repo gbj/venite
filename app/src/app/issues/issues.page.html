@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "menu.issues" | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <h2>Open</h2>
+    <ion-item *ngFor="let item of open$ | async">
+      <ion-label>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority < 3" color="success">Low</ion-badge>
+        <p>{{ item.data.description }}</p>
+        <a href="mailto:{{item.data.email}}">{{ item.data.name }}</a>
+        <p>Submitted {{ item.data.date_created?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+        <p *ngIf="item.data.date_modified">Triaged {{ item.data.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="setPending(item.id)">
+          <ion-icon name="create"></ion-icon>
+        </ion-button>
+        <ion-button (click)="close(item.id)">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <h2>Pending</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of pending$ | async">
+      <ion-label>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority < 3" color="success">Low</ion-badge>
+        <p>{{ item.data.description }}</p>
+        <a href="mailto:{{item.data.email}}">{{ item.data.name }}</a>
+        <p>Submitted {{ item.data.date_created?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+        <p *ngIf="item.data.date_modified">Triaged {{ item.data.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="open(item.id)">
+          <ion-icon name="open"></ion-icon>
+        </ion-button>
+        <ion-button (click)="close(item.id)">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <h2>Closed</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of closed$ | async">
+      <ion-label>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>
+        <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority < 3" color="success">Low</ion-badge>
+        <p>{{ item.data.description }}</p>
+        <a href="mailto:{{item.data.email}}">{{ item.data.name }}</a>
+        <p>Submitted {{ item.data.date_created?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+        <p *ngIf="item.data.date_modified">Triaged {{ item.data.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="open(item.id)">
+          <ion-icon name="open"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(item.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

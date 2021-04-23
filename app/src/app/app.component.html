@@ -66,6 +66,13 @@
             <ion-icon name="bug" slot="start"></ion-icon>
             <ion-label>{{ 'menu.report-issue' | translate }}</ion-label>
           </ion-item>
+          <ion-item *ngIf="issueManager$ | async" routerLink="/issues">
+            <ion-icon name="bug" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.issues' | translate }}</ion-label>
+            <ng-container *ngIf="issues$ | async as issues">
+              <ion-badge *ngIf="issues > 0">{{ issues }}</ion-badge>
+            </ng-container>
+          </ion-item>
         </ion-menu-toggle>
 
       </ion-list>
