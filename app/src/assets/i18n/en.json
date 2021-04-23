@@ -64,7 +64,8 @@
     "about": "About",
     "tutorials": "Tutorials",
     "daily-readings": "Daily Readings",
-    "reminders": "Reminders"
+    "reminders": "Reminders",
+    "report-issue": "Report an Issue"
 },
   "bulletins": {
     "bulletins": "Bulletins",
@@ -339,5 +340,10 @@
     "EOW": "EOW",
     "Daily-Devotion": "Daily Devotions",
     "Template": "Other Templates"
+  },
+  "issue": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "description": "Please describe the issue."
   }
 }

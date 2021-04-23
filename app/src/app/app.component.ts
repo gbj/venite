@@ -1,6 +1,6 @@
 import { Component, NgZone } from "@angular/core";
 
-import { Platform } from "@ionic/angular";
+import { ModalController, Platform } from "@ionic/angular";
 
 // Community Modules
 import { TranslateService } from "@ngx-translate/core";
@@ -17,6 +17,7 @@ import { App } from "@capacitor/app";
 
 import { FirebaseAnalytics } from "@capacitor-community/firebase-analytics";
 import { environment } from "../environments/environment";
+import { IssueComponent } from "./shared/issue/issue.component";
 
 @Component({
   selector: "venite-root",
@@ -36,7 +37,8 @@ export class AppComponent {
     private darkMode: DarkmodeService,
     private preferences: PreferencesService,
     private zone: NgZone,
-    private router: Router
+    private router: Router,
+    private modal: ModalController
   ) {
     this.initializeApp();
     this.translate.use("en");
@@ -94,5 +96,16 @@ export class AppComponent {
         enabled: true,
       });
     }
+  }
+
+  async reportIssue() {
+    const modal = await this.modal.create({
+      component: IssueComponent,
+    });
+    modal.componentProps = {
+      modal,
+    };
+
+    await modal.present();
   }
 }

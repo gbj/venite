@@ -130,5 +130,10 @@ service cloud.firestore {
       allow read: if true;
       allow create, update, delete: if false;
     }
+
+    match /Issue/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
   }
 }

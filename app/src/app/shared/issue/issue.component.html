@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "menu.report-issue" | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">{{ "issue.name" | translate }}</ion-label>
+      <ion-input type="text" ngDefaultControl [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ "issue.email" | translate }}</ion-label>
+      <ion-input type="email" ngDefaultControl [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ "issue.description" | translate }}</ion-label>
+      <ion-textarea ngDefaultControl [(ngModel)]="description"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-label>{{ 'cancel' | translate }}</ion-label>
+      </ion-button>
+      <ion-button (click)="report()">
+        <ion-label>{{ 'ok' | translate }}</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-content>
