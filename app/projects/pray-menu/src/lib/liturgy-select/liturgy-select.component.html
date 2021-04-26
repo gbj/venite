@@ -140,6 +140,7 @@
 <!-- Preferences -->
 <venite-liturgy-preference-menu
   [liturgy]="liturgy$ | async"
+  [onlyAdvancedSettings]="showOnlyAdvancedSettings"
   (clientPreferencesChange)="menuPreferences$.next($event)"
   (preferencesLoaded)="preferencesLoaded$.next($event)"
 ></venite-liturgy-preference-menu>

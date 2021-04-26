@@ -80,6 +80,7 @@ export class LiturgySelectComponent implements OnInit {
   @Input() showVigil: boolean = true;
   @Input() prayButton: boolean = true;
   @Input() bulletinButton: boolean = false;
+  @Input() showOnlyAdvancedSettings: boolean = false;
 
   @Output() dayChosen: EventEmitter<PrayData> = new EventEmitter();
   @Output() createBulletin: EventEmitter<BulletinCommands> = new EventEmitter();

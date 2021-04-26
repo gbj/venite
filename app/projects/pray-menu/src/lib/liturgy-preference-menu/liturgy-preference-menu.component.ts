@@ -26,6 +26,7 @@ import {
 } from "@venite/ng-service-api";
 import { AUTH_SERVICE } from "@venite/ng-service-api";
 import { AuthServiceInterface } from "@venite/ng-service-api";
+import { PrayMenuConfig } from "../pray-menu-config";
 
 interface TreeData {
   preferences: [string, Preference][];
@@ -46,6 +47,7 @@ interface FormData {
 export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
   // preferences for a given liturgy
   @Input() liturgy: Liturgy;
+  @Input() onlyAdvancedSettings: boolean = false;
   @Output()
   clientPreferencesChange: EventEmitter<ClientPreferences> = new EventEmitter();
   @Output() preferencesLoaded: EventEmitter<boolean> = new EventEmitter();
@@ -68,14 +70,20 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
 
   subscription: Subscription;
 
+  onlyAdvanced: boolean;
+
   constructor(
     @Inject(PREFERENCES_SERVICE)
     private preferencesService: PreferencesServiceInterface,
     private fb: FormBuilder,
-    @Inject(AUTH_SERVICE) private auth: AuthServiceInterface
+    @Inject(AUTH_SERVICE) private auth: AuthServiceInterface,
+    @Inject("config") public config: PrayMenuConfig
   ) {}
 
   ngOnInit() {
+    this.onlyAdvanced =
+      this.onlyAdvancedSettings || this.config.showsOnlyAdvancedSettings;
+
     this.preferencesLoaded.emit(false);
 
     // `tree` provides `categories` and `preference_tree`
@@ -88,7 +96,6 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
     this.preferences.next(this.liturgy?.metadata?.preferences);
 
     this.subscription = this.formData.subscribe((data) => {
-      console.log("formData = ", data);
       this.preferencesLoaded.emit(Boolean(data));
     });
   }
@@ -105,12 +112,6 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
       newPreferences = changes.liturgy.currentValue?.metadata?.preferences;
 
     if (changes.liturgy) {
-      console.log(
-        "(LiturgyPreferenceMenuComponent) liturgy has changed",
-        oldPreferences,
-        newPreferences,
-        deepEqual(oldPreferences, newPreferences)
-      );
       if (!oldPreferences || !deepEqual(oldPreferences, newPreferences)) {
         this.formData = this.buildFormData(
           this.tree,
@@ -122,7 +123,6 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
           this.subscription.unsubscribe();
         }
         this.subscription = this.formData.subscribe((data) => {
-          console.log("formData = ", data);
           this.preferencesLoaded.emit(Boolean(data));
         });
       }
@@ -144,7 +144,6 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
       startWith({}),
       // don't use null values of preferences
       filter((preferences) => !!preferences),
-
       // transform preferences into categories
       map((preferences) => ({
         preferences,
