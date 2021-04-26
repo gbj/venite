@@ -12,8 +12,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-card *ngIf="liturgy$ | async as liturgy else loading">
-    <ion-card-header>
+  <div class="readings" *ngIf="liturgy$ | async as liturgy else loading">
       <form>
         <ion-segment [value]="timeOfDay.value" (ionChange)="timeOfDay.setValue($event.detail.value)">
           <ion-segment-button value="morning">
@@ -41,8 +40,8 @@
           </ion-segment-button>
         </ion-segment>
       </form>
-    </ion-card-header>
-    <ion-card-content>
+
+  
       <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
         <h2>{{ today | date:'longDate' }}</h2>
         <ng-container *ngIf="day$ | async as day else loading">
@@ -74,8 +73,7 @@
           </details>
         </ng-container>
       </div>
-    </ion-card-content>
-  </ion-card>
+    </div>
   <venite-sponsor></venite-sponsor>
 </ion-content>
 
