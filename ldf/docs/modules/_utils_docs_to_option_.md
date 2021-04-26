@@ -14,7 +14,7 @@
 
 ▸ **docsToOption**(`docs`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[] | [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md), `versions`: string[] | undefined): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/docs-to-option.ts:6](https://github.com/gbj/venite/blob/03064408/ldf/src/utils/docs-to-option.ts#L6)*
+*Defined in [utils/docs-to-option.ts:6](https://github.com/gbj/venite/blob/65134186/ldf/src/utils/docs-to-option.ts#L6)*
 
 **Parameters:**
 

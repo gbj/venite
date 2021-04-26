@@ -1,7 +1,7 @@
 import { BibleReading, ResponsivePrayer, Text } from '../src';
 
-describe("Bible Class abbreviation and name functions", () => {
-  it("should find abbreviations for book names", () => {
+describe('Bible Class abbreviation and name functions', () => {
+  it('should find abbreviations for book names', () => {
     const reading = new BibleReading();
 
     reading.citation = 'Blob 1:1';
@@ -19,7 +19,7 @@ describe("Bible Class abbreviation and name functions", () => {
     expect(reading.abbrevFromCitation()).toEqual('Sir');
   });
 
-  it("should find chapter and verse numbers for book names", () => {
+  it('should find chapter and verse numbers for book names', () => {
     const reading = new BibleReading();
 
     reading.citation = 'Eccles. 11; 12';
@@ -42,7 +42,7 @@ describe("Bible Class abbreviation and name functions", () => {
     expect(reading.verseFromCitation()).toEqual('4');
   });
 
-  it("should handle broken citations by falling back", () => {
+  it('should handle broken citations by falling back', () => {
     const reading = new BibleReading();
 
     reading.citation = 'Fake 1:4-2:1';
@@ -51,7 +51,7 @@ describe("Bible Class abbreviation and name functions", () => {
     expect(reading.abbrevFromCitation()).toEqual('');
   });
 
-  it("should find book codes from citations", () => {
+  it('should find book codes from citations', () => {
     const reading = new BibleReading();
 
     //@ts-ignore
@@ -73,41 +73,55 @@ describe("Bible Class abbreviation and name functions", () => {
     expect(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '')).toEqual('Jeremiah');
   });
 
-  it("should find full book names", () => {
+  it('should find full book names', () => {
     const reading = new BibleReading();
 
     reading.citation = 'Blob 1:1';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('Blob');
-  
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('Blob');
+
     reading.citation = 'Jn 1:1';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The Gospel According to John');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The Gospel According to John');
     reading.citation = 'Matt. 23:27-39';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The Gospel According to Matthew');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The Gospel According to Matthew');
     reading.citation = '1 Cor. 1:1';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The First Letter to the Corinthians');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The First Letter to the Corinthians');
     reading.citation = '2 Kgs 1:1-7';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The Second Book of Kings');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The Second Book of Kings');
     reading.citation = '2 Kgs 1:1-7, 9, 12-14';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The Second Book of Kings');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The Second Book of Kings');
     reading.citation = 'Sir 1:4-2:1';
-    expect(reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '').toEqual('The Wisdom of Ben Sira');
+    expect(
+      reading.longNameFromBookCode(reading.bookCodeFromAbbrev(reading.abbrevFromCitation() ?? '') ?? '') ?? '',
+    ).toEqual('The Wisdom of Ben Sira');
   });
 
-  it("should compile eucharistic intro properly", () => {
+  it('should compile eucharistic intro properly', () => {
     const reading = new BibleReading();
 
     reading.citation = 'Jn 1:1';
     reading.metadata = {
-      intro : new ResponsivePrayer({
+      intro: new ResponsivePrayer({
         type: 'responsive',
         style: 'responsive',
         value: [
           {
             text: 'The Holy Gospel of Our Lord Jesus Christ, according to ${shortName}.',
-            response: 'Glory to you, Lord Christ.'
-          }
-        ]
-      })
+            response: 'Glory to you, Lord Christ.',
+          },
+        ],
+      }),
     };
     reading.compileIntro();
     expect(reading).toEqual({
@@ -121,9 +135,9 @@ describe("Bible Class abbreviation and name functions", () => {
           value: [
             {
               text: 'The Holy Gospel of Our Lord Jesus Christ, according to ${shortName}.',
-              response: 'Glory to you, Lord Christ.'
-            }
-          ]
+              response: 'Glory to you, Lord Christ.',
+            },
+          ],
         },
         compiled_intro: {
           hidden: false,
@@ -132,11 +146,11 @@ describe("Bible Class abbreviation and name functions", () => {
           value: [
             {
               response: 'Glory to you, Lord Christ.',
-              text: 'The Holy Gospel of Our Lord Jesus Christ, according to John.'
-            }
-          ]
-        }
-      }
+              text: 'The Holy Gospel of Our Lord Jesus Christ, according to John.',
+            },
+          ],
+        },
+      },
     });
 
     reading.citation = 'Matt 2:4-10';
@@ -152,9 +166,9 @@ describe("Bible Class abbreviation and name functions", () => {
           value: [
             {
               text: 'The Holy Gospel of Our Lord Jesus Christ, according to ${shortName}.',
-              response: 'Glory to you, Lord Christ.'
-            }
-          ]
+              response: 'Glory to you, Lord Christ.',
+            },
+          ],
         },
         compiled_intro: {
           hidden: false,
@@ -163,24 +177,24 @@ describe("Bible Class abbreviation and name functions", () => {
           value: [
             {
               response: 'Glory to you, Lord Christ.',
-              text: 'The Holy Gospel of Our Lord Jesus Christ, according to Matthew.'
-            }
-          ]
-        }
-      }
+              text: 'The Holy Gospel of Our Lord Jesus Christ, according to Matthew.',
+            },
+          ],
+        },
+      },
     });
   });
 
-  it("should compile normal office intro properly", () => {
+  it('should compile normal office intro properly', () => {
     const reading = new BibleReading();
 
     //@ts-ignore
     reading.citation = undefined;
     reading.metadata = {
-      intro : new Text({
+      intro: new Text({
         type: 'text',
-        value: ['A Reading from ${longName}.']
-      })
+        value: ['A Reading from ${longName}.'],
+      }),
     };
     reading.compileIntro();
     expect(JSON.parse(JSON.stringify(reading))).toEqual({
@@ -189,22 +203,22 @@ describe("Bible Class abbreviation and name functions", () => {
         intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from ${longName}.']
+          value: ['A Reading from ${longName}.'],
         },
         compiled_intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from —.']
-        }
-      }
+          value: ['A Reading from —.'],
+        },
+      },
     });
 
     reading.citation = 'Wis 1:1-10';
     reading.metadata = {
-      intro : new Text({
+      intro: new Text({
         type: 'text',
-        value: ['A Reading from ${longName}.']
-      })
+        value: ['A Reading from ${longName}.'],
+      }),
     };
     reading.compileIntro();
     expect(reading).toEqual({
@@ -214,14 +228,14 @@ describe("Bible Class abbreviation and name functions", () => {
         intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from ${longName}.']
+          value: ['A Reading from ${longName}.'],
         },
         compiled_intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from the Wisdom of Solomon.']
-        }
-      }
+          value: ['A Reading from the Wisdom of Solomon.'],
+        },
+      },
     });
 
     reading.citation = 'Phlm 1-10';
@@ -233,30 +247,28 @@ describe("Bible Class abbreviation and name functions", () => {
         intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from ${longName}.']
+          value: ['A Reading from ${longName}.'],
         },
         compiled_intro: {
           hidden: false,
           type: 'text',
-          value: ['A Reading from the Letter to Philemon.']
-        }
-      }
+          value: ['A Reading from the Letter to Philemon.'],
+        },
+      },
     });
 
     reading.metadata.intro = new Text({
-      "type": "text",
-      "value": [
-        "The First Lesson is written in ${shortName}, in the ${chapter} chapter, beginning at the ${verse} verse."
-      ]
+      type: 'text',
+      value: [
+        'The First Lesson is written in ${shortName}, in the ${chapter} chapter, beginning at the ${verse} verse.',
+      ],
     });
-    reading.citation = "Jer. 24";
+    reading.citation = 'Jer. 24';
     reading.compileIntro();
     expect(reading.metadata.compiled_intro).toEqual({
-        hidden: false,
-        type: 'text',
-        value: [
-          "The First Lesson is written in Jeremiah, in the 24th chapter, beginning at the 1st verse."
-        ]
-    })
+      hidden: false,
+      type: 'text',
+      value: ['The First Lesson is written in Jeremiah, in the 24th chapter, beginning at the 1st verse.'],
+    });
   });
 });
