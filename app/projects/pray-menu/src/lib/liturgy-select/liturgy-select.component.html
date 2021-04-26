@@ -79,20 +79,20 @@
   </div>
 
     <!-- Liturgy -->
-    <ion-item>
-      <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
-      <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
-        <ng-container *ngIf="options?.length > 0 else skeleton">
-          <ion-select *ngIf="options.length > 1"
+    <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
+      <ion-item *ngIf="options?.length > 1">
+        <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
+        <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
+          <ion-select
             formControlName="liturgy"
             ngDefaultControl
             (ionChange)="form.controls.liturgy.setValue($event.detail.value)"
-        >
+          >
           <ion-select-option *ngFor="let liturgy of options" [value]="liturgy.slug">{{ liturgy.label }}</ion-select-option>
         </ion-select>
-        </ng-container>
       </ng-container>
-    </ion-item>
+      </ion-item>
+    </ng-container>
 
     <!-- Vigil -->
     <ion-item *ngIf="showVigil">
