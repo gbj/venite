@@ -288,8 +288,9 @@ export class LiturgySelectComponent implements OnInit {
       ),
       this.liturgyOptions$,
     ]).pipe(
-      map(([slug, liturgies]) =>
-        liturgies.find((liturgy) => liturgy.slug == slug)
+      map(
+        ([slug, liturgies]) =>
+          liturgies.find((liturgy) => liturgy.slug == slug) || liturgies[0]
       )
     );
 
