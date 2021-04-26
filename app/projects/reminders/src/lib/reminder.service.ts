@@ -43,7 +43,7 @@ export class ReminderService {
   }
 
   async schedule(reminders: Reminder[]) {
-    this.clear();
+    await this.clear();
     let notifications = await Promise.all(
       reminders
         .filter((reminder) => !!reminder.active)

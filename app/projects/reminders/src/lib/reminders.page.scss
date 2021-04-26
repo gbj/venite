@@ -15,6 +15,7 @@
 
   > ion-button {
     grid-area: close;
+    z-index: 100; /* raise it up above the ion-datetime button that otherwise steals its click */
   }
 
   > ion-input {
