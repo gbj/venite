@@ -540,6 +540,10 @@ ul {
   }
 }
 
+.sm-only {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .sm-hidden {
     position: absolute !important;
@@ -549,6 +553,10 @@ ul {
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap; /* added line */
+  }
+
+  .sm-only {
+    display: block;
   }
 }
 

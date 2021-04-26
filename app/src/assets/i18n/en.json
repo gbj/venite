@@ -23,7 +23,8 @@
     "lessons": "Lessons",
     "collects": "Collects",
     "bcp1979": "BCP (1979)",
-    "lff2018": "Lesser Feasts & Fasts (2018)"
+    "lff2018": "Lesser Feasts & Fasts (2018)",
+    "lff2018-short": "LFF (2018)"
   },
   "auth": {
     "edit-avatar": "Change",

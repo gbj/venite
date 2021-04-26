@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <ion-card *ngIf="liturgy$ | async as liturgy else loading">
     <ion-card-header>
       <form>
@@ -36,7 +36,8 @@
             <ion-label>{{ "daily-readings.bcp1979" | translate }}</ion-label>
           </ion-segment-button>
           <ion-segment-button value="lff2018">
-            <ion-label>{{ "daily-readings.lff2018" | translate }}</ion-label>
+            <ion-label class="sm-hidden">{{ "daily-readings.lff2018" | translate }}</ion-label>
+            <ion-label class="sm-only">{{ "daily-readings.lff2018-short" | translate }}</ion-label>
           </ion-segment-button>
         </ion-segment>
       </form>
