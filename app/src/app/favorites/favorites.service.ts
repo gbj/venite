@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { Observable } from "rxjs";
+import { combineLatest, Observable } from "rxjs";
 import { map, switchMap, tap } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
 import { Favorite } from "./favorite";
@@ -45,15 +45,26 @@ export class FavoritesService {
   }
 
   readAll(): Observable<IdAndFavorite[]> {
-    return this.auth.user.pipe(
-      tap((user) => console.log("searching for all favorites for", user?.uid)),
+    const classic$ = this.auth.user.pipe(
+      switchMap((user) =>
+        this.afs
+          .collection<Favorite>("Favorites", (ref) =>
+            ref.where("classic", "==", true).where("user", "==", user.email)
+          )
+          .snapshotChanges()
+      )
+    );
+    const favorites$ = this.auth.user.pipe(
       switchMap((user) =>
         this.afs
           .collection<Favorite>("Favorites", (ref) =>
             ref.where("user", "==", user.uid)
           )
           .snapshotChanges()
-      ),
+      )
+    );
+    return combineLatest([classic$, favorites$]).pipe(
+      map(([classic, favorites]) => classic.concat(favorites)),
       map((changeactions) =>
         changeactions.map((action) => {
           const doc = action.payload.doc;
