@@ -384,47 +384,58 @@ export class SpeechService {
     utterance: SpeechSynthesisUtterance,
     voices: SpeechSynthesisVoice[]
   ): Observable<any> {
-    const voiceIdx = voices.indexOf(
-      voices.find((voice) => voice.voiceURI === utterance.voice?.voiceURI) ||
-        voices.find((voice) => voice.lang === utterance.lang)
-    );
-
-    const voice$ = new Observable((observer) => {
-      const end$ = from(
-        TextToSpeech.speak({
-          text: utterance.text || " ",
-          pitch: utterance.pitch,
-          rate: utterance.rate,
-          lang: utterance.lang,
-          voice: voiceIdx,
-          category: "playback",
-        })
+    // use TextToSpeech plugin for Android -- browser SpeechSynthesis works better for web/iOS
+    if (this.platform.is("android") && this.platform.is("capacitor")) {
+      const voiceIdx = voices.indexOf(
+        voices.find((voice) => voice.voiceURI === utterance.voice?.voiceURI) ||
+          voices.find((voice) => voice.lang === utterance.lang)
       );
 
-      const subscription = merge(
-        interval(1).pipe(first(), mapTo(TTSState.Starting)),
-        end$.pipe(mapTo(TTSState.Ending))
-      )
-        .pipe(
-          takeUntil(end$),
-          map((state) => ({
-            state,
-            utterance,
-            target: utterance,
-          }))
-        )
-        .subscribe(observer);
+      const voice$ = new Observable((observer) => {
+        const end$ = from(
+          TextToSpeech.speak({
+            text: utterance.text || " ",
+            pitch: utterance.pitch,
+            rate: utterance.rate,
+            lang: utterance.lang,
+            voice: this.platform.is("web") ? voiceIdx : undefined,
+            category: "playback",
+          })
+        );
 
-      // cancel all utterances on unsubscribe
-      subscription.add(() => {
-        TextToSpeech.stop();
+        const subscription = merge(
+          interval(1).pipe(first(), mapTo(TTSState.Starting)),
+          end$.pipe(mapTo(TTSState.Ending))
+        )
+          .pipe(
+            takeUntil(end$),
+            map((state) => ({
+              state,
+              utterance,
+              target: utterance,
+            }))
+          )
+          .subscribe(observer);
+
+        // cancel all utterances on unsubscribe
+        subscription.add(() => {
+          TextToSpeech.stop();
+        });
+
+        return subscription;
       });
 
-      return subscription;
-    });
-
-    // make a pause to let speechSynthesis.cancel pass
-    return timer(4).pipe(switchMapTo(voice$));
+      // make a pause to let speechSynthesis.cancel pass
+      return timer(4).pipe(switchMapTo(voice$));
+    } else {
+      return speak(utterance).pipe(
+        map((ev: SpeechSynthesisEvent) => ({
+          state: ev.type === "start" ? TTSState.Starting : undefined,
+          target: ev.target,
+          utterance: ev.utterance,
+        }))
+      );
+    }
   }
 
   async utteranceFromText(
@@ -438,16 +449,15 @@ export class SpeechService {
     const u: SpeechSynthesisUtterance =
       this.platform.is("capacitor") && this.platform.is("android")
         ? ({} as SpeechSynthesisUtterance)
-        : new SpeechSynthesisUtterance(text);
+        : new SpeechSynthesisUtterance(text || " ");
     if (chosenVoice && chosenVoice.voiceURI) {
       u.voice = chosenVoice;
     }
     u.lang = chosenVoice?.lang || lang;
     u.pitch = 1;
-    u.rate =
-      (settings.voiceRate ?? 0.75) *
-      // iOS needs to sloooooow down.
-      (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
+    u.rate = settings.voiceRate ?? 0.75;
+    // iOS needs to sloooooow down if using Capacitor TextToSpeech
+    // * (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
     u.volume = settings.voiceBackgroundVolume ?? 1;
 
     return u;
@@ -456,7 +466,11 @@ export class SpeechService {
   async getVoices(): Promise<SpeechSynthesisVoice[]> {
     // load voices as Promise once (only calls native API once)
     if (!this._voices) {
-      this._voices = TextToSpeech.getSupportedVoices();
+      if (this.platform.is("capacitor") && this.platform.is("android")) {
+        this._voices = TextToSpeech.getSupportedVoices();
+      } else {
+        this._voices = Promise.resolve({ voices: speechSynthesis.getVoices() });
+      }
     }
 
     // and wait for that Promise to resolve on any call

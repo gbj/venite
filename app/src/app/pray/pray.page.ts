@@ -999,18 +999,19 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // TTS
-  initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
-    this.audio.create("/assets/audio/silence-short.mp3");
-    this.audio.play();
+  async initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
+    await this.audio.create("/assets/audio/silence-short.mp3");
+    await this.audio.play();
+
     this.docLabel = doc.label || "";
-    MediaSession.init({
+    await MediaSession.init({
       play: true,
       pause: true,
       nexttrack: true,
       previoustrack: true,
     });
 
-    MediaSession.setMetadata({
+    await MediaSession.setMetadata({
       artist: "Venite",
       album: this.docLabel || "",
       title: doc.label,
@@ -1023,19 +1024,15 @@ export class PrayPage implements OnInit, OnDestroy {
       ],
     });
 
-    //@ts-ignore
-    MediaSession.addListener("play", () =>
-      this.zone.run(() => this.resumeSpeech(doc, settings))
-    );
-    //@ts-ignore
-    MediaSession.addListener("pause", () =>
-      this.zone.run(() => this.pauseSpeech())
-    );
-    //@ts-ignore
+    MediaSession.addListener("play", () => {
+      this.zone.run(() => this.resumeSpeech(doc, settings));
+    });
+    MediaSession.addListener("pause", () => {
+      this.zone.run(() => this.pauseSpeech());
+    });
     MediaSession.addListener("nexttrack", () => {
       this.zone.run(() => this.fastForward(doc, settings));
     });
-    //@ts-ignore
     MediaSession.addListener("previoustrack", () => {
       this.zone.run(() => this.rewind(doc, settings));
     });
@@ -1070,9 +1067,10 @@ export class PrayPage implements OnInit, OnDestroy {
     firstTime: boolean = false
   ) {
     if (
-      (firstTime && navigator.mediaSession) ||
-      this.platform.is("capacitor")
+      firstTime &&
+      (navigator.mediaSession || this.platform.is("capacitor"))
     ) {
+      console.log("initializing media session");
       this.initMediaSession(doc, settings);
     }
 
@@ -1138,8 +1136,9 @@ export class PrayPage implements OnInit, OnDestroy {
 
         // update metadata for doc
         const utterance: SpeechSynthesisUtterance =
-          (data.data as SpeechSynthesisEvent).utterance || data.data.target;
-        if (utterance) {
+          (data?.data as SpeechSynthesisEvent)?.utterance || data?.data?.target;
+
+        if (utterance && data?.data?.state == "Starting") {
           const docLabel = (childDoc: LiturgicalDocument) => {
             try {
               return childDoc?.type === "option"
@@ -1152,10 +1151,13 @@ export class PrayPage implements OnInit, OnDestroy {
                 ? childDoc.label
                 : childDoc?.citation ||
                   childDoc?.label ||
+                  (typeof (childDoc?.value || [])[0] === "string"
+                    ? childDoc?.value[0]
+                    : undefined) ||
                   utterance?.text ||
                   doc?.label;
             } catch (e) {
-              return utterance?.text || doc?.label;
+              return utterance?.text;
             }
           };
           const subdoc = (doc.value[data.subdoc]?.hasOwnProperty("type")
@@ -1163,18 +1165,23 @@ export class PrayPage implements OnInit, OnDestroy {
               : undefined) as LiturgicalDocument,
             title = docLabel(subdoc);
 
-          MediaSession.setMetadata({
-            artist: "Venite",
-            album: this.docLabel || "",
-            title,
-            artwork: [
-              {
-                src: "/assets/icon/icon-512x512.png",
-                sizes: "512x512",
-                type: "image/png",
-              },
-            ],
-          });
+          console.log("subdoc = ", subdoc);
+
+          if (title) {
+            console.log("setting metadata to", title);
+            MediaSession.setMetadata({
+              artist: "Venite",
+              album: this.docLabel || "",
+              title,
+              artwork: [
+                {
+                  src: "/assets/icon/icon-512x512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            });
+          }
         }
       },
       // TODO: speech errors
@@ -1191,7 +1198,6 @@ export class PrayPage implements OnInit, OnDestroy {
     }
   }
   pauseSpeech() {
-    console.log("pause speech");
     this.zone.run(() => {
       this.speechSubscription.unsubscribe();
       this.speechService.pause();
