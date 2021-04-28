@@ -30,9 +30,9 @@
               <h3>{{ obj.data?.date_created?.toDate() | date:'MM/dd/yyyy' }}</h3>
               <p>{{ obj.data.text }}</p>
               <p class="note">{{ obj.data.note }}</p>
-              <p *ngIf="obj.data.tags && obj.data.tags.length > 0">Tags:
+              <p *ngIf="obj.data.tags && obj.data.tags.length > 0" class="tags">Tags:
                 <ng-container *ngFor="let tag of obj.data.tags; let index = index">
-                  <a (click)="search.setValue(tag)" class="tag">{{tag}}</a>
+                  {{tag}}
                   <span *ngIf="index < obj.data.tags.length - 1"> | </span>
                 </ng-container>
               </p>

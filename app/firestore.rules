@@ -16,6 +16,11 @@ service cloud.firestore {
       let doc = get(/databases/$(database)/documents/Document/$(docId)).data;
       return doc.sharing;
     }
+    
+    function userEmail(uid) {
+      let userProfile = get(/databases/$(database)/documents/Users/$(request.auth.uid)).data;
+      return userProfile.email;
+    }
 
     function hasWriteAccess(sharing) {
       return request.auth.uid != null && (
@@ -34,7 +39,7 @@ service cloud.firestore {
     }
   
     match /Document/{docId} {
-      allow read: if true; //hasReadAccess(resource.data.sharing); // TODO fix
+      allow read: if true; //hasReadAccess(resource.data.sharing);
       allow update, delete: if hasWriteAccess(resource.data.sharing);
       allow create: if request.auth.uid != null;
     }
@@ -82,8 +87,8 @@ service cloud.firestore {
      }
      
      match /Favorites/{docId} {
-      allow read, update, delete: if request.auth.uid == resource.data.user;
-      allow create: if request.auth.uid == request.resource.auth.uid;
+      allow read, update, delete: if request.auth.uid == resource.data.user || resource.data.classic == true;
+      allow create: if request.auth.uid != null;
     }
 
     match /Color/{docId} {
@@ -130,10 +135,10 @@ service cloud.firestore {
       allow read: if true;
       allow create, update, delete: if false;
     }
-
+    
     match /Issue/{docId} {
       allow create: if true;
-      allow read, update, delete: if false;
+      allow read, update, delete: if userInOrg(request.auth.uid, "venite");
     }
   }
 }

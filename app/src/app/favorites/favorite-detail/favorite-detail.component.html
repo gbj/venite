@@ -28,14 +28,20 @@
       </ion-textarea>
       <ion-item lines="none">
         <ion-label slot="start">
-          <p *ngIf="obj.data.tags && obj.data.tags.length > 0">Tags:
+          <p class="tags" *ngIf="obj.data.tags && obj.data.tags.length > 0">Tags:
             <ng-container *ngFor="let tag of obj.data.tags; let index = index">
               <a [routerLink]="['..']" [fragment]="tag | fragment" class="tag">{{tag}}</a>
               <span *ngIf="index < obj.data.tags.length - 1"> | </span>
             </ng-container>
           </p>
         </ion-label>
-        <ion-button [routerLink]="obj.data.url" [fragment]="obj.data.fragment || ''" slot="end" fill="clear">
+        <!-- Normal link -->
+        <ion-button *ngIf="!obj.data.classic" [routerLink]="obj.data.url" [fragment]="obj.data.fragment || ''" slot="end" fill="clear">
+          <ion-label>Show in Context</ion-label>
+          <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        </ion-button>
+        <!-- Classic link -->
+        <ion-button *ngIf="obj.data.classic" target="_blank" [href]="'https://classic.venite.app/'+obj.data.url+'#'+obj.data.fragment || ''" slot="end" fill="clear">
           <ion-label>Show in Context</ion-label>
           <ion-icon slot="end" name="arrow-forward"></ion-icon>
         </ion-button>

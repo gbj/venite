@@ -21,6 +21,10 @@ export class FavoritesPage implements OnInit {
     private favoritesService: FavoritesService
   ) {}
 
+  ionViewWillEnter() {
+    this.search.setValue(window?.location?.hash || "");
+  }
+
   ngOnInit() {
     this.search.setValue(window?.location?.hash || "");
 
@@ -44,5 +48,9 @@ export class FavoritesPage implements OnInit {
           )
       )
     );
+  }
+
+  setSearch(ev: MouseEvent, tag: string) {
+    this.search.setValue(tag);
   }
 }
