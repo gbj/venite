@@ -28,7 +28,7 @@ import {
   BIBLE_SERVICE,
   BibleServiceInterface,
 } from "@venite/ng-service-api";
-import { LiturgyConfig } from "@venite/ng-pray/lib/liturgy-config";
+import { LiturgyConfig } from "./liturgy-config";
 import { isCompletelyCompiled } from "./is-completely-compiled";
 
 const LOADING = new LiturgicalDocument({
@@ -96,7 +96,7 @@ export class PrayService {
         (doc.type == "liturgy" || doc.type == "option") &&
         doc.value?.length > 0
       ) {
-        this.latestChildren$ = (docBase as Liturgy).value?.map((child) =>
+        this.latestChildren$ = ((docBase as Liturgy).value || []).map((child) =>
           this.compile(
             child,
             day,
@@ -703,10 +703,17 @@ export class PrayService {
             })
         )
       ),
-      // pack these into a `Liturgy` object
+      // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
+      // in which case multiple entries means multiples options, as in the RCL
       map(
         (docs) =>
-          new LiturgicalDocument({ ...docsToLiturgy(docs), lookup: undefined })
+          new LiturgicalDocument({
+            ...(doc?.lookup?.allow_multiple === undefined ||
+            Boolean(doc?.lookup?.allow_multiple)
+              ? docsToLiturgy(docs)
+              : docsToOption(docs)),
+            lookup: undefined,
+          })
       ),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
