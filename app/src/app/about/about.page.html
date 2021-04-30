@@ -16,6 +16,9 @@
     <ion-segment-button value="support">
       <ion-label>Support</ion-label>
     </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>2.0</ion-label>
+    </ion-segment-button>
     <ion-segment-button value="privacy">
       <ion-label>Privacy</ion-label>
     </ion-segment-button>
@@ -119,7 +122,8 @@
         <p>
           So by popular request, I’ve created a Patreon account where people can subscribe to support this work.
         </p>
-        <ion-row class="ion-align-items-center ion-text-center">
+        <p *ngIf="!canDonate">Unfortunately, Apple and Google policies both now prevent linking to my Patreon from within their apps, and take an unsustainable cut of money that's given through their in-app donations, but you can find me on Patreon by searching for my name.</p>
+        <ion-row class="ion-align-items-center ion-text-center" *ngIf="canDonate">
           <ion-col>
             <a href="https://www.patreon.com/bePatron?u=31251747" target="_system" class="patreon-button">
               <ion-img src="/assets/patreon_button.png"></ion-img>
@@ -127,6 +131,24 @@
             </a>
           </ion-col>
         </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+  <ng-container *ngIf="tab == '2'">
+    <ion-card class="ion-padding">
+      <ion-card-header>
+        <ion-card-subtitle>Venite 2.0</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>I’ve spent quite a while developing the new version of this app. If you’re coming from the old version, you may notice a few differences:</p>
+        <ol>
+          <li>If you’re used to logging in with an email and password, you’ll need to create a new account. I’ve changed providers for this, and the new one will hopefully work much better, but security prevented transferring old passwords over.</li>
+          <li>Most of your preferences should transfer automatically, but you may want to check to make sure things are set the way you like them.</li>
+          <li>There’s a new “Report an Issue” button in the menu that you can use to share any bug reports with me.</li>
+          <li>The app now works mostly offline, with the exception of Biblical readings.</li>
+          <li>Finally, most of the work has been completely revamping the bulletin editor. You can check out the videos in the <a routerLink="/tutorials">Tutorials</a> section to learn more.</li>
+        </ol>
+        <p>Thanks, as always, for your support.<br>Greg</p>
       </ion-card-content>
     </ion-card>
   </ng-container>

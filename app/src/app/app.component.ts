@@ -1,6 +1,6 @@
 import { Component, NgZone } from "@angular/core";
 
-import { ModalController, Platform } from "@ionic/angular";
+import { ModalController, Platform, ToastController } from "@ionic/angular";
 
 // Community Modules
 import { TranslateService } from "@ngx-translate/core";
@@ -19,6 +19,7 @@ import { FirebaseAnalytics } from "@capacitor-community/firebase-analytics";
 import { environment } from "../environments/environment";
 import { IssueComponent } from "./shared/issue/issue.component";
 import { IssueService } from "./issues/issue.service";
+import { LocalStorageService } from "@venite/ng-localstorage";
 
 @Component({
   selector: "venite-root",
@@ -42,13 +43,15 @@ export class AppComponent {
     private zone: NgZone,
     private router: Router,
     private modal: ModalController,
-    private issues: IssueService
+    private issues: IssueService,
+    private storage: LocalStorageService,
+    private toast: ToastController
   ) {
     this.initializeApp();
     this.translate.use("en");
   }
 
-  initializeApp() {
+  async initializeApp() {
     this.canDonate = !this.platform.is("capacitor");
 
     this.platform.ready().then(() => {
@@ -101,6 +104,7 @@ export class AppComponent {
       });
     }
 
+    // Issues
     this.issueManager$ = combineLatest([
       this.auth.user,
       this.organizationService.find("venite"),
@@ -115,6 +119,33 @@ export class AppComponent {
         isManager ? this.issues.numberOpen() : of(null)
       )
     );
+
+    // Venite 2 welcome message
+    const hasHiddenWelcomeMessage = await this.storage.get(
+      "v2-hide-welcome-message"
+    );
+    if (!hasHiddenWelcomeMessage) {
+      const toast = await this.toast.create({
+        message: "Welcome to Venite 2.0.",
+        color: "tertiary",
+        buttons: [
+          {
+            text: "Learn More",
+            handler: () => {
+              this.router.navigateByUrl("/about#2");
+              this.storage.set("v2-hide-welcome-message", true);
+            },
+          },
+          {
+            icon: "close",
+            handler: () => {
+              this.storage.set("v2-hide-welcome-message", true);
+            },
+          },
+        ],
+      });
+      await toast.present();
+    }
   }
 
   async reportIssue() {
