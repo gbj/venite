@@ -35,6 +35,9 @@ export class HolyDay {
   /** Optional: Human-readable name of the feast */
   name?: string;
 
+  /** Optional: Human-readable subtitle of the feast */
+  subtitle?: string;
+
   /** A machine-readable identifier for the liturgical season */
   season?: Seasons[number];
 

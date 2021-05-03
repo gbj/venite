@@ -59,7 +59,7 @@ export class DayNameComponent {
     // Holy Day => name of day
     if(day?.holy_day_observed?.name && day?.holy_day_observed?.type?.rank >= 3) {
       return !day.holy_day_observed.bio 
-        ? day?.holy_day_observed?.name
+        ? [<p class="holy-day-name">{day?.holy_day_observed?.name}</p>, day?.holy_day_observed?.subtitle ? <p class="holy-day-subtitle">{day.holy_day_observed.subtitle}</p> : undefined]
         : <details>
             <summary>{day.holy_day_observed.name}</summary>
             <ldf-text doc={new Text({type: "text", style: "text", value: day.holy_day_observed.bio})}></ldf-text>

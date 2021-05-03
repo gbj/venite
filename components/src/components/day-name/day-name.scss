@@ -4,3 +4,15 @@
   width: 400px;
   max-width: 90%;
 }
+
+.holy-day-name {
+  font-style: var(--ldf-holy-day-name-font-style);
+  font-weight: var(--ldf-holy-day-name-font-weight);
+  font-size: var(--ldf-holy-day-name-font-size);
+}
+
+.holy-day-subtitle {
+  font-style: var(--ldf-holy-day-subtitle-font-style);
+  font-weight: var(--ldf-holy-day-subtitle-font-weight);
+  font-size: var(--ldf-holy-day-subtitle-font-size);
+}
