@@ -54,25 +54,48 @@ export class AuthService {
       const loading = await this.loading.create();
       await loading.present();
 
-      if (provider == "Google") {
-        result = await firebase
-          .auth()
-          .signInWithPopup(new firebase.auth.GoogleAuthProvider());
-      } else if (provider == "Twitter") {
-        result = await firebase
-          .auth()
-          .signInWithPopup(new firebase.auth.TwitterAuthProvider());
-      } else if (provider == "Apple") {
-        const provider = new firebase.auth.OAuthProvider("apple.com");
-        provider.addScope("email");
-        provider.addScope("name");
-        try {
-          result = await firebase.auth().signInWithPopup(provider);
-        } catch (e) {
-          console.warn("(AuthService => login) Error: ", e);
+      try {
+        if (provider == "Google") {
+          result = await firebase
+            .auth()
+            .signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        } else if (provider == "Twitter") {
+          result = await firebase
+            .auth()
+            .signInWithPopup(new firebase.auth.TwitterAuthProvider());
+        } else if (provider == "Apple") {
+          const provider = new firebase.auth.OAuthProvider("apple.com");
+          provider.addScope("email");
+          provider.addScope("name");
+          try {
+            result = await firebase.auth().signInWithPopup(provider);
+          } catch (e) {
+            console.warn("(AuthService => login) Error: ", e);
+          }
+        } else {
+          throw `Auth provider "${provider}" not supported.`;
         }
-      } else {
-        throw `Auth provider "${provider}" not supported.`;
+      } catch (e) {
+        if (provider == "Google") {
+          firebase
+            .auth()
+            .signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+        } else if (provider == "Twitter") {
+          firebase
+            .auth()
+            .signInWithRedirect(new firebase.auth.TwitterAuthProvider());
+        } else if (provider == "Apple") {
+          const provider = new firebase.auth.OAuthProvider("apple.com");
+          provider.addScope("email");
+          provider.addScope("name");
+          try {
+            await firebase.auth().signInWithRedirect(provider);
+          } catch (e) {
+            console.warn("(AuthService => login) Error: ", e);
+          }
+        } else {
+          throw `Auth provider "${provider}" not supported.`;
+        }
       }
 
       loading.dismiss();
