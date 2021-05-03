@@ -32,16 +32,41 @@ export class CalendarService implements CalendarServiceInterface {
 
   /** Get a menu of available `Kalendar`s that provide a full seasonal cycle */
   findKalendars(): Observable<Kalendar[]> {
-    return this.afs
+    return of([
+      {
+        name: "BCP 1979",
+        sanctoral: false,
+        slug: "bcp1979",
+      },
+      {
+        name: "Lesser Feasts and Fasts (2018)",
+        sanctoral: false,
+        slug: "lff2018",
+        kalendar: "lff2018",
+      },
+    ]);
+    /*return this.afs
       .collection<Kalendar>("Kalendar", (ref) =>
         ref.where("sanctoral", "==", false)
       )
-      .valueChanges();
+      .valueChanges();*/
   }
 
   /** Get a menu of available `Kalendar`s that provide saints’ days */
   findSanctorals(): Observable<Kalendar[]> {
-    return this.afs.collection<Kalendar>("Kalendar").valueChanges();
+    return of([
+      {
+        name: "BCP 1979",
+        sanctoral: false,
+        slug: "bcp1979",
+      },
+      {
+        name: "Lesser Feasts and Fasts (2018)",
+        sanctoral: false,
+        slug: "lff2018",
+        kalendar: "lff2018",
+      },
+    ]);
   }
 
   /** Find Proper Liturgies for certain special days */

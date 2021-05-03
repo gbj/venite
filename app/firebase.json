@@ -6,6 +6,23 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/api/calendar/day",
+        "destination": "https://classic.venite.app/api/calendar/day/",
+        "type": 302
+      },
+      {
+        "source": "/api/pray/readings",
+        "destination": "https://classic.venite.app/api/pray/readings",
+        "type": 302
+      },
+      {
+        "source": "/api/pray/**",
+        "destination": "https://classic.venite.app/api/pray/",
+        "type": 302
+      }
+    ],
     "rewrites": [
       {
         "source": "**",

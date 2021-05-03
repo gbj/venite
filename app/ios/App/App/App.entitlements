@@ -10,6 +10,7 @@
 	<array>
 		<string>applinks:venite.app</string>
 		<string>applinks:beta.venite.app</string>
+		<string>applinks:www.venite.app</string>
 	</array>
 </dict>
 </plist>

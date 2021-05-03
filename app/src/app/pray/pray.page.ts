@@ -883,8 +883,19 @@ export class PrayPage implements OnInit, OnDestroy {
       buttons.push({
         text: "Read Aloud",
         icon: "headset",
-        handler: () =>
-          this.startSpeechAt(voices, data.doc, data.settings, 0, 0, true),
+        handler: async () => {
+          const loading = await this.loadingController.create();
+          await loading.present();
+          this.startSpeechAt(
+            voices,
+            data.doc,
+            data.settings,
+            0,
+            0,
+            true,
+            loading
+          );
+        },
       });
     }
 
@@ -1064,13 +1075,17 @@ export class PrayPage implements OnInit, OnDestroy {
     settings: DisplaySettings,
     subdoc: number = 0,
     utterance: number = 0,
-    firstTime: boolean = false
+    firstTime: boolean = false,
+    loading?: HTMLIonLoadingElement | undefined
   ) {
+    MediaSession.setPositionState({
+      playbackRate: 1,
+    });
+
     if (
       firstTime &&
       (navigator.mediaSession || this.platform.is("capacitor"))
     ) {
-      console.log("initializing media session");
       this.initMediaSession(doc, settings);
     }
 
@@ -1116,6 +1131,11 @@ export class PrayPage implements OnInit, OnDestroy {
           this.speechPlayingUtterance ?? 0
         )
       ),
+      tap(() => {
+        if (loading) {
+          loading.dismiss();
+        }
+      }),
       catchError((e) => {
         console.warn("Caught error", e);
         return of({ subdoc: 0, utterance: 0, data: null });
@@ -1140,22 +1160,40 @@ export class PrayPage implements OnInit, OnDestroy {
 
         if (utterance && data?.data?.state == "Starting") {
           const docLabel = (childDoc: LiturgicalDocument) => {
+            function processEntities(str: string): string {
+              try {
+                const e = document.createElement("textarea");
+                e.innerHTML = str;
+                // handle case of empty input
+                return e.childNodes.length === 0
+                  ? ""
+                  : e.childNodes[0].nodeValue;
+              } catch (e) {
+                console.warn(
+                  `(processEntities) error while processing "${str}": `,
+                  e
+                );
+              }
+            }
+
             try {
-              return childDoc?.type === "option"
-                ? docLabel(
-                    (childDoc as Option).value[
-                      childDoc?.metadata?.selected ?? 0
-                    ]
-                  )
-                : childDoc?.style === "canticle"
-                ? childDoc.label
-                : childDoc?.citation ||
-                  childDoc?.label ||
-                  (typeof (childDoc?.value || [])[0] === "string"
-                    ? childDoc?.value[0]
-                    : undefined) ||
-                  utterance?.text ||
-                  doc?.label;
+              const txt =
+                childDoc?.type === "option"
+                  ? docLabel(
+                      (childDoc as Option).value[
+                        childDoc?.metadata?.selected ?? 0
+                      ]
+                    )
+                  : childDoc?.style === "canticle"
+                  ? childDoc.label
+                  : childDoc?.citation ||
+                    childDoc?.label ||
+                    (typeof (childDoc?.value || [])[0] === "string"
+                      ? childDoc?.value[0]
+                      : undefined) ||
+                    utterance?.text ||
+                    doc?.label;
+              return processEntities(txt);
             } catch (e) {
               return utterance?.text;
             }
@@ -1198,10 +1236,13 @@ export class PrayPage implements OnInit, OnDestroy {
     }
   }
   pauseSpeech() {
-    this.zone.run(() => {
+    this.zone.run(async () => {
       this.speechSubscription.unsubscribe();
       this.speechService.pause();
       this.audio?.pause();
+      MediaSession.setPositionState({
+        playbackRate: 0,
+      });
     });
   }
   async resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
@@ -1215,6 +1256,9 @@ export class PrayPage implements OnInit, OnDestroy {
     );
     this.speechService.resume();
     this.audio?.play();
+    MediaSession.setPositionState({
+      playbackRate: 1,
+    });
   }
   async rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
     const voices = await this.speechService.getVoices();
@@ -1237,6 +1281,9 @@ export class PrayPage implements OnInit, OnDestroy {
         //console.log('rewind to beginning of this doc')
         this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc);
       }
+      MediaSession.setPositionState({
+        playbackRate: 1,
+      });
     });
   }
   async fastForward(doc: LiturgicalDocument, settings: DisplaySettings) {
@@ -1247,6 +1294,9 @@ export class PrayPage implements OnInit, OnDestroy {
       this.speechService.pause();
       this.speechPlayingUtterance = 0;
       this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc + 1);
+    });
+    MediaSession.setPositionState({
+      playbackRate: 1,
     });
   }
 
@@ -1300,7 +1350,7 @@ export class PrayPage implements OnInit, OnDestroy {
   ): { title: string; url: string; cite: string; hashtag: string } {
     const baseUrl = this.location.path(),
       anchor = selection.fragment ? `#${selection.fragment}` : "",
-      url = `https://beta.venite.app${baseUrl}${anchor}`,
+      url = `https://www.venite.app${baseUrl}${anchor}`,
       date = dateFromYMDString(doc?.day?.date),
       citation = selectableCitationToString(selection.citation),
       cite = citation ? `${citation ? "- " : ""}${citation}` : "",

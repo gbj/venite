@@ -69,6 +69,7 @@ type PrayData = {
   liturgicalDay: LiturgicalDay;
   clientPreferences: ClientPreferences;
   availableReadings: string[];
+  vigil: boolean;
 };
 
 @Component({
@@ -378,6 +379,7 @@ export class LiturgySelectComponent implements OnInit {
       this.dayName$, // use this instead of day$ because is null if day has been changed + not loaded yet (day$ is still the old one)
       this.clientPreferences$,
       this.availableReadings$.pipe(startWith([])),
+      this.vigil$,
     ]).pipe(
       map(
         ([
@@ -388,6 +390,7 @@ export class LiturgySelectComponent implements OnInit {
           liturgicalDay,
           clientPreferences,
           availableReadings,
+          vigil,
         ]) => ({
           user: user as User,
           liturgy: liturgy as LiturgicalDocument,
@@ -396,6 +399,7 @@ export class LiturgySelectComponent implements OnInit {
           liturgicalDay: liturgicalDay as LiturgicalDay,
           clientPreferences: clientPreferences as ClientPreferences,
           availableReadings: availableReadings as string[],
+          vigil: vigil as boolean,
         })
       ),
       // any time any of the data changes, set isNavigating to false;
@@ -493,6 +497,7 @@ export class LiturgySelectComponent implements OnInit {
         liturgicalDay,
         clientPreferences,
         availableReadings,
+        vigil,
       } = data;
 
       // update preferences
@@ -522,6 +527,7 @@ export class LiturgySelectComponent implements OnInit {
         this.readingsNotAvailableAlert(
           new Liturgy(liturgy),
           liturgicalDay,
+          vigil,
           clientPreferences,
           availableReadings,
           bulletinMode
@@ -534,6 +540,7 @@ export class LiturgySelectComponent implements OnInit {
             new Liturgy(liturgy),
             date,
             liturgicalDay,
+            vigil,
             clientPreferences,
             true
           );
@@ -543,6 +550,7 @@ export class LiturgySelectComponent implements OnInit {
             new Liturgy(liturgy),
             date,
             liturgicalDay,
+            vigil,
             clientPreferences
           );
         }
@@ -589,6 +597,7 @@ export class LiturgySelectComponent implements OnInit {
   async readingsNotAvailableAlert(
     liturgy: Liturgy,
     day: LiturgicalDay,
+    vigil: boolean,
     prefs: ClientPreferences,
     availableReadings: string[],
     bulletinMode: boolean
@@ -638,11 +647,19 @@ export class LiturgySelectComponent implements OnInit {
                     liturgy,
                     date,
                     day,
+                    vigil,
                     modifiedPrefs,
                     true
                   );
                 } else {
-                  this.navigate("/pray", liturgy, date, day, modifiedPrefs);
+                  this.navigate(
+                    "/pray",
+                    liturgy,
+                    date,
+                    day,
+                    vigil,
+                    modifiedPrefs
+                  );
                 }
               },
             },
@@ -672,9 +689,17 @@ export class LiturgySelectComponent implements OnInit {
                 text: "Continue",
                 handler: () => {
                   if (bulletinMode) {
-                    this.navigate("/bulletin", liturgy, date, day, prefs, true);
+                    this.navigate(
+                      "/bulletin",
+                      liturgy,
+                      date,
+                      day,
+                      vigil,
+                      prefs,
+                      true
+                    );
                   } else {
-                    this.navigate("/pray", liturgy, date, day, prefs);
+                    this.navigate("/pray", liturgy, date, day, vigil, prefs);
                   }
                 },
               },
@@ -684,9 +709,9 @@ export class LiturgySelectComponent implements OnInit {
           await alert.present();
         } else {
           if (bulletinMode) {
-            this.navigate("/bulletin", liturgy, date, day, prefs, true);
+            this.navigate("/bulletin", liturgy, date, day, vigil, prefs, true);
           } else {
-            this.navigate("/pray", liturgy, date, day, prefs);
+            this.navigate("/pray", liturgy, date, day, vigil, prefs);
           }
         }
       }
@@ -722,6 +747,7 @@ export class LiturgySelectComponent implements OnInit {
     liturgy: Liturgy,
     date: Date,
     day: LiturgicalDay,
+    vigil: boolean,
     prefs: ClientPreferences,
     bulletinMode: boolean = false
   ) {
@@ -744,11 +770,10 @@ export class LiturgySelectComponent implements OnInit {
       commands.push(JSON.stringify(prefs));
     }
     // if any prefs have changed, add them to URL params
-    else if (Object.keys(nonDefaultPrefs).length > 0) {
-      // || this.data.isVigil) {
+    else if (Object.keys(nonDefaultPrefs).length > 0 || vigil) {
+      commands.push(vigil.toString());
       commands.push(JSON.stringify(nonDefaultPrefs));
     }
-    // TODO -- push vigil info as well
     if (bulletinMode) {
       this.createBulletin.emit({ commands, state: { liturgy, day, prefs } });
     } else {

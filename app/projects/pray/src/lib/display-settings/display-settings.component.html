@@ -34,7 +34,10 @@
       <ion-item *ngIf="hasVoice">
         <ion-label position="stacked">{{ 'displaySettings.Voice' | translate }}</ion-label>
         <ion-select [value]="settings.voiceChoice" (ionChange)="updateSetting(uid, 'voiceChoice', $event)">
-          <ion-select-option *ngFor="let voice of voicesWithNationalities" [value]="voice.voice.name">{{ voice.voice.name }} ({{ voice.nationality }})</ion-select-option>
+          <ng-container *ngFor="let voice of voicesWithNationalities">
+            <ion-select-option *ngIf="voice.voice.name !== voice.nationality" [value]="voice.voice.name">{{ voice.voice.name }} ({{ voice.nationality }})</ion-select-option>
+            <ion-select-option *ngIf="voice.voice.name == voice.nationality" [value]="voice.voice.name">{{ voice.voice.name }}</ion-select-option>
+          </ng-container>
         </ion-select>
       </ion-item>
       <ion-item *ngIf="backgroundEnabled && config.audio_background">

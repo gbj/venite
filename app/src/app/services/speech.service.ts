@@ -95,7 +95,7 @@ export class SpeechService {
     index: number = 0,
     startingUtteranceIndex: number = 0
   ): Observable<SpeechServiceTracking> {
-    TextToSpeech.stop();
+    //TextToSpeech.stop();
 
     // init TTS
     const BETWEEN_DOCS = 500 * (1 / settings.voiceRate),
@@ -386,11 +386,6 @@ export class SpeechService {
   ): Observable<any> {
     // use TextToSpeech plugin for Android -- browser SpeechSynthesis works better for web/iOS
     if (this.platform.is("android") && this.platform.is("capacitor")) {
-      const voiceIdx = voices.indexOf(
-        voices.find((voice) => voice.voiceURI === utterance.voice?.voiceURI) ||
-          voices.find((voice) => voice.lang === utterance.lang)
-      );
-
       const voice$ = new Observable((observer) => {
         const end$ = from(
           TextToSpeech.speak({
@@ -398,7 +393,6 @@ export class SpeechService {
             pitch: utterance.pitch,
             rate: utterance.rate,
             lang: utterance.lang,
-            voice: this.platform.is("web") ? voiceIdx : undefined,
             category: "playback",
           })
         );
@@ -448,7 +442,7 @@ export class SpeechService {
 
     const u: SpeechSynthesisUtterance =
       this.platform.is("capacitor") && this.platform.is("android")
-        ? ({} as SpeechSynthesisUtterance)
+        ? ({ text } as SpeechSynthesisUtterance)
         : new SpeechSynthesisUtterance(text || " ");
     if (chosenVoice && chosenVoice.voiceURI) {
       u.voice = chosenVoice;
@@ -457,6 +451,7 @@ export class SpeechService {
     u.pitch = 1;
     u.rate = settings.voiceRate ?? 0.75;
     // iOS needs to sloooooow down if using Capacitor TextToSpeech
+    // in this case I've just reverted to using the Web Speech Synthesis API on iOS because it's actually better
     // * (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
     u.volume = settings.voiceBackgroundVolume ?? 1;
 
@@ -467,7 +462,18 @@ export class SpeechService {
     // load voices as Promise once (only calls native API once)
     if (!this._voices) {
       if (this.platform.is("capacitor") && this.platform.is("android")) {
-        this._voices = TextToSpeech.getSupportedVoices();
+        const { languages } = await TextToSpeech.getSupportedLanguages();
+        this._voices = Promise.resolve({
+          voices: languages
+            .filter((lang) => lang.startsWith("en"))
+            .map((lang) => ({
+              lang,
+              name: this.translate.instant(`speech.${lang}`),
+              default: false,
+              localService: true,
+              voiceURI: lang,
+            })),
+        });
       } else {
         this._voices = Promise.resolve({ voices: speechSynthesis.getVoices() });
       }
