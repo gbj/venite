@@ -2,7 +2,8 @@ import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import firebase from "firebase/app";
 import * as json1 from "ot-json1";
-import { JSONOp } from "ot-json1/dist/types";
+
+type JSONOp = any;
 
 function subscriberCount<T>(
   sourceObservable: Observable<T>,

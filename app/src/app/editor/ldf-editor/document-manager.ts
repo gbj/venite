@@ -1,11 +1,10 @@
 import { User, Cursor, LiturgicalDocument, Change } from "@venite/ldf";
-import { JSONOp } from "ot-json1/dist/types";
 
 export class DocumentManagerChange {
   actorId: string;
   uid: string;
   lastRevision: number;
-  op: JSONOp;
+  op: any;
   originalChange?: Change | Change[];
 }
 

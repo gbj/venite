@@ -71,7 +71,7 @@
     "json-pointer": "^0.6.0",
     "ngx-pinch-zoom": "^2.5.5",
     "npm": "^7.6.3",
-    "ot-json1": "github:ottypes/json1",
+    "ot-json1": "^1.0.2",
     "query-selector-shadow-dom": "^0.8.0",
     "rxjs": "~6.5.1",
     "rxjs-tts": "0.0.2",
