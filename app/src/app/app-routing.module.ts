@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { LoginGuard } from "./login.guard";
 
 const routes: Routes = [
   {
@@ -43,16 +44,19 @@ const routes: Routes = [
     path: "bulletins",
     loadChildren: () =>
       import("./bulletins/bulletins.module").then((m) => m.BulletinsPageModule),
+    canActivate: [LoginGuard],
   },
   {
     path: "templates",
     loadChildren: () =>
       import("./bulletins/bulletins.module").then((m) => m.BulletinsPageModule),
+    canActivate: [LoginGuard],
   },
   {
     path: "template",
     loadChildren: () =>
       import("./template/template.module").then((m) => m.TemplatePageModule),
+    canActivate: [LoginGuard],
   },
   {
     path: "about",
@@ -80,10 +84,13 @@ const routes: Routes = [
     path: "favorites",
     loadChildren: () =>
       import("./favorites/favorites.module").then((m) => m.FavoritesPageModule),
+    canActivate: [LoginGuard],
   },
   {
-    path: 'issues',
-    loadChildren: () => import('./issues/issues.module').then( m => m.IssuesPageModule)
+    path: "issues",
+    loadChildren: () =>
+      import("./issues/issues.module").then((m) => m.IssuesPageModule),
+    canActivate: [LoginGuard],
   },
 ];
 
