@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 
-import { Observable, from, of, combineLatest, merge } from "rxjs";
+import { Observable, from, of, combineLatest, merge, concat } from "rxjs";
 import {
   catchError,
   filter,
@@ -199,7 +199,7 @@ export class DocumentService {
     ]);
 
     // only load either the offline or the online liturgies, to prevent screen from flickering by switching to newly-loaded set
-    return merge(offlineLiturgies$, onlineLiturgies$);
+    return concat(offlineLiturgies$, onlineLiturgies$);
   }
 
   getAllLiturgyOptions(): Observable<Liturgy[]> {
@@ -331,6 +331,7 @@ export class DocumentService {
           .filter((doc) => Boolean(doc));
         // TODO need to include Firebase ones AS WELL, in case I have my own with same slug
         if (attempt?.length > 0) {
+          console.log("bySlug", slug, "more than one in attempt");
           // also send Firebase version, if online and in bulletin mode
           const firebaseVersions$ = isOnline().pipe(
             filter((online) => online && bulletinMode),
@@ -338,8 +339,9 @@ export class DocumentService {
               this.findDocumentsBySlug(slug, language, rawVersions, true)
             )
           );
-          return merge(processDocs(of(attempt), versions), firebaseVersions$);
+          return concat(processDocs(of(attempt), versions), firebaseVersions$);
         } else {
+          console.log("bySlug", slug, "branch B");
           return this.findDocumentsBySlug(slug, language, rawVersions, true);
         }
       }
