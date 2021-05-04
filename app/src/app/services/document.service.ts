@@ -2,7 +2,14 @@ import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 import { Observable, from, of, combineLatest, merge } from "rxjs";
-import { catchError, filter, map, startWith, switchMap } from "rxjs/operators";
+import {
+  catchError,
+  filter,
+  map,
+  startWith,
+  switchMap,
+  tap,
+} from "rxjs/operators";
 
 import {
   docsToOption,
@@ -278,7 +285,8 @@ export class DocumentService {
             : of(docs)
         ),
         startWith([LOADING]),
-        catchError((error) => this.handleError(error))
+        catchError((error) => this.handleError(error)),
+        tap((doc) => console.log("(findDocumentsBySlug)", slug, doc))
       );
     };
 

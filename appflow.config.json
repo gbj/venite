@@ -3,9 +3,7 @@
   [
       {
           "appId": "9a37f920",
-          "root": "app",
-          "dependencyInstallCommand": "cd app && npm install",
-          "webBuildCommand": "cd app && npm run build"
+          "root": "app"
       }
   ]
 }
