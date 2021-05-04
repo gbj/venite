@@ -1,7 +1,7 @@
 import { Injectable, InjectionToken } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { BibleReading } from "@venite/ldf";
-import { BibleServiceInterface } from "service-api";
+import { BibleServiceInterface } from "@venite/ng-service-api";
 import { HttpClient } from "@angular/common/http";
 import { catchError, map, startWith, tap } from "rxjs/operators";
 

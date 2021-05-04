@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { PlatformService } from "platform";
+import { Component } from "@angular/core";
+import { PlatformService } from "@venite/ng-platform";
 
 @Component({
   selector: "venite-menu",

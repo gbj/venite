@@ -3,7 +3,7 @@ import { from, Observable } from "rxjs";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 import { CanticleTableEntry } from "@venite/ldf";
-import { CanticleTableServiceInterface } from "service-api";
+import { CanticleTableServiceInterface } from "@venite/ng-service-api";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
 

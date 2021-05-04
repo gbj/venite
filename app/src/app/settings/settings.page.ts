@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { DisplaySettings } from "projects/pray/node_modules/@venite/ldf/dist";
+import { DisplaySettings } from "@venite/ldf";
 import { combineLatest, Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
 import { PreferencesService } from "../preferences/preferences.service";
