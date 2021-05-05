@@ -89,12 +89,11 @@ export class MeditationComponent {
   /** Start the timer, either with a given value of seconds or with the number passed in the Meditation object metadata */
   @Method()
   async start(value : number = undefined) {
-    this.startingDuration = value;
-
     const metadata = this.obj?.metadata ?? { length: 300, delay: 0},
           seconds : number = value || metadata.length,
           delay : number = metadata.delay;
     this.secondsRemaining = seconds;
+    this.startingDuration = seconds;
 
     // Start the timer after the delay
     setTimeout(() => {
@@ -158,7 +157,7 @@ export class MeditationComponent {
       this.secondsRemaining--;
       if(this.secondsRemaining == 0) {
         this.timerChanged.emit('complete');
-        this.startingDuration = 0;
+        this.startingDuration = undefined;
       } else {
         this.timerChanged.emit(this.secondsRemaining);
       }
