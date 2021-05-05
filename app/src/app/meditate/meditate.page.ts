@@ -1,6 +1,6 @@
 import { Component, Inject, NgZone, OnInit, ViewChild } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { Liturgy, Meditation } from "@venite/ldf";
+import { LiturgicalDay, Liturgy, Meditation } from "@venite/ldf";
 import {
   CalendarServiceInterface,
   CALENDAR_SERVICE,
@@ -24,7 +24,9 @@ export class MeditatePage implements OnInit {
   delay: number = 3;
   @ViewChild("el") el: any;
   color$: Observable<string>;
+  day$: Observable<LiturgicalDay>;
   bell$: Observable<string>;
+  isPlaying: boolean = false;
 
   constructor(
     @Inject(CALENDAR_SERVICE) private calendar: CalendarServiceInterface,
@@ -44,19 +46,18 @@ export class MeditatePage implements OnInit {
       of("bcp1979"),
       of(false)
     );
-    this.color$ = this.calendar
-      .buildDay(
-        of(new Date()),
-        of("bcp1979"),
-        of(new Liturgy({ metadata: { evening: new Date().getHours() >= 17 } })),
-        week$,
-        of(false)
-      )
-      .pipe(
-        map((day) => day?.color),
-        switchMap((color) => this.documents.getColor(color)),
-        distinct()
-      );
+    this.day$ = this.calendar.buildDay(
+      of(new Date()),
+      of("bcp1979"),
+      of(new Liturgy({ metadata: { evening: new Date().getHours() >= 17 } })),
+      week$,
+      of(false)
+    );
+    this.color$ = this.day$.pipe(
+      map((day) => day?.color),
+      switchMap((color) => this.documents.getColor(color)),
+      distinct()
+    );
 
     this.doc = new Meditation({
       type: "meditation",
@@ -80,14 +81,17 @@ export class MeditatePage implements OnInit {
   ) {
     const audioFile = `/assets/audio/${bell}.mp3`;
     if (typeof ev.detail === "number") {
-      const length =
-        ((ev.target as any)?.doc as Meditation)?.metadata?.length ||
-        this.length;
-      MediaSession.setPositionState({
-        duration: length,
-        position: length - ev.detail,
-        playbackRate: 1,
-      });
+      const duration = await this.el.nativeElement.duration();
+
+      if (ev.detail > 0) {
+        MediaSession.setPositionState({
+          duration,
+          position: duration - ev.detail,
+          playbackRate: 1,
+        });
+      } else {
+        MediaSession.destroy();
+      }
     } else {
       switch (ev.detail) {
         case "start":
@@ -125,6 +129,7 @@ export class MeditatePage implements OnInit {
               },
             ],
           });
+          this.isPlaying = true;
           break;
         case "pause":
           await this.audio.pause();
@@ -145,6 +150,11 @@ export class MeditatePage implements OnInit {
           break;
       }
     }
+  }
+
+  async reset() {
+    this.el.nativeElement.reset();
+    this.isPlaying = false;
   }
 }
 

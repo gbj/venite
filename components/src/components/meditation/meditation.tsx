@@ -137,6 +137,13 @@ export class MeditationComponent {
     return this.startingDuration;
   }
 
+  /** Reset the selector for length of time */
+  @Method()
+  async reset() {
+    await this.pause();
+    this.secondsRemaining = undefined;
+  }
+
   // Private methods
   async loadLocaleStrings() : Promise<void> {
     try {

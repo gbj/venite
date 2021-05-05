@@ -13,8 +13,13 @@
 
 <ion-content>
   <ng-container *ngIf="color$ | async as color">
+    <h1><ldf-day-name [day]="day$ | async"></ldf-day-name></h1>
     <ng-container *ngIf="bell$ | async as bell">
       <ldf-meditation #el [color]="color" [doc]="doc" (timerChanged)="timerChanged($event, bell)"></ldf-meditation>
     </ng-container>
+
+    <ion-button *ngIf="isPlaying" (click)="reset()" fill="clear">
+      <ion-label>{{ 'meditate.reset' | translate }}</ion-label>
+    </ion-button>
   </ng-container>
 </ion-content>

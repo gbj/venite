@@ -45,6 +45,16 @@ Type: `Promise<void>`
 
 
 
+### `reset() => Promise<void>`
+
+Reset the selector for length of time
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `resume() => Promise<void>`
 
 Resume the timer

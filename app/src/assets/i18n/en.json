@@ -348,5 +348,8 @@
     "name": "Your Name",
     "email": "Your Email",
     "description": "Please describe the issue."
+  },
+  "meditate": {
+    "reset": "Reset"
   }
 }

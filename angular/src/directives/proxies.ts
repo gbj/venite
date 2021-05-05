@@ -2624,7 +2624,7 @@ import { MeditationComponent as IMeditationComponent } from '@venite/components/
 export declare interface LdfMeditation extends Components.LdfMeditation {}
 @ProxyCmp({
   inputs: ['autostart', 'color', 'doc', 'editable', 'path'],
-  methods: ['start', 'pause', 'resume', 'rewind']
+  methods: ['start', 'pause', 'resume', 'rewind', 'duration', 'reset']
 })
 @Component({
   selector: 'ldf-meditation',
