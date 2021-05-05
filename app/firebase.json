@@ -8,6 +8,11 @@
     ],
     "redirects": [
       {
+        "source": "/api/liturgy/menu",
+        "destination": "https://classic.venite.app/api/liturgy/menu/",
+        "type": 302
+      },
+      {
         "source": "/api/calendar/day",
         "destination": "https://classic.venite.app/api/calendar/day/",
         "type": 302
