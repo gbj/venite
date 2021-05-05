@@ -1546,7 +1546,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
     const alert = await this.alert.create({
       header: "Bulletin Published",
-      message: `Your bulletin is now available at\n\n${url}\n\n`,
+      message: `Your bulletin is now available at<br><br><pre>${url}</pre>`,
       buttons: [
         {
           text: "Cancel",
@@ -1554,10 +1554,28 @@ export class PrayPage implements OnInit, OnDestroy {
         },
         {
           text: "Copy Link",
-          handler: () => {
-            Clipboard.write({ url }).catch(() => {
-              clipboardPolyfill.writeText(url);
-            });
+          handler: async () => {
+            try {
+              await Clipboard.write({ url });
+            } catch (e) {
+              console.warn(e);
+              try {
+                clipboardPolyfill.writeText(url);
+              } catch (e) {
+                console.warn(e);
+              }
+
+              const alert = await this.alert.create({
+                header: "Error Copying URL",
+                message: `Your browser prevented automatically copying the URL to the clipboard. You can select it below and copy and paste manually.<br><br><pre>${url}</pre>`,
+                buttons: [
+                  {
+                    text: "OK",
+                  },
+                ],
+              });
+              await alert.present();
+            }
           },
         },
         {

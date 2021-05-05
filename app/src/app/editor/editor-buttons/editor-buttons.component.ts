@@ -152,7 +152,7 @@ export class EditorButtonsComponent implements OnInit {
         : `b/${manager.docId}`;
     const alert = await this.alert.create({
       header: "Bulletin Published",
-      message: `Your bulletin is now available at\n\n${environment.baseUrl}pray/${docUrl}\n\n`,
+      message: `Your bulletin is now available at<br><br><pre>${environment.baseUrl}pray/${docUrl}</pre>`,
       buttons: [
         {
           text: "Cancel",
@@ -160,16 +160,32 @@ export class EditorButtonsComponent implements OnInit {
         },
         {
           text: "Copy Link",
-          handler: () => {
+          handler: async () => {
             const link = `${environment.baseUrl}pray/${docUrl}`;
-            Clipboard.write({ url: link })
-              .then(() => (this.clipboardStatus = "success"))
-              .catch(() => {
-                clipboardPolyfill
-                  .writeText(link)
-                  .then(() => (this.clipboardStatus = "success"))
-                  .catch(() => (this.clipboardStatus = "error"));
+            try {
+              await Clipboard.write({ url: link });
+              this.clipboardStatus = "success";
+            } catch (e) {
+              console.warn(e);
+              try {
+                clipboardPolyfill.writeText(link);
+                this.clipboardStatus = "success";
+              } catch (e) {
+                console.warn(e);
+              }
+              this.clipboardStatus = "error";
+
+              const alert = await this.alert.create({
+                header: "Error Copying URL",
+                message: `Your browser prevented automatically copying the URL to the clipboard. You can select it below and copy and paste manually.<br><br><pre>${environment.baseUrl}pray/${docUrl}</pre>`,
+                buttons: [
+                  {
+                    text: "OK",
+                  },
+                ],
               });
+              await alert.present();
+            }
           },
         },
         {
