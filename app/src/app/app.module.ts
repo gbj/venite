@@ -109,6 +109,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
           { value: "Rite-II", label: "Rite II" },
           { value: "Rite-I", label: "Rite I" },
           { value: "EOW", label: "Enriching Our Worship" },
+          { value: "Daily-Devotions", label: "Daily Devotions" },
         ],
         prayersAndThanksgivings: {
           preset: false,

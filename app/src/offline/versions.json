@@ -38,7 +38,8 @@
     "versions": {
       "EOW": "Enriching Our Worship",
       "Rite-II": "Rite II",
-      "Rite-I": "Rite I"
+      "Rite-I": "Rite I",
+      "Daily-Devotions": "Daily Devotions"
     }
   },
   "en-psalm": {

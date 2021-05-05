@@ -196,9 +196,12 @@ export class DocumentService {
       loadLiturgy("en", "Rite-I", "evening-prayer"),
       loadLiturgy("en", "EOW", "morning-prayer"),
       loadLiturgy("en", "EOW", "evening-prayer"),
+      loadLiturgy("en", "Daily-Devotions", "morning-prayer"),
+      loadLiturgy("en", "Daily-Devotions", "noonday-prayer"),
+      loadLiturgy("en", "Daily-Devotions", "evening-prayer"),
+      loadLiturgy("en", "Daily-Devotions", "compline"),
     ]);
 
-    // only load either the offline or the online liturgies, to prevent screen from flickering by switching to newly-loaded set
     return concat(offlineLiturgies$, onlineLiturgies$);
   }
 
