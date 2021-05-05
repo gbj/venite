@@ -93,7 +93,10 @@ import { selectableCitationToString } from "./selectable-citation-to-string";
 import { environment } from "src/environments/environment";
 import { Share } from "@capacitor/share";
 import { Clipboard } from "@capacitor/clipboard";
+import * as clipboardPolyfill from "clipboard-polyfill";
+
 import { MediaSession } from "capacitor-media-session";
+import { LoginComponent } from "../auth/login/login.component";
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -934,17 +937,44 @@ export class PrayPage implements OnInit, OnDestroy {
       });
     }
     // Create bulletin if it's not one
-    if (
-      !this.bulletinMode &&
-      !(data.doc?.id && data.doc?.day) &&
-      this.auth.currentUser()?.uid
-    ) {
+    if (!this.bulletinMode && !(data.doc?.id && data.doc?.day)) {
       buttons.push({
         text: "Create Bulletin",
         icon: "create",
-        handler: () => {
-          this.actionSheetController.dismiss();
-          this.beginEditing(data.doc);
+        handler: async () => {
+          if (this.auth.currentUser()?.uid) {
+            this.actionSheetController.dismiss();
+            this.beginEditing(data.doc);
+          } else {
+            const login = await this.modal.create({
+              component: LoginComponent,
+            });
+            await login.present();
+            const modalData = await login.onDidDismiss();
+            if (modalData.data) {
+              this.actionSheetController.dismiss();
+              this.beginEditing(data.doc);
+            }
+          }
+        },
+      });
+
+      buttons.push({
+        text: "Share Quick Link",
+        icon: "link",
+        handler: async () => {
+          if (this.auth.currentUser()?.uid) {
+            this.quickLink(data.doc);
+          } else {
+            const login = await this.modal.create({
+              component: LoginComponent,
+            });
+            await login.present();
+            const modalData = await login.onDidDismiss();
+            if (modalData.data) {
+              this.quickLink(data.doc);
+            }
+          }
         },
       });
     }
@@ -1491,5 +1521,54 @@ export class PrayPage implements OnInit, OnDestroy {
   async optionSaveSelection(ev: CustomEvent) {
     const { slug, index } = ev.detail;
     await this.storage.set(`option-selected-${slug}`, index.toString());
+  }
+
+  // Create bulletin quick link
+  async quickLink(doc: LiturgicalDocument) {
+    const owner = this.auth.currentUser()?.uid;
+
+    const loading = await this.loadingController.create();
+    await loading.present();
+
+    const docId = await this.documents.newDocument(
+      new LiturgicalDocument({
+        ...unwrapOptions(doc),
+        sharing: new Sharing({
+          owner,
+          collaborators: [],
+          status: "published",
+          privacy: "public",
+        }),
+      })
+    );
+
+    const url = `${environment.baseUrl}pray/b/${docId}`;
+
+    const alert = await this.alert.create({
+      header: "Bulletin Published",
+      message: `Your bulletin is now available at\n\n${url}\n\n`,
+      buttons: [
+        {
+          text: "Cancel",
+          role: "cancel",
+        },
+        {
+          text: "Copy Link",
+          handler: () => {
+            Clipboard.write({ url }).catch(() => {
+              clipboardPolyfill.writeText(url);
+            });
+          },
+        },
+        {
+          text: "Go",
+          handler: () => this.router.navigate(["pray", "b", docId]),
+        },
+      ],
+    });
+
+    await alert.present();
+
+    await loading.dismiss();
   }
 }
