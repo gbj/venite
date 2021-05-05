@@ -4,8 +4,6 @@ import { LoadingController, ModalController } from "@ionic/angular";
 import { AuthService } from "../../auth/auth.service";
 import { LoginComponent } from "../../auth/login/login.component";
 
-import { Subscription } from "rxjs";
-
 @Component({
   selector: "venite-auth-menu-button",
   templateUrl: "./auth-menu-button.component.html",
