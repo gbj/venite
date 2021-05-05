@@ -15,7 +15,7 @@
   <ion-list>
     <h2>Open</h2>
     <ion-item *ngFor="let item of open$ | async">
-      <ion-label>
+      <ion-label class="ion-text-wrap">
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>
@@ -39,7 +39,7 @@
   <h2>Pending</h2>
   <ion-list>
     <ion-item *ngFor="let item of pending$ | async">
-      <ion-label>
+      <ion-label class="ion-text-wrap">
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>
@@ -62,8 +62,8 @@
 
   <h2>Closed</h2>
   <ion-list>
-    <ion-item *ngFor="let item of closed$ | async">
-      <ion-label>
+    <ion-item *ngFor="let item of closed$ | async" >
+      <ion-label class="ion-text-wrap">
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="!item.data.priority" color="primary">New</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority > 3" color="danger">High</ion-badge>
         <ion-badge (click)="priorityAlert(item.id)" *ngIf="item.data.priority && item.data.priority == 3" color="warning">Medium</ion-badge>

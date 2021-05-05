@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons collapse="true" slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'menu.meditate' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="color$ | async as color">
+    <ng-container *ngIf="bell$ | async as bell">
+      <ldf-meditation #el [color]="color" [doc]="doc" (timerChanged)="timerChanged($event, bell)"></ldf-meditation>
+    </ng-container>
+  </ng-container>
+</ion-content>

@@ -16,6 +16,10 @@
             <ion-icon name="book" slot="start"></ion-icon>
             <ion-label>{{ 'menu.pray' | translate }}</ion-label>
           </ion-item>
+          <ion-item routerLink="/meditate">
+            <ion-icon name="sunny" slot="start"></ion-icon>
+            <ion-label>{{ 'menu.meditate' | translate }}</ion-label>
+          </ion-item>
           <ion-item routerLink="/reminders" *ngIf="remindersEnabled">
             <ion-icon name="notifications" slot="start"></ion-icon>
             <ion-label>{{ 'menu.reminders' | translate }}</ion-label>

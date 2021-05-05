@@ -22,19 +22,36 @@ export class AudioService {
     }
   }
 
-  async create(file: string) {
+  async create(file: string, loop: boolean = true) {
     if (this.platform.is("capacitor")) {
       this._nativePlayer = this.media.create(file);
       // loop audio
-      this._nativePlayer.onStatusUpdate
-        .pipe(filter((status) => status === MEDIA_STATUS.STOPPED))
-        .subscribe(() => {
-          this._nativePlayer?.play();
-        });
+      if (loop) {
+        this._nativePlayer.onStatusUpdate
+          .pipe(filter((status) => status === MEDIA_STATUS.STOPPED))
+          .subscribe(() => {
+            this._nativePlayer?.play();
+          });
+      } else {
+        // if not looping audio, switch to looping silence
+        this._nativePlayer.onStatusUpdate
+          .pipe(filter((status) => status === MEDIA_STATUS.STOPPED))
+          .subscribe(async () => {
+            await this.create("/assets/audio/silence-short.mp3");
+            await this.play();
+          });
+      }
       this._webPlayer = null;
     } else {
       this._webPlayer = new Audio(file);
-      this._webPlayer.loop = true;
+      if (loop) {
+        this._webPlayer.loop = loop;
+      } else {
+        this._webPlayer.addEventListener("ended", async () => {
+          await this.create("/assets/audio/silence-short.mp3");
+          await this.play();
+        });
+      }
       this._nativePlayer = null;
     }
   }

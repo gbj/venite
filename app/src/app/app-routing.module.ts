@@ -92,6 +92,10 @@ const routes: Routes = [
       import("./issues/issues.module").then((m) => m.IssuesPageModule),
     canActivate: [LoginGuard],
   },
+  {
+    path: 'meditate',
+    loadChildren: () => import('./meditate/meditate.module').then( m => m.MeditatePageModule)
+  },
 ];
 
 @NgModule({
