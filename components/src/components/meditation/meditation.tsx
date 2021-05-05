@@ -21,6 +21,8 @@ export class MeditationComponent {
   @State() started : boolean = false;
   @State() paused : boolean = false;
 
+  startingDuration : number | undefined = undefined;
+
   timerId;
 
   // Properties
@@ -87,6 +89,8 @@ export class MeditationComponent {
   /** Start the timer, either with a given value of seconds or with the number passed in the Meditation object metadata */
   @Method()
   async start(value : number = undefined) {
+    this.startingDuration = value;
+
     const metadata = this.obj?.metadata ?? { length: 300, delay: 0},
           seconds : number = value || metadata.length,
           delay : number = metadata.delay;
@@ -128,6 +132,12 @@ export class MeditationComponent {
     this.timerChanged.emit('rewind');
   }
 
+  /** Returns the total duration this timer is running for. */
+  @Method()
+  async duration() : Promise<number | undefined> {
+    return this.startingDuration;
+  }
+
   // Private methods
   async loadLocaleStrings() : Promise<void> {
     try {
@@ -148,6 +158,7 @@ export class MeditationComponent {
       this.secondsRemaining--;
       if(this.secondsRemaining == 0) {
         this.timerChanged.emit('complete');
+        this.startingDuration = 0;
       } else {
         this.timerChanged.emit(this.secondsRemaining);
       }

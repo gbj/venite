@@ -25,6 +25,16 @@
 
 ## Methods
 
+### `duration() => Promise<number | undefined>`
+
+Returns the total duration this timer is running for.
+
+#### Returns
+
+Type: `Promise<number>`
+
+
+
 ### `pause() => Promise<void>`
 
 Pause the timer
