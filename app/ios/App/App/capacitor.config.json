@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "app",
+	"appId": "app.venite",
+	"appName": "Venite",
 	"bundledWebRuntime": false,
 	"npmClient": "npm",
 	"webDir": "www",
