@@ -265,7 +265,14 @@ export class DocumentService {
                   ...doc,
                   metadata: {
                     ...doc.metadata,
-                    gloria: docsToOption(gloria),
+                    gloria: doc?.version
+                      ? docsToOption(
+                          gloria.filter(
+                            (option) =>
+                              !option.version || option.version === doc.version
+                          )
+                        )
+                      : docsToOption(gloria),
                   },
                 })
           )

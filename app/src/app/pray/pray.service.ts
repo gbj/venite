@@ -14,6 +14,7 @@ import {
   BibleReading,
   Preference,
   Psalm,
+  versionToString,
 } from "@venite/ldf";
 
 import { Observable, of, combineLatest } from "rxjs";
@@ -427,7 +428,13 @@ export class PrayService {
     random: boolean
   ): Observable<LiturgicalDocument> {
     return this.documents
-      .findDocumentsBySlug(slug, language, versions, false, this.bulletinMode)
+      .findDocumentsBySlug(
+        slug,
+        language,
+        docBase?.version ? [versionToString(docBase.version)] : versions,
+        false,
+        this.bulletinMode
+      )
       .pipe(
         // filter seasonally etc.
         map((docs) => (filterType ? this.filter(filterType, day, docs) : docs)),
