@@ -18,6 +18,7 @@ import { OrganizationService } from "src/app/organization/organization.service";
 import { AlertController, IonSearchbar, ModalController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { CreateOrganizationComponent } from "../create-organization/create-organization.component";
+import { IssueService, Status } from "src/app/issues/issue.service";
 
 @Component({
   selector: "venite-join-organization",
@@ -36,11 +37,14 @@ export class JoinOrganizationComponent implements OnInit {
   // organizations that match the search
   matches$: Observable<Organization[]>;
 
+  error: boolean = false;
+
   constructor(
     private auth: AuthService,
     private organizationService: OrganizationService,
     private modalController: ModalController,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private issues: IssueService
   ) {}
 
   ngOnInit() {
@@ -62,8 +66,23 @@ export class JoinOrganizationComponent implements OnInit {
 
   async joinOrganization(org: Organization) {
     const user = this.auth.currentUser();
-    await this.organizationService.join(user.uid, org.id);
-    this.complete.emit(true);
+    try {
+      await this.organizationService.join(user.uid, org.id);
+      this.complete.emit(true);
+    } catch (e) {
+      console.warn(e);
+      this.error = true;
+      this.issues.create({
+        name: user.displayName,
+        email: user.email,
+        location: window.location.toString(),
+        description: `(Automatically generated)\n\nError joining organization.\n\n${JSON.stringify(
+          e
+        )}\n\n${e}`,
+        status: Status.Open,
+        priority: 3,
+      });
+    }
   }
 
   async createOrganization(name: string) {
