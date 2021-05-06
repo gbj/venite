@@ -887,8 +887,11 @@ export class PrayPage implements OnInit, OnDestroy {
         text: "Read Aloud",
         icon: "headset",
         handler: async () => {
-          const loading = await this.loadingController.create();
-          await loading.present();
+          let loading;
+          if (!this.platform.is("capacitor") && this.platform.is("ios")) {
+            loading = await this.loadingController.create();
+            await loading.present();
+          }
           this.startSpeechAt(
             voices,
             data.doc,
@@ -896,7 +899,7 @@ export class PrayPage implements OnInit, OnDestroy {
             0,
             0,
             true,
-            loading
+            loading || undefined
           );
         },
       });
