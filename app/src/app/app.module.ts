@@ -93,6 +93,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
       providers: [BibleService, PlatformService, LocalStorageService],
       config: {
         bibleVersion: "ESV",
+        url: "/home",
       },
     }),
     DarkmodeModule.forRoot({
