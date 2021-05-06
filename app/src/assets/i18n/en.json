@@ -131,7 +131,7 @@
     "psalm_not_found": "We had trouble finding that psalm. Double-check the citation and try again.",
     "bible_version": "Version",
     "bulletin-color": "Change Liturgical Color",
-    "bulletin-creation-error": "There was an error creating your bulletin. We’ll continue with the best version we had before the error.",
+    "bulletin-creation-error": "It seems like something’s causing the bulletin editor to run slowly. We’ll try giving you the latest version it reached while compiling the liturgy. Sorry about that!",
     "confirm_deletion_header": "Delete “{{label}}”",
     "confirm_deletion": "Are you sure you want to delete this document?",
     "cancel": "Cancel",

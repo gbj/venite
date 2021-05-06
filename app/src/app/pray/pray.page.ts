@@ -28,6 +28,7 @@ import {
   catchError,
   takeWhile,
   distinct,
+  timeout,
 } from "rxjs/operators";
 import {
   Liturgy,
@@ -692,7 +693,10 @@ export class PrayPage implements OnInit, OnDestroy {
   async launchBulletinMode(
     stateDoc$: Observable<LiturgicalDocument>
   ): Promise<Observable<LiturgicalDocument>> {
-    const loading = await this.loadingController.create();
+    const loading = await this.loadingController.create({
+      backdropDismiss: true,
+      duration: 10000,
+    });
     await loading.present();
 
     // in bulletin mode, show a loading screen until the doc is fully compiled,
@@ -700,7 +704,8 @@ export class PrayPage implements OnInit, OnDestroy {
     let latestDoc: null | LiturgicalDocument = null;
 
     const doc$ = stateDoc$.pipe(
-      takeWhile((doc) => !isCompletelyCompiled(doc), true)
+      takeWhile((doc) => !isCompletelyCompiled(doc), true),
+      timeout(10000)
     );
 
     this.bulletinMode = true;
