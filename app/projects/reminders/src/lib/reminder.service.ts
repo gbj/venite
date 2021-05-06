@@ -11,23 +11,37 @@ import { RemindersConfig } from "./reminders-config";
 import { BibleReadingVerse } from "@venite/ldf";
 
 import {
+  ActionPerformed,
+  LocalNotificationActionPerformed,
   LocalNotifications,
-  LocalNotificationPendingList,
+  PendingResult,
 } from "@capacitor/local-notifications";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
 })
 export class ReminderService {
-  pending: LocalNotificationPendingList;
+  pending: PendingResult;
 
   constructor(
-    @Inject("config") private config: RemindersConfig,
+    @Inject("reminder-config") private config: RemindersConfig,
     @Inject(BIBLE_SERVICE) private bible: BibleServiceInterface,
-    @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface
+    @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface,
+    private router: Router
   ) {
     if (!this.platform.is("server") && this.platform.is("capacitor")) {
       this.loadPending();
+      LocalNotifications.addListener(
+        "localNotificationActionPerformed",
+        (event: ActionPerformed) => {
+          console.log("localNotificationActionPerformed", this.config);
+          const url = this.config.url;
+          if (url) {
+            this.router.navigateByUrl(url);
+          }
+        }
+      );
     }
   }
 
@@ -54,6 +68,7 @@ export class ReminderService {
             title: reminder.title,
             body: await this.getMessage(parseInt(hour)),
             id: new Date().getTime(),
+            extra: this.config.url,
             schedule: {
               on: {
                 hour: parseInt(hour),

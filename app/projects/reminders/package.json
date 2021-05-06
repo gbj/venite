@@ -1,6 +1,6 @@
 {
   "name": "@venite/ng-reminders",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
