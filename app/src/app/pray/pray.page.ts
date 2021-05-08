@@ -31,6 +31,7 @@ import {
   timeout,
   debounceTime,
   first,
+  takeUntil,
 } from "rxjs/operators";
 import {
   Liturgy,
@@ -475,7 +476,11 @@ export class PrayPage implements OnInit, OnDestroy {
     } else {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
-      this.doc$ = merge(stateDoc$, this.modifiedDoc$, this.docNotFound$).pipe(
+      this.doc$ = merge(
+        stateDoc$.pipe(takeWhile((doc) => !isCompletelyCompiled(doc), true)),
+        this.modifiedDoc$,
+        this.docNotFound$
+      ).pipe(
         // flatten for TTS purposes
         map((doc) => {
           if (doc) {
@@ -492,7 +497,9 @@ export class PrayPage implements OnInit, OnDestroy {
           } else {
             return undefined;
           }
-        })
+        }),
+        debounceTime(10),
+        tap((doc) => console.log("new doc$ value", doc))
       );
     }
 
@@ -904,7 +911,6 @@ export class PrayPage implements OnInit, OnDestroy {
             loading = await this.loadingController.create();
             await loading.present();
           }
-          console.log("data.doc = ", data.doc);
           this.startSpeechAt(
             voices,
             data.doc,
@@ -1141,7 +1147,7 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechPlayingUtterance = utterance;
     this.scrollToSubdoc(subdoc);
     const utterances$ = combineLatest([
-      merge(of(doc), this.modifiedDoc$),
+      this.doc$,
       this.settings$.pipe(startWith(settings)),
     ]).pipe(
       debounceTime(50),
@@ -1530,9 +1536,15 @@ export class PrayPage implements OnInit, OnDestroy {
     const doc: LiturgicalDocument | undefined = ev.detail.el?.doc;
     if (doc?.slug) {
       const stored = await this.storage.get(`option-selected-${doc.slug}`);
+      this.doc$.subscribe(
+        () => {},
+        () => {},
+        () => {
+          console.log("doc$ is complete");
+        }
+      );
       if (stored) {
-        setTimeout(() => ev.detail.el.select(Number(stored), true), 50);
-        setTimeout(() => ev.detail.el.select(Number(stored), true), 1000);
+        ev.detail.el.select(Number(stored));
       }
     }
   }
