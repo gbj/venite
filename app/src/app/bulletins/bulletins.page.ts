@@ -246,7 +246,9 @@ export class BulletinsPage implements OnInit {
 
   joinDocument(docId: string) {
     this.router.navigate([
+      "/",
       this.mode === "bulletins" ? "bulletin" : "template",
+      "b",
       docId,
     ]);
   }
