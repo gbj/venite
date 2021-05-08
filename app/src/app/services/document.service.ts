@@ -295,8 +295,7 @@ export class DocumentService {
             : of(docs)
         ),
         startWith([LOADING]),
-        catchError((error) => this.handleError(error)),
-        tap((doc) => console.log("(findDocumentsBySlug)", slug, doc))
+        catchError((error) => this.handleError(error))
       );
     };
 
@@ -341,7 +340,6 @@ export class DocumentService {
           .filter((doc) => Boolean(doc));
         // TODO need to include Firebase ones AS WELL, in case I have my own with same slug
         if (attempt?.length > 0) {
-          console.log("bySlug", slug, "more than one in attempt");
           // also send Firebase version, if online and in bulletin mode
           const firebaseVersions$ = isOnline().pipe(
             filter((online) => online && bulletinMode),
@@ -351,7 +349,6 @@ export class DocumentService {
           );
           return concat(processDocs(of(attempt), versions), firebaseVersions$);
         } else {
-          console.log("bySlug", slug, "branch B");
           return this.findDocumentsBySlug(slug, language, rawVersions, true);
         }
       }
