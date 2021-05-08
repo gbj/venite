@@ -556,7 +556,7 @@ export class PrayPage implements OnInit, OnDestroy {
     );
 
     this.actionSheetData$ = combineLatest([
-      this.doc$.pipe(startWith(new LiturgicalDocument())),
+      this.doc$,
       this.settings$.pipe(startWith(new DisplaySettings())),
       this.userOrgs$.pipe(startWith([])),
       this.userProfile$.pipe(startWith(null)),

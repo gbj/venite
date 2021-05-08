@@ -10,7 +10,12 @@ const routes: Routes = [
   { path: "bulletin/:bulletinId", component: ClassicBulletinRedirectComponent },
   { path: ":orgId/:slug", component: PrayPage },
   {
-    path: ":language/:version/:kalendar/:y/:m/:d/:liturgy",
+    path:
+      ":language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs/:newSlug/:newLabel",
+    component: PrayPage,
+  },
+  {
+    path: ":language/:version/:kalendar/:y/:m/:d/:liturgy/:vigil/:prefs",
     component: PrayPage,
   },
   {
@@ -18,12 +23,7 @@ const routes: Routes = [
     component: PrayPage,
   },
   {
-    path: ":language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs/:vigil",
-    component: PrayPage,
-  },
-  {
-    path:
-      ":language/:version/:kalendar/:y/:m/:d/:liturgy/:prefs/:newSlug/:newLabel",
+    path: ":language/:version/:kalendar/:y/:m/:d/:liturgy",
     component: PrayPage,
   },
   {

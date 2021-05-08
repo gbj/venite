@@ -258,8 +258,7 @@ export class PreferencesService {
       return combineLatest([oldPrefs$, newPrefs$]).pipe(
         map(([oldPrefs, newPrefs]) =>
           newPrefs?.length > 0 ? newPrefs : oldPrefs
-        ),
-        tap((value) => console.log("prefs for liturgy", value))
+        )
       );
     }
   }
