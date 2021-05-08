@@ -29,6 +29,8 @@ import {
   takeWhile,
   distinct,
   timeout,
+  debounceTime,
+  first,
 } from "rxjs/operators";
 import {
   Liturgy,
@@ -240,6 +242,11 @@ export class PrayPage implements OnInit, OnDestroy {
         this.editorService.leave(state.localManager.docId);
         this.bulletinDocId$.next(null);
       });
+    }
+
+    if (this.speechPlaying) {
+      this.pauseSpeech();
+      MediaSession.destroy();
     }
   }
 
@@ -897,6 +904,7 @@ export class PrayPage implements OnInit, OnDestroy {
             loading = await this.loadingController.create();
             await loading.present();
           }
+          console.log("data.doc = ", data.doc);
           this.startSpeechAt(
             voices,
             data.doc,
@@ -1132,7 +1140,11 @@ export class PrayPage implements OnInit, OnDestroy {
     this.speechPlayingSubDoc = subdoc;
     this.speechPlayingUtterance = utterance;
     this.scrollToSubdoc(subdoc);
-    const utterances$ = combineLatest([this.doc$, this.settings$]).pipe(
+    const utterances$ = combineLatest([
+      merge(of(doc), this.modifiedDoc$),
+      this.settings$.pipe(startWith(settings)),
+    ]).pipe(
+      debounceTime(50),
       filter(([doc, settings]) => Boolean(doc && settings)),
       map(([doc, settings]) => ({
         doc: docsToLiturgy(this.flattenDoc(doc)),
@@ -1141,7 +1153,7 @@ export class PrayPage implements OnInit, OnDestroy {
       // any time the document or settings change,
       // cancels the previous TTS reading and restarts it with the new document
       // and/or settings, starting at the sub-document/utterance indices that had been reached
-      switchMap(({ doc, settings }) =>
+      switchMap(() =>
         this.speechService.speakDoc(
           voices,
           // insert saints' biographies at the beginning, if relevant
@@ -1240,8 +1252,6 @@ export class PrayPage implements OnInit, OnDestroy {
               ? doc.value[data.subdoc]
               : undefined) as LiturgicalDocument,
             title = docLabel(subdoc);
-
-          console.log("subdoc = ", subdoc);
 
           if (title) {
             console.log("setting metadata to", title);
@@ -1521,7 +1531,8 @@ export class PrayPage implements OnInit, OnDestroy {
     if (doc?.slug) {
       const stored = await this.storage.get(`option-selected-${doc.slug}`);
       if (stored) {
-        setTimeout(() => ev.detail.el.select(Number(stored)), 50);
+        setTimeout(() => ev.detail.el.select(Number(stored), true), 50);
+        setTimeout(() => ev.detail.el.select(Number(stored), true), 1000);
       }
     }
   }

@@ -345,7 +345,7 @@ export class SpeechService {
       .map((sd, subdocIdx) => {
         const u = docToUtterances(sd);
         return (
-          docToUtterances(sd)
+          u
             // start at the given offset, but only for the first subdoc
             // (i.e., if we paused at v. 3 of the psalm, start at v 3 -- but don't slice other docs)
             .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
