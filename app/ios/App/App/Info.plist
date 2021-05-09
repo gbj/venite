@@ -59,7 +59,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>To Take Photos and Video</string>
+	<string>To take a photo to use as a user avatar.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Always allow Geolocation?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
