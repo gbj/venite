@@ -8,7 +8,7 @@ import {
 } from "@venite/ldf";
 import { MediaSession } from "capacitor-media-session";
 import { PlatformService } from "@venite/ng-platform";
-import { combineLatest, of, Subscription } from "rxjs";
+import { combineLatest, Observable, of, Subscription } from "rxjs";
 import { AudioService } from "../pray/audio.service";
 import { SpeechService, SpeechServiceTracking } from "./speech.service";
 import { querySelectorDeep } from "query-selector-shadow-dom";
@@ -34,6 +34,9 @@ export class MediaSessionService {
   speechUtteranceAtStartOfSubDoc: number = 0;
   speechSubscription: Subscription;
   contentEl: IonContent;
+
+  doc$: Observable<LiturgicalDocument>;
+  settings$: Observable<DisplaySettings>;
 
   constructor(
     private audio: AudioService,
@@ -98,7 +101,11 @@ export class MediaSessionService {
       doc,
       settings,
       this.speechPlayingSubDoc,
-      this.speechPlayingUtterance
+      this.speechPlayingUtterance,
+      false,
+      undefined,
+      this.doc$,
+      this.settings$
     );
     this.speechService.resume();
     this.audio?.play();
@@ -125,7 +132,17 @@ export class MediaSessionService {
         );
       } else {
         //console.log('rewind to beginning of this doc')
-        this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc);
+        this.startSpeechAt(
+          voices,
+          doc,
+          settings,
+          this.speechPlayingSubDoc,
+          0,
+          false,
+          undefined,
+          this.doc$,
+          this.settings$
+        );
       }
       MediaSession.setPositionState({
         playbackRate: 1,
@@ -139,7 +156,17 @@ export class MediaSessionService {
       this.speechSubscription?.unsubscribe();
       this.speechService.pause();
       this.speechPlayingUtterance = 0;
-      this.startSpeechAt(voices, doc, settings, this.speechPlayingSubDoc + 1);
+      this.startSpeechAt(
+        voices,
+        doc,
+        settings,
+        this.speechPlayingSubDoc + 1,
+        0,
+        false,
+        undefined,
+        this.doc$,
+        this.settings$
+      );
     });
     MediaSession.setPositionState({
       playbackRate: 1,
@@ -153,8 +180,15 @@ export class MediaSessionService {
     subdoc: number = 0,
     utterance: number = 0,
     firstTime: boolean = false,
-    loading?: HTMLIonLoadingElement | undefined
+    loading?: HTMLIonLoadingElement | undefined,
+    doc$?: Observable<LiturgicalDocument>,
+    settings$?: Observable<DisplaySettings>
   ) {
+    this.doc$ = doc$;
+    this.settings$ = settings$;
+
+    console.log("doc$ = ", doc$, "settings$ = ", settings$);
+
     MediaSession.setPositionState({
       playbackRate: 1,
     });
@@ -172,12 +206,9 @@ export class MediaSessionService {
     this.speechPlayingUtterance = utterance;
     this.scrollToSubdoc(subdoc);
     const utterances$ = combineLatest([
-      of(doc),
-      of(settings),
-      //this.doc$,
-      //this.settings$.pipe(startWith(settings)),
+      this.doc$ || of(doc),
+      this.settings$ || of(settings),
     ]).pipe(
-      debounceTime(50),
       filter(([doc, settings]) => Boolean(doc && settings)),
       map(([doc, settings]) => ({
         doc,
@@ -186,7 +217,7 @@ export class MediaSessionService {
       // any time the document or settings change,
       // cancels the previous TTS reading and restarts it with the new document
       // and/or settings, starting at the sub-document/utterance indices that had been reached
-      switchMap(() =>
+      switchMap(({ doc, settings }) =>
         this.speechService.speakDoc(
           voices,
           // insert saints' biographies at the beginning, if relevant

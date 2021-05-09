@@ -46,8 +46,8 @@
       </ion-item>
     </form>
 
-    <h2>{{ today | date:'longDate' }}</h2>
-    <ng-container *ngIf="day$ | async as day else loading">
+    <ng-container *ngIf="day$ | async as day">
+      <h2>{{ searchDate$ | async | date:'longDate' }}</h2>
       <ldf-day-name [day]="day"></ldf-day-name>
       <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
         <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
@@ -55,7 +55,7 @@
       </ul>
     </ng-container>
     <ng-container *ngIf="liturgy$ | async as doc">
-      <ldf-liturgical-document [doc]="doc"></ldf-liturgical-document>
+      <ldf-liturgical-document path="/" [doc]="doc" (ldfDocShouldChange)="changeDoc(doc, $event)"></ldf-liturgical-document>
     </ng-container>
   </div>
 </ion-content>

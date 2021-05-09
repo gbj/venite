@@ -298,23 +298,28 @@ export class PrayService {
           )
           .pipe(
             map((collects) =>
-              collects.map((collect) => {
-                const label = (day.holy_days || [])
-                  .map((day) => day.slug)
-                  .includes(collect.slug)
-                  ? titleCase(
-                      day.holy_days.find((day) => day.slug === collect.slug)
-                        ?.name
-                    ) ||
-                    collect.label ||
-                    "The Collect of the Day"
-                  : collect.label || "The Collect of the Day";
-                return new LiturgicalDocument({
-                  ...collect,
-                  metadata: { ...doc.metadata, ...collect.metadata },
-                  label,
-                });
-              })
+              collects
+                .filter(
+                  (collect) => !doc.version || doc.version === collect.version
+                )
+                .map((collect) => {
+                  const label = (day.holy_days || [])
+                    .map((day) => day.slug)
+                    .includes(collect.slug)
+                    ? titleCase(
+                        day.holy_days.find((day) => day.slug === collect.slug)
+                          ?.name
+                      ) ||
+                      collect.label ||
+                      "The Collect of the Day"
+                    : collect.label || "The Collect of the Day";
+                  return new LiturgicalDocument({
+                    ...collect,
+                    metadata: { ...doc.metadata, ...collect.metadata },
+                    version_label: doc.version_label || collect.version_label,
+                    label,
+                  });
+                })
             ),
             // ignore the initial "Loading..."
             filter(

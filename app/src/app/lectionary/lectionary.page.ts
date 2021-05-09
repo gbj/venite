@@ -18,14 +18,23 @@ import {
   PREFERENCES_SERVICE,
 } from "@venite/ng-service-api";
 import { PrayService } from "../pray/pray.service";
-import { BehaviorSubject, combineLatest, Observable, of, Subject } from "rxjs";
+import {
+  BehaviorSubject,
+  combineLatest,
+  merge,
+  Observable,
+  of,
+  Subject,
+} from "rxjs";
 import {
   filter,
   first,
   map,
+  shareReplay,
   startWith,
   switchMap,
   takeUntil,
+  tap,
 } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
 import { CalendarService } from "../services/calendar.service";
@@ -36,6 +45,9 @@ import { MediaSession } from "capacitor-media-session";
 import { MediaSessionService } from "../services/media-session.service";
 import { IonContent } from "@ionic/angular";
 import { SpeechService } from "../services/speech.service";
+import { EditorService } from "../editor/ldf-editor/editor.service";
+
+import * as json1 from "ot-json1";
 
 @Component({
   selector: "venite-lectionary",
@@ -51,6 +63,7 @@ export class LectionaryPage implements OnInit, OnDestroy {
   entries$: Observable<LectionaryEntry[]>;
   liturgy$: Observable<LiturgicalDocument>;
   settings$: Observable<DisplaySettings>;
+  modifiedDoc$: Subject<LiturgicalDocument> = new Subject();
 
   @ViewChild(IonContent, { read: IonContent, static: false })
   contentEl: IonContent;
@@ -65,7 +78,8 @@ export class LectionaryPage implements OnInit, OnDestroy {
     private calendar: CalendarService,
     private prayService: PrayService,
     public mediaSessionService: MediaSessionService,
-    private speechService: SpeechService
+    public speechService: SpeechService,
+    private editorService: EditorService
   ) {}
 
   ngOnDestroy(): void {
@@ -168,21 +182,27 @@ export class LectionaryPage implements OnInit, OnDestroy {
         this.lectionaryService.getReadings(day, lectionary, undefined, false)
       )
     );
-    this.liturgy$ = combineLatest([
-      this.day$,
-      this.lectionary.valueChanges.pipe(startWith(this.lectionary.value)),
-      this.bibleVersion.valueChanges.pipe(startWith(this.bibleVersion.value)),
-    ]).pipe(
-      switchMap(([day, lectionary, bibleVersion]) =>
-        this.prayService.compile(
-          generateLiturgy(lectionary, bibleVersion),
-          day,
-          {},
-          [],
-          {}
+    this.liturgy$ = merge(
+      this.modifiedDoc$.pipe(tap((doc) => console.log("modifiedDoc$ ", doc))),
+      combineLatest([
+        this.day$,
+        this.lectionary.valueChanges.pipe(startWith(this.lectionary.value)),
+        this.bibleVersion.valueChanges.pipe(startWith(this.bibleVersion.value)),
+      ]).pipe(
+        tap(([day, lectionary, bibleVersion]) =>
+          console.log("generating new version")
+        ),
+        switchMap(([day, lectionary, bibleVersion]) =>
+          this.prayService.compile(
+            generateLiturgy(lectionary, bibleVersion),
+            day,
+            {},
+            [],
+            {}
+          )
         )
       )
-    );
+    ).pipe(shareReplay());
   }
 
   navigate(ev: Event) {
@@ -220,7 +240,29 @@ export class LectionaryPage implements OnInit, OnDestroy {
 
     this.mediaSessionService.setContentEl(this.contentEl);
     this.mediaSessionService.initMediaSession(doc, settings);
-    this.mediaSessionService.startSpeechAt(voices, doc, settings);
+    this.mediaSessionService.startSpeechAt(
+      voices,
+      doc,
+      settings,
+      0,
+      0,
+      true,
+      undefined,
+      this.liturgy$,
+      this.settings$
+    );
+  }
+
+  changeDoc(doc: LiturgicalDocument, event: CustomEvent) {
+    const op = this.editorService.opFromChange(event.detail);
+    const newValue = new LiturgicalDocument(
+      json1.type.apply(
+        JSON.parse(JSON.stringify(doc)),
+        op
+      ) as Partial<LiturgicalDocument>
+    );
+
+    this.modifiedDoc$.next(newValue);
   }
 }
 
@@ -236,13 +278,31 @@ function generateLiturgy(lectionary: string, version: string): Liturgy {
       liturgyversions: ["bcp1979", "rite_i"],
     },
     value: [
-      new LiturgicalDocument({
-        hidden: false,
-        type: "text",
-        style: "prayer",
-        lookup: {
-          type: "collect",
-        },
+      new Option({
+        type: "option",
+        metadata: { selected: 0 },
+        value: [
+          new LiturgicalDocument({
+            hidden: false,
+            type: "text",
+            style: "prayer",
+            lookup: {
+              type: "collect",
+            },
+            version: "bcp1979",
+            version_label: "Rite II",
+          }),
+          new LiturgicalDocument({
+            hidden: false,
+            type: "text",
+            style: "prayer",
+            lookup: {
+              type: "collect",
+            },
+            version: "rite_i",
+            version_label: "Rite I",
+          }),
+        ],
       }),
       new BibleReading({
         hidden: false,

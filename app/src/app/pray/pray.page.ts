@@ -32,6 +32,7 @@ import {
   debounceTime,
   first,
   takeUntil,
+  shareReplay,
 } from "rxjs/operators";
 import {
   Liturgy,
@@ -180,6 +181,8 @@ export class PrayPage implements OnInit, OnDestroy {
   clipboardIcon: string = "clipboard";
 
   selection: SelectionData;
+
+  storedOptionSelections: number = 0;
 
   constructor(
     private router: Router,
@@ -467,14 +470,18 @@ export class PrayPage implements OnInit, OnDestroy {
 
     if (this.bulletinMode) {
       this.doc$ = from(this.launchBulletinMode(stateDoc$)).pipe(
-        switchMap((doc$) => doc$)
+        switchMap((doc$) => doc$),
+        shareReplay()
       );
     } else {
       // in normal Pray mode, start with window history/router state doc, and follow it with any modifications
       // e.g., "Change Canticle" button
       this.doc$ = merge(
         stateDoc$.pipe(takeWhile((doc) => !isCompletelyCompiled(doc), true)),
-        this.modifiedDoc$,
+        this.modifiedDoc$.pipe(
+          filter((doc) => Boolean(doc)),
+          tap((doc) => console.log("modifiedDoc$ = ", doc))
+        ),
         this.docNotFound$
       ).pipe(
         // flatten for TTS purposes
@@ -495,6 +502,7 @@ export class PrayPage implements OnInit, OnDestroy {
           }
         }),
         debounceTime(10),
+        shareReplay(),
         tap((doc) => console.log("new doc$ value", doc))
       );
     }
@@ -843,6 +851,7 @@ export class PrayPage implements OnInit, OnDestroy {
         op
       ) as Partial<LiturgicalDocument>
     );
+
     this.modifiedDoc$.next(newValue);
   }
 
@@ -1069,7 +1078,9 @@ export class PrayPage implements OnInit, OnDestroy {
       0,
       0,
       true,
-      loading || undefined
+      loading || undefined,
+      this.doc$,
+      this.settings$
     );
   }
 
@@ -1266,18 +1277,16 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   async optionSendStoredSelection(ev: CustomEvent) {
-    const doc: LiturgicalDocument | undefined = ev.detail.el?.doc;
-    if (doc?.slug) {
-      const stored = await this.storage.get(`option-selected-${doc.slug}`);
-      this.doc$.subscribe(
-        () => {},
-        () => {},
-        () => {
-          console.log("doc$ is complete");
-        }
+    const optionDoc: LiturgicalDocument | undefined = ev.detail?.el?.doc;
+    if (optionDoc?.slug) {
+      const stored = await this.storage.get(
+        `option-selected-${optionDoc.slug}`
       );
       if (stored) {
-        ev.detail.el.select(Number(stored));
+        const selection = Number(stored);
+
+        // select in UI
+        ev.detail.el.select(selection, true);
       }
     }
   }

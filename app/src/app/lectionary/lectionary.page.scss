@@ -1,4 +1,4 @@
-ldf-day-name {
+h2, ldf-day-name {
   display: block;
   margin: auto;
   margin-top: 0.5em;
@@ -6,6 +6,13 @@ ldf-day-name {
   text-align: center;
   font-family: var(--ldf-font-face);
   font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+ldf-day-name {
   font-size: 2em;
 }
 
