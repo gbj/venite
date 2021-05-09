@@ -39,7 +39,7 @@
     </ng-container>
   </ion-toolbar>
 </ion-header>
-<ion-content #content [fullscreen]="true" [scrollEvents]="!bulletinMode">
+<ion-content #content [fullscreen]="true">
   <div [class]="{'bordered': true, 'bulletin-mode': bulletinMode}" [style.background]="color$ | async" [style.border-color]="color$ | async">
     <ng-container *ngIf="bulletinMode">
         <div class="editor-wrapper" *ngIf="bulletinDocId$ | async as bulletinDocId">
@@ -84,23 +84,23 @@
 </ion-content>
   
 <ion-footer>
-  <ion-toolbar *ngIf="speechPlaying">
+  <ion-toolbar *ngIf="mediaSessionService.speechPlaying">
     <ng-container *ngIf="doc$ | async as doc">
       <ng-container *ngIf="settings$ | async as settings">
         <ion-buttons class="ion-justify-content-center">
-          <ion-button (click)="rewind(doc, settings)" slot="start">
+          <ion-button (click)="mediaSessionService.rewind(doc, settings)" slot="start">
             <ion-icon name="play-back" slot="icon-only"></ion-icon>
             <ion-label class="display-hidden">{{'speech.Rewind'|translate}}</ion-label>
           </ion-button>
-          <ion-button (click)="pauseSpeech()" *ngIf="speechService.isPlaying">
+          <ion-button (click)="mediaSessionService.pauseSpeech()" *ngIf="speechService.isPlaying">
             <ion-icon name="pause" slot="icon-only"></ion-icon>
             <ion-label class="display-hidden">{{'speech.Pause'|translate}}</ion-label>
           </ion-button>
-          <ion-button (click)="resumeSpeech(doc, settings)" *ngIf="!speechService.isPlaying">
+          <ion-button (click)="mediaSessionService.resumeSpeech(doc, settings)" *ngIf="!speechService.isPlaying">
             <ion-icon name="play" slot="icon-only"></ion-icon>
             <ion-label class="display-hidden">{{'speech.Resume'|translate}}</ion-label>
           </ion-button>
-          <ion-button (click)="fastForward(doc, settings)" slot="end">
+          <ion-button (click)="mediaSessionService.fastForward(doc, settings)" slot="end">
             <ion-icon name="play-forward" slot="icon-only"></ion-icon>
             <ion-label class="display-hidden">{{'speech.Fast-Forward'|translate}}</ion-label>
           </ion-button>

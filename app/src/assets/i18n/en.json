@@ -9,6 +9,7 @@
   "language": {
     "en": "English"
   },
+  "read-aloud": "Read Aloud",
   "psalter": {
     "PsalmNumber": "Psalm Number"
   },
@@ -67,7 +68,8 @@
     "daily-readings": "Daily Readings",
     "reminders": "Reminders",
     "report-issue": "Report an Issue",
-    "issues": "Issues"
+    "issues": "Issues",
+    "lectionary": "Sunday Readings"
 },
   "bulletins": {
     "bulletins": "Bulletins",

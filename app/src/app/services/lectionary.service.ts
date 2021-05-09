@@ -22,7 +22,7 @@ export class LectionaryService {
     day: LiturgicalDay,
     lectionaryName: string = undefined,
     readingType: string = undefined,
-    alternateYear: boolean
+    alternateYear: boolean = false
   ): Observable<LectionaryEntry[]> {
     // lectionaries that include readings for black-letter days
     const BLACK_LETTER_LECTIONARIES = ["lff2018"];
