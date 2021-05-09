@@ -3,7 +3,6 @@ import { Routes, RouterModule } from "@angular/router";
 import { ClassicBulletinRedirectComponent } from "./classic-bulletin-redirect/classic-bulletin-redirect.component";
 
 import { PrayPage } from "./pray.page";
-import { ScrollVanishDirective } from "./scroll-vanish.directive";
 
 const routes: Routes = [
   { path: "b/:docId", component: PrayPage },

@@ -14,7 +14,6 @@ import { PrayPageRoutingModule } from "./pray-routing.module";
 
 import { PrayPage } from "./pray.page";
 import { AuthModule } from "../auth/auth.module";
-import { ScrollVanishDirective } from "./scroll-vanish.directive";
 import { EditorPageModule } from "../editor/editor.module";
 import { MarkFavoriteComponent } from "./mark-favorite/mark-favorite.component";
 import { FavoriteTextComponent } from "./favorite-text/favorite-text.component";
@@ -61,12 +60,7 @@ interface PrayRootConfig {
     EditorPageModule,
     SharedModule,
   ],
-  declarations: [
-    PrayPage,
-    ScrollVanishDirective,
-    MarkFavoriteComponent,
-    FavoriteTextComponent,
-  ],
+  declarations: [PrayPage, MarkFavoriteComponent, FavoriteTextComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AudioService, Media],
 })
