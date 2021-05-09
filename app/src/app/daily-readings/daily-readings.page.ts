@@ -187,8 +187,7 @@ export class DailyReadingsPage implements OnInit {
               })
             : doc
         )
-      ),
-      tap((docs) => console.log("collects = ", docs))
+      )
     );
 
     // Grab display settings from preferences
@@ -225,7 +224,6 @@ export class DailyReadingsPage implements OnInit {
         take(1)
       )
       .subscribe((data) => {
-        console.log("psalmCycle pref is", data.value);
         if (data?.value) {
           this.psalmCycle.setValue(data.value);
         }
@@ -306,46 +304,6 @@ const COLLECT_RECIPE: Liturgy = new Liturgy({
       lookup: {
         type: "collect",
       },
-    }),
-    new LiturgicalDocument({
-      type: "text",
-      style: "prayer",
-      label: "Seasonal Collect",
-      condition: {
-        mode: "and",
-        conditions: [
-          new Condition({
-            season: {
-              only: ["Advent-Ember"],
-            },
-          }),
-        ],
-      },
-      category: ["Collect", "Collect of the Day"],
-      slug: "advent",
-      value: [
-        "Almighty God, give us grace that we may cast away the works of darkness, and put upon us the armour of light, now in the time of this mortal life, in which thy Son Jesus Christ came to visit us in great humility; that in the last day, when he shall come again in his glorious Majesty, to judge both the quick and the dead, we may rise to the life immortal; through him who liveth and reigneth with thee and the Holy Spirit, now and ever.",
-      ],
-    }),
-    new LiturgicalDocument({
-      type: "text",
-      style: "prayer",
-      label: "Seasonal Collect",
-      condition: {
-        mode: "and",
-        conditions: [
-          new Condition({
-            season: {
-              only: ["Lent-Ember"],
-            },
-          }),
-        ],
-      },
-      category: ["Collect", "Collect of the Day"],
-      slug: "lent",
-      value: [
-        "ALMIGHTY and everlasting God, who hatest nothing that thou hast made, and dost forgive the sins of all them that are penitent: Create and make in us new and contrite hearts, that we worthily lamenting our sins, and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord.",
-      ],
     }),
   ],
 });

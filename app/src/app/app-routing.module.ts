@@ -96,6 +96,10 @@ const routes: Routes = [
     path: 'meditate',
     loadChildren: () => import('./meditate/meditate.module').then( m => m.MeditatePageModule)
   },
+  {
+    path: 'lectionary',
+    loadChildren: () => import('./lectionary/lectionary.module').then( m => m.LectionaryPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "menu.lectionary" | translate}}</ion-title>
+    <ion-buttons slot="end">
+      <ng-container *ngIf="liturgy$ | async as doc">
+        <ng-container *ngIf="settings$ | async as settings">
+          <ion-button (click)="read(doc, settings)">
+            <ion-icon name="headset"></ion-icon>
+            <ion-label class="visually-hidden">{{ 'read-aloud' | translate }}</ion-label>
+          </ion-button>
+        </ng-container>
+      </ng-container>
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
+    <form class="settings-form">
+      <ng-container *ngIf="searchDate$ | async as date">
+        <ion-item>
+          <ion-label position="stacked">{{ 'date' | translate }}</ion-label>
+          <ion-input type="date" [value]="date | date:'yyyy-MM-dd'" (ionChange)="navigate($event)"></ion-input>
+        </ion-item>
+      </ng-container>
+      <ion-item>
+        <ion-label position="stacked">{{ 'editor.lectionary' | translate }}</ion-label>
+        <ion-select [formControl]="lectionary">
+          <ion-select-option value="rclsundayTrack1">RCL (Track 1)</ion-select-option>
+          <ion-select-option value="rclsunday">RCL (Track 2)</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{ 'editor.bible-version' | translate }}</ion-label>
+        <ion-select [formControl]="bibleVersion">
+          <ion-select-option value="NRSV">New Revised Standard Version (NRSV)</ion-select-option>
+          <ion-select-option value="CEB">Common English Bible (CEB)</ion-select-option>
+          <ion-select-option value="ESV">English Standard Version (ESV)</ion-select-option>
+          <ion-select-option value="KJV">King James Version (KJV)</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </form>
+
+    <h2>{{ today | date:'longDate' }}</h2>
+    <ng-container *ngIf="day$ | async as day else loading">
+      <ldf-day-name [day]="day"></ldf-day-name>
+      <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
+        <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
+        <li *ngIf="day.week?.proper">(Proper {{ day.week.proper }})</li>
+      </ul>
+    </ng-container>
+    <ng-container *ngIf="liturgy$ | async as doc">
+      <ldf-liturgical-document [doc]="doc"></ldf-liturgical-document>
+    </ng-container>
+  </div>
+</ion-content>
+<ion-footer  *ngIf="mediaSessionService.speechPlaying">
+  <ion-toolbar>
+    <ng-container *ngIf="liturgy$ | async as doc">
+      <ng-container *ngIf="settings$ | async as settings">
+        <ion-buttons class="ion-justify-content-center">
+          <ion-button (click)="mediaSessionService.rewind(doc, settings)" slot="start">
+            <ion-icon name="play-back" slot="icon-only"></ion-icon>
+            <ion-label class="visually-hidden">{{'speech.Rewind'|translate}}</ion-label>
+          </ion-button>
+          <ion-button (click)="mediaSessionService.pauseSpeech()" *ngIf="speechService.isPlaying">
+            <ion-icon name="pause" slot="icon-only"></ion-icon>
+            <ion-label class="visually-hidden">{{'speech.Pause'|translate}}</ion-label>
+          </ion-button>
+          <ion-button (click)="mediaSessionService.resumeSpeech(doc, settings)" *ngIf="!speechService.isPlaying">
+            <ion-icon name="play" slot="icon-only"></ion-icon>
+            <ion-label class="visually-hidden">{{'speech.Resume'|translate}}</ion-label>
+          </ion-button>
+          <ion-button (click)="mediaSessionService.fastForward(doc, settings)" slot="end">
+            <ion-icon name="play-forward" slot="icon-only"></ion-icon>
+            <ion-label class="visually-hidden">{{'speech.Fast-Forward'|translate}}</ion-label>
+          </ion-button>
+        </ion-buttons>
+      </ng-container>
+    </ng-container>
+  </ion-toolbar>
+</ion-footer>

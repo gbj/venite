@@ -1,0 +1,35 @@
+ldf-day-name {
+  display: block;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-family: var(--ldf-font-face);
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.pray-container {
+  width: calc(var(--ldf-max-width) + 4em);
+  max-width: 100%;
+  margin: auto;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  > * {
+    min-width: 150px;
+    width: 30%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  ion-item:last-child {
+    flex-grow: 2;
+  }
+}
