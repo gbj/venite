@@ -19,15 +19,28 @@ export class OrganizationService {
 
   // Enables a user to start following a particular organization
   async join(uid: string, orgId: string): Promise<void> {
-    return await this.afs.doc(`Users/${uid}`).update({
-      ["orgs"]: firebase.firestore.FieldValue.arrayUnion(orgId),
-    });
+    try {
+      return await this.afs.doc(`Users/${uid}`).update({
+        ["orgs"]: firebase.firestore.FieldValue.arrayUnion(orgId),
+      });
+    } catch (e) {
+      console.warn(e);
+      return await this.afs.doc(`Users/${uid}`).set({
+        ["orgs"]: firebase.firestore.FieldValue.arrayUnion(orgId),
+      });
+    }
   }
 
   async leave(uid: string, orgId: string): Promise<void> {
-    return await this.afs.doc(`Users/${uid}`).update({
-      ["orgs"]: firebase.firestore.FieldValue.arrayRemove(orgId),
-    });
+    try {
+      return await this.afs.doc(`Users/${uid}`).update({
+        ["orgs"]: firebase.firestore.FieldValue.arrayRemove(orgId),
+      });
+    } catch (e) {
+      return await this.afs.doc(`Users/${uid}`).set({
+        ["orgs"]: firebase.firestore.FieldValue.arrayRemove(orgId),
+      });
+    }
   }
 
   async create(name: string, ownerUID: string): Promise<void> {
