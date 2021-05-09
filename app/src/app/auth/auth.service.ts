@@ -1,12 +1,13 @@
 import { Injectable } from "@angular/core";
 import { LoadingController, Platform } from "@ionic/angular";
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
 
 import { AngularFireAuth } from "@angular/fire/auth";
 import firebase from "firebase/app";
 import { cfaSignIn, cfaSignOut } from "capacitor-firebase-auth/alternative";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { map, catchError, first, filter } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -102,9 +103,14 @@ export class AuthService {
     }
 
     // create profile if necessary
-    if (result.additionalUserInfo?.isNewUser) {
-      this.createUserProfile(result.user);
-    }
+    this.profileExists(result.user)
+      .pipe(
+        first(),
+        filter((exists) => !exists)
+      )
+      .subscribe(() => {
+        this.createUserProfile(result.user);
+      });
 
     return result;
   }
@@ -159,6 +165,13 @@ export class AuthService {
       ...(user.photoURL && { photoURL: user.photoURL }),
       orgs: [],
     });
+  }
+
+  profileExists(user: firebase.User): Observable<boolean> {
+    return this.getUserProfile(user?.uid).pipe(
+      map((profile) => Boolean(profile)),
+      catchError(() => of(false))
+    );
   }
 
   getUserProfile(uid: string): Observable<UserProfile> {
