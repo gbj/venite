@@ -1,3 +1,8 @@
 .select-control {
   margin-top: var(--ldf-select-control-margin-top);
 }
+
+ion-select {
+  width: 75vw;
+  max-width: 300px;
+}
