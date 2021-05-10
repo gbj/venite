@@ -10,15 +10,11 @@
       "metadata": {
         "level": 1
       },
-      "value": [
-        "Evening Prayer"
-      ]
+      "value": ["Evening Prayer"]
     },
     {
       "type": "heading",
-      "value": [
-        ""
-      ],
+      "value": [""],
       "style": "date",
       "hidden": false,
       "metadata": {
@@ -29,9 +25,7 @@
       "metadata": {
         "level": 1
       },
-      "value": [
-        ""
-      ],
+      "value": [""],
       "style": "day",
       "type": "heading",
       "hidden": false
@@ -139,9 +133,7 @@
     {
       "type": "bible-reading",
       "style": "short",
-      "category": [
-        "Opening Sentence"
-      ],
+      "category": ["Opening Sentence"],
       "hidden": false,
       "lookup": {
         "type": "category",
@@ -211,9 +203,7 @@
           "category": [],
           "type": "text",
           "style": "text",
-          "value": [
-            "Let us confess our sins against God and our neighbor."
-          ],
+          "value": ["Let us confess our sins against God and our neighbor."],
           "version_label": "Short"
         }
       ],
@@ -389,9 +379,7 @@
       "type": "option"
     },
     {
-      "value": [
-        "Invitatory and Psalter"
-      ],
+      "value": ["Invitatory and Psalter"],
       "metadata": {
         "level": 2
       },
@@ -419,9 +407,7 @@
     },
     {
       "hidden": false,
-      "value": [
-        "All stand"
-      ],
+      "value": ["All stand"],
       "condition": {
         "conditions": [
           {
@@ -507,10 +493,7 @@
           {
             "season": {
               "only": [],
-              "except": [
-                "Lent",
-                "HolyWeek"
-              ]
+              "except": ["Lent", "HolyWeek"]
             }
           },
           {
@@ -523,9 +506,7 @@
         ]
       },
       "type": "text",
-      "value": [
-        "Alleluia."
-      ],
+      "value": ["Alleluia."],
       "hidden": false,
       "style": "text"
     },
@@ -571,9 +552,7 @@
             }
           ],
           "type": "psalm",
-          "category": [
-            "Psalm"
-          ],
+          "category": ["Psalm"],
           "version": "bcp1979",
           "language": "en"
         },
@@ -588,9 +567,7 @@
             "omit_gloria": false,
             "localname": "O Gracious Light"
           },
-          "category": [
-            "Psalm"
-          ],
+          "category": ["Psalm"],
           "version_label": "Metrical",
           "sharing": {
             "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -699,9 +676,7 @@
       "type": "heading",
       "hidden": false,
       "style": "text",
-      "value": [
-        "The Lessons"
-      ]
+      "value": ["The Lessons"]
     },
     {
       "hidden": false,
@@ -715,12 +690,8 @@
           "type": "text",
           "style": "text",
           "language": "en",
-          "category": [
-            "Bible Reading Introduction"
-          ],
-          "value": [
-            "A Reading from ${longName}."
-          ]
+          "category": ["Bible Reading Introduction"],
+          "value": ["A Reading from ${longName}."]
         }
       },
       "type": "bible-reading",
@@ -787,12 +758,8 @@
       },
       "metadata": {
         "intro": {
-          "value": [
-            "A Reading from ${longName}."
-          ],
-          "category": [
-            "Bible Reading Introduction"
-          ],
+          "value": ["A Reading from ${longName}."],
+          "category": ["Bible Reading Introduction"],
           "type": "text",
           "style": "text",
           "sharing": {
@@ -916,13 +883,9 @@
       "style": "long",
       "metadata": {
         "intro": {
-          "category": [
-            "Bible Reading Introduction"
-          ],
+          "category": ["Bible Reading Introduction"],
           "type": "text",
-          "value": [
-            "A Reading from ${longName}."
-          ],
+          "value": ["A Reading from ${longName}."],
           "sharing": {
             "privacy": "public",
             "organization": "venite",
@@ -991,9 +954,7 @@
         "source": "",
         "citation": ""
       },
-      "value": [
-        "The Sermon"
-      ]
+      "value": ["The Sermon"]
     },
     {
       "type": "text",
@@ -1021,9 +982,7 @@
       "metadata": {
         "level": 2
       },
-      "value": [
-        "The Prayers"
-      ],
+      "value": ["The Prayers"],
       "source": {
         "api": "",
         "source": "",
@@ -1275,9 +1234,7 @@
         "filter": "—",
         "rotate": true
       },
-      "value": [
-        ""
-      ],
+      "value": [""],
       "slug": "ep-daily-collect",
       "style": "prayer",
       "condition": {
@@ -1286,12 +1243,7 @@
           {
             "weekday": {
               "except": [],
-              "only": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday"
-              ]
+              "only": ["Monday", "Tuesday", "Wednesday", "Thursday"]
             }
           }
         ]
@@ -1309,9 +1261,7 @@
           {
             "weekday": {
               "except": [],
-              "only": [
-                "Friday"
-              ]
+              "only": ["Friday"]
             }
           }
         ]
@@ -1337,9 +1287,7 @@
         "conditions": [
           {
             "weekday": {
-              "only": [
-                "Saturday"
-              ],
+              "only": ["Saturday"],
               "except": []
             }
           }
@@ -1366,9 +1314,7 @@
         "conditions": [
           {
             "weekday": {
-              "only": [
-                "Sunday"
-              ],
+              "only": ["Sunday"],
               "except": []
             }
           }
@@ -1391,9 +1337,7 @@
     },
     {
       "language": "en",
-      "value": [
-        ""
-      ],
+      "value": [""],
       "metadata": {
         "omit_response": false
       },
@@ -1434,9 +1378,7 @@
       "metadata": {
         "level": 3
       },
-      "value": [
-        "The Sermon"
-      ],
+      "value": ["The Sermon"],
       "hidden": false,
       "type": "heading",
       "style": "text",
@@ -1497,9 +1439,7 @@
     },
     {
       "hidden": false,
-      "value": [
-        "Then may be said"
-      ],
+      "value": ["Then may be said"],
       "type": "rubric"
     },
     {
@@ -1507,11 +1447,7 @@
         "conditions": [
           {
             "season": {
-              "except": [
-                "Easter",
-                "Ascension",
-                "Pentecost"
-              ],
+              "except": ["Easter", "Ascension", "Pentecost"],
               "only": []
             }
           }
@@ -1536,7 +1472,7 @@
         {
           "label": "",
           "text": "Let us bless the Lord. Alleluia, alleluia.",
-          "response": "Thanks be to God. Alleluia, alleluia.."
+          "response": "Thanks be to God. Alleluia, alleluia."
         }
       ],
       "hidden": false,
@@ -1545,11 +1481,7 @@
           {
             "season": {
               "except": [],
-              "only": [
-                "Easter",
-                "Ascension",
-                "Pentecost"
-              ]
+              "only": ["Easter", "Ascension", "Pentecost"]
             }
           }
         ],
@@ -1557,17 +1489,13 @@
       }
     },
     {
-      "value": [
-        "The Officiant may then conclude with one of the following"
-      ],
+      "value": ["The Officiant may then conclude with one of the following"],
       "type": "rubric",
       "hidden": false
     },
     {
       "hidden": false,
-      "category": [
-        "Closing Sentence"
-      ],
+      "category": ["Closing Sentence"],
       "type": "bible-reading",
       "lookup": {
         "rotate": true,
@@ -1582,9 +1510,7 @@
       },
       "style": "text",
       "hidden": false,
-      "value": [
-        "The Sermon"
-      ],
+      "value": ["The Sermon"],
       "type": "heading",
       "condition": {
         "conditions": [
@@ -1707,9 +1633,7 @@
         "evening": false,
         "supplement": false,
         "special_preferences": {},
-        "liturgyversions": [
-          "usccb"
-        ]
+        "liturgyversions": ["usccb"]
       },
       "sharing": {
         "organization": "venite",
@@ -1752,10 +1676,7 @@
   },
   "label": "Evening Prayer",
   "metadata": {
-    "liturgyversions": [
-      "bcp1979",
-      "eow"
-    ],
+    "liturgyversions": ["bcp1979", "eow"],
     "special_preferences": {
       "insertGloria": "",
       "palms": {
