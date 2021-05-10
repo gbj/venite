@@ -199,7 +199,7 @@ export class PreferencesService {
         filter((online) => online),
         switchMap(() => this.getStored(key))
       )
-    );
+    ).pipe(shareReplay());
 
     return combineLatest([oldPref$, newPref$]).pipe(
       map(([oldPref, newPref]) => (newPref ? newPref : oldPref)),

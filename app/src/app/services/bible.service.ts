@@ -3,7 +3,7 @@ import { Observable, of } from "rxjs";
 import { BibleReading } from "@venite/ldf";
 import { BibleServiceInterface } from "@venite/ng-service-api";
 import { HttpClient } from "@angular/common/http";
-import { catchError, map, startWith, tap } from "rxjs/operators";
+import { catchError, map, shareReplay, startWith, tap } from "rxjs/operators";
 
 const LOADING = new BibleReading({
   type: "bible-reading",
@@ -72,7 +72,8 @@ export class BibleService implements BibleServiceInterface {
           return version === "NRSV" || citation.startsWith("psalm_")
             ? of(undefined)
             : this.getText(citation, "NRSV");
-        })
+        }),
+        shareReplay()
       );
   }
 }

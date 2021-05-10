@@ -49,6 +49,7 @@ import {
   distinctUntilKeyChanged,
   filter,
   map,
+  shareReplay,
   startWith,
   switchMap,
   take,
@@ -184,13 +185,17 @@ export class LiturgySelectComponent implements OnInit {
     ]).pipe(
       switchMap(([language, version]) =>
         this.documents.getLiturgyOptions(language, version)
-      )
+      ),
+      shareReplay()
     );
 
     this.clientPreferences$ = combineLatest([
       this.menuPreferences$,
       this.properLiturgyPreference$,
-    ]).pipe(map(([menu, proper]) => ({ ...menu, ...proper })));
+    ]).pipe(
+      map(([menu, proper]) => ({ ...menu, ...proper })),
+      shareReplay()
+    );
 
     const availableProperLiturgiesLiturgies$: Observable<
       LiturgicalDocument[] | undefined
@@ -250,7 +255,8 @@ export class LiturgySelectComponent implements OnInit {
                 (!language || liturgy.language === language) &&
                 (!version || liturgy.version === version)
             );
-      })
+      }),
+      shareReplay()
     );
 
     // Language, version, kalendar
@@ -267,7 +273,8 @@ export class LiturgySelectComponent implements OnInit {
             (this.translate.instant(`language.${language}`) as string) ||
             language,
         }))
-      )
+      ),
+      shareReplay()
     );
     this.versionOptions$ = of(this.config.versionOptions);
 
@@ -308,7 +315,8 @@ export class LiturgySelectComponent implements OnInit {
         dateFromYMDString(
           `${this.form.controls.date.value.year}-${this.form.controls.date.value.month}-${this.form.controls.date.value.day}`
         )
-      )
+      ),
+      shareReplay()
     );
 
     if (!this.config.serverReturnsDate) {
@@ -325,23 +333,27 @@ export class LiturgySelectComponent implements OnInit {
       );
 
       // main liturgical day observable
-      this.day$ = this.calendarService.buildDay(
-        this.date$,
-        this.kalendar$,
-        this.liturgy$,
-        this.week$,
-        this.vigil$
-      );
+      this.day$ = this.calendarService
+        .buildDay(
+          this.date$,
+          this.kalendar$,
+          this.liturgy$,
+          this.week$,
+          this.vigil$
+        )
+        .pipe(shareReplay());
     } else {
-      this.day$ = this.calendarService.buildDay(
-        this.date$,
-        this.kalendar$,
-        this.liturgy$,
-        of([]),
-        this.vigil$
-      );
+      this.day$ = this.calendarService
+        .buildDay(
+          this.date$,
+          this.kalendar$,
+          this.liturgy$,
+          of([]),
+          this.vigil$
+        )
+        .pipe(shareReplay());
     }
-    this.dayName$ = merge(this.day$, this.dayReset$);
+    this.dayName$ = merge(this.day$, this.dayReset$).pipe(shareReplay());
 
     this.date$.subscribe(() => {
       this.dayReset$.next(null);
@@ -403,6 +415,7 @@ export class LiturgySelectComponent implements OnInit {
           vigil: vigil as boolean,
         })
       ),
+      shareReplay(),
       // any time any of the data changes, set isNavigating to false;
       // so, for example, if we change date or liturgy the button is no longer disabled
       tap(() => (this.isNavigating = false))
