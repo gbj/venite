@@ -363,7 +363,7 @@ export class PrayPage implements OnInit, OnDestroy {
           }
         })
       )
-    );
+    ).pipe(shareReplay());
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$: Observable<ClientPreferences> = combineLatest(
@@ -407,7 +407,8 @@ export class PrayPage implements OnInit, OnDestroy {
         } else {
           return of(chosenPrefs);
         }
-      })
+      }),
+      shareReplay()
     );
 
     // Unifies everything from the router params
@@ -416,7 +417,8 @@ export class PrayPage implements OnInit, OnDestroy {
       day$,
       prefs$
     ).pipe(
-      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs }))
+      map(([liturgy, day, prefs]) => ({ liturgy: liturgy[0], day, prefs })),
+      shareReplay()
     );
 
     // Unite the data passed from the state and the data derived from the route
@@ -431,7 +433,8 @@ export class PrayPage implements OnInit, OnDestroy {
       ),
       // allow more changes if orgId is in the URL (i.e., it's a published bulletin)
       // to prevent issues with caching old bulletins with same URL
-      take(this.route.snapshot.params["orgId"] ? 1000 : 4)
+      take(this.route.snapshot.params["orgId"] ? 1000 : 4),
+      shareReplay()
       //take(2)
     );
 
@@ -465,7 +468,8 @@ export class PrayPage implements OnInit, OnDestroy {
           state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version],
           state.liturgy?.metadata?.preferences
         );
-      })
+      }),
+      shareReplay()
     );
 
     if (this.bulletinMode) {
@@ -532,23 +536,7 @@ export class PrayPage implements OnInit, OnDestroy {
     }
 
     // Grab display settings from preferences
-    const prefSettings$ = combineLatest([
-      this.grabPreference("dropcaps"),
-      this.grabPreference("response"),
-      this.grabPreference("repeatAntiphon"),
-      this.grabPreference("fontscale"),
-      this.grabPreference("font"),
-      this.grabPreference("voiceChoice"),
-      this.grabPreference("voiceRate"),
-      this.grabPreference("voiceBackground"),
-      this.grabPreference("voiceBackgroundVolume"),
-      this.grabPreference("psalmVerses"),
-      this.grabPreference("bibleVerses"),
-      this.grabPreference("meditationBell"),
-      this.grabPreference("darkmode"),
-      this.grabPreference("bolded"),
-      this.grabPreference("psalmPause"),
-    ]).pipe(map((settings) => new DisplaySettings(...settings)));
+    const prefSettings$ = this.preferencesService.displaySettings();
 
     const docSettings$ = this.doc$.pipe(map((doc) => doc?.display_settings));
 
@@ -684,13 +672,6 @@ export class PrayPage implements OnInit, OnDestroy {
     } else {
       return [doc];
     }
-  }
-
-  grabPreference(key: string): Observable<any> {
-    return this.preferencesService
-      .get(key)
-      .pipe(startWith(undefined))
-      .pipe(map((keyvalue) => keyvalue?.value));
   }
 
   processSettings(settings: DisplaySettings): string[] {

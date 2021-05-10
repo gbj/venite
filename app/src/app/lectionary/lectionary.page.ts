@@ -157,21 +157,7 @@ export class LectionaryPage implements OnInit, OnDestroy {
       );
 
     // Grab display settings from preferences
-    this.settings$ = combineLatest([
-      this.grabPreference("dropcaps"),
-      this.grabPreference("response"),
-      this.grabPreference("repeatAntiphon"),
-      this.grabPreference("fontscale"),
-      this.grabPreference("font"),
-      this.grabPreference("voiceChoice"),
-      this.grabPreference("voiceRate"),
-      this.grabPreference("voiceBackground"),
-      this.grabPreference("voiceBackgroundVolume"),
-      this.grabPreference("psalmVerses"),
-      this.grabPreference("bibleVerses"),
-      this.grabPreference("meditationBell"),
-      this.grabPreference("darkmode"),
-    ]).pipe(map((settings) => new DisplaySettings(...settings)));
+    this.settings$ = this.preferences.displaySettings();
 
     // Load readings
     this.entries$ = combineLatest([
@@ -213,13 +199,6 @@ export class LectionaryPage implements OnInit, OnDestroy {
         (ev.target as HTMLInputElement).value,
       ]);
     }
-  }
-
-  grabPreference(key: string): Observable<any> {
-    return this.preferences
-      .get(key)
-      .pipe(startWith(undefined))
-      .pipe(map((keyvalue) => keyvalue?.value));
   }
 
   processSettings(settings: DisplaySettings): string[] {

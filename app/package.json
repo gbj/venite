@@ -56,7 +56,7 @@
     "@venite/ng-pray": "^0.6.3",
     "@venite/ng-pray-menu": "^0.4.20",
     "@venite/ng-reminders": "^0.2.2",
-    "@venite/ng-service-api": "^0.6.1",
+    "@venite/ng-service-api": "^0.7.0",
     "capacitor-firebase-auth": "^3.0.0-rc.0",
     "capacitor-media-session": "^0.1.6",
     "clipboard-polyfill": "^3.0.1",

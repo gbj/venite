@@ -2,7 +2,14 @@ import { Injectable, Inject } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 import { Observable, of, from, merge, Subject, combineLatest } from "rxjs";
-import { switchMap, map, tap, filter } from "rxjs/operators";
+import {
+  switchMap,
+  map,
+  tap,
+  filter,
+  shareReplay,
+  startWith,
+} from "rxjs/operators";
 
 import {
   AuthServiceInterface,
@@ -40,6 +47,8 @@ export class PreferencesService {
   private _updated: {
     [key: string]: Subject<StoredPreference>;
   } = {};
+
+  private _displaySettings: Observable<DisplaySettings> | undefined;
 
   constructor(
     private readonly afs: AngularFirestore,
@@ -180,8 +189,6 @@ export class PreferencesService {
   }
 
   get(key: string): Observable<StoredPreference> {
-    console.log("getting preference", key);
-
     const oldPref$ = this.getOldPref(key);
 
     const newPref$ = merge(
@@ -196,7 +203,8 @@ export class PreferencesService {
 
     return combineLatest([oldPref$, newPref$]).pipe(
       map(([oldPref, newPref]) => (newPref ? newPref : oldPref)),
-      filter((value) => value !== undefined)
+      filter((value) => value !== undefined),
+      shareReplay()
     );
   }
 
@@ -261,5 +269,37 @@ export class PreferencesService {
         )
       );
     }
+  }
+
+  displaySettings(): Observable<DisplaySettings> {
+    if (this._displaySettings) {
+      return this._displaySettings;
+    } else {
+      this._displaySettings = combineLatest([
+        this.grabPreference("dropcaps"),
+        this.grabPreference("response"),
+        this.grabPreference("repeatAntiphon"),
+        this.grabPreference("fontscale"),
+        this.grabPreference("font"),
+        this.grabPreference("voiceChoice"),
+        this.grabPreference("voiceRate"),
+        this.grabPreference("voiceBackground"),
+        this.grabPreference("voiceBackgroundVolume"),
+        this.grabPreference("psalmVerses"),
+        this.grabPreference("bibleVerses"),
+        this.grabPreference("meditationBell"),
+        this.grabPreference("darkmode"),
+        this.grabPreference("bolded"),
+        this.grabPreference("psalmPause"),
+      ]).pipe(
+        map((settings) => new DisplaySettings(...settings)),
+        shareReplay()
+      );
+      return this._displaySettings;
+    }
+  }
+
+  grabPreference(key: string): Observable<any> {
+    return this.get(key).pipe(map((keyvalue) => keyvalue?.value));
   }
 }

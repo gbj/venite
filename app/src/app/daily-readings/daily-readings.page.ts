@@ -191,21 +191,7 @@ export class DailyReadingsPage implements OnInit {
     );
 
     // Grab display settings from preferences
-    this.settings$ = combineLatest([
-      this.grabPreference("dropcaps"),
-      this.grabPreference("response"),
-      this.grabPreference("repeatAntiphon"),
-      this.grabPreference("fontscale"),
-      this.grabPreference("font"),
-      this.grabPreference("voiceChoice"),
-      this.grabPreference("voiceRate"),
-      this.grabPreference("voiceBackground"),
-      this.grabPreference("voiceBackgroundVolume"),
-      this.grabPreference("psalmVerses"),
-      this.grabPreference("bibleVerses"),
-      this.grabPreference("meditationBell"),
-      this.grabPreference("darkmode"),
-    ]).pipe(map((settings) => new DisplaySettings(...settings)));
+    this.settings$ = this.preferencesService.displaySettings();
 
     this.initFormFromPref();
   }
@@ -238,13 +224,6 @@ export class DailyReadingsPage implements OnInit {
           this.kalendar.setValue(data.value);
         }
       });
-  }
-
-  grabPreference(key: string): Observable<any> {
-    return this.preferencesService
-      .get(key)
-      .pipe(startWith(undefined))
-      .pipe(map((keyvalue) => keyvalue?.value));
   }
 
   processSettings(settings: DisplaySettings): string[] {

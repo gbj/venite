@@ -105,23 +105,7 @@ export class PsalterPage implements OnInit {
     );
 
     // Grab display settings from preferences
-    this.settings$ = combineLatest([
-      // even though some of these preferences are irrelevant, the DisplaySettings
-      // constructor requires them to be present in order
-      this.grabPreference("dropcaps"),
-      this.grabPreference("response"),
-      this.grabPreference("repeatAntiphon"),
-      this.grabPreference("fontscale"),
-      this.grabPreference("font"),
-      this.grabPreference("voiceChoice"),
-      this.grabPreference("voiceRate"),
-      this.grabPreference("voiceBackground"),
-      this.grabPreference("voiceBackgroundVolume"),
-      this.grabPreference("psalmVerses"),
-      this.grabPreference("bibleVerses"),
-      this.grabPreference("meditationBell"),
-      this.grabPreference("darkmode"),
-    ]).pipe(map((settings) => new DisplaySettings(...settings)));
+    this.settings$ = this.preferencesService.displaySettings();
   }
 
   setPsalm(animate: boolean = true) {
@@ -167,13 +151,6 @@ export class PsalterPage implements OnInit {
     };
 
     await modal.present();
-  }
-
-  grabPreference(key: string): Observable<any> {
-    return this.preferencesService
-      .get(key)
-      .pipe(startWith(undefined))
-      .pipe(map((keyvalue) => keyvalue?.value));
   }
 
   processSettings(settings: DisplaySettings): string[] {
