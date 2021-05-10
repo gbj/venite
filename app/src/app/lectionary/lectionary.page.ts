@@ -176,7 +176,7 @@ export class LectionaryPage implements OnInit, OnDestroy {
         this.bibleVersion.valueChanges.pipe(startWith(this.bibleVersion.value)),
       ]).pipe(
         tap(([day, lectionary, bibleVersion]) =>
-          console.log("generating new version")
+          console.log("bibleVersion = ", bibleVersion)
         ),
         switchMap(([day, lectionary, bibleVersion]) =>
           this.prayService.compile(
@@ -192,12 +192,15 @@ export class LectionaryPage implements OnInit, OnDestroy {
   }
 
   navigate(ev: Event) {
-    if ((ev.target as HTMLInputElement).value) {
-      this.router.navigate([
-        "/",
-        "lectionary",
-        (ev.target as HTMLInputElement).value,
-      ]);
+    const ymd = (ev.target as HTMLInputElement)?.value,
+      today = new Date(),
+      todayYMD = `${today.getFullYear()}-${
+        today.getMonth() + 1
+      }-${today.getDate()}`,
+      isToday = ymd == todayYMD,
+      current = this.route.snapshot.params.ymd;
+    if (ymd && (!isToday || ymd !== current)) {
+      this.router.navigate(["/", "lectionary", ymd]);
     }
   }
 
@@ -293,6 +296,7 @@ function generateLiturgy(lectionary: string, version: string): Liturgy {
           item: "first_reading",
         },
         label: "The First Lesson",
+        version,
       }),
       new Psalm({
         hidden: false,
@@ -318,6 +322,7 @@ function generateLiturgy(lectionary: string, version: string): Liturgy {
           item: "second_reading",
         },
         label: "The Epistle",
+        version,
       }),
       new BibleReading({
         hidden: false,
@@ -329,6 +334,7 @@ function generateLiturgy(lectionary: string, version: string): Liturgy {
           item: "gospel",
         },
         label: "The Gospel",
+        version,
       }),
     ],
   });
