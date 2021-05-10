@@ -6,6 +6,7 @@ import {
   catchError,
   filter,
   map,
+  shareReplay,
   startWith,
   switchMap,
   tap,
@@ -27,7 +28,6 @@ import { AuthService } from "../auth/auth.service";
 import { OrganizationService } from "../organization/organization.service";
 
 import BY_SLUG from "../../offline/by_slug.json";
-import BY_CATEGORY from "../../offline/by_category.json";
 import COLORS from "../../offline/colors.json";
 import VERSIONS from "../../offline/versions.json";
 import { HttpClient } from "@angular/common/http";
@@ -200,6 +200,9 @@ export class DocumentService {
       loadLiturgy("en", "Daily-Devotions", "noonday-prayer"),
       loadLiturgy("en", "Daily-Devotions", "evening-prayer"),
       loadLiturgy("en", "Daily-Devotions", "compline"),
+      loadLiturgy("en", "Rite-II", "eucharist"),
+      loadLiturgy("en", "Rite-I", "eucharist"),
+      loadLiturgy("en", "EOW", "eucharist"),
     ]);
 
     return concat(offlineLiturgies$, onlineLiturgies$);
@@ -316,6 +319,7 @@ export class DocumentService {
           "noonday-prayer",
           "evening-prayer",
           "compline",
+          "eucharist",
         ].includes(slug)
       ) {
         const key = `/offline/liturgy/${language}-${
@@ -478,25 +482,44 @@ export class DocumentService {
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
     if (!disableOffline) {
-      const attempt = Array.from(new Set(versions))
-        .map((version) => BY_CATEGORY[`${language}-${version}`])
-        .flat()
-        .filter((doc) =>
-          (doc?.category || []).some((r) => category.indexOf(r) >= 0)
-        );
-      // TODO need to include Firebase ones AS WELL, in case I have my own with same category
-      if (attempt?.length > 0) {
-        // also send Firebase version, if online and in bulletin mode
-        const firebaseVersions$ = isOnline().pipe(
-          filter((online) => online && bulletinMode),
-          switchMap(() =>
-            this.findDocumentsByCategory(category, language, versions, true)
+      const attempt$ = combineLatest(
+        Array.from(
+          new Set(
+            versions
+              .map((v) => v.toLowerCase())
+              .filter((version) =>
+                ["bcp1979", "rite_i", "eow", "rite-ii", "rite-i"].includes(
+                  version
+                )
+              )
           )
-        );
-        return merge(of(attempt), firebaseVersions$);
-      } else {
-        return this.findDocumentsByCategory(category, language, versions, true);
-      }
+        ).map((version) =>
+          this.http.get<LiturgicalDocument[]>(
+            `/offline/category/${language}-${version}.json`
+          )
+        )
+      ).pipe(
+        tap((docs) => console.log("category A", category, versions, docs)),
+        map((docs) =>
+          docs
+            .flat()
+            .filter((doc) =>
+              (doc?.category || []).some((r) => category.indexOf(r) >= 0)
+            )
+        ),
+        tap((docs) => console.log("category B", category, versions, docs))
+      );
+      // also send Firebase version, if online
+      const firebaseVersions$ = isOnline().pipe(
+        switchMap((online) =>
+          online
+            ? this.findDocumentsByCategory(category, language, versions, true)
+            : of([])
+        )
+      );
+      return merge(attempt$, firebaseVersions$).pipe(
+        filter((docs) => docs?.length > 0)
+      );
     } else {
       return this.afs
         .collection<LiturgicalDocument>("Document", (ref) =>
