@@ -24,6 +24,7 @@
         <a href="mailto:{{item.data.email}}">{{ item.data.name }}</a>
         <p>Submitted {{ item.data.date_created?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
         <p *ngIf="item.data.date_modified">Triaged {{ item.data.date_modified?.toDate() | date:'MM/dd/yyyy h:mm:ss a' }}</p>
+        <p>{{ item.data.platform }}<span *ngIf="item.data.version"> v. {{ item.data.version }}</span> – {{ item.data.os }} – {{ item.data.osVersion }} </p>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button (click)="setPending(item.id)">

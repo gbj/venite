@@ -3,6 +3,8 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import firebase from "firebase/app";
+import { App } from "@capacitor/app";
+import { Device } from "@capacitor/device";
 
 export enum Status {
   Open = "Open",
@@ -19,6 +21,10 @@ export type Issue = {
   description: string;
   status: Status;
   priority: number | null;
+  platform?: string;
+  os?: string;
+  osVersion?: string;
+  version?: string;
 };
 
 export type IdAndIssue = {
@@ -32,12 +38,35 @@ export type IdAndIssue = {
 export class IssueService {
   constructor(private afs: AngularFirestore) {}
 
-  create(report: Partial<Issue>) {
+  async create(report: Partial<Issue>) {
     const docId = this.afs.createId();
+    let app;
+    let device;
+    try {
+      app = await App.getInfo();
+    } catch (e) {
+      console.warn(e);
+      app = {
+        version: "",
+      };
+    }
+    try {
+      device = await Device.getInfo();
+    } catch (e) {
+      console.warn(e);
+      device = {};
+    }
     return this.afs
       .collection<Issue>("Issue")
       .doc(docId)
-      .set({ ...report, date_created: firebase.firestore.Timestamp.now() });
+      .set({
+        ...report,
+        date_created: firebase.firestore.Timestamp.now(),
+        platform: device.platform,
+        os: device.operatingSystem,
+        osVersion: device.osVersion,
+        version: app.version,
+      });
   }
 
   update(docId: string, report: Partial<Issue>) {
