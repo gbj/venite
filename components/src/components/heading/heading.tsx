@@ -87,9 +87,9 @@ export class HeadingComponent {
     return display && node;
   }
 
-  private textNode(text : string, index : number) : JSX.Element {
+  private textNode(text : string, index : number, bodyText? : boolean) : JSX.Element {
     return this.editable
-      ? <EditableNode uidOrSlug={this.obj.uid || this.obj.slug || ''} path={this.path} text={text} index={index} />
+      ? <EditableNode uidOrSlug={this.obj.uid || this.obj.slug || ''} path={this.path} text={text} index={index} bodyText={Boolean(bodyText)} />
       : <ldf-string text={text} fragment={this.path}></ldf-string>;
   }
 
@@ -205,7 +205,7 @@ export class HeadingComponent {
         <div>{hasSource && hasCitation && this.obj.citation !== this.obj.label && this.citationNode(this.obj.citation, 'none')}</div>
 
         {/* `Heading.value[2..]` => on a new line` */}
-        {this.obj?.value?.length > 2 && this.obj.value.slice(2, this.obj.value.length).map((text, index) => this.textNode(text, index + 2))}
+        {this.obj?.value?.length > 2 && this.obj.value.slice(2, this.obj.value.length).map((text, index) => this.textNode(text, index + 2, true))}
       </Host>
     );
   }
