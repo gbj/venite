@@ -143,6 +143,10 @@
           <h4>{{ doc.data?.type }} | {{ doc.data?.language }} | {{ doc.data?.version }}</h4>
         </ion-label>
         <ion-buttons slot="end" *ngIf="userProfile$ | async as userProfile">
+          <ion-button (click)="download(doc.data)">
+            <ion-label slot="start" class="sm-hidden">{{ 'editor.download' | translate }}</ion-label>
+            <ion-icon slot="end" name="download"></ion-icon>
+          </ion-button>
           <ion-button (click)="copy(userProfile, doc.data)">
             <ion-label slot="start" class="sm-hidden">{{ 'editor.copy' | translate }}</ion-label>
             <ion-icon slot="end" name="copy"></ion-icon>
