@@ -363,7 +363,10 @@ export class PrayPage implements OnInit, OnDestroy {
           }
         })
       )
-    ).pipe(shareReplay());
+    ).pipe(
+      filter((day) => Boolean(day)),
+      shareReplay()
+    );
 
     // `prefs` are passed as a JSON-encoded string in the param
     const prefs$: Observable<ClientPreferences> = combineLatest(
@@ -526,12 +529,14 @@ export class PrayPage implements OnInit, OnDestroy {
       );
     } else {
       this.color$ = combineLatest(day$, this.doc$).pipe(
+        tap(([day, doc]) =>
+          console.log("color$ ==> day = ", day, "doc = ", doc)
+        ),
         map(([day, doc]) => doc?.metadata?.color ?? day?.color),
         filter((color) => Boolean(color)),
         switchMap((color) =>
           this.documents.getColor(color).pipe(startWith(null))
-        ),
-        distinct()
+        )
       );
     }
 
