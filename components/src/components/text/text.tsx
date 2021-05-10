@@ -112,7 +112,7 @@ export class TextComponent {
         ? (this.obj?.value || []).map(s => s.replace(/\s+/g, ' '))
         : (this.obj?.value || []);
       let compiledValue : string[][] = value.map(s => {
-        return s.split(/([\*\w\n\s,:;\.\-–—'“”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.'“”‘’”\-–—\!\?\[\]\%\(\)]))/g);
+        return s.split(/([\*\w\n\s,:;\.\-–—'“✠”‘’\!\?”\[\]\%\(\)]+([^\*\w\n\s,;:\.'“”✠‘’”\-–—\!\?\[\]\%\(\)]))/g);
       })
       if(!this.editable && this.obj?.display_format === 'abbreviated') {
         const firstSection = compiledValue[0],
