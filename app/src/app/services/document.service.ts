@@ -485,7 +485,7 @@ export class DocumentService {
       const attempt$ = combineLatest(
         Array.from(
           new Set(
-            versions
+            (versions || [])
               .map((v) => v.toLowerCase())
               .filter((version) =>
                 ["bcp1979", "rite_i", "eow", "rite-ii", "rite-i"].includes(
