@@ -144,9 +144,8 @@ export class PrayPage implements OnInit, OnDestroy {
   color$: Observable<string | null>;
   userProfile$: Observable<UserProfile | null>;
   userOrgs$: Observable<Organization[]>;
-  modifiedDoc$: BehaviorSubject<
-    LiturgicalDocument | undefined | null
-  > = new BehaviorSubject(undefined);
+  modifiedDoc$: BehaviorSubject<LiturgicalDocument | undefined | null> =
+    new BehaviorSubject(undefined);
   docNotFound$: Subject<null> = new Subject();
 
   // Liturgy data to be loaded from the database if we come straight to this page
@@ -356,7 +355,7 @@ export class PrayPage implements OnInit, OnDestroy {
               of(params.kalendar),
               of(liturgy).pipe(map((x) => x[0])),
               of(week),
-              of(params.vigil)
+              of(params.vigil === "true")
             );
           } else {
             return of(undefined);
@@ -630,6 +629,7 @@ export class PrayPage implements OnInit, OnDestroy {
           ["bcp1979"]
         )
       ),
+      filter((docs) => docs?.length > 1),
       map((docs) => docs.sort((a, b) => (a.slug <= b.slug ? -1 : 1)))
     );
 
@@ -654,9 +654,9 @@ export class PrayPage implements OnInit, OnDestroy {
       component: DisplaySettingsComponent,
     });
 
-    const voiceChoices = (
-      await this.speechService.getVoices()
-    ).filter((voice) => voice.lang.startsWith(doc.language ?? "en"));
+    const voiceChoices = (await this.speechService.getVoices()).filter(
+      (voice) => voice.lang.startsWith(doc.language ?? "en")
+    );
 
     modal.componentProps = {
       settings,
