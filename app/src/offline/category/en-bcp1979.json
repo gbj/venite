@@ -1,14 +1,822 @@
 [
-  {"lastRevision":1,"source":{"api":"","citation":"","source":""},"date_modified":{"seconds":1604544640,"nanoseconds":960000000},"label":"Form I","style":"litany","hidden":false,"sharing":{"status":"published","organization":"venite","privacy":"public","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","collaborators":[]},"version":"bcp1979","value":[{"optional":false,"response":"","text":"With all our heart and with all our mind, let us pray to the Lord, saying “Lord, have mercy.”"},{"response":"Lord, have mercy.","text":"For the peace from above, for the loving-kindness of God, and for the salvation of our souls, let us pray to the Lord.","optional":true},{"response":"Lord, have mercy.","optional":false,"text":"For the peace of the world, for the welfare of the Holy Church of God, and for the unity of all peoples, let us pray to the Lord."},{"response":"Lord, have mercy.","text":"For our Bishop, and for all the clergy and people, let us pray to the Lord.","optional":false},{"optional":false,"response":"Lord, have mercy.","text":"For our President, for the leaders of the nations, and for all in authority, let us pray to the Lord."},{"optional":false,"response":"Lord, have mercy.","text":"For this city (town, village,                            ), for every city and community, and for those who live in them, let us pray to the Lord."},{"optional":true,"response":"Lord, have mercy.","text":"For seasonable weather, and for an abundance of the fruits of the earth, let us pray to the Lord."},{"response":"Lord, have mercy.","optional":false,"text":"For the good earth which God has given us, and for the wisdom and will to conserve it, let us pray to the Lord."},{"text":"For those who travel on land, on water, or in the air [or through outer space], let us pray to the Lord.","response":"Lord, have mercy.","optional":true},{"text":"For the aged and infirm, for the widowed and orphans, and for the sick and the suffering, let us pray to the Lord.","response":"Lord, have mercy.","optional":false},{"response":"Lord, have mercy.","optional":true,"text":"For ____________, let us pray to the Lord."},{"optional":false,"text":"For the poor and the oppressed, for the unemployed and the destitute, for prisoners and captives, and for all who remember and care for them, let us pray to the Lord.","response":"Lord, have mercy."},{"text":"For all who have died in the hope of the resurrection, and for all the departed, let us pray to the Lord.","response":"Lord, have mercy.","optional":false},{"optional":false,"response":"Lord, have mercy.","text":"For deliverance from all danger, violence, oppression, and degradation, let us pray to the Lord."},{"text":"For the absolution and remission of our sins and offenses, let us pray to the Lord.","optional":true,"response":"Lord, have mercy."},{"text":"  That we may end our lives in faith and hope, without suffering and without reproach, let us pray to the Lord.","response":"Lord, have mercy.","optional":false},{"text":"Defend us, deliver us, and in thy compassion protect us, O Lord, by thy grace.","optional":true,"response":"Lord, have mercy."},{"text":"In the communion of [____________ and of all the] saints, let us commend ourselves, and one another, and all our life, to Christ our God.","optional":false,"response":"To thee, O Lord our God."}],"version_label":"Form I","language":"en","category":["potp","Prayers of the People"],"citation":null,"type":"responsive","metadata":{"response":""},"slug":"potp_form_i"},
-            {"type":"responsive","citation":null,"category":["potp","Prayers of the People"],"slug":"potp_form_ii","metadata":{"response":"[Silence]"},"version_label":"Form II","version":"bcp1979","label":"Form II","hidden":false,"language":"en","value":[{"text":"I ask your prayers for God's people throughout the world; for our Bishop(s) ____________; for this gathering; and for all ministers and people.\n\nPray for the Church.","optional":false},{"text":"I ask your prayers for peace; for goodwill among nations; and for the well-being of all people.\n\nPray for justice and peace.","optional":false},{"optional":false,"text":"I ask your prayers for the poor, the sick, the hungry, the oppressed, and those in prison.\n\nPray for those in any need or trouble."},{"text":"I ask your prayers for all who seek God, or a deeper knowledge of him.\n\nPray that they may find and be found by him.","optional":false},{"text":"I ask your prayers for the departed [especially ____________].\n\nPray for those who have died.","optional":false},{"optional":true,"text":"I ask your prayers for ____________."},{"text":"I ask your thanksgiving for ____________.","optional":true},{"text":"Praise God for those in every generation in whom Christ has been honored [especially ____________ whom we remember today].\n\nPray that we may have grace to glorify Christ in our own day.","optional":false}],"style":"litany","sharing":{"status":"published","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","privacy":"public","organization":"venite","collaborators":[]}},
-            {"citation":null,"style":"litany","version":"bcp1979","metadata":{"response":null},"slug":"potp_form_iii","label":"Form III","type":"responsive","version_label":"Form III","sharing":{"owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","privacy":"public","organization":"venite","collaborators":[],"status":"published"},"hidden":false,"language":"en","value":[{"optional":false,"text":"Father, we pray for your holy Catholic Church;","response":"That we all may be one."},{"response":"That your Name may be glorified by all people.","text":"Grant that every member of the Church may truly and humbly serve you;","optional":false},{"optional":false,"text":"We pray for all bishops, priests, and deacons;","response":"That they may be faithful ministers of your Word and Sacraments."},{"text":"We pray for all who govern and hold authority in the nations of the world;","optional":false,"response":"That there may be justice and peace on the earth."},{"response":"That our works may find favor in your sight.","optional":false,"text":"Give us grace to do your will in all that we undertake;"},{"text":"Have compassion on those who suffer from any grief or trouble;","response":"That they may be delivered from their distress.","optional":false},{"text":"Give to the departed eternal rest.","optional":false,"response":"Let light perpetual shine upon them."},{"optional":false,"response":"May we also come to share in your heavenly kingdom.","text":"We praise you for your saints who have entered into joy;"},{"response":"[Silence]","text":"Let us pray for our own needs and those of others.","optional":false}],"category":["potp","Prayers of the People"]},
-          {"type":"responsive","category":["potp","Prayers of the People"],"value":[{"text":"Let us pray for the Church and for the world.\n\nGrant, Almighty God, that all who confess your Name may be united in your truth, live together in your love, and reveal your glory in the world.","optional":false,"response":"[Silence]"},{"optional":false,"text":"Lord, in your mercy","response":"Hear our prayer."},{"optional":false,"response":"[Silence]","text":"Guide the people of this land, and of all the nations, in the ways of justice and peace; that we may honor one another and serve the common good."},{"text":"Lord, in your mercy","optional":false,"response":"Hear our prayer."},{"response":"[Silence]","text":"Give us all a reverence for the earth as your own creation, that we may use its resources rightly in the service of others and to your honor and glory.","optional":false},{"response":"Hear our prayer.","text":"Lord, in your mercy","optional":false},{"text":"Bless all whose lives are closely linked with ours, and grant that we may serve Christ in them, and love one another as he loves us.","optional":false,"response":"[Silence]"},{"optional":false,"text":"Lord, in your mercy","response":"Hear our prayer."},{"response":"[Silence]","optional":false,"text":"Comfort and heal all those who suffer in body, mind, or spirit; give them courage and hope in their troubles, and bring them the joy of your salvation."},{"optional":false,"response":"Hear our prayer.","text":"Lord, in your mercy"},{"text":"We commend to your mercy all who have died, that your will for them may be fulfilled; and we pray that we may share with all your saints in your eternal kingdom.","optional":false,"response":"[Silence]"},{"response":"Hear our prayer.","text":"Lord, in your mercy","optional":false}],"lastRevision":0,"hidden":false,"sharing":{"organization":"venite","status":"published","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","collaborators":[],"privacy":"public"},"label":"Form IV","citation":null,"version":"bcp1979","metadata":{"response":null},"language":"en","slug":"potp_form_iv","style":"litany","date_modified":{"seconds":1604544609,"nanoseconds":989000000},"version_label":"Form IV"},
-
-            {"label":"Form V","citation":null,"sharing":{"organization":"venite","status":"published","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","collaborators":[],"privacy":"public"},"version_label":"Form V","slug":"potp_form_v","type":"responsive","version":"bcp1979","style":"litany","category":["potp","Prayers of the People"],"value":[{"optional":false,"text":"In peace, let us pray to the Lord, saying, “Lord, have mercy.”\n\nFor the holy Church of God, that it may be filled with truth and love, and be found without fault at the day of your coming, we pray to you, O Lord.","response":"Lord, have mercy."},{"response":"Lord, have mercy.","text":"For N. our Presiding Bishop, for N. (N.) our own Bishop(s), for all bishops and other ministers, and for all the holy people of God, we pray to you, O Lord.","optional":false},{"optional":false,"text":"For all who fear God and believe in you, Lord Christ, that our divisions may cease, and that all may be one as you and the Father are one, we pray to you, O Lord.","response":"Lord, have mercy."},{"text":"For the mission of the Church, that in faithful witness it may preach the Gospel to the ends of the earth, we pray to you, O Lord.","optional":false,"response":"Lord, have mercy."},{"optional":true,"response":"Lord, have mercy.","text":"For those who do not yet believe, and for those who have lost their faith, that they may receive the light of the Gospel, we pray to you, O Lord."},{"text":"For the peace of the world, that a spirit of respect and forbearance may grow among nations and peoples, we pray to you, O Lord.","response":"Lord, have mercy.","optional":false},{"text":"For those in positions of public trust [especially ____________], that they may serve justice, and promote the dignity and freedom of every person, we pray to you, O Lord.","optional":false,"response":"Lord, have mercy."},{"response":"Lord, have mercy.","optional":false,"text":"For all who live and work in this community [especially ____________], we pray to you, O Lord."},{"optional":true,"response":"Lord, have mercy.","text":"For a blessing upon all human labor, and for the right use of the riches of creation, that the world may be freed from poverty, famine, and disaster, we pray to you, O Lord."},{"optional":false,"response":"Lord, have mercy.","text":"For the poor, the persecuted, the sick, and all who suffer; for refugees, prisoners, and all who are in danger; that they may be relieved and protected, we pray to you, O Lord."},{"text":"For this congregation [for those who are present, and for those who are absent], that we may be delivered from hardness of heart, and show forth your glory in all that we do, we pray to you, O Lord.","response":"Lord, have mercy.","optional":false},{"response":"Lord, have mercy.","optional":true,"text":"For our enemies and those who wish us harm, and for all whom we have injured or offended, we pray to you, O Lord."},{"optional":true,"response":"Lord, have mercy.","text":"For ourselves; for the forgiveness of our sins, and for the grace of the Holy Spirit to amend our lives, we pray to you, O Lord."},{"optional":false,"text":"For all who have commended themselves to our prayers; for our families, friends, and neighbors; that being freed from anxiety, they may live in joy, peace, and health, we pray to you, O Lord.","response":"Lord, have mercy."},{"optional":true,"response":"Lord, have mercy.","text":"For ____________, we pray to you, O Lord."},{"optional":false,"response":"Lord, have mercy.","text":"For all who have died in the communion of your Church, and those whose faith is known to you alone, that, with all the saints, they may have rest in that place where there is no pain or grief, but life eternal, we pray to you, O Lord."},{"text":"Rejoicing in the fellowship of [the ever-blessed Virgin Mary, (blessed N.) and] all the saints, let us commend ourselves, and one another, and all our life to Christ our God.","response":"To you, O Lord our God.","optional":false}],"hidden":false,"language":"en","metadata":{"response":null}},
-      {"type":"responsive","value":[{"response":"Kyrie eleison.","text":"In peace, let us pray to the Lord, saying, “Kyrie eleison.”\n\nFor the holy Church of God, that it may be filled with truth and love, and be found without fault at the day of your coming, we pray to you, O Lord.","optional":false},{"optional":false,"response":"Kyrie eleison.","text":"For N. our Presiding Bishop, for N. (N.) our own Bishop(s), for all bishops and other ministers, and for all the holy people of God, we pray to you, O Lord."},{"response":"Kyrie eleison.","optional":false,"text":"For all who fear God and believe in you, Lord Christ, that our divisions may cease, and that all may be one as you and the Father are one, we pray to you, O Lord."},{"text":"For the mission of the Church, that in faithful witness it may preach the Gospel to the ends of the earth, we pray to you, O Lord.","optional":false,"response":"Kyrie eleison."},{"response":"Kyrie eleison.","text":"For those who do not yet believe, and for those who have lost their faith, that they may receive the light of the Gospel, we pray to you, O Lord.","optional":true},{"optional":false,"text":"For the peace of the world, that a spirit of respect and forbearance may grow among nations and peoples, we pray to you, O Lord.","response":"Kyrie eleison."},{"text":"For those in positions of public trust [especially ____________], that they may serve justice, and promote the dignity and freedom of every person, we pray to you, O Lord.","optional":false,"response":"Kyrie eleison."},{"response":"Kyrie eleison.","text":"For all who live and work in this community [especially ____________], we pray to you, O Lord.","optional":false},{"optional":true,"text":"For a blessing upon all human labor, and for the right use of the riches of creation, that the world may be freed from poverty, famine, and disaster, we pray to you, O Lord.","response":"Kyrie eleison."},{"optional":false,"response":"Kyrie eleison.","text":"For the poor, the persecuted, the sick, and all who suffer; for refugees, prisoners, and all who are in danger; that they may be relieved and protected, we pray to you, O Lord."},{"response":"Kyrie eleison.","text":"For this congregation [for those who are present, and for those who are absent], that we may be delivered from hardness of heart, and show forth your glory in all that we do, we pray to you, O Lord.","optional":false},{"response":"Kyrie eleison.","optional":true,"text":"For our enemies and those who wish us harm, and for all whom we have injured or offended, we pray to you, O Lord."},{"optional":true,"response":"Kyrie eleison.","text":"For ourselves; for the forgiveness of our sins, and for the grace of the Holy Spirit to amend our lives, we pray to you, O Lord."},{"text":"For all who have commended themselves to our prayers; for our families, friends, and neighbors; that being freed from anxiety, they may live in joy, peace, and health, we pray to you, O Lord.","optional":false,"response":"Kyrie eleison."},{"text":"For ____________, we pray to you, O Lord.","optional":true,"response":"Kyrie eleison."},{"text":"For all who have died in the communion of your Church, and those whose faith is known to you alone, that, with all the saints, they may have rest in that place where there is no pain or grief, but life eternal, we pray to you, O Lord.","optional":false,"response":"Kyrie eleison."},{"text":"Rejoicing in the fellowship of [the ever-blessed Virgin Mary, (blessed N.) and] all the saints, let us commend ourselves, and one another, and all our life to Christ our God.","optional":false,"response":"To you, O Lord our God."}],"hidden":false,"sharing":{"status":"published","collaborators":[],"privacy":"public","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","organization":"venite"},"version_label":"Form V (“Kyrie eleison”)","style":"litany","citation":null,"version":"bcp1979","slug":"potp_form_v_kyrie","language":"en","label":"Form V","category":["potp","Prayers of the People"],"metadata":{"response":null}},
-    {"source":{"source":"","citation":"","api":""},"type":"liturgy","value":[{"source":{"citation":"","source":"","api":""},"value":["Form VI"],"metadata":{"level":3},"style":"text","type":"heading","hidden":false},{"style":"text","value":["In peace, we pray to you, Lord God."],"type":"text","hidden":false},{"value":["Silence"],"type":"rubric","hidden":false},{"hidden":false,"style":"litany","type":"responsive","source":{"source":"","citation":"","api":""},"value":[{"text":"For all people in their daily life and work;","response":"For our families, friends, and neighbors, and for those who are alone.","label":""},{"response":"For all who work for justice, freedom, and peace.","text":"For this community, the nation, and the world;"},{"text":"For the just and proper use of your creation;","response":"For the victims of hunger, fear, injustice, and oppression."},{"response":"For those who minister to the sick, the friendless, and the needy.","text":"For all who are in danger, sorrow, or any kind of trouble;"},{"response":"For all who proclaim the Gospel, and all who seek the Truth.","text":"For the peace and unity of the Church of God;"},{"text":"For [N. our Presiding Bishop, and N. (N.) our Bishop(s); and for] all bishops and other ministers;","response":"For all who serve God in his Church."}],"metadata":{},"category":[]},{"style":"text","value":["For the special needs and concerns of this congregation."],"type":"text","hidden":false},{"type":"rubric","value":["Silence","The People may add their own petitions"],"hidden":false},{"type":"responsive","value":[{"response":"For your mercy is great.","text":"Hear us, Lord;","label":""}],"hidden":false,"style":"responsive"},{"type":"text","hidden":false,"style":"text","value":["We thank you, Lord, for all the blessings of this life."]},{"value":["Silence","The People may add their own thanksgivings"],"hidden":false,"type":"rubric"},{"source":{"source":"","citation":"","api":""},"value":["We will exalt you, O God our King;"],"hidden":false,"style":"text","metadata":{"rollup":false},"category":[],"type":"responsive"},{"type":"text","style":"text","hidden":false,"value":["We pray for all who have died, that they may have a place in your eternal kingdom."]},{"value":["Silence","The People may add their own petitions"],"hidden":false,"type":"rubric"},{"hidden":false,"value":[{"text":"Lord, let your loving-kindness be upon them;","label":"","response":" Who put their trust in you."}],"style":"responsive","type":"responsive"},{"hidden":false,"value":["We pray to you also for the forgiveness of our sins."],"style":"text","type":"text"},{"hidden":false,"value":["Silence may be kept."],"type":"rubric"},{"value":["Leader and People"],"type":"rubric","hidden":false},{"source":{"source":"","citation":"","api":""},"type":"text","hidden":false,"display_format":"unison","style":"prayer","metadata":{"rollup":false,"response":"Amen.","omit_response":false},"category":[],"value":["Have mercy upon us, most merciful Father;\nin your compassion forgive us our sins,\nknown and unknown,\nthings done and left undone;\nand so uphold us by your Spirit\nthat we may live and serve you in newness of life,\nto the honor and glory of your Name;\nthrough Jesus Christ our Lord."]}],"date_modified":{"seconds":1609900873,"nanoseconds":442000000},"id":"vMCgf4uMDO424L3euSEO","lastRevision":108,"language":"en","date_created":{"seconds":1609900227,"nanoseconds":805000000},"version":"bcp1979","sharing":{"organization":"venite","collaborators":[],"status":"published","privacy":"public","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2"},"slug":"form-vi","label":"Form VI","category":["Prayers of the People"],"metadata":{"preferences":{},"supplement":true,"liturgyversions":[],"evening":false,"special_preferences":{}},"hidden":false},
-
-            {
+  {
+    "lastRevision": 1,
+    "source": {
+      "api": "",
+      "citation": "",
+      "source": ""
+    },
+    "date_modified": {
+      "seconds": 1604544640,
+      "nanoseconds": 960000000
+    },
+    "label": "Form I",
+    "style": "litany",
+    "hidden": false,
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": []
+    },
+    "version": "bcp1979",
+    "value": [
+      {
+        "optional": false,
+        "response": "",
+        "text": "With all our heart and with all our mind, let us pray to the Lord, saying “Lord, have mercy.”"
+      },
+      {
+        "response": "Lord, have mercy.",
+        "text": "For the peace from above, for the loving-kindness of God, and for the salvation of our souls, let us pray to the Lord.",
+        "optional": true
+      },
+      {
+        "response": "Lord, have mercy.",
+        "optional": false,
+        "text": "For the peace of the world, for the welfare of the Holy Church of God, and for the unity of all peoples, let us pray to the Lord."
+      },
+      {
+        "response": "Lord, have mercy.",
+        "text": "For our Bishop, and for all the clergy and people, let us pray to the Lord.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "response": "Lord, have mercy.",
+        "text": "For our President, for the leaders of the nations, and for all in authority, let us pray to the Lord."
+      },
+      {
+        "optional": false,
+        "response": "Lord, have mercy.",
+        "text": "For this city (town, village,                            ), for every city and community, and for those who live in them, let us pray to the Lord."
+      },
+      {
+        "optional": true,
+        "response": "Lord, have mercy.",
+        "text": "For seasonable weather, and for an abundance of the fruits of the earth, let us pray to the Lord."
+      },
+      {
+        "response": "Lord, have mercy.",
+        "optional": false,
+        "text": "For the good earth which God has given us, and for the wisdom and will to conserve it, let us pray to the Lord."
+      },
+      {
+        "text": "For those who travel on land, on water, or in the air [or through outer space], let us pray to the Lord.",
+        "response": "Lord, have mercy.",
+        "optional": true
+      },
+      {
+        "text": "For the aged and infirm, for the widowed and orphans, and for the sick and the suffering, let us pray to the Lord.",
+        "response": "Lord, have mercy.",
+        "optional": false
+      },
+      {
+        "response": "Lord, have mercy.",
+        "optional": true,
+        "text": "For ____________, let us pray to the Lord."
+      },
+      {
+        "optional": false,
+        "text": "For the poor and the oppressed, for the unemployed and the destitute, for prisoners and captives, and for all who remember and care for them, let us pray to the Lord.",
+        "response": "Lord, have mercy."
+      },
+      {
+        "text": "For all who have died in the hope of the resurrection, and for all the departed, let us pray to the Lord.",
+        "response": "Lord, have mercy.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "response": "Lord, have mercy.",
+        "text": "For deliverance from all danger, violence, oppression, and degradation, let us pray to the Lord."
+      },
+      {
+        "text": "For the absolution and remission of our sins and offenses, let us pray to the Lord.",
+        "optional": true,
+        "response": "Lord, have mercy."
+      },
+      {
+        "text": "  That we may end our lives in faith and hope, without suffering and without reproach, let us pray to the Lord.",
+        "response": "Lord, have mercy.",
+        "optional": false
+      },
+      {
+        "text": "Defend us, deliver us, and in thy compassion protect us, O Lord, by thy grace.",
+        "optional": true,
+        "response": "Lord, have mercy."
+      },
+      {
+        "text": "In the communion of [____________ and of all the] saints, let us commend ourselves, and one another, and all our life, to Christ our God.",
+        "optional": false,
+        "response": "To thee, O Lord our God."
+      }
+    ],
+    "version_label": "Form I",
+    "language": "en",
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ],
+    "citation": null,
+    "type": "responsive",
+    "metadata": {
+      "response": ""
+    },
+    "slug": "potp_form_i"
+  },
+  {
+    "type": "responsive",
+    "citation": null,
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ],
+    "slug": "potp_form_ii",
+    "metadata": {
+      "response": "[Silence]"
+    },
+    "version_label": "Form II",
+    "version": "bcp1979",
+    "label": "Form II",
+    "hidden": false,
+    "language": "en",
+    "value": [
+      {
+        "text": "I ask your prayers for God's people throughout the world; for our Bishop(s) ____________; for this gathering; and for all ministers and people.\n\nPray for the Church.",
+        "optional": false
+      },
+      {
+        "text": "I ask your prayers for peace; for goodwill among nations; and for the well-being of all people.\n\nPray for justice and peace.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "I ask your prayers for the poor, the sick, the hungry, the oppressed, and those in prison.\n\nPray for those in any need or trouble."
+      },
+      {
+        "text": "I ask your prayers for all who seek God, or a deeper knowledge of him.\n\nPray that they may find and be found by him.",
+        "optional": false
+      },
+      {
+        "text": "I ask your prayers for the departed [especially ____________].\n\nPray for those who have died.",
+        "optional": false
+      },
+      {
+        "optional": true,
+        "text": "I ask your prayers for ____________."
+      },
+      {
+        "text": "I ask your thanksgiving for ____________.",
+        "optional": true
+      },
+      {
+        "text": "Praise God for those in every generation in whom Christ has been honored [especially ____________ whom we remember today].\n\nPray that we may have grace to glorify Christ in our own day.",
+        "optional": false
+      }
+    ],
+    "style": "litany",
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": []
+    }
+  },
+  {
+    "citation": null,
+    "style": "litany",
+    "version": "bcp1979",
+    "metadata": {
+      "response": null
+    },
+    "slug": "potp_form_iii",
+    "label": "Form III",
+    "type": "responsive",
+    "version_label": "Form III",
+    "sharing": {
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": [],
+      "status": "published"
+    },
+    "hidden": false,
+    "language": "en",
+    "value": [
+      {
+        "optional": false,
+        "text": "Father, we pray for your holy Catholic Church;",
+        "response": "That we all may be one."
+      },
+      {
+        "response": "That your Name may be glorified by all people.",
+        "text": "Grant that every member of the Church may truly and humbly serve you;",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "We pray for all bishops, priests, and deacons;",
+        "response": "That they may be faithful ministers of your Word and Sacraments."
+      },
+      {
+        "text": "We pray for all who govern and hold authority in the nations of the world;",
+        "optional": false,
+        "response": "That there may be justice and peace on the earth."
+      },
+      {
+        "response": "That our works may find favor in your sight.",
+        "optional": false,
+        "text": "Give us grace to do your will in all that we undertake;"
+      },
+      {
+        "text": "Have compassion on those who suffer from any grief or trouble;",
+        "response": "That they may be delivered from their distress.",
+        "optional": false
+      },
+      {
+        "text": "Give to the departed eternal rest.",
+        "optional": false,
+        "response": "Let light perpetual shine upon them."
+      },
+      {
+        "optional": false,
+        "response": "May we also come to share in your heavenly kingdom.",
+        "text": "We praise you for your saints who have entered into joy;"
+      },
+      {
+        "response": "[Silence]",
+        "text": "Let us pray for our own needs and those of others.",
+        "optional": false
+      }
+    ],
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ]
+  },
+  {
+    "type": "responsive",
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ],
+    "value": [
+      {
+        "text": "Let us pray for the Church and for the world.\n\nGrant, Almighty God, that all who confess your Name may be united in your truth, live together in your love, and reveal your glory in the world.",
+        "optional": false,
+        "response": "[Silence]"
+      },
+      {
+        "optional": false,
+        "text": "Lord, in your mercy",
+        "response": "Hear our prayer."
+      },
+      {
+        "optional": false,
+        "response": "[Silence]",
+        "text": "Guide the people of this land, and of all the nations, in the ways of justice and peace; that we may honor one another and serve the common good."
+      },
+      {
+        "text": "Lord, in your mercy",
+        "optional": false,
+        "response": "Hear our prayer."
+      },
+      {
+        "response": "[Silence]",
+        "text": "Give us all a reverence for the earth as your own creation, that we may use its resources rightly in the service of others and to your honor and glory.",
+        "optional": false
+      },
+      {
+        "response": "Hear our prayer.",
+        "text": "Lord, in your mercy",
+        "optional": false
+      },
+      {
+        "text": "Bless all whose lives are closely linked with ours, and grant that we may serve Christ in them, and love one another as he loves us.",
+        "optional": false,
+        "response": "[Silence]"
+      },
+      {
+        "optional": false,
+        "text": "Lord, in your mercy",
+        "response": "Hear our prayer."
+      },
+      {
+        "response": "[Silence]",
+        "optional": false,
+        "text": "Comfort and heal all those who suffer in body, mind, or spirit; give them courage and hope in their troubles, and bring them the joy of your salvation."
+      },
+      {
+        "optional": false,
+        "response": "Hear our prayer.",
+        "text": "Lord, in your mercy"
+      },
+      {
+        "text": "We commend to your mercy all who have died, that your will for them may be fulfilled; and we pray that we may share with all your saints in your eternal kingdom.",
+        "optional": false,
+        "response": "[Silence]"
+      },
+      {
+        "response": "Hear our prayer.",
+        "text": "Lord, in your mercy",
+        "optional": false
+      }
+    ],
+    "lastRevision": 0,
+    "hidden": false,
+    "sharing": {
+      "organization": "venite",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "privacy": "public"
+    },
+    "label": "Form IV",
+    "citation": null,
+    "version": "bcp1979",
+    "metadata": {
+      "response": null
+    },
+    "language": "en",
+    "slug": "potp_form_iv",
+    "style": "litany",
+    "date_modified": {
+      "seconds": 1604544609,
+      "nanoseconds": 989000000
+    },
+    "version_label": "Form IV"
+  },
+  {
+    "label": "Form V",
+    "citation": null,
+    "sharing": {
+      "organization": "venite",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "privacy": "public"
+    },
+    "version_label": "Form V",
+    "slug": "potp_form_v",
+    "type": "responsive",
+    "version": "bcp1979",
+    "style": "litany",
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ],
+    "value": [
+      {
+        "optional": false,
+        "text": "In peace, let us pray to the Lord, saying, “Lord, have mercy.”\n\nFor the holy Church of God, that it may be filled with truth and love, and be found without fault at the day of your coming, we pray to you, O Lord.",
+        "response": "Lord, have mercy."
+      },
+      {
+        "response": "Lord, have mercy.",
+        "text": "For N. our Presiding Bishop, for N. (N.) our own Bishop(s), for all bishops and other ministers, and for all the holy people of God, we pray to you, O Lord.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "For all who fear God and believe in you, Lord Christ, that our divisions may cease, and that all may be one as you and the Father are one, we pray to you, O Lord.",
+        "response": "Lord, have mercy."
+      },
+      {
+        "text": "For the mission of the Church, that in faithful witness it may preach the Gospel to the ends of the earth, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Lord, have mercy."
+      },
+      {
+        "optional": true,
+        "response": "Lord, have mercy.",
+        "text": "For those who do not yet believe, and for those who have lost their faith, that they may receive the light of the Gospel, we pray to you, O Lord."
+      },
+      {
+        "text": "For the peace of the world, that a spirit of respect and forbearance may grow among nations and peoples, we pray to you, O Lord.",
+        "response": "Lord, have mercy.",
+        "optional": false
+      },
+      {
+        "text": "For those in positions of public trust [especially ____________], that they may serve justice, and promote the dignity and freedom of every person, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Lord, have mercy."
+      },
+      {
+        "response": "Lord, have mercy.",
+        "optional": false,
+        "text": "For all who live and work in this community [especially ____________], we pray to you, O Lord."
+      },
+      {
+        "optional": true,
+        "response": "Lord, have mercy.",
+        "text": "For a blessing upon all human labor, and for the right use of the riches of creation, that the world may be freed from poverty, famine, and disaster, we pray to you, O Lord."
+      },
+      {
+        "optional": false,
+        "response": "Lord, have mercy.",
+        "text": "For the poor, the persecuted, the sick, and all who suffer; for refugees, prisoners, and all who are in danger; that they may be relieved and protected, we pray to you, O Lord."
+      },
+      {
+        "text": "For this congregation [for those who are present, and for those who are absent], that we may be delivered from hardness of heart, and show forth your glory in all that we do, we pray to you, O Lord.",
+        "response": "Lord, have mercy.",
+        "optional": false
+      },
+      {
+        "response": "Lord, have mercy.",
+        "optional": true,
+        "text": "For our enemies and those who wish us harm, and for all whom we have injured or offended, we pray to you, O Lord."
+      },
+      {
+        "optional": true,
+        "response": "Lord, have mercy.",
+        "text": "For ourselves; for the forgiveness of our sins, and for the grace of the Holy Spirit to amend our lives, we pray to you, O Lord."
+      },
+      {
+        "optional": false,
+        "text": "For all who have commended themselves to our prayers; for our families, friends, and neighbors; that being freed from anxiety, they may live in joy, peace, and health, we pray to you, O Lord.",
+        "response": "Lord, have mercy."
+      },
+      {
+        "optional": true,
+        "response": "Lord, have mercy.",
+        "text": "For ____________, we pray to you, O Lord."
+      },
+      {
+        "optional": false,
+        "response": "Lord, have mercy.",
+        "text": "For all who have died in the communion of your Church, and those whose faith is known to you alone, that, with all the saints, they may have rest in that place where there is no pain or grief, but life eternal, we pray to you, O Lord."
+      },
+      {
+        "text": "Rejoicing in the fellowship of [the ever-blessed Virgin Mary, (blessed N.) and] all the saints, let us commend ourselves, and one another, and all our life to Christ our God.",
+        "response": "To you, O Lord our God.",
+        "optional": false
+      }
+    ],
+    "hidden": false,
+    "language": "en",
+    "metadata": {
+      "response": null
+    }
+  },
+  {
+    "type": "responsive",
+    "value": [
+      {
+        "response": "Kyrie eleison.",
+        "text": "In peace, let us pray to the Lord, saying, “Kyrie eleison.”\n\nFor the holy Church of God, that it may be filled with truth and love, and be found without fault at the day of your coming, we pray to you, O Lord.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "response": "Kyrie eleison.",
+        "text": "For N. our Presiding Bishop, for N. (N.) our own Bishop(s), for all bishops and other ministers, and for all the holy people of God, we pray to you, O Lord."
+      },
+      {
+        "response": "Kyrie eleison.",
+        "optional": false,
+        "text": "For all who fear God and believe in you, Lord Christ, that our divisions may cease, and that all may be one as you and the Father are one, we pray to you, O Lord."
+      },
+      {
+        "text": "For the mission of the Church, that in faithful witness it may preach the Gospel to the ends of the earth, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Kyrie eleison."
+      },
+      {
+        "response": "Kyrie eleison.",
+        "text": "For those who do not yet believe, and for those who have lost their faith, that they may receive the light of the Gospel, we pray to you, O Lord.",
+        "optional": true
+      },
+      {
+        "optional": false,
+        "text": "For the peace of the world, that a spirit of respect and forbearance may grow among nations and peoples, we pray to you, O Lord.",
+        "response": "Kyrie eleison."
+      },
+      {
+        "text": "For those in positions of public trust [especially ____________], that they may serve justice, and promote the dignity and freedom of every person, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Kyrie eleison."
+      },
+      {
+        "response": "Kyrie eleison.",
+        "text": "For all who live and work in this community [especially ____________], we pray to you, O Lord.",
+        "optional": false
+      },
+      {
+        "optional": true,
+        "text": "For a blessing upon all human labor, and for the right use of the riches of creation, that the world may be freed from poverty, famine, and disaster, we pray to you, O Lord.",
+        "response": "Kyrie eleison."
+      },
+      {
+        "optional": false,
+        "response": "Kyrie eleison.",
+        "text": "For the poor, the persecuted, the sick, and all who suffer; for refugees, prisoners, and all who are in danger; that they may be relieved and protected, we pray to you, O Lord."
+      },
+      {
+        "response": "Kyrie eleison.",
+        "text": "For this congregation [for those who are present, and for those who are absent], that we may be delivered from hardness of heart, and show forth your glory in all that we do, we pray to you, O Lord.",
+        "optional": false
+      },
+      {
+        "response": "Kyrie eleison.",
+        "optional": true,
+        "text": "For our enemies and those who wish us harm, and for all whom we have injured or offended, we pray to you, O Lord."
+      },
+      {
+        "optional": true,
+        "response": "Kyrie eleison.",
+        "text": "For ourselves; for the forgiveness of our sins, and for the grace of the Holy Spirit to amend our lives, we pray to you, O Lord."
+      },
+      {
+        "text": "For all who have commended themselves to our prayers; for our families, friends, and neighbors; that being freed from anxiety, they may live in joy, peace, and health, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Kyrie eleison."
+      },
+      {
+        "text": "For ____________, we pray to you, O Lord.",
+        "optional": true,
+        "response": "Kyrie eleison."
+      },
+      {
+        "text": "For all who have died in the communion of your Church, and those whose faith is known to you alone, that, with all the saints, they may have rest in that place where there is no pain or grief, but life eternal, we pray to you, O Lord.",
+        "optional": false,
+        "response": "Kyrie eleison."
+      },
+      {
+        "text": "Rejoicing in the fellowship of [the ever-blessed Virgin Mary, (blessed N.) and] all the saints, let us commend ourselves, and one another, and all our life to Christ our God.",
+        "optional": false,
+        "response": "To you, O Lord our God."
+      }
+    ],
+    "hidden": false,
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "organization": "venite"
+    },
+    "version_label": "Form V (“Kyrie eleison”)",
+    "style": "litany",
+    "citation": null,
+    "version": "bcp1979",
+    "slug": "potp_form_v_kyrie",
+    "language": "en",
+    "label": "Form V",
+    "category": [
+      "potp",
+      "Prayers of the People"
+    ],
+    "metadata": {
+      "response": null
+    }
+  },
+  {
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "type": "liturgy",
+    "value": [
+      {
+        "source": {
+          "citation": "",
+          "source": "",
+          "api": ""
+        },
+        "value": [
+          "Form VI"
+        ],
+        "metadata": {
+          "level": 3
+        },
+        "style": "text",
+        "type": "heading",
+        "hidden": false
+      },
+      {
+        "style": "text",
+        "value": [
+          "In peace, we pray to you, Lord God."
+        ],
+        "type": "text",
+        "hidden": false
+      },
+      {
+        "value": [
+          "Silence"
+        ],
+        "type": "rubric",
+        "hidden": false
+      },
+      {
+        "hidden": false,
+        "style": "litany",
+        "type": "responsive",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "value": [
+          {
+            "text": "For all people in their daily life and work;",
+            "response": "For our families, friends, and neighbors, and for those who are alone.",
+            "label": ""
+          },
+          {
+            "response": "For all who work for justice, freedom, and peace.",
+            "text": "For this community, the nation, and the world;"
+          },
+          {
+            "text": "For the just and proper use of your creation;",
+            "response": "For the victims of hunger, fear, injustice, and oppression."
+          },
+          {
+            "response": "For those who minister to the sick, the friendless, and the needy.",
+            "text": "For all who are in danger, sorrow, or any kind of trouble;"
+          },
+          {
+            "response": "For all who proclaim the Gospel, and all who seek the Truth.",
+            "text": "For the peace and unity of the Church of God;"
+          },
+          {
+            "text": "For [N. our Presiding Bishop, and N. (N.) our Bishop(s); and for] all bishops and other ministers;",
+            "response": "For all who serve God in his Church."
+          }
+        ],
+        "metadata": {},
+        "category": []
+      },
+      {
+        "style": "text",
+        "value": [
+          "For the special needs and concerns of this congregation."
+        ],
+        "type": "text",
+        "hidden": false
+      },
+      {
+        "type": "rubric",
+        "value": [
+          "Silence",
+          "The People may add their own petitions"
+        ],
+        "hidden": false
+      },
+      {
+        "type": "responsive",
+        "value": [
+          {
+            "response": "For your mercy is great.",
+            "text": "Hear us, Lord;",
+            "label": ""
+          }
+        ],
+        "hidden": false,
+        "style": "responsive"
+      },
+      {
+        "type": "text",
+        "hidden": false,
+        "style": "text",
+        "value": [
+          "We thank you, Lord, for all the blessings of this life."
+        ]
+      },
+      {
+        "value": [
+          "Silence",
+          "The People may add their own thanksgivings"
+        ],
+        "hidden": false,
+        "type": "rubric"
+      },
+      {
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "value": [
+          "We will exalt you, O God our King;"
+        ],
+        "hidden": false,
+        "style": "text",
+        "metadata": {
+          "rollup": false
+        },
+        "category": [],
+        "type": "responsive"
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "hidden": false,
+        "value": [
+          "We pray for all who have died, that they may have a place in your eternal kingdom."
+        ]
+      },
+      {
+        "value": [
+          "Silence",
+          "The People may add their own petitions"
+        ],
+        "hidden": false,
+        "type": "rubric"
+      },
+      {
+        "hidden": false,
+        "value": [
+          {
+            "text": "Lord, let your loving-kindness be upon them;",
+            "label": "",
+            "response": " Who put their trust in you."
+          }
+        ],
+        "style": "responsive",
+        "type": "responsive"
+      },
+      {
+        "hidden": false,
+        "value": [
+          "We pray to you also for the forgiveness of our sins."
+        ],
+        "style": "text",
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "value": [
+          "Silence may be kept."
+        ],
+        "type": "rubric"
+      },
+      {
+        "value": [
+          "Leader and People"
+        ],
+        "type": "rubric",
+        "hidden": false
+      },
+      {
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "type": "text",
+        "hidden": false,
+        "display_format": "unison",
+        "style": "prayer",
+        "metadata": {
+          "rollup": false,
+          "response": "Amen.",
+          "omit_response": false
+        },
+        "category": [],
+        "value": [
+          "Have mercy upon us, most merciful Father;\nin your compassion forgive us our sins,\nknown and unknown,\nthings done and left undone;\nand so uphold us by your Spirit\nthat we may live and serve you in newness of life,\nto the honor and glory of your Name;\nthrough Jesus Christ our Lord."
+        ]
+      }
+    ],
+    "date_modified": {
+      "seconds": 1609900873,
+      "nanoseconds": 442000000
+    },
+    "id": "vMCgf4uMDO424L3euSEO",
+    "lastRevision": 108,
+    "language": "en",
+    "date_created": {
+      "seconds": 1609900227,
+      "nanoseconds": 805000000
+    },
+    "version": "bcp1979",
+    "sharing": {
+      "organization": "venite",
+      "collaborators": [],
+      "status": "published",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "slug": "form-vi",
+    "label": "Form VI",
+    "category": [
+      "Prayers of the People"
+    ],
+    "metadata": {
+      "preferences": {},
+      "supplement": true,
+      "liturgyversions": [],
+      "evening": false,
+      "special_preferences": {}
+    },
+    "hidden": false
+  },
+  {
     "hidden": false,
     "version": "bcp1979",
     "slug": "",

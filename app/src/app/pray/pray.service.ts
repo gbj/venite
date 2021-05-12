@@ -15,10 +15,11 @@ import {
   Preference,
   Psalm,
   versionToString,
+  Text,
 } from "@venite/ldf";
 
 import { Observable, of, combineLatest } from "rxjs";
-import { filter, map, startWith, switchMap } from "rxjs/operators";
+import { filter, map, startWith, switchMap, tap } from "rxjs/operators";
 import {
   DOCUMENT_SERVICE,
   DocumentServiceInterface,
@@ -113,7 +114,7 @@ export class PrayService {
           this.latestChildren$.map((child$) =>
             child$
               ? child$.pipe(
-                  startWith(LOADING),
+                  //startWith(LOADING),
                   switchMap((child) =>
                     child &&
                     child?.include(day, prefs) &&
@@ -237,9 +238,10 @@ export class PrayService {
     originalPrefs: Record<string, Preference> | undefined
   ): Observable<LiturgicalDocument> {
     const language = doc.language || "en",
-      versions: string[] = (alternateVersions?.length > 0
-        ? [doc.version, ...alternateVersions]
-        : [doc.version]
+      versions: string[] = (
+        alternateVersions?.length > 0
+          ? [doc.version, ...alternateVersions]
+          : [doc.version]
       )
         .filter((version) => version !== undefined)
         .map((version) =>
@@ -318,6 +320,12 @@ export class PrayService {
                     metadata: { ...doc.metadata, ...collect.metadata },
                     version_label: doc.version_label || collect.version_label,
                     label,
+                    value:
+                      collect?.type === "text"
+                        ? ((collect as Text)?.value || []).map((v) =>
+                            typeof v === "string" ? v.replace("  ", " ") : v
+                          )
+                        : collect?.value,
                   });
                 })
             ),
