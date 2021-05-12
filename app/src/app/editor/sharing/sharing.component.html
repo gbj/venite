@@ -24,7 +24,7 @@
         </ion-item>
         <ng-container *ngIf="orgOptions$ | async as orgs">
           <ion-item>
-            <ion-label>{{ 'editor.organization' | translate }}</ion-label>
+            <ion-label position="stacked">{{ 'editor.organization' | translate }}</ion-label>
             <ldf-editable-select
               path="/sharing"
               property="organization"
@@ -36,7 +36,7 @@
         </ng-container>
         <ion-list-header><h2>{{ 'editor.permissions' | translate }}</h2></ion-list-header>
         <ion-item>
-          <ion-label>{{ 'editor.published-draft' | translate }}</ion-label>
+          <ion-label position="stacked">{{ 'editor.published-draft' | translate }}</ion-label>
           <ldf-editable-select
             path="/sharing"
             property="status"
@@ -45,7 +45,7 @@
           ></ldf-editable-select>
         </ion-item>
         <ion-item>
-          <ion-label>{{ 'editor.can_access' | translate }}</ion-label>
+          <ion-label position="stacked">{{ 'editor.can_access' | translate }}</ion-label>
           <ldf-editable-select
             path="/sharing"
             property="privacy"
