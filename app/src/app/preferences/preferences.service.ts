@@ -208,9 +208,6 @@ export class PreferencesService {
     );
   }
 
-  /** Returns all preferences of **any** liturgy saved by the user, but with this one's language and version
-   * This allows for smart matching—if I don't have a default Bible translation set for English Rite II Evening Prayer,
-   * see if I have one for English Rite II Morning Prayer  */
   getPreferencesForLiturgy(
     liturgy: LiturgicalDocument
   ): Observable<StoredPreference[]> {
@@ -221,46 +218,51 @@ export class PreferencesService {
         newPrefs$ = this.auth.user.pipe(
           map((user) => [user?.uid, liturgy]),
           switchMap(([uid, liturgy]) => {
-            // if logged in, use Firestore
-            if (uid) {
-              return this.afs
-                .collection<StoredPreference>("Preference", (ref) =>
-                  ref
-                    .where("uid", "==", uid)
-                    .where(
-                      "language",
-                      "==",
-                      (liturgy as LiturgicalDocument).language || "en"
-                    )
-                    .where(
-                      "version",
-                      "==",
-                      (liturgy as LiturgicalDocument).version || "Rite-II"
-                    )
-                )
-                .valueChanges();
-            }
-            // if not, use local storage
-            else {
-              // don't have the ability for a query as with Firestore
-              // instead, return all keys that match the local storage key pattern
-              const exampleKey = this.localStorageKey(
-                  "%%%",
-                  liturgy as LiturgicalDocument
-                ),
-                baseKey = exampleKey.replace("%%%", ""),
-                // storage returns a Promise, but we're not in an async function
-                // because we need to return an observable; so transform it into an observable
-                allKeys = from(this.storage.keys());
-              return allKeys.pipe(
-                // select only keys for this liturgy
-                map((keys) => keys.filter((key) => key.includes(baseKey))),
-                // map in the value for each key
-                switchMap((keys) =>
-                  from(Promise.all(keys.map((key) => this.storage.get(key))))
-                )
-              );
-            }
+            // Firestore preferences
+            const remotePrefs$ = uid
+              ? this.afs
+                  .collection<StoredPreference>("Preference", (ref) =>
+                    ref
+                      .where("uid", "==", uid)
+                      .where(
+                        "language",
+                        "==",
+                        (liturgy as LiturgicalDocument).language || "en"
+                      )
+                      .where(
+                        "version",
+                        "==",
+                        (liturgy as LiturgicalDocument).version || "Rite-II"
+                      )
+                  )
+                  .valueChanges()
+              : of(undefined);
+
+            // Local Storage preferences
+            // don't have the ability for a query as with Firestore
+            // instead, return all keys that match the local storage key pattern
+            const exampleKey = this.localStorageKey(
+                "%%%",
+                liturgy as LiturgicalDocument
+              ),
+              baseKey = exampleKey.replace("%%%", ""),
+              // storage returns a Promise, but we're not in an async function
+              // because we need to return an observable; so transform it into an observable
+              allKeys = from(this.storage.keys());
+            const localPrefs$ = allKeys.pipe(
+              // select only keys for this liturgy
+              map((keys) => keys.filter((key) => key.includes(baseKey))),
+              // map in the value for each key
+              switchMap((keys) =>
+                from(Promise.all(keys.map((key) => this.storage.get(key))))
+              )
+            );
+
+            // merge the two
+            return merge(localPrefs$, remotePrefs$).pipe(
+              filter((set) => Boolean(set)),
+              shareReplay()
+            );
           })
         );
       return combineLatest([oldPrefs$, newPrefs$]).pipe(
