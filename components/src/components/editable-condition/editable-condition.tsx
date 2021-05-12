@@ -94,9 +94,10 @@ export class EditableConditionComponent {
       ... this.currentCondition,
       conditions: this.currentCondition.conditions.concat(new Condition())
     }
+    const index = this.currentCondition.conditions.length - 1;
     this.ldfDocShouldChange.emit(new Change({
       path: `${this.path}/conditions`,
-      op: [ { type: 'insertAt', index: this.currentCondition.conditions.length, value: new Condition() } ]
+      op: [ { type: 'insertAt', index: index < 0 ? 0 : index, value: new Condition() } ]
     }));
   }
 
