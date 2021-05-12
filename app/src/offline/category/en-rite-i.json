@@ -89,7 +89,8 @@
           "type": "slug",
           "filter": "seasonal"
         },
-        "slug": "proper_preface"
+        "slug": "proper_preface",
+        "version": "rite_i"
       },
       {
         "value": [
