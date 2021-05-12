@@ -601,3 +601,11 @@ ion-alert {
 pre {
   white-space: pre-wrap;
 }
+
+/* Remove the repeated drop-caps on multi-section psalms */
+.psalm-set:not(:first-of-type) {
+  --ldf-drop-font-size: 1em;
+  --ldf-drop-margin-right: none;
+  --ldf-drop-font-family: var(--ldf-font-face);
+  --ldf-drop-float: none;
+}
