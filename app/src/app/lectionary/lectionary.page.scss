@@ -40,3 +40,18 @@ ldf-day-name {
     flex-grow: 2;
   }
 }
+
+ul.feasts {
+  font-family: var(--ldf-font-face);
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}

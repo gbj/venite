@@ -48,7 +48,7 @@
           <ldf-day-name [day]="day"></ldf-day-name>
           <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
             <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
-            <li *ngIf="day.week?.proper">(Proper {{ day.week.proper }})</li>
+            <li *ngIf="day.week?.proper && !day.holy_day_observed">(Proper {{ day.week.proper }})</li>
           </ul>
         </ng-container>
             <h3>{{ "daily-readings.psalms" | translate }}</h3>

@@ -18,14 +18,7 @@ import {
   PREFERENCES_SERVICE,
 } from "@venite/ng-service-api";
 import { PrayService } from "../pray/pray.service";
-import {
-  BehaviorSubject,
-  combineLatest,
-  merge,
-  Observable,
-  of,
-  Subject,
-} from "rxjs";
+import { combineLatest, merge, Observable, of, Subject } from "rxjs";
 import {
   filter,
   first,
@@ -39,9 +32,6 @@ import {
 import { AuthService } from "../auth/auth.service";
 import { CalendarService } from "../services/calendar.service";
 import { LectionaryService } from "../services/lectionary.service";
-import { BibleService } from "../services/bible.service";
-import { DocumentService } from "../services/document.service";
-import { MediaSession } from "capacitor-media-session";
 import { MediaSessionService } from "../services/media-session.service";
 import { IonContent } from "@ionic/angular";
 import { SpeechService } from "../services/speech.service";
@@ -119,7 +109,6 @@ export class LectionaryPage implements OnInit, OnDestroy {
       week$,
       of(false)
     );
-
     // Load and set lectionary/Bible version preferences
     this.preferences
       .get("lectionary-lectionary")
