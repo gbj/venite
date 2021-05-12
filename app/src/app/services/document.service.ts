@@ -603,11 +603,13 @@ export class DocumentService {
     if (orgs?.length > 0) {
       return this.afs
         .collection<LiturgicalDocument>("Document", (ref) =>
-          ref.where(
-            "sharing.organization",
-            "in",
-            orgs.map((org) => org.slug)
-          )
+          ref
+            .where(
+              "sharing.organization",
+              "in",
+              orgs.map((org) => org.slug)
+            )
+            .where("sharing.privacy", "!=", "private")
         )
         .snapshotChanges()
         .pipe(

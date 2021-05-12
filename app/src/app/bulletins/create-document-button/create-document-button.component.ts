@@ -4,7 +4,7 @@ import { DocumentService } from "src/app/services/document.service";
 import { AlertController, LoadingController } from "@ionic/angular";
 import { UserProfile } from "src/app/auth/user/user-profile";
 import { combineLatest, Observable, of } from "rxjs";
-import { map, switchMap, take, tap } from "rxjs/operators";
+import { filter, map, switchMap, take, tap } from "rxjs/operators";
 import { LiturgicalDocument, Sharing } from "@venite/ldf";
 import { TranslateService } from "@ngx-translate/core";
 import { slugify } from "src/app/slugify";
@@ -95,18 +95,28 @@ export class CreateDocumentButtonComponent implements OnInit {
     const template = await this.template(label); //,
     //slug = await ;
 
-    this.uniqueSlugify(
-      orgs[0]?.slug,
-      uid,
-      template.slug || slugify(template.label)
-    ).subscribe(async (slug) => {
+    const userOrgs$ = this.auth.user.pipe(
+      switchMap((user) => (user ? this.auth.getUserProfile(user.uid) : null)),
+      filter((user) => Boolean(user)),
+      switchMap((user) =>
+        this.organizationService.organizationsWithUser(user?.uid)
+      )
+    );
+    combineLatest([
+      userOrgs$,
+      this.uniqueSlugify(
+        orgs[0]?.slug,
+        uid,
+        template.slug || slugify(template.label)
+      ),
+    ]).subscribe(async ([orgs, slug]) => {
       const docId = await this.documents.newDocument(
         new LiturgicalDocument({
           ...template,
           slug,
           sharing: new Sharing({
             owner: userProfile.uid,
-            organization: (userProfile.orgs || [""])[0],
+            organization: orgs[0]?.slug,
             collaborators: [],
             status: "draft",
             privacy: "organization",
