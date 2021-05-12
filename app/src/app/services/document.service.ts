@@ -297,7 +297,7 @@ export class DocumentService {
               )
             : of(docs)
         ),
-        //startWith([LOADING]),
+        startWith([LOADING]),
         catchError((error) => this.handleError(error))
       );
     };
