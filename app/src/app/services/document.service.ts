@@ -250,8 +250,6 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
-    console.log("findDocumentsBySlug", slug, rawVersions);
-
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
       versions: string[]
@@ -300,8 +298,7 @@ export class DocumentService {
             : of(docs)
         ),
         //startWith([LOADING]),
-        catchError((error) => this.handleError(error)),
-        tap((docs) => console.log("bySlug", slug, docs))
+        catchError((error) => this.handleError(error))
       );
     };
 
@@ -345,7 +342,7 @@ export class DocumentService {
           .map((version) => BY_SLUG[`${language}-${version}-${slug}`])
           .flat()
           .filter((doc) => Boolean(doc));
-        // TODO need to include Firebase ones AS WELL, in case I have my own with same slug
+
         if (attempt?.length > 0) {
           // also send Firebase version, if online and in bulletin mode
           const firebaseVersions$ = isOnline().pipe(
@@ -519,7 +516,6 @@ export class DocumentService {
         )
       );
       return merge(attempt$, firebaseVersions$).pipe(
-        tap((docs) => console.log("category search", category, versions, docs)),
         filter((docs) => docs?.length > 0)
       );
     } else {
