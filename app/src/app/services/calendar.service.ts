@@ -124,7 +124,9 @@ export class CalendarService implements CalendarServiceInterface {
    * // Ash Wednesday
    * `wednesday-last-epiphany` */
   findSpecialDays(kalendar: string, slug: string): Observable<HolyDay[]> {
-    return of(KALENDAR[kalendar].filter((day) => day.slug == slug));
+    return of(
+      KALENDAR[kalendar].filter((day) => day.slug == slug || day.day == slug)
+    );
   }
 
   // These function had been moved into a Cloud Function to speed them up (by calculating on the client side rather than making round trips
