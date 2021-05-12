@@ -6590,7 +6590,8 @@
       "season": "Ascension",
       "name": "Eve of the Ascension",
       "day": "wednesday-6th-easter",
-      "slug": "eve-ascension",
+      "slug": "eve-wednesday-6th-easter",
+      "collect": "eve-wednesday-6th-easter",
       "readings": "eve-wednesday-6th-easter",
       "type": {
         "rank": 5,
