@@ -172,7 +172,7 @@
       "organization": "venite"
     },
     "value": [
-      "  Through Jesus Christ our Lord; who rose victorious from the dead, and doth comfort us with the blessed hope of everlasting life; for to thy faithful people, O Lord, life is changed, not ended; and when our mortal body doth lie in death, there is prepared for us a dwelling place eternal in the heavens."
+      "Through Jesus Christ our Lord; who rose victorious from the dead, and doth comfort us with the blessed hope of everlasting life; for to thy faithful people, O Lord, life is changed, not ended; and when our mortal body doth lie in death, there is prepared for us a dwelling place eternal in the heavens."
     ],
     "hidden": false,
     "type": "text",
@@ -844,7 +844,7 @@
     "label": null,
     "value": [
       {
-        "text": "  Thine is the day, O God, thine also the night; thou hast established the moon and the sun. Thou hast fixed all the boundaries of the earth; thou hast made summer and winter."
+        "text": "Thine is the day, O God, thine also the night; thou hast established the moon and the sun. Thou hast fixed all the boundaries of the earth; thou hast made summer and winter."
       }
     ],
     "type": "bible-reading",
@@ -2499,7 +2499,32 @@
       "response": "Amen."
     },
     "value": [
-      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting.",
+      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "slug": "friday-6th-easter"
+  },
+  {
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "hidden": false,
+    "type": "text",
+    "version": "rite_i",
+    "language": "en",
+    "sharing": {
+      "status": "published",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "organization": "venite",
+      "collaborators": []
+    },
+    "style": "prayer",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "value": [
       "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
     ],
     "slug": "friday-6th-easter"
@@ -2965,7 +2990,32 @@
       "omit_response": false
     },
     "value": [
-      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting.",
+      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+    ]
+  },
+  {
+    "slug": "thursday-6th-easter",
+    "type": "text",
+    "version": "rite_i",
+    "sharing": {
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "status": "published",
+      "organization": "venite"
+    },
+    "language": "en",
+    "hidden": false,
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "style": "prayer",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
       "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
     ]
   },
@@ -9298,7 +9348,32 @@
   },
   {
     "value": [
-      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting.",
+      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "slug": "saturday-6th-easter",
+    "language": "en",
+    "version": "rite_i",
+    "sharing": {
+      "organization": "venite",
+      "privacy": "public",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published"
+    },
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "value": [
       "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
     ],
     "metadata": {
@@ -12168,7 +12243,7 @@
     "hidden": false,
     "value": [
       {
-        "text": "  Thine is the day, O God, thine also the night; thou hast established the moon and the sun. Thou hast fixed all the boundaries of the earth; thou hast made summer and winter."
+        "text": "Thine is the day, O God, thine also the night; thou hast established the moon and the sun. Thou hast fixed all the boundaries of the earth; thou hast made summer and winter."
       }
     ],
     "citation": "Psalm 74:15, 16",
@@ -14190,7 +14265,32 @@
     },
     "hidden": false,
     "value": [
-      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting.",
+      "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "language": "en",
+    "sharing": {
+      "privacy": "public",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "status": "published"
+    },
+    "slug": "eve-ascension",
+    "type": "text",
+    "style": "prayer"
+  },
+  {
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "version": "rite_i",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "hidden": false,
+    "value": [
       "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
     ],
     "language": "en",
@@ -14201,7 +14301,7 @@
       "collaborators": [],
       "status": "published"
     },
-    "slug": "wednesday-6th-easter",
+    "slug": "eve-ascension",
     "type": "text",
     "style": "prayer"
   },

@@ -10557,33 +10557,6 @@
     "version": "bcp1979"
   },
   {
-    "version": "bcp1979",
-    "hidden": false,
-    "slug": "saturday-6th-easter",
-    "style": "prayer",
-    "language": "en",
-    "sharing": {
-      "privacy": "public",
-      "collaborators": [],
-      "organization": "venite",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-      "status": "published"
-    },
-    "category": [
-      "Collect",
-      "Collect of the Day"
-    ],
-    "metadata": {
-      "response": "Amen.",
-      "omit_response": false
-    },
-    "type": "text",
-    "value": [
-      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting.",
-      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
-    ]
-  },
-  {
     "value": [
       "Accept, O Lord, our thanks and praise for all that you have done for us. We thank you for the splendor of the whole creation, for the beauty of this world, for the wonder of life, and for the mystery of love.\n\nWe thank you for the blessing of family and friends, and for the loving care which surrounds us on every side.\n\nWe thank you for setting us at tasks which demand our best efforts, and for leading us to accomplishments which satisfy and delight us.\n\nWe thank you also for those disappointments and failures that lead us to acknowledge our dependence on you alone.\n\nAbove all, we thank you for your Son Jesus Christ; for the truth of his Word and the example of his life; for his steadfast obedience, by which he overcame temptation; for his dying, through which he overcame death; and for his rising to life again, in which we are raised to the life of your kingdom.\n\nGrant us the gift of your Spirit, that we may know him and make him known; and through him, at all times and in all places, may give thanks to you in all things."
     ],
@@ -16187,33 +16160,6 @@
     "type": "text"
   },
   {
-    "style": "prayer",
-    "slug": "wednesday-6th-easter",
-    "value": [
-      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting.",
-      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
-    ],
-    "sharing": {
-      "privacy": "public",
-      "organization": "venite",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-      "collaborators": [],
-      "status": "published"
-    },
-    "version": "bcp1979",
-    "metadata": {
-      "omit_response": false,
-      "response": "Amen."
-    },
-    "hidden": false,
-    "category": [
-      "Collect",
-      "Collect of the Day"
-    ],
-    "language": "en",
-    "type": "text"
-  },
-  {
     "slug": "the-conversion-of-saint-paul-the-apostle",
     "metadata": {
       "omit_response": false,
@@ -16499,6 +16445,58 @@
     }
   },
   {
+    "slug": "eve-ascension",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "eve-ascension",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
     "slug": "thursday-6th-easter",
     "version": "bcp1979",
     "metadata": {
@@ -16511,7 +16509,136 @@
       "Collect of the Day"
     ],
     "value": [
-      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting.",
+      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "thursday-6th-easter",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "friday-6th-easter",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "friday-6th-easter",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "saturday-6th-easter",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
+      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting."
+    ],
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "style": "prayer",
+    "hidden": false,
+    "type": "text"
+  },
+  {
+    "slug": "saturday-6th-easter",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ],
+    "value": [
       "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
     ],
     "sharing": {
@@ -16688,33 +16815,6 @@
     "type": "text",
     "style": "prayer",
     "language": "en"
-  },
-  {
-    "value": [
-      "Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abides with his Church on earth, even to the end of the ages; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, in glory everlasting.",
-      "Grant, we pray, Almighty God, that as we believe your only-begotten Son our Lord Jesus Christ to have ascended into heaven, so we may also in heart and mind there ascend, and with him continually dwell; who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
-    ],
-    "language": "en",
-    "category": [
-      "Collect",
-      "Collect of the Day"
-    ],
-    "version": "bcp1979",
-    "type": "text",
-    "sharing": {
-      "status": "published",
-      "collaborators": [],
-      "privacy": "public",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-      "organization": "venite"
-    },
-    "style": "prayer",
-    "slug": "friday-6th-easter",
-    "metadata": {
-      "response": "Amen.",
-      "omit_response": false
-    },
-    "hidden": false
   },
   {
     "sharing": {
