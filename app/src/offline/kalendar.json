@@ -6048,16 +6048,13 @@
       "color": "Red",
       "season": "Pentecost",
       "readings": "eve-of-pentecost",
+      "collect": "pentecost",
       "name": "Eve of Pentecost",
       "eve": true,
       "type": {
         "name": "Feast",
         "rank": 5
-      },
-      "collectOptions": [
-        "Almighty God, on this day you opened the way of eternal life to every race and nation by the promised gift of your Holy Spirit: Shed abroad this gift throughout the world by the preaching of the Gospel, that it may reach to the ends of the earth; through Jesus Christ our Lord, who lives and reigns with you, in the unity of the Holy Spirit, one God, for ever and ever.",
-        "O God, who on this day taught the hearts of your faithful people by sending to them the light of your Holy Spirit: Grant us by the same Spirit to have a right judgment in all things, and evermore to rejoice in his holy comfort; through Jesus Christ your Son our Lord, who lives and reigns with you, in the unity of the Holy Spirit, one God, for ever and ever."
-      ]
+      }
     },
     {
       "slug": "saturday-easter",
@@ -6355,7 +6352,8 @@
         "rank": 5,
         "name": "Principal Feast"
       },
-      "color": "Red"
+      "color": "Red",
+      "collect": "pentecost"
     },
     {
       "kalendar": "bcp1979",
