@@ -10255,6 +10255,32 @@
     ]
   },
   {
+    "slug": "sunday-trinity-sunday",
+    "hidden": false,
+    "sharing": {
+      "privacy": "public",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published",
+      "collaborators": []
+    },
+    "type": "text",
+    "version": "bcp1979",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "language": "en",
+    "style": "prayer",
+    "value": [
+      "Almighty and everlasting God, you have given to us your servants grace, by the confession of a true faith, to acknowledge the glory of the eternal Trinity, and in the power of your divine Majesty to worship the Unity: Keep us steadfast in this faith and worship, and bring us at last to see you in your one and eternal glory, O Father; who with the Son and the Holy Spirit live and reign, one God, for ever and ever."
+    ],
+    "category": [
+      "Collect",
+      "Collect of the Day"
+    ]
+  },
+  {
     "type": "text",
     "value": [
       "O God of peace, by whose grace the abbess Hilda was endowed with gifts of justice, prudence, and strength to rule as a wise mother over the nuns and monks of her household: Raise up these gifts in us, that we, following her example and prayers, may build up one another in love to the benefit of your church; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, now and for ever. "

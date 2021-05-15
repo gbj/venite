@@ -6359,8 +6359,21 @@
     },
     {
       "kalendar": "bcp1979",
+      "slug": "saturday-pentecost",
+      "season": "TrinitySunday",
+      "type": {
+        "rank": 3,
+        "name": "Eve of Trinity Sunday"
+      },
+      "color": "White",
+      "collect": "trinity-sunday",
+      "name": "Eve of Trinity Sunday",
+      "eve": true
+    },
+    {
+      "kalendar": "bcp1979",
       "slug": "sunday-trinity-sunday",
-      "season": "Pentecost",
+      "season": "TrinitySunday",
       "type": {
         "rank": 5,
         "name": "Trinity Sunday"
@@ -6435,13 +6448,11 @@
         "rank": 3,
         "name": "Holy Days"
       },
-      "kalendar": "bcp1979",
-      "image": "http://www.stjamesdenver.org/wp-content/uploads/2013/02/transfiguration.jpg"
+      "kalendar": "bcp1979"
     },
     {
       "color": "Blue",
       "slug": "the-visitation",
-      "image": "http://www.madonnahouse.org/features/kowalchyk/Kowalchyk-The_Visitation.jpg",
       "type": {
         "name": "Holy Days",
         "rank": 3

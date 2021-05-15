@@ -8,6 +8,7 @@ import { dateFromYMD, dateFromYMDString } from './utils/date-from-ymd';
 interface ObservedInterface {
   date?: string;
   slug?: string;
+  collect?: string;
   propers?: string;
   color?: string | LiturgicalColor;
   season?: Seasons[number] | undefined;
@@ -143,6 +144,7 @@ export class LiturgicalDay {
     }
 
     const color = observed.color || this.color,
+      collect = observed.collect || this.collect,
       season = observed.season || this.season,
       octave = (this.holy_days || [])
         ?.concat(holydays)
@@ -157,6 +159,7 @@ export class LiturgicalDay {
       color,
       season,
       octave,
+      collect,
       holy_days: (this.holy_days || new Array()).concat(holydays),
       holy_day_observed: holy_day_is_observed ? (observed as HolyDay) : this.holy_day_observed,
     });

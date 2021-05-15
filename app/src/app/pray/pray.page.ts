@@ -335,7 +335,7 @@ export class PrayPage implements OnInit, OnDestroy {
           return this.calendarService.buildWeek(
             of(dateFromYMD(y, m, d)),
             of(kalendar),
-            of(vigil)
+            of(vigil === "true")
           );
         } else {
           return of([]);
