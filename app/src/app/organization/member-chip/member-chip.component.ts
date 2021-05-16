@@ -13,6 +13,7 @@ export class MemberChipComponent implements OnInit {
   /** UID of a user to be rendered */
   @Input() uid: string;
   @Input() user: UserProfile;
+  @Input() badge = false;
 
   @Output() click: EventEmitter<CustomEvent> = new EventEmitter();
 

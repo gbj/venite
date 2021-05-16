@@ -28,43 +28,45 @@ type TemplateCategory = {
   templates: Template[];
 };
 
-const docSearch = (
-  includeBulletins: boolean,
-  includeTemplates: boolean,
-  includeFragments: boolean
-) => ([search, docs]: [string, IdAndDoc[]]) =>
-  docs
-    .filter(
-      (doc) =>
-        (includeBulletins || !Boolean(doc.data.day)) &&
-        (includeTemplates || Boolean(doc.data.day)) &&
-        //(includeFragments || !Boolean(doc.data.metadata?.supplement)) &&
-        (doc.data.label?.toLowerCase().includes(search.toLowerCase()) ||
-          doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
-          doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
-          doc.data.category?.includes(search.toLowerCase()))
-    )
-    .map((a) =>
-      a.data.date_modified && !a.data.date_modified?.toDate
-        ? {
-            ...a,
-            data: new LiturgicalDocument({
-              ...a.data,
-              date_modified: new firebase.firestore.Timestamp(
-                a.data.date_modified.seconds,
-                a.data.date_modified.nanoseconds
-              ),
-            }),
-          }
-        : a
-    )
-    .sort((a, b) =>
-      !a.data.date_modified?.toDate ||
-      !b.data.date_modified?.toDate ||
-      a.data.date_modified?.toDate() > b.data.date_modified?.toDate()
-        ? -1
-        : 1
-    );
+const docSearch =
+  (
+    includeBulletins: boolean,
+    includeTemplates: boolean,
+    includeFragments: boolean
+  ) =>
+  ([search, docs]: [string, IdAndDoc[]]) =>
+    docs
+      .filter(
+        (doc) =>
+          (includeBulletins || !Boolean(doc.data.day)) &&
+          (includeTemplates || Boolean(doc.data.day)) &&
+          //(includeFragments || !Boolean(doc.data.metadata?.supplement)) &&
+          (doc.data.label?.toLowerCase().includes(search.toLowerCase()) ||
+            doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
+            doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
+            doc.data.category?.includes(search.toLowerCase()))
+      )
+      .map((a) =>
+        a.data.date_modified && !a.data.date_modified?.toDate
+          ? {
+              ...a,
+              data: new LiturgicalDocument({
+                ...a.data,
+                date_modified: new firebase.firestore.Timestamp(
+                  a.data.date_modified.seconds,
+                  a.data.date_modified.nanoseconds
+                ),
+              }),
+            }
+          : a
+      )
+      .sort((a, b) =>
+        !a.data.date_modified?.toDate ||
+        !b.data.date_modified?.toDate ||
+        a.data.date_modified?.toDate() > b.data.date_modified?.toDate()
+          ? -1
+          : 1
+      );
 
 @Component({
   selector: "venite-bulletins",
@@ -114,16 +116,6 @@ export class BulletinsPage implements OnInit {
       switchMap((user) => this.documents.myLiturgies(user?.uid))
     );
 
-    this.myDocs$ = combineLatest([this.search$, myUnfilteredDocs$]).pipe(
-      map(([search, docs]) =>
-        docSearch(
-          this.mode === "bulletins",
-          this.mode === "templates",
-          this.mode === "templates"
-        )([search, docs])
-      )
-    );
-
     const orgs$ = this.auth.user.pipe(
       filter((user) => user !== null),
       switchMap((user) =>
@@ -131,25 +123,25 @@ export class BulletinsPage implements OnInit {
       )
     );
 
-    this.orgDocs$ = combineLatest([
+    const orgDocs$ = orgs$.pipe(
+      switchMap((orgs) =>
+        orgs?.length > 0
+          ? this.documents.myOrganizationDocuments(orgs)
+          : of([] as IdAndDoc[])
+      )
+    );
+
+    this.myDocs$ = combineLatest([
       this.search$,
-      this.auth.user,
-      orgs$.pipe(
-        switchMap((orgs) =>
-          orgs?.length > 0
-            ? this.documents.myOrganizationDocuments(orgs)
-            : of([])
-        )
-      ),
+      myUnfilteredDocs$,
+      orgDocs$,
     ]).pipe(
-      map(([search, user, docs]) =>
+      map(([search, docs, orgDocs]) =>
         docSearch(
           this.mode === "bulletins",
           this.mode === "templates",
           this.mode === "templates"
-        )([search, docs]).filter(
-          (doc) => doc?.data?.sharing?.owner !== user?.uid
-        )
+        )([search, (docs || []).concat(orgDocs || [])])
       )
     );
 

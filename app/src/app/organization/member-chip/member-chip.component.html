@@ -1,10 +1,19 @@
-<ion-chip (click)="click.emit($event)" *ngIf="user$ | async as user else loading">
-  <ion-avatar>
-    <img [src]="user.photoURL || '/assets/avatar.svg'">
-  </ion-avatar>
-  <ion-label>{{ user.displayName }}</ion-label>
-  <ng-content slot="end"></ng-content>
-</ion-chip>
+<ng-container *ngIf="!badge">
+  <ion-chip (click)="click.emit($event)" *ngIf="user$ | async as user else loading">
+    <ion-avatar>
+      <img [src]="user.photoURL || '/assets/avatar.svg'">
+    </ion-avatar>
+    <ion-label>{{ user.displayName }}</ion-label>
+    <ng-content slot="end"></ng-content>
+  </ion-chip>
+</ng-container>
+<ng-container *ngIf="badge">
+  <ng-container *ngIf="user$ | async as user">
+    <ion-badge *ngIf="user.displayName || user.email">
+      {{ user.displayName || user.email || '(Another User)' }}
+    </ion-badge>
+  </ng-container>
+</ng-container>
 
 <ng-template #loading>
   <ion-chip>

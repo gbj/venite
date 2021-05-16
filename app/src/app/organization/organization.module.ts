@@ -24,6 +24,7 @@ import { SharedModule } from "../shared/shared.module";
     SharedModule,
   ],
   declarations: [OrganizationPage, MemberChipComponent],
+  exports: [MemberChipComponent],
 })
 export class OrganizationPageModule {}
 

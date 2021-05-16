@@ -60,3 +60,13 @@ ion-card-header ion-toolbar, ion-list ion-toolbar {
   margin: auto;
   max-width: 200px;
 }
+
+ion-label footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  ion-badge, venite-member-chip {
+    margin-right: 0.5em;
+  }
+}
