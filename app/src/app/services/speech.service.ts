@@ -148,20 +148,29 @@ export class SpeechService {
           case "image":
             return [];
           default:
-            return ((doc as Heading | Refrain | Rubric | Text)?.value || [])
-              .map((piece: any) => piece.toString())
-              .concat(
-                doc?.metadata?.response && !doc?.metadata?.omit_response
-                  ? doc.metadata.response
-                  : []
-              )
-              .concat(
-                doc.style === "prayer" &&
-                  !doc?.metadata?.response &&
-                  !doc?.metadata?.omit_response
-                  ? ["Amen"]
-                  : []
-              );
+            return (
+              ((doc as Heading | Refrain | Rubric | Text)?.value || [])
+                // Filter out unneeded "Heading" value
+                .filter(
+                  (piece: any) =>
+                    doc?.type !== "heading" || (piece as string) !== "Heading"
+                )
+                // stringfiy each one
+                .map((piece: any) => piece.toString())
+                // add response if this type takes it
+                .concat(
+                  doc?.metadata?.response && !doc?.metadata?.omit_response
+                    ? doc.metadata.response
+                    : []
+                )
+                .concat(
+                  doc.style === "prayer" &&
+                    !doc?.metadata?.response &&
+                    !doc?.metadata?.omit_response
+                    ? ["Amen"]
+                    : []
+                )
+            );
         }
       } else {
         return [];
