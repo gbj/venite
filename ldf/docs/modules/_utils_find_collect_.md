@@ -20,7 +20,7 @@
 
 • **FAKE_SEASONS**: *string[]* = ['Saints', 'Mary']
 
-*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/3f3a1b03/ldf/src/utils/find-collect.ts#L9)*
+*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L9)*
 
 ## Functions
 
@@ -28,7 +28,7 @@
 
 ▸ **filterMultiple**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `allowMultiple`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[]*
 
-*Defined in [utils/find-collect.ts:100](https://github.com/gbj/venite/blob/3f3a1b03/ldf/src/utils/find-collect.ts#L100)*
+*Defined in [utils/find-collect.ts:106](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L106)*
 
 **Parameters:**
 
@@ -43,9 +43,9 @@ ___
 
 ###  findCollect
 
-▸ **findCollect**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `sundayFirst`: boolean, `emberDayPrecedesSunday`: boolean, `allSaintsSuppressesCollectOfTheDayUnlessSunday`: boolean, `allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday`: boolean, `allowMultiple`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | null*
+▸ **findCollect**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `sundayFirst`: boolean, `emberDayPrecedesSunday`: boolean, `allSaintsSuppressesCollectOfTheDayUnlessSunday`: boolean, `allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday`: boolean, `allowMultiple`: boolean, `sundayRedLetterDaysAlsoIncludeSundayCollect`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | null*
 
-*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/3f3a1b03/ldf/src/utils/find-collect.ts#L12)*
+*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L12)*
 
 Given a set of all possible collects and a `LiturgicalDay`, returns a `LiturgicalDocument` of the correct collect or sequence of collects
 
@@ -60,6 +60,7 @@ Name | Type | Default |
 `allSaintsSuppressesCollectOfTheDayUnlessSunday` | boolean | false |
 `allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday` | boolean | false |
 `allowMultiple` | boolean | true |
+`sundayRedLetterDaysAlsoIncludeSundayCollect` | boolean | false |
 
 **Returns:** *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | null*
 
@@ -69,7 +70,7 @@ ___
 
 ▸ **processCollectText**(`collect`: [Text](../classes/_text_.text.md), `day`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/find-collect.ts:108](https://github.com/gbj/venite/blob/3f3a1b03/ldf/src/utils/find-collect.ts#L108)*
+*Defined in [utils/find-collect.ts:114](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L114)*
 
 **Parameters:**
 

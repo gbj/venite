@@ -17,6 +17,7 @@ export function findCollect(
   allSaintsSuppressesCollectOfTheDayUnlessSunday: boolean = false,
   allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday: boolean = false,
   allowMultiple: boolean = true,
+  sundayRedLetterDaysAlsoIncludeSundayCollect: boolean = false,
 ): LiturgicalDocument | null {
   const date = dateFromYMDString(day.date),
     observedDay = day.collect || day.propers || day.slug,
@@ -74,6 +75,11 @@ export function findCollect(
     if (sundayFirst || date.getDay() === 0) {
       const collects = [
         redLetterCollect || sundayCollect,
+        redLetterCollect &&
+        sundayRedLetterDaysAlsoIncludeSundayCollect &&
+        (date.getDay() === 0 || (date.getDay() == 6 && day.evening))
+          ? new LiturgicalDocument({ ...sundayCollect, label: day.week.name })
+          : undefined,
         ...blackLetterCollects,
         observedOctaveCollect,
         observedSeasonalCollect,
