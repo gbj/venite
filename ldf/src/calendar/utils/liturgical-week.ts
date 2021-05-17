@@ -27,7 +27,7 @@ export function liturgicalWeek(d: Date, calendar: Calendar = TEC_1979_CALENDAR):
     );
 
   if (date >= last_pentecost || date < last_epiphany) {
-    return christmasCycleWeek(date);
+    return christmasCycleWeek(date, calendar);
   } else {
     return easterCycleWeek(date, calendar);
   }
@@ -73,7 +73,7 @@ function closerThan(date: Date, mmdd1: string, mmdd2: string): boolean {
 }
 
 // Christmas Cycle
-function christmasCycleWeek(d: Date): LiturgicalWeekIndex {
+function christmasCycleWeek(d: Date, calendar: Calendar): LiturgicalWeekIndex {
   const date = dateOnly(d);
 
   const xmasYear: number = date.getMonth() >= 10 ? date.getFullYear() : date.getFullYear() - 1,
@@ -90,7 +90,7 @@ function christmasCycleWeek(d: Date): LiturgicalWeekIndex {
     return {
       cycle: 'Advent',
       week,
-      proper: week == 0 ? calculateProper(d) : undefined,
+      proper: week == 0 && calendar.hasPropers ? calculateProper(d) : undefined,
     };
   } else if (date > xmasEve && date < epiphany) {
     // Christmas, between Christmas and Epiphany
