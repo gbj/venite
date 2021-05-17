@@ -317,7 +317,7 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Gospel According to Luke',
     },
     'en-CA': {
-      short: 'Matthew',
+      short: 'Luke',
       long: 'The Gospel According to St. Luke',
     },
   },
@@ -337,7 +337,7 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Acts of the Apostles',
     },
     'en-CA': {
-      short: 'Matthew',
+      short: 'Acts',
       long: 'The Book of the Acts of the Apostles',
     },
   },
