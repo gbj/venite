@@ -327,4 +327,4 @@
   },
 ]
 
-*Defined in [bible-reading/bible-book-abbreviations.ts:1](https://github.com/gbj/venite/blob/8fe09e24/ldf/src/bible-reading/bible-book-abbreviations.ts#L1)*
+*Defined in [bible-reading/bible-book-abbreviations.ts:1](https://github.com/gbj/venite/blob/9191ccbd/ldf/src/bible-reading/bible-book-abbreviations.ts#L1)*
