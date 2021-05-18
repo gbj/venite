@@ -97,7 +97,7 @@ export class PreferencesService {
     const old = await this._oldVenitePreferences,
       language = liturgy.language,
       version = versionToString(liturgy.version),
-      slug = liturgy.slug.replace("-", "_");
+      slug = liturgy.slug?.replace("-", "_");
     const p = (((old?.preferences || {})[language] || {})[
       versionToString(version)
     ] || {})[slug];
