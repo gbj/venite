@@ -123,10 +123,16 @@ export class BulletinsPage implements OnInit {
       )
     );
 
-    const orgDocs$ = orgs$.pipe(
-      switchMap((orgs) =>
+    const orgDocs$ = combineLatest([orgs$, this.auth.user]).pipe(
+      switchMap(([orgs, user]) =>
         orgs?.length > 0
-          ? this.documents.myOrganizationDocuments(orgs)
+          ? this.documents
+              .myOrganizationDocuments(orgs)
+              .pipe(
+                map((docs) =>
+                  docs.filter((doc) => doc?.data?.sharing?.owner !== user?.uid)
+                )
+              )
           : of([] as IdAndDoc[])
       )
     );
