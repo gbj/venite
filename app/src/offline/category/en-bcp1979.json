@@ -1041,6 +1041,7 @@
     ],
     "slug": "offertory_1"
   },
+  {"style":"short","version_label":null,"category":["TrinitySunday","Opening Sentence"],"hidden":false,"sharing":{"privacy":"public","organization":"venite","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","status":"published","collaborators":[]},"citation":"Revelation 4:8","date_created":{"seconds":1621445094,"nanoseconds":555000000},"value":[{"text":"Holy, holy, holy is the Lord God Almighty, who was, and is, and is to come."}],"slug":"opening_sentence","metadata":{"response":" ","omit_response":false},"language":"en","date_modified":{"seconds":1621445129,"nanoseconds":178000000},"version":"bcp1979","type":"bible-reading","label":null,"lastRevision":2,"source":{"citation":"","source":"","api":""},"id":"txU8pbFVAc7XFWXXerUT"},
   {
     "language": "en",
     "metadata": {
@@ -2113,8 +2114,10 @@
       "response": null
     },
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "slug": "opening_sentence",
     "language": "en",
@@ -2743,8 +2746,10 @@
     "label": null,
     "style": "litany",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "value": [
       {
@@ -4245,8 +4250,10 @@
     "style": "short",
     "version": "bcp1979",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "slug": "opening_sentence",
     "version_label": null,
@@ -4487,8 +4494,10 @@
       "response": null
     },
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "sharing": {
       "collaborators": [],
@@ -4618,8 +4627,10 @@
     "label": null,
     "version": "bcp1979",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "value": [
       {
@@ -5186,8 +5197,10 @@
   },
   {
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "style": "short",
     "language": "en",
@@ -11635,8 +11648,10 @@
       "response": null
     },
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "language": "en",
     "citation": "Psalm 118:24",
@@ -12041,8 +12056,10 @@
     "hidden": false,
     "label": null,
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "version": "bcp1979",
     "slug": "opening_sentence",
@@ -14377,8 +14394,10 @@
     "version_label": null,
     "style": "litany",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "citation": null,
     "slug": "opening_sentence",
@@ -15011,8 +15030,10 @@
     "citation": "Acts 1:8",
     "slug": "opening_sentence",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "label": null,
     "value": [
@@ -16811,8 +16832,10 @@
     "slug": "opening_sentence",
     "version": "bcp1979",
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ]
   },
   {
@@ -17262,8 +17285,10 @@
       "omit_response": true
     },
     "category": [
+      "Opening Sentence",
       "Easter",
-      "Opening Sentence"
+      "Ascension",
+      "Pentecost"
     ],
     "style": "short",
     "label": null,
