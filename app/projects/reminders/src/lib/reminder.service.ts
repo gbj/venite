@@ -112,6 +112,13 @@ export class ReminderService {
           .replace("(ESV)", "")
           .replace(/\s+/g, " ")
           .trim();
+      if (!bibleText) {
+        throw new Error(
+          `Bible API returned an empty text for ${randomVerse} (${
+            this.config?.bibleVersion || "ESV"
+          })`
+        );
+      }
       return `“${bibleText}” – ${randomVerse}`;
     } catch (e) {
       console.warn(e);
