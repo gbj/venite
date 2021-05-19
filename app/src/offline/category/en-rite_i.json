@@ -6590,6 +6590,31 @@
     "style": "antiphon"
   },
   {
+    "label": null,
+    "version_label": null,
+    "hidden": false,
+    "value": [
+      "Alleluia. The Spirit of the Lord filleth the world: O come, let us adore him. Alleluia."
+    ],
+    "slug": "invitatory_antiphon",
+    "citation": null,
+    "category": [
+      "Pentecost",
+      "Seasonal Antiphon"
+    ],
+    "language": "en",
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "collaborators": [],
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "type": "refrain",
+    "version": "rite_i",
+    "style": "antiphon"
+  },
+  {
     "metadata": {
       "omit_response": false,
       "response": "Amen."
