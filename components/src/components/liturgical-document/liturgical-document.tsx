@@ -73,7 +73,11 @@ export class LiturgicalDocumentComponent {
   @Event() ldfSelectionChange : EventEmitter<{ target: HTMLElement; text: string; citation: SelectableCitation; fragment: string; }>;
 
   @Listen('selectionchange', { target: 'document' })
-  selectionChangeHandler() {
+  selectionChangeHandler(ev : Event) {
+    // stop iOS from taking over 
+    ev.preventDefault();
+
+    // handle the selection
     const selection = document.getSelection(),
       anchorNode = selection.anchorNode,
       citation = anchorNode?.parentElement?.closest('ldf-string')?.citation;
