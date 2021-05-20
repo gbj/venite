@@ -10,4 +10,5 @@ export interface PrayMenuConfig {
   hasBulletinMode: boolean;
   serverReturnsDate: boolean;
   showsOnlyAdvancedSettings?: boolean;
+  segmentButtonForVersions?: boolean;
 }

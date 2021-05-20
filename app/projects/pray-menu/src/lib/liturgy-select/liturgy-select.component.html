@@ -31,12 +31,15 @@
       </ion-item>
     </ng-container>
     <ng-container *ngIf="versionOptions$ | async as options">
-      <ion-item *ngIf="options.length > 1">
+      <ion-item *ngIf="options.length > 1 && !config?.segmentButtonForVersions">
         <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
         <ion-select name="version" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
           <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
         </ion-select>
       </ion-item>
+      <ion-segment class="version-segment" *ngIf="options.length > 1 && config?.segmentButtonForVersions" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
+        <ion-segment-button *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-segment-button>
+      </ion-segment>
     </ng-container>
     <ng-container *ngIf="kalendarOptions$ | async as options">
       <ion-item *ngIf="options.length > 1">
