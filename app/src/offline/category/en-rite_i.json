@@ -1457,7 +1457,7 @@
       "LFF 2018"
     ],
     "value": [
-      "Direct thy Church, O Lord, into the beauty of holiness, that, following the good example of thy servant Dunstan, we may honor thy Son Jesus Christ with our lips and in our lives; to the glory of his Name, who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. "
+      "Almighty God, who didst raise up thy servant Alcuin as a beacon of learning: Shine in our hearts, we pray, that we may also show forth thy praise in our own generation, for thou hast called us out of darkness and into thy marvelous light; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever."
     ],
     "version": "rite_i",
     "sharing": {
@@ -1703,32 +1703,6 @@
     "language": "en",
     "version": "rite_i",
     "type": "text"
-  },
-  {
-    "slug": "alcuin-of-york",
-    "category": [
-      "Collect",
-      "Collect of the Day",
-      "LFF 2018"
-    ],
-    "metadata": {
-      "response": "Amen.",
-      "omit_response": false
-    },
-    "style": "prayer",
-    "value": [
-      "Direct thy Church, O Lord, into the beauty of holiness, that, following the good example of thy servant Dunstan, we may honor thy Son Jesus Christ with our lips and in our lives; to the glory of his Name, who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. "
-    ],
-    "type": "text",
-    "language": "en",
-    "version": "rite_i",
-    "sharing": {
-      "organization": "venite",
-      "status": "published",
-      "collaborators": [],
-      "privacy": "public",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-    }
   },
   {
     "style": "short",
