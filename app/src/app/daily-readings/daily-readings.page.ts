@@ -78,14 +78,14 @@ export class DailyReadingsPage implements OnInit {
 
     const week$ = this.calendarService.buildWeek(
       of(this.today),
-      of("bcp1979"),
+      this.kalendar.valueChanges.pipe(startWith(this.kalendar.value)),
       of(false)
     );
     this.day$ = this.liturgy$.pipe(
       switchMap((liturgy) =>
         this.calendarService.buildDay(
           of(this.today),
-          of("bcp1979"),
+          this.kalendar.valueChanges.pipe(startWith(this.kalendar.value)),
           of(liturgy),
           week$,
           of(false)
@@ -282,6 +282,7 @@ const COLLECT_RECIPE: Liturgy = new Liturgy({
       style: "prayer",
       lookup: {
         type: "collect",
+        allow_multiple: true,
       },
     }),
   ],

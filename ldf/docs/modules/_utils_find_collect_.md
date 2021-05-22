@@ -20,20 +20,21 @@
 
 • **FAKE_SEASONS**: *string[]* = ['Saints', 'Mary']
 
-*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L9)*
+*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/0199ee4f/ldf/src/utils/find-collect.ts#L9)*
 
 ## Functions
 
 ###  filterMultiple
 
-▸ **filterMultiple**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `allowMultiple`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[]*
+▸ **filterMultiple**(`day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `allowMultiple`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[]*
 
-*Defined in [utils/find-collect.ts:106](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L106)*
+*Defined in [utils/find-collect.ts:106](https://github.com/gbj/venite/blob/0199ee4f/ldf/src/utils/find-collect.ts#L106)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
+`day` | [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md) |
 `collects` | [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[] |
 `allowMultiple` | boolean |
 
@@ -45,7 +46,7 @@ ___
 
 ▸ **findCollect**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `sundayFirst`: boolean, `emberDayPrecedesSunday`: boolean, `allSaintsSuppressesCollectOfTheDayUnlessSunday`: boolean, `allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday`: boolean, `allowMultiple`: boolean, `sundayRedLetterDaysAlsoIncludeSundayCollect`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | null*
 
-*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L12)*
+*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/0199ee4f/ldf/src/utils/find-collect.ts#L12)*
 
 Given a set of all possible collects and a `LiturgicalDay`, returns a `LiturgicalDocument` of the correct collect or sequence of collects
 
@@ -70,7 +71,7 @@ ___
 
 ▸ **processCollectText**(`collect`: [Text](../classes/_text_.text.md), `day`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/find-collect.ts:114](https://github.com/gbj/venite/blob/dd785291/ldf/src/utils/find-collect.ts#L114)*
+*Defined in [utils/find-collect.ts:122](https://github.com/gbj/venite/blob/0199ee4f/ldf/src/utils/find-collect.ts#L122)*
 
 **Parameters:**
 

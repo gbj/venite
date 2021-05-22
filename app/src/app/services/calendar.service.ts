@@ -109,12 +109,15 @@ export class CalendarService implements CalendarServiceInterface {
 
   /** Find feast days on a given date */
   findFeastDays(kalendar: string, mmdd: string): Observable<HolyDay[]> {
-    const feastDayToday: HolyDay[] = KALENDAR[kalendar].filter(
-        (day) => day.mmdd == mmdd
-      ),
+    const feastDayToday: HolyDay[] =
+        kalendar === "lff2018"
+          ? KALENDAR["bcp1979"]
+              .filter((day) => day.mmdd === mmdd && day?.type?.rank >= 3)
+              .concat(KALENDAR["lff2018"].filter((day) => day.mmdd === mmdd))
+          : KALENDAR[kalendar].filter((day) => day.mmdd == mmdd),
       eveToday =
         kalendar === "lff2018"
-          ? KALENDAR["bcp1979"].filter((day) => day.mmdd == mmdd && day.eve)
+          ? KALENDAR["bcp1979"].filter((day) => day.mmdd === mmdd && day.eve)
           : [];
     return of(feastDayToday.concat(eveToday));
   }
@@ -125,7 +128,13 @@ export class CalendarService implements CalendarServiceInterface {
    * `wednesday-last-epiphany` */
   findSpecialDays(kalendar: string, slug: string): Observable<HolyDay[]> {
     return of(
-      KALENDAR[kalendar].filter((day) => day.slug == slug || day.day == slug)
+      kalendar === "lff2018"
+        ? KALENDAR["bcp1979"]
+            .filter((day) => day.slug === slug && day?.type?.rank >= 3)
+            .concat(KALENDAR["lff2018"].filter((day) => day.slug === slug))
+        : KALENDAR[kalendar].filter(
+            (day) => day.slug == slug || day.day == slug
+          )
     );
   }
 

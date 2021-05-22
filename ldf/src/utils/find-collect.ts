@@ -84,7 +84,7 @@ export function findCollect(
         observedOctaveCollect,
         observedSeasonalCollect,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
-      return docsToLiturgy(filterMultiple(collects, allowMultiple));
+      return docsToLiturgy(filterMultiple(day, collects, allowMultiple));
     } else {
       const collects = [
         // Ember Day seasonal collects precede Sunday collects, others follow (Canada)
@@ -95,7 +95,7 @@ export function findCollect(
         observedOctaveCollect,
         !emberDayPrecedesSunday || !(day.season || '').includes('Ember') ? observedSeasonalCollect : null,
       ].filter((collect): collect is LiturgicalDocument => !!collect);
-      return docsToLiturgy(filterMultiple(collects, allowMultiple));
+      return docsToLiturgy(filterMultiple(day, collects, allowMultiple));
     }
   } else {
     console.warn('(LDF findCollect) Could not find a collect for ', day, 'from the available collects', collects);
@@ -103,11 +103,19 @@ export function findCollect(
   }
 }
 
-function filterMultiple(collects: LiturgicalDocument[], allowMultiple: boolean): LiturgicalDocument[] {
+function filterMultiple(
+  day: LiturgicalDay,
+  collects: LiturgicalDocument[],
+  allowMultiple: boolean,
+): LiturgicalDocument[] {
   if (allowMultiple) {
     return collects;
   } else {
-    return [collects[0]];
+    return [
+      collects.find((c) => c.slug === day.holy_day_observed?.slug) ||
+        (day.slug !== day.week.slug && collects.find((c) => c.slug === (day.holy_days || [])[0].slug)) ||
+        collects[0],
+    ];
   }
 }
 

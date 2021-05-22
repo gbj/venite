@@ -184,7 +184,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
         : of(docsToLiturgy(data));
       compiled$
         .pipe(
-          filter((doc) => isCompletelyCompiled(doc)),
+          filter((doc) => !manager.document.day || isCompletelyCompiled(doc)),
           first()
         )
         .subscribe((data) => {
