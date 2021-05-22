@@ -562,11 +562,21 @@ export class DocumentService {
   }
 
   /** All documents 'owned' by a user with `uid` */
-  myLiturgies(uid: string): Observable<IdAndDoc[]> {
+  myLiturgies(
+    uid: string,
+    dateLimit?: Date | undefined
+  ): Observable<IdAndDoc[]> {
     return this.afs
-      .collection<LiturgicalDocument>("Document", (ref) =>
-        ref.where("sharing.owner", "==", uid).where("type", "==", "liturgy")
-      )
+      .collection<LiturgicalDocument>("Document", (ref) => {
+        const q = ref
+          .where("sharing.owner", "==", uid)
+          .where("type", "==", "liturgy");
+        if (dateLimit) {
+          return q.where("date_modified", ">=", dateLimit);
+        } else {
+          return q;
+        }
+      })
       .snapshotChanges()
       .pipe(
         // transform from AngularFire `DocumentChangeAction` to `doc`
@@ -599,27 +609,44 @@ export class DocumentService {
       );
   }
 
-  myOrganizationDocuments(orgs: Organization[]): Observable<IdAndDoc[]> {
+  myOrganizationDocuments(
+    orgs: Organization[],
+    dateLimit?: Date | undefined
+  ): Observable<IdAndDoc[]> {
     if (orgs?.length > 0) {
-      return this.afs
-        .collection<LiturgicalDocument>("Document", (ref) =>
-          ref
-            .where(
-              "sharing.organization",
-              "in",
-              orgs.map((org) => org.slug)
-            )
-            .where("sharing.privacy", "!=", "private")
-        )
-        .snapshotChanges()
-        .pipe(
-          // transform from AngularFire `DocumentChangeAction` to `doc`
-          map((changeactions) =>
-            changeactions.map((action) => action?.payload?.doc)
-          ),
-          // extra ID and document data and leave the rest behind
-          map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
-        );
+      const byPrivacy = (privacy: string) => {
+        return this.afs
+          .collection<LiturgicalDocument>("Document", (ref) => {
+            const q = ref
+              .where(
+                "sharing.organization",
+                "in",
+                orgs.map((org) => org.slug)
+              )
+              .where("sharing.privacy", "==", privacy);
+            if (dateLimit) {
+              console.log("dateLimit = ", dateLimit);
+              return q.where("date_modified", ">=", dateLimit);
+            } else {
+              return q;
+            }
+          })
+          .snapshotChanges()
+          .pipe(
+            // transform from AngularFire `DocumentChangeAction` to `doc`
+            map((changeactions) =>
+              changeactions.map((action) => action?.payload?.doc)
+            ),
+            // extra ID and document data and leave the rest behind
+            map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+          );
+      };
+
+      const orgPrivacy = byPrivacy("organization"),
+        publicPrivacy = byPrivacy("public");
+      return combineLatest([orgPrivacy, publicPrivacy]).pipe(
+        map(([org, pub]) => org.concat(pub))
+      );
     } else {
       return of([]);
     }

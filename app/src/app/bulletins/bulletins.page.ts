@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { AlertController, ModalController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { LiturgicalDocument, versionToString } from "@venite/ldf";
-import { Observable, BehaviorSubject, of, combineLatest } from "rxjs";
+import { Observable, BehaviorSubject, of, combineLatest, Subject } from "rxjs";
 import { filter, switchMap, map, tap } from "rxjs/operators";
 import { AuthService } from "../auth/auth.service";
 import { UserProfile } from "../auth/user/user-profile";
@@ -41,10 +41,11 @@ const docSearch =
           (includeBulletins || !Boolean(doc.data.day)) &&
           (includeTemplates || Boolean(doc.data.day)) &&
           //(includeFragments || !Boolean(doc.data.metadata?.supplement)) &&
-          (doc.data.label?.toLowerCase().includes(search.toLowerCase()) ||
+          /*(doc.data.label?.toLowerCase().includes(search.toLowerCase()) ||
             doc.data.slug?.toLowerCase().includes(search.toLowerCase()) ||
             doc.data.type?.toLowerCase().includes(search.toLowerCase()) ||
-            doc.data.category?.includes(search.toLowerCase()))
+            doc.data.category?.includes(search.toLowerCase()))*/
+          JSON.stringify(doc.data).toLowerCase().includes(search.toLowerCase())
       )
       .map((a) =>
         a.data.date_modified && !a.data.date_modified?.toDate
@@ -59,13 +60,6 @@ const docSearch =
               }),
             }
           : a
-      )
-      .sort((a, b) =>
-        !a.data.date_modified?.toDate ||
-        !b.data.date_modified?.toDate ||
-        a.data.date_modified?.toDate() > b.data.date_modified?.toDate()
-          ? -1
-          : 1
       );
 
 @Component({
@@ -89,6 +83,11 @@ export class BulletinsPage implements OnInit {
   templates$: Observable<TemplateCategory[]>;
   templatesToggled: boolean = false;
 
+  // Date limit on templates -- starts at "2 months ago"
+  dateLimit$: BehaviorSubject<Date | undefined> = new BehaviorSubject(
+    new Date(new Date().setMonth(new Date().getMonth() - 2))
+  );
+
   // Document import
   @ViewChild("importInput") importInput;
 
@@ -110,10 +109,13 @@ export class BulletinsPage implements OnInit {
       : "templates";
 
     // If no docId is given, we use this list of all documents
-    // All docs
-    const myUnfilteredDocs$ = this.auth.user.pipe(
-      filter((user) => user !== null),
-      switchMap((user) => this.documents.myLiturgies(user?.uid))
+    const myUnfilteredDocs$ = combineLatest([
+      this.auth.user.pipe(filter((user) => user !== null)),
+      this.dateLimit$,
+    ]).pipe(
+      switchMap(([user, dateLimit]) =>
+        this.documents.myLiturgies(user?.uid, dateLimit)
+      )
     );
 
     const orgs$ = this.auth.user.pipe(
@@ -123,11 +125,15 @@ export class BulletinsPage implements OnInit {
       )
     );
 
-    const orgDocs$ = combineLatest([orgs$, this.auth.user]).pipe(
-      switchMap(([orgs, user]) =>
+    const orgDocs$ = combineLatest([
+      orgs$,
+      this.auth.user,
+      this.dateLimit$,
+    ]).pipe(
+      switchMap(([orgs, user, dateLimit]) =>
         orgs?.length > 0
           ? this.documents
-              .myOrganizationDocuments(orgs)
+              .myOrganizationDocuments(orgs, dateLimit)
               .pipe(
                 map((docs) =>
                   docs.filter((doc) => doc?.data?.sharing?.owner !== user?.uid)
@@ -147,17 +153,13 @@ export class BulletinsPage implements OnInit {
           this.mode === "bulletins",
           this.mode === "templates",
           this.mode === "templates"
-        )([search, (docs || []).concat(orgDocs || [])])
-      )
-    );
-
-    this.searchResults$ = combineLatest([
-      this.auth.user,
-      this.search$,
-      orgs$,
-    ]).pipe(
-      switchMap(([user, search, orgs]) =>
-        Boolean(search) ? this.documents.search(user?.uid, search, orgs) : []
+        )([search, (docs || []).concat(orgDocs || [])]).sort((a, b) =>
+          //!a.data.date_modified?.toDate ||
+          //!b.data.date_modified?.toDate ||
+          a.data.date_modified?.toDate() < b.data.date_modified?.toDate()
+            ? 1
+            : -1
+        )
       )
     );
 
@@ -342,5 +344,9 @@ export class BulletinsPage implements OnInit {
 
   toggleTemplates() {
     this.templatesToggled = !this.templatesToggled;
+  }
+
+  showOlder() {
+    this.dateLimit$.next(undefined);
   }
 }

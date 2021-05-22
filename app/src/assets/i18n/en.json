@@ -241,7 +241,8 @@
       "web-fonts": "Web Fonts"
     },
     "psalmCitation": "Psalm Citation",
-    "psalmCitationExample": "e.g., Psalm 51:1-4"
+    "psalmCitationExample": "e.g., Psalm 51:1-4",
+    "show-older": "Show Older Documents"
   },
   "organization": {
     "owner": "Administrator",
