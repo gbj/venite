@@ -841,16 +841,23 @@ export class PrayPage implements OnInit, OnDestroy {
     this.modifiedDoc$.next(newValue);
   }
 
-  async convertToDocx(doc: LiturgicalDocument, settings: DisplaySettings) {
+  async convertToDocx(
+    doc: LiturgicalDocument,
+    settings: DisplaySettings,
+    hasRetried: boolean = false
+  ) {
     // show loading
     const loading = await this.loadingController.create();
     await loading.present();
 
-    // post data to create blob
     const filename = `${doc.label}${
-        doc?.day?.date ? ` - ${doc.day.date}` : ""
-      }.docx`,
-      resp = await fetch(
+      doc?.day?.date ? ` - ${doc.day.date}` : ""
+    }.docx`;
+    let blob;
+
+    // post data to create blob
+    try {
+      const resp = await fetch(
         `https://us-central1-venite-2.cloudfunctions.net/docx`,
         {
           method: "POST",
@@ -858,13 +865,27 @@ export class PrayPage implements OnInit, OnDestroy {
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
+            "ngsw-bypass": "true",
           },
           body: JSON.stringify({ doc, settings }),
         }
-      ),
+      );
       blob = await resp.blob();
+    } catch (e) {
+      console.warn(e);
 
-    console.log("PrayPage generated DOCX blob");
+      const alert = await this.alert.create({
+        header: this.translate.instant("docx.error-header"),
+        message: this.translate.instant("docx.error-message"),
+        buttons: [
+          {
+            text: this.translate.instant("Ok"),
+          },
+        ],
+      });
+
+      await alert.present();
+    }
 
     // download the blob
     await this.downloadService.download(

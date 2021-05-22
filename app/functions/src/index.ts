@@ -178,7 +178,7 @@ export const hymnImages = functions.https.onRequest(
 export const docx = functions.https.onRequest(async (request, response) => {
   response.set("Access-Control-Allow-Origin", "*"); // CORS allowed
   response.set("Accept", "application/json");
-  response.set("Access-Control-Allow-Headers", "Content-Type");
+  response.set("Access-Control-Allow-Headers", "Content-Type, ngsw-bypass");
 
   const dto = request.body,
     doc = dto.doc,

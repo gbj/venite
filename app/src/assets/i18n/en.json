@@ -354,5 +354,9 @@
   },
   "meditate": {
     "reset": "Reset"
+  },
+  "docx": {
+    "error-header": "Error Creating Word Document",
+    "error-message": "Something went wrong while trying to open this document in Word."
   }
 }
