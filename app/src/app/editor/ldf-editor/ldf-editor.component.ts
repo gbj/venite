@@ -352,7 +352,10 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   // ldf-editable-metadata-metadata-fields might emit an ldfAskForBibleIntros event
   // in response, we should call the setBibleIntros methods of that component
   sendBibleIntros(ev: CustomEvent, intros: LiturgicalDocument[] = []) {
-    ev.detail.setBibleReadingIntros(intros);
+    const target =
+      ev.detail ||
+      document.querySelector("ldf-editable-metadata-metadata-fields");
+    target.setBibleReadingIntros(intros);
     if (
       !(intros?.length > 0) ||
       (intros?.length == 1 && intros[0].value[0] == "Loading...")

@@ -166,7 +166,7 @@ export class EditorComponent {
 
   @Listen('ldfAskForBibleIntros', { target: 'document' })
   onAskForBibleIntros(ev : CustomEvent) {
-    this.editorAskForBibleIntros.emit((ev.target as HTMLElement).shadowRoot.querySelector('ldf-editable-metadata-metadata-fields') || (ev.target as HTMLElement).querySelector('ldf-editable-metadata-metadata-fields'));
+    this.editorAskForBibleIntros.emit((ev.target as HTMLElement).querySelector('ldf-editable-metadata-metadata-fields'));
   }
 
   @Listen('ldfAskForCanticleOptions', { target: 'document' })
