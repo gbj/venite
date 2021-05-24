@@ -77,6 +77,7 @@ export function findCollect(
         redLetterCollect || sundayCollect,
         redLetterCollect &&
         sundayRedLetterDaysAlsoIncludeSundayCollect &&
+        JSON.stringify(redLetterCollect.value) !== JSON.stringify(sundayCollect?.value) &&
         (date.getDay() === 0 || (date.getDay() == 6 && day.evening))
           ? new LiturgicalDocument({ ...sundayCollect, label: day.week.name })
           : undefined,
