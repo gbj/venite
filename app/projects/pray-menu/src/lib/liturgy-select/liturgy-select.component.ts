@@ -13,6 +13,7 @@ import { TranslateService } from "@ngx-translate/core";
 import {
   ClientPreferences,
   dateFromYMDString,
+  HolyDay,
   Kalendar,
   LiturgicalDay,
   LiturgicalDocument,
@@ -99,9 +100,8 @@ export class LiturgySelectComponent implements OnInit {
   properLiturgy$: BehaviorSubject<ProperLiturgy | null> = new BehaviorSubject(
     null
   );
-  availableProperLiturgies$: BehaviorSubject<
-    ProperLiturgy[]
-  > = new BehaviorSubject([]);
+  availableProperLiturgies$: BehaviorSubject<ProperLiturgy[]> =
+    new BehaviorSubject([]);
 
   // Language/version/kalendar
   languageOptions$: Observable<{ value: string; label: string }[]>;
@@ -126,9 +126,8 @@ export class LiturgySelectComponent implements OnInit {
   menuPreferences$: BehaviorSubject<ClientPreferences> = new BehaviorSubject(
     {}
   );
-  properLiturgyPreference$: BehaviorSubject<ClientPreferences> = new BehaviorSubject(
-    {}
-  );
+  properLiturgyPreference$: BehaviorSubject<ClientPreferences> =
+    new BehaviorSubject({});
   preferencesLoaded$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   // Readings available for the selected day
@@ -136,6 +135,9 @@ export class LiturgySelectComponent implements OnInit {
 
   // Data for Pray button
   prayData$: Observable<PrayData>;
+
+  // Choice of day to observe
+  observanceChoices$: Observable<{ slug: string; name: string }[]>;
 
   /* Records the last time we entered the page; will only reset the menu if
    * it's been longer than REMEMBER_TIME */
@@ -167,6 +169,7 @@ export class LiturgySelectComponent implements OnInit {
         month: new FormControl((today.getMonth() + 1).toString()),
         day: new FormControl(today.getDate().toString()),
       }),
+      observance: new FormControl(undefined),
       liturgy: new FormControl(liturgyOfTheHour(today)),
       vigil: new FormControl(false),
     });
@@ -382,6 +385,23 @@ export class LiturgySelectComponent implements OnInit {
         this.lectionary.getReadings(day, prefs["lectionary"], undefined, false)
       ),
       map((entries) => entries.map((entry) => entry.type))
+    );
+
+    // Choices of which day to observe
+    this.observanceChoices$ = combineLatest([this.day$, this.liturgy$]).pipe(
+      map(([day, liturgy]) =>
+        this.config?.blackLetterDaysPromptObservanceQuestionForLiturgies?.includes(
+          liturgy?.slug
+        ) &&
+        (!day.holy_day_observed ||
+          (day.holy_day_observed &&
+            day.slug !== day.holy_day_observed?.slug)) &&
+        day.holy_days?.length > 0
+          ? [{ slug: day.week.slug, name: "Default Propers" }].concat(
+              day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
+            )
+          : []
+      )
     );
 
     this.prayData$ = combineLatest([
@@ -783,11 +803,28 @@ export class LiturgySelectComponent implements OnInit {
     if (bulletinMode) {
       commands.push(JSON.stringify(prefs));
     }
+
+    // if alternate observance selected, note it observance
+    const observance = this.form.controls.observance.value;
+
     // if any prefs have changed, add them to URL params
-    else if (Object.keys(nonDefaultPrefs).length > 0 || vigil) {
+    if (
+      Object.keys(nonDefaultPrefs).length > 0 ||
+      vigil ||
+      (observance && observance !== day.week.slug)
+    ) {
       commands.push(vigil.toString());
       commands.push(JSON.stringify(nonDefaultPrefs));
     }
+
+    if (observance && observance !== day.week.slug) {
+      day.holy_day_observed = day.holy_days.find((hd) => hd.slug == observance);
+      if (day.holy_day_observed?.slug) {
+        day.slug = day.holy_day_observed.slug;
+      }
+      commands.push(observance);
+    }
+
     if (bulletinMode) {
       this.createBulletin.emit({ commands, state: { liturgy, day, prefs } });
     } else {

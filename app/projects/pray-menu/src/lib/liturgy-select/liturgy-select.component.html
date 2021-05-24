@@ -103,6 +103,16 @@
       <ion-checkbox name="isVigil" formControlName="vigil" ngDefaultControl></ion-checkbox>
     </ion-item>
 
+    <!-- Which Day to Observe -->
+    <ng-container *ngIf="observanceChoices$ | async as options">
+      <ion-radio-group *ngIf="options.length > 1" formControlName="observance" ngDefaultControl (ionChange)="form.controls.observance.setValue($event.detail.value)">
+        <ion-item *ngFor="let opt of options">
+          <ion-label>{{ opt.name }}</ion-label>
+          <ion-radio slot="end" [value]="opt.slug"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ng-container>
+
     <!-- Proper Liturgies -->
     <ng-container *ngIf="availableProperLiturgies$ | async as liturgies">
       <ion-item *ngFor="let liturgy of liturgies">

@@ -11,4 +11,5 @@ export interface PrayMenuConfig {
   serverReturnsDate: boolean;
   showsOnlyAdvancedSettings?: boolean;
   segmentButtonForVersions?: boolean;
+  blackLetterDaysPromptObservanceQuestionForLiturgies?: string[];
 }
