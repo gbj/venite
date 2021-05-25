@@ -390,8 +390,9 @@ export class LiturgySelectComponent implements OnInit {
     // Choices of which day to observe
     this.observanceChoices$ = combineLatest([this.day$, this.liturgy$]).pipe(
       map(([day, liturgy]) =>
-        this.config?.blackLetterDaysPromptObservanceQuestionForLiturgies?.includes(
-          liturgy?.slug
+        this.config?.blackLetterObservanceLiturgies?.includes(liturgy?.slug) &&
+        this.config?.blackLetterObservanceDays?.includes(
+          day?.holy_day_observed?.slug
         ) &&
         (!day.holy_day_observed ||
           (day.holy_day_observed &&
