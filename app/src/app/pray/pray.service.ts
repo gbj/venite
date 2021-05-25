@@ -157,7 +157,11 @@ export class PrayService {
       // insert antiphon if necessary
       // seasonal antiphon
       if (doc.type == "psalm" && doc.metadata?.insert_seasonal_antiphon) {
-        return this.insertAntiphon(doc, day, liturgyversions).pipe(
+        return this.insertAntiphon(
+          doc,
+          day,
+          doc.version ? [versionToString(doc.version)] : liturgyversions
+        ).pipe(
           switchMap((docWithAntiphon) =>
             this.compile(
               docWithAntiphon,
