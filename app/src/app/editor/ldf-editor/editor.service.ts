@@ -131,9 +131,11 @@ export class EditorService {
       localManager$,
       serverManager$,
       revisions$
-    ).subscribe(([localManager, serverManager, revisions]) => {
-      this.applyChanges(localManager, serverManager, revisions);
-    });
+    )
+      .pipe(debounceTime(25), shareReplay())
+      .subscribe(([localManager, serverManager, revisions]) => {
+        this.applyChanges(localManager, serverManager, revisions);
+      });
 
     // update the document once every 3s
     const docSaved$ =
@@ -590,6 +592,11 @@ export class EditorService {
     }
 
     if (additionalChanges?.length > 0) {
+      console.log(
+        "additionalChanges = ",
+        additionalChanges,
+        localManager.lastSyncedRevision
+      );
       additionalChanges.forEach((change, changeIndex) => {
         try {
           // don't apply my own changes
@@ -599,6 +606,18 @@ export class EditorService {
           ) {
             const op =
               typeof change.op === "string" ? JSON.parse(change.op) : change.op;
+
+            console.log(
+              "op = ",
+              op,
+              "doc = ",
+              localManager.document,
+              "\n\nrejected = ",
+              localManager.rejectedChanges,
+              "\n\npending = ",
+              localManager.pendingChanges
+            );
+
             // apply to local document
             //@ts-ignore
             localManager.document = json1.type.apply(
@@ -627,7 +646,7 @@ export class EditorService {
           // update sync number, even for my own changes
           localManager.lastSyncedRevision = change.lastRevision;
         } catch (e) {
-          console.warn(e);
+          console.warn("Error", e);
         }
       });
     }
