@@ -43,6 +43,9 @@ export class Liturgy extends LiturgicalDocument {
 
     /** A font to be used for the service. Will override user font choice. */
     font?: string | undefined;
+
+    /** A list of pronouns that the user should be given the option to swap out. */
+    pronouns?: string[];
   };
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */

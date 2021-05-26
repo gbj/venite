@@ -45,4 +45,4 @@
   '11/30',
 ]
 
-*Defined in [calendar/utils/propers.ts:1](https://github.com/gbj/venite/blob/3c92166c/ldf/src/calendar/utils/propers.ts#L1)*
+*Defined in [calendar/utils/propers.ts:1](https://github.com/gbj/venite/blob/8e444889/ldf/src/calendar/utils/propers.ts#L1)*
