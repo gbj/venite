@@ -4,10 +4,15 @@ import { versionToString } from './version-to-string';
 
 /* Converts a list of documents into a single document showing options in parallel */
 export function docsToOption(
-  docs: LiturgicalDocument[] | LiturgicalDocument,
+  d: LiturgicalDocument[] | LiturgicalDocument,
   versions: string[] | undefined = undefined,
 ): LiturgicalDocument {
-  if (Array.isArray(docs)) {
+  if (Array.isArray(d)) {
+    // remove duplicates if literally same JSON
+    const docs = Array.from(new Set(d.map((doc) => JSON.stringify(doc)))).map(
+      (doc) => new LiturgicalDocument(JSON.parse(doc)),
+    );
+
     // sort by preferred version
     let sorted: LiturgicalDocument[];
     if (versions !== undefined && versions.length > 0) {
@@ -28,6 +33,6 @@ export function docsToOption(
       : // if only one LiturgicalDocument given, return that document
         sorted[0];
   } else {
-    return docs;
+    return d;
   }
 }
