@@ -137,6 +137,7 @@ export class EditableMetadataMetadataFieldsComponent {
           { field: 'liturgyversions', type: Field.StringList },
           { field: 'supplement', type: Field.Bool },
           { field: 'evening', type: Field.Bool },
+          { field: 'pronouns', type: Field.StringList },
         ];
 
       case 'meditation':
