@@ -1,7 +1,7 @@
 import { Component, Prop, Watch, State, Element, Host, Event, h, EventEmitter } from '@stencil/core';
 import { Text, Heading, Change } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
-import '@vanillawc/wc-markdown';
+import showdown from 'showdown';
 
 import EN from './text.i18n.en.json';
 import ES from './text.i18n.es.json';
@@ -179,7 +179,8 @@ export class TextComponent {
       else {
         /** `markdown` types */
         if(this.obj?.style === 'markdown') {
-          return (this.obj?.value || []).map(value => <wc-markdown>{value}</wc-markdown>);
+          const converter = new showdown.Converter();
+          return (this.obj?.value || []).map(value => <div innerHTML={converter.makeHtml(value)}></div>);
         }
         /** `text` and `prayer` types */
         else {  
