@@ -359,5 +359,12 @@
   "docx": {
     "error-header": "Error Creating Word Document",
     "error-message": "Something went wrong while trying to open this document in Word."
+  },
+  "pronouns": {
+    "title": "Set Pronouns",
+    "he": "he",
+    "him": "him",
+    "his": "his",
+    "brother": "brother"
   }
 }
