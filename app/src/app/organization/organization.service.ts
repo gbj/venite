@@ -101,9 +101,10 @@ export class OrganizationService {
         map((orgs) =>
           orgs.filter(
             (org) =>
-              search === "" ||
-              org?.name?.toLowerCase().includes(search?.toLowerCase()) ||
-              org?.slug?.toLowerCase().includes(search?.toLowerCase())
+              org.slug !== "venite" &&
+              (search === "" ||
+                org?.name?.toLowerCase().includes(search?.toLowerCase()) ||
+                org?.slug?.toLowerCase().includes(search?.toLowerCase()))
           )
         )
       );
