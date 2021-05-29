@@ -13,7 +13,6 @@ import {
   combineLatest,
   merge,
   BehaviorSubject,
-  Subscription,
   from,
   Subject,
 } from "rxjs";
@@ -183,13 +182,14 @@ export class PrayPage implements OnInit, OnDestroy {
 
   storedOptionSelections: number = 0;
 
+  pronouns: Promise<Record<string, string>> | undefined;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     @Inject(DOCUMENT_SERVICE) private documents: DocumentService,
     @Inject(CALENDAR_SERVICE) private calendarService: CalendarServiceInterface,
     public prayService: PrayService,
-    //public prayService : PrayService,
     private modal: ModalController,
     @Inject(PREFERENCES_SERVICE)
     private preferencesService: PreferencesServiceInterface,
@@ -204,8 +204,6 @@ export class PrayPage implements OnInit, OnDestroy {
     private toast: ToastController,
     private platform: PlatformService,
     private location: Location,
-    private zone: NgZone,
-    private audio: AudioService,
     private alert: AlertController,
     @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface,
     public mediaSessionService: MediaSessionService
@@ -247,6 +245,8 @@ export class PrayPage implements OnInit, OnDestroy {
       this.mediaSessionService.pauseSpeech();
       this.mediaSessionService.destroyMediaSession();
     }
+
+    this.pronouns = undefined;
   }
 
   ngOnInit() {
@@ -709,7 +709,8 @@ export class PrayPage implements OnInit, OnDestroy {
 
     const doc$ = stateDoc$.pipe(
       takeWhile((doc) => !isCompletelyCompiled(doc), true),
-      timeout(10000)
+      timeout(30000),
+      shareReplay()
     );
 
     this.bulletinMode = true;
@@ -718,6 +719,7 @@ export class PrayPage implements OnInit, OnDestroy {
       // next
       (doc) => {
         latestDoc = doc;
+        console.log("latest doc = ", doc);
       },
       // error — TODO
       async (e) => {
@@ -737,7 +739,9 @@ export class PrayPage implements OnInit, OnDestroy {
         this.beginEditing(latestDoc);
       },
       // complete
-      () => {
+      async () => {
+        console.log("doc is complete");
+        // hide loading and set slug/label
         subscription.unsubscribe();
         this.loadingController.dismiss();
         latestDoc.slug = this.newSlug;
@@ -745,11 +749,61 @@ export class PrayPage implements OnInit, OnDestroy {
         loading.dismiss();
         latestDoc.slug = this.bulletinSlug || latestDoc.slug;
         latestDoc.label = this.bulletinLabel || latestDoc.label;
-        this.beginEditing(latestDoc);
+
+        // fix pronouns
+        if (latestDoc.metadata?.pronouns) {
+          // ask for pronouns if haven't yet
+          if (!this.pronouns) {
+            this.pronouns = this.askForPronouns(latestDoc);
+          }
+
+          // replace with pronouns
+          const pronouns = await this.pronouns;
+          const d = new LiturgicalDocument(
+            JSON.parse(
+              JSON.stringify(latestDoc).replace(
+                new RegExp(
+                  `(${Object.keys(pronouns)
+                    .map((word) => `\\*${word}\\*`)
+                    .join("|")})`,
+                  "g"
+                ),
+                (match) => pronouns[match.replace(/\*/g, "")]
+              )
+            )
+          );
+          d.metadata.pronouns = undefined;
+          this.beginEditing(d);
+        } else {
+          // begin editing
+          this.beginEditing(latestDoc);
+        }
       }
     );
 
     return doc$;
+  }
+
+  async askForPronouns(
+    doc: LiturgicalDocument
+  ): Promise<Record<string, string>> {
+    const alert = await this.alert.create({
+      header: this.translate.instant("pronouns.title"),
+      inputs: doc.metadata.pronouns.map((text) => ({
+        name: text,
+        placeholder: text,
+        value: text,
+      })),
+      buttons: [
+        {
+          text: this.translate.instant("ok"),
+        },
+      ],
+    });
+    await alert.present();
+    const { data } = await alert.onDidDismiss();
+    const { values } = data;
+    return values;
   }
 
   async beginEditing(doc: LiturgicalDocument) {
