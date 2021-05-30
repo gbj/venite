@@ -114,7 +114,7 @@ function filterMultiple(
   } else {
     return [
       collects.find((c) => c.slug === day.holy_day_observed?.slug) ||
-        (day.slug !== day.week.slug && collects.find((c) => c.slug === (day.holy_days || [])[0].slug)) ||
+        (day.slug !== day.week.slug && collects.find((c) => c.slug === (day.holy_days || [])[0]?.slug)) ||
         collects[0],
     ];
   }
