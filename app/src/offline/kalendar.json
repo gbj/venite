@@ -4161,15 +4161,17 @@
       "mmdd": "5/31",
       "slug": "the-visitation",
       "type": {
-        "name": "Black Letter",
-        "rank": 2
+        "name": "Red Letter",
+        "rank": 3
       },
       "bio": [
         "This Feast commemorates the visit of the Blessed Virgin to her cousin Elizabeth, recorded in the Gospel according to Luke (1:39–56). ",
         "Elizabeth, who was then pregnant with John the Baptist, greeted Mary with the words, “Blessed are you among women, and blessed is the fruitof your womb.” Mary broke into the song of praise and thanksgiving which we call the Magnificat, “My soul proclaims the greatness of the Lord.” ",
         "In this scene, the unborn John the Baptist, the prophet who was to prepare the way of the Lord, rejoices in the presence of him whose coming he is later to herald publicly to all Israel, for the Gospel records that when Mary’s greeting came to her kinswoman’s ears, the babe in Elizabeth’s womb leaped for joy. "
       ],
-      "kalendar": "lff2018"
+      "kalendar": "lff2018",
+      "season": "Saints",
+      "color": "Blue"
     },
     {
       "slug": "thecla-of-iconium",
@@ -6447,7 +6449,8 @@
       "mmdd": "5/31",
       "name": "The Visitation of the Blessed Virgin Mary",
       "kalendar": "bcp1979",
-      "image": "/assets/iconography/the-visitation.png"
+      "image": "/assets/iconography/the-visitation.png",
+      "season": "Saints"
     },
     {
       "kalendar": "bcp1979",
