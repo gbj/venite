@@ -450,9 +450,9 @@ export class PrayPage implements OnInit, OnDestroy {
       switchMap((state) => {
         // get default preferences
         const basePrefs = Object.entries(
-          state.liturgy.type === "liturgy"
+          (state.liturgy.type === "liturgy"
             ? (state.liturgy as Liturgy).metadata?.preferences
-            : {} || {}
+            : {}) || {}
         )
           .map(([key, pref]) => [
             key,
