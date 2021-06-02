@@ -751,7 +751,10 @@ export class PrayPage implements OnInit, OnDestroy {
         latestDoc.label = this.bulletinLabel || latestDoc.label;
 
         // fix pronouns
-        if (latestDoc.metadata?.pronouns) {
+        if (
+          latestDoc.metadata?.pronouns &&
+          latestDoc.metadata?.pronouns?.length > 0
+        ) {
           // ask for pronouns if haven't yet
           if (!this.pronouns) {
             this.pronouns = this.askForPronouns(latestDoc);
@@ -759,19 +762,22 @@ export class PrayPage implements OnInit, OnDestroy {
 
           // replace with pronouns
           const pronouns = await this.pronouns;
-          const d = new LiturgicalDocument(
-            JSON.parse(
-              JSON.stringify(latestDoc).replace(
-                new RegExp(
-                  `(${Object.keys(pronouns)
-                    .map((word) => `\\*${word}\\*`)
-                    .join("|")})`,
-                  "g"
-                ),
-                (match) => pronouns[match.replace(/\*/g, "")]
-              )
-            )
-          );
+          const d =
+            Object.keys(pronouns)?.length > 0
+              ? new LiturgicalDocument(
+                  JSON.parse(
+                    JSON.stringify(latestDoc).replace(
+                      new RegExp(
+                        `(${Object.keys(pronouns)
+                          .map((word) => `\\*${word}\\*`)
+                          .join("|")})`,
+                        "g"
+                      ),
+                      (match) => pronouns[match.replace(/\*/g, "")]
+                    )
+                  )
+                )
+              : latestDoc;
           d.metadata.pronouns = undefined;
           this.beginEditing(d);
         } else {
@@ -787,23 +793,33 @@ export class PrayPage implements OnInit, OnDestroy {
   async askForPronouns(
     doc: LiturgicalDocument
   ): Promise<Record<string, string>> {
-    const alert = await this.alert.create({
-      header: this.translate.instant("pronouns.title"),
-      inputs: doc.metadata.pronouns.map((text) => ({
-        name: text,
-        placeholder: text,
-        value: text,
-      })),
-      buttons: [
-        {
-          text: this.translate.instant("ok"),
-        },
-      ],
-    });
-    await alert.present();
-    const { data } = await alert.onDidDismiss();
-    const { values } = data;
-    return values;
+    const p = doc?.metadata?.pronouns || [];
+    if (p.length > 0) {
+      const alert = await this.alert.create({
+        header: this.translate.instant("pronouns.title"),
+        inputs: p.map((text) => ({
+          name: text,
+          placeholder: text,
+          value: text,
+        })),
+        buttons: [
+          {
+            text: this.translate.instant("ok"),
+          },
+        ],
+      });
+      try {
+        await alert.present();
+        const { data } = await alert.onDidDismiss();
+        const { values } = data;
+        return values;
+      } catch (e) {
+        console.warn(e);
+        return {};
+      }
+    } else {
+      return {};
+    }
   }
 
   async beginEditing(doc: LiturgicalDocument) {
