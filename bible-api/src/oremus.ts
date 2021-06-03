@@ -56,7 +56,8 @@ export function parseOremusResponse(
     parsedCitation = firstVerseOfCitation(citation),
     { book, chapter, verse } = parsedCitation
       ? parsedCitation
-      : { book: undefined, chapter: undefined, verse: undefined };
+      : { book: undefined, chapter: undefined, verse: undefined },
+    chapterIncremented: boolean = false;
 
   if (nodes?.length > 0) {
     nodes?.forEach((paragraph, sectionIndex) => {
@@ -74,6 +75,7 @@ export function parseOremusResponse(
           });
           verseTexts = new Array();
           chapter = child.text;
+          chapterIncremented = true;
           verse = "1";
         } else if (
           child instanceof HTMLElement &&
@@ -93,7 +95,12 @@ export function parseOremusResponse(
             text: verseTexts.join(""),
           });
           verseTexts = new Array();
-          verse = child.text?.trim();
+          const newVerse = child.text?.trim();
+          // if number of verse has but chapter hasn't, increment chapter number...
+          if (Number(newVerse) < Number(verse) && !chapterIncremented) {
+            chapter = (Number(chapter) + 1).toString();
+          }
+          verse = newVerse;
         } else if (
           child instanceof HTMLElement &&
           (child.classNames.includes("sectVis") ||
