@@ -5,6 +5,10 @@ import { TemplatePage } from "./template.page";
 
 const routes: Routes = [
   {
+    path: "b/:docId",
+    component: TemplatePage,
+  },
+  {
     path: ":docId",
     component: TemplatePage,
   },
