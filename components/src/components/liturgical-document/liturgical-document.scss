@@ -54,3 +54,22 @@ ldf-editable-metadata-buttons.top-level {
   position: relative;
   top: 0;
 }
+
+/* Responsive Attributes */
+.small-only {
+  display: block;
+}
+
+.small-hidden {
+  display: none;
+}
+
+@media (min-width: 415px) {
+  .small-only {
+    display: none;
+  }
+  
+  .small-hidden {
+    display: block;
+  }
+}

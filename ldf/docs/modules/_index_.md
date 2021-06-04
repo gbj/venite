@@ -45,6 +45,7 @@
 * [PsalmSection](_index_.md#psalmsection)
 * [PsalmVerse](_index_.md#psalmverse)
 * [Refrain](_index_.md#refrain)
+* [Responsive](_index_.md#responsive)
 * [ResponsivePrayer](_index_.md#responsiveprayer)
 * [ResponsivePrayerLine](_index_.md#responsiveprayerline)
 * [Rubric](_index_.md#rubric)
@@ -320,6 +321,12 @@ ___
 ###  Refrain
 
 • **Refrain**:
+
+___
+
+###  Responsive
+
+• **Responsive**:
 
 ___
 

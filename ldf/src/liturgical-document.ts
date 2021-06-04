@@ -7,8 +7,13 @@ import { PsalmSection } from './psalm';
 import { Sharing } from './sharing/sharing';
 import { Condition } from './condition';
 import { ClientPreferences } from './liturgy/client-preferences';
-import { Change } from './editing/change';
 import { DisplaySettings } from './display-settings';
+
+export enum Responsive {
+  AllSizes = 'all',
+  SmallOnly = 'small-only',
+  SmallHidden = 'small-hidden',
+}
 
 const TYPES = [
   'liturgy',
@@ -181,6 +186,10 @@ export class LiturgicalDocument {
    * // the gospel reading in the Revised Common Lectionary
    * { type: 'bible-reading', style: 'long', lookup: { table: 'rcl', item: 'gospel' }} */
   lookup?: Lookup;
+
+  /** Documents can be set to show only on mobile or only on larger-than-mobile
+   * e.g., a hymn could show only the scanned image on tablet, and only the text on mobile */
+  responsive?: Responsive | undefined;
 
   /** The content of the document. */
   value?: Value;

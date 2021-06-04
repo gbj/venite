@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
-import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor, SelectableCitation } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor, SelectableCitation, Responsive } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './liturgical-document.i18n.en.json';
@@ -236,7 +236,12 @@ export class LiturgicalDocumentComponent {
 
     return (
       node && <Host lang={this.obj?.language || 'en'}>
-        <div class={{container: true, editable: this.editable || this.preview}}>
+        <div class={{
+          container: true,
+          editable: this.editable || this.preview,
+          "small-only": !this.editable && !this.preview && this.obj?.responsive !== undefined && this.obj?.responsive == Responsive.SmallOnly,
+          "small-hidden": !this.editable && !this.preview && this.obj?.responsive !== undefined && this.obj?.responsive == Responsive.SmallHidden,
+        }}>
           {/* Settings/Delete/Edit Buttons */}
           {(this.editable || this.preview) && <ldf-editable-metadata-buttons
             visible={this.hasFocus}
