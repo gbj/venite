@@ -15,6 +15,36 @@ describe('parseReference', () => {
         end: { book: Book.FirstTimothy, chapter: 4, verse: 6 },
       },
     ]);
+    expect(parseReference('1 Tin 4:1-3, [4-6], 7-9')).toEqual([
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 1 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 3 },
+      },
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 4 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 6 },
+        bracketed: true,
+      },
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 7 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 9 },
+      },
+    ]);
+    expect(parseReference('1 Tin 4:1-3[4-6]7-9')).toEqual([
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 1 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 3 },
+      },
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 4 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 6 },
+        bracketed: true,
+      },
+      {
+        start: { book: Book.FirstTimothy, chapter: 4, verse: 7 },
+        end: { book: Book.FirstTimothy, chapter: 4, verse: 9 },
+      },
+    ]);
     expect(parseReference('1 Tin 4:1-3; Col. 3:1')).toEqual([
       {
         start: { book: Book.FirstTimothy, chapter: 4, verse: 1 },

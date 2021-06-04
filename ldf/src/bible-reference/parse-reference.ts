@@ -11,20 +11,34 @@ export type BibleReferenceQuery = {
 export type BibleReferenceRange = {
   start: BibleReferenceQuery;
   end: BibleReferenceQuery | null;
+  bracketed?: boolean | undefined;
 };
 
 export function parseReference(reference: string): BibleReferenceRange[] {
   const list = [];
   let prev: BibleReferenceRange | null = null;
-  for (let part of reference.split(/[,;]/)) {
-    const current = parseSingleReference(part, prev);
-    list.push(current);
-    prev = current;
+  let bracketOpened: boolean = false;
+  for (let part of reference.split(/([,;\[\]])/)) {
+    if (['', ',', ';', '[', ']'].includes(part.trim())) {
+      if (part.trim() == '[') {
+        bracketOpened = true;
+      } else {
+        bracketOpened = false;
+      }
+    } else {
+      const current = parseSingleReference(part, prev, bracketOpened);
+      list.push(current);
+      prev = current;
+    }
   }
   return list;
 }
 
-function parseSingleReference(reference: string, previous: BibleReferenceRange | null): BibleReferenceRange {
+function parseSingleReference(
+  reference: string,
+  previous: BibleReferenceRange | null,
+  bracketed: boolean,
+): BibleReferenceRange {
   let range_pieces = reference.split('-');
   const first_half = range_pieces[0];
   const second_half = range_pieces[1];
@@ -48,6 +62,7 @@ function parseSingleReference(reference: string, previous: BibleReferenceRange |
   return {
     start: augmented_start || start,
     end,
+    bracketed: bracketed ? true : undefined,
   };
 }
 
