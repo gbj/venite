@@ -39,5 +39,7 @@
   "lte": " ≤ ",
   "lt": " < ",
   "gt": " > ",
-  "gte": " ≥ "
+  "gte": " ≥ ",
+  "smallOnly": "Only appears on small screens",
+  "smallHidden": "Doesn't appear on small screens"
 }

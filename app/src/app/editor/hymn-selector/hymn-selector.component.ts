@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { LoadingController } from "@ionic/angular";
-import { LiturgicalDocument } from "@venite/ldf";
+import { LiturgicalDocument, Responsive } from "@venite/ldf";
 import { BehaviorSubject, Observable, of } from "rxjs";
 import { switchMap } from "rxjs/operators";
 import { Hymn } from "./hymn";
@@ -32,7 +32,7 @@ export class HymnSelectorComponent implements OnInit {
     this.search$.next(search);
   }
 
-  async chooseHymn(hymn: Hymn, mode: "title" | "text" | "scan") {
+  async chooseHymn(hymn: Hymn, mode: "title" | "text" | "scan" | "responsive") {
     let value: string[] = [];
 
     if (mode === "title") {
@@ -124,6 +124,87 @@ export class HymnSelectorComponent implements OnInit {
             citation: hymn.number,
           },
           value,
+        })
+      );
+    } else if (mode === "responsive") {
+      if (hymn.textUrl) {
+        const loading = await this.loading.create({
+          message: "Loading Page Scans...",
+        });
+        await loading.present();
+
+        try {
+          const resp = await fetch(
+            `https://us-central1-venite-2.cloudfunctions.net/hymnImages?url=${hymn.textUrl}`
+          );
+          const text: string[] = await resp.json();
+          if (Array.isArray(text)) {
+            value = text;
+          } else {
+            console.warn("(chooseHymn) invalid hymn-image response: ", text);
+          }
+        } catch (e) {
+          console.warn("(chooseHymn) error while loading hymn images ", e);
+        }
+
+        await loading.dismiss();
+      }
+
+      let textValue: string[] = [];
+      if (hymn.textUrl) {
+        const loading = await this.loading.create({
+          message: "Loading Hymn Text...",
+        });
+        await loading.present();
+
+        try {
+          const resp = await fetch(
+            `https://us-central1-venite-2.cloudfunctions.net/hymnText?url=${hymn.textUrl}`
+          );
+          const text: string[] = await resp.json();
+          if (Array.isArray(text)) {
+            textValue = text;
+          } else {
+            console.warn("(chooseHymn) invalid hymn-text response: ", text);
+          }
+        } catch (e) {
+          console.warn("(chooseHymn) error while loading hymn text ", e);
+        }
+
+        await loading.dismiss();
+      }
+
+      this.hymnSelected.next(
+        new LiturgicalDocument({
+          type: "liturgy",
+          value: [
+            new LiturgicalDocument({
+              type: "image",
+              style: "normal",
+              label: hymn.title,
+              citation: hymn.tune,
+              source: {
+                api: "venite",
+                source: hymn.source,
+                citation: hymn.number,
+              },
+              value,
+              responsive: Responsive.SmallHidden,
+            }),
+            new LiturgicalDocument({
+              type: "text",
+              style: "text",
+              label: hymn.title,
+              citation: hymn.tune,
+              source: {
+                api: "venite",
+                source: hymn.source,
+                citation: hymn.number,
+              },
+              value: textValue,
+              responsive: Responsive.SmallOnly,
+            }),
+          ],
         })
       );
     }

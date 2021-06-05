@@ -964,9 +964,17 @@ function titleCase(str: string | undefined) {
       .split(" ")
       .map(function (word) {
         const firstLetter = word.startsWith("[") ? word[1] : word[0];
-        return !["de", "of", "the", "in", "and", "with", "by"].includes(
-          word.trim()
-        )
+        return ![
+          "de",
+          "of",
+          "the",
+          "in",
+          "and",
+          "with",
+          "by",
+          "at",
+          "c.",
+        ].includes(word.trim())
           ? word.replace(firstLetter, firstLetter.toUpperCase())
           : word;
       })

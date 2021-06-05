@@ -57,6 +57,9 @@ graph TD;
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgical-document --> ldf-editable-metadata-buttons
+  ldf-liturgical-document --> ion-chip
+  ldf-liturgical-document --> ion-icon
+  ldf-liturgical-document --> ion-label
   ldf-liturgy --> ldf-editable-add-block
   ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
@@ -137,6 +140,7 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
+  ion-chip --> ion-ripple-effect
   style ldf-editor fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

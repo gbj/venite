@@ -21,6 +21,10 @@
             <ion-icon name="camera" slot="start"></ion-icon>
             <ion-label class="sm-hidden">{{ 'editor.include-image' | translate }}</ion-label>
           </ion-button>
+          <ion-button fill="clear" *ngIf="hymn.imageUrl && !hymn.imageUrl.endsWith('null') && hymn.textUrl && !hymn.textUrl.endsWith('null')" (click)="chooseHymn(hymn, 'responsive')">
+            <ion-icon name="camera" slot="start"></ion-icon>
+            <ion-label class="sm-hidden">{{ 'editor.responsive' | translate }}</ion-label>
+          </ion-button>
         </div>
       </ion-label>
     </ion-item>

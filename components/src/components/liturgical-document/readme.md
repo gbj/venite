@@ -53,6 +53,9 @@
 - [ldf-bible-reading](../bible-reading)
 - [ldf-psalm](../psalm)
 - [ldf-editable-metadata-buttons](../editable-metadata-buttons)
+- ion-chip
+- ion-icon
+- ion-label
 
 ### Graph
 ```mermaid
@@ -70,6 +73,9 @@ graph TD;
   ldf-liturgical-document --> ldf-bible-reading
   ldf-liturgical-document --> ldf-psalm
   ldf-liturgical-document --> ldf-editable-metadata-buttons
+  ldf-liturgical-document --> ion-chip
+  ldf-liturgical-document --> ion-icon
+  ldf-liturgical-document --> ion-label
   ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
@@ -122,6 +128,7 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
+  ion-chip --> ion-ripple-effect
   ldf-editable-antiphon-field --> ldf-liturgical-document
   ldf-editor --> ldf-liturgical-document
   style ldf-liturgical-document fill:#f9f,stroke:#333,stroke-width:4px

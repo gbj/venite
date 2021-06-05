@@ -1,6 +1,6 @@
 import { Component, Element, State, Prop, Event, EventEmitter, h, Host, Watch } from '@stencil/core';
 import { modalController, ComponentProps, alertController } from '@ionic/core';
-import { Change, LiturgicalDocument } from '@venite/ldf';
+import { Change, LiturgicalDocument, Responsive } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './editable-metadata-buttons.i18n.en.json';
@@ -67,6 +67,54 @@ export class EditableMetadataButtonsComponent {
       this.localeStrings = LOCALE[getComponentClosestLanguage(this.element)];
     } catch(e) {
       console.warn(e);
+    }
+  }
+
+  /** Display an alert to set responsiveness */
+  async openResponsive() {
+    const alert = await alertController.create({
+      header: this.localeStrings.responsive,
+      message: this.localeStrings.responsiveMsg,
+      inputs: [
+        {
+          name: 'value',
+          type: 'radio',
+          value: Responsive.AllSizes,
+          label: this.localeStrings.responsiveAll
+        },
+        {
+          name: 'value',
+          type: 'radio',
+          value: Responsive.SmallOnly,
+          label: this.localeStrings.responsiveSmallOnly
+        },
+        {
+          name: 'value',
+          type: 'radio',
+          value: Responsive.SmallHidden,
+          label: this.localeStrings.responsiveSmallHidden
+        }
+      ],
+      buttons: [
+        {
+          role: 'cancel',
+          text: this.localeStrings.cancel
+        },
+        this.localeStrings.ok
+      ]
+    });
+    await alert.present();
+    const { data } = await alert.onDidDismiss();
+    const { values } = data;
+    if(values) {
+      this.ldfDocShouldChange.emit(new Change({
+        path: `${this.base}/${this.index}/responsive`,
+        op: [{
+          type: 'set',
+          oldValue: this.obj?.responsive,
+          value: values
+        }]
+      }))
     }
   }
 
@@ -240,15 +288,20 @@ export class EditableMetadataButtonsComponent {
             <ion-label>{localeStrings[`heading${this.obj?.metadata?.level || 3}`] || 'Heading'}</ion-label>
           </ion-button>}
 
-          {/* "Settings" Button */}
-          <ion-button onClick={() => this.openSettings()} aria-role='button' aria-label={localeStrings.settings}>
-            <ion-icon slot='icon-only' name='cog'></ion-icon>
-          </ion-button>
-
           {/* "Condition" Button */}
           {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
             <ion-icon slot='icon-only' name='calendar'></ion-icon>
           </ion-button>}
+
+          {/* "Responsive" Button */}
+          {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openResponsive()} aria-role='button' aria-label={localeStrings.responsive}>
+            <ion-icon slot='icon-only' name='phone-portrait'></ion-icon>
+          </ion-button>}
+
+          {/* "Settings" Button */}
+          <ion-button onClick={() => this.openSettings()} aria-role='button' aria-label={localeStrings.settings}>
+            <ion-icon slot='icon-only' name='cog'></ion-icon>
+          </ion-button>
 
           {/* "Move" Buttons — Move and item up or down */}
           {(this.base && hasIndex && this.index > 0) && <ion-button onClick={() => this.move(-1)} aria-role='button' aria-label={localeStrings.move_up}>

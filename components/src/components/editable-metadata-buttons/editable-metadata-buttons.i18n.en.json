@@ -13,5 +13,10 @@
   "preferences": "Preferences",
   "settings": "Settings",
   "edit": "Edit",
-  "preview": "Preview"
+  "preview": "Preview",
+  "responsive": "Responsive Display Settings",
+  "responsiveMsg": "What size devices should this appear on?",
+  "responsiveAll": "All devices",
+  "responsiveSmallOnly": "Only on small screens",
+  "responsiveSmallHidden": "Not on small screens"
 }

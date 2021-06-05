@@ -110,6 +110,7 @@ graph TD;
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
+  ion-chip --> ion-ripple-effect
   style ldf-liturgy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

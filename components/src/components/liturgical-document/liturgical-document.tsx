@@ -236,6 +236,7 @@ export class LiturgicalDocumentComponent {
 
     return (
       node && <Host lang={this.obj?.language || 'en'}>
+        {/* Editable/Responsive Classes */}
         <div class={{
           container: true,
           editable: this.editable || this.preview,
@@ -254,6 +255,13 @@ export class LiturgicalDocumentComponent {
             class={{'top-level': this.obj?.type === 'liturgy' || this.obj?.type === 'option'}}
           >
           </ldf-editable-metadata-buttons>}
+
+          {/* Responsive banner in editing mode */}
+          {(this.editable || this.preview) && (this.obj?.responsive === Responsive.SmallHidden || this.obj?.responsive === Responsive.SmallOnly) && <ion-chip class="responsive-banner">
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+            {this.obj?.responsive === Responsive.SmallOnly && <ion-label>{this.localeStrings.smallOnly}</ion-label>}
+            {this.obj?.responsive === Responsive.SmallHidden && <ion-label>{this.localeStrings.smallHidden}</ion-label>}
+          </ion-chip>}
 
           {/* Render the Document */}
           <div

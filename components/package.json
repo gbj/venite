@@ -1,6 +1,6 @@
 {
   "name": "@venite/components",
-  "version": "0.14.34",
+  "version": "0.14.36",
   "description": "Rendering components for the Venite.app Liturgical Document Format (LDF)",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
