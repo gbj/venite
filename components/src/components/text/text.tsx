@@ -189,7 +189,7 @@ export class TextComponent {
               {/* Heading */}
               {((this.obj?.label && !this.obj?.metadata?.omit_label) || this.obj?.citation) && <ldf-heading
                 path={this.path}
-                doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.metadata?.omit_label ? '' : this.obj.label], citation: this.obj.citation})}>
+                doc={new Heading({ type: 'heading', metadata: { level: 3 }, value: [this.obj.metadata?.omit_label ? '' : this.obj.label], citation: this.obj.citation, source: this.obj.source })}>
               </ldf-heading>}
     
               {
