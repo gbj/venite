@@ -144,7 +144,7 @@
     "language": "en",
     "value": [
       {
-        "text": "I ask your prayers for God's people throughout the world; for our Bishop(s) ____________; for this gathering; and for all ministers and people.\n\nPray for the Church.",
+        "text": "I ask your prayers for God’s people throughout the world; for our Bishop(s) ____________; for this gathering; and for all ministers and people.\n\nPray for the Church.",
         "optional": false
       },
       {
@@ -1820,10 +1820,10 @@
       "Prayers and Thanksgivings",
       "Prayers",
       "Prayers for the Natural Order",
-      "For Knowledge of God's Creation"
+      "For Knowledge of God’s Creation"
     ],
     "style": "prayer",
-    "label": "40. For Knowledge of God's Creation",
+    "label": "40. For Knowledge of God’s Creation",
     "slug": "prayers-40",
     "sharing": {
       "collaborators": [],
@@ -1919,10 +1919,10 @@
       "Prayers and Thanksgivings",
       "Prayers",
       "Prayers for the Social Order",
-      "For the Right Use of God's Gifts"
+      "For the Right Use of God’s Gifts"
     ],
     "slug": "prayers-38",
-    "label": "38. For the Right Use of God's Gifts",
+    "label": "38. For the Right Use of God’s Gifts",
     "version": "bcp1979",
     "value": [
       "Almighty God, whose loving hand *hath* given us all that we possess: Grant us grace that we may honor *thee* with our substance, and, remembering the account which we must one day give, may be faithful stewards of *thy* bounty, through Jesus Christ our Lord."
@@ -16897,7 +16897,7 @@
       "Prayers and Thanksgivings",
       "Prayers",
       "Prayers for the World",
-      "For Joy in God's Creation"
+      "For Joy in God’s Creation"
     ],
     "sharing": {
       "collaborators": [],
@@ -16908,7 +16908,7 @@
     },
     "version": "bcp1979",
     "style": "prayer",
-    "label": "1. For Joy in God's Creation",
+    "label": "1. For Joy in God’s Creation",
     "slug": "prayers-1",
     "value": [
       "O heavenly Father, *who hast* filled the world with beauty: Open our eyes to behold *thy* gracious hand in all *thy* works; that, rejoicing in *thy* whole creation, we may learn to serve *thee* with gladness; for the sake of him through whom all things were made, *thy* Son Jesus Christ our Lord."
@@ -18294,7 +18294,7 @@
         "value": [
           {
             "type": "psalm-verse",
-            "verse": "You are God: we praise you;\nYou are the Lord; we acclaim you;\nYou are the eternal Father:\nAll creation worships you.\nTo you all angels, all the powers of heaven,\nCherubim and Seraphim, sing in endless praise:\n    Holy, holy, holy Lord, God of power and might,\n    heaven and earth are full of your glory.\nThe glorious company of apostles praise you.\nThe noble fellowship of prophets praise you.\nThe white-robed army of martyrs praise you.\nThroughout the world the holy Church acclaims you;\n    Father, of majesty unbounded,\n    your true and only Son, worthy of all worship,\n    and the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory,\nthe eternal Son of the Father.\nWhen you became man to set us free\nyou did not shun the Virgin's womb.\nYou overcame the sting of death\nand opened the kingdom of heaven to all believers.\nYou are seated at God's right hand in glory.\nWe believe that you will come and be our judge.\n    Come then, Lord, and help your people,\n    bought with the price of your own blood,\n    and bring us with your saints\n    to glory everlasting. "
+            "verse": "You are God: we praise you;\nYou are the Lord; we acclaim you;\nYou are the eternal Father:\nAll creation worships you.\nTo you all angels, all the powers of heaven,\nCherubim and Seraphim, sing in endless praise:\n    Holy, holy, holy Lord, God of power and might,\n    heaven and earth are full of your glory.\nThe glorious company of apostles praise you.\nThe noble fellowship of prophets praise you.\nThe white-robed army of martyrs praise you.\nThroughout the world the holy Church acclaims you;\n    Father, of majesty unbounded,\n    your true and only Son, worthy of all worship,\n    and the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory,\nthe eternal Son of the Father.\nWhen you became man to set us free\nyou did not shun the Virgin's womb.\nYou overcame the sting of death\nand opened the kingdom of heaven to all believers.\nYou are seated at God’s right hand in glory.\nWe believe that you will come and be our judge.\n    Come then, Lord, and help your people,\n    bought with the price of your own blood,\n    and bring us with your saints\n    to glory everlasting. "
           }
         ],
         "type": "psalm-section"
