@@ -12,6 +12,8 @@
   ion-buttons {
     background-color: var(--ion-color-light, #f4f5f8);
     border-radius: 3px;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
 }
 
@@ -33,4 +35,6 @@
     white-space: nowrap;
     width: 1px;
   }
+
+
 }

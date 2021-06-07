@@ -1,12 +1,29 @@
 import { Component, Element, State, Prop, Event, EventEmitter, h, Host, Watch } from '@stencil/core';
-import { modalController, ComponentProps, alertController } from '@ionic/core';
+import { modalController, ComponentProps, alertController, toastController } from '@ionic/core';
 import { Change, LiturgicalDocument, Responsive } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
+
+interface ClipboardItem {
+  readonly types: string[];
+  readonly presentationStyle: "unspecified" | "inline" | "attachment";
+  getType(): Promise<Blob>;
+}
+
+interface ClipboardItemData {
+  [mimeType: string]: Blob | string | Promise<Blob | string>;
+}
+
+declare var ClipboardItem: {
+  prototype: ClipboardItem;
+  new (itemData: ClipboardItemData): ClipboardItem;
+};
 
 import EN from './editable-metadata-buttons.i18n.en.json';
 const LOCALE = {
   'en': EN
-};import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
+};
+
+import { AddOptionToDoc } from '../../interfaces/add-option-to-doc';
 
 @Component({
   tag: 'ldf-editable-metadata-buttons',
@@ -246,6 +263,20 @@ export class EditableMetadataButtonsComponent {
     }
   }
 
+  async copyDoc() {
+    try {
+      navigator.clipboard.writeText(JSON.stringify(this.obj));
+      const toast = await toastController.create({
+        message: this.localeStrings.copied,
+        duration: 1000,
+        color: "success"
+      });
+      await toast.present();
+    } catch(e) {
+      console.warn('Clipboard operation not allowed.', e);
+    }
+  }
+
   // Render
   render() {
     const localeStrings = this.localeStrings || {},
@@ -255,7 +286,12 @@ export class EditableMetadataButtonsComponent {
      {/* Preview Buttons */}
       <div class={{ buttons: true, hidden: !this.visible || !this.preview }}>
         {/* Preview Buttons */}
-        {<ion-buttons slot="end" >
+        {<ion-buttons slot="end">
+          {/* "Copy" Button */}
+          {(navigator?.clipboard) && <ion-button onClick={() => this.copyDoc()} aria-role='button' aria-label={localeStrings.copy}>
+            <ion-label class="sm-hidden">{localeStrings.copy}</ion-label>
+            <ion-icon slot='end' name='clipboard'></ion-icon>
+          </ion-button>}
           <ion-button onClick={() => this.ldfTogglePreview.emit(false)}>
             <ion-label class="sm-hidden">{this.localeStrings?.edit}</ion-label>
             <ion-icon slot="end" name="create"></ion-icon>
@@ -296,6 +332,11 @@ export class EditableMetadataButtonsComponent {
           {/* "Responsive" Button */}
           {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openResponsive()} aria-role='button' aria-label={localeStrings.responsive}>
             <ion-icon slot='icon-only' name='phone-portrait'></ion-icon>
+          </ion-button>}
+
+          {/* "Copy" Button */}
+          {(navigator?.clipboard) && <ion-button onClick={() => this.copyDoc()} aria-role='button' aria-label={localeStrings.copy}>
+            <ion-icon slot='icon-only' name='clipboard'></ion-icon>
           </ion-button>}
 
           {/* "Settings" Button */}

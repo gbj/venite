@@ -184,6 +184,37 @@ export class EditorComponent {
     this.editorShouldAddGloriaPatri.emit(ev.detail);
   }
 
+  // Called whenever the user pastes any text
+  // We'll check it to see if it's LDF JSON (copied from elsewhere in Venite for example)
+  @Listen('paste', { target: 'window' })
+  async onPaste(event : ClipboardEvent) {
+    try {
+      const doc = JSON.parse(event.clipboardData.getData("text"));
+      // if it's a valid JSON document with `type` and `value` fields we're just assuming it's LDF
+      if (doc.type && doc.value) {
+        // if there's a selected path, insert before it
+        // if not, insert at beginning
+        const { path, index } = this.focusObj ? this.pathAndIndexFromPath(this.focusObj.path) : { path: '/value', index: 0 };
+
+        const change = new Change({
+          path,
+          op: [{
+            type: 'insertAt',
+            index,
+            value: doc
+          }]
+        });
+    
+        this.editorDocShouldChange.emit(change);
+        
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    } catch (e) {
+      console.log("Text pasted in that is not JSON.");
+    }
+  }
+
   pathAndIndexFromPath(startPath : string) : { path : string; index : number; previousIndex: number; field: string; } {
     // path is a string JSON pointer path, like          // /value/0/value/0
     const parts = startPath.split('/'),                  // ["", "value", "0", "value", "0"]

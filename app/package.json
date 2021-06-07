@@ -48,7 +48,7 @@
     "@types/firebase": "^3.2.1",
     "@venite/angular": "^0.5.0",
     "@venite/bible-api": "^0.1.1",
-    "@venite/components": "^0.15.0",
+    "@venite/components": "^0.15.2",
     "@venite/docx": "^0.2.1",
     "@venite/ldf": "^0.19.4",
     "@venite/ng-darkmode": "0.0.11",
