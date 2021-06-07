@@ -519,7 +519,10 @@ export class LiturgySelectComponent implements OnInit {
   }
 
   pray(data: PrayData | undefined, bulletinMode: boolean = false) {
-    this.isNavigating = true;
+    window.requestAnimationFrame(() => {
+      this.isNavigating = true;
+      console.log("set isNavigating to `true`");
+    });
 
     window.requestAnimationFrame(() => {
       this.dayChosen.emit(data);
@@ -570,6 +573,7 @@ export class LiturgySelectComponent implements OnInit {
       } else {
         // navigate to the Pray page
         if (bulletinMode) {
+          //this.isNavigating = true;
           this.navigate(
             "/bulletin",
             new Liturgy(liturgy),
