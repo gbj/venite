@@ -144,11 +144,11 @@ describe('Option.getVersionLabel()', () => {
     });
 
     expect(obj.getVersionLabel(obj.value[0])).toEqual('A Song of Wisdom (EOW)');
-    expect(obj.getVersionLabel(obj.value[1])).toEqual('The Song of Zechariah (1979)');
+    expect(obj.getVersionLabel(obj.value[1])).toEqual('The Song of Zechariah (Rite II)');
     expect(obj.getVersionLabel(obj.value[2])).toEqual('The Song of Zechariah (EOW)');
   });
 
-  it('should give local names with versions for canticles with multiple versions', () => {
+  it('should give local names with versions for invitatories with multiple versions', () => {
     const obj = new Option({
       value: [
         new Psalm({
@@ -179,8 +179,34 @@ describe('Option.getVersionLabel()', () => {
     });
 
     expect(obj.getVersionLabel(obj.value[0])).toEqual('Venite (EOW)');
-    expect(obj.getVersionLabel(obj.value[1])).toEqual('Venite (1979)');
+    expect(obj.getVersionLabel(obj.value[1])).toEqual('Venite (Rite II)');
     expect(obj.getVersionLabel(obj.value[2])).toEqual('Jubilate (EOW)');
+  });
+
+  it('should give local names with versions for canticles with multiple versions', () => {
+    const obj = new Option({
+      value: [
+        new Psalm({
+          type: 'psalm',
+          style: 'canticle',
+          label: 'Canticle 16: The Song of Mary',
+          metadata: { localname: 'The Song of Mary', number: '16' },
+          version: 'bcp1979',
+          slug: 'venite',
+        }),
+        new Psalm({
+          type: 'psalm',
+          style: 'canticle',
+          label: 'Canticle 16: The Song of Mary',
+          metadata: { localname: 'The Song of Mary', number: '16' },
+          version: 'eow',
+          slug: 'venite',
+        }),
+      ],
+    });
+
+    expect(obj.getVersionLabel(obj.value[0])).toEqual('Rite II');
+    expect(obj.getVersionLabel(obj.value[1])).toEqual('EOW');
   });
 
   it('should give labels if different labels', () => {
@@ -207,9 +233,9 @@ describe('Option.getVersionLabel()', () => {
       ],
     });
 
-    expect(obj.getVersionLabel(obj.value[0])).toEqual('Kyrie (1979)');
-    expect(obj.getVersionLabel(obj.value[1])).toEqual('Gloria (1979)');
-    expect(obj.getVersionLabel(obj.value[2])).toEqual('Trisagion (1979)');
+    expect(obj.getVersionLabel(obj.value[0])).toEqual('Kyrie (Rite II)');
+    expect(obj.getVersionLabel(obj.value[1])).toEqual('Gloria (Rite II)');
+    expect(obj.getVersionLabel(obj.value[2])).toEqual('Trisagion (Rite II)');
     expect(obj.getVersionLabel(obj.value[3])).toEqual('Trisagion (EOW)');
   });
 

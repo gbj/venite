@@ -21,7 +21,7 @@
 
 • **default**? : *undefined | false | true*
 
-*Defined in [liturgy/preference.ts:55](https://github.com/gbj/venite/blob/da9c99aa/ldf/src/liturgy/preference.ts#L55)*
+*Defined in [liturgy/preference.ts:55](https://github.com/gbj/venite/blob/e28179e4/ldf/src/liturgy/preference.ts#L55)*
 
 Default value for this preference.
 
@@ -31,7 +31,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [liturgy/preference.ts:52](https://github.com/gbj/venite/blob/da9c99aa/ldf/src/liturgy/preference.ts#L52)*
+*Defined in [liturgy/preference.ts:52](https://github.com/gbj/venite/blob/e28179e4/ldf/src/liturgy/preference.ts#L52)*
 
 Human-readable label for the
 
@@ -44,7 +44,7 @@ ___
 
 • **metadata**? : *undefined | object*
 
-*Defined in [liturgy/preference.ts:58](https://github.com/gbj/venite/blob/da9c99aa/ldf/src/liturgy/preference.ts#L58)*
+*Defined in [liturgy/preference.ts:58](https://github.com/gbj/venite/blob/e28179e4/ldf/src/liturgy/preference.ts#L58)*
 
 Can be used to pass additional data that the liturgy compiler will use.
 
@@ -54,7 +54,7 @@ ___
 
 • **value**: *string*
 
-*Defined in [liturgy/preference.ts:47](https://github.com/gbj/venite/blob/da9c99aa/ldf/src/liturgy/preference.ts#L47)*
+*Defined in [liturgy/preference.ts:47](https://github.com/gbj/venite/blob/e28179e4/ldf/src/liturgy/preference.ts#L47)*
 
 Machine-readable value, which will probably be used in a `Piece.condition`
 

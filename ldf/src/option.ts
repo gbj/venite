@@ -5,11 +5,18 @@ import { BibleReadingVerse } from './bible-reading/bible-reading-verse';
 
 const VERSIONS: { [x: string]: string } = {
   ip: 'IP',
-  bcp1979: '1979',
+  bcp1979: 'Rite II',
+  bcp1979_psalm: '1979',
   eow: 'EOW',
   coverdale: 'Coverdale',
   rite_i: 'Rite I',
 };
+
+function modifiedVersion(option: LiturgicalDocument): string | { preference: string } {
+  return option.type === 'psalm' && option.style === 'psalm' && option.version === 'bcp1979'
+    ? 'bcp1979_psalm'
+    : option.version;
+}
 
 export class Option extends LiturgicalDocument {
   type: 'option';
@@ -35,31 +42,38 @@ export class Option extends LiturgicalDocument {
   }
 
   uniqueVersions(): number {
-    return this.value
+    return (this.value || [])
       .map((o) => versionToString(o.version))
       .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
   uniqueLabels(): number {
-    return this.value
+    return (this.value || [])
       .map((o) => o.label)
       .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
   uniqueCitations(): number {
-    return this.value
+    return (this.value || [])
       .map((o) => (o.citation ? o.citation.toString() : ''))
       .filter((citation) => !!citation)
       .reduce((uniques, item) => (uniques.includes(item) ? uniques : [...uniques, item]), [] as string[]).length;
   }
 
+  uniqueCanticleNumbers(): number {
+    return Array.from(
+      new Set((this.value || []).map((o) => (o.style === 'canticle' ? o.metadata?.number : o.slug || Math.random()))),
+    ).length;
+  }
+
   /** Gives an appropriate version label for the document given */
   getVersionLabel(option: LiturgicalDocument, maxLength: number = 50): string {
-    const uniqueVersions: number = this.uniqueVersions(),
-      uniqueLabels: number = this.uniqueLabels(),
-      uniqueCitations: number = this.uniqueCitations();
+    const uniqueVersions = this.uniqueVersions(),
+      uniqueLabels = this.uniqueLabels(),
+      uniqueCitations = this.uniqueCitations(),
+      uniqueCanticleNumbers = this.uniqueCanticleNumbers();
 
-    let label: string;
+    let label: string = '';
 
     if (option.type == 'liturgy') {
       label = option.label || option.version_label || 'Option';
@@ -120,9 +134,13 @@ export class Option extends LiturgicalDocument {
     ) {
       label = option.metadata.localname;
     }
+    // Canticles, if multiple options for same number
+    else if (uniqueVersions > 1 && uniqueCanticleNumbers === 1) {
+      label = VERSIONS[versionToString(modifiedVersion(option))];
+    }
     // Canticles and invitatories, if multiple options => Venite (EOW)
     else if (uniqueVersions > 1 && option.metadata && option.metadata.hasOwnProperty('localname') && option.version) {
-      label = `${option.metadata.localname} (${VERSIONS[versionToString(option.version)]})`;
+      label = `${option.metadata.localname} (${VERSIONS[versionToString(modifiedVersion(option))]})`;
     }
     // Version label other than BCP 1979 => EOW
     else if (option.version_label && option.version_label !== 'bcp1979') {
@@ -134,7 +152,7 @@ export class Option extends LiturgicalDocument {
     }
     // If multiple labels and version, then label (version) => Trisagion (BCP), Gloria in Excelsis (EOW)
     else if (option.label && uniqueLabels > 1 && uniqueVersions > 1) {
-      label = `${option.label} (${VERSIONS[versionToString(option.version)]})`;
+      label = `${option.label} (${VERSIONS[versionToString(modifiedVersion(option))]})`;
     }
     // Local name but no version (or version is BCP) => 'The Song of Mary'
     else if (
@@ -146,7 +164,7 @@ export class Option extends LiturgicalDocument {
     }
     // Fall back to a version label
     else if (uniqueVersions > 1 && option.version) {
-      label = VERSIONS[versionToString(option.version)];
+      label = VERSIONS[versionToString(modifiedVersion(option))];
     }
     // Fall back to a citation
     else if (option.citation) {
@@ -162,8 +180,6 @@ export class Option extends LiturgicalDocument {
       throw `Unable to generate a label from ${JSON.stringify(option)}`;
     }
 
-    label = label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
-
-    return label;
+    return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
   }
 }
