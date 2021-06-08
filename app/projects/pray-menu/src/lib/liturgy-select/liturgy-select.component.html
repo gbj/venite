@@ -37,7 +37,7 @@
           <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-segment class="version-segment" *ngIf="options.length > 1 && config?.segmentButtonForVersions" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
+      <ion-segment class="version-segment" *ngIf="options.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
         <ion-segment-button *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-segment-button>
       </ion-segment>
     </ng-container>

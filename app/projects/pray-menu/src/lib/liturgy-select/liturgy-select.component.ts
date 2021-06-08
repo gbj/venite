@@ -37,6 +37,8 @@ import {
   LectionaryServiceInterface,
   DOCUMENT_SERVICE,
   DocumentServiceInterface,
+  PLATFORM_SERVICE,
+  PlatformServiceInterface,
 } from "@venite/ng-service-api";
 import {
   BehaviorSubject,
@@ -94,6 +96,8 @@ export class LiturgySelectComponent implements OnInit {
   week$: Observable<LiturgicalWeek[]>;
   day$: Observable<LiturgicalDay>;
   form: FormGroup;
+
+  segmentMode: "ios" | "md";
 
   // Liturgies
   liturgyOptions$: Observable<LiturgicalDocument[]>;
@@ -157,7 +161,8 @@ export class LiturgySelectComponent implements OnInit {
     @Inject(PREFERENCES_SERVICE)
     private preferencesService: PreferencesServiceInterface,
     @Inject(LECTIONARY_SERVICE) private lectionary: LectionaryServiceInterface,
-    @Inject(DOCUMENT_SERVICE) private documents: DocumentServiceInterface
+    @Inject(DOCUMENT_SERVICE) private documents: DocumentServiceInterface,
+    @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface
   ) {
     const today = new Date();
     this.form = new FormGroup({
@@ -289,6 +294,12 @@ export class LiturgySelectComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.segmentMode =
+      this.platform.is("ios") ||
+      (this.platform.is("android") && window?.innerWidth < 450)
+        ? "ios"
+        : "md";
+
     this.kalendar$ = this.form.controls.kalendar.valueChanges.pipe(
       startWith(this.form.controls.kalendar.value)
     );
