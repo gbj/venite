@@ -1,0 +1,140 @@
+:root {
+  --ldf-gloria-indent: 1em;
+
+  /** With psalm verses */
+  --ldf-psalm-number-display: inline-block;
+}
+
+.psalmverses-false {
+  --ldf-psalm-number-display: none;
+  --ldf-psalm-grid-display: block;
+}
+
+/* General formatting */
+article {
+  margin-top: 1em;
+}
+
+.rubric {
+  color: red;
+}
+
+.citation {
+  font-style: italic;
+}
+
+/* Bible Reading Styles */
+/* Hebrew */
+.bible-reading[lang="he"] {
+  text-align: right;
+  direction: rtl;
+  font-size: 1.5em;
+  font-family: "Times New Roman" !important;
+}
+
+/* Short citations */
+.bible-reading.short .citation {
+  font-size: 80%;
+  font-style: italic;
+  margin-left: 1em;
+  float: right;
+}
+
+/* Antiphons */
+.refrain.antiphon {
+  font-style: italic;
+}
+
+/* Gloria */
+.refrain p {
+  font-style: inherit;
+  margin-bottom: 0;
+  margin: 0;
+}
+.refrain.gloria {
+  margin-left: calc(var(--ldf-gloria-indent) / 2);
+  text-indent: calc(var(--ldf-gloria-indent) / -2);
+}
+
+@media (min-width: 450px) {
+  .refrain.gloria {
+    margin-left: var(--ldf-gloria-indent);
+    text-indent: calc(var(--ldf-gloria-indent) * -1);
+  }
+
+  .refrain.gloria > p:first-child {
+    margin-left: 0em;
+  }
+
+  .refrain.gloria > p:nth-child(even) {
+    margin-left: 1em;
+  }
+}
+
+/* Heading */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Responsive Prayers */
+.responsive-prayer.preces .line {
+  display: table-row;
+}
+
+.responsive-prayer.preces .line > em, .responsive-prayer.preces .line > span {
+  display: table-cell;
+}
+.responsive-prayer.preces .line > em {
+  padding-right: 1em;
+}
+
+/* Psalm */
+.psalm .antiphon {
+  margin-bottom: 1em;
+}
+
+.psalm .half-verse {
+  white-space: pre-wrap;
+}
+
+.psalm-section .psalm-verse {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "number verse" "spacing half-verse";
+  margin: 0;
+}
+
+.psalm-section .psalm-verse.no-number {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "verse verse" "half-verse half-verse";
+  margin: 0;
+}
+
+.psalm-verse sup {
+  display: var(--ldf-psalm-number-display);
+  grid-area: number;
+  margin-right: 1em;;
+}
+
+.psalm-verse .verse {
+  display: block;
+  grid-area: verse;
+}
+.psalm-verse .half-verse {
+  grid-area: half-verse;
+}
+.psalm-verse .verse,
+.psalm-verse .half-verse {
+  display: inline-block;
+}
+
+.psalm .latin-name {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+}
