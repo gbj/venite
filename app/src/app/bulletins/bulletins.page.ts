@@ -121,7 +121,7 @@ export class BulletinsPage implements OnInit {
     const orgs$ = this.auth.user.pipe(
       filter((user) => user !== null),
       switchMap((user) =>
-        this.organizationService.organizationsWithUser(user?.uid)
+        this.organizationService.organizationsWithUser(user?.uid, true)
       )
     );
 

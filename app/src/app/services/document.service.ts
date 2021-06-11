@@ -6,10 +6,9 @@ import {
   catchError,
   filter,
   map,
-  shareReplay,
   startWith,
   switchMap,
-  tap,
+  first,
 } from "rxjs/operators";
 
 import {
@@ -767,8 +766,24 @@ export class DocumentService {
     );*/
   }
 
-  deleteDocument(docId: string): Promise<void> {
-    return this.afs.collection("Document").doc(docId).delete();
+  deleteDocument(docId: string) {
+    //return this.afs.collection("Document").doc(docId).delete();
+    this.afs
+      .collection("Document")
+      .doc(docId)
+      .valueChanges()
+      .pipe(first())
+      .subscribe((doc: Record<string, any>) => {
+        this.afs
+          .collection("RecycleBin")
+          .doc(docId)
+          .set({
+            ...doc,
+            id: docId,
+            date_modified: firebase.firestore.Timestamp.now(),
+          });
+        return this.afs.collection("Document").doc(docId).delete();
+      });
   }
 
   slugify(doc: Partial<DTO<LiturgicalDocument>>): string {

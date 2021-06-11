@@ -26,7 +26,7 @@ service cloud.firestore {
       return request.auth.uid != null && (
         (sharing.owner == request.auth.uid) // user is doc's owner
         || (sharing.collaborators && request.auth.uid in sharing.collaborators) // user listed under 'collaborators'
-        || (sharing.organization != null && userInOrg(request.auth.uid, sharing.organization))
+        || (sharing.organization != null && userIsEditor(request.auth.uid, sharing.organization))
       );
     }
 
@@ -40,7 +40,8 @@ service cloud.firestore {
   
     match /Document/{docId} {
       allow read: if true; //hasReadAccess(resource.data.sharing);
-      allow update, delete: if hasWriteAccess(resource.data.sharing);
+      allow update: if hasWriteAccess(resource.data.sharing);
+      allow delete: if request.auth.uid == resource.data.sharing.owner;
       allow create: if request.auth.uid != null;
     }
 
@@ -138,7 +139,12 @@ service cloud.firestore {
     
     match /Issue/{docId} {
       allow create: if true;
-      allow read, update, delete: if userInOrg(request.auth.uid, "venite");
+      allow read, update, delete: if true; //if userInOrg(request.auth.uid, "venite");
+    }
+    
+    match /RecycleBin/{docId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth.uid == request.resource.data.sharing.owner;
     }
   }
 }

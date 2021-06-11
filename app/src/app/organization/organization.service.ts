@@ -113,11 +113,16 @@ export class OrganizationService {
   // Search by user
 
   /** All organizations in which a given user plays any role */
-  organizationsWithUser(uid: string): Observable<Organization[]> {
+  organizationsWithUser(
+    uid: string,
+    mustBeEditor: boolean = false
+  ): Observable<Organization[]> {
     return combineLatest(
       this.organizationsWithOwner(uid).pipe(startWith(null)),
       this.organizationsWithEditor(uid).pipe(startWith(null)),
-      this.organizationsWithMember(uid).pipe(startWith(null))
+      mustBeEditor
+        ? of([])
+        : this.organizationsWithMember(uid).pipe(startWith(null))
     ).pipe(
       filter(
         ([owner, editor, member]) =>
