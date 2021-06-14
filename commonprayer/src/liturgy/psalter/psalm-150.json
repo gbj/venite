@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 807"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Hallelujah!\nPraise God in his holy temple; *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "praise him in the firmament of his power."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "praise him for his excellent greatness.",
+              "number": "2",
+              "verse": "Praise him for his mighty acts; *"
+            },
+            {
+              "halfverse": "Praise him with lyre and harp.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Praise him with the blast of the ram’s-horn; *"
+            },
+            {
+              "halfverse": "praise him with strings and pipe.",
+              "number": "4",
+              "verse": "Praise him with timbrel and dance; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "praise him with loud-clanging cymbals.",
+              "verse": "Praise him with resounding cymbals; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let everything that has breath *",
+              "type": "psalm-verse",
+              "halfverse": "praise the Lord.\n Hallelujah!",
+              "number": "6"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "label": "Psalm 150",
+      "version_label": null,
+      "type": "psalm",
+      "slug": "psalm_150",
+      "metadata": {
+        "omit_gloria": false,
+        "number": "150",
+        "localname": "Psalm 150",
+        "omit_antiphon": false,
+        "latinname": "Laudate Domi"
+      },
+      "citation": null,
+      "style": "psalm",
+      "category": ["Psalm"],
+      "language": "en",
+      "version": "bcp1979"
+    }
+  ]
+}

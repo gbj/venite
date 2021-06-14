@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "category": ["Psalm"],
+      "slug": "psalm_59",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 665"
+      },
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 59",
+        "number": "59",
+        "latinname": "Eripe me de inimicis"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "protect me from those who rise up against me.",
+              "verse": "Rescue me from my enemies, O God; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Rescue me from evildoers *",
+              "halfverse": "and save me from those who thirst for my blood.",
+              "number": "2"
+            },
+            {
+              "halfverse": "not for any offense or fault of mine, O LORD.",
+              "number": "3",
+              "verse": "See how they lie in wait for my life,\nhow the mighty gather together against me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "they run and prepare themselves for battle.",
+              "verse": "Not because of any guilt of mine *"
+            },
+            {
+              "halfverse": "for you, LORD God of hosts, are Israel’s God.",
+              "type": "psalm-verse",
+              "verse": "Rouse yourself, come to my side, and see; *",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "show no mercy to those who are faithless and evil.",
+              "verse": "Awake, and punish all the ungodly; *"
+            },
+            {
+              "halfverse": "they snarl like dogs and run about the city.",
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "They go to and fro in the evening; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "“For who,” they say, “will hear us?”",
+              "number": "8",
+              "verse": "Behold, they boast with their mouths,\nand taunts are on their lips; *"
+            },
+            {
+              "halfverse": "you laugh all the ungodly to scorn.",
+              "verse": "But you, O LORD, you laugh at them; *",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "halfverse": "for you, O God, are my stronghold.",
+              "verse": "My eyes are fixed on you, O my Strength; *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "halfverse": "God will let me look in triumph on my enemies.",
+              "verse": "My merciful God comes to meet me; *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "verse": "Slay them, O God, lest my people forget; *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "send them reeling by your might\n and put them down, O Lord our shield."
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "let them be caught in their pride.",
+              "verse": "For the sins of their mouths, for the words of their lips,\nfor the cursing and lies that they utter, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "make an end of them, and they shall be no more.",
+              "number": "14",
+              "verse": "Make an end of them in your wrath; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and to the ends of the earth.",
+              "verse": "Let everyone know that God rules in Jacob, *",
+              "number": "15"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They go to and fro in the evening; *",
+              "number": "16",
+              "halfverse": "they snarl like dogs and run about the city."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and if they are not filled, they howl.",
+              "number": "17",
+              "verse": "They forage for food, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I will celebrate your love in the morning;",
+              "number": "18",
+              "verse": "For my part, I will sing of your strength; *"
+            },
+            {
+              "halfverse": "a refuge in the day of my trouble.",
+              "verse": "For you have become my stronghold, *",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "20",
+              "verse": "To you, O my Strength, will I sing; *",
+              "halfverse": "for you, O God, are my stronghold and my merciful God."
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "version_label": null,
+      "version": "bcp1979",
+      "label": "Psalm 59",
+      "language": "en",
+      "citation": null,
+      "style": "psalm"
+    }
+  ]
+}

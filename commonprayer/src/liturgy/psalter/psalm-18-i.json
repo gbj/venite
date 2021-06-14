@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "label": "Psalm 18: Part I",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "I love you, O LORD my strength, *",
+              "number": "1",
+              "halfverse": "O LORD my stronghold, my crag, and my haven.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "My God, my rock in whom I put my trust, *",
+              "number": "2",
+              "halfverse": "my shield, the horn of my salvation, and my refuge;\n you are worthy of praise."
+            },
+            {
+              "number": "3",
+              "verse": "I will call upon the LORD, *",
+              "halfverse": "and so shall I be saved from my enemies.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the torrents of oblivion made me afraid.",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "The breakers of death rolled over me, *"
+            },
+            {
+              "halfverse": "and the snares of death were set for me.",
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "The cords of hell entangled me, *"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "and cried out to my God for help.",
+              "verse": "I called upon the LORD in my distress *"
+            },
+            {
+              "verse": "He heard my voice from his heavenly dwelling; *",
+              "halfverse": "my cry of anguish came to his ears.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The earth reeled and rocked; *",
+              "halfverse": "the roots of the mountains shook;\n they reeled because of his anger.",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "verse": "Smoke rose from his nostrils\nand a consuming fire out of his mouth; *",
+              "type": "psalm-verse",
+              "halfverse": "hot burning coals blazed forth from him."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "with a storm cloud under his feet.",
+              "verse": "He parted the heavens and came down *"
+            },
+            {
+              "verse": "He mounted on cherubim and flew; *",
+              "number": "11",
+              "halfverse": "he swooped on the wings of the wind.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he made dark waters and thick clouds his pavilion.",
+              "verse": "He wrapped darkness about him; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "From the brightness of his presence, through the clouds, *",
+              "halfverse": "burst hailstones and coals of fire.",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "halfverse": "the Most High uttered his voice.",
+              "number": "14",
+              "verse": "The LORD thundered out of heaven; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he hurled thunderbolts and routed them.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "He loosed his arrows and scattered them; *"
+            },
+            {
+              "halfverse": "at your battle cry, O LORD,\n at the blast of the breath of your nostrils.",
+              "type": "psalm-verse",
+              "number": "16",
+              "verse": "The beds of the seas were uncovered,\nand the foundations of the world laid bare, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He reached down from on high and grasped me; *",
+              "number": "17",
+              "halfverse": "he drew me out of great waters."
+            },
+            {
+              "halfverse": "for they were too mighty for me.",
+              "number": "18",
+              "verse": "He delivered me from my strong enemies\nand from those who hated me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but the LORD was my support.",
+              "verse": "They confronted me in the day of my disaster; *",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he rescued me because he delighted in me.",
+              "verse": "He brought me out into an open place; *",
+              "number": "20",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "version_label": null,
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "latinname": "Diligam te, Domine.",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "18",
+        "localname": "Psalm 18: Part I"
+      },
+      "slug": "psalm_18_i",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 602",
+        "source": "bcp1979"
+      },
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "citation": null
+    }
+  ]
+}

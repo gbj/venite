@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "label": "Psalm 75",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "calling upon your Name and declaring all your wonderful deeds.",
+              "number": "1",
+              "verse": "We give you thanks, O God, we give you thanks, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "“I will appoint a time,” says God; *",
+              "type": "psalm-verse",
+              "halfverse": "“I will judge with equity.",
+              "number": "2"
+            },
+            {
+              "verse": "Though the earth and all its inhabitants are quaking, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "I will make its pillars fast."
+            },
+            {
+              "verse": "I will say to the boasters, ‘Boast no more,’ *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and to the wicked, ‘Do not toss your horns;"
+            },
+            {
+              "verse": "Do not toss your horns so high, *",
+              "number": "5",
+              "halfverse": "nor speak with a proud neck.’”",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "nor yet from the wilderness or the mountains.",
+              "verse": "For judgment is neither from the east nor from the west, *",
+              "number": "6"
+            },
+            {
+              "halfverse": "he puts down one and lifts up another.",
+              "verse": "It is God who judges; *",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "halfverse": "and all the wicked of the earth shall drink and drain the dregs.",
+              "verse": "For in the LORD’s hand there is a cup,\nfull of spiced and foaming wine, which he pours out, *",
+              "type": "psalm-verse",
+              "number": "8"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "But I will rejoice for ever; *",
+              "number": "9",
+              "halfverse": "I will sing praises to the God of Jacob."
+            },
+            {
+              "verse": "He shall break off all the horns of the wicked; *",
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "but the horns of the righteous shall be exalted."
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "lastRevision": 2,
+      "slug": "psalm_75",
+      "version_label": null,
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Confitebimur tibi",
+        "number": "75",
+        "localname": "Psalm 75",
+        "omit_antiphon": false
+      },
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 691",
+        "api": "https://www.venite.app/api"
+      },
+      "language": "en",
+      "style": "psalm"
+    }
+  ]
+}

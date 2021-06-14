@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Nisi Dominus",
+        "localname": "Psalm 127",
+        "omit_antiphon": false,
+        "number": "127"
+      },
+      "label": "Psalm 127",
+      "slug": "psalm_127",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "language": "en",
+      "version": "bcp1979",
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "verse": "Unless the LORD builds the house, *",
+              "halfverse": "their labor is in vain who build it.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "verse": "Unless the LORD watches over the city, *",
+              "halfverse": "in vain the watchman keeps his vigil.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "It is in vain that you rise so early and go to bed so late; *",
+              "halfverse": "vain, too, to eat the bread of toil,\n for he gives to his beloved sleep.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Children are a heritage from the LORD, *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "and the fruit of the womb is a gift."
+            },
+            {
+              "number": "5",
+              "halfverse": "are the children of one’s youth.",
+              "verse": "Like arrows in the hand of a warrior *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he shall not be put to shame\n when he contends with his enemies in the gate.",
+              "verse": "Happy is the man who has his quiver full of them! *",
+              "number": "6"
+            }
+          ]
+        }
+      ],
+      "citation": null,
+      "style": "psalm",
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 782",
+        "source": "bcp1979"
+      }
+    }
+  ]
+}

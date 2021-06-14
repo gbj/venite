@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "version": "bcp1979",
+      "hidden": false,
+      "language": "en",
+      "slug": "psalm_119_lamedh",
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "In aeternum, Domine",
+        "localname": "Psalm 119: Lamedh",
+        "omit_antiphon": false,
+        "number": "119"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "O LORD, your word is everlasting; *",
+              "number": "89",
+              "halfverse": "it stands firm in the heavens.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "90",
+              "verse": "Your faithfulness remains from one generation to another; *",
+              "halfverse": "you established the earth, and it abides.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for all things are your servants.",
+              "type": "psalm-verse",
+              "verse": "By your decree these continue to this day, *",
+              "number": "91"
+            },
+            {
+              "halfverse": "I should have perished in my affliction.",
+              "number": "92",
+              "type": "psalm-verse",
+              "verse": "If my delight had not been in your law, *"
+            },
+            {
+              "halfverse": "because by them you give me life.",
+              "type": "psalm-verse",
+              "number": "93",
+              "verse": "I will never forget your commandments, *"
+            },
+            {
+              "halfverse": "for I study your commandments.",
+              "number": "94",
+              "type": "psalm-verse",
+              "verse": "I am yours; oh, that you would save me! *"
+            },
+            {
+              "verse": "Though the wicked lie in wait for me to destroy me, *",
+              "halfverse": "I will apply my mind to your decrees.",
+              "type": "psalm-verse",
+              "number": "95"
+            },
+            {
+              "verse": "I see that all things come to an end, *",
+              "number": "96",
+              "halfverse": "but your commandment has no bounds.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "source": {
+        "citation": "p. 770",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "style": "psalm",
+      "category": ["Psalm"],
+      "label": "Psalm 119: Lamedh",
+      "type": "psalm"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "number": "119",
+        "localname": "Psalm 119: Pe",
+        "latinname": "Mirabilia",
+        "omit_antiphon": false
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Your decrees are wonderful; *",
+              "type": "psalm-verse",
+              "number": "129",
+              "halfverse": "therefore I obey them with all my heart."
+            },
+            {
+              "halfverse": "it gives understanding to the simple.",
+              "number": "130",
+              "verse": "When your word goes forth it gives light; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I open my mouth and pant; *",
+              "halfverse": "I long for your commandments.",
+              "number": "131",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Turn to me in mercy, *",
+              "type": "psalm-verse",
+              "halfverse": "as you always do to those who love your Name.",
+              "number": "132"
+            },
+            {
+              "number": "133",
+              "halfverse": "let no iniquity have dominion over me.",
+              "type": "psalm-verse",
+              "verse": "Steady my footsteps in your word; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Rescue me from those who oppress me, *",
+              "halfverse": "and I will keep your commandments.",
+              "number": "134"
+            },
+            {
+              "number": "135",
+              "type": "psalm-verse",
+              "halfverse": "and teach me your statutes.",
+              "verse": "Let your countenance shine upon your servant *"
+            },
+            {
+              "halfverse": "because people do not keep your law.",
+              "type": "psalm-verse",
+              "number": "136",
+              "verse": "My eyes shed streams of tears, *"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 774"
+      },
+      "version_label": null,
+      "version": "bcp1979",
+      "slug": "psalm_119_pe",
+      "hidden": false,
+      "citation": null,
+      "label": "Psalm 119: Pe"
+    }
+  ]
+}

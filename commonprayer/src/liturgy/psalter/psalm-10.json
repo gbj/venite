@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "style": "psalm",
+      "hidden": false,
+      "label": "Psalm 10",
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Ut quid, Domine?",
+        "number": "10",
+        "omit_gloria": false,
+        "localname": "Psalm 10"
+      },
+      "version_label": null,
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "slug": "psalm_10",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "and hide yourself in time of trouble?",
+              "type": "psalm-verse",
+              "verse": "Why do you stand so far off, O LORD, *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "halfverse": "but they are trapped in the schemes they have devised.",
+              "verse": "The wicked arrogantly persecute the poor, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The wicked boast of their heart’s desire; *",
+              "halfverse": "the covetous curse and revile the LORD.",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "halfverse": "their only thought is, “God does not matter.”",
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "The wicked are so proud that they care not for God; *"
+            },
+            {
+              "halfverse": "they defy all their enemies.",
+              "verse": "Their ways are devious at all times;\nyour judgments are far above out of their sight; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "no harm shall happen to me ever.”",
+              "verse": "They say in their heart, “I shall not be shaken; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Their mouth is full of cursing, deceit, and oppression; *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "under their tongue are mischief and wrong."
+            },
+            {
+              "number": "8",
+              "verse": "They lurk in ambush in public squares\nand in secret places they murder the innocent; *",
+              "type": "psalm-verse",
+              "halfverse": "they spy out the helpless."
+            },
+            {
+              "verse": "They lie in wait, like a lion in a covert;\nthey lie in wait to seize upon the lowly; *",
+              "type": "psalm-verse",
+              "number": "9",
+              "halfverse": "they seize the lowly and drag them away in their net."
+            },
+            {
+              "halfverse": "the helpless fall before their power.",
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "The innocent are broken and humbled before them; *"
+            },
+            {
+              "halfverse": "he hides his face; he will never notice.”",
+              "verse": "They say in their heart, “God has forgotten; *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "do not forget the afflicted.",
+              "verse": "Rise up, O LORD;\nlift up your hand, O God; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "halfverse": "why should they say in their heart, “You do not care”?",
+              "verse": "Why should the wicked revile God? *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Surely, you behold trouble and misery; *",
+              "type": "psalm-verse",
+              "number": "14",
+              "halfverse": "you see it and take it into your own hand."
+            },
+            {
+              "halfverse": "for you are the helper of orphans.",
+              "verse": "The helpless commit themselves to you, *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "halfverse": "search out their wickedness until you find none.",
+              "verse": "Break the power of the wicked and evil; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the ungodly shall perish from his land.",
+              "number": "17",
+              "verse": "The LORD is King for ever and ever; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The LORD will hear the desire of the humble; *",
+              "number": "18",
+              "halfverse": "you will strengthen their heart and your ears shall hear;"
+            },
+            {
+              "halfverse": "so that mere mortals may strike terror no more.",
+              "type": "psalm-verse",
+              "number": "19",
+              "verse": "To give justice to the orphan and oppressed, *"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "citation": "p. 594",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "citation": null
+    }
+  ]
+}

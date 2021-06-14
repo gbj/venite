@@ -1,0 +1,203 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "label": "Psalm 102",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "localname": "Psalm 102",
+        "number": "102",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "latinname": "Domine, exaudi"
+      },
+      "version_label": null,
+      "hidden": false,
+      "version": "bcp1979",
+      "source": {
+        "citation": "p. 731",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "slug": "psalm_102",
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "hide not your face from me in the day of my trouble.",
+              "type": "psalm-verse",
+              "verse": "LORD, hear my prayer, and let my cry come before you; *",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "when I call, make haste to answer me,",
+              "verse": "Incline your ear to me; *"
+            },
+            {
+              "verse": "For my days drift away like smoke, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and my bones are hot as burning coals."
+            },
+            {
+              "halfverse": "so that I forget to eat my bread.",
+              "verse": "My heart is smitten like grass and withered, *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "halfverse": "I am but skin and bones.",
+              "verse": "Because of the voice of my groaning *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "like an owl among the ruins.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "I have become like a vulture in the wilderness, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I lie awake and groan; *",
+              "number": "7",
+              "halfverse": "I am like a sparrow, lonely on a house-top."
+            },
+            {
+              "number": "8",
+              "halfverse": "and those who scoff at me have taken an oath against me.",
+              "type": "psalm-verse",
+              "verse": "My enemies revile me all day long, *"
+            },
+            {
+              "halfverse": "and mingled my drink with weeping.",
+              "number": "9",
+              "verse": "For I have eaten ashes for bread *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have lifted me up and thrown me away.",
+              "number": "10",
+              "verse": "Because of your indignation and wrath *"
+            },
+            {
+              "number": "11",
+              "verse": "My days pass away like a shadow, *",
+              "type": "psalm-verse",
+              "halfverse": "and I wither like the grass."
+            },
+            {
+              "number": "12",
+              "halfverse": "and your Name from age to age.",
+              "type": "psalm-verse",
+              "verse": "But you, O LORD, endure for ever, *"
+            },
+            {
+              "halfverse": "indeed, the appointed time has come.",
+              "type": "psalm-verse",
+              "verse": "You will arise and have compassion on Zion,\nfor it is time to have mercy upon her; *",
+              "number": "13"
+            },
+            {
+              "halfverse": "and are moved to pity even for her dust.",
+              "number": "14",
+              "verse": "For your servants love her very rubble, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and all the kings of the earth your glory.",
+              "number": "15",
+              "type": "psalm-verse",
+              "verse": "The nations shall fear your Name, O LORD, *"
+            },
+            {
+              "halfverse": "and his glory will appear.",
+              "verse": "For the LORD will build up Zion, *",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He will look with favor on the prayer of the homeless; *",
+              "number": "17",
+              "halfverse": "he will not despise their plea."
+            },
+            {
+              "halfverse": "so that a people yet unborn may praise the LORD.",
+              "verse": "Let this be written for a future generation, *",
+              "number": "18",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For the LORD looked down from his holy place on high; *",
+              "number": "19",
+              "halfverse": "from the heavens he beheld the earth;"
+            },
+            {
+              "halfverse": "and set free those condemned to die;",
+              "verse": "That he might hear the groan of the captive *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "That they may declare in Zion the Name of the LORD, *",
+              "type": "psalm-verse",
+              "halfverse": "and his praise in Jerusalem;",
+              "number": "21"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "22",
+              "halfverse": "and the kingdoms also, to serve the LORD.",
+              "verse": "When the peoples are gathered together, *"
+            },
+            {
+              "halfverse": "he has shortened the number of my days;",
+              "type": "psalm-verse",
+              "number": "23",
+              "verse": "He has brought down my strength before my time; *"
+            },
+            {
+              "halfverse": "your years endure throughout all generations.",
+              "verse": "And I said, “O my God,\ndo not take me away in the midst of my days; *",
+              "number": "24",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the heavens are the work of your hands;",
+              "type": "psalm-verse",
+              "verse": "In the beginning, O LORD, you laid the foundations of the earth, *",
+              "number": "25"
+            },
+            {
+              "verse": "They shall perish, but you will endure;\nthey all shall wear out like a garment; *",
+              "type": "psalm-verse",
+              "halfverse": "as clothing you will change them,\n and they shall be changed;",
+              "number": "26"
+            },
+            {
+              "number": "27",
+              "verse": "But you are always the same, *",
+              "halfverse": "and your years will never end.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "28",
+              "verse": "The children of your servants shall continue, *",
+              "halfverse": "and their offspring shall stand fast in your sight.”"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

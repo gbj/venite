@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "source": {
+        "citation": "p. 617",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "the LORD is the strength of my life;\n of whom then shall I be afraid?",
+              "number": "1",
+              "verse": "The LORD is my light and my salvation;\nwhom then shall I fear? *"
+            },
+            {
+              "halfverse": "it was they, my foes and my adversaries, who stumbled and fell.",
+              "verse": "When evildoers came upon me to eat up my flesh, *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "verse": "Though an army should encamp against me, *",
+              "halfverse": "yet my heart shall not be afraid;",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "yet will I put my trust in him.",
+              "verse": "And though war should rise up against me, *",
+              "number": "4"
+            },
+            {
+              "verse": "One thing have I asked of the LORD;\none thing I seek; *",
+              "halfverse": "that I may dwell in the house of the LORD all the days of my life;",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "verse": "To behold the fair beauty of the LORD *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "and to seek him in his temple."
+            },
+            {
+              "halfverse": "he shall hide me in the secrecy of his dwelling\n and set me high upon a rock.",
+              "type": "psalm-verse",
+              "verse": "For in the day of trouble he shall keep me safe in his shelter; *",
+              "number": "7"
+            },
+            {
+              "halfverse": "above my enemies round about me.",
+              "type": "psalm-verse",
+              "verse": "Even now he lifts up my head *",
+              "number": "8"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Therefore I will offer in his dwelling an oblation\nwith sounds of great gladness; *",
+              "halfverse": "I will sing and make music to the LORD.",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Hearken to my voice, O LORD, when I call; *",
+              "halfverse": "have mercy on me and answer me.",
+              "number": "10"
+            },
+            {
+              "halfverse": "Your face, LORD, will I seek.",
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "You speak in my heart and say, “Seek my face.” *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Hide not your face from me, *",
+              "halfverse": "nor turn away your servant in displeasure.",
+              "number": "12"
+            },
+            {
+              "verse": "You have been my helper;\ncast me not away; *",
+              "halfverse": "do not forsake me, O God of my salvation.",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "halfverse": "the LORD will sustain me.",
+              "type": "psalm-verse",
+              "number": "14",
+              "verse": "Though my father and my mother forsake me, *"
+            },
+            {
+              "number": "15",
+              "verse": "Show me your way, O LORD; *",
+              "halfverse": "lead me on a level path, because of my enemies.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Deliver me not into the hand of my adversaries, *",
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "for false witnesses have risen up against me,\n and also those who speak malice."
+            },
+            {
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "in the land of the living!",
+              "verse": "What if I had not believed\nthat I should see the goodness of the LORD *"
+            },
+            {
+              "halfverse": "wait patiently for the LORD.",
+              "type": "psalm-verse",
+              "verse": "O tarry and await the LORD’S pleasure;\nbe strong, and he shall comfort your heart; *",
+              "number": "18"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "label": "Psalm 27",
+      "hidden": false,
+      "citation": null,
+      "slug": "psalm_27",
+      "style": "psalm",
+      "version_label": null,
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Dominus illuminatio",
+        "number": "27",
+        "localname": "Psalm 27"
+      },
+      "type": "psalm"
+    }
+  ]
+}

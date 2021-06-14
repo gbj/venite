@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 757",
+        "api": "https://www.venite.app/api"
+      },
+      "language": "en",
+      "type": "psalm",
+      "slug": "psalm_115",
+      "citation": null,
+      "version": "bcp1979",
+      "style": "psalm",
+      "hidden": false,
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "Not to us, O LORD, not to us,\nbut to your Name give glory; *",
+              "halfverse": "because of your love and because of your faithfulness."
+            },
+            {
+              "halfverse": "“Where then is their God?”",
+              "number": "2",
+              "verse": "Why should the heathen say, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "whatever he wills to do he does.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Our God is in heaven; *"
+            },
+            {
+              "number": "4",
+              "verse": "Their idols are silver and gold, *",
+              "halfverse": "the work of human hands.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They have mouths, but they cannot speak; *",
+              "type": "psalm-verse",
+              "halfverse": "eyes have they, but they cannot see;",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "They have ears but they cannot hear; *",
+              "halfverse": "noses, but they cannot smell;"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "they make no sound with their throat.",
+              "verse": "They have hands, but they cannot feel;\nfeet, but they cannot walk; *"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "Those who make them are like them, *",
+              "halfverse": "and so are all who put their trust in them."
+            },
+            {
+              "halfverse": "he is their help and their shield.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "O Israel, trust in the LORD; *"
+            },
+            {
+              "halfverse": "he is their help and their shield.",
+              "verse": "O house of Aaron, trust in the LORD; *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "halfverse": "he is their help and their shield.",
+              "type": "psalm-verse",
+              "verse": "You who fear the LORD, trust in the LORD; *",
+              "number": "11"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he will bless the house of Israel;\n he will bless the house of Aaron;",
+              "number": "12",
+              "verse": "The LORD has been mindful of us, and he will bless us; *"
+            },
+            {
+              "verse": "He will bless those who fear the LORD, *",
+              "halfverse": "both small and great together.",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "verse": "May the LORD increase you more and more, *",
+              "number": "14",
+              "halfverse": "you and your children after you.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the maker of heaven and earth.",
+              "number": "15",
+              "type": "psalm-verse",
+              "verse": "May you be blessed by the LORD, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but he entrusted the earth to its peoples.",
+              "verse": "The heaven of heavens is the LORD’S, *",
+              "number": "16"
+            },
+            {
+              "halfverse": "nor all those who go down into silence;",
+              "number": "17",
+              "verse": "The dead do not praise the LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "18",
+              "verse": "But we will bless the LORD, *",
+              "halfverse": "from this time forth for evermore.\n Hallelujah!",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "number": "115",
+        "latinname": "Non nobis, Domine",
+        "omit_gloria": false,
+        "localname": "Psalm 115",
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "label": "Psalm 115"
+    }
+  ]
+}

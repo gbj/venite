@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "O LORD our Governor, *",
+              "halfverse": "how exalted is your Name in all the world!",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "your majesty is praised above the heavens.",
+              "number": "2",
+              "verse": "Out of the mouths of infants and children *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "verse": "You have set up a stronghold against your adversaries, *",
+              "type": "psalm-verse",
+              "halfverse": "to quell the enemy and the avenger."
+            },
+            {
+              "number": "4",
+              "halfverse": "the moon and the stars you have set in their courses,",
+              "verse": "When I consider your heavens, the work of your fingers, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "What is man that you should be mindful of him? *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "the son of man that you should seek him out?"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You have made him but little lower than the angels; *",
+              "number": "6",
+              "halfverse": "you adorn him with glory and honor;"
+            },
+            {
+              "verse": "You give him mastery over the works of your hands; *",
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "you put all things under his feet:"
+            },
+            {
+              "number": "8",
+              "halfverse": "even the wild beasts of the field,",
+              "verse": "All sheep and oxen, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and whatsoever walks in the paths of the sea.",
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "The birds of the air, the fish of the sea, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "how exalted is you Name in all the world!",
+              "verse": "O LORD our Governor, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "hidden": false,
+      "label": "Psalm 8",
+      "category": ["Psalm"],
+      "slug": "psalm_8",
+      "version_label": null,
+      "language": "en",
+      "type": "psalm",
+      "metadata": {
+        "latinname": "Domine, Dominus noster",
+        "omit_gloria": false,
+        "number": "8",
+        "localname": "Psalm 8",
+        "omit_antiphon": false
+      },
+      "version": "bcp1979",
+      "style": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 592",
+        "api": "https://www.venite.app/api"
+      }
+    }
+  ]
+}

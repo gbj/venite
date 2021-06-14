@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 749"
+      },
+      "type": "psalm",
+      "label": "Psalm 108",
+      "citation": null,
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "I will sing and make melody.",
+              "verse": "My heart is firmly fixed, O God, my heart is fixed; *"
+            },
+            {
+              "verse": "Wake up, my spirit;\nawake, lute and harp; *",
+              "number": "2",
+              "halfverse": "I myself will waken the dawn.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I will sing praises to you among the nations.",
+              "verse": "I will confess you among the peoples, O LORD; *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "halfverse": "and your faithfulness reaches to the clouds.",
+              "type": "psalm-verse",
+              "verse": "For your loving-kindness is greater than the heavens, *"
+            },
+            {
+              "halfverse": "and your glory over all the earth.",
+              "type": "psalm-verse",
+              "verse": "Exalt yourself above the heavens, O God, *",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "So that those who are dear to you may be delivered, *",
+              "number": "6",
+              "halfverse": "save with your right hand and answer me."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "verse": "God spoke from his holy place and said, *",
+              "halfverse": "“I will exult and parcel out Shechem;\n I will divide the valley of Succoth."
+            },
+            {
+              "verse": "Gilead is mine and Manasseh is mine; *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "Ephraim is my helmet and Judah my scepter."
+            },
+            {
+              "halfverse": "and over Philistia will I shout in triumph.”",
+              "type": "psalm-verse",
+              "verse": "Moab is my washbasin,\non Edom I throw down my sandal to claim it, *",
+              "number": "9"
+            },
+            {
+              "halfverse": "who will bring me into Edom?",
+              "verse": "Who will lead me into the strong city? *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "verse": "Have you not cast us off, O God? *",
+              "halfverse": "you no longer go out, O God, with our armies.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for vain is the help of man.",
+              "verse": "Grant us your help against the enemy, *",
+              "number": "12"
+            },
+            {
+              "verse": "With God we will do valiant deeds, *",
+              "number": "13",
+              "halfverse": "and he shall tread our enemies under foot.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 108",
+        "number": "108",
+        "latinname": "Paratum cor meum"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "version": "bcp1979",
+      "style": "psalm",
+      "slug": "psalm_108"
+    }
+  ]
+}

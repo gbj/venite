@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "version": "bcp1979",
+      "label": "Psalm 74",
+      "language": "en",
+      "version_label": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 689"
+      },
+      "category": ["Psalm"],
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "O God, why have you utterly cast us off? *",
+              "halfverse": "why is your wrath so hot against the sheep of your pasture?",
+              "number": "1"
+            },
+            {
+              "halfverse": "the tribe you redeemed to be your inheritance,\n and Mount Zion where you dwell.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "Remember your congregation that you purchased long ago, *"
+            },
+            {
+              "halfverse": "the enemy has laid waste everything in your sanctuary.",
+              "verse": "Turn your steps toward the endless ruins; *",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "halfverse": "they set up their banners as tokens of victory.",
+              "number": "4",
+              "verse": "Your adversaries roared in your holy place; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they broke down all your carved work with hatchets and hammers.",
+              "type": "psalm-verse",
+              "verse": "They were like men coming up with axes to a grove of trees; *",
+              "number": "5"
+            },
+            {
+              "verse": "They set fire to your holy place; *",
+              "type": "psalm-verse",
+              "halfverse": "they defiled the dwelling-place of your Name\n and razed it to the ground.",
+              "number": "6"
+            },
+            {
+              "halfverse": "They burned down all the meeting-places of God in the land.",
+              "type": "psalm-verse",
+              "number": "7",
+              "verse": "They said to themselves, “Let us destroy them altogether.” *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "There are no signs for us to see;\nthere is no prophet left; *",
+              "number": "8",
+              "halfverse": "there is not one among us who knows how long."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "How long, O God, will the adversary scoff? *",
+              "halfverse": "will the enemy blaspheme your Name for ever?",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Why do you draw back your hand? *",
+              "number": "10",
+              "halfverse": "why is your right hand hidden in your bosom?"
+            },
+            {
+              "number": "11",
+              "verse": "Yet God is my King from ancient times, *",
+              "halfverse": "victorious in the midst of the earth.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and shattered the heads of the dragons upon the waters;",
+              "type": "psalm-verse",
+              "number": "12",
+              "verse": "You divided the sea by your might *"
+            },
+            {
+              "verse": "You crushed the heads of Leviathan *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "and gave him to the people of the desert for food."
+            },
+            {
+              "verse": "You split open spring and torrent; *",
+              "halfverse": "you dried up ever-flowing rivers.",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you established the moon and the sun.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "Yours is the day, yours also the night; *"
+            },
+            {
+              "verse": "You fixed all the boundaries of the earth; *",
+              "type": "psalm-verse",
+              "halfverse": "you made both summer and winter.",
+              "number": "16"
+            },
+            {
+              "verse": "Remember, O LORD, how the enemy scoffed, *",
+              "type": "psalm-verse",
+              "halfverse": "how a foolish people despised your Name.",
+              "number": "17"
+            },
+            {
+              "number": "18",
+              "halfverse": "never forget the lives of your poor.",
+              "verse": "Do not hand over the life of your dove to wild beasts; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "19",
+              "verse": "Look upon your covenant; *",
+              "halfverse": "the dark places of the earth are haunts of violence."
+            },
+            {
+              "halfverse": "let the poor and needy praise your Name.",
+              "number": "20",
+              "type": "psalm-verse",
+              "verse": "Let not the oppressed turn away ashamed; *"
+            },
+            {
+              "number": "21",
+              "halfverse": "remember how fools revile you all day long.",
+              "type": "psalm-verse",
+              "verse": "Arise, O God, maintain your cause; *"
+            },
+            {
+              "verse": "Forget not the clamor of your adversaries, *",
+              "halfverse": "the unending tumult of those who rise up against you.",
+              "number": "22",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "slug": "psalm_74",
+      "type": "psalm",
+      "citation": null,
+      "metadata": {
+        "number": "74",
+        "latinname": "Ut quid, Deus?",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 74"
+      }
+    }
+  ]
+}

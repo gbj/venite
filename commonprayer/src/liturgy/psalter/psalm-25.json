@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "25",
+        "omit_gloria": false,
+        "localname": "Psalm 25",
+        "latinname": "Ad te, Domine, levavi"
+      },
+      "language": "en",
+      "citation": null,
+      "slug": "psalm_25",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "let me not be humiliated,\n nor let my enemies triumph over me.",
+              "verse": "To you, O LORD, I lift up my soul;\nmy God, I put my trust in you; *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let the treacherous be disappointed in their schemes.",
+              "verse": "Let none who look to you be put to shame; *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and teach me your paths.",
+              "verse": "Show me your ways, O LORD, *"
+            },
+            {
+              "verse": "Lead me in your truth and teach me, *",
+              "type": "psalm-verse",
+              "halfverse": "for you are the God of my salvation;\n in you have I trusted all the day long.",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "Remember, O LORD, your compassion and love, *",
+              "halfverse": "for they are from everlasting."
+            },
+            {
+              "halfverse": "remember me according to your love\n and for the sake of your goodness, O LORD.",
+              "type": "psalm-verse",
+              "verse": "Remember not the sins of my youth and my transgressions; *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "halfverse": "therefore he teaches sinners in his way.",
+              "verse": "Gracious and upright is the LORD; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He guides the humble in doing right *",
+              "halfverse": "and teaches his way to the lowly.",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "to those who keep his covenant and his testimonies.",
+              "verse": "All the paths of the LORD are love and faithfulness *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "forgive my sin, for it is great.",
+              "verse": "For your Name’s sake, O LORD, *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "verse": "Who are they who fear the LORD? *",
+              "type": "psalm-verse",
+              "halfverse": "he will teach them the way that they should choose.",
+              "number": "11"
+            },
+            {
+              "halfverse": "and their offspring shall inherit the land.",
+              "verse": "They shall dwell in prosperity, *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and will show them his covenant.",
+              "verse": "The LORD is a friend to those who fear him *",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for he shall pluck my feet out of the net.",
+              "type": "psalm-verse",
+              "number": "14",
+              "verse": "My eyes are ever looking to the LORD, *"
+            },
+            {
+              "number": "15",
+              "verse": "Turn to me and have pity on me, *",
+              "halfverse": "for I am left alone and in misery.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "The sorrows of my heart have increased; *",
+              "halfverse": "bring me out of my troubles."
+            },
+            {
+              "halfverse": "and forgive me all my sin.",
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "Look upon my adversity and misery *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and they bear a violent hatred against me.",
+              "verse": "Look upon my enemies, for they are many, *",
+              "number": "18"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let me not be put to shame, for I have trusted in you.",
+              "verse": "Protect my life and deliver me; *",
+              "number": "19"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let integrity and uprightness preserve me, *",
+              "halfverse": "for my hope has been in you.",
+              "number": "20"
+            },
+            {
+              "verse": "Deliver Israel, O God, *",
+              "number": "21",
+              "type": "psalm-verse",
+              "halfverse": "out of all his troubles."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 614",
+        "api": "https://www.venite.app/api"
+      },
+      "version_label": null,
+      "label": "Psalm 25",
+      "style": "psalm"
+    }
+  ]
+}

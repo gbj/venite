@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "version": "bcp1979",
+      "style": "psalm",
+      "hidden": false,
+      "source": {
+        "citation": "p. 667",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "slug": "psalm_60",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "you have been angry;\n oh, take us back to you again.",
+              "verse": "O God, you have cast us off and broken us; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You have shaken the earth and split it open; *",
+              "halfverse": "repair the cracks in it, for it totters.",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have given us wine that makes us stagger.",
+              "number": "3",
+              "verse": "You have made your people know hardship; *"
+            },
+            {
+              "halfverse": "to be a refuge from the power of the bow.",
+              "number": "4",
+              "verse": "You have set up a banner for those who fear you, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Save us by your right hand and answer us, *",
+              "type": "psalm-verse",
+              "halfverse": "that those who are dear to you may be delivered.",
+              "number": "5"
+            },
+            {
+              "halfverse": "“I will exult and parcel out Shechem;\n  I will divide the valley of Succoth.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "God spoke from his holy place and said: *"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "Ephraim is my helmet and Judah my scepter.",
+              "verse": "Gilead is mine and Manasseh is mine; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and over Philistia will I shout in triumph.”",
+              "verse": "Moab is my wash-basin,\non Edom I throw down my sandal to claim it, *",
+              "number": "8"
+            },
+            {
+              "halfverse": "who will bring me to Edom?",
+              "verse": "Who will lead me into the strong city? *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you no longer go out, O God, with our armies.",
+              "number": "10",
+              "verse": "Have you not cast us off, O God? *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Grant us your help against the enemy, *",
+              "type": "psalm-verse",
+              "halfverse": "for vain is the help of man.",
+              "number": "11"
+            },
+            {
+              "verse": "With God we will do valiant deeds, *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "and he shall tread our enemies under foot."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "citation": null,
+      "label": "Psalm 60",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Deus, repulisti nos",
+        "omit_gloria": false,
+        "number": "60",
+        "localname": "Psalm 60"
+      }
+    }
+  ]
+}

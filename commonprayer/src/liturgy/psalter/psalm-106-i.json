@@ -1,0 +1,146 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "source": {
+        "citation": "p. 741",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "type": "psalm",
+      "label": "Psalm 106: Part I",
+      "citation": null,
+      "lastRevision": 1,
+      "hidden": false,
+      "metadata": {
+        "omit_gloria": false,
+        "number": "106",
+        "omit_antiphon": false,
+        "localname": "Psalm 106: Part I",
+        "insert_seasonal_antiphon": false,
+        "latinname": "Confitemini Domino",
+        "changeable": false
+      },
+      "category": ["Psalm"],
+      "language": "en",
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "for his mercy endures for ever.",
+              "verse": "Hallelujah!\nGive thanks to the LORD, for he is good, *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "or show forth all his praise?",
+              "verse": "Who can declare the mighty acts of the LORD *"
+            },
+            {
+              "halfverse": "and always do what is right!",
+              "type": "psalm-verse",
+              "verse": "Happy are those who act with justice *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and visit me with your saving help;",
+              "verse": "Remember me, O LORD, with the favor you have for your people, *"
+            },
+            {
+              "verse": "That I may see the prosperity of your elect\nand be glad with the gladness of your people, *",
+              "halfverse": "that I may glory with your inheritance.",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "We have sinned as our forebears did; *",
+              "halfverse": "we have done wrong and dealt wickedly.",
+              "number": "6"
+            },
+            {
+              "verse": "In Egypt they did not consider your marvelous works,\nnor remember the abundance of your love; *",
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "they defied the Most High at the Red Sea."
+            },
+            {
+              "verse": "But he saved them for his Name’s sake, *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "to make his power known."
+            },
+            {
+              "number": "9",
+              "halfverse": "and he led them through the deep as through a desert.",
+              "verse": "He rebuked the Red Sea, and it dried up, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He saved them from the hand of those who hated them *",
+              "number": "10",
+              "halfverse": "and redeemed them from the hand of the enemy.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "not one of them was left.",
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "The waters covered their oppressors; *"
+            },
+            {
+              "number": "12",
+              "halfverse": "and sang him songs of praise.",
+              "verse": "Then they believed his words *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "But they soon forgot his deeds *",
+              "halfverse": "and did not wait for his counsel."
+            },
+            {
+              "number": "14",
+              "halfverse": "and they put God to the test in the desert.",
+              "type": "psalm-verse",
+              "verse": "A craving seized them in the wilderness, *"
+            },
+            {
+              "number": "15",
+              "halfverse": "but sent leanness into their soul.",
+              "type": "psalm-verse",
+              "verse": "He gave them what they asked, *"
+            },
+            {
+              "number": "16",
+              "verse": "They envied Moses in the camp, *",
+              "type": "psalm-verse",
+              "halfverse": "and Aaron, the holy one of the LORD."
+            },
+            {
+              "verse": "The earth opened and swallowed Dathan *",
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "and covered the company of Abiram."
+            },
+            {
+              "halfverse": "and flames devoured the wicked.",
+              "verse": "Fire blazed up against their company, *",
+              "type": "psalm-verse",
+              "number": "18"
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_106_i",
+      "version": "bcp1979"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "do not be jealous of those who do wrong.",
+              "verse": "Do not fret yourself because of evildoers; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For they shall soon wither like the grass, *",
+              "type": "psalm-verse",
+              "halfverse": "and like the green grass fade away.",
+              "number": "2"
+            },
+            {
+              "halfverse": "dwell in the land and feed on its riches.",
+              "verse": "Put your trust in the LORD and do good; *",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "verse": "Take delight in the LORD, *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and he shall give you your heart’s desire."
+            },
+            {
+              "halfverse": "and he will bring it to pass.",
+              "type": "psalm-verse",
+              "verse": "Commit your way to the LORD and put your trust in him, *",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your just dealing as the noonday.",
+              "verse": "He will make your righteousness as clear as the light *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "and wait patiently for him.",
+              "verse": "Be still before the LORD *"
+            },
+            {
+              "halfverse": "the one who succeeds in evil schemes.",
+              "number": "8",
+              "verse": "Do not fret yourself over the one who prospers, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "do not fret yourself; it leads only to evil.",
+              "verse": "Refrain from anger, leave rage alone; *",
+              "number": "9"
+            },
+            {
+              "halfverse": "but those who wait upon the LORD shall possess the land.",
+              "verse": "For evildoers shall be cut off, *",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you shall search out their place, but they will not be there.",
+              "verse": "In a little while the wicked shall be no more; *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "they will delight in abundance of peace.",
+              "type": "psalm-verse",
+              "number": "12",
+              "verse": "But the lowly shall possess the land; *"
+            },
+            {
+              "verse": "The wicked plot against the righteous *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "and gnash at them with their teeth."
+            },
+            {
+              "verse": "The Lord laughs at the wicked, *",
+              "type": "psalm-verse",
+              "halfverse": "because he sees that their day will come.",
+              "number": "14"
+            },
+            {
+              "halfverse": "to slaughter those who are upright in their ways.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "The wicked draw their sword and bend their bow\nto strike down the poor and needy, *"
+            },
+            {
+              "halfverse": "and their bow shall be broken.",
+              "type": "psalm-verse",
+              "verse": "Their sword shall go through their own heart, *",
+              "number": "16"
+            },
+            {
+              "number": "17",
+              "halfverse": "is better than great riches of the wicked.",
+              "type": "psalm-verse",
+              "verse": "The little that the righteous has *"
+            },
+            {
+              "verse": "For the power of the wicked shall be broken, *",
+              "number": "18",
+              "halfverse": "but the LORD upholds the righteous.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 633"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "citation": null,
+      "label": "Psalm 37: Part I",
+      "category": ["Psalm"],
+      "language": "en",
+      "slug": "psalm_37_i",
+      "version": "bcp1979",
+      "version_label": null,
+      "metadata": {
+        "localname": "Psalm 37: Part I",
+        "omit_gloria": false,
+        "latinname": "Noli aemulari",
+        "number": "37",
+        "omit_antiphon": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 18: Part II",
+        "omit_antiphon": false,
+        "latinname": "Et retribuet mihi",
+        "number": "18"
+      },
+      "source": {
+        "citation": "p. 604",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "hidden": false,
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "language": "en",
+      "label": "Psalm 18: Part II",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "because my hands were clean he rewarded me;",
+              "verse": "The LORD rewarded me because of my righteous dealing; *",
+              "type": "psalm-verse",
+              "number": "21"
+            },
+            {
+              "halfverse": "and have not offended against my God;",
+              "type": "psalm-verse",
+              "verse": "For I have kept the ways of the LORD *",
+              "number": "22"
+            },
+            {
+              "halfverse": "and his decrees I have not put away from me;",
+              "verse": "For all his judgments are before my eyes, *",
+              "type": "psalm-verse",
+              "number": "23"
+            },
+            {
+              "halfverse": "and have kept myself from iniquity;",
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "For I have been blameless with him *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "25",
+              "halfverse": "because of the cleanness of my hands in his sight.",
+              "verse": "Therefore the LORD rewarded me according to my righteous dealing, *"
+            },
+            {
+              "halfverse": "with the forthright you show yourself forthright.",
+              "type": "psalm-verse",
+              "verse": "With the faithful you show yourself faithful, O God; *",
+              "number": "26"
+            },
+            {
+              "number": "27",
+              "type": "psalm-verse",
+              "verse": "With the pure you show yourself pure, *",
+              "halfverse": "but with the crooked you are wily."
+            },
+            {
+              "number": "28",
+              "type": "psalm-verse",
+              "halfverse": "but you will humble the haughty eyes.",
+              "verse": "You will save a lowly people, *"
+            },
+            {
+              "halfverse": "my God, you make my darkness bright.",
+              "number": "29",
+              "type": "psalm-verse",
+              "verse": "You, O LORD, are my lamp; *"
+            },
+            {
+              "number": "30",
+              "type": "psalm-verse",
+              "verse": "With you I will break down an enclosure; *",
+              "halfverse": "with the help of my God I will scale any wall."
+            },
+            {
+              "halfverse": "he is a shield to all who trust in him.",
+              "number": "31",
+              "type": "psalm-verse",
+              "verse": "As for God, his ways are perfect;\nthe words of the LORD are tried in the fire; *"
+            },
+            {
+              "verse": "For who is God, but the LORD? *",
+              "number": "32",
+              "type": "psalm-verse",
+              "halfverse": "who is the Rock, except our God?"
+            },
+            {
+              "verse": "It is God who girds me about with strength *",
+              "halfverse": "and makes my way secure.",
+              "number": "33",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and lets me stand firm on the heights.",
+              "type": "psalm-verse",
+              "verse": "He makes me sure-footed like a deer *",
+              "number": "34"
+            },
+            {
+              "halfverse": "and my arms for bending even a bow of bronze.",
+              "type": "psalm-verse",
+              "verse": "He trains my hands for battle *",
+              "number": "35"
+            },
+            {
+              "halfverse": "your right hand also sustains me;\n your loving care makes me great.",
+              "number": "36",
+              "type": "psalm-verse",
+              "verse": "You have given me your shield of victory; *"
+            },
+            {
+              "halfverse": "and my ankles do not give way.",
+              "number": "37",
+              "type": "psalm-verse",
+              "verse": "You lengthen my stride beneath me, *"
+            },
+            {
+              "halfverse": "I will not turn back till I have destroyed them.",
+              "type": "psalm-verse",
+              "verse": "I pursue my enemies and overtake them; *",
+              "number": "38"
+            },
+            {
+              "verse": "I strike them down, and they cannot rise; *",
+              "halfverse": "they fall defeated at my feet.",
+              "number": "39",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have cast down my adversaries beneath me;\n you have put my enemies to flight.",
+              "verse": "You have girded me with strength for the battle; *",
+              "number": "40"
+            },
+            {
+              "verse": "I destroy those who hate me;\nthey cry out, but there is none to help them; *",
+              "type": "psalm-verse",
+              "halfverse": "they cry to the LORD, but he does not answer.",
+              "number": "41"
+            },
+            {
+              "number": "42",
+              "verse": "I beat them small like dust before the wind; *",
+              "type": "psalm-verse",
+              "halfverse": "I trample them like mud in the streets."
+            },
+            {
+              "number": "43",
+              "verse": "You deliver me from the strife of the peoples; *",
+              "type": "psalm-verse",
+              "halfverse": "you put me at the head of the nations."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "44",
+              "halfverse": "strangers will cringe before me.",
+              "verse": "A people I have not known shall serve me;\nno sooner shall they hear than they shall obey me; *"
+            },
+            {
+              "verse": "The foreign peoples will lose heart; *",
+              "number": "45",
+              "halfverse": "they shall come trembling out of their strongholds.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "Exalted is the God of my salvation!",
+              "type": "psalm-verse",
+              "verse": "The LORD lives!  Blessed is my Rock! *",
+              "number": "46"
+            },
+            {
+              "halfverse": "and cast down the peoples beneath me.",
+              "verse": "He is the God who gave me victory *",
+              "type": "psalm-verse",
+              "number": "47"
+            },
+            {
+              "verse": "You rescued me from the fury of my enemies;\nyou exalted me above those who rose against me; *",
+              "number": "48",
+              "type": "psalm-verse",
+              "halfverse": "you saved me from my deadly foe."
+            },
+            {
+              "verse": "Therefore will I extol you among the nations, O LORD, *",
+              "number": "49",
+              "halfverse": "and sing praises to your Name.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "50",
+              "type": "psalm-verse",
+              "halfverse": "he shows loving-kindness to his anointed,\n to David and his descendants for ever.",
+              "verse": "He multiplies the victories of his king; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "style": "psalm",
+      "slug": "psalm_18_ii"
+    }
+  ]
+}

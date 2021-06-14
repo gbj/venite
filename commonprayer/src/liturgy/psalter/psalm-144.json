@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 800",
+        "source": "bcp1979"
+      },
+      "slug": "psalm_144",
+      "type": "psalm",
+      "version_label": null,
+      "citation": null,
+      "version": "bcp1979",
+      "language": "en",
+      "style": "psalm",
+      "hidden": false,
+      "category": ["Psalm"],
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "Blessed be the LORD my rock! *",
+              "halfverse": "who trains my hands to fight and my fingers to battle;"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "my shield in whom I trust,\n who subdues the peoples under me.",
+              "verse": "My help and my fortress, my stronghold and my deliverer, *",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "mere mortals that you should think of us?",
+              "verse": "O LORD, what are we that you should care for us? *",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "halfverse": "our days are like a passing shadow.",
+              "verse": "We are like a puff of wind; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "touch the mountains, and they shall smoke.",
+              "verse": "Bow your heavens, O LORD, and come down; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "shoot out your arrows and rout them.",
+              "number": "6",
+              "verse": "Hurl the lightning and scatter them; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "verse": "Stretch out your hand from on high; *",
+              "type": "psalm-verse",
+              "halfverse": "rescue me and deliver me from the great waters,\n from the hand of foreign peoples,"
+            },
+            {
+              "number": "8",
+              "halfverse": "and whose right hand is raised in falsehood.",
+              "type": "psalm-verse",
+              "verse": "Whose mouths speak deceitfully *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "O God, I will sing to you a new song; *",
+              "halfverse": "I will play to you on a ten-stringed lyre."
+            },
+            {
+              "verse": "You give victory to kings *",
+              "number": "10",
+              "halfverse": "and have rescued David your servant.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and deliver me from the hand of foreign peoples,",
+              "verse": "Rescue me from the hurtful sword *",
+              "number": "11"
+            },
+            {
+              "verse": "Whose mouths speak deceitfully *",
+              "number": "12",
+              "halfverse": "and whose right hand is raised in falsehood.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and our daughters like sculptured corners of a palace.",
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "May our sons be like plants well nurtured from their youth, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "14",
+              "verse": "May our barns be filled to overflowing with all manner of crops; *",
+              "halfverse": "may the flocks in our pastures increase by thousands and tens of thousands;\n may our cattle be fat and sleek."
+            },
+            {
+              "halfverse": "no wailing in the public squares.",
+              "number": "15",
+              "verse": "May there be no breaching of the walls, no going into exile, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Happy are the people of whom this is so! *",
+              "halfverse": "happy are the people whose God is the LORD!",
+              "number": "16"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Benedictus Dominus",
+        "number": "144",
+        "omit_gloria": false,
+        "localname": "Psalm 144"
+      },
+      "label": "Psalm 144"
+    }
+  ]
+}

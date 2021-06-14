@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "type": "psalm",
+      "version": "bcp1979",
+      "style": "psalm",
+      "slug": "psalm_67",
+      "label": "Psalm 67",
+      "hidden": false,
+      "version_label": null,
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "May God be merciful to us and bless us, *",
+              "type": "psalm-verse",
+              "halfverse": "show us the light of his countenance and come to us.",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "Let your ways be known upon earth, *",
+              "halfverse": "your saving health among all nations."
+            },
+            {
+              "halfverse": "let all the peoples praise you.",
+              "type": "psalm-verse",
+              "verse": "Let the peoples praise you, O God; *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for you judge the peoples with equity\n and guide all the nations upon earth.",
+              "verse": "Let the nations be glad and sing for joy, *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let all the peoples praise you.",
+              "number": "5",
+              "verse": "Let the peoples praise you, O God; *"
+            },
+            {
+              "number": "6",
+              "verse": "The earth has brought forth her increase; *",
+              "halfverse": "may God, our own God, give us his blessing.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "May God give us his blessing, *",
+              "number": "7",
+              "halfverse": "and may all the ends of the earth stand in awe of him."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "metadata": {
+        "latinname": "Deus misereatur",
+        "localname": "Psalm 67",
+        "number": "67",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 675"
+      }
+    }
+  ]
+}

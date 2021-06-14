@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "language": "en",
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Happy are they who consider the poor and needy! *",
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "the LORD will deliver them in the time of trouble."
+            },
+            {
+              "number": "2",
+              "halfverse": "he does not hand them over to the will of their enemies.",
+              "type": "psalm-verse",
+              "verse": "The LORD preserves them and keeps them alive,\nso that they may be happy in the land; *"
+            },
+            {
+              "verse": "The LORD sustains them on their sickbed *",
+              "halfverse": "and ministers to them in their illness.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I said, “LORD, be merciful to me; *",
+              "number": "4",
+              "halfverse": "heal me, for I have sinned against you.”"
+            },
+            {
+              "verse": "My enemies are saying wicked things about me: *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "“When will he die, and his name perish?”"
+            },
+            {
+              "halfverse": "their heart collects false rumors;\n they go outside and spread them.",
+              "verse": "Even if they come to see me, they speak empty words; *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "verse": "All my enemies whisper together about me *",
+              "number": "7",
+              "halfverse": "and devise evil against me.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he has taken to his bed and will never get up again.”",
+              "verse": "“A deadly thing,” they say, “has fastened on him; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "has lifted up his heel and turned against me.",
+              "verse": "Even my best friend, whom I trusted,\nwho broke bread with me, *",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "But you, O LORD, be merciful to me and raise me up, *",
+              "number": "10",
+              "halfverse": "and I shall repay them."
+            },
+            {
+              "halfverse": "that my enemy does not triumph over me.",
+              "verse": "By this I know you are pleased with me, *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "In my integrity you hold me fast, *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "and shall set me before your face for ever."
+            },
+            {
+              "halfverse": "from age to age. Amen. Amen.",
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "Blessed be the LORD God of Israel, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 641",
+        "source": "bcp1979"
+      },
+      "slug": "psalm_41",
+      "version_label": null,
+      "style": "psalm",
+      "category": ["Psalm"],
+      "hidden": false,
+      "type": "psalm",
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "41",
+        "latinname": "Beatus qui intelligit",
+        "localname": "Psalm 41",
+        "omit_gloria": false
+      },
+      "label": "Psalm 41"
+    }
+  ]
+}

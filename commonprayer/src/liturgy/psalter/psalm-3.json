@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 3",
+        "latinname": "Domine, quid multiplicati",
+        "number": "3",
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "language": "en",
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "how many there are who rise up against me!",
+              "verse": "LORD, how many adversaries I have! *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "“There is no help for him in his God.”",
+              "verse": "How many there are who say of me, *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "you are my glory, the one who lifts up my head.",
+              "verse": "But you, O LORD, are a shield about me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and he answers me from his holy hill;",
+              "verse": "I call aloud upon the LORD, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I lie down and go to sleep; *",
+              "type": "psalm-verse",
+              "halfverse": "I wake again, because the LORD sustains me.",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I do not fear the multitudes of people *",
+              "number": "6",
+              "halfverse": "who set themselves against me all around."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Rise up, O LORD; set me free, O my God; *",
+              "number": "7",
+              "halfverse": "surely, you will strike all my enemies across the face,\n you will break the teeth of the wicked."
+            },
+            {
+              "verse": "Deliverance belongs to the LORD. *",
+              "number": "8",
+              "halfverse": "Your blessing be upon your people!",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "citation": "p. 587",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "slug": "psalm_3",
+      "style": "psalm",
+      "citation": null,
+      "label": "Psalm 3",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "citation": null,
+      "language": "en",
+      "label": "Psalm 94",
+      "slug": "psalm_94",
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Psalm 94",
+        "latinname": "Deus ultionum",
+        "omit_gloria": false,
+        "number": "94"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 722"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "O LORD God of vengeance, *",
+              "type": "psalm-verse",
+              "halfverse": "O God of vengeance, show yourself.",
+              "number": "1"
+            },
+            {
+              "verse": "Rise up, O Judge of the world; *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "give the arrogant their just deserts."
+            },
+            {
+              "verse": "How long shall the wicked, O LORD, *",
+              "type": "psalm-verse",
+              "halfverse": "how long shall the wicked triumph?",
+              "number": "3"
+            },
+            {
+              "halfverse": "all evildoers are full of boasting.",
+              "number": "4",
+              "verse": "They bluster in their insolence; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and afflict your chosen nation.",
+              "number": "5",
+              "verse": "They crush your people, O LORD, *"
+            },
+            {
+              "number": "6",
+              "halfverse": "and put the orphans to death.",
+              "verse": "They murder the widow and the stranger *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the God of Jacob takes no notice.”",
+              "number": "7",
+              "verse": "Yet they say, “The LORD does not see, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "when will you fools understand?",
+              "verse": "Consider well, you dullards among the people; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He that planted the ear, does he not hear? *",
+              "number": "9",
+              "halfverse": "he that formed the eye, does he not see?"
+            },
+            {
+              "verse": "He who admonishes the nations, will he not punish? *",
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "he who teaches all the world, has he no knowledge?"
+            },
+            {
+              "verse": "The LORD knows our human thoughts; *",
+              "number": "11",
+              "halfverse": "how like a puff of wind they are.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "verse": "Happy are they whom you instruct, O Lord! *",
+              "type": "psalm-verse",
+              "halfverse": "whom you teach out of your law;"
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "To give them rest in evil days, *",
+              "halfverse": "until a pit is dug for the wicked."
+            },
+            {
+              "number": "14",
+              "verse": "For the LORD will not abandon his people, *",
+              "type": "psalm-verse",
+              "halfverse": "nor will he forsake his own."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "15",
+              "halfverse": "and all the true of heart will follow it.",
+              "verse": "For judgment will again be just, *"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "Who rose up for me against the wicked? *",
+              "halfverse": "who took my part against the evildoers?"
+            },
+            {
+              "number": "17",
+              "halfverse": "I should soon have dwelt in the land of silence.",
+              "verse": "If the LORD had not come to my help, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "18",
+              "halfverse": "your love, O LORD, upheld me.",
+              "verse": "As often as I said, “My foot has slipped,” *"
+            },
+            {
+              "verse": "When many cares fill my mind, *",
+              "halfverse": "your consolations cheer my soul.",
+              "type": "psalm-verse",
+              "number": "19"
+            },
+            {
+              "verse": "Can a corrupt tribunal have any part with you, *",
+              "halfverse": "one which frames evil into law?",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "21",
+              "halfverse": "and condemn the innocent to death.",
+              "type": "psalm-verse",
+              "verse": "They conspire against the life of the just *"
+            },
+            {
+              "halfverse": "and my God the rock of my trust.",
+              "verse": "But the LORD has become my stronghold, *",
+              "number": "22",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "23",
+              "halfverse": "the LORD our God will destroy them.",
+              "verse": "He will turn their wickedness back upon them\nand destroy them in their own malice; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ]
+}

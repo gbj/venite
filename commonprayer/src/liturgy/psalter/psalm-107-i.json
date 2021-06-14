@@ -1,0 +1,227 @@
+{
+  "data": [
+    {
+      "slug": "psalm_107_i",
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Psalm 107: Part I",
+        "latinname": "Confitemini Domino",
+        "omit_gloria": false,
+        "number": "107"
+      },
+      "version_label": null,
+      "source": {
+        "citation": "p. 746",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "and his mercy endures for ever.",
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "Give thanks to the LORD, for he is good, *"
+            },
+            {
+              "number": "2",
+              "verse": "Let all those whom the LORD has redeemed proclaim *",
+              "halfverse": "that he redeemed them from the hand of the foe.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "3",
+              "halfverse": "from the east and from the west,\n from the north and from the south.",
+              "verse": "He gathered them out of the lands; *"
+            },
+            {
+              "halfverse": "they found no way to a city where they might dwell.",
+              "type": "psalm-verse",
+              "verse": "Some wandered in desert wastes; *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They were hungry and thirsty; *",
+              "number": "5",
+              "halfverse": "their spirits languished within them."
+            },
+            {
+              "halfverse": "and he delivered them from their distress.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "Then they cried to the LORD in their trouble, *"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "to go to a city where they might dwell.",
+              "verse": "He put their feet on a straight path *"
+            },
+            {
+              "halfverse": "and the wonders he does for his children.",
+              "verse": "Let them give thanks to the LORD for his mercy *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and fills the hungry with good things.",
+              "verse": "For he satisfies the thirsty *",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "verse": "Some sat in darkness and deep gloom, *",
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "bound fast in misery and iron;"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Because they rebelled against the words of God *",
+              "halfverse": "and despised the counsel of the Most High.",
+              "number": "11"
+            },
+            {
+              "halfverse": "they stumbled, and there was none to help.",
+              "number": "12",
+              "verse": "So he humbled their spirits with hard labor; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "and he delivered them from their distress.",
+              "verse": "Then they cried to the LORD in their trouble, *"
+            },
+            {
+              "number": "14",
+              "verse": "He led them out of darkness and deep gloom *",
+              "halfverse": "and broke their bonds asunder.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let them give thanks to the LORD for his mercy *",
+              "number": "15",
+              "halfverse": "and the wonders he does for his children.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For he shatters the doors of bronze *",
+              "type": "psalm-verse",
+              "number": "16",
+              "halfverse": "and breaks in two the iron bars."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "17",
+              "halfverse": "they were afflicted because of their sins.",
+              "verse": "Some were fools and took to rebellious ways; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They abhorred all manner of food *",
+              "halfverse": "and drew near to death’s door.",
+              "number": "18"
+            },
+            {
+              "number": "19",
+              "type": "psalm-verse",
+              "verse": "Then they cried to the LORD in their trouble, *",
+              "halfverse": "and he delivered them from their distress."
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "halfverse": "and saved them from the grave.",
+              "verse": "He sent forth his word and healed them *"
+            },
+            {
+              "verse": "Let them give thanks to the LORD for his mercy *",
+              "number": "21",
+              "type": "psalm-verse",
+              "halfverse": "and the wonders he does for his children."
+            },
+            {
+              "verse": "Let them offer a sacrifice of thanksgiving *",
+              "number": "22",
+              "halfverse": "and tell of his acts with shouts of joy.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and plied their trade in deep waters;",
+              "number": "23",
+              "type": "psalm-verse",
+              "verse": "Some went down to the sea in ships *"
+            },
+            {
+              "number": "24",
+              "type": "psalm-verse",
+              "halfverse": "and his wonders in the deep.",
+              "verse": "They beheld the works of the LORD *"
+            },
+            {
+              "number": "25",
+              "type": "psalm-verse",
+              "halfverse": "which tossed high the waves of the sea.",
+              "verse": "Then he spoke, and a stormy wind arose, *"
+            },
+            {
+              "verse": "They mounted up to the heavens and fell back to the depths; *",
+              "number": "26",
+              "halfverse": "their hearts melted because of their peril.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and were at their wits’ end.",
+              "number": "27",
+              "verse": "They reeled and staggered like drunkards *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Then they cried to the LORD in their trouble, *",
+              "halfverse": "and he delivered them from their distress.",
+              "number": "28",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and quieted the waves of the sea.",
+              "verse": "He stilled the storm to a whisper *",
+              "number": "29",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "30",
+              "type": "psalm-verse",
+              "verse": "Then were they glad because of the calm, *",
+              "halfverse": "and he brought them to the harbor they were bound for."
+            },
+            {
+              "halfverse": "and the wonders he does for his children.",
+              "type": "psalm-verse",
+              "number": "31",
+              "verse": "Let them give thanks to the LORD for his mercy *"
+            },
+            {
+              "verse": "Let them exalt him in the congregation of the people *",
+              "number": "32",
+              "halfverse": "and praise him in the council of the elders.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "label": "Psalm 107: Part I",
+      "language": "en",
+      "hidden": false,
+      "citation": null
+    }
+  ]
+}

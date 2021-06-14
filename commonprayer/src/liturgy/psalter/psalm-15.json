@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "label": "Psalm 15",
+      "version_label": null,
+      "version": "bcp1979",
+      "hidden": false,
+      "metadata": {
+        "localname": "Psalm 15",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Domine, quis habitabit?",
+        "number": "15"
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "slug": "psalm_15",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 599"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "LORD, who may dwell in your tabernacle? *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "who may abide upon your holy hill?"
+            },
+            {
+              "number": "2",
+              "halfverse": "who speaks the truth from his heart.",
+              "verse": "Whoever leads a blameless life and does what is right, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "There is no guile upon his tongue;\nhe does no evil to his friend; *",
+              "type": "psalm-verse",
+              "halfverse": "he does not heap contempt upon his neighbor.",
+              "number": "3"
+            },
+            {
+              "halfverse": "but he honors those who fear the LORD.",
+              "verse": "In his sight the wicked is rejected, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "and does not take back his word.",
+              "verse": "He has sworn to do no wrong *"
+            },
+            {
+              "verse": "He does not give his money in hope of gain, *",
+              "number": "6",
+              "halfverse": "nor does he take a bribe against the innocent.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "halfverse": "shall never be overthrown.",
+              "verse": "Whoever does these things *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "citation": null,
+      "style": "psalm"
+    }
+  ]
+}

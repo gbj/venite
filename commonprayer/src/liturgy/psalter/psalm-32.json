@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "and whose sin is put away!",
+              "verse": "Happy are they whose transgressions are forgiven, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "and in whose spirit there is no guile!",
+              "verse": "Happy are they to whom the LORD imputes no guilt, *"
+            },
+            {
+              "verse": "While I held my tongue, my bones withered away, *",
+              "halfverse": "because of my groaning all day long.",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "my moisture was dried up as in the heat of summer.",
+              "verse": "For your hand was heavy upon me day and night; *"
+            },
+            {
+              "verse": "Then I acknowledged my sin to you, *",
+              "type": "psalm-verse",
+              "halfverse": "and did not conceal my guilt.",
+              "number": "5"
+            },
+            {
+              "halfverse": "Then you forgave me the guilt of my sin.",
+              "verse": "I said, “I will confess my transgressions to the LORD.” *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "when the great waters overflow, they shall not reach them.",
+              "verse": "Therefore all the faithful will make their prayers to you in time of trouble; *",
+              "number": "7"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "you surround me with shouts of deliverance.",
+              "verse": "You are my hiding-place;\nyou preserve me from trouble; *"
+            },
+            {
+              "number": "9",
+              "verse": "“I will instruct you and teach you in the way that you should go; *",
+              "halfverse": "I will guide you with my eye.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "who must be fitted with bit and bridle,\n or else they will not stay near you.”",
+              "verse": "Do not be like horse or mule, which have no understanding; *",
+              "number": "10"
+            },
+            {
+              "halfverse": "but mercy embraces those who trust in the LORD.",
+              "verse": "Great are the tribulations of the wicked; *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Be glad, you righteous, and rejoice in the LORD; *",
+              "number": "12",
+              "halfverse": "shout for joy, all who are true of heart."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "category": ["Psalm"],
+      "version_label": null,
+      "type": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Beati quorum",
+        "number": "32",
+        "localname": "Psalm 32"
+      },
+      "hidden": false,
+      "language": "en",
+      "source": {
+        "citation": "p. 624",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "style": "psalm",
+      "slug": "psalm_32",
+      "label": "Psalm 32",
+      "version": "bcp1979"
+    }
+  ]
+}

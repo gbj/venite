@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "because you have given me hope.",
+              "number": "49",
+              "verse": "Remember your word to your servant, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "50",
+              "halfverse": "that your promise gives me life.",
+              "verse": "This is my comfort in my trouble, *"
+            },
+            {
+              "halfverse": "but I have not turned from your law.",
+              "verse": "The proud have derided me cruelly, *",
+              "type": "psalm-verse",
+              "number": "51"
+            },
+            {
+              "halfverse": "O LORD, I take great comfort.",
+              "number": "52",
+              "type": "psalm-verse",
+              "verse": "When I remember your judgments of old, *"
+            },
+            {
+              "halfverse": "because of the wicked who forsake your law.",
+              "number": "53",
+              "verse": "I am filled with a burning rage, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "54",
+              "halfverse": "wherever I have lived as a stranger.",
+              "verse": "Your statutes have been like songs to me *"
+            },
+            {
+              "halfverse": "and dwell upon your law.",
+              "number": "55",
+              "type": "psalm-verse",
+              "verse": "I remember your Name in the night, O LORD, *"
+            },
+            {
+              "number": "56",
+              "verse": "This is how it has been with me, *",
+              "type": "psalm-verse",
+              "halfverse": "because I have kept your commandments."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "slug": "psalm_119_zayin",
+      "category": ["Psalm"],
+      "lastRevision": 3,
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "119",
+        "latinname": "Memor esto verbi tui",
+        "omit_gloria": false,
+        "localname": "Psalm 119: Zayin"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "hidden": false,
+      "label": "Psalm 119: Zayin",
+      "version_label": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 767"
+      }
+    }
+  ]
+}

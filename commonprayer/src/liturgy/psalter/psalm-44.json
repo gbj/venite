@@ -1,0 +1,191 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "latinname": "Deus, auribus",
+        "omit_antiphon": false,
+        "localname": "Psalm 44",
+        "omit_gloria": false,
+        "number": "44"
+      },
+      "type": "psalm",
+      "version_label": null,
+      "slug": "psalm_44",
+      "version": "bcp1979",
+      "label": "Psalm 44",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "We have heard with our ears, O God,\nour forefathers have told us, *",
+              "number": "1",
+              "halfverse": "the deeds you did in their days,\n in the days of old."
+            },
+            {
+              "halfverse": "how you destroyed nations and made your people flourish.",
+              "type": "psalm-verse",
+              "number": "2",
+              "verse": "How with your hand you drove the peoples out\nand planted our forefathers in the land; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but your right hand, your arm, and the light of your countenance,\n because you favored them.",
+              "verse": "For they did not take the land by their sword,\nnor did their arm win the victory for them; *",
+              "number": "3"
+            },
+            {
+              "verse": "You are my King and my God; *",
+              "number": "4",
+              "halfverse": "you command victories for Jacob.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "through your Name we trampled on those who rose up against us.",
+              "number": "5",
+              "verse": "Through you we pushed back our adversaries; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and my sword does not give me the victory.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "For I do not rely on my bow, *"
+            },
+            {
+              "verse": "Surely, you gave us victory over our adversaries *",
+              "halfverse": "and put those who hate us to shame.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Every day we gloried in God, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "and we will praise your Name for ever."
+            },
+            {
+              "halfverse": "and do not go forth with our armies.",
+              "verse": "Nevertheless, you have rejected and humbled us *",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "verse": "You have made us fall back before our adversary, *",
+              "number": "10",
+              "halfverse": "and our enemies have plundered us.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "halfverse": "and have scattered us among the nations.",
+              "verse": "You have made us like sheep to be eaten *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and are making no profit on the sale of them.",
+              "verse": "You are selling your people for a trifle *",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "number": "13",
+              "halfverse": "a mockery and derision to those around us.",
+              "verse": "You have made us the scorn of our neighbors, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You have made us a byword among the nations, *",
+              "halfverse": "a laughing-stock among the peoples.",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "My humiliation is daily before me, *",
+              "number": "15",
+              "type": "psalm-verse",
+              "halfverse": "and shame has covered my face;"
+            },
+            {
+              "verse": "Because of the taunts of the mockers and blasphemers, *",
+              "halfverse": "because of the enemy and avenger.",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "All this has come upon us; *",
+              "type": "psalm-verse",
+              "halfverse": "yet we have not forgotten you,\n nor have we betrayed your covenant.",
+              "number": "17"
+            },
+            {
+              "verse": "Our heart never turned back, *",
+              "number": "18",
+              "halfverse": "nor did our footsteps stray from your path;",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Though you thrust us down into a place of misery, *",
+              "halfverse": "and covered us over with deep darkness.",
+              "number": "19"
+            },
+            {
+              "number": "20",
+              "halfverse": "or stretched out our hands to some strange god,",
+              "type": "psalm-verse",
+              "verse": "If we have forgotten the Name of our God, *"
+            },
+            {
+              "halfverse": "for he knows the secrets of the heart.",
+              "verse": "Will not God find it out? *",
+              "type": "psalm-verse",
+              "number": "21"
+            },
+            {
+              "verse": "Indeed, for your sake we are killed all the day long; *",
+              "halfverse": "we are accounted as sheep for the slaughter.",
+              "number": "22",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Awake, O Lord! why are you sleeping? *",
+              "halfverse": "Arise! do not reject us for ever.",
+              "number": "23"
+            },
+            {
+              "verse": "Why have you hidden your face *",
+              "halfverse": "and forgotten our affliction and oppression?",
+              "number": "24",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "25",
+              "type": "psalm-verse",
+              "verse": "We sink down into the dust; *",
+              "halfverse": "our body cleaves to the ground."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "26",
+              "halfverse": "and save us, for the sake of your steadfast love.",
+              "verse": "Rise up, and help us, *"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "language": "en",
+      "citation": null,
+      "hidden": false,
+      "style": "psalm",
+      "source": {
+        "citation": "p. 645",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      }
+    }
+  ]
+}

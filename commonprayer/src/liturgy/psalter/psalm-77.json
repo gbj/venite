@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "label": "Psalm 77",
+      "language": "en",
+      "version_label": null,
+      "metadata": {
+        "localname": "Psalm 77",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "77",
+        "latinname": "Voce mea ad Dominum"
+      },
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 693",
+        "source": "bcp1979"
+      },
+      "citation": null,
+      "hidden": false,
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "slug": "psalm_77",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "verse": "I will cry aloud to God; *",
+              "type": "psalm-verse",
+              "halfverse": "I will cry aloud, and he will hear me."
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "In the day of my trouble I sought the Lord; *",
+              "halfverse": "my hands were stretched out by night and did not tire;\n I refused to be comforted."
+            },
+            {
+              "number": "3",
+              "verse": "I think of God, I am restless, *",
+              "type": "psalm-verse",
+              "halfverse": "I ponder, and my spirit faints."
+            },
+            {
+              "halfverse": "I am troubled and I cannot speak.",
+              "verse": "You will not let my eyelids close; *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "halfverse": "I remember the years long past;",
+              "type": "psalm-verse",
+              "verse": "I consider the days of old; *",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "I ponder and search my mind.",
+              "verse": "I commune with my heart in the night; *"
+            },
+            {
+              "verse": "Will the Lord cast me off for ever? *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "will he no more show his favor?"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "has his promise failed for evermore?",
+              "number": "8",
+              "verse": "Has his loving-kindness come to an end for ever? *"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "Has God forgotten to be gracious? *",
+              "halfverse": "has he, in his anger, withheld his compassion?"
+            },
+            {
+              "number": "10",
+              "halfverse": "the right hand of the Most High has lost its power.”",
+              "verse": "And I said, “My grief is this: *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I will remember the works of the LORD, *",
+              "halfverse": "and call to mind your wonders of old time.",
+              "number": "11"
+            },
+            {
+              "halfverse": "and ponder your mighty deeds.",
+              "type": "psalm-verse",
+              "verse": "I will meditate on all your acts *",
+              "number": "12"
+            },
+            {
+              "halfverse": "who is so great a god as our God?",
+              "number": "13",
+              "verse": "Your way, O God, is holy; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "14",
+              "halfverse": "and have declared your power among the peoples.",
+              "verse": "You are the God who works wonders *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "By your strength you have redeemed your people, *",
+              "halfverse": "the children of Jacob and Joseph."
+            },
+            {
+              "halfverse": "the very depths were shaken.",
+              "type": "psalm-verse",
+              "number": "16",
+              "verse": "The waters saw you, O God;\nthe waters saw you and trembled; *"
+            },
+            {
+              "halfverse": "your arrows flashed to and fro;",
+              "number": "17",
+              "verse": "The clouds poured out water;\nthe skies thundered; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The sound of your thunder was in the whirlwind;\nyour lightnings lit up the world; *",
+              "halfverse": "the earth trembled and shook.",
+              "type": "psalm-verse",
+              "number": "18"
+            },
+            {
+              "verse": "Your way was in the sea,\nand your paths in the great waters, *",
+              "halfverse": "yet your footsteps were not seen.",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "by the hand of Moses and Aaron.",
+              "verse": "You led your people like a flock *",
+              "number": "20",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "type": "psalm"
+    }
+  ]
+}

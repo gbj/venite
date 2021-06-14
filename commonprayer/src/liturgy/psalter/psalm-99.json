@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "type": "psalm",
+      "version_label": null,
+      "style": "psalm",
+      "slug": "psalm_99",
+      "label": "Psalm 99",
+      "category": ["Psalm"],
+      "source": {
+        "citation": "p. 728",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "he is enthroned upon the cherubim;\n let the earth shake.",
+              "verse": "The LORD is King;\nlet the people tremble; *"
+            },
+            {
+              "halfverse": "he is high above all peoples.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "The LORD is great in Zion; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he is the Holy One.",
+              "verse": "Let them confess his Name, which is great and awesome; *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "“O mighty King, lover of justice,\nyou have established equity; *",
+              "number": "4",
+              "halfverse": "you have executed justice and righteousness in Jacob.”"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he is the Holy One.",
+              "number": "5",
+              "verse": "Proclaim the greatness of the LORD our God\nand fall down before his footstool; *"
+            },
+            {
+              "halfverse": "they called upon the LORD, and he answered them.",
+              "verse": "Moses and Aaron among his priests,\nand Samuel among those who call upon his Name, *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He spoke to them out of the pillar of cloud; *",
+              "halfverse": "they kept his testimonies and the decree that he gave them.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you were a God who forgave them,\n yet punished them for their evil deeds.”",
+              "verse": "“O LORD our God, you answered them indeed; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "halfverse": "for the LORD our God is the Holy One.",
+              "type": "psalm-verse",
+              "verse": "Proclaim the greatness of the LORD our God\nand worship him upon his holy hill; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "number": "99",
+        "omit_gloria": false,
+        "latinname": "Dominus regnavit",
+        "omit_antiphon": false,
+        "localname": "Psalm 99"
+      },
+      "hidden": false,
+      "language": "en"
+    }
+  ]
+}

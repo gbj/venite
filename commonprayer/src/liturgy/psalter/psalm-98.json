@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "citation": null,
+      "hidden": false,
+      "metadata": {
+        "latinname": "Cantate Domino",
+        "omit_gloria": false,
+        "number": "98",
+        "omit_antiphon": false,
+        "localname": "Psalm 98"
+      },
+      "slug": "psalm_98",
+      "style": "psalm",
+      "source": {
+        "citation": "p. 727",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "language": "en",
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Sing to the LORD a new song, *",
+              "number": "1",
+              "halfverse": "for he has done marvelous things.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "has he won for himself the victory.",
+              "number": "2",
+              "verse": "With his right hand and his holy arm *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD has made known his victory; *",
+              "type": "psalm-verse",
+              "halfverse": "his righteousness has he openly shown in the sight of the nations.",
+              "number": "3"
+            },
+            {
+              "verse": "He remembers his mercy and faithfulness to the house of Israel, *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and all the ends of the earth have seen the victory of our God."
+            },
+            {
+              "verse": "Shout with joy to the LORD, all you lands; *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "lift up your voice, rejoice, and sing."
+            },
+            {
+              "verse": "Sing to the LORD with the harp, *",
+              "halfverse": "with the harp and the voice of song.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "With trumpets and the sound of the horn *",
+              "number": "7",
+              "halfverse": "shout with joy before the King, the LORD."
+            },
+            {
+              "number": "8",
+              "verse": "Let the sea make a noise and all that is in it, *",
+              "type": "psalm-verse",
+              "halfverse": "the lands and those who dwell therein."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and let the hills ring out with joy before the LORD,\n when he comes to judge the earth.",
+              "number": "9",
+              "verse": "Let the rivers clap their hands, *"
+            },
+            {
+              "verse": "In righteousness shall he judge the world *",
+              "halfverse": "and the peoples with equity.",
+              "number": "10",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "label": "Psalm 98",
+      "version": "bcp1979",
+      "category": ["Psalm"]
+    }
+  ]
+}

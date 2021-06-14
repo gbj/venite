@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Be joyful in God, all you lands; *",
+              "type": "psalm-verse",
+              "halfverse": "sing the glory of his Name;\n sing the glory of his praise.",
+              "number": "1"
+            },
+            {
+              "halfverse": "because of your great strength your enemies cringe before you.",
+              "type": "psalm-verse",
+              "verse": "Say to God, “How awesome are your deeds! *",
+              "number": "2"
+            },
+            {
+              "halfverse": "sings to you, sings out your Name.”",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "All the earth bows down before you, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "how wonderful he is in his doing toward all people.",
+              "number": "4",
+              "verse": "Come now and see the works of God, *"
+            },
+            {
+              "verse": "He turned the sea into dry land,\nso that they went through the water on foot, *",
+              "number": "5",
+              "halfverse": "and there we rejoiced in him.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "In his might he rules for ever;\nhis eyes keep watch over the nations; *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "let no rebel rise up against him."
+            },
+            {
+              "halfverse": "make the voice of his praise to be heard;",
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "Bless our God, you peoples; *"
+            },
+            {
+              "halfverse": "and will not allow our feet to slip.",
+              "number": "8",
+              "verse": "Who holds our souls in life, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have tried us just as silver is tried.",
+              "number": "9",
+              "verse": "For you, O God, have proved us; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You brought us into the snare; *",
+              "halfverse": "you laid heavy burdens upon our backs.",
+              "number": "10"
+            },
+            {
+              "halfverse": "but you brought us out into a place of refreshment.",
+              "verse": "You let enemies ride over our heads;\nwe went through fire and water; *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will enter your house with burnt-offerings\nand will pay you my vows, *",
+              "type": "psalm-verse",
+              "halfverse": "which I promised with my lips\n and spoke with my mouth when I was in trouble.",
+              "number": "12"
+            },
+            {
+              "verse": "I will offer you sacrifices of fat beasts\nwith the smoke of rams; *",
+              "type": "psalm-verse",
+              "halfverse": "I will give you oxen and goats.",
+              "number": "13"
+            },
+            {
+              "number": "14",
+              "type": "psalm-verse",
+              "verse": "Come and listen, all you who fear God, *",
+              "halfverse": "and I will tell you what he has done for me."
+            },
+            {
+              "halfverse": "and his praise was on my tongue.",
+              "verse": "I called out to him with my mouth, *",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "the Lord would not have heard me;",
+              "verse": "If I had found evil in my heart, *"
+            },
+            {
+              "halfverse": "he has attended to the voice of my prayer.",
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "But in truth God has heard me; *"
+            },
+            {
+              "verse": "Blessed be God, who has not rejected my prayer, *",
+              "halfverse": "nor withheld his love from me.",
+              "number": "18",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "latinname": "Jubilate Deo",
+        "omit_gloria": false,
+        "localname": "Psalm 66",
+        "number": "66",
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "type": "psalm",
+      "version": "bcp1979",
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 673"
+      },
+      "style": "psalm",
+      "language": "en",
+      "hidden": false,
+      "label": "Psalm 66",
+      "category": ["Psalm"],
+      "slug": "psalm_66"
+    }
+  ]
+}

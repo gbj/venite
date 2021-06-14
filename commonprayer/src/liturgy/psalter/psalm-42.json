@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "label": "Psalm 42",
+      "type": "psalm",
+      "slug": "psalm_42",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "42",
+        "latinname": "Quemadmodum",
+        "localname": "Psalm 42"
+      },
+      "language": "en",
+      "hidden": false,
+      "citation": null,
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "As the deer longs for the water-brooks, *",
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "so longs my soul for you, O God."
+            },
+            {
+              "number": "2",
+              "halfverse": "when shall I come to appear before the presence of God?",
+              "verse": "My soul is athirst for God, athirst for the living God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "My tears have been my food day and night, *",
+              "type": "psalm-verse",
+              "halfverse": "while all day long they say to me,\n “Where now is your God?”",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I pour out my soul when I think on these things; *",
+              "number": "4",
+              "halfverse": "how I went with the multitude and led them into the house of God,"
+            },
+            {
+              "verse": "With the voice of praise and thanksgiving, *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "among those who keep holy-day."
+            },
+            {
+              "halfverse": "and why are you so disquieted within me?",
+              "number": "6",
+              "verse": "Why are you so full of heaviness, O my soul? *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for I will yet give thanks to him,\n who is the help of my countenance, and my God.",
+              "verse": "Put your trust in God; *",
+              "number": "7"
+            },
+            {
+              "halfverse": "therefore I will remember you from the land of Jordan,\n and from the peak of Mizar among the heights of Hermon.",
+              "type": "psalm-verse",
+              "number": "8",
+              "verse": "My soul is heavy within me; *"
+            },
+            {
+              "number": "9",
+              "halfverse": "all your rapids and floods have gone over me.",
+              "verse": "One deep calls to another in the noise of your cataracts; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "The LORD grants his loving-kindness in the daytime; *",
+              "halfverse": "in the night season his song is with me,\n a prayer to the God of my life."
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "and why do I go so heavily while the enemy oppresses me?”",
+              "verse": "I will say to the God of my strength,\n“Why have you forgotten me? *"
+            },
+            {
+              "verse": "While my bones are being broken, *",
+              "number": "12",
+              "halfverse": "my enemies mock me to my face;",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "halfverse": "and say to me, “Where now is your God?”",
+              "verse": "All day long they mock me *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Why are you so full of heaviness, O my soul? *",
+              "halfverse": "and why are you so disquieted within me?",
+              "type": "psalm-verse",
+              "number": "14"
+            },
+            {
+              "number": "15",
+              "halfverse": "for I will yet give thanks to him,\n who is the help of my countenance, and my God.",
+              "type": "psalm-verse",
+              "verse": "Put your trust in God; *"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 643"
+      },
+      "version": "bcp1979",
+      "category": ["Psalm"]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "label": "Psalm 137",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "when we remembered you, O Zion.",
+              "verse": "By the waters of Babylon we sat down and wept, *",
+              "number": "1"
+            },
+            {
+              "verse": "As for our harps, we hung them up *",
+              "number": "2",
+              "halfverse": "on the trees in the midst of that land.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "halfverse": "“Sing us one of the songs of Zion.”",
+              "verse": "For those who led us away captive asked us for a song,\nand our oppressors called for mirth: *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "upon an alien soil?",
+              "verse": "How shall we sing the LORD’S song *",
+              "number": "4"
+            },
+            {
+              "halfverse": "let my right hand forget its skill.",
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "If I forget you, O Jerusalem, *"
+            },
+            {
+              "verse": "Let my tongue cleave to the roof of my mouth\nif I do not remember you, *",
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "if I do not set Jerusalem above my highest joy."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Remember the day of Jerusalem, O LORD,\nagainst the people of Edom, *",
+              "number": "7",
+              "halfverse": "who said, “Down with it! down with it!\n even to the ground!”"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "happy the one who pays you back\n for what you have done to us!",
+              "verse": "O Daughter of Babylon, doomed to destruction, *",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "halfverse": "and dashes them against the rock!",
+              "verse": "Happy shall he be who takes your little ones, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 792"
+      },
+      "language": "en",
+      "version_label": null,
+      "type": "psalm",
+      "slug": "psalm_137",
+      "metadata": {
+        "localname": "Psalm 137",
+        "latinname": "Super flumina",
+        "number": "137",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "style": "psalm"
+    }
+  ]
+}

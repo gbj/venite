@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 54",
+        "latinname": "Deus, in nomine",
+        "number": "54"
+      },
+      "version": "bcp1979",
+      "style": "psalm",
+      "language": "en",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "slug": "psalm_54",
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Save me, O God, by your Name; *",
+              "number": "1",
+              "halfverse": "in your might, defend my cause.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Hear my prayer, O God; *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "give ear to the words of my mouth."
+            },
+            {
+              "halfverse": "those who have no regard for God.",
+              "type": "psalm-verse",
+              "number": "3",
+              "verse": "For the arrogant have risen up against me,\nand the ruthless have sought my life, *"
+            },
+            {
+              "halfverse": "it is the Lord who sustains my life.",
+              "number": "4",
+              "verse": "Behold, God is my helper; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "in your faithfulness, destroy them.",
+              "type": "psalm-verse",
+              "verse": "Render evil to those who spy on me; *",
+              "number": "5"
+            },
+            {
+              "verse": "I will offer you a freewill sacrifice *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "and praise your Name, O LORD, for it is good."
+            },
+            {
+              "verse": "For you have rescued me from every trouble, *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "and my eye has seen the ruin of my foes."
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "citation": null,
+      "label": "Psalm 54",
+      "source": {
+        "citation": "p. 659",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      }
+    }
+  ]
+}

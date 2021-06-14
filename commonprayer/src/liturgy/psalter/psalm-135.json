@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "latinname": "Laudate nomen",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 135",
+        "number": "135"
+      },
+      "style": "psalm",
+      "slug": "psalm_135",
+      "citation": null,
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 788",
+        "api": "https://www.venite.app/api"
+      },
+      "label": "Psalm 135",
+      "type": "psalm",
+      "hidden": false,
+      "version_label": null,
+      "category": ["Psalm"],
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "give praise, you servants of the LORD.",
+              "verse": "Hallelujah!\nPraise the Name of the LORD; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "in the courts of the house of our God.",
+              "verse": "You who stand in the house of the LORD, *",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Praise the LORD, for the LORD is good; *",
+              "number": "3",
+              "halfverse": "sing praises to his Name, for it is lovely."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and Israel for his own possession.",
+              "verse": "For the LORD has chosen Jacob for himself *",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "verse": "For I know that the LORD is great, *",
+              "halfverse": "and that our Lord is above all gods.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The LORD does whatever pleases him, in heaven and on earth, *",
+              "number": "6",
+              "halfverse": "in the seas and all the deeps."
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "He brings up rain clouds from the ends of the earth; *",
+              "halfverse": "he sends out lightning with the rain,\n and brings the winds out of his storehouse."
+            },
+            {
+              "verse": "It was he who struck down the firstborn of Egypt, *",
+              "type": "psalm-verse",
+              "halfverse": "the firstborn both of man and beast.",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "halfverse": "against Pharaoh and all his servants.",
+              "verse": "He sent signs and wonders into the midst of you, O Egypt, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "and put mighty kings to death:",
+              "verse": "He overthrew many nations *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "and all the kings of Canaan.",
+              "verse": "Sihon, king of the Amorites,\nand Og, the kingdoms of Bashan, *"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "an inheritance for Israel his people.",
+              "verse": "He gave their land to be an inheritance, *"
+            },
+            {
+              "halfverse": "your renown, O LORD, endures from age to age.",
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "O LORD, your Name is everlasting; *"
+            },
+            {
+              "number": "14",
+              "halfverse": "and shows compassion to his servants.",
+              "type": "psalm-verse",
+              "verse": "For the LORD gives his people justice *"
+            },
+            {
+              "halfverse": "the work of human hands.",
+              "number": "15",
+              "type": "psalm-verse",
+              "verse": "The idols of the heathen are silver and gold, *"
+            },
+            {
+              "verse": "They have mouths, but they cannot speak; *",
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "eyes have they, but they cannot see."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "neither is there any breath in their mouth.",
+              "verse": "They have ears, but they cannot hear; *",
+              "number": "17"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and so are all who put their trust in them.",
+              "verse": "Those who make them are like them, *",
+              "number": "18"
+            },
+            {
+              "halfverse": "O house of Aaron, bless the LORD.",
+              "verse": "Bless the LORD, O house of Israel; *",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Bless the LORD, O house of Levi; *",
+              "halfverse": "you who fear the LORD, bless the LORD.",
+              "type": "psalm-verse",
+              "number": "20"
+            },
+            {
+              "verse": "Blessed be the LORD out of Zion, *",
+              "halfverse": "who dwells in Jerusalem.\n Hallelujah!",
+              "number": "21",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "language": "en"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "citation": null,
+      "source": {
+        "citation": "p. 759",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "because he has inclined his ear to me whenever I called upon him.",
+              "type": "psalm-verse",
+              "verse": "I love the LORD, because he has heard the voice of my supplication, *",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "I came to grief and sorrow.",
+              "verse": "The cords of death entangled me;\nthe grip of the grave took hold of me; *"
+            },
+            {
+              "halfverse": "“O LORD, I pray you, save my life.”",
+              "verse": "Then I called upon the Name of the LORD: *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Gracious is the LORD and righteous; *",
+              "halfverse": "our God is full of compassion.",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "The LORD watches over the innocent; *",
+              "halfverse": "I was brought very low, and he helped me."
+            },
+            {
+              "number": "6",
+              "verse": "Turn again to your rest, O my soul. *",
+              "halfverse": "for the LORD has treated you well.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "my eyes from tears, and my feet from stumbling.",
+              "verse": "For you have rescued my life from death, *"
+            },
+            {
+              "halfverse": "in the land of the living.",
+              "number": "8",
+              "verse": "I will walk in the presence of the LORD *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "In my distress I said, “No one can be trusted.”",
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "I believed, even when I said,\n“I have been brought very low.” *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "How shall I repay the LORD *",
+              "halfverse": "for all the good things he has done for me?"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and call upon the Name of the LORD.",
+              "verse": "I will lift up the cup of salvation *",
+              "number": "11"
+            },
+            {
+              "number": "12",
+              "halfverse": "in the presence of all his people.",
+              "verse": "I will fulfill my vows to the LORD *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Precious in the sight of the LORD *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "is the death of his servants."
+            },
+            {
+              "halfverse": "I am your servant and the child of your handmaid;\n you have freed me from my bonds.",
+              "verse": "O LORD, I am your servant; *",
+              "type": "psalm-verse",
+              "number": "14"
+            },
+            {
+              "number": "15",
+              "halfverse": "and call upon the Name of the LORD.",
+              "verse": "I will offer you the sacrifice of thanksgiving *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "in the presence of all his people,",
+              "type": "psalm-verse",
+              "verse": "I will fulfill my vows to the LORD *",
+              "number": "16"
+            },
+            {
+              "halfverse": "in the midst of you, O Jerusalem.\n Hallelujah!",
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "In the courts of the LORD’S house, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "hidden": false,
+      "version_label": null,
+      "slug": "psalm_116",
+      "language": "en",
+      "label": "Psalm 116",
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "116",
+        "localname": "Psalm 116",
+        "latinname": "Dilexi, quoniam",
+        "omit_gloria": false
+      },
+      "type": "psalm",
+      "version": "bcp1979"
+    }
+  ]
+}

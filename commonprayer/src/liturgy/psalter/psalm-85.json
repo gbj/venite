@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "citation": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 85",
+        "number": "85",
+        "latinname": "Benedixisti, Domine"
+      },
+      "type": "psalm",
+      "slug": "psalm_85",
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "you have restored the good fortune of Jacob.",
+              "verse": "You have been gracious to your land, O LORD, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You have forgiven the iniquity of your people *",
+              "halfverse": "and blotted out all their sins.",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "halfverse": "and turned yourself from your wrathful indignation.",
+              "verse": "You have withdrawn all your fury *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let your anger depart from us.",
+              "verse": "Restore us then, O God our Savior; *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "verse": "Will you be displeased with us for ever? *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "will you prolong your anger from age to age?"
+            },
+            {
+              "verse": "Will you not give us life again, *",
+              "number": "6",
+              "halfverse": "that your people may rejoice in you?",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Show us your mercy, O LORD, *",
+              "number": "7",
+              "halfverse": "and grant us your salvation.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for he is speaking peace to his faithful people\n and to those who turn their hearts to him.",
+              "verse": "I will listen to what the LORD God is saying, *",
+              "number": "8"
+            },
+            {
+              "halfverse": "that his glory may dwell in our land.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "Truly, his salvation is very near to those who fear him, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "righteousness and peace have kissed each other.",
+              "verse": "Mercy and truth have met together; *"
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "and righteousness shall look down from heaven.",
+              "verse": "Truth shall spring up from the earth, *"
+            },
+            {
+              "halfverse": "and our land will yield its increase.",
+              "verse": "The LORD will indeed grant prosperity, *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Righteousness shall go before him, *",
+              "halfverse": "and peace shall be a pathway for his feet.",
+              "number": "13",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 708"
+      },
+      "hidden": false,
+      "version": "bcp1979",
+      "label": "Psalm 85",
+      "version_label": null
+    }
+  ]
+}

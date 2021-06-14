@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 725"
+      },
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "sing to the LORD, all the whole earth.",
+              "type": "psalm-verse",
+              "verse": "Sing to the LORD a new song; *",
+              "number": "1"
+            },
+            {
+              "halfverse": "proclaim the good news of his salvation from day to day.",
+              "number": "2",
+              "verse": "Sing to the LORD and bless his Name; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and his wonders among all peoples.",
+              "number": "3",
+              "verse": "Declare his glory among the nations *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he is more to be feared than all gods.",
+              "type": "psalm-verse",
+              "verse": "For great is the LORD and greatly to be praised; *",
+              "number": "4"
+            },
+            {
+              "halfverse": "but it is the LORD who made the heavens.",
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "As for all the gods of the nations, they are but idols; *"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "Oh, the majesty and magnificence of his presence! *",
+              "halfverse": "Oh, the power and the splendor of his sanctuary!"
+            },
+            {
+              "verse": "Ascribe to the LORD, you families of the peoples; *",
+              "halfverse": "ascribe to the LORD honor and power.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "bring offerings and come into his courts.",
+              "verse": "Ascribe to the LORD the honor due his Name; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let the whole earth tremble before him.",
+              "verse": "Worship the LORD in the beauty of holiness; *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he has made the world so firm that it cannot be moved;\n he will judge the peoples with equity.”",
+              "verse": "Tell it out among the nations: “The LORD is King! *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "halfverse": "let the field be joyful and all that is therein.",
+              "type": "psalm-verse",
+              "verse": "Let the heavens rejoice, and let the earth be glad;\nlet the sea thunder and all that is in it; *"
+            },
+            {
+              "halfverse": "when he comes to judge the earth.",
+              "number": "12",
+              "verse": "Then shall all the trees of the wood shout for joy\nbefore the LORD when he comes, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "He will judge the world with righteousness *",
+              "halfverse": "and the peoples with his truth."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "label": "Psalm 96",
+      "version": "bcp1979",
+      "version_label": null,
+      "hidden": false,
+      "metadata": {
+        "number": "96",
+        "localname": "Psalm 96",
+        "latinname": "Cantate Domino",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "language": "en",
+      "category": ["Psalm"],
+      "slug": "psalm_96"
+    }
+  ]
+}

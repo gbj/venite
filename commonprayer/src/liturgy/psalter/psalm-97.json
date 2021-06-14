@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "let the multitude of the isles be glad.",
+              "verse": "The LORD is King;\nlet the earth rejoice; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "verse": "Clouds and darkness are round about him, *",
+              "halfverse": "righteousness and justice are the foundations of his throne."
+            },
+            {
+              "number": "3",
+              "halfverse": "and burns up his enemies on every side.",
+              "verse": "A fire goes before him *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "the earth sees it and is afraid.",
+              "verse": "His lightnings light up the world; *"
+            },
+            {
+              "number": "5",
+              "halfverse": "at the presence of the Lord of the whole earth.",
+              "verse": "The mountains melt like wax at the presence of the LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The heavens declare his righteousness, *",
+              "number": "6",
+              "halfverse": "and all the peoples see his glory."
+            },
+            {
+              "number": "7",
+              "halfverse": "Bow down before him, all you gods.",
+              "type": "psalm-verse",
+              "verse": "Confounded be all who worship carved images\nand delight in false gods! *"
+            },
+            {
+              "verse": "Zion hears and is glad, and the cities of Judah rejoice, *",
+              "halfverse": "because of your judgments, O LORD.",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For you are the LORD,\nmost high over all the earth; *",
+              "halfverse": "you are exalted far above all gods.",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The LORD loves those who hate evil; *",
+              "halfverse": "he preserves the lives of his saints\n and delivers them from the hand of the wicked.",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "halfverse": "and joyful gladness for those who are truehearted.",
+              "type": "psalm-verse",
+              "verse": "Light has sprung up for the righteous, *"
+            },
+            {
+              "verse": "Rejoice in the LORD, you righteous, *",
+              "number": "12",
+              "halfverse": "and give thanks to his holy Name.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "label": "Psalm 97",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 726"
+      },
+      "hidden": false,
+      "version": "bcp1979",
+      "citation": null,
+      "category": ["Psalm"],
+      "slug": "psalm_97",
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Psalm 97",
+        "latinname": "Dominus regnavit",
+        "omit_gloria": false,
+        "number": "97"
+      },
+      "type": "psalm",
+      "version_label": null,
+      "style": "psalm"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "let your ears consider well the voice of my supplication.",
+              "type": "psalm-verse",
+              "verse": "Out of the depths have I called to you, O LORD;\nLORD, hear my voice; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "O LORD, who could stand?",
+              "verse": "If you, LORD, were to note what is done amiss, *"
+            },
+            {
+              "halfverse": "therefore you shall be feared.",
+              "type": "psalm-verse",
+              "verse": "For there is forgiveness with you; *",
+              "number": "3"
+            },
+            {
+              "halfverse": "in his word is my hope.",
+              "verse": "I wait for the LORD; my soul waits for him; *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "My soul waits for the LORD,\nmore than watchmen for the morning, *",
+              "halfverse": "more than watchmen for the morning.",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for with the LORD there is mercy;",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "O Israel, wait for the LORD, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "With him there is plenteous redemption, *",
+              "halfverse": "and he shall redeem Israel from all their sins.",
+              "number": "7"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "category": ["Psalm"],
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 784",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "version_label": null,
+      "style": "psalm",
+      "slug": "psalm_130",
+      "version": "bcp1979",
+      "language": "en",
+      "label": "Psalm 130",
+      "metadata": {
+        "localname": "Psalm 130",
+        "latinname": "De profundis",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "130"
+      }
+    }
+  ]
+}

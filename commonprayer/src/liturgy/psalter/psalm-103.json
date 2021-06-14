@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "label": "Psalm 103",
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 733"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "language": "en",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "and all that is within me, bless his holy Name.",
+              "verse": "Bless the LORD, O my soul, *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "and forget not all his benefits.",
+              "verse": "Bless the LORD, O my soul, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and heals all your infirmities;",
+              "verse": "He forgives all your sins *",
+              "number": "3"
+            },
+            {
+              "halfverse": "and crowns you with mercy and loving-kindness;",
+              "verse": "He redeems your life from the grave *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "verse": "He satisfies you with good things, *",
+              "halfverse": "and your youth is renewed like an eagle’s.",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "and judgment for all who are oppressed.",
+              "verse": "The LORD executes righteousness *"
+            },
+            {
+              "verse": "He made his ways known to Moses *",
+              "type": "psalm-verse",
+              "halfverse": "and his works to the children of Israel.",
+              "number": "7"
+            },
+            {
+              "halfverse": "slow to anger and of great kindness.",
+              "verse": "The LORD is full of compassion and mercy, *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "nor will he keep his anger for ever.",
+              "type": "psalm-verse",
+              "verse": "He will not always accuse us, *",
+              "number": "9"
+            },
+            {
+              "number": "10",
+              "halfverse": "nor rewarded us according to our wickedness.",
+              "type": "psalm-verse",
+              "verse": "He has not dealt with us according to our sins, *"
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "For as the heavens are high above the earth, *",
+              "halfverse": "so is his mercy great upon those who fear him."
+            },
+            {
+              "halfverse": "so far has he removed our sins from us.",
+              "verse": "As far as the east is from the west, *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "As a father cares for his children, *",
+              "halfverse": "so does the LORD care for those who fear him."
+            },
+            {
+              "verse": "For he himself knows whereof we are made; *",
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "he remembers that we are but dust."
+            },
+            {
+              "halfverse": "we flourish like a flower of the field;",
+              "verse": "Our days are like the grass; *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "halfverse": "and its place shall know it no more.",
+              "type": "psalm-verse",
+              "verse": "When the wind goes over it, it is gone, *"
+            },
+            {
+              "halfverse": "and his righteousness on children’s children;",
+              "verse": "But the merciful goodness of the LORD endures for ever on those who fear him, *",
+              "type": "psalm-verse",
+              "number": "17"
+            },
+            {
+              "verse": "On those who keep his covenant *",
+              "number": "18",
+              "halfverse": "and remember his commandments and do them.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD has set his throne in heaven, *",
+              "number": "19",
+              "halfverse": "and his kingship has dominion over all.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Bless the LORD, you angels of his,\nyou mighty ones who do his bidding, *",
+              "type": "psalm-verse",
+              "number": "20",
+              "halfverse": "and hearken to the voice of his word."
+            },
+            {
+              "halfverse": "you ministers of his who do his will.",
+              "verse": "Bless the LORD, all you his hosts, *",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Bless the LORD, all you works of his,\nin all places of his dominion; *",
+              "number": "22",
+              "halfverse": "bless the LORD, O my soul."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "slug": "psalm_103",
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Psalm 103",
+        "latinname": "Benedic, anima mea",
+        "omit_gloria": false,
+        "number": "103"
+      },
+      "type": "psalm",
+      "style": "psalm"
+    }
+  ]
+}

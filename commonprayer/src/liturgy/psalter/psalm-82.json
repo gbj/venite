@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "label": "Psalm 82",
+      "version_label": null,
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Deus stetit",
+        "number": "82",
+        "localname": "Psalm 82",
+        "omit_gloria": false
+      },
+      "category": ["Psalm"],
+      "slug": "psalm_82",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 705"
+      },
+      "language": "en",
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "God takes his stand in the council of heaven; *",
+              "halfverse": "he gives judgment in the midst of the gods:",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and show favor to the wicked?",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "“How long will you judge unjustly, *"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Save the weak and the orphan; *",
+              "halfverse": "defend the humble and needy;"
+            },
+            {
+              "verse": "Rescue the weak and the poor; *",
+              "type": "psalm-verse",
+              "halfverse": "deliver them from the power of the wicked.",
+              "number": "4"
+            },
+            {
+              "verse": "They do not know, neither do they understand;\nthey go about in darkness; *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "all the foundations of the earth are shaken."
+            },
+            {
+              "halfverse": "and all of you children of the Most High;",
+              "verse": "Now I say to you, ‘You are gods, *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "halfverse": "and fall like any prince.’”",
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "Nevertheless, you shall die like mortals, *"
+            },
+            {
+              "halfverse": "for you shall take all nations for your own.",
+              "number": "8",
+              "verse": "Arise, O God, and rule the earth, *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "style": "psalm"
+    }
+  ]
+}

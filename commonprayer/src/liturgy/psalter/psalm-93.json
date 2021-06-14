@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "label": "Psalm 93",
+      "version_label": null,
+      "source": {
+        "citation": "p. 722",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "citation": null,
+      "slug": "psalm_93",
+      "hidden": false,
+      "category": ["Psalm"],
+      "metadata": {
+        "latinname": "Dominus regnavit",
+        "omit_antiphon": false,
+        "number": "93",
+        "localname": "Psalm 93",
+        "omit_gloria": false
+      },
+      "style": "psalm",
+      "language": "en",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "The LORD is King;\nhe has put on splendid apparel; *",
+              "type": "psalm-verse",
+              "halfverse": "the LORD has put on his apparel\n and girded himself with strength.",
+              "number": "1"
+            },
+            {
+              "halfverse": "that it cannot be moved;",
+              "type": "psalm-verse",
+              "verse": "He has made the whole world so sure *",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Ever since the world began, your throne has been established; *",
+              "halfverse": "you are from everlasting.",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "the waters have lifted up their pounding waves.",
+              "verse": "The waters have lifted up, O LORD,\nthe waters have lifted up their voice; *"
+            },
+            {
+              "halfverse": "mightier is the LORD who dwells on high.",
+              "verse": "Mightier than the sound of many waters,\nmightier than the breakers of the sea, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and holiness adorns your house, O LORD,\n for ever and for evermore.",
+              "number": "6",
+              "verse": "Your testimonies are very sure, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "version": "bcp1979"
+    }
+  ]
+}

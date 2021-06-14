@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "type": "psalm",
+      "hidden": false,
+      "label": "Psalm 146",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 803"
+      },
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "version_label": null,
+      "language": "en",
+      "slug": "psalm_146",
+      "style": "psalm",
+      "metadata": {
+        "number": "146",
+        "localname": "Psalm 146",
+        "latinname": "Lauda, anima mea",
+        "omit_antiphon": false,
+        "omit_gloria": false
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Hallelujah!\nPraise the LORD, O my soul! *",
+              "number": "1",
+              "halfverse": "I will praise the LORD as long as I live;\n I will sing praises to my God while I have my being.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "for there is no help in them.",
+              "verse": "Put not your trust in rulers, nor in any child of earth, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "When they breathe their last, they return to earth, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and in that day their thoughts perish."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "whose hope is in the LORD their God;",
+              "verse": "Happy are they who have the God of Jacob for their help! *"
+            },
+            {
+              "halfverse": "who keeps his promise for ever;",
+              "verse": "Who made heaven and earth, the seas, and all that is in them; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and food to those who hunger.",
+              "number": "6",
+              "verse": "Who gives justice to those who are oppressed, *"
+            },
+            {
+              "verse": "The LORD sets the prisoners free;\nthe LORD opens the eyes of the blind; *",
+              "type": "psalm-verse",
+              "halfverse": "the LORD lifts up those who are bowed down;",
+              "number": "7"
+            },
+            {
+              "verse": "The LORD loves the righteous;\nthe LORD cares for the stranger; *",
+              "number": "8",
+              "halfverse": "he sustains the orphan and widow,\n but frustrates the way of the wicked.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "your God, O Zion, throughout all generations.\n Hallelujah!",
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "The LORD shall reign for ever, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ]
+}

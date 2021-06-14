@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "version_label": null,
+      "slug": "psalm_134",
+      "label": "Psalm 134",
+      "language": "en",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "verse": "Behold now, bless the LORD, all you servants of the LORD, *",
+              "halfverse": "you that stand by night in the house of the LORD.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Lift up your hands in the holy place and bless the LORD; *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "the LORD who made heaven and earth bless you out of Zion."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "category": ["Psalm"],
+      "citation": null,
+      "metadata": {
+        "localname": "Psalm 134",
+        "omit_gloria": false,
+        "number": "134",
+        "omit_antiphon": false,
+        "latinname": "Ecce nunc"
+      },
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 787"
+      },
+      "style": "psalm",
+      "type": "psalm"
+    }
+  ]
+}

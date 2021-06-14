@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "If the LORD had not been on our side, *",
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "let Israel now say;"
+            },
+            {
+              "halfverse": "when enemies rose up against us;",
+              "number": "2",
+              "verse": "If the LORD had not been on our side, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Then would they have swallowed us up alive *",
+              "type": "psalm-verse",
+              "halfverse": "in their fierce anger toward us;",
+              "number": "3"
+            },
+            {
+              "halfverse": "and the torrent gone over us;",
+              "type": "psalm-verse",
+              "verse": "Then would the waters have overwhelmed us *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "5",
+              "halfverse": "have gone right over us.",
+              "verse": "Then would the raging waters *"
+            },
+            {
+              "number": "6",
+              "verse": "Blessed be the LORD! *",
+              "halfverse": "he has not given us over to be a prey for their teeth.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "We have escaped like a bird from the snare of the fowler; *",
+              "number": "7",
+              "halfverse": "the snare is broken, and we have escaped.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Our help is in the Name of the LORD, *",
+              "type": "psalm-verse",
+              "halfverse": "the maker of heaven and earth.",
+              "number": "8"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "hidden": false,
+      "type": "psalm",
+      "slug": "psalm_124",
+      "version_label": null,
+      "metadata": {
+        "number": "124",
+        "localname": "Psalm 124",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Nisi quia Dominus"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 781"
+      },
+      "category": ["Psalm"],
+      "language": "en",
+      "citation": null,
+      "label": "Psalm 124",
+      "style": "psalm"
+    }
+  ]
+}

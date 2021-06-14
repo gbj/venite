@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "label": "Psalm 2",
+      "version": "bcp1979",
+      "hidden": false,
+      "slug": "psalm_2",
+      "version_label": null,
+      "category": ["Psalm"],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 586",
+        "source": "bcp1979"
+      },
+      "metadata": {
+        "localname": "Psalm 2",
+        "omit_antiphon": false,
+        "number": "2",
+        "latinname": "Quare fremuerunt gentes?",
+        "omit_gloria": false
+      },
+      "style": "psalm",
+      "language": "en",
+      "citation": null,
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Why are the nations in an uproar? *",
+              "type": "psalm-verse",
+              "halfverse": "Why do the peoples mutter empty threats?",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "against the LORD and against his Anointed?",
+              "verse": "Why do the kings of the earth rise up in revolt,\nand the princes plot together, *",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "“let us cast off their bonds from us.”",
+              "verse": "“Let us break their yoke,” they say; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "He whose throne is in heaven is laughing; *",
+              "halfverse": "the Lord has them in derision."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and his rage fills them with terror.",
+              "verse": "Then he speaks to them in his wrath, *",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "upon my holy hill of Zion.”",
+              "verse": "“I myself have set my king *",
+              "number": "6"
+            },
+            {
+              "halfverse": "he said to me, “You are my Son;\n this day have I begotten you.",
+              "number": "7",
+              "verse": "Let me announce the decree of the LORD: *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the ends of the earth for your possession.",
+              "type": "psalm-verse",
+              "verse": "Ask of me, and I will give you the nations for your inheritance *",
+              "number": "8"
+            },
+            {
+              "halfverse": "and shatter them like a piece of pottery.”",
+              "number": "9",
+              "verse": "You shall crush them with an iron rod *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "And now, you kings, be wise; *",
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "be warned, you rulers of the earth."
+            },
+            {
+              "halfverse": "and with trembling bow before him;",
+              "verse": "Submit to the LORD with fear, *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "for his wrath is quickly kindled.",
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": "Lest he be angry and you perish; *"
+            },
+            {
+              "halfverse": "who take refuge in him!",
+              "verse": "Happy are they all *",
+              "type": "psalm-verse",
+              "number": "13"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ]
+}

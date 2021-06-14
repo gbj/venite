@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "hidden": false,
+      "style": "psalm",
+      "version_label": null,
+      "label": "Psalm 63",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "my soul thirsts for you, my flesh faints for you,\n as in a barren and dry land where there is no water.",
+              "number": "1",
+              "verse": "O God, you are my God; eagerly I seek you; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Therefore I have gazed upon you in your holy place, *",
+              "number": "2",
+              "halfverse": "that I might behold your power and your glory.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "my lips shall give you praise.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "For your loving-kindness is better than life itself; *"
+            },
+            {
+              "verse": "So will I bless you as long as I live *",
+              "type": "psalm-verse",
+              "halfverse": "and lift up my hands in your Name.",
+              "number": "4"
+            },
+            {
+              "halfverse": "and my mouth praises you with joyful lips,",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "My soul is content, as with marrow and fatness, *"
+            },
+            {
+              "halfverse": "and meditate on you in the night watches.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "When I remember you upon my bed, *"
+            },
+            {
+              "halfverse": "and under the shadow of your wings I will rejoice.",
+              "verse": "For you have been my helper, *",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "verse": "My soul clings to you; *",
+              "halfverse": "your right hand holds me fast.",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "go down into the depths of the earth;",
+              "verse": "May those who seek my life to destroy it *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let them fall upon the edge of the sword, *",
+              "halfverse": "and let them be food for jackals.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for the mouth of those who speak lies shall be stopped.",
+              "type": "psalm-verse",
+              "verse": "But the king will rejoice in God;\nall those who swear by him will be glad; *",
+              "number": "11"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 670"
+      },
+      "category": ["Psalm"],
+      "slug": "psalm_63",
+      "version": "bcp1979",
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "63",
+        "latinname": "Deus, Deus meus",
+        "localname": "Psalm 63"
+      },
+      "citation": null
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "slug": "psalm_52",
+      "version": "bcp1979",
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "You tyrant, why do you boast of wickedness *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "against the godly all day long?"
+            },
+            {
+              "verse": "You plot ruin;\nyour tongue is like a sharpened razor, *",
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "O worker of deception."
+            },
+            {
+              "number": "3",
+              "verse": "You love evil more than good *",
+              "halfverse": "and lying more than speaking the truth.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O you deceitful tongue.",
+              "verse": "You love all words that hurt, *",
+              "number": "4"
+            },
+            {
+              "verse": "Oh, that God would demolish you utterly, *",
+              "number": "5",
+              "halfverse": "topple you, and snatch you from your dwelling,\n and root you out of the land of the living!",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and they shall laugh at him, saying,",
+              "type": "psalm-verse",
+              "verse": "The righteous shall see and tremble, *",
+              "number": "6"
+            },
+            {
+              "verse": "“This is the one who did not take God for a refuge, *",
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "but trusted in great wealth\n and relied upon wickedness.”"
+            },
+            {
+              "halfverse": "I trust in the mercy of God for ever and ever.",
+              "number": "8",
+              "verse": "But I am like a green olive tree in the house of God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "and declare the goodness of your Name in the presence of the godly.",
+              "verse": "I will give you thanks for what you have done *"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "citation": null,
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 657"
+      },
+      "style": "psalm",
+      "label": "Psalm 52",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Quid gloriaris?",
+        "number": "52",
+        "localname": "Psalm 52",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 11",
+        "number": "11",
+        "omit_antiphon": false,
+        "latinname": "In Domino confido"
+      },
+      "citation": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 596"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "In the LORD have I taken refuge; *",
+              "halfverse": "how then can you say to me,\n “Fly away like a bird to the hilltop;",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For see how the wicked bend the bow\nand fit their arrows to the string, *",
+              "number": "2",
+              "halfverse": "to shoot from ambush at the true of heart."
+            },
+            {
+              "verse": "When the foundations are being destroyed, *",
+              "halfverse": "what can the righteous do?”",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "halfverse": "the LORD’S throne is in heaven.",
+              "verse": "The LORD is in his holy temple; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "his piercing eye weighs our worth.",
+              "verse": "His eyes behold the inhabited world; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but those who delight in violence he abhors.",
+              "number": "6",
+              "verse": "The LORD weighs the righteous as well as the wicked, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Upon the wicked he shall rain coals of fire and burning sulphur; *",
+              "type": "psalm-verse",
+              "halfverse": "a scorching wind shall be their lot.",
+              "number": "7"
+            },
+            {
+              "verse": "For the LORD is righteous;\nhe delights in righteous deeds; *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "and the just shall see his face."
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "type": "psalm",
+      "language": "en",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "slug": "psalm_11",
+      "label": "Psalm 11",
+      "version": "bcp1979",
+      "hidden": false
+    }
+  ]
+}

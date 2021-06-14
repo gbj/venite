@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "slug": "psalm_100",
+      "metadata": {
+        "latinname": "Jubilate Deo",
+        "localname": "Psalm 100",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "100"
+      },
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Be joyful in the LORD, all you lands; *",
+              "number": "1",
+              "halfverse": "serve the LORD with gladness\n and come before his presence with a song.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he himself has made us, and we are his;\n we are his people and the sheep of his pasture.",
+              "number": "2",
+              "verse": "Know this: The LORD himself is God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "give thanks to him and call upon his Name.",
+              "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *"
+            },
+            {
+              "verse": "For the LORD is good;\nhis mercy is everlasting; *",
+              "number": "4",
+              "halfverse": "and his faithfulness endures from age to age.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "hidden": false,
+      "version": "bcp1979",
+      "label": "Psalm 100",
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 729",
+        "source": "bcp1979"
+      },
+      "style": "psalm",
+      "category": ["Psalm"],
+      "version_label": null
+    }
+  ]
+}

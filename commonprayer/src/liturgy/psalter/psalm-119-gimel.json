@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "label": "Psalm 119: Gimel",
+      "version_label": null,
+      "category": ["Psalm"],
+      "language": "en",
+      "citation": null,
+      "version": "bcp1979",
+      "hidden": false,
+      "type": "psalm",
+      "metadata": {
+        "localname": "Psalm 119: Gimel",
+        "omit_gloria": false,
+        "latinname": "Retribue servo tuo",
+        "number": "119",
+        "omit_antiphon": false
+      },
+      "slug": "psalm_119_gimel",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "that I may live and keep your word.",
+              "type": "psalm-verse",
+              "verse": "Deal bountifully with your servant, *",
+              "number": "17"
+            },
+            {
+              "verse": "Open my eyes, that I may see *",
+              "number": "18",
+              "halfverse": "the wonders of your law.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "do not hide your commandments from me.",
+              "number": "19",
+              "verse": "I am a stranger here on earth; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "with longing for your judgments.",
+              "verse": "My soul is consumed at all times *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "cursed are they who stray from your commandments!",
+              "number": "21",
+              "verse": "You have rebuked the insolent; *"
+            },
+            {
+              "verse": "Turn from me shame and rebuke, *",
+              "number": "22",
+              "halfverse": "for I have kept your decrees.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Even though rulers sit and plot against me, *",
+              "number": "23",
+              "halfverse": "I will meditate on your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "24",
+              "verse": "For your decrees are my delight, *",
+              "type": "psalm-verse",
+              "halfverse": "and they are my counselors."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "source": {
+        "citation": "p. 764",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      }
+    }
+  ]
+}

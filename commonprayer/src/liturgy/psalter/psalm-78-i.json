@@ -1,0 +1,269 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "citation": null,
+      "metadata": {
+        "number": "78",
+        "localname": "Psalm 78: Part I",
+        "omit_antiphon": false,
+        "latinname": "Attendite, popule",
+        "omit_gloria": false
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "Hear my teaching, O my people; *",
+              "halfverse": "incline your ears to the words of my mouth."
+            },
+            {
+              "number": "2",
+              "verse": "I will open my mouth in a parable; *",
+              "halfverse": "I will declare the mysteries of ancient times.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "we will not hide from their children.",
+              "type": "psalm-verse",
+              "number": "3",
+              "verse": "That which we have heard and known,\nand what our forefathers have told us, *"
+            },
+            {
+              "verse": "We will recount to generations to come\nthe praiseworthy deeds and the power of the LORD, *",
+              "halfverse": "and the wonderful works he has done.",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "which he commanded them to teach their children;",
+              "number": "5",
+              "verse": "He gave his decrees to Jacob\nand established a law for Israel, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "that they in their turn might tell it to their children;",
+              "verse": "That the generations to come might know,\nand the children yet unborn; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "So that they might put their trust in God, *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "and not forget the deeds of God,\n but keep his commandments;"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "a generation whose heart was not steadfast,\n and whose spirit was not faithful to God.",
+              "verse": "And not be like their forefathers,\na stubborn and rebellious generation, *"
+            },
+            {
+              "number": "9",
+              "verse": "The people of Ephraim, armed with the bow, *",
+              "halfverse": "turned back in the day of battle;",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and refused to walk in his law;",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "They did not keep the covenant of God, *"
+            },
+            {
+              "verse": "They forgot what he had done, *",
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "and the wonders he had shown them."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He worked marvels in the sight of their forefathers, *",
+              "number": "12",
+              "halfverse": "in the land of Egypt, in the field of Zoan."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "he made the waters stand up like walls.",
+              "verse": "He split open the sea and let them pass through; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and all the night through with a glow of fire.",
+              "verse": "He led them with a cloud by day, *",
+              "number": "14"
+            },
+            {
+              "halfverse": "and gave them drink as from the great deep.",
+              "number": "15",
+              "type": "psalm-verse",
+              "verse": "He split the hard rocks in the wilderness *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "16",
+              "halfverse": "and the waters gushed out like rivers.",
+              "verse": "He brought streams out of the cliff, *"
+            },
+            {
+              "number": "17",
+              "halfverse": "rebelling in the desert against the Most High.",
+              "type": "psalm-verse",
+              "verse": "But they went on sinning against him, *"
+            },
+            {
+              "number": "18",
+              "verse": "They tested God in their hearts, *",
+              "halfverse": "demanding food for their craving.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "“Can God set a table in the wilderness?",
+              "number": "19",
+              "verse": "They railed against God and said, *"
+            },
+            {
+              "verse": "True, he struck the rock, the waters gushed out, and the gullies overflowed; *",
+              "halfverse": "but is he able to give bread\n or to provide meat for his people?”",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "When the LORD heard this, he was full of wrath; *",
+              "halfverse": "a fire was kindled against Jacob,\n and his anger mounted against Israel;",
+              "number": "21"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "verse": "For they had no faith in God, *",
+              "halfverse": "nor did they put their trust in his saving power."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "So he commanded the clouds above *",
+              "halfverse": "and opened the doors of heaven.",
+              "number": "23"
+            },
+            {
+              "halfverse": "and gave them grain from heaven.",
+              "verse": "He rained down manna upon them to eat *",
+              "type": "psalm-verse",
+              "number": "24"
+            },
+            {
+              "number": "25",
+              "verse": "So mortals ate the bread of angels; *",
+              "halfverse": "he provided for them food enough.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and led out the south wind by his might.",
+              "verse": "He caused the east wind to blow in the heavens *",
+              "number": "26",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and wingèd birds like the sand of the sea.",
+              "verse": "He rained down flesh upon them like dust *",
+              "type": "psalm-verse",
+              "number": "27"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and round about their dwellings.",
+              "verse": "He let it fall in the midst of their camp *",
+              "number": "28"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for he gave them what they craved.",
+              "verse": "So they ate and were well filled, *",
+              "number": "29"
+            },
+            {
+              "verse": "But they did not stop their craving, *",
+              "type": "psalm-verse",
+              "number": "30",
+              "halfverse": "though the food was still in their mouths."
+            },
+            {
+              "verse": "So God’s anger mounted against them; *",
+              "type": "psalm-verse",
+              "number": "31",
+              "halfverse": "he slew their strongest men\n and laid low the youth of Israel."
+            },
+            {
+              "halfverse": "and had no faith in his wonderful works.",
+              "number": "32",
+              "verse": "In spite of all this, they went on sinning *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and their years in sudden terror.",
+              "verse": "So he brought their days to an end like a breath *",
+              "number": "33",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and repent, and diligently search for God.",
+              "number": "34",
+              "type": "psalm-verse",
+              "verse": "Whenever he slew them, they would seek him, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They would remember that God was their rock, *",
+              "halfverse": "and the Most High God their redeemer.",
+              "number": "35"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and lied to him with their tongues.",
+              "verse": "But they flattered him with their mouths *",
+              "number": "36"
+            },
+            {
+              "halfverse": "and they were not faithful to his covenant.",
+              "number": "37",
+              "type": "psalm-verse",
+              "verse": "Their heart was not steadfast toward him, *"
+            },
+            {
+              "halfverse": "many times he held back his anger\n and did not permit his wrath to be roused.",
+              "verse": "But he was so merciful that he forgave their sins\nand did not destroy them; *",
+              "number": "38",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "39",
+              "halfverse": "a breath that goes forth and does not return.",
+              "verse": "For he remembered that they were but flesh, *"
+            }
+          ]
+        }
+      ],
+      "version": "bcp1979",
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 694"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "language": "en",
+      "slug": "psalm_78_i",
+      "label": "Psalm 78: Part I",
+      "style": "psalm"
+    }
+  ]
+}

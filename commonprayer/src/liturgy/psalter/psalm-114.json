@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "the house of Jacob from a people of strange speech,",
+              "verse": "Hallelujah!\nWhen Israel came out of Egypt, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "and Israel his dominion.",
+              "type": "psalm-verse",
+              "verse": "Judah became God’s sanctuary *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "Jordan turned and went back.",
+              "number": "3",
+              "verse": "The sea beheld it and fled; *"
+            },
+            {
+              "halfverse": "and the little hills like young sheep.",
+              "verse": "The mountains skipped like rams, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "What ailed you, O sea, that you fled? *",
+              "halfverse": "O Jordan, that you turned back?"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "You mountains, that you skipped like rams? *",
+              "halfverse": "you little hills like young sheep?"
+            },
+            {
+              "halfverse": "at the presence of the God of Jacob,",
+              "number": "7",
+              "verse": "Tremble, O earth, at the presence of the Lord, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Who turned the hard rock into a pool of water *",
+              "halfverse": "and flint-stone into a flowing spring.",
+              "type": "psalm-verse",
+              "number": "8"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 114",
+        "latinname": "In exitu Israel",
+        "omit_antiphon": false,
+        "number": "114"
+      },
+      "category": ["Psalm"],
+      "label": "Psalm 114",
+      "style": "psalm",
+      "slug": "psalm_114",
+      "language": "en",
+      "source": {
+        "citation": "p. 756",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "citation": null,
+      "hidden": false
+    }
+  ]
+}

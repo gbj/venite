@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "to the LORD I make loud supplication.",
+              "type": "psalm-verse",
+              "verse": "I cry to the LORD with my voice; *",
+              "number": "1"
+            },
+            {
+              "verse": "I pour out my complaint before him *",
+              "type": "psalm-verse",
+              "halfverse": "and tell him all my trouble.",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "When my spirit languishes within me, you know my path; *",
+              "number": "3",
+              "halfverse": "in the way wherein I walk they have hidden a trap for me."
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "I look to my right hand and find no one who knows me; *",
+              "halfverse": "I have no place to flee to, and no one cares for me."
+            },
+            {
+              "verse": "I cry out to you, O LORD; *",
+              "halfverse": "I say, “You are my refuge,\n my portion in the land of the living.”",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Listen to my cry for help, for I have been brought very low; *",
+              "halfverse": "save me from those who pursue me,\n for they are too strong for me.",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "when you have dealt bountifully with me,\n the righteous will gather around me.",
+              "verse": "Bring me out of prison, that I may give thanks to your Name; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "number": "142",
+        "latinname": "Voce mea ad Dominus",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 142"
+      },
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 748"
+      },
+      "citation": null,
+      "version": "bcp1979",
+      "slug": "psalm_142",
+      "hidden": false,
+      "version_label": null,
+      "type": "psalm",
+      "label": "Psalm 142"
+    }
+  ]
+}

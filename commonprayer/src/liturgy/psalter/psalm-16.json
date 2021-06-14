@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "version": "bcp1979",
+      "version_label": null,
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 599",
+        "api": "https://www.venite.app/api"
+      },
+      "slug": "psalm_16",
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "I have said to the LORD, “You are my Lord,\n my good above all other.”",
+              "verse": "Protect me, O God, for I take refuge in you; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "upon those who are noble among the people.",
+              "verse": "All my delight is upon the godly that are in the land, *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "verse": "But those who run after other gods *",
+              "halfverse": "shall have their troubles multiplied.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "verse": "Their libations of blood I will not offer, *",
+              "halfverse": "nor take the names of their gods upon my lips.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "it is you who uphold my lot.",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "O LORD, you are my portion and my cup; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "indeed, I have a goodly heritage.",
+              "verse": "My boundaries enclose a pleasant land; *",
+              "number": "6"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "my heart teaches me, night after night.",
+              "verse": "I will bless the LORD who gives me counsel; *",
+              "number": "7"
+            },
+            {
+              "halfverse": "because he is at my right hand I shall not fall.",
+              "verse": "I have set the LORD always before me; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "My heart, therefore, is glad, and my spirit rejoices; *",
+              "number": "9",
+              "halfverse": "my body also shall rest in hope.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "nor let your holy one see the Pit.",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "For you will not abandon me to the grave, *"
+            },
+            {
+              "verse": "You will show me the path of life; *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "in your presence there is fullness of joy,\n and in your right hand are pleasures for evermore."
+            }
+          ]
+        }
+      ],
+      "label": "Psalm 16",
+      "citation": null,
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Conserva me, Domine",
+        "number": "16",
+        "localname": "Psalm 16",
+        "omit_antiphon": false
+      },
+      "style": "psalm"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "version_label": null,
+      "label": "Psalm 64",
+      "type": "psalm",
+      "slug": "psalm_64",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 671",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "version": "bcp1979",
+      "language": "en",
+      "metadata": {
+        "latinname": "Exaudi, Deus",
+        "omit_gloria": false,
+        "number": "64",
+        "omit_antiphon": false,
+        "localname": "Psalm 64"
+      },
+      "style": "psalm",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "protect my life from fear of the enemy.",
+              "verse": "Hear my voice, O God, when I complain; *",
+              "number": "1"
+            },
+            {
+              "halfverse": "from the mob of evildoers.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "Hide me from the conspiracy of the wicked, *"
+            },
+            {
+              "verse": "They sharpen their tongue like a sword, *",
+              "type": "psalm-verse",
+              "halfverse": "and aim their bitter words like arrows,",
+              "number": "3"
+            },
+            {
+              "verse": "That they may shoot down the blameless from ambush; *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "they shoot without warning and are not afraid."
+            },
+            {
+              "number": "5",
+              "halfverse": "they plan how they may hide their snares.",
+              "verse": "They hold fast to their evil course; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They say, “Who will see us?\nwho will find out our crimes? *",
+              "number": "6",
+              "halfverse": "we have thought out a perfect plot.”",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but God will loose an arrow at them,\n and suddenly they will be wounded.",
+              "number": "7",
+              "verse": "The human mind and heart are a mystery; *"
+            },
+            {
+              "number": "8",
+              "halfverse": "and all who see them will shake their heads.",
+              "verse": "He will make them trip over their tongues, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they will recognize his works.",
+              "number": "9",
+              "verse": "Everyone will stand in awe and declare God’s deeds; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and all who are true of heart will glory.",
+              "number": "10",
+              "verse": "The righteous will rejoice in the LORD and put their trust in him, *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ]
+}

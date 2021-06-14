@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "type": "psalm",
+      "label": "Psalm 119: Taw",
+      "style": "psalm",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Let my cry come before you, O LORD; *",
+              "number": "169",
+              "halfverse": "give me understanding, according to your word.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "deliver me, according to your promise.",
+              "number": "170",
+              "verse": "Let my supplication come before you; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "when you teach me your statutes.",
+              "number": "171",
+              "verse": "My lips shall pour forth your praise, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "My tongue shall sing of your promise, *",
+              "halfverse": "for all your commandments are righteous.",
+              "number": "172"
+            },
+            {
+              "verse": "Let your hand be ready to help me, *",
+              "number": "173",
+              "type": "psalm-verse",
+              "halfverse": "for I have chosen your commandments."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "174",
+              "verse": "I long for your salvation, O LORD, *",
+              "halfverse": "and your law is my delight."
+            },
+            {
+              "halfverse": "and let your judgments help me.",
+              "number": "175",
+              "type": "psalm-verse",
+              "verse": "Let me live, and I will praise you, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "176",
+              "halfverse": "search for your servant,\n for I do not forget your commandments.",
+              "verse": "I have gone astray like a sheep that is lost; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "latinname": "Appropinquet deprecatio",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 119: Taw",
+        "number": "119"
+      },
+      "language": "en",
+      "citation": null,
+      "slug": "psalm_119_taw",
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 777"
+      },
+      "hidden": false
+    }
+  ]
+}

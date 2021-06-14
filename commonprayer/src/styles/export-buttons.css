@@ -1,0 +1,97 @@
+/* cp-doc buttons */
+.cp-doc-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+menu.cp-doc-menu {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+  width: auto;
+  margin: 0;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  padding: 0;
+  border-radius: var(--border-radius);
+}
+
+menu.cp-doc-menu li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+menu.cp-doc-menu li button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-itrems: center;
+  background: none;
+  font-family: var(--cp-ui-font-family);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--cp-light-border);
+  cursor: pointer;
+}
+
+menu.cp-doc-menu li button img {
+  color: inherit;
+  height: 16px;
+  width: auto;
+  margin-right: 0.25rem;
+}
+
+menu.cp-doc-menu li:first-child button {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+menu.cp-doc-menu li:last-child button {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Button Status Styles */
+button.idle {
+  background-color: var(--cp-light-background);
+  color: var(--cp-light-color);
+}
+
+.word:hover,
+.word.loading {
+  background-color: rgb(20, 67, 144);
+  border-color: rgb(20, 67, 144);
+  color: white;
+}
+.word:hover img {
+  filter: var(--button-filter-light);
+}
+
+.venite:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.clipboard:hover {
+  background-color: #ffdc97;
+  border-color: #ffdc97;
+}
+
+menu.cp-doc-menu li button.success {
+  background-color: var(--cp-success-background);
+  border-color: var(--cp-success-background);
+  color: var(--cp-success-color);
+}
+menu.cp-doc-menu li button.success img {
+  filter: var(--button-filter-light);
+}
+
+menu.cp-doc-menu li button.error {
+  background-color: var(--cp-error-background);
+  border-color: var(--cp-error-background);
+  color: var(--cp-error-color);
+}
+menu.cp-doc-menu li button.error img {
+  filter: var(--button-filter-light);
+}

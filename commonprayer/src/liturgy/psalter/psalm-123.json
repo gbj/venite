@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "metadata": {
+        "latinname": "Ad te levavi oculos meos",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "123",
+        "localname": "Psalm 123"
+      },
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 780",
+        "api": "https://www.venite.app/api"
+      },
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "To you I lift up my eyes, *",
+              "number": "1",
+              "halfverse": "to you enthroned in the heavens."
+            },
+            {
+              "verse": "As the eyes of servants look to the hand of their masters, *",
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "and the eyes of a maid to the hand of her mistress,"
+            },
+            {
+              "halfverse": "until he show us his mercy.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "So our eyes look to the LORD our God, *"
+            },
+            {
+              "halfverse": "for we have had more than enough of contempt,",
+              "verse": "Have mercy upon us, O LORD, have mercy, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "and of the derision of the proud.",
+              "verse": "Too much of the scorn of the indolent rich, *"
+            }
+          ]
+        }
+      ],
+      "version": "bcp1979",
+      "slug": "psalm_123",
+      "citation": null,
+      "version_label": null,
+      "label": "Psalm 123",
+      "style": "psalm",
+      "hidden": false,
+      "language": "en"
+    }
+  ]
+}

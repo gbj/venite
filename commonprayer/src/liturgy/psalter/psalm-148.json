@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "slug": "psalm_148",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 805"
+      },
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "latinname": "Laudate Dominus",
+        "number": "148",
+        "localname": "Psalm 148"
+      },
+      "label": "Psalm 148",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "version_label": null,
+      "style": "psalm",
+      "language": "en",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "praise him in the heights.",
+              "verse": "Hallelujah!\nPraise the LORD from the heavens; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "praise him, all his host.",
+              "verse": "Praise him, all you angels of his; *"
+            },
+            {
+              "halfverse": "praise him, all you shining stars.",
+              "verse": "Praise him, sun and moon; *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Praise him, heaven of heavens, *",
+              "number": "4",
+              "halfverse": "and you waters above the heavens.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let them praise the Name of the LORD; *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "for he commanded, and they were created."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he gave them a law which shall not pass away.",
+              "verse": "He made them stand fast for ever and ever; *",
+              "number": "6"
+            },
+            {
+              "verse": "Praise the LORD from the earth, *",
+              "number": "7",
+              "halfverse": "you sea-monsters and all deeps;",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Fire and hail, snow and fog, *",
+              "halfverse": "tempestuous wind, doing his will;",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "halfverse": "fruit trees and all cedars;",
+              "type": "psalm-verse",
+              "verse": "Mountains and all hills, *"
+            },
+            {
+              "halfverse": "creeping things and wingèd birds;",
+              "type": "psalm-verse",
+              "verse": "Wild beasts and all cattle, *",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "princes and all rulers of the world;",
+              "number": "11",
+              "verse": "Kings of the earth and all peoples, *"
+            },
+            {
+              "halfverse": "old and young together.",
+              "number": "12",
+              "verse": "Young men and maidens, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let them praise the Name of the LORD, *",
+              "halfverse": "for his Name only is exalted,\n his splendor is over earth and heaven.",
+              "number": "13"
+            },
+            {
+              "verse": "He has raised up strength for his people\nand praise for all his loyal servants, *",
+              "halfverse": "the children of Israel, a people who are near him.\n Hallelujah!",
+              "number": "14",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

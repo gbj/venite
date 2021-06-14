@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "LORD, remember David, *",
+              "type": "psalm-verse",
+              "halfverse": "and all the hardships he endured;",
+              "number": "1"
+            },
+            {
+              "halfverse": "and vowed a vow to the Mighty One of Jacob:",
+              "type": "psalm-verse",
+              "verse": "How he swore an oath to the LORD *",
+              "number": "2"
+            },
+            {
+              "halfverse": "nor climb up into my bed;",
+              "verse": "“I will not come under the roof of my house, *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "halfverse": "nor let my eyelids slumber;",
+              "verse": "I will not allow my eyes to sleep, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "a dwelling for the Mighty One of Jacob.”",
+              "verse": "Until I find a place for the LORD, *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "verse": "“The ark! We heard it was in Ephratah; *",
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "we found it in the fields of Jearim."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let us fall upon our knees before his footstool.”",
+              "number": "7",
+              "verse": "Let us go to God’s dwelling place; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "you and the ark of your strength.",
+              "verse": "Arise, O LORD, into your resting-place, *"
+            },
+            {
+              "verse": "Let your priests be clothed with righteousness; *",
+              "type": "psalm-verse",
+              "halfverse": "let your faithful people sing with joy.",
+              "number": "9"
+            },
+            {
+              "verse": "For your servant David’s sake, *",
+              "halfverse": "do not turn away the face of your Anointed.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD has sworn an oath to David; *",
+              "type": "psalm-verse",
+              "halfverse": "in truth, he will not break it:",
+              "number": "11"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": "“A son, the fruit of your body *",
+              "halfverse": "will I set upon your throne."
+            },
+            {
+              "halfverse": "their children will sit upon your throne for evermore.”",
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "If your children keep my covenant\nand my testimonies that I shall teach them, *"
+            },
+            {
+              "verse": "For the LORD has chosen Zion; *",
+              "type": "psalm-verse",
+              "number": "14",
+              "halfverse": "he has desired her for his habitation:"
+            },
+            {
+              "verse": "“This shall be my resting-place for ever; *",
+              "halfverse": "here will I dwell, for I delight in her.",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "halfverse": "and satisfy her poor with bread.",
+              "verse": "I will surely bless her provisions, *",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "17",
+              "halfverse": "and her faithful people will rejoice and sing.",
+              "type": "psalm-verse",
+              "verse": "I will clothe her priests with salvation, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I have prepared a lamp for my Anointed.",
+              "verse": "There will I make the horn of David flourish; *",
+              "number": "18"
+            },
+            {
+              "halfverse": "but as for him, his crown will shine.”",
+              "number": "19",
+              "type": "psalm-verse",
+              "verse": "As for his enemies, I will clothe them with shame; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 785"
+      },
+      "type": "psalm",
+      "label": "Psalm 132",
+      "version_label": null,
+      "hidden": false,
+      "metadata": {
+        "latinname": "Memento, Domine",
+        "omit_antiphon": false,
+        "number": "132",
+        "omit_gloria": false,
+        "localname": "Psalm 132"
+      },
+      "slug": "psalm_132",
+      "citation": null,
+      "style": "psalm",
+      "language": "en"
+    }
+  ]
+}

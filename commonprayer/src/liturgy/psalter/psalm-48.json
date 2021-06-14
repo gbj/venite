@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "slug": "psalm_48",
+      "citation": null,
+      "label": "Psalm 48",
+      "type": "psalm",
+      "version_label": null,
+      "version": "bcp1979",
+      "language": "en",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "in the city of our God is his holy hill.",
+              "verse": "Great is the LORD, and highly to be praised; *"
+            },
+            {
+              "number": "2",
+              "halfverse": "the very center of the world and the city of the great King.",
+              "type": "psalm-verse",
+              "verse": "Beautiful and lofty, the joy of all the earth, is the hill of Zion, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he is known to be her sure refuge.",
+              "verse": "God is in her citadels; *",
+              "number": "3"
+            },
+            {
+              "verse": "Behold, the kings of the earth assembled *",
+              "number": "4",
+              "halfverse": "and marched forward together.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They looked and were astounded; *",
+              "halfverse": "they retreated and fled in terror.",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Trembling seized them there; *",
+              "type": "psalm-verse",
+              "halfverse": "they writhed like a woman in childbirth,\n like ships of the sea when the east wind shatters them.",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "halfverse": "God has established her for ever.",
+              "type": "psalm-verse",
+              "verse": "As we have heard, so have we seen,\nin the city of the LORD of hosts, in the city of our God; *"
+            },
+            {
+              "halfverse": "in the midst of your temple.",
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "We have waited in silence on your loving-kindness, O God, *"
+            },
+            {
+              "halfverse": "your right hand is full of justice.",
+              "verse": "Your praise, like your Name, O God, reaches to the world’s end; *",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "verse": "Let Mount Zion be glad\nand the cities of Judah rejoice, *",
+              "halfverse": "because of your judgments.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "count the number of her towers.",
+              "verse": "Make the circuit of Zion;\nwalk round about her; *"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "that you may tell those who come after.",
+              "verse": "Consider well her bulwarks;\nexamine her strongholds; *"
+            },
+            {
+              "verse": "This God is our God for ever and ever; *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "he shall be our guide for evermore."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "48",
+        "localname": "Psalm 48",
+        "latinname": "Magnus Dominus"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 651"
+      },
+      "hidden": false,
+      "category": ["Psalm"],
+      "style": "psalm"
+    }
+  ]
+}

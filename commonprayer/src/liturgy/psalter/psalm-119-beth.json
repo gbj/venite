@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "By keeping to your words.",
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "How shall a young man cleanse his way? *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "With my whole heart I seek you; *",
+              "halfverse": "let me not stray from your commandments."
+            },
+            {
+              "verse": "I treasure your promise in my heart, *",
+              "halfverse": "that I may not sin against you.",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": "Blessed are you, O LORD; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "all the judgments of your mouth.",
+              "verse": "With my lips will I recite *",
+              "number": "13"
+            },
+            {
+              "halfverse": "than in all manner of riches.",
+              "verse": "I have taken greater delight in the way of your decrees *",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and give attention to your ways.",
+              "type": "psalm-verse",
+              "verse": "I will meditate on your commandments *",
+              "number": "15"
+            },
+            {
+              "number": "16",
+              "verse": "My delight is in your statutes; *",
+              "type": "psalm-verse",
+              "halfverse": "I will not forget your word."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "In quo corrigit?",
+        "number": "119",
+        "localname": "Psalm 119: Beth",
+        "omit_antiphon": false
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "language": "en",
+      "source": {
+        "citation": "p. 764",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "hidden": false,
+      "version_label": null,
+      "version": "bcp1979",
+      "label": "Psalm 119: Beth",
+      "slug": "psalm_119_beth"
+    }
+  ]
+}

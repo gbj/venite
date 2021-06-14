@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "latinname": "Et fecerunt vitulum",
+        "omit_antiphon": false,
+        "localname": "Psalm 107: Part II",
+        "number": "107",
+        "omit_gloria": false
+      },
+      "hidden": false,
+      "version": "bcp1979",
+      "citation": null,
+      "version_label": null,
+      "slug": "psalm_107_ii",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "The LORD changed rivers into deserts, *",
+              "halfverse": "and water-springs into thirsty ground,",
+              "number": "33",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "34",
+              "type": "psalm-verse",
+              "halfverse": "because of the wickedness of those who dwell there.",
+              "verse": "A fruitful land into salt flats, *"
+            },
+            {
+              "number": "35",
+              "verse": "He changed deserts into pools of water *",
+              "type": "psalm-verse",
+              "halfverse": "and dry land into water-springs."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He settled the hungry there, *",
+              "number": "36",
+              "halfverse": "and they founded a city to dwell in."
+            },
+            {
+              "halfverse": "and brought in a fruitful harvest.",
+              "verse": "They sowed fields, and planted vineyards, *",
+              "number": "37",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "38",
+              "type": "psalm-verse",
+              "halfverse": "he did not let their herds decrease.",
+              "verse": "He blessed them, so that they increased greatly; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Yet when they were diminished and brought low, *",
+              "halfverse": "through stress of adversity and sorrow,",
+              "number": "39"
+            },
+            {
+              "verse": "(He pours contempt on princes *",
+              "number": "40",
+              "halfverse": "and makes them wander in trackless wastes)",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "41",
+              "verse": "He lifted up the poor out of misery *",
+              "halfverse": "and multiplied their families like flocks of sheep.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but all wickedness will shut its mouth.",
+              "type": "psalm-verse",
+              "number": "42",
+              "verse": "The upright will see this and rejoice, *"
+            },
+            {
+              "verse": "Whoever is wise will ponder these things, *",
+              "number": "43",
+              "halfverse": "and consider well the mercies of the LORD.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 748"
+      },
+      "style": "psalm",
+      "language": "en",
+      "label": "Psalm 107: Part II"
+    }
+  ]
+}

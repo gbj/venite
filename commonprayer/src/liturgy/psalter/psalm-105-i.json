@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Give thanks to the LORD and call upon his Name; *",
+              "halfverse": "make known his deeds among the peoples.",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Sing to him, sing praises to him, *",
+              "type": "psalm-verse",
+              "halfverse": "and speak of all his marvelous works.",
+              "number": "2"
+            },
+            {
+              "halfverse": "let the hearts of those who seek the LORD rejoice.",
+              "verse": "Glory in his holy Name; *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "continually seek his face.",
+              "verse": "Search for the LORD and his strength; *",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "halfverse": "his wonders and the judgments of his mouth,",
+              "type": "psalm-verse",
+              "verse": "Remember the marvels he has done, *"
+            },
+            {
+              "number": "6",
+              "verse": "O offspring of Abraham his servant, *",
+              "type": "psalm-verse",
+              "halfverse": "O children of Jacob his chosen."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "his judgments prevail in all the world.",
+              "verse": "He is the LORD our God; *",
+              "number": "7"
+            },
+            {
+              "verse": "He has always been mindful of his covenant, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "the promise he made for a thousand generations:"
+            },
+            {
+              "halfverse": "the oath that he swore to Isaac,",
+              "verse": "The covenant he made with Abraham, *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "an everlasting covenant for Israel,",
+              "verse": "Which he established as a statute for Jacob, *"
+            },
+            {
+              "number": "11",
+              "halfverse": "to be your allotted inheritance.”",
+              "verse": "Saying, “To you will I give the land of Canaan *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "of little account, and sojourners in the land,",
+              "verse": "When they were few in number, *"
+            },
+            {
+              "halfverse": "and from one kingdom to another,",
+              "verse": "Wandering from nation to nation *",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "verse": "He let no one oppress them *",
+              "halfverse": "and rebuked kings for their sake,",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and do my prophets no harm.”",
+              "verse": "Saying, “Do not touch my anointed *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Then he called for a famine in the land *",
+              "number": "16",
+              "halfverse": "and destroyed the supply of bread."
+            },
+            {
+              "halfverse": "Joseph, who was sold as a slave.",
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "He sent a man before them, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "his neck they put in an iron collar.",
+              "verse": "They bruised his feet in fetters; *",
+              "number": "18"
+            },
+            {
+              "verse": "Until his prediction came to pass, *",
+              "halfverse": "the word of the LORD tested him.",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the ruler of the peoples set him free.",
+              "number": "20",
+              "verse": "The king sent and released him; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "as a ruler over all his possessions,",
+              "verse": "He set him as a master over his household, *",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and to teach his elders wisdom.",
+              "verse": "To instruct his princes according to his will *",
+              "number": "22"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 105: Part I",
+        "latinname": "Confitemini Domino",
+        "omit_antiphon": false,
+        "number": "105"
+      },
+      "style": "psalm",
+      "type": "psalm",
+      "label": "Psalm 105: Part I",
+      "version": "bcp1979",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 738"
+      },
+      "category": ["Psalm"],
+      "hidden": false,
+      "language": "en",
+      "slug": "psalm_105_i"
+    }
+  ]
+}

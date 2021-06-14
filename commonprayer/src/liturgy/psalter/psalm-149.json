@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "sing his praise in the congregation of the faithful.",
+              "verse": "Hallelujah!\nSing to the LORD a new song; *",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let Israel rejoice in his Maker; *",
+              "number": "2",
+              "halfverse": "let the children of Zion be joyful in their King."
+            },
+            {
+              "verse": "Let them praise his Name in the dance; *",
+              "type": "psalm-verse",
+              "halfverse": "let them sing praise to him with timbrel and harp.",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and adorns the poor with victory.",
+              "number": "4",
+              "verse": "For the LORD takes pleasure in his people *"
+            },
+            {
+              "halfverse": "let them be joyful on their beds.",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "Let the faithful rejoice in triumph; *"
+            },
+            {
+              "verse": "Let the praises of God be in their throat *",
+              "number": "6",
+              "halfverse": "and a two-edged sword in their hand;",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "To wreak vengeance on the nations *",
+              "number": "7",
+              "halfverse": "and punishment on the peoples;",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "and their nobles with links of iron;",
+              "verse": "To bind their kings in chains *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "To inflict on them the judgment decreed; *",
+              "halfverse": "this is glory for all his faithful people.\n Hallelujah!",
+              "number": "9"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 807",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "label": "Psalm 149",
+      "version_label": null,
+      "style": "psalm",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "slug": "psalm_149",
+      "language": "en",
+      "metadata": {
+        "latinname": "Cantate Domino",
+        "omit_gloria": false,
+        "localname": "Psalm 149",
+        "omit_antiphon": false,
+        "number": "149"
+      }
+    }
+  ]
+}

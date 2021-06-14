@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "style": "psalm",
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 706"
+      },
+      "slug": "psalm_83",
+      "label": "Psalm 83",
+      "type": "psalm",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "do not keep still nor hold your peace, O God;",
+              "type": "psalm-verse",
+              "verse": "O God, do not be silent; *",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and those who hate you have lifted up their heads.",
+              "verse": "For your enemies are in tumult, *",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "They take secret counsel against your people *",
+              "halfverse": "and plot against those whom you protect."
+            },
+            {
+              "verse": "They have said, “Come, let us wipe them out from among the nations; *",
+              "number": "4",
+              "halfverse": "let the name of Israel be remembered no more.”",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "verse": "They have conspired together; *",
+              "type": "psalm-verse",
+              "halfverse": "they have made an alliance against you:"
+            },
+            {
+              "halfverse": "the Moabites and the Hagarenes;",
+              "number": "6",
+              "verse": "The tents of Edom and the Ishmaelites; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Gebal, and Ammon, and Amalek; *",
+              "halfverse": "the Philistines and those who dwell in Tyre.",
+              "number": "7"
+            },
+            {
+              "verse": "The Assyrians also have joined them, *",
+              "number": "8",
+              "halfverse": "and have come to help the people of Lot.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "to Sisera, and to Jabin at the river of Kishon:",
+              "verse": "Do to them as you did to Midian, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "they became like dung upon the ground.",
+              "number": "10",
+              "verse": "They were destroyed at Endor; *"
+            },
+            {
+              "number": "11",
+              "verse": "Make their leaders like Oreb and Zeëb, *",
+              "type": "psalm-verse",
+              "halfverse": "and all their commanders like Zebah and Zalmunna,"
+            },
+            {
+              "verse": "Who said, “Let us take for ourselves *",
+              "halfverse": "the fields of God as our possession.”",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "verse": "O my God, make them like whirling dust *",
+              "halfverse": "and like chaff before the wind;",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "like the flame that sets mountains ablaze.",
+              "verse": "Like fire that burns down a forest, *",
+              "number": "14"
+            },
+            {
+              "halfverse": "and terrify them with your storm;",
+              "number": "15",
+              "verse": "Drive them with your tempest *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Cover their faces with shame, O LORD, *",
+              "halfverse": "that they may seek your Name.",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "17",
+              "halfverse": "let them be put to confusion and perish.",
+              "type": "psalm-verse",
+              "verse": "Let them be disgraced and terrified for ever; *"
+            },
+            {
+              "halfverse": "you alone are the Most High over all the earth.",
+              "type": "psalm-verse",
+              "number": "18",
+              "verse": "Let them know that you, whose Name is YAHWEH, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "metadata": {
+        "latinname": "Deus, quis similis",
+        "localname": "Psalm 83",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "83"
+      },
+      "version_label": null,
+      "citation": null
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 68:1-20",
+        "latinname": "Exsurgat Deus",
+        "number": "68",
+        "omit_antiphon": false
+      },
+      "type": "psalm",
+      "language": "en",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "source": {
+        "citation": "p. 676",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "citation": null,
+      "version_label": null,
+      "slug": "psalm_68_i",
+      "label": "Psalm 68:1-20",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "let those who hate him flee before him.",
+              "number": "1",
+              "verse": "Let God arise, and let his enemies be scattered; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "as the wax melts at the fire, so let the wicked perish at the presence of God.",
+              "verse": "Let them vanish like smoke when the wind drives it away; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "verse": "But let the righteous be glad and rejoice before God; *",
+              "type": "psalm-verse",
+              "halfverse": "let them also be merry and joyful."
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "YAHWEH is his Name, rejoice before him!",
+              "verse": "Sing to God, sing praises to his Name;\nexalt him who rides upon the heavens; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "God in his holy habitation!",
+              "verse": "Father of orphans, defender of widows, *",
+              "number": "5"
+            },
+            {
+              "verse": "God gives the solitary a home and brings forth prisoners into freedom; *",
+              "type": "psalm-verse",
+              "halfverse": "but the rebels shall live in dry places.",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "verse": "O God, when you went forth before your people, *",
+              "type": "psalm-verse",
+              "halfverse": "when you marched through the wilderness,"
+            },
+            {
+              "verse": "The earth shook, and the skies poured down rain,\nat the presence of God, the God of Sinai, *",
+              "number": "8",
+              "halfverse": "at the presence of God, the God of Israel.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "you refreshed the land when it was weary.",
+              "verse": "You sent a gracious rain, O God, upon your inheritance; *"
+            },
+            {
+              "halfverse": "in your goodness, O God, you have made provision for the poor.",
+              "verse": "Your people found their home in it; *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The Lord gave the word; *",
+              "halfverse": "great was the company of women who bore the tidings:",
+              "number": "11"
+            },
+            {
+              "halfverse": "the women at home are dividing the spoils.”",
+              "verse": "“Kings with their armies are fleeing away; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you shall be like a dove whose wings are covered with silver,\n whose feathers are like green gold.",
+              "number": "13",
+              "verse": "Though you lingered among the sheepfolds, *"
+            },
+            {
+              "halfverse": "it was like snow falling in Zalmon.",
+              "number": "14",
+              "type": "psalm-verse",
+              "verse": "When the Almighty scattered kings, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "O mighty mountain, O hill of Bashan! *",
+              "halfverse": "O rugged mountain, O hill of Bashan!",
+              "number": "15"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "Why do you look with envy, O rugged mountain,\nat the hill which God chose for his resting place? *",
+              "halfverse": "truly, the LORD will dwell there for ever."
+            },
+            {
+              "verse": "The chariots of God are twenty thousand,\neven thousands of thousands; *",
+              "type": "psalm-verse",
+              "number": "17",
+              "halfverse": "the Lord comes in holiness from Sinai."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "18",
+              "halfverse": "that the LORD God might dwell among them.",
+              "verse": "You have gone up on high and led captivity captive;\nyou have received gifts even from your enemies, *"
+            },
+            {
+              "number": "19",
+              "verse": "Blessed be the Lord day by day, *",
+              "type": "psalm-verse",
+              "halfverse": "the God of our salvation, who bears our burdens."
+            },
+            {
+              "number": "20",
+              "verse": "He is our God, the God of our salvation; *",
+              "halfverse": "God is the LORD, by whom we escape death.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false
+    }
+  ]
+}

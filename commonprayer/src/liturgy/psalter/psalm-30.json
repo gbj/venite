@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 621"
+      },
+      "language": "en",
+      "style": "psalm",
+      "version": "bcp1979",
+      "hidden": false,
+      "slug": "psalm_30",
+      "version_label": null,
+      "label": "Psalm 30",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "I will exalt you, O LORD,\nbecause you have lifted me up *",
+              "type": "psalm-verse",
+              "halfverse": "and have not let my enemies triumph over me.",
+              "number": "1"
+            },
+            {
+              "verse": "O LORD my God, I cried out to you, *",
+              "type": "psalm-verse",
+              "halfverse": "and you restored me to health.",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "verse": "You brought me up, O LORD, from the dead; *",
+              "type": "psalm-verse",
+              "halfverse": "you restored my life as I was going down to the grave."
+            },
+            {
+              "halfverse": "give thanks for the remembrance of his holiness.",
+              "verse": "Sing to the LORD, you servants of his; *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For his wrath endures but the twinkling of an eye, *",
+              "type": "psalm-verse",
+              "halfverse": "his favor for a lifetime.",
+              "number": "5"
+            },
+            {
+              "verse": "Weeping may spend the night, *",
+              "number": "6",
+              "halfverse": "but joy comes in the morning.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "You, LORD, with your favor, made me as strong as the mountains.”",
+              "verse": "While I felt secure, I said,\n“I shall never be disturbed. *"
+            },
+            {
+              "number": "8",
+              "verse": "Then you hid your face, *",
+              "type": "psalm-verse",
+              "halfverse": "and I was filled with fear."
+            },
+            {
+              "number": "9",
+              "verse": "I cried to you, O LORD; *",
+              "type": "psalm-verse",
+              "halfverse": "I pleaded with the Lord, saying,"
+            },
+            {
+              "halfverse": "will the dust praise you or declare your faithfulness?",
+              "verse": "“What profit is there in my blood, if I go down to the Pit? *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "halfverse": "O LORD, be my helper.”",
+              "verse": "Hear, O LORD, and have mercy upon me; *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you have put off my sack-cloth and clothed me with joy.",
+              "verse": "You have turned my wailing into dancing; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O LORD my God, I will give you thanks for ever.",
+              "verse": "Therefore my heart sings to you without ceasing; *",
+              "number": "13"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "metadata": {
+        "localname": "Psalm 30",
+        "number": "30",
+        "latinname": "Exaltabo te, Domine",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "type": "psalm",
+      "citation": null
+    }
+  ]
+}

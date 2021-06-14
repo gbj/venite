@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "version_label": null,
+      "citation": null,
+      "style": "psalm",
+      "metadata": {
+        "localname": "Psalm 33",
+        "omit_antiphon": false,
+        "number": "33",
+        "omit_gloria": false,
+        "latinname": "Exultate, justi"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "it is good for the just to sing praises.",
+              "verse": "Rejoice in the LORD, you righteous; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "verse": "Praise the LORD with the harp; *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "play to him upon the psaltery and lyre."
+            },
+            {
+              "halfverse": "sound a fanfare with all your skill upon the trumpet.",
+              "type": "psalm-verse",
+              "verse": "Sing for him a new song; *",
+              "number": "3"
+            },
+            {
+              "halfverse": "and all his works are sure.",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "For the word of the LORD is right, *"
+            },
+            {
+              "verse": "He loves righteousness and justice; *",
+              "type": "psalm-verse",
+              "halfverse": "the loving-kindness of the LORD fills the whole earth.",
+              "number": "5"
+            },
+            {
+              "verse": "By the word of the LORD were the heavens made, *",
+              "halfverse": "by the breath of his mouth all the heavenly hosts.",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "verse": "He gathers up the waters of the ocean as in a water-skin *",
+              "halfverse": "and stores up the depths of the sea.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let all who dwell in the world stand in awe of him.",
+              "type": "psalm-verse",
+              "verse": "Let all the earth fear the LORD; *",
+              "number": "8"
+            },
+            {
+              "verse": "For he spoke, and it came to pass; *",
+              "type": "psalm-verse",
+              "halfverse": "he commanded, and it stood fast.",
+              "number": "9"
+            },
+            {
+              "halfverse": "he thwarts the designs of the peoples.",
+              "number": "10",
+              "verse": "The LORD brings the will of the nations to naught; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "halfverse": "and the designs of his heart from age to age.",
+              "verse": "But the LORD’S will stands fast for ever, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Happy is the nation whose God is the LORD! *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "happy the people he has chosen to be his own!"
+            },
+            {
+              "verse": "The LORD looks down from heaven, *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "and beholds all the people in the world."
+            },
+            {
+              "halfverse": "on all who dwell on the earth.",
+              "verse": "From where he sits enthroned he turns his gaze *",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He fashions all the hearts of them *",
+              "halfverse": "and understands all their works.",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "a strong man is not delivered by his great strength.",
+              "type": "psalm-verse",
+              "number": "16",
+              "verse": "There is no king that can be saved by a mighty army; *"
+            },
+            {
+              "number": "17",
+              "halfverse": "for all its strength it cannot save.",
+              "verse": "The horse is a vain hope for deliverance; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "on those who wait upon his love,",
+              "number": "18",
+              "type": "psalm-verse",
+              "verse": "Behold, the eye of the LORD is upon those who fear him, *"
+            },
+            {
+              "halfverse": "and to feed them in time of famine.",
+              "type": "psalm-verse",
+              "verse": "To pluck their lives from death, *",
+              "number": "19"
+            },
+            {
+              "verse": "Our soul waits for the LORD; *",
+              "type": "psalm-verse",
+              "halfverse": "he is our help and our shield.",
+              "number": "20"
+            },
+            {
+              "number": "21",
+              "halfverse": "for in his holy Name we put our trust.",
+              "type": "psalm-verse",
+              "verse": "Indeed, our heart rejoices in him, *"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "halfverse": "as we have put our trust in you.",
+              "verse": "Let your loving-kindness, O LORD, be upon us, *"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 626",
+        "source": "bcp1979"
+      },
+      "label": "Psalm 33",
+      "slug": "psalm_33",
+      "type": "psalm",
+      "version": "bcp1979",
+      "language": "en"
+    }
+  ]
+}

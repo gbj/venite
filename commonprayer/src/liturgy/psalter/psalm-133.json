@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "slug": "psalm_133",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Oh, how good and pleasant it is, *",
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "when brethren live together in unity!"
+            },
+            {
+              "verse": "It is like fine oil upon the head *",
+              "halfverse": "that runs down upon the beard,",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and runs down upon the collar of his robe.",
+              "verse": "Upon the beard of Aaron, *"
+            },
+            {
+              "halfverse": "that falls upon the hills of Zion.",
+              "verse": "It is like the dew of Hermon *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "verse": "For there the LORD has ordained the blessing: *",
+              "halfverse": "life for evermore.",
+              "type": "psalm-verse",
+              "number": "5"
+            }
+          ]
+        }
+      ],
+      "citation": null,
+      "hidden": false,
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "source": {
+        "citation": "p. 787",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "version_label": null,
+      "label": "Psalm 133",
+      "style": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 133",
+        "omit_antiphon": false,
+        "latinname": "Ecce, quam bonum!",
+        "number": "133"
+      },
+      "language": "en"
+    }
+  ]
+}

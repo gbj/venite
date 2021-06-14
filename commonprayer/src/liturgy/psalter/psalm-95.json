@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "slug": "psalm_95",
+      "type": "psalm",
+      "version_label": "Ps. 95 (BCP)",
+      "hidden": false,
+      "version": "bcp1979",
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "number": "95",
+        "omit_antiphon": false,
+        "localname": "Psalm 95",
+        "omit_gloria": false,
+        "latinname": "Venite, exultemus"
+      },
+      "citation": null,
+      "category": ["Psalm"],
+      "source": {
+        "citation": "p. 724",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "let us shout for joy to the Rock of our salvation.",
+              "verse": "Come, let us sing to the LORD; *"
+            },
+            {
+              "number": "2",
+              "verse": "Let us come before his presence with thanksgiving *",
+              "type": "psalm-verse",
+              "halfverse": "and raise a loud shout to him with psalms."
+            },
+            {
+              "verse": "For the LORD is a great God, *",
+              "type": "psalm-verse",
+              "halfverse": "and a great King above all gods.",
+              "number": "3"
+            },
+            {
+              "verse": "In his hand are the caverns of the earth, *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and the heights of the hills are his also."
+            },
+            {
+              "halfverse": "and his hands have molded the dry land.",
+              "verse": "The sea is his, for he made it, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Come, let us bow down, and bend the knee, *",
+              "halfverse": "and kneel before the LORD our Maker.",
+              "number": "6"
+            },
+            {
+              "halfverse": "Oh, that today you would hearken to his voice!",
+              "type": "psalm-verse",
+              "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+              "number": "7"
+            },
+            {
+              "halfverse": "at Meribah, and on that day at Massah,\n when they tempted me.",
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "Harden not your hearts,\nas your forebears did in the wilderness, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "They put me to the test, *",
+              "halfverse": "though they had seen my works."
+            },
+            {
+              "verse": "Forty years long I detested that generation and said, *",
+              "type": "psalm-verse",
+              "halfverse": "“This people are wayward in their hearts;\n they do not know my ways.”",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "So I swore in my wrath, *",
+              "halfverse": "“They shall not enter into my rest.”"
+            }
+          ]
+        }
+      ],
+      "label": "Psalm 95"
+    }
+  ]
+}

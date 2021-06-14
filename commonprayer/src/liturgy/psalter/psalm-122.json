@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "metadata": {
+        "number": "122",
+        "localname": "Psalm 122",
+        "latinname": "Laetatus sum",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "style": "psalm",
+      "hidden": false,
+      "version": "bcp1979",
+      "label": "Psalm 122",
+      "citation": null,
+      "source": {
+        "citation": "p. 779",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "slug": "psalm_122",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "“Let us go to the house of the LORD.”",
+              "verse": "I was glad when they said to me, *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "verse": "Now our feet are standing *",
+              "halfverse": "within your gates, O Jerusalem.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "that is at unity with itself;",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Jerusalem is built as a city *"
+            },
+            {
+              "halfverse": "the assembly of Israel,\n to praise the Name of the LORD.",
+              "type": "psalm-verse",
+              "verse": "To which the tribes go up,\nthe tribes of the LORD, *",
+              "number": "4"
+            },
+            {
+              "halfverse": "the thrones of the house of David.",
+              "verse": "For there are the thrones of judgment, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "“May they prosper who love you.",
+              "verse": "Pray for the peace of Jerusalem: *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Peace be within your walls *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "and quietness within your towers."
+            },
+            {
+              "halfverse": "I pray for your prosperity.",
+              "verse": "For my brethren and companions’ sake, *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Because of the house of the LORD our God, *",
+              "number": "9",
+              "halfverse": "I will seek to do you good.”",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "language": "en"
+    }
+  ]
+}

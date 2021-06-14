@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "slug": "psalm_120",
+      "metadata": {
+        "localname": "Psalm 120",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Ad Dominum",
+        "number": "120"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "label": "Psalm 120",
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "I called to the LORD, and he answered me.",
+              "verse": "When I was in trouble, I called to the LORD; *"
+            },
+            {
+              "number": "2",
+              "verse": "Deliver me, O LORD, from lying lips *",
+              "type": "psalm-verse",
+              "halfverse": "and from the deceitful tongue."
+            },
+            {
+              "verse": "What shall be done to you, and what more besides, *",
+              "halfverse": "O you deceitful tongue?",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "along with hot glowing coals.",
+              "verse": "The sharpened arrows of a warrior, *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "halfverse": "and dwell among the tents of Kedar!",
+              "verse": "How hateful it is that I must lodge in Meshech *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Too long have I had to live *",
+              "halfverse": "among the enemies of peace.",
+              "number": "6"
+            },
+            {
+              "halfverse": "but when I speak of it, they are for war.",
+              "number": "7",
+              "verse": "I am on the side of peace, *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "citation": null,
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 778"
+      },
+      "version_label": null
+    }
+  ]
+}

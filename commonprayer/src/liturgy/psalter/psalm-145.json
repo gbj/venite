@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "label": "Psalm 145",
+      "metadata": {
+        "localname": "Psalm 145",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "145",
+        "latinname": "Exaltabo te, Deus"
+      },
+      "citation": null,
+      "version_label": null,
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "slug": "psalm_145",
+      "type": "psalm",
+      "language": "en",
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "I will exalt you, O God my King, *",
+              "halfverse": "and bless your Name for ever and ever.",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Every day will I bless you *",
+              "number": "2",
+              "halfverse": "and praise your Name for ever and ever."
+            },
+            {
+              "halfverse": "there is no end to his greatness.",
+              "verse": "Great is the LORD and greatly to be praised; *",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "halfverse": "and shall declare your power.",
+              "verse": "One generation shall praise your works to another *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will ponder the glorious splendor of your majesty *",
+              "number": "5",
+              "halfverse": "and all your marvelous works.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "and I will tell of your greatness.",
+              "verse": "They shall speak of the might of your wondrous acts, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they shall sing of your righteous deeds.",
+              "verse": "They shall publish the remembrance of your great goodness; *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "verse": "The LORD is gracious and full of compassion, *",
+              "type": "psalm-verse",
+              "halfverse": "slow to anger and of great kindness."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "halfverse": "and his compassion is over all his works.",
+              "verse": "The LORD is loving to everyone *"
+            },
+            {
+              "verse": "All your works praise you, O LORD, *",
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "and your faithful servants bless you."
+            },
+            {
+              "verse": "They make known the glory of your kingdom *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "and speak of your power;"
+            },
+            {
+              "verse": "That the peoples may know of your power *",
+              "type": "psalm-verse",
+              "halfverse": "and the glorious splendor of your kingdom.",
+              "number": "12"
+            },
+            {
+              "verse": "Your kingdom is an everlasting kingdom; *",
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "your dominion endures throughout all ages."
+            },
+            {
+              "halfverse": "and merciful in all his deeds.",
+              "verse": "The LORD is faithful in all his words *",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "The LORD upholds all those who fall; *",
+              "halfverse": "he lifts up those who are bowed down."
+            },
+            {
+              "verse": "The eyes of all wait upon you, O LORD, *",
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "and you give them their food in due season."
+            },
+            {
+              "verse": "You open wide your hand *",
+              "halfverse": "and satisfy the needs of every living creature.",
+              "type": "psalm-verse",
+              "number": "17"
+            },
+            {
+              "halfverse": "and loving in all his works.",
+              "number": "18",
+              "type": "psalm-verse",
+              "verse": "The LORD is righteous in all his ways *"
+            },
+            {
+              "verse": "The LORD is near to those who call upon him, *",
+              "type": "psalm-verse",
+              "halfverse": "to all who call upon him faithfully.",
+              "number": "19"
+            },
+            {
+              "halfverse": "he hears their cry and helps them.",
+              "verse": "He fulfills the desire of those who fear him; *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD preserves all those who love him, *",
+              "number": "21",
+              "halfverse": "but he destroys all the wicked.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let all flesh bless his holy Name for ever and ever.",
+              "verse": "My mouth shall speak the praise of the LORD; *",
+              "number": "22",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 801"
+      },
+      "style": "psalm"
+    }
+  ]
+}

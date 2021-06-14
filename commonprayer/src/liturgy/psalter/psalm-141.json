@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "source": {
+        "citation": "p. 797",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "hear my voice when I cry to you.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "O LORD, I call to you; come to me quickly; *"
+            },
+            {
+              "number": "2",
+              "halfverse": "the lifting up of my hands as the evening sacrifice.",
+              "verse": "Let my prayer be set forth in your sight as incense, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Set a watch before my mouth, O LORD,\nand guard the door of my lips; *",
+              "halfverse": "let not my heart incline to any evil thing.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "nor eat of their choice foods.",
+              "verse": "Let me not be occupied in wickedness with evildoers, *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "halfverse": "for my prayer is continually against their wicked deeds.",
+              "verse": "Let the righteous smite me in friendly rebuke;\nlet not the oil of the unrighteous anoint my head; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "that they may know my words are true.",
+              "verse": "Let their rulers be overthrown in stony places, *",
+              "number": "6"
+            },
+            {
+              "verse": "As when a plowman turns over the earth in furrows, *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "let their bones be scattered at the mouth of the grave."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "in you I take refuge;\n do not strip me of my life.",
+              "verse": "But my eyes are turned to you, Lord GOD; *",
+              "number": "8"
+            },
+            {
+              "halfverse": "and from the traps of the evildoers.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "Protect me from the snare which they have laid for me *"
+            },
+            {
+              "verse": "Let the wicked fall into their own nets, *",
+              "number": "10",
+              "halfverse": "while I myself escape.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "slug": "psalm_141",
+      "label": "Psalm 141",
+      "citation": null,
+      "language": "en",
+      "style": "psalm",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Domine, clamavi",
+        "omit_gloria": false,
+        "localname": "Psalm 141",
+        "number": "141",
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "type": "psalm"
+    }
+  ]
+}

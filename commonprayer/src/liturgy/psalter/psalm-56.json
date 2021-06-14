@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "category": ["Psalm"],
+      "language": "en",
+      "slug": "psalm_56",
+      "citation": null,
+      "label": "Psalm 56",
+      "metadata": {
+        "latinname": "Miserere mei, Deus",
+        "number": "56",
+        "omit_antiphon": false,
+        "localname": "Psalm 56",
+        "omit_gloria": false
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Have mercy on me, O God,\nfor my enemies are hounding me; *",
+              "type": "psalm-verse",
+              "halfverse": "all day long they assault and oppress me.",
+              "number": "1"
+            },
+            {
+              "verse": "They hound me all the day long; *",
+              "halfverse": "truly there are many who fight against me, O Most High.",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "I will put my trust in you.",
+              "type": "psalm-verse",
+              "verse": "Whenever I am afraid, *"
+            },
+            {
+              "verse": "In God, whose word I praise,\nin God I trust and will not be afraid, *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "for what can flesh do to me?"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "their only thought is to do me evil.",
+              "verse": "All day long they damage my cause; *",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "they spy upon my footsteps;\n because they seek my life.",
+              "verse": "They band together; they lie in wait; *"
+            },
+            {
+              "verse": "Shall they escape despite their wickedness? *",
+              "number": "7",
+              "halfverse": "O God, in your anger, cast down the peoples.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "are they not recorded in your book?",
+              "type": "psalm-verse",
+              "verse": "You have noted my lamentation;\nput my tears into your bottle; *"
+            },
+            {
+              "number": "9",
+              "halfverse": "this I know, for God is on my side.",
+              "verse": "Whenever I call upon you, my enemies will be put to flight; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for what can mortals do to me?",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "In God the LORD, whose word I praise,\nin God I trust and will not be afraid, *"
+            },
+            {
+              "halfverse": "I will present to you thank-offerings;",
+              "number": "11",
+              "verse": "I am bound by the vow I made to you, O God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "that I may walk before God in the light of the living.",
+              "verse": "For you have rescued my soul from death and my feet from stumbling, *",
+              "number": "12"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "source": {
+        "citation": "p. 662",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      }
+    }
+  ]
+}

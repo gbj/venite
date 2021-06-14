@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "I will tell of all your marvelous works.",
+              "verse": "I will give thanks to you, O LORD, with my whole heart; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "I will sing to your Name, O Most High.",
+              "verse": "I will be glad and rejoice in you; *"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "they will stumble and perish at your presence.",
+              "verse": "When my enemies are driven back, *"
+            },
+            {
+              "verse": "For you have maintained my right and my cause; *",
+              "halfverse": "you sit upon your throne judging right.",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "You have rebuked the ungodly and destroyed the wicked; *",
+              "halfverse": "you have blotted out their name for ever and ever."
+            },
+            {
+              "halfverse": "their cities plowed under, the memory of them perished;",
+              "type": "psalm-verse",
+              "verse": "As for the enemy, they are finished, in perpetual ruin, *",
+              "number": "6"
+            },
+            {
+              "verse": "But the LORD is enthroned for ever; *",
+              "type": "psalm-verse",
+              "halfverse": "he has set up this throne for judgment.",
+              "number": "7"
+            },
+            {
+              "number": "8",
+              "halfverse": "he judges the peoples with equity.",
+              "verse": "It is he who rules the world with righteousness; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "a refuge in time of trouble.",
+              "verse": "The LORD will be a refuge for the oppressed, *",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for you never forsake those who seek you, O LORD.",
+              "number": "10",
+              "verse": "Those who know your Name will put their trust in you, *"
+            },
+            {
+              "number": "11",
+              "halfverse": "proclaim to the peoples the things he has done.",
+              "verse": "Sing praise to the LORD who dwells in Zion; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "halfverse": "he will not forget the cry of the afflicted.",
+              "verse": "The Avenger of blood will remember them; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "13",
+              "verse": "Have pity on me, O LORD; *",
+              "halfverse": "see the misery I suffer from those who hate me,\n O you who lift me up from the gate of death;",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "So that I may tell of all your praises\nand rejoice in your salvation *",
+              "type": "psalm-verse",
+              "number": "14",
+              "halfverse": "in the gates of the city of Zion."
+            },
+            {
+              "verse": "The ungodly have fallen into the pit they dug, *",
+              "halfverse": "and in the snare they set is their own foot caught.",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "the wicked are trapped in the works of their own hands.",
+              "verse": "The LORD is known by his acts of justice; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and also all the people that forget God.",
+              "number": "17",
+              "verse": "The wicked shall be given over to the grave, *"
+            },
+            {
+              "number": "18",
+              "type": "psalm-verse",
+              "halfverse": "and the hope of the poor shall not perish for ever.",
+              "verse": "For the needy shall not always be forgotten, *"
+            },
+            {
+              "number": "19",
+              "halfverse": "let them be judged before you.",
+              "type": "psalm-verse",
+              "verse": "Rise up, O LORD, let not the ungodly have the upper hand; *"
+            },
+            {
+              "halfverse": "let the ungodly know they are but mortal.",
+              "number": "20",
+              "verse": "Put fear upon them, O LORD; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "citation": "p. 593",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "label": "Psalm 9",
+      "version_label": null,
+      "hidden": false,
+      "citation": null,
+      "metadata": {
+        "number": "9",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 9",
+        "latinname": "Confitebor tibi"
+      },
+      "slug": "psalm_9"
+    }
+  ]
+}

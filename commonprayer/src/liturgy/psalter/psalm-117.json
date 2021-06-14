@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "slug": "psalm_117",
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Praise the LORD, all you nations; *",
+              "number": "1",
+              "halfverse": "laud him, all you peoples.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the faithfulness of the LORD endures for ever.\n Hallelujah!",
+              "type": "psalm-verse",
+              "number": "2",
+              "verse": "For his loving-kindness toward us is great, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "label": "Psalm 117",
+      "style": "psalm",
+      "language": "en",
+      "citation": null,
+      "metadata": {
+        "localname": "Psalm 117",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Laudate Dominus",
+        "number": "117"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "version": "bcp1979",
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 760"
+      }
+    }
+  ]
+}

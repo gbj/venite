@@ -1,0 +1,150 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "hidden": false,
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "88",
+        "latinname": "Domine, Deus",
+        "localname": "Psalm 88"
+      },
+      "slug": "psalm_88",
+      "version": "bcp1979",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 712"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "by day and night I cry to you.",
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "O LORD, my God, my Savior, *"
+            },
+            {
+              "verse": "Let my prayer enter into your presence; *",
+              "halfverse": "incline your ear to my lamentation.",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "3",
+              "halfverse": "my life is at the brink of the grave.",
+              "verse": "For I am full of trouble; *"
+            },
+            {
+              "verse": "I am counted among those who go down to the Pit; *",
+              "type": "psalm-verse",
+              "halfverse": "I have become like one who has no strength;",
+              "number": "4"
+            },
+            {
+              "verse": "Lost among the dead, *",
+              "halfverse": "like the slain who lie in the grave,",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "for they are cut off from your hand.",
+              "verse": "Whom you remember no more, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You have laid me in the depths of the Pit, *",
+              "number": "7",
+              "halfverse": "in dark places, and in the abyss.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Your anger weighs upon me heavily, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "and all your great waves overwhelm me."
+            },
+            {
+              "verse": "You have put my friends far from me;\nyou have made me to be abhorred by them; *",
+              "halfverse": "I am in prison and cannot get free.",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "number": "10",
+              "halfverse": "LORD, I have called upon you daily;\n I have stretched out my hands to you.",
+              "type": "psalm-verse",
+              "verse": "My sight has failed me because of trouble; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "will those who have died stand up and give you thanks?",
+              "number": "11",
+              "verse": "Do you work wonders for the dead? *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Will your loving-kindness be declared in the grave? *",
+              "halfverse": "your faithfulness in the land of destruction?",
+              "number": "12"
+            },
+            {
+              "number": "13",
+              "halfverse": "or your righteousness in the country where all is forgotten?",
+              "verse": "Will your wonders be known in the dark? *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "in the morning my prayer comes before you.",
+              "type": "psalm-verse",
+              "number": "14",
+              "verse": "But as for me, O LORD, I cry to you for help; *"
+            },
+            {
+              "verse": "LORD, why have you rejected me? *",
+              "number": "15",
+              "type": "psalm-verse",
+              "halfverse": "why have you hidden your face from me?"
+            },
+            {
+              "halfverse": "I have borne your terrors with a troubled mind.",
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "Ever since my youth, I have been wretched and at the point of death; *"
+            },
+            {
+              "verse": "Your blazing anger has swept over me; *",
+              "type": "psalm-verse",
+              "halfverse": "your terrors have destroyed me;",
+              "number": "17"
+            },
+            {
+              "halfverse": "they encompass me on every side.",
+              "verse": "They surround me all day long like a flood; *",
+              "type": "psalm-verse",
+              "number": "18"
+            },
+            {
+              "halfverse": "and darkness is my only companion.",
+              "verse": "My friend and my neighbor you have put away from me, *",
+              "number": "19",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "citation": null,
+      "type": "psalm",
+      "version_label": null,
+      "language": "en",
+      "label": "Psalm 88",
+      "style": "psalm",
+      "lastRevision": 0
+    }
+  ]
+}

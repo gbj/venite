@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "metadata": {
+        "number": "147",
+        "latinname": "Laudate Dominus",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 147"
+      },
+      "category": ["Psalm"],
+      "slug": "psalm_147",
+      "hidden": false,
+      "style": "psalm",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "verse": "Hallelujah!\nHow good it is to sing praises to our God! *",
+              "type": "psalm-verse",
+              "halfverse": "how pleasant it is to honor him with praise!"
+            },
+            {
+              "verse": "The LORD rebuilds Jerusalem; *",
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "he gathers the exiles of Israel."
+            },
+            {
+              "halfverse": "and binds up their wounds.",
+              "type": "psalm-verse",
+              "number": "3",
+              "verse": "He heals the brokenhearted *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and calls them all by their names.",
+              "verse": "He counts the number of the stars *"
+            },
+            {
+              "halfverse": "there is no limit to his wisdom.",
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "Great is our LORD and mighty in power; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "but casts the wicked to the ground.",
+              "verse": "The LORD lifts up the lowly, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "make music to our God upon the harp.",
+              "verse": "Sing to the LORD with thanksgiving; *"
+            },
+            {
+              "halfverse": "and prepares rain for the earth;",
+              "number": "8",
+              "verse": "He covers the heavens with clouds *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and green plants to serve mankind.",
+              "verse": "He makes grass to grow upon the mountains *",
+              "number": "9"
+            },
+            {
+              "verse": "He provides food for flocks and herds *",
+              "number": "10",
+              "halfverse": "and for the young ravens when they cry.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He is not impressed by the might of a horse; *",
+              "halfverse": "he has no pleasure in the strength of a man;",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "But the LORD has pleasure in those who fear him, *",
+              "halfverse": "in those who await his gracious favor.",
+              "number": "12"
+            },
+            {
+              "verse": "Worship the LORD, O Jerusalem; *",
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "praise your God, O Zion;"
+            },
+            {
+              "verse": "For he has strengthened the bars of your gates; *",
+              "halfverse": "he has blessed your children within you.",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he satisfies you with the finest wheat.",
+              "verse": "He has established peace on your borders; *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He sends out his command to the earth, *",
+              "type": "psalm-verse",
+              "halfverse": "and his word runs very swiftly.",
+              "number": "16"
+            },
+            {
+              "verse": "He gives snow like wool; *",
+              "halfverse": "he scatters hoarfrost like ashes.",
+              "number": "17",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He scatters his hail like bread crumbs; *",
+              "halfverse": "who can stand against his cold?",
+              "number": "18",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he blows with his wind, and the waters flow.",
+              "verse": "He sends forth his word and melts them; *",
+              "type": "psalm-verse",
+              "number": "19"
+            },
+            {
+              "halfverse": "his statutes and his judgments to Israel.",
+              "number": "20",
+              "verse": "He declares his word to Jacob, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "to them he has not revealed his judgments.\n Hallelujah!",
+              "type": "psalm-verse",
+              "verse": "He has not done so to any other nation; *",
+              "number": "21"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "version_label": null,
+      "citation": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 804"
+      },
+      "label": "Psalm 147"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version_label": null,
+      "version": "bcp1979",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "save and deliver me from all who pursue me;",
+              "verse": "O LORD my God, I take refuge in you; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and snatch me away with none to deliver me.",
+              "verse": "Lest like a lion they tear me in pieces *",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "if there is any wickedness in my hands,",
+              "verse": "O LORD my God, if I have done these things: *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "If I have repaid my friend with evil, *",
+              "halfverse": "or plundered him who without cause is my enemy;",
+              "number": "4"
+            },
+            {
+              "verse": "Then let my enemy pursue and overtake me, *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "trample my life into the ground,\n and lay my honor in the dust."
+            },
+            {
+              "halfverse": "rise up against the fury of my enemies.",
+              "verse": "Stand up, O LORD, in your wrath; *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "Awake, O my God, decree justice; *",
+              "halfverse": "let the assembly of the peoples gather round you."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O LORD, judge the nations.",
+              "verse": "Be seated on your lofty throne, O Most High; *",
+              "number": "8"
+            },
+            {
+              "verse": "Give judgment for me according to my righteousness, O LORD, *",
+              "halfverse": "and according to my innocence, O Most High.",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "halfverse": "for you test the mind and heart, O righteous God.",
+              "number": "10",
+              "verse": "Let the malice of the wicked come to an end,\nbut establish the righteous; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "halfverse": "he is the savior of the true in heart.",
+              "type": "psalm-verse",
+              "verse": "God is my shield and defense; *"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "God sits in judgment every day.",
+              "verse": "God is a righteous judge; *"
+            },
+            {
+              "halfverse": "he will bend his bow and make it ready.",
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "If they will not repent, God will whet his sword; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he makes his arrows shafts of fire.",
+              "verse": "He has prepared his weapons of death; *",
+              "number": "14"
+            },
+            {
+              "verse": "Look at those who are in labor with wickedness, *",
+              "halfverse": "who conceive evil, and give birth to a lie.",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "and fall into the hole that they have made.",
+              "verse": "They dig a pit and make it deep *"
+            },
+            {
+              "number": "17",
+              "halfverse": "their violence falls on their own scalp.",
+              "verse": "Their malice turns back upon their own head; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will bear witness that the LORD is righteous; *",
+              "number": "18",
+              "halfverse": "I will praise the Name of the LORD Most High.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "metadata": {
+        "number": "7",
+        "latinname": "Domine, Deus meus",
+        "localname": "Psalm 7",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "slug": "psalm_7",
+      "style": "psalm",
+      "hidden": false,
+      "label": "Psalm 7",
+      "source": {
+        "citation": "p. 590",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null
+    }
+  ]
+}

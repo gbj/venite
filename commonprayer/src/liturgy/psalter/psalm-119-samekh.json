@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "source": {
+        "citation": "p. 772",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "label": "Psalm 119: Samekh",
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "but your law do I love.",
+              "number": "113",
+              "type": "psalm-verse",
+              "verse": "I hate those who have a divided heart, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You are my refuge and shield; *",
+              "halfverse": "my hope is in your word.",
+              "number": "114"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Away from me, you wicked! *",
+              "halfverse": "I will keep the commandments of my God.",
+              "number": "115"
+            },
+            {
+              "verse": "Sustain me according to your promise, that I may live, *",
+              "number": "116",
+              "halfverse": "and let me not be disappointed in my hope.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Hold me up, and I shall be safe, *",
+              "halfverse": "and my delight shall be ever in your statutes.",
+              "number": "117",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You spurn all who stray from your statutes; *",
+              "halfverse": "their deceitfulness is in vain.",
+              "type": "psalm-verse",
+              "number": "118"
+            },
+            {
+              "number": "119",
+              "type": "psalm-verse",
+              "halfverse": "therefore I love your decrees.",
+              "verse": "In your sight all the wicked of the earth are but dross; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I am afraid of your judgments.",
+              "number": "120",
+              "verse": "My flesh trembles with dread of you; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "language": "en",
+      "slug": "psalm_119_samekh",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "version_label": null,
+      "metadata": {
+        "latinname": "Iniquos odio habui",
+        "omit_gloria": false,
+        "localname": "Psalm 119: Samekh",
+        "omit_antiphon": false,
+        "number": "119"
+      },
+      "hidden": false,
+      "type": "psalm"
+    }
+  ]
+}

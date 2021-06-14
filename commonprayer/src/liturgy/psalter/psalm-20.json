@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "the Name of the God of Jacob defend you;",
+              "number": "1",
+              "verse": "May the LORD answer you in the day of trouble, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "and strengthen you out of Zion;",
+              "type": "psalm-verse",
+              "verse": "Send you help from his holy place *"
+            },
+            {
+              "halfverse": "and accept your burnt sacrifice;",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Remember all your offerings *"
+            },
+            {
+              "halfverse": "and prosper all your plans.",
+              "verse": "Grant you your heart’s desire *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "We will shout for joy at your victory\nand triumph in the Name of our God; *",
+              "halfverse": "may the LORD grant all your requests.",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Now I know that the LORD gives victory to his anointed; *",
+              "halfverse": "he will answer him out of his holy heaven,\n with the victorious strength of his right hand.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but we will call upon the Name of the LORD our God.",
+              "type": "psalm-verse",
+              "verse": "Some put their trust in chariots and some in horses, *",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They collapse and fall down, *",
+              "number": "8",
+              "halfverse": "but we will arise and stand upright."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and answer us when we call.",
+              "verse": "O LORD, give victory to the king *",
+              "number": "9"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "category": ["Psalm"],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 608",
+        "source": "bcp1979"
+      },
+      "version": "bcp1979",
+      "version_label": null,
+      "slug": "psalm_20",
+      "language": "en",
+      "type": "psalm",
+      "label": "Psalm 20",
+      "citation": null,
+      "style": "psalm",
+      "metadata": {
+        "localname": "Psalm 20",
+        "omit_gloria": false,
+        "number": "20",
+        "latinname": "Exaudiat te Dominus",
+        "omit_antiphon": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "slug": "psalm_101",
+      "version_label": null,
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Misericordiam ed judicium",
+        "omit_antiphon": false,
+        "number": "101",
+        "localname": "Psalm 101"
+      },
+      "style": "psalm",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "to you, O LORD, will I sing praises.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "I will sing of mercy and justice; *"
+            },
+            {
+              "number": "2",
+              "halfverse": "I will walk with sincerity of heart within my house.",
+              "type": "psalm-verse",
+              "verse": "I will strive to follow a blameless course;\noh, when will you come to me? *"
+            },
+            {
+              "verse": "I will set no worthless thing before my eyes; *",
+              "number": "3",
+              "halfverse": "I hate the doers of evil deeds;\n they shall not remain with me.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "halfverse": "I will not know evil.",
+              "verse": "A crooked heart shall be far from me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "5",
+              "halfverse": "those who have a haughty look and a proud heart I cannot abide.",
+              "verse": "Those who in secret slander their neighbors I will destroy; *"
+            },
+            {
+              "halfverse": "and only those who lead a blameless life shall be my servants.",
+              "verse": "My eyes are upon the faithful in the land, that they may dwell with me, *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "halfverse": "and those who tell lies shall not continue in my sight.",
+              "type": "psalm-verse",
+              "verse": "Those who act deceitfully shall not dwell in my house, *"
+            },
+            {
+              "number": "8",
+              "verse": "I will soon destroy all the wicked in the land, *",
+              "type": "psalm-verse",
+              "halfverse": "that I may root out all evildoers from the city of the LORD."
+            }
+          ]
+        }
+      ],
+      "version": "bcp1979",
+      "label": "Psalm 101",
+      "category": ["Psalm"],
+      "hidden": false,
+      "type": "psalm",
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 730"
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "slug": "psalm_71",
+      "hidden": false,
+      "version_label": null,
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "In you, O LORD, have I taken refuge; *",
+              "number": "1",
+              "halfverse": "let me never be ashamed.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "In your righteousness, deliver me and set me free; *",
+              "number": "2",
+              "halfverse": "incline your ear to me and save me.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you are my crag and my stronghold.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Be my strong rock, a castle to keep me safe; *"
+            },
+            {
+              "halfverse": "from the clutches of the evildoer and the oppressor.",
+              "number": "4",
+              "verse": "Deliver me, my God, from the hand of the wicked, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "my confidence since I was young.",
+              "verse": "For you are my hope, O LORD God, *"
+            },
+            {
+              "number": "6",
+              "halfverse": "my praise shall be always of you.",
+              "type": "psalm-verse",
+              "verse": "I have been sustained by you ever since I was born;\nfrom my mother’s womb you have been my strength; *"
+            },
+            {
+              "verse": "I have become a portent to many; *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "but you are my refuge and my strength."
+            },
+            {
+              "halfverse": "and your glory all the day long.",
+              "verse": "Let my mouth be full of your praise *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Do not cast me off in my old age; *",
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "forsake me not when my strength fails."
+            },
+            {
+              "halfverse": "and those who lie in wait for my life take counsel together.",
+              "type": "psalm-verse",
+              "verse": "For my enemies are talking against me, *",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "because there is none who will save.”",
+              "verse": "They say, “God has forsaken him;\ngo after him and seize him; *"
+            },
+            {
+              "verse": "O God, be not far from me; *",
+              "halfverse": "come quickly to help me, O my God.",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "number": "13",
+              "halfverse": "let those who seek to do me evil be covered with scorn and reproach.",
+              "type": "psalm-verse",
+              "verse": "Let those who set themselves against me be put to shame and be disgraced; *"
+            },
+            {
+              "number": "14",
+              "verse": "But I shall always wait in patience, *",
+              "halfverse": "and shall praise you more and more.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "though I cannot know the number of them.",
+              "verse": "My mouth shall recount your mighty acts\nand saving deeds all day long; *",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "halfverse": "I will recall your righteousness, yours alone.",
+              "type": "psalm-verse",
+              "verse": "I will begin with the mighty works of the Lord GOD; *",
+              "number": "16"
+            },
+            {
+              "verse": "O God, you have taught me since I was young, *",
+              "halfverse": "and to this day I tell of your wonderful works.",
+              "type": "psalm-verse",
+              "number": "17"
+            },
+            {
+              "halfverse": "till I make known your strength to this generation\n and your power to all who are to come.",
+              "verse": "And now that I am old and gray-headed, O God, do not forsake me, *",
+              "type": "psalm-verse",
+              "number": "18"
+            },
+            {
+              "number": "19",
+              "type": "psalm-verse",
+              "verse": "Your righteousness, O God, reaches to the heavens; *",
+              "halfverse": "you have done great things;\n who is like you, O God?"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but you will restore my life\n and bring me up again from the deep places of the earth.",
+              "number": "20",
+              "verse": "You have showed me great troubles and adversities, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you enfold and comfort me,",
+              "verse": "You strengthen me more and more; *",
+              "number": "21"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "22",
+              "halfverse": "I will sing to you with the harp, O Holy One of Israel.",
+              "verse": "Therefore I will praise you upon the lyre for your faithfulness, O my God; *"
+            },
+            {
+              "number": "23",
+              "type": "psalm-verse",
+              "halfverse": "and so will my soul, which you have redeemed.",
+              "verse": "My lips will sing with joy when I play to you, *"
+            },
+            {
+              "halfverse": "for they are ashamed and disgraced who sought to do me harm.",
+              "verse": "My tongue will proclaim your righteousness all day long, *",
+              "number": "24",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "label": "Psalm 71",
+      "citation": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "In te, Domine, speravi",
+        "omit_gloria": false,
+        "number": "71",
+        "localname": "Psalm 71"
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "language": "en",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 683"
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Misericordias Domini",
+        "omit_antiphon": false,
+        "number": "89",
+        "localname": "Psalm 89: Part I",
+        "omit_gloria": false
+      },
+      "style": "psalm",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "from age to age my mouth will proclaim your faithfulness.",
+              "number": "1",
+              "verse": "Your love, O LORD, for ever will I sing; *"
+            },
+            {
+              "verse": "For I am persuaded that your love is established for ever; *",
+              "type": "psalm-verse",
+              "halfverse": "you have set your faithfulness firmly in the heavens.",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "I have sworn an oath to David my servant:",
+              "verse": "“I have made a covenant with my chosen one; *"
+            },
+            {
+              "halfverse": "and preserve your throne for all generations.’”",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "‘I will establish your line for ever, *"
+            },
+            {
+              "number": "5",
+              "halfverse": "and to your faithfulness in the assembly of the holy ones;",
+              "verse": "The heavens bear witness to your wonders, O LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "who is like the LORD among the gods?",
+              "type": "psalm-verse",
+              "verse": "For who in the skies can be compared to the LORD? *"
+            },
+            {
+              "halfverse": "great and terrible to all those round about him.",
+              "verse": "God is much to be feared in the council of the holy ones, *",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "O mighty LORD, your faithfulness is all around you.",
+              "verse": "Who is like you, LORD God of hosts? *"
+            },
+            {
+              "verse": "You rule the raging of the sea *",
+              "type": "psalm-verse",
+              "halfverse": "and still the surging of its waves.",
+              "number": "9"
+            },
+            {
+              "verse": "You have crushed Rahab of the deep with a deadly wound; *",
+              "number": "10",
+              "halfverse": "you have scattered your enemies with your mighty arm.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Yours are the heavens; the earth also is yours; *",
+              "halfverse": "you laid the foundations of the world and all that is in it.",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "Tabor and Hermon rejoice in your Name.",
+              "verse": "You have made the north and the south; *",
+              "number": "12"
+            },
+            {
+              "halfverse": "strong is your hand and high is your right hand.",
+              "number": "13",
+              "verse": "You have a mighty arm; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "love and truth go before your face.",
+              "verse": "Righteousness and justice are the foundations of your throne; *",
+              "type": "psalm-verse",
+              "number": "14"
+            },
+            {
+              "halfverse": "they walk, O LORD, in the light of your presence.",
+              "verse": "Happy are the people who know the festal shout! *",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They rejoice daily in your Name; *",
+              "halfverse": "they are jubilant in your righteousness.",
+              "number": "16"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "For you are the glory of their strength, *",
+              "halfverse": "and by your favor our might is exalted."
+            },
+            {
+              "number": "18",
+              "halfverse": "The Holy One of Israel is our King.",
+              "verse": "Truly, the LORD is our ruler; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 713"
+      },
+      "category": ["Psalm"],
+      "type": "psalm",
+      "language": "en",
+      "citation": null,
+      "label": "Psalm 89: Part I",
+      "slug": "psalm_89_i"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "label": "Psalm 43",
+      "version_label": null,
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "slug": "psalm_43",
+      "citation": null,
+      "metadata": {
+        "latinname": "Judica me, Deus",
+        "omit_gloria": false,
+        "localname": "Psalm 43",
+        "omit_antiphon": false,
+        "number": "43"
+      },
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Give judgment for me, O God,\nand defend my cause against an ungodly people; *",
+              "number": "1",
+              "halfverse": "deliver me from the deceitful and the wicked.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and why do I go so heavily while the enemy oppresses me?",
+              "verse": "For you are the God of my strength;\nwhy have you put me from you? *",
+              "number": "2"
+            },
+            {
+              "verse": "Send out your light and your truth, that they may lead me, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and bring me to your holy hill\n and to your dwelling;"
+            },
+            {
+              "halfverse": "and on the harp I will give thanks to you, O God my God.",
+              "number": "4",
+              "verse": "That I may go to the altar of God,\nto the God of my joy and gladness; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Why are you so full of heaviness, O my soul? *",
+              "halfverse": "and why are you so disquieted within me?",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for I will yet give thanks to him,\n who is the help of my countenance, and my God.",
+              "number": "6",
+              "verse": "Put your trust in God; *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 644",
+        "api": "https://www.venite.app/api"
+      },
+      "style": "psalm"
+    }
+  ]
+}

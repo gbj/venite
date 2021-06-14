@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "number": "23",
+        "localname": "Psalm 23",
+        "omit_antiphon": false,
+        "latinname": "Dominus regit me"
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "source": {
+        "citation": "p. 612",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "hidden": false,
+      "version": "bcp1979",
+      "language": "en",
+      "label": "Psalm 23",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "The LORD is my shepherd; *",
+              "halfverse": "I shall not be in want.",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "He makes me lie down in green pastures *",
+              "halfverse": "and leads me beside still waters."
+            },
+            {
+              "verse": "He revives my soul *",
+              "type": "psalm-verse",
+              "halfverse": "and guides me along right pathways for his Name’s sake.",
+              "number": "3"
+            },
+            {
+              "halfverse": "for you are with me;\n your rod and your staff, they comfort me.",
+              "type": "psalm-verse",
+              "verse": "Though I walk through the valley of the shadow of death,\nI shall fear no evil; *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You spread a table before me in the presence of those who trouble me; *",
+              "halfverse": "you have anointed my head with oil,\n and my cup is running over.",
+              "number": "5"
+            },
+            {
+              "verse": "Surely your goodness and mercy shall follow me all the days of my life, *",
+              "number": "6",
+              "halfverse": "and I will dwell in the house of the LORD for ever.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "style": "psalm",
+      "slug": "psalm_23"
+    }
+  ]
+}

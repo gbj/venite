@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Answer me when I call, O God, defender of my cause; *",
+              "halfverse": "you set me free when I am hard-pressed;\n have mercy on me and hear my prayer.",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "how long will you worship dumb idols\n and run after false gods?”",
+              "verse": "“You mortals, how long will you dishonor my glory; *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "verse": "Know that the LORD does wonders for the faithful; *",
+              "number": "3",
+              "halfverse": "when I call upon the LORD, he will hear me.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "speak to your heart in silence upon your bed.",
+              "verse": "Tremble, then, and do not sin; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and put your trust in the LORD.",
+              "verse": "Offer the appointed sacrifices *",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "verse": "Many are saying,\n“Oh, that we might see better times!” *",
+              "type": "psalm-verse",
+              "halfverse": "Lift up the light of your countenance upon us, O LORD."
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "more than when grain and wine and oil increase.",
+              "verse": "You have put gladness in my heart, *"
+            },
+            {
+              "verse": "I lie down in peace; at once I fall asleep; *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "for only you, LORD, make me dwell in safety."
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "citation": null,
+      "category": ["Psalm"],
+      "hidden": false,
+      "label": "Psalm 4",
+      "slug": "psalm_4",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 587"
+      },
+      "metadata": {
+        "latinname": "Cum invocarem",
+        "omit_antiphon": false,
+        "number": "4",
+        "localname": "Psalm 4",
+        "omit_gloria": false
+      },
+      "language": "en",
+      "style": "psalm",
+      "version_label": null
+    }
+  ]
+}

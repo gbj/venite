@@ -1,0 +1,191 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Confitemini",
+        "omit_antiphon": false,
+        "number": "136",
+        "localname": "Psalm 136",
+        "omit_gloria": false
+      },
+      "type": "psalm",
+      "version_label": null,
+      "slug": "psalm_136",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "for his mercy endures for ever.",
+              "number": "1",
+              "verse": "Give thanks to the LORD, for he is good, *"
+            },
+            {
+              "halfverse": "for his mercy endures for ever.",
+              "number": "2",
+              "verse": "Give thanks to the God of gods, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Give thanks to the Lord of lords, *",
+              "number": "3",
+              "halfverse": "for his mercy endures for ever.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "Who only does great wonders, *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "verse": "Who by wisdom made the heavens, *",
+              "number": "5",
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse",
+              "verse": "Who spread out the earth upon the waters, *",
+              "number": "6"
+            },
+            {
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse",
+              "verse": "Who created great lights, *",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The sun to rule the day, *",
+              "number": "8",
+              "halfverse": "for his mercy endures for ever;"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The moon and the stars to govern the night, *",
+              "halfverse": "for his mercy endures for ever.",
+              "number": "9"
+            },
+            {
+              "number": "10",
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "Who struck down the firstborn of Egypt, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "verse": "And brought out Israel from among them, *",
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "With a mighty hand and a stretched-out arm, *",
+              "number": "12"
+            },
+            {
+              "verse": "Who divided the Red Sea in two, *",
+              "halfverse": "for his mercy endures for ever;",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "And made Israel to pass through the midst of it, *",
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse",
+              "number": "14"
+            },
+            {
+              "number": "15",
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "But swept Pharaoh and his army into the Red Sea, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for his mercy endures for ever.",
+              "verse": "Who led his people through the wilderness, *",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "number": "17",
+              "halfverse": "for his mercy endures for ever;",
+              "type": "psalm-verse",
+              "verse": "Who struck down great kings, *"
+            },
+            {
+              "verse": "And slew mighty kings, *",
+              "number": "18",
+              "type": "psalm-verse",
+              "halfverse": "for his mercy endures for ever;"
+            },
+            {
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "Sihon, king of the Amorites, *",
+              "type": "psalm-verse",
+              "number": "19"
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "verse": "And Og, the king of Bashan, *",
+              "halfverse": "for his mercy endures for ever;"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "21",
+              "verse": "And gave away their lands for an inheritance, *",
+              "halfverse": "for his mercy endures for ever;"
+            },
+            {
+              "verse": "An inheritance for Israel his servant, *",
+              "type": "psalm-verse",
+              "number": "22",
+              "halfverse": "for his mercy endures for ever."
+            },
+            {
+              "number": "23",
+              "halfverse": "for his mercy endures for ever;",
+              "verse": "Who remembered us in our low estate, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "And delivered us from our enemies, *",
+              "halfverse": "for his mercy endures for ever;"
+            },
+            {
+              "number": "25",
+              "type": "psalm-verse",
+              "halfverse": "for his mercy endures for ever.",
+              "verse": "Who gives food to all creatures, *"
+            },
+            {
+              "halfverse": "for his mercy endures for ever.",
+              "verse": "Give thanks to the God of heaven, *",
+              "type": "psalm-verse",
+              "number": "26"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "style": "psalm",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 789"
+      },
+      "label": "Psalm 136",
+      "citation": null
+    }
+  ]
+}

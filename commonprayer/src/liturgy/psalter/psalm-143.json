@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "LORD, hear my prayer,\nand in your faithfulness heed my supplications; *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "answer me in your righteousness."
+            },
+            {
+              "number": "2",
+              "verse": "Enter not into judgment with your servant, *",
+              "type": "psalm-verse",
+              "halfverse": "for in your sight shall no one living be justified."
+            },
+            {
+              "verse": "For my enemy has sought my life;\nhe has crushed me to the ground; *",
+              "halfverse": "he has made me live in dark places like those who are long dead.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "My spirit faints within me; *",
+              "halfverse": "my heart within me is desolate."
+            },
+            {
+              "number": "5",
+              "verse": "I remember the time past;\nI muse upon all your deeds; *",
+              "type": "psalm-verse",
+              "halfverse": "I consider the works of your hands."
+            },
+            {
+              "verse": "I spread out my hands to you; *",
+              "halfverse": "my soul gasps to you like a thirsty land.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "do not hide your face from me\n or I shall be like those who go down to the Pit.",
+              "verse": "O LORD, make haste to answer me; my spirit fails me; *",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "halfverse": "show me the road that I must walk,\n for I lift up my soul to you.",
+              "verse": "Let me hear of your loving-kindness in the morning,\nfor I put my trust in you; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "halfverse": "for I flee to you for refuge.",
+              "type": "psalm-verse",
+              "verse": "Deliver me from my enemies, O LORD, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let your good Spirit lead me on level ground.",
+              "verse": "Teach me to do what pleases you, for you are my God; *",
+              "number": "10"
+            },
+            {
+              "halfverse": "for your righteousness’ sake, bring me out of trouble.",
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "Revive me, O LORD, for your Name’s sake; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for truly I am your servant.",
+              "verse": "Of your goodness, destroy my enemies\nand bring all my foes to naught, *",
+              "number": "12"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "localname": "Psalm 143",
+        "latinname": "Domine, exaudi",
+        "number": "143",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "slug": "psalm_143",
+      "category": ["Psalm"],
+      "hidden": false,
+      "version": "bcp1979",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 798",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "version_label": null,
+      "label": "Psalm 143",
+      "style": "psalm",
+      "language": "en",
+      "type": "psalm"
+    }
+  ]
+}

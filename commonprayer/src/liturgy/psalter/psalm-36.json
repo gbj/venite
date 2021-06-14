@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "There is a voice of rebellion deep in the heart of the wicked; *",
+              "number": "1",
+              "halfverse": "there is no fear of God before his eyes.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "that his hateful sin will not be found out.",
+              "verse": "He flatters himself in his own eyes *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The words of his mouth are wicked and deceitful; *",
+              "number": "3",
+              "halfverse": "he has left off acting wisely and doing good."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "He thinks up wickedness upon his bed\nand has set himself in no good way; *",
+              "halfverse": "he does not abhor that which is evil."
+            },
+            {
+              "verse": "Your love, O LORD, reaches to the heavens, *",
+              "halfverse": "and your faithfulness to the clouds.",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "verse": "Your righteousness is like the strong mountains,\nyour justice like the great deep; *",
+              "number": "6",
+              "halfverse": "you save both man and beast, O LORD.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "How priceless is your love, O God! *",
+              "halfverse": "your people take refuge under the shadow of your wings.",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "halfverse": "you give them drink from the river of your delights.",
+              "verse": "They feast upon the abundance of your house; *",
+              "type": "psalm-verse",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "For with you is the well of life, *",
+              "halfverse": "and in your light we see light."
+            },
+            {
+              "verse": "Continue your loving-kindness to those who know you, *",
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "and your favor to those who are true of heart."
+            },
+            {
+              "halfverse": "nor the hand of the wicked push me aside.",
+              "number": "11",
+              "verse": "Let not the foot of the proud come near me, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "See how they are fallen, those who work wickedness! *",
+              "type": "psalm-verse",
+              "halfverse": "they are cast down and shall not be able to rise.",
+              "number": "12"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 632",
+        "api": "https://www.venite.app/api"
+      },
+      "version_label": null,
+      "type": "psalm",
+      "slug": "psalm_36",
+      "category": ["Psalm"],
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "36",
+        "localname": "Psalm 36",
+        "latinname": "Dixit injustus",
+        "omit_gloria": false
+      },
+      "style": "psalm",
+      "language": "en",
+      "label": "Psalm 36"
+    }
+  ]
+}

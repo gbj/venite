@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "I have no haughty looks.",
+              "verse": "O LORD, I am not proud; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "or with things that are too hard for me.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "I do not occupy myself with great matters, *"
+            },
+            {
+              "number": "3",
+              "halfverse": "my soul is quieted within me.",
+              "type": "psalm-verse",
+              "verse": "But I still my soul and make it quiet,\nlike a child upon its mother’s breast; *"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "O Israel, wait upon the LORD, *",
+              "halfverse": "from this time forth for evermore."
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_131",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Domine, non est",
+        "number": "131",
+        "localname": "Psalm 131"
+      },
+      "style": "psalm",
+      "citation": null,
+      "label": "Psalm 131",
+      "hidden": false,
+      "source": {
+        "citation": "p. 785",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "version_label": null,
+      "language": "en",
+      "type": "psalm"
+    }
+  ]
+}

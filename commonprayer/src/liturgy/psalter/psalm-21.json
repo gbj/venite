@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "version_label": null,
+      "category": ["Psalm"],
+      "slug": "psalm_21",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 608",
+        "source": "bcp1979"
+      },
+      "metadata": {
+        "number": "21",
+        "latinname": "Domine, in virtute tua",
+        "omit_antiphon": false,
+        "localname": "Psalm 21",
+        "omit_gloria": false
+      },
+      "type": "psalm",
+      "hidden": false,
+      "label": "Psalm 21",
+      "version": "bcp1979",
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "The king rejoices in your strength, O LORD; *",
+              "halfverse": "how greatly he exults in your victory!",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have not denied him the request of his lips.",
+              "verse": "You have given him his heart’s desire; *",
+              "number": "2"
+            },
+            {
+              "verse": "For you meet him with blessings of prosperity, *",
+              "halfverse": "and set a crown of fine gold upon his head.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He asked you for life, and you gave it to him: *",
+              "type": "psalm-verse",
+              "halfverse": "length of days, for ever and ever.",
+              "number": "4"
+            },
+            {
+              "verse": "His honor is great, because of your victory; *",
+              "halfverse": "splendor and majesty have you bestowed upon him.",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "and will make him glad with the joy of your presence.",
+              "verse": "For you will give him everlasting felicity *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "because of the loving-kindness of the Most High, he will not fall.",
+              "verse": "For the king puts his trust in the LORD; *",
+              "number": "7"
+            },
+            {
+              "verse": "Your hand will lay hold upon all your enemies; *",
+              "number": "8",
+              "halfverse": "your right hand will seize all those who hate you.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You will make them like a fiery furnace *",
+              "halfverse": "at the time of your appearing, O LORD;",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and fire shall consume them.",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "You will swallow them up in your wrath, *"
+            },
+            {
+              "number": "11",
+              "halfverse": "and their descendants from among the peoples of the earth.",
+              "verse": "You will destroy their offspring from the land *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "yet they shall not prevail.",
+              "verse": "Though they intend evil against you\nand devise wicked schemes, *"
+            },
+            {
+              "halfverse": "and aim your arrows at them.",
+              "verse": "For you will put them to flight *",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "we will sing and praise your power.",
+              "verse": "Be exalted, O LORD, in your might; *",
+              "type": "psalm-verse",
+              "number": "14"
+            }
+          ]
+        }
+      ],
+      "citation": null
+    }
+  ]
+}

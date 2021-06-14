@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "label": "Psalm 29",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 620",
+        "source": "bcp1979"
+      },
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "ascribe to the LORD glory and strength.",
+              "number": "1",
+              "verse": "Ascribe to the LORD, you gods, *"
+            },
+            {
+              "verse": "Ascribe to the LORD the glory due his Name; *",
+              "type": "psalm-verse",
+              "halfverse": "worship the LORD in the beauty of holiness.",
+              "number": "2"
+            },
+            {
+              "verse": "The voice of the LORD is upon the waters;\nthe God of glory thunders; *",
+              "halfverse": "the LORD is upon the mighty waters.",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The voice of the LORD is a powerful voice; *",
+              "halfverse": "the voice of the LORD is a voice of splendor.",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the LORD breaks the cedars of Lebanon;",
+              "verse": "The voice of the LORD breaks the cedar trees; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He makes Lebanon skip like a calf, *",
+              "halfverse": "and Mount Hermon like a young wild ox.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the LORD shakes the wilderness of Kadesh.",
+              "number": "7",
+              "verse": "The voice of the LORD splits the flames of fire;\nthe voice of the LORD shakes the wilderness; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and strips the forests bare.",
+              "verse": "The voice of the LORD makes the oak trees writhe *",
+              "number": "8"
+            },
+            {
+              "halfverse": "all are crying, “Glory!”",
+              "verse": "And in the temple of the LORD *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD sits enthroned above the flood; *",
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "the LORD sits enthroned as King for evermore."
+            },
+            {
+              "halfverse": "the LORD shall give his people the blessing of peace.",
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "The LORD shall give strength to his people; *"
+            }
+          ]
+        }
+      ],
+      "version": "bcp1979",
+      "style": "psalm",
+      "metadata": {
+        "latinname": "Afferte Domino",
+        "omit_antiphon": false,
+        "number": "29",
+        "omit_gloria": false,
+        "localname": "Psalm 29"
+      },
+      "type": "psalm",
+      "slug": "psalm_29",
+      "version_label": null,
+      "hidden": false,
+      "citation": null
+    }
+  ]
+}

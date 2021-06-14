@@ -1,0 +1,209 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "version_label": null,
+      "source": {
+        "citation": "p. 760",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "slug": "psalm_118",
+      "style": "psalm",
+      "type": "psalm",
+      "label": "Psalm 118",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "his mercy endures for ever.",
+              "verse": "Give thanks to the LORD, for he is good; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "halfverse": "“His mercy endures for ever.”",
+              "verse": "Let Israel now proclaim, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "verse": "Let the house of Aaron now proclaim, *",
+              "type": "psalm-verse",
+              "halfverse": "“His mercy endures for ever.”"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "“His mercy endures for ever.”",
+              "verse": "Let those who fear the LORD now proclaim, *"
+            },
+            {
+              "halfverse": "the LORD answered by setting me free.",
+              "verse": "I called to the LORD in my distress; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "what can anyone do to me?",
+              "verse": "The LORD is at my side, therefore I will not fear; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I will triumph over those who hate me.",
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "The LORD is at my side to help me; *"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "than to put any trust in flesh.",
+              "verse": "It is better to rely on the LORD *"
+            },
+            {
+              "verse": "It is better to rely on the LORD *",
+              "type": "psalm-verse",
+              "halfverse": "than to put any trust in rulers.",
+              "number": "9"
+            },
+            {
+              "halfverse": "in the Name of the LORD I will repel them.",
+              "type": "psalm-verse",
+              "verse": "All the ungodly encompass me; *",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "halfverse": "in the name of the LORD I will repel them.",
+              "type": "psalm-verse",
+              "verse": "They hem me in, they hem me in on every side; *"
+            },
+            {
+              "verse": "They swarm about me like bees;\nthey blaze like a fire of thorns; *",
+              "halfverse": "in the name of the LORD I will repel them.",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but the LORD came to my help.",
+              "number": "13",
+              "verse": "I was pressed so hard that I almost fell, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD is my strength and my song, *",
+              "number": "14",
+              "halfverse": "and he has become my salvation.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "There is a sound of exultation and victory *",
+              "halfverse": "in the tents of the righteous:",
+              "number": "15"
+            },
+            {
+              "verse": "“The right hand of the LORD has triumphed! *",
+              "halfverse": "the right hand of the LORD is exalted!\n the right hand of the LORD has triumphed!”",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I shall not die, but live, *",
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "and declare the works of the LORD."
+            },
+            {
+              "verse": "The LORD has punished me sorely, *",
+              "halfverse": "but he did not hand me over to death.",
+              "number": "18",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "19",
+              "halfverse": "I will enter them;\n I will offer thanks to the LORD.",
+              "verse": "Open for me the gates of righteousness; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he who is righteous may enter.”",
+              "verse": "“This is the gate of the LORD; *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and have become my salvation.",
+              "verse": "I will give thanks to you, for you answered me *",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "verse": "The same stone which the builders rejected *",
+              "halfverse": "has become the chief cornerstone."
+            },
+            {
+              "halfverse": "and it is marvelous in our eyes.",
+              "verse": "This is the LORD’S doing, *",
+              "number": "23",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "24",
+              "halfverse": "we will rejoice and be glad in it.",
+              "verse": "On this day the LORD has acted; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "LORD, send us now success.",
+              "verse": "Hosanna, LORD, hosanna! *",
+              "number": "25"
+            },
+            {
+              "halfverse": "we bless you from the house of the LORD.",
+              "number": "26",
+              "type": "psalm-verse",
+              "verse": "Blessed is he who comes in the name of the Lord; *"
+            },
+            {
+              "halfverse": "form a procession with branches up to the horns of the altar.",
+              "number": "27",
+              "type": "psalm-verse",
+              "verse": "God is the LORD; he has shined upon us; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "“You are my God, and I will thank you; *",
+              "halfverse": "you are my God, and I will exalt you.”",
+              "number": "28"
+            },
+            {
+              "number": "29",
+              "verse": "Give thanks to the LORD, for he is good; *",
+              "halfverse": "his mercy endures for ever.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "version": "bcp1979",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "omit_gloria": false,
+        "number": "118",
+        "latinname": "Confitemini Domino",
+        "localname": "Psalm 118",
+        "omit_antiphon": false
+      }
+    }
+  ]
+}

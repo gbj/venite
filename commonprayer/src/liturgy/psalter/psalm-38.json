@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "hidden": false,
+      "category": ["Psalm"],
+      "label": "Psalm 38",
+      "version": "bcp1979",
+      "slug": "psalm_38",
+      "language": "en",
+      "type": "psalm",
+      "citation": null,
+      "metadata": {
+        "number": "38",
+        "omit_antiphon": false,
+        "latinname": "Domine, ne in furore",
+        "localname": "Psalm 38",
+        "omit_gloria": false
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "O LORD, do not rebuke me in your anger; *",
+              "halfverse": "do not punish me in your wrath."
+            },
+            {
+              "verse": "For your arrows have already pierced me, *",
+              "halfverse": "and your hand presses hard upon me.",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "there is no soundness in my body, because of my sin.",
+              "verse": "There is no health in my flesh,\nbecause of your indignation; *",
+              "number": "3"
+            },
+            {
+              "halfverse": "like a heavy burden they are too much for me to bear.",
+              "type": "psalm-verse",
+              "verse": "For my iniquities overwhelm me; *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "by reason of my foolishness.",
+              "verse": "My wounds stink and fester *",
+              "number": "5"
+            },
+            {
+              "verse": "I am utterly bowed down and prostrate; *",
+              "halfverse": "I go about in mourning all the day long.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "My loins are filled with searing pain; *",
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "there is no health in my body."
+            },
+            {
+              "halfverse": "I wail, because of the groaning of my heart.",
+              "type": "psalm-verse",
+              "verse": "I am utterly numb and crushed; *",
+              "number": "8"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "O Lord, you know all my desires, *",
+              "halfverse": "and my sighing is not hidden from you."
+            },
+            {
+              "verse": "My heart is pounding, my strength has failed me, *",
+              "type": "psalm-verse",
+              "halfverse": "and the brightness of my eyes is gone from me.",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "my neighbors stand afar off.",
+              "verse": "My friends and companions draw back from my affliction; *",
+              "number": "11"
+            },
+            {
+              "halfverse": "those who strive to hurt me speak of my ruin\n and plot treachery all the day long.",
+              "number": "12",
+              "verse": "Those who seek after my life lay snares for me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "like those who are mute and who do not open their mouth.",
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "But I am like the deaf who do not hear, *"
+            },
+            {
+              "verse": "I have become like one who does not hear *",
+              "number": "14",
+              "halfverse": "and from whose mouth comes no defense.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For in you, O LORD, have I fixed my hope; *",
+              "type": "psalm-verse",
+              "halfverse": "you will answer me, O Lord my God.",
+              "number": "15"
+            },
+            {
+              "halfverse": "those who gloat over me when my foot slips.”",
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "For I said, “Do not let them rejoice at my expense, *"
+            },
+            {
+              "halfverse": "and my pain is always with me.",
+              "number": "17",
+              "type": "psalm-verse",
+              "verse": "Truly, I am on the verge of falling, *"
+            },
+            {
+              "number": "18",
+              "halfverse": "and be sorry for my sin.",
+              "verse": "I will confess my iniquity *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and many in number are those who wrongfully hate me.",
+              "type": "psalm-verse",
+              "number": "19",
+              "verse": "Those who are my enemies without cause are mighty, *"
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "halfverse": "because I follow the course that is right.",
+              "verse": "Those who repay evil for good slander me, *"
+            },
+            {
+              "halfverse": "be not far from me, O my God.",
+              "type": "psalm-verse",
+              "verse": "O LORD, do not forsake me; *",
+              "number": "21"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "verse": "Make haste to help me, *",
+              "halfverse": "O Lord of my salvation."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 636",
+        "api": "https://www.venite.app/api"
+      },
+      "style": "psalm"
+    }
+  ]
+}

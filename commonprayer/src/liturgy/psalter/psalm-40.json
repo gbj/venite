@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "I waited patiently upon the LORD; *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "he stooped to me and heard my cry."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "he set my feet upon a high cliff and made my footing sure.",
+              "verse": "He lifted me out of the desolate pit, out of the mire and clay; *"
+            },
+            {
+              "verse": "He put a new song in my mouth,\na song of praise to our God; *",
+              "number": "3",
+              "halfverse": "many shall see, and stand in awe,\n and put their trust in the LORD.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they do not resort to evil spirits or turn to false gods.",
+              "type": "psalm-verse",
+              "verse": "Happy are they who trust in the LORD! *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "there is none who can be compared with you.",
+              "number": "5",
+              "verse": "Great things are they that you have done, O LORD my God!\nhow great your wonders and your plans for us! *"
+            },
+            {
+              "verse": "Oh, that I could make them known and tell them! *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "but they are more than I can count."
+            },
+            {
+              "halfverse": "(you have given me ears to hear you);",
+              "type": "psalm-verse",
+              "verse": "In sacrifice and offering you take no pleasure *",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and so I said, “Behold, I come.",
+              "verse": "Burnt-offering and sin-offering you have not required, *",
+              "number": "8"
+            },
+            {
+              "halfverse": "‘I love to do your will, O my God;\n your law is deep in my heart.’”",
+              "type": "psalm-verse",
+              "verse": "In the roll of the book it is written concerning me: *",
+              "number": "9"
+            },
+            {
+              "verse": "I proclaimed righteousness in the great congregation; *",
+              "type": "psalm-verse",
+              "halfverse": "behold, I did not restrain my lips;\n and that, O LORD, you know.",
+              "number": "10"
+            },
+            {
+              "halfverse": "I have not concealed your love and faithfulness from the great congregation.",
+              "type": "psalm-verse",
+              "verse": "Your righteousness have I not hidden in my heart;\nI have spoken of your faithfulness and your deliverance; *",
+              "number": "11"
+            },
+            {
+              "number": "12",
+              "halfverse": "let your love and your faithfulness keep me safe for ever,",
+              "type": "psalm-verse",
+              "verse": "You are the LORD;\ndo not withhold your compassion from me; *"
+            },
+            {
+              "number": "13",
+              "halfverse": "they are more in number than the hairs of my head,\n and my heart fails me.",
+              "verse": "For innumerable troubles have crowded upon me;\nmy sins have overtaken me, and I cannot see; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "O LORD, make haste to help me.",
+              "verse": "Be pleased, O LORD, to deliver me; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let them draw back and be disgraced who take pleasure in my misfortune.",
+              "number": "15",
+              "verse": "Let them be ashamed and altogether dismayed\nwho seek after my life to destroy it; *"
+            },
+            {
+              "number": "16",
+              "halfverse": "because they are ashamed.",
+              "verse": "Let those who say “Aha!” and gloat over me be confounded, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let all who seek you rejoice in you and be glad; *",
+              "type": "psalm-verse",
+              "number": "17",
+              "halfverse": "let those who love your salvation continually say,\n “Great is the LORD!”"
+            },
+            {
+              "verse": "Though I am poor and afflicted, *",
+              "number": "18",
+              "type": "psalm-verse",
+              "halfverse": "the Lord will have regard for me."
+            },
+            {
+              "number": "19",
+              "halfverse": "do not tarry, O my God.",
+              "verse": "You are my helper and my deliverer; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "version_label": null,
+      "citation": null,
+      "metadata": {
+        "latinname": "Expectans, expectavi",
+        "omit_gloria": false,
+        "number": "40",
+        "omit_antiphon": false,
+        "localname": "Psalm 40"
+      },
+      "style": "psalm",
+      "language": "en",
+      "type": "psalm",
+      "slug": "psalm_40",
+      "label": "Psalm 40",
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 640"
+      },
+      "category": ["Psalm"]
+    }
+  ]
+}

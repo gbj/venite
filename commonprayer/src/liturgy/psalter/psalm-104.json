@@ -1,0 +1,257 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "slug": "psalm_104",
+      "label": "Psalm 104",
+      "version": "bcp1979",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 735"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "O LORD my God, how excellent is your greatness!\n you are clothed with majesty and splendor.",
+              "number": "1",
+              "verse": "Bless the LORD, O my soul; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You wrap yourself with light as with a cloak *",
+              "halfverse": "and spread out the heavens like a curtain.",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "verse": "You lay the beams of your chambers in the waters above; *",
+              "halfverse": "you make the clouds your chariot;\n you ride on the wings of the wind.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You make the winds your messengers *",
+              "number": "4",
+              "halfverse": "and flames of fire your servants."
+            },
+            {
+              "number": "5",
+              "halfverse": "so that it never shall move at any time.",
+              "verse": "You have set the earth upon its foundations, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "verse": "You covered it with the Deep as with a mantle; *",
+              "type": "psalm-verse",
+              "halfverse": "the waters stood higher than the mountains."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "at the voice of your thunder they hastened away.",
+              "verse": "At your rebuke they fled; *",
+              "number": "7"
+            },
+            {
+              "verse": "They went up into the hills and down to the valleys beneath, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "to the places you had appointed for them."
+            },
+            {
+              "number": "9",
+              "halfverse": "they shall not again cover the earth.",
+              "type": "psalm-verse",
+              "verse": "You set the limits that they should not pass; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "they flow between the mountains.",
+              "verse": "You send the springs into the valleys; *"
+            },
+            {
+              "halfverse": "and the wild asses quench their thirst.",
+              "number": "11",
+              "verse": "All the beasts of the field drink their fill from them, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Beside them the birds of the air make their nests *",
+              "halfverse": "and sing among the branches.",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You water the mountains from your dwelling on high; *",
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "the earth is fully satisfied by the fruit of your works."
+            },
+            {
+              "halfverse": "and plants to serve mankind;",
+              "verse": "You make grass grow for flocks and herds *",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "That they may bring forth food from the earth, *",
+              "type": "psalm-verse",
+              "halfverse": "and wine to gladden our hearts,",
+              "number": "15"
+            },
+            {
+              "verse": "Oil to make a cheerful countenance, *",
+              "halfverse": "and bread to strengthen the heart.",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "halfverse": "the cedars of Lebanon which he planted,",
+              "verse": "The trees of the LORD are full of sap, *",
+              "number": "17",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and in whose tops the stork makes his dwelling.",
+              "number": "18",
+              "verse": "In which the birds build their nests, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "19",
+              "verse": "The high hills are a refuge for the mountain goats, *",
+              "halfverse": "and the stony cliffs for the rock badgers.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You appointed the moon to mark the seasons, *",
+              "number": "20",
+              "halfverse": "and the sun knows the time of its setting."
+            },
+            {
+              "verse": "You make darkness that it may be night, *",
+              "halfverse": "in which all the beasts of the forest prowl.",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "22",
+              "halfverse": "and seek their food from God.",
+              "verse": "The lions roar after their prey *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and lay themselves down in their dens.",
+              "number": "23",
+              "verse": "The sun rises, and they slip away *"
+            },
+            {
+              "number": "24",
+              "verse": "Man goes forth to his work *",
+              "type": "psalm-verse",
+              "halfverse": "and to his labor until the evening."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "in wisdom you have made them all;\n the earth is full of your creatures.",
+              "number": "25",
+              "verse": "O LORD, how manifold are your works! *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "creatures both small and great.",
+              "verse": "Yonder is the great and wide sea\nwith its living things too many to number, *",
+              "number": "26"
+            },
+            {
+              "halfverse": "which you have made for the sport of it.",
+              "type": "psalm-verse",
+              "verse": "There move the ships,\nand there is that Leviathan, *",
+              "number": "27"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "All of them look to you *",
+              "halfverse": "to give them their food in due season.",
+              "number": "28"
+            },
+            {
+              "halfverse": "you open your hand, and they are filled with good things.",
+              "type": "psalm-verse",
+              "number": "29",
+              "verse": "You give it to them; they gather it; *"
+            },
+            {
+              "number": "30",
+              "verse": "You hide your face, and they are terrified; *",
+              "halfverse": "you take away their breath,\n and they die and return to their dust.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You send forth your Spirit, and they are created; *",
+              "halfverse": "and so you renew the face of the earth.",
+              "type": "psalm-verse",
+              "number": "31"
+            },
+            {
+              "verse": "May the glory of the LORD endure for ever; *",
+              "halfverse": "may the LORD rejoice in all his works.",
+              "number": "32",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he touches the mountains and they smoke.",
+              "number": "33",
+              "verse": "He looks at the earth and it trembles; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I will sing to the LORD as long as I live; *",
+              "halfverse": "I will praise my God while I have my being.",
+              "number": "34"
+            },
+            {
+              "verse": "May these words of mine please him; *",
+              "type": "psalm-verse",
+              "halfverse": "I will rejoice in the LORD.",
+              "number": "35"
+            },
+            {
+              "halfverse": "and the wicked be no more.",
+              "verse": "Let sinners be consumed out of the earth, *",
+              "number": "36",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "Hallelujah!",
+              "number": "37",
+              "verse": "Bless the LORD, O my soul. *"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "version_label": null,
+      "category": ["Psalm"],
+      "citation": null,
+      "metadata": {
+        "latinname": "Benedic, anima mea",
+        "omit_gloria": false,
+        "number": "104",
+        "omit_antiphon": false,
+        "localname": "Psalm 104"
+      }
+    }
+  ]
+}

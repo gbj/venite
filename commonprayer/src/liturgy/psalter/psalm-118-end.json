@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "hidden": false,
+      "type": "psalm",
+      "slug": "psalm_118_end",
+      "version": "bcp1979",
+      "version_label": null,
+      "label": "Psalm 118",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Confitemini Domino",
+        "localname": "Psalm 118",
+        "number": "118"
+      },
+      "language": "en",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Open for me the gates of righteousness; *",
+              "halfverse": "I will enter them;\n I will offer thanks to the LORD.",
+              "type": "psalm-verse",
+              "number": "19"
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "halfverse": "he who is righteous may enter.”",
+              "verse": "“This is the gate of the LORD; *"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "verse": "I will give thanks to you, for you answered me *",
+              "halfverse": "and have become my salvation."
+            },
+            {
+              "halfverse": "has become the chief cornerstone.",
+              "verse": "The same stone which the builders rejected *",
+              "number": "22",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "This is the LORD’S doing, *",
+              "type": "psalm-verse",
+              "halfverse": "and it is marvelous in our eyes.",
+              "number": "23"
+            },
+            {
+              "verse": "On this day the LORD has acted; *",
+              "type": "psalm-verse",
+              "halfverse": "we will rejoice and be glad in it.",
+              "number": "24"
+            },
+            {
+              "number": "25",
+              "halfverse": "LORD, send us now success.",
+              "verse": "Hosanna, LORD, hosanna! *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "26",
+              "type": "psalm-verse",
+              "verse": "Blessed is he who comes in the name of the Lord; *",
+              "halfverse": "we bless you from the house of the LORD."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "form a procession with branches up to the horns of the altar.",
+              "number": "27",
+              "verse": "God is the LORD; he has shined upon us; *"
+            },
+            {
+              "number": "28",
+              "verse": "“You are my God, and I will thank you; *",
+              "halfverse": "you are my God, and I will exalt you.”",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "29",
+              "type": "psalm-verse",
+              "halfverse": "his mercy endures for ever.",
+              "verse": "Give thanks to the LORD, for he is good; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "category": ["Psalm"]
+    }
+  ]
+}

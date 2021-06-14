@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "label": "Psalm 49",
+      "hidden": false,
+      "slug": "psalm_49",
+      "source": {
+        "citation": "p. 652",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "version_label": null,
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "you of high degree and low, rich and poor together.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "Hear this, all you peoples;\nhearken, all you who dwell in the world, *"
+            },
+            {
+              "verse": "My mouth shall speak of wisdom, *",
+              "type": "psalm-verse",
+              "halfverse": "and my heart shall meditate on understanding.",
+              "number": "2"
+            },
+            {
+              "halfverse": "and set forth my riddle upon the harp.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "I will incline my ear to a proverb *"
+            },
+            {
+              "verse": "Why should I be afraid in evil days, *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "when the wickedness of those at my heels surrounds me,"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and boast of their great riches?",
+              "verse": "The wickedness of those who put their trust in their goods, *",
+              "number": "5"
+            },
+            {
+              "halfverse": "or deliver to God the price of our life;",
+              "verse": "We can never ransom ourselves, *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "verse": "For the ransom of our life is so great, *",
+              "number": "7",
+              "halfverse": "that we should never have enough to pay it,",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "In order to live for ever and ever, *",
+              "halfverse": "and never see the grave."
+            },
+            {
+              "number": "9",
+              "halfverse": "and leave their wealth to those who come after them.",
+              "verse": "For we see that the wise die also;\nlike the dull and stupid they perish *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "Their graves shall be their homes for ever,\ntheir dwelling places from generation to generation, *",
+              "halfverse": "though they call the lands after their own names."
+            },
+            {
+              "verse": "Even though honored, they cannot live for ever; *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "they are like the beasts that perish."
+            },
+            {
+              "verse": "Such is the way of those who foolishly trust in themselves, *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "and the end of those who delight in their own words."
+            },
+            {
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "they go down straightway to the grave.",
+              "verse": "Like a flock of sheep they are destined to die;\nDeath is their shepherd; *"
+            },
+            {
+              "halfverse": "and the land of the dead shall be their home.",
+              "type": "psalm-verse",
+              "verse": "Their form shall waste away, *",
+              "number": "14"
+            },
+            {
+              "number": "15",
+              "type": "psalm-verse",
+              "halfverse": "he will snatch me from the grasp of death.",
+              "verse": "But God will ransom my life; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "or when the grandeur of their house increases;",
+              "verse": "Do not be envious when some become rich, *",
+              "number": "16"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "nor will their grandeur follow them.",
+              "number": "17",
+              "verse": "For they will carry nothing away at their death, *"
+            },
+            {
+              "halfverse": "and were praised for their success,",
+              "verse": "Though they thought highly of themselves while they lived, *",
+              "number": "18",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They shall join the company of their forebears, *",
+              "number": "19",
+              "halfverse": "who will never see the light again.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "20",
+              "verse": "Those who are honored, but have no understanding, *",
+              "type": "psalm-verse",
+              "halfverse": "are like the beasts that perish."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "category": ["Psalm"],
+      "language": "en",
+      "metadata": {
+        "latinname": "Audite haec, omnes",
+        "omit_antiphon": false,
+        "localname": "Psalm 49",
+        "omit_gloria": false,
+        "number": "49"
+      }
+    }
+  ]
+}

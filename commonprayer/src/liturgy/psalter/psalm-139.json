@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "you know my sitting down and my rising up;\n you discern my thoughts from afar.",
+              "verse": "LORD, you have searched me out and known me; *",
+              "number": "1"
+            },
+            {
+              "verse": "You trace my journeys and my resting-places *",
+              "type": "psalm-verse",
+              "halfverse": "and are acquainted with all my ways.",
+              "number": "2"
+            },
+            {
+              "halfverse": "but you, O LORD, know it altogether.",
+              "verse": "Indeed, there is not a word on my lips, *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and lay your hand upon me.",
+              "verse": "You press upon me behind and before *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "verse": "Such knowledge is too wonderful for me; *",
+              "type": "psalm-verse",
+              "halfverse": "it is so high that I cannot attain to it.",
+              "number": "5"
+            },
+            {
+              "verse": "Where can I go then from your Spirit? *",
+              "type": "psalm-verse",
+              "halfverse": "where can I flee from your presence?",
+              "number": "6"
+            },
+            {
+              "verse": "If I climb up to heaven, you are there; *",
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "if I make the grave my bed, you are there also."
+            },
+            {
+              "verse": "If I take the wings of the morning *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "and dwell in the uttermost parts of the sea,"
+            },
+            {
+              "number": "9",
+              "halfverse": "and your right hand hold me fast.",
+              "type": "psalm-verse",
+              "verse": "Even there your hand will lead me *"
+            },
+            {
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "and the light around me turn to night,”",
+              "verse": "If I say, “Surely the darkness will cover me, *"
+            },
+            {
+              "halfverse": "darkness and light to you are both alike.",
+              "verse": "Darkness is not dark to you;\nthe night is as bright as the day; *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "verse": "For you yourself created my inmost parts; *",
+              "number": "12",
+              "halfverse": "you knit me together in my mother’s womb.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will thank you because I am marvelously made; *",
+              "type": "psalm-verse",
+              "halfverse": "your works are wonderful, and I know it well.",
+              "number": "13"
+            },
+            {
+              "verse": "My body was not hidden from you, *",
+              "type": "psalm-verse",
+              "number": "14",
+              "halfverse": "while I was being made in secret\n and woven in the depths of the earth."
+            },
+            {
+              "number": "15",
+              "halfverse": "they were fashioned day by day,\n when as yet there was none of them.",
+              "verse": "Your eyes beheld my limbs, yet unfinished in the womb;\nall of them were written in your book; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "16",
+              "halfverse": "how great is the sum of them!",
+              "verse": "How deep I find your thoughts, O God! *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "to count them all, my life span would need to be like yours.",
+              "number": "17",
+              "verse": "If I were to count them, they would be more in number than the sand; *"
+            },
+            {
+              "number": "18",
+              "halfverse": "You that thirst for blood, depart from me.",
+              "type": "psalm-verse",
+              "verse": "Oh, that you would slay the wicked, O God! *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "your enemies take your Name in vain.",
+              "verse": "They speak despitefully against you; *",
+              "number": "19"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Do I not hate those, O LORD, who hate you? *",
+              "number": "20",
+              "halfverse": "and do I not loathe those who rise up against you?"
+            },
+            {
+              "verse": "I hate them with a perfect hatred; *",
+              "number": "21",
+              "halfverse": "they have become my own enemies.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "22",
+              "halfverse": "try me and know my restless thoughts.",
+              "type": "psalm-verse",
+              "verse": "Search me out, O God, and know my heart; *"
+            },
+            {
+              "halfverse": "and lead me in the way that is everlasting.",
+              "number": "23",
+              "verse": "Look well whether there be any wickedness in me *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "slug": "psalm_139",
+      "language": "en",
+      "hidden": false,
+      "version": "bcp1979",
+      "style": "psalm",
+      "metadata": {
+        "latinname": "Domine, probasti",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 139",
+        "number": "139"
+      },
+      "type": "psalm",
+      "version_label": null,
+      "label": "Psalm 139",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 794"
+      }
+    }
+  ]
+}

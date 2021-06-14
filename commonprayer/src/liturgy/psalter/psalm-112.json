@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 755"
+      },
+      "citation": null,
+      "slug": "psalm_112",
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_gloria": false,
+        "number": "112",
+        "localname": "Psalm 112",
+        "latinname": "Beatus vir",
+        "omit_antiphon": false
+      },
+      "version": "bcp1979",
+      "language": "en",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "and have great delight in his commandments!",
+              "verse": "Hallelujah!\nHappy are they who fear the Lord *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "verse": "Their descendants will be mighty in the land; *",
+              "type": "psalm-verse",
+              "halfverse": "the generation of the upright will be blessed."
+            },
+            {
+              "halfverse": "and their righteousness will last for ever.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "Wealth and riches will be in their house, *"
+            },
+            {
+              "number": "4",
+              "verse": "Light shines in the darkness for the upright; *",
+              "halfverse": "the righteous are merciful and full of compassion.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "It is good for them to be generous in lending *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "and to manage their affairs with justice."
+            },
+            {
+              "verse": "For they will never be shaken; *",
+              "type": "psalm-verse",
+              "halfverse": "the righteous will be kept in everlasting remembrance.",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "their heart is right;\n they put their trust in the Lord.",
+              "verse": "They will not be afraid of any evil rumors; *"
+            },
+            {
+              "verse": "Their heart is established and will not shrink, *",
+              "number": "8",
+              "halfverse": "until they see their desire upon their enemies.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They have given freely to the poor, *",
+              "halfverse": "and their righteousness stands fast for ever;\n they will hold up their head with honor.",
+              "type": "psalm-verse",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The wicked will see it and be angry;\nthey will gnash their teeth and pine away; *",
+              "halfverse": "the desires of the wicked will perish.",
+              "number": "10"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "label": "Psalm 112",
+      "hidden": false
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "slug": "psalm_45",
+      "label": "Psalm 45",
+      "citation": null,
+      "style": "psalm",
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 647",
+        "source": "bcp1979"
+      },
+      "metadata": {
+        "number": "45",
+        "latinname": "Eructavit cor meum",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 45"
+      },
+      "type": "psalm",
+      "language": "en",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "My heart is stirring with a noble song;\nlet me recite what I have fashioned for the king; *",
+              "type": "psalm-verse",
+              "halfverse": "my tongue shall be the pen of a skilled writer.",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "grace flows from your lips,\n because God has blessed you for ever.",
+              "verse": "You are the fairest of men; *"
+            },
+            {
+              "verse": "Strap your sword upon your thigh, O mighty warrior, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "in your pride and in your majesty."
+            },
+            {
+              "number": "4",
+              "verse": "Ride out and conquer in the cause of truth *",
+              "halfverse": "and for the sake of justice.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "your arrows are very sharp, O mighty warrior.",
+              "verse": "Your right hand will show you marvelous things; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "verse": "The peoples are falling at your feet, *",
+              "number": "6",
+              "halfverse": "and the king’s enemies are losing heart.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "halfverse": "a scepter of righteousness is the scepter of your kingdom;\n you love righteousness and hate iniquity.",
+              "verse": "Your throne, O God, endures for ever and ever, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "with the oil of gladness above your fellows.",
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "Therefore God, your God, has anointed you *"
+            },
+            {
+              "verse": "All your garments are fragrant with myrrh, aloes, and cassia, *",
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "and the music of strings from ivory palaces makes you glad."
+            },
+            {
+              "verse": "Kings’ daughters stand among the ladies of the court; *",
+              "halfverse": "on your right hand is the queen,\n adorned with the gold of Ophir.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "“Hear, O daughter; consider and listen closely; *",
+              "number": "11",
+              "halfverse": "forget your people and your father’s house."
+            },
+            {
+              "verse": "The king will have pleasure in your beauty; *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "he is your master; therefore do him honor."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "The people of Tyre are here with a gift; *",
+              "halfverse": "the rich among the people seek your favor.”"
+            },
+            {
+              "verse": "All glorious is the princess as she enters; *",
+              "number": "14",
+              "halfverse": "her gown is cloth-of-gold.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "In embroidered apparel she is brought to the king; *",
+              "halfverse": "after her the bridesmaids follow in procession.",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "halfverse": "and enter into the palace of the king.",
+              "verse": "With joy and gladness they are brought, *",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "verse": "“In place of fathers, O king, you shall have sons; *",
+              "type": "psalm-verse",
+              "halfverse": "you shall make them princes over all the earth.",
+              "number": "17"
+            },
+            {
+              "halfverse": "therefore nations will praise you for ever and ever.”",
+              "number": "18",
+              "type": "psalm-verse",
+              "verse": "I will make your name to be remembered\nfrom one generation to another; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null
+    }
+  ]
+}

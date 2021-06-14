@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "who walk in the law of the LORD!",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "Happy are they whose way is blameless, *"
+            },
+            {
+              "verse": "Happy are they who observe his decrees *",
+              "type": "psalm-verse",
+              "halfverse": "and seek him with all their hearts!",
+              "number": "2"
+            },
+            {
+              "verse": "Who never do any wrong, *",
+              "number": "3",
+              "halfverse": "but always walk in his ways.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "that we should fully keep them.",
+              "verse": "You laid down your commandments, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Oh, that my ways were made so direct *",
+              "number": "5",
+              "halfverse": "that I might keep your statutes!"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "when I regard all your commandments.",
+              "verse": "Then I should not be put to shame, *",
+              "number": "6"
+            },
+            {
+              "verse": "I will thank you with an unfeigned heart, *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "when I have learned your righteous judgments."
+            },
+            {
+              "halfverse": "do not utterly forsake me.",
+              "verse": "I will keep your statutes; *",
+              "number": "8",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "language": "en",
+      "category": ["Psalm"],
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 763",
+        "api": "https://www.venite.app/api"
+      },
+      "style": "psalm",
+      "hidden": false,
+      "slug": "psalm_119_aleph",
+      "label": "Psalm 119: Aleph",
+      "type": "psalm",
+      "metadata": {
+        "localname": "Psalm 119: Aleph",
+        "omit_gloria": false,
+        "number": "119",
+        "latinname": "Beati immaculati",
+        "omit_antiphon": false
+      },
+      "version_label": null
+    }
+  ]
+}

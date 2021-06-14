@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "label": "Psalm 119: Shin",
+      "language": "en",
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Rulers have persecuted me without a cause, *",
+              "number": "161",
+              "halfverse": "but my heart stands in awe of your word.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "162",
+              "halfverse": "as one who finds great spoils.",
+              "type": "psalm-verse",
+              "verse": "I am as glad because of your promise *"
+            },
+            {
+              "number": "163",
+              "verse": "As for lies, I hate and abhor them, *",
+              "type": "psalm-verse",
+              "halfverse": "but your law is my love."
+            },
+            {
+              "number": "164",
+              "halfverse": "because of your righteous judgments.",
+              "verse": "Seven times a day do I praise you, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Great peace have they who love your law; *",
+              "number": "165",
+              "halfverse": "for them there is no stumbling block.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I have hoped for your salvation, O LORD, *",
+              "type": "psalm-verse",
+              "number": "166",
+              "halfverse": "and have fulfilled your commandments."
+            },
+            {
+              "halfverse": "and I have loved them deeply.",
+              "verse": "I have kept your decrees *",
+              "type": "psalm-verse",
+              "number": "167"
+            },
+            {
+              "verse": "I have kept your commandments and decrees, *",
+              "number": "168",
+              "halfverse": "for all my ways are before you.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "type": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 119: Shin",
+        "latinname": "Principes persecuti sunt",
+        "omit_antiphon": false,
+        "number": "119"
+      },
+      "version": "bcp1979",
+      "slug": "psalm_119_shin",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 777"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "hidden": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "slug": "psalm_14",
+      "version_label": null,
+      "hidden": false,
+      "type": "psalm",
+      "version": "bcp1979",
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "All are corrupt and commit abominable acts;\n there is none who does any good.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "The fool has said in his heart, “There is no God.” *"
+            },
+            {
+              "halfverse": "to see if there is any who is wise,\n if there is one who seeks after God.",
+              "type": "psalm-verse",
+              "verse": "The LORD looks down from heaven upon us all, *",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "there is none who does good; no, not one.",
+              "verse": "Every one has proved faithless;\nall alike have turned bad; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Have they no knowledge, all those evildoers *",
+              "number": "4",
+              "halfverse": "who eat up my people like bread\n and do not call upon the LORD?"
+            },
+            {
+              "number": "5",
+              "verse": "See how they tremble with fear, *",
+              "halfverse": "because God is in the company of the righteous.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "but the LORD is their refuge.",
+              "verse": "Their aim is to confound the plans of the afflicted, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Oh, that Israel’s deliverance would come out of Zion! *",
+              "number": "7",
+              "halfverse": "when the LORD restores the fortunes of his people,\n Jacob will rejoice and Israel be glad."
+            }
+          ]
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 598",
+        "api": "https://www.venite.app/api"
+      },
+      "citation": null,
+      "label": "Psalm 14",
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "14",
+        "localname": "Psalm 14",
+        "latinname": "Dixit insipiens",
+        "omit_gloria": false
+      },
+      "language": "en"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "label": "Psalm 119: Heth",
+      "citation": null,
+      "category": ["Psalm"],
+      "hidden": false,
+      "metadata": {
+        "number": "119",
+        "omit_gloria": false,
+        "latinname": "Portio mea, Domine",
+        "localname": "Psalm 119: Heth",
+        "omit_antiphon": false
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 768"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "I have promised to keep your words.",
+              "verse": "You only are my portion, O LORD; *",
+              "type": "psalm-verse",
+              "number": "57"
+            },
+            {
+              "verse": "I entreat you with all my heart, *",
+              "type": "psalm-verse",
+              "halfverse": "be merciful to me according to your promise.",
+              "number": "58"
+            },
+            {
+              "verse": "I have considered my ways *",
+              "type": "psalm-verse",
+              "halfverse": "and turned my feet toward your decrees.",
+              "number": "59"
+            },
+            {
+              "number": "60",
+              "verse": "I hasten and do not tarry *",
+              "type": "psalm-verse",
+              "halfverse": "to keep your commandments."
+            },
+            {
+              "halfverse": "I do not forget your law.",
+              "number": "61",
+              "type": "psalm-verse",
+              "verse": "Though the cords of the wicked entangle me, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "because of your righteous judgments.",
+              "number": "62",
+              "verse": "At midnight I will rise to give you thanks, *"
+            },
+            {
+              "halfverse": "and of those who keep your commandments.",
+              "verse": "I am a companion of all who fear you *",
+              "number": "63",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "verse": "The earth, O LORD, is full of your love; *",
+              "type": "psalm-verse",
+              "number": "64"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "style": "psalm",
+      "slug": "psalm_119_heth",
+      "version_label": null,
+      "language": "en",
+      "version": "bcp1979"
+    }
+  ]
+}

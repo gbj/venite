@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "latinname": "Notus in Judaea",
+        "omit_gloria": false,
+        "number": "76",
+        "omit_antiphon": false,
+        "localname": "Psalm 76"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 692",
+        "api": "https://www.venite.app/api"
+      },
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "In Judah is God known; *",
+              "halfverse": "his Name is great in Israel.",
+              "number": "1"
+            },
+            {
+              "halfverse": "and his dwelling is in Zion.",
+              "verse": "At Salem is his tabernacle, *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "There he broke the flashing arrows, *",
+              "halfverse": "the shield, the sword, and the weapons of battle.",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "verse": "How glorious you are! *",
+              "type": "psalm-verse",
+              "halfverse": "more splendid than the everlasting mountains!"
+            },
+            {
+              "halfverse": "none of the warriors can lift a hand.",
+              "verse": "The strong of heart have been despoiled;\nthey sink into sleep; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "At your rebuke, O God of Jacob, *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "both horse and rider lie stunned."
+            },
+            {
+              "halfverse": "who can stand before you when you are angry?",
+              "type": "psalm-verse",
+              "number": "7",
+              "verse": "What terror you inspire! *"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "the earth was afraid and was still;",
+              "verse": "From heaven you pronounced judgment; *"
+            },
+            {
+              "number": "9",
+              "halfverse": "and to save all the oppressed of the earth.",
+              "verse": "When God rose up to judgment *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the remnant of Hamath will keep your feasts.",
+              "verse": "Truly, wrathful Edom will give you thanks, *",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Make a vow to the LORD your God and keep it; *",
+              "type": "psalm-verse",
+              "halfverse": "let all around him bring gifts to him who is worthy to be feared.",
+              "number": "11"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "12",
+              "verse": "He breaks the spirit of princes, *",
+              "halfverse": "and strikes terror in the kings of the earth."
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_76",
+      "category": ["Psalm"],
+      "label": "Psalm 76",
+      "style": "psalm",
+      "hidden": false,
+      "citation": null
+    }
+  ]
+}

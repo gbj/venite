@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "slug": "psalm_119_ayin",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 119: Ayin",
+        "latinname": "Feci judicium",
+        "number": "119"
+      },
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "121",
+              "verse": "I have done what is just and right; *",
+              "halfverse": "do not deliver me to my oppressors."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let not the proud oppress me.",
+              "verse": "Be surety for your servant’s good; *",
+              "number": "122"
+            },
+            {
+              "halfverse": "and for your righteous promise.",
+              "verse": "My eyes have failed from watching for your salvation *",
+              "number": "123",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and teach me your statutes.",
+              "verse": "Deal with your servant according to your loving-kindness *",
+              "number": "124",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I am your servant; grant me understanding, *",
+              "halfverse": "that I may know your decrees.",
+              "number": "125",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "126",
+              "halfverse": "for they have broken your law.",
+              "verse": "It is time for you to act, O LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "127",
+              "halfverse": "more than gold and precious stones.",
+              "verse": "Truly, I love your commandments *"
+            },
+            {
+              "halfverse": "all paths of falsehood I abhor.",
+              "type": "psalm-verse",
+              "verse": "I hold all your commandments to be right for me; *",
+              "number": "128"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 773",
+        "api": "https://www.venite.app/api"
+      },
+      "hidden": false,
+      "citation": null,
+      "label": "Psalm 119: Ayin",
+      "version": "bcp1979",
+      "version_label": null
+    }
+  ]
+}

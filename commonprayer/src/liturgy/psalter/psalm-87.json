@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "type": "psalm",
+      "style": "psalm",
+      "slug": "psalm_87",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "the LORD loves the gates of Zion\n more than all the dwellings of Jacob.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "On the holy mountain stands the city he has founded; *"
+            },
+            {
+              "halfverse": "O city of our God.",
+              "type": "psalm-verse",
+              "number": "2",
+              "verse": "Glorious things are spoken of you, *"
+            },
+            {
+              "halfverse": "behold Philistia, Tyre, and Ethiopia:\n in Zion were they born.",
+              "number": "3",
+              "verse": "I count Egypt and Babylon among those who know me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the Most High himself shall sustain her.”",
+              "number": "4",
+              "verse": "Of Zion it shall be said, “Everyone was born in her, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD will record as he enrolls the peoples, *",
+              "type": "psalm-verse",
+              "number": "5",
+              "halfverse": "“These also were born there.”"
+            },
+            {
+              "halfverse": "“All my fresh springs are in you.”",
+              "verse": "The singers and the dancers will say, *",
+              "number": "6",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "source": {
+        "citation": "p. 711",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "metadata": {
+        "number": "87",
+        "localname": "Psalm 87",
+        "omit_gloria": false,
+        "latinname": "Fundamenta ejus",
+        "omit_antiphon": false
+      },
+      "label": "Psalm 87",
+      "citation": null,
+      "hidden": false,
+      "version_label": null,
+      "category": ["Psalm"]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 613"
+      },
+      "version_label": null,
+      "hidden": false,
+      "metadata": {
+        "latinname": "Domini est terra",
+        "localname": "Psalm 24",
+        "omit_gloria": false,
+        "number": "24",
+        "omit_antiphon": false
+      },
+      "slug": "psalm_24",
+      "style": "psalm",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "label": "Psalm 24",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "The earth is the LORD’S and all that is in it, *",
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "the world and all who dwell therein."
+            },
+            {
+              "halfverse": "and made it firm upon the rivers of the deep.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "For it is he who founded it upon the seas *"
+            },
+            {
+              "number": "3",
+              "verse": "“Who can ascend the hill of the LORD? *",
+              "halfverse": "and who can stand in his holy place?”",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "“Those who have clean hands and a pure heart, *",
+              "type": "psalm-verse",
+              "halfverse": "who have not pledged themselves to falsehood,\n nor sworn by what is a fraud.",
+              "number": "4"
+            },
+            {
+              "halfverse": "and a just reward from the God of their salvation.”",
+              "type": "psalm-verse",
+              "verse": "They shall receive a blessing from the LORD *",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "of those who seek your face, O God of Jacob.",
+              "verse": "Such is the generation of those who seek him, *"
+            },
+            {
+              "verse": "Lift up your heads, O gates;\nlift them high, O everlasting doors; *",
+              "halfverse": "and the King of glory shall come in.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "“Who is this King of glory?” *",
+              "halfverse": "“The LORD, strong and mighty,\n the LORD, mighty in battle.”",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "and the King of glory shall come in.",
+              "verse": "Lift up your heads, O gates;\nlift them high, O everlasting doors; *"
+            },
+            {
+              "halfverse": "“The LORD of hosts,\n he is the King of glory.”",
+              "verse": "“Who is he, this King of glory?” *",
+              "type": "psalm-verse",
+              "number": "10"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en"
+    }
+  ]
+}

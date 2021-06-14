@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "label": "Psalm 128",
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Beati omnes",
+        "number": "128",
+        "omit_gloria": false,
+        "localname": "Psalm 128"
+      },
+      "slug": "psalm_128",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "and who follow in his ways!",
+              "verse": "Happy are they all who fear the LORD, *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "happiness and prosperity shall be yours.",
+              "verse": "You shall eat the fruit of your labor; *"
+            },
+            {
+              "halfverse": "your children like olive shoots round about your table.",
+              "verse": "Your wife shall be like a fruitful vine within your house, *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "shall thus indeed be blessed.",
+              "verse": "The man who fears the LORD *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "The LORD bless you from Zion, *",
+              "halfverse": "and may you see the prosperity of Jerusalem all the days of your life."
+            },
+            {
+              "verse": "May you live to see your children’s children; *",
+              "number": "6",
+              "halfverse": "may peace be upon Israel.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "version_label": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 783",
+        "source": "bcp1979"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "version": "bcp1979"
+    }
+  ]
+}

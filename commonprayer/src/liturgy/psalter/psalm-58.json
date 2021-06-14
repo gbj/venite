@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Si vere utique",
+        "localname": "Psalm 58",
+        "omit_antiphon": false,
+        "number": "58"
+      },
+      "slug": "psalm_58",
+      "version": "bcp1979",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "do you judge the peoples with equity?",
+              "verse": "Do you indeed decree righteousness, you rulers? *",
+              "number": "1"
+            },
+            {
+              "halfverse": "and your hands deal out violence in the land.",
+              "number": "2",
+              "verse": "No; you devise evil in your hearts, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The wicked are perverse from the womb; *",
+              "number": "3",
+              "halfverse": "liars go astray from their birth.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "they are like the deaf adder which stops its ears,",
+              "number": "4",
+              "verse": "They are as venomous as a serpent, *"
+            },
+            {
+              "halfverse": "no matter how skillful his charming.",
+              "verse": "Which does not heed the voice of the charmer, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "pull the fangs of the young lions, O LORD.",
+              "verse": "O God, break their teeth in their mouths; *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "let them wither like trodden grass.",
+              "verse": "Let them vanish like water that runs off; *"
+            },
+            {
+              "halfverse": "like a stillborn child that never sees the sun.",
+              "number": "8",
+              "verse": "Let them be like the snail that melts away, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "halfverse": "like thorns and thistles let them be swept away.",
+              "verse": "Before they bear fruit, let them be cut down like a brier; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The righteous will be glad when they see the vengeance; *",
+              "type": "psalm-verse",
+              "halfverse": "they will bathe their feet in the blood of the wicked.",
+              "number": "10"
+            },
+            {
+              "verse": "And they will say,\n“Surely, there is a reward for the righteous; *",
+              "halfverse": "surely, there is a God who rules in the earth.”",
+              "number": "11",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "citation": null,
+      "source": {
+        "citation": "p. 664",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "version_label": null,
+      "type": "psalm",
+      "hidden": false,
+      "style": "psalm",
+      "category": ["Psalm"],
+      "label": "Psalm 58"
+    }
+  ]
+}

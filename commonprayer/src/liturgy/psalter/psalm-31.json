@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "metadata": {
+        "number": "31",
+        "latinname": "In te, Domine, speravi",
+        "omit_gloria": false,
+        "localname": "Psalm 31",
+        "omit_antiphon": false
+      },
+      "version": "bcp1979",
+      "language": "en",
+      "label": "Psalm 31",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "deliver me in your righteousness.",
+              "verse": "In you, O LORD, have I taken refuge;\nlet me never be put to shame; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "make haste to deliver me.",
+              "verse": "Incline your ear to me; *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "for the sake of your Name, lead me and guide me.",
+              "type": "psalm-verse",
+              "verse": "Be my strong rock, a castle to keep me safe,\nfor you are my crag and my stronghold; *"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "Take me out of the net that they have secretly set for me, *",
+              "halfverse": "for you are my tower of strength."
+            },
+            {
+              "number": "5",
+              "verse": "Into your hands I commend my spirit, *",
+              "halfverse": "for you have redeemed me,\n O LORD, O God of truth.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "verse": "I hate those who cling to worthless idols, *",
+              "type": "psalm-verse",
+              "halfverse": "and I put my trust in the LORD."
+            },
+            {
+              "halfverse": "for you have seen my affliction;\n you know my distress.",
+              "verse": "I will rejoice and be glad because of your mercy; *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You have not shut me up in the power of the enemy; *",
+              "number": "8",
+              "halfverse": "you have set my feet in an open place."
+            },
+            {
+              "halfverse": "my eye is consumed with sorrow,\n and also my throat and my belly.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "Have mercy on me, O LORD, for I am in trouble; *"
+            },
+            {
+              "halfverse": "my strength fails me because of affliction,\n and my bones are consumed.",
+              "number": "10",
+              "verse": "For my life is wasted with grief,\nand my years with sighing; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "verse": "I have become a reproach to all my enemies and even to my neighbors,\na dismay to those of my acquaintance; *",
+              "type": "psalm-verse",
+              "halfverse": "when they see me in the street they avoid me."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I am forgotten like a dead man, out of mind; *",
+              "halfverse": "I am as useless as a broken pot.",
+              "number": "12"
+            },
+            {
+              "halfverse": "they put their heads together against me;\n they plot to take my life.",
+              "type": "psalm-verse",
+              "verse": "For I have heard the whispering of the crowd;\nfear is all around; *",
+              "number": "13"
+            },
+            {
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "I have said, “You are my God.",
+              "verse": "But as for me, I have trusted in you, O LORD. *"
+            },
+            {
+              "verse": "My times are in your hand; *",
+              "type": "psalm-verse",
+              "halfverse": "rescue me from the hand of my enemies,\n and from those who persecute me.",
+              "number": "15"
+            },
+            {
+              "number": "16",
+              "verse": "Make your face to shine upon your servant, *",
+              "type": "psalm-verse",
+              "halfverse": "and in your loving-kindness save me.”"
+            },
+            {
+              "verse": "LORD, let me not be ashamed for having called upon you; *",
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "rather, let the wicked be put to shame;\n let them be silent in the grave."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "18",
+              "halfverse": "haughtily, disdainfully, and with contempt.",
+              "verse": "Let the lying lips be silenced which speak against the righteous, *"
+            },
+            {
+              "halfverse": "which you have done in the sight of all\n for those who put their trust in you.",
+              "type": "psalm-verse",
+              "verse": "How great is your goodness, O LORD!\nwhich you have laid up for those who fear you; *",
+              "number": "19"
+            },
+            {
+              "verse": "You hide them in the covert of your presence from those who slander them; *",
+              "type": "psalm-verse",
+              "number": "20",
+              "halfverse": "you keep them in your shelter from the strife of tongues."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "21",
+              "verse": "Blessed be the LORD! *",
+              "halfverse": "for he has shown me the wonders of his love in a besieged city."
+            },
+            {
+              "halfverse": "Nevertheless, you heard the sound of my entreaty\n when I cried out to you.",
+              "type": "psalm-verse",
+              "number": "22",
+              "verse": "Yet I said in my alarm,\n“I have been cut off from the sight of your eyes.” *"
+            },
+            {
+              "verse": "Love the LORD, all you who worship him; *",
+              "number": "23",
+              "halfverse": "the LORD protects the faithful,\n but repays to the full those who act haughtily.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Be strong and let your heart take courage, *",
+              "type": "psalm-verse",
+              "halfverse": "all you who wait for the LORD.",
+              "number": "24"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "type": "psalm",
+      "citation": null,
+      "slug": "psalm_31",
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 622"
+      }
+    }
+  ]
+}

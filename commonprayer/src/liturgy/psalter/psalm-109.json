@@ -1,0 +1,215 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "localname": "Psalm 109",
+        "omit_antiphon": false,
+        "latinname": "Deus, laudem",
+        "omit_gloria": false,
+        "number": "109"
+      },
+      "label": "Psalm 109",
+      "source": {
+        "citation": "p. 750",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "for the mouth of the wicked,\n the mouth of the deceitful, is opened against me.",
+              "verse": "Hold not your tongue, O God of my praise; *"
+            },
+            {
+              "halfverse": "they encompass me with hateful words\n and fight against me without a cause.",
+              "verse": "They speak to me with a lying tongue; *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Despite my love, they accuse me; *",
+              "halfverse": "but as for me, I pray for them.",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "and hatred for my love.",
+              "verse": "They repay evil for good, *"
+            },
+            {
+              "verse": "Set a wicked man against him, *",
+              "type": "psalm-verse",
+              "halfverse": "and let an accuser stand at his right hand.",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and let his appeal be in vain.",
+              "verse": "When he is judged, let him be found guilty, *",
+              "number": "6"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "and let another take his office.",
+              "verse": "Let his days be few, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let his children be fatherless, *",
+              "halfverse": "and his wife become a widow.",
+              "number": "8"
+            },
+            {
+              "verse": "Let his children be waifs and beggars; *",
+              "type": "psalm-verse",
+              "number": "9",
+              "halfverse": "let them be driven from the ruins of their homes."
+            },
+            {
+              "verse": "Let the creditor seize everything he has; *",
+              "number": "10",
+              "halfverse": "let strangers plunder his gains.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and none to pity his fatherless children.",
+              "verse": "Let there be no one to show him kindness, *",
+              "number": "11"
+            },
+            {
+              "halfverse": "and his name be blotted out in the next generation.",
+              "type": "psalm-verse",
+              "verse": "Let his descendants be destroyed, *",
+              "number": "12"
+            },
+            {
+              "verse": "Let the wickedness of his fathers be remembered before the LORD, *",
+              "type": "psalm-verse",
+              "halfverse": "and his mother’s sin not be blotted out;",
+              "number": "13"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "14",
+              "verse": "Let their sin be always before the LORD; *",
+              "halfverse": "but let him root out their names from the earth;"
+            },
+            {
+              "verse": "Because he did not remember to show mercy, *",
+              "halfverse": "but persecuted the poor and needy\n and sought to kill the brokenhearted.",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "16",
+              "verse": "He loved cursing,\nlet it come upon him; *",
+              "halfverse": "he took no delight in blessing,\n let it depart from him."
+            },
+            {
+              "halfverse": "let it soak into his body like water\n and into his bones like oil;",
+              "verse": "He put on cursing like a garment, *",
+              "type": "psalm-verse",
+              "number": "17"
+            },
+            {
+              "number": "18",
+              "verse": "Let it be to him like the cloak which he wraps around himself, *",
+              "halfverse": "and like the belt that he wears continually.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "19",
+              "type": "psalm-verse",
+              "halfverse": "and to those who speak evil against me.",
+              "verse": "Let this be the recompense from the LORD to my accusers, *"
+            },
+            {
+              "number": "20",
+              "verse": "But you, O Lord my God,\noh, deal with me according to your Name; *",
+              "halfverse": "for your tender mercy’s sake, deliver me.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "verse": "For I am poor and needy, *",
+              "halfverse": "and my heart is wounded within me."
+            },
+            {
+              "verse": "I have faded away like a shadow when it lengthens; *",
+              "number": "22",
+              "halfverse": "I am shaken off like a locust.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and my flesh is wasted and gaunt.",
+              "type": "psalm-verse",
+              "number": "23",
+              "verse": "My knees are weak through fasting, *"
+            },
+            {
+              "number": "24",
+              "halfverse": "they see and shake their heads.",
+              "type": "psalm-verse",
+              "verse": "I have become a reproach to them; *"
+            },
+            {
+              "halfverse": "save me for your mercy’s sake.",
+              "number": "25",
+              "type": "psalm-verse",
+              "verse": "Help me, O LORD my God; *"
+            },
+            {
+              "number": "26",
+              "halfverse": "that you, O LORD, have done it.",
+              "verse": "Let them know that this is your hand, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They may curse, but you will bless; *",
+              "number": "27",
+              "halfverse": "let those who rise up against me be put to shame,\n and your servant will rejoice."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let my accusers be clothed with disgrace *",
+              "number": "28",
+              "halfverse": "and wrap themselves in their shame as in a cloak."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "in the midst of the multitude will I praise him;",
+              "verse": "I will give great thanks to the LORD with my mouth; *",
+              "number": "29"
+            },
+            {
+              "number": "30",
+              "type": "psalm-verse",
+              "halfverse": "to save his life from those who would condemn him.",
+              "verse": "Because he stands at the right hand of the needy, *"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "slug": "psalm_109",
+      "language": "en",
+      "citation": null,
+      "hidden": false,
+      "version_label": null,
+      "version": "bcp1979"
+    }
+  ]
+}

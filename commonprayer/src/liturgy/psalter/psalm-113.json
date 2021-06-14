@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "metadata": {
+        "localname": "Psalm 113",
+        "latinname": "Laudate, pueri",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "113"
+      },
+      "citation": null,
+      "style": "psalm",
+      "language": "en",
+      "version_label": null,
+      "slug": "psalm_113",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "praise the Name of the LORD.",
+              "verse": "Hallelujah!\nGive praise, you servants of the LORD; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "from this time forth for evermore.",
+              "verse": "Let the Name of the LORD be blessed, *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "halfverse": "let the Name of the LORD be praised.",
+              "type": "psalm-verse",
+              "verse": "From the rising of the sun to its going down *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "The LORD is high above all nations, *",
+              "halfverse": "and his glory above the heavens."
+            },
+            {
+              "halfverse": "but stoops to behold the heavens and the earth?",
+              "verse": "Who is like the LORD our God, who sits enthroned on high, *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "and lifts up the poor from the ashes.",
+              "verse": "He takes up the weak out of the dust *"
+            },
+            {
+              "halfverse": "with the princes of his people.",
+              "verse": "He sets them with the princes, *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "to be a joyful mother of children.",
+              "type": "psalm-verse",
+              "verse": "He makes the woman of a childless house *"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "label": "Psalm 113",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 756"
+      },
+      "type": "psalm"
+    }
+  ]
+}

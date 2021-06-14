@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "slug": "psalm_28",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "lest, if you do not hear me,\n I become like those who go down to the Pit.",
+              "verse": "O LORD, I call to you;\nmy Rock, do not be deaf to my cry; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "verse": "Hear the voice of my prayer when I cry out to you, *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "when I lift up my hands to your holy of holies."
+            },
+            {
+              "number": "3",
+              "halfverse": "who speak peaceably with their neighbors,\n while strife is in their hearts.",
+              "verse": "Do not snatch me away with the wicked or with the evildoers, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and according to the wickedness of their actions.",
+              "number": "4",
+              "verse": "Repay them according to their deeds, *"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "and give them their just deserts.",
+              "verse": "According to the work of their hands repay them, *"
+            },
+            {
+              "halfverse": "therefore he will break them down and not build them up.",
+              "verse": "They have no understanding of the LORD’S doings,\nnor of the works of his hands; *",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "halfverse": "for he has heard the voice of my prayer.",
+              "type": "psalm-verse",
+              "number": "7",
+              "verse": "Blessed is the LORD! *"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "my heart trusts in him, and I have been helped;",
+              "verse": "The LORD is my strength and my shield; *"
+            },
+            {
+              "halfverse": "and in my song will I praise him.",
+              "number": "9",
+              "verse": "Therefore my heart dances for joy, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "a safe refuge for his anointed.",
+              "verse": "The LORD is the strength of his people, *",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Save your people and bless your inheritance; *",
+              "number": "11",
+              "halfverse": "shepherd them and carry them for ever.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "category": ["Psalm"],
+      "metadata": {
+        "latinname": "Ad te, Domine",
+        "omit_antiphon": false,
+        "localname": "Psalm 28",
+        "number": "28",
+        "omit_gloria": false
+      },
+      "version_label": null,
+      "language": "en",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 619"
+      },
+      "citation": null,
+      "label": "Psalm 28",
+      "type": "psalm",
+      "version": "bcp1979",
+      "style": "psalm"
+    }
+  ]
+}

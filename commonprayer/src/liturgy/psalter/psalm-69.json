@@ -1,0 +1,263 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "hidden": false,
+      "style": "psalm",
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 679"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "for the waters have risen up to my neck.",
+              "type": "psalm-verse",
+              "verse": "Save me, O God, *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "I am sinking in deep mire, *",
+              "halfverse": "and there is no firm ground for my feet."
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "I have come into deep waters, *",
+              "halfverse": "and the torrent washes over me."
+            },
+            {
+              "verse": "I have grown weary with my crying;\nmy throat is inflamed; *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "my eyes have failed from looking for my God."
+            },
+            {
+              "halfverse": "Must I then give back what I never stole?",
+              "verse": "Those who hate me without a cause are more than the hairs of my head;\nmy lying foes who would destroy me are mighty. *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "verse": "O God, you know my foolishness, *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "and my faults are not hidden from you."
+            },
+            {
+              "number": "7",
+              "verse": "Let not those who hope in you be put to shame through me, Lord GOD of hosts; *",
+              "type": "psalm-verse",
+              "halfverse": "let not those who seek you be disgraced because of me, O God of Israel."
+            },
+            {
+              "number": "8",
+              "verse": "Surely, for your sake have I suffered reproach, *",
+              "halfverse": "and shame has covered my face.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "an alien to my mother’s children.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "I have become a stranger to my own kindred, *"
+            },
+            {
+              "verse": "Zeal for your house has eaten me up; *",
+              "type": "psalm-verse",
+              "halfverse": "the scorn of those who scorn you has fallen upon me.",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but that was turned to my reproach.",
+              "verse": "I humbled myself with fasting, *",
+              "number": "11"
+            },
+            {
+              "verse": "I put on sack-cloth also, *",
+              "type": "psalm-verse",
+              "halfverse": "and became a byword among them.",
+              "number": "12"
+            },
+            {
+              "verse": "Those who sit at the gate murmur against me, *",
+              "type": "psalm-verse",
+              "halfverse": "and the drunkards make songs about me.",
+              "number": "13"
+            },
+            {
+              "verse": "But as for me, this is my prayer to you, *",
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "at the time you have set, O LORD:"
+            },
+            {
+              "halfverse": "answer me with your unfailing help.",
+              "verse": "“In your great mercy, O God, *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let me be rescued from those who hate me\n and out of the deep waters.",
+              "verse": "Save me from the mire; do not let me sink; *",
+              "number": "16"
+            },
+            {
+              "halfverse": "do not let the Pit shut its mouth upon me.",
+              "verse": "Let not the torrent of waters wash over me,\nneither let the deep swallow me up; *",
+              "number": "17",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "18",
+              "type": "psalm-verse",
+              "halfverse": "in your great compassion, turn to me.”",
+              "verse": "Answer me, O LORD, for your love is kind; *"
+            },
+            {
+              "halfverse": "be swift and answer me, for I am in distress.",
+              "number": "19",
+              "verse": "“Hide not your face from your servant; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "because of my enemies deliver me.",
+              "number": "20",
+              "verse": "Draw near to me and redeem me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "halfverse": "my adversaries are all in your sight.”",
+              "verse": "You know my reproach, my shame, and my dishonor; *"
+            },
+            {
+              "halfverse": "I looked for sympathy, but there was none,\n for comforters, but I could find no one.",
+              "verse": "Reproach has broken my heart, and it cannot be healed; *",
+              "type": "psalm-verse",
+              "number": "22"
+            },
+            {
+              "number": "23",
+              "verse": "They gave me gall to eat, *",
+              "halfverse": "and when I was thirsty, they gave me vinegar to drink.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "Let the table before them be a trap *",
+              "halfverse": "and their sacred feasts a snare."
+            },
+            {
+              "halfverse": "and give them continual trembling in their loins.",
+              "type": "psalm-verse",
+              "number": "25",
+              "verse": "Let their eyes be darkened, that they may not see, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Pour out your indignation upon them, *",
+              "number": "26",
+              "halfverse": "and let the fierceness of your anger overtake them."
+            },
+            {
+              "number": "27",
+              "type": "psalm-verse",
+              "halfverse": "and let there be none to dwell in their tents.",
+              "verse": "Let their camp be desolate, *"
+            },
+            {
+              "number": "28",
+              "type": "psalm-verse",
+              "verse": "For they persecute him whom you have stricken *",
+              "halfverse": "and add to the pain of those whom you have pierced."
+            },
+            {
+              "halfverse": "and let them not receive your vindication.",
+              "number": "29",
+              "type": "psalm-verse",
+              "verse": "Lay to their charge guilt upon guilt, *"
+            },
+            {
+              "verse": "Let them be wiped out of the book of the living *",
+              "number": "30",
+              "type": "psalm-verse",
+              "halfverse": "and not be written among the righteous."
+            },
+            {
+              "verse": "As for me, I am afflicted and in pain; *",
+              "halfverse": "your help, O God, will lift me up on high.",
+              "number": "31",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I will proclaim his greatness with thanksgiving.",
+              "verse": "I will praise the Name of God in song; *",
+              "number": "32",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "33",
+              "halfverse": "more than bullocks with horns and hoofs.",
+              "verse": "This will please the LORD more than an offering of oxen, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The afflicted shall see and be glad; *",
+              "type": "psalm-verse",
+              "number": "34",
+              "halfverse": "you who seek God, your heart shall live."
+            },
+            {
+              "halfverse": "and his prisoners he does not despise.",
+              "number": "35",
+              "verse": "For the LORD listens to the needy, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the seas and all that moves in them;",
+              "type": "psalm-verse",
+              "verse": "Let the heavens and the earth praise him, *",
+              "number": "36"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "37",
+              "halfverse": "they shall live there and have it in possession.",
+              "verse": "For God will save Zion and rebuild the cities of Judah; *"
+            },
+            {
+              "halfverse": "and those who love his Name will dwell therein.",
+              "type": "psalm-verse",
+              "verse": "The children of his servants will inherit it, *",
+              "number": "38"
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "label": "Psalm 69",
+      "slug": "psalm_69",
+      "category": ["Psalm"],
+      "citation": null,
+      "metadata": {
+        "latinname": "Salvum me fac",
+        "localname": "Psalm 69",
+        "omit_antiphon": false,
+        "number": "69",
+        "omit_gloria": false
+      },
+      "version": "bcp1979"
+    }
+  ]
+}

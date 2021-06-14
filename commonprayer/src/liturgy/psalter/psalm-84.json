@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 707"
+      },
+      "label": "Psalm 84",
+      "language": "en",
+      "metadata": {
+        "latinname": "Quam dilecta!",
+        "localname": "Psalm 84",
+        "number": "84",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "hidden": false,
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "verse": "How dear to me is your dwelling, O LORD of hosts! *",
+              "type": "psalm-verse",
+              "halfverse": "My soul has a desire and longing for the courts of the LORD;\n my heart and my flesh rejoice in the living God."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "by the side of your altars, O LORD of hosts,\n my King and my God.",
+              "verse": "The sparrow has found her a house\nand the swallow a nest where she may lay her young; *",
+              "number": "2"
+            },
+            {
+              "verse": "Happy are they who dwell in your house! *",
+              "halfverse": "they will always be praising you.",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "verse": "Happy are the people whose strength is in you! *",
+              "type": "psalm-verse",
+              "halfverse": "whose hearts are set on the pilgrims’ way."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for the early rains have covered it with pools of water.",
+              "number": "5",
+              "verse": "Those who go through the desolate valley will find it a place of springs, *"
+            },
+            {
+              "verse": "They will climb from height to height, *",
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "and the God of gods will reveal himself in Zion."
+            },
+            {
+              "number": "7",
+              "halfverse": "hearken, O God of Jacob.",
+              "verse": "LORD God of hosts, hear my prayer; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "and look upon the face of your Anointed.",
+              "verse": "Behold our defender, O God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and to stand at the threshold of the house of my God\n than to dwell in the tents of the wicked.",
+              "verse": "For one day in your courts is better than a thousand in my own room, *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For the LORD God is both sun and shield; *",
+              "halfverse": "he will give grace and glory;",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "halfverse": "from those who walk with integrity.",
+              "verse": "No good thing will the LORD withhold *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "happy are they who put their trust in you!",
+              "verse": "O LORD of hosts, *",
+              "number": "12",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_84",
+      "citation": null,
+      "style": "psalm",
+      "version": "bcp1979"
+    }
+  ]
+}

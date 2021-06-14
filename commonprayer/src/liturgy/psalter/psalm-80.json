@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "type": "psalm",
+      "slug": "psalm_80",
+      "style": "psalm",
+      "label": "Psalm 80",
+      "source": {
+        "citation": "p. 702",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "hidden": false,
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Hear, O Shepherd of Israel, leading Joseph like a flock; *",
+              "halfverse": "shine forth, you that are enthroned upon the cherubim.",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "stir up your strength and come to help us.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "In the presence of Ephraim, Benjamin, and Manasseh, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "show the light of your countenance, and we shall be saved.",
+              "number": "3",
+              "verse": "Restore us, O God of hosts; *"
+            },
+            {
+              "verse": "O LORD God of hosts, *",
+              "type": "psalm-verse",
+              "halfverse": "how long will you be angered\n despite the prayers of your people?",
+              "number": "4"
+            },
+            {
+              "verse": "You have fed them with the bread of tears; *",
+              "type": "psalm-verse",
+              "number": "5",
+              "halfverse": "you have given them bowls of tears to drink."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and our enemies laugh us to scorn.",
+              "verse": "You have made us the derision of our neighbors, *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "verse": "Restore us, O God of hosts; *",
+              "halfverse": "show the light of your countenance, and we shall be saved.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You have brought a vine out of Egypt; *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "you cast out the nations and planted it."
+            },
+            {
+              "number": "9",
+              "halfverse": "it took root and filled the land.",
+              "verse": "You prepared the ground for it; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "10",
+              "verse": "The mountains were covered by its shadow *",
+              "halfverse": "and the towering cedar trees by its boughs.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You stretched out its tendrils to the Sea *",
+              "halfverse": "and its branches to the River.",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Why have you broken down its wall, *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "so that all who pass by pluck off its grapes?"
+            },
+            {
+              "number": "13",
+              "halfverse": "and the beasts of the field have grazed upon it.",
+              "type": "psalm-verse",
+              "verse": "The wild boar of the forest has ravaged it, *"
+            },
+            {
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "preserve what your right hand has planted.",
+              "verse": "Turn now, O God of hosts, look down from heaven;\nbehold and tend this vine; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "15",
+              "halfverse": "at the rebuke of your countenance let them perish.",
+              "verse": "They burn it with fire like rubbish; *"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "halfverse": "and son of man you have made so strong for yourself.",
+              "verse": "Let your hand be upon the man of your right hand, *"
+            },
+            {
+              "halfverse": "give us life, that we may call upon your Name.",
+              "verse": "And so will we never turn away from you; *",
+              "type": "psalm-verse",
+              "number": "17"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "show the light of your countenance, and we shall be saved.",
+              "number": "18",
+              "verse": "Restore us, O LORD God of hosts; *"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "latinname": "Qui regis Israel",
+        "number": "80",
+        "localname": "Psalm 80"
+      },
+      "version_label": null,
+      "version": "bcp1979"
+    }
+  ]
+}

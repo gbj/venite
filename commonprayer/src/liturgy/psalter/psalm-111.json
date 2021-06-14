@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 754"
+      },
+      "category": ["Psalm"],
+      "slug": "psalm_111",
+      "hidden": false,
+      "style": "psalm",
+      "citation": null,
+      "label": "Psalm 111",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "in the assembly of the upright, in the congregation.",
+              "verse": "Hallelujah!\nI will give thanks to the LORD with my whole heart, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "Great are the deeds of the LORD! *",
+              "halfverse": "they are studied by all who delight in them."
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "His work is full of majesty and splendor, *",
+              "halfverse": "and his righteousness endures for ever."
+            },
+            {
+              "verse": "He makes his marvelous works to be remembered; *",
+              "halfverse": "the LORD is gracious and full of compassion.",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "5",
+              "halfverse": "he is ever mindful of his covenant.",
+              "type": "psalm-verse",
+              "verse": "He gives food to those who fear him; *"
+            },
+            {
+              "verse": "He has shown his people the power of his works *",
+              "halfverse": "in giving them the lands of the nations.",
+              "type": "psalm-verse",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "The works of his hands are faithfulness and justice; *",
+              "halfverse": "all his commandments are sure."
+            },
+            {
+              "number": "8",
+              "halfverse": "because they are done in truth and equity.",
+              "verse": "They stand fast for ever and ever, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "holy and awesome is his Name.",
+              "verse": "He sent redemption to his people;\nhe commanded his covenant for ever; *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "those who act accordingly have a good understanding;\n his praise endures for ever.",
+              "verse": "The fear of the LORD is the beginning of wisdom; *",
+              "number": "10",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "version_label": null,
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 111",
+        "latinname": "Confitebor tibi",
+        "omit_antiphon": false,
+        "number": "111"
+      },
+      "language": "en",
+      "version": "bcp1979"
+    }
+  ]
+}

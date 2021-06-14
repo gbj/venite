@@ -1,0 +1,167 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 627"
+      },
+      "language": "en",
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "his praise shall ever be in my mouth.",
+              "verse": "I will bless the LORD at all times; *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let the humble hear and rejoice.",
+              "verse": "I will glory in the LORD; *",
+              "number": "2"
+            },
+            {
+              "verse": "Proclaim with me the greatness of the LORD; *",
+              "type": "psalm-verse",
+              "halfverse": "let us exalt his Name together.",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "halfverse": "and delivered me out of all my terror.",
+              "verse": "I sought the LORD, and he answered me *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Look upon him and be radiant, *",
+              "halfverse": "and let not your faces be ashamed.",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "verse": "I called in my affliction and the LORD heard me *",
+              "halfverse": "and saved me from all my troubles."
+            },
+            {
+              "halfverse": "and he will deliver them.",
+              "number": "7",
+              "verse": "The angel of the LORD encompasses those who fear him, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Taste and see that the LORD is good; *",
+              "halfverse": "happy are they who trust in him!",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for those who fear him lack nothing.",
+              "verse": "Fear the LORD, you that are his saints, *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The young lions lack and suffer hunger, *",
+              "halfverse": "but those who seek the LORD lack nothing that is good.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "Come, children, and listen to me; *",
+              "halfverse": "I will teach you the fear of the LORD."
+            },
+            {
+              "number": "12",
+              "halfverse": "and desires long life to enjoy prosperity?",
+              "type": "psalm-verse",
+              "verse": "Who among you loves life *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your lips from lying words.",
+              "verse": "Keep your tongue from evil-speaking *",
+              "number": "13"
+            },
+            {
+              "number": "14",
+              "halfverse": "seek peace and pursue it.",
+              "type": "psalm-verse",
+              "verse": "Turn from evil and do good; *"
+            },
+            {
+              "verse": "The eyes of the LORD are upon the righteous, *",
+              "number": "15",
+              "halfverse": "and his ears are open to their cry.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "type": "psalm-verse",
+              "verse": "The face of the LORD is against those who do evil, *",
+              "halfverse": "to root out the remembrance of them from the earth."
+            },
+            {
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "and delivers them from all their troubles.",
+              "verse": "The righteous cry, and the LORD hears them *"
+            },
+            {
+              "verse": "The LORD is near to the brokenhearted *",
+              "halfverse": "and will save those whose spirits are crushed.",
+              "type": "psalm-verse",
+              "number": "18"
+            },
+            {
+              "number": "19",
+              "type": "psalm-verse",
+              "verse": "Many are the troubles of the righteous, *",
+              "halfverse": "but the LORD will deliver him out of them all."
+            },
+            {
+              "number": "20",
+              "verse": "He will keep safe all his bones; *",
+              "halfverse": "not one of them shall be broken.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and those who hate the righteous will be punished.",
+              "type": "psalm-verse",
+              "number": "21",
+              "verse": "Evil shall slay the wicked, *"
+            },
+            {
+              "halfverse": "and none will be punished who trust in him.",
+              "type": "psalm-verse",
+              "number": "22",
+              "verse": "The LORD ransoms the life of his servants, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "label": "Psalm 34",
+      "type": "psalm",
+      "slug": "psalm_34",
+      "citation": null,
+      "metadata": {
+        "latinname": "Benedicam Dominum",
+        "omit_gloria": false,
+        "localname": "Psalm 34",
+        "omit_antiphon": false,
+        "number": "34"
+      },
+      "version": "bcp1979",
+      "style": "psalm"
+    }
+  ]
+}

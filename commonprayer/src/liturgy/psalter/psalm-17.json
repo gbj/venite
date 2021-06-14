@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 600",
+        "source": "bcp1979"
+      },
+      "language": "en",
+      "category": ["Psalm"],
+      "slug": "psalm_17",
+      "type": "psalm",
+      "hidden": false,
+      "label": "Psalm 17",
+      "metadata": {
+        "number": "17",
+        "latinname": "Exaudi, Domine",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 17"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Hear my plea of innocence, O LORD;\ngive heed to my cry; *",
+              "halfverse": "listen to my prayer, which does not come from lying lips.",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "let your eyes be fixed on justice.",
+              "type": "psalm-verse",
+              "verse": "Let my vindication come forth from your presence; *",
+              "number": "2"
+            },
+            {
+              "verse": "Weigh my heart, summon me by night, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "melt me down; you will find no impurity in me."
+            },
+            {
+              "verse": "I give no offense with my mouth as others do; *",
+              "type": "psalm-verse",
+              "halfverse": "I have heeded the words of your lips.",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "in your paths my feet shall not stumble.",
+              "verse": "My footsteps hold fast to the ways of your law; *"
+            },
+            {
+              "halfverse": "incline your ear to me and hear my words.",
+              "verse": "I call upon you, O God, for you will answer me; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O Savior of those who take refuge at your right hand\n from those who rise up against them.",
+              "verse": "Show me your marvelous loving-kindness, *",
+              "number": "7"
+            },
+            {
+              "halfverse": "hide me under the shadow of your wings,",
+              "number": "8",
+              "verse": "Keep me as the apple of your eye; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "from my deadly enemies who surround me.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "From the wicked who assault me, *"
+            },
+            {
+              "number": "10",
+              "verse": "They have closed their heart to pity, *",
+              "halfverse": "and their mouth speaks proud things.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They press me hard,\nnow they surround me, *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "watching how they may cast me to the ground,"
+            },
+            {
+              "verse": "Like a lion, greedy for its prey, *",
+              "halfverse": "and like a young lion lurking in secret places.",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "halfverse": "deliver me from the wicked by your sword.",
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "Arise, O LORD; confront them and bring them down; *"
+            },
+            {
+              "verse": "Deliver me, O LORD, by your hand *",
+              "number": "14",
+              "halfverse": "from those whose portion in life is this world;",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Whose bellies you fill with your treasure, *",
+              "type": "psalm-verse",
+              "halfverse": "who are well supplied with children\n and leave their wealth to their little ones.",
+              "number": "15"
+            },
+            {
+              "halfverse": "when I awake, I shall be satisfied, beholding your likeness.",
+              "verse": "But at my vindication I shall see your face; *",
+              "type": "psalm-verse",
+              "number": "16"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979",
+      "style": "psalm",
+      "citation": null
+    }
+  ]
+}

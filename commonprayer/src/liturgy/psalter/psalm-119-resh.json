@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 776"
+      },
+      "version": "bcp1979",
+      "label": "Psalm 119: Resh",
+      "style": "psalm",
+      "slug": "psalm_119_resh",
+      "hidden": false,
+      "category": ["Psalm"],
+      "version_label": null,
+      "metadata": {
+        "number": "119",
+        "localname": "Psalm 119: Resh",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Vide humilitatem"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "number": "153",
+              "halfverse": "for I do not forget your law.",
+              "verse": "Behold my affliction and deliver me, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "according to your promise, give me life.",
+              "number": "154",
+              "verse": "Plead my cause and redeem me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for they do not study your statutes.",
+              "number": "155",
+              "verse": "Deliverance is far from the wicked, *"
+            },
+            {
+              "verse": "Great is your compassion, O LORD; *",
+              "type": "psalm-verse",
+              "halfverse": "preserve my life, according to your judgments.",
+              "number": "156"
+            },
+            {
+              "verse": "There are many who persecute and oppress me, *",
+              "halfverse": "yet I have not swerved from your decrees.",
+              "type": "psalm-verse",
+              "number": "157"
+            },
+            {
+              "verse": "I look with loathing at the faithless, *",
+              "halfverse": "for they have not kept your word.",
+              "type": "psalm-verse",
+              "number": "158"
+            },
+            {
+              "verse": "See how I love your commandments! *",
+              "halfverse": "O LORD, in your mercy, preserve me.",
+              "number": "159",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "160",
+              "verse": "The heart of your word is truth; *",
+              "halfverse": "all your righteous judgments endure for evermore."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm"
+    }
+  ]
+}

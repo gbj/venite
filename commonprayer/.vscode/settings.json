@@ -1,0 +1,11 @@
+{
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "deno.enable": true, // enables extension
+  "deno.lint": true, // inline deno lint diagnostics, requires `deno.unstable`
+  "deno.unstable": true,
+  "deno.suggest.imports.hosts": {
+    "https://cdn.pika.dev": false,
+    "https://deno.land": false,
+    "https://cdn.skypack.dev": true
+  } // also provides unstable type declarations in VS Code
+}

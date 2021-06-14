@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "h",
+    "noImplicitAny": false,
+    "strict": false,
+    "lib": ["deno.window", "deno.unstable", "es2020"],
+    "noUncheckedIndexedAccess": true
+  }
+}

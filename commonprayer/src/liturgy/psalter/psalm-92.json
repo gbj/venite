@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "style": "psalm",
+      "language": "en",
+      "citation": null,
+      "slug": "psalm_92",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 720"
+      },
+      "version": "bcp1979",
+      "label": "Psalm 92",
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "and to sing praises to your Name, O Most High;",
+              "verse": "It is a good thing to give thanks to the LORD, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "To tell of your loving-kindness early in the morning *",
+              "number": "2",
+              "halfverse": "and of your faithfulness in the night season;"
+            },
+            {
+              "number": "3",
+              "halfverse": "and to the melody of the harp.",
+              "type": "psalm-verse",
+              "verse": "On the psaltery, and on the lyre, *"
+            },
+            {
+              "halfverse": "and I shout for joy because of the works of your hands.",
+              "number": "4",
+              "verse": "For you have made me glad by your acts, O LORD; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "your thoughts are very deep.",
+              "number": "5",
+              "verse": "LORD, how great are your works! *"
+            },
+            {
+              "verse": "The dullard does not know,\nnor does the fool understand, *",
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "that though the wicked grow like weeds,\n and all the workers of iniquity flourish,"
+            },
+            {
+              "halfverse": "but you, O LORD, are exalted for evermore.",
+              "verse": "They flourish only to be destroyed for ever; *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and all the workers of iniquity shall be scattered.",
+              "type": "psalm-verse",
+              "number": "8",
+              "verse": "For lo, your enemies, O LORD,\nlo, your enemies shall perish, *"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "I am anointed with fresh oil.",
+              "verse": "But my horn you have exalted like the horns of wild bulls; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "and my ears rejoice to hear the doom of the wicked who rise up against me.",
+              "verse": "My eyes also gloat over my enemies, *"
+            },
+            {
+              "halfverse": "and shall spread abroad like a cedar of Lebanon.",
+              "verse": "The righteous shall flourish like a palm tree, *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "shall flourish in the courts of our God;",
+              "number": "12",
+              "verse": "Those who are planted in the house of the LORD *"
+            },
+            {
+              "verse": "They shall still bear fruit in old age; *",
+              "type": "psalm-verse",
+              "halfverse": "they shall be green and succulent;",
+              "number": "13"
+            },
+            {
+              "verse": "That they may show how upright the LORD is, *",
+              "halfverse": "my Rock, in whom there is no fault.",
+              "number": "14",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "92",
+        "latinname": "Bonum est confiteri",
+        "localname": "Psalm 92"
+      }
+    }
+  ]
+}

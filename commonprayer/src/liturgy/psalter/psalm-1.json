@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "latinname": "Beatus vir qui non abiit",
+        "omit_gloria": false,
+        "number": "1",
+        "omit_antiphon": false,
+        "localname": "Psalm 1"
+      },
+      "slug": "psalm_1",
+      "language": "en",
+      "version_label": null,
+      "hidden": false,
+      "source": {
+        "citation": "p. 585",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "type": "psalm",
+      "label": "Psalm 1",
+      "citation": null,
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "nor lingered in the way of sinners,\nnor sat in the seats of the scornful!",
+              "verse": "Happy are they who have not walked in the counsel of the wicked, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "and they meditate on his law day and night.",
+              "verse": "Their delight is in the law of the LORD, *"
+            },
+            {
+              "number": "3",
+              "halfverse": "everything they do shall prosper.",
+              "type": "psalm-verse",
+              "verse": "They are like trees planted by streams of water,\nbearing fruit in due season, with leaves that do not wither; *"
+            },
+            {
+              "halfverse": "they are like chaff which the wind blows away.",
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "It is not so with the wicked; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Therefore the wicked shall not stand upright when judgment comes, *",
+              "halfverse": "nor the sinner in the council of the righteous.",
+              "number": "5"
+            },
+            {
+              "halfverse": "but the way of the wicked is doomed.",
+              "verse": "For the LORD knows the way of the righteous, *",
+              "number": "6",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ]
+}

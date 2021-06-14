@@ -1,0 +1,251 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "version_label": null,
+      "slug": "psalm_68",
+      "style": "psalm",
+      "language": "en",
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "verse": "Let God arise, and let his enemies be scattered; *",
+              "type": "psalm-verse",
+              "halfverse": "let those who hate him flee before him."
+            },
+            {
+              "verse": "Let them vanish like smoke when the wind drives it away; *",
+              "type": "psalm-verse",
+              "halfverse": "as the wax melts at the fire, so let the wicked perish at the presence of God.",
+              "number": "2"
+            },
+            {
+              "halfverse": "let them also be merry and joyful.",
+              "verse": "But let the righteous be glad and rejoice before God; *",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "YAHWEH is his Name, rejoice before him!",
+              "verse": "Sing to God, sing praises to his Name;\nexalt him who rides upon the heavens; *",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Father of orphans, defender of widows, *",
+              "halfverse": "God in his holy habitation!",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "verse": "God gives the solitary a home and brings forth prisoners into freedom; *",
+              "type": "psalm-verse",
+              "halfverse": "but the rebels shall live in dry places."
+            },
+            {
+              "verse": "O God, when you went forth before your people, *",
+              "type": "psalm-verse",
+              "halfverse": "when you marched through the wilderness,",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "verse": "The earth shook, and the skies poured down rain,\nat the presence of God, the God of Sinai, *",
+              "halfverse": "at the presence of God, the God of Israel."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You sent a gracious rain, O God, upon your inheritance; *",
+              "halfverse": "you refreshed the land when it was weary.",
+              "number": "9"
+            },
+            {
+              "verse": "Your people found their home in it; *",
+              "halfverse": "in your goodness, O God, you have made provision for the poor.",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "verse": "The Lord gave the word; *",
+              "type": "psalm-verse",
+              "halfverse": "great was the company of women who bore the tidings:",
+              "number": "11"
+            },
+            {
+              "verse": "“Kings with their armies are fleeing away; *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "the women at home are dividing the spoils.”"
+            },
+            {
+              "halfverse": "you shall be like a dove whose wings are covered with silver,\n whose feathers are like green gold.",
+              "verse": "Though you lingered among the sheepfolds, *",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "When the Almighty scattered kings, *",
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "it was like snow falling in Zalmon."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "O mighty mountain, O hill of Bashan! *",
+              "halfverse": "O rugged mountain, O hill of Bashan!"
+            },
+            {
+              "halfverse": "truly, the LORD will dwell there for ever.",
+              "verse": "Why do you look with envy, O rugged mountain,\nat the hill which God chose for his resting place? *",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The chariots of God are twenty thousand,\neven thousands of thousands; *",
+              "number": "17",
+              "halfverse": "the Lord comes in holiness from Sinai.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You have gone up on high and led captivity captive;\nyou have received gifts even from your enemies, *",
+              "type": "psalm-verse",
+              "number": "18",
+              "halfverse": "that the LORD God might dwell among them."
+            },
+            {
+              "verse": "Blessed be the Lord day by day, *",
+              "type": "psalm-verse",
+              "halfverse": "the God of our salvation, who bears our burdens.",
+              "number": "19"
+            },
+            {
+              "halfverse": "God is the LORD, by whom we escape death.",
+              "verse": "He is our God, the God of our salvation; *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the hairy scalp of those who go on still in their wickedness.",
+              "type": "psalm-verse",
+              "verse": "God shall crush the heads of his enemies, *",
+              "number": "21"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "verse": "The Lord has said, “I will bring them back from Bashan; *",
+              "halfverse": "I will bring them back from the depths of the sea;"
+            },
+            {
+              "halfverse": "the tongues of your dogs in the blood of your enemies.”",
+              "number": "23",
+              "type": "psalm-verse",
+              "verse": "That your foot may be dipped in blood, *"
+            },
+            {
+              "verse": "They see your procession, O God, *",
+              "halfverse": "your procession into the sanctuary, my God and my King.",
+              "number": "24",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The singers go before, musicians follow after, *",
+              "halfverse": "in the midst of maidens playing upon the hand-drums.",
+              "number": "25"
+            },
+            {
+              "number": "26",
+              "verse": "Bless God in the congregation; *",
+              "type": "psalm-verse",
+              "halfverse": "bless the LORD, you that are of the fountain of Israel."
+            },
+            {
+              "number": "27",
+              "halfverse": "and the princes of Zebulon and Naphtali.",
+              "type": "psalm-verse",
+              "verse": "There is Benjamin, least of the tribes, at the head;\nthe princes of Judah in a company; *"
+            },
+            {
+              "halfverse": "establish, O God, what you have wrought for us.",
+              "number": "28",
+              "verse": "Send forth your strength, O God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for your temple’s sake at Jerusalem.",
+              "number": "29",
+              "type": "psalm-verse",
+              "verse": "Kings shall bring gifts to you, *"
+            },
+            {
+              "number": "30",
+              "halfverse": "and the peoples, a herd of wild bulls with its calves.",
+              "verse": "Rebuke the wild beast of the reeds, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Trample down those who lust after silver; *",
+              "type": "psalm-verse",
+              "number": "31",
+              "halfverse": "scatter the peoples that delight in war."
+            },
+            {
+              "halfverse": "let Ethiopia stretch out her hands to God.",
+              "number": "32",
+              "type": "psalm-verse",
+              "verse": "Let tribute be brought out of Egypt; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Sing to God, O kingdoms of the earth; *",
+              "number": "33",
+              "halfverse": "sing praises to the Lord."
+            },
+            {
+              "number": "34",
+              "verse": "He rides in the heavens, the ancient heavens; *",
+              "type": "psalm-verse",
+              "halfverse": "he sends forth his voice, his mighty voice."
+            },
+            {
+              "number": "35",
+              "type": "psalm-verse",
+              "halfverse": "his majesty is over Israel;\n his strength is in the skies.",
+              "verse": "Ascribe power to God; *"
+            },
+            {
+              "number": "36",
+              "type": "psalm-verse",
+              "verse": "How wonderful is God in his holy places! *",
+              "halfverse": "the God of Israel giving strength and power to his people!\n Blessed be God!"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 676"
+      },
+      "label": "Psalm 68",
+      "hidden": false,
+      "metadata": {
+        "localname": "Psalm 68",
+        "omit_gloria": false,
+        "latinname": "Exsurgat Deus",
+        "omit_antiphon": false,
+        "number": "68"
+      },
+      "type": "psalm"
+    }
+  ]
+}

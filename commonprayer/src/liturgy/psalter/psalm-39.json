@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "so that I do not offend with my tongue.",
+              "verse": "I said, “I will keep watch upon my ways, *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will put a muzzle on my mouth *",
+              "number": "2",
+              "halfverse": "while the wicked are in my presence.”",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "I refrained from rash words;\n but my pain became unbearable.",
+              "verse": "So I held my tongue and said nothing; *"
+            },
+            {
+              "halfverse": "I spoke out with my tongue:",
+              "verse": "My heart was hot within me;\nwhile I pondered, the fire burst into flame; *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "LORD, let me know my end and the number of my days, *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "so that I may know how short my life is."
+            },
+            {
+              "verse": "You have given me a mere handful of days,\nand my lifetime is as nothing in your sight; *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "truly, even those who stand erect are but a puff of wind."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "we heap up riches and cannot tell who will gather them.",
+              "verse": "We walk about like a shadow,\nand in vain we are in turmoil; *",
+              "number": "7"
+            },
+            {
+              "halfverse": "O Lord, my hope is in you.",
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "And now, what is my hope? *"
+            },
+            {
+              "verse": "Deliver me from all my transgressions *",
+              "number": "9",
+              "halfverse": "and do not make me the taunt of the fool.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I fell silent and did not open my mouth, *",
+              "number": "10",
+              "halfverse": "for surely it was you that did it."
+            },
+            {
+              "number": "11",
+              "verse": "Take your affliction from me; *",
+              "type": "psalm-verse",
+              "halfverse": "I am worn down by the blows of your hand."
+            },
+            {
+              "verse": "With rebukes for sin you punish us;\nlike a moth you eat away all that is dear to us; *",
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "truly, everyone is but a puff of wind."
+            },
+            {
+              "halfverse": "hold not your peace at my tears.",
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "Hear my prayer, O LORD,\nand give ear to my cry; *"
+            },
+            {
+              "halfverse": "a wayfarer, as all my forebears were.",
+              "number": "14",
+              "verse": "For I am but a sojourner with you, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Turn your gaze from me, that I may be glad again, *",
+              "number": "15",
+              "halfverse": "before I go my way and am no more.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 638"
+      },
+      "type": "psalm",
+      "version_label": null,
+      "style": "psalm",
+      "citation": null,
+      "slug": "psalm_39",
+      "version": "bcp1979",
+      "hidden": false,
+      "label": "Psalm 39",
+      "metadata": {
+        "number": "39",
+        "localname": "Psalm 39",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Dixi, Custodiam"
+      }
+    }
+  ]
+}

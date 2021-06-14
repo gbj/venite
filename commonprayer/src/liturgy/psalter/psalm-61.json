@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "style": "psalm",
+      "language": "en",
+      "category": ["Psalm"],
+      "version_label": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "61",
+        "omit_gloria": false,
+        "localname": "Psalm 61",
+        "latinname": "Exaudi, Deus"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "and listen to my prayer.",
+              "verse": "Hear my cry, O God, *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "set me upon the rock that is higher than I.",
+              "verse": "I call upon you from the ends of the earth\nwith heaviness in my heart; *"
+            },
+            {
+              "halfverse": "a strong tower against the enemy.",
+              "verse": "For you have been my refuge, *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "verse": "I will dwell in your house for ever; *",
+              "type": "psalm-verse",
+              "halfverse": "I will take refuge under the cover of your wings."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have granted me the heritage of those who fear your Name.",
+              "number": "5",
+              "verse": "For you, O God, have heard my vows; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Add length of days to the king’s life; *",
+              "number": "6",
+              "halfverse": "let his years extend over many generations."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "bid love and faithfulness watch over him.",
+              "verse": "Let him sit enthroned before God for ever; *",
+              "number": "7"
+            },
+            {
+              "halfverse": "and day by day I will fulfill my vows.",
+              "verse": "So will I always sing the praise of your Name, *",
+              "type": "psalm-verse",
+              "number": "8"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "citation": null,
+      "label": "Psalm 61",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 668",
+        "api": "https://www.venite.app/api"
+      },
+      "type": "psalm",
+      "slug": "psalm_61",
+      "version": "bcp1979"
+    }
+  ]
+}

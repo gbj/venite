@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "slug": "psalm_47",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "shout to God with a cry of joy.",
+              "verse": "Clap your hands, all you peoples; *",
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "he is the great King over all the earth.",
+              "verse": "For the LORD Most High is to be feared; *"
+            },
+            {
+              "number": "3",
+              "halfverse": "and the nations under our feet.",
+              "verse": "He subdues the peoples under us, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He chooses our inheritance for us, *",
+              "halfverse": "the pride of Jacob whom he loves.",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "God has gone up with a shout, *",
+              "number": "5",
+              "halfverse": "the LORD with the sound of the ram’s-horn."
+            },
+            {
+              "verse": "Sing praises to God, sing praises; *",
+              "number": "6",
+              "halfverse": "sing praises to our King, sing praises.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "sing praises with all your skill.",
+              "verse": "For God is King of all the earth; *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "God sits upon his holy throne.",
+              "verse": "God reigns over the nations; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The nobles of the peoples have gathered together *",
+              "number": "9",
+              "halfverse": "with the people of the God of Abraham.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and he is highly exalted.",
+              "verse": "The rulers of the earth belong to God, *",
+              "number": "10",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "label": "Psalm 47",
+      "version": "bcp1979",
+      "style": "psalm",
+      "citation": null,
+      "version_label": null,
+      "metadata": {
+        "localname": "Psalm 47",
+        "omit_antiphon": false,
+        "number": "47",
+        "omit_gloria": false,
+        "latinname": "Omnes gentes, plaudite"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 650"
+      },
+      "type": "psalm",
+      "language": "en"
+    }
+  ]
+}

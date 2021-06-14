@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "category": ["Psalm"],
+      "slug": "psalm_81",
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Exultate Deo",
+        "number": "81",
+        "omit_antiphon": false,
+        "localname": "Psalm 81"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Sing with joy to God our strength *",
+              "halfverse": "and raise a loud shout to the God of Jacob.",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "the merry harp, and the lyre.",
+              "number": "2",
+              "verse": "Raise a song and sound the timbrel, *"
+            },
+            {
+              "halfverse": "and at the full moon, the day of our feast.",
+              "type": "psalm-verse",
+              "number": "3",
+              "verse": "Blow the ram’s-horn at the new moon, *"
+            },
+            {
+              "verse": "For this is a statute for Israel, *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "a law of the God of Jacob."
+            },
+            {
+              "verse": "He laid it as a solemn charge upon Joseph, *",
+              "halfverse": "when he came out of the land of Egypt.",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "“I eased his shoulder from the burden;\n his hands were set free from bearing the load.”",
+              "type": "psalm-verse",
+              "verse": "I heard an unfamiliar voice saying, *",
+              "number": "6"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "I answered you from the secret place of thunder\n and tested you at the waters of Meribah.",
+              "verse": "You called on me in trouble, and I saved you; *"
+            },
+            {
+              "number": "8",
+              "halfverse": "O Israel, if you would but listen to me!",
+              "verse": "Hear, O my people, and I will admonish you: *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "There shall be no strange god among you; *",
+              "halfverse": "you shall not worship a foreign god.",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I am the LORD your God,\nwho brought you out of the land of Egypt and said, *",
+              "number": "10",
+              "halfverse": "“Open your mouth wide, and I will fill it.”"
+            },
+            {
+              "number": "11",
+              "halfverse": "and Israel would not obey me.",
+              "verse": "And yet my people did not hear my voice, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "to follow their own devices.",
+              "verse": "So I gave them over to the stubbornness of their hearts, *"
+            },
+            {
+              "verse": "Oh, that my people would listen to me! *",
+              "halfverse": "that Israel would walk in my ways!",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I should soon subdue their enemies *",
+              "number": "14",
+              "halfverse": "and turn my hand against their foes."
+            },
+            {
+              "number": "15",
+              "halfverse": "and their punishment would last for ever.",
+              "verse": "Those who hate the LORD would cringe before him, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "But Israel would I feed with the finest wheat *",
+              "number": "16",
+              "halfverse": "and satisfy him with honey from the rock.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "style": "psalm",
+      "hidden": false,
+      "label": "Psalm 81",
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 704"
+      },
+      "version": "bcp1979",
+      "type": "psalm"
+    }
+  ]
+}

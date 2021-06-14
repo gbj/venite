@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "source": {
+        "citation": "p. 672",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "version": "bcp1979",
+      "slug": "psalm_65",
+      "style": "psalm",
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "to you shall vows be performed in Jerusalem.",
+              "verse": "You are to be praised, O God, in Zion; *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "To you that hear prayer shall all flesh come, *",
+              "halfverse": "because of their transgressions.",
+              "number": "2"
+            },
+            {
+              "verse": "Our sins are stronger than we are, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "but you will blot them out."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "they will be satisfied by the beauty of your house,\n by the holiness of your temple.",
+              "number": "4",
+              "verse": "Happy are they whom you choose\nand draw to your courts to dwell there! *"
+            },
+            {
+              "halfverse": "O Hope of all the ends of the earth\n and of the seas that are far away.",
+              "verse": "Awesome things will you show us in your righteousness,\nO God of our salvation, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they are girded about with might.",
+              "verse": "You make fast the mountains by your power; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You still the roaring of the seas, *",
+              "halfverse": "the roaring of their waves,\n and the clamor of the peoples.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "halfverse": "you make the dawn and the dusk to sing for joy.",
+              "type": "psalm-verse",
+              "verse": "Those who dwell at the ends of the earth will tremble at your marvelous signs; *"
+            },
+            {
+              "halfverse": "the river of God is full of water.",
+              "type": "psalm-verse",
+              "verse": "You visit the earth and water it abundantly;\nyou make it very plenteous; *",
+              "number": "9"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You prepare the grain, *",
+              "halfverse": "for so you provide for the earth.",
+              "number": "10"
+            },
+            {
+              "verse": "You drench the furrows and smooth out the ridges; *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "with heavy rain you soften the ground and bless its increase."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "12",
+              "verse": "You crown the year with your goodness, *",
+              "halfverse": "and your paths overflow with plenty."
+            },
+            {
+              "halfverse": "and the hills be clothed with joy.",
+              "number": "13",
+              "type": "psalm-verse",
+              "verse": "May the fields of the wilderness be rich for grazing, *"
+            },
+            {
+              "verse": "May the meadows cover themselves with flocks,\nand the valleys cloak themselves with grain; *",
+              "halfverse": "let them shout for joy and sing.",
+              "type": "psalm-verse",
+              "number": "14"
+            }
+          ]
+        }
+      ],
+      "label": "Psalm 65",
+      "language": "en",
+      "citation": null,
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Te decet hymnus",
+        "omit_antiphon": false,
+        "number": "65",
+        "localname": "Psalm 65"
+      },
+      "version_label": null,
+      "category": ["Psalm"]
+    }
+  ]
+}

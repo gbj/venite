@@ -1,0 +1,209 @@
+{
+  "data": [
+    {
+      "slug": "psalm_73",
+      "language": "en",
+      "version_label": null,
+      "type": "psalm",
+      "label": "Psalm 73",
+      "version": "bcp1979",
+      "style": "psalm",
+      "citation": null,
+      "hidden": false,
+      "source": {
+        "citation": "p. 687",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "metadata": {
+        "localname": "Psalm 73",
+        "omit_gloria": false,
+        "number": "73",
+        "latinname": "Quam bonus Israel!",
+        "omit_antiphon": false
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "to those who are pure in heart.",
+              "verse": "Truly, God is good to Israel, *",
+              "number": "1"
+            },
+            {
+              "halfverse": "I had almost tripped and fallen;",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "But as for me, my feet had nearly slipped; *"
+            },
+            {
+              "verse": "Because I envied the proud *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "and saw the prosperity of the wicked:"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "and their bodies are sleek and sound;",
+              "verse": "For they suffer no pain, *"
+            },
+            {
+              "halfverse": "they are not afflicted as others are;",
+              "verse": "In the misfortunes of others they have no share; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "halfverse": "and wrap their violence about them like a cloak.",
+              "verse": "Therefore they wear their pride like a necklace *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "halfverse": "and their hearts overflow with wicked thoughts.",
+              "verse": "Their iniquity comes from gross minds, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "out of their haughtiness they plan oppression.",
+              "verse": "They scoff and speak maliciously; *"
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "halfverse": "and their evil speech runs through the world.",
+              "verse": "They set their mouths against the heavens, *"
+            },
+            {
+              "verse": "And so the people turn to them *",
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "and find in them no fault."
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "is there knowledge in the Most High?”",
+              "verse": "They say, “How should God know? *"
+            },
+            {
+              "halfverse": "always at ease, they increase their wealth.",
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": "So then, these are the wicked; *"
+            },
+            {
+              "halfverse": "and washed my hands in innocence.",
+              "verse": "In vain have I kept my heart clean, *",
+              "number": "13",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and punished every morning.",
+              "number": "14",
+              "verse": "I have been afflicted all day long, *"
+            },
+            {
+              "number": "15",
+              "verse": "Had I gone on speaking this way, *",
+              "halfverse": "I should have betrayed the generation of your children.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "16",
+              "halfverse": "it was too hard for me;",
+              "verse": "When I tried to understand these things, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and discerned the end of the wicked.",
+              "verse": "Until I entered the sanctuary of God *",
+              "number": "17"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "18",
+              "verse": "Surely, you set them in slippery places; *",
+              "halfverse": "you cast them down in ruin."
+            },
+            {
+              "halfverse": "come to an end, and perish from terror!",
+              "type": "psalm-verse",
+              "number": "19",
+              "verse": "Oh, how suddenly do they come to destruction, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "when you arise you will make their image vanish.",
+              "number": "20",
+              "verse": "Like a dream when one awakens, O Lord, *"
+            },
+            {
+              "verse": "When my mind became embittered, *",
+              "halfverse": "I was sorely wounded in my heart.",
+              "type": "psalm-verse",
+              "number": "21"
+            },
+            {
+              "number": "22",
+              "halfverse": "I was like a brute beast in your presence.",
+              "verse": "I was stupid and had no understanding; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you hold me by my right hand.",
+              "number": "23",
+              "verse": "Yet I am always with you; *"
+            },
+            {
+              "halfverse": "and afterwards receive me with glory.",
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "You will guide me by your counsel, *"
+            },
+            {
+              "halfverse": "and having you I desire nothing upon earth.",
+              "verse": "Whom have I in heaven but you? *",
+              "type": "psalm-verse",
+              "number": "25"
+            },
+            {
+              "halfverse": "God is the strength of my heart and my portion for ever.",
+              "verse": "Though my flesh and my heart should waste away, *",
+              "type": "psalm-verse",
+              "number": "26"
+            },
+            {
+              "verse": "Truly, those who forsake you will perish; *",
+              "halfverse": "you destroy all who are unfaithful.",
+              "number": "27",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "But it is good for me to be near God; *",
+              "number": "28",
+              "halfverse": "I have made the Lord GOD my refuge.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will speak of all your works *",
+              "number": "29",
+              "halfverse": "in the gates of the city of Zion.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"]
+    }
+  ]
+}

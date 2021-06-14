@@ -1,0 +1,215 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 610"
+      },
+      "citation": null,
+      "version_label": null,
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Deus, Deus meus",
+        "omit_antiphon": false,
+        "number": "22",
+        "localname": "Psalm 22"
+      },
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "and are so far from my cry\n and from the words of my distress?",
+              "verse": "My God, my God, why have you forsaken me? *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "by night as well, but I find no rest.",
+              "verse": "O my God, I cry in the daytime, but you do not answer; *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "halfverse": "enthroned upon the praises of Israel.",
+              "verse": "Yet you are the Holy One, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "halfverse": "they trusted, and you delivered them.",
+              "verse": "Our forefathers put their trust in you; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They cried out to you and were delivered; *",
+              "type": "psalm-verse",
+              "number": "5",
+              "halfverse": "they trusted in you and were not put to shame."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "scorned by all and despised by the people.",
+              "verse": "But as for me, I am a worm and no man, *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "halfverse": "they curl their lips and wag their heads, saying,",
+              "verse": "All who see me laugh me to scorn; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "verse": "“He trusted in the LORD; let him deliver him; *",
+              "type": "psalm-verse",
+              "halfverse": "let him rescue him, if he delights in him.”"
+            },
+            {
+              "verse": "Yet you are he who took me out of the womb, *",
+              "number": "9",
+              "halfverse": "and kept me safe upon my mother’s breast.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you were my God when I was still in my mother’s womb.",
+              "type": "psalm-verse",
+              "verse": "I have been entrusted to you ever since I was born; *",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Be not far from me, for trouble is near, *",
+              "halfverse": "and there is none to help.",
+              "number": "11"
+            },
+            {
+              "halfverse": "strong bulls of Bashan surround me.",
+              "verse": "Many young bulls encircle me; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They open wide their jaws at me, *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "like a ravening and a roaring lion."
+            },
+            {
+              "verse": "I am poured out like water;\nall my bones are out of joint; *",
+              "number": "14",
+              "type": "psalm-verse",
+              "halfverse": "my heart within my breast is melting wax."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and you have laid me in the dust of the grave.",
+              "number": "15",
+              "verse": "My mouth is dried out like a pot-sherd;\nmy tongue sticks to the roof of my mouth; *"
+            },
+            {
+              "halfverse": "they pierce my hands and my feet;\n I can count all my bones.",
+              "verse": "Packs of dogs close me in,\nand gangs of evildoers circle around me; *",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "number": "17",
+              "type": "psalm-verse",
+              "halfverse": "they divide my garments among them;\n they cast lots for my clothing.",
+              "verse": "They stare and gloat over me; *"
+            },
+            {
+              "halfverse": "you are my strength; hasten to help me.",
+              "type": "psalm-verse",
+              "verse": "Be not far away, O LORD; *",
+              "number": "18"
+            },
+            {
+              "number": "19",
+              "halfverse": "my life from the power of the dog.",
+              "type": "psalm-verse",
+              "verse": "Save me from the sword, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "my wretched body from the horns of wild bulls.",
+              "verse": "Save me from the lion’s mouth, *",
+              "number": "20"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "halfverse": "in the midst of the congregation I will praise you.",
+              "verse": "I will declare your Name to my brethren; *"
+            },
+            {
+              "verse": "Praise the LORD, you that fear him; *",
+              "halfverse": "stand in awe of him, O offspring of Israel;\n all you of Jacob’s line, give glory.",
+              "number": "22",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but when they cry to him he hears them.",
+              "verse": "For he does not despise nor abhor the poor in their poverty;\nneither does he hide his face from them; *",
+              "type": "psalm-verse",
+              "number": "23"
+            },
+            {
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "My praise is of him in the great assembly; *",
+              "halfverse": "I will perform my vows in the presence of those who worship him."
+            },
+            {
+              "number": "25",
+              "verse": "The poor shall eat and be satisfied,\nand those who seek the LORD shall praise him: *",
+              "halfverse": "“May your heart live for ever!”",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "All the ends of the earth shall remember and turn to the LORD, *",
+              "type": "psalm-verse",
+              "halfverse": "and all the families of the nations bow before him.",
+              "number": "26"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For kingship belongs to the LORD; *",
+              "number": "27",
+              "halfverse": "he rules over the nations."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "To him alone all who sleep in the earth bow down in worship; *",
+              "number": "28",
+              "halfverse": "all who go down to the dust fall before him."
+            },
+            {
+              "verse": "My soul shall live for him;\nmy descendants shall serve him; *",
+              "number": "29",
+              "halfverse": "they shall be known as the LORD’S for ever.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "30",
+              "halfverse": "the saving deeds that he has done.",
+              "type": "psalm-verse",
+              "verse": "They shall come and make known to a people yet unborn *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "hidden": false,
+      "style": "psalm",
+      "language": "en",
+      "slug": "psalm_22",
+      "label": "Psalm 22"
+    }
+  ]
+}

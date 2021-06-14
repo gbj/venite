@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "localname": "Psalm 125",
+        "number": "125",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "latinname": "Qui confidunt"
+      },
+      "category": ["Psalm"],
+      "slug": "psalm_125",
+      "hidden": false,
+      "citation": null,
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 781"
+      },
+      "version": "bcp1979",
+      "version_label": null,
+      "type": "psalm",
+      "label": "Psalm 125",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Those who trust in the LORD are like Mount Zion, *",
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "which cannot be moved, but stands fast for ever."
+            },
+            {
+              "verse": "The hills stand about Jerusalem; *",
+              "number": "2",
+              "halfverse": "so does the LORD stand round about his people,\n from this time forth for evermore.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The scepter of the wicked shall not hold sway over the land allotted to the just, *",
+              "number": "3",
+              "halfverse": "so that the just shall not put their hands to evil.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "Show your goodness, O LORD, to those who are good *",
+              "halfverse": "and to those who are true of heart."
+            },
+            {
+              "halfverse": "but peace be upon Israel.",
+              "type": "psalm-verse",
+              "verse": "As for those who turn aside to crooked ways,\nthe LORD will lead them away with the evildoers; *",
+              "number": "5"
+            }
+          ]
+        }
+      ],
+      "style": "psalm"
+    }
+  ]
+}

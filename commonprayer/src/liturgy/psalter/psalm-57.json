@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "label": "Psalm 57",
+      "metadata": {
+        "latinname": "Miserere mei, Deus",
+        "omit_gloria": false,
+        "number": "57",
+        "omit_antiphon": false,
+        "localname": "Psalm 57"
+      },
+      "type": "psalm",
+      "category": ["Psalm"],
+      "source": {
+        "citation": "p. 663",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "in the shadow of your wings will I take refuge\n until this time of trouble has gone by.",
+              "number": "1",
+              "verse": "Be merciful to me, O God, be merciful,\nfor I have taken refuge in you; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "verse": "I will call upon the Most High God, *",
+              "halfverse": "the God who maintains my cause.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "halfverse": "God will send forth his love and his faithfulness.",
+              "verse": "He will send from heaven and save me;\nhe will confound those who trample upon me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "their teeth are spears and arrows,\n their tongue a sharp sword.",
+              "type": "psalm-verse",
+              "verse": "I lie in the midst of lions that devour the people; *",
+              "number": "4"
+            },
+            {
+              "halfverse": "they have dug a pit before me,\n but have fallen into it themselves.",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "They have laid a net for my feet,\nand I am bowed low; *"
+            },
+            {
+              "verse": "Exalt yourself above the heavens, O God, *",
+              "type": "psalm-verse",
+              "halfverse": "and your glory over all the earth.",
+              "number": "6"
+            },
+            {
+              "verse": "My heart is firmly fixed, O God, my heart is fixed; *",
+              "type": "psalm-verse",
+              "halfverse": "I will sing and make melody.",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Wake up, my spirit;\nawake, lute and harp; *",
+              "number": "8",
+              "halfverse": "I myself will waken the dawn."
+            },
+            {
+              "verse": "I will confess you among the peoples, O LORD; *",
+              "type": "psalm-verse",
+              "number": "9",
+              "halfverse": "I will sing praise to you among the nations."
+            },
+            {
+              "halfverse": "and your faithfulness reaches to the clouds.",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "For your loving-kindness is greater than the heavens, *"
+            },
+            {
+              "number": "11",
+              "halfverse": "and your glory over all the earth.",
+              "verse": "Exalt yourself above the heavens, O God, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "version": "bcp1979",
+      "slug": "psalm_57",
+      "style": "psalm",
+      "citation": null,
+      "version_label": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "“Greatly have they oppressed me since my youth,” *",
+              "halfverse": "let Israel now say;",
+              "number": "1"
+            },
+            {
+              "verse": "“Greatly have they oppressed me since my youth, *",
+              "halfverse": "but they have not prevailed against me.”",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The plowmen plowed upon my back *",
+              "number": "3",
+              "halfverse": "and made their furrows long."
+            },
+            {
+              "halfverse": "has cut the cords of the wicked.",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "The LORD, the Righteous One, *"
+            },
+            {
+              "halfverse": "all those who are enemies of Zion.",
+              "verse": "Let them be put to shame and thrown back, *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "which withers before it can be plucked;",
+              "number": "6",
+              "verse": "Let them be like grass upon the housetops, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Which does not fill the hand of the reaper, *",
+              "number": "7",
+              "halfverse": "nor the bosom of him who binds the sheaves;"
+            },
+            {
+              "halfverse": "We wish you well in the Name of the LORD.”",
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "So that those who go by say not so much as,\n“The LORD prosper you. *"
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "language": "en",
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "129",
+        "latinname": "Saepe expugnaverunt",
+        "localname": "Psalm 129"
+      },
+      "type": "psalm",
+      "hidden": false,
+      "label": "Psalm 129",
+      "slug": "psalm_129",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 784",
+        "source": "bcp1979"
+      },
+      "style": "psalm"
+    }
+  ]
+}

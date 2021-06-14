@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "label": "Psalm 46",
+      "slug": "psalm_46",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "a very present help in trouble.",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "God is our refuge and strength, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Therefore we will not fear, though the earth be moved, *",
+              "halfverse": "and though the mountains be toppled into the depths of the sea;",
+              "number": "2"
+            },
+            {
+              "halfverse": "and though the mountains tremble at its tumult.",
+              "number": "3",
+              "verse": "Though its waters rage and foam, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the God of Jacob is our stronghold.",
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "The LORD of hosts is with us; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "There is a river whose streams make glad the city of God, *",
+              "halfverse": "the holy habitation of the Most High."
+            },
+            {
+              "halfverse": "God shall help her at the break of day.",
+              "type": "psalm-verse",
+              "number": "6",
+              "verse": "God is in the midst of her;\nshe shall not be overthrown; *"
+            },
+            {
+              "halfverse": "God has spoken, and the earth shall melt away.",
+              "verse": "The nations make much ado, and the kingdoms are shaken; *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD of hosts is with us; *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "the God of Jacob is our stronghold."
+            },
+            {
+              "number": "9",
+              "verse": "Come now and look upon the works of the LORD, *",
+              "halfverse": "what awesome things he has done on earth.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "It is he who makes war to cease in all the world; *",
+              "halfverse": "he breaks the bow, and shatters the spear,\n and burns the shields with fire.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "11",
+              "type": "psalm-verse",
+              "verse": "“Be still, then, and know that I am God; *",
+              "halfverse": "I will be exalted among the nations;\n I will be exalted in the earth.”"
+            },
+            {
+              "halfverse": "the God of Jacob is our stronghold.",
+              "type": "psalm-verse",
+              "verse": "The LORD of hosts is with us; *",
+              "number": "12"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "latinname": "Deus noster refugium",
+        "omit_antiphon": false,
+        "localname": "Psalm 46",
+        "number": "46",
+        "omit_gloria": false
+      },
+      "category": ["Psalm"],
+      "citation": null,
+      "hidden": false,
+      "version": "bcp1979",
+      "version_label": null,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 649"
+      }
+    }
+  ]
+}

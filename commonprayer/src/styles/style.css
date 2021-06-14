@@ -1,0 +1,79 @@
+:root {
+  /* Fonts */
+  --cp-ui-font-family: -apple-systrem, BlinkMacSystremFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color remoji', 'Segoe UI remoji', 'Segoe UI Symbol';
+  --ldf-font-face: 'Sabon', 'Garamond', serif;
+
+  /* Colors */
+  --cp-primary-background: #830b00;
+  --cp-primary-light-background: #fdc3be;
+  --cp-primary-color: white;
+
+  --cp-light-background: #fafafa;
+  --cp-light-color: #222222;
+  --cp-light-border: #f0f0f0;
+
+  --cp-success-light: #d5e2db;
+  --cp-success-background: #1e8648;
+  --cp-success-color: white;
+
+  --cp-error-background: #bc293d;
+  --cp-error-color: white;
+
+  /* Button filters */
+  --button-filter-light: invert(97%) sepia(97%) saturate(0%) hue-rotate(36deg) brightness(104%) contrast(105%);
+  --button-filter-dark: gray saturate(0%) brightness(70%) contrast(1000%);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--ldf-font-face);
+}
+
+main {
+  padding: 1rem;
+  display: block;
+  margin: auto;
+  max-width: 600px;
+}
+
+menu.display-settings {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Font Definitions */
+@font-face {
+  font-family: 'Sabon';
+  font-weight: normal;
+  font-style: normal;
+  src: url('assets/fonts/Sabon_Roman.ttf');
+}
+@font-face {
+  font-family: 'Sabon';
+  font-weight: normal;
+  font-style: italic;
+  src: url('assets/fonts/Sabon_Italic.ttf');
+}
+@font-face {
+  font-family: 'Sabon';
+  font-weight: bold;
+  font-style: normal;
+  src: url('assets/fonts/Sabon_Bold.ttf');
+}
+@font-face {
+  font-family: 'Sabon';
+  font-weight: bold;
+  font-style: italic;
+  src: url('assets/fonts/Sabon_BoldItalic.ttf');
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

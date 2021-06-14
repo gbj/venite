@@ -1,0 +1,203 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "hidden": false,
+      "slug": "psalm_35",
+      "type": "psalm",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 629"
+      },
+      "version_label": null,
+      "label": "Psalm 35",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "attack those who are attacking me.",
+              "verse": "Fight those who fight me, O LORD; *"
+            },
+            {
+              "verse": "Take up shield and armor *",
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "and rise up to help me."
+            },
+            {
+              "verse": "Draw the sword and bar the way against those who pursue me; *",
+              "halfverse": "say to my soul, “I am your salvation.”",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "verse": "Let those who seek after my life be shamed and humbled; *",
+              "halfverse": "let those who plot my ruin fall back and be dismayed.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and let the angel of the LORD drive them away.",
+              "type": "psalm-verse",
+              "verse": "Let them be like chaff before the wind, *",
+              "number": "5"
+            },
+            {
+              "halfverse": "and let the angel of the LORD pursue them.",
+              "type": "psalm-verse",
+              "verse": "Let their way be dark and slippery, *",
+              "number": "6"
+            },
+            {
+              "halfverse": "without a cause they have dug a pit to take me alive.",
+              "type": "psalm-verse",
+              "verse": "For they have secretly spread a net for me without a cause; *",
+              "number": "7"
+            },
+            {
+              "verse": "Let ruin come upon them unawares; *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "let them be caught in the net they hid;\n let them fall into the pit they dug."
+            },
+            {
+              "verse": "Then I will be joyful in the LORD; *",
+              "halfverse": "I will glory in his victory.",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "You deliver the poor from those who are too strong for them,\n the poor and needy from those who rob them.”",
+              "verse": "My very bones will say, “LORD, who is like you? *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Malicious witnesses rise up against me; *",
+              "number": "11",
+              "halfverse": "they charge me with matters I know nothing about."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They pay me evil in exchange for good; *",
+              "number": "12",
+              "halfverse": "my soul is full of despair."
+            },
+            {
+              "number": "13",
+              "halfverse": "and humbled myself by fasting.",
+              "type": "psalm-verse",
+              "verse": "But when they were sick I dressed in sack-cloth *"
+            },
+            {
+              "number": "14",
+              "halfverse": "I behaved like one who mourns for his mother,\n bowed down and grieving.",
+              "verse": "I prayed with my whole heart,\nas one would for a friend or a brother; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "strangers whom I did not know tore me to pieces and would not stop.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "But when I stumbled, they were glad and gathered together;\nthey gathered against me; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "they gnashed at me with their teeth.",
+              "verse": "They put me to the test and mocked me; *",
+              "number": "16"
+            },
+            {
+              "halfverse": "rescue me from the roaring beasts,\n and my life from the young lions.",
+              "type": "psalm-verse",
+              "verse": "O Lord, how long will you look on? *",
+              "number": "17"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I will praise you in the mighty throng.",
+              "verse": "I will give you thanks in the great congregation; *",
+              "number": "18"
+            },
+            {
+              "number": "19",
+              "type": "psalm-verse",
+              "halfverse": "nor let those who hate me without a cause wink at each other.",
+              "verse": "Do not let my treacherous foes rejoice over me, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For they do not plan for peace, *",
+              "halfverse": "but invent deceitful schemes against the quiet in the land.",
+              "number": "20"
+            },
+            {
+              "number": "21",
+              "type": "psalm-verse",
+              "halfverse": "“Aha! we saw it with our own eyes.”",
+              "verse": "They opened their mouths at me and said, *"
+            },
+            {
+              "halfverse": "O Lord, be not far from me.",
+              "type": "psalm-verse",
+              "number": "22",
+              "verse": "You saw it, O LORD; do not be silent; *"
+            },
+            {
+              "verse": "Awake, arise, to my cause! *",
+              "number": "23",
+              "halfverse": "to my defense, my God and my Lord!",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Give me justice, O LORD my God,\naccording to your righteousness; *",
+              "halfverse": "do not let them triumph over me.",
+              "number": "24"
+            },
+            {
+              "number": "25",
+              "halfverse": "Do not let them say, “We have swallowed him up.”",
+              "type": "psalm-verse",
+              "verse": "Do not let them say in their hearts,\n“Aha! just what we want!” *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "26",
+              "halfverse": "let those who boast against me be clothed with dismay and shame.",
+              "verse": "Let all who rejoice at my ruin be ashamed and disgraced; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let those who favor my cause sing out with joy and be glad; *",
+              "halfverse": "let them say always, “Great is the LORD,\n who desires the prosperity of his servant.”",
+              "number": "27"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and of your praise all the day long.",
+              "number": "28",
+              "verse": "And my tongue shall be talking of your righteousness *"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "latinname": "Judica, Domine",
+        "number": "35",
+        "omit_gloria": false,
+        "localname": "Psalm 35",
+        "omit_antiphon": false
+      },
+      "language": "en",
+      "version": "bcp1979"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "slug": "psalm_5",
+      "style": "psalm",
+      "label": "Psalm 5",
+      "citation": null,
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "consider my meditation.",
+              "verse": "Give ear to my words, O LORD; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for I make my prayer to you.",
+              "verse": "Hearken to my cry for help, my King and my God, *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "halfverse": "early in the morning I make my appeal and watch for you.",
+              "type": "psalm-verse",
+              "verse": "In the morning, LORD, you hear my voice; *"
+            },
+            {
+              "number": "4",
+              "verse": "For you are not a God who takes pleasure in wickedness, *",
+              "halfverse": "and evil cannot dwell with you.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you hate all those who work wickedness.",
+              "verse": "Braggarts cannot stand in your sight; *",
+              "type": "psalm-verse",
+              "number": "5"
+            },
+            {
+              "halfverse": "the bloodthirsty and deceitful, O LORD, you abhor.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "You destroy those who speak lies; *"
+            },
+            {
+              "verse": "But as for me, through the greatness of your mercy I will go into your house; *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "I will bow down toward your holy temple in awe of you."
+            },
+            {
+              "halfverse": "make your way straight before me.",
+              "type": "psalm-verse",
+              "number": "8",
+              "verse": "Lead me, O LORD, in your righteousness,\nbecause of those who lie in wait for me; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "there is destruction in their heart;",
+              "verse": "For there is no truth in their mouth; *",
+              "number": "9"
+            },
+            {
+              "halfverse": "they flatter with their tongue.",
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "Their throat is an open grave; *"
+            },
+            {
+              "halfverse": "let them fall, because of their schemes.",
+              "number": "11",
+              "verse": "Declare them guilty, O God; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for they have rebelled against you.",
+              "number": "12",
+              "verse": "Because of their many transgressions cast them out, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they will sing out their joy for ever.",
+              "number": "13",
+              "verse": "But all who take refuge in you will be glad; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You will shelter them, *",
+              "halfverse": "so that those who love your Name may exult in you.",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you will defend them with your favor as with a shield.",
+              "verse": "For you, O LORD, will bless the righteous; *",
+              "number": "15"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "type": "psalm",
+      "language": "en",
+      "metadata": {
+        "omit_gloria": false,
+        "number": "5",
+        "latinname": "Verba mea auribus",
+        "localname": "Psalm 5",
+        "omit_antiphon": false
+      },
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 588"
+      },
+      "version_label": null,
+      "version": "bcp1979"
+    }
+  ]
+}

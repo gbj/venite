@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 589",
+        "api": "https://www.venite.app/api"
+      },
+      "category": ["Psalm"],
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "LORD, do not rebuke me in your anger; *",
+              "type": "psalm-verse",
+              "halfverse": "do not punish me in your wrath.",
+              "number": "1"
+            },
+            {
+              "verse": "Have pity on me, LORD, for I am weak; *",
+              "number": "2",
+              "halfverse": "heal me, LORD, for my bones are racked.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "halfverse": "how long, O LORD, how long?",
+              "type": "psalm-verse",
+              "verse": "My spirit shakes with terror; *"
+            },
+            {
+              "halfverse": "save me for your mercy’s sake.",
+              "verse": "Turn, O LORD, and deliver me; *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For in death no one remembers you; *",
+              "halfverse": "and who will give you thanks in the grave?",
+              "number": "5"
+            },
+            {
+              "verse": "I grow weary because of my groaning; *",
+              "halfverse": "every night I drench my bed\n and flood my couch with tears.",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "halfverse": "and worn away because of all my enemies.",
+              "type": "psalm-verse",
+              "verse": "My eyes are wasted with grief *"
+            },
+            {
+              "number": "8",
+              "type": "psalm-verse",
+              "verse": "Depart from me, all evildoers, *",
+              "halfverse": "for the LORD has heard the sound of my weeping."
+            },
+            {
+              "number": "9",
+              "halfverse": "the LORD accepts my prayer.",
+              "verse": "The LORD has heard my supplication; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "All my enemies shall be confounded and quake with fear; *",
+              "type": "psalm-verse",
+              "halfverse": "they shall turn back and suddenly be put to shame.",
+              "number": "10"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "label": "Psalm 6",
+      "slug": "psalm_6",
+      "language": "en",
+      "citation": null,
+      "hidden": false,
+      "metadata": {
+        "latinname": "Domine, ne in furore",
+        "omit_gloria": false,
+        "number": "6",
+        "omit_antiphon": false,
+        "localname": "Psalm 6"
+      },
+      "version": "bcp1979",
+      "type": "psalm",
+      "style": "psalm"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "label": "Psalm 72",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 685",
+        "api": "https://www.venite.app/api"
+      },
+      "hidden": false,
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Give the King your justice, O God, *",
+              "halfverse": "and your righteousness to the King’s son;",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "and the poor with justice.",
+              "verse": "That he may rule your people righteously *",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the little hills bring righteousness.",
+              "number": "3",
+              "type": "psalm-verse",
+              "verse": "That the mountains may bring prosperity to the people, *"
+            },
+            {
+              "halfverse": "he shall rescue the poor and crush the oppressor.",
+              "number": "4",
+              "verse": "He shall defend the needy among the people; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "from one generation to another.",
+              "verse": "He shall live as long as the sun and moon endure, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "like showers that water the earth.",
+              "verse": "He shall come down like rain upon the mown field, *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "verse": "In his time shall the righteous flourish; *",
+              "halfverse": "there shall be abundance of peace till the moon shall be no more."
+            },
+            {
+              "number": "8",
+              "verse": "He shall rule from sea to sea, *",
+              "halfverse": "and from the River to the ends of the earth.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "His foes shall bow down before him, *",
+              "number": "9",
+              "halfverse": "and his enemies lick the dust.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The kings of Tarshish and of the isles shall pay tribute, *",
+              "type": "psalm-verse",
+              "halfverse": "and the kings of Arabia and Saba offer gifts.",
+              "number": "10"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "and all the nations do him service.",
+              "verse": "All kings shall bow down before him, *"
+            },
+            {
+              "verse": "For he shall deliver the poor who cries out in distress, *",
+              "type": "psalm-verse",
+              "number": "12",
+              "halfverse": "and the oppressed who has no helper."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He shall have pity on the lowly and poor; *",
+              "halfverse": "he shall preserve the lives of the needy.",
+              "number": "13"
+            },
+            {
+              "verse": "He shall redeem their lives from oppression and violence, *",
+              "halfverse": "and dear shall their blood be in his sight.",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "15",
+              "halfverse": "may prayer be made for him always,\n and may they bless him all the day long.",
+              "verse": "Long may he live!\nand may there be given to him gold from Arabia; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "May there be abundance of grain on the earth,\ngrowing thick even on the hilltops; *",
+              "halfverse": "may its fruit flourish like Lebanon,\n and its grain like grass upon the earth.",
+              "number": "16"
+            },
+            {
+              "verse": "May his Name remain for ever\nand be established as long as the sun endures; *",
+              "type": "psalm-verse",
+              "halfverse": "may all the nations bless themselves in him and call him blessed.",
+              "number": "17"
+            },
+            {
+              "verse": "Blessed be the Lord GOD, the God of Israel, *",
+              "type": "psalm-verse",
+              "halfverse": "who alone does wondrous deeds!",
+              "number": "18"
+            },
+            {
+              "verse": "And blessed be his glorious Name for ever! *",
+              "halfverse": "and may all the earth be filled with his glory. Amen. Amen.",
+              "number": "19",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "number": "72",
+        "latinname": "Deus, judicium",
+        "omit_gloria": false,
+        "localname": "Psalm 72",
+        "omit_antiphon": false
+      },
+      "slug": "psalm_72",
+      "category": ["Psalm"],
+      "version_label": null,
+      "version": "bcp1979",
+      "type": "psalm"
+    }
+  ]
+}

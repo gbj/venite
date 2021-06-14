@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "language": "en",
+      "metadata": {
+        "number": "119",
+        "omit_gloria": false,
+        "latinname": "Manus tuae fecerunt me",
+        "omit_antiphon": false,
+        "localname": "Psalm 119: Yodh"
+      },
+      "source": {
+        "citation": "p. 769",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "citation": null,
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "give me understanding, that I may learn your commandments.",
+              "type": "psalm-verse",
+              "verse": "Your hands have made me and fashioned me; *",
+              "number": "73"
+            },
+            {
+              "halfverse": "because I trust in your word.",
+              "verse": "Those who fear you will be glad when they see me, *",
+              "type": "psalm-verse",
+              "number": "74"
+            },
+            {
+              "verse": "I know, O LORD, that your judgments are right *",
+              "halfverse": "and that in faithfulness you have afflicted me.",
+              "number": "75",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let your loving-kindness be my comfort, *",
+              "number": "76",
+              "halfverse": "as you have promised to your servant.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "77",
+              "halfverse": "for your law is my delight.",
+              "type": "psalm-verse",
+              "verse": "Let your compassion come to me, that I may live, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but I will meditate on your commandments.",
+              "verse": "Let the arrogant be put to shame, for they wrong me with lies; *",
+              "number": "78"
+            },
+            {
+              "number": "79",
+              "type": "psalm-verse",
+              "verse": "Let those who fear you turn to me, *",
+              "halfverse": "and also those who know your decrees."
+            },
+            {
+              "number": "80",
+              "halfverse": "that I may not be put to shame.",
+              "type": "psalm-verse",
+              "verse": "Let my heart be sound in your statutes, *"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "version": "bcp1979",
+      "slug": "psalm_119_yodh",
+      "label": "Psalm 119: Yodh"
+    }
+  ]
+}

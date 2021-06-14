@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "slug": "psalm_138",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "before the gods I will sing your praise.",
+              "verse": "I will give thanks to you, O LORD, with my whole heart; *",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will bow down toward your holy temple\nand praise your Name, *",
+              "halfverse": "because of your love and faithfulness;",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your word above all things.",
+              "verse": "For you have glorified your Name *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "When I called, you answered me; *",
+              "halfverse": "you increased my strength within me.",
+              "number": "4"
+            },
+            {
+              "verse": "All the kings of the earth will praise you, O LORD, *",
+              "halfverse": "when they have heard the words of your mouth.",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "verse": "They will sing of the ways of the LORD, *",
+              "halfverse": "that great is the glory of the LORD.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Though the LORD be high, he cares for the lowly; *",
+              "number": "7",
+              "halfverse": "he perceives the haughty from afar."
+            },
+            {
+              "verse": "Though I walk in the midst of trouble, you keep me safe; *",
+              "type": "psalm-verse",
+              "halfverse": "you stretch forth your hand against the fury of my enemies;\n your right hand shall save me.",
+              "number": "8"
+            },
+            {
+              "verse": "The LORD will make good his purpose for me; *",
+              "type": "psalm-verse",
+              "halfverse": "O LORD, your love endures for ever;\n do not abandon the works of your hands.",
+              "number": "9"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "hidden": false,
+      "source": {
+        "citation": "p. 793",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "138",
+        "omit_gloria": false,
+        "latinname": "Confitebor tibi",
+        "localname": "Psalm 138"
+      },
+      "type": "psalm",
+      "language": "en",
+      "version_label": null,
+      "version": "bcp1979",
+      "citation": null,
+      "label": "Psalm 138",
+      "category": ["Psalm"]
+    }
+  ]
+}

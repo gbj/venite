@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "metadata": {
+        "number": "53",
+        "omit_antiphon": false,
+        "localname": "Psalm 53",
+        "latinname": "Dixit insipiens",
+        "omit_gloria": false
+      },
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "All are corrupt and commit abominable acts;\n there is none who does any good.",
+              "verse": "The fool has said in his heart, “There is no God.” *",
+              "number": "1"
+            },
+            {
+              "halfverse": "to see if there is any who is wise,\n if there is one who seeks after God.",
+              "number": "2",
+              "verse": "God looks down from heaven upon us all, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "there is none who does good; no, not one.",
+              "verse": "Every one has proved faithless;\nall alike have turned bad; *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "who eat up my people like bread\n and do not call upon God?",
+              "verse": "Have they no knowledge, those evildoers *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "halfverse": "for God has scattered the bones of the enemy;\n they are put to shame, because God has rejected them.",
+              "type": "psalm-verse",
+              "verse": "See how greatly they tremble,\nsuch trembling as never was; *",
+              "number": "5"
+            },
+            {
+              "halfverse": "when God restores the fortunes of his people\n Jacob will rejoice and Israel be glad.",
+              "number": "6",
+              "verse": "Oh, that Israel’s deliverance would come out of Zion! *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 658"
+      },
+      "version": "bcp1979",
+      "label": "Psalm 53",
+      "slug": "psalm_53",
+      "language": "en",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "hidden": false,
+      "style": "psalm"
+    }
+  ]
+}

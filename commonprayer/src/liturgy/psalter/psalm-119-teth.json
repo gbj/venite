@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "source": {
+        "citation": "p. 768",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "version_label": null,
+      "hidden": false,
+      "slug": "psalm_119_teth",
+      "type": "psalm",
+      "label": "Psalm 119: Teth",
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Bonitatem fecisti",
+        "localname": "Psalm 119: Teth",
+        "omit_gloria": false,
+        "number": "119"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "O LORD, you have dealt graciously with your servant, *",
+              "type": "psalm-verse",
+              "halfverse": "according to your word.",
+              "number": "65"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "66",
+              "halfverse": "for I have believed in your commandments.",
+              "verse": "Teach me discernment and knowledge, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Before I was afflicted I went astray, *",
+              "number": "67",
+              "halfverse": "but now I keep your word."
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "type": "psalm-verse",
+              "verse": "You are good and you bring forth good; *",
+              "number": "68"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The proud have smeared me with lies, *",
+              "number": "69",
+              "halfverse": "but I will keep your commandments with my whole heart."
+            },
+            {
+              "number": "70",
+              "halfverse": "but my delight is in your law.",
+              "verse": "Their heart is gross and fat, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "71",
+              "halfverse": "that I might learn your statutes.",
+              "verse": "It is good for me that I have been afflicted, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "72",
+              "type": "psalm-verse",
+              "halfverse": "than thousands in gold and silver.",
+              "verse": "The law of your mouth is dearer to me *"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "citation": null,
+      "language": "en",
+      "style": "psalm"
+    }
+  ]
+}

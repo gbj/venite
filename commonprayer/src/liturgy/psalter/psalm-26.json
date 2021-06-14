@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "I have trusted in the Lord and have not faltered.",
+              "number": "1",
+              "verse": "Give judgment for me, O LORD,\nfor I have lived with integrity; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "examine my heart and my mind.",
+              "type": "psalm-verse",
+              "verse": "Test me, O LORD, and try me; *",
+              "number": "2"
+            },
+            {
+              "verse": "For your love is before my eyes; *",
+              "type": "psalm-verse",
+              "number": "3",
+              "halfverse": "I have walked faithfully with you."
+            },
+            {
+              "verse": "I have not sat with the worthless, *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "nor do I consort with the deceitful."
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "I have hated the company of evildoers; *",
+              "halfverse": "I will not sit down with the wicked."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "I will wash my hands in innocence, O LORD, *",
+              "number": "6",
+              "halfverse": "that I may go in procession round your altar,"
+            },
+            {
+              "number": "7",
+              "verse": "Singing aloud a song of thanksgiving *",
+              "halfverse": "and recounting all your wonderful deeds.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and the place where your glory abides.",
+              "number": "8",
+              "verse": "LORD, I love the house in which you dwell *"
+            },
+            {
+              "halfverse": "nor my life with those who thirst for blood,",
+              "verse": "Do not sweep me away with sinners, *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "10",
+              "verse": "Whose hands are full of evil plots, *",
+              "halfverse": "and their right hand full of bribes.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "As for me, I will live with integrity; *",
+              "number": "11",
+              "halfverse": "redeem me, O LORD, and have pity on me.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "in the full assembly I will bless the LORD.",
+              "number": "12",
+              "verse": "My foot stands on level ground; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "metadata": {
+        "latinname": "Judica me, Domine",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "26",
+        "localname": "Psalm 26"
+      },
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "citation": null,
+      "source": {
+        "citation": "p. 616",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "language": "en",
+      "label": "Psalm 26",
+      "slug": "psalm_26",
+      "version_label": null
+    }
+  ]
+}

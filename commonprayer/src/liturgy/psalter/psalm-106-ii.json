@@ -1,0 +1,215 @@
+{
+  "data": [
+    {
+      "slug": "psalm_106_ii",
+      "category": ["Psalm"],
+      "citation": null,
+      "version_label": null,
+      "type": "psalm",
+      "label": "Psalm 106: Part II",
+      "language": "en",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "and worshiped a molten image;",
+              "verse": "Israel made a bull-calf at Horeb *",
+              "number": "19"
+            },
+            {
+              "number": "20",
+              "verse": "And so they exchanged their Glory *",
+              "halfverse": "for the image of an ox that feeds on grass.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "who had done great things in Egypt,",
+              "verse": "They forgot God their Savior, *",
+              "type": "psalm-verse",
+              "number": "21"
+            },
+            {
+              "verse": "Wonderful deeds in the land of Ham, *",
+              "number": "22",
+              "halfverse": "and fearful things at the Red Sea.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "So he would have destroyed them,\nhad not Moses his chosen stood before him in the breach, *",
+              "number": "23",
+              "halfverse": "to turn away his wrath from consuming them.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They refused the pleasant land *",
+              "type": "psalm-verse",
+              "number": "24",
+              "halfverse": "and would not believe his promise."
+            },
+            {
+              "halfverse": "and would not listen to the voice of the LORD.",
+              "verse": "They grumbled in their tents *",
+              "number": "25",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "to overthrow them in the wilderness,",
+              "verse": "So he lifted his hand against them, *",
+              "number": "26",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "To cast out their seed among the nations, *",
+              "halfverse": "and to scatter them throughout the lands.",
+              "number": "27"
+            },
+            {
+              "halfverse": "and ate sacrifices offered to the dead.",
+              "type": "psalm-verse",
+              "verse": "They joined themselves to Baal-Peor *",
+              "number": "28"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They provoked him to anger with their actions, *",
+              "number": "29",
+              "halfverse": "and a plague broke out among them."
+            },
+            {
+              "number": "30",
+              "type": "psalm-verse",
+              "verse": "Then Phinehas stood up and interceded, *",
+              "halfverse": "and the plague came to an end."
+            },
+            {
+              "halfverse": "throughout all generations for ever.",
+              "verse": "This was reckoned to him as righteousness *",
+              "number": "31",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "so that he punished Moses because of them;",
+              "verse": "Again they provoked his anger at the waters of Meribah, *",
+              "number": "32",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For they so embittered his spirit *",
+              "number": "33",
+              "halfverse": "that he spoke rash words with his lips."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They did not destroy the peoples *",
+              "number": "34",
+              "halfverse": "as the LORD had commanded them."
+            },
+            {
+              "halfverse": "and learned their pagan ways,",
+              "number": "35",
+              "verse": "They intermingled with the heathen *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "which became a snare to them.",
+              "type": "psalm-verse",
+              "number": "36",
+              "verse": "So that they worshiped their idols, *"
+            },
+            {
+              "number": "37",
+              "type": "psalm-verse",
+              "halfverse": "and their daughters to evil spirits.",
+              "verse": "They sacrificed their sons *"
+            },
+            {
+              "verse": "They shed innocent blood,\nthe blood of their sons and daughters, *",
+              "halfverse": "which they offered to the idols of Canaan,\n and the land was defiled with blood.",
+              "number": "38",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and went whoring in their evil deeds.",
+              "type": "psalm-verse",
+              "verse": "Thus they were polluted by their actions *",
+              "number": "39"
+            },
+            {
+              "verse": "Therefore the wrath of the LORD was kindled against his people *",
+              "halfverse": "and he abhorred his inheritance.",
+              "number": "40",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He gave them over to the hand of the heathen, *",
+              "number": "41",
+              "type": "psalm-verse",
+              "halfverse": "and those who hated them ruled over them."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Their enemies oppressed them, *",
+              "halfverse": "and they were humbled under their hand.",
+              "number": "42"
+            },
+            {
+              "number": "43",
+              "type": "psalm-verse",
+              "halfverse": "and were brought down in their iniquity.",
+              "verse": "Many a time did he deliver them,\nbut they rebelled through their own devices, *"
+            },
+            {
+              "halfverse": "when he heard their lamentation.",
+              "type": "psalm-verse",
+              "verse": "Nevertheless, he saw their distress, *",
+              "number": "44"
+            },
+            {
+              "verse": "He remembered his covenant with them *",
+              "halfverse": "and relented in accordance with his great mercy.",
+              "number": "45",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "46",
+              "type": "psalm-verse",
+              "verse": "He caused them to be pitied *",
+              "halfverse": "by those who held them captive."
+            },
+            {
+              "halfverse": "that we may give thanks to your holy Name\n and glory in your praise.",
+              "number": "47",
+              "type": "psalm-verse",
+              "verse": "Save us, O LORD our God,\nand gather us from among the nations, *"
+            },
+            {
+              "verse": "Blessed be the LORD, the God of Israel,\nfrom everlasting to everlasting; *",
+              "halfverse": "and let all the people say, “Amen!”\n Hallelujah!",
+              "number": "48",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 106: Part II",
+        "number": "106",
+        "latinname": "Et fecerunt vitulum"
+      },
+      "version": "bcp1979",
+      "style": "psalm",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 743"
+      },
+      "hidden": false
+    }
+  ]
+}

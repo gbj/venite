@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "version_label": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "The heavens declare the glory of God, *",
+              "halfverse": "and the firmament shows his handiwork.",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "verse": "One day tells its tale to another, *",
+              "number": "2",
+              "halfverse": "and one night imparts knowledge to another.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Although they have no words or language, *",
+              "type": "psalm-verse",
+              "halfverse": "and their voices are not heard,",
+              "number": "3"
+            },
+            {
+              "halfverse": "and their message to the ends of the world.",
+              "verse": "Their sound has gone out into all lands, *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "halfverse": "it comes forth like a bridegroom out of his chamber;\n it rejoices like a champion to run its course.",
+              "verse": "In the deep has he set a pavilion for the sun; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "nothing is hidden from its burning heat.",
+              "verse": "It goes forth from the uttermost edge of the heavens\nand runs about to the end of it again; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "the testimony of the LORD is sure and gives wisdom to the innocent.",
+              "verse": "The law of the LORD is perfect and revives the soul; *"
+            },
+            {
+              "halfverse": "the commandment of the LORD is clear and gives light to the eyes.",
+              "verse": "The statutes of the LORD are just and rejoice the heart; *",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "9",
+              "halfverse": "the judgments of the LORD are true and righteous altogether.",
+              "type": "psalm-verse",
+              "verse": "The fear of the LORD is clean and endures for ever; *"
+            },
+            {
+              "verse": "More to be desired are they than gold, more than much fine gold, *",
+              "halfverse": "sweeter far than honey, than honey in the comb.",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "By them also is your servant enlightened, *",
+              "type": "psalm-verse",
+              "number": "11",
+              "halfverse": "and in keeping them there is great reward."
+            },
+            {
+              "verse": "Who can tell how often he offends? *",
+              "type": "psalm-verse",
+              "halfverse": "cleanse me from my secret faults.",
+              "number": "12"
+            },
+            {
+              "number": "13",
+              "halfverse": "then shall I be whole and sound,\n and innocent of a great offense.",
+              "verse": "Above all, keep your servant from presumptuous sins;\nlet them not get dominion over me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "O LORD, my strength and my redeemer.",
+              "number": "14",
+              "verse": "Let the words of my mouth and the meditation of my heart be acceptable in your sight, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "citation": null,
+      "version": "bcp1979",
+      "type": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "number": "19",
+        "latinname": "Caeli enarrant",
+        "omit_antiphon": false,
+        "localname": "Psalm 19"
+      },
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 606"
+      },
+      "slug": "psalm_19",
+      "label": "Psalm 19",
+      "style": "psalm",
+      "language": "en"
+    }
+  ]
+}

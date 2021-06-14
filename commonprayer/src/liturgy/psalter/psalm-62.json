@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "hidden": false,
+      "language": "en",
+      "version_label": null,
+      "slug": "psalm_62",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "For God alone my soul in silence waits; *",
+              "halfverse": "from him comes my salvation."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "my stronghold, so that I shall not be greatly shaken.",
+              "number": "2",
+              "verse": "He alone is my rock and my salvation, *"
+            },
+            {
+              "halfverse": "as if you were a leaning fence, a toppling wall?",
+              "number": "3",
+              "verse": "How long will you assail me to crush me,\nall of you together, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "lies are their chief delight.",
+              "verse": "They seek only to bring me down from my place of honor; *",
+              "type": "psalm-verse",
+              "number": "4"
+            },
+            {
+              "halfverse": "but in their hearts they curse.",
+              "type": "psalm-verse",
+              "verse": "They bless with their lips, *",
+              "number": "5"
+            },
+            {
+              "halfverse": "truly, my hope is in him.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "For God alone my soul in silence waits; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "7",
+              "halfverse": "my stronghold, so that I shall not be shaken.",
+              "verse": "He alone is my rock and my salvation, *"
+            },
+            {
+              "verse": "In God is my safety and my honor; *",
+              "halfverse": "God is my strong rock and my refuge.",
+              "type": "psalm-verse",
+              "number": "8"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "pour out your hearts before him, for God is our refuge.",
+              "verse": "Put your trust in him always, O people, *",
+              "number": "9"
+            },
+            {
+              "verse": "Those of high degree are but a fleeting breath, *",
+              "number": "10",
+              "type": "psalm-verse",
+              "halfverse": "even those of low estate cannot be trusted."
+            },
+            {
+              "number": "11",
+              "verse": "On the scales they are lighter than a breath, *",
+              "type": "psalm-verse",
+              "halfverse": "all of them together."
+            },
+            {
+              "halfverse": "though wealth increase, set not your heart upon it.",
+              "verse": "Put no trust in extortion;\nin robbery take no empty pride; *",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "that power belongs to God.",
+              "verse": "God has spoken once, twice have I heard it, *",
+              "number": "13"
+            },
+            {
+              "halfverse": "for you repay everyone according to his deeds.",
+              "verse": "Steadfast love is yours, O Lord, *",
+              "number": "14",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "style": "psalm",
+      "metadata": {
+        "number": "62",
+        "localname": "Psalm 62",
+        "omit_antiphon": false,
+        "latinname": "Nonne Deo?",
+        "omit_gloria": false
+      },
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 669"
+      },
+      "label": "Psalm 62"
+    }
+  ]
+}

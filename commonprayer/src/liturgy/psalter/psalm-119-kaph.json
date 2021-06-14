@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "label": "Psalm 119: Kaph",
+      "slug": "psalm_119_kaph",
+      "metadata": {
+        "localname": "Psalm 119: Kaph",
+        "number": "119",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "latinname": "Defecit in salutare"
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "81",
+              "halfverse": "I have put my hope in your word.",
+              "type": "psalm-verse",
+              "verse": "My soul has longed for your salvation; *"
+            },
+            {
+              "verse": "My eyes have failed from watching for your promise, *",
+              "type": "psalm-verse",
+              "number": "82",
+              "halfverse": "and I say, “When will you comfort me?”"
+            },
+            {
+              "halfverse": "but I have not forgotten your statutes.",
+              "type": "psalm-verse",
+              "verse": "I have become like a leather flask in the smoke, *",
+              "number": "83"
+            },
+            {
+              "verse": "How much longer must I wait? *",
+              "halfverse": "when will you give judgment against those who persecute me?",
+              "number": "84",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "85",
+              "verse": "The proud have dug pits for me; *",
+              "type": "psalm-verse",
+              "halfverse": "they do not keep your law."
+            },
+            {
+              "halfverse": "help me, for they persecute me with lies.",
+              "number": "86",
+              "verse": "All your commandments are true; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They had almost made an end of me on earth, *",
+              "number": "87",
+              "type": "psalm-verse",
+              "halfverse": "but I have not forsaken your commandments."
+            },
+            {
+              "verse": "In your loving-kindness, revive me, *",
+              "type": "psalm-verse",
+              "halfverse": "that I may keep the decrees of your mouth.",
+              "number": "88"
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "version_label": null,
+      "type": "psalm",
+      "version": "bcp1979",
+      "citation": null,
+      "source": {
+        "citation": "p. 770",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "style": "psalm",
+      "hidden": false
+    }
+  ]
+}

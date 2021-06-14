@@ -1,0 +1,155 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "hidden": false,
+      "language": "en",
+      "style": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 656"
+      },
+      "version": "bcp1979",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Have mercy on me, O God, according to your loving-kindness; *",
+              "type": "psalm-verse",
+              "halfverse": "in your great compassion blot out my offenses.",
+              "number": "1"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and cleanse me from my sin.",
+              "number": "2",
+              "verse": "Wash me through and through from my wickedness *"
+            },
+            {
+              "verse": "For I know my transgressions, *",
+              "type": "psalm-verse",
+              "number": "3",
+              "halfverse": "and my sin is ever before me."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and done what is evil in your sight.",
+              "verse": "Against you only have I sinned *",
+              "number": "4"
+            },
+            {
+              "verse": "And so you are justified when you speak *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "and upright in your judgment."
+            },
+            {
+              "verse": "Indeed, I have been wicked from my birth, *",
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "a sinner from my mother’s womb."
+            },
+            {
+              "verse": "For behold, you look for truth deep within me, *",
+              "number": "7",
+              "halfverse": "and will make me understand wisdom secretly.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "wash me, and I shall be clean indeed.",
+              "verse": "Purge me from my sin, and I shall be pure; *",
+              "type": "psalm-verse",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "halfverse": "that the body you have broken may rejoice.",
+              "verse": "Make me hear of joy and gladness, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and blot out all my iniquities.",
+              "type": "psalm-verse",
+              "verse": "Hide your face from my sins *",
+              "number": "10"
+            },
+            {
+              "halfverse": "and renew a right spirit within me.",
+              "type": "psalm-verse",
+              "verse": "Create in me a clean heart, O God, *",
+              "number": "11"
+            },
+            {
+              "halfverse": "and take not your holy Spirit from me.",
+              "verse": "Cast me not away from your presence *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Give me the joy of your saving help again *",
+              "type": "psalm-verse",
+              "number": "13",
+              "halfverse": "and sustain me with your bountiful Spirit."
+            },
+            {
+              "number": "14",
+              "verse": "I shall teach your ways to the wicked, *",
+              "type": "psalm-verse",
+              "halfverse": "and sinners shall return to you."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Deliver me from death, O God, *",
+              "number": "15",
+              "halfverse": "and my tongue shall sing of your righteousness,\n O God of my salvation."
+            },
+            {
+              "number": "16",
+              "verse": "Open my lips, O Lord, *",
+              "halfverse": "and my mouth shall proclaim your praise.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but you take no delight in burnt-offerings.",
+              "verse": "Had you desired it, I would have offered sacrifice, *",
+              "number": "17"
+            },
+            {
+              "verse": "The sacrifice of God is a troubled spirit; *",
+              "number": "18",
+              "halfverse": "a broken and contrite heart, O God, you will not despise.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Be favorable and gracious to Zion, *",
+              "number": "19",
+              "halfverse": "and rebuild the walls of Jerusalem."
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "halfverse": "then shall they offer young bullocks upon your altar.",
+              "verse": "Then you will be pleased with the appointed sacrifices,\nwith burnt-offerings and oblations; *"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "label": "Psalm 51",
+      "version_label": null,
+      "metadata": {
+        "latinname": "Miserere mei, Deus",
+        "localname": "Psalm 51",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "51"
+      },
+      "slug": "psalm_51"
+    }
+  ]
+}

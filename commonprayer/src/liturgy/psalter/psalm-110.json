@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "label": "Psalm 110",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "until I make your enemies your footstool.”",
+              "verse": "The LORD said to my Lord, “Sit at my right hand, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "saying, “Rule over your enemies round about you.",
+              "verse": "The LORD will send the scepter of your power out of Zion, *"
+            },
+            {
+              "verse": "Princely state has been yours from the day of your birth; *",
+              "number": "3",
+              "halfverse": "in the beauty of holiness have I begotten you,\n like dew from the womb of the morning.”",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "“You are a priest for ever after the order of Melchizedek.”",
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "The LORD has sworn and he will not recant: *"
+            },
+            {
+              "verse": "The Lord who is at your right hand\nwill smite kings in the day of his wrath; *",
+              "number": "5",
+              "halfverse": "he will rule over the nations.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "he will smash heads over the wide earth.",
+              "type": "psalm-verse",
+              "verse": "He will heap high the corpses; *"
+            },
+            {
+              "number": "7",
+              "halfverse": "therefore he will lift high his head.",
+              "type": "psalm-verse",
+              "verse": "He will drink from the brook beside the road; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "slug": "psalm_110",
+      "language": "en",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 753",
+        "source": "bcp1979"
+      },
+      "category": ["Psalm"],
+      "hidden": false,
+      "citation": null,
+      "metadata": {
+        "latinname": "Dixit Dominus",
+        "localname": "Psalm 110",
+        "number": "110",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "type": "psalm",
+      "version": "bcp1979"
+    }
+  ]
+}

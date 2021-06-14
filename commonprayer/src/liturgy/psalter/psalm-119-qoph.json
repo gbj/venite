@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "label": "Psalm 119: Qoph",
+      "slug": "psalm_119_qoph",
+      "language": "en",
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "119",
+        "localname": "Psalm 119: Qoph",
+        "omit_gloria": false,
+        "latinname": "Clamavi in toto corde meo"
+      },
+      "hidden": false,
+      "type": "psalm",
+      "version": "bcp1979",
+      "source": {
+        "citation": "p. 775",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "number": "145",
+              "verse": "I call with my whole heart; *",
+              "halfverse": "answer me, O LORD, that I may keep your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I will keep your decrees.",
+              "number": "146",
+              "verse": "I call to you;\noh, that you would save me! *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "147",
+              "halfverse": "for in your word is my trust.",
+              "type": "psalm-verse",
+              "verse": "Early in the morning I cry out to you, *"
+            },
+            {
+              "verse": "My eyes are open in the night watches, *",
+              "type": "psalm-verse",
+              "number": "148",
+              "halfverse": "that I may meditate upon your promise."
+            },
+            {
+              "number": "149",
+              "type": "psalm-verse",
+              "verse": "Hear my voice, O LORD, according to your loving-kindness; *",
+              "halfverse": "according to your judgments, give me life."
+            },
+            {
+              "verse": "They draw near who in malice persecute me; *",
+              "number": "150",
+              "type": "psalm-verse",
+              "halfverse": "they are very far from your law."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You, O LORD, are near at hand, *",
+              "number": "151",
+              "halfverse": "and all your commandments are true."
+            },
+            {
+              "halfverse": "that you have established them for ever.",
+              "number": "152",
+              "verse": "Long have I known from your decrees *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Psalm"],
+      "version_label": null,
+      "style": "psalm",
+      "citation": null
+    }
+  ]
+}

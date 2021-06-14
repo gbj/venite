@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "label": "Psalm 70",
+      "citation": null,
+      "version": "bcp1979",
+      "type": "psalm",
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "70",
+        "latinname": "Deus, in adjutorium",
+        "localname": "Psalm 70"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "O LORD, make haste to help me.",
+              "verse": "Be pleased, O God, to deliver me; *",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "let those who take pleasure in my misfortune\n draw back and be disgraced.",
+              "number": "2",
+              "verse": "Let those who seek my life be ashamed\nand altogether dismayed; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "because they are ashamed.",
+              "verse": "Let those who say to me “Aha!” and gloat over me turn back, *",
+              "number": "3"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let all who seek you rejoice and be glad in you; *",
+              "halfverse": "let those who love your salvation say for ever,\n “Great is the LORD!”",
+              "number": "4"
+            },
+            {
+              "halfverse": "come to me speedily, O God.",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "But as for me, I am poor and needy; *"
+            },
+            {
+              "verse": "You are my helper and my deliverer; *",
+              "number": "6",
+              "halfverse": "O LORD, do not tarry.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "slug": "psalm_70",
+      "hidden": false,
+      "version_label": null,
+      "source": {
+        "citation": "p. 682",
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api"
+      },
+      "language": "en",
+      "style": "psalm"
+    }
+  ]
+}

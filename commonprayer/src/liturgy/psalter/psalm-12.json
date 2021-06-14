@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "type": "psalm",
+      "citation": null,
+      "language": "en",
+      "slug": "psalm_12",
+      "metadata": {
+        "number": "12",
+        "latinname": "Salvum me fac",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Psalm 12"
+      },
+      "label": "Psalm 12",
+      "source": {
+        "citation": "p. 597",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "the faithful have vanished from among us.",
+              "verse": "Help me, LORD, for there is no godly one left; *"
+            },
+            {
+              "number": "2",
+              "verse": "Everyone speaks falsely with his neighbor; *",
+              "type": "psalm-verse",
+              "halfverse": "with a smooth tongue they speak from a double heart."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "3",
+              "halfverse": "and close the lips that utter proud boasts!",
+              "verse": "Oh, that the LORD would cut off all smooth tongues, *"
+            },
+            {
+              "halfverse": "our lips are our own; who is lord over us?”",
+              "number": "4",
+              "type": "psalm-verse",
+              "verse": "Those who say, “With our tongue will we prevail; *"
+            },
+            {
+              "verse": "“Because the needy are oppressed,\nand the poor cry out in misery, *",
+              "number": "5",
+              "type": "psalm-verse",
+              "halfverse": "I will rise up,” says the LORD,\n “and give them the help they long for.”"
+            },
+            {
+              "halfverse": "like silver refined from ore\n and purified seven times in the fire.",
+              "verse": "The words of the LORD are pure words, *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "verse": "O LORD, watch over us *",
+              "halfverse": "and save us from this generation for ever.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "8",
+              "verse": "The wicked prowl on every side, *",
+              "type": "psalm-verse",
+              "halfverse": "and that which is worthless is highly prized by everyone."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm",
+      "hidden": false,
+      "category": ["Psalm"],
+      "version": "bcp1979"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "category": ["Psalm"],
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "105",
+              "type": "psalm-verse",
+              "verse": "Your word is a lantern to my feet *",
+              "halfverse": "and a light upon my path."
+            },
+            {
+              "number": "106",
+              "halfverse": "to keep your righteous judgments.",
+              "type": "psalm-verse",
+              "verse": "I have sworn and am determined *"
+            },
+            {
+              "halfverse": "preserve my life, O LORD, according to your word.",
+              "verse": "I am deeply troubled; *",
+              "type": "psalm-verse",
+              "number": "107"
+            },
+            {
+              "number": "108",
+              "verse": "Accept, O LORD, the willing tribute of my lips, *",
+              "halfverse": "and teach me your judgments.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "yet I do not forget your law.",
+              "number": "109",
+              "verse": "My life is always in my hand, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but I have not strayed from your commandments.",
+              "number": "110",
+              "type": "psalm-verse",
+              "verse": "The wicked have set a trap for me, *"
+            },
+            {
+              "number": "111",
+              "halfverse": "truly, they are the joy of my heart.",
+              "type": "psalm-verse",
+              "verse": "Your decrees are my inheritance for ever; *"
+            },
+            {
+              "verse": "I have applied my heart to fulfill your statutes *",
+              "type": "psalm-verse",
+              "halfverse": "for ever and to the end.",
+              "number": "112"
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "slug": "psalm_119_nun",
+      "style": "psalm",
+      "citation": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "119",
+        "latinname": "Lucerna pedibus meis",
+        "localname": "Psalm 119: Nun"
+      },
+      "language": "en",
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 772"
+      },
+      "version": "bcp1979",
+      "label": "Psalm 119: Nun"
+    }
+  ]
+}

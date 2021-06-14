@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "label": "Psalm 50",
+      "metadata": {
+        "localname": "Psalm 50",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "50",
+        "latinname": "Deus deorum"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 654"
+      },
+      "hidden": false,
+      "slug": "psalm_50",
+      "version": "bcp1979",
+      "style": "psalm",
+      "category": ["Psalm"],
+      "citation": null,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "verse": "The LORD, the God of gods, has spoken; *",
+              "type": "psalm-verse",
+              "halfverse": "he has called the earth from the rising of the sun to its setting."
+            },
+            {
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "God reveals himself in glory.",
+              "verse": "Out of Zion, perfect in its beauty, *"
+            },
+            {
+              "verse": "Our God will come and will not keep silence; *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "before him there is a consuming flame,\n and round about him a raging storm."
+            },
+            {
+              "verse": "He calls the heavens and the earth from above *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "to witness the judgment of his people."
+            },
+            {
+              "halfverse": "those who have made a covenant with me\n and sealed it with sacrifice.”",
+              "verse": "“Gather before me my loyal followers, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for God himself is judge.",
+              "number": "6",
+              "type": "psalm-verse",
+              "verse": "Let the heavens declare the rightness of his cause; *"
+            },
+            {
+              "verse": "Hear, O my people, and I will speak:\n“O Israel, I will bear witness against you; *",
+              "type": "psalm-verse",
+              "halfverse": "for I am God, your God.",
+              "number": "7"
+            },
+            {
+              "verse": "I do not accuse you because of your sacrifices; *",
+              "halfverse": "your offerings are always before me.",
+              "type": "psalm-verse",
+              "number": "8"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "9",
+              "halfverse": "nor he-goats out of your pens;",
+              "verse": "I will take no bull-calf from your stalls, *"
+            },
+            {
+              "halfverse": "the herds in their thousands upon the hills.",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "For all the beasts of the forest are mine, *"
+            },
+            {
+              "halfverse": "and the creatures of the fields are in my sight.",
+              "verse": "I know every bird in the sky, *",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for the whole world is mine and all that is in it.",
+              "number": "12",
+              "verse": "If I were hungry, I would not tell you, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "or drink the blood of goats?",
+              "number": "13",
+              "verse": "Do you think I eat the flesh of bulls, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Offer to God a sacrifice of thanksgiving *",
+              "halfverse": "and make good your vows to the Most High.",
+              "number": "14"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Call upon me in the day of trouble; *",
+              "halfverse": "I will deliver you, and you shall honor me.”",
+              "number": "15"
+            },
+            {
+              "halfverse": "“Why do you recite my statutes,\n and take my covenant upon your lips;",
+              "verse": "But to the wicked God says: *",
+              "type": "psalm-verse",
+              "number": "16"
+            },
+            {
+              "number": "17",
+              "halfverse": "and toss my words behind your back?",
+              "verse": "Since you refuse discipline, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and you cast in your lot with adulterers.",
+              "number": "18",
+              "verse": "When you see a thief, you make him your friend, *"
+            },
+            {
+              "number": "19",
+              "halfverse": "and harnessed your tongue to a lie.",
+              "verse": "You have loosed your lips for evil, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "20",
+              "halfverse": "and slandering your own mother’s son.",
+              "verse": "You are always speaking evil of your brother *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "These things you have done, and I kept still, *",
+              "halfverse": "and you thought that I am like you.”",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "22",
+              "type": "psalm-verse",
+              "halfverse": "I have put my case in order before your eyes.",
+              "verse": "“I have made my accusation; *"
+            },
+            {
+              "halfverse": "lest I rend you and there be none to deliver you.",
+              "type": "psalm-verse",
+              "number": "23",
+              "verse": "Consider this well, you who forget God, *"
+            },
+            {
+              "halfverse": "but to those who keep in my way will I show the salvation of God.”",
+              "type": "psalm-verse",
+              "verse": "Whoever offers me the sacrifice of thanksgiving honors me; *",
+              "number": "24"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "type": "psalm"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "for I am poor and in misery.",
+              "number": "1",
+              "verse": "Bow down your ear, O LORD, and answer me, *"
+            },
+            {
+              "halfverse": "save your servant who puts his trust in you.",
+              "type": "psalm-verse",
+              "verse": "Keep watch over my life, for I am faithful; *",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "I call upon you all the day long.",
+              "verse": "Be merciful to me, O LORD, for you are my God; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for to you, O LORD, I lift up my soul.",
+              "verse": "Gladden the soul of your servant, *",
+              "number": "4"
+            },
+            {
+              "halfverse": "and great is your love toward all who call upon you.",
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "For you, O LORD, are good and forgiving, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Give ear, O LORD, to my prayer, *",
+              "halfverse": "and attend to the voice of my supplications.",
+              "number": "6"
+            },
+            {
+              "halfverse": "for you will answer me.",
+              "verse": "In the time of my trouble I will call upon you, *",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "nor anything like your works.",
+              "number": "8",
+              "verse": "Among the gods there is none like you, O LORD, *"
+            },
+            {
+              "halfverse": "and glorify your Name.",
+              "type": "psalm-verse",
+              "number": "9",
+              "verse": "All the nations you have made will come and worship you, O LORD, *"
+            },
+            {
+              "halfverse": "and you alone are God.",
+              "type": "psalm-verse",
+              "verse": "For you are great;\nyou do wondrous things; *",
+              "number": "10"
+            },
+            {
+              "halfverse": "knit my heart to you that I may fear your Name.",
+              "type": "psalm-verse",
+              "verse": "Teach me your way, O LORD,\nand I will walk in your truth; *",
+              "number": "11"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and glorify your Name for evermore.",
+              "number": "12",
+              "verse": "I will thank you, O LORD my God, with all my heart, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For great is your love toward me; *",
+              "halfverse": "you have delivered me from the nethermost Pit.",
+              "number": "13"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The arrogant rise up against me, O God,\nand a band of violent men seeks my life; *",
+              "halfverse": "they have not set you before their eyes.",
+              "number": "14"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "But you, O LORD, are gracious and full of compassion, *",
+              "number": "15",
+              "halfverse": "slow to anger, and full of kindness and truth."
+            },
+            {
+              "halfverse": "give your strength to your servant;\n and save the child of your handmaid.",
+              "verse": "Turn to me and have mercy upon me; *",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "because you, O LORD, have helped me and comforted me.",
+              "number": "17",
+              "verse": "Show me a sign of your favor,\nso that those who hate me may see it and be ashamed; *"
+            }
+          ]
+        }
+      ],
+      "style": "psalm",
+      "version_label": null,
+      "slug": "psalm_86",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 709"
+      },
+      "language": "en",
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "label": "Psalm 86",
+      "type": "psalm",
+      "metadata": {
+        "number": "86",
+        "localname": "Psalm 86",
+        "omit_gloria": false,
+        "latinname": "Inclina, Domine",
+        "omit_antiphon": false
+      },
+      "hidden": false,
+      "citation": null
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "citation": null,
+      "version_label": null,
+      "category": ["Psalm"],
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Deus, venerunt",
+        "omit_gloria": false,
+        "localname": "Psalm 79",
+        "number": "79"
+      },
+      "source": {
+        "citation": "p. 701",
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979"
+      },
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "O God, the heathen have come into your inheritance;\nthey have profaned your holy temple; *",
+              "halfverse": "they have made Jerusalem a heap of rubble.",
+              "type": "psalm-verse",
+              "number": "1"
+            },
+            {
+              "halfverse": "and the flesh of your faithful ones to the beasts of the field.",
+              "number": "2",
+              "type": "psalm-verse",
+              "verse": "They have given the bodies of your servants as food for the birds of the air, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and there was no one to bury them.",
+              "number": "3",
+              "verse": "They have shed their blood like water on every side of Jerusalem, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "an object of scorn and derision to those around us.",
+              "number": "4",
+              "verse": "We have become a reproach to our neighbors, *"
+            },
+            {
+              "verse": "How long will you be angry, O LORD? *",
+              "number": "5",
+              "halfverse": "will your fury blaze like fire for ever?",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Pour out your wrath upon the heathen who have not known you *",
+              "type": "psalm-verse",
+              "halfverse": "and upon the kingdoms that have not called upon your Name.",
+              "number": "6"
+            },
+            {
+              "verse": "For they have devoured Jacob *",
+              "halfverse": "and made his dwelling a ruin.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Remember not our past sins;\nlet your compassion be swift to meet us; *",
+              "number": "8",
+              "halfverse": "for we have been brought very low.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "deliver us and forgive us our sins, for your Name’s sake.",
+              "number": "9",
+              "verse": "Help us, O God our Savior, for the glory of your Name; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "Let it be known among the heathen and in our sight\n that you avenge the shedding of your servants’ blood.",
+              "verse": "Why should the heathen say, “Where is their God?” *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "halfverse": "and by your great might spare those who are condemned to die.",
+              "verse": "Let the sorrowful sighing of the prisoners come before you, *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "return seven-fold into their bosoms.",
+              "verse": "May the revilings with which they reviled you, O Lord, *",
+              "type": "psalm-verse",
+              "number": "12"
+            },
+            {
+              "verse": "For we are your people and the sheep of your pasture; *",
+              "halfverse": "we will give you thanks for ever\n and show forth your praise from age to age.",
+              "type": "psalm-verse",
+              "number": "13"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "label": "Psalm 79",
+      "type": "psalm",
+      "slug": "psalm_79",
+      "version": "bcp1979",
+      "language": "en",
+      "hidden": false
+    }
+  ]
+}

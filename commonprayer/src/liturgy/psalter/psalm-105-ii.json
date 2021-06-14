@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "category": ["Psalm"],
+      "citation": null,
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "and Jacob became a sojourner in the land of Ham.",
+              "number": "23",
+              "type": "psalm-verse",
+              "verse": "Israel came into Egypt, *"
+            },
+            {
+              "halfverse": "he made them stronger than their enemies;",
+              "verse": "The LORD made his people exceedingly fruitful; *",
+              "type": "psalm-verse",
+              "number": "24"
+            },
+            {
+              "number": "25",
+              "halfverse": "and dealt unjustly with his servants.",
+              "type": "psalm-verse",
+              "verse": "Whose heart he turned, so that they hated his people, *"
+            },
+            {
+              "verse": "He sent Moses his servant, *",
+              "number": "26",
+              "halfverse": "and Aaron whom he had chosen.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They worked his signs among them, *",
+              "halfverse": "and portents in the land of Ham.",
+              "number": "27",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "28",
+              "halfverse": "but the Egyptians rebelled against his words.",
+              "type": "psalm-verse",
+              "verse": "He sent darkness, and it grew dark; *"
+            },
+            {
+              "verse": "He turned their waters into blood *",
+              "number": "29",
+              "halfverse": "and caused their fish to die.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Their land was overrun by frogs, *",
+              "type": "psalm-verse",
+              "halfverse": "in the very chambers of their kings.",
+              "number": "30"
+            },
+            {
+              "number": "31",
+              "halfverse": "and gnats within all their borders.",
+              "verse": "He spoke, and there came swarms of insects *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "32",
+              "type": "psalm-verse",
+              "verse": "He gave them hailstones instead of rain, *",
+              "halfverse": "and flames of fire throughout their land."
+            },
+            {
+              "number": "33",
+              "type": "psalm-verse",
+              "verse": "He blasted their vines and their fig trees *",
+              "halfverse": "and shattered every tree in their country."
+            },
+            {
+              "verse": "He spoke, and the locust came, *",
+              "type": "psalm-verse",
+              "number": "34",
+              "halfverse": "and young locusts without number,"
+            },
+            {
+              "verse": "Which ate up all the green plants in their land *",
+              "type": "psalm-verse",
+              "halfverse": "and devoured the fruit of their soil.",
+              "number": "35"
+            },
+            {
+              "halfverse": "the firstfruits of all their strength.",
+              "verse": "He struck down the firstborn of their land, *",
+              "type": "psalm-verse",
+              "number": "36"
+            },
+            {
+              "halfverse": "in all their tribes there was not one that stumbled.",
+              "verse": "He led out his people with silver and gold; *",
+              "type": "psalm-verse",
+              "number": "37"
+            },
+            {
+              "halfverse": "because they were afraid of them.",
+              "type": "psalm-verse",
+              "verse": "Egypt was glad of their going, *",
+              "number": "38"
+            },
+            {
+              "halfverse": "and a fire to give light in the night season.",
+              "verse": "He spread out a cloud for a covering *",
+              "number": "39",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "40",
+              "halfverse": "and he satisfied them with bread from heaven.",
+              "verse": "They asked, and quails appeared, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "so the river ran in the dry places.",
+              "type": "psalm-verse",
+              "number": "41",
+              "verse": "He opened the rock, and water flowed, *"
+            },
+            {
+              "number": "42",
+              "type": "psalm-verse",
+              "halfverse": "and Abraham his servant.",
+              "verse": "For God remembered his holy word *"
+            },
+            {
+              "verse": "So he led forth his people with gladness, *",
+              "number": "43",
+              "type": "psalm-verse",
+              "halfverse": "his chosen with shouts of joy."
+            },
+            {
+              "number": "44",
+              "verse": "He gave his people the lands of the nations, *",
+              "type": "psalm-verse",
+              "halfverse": "and they took the fruit of others’ toil,"
+            },
+            {
+              "halfverse": "and observe his laws.\n Hallelujah!",
+              "verse": "That they might keep his statutes *",
+              "type": "psalm-verse",
+              "number": "45"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 739"
+      },
+      "style": "psalm",
+      "language": "en",
+      "label": "Psalm 105: Part II",
+      "slug": "psalm_105_ii",
+      "version_label": null,
+      "metadata": {
+        "latinname": "Et intravit Israel",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "105",
+        "localname": "Psalm 105: Part II"
+      },
+      "hidden": false
+    }
+  ]
+}

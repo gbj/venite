@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 765"
+      },
+      "type": "psalm",
+      "version": "bcp1979",
+      "slug": "psalm_119_daleth",
+      "citation": null,
+      "style": "psalm",
+      "label": "Psalm 119: Daleth",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "give me life according to your word.",
+              "number": "25",
+              "verse": "My soul cleaves to the dust; *"
+            },
+            {
+              "verse": "I have confessed my ways, and you answered me; *",
+              "number": "26",
+              "halfverse": "instruct me in your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Make me understand the way of your commandments, *",
+              "number": "27",
+              "type": "psalm-verse",
+              "halfverse": "that I may meditate on your marvelous works."
+            },
+            {
+              "verse": "My soul melts away for sorrow; *",
+              "halfverse": "strengthen me according to your word.",
+              "type": "psalm-verse",
+              "number": "28"
+            },
+            {
+              "verse": "Take from me the way of lying; *",
+              "number": "29",
+              "type": "psalm-verse",
+              "halfverse": "let me find grace through your law."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I have set your judgments before me.",
+              "verse": "I have chosen the way of faithfulness; *",
+              "number": "30"
+            },
+            {
+              "verse": "I hold fast to your decrees; *",
+              "number": "31",
+              "halfverse": "O LORD, let me not be put to shame.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for you have set my heart at liberty.",
+              "verse": "I will run the way of your commandments, *",
+              "number": "32"
+            }
+          ]
+        }
+      ],
+      "category": ["Psalm"],
+      "metadata": {
+        "localname": "Psalm 119: Daleth",
+        "omit_antiphon": false,
+        "number": "119",
+        "latinname": "Adhaesit pavimento",
+        "omit_gloria": false
+      },
+      "language": "en",
+      "version_label": null
+    }
+  ]
+}

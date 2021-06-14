@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "style": "psalm",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "type": "psalm",
+      "language": "en",
+      "hidden": false,
+      "slug": "psalm_119_sadhe",
+      "citation": null,
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Justus es, Domine",
+        "omit_antiphon": false,
+        "localname": "Psalm 119: Sadhe",
+        "number": "119"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "number": "137",
+              "type": "psalm-verse",
+              "halfverse": "and upright are your judgments.",
+              "verse": "You are righteous, O LORD, *"
+            },
+            {
+              "number": "138",
+              "type": "psalm-verse",
+              "verse": "You have issued your decrees *",
+              "halfverse": "with justice and in perfect faithfulness."
+            },
+            {
+              "number": "139",
+              "verse": "My indignation has consumed me, *",
+              "type": "psalm-verse",
+              "halfverse": "because my enemies forget your words."
+            },
+            {
+              "verse": "Your word has been tested to the uttermost, *",
+              "number": "140",
+              "halfverse": "and your servant holds it dear.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "141",
+              "halfverse": "yet I do not forget your commandments.",
+              "verse": "I am small and of little account, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your law is the truth.",
+              "number": "142",
+              "verse": "Your justice is an everlasting justice *"
+            },
+            {
+              "verse": "Trouble and distress have come upon me, *",
+              "number": "143",
+              "type": "psalm-verse",
+              "halfverse": "yet your commandments are my delight."
+            },
+            {
+              "number": "144",
+              "verse": "The righteousness of your decrees is everlasting; *",
+              "type": "psalm-verse",
+              "halfverse": "grant me understanding, that I may live."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 774"
+      },
+      "label": "Psalm 119: Sadhe"
+    }
+  ]
+}

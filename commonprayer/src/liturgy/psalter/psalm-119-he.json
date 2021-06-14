@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "33",
+              "verse": "Teach me, O LORD, the way of your statutes, *",
+              "type": "psalm-verse",
+              "halfverse": "and I shall keep it to the end."
+            },
+            {
+              "halfverse": "I shall keep it with all my heart.",
+              "type": "psalm-verse",
+              "number": "34",
+              "verse": "Give me understanding, and I shall keep your law; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Make me go in the path of your commandments, *",
+              "halfverse": "for that is my desire.",
+              "number": "35"
+            },
+            {
+              "halfverse": "and not to unjust gain.",
+              "verse": "Incline my heart to your decrees *",
+              "type": "psalm-verse",
+              "number": "36"
+            },
+            {
+              "number": "37",
+              "verse": "Turn my eyes from watching what is worthless; *",
+              "type": "psalm-verse",
+              "halfverse": "give me life in your ways."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "which you make to those who fear you.",
+              "number": "38",
+              "verse": "Fulfill your promise to your servant, *"
+            },
+            {
+              "verse": "Turn away the reproach which I dread, *",
+              "number": "39",
+              "halfverse": "because your judgments are good.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Behold, I long for your commandments; *",
+              "number": "40",
+              "halfverse": "in your righteousness preserve my life.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 766"
+      },
+      "label": "Psalm 119: He",
+      "language": "en",
+      "slug": "psalm_119_he",
+      "style": "psalm",
+      "type": "psalm",
+      "hidden": false,
+      "category": ["Psalm"],
+      "citation": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "number": "119",
+        "localname": "Psalm 119: He",
+        "latinname": "Legem pone",
+        "omit_gloria": false
+      }
+    }
+  ]
+}

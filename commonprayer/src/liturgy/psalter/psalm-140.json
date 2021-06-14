@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "slug": "psalm_140",
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "140",
+        "localname": "Psalm 140",
+        "latinname": "Eripe me, Domine"
+      },
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 796"
+      },
+      "hidden": false,
+      "citation": null,
+      "language": "en",
+      "label": "Psalm 140",
+      "version_label": null,
+      "type": "psalm",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "verse": "Deliver me, O LORD, from evildoers; *",
+              "halfverse": "protect me from the violent,"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and stir up strife all day long.",
+              "verse": "Who devise evil in their hearts *",
+              "number": "2"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "adder’s poison is under their lips.",
+              "verse": "They have sharpened their tongues like a serpent; *",
+              "number": "3"
+            },
+            {
+              "number": "4",
+              "halfverse": "protect me from the violent,\n who are determined to trip me up.",
+              "verse": "Keep me, O LORD, from the hands of the wicked; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they have set traps for me along the path.",
+              "verse": "The proud have hidden a snare for me\nand stretched out a net of cords; *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "listen, O LORD, to my supplication.",
+              "verse": "I have said to the LORD, “You are my God; *",
+              "number": "6",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "halfverse": "you have covered my head in the day of battle.",
+              "type": "psalm-verse",
+              "verse": "O Lord GOD, the strength of my salvation, *"
+            },
+            {
+              "verse": "Do not grant the desires of the wicked, O LORD, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "nor let their evil plans prosper."
+            },
+            {
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "Let not those who surround me lift up their heads; *",
+              "halfverse": "let the evil of their lips overwhelm them."
+            },
+            {
+              "halfverse": "let them be cast into the mire, never to rise up again.”",
+              "verse": "Let hot burning coals fall upon them; *",
+              "type": "psalm-verse",
+              "number": "10"
+            },
+            {
+              "verse": "A slanderer shall not be established on the earth, *",
+              "number": "11",
+              "type": "psalm-verse",
+              "halfverse": "and evil shall hunt down the lawless."
+            },
+            {
+              "verse": "I know that the LORD will maintain the cause of the poor *",
+              "type": "psalm-verse",
+              "number": "12",
+              "halfverse": "and render justice to the needy."
+            },
+            {
+              "halfverse": "and the upright shall continue in your sight.",
+              "type": "psalm-verse",
+              "number": "13",
+              "verse": "Surely, the righteous will give thanks to your Name, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "bcp1979"
+    }
+  ]
+}

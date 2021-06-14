@@ -1,0 +1,191 @@
+{
+  "data": [
+    {
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 660",
+        "source": "bcp1979"
+      },
+      "hidden": false,
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Psalm 55",
+        "omit_gloria": false,
+        "latinname": "Exaudi, Deus",
+        "number": "55"
+      },
+      "slug": "psalm_55",
+      "label": "Psalm 55",
+      "version_label": null,
+      "type": "psalm",
+      "citation": null,
+      "language": "en",
+      "category": ["Psalm"],
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "do not hide yourself from my petition.",
+              "verse": "Hear my prayer,O God; *"
+            },
+            {
+              "verse": "Listen to me and answer me; *",
+              "number": "2",
+              "halfverse": "I have no peace, because of my cares.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I am shaken by the noise of the enemy *",
+              "halfverse": "and by the pressure of the wicked;",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For they have cast an evil spell upon me *",
+              "number": "4",
+              "halfverse": "and are set against me in fury.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the terrors of death have fallen upon me.",
+              "verse": "My heart quakes within me, *",
+              "number": "5",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "6",
+              "halfverse": "and horror overwhelms me.",
+              "verse": "Fear and trembling have come over me, *"
+            },
+            {
+              "number": "7",
+              "halfverse": "I would fly away and be at rest.",
+              "type": "psalm-verse",
+              "verse": "And I said, “Oh, that I had wings like a dove! *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "and make my lodging in the wilderness.",
+              "verse": "I would flee to a far-off place *"
+            },
+            {
+              "halfverse": "from the stormy wind and tempest.”",
+              "number": "9",
+              "verse": "I would hasten to escape *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "10",
+              "verse": "Swallow them up, O Lord;\nconfound their speech; *",
+              "type": "psalm-verse",
+              "halfverse": "for I have seen violence and strife in the city."
+            },
+            {
+              "verse": "Day and night the watchmen make their rounds upon her walls, *",
+              "type": "psalm-verse",
+              "halfverse": "but trouble and misery are in the midst of her.",
+              "number": "11"
+            },
+            {
+              "halfverse": "her streets are never free of oppression and deceit.",
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": " There is corruption at her heart; *"
+            },
+            {
+              "number": "13",
+              "verse": "For had it been an adversary who taunted me,\nthen I could have borne it; *",
+              "type": "psalm-verse",
+              "halfverse": "or had it been an enemy who vaunted himself against me,\n then I could have hidden from him."
+            },
+            {
+              "verse": "But it was you, a man after my own heart, *",
+              "number": "14",
+              "halfverse": "my companion, my own familiar friend.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "We took sweet counsel together, *",
+              "number": "15",
+              "type": "psalm-verse",
+              "halfverse": "and walked with the throng in the house of God."
+            },
+            {
+              "verse": "Let death come upon them suddenly;\nlet them go down alive to the grave; *",
+              "halfverse": "for wickedness is in their dwellings, in their very midst.",
+              "number": "16",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "But I will call upon God, *",
+              "number": "17",
+              "halfverse": "and the LORD will deliver me.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "18",
+              "verse": "In the evening, in the morning, and at noonday,\nI will complain and lament, *",
+              "halfverse": "and he will hear my voice.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "19",
+              "verse": "He will bring me safely back from the battle waged against me; *",
+              "type": "psalm-verse",
+              "halfverse": "for there are many who fight me."
+            },
+            {
+              "halfverse": "they never change; they do not fear God.",
+              "verse": "God, who is enthroned of old, will hear me and bring them down; *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "21",
+              "verse": "My companion stretched forth his hand against his comrade; *",
+              "type": "psalm-verse",
+              "halfverse": "he has broken his covenant."
+            },
+            {
+              "number": "22",
+              "halfverse": "but war is in his heart.",
+              "verse": "His speech is softer than butter, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "23",
+              "halfverse": "but they are drawn swords.",
+              "verse": "His words are smoother than oil, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Cast your burden upon the LORD,\nand he will sustain you; *",
+              "halfverse": "he will never let the righteous stumble.",
+              "type": "psalm-verse",
+              "number": "24"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For you will bring the bloodthirsty and deceitful *",
+              "number": "25",
+              "halfverse": "down to the pit of destruction, O God."
+            },
+            {
+              "halfverse": "but I will put my trust in you.",
+              "verse": "They shall not live out half their days, *",
+              "type": "psalm-verse",
+              "number": "26"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "psalm"
+    }
+  ]
+}

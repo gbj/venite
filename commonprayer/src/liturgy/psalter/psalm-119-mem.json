@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "slug": "psalm_119_mem",
+      "citation": null,
+      "label": "Psalm 119: Mem",
+      "version": "bcp1979",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "97",
+              "verse": "Oh, how I love your law! *",
+              "halfverse": "all the day long it is in my mind."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "98",
+              "verse": "Your commandment has made me wiser than my enemies, *",
+              "halfverse": "and it is always with me."
+            },
+            {
+              "verse": "I have more understanding than all my teachers, *",
+              "number": "99",
+              "halfverse": "for your decrees are my study.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "because I observe your commandments.",
+              "type": "psalm-verse",
+              "number": "100",
+              "verse": "I am wiser than the elders, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "that I may keep your word.",
+              "verse": "I restrain my feet from every evil way, *",
+              "number": "101"
+            },
+            {
+              "halfverse": "because you yourself have taught me.",
+              "verse": "I do not shrink from your judgments, *",
+              "number": "102",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "How sweet are your words to my taste! *",
+              "type": "psalm-verse",
+              "halfverse": "they are sweeter than honey to my mouth.",
+              "number": "103"
+            },
+            {
+              "number": "104",
+              "halfverse": "therefore I hate every lying way.",
+              "verse": "Through your commandments I gain understanding; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "language": "en",
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 771"
+      },
+      "style": "psalm",
+      "metadata": {
+        "latinname": "Quomodo dilexi!",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "119",
+        "localname": "Psalm 119: Mem"
+      },
+      "category": ["Psalm"],
+      "version_label": null,
+      "type": "psalm"
+    }
+  ]
+}

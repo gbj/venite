@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "localname": "Psalm 119: Waw",
+        "latinname": "Et veniat super me",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "119"
+      },
+      "hidden": false,
+      "label": "Psalm 119: Waw",
+      "slug": "psalm_119_waw",
+      "category": ["Psalm"],
+      "style": "psalm",
+      "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 766"
+      },
+      "language": "en",
+      "citation": null,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Let your loving-kindness come to me, O LORD, *",
+              "halfverse": "and your salvation, according to your promise.",
+              "number": "41"
+            },
+            {
+              "verse": "Then shall I have a word for those who taunt me, *",
+              "number": "42",
+              "type": "psalm-verse",
+              "halfverse": "because I trust in your words."
+            },
+            {
+              "halfverse": "for my hope is in your judgments.",
+              "verse": "Do not take the word of truth out of my mouth, *",
+              "number": "43",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I shall keep it for ever and ever.",
+              "verse": "I shall continue to keep your law; *",
+              "type": "psalm-verse",
+              "number": "44"
+            },
+            {
+              "halfverse": "because I study your commandments.",
+              "type": "psalm-verse",
+              "verse": "I will walk at liberty, *",
+              "number": "45"
+            },
+            {
+              "halfverse": "and will not be ashamed.",
+              "type": "psalm-verse",
+              "number": "46",
+              "verse": "I will tell of your decrees before kings *"
+            },
+            {
+              "halfverse": "which I have always loved.",
+              "verse": "I delight in your commandments, *",
+              "number": "47",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "48",
+              "halfverse": "and I will meditate on your statutes.",
+              "verse": "I will lift up my hands to your commandments, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "version_label": null,
+      "version": "bcp1979"
+    }
+  ]
+}
