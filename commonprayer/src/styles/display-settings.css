@@ -13,6 +13,12 @@
   width: calc(100%-1rem-2px);
 }
 
+.display-setting-button {
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-size: 1rem;
+}
+
 /* Psalm Verses */
 #psalmverses:not(:checked) ~ main {
   --ldf-psalm-number-display: none;
@@ -20,16 +26,16 @@
   --ldf-psalm-verse-grid: "verse verse" "half-verse half-verse";
 }
 #psalmverses:checked ~ menu {
-  --psalmverses-background: var(--cp-success-light);
+  --psalmverses-background-color: var(--cp-success-light);
   --psalmverses-toggle-color: var(--cp-success-background);
   --psalmverses-padding: calc(0.5rem - 1px);
-  background-image: url("/assets/icon/check-solid.svg");
-  background-repeat: no-repeat;
+  --psalmverses-background-image: url("/assets/icon/check-solid.svg");
 }
 label[for="psalmverses"] {
-  background-color: var(--psalmverses-background);
+  background-color: var(--psalmverses-background-color);
+  background-image: var(--psalmverses-background-image);
   color: var(--psalmverses-toggle-color);
-  border: 1px solid var(--psalmverses-toggle-color);
+  border: 1px solid var(--psalmverses-toggle-color, black);
   padding: var(--psalmverses-padding, 0.5rem);
   margin: 1px;
 }
@@ -39,12 +45,14 @@ label[for="psalmverses"] {
   --ldf-bible-verse-display: none;
 }
 #bibleverses:checked ~ menu {
-  --bibleverses-background: var(--cp-success-light);
+  --bibleverses-background-color: var(--cp-success-light);
+  --bibleverses-background-image: url("/assets/icon/check-solid.svg");
   --bibleverses-toggle-color: var(--cp-success-background);
   --bibleverses-padding: calc(0.5rem - 1px);
 }
 label[for="bibleverses"] {
-  background-color: var(--bibleverses-background);
+  background-color: var(--bibleverses-background-color);
+  background-image: var(--bibleverses-background-image);
   color: var(--bibleverses-toggle-color);
   border: 1px solid var(--bibleverses-toggle-color);
   padding: var(--bibleverses-padding, 0.5rem);

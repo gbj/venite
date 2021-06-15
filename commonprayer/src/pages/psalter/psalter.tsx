@@ -2,7 +2,7 @@ import h from "https://cdn.pika.dev/vhtml@2.2.0";
 import { Page } from "../../ssg/page.ts";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Psalm } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.1.10";
+import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.1.12";
 
 export default async function psalter(): Promise<Page> {
   const localization = LOCALIZATION.en;
@@ -16,7 +16,7 @@ export default async function psalter(): Promise<Page> {
       ...(await Promise.all(
         book.days.map(async (day) => [
           <h3>
-            {localization.days[day.day - 1]} {localization.day}{" "}
+            {localization.days[day.day - 1]} {localization.day}{": "}
             {day.morning ? localization.morning : localization.evening}
           </h3>,
           ...(await Promise.all(
@@ -34,7 +34,7 @@ export default async function psalter(): Promise<Page> {
                 ),
                 doc = JSON.parse(f);
               const { data } = doc;
-              return `<div class="cp-doc" data-category="psalm" data-slug="${psalm}">${
+              return `<div class="cp-doc" data-category="psalter" data-slug="psalm-${psalm}">${
                 ldfToHTML(
                   new Psalm(data[0]),
                 )

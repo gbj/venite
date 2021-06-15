@@ -9,7 +9,7 @@ window.addEventListener("click", (ev) => {
   if (parent) {
     handle(parent);
   }
-  if (local) {
+  if (local && parent !== local) {
     handle(local);
   }
 });
@@ -63,7 +63,7 @@ async function loadDoc(el: HTMLElement): Promise<LiturgicalDocument> {
     }
   } catch (e) {
     console.warn(e);
-    setStatus(ev.target as HTMLElement, "error");
+    setStatus(el, "error");
   }
 }
 

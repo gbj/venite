@@ -42,16 +42,20 @@
   right: 0.5rem;
 }
 
-/* TOC menu */
-.toc-menu {
+/* Both menus */
+.toc-menu, .display-settings {
   position: fixed;
+  top: 0.55rem;
   transition: 1s linear;
-  width: 100vw;
-  max-width: calc(100% - 6rem);
+  width: calc(100vw - 6rem);
+  max-width: calc(400px);
   background-color: var(--cp-light-background);
   transition: 0.125s linear;
-  left: 2.75rem;
-  top: 0.5rem;
+}
+
+/* TOC menu */
+.toc-menu {
+  left: 3.5rem;
   z-index: 15;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
 }
@@ -68,14 +72,7 @@
 
 /* Display settings menu */
 .display-settings {
-  position: fixed;
-  transition: 1s linear;
-  width: 100vw;
-  max-width: calc(100% - 6rem);
-  background-color: var(--cp-light-background);
-  transition: 0.125s linear;
-  right: 2.75rem;
-  top: 0.5rem;
+  right: 3.5rem;
   z-index: 10;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
   display: flex;

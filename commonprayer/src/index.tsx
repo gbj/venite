@@ -16,7 +16,7 @@ const TOCMenu = () => [
     <img src="/assets/icon/books.svg"/>
     <span class="visually-hidden">Table of Contents</span>
   </button>,
-  <nav class="toc-menu">
+  <nav class="hidden toc-menu">
     <ul>
       <li>
         <h2>Daily Office</h2>
@@ -41,12 +41,12 @@ const DisplaySettings = () => [
     <img src="/assets/icon/cog-solid.svg"/>
     <span class="visually-hidden">Display Settings</span>
   </button>,
-  <menu class="display-settings">
+  <menu class="hidden display-settings">
     <h2>Display Settings</h2>
-    <label for="psalmverses" aria-role="button">
+    <label for="psalmverses" aria-role="button" class="display-setting-button">
       Psalm Verse Numbers
     </label>
-    <label for="bibleverses" aria-role="button">
+    <label for="bibleverses" aria-role="button" class="display-setting-button">
       Bible Verse Numbers
     </label>
   </menu>
@@ -104,7 +104,7 @@ export function Index({ main, script, style, head }: Page, isDev = false): strin
       {style && <style>{style}</style>}
       {head}
       {isDev && <script src="/scripts/dev-socket.js"></script>}
-      {links.map(link => <link rel="prefetch" href="${link}"/>)}
+      {links.map(link => <link rel="prefetch" href={link}/>)}
     </head>
     {body}
     {script && <script>${script}</script>}
