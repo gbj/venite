@@ -234,6 +234,11 @@ export class PreferencesService {
                         "==",
                         (liturgy as LiturgicalDocument).version || "Rite-II"
                       )
+                      .where(
+                        "liturgy",
+                        "==",
+                        typeof liturgy === "string" ? liturgy : liturgy.slug
+                      )
                   )
                   .valueChanges()
               : of(undefined);
