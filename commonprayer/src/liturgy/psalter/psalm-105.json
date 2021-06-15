@@ -1,0 +1,312 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "value": [
+        {
+          "label": "Part I",
+          "value": [
+            {
+              "verse": "Give thanks to the LORD and call upon his Name; *",
+              "halfverse": "make known his deeds among the peoples.",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Sing to him, sing praises to him, *",
+              "type": "psalm-verse",
+              "halfverse": "and speak of all his marvelous works.",
+              "number": "2"
+            },
+            {
+              "halfverse": "let the hearts of those who seek the LORD rejoice.",
+              "verse": "Glory in his holy Name; *",
+              "number": "3",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "continually seek his face.",
+              "verse": "Search for the LORD and his strength; *",
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "halfverse": "his wonders and the judgments of his mouth,",
+              "type": "psalm-verse",
+              "verse": "Remember the marvels he has done, *"
+            },
+            {
+              "number": "6",
+              "verse": "O offspring of Abraham his servant, *",
+              "type": "psalm-verse",
+              "halfverse": "O children of Jacob his chosen."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "his judgments prevail in all the world.",
+              "verse": "He is the LORD our God; *",
+              "number": "7"
+            },
+            {
+              "verse": "He has always been mindful of his covenant, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "the promise he made for a thousand generations:"
+            },
+            {
+              "halfverse": "the oath that he swore to Isaac,",
+              "verse": "The covenant he made with Abraham, *",
+              "number": "9",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "an everlasting covenant for Israel,",
+              "verse": "Which he established as a statute for Jacob, *"
+            },
+            {
+              "number": "11",
+              "halfverse": "to be your allotted inheritance.”",
+              "verse": "Saying, “To you will I give the land of Canaan *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "12",
+              "type": "psalm-verse",
+              "halfverse": "of little account, and sojourners in the land,",
+              "verse": "When they were few in number, *"
+            },
+            {
+              "halfverse": "and from one kingdom to another,",
+              "verse": "Wandering from nation to nation *",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "verse": "He let no one oppress them *",
+              "halfverse": "and rebuked kings for their sake,",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and do my prophets no harm.”",
+              "verse": "Saying, “Do not touch my anointed *",
+              "number": "15",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Then he called for a famine in the land *",
+              "number": "16",
+              "halfverse": "and destroyed the supply of bread."
+            },
+            {
+              "halfverse": "Joseph, who was sold as a slave.",
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "He sent a man before them, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "his neck they put in an iron collar.",
+              "verse": "They bruised his feet in fetters; *",
+              "number": "18"
+            },
+            {
+              "verse": "Until his prediction came to pass, *",
+              "halfverse": "the word of the LORD tested him.",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "the ruler of the peoples set him free.",
+              "number": "20",
+              "verse": "The king sent and released him; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "as a ruler over all his possessions,",
+              "verse": "He set him as a master over his household, *",
+              "number": "21",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and to teach his elders wisdom.",
+              "verse": "To instruct his princes according to his will *",
+              "number": "22"
+            }
+          ],
+          "type": "psalm-section"
+        },
+        {
+          "label": "Part II",
+          "value": [
+            {
+              "halfverse": "and Jacob became a sojourner in the land of Ham.",
+              "number": "23",
+              "type": "psalm-verse",
+              "verse": "Israel came into Egypt, *"
+            },
+            {
+              "halfverse": "he made them stronger than their enemies;",
+              "verse": "The LORD made his people exceedingly fruitful; *",
+              "type": "psalm-verse",
+              "number": "24"
+            },
+            {
+              "number": "25",
+              "halfverse": "and dealt unjustly with his servants.",
+              "type": "psalm-verse",
+              "verse": "Whose heart he turned, so that they hated his people, *"
+            },
+            {
+              "verse": "He sent Moses his servant, *",
+              "number": "26",
+              "halfverse": "and Aaron whom he had chosen.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They worked his signs among them, *",
+              "halfverse": "and portents in the land of Ham.",
+              "number": "27",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "28",
+              "halfverse": "but the Egyptians rebelled against his words.",
+              "type": "psalm-verse",
+              "verse": "He sent darkness, and it grew dark; *"
+            },
+            {
+              "verse": "He turned their waters into blood *",
+              "number": "29",
+              "halfverse": "and caused their fish to die.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Their land was overrun by frogs, *",
+              "type": "psalm-verse",
+              "halfverse": "in the very chambers of their kings.",
+              "number": "30"
+            },
+            {
+              "number": "31",
+              "halfverse": "and gnats within all their borders.",
+              "verse": "He spoke, and there came swarms of insects *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "32",
+              "type": "psalm-verse",
+              "verse": "He gave them hailstones instead of rain, *",
+              "halfverse": "and flames of fire throughout their land."
+            },
+            {
+              "number": "33",
+              "type": "psalm-verse",
+              "verse": "He blasted their vines and their fig trees *",
+              "halfverse": "and shattered every tree in their country."
+            },
+            {
+              "verse": "He spoke, and the locust came, *",
+              "type": "psalm-verse",
+              "number": "34",
+              "halfverse": "and young locusts without number,"
+            },
+            {
+              "verse": "Which ate up all the green plants in their land *",
+              "type": "psalm-verse",
+              "halfverse": "and devoured the fruit of their soil.",
+              "number": "35"
+            },
+            {
+              "halfverse": "the firstfruits of all their strength.",
+              "verse": "He struck down the firstborn of their land, *",
+              "type": "psalm-verse",
+              "number": "36"
+            },
+            {
+              "halfverse": "in all their tribes there was not one that stumbled.",
+              "verse": "He led out his people with silver and gold; *",
+              "type": "psalm-verse",
+              "number": "37"
+            },
+            {
+              "halfverse": "because they were afraid of them.",
+              "type": "psalm-verse",
+              "verse": "Egypt was glad of their going, *",
+              "number": "38"
+            },
+            {
+              "halfverse": "and a fire to give light in the night season.",
+              "verse": "He spread out a cloud for a covering *",
+              "number": "39",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "40",
+              "halfverse": "and he satisfied them with bread from heaven.",
+              "verse": "They asked, and quails appeared, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "so the river ran in the dry places.",
+              "type": "psalm-verse",
+              "number": "41",
+              "verse": "He opened the rock, and water flowed, *"
+            },
+            {
+              "number": "42",
+              "type": "psalm-verse",
+              "halfverse": "and Abraham his servant.",
+              "verse": "For God remembered his holy word *"
+            },
+            {
+              "verse": "So he led forth his people with gladness, *",
+              "number": "43",
+              "type": "psalm-verse",
+              "halfverse": "his chosen with shouts of joy."
+            },
+            {
+              "number": "44",
+              "verse": "He gave his people the lands of the nations, *",
+              "type": "psalm-verse",
+              "halfverse": "and they took the fruit of others’ toil,"
+            },
+            {
+              "halfverse": "and observe his laws.\n Hallelujah!",
+              "verse": "That they might keep his statutes *",
+              "type": "psalm-verse",
+              "number": "45"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": null,
+      "metadata": {
+        "omit_gloria": false,
+        "localname": "Psalm 105",
+        "latinname": "Confitemini Domino",
+        "omit_antiphon": false,
+        "number": "105"
+      },
+      "style": "psalm",
+      "type": "psalm",
+      "label": "Psalm 105",
+      "version": "bcp1979",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 738"
+      },
+      "category": ["Psalm"],
+      "hidden": false,
+      "language": "en",
+      "slug": "psalm_105"
+    }
+  ]
+}

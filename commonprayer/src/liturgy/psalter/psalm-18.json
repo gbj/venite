@@ -1,0 +1,342 @@
+{
+  "data": [
+    {
+      "type": "psalm",
+      "label": "Psalm 18",
+      "value": [
+        {
+          "label": "Part I",
+          "value": [
+            {
+              "verse": "I love you, O LORD my strength, *",
+              "number": "1",
+              "halfverse": "O LORD my stronghold, my crag, and my haven.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "My God, my rock in whom I put my trust, *",
+              "number": "2",
+              "halfverse": "my shield, the horn of my salvation, and my refuge;\n you are worthy of praise."
+            },
+            {
+              "number": "3",
+              "verse": "I will call upon the LORD, *",
+              "halfverse": "and so shall I be saved from my enemies.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and the torrents of oblivion made me afraid.",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "The breakers of death rolled over me, *"
+            },
+            {
+              "halfverse": "and the snares of death were set for me.",
+              "type": "psalm-verse",
+              "number": "5",
+              "verse": "The cords of hell entangled me, *"
+            },
+            {
+              "number": "6",
+              "type": "psalm-verse",
+              "halfverse": "and cried out to my God for help.",
+              "verse": "I called upon the LORD in my distress *"
+            },
+            {
+              "verse": "He heard my voice from his heavenly dwelling; *",
+              "halfverse": "my cry of anguish came to his ears.",
+              "number": "7",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The earth reeled and rocked; *",
+              "halfverse": "the roots of the mountains shook;\n they reeled because of his anger.",
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "verse": "Smoke rose from his nostrils\nand a consuming fire out of his mouth; *",
+              "type": "psalm-verse",
+              "halfverse": "hot burning coals blazed forth from him."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "halfverse": "with a storm cloud under his feet.",
+              "verse": "He parted the heavens and came down *"
+            },
+            {
+              "verse": "He mounted on cherubim and flew; *",
+              "number": "11",
+              "halfverse": "he swooped on the wings of the wind.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he made dark waters and thick clouds his pavilion.",
+              "verse": "He wrapped darkness about him; *",
+              "number": "12",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "From the brightness of his presence, through the clouds, *",
+              "halfverse": "burst hailstones and coals of fire.",
+              "type": "psalm-verse",
+              "number": "13"
+            },
+            {
+              "halfverse": "the Most High uttered his voice.",
+              "number": "14",
+              "verse": "The LORD thundered out of heaven; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he hurled thunderbolts and routed them.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "He loosed his arrows and scattered them; *"
+            },
+            {
+              "halfverse": "at your battle cry, O LORD,\n at the blast of the breath of your nostrils.",
+              "type": "psalm-verse",
+              "number": "16",
+              "verse": "The beds of the seas were uncovered,\nand the foundations of the world laid bare, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He reached down from on high and grasped me; *",
+              "number": "17",
+              "halfverse": "he drew me out of great waters."
+            },
+            {
+              "halfverse": "for they were too mighty for me.",
+              "number": "18",
+              "verse": "He delivered me from my strong enemies\nand from those who hated me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but the LORD was my support.",
+              "verse": "They confronted me in the day of my disaster; *",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he rescued me because he delighted in me.",
+              "verse": "He brought me out into an open place; *",
+              "number": "20",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        },
+        {
+          "label": "Part II",
+          "value": [
+            {
+              "halfverse": "because my hands were clean he rewarded me;",
+              "verse": "The LORD rewarded me because of my righteous dealing; *",
+              "type": "psalm-verse",
+              "number": "21"
+            },
+            {
+              "halfverse": "and have not offended against my God;",
+              "type": "psalm-verse",
+              "verse": "For I have kept the ways of the LORD *",
+              "number": "22"
+            },
+            {
+              "halfverse": "and his decrees I have not put away from me;",
+              "verse": "For all his judgments are before my eyes, *",
+              "type": "psalm-verse",
+              "number": "23"
+            },
+            {
+              "halfverse": "and have kept myself from iniquity;",
+              "number": "24",
+              "type": "psalm-verse",
+              "verse": "For I have been blameless with him *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "25",
+              "halfverse": "because of the cleanness of my hands in his sight.",
+              "verse": "Therefore the LORD rewarded me according to my righteous dealing, *"
+            },
+            {
+              "halfverse": "with the forthright you show yourself forthright.",
+              "type": "psalm-verse",
+              "verse": "With the faithful you show yourself faithful, O God; *",
+              "number": "26"
+            },
+            {
+              "number": "27",
+              "type": "psalm-verse",
+              "verse": "With the pure you show yourself pure, *",
+              "halfverse": "but with the crooked you are wily."
+            },
+            {
+              "number": "28",
+              "type": "psalm-verse",
+              "halfverse": "but you will humble the haughty eyes.",
+              "verse": "You will save a lowly people, *"
+            },
+            {
+              "halfverse": "my God, you make my darkness bright.",
+              "number": "29",
+              "type": "psalm-verse",
+              "verse": "You, O LORD, are my lamp; *"
+            },
+            {
+              "number": "30",
+              "type": "psalm-verse",
+              "verse": "With you I will break down an enclosure; *",
+              "halfverse": "with the help of my God I will scale any wall."
+            },
+            {
+              "halfverse": "he is a shield to all who trust in him.",
+              "number": "31",
+              "type": "psalm-verse",
+              "verse": "As for God, his ways are perfect;\nthe words of the LORD are tried in the fire; *"
+            },
+            {
+              "verse": "For who is God, but the LORD? *",
+              "number": "32",
+              "type": "psalm-verse",
+              "halfverse": "who is the Rock, except our God?"
+            },
+            {
+              "verse": "It is God who girds me about with strength *",
+              "halfverse": "and makes my way secure.",
+              "number": "33",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and lets me stand firm on the heights.",
+              "type": "psalm-verse",
+              "verse": "He makes me sure-footed like a deer *",
+              "number": "34"
+            },
+            {
+              "halfverse": "and my arms for bending even a bow of bronze.",
+              "type": "psalm-verse",
+              "verse": "He trains my hands for battle *",
+              "number": "35"
+            },
+            {
+              "halfverse": "your right hand also sustains me;\n your loving care makes me great.",
+              "number": "36",
+              "type": "psalm-verse",
+              "verse": "You have given me your shield of victory; *"
+            },
+            {
+              "halfverse": "and my ankles do not give way.",
+              "number": "37",
+              "type": "psalm-verse",
+              "verse": "You lengthen my stride beneath me, *"
+            },
+            {
+              "halfverse": "I will not turn back till I have destroyed them.",
+              "type": "psalm-verse",
+              "verse": "I pursue my enemies and overtake them; *",
+              "number": "38"
+            },
+            {
+              "verse": "I strike them down, and they cannot rise; *",
+              "halfverse": "they fall defeated at my feet.",
+              "number": "39",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have cast down my adversaries beneath me;\n you have put my enemies to flight.",
+              "verse": "You have girded me with strength for the battle; *",
+              "number": "40"
+            },
+            {
+              "verse": "I destroy those who hate me;\nthey cry out, but there is none to help them; *",
+              "type": "psalm-verse",
+              "halfverse": "they cry to the LORD, but he does not answer.",
+              "number": "41"
+            },
+            {
+              "number": "42",
+              "verse": "I beat them small like dust before the wind; *",
+              "type": "psalm-verse",
+              "halfverse": "I trample them like mud in the streets."
+            },
+            {
+              "number": "43",
+              "verse": "You deliver me from the strife of the peoples; *",
+              "type": "psalm-verse",
+              "halfverse": "you put me at the head of the nations."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "44",
+              "halfverse": "strangers will cringe before me.",
+              "verse": "A people I have not known shall serve me;\nno sooner shall they hear than they shall obey me; *"
+            },
+            {
+              "verse": "The foreign peoples will lose heart; *",
+              "number": "45",
+              "halfverse": "they shall come trembling out of their strongholds.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "Exalted is the God of my salvation!",
+              "type": "psalm-verse",
+              "verse": "The LORD lives!  Blessed is my Rock! *",
+              "number": "46"
+            },
+            {
+              "halfverse": "and cast down the peoples beneath me.",
+              "verse": "He is the God who gave me victory *",
+              "type": "psalm-verse",
+              "number": "47"
+            },
+            {
+              "verse": "You rescued me from the fury of my enemies;\nyou exalted me above those who rose against me; *",
+              "number": "48",
+              "type": "psalm-verse",
+              "halfverse": "you saved me from my deadly foe."
+            },
+            {
+              "verse": "Therefore will I extol you among the nations, O LORD, *",
+              "number": "49",
+              "halfverse": "and sing praises to your Name.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "50",
+              "type": "psalm-verse",
+              "halfverse": "he shows loving-kindness to his anointed,\n to David and his descendants for ever.",
+              "verse": "He multiplies the victories of his king; *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "version_label": null,
+      "style": "psalm",
+      "language": "en",
+      "metadata": {
+        "latinname": "Diligam te, Domine.",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "number": "18",
+        "localname": "Psalm 18"
+      },
+      "slug": "psalm_18",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "p. 602",
+        "source": "bcp1979"
+      },
+      "version": "bcp1979",
+      "category": ["Psalm"],
+      "citation": null
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "data": [
+    {
+      "version": "bcp1979",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Misericordias Domini",
+        "omit_antiphon": false,
+        "number": "89",
+        "localname": "Psalm 89",
+        "omit_gloria": false
+      },
+      "style": "psalm",
+      "version_label": null,
+      "value": [
+        {
+          "label": "Part I",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "from age to age my mouth will proclaim your faithfulness.",
+              "number": "1",
+              "verse": "Your love, O LORD, for ever will I sing; *"
+            },
+            {
+              "verse": "For I am persuaded that your love is established for ever; *",
+              "type": "psalm-verse",
+              "halfverse": "you have set your faithfulness firmly in the heavens.",
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "I have sworn an oath to David my servant:",
+              "verse": "“I have made a covenant with my chosen one; *"
+            },
+            {
+              "halfverse": "and preserve your throne for all generations.’”",
+              "type": "psalm-verse",
+              "number": "4",
+              "verse": "‘I will establish your line for ever, *"
+            },
+            {
+              "number": "5",
+              "halfverse": "and to your faithfulness in the assembly of the holy ones;",
+              "verse": "The heavens bear witness to your wonders, O LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "who is like the LORD among the gods?",
+              "type": "psalm-verse",
+              "verse": "For who in the skies can be compared to the LORD? *"
+            },
+            {
+              "halfverse": "great and terrible to all those round about him.",
+              "verse": "God is much to be feared in the council of the holy ones, *",
+              "type": "psalm-verse",
+              "number": "7"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "O mighty LORD, your faithfulness is all around you.",
+              "verse": "Who is like you, LORD God of hosts? *"
+            },
+            {
+              "verse": "You rule the raging of the sea *",
+              "type": "psalm-verse",
+              "halfverse": "and still the surging of its waves.",
+              "number": "9"
+            },
+            {
+              "verse": "You have crushed Rahab of the deep with a deadly wound; *",
+              "number": "10",
+              "halfverse": "you have scattered your enemies with your mighty arm.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Yours are the heavens; the earth also is yours; *",
+              "halfverse": "you laid the foundations of the world and all that is in it.",
+              "number": "11",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "Tabor and Hermon rejoice in your Name.",
+              "verse": "You have made the north and the south; *",
+              "number": "12"
+            },
+            {
+              "halfverse": "strong is your hand and high is your right hand.",
+              "number": "13",
+              "verse": "You have a mighty arm; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "love and truth go before your face.",
+              "verse": "Righteousness and justice are the foundations of your throne; *",
+              "type": "psalm-verse",
+              "number": "14"
+            },
+            {
+              "halfverse": "they walk, O LORD, in the light of your presence.",
+              "verse": "Happy are the people who know the festal shout! *",
+              "type": "psalm-verse",
+              "number": "15"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "They rejoice daily in your Name; *",
+              "halfverse": "they are jubilant in your righteousness.",
+              "number": "16"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "17",
+              "verse": "For you are the glory of their strength, *",
+              "halfverse": "and by your favor our might is exalted."
+            },
+            {
+              "number": "18",
+              "halfverse": "The Holy One of Israel is our King.",
+              "verse": "Truly, the LORD is our ruler; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        },
+        {
+          "label": "Part II",
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "19",
+              "verse": "You spoke once in vision and said to your faithful people: *",
+              "halfverse": "“I have set the crown upon a warrior\n and have exalted one chosen out of the people."
+            },
+            {
+              "number": "20",
+              "type": "psalm-verse",
+              "halfverse": "with my holy oil have I anointed him.",
+              "verse": "I have found David my servant; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "21",
+              "halfverse": "and my arm will make him strong.",
+              "verse": "My hand will hold him fast *"
+            },
+            {
+              "halfverse": "nor any wicked man bring him down.",
+              "number": "22",
+              "verse": "No enemy shall deceive him, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "23",
+              "halfverse": "and strike down those who hate him.",
+              "type": "psalm-verse",
+              "verse": "I will crush his foes before him *"
+            },
+            {
+              "verse": "My faithfulness and love shall be with him, *",
+              "type": "psalm-verse",
+              "number": "24",
+              "halfverse": "and he shall be victorious through my Name."
+            },
+            {
+              "verse": "I shall make his dominion extend *",
+              "number": "25",
+              "halfverse": "from the Great Sea to the River.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He will say to me, ‘You are my Father, *",
+              "type": "psalm-verse",
+              "halfverse": "my God, and the rock of my salvation.’",
+              "number": "26"
+            },
+            {
+              "verse": "I will make him my firstborn *",
+              "number": "27",
+              "type": "psalm-verse",
+              "halfverse": "and higher than the kings of the earth."
+            },
+            {
+              "number": "28",
+              "halfverse": "and my covenant will stand firm for him.",
+              "verse": "I will keep my love for him for ever, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "29",
+              "type": "psalm-verse",
+              "halfverse": "and his throne as the days of heaven.”",
+              "verse": "I will establish his line for ever *"
+            },
+            {
+              "halfverse": "and do not walk according to my judgments;",
+              "number": "30",
+              "type": "psalm-verse",
+              "verse": "“If his children forsake my law *"
+            },
+            {
+              "verse": "If they break my statutes *",
+              "halfverse": "and do not keep my commandments;",
+              "number": "31",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I will punish their transgressions with a rod *",
+              "type": "psalm-verse",
+              "number": "32",
+              "halfverse": "and their iniquities with the lash;"
+            },
+            {
+              "verse": "But I will not take my love from him, *",
+              "type": "psalm-verse",
+              "halfverse": "nor let my faithfulness prove false.",
+              "number": "33"
+            },
+            {
+              "halfverse": "nor change what has gone out of my lips.",
+              "number": "34",
+              "type": "psalm-verse",
+              "verse": "I will not break my covenant, *"
+            },
+            {
+              "halfverse": "‘I will not lie to David.",
+              "verse": "Once for all I have sworn by my holiness: *",
+              "number": "35",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and his throne as the sun before me;",
+              "verse": "His line shall endure for ever *",
+              "type": "psalm-verse",
+              "number": "36"
+            },
+            {
+              "verse": "It shall stand fast for evermore like the moon, *",
+              "halfverse": "the abiding witness in the sky.’”",
+              "number": "37",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "you have become enraged at him.",
+              "verse": "But you have cast off and rejected your anointed; *",
+              "number": "38"
+            },
+            {
+              "halfverse": "defiled his crown, and hurled it to the ground.",
+              "number": "39",
+              "type": "psalm-verse",
+              "verse": "You have broken your covenant with your servant, *"
+            },
+            {
+              "verse": "You have breached all his walls *",
+              "halfverse": "and laid his strongholds in ruins.",
+              "number": "40",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he has become the scorn of his neighbors.",
+              "number": "41",
+              "verse": "All who pass by despoil him; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You have exalted the right hand of his foes *",
+              "halfverse": "and made all his enemies rejoice.",
+              "number": "42"
+            },
+            {
+              "number": "43",
+              "verse": "You have turned back the edge of his sword *",
+              "halfverse": "and have not sustained him in battle.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "44",
+              "type": "psalm-verse",
+              "halfverse": "and cast his throne to the ground.",
+              "verse": "You have put an end to his splendor *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You have cut short the days of his youth *",
+              "halfverse": "and have covered him with shame.",
+              "number": "45"
+            },
+            {
+              "number": "46",
+              "halfverse": "how long will your anger burn like fire?",
+              "verse": "How long will you hide yourself, O LORD?\nwill you hide yourself for ever? *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Remember, LORD, how short life is, *",
+              "halfverse": "how frail you have made all flesh.",
+              "number": "47",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "48",
+              "halfverse": "who can save himself from the power of the grave?",
+              "verse": "Who can live and not see death? *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "which you promised David in your faithfulness?",
+              "number": "49",
+              "verse": "Where, Lord, are your loving-kindnesses of old, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "how I carry in my bosom the taunts of many peoples,",
+              "verse": "Remember, Lord, how your servant is mocked, *",
+              "type": "psalm-verse",
+              "number": "50"
+            },
+            {
+              "number": "51",
+              "type": "psalm-verse",
+              "halfverse": "which they hurled at the heels of your anointed.",
+              "verse": "The taunts your enemies have hurled, O LORD, *"
+            },
+            {
+              "number": "52",
+              "verse": "Blessed be the LORD for evermore! *",
+              "halfverse": "Amen, I say, Amen.",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 713"
+      },
+      "category": ["Psalm"],
+      "type": "psalm",
+      "language": "en",
+      "citation": null,
+      "label": "Psalm 89",
+      "slug": "psalm_89"
+    }
+  ]
+}

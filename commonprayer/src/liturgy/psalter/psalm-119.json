@@ -1,0 +1,1218 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "who walk in the law of the LORD!",
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "Happy are they whose way is blameless, *"
+            },
+            {
+              "verse": "Happy are they who observe his decrees *",
+              "type": "psalm-verse",
+              "halfverse": "and seek him with all their hearts!",
+              "number": "2"
+            },
+            {
+              "verse": "Who never do any wrong, *",
+              "number": "3",
+              "halfverse": "but always walk in his ways.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "that we should fully keep them.",
+              "verse": "You laid down your commandments, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Oh, that my ways were made so direct *",
+              "number": "5",
+              "halfverse": "that I might keep your statutes!"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "when I regard all your commandments.",
+              "verse": "Then I should not be put to shame, *",
+              "number": "6"
+            },
+            {
+              "verse": "I will thank you with an unfeigned heart, *",
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "when I have learned your righteous judgments."
+            },
+            {
+              "halfverse": "do not utterly forsake me.",
+              "verse": "I will keep your statutes; *",
+              "number": "8",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Aleph"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "By keeping to your words.",
+              "number": "9",
+              "type": "psalm-verse",
+              "verse": "How shall a young man cleanse his way? *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "10",
+              "verse": "With my whole heart I seek you; *",
+              "halfverse": "let me not stray from your commandments."
+            },
+            {
+              "verse": "I treasure your promise in my heart, *",
+              "halfverse": "that I may not sin against you.",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "number": "12",
+              "type": "psalm-verse",
+              "verse": "Blessed are you, O LORD; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "all the judgments of your mouth.",
+              "verse": "With my lips will I recite *",
+              "number": "13"
+            },
+            {
+              "halfverse": "than in all manner of riches.",
+              "verse": "I have taken greater delight in the way of your decrees *",
+              "number": "14",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and give attention to your ways.",
+              "type": "psalm-verse",
+              "verse": "I will meditate on your commandments *",
+              "number": "15"
+            },
+            {
+              "number": "16",
+              "verse": "My delight is in your statutes; *",
+              "type": "psalm-verse",
+              "halfverse": "I will not forget your word."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Beth"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "that I may live and keep your word.",
+              "type": "psalm-verse",
+              "verse": "Deal bountifully with your servant, *",
+              "number": "17"
+            },
+            {
+              "verse": "Open my eyes, that I may see *",
+              "number": "18",
+              "halfverse": "the wonders of your law.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "do not hide your commandments from me.",
+              "number": "19",
+              "verse": "I am a stranger here on earth; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "with longing for your judgments.",
+              "verse": "My soul is consumed at all times *",
+              "number": "20",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "cursed are they who stray from your commandments!",
+              "number": "21",
+              "verse": "You have rebuked the insolent; *"
+            },
+            {
+              "verse": "Turn from me shame and rebuke, *",
+              "number": "22",
+              "halfverse": "for I have kept your decrees.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Even though rulers sit and plot against me, *",
+              "number": "23",
+              "halfverse": "I will meditate on your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "24",
+              "verse": "For your decrees are my delight, *",
+              "type": "psalm-verse",
+              "halfverse": "and they are my counselors."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Gimel"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "give me life according to your word.",
+              "number": "25",
+              "verse": "My soul cleaves to the dust; *"
+            },
+            {
+              "verse": "I have confessed my ways, and you answered me; *",
+              "number": "26",
+              "halfverse": "instruct me in your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Make me understand the way of your commandments, *",
+              "number": "27",
+              "type": "psalm-verse",
+              "halfverse": "that I may meditate on your marvelous works."
+            },
+            {
+              "verse": "My soul melts away for sorrow; *",
+              "halfverse": "strengthen me according to your word.",
+              "type": "psalm-verse",
+              "number": "28"
+            },
+            {
+              "verse": "Take from me the way of lying; *",
+              "number": "29",
+              "type": "psalm-verse",
+              "halfverse": "let me find grace through your law."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I have set your judgments before me.",
+              "verse": "I have chosen the way of faithfulness; *",
+              "number": "30"
+            },
+            {
+              "verse": "I hold fast to your decrees; *",
+              "number": "31",
+              "halfverse": "O LORD, let me not be put to shame.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for you have set my heart at liberty.",
+              "verse": "I will run the way of your commandments, *",
+              "number": "32"
+            }
+          ],
+          "label": "Psalm 119: Daleth"
+        },
+        {
+          "value": [
+            {
+              "number": "33",
+              "verse": "Teach me, O LORD, the way of your statutes, *",
+              "type": "psalm-verse",
+              "halfverse": "and I shall keep it to the end."
+            },
+            {
+              "halfverse": "I shall keep it with all my heart.",
+              "type": "psalm-verse",
+              "number": "34",
+              "verse": "Give me understanding, and I shall keep your law; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Make me go in the path of your commandments, *",
+              "halfverse": "for that is my desire.",
+              "number": "35"
+            },
+            {
+              "halfverse": "and not to unjust gain.",
+              "verse": "Incline my heart to your decrees *",
+              "type": "psalm-verse",
+              "number": "36"
+            },
+            {
+              "number": "37",
+              "verse": "Turn my eyes from watching what is worthless; *",
+              "type": "psalm-verse",
+              "halfverse": "give me life in your ways."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "which you make to those who fear you.",
+              "number": "38",
+              "verse": "Fulfill your promise to your servant, *"
+            },
+            {
+              "verse": "Turn away the reproach which I dread, *",
+              "number": "39",
+              "halfverse": "because your judgments are good.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Behold, I long for your commandments; *",
+              "number": "40",
+              "halfverse": "in your righteousness preserve my life.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: He"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Let your loving-kindness come to me, O LORD, *",
+              "halfverse": "and your salvation, according to your promise.",
+              "number": "41"
+            },
+            {
+              "verse": "Then shall I have a word for those who taunt me, *",
+              "number": "42",
+              "type": "psalm-verse",
+              "halfverse": "because I trust in your words."
+            },
+            {
+              "halfverse": "for my hope is in your judgments.",
+              "verse": "Do not take the word of truth out of my mouth, *",
+              "number": "43",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I shall keep it for ever and ever.",
+              "verse": "I shall continue to keep your law; *",
+              "type": "psalm-verse",
+              "number": "44"
+            },
+            {
+              "halfverse": "because I study your commandments.",
+              "type": "psalm-verse",
+              "verse": "I will walk at liberty, *",
+              "number": "45"
+            },
+            {
+              "halfverse": "and will not be ashamed.",
+              "type": "psalm-verse",
+              "number": "46",
+              "verse": "I will tell of your decrees before kings *"
+            },
+            {
+              "halfverse": "which I have always loved.",
+              "verse": "I delight in your commandments, *",
+              "number": "47",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "48",
+              "halfverse": "and I will meditate on your statutes.",
+              "verse": "I will lift up my hands to your commandments, *",
+              "type": "psalm-verse"
+            }
+          ],
+          "label": "Psalm 119: Waw"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "because you have given me hope.",
+              "number": "49",
+              "verse": "Remember your word to your servant, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "50",
+              "halfverse": "that your promise gives me life.",
+              "verse": "This is my comfort in my trouble, *"
+            },
+            {
+              "halfverse": "but I have not turned from your law.",
+              "verse": "The proud have derided me cruelly, *",
+              "type": "psalm-verse",
+              "number": "51"
+            },
+            {
+              "halfverse": "O LORD, I take great comfort.",
+              "number": "52",
+              "type": "psalm-verse",
+              "verse": "When I remember your judgments of old, *"
+            },
+            {
+              "halfverse": "because of the wicked who forsake your law.",
+              "number": "53",
+              "verse": "I am filled with a burning rage, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "54",
+              "halfverse": "wherever I have lived as a stranger.",
+              "verse": "Your statutes have been like songs to me *"
+            },
+            {
+              "halfverse": "and dwell upon your law.",
+              "number": "55",
+              "type": "psalm-verse",
+              "verse": "I remember your Name in the night, O LORD, *"
+            },
+            {
+              "number": "56",
+              "verse": "This is how it has been with me, *",
+              "type": "psalm-verse",
+              "halfverse": "because I have kept your commandments."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Zayin"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "I have promised to keep your words.",
+              "verse": "You only are my portion, O LORD; *",
+              "type": "psalm-verse",
+              "number": "57"
+            },
+            {
+              "verse": "I entreat you with all my heart, *",
+              "type": "psalm-verse",
+              "halfverse": "be merciful to me according to your promise.",
+              "number": "58"
+            },
+            {
+              "verse": "I have considered my ways *",
+              "type": "psalm-verse",
+              "halfverse": "and turned my feet toward your decrees.",
+              "number": "59"
+            },
+            {
+              "number": "60",
+              "verse": "I hasten and do not tarry *",
+              "type": "psalm-verse",
+              "halfverse": "to keep your commandments."
+            },
+            {
+              "halfverse": "I do not forget your law.",
+              "number": "61",
+              "type": "psalm-verse",
+              "verse": "Though the cords of the wicked entangle me, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "because of your righteous judgments.",
+              "number": "62",
+              "verse": "At midnight I will rise to give you thanks, *"
+            },
+            {
+              "halfverse": "and of those who keep your commandments.",
+              "verse": "I am a companion of all who fear you *",
+              "number": "63",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "verse": "The earth, O LORD, is full of your love; *",
+              "type": "psalm-verse",
+              "number": "64"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Heth"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "O LORD, you have dealt graciously with your servant, *",
+              "type": "psalm-verse",
+              "halfverse": "according to your word.",
+              "number": "65"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "66",
+              "halfverse": "for I have believed in your commandments.",
+              "verse": "Teach me discernment and knowledge, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Before I was afflicted I went astray, *",
+              "number": "67",
+              "halfverse": "but now I keep your word."
+            },
+            {
+              "halfverse": "instruct me in your statutes.",
+              "type": "psalm-verse",
+              "verse": "You are good and you bring forth good; *",
+              "number": "68"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The proud have smeared me with lies, *",
+              "number": "69",
+              "halfverse": "but I will keep your commandments with my whole heart."
+            },
+            {
+              "number": "70",
+              "halfverse": "but my delight is in your law.",
+              "verse": "Their heart is gross and fat, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "71",
+              "halfverse": "that I might learn your statutes.",
+              "verse": "It is good for me that I have been afflicted, *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "72",
+              "type": "psalm-verse",
+              "halfverse": "than thousands in gold and silver.",
+              "verse": "The law of your mouth is dearer to me *"
+            }
+          ],
+          "label": "Psalm 119: Teth"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "give me understanding, that I may learn your commandments.",
+              "type": "psalm-verse",
+              "verse": "Your hands have made me and fashioned me; *",
+              "number": "73"
+            },
+            {
+              "halfverse": "because I trust in your word.",
+              "verse": "Those who fear you will be glad when they see me, *",
+              "type": "psalm-verse",
+              "number": "74"
+            },
+            {
+              "verse": "I know, O LORD, that your judgments are right *",
+              "halfverse": "and that in faithfulness you have afflicted me.",
+              "number": "75",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Let your loving-kindness be my comfort, *",
+              "number": "76",
+              "halfverse": "as you have promised to your servant.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "77",
+              "halfverse": "for your law is my delight.",
+              "type": "psalm-verse",
+              "verse": "Let your compassion come to me, that I may live, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "but I will meditate on your commandments.",
+              "verse": "Let the arrogant be put to shame, for they wrong me with lies; *",
+              "number": "78"
+            },
+            {
+              "number": "79",
+              "type": "psalm-verse",
+              "verse": "Let those who fear you turn to me, *",
+              "halfverse": "and also those who know your decrees."
+            },
+            {
+              "number": "80",
+              "halfverse": "that I may not be put to shame.",
+              "type": "psalm-verse",
+              "verse": "Let my heart be sound in your statutes, *"
+            }
+          ],
+          "label": "Psalm 119: Yodh"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "81",
+              "halfverse": "I have put my hope in your word.",
+              "type": "psalm-verse",
+              "verse": "My soul has longed for your salvation; *"
+            },
+            {
+              "verse": "My eyes have failed from watching for your promise, *",
+              "type": "psalm-verse",
+              "number": "82",
+              "halfverse": "and I say, “When will you comfort me?”"
+            },
+            {
+              "halfverse": "but I have not forgotten your statutes.",
+              "type": "psalm-verse",
+              "verse": "I have become like a leather flask in the smoke, *",
+              "number": "83"
+            },
+            {
+              "verse": "How much longer must I wait? *",
+              "halfverse": "when will you give judgment against those who persecute me?",
+              "number": "84",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "85",
+              "verse": "The proud have dug pits for me; *",
+              "type": "psalm-verse",
+              "halfverse": "they do not keep your law."
+            },
+            {
+              "halfverse": "help me, for they persecute me with lies.",
+              "number": "86",
+              "verse": "All your commandments are true; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "They had almost made an end of me on earth, *",
+              "number": "87",
+              "type": "psalm-verse",
+              "halfverse": "but I have not forsaken your commandments."
+            },
+            {
+              "verse": "In your loving-kindness, revive me, *",
+              "type": "psalm-verse",
+              "halfverse": "that I may keep the decrees of your mouth.",
+              "number": "88"
+            }
+          ],
+          "label": "Psalm 119: Kaph"
+        },
+        {
+          "value": [
+            {
+              "verse": "O LORD, your word is everlasting; *",
+              "number": "89",
+              "halfverse": "it stands firm in the heavens.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "90",
+              "verse": "Your faithfulness remains from one generation to another; *",
+              "halfverse": "you established the earth, and it abides.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "for all things are your servants.",
+              "type": "psalm-verse",
+              "verse": "By your decree these continue to this day, *",
+              "number": "91"
+            },
+            {
+              "halfverse": "I should have perished in my affliction.",
+              "number": "92",
+              "type": "psalm-verse",
+              "verse": "If my delight had not been in your law, *"
+            },
+            {
+              "halfverse": "because by them you give me life.",
+              "type": "psalm-verse",
+              "number": "93",
+              "verse": "I will never forget your commandments, *"
+            },
+            {
+              "halfverse": "for I study your commandments.",
+              "number": "94",
+              "type": "psalm-verse",
+              "verse": "I am yours; oh, that you would save me! *"
+            },
+            {
+              "verse": "Though the wicked lie in wait for me to destroy me, *",
+              "halfverse": "I will apply my mind to your decrees.",
+              "type": "psalm-verse",
+              "number": "95"
+            },
+            {
+              "verse": "I see that all things come to an end, *",
+              "number": "96",
+              "halfverse": "but your commandment has no bounds.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Lamedh"
+        },
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "97",
+              "verse": "Oh, how I love your law! *",
+              "halfverse": "all the day long it is in my mind."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "98",
+              "verse": "Your commandment has made me wiser than my enemies, *",
+              "halfverse": "and it is always with me."
+            },
+            {
+              "verse": "I have more understanding than all my teachers, *",
+              "number": "99",
+              "halfverse": "for your decrees are my study.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "because I observe your commandments.",
+              "type": "psalm-verse",
+              "number": "100",
+              "verse": "I am wiser than the elders, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "that I may keep your word.",
+              "verse": "I restrain my feet from every evil way, *",
+              "number": "101"
+            },
+            {
+              "halfverse": "because you yourself have taught me.",
+              "verse": "I do not shrink from your judgments, *",
+              "number": "102",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "How sweet are your words to my taste! *",
+              "type": "psalm-verse",
+              "halfverse": "they are sweeter than honey to my mouth.",
+              "number": "103"
+            },
+            {
+              "number": "104",
+              "halfverse": "therefore I hate every lying way.",
+              "verse": "Through your commandments I gain understanding; *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Mem"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "105",
+              "type": "psalm-verse",
+              "verse": "Your word is a lantern to my feet *",
+              "halfverse": "and a light upon my path."
+            },
+            {
+              "number": "106",
+              "halfverse": "to keep your righteous judgments.",
+              "type": "psalm-verse",
+              "verse": "I have sworn and am determined *"
+            },
+            {
+              "halfverse": "preserve my life, O LORD, according to your word.",
+              "verse": "I am deeply troubled; *",
+              "type": "psalm-verse",
+              "number": "107"
+            },
+            {
+              "number": "108",
+              "verse": "Accept, O LORD, the willing tribute of my lips, *",
+              "halfverse": "and teach me your judgments.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "yet I do not forget your law.",
+              "number": "109",
+              "verse": "My life is always in my hand, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but I have not strayed from your commandments.",
+              "number": "110",
+              "type": "psalm-verse",
+              "verse": "The wicked have set a trap for me, *"
+            },
+            {
+              "number": "111",
+              "halfverse": "truly, they are the joy of my heart.",
+              "type": "psalm-verse",
+              "verse": "Your decrees are my inheritance for ever; *"
+            },
+            {
+              "verse": "I have applied my heart to fulfill your statutes *",
+              "type": "psalm-verse",
+              "halfverse": "for ever and to the end.",
+              "number": "112"
+            }
+          ],
+          "label": "Psalm 119: Nun"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "but your law do I love.",
+              "number": "113",
+              "type": "psalm-verse",
+              "verse": "I hate those who have a divided heart, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You are my refuge and shield; *",
+              "halfverse": "my hope is in your word.",
+              "number": "114"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Away from me, you wicked! *",
+              "halfverse": "I will keep the commandments of my God.",
+              "number": "115"
+            },
+            {
+              "verse": "Sustain me according to your promise, that I may live, *",
+              "number": "116",
+              "halfverse": "and let me not be disappointed in my hope.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Hold me up, and I shall be safe, *",
+              "halfverse": "and my delight shall be ever in your statutes.",
+              "number": "117",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "You spurn all who stray from your statutes; *",
+              "halfverse": "their deceitfulness is in vain.",
+              "type": "psalm-verse",
+              "number": "118"
+            },
+            {
+              "number": "119",
+              "type": "psalm-verse",
+              "halfverse": "therefore I love your decrees.",
+              "verse": "In your sight all the wicked of the earth are but dross; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "I am afraid of your judgments.",
+              "number": "120",
+              "verse": "My flesh trembles with dread of you; *"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Samekh"
+        },
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "121",
+              "verse": "I have done what is just and right; *",
+              "halfverse": "do not deliver me to my oppressors."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "let not the proud oppress me.",
+              "verse": "Be surety for your servant’s good; *",
+              "number": "122"
+            },
+            {
+              "halfverse": "and for your righteous promise.",
+              "verse": "My eyes have failed from watching for your salvation *",
+              "number": "123",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and teach me your statutes.",
+              "verse": "Deal with your servant according to your loving-kindness *",
+              "number": "124",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I am your servant; grant me understanding, *",
+              "halfverse": "that I may know your decrees.",
+              "number": "125",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "126",
+              "halfverse": "for they have broken your law.",
+              "verse": "It is time for you to act, O LORD, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "127",
+              "halfverse": "more than gold and precious stones.",
+              "verse": "Truly, I love your commandments *"
+            },
+            {
+              "halfverse": "all paths of falsehood I abhor.",
+              "type": "psalm-verse",
+              "verse": "I hold all your commandments to be right for me; *",
+              "number": "128"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Ayin"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Your decrees are wonderful; *",
+              "type": "psalm-verse",
+              "number": "129",
+              "halfverse": "therefore I obey them with all my heart."
+            },
+            {
+              "halfverse": "it gives understanding to the simple.",
+              "number": "130",
+              "verse": "When your word goes forth it gives light; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I open my mouth and pant; *",
+              "halfverse": "I long for your commandments.",
+              "number": "131",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Turn to me in mercy, *",
+              "type": "psalm-verse",
+              "halfverse": "as you always do to those who love your Name.",
+              "number": "132"
+            },
+            {
+              "number": "133",
+              "halfverse": "let no iniquity have dominion over me.",
+              "type": "psalm-verse",
+              "verse": "Steady my footsteps in your word; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Rescue me from those who oppress me, *",
+              "halfverse": "and I will keep your commandments.",
+              "number": "134"
+            },
+            {
+              "number": "135",
+              "type": "psalm-verse",
+              "halfverse": "and teach me your statutes.",
+              "verse": "Let your countenance shine upon your servant *"
+            },
+            {
+              "halfverse": "because people do not keep your law.",
+              "type": "psalm-verse",
+              "number": "136",
+              "verse": "My eyes shed streams of tears, *"
+            }
+          ],
+          "label": "Psalm 119: Pe"
+        },
+        {
+          "value": [
+            {
+              "number": "137",
+              "type": "psalm-verse",
+              "halfverse": "and upright are your judgments.",
+              "verse": "You are righteous, O LORD, *"
+            },
+            {
+              "number": "138",
+              "type": "psalm-verse",
+              "verse": "You have issued your decrees *",
+              "halfverse": "with justice and in perfect faithfulness."
+            },
+            {
+              "number": "139",
+              "verse": "My indignation has consumed me, *",
+              "type": "psalm-verse",
+              "halfverse": "because my enemies forget your words."
+            },
+            {
+              "verse": "Your word has been tested to the uttermost, *",
+              "number": "140",
+              "halfverse": "and your servant holds it dear.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "141",
+              "halfverse": "yet I do not forget your commandments.",
+              "verse": "I am small and of little account, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your law is the truth.",
+              "number": "142",
+              "verse": "Your justice is an everlasting justice *"
+            },
+            {
+              "verse": "Trouble and distress have come upon me, *",
+              "number": "143",
+              "type": "psalm-verse",
+              "halfverse": "yet your commandments are my delight."
+            },
+            {
+              "number": "144",
+              "verse": "The righteousness of your decrees is everlasting; *",
+              "type": "psalm-verse",
+              "halfverse": "grant me understanding, that I may live."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Sadhe"
+        },
+        {
+          "value": [
+            {
+              "number": "145",
+              "verse": "I call with my whole heart; *",
+              "halfverse": "answer me, O LORD, that I may keep your statutes.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "I will keep your decrees.",
+              "number": "146",
+              "verse": "I call to you;\noh, that you would save me! *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "147",
+              "halfverse": "for in your word is my trust.",
+              "type": "psalm-verse",
+              "verse": "Early in the morning I cry out to you, *"
+            },
+            {
+              "verse": "My eyes are open in the night watches, *",
+              "type": "psalm-verse",
+              "number": "148",
+              "halfverse": "that I may meditate upon your promise."
+            },
+            {
+              "number": "149",
+              "type": "psalm-verse",
+              "verse": "Hear my voice, O LORD, according to your loving-kindness; *",
+              "halfverse": "according to your judgments, give me life."
+            },
+            {
+              "verse": "They draw near who in malice persecute me; *",
+              "number": "150",
+              "type": "psalm-verse",
+              "halfverse": "they are very far from your law."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "You, O LORD, are near at hand, *",
+              "number": "151",
+              "halfverse": "and all your commandments are true."
+            },
+            {
+              "halfverse": "that you have established them for ever.",
+              "number": "152",
+              "verse": "Long have I known from your decrees *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Qoph"
+        },
+        {
+          "value": [
+            {
+              "number": "153",
+              "halfverse": "for I do not forget your law.",
+              "verse": "Behold my affliction and deliver me, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "according to your promise, give me life.",
+              "number": "154",
+              "verse": "Plead my cause and redeem me; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "for they do not study your statutes.",
+              "number": "155",
+              "verse": "Deliverance is far from the wicked, *"
+            },
+            {
+              "verse": "Great is your compassion, O LORD; *",
+              "type": "psalm-verse",
+              "halfverse": "preserve my life, according to your judgments.",
+              "number": "156"
+            },
+            {
+              "verse": "There are many who persecute and oppress me, *",
+              "halfverse": "yet I have not swerved from your decrees.",
+              "type": "psalm-verse",
+              "number": "157"
+            },
+            {
+              "verse": "I look with loathing at the faithless, *",
+              "halfverse": "for they have not kept your word.",
+              "type": "psalm-verse",
+              "number": "158"
+            },
+            {
+              "verse": "See how I love your commandments! *",
+              "halfverse": "O LORD, in your mercy, preserve me.",
+              "number": "159",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "160",
+              "verse": "The heart of your word is truth; *",
+              "halfverse": "all your righteous judgments endure for evermore."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Resh"
+        },
+        {
+          "value": [
+            {
+              "verse": "Rulers have persecuted me without a cause, *",
+              "number": "161",
+              "halfverse": "but my heart stands in awe of your word.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "162",
+              "halfverse": "as one who finds great spoils.",
+              "type": "psalm-verse",
+              "verse": "I am as glad because of your promise *"
+            },
+            {
+              "number": "163",
+              "verse": "As for lies, I hate and abhor them, *",
+              "type": "psalm-verse",
+              "halfverse": "but your law is my love."
+            },
+            {
+              "number": "164",
+              "halfverse": "because of your righteous judgments.",
+              "verse": "Seven times a day do I praise you, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Great peace have they who love your law; *",
+              "number": "165",
+              "halfverse": "for them there is no stumbling block.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "I have hoped for your salvation, O LORD, *",
+              "type": "psalm-verse",
+              "number": "166",
+              "halfverse": "and have fulfilled your commandments."
+            },
+            {
+              "halfverse": "and I have loved them deeply.",
+              "verse": "I have kept your decrees *",
+              "type": "psalm-verse",
+              "number": "167"
+            },
+            {
+              "verse": "I have kept your commandments and decrees, *",
+              "number": "168",
+              "halfverse": "for all my ways are before you.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Shin"
+        },
+        {
+          "value": [
+            {
+              "verse": "Let my cry come before you, O LORD; *",
+              "number": "169",
+              "halfverse": "give me understanding, according to your word.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "deliver me, according to your promise.",
+              "number": "170",
+              "verse": "Let my supplication come before you; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "when you teach me your statutes.",
+              "number": "171",
+              "verse": "My lips shall pour forth your praise, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "My tongue shall sing of your promise, *",
+              "halfverse": "for all your commandments are righteous.",
+              "number": "172"
+            },
+            {
+              "verse": "Let your hand be ready to help me, *",
+              "number": "173",
+              "type": "psalm-verse",
+              "halfverse": "for I have chosen your commandments."
+            },
+            {
+              "type": "psalm-verse",
+              "number": "174",
+              "verse": "I long for your salvation, O LORD, *",
+              "halfverse": "and your law is my delight."
+            },
+            {
+              "halfverse": "and let your judgments help me.",
+              "number": "175",
+              "type": "psalm-verse",
+              "verse": "Let me live, and I will praise you, *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "176",
+              "halfverse": "search for your servant,\n for I do not forget your commandments.",
+              "verse": "I have gone astray like a sheep that is lost; *"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "Psalm 119: Taw"
+        }
+      ],
+      "version": "bcp1979",
+      "language": "en",
+      "category": ["Psalm"],
+      "citation": null,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 763",
+        "api": "https://www.venite.app/api"
+      },
+      "style": "psalm",
+      "hidden": false,
+      "slug": "psalm_119",
+      "label": "Psalm 119",
+      "type": "psalm",
+      "metadata": {
+        "localname": "Psalm 119",
+        "omit_gloria": false,
+        "number": "119",
+        "latinname": "Beati immaculati",
+        "omit_antiphon": false
+      },
+      "version_label": null
+    }
+  ]
+}

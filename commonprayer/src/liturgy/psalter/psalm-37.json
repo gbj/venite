@@ -1,0 +1,294 @@
+{
+  "data": [
+    {
+      "value": [
+        {
+          "label": "Part I",
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "do not be jealous of those who do wrong.",
+              "verse": "Do not fret yourself because of evildoers; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For they shall soon wither like the grass, *",
+              "type": "psalm-verse",
+              "halfverse": "and like the green grass fade away.",
+              "number": "2"
+            },
+            {
+              "halfverse": "dwell in the land and feed on its riches.",
+              "verse": "Put your trust in the LORD and do good; *",
+              "type": "psalm-verse",
+              "number": "3"
+            },
+            {
+              "verse": "Take delight in the LORD, *",
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and he shall give you your heart’s desire."
+            },
+            {
+              "halfverse": "and he will bring it to pass.",
+              "type": "psalm-verse",
+              "verse": "Commit your way to the LORD and put your trust in him, *",
+              "number": "5"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and your just dealing as the noonday.",
+              "verse": "He will make your righteousness as clear as the light *",
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "and wait patiently for him.",
+              "verse": "Be still before the LORD *"
+            },
+            {
+              "halfverse": "the one who succeeds in evil schemes.",
+              "number": "8",
+              "verse": "Do not fret yourself over the one who prospers, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "do not fret yourself; it leads only to evil.",
+              "verse": "Refrain from anger, leave rage alone; *",
+              "number": "9"
+            },
+            {
+              "halfverse": "but those who wait upon the LORD shall possess the land.",
+              "verse": "For evildoers shall be cut off, *",
+              "number": "10",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "you shall search out their place, but they will not be there.",
+              "verse": "In a little while the wicked shall be no more; *",
+              "type": "psalm-verse",
+              "number": "11"
+            },
+            {
+              "halfverse": "they will delight in abundance of peace.",
+              "type": "psalm-verse",
+              "number": "12",
+              "verse": "But the lowly shall possess the land; *"
+            },
+            {
+              "verse": "The wicked plot against the righteous *",
+              "number": "13",
+              "type": "psalm-verse",
+              "halfverse": "and gnash at them with their teeth."
+            },
+            {
+              "verse": "The Lord laughs at the wicked, *",
+              "type": "psalm-verse",
+              "halfverse": "because he sees that their day will come.",
+              "number": "14"
+            },
+            {
+              "halfverse": "to slaughter those who are upright in their ways.",
+              "type": "psalm-verse",
+              "number": "15",
+              "verse": "The wicked draw their sword and bend their bow\nto strike down the poor and needy, *"
+            },
+            {
+              "halfverse": "and their bow shall be broken.",
+              "type": "psalm-verse",
+              "verse": "Their sword shall go through their own heart, *",
+              "number": "16"
+            },
+            {
+              "number": "17",
+              "halfverse": "is better than great riches of the wicked.",
+              "type": "psalm-verse",
+              "verse": "The little that the righteous has *"
+            },
+            {
+              "verse": "For the power of the wicked shall be broken, *",
+              "number": "18",
+              "halfverse": "but the LORD upholds the righteous.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        },
+        {
+          "label": "Part II",
+          "value": [
+            {
+              "halfverse": "and their inheritance shall last for ever.",
+              "verse": "The LORD cares for the lives of the godly, *",
+              "number": "19",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "20",
+              "verse": "They shall not be ashamed in bad times, *",
+              "halfverse": "and in days of famine they shall have enough.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and the enemies of the LORD, like the glory of the meadows, shall vanish;\n they shall vanish like smoke.",
+              "verse": "As for the wicked, they shall perish, *",
+              "number": "21"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "22",
+              "halfverse": "but the righteous are generous in giving.",
+              "verse": "The wicked borrow and do not repay, *"
+            },
+            {
+              "number": "23",
+              "verse": "Those who are blessed by God shall possess the land, *",
+              "halfverse": "but those who are cursed by him shall be destroyed.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Our steps are directed by the LORD; *",
+              "number": "24",
+              "halfverse": "he strengthens those in whose way he delights."
+            },
+            {
+              "verse": "If they stumble, they shall not fall headlong, *",
+              "number": "25",
+              "type": "psalm-verse",
+              "halfverse": "for the LORD holds them by the hand."
+            },
+            {
+              "verse": "I have been young and now I am old, *",
+              "number": "26",
+              "type": "psalm-verse",
+              "halfverse": "but never have I seen the righteous forsaken,\n or their children begging bread."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "The righteous are always generous in their lending, *",
+              "halfverse": "and their children shall be a blessing.",
+              "number": "27"
+            },
+            {
+              "halfverse": "and dwell in the land for ever.",
+              "verse": "Turn from evil, and do good, *",
+              "number": "28",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "he does not forsake his faithful ones.",
+              "verse": "For the LORD loves justice; *",
+              "number": "29",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "but the offspring of the wicked shall be destroyed.",
+              "type": "psalm-verse",
+              "verse": "They shall be kept safe for ever, *",
+              "number": "30"
+            },
+            {
+              "verse": "The righteous shall possess the land *",
+              "type": "psalm-verse",
+              "number": "31",
+              "halfverse": "and dwell in it for ever."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "and their tongue speaks what is right.",
+              "verse": "The mouth of the righteous utters wisdom, *",
+              "number": "32"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "33",
+              "verse": "The law of their God is in their heart, *",
+              "halfverse": "and their footsteps shall not falter."
+            },
+            {
+              "number": "34",
+              "halfverse": "and seek occasion to kill them.",
+              "verse": "The wicked spy on the righteous *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "The LORD will not abandon them to their hand, *",
+              "number": "35",
+              "type": "psalm-verse",
+              "halfverse": "nor let them be found guilty when brought to trial."
+            },
+            {
+              "halfverse": "he will raise you up to possess the land,\n and when the wicked are cut off, you will see it.",
+              "type": "psalm-verse",
+              "number": "36",
+              "verse": "Wait upon the LORD and keep his way; *"
+            },
+            {
+              "halfverse": "flourishing like a tree in full leaf.",
+              "verse": "I have seen the wicked in their arrogance, *",
+              "type": "psalm-verse",
+              "number": "37"
+            },
+            {
+              "halfverse": "I searched for them, but they could not be found.",
+              "number": "38",
+              "type": "psalm-verse",
+              "verse": "I went by, and behold, they were not there; *"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "39",
+              "halfverse": "for there is a future for the peaceable.",
+              "verse": "Mark those who are honest;\nobserve the upright; *"
+            },
+            {
+              "halfverse": "the future of the wicked is cut off.",
+              "number": "40",
+              "verse": "Transgressors shall be destroyed, one and all; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "41",
+              "halfverse": "he is their stronghold in time of trouble.",
+              "verse": "But the deliverance of the righteous comes from the LORD; *"
+            },
+            {
+              "verse": "The LORD will help them and rescue them; *",
+              "number": "42",
+              "halfverse": "he will rescue them from the wicked and deliver them,\n because they seek refuge in him.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "source": {
+        "source": "bcp1979",
+        "api": "https://www.venite.app/api",
+        "citation": "p. 633"
+      },
+      "type": "psalm",
+      "style": "psalm",
+      "citation": null,
+      "label": "Psalm 37",
+      "category": ["Psalm"],
+      "language": "en",
+      "slug": "psalm_37",
+      "version": "bcp1979",
+      "version_label": null,
+      "metadata": {
+        "localname": "Psalm 37",
+        "omit_gloria": false,
+        "latinname": "Noli aemulari",
+        "number": "37",
+        "omit_antiphon": false
+      }
+    }
+  ]
+}
