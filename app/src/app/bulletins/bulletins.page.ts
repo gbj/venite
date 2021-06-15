@@ -331,6 +331,15 @@ export class BulletinsPage implements OnInit {
           const doc: LiturgicalDocument = JSON.parse(
             e.target.result.toString()
           );
+          if (!doc.sharing) {
+            doc.sharing = {
+              owner: userProfile.uid,
+              organization: (userProfile.orgs || [])[0],
+              status: "published",
+              privacy: "public",
+              collaborators: [],
+            };
+          }
           doc.sharing.owner = userProfile.uid;
           doc.sharing.organization = (userProfile.orgs || [])[0];
           // TODO seems to hang if you immediately join new document; works if you join it from Bulletins page later
