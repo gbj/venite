@@ -420,6 +420,7 @@ export class DocumentService {
           ])
         ),
         map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
+        map((orgs) => orgs.filter((org) => org.slug !== "venite")),
         switchMap((orgs) => {
           if (orgs?.length > 0) {
             return this.afs
