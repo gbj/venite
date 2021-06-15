@@ -38,10 +38,10 @@ export class Psalm extends LiturgicalDocument {
          * something like 'Psalm 80' was passed as citation */
         filtered = this.value;
       } else {
-        this.value.forEach((section) => {
+        (this.value || []).forEach((section) => {
           const newSection = new Array();
 
-          section.value.forEach((verse) => {
+          (section.value || []).forEach((verse) => {
             if (!verse.number || versesInCitation.includes(verse.number)) {
               newSection.push(verse);
             }
@@ -72,7 +72,7 @@ export class Psalm extends LiturgicalDocument {
       verseRanges = search.slice(1);
 
     let verses = new Array();
-    verseRanges.forEach((range) => {
+    (verseRanges || []).forEach((range) => {
       const [first, last] = range.replace(/a-zA-Z/g, '').split(/-|–/);
       if (first && last) {
         for (let ii = parseInt(first); ii <= parseInt(last); ii++) {
