@@ -7,8 +7,11 @@ import { notEmpty } from "./not-empty";
 
 export function headingToHTML(
   doc: Heading,
-  localeStrings: Record<string, string>
+  localeStrings: Record<string, string>,
+  includeLDF = false
 ): string {
+  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+
   const level: number = doc.metadata?.level ? doc.metadata.level : 4,
     isDate = doc?.style == "date",
     isDay = doc?.style == "day",
@@ -25,9 +28,7 @@ export function headingToHTML(
     const children: string[] = [
       headerNode(
         doc?.metadata?.level ?? 3,
-        [
-          value[0] ? `<span>${doc.value[0].replace(/\t/g, "  ")}</span>` : null,
-        ].filter(notEmpty),
+        [value[0] ? doc.value[0]?.replace(/\t/g, "  ") : null].filter(notEmpty),
         true
       ),
       value[1] ? `\t<span>${doc.value[1].replace(/\t/g, "  ")}</span>` : null,
@@ -66,7 +67,10 @@ export function headingToHTML(
     children: string[],
     display: boolean
   ): string | null {
-    return display ? `<h${level}>${children.join("\n")}</h${level}>` : null;
+    const text = children.join("\n");
+    return display && text.trim() !== ""
+      ? `<h${level}>${text}</h${level}>`
+      : null;
   }
 
   function dateNode(): string | null {
@@ -123,9 +127,11 @@ export function headingToHTML(
     day = isDay && doc.day ? dayNode(doc.day) : null;
 
   return (
-    text || day || day
+    (text && text.length > 0 && !(text.length == 0 && text[0].trim() == "")) ||
+    day ||
+    day
       ? [
-          `<article class="heading">`,
+          `<article ${ldf} class="doc heading">`,
           ...(text ? text : []),
           date ? headerNode(level, [date], true) : null,
           day ? headerNode(level, day, true) : null,

@@ -76,6 +76,7 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Responsive Prayers */
@@ -103,7 +104,7 @@ article {
   display: grid;
   grid-template-columns: 2em 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "number verse" "spacing half-verse";
+  grid-template-areas: var(--ldf-psalm-verse-grid, "number verse" "spacing half-verse");
   margin: 0;
 }
 
@@ -111,7 +112,7 @@ article {
   display: grid;
   grid-template-columns: 2em 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "verse verse" "half-verse half-verse";
+  grid-template-areas:"verse verse" "half-verse half-verse";
   margin: 0;
 }
 
@@ -137,4 +138,132 @@ article {
   font-weight: normal;
   font-style: italic;
   font-size: 1em;
+}
+
+/* Option */
+.option > input.option-button {
+  display: none;
+}
+.option > input.option-button:nth-of-type(1):checked ~ section.options {
+  --vh-option-child-1-display: block;
+}
+.option > input.option-button:nth-of-type(2):checked ~ section.options {
+  --vh-option-child-2-display: block;
+}
+.option > input.option-button:nth-of-type(3):checked ~ section.options {
+  --vh-option-child-3-display: block;
+}
+.option > input.option-button:nth-of-type(4):checked ~ section.options {
+  --vh-option-child-4-display: block;
+}
+.option > input.option-button:nth-of-type(5):checked ~ section.options {
+  --vh-option-child-5-display: block;
+}
+.option > input.option-button:nth-of-type(6):checked ~ section.options {
+  --vh-option-child-6-display: block;
+}
+.option > input.option-button:nth-of-type(7):checked ~ section.options {
+  --vh-option-child-7-display: block;
+}
+.option > input.option-button:nth-of-type(8):checked ~ section.options {
+  --vh-option-child-8-display: block;
+}
+.option > input.option-button:nth-of-type(9):checked ~ section.options {
+  --vh-option-child-9-display: block;
+}
+.option > input.option-button:nth-of-type(10):checked ~ section.options {
+  --vh-option-child-10-display: block;
+}
+.option > input.option-button:nth-of-type(11):checked ~ section.options {
+  --vh-option-child-11-display: block;
+}
+.option > input.option-button:nth-of-type(12):checked ~ section.options {
+  --vh-option-child-12-display: block;
+}
+.option > input.option-button:nth-of-type(13):checked ~ section.options {
+  --vh-option-child-13-display: block;
+}
+.option > input.option-button:nth-of-type(14):checked ~ section.options {
+  --vh-option-child-14-display: block;
+}
+.option > input.option-button:nth-of-type(15):checked ~ section.options {
+  --vh-option-child-15-display: block;
+}
+.option > input.option-button:nth-of-type(16):checked ~ section.options {
+  --vh-option-child-16-display: block;
+}
+.option > input.option-button:nth-of-type(17):checked ~ section.options {
+  --vh-option-child-17-display: block;
+}
+.option > input.option-button:nth-of-type(18):checked ~ section.options {
+  --vh-option-child-18-display: block;
+}
+.option > input.option-button:nth-of-type(19):checked ~ section.options {
+  --vh-option-child-19-display: block;
+}
+.option > input.option-button:nth-of-type(20):checked ~ section.options {
+  --vh-option-child-20-display: block;
+}
+.option > section.options > .doc {
+  display: none;
+}
+.option > section.options > .doc:nth-child(1) {
+  display: var(--vh-option-child-1-display, none);
+}
+.option > section.options > .doc:nth-child(2) {
+  display: var(--vh-option-child-2-display, none);
+}
+.option > section.options > .doc:nth-child(3) {
+  display: var(--vh-option-child-3-display, none);
+}
+.option > section.options > .doc:nth-child(4) {
+  display: var(--vh-option-child-4-display, none);
+}
+.option > section.options > .doc:nth-child(5) {
+  display: var(--vh-option-child-5-display, none);
+}
+.option > section.options > .doc:nth-child(6) {
+  display: var(--vh-option-child-6-display, none);
+}
+.option > section.options > .doc:nth-child(7) {
+  display: var(--vh-option-child-7-display, none);
+}
+.option > section.options > .doc:nth-child(8) {
+  display: var(--vh-option-child-8-display, none);
+}
+.option > section.options > .doc:nth-child(9) {
+  display: var(--vh-option-child-9-display, none);
+}
+.option > section.options > .doc:nth-child(10) {
+  display: var(--vh-option-child-10-display, none);
+}
+.option > section.options > .doc:nth-child(11) {
+  display: var(--vh-option-child-11-display, none);
+}
+.option > section.options > .doc:nth-child(12) {
+  display: var(--vh-option-child-12-display, none);
+}
+.option > section.options > .doc:nth-child(13) {
+  display: var(--vh-option-child-13-display, none);
+}
+.option > section.options > .doc:nth-child(14) {
+  display: var(--vh-option-child-14-display, none);
+}
+.option > section.options > .doc:nth-child(15) {
+  display: var(--vh-option-child-15-display, none);
+}
+.option > section.options > .doc:nth-child(16) {
+  display: var(--vh-option-child-16-display, none);
+}
+.option > section.options > .doc:nth-child(17) {
+  display: var(--vh-option-child-17-display, none);
+}
+.option > section.options > .doc:nth-child(18) {
+  display: var(--vh-option-child-18-display, none);
+}
+.option > section.options > .doc:nth-child(19) {
+  display: var(--vh-option-child-19-display, none);
+}
+.option > section.options > .doc:nth-child(20) {
+  display: var(--vh-option-child-20-display, none);
 }

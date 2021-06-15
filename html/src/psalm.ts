@@ -8,11 +8,15 @@ import {
 import { ldfToHTML } from ".";
 import { genericTextToHTML } from "./generic-text";
 import { headingToHTML } from "./heading";
+import { notEmpty } from "./not-empty";
 
 export function psalmToHTML(
   doc: Psalm,
-  localeStrings: Record<string, string>
+  localeStrings: Record<string, string>,
+  includeLDF = false
 ): string {
+  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+
   function headingNode(
     value: string | undefined = undefined,
     level: number = 3,
@@ -41,16 +45,14 @@ export function psalmToHTML(
         !omitCitation && doc?.citation !== doc?.label
           ? doc?.citation
           : undefined,
-      value: [value ?? label],
+      value: [
+        value ?? label,
+        showLatinName ? doc?.metadata?.latinname : null,
+      ].filter(notEmpty),
       source: doc?.source,
     });
 
-    return [
-      headingToHTML(heading, localeStrings),
-      showLatinName && doc?.metadata?.latinname
-        ? `<h5 class="latin-name">${doc.metadata.latinname}</h5>`
-        : "",
-    ].join("\n");
+    return headingToHTML(heading, localeStrings);
   }
 
   function antiphonNode(
@@ -99,29 +101,30 @@ export function psalmToHTML(
     sections = p.filteredVerses();
 
   return [
-    `<article class="psalm ${doc.style}">`,
+    `<article ${ldf} class="doc psalm ${doc.style}">`,
     headingNode(),
     includeAntiphon && doc.metadata?.antiphon
       ? antiphonNode(doc.metadata.antiphon)
       : "",
-    ...sections.map((section, sectionIndex) =>
+    ...(sections || []).map((section, sectionIndex) =>
       [
         section.label ? headingNode(section.label, 4, false, true) : "",
         `<section class="psalm-section">`,
-        ...section.value.map((verse) =>
+        ...(section.value || []).map((verse) =>
           verse instanceof Heading || (verse as any).type === "heading"
             ? headingToHTML(verse as any, localeStrings)
             : `<p class="psalm-verse ${verse.number ? "" : "no-number"}">${
                 verse.number
                   ? `<sup class="psalm-verse-number">${verse.number} </sup>`
                   : ""
-              }<span class="verse">${verse.verse.replace(
+              }<span class="verse">${verse?.verse?.replace(
                 /\n/g,
                 "<br>"
               )}</span>${
                 verse.halfverse
-                  ? `<br><span class="half-verse">${verse.halfverse
-                      .split("\n")
+                  ? `<br><span class="half-verse">${(
+                      verse.halfverse.split("\n") || []
+                    )
                       .map((piece) => `\t${piece}`)
                       .join("\n")
                       .replace(/\n/g, "<br>")}</span>`

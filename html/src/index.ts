@@ -18,51 +18,70 @@ import { headingToHTML } from "./heading";
 import { LOCALE_STRINGS } from "./locale";
 import { psalmToHTML } from "./psalm";
 import { responsivePrayerToHTML } from "./responsive-prayer";
+import { optionToHTML } from "./option";
 
-export function ldfToHTML(inDoc: LiturgicalDocument): string {
+export function ldfToHTML(
+  inDoc: LiturgicalDocument,
+  includeLDF = false
+): string {
   const localeStrings = LOCALE_STRINGS["en"];
 
   switch (inDoc?.type) {
     case "liturgy":
       return ((inDoc as Liturgy).value || [])
-        .map((subDoc: LiturgicalDocument) => ldfToHTML(subDoc))
+        .map((subDoc: LiturgicalDocument) => ldfToHTML(subDoc, true))
         .flat()
         .join("\n");
     case "option":
-      /*console.log("option = ", inDoc.value);
-      ((inDoc as Option).value || [])
-        .map((sub) => {
-          console.log("\tsub = ", sub);
-          return `<pre>${JSON.stringify(sub)}</pre>`;
-        })
-        .join(`<p><em class="rubric">${localeStrings.or}</em></p>`);*/
-      return ((inDoc as Option).value || [])
-        .map((sub) => ldfToHTML(sub))
-        .join(ldfToHTML(new Rubric({ type: "rubric", value: ["or"] })));
+      return optionToHTML(inDoc as Option);
     case "bible-reading":
-      return bibleReadingToHTML(inDoc as BibleReading, localeStrings);
+      return bibleReadingToHTML(
+        inDoc as BibleReading,
+        localeStrings,
+        includeLDF
+      );
     case "heading":
-      return headingToHTML(inDoc as Heading, localeStrings);
+      return headingToHTML(inDoc as Heading, localeStrings, includeLDF);
     case "meditation":
       return "";
     case "image":
       return ((inDoc as Image).value || [])
-        .map((src) => `<img src="${src}">`)
+        .map(
+          (src: string) =>
+            `<article class="doc image"${
+              includeLDF ? ` data-ldf="${JSON.stringify(inDoc)}` : ""
+            }><img src="${src}"></article>`
+        )
         .join("\n");
     case "psalm":
-      return psalmToHTML(inDoc as Psalm, localeStrings);
+      return psalmToHTML(inDoc as Psalm, localeStrings, includeLDF);
     case "responsive":
-      return responsivePrayerToHTML(inDoc as ResponsivePrayer, localeStrings);
+      return responsivePrayerToHTML(
+        inDoc as ResponsivePrayer,
+        localeStrings,
+        includeLDF
+      );
     /** Text fields with various styles */
     case "refrain":
-      return genericTextToHTML(inDoc as Refrain, "refrain", localeStrings);
+      return genericTextToHTML(
+        inDoc as Refrain,
+        "refrain",
+        localeStrings,
+        includeLDF
+      );
     case "rubric":
-      return genericTextToHTML(inDoc as Rubric, "rubric", localeStrings);
+      return genericTextToHTML(
+        inDoc as Rubric,
+        "rubric",
+        localeStrings,
+        includeLDF
+      );
     case "text":
       return genericTextToHTML(
         inDoc as Text,
         inDoc?.display_format === "unison" ? "unison" : "normal",
-        localeStrings
+        localeStrings,
+        includeLDF
       );
     default:
       return "";

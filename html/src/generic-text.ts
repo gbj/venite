@@ -4,8 +4,11 @@ import { ldfToHTML } from ".";
 export function genericTextToHTML(
   doc: LiturgicalDocument,
   style: string,
-  localeStrings: Record<string, string>
+  localeStrings: Record<string, string>,
+  includeLDF = false
 ): string {
+  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+
   const heading =
     doc.label || doc.citation
       ? ldfToHTML(
@@ -19,9 +22,9 @@ export function genericTextToHTML(
         )
       : "";
 
-  return `<article class="${doc.type} ${doc.style || ""} ${style}">${heading}${(
-    (doc.value || []) as string[]
-  )
+  return `<article ${ldf} class="doc ${doc.type} ${
+    doc.style || ""
+  } ${style}">${heading}${((doc.value || []) as string[])
     .map(
       (line, lineIndex) =>
         `<p>${

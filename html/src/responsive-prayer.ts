@@ -3,8 +3,11 @@ import { headingToHTML } from "./heading";
 
 export function responsivePrayerToHTML(
   doc: ResponsivePrayer,
-  localeStrings: Record<string, string>
+  localeStrings: Record<string, string>,
+  includeLDF = false
 ): string {
+  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+
   const header = headingToHTML(
     new Heading({
       type: "heading",
@@ -18,8 +21,8 @@ export function responsivePrayerToHTML(
   if (doc.style === "litany") {
     return [
       header,
-      `<article class="responsive-prayer litany">`,
-      ...doc.value.map(
+      `<article ${ldf} class="doc responsive-prayer litany">`,
+      ...(doc.value || []).map(
         (line) =>
           `<p class="line ${
             line.optional ? "optional" : ""
@@ -34,8 +37,8 @@ export function responsivePrayerToHTML(
   } else if (doc.style === "preces") {
     return [
       header,
-      `<article class="responsive-prayer preces">`,
-      ...doc.value.map(
+      `<article ${ldf} class="doc responsive-prayer preces">`,
+      ...(doc.value || []).map(
         (line) =>
           `<p class="line ${
             line.optional ? "optional" : ""
@@ -48,8 +51,8 @@ export function responsivePrayerToHTML(
   } else {
     return [
       header,
-      `<article class="responsive-prayer responsive"><p>`,
-      ...doc.value.map(
+      `<article ${ldf} class="doc responsive-prayer responsive"><p>`,
+      ...(doc.value || []).map(
         (line) =>
           `${line.text}<br><strong class="response">${line.response}</strong>`
       ),

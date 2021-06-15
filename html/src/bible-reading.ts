@@ -5,7 +5,7 @@ import { headingToHTML } from "./heading";
 function docToParagraphs(doc: BibleReading): (BibleReadingVerse | Heading)[][] {
   const paragraphs: (BibleReadingVerse | Heading)[][] = new Array();
   let currentParagraph: (BibleReadingVerse | Heading)[] = new Array();
-  doc.value.forEach((verse) => {
+  (doc.value || []).forEach((verse) => {
     if (verse.hasOwnProperty("type") && (verse as Heading).type === "heading") {
       paragraphs.push(currentParagraph);
       currentParagraph = new Array();
@@ -19,20 +19,23 @@ function docToParagraphs(doc: BibleReading): (BibleReadingVerse | Heading)[][] {
 
 export function bibleReadingToHTML(
   doc: BibleReading,
-  localeStrings: Record<string, string>
+  localeStrings: Record<string, string>,
+  includeLDF = false
 ): string {
   const paragraphs = docToParagraphs(doc);
+
+  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
 
   if (doc.style === "short") {
     const shortResponse =
       (doc.metadata?.response || localeStrings.amen).length <= 5;
 
     return [
-      `<article lang="${doc.language || "en"}" class="bible-reading short ${
-        doc.display_format || "default"
-      }">`,
+      `<article ${ldf} lang="${
+        doc.language || "en"
+      }" class="bible-reading short ${doc.display_format || "default"}">`,
       "<p>",
-      ...doc.value.map((verse) =>
+      ...(doc.value || []).map((verse) =>
         verse.hasOwnProperty("type") && (verse as Heading).type === "heading"
           ? `</p>\n${headingToHTML(
               new Heading(verse as Heading),
@@ -52,7 +55,7 @@ export function bibleReadingToHTML(
   } else {
     // TODO include intros etc.
     return [
-      `<article class="bible-reading long ${
+      `<article ${ldf} class="doc bible-reading long ${
         doc.display_format || "default"
       }" lang="${doc.language || "en"}">`,
       headingToHTML(
@@ -67,9 +70,9 @@ export function bibleReadingToHTML(
       doc?.metadata?.compiled_intro
         ? ldfToHTML(doc.metadata.compiled_intro)
         : "",
-      ...paragraphs.map(
+      ...(paragraphs || []).map(
         (paragraph) => `<p lang="${doc.language || "en"}">
-        ${paragraph
+        ${(paragraph || [])
           .map((verse) =>
             verse.hasOwnProperty("type") &&
             (verse as Heading).type === "heading"

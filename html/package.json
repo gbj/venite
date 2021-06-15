@@ -1,11 +1,11 @@
 {
   "name": "@venite/html",
-  "version": "0.1.0",
+  "version": "0.1.12",
   "description": "Converts Liturgical Document Format (LDF) objects to plain HTML.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --module es2015 --target es6 --outDir dist",
+    "build": "tsc --target es6 --outDir dist",
     "prepare": "npm run build"
   },
   "repository": {
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/gbj/venite#readme",
   "dependencies": {
-    "@venite/ldf": "^0.19.4"
+    "@venite/ldf": "^0.19.5"
   }
 }
