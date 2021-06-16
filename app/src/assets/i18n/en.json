@@ -70,7 +70,7 @@
     "report-issue": "Report an Issue",
     "issues": "Issues",
     "lectionary": "Sunday Readings"
-},
+  },
   "bulletins": {
     "bulletins": "Bulletins",
     "templates": "Templates",
@@ -367,5 +367,13 @@
     "him": "him",
     "his": "his",
     "brother": "brother"
+  },
+  "liturgyOfTheHour": {
+    "title": "Default Times for Liturgies",
+    "morning-prayer": "Morning Prayer",
+    "noonday-prayer": "Noonday Prayer",
+    "evening-prayer": "Evening Prayer",
+    "compline": "Compline",
+    "to": "to"
   }
 }

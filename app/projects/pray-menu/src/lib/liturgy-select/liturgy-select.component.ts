@@ -51,6 +51,7 @@ import {
 import {
   distinctUntilKeyChanged,
   filter,
+  first,
   map,
   shareReplay,
   startWith,
@@ -58,6 +59,7 @@ import {
   take,
   tap,
 } from "rxjs/operators";
+import { LiturgyTimeRanges } from "@venite/ng-service-api";
 
 type DateValues = {
   year: string;
@@ -150,6 +152,9 @@ export class LiturgySelectComponent implements OnInit {
   hasStartedNavigating: boolean = false;
   startingDate$: Subject<Date> = new Subject();
 
+  // Time ranges
+  ranges: LiturgyTimeRanges;
+
   constructor(
     @Inject("config") public config: PrayMenuConfig,
     private translate: TranslateService,
@@ -175,9 +180,18 @@ export class LiturgySelectComponent implements OnInit {
         day: new FormControl(today.getDate().toString()),
       }),
       observance: new FormControl(undefined),
-      liturgy: new FormControl(liturgyOfTheHour(today)),
+      liturgy: new FormControl(undefined),
       vigil: new FormControl(false),
     });
+
+    this.preferencesService
+      .liturgyTimeRanges()
+      .pipe(first())
+      .subscribe((ranges) => {
+        this.form.controls.liturgy.setValue(
+          liturgyOfTheMoment(new Date(), ranges)
+        );
+      });
 
     // Liturgy options
     this.language$ = this.form.controls.language.valueChanges.pipe(
@@ -504,7 +518,9 @@ export class LiturgySelectComponent implements OnInit {
     } else {
       // if it had a liturgy, reset to the default for this time
       if (properLiturgy.liturgy) {
-        this.form.controls.liturgy.setValue(liturgyOfTheHour(new Date()));
+        this.form.controls.liturgy.setValue(
+          liturgyOfTheMoment(new Date(), this.ranges)
+        );
       }
       // if it had a preference, clear it
       if (properLiturgy.preference) {
@@ -893,6 +909,7 @@ function daysInMonth(year: string | number, month: string | number): number[] {
   }
   return range;
 }
+
 // Hard-coded default liturgy slug for any given hour
 function liturgyOfTheHour(now: Date): string {
   const hour: number = now.getHours();
@@ -904,5 +921,50 @@ function liturgyOfTheHour(now: Date): string {
     return "evening-prayer";
   } else {
     return "compline";
+  }
+}
+
+// Hard-coded default liturgy slug for any given hour
+function liturgyOfTheMoment(now: Date, range: LiturgyTimeRanges): string {
+  const hour: number = now.getHours(),
+    minute: number = now.getMinutes();
+  if (
+    (hour > range.morning.start.hour ||
+      (hour === range.morning.start.hour &&
+        minute > range.morning.start.minute)) &&
+    (hour < range.morning.end.hour ||
+      (hour === range.morning.end.hour && minute < range.morning.end.minute) ||
+      range.morning.end.hour < range.morning.start.hour)
+  ) {
+    return "morning-prayer";
+  } else if (
+    (hour > range.noon.start.hour ||
+      (hour === range.noon.start.hour && minute > range.noon.start.minute)) &&
+    (hour < range.noon.end.hour ||
+      (hour === range.noon.end.hour && minute < range.noon.end.minute) ||
+      range.noon.end.hour < range.noon.start.hour)
+  ) {
+    return "noonday-prayer";
+  } else if (
+    (hour > range.evening.start.hour ||
+      (hour === range.evening.start.hour &&
+        minute > range.evening.start.minute)) &&
+    (hour < range.evening.end.hour ||
+      (hour === range.evening.end.hour && minute < range.evening.end.minute) ||
+      range.evening.end.hour < range.evening.start.hour)
+  ) {
+    return "evening-prayer";
+  } else if (
+    (hour > range.compline.start.hour ||
+      (hour === range.compline.start.hour &&
+        minute > range.compline.start.minute)) &&
+    (hour < range.compline.end.hour ||
+      (hour === range.compline.end.hour &&
+        minute < range.compline.end.minute) ||
+      range.compline.end.hour < range.compline.start.hour)
+  ) {
+    return "compline";
+  } else {
+    return "morning-prayer";
   }
 }

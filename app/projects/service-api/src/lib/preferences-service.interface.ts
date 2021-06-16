@@ -17,4 +17,18 @@ export interface PreferencesServiceInterface {
   ) => Observable<StoredPreference[]>;
 
   displaySettings: () => Observable<DisplaySettings>;
+
+  liturgyTimeRanges: () => Observable<LiturgyTimeRanges>;
 }
+
+export type TimeRange = {
+  start: { hour: number; minute: number };
+  end: { hour: number; minute: number };
+};
+
+export type LiturgyTimeRanges = {
+  morning: TimeRange;
+  noon: TimeRange;
+  evening: TimeRange;
+  compline: TimeRange;
+};

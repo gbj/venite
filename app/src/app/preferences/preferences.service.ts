@@ -9,6 +9,7 @@ import {
   filter,
   shareReplay,
   startWith,
+  first,
 } from "rxjs/operators";
 
 import {
@@ -24,6 +25,7 @@ import {
   versionToString,
 } from "@venite/ldf";
 import { isOnline } from "../editor/ldf-editor/is-online";
+import { LiturgyTimeRanges } from "@venite/ng-service-api";
 
 type OldPreferences = {
   defaultLanguage?: string;
@@ -308,5 +310,34 @@ export class PreferencesService {
 
   grabPreference(key: string): Observable<any> {
     return this.get(key).pipe(map((keyvalue) => keyvalue?.value));
+  }
+
+  liturgyTimeRanges(): Observable<LiturgyTimeRanges> {
+    return this.get("liturgy-times").pipe(
+      first(),
+      map((data) =>
+        data?.value
+          ? JSON.parse(data?.value)
+          : {
+              morning: {
+                start: { hour: 3, minute: 0 },
+                end: { hour: 11, minute: 0 },
+              },
+              noon: {
+                start: { hour: 11, minute: 0 },
+                end: { hour: 14, minute: 0 },
+              },
+              evening: {
+                start: { hour: 14, minute: 0 },
+                end: { hour: 20, minute: 0 },
+              },
+              compline: {
+                start: { hour: 20, minute: 0 },
+                end: { hour: 3, minute: 0 },
+              },
+            }
+      ),
+      tap((ranges) => console.log("liturgyTimeRanges = ", ranges))
+    );
   }
 }

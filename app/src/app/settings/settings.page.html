@@ -4,14 +4,58 @@
       <ion-back-button></ion-back-button>
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ 'displaySettings.display-settings' | translate }}</ion-title>
+    <ion-title>{{ 'menu.settings' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!-- Display Settings -->
+  <h2>{{ 'displaySettings.display-settings' | translate }}</h2>
   <venite-display-settings *ngIf="settings$ | async as settings"
     [settings]="settings"
     [isModal]="false"
   ></venite-display-settings>
+
+  <!-- Default Liturgies for Times -->
+  <h2>{{ 'liturgyOfTheHour.title' | translate }}</h2>
+  <form (submit)="formChange()">
+    <div class="row">
+      <ion-label>{{ 'liturgyOfTheHour.morning-prayer' | translate }}</ion-label>
+    </div>
+    <div class="row">
+      <ion-input name="morningStart" type="time" ngDefaultControl [(ngModel)]="morningStart"></ion-input>
+      <span>{{ 'liturgyOfTheHour.to' | translate }}</span>
+      <ion-input name="morningEnd" type="time" ngDefaultControl [(ngModel)]="morningEnd"></ion-input>
+    </div>
+    <div class="row">
+      <ion-label>{{ 'liturgyOfTheHour.noonday-prayer' | translate }}</ion-label>
+    </div>
+    <div class="row">
+      <ion-input name="noonStart" type="time" ngDefaultControl [(ngModel)]="noonStart"></ion-input>
+      <span>{{ 'liturgyOfTheHour.to' | translate }}</span>
+      <ion-input name="noonEnd" type="time" ngDefaultControl [(ngModel)]="noonEnd"></ion-input>
+    </div>
+    <div class="row">
+      <ion-label>{{ 'liturgyOfTheHour.evening-prayer' | translate }}</ion-label>
+    </div>
+    <div class="row">
+      <ion-input name="eveningStart" type="time" ngDefaultControl [(ngModel)]="eveningStart"></ion-input>
+      <span>{{ 'liturgyOfTheHour.to' | translate }}</span>
+      <ion-input name="eveningEnd" type="time" ngDefaultControl [(ngModel)]="eveningEnd"></ion-input>
+    </div>
+    <div class="row">
+      <ion-label>{{ 'liturgyOfTheHour.compline' | translate }}</ion-label>
+    </div>
+    <div class="row">
+      <ion-input name="complineStart" type="time" ngDefaultControl [(ngModel)]="complineStart"></ion-input>
+      <span>{{ 'liturgyOfTheHour.to' | translate }}</span>
+      <ion-input name="complineEnd" type="time" ngDefaultControl [(ngModel)]="complineEnd"></ion-input>
+    </div>
+    <div class="row">
+      <ion-button role="submit" (click)="formChange()"><ion-label>{{ 'ok' | translate }}</ion-label></ion-button>
+    </div>
+  </form>
+
+  <!-- Sponsorship -->
   <venite-sponsor></venite-sponsor>
 </ion-content>
