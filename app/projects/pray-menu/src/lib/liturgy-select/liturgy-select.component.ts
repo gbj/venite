@@ -149,7 +149,6 @@ export class LiturgySelectComponent implements OnInit {
    * it's been longer than REMEMBER_TIME */
   lastPrayed: Date = new Date();
   readonly REMEMBER_TIME = 30 * 60 * 1000; // default to 30 minutes
-  hasStartedNavigating: boolean = false;
   startingDate$: Subject<Date> = new Subject();
 
   // Time ranges
@@ -335,6 +334,21 @@ export class LiturgySelectComponent implements OnInit {
     // load kalendar options
     this.kalendarOptions$ = this.calendarService.findKalendars();
 
+    // Date when we re-enter the view
+    this.startingDate$.subscribe((today) => {
+      console.log("startingDate$ new value = ", today);
+      (this.form.controls.date as FormGroup).controls.year.setValue(
+        today.getFullYear().toString()
+      );
+      (this.form.controls.date as FormGroup).controls.month.setValue(
+        (today.getMonth() + 1).toString()
+      );
+      (this.form.controls.date as FormGroup).controls.day.setValue(
+        today.getDate().toString()
+      );
+    });
+
+    // Date from form
     this.date$ = this.form.controls.date.valueChanges.pipe(
       map((values: DateValues) =>
         dateFromYMDString(`${values.year}-${values.month}-${values.day}`)
@@ -493,6 +507,29 @@ export class LiturgySelectComponent implements OnInit {
         take(1)
       )
       .subscribe((pref) => this.form.controls.kalendar.setValue(pref.value));
+
+    // when reentering view, reset date if necessary
+    this.router.events.subscribe(() => {
+      this.isNavigating = false;
+
+      console.log(
+        "viewWillEnter lastPrayed = ",
+        this.lastPrayed,
+        Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
+          this.REMEMBER_TIME,
+        !this.lastPrayed ||
+          Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
+            this.REMEMBER_TIME
+      );
+
+      if (
+        !this.lastPrayed ||
+        Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
+          this.REMEMBER_TIME
+      ) {
+        this.startingDate$.next(new Date());
+      }
+    });
   }
 
   setMonth(value: string) {
@@ -531,21 +568,9 @@ export class LiturgySelectComponent implements OnInit {
     }
   }
 
-  // ionViewWillEnter -- each time we return to this page, check last time we prayed and reset menu if necessary
-  ionViewWillEnter() {
-    this.isNavigating = false;
-
-    if (
-      !this.lastPrayed ||
-      Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
-        this.REMEMBER_TIME
-    ) {
-      this.startingDate$.next(new Date());
-    }
-    this.hasStartedNavigating = false;
-  }
-
   pray(data: PrayData | undefined, bulletinMode: boolean = false) {
+    this.lastPrayed = new Date();
+
     window.requestAnimationFrame(() => {
       this.isNavigating = true;
       console.log("set isNavigating to `true`");
