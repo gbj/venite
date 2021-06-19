@@ -10,7 +10,7 @@
 
   display: flex;
   justify-content: center;
-  align-itrems: center;
+  align-items: center;
 
   position: fixed;
   top: 0.5rem;
@@ -47,7 +47,7 @@
   position: fixed;
   top: 0.55rem;
   transition: 1s linear;
-  width: calc(100vw - 6rem);
+  width: calc(100vw - 8rem);
   max-width: calc(400px);
   background-color: var(--cp-light-background);
   transition: 0.125s linear;

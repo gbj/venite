@@ -33,6 +33,7 @@ export async function devServer(
 }
 
 function checkMap(map: SSGRefreshMap, path: string): Function | undefined {
+  console.log("checking map for ", path);
   if (path.endsWith(".ts") || path.endsWith(".tsx")) {
     return (
       map[path] ||

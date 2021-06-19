@@ -1,1086 +1,1091 @@
 {
-  "value": [
-    {
-      "type": "heading",
-      "hidden": false,
-      "style": "text",
-      "value": ["An Order for Compline"],
-      "metadata": {
-        "level": 1
-      }
-    },
-    {
-      "style": "date",
-      "type": "heading",
-      "value": [""],
-      "metadata": {
-        "level": 1
-      },
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "value": ["Heading"],
-      "metadata": {
-        "level": 1
-      },
-      "style": "day",
-      "type": "heading"
-    },
-    {
-      "type": "rubric",
-      "value": ["The Officiant begins"],
-      "hidden": false
-    },
-    {
-      "style": "text",
-      "value": [
-        "The Lord Almighty grant us a peaceful night and a perfect end."
-      ],
-      "category": [],
-      "source": {
-        "api": "",
-        "citation": "p. 127",
-        "source": "BCP"
-      },
-      "metadata": {
-        "response": "Amen.",
-        "omit_response": false
-      },
-      "type": "text",
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "value": [
-        {
-          "text": "Our help is in the name of the Lord.",
-          "response": "",
-          "label": "Officiant"
-        },
-        {
-          "text": "The maker of heaven and earth.",
-          "label": "People"
-        }
-      ],
-      "style": "preces",
-      "type": "responsive"
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["The Officiant may then say"]
-    },
-    {
-      "hidden": false,
-      "type": "text",
-      "value": ["Let us confess our sins to God."],
-      "style": "text"
-    },
-    {
-      "hidden": false,
-      "value": ["Silence may be kept."],
-      "type": "rubric"
-    },
-    {
-      "value": ["Officiant and People"],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "source": {
-        "citation": "",
-        "api": "",
-        "source": ""
-      },
-      "display_format": "unison",
-      "category": [],
-      "type": "text",
-      "value": [
-        "Almighty God, our heavenly Father:\nWe have sinned against you,\nthrough our own fault,\nin thought, and word, and deed,\nand in what we have left undone.\nFor the sake of your Son our Lord Jesus Christ,\nforgive us all our offenses;\nand grant that we may serve you\nin newness of life,\nto the glory of your Name."
-      ],
-      "hidden": false,
-      "style": "prayer",
-      "metadata": {
-        "omit_response": false
-      }
-    },
-    {
-      "value": ["Officiant"],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "value": [
-        "May the Almighty God grant us forgiveness of all our sins, and the grace and comfort of the Holy Spirit."
-      ],
-      "type": "text",
-      "style": "prayer"
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["The Officiant then says"]
-    },
-    {
-      "type": "responsive",
-      "hidden": false,
-      "style": "preces",
-      "value": [
-        {
-          "response": "",
-          "text": "O God, make speed to save us.",
-          "label": ""
-        },
-        {
-          "text": "O Lord, make haste to help us.",
-          "label": "People"
-        }
-      ]
-    },
-    {
-      "hidden": false,
-      "value": ["Officiant and People"],
-      "type": "rubric"
-    },
-    {
-      "version": "bcp1979",
-      "category": [null],
-      "label": null,
-      "version_label": "Rite II",
-      "type": "refrain",
-      "slug": "gloria-patri",
-      "value": [
-        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-      ],
-      "citation": null,
-      "language": "en",
-      "style": "gloria",
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "value": ["Except in Lent, add"]
-    },
-    {
-      "style": "text",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "season": {
-              "only": [],
-              "except": ["Lent", "HolyWeek"]
-            }
-          }
-        ]
-      },
-      "value": ["Alleluia."],
-      "hidden": false,
-      "type": "text"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [
-        "\nOne or more of the following Psalms are sung or said. Other suitable selections may be substituted."
-      ]
-    },
-    {
-      "version": "bcp1979",
-      "value": [
-        {
-          "type": "psalm-section",
-          "value": [
-            {
-              "verse": "Answer me when I call, O God, defender of my cause; *",
-              "halfverse": "you set me free when I am hard-pressed;\n have mercy on me and hear my prayer.",
-              "number": "1",
-              "type": "psalm-verse"
-            },
-            {
-              "halfverse": "how long will you worship dumb idols\n and run after false gods?”",
-              "verse": "“You mortals, how long will you dishonor my glory; *",
-              "type": "psalm-verse",
-              "number": "2"
-            },
-            {
-              "verse": "Know that the LORD does wonders for the faithful; *",
-              "number": "3",
-              "halfverse": "when I call upon the LORD, he will hear me.",
-              "type": "psalm-verse"
-            },
-            {
-              "number": "4",
-              "type": "psalm-verse",
-              "halfverse": "speak to your heart in silence upon your bed.",
-              "verse": "Tremble, then, and do not sin; *"
-            },
-            {
-              "type": "psalm-verse",
-              "halfverse": "and put your trust in the LORD.",
-              "verse": "Offer the appointed sacrifices *",
-              "number": "5"
-            },
-            {
-              "number": "6",
-              "verse": "Many are saying,\n“Oh, that we might see better times!” *",
-              "type": "psalm-verse",
-              "halfverse": "Lift up the light of your countenance upon us, O LORD."
-            },
-            {
-              "number": "7",
-              "type": "psalm-verse",
-              "halfverse": "more than when grain and wine and oil increase.",
-              "verse": "You have put gladness in my heart, *"
-            },
-            {
-              "verse": "I lie down in peace; at once I fall asleep; *",
-              "type": "psalm-verse",
-              "number": "8",
-              "halfverse": "for only you, LORD, make me dwell in safety."
-            }
-          ]
-        }
-      ],
-      "type": "psalm",
-      "citation": null,
-      "category": ["Psalm"],
-      "hidden": false,
-      "label": "Psalm 4",
-      "slug": "psalm_4",
-      "source": {
-        "api": "https://www.venite.app/api",
-        "source": "bcp1979",
-        "citation": "p. 587"
-      },
-      "metadata": {
-        "latinname": "Cum invocarem",
-        "omit_antiphon": false,
-        "number": "4",
-        "localname": "Psalm 4",
-        "omit_gloria": false
-      },
-      "language": "en",
-      "style": "psalm",
-      "version_label": null
-    },
-    {
-      "hidden": false,
-      "metadata": {
-        "number": "31",
-        "latinname": "In te, Domine, speravi",
-        "omit_gloria": false,
-        "localname": "Psalm 31",
-        "omit_antiphon": false
-      },
-      "version": "bcp1979",
-      "language": "en",
-      "label": "Psalm 31",
-      "category": ["Psalm"],
-      "value": [
-        {
-          "value": [
-            {
-              "halfverse": "deliver me in your righteousness.",
-              "verse": "In you, O LORD, have I taken refuge;\nlet me never be put to shame; *",
-              "type": "psalm-verse",
-              "number": "1"
-            },
-            {
-              "halfverse": "make haste to deliver me.",
-              "verse": "Incline your ear to me; *",
-              "type": "psalm-verse",
-              "number": "2"
-            },
-            {
-              "number": "3",
-              "halfverse": "for the sake of your Name, lead me and guide me.",
-              "type": "psalm-verse",
-              "verse": "Be my strong rock, a castle to keep me safe,\nfor you are my crag and my stronghold; *"
-            },
-            {
-              "number": "4",
-              "type": "psalm-verse",
-              "verse": "Take me out of the net that they have secretly set for me, *",
-              "halfverse": "for you are my tower of strength."
-            },
-            {
-              "number": "5",
-              "verse": "Into your hands I commend my spirit, *",
-              "halfverse": "for you have redeemed me,\n O LORD, O God of truth.",
-              "type": "psalm-verse"
-            }
-          ],
-          "type": "psalm-section"
-        }
-      ],
-      "style": "psalm",
-      "type": "psalm",
-      "citation": null,
-      "slug": "psalm_31",
-      "version_label": null,
-      "source": {
-        "source": "bcp1979",
-        "api": "https://www.venite.app/api",
-        "citation": "p. 622"
-      }
-    },
+  "index": 400,
+  "data": [
     {
       "value": [
         {
-          "type": "psalm-section",
-          "value": [
-            {
-              "type": "psalm-verse",
-              "verse": "He who dwells in the shelter of the Most High, *",
-              "number": "1",
-              "halfverse": "abides under the shadow of the Almighty."
-            },
-            {
-              "type": "psalm-verse",
-              "verse": "He shall say to the LORD,\n“You are my refuge and my stronghold, *",
-              "number": "2",
-              "halfverse": "my God in whom I put my trust.”"
-            },
-            {
-              "verse": "He shall deliver you from the snare of the hunter *",
-              "number": "3",
-              "type": "psalm-verse",
-              "halfverse": "and from the deadly pestilence."
-            },
-            {
-              "verse": "He shall cover you with his pinions,\nand you shall find refuge under his wings; *",
-              "number": "4",
-              "type": "psalm-verse",
-              "halfverse": "his faithfulness shall be a shield and buckler."
-            },
-            {
-              "number": "5",
-              "type": "psalm-verse",
-              "verse": "You shall not be afraid of any terror by night, *",
-              "halfverse": "nor of the arrow that flies by day;"
-            },
-            {
-              "halfverse": "nor of the sickness that lays waste at mid-day.",
-              "type": "psalm-verse",
-              "verse": "Of the plague that stalks in the darkness, *",
-              "number": "6"
-            },
-            {
-              "halfverse": "but it shall not come near you.",
-              "number": "7",
-              "verse": "A thousand shall fall at your side\nand ten thousand at your right hand, *",
-              "type": "psalm-verse"
-            },
-            {
-              "verse": "Your eyes have only to behold *",
-              "halfverse": "to see the reward of the wicked.",
-              "number": "8",
-              "type": "psalm-verse"
-            },
-            {
-              "type": "psalm-verse",
-              "halfverse": "and the Most High your habitation,",
-              "number": "9",
-              "verse": "Because you have made the LORD your refuge, *"
-            },
-            {
-              "halfverse": "neither shall any plague come near your dwelling.",
-              "number": "10",
-              "type": "psalm-verse",
-              "verse": "There shall no evil happen to you, *"
-            },
-            {
-              "halfverse": "to keep you in all your ways.",
-              "type": "psalm-verse",
-              "verse": "For he shall give his angels charge over you, *",
-              "number": "11"
-            },
-            {
-              "number": "12",
-              "halfverse": "lest you dash your foot against a stone.",
-              "type": "psalm-verse",
-              "verse": "They shall bear you in their hands, *"
-            },
-            {
-              "halfverse": "you shall trample the young lion and the serpent under your feet.",
-              "type": "psalm-verse",
-              "verse": "You shall tread upon the lion and the adder; *",
-              "number": "13"
-            },
-            {
-              "number": "14",
-              "halfverse": "I will protect him, because he knows my Name.",
-              "verse": "Because he is bound to me in love,\ntherefore will I deliver him; *",
-              "type": "psalm-verse"
-            },
-            {
-              "number": "15",
-              "halfverse": "I am with him in trouble;\n I will rescue him and bring him to honor.",
-              "verse": "He shall call upon me, and I will answer him; *",
-              "type": "psalm-verse"
-            },
-            {
-              "type": "psalm-verse",
-              "halfverse": "and show him my salvation.",
-              "number": "16",
-              "verse": "With long life will I satisfy him, *"
-            }
-          ]
-        }
-      ],
-      "type": "psalm",
-      "citation": null,
-      "metadata": {
-        "omit_antiphon": false,
-        "latinname": "Qui habitat",
-        "number": "91",
-        "omit_gloria": false,
-        "localname": "Psalm 91"
-      },
-      "version": "bcp1979",
-      "language": "en",
-      "style": "psalm",
-      "slug": "psalm_91",
-      "version_label": null,
-      "hidden": false,
-      "label": "Psalm 91",
-      "category": ["Psalm"],
-      "source": {
-        "api": "https://www.venite.app/api",
-        "citation": "p. 719",
-        "source": "bcp1979"
-      }
-    },
-    {
-      "version": "bcp1979",
-      "version_label": null,
-      "slug": "psalm_134",
-      "label": "Psalm 134",
-      "language": "en",
-      "value": [
-        {
-          "value": [
-            {
-              "number": "1",
-              "verse": "Behold now, bless the LORD, all you servants of the LORD, *",
-              "halfverse": "you that stand by night in the house of the LORD.",
-              "type": "psalm-verse"
-            },
-            {
-              "verse": "Lift up your hands in the holy place and bless the LORD; *",
-              "type": "psalm-verse",
-              "number": "2",
-              "halfverse": "the LORD who made heaven and earth bless you out of Zion."
-            }
-          ],
-          "type": "psalm-section"
-        }
-      ],
-      "hidden": false,
-      "category": ["Psalm"],
-      "citation": null,
-      "metadata": {
-        "localname": "Psalm 134",
-        "omit_gloria": false,
-        "number": "134",
-        "omit_antiphon": false,
-        "latinname": "Ecce nunc"
-      },
-      "source": {
-        "api": "https://www.venite.app/api",
-        "source": "bcp1979",
-        "citation": "p. 787"
-      },
-      "style": "psalm",
-      "type": "psalm"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": ["At the end of the Psalms is sung or said"],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "value": "false",
-              "is": true,
-              "key": "insertGloria"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "value": "false",
-              "is": true,
-              "key": "insertGloria"
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "version": "bcp1979",
-      "category": [null],
-      "label": null,
-      "version_label": "Rite II",
-      "type": "refrain",
-      "slug": "gloria-patri",
-      "value": [
-        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-      ],
-      "citation": null,
-      "language": "en",
-      "style": "gloria",
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "value": [
-        "One of the following, or some other suitable passage of Scripture, is read"
-      ]
-    },
-    {
-      "type": "option",
-      "value": [
-        {
-          "metadata": {
-            "response": "Thanks be to God."
-          },
-          "lastRevision": 16,
-          "style": "short",
-          "citation": " Jeremiah 14:9,22",
+          "type": "heading",
           "hidden": false,
-          "version": "bcp1979",
-          "language": "en",
-          "category": [],
-          "value": [
-            {
-              "verse": "9,22",
-              "text": "Lord, you are in the midst of us, and we are called by your Name: Do not forsake us, O Lord our God.",
-              "book": "Jeremiah",
-              "chapter": "14"
-            }
-          ],
-          "slug": "compline_chapter",
-          "type": "bible-reading"
-        },
-        {
-          "language": "en",
-          "version": "bcp1979",
-          "metadata": {
-            "response": "Thanks be to God."
-          },
-          "type": "bible-reading",
-          "lastRevision": 28,
-          "citation": "1 Peter 5:8-9a ",
-          "hidden": false,
-          "category": [],
-          "slug": "compline_chapter",
-          "value": [
-            {
-              "chapter": "5",
-              "verse": "8-9a",
-              "book": "1 Peter",
-              "text": "Be sober, be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour. Resist him, firm in your faith."
-            }
-          ],
-          "style": "short"
-        },
-        {
-          "citation": "Hebres 13:20-21",
-          "hidden": false,
-          "metadata": {
-            "response": "Thanks be to God."
-          },
-          "lastRevision": 22,
-          "type": "bible-reading",
-          "slug": "compline_chapter",
-          "version": "bcp1979",
-          "style": "short",
-          "category": [],
-          "language": "en",
-          "value": [
-            {
-              "verse": "20-21",
-              "chapter": "13",
-              "book": "Hebrews",
-              "text": "May the God of peace, who brought again from the dead our Lord Jesus, the great shepherd of the sheep, by the blood of the eternal covenant, equip you with everything good that you may do his will, working in you that which is pleasing in his sight; through Jesus Christ, to whom be glory for ever and ever. "
-            }
-          ]
-        },
-        {
-          "version": "bcp1979",
-          "style": "short",
-          "hidden": false,
-          "type": "bible-reading",
-          "lastRevision": 21,
-          "slug": "compline_chapter",
-          "language": "en",
-          "metadata": {
-            "response": "Thanks be to God."
-          },
-          "category": [],
-          "citation": "Matthew 11:28-30",
-          "value": [
-            {
-              "verse": "28-30",
-              "chapter": "11",
-              "book": "Matthew",
-              "text": "Come to me, all who labor and are heavy-laden, and I will give you rest. Take my yoke upon you, and learn from me; for I am gentle and lowly in heart, and you will find rest for your souls. For my yoke is easy, and my burden is light."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "value": ["A hymn suitable for the evening may be sung. "],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": ["Then follows"]
-    },
-    {
-      "value": [
-        {
-          "text": "Into your hands, O Lord, I commend my spirit;",
-          "label": "V.",
-          "response": ""
-        },
-        {
-          "text": "For you have redeemed me, O Lord, O God of truth.",
-          "label": "R."
-        },
-        {
-          "text": "Keep us, O Lord, as the apple of your eye;",
-          "label": "V."
-        },
-        {
-          "text": "Hide us under the shadow of your wings.",
-          "label": "R."
-        }
-      ],
-      "metadata": {},
-      "category": [],
-      "hidden": false,
-      "type": "responsive",
-      "style": "preces",
-      "source": {
-        "source": "BCP",
-        "api": "",
-        "citation": "p. 132"
-      }
-    },
-    {
-      "style": "preces",
-      "value": [
-        {
-          "response": "",
-          "label": "Officiant",
-          "text": "Lord, have mercy."
-        },
-        {
-          "label": "People",
-          "text": "Christ, have mercy."
-        },
-        {
-          "text": "Lord, have mercy.",
-          "label": "Officiant"
-        }
-      ],
-      "type": "responsive",
-      "hidden": false
-    },
-    {
-      "value": ["Officiant and People"],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "value": [
-        {
-          "source": {
-            "api": "",
-            "source": "",
-            "citation": ""
-          },
-          "type": "text",
-          "value": [
-            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
-          ],
-          "metadata": {
-            "omit_response": false
-          },
-          "version_label": "Traditional",
           "style": "text",
-          "category": [],
+          "value": ["An Order for Compline"],
+          "metadata": {
+            "level": 1
+          }
+        },
+        {
+          "style": "date",
+          "type": "heading",
+          "value": [""],
+          "metadata": {
+            "level": 1
+          },
           "hidden": false
         },
         {
           "hidden": false,
-          "version_label": "Contemporary",
-          "style": "text",
+          "value": ["Heading"],
           "metadata": {
+            "level": 1
+          },
+          "style": "day",
+          "type": "heading"
+        },
+        {
+          "type": "rubric",
+          "value": ["The Officiant begins"],
+          "hidden": false
+        },
+        {
+          "style": "text",
+          "value": [
+            "The Lord Almighty grant us a peaceful night and a perfect end."
+          ],
+          "category": [],
+          "source": {
+            "api": "",
+            "citation": "p. 127",
+            "source": "BCP"
+          },
+          "metadata": {
+            "response": "Amen.",
             "omit_response": false
           },
           "type": "text",
-          "category": [],
+          "hidden": false
+        },
+        {
+          "hidden": false,
           "value": [
-            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil."
+            {
+              "text": "Our help is in the name of the Lord.",
+              "response": "",
+              "label": "Officiant"
+            },
+            {
+              "text": "The maker of heaven and earth.",
+              "label": "People"
+            }
           ],
+          "style": "preces",
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "hidden": false,
+          "value": ["The Officiant may then say"]
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "value": ["Let us confess our sins to God."],
+          "style": "text"
+        },
+        {
+          "hidden": false,
+          "value": ["Silence may be kept."],
+          "type": "rubric"
+        },
+        {
+          "value": ["Officiant and People"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
           "source": {
             "citation": "",
             "api": "",
             "source": ""
+          },
+          "display_format": "unison",
+          "category": [],
+          "type": "text",
+          "value": [
+            "Almighty God, our heavenly Father:\nWe have sinned against you,\nthrough our own fault,\nin thought, and word, and deed,\nand in what we have left undone.\nFor the sake of your Son our Lord Jesus Christ,\nforgive us all our offenses;\nand grant that we may serve you\nin newness of life,\nto the glory of your Name."
+          ],
+          "hidden": false,
+          "style": "prayer",
+          "metadata": {
+            "omit_response": false
           }
-        }
-      ],
-      "category": [],
-      "hidden": false,
-      "version_label": "",
-      "type": "option",
-      "source": {
-        "source": "",
-        "citation": "",
-        "api": ""
-      },
-      "metadata": {
-        "selected": 1,
-        "editor_selected": 1
-      }
-    },
-    {
-      "hidden": false,
-      "style": "preces",
-      "value": [
-        {
-          "response": "",
-          "text": "Lord, hear our prayer.",
-          "label": "Officiant"
         },
         {
-          "label": "People",
-          "text": "And let our cry come to you."
-        },
-        {
-          "text": "Let us pray.",
-          "label": "Officiant"
-        }
-      ],
-      "type": "responsive"
-    },
-    {
-      "type": "option",
-      "value": [
-        {
-          "style": "prayer",
-          "version": "bcp1979",
-          "label": "",
-          "language": "en",
-          "category": [],
-          "slug": "compline_collect",
-          "value": [
-            "Visit this place, O Lord, and drive far from it all snares of the enemy; let your holy angels dwell with us to preserve us in peace; and let your blessing be upon us always; through Jesus Christ our Lord."
-          ],
-          "hidden": false,
-          "lastRevision": 23,
-          "type": "text"
-        },
-        {
-          "type": "text",
-          "language": "en",
-          "slug": "compline_collect",
-          "value": [
-            "Be our light in the darkness, O Lord, and in your great mercy defend us from all perils and dangers of this night; for the love of your only Son, our Savior Jesus Christ."
-          ],
-          "style": "prayer",
-          "hidden": false,
-          "lastRevision": 11,
-          "label": "",
-          "version": "bcp1979",
-          "category": []
-        },
-        {
-          "category": [],
-          "language": "en",
-          "lastRevision": 19,
-          "value": [
-            "Look down, O Lord, from your heavenly throne, and illumine this night with your celestial brightness; that by night as by day your people may glorify your holy Name; through Jesus Christ our Lord."
-          ],
-          "version": "bcp1979",
-          "label": "",
-          "hidden": false,
-          "slug": "compline_collect",
-          "type": "text",
-          "style": "prayer"
-        },
-        {
-          "style": "prayer",
-          "language": "en",
-          "type": "text",
-          "value": [
-            "Be present, O merciful God, and protect us through the hours of this night, so that we who are wearied by the changes and chances of this life may rest in your eternal changelessness; through Jesus Christ our Lord."
-          ],
-          "slug": "compline_collect",
-          "label": "",
-          "category": [],
-          "lastRevision": 15,
-          "version": "bcp1979",
+          "value": ["Officiant"],
+          "type": "rubric",
           "hidden": false
-        }
-      ]
-    },
-    {
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "weekday": {
-              "only": ["Saturday"],
-              "except": []
-            }
-          }
-        ]
-      },
-      "label": "A Collect for Saturdays",
-      "value": [
-        "We give you thanks, O God, for revealing your Son Jesus Christ to us by the light of his resurrection: Grant that as we sing your glory at the close of this day, our joy may abound in the morning as we celebrate the Paschal mystery; through Jesus Christ our Lord."
-      ],
-      "hidden": false,
-      "style": "prayer",
-      "type": "text"
-    },
-    {
-      "type": "rubric",
-      "value": ["One of the following prayers may be added"]
-    },
-    {
-      "hidden": false,
-      "metadata": {
-        "editor_selected": 1,
-        "selected": 1
-      },
-      "value": [
+        },
         {
           "hidden": false,
-          "type": "text",
           "value": [
-            "Keep watch, dear Lord, with those who work, or watch, or weep this night, and give your angels charge over those who sleep. Tend the sick, Lord Christ; give rest to the weary, bless the dying, soothe the suffering, pity the afflicted, shield the joyous; and all for your love’s sake."
+            "May the Almighty God grant us forgiveness of all our sins, and the grace and comfort of the Holy Spirit."
           ],
+          "type": "text",
           "style": "prayer"
         },
         {
-          "value": [
-            "O God, your unfailing providence sustains the world we live in and the life we live: Watch over those, both night and day, who work while others sleep, and grant that we may never forget that our common life depends upon each other’s toil; through Jesus Christ our Lord."
-          ],
-          "type": "text",
+          "type": "rubric",
           "hidden": false,
-          "style": "prayer"
-        }
-      ],
-      "type": "option"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [
-        "Silence may be kept, and free intercessions and thanksgivings may be offered.\n"
-      ]
-    },
-    {
-      "value": [
-        "The service concludes with the Song of Simeon with this Antiphon, which is sung or said by all"
-      ],
-      "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "style": "antiphon",
-      "type": "refrain",
-      "value": [
-        "Guide us waking, O Lord, and guard us sleeping; that awake we may watch with Christ, and asleep we may rest in peace."
-      ],
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "value": ["In Easter Season, add"]
-    },
-    {
-      "type": "refrain",
-      "style": "antiphon",
-      "value": ["Alleluia, alleluia, alleuia."]
-    },
-    {
-      "version": "bcp1979",
-      "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
-      },
-      "value": [
+          "value": ["The Officiant then says"]
+        },
         {
-          "type": "psalm-section",
+          "type": "responsive",
+          "hidden": false,
+          "style": "preces",
           "value": [
             {
-              "number": "",
-              "type": "psalm-verse",
-              "verse": "Lord, you now have set your servant free *",
-              "halfverse": "to go in peace as you have promised;"
+              "response": "",
+              "text": "O God, make speed to save us.",
+              "label": ""
             },
             {
-              "type": "psalm-verse",
-              "verse": "For these eyes of mine have seen the Savior, *",
-              "halfverse": "whom you have prepared for all the world to see:",
-              "number": ""
-            },
-            {
-              "type": "psalm-verse",
-              "number": "",
-              "halfverse": "and the glory of your people Israel.",
-              "verse": "A Light to enlighten the nations, *"
+              "text": "O Lord, make haste to help us.",
+              "label": "People"
             }
           ]
-        }
-      ],
-      "hidden": false,
-      "language": "en",
-      "category": [],
-      "type": "psalm",
-      "style": "canticle",
-      "metadata": {
-        "insert_antiphon": false,
-        "omit_gloria": false,
-        "omit_antiphon": false,
-        "gloria": {
-          "style": "gloria",
-          "version": "bcp1979",
-          "label": null,
-          "language": "en",
-          "citation": null,
-          "sharing": {
-            "organization": "venite",
-            "collaborators": [],
-            "privacy": "public",
-            "status": "published",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-          },
-          "type": "refrain",
-          "category": [null],
+        },
+        {
           "hidden": false,
+          "value": ["Officiant and People"],
+          "type": "rubric"
+        },
+        {
+          "version": "bcp1979",
+          "category": [null],
+          "label": null,
           "version_label": "Rite II",
+          "type": "refrain",
           "slug": "gloria-patri",
           "value": [
             "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
             "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-          ]
-        }
-      }
-    },
-    {
-      "type": "refrain",
-      "style": "antiphon",
-      "value": ["All repeat the Antiphon"]
-    },
-    {
-      "style": "antiphon",
-      "type": "refrain",
-      "value": [
-        "Guide us waking, O Lord, and guard us sleeping; that awake we may watch with Christ, and asleep we may rest in peace."
-      ],
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "value": ["In Easter Season, add"]
-    },
-    {
-      "type": "refrain",
-      "style": "antiphon",
-      "value": ["Alleluia, alleluia, alleuia."]
-    },
-    {
-      "value": [
-        {
-          "response": "",
-          "text": "Let us bless the Lord.",
-          "label": "Officiant"
+          ],
+          "citation": null,
+          "language": "en",
+          "style": "gloria",
+          "hidden": false
         },
         {
-          "text": "Thanks be to God.",
-          "label": "People"
+          "type": "rubric",
+          "value": ["Except in Lent, add"]
+        },
+        {
+          "style": "text",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": [],
+                  "except": ["Lent", "HolyWeek"]
+                }
+              }
+            ]
+          },
+          "value": ["Alleluia."],
+          "hidden": false,
+          "type": "text"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "\nOne or more of the following Psalms are sung or said. Other suitable selections may be substituted."
+          ]
+        },
+        {
+          "version": "bcp1979",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Answer me when I call, O God, defender of my cause; *",
+                  "halfverse": "you set me free when I am hard-pressed;\n have mercy on me and hear my prayer.",
+                  "number": "1",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "how long will you worship dumb idols\n and run after false gods?”",
+                  "verse": "“You mortals, how long will you dishonor my glory; *",
+                  "type": "psalm-verse",
+                  "number": "2"
+                },
+                {
+                  "verse": "Know that the LORD does wonders for the faithful; *",
+                  "number": "3",
+                  "halfverse": "when I call upon the LORD, he will hear me.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "number": "4",
+                  "type": "psalm-verse",
+                  "halfverse": "speak to your heart in silence upon your bed.",
+                  "verse": "Tremble, then, and do not sin; *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and put your trust in the LORD.",
+                  "verse": "Offer the appointed sacrifices *",
+                  "number": "5"
+                },
+                {
+                  "number": "6",
+                  "verse": "Many are saying,\n“Oh, that we might see better times!” *",
+                  "type": "psalm-verse",
+                  "halfverse": "Lift up the light of your countenance upon us, O LORD."
+                },
+                {
+                  "number": "7",
+                  "type": "psalm-verse",
+                  "halfverse": "more than when grain and wine and oil increase.",
+                  "verse": "You have put gladness in my heart, *"
+                },
+                {
+                  "verse": "I lie down in peace; at once I fall asleep; *",
+                  "type": "psalm-verse",
+                  "number": "8",
+                  "halfverse": "for only you, LORD, make me dwell in safety."
+                }
+              ]
+            }
+          ],
+          "type": "psalm",
+          "citation": null,
+          "category": ["Psalm"],
+          "hidden": false,
+          "label": "Psalm 4",
+          "slug": "psalm_4",
+          "source": {
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979",
+            "citation": "p. 587"
+          },
+          "metadata": {
+            "latinname": "Cum invocarem",
+            "omit_antiphon": false,
+            "number": "4",
+            "localname": "Psalm 4",
+            "omit_gloria": false
+          },
+          "language": "en",
+          "style": "psalm",
+          "version_label": null
+        },
+        {
+          "hidden": false,
+          "metadata": {
+            "number": "31",
+            "latinname": "In te, Domine, speravi",
+            "omit_gloria": false,
+            "localname": "Psalm 31",
+            "omit_antiphon": false
+          },
+          "version": "bcp1979",
+          "language": "en",
+          "label": "Psalm 31",
+          "category": ["Psalm"],
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "deliver me in your righteousness.",
+                  "verse": "In you, O LORD, have I taken refuge;\nlet me never be put to shame; *",
+                  "type": "psalm-verse",
+                  "number": "1"
+                },
+                {
+                  "halfverse": "make haste to deliver me.",
+                  "verse": "Incline your ear to me; *",
+                  "type": "psalm-verse",
+                  "number": "2"
+                },
+                {
+                  "number": "3",
+                  "halfverse": "for the sake of your Name, lead me and guide me.",
+                  "type": "psalm-verse",
+                  "verse": "Be my strong rock, a castle to keep me safe,\nfor you are my crag and my stronghold; *"
+                },
+                {
+                  "number": "4",
+                  "type": "psalm-verse",
+                  "verse": "Take me out of the net that they have secretly set for me, *",
+                  "halfverse": "for you are my tower of strength."
+                },
+                {
+                  "number": "5",
+                  "verse": "Into your hands I commend my spirit, *",
+                  "halfverse": "for you have redeemed me,\n O LORD, O God of truth.",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "style": "psalm",
+          "type": "psalm",
+          "citation": null,
+          "slug": "psalm_31",
+          "version_label": null,
+          "source": {
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api",
+            "citation": "p. 622"
+          }
+        },
+        {
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "He who dwells in the shelter of the Most High, *",
+                  "number": "1",
+                  "halfverse": "abides under the shadow of the Almighty."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "He shall say to the LORD,\n“You are my refuge and my stronghold, *",
+                  "number": "2",
+                  "halfverse": "my God in whom I put my trust.”"
+                },
+                {
+                  "verse": "He shall deliver you from the snare of the hunter *",
+                  "number": "3",
+                  "type": "psalm-verse",
+                  "halfverse": "and from the deadly pestilence."
+                },
+                {
+                  "verse": "He shall cover you with his pinions,\nand you shall find refuge under his wings; *",
+                  "number": "4",
+                  "type": "psalm-verse",
+                  "halfverse": "his faithfulness shall be a shield and buckler."
+                },
+                {
+                  "number": "5",
+                  "type": "psalm-verse",
+                  "verse": "You shall not be afraid of any terror by night, *",
+                  "halfverse": "nor of the arrow that flies by day;"
+                },
+                {
+                  "halfverse": "nor of the sickness that lays waste at mid-day.",
+                  "type": "psalm-verse",
+                  "verse": "Of the plague that stalks in the darkness, *",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "but it shall not come near you.",
+                  "number": "7",
+                  "verse": "A thousand shall fall at your side\nand ten thousand at your right hand, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Your eyes have only to behold *",
+                  "halfverse": "to see the reward of the wicked.",
+                  "number": "8",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and the Most High your habitation,",
+                  "number": "9",
+                  "verse": "Because you have made the LORD your refuge, *"
+                },
+                {
+                  "halfverse": "neither shall any plague come near your dwelling.",
+                  "number": "10",
+                  "type": "psalm-verse",
+                  "verse": "There shall no evil happen to you, *"
+                },
+                {
+                  "halfverse": "to keep you in all your ways.",
+                  "type": "psalm-verse",
+                  "verse": "For he shall give his angels charge over you, *",
+                  "number": "11"
+                },
+                {
+                  "number": "12",
+                  "halfverse": "lest you dash your foot against a stone.",
+                  "type": "psalm-verse",
+                  "verse": "They shall bear you in their hands, *"
+                },
+                {
+                  "halfverse": "you shall trample the young lion and the serpent under your feet.",
+                  "type": "psalm-verse",
+                  "verse": "You shall tread upon the lion and the adder; *",
+                  "number": "13"
+                },
+                {
+                  "number": "14",
+                  "halfverse": "I will protect him, because he knows my Name.",
+                  "verse": "Because he is bound to me in love,\ntherefore will I deliver him; *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "number": "15",
+                  "halfverse": "I am with him in trouble;\n I will rescue him and bring him to honor.",
+                  "verse": "He shall call upon me, and I will answer him; *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and show him my salvation.",
+                  "number": "16",
+                  "verse": "With long life will I satisfy him, *"
+                }
+              ]
+            }
+          ],
+          "type": "psalm",
+          "citation": null,
+          "metadata": {
+            "omit_antiphon": false,
+            "latinname": "Qui habitat",
+            "number": "91",
+            "omit_gloria": false,
+            "localname": "Psalm 91"
+          },
+          "version": "bcp1979",
+          "language": "en",
+          "style": "psalm",
+          "slug": "psalm_91",
+          "version_label": null,
+          "hidden": false,
+          "label": "Psalm 91",
+          "category": ["Psalm"],
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 719",
+            "source": "bcp1979"
+          }
+        },
+        {
+          "version": "bcp1979",
+          "version_label": null,
+          "slug": "psalm_134",
+          "label": "Psalm 134",
+          "language": "en",
+          "value": [
+            {
+              "value": [
+                {
+                  "number": "1",
+                  "verse": "Behold now, bless the LORD, all you servants of the LORD, *",
+                  "halfverse": "you that stand by night in the house of the LORD.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Lift up your hands in the holy place and bless the LORD; *",
+                  "type": "psalm-verse",
+                  "number": "2",
+                  "halfverse": "the LORD who made heaven and earth bless you out of Zion."
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "hidden": false,
+          "category": ["Psalm"],
+          "citation": null,
+          "metadata": {
+            "localname": "Psalm 134",
+            "omit_gloria": false,
+            "number": "134",
+            "omit_antiphon": false,
+            "latinname": "Ecce nunc"
+          },
+          "source": {
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979",
+            "citation": "p. 787"
+          },
+          "style": "psalm",
+          "type": "psalm"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": ["At the end of the Psalms is sung or said"],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "false",
+                  "is": true,
+                  "key": "insertGloria"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "value": "false",
+                  "is": true,
+                  "key": "insertGloria"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "bcp1979",
+          "category": [null],
+          "label": null,
+          "version_label": "Rite II",
+          "type": "refrain",
+          "slug": "gloria-patri",
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ],
+          "citation": null,
+          "language": "en",
+          "style": "gloria",
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "One of the following, or some other suitable passage of Scripture, is read"
+          ]
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "metadata": {
+                "response": "Thanks be to God."
+              },
+              "lastRevision": 16,
+              "style": "short",
+              "citation": " Jeremiah 14:9,22",
+              "hidden": false,
+              "version": "bcp1979",
+              "language": "en",
+              "category": [],
+              "value": [
+                {
+                  "verse": "9,22",
+                  "text": "Lord, you are in the midst of us, and we are called by your Name: Do not forsake us, O Lord our God.",
+                  "book": "Jeremiah",
+                  "chapter": "14"
+                }
+              ],
+              "slug": "compline_chapter",
+              "type": "bible-reading"
+            },
+            {
+              "language": "en",
+              "version": "bcp1979",
+              "metadata": {
+                "response": "Thanks be to God."
+              },
+              "type": "bible-reading",
+              "lastRevision": 28,
+              "citation": "1 Peter 5:8-9a ",
+              "hidden": false,
+              "category": [],
+              "slug": "compline_chapter",
+              "value": [
+                {
+                  "chapter": "5",
+                  "verse": "8-9a",
+                  "book": "1 Peter",
+                  "text": "Be sober, be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour. Resist him, firm in your faith."
+                }
+              ],
+              "style": "short"
+            },
+            {
+              "citation": "Hebrews 13:20-21",
+              "hidden": false,
+              "metadata": {
+                "response": "Thanks be to God."
+              },
+              "lastRevision": 22,
+              "type": "bible-reading",
+              "slug": "compline_chapter",
+              "version": "bcp1979",
+              "style": "short",
+              "category": [],
+              "language": "en",
+              "value": [
+                {
+                  "verse": "20-21",
+                  "chapter": "13",
+                  "book": "Hebrews",
+                  "text": "May the God of peace, who brought again from the dead our Lord Jesus, the great shepherd of the sheep, by the blood of the eternal covenant, equip you with everything good that you may do his will, working in you that which is pleasing in his sight; through Jesus Christ, to whom be glory for ever and ever. "
+                }
+              ]
+            },
+            {
+              "version": "bcp1979",
+              "style": "short",
+              "hidden": false,
+              "type": "bible-reading",
+              "lastRevision": 21,
+              "slug": "compline_chapter",
+              "language": "en",
+              "metadata": {
+                "response": "Thanks be to God."
+              },
+              "category": [],
+              "citation": "Matthew 11:28-30",
+              "value": [
+                {
+                  "verse": "28-30",
+                  "chapter": "11",
+                  "book": "Matthew",
+                  "text": "Come to me, all who labor and are heavy-laden, and I will give you rest. Take my yoke upon you, and learn from me; for I am gentle and lowly in heart, and you will find rest for your souls. For my yoke is easy, and my burden is light."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "value": ["A hymn suitable for the evening may be sung. "],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": ["Then follows"]
+        },
+        {
+          "value": [
+            {
+              "text": "Into your hands, O Lord, I commend my spirit;",
+              "label": "V.",
+              "response": ""
+            },
+            {
+              "text": "For you have redeemed me, O Lord, O God of truth.",
+              "label": "R."
+            },
+            {
+              "text": "Keep us, O Lord, as the apple of your eye;",
+              "label": "V."
+            },
+            {
+              "text": "Hide us under the shadow of your wings.",
+              "label": "R."
+            }
+          ],
+          "metadata": {},
+          "category": [],
+          "hidden": false,
+          "type": "responsive",
+          "style": "preces",
+          "source": {
+            "source": "BCP",
+            "api": "",
+            "citation": "p. 132"
+          }
+        },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "label": "Officiant",
+              "text": "Lord, have mercy."
+            },
+            {
+              "label": "People",
+              "text": "Christ, have mercy."
+            },
+            {
+              "text": "Lord, have mercy.",
+              "label": "Officiant"
+            }
+          ],
+          "type": "responsive",
+          "hidden": false
+        },
+        {
+          "value": ["Officiant and People"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "value": [
+            {
+              "source": {
+                "api": "",
+                "source": "",
+                "citation": ""
+              },
+              "type": "text",
+              "value": [
+                "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
+              ],
+              "metadata": {
+                "omit_response": false
+              },
+              "version_label": "Traditional",
+              "style": "text",
+              "category": [],
+              "hidden": false
+            },
+            {
+              "hidden": false,
+              "version_label": "Contemporary",
+              "style": "text",
+              "metadata": {
+                "omit_response": false
+              },
+              "type": "text",
+              "category": [],
+              "value": [
+                "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil."
+              ],
+              "source": {
+                "citation": "",
+                "api": "",
+                "source": ""
+              }
+            }
+          ],
+          "category": [],
+          "hidden": false,
+          "version_label": "",
+          "type": "option",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "metadata": {
+            "selected": 1,
+            "editor_selected": 1
+          }
+        },
+        {
+          "hidden": false,
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "text": "Lord, hear our prayer.",
+              "label": "Officiant"
+            },
+            {
+              "label": "People",
+              "text": "And let our cry come to you."
+            },
+            {
+              "text": "Let us pray.",
+              "label": "Officiant"
+            }
+          ],
+          "type": "responsive"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "style": "prayer",
+              "version": "bcp1979",
+              "label": "",
+              "language": "en",
+              "category": [],
+              "slug": "compline_collect",
+              "value": [
+                "Visit this place, O Lord, and drive far from it all snares of the enemy; let your holy angels dwell with us to preserve us in peace; and let your blessing be upon us always; through Jesus Christ our Lord."
+              ],
+              "hidden": false,
+              "lastRevision": 23,
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "language": "en",
+              "slug": "compline_collect",
+              "value": [
+                "Be our light in the darkness, O Lord, and in your great mercy defend us from all perils and dangers of this night; for the love of your only Son, our Savior Jesus Christ."
+              ],
+              "style": "prayer",
+              "hidden": false,
+              "lastRevision": 11,
+              "label": "",
+              "version": "bcp1979",
+              "category": []
+            },
+            {
+              "category": [],
+              "language": "en",
+              "lastRevision": 19,
+              "value": [
+                "Look down, O Lord, from your heavenly throne, and illumine this night with your celestial brightness; that by night as by day your people may glorify your holy Name; through Jesus Christ our Lord."
+              ],
+              "version": "bcp1979",
+              "label": "",
+              "hidden": false,
+              "slug": "compline_collect",
+              "type": "text",
+              "style": "prayer"
+            },
+            {
+              "style": "prayer",
+              "language": "en",
+              "type": "text",
+              "value": [
+                "Be present, O merciful God, and protect us through the hours of this night, so that we who are wearied by the changes and chances of this life may rest in your eternal changelessness; through Jesus Christ our Lord."
+              ],
+              "slug": "compline_collect",
+              "label": "",
+              "category": [],
+              "lastRevision": 15,
+              "version": "bcp1979",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "weekday": {
+                  "only": ["Saturday"],
+                  "except": []
+                }
+              }
+            ]
+          },
+          "label": "A Collect for Saturdays",
+          "value": [
+            "We give you thanks, O God, for revealing your Son Jesus Christ to us by the light of his resurrection: Grant that as we sing your glory at the close of this day, our joy may abound in the morning as we celebrate the Paschal mystery; through Jesus Christ our Lord."
+          ],
+          "hidden": false,
+          "style": "prayer",
+          "type": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["One of the following prayers may be added"]
+        },
+        {
+          "hidden": false,
+          "metadata": {
+            "editor_selected": 1,
+            "selected": 1
+          },
+          "value": [
+            {
+              "hidden": false,
+              "type": "text",
+              "value": [
+                "Keep watch, dear Lord, with those who work, or watch, or weep this night, and give your angels charge over those who sleep. Tend the sick, Lord Christ; give rest to the weary, bless the dying, soothe the suffering, pity the afflicted, shield the joyous; and all for your love’s sake."
+              ],
+              "style": "prayer"
+            },
+            {
+              "value": [
+                "O God, your unfailing providence sustains the world we live in and the life we live: Watch over those, both night and day, who work while others sleep, and grant that we may never forget that our common life depends upon each other’s toil; through Jesus Christ our Lord."
+              ],
+              "type": "text",
+              "hidden": false,
+              "style": "prayer"
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "Silence may be kept, and free intercessions and thanksgivings may be offered.\n"
+          ]
+        },
+        {
+          "value": [
+            "The service concludes with the Song of Simeon with this Antiphon, which is sung or said by all"
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "style": "antiphon",
+          "type": "refrain",
+          "value": [
+            "Guide us waking, O Lord, and guard us sleeping; that awake we may watch with Christ, and asleep we may rest in peace."
+          ],
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["In Easter Season, add"]
+        },
+        {
+          "type": "refrain",
+          "style": "antiphon",
+          "value": ["Alleluia, alleluia, alleuia."]
+        },
+        {
+          "version": "bcp1979",
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "number": "",
+                  "type": "psalm-verse",
+                  "verse": "Lord, you now have set your servant free *",
+                  "halfverse": "to go in peace as you have promised;"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "For these eyes of mine have seen the Savior, *",
+                  "halfverse": "whom you have prepared for all the world to see:",
+                  "number": ""
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "",
+                  "halfverse": "and the glory of your people Israel.",
+                  "verse": "A Light to enlighten the nations, *"
+                }
+              ]
+            }
+          ],
+          "hidden": false,
+          "language": "en",
+          "category": [],
+          "type": "psalm",
+          "style": "canticle",
+          "metadata": {
+            "insert_antiphon": false,
+            "omit_gloria": false,
+            "omit_antiphon": false,
+            "gloria": {
+              "style": "gloria",
+              "version": "bcp1979",
+              "label": null,
+              "language": "en",
+              "citation": null,
+              "sharing": {
+                "organization": "venite",
+                "collaborators": [],
+                "privacy": "public",
+                "status": "published",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+              },
+              "type": "refrain",
+              "category": [null],
+              "hidden": false,
+              "version_label": "Rite II",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ]
+            }
+          }
+        },
+        {
+          "type": "refrain",
+          "style": "antiphon",
+          "value": ["All repeat the Antiphon"]
+        },
+        {
+          "style": "antiphon",
+          "type": "refrain",
+          "value": [
+            "Guide us waking, O Lord, and guard us sleeping; that awake we may watch with Christ, and asleep we may rest in peace."
+          ],
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["In Easter Season, add"]
+        },
+        {
+          "type": "refrain",
+          "style": "antiphon",
+          "value": ["Alleluia, alleluia, alleuia."]
+        },
+        {
+          "value": [
+            {
+              "response": "",
+              "text": "Let us bless the Lord.",
+              "label": "Officiant"
+            },
+            {
+              "text": "Thanks be to God.",
+              "label": "People"
+            }
+          ],
+          "hidden": false,
+          "style": "preces",
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "hidden": false,
+          "value": ["The Officiant concludes"]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "hidden": false,
+          "value": [
+            "The almighty and merciful Lord, Father, Son, and Holy Spirit, bless us and keep us."
+          ]
         }
       ],
-      "hidden": false,
-      "style": "preces",
-      "type": "responsive"
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["The Officiant concludes"]
-    },
-    {
-      "type": "text",
-      "style": "prayer",
-      "hidden": false,
-      "value": [
-        "The almighty and merciful Lord, Father, Son, and Holy Spirit, bless us and keep us."
-      ]
-    }
-  ],
-  "slug": "compline",
-  "source": {
-    "api": "",
-    "citation": "",
-    "source": ""
-  },
-  "version": "Rite-II",
-  "metadata": {
-    "preferences": {
-      "insertGloria": {
-        "options": [
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "No",
-            "value": "false",
-            "default": true
-          },
-          {
-            "metadata": {
-              "alternateYear": false
-            },
-            "label": "Yes",
-            "value": "true",
-            "default": false
+      "slug": "compline",
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "version": "Rite-II",
+      "metadata": {
+        "preferences": {
+          "insertGloria": {
+            "options": [
+              {
+                "metadata": {
+                  "alternateYear": false
+                },
+                "label": "No",
+                "value": "false",
+                "default": true
+              },
+              {
+                "metadata": {
+                  "alternateYear": false
+                },
+                "label": "Yes",
+                "value": "true",
+                "default": false
+              }
+            ],
+            "label": "Insert Gloria Patri after each Psalm",
+            "key": "insertGloria"
           }
-        ],
-        "label": "Insert Gloria Patri after each Psalm",
-        "key": "insertGloria"
-      }
-    },
-    "special_preferences": {},
-    "evening": true,
-    "supplement": false,
-    "liturgyversions": ["bcp1979"]
-  },
-  "label": "Compline",
-  "language": "en",
-  "hidden": false,
-  "type": "liturgy",
-  "category": []
+        },
+        "special_preferences": {},
+        "evening": true,
+        "supplement": false,
+        "liturgyversions": ["bcp1979"]
+      },
+      "label": "Compline",
+      "language": "en",
+      "hidden": false,
+      "type": "liturgy",
+      "category": []
+    }
+  ]
 }

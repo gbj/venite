@@ -2,7 +2,7 @@ import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 
-async function buildScript(src: string, outDir: string) {
+export async function buildScript(src: string, outDir: string) {
   const { files } = await Deno.emit(src);
   for (const [fileName, text] of Object.entries(files)) {
     const jsFileName = (fileName.split("/").pop() || "")?.replace(
@@ -13,7 +13,7 @@ async function buildScript(src: string, outDir: string) {
     console.log("Bundled", jsFileName);
   }
 
-  return { [src]: () => buildScript(src, outDir) };
+  return { map: { [src]: () => buildScript(src, outDir) } };
 }
 
 export async function buildScripts(): Promise<SSGRefreshMap> {

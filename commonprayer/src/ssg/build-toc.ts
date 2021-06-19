@@ -1,12 +1,14 @@
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { exists, walk } from "https://deno.land/std@0.98.0/fs/mod.ts";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.1.12";
+import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.2.4";
 import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
 
 import { Index } from "../index.tsx";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
+import { LDF_TO_HTML_CONFIG } from "./ldf-to-html-config.tsx";
+import { Category } from "../components/category/category.tsx";
 
-const IGNORE = [".DS_Store"],
+const IGNORE = [".DS_Store", "index.json"],
   DIR_IGNORE_CHILDREN: string[] = [];
 
 export async function buildDoc(
@@ -29,10 +31,13 @@ export async function buildDoc(
       json = await Deno.readTextFile(src),
       data = JSON.parse(json),
       docs = data.data ? data.data : [data],
-      main = `<main><div class="cp-doc" data-category="${subpath}" data-slug="${slug}">${docs.map(
-        (doc: LiturgicalDocument) => ldfToHTML(new LiturgicalDocument(doc))
-      )}</div></main>`,
-      html = Index({ main }, isDev);
+      main = Promise.resolve(
+        `<main><div class="cp-doc" data-category="${subpath}" data-slug="${slug}">${docs.map(
+          (doc: LiturgicalDocument) =>
+            ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
+        )}</div></main>`
+      ),
+      html = await Index({ main }, isDev);
 
     if (!(await exists(dest))) {
       await Deno.mkdir(dest, { recursive: true });
@@ -49,6 +54,40 @@ export async function buildDoc(
   }
 
   return { [src]: () => buildDoc(subpath, src, filename, isDev) };
+}
+
+export async function buildCategoryPage(
+  srcDir: string,
+  categoryName: string,
+  isDev: boolean
+): Promise<SSGRefreshMap> {
+  const page = Category(srcDir, categoryName),
+    html = await Index(page),
+    dest = path.join(
+      path.fromFileUrl(import.meta.url),
+      "..",
+      "..",
+      "..",
+      "www",
+      categoryName
+    );
+  if (!(await exists(dest))) {
+    await Deno.mkdir(dest, { recursive: true });
+  }
+  await Deno.writeTextFile(path.join(dest, "index.html"), html);
+
+  const categoryPagePath = path.join(
+    path.fromFileUrl(import.meta.url),
+    "..",
+    "..",
+    "pages",
+    "category.tsx"
+  );
+
+  return {
+    [srcDir]: () => buildCategoryPage(srcDir, categoryName, isDev),
+    [categoryPagePath]: () => buildCategoryPage(srcDir, categoryName, isDev),
+  };
 }
 
 export async function buildTOC(
@@ -68,12 +107,19 @@ export async function buildTOC(
   let map: SSGRefreshMap = {};
 
   for await (const e of walk(src, { maxDepth: 1 })) {
+    // build a page for each LDF JSON file
     if (e.isFile) {
       if (!IGNORE.includes(e.name)) {
         map = { ...map, ...(await buildDoc(subpath, e.path, e.name, isDev)) };
       }
-    } else {
+    }
+    // for each directory,
+    else {
       if (e.path !== src) {
+        // a) build a category page
+        map = { ...map, ...(await buildCategoryPage(e.path, e.name, isDev)) };
+
+        // b) build pages for children
         if (!DIR_IGNORE_CHILDREN.includes(e.name)) {
           map = {
             ...map,

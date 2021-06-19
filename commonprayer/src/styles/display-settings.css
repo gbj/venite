@@ -6,11 +6,20 @@
   display: flex;
   flex-direction: column;
 }
+.display-settings > .multiple {
+  display: flex;
+  flex-direction: row;
+}
 .display-settings label {
   font-family: var(--cp-ui-font-family);
   padding: 0.5rem;
   cursor: pointer;
   width: calc(100%-1rem-2px);
+}
+.display-settings > .multiple > label {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
 }
 
 .display-setting-button {
@@ -56,5 +65,43 @@ label[for="bibleverses"] {
   color: var(--bibleverses-toggle-color);
   border: 1px solid var(--bibleverses-toggle-color);
   padding: var(--bibleverses-padding, 0.5rem);
+  margin: 1px;
+}
+
+/* Response */
+#responses-bold:checked ~ main .response, #responses-bold:checked ~ main .unison {
+  font-weight: bold;
+  font-style: normal;
+}
+#responses-bold:checked ~ menu {
+  --responses-bold-background-color: var(--cp-success-light);
+  --responses-bold-background-image: url("/assets/icon/check-solid.svg");
+  --responses-bold-toggle-color: var(--cp-success-background);
+  --responses-bold-padding: calc(0.5rem - 1px);
+}
+label[for="responses-bold"] {
+  background-color: var(--responses-bold-background-color);
+  background-image: var(--responses-bold-background-image);
+  color: var(--responses-bold-toggle-color);
+  border: 1px solid var(--responses-bold-toggle-color);
+  padding: var(--responses-bold-padding, 0.5rem);
+  margin: 1px;
+}
+#responses-italic:checked ~ main .response, #responses-italic:checked ~ main .unison {
+  font-weight: normal;
+  font-style: italic;
+}
+#responses-italic:checked ~ menu {
+  --responses-italic-background-color: var(--cp-success-light);
+  --responses-italic-background-image: url("/assets/icon/check-solid.svg");
+  --responses-italic-toggle-color: var(--cp-success-background);
+  --responses-italic-padding: calc(0.5rem - 1px);
+}
+label[for="responses-italic"] {
+  background-color: var(--responses-italic-background-color);
+  background-image: var(--responses-italic-background-image);
+  color: var(--responses-italic-toggle-color);
+  border: 1px solid var(--responses-italic-toggle-color);
+  padding: var(--responses-italic-padding, 0.5rem);
   margin: 1px;
 }

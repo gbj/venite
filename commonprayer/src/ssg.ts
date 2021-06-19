@@ -21,7 +21,7 @@ async function build(isDev = false): Promise<SSGRefreshMap> {
     buildTOC(isDev),
 
     // Build pages
-    buildPage("home", isDev),
+    buildPage("home", isDev, true),
     buildPage("psalter", isDev),
   ]);
 

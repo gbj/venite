@@ -1,6 +1,9 @@
 import typesVhtml from "https://cdn.skypack.dev/@types/vhtml";
 import h from "https://cdn.pika.dev/vhtml@ 2.2.0";
-import { Page } from "./ssg/page.ts";
+import { PageProps } from "./ssg/page.ts";
+import { TOCMenu } from "./components/toc-menu.tsx";
+import { DisplaySettings } from "./components/display-settings.tsx";
+import { DocActionMenu } from "./components/doc-action-menu.tsx";
 
 function linksFromHTML(main : string) : string[] {
   try {
@@ -11,76 +14,14 @@ function linksFromHTML(main : string) : string[] {
   }
 }
 
-const TOCMenu = () => [
-  <button class="menu-button" id="toc-menu-button">
-    <img src="/assets/icon/books.svg"/>
-    <span class="visually-hidden">Table of Contents</span>
-  </button>,
-  <nav class="hidden toc-menu">
-    <ul>
-      <li>
-        <h2>Daily Office</h2>
-        <ul>
-          <li>Morning Prayer</li>
-          <li><a href="/office/noonday-prayer">Noonday Prayer</a></li>
-          <li>Evening Prayer</li>
-          <li><a href="/office/compline">Compline</a></li>
-        </ul>
-      </li>
-      <li>
-      <h2><a href="/psalter">The Psalter</a></h2>
-    </li>
-    </ul>
-  </nav>
-]
-
-const DisplaySettings = () => [
-  <input class="display-setting" type="checkbox" id="psalmverses" checked/>,
-  <input class="display-setting" type="checkbox" id="bibleverses" checked/>,
-  <button class="menu-button" id="display-menu-button">
-    <img src="/assets/icon/cog-solid.svg"/>
-    <span class="visually-hidden">Display Settings</span>
-  </button>,
-  <menu class="hidden display-settings">
-    <h2>Display Settings</h2>
-    <label for="psalmverses" aria-role="button" class="display-setting-button">
-      Psalm Verse Numbers
-    </label>
-    <label for="bibleverses" aria-role="button" class="display-setting-button">
-      Bible Verse Numbers
-    </label>
-  </menu>
-]
-
-export function Index({ main, script, style, head }: Page, isDev = false): string {
+export async function Index({ main, script, style, head, styles, scripts }: PageProps, isDev = false): Promise<string> {
+  const mainHtml = await main;
+  
   const body = (<body>
     <TOCMenu/>
     <DisplaySettings/>
-    <main dangerouslySetInnerHTML={{__html: main.replace("<main>", "").replace("</main>", "")}}></main>
-    <template id="cp-doc-menu">
-      <header class="cp-doc-header">
-        <menu class="cp-doc-menu">
-          <li>
-            <button class="clipboard">
-              <img src="/assets/icon/clipboard-regular.svg" />
-              <label>Copy Text</label>
-            </button>
-          </li>
-          <li>
-            <button class="venite">
-              <img src="/assets/icon/venite.svg" />
-              <label>Copy to Venite</label>
-            </button>
-          </li>
-          <li>
-            <button class="word">
-              <img src="/assets/icon/file-word-regular.svg" />
-              <label>Open in Word</label>
-            </button>
-          </li>
-        </menu>
-      </header>
-    </template>
+    <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>*
+    <DocActionMenu/>
   </body>);
 
   const links = linksFromHTML(body);
@@ -101,6 +42,7 @@ export function Index({ main, script, style, head }: Page, isDev = false): strin
       <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="preload" href="/assets/fonts/Sabon_Roman.ttf" as="font" type="font/ttf"/>
+      {styles && styles.map(url => <link rel="stylesheet" href={url}/>)}
       {style && <style>{style}</style>}
       {head}
       {isDev && <script src="/scripts/dev-socket.js"></script>}
@@ -108,8 +50,9 @@ export function Index({ main, script, style, head }: Page, isDev = false): strin
     </head>
     {body}
     {script && <script>${script}</script>}
-    <script type="module" src="/scripts/cp-doc.js"></script>
     <script type="module" src="/scripts/menus.js"></script>
+    {scripts && scripts.map(url => <script type="module" src={url}></script>)}
+    <script type="module" src="/scripts/cp-doc.js"></script>
   </html>;
 
   return `<!DOCTYPE html>${page}`
