@@ -83,3 +83,8 @@ menu.display-settings {
 .psalm .heading span {
   font-style: italic;
 }
+
+/* Calendar table */
+td {
+  vertical-align: middle;
+}

@@ -9,7 +9,7 @@ import { LDF_TO_HTML_CONFIG } from "./ldf-to-html-config.tsx";
 import { Category } from "../components/category/category.tsx";
 
 const IGNORE = [".DS_Store", "index.json"],
-  DIR_IGNORE_CHILDREN: string[] = [];
+  DIR_IGNORE_CHILDREN: string[] = ["psalter"];
 
 export async function buildDoc(
   subpath: string | undefined,

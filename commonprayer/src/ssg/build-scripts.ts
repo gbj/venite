@@ -3,14 +3,21 @@ import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 
 export async function buildScript(src: string, outDir: string) {
-  const { files } = await Deno.emit(src);
+  if (!(await exists(outDir))) {
+    await Deno.mkdir(outDir);
+  }
+
+  const { files } = await Deno.emit(src, { bundle: "module" });
+  const baseFileName = src.split("/").pop();
   for (const [fileName, text] of Object.entries(files)) {
-    const jsFileName = (fileName.split("/").pop() || "")?.replace(
-      ".ts.js",
-      ".js"
-    );
-    await Deno.writeTextFile(path.join(outDir, jsFileName), text);
-    console.log("Bundled", jsFileName);
+    const jsFileName = baseFileName
+        .replace(".ts.js", ".js")
+        .replace(".ts", ".js"),
+      outFileName = fileName.endsWith(".js.map")
+        ? `${jsFileName}.map`
+        : jsFileName;
+    await Deno.writeTextFile(path.join(outDir, outFileName), text);
+    console.log("Bundled", outFileName);
   }
 
   return { map: { [src]: () => buildScript(src, outDir) } };

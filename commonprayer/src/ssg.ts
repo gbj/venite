@@ -23,6 +23,7 @@ async function build(isDev = false): Promise<SSGRefreshMap> {
     // Build pages
     buildPage("home", isDev, true),
     buildPage("psalter", isDev),
+    buildPage("calendar", isDev),
   ]);
 
   return map.reduce((acc, curr) => ({ ...acc, ...curr }));

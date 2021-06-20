@@ -1,0 +1,2604 @@
+{
+  "weeks": [
+    {
+      "week": 24,
+      "color": "Green",
+      "slug": "10th-pentecost",
+      "kalendar": "bcp1979",
+      "name": "Tenth Sunday after Pentecost",
+      "season": "OrdinaryTime",
+      "cycle": "Easter"
+    },
+    {
+      "name": "Eleventh Sunday after Pentecost",
+      "slug": "11th-pentecost",
+      "season": "OrdinaryTime",
+      "week": 25,
+      "cycle": "Easter",
+      "kalendar": "bcp1979",
+      "color": "Green"
+    },
+    {
+      "slug": "12th-pentecost",
+      "cycle": "Easter",
+      "name": "Twelfth Sunday after Pentecost",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "week": 26,
+      "color": "Green"
+    },
+    {
+      "season": "OrdinaryTime",
+      "week": 27,
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "name": "Thirteenth Sunday after Pentecost",
+      "slug": "13th-pentecost",
+      "cycle": "Easter"
+    },
+    {
+      "cycle": "Easter",
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "week": 28,
+      "name": "Fourteenth Sunday after Pentecost",
+      "slug": "14th-pentecost"
+    },
+    {
+      "color": "Green",
+      "slug": "15th-pentecost",
+      "week": 29,
+      "name": "Fifteenth Sunday after Pentecost",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Easter"
+    },
+    {
+      "slug": "16th-pentecost",
+      "week": 30,
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "name": "Sixteenth Sunday after Pentecost",
+      "cycle": "Easter",
+      "season": "OrdinaryTime"
+    },
+    {
+      "week": 31,
+      "cycle": "Easter",
+      "name": "Seventeenth Sunday after Pentecost",
+      "slug": "17th-pentecost",
+      "color": "Green",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979"
+    },
+    {
+      "week": 32,
+      "name": "Eighteenth Sunday after Pentecost",
+      "color": "Green",
+      "slug": "18th-pentecost",
+      "cycle": "Easter",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime"
+    },
+    {
+      "slug": "19th-pentecost",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "week": 33,
+      "name": "Nineteenth Sunday after Pentecost"
+    },
+    {
+      "cycle": "Epiphany",
+      "season": "Epiphany",
+      "name": "First Sunday after the Epiphany",
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "slug": "1st-epiphany",
+      "week": 1
+    },
+    {
+      "name": "First Sunday in Lent",
+      "slug": "1st-lent",
+      "week": 1,
+      "kalendar": "bcp1979",
+      "cycle": "Easter",
+      "season": "Lent",
+      "color": "Purple"
+    },
+    {
+      "week": 1,
+      "season": "Christmas",
+      "color": "White",
+      "kalendar": "bcp1979",
+      "slug": "1st-sunday-after-christmas",
+      "name": "First Sunday after Christmas",
+      "cycle": "Christmas"
+    },
+    {
+      "season": "OrdinaryTime",
+      "color": "Green",
+      "name": "Twentieth Sunday after Pentecost",
+      "cycle": "Easter",
+      "week": 34,
+      "kalendar": "bcp1979",
+      "slug": "20th-pentecost"
+    },
+    {
+      "cycle": "Easter",
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "slug": "21st-pentecost",
+      "week": 35,
+      "name": "Twenty-First Sunday after Pentecost",
+      "season": "OrdinaryTime"
+    },
+    {
+      "slug": "22nd-pentecost",
+      "color": "Green",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "week": 36,
+      "name": "Twenty-Second Sunday after Pentecost"
+    },
+    {
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "week": 37,
+      "slug": "23rd-pentecost",
+      "name": "Twenty-Third Sunday after Pentecost",
+      "cycle": "Easter"
+    },
+    {
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "slug": "24th-pentecost",
+      "week": 38,
+      "name": "Twenty-Fourth Sunday after Pentecost"
+    },
+    {
+      "season": "OrdinaryTime",
+      "cycle": "Easter",
+      "week": 39,
+      "kalendar": "bcp1979",
+      "slug": "25th-pentecost",
+      "color": "Green",
+      "name": "Twenty-Fifth Sunday after Pentecost"
+    },
+    {
+      "name": "Twenty-Sixth Sunday after Pentecost",
+      "slug": "26th-pentecost",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "color": "Green",
+      "week": 40,
+      "kalendar": "bcp1979"
+    },
+    {
+      "cycle": "Easter",
+      "kalendar": "bcp1979",
+      "slug": "27th-pentecost",
+      "week": 41,
+      "name": "Twenty-Seventh Sunday after Pentecost",
+      "color": "Green",
+      "season": "OrdinaryTime"
+    },
+    {
+      "color": "Gold",
+      "season": "Easter",
+      "week": 8,
+      "kalendar": "bcp1979",
+      "slug": "2nd-easter",
+      "cycle": "Easter",
+      "name": "Second Sunday of Easter"
+    },
+    {
+      "season": "Epiphany",
+      "name": "Second Sunday after the Epiphany",
+      "week": 2,
+      "kalendar": "bcp1979",
+      "slug": "2nd-epiphany",
+      "cycle": "Epiphany",
+      "color": "Green"
+    },
+    {
+      "cycle": "Easter",
+      "color": "Purple",
+      "slug": "2nd-lent",
+      "season": "Lent",
+      "week": 2,
+      "kalendar": "bcp1979",
+      "name": "Second Sunday in Lent"
+    },
+    {
+      "color": "Green",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "week": 16,
+      "name": "Second Sunday after Pentecost",
+      "slug": "2nd-pentecost"
+    },
+    {
+      "cycle": "Christmas",
+      "name": "Second Sunday after Christmas",
+      "slug": "2nd-sunday-after-christmas",
+      "color": "White",
+      "kalendar": "bcp1979",
+      "season": "Christmas",
+      "week": 2
+    },
+    {
+      "slug": "3rd-easter",
+      "kalendar": "bcp1979",
+      "color": "Gold",
+      "season": "Easter",
+      "name": "Third Sunday of Easter",
+      "week": 9,
+      "cycle": "Easter"
+    },
+    {
+      "week": 3,
+      "cycle": "Epiphany",
+      "slug": "3rd-epiphany",
+      "season": "Epiphany",
+      "kalendar": "bcp1979",
+      "name": "Third Sunday after the Epiphany",
+      "color": "Green"
+    },
+    {
+      "kalendar": "bcp1979",
+      "color": "Purple",
+      "name": "Third Sunday in Lent",
+      "slug": "3rd-lent",
+      "cycle": "Easter",
+      "week": 3,
+      "season": "Lent"
+    },
+    {
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "slug": "3rd-pentecost",
+      "color": "Green",
+      "week": 17,
+      "name": "Third Sunday after Pentecost"
+    },
+    {
+      "cycle": "Easter",
+      "color": "Gold",
+      "name": "Fourth Sunday of Easter",
+      "season": "Easter",
+      "week": 10,
+      "kalendar": "bcp1979",
+      "slug": "4th-easter"
+    },
+    {
+      "season": "Epiphany",
+      "name": "Fourth Sunday after the Epiphany",
+      "week": 4,
+      "kalendar": "bcp1979",
+      "slug": "4th-epiphany",
+      "cycle": "Epiphany",
+      "color": "Green"
+    },
+    {
+      "season": "Lent",
+      "cycle": "Easter",
+      "slug": "4th-lent",
+      "color": "Purple",
+      "week": 4,
+      "name": "Fourth Sunday in Lent",
+      "kalendar": "bcp1979"
+    },
+    {
+      "season": "OrdinaryTime",
+      "slug": "4th-pentecost",
+      "color": "Green",
+      "cycle": "Easter",
+      "name": "Fourth Sunday after Pentecost",
+      "kalendar": "bcp1979",
+      "week": 18
+    },
+    {
+      "color": "Gold",
+      "season": "Easter",
+      "kalendar": "bcp1979",
+      "cycle": "Easter",
+      "slug": "5th-easter",
+      "week": 11,
+      "name": "Fifth Sunday of Easter"
+    },
+    {
+      "slug": "5th-epiphany",
+      "color": "Green",
+      "name": "Fifth Sunday after the Epiphany",
+      "week": 5,
+      "kalendar": "bcp1979",
+      "cycle": "Epiphany",
+      "season": "OrdinaryTime"
+    },
+    {
+      "name": "Fifth Sunday in Lent",
+      "slug": "5th-lent",
+      "color": "Purple",
+      "kalendar": "bcp1979",
+      "cycle": "Easter",
+      "season": "Lent",
+      "week": 5
+    },
+    {
+      "cycle": "Easter",
+      "kalendar": "bcp1979",
+      "slug": "5th-pentecost",
+      "week": 19,
+      "season": "OrdinaryTime",
+      "name": "Fifth Sunday after Pentecost",
+      "color": "Green"
+    },
+    {
+      "kalendar": "bcp1979",
+      "color": "Gold",
+      "slug": "6th-easter",
+      "name": "Sixth Sunday of Easter",
+      "week": 12,
+      "cycle": "Easter",
+      "season": "Easter"
+    },
+    {
+      "slug": "6th-epiphany",
+      "name": "Sixth Sunday after the Epiphany",
+      "week": 6,
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "cycle": "Epiphany",
+      "season": "OrdinaryTime"
+    },
+    {
+      "slug": "6th-pentecost",
+      "season": "OrdinaryTime",
+      "kalendar": "bcp1979",
+      "week": 20,
+      "color": "Green",
+      "cycle": "Easter",
+      "name": "Sixth Sunday after Pentecost"
+    },
+    {
+      "cycle": "Easter",
+      "name": "Seventh Sunday of Easter",
+      "kalendar": "bcp1979",
+      "color": "Gold",
+      "slug": "7th-easter",
+      "week": 13,
+      "season": "Ascension"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "7th-epiphany",
+      "week": 7,
+      "name": "Seventh Sunday after the Epiphany",
+      "cycle": "Epiphany",
+      "color": "Green",
+      "season": "OrdinaryTime"
+    },
+    {
+      "color": "Green",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "name": "Seventh Sunday after Pentecost",
+      "kalendar": "bcp1979",
+      "week": 21,
+      "slug": "7th-pentecost"
+    },
+    {
+      "cycle": "Epiphany",
+      "slug": "8th-epiphany",
+      "name": "Eighth Sunday after the Epiphany",
+      "week": 8,
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "color": "Green"
+    },
+    {
+      "week": 22,
+      "name": "Eighth Sunday after Pentecost",
+      "color": "Green",
+      "slug": "8th-pentecost",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Easter"
+    },
+    {
+      "name": "Ninth Sunday after Pentecost",
+      "slug": "9th-pentecost",
+      "week": 23,
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Easter"
+    },
+    {
+      "omit_the": true,
+      "slug": "christmas",
+      "color": "Gold",
+      "name": "Christmas",
+      "kalendar": "bcp1979",
+      "cycle": "Christmas",
+      "week": 0,
+      "season": "Christmas"
+    },
+    {
+      "slug": "easter",
+      "season": "Easter",
+      "omit_the": true,
+      "week": 7,
+      "name": "Easter Day",
+      "color": "Gold",
+      "kalendar": "bcp1979",
+      "cycle": "Easter"
+    },
+    {
+      "week": 0,
+      "cycle": "Epiphany",
+      "season": "Epiphany",
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "slug": "epiphany",
+      "name": "Epiphany"
+    },
+    {
+      "season": "Advent",
+      "kalendar": "bcp1979",
+      "slug": "first-advent",
+      "color": "Blue",
+      "week": 1,
+      "cycle": "Advent",
+      "name": "First Sunday of Advent"
+    },
+    {
+      "name": "Fourth Sunday of Advent",
+      "cycle": "Advent",
+      "color": "Blue",
+      "season": "Advent",
+      "kalendar": "bcp1979",
+      "slug": "fourth-advent",
+      "week": 4
+    },
+    {
+      "week": 6,
+      "omit_the": true,
+      "name": "Palm Sunday",
+      "slug": "holy-week",
+      "season": "HolyWeek",
+      "color": "Red",
+      "cycle": "Easter",
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Advent",
+      "slug": "last-after-pentecost",
+      "week": 0,
+      "color": "Green",
+      "name": "Last Sunday after Pentecost"
+    },
+    {
+      "week": 0,
+      "season": "OrdinaryTime",
+      "color": "Green",
+      "kalendar": "bcp1979",
+      "cycle": "Easter",
+      "slug": "last-epiphany",
+      "name": "Last Sunday after the Epiphany"
+    },
+    {
+      "kalendar": "bcp1979",
+      "season": "OrdinaryTime",
+      "cycle": "Easter",
+      "color": "Green",
+      "omit_the": true,
+      "slug": "pentecost",
+      "week": 14,
+      "name": "Pentecost"
+    },
+    {
+      "slug": "second-advent",
+      "cycle": "Advent",
+      "kalendar": "bcp1979",
+      "color": "Blue",
+      "season": "Advent",
+      "name": "Second Sunday of Advent",
+      "week": 2
+    },
+    {
+      "week": 3,
+      "cycle": "Advent",
+      "season": "Advent",
+      "kalendar": "bcp1979",
+      "name": "Third Sunday of Advent",
+      "color": "Blue",
+      "slug": "third-advent"
+    },
+    {
+      "season": "OrdinaryTime",
+      "name": "Trinity Sunday",
+      "kalendar": "bcp1979",
+      "color": "Green",
+      "cycle": "Easter",
+      "slug": "trinity-sunday",
+      "week": 15,
+      "omit_the": true
+    }
+  ],
+  "specials": [
+    {
+      "kalendar": "bcp1979",
+      "season": "Ascension",
+      "slug": "friday-6th-easter"
+    },
+    {
+      "name": "Friday in Easter Week",
+      "type": {
+        "rank": 4,
+        "name": "Weekday"
+      },
+      "kalendar": "bcp1979",
+      "slug": "friday-easter",
+      "season": "Easter"
+    },
+    {
+      "imageUrl": "https://w3id.org/vhmml/readingRoom/view/501250",
+      "slug": "friday-holy-week",
+      "type": {
+        "rank": 4,
+        "name": "Triduum"
+      },
+      "kalendar": "bcp1979",
+      "season": "HolyWeek",
+      "color": "Red",
+      "image": "/assets/iconography/good_friday.png",
+      "name": "Good Friday"
+    },
+    {
+      "color": "Purple",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Weekday",
+        "rank": 3
+      },
+      "name": "Friday after Ash Wednesday",
+      "slug": "friday-last-epiphany",
+      "season": "Lent"
+    },
+    {
+      "slug": "monday-easter",
+      "season": "Easter",
+      "type": {
+        "name": "Weekday",
+        "rank": 4
+      },
+      "kalendar": "bcp1979",
+      "name": "Monday in Easter Week"
+    },
+    {
+      "kalendar": "bcp1979",
+      "season": "HolyWeek",
+      "slug": "monday-holy-week",
+      "type": {
+        "name": "Holy Week",
+        "rank": 4
+      },
+      "name": "Monday in Holy Week"
+    },
+    {
+      "kalendar": "bcp1979",
+      "season": "Ascension",
+      "slug": "saturday-6th-easter"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "saturday-7th-easter",
+      "color": "Red",
+      "season": "Pentecost",
+      "readings": "eve-of-pentecost",
+      "collect": "pentecost",
+      "name": "Eve of Pentecost",
+      "eve": true,
+      "type": {
+        "name": "Feast",
+        "rank": 5
+      }
+    },
+    {
+      "slug": "saturday-easter",
+      "name": "Saturday in Easter Week",
+      "type": {
+        "name": "Weekday",
+        "rank": 4
+      },
+      "kalendar": "bcp1979",
+      "season": "Easter"
+    },
+    {
+      "image": "/assets/iconography/holy_saturday.png",
+      "color": "Red",
+      "slug": "saturday-holy-week",
+      "kalendar": "bcp1979",
+      "season": "HolyWeek",
+      "name": "Holy Saturday",
+      "type": {
+        "name": "Triduum",
+        "rank": 4
+      },
+      "imageUrl": "https://w3id.org/vhmml/readingRoom/view/501250"
+    },
+    {
+      "name": "Saturday after Ash Wednesday",
+      "type": {
+        "name": "Weekday",
+        "rank": 3
+      },
+      "season": "Lent",
+      "slug": "saturday-last-epiphany",
+      "color": "Purple",
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "sunday-holy-week",
+      "color": "Red",
+      "imageUrl": "https://w3id.org/vhmml/readingRoom/view/501250",
+      "kalendar": "bcp1979",
+      "image": "/assets/iconography/palm_sunday.png",
+      "type": {
+        "name": "Sunday",
+        "rank": 5
+      },
+      "name": "Palm Sunday",
+      "season": "HolyWeek"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "sunday-pentecost",
+      "season": "Pentecost",
+      "type": {
+        "rank": 5,
+        "name": "Principal Feast"
+      },
+      "color": "Red",
+      "collect": "pentecost"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "saturday-pentecost",
+      "season": "TrinitySunday",
+      "type": {
+        "rank": 3,
+        "name": "Eve of Trinity Sunday"
+      },
+      "color": "White",
+      "collect": "trinity-sunday",
+      "name": "Eve of Trinity Sunday",
+      "eve": true
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "sunday-trinity-sunday",
+      "season": "TrinitySunday",
+      "type": {
+        "rank": 5,
+        "name": "Trinity Sunday"
+      },
+      "color": "White"
+    },
+    {
+      "name": "Thanksgiving Day",
+      "slug": "thanksgiving-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Holy Day",
+        "rank": 3
+      }
+    },
+    {
+      "season": "Ascension",
+      "slug": "thursday-6th-easter",
+      "name": "Ascension Day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 5,
+        "name": "Feast"
+      }
+    },
+    {
+      "type": {
+        "name": "Weekday",
+        "rank": 4
+      },
+      "kalendar": "bcp1979",
+      "season": "Easter",
+      "slug": "thursday-easter",
+      "name": "Thursday in Easter Week"
+    },
+    {
+      "slug": "thursday-holy-week",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 4,
+        "name": "Triduum"
+      },
+      "imageUrl": "https://w3id.org/vhmml/readingRoom/view/501250",
+      "image": "/assets/iconography/maundy_thursday.png",
+      "color": "Red",
+      "name": "Maundy Thursday",
+      "season": "HolyWeek"
+    },
+    {
+      "season": "Lent",
+      "type": {
+        "rank": 3,
+        "name": "Weekday"
+      },
+      "name": "Thursday after Ash Wednesday",
+      "color": "Purple",
+      "slug": "thursday-last-epiphany",
+      "kalendar": "bcp1979"
+    },
+    {
+      "name": "Tuesday in Easter Week",
+      "season": "Easter",
+      "kalendar": "bcp1979",
+      "slug": "tuesday-easter",
+      "type": {
+        "name": "Weekday",
+        "rank": 4
+      }
+    },
+    {
+      "type": {
+        "name": "Holy Week",
+        "rank": 4
+      },
+      "slug": "tuesday-holy-week",
+      "kalendar": "bcp1979",
+      "season": "HolyWeek",
+      "name": "Tuesday in Holy Week"
+    },
+    {
+      "eve": true,
+      "kalendar": "bcp1979",
+      "season": "Ascension",
+      "name": "Eve of the Ascension",
+      "day": "wednesday-6th-easter",
+      "slug": "eve-wednesday-6th-easter",
+      "collect": "eve-wednesday-6th-easter",
+      "readings": "eve-wednesday-6th-easter",
+      "type": {
+        "rank": 5,
+        "name": "Feast"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 4,
+        "name": "Weekday"
+      },
+      "name": "Wednesday in Easter Week",
+      "slug": "wednesday-easter",
+      "season": "Easter"
+    },
+    {
+      "name": "Wednesday in Holy Week",
+      "season": "HolyWeek",
+      "kalendar": "bcp1979",
+      "slug": "wednesday-holy-week",
+      "type": {
+        "rank": 4,
+        "name": "Holy Week"
+      }
+    },
+    {
+      "slug": "wednesday-last-epiphany",
+      "name": "Ash Wednesday",
+      "kalendar": "bcp1979",
+      "color": "Purple",
+      "type": {
+        "rank": 3,
+        "name": "Fast"
+      },
+      "season": "Lent"
+    }
+  ],
+  "feasts": [
+    {
+      "slug": "absalom-jones",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "Absalom Jones, Priest, 1818",
+      "mmdd": "2/13"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "agnes-and-cecilia-of-rome",
+      "name": "Agnes, Martyr at Rome, 304",
+      "mmdd": "1/21",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "aidan-of-lindisfarne",
+      "name": "Aidan, Bishop of Lindisfarne, 651",
+      "mmdd": "8/31",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "alban",
+      "name": "Alban, First Martyr of Britain, c. 304",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "6/22"
+    },
+    {
+      "mmdd": "5/20",
+      "slug": "alcuin-of-york",
+      "kalendar": "bcp1979",
+      "name": "Alcuin, Deacon, and Abbot of Tours, 804",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Alfred the Great, King of the West Saxons, 889",
+      "mmdd": "10/26",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "alfred"
+    },
+    {
+      "type": {
+        "rank": 5
+      },
+      "name": "All Saints’ Day",
+      "mmdd": "11/1",
+      "season": "Saints",
+      "color": "Gold",
+      "kalendar": "bcp1979",
+      "slug": "all-saints-day"
+    },
+    {
+      "mmdd": "11/2",
+      "color": "Purple",
+      "season": "Saints",
+      "slug": "all-souls-day",
+      "name": "Commemoration of All Faithful Departed (All Souls’ Day)",
+      "kalendar": "bcp1979"
+    },
+    {
+      "name": "Alphege, Archbishop of Canterbury, and Martyr, 1012",
+      "mmdd": "4/19",
+      "slug": "alphege",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "name": "Ambrose, Bishop of Milan, 397",
+      "mmdd": "12/7",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "ambrose-of-milan",
+      "kalendar": "bcp1979"
+    },
+    {
+      "mmdd": "3/25",
+      "season": "Saints",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "name": "The Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary",
+      "slug": "annunciation",
+      "color": "Blue",
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "anselm-of-canterbury",
+      "mmdd": "4/21",
+      "name": "Anselm, Archbishop of Canterbury, 1109",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "mmdd": "2/3",
+      "kalendar": "bcp1979",
+      "name": "Anskar, Archbishop of Hamburg, Missionary to Denmark and Sweden, 865",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "anskar"
+    },
+    {
+      "slug": "antony-of-egypt",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Antony, Abbot in Egypt, 356",
+      "mmdd": "1/17"
+    },
+    {
+      "name": "Athanasius, Bishop of Alexandria, 373",
+      "mmdd": "5/2",
+      "slug": "athanasius-of-alexandria",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "slug": "augustine-of-hippo",
+      "name": "Augustine, Bishop of Hippo, 430",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "8/28"
+    },
+    {
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "augustine",
+      "mmdd": "5/26",
+      "kalendar": "bcp1979",
+      "name": "Augustine, First Archbishop of Canterbury, 605"
+    },
+    {
+      "name": "Basil the Great, Bishop of Caesarea, 379",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "slug": "basil-of-caesarea",
+      "mmdd": "6/14"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Bede, the Venerable, Priest, and Monk of Jarrow, 735",
+      "mmdd": "5/25",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "bede"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "benedict-of-nursia",
+      "kalendar": "bcp1979",
+      "name": "Benedict of Nursia, Abbot of Monte Cassino, c. 540",
+      "mmdd": "7/11"
+    },
+    {
+      "name": "Bernard, Abbot of Clairvaux, 1153",
+      "slug": "bernard-of-clairvaux",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "8/20"
+    },
+    {
+      "slug": "bernard-mizeki",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "Bernard, Mizeki, Catechist and Martyr in Rhodesia, 1896",
+      "kalendar": "bcp1979",
+      "mmdd": "6/18"
+    },
+    {
+      "name": "Boniface, Archbishop of Mainz, Missionary to Germany, and Martyr, 754",
+      "slug": "boniface",
+      "mmdd": "6/5",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "catherine-of-siena",
+      "kalendar": "bcp1979",
+      "mmdd": "4/29",
+      "name": "Catherine of Siena, 1380",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "chad-of-lichfield",
+      "kalendar": "bcp1979",
+      "name": "Chad, Bishop of Lichfield, 672",
+      "mmdd": "3/2",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "slug": "channing-moore-williams",
+      "name": "Channing Moore Williams, Missionary Bishop in China and Japan, 1910",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "12/2"
+    },
+    {
+      "slug": "charles-henry-brent",
+      "kalendar": "bcp1979",
+      "mmdd": "3/27",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "Charles Henry Brent, Bishop of the Philippines, and of Western New York, 1929"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Charles Simeon, Priest, 1836",
+      "slug": "charles-simeon",
+      "mmdd": "11/12",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "mmdd": "12/25",
+      "season": "Christmas",
+      "type": {
+        "name": "Principal Feast",
+        "rank": 5
+      },
+      "color": "White",
+      "kalendar": "bcp1979",
+      "name": "Christmas Day",
+      "slug": "christmas-day"
+    },
+    {
+      "name": "Christmas Eve",
+      "slug": "christmas-eve",
+      "eve": true,
+      "season": "Christmas",
+      "type": {
+        "rank": 5
+      },
+      "mmdd": "12/24",
+      "color": "White",
+      "kalendar": "bcp1979"
+    },
+    {
+      "name": "Clare, Abbess at Assisi, 1253",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "8/11",
+      "slug": "clare-of-assisi",
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "clement-of-rome",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "11/23",
+      "name": "Clement, Bishop of Rome, c. 100"
+    },
+    {
+      "slug": "clement-of-alexandria",
+      "kalendar": "bcp1979",
+      "name": "Clement of Alexandria, Priest, c. 210",
+      "mmdd": "12/5",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "mmdd": "6/9",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "Columba, Abbot of Iona, 597",
+      "kalendar": "bcp1979",
+      "slug": "columba-of-iona"
+    },
+    {
+      "slug": "confession-of-st-peter",
+      "color": "White",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "mmdd": "1/18",
+      "name": "The Confession of St. Peter the Apostle",
+      "kalendar": "bcp1979",
+      "season": "Saints"
+    },
+    {
+      "slug": "samuel-seabury",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Consecration of Samuel Seabury, First American Bishop, 1784",
+      "mmdd": "11/14"
+    },
+    {
+      "season": "Saints",
+      "mmdd": "1/25",
+      "slug": "conversion-of-st-paul",
+      "color": "White",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "name": "The Conversion of St. Paul the Apostle",
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "cuthbert",
+      "name": "Cuthbert, Bishop of Lindisfarne, 687",
+      "kalendar": "bcp1979",
+      "mmdd": "3/20"
+    },
+    {
+      "slug": "cyprian-of-carthage",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "9/13",
+      "name": "Cyprian, Bishop and Martyr of Carthage, 258"
+    },
+    {
+      "slug": "cyril-of-jerusalem",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "mmdd": "3/18",
+      "kalendar": "bcp1979",
+      "name": "Cyril, Bishop of Jerusalem, 386"
+    },
+    {
+      "slug": "cyril-and-methodius",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Cyril, Monk, and Methodius, Bishop, Missionaries to the Slavs, 869, 885",
+      "mmdd": "2/14"
+    },
+    {
+      "name": "Dame Julian of Norwich, c. 1417",
+      "mmdd": "5/8",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "julian-of-norwich",
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "3/1",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "David, Bishop of Menevia, Wales, c. 544",
+      "slug": "david-of-wales"
+    },
+    {
+      "season": "Christmas",
+      "slug": "december-29",
+      "color": "White",
+      "type": {
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "12/29"
+    },
+    {
+      "color": "White",
+      "mmdd": "12/30",
+      "slug": "december-30",
+      "type": {
+        "rank": 2
+      },
+      "season": "Christmas",
+      "kalendar": "bcp1979"
+    },
+    {
+      "mmdd": "12/31",
+      "evening": {
+        "type": {
+          "rank": 5
+        },
+        "color": "White",
+        "slug": "eve-holy-name",
+        "name": "Eve of the Holy Name of Our Lord Jesus Christ",
+        "season": "Christmas"
+      },
+      "morning": {
+        "color": "white",
+        "season": "Christmas",
+        "slug": "december-31",
+        "type": {
+          "rank": 2
+        }
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "name": "Dominic, Priest and Friar, 1221",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "8/8",
+      "slug": "dominic"
+    },
+    {
+      "slug": "dunstan",
+      "kalendar": "bcp1979",
+      "mmdd": "5/19",
+      "name": "Dunstan, Archbishop of Canterbury, 988",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "slug": "edward-bouverie-pusey",
+      "kalendar": "bcp1979",
+      "name": "Edward Bouverie Pusey, Priest, 1882",
+      "mmdd": "9/18",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "mmdd": "11/19",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Elizabeth, Princess of Hungary, 1231",
+      "slug": "elizabeth-of-hungary"
+    },
+    {
+      "mmdd": "6/10",
+      "slug": "ephrem-of-nisibis",
+      "name": "Ephrem of Edessa, Syria, Deacon, 373",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "mmdd": "1/6",
+      "name": "The Epiphany",
+      "season": "Epiphany",
+      "slug": "epiphany",
+      "kalendar": "bcp1979",
+      "color": "White",
+      "type": {
+        "rank": 5,
+        "name": "Principal Feast"
+      }
+    },
+    {
+      "slug": "eve-of-all-saints",
+      "color": "Gold",
+      "name": "Eve of All Saints’ Day",
+      "mmdd": "10/31",
+      "eve": true,
+      "kalendar": "bcp1979",
+      "season": "Saints"
+    },
+    {
+      "season": "HolyWeek",
+      "kalendar": "bcp1979",
+      "mmdd": "9/13",
+      "eve": true,
+      "slug": "eve-of-holy-cross",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "color": "Red",
+      "name": "Eve of Holy Cross Day"
+    },
+    {
+      "mmdd": "6/23",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "kalendar": "bcp1979",
+      "season": "Saints",
+      "eve": true,
+      "name": "Eve of the Nativity of St. John the Baptist",
+      "slug": "eve-of-st-john-the-baptist",
+      "image": "/assets/iconography/john_the_baptist.png",
+      "color": "White"
+    },
+    {
+      "slug": "eve-of-the-annunciation",
+      "mmdd": "3/24",
+      "season": "Saints",
+      "eve": true,
+      "color": "Blue",
+      "name": "Eve of the Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "color": "White",
+      "slug": "eve-of-the-presentation",
+      "mmdd": "2/1",
+      "name": "Eve of the Presentation of Our Lord Jesus Christ in the Temple",
+      "eve": true,
+      "kalendar": "bcp1979"
+    },
+    {
+      "eve": true,
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "slug": "eve-of-the-transfiguration",
+      "mmdd": "8/5",
+      "color": "White",
+      "kalendar": "bcp1979",
+      "name": "Eve of the Transfiguration of Our Lord Jesus Christ"
+    },
+    {
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "eve": true,
+      "name": "Eve of the Visitation of the Blessed Virgin Mary",
+      "kalendar": "bcp1979",
+      "color": "Blue",
+      "slug": "eve-of-the-visitation",
+      "mmdd": "5/30",
+      "image": "/assets/iconography/the-visitation.png"
+    },
+    {
+      "mmdd": "1/20",
+      "kalendar": "bcp1979",
+      "slug": "fabian",
+      "name": "Fabian, Bishop and Martyr of Rome, 250",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "10/4",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "francis-of-assisi",
+      "name": "Francis of Assisi, Friar, 1226"
+    },
+    {
+      "slug": "frederick-denison-maurice",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "Frederick Denison Maurice, Priest, 1872",
+      "mmdd": "4/1",
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "george-augustus-selwyn",
+      "name": "George Augustus Selwyn, Bishop of New Zealand, and of Litchfield, 1878",
+      "mmdd": "4/11"
+    },
+    {
+      "name": "George Herbert, Priest, 1633",
+      "kalendar": "bcp1979",
+      "mmdd": "2/27",
+      "slug": "george-herbert",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "gregory-of-nazianzus",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Gregory of Nazianzus, Bishop of Constantinople, 389",
+      "mmdd": "5/9"
+    },
+    {
+      "mmdd": "3/12",
+      "kalendar": "bcp1979",
+      "name": "Gregory the Great, Bishop of Rome, 604",
+      "slug": "gregory-the-great",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "name": "Gregory the Illuminator, Bishop and Missionary of Armenia, c. 332",
+      "mmdd": "3/23",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "gregory-the-illuminator"
+    },
+    {
+      "name": "Henry Martyn, Priest, and Missionary to India and Persia, 1812",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "henry-martyn",
+      "kalendar": "bcp1979",
+      "mmdd": "10/19"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Hilary, Bishop of Poitiers, 367",
+      "slug": "hilary-of-poitiers",
+      "mmdd": "1/13",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "hilda-of-whitby",
+      "mmdd": "11/18",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "Hilda, Abbess of Whitby, 680"
+    },
+    {
+      "season": "HolyWeek",
+      "name": "Holy Cross Day",
+      "color": "Red",
+      "mmdd": "9/14",
+      "kalendar": "bcp1979",
+      "slug": "holy-cross",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      }
+    },
+    {
+      "mmdd": "12/28",
+      "type": {
+        "rank": 3
+      },
+      "name": "Holy Innocents",
+      "kalendar": "bcp1979",
+      "season": "Saints",
+      "slug": "holy-innocents",
+      "color": "Red"
+    },
+    {
+      "season": "Christmas",
+      "name": "The Holy Name of Our Lord Jesus Christ",
+      "slug": "holy-name",
+      "mmdd": "1/1",
+      "type": {
+        "rank": 5,
+        "name": "Principal Feast"
+      },
+      "kalendar": "bcp1979",
+      "color": "White"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "hugh-of-lincoln",
+      "name": "Hugh, Bishop of Lincoln, 1200",
+      "mmdd": "11/17",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "mmdd": "10/16",
+      "slug": "hugh-latimer-and-nicholas-ridley",
+      "name": "Hugh Latimer and Nicholas Ridley, Bishops, 1555, and Thomas Cranmer, Archbishop of Canterbury, 1556",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "ignatius-of-antioch",
+      "name": "Ignatius, Bishop of Antioch, and Martyr, c. 115",
+      "kalendar": "bcp1979",
+      "mmdd": "10/17",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "independence-day",
+      "name": "Independence Day",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "mmdd": "7/4"
+    },
+    {
+      "slug": "irenaeus-of-lyons",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "6/28",
+      "name": "Irenaeus, Bishop of Lyons, c. 202"
+    },
+    {
+      "mmdd": "5/24",
+      "slug": "jackson-kemper",
+      "name": "Jackson Kemper, First Missionary Bishop in the United States, 1870",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "james-de-koven",
+      "name": "James De Koven, Priest, 1879",
+      "mmdd": "3/22",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "james-hannington",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "mmdd": "10/29",
+      "name": "James Hannington, Bishop of Eastern Equatorial Africa, and his Companions, Martyrs, 1885"
+    },
+    {
+      "name": "James Lloyd Breck, Priest, 1876",
+      "mmdd": "4/2",
+      "slug": "james-lloyd-breck",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "type": {
+        "rank": 2.5
+      },
+      "kalendar": "bcp1979",
+      "slug": "january-10",
+      "mmdd": "1/10",
+      "stops_at_sunday": "1st-epiphany"
+    },
+    {
+      "slug": "january-11",
+      "mmdd": "1/11",
+      "stops_at_sunday": "1st-epiphany",
+      "type": {
+        "rank": 2.5
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "mmdd": "1/12",
+      "type": {
+        "rank": 2.5
+      },
+      "stops_at_sunday": "1st-epiphany",
+      "slug": "january-12",
+      "kalendar": "bcp1979"
+    },
+    {
+      "season": "Christmas",
+      "slug": "january-2",
+      "color": "White",
+      "mmdd": "1/2",
+      "type": {
+        "rank": 2.5
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "rank": 2.5
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "1/3",
+      "season": "Christmas",
+      "slug": "january-3",
+      "color": "White"
+    },
+    {
+      "slug": "january-4",
+      "season": "Christmas",
+      "color": "White",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2.5
+      },
+      "mmdd": "1/4"
+    },
+    {
+      "slug": "january-5",
+      "kalendar": "bcp1979",
+      "evening": {
+        "season": "Epiphany",
+        "type": {
+          "rank": 5,
+          "name": "Principal Feast"
+        },
+        "slug": "eve-epiphany",
+        "color": "Green",
+        "name": "Eve of the Epiphany"
+      },
+      "mmdd": "1/5",
+      "morning": {
+        "type": {
+          "rank": 2.5
+        },
+        "color": "White",
+        "slug": "january-5",
+        "season": "Christmas"
+      }
+    },
+    {
+      "type": {
+        "rank": 2.5
+      },
+      "kalendar": "bcp1979",
+      "slug": "january-7",
+      "stops_at_sunday": "1st-epiphany",
+      "mmdd": "1/7"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "january-8",
+      "mmdd": "1/8",
+      "stops_at_sunday": "1st-epiphany",
+      "type": {
+        "rank": 2.5
+      }
+    },
+    {
+      "stops_at_sunday": "1st-epiphany",
+      "type": {
+        "rank": 2.5
+      },
+      "mmdd": "1/9",
+      "slug": "january-9",
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "8/13",
+      "name": "Jeremy Taylor, Bishop of Down, Connor, and Dromore, 1667",
+      "slug": "jeremy-taylor",
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "jerome",
+      "mmdd": "9/30",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "Jerome, Priest, and Monk of Bethlehem, 420"
+    },
+    {
+      "name": "John and Charles Wesley, Priests, 1791, 1788",
+      "kalendar": "bcp1979",
+      "slug": "john-and-charles-wesley",
+      "mmdd": "3/3",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "mmdd": "1/27",
+      "slug": "john-chrysostom",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "name": "John Chrysostom, Bishop of Constantinople, 407"
+    },
+    {
+      "name": "John Coleridge Patteson, Bishop of Melanesia, and his Companions, Martyrs, 1871",
+      "kalendar": "bcp1979",
+      "slug": "john-coleridge-patteson",
+      "mmdd": "9/20",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "john-donne",
+      "name": "John Donne, Priest, 1631",
+      "mmdd": "3/31",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "9/12",
+      "slug": "john-henry-hobart",
+      "name": "John Henry Hobart, Bishop of New York, 1830"
+    },
+    {
+      "mmdd": "3/29",
+      "slug": "john-keble",
+      "name": "John Keble, Priest, 1866",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "John Mason Neale, Priest, 1866",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "john-mason-neale",
+      "mmdd": "8/7"
+    },
+    {
+      "mmdd": "12/4",
+      "slug": "john-of-damascus",
+      "kalendar": "bcp1979",
+      "name": "John of Damascus, Priest, c. 760",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "6/16",
+      "name": "Joseph Butler, Bishop of Durham, 1752",
+      "slug": "joseph-butler",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "joseph-of-arimathea",
+      "mmdd": "7/31",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Joseph of Arimathaea"
+    },
+    {
+      "slug": "justin",
+      "name": "Justin, Martyr at Rome, c. 167",
+      "mmdd": "6/1",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "lancelot-andrewes",
+      "kalendar": "bcp1979",
+      "name": "Lancelot Andrewes, Bishop of Winchester",
+      "mmdd": "9/26",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "Laurence, Deacon and Martyr at Rome, 258",
+      "slug": "laurence-of-rome",
+      "mmdd": "8/10",
+      "kalendar": "bcp1979"
+    },
+    {
+      "name": "Leo the Great, Bishop of Rome, 461",
+      "mmdd": "11/10",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "slug": "leo-of-rome"
+    },
+    {
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "Louis, King of France, 1270",
+      "mmdd": "8/25",
+      "slug": "louis"
+    },
+    {
+      "name": "Margaret, Queen of Scotland, 1093",
+      "mmdd": "11/16",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "margaret-of-scotland"
+    },
+    {
+      "mmdd": "11/11",
+      "name": "Martin, Bishop of Tours, 397",
+      "slug": "martin-of-tours",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "monica",
+      "name": "Monnica, Mother of Augustine of Hippo, 387",
+      "mmdd": "5/4",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "nativity-of-st-john-the-baptist",
+      "name": "The Nativity of St. John the Baptist",
+      "color": "White",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "mmdd": "6/24",
+      "kalendar": "bcp1979",
+      "season": "Saints",
+      "image": "/assets/iconography/john_the_baptist.png"
+    },
+    {
+      "name": "Nicholas, Bishop of Myra, c. 342",
+      "mmdd": "12/6",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "nicholas-of-myra"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Nicholas Ferrar, Deacon, 1637",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "nicholas-ferrar",
+      "mmdd": "12/1"
+    },
+    {
+      "slug": "ninian",
+      "name": "Ninian, Bishop in Galloway, c. 430",
+      "kalendar": "bcp1979",
+      "mmdd": "9/16",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "name": "Patrick, Bishop and Missionary of Ireland, 461",
+      "slug": "patrick-of-ireland",
+      "mmdd": "3/17",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "mmdd": "3/7",
+      "kalendar": "bcp1979",
+      "slug": "perpetua-and-felicity",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "Perpetua and her Companions, Martyrs at Carthage, 202"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "Phillips Brooks, Bishop of Massachusetts, 1893",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "mmdd": "1/23",
+      "slug": "phillips-brooks"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "polycarp-of-smyrna",
+      "name": "Polycarp, Bishop and Martyr of Smyrna, 156",
+      "mmdd": "2/23",
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "10/1",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "slug": "remigius-of-rheims",
+      "name": "Remigius, Bishop of Rheims, c. 530"
+    },
+    {
+      "mmdd": "4/3",
+      "slug": "richard-of-chichester",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "name": "Richard, Bishop of Chichester, 1253"
+    },
+    {
+      "slug": "richard-hooker",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "name": "Richard Hooker, Priest, 1600",
+      "mmdd": "11/3"
+    },
+    {
+      "slug": "robert-grosseteste",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "name": "Robert Grosseteste, Bishop of Lincoln, 1253",
+      "mmdd": "10/9"
+    },
+    {
+      "slug": "samuel-isaac-joseph-scherechewsky",
+      "mmdd": "10/15",
+      "name": "Samuel Isaac Joseph Schereschewsky, Bishop of Shanghai, 1906",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "name": "Sergius, Abbot of Holy Trinity, Moscow, 1932",
+      "slug": "sergius-of-radonezh",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "9/25"
+    },
+    {
+      "name": "St. Peter and St. Paul, Apostles",
+      "color": "Red",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "kalendar": "bcp1979",
+      "slug": "ss-peter-and-paul",
+      "mmdd": "6/29",
+      "season": "Saints"
+    },
+    {
+      "season": "Saints",
+      "slug": "ss-philip-and-james",
+      "name": "St. Philip and St. James, Apostles",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "color": "Red",
+      "mmdd": "5/1"
+    },
+    {
+      "slug": "ss-simon-and-jude",
+      "mmdd": "10/28",
+      "name": "St. Simon and St. Jude, Apostles",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "season": "Saints",
+      "color": "Red"
+    },
+    {
+      "season": "Saints",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "slug": "st-andrew",
+      "mmdd": "11/30",
+      "color": "Red",
+      "kalendar": "bcp1979",
+      "name": "St. Andrew the Apostle"
+    },
+    {
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "mmdd": "6/11",
+      "season": "Saints",
+      "kalendar": "bcp1979",
+      "slug": "st-barnabas",
+      "name": "St. Barnabas the Apostle",
+      "color": "Red"
+    },
+    {
+      "season": "Saints",
+      "color": "Red",
+      "name": "St. Bartholomew the Apostle",
+      "kalendar": "bcp1979",
+      "mmdd": "8/24",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "slug": "st-bartholomew"
+    },
+    {
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "color": "Red",
+      "slug": "st-james",
+      "mmdd": "7/25",
+      "kalendar": "bcp1979",
+      "season": "Saints",
+      "name": "St. James the Apostle"
+    },
+    {
+      "season": "Saints",
+      "name": "St. James of Jerusalem, Brother of Our Lord Jesus Christ, and Martyr",
+      "slug": "st-james-of-jerusalem",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "kalendar": "bcp1979",
+      "color": "Red",
+      "mmdd": "10/23"
+    },
+    {
+      "slug": "st-john",
+      "season": "Saints",
+      "name": "Feast of St. John",
+      "kalendar": "bcp1979",
+      "color": "White",
+      "type": {
+        "rank": 3
+      },
+      "mmdd": "12/27"
+    },
+    {
+      "name": "St. Joseph",
+      "slug": "st-joseph",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "color": "White",
+      "mmdd": "3/19",
+      "season": "Saints",
+      "kalendar": "bcp1979"
+    },
+    {
+      "color": "Red",
+      "kalendar": "bcp1979",
+      "mmdd": "10/18",
+      "slug": "st-luke",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "season": "Saints",
+      "name": "St. Luke the Evangelist"
+    },
+    {
+      "mmdd": "4/25",
+      "season": "Saints",
+      "color": "Red",
+      "name": "St. Mark the Evangelist",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "kalendar": "bcp1979",
+      "slug": "st-mark"
+    },
+    {
+      "season": "Saints",
+      "mmdd": "7/22",
+      "color": "White",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "name": "St. Mary Magdalene",
+      "kalendar": "bcp1979",
+      "slug": "st-mary-magdalene"
+    },
+    {
+      "mmdd": "8/15",
+      "season": "Saints",
+      "kalendar": "bcp1979",
+      "color": "Blue",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "name": "St. Mary the Virgin, Mother of Our Lord Jesus Christ",
+      "slug": "st-mary-the-virgin"
+    },
+    {
+      "mmdd": "9/21",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "name": "St. Matthew, Apostle and Evangelist",
+      "color": "Red",
+      "season": "Saints",
+      "slug": "st-matthew"
+    },
+    {
+      "name": "St. Matthias the Apostle",
+      "color": "Red",
+      "mmdd": "2/24",
+      "kalendar": "bcp1979",
+      "slug": "st-matthias",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "season": "Saints"
+    },
+    {
+      "season": "Saints",
+      "name": "St. Michael and All Angels",
+      "slug": "st-michael",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "mmdd": "9/29",
+      "color": "White",
+      "kalendar": "bcp1979"
+    },
+    {
+      "type": {
+        "rank": 3
+      },
+      "name": "Feast of St. Stephen",
+      "kalendar": "bcp1979",
+      "slug": "st-stephen",
+      "color": "Red",
+      "mmdd": "12/26",
+      "season": "Saints"
+    },
+    {
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "mmdd": "12/21",
+      "kalendar": "bcp1979",
+      "name": "St. Thomas the Apostle",
+      "slug": "st-thomas",
+      "season": "Saints",
+      "color": "Red"
+    },
+    {
+      "name": "The Martyrs of Japan, 1597",
+      "slug": "the-martyrs-of-japan",
+      "mmdd": "2/5",
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "name": "The Martyrs of Lyons, 177",
+      "mmdd": "6/2",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "kalendar": "bcp1979",
+      "name": "The Martyrs of New Guinea, 1942",
+      "mmdd": "9/2",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "the-martyrs-of-new-guinea"
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "6/3",
+      "slug": "the-martyrs-of-uganda",
+      "name": "The Martyrs of Uganda, 1886",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "slug": "the-presentation",
+      "color": "White",
+      "name": "The Presentation of Our Lord Jesus Christ in the Temple (Candlemas)",
+      "kalendar": "bcp1979",
+      "mmdd": "2/2"
+    },
+    {
+      "slug": "the-transfiguration",
+      "name": "The Transfiguration of Our Lord Jesus Christ",
+      "mmdd": "8/6",
+      "color": "White",
+      "type": {
+        "rank": 3,
+        "name": "Holy Days"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "color": "Blue",
+      "slug": "the-visitation",
+      "type": {
+        "name": "Holy Days",
+        "rank": 3
+      },
+      "mmdd": "5/31",
+      "name": "The Visitation of the Blessed Virgin Mary",
+      "kalendar": "bcp1979",
+      "image": "/assets/iconography/the-visitation.png",
+      "season": "Saints"
+    },
+    {
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "theodore-of-tarsus",
+      "name": "Theodore of Tarsus, Archbishop of Canterbury, 690",
+      "mmdd": "9/19"
+    },
+    {
+      "name": "Thomas a Kempis, Priest, 1471",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "7/24",
+      "slug": "thomas-a-kempis"
+    },
+    {
+      "name": "Thomas Aquinas, Priest and Friar, 1274",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "slug": "thomas-aquinas",
+      "mmdd": "1/28"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "slug": "thomas-bray",
+      "mmdd": "2/15",
+      "kalendar": "bcp1979",
+      "name": "Thomas Bray, Priest and Missionary, 1730"
+    },
+    {
+      "name": "Thomas Ken, Bishop of Bath and Wells, 1711",
+      "slug": "thomas-ken",
+      "mmdd": "3/21",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "titus-and-timothy",
+      "name": "Timothy and Titus, Companions of Saint Paul",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "mmdd": "1/26"
+    },
+    {
+      "slug": "vincent-of-saragossa",
+      "kalendar": "bcp1979",
+      "name": "Vincent, Deacon of Saragossa, and Martyr, 304",
+      "mmdd": "1/22",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "kalendar": "bcp1979",
+      "mmdd": "4/8",
+      "slug": "william-augustus-muhlenberg",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "name": "William Augustus Muhlenberg, Priest, 1877"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "kalendar": "bcp1979",
+      "slug": "william-laud",
+      "mmdd": "1/10",
+      "name": "William Laud, Archbishop of Canterbury, 1645"
+    },
+    {
+      "kalendar": "bcp1979",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "mmdd": "4/9",
+      "slug": "william-law",
+      "name": "William Law, Priest, 1761"
+    },
+    {
+      "slug": "william-porcher-dubose",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "name": "William Porcher DuBose, Priest, 1918",
+      "mmdd": "8/18",
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "william-reed-huntington",
+      "kalendar": "bcp1979",
+      "mmdd": "7/27",
+      "name": "William Reed Huntington, Priest, 1909",
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      }
+    },
+    {
+      "mmdd": "10/6",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "slug": "william-tyndale",
+      "name": "William Tyndale, Priest, 1536"
+    },
+    {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "mmdd": "7/17",
+      "slug": "william-white",
+      "name": "William White, Bishop of Pennsylvania, 1836",
+      "kalendar": "bcp1979"
+    },
+    {
+      "mmdd": "7/30",
+      "slug": "william-wilberforce",
+      "kalendar": "bcp1979",
+      "name": "William Wilberforce, 1833",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    },
+    {
+      "slug": "willibrord",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      },
+      "kalendar": "bcp1979",
+      "name": "Willibrord, Archbishop of Utrecht, Missionary to Frisia, 739",
+      "mmdd": "11/7"
+    },
+    {
+      "slug": "wulfstan-of-worcester",
+      "name": "Wulfstan, Bishop of Worcester, 1095",
+      "mmdd": "6/19",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Black Letter"
+      }
+    }
+  ]
+}
