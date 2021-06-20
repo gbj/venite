@@ -1,0 +1,240 @@
+{
+  "data": [
+    {
+      "label": "The Great Litany",
+      "version": "EOW",
+      "value": [
+        {
+          "type": "heading",
+          "hidden": false,
+          "value": ["The Great Litany"],
+          "style": "text",
+          "metadata": { "level": 1 }
+        },
+        {
+          "hidden": false,
+          "value": [
+            "It is traditional to use sections I and VI. Other petitions may be added from sections II, III, IV and V. The first petition in section III is used as an introductory petition when petitions are included from section III, IV and/or V."
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "responsive",
+          "label": "I.",
+          "hidden": false,
+          "style": "litany",
+          "metadata": { "response": "Have mercy upon us." },
+          "source": { "source": "", "api": "", "citation": "" },
+          "value": [
+            {
+              "label": "",
+              "text": "Holy God, Creator of heaven and earth,",
+              "response": ""
+            },
+            {
+              "response": "Have mercy upon us.",
+              "text": "Holy and Mighty, Redeemer of the world,"
+            },
+            {
+              "text": "Holy Immortal One, Sanctifier of the faithful,",
+              "response": "Have mercy upon us."
+            },
+            {
+              "text": "Holy, blessed and glorious Trinity, One God,",
+              "response": "Have mercy upon us."
+            }
+          ]
+        },
+        {
+          "label": "II.",
+          "metadata": { "response": "Savior deliver us." },
+          "hidden": false,
+          "type": "responsive",
+          "style": "litany",
+          "source": { "api": "", "citation": "", "source": "" },
+          "value": [
+            {
+              "text": "From all evil and mischief; from pride, vanity and hypocrisy; from envy, hatred and malice; and from all evil intent,",
+              "label": "",
+              "response": ""
+            },
+            {
+              "response": "Savior deliver us.",
+              "text": "From sloth, worldliness and love of money; from hardness of heart and contempt for your word and your laws,"
+            },
+            {
+              "response": "Savior deliver us.",
+              "text": "From sins of body and mind; from deceits of the world, flesh and the devil,"
+            },
+            {
+              "response": "Savior deliver us.",
+              "text": "From famine and disaster; from violence, murder, and dying unprepared,"
+            },
+            {
+              "response": "Savior deliver us.",
+              "text": "In all times of sorrow; in all times of joy; in the hour of our death and at the day of judgment,"
+            },
+            {
+              "text": "By the mystery of your holy incarnation; by your birth, childhood and obedience; by your baptism, fasting and temptation,",
+              "response": "Savior deliver us."
+            },
+            {
+              "text": "By your ministry in word and work; by your mighty acts of power; by the preaching of your reign,",
+              "response": "Savior deliver us."
+            },
+            {
+              "text": "By your agony and trial; by your cross and passion; by your precious death and burial,",
+              "response": "Savior deliver us."
+            },
+            {
+              "response": "Savior deliver us.",
+              "text": "By your mighty resurrection; by your glorious ascension; and by your sending of the Holy Spirit,"
+            }
+          ]
+        },
+        {
+          "style": "litany",
+          "source": { "api": "", "citation": "", "source": "" },
+          "value": [
+            {
+              "label": "",
+              "response": "",
+              "text": "Hear our prayers, O Christ our God."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Govern and direct your holy Church; fill it with love and truth; and grant it that unity which is your will."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Give us boldness to preach the gospel in all the world, and to make disciples of all the nations."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Enlighten your bishops, priests and deacons (especially  _______) with knowledge and understanding, that by their teaching and their lives they may proclaim your word."
+            },
+            {
+              "text": "Give your people grace to witness to your word and bring forth the fruit of your Spirit.",
+              "response": "Hear us, O Christ."
+            },
+            {
+              "text": "Bring into the way of truth all who have erred and are deceived.",
+              "response": "Hear us, O Christ."
+            },
+            {
+              "text": "Strengthen those who stand; comfort and help the fainthearted; raise up the fallen; and finally beat down Satan under our feet.",
+              "response": "Hear us, O Christ."
+            }
+          ],
+          "type": "responsive",
+          "label": "III.",
+          "hidden": false,
+          "metadata": { "response": "Hear us, O Christ." }
+        },
+        {
+          "label": "IV.",
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "label": "",
+              "text": "Guide the leaders of the nations into the ways of peace and justice."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Give your wisdom and strength to _______, the President of the United States,  _______  the Governor of this state, (and  ______, the Mayor of this city) that in all things they may do your will, for your glory and the common good."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Give to the Congress of the United States, the members of the President’s Cabinet, those who serve in our state legislature, and all others in authority the grace to walk always in the ways of truth."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Bless the justices of the Supreme Court and all those who administer the law, that they may act with integrity and do justice for all your people."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Give us the will to use the resources of the earth to your glory and for the good of all."
+            },
+            {
+              "text": "Bless and keep all your people,",
+              "response": "Hear us, O Christ."
+            }
+          ],
+          "style": "litany",
+          "hidden": false,
+          "metadata": { "response": "Hear us, O Christ." },
+          "source": { "source": "", "api": "", "citation": "" }
+        },
+        {
+          "value": [
+            {
+              "label": "",
+              "text": "Comfort and liberate the lonely, the bereaved (especially_______) and the oppressed.",
+              "response": ""
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Keep in safety those who travel (especially  _______) and all who are in peril."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Heal the sick in body, mind or spirit (especially _______) and provide for the homeless, the hungry and the destitute."
+            },
+            {
+              "text": "Guard and protect all children who are in danger.",
+              "response": "Hear us, O Christ."
+            },
+            {
+              "text": "Shower your compassion on prisoners, hostages and refugees, and all who are in trouble.",
+              "response": "Hear us, O Christ."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Forgive our enemies, persecutors and slanderers, and turn their hearts."
+            },
+            {
+              "response": "Hear us, O Christ.",
+              "text": "Hear us as we remember those who have died (especially _______) and grant us with them a share in your eternal glory."
+            }
+          ],
+          "metadata": { "response": "Hear us, O Christ." },
+          "hidden": false,
+          "label": "V.",
+          "source": { "api": "", "source": "", "citation": "" },
+          "type": "responsive",
+          "style": "litany"
+        },
+        {
+          "metadata": {},
+          "label": "VI.",
+          "type": "responsive",
+          "value": [
+            {
+              "text": "Give us true repentance; forgive us our sins of negligence and ignorance and our deliberate sins; and grant us the grace of your Holy Spirit to amend our lives according to your word.",
+              "label": "",
+              "response": "Holy God,\nHoly and Mighty,\nHoly Immortal One,\nHave mercy on us."
+            }
+          ],
+          "hidden": false,
+          "source": { "api": "", "source": "", "citation": "" },
+          "style": "responsive"
+        }
+      ],
+      "type": "liturgy",
+      "language": "en",
+      "source": { "source": "", "api": "", "citation": "" },
+      "hidden": false,
+      "category": [],
+      "lastRevision": 177,
+      "metadata": {
+        "special_preferences": {},
+        "supplement": false,
+        "liturgyversions": [],
+        "preferences": {},
+        "evening": false
+      },
+      "slug": "litany"
+    }
+  ]
+}

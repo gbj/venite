@@ -20,7 +20,7 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
   const body = (<body>
     <TOCMenu/>
     <DisplaySettings/>
-    <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>*
+    <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>
     <DocActionMenu/>
   </body>);
 

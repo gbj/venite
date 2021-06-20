@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "slug": "supplication",
+      "category": [],
+      "label": "The Supplication",
+      "metadata": {
+        "evening": false,
+        "liturgyversions": [],
+        "special_preferences": {},
+        "preferences": {}
+      },
+      "language": "en",
+      "type": "liturgy",
+      "source": { "citation": "", "api": "", "source": "" },
+      "lastRevision": 90,
+      "hidden": false,
+      "version": "Rite-I",
+      "value": [
+        {
+          "type": "heading",
+          "style": "text",
+          "value": ["The Supplication"],
+          "metadata": { "level": 1 },
+          "hidden": false
+        },
+        {
+          "value": [
+            "For use in the Litany in place of the Versicle and Collect which follows the Lord’s Prayer; or at the end or Morning or Evening Prayer; or as a separate devotion; especially in times of war, or of national anxiety, or of disaster."
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "type": "responsive",
+          "style": "litany",
+          "source": { "source": "", "api": "", "citation": "" },
+          "value": [
+            {
+              "optional": false,
+              "text": "O Lord, arise, help us;",
+              "label": "",
+              "response": "And deliver us for thy Name’s sake. \n"
+            },
+            {
+              "response": "O Lord, arise, help us;\nand deliver us for thy Name’s sake. ",
+              "optional": false,
+              "text": "O God, we have heard with our ears, and our fathers have declared unto us, the noble works that thou didst in their days, and in the old time before them. "
+            },
+            {
+              "text": "Glory be to the Father, and to the Son, and to the Holy Ghost; as it was in the beginning, is now, and ever shall be, world without end. Amen.",
+              "response": ""
+            }
+          ],
+          "category": [],
+          "metadata": {
+            "response": "O Lord, arise, help us; and deliver us for thy Name's sake. "
+          }
+        },
+        {
+          "hidden": false,
+          "style": "preces",
+          "value": [
+            {
+              "label": "V.",
+              "text": "From our enemies defend us, O Christ;",
+              "response": ""
+            },
+            { "label": "R.", "text": "Graciously behold our afflictions." },
+            {
+              "text": "With pity behold the sorrows of our hearts;",
+              "label": "V."
+            },
+            {
+              "text": "Mercifully forgive the sins of thy people.",
+              "label": "R."
+            },
+            { "text": "Favorably with mercy hear our prayers;", "label": "V." },
+            { "label": "R.", "text": "O Son of David, have mercy upon us." },
+            {
+              "text": "Both now and ever vouchsafe to hear us, O Christ;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Graciously hear us, O Christ; graciously hear us, O Lord Christ."
+            }
+          ],
+          "type": "responsive"
+        },
+        {
+          "value": ["The Officiant concludes "],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "style": "text",
+          "type": "text",
+          "hidden": false,
+          "value": ["Let us pray. "]
+        },
+        {
+          "value": [
+            "We humbly beseech thee, O Father, mercifully to look upon our infirmities; and, for the glory of thy Name, turn from us all those evils that we most justly have deserved; and grant that in all our troubles we may put our whole trust and confidence in thy mercy, and evermore serve thee in holiness and pureness of living, to thy honor and glory; through our only Mediator and Advocate, Jesus Christ our Lord. "
+          ],
+          "hidden": false,
+          "style": "prayer",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

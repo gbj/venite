@@ -1,4 +1,20 @@
-const rite1 = [
+import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
+import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
+
+const reducer = (acc: Record<string, any[]>, curr: any) => {
+  const slug = curr.category[0]
+    .replace(/\s/g, "-")
+    .replace(/\-\-/g, "-")
+    .toLowerCase();
+  if (acc[slug]) {
+    acc[slug].push(curr);
+  } else {
+    acc[slug] = [curr];
+  }
+  return acc;
+};
+
+const rite1: Record<string, LiturgicalDocument[]> = [
   {
     metadata: {
       omit_response: true,
@@ -49,7 +65,7 @@ const rite1 = [
     hidden: false,
     category: ["Advent", "Proper Preface"],
     value: [
-      " Because thou didst send thy beloved Son to redeem us from sin and death, and to make us heirs in him of everlasting life; that when he shall come again in power and great triumph to judge the world, we may without shame or fear rejoice to behold his appearing.",
+      "Because thou didst send thy beloved Son to redeem us from sin and death, and to make us heirs in him of everlasting life; that when he shall come again in power and great triumph to judge the world, we may without shame or fear rejoice to behold his appearing.",
     ],
     language: "en",
     citation: null,
@@ -111,7 +127,7 @@ const rite1 = [
     },
     label: null,
     value: [
-      "  Through Jesus Christ our Lord; who rose victorious from the dead, and doth comfort us with the blessed hope of everlasting life; for to thy faithful people, O Lord, life is changed, not ended; and when our mortal body doth lie in death, there is prepared for us a dwelling place eternal in the heavens.",
+      "Through Jesus Christ our Lord; who rose victorious from the dead, and doth comfort us with the blessed hope of everlasting life; for to thy faithful people, O Lord, life is changed, not ended; and when our mortal body doth lie in death, there is prepared for us a dwelling place eternal in the heavens.",
     ],
     hidden: false,
     type: "text",
@@ -193,7 +209,7 @@ const rite1 = [
     language: "en",
     version_label: "A Saint",
     value: [
-      "  Who in the obedience of thy saints hast given us an example of righteousness, and in their eternal joy a glorious pledge of the hope of our calling.",
+      "Who in the obedience of thy saints hast given us an example of righteousness, and in their eternal joy a glorious pledge of the hope of our calling.",
     ],
     type: "text",
   },
@@ -238,7 +254,7 @@ const rite1 = [
   {
     language: "en",
     value: [
-      "  Because in the love of wife and husband, thou hast given us an image of the heavenly Jerusalem, adorned as a bride for her bridegroom, thy Son Jesus Christ our Lord; who loveth her and gave himself for her, that he might make the whole creation new.",
+      "Because in the love of wife and husband, thou hast given us an image of the heavenly Jerusalem, adorned as a bride for her bridegroom, thy Son Jesus Christ our Lord; who loveth her and gave himself for her, that he might make the whole creation new.",
     ],
     hidden: false,
     version_label: "Marriage",
@@ -327,7 +343,7 @@ const rite1 = [
     type: "text",
     citation: null,
     value: [
-      " Who by water and the Holy Spirit hast made us a new people in Jesus Christ our Lord, to show forth thy glory in all the world.",
+      "Who by water and the Holy Spirit hast made us a new people in Jesus Christ our Lord, to show forth thy glory in all the world.",
     ],
   },
   {
@@ -354,7 +370,7 @@ const rite1 = [
     version_label: "Of God the Son",
     type: "text",
     value: [
-      "  Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life.",
+      "Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life.",
     ],
     hidden: false,
     version: "rite_i",
@@ -370,7 +386,7 @@ const rite1 = [
   },
   {
     value: [
-      " Creator of the light and source of life, who hast made us in thine image, and called us to new life in Jesus Christ our Lord.",
+      "Creator of the light and source of life, who hast made us in thine image, and called us to new life in Jesus Christ our Lord.",
     ],
     type: "text",
     metadata: {
@@ -387,13 +403,13 @@ const rite1 = [
     category: ["OrdinaryTime", "Proper Preface"],
     language: "en",
   },
-];
+].reduce(reducer, {});
 
-const rite2 = [
+const rite2: Record<string, LiturgicalDocument[]> = [
   {
     category: ["Trinity", "Proper Preface"],
     value: [
-      " For with your co-eternal Son and Holy Spirit, you are one God, one Lord, in Trinity of Persons and in Unity of Being; and we celebrate the one and equal glory of you, O Father, and of the Son, and of the Holy Spirit.",
+      "For with your co-eternal Son and Holy Spirit, you are one God, one Lord, in Trinity of Persons and in Unity of Being; and we celebrate the one and equal glory of you, O Father, and of the Son, and of the Holy Spirit.",
     ],
     version_label: "Trinity Sunday",
     version: "bcp1979",
@@ -525,7 +541,7 @@ const rite2 = [
   },
   {
     value: [
-      " Because in the love of wife and husband, you have given us an image of the heavenly Jerusalem, adorned as a bride for her bridegroom, your Son Jesus Christ our Lord; who loves her and gave himself for her, that he might make the whole creation new.",
+      "Because in the love of wife and husband, you have given us an image of the heavenly Jerusalem, adorned as a bride for her bridegroom, your Son Jesus Christ our Lord; who loves her and gave himself for her, that he might make the whole creation new.",
     ],
     style: "text",
     language: "en",
@@ -770,4 +786,36 @@ const rite2 = [
     version: "bcp1979",
     language: "en",
   },
-];
+].reduce(reducer, {});
+
+for (const [slug, data] of Object.entries(rite1)) {
+  Deno.writeTextFile(
+    path.join(
+      path.fromFileUrl(import.meta.url),
+      "..",
+      "..",
+      "src",
+      "liturgy",
+      "proper-prefaces",
+      "Rite-I",
+      `${slug}.json`
+    ),
+    JSON.stringify({ data })
+  );
+}
+
+for (const [slug, data] of Object.entries(rite2)) {
+  Deno.writeTextFile(
+    path.join(
+      path.fromFileUrl(import.meta.url),
+      "..",
+      "..",
+      "src",
+      "liturgy",
+      "proper-prefaces",
+      "Rite-II",
+      `${slug}.json`
+    ),
+    JSON.stringify({ data })
+  );
+}

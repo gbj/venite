@@ -9,8 +9,9 @@ export const LDF_TO_HTML_CONFIG = {
     switch(doc.lookup.type) {
       case "category":
         const category = doc.category[0],
+          version = doc.version,
           slug = category.trim().replace(/\s/g, '-').toLowerCase();
-        return <a href={`/${slug}`}>{category}</a>;
+        return <a href={`/${slug}${version ? `/${version}` : ''}`}>{category}</a>;
       default:
         return <pre>{JSON.stringify(doc.lookup)}</pre>
     }

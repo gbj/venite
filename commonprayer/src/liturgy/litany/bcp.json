@@ -1,0 +1,410 @@
+{
+  "data": [
+    {
+      "metadata": {
+        "special_preferences": {},
+        "preferences": {
+          "supplication": {
+            "options": [
+              {
+                "label": "—",
+                "value": "no",
+                "metadata": { "alternateYear": false }
+              },
+              {
+                "metadata": { "alternateYear": false },
+                "value": "yes",
+                "label": "After the Lord’s Prayer"
+              }
+            ],
+            "key": "supplication",
+            "label": "Supplication"
+          }
+        },
+        "evening": false,
+        "liturgyversions": [],
+        "supplement": false
+      },
+      "language": "en",
+      "value": [
+        {
+          "metadata": { "level": 1 },
+          "hidden": false,
+          "type": "heading",
+          "value": ["The Great Litany"],
+          "style": "text"
+        },
+        {
+          "value": [
+            "To be said or sung, kneeling, standing, or in procession; before the Eucharist or after the Collects of Morning or Evening Prayer; or separately; especially in Lent and on Rogation days. "
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "value": [
+            {
+              "label": "",
+              "response": "Have mercy upon us.",
+              "text": "O God the Father, Creator of heaven and earth,"
+            },
+            {
+              "response": "Have mercy upon us.",
+              "text": "O God the Son, Redeemer of the world,"
+            },
+            {
+              "text": "O God the Holy Spirit, Sanctifier of the faithful,",
+              "response": "Have mercy upon us."
+            },
+            {
+              "response": "Have mercy upon us.",
+              "text": "O holy, blessed, and glorious Trinity, one God,"
+            },
+            {
+              "text": "Remember not, Lord Christ, our offenses, nor the offenses of our forefathers; neither reward us according to our sins. Spare us, good Lord, spare thy people, whom thou hast redeemed with thy most precious blood, and by thy mercy preserve us, for ever.",
+              "response": "Spare us, good Lord. "
+            },
+            {
+              "response": "Good Lord, deliver us.",
+              "text": "From all evil and wickedness; from sin; from the crafts and assaults of the devil; and from everlasting damnation,"
+            },
+            {
+              "text": "From all blindness of heart; from pride, vainglory, and hypocrisy; from envy, hatred, and malice; and from all want of charity,",
+              "response": "Good Lord, deliver us. "
+            },
+            {
+              "text": "From all inordinate and sinful affections; and from all the deceits of the world, the flesh, and the devil,",
+              "response": "Good Lord, deliver us. "
+            },
+            {
+              "response": "Good Lord, deliver us. ",
+              "text": "From all false doctrine, heresy, and schism; from hardness of heart, and contempt of thy Word and commandment,"
+            },
+            {
+              "response": "Good Lord, deliver us. ",
+              "text": "From lightning and tempest; from earthquake, fire, and flood; from plague, pestilence, and famine,"
+            },
+            {
+              "response": "Good Lord, deliver us. ",
+              "text": "From all oppression, conspiracy, and rebellion; from violence, battle, and murder; and from dying suddenly and unprepared,"
+            },
+            {
+              "text": "By the mystery of thy holy Incarnation; by thy holy Nativity and submission to the Law; by thy Baptism, Fasting, and Temptation,",
+              "response": "Good Lord, deliver us. "
+            },
+            {
+              "response": "Good Lord, deliver us. ",
+              "text": "By thine Agony and Bloody Sweat; by thy Cross and Passion; by thy precious Death and Burial; by thy glorious Resurrection and Ascension; and by the Coming of the Holy Ghost,"
+            },
+            {
+              "text": "In all time of our tribulation; in all time of our prosperity; in the hour of death, and in the day of judgment,",
+              "response": "Good Lord, deliver us. "
+            }
+          ],
+          "metadata": { "response": "Have mercy upon us." },
+          "hidden": false,
+          "style": "litany",
+          "type": "responsive"
+        },
+        {
+          "value": [
+            {
+              "label": "",
+              "text": "We sinners do beseech thee to hear us, O Lord God; and that it may please thee to rule and govern thy holy Church Universal in the right way,",
+              "response": ""
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to illumine all bishops, priests, and deacons, with true knowledge and understanding of thy Word; and that both by their preaching and living, they may set it forth, and show it accordingly,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to bless and keep all thy people,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to send forth laborers into thy harvest, and to draw all mankind into thy kingdom,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to give to all people increase of grace to hear and receive thy Word, and to bring forth the fruits of the Spirit,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to bring into the way of truth all such as have erred, and are deceived,"
+            },
+            {
+              "text": "That it may please thee to give us a heart to love and fear thee, and diligently to live after thy commandments,",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "text": "That it may please thee so to rule the hearts of thy servants, the President of the United States (or of this nation), and all others in authority, that they may do justice, and love mercy, and walk in the ways of truth,",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "text": "That it may please thee to make wars to cease in all the world; to give to all nations unity, peace, and concord; and to bestow freedom upon all peoples, ",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to show thy pity upon all prisoners and captives, the homeless and the hungry, and all who are desolate and oppressed,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to give and preserve to our use the bountiful fruits of the earth, so that in due time all may enjoy them,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to inspire us, in our several callings, to do the work which thou givest us to do with singleness of heart as thy servants, and for the common good,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to preserve all who are in danger by reason of their labor or their travel,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to preserve, and provide for, all women in childbirth, young children and orphans, the widowed, and all whose homes are broken or torn by strife,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to visit the lonely; to strengthen all who suffer in mind, body, and spirit; and to comfort with thy presence those who are failing and infirm,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to support, help, and comfort all who are in danger, necessity, and tribulation,"
+            },
+            {
+              "text": "That it may please thee to have mercy upon all mankind,",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "text": "That it may please thee to give us true repentance; to forgive us all our sins, negligences, and ignorances; and to endue us with the grace of thy Holy Spirit to amend our lives according to thy holy Word,",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to forgive our enemies, persecutors, and slanderers, and to turn their hearts,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to strengthen such as do stand; to comfort and help the weak-hearted; to raise up those who fall; and finally to beat down Satan under our feet,"
+            },
+            {
+              "response": "We beesech thee to hear us, good Lord. ",
+              "text": "That it may please thee to grant to all the faithful departed eternal life and peace,"
+            },
+            {
+              "text": "That it may please thee to grant that, in the fellowship of [__________ and] all the saints, we may attain to thy heavenly kingdom,",
+              "response": "We beesech thee to hear us, good Lord. "
+            },
+            {
+              "text": "Son of God, we beseech thee to hear us.",
+              "response": "Son of God, we beseech thee to hear us."
+            }
+          ],
+          "hidden": false,
+          "style": "litany",
+          "metadata": { "response": "We beesech thee to hear us, good Lord. " },
+          "type": "responsive"
+        },
+        {
+          "metadata": { "response": "Have mercy upon us." },
+          "style": "litany",
+          "hidden": false,
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "text": "O Lamb of God, that takest away the sins of the world,",
+              "label": ""
+            },
+            {
+              "text": "O Lamb of God, that takest away the sins of the world,",
+              "response": "Have mercy upon us."
+            },
+            {
+              "response": "Grant us thy peace.",
+              "text": "O Lamb of God, that takest away the sins of the world,"
+            },
+            { "text": "O Christ, hear us.", "response": "O Christ, hear us." }
+          ]
+        },
+        {
+          "hidden": false,
+          "style": "responsive",
+          "value": [
+            {
+              "label": "",
+              "response": "Christ, have mercy upon us.",
+              "text": "Lord, have mercy upon us."
+            },
+            { "text": "Lord, have mercy upon us.", "response": "" }
+          ],
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "hidden": false,
+          "value": [
+            "When the Litany is sung or said immediately before the Eucharist, the Litany concludes here, and the Eucharist begins with the Salutation and the Collect of the Day. ",
+            "On all other occasions, the Officiant and People say together "
+          ]
+        },
+        {
+          "style": "prayer",
+          "hidden": false,
+          "metadata": { "rollup": false },
+          "display_format": "unison",
+          "value": [
+            "Our Father, who art in heaven,\n    hallowed be thy Name,\n    thy kingdom come,\n    thy will be done,\n        on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n    as we forgive those who trespass against us.\nAnd lead us not into temptation,\n    but deliver us from evil."
+          ],
+          "source": { "citation": "", "api": "", "source": "" },
+          "type": "text"
+        },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "O Lord, let thy mercy be showed upon us;"
+            },
+            { "text": "As we do put our trust in thee.", "label": "R." }
+          ],
+          "hidden": false,
+          "type": "responsive",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "key": "supplication",
+                  "is": false,
+                  "value": "yes"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hidden": false,
+          "value": [
+            "The Officiant concludes with the following or some other Collect"
+          ],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "is": false,
+                  "key": "supplication"
+                }
+              }
+            ]
+          },
+          "type": "rubric"
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "value": "yes",
+                  "key": "supplication"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "value": ["Let us pray."],
+          "type": "text",
+          "hidden": false,
+          "style": "text"
+        },
+        {
+          "style": "prayer",
+          "value": [
+            "Almighty God, who hast promised to hear the petitions of those who ask in thy Son’s Name: We beseech thee mercifully to incline thine ear to us who have now made our prayers and supplications unto thee; and grant that those things which we have asked faithfully according to thy will, may be obtained effectually, to the relief of our necessity, and to the setting forth of thy glory; through Jesus Christ our Lord."
+          ],
+          "type": "text",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "value": "yes",
+                  "key": "supplication"
+                }
+              }
+            ]
+          },
+          "hidden": false
+        },
+        {
+          "source": { "source": "", "citation": "", "api": "" },
+          "metadata": {
+            "evening": false,
+            "supplement": false,
+            "liturgyversions": []
+          },
+          "slug": "supplication",
+          "label": "The Supplication",
+          "sharing": {
+            "status": "published",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "language": "en",
+          "version": "Rite-I",
+          "hidden": false,
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "is": true,
+                  "value": "yes",
+                  "key": "supplication"
+                }
+              }
+            ]
+          },
+          "date_modified": { "seconds": 1610557535, "nanoseconds": 891000000 },
+          "lastRevision": 77,
+          "date_created": { "seconds": 1610557049, "nanoseconds": 367000000 },
+          "type": "liturgy",
+          "category": [],
+          "id": "F8th0Wu9qtjTL13cBbTr"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The Officiant may add other Prayers, and end the Litany, saying"
+          ]
+        },
+        {
+          "hidden": false,
+          "value": [
+            "The grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Ghost, be with us all evermore."
+          ],
+          "type": "text",
+          "style": "prayer"
+        }
+      ],
+      "source": { "api": "", "source": "", "citation": "" },
+      "lastRevision": 192,
+      "hidden": false,
+      "category": [],
+      "version": "Rite-I",
+      "slug": "litany",
+      "label": "The Great Litany",
+      "type": "liturgy"
+    }
+  ]
+}

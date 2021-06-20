@@ -21,9 +21,11 @@ export const Category = await Page({
       if(isFile && name.endsWith(".json") && name !== "index.json") {
         const json = await Deno.readTextFile(path.join(srcDir, name)),
           { data, index } = JSON.parse(json),
-          docs = data.map(doc => new LiturgicalDocument(doc)),
-          html = docs.map(doc => ldfToHTML(doc, LDF_TO_HTML_CONFIG)).join("\n\n");
-        children.push({index, html, label: docs[0]?.label });
+          docs = data.map(doc => new LiturgicalDocument(doc));
+        for(const doc of docs) {
+          const html = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
+          children.push({index, html, label: doc.label || (doc.category || [])[0] });
+        }
       }
     }
 
@@ -42,9 +44,9 @@ export const Category = await Page({
           children
             .sort((a, b) => a.index - b.index)
             .map(child => <li>
-              <details>
-                {child.label && <summary>{child.label}</summary>}
-                <article dangerouslySetInnerHTML={{__html: child.html}}></article>
+              <details open={child.html.length < 1000}>
+                {(child.label) && <summary>{child.label}</summary>}
+                <article dangerouslySetInnerHTML={{__html: child.html}} class="cp-doc"></article>
               </details>
             </li>)
         }

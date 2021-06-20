@@ -13,9 +13,9 @@ searchbar.disabled = false;
 searchbar.oninput = debounce(() => {
   for (const child of category.children) {
     if (child.textContent.includes(searchbar.value)) {
-      child.classList.remove("hidden");
+      child.querySelector("details").open = true;
     } else {
-      child.classList.add("hidden");
+      child.querySelector("details").open = false;
     }
   }
 }, 100);

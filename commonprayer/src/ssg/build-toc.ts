@@ -58,6 +58,7 @@ export async function buildDoc(
 
 export async function buildCategoryPage(
   srcDir: string,
+  subpath: string,
   categoryName: string,
   isDev: boolean
 ): Promise<SSGRefreshMap> {
@@ -69,6 +70,7 @@ export async function buildCategoryPage(
       "..",
       "..",
       "www",
+      subpath || "",
       categoryName
     );
   if (!(await exists(dest))) {
@@ -85,8 +87,9 @@ export async function buildCategoryPage(
   );
 
   return {
-    [srcDir]: () => buildCategoryPage(srcDir, categoryName, isDev),
-    [categoryPagePath]: () => buildCategoryPage(srcDir, categoryName, isDev),
+    [srcDir]: () => buildCategoryPage(srcDir, subpath, categoryName, isDev),
+    [categoryPagePath]: () =>
+      buildCategoryPage(srcDir, subpath, categoryName, isDev),
   };
 }
 
@@ -117,7 +120,10 @@ export async function buildTOC(
     else {
       if (e.path !== src) {
         // a) build a category page
-        map = { ...map, ...(await buildCategoryPage(e.path, e.name, isDev)) };
+        map = {
+          ...map,
+          ...(await buildCategoryPage(e.path, subpath, e.name, isDev)),
+        };
 
         // b) build pages for children
         if (!DIR_IGNORE_CHILDREN.includes(e.name)) {

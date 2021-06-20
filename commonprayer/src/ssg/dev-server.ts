@@ -140,6 +140,7 @@ async function handleDepartures(
   clients: Map<string, WebSocket>
 ) {
   for await (const ev of sock) {
+    console.log(ev);
     if (isWebSocketCloseEvent(ev)) {
       console.log("\n\nClient", uid, "disconnected");
       clients.delete(uid);

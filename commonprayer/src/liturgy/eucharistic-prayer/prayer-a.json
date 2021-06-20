@@ -2,10 +2,6 @@
   "data": [
     {
       "slug": "prayer_a",
-      "date_modified": {
-        "seconds": 1610564379,
-        "nanoseconds": 146000000
-      },
       "label": "Prayer A",
       "lastRevision": 13,
       "language": "en",
@@ -14,14 +10,7 @@
         "api": "",
         "citation": ""
       },
-      "category": [null, "Eucharistic Prayer"],
-      "sharing": {
-        "status": "published",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": [],
-        "organization": "venite",
-        "privacy": "public"
-      },
+      "category": ["Eucharistic Prayer"],
       "value": [
         {
           "type": "heading",
@@ -125,7 +114,8 @@
             "type": "category",
             "filter": "seasonal"
           },
-          "category": ["Proper Prefaces"]
+          "category": ["Proper Prefaces"],
+          "version": "Rite-II"
         },
         {
           "label": null,
