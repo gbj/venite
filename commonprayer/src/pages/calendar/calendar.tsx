@@ -19,7 +19,6 @@ const MONTHS = [
 ];
 
 const CalendarPage = async (kalendar : string) => (await Page({
-  scripts: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-service.ts"), path.join(path.fromFileUrl(import.meta.url), "..", "calendar-ui.ts")],
   main: async () => {
     const feasts = (await Promise.all(MONTHS.map(async (month, monthIndex) => await Promise.all([...Array(month.days).keys()].map(d => d +1).map(async dd => {
       const mmdd = `${monthIndex+1}/${dd}`,
@@ -28,8 +27,6 @@ const CalendarPage = async (kalendar : string) => (await Page({
     }))))).flat();
 
     return <main>
-      <input type="date" id="date"/>
-      <pre id="date-output"></pre>
       {MONTHS.map((month, monthIndex) => [
         <h2>{month.name}</h2>,
         <table id={month.name.toLowerCase()}>

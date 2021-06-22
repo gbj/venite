@@ -28,6 +28,10 @@ async function build(isDev = false): Promise<SSGRefreshMap> {
       isDev,
       route: "calendar/about",
     }),
+    buildPage("calendar-calculator", {
+      isDev,
+      route: "calendar/date",
+    }),
   ]);
 
   return map.reduce((acc, curr) => ({ ...acc, ...curr }));

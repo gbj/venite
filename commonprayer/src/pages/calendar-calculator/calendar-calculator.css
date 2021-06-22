@@ -1,0 +1,15 @@
+input {
+  display: block;
+  margin: auto;
+}
+
+.disclaimer {
+  background: var(--cp-medium-background);
+  color: var(--cp-medium-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
+  padding: 1rem;
+}
+
+#day-details h1, #day-details h2 {
+  text-align: center;
+}

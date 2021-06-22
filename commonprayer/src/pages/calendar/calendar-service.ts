@@ -48,6 +48,10 @@ class CalendarServiceController {
     return await this.addHolyDays(day, vigil);
   }
 
+  dateFromYMDString(ymd: string): Date {
+    return dateFromYMDString(ymd);
+  }
+
   // Used as an async getter for calendars — ensures each one is only fetched once
   private kalendars: Record<string, Promise<Kalendar>> = {};
   private kalendar(kalendar: string): Promise<Kalendar> {
