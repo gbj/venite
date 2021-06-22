@@ -53,6 +53,7 @@ export class HymnSelectorComponent implements OnInit {
     } else if (mode === "text") {
       if (hymn.textUrl) {
         const loading = await this.loading.create({
+          backdropDismiss: true,
           message: "Loading Hymn Text...",
         });
         await loading.present();
@@ -91,6 +92,7 @@ export class HymnSelectorComponent implements OnInit {
     } else if (mode === "scan") {
       if (hymn.textUrl) {
         const loading = await this.loading.create({
+          backdropDismiss: true,
           message: "Loading Page Scans...",
         });
         await loading.present();
@@ -129,6 +131,7 @@ export class HymnSelectorComponent implements OnInit {
     } else if (mode === "responsive") {
       if (hymn.textUrl) {
         const loading = await this.loading.create({
+          backdropDismiss: true,
           message: "Loading Page Scans...",
         });
         await loading.present();
@@ -153,6 +156,7 @@ export class HymnSelectorComponent implements OnInit {
       let textValue: string[] = [];
       if (hymn.textUrl) {
         const loading = await this.loading.create({
+          backdropDismiss: true,
           message: "Loading Hymn Text...",
         });
         await loading.present();

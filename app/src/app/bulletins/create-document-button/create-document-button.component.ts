@@ -89,7 +89,7 @@ export class CreateDocumentButtonComponent implements OnInit {
     orgs: Organization[],
     label: string
   ) {
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({ backdropDismiss: true });
     await loading.present();
 
     const template = await this.template(label); //,

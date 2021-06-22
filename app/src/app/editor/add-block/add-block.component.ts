@@ -396,7 +396,7 @@ export class AddBlockComponent implements OnInit, OnDestroy {
 
     // citation + version => load and insert
     if (citation && version) {
-      const loading = await this.loading.create();
+      const loading = await this.loading.create({ backdropDismiss: true });
 
       const reading = await this.fetchReading(citation, version);
 

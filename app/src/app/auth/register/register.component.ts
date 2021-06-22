@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { LoadingController } from "@ionic/angular";
 
 import { AuthService } from "../auth.service";
 
@@ -28,7 +29,7 @@ export class RegisterComponent implements OnInit {
         this.email,
         this.password
       );
-      if (result.user) {
+      if (result?.user) {
         await result.user.updateProfile({
           displayName: this.name,
           photoURL: "/assets/avatar.svg",

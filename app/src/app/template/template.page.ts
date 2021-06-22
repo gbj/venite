@@ -45,7 +45,9 @@ export class TemplatePage implements OnInit {
   }
 
   async showLoading() {
-    this.loadingInstance = await this.loading.create();
+    this.loadingInstance = await this.loading.create({
+      backdropDismiss: true,
+    });
     await this.loadingInstance.present();
   }
 }

@@ -20,7 +20,7 @@ export class AuthMenuButtonComponent implements OnInit {
 
   async signIn() {
     // show loading because the modal widget can sometimes be slow to load the first time
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({ backdropDismiss: true });
     await loading.present();
 
     const modal = await this.modal.create({
