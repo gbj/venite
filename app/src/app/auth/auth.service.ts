@@ -45,14 +45,16 @@ export class AuthService {
           break;
       }
       if (target) {
-        const loading = await this.loading.create();
+        const loading = await this.loading.create({
+          backdropDismiss: true,
+        });
         await loading.present();
         const user = await cfaSignIn(target).toPromise();
         loading.dismiss();
         return user.userCredential;
       }
     } else {
-      const loading = await this.loading.create();
+      const loading = await this.loading.create({ backdropDismiss: true });
       await loading.present();
 
       try {
@@ -124,7 +126,7 @@ export class AuthService {
   }
 
   async signInWithEmailAndPassword(email: string, password: string) {
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({ backdropDismiss: true });
     await loading.present();
     const res = await firebase
       .auth()
@@ -134,17 +136,23 @@ export class AuthService {
   }
 
   async createUserWithEmailAndPassword(email: string, password: string) {
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({ backdropDismiss: true });
     await loading.present();
-    const res = await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password);
-    await loading.dismiss();
-    return res;
+    try {
+      const res = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
+      await loading.dismiss();
+
+      return res;
+    } catch (e) {
+      await loading.dismiss();
+      throw e;
+    }
   }
 
   async resetPassword(email: string) {
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({ backdropDismiss: true });
     await loading.present();
     const res = await firebase.auth().sendPasswordResetEmail(email);
     await loading.dismiss();

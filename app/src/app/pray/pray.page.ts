@@ -558,7 +558,7 @@ export class PrayPage implements OnInit, OnDestroy {
     this.userProfile$ = this.auth.user.pipe(
       switchMap((user) => (user ? this.auth.getUserProfile(user.uid) : null))
     );
-    this.userOrgs$ = this.userProfile$.pipe(
+    this.userOrgs$ = this.auth.user.pipe(
       filter((user) => Boolean(user)),
       switchMap((user) =>
         this.organizationService.organizationsWithUser(user?.uid)
@@ -825,7 +825,9 @@ export class PrayPage implements OnInit, OnDestroy {
   async beginEditing(doc: LiturgicalDocument) {
     this.latestDoc = doc;
 
-    const loading = await this.loadingController.create();
+    const loading = await this.loadingController.create({
+      backdropDismiss: true,
+    });
 
     await loading.present();
 
@@ -917,7 +919,9 @@ export class PrayPage implements OnInit, OnDestroy {
     hasRetried: boolean = false
   ) {
     // show loading
-    const loading = await this.loadingController.create();
+    const loading = await this.loadingController.create({
+      backdropDismiss: true,
+    });
     await loading.present();
 
     const filename = `${doc.label}${
@@ -990,7 +994,9 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: async () => {
           let loading;
           if (!this.platform.is("capacitor") && this.platform.is("ios")) {
-            loading = await this.loadingController.create();
+            loading = await this.loadingController.create({
+              backdropDismiss: true,
+            });
             await loading.present();
           }
           this.startSpeech(
@@ -1377,7 +1383,9 @@ export class PrayPage implements OnInit, OnDestroy {
   async quickLink(doc: LiturgicalDocument) {
     const owner = this.auth.currentUser()?.uid;
 
-    const loading = await this.loadingController.create();
+    const loading = await this.loadingController.create({
+      backdropDismiss: true,
+    });
     await loading.present();
 
     const docId = await this.documents.newDocument(
