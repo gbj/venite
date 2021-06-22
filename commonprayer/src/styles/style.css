@@ -86,5 +86,6 @@ menu.display-settings {
 
 /* Calendar table */
 td {
-  vertical-align: middle;
+  vertical-align: top;
+  padding: 0.25rem 0.75rem 0.25rem 0;
 }

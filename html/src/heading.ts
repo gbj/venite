@@ -3,14 +3,17 @@ import {
   Heading,
   LiturgicalDay,
 } from "@venite/ldf/dist/cjs";
+import { LDFToHTMLConfig } from "./config";
 import { notEmpty } from "./not-empty";
 
 export function headingToHTML(
   doc: Heading,
   localeStrings: Record<string, string>,
-  includeLDF = false
+  config: LDFToHTMLConfig
 ): string {
-  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+  const ldf = config.includeLDF
+    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+    : "";
 
   const level: number = doc.metadata?.level ? doc.metadata.level : 4,
     isDate = doc?.style == "date",

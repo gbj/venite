@@ -6,6 +6,7 @@ import {
   Refrain,
 } from "@venite/ldf/dist/cjs";
 import { ldfToHTML } from ".";
+import { LDFToHTMLConfig } from "./config";
 import { genericTextToHTML } from "./generic-text";
 import { headingToHTML } from "./heading";
 import { notEmpty } from "./not-empty";
@@ -13,9 +14,11 @@ import { notEmpty } from "./not-empty";
 export function psalmToHTML(
   doc: Psalm,
   localeStrings: Record<string, string>,
-  includeLDF = false
+  config: LDFToHTMLConfig
 ): string {
-  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+  const ldf = config.includeLDF
+    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+    : "";
 
   function headingNode(
     value: string | undefined = undefined,
@@ -52,7 +55,7 @@ export function psalmToHTML(
       source: doc?.source,
     });
 
-    return headingToHTML(heading, localeStrings);
+    return headingToHTML(heading, localeStrings, config);
   }
 
   function antiphonNode(
@@ -65,9 +68,9 @@ export function psalmToHTML(
         value: [antiphon],
         style: "antiphon",
       });
-      return genericTextToHTML(refrain, "refrain", localeStrings);
+      return genericTextToHTML(refrain, "refrain", localeStrings, config);
     } else if (antiphon?.type) {
-      return ldfToHTML(antiphon as LiturgicalDocument);
+      return ldfToHTML(antiphon as LiturgicalDocument, config);
     } else if (typeof antiphon == "object") {
       // antiphon is something like an O antiphon tree:
       // dates can be either MM/DD or MM-DD
@@ -90,9 +93,9 @@ export function psalmToHTML(
   function gloriaNode(gloria: string | Refrain): string {
     if (typeof gloria == "string") {
       const refrain = new Refrain({ value: [gloria], style: "gloria" });
-      return genericTextToHTML(refrain, "refrain", localeStrings);
+      return genericTextToHTML(refrain, "refrain", localeStrings, config);
     } else {
-      return genericTextToHTML(gloria, "refrain", localeStrings);
+      return genericTextToHTML(gloria, "refrain", localeStrings, config);
     }
   }
 
@@ -112,7 +115,7 @@ export function psalmToHTML(
         `<section class="psalm-section">`,
         ...(section.value || []).map((verse) =>
           verse instanceof Heading || (verse as any).type === "heading"
-            ? headingToHTML(verse as any, localeStrings)
+            ? headingToHTML(verse as any, localeStrings, config)
             : `<p class="psalm-verse ${verse.number ? "" : "no-number"}">${
                 verse.number
                   ? `<sup class="psalm-verse-number">${verse.number} </sup>`

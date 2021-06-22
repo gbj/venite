@@ -111,7 +111,7 @@
             {
               "label": "",
               "text": "We sinners do beseech thee to hear us, O Lord God; and that it may please thee to rule and govern thy holy Church Universal in the right way,",
-              "response": ""
+              "response": "We beseech thee to hear us, good Lord."
             },
             {
               "response": "We beesech thee to hear us, good Lord. ",
@@ -214,7 +214,7 @@
           "type": "responsive",
           "value": [
             {
-              "response": "",
+              "response": "Have mercy upon us.",
               "text": "O Lamb of God, that takest away the sins of the world,",
               "label": ""
             },

@@ -1,15 +1,19 @@
-const CalendarService = (await import("./calendar-service.js")).default;
+import CalendarService from "./calendar-service.js";
 
-const dateField = document.getElementById("date");
+console.log("CalendarService = ", CalendarService);
 
-dateField.onchange = async (ev) => {
-  const day = await CalendarService.findDay(ev.target.value, "bcp1979");
+(async () => {
+  const dateField = document.getElementById("date");
+
+  dateField.onchange = async (ev) => {
+    const day = await CalendarService.findDay(ev.target.value, "bcp1979");
+    document.getElementById("date-output").innerHTML = JSON.stringify(day);
+  };
+
+  const now = new Date();
+  dateField.value = `${now.getFullYear()}-${(now.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}-${now.getDate().toString().padStart(2, "0")}`;
+  const day = await CalendarService.findDay(dateField.value, "bcp1979");
   document.getElementById("date-output").innerHTML = JSON.stringify(day);
-};
-
-const now = new Date();
-dateField.value = `${now.getFullYear()}-${(now.getMonth() + 1)
-  .toString()
-  .padStart(2, "0")}-${now.getDate().toString().padStart(2, "0")}`;
-const day = await CalendarService.findDay(dateField.value, "bcp1979");
-document.getElementById("date-output").innerHTML = JSON.stringify(day);
+})();

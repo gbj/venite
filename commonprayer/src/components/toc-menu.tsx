@@ -7,7 +7,15 @@ export const TOCMenu = () => [
   </button>,
   <nav class="hidden toc-menu">
     <ul>
-      <li><h2>The Calendar of the Church Year</h2></li>
+      <li>
+        <h2>The Calendar of the Church Year</h2>
+        <ul>
+          <li><a href="/calendar/about">About</a></li>
+          <li><a href="/calendar/bcp">Book of Common Prayer (1979)</a></li>
+          <li><a href="/calendar/lff"><em>Lesser Feasts and Fasts</em> (2018)</a></li>
+          <li><a href="/calendar/date">Calculator</a></li>
+        </ul>
+      </li>
       <li>
         <h2>The Daily Office</h2>
         <ul>

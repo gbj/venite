@@ -1,6 +1,6 @@
 import { buildCSS } from "./ssg/build-css.ts";
 import { buildPage } from "./ssg/build-page.ts";
-import { buildScripts } from "./ssg/build-scripts.ts";
+import { buildLDFBundle, buildScripts } from "./ssg/build-scripts.ts";
 import { buildTOC } from "./ssg/build-toc.ts";
 import { copyStatic } from "./ssg/copy-static.ts";
 import { createWWW } from "./ssg/create-www.ts";
@@ -21,9 +21,13 @@ async function build(isDev = false): Promise<SSGRefreshMap> {
     buildTOC(isDev),
 
     // Build pages
-    buildPage("home", isDev, true),
-    buildPage("psalter", isDev),
-    buildPage("calendar", isDev),
+    buildPage("home", { isDev, isIndex: true }),
+    buildPage("psalter", { isDev }),
+    buildPage("calendar", { isDev, route: "calendar/bcp", args: ["bcp1979"] }),
+    buildPage("calendar-about", {
+      isDev,
+      route: "calendar/about",
+    }),
   ]);
 
   return map.reduce((acc, curr) => ({ ...acc, ...curr }));

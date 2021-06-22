@@ -118,7 +118,7 @@ export async function buildTOC(
     }
     // for each directory,
     else {
-      if (e.path !== src) {
+      if (e.path !== src && !DIR_IGNORE_CHILDREN.includes(e.name)) {
         // a) build a category page
         map = {
           ...map,

@@ -1,13 +1,16 @@
 import { Heading, LiturgicalDocument } from "@venite/ldf/dist/cjs";
 import { ldfToHTML } from ".";
+import { LDFToHTMLConfig } from "./config";
 
 export function genericTextToHTML(
   doc: LiturgicalDocument,
   style: string,
   localeStrings: Record<string, string>,
-  includeLDF = false
+  config: LDFToHTMLConfig
 ): string {
-  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+  const ldf = config.includeLDF
+    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+    : "";
 
   const heading =
     doc.label || doc.citation
@@ -18,7 +21,8 @@ export function genericTextToHTML(
             value: [doc.label],
             citation: doc.citation,
             source: doc.source,
-          })
+          }),
+          config
         )
       : "";
 

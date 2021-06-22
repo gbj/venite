@@ -1,5 +1,6 @@
 import { BibleReading, BibleReadingVerse, Heading } from "@venite/ldf/dist/cjs";
 import { ldfToHTML } from ".";
+import { LDFToHTMLConfig } from "./config";
 import { headingToHTML } from "./heading";
 
 function docToParagraphs(doc: BibleReading): (BibleReadingVerse | Heading)[][] {
@@ -20,11 +21,13 @@ function docToParagraphs(doc: BibleReading): (BibleReadingVerse | Heading)[][] {
 export function bibleReadingToHTML(
   doc: BibleReading,
   localeStrings: Record<string, string>,
-  includeLDF = false
+  config: LDFToHTMLConfig
 ): string {
   const paragraphs = docToParagraphs(doc);
 
-  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+  const ldf = config.includeLDF
+    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+    : "";
 
   if (doc.style === "short") {
     const shortResponse =
@@ -33,13 +36,14 @@ export function bibleReadingToHTML(
     return [
       `<article ${ldf} lang="${
         doc.language || "en"
-      }" class="bible-reading short ${doc.display_format || "default"}">`,
+      }" class="doc bible-reading short ${doc.display_format || "default"}">`,
       "<p>",
       ...(doc.value || []).map((verse) =>
         verse.hasOwnProperty("type") && (verse as Heading).type === "heading"
           ? `</p>\n${headingToHTML(
               new Heading(verse as Heading),
-              localeStrings
+              localeStrings,
+              config
             )}<p>`
           : (verse as BibleReadingVerse).text
       ),
@@ -50,6 +54,9 @@ export function bibleReadingToHTML(
         : "",
       ` <span class="citation">${doc.citation}</span>`,
       "</p>",
+      doc.metadata?.response && !shortResponse && !doc.metadata?.omit_response
+        ? `<p class="response">${doc.metadata?.response}</p>`
+        : "",
       "</article>",
     ].join("\n");
   } else {
@@ -65,10 +72,11 @@ export function bibleReadingToHTML(
           value: [doc.label],
           citation: doc.citation,
         }),
-        localeStrings
+        localeStrings,
+        config
       ),
       doc?.metadata?.compiled_intro
-        ? ldfToHTML(doc.metadata.compiled_intro)
+        ? ldfToHTML(doc.metadata.compiled_intro, config)
         : "",
       ...(paragraphs || []).map(
         (paragraph) => `<p lang="${doc.language || "en"}">
@@ -76,7 +84,11 @@ export function bibleReadingToHTML(
           .map((verse) =>
             verse.hasOwnProperty("type") &&
             (verse as Heading).type === "heading"
-              ? headingToHTML(new Heading(verse as Heading), localeStrings)
+              ? headingToHTML(
+                  new Heading(verse as Heading),
+                  localeStrings,
+                  config
+                )
               : [
                   (verse as BibleReadingVerse).verse
                     ? `<sup class="bible-verse-number">${

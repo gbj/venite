@@ -18,12 +18,12 @@ const MONTHS = [
   {name: 'December', days: 31}
 ];
 
-const CalendarPage = await Page({
+const CalendarPage = async (kalendar : string) => (await Page({
   scripts: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-service.ts"), path.join(path.fromFileUrl(import.meta.url), "..", "calendar-ui.ts")],
   main: async () => {
     const feasts = (await Promise.all(MONTHS.map(async (month, monthIndex) => await Promise.all([...Array(month.days).keys()].map(d => d +1).map(async dd => {
       const mmdd = `${monthIndex+1}/${dd}`,
-        feast = await CalendarService.findFeastDays("bcp1979", mmdd);
+        feast = await CalendarService.findFeastDays(kalendar, mmdd);
       return { mmdd, feast }
     }))))).flat();
 
@@ -46,6 +46,6 @@ const CalendarPage = await Page({
       ])}
     </main>
   }
-});
+}))();
 
 export default CalendarPage;

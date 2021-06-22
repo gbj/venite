@@ -43,7 +43,7 @@ export async function Page({
   return (...args: any[]) => ({
     main: main(...args),
     style,
-    scripts: scripts.map(
+    scripts: (scripts || []).map(
       (fileName) =>
         "/scripts/" +
         (fileName.split("/").pop() || "")

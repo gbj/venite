@@ -4,10 +4,13 @@ import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 
 export async function buildScript(src: string, outDir: string) {
   if (!(await exists(outDir))) {
-    await Deno.mkdir(outDir);
+    await Deno.mkdir(outDir, { recursive: true });
   }
 
-  const { files } = await Deno.emit(src, { bundle: "module" });
+  const { files } = await Deno.emit(
+    src,
+    src.endsWith("-service.ts") ? { bundle: "module" } : undefined
+  );
   const baseFileName = src.split("/").pop();
   for (const [fileName, text] of Object.entries(files)) {
     const jsFileName = baseFileName
@@ -23,6 +26,24 @@ export async function buildScript(src: string, outDir: string) {
   return { map: { [src]: () => buildScript(src, outDir) } };
 }
 
+export async function buildLDFBundle() {
+  const src = path.join(
+    path.fromFileUrl(import.meta.url),
+    "..",
+    "..",
+    "ldf.ts"
+  );
+  const outDir = path.join(
+    path.fromFileUrl(import.meta.url),
+    "..",
+    "..",
+    "..",
+    "www"
+  );
+  await buildScript(src, outDir);
+  return { [src]: () => buildLDFBundle() };
+}
+
 export async function buildScripts(): Promise<SSGRefreshMap> {
   const outDir = path.join(
     path.fromFileUrl(import.meta.url),
@@ -33,7 +54,7 @@ export async function buildScripts(): Promise<SSGRefreshMap> {
     "scripts"
   );
   if (!(await exists(outDir))) {
-    await Deno.mkdir(outDir);
+    await Deno.mkdir(outDir, { recursive: true });
   }
 
   const srcDir = path.join(

@@ -1,5 +1,6 @@
 import { Option, LiturgicalDocument } from "@venite/ldf/dist/cjs";
 import { ldfToHTML } from "..";
+import { LDFToHTMLConfig } from "./config";
 
 function lowQualityUUID() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -9,7 +10,7 @@ function lowQualityUUID() {
   });
 }
 
-export function optionToHTML(doc: Option): string {
+export function optionToHTML(doc: Option, config: LDFToHTMLConfig): string {
   const uuid = lowQualityUUID(),
     opt = new Option(doc),
     selected = doc.metadata?.selected ?? doc.metadata?.editor_selected ?? 0;
@@ -27,7 +28,7 @@ export function optionToHTML(doc: Option): string {
   );
 
   const docs = (doc.value || []).map((sub: LiturgicalDocument) =>
-    ldfToHTML(sub, true)
+    ldfToHTML(sub, { ...config, includeLDF: true })
   );
 
   return `<article class="option">${[

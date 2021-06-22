@@ -1,12 +1,15 @@
 import { Heading, ResponsivePrayer } from "@venite/ldf/dist/cjs";
+import { LDFToHTMLConfig } from "./config";
 import { headingToHTML } from "./heading";
 
 export function responsivePrayerToHTML(
   doc: ResponsivePrayer,
   localeStrings: Record<string, string>,
-  includeLDF = false
+  config: LDFToHTMLConfig
 ): string {
-  const ldf = includeLDF ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"` : "";
+  const ldf = config.includeLDF
+    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+    : "";
 
   const header = headingToHTML(
     new Heading({
@@ -16,7 +19,8 @@ export function responsivePrayerToHTML(
       citation: doc.citation,
       source: doc.source,
     }),
-    localeStrings
+    localeStrings,
+    config
   );
   if (doc.style === "litany") {
     return [

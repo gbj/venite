@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
+import { LiturgicalDocument } from "/ldf.js";
 
 // Listen for all clicks in the window, and if the target is a descendant of an
 // element with cp-doc class or with data-ldf set, then toggle buttons
