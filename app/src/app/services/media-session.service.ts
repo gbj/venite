@@ -45,43 +45,49 @@ export class MediaSessionService {
     private platform: PlatformService
   ) {}
 
+  isAvailable(): boolean {
+    return this.platform.is("capacitor") || Boolean(navigator.mediaSession);
+  }
+
   async initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
-    await this.audio.create("/assets/audio/silence-short.mp3");
-    await this.audio.play();
+    if (this.isAvailable()) {
+      await this.audio.create("/assets/audio/silence-short.mp3");
+      await this.audio.play();
 
-    this.docLabel = doc.label || "";
-    await MediaSession.init({
-      play: true,
-      pause: true,
-      nexttrack: true,
-      previoustrack: true,
-    });
+      this.docLabel = doc.label || "";
+      await MediaSession.init({
+        play: true,
+        pause: true,
+        nexttrack: true,
+        previoustrack: true,
+      });
 
-    await MediaSession.setMetadata({
-      artist: "Venite",
-      album: this.docLabel || "",
-      title: doc.label,
-      artwork: [
-        {
-          src: "/assets/icon/icon-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-        },
-      ],
-    });
+      await MediaSession.setMetadata({
+        artist: "Venite",
+        album: this.docLabel || "",
+        title: doc.label,
+        artwork: [
+          {
+            src: "/assets/icon/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+      });
 
-    MediaSession.addListener("play", () => {
-      this.zone.run(() => this.resumeSpeech(doc, settings));
-    });
-    MediaSession.addListener("pause", () => {
-      this.zone.run(() => this.pauseSpeech());
-    });
-    MediaSession.addListener("nexttrack", () => {
-      this.zone.run(() => this.fastForward(doc, settings));
-    });
-    MediaSession.addListener("previoustrack", () => {
-      this.zone.run(() => this.rewind(doc, settings));
-    });
+      MediaSession.addListener("play", () => {
+        this.zone.run(() => this.resumeSpeech(doc, settings));
+      });
+      MediaSession.addListener("pause", () => {
+        this.zone.run(() => this.pauseSpeech());
+      });
+      MediaSession.addListener("nexttrack", () => {
+        this.zone.run(() => this.fastForward(doc, settings));
+      });
+      MediaSession.addListener("previoustrack", () => {
+        this.zone.run(() => this.rewind(doc, settings));
+      });
+    }
   }
 
   pauseSpeech() {
@@ -89,11 +95,14 @@ export class MediaSessionService {
       this.speechSubscription.unsubscribe();
       this.speechService.pause();
       this.audio?.pause();
-      MediaSession.setPositionState({
-        playbackRate: 0,
-      });
+      if (this.isAvailable()) {
+        MediaSession.setPositionState({
+          playbackRate: 0,
+        });
+      }
     });
   }
+
   async resumeSpeech(doc: LiturgicalDocument, settings: DisplaySettings) {
     const voices = await this.speechService.getVoices();
     this.startSpeechAt(
@@ -109,9 +118,11 @@ export class MediaSessionService {
     );
     this.speechService.resume();
     this.audio?.play();
-    MediaSession.setPositionState({
-      playbackRate: 1,
-    });
+    if (this.isAvailable()) {
+      MediaSession.setPositionState({
+        playbackRate: 1,
+      });
+    }
   }
   async rewind(doc: LiturgicalDocument, settings: DisplaySettings) {
     const voices = await this.speechService.getVoices();
@@ -144,9 +155,11 @@ export class MediaSessionService {
           this.settings$
         );
       }
-      MediaSession.setPositionState({
-        playbackRate: 1,
-      });
+      if (this.isAvailable()) {
+        MediaSession.setPositionState({
+          playbackRate: 1,
+        });
+      }
     });
   }
   async fastForward(doc: LiturgicalDocument, settings: DisplaySettings) {
@@ -168,9 +181,11 @@ export class MediaSessionService {
         this.settings$
       );
     });
-    MediaSession.setPositionState({
-      playbackRate: 1,
-    });
+    if (this.isAvailable()) {
+      MediaSession.setPositionState({
+        playbackRate: 1,
+      });
+    }
   }
 
   startSpeechAt(
@@ -189,14 +204,13 @@ export class MediaSessionService {
 
     console.log("doc$ = ", doc$, "settings$ = ", settings$);
 
-    MediaSession.setPositionState({
-      playbackRate: 1,
-    });
+    if (this.isAvailable()) {
+      MediaSession.setPositionState({
+        playbackRate: 1,
+      });
+    }
 
-    if (
-      firstTime &&
-      (navigator.mediaSession || this.platform.is("capacitor"))
-    ) {
+    if (firstTime && this.isAvailable()) {
       this.initMediaSession(doc, settings);
     }
 
@@ -312,12 +326,14 @@ export class MediaSessionService {
               return utterance?.text;
             }
           };
-          const subdoc = (doc.value[data.subdoc]?.hasOwnProperty("type")
-              ? doc.value[data.subdoc]
-              : undefined) as LiturgicalDocument,
+          const subdoc = (
+              doc.value[data.subdoc]?.hasOwnProperty("type")
+                ? doc.value[data.subdoc]
+                : undefined
+            ) as LiturgicalDocument,
             title = docLabel(subdoc);
 
-          if (title) {
+          if (title && this.isAvailable()) {
             console.log("setting metadata to", title);
             MediaSession.setMetadata({
               artist: "Venite",
@@ -358,6 +374,8 @@ export class MediaSessionService {
     this.speechService.pause();
     this.audio.pause();
     this.audio.destroy();
-    MediaSession.destroy();
+    if (this.isAvailable()) {
+      MediaSession.destroy();
+    }
   }
 }

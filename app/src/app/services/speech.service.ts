@@ -432,6 +432,7 @@ export class SpeechService {
       return timer(4).pipe(switchMapTo(voice$));
     } else {
       return speak(utterance).pipe(
+        tap((ev) => console.log(ev)),
         map((ev: SpeechSynthesisEvent) => ({
           state: ev.type === "start" ? TTSState.Starting : undefined,
           target: ev.target,

@@ -993,7 +993,16 @@ export class PrayPage implements OnInit, OnDestroy {
         icon: "headset",
         handler: async () => {
           let loading;
+          console.log(
+            "startSpeech platform",
+            !this.platform.is("capacitor") && this.platform.is("ios"),
+            this.platform.is("capacitor"),
+            this.platform.is("ios")
+          );
           if (!this.platform.is("capacitor") && this.platform.is("ios")) {
+            console.log("Starting some iOS speech.");
+            const u = new SpeechSynthesisUtterance("Loading speech synthesis.");
+            speechSynthesis.speak(u);
             loading = await this.loadingController.create({
               backdropDismiss: true,
             });
