@@ -24,6 +24,7 @@ async function build(isDev = false): Promise<SSGRefreshMap> {
     buildPage("home", { isDev, isIndex: true }),
     buildPage("psalter", { isDev }),
     buildPage("calendar", { isDev, route: "calendar/bcp", args: ["bcp1979"] }),
+    buildPage("calendar", { isDev, route: "calendar/lff", args: ["lff2018"] }),
     buildPage("calendar-about", {
       isDev,
       route: "calendar/about",
