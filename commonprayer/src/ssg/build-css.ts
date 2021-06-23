@@ -3,7 +3,7 @@ import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 
 async function veniteCSS(): Promise<string> {
   const resp = await fetch(
-    "https://cdn.pika.dev/@venite/html@0.2.4/src/style.css"
+    "https://cdn.pika.dev/@venite/html@0.2.5/src/style.css"
   );
   return resp.text();
 }

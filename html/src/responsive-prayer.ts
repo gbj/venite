@@ -43,12 +43,12 @@ export function responsivePrayerToHTML(
       header,
       `<article ${ldf} class="doc responsive-prayer preces">`,
       ...(doc.value || []).map(
-        (line) =>
+        (line, lineIndex) =>
           `<p class="line ${
             line.optional ? "optional" : ""
-          }"><em class="label">${line.label}</em>\t<span class="text">${
-            line.text
-          }</span></p>`
+          }"><em class="label">${line.label}</em>\t<span class="text${
+            lineIndex % 2 === 1 ? " response" : ""
+          }">${line.text}</span></p>`
       ),
       `</article>`,
     ].join("\n");
@@ -57,8 +57,12 @@ export function responsivePrayerToHTML(
       header,
       `<article ${ldf} class="doc responsive-prayer responsive"><p>`,
       ...(doc.value || []).map(
-        (line) =>
-          `${line.text}<br><strong class="response">${line.response}</strong>`
+        (line, lineIndex) =>
+          `${lineIndex > 0 ? "<br>" : ""}${line.text}${
+            line.response
+              ? `<br><strong class="response">${line.response}</strong>`
+              : ""
+          }`
       ),
       `</p></article>`,
     ].join("\n");
