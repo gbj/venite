@@ -8,7 +8,7 @@ import {
   WebSocket,
 } from "https://deno.land/std@0.98.0/ws/mod.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
-import { v4 } from "https://deno.land/std/uuid/mod.ts";
+import { v4 } from "https://deno.land/std@0.98.0/uuid/mod.ts";
 
 import { debounce } from "./debounce.ts";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
@@ -23,7 +23,7 @@ export async function devServer(
   const initialRefreshMap = await build();
 
   // Launch socket server
-  const clients = reloadServer(socketPort /*reloadGenerator*/);
+  const clients = reloadServer(socketPort);
 
   // Watch for rebuilds
   watchFiles(build, clients, initialRefreshMap);
@@ -63,45 +63,49 @@ async function watchFiles(
         .reduce((acc, curr) => acc && curr, true)
     ) {
       debounce(async () => {
-        if (!rebuilding && event.kind == "modify") {
-          rebuilding = true;
+        try {
+          if (!rebuilding && event.kind == "modify") {
+            rebuilding = true;
 
-          console.log("\n\nRebuilding...\n\n");
+            console.log("\n\nRebuilding...\n\n");
 
-          const rebuildFragments = event.paths.map((path) =>
-            checkMap(refreshMap, path)
-          );
-          // if every fragment has a function to update it, call them all
-          if (!rebuildFragments.includes(undefined)) {
-            await Promise.all(
-              event.paths.map((path) => {
-                console.log("Rebuilding ", path);
-                const f = checkMap(refreshMap, path);
-                if (f) f();
-              })
+            const rebuildFragments = event.paths.map((path) =>
+              checkMap(refreshMap, path)
             );
-          }
-          // otherwise, just rebuild the whole app
-          else {
-            console.log("\n\nRebuilding complete app.\n\n");
-            await build();
-          }
-
-          console.log("\n\nFinished rebuilding.");
-          console.log(
-            "\n\nTelling ",
-            clients.entries.length,
-            "clients to refresh."
-          );
-
-          for (const [, sock] of clients) {
-            try {
-              await sock.send("Refresh");
-            } catch (e) {
-              console.error("Socket error", e);
+            // if every fragment has a function to update it, call them all
+            if (!rebuildFragments.includes(undefined)) {
+              await Promise.all(
+                event.paths.map((path) => {
+                  console.log("Rebuilding ", path);
+                  const f = checkMap(refreshMap, path);
+                  if (f) f();
+                })
+              );
             }
+            // otherwise, just rebuild the whole app
+            else {
+              console.log("\n\nRebuilding complete app.\n\n");
+              await build();
+            }
+
+            console.log("\n\nFinished rebuilding.");
+            console.log(
+              "\n\nTelling ",
+              clients.entries.length,
+              "clients to refresh."
+            );
+
+            for (const [, sock] of clients) {
+              try {
+                await sock.send("Refresh");
+              } catch (e) {
+                console.error("Socket error", e);
+              }
+            }
+            rebuilding = false;
           }
-          rebuilding = false;
+        } catch (e) {
+          console.warn("(watchFiles error)", e);
         }
       }, 50)();
     }
@@ -143,7 +147,11 @@ async function handleDepartures(
     console.log(ev);
     if (isWebSocketCloseEvent(ev)) {
       console.log("\n\nClient", uid, "disconnected");
-      clients.delete(uid);
+      try {
+        clients.delete(uid);
+      } catch (e) {
+        console.warn("(handleDepartures err)", e);
+      }
       return;
     }
   }
