@@ -285,115 +285,77 @@
           "slug": "psalm_121"
         },
         {
-          "data": [
-            {
-              "version_label": null,
-              "slug": "psalm_126",
-              "source": {
-                "api": "https://www.venite.app/api",
-                "citation": "p. 782",
-                "source": "bcp1979"
-              },
-              "version": "bcp1979",
-              "label": "Psalm 126",
-              "type": "psalm",
-              "category": ["Psalm"],
-              "hidden": false,
-              "citation": null,
-              "metadata": {
-                "omit_gloria": false,
-                "latinname": "In convertendo",
-                "number": "126",
-                "omit_antiphon": false,
-                "localname": "Psalm 126"
-              },
-              "style": "psalm",
-              "language": "en",
-              "value": [
-                {
-                  "value": [
-                    {
-                      "halfverse": "then were we like those who dream.",
-                      "number": "1",
-                      "verse": "When the LORD restored the fortunes of Zion, *",
-                      "type": "psalm-verse"
-                    },
-                    {
-                      "number": "2",
-                      "halfverse": "and our tongue with shouts of joy.",
-                      "verse": "Then was our mouth filled with laughter, *",
-                      "type": "psalm-verse"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "halfverse": "“The LORD has done great things for them.”",
-                      "number": "3",
-                      "verse": "Then they said among the nations, *"
-                    },
-                    {
-                      "type": "psalm-verse",
-                      "verse": "The LORD has done great things for us, *",
-                      "number": "4",
-                      "halfverse": "and we are glad indeed."
-                    },
-                    {
-                      "halfverse": "like the watercourses of the Negev.",
-                      "number": "5",
-                      "type": "psalm-verse",
-                      "verse": "Restore our fortunes, O LORD, *"
-                    },
-                    {
-                      "verse": "Those who sowed with tears *",
-                      "type": "psalm-verse",
-                      "number": "6",
-                      "halfverse": "will reap with songs of joy."
-                    },
-                    {
-                      "halfverse": "will come again with joy, shouldering their sheaves.",
-                      "verse": "Those who go out weeping, carrying the seed, *",
-                      "number": "7",
-                      "type": "psalm-verse"
-                    }
-                  ],
-                  "type": "psalm-section"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "status": "published",
-            "collaborators": [],
-            "organization": "venite"
-          },
           "version_label": null,
-          "hidden": false,
-          "label": "Psalm 126",
-          "source": {
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 782"
-          },
           "slug": "psalm_126",
-          "language": "en",
-          "category": ["Psalm"],
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 782",
+            "source": "bcp1979"
+          },
           "version": "bcp1979",
+          "label": "Psalm 126",
+          "type": "psalm",
+          "category": ["Psalm"],
+          "hidden": false,
           "citation": null,
           "metadata": {
-            "omit_antiphon": false,
             "omit_gloria": false,
-            "number": "126",
             "latinname": "In convertendo",
+            "number": "126",
+            "omit_antiphon": false,
             "localname": "Psalm 126"
           },
-          "lookup": {
-            "type": "slug"
-          },
           "style": "psalm",
-          "type": "psalm"
+          "language": "en",
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "then were we like those who dream.",
+                  "number": "1",
+                  "verse": "When the LORD restored the fortunes of Zion, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "number": "2",
+                  "halfverse": "and our tongue with shouts of joy.",
+                  "verse": "Then was our mouth filled with laughter, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "“The LORD has done great things for them.”",
+                  "number": "3",
+                  "verse": "Then they said among the nations, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "The LORD has done great things for us, *",
+                  "number": "4",
+                  "halfverse": "and we are glad indeed."
+                },
+                {
+                  "halfverse": "like the watercourses of the Negev.",
+                  "number": "5",
+                  "type": "psalm-verse",
+                  "verse": "Restore our fortunes, O LORD, *"
+                },
+                {
+                  "verse": "Those who sowed with tears *",
+                  "type": "psalm-verse",
+                  "number": "6",
+                  "halfverse": "will reap with songs of joy."
+                },
+                {
+                  "halfverse": "will come again with joy, shouldering their sheaves.",
+                  "verse": "Those who go out weeping, carrying the seed, *",
+                  "number": "7",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ]
         },
         {
           "condition": {
