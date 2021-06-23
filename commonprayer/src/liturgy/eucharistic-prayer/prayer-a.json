@@ -1,9 +1,9 @@
 {
+  "index": 100,
   "data": [
     {
       "slug": "prayer_a",
       "label": "Prayer A",
-      "lastRevision": 13,
       "language": "en",
       "source": {
         "source": "",
@@ -159,6 +159,13 @@
           },
           "version": "bcp1979",
           "display_format": "unison"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people stand or kneel.",
+            "Then the Celebrant continues"
+          ]
         },
         {
           "version_label": null,

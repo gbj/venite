@@ -1,0 +1,265 @@
+{
+  "index": 200,
+  "data": [
+    {
+      "version": "Rite-II",
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "hidden": false,
+      "type": "liturgy",
+      "category": ["Eucharistic Prayer"],
+      "label": "Prayer B",
+      "language": "en",
+      "value": [
+        {
+          "type": "heading",
+          "metadata": {
+            "level": 3
+          },
+          "value": ["Eucharistic Prayer B"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people remain standing. The Celebrant, whether bishop or priest, faces them and sings or says"
+          ]
+        },
+        {
+          "label": null,
+          "slug": "sursum_corda",
+          "version_label": "BCP (“give him”)",
+          "hidden": false,
+          "citation": null,
+          "style": "preces",
+          "value": [
+            {
+              "text": "The Lord be with you.",
+              "label": ""
+            },
+            {
+              "text": "And also with you.",
+              "label": "People"
+            },
+            {
+              "label": "Celebrant",
+              "text": "Lift up your hearts."
+            },
+            {
+              "label": "People",
+              "text": "We lift them to the Lord."
+            },
+            {
+              "text": "Let us give thanks to the Lord our God.",
+              "label": "Celebrant"
+            },
+            {
+              "label": "People",
+              "text": "It is right to give him thanks and praise."
+            }
+          ],
+          "category": ["sursum_corda"],
+          "version": "bcp1979",
+          "metadata": {
+            "response": null
+          },
+          "type": "responsive",
+          "language": "en"
+        },
+        {
+          "type": "rubric",
+          "value": ["Then, facing the Holy Table, the Celebrant proceeds"]
+        },
+        {
+          "version_label": null,
+          "version": "bcp1979",
+          "slug": "prepreface_a",
+          "type": "text",
+          "value": [
+            "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Father Almighty, Creator of heaven and earth."
+          ],
+          "category": [null],
+          "citation": null,
+          "language": "en",
+          "hidden": false,
+          "style": "text",
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "label": null
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "Here a Proper Preface is sung or said on all Sundays, and on other occasions as appointed."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "lookup": {
+            "type": "category",
+            "filter": "seasonal"
+          },
+          "category": ["Proper Prefaces"],
+          "version": "Rite-II"
+        },
+        {
+          "version_label": null,
+          "version": "bcp1979",
+          "slug": "postpreface_a",
+          "type": "text",
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "style": "text",
+          "hidden": false,
+          "label": null,
+          "citation": null,
+          "category": [null],
+          "language": "en",
+          "value": [
+            "Therefore we praise you, joining our voices with Angels and Archangels and with all the company of heaven, who for ever sing this hymn to proclaim the glory of your Name:"
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": ["Celebrant and People"]
+        },
+        {
+          "version": "bcp1979",
+          "type": "text",
+          "metadata": {
+            "omit_response": true,
+            "response": ""
+          },
+          "style": "text",
+          "language": "en",
+          "slug": "sanctus",
+          "value": [
+            "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+          ],
+          "display_format": "unison"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people stand or kneel.",
+            "Then the Celebrant continues"
+          ]
+        },
+        {
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 368",
+            "source": "bcp1979"
+          },
+          "label": null,
+          "language": "en",
+          "category": [null],
+          "version_label": null,
+          "hidden": false,
+          "type": "text",
+          "citation": null,
+          "value": [
+            "We give thanks to you, O God, for the goodness and love which you have made known to us in creation; in the calling of Israel to be your people; in your Word spoken through the prophets; and above all in the Word made flesh, Jesus, your Son. For in these last days you sent him to be incarnate from the Virgin Mary, to be the Savior and Redeemer of the world. In him, you have delivered us from evil, and made us worthy to stand before you. In him, you have brought us out of error into truth, out of sin into righteousness, out of death into life."
+          ],
+          "version": "bcp1979",
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "style": "text",
+          "slug": "prayer_body_b"
+        },
+        {
+          "label": null,
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+          ],
+          "language": "en",
+          "citation": null,
+          "category": [null],
+          "version_label": null,
+          "slug": "institution_rubric",
+          "version": "bcp1979"
+        },
+        {
+          "label": null,
+          "type": "text",
+          "version": "bcp1979",
+          "style": "text",
+          "slug": "institution_b",
+          "value": [
+            "On the night before he died for us, our Lord Jesus Christ took bread; and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
+            "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”",
+            "Therefore, according to his command, O Father,"
+          ],
+          "category": [null],
+          "hidden": false,
+          "citation": null,
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "language": "en",
+          "version_label": null
+        },
+        {
+          "type": "rubric",
+          "value": ["Celebrant and People"]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "display_format": "unison",
+          "value": [
+            "We remember his death,\nWe proclaim his resurrection,\nWe await his coming in glory;"
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": ["The Celebrant continues"]
+        },
+        {
+          "version_label": null,
+          "type": "text",
+          "citation": null,
+          "category": [null],
+          "slug": "prayer_conclusion_b",
+          "metadata": {
+            "response": "AMEN.",
+            "omit_response": false
+          },
+          "value": [
+            "And we offer our sacrifice of praise and thanksgiving to you, O Lord of all; presenting to you, from your creation, this bread and this wine.",
+            "We pray you, gracious God, to send your Holy Spirit upon these gifts that they may be the Sacrament of the Body of Christ and his Blood of the new Covenant. Unite us to your Son in his sacrifice, that we may be acceptable through him, being sanctified by the Holy Spirit. In the fullness of time, put all things in subjection under your Christ, and bring us to that heavenly country where, with [____________ and] all your saints, we may enter the everlasting heritage of your sons and daughters; through Jesus Christ our Lord, the firstborn of all creation, the head of the Church, and the author of our salvation.",
+            "By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever."
+          ],
+          "version": "bcp1979",
+          "label": null,
+          "style": "text",
+          "hidden": false,
+          "language": "en"
+        }
+      ],
+      "slug": "prayer_b",
+      "metadata": {
+        "evening": false,
+        "supplement": true,
+        "liturgyversions": ["bcp1979"]
+      }
+    }
+  ]
+}

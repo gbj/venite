@@ -1,0 +1,256 @@
+{
+  "data": [
+    {
+      "type": "liturgy",
+      "label": "Prayer C",
+      "language": "en",
+      "version": "Rite-II",
+      "lastRevision": 9,
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "category": ["Eucharistic Prayer"],
+      "metadata": {
+        "evening": false,
+        "liturgyversions": [],
+        "supplement": true
+      },
+      "hidden": false,
+      "value": [
+        {
+          "type": "heading",
+          "metadata": {
+            "level": 3
+          },
+          "value": ["Eucharistic Prayer C"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "In this prayer, the lines in italics are spoken by the People.",
+            "The Celebrant, whether bishop or priest, faces them and sings or says"
+          ]
+        },
+        {
+          "metadata": {
+            "response": null
+          },
+          "version_label": "BCP (“give him”)",
+          "slug": "sursum_corda",
+          "citation": null,
+          "style": "litany",
+          "value": [
+            {
+              "text": "The Lord be with you.",
+              "response": "And also with you."
+            },
+            {
+              "text": "Lift up your hearts.",
+              "response": "We lift them to the Lord."
+            },
+            {
+              "text": "Let us give thanks to the Lord our God.",
+              "response": "It is right to give him thanks and praise."
+            }
+          ],
+          "category": ["sursum_corda"],
+          "language": "en",
+          "hidden": false,
+          "version": "bcp1979",
+          "type": "responsive",
+          "label": null
+        },
+        {
+          "type": "rubric",
+          "value": ["Then, facing the Holy Table, the Celebrant proceeds"]
+        },
+        {
+          "slug": "preface_c",
+          "citation": null,
+          "type": "responsive",
+          "value": [
+            {
+              "text": "God of all power, Ruler of the Universe, you are worthy of glory and praise.",
+              "response": "Glory to you for ever and ever.",
+              "optional": false
+            },
+            {
+              "text": "At your command all things came to be: the vast expanse of interstellar space, galaxies, suns, the planets in their courses, and this fragile earth, our island home.",
+              "response": "By your will they were created and have their being.",
+              "optional": false
+            },
+            {
+              "text": "From the primal elements you brought forth the human race, and blessed us with memory, reason, and skill. You made us the rulers of creation. But we turned against you, and betrayed your trust; and we turned against one another.",
+              "response": " Have mercy, Lord, for we are sinners in your sight.",
+              "optional": false
+            },
+            {
+              "response": "By his blood, he reconciled us.\nBy his wounds, we are healed.",
+              "text": "Again and again, you called us to return. Through prophets and sages you revealed your righteous Law. And in the fullness of time you sent your only Son, born of a woman, to fulfill your Law, to open for us the way of freedom and peace.",
+              "optional": false
+            }
+          ],
+          "version_label": null,
+          "version": "bcp1979",
+          "category": [null],
+          "style": "litany",
+          "label": null,
+          "hidden": false,
+          "metadata": {
+            "response": null
+          },
+          "language": "en"
+        },
+        {
+          "language": "en",
+          "slug": "postpreface_c",
+          "category": [null],
+          "citation": null,
+          "version_label": null,
+          "version": "bcp1979",
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "hidden": false,
+          "label": null,
+          "style": "text",
+          "value": [
+            "And therefore we praise you, joining with the heavenly chorus, with prophets, apostles, and martyrs, and with all those in every generation who have looked to you in hope, to proclaim with them your glory, in their unending hymn:"
+          ],
+          "type": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["Celebrant and People"]
+        },
+        {
+          "version_label": null,
+          "metadata": {
+            "response": "",
+            "omit_response": true
+          },
+          "value": [
+            "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+          ],
+          "citation": null,
+          "label": null,
+          "type": "text",
+          "hidden": false,
+          "language": "en",
+          "category": [""],
+          "slug": "sanctus",
+          "style": "text",
+          "version": "bcp1979",
+          "display_format": "unison"
+        },
+        {
+          "type": "rubric",
+          "value": ["The Celebrant continues"]
+        },
+        {
+          "type": "text",
+          "value": [
+            "And so, Father, we who have been redeemed by him, and made a new people by water and the Spirit, now bring before you these gifts. Sanctify them by your Holy Spirit to be the Body and Blood of Jesus Christ our Lord."
+          ],
+          "version_label": null,
+          "citation": null,
+          "version": "bcp1979",
+          "language": "en",
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "slug": "epiclesis_c",
+          "hidden": false,
+          "category": [null],
+          "label": null,
+          "style": "text"
+        },
+        {
+          "version_label": null,
+          "category": [null],
+          "type": "rubric",
+          "citation": null,
+          "version": "bcp1979",
+          "language": "en",
+          "value": [
+            "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+          ],
+          "label": null,
+          "hidden": false,
+          "slug": "institution_rubric"
+        },
+        {
+          "style": "text",
+          "category": [null],
+          "version": "bcp1979",
+          "hidden": false,
+          "language": "en",
+          "slug": "institution_c",
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "value": [
+            "On the night he was betrayed he took bread, said the blessing, broke the bread, and gave it to his friends, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
+            "After supper, he took the cup of wine, gave thanks, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+          ],
+          "citation": null,
+          "label": null,
+          "type": "text",
+          "version_label": null
+        },
+        {
+          "citation": null,
+          "value": [
+            {
+              "optional": false,
+              "text": "Remembering now his work of redemption, and offering to you this sacrifice of thanksgiving,",
+              "response": "We celebrate his death and resurrection,\nas we await the day of his coming."
+            },
+            {
+              "response": "Risen Lord, be known to us in the breaking of the Bread.",
+              "text": "Lord God of our Fathers: God of Abraham, Isaac, and Jacob; God and Father of our Lord Jesus Christ: Open our eyes to see your hand at work in the world about us. Deliver us from the presumption of coming to this Table for solace only, and not for strength; for pardon only, and not for renewal. Let the grace of this Holy Communion make us one body, one spirit in Christ, that we may worthily serve the world in his name.",
+              "optional": false
+            }
+          ],
+          "version": "bcp1979",
+          "hidden": false,
+          "style": "litany",
+          "label": null,
+          "type": "responsive",
+          "metadata": {
+            "response": null
+          },
+          "category": [null],
+          "language": "en",
+          "slug": "acclamation_c",
+          "version_label": null
+        },
+        {
+          "category": [null],
+          "version_label": null,
+          "type": "text",
+          "language": "en",
+          "version": "bcp1979",
+          "metadata": {
+            "response": "AMEN.",
+            "omit_response": false
+          },
+          "value": [
+            "Accept these prayers and praises, Father, through Jesus Christ our great High Priest, to whom, with you and the Holy Spirit, your Church gives honor, glory, and worship, from generation to generation."
+          ],
+          "citation": null,
+          "style": "text",
+          "label": null,
+          "hidden": false,
+          "slug": "prayer_conclusion_c"
+        }
+      ],
+      "slug": "prayer_c"
+    }
+  ]
+}
