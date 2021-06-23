@@ -32,10 +32,20 @@ export async function buildDoc(
       data = JSON.parse(json),
       docs = data.data ? data.data : [data],
       main = Promise.resolve(
-        `<main><div class="cp-doc" data-category="${subpath}" data-slug="${slug}">${docs.map(
+        `<main>
+          ${
+            data.source?.url
+              ? `<a class="source" href="${data.source?.url}" target="_blank">
+                  <span class="label">Source</span>
+                  ${data.source?.label || "Source"}
+                </a>`
+              : ""
+          }
+          <div class="cp-doc" data-category="${subpath}" data-slug="${slug}">${docs.map(
           (doc: LiturgicalDocument) =>
             ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
-        )}</div></main>`
+        )}</div>
+        </main>`
       ),
       html = await Index({ main }, isDev);
 

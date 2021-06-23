@@ -1,5 +1,9 @@
 {
   "index": 300,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=369",
+    "label": "BCP p. 369"
+  },
   "data": [
     {
       "type": "liturgy",

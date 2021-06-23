@@ -1,5 +1,9 @@
 {
   "index": 100,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=361",
+    "label": "BCP p. 361"
+  },
   "data": [
     {
       "slug": "prayer_a",
@@ -12,13 +16,6 @@
       },
       "category": ["Eucharistic Prayer"],
       "value": [
-        {
-          "type": "heading",
-          "metadata": {
-            "level": 2
-          },
-          "value": ["The Great Thanksgiving"]
-        },
         {
           "type": "heading",
           "metadata": {
