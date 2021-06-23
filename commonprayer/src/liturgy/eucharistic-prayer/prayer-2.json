@@ -1,0 +1,241 @@
+{
+  "index": 50,
+  "data": [
+    {
+      "type": "liturgy",
+      "category": ["Eucharistic Prayer"],
+      "label": "Prayer 2",
+      "metadata": {
+        "evening": false,
+        "liturgyversions": ["rite_i"],
+        "supplement": true
+      },
+      "version": "Rite-I",
+      "language": "en",
+      "slug": "prayer_2",
+      "value": [
+        {
+          "type": "heading",
+          "metadata": {
+            "level": 3
+          },
+          "value": ["Eucharistic Prayer 2"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people remain standing. The Celebrant, whether bishop or priest, faces them and sings or says"
+          ]
+        },
+        {
+          "hidden": false,
+          "version": "rite_i",
+          "style": "preces",
+          "category": ["sursum_corda"],
+          "type": "responsive",
+          "version_label": "",
+          "label": null,
+          "language": "en",
+          "slug": "sursum_corda",
+          "metadata": {
+            "response": null
+          },
+          "value": [
+            {
+              "label": "",
+              "text": "The Lord be with you."
+            },
+            {
+              "label": "People",
+              "text": "And with thy spirit."
+            },
+            {
+              "label": "Celebrant",
+              "text": "Lift up your hearts."
+            },
+            {
+              "label": "People",
+              "text": "We lift them up unto the Lord."
+            },
+            {
+              "text": "Let us give thanks unto our Lord God.",
+              "label": "Celebrant"
+            },
+            {
+              "label": "People",
+              "text": "It is meet and right so to do."
+            }
+          ],
+          "citation": null
+        },
+        {
+          "type": "rubric",
+          "value": ["Then, facing the Holy Table, the Celebrant proceeds"]
+        },
+        {
+          "hidden": false,
+          "style": "text",
+          "citation": null,
+          "category": [null],
+          "language": "en",
+          "version_label": null,
+          "version": "rite_i",
+          "label": null,
+          "slug": "prepreface",
+          "value": [
+            "It is very meet, right, and our bounden duty, that we should at all times, and in all places, give thanks unto thee, O Lord, holy Father, almighty, everlasting God."
+          ],
+          "type": "text",
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          }
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "Here a Proper Preface is sung or said on all Sundays, and on other occasions as appointed."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "lookup": {
+            "type": "category",
+            "filter": "seasonal"
+          },
+          "category": ["Proper Prefaces"],
+          "version": "Rite-I"
+        },
+        {
+          "value": [
+            "Therefore with Angels and Archangels, and with all the company of heaven, we laud and magnify thy glorious Name; evermore praising thee, and saying,"
+          ],
+          "style": "text",
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "value": ["Celebrant and People"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "value": [
+            "Holy, holy, holy, Lord God of Hosts:\nHeaven and earth are full of thy Glory.\nGlory be to thee, O Lord Most High."
+          ],
+          "hidden": false,
+          "type": "text",
+          "source": {
+            "api": "",
+            "source": "",
+            "citation": ""
+          },
+          "display_format": "unison",
+          "version_label": "Sanctus only",
+          "style": "text",
+          "category": [],
+          "metadata": {
+            "rollup": false,
+            "omit_response": false
+          }
+        },
+        {
+          "value": ["Here may be added"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "category": [],
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "metadata": {
+            "omit_response": false,
+            "rollup": false
+          },
+          "style": "text",
+          "display_format": "unison",
+          "value": [
+            "Blessed is he that cometh in the name of the Lord.\nHosanna in the highest."
+          ],
+          "hidden": false,
+          "version_label": "Sanctus & Benedictus",
+          "type": "text"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The people kneel or stand.",
+            "Then the Celebrant continues"
+          ]
+        },
+        {
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "slug": "prayer_body_2",
+          "style": "text",
+          "hidden": false,
+          "language": "en",
+          "category": [null],
+          "type": "text",
+          "version_label": null,
+          "label": null,
+          "version": "rite_i",
+          "citation": null,
+          "value": [
+            "All glory be to thee, O Lord our God, for that thou didst create heaven and earth, and didst make us in thine own image; and, of thy tender mercy, didst give thine only Son Jesus Christ to take our nature upon him, and to suffer death upon the cross for our redemption. He made there a full and perfect sacrifice for the whole world; and did institute, and in his holy Gospel command us to continue, a perpetual memory of that his precious death and sacrifice, until his coming again. "
+          ]
+        },
+        {
+          "citation": null,
+          "category": [null],
+          "slug": "institution_rubric",
+          "version": "rite_i",
+          "type": "rubric",
+          "value": [
+            "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+          ],
+          "hidden": false,
+          "language": "en",
+          "version_label": null,
+          "label": null
+        },
+        {
+          "slug": "institution_and_prayer_2",
+          "label": null,
+          "language": "en",
+          "version": "rite_i",
+          "citation": null,
+          "metadata": {
+            "omit_response": false,
+            "response": "AMEN."
+          },
+          "type": "text",
+          "hidden": false,
+          "category": [null],
+          "value": [
+            "For in the night in which he was betrayed, he took bread; and when he had given thanks, he broke it, and gave it to his disciples, saying, “Take, eat, this is my Body, which is given for you. Do this in remembrance of me.”",
+            "Likewise, after supper, he took the cup; and when he had given thanks, he gave it to them, saying, “Drink this, all of\nyou; for this is my Blood of the New Covenant, which is shed\nfor you, and for many, for the remission of sins. Do this, as\noft as ye shall drink it, in remembrance of me.”",
+            "Wherefore, O Lord and heavenly Father, we thy people do celebrate and make, with these thy holy gifts which we now offer unto thee, the memorial thy Son hath commanded us to make; having in remembrance his blessed passion and precious death, his mighty resurrection and glorious ascension; and looking for his coming again with power and great glory.",
+            "And we most humbly beseech thee, O merciful Father, to hear us, and, with thy Word and Holy Spirit, to bless and sanctify these gifts of bread and wine, that they may be unto us the Body and Blood of thy dearly-beloved Son Jesus Christ.",
+            "And we earnestly desire thy fatherly goodness to accept this our sacrifice of praise and thanksgiving, whereby we offer and present unto thee, O Lord, our selves, our souls and bodies. Grant, we beseech thee, that all who partake of this Holy Communion may worthily receive the most precious Body and Blood of thy Son Jesus Christ, and be filled with thy grace and heavenly benediction; and also that we and all thy whole Church may be made one body with him, that he  may dwell in us, and we in him; through the same Jesus Christ our Lord;",
+            "By whom, and with whom, and in whom, in the unity of the Holy Ghost all honor and glory be unto thee, O Father Almighty, world without end."
+          ],
+          "version_label": null,
+          "style": "text"
+        }
+      ]
+    }
+  ]
+}

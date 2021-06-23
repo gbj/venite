@@ -1,0 +1,255 @@
+{
+  "index": 400,
+  "data": [
+    {
+      "label": "Prayer D",
+      "type": "liturgy",
+      "slug": "prayer_d",
+      "version": "Rite-II",
+      "metadata": {
+        "liturgyversions": [],
+        "supplement": true,
+        "evening": false
+      },
+      "language": "en",
+      "category": ["Eucharistic Prayer"],
+      "value": [
+        {
+          "type": "heading",
+          "metadata": {
+            "level": 3
+          },
+          "value": ["Eucharistic Prayer D"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people remain standing. The Celebrant, whether bishop or priest, faces them and sings or says"
+          ]
+        },
+        {
+          "label": null,
+          "style": "preces",
+          "version": "bcp1979",
+          "value": [
+            {
+              "text": "The Lord be with you.",
+              "label": ""
+            },
+            {
+              "label": "People",
+              "text": "And also with you."
+            },
+            {
+              "text": "Lift up your hearts.",
+              "label": "Celebrant"
+            },
+            {
+              "label": "People",
+              "text": "We lift them to the Lord."
+            },
+            {
+              "text": "Let us give thanks to the Lord our God.",
+              "label": "Celebrant"
+            },
+            {
+              "text": "It is right to give him thanks and praise.",
+              "label": "People"
+            }
+          ],
+          "slug": "sursum_corda",
+          "citation": null,
+          "hidden": false,
+          "category": ["sursum_corda"],
+          "type": "responsive",
+          "language": "en",
+          "metadata": {
+            "response": null
+          },
+          "version_label": "BCP (“give him”)"
+        },
+        {
+          "type": "rubric",
+          "value": ["Then, facing the Holy Table, the Celebrant proceeds"]
+        },
+        {
+          "hidden": false,
+          "version_label": null,
+          "source": {
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api",
+            "citation": "p. 373"
+          },
+          "metadata": {
+            "omit_response": true,
+            "response": null
+          },
+          "category": [null],
+          "label": null,
+          "value": [
+            "It is truly right to glorify you, Father, and to give you thanks; for you alone are God, living and true, dwelling in light inaccessible from before time and for ever.",
+            "Fountain of life and source of all goodness, you made all things and fill them with your blessing; you created them to rejoice in the splendor of your radiance.",
+            "Countless throngs of angels stand before you to serve you night and day; and, beholding the glory of your presence, they offer you unceasing praise. Joining with them, and giving voice to every creature under heaven, we acclaim you, and glorify your Name, as we sing (say),"
+          ],
+          "citation": null,
+          "slug": "preface_d",
+          "style": "text",
+          "version": "bcp1979",
+          "type": "text",
+          "language": "en"
+        },
+        {
+          "type": "rubric",
+          "value": ["Celebrant and People"]
+        },
+        {
+          "category": [""],
+          "language": "en",
+          "slug": "sanctus",
+          "style": "text",
+          "version_label": null,
+          "type": "text",
+          "metadata": {
+            "response": "",
+            "omit_response": true
+          },
+          "version": "bcp1979",
+          "value": [
+            "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+          ],
+          "display_format": "unison"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people stand or kneel.",
+            "Then the Celebrant continues"
+          ]
+        },
+        {
+          "hidden": false,
+          "style": "text",
+          "type": "text",
+          "version": "bcp1979",
+          "version_label": null,
+          "category": [null],
+          "citation": null,
+          "language": "en",
+          "slug": "postpreface_d",
+          "value": [
+            "We acclaim you, holy Lord, glorious in power. Your mighty works reveal your wisdom and love. You formed us in your own image, giving the whole world into our care, so that, in obedience to you, our Creator, we might rule and serve all your creatures. When our disobedience took us far from you, you did not abandon us to the power of death. In your mercy you came to our help, so that in seeking you we might find you. Again and again you called us into covenant with you, and through the prophets you taught us to hope for salvation. ",
+            "Father, you loved the world so much that in the fullness of time you sent your only Son to be our Savior. Incarnate by the Holy Spirit, born of the Virgin Mary, he lived as one of us, yet without sin. To the poor he proclaimed the good news of salvation; to prisoners, freedom; to the sorrowful, joy. To fulfill your purpose he gave himself up to death; and, rising from the grave, destroyed death, and made the whole creation new.",
+            "And, that we might live no longer for ourselves, but for him who died and rose for us, he sent the Holy Spirit, his own first gift for those who believe, to complete his work in the world, and to bring to fulfillment the sanctification of all."
+          ],
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "label": null
+        },
+        {
+          "category": [null],
+          "value": [
+            "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+          ],
+          "label": null,
+          "citation": null,
+          "language": "en",
+          "hidden": false,
+          "slug": "institution_rubric",
+          "type": "rubric",
+          "version": "bcp1979",
+          "version_label": null
+        },
+        {
+          "language": "en",
+          "value": [
+            "When the hour had come for him to be glorified by you, his heavenly Father, having loved his own who were in the world, he loved them to the end; at supper with them he took bread, and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”\n\n",
+            "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+          ],
+          "hidden": false,
+          "type": "text",
+          "slug": "institution_d",
+          "version_label": null,
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "style": "text",
+          "category": [null],
+          "label": null,
+          "version": "bcp1979",
+          "citation": null
+        },
+        {
+          "hidden": false,
+          "style": "litany",
+          "version_label": null,
+          "type": "responsive",
+          "slug": "acclamation_d",
+          "citation": null,
+          "language": "en",
+          "metadata": {
+            "response": null
+          },
+          "value": [
+            {
+              "text": "Father, we now celebrate this memorial of our redemption. Recalling Christ's death and his descent among the dead, proclaiming his resurrection and ascension to your right hand, awaiting his coming in glory; and offering to you, from the gifts you have given us, this bread and this cup, we praise you and we bless you.",
+              "optional": false,
+              "response": "We praise you, we bless you,\nwe give thanks to you,\nand we pray to you, Lord our God."
+            }
+          ],
+          "version": "bcp1979",
+          "category": [null],
+          "label": null
+        },
+        {
+          "type": "rubric",
+          "value": ["The Celebrant continues"]
+        },
+        {
+          "label": null,
+          "metadata": {
+            "response": null,
+            "omit_response": true
+          },
+          "type": "text",
+          "style": "text",
+          "value": [
+            "Lord, we pray that in your goodness and mercy your Holy Spirit may descend upon us, and upon these gifts, sanctifying them and showing them to be holy gifts for your holy people, the bread of life and the cup of salvation, the Body and Blood of your Son Jesus Christ.",
+            "Grant that all who share this bread and cup may become one body and one spirit, a living sacrifice in Christ, to the praise of your Name.",
+            "Remember, Lord, your one holy catholic and apostolic Church, redeemed by the blood of your Christ. Reveal its unity, guard its faith, and preserve it in peace.",
+            "[Remember (NN. and) all who minister in your Church.]\n[Remember all your people, and those who seek your truth.]\n[Remember  ____________.]\n[Remember all who have died in the peace of Christ, and those whose faith is known to you alone; bring them into the place of eternal joy and light.]",
+            "And grant that we may find our inheritance with [the Blessed Virgin Mary, with patriarchs, prophets, apostles, and martyrs, (with ____________) and] all the saints who have found favor with you in ages past. We praise you in union with them and give you glory through your Son Jesus Christ our Lord."
+          ],
+          "citation": null,
+          "language": "en",
+          "version": "bcp1979",
+          "hidden": false,
+          "version_label": null,
+          "category": [null],
+          "slug": "intercessions_d"
+        },
+        {
+          "category": [null],
+          "label": null,
+          "version_label": null,
+          "language": "en",
+          "type": "text",
+          "slug": "prayer_conclusion_d",
+          "style": "text",
+          "value": [
+            "Through Christ, and with Christ, and in Christ, all honor and glory are yours, Almighty God and Father, in the unity of the Holy Spirit, for ever and ever."
+          ],
+          "version": "bcp1979",
+          "metadata": {
+            "response": "AMEN.",
+            "omit_response": false
+          },
+          "hidden": false,
+          "citation": null
+        }
+      ]
+    }
+  ]
+}
