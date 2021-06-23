@@ -13,10 +13,7 @@
       "api": "",
       "citation": ""
     },
-    "category": [
-      null,
-      "Eucharistic Prayer"
-    ],
+    "category": [null, "Eucharistic Prayer"],
     "sharing": {
       "status": "published",
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -30,9 +27,7 @@
         "value": [
           {
             "version": "bcp1979",
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "style": "preces",
             "metadata": {
               "response": null
@@ -109,15 +104,11 @@
             "version": "eow",
             "label": null,
             "version_label": "EOW (“give our”)",
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "type": "responsive"
           },
           {
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "label": null,
             "slug": "sursum_corda",
             "citation": null,
@@ -166,9 +157,7 @@
             },
             "type": "responsive",
             "hidden": false,
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "value": [
               {
                 "text": "God be with you.",
@@ -217,9 +206,7 @@
             "label": null,
             "style": "text",
             "type": "text",
-            "category": [
-              null
-            ],
+            "category": [null],
             "version_label": null,
             "version": "bcp1979",
             "metadata": {
@@ -231,9 +218,7 @@
           },
           {
             "version_label": "Expansive",
-            "category": [
-              null
-            ],
+            "category": [null],
             "version": "eow",
             "hidden": false,
             "citation": null,
@@ -275,9 +260,7 @@
         "label": null,
         "language": "en",
         "citation": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "value": [
           "Therefore we praise you, joining our voices with Angels and Archangels and with all the company of heaven, who for ever sing this hymn to proclaim the glory of your Name:"
         ],
@@ -296,9 +279,7 @@
         "value": [
           {
             "citation": null,
-            "category": [
-              ""
-            ],
+            "category": [""],
             "version_label": null,
             "type": "text",
             "style": "text",
@@ -325,9 +306,7 @@
             "style": "text",
             "citation": null,
             "language": "en",
-            "category": [
-              ""
-            ],
+            "category": [""],
             "label": null,
             "type": "text",
             "value": [
@@ -359,9 +338,7 @@
               "source": "bcp1979",
               "api": "https://www.venite.app/api"
             },
-            "category": [
-              null
-            ],
+            "category": [null],
             "style": "text",
             "metadata": {
               "omit_response": true,
@@ -395,9 +372,7 @@
               "Jesus stretched out his arms upon the cross, and offered himself, in obedience to your will, a perfect sacrifice for the whole world."
             ],
             "label": null,
-            "category": [
-              null
-            ],
+            "category": [null],
             "source": {
               "source": "bcp1979",
               "api": "https://www.venite.app/api",
@@ -415,9 +390,7 @@
           "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
         ],
         "type": "rubric",
-        "category": [
-          null
-        ],
+        "category": [null],
         "language": "en",
         "citation": null,
         "slug": "institution_rubric"
@@ -442,9 +415,7 @@
             ],
             "type": "text",
             "style": "text",
-            "category": [
-              null
-            ],
+            "category": [null],
             "label": null,
             "slug": "institution",
             "citation": null,
@@ -463,9 +434,7 @@
             "label": null,
             "type": "text",
             "hidden": false,
-            "category": [
-              null
-            ],
+            "category": [null],
             "value": [
               "On the night before he died for us, \nOur Savior Jesus Christ took bread, \nand when he had given thanks to you, \nhe broke it, and gave it to his friends, and said: \n“Take, eat: \nThis is my Body which is given for you. \nDo this for the remembrance of me.”",
               "As supper was ending, Jesus took the cup of wine, \nand when he had given thanks, \nhe gave it to them, and said: \n“Drink this, all of you: \nThis is my Blood of the new Covenant, \nwhich is poured out for you and for all \nfor the forgiveness of sins. \nWhenever you drink it, \ndo this for the remembrance of me.”"
@@ -494,9 +463,7 @@
         "type": "responsive",
         "version": "bcp1979",
         "language": "en",
-        "category": [
-          null
-        ],
+        "category": [null],
         "version_label": null
       },
       {
@@ -505,16 +472,14 @@
         "style": "text",
         "value": [
           "We celebrate the memorial of our redemption, O Father, in this sacrifice of praise and thanksgiving. Recalling his death, resurrection, and ascension, we offer you these gifts.",
-          " Sanctify them by your Holy Spirit to be for your people the Body and Blood of your Son, the holy food and drink of new and unending life in him. Sanctify us also that we may faithfully receive this holy Sacrament, and serve you in unity, constancy, and peace; and at the last day bring us with all your saints into the joy of your eternal kingdom.",
+          "Sanctify them by your Holy Spirit to be for your people the Body and Blood of your Son, the holy food and drink of new and unending life in him. Sanctify us also that we may faithfully receive this holy Sacrament, and serve you in unity, constancy, and peace; and at the last day bring us with all your saints into the joy of your eternal kingdom.",
           "All this we ask through your Son Jesus Christ: By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever. "
         ],
         "language": "en",
         "hidden": false,
         "citation": null,
         "version": "bcp1979",
-        "category": [
-          null
-        ],
+        "category": [null],
         "type": "text",
         "version_label": null,
         "metadata": {
@@ -524,9 +489,7 @@
       }
     ],
     "metadata": {
-      "liturgyversions": [
-        "bcp1979"
-      ],
+      "liturgyversions": ["bcp1979"],
       "supplement": true,
       "evening": false
     },
@@ -543,10 +506,7 @@
     },
     "hidden": false,
     "type": "liturgy",
-    "category": [
-      null,
-      "Eucharistic Prayer"
-    ],
+    "category": [null, "Eucharistic Prayer"],
     "label": "Prayer B",
     "sharing": {
       "status": "published",
@@ -572,9 +532,7 @@
             "metadata": {
               "response": null
             },
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "slug": "sursum_corda_god",
             "value": [
               {
@@ -613,9 +571,7 @@
             "version_label": "EOW (“give our”)",
             "citation": null,
             "slug": "sursum_corda_our",
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "type": "responsive",
             "label": null,
             "value": [
@@ -679,9 +635,7 @@
                 "text": "It is right to give him thanks and praise."
               }
             ],
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "version": "bcp1979",
             "metadata": {
               "response": null
@@ -693,9 +647,7 @@
             "type": "responsive",
             "version_label": "Expansive (“God be with you.”)",
             "citation": null,
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "language": "en",
             "value": [
               {
@@ -748,9 +700,7 @@
             "value": [
               "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Father Almighty, Creator of heaven and earth."
             ],
-            "category": [
-              null
-            ],
+            "category": [null],
             "citation": null,
             "language": "en",
             "hidden": false,
@@ -776,9 +726,7 @@
               "response": null,
               "omit_response": true
             },
-            "category": [
-              null
-            ],
+            "category": [null],
             "style": "text",
             "hidden": false
           }
@@ -816,9 +764,7 @@
         "hidden": false,
         "label": null,
         "citation": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "language": "en",
         "value": [
           "Therefore we praise you, joining our voices with Angels and Archangels and with all the company of heaven, who for ever sing this hymn to proclaim the glory of your Name:"
@@ -847,9 +793,7 @@
               "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
             ],
             "citation": null,
-            "category": [
-              ""
-            ]
+            "category": [""]
           },
           {
             "type": "text",
@@ -867,9 +811,7 @@
             },
             "hidden": false,
             "citation": null,
-            "category": [
-              ""
-            ],
+            "category": [""],
             "style": "text"
           }
         ],
@@ -883,9 +825,7 @@
         },
         "label": null,
         "language": "en",
-        "category": [
-          null
-        ],
+        "category": [null],
         "version_label": null,
         "hidden": false,
         "type": "text",
@@ -910,9 +850,7 @@
         ],
         "language": "en",
         "citation": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "version_label": null,
         "slug": "institution_rubric",
         "version": "bcp1979"
@@ -927,9 +865,7 @@
           "On the night before he died for us, our Lord Jesus Christ took bread; and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
           "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
         ],
-        "category": [
-          null
-        ],
+        "category": [null],
         "hidden": false,
         "citation": null,
         "metadata": {
@@ -956,9 +892,7 @@
         },
         "type": "responsive",
         "citation": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "source": {
           "source": "bcp1979",
           "citation": "p. 368",
@@ -972,18 +906,16 @@
         "version_label": null,
         "type": "text",
         "citation": null,
-        "category": [
-          null
-        ],
-        "slug": "prayer_conclusion_a",
+        "category": [null],
+        "slug": "prayer_conclusion_b",
         "metadata": {
           "response": "AMEN.",
           "omit_response": false
         },
         "value": [
-          "We celebrate the memorial of our redemption, O Father, in this sacrifice of praise and thanksgiving. Recalling his death, resurrection, and ascension, we offer you these gifts.",
-          " Sanctify them by your Holy Spirit to be for your people the Body and Blood of your Son, the holy food and drink of new and unending life in him. Sanctify us also that we may faithfully receive this holy Sacrament, and serve you in unity, constancy, and peace; and at the last day bring us with all your saints into the joy of your eternal kingdom.",
-          "All this we ask through your Son Jesus Christ: By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever. "
+          "And we offer our sacrifice of praise and thanksgiving to you, O Lord of all; presenting to you, from your creation, this bread and this wine.",
+          "We pray you, gracious God, to send your Holy Spirit upon these gifts that they may be the Sacrament of the Body of Christ and his Blood of the new Covenant. Unite us to your Son in his sacrifice, that we may be acceptable through him, being sanctified by the Holy Spirit. In the fullness of time, put all things in subjection under your Christ, and bring us to that heavenly country where, with [____________ and] all your saints, we may enter the everlasting heritage of your sons and daughters; through Jesus Christ our Lord, the firstborn of all creation, the head of the Church, and the author of our salvation.",
+          "By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever."
         ],
         "version": "bcp1979",
         "label": null,
@@ -1000,9 +932,7 @@
     "metadata": {
       "evening": false,
       "supplement": true,
-      "liturgyversions": [
-        "bcp1979"
-      ]
+      "liturgyversions": ["bcp1979"]
     },
     "lastRevision": 19
   },
@@ -1024,10 +954,7 @@
       "citation": "",
       "api": ""
     },
-    "category": [
-      null,
-      "Eucharistic Prayer"
-    ],
+    "category": [null, "Eucharistic Prayer"],
     "metadata": {
       "evening": false,
       "liturgyversions": [],
@@ -1081,9 +1008,7 @@
             "hidden": false,
             "version_label": "BCP (“give God”)",
             "citation": null,
-            "category": [
-              "sursum_corda"
-            ]
+            "category": ["sursum_corda"]
           },
           {
             "version": "eow",
@@ -1120,9 +1045,7 @@
             "metadata": {
               "response": null
             },
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "type": "responsive",
             "hidden": false,
             "slug": "sursum_corda_our",
@@ -1162,9 +1085,7 @@
                 "label": "People"
               }
             ],
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "language": "en",
             "hidden": false,
             "version": "bcp1979",
@@ -1202,9 +1123,7 @@
             "language": "en",
             "slug": "sursum_corda_expansive",
             "hidden": false,
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "metadata": {
               "response": null
             },
@@ -1249,9 +1168,7 @@
         ],
         "version_label": null,
         "version": "bcp1979",
-        "category": [
-          null
-        ],
+        "category": [null],
         "style": "litany",
         "label": null,
         "hidden": false,
@@ -1263,9 +1180,7 @@
       {
         "language": "en",
         "slug": "postpreface_c",
-        "category": [
-          null
-        ],
+        "category": [null],
         "citation": null,
         "version_label": null,
         "version": "bcp1979",
@@ -1301,9 +1216,7 @@
             "type": "text",
             "hidden": false,
             "language": "en",
-            "category": [
-              ""
-            ],
+            "category": [""],
             "slug": "sanctus",
             "style": "text",
             "version": "bcp1979"
@@ -1318,9 +1231,7 @@
             },
             "style": "text",
             "version": "eow",
-            "category": [
-              ""
-            ],
+            "category": [""],
             "value": [
               "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is the one who comes in the name of the Lord.\n    Hosanna in the highest."
             ],
@@ -1347,17 +1258,13 @@
         },
         "slug": "epiclesis_c",
         "hidden": false,
-        "category": [
-          null
-        ],
+        "category": [null],
         "label": null,
         "style": "text"
       },
       {
         "version_label": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "type": "rubric",
         "citation": null,
         "version": "bcp1979",
@@ -1371,9 +1278,7 @@
       },
       {
         "style": "text",
-        "category": [
-          null
-        ],
+        "category": [null],
         "version": "bcp1979",
         "hidden": false,
         "language": "en",
@@ -1413,17 +1318,13 @@
         "metadata": {
           "response": null
         },
-        "category": [
-          null
-        ],
+        "category": [null],
         "language": "en",
         "slug": "acclamation_c",
         "version_label": null
       },
       {
-        "category": [
-          null
-        ],
+        "category": [null],
         "version_label": null,
         "type": "text",
         "language": "en",
@@ -1471,19 +1372,14 @@
       "evening": false
     },
     "language": "en",
-    "category": [
-      null,
-      "Eucharistic Prayer"
-    ],
+    "category": [null, "Eucharistic Prayer"],
     "value": [
       {
         "value": [
           {
             "type": "responsive",
             "version": "bcp1979",
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "hidden": false,
             "style": "preces",
             "slug": "sursum_corda_god",
@@ -1555,9 +1451,7 @@
             ],
             "hidden": false,
             "type": "responsive",
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "version_label": "EOW (“give our”)",
             "version": "eow",
             "metadata": {
@@ -1597,9 +1491,7 @@
             "slug": "sursum_corda",
             "citation": null,
             "hidden": false,
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "type": "responsive",
             "language": "en",
             "metadata": {
@@ -1608,9 +1500,7 @@
             "version_label": "BCP (“give him”)"
           },
           {
-            "category": [
-              "sursum_corda"
-            ],
+            "category": ["sursum_corda"],
             "version": "eow",
             "citation": null,
             "hidden": false,
@@ -1669,9 +1559,7 @@
           "omit_response": true,
           "response": null
         },
-        "category": [
-          null
-        ],
+        "category": [null],
         "label": null,
         "value": [
           "It is truly right to glorify you, Father, and to give you thanks; for you alone are God, living and true, dwelling in light inaccessible from before time and for ever.",
@@ -1692,9 +1580,7 @@
         },
         "value": [
           {
-            "category": [
-              ""
-            ],
+            "category": [""],
             "language": "en",
             "slug": "sanctus",
             "style": "text",
@@ -1717,9 +1603,7 @@
             "slug": "sanctus",
             "style": "text",
             "citation": null,
-            "category": [
-              ""
-            ],
+            "category": [""],
             "metadata": {
               "omit_response": true,
               "response": ""
@@ -1742,9 +1626,7 @@
         "type": "text",
         "version": "bcp1979",
         "version_label": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "citation": null,
         "language": "en",
         "slug": "postpreface_d",
@@ -1760,9 +1642,7 @@
         "label": null
       },
       {
-        "category": [
-          null
-        ],
+        "category": [null],
         "value": [
           "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
         ],
@@ -1790,9 +1670,7 @@
           "omit_response": true
         },
         "style": "text",
-        "category": [
-          null
-        ],
+        "category": [null],
         "label": null,
         "version": "bcp1979",
         "citation": null
@@ -1816,9 +1694,7 @@
           }
         ],
         "version": "bcp1979",
-        "category": [
-          null
-        ],
+        "category": [null],
         "label": null
       },
       {
@@ -1844,15 +1720,11 @@
         "version": "bcp1979",
         "hidden": false,
         "version_label": null,
-        "category": [
-          null
-        ],
+        "category": [null],
         "slug": "intercessions_d"
       },
       {
-        "category": [
-          null
-        ],
+        "category": [null],
         "label": null,
         "version_label": null,
         "language": "en",
