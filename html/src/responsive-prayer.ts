@@ -33,7 +33,7 @@ export function responsivePrayerToHTML(
           }"><span class="text">${
             line.text
           }</span><br/><strong class="response">${
-            line.response ?? doc.metadata?.response
+            line.response || doc.metadata?.response
           }</strong></p>`
       ),
       `</article>`,
