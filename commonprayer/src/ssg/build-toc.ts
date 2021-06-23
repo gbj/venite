@@ -1,6 +1,6 @@
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { exists, walk } from "https://deno.land/std@0.98.0/fs/mod.ts";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.2.5";
+import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.2.6";
 import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
 
 import { Index } from "../index.tsx";

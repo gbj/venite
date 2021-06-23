@@ -1,6 +1,7 @@
 import { Heading, ResponsivePrayer } from "@venite/ldf/dist/cjs";
 import { LDFToHTMLConfig } from "./config";
 import { headingToHTML } from "./heading";
+import { processText } from "./process-text";
 
 export function responsivePrayerToHTML(
   doc: ResponsivePrayer,
@@ -30,11 +31,13 @@ export function responsivePrayerToHTML(
         (line) =>
           `<p class="line ${
             line.optional ? "optional" : ""
-          }"><span class="text">${
-            line.text
-          }</span><br/><strong class="response">${
+          }"><span class="text">${processText(line.text)}</span><br/>${
             line.response || doc.metadata?.response
-          }</strong></p>`
+              ? `<strong class="response">${processText(
+                  line.response || doc.metadata?.response || ""
+                )}</strong>`
+              : ""
+          }</p>`
       ),
       `</article>`,
     ].join("\n");
@@ -48,7 +51,7 @@ export function responsivePrayerToHTML(
             line.optional ? "optional" : ""
           }"><em class="label">${line.label}</em>\t<span class="text${
             lineIndex % 2 === 1 ? " response" : ""
-          }">${line.text}</span></p>`
+          }">${processText(line.text)}</span></p>`
       ),
       `</article>`,
     ].join("\n");
@@ -58,9 +61,11 @@ export function responsivePrayerToHTML(
       `<article ${ldf} class="doc responsive-prayer responsive"><p>`,
       ...(doc.value || []).map(
         (line, lineIndex) =>
-          `${lineIndex > 0 ? "<br>" : ""}${line.text}${
+          `${lineIndex > 0 ? "<br>" : ""}${processText(line.text)}${
             line.response
-              ? `<br><strong class="response">${line.response}</strong>`
+              ? `<br><strong class="response">${processText(
+                  line.response
+                )}</strong>`
               : ""
           }`
       ),

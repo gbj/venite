@@ -30,9 +30,6 @@ const handle = (el: HTMLElement, force: boolean | undefined = undefined) => {
       menuNode = document.importNode(menu, true);
     el.parentNode.insertBefore(menuNode, el);
 
-    el.parentNode.querySelector("button.clipboard").onclick = (
-      ev: MouseEvent
-    ) => copyText(ev, el);
     el.parentNode.querySelector("button.venite").onclick = (ev: MouseEvent) =>
       copyLDF(ev, el);
     el.parentNode.querySelector("button.word").onclick = (ev: MouseEvent) =>
@@ -64,23 +61,6 @@ async function loadDoc(el: HTMLElement): Promise<LiturgicalDocument> {
   } catch (e) {
     console.warn(e);
     setStatus(el, "error");
-  }
-}
-
-// Copy text to clipboard
-async function copyText(ev: MouseEvent, el: HTMLElement) {
-  const target = ev.target as HTMLElement,
-    btn =
-      target.tagName.toLowerCase() === "button"
-        ? target
-        : (target.closest("button") as HTMLElement),
-    text = el.innerText;
-  try {
-    await navigator.clipboard.writeText(text);
-    setStatus(btn, "success");
-  } catch (e) {
-    console.warn(e);
-    setStatus(btn, "error");
   }
 }
 

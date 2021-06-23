@@ -91,15 +91,18 @@ async function watchFiles(
             console.log("\n\nFinished rebuilding.");
             console.log(
               "\n\nTelling ",
-              clients.entries.length,
+              Array.from(clients.entries()).length,
               "clients to refresh."
             );
 
-            for (const [, sock] of clients) {
-              try {
-                await sock.send("Refresh");
-              } catch (e) {
-                console.error("Socket error", e);
+            if (Array.from(clients.entries()).length > 0) {
+              for (const [, sock] of clients) {
+                try {
+                  console.log("Sending refresh", sock);
+                  await sock.send("Refresh");
+                } catch (e) {
+                  console.error("Socket error", e);
+                }
               }
             }
             rebuilding = false;
@@ -132,7 +135,12 @@ async function waitForClients(port: number, clients: Map<string, WebSocket>) {
 
     const uid = v4.generate();
     clients.set(uid, sock);
-    console.log("\n\nClient", uid, "connected");
+    console.log(
+      "\n\nClient",
+      uid,
+      "connected — now ",
+      Array.from(clients.entries()).length
+    );
 
     handleDepartures(uid, sock, clients);
   }
@@ -189,16 +197,24 @@ async function serveFiles(port: number): Promise<Server> {
         }
       } catch (e) {
         console.error(e);
-        req.respond({
-          status: Status.NotFound,
-          body: JSON.stringify(e),
-        });
+        try {
+          req.respond({
+            status: Status.NotFound,
+            body: JSON.stringify(e),
+          });
+        } catch (e) {
+          console.warn("(serveFiles error)", e);
+        }
       }
       continue;
     } else {
-      req.respond({
-        status: Status.NotFound,
-      });
+      try {
+        req.respond({
+          status: Status.NotFound,
+        });
+      } catch (e) {
+        console.warn("(serveFiles error)", e);
+      }
     }
   }
   return server;
