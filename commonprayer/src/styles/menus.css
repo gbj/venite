@@ -1,3 +1,13 @@
+/* TOC and Display Settings */
+#menu-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  height: 4rem;
+  width: 100vw;
+}
+
 .menu-button {
   border-radius: 50%;
   font-family: var(--cp-ui-font-family);
@@ -11,9 +21,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: fixed;
-  top: 0.5rem;
 
   transition: 0.125s linear;
   z-index: 11;

@@ -1,8 +1,8 @@
 import h from "https://cdn.pika.dev/vhtml@2.2.0";
 import { PageProps } from "../../ssg/page.ts";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
-import { Psalm } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.2.6";
+import { Psalm } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
+import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.3.0";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 
 export default async function psalter(): Promise<PageProps> {

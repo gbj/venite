@@ -4,8 +4,7 @@
     "jsxFactory": "h",
     "noImplicitAny": false,
     "strict": false,
-    "lib": ["dom", "deno.window", "deno.unstable", "es2020"],
-    "noUncheckedIndexedAccess": true,
-    "target": "ES6"
+    "lib": ["deno.window", "deno.unstable", "es2020"],
+    "noUncheckedIndexedAccess": true
   }
 }

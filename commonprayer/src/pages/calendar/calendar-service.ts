@@ -11,7 +11,7 @@ import {
   liturgicalDay,
   transferredFeast,
   dateFromYMD,
-} from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
+} from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
 
 type Kalendar = {
   weeks: LiturgicalWeek[];

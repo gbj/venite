@@ -1,6 +1,5 @@
-//import { LDFToHTMLConfig } from "https://cdn.pika.dev/@venite/html@0.2.6";
-//import { Lookup } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
-import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.19.5";
+//import { LDFToHTMLConfig } from "https://cdn.pika.dev/@venite/html@0.3.0";
+//import { Lookup } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
 import h from "https://cdn.pika.dev/vhtml@2.2.0";
 
 export const LDF_TO_HTML_CONFIG = {

@@ -1,8 +1,15 @@
 /* cp-doc buttons */
-.cp-doc-header {
+#cp-doc-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: fixed;
+  top: 4rem;
+  width: 100vw;
+}
+
+#cp-doc-header.hidden {
+  display: none;
 }
 
 menu.cp-doc-menu {
@@ -94,4 +101,27 @@ menu.cp-doc-menu li button.error {
 }
 menu.cp-doc-menu li button.error img {
   filter: var(--button-filter-light);
+}
+
+/* Selected elements */
+.selected {
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--cp-selected-border);
+  background-color: var(--cp-selected-background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
+  padding: 0px;
+}
+
+.doc > p {
+  margin: 0;
+}
+
+.doc {
+  padding: 1px;
+}
+
+.doc.selected {
+  padding: 0px;
 }

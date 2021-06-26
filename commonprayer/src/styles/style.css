@@ -3,6 +3,8 @@
   --cp-ui-font-family: -apple-systrem, BlinkMacSystremFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color remoji', 'Segoe UI remoji', 'Segoe UI Symbol';
   --ldf-font-face: 'Sabon', 'Garamond', serif;
 
+  --border-radius: 3px;
+
   /* Colors */
   --cp-primary-background: #830b00;
   --cp-primary-light-background: #fdc3be;
@@ -23,6 +25,9 @@
   --cp-error-background: #bc293d;
   --cp-error-color: white;
 
+  --cp-selected-border: #9090ee;
+  --cp-selected-background: #ccccff;
+
   /* Button filters */
   --button-filter-light: invert(97%) sepia(97%) saturate(0%) hue-rotate(36deg) brightness(104%) contrast(105%);
   --button-filter-dark: gray saturate(0%) brightness(70%) contrast(1000%);
@@ -36,9 +41,33 @@ body {
 
 main {
   padding: 1rem;
-  display: block;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1.5rem;
+}
+
+main > * {
+  max-width: 600px;
+}
+
+.cp-doc article {
+  max-width: 600px;
+}
+
+.cp-doc article.parallel {
+  max-width: calc(1000px + 1rem);
+}
+
+.cp-doc article.parallel article {
+  max-width: 500px;
+}
+
+.cp-doc article.parallel.hidden {
+  max-width: 600px;
+}
+
+.cp-doc article.parallel.hidden article {
   max-width: 600px;
 }
 
@@ -122,4 +151,25 @@ a.source .label {
 
 a.source:visited {
   color: var(--cp-light-color);
+}
+
+/* Parallels */
+.sources {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.parallel > * {
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.parallel > *:first-child {
+  width: 50%;
+  padding-left: 0;
+}
+
+.parallel.hidden > * {
+  width: 100%;
+  padding: 0;
 }

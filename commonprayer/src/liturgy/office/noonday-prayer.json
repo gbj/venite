@@ -1,5 +1,15 @@
 {
   "index": 200,
+  "source": [
+    {
+      "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=103",
+      "label": "BCP p. 333"
+    },
+    {
+      "url": "https://extranet.generalconvention.org/staff/files/download/30208#page=40",
+      "label": "LOC p. 40"
+    }
+  ],
   "data": [
     {
       "metadata": {
@@ -10,17 +20,13 @@
             "options": [
               {
                 "value": "false",
-                "metadata": {
-                  "alternateYear": false
-                },
+                "metadata": { "alternateYear": false },
                 "label": "No",
                 "default": false
               },
               {
                 "default": false,
-                "metadata": {
-                  "alternateYear": false
-                },
+                "metadata": { "alternateYear": false },
                 "value": "true",
                 "label": "Yes"
               }
@@ -29,90 +35,166 @@
             "label": "Insert Gloria Patri after each Psalm",
             "key": "insertGloria"
           }
-        }
+        },
+        "parallels": { "en": true, "es": true }
       },
       "label": "Noonday Prayer",
       "value": [
         {
-          "type": "heading",
-          "metadata": {
-            "level": 1
-          },
-          "hidden": false,
-          "value": ["An Order of Service for Noonday"]
-        },
-        {
-          "type": "heading",
-          "hidden": false,
-          "metadata": {
-            "level": 2
-          },
-          "label": "",
-          "style": "date",
-          "value": [""],
-          "citation": ""
-        },
-        {
-          "type": "heading",
-          "label": "",
-          "style": "day",
-          "metadata": {
-            "level": 2
-          },
-          "citation": "",
-          "value": [""],
-          "hidden": false
-        },
-        {
+          "type": "parallel",
           "value": [
             {
-              "label": "Officiant",
-              "text": "O God, make speed to save us.",
-              "response": ""
+              "type": "heading",
+              "metadata": { "level": 1 },
+              "hidden": false,
+              "value": ["An Order of Service for Noonday"]
             },
             {
-              "text": "O Lord, make haste to help us.",
-              "label": "People"
+              "language": "es",
+              "type": "heading",
+              "metadata": { "level": 1 },
+              "hidden": false,
+              "value": ["Oración del Mediodía"]
             }
-          ],
-          "type": "responsive",
-          "hidden": false,
-          "style": "preces"
+          ]
         },
         {
-          "type": "rubric",
-          "value": ["Officiant and People"]
-        },
-        {
-          "version": "bcp1979",
-          "category": [null],
-          "label": null,
-          "version_label": "Rite II",
-          "type": "refrain",
-          "slug": "gloria-patri",
+          "type": "parallel",
           "value": [
-            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-          ],
-          "citation": null,
-          "language": "en",
-          "style": "gloria",
-          "hidden": false
+            {
+              "type": "heading",
+              "hidden": false,
+              "metadata": { "level": 2 },
+              "label": "",
+              "style": "date",
+              "value": [""],
+              "citation": ""
+            },
+            {
+              "type": "heading",
+              "hidden": false,
+              "metadata": { "level": 2 },
+              "label": "",
+              "style": "date",
+              "value": [""],
+              "citation": "",
+              "language": "es"
+            }
+          ]
         },
         {
-          "type": "rubric",
-          "value": ["Except in Lent, add"]
+          "type": "parallel",
+          "value": [
+            {
+              "type": "heading",
+              "label": "",
+              "style": "day",
+              "metadata": { "level": 2 },
+              "citation": "",
+              "value": [""],
+              "hidden": false
+            },
+            {
+              "type": "heading",
+              "label": "",
+              "style": "day",
+              "metadata": { "level": 2 },
+              "citation": "",
+              "value": [""],
+              "hidden": false,
+              "language": "es"
+            }
+          ]
         },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "value": [
+                {
+                  "label": "Officiant",
+                  "text": "O God, make speed to save us.",
+                  "response": ""
+                },
+                { "text": "O Lord, make haste to help us.", "label": "People" }
+              ],
+              "type": "responsive",
+              "hidden": false,
+              "style": "preces"
+            },
+            {
+              "value": [
+                {
+                  "label": "Oficiante",
+                  "text": "Apresúrate, Dios, a librarnos.",
+                  "response": ""
+                },
+                {
+                  "text": "Date prisa, Dios, a socorrernos.",
+                  "label": "Pueblo"
+                }
+              ],
+              "type": "responsive",
+              "hidden": false,
+              "style": "preces",
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            { "type": "rubric", "value": ["Officiant and People"] },
+            {
+              "type": "rubric",
+              "value": ["Oficiante y pueblo"],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            },
+            {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Gloria al Padre, y al Hijo y al Espíritu Santo:",
+                "Como al principio, ahora y siempre por los siglos de los siglos. Amén. ¡Aleluya!"
+              ],
+              "citation": null,
+              "language": "es",
+              "style": "gloria",
+              "hidden": false
+            }
+          ]
+        },
+        { "type": "rubric", "value": ["Except in Lent, add"] },
         {
           "type": "text",
           "condition": {
             "conditions": [
-              {
-                "season": {
-                  "except": ["Lent", "HolyWeek"],
-                  "only": []
-                }
-              }
+              { "season": { "except": ["Lent", "HolyWeek"], "only": [] } }
             ],
             "mode": "and"
           },
@@ -121,532 +203,1109 @@
           "value": ["Alleluia."]
         },
         {
-          "type": "rubric",
+          "type": "parallel",
           "value": [
-            "One or more of the following Psalms is sung or said. Other suitable selections include Psalms 19,67, one or more sections of Psalm 119, or a selection from Psalms 120 through 133."
+            {
+              "type": "rubric",
+              "value": [""]
+            },
+            {
+              "type": "rubric",
+              "value": ["En Cuaresma se omite el ¡Aleluya!"],
+              "language": "es"
+            }
           ]
         },
         {
-          "category": ["Psalm"],
-          "type": "psalm",
+          "type": "parallel",
           "value": [
             {
-              "type": "psalm-section",
+              "type": "rubric",
+              "value": [
+                "One or more of the following Psalms is sung or said. Other suitable selections include Psalms 19,67, one or more sections of Psalm 119, or a selection from Psalms 120 through 133."
+              ]
+            },
+            {
+              "type": "rubric",
+              "value": [
+                "Se puede cantar un himno apropiado.",
+                "Se puede cantar o recitar uno o más de los salmos que siguen. Otras selecciones apropiadas incluyen Salmo 19, Salmo 67, una o más secciones del Salmo 119, o una selección de Salmo 120 a 133."
+              ],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "category": ["Psalm"],
+              "type": "psalm",
               "value": [
                 {
-                  "number": "105",
-                  "type": "psalm-verse",
-                  "verse": "Your word is a lantern to my feet *",
-                  "halfverse": "and a light upon my path."
-                },
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "105",
+                      "type": "psalm-verse",
+                      "verse": "Your word is a lantern to my feet *",
+                      "halfverse": "and a light upon my path."
+                    },
+                    {
+                      "number": "106",
+                      "halfverse": "to keep your righteous judgments.",
+                      "type": "psalm-verse",
+                      "verse": "I have sworn and am determined *"
+                    },
+                    {
+                      "halfverse": "preserve my life, O LORD, according to your word.",
+                      "verse": "I am deeply troubled; *",
+                      "type": "psalm-verse",
+                      "number": "107"
+                    },
+                    {
+                      "number": "108",
+                      "verse": "Accept, O LORD, the willing tribute of my lips, *",
+                      "halfverse": "and teach me your judgments.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "yet I do not forget your law.",
+                      "number": "109",
+                      "verse": "My life is always in my hand, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "but I have not strayed from your commandments.",
+                      "number": "110",
+                      "type": "psalm-verse",
+                      "verse": "The wicked have set a trap for me, *"
+                    },
+                    {
+                      "number": "111",
+                      "halfverse": "truly, they are the joy of my heart.",
+                      "type": "psalm-verse",
+                      "verse": "Your decrees are my inheritance for ever; *"
+                    },
+                    {
+                      "verse": "I have applied my heart to fulfill your statutes *",
+                      "type": "psalm-verse",
+                      "halfverse": "for ever and to the end.",
+                      "number": "112"
+                    }
+                  ]
+                }
+              ],
+              "version_label": null,
+              "slug": "psalm_119_nun",
+              "style": "psalm",
+              "citation": null,
+              "metadata": {
+                "omit_antiphon": false,
+                "omit_gloria": false,
+                "number": "119",
+                "latinname": "Lucerna pedibus meis",
+                "localname": "Psalm 119: Nun"
+              },
+              "language": "en",
+              "hidden": false,
+              "source": {
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api",
+                "citation": "p. 772"
+              },
+              "version": "bcp1979",
+              "label": "Psalm 119: Nun"
+            },
+            {
+              "category": ["Psalm"],
+              "type": "psalm",
+              "value": [
                 {
-                  "number": "106",
-                  "halfverse": "to keep your righteous judgments.",
-                  "type": "psalm-verse",
-                  "verse": "I have sworn and am determined *"
-                },
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "105",
+                      "type": "psalm-verse",
+                      "verse": "Tu palabra es una lámpara a mis pies, *",
+                      "halfverse": "una luz en mi camino."
+                    },
+                    {
+                      "number": "106",
+                      "halfverse": "es observar tus justas leyes.",
+                      "type": "psalm-verse",
+                      "verse": "Mi juramento y mi resolución *"
+                    },
+                    {
+                      "halfverse": "dame vida, DIOS, conforme a tu palabra.",
+                      "verse": "Demasiadas son mis aflicciones; * ",
+                      "type": "psalm-verse",
+                      "number": "107"
+                    },
+                    {
+                      "number": "108",
+                      "verse": "Acepta, Yahvé, la ofrenda de mi boca *  ",
+                      "halfverse": "y enséñame tus juicios.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "pero no me olvido de tu ley.",
+                      "number": "109",
+                      "verse": "Mi vida está siempre en peligro * ",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "pero no me desvío de tus enseñanzas.",
+                      "number": "110",
+                      "type": "psalm-verse",
+                      "verse": "Los malvados me han puesto una trampa, * "
+                    },
+                    {
+                      "number": "111",
+                      "halfverse": "y me llenan de gozo el corazón.",
+                      "type": "psalm-verse",
+                      "verse": "Tus preceptos son mi herencia eterna *"
+                    },
+                    {
+                      "verse": "Inclino mi corazón acumplir tu ley *",
+                      "type": "psalm-verse",
+                      "halfverse": "continuamente, y hasta el fin.",
+                      "number": "112"
+                    }
+                  ]
+                }
+              ],
+              "version_label": null,
+              "slug": "psalm_119_nun",
+              "style": "psalm",
+              "citation": null,
+              "metadata": {
+                "omit_antiphon": false,
+                "omit_gloria": false,
+                "number": "119",
+                "latinname": "Lucerna pedibus meis",
+                "localname": "Salmo 119"
+              },
+              "language": "es",
+              "hidden": false,
+              "source": {
+                "source": "LOC",
+                "api": "https://extranet.generalconvention.org/staff/files/download/30208#page=41",
+                "citation": "p. 41"
+              },
+              "version": "bcp1979",
+              "label": "Salmo 119"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "metadata": {
+                "omit_gloria": false,
+                "localname": "Psalm 121",
+                "latinname": "Levavi oculum",
+                "omit_antiphon": false,
+                "number": "121"
+              },
+              "type": "psalm",
+              "hidden": false,
+              "source": {
+                "citation": "p. 779",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "citation": null,
+              "version_label": null,
+              "label": "Psalm 121",
+              "category": ["Psalm"],
+              "language": "en",
+              "style": "psalm",
+              "version": "bcp1979",
+              "value": [
                 {
-                  "halfverse": "preserve my life, O LORD, according to your word.",
-                  "verse": "I am deeply troubled; *",
-                  "type": "psalm-verse",
-                  "number": "107"
-                },
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "1",
+                      "halfverse": "from where is my help to come?",
+                      "type": "psalm-verse",
+                      "verse": "I lift up my eyes to the hills; *"
+                    },
+                    {
+                      "verse": "My help comes from the LORD, *",
+                      "type": "psalm-verse",
+                      "halfverse": "the maker of heaven and earth.",
+                      "number": "2"
+                    },
+                    {
+                      "number": "3",
+                      "type": "psalm-verse",
+                      "halfverse": "and he who watches over you will not fall asleep.",
+                      "verse": "He will not let your foot be moved *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "verse": "Behold, he who keeps watch over Israel *",
+                      "halfverse": "shall neither slumber nor sleep;"
+                    },
+                    {
+                      "verse": "The LORD himself watches over you; *",
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "halfverse": "the LORD is your shade at your right hand,"
+                    },
+                    {
+                      "number": "6",
+                      "halfverse": "nor the moon by night.",
+                      "verse": "So that the sun shall not strike you by day, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "it is he who shall keep you safe.",
+                      "verse": "The LORD shall preserve you from all evil; *",
+                      "type": "psalm-verse",
+                      "number": "7"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "from this time forth for evermore.",
+                      "verse": "The LORD shall watch over your going out and your coming in, *",
+                      "number": "8"
+                    }
+                  ]
+                }
+              ],
+              "slug": "psalm_121"
+            },
+            {
+              "metadata": {
+                "omit_gloria": false,
+                "localname": "Psalm 121",
+                "latinname": "Levavi oculum",
+                "omit_antiphon": false,
+                "number": "121"
+              },
+              "type": "psalm",
+              "hidden": false,
+              "source": {
+                "citation": "p. 779",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "citation": null,
+              "version_label": null,
+              "label": "Psalm 121",
+              "category": ["Psalm"],
+              "language": "es",
+              "style": "psalm",
+              "version": "bcp1979",
+              "value": [
                 {
-                  "number": "108",
-                  "verse": "Accept, O LORD, the willing tribute of my lips, *",
-                  "halfverse": "and teach me your judgments.",
-                  "type": "psalm-verse"
-                },
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "1",
+                      "halfverse": "from where is my help to come?",
+                      "type": "psalm-verse",
+                      "verse": "I lift up my eyes to the hills; *"
+                    },
+                    {
+                      "verse": "My help comes from the LORD, *",
+                      "type": "psalm-verse",
+                      "halfverse": "the maker of heaven and earth.",
+                      "number": "2"
+                    },
+                    {
+                      "number": "3",
+                      "type": "psalm-verse",
+                      "halfverse": "and he who watches over you will not fall asleep.",
+                      "verse": "He will not let your foot be moved *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "verse": "Behold, he who keeps watch over Israel *",
+                      "halfverse": "shall neither slumber nor sleep;"
+                    },
+                    {
+                      "verse": "The LORD himself watches over you; *",
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "halfverse": "the LORD is your shade at your right hand,"
+                    },
+                    {
+                      "number": "6",
+                      "halfverse": "nor the moon by night.",
+                      "verse": "So that the sun shall not strike you by day, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "it is he who shall keep you safe.",
+                      "verse": "The LORD shall preserve you from all evil; *",
+                      "type": "psalm-verse",
+                      "number": "7"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "from this time forth for evermore.",
+                      "verse": "The LORD shall watch over your going out and your coming in, *",
+                      "number": "8"
+                    }
+                  ]
+                }
+              ],
+              "slug": "psalm_121"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "version_label": null,
+              "slug": "psalm_126",
+              "source": {
+                "api": "https://www.venite.app/api",
+                "citation": "p. 782",
+                "source": "bcp1979"
+              },
+              "version": "bcp1979",
+              "label": "Psalm 126",
+              "type": "psalm",
+              "category": ["Psalm"],
+              "hidden": false,
+              "citation": null,
+              "metadata": {
+                "omit_gloria": false,
+                "latinname": "In convertendo",
+                "number": "126",
+                "omit_antiphon": false,
+                "localname": "Psalm 126"
+              },
+              "style": "psalm",
+              "language": "en",
+              "value": [
                 {
-                  "halfverse": "yet I do not forget your law.",
-                  "number": "109",
-                  "verse": "My life is always in my hand, *",
-                  "type": "psalm-verse"
-                },
+                  "value": [
+                    {
+                      "halfverse": "then were we like those who dream.",
+                      "number": "1",
+                      "verse": "When the LORD restored the fortunes of Zion, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "2",
+                      "halfverse": "and our tongue with shouts of joy.",
+                      "verse": "Then was our mouth filled with laughter, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "“The LORD has done great things for them.”",
+                      "number": "3",
+                      "verse": "Then they said among the nations, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "The LORD has done great things for us, *",
+                      "number": "4",
+                      "halfverse": "and we are glad indeed."
+                    },
+                    {
+                      "halfverse": "like the watercourses of the Negev.",
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "verse": "Restore our fortunes, O LORD, *"
+                    },
+                    {
+                      "verse": "Those who sowed with tears *",
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "halfverse": "will reap with songs of joy."
+                    },
+                    {
+                      "halfverse": "will come again with joy, shouldering their sheaves.",
+                      "verse": "Those who go out weeping, carrying the seed, *",
+                      "number": "7",
+                      "type": "psalm-verse"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ]
+            },
+            {
+              "version_label": null,
+              "slug": "psalm_126",
+              "source": {
+                "api": "https://www.venite.app/api",
+                "citation": "p. 782",
+                "source": "bcp1979"
+              },
+              "version": "bcp1979",
+              "label": "Psalm 126",
+              "type": "psalm",
+              "category": ["Psalm"],
+              "hidden": false,
+              "citation": null,
+              "metadata": {
+                "omit_gloria": false,
+                "latinname": "In convertendo",
+                "number": "126",
+                "omit_antiphon": false,
+                "localname": "Psalm 126"
+              },
+              "style": "psalm",
+              "language": "es",
+              "value": [
                 {
-                  "halfverse": "but I have not strayed from your commandments.",
-                  "number": "110",
-                  "type": "psalm-verse",
-                  "verse": "The wicked have set a trap for me, *"
-                },
-                {
-                  "number": "111",
-                  "halfverse": "truly, they are the joy of my heart.",
-                  "type": "psalm-verse",
-                  "verse": "Your decrees are my inheritance for ever; *"
-                },
-                {
-                  "verse": "I have applied my heart to fulfill your statutes *",
-                  "type": "psalm-verse",
-                  "halfverse": "for ever and to the end.",
-                  "number": "112"
+                  "value": [
+                    {
+                      "halfverse": "then were we like those who dream.",
+                      "number": "1",
+                      "verse": "When the LORD restored the fortunes of Zion, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "2",
+                      "halfverse": "and our tongue with shouts of joy.",
+                      "verse": "Then was our mouth filled with laughter, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "“The LORD has done great things for them.”",
+                      "number": "3",
+                      "verse": "Then they said among the nations, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "The LORD has done great things for us, *",
+                      "number": "4",
+                      "halfverse": "and we are glad indeed."
+                    },
+                    {
+                      "halfverse": "like the watercourses of the Negev.",
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "verse": "Restore our fortunes, O LORD, *"
+                    },
+                    {
+                      "verse": "Those who sowed with tears *",
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "halfverse": "will reap with songs of joy."
+                    },
+                    {
+                      "halfverse": "will come again with joy, shouldering their sheaves.",
+                      "verse": "Those who go out weeping, carrying the seed, *",
+                      "number": "7",
+                      "type": "psalm-verse"
+                    }
+                  ],
+                  "type": "psalm-section"
                 }
               ]
             }
-          ],
-          "version_label": null,
-          "slug": "psalm_119_nun",
-          "style": "psalm",
-          "citation": null,
-          "metadata": {
-            "omit_antiphon": false,
-            "omit_gloria": false,
-            "number": "119",
-            "latinname": "Lucerna pedibus meis",
-            "localname": "Psalm 119: Nun"
-          },
-          "language": "en",
-          "hidden": false,
-          "source": {
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 772"
-          },
-          "version": "bcp1979",
-          "label": "Psalm 119: Nun"
-        },
-        {
-          "metadata": {
-            "omit_gloria": false,
-            "localname": "Psalm 121",
-            "latinname": "Levavi oculum",
-            "omit_antiphon": false,
-            "number": "121"
-          },
-          "type": "psalm",
-          "hidden": false,
-          "source": {
-            "citation": "p. 779",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
-          "citation": null,
-          "version_label": null,
-          "label": "Psalm 121",
-          "category": ["Psalm"],
-          "language": "en",
-          "style": "psalm",
-          "version": "bcp1979",
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "number": "1",
-                  "halfverse": "from where is my help to come?",
-                  "type": "psalm-verse",
-                  "verse": "I lift up my eyes to the hills; *"
-                },
-                {
-                  "verse": "My help comes from the LORD, *",
-                  "type": "psalm-verse",
-                  "halfverse": "the maker of heaven and earth.",
-                  "number": "2"
-                },
-                {
-                  "number": "3",
-                  "type": "psalm-verse",
-                  "halfverse": "and he who watches over you will not fall asleep.",
-                  "verse": "He will not let your foot be moved *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "number": "4",
-                  "verse": "Behold, he who keeps watch over Israel *",
-                  "halfverse": "shall neither slumber nor sleep;"
-                },
-                {
-                  "verse": "The LORD himself watches over you; *",
-                  "number": "5",
-                  "type": "psalm-verse",
-                  "halfverse": "the LORD is your shade at your right hand,"
-                },
-                {
-                  "number": "6",
-                  "halfverse": "nor the moon by night.",
-                  "verse": "So that the sun shall not strike you by day, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "halfverse": "it is he who shall keep you safe.",
-                  "verse": "The LORD shall preserve you from all evil; *",
-                  "type": "psalm-verse",
-                  "number": "7"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "from this time forth for evermore.",
-                  "verse": "The LORD shall watch over your going out and your coming in, *",
-                  "number": "8"
-                }
-              ]
-            }
-          ],
-          "slug": "psalm_121"
-        },
-        {
-          "version_label": null,
-          "slug": "psalm_126",
-          "source": {
-            "api": "https://www.venite.app/api",
-            "citation": "p. 782",
-            "source": "bcp1979"
-          },
-          "version": "bcp1979",
-          "label": "Psalm 126",
-          "type": "psalm",
-          "category": ["Psalm"],
-          "hidden": false,
-          "citation": null,
-          "metadata": {
-            "omit_gloria": false,
-            "latinname": "In convertendo",
-            "number": "126",
-            "omit_antiphon": false,
-            "localname": "Psalm 126"
-          },
-          "style": "psalm",
-          "language": "en",
-          "value": [
-            {
-              "value": [
-                {
-                  "halfverse": "then were we like those who dream.",
-                  "number": "1",
-                  "verse": "When the LORD restored the fortunes of Zion, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "number": "2",
-                  "halfverse": "and our tongue with shouts of joy.",
-                  "verse": "Then was our mouth filled with laughter, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "“The LORD has done great things for them.”",
-                  "number": "3",
-                  "verse": "Then they said among the nations, *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "verse": "The LORD has done great things for us, *",
-                  "number": "4",
-                  "halfverse": "and we are glad indeed."
-                },
-                {
-                  "halfverse": "like the watercourses of the Negev.",
-                  "number": "5",
-                  "type": "psalm-verse",
-                  "verse": "Restore our fortunes, O LORD, *"
-                },
-                {
-                  "verse": "Those who sowed with tears *",
-                  "type": "psalm-verse",
-                  "number": "6",
-                  "halfverse": "will reap with songs of joy."
-                },
-                {
-                  "halfverse": "will come again with joy, shouldering their sheaves.",
-                  "verse": "Those who go out weeping, carrying the seed, *",
-                  "number": "7",
-                  "type": "psalm-verse"
-                }
-              ],
-              "type": "psalm-section"
-            }
           ]
         },
         {
-          "condition": {
-            "mode": "and",
-            "conditions": [
-              {
-                "preference": {
-                  "key": "insertGloria",
-                  "value": "false",
-                  "is": true
-                }
-              }
-            ]
-          },
-          "version": "bcp1979",
-          "category": [null],
-          "label": null,
-          "version_label": "Rite II",
-          "type": "refrain",
-          "slug": "gloria-patri",
-          "value": [
-            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-          ],
-          "citation": null,
-          "language": "en",
-          "style": "gloria",
-          "hidden": false
-        },
-        {
-          "type": "rubric",
-          "value": [
-            "One of the following, or some other suitable passage of Scripture, is read"
-          ]
-        },
-        {
-          "type": "option",
+          "type": "parallel",
           "value": [
             {
-              "type": "bible-reading",
-              "citation": "Romans 5:5",
-              "style": "short",
-              "category": [],
-              "lastRevision": 14,
-              "version": "bcp1979",
-              "slug": "noonday_sentence",
-              "metadata": {
-                "response": "Thanks be to God."
+              "condition": {
+                "mode": "and",
+                "conditions": [
+                  {
+                    "preference": {
+                      "key": "insertGloria",
+                      "value": "false",
+                      "is": true
+                    }
+                  }
+                ]
               },
-              "hidden": false,
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
               "value": [
-                {
-                  "book": "Romans",
-                  "text": "The love of God has been poured into our hearts through the Holy Spirit that has been given to us.",
-                  "verse": "5",
-                  "chapter": "5"
-                }
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
               ],
-              "language": "en"
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
             },
             {
-              "category": [],
-              "metadata": {
-                "response": "Thanks be to God."
+              "condition": {
+                "mode": "and",
+                "conditions": [
+                  {
+                    "preference": {
+                      "key": "insertGloria",
+                      "value": "false",
+                      "is": true
+                    }
+                  }
+                ]
               },
-              "type": "bible-reading",
-              "citation": " 2 Corinthians 5:17-18",
               "version": "bcp1979",
-              "lastRevision": 21,
-              "language": "en",
-              "slug": "noonday_sentence",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
               "value": [
-                {
-                  "verse": "17-18",
-                  "text": "If anyone is in Christ he is a new creation; the old has passed away, behold the new has come. All this is from God, who through Christ reconciled us to himself and gave us the ministry of reconciliation. ",
-                  "chapter": "5",
-                  "book": "2 Cor."
-                }
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
               ],
-              "hidden": false,
-              "style": "short"
-            },
-            {
-              "language": "en",
-              "metadata": {
-                "response": "Thanks be to God."
-              },
-              "category": [],
-              "value": [
-                {
-                  "verse": "11",
-                  "text": "From the rising of the sun to its setting my Name shall be great among the nations, and in every place incense shall be offered to my Name, and a pure offering; for my Name shall be great among the nations, says the Lord of Hosts.",
-                  "book": "Malachi",
-                  "chapter": "1"
-                }
-              ],
-              "citation": "Malachi 1:11",
-              "slug": "noonday_sentence",
-              "version": "bcp1979",
-              "lastRevision": 22,
-              "type": "bible-reading",
-              "style": "short",
+              "citation": null,
+              "language": "es",
+              "style": "gloria",
               "hidden": false
             }
           ]
         },
         {
-          "metadata": {},
-          "type": "rubric",
-          "value": ["A meditation, silent or spoken, may follow."],
-          "hidden": false
-        },
-        {
-          "type": "rubric",
-          "hidden": false,
-          "value": ["The Officiant then begins the Prayers"]
-        },
-        {
-          "style": "responsive",
-          "type": "responsive",
+          "type": "parallel",
           "value": [
             {
-              "label": "",
-              "response": "Christ, have mercy.",
-              "text": "Lord, have mercy."
-            },
-            {
-              "text": "Lord, have mercy."
-            }
-          ],
-          "hidden": false
-        },
-        {
-          "value": [
-            {
-              "version_label": "Traditional",
-              "category": [],
-              "display_format": "unison",
-              "hidden": false,
-              "source": {
-                "citation": "",
-                "api": "",
-                "source": ""
-              },
-              "type": "text",
+              "type": "rubric",
               "value": [
-                "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
-              ],
-              "metadata": {
-                "omit_response": true
-              },
-              "style": "prayer"
-            },
-            {
-              "category": [],
-              "metadata": {
-                "omit_response": true
-              },
-              "hidden": false,
-              "style": "prayer",
-              "value": [
-                "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil."
-              ],
-              "display_format": "unison",
-              "version_label": "Contemporary",
-              "source": {
-                "source": "",
-                "api": "",
-                "citation": ""
-              },
-              "type": "text"
-            }
-          ],
-          "metadata": {
-            "editor_selected": 0,
-            "selected": 0
-          },
-          "type": "option",
-          "hidden": false
-        },
-        {
-          "value": [
-            {
-              "label": "Officiant",
-              "text": "Lord, hear our prayer.",
-              "response": ""
-            },
-            {
-              "label": "People",
-              "text": "And let our cry come to you."
-            },
-            {
-              "label": "Officiant",
-              "text": "Let us pray."
-            }
-          ],
-          "style": "preces",
-          "hidden": false,
-          "type": "responsive"
-        },
-        {
-          "type": "rubric",
-          "value": [
-            "The Officiant then says one of the following Collect. If desired, the Collect of the Day may be used."
-          ]
-        },
-        {
-          "type": "option",
-          "value": [
-            {
-              "type": "text",
-              "metadata": {},
-              "style": "prayer",
-              "value": [
-                "Heavenly Father, send your Holy Spirit into our hearts, to direct and rule us according to your will, to comfort us in all our afflictions, to defend us from all error, and to lead us into all truth; through Jesus Christ our Lord."
-              ],
-              "slug": "noonday_collect",
-              "version": "bcp1979",
-              "lookup": "category",
-              "lastRevision": 21,
-              "category": [],
-              "language": "en",
-              "hidden": false,
-              "label": ""
-            },
-            {
-              "style": "prayer",
-              "hidden": false,
-              "lastRevision": 30,
-              "label": "",
-              "metadata": {},
-              "lookup": "category",
-              "slug": "noonday_collect",
-              "value": [
-                "Blessed Savior, at this hour you hung upon the cross, stretching out your loving arms: Grant that all the peoples of the earth may look to you and be saved; for your tender mercies’ sake."
-              ],
-              "language": "en",
-              "type": "text",
-              "version": "bcp1979",
-              "category": []
-            },
-            {
-              "lastRevision": 28,
-              "label": "",
-              "type": "text",
-              "language": "en",
-              "style": "prayer",
-              "category": [],
-              "version": "bcp1979",
-              "slug": "noonday_collect",
-              "value": [
-                "Lord Jesus Christ, you said to your apostles, “Peace I give to you; my peace I leave with you:” Regard not our sins, but the faith of your Church, and give to us the peace and unity of that heavenly city, where with the Father and the Holy Spirit you live and reign, now and for ever."
-              ],
-              "hidden": false,
-              "metadata": {},
-              "lookup": "category"
-            },
-            {
-              "metadata": {},
-              "lastRevision": 22,
-              "category": [],
-              "hidden": false,
-              "style": "prayer",
-              "lookup": "category",
-              "slug": "noonday_collect",
-              "label": "",
-              "version": "bcp1979",
-              "language": "en",
-              "type": "text",
-              "value": [
-                "Almighty Savior, who at noonday called your servant Saint Paul to be an apostle to the Gentiles: We pray you to illumine the world with the radiance of your glory, that all nations may come and worship you; for you live and reign for ever and ever."
+                "One of the following, or some other suitable passage of Scripture, is read"
               ]
+            },
+            {
+              "type": "rubric",
+              "value": [
+                "One of the following, or some other suitable passage of Scripture, is read"
+              ],
+              "language": "es"
             }
           ]
         },
         {
-          "hidden": false,
-          "type": "rubric",
-          "value": ["Free intercessions may be offered."]
-        },
-        {
-          "type": "responsive",
+          "type": "parallel",
           "value": [
             {
-              "label": "",
-              "text": "Let us bless the Lord.",
-              "response": "Thanks be to God."
+              "type": "option",
+              "value": [
+                {
+                  "type": "bible-reading",
+                  "citation": "Romans 5:5",
+                  "style": "short",
+                  "category": [],
+                  "lastRevision": 14,
+                  "version": "bcp1979",
+                  "slug": "noonday_sentence",
+                  "metadata": { "response": "Thanks be to God." },
+                  "hidden": false,
+                  "value": [
+                    {
+                      "book": "Romans",
+                      "text": "The love of God has been poured into our hearts through the Holy Spirit that has been given to us.",
+                      "verse": "5",
+                      "chapter": "5"
+                    }
+                  ],
+                  "language": "en"
+                },
+                {
+                  "category": [],
+                  "metadata": { "response": "Thanks be to God." },
+                  "type": "bible-reading",
+                  "citation": " 2 Corinthians 5:17-18",
+                  "version": "bcp1979",
+                  "lastRevision": 21,
+                  "language": "en",
+                  "slug": "noonday_sentence",
+                  "value": [
+                    {
+                      "verse": "17-18",
+                      "text": "If anyone is in Christ he is a new creation; the old has passed away, behold the new has come. All this is from God, who through Christ reconciled us to himself and gave us the ministry of reconciliation. ",
+                      "chapter": "5",
+                      "book": "2 Cor."
+                    }
+                  ],
+                  "hidden": false,
+                  "style": "short"
+                },
+                {
+                  "language": "en",
+                  "metadata": { "response": "Thanks be to God." },
+                  "category": [],
+                  "value": [
+                    {
+                      "verse": "11",
+                      "text": "From the rising of the sun to its setting my Name shall be great among the nations, and in every place incense shall be offered to my Name, and a pure offering; for my Name shall be great among the nations, says the Lord of Hosts.",
+                      "book": "Malachi",
+                      "chapter": "1"
+                    }
+                  ],
+                  "citation": "Malachi 1:11",
+                  "slug": "noonday_sentence",
+                  "version": "bcp1979",
+                  "lastRevision": 22,
+                  "type": "bible-reading",
+                  "style": "short",
+                  "hidden": false
+                }
+              ]
+            },
+            {
+              "type": "option",
+              "value": [
+                {
+                  "type": "bible-reading",
+                  "citation": "Romans 5:5",
+                  "style": "short",
+                  "category": [],
+                  "lastRevision": 14,
+                  "version": "bcp1979",
+                  "slug": "noonday_sentence",
+                  "metadata": { "response": "Thanks be to God." },
+                  "hidden": false,
+                  "value": [
+                    {
+                      "book": "Romans",
+                      "text": "The love of God has been poured into our hearts through the Holy Spirit that has been given to us.",
+                      "verse": "5",
+                      "chapter": "5"
+                    }
+                  ],
+                  "language": "en"
+                },
+                {
+                  "category": [],
+                  "metadata": { "response": "Thanks be to God." },
+                  "type": "bible-reading",
+                  "citation": " 2 Corinthians 5:17-18",
+                  "version": "bcp1979",
+                  "lastRevision": 21,
+                  "language": "en",
+                  "slug": "noonday_sentence",
+                  "value": [
+                    {
+                      "verse": "17-18",
+                      "text": "If anyone is in Christ he is a new creation; the old has passed away, behold the new has come. All this is from God, who through Christ reconciled us to himself and gave us the ministry of reconciliation. ",
+                      "chapter": "5",
+                      "book": "2 Cor."
+                    }
+                  ],
+                  "hidden": false,
+                  "style": "short"
+                },
+                {
+                  "language": "en",
+                  "metadata": { "response": "Thanks be to God." },
+                  "category": [],
+                  "value": [
+                    {
+                      "verse": "11",
+                      "text": "From the rising of the sun to its setting my Name shall be great among the nations, and in every place incense shall be offered to my Name, and a pure offering; for my Name shall be great among the nations, says the Lord of Hosts.",
+                      "book": "Malachi",
+                      "chapter": "1"
+                    }
+                  ],
+                  "citation": "Malachi 1:11",
+                  "slug": "noonday_sentence",
+                  "version": "bcp1979",
+                  "lastRevision": 22,
+                  "type": "bible-reading",
+                  "style": "short",
+                  "hidden": false
+                }
+              ],
+              "language": "es"
             }
-          ],
-          "style": "responsive",
-          "hidden": false
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "metadata": {},
+              "type": "rubric",
+              "value": ["A meditation, silent or spoken, may follow."],
+              "hidden": false
+            },
+            {
+              "metadata": {},
+              "type": "rubric",
+              "value": ["A meditation, silent or spoken, may follow."],
+              "hidden": false,
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "type": "rubric",
+              "hidden": false,
+              "value": ["The Officiant then begins the Prayers"]
+            },
+            {
+              "type": "rubric",
+              "hidden": false,
+              "value": ["The Officiant then begins the Prayers"],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "style": "responsive",
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "response": "Christ, have mercy.",
+                  "text": "Lord, have mercy."
+                },
+                { "text": "Lord, have mercy." }
+              ],
+              "hidden": false
+            },
+            {
+              "style": "responsive",
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "response": "Christ, have mercy.",
+                  "text": "Lord, have mercy."
+                },
+                { "text": "Lord, have mercy." }
+              ],
+              "hidden": false,
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "value": [
+                {
+                  "version_label": "Traditional",
+                  "category": [],
+                  "display_format": "unison",
+                  "hidden": false,
+                  "source": { "citation": "", "api": "", "source": "" },
+                  "type": "text",
+                  "value": [
+                    "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
+                  ],
+                  "metadata": { "omit_response": true },
+                  "style": "prayer"
+                },
+                {
+                  "category": [],
+                  "metadata": { "omit_response": true },
+                  "hidden": false,
+                  "style": "prayer",
+                  "value": [
+                    "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil."
+                  ],
+                  "display_format": "unison",
+                  "version_label": "Contemporary",
+                  "source": { "source": "", "api": "", "citation": "" },
+                  "type": "text"
+                }
+              ],
+              "metadata": { "editor_selected": 0, "selected": 0 },
+              "type": "option",
+              "hidden": false
+            },
+            {
+              "value": [
+                {
+                  "version_label": "Traditional",
+                  "category": [],
+                  "display_format": "unison",
+                  "hidden": false,
+                  "source": { "citation": "", "api": "", "source": "" },
+                  "type": "text",
+                  "value": [
+                    "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
+                  ],
+                  "metadata": { "omit_response": true },
+                  "style": "prayer"
+                },
+                {
+                  "category": [],
+                  "metadata": { "omit_response": true },
+                  "hidden": false,
+                  "style": "prayer",
+                  "value": [
+                    "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil."
+                  ],
+                  "display_format": "unison",
+                  "version_label": "Contemporary",
+                  "source": { "source": "", "api": "", "citation": "" },
+                  "type": "text"
+                }
+              ],
+              "metadata": { "editor_selected": 0, "selected": 0 },
+              "type": "option",
+              "hidden": false,
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "value": [
+                {
+                  "label": "Officiant",
+                  "text": "Lord, hear our prayer.",
+                  "response": ""
+                },
+                { "label": "People", "text": "And let our cry come to you." },
+                { "label": "Officiant", "text": "Let us pray." }
+              ],
+              "style": "preces",
+              "hidden": false,
+              "type": "responsive"
+            },
+            {
+              "value": [
+                {
+                  "label": "Officiant",
+                  "text": "Lord, hear our prayer.",
+                  "response": ""
+                },
+                { "label": "People", "text": "And let our cry come to you." },
+                { "label": "Officiant", "text": "Let us pray." }
+              ],
+              "style": "preces",
+              "hidden": false,
+              "type": "responsive",
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "type": "rubric",
+              "value": [
+                "The Officiant then says one of the following Collect. If desired, the Collect of the Day may be used."
+              ]
+            },
+            {
+              "type": "rubric",
+              "value": [
+                "The Officiant then says one of the following Collect. If desired, the Collect of the Day may be used."
+              ],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "type": "option",
+              "value": [
+                {
+                  "type": "text",
+                  "metadata": {},
+                  "style": "prayer",
+                  "value": [
+                    "Heavenly Father, send your Holy Spirit into our hearts, to direct and rule us according to your will, to comfort us in all our afflictions, to defend us from all error, and to lead us into all truth; through Jesus Christ our Lord."
+                  ],
+                  "slug": "noonday_collect",
+                  "version": "bcp1979",
+                  "lookup": "category",
+                  "lastRevision": 21,
+                  "category": [],
+                  "language": "en",
+                  "hidden": false,
+                  "label": ""
+                },
+                {
+                  "style": "prayer",
+                  "hidden": false,
+                  "lastRevision": 30,
+                  "label": "",
+                  "metadata": {},
+                  "lookup": "category",
+                  "slug": "noonday_collect",
+                  "value": [
+                    "Blessed Savior, at this hour you hung upon the cross, stretching out your loving arms: Grant that all the peoples of the earth may look to you and be saved; for your tender mercies’ sake."
+                  ],
+                  "language": "en",
+                  "type": "text",
+                  "version": "bcp1979",
+                  "category": []
+                },
+                {
+                  "lastRevision": 28,
+                  "label": "",
+                  "type": "text",
+                  "language": "en",
+                  "style": "prayer",
+                  "category": [],
+                  "version": "bcp1979",
+                  "slug": "noonday_collect",
+                  "value": [
+                    "Lord Jesus Christ, you said to your apostles, “Peace I give to you; my peace I leave with you:” Regard not our sins, but the faith of your Church, and give to us the peace and unity of that heavenly city, where with the Father and the Holy Spirit you live and reign, now and for ever."
+                  ],
+                  "hidden": false,
+                  "metadata": {},
+                  "lookup": "category"
+                },
+                {
+                  "metadata": {},
+                  "lastRevision": 22,
+                  "category": [],
+                  "hidden": false,
+                  "style": "prayer",
+                  "lookup": "category",
+                  "slug": "noonday_collect",
+                  "label": "",
+                  "version": "bcp1979",
+                  "language": "en",
+                  "type": "text",
+                  "value": [
+                    "Almighty Savior, who at noonday called your servant Saint Paul to be an apostle to the Gentiles: We pray you to illumine the world with the radiance of your glory, that all nations may come and worship you; for you live and reign for ever and ever."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "option",
+              "value": [
+                {
+                  "type": "text",
+                  "metadata": {},
+                  "style": "prayer",
+                  "value": [
+                    "Heavenly Father, send your Holy Spirit into our hearts, to direct and rule us according to your will, to comfort us in all our afflictions, to defend us from all error, and to lead us into all truth; through Jesus Christ our Lord."
+                  ],
+                  "slug": "noonday_collect",
+                  "version": "bcp1979",
+                  "lookup": "category",
+                  "lastRevision": 21,
+                  "category": [],
+                  "language": "en",
+                  "hidden": false,
+                  "label": ""
+                },
+                {
+                  "style": "prayer",
+                  "hidden": false,
+                  "lastRevision": 30,
+                  "label": "",
+                  "metadata": {},
+                  "lookup": "category",
+                  "slug": "noonday_collect",
+                  "value": [
+                    "Blessed Savior, at this hour you hung upon the cross, stretching out your loving arms: Grant that all the peoples of the earth may look to you and be saved; for your tender mercies’ sake."
+                  ],
+                  "language": "en",
+                  "type": "text",
+                  "version": "bcp1979",
+                  "category": []
+                },
+                {
+                  "lastRevision": 28,
+                  "label": "",
+                  "type": "text",
+                  "language": "en",
+                  "style": "prayer",
+                  "category": [],
+                  "version": "bcp1979",
+                  "slug": "noonday_collect",
+                  "value": [
+                    "Lord Jesus Christ, you said to your apostles, “Peace I give to you; my peace I leave with you:” Regard not our sins, but the faith of your Church, and give to us the peace and unity of that heavenly city, where with the Father and the Holy Spirit you live and reign, now and for ever."
+                  ],
+                  "hidden": false,
+                  "metadata": {},
+                  "lookup": "category"
+                },
+                {
+                  "metadata": {},
+                  "lastRevision": 22,
+                  "category": [],
+                  "hidden": false,
+                  "style": "prayer",
+                  "lookup": "category",
+                  "slug": "noonday_collect",
+                  "label": "",
+                  "version": "bcp1979",
+                  "language": "en",
+                  "type": "text",
+                  "value": [
+                    "Almighty Savior, who at noonday called your servant Saint Paul to be an apostle to the Gentiles: We pray you to illumine the world with the radiance of your glory, that all nations may come and worship you; for you live and reign for ever and ever."
+                  ]
+                }
+              ],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "hidden": false,
+              "type": "rubric",
+              "value": ["Free intercessions may be offered."]
+            },
+            {
+              "hidden": false,
+              "type": "rubric",
+              "value": ["Free intercessions may be offered."],
+              "language": "es"
+            }
+          ]
+        },
+        {
+          "type": "parallel",
+          "value": [
+            {
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "text": "Let us bless the Lord.",
+                  "response": "Thanks be to God."
+                }
+              ],
+              "style": "responsive",
+              "hidden": false
+            },
+            {
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "text": "Let us bless the Lord.",
+                  "response": "Thanks be to God."
+                }
+              ],
+              "style": "responsive",
+              "hidden": false,
+              "language": "es"
+            }
+          ]
         }
       ],
       "version": "Rite-II",

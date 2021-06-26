@@ -4,8 +4,7 @@
   "deno.lint": true, // inline deno lint diagnostics, requires `deno.unstable`
   "deno.unstable": true,
   "deno.suggest.imports.hosts": {
-    "https://cdn.pika.dev": false,
-    "https://deno.land": false,
+    "https://deno.land": true,
     "https://cdn.skypack.dev": true
   }, // also provides unstable type declarations in VS Code
   "deno.config": "./tsconfig.json"

@@ -1,15 +1,12 @@
 import h from "https://cdn.pika.dev/vhtml@2.2.0";
 
-export function DocActionMenu() {
-  return <template id="cp-doc-menu">
-    <header class="cp-doc-header">
+type DocActionMenuProps = {
+  hidden?: boolean;
+}
+
+export function DocActionMenu({ hidden } : DocActionMenuProps) {
+  return <header id="cp-doc-header" class={hidden ? "hidden" : ""}>
       <menu class="cp-doc-menu">
-        {/*<li>
-          <button class="clipboard">
-            <img src="/assets/icon/clipboard-regular.svg" />
-            <label>Copy Text</label>
-          </button>
-        </li>*/}
         <li>
           <button class="venite">
             <img src="/assets/icon/venite.svg" />
@@ -24,5 +21,4 @@ export function DocActionMenu() {
         </li>
       </menu>
     </header>
-  </template>
 }

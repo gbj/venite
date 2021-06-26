@@ -56,61 +56,66 @@ async function watchFiles(
 
   let rebuilding = false;
 
-  for await (const event of watcher) {
-    if (
-      !event.paths
-        .map((path) => path.includes("/dist/"))
-        .reduce((acc, curr) => acc && curr, true)
-    ) {
-      debounce(async () => {
-        try {
-          if (!rebuilding && event.kind == "modify") {
-            rebuilding = true;
+  while (true) {
+    try {
+      for await (const event of watcher) {
+        if (
+          !event.paths
+            .map((path) => path.includes("/dist/"))
+            .reduce((acc, curr) => acc && curr, true)
+        ) {
+          debounce(async () => {
+            try {
+              if (!rebuilding && event.kind == "modify") {
+                rebuilding = true;
 
-            console.log("\n\nRebuilding...\n\n");
+                console.log("\n\nRebuilding...\n\n");
 
-            const rebuildFragments = event.paths.map((path) =>
-              checkMap(refreshMap, path)
-            );
-            // if every fragment has a function to update it, call them all
-            if (!rebuildFragments.includes(undefined)) {
-              await Promise.all(
-                event.paths.map((path) => {
-                  console.log("Rebuilding ", path);
-                  const f = checkMap(refreshMap, path);
-                  if (f) f();
-                })
-              );
-            }
-            // otherwise, just rebuild the whole app
-            else {
-              console.log("\n\nRebuilding complete app.\n\n");
-              await build();
-            }
-
-            console.log("\n\nFinished rebuilding.");
-            console.log(
-              "\n\nTelling ",
-              Array.from(clients.entries()).length,
-              "clients to refresh."
-            );
-
-            if (Array.from(clients.entries()).length > 0) {
-              for (const [, sock] of clients) {
-                try {
-                  console.log("Sending refresh", sock);
-                  await sock.send("Refresh");
-                } catch (e) {
-                  console.error("Socket error", e);
+                const rebuildFragments = event.paths.map((path) =>
+                  checkMap(refreshMap, path)
+                );
+                // if every fragment has a function to update it, call them all
+                if (!rebuildFragments.includes(undefined)) {
+                  await Promise.all(
+                    event.paths.map((path) => {
+                      console.log("Rebuilding ", path);
+                      const f = checkMap(refreshMap, path);
+                      if (f) f();
+                    })
+                  );
                 }
+                // otherwise, just rebuild the whole app
+                else {
+                  console.log("\n\nRebuilding complete app.\n\n");
+                  await build();
+                }
+
+                console.log("\n\nFinished rebuilding.");
+                console.log(
+                  "\n\nTelling ",
+                  Array.from(clients.entries()).length,
+                  "clients to refresh."
+                );
+
+                if (Array.from(clients.entries()).length > 0) {
+                  for (const [, sock] of clients) {
+                    try {
+                      await sock.send("Refresh");
+                    } catch (e) {
+                      console.error("Socket error", e);
+                    }
+                  }
+                }
+                rebuilding = false;
               }
+            } catch (e) {
+              console.warn("(watchFiles error)", e);
             }
-            rebuilding = false;
-          }
-        } catch (e) {
-          console.warn("(watchFiles error)", e);
+          }, 50)();
         }
-      }, 50)();
+      }
+    } catch (e) {
+      console.warn(e);
     }
   }
 }
@@ -152,7 +157,6 @@ async function handleDepartures(
   clients: Map<string, WebSocket>
 ) {
   for await (const ev of sock) {
-    console.log(ev);
     if (isWebSocketCloseEvent(ev)) {
       console.log("\n\nClient", uid, "disconnected");
       try {

@@ -18,10 +18,12 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
   const mainHtml = await main;
   
   const body = (<body>
-    <TOCMenu/>
-    <DisplaySettings/>
+    <header id="menu-header">
+      <TOCMenu/>
+      <DisplaySettings/>
+    </header>
+    <DocActionMenu hidden={true} />
     <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>
-    <DocActionMenu/>
   </body>);
 
   const links = linksFromHTML(body);

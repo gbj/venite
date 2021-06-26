@@ -1,42 +1,65 @@
-import { LiturgicalDocument } from "/ldf.js";
+import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
+
+// List of selected subdocs to export
+type Selection = {
+  el: HTMLElement;
+  ldf: Promise<LiturgicalDocument>;
+};
+
+const selections: Selection[] = [];
+
+// Menu button handlers
+const menu = document.getElementById("cp-doc-header");
+(menu.querySelector("button.venite") as HTMLButtonElement).onclick = (
+  ev: MouseEvent
+) => copyLDF(ev);
+(menu.querySelector("button.word") as HTMLButtonElement).onclick = (
+  ev: MouseEvent
+) => exportWord(ev);
 
 // Listen for all clicks in the window, and if the target is a descendant of an
 // element with cp-doc class or with data-ldf set, then toggle buttons
 window.addEventListener("click", (ev) => {
   const target = ev.target as HTMLElement,
-    parent = target.closest(".cp-doc"),
-    local = target.closest("[data-ldf]") || target.closest("[data-slug]");
-  if (parent) {
-    handle(parent);
-  }
-  if (local && parent !== local) {
+    local: HTMLElement =
+      target.closest("[data-ldf]") || target.closest("[data-slug]");
+  if (local) {
     handle(local);
   }
 });
 
-const handle = (el: HTMLElement, force: boolean | undefined = undefined) => {
-  if (force !== undefined) {
-    el.dataset.toggled = force.toString();
-  } else {
-    el.dataset.toggled =
-      el.dataset.toggled == undefined || el.dataset.toggled === "false"
-        ? "true"
-        : "false";
-  }
+const handle = (el: HTMLElement) => {
+  el.dataset.toggled =
+    el.dataset.toggled == undefined || el.dataset.toggled === "false"
+      ? "true"
+      : "false";
 
+  // toggled
   if (el.dataset.toggled === "true") {
-    const menu = (document.getElementById("cp-doc-menu") as HTMLTemplateElement)
-        .content,
-      menuNode = document.importNode(menu, true);
-    el.parentNode.insertBefore(menuNode, el);
+    // highlight the element
+    el.classList.add("selected");
 
-    el.parentNode.querySelector("button.venite").onclick = (ev: MouseEvent) =>
-      copyLDF(ev, el);
-    el.parentNode.querySelector("button.word").onclick = (ev: MouseEvent) =>
-      exportWord(ev, el);
-  } else {
-    for (const menu of el.parentNode.querySelectorAll("menu")) {
-      menu.remove();
+    // add to selections
+    selections.push({ el, ldf: loadDoc(el) });
+
+    // show menu
+    if (selections.length > 0) {
+      menu.classList.remove("hidden");
+    }
+  }
+  // untoggled
+  else {
+    // remove highlight on element
+    el.classList.remove("selected");
+
+    // remove this element from selections
+    const entry = selections.find((e) => e.el == el),
+      i = selections.indexOf(entry);
+    selections.splice(i, 1);
+
+    // if there are now no selections, hide the menu
+    if (selections.length === 0) {
+      menu.classList.add("hidden");
     }
   }
 };
@@ -65,14 +88,11 @@ async function loadDoc(el: HTMLElement): Promise<LiturgicalDocument> {
 }
 
 // Copy LDF JSON to clipboard
-async function copyLDF(ev: MouseEvent, el: HTMLElement) {
-  const target = ev.target as HTMLElement,
-    btn =
-      target.tagName.toLowerCase() === "button"
-        ? target
-        : (target.closest("button") as HTMLElement);
+async function copyLDF(_ev: MouseEvent) {
+  const btn = menu.querySelector("button.venite") as HTMLElement;
   try {
-    const doc = await loadDoc(el),
+    const value = await Promise.all(selections.map((e) => e.ldf)),
+      doc = value.length > 1 ? { type: "liturgy", value } : value[0],
       json = JSON.stringify(doc);
     navigator.clipboard.writeText(json);
     setStatus(btn, "success");
@@ -83,12 +103,9 @@ async function copyLDF(ev: MouseEvent, el: HTMLElement) {
 }
 
 // Export document to Word
-async function exportWord(ev: MouseEvent, el: HTMLElement) {
+async function exportWord(ev: MouseEvent) {
   const target = ev.target as HTMLElement,
-    btn =
-      target.tagName.toLowerCase() === "button"
-        ? target
-        : (target.closest("button") as HTMLElement),
+    btn = menu.querySelector("button.word") as HTMLElement,
     label =
       target.tagName.toLowerCase() === "label"
         ? target
@@ -101,8 +118,9 @@ async function exportWord(ev: MouseEvent, el: HTMLElement) {
   label.style.paddingRight = "0";
 
   try {
-    const { slug } = el.dataset,
-      doc = await loadDoc(el),
+    const value = await Promise.all(selections.map((e) => e.ldf)),
+      doc = value.length > 1 ? { type: "liturgy", value } : value[0],
+      { slug } = selections[0]?.el.dataset,
       settings = {
         psalmVerses: (
           document.getElementById("psalmverses") as HTMLInputElement

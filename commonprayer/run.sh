@@ -1,1 +1,1 @@
-deno run -c tsconfig.json --allow-run --allow-read --allow-write --allow-net --unstable src/ssg.ts $1
+deno run -c tsconfig.deno.json --allow-run --allow-read --allow-write --allow-net --unstable src/ssg.ts $1
