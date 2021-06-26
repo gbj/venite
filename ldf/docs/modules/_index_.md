@@ -38,6 +38,7 @@
 * [Operation](_index_.md#operation)
 * [Option](_index_.md#option)
 * [PROPERS](_index_.md#propers)
+* [Parallel](_index_.md#parallel)
 * [Preference](_index_.md#preference)
 * [PreferenceOption](_index_.md#preferenceoption)
 * [ProperLiturgy](_index_.md#properliturgy)
@@ -279,6 +280,12 @@ ___
 ###  PROPERS
 
 • **PROPERS**:
+
+___
+
+###  Parallel
+
+• **Parallel**:
 
 ___
 

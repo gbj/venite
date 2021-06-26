@@ -56,6 +56,7 @@
 * ["liturgy/preference"](modules/_liturgy_preference_.md)
 * ["meditation"](modules/_meditation_.md)
 * ["option"](modules/_option_.md)
+* ["parallel"](modules/_parallel_.md)
 * ["psalm"](modules/_psalm_.md)
 * ["refrain"](modules/_refrain_.md)
 * ["responsive-prayer"](modules/_responsive_prayer_.md)

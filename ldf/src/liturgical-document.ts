@@ -27,6 +27,7 @@ const TYPES = [
   'psalm',
   'meditation',
   'image',
+  'parallel',
 ] as const;
 export type TypeTuple = typeof TYPES;
 

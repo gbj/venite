@@ -1,6 +1,5 @@
-import { LiturgicalDocument } from "@venite/ldf/dist/cjs";
-
 import {
+  LiturgicalDocument,
   Liturgy,
   Option,
   BibleReading,
@@ -11,6 +10,7 @@ import {
   Text,
   Psalm,
   ResponsivePrayer,
+  Parallel,
 } from "@venite/ldf/dist/cjs";
 import { bibleReadingToHTML } from "./bible-reading";
 import { genericTextToHTML } from "./generic-text";
@@ -20,6 +20,7 @@ import { psalmToHTML } from "./psalm";
 import { responsivePrayerToHTML } from "./responsive-prayer";
 import { optionToHTML } from "./option";
 import { LDFToHTMLConfig } from "./config";
+import { parallelToHTML } from "./parallel";
 
 export function ldfToHTML(
   inDoc: LiturgicalDocument,
@@ -43,6 +44,8 @@ export function ldfToHTML(
           )
           .flat()
           .join("\n");
+      case "parallel":
+        return parallelToHTML(inDoc as Parallel, config);
       case "option":
         return optionToHTML(inDoc as Option, config);
       case "bible-reading":

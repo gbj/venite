@@ -140,6 +140,14 @@ article {
   font-size: 1em;
 }
 
+/* Parallel */
+.parallel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+}
+
 /* Option */
 .option > input.option-button {
   display: none;

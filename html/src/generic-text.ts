@@ -28,7 +28,9 @@ export function genericTextToHTML(
 
   return `<article ${ldf} class="doc ${doc.type} ${
     doc.style || ""
-  } ${style}">${heading}${((doc.value || []) as string[])
+  } ${style}" lang="${doc.language || "en"}">${heading}${(
+    (doc.value || []) as string[]
+  )
     .map(
       (line, lineIndex) =>
         `<p>${

@@ -34,7 +34,7 @@
 
 \+ **new Preference**(`data`: Partial‹[Preference](_liturgy_preference_.preference.md)›): *[Preference](_liturgy_preference_.preference.md)*
 
-*Defined in [liturgy/preference.ts:35](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L35)*
+*Defined in [liturgy/preference.ts:35](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L35)*
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ Name | Type | Default |
 
 • **category**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L13)*
+*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L13)*
 
 Optional: Category to which a preference belongs, if any.
 
@@ -64,7 +64,7 @@ ___
 
 • **description**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:16](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L16)*
+*Defined in [liturgy/preference.ts:16](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L16)*
 
 Optional: Additional descriptive text. Can include HTML.
 
@@ -74,7 +74,7 @@ ___
 
 • **index**? : *undefined | number*
 
-*Defined in [liturgy/preference.ts:23](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L23)*
+*Defined in [liturgy/preference.ts:23](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L23)*
 
 Index for ordering within a set of preferences in the UI. (If not present, defaults to alphabet order.)
 
@@ -84,7 +84,7 @@ ___
 
 • **key**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L4)*
+*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L4)*
 
 Key of this preference within the parent `Liturgy`’s `preferences`
 
@@ -94,7 +94,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [liturgy/preference.ts:7](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L7)*
+*Defined in [liturgy/preference.ts:7](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L7)*
 
 Human-readable label for the preference
 
@@ -104,7 +104,7 @@ ___
 
 • **options**: *[PreferenceOption](_liturgy_preference_.preferenceoption.md)[]*
 
-*Defined in [liturgy/preference.ts:20](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L20)*
+*Defined in [liturgy/preference.ts:20](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L20)*
 
 Array of options for this preference, in order they will be displayed.
 Defaults to first in array if `PreferenceOption.default` is not set.
@@ -115,7 +115,7 @@ Defaults to first in array if `PreferenceOption.default` is not set.
 
 ▸ **getDefaultPref**(): *string*
 
-*Defined in [liturgy/preference.ts:31](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L31)*
+*Defined in [liturgy/preference.ts:31](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L31)*
 
 Returns the default value for the preference
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **getPreferenceOption**(`value`: string): *[PreferenceOption](_liturgy_preference_.preferenceoption.md) | undefined*
 
-*Defined in [liturgy/preference.ts:26](https://github.com/gbj/venite/blob/8854a149/ldf/src/liturgy/preference.ts#L26)*
+*Defined in [liturgy/preference.ts:26](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgy/preference.ts#L26)*
 
 Given a `value` for the preference, returns the full option
 

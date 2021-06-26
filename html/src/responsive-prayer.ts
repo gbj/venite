@@ -26,7 +26,9 @@ export function responsivePrayerToHTML(
   if (doc.style === "litany") {
     return [
       header,
-      `<article ${ldf} class="doc responsive-prayer litany">`,
+      `<article ${ldf} class="doc responsive-prayer litany"  lang="${
+        doc.language || "en"
+      }">`,
       ...(doc.value || []).map(
         (line) =>
           `<p class="line ${
@@ -44,7 +46,9 @@ export function responsivePrayerToHTML(
   } else if (doc.style === "preces") {
     return [
       header,
-      `<article ${ldf} class="doc responsive-prayer preces">`,
+      `<article ${ldf} class="doc responsive-prayer preces"  lang="${
+        doc.language || "en"
+      }">`,
       ...(doc.value || []).map(
         (line, lineIndex) =>
           `<p class="line ${
@@ -58,7 +62,9 @@ export function responsivePrayerToHTML(
   } else {
     return [
       header,
-      `<article ${ldf} class="doc responsive-prayer responsive"><p>`,
+      `<article ${ldf} class="doc responsive-prayer responsive"  lang="${
+        doc.language || "en"
+      }"><p>`,
       ...(doc.value || []).map(
         (line, lineIndex) =>
           `${lineIndex > 0 ? "<br>" : ""}${processText(line.text)}${

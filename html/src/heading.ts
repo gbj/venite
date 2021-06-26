@@ -134,7 +134,7 @@ export function headingToHTML(
     day ||
     day
       ? [
-          `<article ${ldf} class="doc heading">`,
+          `<article ${ldf} class="doc heading" lang="${doc.language || "en"}">`,
           ...(text ? text : []),
           date ? headerNode(level, [date], true) : null,
           day ? headerNode(level, day, true) : null,

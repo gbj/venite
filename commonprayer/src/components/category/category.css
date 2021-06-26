@@ -1,15 +1,15 @@
-#category-list {
+.category-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-#category-list li {
+.category-list li {
   margin: 0;
   padding: 0;
 }
 
-#category-list li.hidden {
+.category-list li.hidden {
   display: none;
 }
 

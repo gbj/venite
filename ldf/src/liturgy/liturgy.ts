@@ -46,6 +46,9 @@ export class Liturgy extends LiturgicalDocument {
 
     /** A list of pronouns that the user should be given the option to swap out. */
     pronouns?: string[];
+
+    /** A map of languages (ISO 639-1 two-letter codes) and whether to display their respective parallel texts */
+    parallels?: Record<string, boolean>;
   };
 
   /** Value is an array of any kind of LiturgicalDocument, including child classes */

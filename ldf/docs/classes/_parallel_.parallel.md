@@ -1,73 +1,73 @@
-[@venite/ldf](../README.md) › [Globals](../globals.md) › ["heading"](../modules/_heading_.md) › [Heading](_heading_.heading.md)
+[@venite/ldf](../README.md) › [Globals](../globals.md) › ["parallel"](../modules/_parallel_.md) › [Parallel](_parallel_.parallel.md)
 
-# Class: Heading
+# Class: Parallel
 
 ## Hierarchy
 
 * [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md)
 
-  ↳ **Heading**
+  ↳ **Parallel**
 
 ## Index
 
 ### Constructors
 
-* [constructor](_heading_.heading.md#constructor)
+* [constructor](_parallel_.parallel.md#constructor)
 
 ### Properties
 
-* [api](_heading_.heading.md#optional-api)
-* [category](_heading_.heading.md#category)
-* [citation](_heading_.heading.md#optional-citation)
-* [condition](_heading_.heading.md#condition)
-* [date_created](_heading_.heading.md#optional-date_created)
-* [date_modified](_heading_.heading.md#optional-date_modified)
-* [day](_heading_.heading.md#optional-day)
-* [display_format](_heading_.heading.md#optional-display_format)
-* [display_settings](_heading_.heading.md#optional-display_settings)
-* [hidden](_heading_.heading.md#hidden)
-* [id](_heading_.heading.md#optional-id)
-* [label](_heading_.heading.md#label)
-* [language](_heading_.heading.md#language)
-* [lastRevision](_heading_.heading.md#lastrevision)
-* [lookup](_heading_.heading.md#optional-lookup)
-* [metadata](_heading_.heading.md#metadata)
-* [responsive](_heading_.heading.md#optional-responsive)
-* [sharing](_heading_.heading.md#optional-sharing)
-* [slug](_heading_.heading.md#slug)
-* [source](_heading_.heading.md#optional-source)
-* [style](_heading_.heading.md#style)
-* [type](_heading_.heading.md#type)
-* [uid](_heading_.heading.md#optional-uid)
-* [value](_heading_.heading.md#value)
-* [version](_heading_.heading.md#version)
-* [version_label](_heading_.heading.md#optional-version_label)
+* [api](_parallel_.parallel.md#optional-api)
+* [category](_parallel_.parallel.md#category)
+* [citation](_parallel_.parallel.md#optional-citation)
+* [condition](_parallel_.parallel.md#condition)
+* [date_created](_parallel_.parallel.md#optional-date_created)
+* [date_modified](_parallel_.parallel.md#optional-date_modified)
+* [day](_parallel_.parallel.md#optional-day)
+* [display_format](_parallel_.parallel.md#optional-display_format)
+* [display_settings](_parallel_.parallel.md#optional-display_settings)
+* [hidden](_parallel_.parallel.md#hidden)
+* [id](_parallel_.parallel.md#optional-id)
+* [label](_parallel_.parallel.md#label)
+* [language](_parallel_.parallel.md#language)
+* [lastRevision](_parallel_.parallel.md#lastrevision)
+* [lookup](_parallel_.parallel.md#optional-lookup)
+* [metadata](_parallel_.parallel.md#metadata)
+* [responsive](_parallel_.parallel.md#optional-responsive)
+* [sharing](_parallel_.parallel.md#optional-sharing)
+* [slug](_parallel_.parallel.md#slug)
+* [source](_parallel_.parallel.md#optional-source)
+* [style](_parallel_.parallel.md#optional-style)
+* [type](_parallel_.parallel.md#type)
+* [uid](_parallel_.parallel.md#optional-uid)
+* [value](_parallel_.parallel.md#value)
+* [version](_parallel_.parallel.md#version)
+* [version_label](_parallel_.parallel.md#optional-version_label)
 
 ### Methods
 
-* [availableDisplayFormats](_heading_.heading.md#availabledisplayformats)
-* [availableLookupTypes](_heading_.heading.md#availablelookuptypes)
-* [availableStyles](_heading_.heading.md#availablestyles)
-* [availableTypes](_heading_.heading.md#availabletypes)
-* [include](_heading_.heading.md#include)
+* [availableDisplayFormats](_parallel_.parallel.md#availabledisplayformats)
+* [availableLookupTypes](_parallel_.parallel.md#availablelookuptypes)
+* [availableStyles](_parallel_.parallel.md#availablestyles)
+* [availableTypes](_parallel_.parallel.md#availabletypes)
+* [include](_parallel_.parallel.md#include)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Heading**(`data`: Partial‹[Heading](_heading_.heading.md)›): *[Heading](_heading_.heading.md)*
+\+ **new Parallel**(`data`: Partial‹[Parallel](_parallel_.parallel.md)›): *[Parallel](_parallel_.parallel.md)*
 
 *Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[constructor](_liturgy_liturgy_.liturgy.md#constructor)*
 
-*Defined in [heading.ts:37](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L37)*
+Defined in parallel.ts:11
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`data` | Partial‹[Heading](_heading_.heading.md)› | {} |
+`data` | Partial‹[Parallel](_parallel_.parallel.md)› | {} |
 
-**Returns:** *[Heading](_heading_.heading.md)*
+**Returns:** *[Parallel](_parallel_.parallel.md)*
 
 ## Properties
 
@@ -289,11 +289,11 @@ ___
 
 *Overrides [Rubric](_rubric_.rubric.md).[metadata](_rubric_.rubric.md#optional-metadata)*
 
-*Defined in [heading.ts:16](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L16)*
+Defined in parallel.ts:6
 
 #### Type declaration:
 
-* **level**? : *undefined | number*
+* **parallels**? : *Record‹string, boolean›*
 
 ___
 
@@ -352,28 +352,25 @@ Source for the physical resource within which the document can be found
 
 ___
 
-###  style
+### `Optional` style
 
-• **style**: *StyleTuple[number]*
+• **style**? : *string | null*
 
-*Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[style](_liturgy_liturgy_.liturgy.md#optional-style)*
+*Inherited from [Liturgy](_liturgy_liturgy_.liturgy.md).[style](_liturgy_liturgy_.liturgy.md#optional-style)*
 
-*Defined in [heading.ts:14](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L14)*
+*Defined in [liturgical-document.ts:85](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgical-document.ts#L85)*
 
-What kind of value to display
-If `text`, displays plain text stored in `value`
-If `day`, displays name of `LiturgicalDay` stored in `day`
-If `date`, displays localized version of `Date` determined by `dateFromYMDString(day.date)`
+An optional string that clarifies the variety; for example, a `Text` could be of the `prayer` style.
 
 ___
 
 ###  type
 
-• **type**: *"heading"*
+• **type**: *"parallel"*
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[type](_liturgical_document_.liturgicaldocument.md#type)*
 
-*Defined in [heading.ts:7](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L7)*
+Defined in parallel.ts:4
 
 ___
 
@@ -394,16 +391,11 @@ ___
 
 ###  value
 
-• **value**: *string[]*
+• **value**: *[LiturgicalDocument](_liturgical_document_.liturgicaldocument.md)[]*
 
 *Overrides [LiturgicalDocument](_liturgical_document_.liturgicaldocument.md).[value](_liturgical_document_.liturgicaldocument.md#optional-value)*
 
-*Defined in [heading.ts:27](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L27)*
-
-Contains the text of the heading
-value[0] appears as the main heading
-value[1] is indented
-value[2..] appear as paragraphs below the heading
+Defined in parallel.ts:11
 
 ___
 
@@ -439,15 +431,15 @@ Optional: A human-readable name for this particular version of a larger category
 
 ###  availableDisplayFormats
 
-▸ **availableDisplayFormats**(): *never[]*
+▸ **availableDisplayFormats**(): *ReadonlyArray‹string›*
 
-*Overrides [Meditation](_meditation_.meditation.md).[availableDisplayFormats](_meditation_.meditation.md#availabledisplayformats)*
+*Inherited from [Meditation](_meditation_.meditation.md).[availableDisplayFormats](_meditation_.meditation.md#availabledisplayformats)*
 
-*Defined in [heading.ts:35](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L35)*
+*Defined in [liturgical-document.ts:237](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgical-document.ts#L237)*
 
-No meaningful difference in display formats for this type
+Returns the list of all available `display_format` values
 
-**Returns:** *never[]*
+**Returns:** *ReadonlyArray‹string›*
 
 ___
 
@@ -469,11 +461,11 @@ ___
 
 ▸ **availableStyles**(): *ReadonlyArray‹string›*
 
-*Overrides [Liturgy](_liturgy_liturgy_.liturgy.md).[availableStyles](_liturgy_liturgy_.liturgy.md#availablestyles)*
+*Inherited from [Liturgy](_liturgy_liturgy_.liturgy.md).[availableStyles](_liturgy_liturgy_.liturgy.md#availablestyles)*
 
-*Defined in [heading.ts:30](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/heading.ts#L30)*
+*Defined in [liturgical-document.ts:227](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/liturgical-document.ts#L227)*
 
-Returns the list of all possible `style` values.
+Returns the list of all possible `style` values. Child classes should override if they have styles available.
 
 **Returns:** *ReadonlyArray‹string›*
 

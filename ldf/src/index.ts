@@ -31,6 +31,7 @@ export * from './liturgy/preference';
 export * from './liturgy/client-preferences';
 export * from './meditation';
 export * from './option';
+export * from './parallel';
 export * from './psalm';
 export * from './refrain';
 export * from './responsive-prayer';
