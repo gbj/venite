@@ -35,7 +35,7 @@ menu.cp-doc-menu li button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-itrems: center;
+  align-items: center;
   background: none;
   font-family: var(--cp-ui-font-family);
   padding: 0.5rem 1rem;
@@ -110,7 +110,6 @@ menu.cp-doc-menu li button.error img {
   border-width: 1px;
   border-color: var(--cp-selected-border);
   background-color: var(--cp-selected-background);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
   padding: 0px;
 }
 

@@ -19,12 +19,19 @@ const menu = document.getElementById("cp-doc-header");
 
 // Listen for all clicks in the window, and if the target is a descendant of an
 // element with cp-doc class or with data-ldf set, then toggle buttons
+
+// Then add the actual click listener
 window.addEventListener("click", (ev) => {
-  const target = ev.target as HTMLElement,
-    local: HTMLElement =
-      target.closest("[data-ldf]") || target.closest("[data-slug]");
-  if (local) {
-    handle(local);
+  // Don't activate this if the click is part of a text selection
+  const cellText = document.getSelection();
+  if (cellText.type === "Range") {
+    ev.stopPropagation();
+  } else {
+    const target = ev.target as HTMLElement,
+      local: HTMLElement = target.closest("[data-ldf]");
+    if (local) {
+      handle(local);
+    }
   }
 });
 
@@ -42,6 +49,9 @@ const handle = (el: HTMLElement) => {
     // add to selections
     selections.push({ el, ldf: loadDoc(el) });
 
+    // make it draggable
+    el.draggable = true;
+
     // show menu
     if (selections.length > 0) {
       menu.classList.remove("hidden");
@@ -56,6 +66,9 @@ const handle = (el: HTMLElement) => {
     const entry = selections.find((e) => e.el == el),
       i = selections.indexOf(entry);
     selections.splice(i, 1);
+
+    // no longer draggable
+    el.draggable = false;
 
     // if there are now no selections, hide the menu
     if (selections.length === 0) {
@@ -169,3 +182,13 @@ async function exportWord(ev: MouseEvent) {
   label.style.paddingLeft = "";
   label.style.paddingRight = "";
 }
+
+// Drag and drop support
+document.querySelectorAll(".doc").forEach((el: HTMLElement) => {
+  el.addEventListener("dragstart", async (ev) => {
+    const doc = await loadDoc(el);
+    ev.dataTransfer.setData("application/json", JSON.stringify(doc));
+    ev.dataTransfer.setData("text/html", el.innerHTML);
+    ev.dataTransfer.setData("text/plain", el.innerText);
+  });
+});

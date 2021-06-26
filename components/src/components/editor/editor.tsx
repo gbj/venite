@@ -215,6 +215,55 @@ export class EditorComponent {
     }
   }
 
+  // Called drops an object into the editor component
+  // We'll check it to see if it's LDF JSON (copied from elsewhere in Venite for example)
+  @Listen('drop', { target: 'window', passive: false })
+  async onDrop(event : any) {
+    try {
+      const doc = JSON.parse(event.dataTransfer.getData("application/json"));
+      // if it's a valid JSON document with `type` and `value` fields we're just assuming it's LDF
+      if (doc.type && doc.value) {
+        // if there's a selected path, insert before it
+        // if not, insert at beginning
+        const { path, index } = this.focusObj ? this.pathAndIndexFromPath(this.focusObj.path) : { path: '/value', index: 0 };
+
+        console.log('dropped on ', path, index);
+
+        const change = new Change({
+          path,
+          op: [{
+            type: 'insertAt',
+            index: index + 1,
+            value: doc
+          }]
+        });
+    
+        this.editorDocShouldChange.emit(change);
+        
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    } catch (e) {
+      console.log("Text pasted in that is not LDF JSON.");
+    }
+  }
+
+  @Listen('dragover', { target: 'window', passive: false })
+  async onDragOver(event : any) {
+    if(event.dataTransfer.types.includes("application/json")) {
+      // canceling the event required to later receive a drop
+      event.preventDefault();
+    }
+  }
+
+  @Listen('dragenter', { target: 'window', passive: false })
+  async onDragEnter(event : any) {
+    if(event.dataTransfer.types.includes("application/json")) {
+      // canceling the event required to later receive a drop
+      event.preventDefault();
+    }
+  }
+
   pathAndIndexFromPath(startPath : string) : { path : string; index : number; previousIndex: number; field: string; } {
     // path is a string JSON pointer path, like          // /value/0/value/0
     const parts = startPath.split('/'),                  // ["", "value", "0", "value", "0"]

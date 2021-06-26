@@ -67,6 +67,17 @@ export class LiturgicalDocumentComponent {
   /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
   @Prop() preview : boolean = false;
 
+  // Listeners
+  @Listen("dragover", { passive: false })
+  onDragOver() {
+    if(this.path !== "/") {
+      this.hasFocus = true;
+      this.focusPath.emit(this.path);
+      this.focusObj.emit({obj: this.obj, path: this.path});
+      console.log("dragged over", this.path);
+    }
+  }
+
   // Events
   @Event() focusPath : EventEmitter<string>;
   @Event() focusObj : EventEmitter<{obj: LiturgicalDocument; path: string;}>;
