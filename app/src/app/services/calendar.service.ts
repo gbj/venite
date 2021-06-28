@@ -209,7 +209,7 @@ export class CalendarService implements CalendarServiceInterface {
         // original holy days defaulted to rank 3, so if no rank present opt for 3
         .map((hd) => (hd?.type?.rank ? hd : { ...hd, type: { rank: 3 } })),
       // add transferred feast days
-      transferred$: Observable<HolyDay | null> = from(
+      transferred$ = from(
         transferredFeast(
           async (dfd: Date) => {
             const week = await this.findWeek(
@@ -255,7 +255,7 @@ export class CalendarService implements CalendarServiceInterface {
               !holyday.type?.rank ||
               holyday.type?.rank >= highestHolyDayRank
           );
-        } else if (isSunday) {
+        } else if (isSunday && day.season !== "OrdinaryTime") {
           holydays = holydays.filter(
             (holyday) =>
               holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4
@@ -275,7 +275,7 @@ export class CalendarService implements CalendarServiceInterface {
         }
 
         // incorporate them into the `LiturgicalDay`
-        return day.addHolyDays(holydays);
+        return day.addHolyDays(uniqueBy(holydays, "slug"));
       })
     );
   }
@@ -329,4 +329,13 @@ export class CalendarService implements CalendarServiceInterface {
       shareReplay()
     )
   }*/
+}
+
+function uniqueBy<T>(a: T[], key: string): T[] {
+  return a.reduce((acc, curr) => {
+    if (!acc.find((e) => e[key] === curr[key])) {
+      acc.push(curr);
+    }
+    return acc;
+  }, [] as T[]);
 }

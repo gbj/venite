@@ -95,7 +95,9 @@ export class LectionaryService {
         "rclsundayTrack1",
       ].includes(lectionaryName)
     ) {
-      const key = `${day.date}-${lectionaryName}-${readingType}-${alternateYear}`;
+      const key = `${
+        day.propers || day.slug
+      }-${lectionaryName}-${readingType}-${alternateYear}`;
       if (!this._cache[key]) {
         this._cache[key] = this.http
           .get<LectionaryEntry[]>(`/offline/lectionary/${lectionaryName}.json`)
@@ -204,7 +206,8 @@ export class LectionaryService {
               } else {
                 return of(entries);
               }
-            })
+            }),
+            tap((e) => console.log("getReadings for day", day, "\n\n", e))
           )
           .toPromise();
       }
@@ -260,7 +263,12 @@ export class LectionaryService {
             return query;
           }
         })
-        .valueChanges();
+        .valueChanges()
+        .pipe(
+          tap((e) =>
+            console.log("getReadings (online) for day", day, "\n\n", e)
+          )
+        );
     }
   }
 
@@ -302,12 +310,4 @@ export class LectionaryService {
         }
     }
   }
-}
-
-function uniqueBy<T>(a: T[], key: (item: T) => string): T[] {
-  var seen = {};
-  return a.filter(function (item) {
-    var k = key(item);
-    return seen.hasOwnProperty(k) ? false : (seen[k] = true);
-  });
 }

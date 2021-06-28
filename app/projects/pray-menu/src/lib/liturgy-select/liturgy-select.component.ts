@@ -49,6 +49,8 @@ import {
   merge,
 } from "rxjs";
 import {
+  debounceTime,
+  distinctUntilChanged,
   distinctUntilKeyChanged,
   filter,
   first,
@@ -413,7 +415,17 @@ export class LiturgySelectComponent implements OnInit {
         )
       )
       .subscribe((liturgies) => {
-        this.availableProperLiturgies$.next(liturgies);
+        if (
+          JSON.stringify(liturgies) !==
+          JSON.stringify(this.availableProperLiturgies$.getValue())
+        ) {
+          console.log(
+            "sending more proper liturgies",
+            JSON.stringify(liturgies),
+            JSON.stringify(this.availableProperLiturgies$.getValue())
+          );
+          this.availableProperLiturgies$.next(liturgies);
+        }
       });
 
     this.availableReadings$ = combineLatest(
@@ -428,21 +440,88 @@ export class LiturgySelectComponent implements OnInit {
 
     // Choices of which day to observe
     this.observanceChoices$ = combineLatest([this.day$, this.liturgy$]).pipe(
-      map(([day, liturgy]) =>
-        this.config?.blackLetterObservanceLiturgies?.includes(liturgy?.slug) &&
-        this.config?.blackLetterObservanceDays?.includes(
-          day?.holy_day_observed?.slug
-        ) &&
-        (!day.holy_day_observed ||
-          (day.holy_day_observed &&
-            day.slug !== day.holy_day_observed?.slug)) &&
-        day.holy_days?.length > 0
-          ? [{ slug: day.week.slug, name: "Default Propers" }].concat(
-              day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
-            )
-          : []
-      )
+      map(([day, liturgy]) => {
+        const date = dateFromYMDString(day.date);
+
+        // either no liturgies listed in config, or the liturgy is one of those listed
+        const liturgyOk =
+          !this.config?.blackLetterObservanceLiturgies ||
+          this.config.blackLetterObservanceLiturgies.includes(liturgy?.slug);
+
+        // and either
+        // the black-letter day would ordinarily be observed
+        const decideWhetherToObserveBlackLetter =
+          this.config?.blackLetterObservanceDays?.includes(
+            day?.holy_day_observed?.slug
+          ) &&
+          (!day.holy_day_observed ||
+            (day.holy_day_observed &&
+              day.slug !== day.holy_day_observed?.slug)) &&
+          day.holy_days?.length > 0;
+
+        // or
+        // there's a red-letter day in holy_days, but it's not the day observed
+        const decideWhetherToTransfer =
+          (day?.holy_days || []).filter(
+            (hd) =>
+              hd.type?.rank >= 3 && hd.slug !== day.holy_day_observed?.slug
+          ).length > 0;
+
+        // or
+        // there was a transferred holy day
+        let isTransferred = false;
+        if (day.holy_day_observed?.mmdd) {
+          const [mm, dd] = day.holy_day_observed?.mmdd.split("/"),
+            [y, m, d] = day.date.split("-");
+          isTransferred = Number(m) !== Number(mm) || Number(d) !== Number(dd);
+        }
+
+        const baseDaySlug = `${date
+            .toLocaleString("en", { weekday: "long" })
+            .toLowerCase()}-${day.week.propers || day.week.slug}`,
+          baseDayWeekdayFragment =
+            date.getDay() === 0
+              ? ""
+              : `${date.toLocaleString("en", { weekday: "long" })} after ${
+                  day.week.omit_the ? "" : "the "
+                }`,
+          baseDayName = `${baseDayWeekdayFragment}${day.week.name}`;
+
+        // decision tree
+        if (liturgyOk && decideWhetherToObserveBlackLetter) {
+          return [{ slug: baseDaySlug, name: baseDayName }].concat(
+            day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
+          );
+        } else if (liturgyOk && decideWhetherToTransfer) {
+          return [{ slug: baseDaySlug, name: baseDayName }].concat(
+            day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
+          );
+        } else if (liturgyOk && isTransferred) {
+          return [
+            {
+              slug: day.holy_day_observed.slug,
+              name: day.holy_day_observed.name,
+            },
+            {
+              slug: baseDaySlug,
+              name: baseDayName,
+            },
+          ];
+        } else {
+          return [];
+        }
+      }),
+      debounceTime(50),
+      filter((oc) => oc?.length > 0),
+      distinctUntilChanged(
+        (prev, curr) => JSON.stringify(prev) === JSON.stringify(curr)
+      ),
+      tap((oc) => console.log("observanceChoices$", oc))
     );
+
+    this.observanceChoices$
+      .pipe(first())
+      .subscribe((oc) => this.form.controls.observance.setValue(oc[0]?.slug));
 
     this.prayData$ = combineLatest([
       this.auth.user,
@@ -511,16 +590,6 @@ export class LiturgySelectComponent implements OnInit {
     // when reentering view, reset date if necessary
     this.router.events.subscribe(() => {
       this.isNavigating = false;
-
-      console.log(
-        "viewWillEnter lastPrayed = ",
-        this.lastPrayed,
-        Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
-          this.REMEMBER_TIME,
-        !this.lastPrayed ||
-          Math.abs(new Date().getTime() - this.lastPrayed.getTime()) >
-            this.REMEMBER_TIME
-      );
 
       if (
         !this.lastPrayed ||
@@ -699,14 +768,14 @@ export class LiturgySelectComponent implements OnInit {
       date = dateFromYMDString(day?.date);
 
     if (day) {
-      if (holy_day_readings?.length > 0) {
-        const evening: boolean = liturgy.metadata?.evening,
-          readingA: string = evening
-            ? "holy_day_evening_1"
-            : "holy_day_morning_1",
-          readingB: string = evening
-            ? "holy_day_evening_2"
-            : "holy_day_morning_2";
+      if (
+        holy_day_readings?.length > 0 &&
+        (!this.form.controls.observance.value ||
+          this.form.controls.observance.value === day.holy_day_observed?.slug)
+      ) {
+        const evening = liturgy.metadata?.evening,
+          readingA = evening ? "holy_day_evening_1" : "holy_day_morning_1",
+          readingB = evening ? "holy_day_evening_2" : "holy_day_morning_2";
 
         const modifiedPrefs = {
           ...prefs,
@@ -764,7 +833,11 @@ export class LiturgySelectComponent implements OnInit {
             -1
           )}`;
 
-        if (a.length > 0) {
+        if (
+          a.length > 0 &&
+          (!this.form.controls.observance.value ||
+            this.form.controls.observance.value === day.holy_day_observed?.slug)
+        ) {
           const alert = await this.alert.create({
             header: this.translate.instant("home.missing_reading_alert.title"),
             message: this.translate.instant(
@@ -855,37 +928,52 @@ export class LiturgySelectComponent implements OnInit {
         d,
         liturgy?.slug,
       ];
-    const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
-    // in bulletin mode, send all prefs
-    if (bulletinMode) {
-      commands.push(JSON.stringify(prefs));
-    }
 
-    // if alternate observance selected, note it observance
-    const observance = this.form.controls.observance.value;
-
-    // if any prefs have changed, add them to URL params
-    if (
-      Object.keys(nonDefaultPrefs).length > 0 ||
-      vigil ||
-      (observance && observance !== day.week.slug)
-    ) {
-      commands.push(vigil.toString());
-      commands.push(JSON.stringify(nonDefaultPrefs));
-    }
-
-    if (observance && observance !== day.week.slug) {
-      day.holy_day_observed = day.holy_days.find((hd) => hd.slug == observance);
-      if (day.holy_day_observed?.slug) {
-        day.slug = day.holy_day_observed.slug;
+    // if alternate observance selected, note it
+    const observance = this.form.controls.observance.value,
+      observanceDay = observance ? { ...day } : null;
+    if (observance) {
+      console.log("WHS setting observance");
+      observanceDay.holy_day_observed = day.holy_days.find(
+        (hd) => hd.slug == observance
+      );
+      observanceDay.slug = observance;
+      observanceDay.propers = observance;
+      if (observanceDay.holy_day_observed?.slug) {
+        observanceDay.slug = observanceDay.holy_day_observed.slug;
       }
+      console.log("WHS day = ", observanceDay);
+    }
+
+    // in bulletin mode, send all params
+    if (bulletinMode) {
+      commands.push(vigil.toString());
+      commands.push(JSON.stringify(prefs));
       commands.push(observance);
+    } else {
+      const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
+
+      // if any prefs have changed, add them to URL params
+      if (Object.keys(nonDefaultPrefs).length > 0 || vigil || observance) {
+        commands.push(vigil.toString());
+        commands.push(JSON.stringify(nonDefaultPrefs));
+      }
+
+      if (observance) {
+        commands.push(observance);
+      }
     }
 
     if (bulletinMode) {
-      this.createBulletin.emit({ commands, state: { liturgy, day, prefs } });
+      this.createBulletin.emit({
+        commands,
+        state: { liturgy, day: new LiturgicalDay(observanceDay) || day, prefs },
+      });
     } else {
-      this.router.navigate(commands, { state: { liturgy, day, prefs } });
+      console.log("WHS navigating with day  = ", day);
+      this.router.navigate(commands, {
+        state: { liturgy, day: new LiturgicalDay(observanceDay) || day, prefs },
+      });
     }
   }
 
