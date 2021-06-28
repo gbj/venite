@@ -16336,7 +16336,7 @@
       "number": "21",
       "latinname": "Te Deum laudamus",
       "localname": "You are God",
-      "omit_gloria": false
+      "omit_gloria": true
     },
     "version": "bcp1979",
     "style": "canticle",

@@ -12542,7 +12542,7 @@
     "lastRevision": 28,
     "metadata": {
       "number": "7",
-      "omit_gloria": false,
+      "omit_gloria": true,
       "latinname": "Te Deum laudamus",
       "omit_antiphon": false,
       "localname": "You are God"

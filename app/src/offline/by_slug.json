@@ -726,7 +726,7 @@
       "omit_antiphon": false,
       "latinname": "Te Deum laudamus",
       "localname": "You are God",
-      "omit_gloria": false
+      "omit_gloria": true
     },
     "sharing": {
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -10345,7 +10345,7 @@
       "metadata": {
         "omit_antiphon": false,
         "latinname": "Te Deum laudamus",
-        "omit_gloria": false,
+        "omit_gloria": true,
         "number": "21",
         "localname": "You are God"
       },
