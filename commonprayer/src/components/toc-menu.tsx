@@ -1,11 +1,8 @@
 import h from "https://cdn.pika.dev/vhtml@2.2.0";
+import { MenuHeader } from "./menu-header.tsx";
 
-export const TOCMenu = () => [
-  <button class="menu-button" id="toc-menu-button">
-    <img src="/assets/icon/books.svg"/>
-    <span class="visually-hidden">Table of Contents</span>
-  </button>,
-  <nav class="hidden toc-menu">
+export const TOCMenu = () => <nav class="hidden toc-menu">
+    <MenuHeader title="Table of Contents" />
     <ul>
       <li>
         <h2>The Calendar of the Church Year</h2>
@@ -149,4 +146,3 @@ export const TOCMenu = () => [
       </li>
     </ul>
   </nav>
-]

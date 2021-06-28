@@ -3,35 +3,56 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
-  height: 4rem;
-  width: 100vw;
+  top: 0;
+  z-index: var(--menu-z-index);
 }
 
+/* Header within the menus themselves */
+header.menu-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.menu-header h2 {
+  font-family: var(--cp-ui-font-family);
+}
+
+button.close {
+  background: var(--background-color);
+  color: var(--color);
+  border: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.button.close img {
+  height: auto;
+  width: 100%;
+  filter: var(--button-filter-dark);
+}
+
+/* Menu open buttons */
 .menu-button {
+  border-width: 0;
   border-radius: 50%;
   font-family: var(--cp-ui-font-family);
-  border: 1px solid var(--cp-light-border);
-  background-color: var(--cp-light-background);
+  background-color: var(--background-color);
+  border-color: var(--background-color);
   cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
-  width: 3rem;
-  height: 3rem;
+  width: var(--menu-button-height);
+  height: var(--menu-button-height);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   transition: 0.125s linear;
-  z-index: 11;
-}
-
-.menu-button:hover {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23);
-}
-
-.menu-button:active {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
 }
 
 .menu-button img {
@@ -41,7 +62,6 @@
 }
 
 #toc-menu-button {
-  z-index: 16;
   left: 0.5rem;
 }
 
@@ -50,35 +70,45 @@
 }
 
 /* Both menus */
-.toc-menu, .display-settings {
+.toc-menu,
+.display-settings {
+  /* This will center in both X and Y */
   position: fixed;
-  top: 0.55rem;
-  transition: 1s linear;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  /* Gives a buffer on both X and Y */
+  max-height: calc(100vh - 6rem);
   width: calc(100vw - 8rem);
-  max-width: calc(600px);
+  max-width: 600px;
   background-color: var(--cp-light-background);
-  transition: 0.125s linear;
+
+  /* Animates based on opacity */
+  transition: opacity 0.125s linear;
+  opacity: 1;
+  z-index: 10;
+  overflow-y: scroll;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), 0 3px 3px rgba(0, 0, 0, 0.5);
+
+  padding: 1rem;
+}
+
+/* On mobile, take full screen */
+@media(max-width: 767px) {
+  .toc-menu, .display-settings {
+    width: 100vw;
+    max-height: 100vh;
+  }
+}
+
+.toc-menu.hidden,
+.display-settings.hidden {
+  opacity: 0;
+  height: 0;
 }
 
 /* TOC menu */
-.toc-menu {
-  left: 3.5rem;
-  z-index: 15;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
-  overflow-y: scroll;
-  max-height: calc(100vh - 0.6rem);
-}
-.toc-menu.hidden {
-  width: 0px;
-  overflow: hidden;
-}
-
-#toc-menu-button.open {
-  border-radius: 50% 0 0 50%;
-  box-shadow: -3px 5px 3px rgba(0, 0, 0, 0.19);
-  border-right: none;
-}
-
 .toc-menu ul {
   list-style-type: none;
   margin: 0;
@@ -91,11 +121,13 @@
   padding: 0;
 }
 
-.toc-menu > ul > li, .toc-menu ul {
+.toc-menu > ul > li,
+.toc-menu ul {
   margin-bottom: 1rem;
 }
 
-.toc-menu li h2, .toc-menu li h3 {
+.toc-menu li h2,
+.toc-menu li h3 {
   font-size: 1em;
   font-weight: bold;
   margin: 0;
@@ -109,25 +141,32 @@
 /* Display settings menu */
 .display-settings {
   right: 3.5rem;
-  z-index: 10;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
 }
-.display-settings.hidden {
-  width: 0px;
-  overflow: hidden;
-}
-#display-menu-button.open {
-  border-radius: 0 50% 50% 0;
-  box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.19);
-  border-left: none;
-}
+
 .display-settings h2 {
   text-align: center;
   font-family: var(--cp-ui-font-family);
   margin: 0;
   padding: 0.25rem;
+}
+
+#menu-backdrop {
+  z-index: -5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  opacity: 0;
+}
+
+#menu-backdrop.open {
+  z-index: 5;
+  opacity: 0.3;
+  transition: opacity 0.125s linear;
 }

@@ -1,8 +1,12 @@
 :root {
   /* Fonts */
-  --cp-ui-font-family: -apple-systrem, BlinkMacSystremFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color remoji', 'Segoe UI remoji', 'Segoe UI Symbol';
-  --ldf-font-face: 'Sabon', 'Garamond', serif;
+  --cp-ui-font-family: -apple-systrem, BlinkMacSystremFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color remoji", "Segoe UI remoji",
+    "Segoe UI Symbol";
+  --ldf-font-face: "Sabon", "Garamond", serif;
 
+  --color: black;
+  --background-color: white;
   --border-radius: 3px;
 
   /* Colors */
@@ -29,14 +33,32 @@
   --cp-selected-background: #ccccff;
 
   /* Button filters */
-  --button-filter-light: invert(97%) sepia(97%) saturate(0%) hue-rotate(36deg) brightness(104%) contrast(105%);
+  --button-filter-light: invert(97%) sepia(97%) saturate(0%) hue-rotate(36deg)
+    brightness(104%) contrast(105%);
   --button-filter-dark: gray saturate(0%) brightness(70%) contrast(1000%);
+
+  /* Menus */
+  --menu-button-height: 2.25rem;
+  --menu-height: calc(var(--menu-button-height) + 1rem);
+  --menu-z-index: 5;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   font-family: var(--ldf-font-face);
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+body > header {
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--color);
+  height: var(--menu-height);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
 }
 
 main {
@@ -78,28 +100,28 @@ menu.display-settings {
 
 /* Font Definitions */
 @font-face {
-  font-family: 'Sabon';
+  font-family: "Sabon";
   font-weight: normal;
   font-style: normal;
-  src: url('assets/fonts/Sabon_Roman.ttf');
+  src: url("assets/fonts/Sabon_Roman.ttf");
 }
 @font-face {
-  font-family: 'Sabon';
+  font-family: "Sabon";
   font-weight: normal;
   font-style: italic;
-  src: url('assets/fonts/Sabon_Italic.ttf');
+  src: url("assets/fonts/Sabon_Italic.ttf");
 }
 @font-face {
-  font-family: 'Sabon';
+  font-family: "Sabon";
   font-weight: bold;
   font-style: normal;
-  src: url('assets/fonts/Sabon_Bold.ttf');
+  src: url("assets/fonts/Sabon_Bold.ttf");
 }
 @font-face {
-  font-family: 'Sabon';
+  font-family: "Sabon";
   font-weight: bold;
   font-style: italic;
-  src: url('assets/fonts/Sabon_BoldItalic.ttf');
+  src: url("assets/fonts/Sabon_BoldItalic.ttf");
 }
 
 .visually-hidden {

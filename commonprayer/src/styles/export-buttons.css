@@ -1,12 +1,13 @@
 /* cp-doc buttons */
-#cp-doc-header {
+/*#cp-doc-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   position: fixed;
-  top: 4rem;
+  top: var(--menu-height);
   width: 100vw;
-}
+  z-index: calc(var(--menu-z-index) + 1);
+}*/
 
 #cp-doc-header.hidden {
   display: none;
@@ -16,10 +17,8 @@ menu.cp-doc-menu {
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-end;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+  align-items: center;
   width: auto;
-  margin: 0;
-  margin-bottom: 1rem;
   margin-left: auto;
   padding: 0;
   border-radius: var(--border-radius);
@@ -29,6 +28,7 @@ menu.cp-doc-menu li {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 menu.cp-doc-menu li button {

@@ -1,9 +1,6 @@
-import typesVhtml from "https://cdn.skypack.dev/@types/vhtml";
 import h from "https://cdn.pika.dev/vhtml@ 2.2.0";
+import Menus from "./components/menus.tsx";
 import { PageProps } from "./ssg/page.ts";
-import { TOCMenu } from "./components/toc-menu.tsx";
-import { DisplaySettings } from "./components/display-settings.tsx";
-import { DocActionMenu } from "./components/doc-action-menu.tsx";
 
 function linksFromHTML(main : string) : string[] {
   try {
@@ -18,11 +15,7 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
   const mainHtml = await main;
   
   const body = (<body>
-    <header id="menu-header">
-      <TOCMenu/>
-      <DisplaySettings/>
-    </header>
-    <DocActionMenu hidden={true} />
+    <Menus/>
     <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>
   </body>);
 
