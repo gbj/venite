@@ -262,11 +262,10 @@ export class PrayPage implements OnInit, OnDestroy {
     // This probably means we came from the home page and clicked Pray, so the liturgy
     // and liturgical day had been preloaded
     const windowHistoryState$: Observable<PrayState> = this.router.events.pipe(
-      tap((ev) => console.log("WHS router event = ", ev)),
       mapTo(window?.history?.state),
       // store bulletin slug and label from router state, to override whatever's loaded from server
       tap((state: PrayState) => {
-        console.log("WHS day = ", state.day);
+        console.log("WHS day = ", state.day, state);
         if (this.bulletinMode) {
           this.bulletinLabel = state?.liturgy?.label;
           this.bulletinSlug = state?.liturgy?.slug;
@@ -350,7 +349,6 @@ export class PrayPage implements OnInit, OnDestroy {
       combineLatest(liturgy$, week$, this.route.params).pipe(
         switchMap(([liturgy, week, params]) => {
           if (liturgy[0] && liturgy[0].day) {
-            console.log("liturgy has own day", liturgy[0].day);
             return of(liturgy[0].day);
           } else if (params.y && params.m && params.d) {
             console.log("observance observed = ", params?.observance);

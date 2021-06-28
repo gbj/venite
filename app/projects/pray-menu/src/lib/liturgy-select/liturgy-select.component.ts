@@ -933,7 +933,6 @@ export class LiturgySelectComponent implements OnInit {
     const observance = this.form.controls.observance.value,
       observanceDay = observance ? { ...day } : null;
     if (observance) {
-      console.log("WHS setting observance");
       observanceDay.holy_day_observed = day.holy_days.find(
         (hd) => hd.slug == observance
       );
@@ -942,7 +941,6 @@ export class LiturgySelectComponent implements OnInit {
       if (observanceDay.holy_day_observed?.slug) {
         observanceDay.slug = observanceDay.holy_day_observed.slug;
       }
-      console.log("WHS day = ", observanceDay);
     }
 
     // in bulletin mode, send all params
@@ -967,12 +965,25 @@ export class LiturgySelectComponent implements OnInit {
     if (bulletinMode) {
       this.createBulletin.emit({
         commands,
-        state: { liturgy, day: new LiturgicalDay(observanceDay) || day, prefs },
+        state: {
+          liturgy,
+          day: observanceDay ? new LiturgicalDay(observanceDay) : day,
+          prefs,
+        },
       });
     } else {
-      console.log("WHS navigating with day  = ", day);
+      console.log(
+        "WHS navigating with day  = ",
+        new LiturgicalDay(observanceDay) || day,
+        "\n\nobservanceDay = ",
+        observanceDay
+      );
       this.router.navigate(commands, {
-        state: { liturgy, day: new LiturgicalDay(observanceDay) || day, prefs },
+        state: {
+          liturgy,
+          day: observanceDay ? new LiturgicalDay(observanceDay) : day,
+          prefs,
+        },
       });
     }
   }
