@@ -947,7 +947,7 @@ export class LiturgySelectComponent implements OnInit {
     if (bulletinMode) {
       commands.push(vigil.toString());
       commands.push(JSON.stringify(prefs));
-      commands.push(observance);
+      commands.push(observance || day.propers || day.slug);
     } else {
       const nonDefaultPrefs = this.nonDefaultPrefs(liturgy, prefs);
 

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { AlertController } from "@ionic/angular";
+import { AlertController, LoadingController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { LiturgicalDay, LiturgicalDocument } from "@venite/ldf";
 import { BulletinCommands } from "@venite/ng-pray-menu";
@@ -8,7 +8,6 @@ import { switchMap, take } from "rxjs/operators";
 import { AuthService } from "src/app/auth/auth.service";
 import { OrganizationService } from "src/app/organization/organization.module";
 import { DocumentService } from "src/app/services/document.service";
-import { environment } from "src/environments/environment";
 
 @Component({
   selector: "venite-create-bulletin-modal",
@@ -24,7 +23,8 @@ export class CreateBulletinModalComponent implements OnInit {
     private router: Router,
     private alert: AlertController,
     private documents: DocumentService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private loading: LoadingController
   ) {}
 
   ngOnInit() {}
@@ -119,9 +119,14 @@ export class CreateBulletinModalComponent implements OnInit {
 
     console.log("createBulletin liturgy = ", liturgy);
 
+    const loading = await this.loading.create({ backdropDismiss: true });
+    await loading.present();
+
     orgs$.subscribe(async (orgs) => {
       const org = orgs.map((org) => org.slug)[0];
       let proceed = true;
+
+      await loading.dismiss();
 
       if (org) {
         let { label, slug } = await this.labelSlugAlert(
@@ -208,6 +213,7 @@ export class CreateBulletinModalComponent implements OnInit {
 
       // navigate to the newly-created bulletin
       if (proceed) {
+        console.log("commands = ", event.commands);
         // if it all default preferences are selected, add {} so the slug/label don't cause it to hang
         if (event.commands.length === 8) {
           event.commands.push("{}");
