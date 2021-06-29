@@ -28,7 +28,8 @@ window.addEventListener("click", (ev) => {
     ev.stopPropagation();
   } else {
     const target = ev.target as HTMLElement,
-      local: HTMLElement = target.closest("[data-ldf]");
+      local: HTMLElement =
+        target.closest("[data-ldf]") || target.closest("[data-slug]");
     if (local) {
       handle(local);
     }

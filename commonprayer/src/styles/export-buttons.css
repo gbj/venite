@@ -124,3 +124,10 @@ menu.cp-doc-menu li button.error img {
 .doc.selected {
   padding: 0px;
 }
+
+.cp-doc {
+  padding: 1px;
+}
+.cp-doc.selected {
+  padding: 0px;
+}

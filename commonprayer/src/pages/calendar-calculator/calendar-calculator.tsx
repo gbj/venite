@@ -22,6 +22,8 @@ const CalendarAboutPage = await Page({
     <template id="day-details-template">
       <h1></h1>
       <h2></h2>
+      <article id="collect"></article>
+      <ul id="readings"></ul>
     </template>
   </main>
 });

@@ -1,58 +1,58 @@
 import h from "https://cdn.pika.dev/vhtml@2.2.0";
-import { PageProps } from "../../ssg/page.ts";
+import { Page } from "../../ssg/page.ts";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Psalm } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
 import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.3.0";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 
-export default async function psalter(): Promise<PageProps> {
-  const localization = LOCALIZATION.en;
+const Psalter = await Page({
+  main: async () => {
+    const localization = LOCALIZATION.en;
 
-  const tree = await Promise.all(
-    PSALTER_LAYOUT.map(async (book) => [
-      <h1>The Psalter</h1>,
-      <h2>
-        {localization.book} {localization.books[book.book - 1]}
-      </h2>,
-      ...(await Promise.all(
-        book.days.map(async (day) => [
-          <h3>
-            {localization.days[day.day - 1]} {localization.day}
-            {": "}
-            {day.morning ? localization.morning : localization.evening}
-          </h3>,
-          ...(await Promise.all(
-            day.psalms.map(async (psalm) => {
-              const f = await Deno.readTextFile(
-                  path.join(
-                    path.fromFileUrl(import.meta.url),
-                    "..",
-                    "..",
-                    "..",
-                    "liturgy",
-                    "psalter",
-                    "psalm-" + psalm + ".json"
-                  )
-                ),
-                doc = JSON.parse(f);
-              const { data } = doc;
-              return `<div class="cp-doc" data-category="psalter" data-slug="psalm-${psalm}">${ldfToHTML(
-                new Psalm(data[0]),
-                LDF_TO_HTML_CONFIG
-              )}</div>`;
-            })
-          )),
-        ])
-      )),
-    ])
-  );
+    const tree = await Promise.all(
+      PSALTER_LAYOUT.map(async (book) => [
+        <h1>The Psalter</h1>,
+        <h2>
+          {localization.book} {localization.books[book.book - 1]}
+        </h2>,
+        ...(await Promise.all(
+          book.days.map(async (day) => [
+            <h3>
+              {localization.days[day.day - 1]} {localization.day}
+              {": "}
+              {day.morning ? localization.morning : localization.evening}
+            </h3>,
+            ...(await Promise.all(
+              day.psalms.map(async (psalm) => {
+                const f = await Deno.readTextFile(
+                    path.join(
+                      path.fromFileUrl(import.meta.url),
+                      "..",
+                      "..",
+                      "..",
+                      "liturgy",
+                      "psalter",
+                      "psalm-" + psalm + ".json"
+                    )
+                  ),
+                  doc = JSON.parse(f);
+                const { data } = doc;
+                return `<div class="cp-doc" data-category="psalter" data-slug="psalm-${psalm}">${ldfToHTML(
+                  new Psalm(data[0]),
+                  LDF_TO_HTML_CONFIG
+                )}</div>`;
+              })
+            )),
+          ])
+        )),
+      ])
+    );
 
-  const main = Promise.resolve(`<main>${tree.flat().flat().join("\n")}</main>`);
+    return `<main>${tree.flat().flat().join("\n")}</main>`;
+  }
+});
 
-  return {
-    main,
-  };
-}
+export default Psalter;
 
 export const PSALTER_LAYOUT = [
   {
