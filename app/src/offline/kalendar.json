@@ -4087,10 +4087,12 @@
       "slug": "nativity-of-st-john-the-baptist",
       "type": {
         "name": "Black Letter",
-        "rank": 2
+        "rank": 3
       },
       "mmdd": "6/24",
-      "kalendar": "lff2018"
+      "kalendar": "lff2018",
+      "color": "White",
+      "season": "Saints"
     },
     {
       "name": "THE NATIVITY OF THE BLESSED VIRGIN MARY",
