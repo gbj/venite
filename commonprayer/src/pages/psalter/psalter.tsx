@@ -1,8 +1,8 @@
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import { Page } from "../../ssg/page.ts";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
-import { Psalm } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.3.0";
+import { Psalm } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.0";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 
 const Psalter = await Page({

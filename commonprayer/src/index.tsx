@@ -1,4 +1,4 @@
-import h from "https://cdn.pika.dev/vhtml@ 2.2.0";
+import h from "https://cdn.skypack.dev/vhtml@ 2.2.0";
 import Menus from "./components/menus.tsx";
 import { PageProps } from "./ssg/page.ts";
 

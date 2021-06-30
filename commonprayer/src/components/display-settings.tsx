@@ -1,4 +1,4 @@
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import { MenuHeader } from "./menu-header.tsx";
 
 export const DisplaySettings = () => [

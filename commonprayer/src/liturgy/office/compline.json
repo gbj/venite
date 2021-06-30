@@ -510,8 +510,8 @@
             "conditions": [
               {
                 "preference": {
-                  "value": "false",
-                  "is": true,
+                  "value": "true",
+                  "is": false,
                   "key": "insertGloria"
                 }
               }
@@ -523,8 +523,8 @@
             "conditions": [
               {
                 "preference": {
-                  "value": "false",
-                  "is": true,
+                  "value": "true",
+                  "is": false,
                   "key": "insertGloria"
                 }
               }
@@ -919,12 +919,22 @@
         },
         {
           "type": "rubric",
-          "value": ["In Easter Season, add"]
+          "value": ["In Easter Season, add"],
+          "condition": {
+            "season": {
+              "only": ["Easter", "Ascension", "Pentecost"]
+            }
+          }
         },
         {
           "type": "refrain",
           "style": "antiphon",
-          "value": ["Alleluia, alleluia, alleuia."]
+          "value": ["Alleluia, alleluia, alleuia."],
+          "condition": {
+            "season": {
+              "only": ["Easter", "Ascension", "Pentecost"]
+            }
+          }
         },
         {
           "version": "bcp1979",
@@ -993,8 +1003,7 @@
           }
         },
         {
-          "type": "refrain",
-          "style": "antiphon",
+          "type": "rubric",
           "value": ["All repeat the Antiphon"]
         },
         {
@@ -1007,12 +1016,22 @@
         },
         {
           "type": "rubric",
-          "value": ["In Easter Season, add"]
+          "value": ["In Easter Season, add"],
+          "condition": {
+            "season": {
+              "only": ["Easter", "Ascension", "Pentecost"]
+            }
+          }
         },
         {
           "type": "refrain",
           "style": "antiphon",
-          "value": ["Alleluia, alleluia, alleuia."]
+          "value": ["Alleluia, alleluia, alleuia."],
+          "condition": {
+            "season": {
+              "only": ["Easter", "Ascension", "Pentecost"]
+            }
+          }
         },
         {
           "value": [

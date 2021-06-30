@@ -1,22 +1,13 @@
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { exists, walk } from "https://deno.land/std@0.98.0/fs/mod.ts";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.3.0";
-import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
 
 import { Index } from "../index.tsx";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
-import { LDF_TO_HTML_CONFIG } from "./ldf-to-html-config.tsx";
 import { Category } from "../components/category/category.tsx";
+import { Doc } from "../components/doc/doc.tsx";
 
 const IGNORE = [".DS_Store", "index.json"],
   DIR_IGNORE_CHILDREN: string[] = ["psalter"];
-
-function sourceToHTML(source: { url: string; label?: string }) {
-  return `<a class="source" href="${source?.url}" target="_blank">
-      <span class="label">Source</span>
-      ${source.label || "Source"}
-    </a>`;
-}
 
 export async function buildDoc(
   subpath: string | undefined,
@@ -26,6 +17,8 @@ export async function buildDoc(
 ): Promise<SSGRefreshMap> {
   try {
     const slug = filename.replace(/(\.ldf)?\.json/, ""),
+      page = Doc(slug, subpath, src),
+      html = await Index(page),
       dest = path.join(
         path.fromFileUrl(import.meta.url),
         "..",
@@ -34,28 +27,7 @@ export async function buildDoc(
         "www",
         subpath || "",
         slug
-      ),
-      json = await Deno.readTextFile(src),
-      data = JSON.parse(json),
-      docs = data.data ? data.data : [data],
-      main = Promise.resolve(
-        `<main>
-          ${
-            data.source
-              ? Array.isArray(data.source)
-                ? `<section class="sources">${data.source
-                    .map((source) => sourceToHTML(source))
-                    .join("\n")}</section>`
-                : sourceToHTML(data.source)
-              : ""
-          }
-          <div class="cp-doc" data-category="${subpath}" data-slug="${slug}">${docs.map(
-          (doc: LiturgicalDocument) =>
-            ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
-        )}</div>
-        </main>`
-      ),
-      html = await Index({ main }, isDev);
+      );
 
     if (!(await exists(dest))) {
       await Deno.mkdir(dest, { recursive: true });

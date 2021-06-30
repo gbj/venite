@@ -1,6 +1,6 @@
-//import { LDFToHTMLConfig } from "https://cdn.pika.dev/@venite/html@0.3.0";
-//import { Lookup } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
+//import { LDFToHTMLConfig } from "https://cdn.skypack.dev/@venite/html@0.3.0";
+//import { Lookup } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 
 export const LDF_TO_HTML_CONFIG = {
   includeLDF: false,

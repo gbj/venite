@@ -1,11 +1,11 @@
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Page } from "../../ssg/page.ts";
 
 
 const CalendarAboutPage = await Page({
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-calculator.css")],
-  scripts: [path.join(path.fromFileUrl(import.meta.url), "..", "..", "calendar", "calendar-service.ts"), path.join(path.fromFileUrl(import.meta.url), "..", "calendar-ui.ts")],
+  scripts: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-ui.ts")],
   main: () => <main>
     <input type="date" id="date"/>
     <article id="day-details"></article>

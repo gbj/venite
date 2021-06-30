@@ -1,7 +1,8 @@
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
-import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import { Page } from "../../ssg/page.ts";
-import CalendarService from "./calendar-service.ts";
+import { CalendarServiceController } from "../../services/calendar-service.ts";
+
+const CalendarService = new CalendarServiceController();
 
 const MONTHS = [
   {name: 'January', days: 31},

@@ -9,7 +9,7 @@ export async function buildScript(src: string, outDir: string) {
 
   const { files } = await Deno.emit(
     src,
-    src.endsWith("-service.ts") ? { bundle: "module" } : undefined
+    src.endsWith(".bundle.ts") ? { bundle: "module" } : undefined
   );
   const baseFileName = src.split("/").pop();
   for (const [fileName, text] of Object.entries(files)) {

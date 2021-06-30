@@ -2,9 +2,9 @@ import {
   dateFromYMDString,
   LectionaryEntry,
   LiturgicalDay,
-} from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.2?dts";
 
-class LectionaryServiceController {
+export class LectionaryServiceController {
   private _lectionary: Record<string, Promise<LectionaryEntry[]>> = {};
   private _cache: Record<string, Promise<LectionaryEntry[]>> = {};
 
@@ -156,5 +156,3 @@ class LectionaryServiceController {
     }
   }
 }
-
-export default new LectionaryServiceController();

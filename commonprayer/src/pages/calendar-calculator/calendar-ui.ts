@@ -1,5 +1,4 @@
-import CalendarService from "./calendar-service.js";
-import LectionaryService from "./lectionary-service.js";
+import { CalendarService, LectionaryService } from "./services.bundle.js";
 import { getLocale } from "./locale.js";
 
 const LOCALIZATION = {
@@ -20,7 +19,9 @@ async function setDay(ymd: string, calendar: string) {
   const locale = getLocale(),
     day = await CalendarService.findDay(ymd, "bcp1979"),
     details = document.getElementById("day-details"),
-    template = document.getElementById("day-details-template"),
+    template = document.getElementById(
+      "day-details-template"
+    ) as HTMLTemplateElement,
     date = CalendarService.dateFromYMDString(day.date),
     dayName =
       day?.holy_day_observed?.name && day?.holy_day_observed?.type?.rank >= 3
@@ -57,9 +58,10 @@ async function setDay(ymd: string, calendar: string) {
 }
 
 // run main
-const dateField = document.getElementById("date");
+const dateField = document.getElementById("date") as HTMLInputElement;
 
-dateField.onchange = (ev) => setDay(ev.target.value, "bcp1979");
+dateField.onchange = (ev) =>
+  setDay((ev.target as HTMLInputElement).value, "bcp1979");
 
 // Start with current day
 const now = new Date();

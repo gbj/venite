@@ -11,7 +11,7 @@ import {
   liturgicalDay,
   transferredFeast,
   dateFromYMD,
-} from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
 
 type Kalendar = {
   weeks: LiturgicalWeek[];
@@ -19,7 +19,7 @@ type Kalendar = {
   specials: HolyDay[];
 };
 
-class CalendarServiceController {
+export class CalendarServiceController {
   async findDay(ymd: string, kalendar: string): Promise<LiturgicalDay> {
     const date = dateFromYMDString(ymd),
       week = await this.findWeek(date),
@@ -219,5 +219,4 @@ class CalendarServiceController {
   }
 }
 
-// main
-export default new CalendarServiceController();
+export const CalendarService = new CalendarServiceController();

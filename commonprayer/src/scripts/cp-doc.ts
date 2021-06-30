@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
+import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
 
 // List of selected subdocs to export
 type Selection = {

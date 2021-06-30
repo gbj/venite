@@ -1,7 +1,7 @@
-import h from "https://cdn.pika.dev/vhtml@2.2.0";
+import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
-import { LiturgicalDocument } from "https://cdn.pika.dev/@venite/ldf@^0.20.1";
-import { ldfToHTML } from "https://cdn.pika.dev/@venite/html@0.3.0";
+import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.0";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 import { Page } from "../../ssg/page.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/exists.ts";
@@ -12,7 +12,7 @@ const SHORT_DOC_LENGTH = 1000;
 
 export const Category = await Page({
   scripts: [
-    path.join(path.fromFileUrl(import.meta.url), "..", "category-ui-service.ts"),
+    path.join(path.fromFileUrl(import.meta.url), "..", "category-ui.ts"),
   ],
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "category.css")],
   main: async (srcDir: string, categorySlug: string) => {
