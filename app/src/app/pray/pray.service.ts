@@ -313,16 +313,19 @@ export class PrayService {
                       !(collect.category || []).includes("LFF 2018"))
                 )
                 .map((collect) => {
-                  const label = (day.holy_days || [])
-                    .map((day) => day.slug)
-                    .includes(collect.slug)
-                    ? titleCase(
-                        day.holy_days.find((day) => day.slug === collect.slug)
-                          ?.name
-                      ) ||
-                      collect.label ||
-                      "The Collect of the Day"
-                    : collect.label || "The Collect of the Day";
+                  const label =
+                    (day.holy_days || [])
+                      .map((day) => day.slug)
+                      .includes(collect.slug) &&
+                    (!collect.label ||
+                      collect.label === "The Collect of the Day")
+                      ? titleCase(
+                          day.holy_days.find((day) => day.slug === collect.slug)
+                            ?.name
+                        ) ||
+                        collect.label ||
+                        "The Collect of the Day"
+                      : collect.label || "The Collect of the Day";
                   return new LiturgicalDocument({
                     ...collect,
                     metadata: { ...doc.metadata, ...collect.metadata },
