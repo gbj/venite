@@ -139,4 +139,4 @@
   ['Bel and the Dragon', Book.Bel],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/40f2cea5/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/9a9b0f6b/ldf/src/bible-reference/books.ts#L3)*

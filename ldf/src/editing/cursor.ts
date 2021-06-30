@@ -3,9 +3,9 @@ export class Cursor {
   path: string;
   start: number;
   end: number;
-  element: HTMLTextAreaElement | HTMLInputElement;
+  element: any; //HTMLTextAreaElement | HTMLInputElement;
 
-  constructor(path: string, start: number, end: number, element: HTMLTextAreaElement | HTMLInputElement) {
+  constructor(path: string, start: number, end: number, element: any) {
     this.path = path;
     this.start = start;
     this.end = end;
