@@ -2,13 +2,34 @@ import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Page } from "../../ssg/page.ts";
 
+export enum Psalter {
+  DailyOffice = "office",
+  ThirtyDay = "30",
+}
+
 
 const CalendarAboutPage = await Page({
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-calculator.css")],
   scripts: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-ui.ts")],
   main: () => <main>
-    <input type="date" id="date"/>
+    {/* Controls */}
+    <form id="date-controls">
+      <input type="date" id="date" aria-label="Date" />
+      <label>
+        Daily Office Psalter
+        {/* TODO pref */}
+        <input type="radio" name="psalter" value={Psalter.DailyOffice} checked />
+      </label>
+      <label>
+        30-Day Psalter
+        <input type="radio" name="psalter" value={Psalter.ThirtyDay}/>
+      </label>
+    </form>
+    
+    {/* Outlet for template */}
     <article id="day-details"></article>
+
+    {/* Tempalte */}
     <details class="disclaimer">
       <summary>Disclaimer</summary>
       <p>
@@ -22,8 +43,31 @@ const CalendarAboutPage = await Page({
     <template id="day-details-template">
       <h1></h1>
       <h2></h2>
-      <article id="collect"></article>
-      <ul id="readings"></ul>
+      <section class="collect">
+        <article id="collect"></article>
+      </section>
+
+      <h3>Psalms</h3>
+      <section class="psalms">
+        <section class="morning">
+          <h4>Morning</h4>
+          <ul id="morning-psalms">Loading...</ul>
+        </section>
+        <section class="evening">
+          <h4>Evening</h4>
+          <ul id="evening-psalms">Loading...</ul>
+        </section>
+      </section>
+
+      <section class="readings office">
+        <h3>Daily Office Readings</h3>
+        <ul id="readings">Loading...</ul>
+      </section>
+
+      <section class="readings rcl">
+        <h3 class="hidden">Revised Common Lectionary Readings</h3>
+        <ul id="rcl" class="hidden">Loading...</ul>
+      </section>
     </template>
   </main>
 });

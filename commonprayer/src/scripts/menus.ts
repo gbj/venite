@@ -1,3 +1,5 @@
+import { debounce } from "./debounce.js";
+
 const backdrop = document.getElementById("menu-backdrop");
 
 function tableOfContents() {
@@ -49,3 +51,27 @@ backdrop.addEventListener("click", () => {
   document.querySelector("menu.display-settings").classList.add("hidden");
   backdrop.classList.remove("open");
 });
+
+// collapse menu bar on scroll
+const header = document.getElementById("menu-header");
+let scrollTopPrev: number | null = null;
+window.addEventListener(
+  "scroll",
+  debounce(() => {
+    const scrollTopCurr = document.documentElement.scrollTop;
+
+    if (scrollTopPrev && scrollTopPrev < scrollTopCurr) {
+      header.classList.add("collapsed");
+    } else {
+      header.classList.remove("collapsed");
+    }
+
+    scrollTopPrev = scrollTopCurr;
+  }, 100)
+);
+window.addEventListener(
+  "click",
+  debounce(() => {
+    header.classList.remove("collapsed");
+  }, 25)
+);

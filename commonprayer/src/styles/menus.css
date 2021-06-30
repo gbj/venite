@@ -1,12 +1,46 @@
+/* Preview Menu */
+#preview-menu.hidden {
+  display: none;
+}
+
+#preview-menu > * {
+  margin-right: 0.25rem;
+}
+#preview-menu > :last-child {
+  margin-right: 0;
+}
+
 /* TOC and Display Settings */
 #menu-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: var(--menu-z-index);
+  height: var(--menu-height);
+  transition: height 0.125s;
+}
+
+#menu-header.collapsed {
+  height: 1px;
+  overflow: hidden;
+}
+
+#menu-header.collapsed > * {
+  display: none;
+}
+
+#menu-header > * {
+  margin-right: 0.5rem;
+}
+
+#menu-header > :first-child {
+  margin-right: auto;
+}
+
+#menu-header > :last-child {
+  margin-right: 0;
 }
 
 /* Header within the menus themselves */
@@ -61,14 +95,6 @@ button.close {
   filter: var(--button-filter-dark);
 }
 
-#toc-menu-button {
-  left: 0.5rem;
-}
-
-#display-menu-button {
-  right: 0.5rem;
-}
-
 /* Both menus */
 .toc-menu,
 .display-settings {
@@ -95,8 +121,9 @@ button.close {
 }
 
 /* On mobile, take full screen */
-@media(max-width: 767px) {
-  .toc-menu, .display-settings {
+@media (max-width: 767px) {
+  .toc-menu,
+  .display-settings {
     width: 100vw;
     max-height: 100vh;
   }

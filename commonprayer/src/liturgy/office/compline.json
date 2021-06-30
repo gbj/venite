@@ -921,9 +921,14 @@
           "type": "rubric",
           "value": ["In Easter Season, add"],
           "condition": {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost"]
-            }
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ]
           }
         },
         {
@@ -931,9 +936,14 @@
           "style": "antiphon",
           "value": ["Alleluia, alleluia, alleuia."],
           "condition": {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost"]
-            }
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ]
           }
         },
         {
@@ -1018,9 +1028,14 @@
           "type": "rubric",
           "value": ["In Easter Season, add"],
           "condition": {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost"]
-            }
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ]
           }
         },
         {
@@ -1028,9 +1043,14 @@
           "style": "antiphon",
           "value": ["Alleluia, alleluia, alleuia."],
           "condition": {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost"]
-            }
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ]
           }
         },
         {

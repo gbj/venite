@@ -13,3 +13,16 @@ input {
 #day-details h1, #day-details h2 {
   text-align: center;
 }
+
+#day-details .hidden {
+  display: none;
+}
+
+#day-details section.psalms {
+  display: flex;
+  flex-direction: row;
+}
+
+#day-details section.psalms .morning, #day-details section.psalms .evening {
+  width: 50%;
+}

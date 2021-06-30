@@ -57,25 +57,6 @@ export class LectionaryServiceController {
           entry.when.toString() == when.toString() && entry.whentype == whentype
       );
 
-      console.log(
-        "halfFiltered = ",
-        halfFiltered,
-        "whens = ",
-        when,
-        whentype,
-        includeDay
-      );
-
-      console.log(
-        "halfFiltered = ",
-        halfFiltered,
-        "includeDay = ",
-        includeDay,
-        "propers = ",
-        day.propers,
-        day.slug
-      );
-
       if (includeDay !== false) {
         const beforeFiltering = [...halfFiltered];
 
@@ -110,8 +91,6 @@ export class LectionaryServiceController {
           );
         }
       }
-
-      console.log("halfFiltered = ", halfFiltered);
 
       return halfFiltered;
     }

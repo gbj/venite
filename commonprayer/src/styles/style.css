@@ -6,13 +6,13 @@
   --ldf-font-face: "Sabon", "Garamond", serif;
 
   --color: black;
-  --background-color: white;
+  --background-color: #fafafa;
   --border-radius: 3px;
 
   /* Colors */
   --cp-primary-background: #830b00;
   --cp-primary-light-background: #fdc3be;
-  --cp-primary-color: white;
+  --cp-primary-color: #fafafa;
 
   --cp-light-background: #fafafa;
   --cp-light-color: #222222;
@@ -24,10 +24,10 @@
 
   --cp-success-light: #d5e2db;
   --cp-success-background: #1e8648;
-  --cp-success-color: white;
+  --cp-success-color: #fafafa;
 
   --cp-error-background: #bc293d;
-  --cp-error-color: white;
+  --cp-error-color: #fafafa;
 
   --cp-selected-border: #9090ee;
   --cp-selected-background: #ccccff;
@@ -70,6 +70,7 @@ main {
   position: absolute;
   top: var(--menu-height);
   width: 100%;
+  box-sizing: border-box;
 }
 
 main > * {
