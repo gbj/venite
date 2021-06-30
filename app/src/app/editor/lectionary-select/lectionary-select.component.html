@@ -52,7 +52,10 @@
         <ion-radio [value]="null"></ion-radio>
       </ion-item>
       <ion-item *ngFor="let intro of intros">
-        <ion-label>{{ intro.value[0] }}</ion-label>
+        <ion-label>
+          <ng-container *ngIf="intro.type === 'text'">{{ intro.value[0] }}</ng-container>
+          <ldf-liturgical-document *ngIf="intro.type !== 'text'" [doc]="intro"></ldf-liturgical-document>
+        </ion-label>
         <ion-radio [value]="intro"></ion-radio>
       </ion-item>
     </ion-radio-group>

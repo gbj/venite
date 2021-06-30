@@ -172,7 +172,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     const { base, index } = ev.detail;
 
     // if in bulletin mode, and not template mode, compile the addition first
-    this.addBlock((data: LiturgicalDocument[]) => {
+    this.addBlock(manager, (data: LiturgicalDocument[]) => {
       const compiled$ = manager.document.day
         ? this.prayService.compile(
             docsToLiturgy(data),
@@ -214,11 +214,13 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
     const { base, index, obj } = ev.detail;
     // Add an option to an existing `Option`
     if (obj.type == "option") {
-      this.addBlock((data) => this.add(manager, `${base}/value`, index, data));
+      this.addBlock(manager, (data) =>
+        this.add(manager, `${base}/value`, index, data)
+      );
     }
     // Otherwise, add a new doc and convert the whole thing to an `Option`
     else {
-      this.addBlock((data) =>
+      this.addBlock(manager, (data) =>
         this.replace(manager, base, index, obj, [
           new Option({
             type: "option",
@@ -277,12 +279,16 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   }
 
   // Called whenever the user wants to add a new LiturgicalDocument block at JSON pointer `base`/`index`
-  async addBlock(callback: (data) => void) {
+  async addBlock(manager: LocalDocumentManager, callback: (data) => void) {
     const modal = await this.modal.create({
       component: AddBlockComponent,
       swipeToClose: true,
     });
-    modal.componentProps = { modal };
+    console.log("state = ", this.state);
+    modal.componentProps = {
+      modal,
+      templateMode: !Boolean(manager.document?.day),
+    };
 
     await modal.present();
 

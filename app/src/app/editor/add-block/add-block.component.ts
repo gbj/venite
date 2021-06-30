@@ -7,18 +7,20 @@ import {
   Inject,
 } from "@angular/core";
 import { Observable, Subscription, Subject, of, from } from "rxjs";
-import { take, map, tap, switchMap, filter } from "rxjs/operators";
+import { take, map, tap, switchMap, filter, takeWhile } from "rxjs/operators";
 import {
   LiturgicalDocument,
   sortPsalms,
   Psalm,
   BibleReading,
+  docsToLiturgy,
 } from "@venite/ldf";
 import { DocumentService } from "src/app/services/document.service";
 import { AuthServiceInterface, AUTH_SERVICE } from "@venite/ng-service-api";
 import { AuthService } from "src/app/auth/auth.service";
 import { AlertController, LoadingController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
+import { isCompletelyCompiled } from "../../pray/is-completely-compiled";
 
 class MenuOption {
   label: string;
@@ -49,6 +51,7 @@ class MenuOption {
 export class AddBlockComponent implements OnInit, OnDestroy {
   @Input() language: string = "en";
   @Input() modal: any;
+  @Input() templateMode: boolean = false;
 
   @ViewChild("additional") additionalElement;
 
@@ -92,9 +95,17 @@ export class AddBlockComponent implements OnInit, OnDestroy {
 
   add(ev: CustomEvent) {
     const completed = this.completeOption(ev.detail);
-    this.completeSubscription = completed
-      .pipe(take(1))
-      .subscribe((addition) => this.modal.dismiss(addition));
+    if (this.templateMode) {
+      this.completeSubscription = completed
+        .pipe(take(1))
+        .subscribe((addition) => this.modal.dismiss(addition));
+    } else {
+      this.completeSubscription = completed
+        .pipe(
+          takeWhile((doc) => !isCompletelyCompiled(docsToLiturgy(doc)), true)
+        )
+        .subscribe((addition) => this.modal.dismiss(addition));
+    }
   }
 
   dismissEmpty() {
