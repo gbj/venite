@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 60px 50px;
   grid-template-rows: 50% 50%;
   width: 100%;
+  min-height: 56px;
   grid-template-areas: "time toggle close" "label label label";
 
   > ion-datetime {
