@@ -1681,28 +1681,6 @@
     "style": "prayer"
   },
   {
-    "language": "en",
-    "slug": "independence-day-united-states",
-    "style": "prayer",
-    "metadata": {
-      "response": "Amen.",
-      "omit_response": false
-    },
-    "value": [
-      "Lord God Almighty, in whose Name the founders of this country won liberty for themselves and for us, and lit the torch of freedom for nations then unborn: Grant, we beseech thee, that we and all the people of this land may have grace to maintain these liberties in righteousness and peace; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever. "
-    ],
-    "category": ["Collect", "Collect of the Day", "LFF 2018"],
-    "type": "text",
-    "version": "rite_i",
-    "sharing": {
-      "organization": "venite",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-      "collaborators": [],
-      "privacy": "public",
-      "status": "published"
-    }
-  },
-  {
     "metadata": {
       "response": "Amen.",
       "omit_response": false
