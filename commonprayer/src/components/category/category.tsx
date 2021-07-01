@@ -71,7 +71,7 @@ export const Category = await Page({
               {Object.keys(versions).length > 1 && <h2>{VERSION_LABELS[version] || version}</h2>}
               {children
                 .map((child) => (
-                  <li class="document" data-ldf={mode === Mode.Links ? child.ldf : undefined}>
+                  <li class="document" data-copyable={child.html.length < SHORT_DOC_LENGTH ? "true" : "false"} data-ldf={mode === Mode.Links ? child.ldf : undefined}>
                     {mode === Mode.Embedded ? <details open={child.html.length < SHORT_DOC_LENGTH}>
                       {child.label && <summary>{child.label}</summary>}
                       <article

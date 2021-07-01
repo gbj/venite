@@ -30,7 +30,8 @@ window.addEventListener("click", (ev) => {
     const target = ev.target as HTMLElement,
       local: HTMLElement =
         target.closest("[data-ldf]") || target.closest("[data-slug]");
-    if (local) {
+    const { copyable } = local.dataset;
+    if (local && copyable !== "false") {
       handle(local);
     }
   }
