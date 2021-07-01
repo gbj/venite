@@ -133,6 +133,7 @@ button.close {
 .display-settings.hidden {
   opacity: 0;
   height: 0;
+  z-index: -5;
 }
 
 /* TOC menu */

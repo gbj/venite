@@ -37,10 +37,12 @@ const Psalter = await Page({
                   ),
                   doc = JSON.parse(f);
                 const { data } = doc;
-                return `<div class="cp-doc" data-category="psalter" data-slug="psalm-${psalm}">${ldfToHTML(
-                  new Psalm(data[0]),
-                  LDF_TO_HTML_CONFIG
-                )}</div>`;
+                return `<a id="psalm-${psalm}">
+                  <div class="cp-doc" data-category="psalter" data-slug="psalm-${psalm}">${ldfToHTML(
+                    new Psalm(data[0]),
+                    LDF_TO_HTML_CONFIG
+                  )}</div>
+                </a>`;
               })
             )),
           ])

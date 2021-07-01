@@ -54,7 +54,8 @@ export class LectionaryServiceController {
     } else {
       let halfFiltered = entries.filter(
         (entry) =>
-          entry.when.toString() == when.toString() && entry.whentype == whentype
+          entry.when.toString() == when.toString() &&
+          (!entry.whentype || entry.whentype == whentype)
       );
 
       if (includeDay !== false) {

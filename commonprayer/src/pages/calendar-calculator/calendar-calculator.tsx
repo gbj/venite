@@ -15,15 +15,17 @@ const CalendarAboutPage = await Page({
     {/* Controls */}
     <form id="date-controls">
       <input type="date" id="date" aria-label="Date" />
-      <label>
-        Daily Office Psalter
-        {/* TODO pref */}
-        <input type="radio" name="psalter" value={Psalter.DailyOffice} checked />
-      </label>
-      <label>
-        30-Day Psalter
-        <input type="radio" name="psalter" value={Psalter.ThirtyDay}/>
-      </label>
+      <fieldset>
+        <label>
+          Daily Office Psalter
+          {/* TODO pref */}
+          <input type="radio" name="psalter" value={Psalter.DailyOffice} checked />
+        </label>
+        <label>
+          30-Day Psalter
+          <input type="radio" name="psalter" value={Psalter.ThirtyDay}/>
+        </label>
+      </fieldset>
     </form>
     
     {/* Outlet for template */}

@@ -1,6 +1,14 @@
 import { CalendarService, LectionaryService } from "./services.bundle.js";
 import { getLocale } from "./locale.js";
-import { LectionaryEntry } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2?dts";
+
+export type LectionaryEntry = {
+  citation: string;
+  day?: string;
+  type?: string;
+  whentype?: string;
+  when?: number | string;
+  label?: string;
+};
 
 export enum Psalter {
   DailyOffice = "office",
@@ -71,12 +79,14 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
   buildList(
     morningPsalmList,
     morningPsalms,
-    (entry) => `<li>${entry.citation}</li>`
+    (entry) =>
+      `<li><a href="/psalter#${entry.citation}">${entry.label}</a></li>`
   );
   buildList(
     eveningPsalmList,
     eveningPsalms,
-    (entry) => `<li>${entry.citation}</li>`
+    (entry) =>
+      `<li><a href="/psalter#${entry.citation}">${entry.label}</a></li>`
   );
 
   // empty out past entries
@@ -111,4 +121,4 @@ const now = new Date();
 dateField.value = `${now.getFullYear()}-${(now.getMonth() + 1)
   .toString()
   .padStart(2, "0")}-${now.getDate().toString().padStart(2, "0")}`;
-setDay(dateField.value, "bcp1979", Psalter.DailyOffice);
+setDay(dateValue(), "bcp1979", psalterValue());
