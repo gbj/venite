@@ -1,4 +1,4 @@
-import { CompileService } from "./services.bundle.js";
+import { CompileService, CompileMode } from "./services.bundle.js";
 
 // Elements
 const previewMenu = document.getElementById("preview-menu"),
@@ -31,5 +31,10 @@ previewDate.onchange = (ev: InputEvent) => {
 };
 
 function compileForDate(ymd: string) {
-  CompileService.compileInDOM(ymd, document.querySelector("main"));
+  const rootEl = document.querySelector("main");
+  if (ymd) {
+    CompileService.compileInDOM(ymd, rootEl, CompileMode.Preview);
+  } else {
+    CompileService.clear(rootEl);
+  }
 }

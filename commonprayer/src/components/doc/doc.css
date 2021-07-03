@@ -1,3 +1,12 @@
-.doc.hidden {
+.doc.dimmed, .lookup.dimmed {
   opacity: 0.25;
+}
+
+.doc.hidden, .lookup.hidden {
+  display: none;
+}
+
+.doc {
+  width: 100%;
+  box-sizing: border-box;
 }

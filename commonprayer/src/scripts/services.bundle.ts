@@ -5,3 +5,5 @@ import { LectionaryServiceController } from "../services/lectionary-service.ts";
 export const CalendarService = new CalendarServiceController();
 export const LectionaryService = new LectionaryServiceController();
 export const CompileService = new CompileServiceController();
+
+export { CompileMode } from "../services/compile-service.ts";

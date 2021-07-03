@@ -52,6 +52,7 @@ export async function buildCategoryPage(
   categoryName: string,
   isDev: boolean
 ): Promise<SSGRefreshMap> {
+  // build category page
   const page = Category(srcDir, categoryName),
     html = await Index(page),
     dest = path.join(
@@ -74,6 +75,22 @@ export async function buildCategoryPage(
     "..",
     "pages",
     "category.tsx"
+  );
+
+  // build category lookup JSON
+  const categoryDocs = [];
+  for await (const { name, isFile } of await Deno.readDir(srcDir)) {
+    if (isFile && name.endsWith(".json") && name !== "index.json") {
+      const json = await Deno.readTextFile(path.join(srcDir, name)),
+        { data } = JSON.parse(json);
+      for (const doc of data) {
+        categoryDocs.push(doc);
+      }
+    }
+  }
+  await Deno.writeTextFile(
+    path.join(dest, "category.json"),
+    JSON.stringify(categoryDocs)
   );
 
   return {

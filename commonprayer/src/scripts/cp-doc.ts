@@ -28,11 +28,12 @@ window.addEventListener("click", (ev) => {
     ev.stopPropagation();
   } else {
     const target = ev.target as HTMLElement,
-      local: HTMLElement =
-        target.closest("[data-ldf]") || target.closest("[data-slug]");
-    const { copyable } = local.dataset;
-    if (local && copyable !== "false") {
-      handle(local);
+      local: HTMLElement = target.closest(".doc"); // || target.closest("[data-slug]");
+    if (local) {
+      const { copyable } = local.dataset;
+      if (copyable !== "false") {
+        handle(local);
+      }
     }
   }
 });

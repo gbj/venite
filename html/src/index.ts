@@ -30,9 +30,9 @@ export function ldfToHTML(
 
   // lookups by category, slug, lectionary, etc.
   if (inDoc?.lookup && (!inDoc.value || inDoc.value?.length === 0)) {
-    return `<article class="lookup ${inDoc.lookup.type}">${config.lookupLinks(
-      inDoc
-    )}</article>`;
+    return `<article class="lookup ${inDoc.lookup.type}" data-ldf="${encodeURI(
+      JSON.stringify(inDoc)
+    )}">${config.lookupLinks(inDoc)}</article>`;
   }
   // compiled documents
   else {
@@ -59,7 +59,9 @@ export function ldfToHTML(
           .map(
             (src: string) =>
               `<article class="doc image"${
-                config.includeLDF ? ` data-ldf="${JSON.stringify(inDoc)}` : ""
+                config.includeLDF
+                  ? ` data-ldf="${encodeURI(JSON.stringify(inDoc))}"`
+                  : ""
               }><img src="${src}"></article>`
           )
           .join("\n");

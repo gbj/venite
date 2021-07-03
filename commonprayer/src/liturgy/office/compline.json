@@ -165,7 +165,18 @@
         },
         {
           "type": "rubric",
-          "value": ["Except in Lent, add"]
+          "value": ["Except in Lent, add"],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": [],
+                  "except": ["Lent", "HolyWeek"]
+                }
+              }
+            ]
+          }
         },
         {
           "style": "text",
