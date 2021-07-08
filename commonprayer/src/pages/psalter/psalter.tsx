@@ -32,6 +32,7 @@ const Psalter = await Page({
                       "..",
                       "liturgy",
                       "psalter",
+                      "bcp1979",
                       "psalm-" + psalm + ".json"
                     )
                   ),

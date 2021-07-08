@@ -38,6 +38,19 @@ export async function buildDoc(
     } catch (e) {
       console.warn("Trouble writing ", subpath, filename, e);
     }
+
+    await Deno.copyFile(
+      src,
+      path.join(
+        path.fromFileUrl(import.meta.url),
+        "..",
+        "..",
+        "..",
+        "www",
+        subpath || "",
+        slug + ".json"
+      )
+    );
   } catch (e) {
     console.error("Error building", subpath, filename);
     console.error(e);

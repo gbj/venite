@@ -27,8 +27,21 @@ todayBtn.onclick = () => {
 
 // Date change handler
 previewDate.onchange = (ev: InputEvent) => {
-  compileForDate((ev.target as HTMLInputElement).value);
+  const ymd = (ev.target as HTMLInputElement).value;
+  // set the URL fragment, which will in turn compile the document
+  // we don't compile it directly here because the hashchange event will also compile it
+  // when we load the page
+  window.location.hash = ymd;
 };
+
+window.addEventListener("hashchange", () => {
+  compileForDate(window.location.hash?.replace("#", ""));
+});
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    compileForDate(window.location.hash?.replace("#", ""));
+  }
+});
 
 function compileForDate(ymd: string) {
   const rootEl = document.querySelector("main");

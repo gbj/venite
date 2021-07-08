@@ -172,7 +172,7 @@
               {
                 "season": {
                   "only": [],
-                  "except": ["Lent", "HolyWeek"]
+                  "except": ["Lent", "Holy Week"]
                 }
               }
             ]
@@ -186,7 +186,7 @@
               {
                 "season": {
                   "only": [],
-                  "except": ["Lent", "HolyWeek"]
+                  "except": ["Lent", "Holy Week"]
                 }
               }
             ]

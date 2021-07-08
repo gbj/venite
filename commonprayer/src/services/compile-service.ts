@@ -1,14 +1,24 @@
 import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.2";
 import {
+  BibleReading,
+  CanticleTableEntry,
+  ClientPreferences,
   dateFromYMDString,
   docsToLiturgy,
   docsToOption,
+  filterCanticleTableEntries,
+  findCollect,
   LiturgicalDay,
   LiturgicalDocument,
+  Liturgy,
+  Preference,
+  Psalm,
   versionToString,
 } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2?dts";
 import { LDF_TO_HTML_CONFIG } from "../ssg/ldf-to-html-config.tsx";
 import { CalendarService } from "./calendar-service.ts";
+import { CanticleTableService } from "./canticle-table-service.ts";
+import { LectionaryService } from "./lectionary-service.ts";
 
 export enum CompileMode {
   Document, // displays whole document without compiling
@@ -31,7 +41,36 @@ export class CompileServiceController {
     });
   }
 
+  async loadDoc(rootEl: HTMLElement): Promise<LiturgicalDocument> {
+    const { category, slug } = (
+        rootEl.querySelector("[data-slug]") as HTMLElement
+      ).dataset,
+      resp = await fetch(`/${category}/${slug}.json`),
+      data = await resp.json();
+    return new LiturgicalDocument(data.data[0]);
+  }
+
   async compileInDOM(ymd: string, rootEl: HTMLElement, mode: CompileMode) {
+    const doc = rootEl.dataset.ldf
+        ? new LiturgicalDocument(JSON.parse(rootEl.dataset.ldf))
+        : await this.loadDoc(rootEl),
+      defaultPrefs: Record<string, string> = {};
+    if (doc.type === "liturgy" && (doc as Liturgy).metadata?.preferences) {
+      for (const [key, pref] of Object.entries(
+        doc.metadata.preferences as Record<string, Preference>
+      )) {
+        const defaultOption =
+          pref.options.find((o) => o.default) || pref.options[0];
+        defaultPrefs[key] = defaultOption.value;
+      }
+    }
+
+    // TODO user prefs
+    const prefs = defaultPrefs,
+      originalPrefs: Record<string, Preference> =
+        doc.metadata?.preferences || {};
+    console.log("prefs = ", prefs, "\n\noriginalPrefs = ", originalPrefs);
+
     // build day from date
     const day = await CalendarService.findDay(ymd, "bcp1979");
 
@@ -47,20 +86,29 @@ export class CompileServiceController {
           // run conditions and lookups
           else {
             if (ldf) {
-              const doc = new LiturgicalDocument(JSON.parse(decodeURI(ldf)));
+              try {
+                const doc = new LiturgicalDocument(JSON.parse(decodeURI(ldf)));
 
-              // first, run any condition checks
-              const include = doc.include(day as LiturgicalDay, {});
-              if (!include) {
-                this.hide(child, mode);
-              } else {
-                this.show(child);
-              }
+                // first, run any condition checks
+                const include = doc.include(day as LiturgicalDay, {});
+                if (!include) {
+                  this.hide(child, mode);
+                } else {
+                  this.show(child);
+                }
 
-              // next, run any lookups
-              const lookupEl = await this.lookup(doc, day as LiturgicalDay);
-              if (lookupEl) {
-                this.replace(child, lookupEl, mode);
+                // next, run any lookups
+                const lookupEl = await this.lookup(
+                  doc,
+                  day as LiturgicalDay,
+                  prefs,
+                  originalPrefs
+                );
+                if (lookupEl) {
+                  this.replace(child, lookupEl, mode);
+                }
+              } catch (e) {
+                console.warn(e, decodeURI(ldf));
               }
             }
           }
@@ -91,22 +139,71 @@ export class CompileServiceController {
   // Lookup methods
   async lookup(
     doc: LiturgicalDocument,
-    day: LiturgicalDay
+    day: LiturgicalDay,
+    prefs: ClientPreferences,
+    originalPrefs: Record<string, Preference> | undefined
   ): Promise<Element | null> {
     if (doc.lookup) {
       let resultDocs: LiturgicalDocument[] | null;
 
+      const version = versionToString(doc.version);
+
       switch (doc.lookup?.type) {
         case "category":
-          resultDocs = await this.lookupByCategory(
-            doc.category,
-            versionToString(doc.version)
+          resultDocs = await this.lookupByCategory(doc.category, version);
+          break;
+        // TODO lectionary + psalter lookup
+        case "lectionary":
+          resultDocs = await this.lookupLectionary(
+            doc,
+            day,
+            prefs,
+            originalPrefs
           );
           break;
-        case "lectionary":
-        case "canticle":
+        case "canticle": {
+          const table =
+            typeof doc.lookup.table === "string"
+              ? undefined
+              : (
+                  (originalPrefs[doc.lookup.table.preference] as any)
+                    ?.options || []
+                ).find(
+                  (item) => item.value === prefs[doc.lookup.table["preference"]]
+                );
+
+          resultDocs = await this.lookupCanticle(
+            day,
+            version,
+            typeof doc.lookup.table === "string"
+              ? doc.lookup.table
+              : prefs[doc.lookup.table.preference],
+            Number(doc.lookup.item),
+            table?.metadata?.fallback
+          );
+          break;
+        }
         case "slug":
-        case "collect":
+          resultDocs = await this.lookupBySlug(doc.slug, version);
+          break;
+        case "collect": {
+          const collects = await this.lookupByCategory(
+            ["Collect of the Day"],
+            version
+          );
+          resultDocs = [
+            findCollect(
+              collects,
+              day,
+              true,
+              false,
+              false,
+              false,
+              Boolean(doc?.lookup?.allow_multiple)
+            ),
+          ];
+          break;
+        }
         default:
           return null;
       }
@@ -168,7 +265,7 @@ export class CompileServiceController {
     docs: LiturgicalDocument[]
   ): LiturgicalDocument[] {
     switch (filterType) {
-      case "seasonal":
+      case "seasonal": {
         const filteredByDaySeason = docs.filter((doc) =>
             doc.category?.includes(day?.season)
           ),
@@ -178,6 +275,7 @@ export class CompileServiceController {
         return filteredByDaySeason?.length == 0
           ? filteredByWeekSeason
           : filteredByDaySeason;
+      }
       case "evening":
         return docs.filter((doc) => doc.category?.includes("Evening"));
       case "day":
@@ -264,6 +362,8 @@ export class CompileServiceController {
     }
   }
 
+  // as the SSG traverses documents while building pages, it stores LDF JSON for a category in an array of documents
+  // located at `/CATEGORY/category.json` or `/CATEGORY/VERSION/category.json`
   async lookupByCategory(
     categories: string[] | undefined,
     version: string | undefined
@@ -287,4 +387,149 @@ export class CompileServiceController {
       return null;
     }
   }
+
+  // documents looked up only by slug are located at `/SLUG.json` or `/VERSION/SLUG.json`
+  async lookupBySlug(
+    slug: string | undefined,
+    version: string | undefined
+  ): Promise<LiturgicalDocument[] | null> {
+    if (slug) {
+      const resp = await fetch(
+          `/${version ? `${version}/` : ""}${slugify(slug)}.json`
+        ),
+        data: LiturgicalDocument[] = await resp.json();
+      return data;
+    } else {
+      return null;
+    }
+  }
+
+  async lookupCanticle(
+    day: LiturgicalDay,
+    version: string,
+    whichTable: string,
+    nth = 1,
+    fallbackTable: string | undefined
+  ): Promise<LiturgicalDocument[]> {
+    const entries = await CanticleTableService.findEntry(
+        whichTable,
+        nth,
+        fallbackTable
+      ),
+      filtered = filterCanticleTableEntries(
+        entries as CanticleTableEntry[],
+        day,
+        whichTable,
+        nth,
+        fallbackTable,
+        DEFAULT_CANTICLES
+      );
+    const docs = await Promise.all(
+      filtered.map((entry) => this.lookupBySlug(entry.slug, version))
+    );
+    return docs.flat();
+  }
+
+  async lookupLectionary(
+    doc: LiturgicalDocument,
+    day: LiturgicalDay,
+    prefs: ClientPreferences,
+    originalPrefs: Record<string, Preference> | undefined
+  ): Promise<LiturgicalDocument> {
+    const lectionaryName: string =
+        typeof doc.lookup?.table === "string"
+          ? doc.lookup.table
+          : prefs[doc.lookup.table.preference],
+      readingPrefName =
+        typeof doc.lookup?.item === "string" ||
+        typeof doc.lookup?.item === "number"
+          ? null
+          : doc.lookup.item.preference,
+      reading: string = readingPrefName
+        ? prefs[readingPrefName]
+        : doc.lookup.item.toString(),
+      alternateYear = Boolean(
+        (originalPrefs[readingPrefName]?.options || []).find(
+          (option) => option.value == reading
+        )?.metadata?.alternateYear
+      ),
+      entries = await LectionaryService.findReading(
+        day,
+        lectionaryName,
+        reading,
+        alternateYear
+      );
+    // look up and sort the documents
+    const docs = await Promise.all(
+        entries.map((entry) =>
+          doc.type === "psalm"
+            ? this.lookupPsalm(doc, prefs, entry.citation)
+            : this.lookupBibleReading(doc, prefs, entry.citation)
+        )
+      ),
+      sorted = docs.sort((a, b) =>
+        a.type === "psalm" &&
+        b.type === "psalm" &&
+        a?.metadata?.number === b?.metadata?.number &&
+        a.value &&
+        b.value
+          ? Number((a as Psalm).value[0].value[0].number) -
+            Number((b as Psalm).value[0].value[0].number)
+          : a?.metadata?.number - b?.metadata?.number
+      );
+    if (doc.metadata?.allow_multiple) {
+      return docsToLiturgy(sorted);
+    } else {
+      return docsToOption(sorted);
+    }
+  }
+
+  async lookupBibleReading(
+    doc: LiturgicalDocument,
+    prefs: ClientPreferences,
+    citation: string
+  ): Promise<LiturgicalDocument> {
+    const version =
+        typeof doc.version === "object"
+          ? prefs[doc.version.preference]
+          : doc.version,
+      resp = await fetch(
+        `https://us-central1-venite-2.cloudfunctions.net/bible?citation=${citation}&version=${version}`
+      ),
+      data = await resp.json();
+    return new BibleReading(data);
+  }
+
+  async lookupPsalm(
+    doc: LiturgicalDocument,
+    prefs: ClientPreferences,
+    c: string
+  ): Promise<LiturgicalDocument> {
+    const version =
+      typeof doc.version === "object"
+        ? prefs[doc.version.preference]
+        : doc.version || prefs["psalterVersion"] || "bcp1979";
+    const slug = c.match(/Psalm \d+/g)
+      ? c.split(":")[0].replace(" ", "-").toLowerCase()
+      : c;
+    const resp = await fetch(`/assets/liturgy/psalter/${version}/${slug}.json`),
+      { data } = await resp.json();
+    return docsToLiturgy(data);
+  }
 }
+
+const DEFAULT_CANTICLES = {
+  evening: [, "canticle-15", "canticle-17"],
+  morning: [, "canticle-21", "canticle-16"],
+};
+
+const HOLY_DAY_READINGS = {
+  morning: {
+    readingA: "holy_day_morning_1",
+    readingB: "holy_day_morning_2",
+  },
+  evening: {
+    readingA: "holy_day_evening_1",
+    readingB: "holy_day_evening_2",
+  },
+};

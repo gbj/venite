@@ -35,6 +35,7 @@ export class CalendarServiceController {
     vigil = false
   ) {
     // build the liturgical day
+    console.log("date = ", date);
     const initialDay = liturgicalDay(
         vigil ? addOneDay(date) : date,
         kalendar,

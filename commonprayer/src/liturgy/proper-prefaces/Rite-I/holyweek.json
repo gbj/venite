@@ -1,1 +1,20 @@
-{"data":[{"value":["Through Jesus Christ our Lord; who for our sins was lifted high upon the cross, that he might draw the whole world to himself; who by his suffering and death became the author of eternal salvation for all who put their trust in him."],"hidden":false,"slug":"proper_preface","language":"en","label":null,"version":"rite_i","metadata":{"response":null,"omit_response":true},"version_label":"Holy Week","style":"text","type":"text","category":["HolyWeek","Proper Preface"],"citation":null}]}
+{
+  "data": [
+    {
+      "value": [
+        "Through Jesus Christ our Lord; who for our sins was lifted high upon the cross, that he might draw the whole world to himself; who by his suffering and death became the author of eternal salvation for all who put their trust in him."
+      ],
+      "hidden": false,
+      "slug": "proper_preface",
+      "language": "en",
+      "label": null,
+      "version": "rite_i",
+      "metadata": { "response": null, "omit_response": true },
+      "version_label": "Holy Week",
+      "style": "text",
+      "type": "text",
+      "category": ["Holy Week", "Proper Preface"],
+      "citation": null
+    }
+  ]
+}

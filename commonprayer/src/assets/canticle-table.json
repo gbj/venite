@@ -1,0 +1,1543 @@
+{
+  "Rite-II-2": [
+    {
+      "day": null,
+      "week": null,
+      "season": null,
+      "slug": "canticle-17",
+      "nth": 2,
+      "weekday": "FeastDay",
+      "evening": true
+    },
+    {
+      "day": null,
+      "evening": false,
+      "weekday": "Thursday",
+      "week": null,
+      "slug": "canticle-20",
+      "season": null,
+      "nth": 2
+    },
+    {
+      "day": null,
+      "weekday": "Wednesday",
+      "nth": 2,
+      "evening": true,
+      "week": null,
+      "season": null,
+      "slug": "canticle-17"
+    },
+    {
+      "evening": true,
+      "season": null,
+      "slug": "canticle-17",
+      "day": null,
+      "nth": 2,
+      "weekday": "Sunday",
+      "week": null
+    },
+    {
+      "nth": 2,
+      "day": null,
+      "weekday": "Wednesday",
+      "week": null,
+      "slug": "canticle-16",
+      "evening": false,
+      "season": null
+    },
+    {
+      "nth": 2,
+      "day": null,
+      "season": null,
+      "evening": true,
+      "weekday": "Monday",
+      "slug": "canticle-17",
+      "week": null
+    },
+    {
+      "evening": true,
+      "week": null,
+      "day": null,
+      "nth": 2,
+      "season": null,
+      "slug": "canticle-15",
+      "weekday": "Tuesday"
+    },
+    {
+      "evening": false,
+      "week": null,
+      "weekday": "Tuesday",
+      "slug": "canticle-18",
+      "day": null,
+      "nth": 2,
+      "season": null
+    },
+    {
+      "slug": "Friday",
+      "day": null,
+      "evening": true,
+      "weekday": "canticle-17",
+      "week": null,
+      "nth": 2,
+      "season": null
+    },
+    {
+      "nth": 2,
+      "season": null,
+      "weekday": "FeastDay",
+      "evening": false,
+      "day": null,
+      "week": null,
+      "slug": "canticle-21"
+    },
+    {
+      "weekday": "Sunday",
+      "week": null,
+      "slug": "canticle-16",
+      "nth": 2,
+      "season": "Advent",
+      "day": null,
+      "evening": false,
+      "table": "bcp1979"
+    },
+    {
+      "weekday": "Sunday",
+      "week": null,
+      "nth": 2,
+      "slug": "canticle-21",
+      "evening": false,
+      "day": null,
+      "season": null,
+      "table": "bcp1979"
+    },
+    {
+      "season": null,
+      "nth": 2,
+      "weekday": "Monday",
+      "evening": false,
+      "slug": "canticle-19",
+      "week": null,
+      "day": null
+    },
+    {
+      "evening": false,
+      "nth": 2,
+      "slug": "canticle-19",
+      "weekday": "Thursday",
+      "day": null,
+      "week": null,
+      "season": "Lent",
+      "id": "22"
+    },
+    {
+      "evening": true,
+      "week": null,
+      "slug": "canticle-15",
+      "nth": 2,
+      "weekday": "Saturday",
+      "day": null,
+      "season": null,
+      "table": "bcp1979"
+    },
+    {
+      "nth": 2,
+      "evening": false,
+      "weekday": "Sunday",
+      "season": "Lent",
+      "day": null,
+      "week": null,
+      "slug": "canticle-16",
+      "table": "bcp1979"
+    },
+    {
+      "slug": "canticle-19",
+      "nth": 2,
+      "weekday": "Thursday",
+      "day": null,
+      "evening": false,
+      "season": "Advent",
+      "week": null
+    },
+    {
+      "slug": "canticle-20",
+      "day": null,
+      "week": null,
+      "nth": 2,
+      "evening": false,
+      "weekday": "Thursday",
+      "season": "Holy Week"
+    },
+    {
+      "weekday": "Thursday",
+      "season": "Holy Week",
+      "evening": false,
+      "slug": "canticle-19",
+      "nth": 2
+    },
+    {
+      "day": null,
+      "nth": 2,
+      "slug": "canticle-18",
+      "season": null,
+      "week": null,
+      "evening": false,
+      "weekday": "Friday"
+    },
+    {
+      "day": null,
+      "season": "Holy Week",
+      "nth": 2,
+      "evening": false,
+      "slug": "canticle-16",
+      "weekday": "Sunday",
+      "week": null
+    },
+    {
+      "week": null,
+      "weekday": "Thursday",
+      "slug": "canticle-15",
+      "evening": true,
+      "day": null,
+      "nth": 2,
+      "season": null,
+      "table": "bcp1979"
+    },
+    {
+      "nth": 2,
+      "weekday": "Saturday",
+      "evening": false,
+      "season": null,
+      "day": null,
+      "week": null,
+      "slug": "canticle-19",
+      "id": "29"
+    }
+  ],
+  "EOW-2": [
+    {
+      "evening": false,
+      "weekday": "Friday",
+      "day": null,
+      "nth": 2,
+      "season": "Holy Week",
+      "week": null,
+      "slug": "canticle-s"
+    },
+    {
+      "season": null,
+      "week": null,
+      "day": null,
+      "weekday": "Thursday",
+      "nth": 2,
+      "slug": "canticle-s",
+      "evening": true
+    },
+    {
+      "week": null,
+      "weekday": "FeastDay",
+      "slug": "canticle-o",
+      "season": null,
+      "day": null,
+      "nth": 2,
+      "evening": true
+    },
+    {
+      "day": null,
+      "week": null,
+      "slug": "canticle-s",
+      "season": null,
+      "nth": 2,
+      "evening": false,
+      "weekday": "Wednesday",
+      "table": "eow"
+    },
+    {
+      "week": null,
+      "day": null,
+      "season": "Easter",
+      "slug": "canticle-k",
+      "evening": false,
+      "weekday": "Friday",
+      "nth": 2,
+      "id": "101"
+    },
+    {
+      "day": null,
+      "season": null,
+      "week": null,
+      "weekday": "Sunday",
+      "nth": 2,
+      "evening": true,
+      "slug": "canticle-m"
+    },
+    {
+      "slug": "canticle-17",
+      "season": null,
+      "evening": true,
+      "nth": 2,
+      "day": null,
+      "week": null,
+      "weekday": "Friday"
+    },
+    {
+      "day": null,
+      "week": null,
+      "nth": 2,
+      "evening": true,
+      "season": null,
+      "slug": "canticle-l",
+      "weekday": "Monday",
+      "table": "eow"
+    },
+    {
+      "week": null,
+      "nth": 2,
+      "season": null,
+      "weekday": "Friday",
+      "slug": "canticle-q",
+      "evening": true,
+      "day": null
+    },
+    {
+      "nth": 2,
+      "evening": false,
+      "week": null,
+      "weekday": "Sunday",
+      "season": "Christmas",
+      "day": null,
+      "slug": "canticle-n"
+    },
+    {
+      "day": null,
+      "nth": 2,
+      "weekday": "FeastDay",
+      "season": null,
+      "week": null,
+      "slug": "canticle-21",
+      "evening": false
+    },
+    {
+      "season": null,
+      "week": null,
+      "slug": "canticle-n",
+      "day": null,
+      "weekday": "Monday",
+      "evening": true,
+      "nth": 2,
+      "id": "114"
+    },
+    {
+      "weekday": "FeastDay",
+      "day": null,
+      "season": null,
+      "evening": false,
+      "nth": 2,
+      "slug": "canticle-k",
+      "week": null
+    },
+    {
+      "nth": 2,
+      "season": null,
+      "evening": true,
+      "week": null,
+      "weekday": "FeastDay",
+      "slug": "canticle-17",
+      "day": null
+    },
+    {
+      "slug": "canticle-l",
+      "nth": 2,
+      "week": null,
+      "day": null,
+      "evening": true,
+      "weekday": "Wednesday",
+      "season": null
+    },
+    {
+      "evening": true,
+      "week": null,
+      "nth": 2,
+      "weekday": "Saturday",
+      "day": null,
+      "season": null,
+      "slug": "canticle-16"
+    },
+    {
+      "nth": 2,
+      "weekday": "Tuesday",
+      "day": null,
+      "evening": false,
+      "week": null,
+      "slug": "canticle-m",
+      "season": null
+    },
+    {
+      "evening": false,
+      "week": null,
+      "slug": "canticle-s",
+      "weekday": "Friday",
+      "day": null,
+      "season": "Lent",
+      "nth": 2,
+      "id": "99"
+    },
+    {
+      "evening": false,
+      "nth": 2,
+      "slug": "canticle-o",
+      "day": null,
+      "season": null,
+      "weekday": "Saturday",
+      "week": null
+    },
+    {
+      "week": null,
+      "slug": "canticle-l",
+      "nth": 2,
+      "weekday": "Sunday",
+      "evening": false,
+      "day": null,
+      "season": "Lent"
+    },
+    {
+      "nth": 2,
+      "week": null,
+      "slug": "canticle-m",
+      "evening": false,
+      "season": "Easter",
+      "weekday": "Sunday",
+      "day": null
+    },
+    {
+      "slug": "canticle-p",
+      "week": null,
+      "evening": true,
+      "season": null,
+      "day": null,
+      "nth": 2,
+      "weekday": "Tuesday"
+    },
+    {
+      "week": null,
+      "season": "Epiphany",
+      "evening": false,
+      "weekday": "Sunday",
+      "slug": "canticle-20",
+      "day": null,
+      "nth": 2,
+      "id": "67"
+    },
+    {
+      "day": null,
+      "season": null,
+      "nth": 2,
+      "slug": "canticle-n",
+      "weekday": "Tuesday",
+      "week": null,
+      "evening": false
+    },
+    {
+      "day": null,
+      "weekday": "Sunday",
+      "evening": false,
+      "slug": "canticle-n",
+      "nth": 2,
+      "season": "Epiphany",
+      "week": null
+    },
+    {
+      "slug": "canticle-r",
+      "week": null,
+      "evening": false,
+      "nth": 2,
+      "weekday": "Friday",
+      "day": null,
+      "season": "Christmas"
+    },
+    {
+      "nth": 2,
+      "evening": true,
+      "week": null,
+      "season": null,
+      "slug": "canticle-16",
+      "day": null,
+      "weekday": "Thursday"
+    },
+    {
+      "evening": false,
+      "day": null,
+      "nth": 2,
+      "season": null,
+      "weekday": "Sunday",
+      "slug": "canticle-k",
+      "week": null
+    },
+    {
+      "weekday": "Wednesday",
+      "nth": 2,
+      "season": null,
+      "evening": false,
+      "week": null,
+      "day": null,
+      "slug": "canticle-p"
+    },
+    {
+      "weekday": "Monday",
+      "nth": 2,
+      "slug": "canticle-17",
+      "week": null,
+      "day": null,
+      "season": null,
+      "evening": true
+    },
+    {
+      "evening": false,
+      "nth": 2,
+      "slug": "canticle-q",
+      "day": null,
+      "week": null,
+      "season": null,
+      "weekday": "Monday"
+    },
+    {
+      "evening": true,
+      "season": null,
+      "week": null,
+      "nth": 2,
+      "slug": "canticle-17",
+      "weekday": "Wednesday",
+      "day": null
+    },
+    {
+      "nth": 2,
+      "day": null,
+      "evening": false,
+      "week": null,
+      "slug": "canticle-p",
+      "weekday": "Sunday",
+      "season": "Advent"
+    },
+    {
+      "day": null,
+      "nth": 2,
+      "slug": "canticle-19",
+      "season": null,
+      "weekday": "Saturday",
+      "evening": false,
+      "week": null,
+      "table": "eow"
+    },
+    {
+      "nth": 2,
+      "evening": false,
+      "slug": "canticle-r",
+      "week": null,
+      "weekday": "Thursday",
+      "day": null,
+      "season": null,
+      "id": "88"
+    },
+    {
+      "season": null,
+      "nth": 2,
+      "week": null,
+      "weekday": "Tuesday",
+      "evening": true,
+      "slug": "canticle-16",
+      "day": null
+    },
+    {
+      "slug": "canticle-17",
+      "nth": 2,
+      "weekday": "Sunday",
+      "day": null,
+      "evening": true,
+      "season": null,
+      "week": null
+    },
+    {
+      "day": null,
+      "slug": "canticle-18",
+      "week": null,
+      "season": null,
+      "evening": false,
+      "nth": 2,
+      "weekday": "Friday",
+      "table": "eow"
+    },
+    {
+      "evening": false,
+      "week": null,
+      "day": null,
+      "weekday": "Sunday",
+      "season": "Christmas",
+      "slug": "canticle-20",
+      "nth": 2,
+      "table": "eow"
+    },
+    {
+      "weekday": "Thursday",
+      "day": null,
+      "evening": false,
+      "season": null,
+      "slug": "canticle-16",
+      "week": null,
+      "nth": 2
+    },
+    {
+      "day": null,
+      "nth": 2,
+      "weekday": "Saturday",
+      "season": null,
+      "evening": true,
+      "slug": "canticle-r",
+      "week": null
+    },
+    {
+      "season": null,
+      "nth": 2,
+      "day": null,
+      "week": null,
+      "slug": "canticle-21",
+      "weekday": "Sunday",
+      "evening": false
+    }
+  ],
+  "EOW-1": [
+    {
+      "slug": "canticle-15",
+      "day": null,
+      "weekday": "Sunday",
+      "week": null,
+      "nth": 1,
+      "season": null,
+      "evening": true
+    },
+    {
+      "evening": false,
+      "day": null,
+      "season": null,
+      "weekday": "Thursday",
+      "slug": "canticle-j",
+      "nth": 1,
+      "week": null
+    },
+    {
+      "slug": "canticle-14",
+      "evening": false,
+      "weekday": "Friday",
+      "day": null,
+      "nth": 1,
+      "season": "Holy Week",
+      "week": null,
+      "id": "95"
+    },
+    {
+      "nth": 1,
+      "season": null,
+      "evening": false,
+      "weekday": "Monday",
+      "week": null,
+      "day": null,
+      "slug": "canticle-c"
+    },
+    {
+      "evening": false,
+      "weekday": "Saturday",
+      "slug": "canticle-d",
+      "nth": 1,
+      "week": null,
+      "season": null,
+      "day": null
+    },
+    {
+      "season": null,
+      "week": null,
+      "weekday": "FeastDay",
+      "slug": "canticle-16",
+      "day": null,
+      "nth": 1,
+      "evening": false
+    },
+    {
+      "day": null,
+      "evening": false,
+      "nth": 1,
+      "week": null,
+      "weekday": "Sunday",
+      "season": "Christmas",
+      "slug": "canticle-9"
+    },
+    {
+      "slug": "canticle-11",
+      "evening": false,
+      "weekday": "Monday",
+      "day": null,
+      "nth": 1,
+      "season": null,
+      "week": null,
+      "id": "71"
+    },
+    {
+      "nth": 1,
+      "evening": false,
+      "week": null,
+      "day": null,
+      "season": "Christmas",
+      "weekday": "Friday",
+      "slug": "canticle-j"
+    },
+    {
+      "evening": true,
+      "day": null,
+      "week": null,
+      "weekday": "Thursday",
+      "slug": "canticle-j",
+      "nth": 1,
+      "season": null
+    },
+    {
+      "week": null,
+      "day": null,
+      "season": "Lent",
+      "nth": 1,
+      "slug": "canticle-10",
+      "evening": false,
+      "weekday": "Wednesday"
+    },
+    {
+      "weekday": "FeastDay",
+      "day": null,
+      "slug": "canticle-e",
+      "nth": 1,
+      "week": null,
+      "evening": false,
+      "season": null
+    },
+    {
+      "week": null,
+      "weekday": "Sunday",
+      "slug": "canticle-c",
+      "nth": 1,
+      "season": "Epiphany",
+      "evening": false,
+      "day": null
+    },
+    {
+      "day": null,
+      "nth": 1,
+      "slug": "canticle-h",
+      "season": "Lent",
+      "week": null,
+      "weekday": "Sunday",
+      "evening": false,
+      "table": "eow"
+    },
+    {
+      "nth": 1,
+      "week": null,
+      "season": null,
+      "evening": true,
+      "slug": "canticle-16",
+      "day": null,
+      "weekday": "FeastDay"
+    },
+    {
+      "evening": false,
+      "slug": "canticle-g",
+      "nth": 1,
+      "weekday": "Wednesday",
+      "day": null,
+      "week": null,
+      "season": null
+    },
+    {
+      "evening": false,
+      "day": null,
+      "slug": "canticle-d",
+      "weekday": "Sunday",
+      "nth": 1,
+      "season": "Advent",
+      "week": null
+    },
+    {
+      "nth": 1,
+      "day": null,
+      "evening": false,
+      "week": null,
+      "season": "Epiphany",
+      "slug": "canticle-9",
+      "weekday": "Sunday"
+    },
+    {
+      "evening": false,
+      "day": null,
+      "season": null,
+      "nth": 1,
+      "slug": "canticle-a",
+      "week": null,
+      "weekday": "Thursday",
+      "table": "eow"
+    },
+    {
+      "nth": 1,
+      "slug": "canticle-d",
+      "week": null,
+      "weekday": "Tuesday",
+      "season": null,
+      "day": null,
+      "evening": true,
+      "table": "eow"
+    },
+    {
+      "weekday": "Wednesday",
+      "season": null,
+      "week": null,
+      "day": null,
+      "slug": "canticle-h",
+      "evening": false,
+      "nth": 1,
+      "id": "79"
+    },
+    {
+      "season": null,
+      "nth": 1,
+      "weekday": "Tuesday",
+      "week": null,
+      "slug": "canticle-b",
+      "evening": false,
+      "day": null
+    },
+    {
+      "weekday": "Saturday",
+      "day": null,
+      "slug": "canticle-b",
+      "nth": 1,
+      "season": null,
+      "evening": true,
+      "week": null
+    },
+    {
+      "evening": false,
+      "day": null,
+      "nth": 1,
+      "season": "Lent",
+      "slug": "canticle-h",
+      "weekday": "Sunday",
+      "week": null
+    },
+    {
+      "slug": "canticle-12",
+      "week": null,
+      "day": null,
+      "season": null,
+      "evening": false,
+      "nth": 1,
+      "weekday": "Saturday",
+      "table": "eow"
+    },
+    {
+      "season": "Lent",
+      "evening": false,
+      "nth": 1,
+      "week": null,
+      "slug": "canticle-f",
+      "weekday": "Friday",
+      "day": null
+    },
+    {
+      "nth": 1,
+      "season": "Easter",
+      "weekday": "Friday",
+      "slug": "canticle-g",
+      "day": null,
+      "evening": false,
+      "week": null
+    },
+    {
+      "evening": false,
+      "season": null,
+      "weekday": "Friday",
+      "day": null,
+      "week": null,
+      "slug": "canticle-i",
+      "nth": 1
+    },
+    {
+      "nth": 1,
+      "week": null,
+      "day": null,
+      "evening": false,
+      "slug": "canticle-16",
+      "season": null,
+      "weekday": "Sunday"
+    },
+    {
+      "season": "Holy Week",
+      "day": null,
+      "nth": 1,
+      "week": null,
+      "slug": "canticle-i",
+      "weekday": "Wednesday",
+      "evening": false,
+      "id": "81"
+    },
+    {
+      "evening": false,
+      "season": null,
+      "day": null,
+      "week": null,
+      "weekday": "Tuesday",
+      "slug": "canticle-13",
+      "nth": 1
+    },
+    {
+      "weekday": "Wednesday",
+      "day": null,
+      "week": null,
+      "season": "Holy Week",
+      "evening": false,
+      "slug": "canticle-10",
+      "nth": 1
+    },
+    {
+      "week": null,
+      "nth": 1,
+      "season": "Easter",
+      "slug": "canticle-a",
+      "evening": false,
+      "weekday": "Sunday",
+      "day": null
+    },
+    {
+      "day": null,
+      "weekday": "Monday",
+      "week": null,
+      "evening": true,
+      "season": null,
+      "nth": 1,
+      "slug": "canticle-a"
+    },
+    {
+      "season": "Christmas",
+      "weekday": "Sunday",
+      "evening": false,
+      "slug": "canticle-c",
+      "day": null,
+      "nth": 1,
+      "week": null
+    },
+    {
+      "season": null,
+      "slug": "canticle-c",
+      "weekday": "Wednesday",
+      "nth": 1,
+      "evening": true,
+      "day": null,
+      "week": null
+    },
+    {
+      "day": null,
+      "evening": true,
+      "slug": "canticle-g",
+      "week": null,
+      "season": null,
+      "weekday": "Friday",
+      "nth": 1
+    },
+    {
+      "season": "Easter",
+      "day": null,
+      "slug": "canticle-8",
+      "week": null,
+      "weekday": "Sunday",
+      "evening": false,
+      "nth": 1
+    },
+    {
+      "nth": 1,
+      "weekday": "Sunday",
+      "evening": false,
+      "day": null,
+      "slug": "canticle-e",
+      "week": null,
+      "season": null,
+      "table": "eow"
+    },
+    {
+      "day": null,
+      "season": "Lent",
+      "slug": "canticle-i",
+      "evening": false,
+      "nth": 1,
+      "weekday": "Wednesday",
+      "week": null
+    },
+    {
+      "day": null,
+      "weekday": "Friday",
+      "season": "Lent",
+      "slug": "canticle-14",
+      "nth": 1,
+      "week": null,
+      "evening": false
+    },
+    {
+      "season": "Holy Week",
+      "nth": 1,
+      "evening": false,
+      "slug": "canticle-f",
+      "week": null,
+      "day": null,
+      "weekday": "Friday"
+    }
+  ],
+  "Rite-II-1": [
+    {
+      "slug": "canticle-11",
+      "season": null,
+      "nth": 1,
+      "day": null,
+      "week": null,
+      "weekday": "Wednesday",
+      "evening": false
+    },
+    {
+      "slug": "canticle-14",
+      "season": "Lent",
+      "nth": 1,
+      "day": null,
+      "week": null,
+      "evening": false,
+      "weekday": "Sunday",
+      "table": "bcp1979"
+    },
+    {
+      "slug": "canticle-10",
+      "season": null,
+      "day": null,
+      "weekday": "Tuesday",
+      "evening": true,
+      "nth": 1,
+      "week": null
+    },
+    {
+      "evening": false,
+      "nth": 1,
+      "slug": "canticle-14",
+      "season": "Lent",
+      "day": null,
+      "week": null,
+      "weekday": "Wednesday",
+      "table": "bcp1979"
+    },
+    {
+      "week": null,
+      "day": null,
+      "slug": "canticle-8",
+      "weekday": "Thursday",
+      "evening": false,
+      "nth": 1,
+      "season": null,
+      "table": "bcp1979"
+    },
+    {
+      "evening": true,
+      "weekday": "Friday",
+      "slug": "canticle-13",
+      "nth": 1,
+      "day": null,
+      "week": null,
+      "season": null
+    },
+    {
+      "day": null,
+      "week": null,
+      "evening": false,
+      "slug": "canticle-16",
+      "nth": 1,
+      "season": null,
+      "weekday": "Sunday"
+    },
+    {
+      "season": "Holy Week",
+      "week": null,
+      "slug": "canticle-14",
+      "evening": false,
+      "weekday": "Wednesday",
+      "nth": 1,
+      "day": null
+    },
+    {
+      "day": null,
+      "season": "Lent",
+      "nth": 1,
+      "weekday": "Friday",
+      "slug": "canticle-14",
+      "evening": false,
+      "week": null
+    },
+    {
+      "evening": true,
+      "nth": 1,
+      "slug": "canticle-15",
+      "weekday": "Sunday",
+      "day": null,
+      "week": null,
+      "season": null
+    },
+    {
+      "weekday": "FeastDay",
+      "evening": true,
+      "week": null,
+      "day": null,
+      "season": null,
+      "nth": 1,
+      "slug": "canticle-15"
+    },
+    {
+      "slug": "canticle-10",
+      "evening": false,
+      "season": null,
+      "week": null,
+      "day": null,
+      "weekday": "Friday",
+      "nth": 1
+    },
+    {
+      "evening": false,
+      "slug": "canticle-14",
+      "week": null,
+      "nth": 1,
+      "day": null,
+      "season": "Lent",
+      "weekday": "Friday"
+    },
+    {
+      "nth": 1,
+      "season": "Advent",
+      "evening": false,
+      "weekday": "Sunday",
+      "slug": "canticle-11",
+      "day": null,
+      "week": null,
+      "id": "1"
+    },
+    {
+      "season": null,
+      "week": null,
+      "weekday": "Saturday",
+      "evening": false,
+      "day": null,
+      "slug": "canticle-12",
+      "nth": 1
+    },
+    {
+      "season": "Holy Week",
+      "slug": "canticle-14",
+      "weekday": "Monday",
+      "day": null,
+      "evening": true,
+      "nth": 1,
+      "week": null
+    },
+    {
+      "weekday": "Sunday",
+      "evening": false,
+      "nth": 1,
+      "week": null,
+      "season": "Easter",
+      "slug": "canticle-8",
+      "day": null,
+      "id": "3"
+    },
+    {
+      "day": null,
+      "season": null,
+      "nth": 1,
+      "weekday": "FeastDay",
+      "week": null,
+      "evening": false,
+      "slug": "canticle-16"
+    },
+    {
+      "weekday": "Monday",
+      "day": null,
+      "evening": false,
+      "slug": "canticle-9",
+      "nth": 1,
+      "week": null,
+      "season": null
+    },
+    {
+      "day": null,
+      "evening": true,
+      "weekday": "Saturday",
+      "week": null,
+      "slug": "canticle-9",
+      "season": null,
+      "nth": 1
+    },
+    {
+      "nth": 1,
+      "season": null,
+      "weekday": "Monday",
+      "week": null,
+      "slug": "canticle-8",
+      "day": null,
+      "evening": true
+    },
+    {
+      "nth": 1,
+      "evening": true,
+      "slug": "canticle-11",
+      "season": null,
+      "week": null,
+      "day": null,
+      "weekday": "Thursday"
+    },
+    {
+      "season": null,
+      "nth": 1,
+      "week": null,
+      "weekday": "Tuesday",
+      "day": null,
+      "slug": "canticle-13",
+      "evening": false,
+      "table": "bcp1979"
+    },
+    {
+      "week": null,
+      "weekday": "Wednesday",
+      "day": null,
+      "season": null,
+      "evening": true,
+      "slug": "canticle-12",
+      "nth": 1
+    },
+    {
+      "weekday": "Monday",
+      "season": "Lent",
+      "slug": "canticle-14",
+      "week": null,
+      "day": null,
+      "evening": true,
+      "nth": 1
+    },
+    {
+      "season": "Holy Week",
+      "day": null,
+      "slug": "canticle-11",
+      "weekday": "Sunday",
+      "week": null,
+      "evening": false,
+      "nth": 1
+    }
+  ],
+  "Rite-I-1": [
+    {
+      "slug": "canticle-3",
+      "week": null,
+      "day": null,
+      "season": null,
+      "weekday": "FeastDay",
+      "nth": 1,
+      "evening": true
+    },
+    {
+      "slug": "canticle-1",
+      "day": null,
+      "season": null,
+      "week": null,
+      "nth": 1,
+      "evening": false,
+      "weekday": "Saturday"
+    },
+    {
+      "day": null,
+      "evening": true,
+      "slug": "canticle-3",
+      "weekday": "Sunday",
+      "season": null,
+      "nth": 1,
+      "week": null
+    },
+    {
+      "season": null,
+      "day": null,
+      "weekday": "Friday",
+      "nth": 1,
+      "week": null,
+      "slug": "canticle-2",
+      "evening": true
+    },
+    {
+      "evening": false,
+      "week": null,
+      "weekday": "Sunday",
+      "season": null,
+      "nth": 1,
+      "slug": "canticle-4",
+      "day": null
+    },
+    {
+      "nth": 1,
+      "evening": false,
+      "day": null,
+      "season": null,
+      "slug": "canticle-2",
+      "week": null,
+      "weekday": "Tuesday"
+    },
+    {
+      "slug": "canticle-1",
+      "day": null,
+      "evening": true,
+      "weekday": "Wednesday",
+      "season": null,
+      "nth": 1,
+      "week": null
+    },
+    {
+      "day": null,
+      "slug": "canticle-4",
+      "evening": false,
+      "week": null,
+      "season": null,
+      "nth": 1,
+      "weekday": "FeastDay"
+    }
+  ],
+  "TDB-2": [
+    {
+      "week": null,
+      "day": null,
+      "weekday": null,
+      "nth": 2,
+      "evening": false,
+      "slug": "canticle-16",
+      "season": null
+    }
+  ],
+  "Rite-I-2": [
+    {
+      "week": null,
+      "nth": 2,
+      "season": "Lent",
+      "slug": "canticle-4",
+      "weekday": "Sunday",
+      "day": null,
+      "evening": false
+    },
+    {
+      "evening": false,
+      "season": "Advent",
+      "nth": 2,
+      "weekday": "Sunday",
+      "week": null,
+      "slug": "canticle-4",
+      "day": null,
+      "table": "rite_i"
+    },
+    {
+      "slug": "canticle-4",
+      "weekday": "Sunday",
+      "nth": 2,
+      "season": "Holy Week",
+      "evening": false,
+      "day": null,
+      "week": null,
+      "id": "142"
+    },
+    {
+      "weekday": "Wednesday",
+      "nth": 2,
+      "week": null,
+      "season": null,
+      "day": null,
+      "slug": "canticle-4",
+      "evening": false
+    },
+    {
+      "day": null,
+      "weekday": "Tuesday",
+      "week": null,
+      "season": null,
+      "slug": "canticle-3",
+      "nth": 2,
+      "evening": true,
+      "table": "rite_i"
+    },
+    {
+      "nth": 2,
+      "slug": "canticle-5",
+      "weekday": "Monday",
+      "week": null,
+      "season": null,
+      "day": null,
+      "evening": true,
+      "table": "rite_i"
+    },
+    {
+      "evening": true,
+      "day": null,
+      "weekday": "Friday",
+      "nth": 2,
+      "slug": "canticle-5",
+      "week": null,
+      "season": null
+    },
+    {
+      "evening": false,
+      "weekday": "Sunday",
+      "day": null,
+      "slug": "canticle-7",
+      "nth": 2,
+      "week": null,
+      "season": null
+    },
+    {
+      "slug": "canticle-5",
+      "nth": 2,
+      "week": null,
+      "evening": true,
+      "weekday": "Sunday",
+      "season": null,
+      "day": null
+    },
+    {
+      "slug": "canticle-3",
+      "weekday": "Saturday",
+      "week": null,
+      "nth": 2,
+      "evening": true,
+      "day": null,
+      "season": null
+    },
+    {
+      "day": null,
+      "slug": "canticle-5",
+      "evening": true,
+      "week": null,
+      "season": null,
+      "nth": 2,
+      "weekday": "FeastDay"
+    },
+    {
+      "weekday": "Thursday",
+      "slug": "canticle-3",
+      "day": null,
+      "season": null,
+      "evening": true,
+      "week": null,
+      "nth": 2
+    },
+    {
+      "slug": "canticle-7",
+      "nth": 2,
+      "season": null,
+      "week": null,
+      "weekday": "FeastDay",
+      "day": null,
+      "evening": false
+    },
+    {
+      "weekday": "Wednesday",
+      "slug": "canticle-5",
+      "day": null,
+      "evening": true,
+      "week": null,
+      "nth": 2,
+      "season": null
+    },
+    {
+      "season": null,
+      "slug": "canticle-6",
+      "day": null,
+      "week": null,
+      "weekday": "Thursday",
+      "nth": 2,
+      "evening": false
+    }
+  ],
+  "MagNunc-1": [
+    {
+      "weekday": null,
+      "day": null,
+      "slug": "canticle-15",
+      "season": null,
+      "evening": true,
+      "nth": 1,
+      "week": null
+    }
+  ],
+  "MagNunc-I-1": [
+    {
+      "weekday": null,
+      "nth": 1,
+      "slug": "canticle-3",
+      "season": null,
+      "week": null,
+      "day": null,
+      "evening": true,
+      "id": "172"
+    }
+  ],
+  "TDB-1": [
+    {
+      "slug": "canticle-21",
+      "day": null,
+      "weekday": null,
+      "season": null,
+      "evening": false,
+      "week": null,
+      "nth": 1,
+      "id": "136"
+    }
+  ],
+  "MagNunc-I-2": [
+    {
+      "nth": 2,
+      "week": null,
+      "season": null,
+      "day": null,
+      "evening": true,
+      "slug": "canticle-5",
+      "weekday": null,
+      "id": "173"
+    }
+  ],
+  "TDB-I-2": [
+    {
+      "evening": false,
+      "day": null,
+      "weekday": null,
+      "slug": "canticle-4",
+      "week": null,
+      "season": null,
+      "nth": 2
+    }
+  ],
+  "TDB-I-1": [
+    {
+      "weekday": null,
+      "nth": 1,
+      "season": null,
+      "day": null,
+      "week": null,
+      "evening": false,
+      "slug": "canticle-7"
+    }
+  ],
+  "MagNunc-2": [
+    {
+      "season": null,
+      "week": null,
+      "weekday": null,
+      "nth": 2,
+      "day": null,
+      "slug": "canticle-17",
+      "evening": true
+    }
+  ]
+}

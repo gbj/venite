@@ -1,1 +1,52 @@
-{"data":[{"value":["For by water and the Holy Spirit you have made us a new people in Jesus Christ our Lord, to show forth your glory in all the world."],"label":null,"language":"en","style":"text","citation":null,"slug":"proper_preface","hidden":false,"version":"bcp1979","metadata":{"omit_response":true,"response":null},"type":"text","category":["OrdinaryTime","Proper Preface"],"version_label":"Of God the Holy Spirit"},{"metadata":{"response":null,"omit_response":true},"language":"en","version":"bcp1979","slug":"proper_preface","value":["Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life."],"citation":null,"category":["OrdinaryTime","Proper Preface"],"hidden":false,"version_label":"Of God the Son","label":null,"type":"text","style":"text"},{"label":null,"hidden":false,"value":["For you are the source of light and life, you made us in your image, and called us to new life in Jesus Christ our Lord."],"slug":"proper_preface","version":"bcp1979","style":"text","metadata":{"response":null,"omit_response":true},"citation":null,"category":["OrdinaryTime","Proper Preface"],"version_label":"Of God the Father","language":"en","type":"text"}]}
+{
+  "data": [
+    {
+      "value": [
+        "For by water and the Holy Spirit you have made us a new people in Jesus Christ our Lord, to show forth your glory in all the world."
+      ],
+      "label": null,
+      "language": "en",
+      "style": "text",
+      "citation": null,
+      "slug": "proper_preface",
+      "hidden": false,
+      "version": "bcp1979",
+      "metadata": { "omit_response": true, "response": null },
+      "type": "text",
+      "category": ["Ordinary Time", "Proper Preface"],
+      "version_label": "Of God the Holy Spirit"
+    },
+    {
+      "metadata": { "response": null, "omit_response": true },
+      "language": "en",
+      "version": "bcp1979",
+      "slug": "proper_preface",
+      "value": [
+        "Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life."
+      ],
+      "citation": null,
+      "category": ["Ordinary Time", "Proper Preface"],
+      "hidden": false,
+      "version_label": "Of God the Son",
+      "label": null,
+      "type": "text",
+      "style": "text"
+    },
+    {
+      "label": null,
+      "hidden": false,
+      "value": [
+        "For you are the source of light and life, you made us in your image, and called us to new life in Jesus Christ our Lord."
+      ],
+      "slug": "proper_preface",
+      "version": "bcp1979",
+      "style": "text",
+      "metadata": { "response": null, "omit_response": true },
+      "citation": null,
+      "category": ["Ordinary Time", "Proper Preface"],
+      "version_label": "Of God the Father",
+      "language": "en",
+      "type": "text"
+    }
+  ]
+}

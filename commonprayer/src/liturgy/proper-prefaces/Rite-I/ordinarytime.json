@@ -1,1 +1,52 @@
-{"data":[{"version":"rite_i","slug":"proper_preface","category":["OrdinaryTime","Proper Preface"],"style":"text","label":null,"language":"en","metadata":{"response":null,"omit_response":true},"hidden":false,"version_label":"Of God the Holy Spirit","type":"text","citation":null,"value":["Who by water and the Holy Spirit hast made us a new people in Jesus Christ our Lord, to show forth thy glory in all the world."]},{"language":"en","version_label":"Of God the Son","type":"text","value":["Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life."],"hidden":false,"version":"rite_i","category":["OrdinaryTime","Proper Preface"],"slug":"proper_preface","citation":null,"style":"text","label":null,"metadata":{"omit_response":true,"response":null}},{"value":["Creator of the light and source of life, who hast made us in thine image, and called us to new life in Jesus Christ our Lord."],"type":"text","metadata":{"omit_response":true,"response":null},"version":"rite_i","slug":"proper_preface","style":"text","version_label":"Of God the Father","citation":null,"hidden":false,"label":null,"category":["OrdinaryTime","Proper Preface"],"language":"en"}]}
+{
+  "data": [
+    {
+      "version": "rite_i",
+      "slug": "proper_preface",
+      "category": ["Ordinary Time", "Proper Preface"],
+      "style": "text",
+      "label": null,
+      "language": "en",
+      "metadata": { "response": null, "omit_response": true },
+      "hidden": false,
+      "version_label": "Of God the Holy Spirit",
+      "type": "text",
+      "citation": null,
+      "value": [
+        "Who by water and the Holy Spirit hast made us a new people in Jesus Christ our Lord, to show forth thy glory in all the world."
+      ]
+    },
+    {
+      "language": "en",
+      "version_label": "Of God the Son",
+      "type": "text",
+      "value": [
+        "Through Jesus Christ our Lord; who on the first day of the week overcame death and the grave, and by his glorious resurrection opened to us the way of everlasting life."
+      ],
+      "hidden": false,
+      "version": "rite_i",
+      "category": ["Ordinary Time", "Proper Preface"],
+      "slug": "proper_preface",
+      "citation": null,
+      "style": "text",
+      "label": null,
+      "metadata": { "omit_response": true, "response": null }
+    },
+    {
+      "value": [
+        "Creator of the light and source of life, who hast made us in thine image, and called us to new life in Jesus Christ our Lord."
+      ],
+      "type": "text",
+      "metadata": { "omit_response": true, "response": null },
+      "version": "rite_i",
+      "slug": "proper_preface",
+      "style": "text",
+      "version_label": "Of God the Father",
+      "citation": null,
+      "hidden": false,
+      "label": null,
+      "category": ["Ordinary Time", "Proper Preface"],
+      "language": "en"
+    }
+  ]
+}

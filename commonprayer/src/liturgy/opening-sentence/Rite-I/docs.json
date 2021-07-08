@@ -1,0 +1,830 @@
+{
+  "data": [
+    {
+      "type": "bible-reading",
+      "version_label": null,
+      "value": [
+        {
+          "text": "Is it nothing to you, all ye that pass by? Behold and see if there be any sorrow like unto my sorrow which is done unto me, wherewith the Lord hath afflicted me."
+        }
+      ],
+      "hidden": false,
+      "version": "rite_i",
+      "label": null,
+      "style": "short",
+      "slug": "opening_sentence",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "category": ["Holy Week", "Opening Sentence"],
+      "citation": "Lamentations 1:12",
+      "language": "en"
+    },
+    {
+      "label": null,
+      "value": [
+        {
+          "text": "Behold, I bring you good tidings of a great joy, which shall be to all people. For unto you is born this day in the city of David a Savior, which is Christ the Lord. "
+        }
+      ],
+      "category": ["Christmas", "Opening Sentence"],
+      "version_label": null,
+      "language": "en",
+      "slug": "opening_sentence",
+      "type": "bible-reading",
+      "hidden": false,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version": "rite_i",
+      "citation": "Luke 2:10, 11",
+      "style": "short"
+    },
+    {
+      "label": null,
+      "value": [
+        {
+          "text": "Thine is the day, O God, thine also the night; thou hast established the moon and the sun. Thou hast fixed all the boundaries of the earth; thou hast made summer and winter."
+        }
+      ],
+      "type": "bible-reading",
+      "version": "rite_i",
+      "language": "en",
+      "version_label": null,
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "style": "short",
+      "hidden": false,
+      "slug": "opening_sentence",
+      "citation": "Psalm 74:15, 16",
+      "category": ["Evening", "Opening Sentence"]
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "value": [
+        {
+          "text": "Thus saith the high and lofty One who inhabiteth eternity, whose name is Holy, “I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones.”"
+        }
+      ],
+      "version": "rite_i",
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "style": "short",
+      "language": "en",
+      "citation": "Isaiah 57:15",
+      "slug": "opening_sentence",
+      "label": null,
+      "hidden": false,
+      "version_label": null,
+      "type": "bible-reading"
+    },
+    {
+      "value": [
+        {
+          "text": "The Gentiles shall come to thy light, and kings to the brightness of thy rising."
+        }
+      ],
+      "hidden": false,
+      "language": "en",
+      "version_label": null,
+      "type": "bible-reading",
+      "slug": "opening_sentence",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "category": ["Epiphany", "Opening Sentence"],
+      "label": null,
+      "style": "short",
+      "version": "rite_i",
+      "citation": "Isaiah 60:3"
+    },
+    {
+      "language": "en",
+      "hidden": false,
+      "version": "rite_i",
+      "label": null,
+      "slug": "opening_sentence",
+      "version_label": null,
+      "value": [
+        {
+          "text": "Let the words of my mouth, and the meditation of my heart, be alway acceptable in thy sight, O Lord, my strength and my redeemer."
+        }
+      ],
+      "type": "bible-reading",
+      "style": "short",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "citation": "Psalm 19:14"
+    },
+    {
+      "style": "short",
+      "slug": "opening_sentence",
+      "version": "rite_i",
+      "type": "bible-reading",
+      "citation": "Philippians 1:2",
+      "hidden": false,
+      "version_label": null,
+      "label": null,
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "language": "en",
+      "value": [
+        {
+          "text": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ. "
+        }
+      ],
+      "category": ["Evening", "Opening Sentence"]
+    },
+    {
+      "version_label": null,
+      "label": null,
+      "language": "en",
+      "version": "rite_i",
+      "style": "litany",
+      "type": "responsive",
+      "hidden": false,
+      "metadata": {
+        "response": null
+      },
+      "slug": "opening_sentence",
+      "citation": null,
+      "value": [
+        {
+          "response": "The Lord is risen indeed. Alleluia!",
+          "text": "Alleluia! Christ is risen.",
+          "optional": false
+        }
+      ],
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"]
+    },
+    {
+      "citation": "John 8:12",
+      "style": "short",
+      "category": ["Evening", "Opening Sentence"],
+      "value": [
+        {
+          "text": "Jesus said, “I am the light of the world; he that followeth me shall not walk in darkness, but shall have the light of life.”"
+        }
+      ],
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "version_label": null,
+      "type": "bible-reading",
+      "hidden": false,
+      "version": "rite_i",
+      "slug": "opening_sentence",
+      "label": null
+    },
+    {
+      "version": "rite_i",
+      "type": "bible-reading",
+      "category": ["Lent", "Opening Sentence"],
+      "value": [
+        {
+          "text": "Rend your heart, and not your garments, and turn unto the Lord your God; for he is gracious and merciful, slow to anger and of great kindness, and repenteth him of the evil."
+        }
+      ],
+      "slug": "opening_sentence",
+      "label": null,
+      "style": "short",
+      "citation": "Joel 2:13",
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "version_label": null,
+      "hidden": false
+    },
+    {
+      "style": "short",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "version_label": null,
+      "version": "rite_i",
+      "type": "bible-reading",
+      "slug": "opening_sentence",
+      "language": "en",
+      "label": null,
+      "value": [
+        {
+          "text": "I was glad when they said unto me, “We will go into the house of the Lord.”"
+        }
+      ],
+      "citation": "Psalm 122:1",
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "hidden": false
+    },
+    {
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"],
+      "label": null,
+      "hidden": false,
+      "value": [
+        {
+          "text": "Thanks be to God, which giveth us the victory through our Lord Jesus Christ."
+        }
+      ],
+      "type": "bible-reading",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version": "rite_i",
+      "version_label": null,
+      "style": "short",
+      "citation": "1 Corinthians 15:57",
+      "language": "en",
+      "slug": "opening_sentence"
+    },
+    {
+      "value": [
+        {
+          "text": "Jesus said, “Whosoever will come after me, let him deny himself, and take up his cross, and follow me.”"
+        }
+      ],
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version_label": null,
+      "hidden": false,
+      "citation": "Mark 8:34",
+      "style": "short",
+      "slug": "opening_sentence",
+      "language": "en",
+      "category": ["Lent", "Opening Sentence"],
+      "label": null,
+      "version": "rite_i",
+      "type": "bible-reading"
+    },
+    {
+      "language": "en",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "style": "short",
+      "citation": "Psalm 96:9",
+      "value": [
+        {
+          "text": "O worship the Lord in the beauty of holiness; let the whole earth stand in awe of him."
+        }
+      ],
+      "type": "bible-reading",
+      "version_label": null,
+      "slug": "opening_sentence",
+      "hidden": false,
+      "version": "rite_i",
+      "label": null,
+      "category": ["Evening", "Opening Sentence"]
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version": "rite_i",
+      "label": null,
+      "type": "bible-reading",
+      "style": "short",
+      "slug": "opening_sentence",
+      "value": [
+        {
+          "text": "If I say, “Surely the darkness will cover me, and the light around me turn to night,” darkness is not dark to thee, O Lord; the night is as bright as the day; darkness and light to thee are both alike. "
+        }
+      ],
+      "category": ["Evening", "Opening Sentence"],
+      "language": "en",
+      "citation": "Psalm 139:10, 11",
+      "version_label": null
+    },
+    {
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version_label": null,
+      "hidden": false,
+      "slug": "opening_sentence",
+      "type": "bible-reading",
+      "category": ["Advent", "Opening Sentence"],
+      "style": "short",
+      "language": "en",
+      "citation": "Isaiah 40:5",
+      "version": "rite_i",
+      "value": [
+        {
+          "text": "The glory of the Lord shall be revealed, and all flesh shall see it together. "
+        }
+      ],
+      "label": null
+    },
+    {
+      "slug": "opening_sentence",
+      "citation": "Isaiah 49:6b",
+      "category": ["Epiphany", "Opening Sentence"],
+      "label": null,
+      "language": "en",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "type": "bible-reading",
+      "version": "rite_i",
+      "hidden": false,
+      "version_label": null,
+      "value": [
+        {
+          "text": "I will give thee for a light to the Gentiles, that thou mayest be my salvation unto the end of the earth."
+        }
+      ],
+      "style": "short"
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "All we like sheep have gone astray; we have turned every one to his own way; and the Lord hath laid on him the iniquity of us all."
+        }
+      ],
+      "language": "en",
+      "version_label": null,
+      "version": "rite_i",
+      "citation": "Isaiah 53:6",
+      "style": "short",
+      "category": ["Holy Week", "Opening Sentence"],
+      "slug": "opening_sentence",
+      "label": null
+    },
+    {
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "citation": "John 4:23",
+      "language": "en",
+      "style": "short",
+      "metadata": {
+        "omit_response": true,
+        "response": " "
+      },
+      "version_label": null,
+      "version": "rite_i",
+      "type": "bible-reading",
+      "slug": "opening_sentence",
+      "hidden": false,
+      "value": [
+        {
+          "text": "\nThe hour cometh, and now is, when the true worshipers shall worship the Father in spirit and in truth, for the Father seeketh such to worship him."
+        }
+      ],
+      "label": null
+    },
+    {
+      "label": null,
+      "language": "en",
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"],
+      "slug": "opening_sentence",
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "If ye then be risen with Christ, seek the things which are above, where Christ sitteth on the right hand of God."
+        }
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "version_label": null,
+      "hidden": false,
+      "version": "rite_i",
+      "style": "short",
+      "citation": "Colossians 3:1"
+    },
+    {
+      "hidden": false,
+      "label": null,
+      "version": "rite_i",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"],
+      "version_label": null,
+      "slug": "opening_sentence",
+      "citation": "Acts 1:8",
+      "type": "bible-reading",
+      "style": "short",
+      "value": [
+        {
+          "text": " Ye shall receive power, after the Holy Ghost is come upon you; and ye shall be witness unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth. "
+        }
+      ],
+      "language": "en"
+    },
+    {
+      "style": "short",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "language": "en",
+      "category": ["Evening", "Opening Sentence"],
+      "hidden": false,
+      "citation": "Psalm 16:7, 8",
+      "version_label": null,
+      "value": [
+        {
+          "text": "I will bless the Lord, who giveth me counsel; my heart teacheth me, night after night. I have set the Lord always before me; because he is at my right hand, I shall not fall."
+        }
+      ],
+      "type": "bible-reading",
+      "slug": "opening_sentence",
+      "label": null,
+      "version": "rite_i"
+    },
+    {
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "type": "bible-reading",
+      "style": "short",
+      "category": ["TrinitySunday", "Opening Sentence"],
+      "language": "en",
+      "value": [
+        {
+          "text": "Holy, holy, holy, Lord God Almighty, which was, and is, and is to come."
+        }
+      ],
+      "citation": "Revelation 4:8",
+      "label": null,
+      "hidden": false,
+      "version_label": null,
+      "slug": "opening_sentence",
+      "version": "rite_i"
+    },
+    {
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "style": "short",
+      "language": "en",
+      "version": "rite_i",
+      "value": [
+        {
+          "text": "Let my prayer be set forth in thy sight as the incense, and let the lifting up of my hands be an evening sacrifice."
+        }
+      ],
+      "hidden": false,
+      "label": null,
+      "category": ["Evening", "Opening Sentence"],
+      "type": "bible-reading",
+      "slug": "opening_sentence",
+      "version_label": null,
+      "citation": "Psalm 141:2"
+    },
+    {
+      "label": null,
+      "version_label": null,
+      "category": ["Advent", "Opening Sentence"],
+      "style": "short",
+      "language": "en",
+      "citation": "Isaiah 40:3",
+      "slug": "opening_sentence",
+      "version": "rite_i",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "hidden": false,
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "Prepare ye the way of the Lord, make straight in the desert a highway for our God. "
+        }
+      ]
+    },
+    {
+      "version_label": null,
+      "style": "short",
+      "category": ["Advent", "Opening Sentence"],
+      "label": null,
+      "type": "bible-reading",
+      "language": "en",
+      "citation": "Mark 13:35, 36",
+      "value": [
+        {
+          "text": "Watch ye, for ye know not when the master of the house cometh, at even, or at midnight, or at the cock-crowing, or in the morning; lest coming suddenly he find you sleeping."
+        }
+      ],
+      "slug": "opening_sentence",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "version": "rite_i",
+      "hidden": false
+    },
+    {
+      "style": "short",
+      "citation": "Hebrews 9:24",
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"],
+      "version": "rite_i",
+      "slug": "opening_sentence",
+      "version_label": null,
+      "value": [
+        {
+          "text": "Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us."
+        }
+      ],
+      "language": "en",
+      "hidden": false,
+      "type": "bible-reading",
+      "label": null,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      }
+    },
+    {
+      "category": ["Saints", "Opening Sentence"],
+      "citation": "Colossians 1:12",
+      "label": null,
+      "value": [
+        {
+          "text": "We give thanks unto the Father, which hath made us meet to be partakers of the inheritance of the saints in light."
+        }
+      ],
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "slug": "opening_sentence",
+      "type": "bible-reading",
+      "hidden": false,
+      "language": "en",
+      "version": "rite_i",
+      "style": "short",
+      "version_label": null
+    },
+    {
+      "version_label": null,
+      "language": "en",
+      "citation": "Amos 5:8",
+      "value": [
+        {
+          "text": "Seek him that made the Pleiades and Orion, that turneth deep darkness into the morning, and darkeneth the day into night; that calleth for the waters of the sea, and poureth them out upon the face of the earth: The Lord is his Name. "
+        }
+      ],
+      "type": "bible-reading",
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "style": "short",
+      "category": ["Evening", "Opening Sentence"],
+      "slug": "opening_sentence",
+      "hidden": false,
+      "label": null,
+      "version": "rite_i"
+    },
+    {
+      "version_label": null,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "category": ["Easter", "Opening Sentence", "Ascension", "Pentecost"],
+      "slug": "opening_sentence",
+      "language": "en",
+      "type": "bible-reading",
+      "citation": "Psalm 118:24",
+      "style": "short",
+      "value": [
+        {
+          "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
+        }
+      ],
+      "hidden": false,
+      "label": null,
+      "version": "rite_i"
+    },
+    {
+      "language": "en",
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "Their sound is gone out into all lands, and their words into the ends of the world."
+        }
+      ],
+      "citation": "Psalm 19:4",
+      "version": "rite_i",
+      "slug": "opening_sentence",
+      "label": null,
+      "hidden": false,
+      "metadata": {
+        "omit_response": false,
+        "response": " "
+      },
+      "category": ["Saints", "Opening Sentence"],
+      "style": "short",
+      "version_label": null
+    },
+    {
+      "slug": "opening_sentence",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version_label": null,
+      "citation": "Habakkuk 2:20",
+      "type": "bible-reading",
+      "hidden": false,
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "value": [
+        {
+          "text": "The Lord is in his holy temple; let all the earth keep silence before him."
+        }
+      ],
+      "label": null,
+      "language": "en",
+      "style": "short",
+      "version": "rite_i"
+    },
+    {
+      "category": ["Epiphany", "Opening Sentence"],
+      "slug": "opening_sentence",
+      "language": "en",
+      "type": "bible-reading",
+      "version": "rite_i",
+      "label": null,
+      "citation": "Malachi 1:11",
+      "hidden": false,
+      "version_label": null,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "value": [
+        {
+          "text": "From the rising of the sun even unto the going down of the same my Name shall be great among the Gentiles, and in every place incense shall be offered unto my Name, and a pure offering: for my Name shall be great among the heathen, saith the Lord of hosts. "
+        }
+      ],
+      "style": "short"
+    },
+    {
+      "version": "rite_i",
+      "style": "short",
+      "category": ["Lent", "Opening Sentence"],
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version_label": null,
+      "hidden": false,
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "If we say we have no sin, we deceive ourselves, and the truth is not in us; but if we confess our sins, God is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
+        }
+      ],
+      "label": null,
+      "citation": "I John 1:8, 9",
+      "language": "en",
+      "slug": "opening_sentence"
+    },
+    {
+      "style": "short",
+      "hidden": false,
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      },
+      "type": "bible-reading",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "language": "en",
+      "value": [
+        {
+          "text": "Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God. "
+        }
+      ],
+      "version_label": null,
+      "label": null,
+      "version": "rite_i",
+      "lastRevision": 2,
+      "slug": "opening_sentence",
+      "category": ["Christmas", "Opening Sentence"],
+      "citation": "Revelation 21:3"
+    },
+    {
+      "slug": "opening_sentence",
+      "label": null,
+      "type": "bible-reading",
+      "category": ["Saints", "Opening Sentence"],
+      "hidden": false,
+      "citation": "Ephesians 2:19",
+      "version": "rite_i",
+      "language": "en",
+      "value": [
+        {
+          "text": " Ye are no more strangers and foreigners, but fellow-citizens with the saints and of the household of God."
+        }
+      ],
+      "version_label": null,
+      "style": "short",
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      }
+    },
+    {
+      "language": "en",
+      "hidden": false,
+      "type": "bible-reading",
+      "citation": "Daniel 9:9, 10",
+      "slug": "opening_sentence",
+      "label": null,
+      "version": "rite_i",
+      "value": [
+        {
+          "text": " To the Lord our God belong mercies and forgivenesses, though we have rebelled against him; neither have we obeyed the voice of the Lord our God, to walk in his laws which he set before us."
+        }
+      ],
+      "category": ["Lent", "Opening Sentence"],
+      "version_label": null,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "style": "short"
+    },
+    {
+      "language": "en",
+      "version": "rite_i",
+      "citation": "Psalm 43:3",
+      "category": ["Ordinary Time", "Opening Sentence"],
+      "type": "bible-reading",
+      "label": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "hidden": false,
+      "slug": "opening_sentence",
+      "version_label": null,
+      "style": "short",
+      "value": [
+        {
+          "text": "O send out thy light and thy truth, that they may lead me, and bring me unto thy holy hill, and to thy dwelling."
+        }
+      ]
+    },
+    {
+      "label": null,
+      "metadata": {
+        "response": " ",
+        "omit_response": false
+      },
+      "version_label": null,
+      "style": "short",
+      "category": ["Lent", "Opening Sentence"],
+      "language": "en",
+      "type": "bible-reading",
+      "hidden": false,
+      "version": "rite_i",
+      "value": [
+        {
+          "text": "I will arise and go to my father, and will say unto him, “Father, I have sinned against heaven, and before thee, and am no more worthy to be called thy son.”"
+        }
+      ],
+      "slug": "opening_sentence",
+      "citation": "Luke 15:18, 19"
+    }
+  ]
+}

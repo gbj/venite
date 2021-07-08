@@ -194,7 +194,7 @@
           "type": "text",
           "condition": {
             "conditions": [
-              { "season": { "except": ["Lent", "HolyWeek"], "only": [] } }
+              { "season": { "except": ["Lent", "Holy Week"], "only": [] } }
             ],
             "mode": "and"
           },

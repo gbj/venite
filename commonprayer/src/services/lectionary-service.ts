@@ -32,6 +32,16 @@ export class LectionaryServiceController {
     return this._cache[slug];
   }
 
+  async findReading(
+    day: LiturgicalDay,
+    lectionaryName: string,
+    readingType: string,
+    alternateYear = false
+  ): Promise<LectionaryEntry[]> {
+    const entries = await this.findReadings(day, lectionaryName, alternateYear);
+    return entries.filter((e) => e.type === readingType);
+  }
+
   filterReadings(
     entries: LectionaryEntry[],
     day: LiturgicalDay,
@@ -136,3 +146,5 @@ export class LectionaryServiceController {
     }
   }
 }
+
+export const LectionaryService = new LectionaryServiceController();

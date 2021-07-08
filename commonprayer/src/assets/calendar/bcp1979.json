@@ -6,13 +6,13 @@
       "slug": "10th-pentecost",
       "kalendar": "bcp1979",
       "name": "Tenth Sunday after Pentecost",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter"
     },
     {
       "name": "Eleventh Sunday after Pentecost",
       "slug": "11th-pentecost",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "week": 25,
       "cycle": "Easter",
       "kalendar": "bcp1979",
@@ -23,12 +23,12 @@
       "cycle": "Easter",
       "name": "Twelfth Sunday after Pentecost",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "week": 26,
       "color": "Green"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "week": 27,
       "kalendar": "bcp1979",
       "color": "Green",
@@ -40,7 +40,7 @@
       "cycle": "Easter",
       "color": "Green",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "week": 28,
       "name": "Fourteenth Sunday after Pentecost",
       "slug": "14th-pentecost"
@@ -51,7 +51,7 @@
       "week": 29,
       "name": "Fifteenth Sunday after Pentecost",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter"
     },
     {
@@ -61,7 +61,7 @@
       "color": "Green",
       "name": "Sixteenth Sunday after Pentecost",
       "cycle": "Easter",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "week": 31,
@@ -69,7 +69,7 @@
       "name": "Seventeenth Sunday after Pentecost",
       "slug": "17th-pentecost",
       "color": "Green",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979"
     },
     {
@@ -79,12 +79,12 @@
       "slug": "18th-pentecost",
       "cycle": "Easter",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "slug": "19th-pentecost",
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "color": "Green",
       "week": 33,
@@ -118,7 +118,7 @@
       "cycle": "Christmas"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "color": "Green",
       "name": "Twentieth Sunday after Pentecost",
       "cycle": "Easter",
@@ -133,19 +133,19 @@
       "slug": "21st-pentecost",
       "week": 35,
       "name": "Twenty-First Sunday after Pentecost",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "slug": "22nd-pentecost",
       "color": "Green",
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "week": 36,
       "name": "Twenty-Second Sunday after Pentecost"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "color": "Green",
       "week": 37,
@@ -155,7 +155,7 @@
     },
     {
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "color": "Green",
       "slug": "24th-pentecost",
@@ -163,7 +163,7 @@
       "name": "Twenty-Fourth Sunday after Pentecost"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter",
       "week": 39,
       "kalendar": "bcp1979",
@@ -175,7 +175,7 @@
       "name": "Twenty-Sixth Sunday after Pentecost",
       "slug": "26th-pentecost",
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "color": "Green",
       "week": 40,
       "kalendar": "bcp1979"
@@ -187,7 +187,7 @@
       "week": 41,
       "name": "Twenty-Seventh Sunday after Pentecost",
       "color": "Green",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "color": "Gold",
@@ -219,7 +219,7 @@
     {
       "color": "Green",
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "week": 16,
       "name": "Second Sunday after Pentecost",
@@ -263,7 +263,7 @@
     },
     {
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "slug": "3rd-pentecost",
       "color": "Green",
@@ -298,7 +298,7 @@
       "kalendar": "bcp1979"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "slug": "4th-pentecost",
       "color": "Green",
       "cycle": "Easter",
@@ -322,7 +322,7 @@
       "week": 5,
       "kalendar": "bcp1979",
       "cycle": "Epiphany",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "name": "Fifth Sunday in Lent",
@@ -338,7 +338,7 @@
       "kalendar": "bcp1979",
       "slug": "5th-pentecost",
       "week": 19,
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "name": "Fifth Sunday after Pentecost",
       "color": "Green"
     },
@@ -358,11 +358,11 @@
       "color": "Green",
       "kalendar": "bcp1979",
       "cycle": "Epiphany",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "slug": "6th-pentecost",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "kalendar": "bcp1979",
       "week": 20,
       "color": "Green",
@@ -385,12 +385,12 @@
       "name": "Seventh Sunday after the Epiphany",
       "cycle": "Epiphany",
       "color": "Green",
-      "season": "OrdinaryTime"
+      "season": "Ordinary Time"
     },
     {
       "color": "Green",
       "cycle": "Easter",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "name": "Seventh Sunday after Pentecost",
       "kalendar": "bcp1979",
       "week": 21,
@@ -402,7 +402,7 @@
       "name": "Eighth Sunday after the Epiphany",
       "week": 8,
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "color": "Green"
     },
     {
@@ -411,7 +411,7 @@
       "color": "Green",
       "slug": "8th-pentecost",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter"
     },
     {
@@ -420,7 +420,7 @@
       "week": 23,
       "color": "Green",
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter"
     },
     {
@@ -475,14 +475,14 @@
       "omit_the": true,
       "name": "Palm Sunday",
       "slug": "holy-week",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "color": "Red",
       "cycle": "Easter",
       "kalendar": "bcp1979"
     },
     {
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Advent",
       "slug": "last-after-pentecost",
       "week": 0,
@@ -491,7 +491,7 @@
     },
     {
       "week": 0,
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "color": "Green",
       "kalendar": "bcp1979",
       "cycle": "Easter",
@@ -500,7 +500,7 @@
     },
     {
       "kalendar": "bcp1979",
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "cycle": "Easter",
       "color": "Green",
       "omit_the": true,
@@ -527,7 +527,7 @@
       "slug": "third-advent"
     },
     {
-      "season": "OrdinaryTime",
+      "season": "Ordinary Time",
       "name": "Trinity Sunday",
       "kalendar": "bcp1979",
       "color": "Green",
@@ -561,7 +561,7 @@
         "name": "Triduum"
       },
       "kalendar": "bcp1979",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "color": "Red",
       "image": "/assets/iconography/good_friday.png",
       "name": "Good Friday"
@@ -589,7 +589,7 @@
     },
     {
       "kalendar": "bcp1979",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "slug": "monday-holy-week",
       "type": {
         "name": "Holy Week",
@@ -631,7 +631,7 @@
       "color": "Red",
       "slug": "saturday-holy-week",
       "kalendar": "bcp1979",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "name": "Holy Saturday",
       "type": {
         "name": "Triduum",
@@ -661,7 +661,7 @@
         "rank": 5
       },
       "name": "Palm Sunday",
-      "season": "HolyWeek"
+      "season": "Holy Week"
     },
     {
       "kalendar": "bcp1979",
@@ -737,7 +737,7 @@
       "image": "/assets/iconography/maundy_thursday.png",
       "color": "Red",
       "name": "Maundy Thursday",
-      "season": "HolyWeek"
+      "season": "Holy Week"
     },
     {
       "season": "Lent",
@@ -767,7 +767,7 @@
       },
       "slug": "tuesday-holy-week",
       "kalendar": "bcp1979",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "name": "Tuesday in Holy Week"
     },
     {
@@ -796,7 +796,7 @@
     },
     {
       "name": "Wednesday in Holy Week",
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "kalendar": "bcp1979",
       "slug": "wednesday-holy-week",
       "type": {
@@ -1369,7 +1369,7 @@
       "season": "Saints"
     },
     {
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "kalendar": "bcp1979",
       "mmdd": "9/13",
       "eve": true,
@@ -1556,7 +1556,7 @@
       "name": "Hilda, Abbess of Whitby, 680"
     },
     {
-      "season": "HolyWeek",
+      "season": "Holy Week",
       "name": "Holy Cross Day",
       "color": "Red",
       "mmdd": "9/14",
