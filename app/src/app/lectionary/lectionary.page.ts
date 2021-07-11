@@ -237,8 +237,11 @@ export class LectionaryPage implements OnInit, OnDestroy {
   }
 }
 
+// if today is a Sunday, today; otherwise, the next Sunday
 function sundayAfter(date: Date): Date {
-  return new Date(sundayBefore(date).getTime() + 7 * 60 * 60 * 24 * 1000);
+  return date.getDay() === 0
+    ? date
+    : new Date(sundayBefore(date).getTime() + 7 * 60 * 60 * 24 * 1000);
 }
 
 function generateLiturgy(lectionary: string, version: string): Liturgy {

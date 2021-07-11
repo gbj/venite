@@ -12634,7 +12634,7 @@
       "localname": "A Song of Creation",
       "omit_antiphon": false,
       "latinname": "Benedicite, omnia opera Domini",
-      "omit_gloria": false,
+      "omit_gloria": true,
       "number": "1"
     },
     "label": "Canticle 1: A Song of Creation",
