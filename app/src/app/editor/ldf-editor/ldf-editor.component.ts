@@ -111,8 +111,11 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
       .pipe(catchError(() => this.permissionDenied()));
 
     this.settingsClasses$ = this.state$.pipe(
-      map((state) => state?.localManager?.document?.display_settings),
-      filter((settings) => Boolean(settings)),
+      map(
+        (state) =>
+          state?.localManager?.document?.display_settings ||
+          new DisplaySettings()
+      ),
       map((settings) =>
         [
           "ldf-wrapper",
@@ -121,9 +124,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           settings.repeatAntiphon
             ? `repeat-antiphon-${settings.repeatAntiphon}`
             : "",
-          settings.fontscale
-            ? `fontscale-${settings.fontscale.toString()}`
-            : "",
+          `fontscale-${settings.fontscale.toString() || "m"}`,
           settings.font ? `font-${settings.font}` : "",
           `psalmverses-${settings.psalmVerses}`,
           `bibleverses-${settings.bibleVerses}`,
