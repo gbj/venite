@@ -134,6 +134,8 @@ export class EditableMetadataMetadataFieldsComponent {
 
       case 'liturgy':
         return [
+          { field: 'label', type: Field.String },
+          { field: 'slug', type: Field.String },
           { field: 'liturgyversions', type: Field.StringList },
           { field: 'supplement', type: Field.Bool },
           { field: 'evening', type: Field.Bool },
