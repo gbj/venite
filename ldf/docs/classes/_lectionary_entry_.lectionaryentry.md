@@ -23,7 +23,7 @@
 
 • **citation**: *string*
 
-*Defined in [lectionary-entry.ts:3](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L3)*
+*Defined in [lectionary-entry.ts:3](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L3)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **day**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:4](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L4)*
+*Defined in [lectionary-entry.ts:4](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L4)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **lectionary**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:2](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L2)*
+*Defined in [lectionary-entry.ts:2](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L2)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **type**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:5](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L5)*
+*Defined in [lectionary-entry.ts:5](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L5)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **when**? : *number | string*
 
-*Defined in [lectionary-entry.ts:7](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L7)*
+*Defined in [lectionary-entry.ts:7](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L7)*
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 • **whentype**? : *undefined | string*
 
-*Defined in [lectionary-entry.ts:6](https://github.com/gbj/venite/blob/5b275c88/ldf/src/lectionary-entry.ts#L6)*
+*Defined in [lectionary-entry.ts:6](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/lectionary-entry.ts#L6)*

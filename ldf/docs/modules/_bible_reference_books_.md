@@ -76,6 +76,7 @@
   ['Second Corinthians', Book.SecondCorinthians],
   ['Galatians', Book.Galatians],
   ['Ephesians', Book.Ephesians],
+  ['Eph', Book.Ephesians],
   ['Philippians', Book.Ephesians],
   ['Phil', Book.Philippians],
   ['Colossians', Book.Colossians],
@@ -139,4 +140,4 @@
   ['Bel and the Dragon', Book.Bel],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/5b275c88/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/bible-reference/books.ts#L3)*

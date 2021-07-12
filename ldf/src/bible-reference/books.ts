@@ -64,6 +64,7 @@ export const BOOKS: [string, Book][] = [
   ['Second Corinthians', Book.SecondCorinthians],
   ['Galatians', Book.Galatians],
   ['Ephesians', Book.Ephesians],
+  ['Eph', Book.Ephesians],
   ['Philippians', Book.Ephesians],
   ['Phil', Book.Philippians],
   ['Colossians', Book.Colossians],
