@@ -129,13 +129,17 @@ export class StringComponent {
   }
 
   maintainCasing(st : string | undefined) : boolean {
-        const s = st.replace(/\^/g, '');
+    if(!st) {
+      return true;
+    } else {
+      const s = st.replace(/\^/g, '');
       // don't lower-case if only the first letter is capitalized but others aren't (e.g., God, Lord)
-    return !(s.split("").map(char => char >= 'A' && char <= 'Z').reduce((a, b) => a && b, true))
-      // or if it's a Roman numeral
-      || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s)
-      // or if it's the word "I"
-      || s?.toLowerCase() == 'i ';
+      return !(s.split("").map(char => char >= 'A' && char <= 'Z').reduce((a, b) => a && b, true))
+        // or if it's a Roman numeral
+        || Boolean((s?.match(/^I+$/) || [])[0]) || ['IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'].includes(s)
+        // or if it's the word "I"
+        || s?.toLowerCase() == 'i ';
+    }
   }
 
   processDropcap(processed : JSX.Element[]) : JSX.Element[] {
@@ -144,13 +148,15 @@ export class StringComponent {
     let final = processed;
 
     if(firstChunk) {
-      const splitTest = (firstChunk || '').split(/[\s.!?\\]/),
+      const splitTest = (firstChunk || '').split(/[\s.!?\\]/);
+      console.log('firstChunk = ', firstChunk)
+      const 
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2
-              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
-              : /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
-            reIncludingPunctuation = firstWord[0]?.match(/[“”‘’\!\?\[\]\(\)]/)
-              ? /^ ?([“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff]{2})\s*([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              ? /^ ?([\"\'“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*)/
+              : /^ ?([\"\'“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff])([\w\u0590-\u05ff\u0370-\u03ff]*[\s.!?]*[\w\u0590-\u05ff\u0370-\u03ff]*)/,
+            reIncludingPunctuation = firstWord[0]?.match(/[\"\'“”‘’\!\?\[\]\(\)]/)
+              ? /^ ?([\"\'“”‘’\!\?\[\]\(\)\w\u0590-\u05ff\u0370-\u03ff]{2})\s*([\w\u0590-\u05ff\u0370-\u03ff]*)/
               : re,
             buffer = firstWord.length == 1,
             split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
