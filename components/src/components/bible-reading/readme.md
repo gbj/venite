@@ -132,7 +132,10 @@ graph TD;
   ldf-editable-metadata-buttons --> ion-button
   ldf-editable-metadata-buttons --> ion-label
   ldf-editable-metadata-buttons --> ion-icon
+  ldf-editable-metadata-buttons --> ldf-editable-select
   ldf-editable-metadata-buttons --> ldf-editable-delete
+  ldf-editable-select --> ion-select
+  ldf-editable-select --> ion-select-option
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon

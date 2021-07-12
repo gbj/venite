@@ -2385,13 +2385,13 @@ export class LdfEditablePreferences {
 import { EditableSelectComponent as IEditableSelectComponent } from '@venite/components/dist/types/components/editable-select/editable-select';
 export declare interface LdfEditableSelect extends Components.LdfEditableSelect {}
 @ProxyCmp({
-  inputs: ['options', 'path', 'property', 'value']
+  inputs: ['options', 'path', 'placeholder', 'property', 'value']
 })
 @Component({
   selector: 'ldf-editable-select',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['options', 'path', 'property', 'value'],
+  inputs: ['options', 'path', 'placeholder', 'property', 'value'],
   outputs: ['ldfChange', 'ldfDocShouldChange']
 })
 export class LdfEditableSelect {
