@@ -174,7 +174,11 @@ export class LiturgicalDocument {
   /** Marks a document hidden, so it will not display but will not be deleted
    * Typically used to a hide a subdocument within a larger liturgy without removing it entirely from the structure,
    * making it easier to restore or toggle on and off */
-  hidden: boolean = false;
+  hidden?: boolean;
+
+  /** Marks a piece of a document that should be hidden after the document is compiled.
+   * This can be used for e.g., explanatory rubrics that become redundant once a reading or psalm has been inserted. */
+  compile_hidden?: boolean;
 
   /** Instructs the client to look up more information from the server
    * @example
