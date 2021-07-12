@@ -324,6 +324,15 @@ export class EditableMetadataButtonsComponent {
             <ion-label>{localeStrings[`heading${this.obj?.metadata?.level || 3}`] || 'Heading'}</ion-label>
           </ion-button>}
 
+          {/* display formats */}
+          {this.obj?.availableDisplayFormats()?.length > 0 && <ldf-editable-select
+            placeholder={localeStrings.displayFormat}
+            value={this.obj.display_format}
+            path={`${this.base}/${this.index}`}
+            property="display_format"
+            options={this.obj.availableDisplayFormats().map(value => ({ value, label: localeStrings[value] || value }))}
+          ></ldf-editable-select>}
+
           {/* "Condition" Button */}
           {(this.base && hasIndex || this.obj?.type !== 'liturgy') && <ion-button onClick={() => this.openCondition()} aria-role='button' aria-label={localeStrings.condition}>
             <ion-icon slot='icon-only' name='calendar'></ion-icon>

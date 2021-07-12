@@ -23,6 +23,9 @@ export class EditableSelectComponent {
   /** Starting value for editing */
   @Prop() value: any;
 
+  /** Placeholder if value is undefined */
+  @Prop() placeholder: string;
+
   /** Optional callback when it emits a change */
   @Event() ldfChange: any; 
 
@@ -49,7 +52,7 @@ export class EditableSelectComponent {
 
   render() {
     return (
-      <ion-select value={this.value}>
+      <ion-select value={this.value} placeholder={this.placeholder}>
         {this.options.map(option =>
           <ion-select-option value={option.value}>{option.label}</ion-select-option>
         )}

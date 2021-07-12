@@ -1,9 +1,13 @@
 {
+  "abbreviated": "Abbreviated",
   "addOption": "Add an Option",
   "cancel": "Cancel",
   "condition": "Conditions",
   "copy": "Copy",
   "copied": "Copied to Clipboard",
+  "default": "Default",
+  "displayFormat": "Display",
+  "halfverse": "By Half Verse",
   "heading": "Heading Level",
   "heading1": "1. Title",
   "heading2": "2. Section Title",
@@ -12,6 +16,7 @@
   "move_down": "Move Down",
   "move_up": "Move Up",
   "ok": "OK",
+  "omit": "Omit",
   "preferences": "Preferences",
   "settings": "Settings",
   "edit": "Edit",
@@ -20,5 +25,7 @@
   "responsiveMsg": "What size devices should this appear on?",
   "responsiveAll": "All devices",
   "responsiveSmallOnly": "Only on small screens",
-  "responsiveSmallHidden": "Not on small screens"
+  "responsiveSmallHidden": "Not on small screens",
+  "unison": "Unison",
+  "wholeverse": "By Whole Verse"
 }
