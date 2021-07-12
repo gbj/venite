@@ -2,7 +2,7 @@ import {
   dateFromYMDString,
   LectionaryEntry,
   LiturgicalDay,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.2?dts";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3?dts";
 
 export class LectionaryServiceController {
   private _lectionary: Record<string, Promise<LectionaryEntry[]>> = {};

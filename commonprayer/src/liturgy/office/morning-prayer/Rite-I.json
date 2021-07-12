@@ -307,6 +307,13 @@
           "value": [""]
         },
         {
+          "type": "rubric",
+          "value": [
+            "The Officiant begins the service with one or more of these sentences of Scripture, or with the versicle “O Lord, open thou our lips.”"
+          ],
+          "compile_hidden": true
+        },
+        {
           "lookup": {
             "type": "category",
             "filter": "seasonal",
@@ -331,12 +338,20 @@
           "version": "Rite-I"
         },
         {
+          "type": "heading",
+          "value": ["Confession of Sin"],
+          "metadata": { "level": 3 }
+        },
+        {
+          "type": "rubric",
+          "value": ["The Officiant says to the people"]
+        },
+        {
           "value": [
             {
               "source": { "api": "", "source": "", "citation": "" },
               "category": [],
               "hidden": false,
-              "label": "Confession of Sin",
               "value": [
                 "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to render thanks for the great benefits that we have received at his hands, to set forth his most worthy praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy."
               ],
@@ -385,9 +400,9 @@
             "conditions": [
               {
                 "preference": {
-                  "is": true,
+                  "is": false,
                   "key": "omitForeOffice",
-                  "value": "no"
+                  "value": "yes"
                 }
               }
             ],
@@ -407,8 +422,8 @@
               {
                 "preference": {
                   "key": "omitForeOffice",
-                  "is": true,
-                  "value": "no"
+                  "is": false,
+                  "value": "yes"
                 }
               }
             ],
@@ -424,6 +439,10 @@
       "language": "en"
     },
     {
+      "type": "rubric",
+      "value": ["The Priest alone stands and says"]
+    },
+    {
       "slug": "absolution",
       "condition": {
         "mode": "and",
@@ -437,37 +456,22 @@
           }
         ]
       },
-      "source": { "api": "", "citation": "", "source": "" },
-      "metadata": { "editor_selected": 0, "selected": 0 },
-      "value": [
-        {
-          "version_label": "Lay/Deacon",
-          "source": { "api": "", "source": "", "citation": "" },
-          "metadata": {},
-          "style": "prayer",
-          "value": [
-            "The Almighty and merciful Lord grant us absolution and remission of all our sins, true repentance, amendment of life, and the grace and consolation of his Holy Spirit."
-          ],
-          "category": [],
-          "type": "text",
-          "hidden": false
-        },
-        {
-          "style": "prayer",
-          "source": { "source": "", "api": "", "citation": "" },
-          "category": [],
-          "value": [
-            "The Almighty and merciful Lord grant you absolution and remission of all your sins, true repentance, amendment of life, and the grace and consolation of his Holy Spirit."
-          ],
-          "metadata": {},
-          "version_label": "Priest",
-          "hidden": false,
-          "type": "text"
-        }
-      ],
+      "style": "prayer",
+      "source": { "source": "", "api": "", "citation": "" },
       "category": [],
-      "type": "option",
-      "hidden": false
+      "value": [
+        "The Almighty and merciful Lord grant you absolution and remission of all your sins, true repentance, amendment of life, and the grace and consolation of his Holy Spirit."
+      ],
+      "metadata": {},
+      "version_label": "Priest",
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "A deacon or lay person using the preceding form remains kneeling, and substitutes “us” for “you” and “our” for “your.”"
+      ]
     },
     {
       "metadata": { "level": 2 },
@@ -480,11 +484,7 @@
     },
     {
       "type": "rubric",
-      "hidden": false,
-      "value": ["All stand"],
-      "metadata": {},
-      "category": [],
-      "source": { "source": "", "citation": "", "api": "" }
+      "value": ["All stand"]
     },
     {
       "type": "responsive",
@@ -506,15 +506,10 @@
       ]
     },
     {
-      "label": null,
-      "version_label": "",
-      "sharing": {
-        "collaborators": [],
-        "status": "published",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "organization": "venite",
-        "privacy": "public"
-      },
+      "type": "rubric",
+      "value": ["Officiant and People"]
+    },
+    {
       "style": "gloria",
       "value": [
         "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
@@ -529,6 +524,11 @@
       "type": "refrain"
     },
     {
+      "type": "rubric",
+      "value": ["Except in Lent,"],
+      "compile_hidden": true
+    },
+    {
       "type": "text",
       "value": ["Alleluia."],
       "condition": {
@@ -540,6 +540,46 @@
       "hidden": false,
       "style": "text",
       "source": {}
+    },
+    {
+      "type": "rubric",
+      "value": ["may be added."],
+      "compile_hidden": true
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "One of the following Antiphons may be sung or said with the Invitatory Psalm"
+      ],
+      "compile_hidden": true
+    },
+    {
+      "type": "refrain",
+      "style": "antiphon",
+      "category": ["Invitatory Antiphons"],
+      "lookup": {
+        "type": "category"
+      }
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "Then follows one of the Invitatory Psalms, Venite or Jubilate."
+      ],
+      "compile_hidden": true
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "In Easter Week, in place of an Invitatory Psalm, the Pascha Nostrum is sung or said. It may also be used daily until the Day of Pentecost."
+      ],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "only": ["Easter", "Ascension", "Pentecost"] } }
+        ]
+      },
+      "compile_hidden": true
     },
     {
       "type": "option",
@@ -560,14 +600,175 @@
       "hidden": false,
       "value": [
         {
-          "slug": "pascha_nostrum",
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "collaborators": [],
-            "organization": "venite",
-            "status": "published"
+          "metadata": {
+            "omit_antiphon": false,
+            "localname": "Venite",
+            "changeable": false,
+            "omit_gloria": true,
+            "insert_seasonal_antiphon": true,
+            "number": null,
+            "latinname": null
           },
+          "slug": "venite",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "let us heartily rejoice in the strength of our salvation.",
+                  "type": "psalm-verse",
+                  "verse": "O come, let us sing unto the Lord; *"
+                },
+                {
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "type": "psalm-verse",
+                  "halfverse": "and show ourselves glad in him with psalms."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and a great King above all gods.",
+                  "verse": "For the Lord is a great God, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and the strength of the hills is his also.",
+                  "verse": " In his hand are all the corners of the earth, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "The sea is his, and he made it, *",
+                  "type": "psalm-verse",
+                  "halfverse": "and his hands prepared the dry land."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and kneel before the Lord our Maker.",
+                  "type": "psalm-verse",
+                  "verse": "O come, let us worship and fall down, *"
+                },
+                {
+                  "halfverse": "and we are the people of his pasture\nand the sheep of his hand.",
+                  "verse": "For he is the Lord our God, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "O worship the Lord in the beauty of holiness; *",
+                  "halfverse": "let the whole earth stand in awe of him.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "For he cometh, for he cometh to judge the earth, *",
+                  "halfverse": "and with righteousness to judge the world\nand the peoples with his truth."
+                }
+              ]
+            }
+          ],
+          "source": {
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979",
+            "citation": "p. 82"
+          },
+          "language": "en",
+          "style": "invitatory",
+          "citation": "Psalm 95:1-7",
+          "type": "psalm",
+          "hidden": false,
+          "category": ["Invitatory"],
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "key": "psalmCycle",
+                  "value": "30day-psalter",
+                  "is": false
+                }
+              },
+              { "day_of_month": { "neq": "19" } }
+            ],
+            "mode": "or"
+          },
+          "version": "bcp1979",
+          "label": "Venite"
+        },
+        {
+          "citation": "Psalm 100",
+          "slug": "jubilate",
+          "language": "en",
+          "source": {
+            "citation": "p. 82",
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979"
+          },
+          "metadata": {
+            "insert_seasonal_antiphon": true,
+            "omit_antiphon": false,
+            "changeable": false,
+            "localname": "Jubilate",
+            "number": null,
+            "omit_gloria": true,
+            "latinname": null
+          },
+          "version": "bcp1979",
+          "type": "psalm",
+          "category": ["Invitatory"],
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "verse": "Be joyful in the Lord, all ye lands; *",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "halfverse": "we are his people and the sheep of his pasture.",
+                  "verse": "Be ye sure that the Lord he is God;\nit is he that hath made us and not we ourselves; *",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "be thankful unto him and speak good of his Name.",
+                  "verse": "O go your way into his gates with thanksgiving\nand into his courts with praise; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and his truth endureth from generation to generation.",
+                  "verse": "For the Lord is gracious;\nhis mercy is everlasting; *",
+                  "type": "psalm-verse"
+                }
+              ]
+            }
+          ],
+          "hidden": false,
+          "label": "Jubilate",
+          "style": "invitatory"
+        },
+        {
+          "slug": "pascha_nostrum",
+          "version_label": "Pascha Nostrum",
           "source": {
             "source": "bcp1979",
             "citation": "p. 83",
@@ -656,234 +857,21 @@
           },
           "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
           "category": ["Invitatory"],
-          "hidden": false,
-          "version_label": null
-        },
-        {
-          "metadata": {
-            "omit_antiphon": false,
-            "gloria": {
-              "style": "gloria",
-              "citation": null,
-              "version_label": "Rite II",
-              "slug": "gloria-patri",
-              "version": "bcp1979",
-              "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "hidden": false,
-              "category": [null],
-              "type": "refrain",
-              "language": "en",
-              "label": null
-            },
-            "localname": "Venite",
-            "changeable": false,
-            "omit_gloria": false,
-            "insert_seasonal_antiphon": true,
-            "number": null,
-            "latinname": null
-          },
-          "version_label": "Venite (BCP)",
-          "slug": "venite",
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "let us heartily rejoice in the strength of our salvation.",
-                  "type": "psalm-verse",
-                  "verse": "O come, let us sing unto the Lord; *"
-                },
-                {
-                  "verse": "Let us come before his presence with thanksgiving *",
-                  "type": "psalm-verse",
-                  "halfverse": "and show ourselves glad in him with psalms."
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "and a great King above all gods.",
-                  "verse": "For the Lord is a great God, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "halfverse": "and the strength of the hills is his also.",
-                  "verse": " In his hand are all the corners of the earth, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "The sea is his, and he made it, *",
-                  "type": "psalm-verse",
-                  "halfverse": "and his hands prepared the dry land."
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "and kneel before the Lord our Maker.",
-                  "type": "psalm-verse",
-                  "verse": "O come, let us worship and fall down, *"
-                },
-                {
-                  "halfverse": "and we are the people of his pasture\nand the sheep of his hand.",
-                  "verse": "For he is the Lord our God, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "O worship the Lord in the beauty of holiness; *",
-                  "halfverse": "let the whole earth stand in awe of him.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "verse": "For he cometh, for he cometh to judge the earth, *",
-                  "halfverse": "and with righteousness to judge the world\nand the peoples with his truth."
-                }
-              ]
-            }
-          ],
-          "source": {
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979",
-            "citation": "p. 82"
-          },
-          "language": "en",
-          "style": "invitatory",
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "organization": "venite",
-            "privacy": "public",
-            "collaborators": [],
-            "status": "published"
-          },
-          "citation": "Psalm 95:1-7",
-          "type": "psalm",
-          "hidden": false,
-          "category": ["Invitatory"],
-          "condition": {
-            "conditions": [
-              {
-                "preference": {
-                  "key": "psalmCycle",
-                  "value": "bcp1979_30day_psalter",
-                  "is": false
-                }
-              },
-              { "day_of_month": { "neq": "19" } }
-            ],
-            "mode": "or"
-          },
-          "version": "bcp1979",
-          "label": "Venite"
-        },
-        {
-          "version_label": "Jubilate (BCP)",
-          "citation": "Psalm 100",
-          "sharing": {
-            "collaborators": [],
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "status": "published",
-            "organization": "venite"
-          },
-          "slug": "jubilate",
-          "language": "en",
-          "source": {
-            "citation": "p. 82",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
-          "metadata": {
-            "insert_seasonal_antiphon": true,
-            "omit_antiphon": false,
-            "changeable": false,
-            "localname": "Jubilate",
-            "gloria": {
-              "label": null,
-              "version_label": "",
-              "sharing": {
-                "collaborators": [],
-                "status": "published",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-                "organization": "venite",
-                "privacy": "public"
-              },
-              "style": "gloria",
-              "value": [
-                "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-                "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
-              ],
-              "category": [null],
-              "language": "en",
-              "version": "rite_i",
-              "slug": "gloria-patri",
-              "hidden": false,
-              "citation": null,
-              "type": "refrain"
-            },
-            "number": null,
-            "omit_gloria": false,
-            "latinname": null
-          },
-          "version": "bcp1979",
-          "type": "psalm",
-          "category": ["Invitatory"],
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
-                  "verse": "Be joyful in the Lord, all ye lands; *",
-                  "type": "psalm-verse"
-                }
-              ]
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "we are his people and the sheep of his pasture.",
-                  "verse": "Be ye sure that the Lord he is God;\nit is he that hath made us and not we ourselves; *",
-                  "type": "psalm-verse"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "be thankful unto him and speak good of his Name.",
-                  "verse": "O go your way into his gates with thanksgiving\nand into his courts with praise; *"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "and his truth endureth from generation to generation.",
-                  "verse": "For the Lord is gracious;\nhis mercy is everlasting; *",
-                  "type": "psalm-verse"
-                }
-              ]
-            },
-            { "type": "psalm-section", "value": [] }
-          ],
-          "hidden": false,
-          "label": "Jubilate",
-          "style": "invitatory"
+          "hidden": false
         }
       ],
       "metadata": { "selected": 0, "editor_selected": 0 }
+    },
+    {
+      "type": "rubric",
+      "value": ["Then follows"]
+    },
+    {
+      "type": "heading",
+      "metadata": {
+        "level": 3
+      },
+      "value": ["The Psalm or Psalms Appointed"]
     },
     {
       "hidden": false,
@@ -900,13 +888,29 @@
       }
     },
     {
+      "type": "rubric",
+      "value": ["At the end of the Psalms is sung or said"],
       "condition": {
         "conditions": [
           {
             "preference": {
-              "value": "false",
+              "value": "true",
               "key": "insertGloria",
-              "is": true
+              "is": false
+            }
+          }
+        ],
+        "mode": "and"
+      }
+    },
+    {
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "value": "true",
+              "key": "insertGloria",
+              "is": false
             }
           }
         ],
@@ -935,6 +939,49 @@
       "category": [],
       "metadata": { "level": 2 },
       "type": "heading"
+    },
+    {
+      "type": "rubric",
+      "compile_hidden": true,
+      "value": [
+        "One or two lessons, as appointed, are read, the Reader first saying"
+      ]
+    },
+    {
+      "type": "text",
+      "style": "text",
+      "compile_hidden": true,
+      "value": ["A Reading (Lesson) from _______________."]
+    },
+    {
+      "type": "rubric",
+      "compile_hidden": true,
+      "value": ["A citation giving chapter and verse may be added."]
+    },
+    {
+      "type": "rubric",
+      "compile_hidden": true,
+      "value": ["After each Lesson the Reader may say"]
+    },
+    {
+      "type": "responsive",
+      "style": "preces",
+      "compile_hidden": true,
+      "value": [
+        { "label": "", "text": "The Word of the Lord." },
+        { "label": "People", "text": "Thanks be to God." }
+      ]
+    },
+    {
+      "type": "rubric",
+      "compile_hidden": true,
+      "value": ["Or the Reader may say"]
+    },
+    {
+      "type": "text",
+      "style": "text",
+      "compile_hidden": true,
+      "value": ["Here endeth the Lesson (Reading)."]
     },
     {
       "lookup": {

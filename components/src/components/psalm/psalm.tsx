@@ -121,7 +121,7 @@ export class PsalmComponent {
     }
   }
 
-  headingNode(value : string = undefined, level : number = 3, showLatinName : boolean = true, omitCitation : boolean = false) : JSX.Element {
+  headingNode(value : string = undefined, level : number = 3, showLatinName : boolean = true, omitCitation : boolean = false, omitSource = false) : JSX.Element {
     let label : string = this.obj.label;
     if(this.obj.style == 'canticle' && this.obj.metadata && this.obj.metadata.number && this.obj.metadata.localname) {
       label = `${this.obj.metadata.number}. ${this.obj.metadata.localname}`;
@@ -133,7 +133,7 @@ export class PsalmComponent {
       metadata: { level },
       citation: !omitCitation && this.obj?.citation !== this.obj?.label ? this.obj?.citation : undefined,
       value: [value ?? label],
-      source: this.obj?.source
+      source: omitSource ? undefined : this.obj?.source
     })
     return (
       this.editable
@@ -291,7 +291,7 @@ export class PsalmComponent {
         {/* render each set of verses */}
         {this.filteredValue?.map((section, sectionIndex) => [
           // render a `Heading`, if this section has a `label`
-          section.label && this.headingNode(section.label, 4, false, true),
+          section.label && section.value?.length > 0 && this.headingNode(section.label, 4, false, true, true),
   
           // build a set of verses
           <div class='psalm-set'>

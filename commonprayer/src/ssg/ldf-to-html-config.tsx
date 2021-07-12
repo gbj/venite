@@ -1,5 +1,5 @@
 //import { LDFToHTMLConfig } from "https://cdn.skypack.dev/@venite/html@0.3.2";
-//import { Lookup } from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
+//import { Lookup } from "https://cdn.skypack.dev/@venite/ldf@^0.20.3";
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 
 export const LDF_TO_HTML_CONFIG = {

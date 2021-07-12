@@ -11,7 +11,7 @@ import {
   liturgicalDay,
   transferredFeast,
   dateFromYMD,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.2";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3";
 
 type Kalendar = {
   weeks: LiturgicalWeek[];

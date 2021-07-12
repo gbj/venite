@@ -341,11 +341,13 @@ body * {
   .psalmverses-false {
     --ldf-psalm-number-display: none;
     --ldf-psalm-grid-display: block;
+    --ldf-psalm-set-first-verse-number-display: none;
   }
 
   .psalmverses-true {
     --ldf-psalm-number-display: inline-block;
     --ldf-psalm-grid-display: grid;
+    --ldf-psalm-set-first-verse-number-display: inline-block;
   }
 
   .bibleverses-true {

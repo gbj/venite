@@ -14,7 +14,7 @@ import {
   Preference,
   Psalm,
   versionToString,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.2?dts";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3?dts";
 import { LDF_TO_HTML_CONFIG } from "../ssg/ldf-to-html-config.tsx";
 import { CalendarService } from "./calendar-service.ts";
 import { CanticleTableService } from "./canticle-table-service.ts";
@@ -106,6 +106,10 @@ export class CompileServiceController {
                 );
                 if (lookupEl) {
                   this.replace(child, lookupEl, mode);
+                }
+
+                if (doc.compile_hidden) {
+                  this.hide(child, mode);
                 }
               } catch (e) {
                 console.warn(e, decodeURI(ldf));
