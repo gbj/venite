@@ -22,7 +22,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [image.ts:4](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/image.ts#L4)*
+*Defined in [image.ts:4](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/image.ts#L4)*
 
 ## Variables
 
@@ -30,4 +30,4 @@
 
 • **STYLES**: *["normal", "slideshow", "carousel"]* = ['normal', 'slideshow', 'carousel'] as const
 
-*Defined in [image.ts:3](https://github.com/gbj/venite/blob/df4c63ac/ldf/src/image.ts#L3)*
+*Defined in [image.ts:3](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/image.ts#L3)*
