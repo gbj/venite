@@ -201,7 +201,7 @@
                 "label": "1979 Table of Suggested Canticles",
                 "value": "Rite-I",
                 "default": false,
-                "metadata": { "fallback": "bcp1979", "alternateYear": false }
+                "metadata": { "fallback": "Rite-II", "alternateYear": false }
               },
               {
                 "metadata": { "alternateYear": false },

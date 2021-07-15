@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.2";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.4";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -401,8 +401,10 @@ export class CompileServiceController {
       const resp = await fetch(
           `/${version ? `${version}/` : ""}${slugify(slug)}.json`
         ),
-        data: LiturgicalDocument[] = await resp.json();
-      return data;
+        data = await resp.json();
+      return Array.isArray(data.data)
+        ? (data.data as LiturgicalDocument[])
+        : ([data] as LiturgicalDocument[]);
     } else {
       return null;
     }
@@ -429,8 +431,9 @@ export class CompileServiceController {
         DEFAULT_CANTICLES
       );
     const docs = await Promise.all(
-      filtered.map((entry) => this.lookupBySlug(entry.slug, version))
+      filtered.map((entry) => this.lookupBySlug(entry.slug, "canticle"))
     );
+    console.log("lookupCanticle", entries);
     return docs.flat();
   }
 

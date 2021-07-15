@@ -8,9 +8,10 @@ export function responsivePrayerToHTML(
   localeStrings: Record<string, string>,
   config: LDFToHTMLConfig
 ): string {
-  const ldf = config.includeLDF
-    ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
-    : "";
+  const ldf =
+    config.includeLDF || doc.compile_hidden
+      ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
+      : "";
 
   const header = headingToHTML(
     new Heading({

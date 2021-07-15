@@ -16,6 +16,8 @@ export class CanticleTableServiceController {
     nth: number,
     fallbackTable: string = undefined
   ): Promise<CanticleTableEntry[]> {
+    console.log("findEntry", table, nth, fallbackTable);
+
     const tables = await this.tables();
 
     return fallbackTable

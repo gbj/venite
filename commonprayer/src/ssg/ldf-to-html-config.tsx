@@ -1,4 +1,4 @@
-//import { LDFToHTMLConfig } from "https://cdn.skypack.dev/@venite/html@0.3.2";
+//import { LDFToHTMLConfig } from "https://cdn.skypack.dev/@venite/html@0.3.4";
 //import { Lookup } from "https://cdn.skypack.dev/@venite/ldf@^0.20.3";
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 

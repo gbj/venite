@@ -146,7 +146,7 @@ export async function buildTOC(
         };
 
         // b) build pages for children
-        if (!DIR_IGNORE_CHILDREN.includes(e.name)) {
+        if (!DIR_IGNORE_CHILDREN.includes(e.name) && !e.name.endsWith(".ts")) {
           map = {
             ...map,
             ...(await buildTOC(

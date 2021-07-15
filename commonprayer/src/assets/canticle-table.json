@@ -98,7 +98,7 @@
       "season": "Advent",
       "day": null,
       "evening": false,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "weekday": "Sunday",
@@ -108,7 +108,7 @@
       "evening": false,
       "day": null,
       "season": null,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "season": null,
@@ -137,7 +137,7 @@
       "weekday": "Saturday",
       "day": null,
       "season": null,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "nth": 2,
@@ -147,7 +147,7 @@
       "day": null,
       "week": null,
       "slug": "canticle-16",
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "slug": "canticle-19",
@@ -200,7 +200,7 @@
       "day": null,
       "nth": 2,
       "season": null,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "nth": 2,
@@ -249,7 +249,7 @@
       "nth": 2,
       "evening": false,
       "weekday": "Wednesday",
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "week": null,
@@ -287,7 +287,7 @@
       "season": null,
       "slug": "canticle-l",
       "weekday": "Monday",
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "week": null,
@@ -525,7 +525,7 @@
       "weekday": "Saturday",
       "evening": false,
       "week": null,
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "nth": 2,
@@ -563,7 +563,7 @@
       "evening": false,
       "nth": 2,
       "weekday": "Friday",
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "evening": false,
@@ -573,7 +573,7 @@
       "season": "Christmas",
       "slug": "canticle-20",
       "nth": 2,
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "weekday": "Thursday",
@@ -731,7 +731,7 @@
       "week": null,
       "weekday": "Sunday",
       "evening": false,
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "nth": 1,
@@ -777,7 +777,7 @@
       "slug": "canticle-a",
       "week": null,
       "weekday": "Thursday",
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "nth": 1,
@@ -787,7 +787,7 @@
       "season": null,
       "day": null,
       "evening": true,
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "weekday": "Wednesday",
@@ -834,7 +834,7 @@
       "evening": false,
       "nth": 1,
       "weekday": "Saturday",
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "season": "Lent",
@@ -962,7 +962,7 @@
       "slug": "canticle-e",
       "week": null,
       "season": null,
-      "table": "eow"
+      "table": "EOW"
     },
     {
       "day": null,
@@ -1010,7 +1010,7 @@
       "week": null,
       "evening": false,
       "weekday": "Sunday",
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "slug": "canticle-10",
@@ -1029,7 +1029,7 @@
       "day": null,
       "week": null,
       "weekday": "Wednesday",
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "week": null,
@@ -1039,7 +1039,7 @@
       "evening": false,
       "nth": 1,
       "season": null,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "evening": true,
@@ -1204,7 +1204,7 @@
       "day": null,
       "slug": "canticle-13",
       "evening": false,
-      "table": "bcp1979"
+      "table": "Rite-II"
     },
     {
       "week": null,
@@ -1337,7 +1337,7 @@
       "week": null,
       "slug": "canticle-4",
       "day": null,
-      "table": "rite_i"
+      "table": "Rite-I"
     },
     {
       "slug": "canticle-4",
@@ -1366,7 +1366,7 @@
       "slug": "canticle-3",
       "nth": 2,
       "evening": true,
-      "table": "rite_i"
+      "table": "Rite-I"
     },
     {
       "nth": 2,
@@ -1376,7 +1376,7 @@
       "season": null,
       "day": null,
       "evening": true,
-      "table": "rite_i"
+      "table": "Rite-I"
     },
     {
       "evening": true,
