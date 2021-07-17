@@ -1,4 +1,4 @@
-import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.3?dts";
+import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
 
 const R1 = [
   {

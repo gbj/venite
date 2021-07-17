@@ -9,7 +9,7 @@ export function genericTextToHTML(
   config: LDFToHTMLConfig
 ): string {
   const ldf =
-    config.includeLDF || doc.compile_hidden
+    config.includeLDF || doc.compile_hidden || doc.hidden
       ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
       : "";
 
@@ -27,11 +27,9 @@ export function genericTextToHTML(
         )
       : "";
 
-  return `<article ${ldf} class="doc ${doc.type} ${
-    doc.style || ""
-  } ${style}" lang="${doc.language || "en"}">${heading}${(
-    (doc.value || []) as string[]
-  )
+  return `<article ${ldf} class="doc ${doc.type} ${doc.style || ""} ${style} ${
+    doc.hidden ? " hidden" : ""
+  }" lang="${doc.language || "en"}">${heading}${((doc.value || []) as string[])
     .map(
       (line, lineIndex) =>
         `<p>${

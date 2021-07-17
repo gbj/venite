@@ -319,7 +319,7 @@
             "filter": "seasonal",
             "rotate": true
           },
-          "category": ["Opening Sentence"],
+          "category": ["Opening Sentences"],
           "condition": {
             "mode": "and",
             "conditions": [
@@ -984,12 +984,31 @@
       "value": ["Here endeth the Lesson (Reading)."]
     },
     {
+      "compile_hidden": true,
+      "lookup": {
+        "type": "lectionary"
+      }
+    },
+    {
+      "type": "rubric",
+      "compile_hidden": true,
+      "value": [
+        "Silence may be kept after each Reading. One of the Canticles is sung or said after each Reading. If three Lessons are used, the Lesson from the Gospel is read after the second Canticle."
+      ]
+    },
+    {
+      "compile_hidden": true,
+      "lookup": {
+        "type": "canticle"
+      }
+    },
+    {
       "lookup": {
         "item": { "preference": "readingA" },
         "type": "lectionary",
         "table": { "preference": "lectionary" }
       },
-      "hidden": false,
+      "hidden": true,
       "category": [],
       "metadata": {
         "intro": {
@@ -1021,11 +1040,11 @@
           "response": "Thanks be to God."
         }
       ],
-      "hidden": false
+      "hidden": true
     },
     {
       "source": { "source": "", "api": "", "citation": "" },
-      "hidden": false,
+      "hidden": true,
       "metadata": {
         "omit_antiphon": false,
         "changeable": true,
@@ -1044,7 +1063,7 @@
     {
       "version": { "preference": "bibleVersion" },
       "label": "The Second Lesson",
-      "hidden": false,
+      "hidden": true,
       "style": "long",
       "lookup": {
         "type": "lectionary",
@@ -1094,7 +1113,7 @@
         ],
         "mode": "and"
       },
-      "hidden": false,
+      "hidden": true,
       "type": "responsive",
       "style": "responsive",
       "value": [
@@ -1115,7 +1134,7 @@
       },
       "type": "psalm",
       "source": { "api": "", "source": "", "citation": "" },
-      "hidden": false,
+      "hidden": true,
       "metadata": {
         "omit_antiphon": false,
         "omit_gloria": false,
@@ -1136,67 +1155,6 @@
       }
     },
     {
-      "style": "long",
-      "hidden": false,
-      "version": { "preference": "bibleVersion" },
-      "lookup": {
-        "type": "lectionary",
-        "table": { "preference": "lectionary" },
-        "item": { "preference": "readingC" }
-      },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "preference": {
-              "value": "none",
-              "key": "readingC",
-              "is": false
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "intro": {
-          "language": "en",
-          "category": ["Bible Reading Introduction"],
-          "style": "text",
-          "type": "text",
-          "sharing": {
-            "privacy": "public",
-            "status": "published",
-            "organization": "venite"
-          },
-          "value": ["A Reading from ${longName}."]
-        }
-      },
-      "type": "bible-reading"
-    },
-    {
-      "value": [
-        {
-          "response": "Thanks be to God.",
-          "text": "The Word of the Lord.",
-          "label": ""
-        }
-      ],
-      "style": "responsive",
-      "condition": {
-        "conditions": [
-          {
-            "preference": {
-              "is": false,
-              "key": "readingC",
-              "value": "none"
-            }
-          }
-        ],
-        "mode": "and"
-      },
-      "hidden": false,
-      "type": "responsive"
-    },
-    {
       "type": "heading",
       "condition": {
         "conditions": [
@@ -1214,26 +1172,39 @@
       "metadata": { "level": 3 },
       "style": "text",
       "category": [],
-      "hidden": false,
+      "hidden": true,
       "value": ["The Sermon"]
     },
     {
-      "category": [],
-      "source": { "citation": "p. 53", "api": "", "source": "bcp1979" },
-      "style": "text",
-      "type": "text",
-      "hidden": false,
-      "display_format": "unison",
+      "type": "liturgy",
       "value": [
-        "I believe in God, the Father almighty,\n\tmaker of heaven and earth;\nAnd in Jesus Christ his only Son our Lord;\n\twho was conceived by the Holy Ghost,\n\tborn of the Virgin Mary,\n\tsuffered under Pontius Pilate,\n\twas crucified, dead, and buried.\n\tHe descended into hell.\n\tThe third day he rose again from the dead.\n\tHe ascended into heaven,\n\tand sitteth on the right hand of God the Father almighty.\n\tFrom thence he shall come to judge the quick and the dead.\nI believe in the Holy Ghost,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting. Amen."
-      ],
-      "metadata": {
-        "response": "",
-        "omit_response": true,
-        "rollup": false
-      },
-      "label": "The Apostles’ Creed",
-      "response": "Amen."
+        {
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["The Apostles’ Creed"]
+        },
+        {
+          "type": "rubric",
+          "value": ["Officiant and People together, all standing"]
+        },
+        {
+          "category": [],
+          "source": { "citation": "p. 53", "api": "", "source": "bcp1979" },
+          "style": "text",
+          "type": "text",
+          "hidden": false,
+          "display_format": "unison",
+          "value": [
+            "I believe in God, the Father almighty,\n\tmaker of heaven and earth;\nAnd in Jesus Christ his only Son our Lord;\n\twho was conceived by the Holy Ghost,\n\tborn of the Virgin Mary,\n\tsuffered under Pontius Pilate,\n\twas crucified, dead, and buried.\n\tHe descended into hell.\n\tThe third day he rose again from the dead.\n\tHe ascended into heaven,\n\tand sitteth on the right hand of God the Father almighty.\n\tFrom thence he shall come to judge the quick and the dead.\nI believe in the Holy Ghost,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting. Amen."
+          ],
+          "metadata": {
+            "response": "",
+            "omit_response": true,
+            "rollup": false
+          },
+          "response": "Amen."
+        }
+      ]
     },
     {
       "value": ["The Prayers"],
@@ -1603,7 +1574,7 @@
       "version": "Rite-I",
       "source": { "source": "", "citation": "", "api": "" },
       "metadata": {},
-      "category": ["Closing Sentence"],
+      "category": ["Closing Sentences"],
       "style": "short",
       "hidden": false
     },
@@ -1612,7 +1583,7 @@
       "type": "heading",
       "category": [],
       "metadata": { "omit_response": false, "level": 3 },
-      "hidden": false,
+      "hidden": true,
       "source": { "source": "", "api": "", "citation": "" },
       "condition": {
         "conditions": [

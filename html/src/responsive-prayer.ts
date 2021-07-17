@@ -9,7 +9,7 @@ export function responsivePrayerToHTML(
   config: LDFToHTMLConfig
 ): string {
   const ldf =
-    config.includeLDF || doc.compile_hidden
+    config.includeLDF || doc.compile_hidden || doc.hidden
       ? ` data-ldf="${encodeURI(JSON.stringify(doc))}"`
       : "";
 
@@ -25,11 +25,11 @@ export function responsivePrayerToHTML(
     config
   );
   if (doc.style === "litany") {
-    return [
+    return `<div>${[
       header,
-      `<article ${ldf} class="doc responsive-prayer litany"  lang="${
-        doc.language || "en"
-      }">`,
+      `<article ${ldf} class="doc responsive-prayer litany${
+        doc.hidden ? " hidden" : ""
+      }"  lang="${doc.language || "en"}">`,
       ...(doc.value || []).map(
         (line) =>
           `<p class="line ${
@@ -43,13 +43,12 @@ export function responsivePrayerToHTML(
           }</p>`
       ),
       `</article>`,
-    ].join("\n");
+    ].join("\n")}</div>`;
   } else if (doc.style === "preces") {
-    return [
+    return `<article ${ldf} class="doc responsive-prayer preces${
+      doc.hidden ? " hidden" : ""
+    }"  lang="${doc.language || "en"}">${[
       header,
-      `<article ${ldf} class="doc responsive-prayer preces"  lang="${
-        doc.language || "en"
-      }">`,
       ...(doc.value || []).map(
         (line, lineIndex) =>
           `<p class="line ${
@@ -58,14 +57,13 @@ export function responsivePrayerToHTML(
             lineIndex % 2 === 1 ? " response" : ""
           }">${processText(line.text)}</span></p>`
       ),
-      `</article>`,
-    ].join("\n");
+    ].join("\n")}</article>`;
   } else {
-    return [
+    return `<article ${ldf} class="doc responsive-prayer responsive${
+      doc.hidden ? " hidden" : ""
+    }" lang="${doc.language || "en"}>${[
       header,
-      `<article ${ldf} class="doc responsive-prayer responsive"  lang="${
-        doc.language || "en"
-      }"><p>`,
+      `<p>`,
       ...(doc.value || []).map(
         (line, lineIndex) =>
           `${lineIndex > 0 ? "<br>" : ""}${processText(line.text)}${
@@ -76,7 +74,7 @@ export function responsivePrayerToHTML(
               : ""
           }`
       ),
-      `</p></article>`,
-    ].join("\n");
+      `</p>`,
+    ].join("\n")}</article>`;
   }
 }

@@ -1,0 +1,38 @@
+.lookup {
+  border-radius: var(--border-radius);
+  font-family: var(--cp-ui-font-family);
+}
+
+.lookup a, .lookup a:visited {
+  display: block;
+  color: inherit;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.lookup.category {
+  background-color: #fba5a5;
+  color: black;
+}
+
+.lookup.collect {
+  background-color: #ccff66;
+  color: black;
+}
+
+.lookup.canticle {
+  background-color: #bd8fec;
+  color: black;
+}
+
+.lookup.lectionary {
+  background-color: #F1E8B8;
+  color: black;
+}
+
+.lookup.slug {
+  background-color: #2ec4b6;
+  color: white;
+}

@@ -11,7 +11,7 @@ import {
   liturgicalDay,
   transferredFeast,
   dateFromYMD,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
 
 type Kalendar = {
   weeks: LiturgicalWeek[];
@@ -21,7 +21,7 @@ type Kalendar = {
 
 export class CalendarServiceController {
   async findDay(ymd: string, kalendar: string): Promise<LiturgicalDay> {
-    const date = dateFromYMDString(ymd),
+    const date = this.dateFromYMDString(ymd),
       week = await this.findWeek(date),
       day = await this.buildDay(date, kalendar, week);
     return day;
@@ -121,17 +121,22 @@ export class CalendarServiceController {
           ? await this.findSpecialDays(kalendar, "thanksgiving-day")
           : [],
       // Transferred feasts
-      transferred: HolyDay | null = transferredFeast(
+      transferred: HolyDay | null = await transferredFeast(
         async (dfd: Date) => {
           const week = await this.findWeek(dfd);
           return liturgicalDay(dfd, kalendar, false, week);
         },
-        (slug: string) => this.findSpecialDays(kalendar, slug),
-        (dfd: Date) =>
-          this.findFeastDays(
+        async (slug: string) => {
+          const days = await this.findSpecialDays(kalendar, slug);
+          return days?.length > 0 ? days[0] : null;
+        },
+        async (dfd: Date) => {
+          const days = await this.findFeastDays(
             kalendar,
             `${dfd.getMonth() + 1}/${dfd.getDate()}`
-          ),
+          );
+          return days?.length > 0 ? days[0] : null;
+        },
         date
       );
 

@@ -30,9 +30,11 @@ export function ldfToHTML(
 
   // lookups by category, slug, lectionary, etc.
   if (inDoc?.lookup && (!inDoc.value || inDoc.value?.length === 0)) {
-    return `<article class="lookup ${inDoc.lookup.type}" data-ldf="${encodeURI(
-      JSON.stringify(inDoc)
-    )}">${config.lookupLinks(inDoc)}</article>`;
+    return `<article class="lookup ${inDoc.lookup.type} ${
+      inDoc?.hidden ? " hidden" : ""
+    }" data-ldf="${encodeURI(JSON.stringify(inDoc))}">${config.lookupLinks(
+      inDoc
+    )}</article>`;
   }
   // compiled documents
   else {

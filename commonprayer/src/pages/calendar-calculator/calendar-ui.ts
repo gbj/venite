@@ -1,4 +1,9 @@
-import { CalendarService, LectionaryService } from "./services.bundle.js";
+import {
+  CalendarService,
+  CompileService,
+  LectionaryService,
+  docToHTML,
+} from "./services.bundle.js";
 import { getLocale } from "./locale.js";
 
 export type LectionaryEntry = {
@@ -75,7 +80,7 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
 
   // fill template
   title.innerText = dayName;
-  buildList(readingList, readings, (entry) => `<li>${entry.citation}</li>`);
+  //buildList(readingList, readings, (entry) => `<li>${entry.citation}</li>`);
   buildList(
     morningPsalmList,
     morningPsalms,
@@ -88,6 +93,34 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
     (entry) =>
       `<li><a href="/psalter#${entry.citation}">${entry.label}</a></li>`
   );
+
+  // readings
+
+  // first, synchronously add headings
+  readings.forEach((entry) => {
+    const heading = document.createElement("h4");
+    heading.innerText = entry.citation;
+    heading.setAttribute("id", entry.type);
+    readingList.append(heading);
+  });
+
+  // then asynchronously load readings and replace the headings with them
+  readings.forEach(async (entry) => {
+    // TODO client preferences for Bible version
+    const reading = await CompileService.lookupBibleReading(
+        {},
+        {},
+        entry.citation
+      ),
+      content = docToHTML({
+        ...reading,
+        label: entry.citation,
+        citation: undefined,
+      }),
+      el = document.createElement("div");
+    el.innerHTML = content;
+    document.getElementById(entry.type).replaceWith(el);
+  });
 
   // empty out past entries
   while (details.firstChild) {

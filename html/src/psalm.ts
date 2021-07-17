@@ -104,9 +104,9 @@ export function psalmToHTML(
     sections = p.filteredVerses();
 
   return [
-    `<article ${ldf} class="doc psalm ${doc.style}"  lang="${
-      doc.language || "en"
-    }">`,
+    `<article ${ldf} class="doc psalm ${doc.style}${
+      doc.hidden ? " hidden" : ""
+    }"  lang="${doc.language || "en"}">`,
     headingNode(),
     includeAntiphon && doc.metadata?.antiphon
       ? antiphonNode(doc.metadata.antiphon)

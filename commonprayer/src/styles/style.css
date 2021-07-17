@@ -158,7 +158,7 @@ a.source {
   background: var(--cp-light-background);
   border: 1px solid var(--cp-light-border);
   color: var(--cp-light-color);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   padding: 0.5rem;
   width: 6rem;
   font-family: var(--cp-ui-font-family);

@@ -1,17 +1,44 @@
-import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
-import { Status } from "https://deno.land/std@0.98.0/http/http_status.ts";
-import { serve, Server } from "https://deno.land/std@0.98.0/http/server.ts";
-import { serveFile } from "https://deno.land/std@0.98.0/http/file_server.ts";
 import {
+  extname,
+  join,
+  fromFileUrl,
+} from "https://deno.land/std@0.98.0/path/mod.ts";
+import { Status } from "https://deno.land/std@0.98.0/http/http_status.ts";
+//import { serve, Server } from "https://deno.land/std@0.98.0/http/server.ts";
+//import { serveFile } from "https://deno.land/std@0.98.0/http/file_server.ts";
+/*import {
   acceptWebSocket,
   isWebSocketCloseEvent,
   WebSocket,
-} from "https://deno.land/std@0.98.0/ws/mod.ts";
+} from "https://deno.land/std@0.98.0/ws/mod.ts";*/
 import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
 import { v4 } from "https://deno.land/std@0.98.0/uuid/mod.ts";
 
 import { debounce } from "./debounce.ts";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
+
+const MEDIA_TYPES: Record<string, string> = {
+  ".md": "text/markdown",
+  ".html": "text/html",
+  ".htm": "text/html",
+  ".json": "application/json",
+  ".map": "application/json",
+  ".txt": "text/plain",
+  ".ts": "text/typescript",
+  ".tsx": "text/tsx",
+  ".js": "application/javascript",
+  ".jsx": "text/jsx",
+  ".gz": "application/gzip",
+  ".css": "text/css",
+  ".wasm": "application/wasm",
+  ".mjs": "application/javascript",
+  ".svg": "image/svg+xml",
+};
+
+/** Returns the content-type based on the extension of a path. */
+function contentType(path: string): string | undefined {
+  return MEDIA_TYPES[extname(path)];
+}
 
 export async function devServer(
   build: () => Promise<SSGRefreshMap>,
@@ -50,9 +77,7 @@ async function watchFiles(
   clients: Map<string, WebSocket>,
   refreshMap: SSGRefreshMap
 ) {
-  const watcher = Deno.watchFs(
-    path.join(path.fromFileUrl(import.meta.url), "..", "..")
-  );
+  const watcher = Deno.watchFs(join(fromFileUrl(import.meta.url), "..", ".."));
 
   let rebuilding = false;
 
@@ -129,9 +154,34 @@ function reloadServer(port: number) {
 }
 
 async function waitForClients(port: number, clients: Map<string, WebSocket>) {
-  for await (const req of serve({ port })) {
-    const { conn, r: bufReader, w: bufWriter, headers } = req;
-    const sock = await acceptWebSocket({
+  const server = Deno.listen({ port });
+  for await (const conn of server) {
+    (async () => {
+      const httpConn = Deno.serveHttp(conn);
+
+      for await (const requestEvent of httpConn) {
+        const { websocket, response } = Deno.upgradeWebSocket(
+          requestEvent.request
+        );
+
+        const uid = v4.generate();
+        clients.set(uid, websocket);
+        console.log(
+          "\n\nClient",
+          uid,
+          "connected — now ",
+          Array.from(clients.entries()).length
+        );
+
+        requestEvent.respondWith(response);
+
+        handleDepartures(uid, websocket, clients);
+      }
+    })();
+  }
+}
+
+/*  const sock = await acceptWebSocket({
       conn,
       bufReader,
       bufWriter,
@@ -150,76 +200,115 @@ async function waitForClients(port: number, clients: Map<string, WebSocket>) {
     handleDepartures(uid, sock, clients);
   }
 }
-
-async function handleDepartures(
+ */
+function handleDepartures(
   uid: string,
-  sock: WebSocket,
+  websocket: WebSocket,
   clients: Map<string, WebSocket>
 ) {
-  for await (const ev of sock) {
-    if (isWebSocketCloseEvent(ev)) {
-      console.log("\n\nClient", uid, "disconnected");
-      try {
-        clients.delete(uid);
-      } catch (e) {
-        console.warn("(handleDepartures err)", e);
-      }
-      return;
-    }
-  }
+  websocket.onopen = () => {
+    websocket.send("Hello World!");
+  };
+  websocket.onmessage = (e) => {
+    console.log(e.data);
+    websocket.close();
+  };
+  websocket.onclose = () => {
+    console.log("\n\nClient", uid, "disconnected");
+    clients.delete(uid);
+  };
+  websocket.onerror = (e) => console.error("WebSocket error:", e);
 }
 
-async function serveFiles(port: number): Promise<Server> {
-  const server = serve({ port });
+async function serveFiles(port: number): Promise<Deno.Listener> {
+  const server = Deno.listen({ port });
   console.log(`\n\nDev server active at http://localhost:${port}`);
-  for await (const req of server) {
-    const filePath = path.join(
-      path.fromFileUrl(import.meta.url),
-      "..",
-      "..",
-      "..",
-      "www",
-      req.url
-    );
-    if (await exists(filePath)) {
-      const fileInfo = await Deno.stat(filePath);
-      try {
-        if (fileInfo.isFile) {
-          const content = await serveFile(req, filePath);
-          req.respond(content);
-        } else if (
-          fileInfo.isDirectory &&
-          (await exists(path.join(filePath, "index.html")))
-        ) {
-          const content = await serveFile(
-            req,
-            path.join(filePath, "index.html")
-          );
-          req.respond(content);
+  for await (const conn of server) {
+    (async () => {
+      const httpConn = Deno.serveHttp(conn);
+
+      for await (const requestEvent of httpConn) {
+        const req = requestEvent.request,
+          url = new URL(req.url),
+          pathname = url.pathname;
+        const filePath = join(
+          fromFileUrl(import.meta.url),
+          "..",
+          "..",
+          "..",
+          "www",
+          pathname
+        );
+
+        if (await exists(filePath)) {
+          const fileInfo = await Deno.stat(filePath);
+          try {
+            if (fileInfo.isFile) {
+              const content = await Deno.readFile(filePath);
+              await requestEvent.respondWith(
+                new Response(content, {
+                  status: Status.OK,
+                  headers: {
+                    "Content-Type": contentType(filePath),
+                  },
+                })
+              );
+            } else if (
+              fileInfo.isDirectory &&
+              (await exists(join(filePath, "index.html")))
+            ) {
+              const content = await Deno.readFile(join(filePath, "index.html"));
+              await requestEvent.respondWith(
+                new Response(content, {
+                  status: Status.OK,
+                  headers: {
+                    "Content-Type": contentType("index.html"),
+                  },
+                })
+              );
+            } else {
+              // TODO real 404 page
+              await requestEvent.respondWith(
+                new Response("", { status: Status.NotFound })
+              );
+            }
+          } catch (e) {
+            console.error(e);
+            try {
+              await requestEvent.respondWith(
+                new Response(JSON.stringify(e), {
+                  status: Status.InternalServerError,
+                })
+              );
+            } catch (e) {
+              console.warn("(serveFiles error)", e);
+              await requestEvent.respondWith(
+                new Response(JSON.stringify(e), {
+                  status: Status.InternalServerError,
+                })
+              );
+            }
+          }
+          continue;
         } else {
-          req.respond({ status: Status.NotFound });
-        }
-      } catch (e) {
-        console.error(e);
-        try {
-          req.respond({
-            status: Status.NotFound,
-            body: JSON.stringify(e),
-          });
-        } catch (e) {
-          console.warn("(serveFiles error)", e);
+          try {
+            // TODO real 404 page
+            await requestEvent.respondWith(
+              new Response("", {
+                status: Status.NotFound,
+              })
+            );
+          } catch (e) {
+            console.warn(e);
+            await requestEvent.respondWith(
+              new Response(JSON.stringify(e), {
+                status: Status.InternalServerError,
+              })
+            );
+          }
         }
       }
-      continue;
-    } else {
-      try {
-        req.respond({
-          status: Status.NotFound,
-        });
-      } catch (e) {
-        console.warn("(serveFiles error)", e);
-      }
-    }
+    })();
   }
   return server;
 }

@@ -1,5 +1,5 @@
 console.log("Trying to connect to dev server.");
-const ws = new WebSocket("ws://localhost:8001");
+const ws = new WebSocket("ws://localhost:8000");
 
 ws.onopen = function () {
   console.log("Connected to dev server");

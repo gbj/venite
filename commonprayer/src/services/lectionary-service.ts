@@ -2,7 +2,7 @@ import {
   dateFromYMDString,
   LectionaryEntry,
   LiturgicalDay,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3?dts";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
 
 export class LectionaryServiceController {
   private _lectionary: Record<string, Promise<LectionaryEntry[]>> = {};
@@ -21,12 +21,25 @@ export class LectionaryServiceController {
     lectionaryName: string,
     alternateYear = false
   ): Promise<LectionaryEntry[]> {
+    const READING_ORDER = [
+      "holy_day_morning_1",
+      "holy_day_morning_2",
+      "holy_day_evening_1",
+      "holy_day_evening_2",
+      "first_reading",
+      "second_reading",
+      "gospel",
+    ];
+
     const slug = `${
       day.propers || day.slug
     }-${lectionaryName}-${alternateYear}`;
     if (!this._cache[slug]) {
       this._cache[slug] = this.loadLectionary(lectionaryName).then((entries) =>
-        this.filterReadings(entries, day, lectionaryName, alternateYear)
+        this.filterReadings(entries, day, lectionaryName, alternateYear).sort(
+          (a, b) =>
+            READING_ORDER.indexOf(a.type) - READING_ORDER.indexOf(b.type)
+        )
       );
     }
     return this._cache[slug];

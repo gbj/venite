@@ -36,7 +36,9 @@ export function bibleReadingToHTML(
     return [
       `<article ${ldf} lang="${
         doc.language || "en"
-      }" class="doc bible-reading short ${doc.display_format || "default"}">`,
+      }" class="doc bible-reading short ${doc.display_format || "default"}${
+        doc.hidden ? " hidden" : ""
+      }">`,
       "<p>",
       ...(doc.value || []).map((verse) =>
         verse.hasOwnProperty("type") && (verse as Heading).type === "heading"

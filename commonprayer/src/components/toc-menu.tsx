@@ -16,7 +16,7 @@ export const TOCMenu = () => <nav class="hidden toc-menu">
       <li>
         <h2>The Daily Office</h2>
         <ul>
-          <li>Morning Prayer</li>
+          <li><a href="/office/morning-prayer">Morning Prayer</a></li>
           <li><a href="/office/noonday-prayer">Noonday Prayer</a></li>
           <li>Evening Prayer</li>
           <li><a href="/office/compline">Compline</a></li>

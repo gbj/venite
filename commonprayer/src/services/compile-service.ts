@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.4";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.9";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -14,7 +14,7 @@ import {
   Preference,
   Psalm,
   versionToString,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.3?dts";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
 import { LDF_TO_HTML_CONFIG } from "../ssg/ldf-to-html-config.tsx";
 import { CalendarService } from "./calendar-service.ts";
 import { CanticleTableService } from "./canticle-table-service.ts";
@@ -108,6 +108,10 @@ export class CompileServiceController {
                   this.replace(child, lookupEl, mode);
                 }
 
+                if (doc.lookup) {
+                  console.log("lookup", doc, child, lookupEl);
+                }
+
                 if (doc.compile_hidden) {
                   this.hide(child, mode);
                 }
@@ -158,33 +162,35 @@ export class CompileServiceController {
           break;
         // TODO lectionary + psalter lookup
         case "lectionary":
-          resultDocs = await this.lookupLectionary(
-            doc,
-            day,
-            prefs,
-            originalPrefs
-          );
+          resultDocs = doc.lookup.table
+            ? [await this.lookupLectionary(doc, day, prefs, originalPrefs)]
+            : [];
           break;
         case "canticle": {
-          const table =
-            typeof doc.lookup.table === "string"
-              ? undefined
-              : (
-                  (originalPrefs[doc.lookup.table.preference] as any)
-                    ?.options || []
-                ).find(
-                  (item) => item.value === prefs[doc.lookup.table["preference"]]
-                );
+          if (doc.lookup.table) {
+            const table =
+              typeof doc.lookup.table === "string"
+                ? undefined
+                : (
+                    (originalPrefs[doc.lookup.table.preference] as any)
+                      ?.options || []
+                  ).find(
+                    (item) =>
+                      item.value === prefs[doc.lookup.table["preference"]]
+                  );
 
-          resultDocs = await this.lookupCanticle(
-            day,
-            version,
-            typeof doc.lookup.table === "string"
-              ? doc.lookup.table
-              : prefs[doc.lookup.table.preference],
-            Number(doc.lookup.item),
-            table?.metadata?.fallback
-          );
+            resultDocs = await this.lookupCanticle(
+              day,
+              version,
+              typeof doc.lookup.table === "string"
+                ? doc.lookup.table
+                : prefs[doc.lookup.table.preference],
+              Number(doc.lookup.item),
+              table?.metadata?.fallback
+            );
+          } else {
+            resultDocs = [];
+          }
           break;
         }
         case "slug":
@@ -433,7 +439,6 @@ export class CompileServiceController {
     const docs = await Promise.all(
       filtered.map((entry) => this.lookupBySlug(entry.slug, "canticle"))
     );
-    console.log("lookupCanticle", entries);
     return docs.flat();
   }
 
@@ -499,7 +504,7 @@ export class CompileServiceController {
     const version =
         typeof doc.version === "object"
           ? prefs[doc.version.preference]
-          : doc.version,
+          : doc.version || "NRSV",
       resp = await fetch(
         `https://us-central1-venite-2.cloudfunctions.net/bible?citation=${citation}&version=${version}`
       ),

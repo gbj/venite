@@ -44,30 +44,28 @@ const CalendarAboutPage = await Page({
     </details>
     <template id="day-details-template">
       <h1></h1>
-      <h2></h2>
       <section class="collect">
         <article id="collect"></article>
       </section>
 
-      <h3>Psalms</h3>
+      <h2>Psalms</h2>
       <section class="psalms">
         <section class="morning">
-          <h4>Morning</h4>
+          <h3>Morning</h3>
           <ul id="morning-psalms">Loading...</ul>
         </section>
         <section class="evening">
-          <h4>Evening</h4>
+          <h3>Evening</h3>
           <ul id="evening-psalms">Loading...</ul>
         </section>
       </section>
 
-      <section class="readings office">
-        <h3>Daily Office Readings</h3>
-        <ul id="readings">Loading...</ul>
+      <section class="readings office" id="readings">
+        <h2>Daily Office Readings</h2>
       </section>
 
       <section class="readings rcl">
-        <h3 class="hidden">Revised Common Lectionary Readings</h3>
+        <h2 class="hidden">Revised Common Lectionary Readings</h2>
         <ul id="rcl" class="hidden">Loading...</ul>
       </section>
     </template>
