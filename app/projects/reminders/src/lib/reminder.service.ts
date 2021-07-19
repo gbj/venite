@@ -50,6 +50,13 @@ export class ReminderService {
   }
 
   async clear() {
+    await this.loadPending();
+
+    console.log(
+      "ReminderService.clear() — pending notifications = ",
+      this.pending
+    );
+
     if (this.pending?.notifications?.length > 0) {
       LocalNotifications.cancel(this.pending);
     }
