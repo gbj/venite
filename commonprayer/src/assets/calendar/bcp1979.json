@@ -677,7 +677,7 @@
     {
       "kalendar": "bcp1979",
       "slug": "saturday-pentecost",
-      "season": "TrinitySunday",
+      "season": "Trinity Sunday",
       "type": {
         "rank": 3,
         "name": "Eve of Trinity Sunday"
@@ -690,7 +690,7 @@
     {
       "kalendar": "bcp1979",
       "slug": "sunday-trinity-sunday",
-      "season": "TrinitySunday",
+      "season": "Trinity Sunday",
       "type": {
         "rank": 5,
         "name": "Trinity Sunday"

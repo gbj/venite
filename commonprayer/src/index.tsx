@@ -12,12 +12,10 @@ function linksFromHTML(main : string) : string[] {
 }
 
 export async function Index({ main, script, style, head, styles, scripts }: PageProps, isDev = false): Promise<string> {
-  const mainHtml = await main;
+  const mainHTML = await main,
+    menus = <Menus/>;
   
-  const body = (<body>
-    <Menus/>
-    <main dangerouslySetInnerHTML={{__html: mainHtml.replace("<main>", "").replace("</main>", "")}}></main>
-  </body>);
+  const body = <body dangerouslySetInnerHTML={{__html: `${menus}${mainHTML}`}}></body>;
 
   const links = linksFromHTML(body);
 

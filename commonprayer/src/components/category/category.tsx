@@ -10,12 +10,36 @@ import { Mode } from "./mode.ts";
 
 const SHORT_DOC_LENGTH = 1000;
 
+async function buildDocs(srcDir : string, subpath : string, categorySlug : string, children : any[]) {
+  for await (const { name, isFile, isDirectory } of await Deno.readDir(srcDir)) {
+    if (isFile && name.endsWith(".json") && name !== "index.json") {
+      const json = await Deno.readTextFile(path.join(srcDir, name)),
+        { data, index } = JSON.parse(json),
+        docs = data.map((doc) => new LiturgicalDocument(doc));
+      for (const doc of docs) {
+        const html = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
+        children.push({
+          index,
+          html,
+          url: `${subpath ? `/${subpath}/` : '/'}${categorySlug}/${name.replace(".json", "")}`,
+          label: doc.label || (doc.category || [])[0],
+          version: doc.version,
+          ldf: JSON.stringify(doc)
+        });
+      }
+    }
+    else if(isDirectory) {
+      buildDocs(path.join(srcDir, name), subpath, `${categorySlug}/${name}`, children);
+    }
+  }
+}
+
 export const Category = await Page({
   scripts: [
-    path.join(path.fromFileUrl(import.meta.url), "..", "category-ui.ts"),
+    path.join(path.fromFileUrl(import.meta.url), "..", "category-ui.bundle.ts"),
   ],
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "category.css")],
-  main: async (srcDir: string, categorySlug: string) => {
+  main: async (srcDir: string, categorySlug: string, subpath? : string) => {
     const children: { index: number; html: string; ldf: string; version: string; label?: string; url: string; }[] = [];
 
     let metadata: { label?: string } = {};
@@ -25,32 +49,25 @@ export const Category = await Page({
       );
     }
 
-    for await (const { name, isFile } of await Deno.readDir(srcDir)) {
-      if (isFile && name.endsWith(".json") && name !== "index.json") {
-        const json = await Deno.readTextFile(path.join(srcDir, name)),
-          { data, index } = JSON.parse(json),
-          docs = data.map((doc) => new LiturgicalDocument(doc));
-        for (const doc of docs) {
-          const html = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
-          children.push({
-            index,
-            html,
-            url: `/${categorySlug}/${name.replace(".json", "")}`,
-            label: doc.label || (doc.category || [])[0],
-            version: doc.version,
-            ldf: JSON.stringify(doc)
-          });
-        }
-      }
-    }
+    await buildDocs(srcDir, subpath, categorySlug, children);
 
     const versions = groupBy(
       children.sort((a, b) => a.index - b.index),
       child => child.version
     );
 
+    const labels = groupBy(      children.sort((a, b) => a.index - b.index),
+child => child.label    );
+
+    const uniqueLabels = Array.from(new Set(children.map(child => child.label)));
+
     const mode = children.map(child => child.html.length < SHORT_DOC_LENGTH).reduce((a, b) => a && b, true)
+      ? uniqueLabels.length === 1
+            // if they're all short and share a label, just show all the documents
       ? Mode.Embedded
+      // if the labels are different, show them with labels
+      : Mode.Labeled
+      // if any of the documents are longer, just give them all as links
       : Mode.Links;
 
     return (
@@ -69,17 +86,32 @@ export const Category = await Page({
           {Object.entries(versions).map(([version, children]) => <ol class="category-list">
             <li class="version">
               {Object.keys(versions).length > 1 && <h2>{VERSION_LABELS[version] || version}</h2>}
-              {children
+              {/* Labeled */}
+              {mode === Mode.Labeled && Object.entries(labels).map(([label, entries]) => <section>
+                <h2 class="label">{label}</h2>
+                {entries.map(entry =>
+                  <li class="document"
+                    data-copyable={entry.html.length < SHORT_DOC_LENGTH ? "true" : "false"}
+                    data-ldf={entry.ldf}
+                    data-category={label}
+                  >
+                    <article
+                      dangerouslySetInnerHTML={{__html: entry.html}} class="cp-doc"
+                    ></article>
+                  </li>)}
+              </section>)}
+              {/* Embedded or links */}
+              {mode !== Mode.Labeled && children
                 .map((child) => (
-                  <li class="document" data-copyable={child.html.length < SHORT_DOC_LENGTH ? "true" : "false"} data-ldf={mode === Mode.Links ? child.ldf : undefined}>
-                    {mode === Mode.Embedded ? <details open={child.html.length < SHORT_DOC_LENGTH}>
-                      {child.label && <summary>{child.label}</summary>}
-                      <article
+                  <li class="document" data-copyable={child.html.length < SHORT_DOC_LENGTH ? "true" : "false"} data-ldf={child.ldf}>
+                    {/* Embedded */}
+                    {mode === Mode.Embedded && <article
                         dangerouslySetInnerHTML={{ __html: child.html }}
                         class="cp-doc"
-                      ></article>
-                    </details>
-                    : <a href={child.url}>{child.label}</a>}
+                    ></article>}
+
+                    {/* Links */}
+                    {mode === Mode.Links && <a href={child.url}>{child.label}</a>}
                   </li>
                 ))}
             </li>

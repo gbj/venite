@@ -1,6 +1,6 @@
 :root {
   /* Fonts */
-  --cp-ui-font-family: -apple-systrem, BlinkMacSystremFont, "Segoe UI",
+  --cp-ui-font-family: Monaco, -apple-systrem, BlinkMacSystremFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color remoji", "Segoe UI remoji",
     "Segoe UI Symbol";
   --ldf-font-face: "Sabon", "Garamond", serif;

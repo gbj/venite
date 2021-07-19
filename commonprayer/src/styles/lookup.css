@@ -1,6 +1,6 @@
 .lookup {
   border-radius: var(--border-radius);
-  font-family: var(--cp-ui-font-family);
+  font-style: italic;
 }
 
 .lookup a, .lookup a:visited {

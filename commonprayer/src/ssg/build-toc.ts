@@ -5,6 +5,7 @@ import { Index } from "../index.tsx";
 import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 import { Category } from "../components/category/category.tsx";
 import { Doc } from "../components/doc/doc.tsx";
+import { LiturgicalDocument } from "https://cdn.skypack.dev/-/@venite/ldf@v0.20.5-F6YbzfEcy3nSd6XaqbIq/dist=es2020,mode=types/dist/liturgical-document";
 
 const IGNORE = [".DS_Store", "index.json"],
   DIR_IGNORE_CHILDREN: string[] = ["psalter"];
@@ -59,6 +60,26 @@ export async function buildDoc(
   return { [src]: () => buildDoc(subpath, src, filename, isDev) };
 }
 
+async function addCategoryDirectory(
+  srcDir: string,
+  categoryDocs: LiturgicalDocument[]
+) {
+  for await (const { name, isFile, isDirectory } of await Deno.readDir(
+    srcDir
+  )) {
+    if (isFile && name.endsWith(".json") && name !== "index.json") {
+      const json = await Deno.readTextFile(path.join(srcDir, name)),
+        { data } = JSON.parse(json);
+      for (const doc of data) {
+        categoryDocs.push(doc);
+      }
+    } else if (isDirectory) {
+      console.log("\n\nrecurse", name);
+      addCategoryDirectory(path.join(srcDir, name), categoryDocs);
+    }
+  }
+}
+
 export async function buildCategoryPage(
   srcDir: string,
   subpath: string,
@@ -66,7 +87,7 @@ export async function buildCategoryPage(
   isDev: boolean
 ): Promise<SSGRefreshMap> {
   // build category page
-  const page = Category(srcDir, categoryName),
+  const page = Category(srcDir, categoryName, subpath),
     html = await Index(page),
     dest = path.join(
       path.fromFileUrl(import.meta.url),
@@ -91,16 +112,14 @@ export async function buildCategoryPage(
   );
 
   // build category lookup JSON
-  const categoryDocs = [];
-  for await (const { name, isFile } of await Deno.readDir(srcDir)) {
-    if (isFile && name.endsWith(".json") && name !== "index.json") {
-      const json = await Deno.readTextFile(path.join(srcDir, name)),
-        { data } = JSON.parse(json);
-      for (const doc of data) {
-        categoryDocs.push(doc);
-      }
-    }
+  const categoryDocs: LiturgicalDocument[] = [];
+
+  await addCategoryDirectory(srcDir, categoryDocs);
+
+  if (categoryName === "office") {
+    console.log("\n\n\ncategoryDocs = ", categoryDocs);
   }
+
   await Deno.writeTextFile(
     path.join(dest, "category.json"),
     JSON.stringify(categoryDocs)

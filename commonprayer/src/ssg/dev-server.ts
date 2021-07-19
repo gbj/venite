@@ -4,13 +4,12 @@ import {
   fromFileUrl,
 } from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Status } from "https://deno.land/std@0.98.0/http/http_status.ts";
-//import { serve, Server } from "https://deno.land/std@0.98.0/http/server.ts";
-//import { serveFile } from "https://deno.land/std@0.98.0/http/file_server.ts";
-/*import {
+import { serve } from "https://deno.land/std@0.98.0/http/server.ts";
+import {
   acceptWebSocket,
   isWebSocketCloseEvent,
   WebSocket,
-} from "https://deno.land/std@0.98.0/ws/mod.ts";*/
+} from "https://deno.land/std@0.98.0/ws/mod.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
 import { v4 } from "https://deno.land/std@0.98.0/uuid/mod.ts";
 
@@ -153,7 +152,7 @@ function reloadServer(port: number) {
   return clients;
 }
 
-async function waitForClients(port: number, clients: Map<string, WebSocket>) {
+/*async function waitForClients(port: number, clients: Map<string, WebSocket>) {
   const server = Deno.listen({ port });
   for await (const conn of server) {
     (async () => {
@@ -179,6 +178,29 @@ async function waitForClients(port: number, clients: Map<string, WebSocket>) {
       }
     })();
   }
+}*/
+
+async function waitForClients(port: number, clients: Map<string, WebSocket>) {
+  for await (const req of serve({ port })) {
+    const { conn, r: bufReader, w: bufWriter, headers } = req;
+    const sock = await acceptWebSocket({
+      conn,
+      bufReader,
+      bufWriter,
+      headers,
+    });
+
+    const uid = v4.generate();
+    clients.set(uid, sock);
+    console.log(
+      "\n\nClient",
+      uid,
+      "connected — now ",
+      Array.from(clients.entries()).length
+    );
+
+    handleDepartures(uid, sock, clients);
+  }
 }
 
 /*  const sock = await acceptWebSocket({
@@ -201,23 +223,22 @@ async function waitForClients(port: number, clients: Map<string, WebSocket>) {
   }
 }
  */
-function handleDepartures(
+async function handleDepartures(
   uid: string,
-  websocket: WebSocket,
+  sock: WebSocket,
   clients: Map<string, WebSocket>
 ) {
-  websocket.onopen = () => {
-    websocket.send("Hello World!");
-  };
-  websocket.onmessage = (e) => {
-    console.log(e.data);
-    websocket.close();
-  };
-  websocket.onclose = () => {
-    console.log("\n\nClient", uid, "disconnected");
-    clients.delete(uid);
-  };
-  websocket.onerror = (e) => console.error("WebSocket error:", e);
+  for await (const ev of sock) {
+    if (isWebSocketCloseEvent(ev)) {
+      console.log("\n\nClient", uid, "disconnected");
+      try {
+        clients.delete(uid);
+      } catch (e) {
+        console.warn("(handleDepartures err)", e);
+      }
+      return;
+    }
+  }
 }
 
 async function serveFiles(port: number): Promise<Deno.Listener> {
