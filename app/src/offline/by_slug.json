@@ -27941,6 +27941,40 @@
       ]
     }
   ],
+  "en-rite_i-mp_daily_collect": [
+    {
+      "type": "text",
+      "style": "prayer",
+      "label": "A Collect for the Renewal of Life",
+      "value": [
+        "O God, the King eternal, who dividest the day from the night and turnest the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep thy law, and guide our feet into the way of peace; that, having done thy will with cheerfulness while it was day, we may, when the night cometh, rejoice to give thee thanks; through Jesus Christ our Lord."
+      ]
+    },
+    {
+      "type": "text",
+      "style": "prayer",
+      "label": "A Collect for Peace",
+      "value": [
+        "O God, who art the author of peace and lover of concord, in knowledge of whom standeth our eternal life, whose service is perfect freedom: Defend us, thy humble servants, in all assaults of our enemies; that we, surely trusting in thy defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord."
+      ]
+    },
+    {
+      "type": "text",
+      "style": "prayer",
+      "label": "A Collect for Grace",
+      "value": [
+        "O Lord, our heavenly Father, almighty and everlasting God, who hast safely brought us to the beginning of this day: Defend us in the same with thy mighty power; and grant that this day we fall into no sin, neither run into any kind of danger; but that we, being ordered by thy governance, may do always what is righteous in thy sight; through Jesus Christ our Lord."
+      ]
+    },
+    {
+      "type": "text",
+      "style": "prayer",
+      "label": "A Collect for Guidance",
+      "value": [
+        "O heavenly Father, in whom we live and move and have our being: We humbly pray thee so to guide and govern us by thy Holy Spirit, that in all the cares and occupations of our life we may not forget thee, but may remember that we are ever walking in thy sight; through Jesus Christ our Lord."
+      ]
+    }
+  ],
   "en-rite_i-mp_prayers_for_mission": [
     {
       "category": [],
