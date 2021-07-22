@@ -40,6 +40,11 @@ type OldPreferences = {
   };
 };
 
+type PreferencesDoc = {
+  uid: string;
+  prefs: Record<string, StoredPreference>;
+};
+
 @Injectable({
   providedIn: "root",
 })
@@ -51,6 +56,8 @@ export class PreferencesService {
   } = {};
 
   private _displaySettings: Observable<DisplaySettings> | undefined;
+
+  private _preferences: Observable<PreferencesDoc>;
 
   constructor(
     private readonly afs: AngularFirestore,
@@ -146,10 +153,13 @@ export class PreferencesService {
       prefDoc.uid = uid;
 
       const ref = liturgy
-        ? `${liturgy.slug}-${liturgy.language}-${liturgy.version}-${key}-${uid}`
-        : `${key}-${uid}`;
-      const doc = this.afs.doc<StoredPreference>(`Preference/${ref}`);
-      doc.set(prefDoc);
+        ? `${liturgy.slug}-${liturgy.language}-${liturgy.version}-${key}`
+        : key;
+      /*const doc = this.afs.doc<StoredPreference>(`Preference/${ref}`);
+      doc.set(prefDoc);*/
+      this.afs
+        .doc<PreferencesDoc>(`Preferences/${uid}`)
+        .update({ [`prefs.${ref}`]: prefDoc });
     }
 
     if (!this._updated[key]) {
@@ -158,28 +168,89 @@ export class PreferencesService {
     this._updated[key].next(prefDoc);
   }
 
+  preferences(): Observable<PreferencesDoc | null> {
+    return this.auth.user.pipe(
+      map((user) => user?.uid),
+      switchMap((uid) => {
+        // if logged in, use Firestore
+        if (uid) {
+          if (!this._preferences) {
+            this._preferences = this.afs
+              .collection<PreferencesDoc>("Preferences", (ref) =>
+                ref.where("uid", "==", uid)
+              )
+              .valueChanges()
+              .pipe(
+                tap((p) =>
+                  console.log(
+                    "(PreferencesService) Preferences document is ",
+                    p
+                  )
+                ),
+                switchMap(async (p) => {
+                  if (p.length === 0) {
+                    console.log(
+                      "(PreferencesService) No Preferences document found. Creating it."
+                    );
+
+                    const prefs = (
+                      await this.afs
+                        .collection<StoredPreference>("Preference", (ref) =>
+                          ref.where("uid", "==", uid)
+                        )
+                        .valueChanges()
+                        .pipe(first())
+                        .toPromise()
+                    ).reduce((acc, curr) => {
+                      const ref = curr.liturgy
+                        ? `${curr.liturgy}-${curr.language || "en"}-${
+                            curr.version || "Rite-II"
+                          }-${curr.key}`
+                        : curr.key;
+                      return { ...acc, [ref]: curr };
+                    }, {});
+
+                    await this.afs
+                      .doc<PreferencesDoc>(`Preferences/${uid}`)
+                      .set({ uid, prefs });
+                    console.log(
+                      "(PreferencesService) Preferences document added as ",
+                      prefs
+                    );
+
+                    return [{ uid, prefs }];
+                  } else {
+                    return p;
+                  }
+                }),
+                map((p) => p[0]),
+                shareReplay()
+              );
+            return this._preferences;
+          }
+        } else {
+          return of(null);
+        }
+      })
+    );
+  }
+
   // Gets a single preference by key
   getStored(key: string): Observable<StoredPreference> {
     return this.auth.user.pipe(
       map((user) => [user?.uid, key]),
+      tap(([uid, key]) =>
+        console.log("(PreferencesService) getStored", uid, key)
+      ),
       switchMap(([uid, key]) => {
         // if logged in, use Firestore
         if (uid) {
-          return this.afs
-            .collection<StoredPreference>("Preference", (ref) =>
-              ref.where("uid", "==", uid).where("key", "==", key)
-            )
-            .valueChanges()
-            .pipe(
-              // take only the first thing returned if multiple for query
-              map((values) => values[0])
-            );
+          return this.preferences().pipe(map((prefs) => prefs?.prefs[key]));
         } else {
-          return from(this.storage.get(this.localStorageKey(key))).pipe(
-            tap((data) => console.log("getStored", data))
-          );
+          return from(this.storage.get(this.localStorageKey(key)));
         }
-      })
+      }),
+      shareReplay()
     );
   }
 
@@ -220,8 +291,25 @@ export class PreferencesService {
         newPrefs$ = this.auth.user.pipe(
           map((user) => [user?.uid, liturgy]),
           switchMap(([uid, liturgy]) => {
-            // Firestore preferences
+            const { language, version, slug } = liturgy as LiturgicalDocument;
             const remotePrefs$ = uid
+              ? this.preferences().pipe(
+                  tap((p) => console.log("preferences$", p)),
+                  map((p) =>
+                    Object.values(p.prefs).filter(
+                      (pref) =>
+                        pref.language === language ||
+                        ("en" && pref.version === version) ||
+                        ("Rite-II" && pref.liturgy === liturgy)
+                    )
+                  ),
+                  tap((p) =>
+                    console.log("getting preferences for", liturgy, "from", p)
+                  )
+                )
+              : of(undefined);
+            // Firestore preferences
+            /*const remotePrefs$ = uid
               ? this.afs
                   .collection<StoredPreference>("Preference", (ref) =>
                     ref
@@ -243,7 +331,7 @@ export class PreferencesService {
                       )
                   )
                   .valueChanges()
-              : of(undefined);
+              : of(undefined);*/
 
             // Local Storage preferences
             // don't have the ability for a query as with Firestore
@@ -266,13 +354,17 @@ export class PreferencesService {
             );
 
             // merge the two
-            return merge(localPrefs$, remotePrefs$).pipe(
+            return merge(
+              localPrefs$,
+              remotePrefs$.pipe(tap((p) => console.log("remotePrefs$", p)))
+            ).pipe(
               filter((set) => Boolean(set)),
               shareReplay()
             );
           })
         );
       return combineLatest([oldPrefs$, newPrefs$]).pipe(
+        tap(([oldPrefs, newPrefs]) => console.log("newPrefs = ", newPrefs)),
         map(([oldPrefs, newPrefs]) =>
           newPrefs?.length > 0 ? newPrefs : oldPrefs
         )

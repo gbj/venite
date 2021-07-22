@@ -6,7 +6,13 @@ import { ModalController, Platform, ToastController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { DarkmodeService } from "@venite/ng-darkmode";
 import { combineLatest, Observable, of } from "rxjs";
-import { map, startWith, switchMap } from "rxjs/operators";
+import {
+  debounceTime,
+  map,
+  shareReplay,
+  startWith,
+  switchMap,
+} from "rxjs/operators";
 import { AuthService } from "./auth/auth.service";
 import { Organization } from "./organization/organization";
 import { OrganizationService } from "./organization/organization.module";
@@ -80,11 +86,10 @@ export class AppComponent {
       // dark mode + ecru
       combineLatest([
         this.darkMode.prefersDark.pipe(startWith(false)),
-        this.preferences.get("darkmode").pipe(
+        this.darkMode.darkmodePreference$.pipe(
           map((storedPreference) =>
             storedPreference ? storedPreference.value : "auto"
-          ),
-          startWith("auto")
+          )
         ),
       ]).subscribe(([prefersDark, pref]) => {
         document.body.classList.toggle("ecru", pref == "ecru");
