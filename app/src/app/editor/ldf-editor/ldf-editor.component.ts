@@ -30,6 +30,7 @@ import {
   filter,
   catchError,
   first,
+  shareReplay,
 } from "rxjs/operators";
 import { DocumentService } from "src/app/services/document.service";
 import {
@@ -106,16 +107,14 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.editorStatus = this.editorService.status;
 
-    this.state$ = this.editorService
-      .editorState(this.docId)
-      .pipe(catchError(() => this.permissionDenied()));
+    this.state$ = this.editorService.editorState(this.docId).pipe(
+      catchError(() => this.permissionDenied()),
+      shareReplay()
+    );
 
     this.settingsClasses$ = this.state$.pipe(
-      map(
-        (state) =>
-          state?.localManager?.document?.display_settings ||
-          new DisplaySettings()
-      ),
+      map((state) => state?.localManager?.document?.display_settings),
+      filter((settings) => Boolean(settings)),
       map((settings) =>
         [
           "ldf-wrapper",
