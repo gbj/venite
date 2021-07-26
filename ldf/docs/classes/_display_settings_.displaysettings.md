@@ -36,7 +36,7 @@
 
 \+ **new DisplaySettings**(`dropcaps`: "decorated" | "plain" | "none", `response`: "bold" | "italics", `repeatAntiphon`: "bracket" | "repeat" | "none", `fontscale`: "s" | "m" | "l" | "xl" | "xxl", `font`: "garamond" | "gill-sans", `voiceChoice`: string, `voiceRate`: number, `voiceBackground`: "silence" | "seashore" | "garden" | "night" | "silence-short", `voiceBackgroundVolume`: number, `psalmVerses`: boolean, `bibleVerses`: boolean, `meditationBell`: "silence" | "singing-bowl", `darkmode`: "auto" | "dark" | "light" | "ecru", `bolded`: "both" | "unison" | "response" | "none", `psalmPause`: number): *[DisplaySettings](_display_settings_.displaysettings.md)*
 
-*Defined in [display-settings.ts:1](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L1)*
+*Defined in [display-settings.ts:1](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L1)*
 
 **Parameters:**
 
@@ -66,7 +66,7 @@ Name | Type | Default |
 
 • **bibleVerses**: *boolean*
 
-*Defined in [display-settings.ts:13](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L13)*
+*Defined in [display-settings.ts:13](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L13)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **bolded**: *"both" | "unison" | "response" | "none"*
 
-*Defined in [display-settings.ts:16](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L16)*
+*Defined in [display-settings.ts:16](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L16)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **darkmode**: *"auto" | "dark" | "light" | "ecru"*
 
-*Defined in [display-settings.ts:15](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L15)*
+*Defined in [display-settings.ts:15](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L15)*
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 • **dropcaps**: *"decorated" | "plain" | "none"*
 
-*Defined in [display-settings.ts:3](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L3)*
+*Defined in [display-settings.ts:3](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L3)*
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 • **font**: *"garamond" | "gill-sans"*
 
-*Defined in [display-settings.ts:7](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L7)*
+*Defined in [display-settings.ts:7](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L7)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 • **fontscale**: *"s" | "m" | "l" | "xl" | "xxl"*
 
-*Defined in [display-settings.ts:6](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L6)*
+*Defined in [display-settings.ts:6](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L6)*
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 • **meditationBell**: *"silence" | "singing-bowl"*
 
-*Defined in [display-settings.ts:14](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L14)*
+*Defined in [display-settings.ts:14](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L14)*
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 • **psalmPause**: *number*
 
-*Defined in [display-settings.ts:17](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L17)*
+*Defined in [display-settings.ts:17](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L17)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **psalmVerses**: *boolean*
 
-*Defined in [display-settings.ts:12](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L12)*
+*Defined in [display-settings.ts:12](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L12)*
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 • **repeatAntiphon**: *"bracket" | "repeat" | "none"*
 
-*Defined in [display-settings.ts:5](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L5)*
+*Defined in [display-settings.ts:5](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L5)*
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 • **response**: *"bold" | "italics"*
 
-*Defined in [display-settings.ts:4](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L4)*
+*Defined in [display-settings.ts:4](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L4)*
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 • **voiceBackground**: *"silence" | "seashore" | "garden" | "night" | "silence-short"*
 
-*Defined in [display-settings.ts:10](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L10)*
+*Defined in [display-settings.ts:10](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L10)*
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 • **voiceBackgroundVolume**: *number*
 
-*Defined in [display-settings.ts:11](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L11)*
+*Defined in [display-settings.ts:11](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L11)*
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 • **voiceChoice**: *string*
 
-*Defined in [display-settings.ts:8](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L8)*
+*Defined in [display-settings.ts:8](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L8)*
 
 ___
 
@@ -178,4 +178,4 @@ ___
 
 • **voiceRate**: *number*
 
-*Defined in [display-settings.ts:9](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/display-settings.ts#L9)*
+*Defined in [display-settings.ts:9](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/display-settings.ts#L9)*

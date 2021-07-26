@@ -106,8 +106,6 @@ function queryFromRe(
 }
 
 function fillOut(query: BibleReferenceQuery | null, template: BibleReferenceQuery | null): BibleReferenceQuery | null {
-  let final_query = query;
-
   // if template provided, fill out query as needed
   return {
     book: query?.book || template?.book || null,

@@ -126,4 +126,5 @@ export const BOOKS: [string, Book][] = [
   ['4 Maccabees', Book.FourthMaccabees],
   ['Bel', Book.Bel],
   ['Bel and the Dragon', Book.Bel],
+  ['Judith', Book.Judith],
 ];

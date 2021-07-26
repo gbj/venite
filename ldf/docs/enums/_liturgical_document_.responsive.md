@@ -16,7 +16,7 @@
 
 • **AllSizes**: = "all"
 
-*Defined in [liturgical-document.ts:13](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/liturgical-document.ts#L13)*
+*Defined in [liturgical-document.ts:13](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/liturgical-document.ts#L13)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **SmallHidden**: = "small-hidden"
 
-*Defined in [liturgical-document.ts:15](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/liturgical-document.ts#L15)*
+*Defined in [liturgical-document.ts:15](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/liturgical-document.ts#L15)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **SmallOnly**: = "small-only"
 
-*Defined in [liturgical-document.ts:14](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/liturgical-document.ts#L14)*
+*Defined in [liturgical-document.ts:14](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/liturgical-document.ts#L14)*

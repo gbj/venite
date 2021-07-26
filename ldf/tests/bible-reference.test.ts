@@ -91,5 +91,9 @@ describe('parseReference', () => {
       { start: { book: Book.SecondSamuel, chapter: 7, verse: 4 }, end: null },
       { start: { book: null, chapter: null, verse: 8 }, end: { book: null, chapter: null, verse: 16 } },
     ]);
+    expect(parseReference('Judith 9:1, 11-14')).toEqual([
+      { start: { book: Book.Judith, chapter: 9, verse: 1 }, end: null },
+      { start: { book: null, chapter: null, verse: 11 }, end: { book: null, chapter: null, verse: 14 } },
+    ]);
   });
 });

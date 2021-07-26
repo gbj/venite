@@ -25,7 +25,7 @@
 
 • **day**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:9](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L9)*
+*Defined in [canticle-table/canticle-table.ts:9](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L9)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **evening**: *boolean*
 
-*Defined in [canticle-table/canticle-table.ts:5](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L5)*
+*Defined in [canticle-table/canticle-table.ts:5](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L5)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **nth**: *number*
 
-*Defined in [canticle-table/canticle-table.ts:6](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L6)*
+*Defined in [canticle-table/canticle-table.ts:6](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L6)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **season**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:7](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L7)*
+*Defined in [canticle-table/canticle-table.ts:7](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L7)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **slug**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:3](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L3)*
+*Defined in [canticle-table/canticle-table.ts:3](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L3)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **table**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:2](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L2)*
+*Defined in [canticle-table/canticle-table.ts:2](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L2)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **week**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:8](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L8)*
+*Defined in [canticle-table/canticle-table.ts:8](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L8)*
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **weekday**: *string*
 
-*Defined in [canticle-table/canticle-table.ts:4](https://github.com/gbj/venite/blob/0acb2eac/ldf/src/canticle-table/canticle-table.ts#L4)*
+*Defined in [canticle-table/canticle-table.ts:4](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/canticle-table/canticle-table.ts#L4)*
