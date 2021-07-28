@@ -116,10 +116,6 @@ export async function buildCategoryPage(
 
   await addCategoryDirectory(srcDir, categoryDocs);
 
-  if (categoryName === "office") {
-    console.log("\n\n\ncategoryDocs = ", categoryDocs);
-  }
-
   await Deno.writeTextFile(
     path.join(dest, "category.json"),
     JSON.stringify(categoryDocs)

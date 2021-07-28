@@ -39,7 +39,8 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
       {style && <style>{style}</style>}
       {head}
       {isDev && <script src="/scripts/dev-socket.js"></script>}
-      {links.map(link => <link rel="prefetch" href={link}/>)}
+      {/* Remove link preloading for now */}
+      {/*links.map(link => <link rel="prefetch" href={link}/>)*/}
     </head>
     {body}
     {script && <script>${script}</script>}

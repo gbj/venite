@@ -279,7 +279,6 @@
         },
         "liturgyversions": ["Rite-I"]
       },
-      "hidden": false,
       "label": "Morning Prayer",
       "slug": "morning-prayer",
       "version": "Rite-I",
@@ -288,12 +287,10 @@
         {
           "metadata": { "level": 1 },
           "value": ["Morning Prayer"],
-          "hidden": false,
           "type": "heading",
           "style": "text"
         },
         {
-          "hidden": false,
           "metadata": { "level": 1 },
           "style": "date",
           "type": "heading",
@@ -303,7 +300,6 @@
           "metadata": { "level": 1 },
           "style": "day",
           "type": "heading",
-          "hidden": false,
           "value": [""]
         },
         {
@@ -333,7 +329,6 @@
             ]
           },
           "type": "bible-reading",
-          "hidden": false,
           "style": "short",
           "version": "Rite-I"
         },
@@ -351,7 +346,6 @@
             {
               "source": { "api": "", "source": "", "citation": "" },
               "category": [],
-              "hidden": false,
               "value": [
                 "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to render thanks for the great benefits that we have received at his hands, to set forth his most worthy praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy."
               ],
@@ -366,7 +360,6 @@
               "type": "text",
               "style": "text",
               "category": [],
-              "hidden": false,
               "label": "Confession of Sin",
               "source": { "citation": "", "source": "", "api": "" },
               "metadata": {}
@@ -386,7 +379,6 @@
           },
           "type": "option",
           "source": { "api": "", "source": "bcp1979", "citation": "p. 79" },
-          "hidden": false,
           "category": [],
           "metadata": { "editor_selected": 0, "selected": 0 },
           "slug": "confession_intro"
@@ -414,7 +406,6 @@
         {
           "metadata": { "rollup": false },
           "source": { "citation": "", "api": "", "source": "" },
-          "hidden": false,
           "display_format": "unison",
           "style": "prayer",
           "condition": {
@@ -460,7 +451,6 @@
           ],
           "metadata": {},
           "version_label": "Priest",
-          "hidden": false,
           "type": "text"
         },
         {
@@ -486,7 +476,6 @@
           "type": "responsive",
           "category": [],
           "style": "preces",
-          "hidden": false,
           "source": { "source": "bcp1979", "citation": "p. 80", "api": "" },
           "metadata": {},
           "value": [
@@ -515,7 +504,6 @@
           "language": "en",
           "version": "rite_i",
           "slug": "gloria-patri",
-          "hidden": false,
           "citation": null,
           "type": "refrain"
         },
@@ -533,7 +521,6 @@
               { "season": { "only": [], "except": ["Lent", "Holy Week"] } }
             ]
           },
-          "hidden": false,
           "style": "text",
           "source": {}
         },
@@ -593,7 +580,6 @@
             "mode": "and"
           },
           "source": { "source": "", "api": "", "citation": "" },
-          "hidden": false,
           "value": [
             {
               "metadata": {
@@ -677,7 +663,6 @@
               "style": "invitatory",
               "citation": "Psalm 95:1-7",
               "type": "psalm",
-              "hidden": false,
               "category": ["Invitatory"],
               "condition": {
                 "conditions": [
@@ -758,7 +743,6 @@
                   ]
                 }
               ],
-              "hidden": false,
               "label": "Jubilate",
               "style": "invitatory"
             },
@@ -870,7 +854,6 @@
           "value": ["The Psalm or Psalms Appointed"]
         },
         {
-          "hidden": false,
           "lookup": {
             "item": "morning_psalms",
             "type": "lectionary",
@@ -923,12 +906,10 @@
           "language": "en",
           "version": "rite_i",
           "slug": "gloria-patri",
-          "hidden": false,
           "citation": null,
           "type": "refrain"
         },
         {
-          "hidden": false,
           "style": "text",
           "value": ["The Lessons"],
           "source": { "citation": "", "source": "", "api": "" },
@@ -1188,7 +1169,6 @@
               "source": { "citation": "p. 53", "api": "", "source": "bcp1979" },
               "style": "text",
               "type": "text",
-              "hidden": false,
               "display_format": "unison",
               "value": [
                 "I believe in God, the Father almighty,\n\tmaker of heaven and earth;\nAnd in Jesus Christ his only Son our Lord;\n\twho was conceived by the Holy Ghost,\n\tborn of the Virgin Mary,\n\tsuffered under Pontius Pilate,\n\twas crucified, dead, and buried.\n\tHe descended into hell.\n\tThe third day he rose again from the dead.\n\tHe ascended into heaven,\n\tand sitteth on the right hand of God the Father almighty.\n\tFrom thence he shall come to judge the quick and the dead.\nI believe in the Holy Ghost,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting. Amen."
@@ -1207,9 +1187,12 @@
           "metadata": { "level": 2 },
           "source": { "source": "bcp1979", "citation": "p. 54", "api": "" },
           "style": "text",
-          "hidden": false,
           "category": [],
           "type": "heading"
+        },
+        {
+          "type": "rubric",
+          "value": ["The People stand or kneel"]
         },
         {
           "style": "preces",
@@ -1226,25 +1209,30 @@
           "hidden": false
         },
         {
+          "type": "rubric",
+          "value": ["Officiant and People"]
+        },
+        {
           "display_format": "unison",
           "source": { "api": "", "citation": "", "source": "" },
           "value": [
             "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
           ],
-          "hidden": false,
           "style": "prayer",
           "type": "text",
           "metadata": { "omit_response": false, "rollup": false },
           "label": "The Lord’s Prayer"
         },
         {
+          "type": "rubric",
+          "value": ["Then follows one of these sets of Suffrages"]
+        },
+        {
           "value": [
             {
               "type": "responsive",
               "style": "preces",
-              "hidden": false,
-              "label": "Suffrages A",
-              "metadata": {},
+              "label": "A",
               "value": [
                 {
                   "text": "O Lord, show thy mercy upon us;",
@@ -1291,11 +1279,10 @@
                   "label": "R.",
                   "text": "And sustain us with thy Holy Spirit."
                 }
-              ],
-              "category": [],
-              "source": { "source": "", "api": "", "citation": "" }
+              ]
             },
             {
+              "label": "B",
               "value": [
                 {
                   "response": "",
@@ -1324,16 +1311,10 @@
                 { "text": "O Lord, in thee have I trusted;", "label": "V." },
                 { "label": "R.", "text": "Let me never be confounded." }
               ],
-              "hidden": false,
               "style": "preces",
-              "category": [],
-              "label": "Suffrages B",
-              "source": { "citation": "", "source": "", "api": "" },
-              "metadata": {},
               "type": "responsive"
             }
           ],
-          "hidden": false,
           "slug": "suffrages_mp",
           "source": { "source": "", "citation": "", "api": "" },
           "type": "option",
@@ -1341,8 +1322,13 @@
           "metadata": { "editor_selected": 0, "selected": 0 }
         },
         {
+          "type": "rubric",
+          "value": [
+            "The Officiant then says one or more of the following Collects"
+          ]
+        },
+        {
           "label": "The Collect of the Day",
-          "hidden": false,
           "category": [],
           "language": "en",
           "style": "prayer",
@@ -1361,28 +1347,19 @@
           "type": "text"
         },
         {
-          "source": { "citation": "", "source": "", "api": "" },
-          "slug": "mp_daily_collect",
-          "version": "Rite-I",
-          "style": "prayer",
-          "metadata": { "omit_response": false, "rollup": false },
-          "lookup": { "filter": "—", "rotate": true, "type": "slug" },
-          "value": [""],
-          "type": "text",
           "condition": {
-            "conditions": [
-              {
-                "weekday": {
-                  "only": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-                  "except": []
-                }
-              }
-            ],
+            "conditions": [{ "weekday": { "only": ["Sunday"], "except": [] } }],
             "mode": "and"
           },
-          "language": "en",
-          "hidden": false,
-          "category": []
+          "label": "A Collect for Sundays",
+          "value": [
+            "O God, who makest us glad with the weekly remembrance of the glorious resurrection of thy Son our Lord: Grant us this day such blessing through our worship of thee, that the days to come may be spent in thy favor; through the same Jesus Christ our Lord."
+          ],
+          "source": { "api": "", "citation": "", "source": "" },
+          "metadata": {},
+          "style": "prayer",
+          "category": [],
+          "type": "text"
         },
         {
           "condition": {
@@ -1397,11 +1374,9 @@
           ],
           "source": { "source": "", "citation": "", "api": "" },
           "type": "text",
-          "hidden": false,
           "style": "prayer"
         },
         {
-          "hidden": false,
           "metadata": {},
           "style": "prayer",
           "source": { "api": "", "source": "", "citation": "" },
@@ -1419,35 +1394,74 @@
           }
         },
         {
-          "condition": {
-            "conditions": [{ "weekday": { "only": ["Sunday"], "except": [] } }],
-            "mode": "and"
-          },
-          "label": "A Collect for Sundays",
-          "hidden": false,
-          "value": [
-            "O God, who makest us glad with the weekly remembrance of the glorious resurrection of thy Son our Lord: Grant us this day such blessing through our worship of thee, that the days to come may be spent in thy favor; through the same Jesus Christ our Lord."
-          ],
-          "source": { "api": "", "citation": "", "source": "" },
-          "metadata": {},
+          "type": "text",
           "style": "prayer",
-          "category": [],
+          "label": "A Collect for the Renewal of Life",
+          "value": [
+            "O God, the King eternal, who dividest the day from the night and turnest the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep thy law, and guide our feet into the way of peace; that, having done thy will with cheerfulness while it was day, we may, when the night cometh, rejoice to give thee thanks; through Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "label": "A Collect for Peace",
+          "value": [
+            "O God, who art the author of peace and lover of concord, in knowledge of whom standeth our eternal life, whose service is perfect freedom: Defend us, thy humble servants, in all assaults of our enemies; that we, surely trusting in thy defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "label": "A Collect for Grace",
+          "value": [
+            "O Lord, our heavenly Father, almighty and everlasting God, who hast safely brought us to the beginning of this day: Defend us in the same with thy mighty power; and grant that this day we fall into no sin, neither run into any kind of danger; but that we, being ordered by thy governance, may do always what is righteous in thy sight; through Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "label": "A Collect for Guidance",
+          "value": [
+            "O heavenly Father, in whom we live and move and have our being: We humbly pray thee so to guide and govern us by thy Holy Spirit, that in all the cares and occupations of our life we may not forget thee, but may remember that we are ever walking in thy sight; through Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "Then, unless the Eucharist or a form of general intercession is to follow, one of these prayers for mission is added"
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O God, who hast made of one blood all the peoples of the earth, and didst send thy blessed Son to preach peace to those who are far off and to those who are near: Grant that people everywhere may seek after thee and find thee; bring the nations into thy fold; pour out thy Spirit upon all flesh; and hasten the coming of thy kingdom; through the same thy Son Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": ["or the following"]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "Almighty and everlasting God, by whose Spirit the whole body of thy faithful people is governed and sanctified: Receive our supplications and prayers which we offer before thee for all members of thy holy Church, that in their vocation and ministry they may truly and godly serve thee; through our Lord and Savior Jesus Christ."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": ["or this"]
+        },
+        {
+          "value": [
+            "Lord Jesus Christ, who didst stretch out thine arms of love on the hard wood of the cross that everyone might come within the reach of thy saving embrace: So clothe us in thy Spirit that we, reaching forth our hands in love, may bring those who do not know thee to the knowledge and love of thee; for the honor of thy Name."
+          ],
+          "style": "prayer",
           "type": "text"
         },
         {
-          "version": "Rite-I",
-          "category": [],
-          "lookup": { "type": "slug", "rotate": true },
-          "style": "prayer",
-          "language": "en",
-          "type": "text",
-          "source": { "api": "", "citation": "", "source": "" },
-          "value": [""],
-          "metadata": { "omit_response": false, "rollup": false },
-          "hidden": false,
-          "slug": "mp_prayers_for_mission"
-        },
-        {
+          "hidden": true,
           "style": "text",
           "metadata": { "level": 3 },
           "value": ["The Sermon"],
@@ -1465,8 +1479,7 @@
               }
             ]
           },
-          "category": [],
-          "hidden": false
+          "category": []
         },
         {
           "type": "rubric",
@@ -1476,24 +1489,18 @@
           ],
           "hidden": false
         },
-        {
-          "hidden": false,
-          "source": {},
-          "type": "text",
-          "style": "authorized-prayers"
-        },
+        { "source": {}, "type": "text", "style": "authorized-prayers" },
         {
           "type": "rubric",
-          "hidden": false,
           "value": [
             "Before the close of the Office one or both of the following may be used"
           ]
         },
         {
-          "hidden": false,
           "metadata": {},
           "category": [],
           "source": { "api": "", "citation": "p. 58", "source": "bcp1979" },
+          "display_format": "unison",
           "style": "prayer",
           "label": "The General Thanksgiving",
           "type": "text",
@@ -1506,7 +1513,6 @@
           "category": [],
           "label": "A Prayer of St. Chrysostom",
           "source": { "api": "", "citation": "p. 59", "source": "bcp1979" },
-          "hidden": false,
           "style": "prayer",
           "type": "text",
           "value": [
@@ -1523,7 +1529,6 @@
               "text": "Let us bless the Lord."
             }
           ],
-          "hidden": false,
           "type": "responsive",
           "condition": {
             "conditions": [
@@ -1539,6 +1544,14 @@
           "style": "responsive"
         },
         {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": [
+            "From Easter Day through the Day of Pentecost “Alleluia, alleluia” may be added to the preceding versicle and response."
+          ]
+        },
+        {
+          "hidden": true,
           "value": [
             {
               "label": "",
@@ -1548,7 +1561,6 @@
           ],
           "style": "responsive",
           "type": "responsive",
-          "hidden": false,
           "condition": {
             "mode": "and",
             "conditions": [
