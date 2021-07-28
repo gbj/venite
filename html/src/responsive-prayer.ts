@@ -61,7 +61,7 @@ export function responsivePrayerToHTML(
   } else {
     return `<article ${ldf} class="doc responsive-prayer responsive${
       doc.hidden ? " hidden" : ""
-    }" lang="${doc.language || "en"}>${[
+    }" lang="${doc.language || "en"}">${[
       header,
       `<p>`,
       ...(doc.value || []).map(
