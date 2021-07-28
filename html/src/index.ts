@@ -41,10 +41,13 @@ export function ldfToHTML(
     switch (inDoc?.type) {
       case "liturgy":
         return ((inDoc as Liturgy).value || [])
-          .map((subDoc: LiturgicalDocument) =>
-            ldfToHTML(subDoc, { ...config, includeLDF: true })
-          )
+          .map((subDoc: LiturgicalDocument) => [
+            subDoc.slug ? `<a name="${subDoc.slug}"></a>` : null,
+            ldfToHTML(subDoc, { ...config, includeLDF: true }),
+          ])
           .flat()
+          .flat()
+          .filter((n) => Boolean(n))
           .join("\n");
       case "parallel":
         return parallelToHTML(inDoc as Parallel, config);
