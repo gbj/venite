@@ -122,6 +122,8 @@ export async function buildCategoryPage(
   );
 
   return {
+    [path.join(srcDir, "docs.json")]: () =>
+      buildCategoryPage(srcDir, subpath, categoryName, isDev),
     [srcDir]: () => buildCategoryPage(srcDir, subpath, categoryName, isDev),
     [categoryPagePath]: () =>
       buildCategoryPage(srcDir, subpath, categoryName, isDev),

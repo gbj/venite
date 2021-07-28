@@ -1,0 +1,422 @@
+{
+  "data": [
+    {
+      "hidden": false,
+      "version": "bcp1979",
+      "slug": "",
+      "value": [
+        "The earth is the Lord’s for he made it: Come let us adore him. "
+      ],
+      "sharing": {
+        "collaborators": [],
+        "organization": "venite",
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "label": "",
+      "lastRevision": 17,
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "category": ["Seasonal Antiphon", "OrdinaryTime"],
+      "language": "en",
+      "style": "antiphon",
+      "metadata": {
+        "omit_response": false
+      },
+      "type": "refrain"
+    },
+    {
+      "slug": "",
+      "label": "",
+      "hidden": false,
+      "version": "bcp1979",
+      "lastRevision": 27,
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "style": "antiphon",
+      "value": [
+        "Alleluia. The Lord is risen indeed: Come let us adore him. Alleluia."
+      ],
+      "metadata": {
+        "omit_response": false
+      },
+      "language": "en",
+      "type": "refrain",
+      "category": ["Seasonal Antiphon", "Easter"],
+      "sharing": {
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "status": "published",
+        "organization": "venite"
+      }
+    },
+    {
+      "value": [
+        "Worship the Lord in the beauty of holiness: Come let us adore him. "
+      ],
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "hidden": false,
+      "label": "",
+      "metadata": {
+        "omit_response": false
+      },
+      "lastRevision": 19,
+      "category": ["Seasonal Antiphon", "OrdinaryTime"],
+      "sharing": {
+        "organization": "venite",
+        "privacy": "public",
+        "status": "published",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "style": "antiphon",
+      "slug": "",
+      "language": "en",
+      "type": "refrain",
+      "version": "bcp1979"
+    },
+    {
+      "metadata": {
+        "omit_response": false
+      },
+      "sharing": {
+        "organization": "venite",
+        "privacy": "public",
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "language": "en",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "style": "antiphon",
+      "label": "",
+      "version": "bcp1979",
+      "category": ["Seasonal Antiphon", "Advent"],
+      "type": "refrain",
+      "value": ["Our King and Savior now draws near: Come, let us adore him."],
+      "hidden": false,
+      "slug": "",
+      "lastRevision": 23
+    },
+    {
+      "metadata": {
+        "omit_response": false
+      },
+      "sharing": {
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "status": "published",
+        "organization": "venite"
+      },
+      "style": "antiphon",
+      "slug": "",
+      "lastRevision": 28,
+      "value": [
+        "[Alleluia.] The Word was made flesh and dwelt among us: Come, let us adore him. [Alleluia.] "
+      ],
+      "version": "bcp1979",
+      "language": "en",
+      "label": "",
+      "type": "refrain",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "category": ["Seasonal Antiphon", "Incarnation"],
+      "hidden": false
+    },
+    {
+      "label": "",
+      "style": "antiphon",
+      "value": [
+        "Alleluia. The Spirit of the Lord renews the face of the earth: Come let us adore him. Alleluia. "
+      ],
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "version": "bcp1979",
+      "type": "refrain",
+      "hidden": false,
+      "lastRevision": 27,
+      "slug": "",
+      "sharing": {
+        "collaborators": [],
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      },
+      "language": "en",
+      "metadata": {
+        "omit_response": false
+      },
+      "category": ["Seasonal Antiphon", "Pentecost"]
+    },
+    {
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "value": [
+        "[Alleluia.] The Lord is glorious in his saints: Come, let us adore him. [Alleluia.] "
+      ],
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public"
+      },
+      "slug": "",
+      "label": "",
+      "style": "antiphon",
+      "language": "en",
+      "type": "refrain",
+      "metadata": {
+        "omit_response": false
+      },
+      "version": "bcp1979",
+      "lastRevision": 29,
+      "hidden": false,
+      "category": ["Seasonal Antiphon", "Saints"]
+    },
+    {
+      "sharing": {
+        "status": "published",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "privacy": "public"
+      },
+      "category": ["Seasonal Antiphon", "Lent", "HolyWeek"],
+      "type": "refrain",
+      "lastRevision": 27,
+      "style": "antiphon",
+      "metadata": {
+        "omit_response": false
+      },
+      "slug": "invitatory_antiphon",
+      "id": "Vb4MetLUjm7QG1YIGlA0",
+      "value": [
+        "The Lord is full of compassion and mercy: Come let us adore him."
+      ],
+      "language": "en",
+      "version": "bcp1979",
+      "date_modified": {
+        "_seconds": 1613565531,
+        "_nanoseconds": 646000000
+      },
+      "hidden": false,
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "date_created": {
+        "nanoseconds": 958000000,
+        "seconds": 1613565525
+      },
+      "label": ""
+    },
+    {
+      "lastRevision": 27,
+      "style": "antiphon",
+      "language": "en",
+      "version": "bcp1979",
+      "slug": "",
+      "metadata": {
+        "omit_response": false
+      },
+      "label": "",
+      "type": "refrain",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "hidden": false,
+      "category": ["Seasonal Antiphon", "Ascension"],
+      "value": [
+        "Alleluia. Christ the Lord has ascended into heaven: Come let us adore him. Alleluia."
+      ],
+      "sharing": {
+        "privacy": "public",
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      }
+    },
+    {
+      "sharing": {
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "organization": "venite"
+      },
+      "category": ["Seasonal Antiphon", "Lent", "HolyWeek"],
+      "version": "bcp1979",
+      "slug": "invitatory_antiphon",
+      "style": "antiphon",
+      "label": "",
+      "hidden": false,
+      "date_modified": {
+        "_seconds": 1613565518,
+        "_nanoseconds": 368000000
+      },
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "language": "en",
+      "lastRevision": 27,
+      "value": [
+        "The Lord is full of compassion and mercy: Come let us adore him."
+      ],
+      "metadata": {
+        "omit_response": false
+      },
+      "type": "refrain"
+    },
+    {
+      "style": "antiphon",
+      "language": "en",
+      "lastRevision": 21,
+      "slug": "",
+      "label": "",
+      "metadata": {
+        "omit_response": false
+      },
+      "category": ["Seasonal Antiphon", "OrdinaryTime"],
+      "value": ["The mercy of the Lord is everlasting: Come let us adore him."],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "status": "published",
+        "privacy": "public",
+        "collaborators": []
+      },
+      "type": "refrain",
+      "version": "bcp1979",
+      "hidden": false,
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      }
+    },
+    {
+      "value": ["The Lord has shown forth his glory: Come let us adore him."],
+      "type": "refrain",
+      "label": "",
+      "language": "en",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "style": "antiphon",
+      "slug": "",
+      "lastRevision": 29,
+      "category": [
+        "Seasonal Antiphon",
+        "Epiphany",
+        "the-transfiguration",
+        "holy-cross"
+      ],
+      "version": "bcp1979",
+      "metadata": {
+        "omit_response": false
+      },
+      "sharing": {
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "privacy": "public"
+      },
+      "hidden": false
+    },
+    {
+      "slug": "",
+      "style": "antiphon",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "type": "refrain",
+      "metadata": {
+        "omit_response": false
+      },
+      "label": "",
+      "category": ["Seasonal Antiphon", "Christmas"],
+      "sharing": {
+        "organization": "venite",
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "version": "bcp1979",
+      "lastRevision": 23,
+      "language": "en",
+      "hidden": false,
+      "value": [
+        "Alleluia. To us a child is born: O come, let us adore him. Alleluia."
+      ]
+    },
+    {
+      "style": "antiphon",
+      "type": "refrain",
+      "sharing": {
+        "status": "published",
+        "privacy": "public",
+        "collaborators": [],
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "metadata": {
+        "omit_response": false
+      },
+      "value": [
+        "Father, Son, and Holy Spirit, one God: Come let us adore him. "
+      ],
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      },
+      "language": "en",
+      "label": "",
+      "hidden": false,
+      "category": ["Seasonal Antiphon", "sunday-trinity-sunday"],
+      "lastRevision": 25,
+      "slug": "",
+      "version": "bcp1979"
+    }
+  ]
+}

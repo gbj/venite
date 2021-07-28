@@ -542,7 +542,8 @@
           "category": ["Invitatory Antiphons"],
           "lookup": {
             "type": "category"
-          }
+          },
+          "version": "Rite-I"
         },
         {
           "type": "rubric",
@@ -580,6 +581,7 @@
             "mode": "and"
           },
           "source": { "source": "", "api": "", "citation": "" },
+          "version": "Rite-I",
           "value": [
             {
               "metadata": {
@@ -677,7 +679,7 @@
                 ],
                 "mode": "or"
               },
-              "version": "bcp1979",
+              "version": "Rite-I",
               "label": "Venite"
             },
             {
@@ -698,7 +700,7 @@
                 "omit_gloria": true,
                 "latinname": null
               },
-              "version": "bcp1979",
+              "version": "Rite-I",
               "type": "psalm",
               "category": ["Invitatory"],
               "value": [
@@ -761,7 +763,7 @@
                 "localname": "Christ our Passover",
                 "omit_antiphon": false
               },
-              "version": "bcp1979",
+              "version": "Rite-I",
               "value": [
                 {
                   "type": "psalm-section",

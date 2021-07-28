@@ -51,7 +51,7 @@ export const LDF_TO_HTML_CONFIG = {
           </a>;
         }
       case "collect":
-        return <a href="/collects">{locale['collect']}</a>;
+        return <a href={`/collect-of-the-day${doc.version ? `/${doc.version}` : ''}`}>{locale['collect']}</a>;
       case "lectionary":{
                 // message noting the reading number and lectionary
         if(doc.lookup.item && doc.lookup.table) {

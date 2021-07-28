@@ -1,7 +1,7 @@
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.10";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.11";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 import { Page } from "../../ssg/page.ts";
 
@@ -30,9 +30,10 @@ export const Doc = await Page({
               .join("\n")}</section>`
           : sourceToHTML(data.source))}
     <div class="cp-doc" data-category={subpath} data-slug={slug} dangerouslySetInnerHTML={{__html: docs.map(
-      (doc: LiturgicalDocument) =>
+      (doc: LiturgicalDocument) => [
+        doc.slug ? <a name={doc.slug}></a> : null,
         ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
-    ).join("\n")}}></div>
+    ]).flat().filter(n => Boolean(n)).join("\n")}}></div>
   </main>
   },
 });

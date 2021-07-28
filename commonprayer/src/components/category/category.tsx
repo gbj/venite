@@ -1,7 +1,7 @@
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.10";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.11";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 import { Page } from "../../ssg/page.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/exists.ts";
@@ -21,7 +21,7 @@ async function buildDocs(srcDir : string, subpath : string, categorySlug : strin
         children.push({
           index,
           html,
-          url: `${subpath ? `/${subpath}/` : '/'}${categorySlug}/${name.replace(".json", "")}`,
+          url: `${subpath ? `/${subpath}/` : '/'}${categorySlug}/${name.replace(".json", "")}${doc.slug && name === "docs.json" ? `#${doc.slug}` : ''}`,
           label: doc.label || (doc.category || [])[0],
           version: doc.version,
           ldf: JSON.stringify(doc)
@@ -56,8 +56,10 @@ export const Category = await Page({
       child => child.version
     );
 
-    const labels = groupBy(      children.sort((a, b) => a.index - b.index),
-child => child.label    );
+    const labels = groupBy(
+      children.sort((a, b) => a.index - b.index),
+      child => child.label
+    );
 
     const uniqueLabels = Array.from(new Set(children.map(child => child.label)));
 

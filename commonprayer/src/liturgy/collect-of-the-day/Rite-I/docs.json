@@ -1,0 +1,2333 @@
+{
+  "data": [
+    {
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "style": "prayer",
+      "slug": "first-advent",
+      "value": [
+        "Almighty God, give us grace that we may cast away the works of darkness, and put upon us the armor of light, now in the time of this mortal life in which thy Son Jesus Christ came to visit us in great humility; that in the last day, when he shall come again in his glorious majesty to judge both the quick and the dead, we may rise to the life immortal; through him who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever."
+      ],
+      "hidden": false,
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "First Sunday of Advent",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "hidden": false,
+      "slug": "second-advent",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "Merciful God, who didst send thy messengers the prophets to preach repentance and prepare the way for our salvation: Give us grace to heed their warnings and forsake our sins, that we may greet with joy the coming of Jesus Christ our Redeemer; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "style": "prayer",
+      "version": "Rite-I",
+      "label": "Second Sunday of Advent",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "language": "en",
+      "value": [
+        "Stir up thy power, O Lord, and with great might come among us; and, because we are sorely hindered by our sins, let thy bountiful grace and mercy speedily help and deliver us; through Jesus Christ our Lord, to whom, with thee and the Holy Ghost, be honor and glory, world without end."
+      ],
+      "slug": "third-advent",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "label": "Third Sunday of Advent",
+      "citation": null
+    },
+    {
+      "value": [
+        "We beseech thee, Almighty God, to purify our consciences by thy daily visitation, that when thy Son Jesus Christ cometh he may find in us a mansion prepared for himself; through the same Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "fourth-advent",
+      "style": "prayer",
+      "label": "Fourth Sunday of Advent",
+      "citation": null
+    },
+    {
+      "value": [
+        "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end.",
+        "O God, who hast caused this holy night to shine with the illumination of the true Light: Grant us, we beseech thee, that as we have known the mystery of that Light upon earth, so may we also perfectly enjoy him in heaven; where with thee and the Holy Spirit he liveth and reigneth, one God, in glory everlasting.",
+        "Almighty God, who hast given us thy only-begotten Son to take our nature upon him, and as at this time to be born of a pure virgin: Grant that we, being regenerate and made thy children by adoption and grace, may daily be renewed by thy Holy Spirit; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the same Spirit ever, one God, world without end."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "type": "text",
+      "slug": "christmas",
+      "hidden": false,
+      "style": "prayer",
+      "label": "The Nativity of Our Lord:  Christmas Day",
+      "citation": "December 25"
+    },
+    {
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "christmas-day",
+      "style": "prayer",
+      "value": [
+        "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end.",
+        "Almighty God, who hast given us thy only-begotten Son to take our nature upon him, and as at this time to be born of a pure virgin: Grant that we, being regenerate and made thy children by adoption and grace, may daily be renewed by thy Holy Spirit; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the same Spirit ever, one God, world without end."
+      ],
+      "type": "text",
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "label": "The Nativity of Our Lord:  Christmas Day",
+      "citation": "December 25"
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "type": "text",
+      "value": [
+        "O God, who hast caused this holy night to shine with the illumination of the true Light: Grant us, we beseech thee, that as we have known the mystery of that Light upon earth, so may we also perfectly enjoy him in heaven; where with thee and the Holy Spirit he liveth and reigneth, one God, in glory everlasting."
+      ],
+      "slug": "christmas-eve",
+      "hidden": false,
+      "version": "Rite-I",
+      "language": "en",
+      "label": "[missing label]",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "Almighty God, who hast poured upon us the new light of thine incarnate Word: Grant that the same light, enkindled in our hearts, may shine forth in our lives; through the same Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "version": "Rite-I",
+      "slug": "1st-sunday-after-christmas",
+      "style": "prayer",
+      "label": "First Sunday after Christmas Day",
+      "citation": null
+    },
+    {
+      "slug": "holy-name",
+      "version": "Rite-I",
+      "hidden": false,
+      "value": [
+        "Eternal Father, who didst give to thine incarnate Son the holy name of Jesus to be the sign of our salvation: Plant in every heart, we beseech thee, the love of him who is the Savior of the world, even our Lord Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "style": "prayer",
+      "language": "en",
+      "label": "The Holy Name",
+      "citation": "January 1"
+    },
+    {
+      "version": "Rite-I",
+      "hidden": false,
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "2nd-sunday-after-christmas",
+      "value": [
+        "O God, who didst wonderfully create, and yet more wonderfully restore, the dignity of human nature: Grant that we may share the divine life of him who humbled himself to share our humanity, thy Son Jesus Christ; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, for ever and ever."
+      ],
+      "language": "en",
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Second Sunday after Christmas Day",
+      "citation": null
+    },
+    {
+      "slug": "epiphany",
+      "version": "Rite-I",
+      "value": [
+        "O God, who by the leading of a star didst manifest thy only-begotten Son to the peoples of the earth: Lead us, who know thee now by faith, to thy presence, where we may behold thy glory face to face; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "The Epiphany",
+      "citation": "January 6"
+    },
+    {
+      "type": "text",
+      "value": [
+        "Father in heaven, who at the baptism of Jesus in the River Jordan didst proclaim him thy beloved Son and anoint him with the Holy Spirit: Grant that all who are baptized into his Name may keep the covenant they have made, and boldly confess him as Lord and Savior; who with thee and the same Holy Spirit liveth and reigneth, one God, in glory everlasting. "
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "style": "prayer",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "slug": "1st-epiphany",
+      "label": "First Sunday after the Epiphany: The Baptism of our Lord",
+      "citation": null
+    },
+    {
+      "value": [
+        "Almighty God, whose Son our Savior Jesus Christ is the light of the world: Grant that thy people, illumined by thy Word and Sacraments, may shine with the radiance of Christ's glory, that he may be known, worshiped, and obeyed to the ends of the earth; through Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, now and for ever."
+      ],
+      "language": "en",
+      "hidden": false,
+      "type": "text",
+      "style": "prayer",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "2nd-epiphany",
+      "label": "Second Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "slug": "3rd-epiphany",
+      "style": "prayer",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "Give us grace, O Lord, to answer readily the call of our Savior Jesus Christ and proclaim to all people the Good News of his salvation, that we and the whole world may perceive the glory of his marvelous works; who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "language": "en",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "version": "Rite-I",
+      "label": "Third Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "4th-epiphany",
+      "value": [
+        "Almighty and everlasting God, who dost govern all things in heaven and earth: Mercifully hear the supplications of thy people, and in our time grant us thy peace; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "type": "text",
+      "version": "Rite-I",
+      "language": "en",
+      "label": "Fourth Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "slug": "5th-epiphany",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "style": "prayer",
+      "language": "en",
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Set us free, O God, from the bondage of our sins and give us, we beseech thee, the liberty of that abundant life which thou hast manifested to us in thy Son our Savior Jesus Christ; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "label": "Fifth Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "value": [
+        "O God, the strength of all who put their trust in thee: Mercifully accept our prayers; and because through the weakness of our mortal nature, we can do no good thing without thee, give us the help of thy grace, that in keeping thy commandments we may please thee both in will and deed; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "slug": "6th-epiphany",
+      "hidden": false,
+      "style": "prayer",
+      "label": "Sixth Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "slug": "7th-epiphany",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "O Lord, who hast taught us that all our doings without charity are nothing worth; Send thy Holy Ghost and pour into our hearts that most excellent gift of charity, the very bond of peace and of all virtue, without which whosoever liveth is counted dead before thee. Grant this for thine only Son Jesus Christ, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever. "
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "style": "prayer",
+      "label": "Seventh Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "language": "en",
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "8th-epiphany",
+      "value": [
+        "O most loving Father, who willest us to give thanks for all things, to dread nothing but the loss of thee, and to cast all our care on thee who carest for us: Preserve us from faithless fears and worldly anxieties, and grant that no clouds of this mortal life may hide from us the light of that love which is immortal, and which thou hast manifested to us in thy Son Jesus Christ our Lord; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "label": "Eighth Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "slug": "last-epiphany",
+      "version": "Rite-I",
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "O God, who before the passion of thy only-begotten Son didst reveal his glory upon the holy mount: Grant unto us that we, beholding by faith the light of his countenance, may be strengthened to bear our cross, and be changed into his likeness from glory to glory; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "label": "Last Sunday after the Epiphany",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "wednesday-last-epiphany",
+      "hidden": false,
+      "value": [
+        "Almighty and everlasting God, who hatest nothing that thou hast made and dost forgive the sins of all those who are penitent: Create and make in us new and contrite hearts, that we, worthily lamenting our sins and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "language": "en",
+      "label": "Ash Wednesday",
+      "citation": null
+    },
+    {
+      "slug": "friday-last-epiphany",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "version": "Rite-I",
+      "style": "prayer",
+      "value": [
+        "Almighty and everlasting God, who hatest nothing that thou hast made and dost forgive the sins of all those who are penitent: Create and make in us new and contrite hearts, that we, worthily lamenting our sins and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Ash Wednesday",
+      "citation": null
+    },
+    {
+      "version": "Rite-I",
+      "hidden": false,
+      "language": "en",
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "thursday-last-epiphany",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "value": [
+        "Almighty and everlasting God, who hatest nothing that thou hast made and dost forgive the sins of all those who are penitent: Create and make in us new and contrite hearts, that we, worthily lamenting our sins and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Ash Wednesday",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "version": "Rite-I",
+      "value": [
+        "Almighty and everlasting God, who hatest nothing that thou hast made and dost forgive the sins of all those who are penitent: Create and make in us new and contrite hearts, that we, worthily lamenting our sins and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "hidden": false,
+      "language": "en",
+      "slug": "saturday-last-epiphany",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Ash Wednesday",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "slug": "Lent",
+      "metadata": {
+        "omit_label": false,
+        "omit_response": false,
+        "rollup": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "lastRevision": 2,
+      "id": "wAiFNH1ATE0KSlGfWVOA",
+      "language": "en",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "Almighty and everlasting God, who hatest nothing that thou hast made and dost forgive the sins of all those who are penitent: Create and make in us new and contrite hearts, that we, worthily lamenting our sins and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgiveness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Ash Wednesday",
+      "citation": null
+    },
+    {
+      "value": [
+        "Almighty God, whose blessed Son was led by the Spirit to be tempted of Satan; Make speed to help thy servants who are assaulted by manifold temptations; and, as thou knowest their several infirmities, let each one find thee mighty to save; through Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "language": "en",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "slug": "1st-lent",
+      "style": "prayer",
+      "label": "First Sunday in Lent",
+      "citation": null
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "O God, whose glory it is always to have mercy: Be gracious to all who have gone astray from thy ways, and bring them again with penitent hearts and steadfast faith to embrace and hold fast the unchangeable truth of thy Word, Jesus Christ thy Son; who with thee and the Holy Spirit liveth and reigneth, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "language": "en",
+      "slug": "2nd-lent",
+      "style": "prayer",
+      "label": "Second Sunday in Lent",
+      "citation": null
+    },
+    {
+      "hidden": false,
+      "slug": "3rd-lent",
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "style": "prayer",
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Almighty God, who seest that we have no power of ourselves to help ourselves: Keep us both outwardly in our bodies and inwardly in our souls, that we may be defended from all adversities which may happen to the body, and from all evil thoughts which may assault and hurt the soul; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Third Sunday in Lent",
+      "citation": null
+    },
+    {
+      "hidden": false,
+      "style": "prayer",
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Gracious Father, whose blessed Son Jesus Christ came down from heaven to be the true bread which giveth life to the world: Evermore give us this bread, that he may live in us, and we in him; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "language": "en",
+      "slug": "4th-lent",
+      "label": "Fourth Sunday in Lent",
+      "citation": null
+    },
+    {
+      "version": "Rite-I",
+      "type": "text",
+      "value": [
+        "O Almighty God, who alone canst order the unruly wills and affections of sinful men: Grant unto thy people that they may love the thing which thou commandest, and desire that which thou dost promise; that so, among the sundry and manifold changes of the world, our hearts may surely there be fixed where true joys are to be found; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "5th-lent",
+      "style": "prayer",
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "label": "Fifth Sunday in Lent",
+      "citation": null
+    },
+    {
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "language": "en",
+      "hidden": false,
+      "value": [
+        "Almighty and everlasting God, who, of thy tender love towards mankind, hast sent thy Son our Savior Jesus Christ to take upon him our flesh, and to suffer death upon the cross, that all mankind should follow the example of his great humility: Mercifully grant that we may both follow the example of his patience, and also be made partakers of his resurrection; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "slug": "holy-week",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Sunday of the Passion:  Palm Sunday",
+      "citation": null
+    },
+    {
+      "slug": "monday-holy-week",
+      "language": "en",
+      "hidden": false,
+      "version": "Rite-I",
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "value": [
+        "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other that the way of life and peace; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Monday in Holy Week",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "value": [
+        "O God, by the passion of thy blessed Son didst make an instrument of shameful death to be unto us the means of life: Grant us so to glory in the cross of Christ, that we may gladly suffer shame and loss for the sake of thy Son our Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "hidden": false,
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "slug": "tuesday-holy-week",
+      "label": "Tuesday in Holy Week",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "value": [
+        "O Lord God, whose blessed Son our Savior gave his back to the smiters and hid not his face from shame: Give us grace to take joyfully the sufferings of the present time, in full assurance of the glory that shall be revealed; through the same Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "slug": "wednesday-holy-week",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "style": "prayer",
+      "hidden": false,
+      "label": "Wednesday in Holy Week",
+      "citation": null
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "slug": "thursday-holy-week",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Almighty Father, whose dear Son, on the night before he suffered, instituted the Sacrament of his Body and Blood: Mercifully grant that we may thankfully receive the same in remembrance of him who in these holy mysteries giveth us a pledge of life eternal, the same thy Son Jesus Christ our Lord; who now liveth and reigneth with thee and the Holy Spirit ever, one God, world without end."
+      ],
+      "label": "Maundy Thursday",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "slug": "friday-holy-week",
+      "value": [
+        "Almighty God, we beseech thee graciously to behold this thy family, for whom our Lord Jesus Christ was contented to be betrayed, and given into the hands of sinners, and to suffer death upon the cross; who now liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "hidden": false,
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "version": "Rite-I",
+      "label": "Good Friday",
+      "citation": null
+    },
+    {
+      "value": [
+        "O God, Creator of heaven and earth: Grant that, as the crucified body of thy dear Son was laid in the tomb and rested on this holy Sabbath, so we may await with him the coming of the third day, and rise with him to newness of life; who now liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "slug": "saturday-holy-week",
+      "hidden": false,
+      "type": "text",
+      "label": "Holy Saturday",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "version": "Rite-I",
+      "type": "text",
+      "style": "prayer",
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "O God, who for our redemption didst give thine only-begotten Son to the death of the cross, and by his glorious resurrection hast delivered us from the power of our enemy: Grant us so to die daily to sin, that we may evermore live with him in the joy of his resurrection; through Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever.",
+        "O God, who didst make this most holy night to shine with the glory of the Lord’s resurrection: Stir up in thy Church that Spirit of adoption which is given to us in Baptism, that we, being renewed both in body and mind, may worship thee in sincerity and truth; through the same Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever.",
+        "Almighty God, who through thine only-begotten Son Jesus Christ overcame death and opened unto us the gate of everlasting life: Grant that we, who celebrate with joy the day of the Lord’s resurrection, may be raised from the death of sin by thy life-giving Spirit; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the same Spirit, one God, now and for ever."
+      ],
+      "slug": "easter",
+      "label": "Easter Day",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "version": "Rite-I",
+      "value": [
+        "Grant, we beseech thee, Almighty God, that we who celebrate with reverence the Paschal feast may be found worthy to attain to everlasting joys; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "style": "prayer",
+      "hidden": false,
+      "slug": "monday-easter",
+      "label": "Monday in Easter Week",
+      "citation": null
+    },
+    {
+      "value": [
+        "O God, who by the glorious resurrection of thy Son Jesus Christ destroyed death and brought life and immortality to light: Grant that we, who have been raised with him, may abide in his presence and rejoice in the hope of eternal glory; through the same Jesus Christ our Lord, to whom, with thee and the Holy Spirit, be dominion and praise for ever and ever."
+      ],
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "tuesday-easter",
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Tuesday in Easter Week",
+      "citation": null
+    },
+    {
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "O God, whose blessed Son did manifest himself to his disciples in the breaking of bread: Open, we pray thee, the eyes of our faith, that we may behold him in all his redeeming work; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "slug": "3rd-easter",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "version": "Rite-I",
+      "label": "Wednesday in Easter Week",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "O God, whose blessed Son did manifest himself to his disciples in the breaking of bread: Open, we pray thee, the eyes of our faith, that we may behold him in all his redeeming work; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "style": "prayer",
+      "type": "text",
+      "language": "en",
+      "slug": "wednesday-easter",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "hidden": false,
+      "label": "Wednesday in Easter Week",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "value": [
+        "Almighty and everlasting God, who in the Paschal mystery hast established the new covenant of reconciliation: Grant that all who have been reborn into the fellowship of Christ’s Body may show forth in their lives what they profess by their faith; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "language": "en",
+      "slug": "thursday-easter",
+      "hidden": false,
+      "label": "Thursday in Easter Week",
+      "citation": null
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "2nd-easter",
+      "style": "prayer",
+      "value": [
+        "Almighty and everlasting God, who in the Paschal mystery hast established the new covenant of reconciliation: Grant that all who have been reborn into the fellowship of Christ’s Body may show forth in their lives what they profess by their faith; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "type": "text",
+      "label": "Thursday in Easter Week",
+      "citation": null
+    },
+    {
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "language": "en",
+      "type": "text",
+      "slug": "friday-easter",
+      "style": "prayer",
+      "value": [
+        "Almighty Father, who hast given thine only Son to die for our sins and to rise again for our justification: Grant us so to put away the leaven of malice and wickedness, that we may always serve thee in pureness of living and truth; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Friday in Easter Week",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "slug": "saturday-easter",
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "We thank thee, heavenly Father, for that thou hast delivered us from the dominion of sin and death and hast brought us into the kingdom of thy Son; and we pray that, as by his death he hath recalled us to life, so by his love he may raise us to joys eternal; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "version": "Rite-I",
+      "label": "Saturday in Easter Week",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "slug": "4th-easter",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "O God, whose Son Jesus is the good shepherd of thy people; Grant that when we hear his voice we may know him who calleth us each by name, and follow where he doth lead; who, with thee and the Holy Spirit, liveth and reigneth, one God, for ever and ever."
+      ],
+      "label": "Fourth Sunday of Easter",
+      "citation": null
+    },
+    {
+      "language": "en",
+      "hidden": false,
+      "version": "Rite-I",
+      "value": [
+        "O Almighty God, whom truly to know is everlasting life: Grant us so perfectly to know thy Son Jesus Christ to be the way, the truth, and the life, that we may steadfastly follow his steps in the way that leadeth to eternal life; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "5th-easter",
+      "type": "text",
+      "label": "Fifth Sunday of Easter",
+      "citation": null
+    },
+    {
+      "slug": "6th-easter",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "O God, who hast prepared for those who love thee such good things as pass man’s understanding: Pour into our hearts such love towards thee, that we, loving thee in all things and above all things, may obtain thy promises, which exceed all that we can desire; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Sixth Sunday of Easter",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "type": "text",
+      "version": "Rite-I",
+      "language": "en",
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "slug": "friday-6th-easter",
+      "label": "Ascension Day",
+      "citation": null
+    },
+    {
+      "slug": "thursday-6th-easter",
+      "type": "text",
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "label": "Ascension Day",
+      "citation": null
+    },
+    {
+      "value": [
+        "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "saturday-6th-easter",
+      "language": "en",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "label": "Ascension Day",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "value": [
+        "O Almighty God, whose blessed Son our Savior Jesus Christ ascended far above all heavens that he might fill all things: Mercifully give us faith to perceive that, according to his promise, he abideth with his Church on earth, even to the end of the ages; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "language": "en",
+      "slug": "eve-wednesday-6th-easter",
+      "type": "text",
+      "style": "prayer",
+      "label": "Ascension Day",
+      "citation": null
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "type": "text",
+      "version": "Rite-I",
+      "language": "en",
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+      ],
+      "slug": "friday-6th-easter",
+      "label": "[missing label]",
+      "citation": "Amen."
+    },
+    {
+      "slug": "thursday-6th-easter",
+      "type": "text",
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+      ],
+      "label": "[missing label]",
+      "citation": "Amen."
+    },
+    {
+      "value": [
+        "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "saturday-6th-easter",
+      "language": "en",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "label": "[missing label]",
+      "citation": "Amen."
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "value": [
+        "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+      ],
+      "language": "en",
+      "slug": "eve-wednesday-6th-easter",
+      "type": "text",
+      "style": "prayer",
+      "label": "[missing label]",
+      "citation": "Amen."
+    },
+    {
+      "style": "prayer",
+      "language": "en",
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "7th-easter",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "O God, the King of glory, who hast exalted thine only Son Jesus Christ with great triumph unto thy kingdom in heaven: We beseech thee, leave us not comfortless, but send to us thine Holy Ghost to comfort us, and exalt us unto the same place whither our Savior Christ is gone before; who liveth and reigneth with thee and the same Holy Ghost, one God, world without end."
+      ],
+      "type": "text",
+      "label": "Seventh Sunday of Easter:  The Sunday after Ascension Day",
+      "citation": null
+    },
+    {
+      "slug": "pentecost",
+      "value": [
+        "Almighty God, who on this day didst open the way of eternal life to every race and nation by the promised gift of thy Holy Spirit: Shed abroad this gift throughout the world by the preaching of the Gospel, that it may reach to the ends of the earth; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the same Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "language": "en",
+      "version": "Rite-I",
+      "hidden": false,
+      "type": "text",
+      "label": "The Day of Pentecost:  Whitsunday",
+      "citation": null
+    },
+    {
+      "slug": "pentecost",
+      "value": [
+        "O God, who on this day didst teach the hearts of thy faithful people by sending to them the light of thy Holy Spirit: Grant us by the same Spirit to have a right judgment in all things, and evermore to rejoice in his holy comfort; through the merits of Christ Jesus our Savior, who liveth and reigneth with thee, in the unity of the same Spirit, one God, world without end."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "language": "en",
+      "version": "Rite-I",
+      "hidden": false,
+      "type": "text",
+      "label": "[missing label]",
+      "citation": "Amen."
+    },
+    {
+      "type": "text",
+      "version": "Rite-I",
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "trinity-sunday",
+      "value": [
+        "Almighty and everlasting God, who hast given unto us thy servants grace, by the confession of a true faith, to acknowledge the glory of the eternal Trinity, and in the power of thy Divine Majesty to worship the Unity: We beseech thee that thou wouldest keep us steadfast in this faith and worship, and bring us at last to see thee in thy one and eternal glory, O Father; who with the Son and the Holy Spirit livest and reignest, one God, for ever and ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "hidden": false,
+      "label": "First Sunday after Pentecost:  Trinity Sunday",
+      "citation": null
+    },
+    {
+      "type": "text",
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "Remember, O Lord, what thou hast wrought in us and not what we deserve; and, as thou hast called us to thy service, make us worthy of our calling; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "version": "Rite-I",
+      "slug": "proper-1",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "label": "Proper 1",
+      "citation": "Week of the Sunday closest to May 11"
+    },
+    {
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "hidden": false,
+      "type": "text",
+      "slug": "proper-2",
+      "style": "prayer",
+      "value": [
+        "O Almighty and most merciful God, of thy bountiful goodness keep us, we beseech thee, from all things that may hurt us, that we, being ready both in body and soul, may with free hearts accomplish those things which belong to thy purpose; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Proper 2",
+      "citation": "Week of the Sunday closest to May 18"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "style": "prayer",
+      "slug": "proper-3",
+      "value": [
+        "Grant, O Lord, we beseech thee, that the course of this world may be peaceably governed by thy providence; and that thy Church may joyfully serve thee in confidence and serenity; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "version": "Rite-I",
+      "hidden": false,
+      "type": "text",
+      "label": "Proper 3",
+      "citation": "The Sunday closest to May 25"
+    },
+    {
+      "version": "Rite-I",
+      "hidden": false,
+      "slug": "proper-4",
+      "value": [
+        "O God, whose never-failing providence ordereth all things both in heaven and earth: We humbly beseech thee to put away from us all hurtful things, and give us those things which are profitable for us; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "style": "prayer",
+      "label": "Proper 4",
+      "citation": "The Sunday closest to June 1"
+    },
+    {
+      "version": "Rite-I",
+      "slug": "proper-5",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "value": [
+        "O God, from whom all good doth come: Grant that by thy inspiration we may think those things that are right, and by thy merciful guiding may perform the same; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "label": "Proper 5",
+      "citation": "The Sunday closest to June 8"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "slug": "proper-6",
+      "style": "prayer",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Keep, O Lord, we beseech thee, thy household the Church in thy steadfast faith and love, that by the help of thy grace we may proclaim thy truth with boldness, and minister thy justice with compassion; for the sake of our Savior Jesus Christ, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "label": "Proper 6",
+      "citation": "The Sunday closest to June 15"
+    },
+    {
+      "value": [
+        "O Lord, we beseech thee, make us to have a perpetual fear and love of thy holy Name, for thou never failest to help and govern those whom thou hast set upon the sure foundation of thy loving-kindness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "hidden": false,
+      "type": "text",
+      "slug": "proper-7",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "version": "Rite-I",
+      "style": "prayer",
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Proper 7",
+      "citation": "The Sunday closest to June 22"
+    },
+    {
+      "slug": "proper-8",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "version": "Rite-I",
+      "value": [
+        "O Almighty God, who hast built thy Church upon the foundation of the apostles and prophets, Jesus Christ himself being the chief cornerstone: Grant us so to be joined together in unity of spirit by their doctrine, that we may be made an holy temple acceptable unto thee; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "type": "text",
+      "style": "prayer",
+      "language": "en",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Proper 8",
+      "citation": "The Sunday closest to June 29"
+    },
+    {
+      "style": "prayer",
+      "language": "en",
+      "slug": "proper-9",
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "O God, who hast taught us to keep all thy commandments by loving thee and our neighbor: Grant us the grace of thy Holy Spirit, that we may be devoted to thee with our whole heart, and united to one another with pure affection; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "hidden": false,
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Proper 9",
+      "citation": "The Sunday closest to July 6"
+    },
+    {
+      "value": [
+        "O Lord, we beseech thee mercifully to receive the prayers of thy people who call upon thee, and grant that they may both perceive and know what things they ought to do, and also may have grace and power faithfully to fulfill the same; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "slug": "proper-10",
+      "version": "Rite-I",
+      "hidden": false,
+      "style": "prayer",
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "label": "Proper 10",
+      "citation": "The Sunday closest to July 13"
+    },
+    {
+      "style": "prayer",
+      "version": "Rite-I",
+      "language": "en",
+      "slug": "proper-11",
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "Almighty God, the fountain of all wisdom, who knowest our necessities before we ask and our ignorance in asking: Have compassion, we beseech thee, upon our infirmities, and those things which for our unworthiness we dare not, and for our blindness we cannot ask, mercifully give us for the worthiness of thy Son Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "label": "Proper 11",
+      "citation": "The Sunday closest to July 20"
+    },
+    {
+      "slug": "proper-12",
+      "value": [
+        "O God, the protector of all that trust in thee, without whom nothing is strong, nothing is holy: Increase and multiply upon us thy mercy; that, thou being our ruler and guide, we may so pass through things temporal, that we finally lose not the things eternal; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "label": "Proper 12",
+      "citation": "The Sunday closest to July 27"
+    },
+    {
+      "slug": "proper-13",
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "value": [
+        "O Lord, we beseech thee, let thy continual pity cleanse and defend thy Church; and, because it cannot continue in safety without thy succor, preserve it evermore by thy help and goodness; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Proper 13",
+      "citation": "The Sunday closest to August 3"
+    },
+    {
+      "version": "Rite-I",
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "Grant to us, Lord, we beseech thee, the spirit to think and do always such things as are right, that we, who cannot exist without thee, may by thee be enabled to live according to thy will; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "proper-14",
+      "label": "Proper 14",
+      "citation": "The Sunday closest to August 10"
+    },
+    {
+      "hidden": false,
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "slug": "proper-15",
+      "value": [
+        "Almighty God, who hast given thy only Son to be unto us both a sacrifice for sin and also an example of godly life: Give us grace that we may always most thankfully receive that his inestimable benefit, and also daily endeavor ourselves to follow the blessed steps of his most holy life; through the same Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "language": "en",
+      "label": "Proper 15",
+      "citation": "The Sunday closest to August 17"
+    },
+    {
+      "version": "Rite-I",
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Grant, we beseech thee, merciful God, that thy Church, being gathered together in unity by thy Holy Spirit, may manifest thy power among all peoples, to the glory of thy Name; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, world without end."
+      ],
+      "slug": "proper-16",
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "label": "Proper 16",
+      "citation": "The Sunday closest to August 24"
+    },
+    {
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Lord of all power and might, who art the author and giver of all good things: Graft in our hearts the love of thy Name; increase in us true religion; nourish us with all goodness; and bring forth in us the fruit of good works; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "slug": "proper-17",
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "label": "Proper 17",
+      "citation": "The Sunday closest to August 31"
+    },
+    {
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "proper-18",
+      "version": "Rite-I",
+      "hidden": false,
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "value": [
+        "Grant us, O Lord, we pray thee, to trust in thee with all our heart; seeing that, as thou dost alway resist the proud who confide in their own strength, so thou dost not forsake those who make their boast of thy mercy; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "label": "Proper 18",
+      "citation": "The Sunday closest to September 7"
+    },
+    {
+      "type": "text",
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "style": "prayer",
+      "slug": "proper-19",
+      "value": [
+        "O God, forasmuch as without thee we are not able to please thee, mercifully grant that thy Holy Spirit may in all things direct and rule our hearts; through Jesus Christ our Lord, who with thee and the same Spirit liveth and reigneth, one God, now and for ever."
+      ],
+      "label": "Proper 19",
+      "citation": "The Sunday closest to September 14"
+    },
+    {
+      "version": "Rite-I",
+      "language": "en",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Grant us, O Lord, not to mind earthly things, but to love things heavenly; and even now, while we are placed among things that are passing away, to cleave to those that shall abide; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "slug": "proper-20",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "type": "text",
+      "hidden": false,
+      "label": "Proper 20",
+      "citation": "The Sunday closest to September 21"
+    },
+    {
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "O God, who declarest thy almighty power chiefly in showing mercy and pity: Mercifully grant unto us such a measure of thy grace, that we, running to obtain thy promises, may be made partakers of thy heavenly treasure; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "proper-21",
+      "label": "Proper 21",
+      "citation": "The Sunday closest to September 28"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "style": "prayer",
+      "slug": "proper-22",
+      "version": "Rite-I",
+      "hidden": false,
+      "value": [
+        "Almighty and everlasting God, who art always more ready to hear than we to pray, and art wont to give more than either we desire or deserve: Pour down upon us the abundance of thy mercy, forgiving us those things whereof our conscience is afraid, and giving us those good things which we are not worthy to ask, but through the merits and mediation of Jesus Christ thy Son our Lord; who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Proper 22",
+      "citation": "The Sunday closest to October 5"
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "slug": "proper-23",
+      "style": "prayer",
+      "value": [
+        "Lord, we pray thee that thy grace may always precede and follow us, and make us continually to be given to all good works; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "label": "Proper 23",
+      "citation": "The Sunday closest to October 12"
+    },
+    {
+      "value": [
+        "Almighty and everlasting God, who in Christ hast revealed thy glory among the nations: Preserve the works of thy mercy, that thy Church throughout the world may persevere with steadfast faith in the confession of thy Name; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "slug": "proper-24",
+      "style": "prayer",
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "language": "en",
+      "label": "Proper 24",
+      "citation": "The Sunday closest to October 19"
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "language": "en",
+      "slug": "proper-25",
+      "value": [
+        "Almighty and everlasting God, give unto us the increase of faith, hope, and charity; and, that we may obtain that which thou dost promise, make us to love that which thou dost command; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "label": "Proper 25",
+      "citation": "The Sunday closest to October 26"
+    },
+    {
+      "slug": "proper-26",
+      "style": "prayer",
+      "type": "text",
+      "value": [
+        "Almighty and merciful God, of whose only gift it cometh that thy faithful people do unto thee true and laudable service: Grant, we beseech thee, that we may run without stumbling to obtain thy heavenly promises; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "hidden": false,
+      "language": "en",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "label": "Proper 26",
+      "citation": "The Sunday closest to November 2"
+    },
+    {
+      "slug": "proper-27",
+      "type": "text",
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "style": "prayer",
+      "value": [
+        "O God, whose blessed Son was manifested that he might destroy the works of the devil and make us children of God and heirs of eternal life: Grant us, we beseech thee, that, having this hope, we may purify ourselves even as he is pure; that, when he shall appear again with power and great glory, we may be made like unto him in his eternal and glorious kingdom; where with thee, O Father, and thee, O Holy Ghost, he liveth and reigneth ever, one God, world without end."
+      ],
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Proper 27",
+      "citation": "The Sunday closest to November 9"
+    },
+    {
+      "style": "prayer",
+      "value": [
+        "Blessed Lord, who hast caused all holy Scriptures to be written for our learning: Grant that we may in such wise hear them, read, mark, learn, and inwardly digest them, that, by patience and comfort of thy holy Word, we may embrace and ever hold fast the blessed hope of everlasting life, which thou hast given us in our Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "slug": "proper-28",
+      "language": "en",
+      "type": "text",
+      "label": "Proper 28",
+      "citation": "The Sunday closest to November 16"
+    },
+    {
+      "style": "prayer",
+      "version": "Rite-I",
+      "value": [
+        "Almighty and everlasting God, whose will it is to restore all things in thy well-beloved Son, the King of kings and Lord of lords: Mercifully grant that the peoples of the earth, divided and enslaved by sin, may be freed and brought together under his most gracious rule; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "hidden": false,
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "proper-29",
+      "label": "Proper 29",
+      "citation": "The Sunday closest to November 23"
+    },
+    {
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "slug": "st-andrew",
+      "value": [
+        "Almighty God, who didst give such grace to thine apostle Andrew that he readily obeyed the call of thy Son Jesus Christ, and brought his brother with him: Give unto us, who are called by thy Word, grace to follow him without delay, and to bring those near to us into his gracious presence; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "label": "Saint Andrew",
+      "citation": "November 30"
+    },
+    {
+      "slug": "st-thomas",
+      "version": "Rite-I",
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "Everliving God, who didst strengthen thine apostle Thomas with firm and certain faith in thy Son’s resurrection: Grant us so perfectly and without doubt to believe in Jesus Christ, our Lord and our God, that our faith may never be found wanting in thy sight; through him who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "style": "prayer",
+      "language": "en",
+      "hidden": false,
+      "label": "Saint Thomas",
+      "citation": "December 21"
+    },
+    {
+      "version": "Rite-I",
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "hidden": false,
+      "slug": "st-stephen",
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "We give the thanks, O Lord of glory, for the example of the first martyr Stephen, who looked up to heaven and prayed for his persecutors to thy Son Jesus Christ, who standeth at thy right hand; where he liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "type": "text",
+      "label": "Saint Stephen",
+      "citation": "December 26"
+    },
+    {
+      "value": [
+        "Shed upon thy Church, we beseech thee, O Lord, the brightness of thy light; that we, being illumined by the teaching of thine apostle and evangelist John, may so walk in the light of thy truth, that at length we may attain to the fullness of life everlasting; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "version": "Rite-I",
+      "hidden": false,
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "type": "text",
+      "slug": "st-john",
+      "label": "Saint John",
+      "citation": "December 27"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "slug": "holy-innocents",
+      "value": [
+        "We remember today, O God, the slaughter of the holy innocents of Bethlehem by the order of King Herod. Receive, we beseech thee, into the arms of thy mercy all innocent victims; and by thy great might frustrate the designs of evil tyrants and establish thy rule of justice, love, and peace; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit,, one God, for ever and ever."
+      ],
+      "language": "en",
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "label": "The Holy Innocents",
+      "citation": "December 28"
+    },
+    {
+      "value": [
+        "Almighty Father, who didst inspire Simon Peter, first among the apostles, to confess Jesus as Messiah and Son of the living God: Keep thy Church steadfast upon the rock of this faith, so that in unity and peace we may proclaim the one truth and follow the one Lord, our Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "style": "prayer",
+      "type": "text",
+      "slug": "confession-of-st-peter",
+      "language": "en",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Confession of Saint Peter",
+      "citation": "January 18"
+    },
+    {
+      "slug": "conversion-of-st-paul",
+      "style": "prayer",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "value": [
+        "O God, who, by the preaching of thine apostle Paul, hast caused the light of the Gospel to shine throughout the world: Grant, we beseech thee, that we, having his wonderful conversion in remembrance, may show forth our thankfulness unto thee for the same by following the holy doctrine which he taught; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Conversion of Saint Paul",
+      "citation": "January 25"
+    },
+    {
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "value": [
+        "Almighty and everliving God, we humbly beseech thee that, as thy only-begotten Son was this day presented in the temple, so we may be presented unto thee with pure and clean hearts by the same thy Son Jesus Christ our Lord; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "slug": "the-presentation",
+      "type": "text",
+      "version": "Rite-I",
+      "hidden": false,
+      "style": "prayer",
+      "label": "The Presentation",
+      "citation": "February 2"
+    },
+    {
+      "style": "prayer",
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "slug": "eve-of-the-presentation",
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Almighty and everliving God, we humbly beseech thee that, as thy only-begotten Son was this day presented in the temple, so we may be presented unto thee with pure and clean hearts by the same thy Son Jesus Christ our Lord; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "type": "text",
+      "label": "The Presentation",
+      "citation": "February 2"
+    },
+    {
+      "slug": "st-matthias",
+      "type": "text",
+      "style": "prayer",
+      "version": "Rite-I",
+      "language": "en",
+      "value": [
+        "O Almighty God, who into the place of Judas didst choose thy faithful servant Matthias to be of the number of the Twelve: Grant that thy Church, being delivered from false apostles, may always be ordered and guided by faithful and true pastors; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Saint Matthias",
+      "citation": "February 24"
+    },
+    {
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "st-joseph",
+      "value": [
+        "O God, who from the family of thy servant David didst raise up Joseph to be the guardian of thy incarnate Son and the spouse of his virgin mother: Give us grace to imitate his uprightness of life and his obedience to thy commands; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "version": "Rite-I",
+      "hidden": false,
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "label": "Saint Joseph",
+      "citation": "March 19"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "value": [
+        "We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "slug": "eve-of-the-annunciation",
+      "type": "text",
+      "style": "prayer",
+      "hidden": false,
+      "label": "The Annunciation",
+      "citation": "March 25"
+    },
+    {
+      "slug": "annunciation",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "style": "prayer",
+      "version": "Rite-I",
+      "type": "text",
+      "label": "The Annunciation",
+      "citation": "March 25"
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "language": "en",
+      "slug": "st-mark",
+      "style": "prayer",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "value": [
+        "Almighty God, who by the hand of Mark the evangelist hast given to thy Church the Gospel of Jesus Christ the Son of God: We thank thee for this witness, and pray that we may be firmly grounded in its truth; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Saint Mark",
+      "citation": "April 25"
+    },
+    {
+      "value": [
+        "Almighty God, who didst give to thine apostles Philip and James grace and strength to bear witness to the truth: Grant that we, being mindful of their victory of faith, may glorify in life and death the Name of our Lord Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "hidden": false,
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "slug": "ss-philip-and-james",
+      "language": "en",
+      "style": "prayer",
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "label": "Saint Philip and Saint James",
+      "citation": "May 1"
+    },
+    {
+      "language": "en",
+      "hidden": false,
+      "style": "prayer",
+      "version": "Rite-I",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "value": [
+        "Father in heaven, by whose grace the virgin mother of thy incarnate Son was blessed in bearing him, but still more blessed in keeping thy word: Grant us who honor the exaltation of her lowliness to follow the example of her devotion to thy will; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "slug": "the-visitation",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "label": "The Visitation",
+      "citation": "May 31"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "slug": "eve-of-the-visitation",
+      "language": "en",
+      "type": "text",
+      "value": [
+        "Father in heaven, by whose grace the virgin mother of thy incarnate Son was blessed in bearing him, but still more blessed in keeping thy word: Grant us who honor the exaltation of her lowliness to follow the example of her devotion to thy will; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "style": "prayer",
+      "label": "The Visitation",
+      "citation": "May 31"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "Grant, O God, that we may follow the example of thy faithful servant Barnabas, who, seeking not his own renown but the well-being of thy Church, gave generously of his life and substance for the relief of the poor and the spread of the Gospel; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "slug": "st-barnabas",
+      "label": "Saint Barnabas",
+      "citation": "June 11"
+    },
+    {
+      "slug": "nativity-of-st-john-the-baptist",
+      "hidden": false,
+      "value": [
+        "Almighty God, by whose providence thy servant John the Baptist was wonderfully born, and sent to prepare the way of thy Son our Savior by preaching repentance: Make us so to follow his doctrine and holy life, that we may truly repent according to his preaching; and, after his example, constantly speak the truth, boldly rebuke vice, and patiently suffer for the truth’s sake; through the same Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "label": "The Nativity of Saint John the Baptist",
+      "citation": "June 24"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "eve-of-st-john-the-baptist",
+      "value": [
+        "Almighty God, by whose providence thy servant John the Baptist was wonderfully born, and sent to prepare the way of thy Son our Savior by preaching repentance: Make us so to follow his doctrine and holy life, that we may truly repent according to his preaching; and, after his example, constantly speak the truth, boldly rebuke vice, and patiently suffer for the truth’s sake; through the same Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "version": "Rite-I",
+      "language": "en",
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "label": "The Nativity of Saint John the Baptist",
+      "citation": "June 24"
+    },
+    {
+      "slug": "ss-peter-and-paul",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Almighty God, whose blessed apostles Peter and Paul glorified thee by their martyrdom: Grant that thy Church, instructed by their teaching and example, and knit together in unity by thy Spirit, may ever stand firm upon the one foundation, which is Jesus Christ our Lord; who liveth and reigneth with thee, in the unity of the same Spirit, one God, for ever and ever."
+      ],
+      "label": "Saint Peter and Saint Paul",
+      "citation": "June 29"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Lord God Almighty, in whose Name the founders of this country won liberty for themselves and for us, and lit the torch of freedom for nations then unborn: Grant, we beseech thee, that we and all the people of this land may have grace to maintain our liberties in righteousness and peace; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "hidden": false,
+      "language": "en",
+      "version": "Rite-I",
+      "slug": "independence-day",
+      "label": "Independence Day",
+      "citation": "July 4"
+    },
+    {
+      "slug": "st-mary-magdalene",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "value": [
+        "Almighty God, whose blessed Son restored Mary Magdalene to health of body and mind, and called her to be a witness of his resurrection: Mercifully grant that by thy grace we may be healed of all our infirmities and know thee in the power of his endless life; who with thee and the Holy Spirit liveth and reigneth, one God, now and for ever."
+      ],
+      "version": "Rite-I",
+      "style": "prayer",
+      "language": "en",
+      "type": "text",
+      "hidden": false,
+      "label": "Saint Mary Magdalene",
+      "citation": "July 22"
+    },
+    {
+      "value": [
+        "O gracious God, we remember before thee this day thy servant and apostle James, first among the Twelve to suffer martyrdom for the Name of Jesus Christ; and we pray that thou wilt pour out upon the leaders of thy Church that spirit of self-denying service by which alone they may have true authority among thy people; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "style": "prayer",
+      "hidden": false,
+      "version": "Rite-I",
+      "language": "en",
+      "slug": "st-james",
+      "category": ["Collect", "Collect of the Day"],
+      "type": "text",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Saint James",
+      "citation": "July 25"
+    },
+    {
+      "style": "prayer",
+      "lastRevision": 1,
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "hidden": false,
+      "type": "text",
+      "language": "en",
+      "category": [
+        "Collect",
+        "Collect of the Day",
+        "Transfiguration",
+        "Transfiguration"
+      ],
+      "slug": "the-transfiguration",
+      "value": [
+        "O God, who on the holy mount didst reveal to chosen witnesses thy well-beloved Son, wonderfully transfigured, in raiment white and glistening: Mercifully grant that we, being delivered from the disquietude of this world, may by faith behold the King in his beauty; who with thee, O Father, and thee, O Holy Ghost, liveth and reigneth, one God, world without end."
+      ],
+      "version": "Rite-I",
+      "label": "The Transfiguration",
+      "citation": "August 6"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "version": "Rite-I",
+      "slug": "eve-of-the-transfiguration",
+      "value": [
+        "O God, who on the holy mount didst reveal to chosen witnesses thy well-beloved Son, wonderfully transfigured, in raiment white and glistening: Mercifully grant that we, being delivered from the disquietude of this world, may by faith behold the King in his beauty; who with thee, O Father, and thee, O Holy Ghost, liveth and reigneth, one God, world without end."
+      ],
+      "type": "text",
+      "label": "The Transfiguration",
+      "citation": "August 6"
+    },
+    {
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "version": "Rite-I",
+      "style": "prayer",
+      "type": "text",
+      "value": [
+        "O God, who hast taken to thyself the blessed Virgin Mary, mother of thy incarnate Son: Grant that we, who have been redeemed by his blood, may share with her the glory of thine eternal kingdom; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "hidden": false,
+      "language": "en",
+      "slug": "st-mary-the-virgin",
+      "label": "Saint Mary the Virgin",
+      "citation": "August 15"
+    },
+    {
+      "value": [
+        "O Almighty and everlasting God, who didst give to thine apostle Bartholomew grace truly to believe and to preach thy Word: Grant, we beseech thee, unto thy Church to love what he believed and to preach what he taught; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "style": "prayer",
+      "version": "Rite-I",
+      "type": "text",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "st-bartholomew",
+      "hidden": false,
+      "label": "Saint Bartholomew",
+      "citation": "August 24"
+    },
+    {
+      "slug": "holy-cross",
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "Almighty God, whose Son our Savior Jesus Christ was lifted high upon the cross that he might draw the whole world unto himself: Mercifully grant that we, who glory in the mystery of our redemption, may have grace to take up our cross and follow him; who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "language": "en",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "label": "Holy Cross Day",
+      "citation": "September 14"
+    },
+    {
+      "value": [
+        "Almighty God, whose Son our Savior Jesus Christ was lifted high upon the cross that he might draw the whole world unto himself: Mercifully grant that we, who glory in the mystery of our redemption, may have grace to take up our cross and follow him; who liveth and reigneth with thee and the Holy Spirit, one God, in glory everlasting."
+      ],
+      "slug": "eve-of-holy-cross",
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "language": "en",
+      "type": "text",
+      "version": "Rite-I",
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Holy Cross Day",
+      "citation": "September 14"
+    },
+    {
+      "version": "Rite-I",
+      "style": "prayer",
+      "type": "text",
+      "category": ["Collect", "Collect of the Day"],
+      "slug": "st-matthew",
+      "hidden": false,
+      "value": [
+        "We thank thee, heavenly Father, for the witness of thine apostle and evangelist Matthew to the Gospel of thy Son our Savior; and we pray that, after his example, we may with ready wills and hearts obey the calling of our Lord to follow him; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Saint Matthew",
+      "citation": "September 21"
+    },
+    {
+      "style": "prayer",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "language": "en",
+      "hidden": false,
+      "value": [
+        "O everlasting God, who hast ordained and constituted the ministries of angels and men in a wonderful order: Mercifully grant that, as thy holy angels always serve and worship thee in heaven, so by thy appointment they may help and defend us on earth; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "type": "text",
+      "slug": "st-michael",
+      "label": "Saint Michael and All Angels",
+      "citation": "September 29"
+    },
+    {
+      "slug": "st-luke",
+      "value": [
+        "Almighty God, who didst inspire thy servant Luke the physician to set forth in the Gospel the love and healing power of thy Son: Graciously continue in thy Church the like love and power to heal, to the praise and glory of thy Name; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "language": "en",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "label": "Saint Luke",
+      "citation": "October 18"
+    },
+    {
+      "version": "Rite-I",
+      "category": ["Collect", "Collect of the Day"],
+      "style": "prayer",
+      "slug": "st-james-of-jerusalem",
+      "value": [
+        "Grant, we beseech thee, O God, that after the example of thy servant James the Just, brother of our Lord, thy Church may give itself continually to prayer and to the reconciliation of all who are at variance and enmity; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "hidden": false,
+      "type": "text",
+      "language": "en",
+      "label": "Saint James of Jerusalem",
+      "citation": "October 23"
+    },
+    {
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "category": ["Collect", "Collect of the Day"],
+      "version": "Rite-I",
+      "type": "text",
+      "slug": "ss-simon-and-jude",
+      "style": "prayer",
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "O God, we thank thee for the glorious company of the apostles, and especially on this day for Simon and Jude; and we pray that, as they were faithful and zealous in their mission, so we may with ardent devotion make known the love and mercy of our Lord and Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      ],
+      "label": "Saint Simon and Saint Jude",
+      "citation": "October 28"
+    },
+    {
+      "style": "prayer",
+      "metadata": {
+        "response": "Amen.",
+        "omit_response": false
+      },
+      "slug": "all-saints-day",
+      "category": ["Collect", "Collect of the Day"],
+      "language": "en",
+      "version": "Rite-I",
+      "value": [
+        "Almighty God, who hast knit together thine elect in one communion and fellowship in the mystical body of thy Son Christ our Lord: Give us grace so to follow thy blessed saints in all virtuous and godly living, that we may come to those ineffable joys that thou hast prepared for those who unfeignedly love thee; through the same Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, in glory everlasting."
+      ],
+      "type": "text",
+      "hidden": false,
+      "label": "All Saints' Day",
+      "citation": "November 1"
+    },
+    {
+      "value": [
+        "Almighty God, who hast knit together thine elect in one communion and fellowship in the mystical body of thy Son Christ our Lord: Give us grace so to follow thy blessed saints in all virtuous and godly living, that we may come to those ineffable joys that thou hast prepared for those who unfeignedly love thee; through the same Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, in glory everlasting."
+      ],
+      "category": ["Collect", "Collect of the Day"],
+      "hidden": false,
+      "version": "Rite-I",
+      "slug": "eve-of-all-saints",
+      "metadata": {
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "language": "en",
+      "style": "prayer",
+      "type": "text",
+      "label": "All Saints' Day",
+      "citation": "November 1"
+    },
+    {
+      "style": "prayer",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "lastRevision": 24,
+      "metadata": {
+        "omit_response": false
+      },
+      "slug": "thanksgiving-day",
+      "label": "Thanksgiving Day",
+      "type": "text",
+      "language": "en",
+      "version": "Rite-I",
+      "value": [
+        "Almighty and gracious Father, we give thee thanks for the fruits of the earth in their season and for the labors of those who harvest them. Make us, we beseech thee, faithful stewards of thy great bounty, for the provision of our necessities and the relief of all who are in need, to the glory of thy Name; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      ],
+      "hidden": false,
+      "category": ["Collect", "Collect of the Day"],
+      "citation": null
+    }
+  ]
+}

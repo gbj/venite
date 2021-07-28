@@ -3,7 +3,7 @@ import { SSGRefreshMap } from "./ssg-refresh-map.ts";
 
 async function veniteCSS(): Promise<string> {
   const resp = await fetch(
-    "https://cdn.skypack.dev/@venite/html@0.3.10/src/style.css"
+    "https://cdn.skypack.dev/@venite/html@0.3.11/src/style.css"
   );
   return resp.text();
 }

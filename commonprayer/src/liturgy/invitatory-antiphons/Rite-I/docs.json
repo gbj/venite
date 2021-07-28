@@ -1,0 +1,156 @@
+{
+  "data": [
+    {
+      "category": ["Advent", "Seasonal Antiphon"],
+      "label": null,
+      "version": "Rite-I",
+      "citation": null,
+      "type": "refrain",
+      "style": "antiphon",
+      "value": ["Our King and Savior draweth nigh: O come, let us adore him."],
+      "language": "en"
+    },
+    {
+      "category": ["Christmas", "Seasonal Antiphon"],
+      "hidden": false,
+      "label": "On the Twelve Days of Christmas",
+      "version": "Rite-I",
+      "citation": null,
+      "type": "refrain",
+      "style": "antiphon",
+      "value": [
+        "Alleluia. Unto us a child is born: O come, let us adore him. Alleluia."
+      ],
+      "language": "en"
+    },
+    {
+      "label": "From the Epiphany through the Baptism of Christ, and on the Feasts of the Transfiguration and Holy Cross",
+      "value": [
+        "The Lord hath manifested forth his glory: O come, let us adore him."
+      ],
+      "category": ["Epiphany", "Seasonal Antiphon"],
+      "language": "en",
+      "type": "refrain",
+      "version": "Rite-I",
+      "style": "antiphon"
+    },
+    {
+      "language": "en",
+      "value": [
+        "The Lord is full of compassion and mercy: O come, let us adore him."
+      ],
+      "type": "refrain",
+      "label": "In Lent",
+      "version": "Rite-I",
+      "style": "antiphon",
+      "category": ["Lent", "Holy Week", "Seasonal Antiphon"]
+    },
+    {
+      "label": "From Easter Day until the Ascension",
+      "value": [
+        "Alleluia. The Lord is risen indeed: O come, let us adore him. Alleluia."
+      ],
+      "style": "antiphon",
+      "language": "en",
+      "version": "Rite-I",
+      "type": "refrain",
+      "category": ["Easter", "Seasonal Antiphon"]
+    },
+    {
+      "version": "Rite-I",
+      "type": "refrain",
+      "label": "From Ascension Day until the Day of Pentecost",
+      "category": ["Ascension", "Seasonal Antiphon"],
+      "value": [
+        "Alleluia. Christ the Lord ascendedeth into heaven: O come, let us adore him. Alleluia."
+      ],
+      "language": "en",
+      "style": "antiphon"
+    },
+    {
+      "label": "On the Day of Pentecost",
+      "value": [
+        "Alleluia. The Spirit of the Lord filleth the world: O come, let us adore him. Alleluia."
+      ],
+      "category": ["Pentecost", "Seasonal Antiphon"],
+      "language": "en",
+      "type": "refrain",
+      "version": "Rite-I",
+      "style": "antiphon"
+    },
+    {
+      "hidden": false,
+      "category": ["Trinity Sunday", "Seasonal Antiphon"],
+      "value": [
+        "Father, Son, and Holy Spirit, one God: O come, let us adore him."
+      ],
+      "language": "en",
+      "style": "antiphon",
+      "label": "On Trinity Sunday",
+      "type": "refrain",
+      "version": "Rite-I"
+    },
+    {
+      "type": "refrain",
+      "style": "antiphon",
+      "language": "en",
+      "version": "Rite-I",
+      "category": [
+        "On other Sundays and weekdays",
+        "Ordinary Time",
+        "Seasonal Antiphon"
+      ],
+      "value": [
+        "The earth is the Lord’s for he made it: O come, let us adore him."
+      ]
+    },
+    {
+      "language": "en",
+      "style": "antiphon",
+      "category": [
+        "On other Sundays and weekdays",
+        "Ordinary Time",
+        "Seasonal Antiphon"
+      ],
+      "type": "refrain",
+      "version": "Rite-I",
+      "label": null,
+      "hidden": false,
+      "version_label": null,
+      "value": [
+        "Worship the Lord in the beauty of holiness: O come, let us adore him."
+      ],
+      "citation": null
+    },
+    {
+      "type": "refrain",
+      "category": [
+        "On other Sundays and weekdays",
+        "Ordinary Time",
+        "Seasonal Antiphon"
+      ],
+      "slug": "invitatory_antiphon",
+      "language": "en",
+      "value": [
+        "The mercy of the Lord is everlasting: O come, let us adore him."
+      ],
+      "style": "antiphon",
+      "version": "Rite-I"
+    },
+    {
+      "language": "en",
+      "version": "Rite-I",
+      "style": "antiphon",
+      "slug": "invitatory_antiphon",
+      "value": [
+        "[Alleluia.] The Lord is glorious in his saints: O come, let us adore him. [Alleluia.]"
+      ],
+      "type": "refrain",
+      "category": [
+        "On All Saints and other Major Saints’ Days",
+        "Saints",
+        "Seasonal Antiphon"
+      ]
+    }
+  ]
+}

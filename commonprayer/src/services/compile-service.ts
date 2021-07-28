@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.10";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.11";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -54,7 +54,7 @@ export class CompileServiceController {
     const doc = rootEl.dataset.ldf
         ? new LiturgicalDocument(JSON.parse(rootEl.dataset.ldf))
         : await this.loadDoc(rootEl),
-      defaultPrefs: Record<string, string> = {};
+      defaultPrefs: ClientPreferences = {};
     if (doc.type === "liturgy" && (doc as Liturgy).metadata?.preferences) {
       for (const [key, pref] of Object.entries(
         doc.metadata.preferences as Record<string, Preference>
@@ -69,60 +69,87 @@ export class CompileServiceController {
     const prefs = defaultPrefs,
       originalPrefs: Record<string, Preference> =
         doc.metadata?.preferences || {};
-    console.log("prefs = ", prefs, "\n\noriginalPrefs = ", originalPrefs);
 
     // build day from date
     const day = await CalendarService.findDay(ymd, "bcp1979");
 
     // compile each individual document
-    rootEl.querySelectorAll(".cp-doc").forEach(async (cpDoc) => {
-      for (const child of Array.from(cpDoc.children)) {
-        if (child instanceof HTMLElement) {
-          const { ldf, compiled } = child.dataset;
-          // remove any item that was already compiled from a previous date
-          if (compiled === "true") {
-            child.remove();
-          }
-          // run conditions and lookups
-          else {
-            if (ldf) {
-              try {
-                const doc = new LiturgicalDocument(JSON.parse(decodeURI(ldf)));
+    rootEl
+      .querySelectorAll(".cp-doc")
+      .forEach((cpDoc) =>
+        this.compileNode(cpDoc, mode, day, prefs, originalPrefs)
+      );
+  }
 
-                // first, run any condition checks
-                const include = doc.include(day as LiturgicalDay, {});
-                if (!include) {
-                  this.hide(child, mode);
-                } else {
-                  this.show(child);
-                }
+  async compileNode(
+    cpDoc: Element,
+    mode: CompileMode,
+    day: LiturgicalDay,
+    prefs: ClientPreferences,
+    originalPrefs: Record<string, Preference>
+  ) {
+    for (const child of Array.from(cpDoc.children)) {
+      if (child instanceof HTMLElement) {
+        const { ldf, compiled } = child.dataset;
+        // remove any item that was already compiled from a previous date
+        if (compiled === "true") {
+          child.remove();
+        }
+        // run conditions and lookups
+        else {
+          if (ldf) {
+            try {
+              const doc = new LiturgicalDocument(JSON.parse(decodeURI(ldf)));
 
-                // next, run any lookups
-                const lookupEl = await this.lookup(
-                  doc,
-                  day as LiturgicalDay,
-                  prefs,
-                  originalPrefs
+              if (doc.type === "option") {
+                const options = child.querySelectorAll(".options");
+                options.forEach((option) =>
+                  this.compileNode(option, mode, day, prefs, originalPrefs)
                 );
-                if (lookupEl) {
-                  this.replace(child, lookupEl, mode);
-                }
-
-                if (doc.lookup) {
-                  console.log("lookup", doc, child, lookupEl);
-                }
-
-                if (doc.compile_hidden) {
-                  this.hide(child, mode);
-                }
-              } catch (e) {
-                console.warn(e, decodeURI(ldf));
               }
+
+              // first, run any condition checks
+              const include = doc.include(day as LiturgicalDay, {});
+              if (!include) {
+                this.hide(child, mode);
+              } else {
+                this.show(child);
+              }
+
+              // next, run any lookups
+              const lookupEl = await this.lookup(
+                doc,
+                day as LiturgicalDay,
+                prefs,
+                originalPrefs
+              );
+              if (lookupEl) {
+                this.replace(child, lookupEl, mode);
+              }
+
+              // insert seasonal antiphons as needed
+              if (
+                doc.type === "psalm" &&
+                (doc as Psalm).metadata.insert_seasonal_antiphon
+              ) {
+                const antiphon = await this.lookupByCategory(
+                  ["Seasonal Antiphon"],
+                  versionToString(doc.version)
+                );
+                console.log("antiphon = ", antiphon);
+              }
+
+              // hide it if it's supposed to be hidden after compilation
+              if (doc.compile_hidden) {
+                this.hide(child, mode);
+              }
+            } catch (e) {
+              console.warn(e, decodeURI(ldf));
             }
           }
         }
       }
-    });
+    }
   }
 
   // DOM manipulation methods
