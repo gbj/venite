@@ -876,7 +876,7 @@
           "source": {
             "api": "https://www.venite.app/api",
             "source": "bcp1979",
-            "citation": "p. 82"
+            "citation": "p. 44"
           },
           "language": "en",
           "style": "invitatory",
@@ -904,7 +904,7 @@
             ],
             "mode": "or"
           },
-          "version": "bcp1979",
+          "version": "rite_i",
           "label": "Venite"
         },
         {
@@ -920,7 +920,7 @@
           "slug": "jubilate",
           "language": "en",
           "source": {
-            "citation": "p. 82",
+            "citation": "p. 45",
             "api": "https://www.venite.app/api",
             "source": "bcp1979"
           },
@@ -956,7 +956,7 @@
             "omit_gloria": false,
             "latinname": null
           },
-          "version": "bcp1979",
+          "version": "rite_i",
           "type": "psalm",
           "category": ["Invitatory"],
           "value": [
@@ -1123,7 +1123,7 @@
           "source": {
             "api": "https://www.venite.app/api",
             "source": "bcp1979",
-            "citation": "p. 83"
+            "citation": "p. 46"
           },
           "value": [
             {
@@ -1183,7 +1183,7 @@
             }
           ],
           "label": "Christ our Passover",
-          "version": "bcp1979",
+          "version": "rite_i",
           "type": "psalm",
           "slug": "pascha_nostrum",
           "category": ["Invitatory"],
@@ -1288,7 +1288,7 @@
             }
           ],
           "version_label": "Venite (BCP)",
-          "version": "bcp1979",
+          "version": "rite_i",
           "metadata": {
             "omit_antiphon": false,
             "number": null,
@@ -1309,7 +1309,7 @@
           "language": "en",
           "source": {
             "source": "bcp1979",
-            "citation": "p. 82",
+            "citation": "p. 44",
             "api": "https://www.venite.app/api"
           },
           "condition": {
@@ -1331,7 +1331,7 @@
           "label": "Jubilate",
           "source": {
             "source": "bcp1979",
-            "citation": "p. 82",
+            "citation": "p. 45",
             "api": "https://www.venite.app/api"
           },
           "category": ["Invitatory"],
@@ -1381,7 +1381,7 @@
             { "value": [], "type": "psalm-section" }
           ],
           "type": "psalm",
-          "version": "bcp1979",
+          "version": "rite_i",
           "version_label": "Jubilate (BCP)",
           "style": "invitatory",
           "language": "en",
