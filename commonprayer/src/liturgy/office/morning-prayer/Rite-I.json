@@ -543,7 +543,8 @@
           "lookup": {
             "type": "category"
           },
-          "version": "Rite-I"
+          "version": "Rite-I",
+          "compile_hidden": true
         },
         {
           "type": "rubric",

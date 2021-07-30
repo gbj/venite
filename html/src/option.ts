@@ -31,7 +31,9 @@ export function optionToHTML(doc: Option, config: LDFToHTMLConfig): string {
     ldfToHTML(sub, { ...config, includeLDF: true })
   );
 
-  return `<article class="option">${[
+  return `<article class="option" data-ldf="${encodeURI(
+    JSON.stringify(doc)
+  )}">${[
     ...buttons,
     `<section class="option-labels">${labels.join("\n")}</section>`,
     `<section class="options">${docs.join("\n")}</section>`,

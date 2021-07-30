@@ -1,8 +1,7 @@
 {
   "data": [
     {
-      "category": ["Advent", "Seasonal Antiphon"],
-      "label": null,
+      "category": ["In Advent", "Advent", "Seasonal Antiphon"],
       "version": "Rite-I",
       "citation": null,
       "type": "refrain",
@@ -11,9 +10,12 @@
       "language": "en"
     },
     {
-      "category": ["Christmas", "Seasonal Antiphon"],
+      "category": [
+        "On the Twelve Days of Christmas",
+        "Christmas",
+        "Seasonal Antiphon"
+      ],
       "hidden": false,
-      "label": "On the Twelve Days of Christmas",
       "version": "Rite-I",
       "citation": null,
       "type": "refrain",
@@ -24,11 +26,14 @@
       "language": "en"
     },
     {
-      "label": "From the Epiphany through the Baptism of Christ, and on the Feasts of the Transfiguration and Holy Cross",
       "value": [
         "The Lord hath manifested forth his glory: O come, let us adore him."
       ],
-      "category": ["Epiphany", "Seasonal Antiphon"],
+      "category": [
+        "From the Epiphany through the Baptism of Christ, and on the Feasts of the Transfiguration and Holy Cross",
+        "Epiphany",
+        "Seasonal Antiphon"
+      ],
       "language": "en",
       "type": "refrain",
       "version": "Rite-I",
@@ -40,13 +45,11 @@
         "The Lord is full of compassion and mercy: O come, let us adore him."
       ],
       "type": "refrain",
-      "label": "In Lent",
       "version": "Rite-I",
       "style": "antiphon",
-      "category": ["Lent", "Holy Week", "Seasonal Antiphon"]
+      "category": ["In Lent", "Lent", "Holy Week", "Seasonal Antiphon"]
     },
     {
-      "label": "From Easter Day until the Ascension",
       "value": [
         "Alleluia. The Lord is risen indeed: O come, let us adore him. Alleluia."
       ],
@@ -54,13 +57,20 @@
       "language": "en",
       "version": "Rite-I",
       "type": "refrain",
-      "category": ["Easter", "Seasonal Antiphon"]
+      "category": [
+        "From Easter Day until the Ascension",
+        "Easter",
+        "Seasonal Antiphon"
+      ]
     },
     {
       "version": "Rite-I",
       "type": "refrain",
-      "label": "From Ascension Day until the Day of Pentecost",
-      "category": ["Ascension", "Seasonal Antiphon"],
+      "category": [
+        "From Ascension Day until the Day of Pentecost",
+        "Ascension",
+        "Seasonal Antiphon"
+      ],
       "value": [
         "Alleluia. Christ the Lord ascendedeth into heaven: O come, let us adore him. Alleluia."
       ],
@@ -68,11 +78,10 @@
       "style": "antiphon"
     },
     {
-      "label": "On the Day of Pentecost",
       "value": [
         "Alleluia. The Spirit of the Lord filleth the world: O come, let us adore him. Alleluia."
       ],
-      "category": ["Pentecost", "Seasonal Antiphon"],
+      "category": ["On the Day of Pentecost", "Pentecost", "Seasonal Antiphon"],
       "language": "en",
       "type": "refrain",
       "version": "Rite-I",
@@ -80,13 +89,12 @@
     },
     {
       "hidden": false,
-      "category": ["Trinity Sunday", "Seasonal Antiphon"],
+      "category": ["On Trinity Sunday", "Trinity Sunday", "Seasonal Antiphon"],
       "value": [
         "Father, Son, and Holy Spirit, one God: O come, let us adore him."
       ],
       "language": "en",
       "style": "antiphon",
-      "label": "On Trinity Sunday",
       "type": "refrain",
       "version": "Rite-I"
     },
@@ -114,7 +122,6 @@
       ],
       "type": "refrain",
       "version": "Rite-I",
-      "label": null,
       "hidden": false,
       "version_label": null,
       "value": [

@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.11";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.12";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -102,10 +102,8 @@ export class CompileServiceController {
               const doc = new LiturgicalDocument(JSON.parse(decodeURI(ldf)));
 
               if (doc.type === "option") {
-                const options = child.querySelectorAll(".options");
-                options.forEach((option) =>
-                  this.compileNode(option, mode, day, prefs, originalPrefs)
-                );
+                const options = child.querySelector(".options");
+                this.compileNode(options, mode, day, prefs, originalPrefs);
               }
 
               // first, run any condition checks
@@ -132,16 +130,34 @@ export class CompileServiceController {
                 doc.type === "psalm" &&
                 (doc as Psalm).metadata.insert_seasonal_antiphon
               ) {
-                const antiphon = await this.lookupByCategory(
-                  ["Seasonal Antiphon"],
+                const antiphons = await this.lookupByCategory(
+                  ["Invitatory Antiphons"],
                   versionToString(doc.version)
                 );
-                console.log("antiphon = ", antiphon);
+                const antiphon = this.filterAndRotate(
+                  new LiturgicalDocument({
+                    lookup: {
+                      type: "category",
+                      filter: "seasonal",
+                      rotate: true,
+                      allow_multiple: false,
+                    },
+                  }),
+                  day,
+                  antiphons
+                );
+
+                doc.metadata.antiphon = { ...antiphon, label: undefined };
+                child.innerHTML = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
               }
 
               // hide it if it's supposed to be hidden after compilation
               if (doc.compile_hidden) {
-                this.hide(child, mode);
+                if (lookupEl) {
+                  this.hide(lookupEl, mode);
+                } else {
+                  this.hide(child, mode);
+                }
               }
             } catch (e) {
               console.warn(e, decodeURI(ldf));
