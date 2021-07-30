@@ -512,7 +512,6 @@ export class LiturgySelectComponent implements OnInit {
         }
       }),
       debounceTime(50),
-      filter((oc) => oc?.length > 0),
       distinctUntilChanged(
         (prev, curr) => JSON.stringify(prev) === JSON.stringify(curr)
       ),
