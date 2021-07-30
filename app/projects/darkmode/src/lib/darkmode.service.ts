@@ -9,6 +9,8 @@ import {
   PREFERENCES_SERVICE,
   PLATFORM_SERVICE,
   StoredPreference,
+  LOCAL_STORAGE,
+  LocalStorageServiceInterface,
 } from "@venite/ng-service-api";
 
 @Injectable({
@@ -26,7 +28,8 @@ export class DarkmodeService {
     private preferences: PreferencesServiceInterface,
     private alert: AlertController,
     @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface,
-    private translate: TranslateService
+    private translate: TranslateService,
+    @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface
   ) {
     if (!this.platform.is("server")) {
       this.darkmodePreference$ = this.preferences
@@ -96,17 +99,28 @@ export class DarkmodeService {
       this.translate.get("darkmode.darkmode"),
       this.translate.get("darkmode.needsAuto")
     ).subscribe(async ([header, message]) => {
-      const alert = await this.alert.create({
-        header: this.translate.instant("darkmode.darkmode"),
-        message: this.translate.instant("darkmode.needsAuto", {
-          deviceMode: deviceDark
-            ? this.translate.instant("darkmode.dark-mode")
-            : this.translate.instant("darkmode.light-mode"),
-        }),
-        buttons: ["OK"],
-      });
+      const hasNotified: boolean = await this.storage.get(
+        "hasNotifiedAboutDarkMode"
+      );
 
-      await alert.present();
+      if (!hasNotified) {
+        const alert = await this.alert.create({
+          header: this.translate.instant("darkmode.darkmode"),
+          message: this.translate.instant("darkmode.needsAuto", {
+            deviceMode: deviceDark
+              ? this.translate.instant("darkmode.dark-mode")
+              : this.translate.instant("darkmode.light-mode"),
+          }),
+          buttons: ["OK"],
+        });
+
+        await alert.present();
+
+        await alert.onDidDismiss();
+
+        // set flag to not show the message any more
+        await this.storage.set("hasNotifiedAboutDarkMode", true);
+      }
     });
   }
 }
