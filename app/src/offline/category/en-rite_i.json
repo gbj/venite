@@ -2723,7 +2723,7 @@
     },
     "category": ["Collect", "Collect of the Day"],
     "value": [
-      "Merciful God, who sent thy messengers the prophets to preach repentance and prepare the way for our salvation: Give us grace to heed their warnings and forsake our sins, that we may greet with joy the coming of Jesus Christ our Redeemer; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      "Merciful God, who didst send thy messengers the prophets to preach repentance and prepare the way for our salvation: Give us grace to heed their warnings and forsake our sins, that we may greet with joy the coming of Jesus Christ our Redeemer; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
     ],
     "type": "text",
     "style": "prayer",
@@ -3640,7 +3640,7 @@
   },
   {
     "language": "en",
-    "category": ["Collect", "Collect of the Day"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "type": "text",
     "style": "prayer",
     "version": "rite_i",
@@ -3649,7 +3649,9 @@
       "omit_response": false
     },
     "slug": "richard-hooker",
-    "value": ["hn 17:18–23"],
+    "value": [
+      "O God of truth and peace, who didst raise upthy servant Richard Hooker in a day of bitter controversy to defend with sound reasoning and great charity the catholic and reformed religion: Grant that we may maintain that middle way, not as a compromise for the sake of peace, but as a comprehension for the sake of truth; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
     "sharing": {
       "organization": "venite",
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -3795,14 +3797,16 @@
     }
   },
   {
-    "value": ["rk 4:26–29"],
+    "value": [
+      "Almighty God, who didst call thy servant David to be a faithful and wise steward of thy mysteries for the people of Wales: Mercifully grant that, following his purity of life and zeal for the Gospel of Christ, we may, with him, praise thee both here on earth and also in thy everlasting kingdom; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
     "style": "prayer",
     "metadata": {
       "response": "Amen.",
       "omit_response": false
     },
     "slug": "david-of-wales",
-    "category": ["Collect", "Collect of the Day"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "language": "en",
     "type": "text",
     "sharing": {
@@ -4569,11 +4573,13 @@
       "privacy": "public",
       "collaborators": []
     },
-    "value": ["ke 6:43–49"],
+    "value": [
+      "O God, who didst call thy servant Alfred to an earthly throne that he might advance thy heavenly kingdom and didst give him zeal for thy church and love for thy people: Grant that we, inspired by his example and prayers, may remain steadfast in the work thou hast given us to do for the building up of thy reign of love; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
     "slug": "alfred",
     "style": "prayer",
     "version": "rite_i",
-    "category": ["Collect", "Collect of the Day"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "metadata": {
       "omit_response": false,
       "response": "Amen."
@@ -6981,7 +6987,7 @@
     "style": "prayer",
     "category": ["Collect", "Collect of the Day"],
     "value": [
-      "We thank thee, heavenly Father, for that thous hast delivered us from the dominion of sin and death and hast brought us into the kingdom of thy Son; and we pray that, as by his death he hath recalled us to life, so by his love he may raise us to joys eternal; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      "We thank thee, heavenly Father, for that thou hast delivered us from the dominion of sin and death and hast brought us into the kingdom of thy Son; and we pray that, as by his death he hath recalled us to life, so by his love he may raise us to joys eternal; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
     ],
     "version": "rite_i",
     "sharing": {
@@ -7209,7 +7215,7 @@
     "language": "en",
     "hidden": false,
     "value": [
-      "O Everlasting God, who hast ordained and constituted the ministries of angels and men in a wonderful order: Mercifully grant that, as thy holy angels always serve and worship thee in heaven, so by thy appointment they may help and defend us on earth; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      "O everlasting God, who hast ordained and constituted the ministries of angels and men in a wonderful order: Mercifully grant that, as thy holy angels always serve and worship thee in heaven, so by thy appointment they may help and defend us on earth; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
     ],
     "type": "text",
     "slug": "st-michael"
@@ -7994,7 +8000,7 @@
   },
   {
     "value": [
-      "Almighty Father, who didst inspired Simon Peter, first among the apostles, to confess Jesus as Messiah and Son of the living God: Keep thy Church steadfast upon the rock of this faith, so that in unity and peace we may proclaim the one truth and follow the one Lord, our Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+      "Almighty Father, who didst inspire Simon Peter, first among the apostles, to confess Jesus as Messiah and Son of the living God: Keep thy Church steadfast upon the rock of this faith, so that in unity and peace we may proclaim the one truth and follow the one Lord, our Savior Jesus Christ; who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
     ],
     "metadata": {
       "response": "Amen.",
@@ -8367,7 +8373,7 @@
     "language": "en",
     "version": "rite_i",
     "value": [
-      "Almighty and gracious Father, we give you thanks for the fruits of the earth in their season and for the labors of those who harvest them. Make us, we pray, faithful stewards of your great bounty, for the provision of our necessities and the relief of all who are in need, to the glory of your Name; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, now and for ever."
+      "Almighty and gracious Father, we give thee thanks for the fruits of the earth in their season and for the labors of those who harvest them. Make us, we beseech thee, faithful stewards of thy great bounty, for the provision of our necessities and the relief of all who are in need, to the glory of thy Name; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
     ],
     "hidden": false,
     "sharing": {
@@ -9047,7 +9053,7 @@
       "status": "published"
     },
     "slug": "zita-of-tuscany",
-    "category": ["Collect", "Collect of the Day"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "type": "text",
     "version": "rite_i"
   },
@@ -9105,7 +9111,7 @@
   {
     "slug": "john-and-charles-wesley",
     "value": [
-      "Lord God, who didst inspire thy servants Johnand Charles Wesley with burning zeal for the sanctification of souls and didst endow themwith eloquence in speech and song: Kindle such fervor in thy church, we beseech thee, that those whose faith has cooled may be warmed, and those who have not known thy Christ may turn to him and be saved; who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. "
+      "Lord God, who didst inspire thy servants John and Charles Wesley with burning zeal for the sanctification of souls and didst endow themwith eloquence in speech and song: Kindle such fervor in thy church, we beseech thee, that those whose faith has cooled may be warmed, and those who have not known thy Christ may turn to him and be saved; who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. "
     ],
     "metadata": {
       "response": "Amen.",
@@ -10279,7 +10285,7 @@
       "omit_response": false
     },
     "value": [
-      "Set us free, O God, from the bondage of our sins, and give us, we beseech thee, the liberty of that abundant life which thou hast manifested to us in thy Son our Savior Jesus Christ; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      "Set us free, O God, from the bondage of our sins and give us, we beseech thee, the liberty of that abundant life which thou hast manifested to us in thy Son our Savior Jesus Christ; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
     ],
     "type": "text"
   },
@@ -10708,7 +10714,7 @@
     "language": "en",
     "hidden": false,
     "value": [
-      "Almighty and everliving God, who, of thy tender love towards mankind, hast sent thy Son our Savior Jesus Christ to take upon him our flesh, and to suffer death upon the cross, that all mankind should follow the example of his great humility: Mercifully grant that we may both follow the example of his patience, and also be made partakers of his resurrection; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+      "Almighty and everlasting God, who, of thy tender love towards mankind, hast sent thy Son our Savior Jesus Christ to take upon him our flesh, and to suffer death upon the cross, that all mankind should follow the example of his great humility: Mercifully grant that we may both follow the example of his patience, and also be made partakers of his resurrection; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
     ],
     "version": "rite_i",
     "sharing": {
@@ -11670,7 +11676,7 @@
       "organization": "venite",
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
     },
-    "category": ["Collect", "Collect of the Day"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "slug": "all-souls-day"
   },
   {
@@ -11922,7 +11928,7 @@
     },
     "slug": "8th-epiphany",
     "value": [
-      "Most loving Father, who willest us to give thanks for all things, to dread nothing but the loss of thee, and to cast all our care on thee who carest for us: Preserve us from faithless fears and worldly anxieties, and grant that no clouds of this mortal life may hide from us the light of that love which is immortal, and which thou hast manifested to us in thy Son Jesus Christ our Lord; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      "O most loving Father, who willest us to give thanks for all things, to dread nothing but the loss of thee, and to cast all our care on thee who carest for us: Preserve us from faithless fears and worldly anxieties, and grant that no clouds of this mortal life may hide from us the light of that love which is immortal, and which thou hast manifested to us in thy Son Jesus Christ our Lord; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
     ],
     "sharing": {
       "status": "published",
