@@ -262,7 +262,7 @@
           },
           {
             "metadata": { "alternateYear": false },
-            "value": "tdb",
+            "value": "tdb_i",
             "default": false,
             "label": "Te Deum/Benedictus"
           },

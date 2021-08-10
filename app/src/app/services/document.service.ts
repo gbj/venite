@@ -242,6 +242,56 @@ export class DocumentService {
     return this.afs.doc<LiturgicalDocument>(`Document/${docId}`).valueChanges();
   }
 
+  // made more efficient by not searching DB for every Gloria Patri
+  findGloria(
+    language: string,
+    versions: string[]
+  ): Observable<LiturgicalDocument[]> {
+    if (language === "en") {
+      if (versions.includes("rite_i") || versions.includes("coverdale")) {
+        return of([
+          new LiturgicalDocument({
+            version_label: "",
+            type: "refrain",
+            language: "en",
+            hidden: false,
+            slug: "gloria-patri",
+            category: [null],
+            label: null,
+            version: "rite_i",
+            style: "gloria",
+            citation: null,
+            value: [
+              "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+              "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
+            ],
+          }),
+        ]);
+      } else {
+        return of([
+          new LiturgicalDocument({
+            version: "bcp1979",
+            category: [null],
+            label: null,
+            version_label: "Rite II",
+            type: "refrain",
+            slug: "gloria-patri",
+            value: [
+              "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+              "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen.",
+            ],
+            citation: null,
+            language: "en",
+            style: "gloria",
+            hidden: false,
+          }),
+        ]);
+      }
+    } else {
+      this.findDocumentsBySlug("gloria-patri", language, versions);
+    }
+  }
+
   findDocumentsBySlug(
     slug: string,
     language: string = "en",
@@ -256,7 +306,7 @@ export class DocumentService {
       // add Gloria to psalms, canticles, invitatories, if they don't have
       const gloriaQuery$: Observable<LiturgicalDocument[]> =
         slug !== "gloria-patri"
-          ? this.findDocumentsBySlug("gloria-patri", language, versions)
+          ? this.findGloria(language, versions) //this.findDocumentsBySlug("gloria-patri", language, versions)
           : of([]);
       return combineLatest([docs$, gloriaQuery$]).pipe(
         map(([docs, gloria]) =>

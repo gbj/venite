@@ -32,6 +32,7 @@ import {
 } from "@venite/ng-service-api";
 import { LiturgyConfig } from "@venite/ng-pray/lib/liturgy-config";
 import { isCompletelyCompiled } from "./is-completely-compiled";
+import { DocumentService } from "../services/document.service";
 
 const LOADING = new LiturgicalDocument({
   type: "text",
@@ -56,7 +57,7 @@ export class PrayService {
 
   constructor(
     @Inject("liturgyConfig") private config: LiturgyConfig,
-    @Inject(DOCUMENT_SERVICE) private documents: DocumentServiceInterface,
+    private documents: DocumentService,
     @Inject(LECTIONARY_SERVICE)
     private lectionaryService: LectionaryServiceInterface,
     @Inject(CANTICLE_TABLE_SERVICE)
@@ -182,6 +183,9 @@ export class PrayService {
       ) {
         doc.day = day;
       }
+
+      console.log("slug = ", doc.slug, "gloria = ", doc.metadata?.gloria);
+
       // if psalm with Gloria inserted, condition-check the provided Gloria
       if (
         doc.metadata?.gloria &&
@@ -258,7 +262,13 @@ export class PrayService {
       case "lectionary":
         result =
           doc.type == "psalm"
-            ? this.lookupPsalter(doc, day, prefs, originalPrefs)
+            ? this.lookupPsalter(
+                doc,
+                day,
+                prefs,
+                originalPrefs,
+                alternateVersions
+              )
             : this.lookupLectionaryReadings(doc, day, prefs, originalPrefs);
         break;
       case "canticle-table":
@@ -709,7 +719,8 @@ export class PrayService {
     doc: LiturgicalDocument,
     day: LiturgicalDay,
     prefs: ClientPreferences,
-    originalPrefs: Record<string, Preference> | undefined
+    originalPrefs: Record<string, Preference> | undefined,
+    liturgyversions: string[]
   ): Observable<LiturgicalDocument> {
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
     const version: string =
@@ -717,7 +728,12 @@ export class PrayService {
         ? prefs[doc.version.preference]
         : doc.version || prefs["psalterVersion"] || "bcp1979";
 
-    return this.findReadings(doc, day, prefs, originalPrefs).pipe(
+    const gloriaQuery$ = this.documents.findGloria(
+      doc.language || "en",
+      liturgyversions
+    );
+
+    const psalms$ = this.findReadings(doc, day, prefs, originalPrefs).pipe(
       map((entries) =>
         (entries || []).map(
           (entry) =>
@@ -728,6 +744,7 @@ export class PrayService {
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
+              metadata: { liturgyversions },
               citation: entry?.citation?.startsWith("Psalm ")
                 ? entry.citation
                 : undefined,
@@ -767,6 +784,29 @@ export class PrayService {
                 : a?.metadata?.number - b?.metadata?.number
             ),
           })
+      )
+    );
+
+    return combineLatest([gloriaQuery$, psalms$]).pipe(
+      map(([gloria, psalms]) =>
+        psalms.type === "psalm"
+          ? new LiturgicalDocument({
+              ...psalms,
+              metadata: { ...psalms.metadata, gloria: docsToOption(gloria) },
+            })
+          : new LiturgicalDocument({
+              type: "liturgy",
+              value: (psalms as Liturgy).value.map(
+                (psalm) =>
+                  new LiturgicalDocument({
+                    ...psalm,
+                    metadata: {
+                      ...psalm.metadata,
+                      gloria: docsToOption(gloria),
+                    },
+                  })
+              ),
+            })
       )
     );
   }
