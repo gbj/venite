@@ -7,10 +7,10 @@ import { TOCMenu } from "./toc-menu.tsx";
 export default function Menus() {
   return [
     <header id="menu-header">
-      <button class="menu-button" id="toc-menu-button">
+      <a class="menu-button" id="toc-menu-button" href="/">
         <img src="/assets/icon/books.svg"/>
         <span class="visually-hidden">Table of Contents</span>
-      </button>
+      </a>
       <PreviewMenu hidden={true} />
       <DocActionMenu hidden={true} />
       <button class="menu-button" id="display-menu-button">
@@ -18,7 +18,6 @@ export default function Menus() {
         <span class="visually-hidden">Display Settings</span>
       </button>
     </header>,
-    <TOCMenu/>,
     <DisplaySettings/>,
     <div id="menu-backdrop"></div>
   ]

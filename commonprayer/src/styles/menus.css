@@ -96,7 +96,6 @@ button.close {
 }
 
 /* Both menus */
-.toc-menu,
 .display-settings {
   /* This will center in both X and Y */
   position: fixed;
@@ -122,14 +121,12 @@ button.close {
 
 /* On mobile, take full screen */
 @media (max-width: 767px) {
-  .toc-menu,
   .display-settings {
     width: 100vw;
     max-height: 100vh;
   }
 }
 
-.toc-menu.hidden,
 .display-settings.hidden {
   opacity: 0;
   height: 0;
@@ -137,20 +134,23 @@ button.close {
 }
 
 /* TOC menu */
-.toc-menu ul {
+ul.toc-menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.toc-menu ul li {
+ul.toc-menu li {
   margin: 0;
-  margin-left: 1rem;
   padding: 0;
 }
 
+ul.toc-menu > li {
+  margin-bottom: 0.5rem;
+}
+
 .toc-menu > ul > li,
-.toc-menu ul {
+ul.toc-menu {
   margin-bottom: 1rem;
 }
 
