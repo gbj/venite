@@ -47,6 +47,7 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
     <script type="module" src="/scripts/menus.js"></script>
     {scripts && scripts.map(url => <script type="module" src={url}></script>)}
     <script type="module" src="/scripts/cp-doc.js"></script>
+    <script type="module" src="/scripts/option.js" defer></script>
   </html>;
 
   return `<!DOCTYPE html>${page}`

@@ -11,31 +11,30 @@ function lowQualityUUID() {
 }
 
 export function optionToHTML(doc: Option, config: LDFToHTMLConfig): string {
-  const uuid = lowQualityUUID(),
+  const uid = lowQualityUUID(),
     opt = new Option(doc),
     selected = doc.metadata?.selected ?? doc.metadata?.editor_selected ?? 0;
 
   const buttons = (doc.value || []).map(
-    (sub: LiturgicalDocument, subIndex) =>
-      `<input type="radio" name="${uuid}" class="option-button" id="${uuid}-${subIndex}" value="${subIndex}"${
-        subIndex === selected ? " checked" : ""
-      }>`
+    (sub: LiturgicalDocument, subIndex) => `<label for="${uid}-${subIndex}">
+      ${opt.getVersionLabel(sub)}
+      <input type="radio" id="${uid}-${subIndex}" name="${uid}" value="${subIndex}"${
+      subIndex === Number(selected) ? " checked" : ""
+    }>
+    </label>`
   );
 
-  const labels = (doc.value || []).map(
-    (sub: LiturgicalDocument, subIndex) =>
-      `<label for="${uuid}-${subIndex}">${opt.getVersionLabel(sub)}</label>`
-  );
-
-  const docs = (doc.value || []).map((sub: LiturgicalDocument) =>
-    ldfToHTML(sub, { ...config, includeLDF: true })
+  const docs = (doc.value || []).map((sub: LiturgicalDocument, subIndex) =>
+    ldfToHTML(
+      new LiturgicalDocument({ ...sub, hidden: subIndex !== Number(selected) }),
+      { ...config, includeLDF: true }
+    )
   );
 
   return `<article class="option" data-ldf="${encodeURI(
     JSON.stringify(doc)
   )}">${[
-    ...buttons,
-    `<section class="option-labels">${labels.join("\n")}</section>`,
+    `<section class="option-labels">${buttons.join("\n")}</section>`,
     `<section class="options">${docs.join("\n")}</section>`,
   ].join("\n")}</article>`;
 }
