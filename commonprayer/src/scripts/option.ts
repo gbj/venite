@@ -7,7 +7,7 @@ options.forEach((option) => {
         parent = (target as HTMLElement).closest(".option") as HTMLElement,
         ldf = parent.dataset.ldf,
         doc = ldf ? JSON.parse(decodeURI(ldf)) : null,
-        options = parent.querySelectorAll(".options .doc");
+        options = parent.querySelectorAll(".options > .doc");
 
       // update selection in data-ldf field
       if (doc) {
@@ -27,5 +27,6 @@ options.forEach((option) => {
         }
       });
     });
+    input.dispatchEvent(new Event("change"));
   });
 });

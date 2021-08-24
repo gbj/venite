@@ -29,12 +29,12 @@
 }
 
 /* Psalm Verses */
-#psalmverses:not(:checked) ~ main {
+main.psalmverses {
   --ldf-psalm-number-display: none;
   --ldf-psalm-grid-display: block;
   --ldf-psalm-verse-grid: "verse verse" "half-verse half-verse";
 }
-#psalmverses:checked ~ menu {
+menu.psalmverses {
   --psalmverses-background-color: var(--cp-success-light);
   --psalmverses-toggle-color: var(--cp-success-background);
   --psalmverses-padding: calc(0.5rem - 1px);
@@ -50,10 +50,13 @@ label[for="psalmverses"] {
 }
 
 /* Bible Verses */
-#bibleverses:not(:checked) ~ main {
+main {
   --ldf-bible-verse-display: none;
 }
-#bibleverses:checked ~ menu {
+main.bibleverses {
+  --ldf-bible-verse-display: inline-block;
+}
+menu.bibleverses {
   --bibleverses-background-color: var(--cp-success-light);
   --bibleverses-background-image: url("/assets/icon/check-solid.svg");
   --bibleverses-toggle-color: var(--cp-success-background);
@@ -69,11 +72,11 @@ label[for="bibleverses"] {
 }
 
 /* Response */
-#responses-bold:checked ~ main .response, #responses-bold:checked ~ main .unison {
+main.responses-bold .response, main.responses-bold .unison {
   font-weight: bold;
   font-style: normal;
 }
-#responses-bold:checked ~ menu {
+menu.responses-bold {
   --responses-bold-background-color: var(--cp-success-light);
   --responses-bold-background-image: url("/assets/icon/check-solid.svg");
   --responses-bold-toggle-color: var(--cp-success-background);
@@ -87,11 +90,11 @@ label[for="responses-bold"] {
   padding: var(--responses-bold-padding, 0.5rem);
   margin: 1px;
 }
-#responses-italic:checked ~ main .response, #responses-italic:checked ~ main .unison {
+main.responses-italic .response, main.responses-italic .unison {
   font-weight: normal;
   font-style: italic;
 }
-#responses-italic:checked ~ menu {
+menu.responses-italic {
   --responses-italic-background-color: var(--cp-success-light);
   --responses-italic-background-image: url("/assets/icon/check-solid.svg");
   --responses-italic-toggle-color: var(--cp-success-background);
@@ -104,4 +107,10 @@ label[for="responses-italic"] {
   border: 1px solid var(--responses-italic-toggle-color);
   padding: var(--responses-italic-padding, 0.5rem);
   margin: 1px;
+}
+
+
+.bible-reading .bible-verse-number {
+  display: var(--ldf-bible-verse-display);
+  margin-right: 0.25rem;
 }
