@@ -744,7 +744,7 @@ export class PrayService {
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
-              metadata: { liturgyversions },
+              metadata: { ...doc.metadata, liturgyversions },
               citation: entry?.citation?.startsWith("Psalm ")
                 ? entry.citation
                 : undefined,
