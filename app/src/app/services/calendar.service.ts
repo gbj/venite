@@ -252,7 +252,7 @@ export class CalendarService implements CalendarServiceInterface {
           .concat(specials)
           .concat(thanksgiving)
       ),
-      // remove black-letter days that fall on a major feast
+      // remove black-letter days that fall on a major feast or a Sunday
       map((holydays) => {
         const highestHolyDayRank = Math.max(
           ...holydays.map((holyday) => holyday.type?.rank ?? 3)
@@ -264,10 +264,19 @@ export class CalendarService implements CalendarServiceInterface {
               !holyday.type?.rank ||
               holyday.type?.rank >= highestHolyDayRank
           );
-        } else if (isSunday && day.season !== "OrdinaryTime") {
+        }
+        // filter out red-letter days on Sundays outside ordinary time
+        else if (isSunday && day.season !== "OrdinaryTime") {
           holydays = holydays.filter(
             (holyday) =>
               holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4
+          );
+        }
+        // filter out black-letter days on Sundays in ordinary time
+        else if (isSunday && day.season === "OrdinaryTime") {
+          holydays = holydays.filter(
+            (holyday) =>
+              holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 3
           );
         }
 
