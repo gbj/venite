@@ -114,6 +114,15 @@ export class CalendarService implements CalendarServiceInterface {
           ? KALENDAR["bcp1979"]
               .filter((day) => day.mmdd === mmdd && day?.type?.rank >= 3)
               .concat(KALENDAR["lff2018"].filter((day) => day.mmdd === mmdd))
+              .map((day) =>
+                day.color
+                  ? day
+                  : {
+                      ...day,
+                      color: KALENDAR["bcp1979"].find((d) => d.mmdd == day.mmdd)
+                        ?.color,
+                    }
+              )
           : KALENDAR[kalendar].filter((day) => day.mmdd == mmdd),
       eveToday =
         kalendar === "lff2018"
