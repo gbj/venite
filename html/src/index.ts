@@ -24,8 +24,7 @@ import { parallelToHTML } from "./parallel";
 
 export function ldfToHTML(
   inDoc: LiturgicalDocument,
-  config: LDFToHTMLConfig,
-  hidden?: boolean | undefined
+  config: LDFToHTMLConfig
 ): string {
   const localeStrings = LOCALE_STRINGS["en"];
 

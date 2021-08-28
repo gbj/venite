@@ -32,6 +32,10 @@ article {
   font-family: "Times New Roman" !important;
 }
 
+.bible-reading .bible-verse-number {
+  display: var(--ldf-bible-verse-display);
+}
+
 /* Short citations */
 .bible-reading.short .citation {
   font-size: 80%;
@@ -84,7 +88,8 @@ article {
   display: table-row;
 }
 
-.responsive-prayer.preces .line > em, .responsive-prayer.preces .line > span {
+.responsive-prayer.preces .line > em,
+.responsive-prayer.preces .line > span {
   display: table-cell;
 }
 .responsive-prayer.preces .line > em {
@@ -104,7 +109,10 @@ article {
   display: grid;
   grid-template-columns: 2em 1fr;
   grid-template-rows: auto;
-  grid-template-areas: var(--ldf-psalm-verse-grid, "number verse" "spacing half-verse");
+  grid-template-areas: var(
+    --ldf-psalm-verse-grid,
+    "number verse" "spacing half-verse"
+  );
   margin: 0;
 }
 
@@ -112,14 +120,14 @@ article {
   display: grid;
   grid-template-columns: 2em 1fr;
   grid-template-rows: auto;
-  grid-template-areas:"verse verse" "half-verse half-verse";
+  grid-template-areas: "verse verse" "half-verse half-verse";
   margin: 0;
 }
 
 .psalm-verse sup {
   display: var(--ldf-psalm-number-display);
   grid-area: number;
-  margin-right: 1em;;
+  margin-right: 1em;
 }
 
 .psalm-verse .verse {
