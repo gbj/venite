@@ -137,6 +137,23 @@
         "label": "Angelus",
         "category": "Supplemental Devotions"
       },
+      "litany": {
+        "options": [
+          {
+            "value": "no",
+            "default": true,
+            "label": "—"
+          },
+          {
+            "value": "yes",
+            "default": false,
+            "label": "Following the Collects"
+          }
+        ],
+        "key": "litany",
+        "label": "The Great Litany",
+        "category": "Supplemental Devotions"
+      },
       "veniteGloria": {
         "key": "veniteGloria",
         "category": "Advanced",
@@ -2036,20 +2053,38 @@
         "Here may be sung a hymn or anthem.",
         "Authorized intercessions and thanksgivings may follow."
       ],
-      "hidden": false
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
     {
       "hidden": false,
       "source": {},
       "type": "text",
-      "style": "authorized-prayers"
+      "style": "authorized-prayers",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
     {
       "type": "rubric",
       "hidden": false,
       "value": [
         "Before the close of the Office one or both of the following may be used"
-      ]
+      ],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
     {
       "hidden": false,
@@ -2062,7 +2097,13 @@
       "value": [
         "Almighty God, Father of all mercies,\nwe thine unworthy servants\ndo give thee most humble and hearty thanks\nfor all thy goodness and loving-kindness\nto us and to all men.\nWe bless thee for our creation, preservation,\nand all the blessings of this life;\nbut above all for thine inestimable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
         "And, we beseech thee,\ngive us that due sense of all thy mercies,\nthat our hearts may be unfeignedly thankful;\nand that we show forth thy praise,\nnot only with our lips, but in our lives,\nby giving up our selves to thy service,\nand by walking before thee\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with thee and the Holy Ghost,\nbe all honor and glory, world without end."
-      ]
+      ],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
     {
       "category": [],
@@ -2074,9 +2115,25 @@
       "value": [
         "Almighty God, who hast given us grace at this time with one accord to make our common supplication unto thee; and hast promised through thy well-beloved Son that when two or three are gathered together in his Name thou wilt be in the midst of them: Fulfill now, O Lord, the desires and petitions of thy servants as may be best for us; granting us in this world knowledge of thy truth, and in the world to come life everlasting. "
       ],
-      "metadata": {}
+      "metadata": {},
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
-    { "type": "rubric", "hidden": false, "value": ["Then may be said"] },
+    {
+      "type": "rubric",
+      "hidden": false,
+      "value": ["Then may be said"],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
+    },
     {
       "value": [
         {
@@ -2094,7 +2151,8 @@
               "only": [],
               "except": ["Easter", "Ascension", "Pentecost"]
             }
-          }
+          },
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
         ],
         "mode": "and"
       },
@@ -2119,14 +2177,21 @@
               "only": ["Easter", "Ascension", "Pentecost"],
               "except": []
             }
-          }
+          },
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
         ]
       }
     },
     {
       "type": "rubric",
       "value": ["The Officiant may then conclude with one of the following"],
-      "hidden": false
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
     },
     {
       "lookup": { "rotate": true, "type": "category" },
@@ -2136,7 +2201,30 @@
       "metadata": {},
       "category": ["Closing Sentence"],
       "style": "short",
-      "hidden": false
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": false, "value": "yes" } }
+        ]
+      }
+    },
+    {
+      "category": [],
+      "label": "The Great Litany",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "litany", "is": true, "value": "yes" } }
+        ]
+      },
+      "hidden": false,
+      "type": "liturgy",
+      "version": "Rite-I",
+      "language": "en",
+      "metadata": { "liturgyversions": [], "evening": false },
+      "slug": "litany",
+      "lookup": { "rotate": false, "type": "slug" }
     },
     {
       "value": ["The Sermon"],
