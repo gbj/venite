@@ -13,4 +13,5 @@ export interface PrayMenuConfig {
   segmentButtonForVersions?: boolean;
   blackLetterObservanceLiturgies?: string[];
   blackLetterObservanceDays?: string[];
+  blackLetterCollectsOptional?: boolean;
 }

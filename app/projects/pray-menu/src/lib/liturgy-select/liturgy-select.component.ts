@@ -100,6 +100,7 @@ export class LiturgySelectComponent implements OnInit {
   week$: Observable<LiturgicalWeek[]>;
   day$: Observable<LiturgicalDay>;
   form: FormGroup;
+  useBlackLetterCollect: FormControl;
 
   segmentMode: "ios" | "md";
 
@@ -184,6 +185,8 @@ export class LiturgySelectComponent implements OnInit {
       liturgy: new FormControl(undefined),
       vigil: new FormControl(false),
     });
+
+    this.useBlackLetterCollect = new FormControl(true);
 
     this.preferencesService
       .liturgyTimeRanges()
@@ -362,6 +365,27 @@ export class LiturgySelectComponent implements OnInit {
       ),
       shareReplay()
     );
+
+    // whether to use black-letter collects
+    if (this.config.blackLetterCollectsOptional) {
+      this.preferencesService
+        .get("use-black-letter-collects")
+        .pipe(first())
+        .subscribe((pref) => {
+          console.log("ublc pref?.value = ", pref?.value);
+          if (pref?.value === "false") {
+            this.useBlackLetterCollect.setValue(false);
+          }
+        });
+
+      this.useBlackLetterCollect.valueChanges.subscribe((value) => {
+        this.preferencesService.set(
+          "use-black-letter-collects",
+          value ? "true" : "false",
+          this.auth.currentUser()?.uid
+        );
+      });
+    }
 
     if (!this.config.serverReturnsDate) {
       // DB queries that depend on date change
@@ -691,6 +715,12 @@ export class LiturgySelectComponent implements OnInit {
           bulletinMode
         );
       } else {
+        const clientPrefs = this.config?.blackLetterCollectsOptional
+          ? {
+              ...clientPreferences,
+              ublc: this.useBlackLetterCollect.value.toString(),
+            }
+          : clientPreferences;
         // navigate to the Pray page
         if (bulletinMode) {
           //this.isNavigating = true;
@@ -700,7 +730,7 @@ export class LiturgySelectComponent implements OnInit {
             date,
             liturgicalDay,
             vigil,
-            clientPreferences,
+            clientPrefs,
             true
           );
         } else {
@@ -710,7 +740,7 @@ export class LiturgySelectComponent implements OnInit {
             date,
             liturgicalDay,
             vigil,
-            clientPreferences
+            clientPrefs
           );
         }
         this.isNavigating = false;

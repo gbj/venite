@@ -304,6 +304,7 @@ export class PrayService {
         );
         break;
       case "collect":
+        console.log("prefs.ublc = ", prefs.ublc);
         result = this.documents
           .findDocumentsByCategory(
             ["Collect of the Day"],
@@ -362,7 +363,13 @@ export class PrayService {
             map((collects) =>
               findCollect(
                 collects,
-                day,
+                // don't use black-letter day collects if opting out
+                new LiturgicalDay({
+                  ...day,
+                  holy_days: (day.holy_days || []).filter(
+                    (hd) => hd.type?.rank >= 3 || prefs["ublc"] !== "false"
+                  ),
+                }),
                 this.config.sundayCollectsFirst,
                 this.config.emberDayCollectPrecedesSunday,
                 this.config.allSaintsSuppressesCollectOfTheDayUnlessSunday,

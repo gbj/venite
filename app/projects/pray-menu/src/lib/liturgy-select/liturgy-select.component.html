@@ -154,6 +154,13 @@
 </div>
 
 <!-- Preferences -->
+<ng-container *ngIf="config?.blackLetterCollectsOptional">
+  <ion-item>
+    <ion-label>{{ 'use-black-letter-collects' | translate }}</ion-label>
+    <ion-checkbox name="useBlackLetterCollect" [formControl]="useBlackLetterCollect" ngDefaultControl></ion-checkbox>
+  </ion-item>
+</ng-container>
+
 <venite-liturgy-preference-menu
   [liturgy]="liturgy$ | async"
   [onlyAdvancedSettings]="showOnlyAdvancedSettings"

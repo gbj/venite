@@ -375,5 +375,6 @@
     "evening-prayer": "Evening Prayer",
     "compline": "Compline",
     "to": "to"
-  }
+  },
+  "use-black-letter-collects": "Include collects for minor feasts."
 }

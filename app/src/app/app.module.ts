@@ -118,6 +118,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
         },
         hasBulletinMode: false,
         serverReturnsDate: false,
+        blackLetterCollectsOptional: true,
       },
       providers: [
         AuthService,
