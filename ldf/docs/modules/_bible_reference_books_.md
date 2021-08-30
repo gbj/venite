@@ -32,7 +32,9 @@
   ['1 Kings', Book.FirstKings],
   ['2 Kings', Book.SecondKings],
   ['1 Chronicles', Book.FirstChronicles],
+  ['1 Chron.', Book.FirstChronicles],
   ['2 Chronicles', Book.SecondChronicles],
+  ['2 Chron.', Book.SecondChronicles],
   ['Ezra', Book.Ezra],
   ['Nehemiah', Book.Nehemiah],
   ['Esther', Book.Esther],
@@ -141,4 +143,4 @@
   ['Judith', Book.Judith],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/0ec46cb7/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/96288591/ldf/src/bible-reference/books.ts#L3)*
