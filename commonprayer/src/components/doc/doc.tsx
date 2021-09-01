@@ -40,17 +40,20 @@ export const Doc = await Page({
     else {
       docs.push(data);
     }
-    return <main>{
-      data.source && (Array.isArray(data.source)
-          ? `<section class="sources">${data.source
-              .map((source) => sourceToHTML(source))
-              .join("\n")}</section>`
-          : sourceToHTML(data.source))}
-    <div class="cp-doc" data-category={subpath} data-slug={slug} dangerouslySetInnerHTML={{__html: docs.map(
-      (doc: LiturgicalDocument) => [
-        doc.slug ? <a name={doc.slug}></a> : null,
-        ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
-    ]).flat().filter(n => Boolean(n)).join("\n")}}></div>
-  </main>
+        
+    const sources = data.source
+      ? Array.isArray(data.source)
+        ? data.source.map((source) => sourceToHTML(source))
+        : sourceToHTML(data.source)
+      : "";
+
+    return <main>
+      <section class="sources" dangerouslySetInnerHTML={{__html: sources }}></section>
+      <div class="cp-doc" data-category={subpath} data-slug={slug} dangerouslySetInnerHTML={{__html: docs.map(
+        (doc: LiturgicalDocument) => [
+          doc.slug ? <a name={doc.slug}></a> : null,
+          ldfToHTML(new LiturgicalDocument(doc), LDF_TO_HTML_CONFIG)
+      ]).flat().filter(n => Boolean(n)).join("\n")}}></div>
+    </main>
   },
 });
