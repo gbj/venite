@@ -5,6 +5,12 @@ const CanticleTablePage = await Page({
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "canticle-table.css")],
   main: () => <main>
     <h1>Table of Suggested Canticles</h1>
+    <section class="sources">
+      <a class="source" href="https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=144" target="_blank">
+        <span class="label">Source</span>
+        BCP p. 144-145
+      </a>
+    </section>
     <h2>Book of Common Prayer (1979)</h2>
     <h3>Suggested Canticles at Morning Prayer</h3>
     <table class="canticle-table">
@@ -146,6 +152,12 @@ const CanticleTablePage = await Page({
     <p><em class="rubric">* If only one Reading is used, the suggested Canticle is the Magnificat.</em></p>
   
 
+    <section class="sources">
+      <a class="source" href="https://www.churchpublishing.org/siteassets/pdf/enriching-our-worship-1/enrichingourworship1.pdf#page=44" target="_blank">
+        <span class="label">Source</span>
+        EOW 1 p. 44-45
+      </a>
+    </section>
     <h2>Enriching Our Worship 1 (1998)</h2>
 
     <h3>Suggested Canticles at Morning Prayer</h3>

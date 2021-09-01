@@ -18,7 +18,13 @@ export default function Home(): PageProps {
             <li><a href="/calendar/date">Calculator</a></li>
           </ul>
         </li>
-        <li><a href="/office">The Daily Office</a></li>
+        <li>
+          <a href="/office">The Daily Office</a>
+          <ul>
+            <li><a href="/office/morning-prayer">Morning Prayer</a></li>
+            <li><a href="/canticle-table">Table of Suggested Canticles</a></li>
+          </ul>
+        </li>
         <li><a href="/litany">The Great Litany</a></li>
         <li><a href="/collects">The Collects</a></li>
         <li><a href="/proper-liturgies">Proper Liturgies for Special Days</a></li>
@@ -31,6 +37,6 @@ export default function Home(): PageProps {
         <li><a href="/catechism">An Outline of the Faith, or Catechism</a></li>
         <li><a href="/historical-documents">Historical Documents of the Church</a></li>
       </ul>
-    </main>,
+    </main>
   };
 }

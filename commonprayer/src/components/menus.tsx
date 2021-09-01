@@ -3,7 +3,6 @@ import { Fragment } from "../ssg/fragment.ts";
 import { DisplaySettings } from "./display-settings.tsx";
 import { DocActionMenu } from "./doc-action-menu.tsx";
 import { PreviewMenu } from "./preview-menu.tsx";
-import { TOCMenu } from "./toc-menu.tsx";
 
 export default function Menus() {
   return <>
