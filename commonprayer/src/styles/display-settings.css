@@ -1,7 +1,4 @@
 /* Menu Appearance */
-.display-setting {
-  display: none;
-}
 .display-settings {
   display: flex;
   flex-direction: column;
@@ -23,22 +20,19 @@
 }
 
 .display-setting-button {
-  background-repeat: no-repeat;
-  background-position: 95%;
-  background-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* Psalm Verses */
 main.psalmverses {
-  --ldf-psalm-number-display: none;
-  --ldf-psalm-grid-display: block;
-  --ldf-psalm-verse-grid: "verse verse" "half-verse half-verse";
+  --ldf-psalm-number-display: block;
 }
 menu.psalmverses {
   --psalmverses-background-color: var(--cp-success-light);
   --psalmverses-toggle-color: var(--cp-success-background);
   --psalmverses-padding: calc(0.5rem - 1px);
-  --psalmverses-background-image: url("/assets/icon/check-solid.svg");
 }
 label[for="psalmverses"] {
   background-color: var(--psalmverses-background-color);
@@ -58,7 +52,6 @@ main.bibleverses {
 }
 menu.bibleverses {
   --bibleverses-background-color: var(--cp-success-light);
-  --bibleverses-background-image: url("/assets/icon/check-solid.svg");
   --bibleverses-toggle-color: var(--cp-success-background);
   --bibleverses-padding: calc(0.5rem - 1px);
 }
@@ -78,7 +71,6 @@ main.responses-bold .response, main.responses-bold .unison {
 }
 menu.responses-bold {
   --responses-bold-background-color: var(--cp-success-light);
-  --responses-bold-background-image: url("/assets/icon/check-solid.svg");
   --responses-bold-toggle-color: var(--cp-success-background);
   --responses-bold-padding: calc(0.5rem - 1px);
 }
@@ -96,7 +88,6 @@ main.responses-italic .response, main.responses-italic .unison {
 }
 menu.responses-italic {
   --responses-italic-background-color: var(--cp-success-light);
-  --responses-italic-background-image: url("/assets/icon/check-solid.svg");
   --responses-italic-toggle-color: var(--cp-success-background);
   --responses-italic-padding: calc(0.5rem - 1px);
 }

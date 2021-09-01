@@ -41,6 +41,10 @@
   --menu-button-height: 2.25rem;
   --menu-height: calc(var(--menu-button-height) + 1rem);
   --menu-z-index: 5;
+
+  /* Display settings */
+  --ldf-psalm-number-display: none;
+  --ldf-psalm-grid-display: block;
 }
 
 body {
@@ -199,4 +203,11 @@ a.source:visited {
 .parallel.hidden > * {
   width: 100%;
   padding: 0;
+}
+
+.psalm-section .psalm-verse {
+  display: block;
+}
+.psalmverses .psalm-section .psalm-verse {
+  display: grid;
 }
