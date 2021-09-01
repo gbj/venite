@@ -2,7 +2,7 @@ import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import { Page } from "../../ssg/page.ts";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { Psalm } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.15";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.17";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 
 const Psalter = await Page({

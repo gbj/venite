@@ -8,138 +8,31 @@
 }
 
 .option > .option-labels > label {
+  cursor: pointer;
   width: calc(100% / 4 - 2rem);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: var(--cp-ui-font-family);
   font-size: 0.75rem;
-  margin: 0 0.25rem 0 0.25rem;
+  margin: 0;
+  padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  border-bottom: 3px solid;
-  border-color: var(--cp-light-border);
+  border-bottom: 1px solid;
   text-align: center;
 }
 
+.option > .option-labels > input {
+  visibility: hidden;
+}
 
-/* Selected option */
-.option > input.option-button:nth-of-type(1):checked ~ section.option-labels {
-  --vh-option-child-1-border-color: var(--cp-primary-background);
+.option > .option-labels > input:not(:checked) + label {
+  border-color: var(--cp-light-border);
 }
-.option > input.option-button:nth-of-type(2):checked ~ section.option-labels {
-  --vh-option-child-2-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(3):checked ~ section.option-labels {
-  --vh-option-child-3-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(4):checked ~ section.option-labels {
-  --vh-option-child-4-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(5):checked ~ section.option-labels {
-  --vh-option-child-5-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(6):checked ~ section.option-labels {
-  --vh-option-child-6-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(7):checked ~ section.option-labels {
-  --vh-option-child-7-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(8):checked ~ section.option-labels {
-  --vh-option-child-8-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(9):checked ~ section.option-labels {
-  --vh-option-child-9-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(10):checked ~ section.option-labels {
-  --vh-option-child-10-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(11):checked ~ section.option-labels {
-  --vh-option-child-11-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(12):checked ~ section.option-labels {
-  --vh-option-child-12-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(13):checked ~ section.option-labels {
-  --vh-option-child-13-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(14):checked ~ section.option-labels {
-  --vh-option-child-14-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(15):checked ~ section.option-labels {
-  --vh-option-child-15-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(16):checked ~ section.option-labels {
-  --vh-option-child-16-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(17):checked ~ section.option-labels {
-  --vh-option-child-17-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(18):checked ~ section.option-labels {
-  --vh-option-child-18-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(19):checked ~ section.option-labels {
-  --vh-option-child-19-border-color: var(--cp-primary-background);
-}
-.option > input.option-button:nth-of-type(20):checked ~ section.option-labels {
-  --vh-option-child-20-border-color: var(--cp-primary-background);
-}
-.option > section.option-labels > label:nth-child(1) {
-  border-color: var(--vh-option-child-1-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(2) {
-  border-color: var(--vh-option-child-2-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(3) {
-  border-color: var(--vh-option-child-3-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(4) {
-  border-color: var(--vh-option-child-4-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(5) {
-  border-color: var(--vh-option-child-5-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(6) {
-  border-color: var(--vh-option-child-6-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(7) {
-  border-color: var(--vh-option-child-7-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(8) {
-  border-color: var(--vh-option-child-8-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(9) {
-  border-color: var(--vh-option-child-9-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(10) {
-  border-color: var(--vh-option-child-10-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(11) {
-  border-color: var(--vh-option-child-11-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(12) {
-  border-color: var(--vh-option-child-12-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(13) {
-  border-color: var(--vh-option-child-13-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(14) {
-  border-color: var(--vh-option-child-14-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(15) {
-  border-color: var(--vh-option-child-15-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(16) {
-  border-color: var(--vh-option-child-16-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(17) {
-  border-color: var(--vh-option-child-17-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(18) {
-  border-color: var(--vh-option-child-18-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(19) {
-  border-color: var(--vh-option-child-19-border-color, var(--cp-light-border));
-}
-.option > section.option-labels > label:nth-child(20) {
-  border-color: var(--vh-option-child-20-border-color, var(--cp-light-border));
+
+.option > .option-labels > input:not(:checked) + label:hover, .option > .option-labels > input:checked + label {
+  background-color: var(--cp-success-light);
+  border-color: var(--cp-success-background);
+  border-width: 3px;
+  padding-bottom: calc(0.25rem - 2px);
 }

@@ -16,12 +16,12 @@ export function optionToHTML(doc: Option, config: LDFToHTMLConfig): string {
     selected = doc.metadata?.selected ?? doc.metadata?.editor_selected ?? 0;
 
   const buttons = (doc.value || []).map(
-    (sub: LiturgicalDocument, subIndex) => `<label for="${uid}-${subIndex}">
-      ${opt.getVersionLabel(sub)}
+    (sub: LiturgicalDocument, subIndex) => `
       <input type="radio" id="${uid}-${subIndex}" name="${uid}" value="${subIndex}"${
       subIndex === Number(selected) ? " checked" : ""
     }>
-    </label>`
+      <label for="${uid}-${subIndex}">${opt.getVersionLabel(sub)}</label>
+    `
   );
 
   const docs = (doc.value || []).map((sub: LiturgicalDocument, subIndex) =>
