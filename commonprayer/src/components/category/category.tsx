@@ -11,21 +11,29 @@ import { Mode } from "./mode.ts";
 const SHORT_DOC_LENGTH = 1000;
 
 async function buildDocs(srcDir : string, subpath : string, categorySlug : string, children : any[]) {
+  const alreadyFound : Set<string> = new Set();
+
   for await (const { name, isFile, isDirectory } of await Deno.readDir(srcDir)) {
     if (isFile && name.endsWith(".json") && name !== "index.json") {
       const json = await Deno.readTextFile(path.join(srcDir, name)),
         { data, index } = JSON.parse(json),
         docs = data.map((doc) => new LiturgicalDocument(doc));
       for (const doc of docs) {
-        const html = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
-        children.push({
-          index,
-          html,
-          url: `${subpath ? `/${subpath}/` : '/'}${categorySlug}/${name.replace(".json", "")}${doc.slug && name === "docs.json" ? `#${doc.slug}` : ''}`,
-          label: doc.label || (doc.category || [])[0],
-          version: doc.version,
-          ldf: JSON.stringify(doc)
-        });
+        const label = doc.label || (doc.category || [])[0],
+          key = `${label}-${(doc.value || [])[0]}`;
+
+        if(!alreadyFound.has(key)) {
+          alreadyFound.add(key);
+          const html = ldfToHTML(doc, LDF_TO_HTML_CONFIG);
+          children.push({
+            index,
+            html,
+            url: `${subpath ? `/${subpath}/` : '/'}${categorySlug}/${name.replace(".json", "")}${doc.slug && name === "docs.json" ? `#${doc.slug}` : ''}`,
+            label,
+            version: doc.version,
+            ldf: JSON.stringify(doc)
+          });
+        }
       }
     }
     else if(isDirectory) {
@@ -50,6 +58,8 @@ export const Category = await Page({
     }
 
     await buildDocs(srcDir, subpath, categorySlug, children);
+
+    console.log("\n\nchildren.length = ", children.length, "\n\n");
 
     const versions = groupBy(
       children.sort((a, b) => a.index - b.index),

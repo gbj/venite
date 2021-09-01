@@ -74,7 +74,6 @@ async function addCategoryDirectory(
         categoryDocs.push(doc);
       }
     } else if (isDirectory) {
-      console.log("\n\nrecurse", name);
       addCategoryDirectory(path.join(srcDir, name), categoryDocs);
     }
   }

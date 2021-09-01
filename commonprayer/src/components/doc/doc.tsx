@@ -22,7 +22,24 @@ export const Doc = await Page({
   main: async (slug : string, subpath : string | undefined, src: string) => {
     const json = await Deno.readTextFile(src),
       data = JSON.parse(json),
-      docs = data.data ? data.data : [data];
+      docs = [];
+     
+    if(data.data) {
+      const dataDocs : LiturgicalDocument[] = data.data;
+      // deduplicate by value
+      const alreadySeen = new Set();
+      for(const doc of dataDocs) {
+        const key = JSON.stringify(doc.value);
+        if(!alreadySeen.has(key)) {
+          alreadySeen.add(key);
+          docs.push(doc);
+        }
+      }
+    }
+    // if a single doc, push it into the docs
+    else {
+      docs.push(data);
+    }
     return <main>{
       data.source && (Array.isArray(data.source)
           ? `<section class="sources">${data.source
