@@ -983,8 +983,7 @@
         "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
       ],
       "slug": "friday-6th-easter",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "slug": "thursday-6th-easter",
@@ -1001,8 +1000,7 @@
       "value": [
         "Grant, we beseech thee, Almighty God, that like as we do believe thy only-begotten Son our Lord Jesus Christ to have ascended into the heavens, so we may also in heart and mind thither ascend, and with him continually dwell; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
       ],
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "value": [
@@ -1019,8 +1017,7 @@
       "style": "prayer",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "category": ["Collect", "Collect of the Day"],
@@ -1037,8 +1034,7 @@
       "slug": "eve-wednesday-6th-easter",
       "type": "text",
       "style": "prayer",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "style": "prayer",
@@ -1055,7 +1051,7 @@
         "O God, the King of glory, who hast exalted thine only Son Jesus Christ with great triumph unto thy kingdom in heaven: We beseech thee, leave us not comfortless, but send to us thine Holy Ghost to comfort us, and exalt us unto the same place whither our Savior Christ is gone before; who liveth and reigneth with thee and the same Holy Ghost, one God, world without end."
       ],
       "type": "text",
-      "label": "Seventh Sunday of Easter:  The Sunday after Ascension Day",
+      "label": "Seventh Sunday of Easter: The Sunday after Ascension Day",
       "citation": null
     },
     {
@@ -1073,7 +1069,7 @@
       "version": "Rite-I",
       "hidden": false,
       "type": "text",
-      "label": "The Day of Pentecost:  Whitsunday",
+      "label": "The Day of Pentecost: Whitsunday",
       "citation": null
     },
     {
@@ -1091,8 +1087,7 @@
       "version": "Rite-I",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "The Day of Pentecost: Whitsunday"
     },
     {
       "type": "text",
