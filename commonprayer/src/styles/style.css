@@ -22,6 +22,9 @@
   --cp-medium-color: #222222;
   --cp-medium-border: #e0e0e0;
 
+  --cp-warning-light: #fff6d8;
+  --cp-warning-color: #ffc409;
+
   --cp-success-light: #d5e2db;
   --cp-success-background: #1e8648;
   --cp-success-color: #fafafa;
@@ -141,6 +144,13 @@ menu.display-settings {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.disclaimer {
+  background: var(--cp-medium-background);
+  color: var(--cp-medium-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.19);
+  padding: 1rem;
 }
 
 /* Psalm Latin name */

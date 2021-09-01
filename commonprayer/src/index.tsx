@@ -36,14 +36,14 @@ export async function Index({ main, script, style, head, styles, scripts }: Page
       <link rel="manifest" href="/manifest.json" />
       <link rel="preload" href="/assets/fonts/Sabon_Roman.ttf" as="font" type="font/ttf"/>
       {styles && styles.map(url => <link rel="stylesheet" href={url}/>)}
-      {style && <style>{style}</style>}
+      {style && <style dangerouslySetInnerHTML={{__html: style}}></style>}
       {head}
       {isDev && <script src="/scripts/dev-socket.js"></script>}
       {/* Remove link preloading for now */}
       {/*links.map(link => <link rel="prefetch" href={link}/>)*/}
     </head>
     {body}
-    {script && <script>${script}</script>}
+    {script && <script dangerouslySetInnerHTML={{__html: script}}></script>}
     <script type="module" src="/scripts/menus.js"></script>
     {scripts && scripts.map(url => <script type="module" src={url}></script>)}
     <script type="module" src="/scripts/cp-doc.js"></script>

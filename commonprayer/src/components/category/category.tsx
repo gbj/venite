@@ -59,8 +59,6 @@ export const Category = await Page({
 
     await buildDocs(srcDir, subpath, categorySlug, children);
 
-    console.log("\n\nchildren.length = ", children.length, "\n\n");
-
     const versions = groupBy(
       children.sort((a, b) => a.index - b.index),
       child => child.version

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "noImplicitAny": false,
     "strict": false,
     "lib": ["dom", "deno.window", "deno.unstable", "es2020"],
