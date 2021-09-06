@@ -41,9 +41,16 @@ export class Psalm extends LiturgicalDocument {
         (this.value || []).forEach((section) => {
           const newSection = new Array();
 
+          // okay, this is O(4n)...
           (section.value || []).forEach((verse) => {
             if (!verse.number || versesInCitation.includes(verse.number)) {
               newSection.push(verse);
+            } else if (versesInCitation.includes(`[${verse.number}`)) {
+              newSection.push({ ...verse, verse: '[' + verse.verse });
+            } else if (versesInCitation.includes(`${verse.number}]`)) {
+              newSection.push({ ...verse, halfverse: verse.halfverse + ']' });
+            } else if (versesInCitation.includes(`[${verse.number}]`)) {
+              newSection.push({ ...verse, verse: '[' + verse.verse, halfverse: verse.halfverse + ']' });
             }
           });
 
@@ -63,23 +70,51 @@ export class Psalm extends LiturgicalDocument {
    * versesInCitation('Psalm 100:1-3,6-7, 11a')
    * */
   versesInCitation(citation: string): string[] {
+    function makeVerseNumber(startBracket: boolean, endBracket: boolean, num: string) {
+      if (startBracket && endBracket) {
+        return '[' + num + ']';
+      } else if (startBracket) {
+        return '[' + num;
+      } else if (endBracket) {
+        return num + ']';
+      } else {
+        return num;
+      }
+    }
+
     // comments assume versesInCitation('Psalm 100:1-3,6-7, 11a')
     // search = [ "Psalm 100", "1-3", "6-7", "11a" ]
-    const search = citation.replace(/Ps[\w\.]*\s*/g, '').split(/\s*[,:\s]\s*/),
+    const search = citation.replace(/Ps[\w\.]*\s*/g, '').split(/\s*([\[\]\(\),:\s])\s*/),
       // whole = 'Psalm 100', psalm = 'Psalm', number = '100'
       // [whole, psalm, number] = search[0].match(/(Ps[^\s]*)\s(\d+)/),
       // verseRanges = [ "1-3", "6-7", "11a" ]
       verseRanges = search.slice(1);
 
     let verses = new Array();
-    (verseRanges || []).forEach((range) => {
-      const [first, last] = range.replace(/a-zA-Z/g, '').split(/-|–/);
+    let startBracket = false;
+    let endBracket = false;
+    (verseRanges || []).forEach((range, rangeIndex) => {
+      if (range === '[' || range === '(') {
+        startBracket = true;
+      }
+      if (verseRanges[rangeIndex + 1] === ']' || verseRanges[rangeIndex + 1] === ')') {
+        endBracket = true;
+      }
+
+      const [first, last] = range.replace(/[^\d-s–]/g, '').split(/-|–/);
       if (first && last) {
+        const hasEndBracket = endBracket;
         for (let ii = parseInt(first); ii <= parseInt(last); ii++) {
-          verses.push(ii.toString());
+          endBracket = hasEndBracket && ii == parseInt(last);
+          verses.push(makeVerseNumber(startBracket, endBracket, ii.toString()));
+          startBracket = false;
         }
       } else {
-        verses.push(first);
+        if (first) {
+          verses.push(makeVerseNumber(startBracket, endBracket, first));
+          startBracket = false;
+        }
+        endBracket = false;
       }
     });
 

@@ -408,6 +408,18 @@ describe('Psalm.versesInCitation()', () => {
     const verses = psalm.versesInCitation('Psalm 107:1-3, 23-25');
     expect(verses).toEqual(['1', '2', '3', '23', '24', '25']);
   });
+
+  it('should add brackets for bracketed citations', () => {
+    const psalm = new Psalm(PSALM_107 as Psalm);
+    const verses = psalm.versesInCitation('Psalm 107:1-3[4-6]7-8');
+    expect(verses).toEqual(['1', '2', '3', '[4', '5', '6]', '7', '8']);
+  });
+
+  it('should add brackets for bracketed citations', () => {
+    const psalm = new Psalm(PSALM_107 as Psalm);
+    const verses = psalm.versesInCitation('Psalm 107:1-2[3]');
+    expect(verses).toEqual(['1', '2', '[3]']);
+  });
 });
 
 describe('Psalm.filteredVerses()', () => {
@@ -437,6 +449,38 @@ describe('Psalm.filteredVerses()', () => {
             number: '3',
             verse: 'Restore us, O God of hosts; *',
             halfverse: 'show the light of your countenance, and we shall be saved.',
+          },
+        ],
+      },
+    ]);
+  });
+
+  it('should insert brackets for bracketed citations', () => {
+    const psalm = new Psalm(PSALM_80);
+    psalm.citation = 'Psalm 80:1-2[3]';
+    const verses = psalm.filteredVerses();
+
+    expect(verses).toEqual([
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '1',
+            verse: 'Hear, O Shepherd of Israel, leading Joseph like a flock; * ',
+            halfverse: 'shine forth, you that are enthroned upon the cherubim.',
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.',
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '3',
+            verse: '[Restore us, O God of hosts; *',
+            halfverse: 'show the light of your countenance, and we shall be saved.]',
           },
         ],
       },
