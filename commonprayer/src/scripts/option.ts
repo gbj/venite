@@ -17,8 +17,6 @@ options.forEach((option) => {
         doc = ldf ? JSON.parse(decodeURI(ldf)) : null,
         options = parent.querySelectorAll(".options > .doc");
 
-      console.log(ev.target, "\nnewSelection = ", newSelection);
-
       // update selection in data-ldf field
       if (doc) {
         parent.dataset.ldf = encodeURI(
