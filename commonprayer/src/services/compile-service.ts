@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.17";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.18";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -14,7 +14,7 @@ import {
   Preference,
   Psalm,
   versionToString,
-} from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
+} from "https://cdn.skypack.dev/@venite/ldf@^0.21.0?dts";
 import { LDF_TO_HTML_CONFIG } from "../ssg/ldf-to-html-config.tsx";
 import { CalendarService } from "./calendar-service.ts";
 import { CanticleTableService } from "./canticle-table-service.ts";
@@ -514,12 +514,16 @@ export class CompileServiceController {
         reading,
         alternateYear
       );
+    // deduplicate citations
+    const citations = Array.from(
+      new Set(entries.map((entry) => entry.citation))
+    );
     // look up and sort the documents
     const docs = await Promise.all(
-        entries.map((entry) =>
+        citations.map((citation) =>
           doc.type === "psalm"
-            ? this.lookupPsalm(doc, prefs, entry.citation)
-            : this.lookupBibleReading(doc, prefs, entry.citation)
+            ? this.lookupPsalm(doc, prefs, citation)
+            : this.lookupBibleReading(doc, prefs, citation)
         )
       ),
       sorted = docs.sort((a, b) =>
@@ -568,8 +572,30 @@ export class CompileServiceController {
       ? c.split(":")[0].replace(" ", "-").toLowerCase()
       : c;
     const resp = await fetch(`/assets/liturgy/psalter/${version}/${slug}.json`),
-      { data } = await resp.json();
-    return docsToLiturgy(data);
+      { data } = (await resp.json()) as { data: LiturgicalDocument[] },
+      docs = data.map(
+        (d) =>
+          new LiturgicalDocument({
+            ...d,
+            metadata: {
+              ...d.metadata,
+              omit_antiphon:
+                d?.metadata?.omit_antiphon || doc?.metadata?.omit_antiphon,
+              // also omit Gloria Patri if `insertGloria` === 'false'
+              omit_gloria:
+                (doc?.style === "psalm" &&
+                  Boolean(prefs["insertGloria"] == "false")) ||
+                d?.metadata?.omit_gloria ||
+                doc?.metadata?.omit_gloria,
+              omit_response:
+                d?.metadata?.omit_response || doc?.metadata?.omit_response,
+              omit_label: d?.metadata?.omit_label || doc?.metadata?.omit_label,
+              changeable: d?.metadata?.changeable || doc?.metadata?.changeable,
+            },
+            citation: c,
+          })
+      );
+    return docsToLiturgy(docs);
   }
 }
 

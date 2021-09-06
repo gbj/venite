@@ -1,6 +1,6 @@
 {
   "name": "@venite/html",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "description": "Converts Liturgical Document Format (LDF) objects to plain HTML.",
   "main": "dist/index.js",
   "scripts": {
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/gbj/venite#readme",
   "dependencies": {
-    "@venite/ldf": "^0.20.5"
+    "@venite/ldf": "^0.21.0"
   }
 }

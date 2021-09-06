@@ -1,4 +1,4 @@
-import { CanticleTableEntry } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
+import { CanticleTableEntry } from "https://cdn.skypack.dev/@venite/ldf@^0.21.0?dts";
 
 export class CanticleTableServiceController {
   private _cache: Promise<Record<string, CanticleTableEntry[]>>;

@@ -1,4 +1,4 @@
-import { Lookup, LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.20.5?dts";
+import { Lookup, LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.21.0?dts";
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 
 const LOCALE = {
