@@ -11,12 +11,10 @@ async function build(isDev = false, pagesOnly = false): Promise<SSGRefreshMap> {
   // Create `www` if it doesn't exist
   await createWWW();
 
-  console.log("pagesOnly = ", pagesOnly);
-
   const map = await Promise.all(
     [
       // Copy CSS/assets
-      !pagesOnly && buildCSS(),
+      buildCSS(),
       !pagesOnly && copyStatic(),
       !pagesOnly && buildScripts(),
 

@@ -216,8 +216,15 @@ a.source:visited {
 }
 
 .psalm-section .psalm-verse {
-  display: block;
+  display: grid;
+  grid-template-areas: "verse verse verse" "spacing half-verse half-verse";
 }
 .psalmverses .psalm-section .psalm-verse {
   display: grid;
+  grid-template-areas: "number verse verse" "spacing spacing half-verse";
+}
+
+.psalm-section .psalm-verse.no-number {
+  display: grid;
+  grid-template-areas: "verse verse verse" "spacing half-verse half-verse";
 }

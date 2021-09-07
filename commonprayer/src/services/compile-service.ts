@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.18";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.19";
 import {
   BibleReading,
   CanticleTableEntry,

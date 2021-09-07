@@ -101,26 +101,22 @@ article {
   margin-bottom: 1em;
 }
 
-.psalm .half-verse {
-  white-space: pre-wrap;
-}
-
 .psalm-section .psalm-verse {
   display: grid;
-  grid-template-columns: 2em 1fr;
+  grid-template-columns: 1.5rem 1.5rem 1fr;
   grid-template-rows: auto;
   grid-template-areas: var(
     --ldf-psalm-verse-grid,
-    "number verse" "spacing half-verse"
+    "number verse verse" "spacing spacing half-verse"
   );
   margin: 0;
 }
 
 .psalm-section .psalm-verse.no-number {
   display: grid;
-  grid-template-columns: 2em 1fr;
+  grid-template-columns: 1.5rem 1.5rem 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "verse verse" "half-verse half-verse";
+  grid-template-areas: "verse verse verse" "spacing half-verse half-verse";
   margin: 0;
 }
 
