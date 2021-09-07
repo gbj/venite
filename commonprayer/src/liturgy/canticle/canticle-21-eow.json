@@ -1,1 +1,28 @@
-{"index":2101,"data":[{"lastRevision":4,"hidden":false,"language":"en","value":[{"value":[{"verse":"We praise you, O God, \nwe acclaim you as Lord; \nall creation worships you, \nthe  Father  everlasting. \nTo you all angels, all the powers of heaven, \nthe cherubim and seraphim, sing in endless praise: \n\tHoly, holy, holy Lord, God of power and might, \n\theaven and earth are full of your glory. \nThe glorious company of apostles praise you. \nThe noble fellowship of prophets praise you. \nThe white-robed army of martyrs praise you. \nThroughout the world the holy Church acclaims you: \n\tFather, of majesty unbounded, \n\tyour true and only Son, worthy of all worship, \n\tand the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory, \nthe eternal Son of the Father. \nWhen you took our flesh to set us free \nyou humbly chose the Virgin’s womb. \nYou overcame the sting of death \nand opened the kingdom of heaven to all believers. \nYou are seated at God’s right hand in glory. \nWe believe that you will come to be our judge. \n\tCome then, Lord, and help your people, \n\tbought with the price of your own blood, \n\tand bring us with your saints \n\tto glory everlasting.","type":"psalm-verse"}],"type":"psalm-section"}],"type":"psalm","slug":"canticle-21","metadata":{"number":"21","omit_antiphon":false,"latinname":"Te Deum laudamus","localname":"We Praise You, O God","omit_gloria":true},"version_label":null,"style":"canticle","version":"EOW","label":"Canticle 21: Te Deum","category":["Canticle"],"citation":null}]}
+{
+  "index": 2101,
+  "data": [
+    {
+      "lastRevision": 4,
+      "hidden": false,
+      "language": "en",
+      "value": [
+        "We praise you, O God, \nwe acclaim you as Lord; \nall creation worships you, \nthe  Father  everlasting. \nTo you all angels, all the powers of heaven, \nthe cherubim and seraphim, sing in endless praise: \n\tHoly, holy, holy Lord, God of power and might, \n\theaven and earth are full of your glory. \nThe glorious company of apostles praise you. \nThe noble fellowship of prophets praise you. \nThe white-robed army of martyrs praise you. \nThroughout the world the holy Church acclaims you: \n\tFather, of majesty unbounded, \n\tyour true and only Son, worthy of all worship, \n\tand the Holy Spirit, advocate and guide. \nYou, Christ, are the king of glory, \nthe eternal Son of the Father. \nWhen you took our flesh to set us free \nyou humbly chose the Virgin’s womb. \nYou overcame the sting of death \nand opened the kingdom of heaven to all believers. \nYou are seated at God’s right hand in glory. \nWe believe that you will come to be our judge. \n\tCome then, Lord, and help your people, \n\tbought with the price of your own blood, \n\tand bring us with your saints \n\tto glory everlasting."
+      ],
+      "type": "text",
+      "slug": "canticle-21",
+      "metadata": {
+        "number": "21",
+        "omit_antiphon": false,
+        "latinname": "Te Deum laudamus",
+        "localname": "We Praise You, O God",
+        "omit_gloria": true
+      },
+      "version_label": null,
+      "style": "text",
+      "version": "EOW",
+      "label": "Canticle 21: Te Deum",
+      "category": ["Canticle"],
+      "citation": null
+    }
+  ]
+}
