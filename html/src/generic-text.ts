@@ -36,23 +36,21 @@ export function genericTextToHTML(
           doc.type === "rubric"
             ? `<em class="rubric">${line}</em>`
             : line.replace(/\n/g, "<br>").replace(/\t/g, "    ")
-        }
-        ${
+        }${
           doc?.metadata?.response &&
           doc.value &&
           lineIndex == doc.value.length - 1
-            ? `<strong class="response">${doc.metadata.response}</strong>`
+            ? ` <strong class="response">${doc.metadata.response}</strong>`
             : ""
-        }
-        ${
+        }${
           !doc?.metadata?.response &&
           doc.style == "prayer" &&
           doc.value &&
           lineIndex == doc.value.length - 1
-            ? `<strong class="response">${localeStrings.amen}</strong>`
+            ? ` <strong class="response">${localeStrings.amen}</strong>`
             : ""
         }
         </p>`
     )
-    .join("\n")}</article>`;
+    .join("")}</article>`;
 }

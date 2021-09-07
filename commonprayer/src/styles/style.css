@@ -228,3 +228,7 @@ a.source:visited {
   display: grid;
   grid-template-areas: "verse verse verse" "spacing half-verse half-verse";
 }
+
+.doc.text {
+  white-space: pre-wrap;
+}
