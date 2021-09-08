@@ -540,7 +540,7 @@
         ]
       },
       "type": "option",
-      "source": { "api": "", "source": "bcp1979", "citation": "p. 79" },
+      "source": { "api": "", "source": "bcp1979", "citation": "p. 41" },
       "hidden": false,
       "category": [],
       "metadata": { "editor_selected": 0, "selected": 0 },
@@ -645,7 +645,7 @@
       "category": [],
       "style": "preces",
       "hidden": false,
-      "source": { "source": "bcp1979", "citation": "p. 80", "api": "" },
+      "source": { "source": "bcp1979", "citation": "p. 42", "api": "" },
       "metadata": {},
       "value": [
         {
@@ -704,7 +704,7 @@
           },
           "source": {
             "source": "bcp1979",
-            "citation": "p. 83",
+            "citation": "p. 46",
             "api": "https://www.venite.app/api"
           },
           "metadata": {
