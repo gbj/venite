@@ -19,7 +19,7 @@ export async function buildDoc(
   try {
     const slug = filename.replace(/(\.ldf)?\.json/, ""),
       page = Doc(slug, subpath, src),
-      html = await Index(page),
+      html = await Index(page, isDev),
       dest = path.join(
         path.fromFileUrl(import.meta.url),
         "..",
@@ -87,7 +87,7 @@ export async function buildCategoryPage(
 ): Promise<SSGRefreshMap> {
   // build category page
   const page = Category(srcDir, categoryName, subpath),
-    html = await Index(page),
+    html = await Index(page, isDev),
     dest = path.join(
       path.fromFileUrl(import.meta.url),
       "..",
@@ -133,7 +133,7 @@ export async function buildTOC(
   isDev = false,
   subpath: string | undefined = undefined
 ): Promise<SSGRefreshMap> {
-  console.log("Building TOC", subpath || "");
+  console.log(subpath || "");
 
   const src = path.join(
     path.fromFileUrl(import.meta.url),

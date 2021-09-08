@@ -20,7 +20,7 @@ async function buildDocs(srcDir : string, subpath : string, categorySlug : strin
         docs = data.map((doc) => new LiturgicalDocument(doc));
       for (const doc of docs) {
         const label = doc.label || (doc.category || [])[0],
-          key = `${label}-${(doc.value || [])[0]}`;
+          key = `${label}-${doc.version}-${JSON.stringify((doc.value || [])[0])}`;
 
         if(!alreadyFound.has(key)) {
           alreadyFound.add(key);
@@ -92,10 +92,12 @@ export const Category = await Page({
           results="5"
           autosave={categorySlug}
         />
+        {uniqueLabels.length == 1 && <h2>{uniqueLabels[0]}</h2>}
         <ol class="version-list">
           {Object.entries(versions).map(([version, children]) => <ol class="category-list">
             <li class="version">
-              {Object.keys(versions).length > 1 && <h2>{VERSION_LABELS[version] || version}</h2>}
+              {/* Show version, but only if there's more than one document label; otherwise, use version as document label */}
+              {Object.keys(versions).length > 1 && uniqueLabels.length > 1 && <h2>{VERSION_LABELS[version] || version}</h2>}
               {/* Labeled */}
               {mode === Mode.Labeled && Object.entries(labels).map(([label, entries]) => <section>
                 <h2 class="label">{label}</h2>
@@ -121,7 +123,7 @@ export const Category = await Page({
                     ></article>}
 
                     {/* Links */}
-                    {mode === Mode.Links && <a href={child.url}>{child.label}</a>}
+                    {mode === Mode.Links && <a href={child.url}>{uniqueLabels.length > 1 ? child.label : VERSION_LABELS[version] || version}</a>}
                   </li>
                 ))}
             </li>

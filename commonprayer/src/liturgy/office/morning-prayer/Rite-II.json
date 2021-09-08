@@ -11,10 +11,10 @@
             "category": "Translations",
             "options": [
               {
+                "metadata": { "alternateYear": false },
+                "label": "New Revised Standard Version (NRSV)",
                 "default": false,
-                "label": "King James Version (KJV)",
-                "value": "KJV",
-                "metadata": { "alternateYear": false }
+                "value": "NRSV"
               },
               {
                 "label": "Common English Bible (CEB)",
@@ -29,10 +29,10 @@
                 "default": false
               },
               {
-                "metadata": { "alternateYear": false },
-                "label": "New Revised Standard Version (NRSV)",
                 "default": false,
-                "value": "NRSV"
+                "label": "King James Version (KJV)",
+                "value": "KJV",
+                "metadata": { "alternateYear": false }
               }
             ]
           },
@@ -230,9 +230,8 @@
             "options": [
               {
                 "label": "1979 Table of Suggested Canticles",
-                "value": "Rite-I",
-                "default": true,
-                "metadata": { "fallback": "Rite-II", "alternateYear": false }
+                "value": "Rite-II",
+                "default": true
               },
               {
                 "metadata": { "alternateYear": false },
@@ -277,11 +276,11 @@
             ]
           }
         },
-        "liturgyversions": ["Rite-I"]
+        "liturgyversions": ["Rite-II"]
       },
       "label": "Morning Prayer",
       "slug": "morning-prayer",
-      "version": "Rite-I",
+      "version": "Rite-II",
       "type": "liturgy",
       "value": [
         {
@@ -305,7 +304,7 @@
         {
           "type": "rubric",
           "value": [
-            "The Officiant begins the service with one or more of these sentences of Scripture, or with the versicle “O Lord, open thou our lips.”"
+            "The Officiant begins the service with one or more of these sentences of Scripture, or with the versicle “Lord, open our lips.”"
           ],
           "compile_hidden": true
         },
@@ -330,7 +329,7 @@
           },
           "type": "bible-reading",
           "style": "short",
-          "version": "Rite-I"
+          "version": "Rite-II"
         },
         {
           "type": "heading",
@@ -347,7 +346,7 @@
               "source": { "api": "", "source": "", "citation": "" },
               "category": [],
               "value": [
-                "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to render thanks for the great benefits that we have received at his hands, to set forth his most worthy praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy."
+                "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
               ],
               "style": "text",
               "type": "text",
@@ -355,7 +354,9 @@
               "version_label": "Long"
             },
             {
-              "value": ["Let us humbly confess our sins unto Almighty God."],
+              "value": [
+                "Let us confess our sins against God and our neighbor."
+              ],
               "version_label": "Short",
               "type": "text",
               "style": "text",
@@ -377,7 +378,7 @@
             ]
           },
           "type": "option",
-          "source": { "api": "", "source": "bcp1979", "citation": "p. 41" },
+          "source": { "api": "", "source": "bcp1979", "citation": "p. 79" },
           "category": [],
           "metadata": { "editor_selected": 0, "selected": 0 },
           "slug": "confession_intro"
@@ -420,7 +421,7 @@
             "mode": "and"
           },
           "value": [
-            "Almighty and most merciful Father,\nwe have erred and strayed from thy ways like lost sheep,\nwe have followed too much the devices and desires of our own hearts,\nwe have offended against thy holy laws,\nwe have left undone those things which we ought to have done,\nand we have done those things which we ought not to have done.\nBut thou, O Lord, have mercy upon us,\nspare thou those who confess their faults,\nrestore thou those who are penitent,\naccording to thy promises declared unto mankind\nin Christ Jesus our Lord;\nand grant, O most merciful Father, for his sake,\nthat we may hereafter live a godly, righteous, and sober life,\nto the glory of thy holy Name."
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
           ],
           "type": "text"
         },
@@ -446,7 +447,7 @@
           "source": { "source": "", "api": "", "citation": "" },
           "category": [],
           "value": [
-            "The Almighty and merciful Lord grant you absolution and remission of all your sins, true repentance, amendment of life, and the grace and consolation of his Holy Spirit."
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
           ],
           "metadata": {},
           "version_label": "Priest",
@@ -475,17 +476,16 @@
           "type": "responsive",
           "category": [],
           "style": "preces",
-          "source": { "source": "bcp1979", "citation": "p. 42", "api": "" },
+          "source": { "source": "bcp1979", "citation": "p. 80", "api": "" },
           "metadata": {},
           "value": [
             {
-              "text": "O Lord, open thou our lips.",
-              "response": "",
+              "text": "Lord, open our lips.",
               "label": "Officiant"
             },
             {
-              "text": "And our mouth shall show forth thy praise.",
-              "label": "People"
+              "label": "People",
+              "text": "And our mouth shall proclaim your praise."
             }
           ]
         },
@@ -496,8 +496,8 @@
         {
           "style": "gloria",
           "value": [
-            "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-            "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
           ],
           "category": [null],
           "language": "en",
@@ -542,7 +542,7 @@
           "lookup": {
             "type": "category"
           },
-          "version": "Rite-I",
+          "version": "Rite-II",
           "compile_hidden": true
         },
         {
@@ -581,7 +581,7 @@
             "mode": "and"
           },
           "source": { "source": "", "api": "", "citation": "" },
-          "version": "Rite-I",
+          "version": "Rite-II",
           "value": [
             {
               "metadata": {
@@ -596,37 +596,37 @@
               "slug": "venite",
               "value": [
                 {
-                  "type": "psalm-section",
                   "value": [
                     {
-                      "halfverse": "let us heartily rejoice in the strength of our salvation.",
+                      "verse": "Come, let us sing to the Lord; *",
                       "type": "psalm-verse",
-                      "verse": "O come, let us sing unto the Lord; *"
+                      "halfverse": "let us shout for joy to the Rock of our salvation."
                     },
                     {
                       "verse": "Let us come before his presence with thanksgiving *",
-                      "type": "psalm-verse",
-                      "halfverse": "and show ourselves glad in him with psalms."
+                      "halfverse": "and raise a loud shout to him with psalms.",
+                      "type": "psalm-verse"
                     }
-                  ]
+                  ],
+                  "type": "psalm-section"
                 },
                 {
                   "type": "psalm-section",
                   "value": [
                     {
+                      "type": "psalm-verse",
                       "halfverse": "and a great King above all gods.",
-                      "verse": "For the Lord is a great God, *",
-                      "type": "psalm-verse"
+                      "verse": "For the Lord is a great God, *"
                     },
                     {
-                      "halfverse": "and the strength of the hills is his also.",
-                      "verse": " In his hand are all the corners of the earth, *",
-                      "type": "psalm-verse"
-                    },
-                    {
-                      "verse": "The sea is his, and he made it, *",
+                      "halfverse": "and the heights of the hills are his also.",
                       "type": "psalm-verse",
-                      "halfverse": "and his hands prepared the dry land."
+                      "verse": "In his hand are the caverns of the earth, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "and his hands have molded the dry land.",
+                      "verse": "The sea is his, for he made it, *"
                     }
                   ]
                 },
@@ -634,24 +634,14 @@
                   "type": "psalm-section",
                   "value": [
                     {
-                      "halfverse": "and kneel before the Lord our Maker.",
+                      "verse": "Come, let us bow down, and bend the knee, *",
                       "type": "psalm-verse",
-                      "verse": "O come, let us worship and fall down, *"
+                      "halfverse": "and kneel before the Lord our Maker."
                     },
                     {
-                      "halfverse": "and we are the people of his pasture\nand the sheep of his hand.",
-                      "verse": "For he is the Lord our God, *",
-                      "type": "psalm-verse"
-                    },
-                    {
-                      "verse": "O worship the Lord in the beauty of holiness; *",
-                      "halfverse": "let the whole earth stand in awe of him.",
-                      "type": "psalm-verse"
-                    },
-                    {
+                      "halfverse": "Oh, that today you would hearken to his voice!",
                       "type": "psalm-verse",
-                      "verse": "For he cometh, for he cometh to judge the earth, *",
-                      "halfverse": "and with righteousness to judge the world\nand the peoples with his truth."
+                      "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *"
                     }
                   ]
                 }
@@ -659,7 +649,7 @@
               "source": {
                 "api": "https://www.venite.app/api",
                 "source": "bcp1979",
-                "citation": "p. 44"
+                "citation": "p. 82"
               },
               "language": "en",
               "style": "invitatory",
@@ -679,7 +669,7 @@
                 ],
                 "mode": "or"
               },
-              "version": "Rite-I",
+              "version": "Rite-II",
               "label": "Venite"
             },
             {
@@ -687,7 +677,7 @@
               "slug": "jubilate",
               "language": "en",
               "source": {
-                "citation": "p. 45",
+                "citation": "p. 82",
                 "api": "https://www.venite.app/api",
                 "source": "bcp1979"
               },
@@ -700,26 +690,36 @@
                 "omit_gloria": true,
                 "latinname": null
               },
-              "version": "Rite-I",
+              "version": "Rite-II",
               "type": "psalm",
               "category": ["Invitatory"],
               "value": [
                 {
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                      "verse": "Be joyful in the Lord, all you lands; *"
+                    }
+                  ],
+                  "type": "psalm-section"
+                },
+                {
                   "type": "psalm-section",
                   "value": [
                     {
-                      "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
-                      "verse": "Be joyful in the Lord, all ye lands; *",
-                      "type": "psalm-verse"
+                      "type": "psalm-verse",
+                      "verse": "Know this: The Lord himself is God; *",
+                      "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture."
                     }
                   ]
                 },
                 {
                   "value": [
                     {
-                      "halfverse": "we are his people and the sheep of his pasture.",
-                      "verse": "Be ye sure that the Lord he is God;\nit is he that hath made us and not we ourselves; *",
-                      "type": "psalm-verse"
+                      "type": "psalm-verse",
+                      "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                      "halfverse": "give thanks to him and call upon his Name."
                     }
                   ],
                   "type": "psalm-section"
@@ -728,22 +728,13 @@
                   "value": [
                     {
                       "type": "psalm-verse",
-                      "halfverse": "be thankful unto him and speak good of his Name.",
-                      "verse": "O go your way into his gates with thanksgiving\nand into his courts with praise; *"
+                      "verse": "For the Lord is good;\nhis mercy is everlasting; *",
+                      "halfverse": "and his faithfulness endures from age to age."
                     }
                   ],
                   "type": "psalm-section"
                 },
-                {
-                  "type": "psalm-section",
-                  "value": [
-                    {
-                      "halfverse": "and his truth endureth from generation to generation.",
-                      "verse": "For the Lord is gracious;\nhis mercy is everlasting; *",
-                      "type": "psalm-verse"
-                    }
-                  ]
-                }
+                { "value": [], "type": "psalm-section" }
               ],
               "label": "Jubilate",
               "style": "invitatory"
@@ -753,7 +744,7 @@
               "version_label": "Pascha Nostrum",
               "source": {
                 "source": "bcp1979",
-                "citation": "p. 46",
+                "citation": "p. 83",
                 "api": "https://www.venite.app/api"
               },
               "metadata": {
@@ -763,62 +754,62 @@
                 "localname": "Christ our Passover",
                 "omit_antiphon": false
               },
-              "version": "Rite-I",
+              "version": "Rite-II",
               "value": [
                 {
                   "type": "psalm-section",
                   "value": [
                     {
-                      "halfverse": "therefore let us keep the feast,",
+                      "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *",
                       "type": "psalm-verse",
-                      "verse": "Alleluia.\nChrist our Passover is sacrificed for us; *"
+                      "halfverse": "therefore let us keep the feast,"
                     },
                     {
-                      "type": "psalm-verse",
+                      "verse": "Not with the old leaven, the leaven of malice and evil, *",
                       "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
-                      "verse": "Not with old leaven,\nneither with the leaven of malice and wickedness, *"
+                      "type": "psalm-verse"
                     }
                   ]
                 },
                 {
                   "value": [
                     {
-                      "verse": "Christ being raised from the dead dieth no more; *",
-                      "type": "psalm-verse",
-                      "halfverse": "death hath no more dominion over him."
+                      "halfverse": "death no longer has dominion over him.",
+                      "verse": "Christ being raised from the dead will never die again; *",
+                      "type": "psalm-verse"
                     },
                     {
                       "type": "psalm-verse",
-                      "verse": "For in that he died, he died unto sin once; *",
-                      "halfverse": "but in that he liveth, he liveth unto God."
+                      "halfverse": "but the life he lives, he lives to God.",
+                      "verse": "The death that he died, he died to sin, once for all; *"
                     },
                     {
-                      "halfverse": "but alive unto God through Jesus Christ our Lord. Alleluia.",
                       "type": "psalm-verse",
-                      "verse": "Likewise reckon ye also yourselves to be dead indeed unto sin, *\n"
+                      "verse": "So also consider yourselves dead to sin, *",
+                      "halfverse": "and alive to God in Jesus Christ our Lord. Alleluia."
                     }
                   ],
                   "type": "psalm-section"
                 },
                 {
+                  "type": "psalm-section",
                   "value": [
                     {
-                      "halfverse": "and become the first fruits of them that slept.",
-                      "type": "psalm-verse",
-                      "verse": "Christ is risen from the dead, *\n"
-                    },
-                    {
-                      "halfverse": "by man came also the resurrection of the dead.",
-                      "verse": "For since by man came death, *",
+                      "verse": "Christ has been raised from the dead, *",
+                      "halfverse": "the first fruits of those who have fallen asleep.",
                       "type": "psalm-verse"
                     },
                     {
-                      "halfverse": "even so in Christ shall all be made alive. Alleluia.",
+                      "halfverse": "by a man has come also the resurrection of the dead.",
+                      "verse": "For since by a man came death, * ",
+                      "type": "psalm-verse"
+                    },
+                    {
                       "type": "psalm-verse",
-                      "verse": "For as in Adam all die, *\n"
+                      "verse": "For as in Adam all die, *",
+                      "halfverse": "so also in Christ shall all be made alive. Alleluia."
                     }
-                  ],
-                  "type": "psalm-section"
+                  ]
                 }
               ],
               "language": "en",
@@ -901,8 +892,8 @@
           "version_label": "",
           "style": "gloria",
           "value": [
-            "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-            "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
           ],
           "category": [null],
           "language": "en",
@@ -960,7 +951,7 @@
           "type": "text",
           "style": "text",
           "compile_hidden": true,
-          "value": ["Here endeth the Lesson (Reading)."]
+          "value": ["Here ends the Lesson (Reading)."]
         },
         {
           "compile_hidden": true,
@@ -1173,7 +1164,7 @@
               "type": "text",
               "display_format": "unison",
               "value": [
-                "I believe in God, the Father almighty,\n\tmaker of heaven and earth;\nAnd in Jesus Christ his only Son our Lord;\n\twho was conceived by the Holy Ghost,\n\tborn of the Virgin Mary,\n\tsuffered under Pontius Pilate,\n\twas crucified, dead, and buried.\n\tHe descended into hell.\n\tThe third day he rose again from the dead.\n\tHe ascended into heaven,\n\tand sitteth on the right hand of God the Father almighty.\n\tFrom thence he shall come to judge the quick and the dead.\nI believe in the Holy Ghost,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting. Amen."
+                "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only Son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
               ],
               "metadata": {
                 "response": "",
@@ -1200,11 +1191,10 @@
           "style": "preces",
           "value": [
             {
-              "text": "The Lord be with you.",
               "label": "Officiant",
-              "response": ""
+              "text": "The Lord be with you."
             },
-            { "label": "People", "text": "And with thy spirit." },
+            { "text": "And also with you.", "label": "People" },
             { "label": "Officiant", "text": "Let us pray." }
           ],
           "type": "responsive",
@@ -1215,15 +1205,42 @@
           "value": ["Officiant and People"]
         },
         {
-          "display_format": "unison",
-          "source": { "api": "", "citation": "", "source": "" },
+          "hidden": false,
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "slug": "lords_prayer",
+          "category": [],
           "value": [
-            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+            {
+              "version_label": "Traditional",
+              "source": { "citation": "", "api": "", "source": "" },
+              "label": "The Lord’s Prayer",
+              "type": "text",
+              "metadata": { "omit_response": false },
+              "value": [
+                "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+              ],
+              "hidden": false,
+              "style": "prayer",
+              "display_format": "unison",
+              "category": []
+            },
+            {
+              "version_label": "Contemporary",
+              "type": "text",
+              "metadata": { "omit_response": false },
+              "value": [
+                "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+              ],
+              "style": "prayer",
+              "category": [],
+              "display_format": "unison",
+              "source": { "citation": "", "api": "", "source": "" },
+              "label": "The Lord’s Prayer",
+              "hidden": false
+            }
           ],
-          "style": "prayer",
-          "type": "text",
-          "metadata": { "omit_response": false, "rollup": false },
-          "label": "The Lord’s Prayer"
+          "source": { "source": "", "citation": "", "api": "" }
         },
         {
           "type": "rubric",
@@ -1237,40 +1254,40 @@
               "label": "A",
               "value": [
                 {
-                  "text": "O Lord, show thy mercy upon us;",
                   "label": "V.",
+                  "text": "Show us your mercy, O Lord;",
                   "response": ""
                 },
-                { "label": "R.", "text": "And grant us thy salvation." },
+                { "text": "And grant us your salvation.", "label": "R." },
                 {
-                  "label": "V.",
-                  "text": "Endue thy ministers with righteousness;"
+                  "text": "Clothe your ministers with righteousness;",
+                  "label": "V."
                 },
-                { "label": "R.", "text": "And make thy chosen people joyful." },
+                { "label": "R.", "text": "Let your people sing with joy." },
                 {
-                  "label": "V.",
-                  "text": "Give peace, O Lord, in all the world;"
-                },
-                {
-                  "label": "R.",
-                  "text": "For only in thee can we live in safety."
+                  "text": "Give peace, O Lord, in all the world;",
+                  "label": "V."
                 },
                 {
-                  "text": "Lord, keep this nation under thy care;",
+                  "text": "For only in you can we live in safety.",
+                  "label": "R."
+                },
+                {
+                  "text": "Lord, keep this nation under your care; ",
                   "label": "V."
                 },
                 {
                   "label": "R.",
                   "text": "And guide us in the way of justice and truth."
                 },
-                { "label": "V.", "text": "Let thy way be known upon earth;" },
+                { "text": "Let your way be known upon earth;", "label": "V." },
                 {
-                  "text": "Thy saving health among all nations.",
-                  "label": "R."
+                  "label": "R.",
+                  "text": "Your saving health among all nations."
                 },
                 {
-                  "text": "Let not the needy, O Lord, be forgotten;",
-                  "label": "V."
+                  "label": "V.",
+                  "text": "Let not the needy, O Lord, be forgotten;"
                 },
                 {
                   "label": "R.",
@@ -1278,8 +1295,8 @@
                 },
                 { "text": "Create in us clean hearts, O God;", "label": "V." },
                 {
-                  "label": "R.",
-                  "text": "And sustain us with thy Holy Spirit."
+                  "text": "And sustain us with your Holy Spirit.",
+                  "label": "R."
                 }
               ]
             },
@@ -1287,31 +1304,25 @@
               "label": "B",
               "value": [
                 {
+                  "text": "Save your people, Lord, and bless your inheritance;",
                   "response": "",
-                  "label": "V.",
-                  "text": "O Lord, save thy people and bless thine heritage;"
-                },
-                {
-                  "text": "Govern them and lift them up for ever.",
-                  "label": "R."
-                },
-                { "label": "V.", "text": "Day by day we magnify thee;" },
-                {
-                  "label": "R.",
-                  "text": "And we worship thy name for ever, world without end."
-                },
-                {
-                  "label": "V.",
-                  "text": "Vouchsafe, O Lord, to keep us this day without sin;"
+                  "label": "V."
                 },
                 {
                   "label": "R.",
-                  "text": "O Lord, have mercy upon us, have mercy upon us."
+                  "text": "Govern and uphold them, now and always."
                 },
-                { "label": "V.", "text": "O Lord, let thy mercy be upon us;" },
-                { "label": "R.", "text": "As our trust is in thee." },
-                { "text": "O Lord, in thee have I trusted;", "label": "V." },
-                { "label": "R.", "text": "Let me never be confounded." }
+                { "text": "Day by day we bless you;", "label": "V." },
+                { "label": "R.", "text": "We praise your name for ever." },
+                { "text": "Lord, keep us from all sin today;", "label": "V." },
+                {
+                  "label": "R.",
+                  "text": "Have mercy on us, Lord, have mercy."
+                },
+                { "label": "V.", "text": "Lord, show us your love and mercy;" },
+                { "label": "R.", "text": "For we put our trust in you." },
+                { "label": "V.", "text": "In you, Lord, is our hope;" },
+                { "label": "R.", "text": "And we shall never hope in vain." }
               ],
               "style": "preces",
               "type": "responsive"
@@ -1344,7 +1355,7 @@
             "omit_label": false,
             "omit_response": false
           },
-          "version": "Rite-I",
+          "version": "Rite-II",
           "source": { "citation": "", "source": "", "api": "" },
           "type": "text"
         },
@@ -1355,7 +1366,7 @@
           },
           "label": "A Collect for Sundays",
           "value": [
-            "O God, who makest us glad with the weekly remembrance of the glorious resurrection of thy Son our Lord: Grant us this day such blessing through our worship of thee, that the days to come may be spent in thy favor; through the same Jesus Christ our Lord."
+            "O God, you make us glad with the weekly remembrance of the glorious resurrection of your Son our Lord: Give us this day such blessing through our worship of you, that the week to come may be spent in your favor; through Jesus Christ our Lord."
           ],
           "source": { "api": "", "citation": "", "source": "" },
           "metadata": {},
@@ -1372,7 +1383,7 @@
           "label": "A Collect for Fridays",
           "metadata": {},
           "value": [
-            "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other than the way of life and peace; through the same thy Son Jesus Christ our Lord."
+            "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other than the way of life and peace; through Jesus Christ our Lord."
           ],
           "source": { "source": "", "citation": "", "api": "" },
           "type": "text",
@@ -1385,7 +1396,7 @@
           "type": "text",
           "label": "A Collect for Saturdays",
           "value": [
-            "Almighty God, who after the creation of the world didst rest from all thy works and sanctify a day of rest for all thy creatures: Grant that we, putting away all earthly anxieties, may be duly prepared for the service of thy sanctuary, and that our rest here upon earth may be a preparation for the eternal rest promised to thy people in heaven; through Jesus Christ our Lord."
+            "Almighty God, who after the creation of the world rested from all your works and sanctified a day of rest for all your creatures: Grant that we, putting away all earthly anxieties, may be duly prepared for the service of your sanctuary, and that our rest here upon earth may be a preparation for the eternal rest promised to your people in heaven; through Jesus Christ our Lord."
           ],
           "category": [],
           "condition": {
@@ -1400,7 +1411,7 @@
           "style": "prayer",
           "label": "A Collect for the Renewal of Life",
           "value": [
-            "O God, the King eternal, who dividest the day from the night and turnest the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep thy law, and guide our feet into the way of peace; that, having done thy will with cheerfulness while it was day, we may, when the night cometh, rejoice to give thee thanks; through Jesus Christ our Lord."
+            "O God, the King eternal, whose light divides the day from the night and turns the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep your law, and guide our feet into the way of peace; that, having done your will with cheerfulness during the day, we may, when night comes, rejoice to give you thanks; through Jesus Christ our Lord."
           ]
         },
         {
@@ -1408,7 +1419,7 @@
           "style": "prayer",
           "label": "A Collect for Peace",
           "value": [
-            "O God, who art the author of peace and lover of concord, in knowledge of whom standeth our eternal life, whose service is perfect freedom: Defend us, thy humble servants, in all assaults of our enemies; that we, surely trusting in thy defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord."
+            "O God, the author of peace and lover of concord, to know you is eternal life and to serve you is perfect freedom: Defend us, your humble servants, in all assaults of our enemies; that we, surely trusting in your defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord. "
           ]
         },
         {
@@ -1416,7 +1427,7 @@
           "style": "prayer",
           "label": "A Collect for Grace",
           "value": [
-            "O Lord, our heavenly Father, almighty and everlasting God, who hast safely brought us to the beginning of this day: Defend us in the same with thy mighty power; and grant that this day we fall into no sin, neither run into any kind of danger; but that we, being ordered by thy governance, may do always what is righteous in thy sight; through Jesus Christ our Lord."
+            "Lord God, almighty and everlasting Father, you have brought us in safety to this new day: Preserve us with your mighty power, that we may not fall into sin, nor be overcome by adversity; and in all we do, direct us to the fulfilling of your purpose; through Jesus Christ our Lord."
           ]
         },
         {
@@ -1424,7 +1435,7 @@
           "style": "prayer",
           "label": "A Collect for Guidance",
           "value": [
-            "O heavenly Father, in whom we live and move and have our being: We humbly pray thee so to guide and govern us by thy Holy Spirit, that in all the cares and occupations of our life we may not forget thee, but may remember that we are ever walking in thy sight; through Jesus Christ our Lord."
+            "Heavenly Father, in you we live and move and have our being: We humbly pray you so to guide and govern us by your Holy Spirit, that in all the cares and occupations of our life we may not forget you, but may remember that we are ever walking in your sight; through Jesus Christ our Lord. "
           ]
         },
         {
@@ -1437,7 +1448,7 @@
           "type": "text",
           "style": "prayer",
           "value": [
-            "O God, who hast made of one blood all the peoples of the earth, and didst send thy blessed Son to preach peace to those who are far off and to those who are near: Grant that people everywhere may seek after thee and find thee; bring the nations into thy fold; pour out thy Spirit upon all flesh; and hasten the coming of thy kingdom; through the same thy Son Jesus Christ our Lord."
+            "O God, you have made of one blood all the peoples of the earth, and sent your blessed Son to preach peace to those who are far off and to those who are near: Grant that people everywhere may seek after you and find you; bring the nations into your fold; pour out your Spirit upon all flesh; and hasten the coming of your kingdom; through Jesus Christ our Lord. "
           ]
         },
         {
@@ -1448,7 +1459,7 @@
           "type": "text",
           "style": "prayer",
           "value": [
-            "Almighty and everlasting God, by whose Spirit the whole body of thy faithful people is governed and sanctified: Receive our supplications and prayers which we offer before thee for all members of thy holy Church, that in their vocation and ministry they may truly and godly serve thee; through our Lord and Savior Jesus Christ."
+            "Almighty and everlasting God, by whose Spirit the whole body of your faithful people is governed and sanctified: Receive our supplications and prayers which we offer before you for all members of your holy Church, that in their vocation and ministry they may truly and devoutly serve you; through our Lord and Savior Jesus Christ."
           ]
         },
         {
@@ -1457,7 +1468,7 @@
         },
         {
           "value": [
-            "Lord Jesus Christ, who didst stretch out thine arms of love on the hard wood of the cross that everyone might come within the reach of thy saving embrace: So clothe us in thy Spirit that we, reaching forth our hands in love, may bring those who do not know thee to the knowledge and love of thee; for the honor of thy Name."
+            "Lord Jesus Christ, you stretched out your arms of love on the hard wood of the cross that everyone might come within the reach of your saving embrace: So clothe us in your Spirit that we, reaching forth our hands in love, may bring those who do not know you to the knowledge and love of you; for the honor of your Name."
           ],
           "style": "prayer",
           "type": "text"
@@ -1507,8 +1518,8 @@
           "label": "The General Thanksgiving",
           "type": "text",
           "value": [
-            "Almighty God, Father of all mercies,\nwe thine unworthy servants\ndo give thee most humble and hearty thanks\nfor all thy goodness and loving-kindness\nto us and to all men.\nWe bless thee for our creation, preservation,\nand all the blessings of this life;\nbut above all for thine inestimable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
-            "And, we beseech thee,\ngive us that due sense of all thy mercies,\nthat our hearts may be unfeignedly thankful;\nand that we show forth thy praise,\nnot only with our lips, but in our lives,\nby giving up our selves to thy service,\nand by walking before thee\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with thee and the Holy Ghost,\nbe all honor and glory, world without end."
+            "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
+            "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages. "
           ]
         },
         {
@@ -1518,7 +1529,7 @@
           "style": "prayer",
           "type": "text",
           "value": [
-            "Almighty God, who hast given us grace at this time with one accord to make our common supplication unto thee; and hast promised through thy well-beloved Son that when two or three are gathered together in his Name thou wilt be in the midst of them: Fulfill now, O Lord, the desires and petitions of thy servants as may be best for us; granting us in this world knowledge of thy truth, and in the world to come life everlasting. "
+            "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
           ],
           "metadata": {}
         },
@@ -1585,7 +1596,7 @@
         {
           "lookup": { "rotate": true, "type": "category" },
           "type": "bible-reading",
-          "version": "Rite-I",
+          "version": "Rite-II",
           "source": { "source": "", "citation": "", "api": "" },
           "metadata": {},
           "category": ["Closing Sentences"],
