@@ -37,7 +37,7 @@ async function buildDocs(srcDir : string, subpath : string, categorySlug : strin
       }
     }
     else if(isDirectory) {
-      buildDocs(path.join(srcDir, name), subpath, `${categorySlug}/${name}`, children);
+      await buildDocs(path.join(srcDir, name), subpath, `${categorySlug}/${name}`, children);
     }
   }
 }
