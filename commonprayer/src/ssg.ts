@@ -30,6 +30,7 @@ async function build(
       // Build pages
       buildPage("home", { isDev, isIndex: true }),
       buildPage("psalter", { isDev }),
+      buildPage("collects", { isDev }),
       buildPage("canticle-table", { isDev }),
       buildPage("calendar", {
         isDev,
