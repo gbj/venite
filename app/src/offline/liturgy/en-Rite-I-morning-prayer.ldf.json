@@ -825,7 +825,7 @@
             "number": null,
             "latinname": null
           },
-          "version_label": "Venite (BCP)",
+          "version_label": "Venite",
           "slug": "venite",
           "value": [
             {
@@ -924,7 +924,7 @@
           "label": "Venite"
         },
         {
-          "version_label": "Jubilate (BCP)",
+          "version_label": "Jubilate",
           "citation": "Psalm 100",
           "sharing": {
             "collaborators": [],
