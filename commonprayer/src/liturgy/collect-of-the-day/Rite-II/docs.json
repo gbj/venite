@@ -126,8 +126,7 @@
       "category": ["Collect", "Collect of the Day"],
       "hidden": false,
       "style": "prayer",
-      "label": "The Nativity of Our Lord: Christmas Day",
-      "citation": "Amen."
+      "label": "The Nativity of Our Lord: Christmas Day"
     },
     {
       "hidden": false,
@@ -906,8 +905,7 @@
       "style": "prayer",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "slug": "thursday-6th-easter",
@@ -924,8 +922,7 @@
       "style": "prayer",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "slug": "friday-6th-easter",
@@ -942,8 +939,7 @@
       "style": "prayer",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "slug": "saturday-6th-easter",
@@ -960,8 +956,7 @@
       "style": "prayer",
       "hidden": false,
       "type": "text",
-      "label": "[missing label]",
-      "citation": "Amen."
+      "label": "Ascension Day"
     },
     {
       "metadata": {
@@ -1014,7 +1009,7 @@
       "style": "prayer",
       "slug": "pentecost",
       "version": "Rite-II",
-      "label": "[missing label]",
+      "label": "The Day of Pentecost: Whitsunday",
       "citation": "Amen."
     },
     {
