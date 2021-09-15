@@ -25,25 +25,25 @@ export function responsivePrayerToHTML(
     config
   );
   if (doc.style === "litany") {
-    return `<div>${[
-      header,
-      `<article ${ldf} class="doc responsive-prayer litany${
-        doc.hidden ? " hidden" : ""
-      }"  lang="${doc.language || "en"}">`,
-      ...(doc.value || []).map(
-        (line) =>
-          `<p class="line ${
-            line.optional ? "optional" : ""
-          }"><span class="text">${processText(line.text)}</span><br/>${
-            line.response || doc.metadata?.response
-              ? `<strong class="response">${processText(
-                  line.response || doc.metadata?.response || ""
-                )}</strong>`
-              : ""
-          }</p>`
-      ),
-      `</article>`,
-    ].join("\n")}</div>`;
+    return `<article ${ldf} class="doc responsive-prayer litany${
+      doc.hidden ? " hidden" : ""
+    }"  lang="${doc.language || "en"}">
+      ${[
+        header,
+        ...(doc.value || []).map(
+          (line) =>
+            `<p class="line ${
+              line.optional ? "optional" : ""
+            }"><span class="text">${processText(line.text)}</span><br/>${
+              line.response || doc.metadata?.response
+                ? `<strong class="response">${processText(
+                    line.response || doc.metadata?.response || ""
+                  )}</strong>`
+                : ""
+            }</p>`
+        ),
+      ].join("\n")}
+      </article>`;
   } else if (doc.style === "preces") {
     return `<article ${ldf} class="doc responsive-prayer preces${
       doc.hidden ? " hidden" : ""
