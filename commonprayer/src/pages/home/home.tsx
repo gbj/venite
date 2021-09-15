@@ -22,6 +22,9 @@ export default function Home(): PageProps {
           <a href="/office">The Daily Office</a>
           <ul>
             <li><a href="/office/morning-prayer">Morning Prayer</a></li>
+            <li><a href="/office/noonday-prayer">Noonday Prayer</a></li>
+            <li><a href="/office/evening-prayer">Evening Prayer</a></li>
+            <li><a href="/office/compline">Compline</a></li>
             <li><a href="/canticle-table">Table of Suggested Canticles</a></li>
           </ul>
         </li>

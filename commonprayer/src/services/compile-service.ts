@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.21";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.23";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -263,7 +263,11 @@ export class CompileServiceController {
 
       if (resultDocs) {
         // filter/rotate
-        const filteredDoc = this.filterAndRotate(doc, day, resultDocs);
+        const filteredDoc = this.filterAndRotate(
+          doc,
+          day,
+          resultDocs.filter((doc) => Boolean(doc))
+        );
 
         // create in UI
         const el = document.createElement("article");
@@ -514,10 +518,14 @@ export class CompileServiceController {
         reading,
         alternateYear
       );
+
+    console.log("lookupLectionary", alternateYear, entries);
+
     // deduplicate citations
     const citations = Array.from(
       new Set(entries.map((entry) => entry.citation))
     );
+
     // look up and sort the documents
     const docs = await Promise.all(
         citations.map((citation) =>
@@ -536,9 +544,13 @@ export class CompileServiceController {
             Number((b as Psalm).value[0].value[0].number)
           : a?.metadata?.number - b?.metadata?.number
       );
+
+    console.log("lookupLectionary -- ", sorted);
     if (doc.metadata?.allow_multiple) {
+      console.log("lookupLectionary -- docsToLiturgy --", sorted);
       return docsToLiturgy(sorted);
     } else {
+      console.log("lookupLectionary -- docsToOption --", sorted);
       return docsToOption(sorted);
     }
   }

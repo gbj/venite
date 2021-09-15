@@ -28,6 +28,14 @@ export const LDF_TO_HTML_CONFIG = {
     const locale = LOCALE[doc.language || "en"];
 
     switch (doc.lookup.type) {
+      case "slug":{
+        const slug = doc.slug,
+          category = (doc.category || []).join("/").replace(/[^\w]/g, "-").toLowerCase(),
+          version = doc.version,
+          label = doc.label;
+        return (
+          <a href={`/${category ? category + '/' : ''}${version ? version + '/' : ''}${slug}/`}>{label}</a>
+        );}
       case "category":{
         const category = doc.category[0],
           version = doc.version,

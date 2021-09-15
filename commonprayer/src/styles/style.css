@@ -232,3 +232,7 @@ a.source:visited {
 .doc.text {
   white-space: pre-wrap;
 }
+
+.litany > .line {
+  margin-bottom: 1rem;
+}

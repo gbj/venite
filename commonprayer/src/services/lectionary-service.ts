@@ -52,7 +52,11 @@ export class LectionaryServiceController {
     alternateYear = false
   ): Promise<LectionaryEntry[]> {
     const entries = await this.findReadings(day, lectionaryName, alternateYear);
-    return entries.filter((e) => e.type === readingType);
+    return entries.filter((e) =>
+      alternateYear
+        ? e.type === readingType.replace("_alt", "")
+        : e.type === readingType
+    );
   }
 
   filterReadings(
@@ -77,7 +81,8 @@ export class LectionaryServiceController {
     } else {
       let halfFiltered = entries.filter(
         (entry) =>
-          entry.when.toString() == when.toString() &&
+          (entry.when.toString() == when.toString() ||
+            (alternateYear && entry.when.toString() !== when.toString())) &&
           (!entry.whentype || entry.whentype == whentype)
       );
 

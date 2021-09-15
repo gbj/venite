@@ -8,7 +8,7 @@ export const CalendarService = new CalendarServiceController();
 export const LectionaryService = new LectionaryServiceController();
 export const CompileService = new CompileServiceController();
 
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.21";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.23";
 import { LDF_TO_HTML_CONFIG } from "../ssg/ldf-to-html-config.tsx";
 
 export function docToHTML(doc: LiturgicalDocument): string {

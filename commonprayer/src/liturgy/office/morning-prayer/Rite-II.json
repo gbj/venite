@@ -101,13 +101,13 @@
                 "value": "second_reading",
                 "metadata": { "alternateYear": false },
                 "label": "Epistle/Second Reading",
-                "default": false
+                "default": true
               },
               {
                 "metadata": { "alternateYear": false },
                 "value": "gospel",
                 "label": "Gospel",
-                "default": true
+                "default": false
               }
             ]
           },
@@ -332,13 +332,55 @@
           "version": "Rite-II"
         },
         {
+          "type": "rubric",
+          "value": [
+            "The following Confession of Sin may then be said; or the Office may continue at once with “Lord, open our lips.”"
+          ],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "heading",
           "value": ["Confession of Sin"],
-          "metadata": { "level": 3 }
+          "metadata": { "level": 3 },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          }
         },
         {
           "type": "rubric",
-          "value": ["The Officiant says to the people"]
+          "value": ["The Officiant says to the people"],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          }
         },
         {
           "value": [
@@ -464,7 +506,7 @@
           "style": "text",
           "category": [],
           "type": "heading",
-          "value": ["Invitatory and Psalter"],
+          "value": ["The Invitatory and Psalter"],
           "source": { "api": "", "source": "", "citation": "" },
           "hidden": false
         },
@@ -501,7 +543,6 @@
           ],
           "category": [null],
           "language": "en",
-          "version": "rite_i",
           "slug": "gloria-patri",
           "citation": null,
           "type": "refrain"
@@ -1117,12 +1158,76 @@
               {
                 "preference": {
                   "is": false,
-                  "key": "readingB",
+                  "key": "readingC",
                   "value": "none"
                 }
               }
             ]
           }
+        },
+        {
+          "version": { "preference": "bibleVersion" },
+          "label": "The Third Lesson",
+          "hidden": true,
+          "style": "long",
+          "lookup": {
+            "type": "lectionary",
+            "table": { "preference": "lectionary" },
+            "item": { "preference": "readingC" }
+          },
+          "type": "bible-reading",
+          "metadata": {
+            "intro": {
+              "type": "text",
+              "value": ["A Reading from ${longName}."],
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "privacy": "public"
+              }
+            }
+          },
+          "source": { "source": "", "api": "", "citation": "" },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "value": "none",
+                  "key": "readingC"
+                }
+              }
+            ]
+          },
+          "category": []
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "value": "none",
+                  "is": false,
+                  "key": "readingC"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "hidden": true,
+          "type": "responsive",
+          "style": "responsive",
+          "value": [
+            {
+              "label": "",
+              "response": "Thanks be to God.",
+              "text": "The Word of the Lord."
+            }
+          ]
         },
         {
           "type": "heading",

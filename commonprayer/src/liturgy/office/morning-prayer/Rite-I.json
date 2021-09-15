@@ -101,13 +101,13 @@
                 "value": "second_reading",
                 "metadata": { "alternateYear": false },
                 "label": "Epistle/Second Reading",
-                "default": false
+                "default": true
               },
               {
                 "metadata": { "alternateYear": false },
                 "value": "gospel",
                 "label": "Gospel",
-                "default": true
+                "default": false
               }
             ]
           },
@@ -236,7 +236,7 @@
               },
               {
                 "metadata": { "alternateYear": false },
-                "value": "TDB",
+                "value": "TDB-I",
                 "default": false,
                 "label": "Te Deum/Benedictus"
               }
@@ -333,13 +333,55 @@
           "version": "Rite-I"
         },
         {
+          "type": "rubric",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          },
+          "value": [
+            "The following Confession of Sin may then be said; or the Office may continue at once with “O Lord, open thou our lips.”"
+          ]
+        },
+        {
           "type": "heading",
           "value": ["Confession of Sin"],
-          "metadata": { "level": 3 }
+          "metadata": { "level": 3 },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          }
         },
         {
           "type": "rubric",
-          "value": ["The Officiant says to the people"]
+          "value": ["The Officiant says to the people"],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "yes",
+                  "key": "omitForeOffice",
+                  "is": false
+                }
+              }
+            ]
+          }
         },
         {
           "value": [
@@ -456,14 +498,26 @@
           "type": "rubric",
           "value": [
             "A deacon or lay person using the preceding form remains kneeling, and substitutes “us” for “you” and “our” for “your.”"
-          ]
+          ],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "key": "omitForeOffice",
+                  "is": true,
+                  "value": "no"
+                }
+              }
+            ]
+          }
         },
         {
           "metadata": { "level": 2 },
           "style": "text",
           "category": [],
           "type": "heading",
-          "value": ["Invitatory and Psalter"],
+          "value": ["The Invitatory and Psalter"],
           "source": { "api": "", "source": "", "citation": "" },
           "hidden": false
         },
@@ -496,12 +550,11 @@
         {
           "style": "gloria",
           "value": [
-            "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-            "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
           ],
           "category": [null],
           "language": "en",
-          "version": "rite_i",
           "slug": "gloria-patri",
           "citation": null,
           "type": "refrain"
@@ -1126,12 +1179,76 @@
               {
                 "preference": {
                   "is": false,
-                  "key": "readingB",
+                  "key": "readingC",
                   "value": "none"
                 }
               }
             ]
           }
+        },
+        {
+          "version": { "preference": "bibleVersion" },
+          "label": "The Third Lesson",
+          "hidden": true,
+          "style": "long",
+          "lookup": {
+            "type": "lectionary",
+            "table": { "preference": "lectionary" },
+            "item": { "preference": "readingC" }
+          },
+          "type": "bible-reading",
+          "metadata": {
+            "intro": {
+              "type": "text",
+              "value": ["A Reading from ${longName}."],
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "privacy": "public"
+              }
+            }
+          },
+          "source": { "source": "", "api": "", "citation": "" },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "value": "none",
+                  "key": "readingC"
+                }
+              }
+            ]
+          },
+          "category": []
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "value": "none",
+                  "is": false,
+                  "key": "readingC"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "hidden": true,
+          "type": "responsive",
+          "style": "responsive",
+          "value": [
+            {
+              "label": "",
+              "response": "Thanks be to God.",
+              "text": "The Word of the Lord."
+            }
+          ]
         },
         {
           "type": "heading",
@@ -1160,7 +1277,8 @@
             {
               "type": "heading",
               "metadata": { "level": 3 },
-              "value": ["The Apostles’ Creed"]
+              "value": ["The Apostles’ Creed"],
+              "source": { "source": "bcp1979", "citation": "p. 53", "api": "" }
             },
             {
               "type": "rubric",
