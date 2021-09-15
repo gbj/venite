@@ -1775,8 +1775,8 @@
         "The dedication of the buildings was completed on September 14th, 335, the seventh month of the Roman calendar, a date suggested by the account of the dedication of Solomon’s temple in the same city, in the seventh month of the Jewish calendar, hundreds of years before (2 Chronicles 7:8–10). "
       ],
       "type": {
-        "rank": 2,
-        "name": "Black Letter"
+        "rank": 3,
+        "name": "Red Letter"
       },
       "mmdd": "9/14",
       "slug": "holy-cross",
@@ -1881,25 +1881,6 @@
         "It was not until the revision of 1928 that provision was again made for the liturgical observance of the day. "
       ],
       "kalendar": "lff2018"
-    },
-    {
-      "kalendar": "lff2018",
-      "type": {
-        "rank": 2,
-        "name": "Black Letter"
-      },
-      "mmdd": "6/28",
-      "bio": [
-        "I\tAlmighty God, who didst strengthen thy servant Irenaeus to defend thy truth against every blast of vain doctrine: Keep us, we pray, steadfast in thy true religion, that in constancy and peace we may walk in the way that leads to eternal life; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. Amen. ",
-        "II\tAlmighty God, who strengthened your servant Irenaeus to defend thy truth against every blast of vain doctrine: Keep us, we pray, steadfast in your true religion, that in constancy and peace we may walk in the way that leads to eternal life; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, now and for ever. Amen. ",
-        "Lessons and Psalm",
-        "2 Timothy 2:22–26 ",
-        "Psalm 85:8–13",
-        "Luke 11:33–36 ",
-        "Preface of the Epiphany"
-      ],
-      "slug": "irenaeus-of-lyon",
-      "name": "IRENAEUS OF LYON, Bishop and Theologian, c.202"
     },
     {
       "kalendar": "lff2018",
@@ -3506,14 +3487,10 @@
     {
       "name": "SAINT JAMES OF JERUSALEM, BROTHER OF OUR LORD JESUS CHRIST",
       "bio": [
-        "I\tGrant, we beseech thee, O God, that after the exampleof thy servant James the Just, brother of our Lord, thy church may give itself continually to prayer and to the reconciliation of all who are at variance and enmity; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the Holy Ghost, one God, now and for ever. Amen. ",
-        "II\tGrant, O God, that, following the example of your servant James the Just, brother of our Lord, your church may give itself continually to prayer and to the reconciliation of all who are at variance and enmity; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, now and for ever. Amen. ",
-        "Lessons and Psalm",
-        "Acts 15:12–22a",
-        "Psalm 1",
-        "1 Corinthians 15:1–11 ",
-        "Matthew 13:54–58 ",
-        "Preface of All Saints"
+        "In the Gospel according to Matthew and in the Epistle to the Galatians, the James whom we commemorate today is called the Lord’s brother. Other writers, following Mark’s tradition, believe him to have been a cousin of Jesus. Certain apocryphal writings speakof him as a son of Joseph’s first wife. Whatever his relationship to Jesus—brother, half-brother, or cousin—James was converted after the resurrection. Eventually, he became Bishop of Jerusalem.",
+        "In the first letter to the Corinthians (15:7), Paul says that James was favored with a special appearance of the Lord before the ascension. Later, James dealt cordially with Paul at Jerusalem, when the latter came there to meet Peter and the other apostles. During the Council of Jerusalem, when there was disagreement about whether Gentile converts should be circumcised, James summed up the momentous decision with these words: “My judgment is that we should impose no irksome restrictions on those Gentiles who are turning to God” (Acts 15:19).",
+        "Eusebius, quoting from an earlier church history by Hegesippus, declares that James was surnamed “the Just.” He was holy, abstemious, did not cut his hair nor oil his body, and was continually on his knees in prayer, interceding for his people. “As many as came to believe did so through James,” says Hegesippus. ",
+        "James’ success in converting many to Christ greatly perturbed some factions in Jerusalem. According to Hegesippus, they begged himto “restrain the people, for they have gone astray to Jesus, thinking him to be the Messiah…We bear you witness that you are just…Persuade the people that they do not go astray…we put our trust in you.” They then set James on the pinnacle of the temple, bidding him to preach to the multitude and turn them from Jesus. James, however, testified for the Lord. Thereupon, they hurled him from the roof to the pavement, and cudgeled him to death. "
       ],
       "color": "Red",
       "slug": "st-james-of-jerusalem",
@@ -3647,7 +3624,7 @@
       "slug": "st-matthew",
       "kalendar": "lff2018",
       "type": {
-        "rank": 2,
+        "rank": 3,
         "name": "Black Letter"
       },
       "mmdd": "9/21",
@@ -3693,7 +3670,7 @@
     {
       "type": {
         "name": "Black Letter",
-        "rank": 2
+        "rank": 3
       },
       "kalendar": "lff2018",
       "bio": [
@@ -3847,8 +3824,8 @@
       "name": "THE ANNUNCIATION OF OUR LORD JESUS CHRIST TO THE BLESSED VIRGIN MARY",
       "kalendar": "lff2018",
       "type": {
-        "rank": 2,
-        "name": "Black Letter"
+        "rank": 3,
+        "name": "Red Letter"
       },
       "slug": "annunciation"
     },
@@ -4086,7 +4063,7 @@
       ],
       "slug": "nativity-of-st-john-the-baptist",
       "type": {
-        "name": "Black Letter",
+        "name": "Red Letter",
         "rank": 3
       },
       "mmdd": "6/24",
