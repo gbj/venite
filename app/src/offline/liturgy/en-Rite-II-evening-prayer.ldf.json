@@ -107,7 +107,7 @@
       "style": "short"
     },
     {
-      "source": { "citation": "p. 79", "source": "bcp1979", "api": "" },
+      "source": { "citation": "p. 116", "source": "bcp1979", "api": "" },
       "type": "option",
       "condition": {
         "mode": "and",
@@ -682,7 +682,7 @@
       "source": { "api": "", "citation": "", "source": "" }
     },
     {
-      "source": { "api": "", "citation": "p. 96", "source": "bcp1979" },
+      "source": { "api": "", "citation": "p. 120", "source": "bcp1979" },
       "category": [],
       "metadata": { "response": "Amen.", "omit_response": false },
       "display_format": "unison",
@@ -985,7 +985,7 @@
       "type": "text",
       "style": "prayer",
       "metadata": {},
-      "source": { "citation": "p. 101", "api": "", "source": "bcp1979" },
+      "source": { "citation": "p. 125", "api": "", "source": "bcp1979" },
       "category": [],
       "value": [
         "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
@@ -1001,7 +1001,7 @@
       "value": [
         "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
       ],
-      "source": { "api": "", "citation": "p. 102", "source": "bcp1979" },
+      "source": { "api": "", "citation": "p. 126", "source": "bcp1979" },
       "type": "text",
       "label": "A Prayer of St. Chrysostom"
     },
