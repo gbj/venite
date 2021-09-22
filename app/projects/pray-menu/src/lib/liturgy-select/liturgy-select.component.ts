@@ -1034,18 +1034,20 @@ export class LiturgySelectComponent implements OnInit {
 
     const nonDefaultPrefs = {};
 
-    for (let key of uniquePrefKeys) {
-      const liturgyPref = new Preference(liturgy.metadata?.preferences[key]),
-        clientPrefValue = prefs[key];
-      let defaultPrefValue: string;
-      try {
-        defaultPrefValue = liturgyPref.getDefaultPref();
-      } catch (e) {
-        console.warn(e);
-      }
+    if (liturgy.metadata?.preferences) {
+      for (let key of uniquePrefKeys) {
+        const liturgyPref = new Preference(liturgy.metadata.preferences[key]),
+          clientPrefValue = prefs[key];
+        let defaultPrefValue: string;
+        try {
+          defaultPrefValue = liturgyPref.getDefaultPref();
+        } catch (e) {
+          console.warn(e);
+        }
 
-      if (clientPrefValue !== defaultPrefValue) {
-        nonDefaultPrefs[key] = clientPrefValue;
+        if (clientPrefValue !== defaultPrefValue) {
+          nonDefaultPrefs[key] = clientPrefValue;
+        }
       }
     }
 
