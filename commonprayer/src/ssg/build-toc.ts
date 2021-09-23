@@ -60,6 +60,46 @@ export async function buildDoc(
   return { [src]: () => buildDoc(subpath, src, filename, isDev) };
 }
 
+export async function buildDocFromCategory(
+  srcDir: string,
+  doc: LiturgicalDocument,
+  isDev = false
+) {
+  console.log(doc.slug, doc.version);
+  if (doc.slug && doc.version) {
+    try {
+      const slug = doc.slug,
+        version = typeof doc.version === "string" ? doc.version : "Rite-II",
+        dest = path.join(
+          path.fromFileUrl(import.meta.url),
+          "..",
+          "..",
+          "..",
+          "www",
+          srcDir,
+          version,
+          slug
+        ),
+        page = Doc(slug, srcDir, undefined, doc),
+        html = await Index(page, isDev);
+
+      if (!(await exists(dest))) {
+        await Deno.mkdir(dest, { recursive: true });
+      }
+
+      try {
+        console.log("dest = ", dest);
+        //await Deno.writeTextFile(path.join(dest, "index.html"), html);
+      } catch (e) {
+        console.warn("Trouble w/ subdoc ", e);
+      }
+    } catch (e) {
+      console.error("Error building");
+      console.error(e);
+    }
+  }
+}
+
 async function addCategoryDirectory(
   srcDir: string,
   categoryDocs: LiturgicalDocument[]

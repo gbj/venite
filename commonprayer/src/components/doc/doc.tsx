@@ -19,10 +19,16 @@ export const Doc = await Page({
   styles: [
     path.join(path.fromFileUrl(import.meta.url), "..", "doc.css"),
   ],
-  main: async (slug : string, subpath : string | undefined, src: string) => {
-    const json = await Deno.readTextFile(src),
-      data = JSON.parse(json),
-      docs = [];
+  main: async (slug : string, subpath : string | undefined, src?: string, doc?: LiturgicalDocument) => {
+    let data;
+    if(src) {
+      const json = await Deno.readTextFile(src);
+      data = JSON.parse(json);
+    }
+    else if(doc) {
+      data = doc;
+    }
+    const docs = [];
      
     if(data.data) {
       const dataDocs : LiturgicalDocument[] = data.data;

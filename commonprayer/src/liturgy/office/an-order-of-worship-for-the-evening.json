@@ -5,11 +5,478 @@
       "value": [
         {
           "type": "heading",
+          "hidden": false,
+          "style": "text",
+          "metadata": { "level": 1 },
           "value": ["An Order of Worship for the Evening"]
         },
         {
           "type": "rubric",
-          "value": ["[TODO]"]
+          "value": [
+            "The church is dark, or partially so, when the service is to begin.",
+            " All stand, and the Officiant greets the people with these words."
+          ],
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "style": "preces",
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "label": "Officiant",
+              "text": "Light and peace, in Jesus Christ our Lord."
+            },
+            { "text": "Thanks be to God.", "label": "People" }
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "only": ["Easter", "Ascension", "Pentecost"] } }
+            ]
+          },
+          "value": [
+            "In place of the above, from Easter Day through the Day of Pentecost"
+          ]
+        },
+        {
+          "type": "responsive",
+          "style": "preces",
+          "compile_hidden": true,
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "only": ["Easter", "Ascension", "Pentecost"] } }
+            ]
+          },
+          "value": [
+            { "label": "Officiant", "text": "Alleluia. Christ is risen." },
+            { "label": "People", "text": "The Lord is risen indeed. Alleluia." }
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "condition": {
+            "mode": "and",
+            "conditions": [{ "season": { "only": ["Lent", "HolyWeek"] } }]
+          },
+          "value": ["In Lent and on other penitential occasions"]
+        },
+        {
+          "type": "responsive",
+          "style": "preces",
+          "compile_hidden": true,
+          "condition": {
+            "mode": "and",
+            "conditions": [{ "season": { "only": ["Lent", "HolyWeek"] } }]
+          },
+          "value": [
+            {
+              "label": "Officiant",
+              "text": "Bless the Lord who forgives all our sins;"
+            },
+            { "label": "People", "text": "His mercy endures forever." }
+          ]
+        },
+        {
+          "hidden": false,
+          "value": [
+            "One of the following, or some other Short Lesson of Scripture appropriate to the occasion or to the season, may then be read"
+          ],
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "language": "en",
+              "category": [],
+              "label": "",
+              "metadata": { "response": " " },
+              "value": [
+                {
+                  "chapter": "5",
+                  "verse": "14",
+                  "book": "Matthew",
+                  "text": "Jesus said, “You are the light of the world. A city built on a hill cannot be hid. "
+                },
+                {
+                  "verse": "15",
+                  "book": "Matthew",
+                  "text": "No one lights a lamp to put it under a bucket, but on a lamp-stand where it gives light for everyone in the house.",
+                  "chapter": "5"
+                },
+                {
+                  "chapter": "5",
+                  "text": "And you, like the lamp, must shed light among your fellow men, so that they may see the deed you do, and give glory to your Father in heaven.”",
+                  "book": "Matthew",
+                  "verse": "16"
+                }
+              ],
+              "type": "bible-reading",
+              "style": "short",
+              "hidden": false,
+              "version": "NRSV",
+              "source": { "source": "", "citation": "", "api": "" },
+              "citation": "Matthew 5:14-16"
+            },
+            {
+              "language": "en",
+              "version": "NRSV",
+              "source": { "citation": "", "source": "", "api": "" },
+              "label": "",
+              "citation": "2 Corinthians 4:5-6",
+              "hidden": false,
+              "category": [],
+              "type": "bible-reading",
+              "metadata": { "response": " " },
+              "value": [
+                {
+                  "book": "2 Corinthians",
+                  "verse": "5",
+                  "chapter": "4",
+                  "text": "It is not ourselves that we proclaim; we proclaim Christ Jesus as Lord, and ourselves as your servants, for Jesus’ sake. "
+                },
+                {
+                  "verse": "6",
+                  "chapter": "4",
+                  "book": "2 Corinthians",
+                  "text": "For the same God who said, “Out of darkness let light shine,” has caused his light to shine within us, to give the light of revelation—the revelation of the glory of God in the face of Jesus Christ."
+                }
+              ],
+              "style": "short"
+            },
+            {
+              "type": "bible-reading",
+              "metadata": { "response": " " },
+              "label": "",
+              "citation": "Psalm 139:11",
+              "style": "short",
+              "hidden": false,
+              "version": "NRSV",
+              "source": { "api": "", "citation": "", "source": "" },
+              "language": "en",
+              "category": [],
+              "value": [
+                {
+                  "chapter": "139",
+                  "text": "If I say, “Surely the darkness will cover me, and the light around me turn to night,” darkness is not dark to you, O Lord; the night is as bright as the day; darkness and light to you are both alike.",
+                  "book": "Psalm",
+                  "verse": "11"
+                }
+              ]
+            }
+          ],
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "source": { "api": "", "source": "", "citation": "" }
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The Officiant then says the Prayer for Light, using any one of the following or some other suitable prayer, first saying"
+          ]
+        },
+        {
+          "hidden": false,
+          "type": "text",
+          "style": "text",
+          "value": ["Let us pray."]
+        },
+        {
+          "value": [
+            {
+              "hidden": false,
+              "style": "prayer",
+              "value": [
+                "Almighty God, we give you thanks for surrounding us, as daylight fades, with the brightness of the vesper light; and we implore you of your great mercy that, as you enfold us with the radiance of this light, so you would shine into our hearts the brightness of your Holy Spirit; through Jesus Christ our Lord. "
+              ],
+              "type": "text"
+            },
+            {
+              "value": [
+                "Grant us, Lord, the lamp of charity which never fails, that it may burn in us and shed its light on those around us, and that by its brightness we may have a vision of that holy City, where dwells the true and never-failing Light, Jesus Christ our Lord. "
+              ],
+              "hidden": false,
+              "type": "text",
+              "style": "prayer"
+            },
+            {
+              "type": "text",
+              "hidden": false,
+              "value": [
+                "O Lord God Almighty, as you have taught us to call the evening, the morning, and the noonday one day; and have made the sun to know its going down: Dispel the darkness of our hearts, that by your brightness we may know you to be the true God and eternal light, living and reigning for ever and ever."
+              ],
+              "style": "prayer"
+            },
+            {
+              "type": "text",
+              "hidden": false,
+              "value": [
+                "Lighten our darkness, we beseech thee, O Lord; and by thy great mercy defend us from all perils and dangers of this night; for the love of thy only Son, our Savior, Jesus Christ. "
+              ],
+              "style": "prayer"
+            }
+          ],
+          "type": "option",
+          "hidden": false,
+          "metadata": { "selected": 0, "editor_selected": 0 }
+        },
+        {
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["Advent"]
+        },
+        {
+          "version": "Rite-II",
+          "source": { "citation": "", "source": "", "api": "" },
+          "slug": "first-advent",
+          "category": ["Collect of the Day"],
+          "condition": {
+            "mode": "and",
+            "conditions": [{ "season": { "except": [], "only": ["Advent"] } }]
+          },
+          "style": "prayer",
+          "lookup": { "rotate": false, "type": "slug" },
+          "hidden": false,
+          "metadata": { "rollup": false },
+          "type": "text",
+          "label": "Collect for the First Sunday of Advent"
+        },
+        {
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["Christmas, Epiphany, and other Feasts of the Incarnation"]
+        },
+        {
+          "version": "Rite-II",
+          "hidden": false,
+          "category": ["Collect of the Day"],
+          "lookup": { "type": "slug", "rotate": false },
+          "metadata": { "rollup": false },
+          "style": "prayer",
+          "type": "text",
+          "slug": "1st-sunday-after-christmas",
+          "source": { "citation": "", "source": "", "api": "" },
+          "condition": {
+            "conditions": [
+              { "season": { "except": [], "only": ["Christmas", "Epiphany"] } }
+            ],
+            "mode": "and"
+          },
+          "label": "Collect for the First Sunday after Christmas"
+        },
+        {
+          "style": "prayer",
+          "type": "text",
+          "label": "Lent and other times of penitence",
+          "value": [
+            "Almighty and most merciful God, kindle within us the fire of love, that by its cleansing flame we may be purged of all our sins and made worthy to worship you in spirit and in truth; through Jesus Christ our Lord."
+          ],
+          "condition": {
+            "conditions": [
+              { "season": { "except": [], "only": ["Lent", "HolyWeek"] } }
+            ],
+            "mode": "and"
+          },
+          "hidden": false
+        },
+        {
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "except": [], "only": ["Easter", "Ascension"] } }
+            ]
+          },
+          "type": "text",
+          "label": "Easter Season",
+          "value": [
+            "Eternal God, who led your ancient people into freedom by a pillar of cloud by day and a pillar of fire by night: Grant that we who walk in the light of your presence may rejoice in the liberty of the children of God; through Jesus Christ our Lord. "
+          ],
+          "style": "prayer",
+          "hidden": false
+        },
+        {
+          "type": "text",
+          "condition": {
+            "conditions": [{ "season": { "except": [], "only": ["Saints"] } }],
+            "mode": "and"
+          },
+          "hidden": false,
+          "label": "Festivals of Saints",
+          "value": [
+            "Lord Christ, your saints have been the lights of the world in every generation: Grant that we who follow in their footsteps may be made worthy to enter with them into that heavenly country where you live and reign for ever and ever. "
+          ],
+          "style": "prayer"
+        },
+        {
+          "value": [
+            "\nThe candles at the Altar are now lighted, as are other candles and lamps as may be convenient.",
+            "During the candle-lighting, an appropriate anthem or psalm may be sung, or silence kept."
+          ],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The following hymn, or a metrical version of it, or some other hymn, is then sung "
+          ]
+        },
+        {
+          "language": "en",
+          "source": { "api": "", "source": "", "citation": "" },
+          "hidden": false,
+          "metadata": {
+            "omit_gloria": false,
+            "latinname": "Phos Hilaron",
+            "number": "",
+            "localname": "O Gracious Light",
+            "omit_antiphon": false
+          },
+          "version": "bcp1979",
+          "citation": null,
+          "value": [
+            {
+              "value": [
+                {
+                  "verse": "O gracious light,\npure brightness of the everliving Father in heaven,\nO Jesus Christ, holy and blessed!\n\nNow as we come to the setting of the sun,\nand our eyes behold the vesper light,\nwe sing your praises, O God: Father, Son, and Holy Spirit.\n\nYou are worthy at all times to be praised by happy voices,\nO Son of God, O Giver of Life,\nand to be glorified through all the worlds.",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "style": "psalm",
+          "label": "O Gracious Light",
+          "type": "psalm",
+          "lastRevision": 5,
+          "category": ["Psalm"],
+          "version_label": "BCP",
+          "slug": "phos_hilaron"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The service may then continue in any of the following ways:",
+            "With Evening Prayer, beginning with the Psalms; or with some other Office or Devotion;",
+            "With the celebration of the Holy Eucharist, beginning with the Salutation and Collect of the Day;",
+            "Or, it may be followed by a meal or other activity, in which case Phos hilaron may be followed by the Lord's Prayer and a grace or blessing;",
+            "Or, it may continue as a complete evening Office with the following elements:"
+          ],
+          "compile_hidden": true
+        },
+        {
+          "type": "text",
+          "style": "markdown",
+          "compile_hidden": true,
+          "value": [
+            "**Selection from the Psalter.** Silence, or a suitable Collect, or both, may follow the Psalmody.",
+            "**Bible Reading.** A sermon or homily, a passage from Christian literature, or a brief silence, may follow the Reading.",
+            "**Canticle.** The Magnificat or other canticle, or some other hymn of praise.",
+            "**Prayers.** A litany, or other suitable devotions, including the Lord's Prayer.",
+            "**Blessing or Dismissal,** or both. The Peace may then be exchanged."
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": [
+            "On feasts or other days of special significance, the Collect of the Day, or one proper to the season, may precede the Blessing or Dismissal. On other days, either of the following, or one of the Collects from Evening Prayer or from Compline, may be so used."
+          ]
+        },
+        {
+          "type": "option",
+          "compile_hidden": true,
+          "value": [
+            {
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "Blessed are you, O Lord, the God of our fathers, creator of the changes of day and night, giving rest to the weary, renewing the strength of those who are spent, bestowing upon us occasions of song in the evening. As you have protected us in the day that is past, so be with us in the coming night; keep us from every sin, every evil, and every fear; for you are our light and salvation, and the strength of our life. To you be glory for endless ages."
+              ]
+            },
+            {
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "Almighty, everlasting God, let our prayer in your sight be as incense, the lifting up of our hands as the evening sacrifice. Give us grace to behold you, present in your Word and Sacraments, and to recognize you in the lives of those around us. Stir up in us the flame of that love which burned in the heart of your Son as he bore his passion, and let it burn in us to eternal life and to the ages of ages."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": [
+            "A bishop or priest may use the following or some other blessing or grace"
+          ]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "compile_hidden": true,
+          "value": [
+            "The Lord bless you and keep you. Amen.",
+            "The Lord make his face to shine upon you and be gracious to you. Amen. ",
+            "The Lord lift up his countenance upon you and give you peace. Amen."
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": [
+            "A deacon or lay person using the preceding blessing substitutes “us” for “you.”"
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": [
+            "A dismissal may be used (adding “Alleluia, alleluia” in Easter Season)"
+          ]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": ["The People respond"]
+        },
+        {
+          "type": "text",
+          "compile_hidden": true,
+          "display_format": "unison",
+          "value": ["Thanks be to God."]
+        },
+        {
+          "type": "rubric",
+          "compile_hidden": true,
+          "value": ["In Easter Season the People respond"],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "only": ["Easter", "Ascension", "Pentecost"] } }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "compile_hidden": true,
+          "display_format": "unison",
+          "value": ["Thanks be to God. Alleluia, alleluia."],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "only": ["Easter", "Ascension", "Pentecost"] } }
+            ]
+          }
         }
       ]
     }

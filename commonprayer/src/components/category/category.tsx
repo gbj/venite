@@ -7,6 +7,8 @@ import { Page } from "../../ssg/page.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/exists.ts";
 import { VERSION_LABELS } from "../../ssg/version-labels.ts";
 import { Mode } from "./mode.ts";
+import { Doc } from "../doc/doc.tsx";
+import { Index } from "../../index.tsx";
 
 const SHORT_DOC_LENGTH = 1000;
 
@@ -34,12 +36,54 @@ async function buildDocs(srcDir : string, subpath : string, categorySlug : strin
             ldf: JSON.stringify(doc)
           });
         }
+
+        if(name === "docs.json") {
+          await buildIndividualPage(srcDir, doc);
+        }
       }
     }
     else if(isDirectory) {
       await buildDocs(path.join(srcDir, name), subpath, `${categorySlug}/${name}`, children);
     }
   }
+}
+
+async function buildIndividualPage(
+    srcDir: string,
+    doc: LiturgicalDocument,
+    isDev = false
+  ) {
+    if (doc.slug && doc.version && doc.category?.length > 0) {
+      try {
+        const slug = doc.slug,
+          version = typeof doc.version === "string" ? doc.version : "Rite-II",
+          dest = path.join(
+            path.fromFileUrl(import.meta.url),
+            "..",
+            "..",
+            "..",
+            "..",
+            "www",
+            srcDir.split("/liturgy/")[1],
+            slug
+          ),
+          page = Doc(slug, srcDir, undefined, doc),
+          html = await Index(page, isDev);
+  
+        if (!(await exists(dest))) {
+          await Deno.mkdir(dest, { recursive: true });
+        }
+  
+        try {
+          await Deno.writeTextFile(path.join(dest, "index.html"), html);
+        } catch (e) {
+          console.warn("Trouble w/ subdoc ", e);
+        }
+      } catch (e) {
+        console.error("Error building");
+        console.error(e);
+      }
+    }
 }
 
 export const Category = await Page({
