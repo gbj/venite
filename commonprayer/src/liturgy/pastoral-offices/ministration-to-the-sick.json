@@ -1,0 +1,1139 @@
+{
+  "data": [
+    {
+      "slug": "ministration-to-the-sick",
+      "version": "Rite-II",
+      "label": "Ministration to the Sick",
+      "type": "liturgy",
+      "value": [
+        {
+          "style": "text",
+          "type": "heading",
+          "value": ["Ministration to the Sick"],
+          "metadata": { "level": 1 }
+        },
+        {
+          "value": [
+            "In case of illness, the Minister of the Congregation is to be notified.",
+            "At the ministration, one or more parts of the following service are used, as appropriate, but when two or more are used together, they are used in the order indicated. The Lord's Prayer is always included.",
+            "Part One of this service may always be led by a deacon or lay person.",
+            "When the Laying on of Hands or Anointing takes place at a public celebration of the Eucharist, it is desirable that it precede the distribution of Holy Communion, and it is recommended that it take place immediately before the exchange of the Peace.",
+            "The Celebrant begins the service with the following or some other greeting"
+          ],
+          "type": "rubric"
+        },
+        {
+          "style": "text",
+          "type": "text",
+          "value": [
+            "Peace be to this house (place), and to all who dwell in it."
+          ]
+        },
+        {
+          "type": "heading",
+          "metadata": { "level": 2 },
+          "value": ["Part I. Ministry of the Word"],
+          "style": "text"
+        },
+        {
+          "value": [
+            "One or more of the following or other passages of Scripture are read"
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["General"],
+          "style": "text"
+        },
+        {
+          "value": [
+            {
+              "metadata": { "response": " " },
+              "version": "NRSV",
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "style": "short",
+              "label": "",
+              "value": [
+                {
+                  "text": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all consolation, ",
+                  "chapter": "1",
+                  "verse": "3",
+                  "book": "2 Corinthians"
+                },
+                {
+                  "verse": "4",
+                  "text": "who consoles us in all our affliction, so that we may be able to console those who are in any affliction with the consolation with which we ourselves are consoled by God. ",
+                  "book": "2 Corinthians",
+                  "chapter": "1"
+                },
+                {
+                  "book": "2 Corinthians",
+                  "chapter": "1",
+                  "text": "For just as the sufferings of Christ are abundant for us, so also our consolation is abundant through Christ. ",
+                  "verse": "5"
+                }
+              ],
+              "type": "bible-reading",
+              "hidden": false,
+              "language": "en",
+              "citation": "2 Corinthians 1:3-5"
+            },
+            {
+              "language": "en",
+              "style": "psalm",
+              "version": "bcp1979",
+              "citation": "Psalm 91",
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "He who dwells in the shelter of the Most High, *",
+                      "halfverse": "abides under the shadow of the Almighty."
+                    },
+                    {
+                      "halfverse": "my God in whom I put my trust.”",
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "verse": "He shall say to the LORD,\n“You are my refuge and my stronghold, *"
+                    },
+                    {
+                      "verse": "He shall deliver you from the snare of the hunter *",
+                      "number": "3",
+                      "type": "psalm-verse",
+                      "halfverse": "and from the deadly pestilence."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "his faithfulness shall be a shield and buckler.",
+                      "verse": "He shall cover you with his pinions,\nand you shall find refuge under his wings; *",
+                      "number": "4"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "nor of the arrow that flies by day;",
+                      "number": "5",
+                      "verse": "You shall not be afraid of any terror by night, *"
+                    },
+                    {
+                      "verse": "Of the plague that stalks in the darkness, *",
+                      "halfverse": "nor of the sickness that lays waste at mid-day.",
+                      "type": "psalm-verse",
+                      "number": "6"
+                    },
+                    {
+                      "halfverse": "but it shall not come near you.",
+                      "number": "7",
+                      "verse": "A thousand shall fall at your side\nand ten thousand at your right hand, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "8",
+                      "type": "psalm-verse",
+                      "halfverse": "to see the reward of the wicked.",
+                      "verse": "Your eyes have only to behold *"
+                    },
+                    {
+                      "number": "9",
+                      "verse": "Because you have made the LORD your refuge, *",
+                      "halfverse": "and the Most High your habitation,",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "10",
+                      "verse": "There shall no evil happen to you, *",
+                      "halfverse": "neither shall any plague come near your dwelling.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "11",
+                      "halfverse": "to keep you in all your ways.",
+                      "type": "psalm-verse",
+                      "verse": "For he shall give his angels charge over you, *"
+                    },
+                    {
+                      "verse": "They shall bear you in their hands, *",
+                      "number": "12",
+                      "type": "psalm-verse",
+                      "halfverse": "lest you dash your foot against a stone."
+                    },
+                    {
+                      "verse": "You shall tread upon the lion and the adder; *",
+                      "type": "psalm-verse",
+                      "halfverse": "you shall trample the young lion and the serpent under your feet.",
+                      "number": "13"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "14",
+                      "halfverse": "I will protect him, because he knows my Name.",
+                      "verse": "Because he is bound to me in love,\ntherefore will I deliver him; *"
+                    },
+                    {
+                      "verse": "He shall call upon me, and I will answer him; *",
+                      "number": "15",
+                      "halfverse": "I am with him in trouble;\n I will rescue him and bring him to honor.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "16",
+                      "verse": "With long life will I satisfy him, *",
+                      "halfverse": "and show him my salvation."
+                    }
+                  ]
+                }
+              ],
+              "category": ["Psalm"],
+              "label": "Psalm 91",
+              "version_label": null,
+              "slug": "psalm_91",
+              "sharing": {
+                "privacy": "public",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": [],
+                "status": "published"
+              },
+              "hidden": false,
+              "source": {
+                "citation": "p. 719",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "metadata": {
+                "omit_gloria": false,
+                "localname": "Psalm 91",
+                "latinname": "Qui habitat",
+                "omit_antiphon": false,
+                "number": "91"
+              },
+              "type": "psalm"
+            },
+            {
+              "version": "NRSV",
+              "value": [
+                {
+                  "chapter": "17",
+                  "verse": "11",
+                  "text": "On the way to Jerusalem Jesus was going through the region between Samaria and Galilee. ",
+                  "book": "Luke"
+                },
+                {
+                  "chapter": "17",
+                  "book": "Luke",
+                  "verse": "12",
+                  "text": "As he entered a village, ten lepers approached him. Keeping their distance, "
+                },
+                {
+                  "text": "they called out, saying, &#147;Jesus, Master, have mercy on us!&#148; ",
+                  "chapter": "17",
+                  "verse": "13",
+                  "book": "Luke"
+                },
+                {
+                  "chapter": "17",
+                  "book": "Luke",
+                  "text": "When he saw them, he said to them, &#147;Go and show yourselves to the priests.&#148; And as they went, they were made clean. ",
+                  "verse": "14"
+                },
+                {
+                  "book": "Luke",
+                  "chapter": "17",
+                  "verse": "15",
+                  "text": "Then one of them, when he saw that he was healed, turned back, praising God with a loud voice. "
+                },
+                {
+                  "verse": "16",
+                  "chapter": "17",
+                  "text": "He prostrated himself at Jesus&#146; feet and thanked him. And he was a Samaritan. ",
+                  "book": "Luke"
+                },
+                {
+                  "text": "Then Jesus asked, &#147;Were not ten made clean? But the other nine, where are they? ",
+                  "book": "Luke",
+                  "verse": "17",
+                  "chapter": "17"
+                },
+                {
+                  "text": "Was none of them found to return and give praise to God except this foreigner?&#148; ",
+                  "chapter": "17",
+                  "verse": "18",
+                  "book": "Luke"
+                },
+                {
+                  "chapter": "17",
+                  "text": "Then he said to him, &#147;Get up and go on your way; your faith has made you well.&#148; ",
+                  "book": "Luke",
+                  "verse": "19"
+                }
+              ],
+              "metadata": { "response": " " },
+              "source": { "source": "", "citation": "", "api": "" },
+              "type": "bible-reading",
+              "language": "en",
+              "hidden": false,
+              "citation": "Luke 17:11-19",
+              "label": "",
+              "style": "short",
+              "category": []
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option"
+        },
+        {
+          "metadata": { "level": 3 },
+          "type": "heading",
+          "style": "text",
+          "value": ["Penitence"]
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "value": [
+            {
+              "source": { "citation": "", "source": "", "api": "" },
+              "citation": "Hebrews 12:1-2",
+              "metadata": { "response": " " },
+              "type": "bible-reading",
+              "version": "NRSV",
+              "value": [
+                {
+                  "text": "Therefore, since we are surrounded by so great a cloud of witnesses, let us also lay aside every weight and the sin that clings so closely, and let us run with perseverance the race that is set before us, ",
+                  "verse": "1",
+                  "chapter": "12",
+                  "book": "Hebrews"
+                },
+                {
+                  "chapter": "12",
+                  "verse": "2",
+                  "book": "Hebrews",
+                  "text": "looking to Jesus the pioneer and perfecter of our faith, who for the sake of the joy that was set before him endured the cross, disregarding its shame, and has taken his seat at the right hand of the throne of God. "
+                }
+              ],
+              "label": "",
+              "hidden": false,
+              "language": "en",
+              "style": "short",
+              "category": []
+            },
+            {
+              "slug": "psalm_103",
+              "version": "bcp1979",
+              "label": "Psalm 103",
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "halfverse": "and all that is within me, bless his holy Name.",
+                      "verse": "Bless the LORD, O my soul, *",
+                      "type": "psalm-verse",
+                      "number": "1"
+                    },
+                    {
+                      "verse": "Bless the LORD, O my soul, *",
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "halfverse": "and forget not all his benefits."
+                    },
+                    {
+                      "number": "3",
+                      "verse": "He forgives all your sins *",
+                      "type": "psalm-verse",
+                      "halfverse": "and heals all your infirmities;"
+                    },
+                    {
+                      "verse": "He redeems your life from the grave *",
+                      "number": "4",
+                      "type": "psalm-verse",
+                      "halfverse": "and crowns you with mercy and loving-kindness;"
+                    },
+                    {
+                      "verse": "He satisfies you with good things, *",
+                      "type": "psalm-verse",
+                      "halfverse": "and your youth is renewed like an eagle’s.",
+                      "number": "5"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "halfverse": "and judgment for all who are oppressed.",
+                      "verse": "The LORD executes righteousness *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "verse": "He made his ways known to Moses *",
+                      "halfverse": "and his works to the children of Israel."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "8",
+                      "verse": "The LORD is full of compassion and mercy, *",
+                      "halfverse": "slow to anger and of great kindness."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "verse": "He will not always accuse us, *",
+                      "halfverse": "nor will he keep his anger for ever."
+                    },
+                    {
+                      "halfverse": "nor rewarded us according to our wickedness.",
+                      "type": "psalm-verse",
+                      "verse": "He has not dealt with us according to our sins, *",
+                      "number": "10"
+                    },
+                    {
+                      "halfverse": "so is his mercy great upon those who fear him.",
+                      "type": "psalm-verse",
+                      "number": "11",
+                      "verse": "For as the heavens are high above the earth, *"
+                    },
+                    {
+                      "verse": "As far as the east is from the west, *",
+                      "number": "12",
+                      "type": "psalm-verse",
+                      "halfverse": "so far has he removed our sins from us."
+                    },
+                    {
+                      "number": "13",
+                      "type": "psalm-verse",
+                      "halfverse": "so does the LORD care for those who fear him.",
+                      "verse": "As a father cares for his children, *"
+                    },
+                    {
+                      "verse": "For he himself knows whereof we are made; *",
+                      "type": "psalm-verse",
+                      "number": "14",
+                      "halfverse": "he remembers that we are but dust."
+                    },
+                    {
+                      "halfverse": "we flourish like a flower of the field;",
+                      "number": "15",
+                      "type": "psalm-verse",
+                      "verse": "Our days are like the grass; *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "16",
+                      "verse": "When the wind goes over it, it is gone, *",
+                      "halfverse": "and its place shall know it no more."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "17",
+                      "halfverse": "and his righteousness on children’s children;",
+                      "verse": "But the merciful goodness of the LORD endures for ever on those who fear him, *"
+                    },
+                    {
+                      "halfverse": "and remember his commandments and do them.",
+                      "number": "18",
+                      "type": "psalm-verse",
+                      "verse": "On those who keep his covenant *"
+                    },
+                    {
+                      "verse": "The LORD has set his throne in heaven, *",
+                      "number": "19",
+                      "halfverse": "and his kingship has dominion over all.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "Bless the LORD, you angels of his,\nyou mighty ones who do his bidding, *",
+                      "type": "psalm-verse",
+                      "halfverse": "and hearken to the voice of his word.",
+                      "number": "20"
+                    },
+                    {
+                      "verse": "Bless the LORD, all you his hosts, *",
+                      "number": "21",
+                      "halfverse": "you ministers of his who do his will.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "bless the LORD, O my soul.",
+                      "number": "22",
+                      "type": "psalm-verse",
+                      "verse": "Bless the LORD, all you works of his,\nin all places of his dominion; *"
+                    }
+                  ]
+                }
+              ],
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public",
+                "collaborators": [],
+                "status": "published",
+                "organization": "venite"
+              },
+              "version_label": null,
+              "category": ["Psalm"],
+              "type": "psalm",
+              "hidden": false,
+              "source": {
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api",
+                "citation": "p. 733"
+              },
+              "citation": "Psalm 103",
+              "style": "psalm",
+              "metadata": {
+                "localname": "Psalm 103",
+                "omit_gloria": false,
+                "omit_antiphon": false,
+                "latinname": "Benedic, anima mea",
+                "number": "103"
+              },
+              "language": "en"
+            },
+            {
+              "value": [
+                {
+                  "book": "Matthew",
+                  "text": "And just then some people were carrying a paralyzed man lying on a bed. When Jesus saw their faith, he said to the paralytic, &#147;Take heart, son; your sins are forgiven.&#148; ",
+                  "verse": "2",
+                  "chapter": "9"
+                },
+                {
+                  "verse": "3",
+                  "text": "Then some of the scribes said to themselves, &#147;This man is blaspheming.&#148; ",
+                  "chapter": "9",
+                  "book": "Matthew"
+                },
+                {
+                  "chapter": "9",
+                  "book": "Matthew",
+                  "text": "But Jesus, perceiving their thoughts, said, &#147;Why do you think evil in your hearts? ",
+                  "verse": "4"
+                },
+                {
+                  "chapter": "9",
+                  "verse": "5",
+                  "text": "For which is easier, to say, &#145;Your sins are forgiven,&#146; or to say, &#145;Stand up and walk&#146;? ",
+                  "book": "Matthew"
+                },
+                {
+                  "text": "But so that you may know that the Son of Man has authority on earth to forgive sins&#148; &#151;he then said to the paralytic&#151;&#146;stand up, take your bed and go to your home.&#148; ",
+                  "chapter": "9",
+                  "book": "Matthew",
+                  "verse": "6"
+                },
+                {
+                  "book": "Matthew",
+                  "chapter": "9",
+                  "verse": "7",
+                  "text": "And he stood up and went to his home. "
+                },
+                {
+                  "verse": "8",
+                  "book": "Matthew",
+                  "chapter": "9",
+                  "text": "When the crowds saw it, they were filled with awe, and they glorified God, who had given such authority to human beings. "
+                }
+              ],
+              "version": "NRSV",
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "citation": "Matthew 9:2-8",
+              "hidden": false,
+              "type": "bible-reading",
+              "style": "short",
+              "label": "",
+              "language": "en",
+              "metadata": { "response": " " }
+            }
+          ]
+        },
+        {
+          "style": "text",
+          "metadata": { "level": 3 },
+          "value": ["When Anointing is to follow"],
+          "type": "heading"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "metadata": { "response": " " },
+              "language": "en",
+              "citation": "James 5:14-16",
+              "type": "bible-reading",
+              "style": "short",
+              "source": { "citation": "", "api": "", "source": "" },
+              "value": [
+                {
+                  "book": "James",
+                  "verse": "14",
+                  "chapter": "5",
+                  "text": "Are any among you sick? They should call for the elders of the church and have them pray over them, anointing them with oil in the name of the Lord. "
+                },
+                {
+                  "book": "James",
+                  "text": "The prayer of faith will save the sick, and the Lord will raise them up; and anyone who has committed sins will be forgiven. ",
+                  "verse": "15",
+                  "chapter": "5"
+                },
+                {
+                  "text": "Therefore confess your sins to one another, and pray for one another, so that you may be healed. The prayer of the righteous is powerful and effective. ",
+                  "chapter": "5",
+                  "book": "James",
+                  "verse": "16"
+                }
+              ],
+              "version": "NRSV",
+              "hidden": false,
+              "category": [],
+              "label": ""
+            },
+            {
+              "language": "en",
+              "version": "bcp1979",
+              "slug": "psalm_23",
+              "hidden": false,
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public",
+                "status": "published",
+                "collaborators": [],
+                "organization": "venite"
+              },
+              "citation": "Psalm 23",
+              "type": "psalm",
+              "style": "psalm",
+              "metadata": {
+                "omit_gloria": false,
+                "localname": "Psalm 23",
+                "omit_antiphon": false,
+                "number": "23",
+                "latinname": "Dominus regit me"
+              },
+              "source": {
+                "source": "bcp1979",
+                "citation": "p. 612",
+                "api": "https://www.venite.app/api"
+              },
+              "value": [
+                {
+                  "value": [
+                    {
+                      "verse": "The LORD is my shepherd; *",
+                      "number": "1",
+                      "type": "psalm-verse",
+                      "halfverse": "I shall not be in want."
+                    },
+                    {
+                      "verse": "He makes me lie down in green pastures *",
+                      "halfverse": "and leads me beside still waters.",
+                      "number": "2",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "3",
+                      "type": "psalm-verse",
+                      "verse": "He revives my soul *",
+                      "halfverse": "and guides me along right pathways for his Name’s sake."
+                    },
+                    {
+                      "number": "4",
+                      "verse": "Though I walk through the valley of the shadow of death,\nI shall fear no evil; *",
+                      "type": "psalm-verse",
+                      "halfverse": "for you are with me;\n your rod and your staff, they comfort me."
+                    },
+                    {
+                      "number": "5",
+                      "verse": "You spread a table before me in the presence of those who trouble me; *",
+                      "type": "psalm-verse",
+                      "halfverse": "you have anointed my head with oil,\n and my cup is running over."
+                    },
+                    {
+                      "number": "6",
+                      "type": "psalm-verse",
+                      "halfverse": "and I will dwell in the house of the LORD for ever.",
+                      "verse": "Surely your goodness and mercy shall follow me all the days of my life, *"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "version_label": null,
+              "category": ["Psalm"],
+              "label": "Psalm 23"
+            },
+            {
+              "label": "",
+              "source": { "citation": "", "source": "", "api": "" },
+              "language": "en",
+              "type": "bible-reading",
+              "category": [],
+              "style": "short",
+              "version": "NRSV",
+              "hidden": false,
+              "citation": "Mark 6:7,12-13",
+              "metadata": { "response": " " },
+              "value": [
+                {
+                  "book": "Mark",
+                  "text": "He called the twelve and began to send them out two by two, and gave them authority over the unclean spirits. ",
+                  "verse": "7",
+                  "chapter": "6"
+                },
+                {
+                  "verse": "12",
+                  "book": "Mark",
+                  "text": "So they went out and proclaimed that all should repent. ",
+                  "chapter": "6"
+                },
+                {
+                  "text": "They cast out many demons, and anointed with oil many who were sick and cured them. ",
+                  "book": "Mark",
+                  "chapter": "6",
+                  "verse": "13"
+                }
+              ]
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "metadata": { "level": 3 },
+          "type": "heading",
+          "value": ["When Communion is to follow"],
+          "style": "text"
+        },
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "chapter": "5",
+                  "text": "I write these things to you who believe in the name of the Son of God, so that you may know that you have eternal life. ",
+                  "verse": "13",
+                  "book": "1 John"
+                },
+                { "hidden": false, "value": [""], "type": "heading" },
+                {
+                  "chapter": "5",
+                  "verse": "14",
+                  "book": "1 John",
+                  "text": "And this is the boldness we have in him, that if we ask anything according to his will, he hears us. "
+                },
+                {
+                  "book": "1 John",
+                  "text": "And if we know that he hears us in whatever we ask, we know that we have obtained the requests made of him. ",
+                  "chapter": "5",
+                  "verse": "15"
+                }
+              ],
+              "version": "NRSV",
+              "style": "short",
+              "metadata": { "response": " " },
+              "type": "bible-reading",
+              "hidden": false,
+              "label": "",
+              "source": { "api": "", "source": "", "citation": "" },
+              "category": [],
+              "citation": "1 John 5:13-15",
+              "language": "en"
+            },
+            {
+              "version_label": null,
+              "language": "en",
+              "metadata": {
+                "number": "145",
+                "omit_gloria": false,
+                "latinname": "Exaltabo te, Deus",
+                "localname": "Psalm 145",
+                "omit_antiphon": false
+              },
+              "source": {
+                "citation": "p. 801",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "style": "psalm",
+              "hidden": false,
+              "category": ["Psalm"],
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite"
+              },
+              "type": "psalm",
+              "citation": "Psalm 145:14-22",
+              "label": "Psalm 145",
+              "version": "bcp1979",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "and bless your Name for ever and ever.",
+                      "number": "1",
+                      "verse": "I will exalt you, O God my King, *"
+                    },
+                    {
+                      "halfverse": "and praise your Name for ever and ever.",
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "verse": "Every day will I bless you *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "Great is the LORD and greatly to be praised; *",
+                      "halfverse": "there is no end to his greatness.",
+                      "number": "3"
+                    },
+                    {
+                      "verse": "One generation shall praise your works to another *",
+                      "type": "psalm-verse",
+                      "halfverse": "and shall declare your power.",
+                      "number": "4"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "and all your marvelous works.",
+                      "number": "5",
+                      "verse": "I will ponder the glorious splendor of your majesty *"
+                    },
+                    {
+                      "halfverse": "and I will tell of your greatness.",
+                      "type": "psalm-verse",
+                      "verse": "They shall speak of the might of your wondrous acts, *",
+                      "number": "6"
+                    },
+                    {
+                      "verse": "They shall publish the remembrance of your great goodness; *",
+                      "halfverse": "they shall sing of your righteous deeds.",
+                      "number": "7",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "slow to anger and of great kindness.",
+                      "number": "8",
+                      "verse": "The LORD is gracious and full of compassion, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "verse": "The LORD is loving to everyone *",
+                      "halfverse": "and his compassion is over all his works."
+                    },
+                    {
+                      "halfverse": "and your faithful servants bless you.",
+                      "type": "psalm-verse",
+                      "verse": "All your works praise you, O LORD, *",
+                      "number": "10"
+                    },
+                    {
+                      "halfverse": "and speak of your power;",
+                      "number": "11",
+                      "verse": "They make known the glory of your kingdom *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "That the peoples may know of your power *",
+                      "halfverse": "and the glorious splendor of your kingdom.",
+                      "number": "12"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "13",
+                      "halfverse": "your dominion endures throughout all ages.",
+                      "verse": "Your kingdom is an everlasting kingdom; *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "and merciful in all his deeds.",
+                      "verse": "The LORD is faithful in all his words *",
+                      "number": "14"
+                    },
+                    {
+                      "verse": "The LORD upholds all those who fall; *",
+                      "halfverse": "he lifts up those who are bowed down.",
+                      "type": "psalm-verse",
+                      "number": "15"
+                    },
+                    {
+                      "verse": "The eyes of all wait upon you, O LORD, *",
+                      "number": "16",
+                      "halfverse": "and you give them their food in due season.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "17",
+                      "verse": "You open wide your hand *",
+                      "halfverse": "and satisfy the needs of every living creature."
+                    },
+                    {
+                      "halfverse": "and loving in all his works.",
+                      "type": "psalm-verse",
+                      "number": "18",
+                      "verse": "The LORD is righteous in all his ways *"
+                    },
+                    {
+                      "halfverse": "to all who call upon him faithfully.",
+                      "number": "19",
+                      "verse": "The LORD is near to those who call upon him, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "he hears their cry and helps them.",
+                      "number": "20",
+                      "type": "psalm-verse",
+                      "verse": "He fulfills the desire of those who fear him; *"
+                    },
+                    {
+                      "number": "21",
+                      "type": "psalm-verse",
+                      "verse": "The LORD preserves all those who love him, *",
+                      "halfverse": "but he destroys all the wicked."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "My mouth shall speak the praise of the LORD; *",
+                      "halfverse": "let all flesh bless his holy Name for ever and ever.",
+                      "number": "22"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "slug": "psalm_145"
+            },
+            {
+              "type": "bible-reading",
+              "source": { "citation": "", "api": "", "source": "" },
+              "label": "",
+              "version": "NRSV",
+              "metadata": { "response": " " },
+              "value": [
+                {
+                  "text": "Very truly, I tell you, whoever believes has eternal life. ",
+                  "verse": "47",
+                  "book": "John",
+                  "chapter": "6"
+                },
+                {
+                  "book": "John",
+                  "text": "I am the bread of life. ",
+                  "chapter": "6",
+                  "verse": "48"
+                },
+                {
+                  "text": "Your ancestors ate the manna in the wilderness, and they died. ",
+                  "book": "John",
+                  "chapter": "6",
+                  "verse": "49"
+                },
+                {
+                  "book": "John",
+                  "verse": "50",
+                  "chapter": "6",
+                  "text": "This is the bread that comes down from heaven, so that one may eat of it and not die. "
+                },
+                {
+                  "text": "I am the living bread that came down from heaven. Whoever eats of this bread will live forever; and the bread that I will give for the life of the world is my flesh.&#148; ",
+                  "book": "John",
+                  "chapter": "6",
+                  "verse": "51"
+                }
+              ],
+              "hidden": false,
+              "language": "en",
+              "citation": "John 6:47-51",
+              "style": "short",
+              "category": []
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option"
+        },
+        {
+          "value": [
+            "After any Reading, the Celebrant may comment on it briefly.",
+            "Prayers may be offered according to the occasion.",
+            "The Priest may suggest the making of a special confession, if the sick person’s conscience is troubled, and use the form for the Reconciliation of a Penitent.",
+            "Or else the following general confession may be said"
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "display_format": "unison",
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of you Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ]
+        },
+        { "value": ["The Priest alone says"], "type": "rubric" },
+        {
+          "style": "prayer",
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "type": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "A deacon or lay person using the preceding form substitutes “us” for “you” and “our” for “your.”"
+          ]
+        },
+        {
+          "value": ["Part II. Laying on of Hands and Anointing"],
+          "metadata": { "level": 2 },
+          "type": "heading",
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            " If oil for the Anointing of the Sick is to be blessed, the Priest says"
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O Lord, holy Father, giver of health and salvation: Send your Holy Spirit to sanctify this oil; that, as your holy apostles anointed many that were sick and healed them, so may those who in faith and repentance receive this holy unction be made whole; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever. "
+          ]
+        },
+        { "type": "rubric", "value": ["The following anthem is said"] },
+        {
+          "style": "responsive",
+          "value": [
+            {
+              "response": "Save us and help us, we humbly beseech you, O Lord.",
+              "label": "",
+              "text": "Savior of the world, by your cross and precious blood you have redeemed us;"
+            }
+          ],
+          "type": "responsive"
+        },
+        {
+          "value": [
+            "The Priest then lays hands upon the sick person, and says one of the following"
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "type": "text",
+              "value": [
+                "N., I lay my hands upon you in the Name of the Father, and of the Son, and of the Holy Spirit, beseeching our Lord Jesus Christ to sustain you with his presence, to drive away all sickness of body and spirit, and to give you that victory of life and peace which will enable you to serve him both now and evermore."
+              ],
+              "style": "prayer"
+            },
+            {
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "N., I lay my hands upon you in the Name of our Lord and Savior Jesus Christ, beseeching him to uphold you and fill you with his grace, that you may know the healing power of his love."
+              ]
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "value": [
+            "If the person is to be anointed, the Priest dips a thumb in the holy oil, and makes the sign of the cross on the sick person's forehead, saying"
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "N., I anoint you with oil in the Name of the Father, and of the Son, and of the Holy Spirit."
+          ]
+        },
+        { "type": "rubric", "value": [""] },
+        {
+          "style": "prayer",
+          "type": "text",
+          "value": [
+            "As you are outwardly anointed with this holy oil, so may our heavenly Father grant you the inward anointing of the Holy Spirit.  Of his great mercy, may he forgive you your sins, release you from suffering, and restore you to wholeness and strength.  May he deliver you from all evil, preserve you in all goodness, and bring you to everlasting life; through Jesus Christ our Lord."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "In cases of necessity, a deacon or lay person may perform the anointing, using oil blessed by a bishop or priest.",
+            "If Communion is not to follow, the Lord's Prayer is now said.",
+            "The Priest concludes"
+          ]
+        },
+        {
+          "type": "text",
+          "value": [
+            "The Almighty Lord, who is a strong tower to all who put their trust in him, to whom all things in heaven, on earth, and under  the earth bow and obey: Be now and evermore your defense, and make you know and feel that the only Name under heaven given for health and salvation is the Name of our Lord Jesus Christ."
+          ],
+          "style": "prayer"
+        },
+        {
+          "type": "heading",
+          "style": "text",
+          "metadata": { "level": 2 },
+          "value": ["Part III. Holy Communion"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If the Eucharist is to be celebrated, the Priest begins with the [Peace and] Offertory.",
+            "If Communion is to be administered from the reserved Sacrament, the form for Communion under Special Circumstances is used, beginning with the [Peace and] Lord’s Prayer.",
+            "If the sick person cannot receive either the consecrated Bread or the Wine, it is suitable to administer the Sacrament in one kind only.",
+            "One of the usual postcommunion prayers is said, or the following"
+          ]
+        },
+        {
+          "style": "prayer",
+          "value": [
+            "Gracious Father, we give you praise and thanks for this Holy Communion of the Body and Blood of your beloved Son Jesus Christ, the pledge of our redemption; and we pray that it may bring us forgiveness of our sins, strength in our weakness, and everlasting salvation; through Jesus Christ our Lord."
+          ],
+          "type": "text"
+        },
+        {
+          "value": [
+            "The service concludes with a blessing or with a dismissal"
+          ],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            {
+              "text": "Let us bless the Lord.",
+              "response": "Thanks be to God.",
+              "label": ""
+            }
+          ],
+          "style": "responsive",
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If a person desires to receive the Sacrament, but, by reason of extreme sickness or physical disability, is unable to eat and drink the Bread and Wine, the Celebrant is to assure that person that all the benefits of Communion are received, even though the Sacrament is not received with the mouth."
+          ]
+        },
+        { "style": "authorized-prayers", "type": "text" }
+      ],
+      "date_created": { "nanoseconds": 995000000, "seconds": 1632512420 },
+      "language": "en",
+      "metadata": { "preferences": {}, "special_preferences": {} }
+    }
+  ]
+}

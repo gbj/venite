@@ -1,0 +1,270 @@
+{
+  "data": [
+    {
+      "metadata": { "special_preferences": {}, "preferences": {} },
+      "language": "en",
+      "slug": "communion-under-special-circumstances",
+      "version": "Rite-II",
+      "type": "liturgy",
+      "label": "Communion under Special Circumstances",
+      "value": [
+        {
+          "metadata": { "level": 1 },
+          "style": "text",
+          "value": ["Communion under Special Circumstances"],
+          "type": "heading"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "This form is intended for use with those who for reasonable cause cannot be present at a public celebration of the Eucharist.",
+            "When persons are unable to be present for extended periods, it is desirable that the priest arrange to celebrate the Eucharist with them from time to time on a regular basis, using either the Proper of the Day or one of those appointed for Various Occasions. If it is necessary to shorten the service, the priest may begin the celebration at the Offertory, but it is desirable that a passage from the Gospel first be read.",
+            "At other times, or when desired, such persons may be communicated from the reserved Sacrament, using the following form.",
+            "It is desirable that fellow parishioners, relatives, and friends be present, when possible, to communicate with them."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Celebrant, whether priest or deacon, reads a passage of Scripture appropriate to the day or occasion, or else one of the following"
+          ]
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "source": { "source": "", "api": "", "citation": "" },
+              "label": "",
+              "type": "bible-reading",
+              "language": "en",
+              "value": [
+                {
+                  "book": "John",
+                  "text": "God so loved the world that he gave his only Son, that whoever believes in him should not perish, but have eternal life.",
+                  "chapter": "3",
+                  "verse": "16"
+                }
+              ],
+              "hidden": false,
+              "metadata": { "response": " " },
+              "category": [],
+              "version": "",
+              "citation": "John 3:16",
+              "style": "short"
+            },
+            {
+              "citation": "John 6:35",
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "hidden": false,
+              "metadata": { "response": " " },
+              "version": "",
+              "value": [
+                {
+                  "verse": "35",
+                  "chapter": "6",
+                  "book": "John",
+                  "text": "Jesus said, “I am the bread of life; whoever comes to me shall not hunger, and whoever believes in me shall never thirst.”"
+                }
+              ],
+              "type": "bible-reading",
+              "style": "short",
+              "label": "",
+              "language": "en"
+            },
+            {
+              "style": "short",
+              "value": [
+                {
+                  "verse": "51",
+                  "text": "Jesus said, “I am the living bread which came down from heaven; if anyone eats of this bread, he will live for ever; and the bread which I shall give for the life of the world is my flesh. For my flesh is food indeed, and my blood is drink indeed. Whoever eats my flesh and drinks my blood abides in me, and I in him.”",
+                  "book": "John",
+                  "chapter": "6"
+                }
+              ],
+              "hidden": false,
+              "metadata": { "response": " " },
+              "source": { "citation": "", "source": "", "api": "" },
+              "citation": "John 6:51, 55-56",
+              "language": "en",
+              "category": [],
+              "version": "",
+              "label": "",
+              "type": "bible-reading"
+            },
+            {
+              "style": "short",
+              "language": "en",
+              "version": "",
+              "hidden": false,
+              "source": { "citation": "", "api": "", "source": "" },
+              "category": [],
+              "value": [
+                {
+                  "chapter": "15",
+                  "verse": "4",
+                  "book": "John",
+                  "text": "Jesus said, “Abide in me, as I in you. As the branch cannot bear fruit by itself, unless it abides in the vine, neither can you, unless you abide in me. I am the vine, you are the branches. By this my Father is glorified, that you bear much fruit, and so prove to be my disciples. As the Father has loved me, so have I loved you; abide in my love.”"
+                }
+              ],
+              "citation": "John 15:4-5a, 8-9",
+              "type": "bible-reading",
+              "label": "",
+              "metadata": { "response": " " }
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "value": [
+            "After the Reading, the Celebrant may comment on it briefly."
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "Suitable prayers may be offered, concluding with the following or some other Collect"
+          ]
+        },
+        {
+          "value": [
+            "Almighty Father, whose dear Son, on the night before he suffered, instituted the Sacrament of his Body and Blood: Mercifully grant that we may receive it thankfully in remembrance of Jesus Christ our Lord, who in these holy mysteries gives us a pledge of eternal life; and who lives and reigns for ever and ever."
+          ],
+          "type": "text",
+          "style": "prayer"
+        },
+        {
+          "value": [
+            "A Confession of Sin may follow. The following or some other form is used"
+          ],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves. \nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ],
+          "display_format": "unison",
+          "style": "prayer",
+          "type": "text"
+        },
+        { "type": "rubric", "value": [""] },
+        {
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "type": "text",
+          "style": "prayer"
+        },
+        {
+          "value": [
+            "A deacon using the preceding form substitutes “us” for “you” and “our” for “your.”"
+          ],
+          "type": "rubric"
+        },
+        { "value": ["The Peace may then be exchanged."], "type": "rubric" },
+        {
+          "type": "rubric",
+          "value": ["The Lord’s Prayer is said, the Celebrant first saying"]
+        },
+        {
+          "value": [
+            "Let us pray in the words our Savior Christ has taught us."
+          ],
+          "type": "text",
+          "style": "text"
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "version_label": "Traditional",
+              "metadata": {},
+              "style": "prayer",
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "display_format": "unison",
+              "value": [
+                "Our Father, who art in heaven,\n    hallowed be thy Name,\n    thy kingdom come,\n    thy will be done,\n        on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our tresspasses,\n    as we forgive those\n        who trespass against us.\nAnd lead us not into temptation,\n    but deliver us from evil.\nFor thine is the kingdom,\n    and the power, and the glory,\n    for ever and ever. "
+              ],
+              "type": "text"
+            },
+            {
+              "version_label": "Contemporary",
+              "source": { "api": "", "citation": "", "source": "" },
+              "type": "text",
+              "display_format": "unison",
+              "metadata": {},
+              "style": "prayer",
+              "category": [],
+              "value": [
+                "Our Father in heaven,\n    hallowed be your Name,\n    your kingdom come,\n    your will be done,\n        on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n    as we forgive those\n        who sin against us.\nSave us from the time of trial,\n    and deliver us from evil.\nFor the kingdom, the power,\n    and the glory are yours,\n    now and for ever. "
+              ]
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "value": ["The Celebrant may say the following Invitation"],
+          "type": "rubric"
+        },
+        {
+          "style": "text",
+          "value": ["The Gifts of God for the People of God"],
+          "type": "text"
+        },
+        { "value": ["and may add"], "type": "rubric" },
+        {
+          "type": "text",
+          "value": [
+            "Take them in remembrance that Christ died for you, and feed on him in your hearts by faith, with thanksgiving."
+          ],
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Sacrament is administered with the following or other words"
+          ]
+        },
+        {
+          "response": "[Amen.]",
+          "style": "prayer",
+          "value": [
+            "The Body (Blood) of our Lord Jesus Christ keep you in everlasting life. "
+          ],
+          "type": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "One of the usual postcommunion prayers is then said, or the following"
+          ]
+        },
+        {
+          "display_format": "unison",
+          "style": "prayer",
+          "value": [
+            "Gracious Father, we give you praise and thanks for this Holy Communion of the Body and Blood of your beloved Son Jesus Christ, the pledge of our redemption; and we pray that it may bring us forgiveness of our sins, strength in our weakness, and everlasting salvation; through Jesus Christ our Lord."
+          ],
+          "type": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["The service concludes with a blessing or with a dismissal"]
+        },
+        {
+          "value": [
+            {
+              "text": "Let us bless the Lord.",
+              "label": "",
+              "response": "Thanks be to God."
+            }
+          ],
+          "style": "responsive",
+          "type": "responsive"
+        }
+      ]
+    }
+  ]
+}

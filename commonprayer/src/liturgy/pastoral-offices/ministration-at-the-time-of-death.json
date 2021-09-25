@@ -1,0 +1,202 @@
+{
+  "data": [
+    {
+      "slug": "ministration-at-the-time-of-death",
+      "value": [
+        {
+          "metadata": { "level": 1 },
+          "type": "heading",
+          "style": "text",
+          "value": ["Ministration at the Time of Death"]
+        },
+        {
+          "value": [
+            "When a person is near death, the Minister of the Congregation should be notified, in order that the ministrations of the Church may be provided."
+          ],
+          "type": "rubric"
+        },
+        {
+          "label": "A Prayer for a Person near Death",
+          "value": [
+            "Almighty God, look on this your servant, lying in great weakness, and comfort him with the promise of life everlasting, given in the resurrection of your Son Jesus Christ our Lord."
+          ],
+          "type": "text",
+          "style": "prayer"
+        },
+        {
+          "metadata": { "level": 3 },
+          "type": "heading",
+          "style": "text",
+          "value": ["Litany at the Time of Death"]
+        },
+        {
+          "value": [
+            "When possible, it is desirable that members of the family and friends come together to join in the Litany."
+          ],
+          "type": "rubric"
+        },
+        {
+          "style": "litany",
+          "metadata": { "response": "Have mercy on your servant." },
+          "source": { "citation": "", "api": "", "source": "" },
+          "value": [
+            {
+              "label": "",
+              "response": "",
+              "text": "God the Father,",
+              "optional": false
+            },
+            {
+              "text": "God the Son,",
+              "response": "Have mercy on your servant.",
+              "optional": false
+            },
+            {
+              "optional": false,
+              "text": "God the Holy Spirit,",
+              "response": "Have mercy on your servant."
+            },
+            {
+              "optional": false,
+              "response": "Have mercy on your servant.",
+              "text": "Holy Trinity, one God,"
+            },
+            {
+              "response": "Good Lord, deliver *him*.",
+              "optional": false,
+              "text": "From all evil, from all sin, from all tribulation"
+            },
+            {
+              "text": "By your holy Incarnation, by your Cross and Passion, by your precious Death and Burial,",
+              "optional": false,
+              "response": "Good Lord, deliver *him*."
+            },
+            {
+              "response": "Good Lord, deliver *him*.",
+              "optional": false,
+              "text": "By your glorious Resurrection and Ascension, and by the Coming of the Holy Spirit,"
+            },
+            {
+              "text": "We sinners beseech you to hear us, Lord Christ: That it may please you to deliver the soul of your servant from the power of evil, and from eternal death,",
+              "optional": false,
+              "response": "We beseech you to hear us, good Lord."
+            },
+            {
+              "text": "hat it may please you mercifully to pardon all *his* sins,",
+              "response": "We beseech you to hear us, good Lord.",
+              "optional": false
+            },
+            {
+              "text": "That it may please you to grant *him* a place of refreshment and everlasting blessedness,",
+              "response": "We beseech you to hear us, good Lord.",
+              "optional": false
+            },
+            {
+              "optional": false,
+              "text": "That it may please you to give *him* joy and gladness in your kingdom, with your saints in light,",
+              "response": "We beseech you to hear us, good Lord."
+            },
+            {
+              "text": "Jesus, Lamb of God:",
+              "response": "Have mercy on *him*.",
+              "optional": false
+            },
+            {
+              "optional": false,
+              "text": "Jesus, bearer of our sins:",
+              "response": "Have mercy on *him*."
+            },
+            {
+              "response": "Give *him* your peace.",
+              "optional": false,
+              "text": "Jesus, redeemer of the world:"
+            }
+          ],
+          "type": "responsive"
+        },
+        "",
+        {
+          "style": "responsive",
+          "type": "responsive",
+          "value": [
+            {
+              "text": "Lord, have mercy.",
+              "response": "Christ, have mercy.",
+              "label": ""
+            },
+            { "text": "Lord, have mercy.", "response": "" }
+          ]
+        },
+        { "value": [""], "type": "rubric" },
+        {
+          "version_label": "Contemporary",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "category": [],
+          "type": "option",
+          "value": [
+            {
+              "metadata": { "rollup": false, "omit_response": false },
+              "version_label": "Traditional",
+              "value": [
+                "Our Father, who art in heaven,\n    hallowed be thy Name,\n    thy kingdom come,\n    thy will be done,\n        on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n    as we forgive those\n        who trespass against us.\nAnd lead us not into temptation,\n    but deliver us from evil. "
+              ],
+              "category": [],
+              "style": "text",
+              "type": "text",
+              "source": { "citation": "", "source": "", "api": "" }
+            },
+            {
+              "category": [],
+              "version_label": "Contemporary",
+              "source": { "source": "", "api": "", "citation": "" },
+              "type": "text",
+              "value": [
+                "Our Father in heaven,\n    hallowed be your Name,\n    your kingdom come,\n    your will be done,\n        on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n    as we forgive those\n        who sin against us.\nSave us from the time of trial,\n    and deliver us from evil. "
+              ],
+              "style": "text"
+            }
+          ],
+          "source": { "api": "", "source": "", "citation": "" }
+        },
+        { "type": "rubric", "value": ["The Officiant says this Collect"] },
+        { "style": "text", "type": "text", "value": ["Let us pray."] },
+        {
+          "value": [
+            "Deliver your servant, *N.*, O Sovereign Lord Christ, from all evil, and set *him* free from every bond; that *he* may rest with all your saints in the eternal habitations; where with the Father and the Holy Spirit you live and reign, one God, for ever and ever. "
+          ],
+          "style": "prayer",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "label": "A Commendation at the Time of Death",
+          "value": [
+            "Depart, O Christian soul, out of this world;\nIn the Name of God the Father Almighty who created you;\nIn the Name of Jesus Christ who redeemed you;\nIn the Name of the Holy Spirit who sanctifies you.\nMay your rest be this day in peace,\n    and your dwelling place in the Paradise of God."
+          ],
+          "style": "text"
+        },
+        {
+          "value": [
+            "Into your hands, O merciful Savior, we commend your servant *N.* Acknowledge, we humbly beseech you, a sheep of your own fold, a lamb of your own flock, a sinner of your own redeeming. Receive *him* into the arms of your mercy, into the blessed rest of everlasting peace, and into the glorious company of the saints in light."
+          ],
+          "label": "A Commendatory Prayer",
+          "type": "text",
+          "style": "prayer"
+        },
+        {
+          "value": [
+            "May *his* soul and the souls of all the departed, through the mercy of God, rest in peace. "
+          ],
+          "type": "text",
+          "style": "prayer"
+        }
+      ],
+      "label": "Ministration at the Time of Death",
+      "date_created": { "nanoseconds": 504000000, "seconds": 1632567505 },
+      "version": "Rite-II",
+      "language": "en",
+      "metadata": { "p}references": {}, "special_preferences": {} },
+      "type": "liturgy"
+    }
+  ]
+}
