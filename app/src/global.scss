@@ -25,6 +25,13 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+// React to system font size choice
+@supports (font: -apple-system-body) {
+  html {
+    font: -apple-system-body;
+  }
+}
+
   /* cormorant-garamond-regular - latin */
   @font-face {
     font-family: 'Cormorant Garamond';
