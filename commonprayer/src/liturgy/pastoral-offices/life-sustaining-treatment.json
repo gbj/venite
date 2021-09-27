@@ -1,0 +1,1263 @@
+{
+  "index": 300,
+  "data": [
+    {
+      "slug": "life-sustaining-treatment",
+      "metadata": {
+        "liturgyversions": [],
+        "preferences": {},
+        "special_preferences": {},
+        "supplement": false
+      },
+      "type": "liturgy",
+      "value": [
+        {
+          "type": "heading",
+          "value": [
+            "A Form of Prayer When Life-Sustaining Treatment Is Withheld or Discontinued"
+          ],
+          "style": "text",
+          "metadata": { "level": 1 }
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "This rite is appropriate when family, friends, and/or caregivers gather for prayer to mark a transition from life-sustaining to palliative care. It may also be used when extraordinary measures are to be withheld or discontinued.",
+            "The service is appropriate for situations in which death is expected to follow not long after the withholding or discontinuing of treatment. When death is expected immediately after the withholding or discontinuing of treatment, traditional rites at time of death might be preferred. ",
+            "The service may be abbreviated or lengthened as needed.",
+            "The minister may begin the service with the following sentence"
+          ]
+        },
+        {
+          "language": "en",
+          "value": [
+            {
+              "book": "Revelation",
+              "verse": "17",
+              "chapter": "7",
+              "text": "The Lamb at the center of the throne will be their shepherd, and he will guide them to springs of the water of life, and God will wipe away every tear from their eyes."
+            }
+          ],
+          "category": [],
+          "source": { "api": "", "citation": "", "source": "" },
+          "type": "bible-reading",
+          "hidden": false,
+          "version": "",
+          "metadata": { "response": " " },
+          "label": "",
+          "citation": "Revelation 7:17",
+          "style": "short"
+        },
+        { "type": "rubric", "value": ["The minister continues"] },
+        { "value": ["Let us pray."], "type": "text", "style": "text" },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "O God our Creator and Sustainer, receive our prayers for *N.* We thank you for the love and companionship we have shared with *him/her*. Give us grace now to accept the limits of human healing as we commend *N.* to your merciful care. Strengthen us, we pray, in this time of trial and help us to continue to serve and care for one another; through Jesus Christ our Savior. "
+          ]
+        },
+        {
+          "value": [
+            "Lord of all wisdom and source of all life, we come before you as we struggle with decisions about life and death that rightly belong to you alone. We confess that we act with uncertainty now. Give us your help, and guide us, merciful God, in your loving concern for *N.* who lies in grave illness; through Jesus Christ our\nRedeemer. "
+          ],
+          "type": "text",
+          "style": "prayer",
+          "label": "In a Time of Difficult Decision"
+        },
+        {
+          "value": [
+            "One or more of the following passages of scripture may be read."
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "type": "bible-reading",
+              "category": [],
+              "citation": "Isaiah 49:14-16a",
+              "label": "From the Old Testament",
+              "language": "en",
+              "source": { "citation": "", "source": "", "api": "" },
+              "metadata": { "response": " " },
+              "hidden": false,
+              "style": "long",
+              "value": [
+                {
+                  "book": "Isaiah",
+                  "text": "But Zion said, &#147;The LORD has forsaken me, my Lord has forgotten me.&#148; ",
+                  "chapter": "49",
+                  "verse": "14"
+                },
+                {
+                  "chapter": "49",
+                  "verse": "15",
+                  "text": "Can a woman forget her nursing child, or show no compassion for the child of her womb? Even these may forget, yet I will not forget you. ",
+                  "book": "Isaiah"
+                },
+                {
+                  "text": "See, I have inscribed you on the palms of my hands; your walls are continually before me. ",
+                  "book": "Isaiah",
+                  "verse": "16",
+                  "chapter": "49"
+                }
+              ],
+              "version": "NRSV"
+            },
+            {
+              "language": "en",
+              "value": [
+                {
+                  "book": "Isaiah",
+                  "text": "For I am about to create new heavens and a new earth; the former things shall not be remembered or come to mind. ",
+                  "chapter": "65",
+                  "verse": "17"
+                },
+                {
+                  "text": "But be glad and rejoice forever in what I am creating; for I am about to create Jerusalem as a joy, and its people as a delight. ",
+                  "chapter": "65",
+                  "verse": "18",
+                  "book": "Isaiah"
+                },
+                {
+                  "verse": "19",
+                  "chapter": "65",
+                  "book": "Isaiah",
+                  "text": "I will rejoice in Jerusalem, and delight in my people; no more shall the sound of weeping be heard in it, or the cry of distress. "
+                },
+                {
+                  "chapter": "65",
+                  "text": "No more shall there be in it an infant that lives but a few days, or an old person who does not live out a lifetime; for one who dies at a hundred years will be considered a youth, and one who falls short of a hundred will be considered accursed. ",
+                  "verse": "20",
+                  "book": "Isaiah"
+                }
+              ],
+              "style": "long",
+              "source": { "citation": "", "source": "", "api": "" },
+              "type": "bible-reading",
+              "label": "From the Old Testament",
+              "version": "NRSV",
+              "category": [],
+              "hidden": false,
+              "citation": "Isaiah 65:17-20",
+              "metadata": { "response": " " }
+            }
+          ],
+          "metadata": { "selected": 0, "editor_selected": 0 }
+        },
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "1",
+                      "verse": "The LORD is my shepherd; *",
+                      "halfverse": "I shall not be in want.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "He makes me lie down in green pastures *",
+                      "type": "psalm-verse",
+                      "number": "2",
+                      "halfverse": "and leads me beside still waters."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "He revives my soul *",
+                      "halfverse": "and guides me along right pathways for his Name’s sake.",
+                      "number": "3"
+                    },
+                    {
+                      "verse": "Though I walk through the valley of the shadow of death,\nI shall fear no evil; *",
+                      "halfverse": "for you are with me;\n your rod and your staff, they comfort me.",
+                      "number": "4",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "5",
+                      "halfverse": "you have anointed my head with oil,\n and my cup is running over.",
+                      "verse": "You spread a table before me in the presence of those who trouble me; *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "Surely your goodness and mercy shall follow me all the days of my life, *",
+                      "number": "6",
+                      "type": "psalm-verse",
+                      "halfverse": "and I will dwell in the house of the LORD for ever."
+                    }
+                  ]
+                }
+              ],
+              "type": "psalm",
+              "language": "en",
+              "version_label": null,
+              "source": {
+                "api": "https://www.venite.app/api",
+                "citation": "p. 612",
+                "source": "bcp1979"
+              },
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public",
+                "collaborators": []
+              },
+              "version": "bcp1979",
+              "metadata": {
+                "latinname": "Dominus regit me",
+                "omit_antiphon": false,
+                "number": "23",
+                "localname": "Psalm 23",
+                "omit_gloria": false
+              },
+              "slug": "psalm_23",
+              "citation": "Psalm 23",
+              "hidden": false,
+              "style": "psalm",
+              "label": "Psalm 23",
+              "category": ["Psalm"]
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "Bless the LORD, O my soul, *",
+                      "halfverse": "and all that is within me, bless his holy Name."
+                    },
+                    {
+                      "verse": "Bless the LORD, O my soul, *",
+                      "halfverse": "and forget not all his benefits.",
+                      "number": "2",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "He forgives all your sins *",
+                      "halfverse": "and heals all your infirmities;",
+                      "number": "3",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "halfverse": "and crowns you with mercy and loving-kindness;",
+                      "verse": "He redeems your life from the grave *"
+                    },
+                    {
+                      "number": "5",
+                      "verse": "He satisfies you with good things, *",
+                      "type": "psalm-verse",
+                      "halfverse": "and your youth is renewed like an eagle’s."
+                    },
+                    {
+                      "verse": "The LORD executes righteousness *",
+                      "halfverse": "and judgment for all who are oppressed.",
+                      "number": "6",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "7",
+                      "type": "psalm-verse",
+                      "verse": "He made his ways known to Moses *",
+                      "halfverse": "and his works to the children of Israel."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "slow to anger and of great kindness.",
+                      "number": "8",
+                      "verse": "The LORD is full of compassion and mercy, *"
+                    },
+                    {
+                      "number": "9",
+                      "type": "psalm-verse",
+                      "verse": "He will not always accuse us, *",
+                      "halfverse": "nor will he keep his anger for ever."
+                    },
+                    {
+                      "number": "10",
+                      "halfverse": "nor rewarded us according to our wickedness.",
+                      "verse": "He has not dealt with us according to our sins, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "so is his mercy great upon those who fear him.",
+                      "type": "psalm-verse",
+                      "verse": "For as the heavens are high above the earth, *",
+                      "number": "11"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "As far as the east is from the west, *",
+                      "halfverse": "so far has he removed our sins from us.",
+                      "number": "12"
+                    },
+                    {
+                      "number": "13",
+                      "verse": "As a father cares for his children, *",
+                      "type": "psalm-verse",
+                      "halfverse": "so does the LORD care for those who fear him."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "he remembers that we are but dust.",
+                      "number": "14",
+                      "verse": "For he himself knows whereof we are made; *"
+                    },
+                    {
+                      "halfverse": "we flourish like a flower of the field;",
+                      "number": "15",
+                      "type": "psalm-verse",
+                      "verse": "Our days are like the grass; *"
+                    },
+                    {
+                      "verse": "When the wind goes over it, it is gone, *",
+                      "number": "16",
+                      "type": "psalm-verse",
+                      "halfverse": "and its place shall know it no more."
+                    },
+                    {
+                      "verse": "But the merciful goodness of the LORD endures for ever on those who fear him, *",
+                      "number": "17",
+                      "type": "psalm-verse",
+                      "halfverse": "and his righteousness on children’s children;"
+                    },
+                    {
+                      "halfverse": "and remember his commandments and do them.",
+                      "number": "18",
+                      "verse": "On those who keep his covenant *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "and his kingship has dominion over all.",
+                      "number": "19",
+                      "verse": "The LORD has set his throne in heaven, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "and hearken to the voice of his word.",
+                      "verse": "Bless the LORD, you angels of his,\nyou mighty ones who do his bidding, *",
+                      "number": "20"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "21",
+                      "verse": "Bless the LORD, all you his hosts, *",
+                      "halfverse": "you ministers of his who do his will."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "bless the LORD, O my soul.",
+                      "verse": "Bless the LORD, all you works of his,\nin all places of his dominion; *",
+                      "number": "22"
+                    }
+                  ]
+                }
+              ],
+              "version_label": null,
+              "source": {
+                "source": "bcp1979",
+                "citation": "p. 733",
+                "api": "https://www.venite.app/api"
+              },
+              "citation": "Psalm 103",
+              "metadata": {
+                "latinname": "Benedic, anima mea",
+                "number": "103",
+                "localname": "Psalm 103",
+                "omit_gloria": false,
+                "omit_antiphon": false
+              },
+              "style": "psalm",
+              "version": "bcp1979",
+              "sharing": {
+                "collaborators": [],
+                "privacy": "public",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published"
+              },
+              "slug": "psalm_103",
+              "category": ["Psalm"],
+              "type": "psalm",
+              "label": "Psalm 103",
+              "hidden": false,
+              "language": "en"
+            }
+          ],
+          "type": "option",
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "value": [
+            {
+              "version": "NRSV",
+              "value": [
+                {
+                  "book": "Romans",
+                  "verse": "3",
+                  "chapter": "6",
+                  "text": "Do you not know that all of us who have been baptized into Christ Jesus were baptized into his death? "
+                },
+                {
+                  "chapter": "6",
+                  "book": "Romans",
+                  "verse": "4",
+                  "text": "Therefore we have been buried with him by baptism into death, so that, just as Christ was raised from the dead by the glory of the Father, so we too might walk in newness of life. "
+                },
+                {
+                  "chapter": "6",
+                  "verse": "8",
+                  "text": "But if we have died with Christ, we believe that we will also live with him. ",
+                  "book": "Romans"
+                },
+                {
+                  "verse": "9",
+                  "chapter": "6",
+                  "text": "We know that Christ, being raised from the dead, will never die again; death no longer has dominion over him. ",
+                  "book": "Romans"
+                },
+                {
+                  "text": "The death he died, he died to sin, once for all; but the life he lives, he lives to God. ",
+                  "chapter": "6",
+                  "book": "Romans",
+                  "verse": "10"
+                },
+                {
+                  "book": "Romans",
+                  "verse": "11",
+                  "text": "So you also must consider yourselves dead to sin and alive to God in Christ Jesus. ",
+                  "chapter": "6"
+                }
+              ],
+              "style": "long",
+              "type": "bible-reading",
+              "language": "en",
+              "hidden": false,
+              "label": "From the New Testament",
+              "citation": "Romans 6:3-4, 8-11"
+            },
+            {
+              "citation": "Romans 8:35, 38-39",
+              "hidden": false,
+              "style": "long",
+              "label": "From the New Testament",
+              "type": "bible-reading",
+              "version": "NRSV",
+              "value": [
+                {
+                  "verse": "35",
+                  "book": "Romans",
+                  "chapter": "8",
+                  "text": "Who will separate us from the love of Christ? Will hardship, or distress, or persecution, or famine, or nakedness, or peril, or sword? "
+                },
+                {
+                  "verse": "38",
+                  "chapter": "8",
+                  "text": "For I am convinced that neither death, nor life, nor angels, nor rulers, nor things present, nor things to come, nor powers, ",
+                  "book": "Romans"
+                },
+                {
+                  "book": "Romans",
+                  "verse": "39",
+                  "chapter": "8",
+                  "text": "nor height, nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord. "
+                }
+              ],
+              "language": "en"
+            },
+            {
+              "hidden": false,
+              "style": "long",
+              "value": [
+                {
+                  "book": "1 Corinthians",
+                  "text": "Listen, I will tell you a mystery! We will not all die, but we will all be changed, ",
+                  "chapter": "15",
+                  "verse": "51"
+                },
+                {
+                  "text": "in a moment, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, and the dead will be raised imperishable, and we will be changed. ",
+                  "book": "1 Corinthians",
+                  "verse": "52",
+                  "chapter": "15"
+                },
+                {
+                  "verse": "53",
+                  "book": "1 Corinthians",
+                  "text": "For this perishable body must put on imperishability, and this mortal body must put on immortality. ",
+                  "chapter": "15"
+                },
+                {
+                  "chapter": "15",
+                  "book": "1 Corinthians",
+                  "verse": "54",
+                  "text": "When this perishable body puts on imperishability, and this mortal body puts on immortality, then the saying that is written will be fulfilled: &#147;Death has been swallowed up in victory.&#148; "
+                },
+                {
+                  "verse": "55",
+                  "text": "&#147;Where, O death, is your victory? Where, O death, is your sting?&#148; ",
+                  "book": "1 Corinthians",
+                  "chapter": "15"
+                },
+                {
+                  "verse": "56",
+                  "book": "1 Corinthians",
+                  "text": "The sting of death is sin, and the power of sin is the law. ",
+                  "chapter": "15"
+                },
+                {
+                  "text": "But thanks be to God, who gives us the victory through our Lord Jesus Christ. ",
+                  "book": "1 Corinthians",
+                  "chapter": "15",
+                  "verse": "57"
+                },
+                { "hidden": false, "value": [""], "type": "heading" },
+                {
+                  "text": "Therefore, my beloved, be steadfast, immovable, always excelling in the work of the Lord, because you know that in the Lord your labor is not in vain. ",
+                  "chapter": "15",
+                  "book": "1 Corinthians",
+                  "verse": "58"
+                }
+              ],
+              "version": "NRSV",
+              "label": "From the New Testament",
+              "citation": "1 Corinthians 15:51-58",
+              "language": "en",
+              "type": "bible-reading"
+            }
+          ],
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option"
+        },
+        {
+          "value": [
+            {
+              "text": "&#147;Do not let your hearts be troubled. Believe in God, believe also in me. ",
+              "chapter": "14",
+              "verse": "1",
+              "book": "John"
+            },
+            {
+              "book": "John",
+              "text": "In my Father&#146;s house there are many dwelling places. If it were not so, would I have told you that I go to prepare a place for you? ",
+              "verse": "2",
+              "chapter": "14"
+            },
+            {
+              "chapter": "14",
+              "verse": "3",
+              "book": "John",
+              "text": "And if I go and prepare a place for you, I will come again and will take you to myself, so that where I am, there you may be also. "
+            }
+          ],
+          "label": "The Gospel",
+          "version": "NRSV",
+          "style": "long",
+          "language": "en",
+          "citation": "John 14:1-3",
+          "hidden": false,
+          "type": "bible-reading"
+        },
+        {
+          "value": ["One or both of the following litanies may be prayed."],
+          "type": "rubric"
+        },
+        {
+          "value": ["The Minister adds the following or some other Collect"],
+          "type": "rubric"
+        },
+        {
+          "label": "A Litany for the Discontinuing of Life-Sustaining Treatment: Form 1",
+          "language": "en",
+          "source": { "api": "", "citation": "", "source": "" },
+          "version": "Rite-II",
+          "id": "GkqFqTiKoMGNoQmMEVHa",
+          "date_created": { "seconds": 1632754111, "nanoseconds": 171000000 },
+          "lastRevision": 21,
+          "metadata": {
+            "liturgyversions": [],
+            "preferences": {},
+            "special_preferences": {},
+            "supplement": true
+          },
+          "type": "liturgy",
+          "value": [
+            {
+              "type": "heading",
+              "value": [
+                "A Litany for the Discontinuing of Life-Sustaining Treatment: Form 1"
+              ],
+              "metadata": { "level": 3 },
+              "style": "text"
+            },
+            {
+              "value": [
+                "The Minister introduces the litany with these or similar words"
+              ],
+              "type": "rubric"
+            },
+            {
+              "value": [
+                "Let us pray to God, the helper and lover of souls, saying “Holy\nOne, help us!”"
+              ],
+              "type": "text",
+              "style": "text"
+            },
+            {
+              "style": "litany",
+              "value": [
+                {
+                  "response": "",
+                  "label": "",
+                  "optional": false,
+                  "text": "That we may know your near presence with us, blessed God:"
+                },
+                {
+                  "response": "Holy One, help us!",
+                  "optional": false,
+                  "text": "That *N.* may be released from the bondage of suffering, blessed God:"
+                },
+                {
+                  "response": "Holy One, help us!",
+                  "optional": false,
+                  "text": "That our actions may proceed from love, blessed God:"
+                },
+                {
+                  "optional": false,
+                  "text": "That our best judgments may accord with your will, blessed God:",
+                  "response": "Holy One, help us!"
+                },
+                {
+                  "optional": false,
+                  "response": "Holy One, help us!",
+                  "text": "That you will hold *N.* and us in the palm of your hand this day, blessed God:"
+                },
+                {
+                  "text": "That all our fears may be relieved as we place our trust in you, blessed God:",
+                  "response": "Holy One, help us!",
+                  "optional": false
+                },
+                {
+                  "optional": false,
+                  "response": "Holy One, help us!",
+                  "text": "That as *N.* labors into new resurrection birth, we may surround *him/her* with courage, blessed God:"
+                },
+                {
+                  "optional": false,
+                  "response": "Holy One, help us!",
+                  "text": "That although we now grieve, joy may return in the morning, blessed God:"
+                }
+              ],
+              "metadata": { "response": "Holy One, help us!" },
+              "type": "responsive"
+            },
+            {
+              "value": [
+                "The Minister adds the following or some other Collect"
+              ],
+              "type": "rubric"
+            },
+            {
+              "value": [
+                "God our Wisdom: Bless the decisions we have made in hope, in sorrow, and in love; that as we place our whole trust in you, our choices and our actions may be encompassed by your perfecting will; through Jesus Christ who died and rose for us."
+              ],
+              "type": "text",
+              "style": "prayer"
+            }
+          ],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "organization": "venite",
+            "collaborators": [],
+            "status": "published"
+          },
+          "lookup": { "type": "slug" },
+          "date_modified": { "seconds": 1632754254, "nanoseconds": 862000000 },
+          "slug": "a-litany-for-the-discontinuing-of-life-sustaining-treatment--form-1"
+        },
+        {
+          "value": [
+            {
+              "category": [],
+              "lookup": {
+                "rotate": false,
+                "allow_multiple": false,
+                "type": "slug"
+              },
+              "version_label": "Form 1",
+              "label": "Form 1",
+              "date_created": {
+                "seconds": 1632754111,
+                "nanoseconds": 171000000
+              },
+              "type": "liturgy",
+              "metadata": {
+                "evening": false,
+                "pronouns": [],
+                "liturgyversions": [],
+                "preferences": {},
+                "special_preferences": {},
+                "supplement": true
+              },
+              "lastRevision": 21,
+              "date_modified": {
+                "nanoseconds": 862000000,
+                "seconds": 1632754254
+              },
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": [],
+                "status": "published",
+                "organization": "venite",
+                "privacy": "public"
+              },
+              "version": "Rite-II",
+              "id": "GkqFqTiKoMGNoQmMEVHa",
+              "source": { "api": "", "citation": "", "source": "" },
+              "language": "en",
+              "value": [
+                {
+                  "style": "text",
+                  "type": "heading",
+                  "value": [
+                    "A Litany for the Discontinuing of Life-Sustaining Treatment: Form 1"
+                  ],
+                  "metadata": { "level": 3 }
+                },
+                {
+                  "value": [
+                    "The Minister introduces the litany with these or similar words"
+                  ],
+                  "type": "rubric"
+                },
+                {
+                  "style": "text",
+                  "value": [
+                    "Let us pray to God, the helper and lover of souls, saying “Holy\nOne, help us!”"
+                  ],
+                  "type": "text"
+                },
+                {
+                  "style": "litany",
+                  "metadata": { "response": "Holy One, help us!" },
+                  "type": "responsive",
+                  "value": [
+                    {
+                      "optional": false,
+                      "text": "That we may know your near presence with us, blessed God:",
+                      "label": "",
+                      "response": ""
+                    },
+                    {
+                      "response": "Holy One, help us!",
+                      "optional": false,
+                      "text": "That *N.* may be released from the bondage of suffering, blessed God:"
+                    },
+                    {
+                      "response": "Holy One, help us!",
+                      "optional": false,
+                      "text": "That our actions may proceed from love, blessed God:"
+                    },
+                    {
+                      "text": "That our best judgments may accord with your will, blessed God:",
+                      "optional": false,
+                      "response": "Holy One, help us!"
+                    },
+                    {
+                      "response": "Holy One, help us!",
+                      "optional": false,
+                      "text": "That you will hold *N.* and us in the palm of your hand this day, blessed God:"
+                    },
+                    {
+                      "response": "Holy One, help us!",
+                      "text": "That all our fears may be relieved as we place our trust in you, blessed God:",
+                      "optional": false
+                    },
+                    {
+                      "text": "That as *N.* labors into new resurrection birth, we may surround *him/her* with courage, blessed God:",
+                      "optional": false,
+                      "response": "Holy One, help us!"
+                    },
+                    {
+                      "response": "Holy One, help us!",
+                      "text": "That although we now grieve, joy may return in the morning, blessed God:",
+                      "optional": false
+                    }
+                  ]
+                },
+                {
+                  "value": [
+                    "The Minister adds the following or some other Collect"
+                  ],
+                  "type": "rubric"
+                },
+                {
+                  "type": "text",
+                  "style": "prayer",
+                  "value": [
+                    "God our Wisdom: Bless the decisions we have made in hope, in sorrow, and in love; that as we place our whole trust in you, our choices and our actions may be encompassed by your perfecting will; through Jesus Christ who died and rose for us."
+                  ]
+                }
+              ],
+              "slug": "a-litany-for-the-discontinuing-of-life-sustaining-treatment--form-1"
+            },
+            {
+              "source": { "citation": "", "source": "", "api": "" },
+              "slug": "a-litany-for-the-discontinuing-of-life-sustaining-treatment--form-2",
+              "version": "Rite-II",
+              "type": "liturgy",
+              "language": "en",
+              "lastRevision": 52,
+              "date_created": {
+                "nanoseconds": 925000000,
+                "seconds": 1632754276
+              },
+              "lookup": {
+                "type": "slug",
+                "allow_multiple": false,
+                "rotate": false
+              },
+              "value": [
+                {
+                  "value": [
+                    "A Litany for the Discontinuing of Life-Sustaining Treatment: Form 2"
+                  ],
+                  "style": "text",
+                  "type": "heading",
+                  "metadata": { "level": 3 }
+                },
+                {
+                  "value": [
+                    "The Minister introduces the litany with these or similar words"
+                  ],
+                  "type": "rubric"
+                },
+                {
+                  "style": "text",
+                  "value": [
+                    "Hear, encourage, and strengthen us as we pray to you, Holy One, saying, “We put our trust in you.”"
+                  ],
+                  "type": "text"
+                },
+                {
+                  "type": "responsive",
+                  "metadata": { "response": "We put our trust in you." },
+                  "style": "litany",
+                  "value": [
+                    {
+                      "optional": false,
+                      "label": "",
+                      "text": "As the centurion placed his sick servant under Jesus’ authority, Holy One:",
+                      "response": ""
+                    },
+                    {
+                      "response": "We put our trust in you.",
+                      "optional": false,
+                      "text": "As Jonah cried out from the belly of the fish, Holy One:"
+                    },
+                    {
+                      "response": "We put our trust in you.",
+                      "optional": false,
+                      "text": "As did the three young men in Nebuchadnezzar’s fiery furnace, Holy One:"
+                    },
+                    {
+                      "optional": false,
+                      "text": "As Gideon laid siege to his enemy with a tiny force, Holy One:",
+                      "response": "We put our trust in you."
+                    },
+                    {
+                      "response": "We put our trust in you.",
+                      "optional": false,
+                      "text": "As the sons of Zebedee left their father and their boat to follow Jesus, Holy One:"
+                    },
+                    {
+                      "optional": false,
+                      "response": "We put our trust in you.",
+                      "text": "As the magi followed the star, Holy One:"
+                    },
+                    {
+                      "optional": false,
+                      "text": "As did Martha and Mary at the opening of Lazarus’ tomb,  Holy One:",
+                      "response": "We put our trust in you."
+                    },
+                    {
+                      "optional": false,
+                      "response": "We put our trust in you.",
+                      "text": "As Mary Magdalene released her risen Teacher, Holy One:"
+                    }
+                  ]
+                },
+                {
+                  "value": [
+                    "The Minister adds the following or some other Collect"
+                  ],
+                  "type": "rubric"
+                },
+                {
+                  "style": "prayer",
+                  "value": [
+                    "God our Wisdom: Bless the decisions we have made in hope, in sorrow, and in love; that as we place our whole trust in you, our choices and our actions may be encompassed by your perfecting will; through Jesus Christ who died and rose for us."
+                  ],
+                  "type": "text"
+                }
+              ],
+              "category": [],
+              "label": "Form 2",
+              "id": "goacIU3mEuvnDAr7lYHd",
+              "date_modified": {
+                "seconds": 1632754432,
+                "nanoseconds": 606000000
+              },
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": [],
+                "organization": "venite",
+                "privacy": "public",
+                "status": "published"
+              },
+              "version_label": "Form 2",
+              "metadata": {
+                "liturgyversions": [],
+                "pronouns": [],
+                "evening": false,
+                "special_preferences": {},
+                "preferences": {},
+                "supplement": true
+              }
+            }
+          ],
+          "type": "option",
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If Communion is not to follow, the service continues with the Lord’s Prayer. The minister may introduce the prayer with these or similar words"
+          ]
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "value": [
+            {
+              "style": "prayer",
+              "type": "text",
+              "version_label": "Contemporary",
+              "metadata": { "omit_response": false, "rollup": false },
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "value": [
+                "As our Savior Christ\nhas taught us,\nwe now pray,",
+                "Our Father in heaven,\n     hallowed be your Name,\n     your kingdom come,\n     your will be done,\n         on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n     as we forgive those\n         who sin against us.\nSave us from the time of trial,\n     and deliver us from evil.\nFor the kingdom, the power,\n     and the glory are yours,\n     now and for ever."
+              ]
+            },
+            {
+              "metadata": { "omit_label": false, "rollup": false },
+              "version_label": "Traditional",
+              "type": "text",
+              "value": [
+                "And now, as our Savior\nChrist has taught us,\nwe are bold to say,",
+                "Our Father, who art in heaven,\n     hallowed be thy Name,\n     thy kingdom come,\n     thy will be done,\n         on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n     as we forgive those\n         who trespass against us.\nAnd lead us not into temptation,\n     but deliver us from evil.\nFor thine is the kingdom,\n     and the power, and the glory,\n     for ever and ever."
+              ],
+              "category": [],
+              "style": "prayer",
+              "source": { "api": "", "source": "", "citation": "" }
+            }
+          ]
+        },
+        {
+          "style": "text",
+          "value": ["Laying on of Hands [and Anointing]"],
+          "type": "heading",
+          "metadata": { "level": 3 }
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The minister may lay hands upon the person from whom treatment is to be withdrawn [and/or may anoint the person], pray silently, then pray aloud using one of the following forms or similar words"
+          ]
+        },
+        {
+          "value": [
+            {
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "*N.*, I lay my hands upon you in the name of our Lord Jesus Christ, beseeching him to uphold you and fill you with grace, that you may know the healing power of his love. "
+              ]
+            },
+            {
+              "style": "prayer",
+              "value": [
+                "*N.*, I lay my hands upon you in the name of the Father, and of the Son, and of the Holy Spirit, trusting that God will do better things for you than we can desire or pray for."
+              ],
+              "type": "text"
+            },
+            {
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "*N.*, I lay my hands upon you [and anoint you] in the name of our\nSavior Jesus Christ."
+              ]
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option"
+        },
+        {
+          "style": "text",
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["An Act of Commitment"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The service may continue with this act of commitment by family member(s) and/or friend(s) to the individual from whom treatment will be withdrawn.",
+            "The minister may introduce the act of commitment with these or similar words"
+          ]
+        },
+        {
+          "value": [
+            "Our Savior Jesus Christ chose to be like us in all things, even to sharing our suffering and death. As God is faithful to us, I now invite you to make a covenant of faithfulness with *N.*"
+          ],
+          "style": "text",
+          "type": "text"
+        },
+        { "value": ["Those present say"], "type": "rubric" },
+        {
+          "type": "text",
+          "style": "text",
+          "value": [
+            "*N.*, may Christ comfort you as you follow him on the path now set before you. With God’s help, I will journey beside you. With God’s help, I will watch and wait with you, and with God’s help, I will witness the love of Christ by my presence and prayers with you. Before God and your loved ones, I commit myself to you in the Name of Christ."
+          ]
+        },
+        {
+          "value": ["The Peace"],
+          "type": "heading",
+          "style": "text",
+          "metadata": { "level": 3 }
+        },
+        {
+          "value": ["All present may greet one another in the name of Christ."],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            "If Communion does not follow, the service may conclude as follows"
+          ],
+          "type": "rubric"
+        },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "label": "Minister",
+              "response": "",
+              "text": "Into your hands, O Lord, I commend my spirit,\nFor you have redeemed me, O God of truth."
+            },
+            {
+              "text": "Into your hands, O Lord, I commend my spirit.",
+              "label": "People"
+            }
+          ],
+          "type": "responsive"
+        },
+        {
+          "style": "text",
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["Communion"]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If the Eucharist is to be celebrated, the Priest or Bishop begins with the Offertory.",
+            "If Communion is to be administered from the reserved Sacrament, the service continues with the Lord’s Prayer, the minister first saying"
+          ]
+        },
+        {
+          "value": [
+            {
+              "source": { "citation": "", "api": "", "source": "" },
+              "metadata": { "omit_response": false, "rollup": false },
+              "style": "prayer",
+              "version_label": "Contemporary",
+              "value": [
+                "As our Savior Christ\nhas taught us,\nwe now pray,",
+                "Our Father in heaven,\n     hallowed be your Name,\n     your kingdom come,\n     your will be done,\n         on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n     as we forgive those\n         who sin against us.\nSave us from the time of trial,\n     and deliver us from evil.\nFor the kingdom, the power,\n     and the glory are yours,\n     now and for ever."
+              ],
+              "category": [],
+              "type": "text"
+            },
+            {
+              "type": "text",
+              "version_label": "Traditional",
+              "source": { "api": "", "citation": "", "source": "" },
+              "style": "prayer",
+              "category": [],
+              "metadata": { "omit_label": false, "rollup": false },
+              "value": [
+                "And now, as our Savior\nChrist has taught us,\nwe are bold to say,",
+                "Our Father, who art in heaven,\n     hallowed be thy Name,\n     thy kingdom come,\n     thy will be done,\n         on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n     as we forgive those\n         who trespass against us.\nAnd lead us not into temptation,\n     but deliver us from evil.\nFor thine is the kingdom,\n     and the power, and the glory,\n     for ever and ever."
+              ]
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option"
+        },
+        {
+          "value": ["The minister may say the following Invitation"],
+          "type": "rubric"
+        },
+        {
+          "style": "text",
+          "type": "text",
+          "value": ["The Gifts of God for the People of God."]
+        },
+        { "value": [""], "type": "rubric" },
+        {
+          "type": "text",
+          "style": "text",
+          "value": [
+            "Take them in remembrance that Christ died for you, and feed on him in your heart[s] by faith, with thanksgiving."
+          ]
+        },
+        {
+          "value": [
+            "The Sacrament is administered with the following or other words"
+          ],
+          "type": "rubric"
+        },
+        {
+          "style": "prayer",
+          "type": "text",
+          "value": [
+            "The Body (Blood) of our Lord Jesus Christ keep you in everlasting\nlife."
+          ],
+          "response": "[Amen.]"
+        },
+        {
+          "value": [
+            "If the person cannot receive both the consecrated Bread and the Wine, it is suitable to administer the Sacrament in one kind only.",
+            "One of the usual postcommunion prayers is then said, or the following"
+          ],
+          "type": "rubric"
+        },
+        {
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "value": [
+            {
+              "type": "text",
+              "value": [
+                "Gracious Father, \nwe give you praise and thanks \nfor this Holy Communion \nof the Body and Blood of your beloved Son Jesus Christ, \nthe pledge of our redemption; \nand we pray that it may bring us forgiveness of our sins, \nstrength in our weakness, \nand everlasting salvation; \nthrough Jesus Christ our Lord."
+              ],
+              "style": "prayer",
+              "display_format": "unison"
+            },
+            {
+              "display_format": "unison",
+              "style": "prayer",
+              "value": [
+                "Faithful God\nin the wonder of your wisdom and love\nyou fed your people in the wilderness with the bread of angels,\nand you sent Jesus to be the bread of life.\nWe thank you for feeding us with this bread.\nMay it strengthen us\nthat by the power of the Holy Spirit\nwe may embody your desire\nand be renewed for your service;\nthrough Jesus Christ our Savior."
+              ],
+              "type": "text"
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "value": [
+            "If a person desires Communion but is unable to eat and drink the Bread and Wine, by reason of extreme sickness or disability, the minister should assure that person that all benefits of Communion are received through an act of spiritual communion even if the Sacrament is not received with the mouth. The minister [and/or the individual who is ill] may pray, using these or similar words."
+          ],
+          "type": "rubric"
+        },
+        {
+          "metadata": { "editor_selected": 1, "selected": 1 },
+          "value": [
+            {
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "Faithful God,\nin the wonder of your wisdom and love\nyou fed your people in the wilderness with the bread of angels,\nand you sent Jesus to be the bread of life.\nThough *N.* [*I*] cannot consume these gifts of bread and wine,\nwe [*I*] thank you that *he/she* has [*I have*] received the sacrament \n    of Christ’s presence,\nthe forgiveness of sins, and all other benefits of Christ’s passion.\nBy the power of the Holy Spirit,\nmay *we* [*I*] embody your desire\nand be renewed for your service;\nthrough Jesus Christ our Savior. "
+              ]
+            },
+            {
+              "type": "text",
+              "value": [
+                "God of infinite mercy,\nwe thank you for Jesus our Savior, our true Mother\nwho feeds us and gives us eternal life.\nThough *N.* [*I*] cannot consume these gifts of bread and wine,\nwe [*I*] thank you that *he/she has* [*I have*] received the sacrament \n    of Christ’s presence,\nthe forgiveness of sins, and all other benefits of Christ’s passion.\nGrant that we may continue for ever in the Risen Life of our Savior,\nwho with you and the Holy Spirit,\nlives and reigns, one God, now and for ever."
+              ],
+              "style": "prayer"
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "style": "text",
+          "value": ["Grace"],
+          "type": "heading",
+          "metadata": { "level": 3 }
+        },
+        {
+          "type": "rubric",
+          "value": ["The Minister may conclude with one of the following"]
+        },
+        {
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "type": "text",
+              "value": [
+                "The grace of our Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with us all evermore."
+              ],
+              "style": "prayer"
+            },
+            {
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "Glory to God whose power, working in us, can do infinitely more than we can ask or imagine; glory to God from generation to generation in the Church and in Christ Jesus for ever and ever."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": ["After this, treatment is withdrawn as needed."]
+        },
+        {
+          "value": [
+            "Ministration at the Time of Death may follow at a later time when death is imminent."
+          ],
+          "type": "rubric"
+        }
+      ],
+      "language": "en",
+      "category": [],
+      "sharing": {
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite"
+      },
+      "lastRevision": 351,
+      "date_created": { "nanoseconds": 956000000, "seconds": 1632752947 },
+      "label": "When Life-Sustaining Treatment Is Withheld or Discontinued",
+      "source": { "citation": "", "api": "", "source": "" },
+      "version": "Rite-II"
+    }
+  ]
+}
