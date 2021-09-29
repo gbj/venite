@@ -1,5 +1,9 @@
 {
   "index": "100",
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=396",
+    "label": "BCP p. 396"
+  },
   "data": [
     {
       "metadata": { "special_preferences": {}, "preferences": {} },
