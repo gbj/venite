@@ -1,0 +1,77 @@
+{
+  "index": 10,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=420",
+    "label": "BCP p. 420"
+  },
+  "data": [
+    {
+      "value": [
+        {
+          "metadata": { "level": 1 },
+          "value": ["A Form of Commitment to Christian Service"],
+          "type": "heading",
+          "style": "text"
+        },
+        {
+          "value": [
+            "This form may be used when a person wishes to make or renew a commitment to the service of Christ in the world, either in general terms, or upon undertaking some special responsibility.",
+            "It is essential that the person seeking to make or renew a commitment prepare in advance, in consultation with the celebrant, the Act of Commitment, which may be in the form either of a statement of intention or of a series of questions and answers, but which should include a reaffirmation of baptismal promises.",
+            "Before the Offertory of the Eucharist, the person comes forward at the invitation of the celebrant, and, standing before the congregation, makes the Act of Commitment.",
+            " After this, the Celebrant says these or similar words"
+          ],
+          "type": "rubric"
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "May the Holy Spirit guide and strengthen you, that in this, and in all things, you may do God’s will in the service of the kingdom of his Christ."
+          ]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "value": [
+            "In the name of this congregation I commend you to this work, and pledge you our prayers, encouragement, and support."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Celebrant then says this or some other appropriate prayer"
+          ]
+        },
+        { "type": "text", "value": ["Let us pray."], "style": "text" },
+        {
+          "value": [
+            "Almighty God, look with favor upon this person who has now reaffirmed *his* commitment to follow Christ and to serve in his name. Give *him* courage, patience, and vision; and strengthen us all in our Christian vocation of witness to the world, and of service to others; through Jesus Christ our Lord.  "
+          ],
+          "type": "text",
+          "style": "prayer"
+        },
+        {
+          "value": [
+            "A prayer for the special work in which the person will be engaged may be added.",
+            "The service then continues with the exchange of the Peace and the Offertory."
+          ],
+          "type": "rubric"
+        }
+      ],
+      "slug": "a-form-of-commitment-to-christian-service",
+      "lastRevision": 36,
+      "source": { "api": "", "source": "", "citation": "" },
+      "type": "liturgy",
+      "metadata": {
+        "supplement": false,
+        "preferences": {},
+        "liturgyversions": [],
+        "special_preferences": {}
+      },
+      "id": "60uqOUl6yuTlHqD7lHgd",
+      "version": "Rite-II",
+      "label": "A Form of Commitment to Christian Service",
+      "language": "en"
+    }
+  ]
+}
