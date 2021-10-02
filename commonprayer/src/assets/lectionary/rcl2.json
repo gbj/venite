@@ -45,7 +45,7 @@
     "day": "second-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 72:1-7, 18-19"
+    "citation": "Psalm 72:1-7,18-19"
   },
   {
     "whentype": "year",
@@ -117,7 +117,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 80:1-7, 16-18"
+    "citation": "Psalm 80:1-7,16-18"
   },
   {
     "whentype": "year",
@@ -253,7 +253,7 @@
     "day": "1st-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Galatians 3:23-25;4:4-7"
+    "citation": "Galatians 3:23-25; 4:4-7"
   },
   {
     "whentype": "year",
@@ -285,7 +285,7 @@
     "day": "1st-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Galatians 3:23-25;4:4-7"
+    "citation": "Galatians 3:23-25; 4:4-7"
   },
   {
     "whentype": "year",
@@ -317,7 +317,7 @@
     "day": "1st-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Galatians 3:23-25;4:4-7"
+    "citation": "Galatians 3:23-25; 4:4-7"
   },
   {
     "whentype": "year",
@@ -453,7 +453,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 2:13-15, 2:19-23"
+    "citation": "Matthew 2:13-15,19-23"
   },
   {
     "whentype": "year",
@@ -485,7 +485,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 2:13-15, 2:19-23"
+    "citation": "Matthew 2:13-15,19-23"
   },
   {
     "whentype": "year",
@@ -517,7 +517,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 2:13-15, 2:19-23"
+    "citation": "Matthew 2:13-15,19-23"
   },
   {
     "whentype": "year",
@@ -533,7 +533,7 @@
     "day": "epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 72:1-7, 10-14"
+    "citation": "Psalm 72:1-7,10-14"
   },
   {
     "whentype": "year",
@@ -565,7 +565,7 @@
     "day": "epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 72:1-7, 10-14"
+    "citation": "Psalm 72:1-7,10-14"
   },
   {
     "whentype": "year",
@@ -597,7 +597,7 @@
     "day": "epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 72:1-7, 10-14"
+    "citation": "Psalm 72:1-7,10-14"
   },
   {
     "whentype": "year",
@@ -693,7 +693,7 @@
     "day": "3rd-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 27:1, 5-13"
+    "citation": "Psalm 27:1,5-13"
   },
   {
     "whentype": "year",
@@ -813,7 +813,7 @@
     "day": "7th-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Leviticus 19:1-2, 19:9-18"
+    "citation": "Leviticus 19:1-2,9-18"
   },
   {
     "whentype": "year",
@@ -829,7 +829,7 @@
     "day": "7th-epiphany",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "1 Corinthians 3:10-11, 3:16-23"
+    "citation": "1 Corinthians 3:10-11,16-23"
   },
   {
     "whentype": "year",
@@ -941,7 +941,7 @@
     "day": "wednesday-last-epiphany",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 6:1-6, 6:16-21"
+    "citation": "Matthew 6:1-6,16-21"
   },
   {
     "whentype": "year",
@@ -981,7 +981,7 @@
     "day": "wednesday-last-epiphany",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 6:1-6, 6:16-21"
+    "citation": "Matthew 6:1-6,16-21"
   },
   {
     "whentype": "year",
@@ -1021,7 +1021,7 @@
     "day": "wednesday-last-epiphany",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 6:1-6, 6:16-21"
+    "citation": "Matthew 6:1-6,16-21"
   },
   {
     "whentype": "year",
@@ -1085,7 +1085,7 @@
     "day": "2nd-lent",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 4:1-5, 13-17"
+    "citation": "Romans 4:1-5,13-17"
   },
   {
     "whentype": "year",
@@ -1533,7 +1533,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 116:1, 10-17"
+    "citation": "Psalm 116:1,10-17"
   },
   {
     "whentype": "year",
@@ -1549,7 +1549,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 13:1-17, 13:31-35"
+    "citation": "John 13:1-17,31b-35"
   },
   {
     "whentype": "year",
@@ -1565,7 +1565,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 116:1, 10-17"
+    "citation": "Psalm 116:1,10-17"
   },
   {
     "whentype": "year",
@@ -1581,7 +1581,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 13:1-17, 13:31-35"
+    "citation": "John 13:1-17,31b-35"
   },
   {
     "whentype": "year",
@@ -1597,7 +1597,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 116:1, 10-17"
+    "citation": "Psalm 116:1,10-17"
   },
   {
     "whentype": "year",
@@ -1613,7 +1613,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 13:1-17, 13:31b-35"
+    "citation": "John 13:1-17,31b-35"
   },
   {
     "whentype": "year",
@@ -1725,7 +1725,7 @@
     "day": "saturday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 31:1-4, 15-16"
+    "citation": "Psalm 31:1-4,15-16"
   },
   {
     "whentype": "year",
@@ -1757,7 +1757,7 @@
     "day": "saturday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 31:1-4, 15-16"
+    "citation": "Psalm 31:1-4,15-16"
   },
   {
     "whentype": "year",
@@ -1789,7 +1789,7 @@
     "day": "saturday-holy-week",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 31:1-4, 15-16"
+    "citation": "Psalm 31:1-4,15-16"
   },
   {
     "whentype": "year",
@@ -1821,7 +1821,7 @@
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 118:1-2, 14-24"
+    "citation": "Psalm 118:1-2,14-24"
   },
   {
     "whentype": "year",
@@ -1853,7 +1853,7 @@
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 118:1-2, 14-24"
+    "citation": "Psalm 118:1-2,14-24"
   },
   {
     "whentype": "year",
@@ -2373,7 +2373,7 @@
     "day": "saturday-easter",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 16:9-15, 20"
+    "citation": "Mark 16:9-15,20"
   },
   {
     "whentype": "year",
@@ -2405,7 +2405,7 @@
     "day": "saturday-easter",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 16:9-15, 20"
+    "citation": "Mark 16:9-15,20"
   },
   {
     "whentype": "year",
@@ -2437,7 +2437,7 @@
     "day": "saturday-easter",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 16:9-15, 20"
+    "citation": "Mark 16:9-15,20"
   },
   {
     "whentype": "year",
@@ -2453,7 +2453,7 @@
     "day": "2nd-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Acts 2:14, 2:22-32"
+    "citation": "Acts 2:14,22-32"
   },
   {
     "whentype": "year",
@@ -2485,7 +2485,7 @@
     "day": "3rd-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Acts 2:14, 2:36-41"
+    "citation": "Acts 2:14,36-41"
   },
   {
     "whentype": "year",
@@ -2493,7 +2493,7 @@
     "day": "3rd-easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 116:1-3, 10-17"
+    "citation": "Psalm 116:1-3,10-17"
   },
   {
     "whentype": "year",
@@ -2557,7 +2557,7 @@
     "day": "5th-easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 31:1-5, 15-16"
+    "citation": "Psalm 31:1-5,15-16"
   },
   {
     "whentype": "year",
@@ -2741,7 +2741,7 @@
     "day": "7th-easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 68:1-10, 33-36"
+    "citation": "Psalm 68:1-10,33-36"
   },
   {
     "whentype": "year",
@@ -2773,7 +2773,7 @@
     "day": "pentecost",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 104:25-35, 37"
+    "citation": "Psalm 104:25-35,37"
   },
   {
     "whentype": "year",
@@ -2869,7 +2869,7 @@
     "day": "proper-2",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Leviticus 19:1-2, 19:9-18"
+    "citation": "Leviticus 19:1-2,9-18"
   },
   {
     "whentype": "year",
@@ -2885,7 +2885,7 @@
     "day": "proper-2",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "1 Corinthians 3:10-11, 16-23"
+    "citation": "1 Corinthians 3:10-11,16-23"
   },
   {
     "whentype": "year",
@@ -2933,7 +2933,7 @@
     "day": "proper-4",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Deuteronomy 11:18-21, 11:26-28"
+    "citation": "Deuteronomy 11:18-21,26-28"
   },
   {
     "whentype": "year",
@@ -2941,7 +2941,7 @@
     "day": "proper-4",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 31:1-5, 19-24"
+    "citation": "Psalm 31:1-5,19-24"
   },
   {
     "whentype": "year",
@@ -2949,7 +2949,7 @@
     "day": "proper-4",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 1:16-17; 3:22b-28, (29-31)"
+    "citation": "Romans 1:16-17; 3:22b-28,(29-31)"
   },
   {
     "whentype": "year",
@@ -2989,7 +2989,7 @@
     "day": "proper-5",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 9:9-13, 9:18-26"
+    "citation": "Matthew 9:9-13,18-26"
   },
   {
     "whentype": "year",
@@ -3037,7 +3037,7 @@
     "day": "proper-7",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 69:8-11, (12-17), 18-20"
+    "citation": "Psalm 69:8-11,(12-17),18-20"
   },
   {
     "whentype": "year",
@@ -3069,7 +3069,7 @@
     "day": "proper-8",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 89:1-4, 15-18"
+    "citation": "Psalm 89:1-4,15-18"
   },
   {
     "whentype": "year",
@@ -3117,7 +3117,7 @@
     "day": "proper-9",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 11:16-19, 11:25-30"
+    "citation": "Matthew 11:16-19,25-30"
   },
   {
     "whentype": "year",
@@ -3133,7 +3133,7 @@
     "day": "proper-10",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 65:(1-8), 9-14"
+    "citation": "Psalm 65:(1-8),9-14"
   },
   {
     "whentype": "year",
@@ -3149,7 +3149,7 @@
     "day": "proper-10",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 13:1-9, 13:18-23"
+    "citation": "Matthew 13:1-9,18-23"
   },
   {
     "whentype": "year",
@@ -3181,7 +3181,7 @@
     "day": "proper-11",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 13:24-30, 13:36-43"
+    "citation": "Matthew 13:24-30,36-43"
   },
   {
     "whentype": "year",
@@ -3213,7 +3213,7 @@
     "day": "proper-12",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Matthew 13:31-33, 13:44-52"
+    "citation": "Matthew 13:31-33,44-52"
   },
   {
     "whentype": "year",
@@ -3229,7 +3229,7 @@
     "day": "proper-13",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 145:8-9, 15-22"
+    "citation": "Psalm 145:8-9,15-22"
   },
   {
     "whentype": "year",
@@ -3285,7 +3285,7 @@
     "day": "proper-15",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 56:1, 6-8"
+    "citation": "Isaiah 56:1,6-8"
   },
   {
     "whentype": "year",
@@ -3301,7 +3301,7 @@
     "day": "proper-15",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 11:1-2, 29-32"
+    "citation": "Romans 11:1-2,29-32"
   },
   {
     "whentype": "year",
@@ -3421,7 +3421,7 @@
     "day": "proper-19",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 103:(1-7), 8-13"
+    "citation": "Psalm 103:(1-7),8-13"
   },
   {
     "whentype": "year",
@@ -3477,7 +3477,7 @@
     "day": "proper-21",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ezekiel 18:1-4, 18:25-32"
+    "citation": "Ezekiel 18:1-4,25-32"
   },
   {
     "whentype": "year",
@@ -3581,7 +3581,7 @@
     "day": "proper-24",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 96:1-9, (10-13)"
+    "citation": "Psalm 96:1-9,(10-13)"
   },
   {
     "whentype": "year",
@@ -3605,7 +3605,7 @@
     "day": "proper-25",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Leviticus 19:1-2, 19:15-18"
+    "citation": "Leviticus 19:1-2,15-18"
   },
   {
     "whentype": "year",
@@ -3701,7 +3701,7 @@
     "day": "proper-28",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Zephaniah 1:7, 12-18"
+    "citation": "Zephaniah 1:7,12-18"
   },
   {
     "whentype": "year",
@@ -3709,7 +3709,7 @@
     "day": "proper-28",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 90:1-8, (9-11), 12"
+    "citation": "Psalm 90:1-8,(9-11),12"
   },
   {
     "whentype": "year",
@@ -3733,7 +3733,7 @@
     "day": "proper-29",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ezekiel 34:11-16, 34:20-24"
+    "citation": "Ezekiel 34:11-16,20-24"
   },
   {
     "whentype": "year",
@@ -3773,7 +3773,7 @@
     "day": "first-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 80:1-7, 17-18"
+    "citation": "Psalm 80:1-7,17-18"
   },
   {
     "whentype": "year",
@@ -3805,7 +3805,7 @@
     "day": "second-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 85:1-2, 8-13"
+    "citation": "Psalm 85:1-2,8-13"
   },
   {
     "whentype": "year",
@@ -3829,7 +3829,7 @@
     "day": "third-advent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 61:1-4, 61:8-11"
+    "citation": "Isaiah 61:1-4,8-11"
   },
   {
     "whentype": "year",
@@ -3853,7 +3853,7 @@
     "day": "third-advent",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 1:6-8, 1:19-28"
+    "citation": "John 1:6-8,19-28"
   },
   {
     "whentype": "year",
@@ -3869,7 +3869,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Samuel 7:1-11, 16"
+    "citation": "2 Samuel 7:1-11,16"
   },
   {
     "whentype": "year",
@@ -3901,7 +3901,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 89:1-4, 19-26"
+    "citation": "Psalm 89:1-4,19-26"
   },
   {
     "whentype": "year",
@@ -3973,7 +3973,7 @@
     "day": "3rd-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Jonah 3:1-5, 10"
+    "citation": "Jonah 3:1-5,10"
   },
   {
     "whentype": "year",
@@ -4045,7 +4045,7 @@
     "day": "5th-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 147:1-11, 20c"
+    "citation": "Psalm 147:1-11,20c"
   },
   {
     "whentype": "year",
@@ -4141,7 +4141,7 @@
     "day": "8th-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 103:1-13, 22"
+    "citation": "Psalm 103:1-13,22"
   },
   {
     "whentype": "year",
@@ -4229,7 +4229,7 @@
     "day": "2nd-lent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 17:1-7, 17:15-16"
+    "citation": "Genesis 17:1-7,15-16"
   },
   {
     "whentype": "year",
@@ -4301,7 +4301,7 @@
     "day": "4th-lent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 107:1-3, 17-22"
+    "citation": "Psalm 107:1-3,17-22"
   },
   {
     "whentype": "year",
@@ -4421,7 +4421,7 @@
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 118:1-2, 14-24"
+    "citation": "Psalm 118:1-2,14-24"
   },
   {
     "whentype": "year",
@@ -4605,7 +4605,7 @@
     "day": "7th-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Acts 1:15-17, 1:21-26"
+    "citation": "Acts 1:15-17,21-26"
   },
   {
     "whentype": "year",
@@ -4645,7 +4645,7 @@
     "day": "pentecost",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 104:25-35, 37"
+    "citation": "Psalm 104:25-35,37"
   },
   {
     "whentype": "year",
@@ -4661,7 +4661,7 @@
     "day": "pentecost",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 15:26-27, 16:4-15"
+    "citation": "John 15:26-27; 16:4b-15"
   },
   {
     "whentype": "year",
@@ -4781,7 +4781,7 @@
     "day": "proper-3",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 103:1-13, 22"
+    "citation": "Psalm 103:1-13,22"
   },
   {
     "whentype": "year",
@@ -4877,7 +4877,7 @@
     "day": "proper-6",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
@@ -4909,7 +4909,7 @@
     "day": "proper-7",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 107:1-3, 23-32"
+    "citation": "Psalm 107:1-3,23-32"
   },
   {
     "whentype": "year",
@@ -4933,7 +4933,7 @@
     "day": "proper-8",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Wisdom 1:13-15, 2:23-24"
+    "citation": "Wisdom 1:13-15; 2:23-24"
   },
   {
     "whentype": "year",
@@ -5053,7 +5053,7 @@
     "day": "proper-11",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 6:30-34, 6:53-56"
+    "citation": "Mark 6:30-34,53-56"
   },
   {
     "whentype": "year",
@@ -5093,7 +5093,7 @@
     "day": "proper-13",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Exodus 16:2-4, 16:9-15"
+    "citation": "Exodus 16:2-4,9-15"
   },
   {
     "whentype": "year",
@@ -5149,7 +5149,7 @@
     "day": "proper-14",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 6:35, 41-51"
+    "citation": "John 6:35,41-51"
   },
   {
     "whentype": "year",
@@ -5189,7 +5189,7 @@
     "day": "proper-16",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Joshua 24:1-2, 24:14-18"
+    "citation": "Joshua 24:1-2,14-18"
   },
   {
     "whentype": "year",
@@ -5221,7 +5221,7 @@
     "day": "proper-17",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Deuteronomy 4:1-2, 6-9"
+    "citation": "Deuteronomy 4:1-2,6-9"
   },
   {
     "whentype": "year",
@@ -5245,7 +5245,7 @@
     "day": "proper-17",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 7:1-8, 14-15, 21-23"
+    "citation": "Mark 7:1-8,14-15,21-23"
   },
   {
     "whentype": "year",
@@ -5317,7 +5317,7 @@
     "day": "proper-20",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Wisdom 1:16-2:1, 12-22"
+    "citation": "Wisdom 1:16-2:1,12-22"
   },
   {
     "whentype": "year",
@@ -5333,7 +5333,7 @@
     "day": "proper-20",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "James 3:13-4:3, 4:7-8"
+    "citation": "James 3:13-4:3,7-8a"
   },
   {
     "whentype": "year",
@@ -5349,7 +5349,7 @@
     "day": "proper-21",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Numbers 11:4-6, 10-16, 24-29"
+    "citation": "Numbers 11:4-6,10-16,24-29"
   },
   {
     "whentype": "year",
@@ -5397,7 +5397,7 @@
     "day": "proper-22",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Hebrews 1:1-4, 2:5-12"
+    "citation": "Hebrews 1:1-4; 2:5-12"
   },
   {
     "whentype": "year",
@@ -5413,7 +5413,7 @@
     "day": "proper-23",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Amos 5:6-7, 5:10-15"
+    "citation": "Amos 5:6-7,10-15"
   },
   {
     "whentype": "year",
@@ -5605,7 +5605,7 @@
     "day": "proper-29",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Daniel 7:9-10, 7:13-14"
+    "citation": "Daniel 7:9-10,13-14"
   },
   {
     "whentype": "year",
@@ -5741,7 +5741,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Micah 5:2-5a
+    "citation": "Micah 5:2-5a"
   },
   {
     "whentype": "year",
@@ -5805,7 +5805,7 @@
     "day": "1st-epiphany",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Luke 3:15-17, 3:21-22"
+    "citation": "Luke 3:15-17,21-22"
   },
   {
     "whentype": "year",
@@ -5845,7 +5845,7 @@
     "day": "3rd-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Nehemiah 8:1-3, 5-6, 8-10"
+    "citation": "Nehemiah 8:1-3,5-6,8-10"
   },
   {
     "whentype": "year",
@@ -5973,7 +5973,7 @@
     "day": "7th-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 45:3-11, 15"
+    "citation": "Genesis 45:3-11,15"
   },
   {
     "whentype": "year",
@@ -5981,7 +5981,7 @@
     "day": "7th-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 37:1-12, 41-42"
+    "citation": "Psalm 37:1-12,41-42"
   },
   {
     "whentype": "year",
@@ -5989,7 +5989,7 @@
     "day": "7th-epiphany",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "1 Corinthians 15:35-38, 15:42-50"
+    "citation": "1 Corinthians 15:35-38,42-50"
   },
   {
     "whentype": "year",
@@ -6013,7 +6013,7 @@
     "day": "8th-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
@@ -6085,7 +6085,7 @@
     "day": "1st-lent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 91:1-2, 9-16"
+    "citation": "Psalm 91:1-2,9-16"
   },
   {
     "whentype": "year",
@@ -6109,7 +6109,7 @@
     "day": "2nd-lent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 15:1-12, 15:17-18"
+    "citation": "Genesis 15:1-12,17-18"
   },
   {
     "whentype": "year",
@@ -6197,7 +6197,7 @@
     "day": "4th-lent",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Luke 15:1-3, 15:11b-32"
+    "citation": "Luke 15:1-3,11b-32"
   },
   {
     "whentype": "year",
@@ -6285,7 +6285,7 @@
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 118:1-2, 14-24"
+    "citation": "Psalm 118:1-2,14-24"
   },
   {
     "whentype": "year",
@@ -6469,7 +6469,7 @@
     "day": "6th-easter",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Revelation 21:10, 22-22:5"
+    "citation": "Revelation 21:10,22-22:5"
   },
   {
     "whentype": "year",
@@ -6501,7 +6501,7 @@
     "day": "7th-easter",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Revelation 22:12-14, 16-17, 20-21"
+    "citation": "Revelation 22:12-14,16-17,20-21"
   },
   {
     "whentype": "year",
@@ -6525,7 +6525,7 @@
     "day": "pentecost",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 104:24-35, 37"
+    "citation": "Psalm 104:24-35,37"
   },
   {
     "whentype": "year",
@@ -6541,7 +6541,7 @@
     "day": "pentecost",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 14:8-17, 14:25-27"
+    "citation": "John 14:8-17,25-27"
   },
   {
     "whentype": "year",
@@ -6557,7 +6557,7 @@
     "day": "trinity-sunday",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Proverbs 8:1-4, 8:22-31"
+    "citation": "Proverbs 8:1-4,22-31"
   },
   {
     "whentype": "year",
@@ -6629,7 +6629,7 @@
     "day": "proper-2",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 45:3-11, 15"
+    "citation": "Genesis 45:3-11,15"
   },
   {
     "whentype": "year",
@@ -6637,7 +6637,7 @@
     "day": "proper-2",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 37:1-12, 41-42"
+    "citation": "Psalm 37:1-12,41-42"
   },
   {
     "whentype": "year",
@@ -6645,7 +6645,7 @@
     "day": "proper-2",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "1 Corinthians 15:35-38, 15:42-50"
+    "citation": "1 Corinthians 15:35-38,42-50"
   },
   {
     "whentype": "year",
@@ -6669,7 +6669,7 @@
     "day": "proper-3",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
@@ -6701,7 +6701,7 @@
     "day": "proper-4",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "1 Kings 8:22-23, 8:41-43"
+    "citation": "1 Kings 8:22-23,41-43"
   },
   {
     "whentype": "year",
@@ -6765,7 +6765,7 @@
     "day": "proper-6",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Samuel 11:26-12:10, 13-15"
+    "citation": "2 Samuel 11:26-12:10,13-15"
   },
   {
     "whentype": "year",
@@ -6829,7 +6829,7 @@
     "day": "proper-8",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "1 Kings 19:15-16, 19:19-21"
+    "citation": "1 Kings 19:15-16,19-21"
   },
   {
     "whentype": "year",
@@ -6845,7 +6845,7 @@
     "day": "proper-8",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Galatians 5:1, 13-25"
+    "citation": "Galatians 5:1,13-25"
   },
   {
     "whentype": "year",
@@ -6885,7 +6885,7 @@
     "day": "proper-9",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Luke 10:1-11, 10:16-20"
+    "citation": "Luke 10:1-11,16-20"
   },
   {
     "whentype": "year",
@@ -6989,7 +6989,7 @@
     "day": "proper-13",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ecclesiastes 1:2, 12-14; 2:18-23"
+    "citation": "Ecclesiastes 1:2,12-14; 2:18-23"
   },
   {
     "whentype": "year",
@@ -7037,7 +7037,7 @@
     "day": "proper-14",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Hebrews 11:1-3, 11:8-16"
+    "citation": "Hebrews 11:1-3,8-16"
   },
   {
     "whentype": "year",
@@ -7133,7 +7133,7 @@
     "day": "proper-17",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Hebrews 13:1-8, 13:15-16"
+    "citation": "Hebrews 13:1-8,15-16"
   },
   {
     "whentype": "year",
@@ -7141,7 +7141,7 @@
     "day": "proper-17",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Luke 14:1, 7-14"
+    "citation": "Luke 14:1,7-14"
   },
   {
     "whentype": "year",
@@ -7253,7 +7253,7 @@
     "day": "proper-21",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Amos 6:1a, 4-7"
+    "citation": "Amos 6:1a,4-7"
   },
   {
     "whentype": "year",
@@ -7285,7 +7285,7 @@
     "day": "proper-22",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Habakkuk 1:1-4, 2:1-4"
+    "citation": "Habakkuk 1:1-4; 2:1-4"
   },
   {
     "whentype": "year",
@@ -7317,7 +7317,7 @@
     "day": "proper-23",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Kings 5:1-3, 5:7-15c"
+    "citation": "2 Kings 5:1-3,7-15c"
   },
   {
     "whentype": "year",
@@ -7397,7 +7397,7 @@
     "day": "proper-25",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "2 Timothy 4:6-8, 4:16-18"
+    "citation": "2 Timothy 4:6-8,16-18"
   },
   {
     "whentype": "year",
@@ -7413,7 +7413,7 @@
     "day": "proper-25",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Jeremiah 14:7-10, 14:19-22"
+    "citation": "Jeremiah 14:7-10,19-22"
   },
   {
     "whentype": "year",
@@ -7437,7 +7437,7 @@
     "day": "proper-26",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "2 Thessalonians 1:1-4, 1:11-12"
+    "citation": "2 Thessalonians 1:1-4,11-12"
   },
   {
     "whentype": "year",
@@ -7469,7 +7469,7 @@
     "day": "proper-27",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "2 Thessalonians 2:1-5, 2:13-17"
+    "citation": "2 Thessalonians 2:1-5,13-17"
   },
   {
     "whentype": "year",
@@ -7885,7 +7885,7 @@
     "day": "st-matthias",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 15:1, 6-16"
+    "citation": "John 15:1,6-16"
   },
   {
     "whentype": "year",
@@ -7917,7 +7917,7 @@
     "day": "st-matthias",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 15:1, 6-16"
+    "citation": "John 15:1,6-16"
   },
   {
     "whentype": "year",
@@ -7949,7 +7949,7 @@
     "day": "st-matthias",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "John 15:1, 6-16"
+    "citation": "John 15:1,6-16"
   },
   {
     "whentype": "year",
@@ -7957,7 +7957,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Samuel 7:4, 8-16"
+    "citation": "2 Samuel 7:4,8-16"
   },
   {
     "whentype": "year",
@@ -7989,7 +7989,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 89:1-4, 26-29"
+    "citation": "Psalm 89:1-4,26-29"
   },
   {
     "whentype": "year",
@@ -7997,7 +7997,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Samuel 7:4, 8-16"
+    "citation": "2 Samuel 7:4,8-16"
   },
   {
     "whentype": "year",
@@ -8029,7 +8029,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 89:1-4, 26-29"
+    "citation": "Psalm 89:1-4,26-29"
   },
   {
     "whentype": "year",
@@ -8037,7 +8037,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "2 Samuel 7:4, 8-16"
+    "citation": "2 Samuel 7:4,8-16"
   },
   {
     "whentype": "year",
@@ -8069,7 +8069,7 @@
     "day": "st-joseph",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 89:1-4, 26-29"
+    "citation": "Psalm 89:1-4,26-29"
   },
   {
     "whentype": "year",
@@ -8213,7 +8213,7 @@
     "day": "st-mark",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 4:7-8, 4:11-16"
+    "citation": "Ephesians 4:7-8,11-16"
   },
   {
     "whentype": "year",
@@ -8253,7 +8253,7 @@
     "day": "st-mark",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 4:7-8, 4:11-16"
+    "citation": "Ephesians 4:7-8,11-16"
   },
   {
     "whentype": "year",
@@ -8293,7 +8293,7 @@
     "day": "st-mark",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 4:7-8, 4:11-16"
+    "citation": "Ephesians 4:7-8,11-16"
   },
   {
     "whentype": "year",
@@ -8941,7 +8941,7 @@
     "day": "st-mary-magdalene",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Judith 9:1, 11-14"
+    "citation": "Judith 9:1,11-14"
   },
   {
     "whentype": "year",
@@ -8973,7 +8973,7 @@
     "day": "st-mary-magdalene",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Judith 9:1, 11-14"
+    "citation": "Judith 9:1,11-14"
   },
   {
     "whentype": "year",
@@ -9005,7 +9005,7 @@
     "day": "st-mary-magdalene",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Judith 9:1, 11-14"
+    "citation": "Judith 9:1,11-14"
   },
   {
     "whentype": "year",
@@ -9829,7 +9829,7 @@
     "day": "st-luke",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ecclesiasticus 38:1-4, 6-10, 12-14"
+    "citation": "Ecclesiasticus 38:1-4,6-10,12-14"
   },
   {
     "whentype": "year",
@@ -9869,7 +9869,7 @@
     "day": "st-luke",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ecclesiasticus 38:1-4, 6-10, 12-14"
+    "citation": "Ecclesiasticus 38:1-4,6-10,12-14"
   },
   {
     "whentype": "year",
@@ -9909,7 +9909,7 @@
     "day": "st-luke",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Ecclesiasticus 38:1-4, 6-10, 12-14"
+    "citation": "Ecclesiasticus 38:1-4,6-10,12-14"
   },
   {
     "whentype": "year",
@@ -10149,7 +10149,7 @@
     "day": "all-saints-day",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 34:1-10, 22"
+    "citation": "Psalm 34:1-10,22"
   },
   {
     "whentype": "year",
@@ -10213,7 +10213,7 @@
     "day": "all-saints-day",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Daniel 7:1-3, 7:15-18"
+    "citation": "Daniel 7:1-3,15-18"
   },
   {
     "whentype": "year",
@@ -10461,7 +10461,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Jeremiah 26:1-9, 26:12-15"
+    "citation": "Jeremiah 26:1-9,12-15"
   },
   {
     "whentype": "year",
@@ -10477,7 +10477,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Acts 6:8 - 7:2a, 51c-60"
+    "citation": "Acts 6:8-7:2a,51c-60"
   },
   {
     "whentype": "year",
@@ -10501,7 +10501,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Jeremiah 26:1-9, 26:12-15"
+    "citation": "Jeremiah 26:1-9,12-15"
   },
   {
     "whentype": "year",
@@ -10517,7 +10517,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Acts 6:8 - 7:2a, 51c-60"
+    "citation": "Acts 6:8-7:2a,51c-60"
   },
   {
     "whentype": "year",
@@ -10541,7 +10541,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Jeremiah 26:1-9, 26:12-15"
+    "citation": "Jeremiah 26:1-9,12-15"
   },
   {
     "whentype": "year",
@@ -10557,7 +10557,7 @@
     "day": "st-stephen",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Acts 6:8 - 7:2a, 51c-60"
+    "citation": "Acts 6:8-7:2a,51c-60"
   },
   {
     "whentype": "year",
@@ -10613,7 +10613,7 @@
     "day": "st-john",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
@@ -10653,7 +10653,7 @@
     "day": "st-john",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
@@ -10693,7 +10693,7 @@
     "day": "st-john",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 92:1-4, 11-14"
+    "citation": "Psalm 92:1-4,11-14"
   },
   {
     "whentype": "year",
