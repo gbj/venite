@@ -77,7 +77,7 @@
     "day": "christmas",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 2:1-20"
+    "citation": "Luke 2:1-14,(15-20)"
   },
   {
     "whentype": "year",
@@ -93,7 +93,7 @@
     "day": "christmas",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 2:1-20"
+    "citation": "Luke 2:1-14,(15-20)"
   },
   {
     "whentype": "year",
@@ -109,7 +109,7 @@
     "day": "christmas",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 2:1-20"
+    "citation": "Luke 2:1-14,(15-20)"
   },
   {
     "whentype": "year",
@@ -3693,7 +3693,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 1:39-55"
+    "citation": "Luke 1:39-45, (46-55)"
   },
   {
     "whentype": "year",
@@ -3837,7 +3837,7 @@
     "day": "last-epiphany",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 9:28-43a"
+    "citation": "Luke 9:28-36,(37-43a)"
   },
   {
     "whentype": "year",
@@ -4069,7 +4069,7 @@
     "day": "pentecost",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "John 14:8-17,25-27"
+    "citation": "John 14:8-17,(25-27)"
   },
   {
     "whentype": "year",
@@ -4141,7 +4141,7 @@
     "day": "proper-4",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Kings 18:20-39"
+    "citation": "1 Kings 18:20-21,(22-29),30-39"
   },
   {
     "whentype": "year",
@@ -4173,7 +4173,7 @@
     "day": "proper-5",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Kings 17:8-24"
+    "citation": "1 Kings 17:8-16,(17-24)"
   },
   {
     "whentype": "year",
@@ -4205,7 +4205,7 @@
     "day": "proper-6",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Kings 21:1-21"
+    "citation": "1 Kings 21:1-10,(11-14),15-21a"
   },
   {
     "whentype": "year",
@@ -4237,7 +4237,7 @@
     "day": "proper-7",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Kings 19:1-15"
+    "citation": "1 Kings 19:1-4,(5-7),8-15a"
   },
   {
     "whentype": "year",
@@ -4325,7 +4325,7 @@
     "day": "proper-9",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "Galatians 6:1-16"
+    "citation": "Galatians 6:(1-6),7-16"
   },
   {
     "whentype": "year",
@@ -4421,7 +4421,7 @@
     "day": "proper-12",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "Colossians 2:6-19"
+    "citation": "Colossians 2:6-15,(16-19)"
   },
   {
     "whentype": "year",
@@ -6157,7 +6157,7 @@
     "day": "all-saints-day",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "Revelation 21:1-6"
+    "citation": "Revelation 21:1-6a"
   },
   {
     "whentype": "year",
