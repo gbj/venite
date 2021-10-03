@@ -225,6 +225,22 @@
   },
   {
     "whentype": "year",
+    "when": "A",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:41-52"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Matthew 2:1-12"
+  },
+  {
+    "whentype": "year",
     "when": "B",
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsundayTrack1",
@@ -241,6 +257,22 @@
   },
   {
     "whentype": "year",
+    "when": "B",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:41-52"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Matthew 2:1-12"
+  },
+  {
+    "whentype": "year",
     "when": "C",
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsundayTrack1",
@@ -254,6 +286,22 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "Matthew 2:13-15,19-23"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:41-52"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "2nd-sunday-after-christmas",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Matthew 2:1-12"
   },
   {
     "whentype": "year",
@@ -589,6 +637,14 @@
     "day": "holy-week",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
+    "citation": "Matthew 26:14-27:66"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
     "citation": "Matthew 27:11-54"
   },
   {
@@ -804,6 +860,14 @@
     "when": "A",
     "day": "friday-holy-week",
     "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 4:14-16; 5:7-9"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "friday-holy-week",
+    "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 18:1-19:42"
   },
@@ -814,6 +878,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Hebrews 10:16-25"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "friday-holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 4:14-16; 5:7-9"
   },
   {
     "whentype": "year",
@@ -830,6 +902,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Hebrews 10:16-25"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "friday-holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 4:14-16; 5:7-9"
   },
   {
     "whentype": "year",
@@ -857,6 +937,14 @@
   },
   {
     "whentype": "year",
+    "when": "A",
+    "day": "saturday-holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 19:38-42"
+  },
+  {
+    "whentype": "year",
     "when": "B",
     "day": "saturday-holy-week",
     "lectionary": "rclsundayTrack1",
@@ -873,6 +961,14 @@
   },
   {
     "whentype": "year",
+    "when": "B",
+    "day": "saturday-holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 19:38-42"
+  },
+  {
+    "whentype": "year",
     "when": "C",
     "day": "saturday-holy-week",
     "lectionary": "rclsundayTrack1",
@@ -886,6 +982,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "Matthew 27:57-66"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "saturday-holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 19:38-42"
   },
   {
     "whentype": "year",
@@ -2581,7 +2685,15 @@
     "day": "holy-week",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Mark 15:1-47"
+    "citation": "Mark 14:1-15:47"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "holy-week",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Mark 15:1-39,(40-47)"
   },
   {
     "whentype": "year",
@@ -3693,7 +3805,7 @@
     "day": "fourth-advent",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Luke 1:39-45, (46-55)"
+    "citation": "Luke 1:39-45,(46-55)"
   },
   {
     "whentype": "year",
@@ -3940,6 +4052,14 @@
     "when": "C",
     "day": "holy-week",
     "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 23:1-49"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "holy-week",
+    "lectionary": "rclsundayTrack1",
     "type": "palms_gospel",
     "citation": "Luke 19:28-40"
   },
@@ -3958,6 +4078,22 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 20:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Acts 10:34-43"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 24:1-12"
   },
   {
     "whentype": "year",
@@ -4042,6 +4178,14 @@
   {
     "whentype": "year",
     "when": "C",
+    "day": "6th-easter",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 5:1-9"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
     "day": "7th-easter",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
@@ -4054,6 +4198,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 17:20-26"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "pentecost",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Romans 8:14-17"
   },
   {
     "whentype": "year",
@@ -4740,6 +4892,14 @@
     "when": "C",
     "day": "proper-22",
     "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 137"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "proper-22",
+    "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "2 Timothy 1:1-14"
   },
@@ -5289,6 +5449,14 @@
   },
   {
     "whentype": "year",
+    "when": "A",
+    "day": "st-mark",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Mark 16:15-20"
+  },
+  {
+    "whentype": "year",
     "when": "B",
     "day": "st-mark",
     "lectionary": "rclsundayTrack1",
@@ -5305,6 +5473,14 @@
   },
   {
     "whentype": "year",
+    "when": "B",
+    "day": "st-mark",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Mark 16:15-20"
+  },
+  {
+    "whentype": "year",
     "when": "C",
     "day": "st-mark",
     "lectionary": "rclsundayTrack1",
@@ -5318,6 +5494,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "Mark 1:1-15"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "st-mark",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Mark 16:15-20"
   },
   {
     "whentype": "year",
@@ -5854,6 +6038,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Philippians 2:5-11"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "holy-cross",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Galatians 6:14-18"
   },
   {
     "whentype": "year",
@@ -5876,6 +6068,14 @@
     "when": "B",
     "day": "holy-cross",
     "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Galatians 6:14-18"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "holy-cross",
+    "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 12:31-36a"
   },
@@ -5886,6 +6086,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Philippians 2:5-11"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "holy-cross",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Galatians 6:14-18"
   },
   {
     "whentype": "year",
