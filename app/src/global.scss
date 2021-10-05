@@ -622,3 +622,10 @@ pre {
 .psalm-set sup {
   top: 0.5em;
 }
+
+/* Popovers */
+ion-popover {
+  --min-width: 300px !important;
+  --width: 75% !important;
+  --max-width: 650px !important;
+}

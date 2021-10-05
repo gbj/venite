@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "menu.prayers-and-thanksgivings" | translate}}</ion-title>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ldf-wrapper" *ngIf="pAndTs$ | async as docs else loading">
+    <ldf-prayers-and-thanksgivings [options]="docs"></ldf-prayers-and-thanksgivings>
+
+  </div>
+</ion-content>
+
+<ng-template #loading>
+  <div class="loading">{{ "loading" | translate }}</div>
+</ng-template>

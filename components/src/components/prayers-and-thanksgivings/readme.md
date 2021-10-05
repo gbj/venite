@@ -40,6 +40,10 @@ Type: `Promise<void>`
 
 ### Depends on
 
+- ion-list
+- ion-searchbar
+- ion-item
+- ion-label
 - ion-header
 - ion-toolbar
 - ion-title
@@ -47,14 +51,14 @@ Type: `Promise<void>`
 - ion-button
 - ion-icon
 - ion-content
-- ion-searchbar
-- ion-item
-- ion-label
-- ion-list
 
 ### Graph
 ```mermaid
 graph TD;
+  ldf-prayers-and-thanksgivings --> ion-list
+  ldf-prayers-and-thanksgivings --> ion-searchbar
+  ldf-prayers-and-thanksgivings --> ion-item
+  ldf-prayers-and-thanksgivings --> ion-label
   ldf-prayers-and-thanksgivings --> ion-header
   ldf-prayers-and-thanksgivings --> ion-toolbar
   ldf-prayers-and-thanksgivings --> ion-title
@@ -62,14 +66,10 @@ graph TD;
   ldf-prayers-and-thanksgivings --> ion-button
   ldf-prayers-and-thanksgivings --> ion-icon
   ldf-prayers-and-thanksgivings --> ion-content
-  ldf-prayers-and-thanksgivings --> ion-searchbar
-  ldf-prayers-and-thanksgivings --> ion-item
-  ldf-prayers-and-thanksgivings --> ion-label
-  ldf-prayers-and-thanksgivings --> ion-list
-  ion-button --> ion-ripple-effect
   ion-searchbar --> ion-icon
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
+  ion-button --> ion-ripple-effect
   style ldf-prayers-and-thanksgivings fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
