@@ -12334,5 +12334,61 @@
     "lectionary": "rclsunday",
     "type": "gospel",
     "citation": "John 6:25-35"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 118:1-2,19-29"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Matthew 21:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 118:1-2,19-29"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Mark 11:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 12:12-16"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 118:1-2,19-29"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "palm-sunday-liturgy-of-the-palms",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 19:28-40"
   }
 ]
