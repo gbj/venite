@@ -234,6 +234,198 @@
   {
     "whentype": "year",
     "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 1:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 1:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 1:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
     "day": "1st-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "first_reading",
@@ -2010,6 +2202,534 @@
   {
     "whentype": "year",
     "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 1:1-2:4a"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 7:1-5,11-18; 8:6-18; 9:8-13"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 22:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 14:10-31; 15:20-21"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 55:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Baruch 3:9-15,32-4:4"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Proverbs 8:1-8,19-21; 9:4b-6"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 36:24-28"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Zephaniah 3:14-20"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 136:1-9,23-26"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 46"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 16"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 8"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 19"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 42 and 43"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 143"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 6:3-11"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Matthew 28:1-10"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 1:1-2:4a"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 7:1-5,11-18; 8:6-18; 9:8-13"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 22:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 14:10-31; 15:20-21"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 55:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Baruch 3:9-15,32-4:4"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Proverbs 8:1-8,19-21; 9:4b-6"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 36:24-28"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Zephaniah 3:14-20"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 136:1-9,23-26"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 46"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 16"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 8"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 19"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 42 and 43"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 143"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 6:3-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Mark 16:1-8"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 1:1-2:4a"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 7:1-5,11-18; 8:6-18; 9:8-13"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 22:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 14:10-31; 15:20-21"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 55:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Baruch 3:9-15,32-4:4"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Proverbs 8:1-8,19-21; 9:4b-6"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 36:24-28"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Zephaniah 3:14-20"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 136:1-9,23-26"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 46"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 16"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 8"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 19"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 42 and 43"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 143"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 6:3-11"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 24:1-12"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
@@ -2070,6 +2790,102 @@
     "lectionary": "rclsunday",
     "type": "gospel",
     "citation": "John 20:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 25:6-9"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "1 Corinthians 5:6b-8"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 24:13-49"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 25:6-9"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "1 Corinthians 5:6b-8"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 24:13-49"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 25:6-9"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 114"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "1 Corinthians 5:6b-8"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-evening-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Luke 24:13-49"
   },
   {
     "whentype": "year",
@@ -2982,6 +3798,294 @@
     "lectionary": "rclsunday",
     "type": "gospel",
     "citation": "John 17:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 11:1-9"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 19:1-9a,16-20a; 20:18-20"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Joel 2:28-32"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 33:12-22"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 2 or 13"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 130"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 104:25-32"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Acts 2:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 8:14-17,22-27"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 7:37-39a"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 11:1-9"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 19:1-9a,16-20a; 20:18-20"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Joel 2:28-32"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 33:12-22"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 2 or 13"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 130"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 104:25-32"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Acts 2:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 8:14-17,22-27"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 7:37-39a"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Genesis 11:1-9"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Exodus 19:1-9a,16-20a; 20:18-20"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Joel 2:28-32"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 33:12-22"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 2 or 13"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 130"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Canticle 9"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 104:25-32"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Acts 2:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Romans 8:14-17,22-27"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "day-of-pentecost-early-or-vigil-service",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "John 7:37-39a"
   },
   {
     "whentype": "year",
