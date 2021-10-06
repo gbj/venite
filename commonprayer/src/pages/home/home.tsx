@@ -33,7 +33,12 @@ export default function Home(): PageProps {
         <li><a href="/proper-liturgies">Proper Liturgies for Special Days</a></li>
         <li><a href="/baptism">Holy Baptism</a></li>
         <li><a href="/eucharist">Holy Eucharist</a></li>
-        <li><a href="/pastoral-offices">Pastoral Offices</a></li>
+        <li>
+          <a href="/pastoral-offices">Pastoral Offices</a>
+          <ul>
+            <li><a href="/marriage">Marriage</a></li>
+          </ul>
+        </li>
         <li><a href="/episcopal-services">Episcopal Services</a></li>
         <li><a href="/psalter">The Psalter, or Psalms of David</a></li>
         <li><a href="/prayers-and-thanksgivings">Prayers and Thanksgivings</a></li>

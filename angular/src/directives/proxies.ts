@@ -2577,13 +2577,13 @@ export class LdfLabelBar {
 import { LiturgicalDocumentComponent as ILiturgicalDocumentComponent } from '@venite/components/dist/types/components/liturgical-document/liturgical-document';
 export declare interface LdfLiturgicalDocument extends Components.LdfLiturgicalDocument {}
 @ProxyCmp({
-  inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview']
+  inputs: ['base', 'doc', 'editable', 'index', 'padding', 'parentType', 'path', 'preview']
 })
 @Component({
   selector: 'ldf-liturgical-document',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['base', 'doc', 'editable', 'index', 'parentType', 'path', 'preview'],
+  inputs: ['base', 'doc', 'editable', 'index', 'padding', 'parentType', 'path', 'preview'],
   outputs: ['focusPath', 'focusObj', 'ldfSelectionChange']
 })
 export class LdfLiturgicalDocument {

@@ -67,6 +67,9 @@ export class LiturgicalDocumentComponent {
   /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
   @Prop() preview : boolean = false;
 
+  /** CSS padding to add around element, if any. */
+  @Prop() padding : string | undefined = undefined;
+
   // Listeners
   @Listen("dragover", { passive: false })
   onDragOver() {
@@ -281,6 +284,7 @@ export class LiturgicalDocumentComponent {
               doc: true,
               editable: this.editable || this.preview
             }}
+            style={{padding: this.padding}}
           >
             {node}
           </div>

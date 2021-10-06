@@ -1,5 +1,9 @@
 {
   "index": 300,
+  "source": {
+    "url": "https://www.churchpublishing.org/siteassets/pdf/enriching-our-worship-2/enrichingourworship2.pdf#page=117",
+    "label": "EOW 2 p. 117"
+  },
   "data": [
     {
       "slug": "life-sustaining-treatment",
@@ -580,10 +584,7 @@
           "label": "A Litany for the Discontinuing of Life-Sustaining Treatment: Form 1",
           "language": "en",
           "source": { "api": "", "citation": "", "source": "" },
-          "version": "Rite-II",
-          "id": "GkqFqTiKoMGNoQmMEVHa",
-          "date_created": { "seconds": 1632754111, "nanoseconds": 171000000 },
-          "lastRevision": 21,
+          "version": "EOW",
           "metadata": {
             "liturgyversions": [],
             "preferences": {},

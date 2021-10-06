@@ -26,9 +26,13 @@
 </head>
 <body>
     <ion-content id='example' class="content ion-padding dropcaps-plain psalmverses-true bibleverses-false">
+      <ldf-prayers-and-thanksgivings></ldf-prayers-and-thanksgivings>
     </ion-content>
 
   <script>
+    document.querySelector("ldf-prayers-and-thanksgivings").setAttribute("options", [{"type": "text", "value": ["Test prayer. Lorem ipsum sit dolor amet, e pluribus unum ipsum sit dolor amet, e pluribus unum ipsum sit dolor amet, "], "label": "Test Prayer", "category": ["Prayers and Thanksgivings", "For the Nation", "Something something"]}])
+
+
     document.addEventListener('ldfSelectionChange', (ev) => console.log('(ldfSelectionChange)', ev));
     document.addEventListener('ldfDocumentSelected', (ev) => console.log('document selected', ev));
     document.addEventListener('ldfDocShouldChange', (ev) => console.log('(ldfDocShouldChange)', ev.detail));

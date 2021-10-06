@@ -1,6 +1,6 @@
 {
   "name": "Venite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Greg Johnston <greg@venite.app>",
   "homepage": "https://www.venite.app/",
   "scripts": {
@@ -48,7 +48,7 @@
     "@types/firebase": "^3.2.1",
     "@venite/angular": "^0.5.0",
     "@venite/bible-api": "^0.1.1",
-    "@venite/components": "^0.16.0",
+    "@venite/components": "^0.16.4",
     "@venite/docx": "^0.2.1",
     "@venite/ldf": "^0.20.5",
     "@venite/ng-darkmode": "0.0.13",

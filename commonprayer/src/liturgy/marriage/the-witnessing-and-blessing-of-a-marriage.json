@@ -1,0 +1,3786 @@
+{
+  "index": 300,
+  "source": {
+    "url": "https://www.churchpublishing.org/contentassets/104caa0c8b8741819c171f642de395a3/the_witnessing_and_blessing_of_a_marriage.pdf",
+    "label": "Liturgical Resources 1 p. 7"
+  },
+  "data": [
+    {
+      "date_modified": { "seconds": 1633052221, "nanoseconds": 210000000 },
+      "metadata": {
+        "supplement": false,
+        "special_preferences": {},
+        "preferences": {},
+        "pronouns": [],
+        "evening": false
+      },
+      "id": "KVNm0t3wKug4DqBGGxrt",
+      "label": "The Witnessing and Blessing of a Marriage",
+      "source": { "source": "", "api": "", "citation": "" },
+      "lastRevision": 857,
+      "category": [],
+      "date_created": { "seconds": 1633047472, "nanoseconds": 898000000 },
+      "version": "EOW",
+      "type": "liturgy",
+      "language": "en",
+      "value": [
+        {
+          "value": ["The Witnessing and Blessing of a Marriage"],
+          "style": "text",
+          "type": "heading",
+          "metadata": { "level": 1 }
+        },
+        {
+          "style": "text",
+          "metadata": { "level": 2 },
+          "type": "heading",
+          "value": ["The Word of God"]
+        },
+        {
+          "value": ["Gathering"],
+          "style": "text",
+          "type": "heading",
+          "metadata": { "level": 3 }
+        },
+        {
+          "value": [
+            "The couple joins the assembly.  ",
+            "A hymn of praise, psalm, or anthem may be sung, or instrumental music may be played."
+          ],
+          "type": "rubric"
+        },
+        {
+          "value": ["The Presider says the following, the People standing"],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            {
+              "metadata": {},
+              "value": [
+                {
+                  "text": "Blessed be God: Father, Son, and Holy Spirit.",
+                  "response": "",
+                  "label": "Presider"
+                },
+                {
+                  "text": "Blessed be God, now and for ever. Amen.",
+                  "label": "People"
+                }
+              ],
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "preces",
+              "version_label": "Blessed be God: Father, Son, and Holy Spirit.",
+              "category": [],
+              "type": "responsive"
+            },
+            {
+              "style": "preces",
+              "source": { "api": "", "source": "", "citation": "" },
+              "type": "responsive",
+              "category": [],
+              "metadata": {},
+              "version_label": "Blessed be the one, holy, and living God.",
+              "value": [
+                {
+                  "text": "Blessed be the one, holy, and living God.",
+                  "response": "",
+                  "label": "Presider"
+                },
+                { "label": "People", "text": "Glory to God for ever and ever." }
+              ]
+            }
+          ],
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": ["Easter", "Easter", "Ascension", "Pentecost"],
+                  "only": []
+                }
+              }
+            ]
+          }
+        },
+        {
+          "value": ["From Easter Day through the Day of Pentecost"],
+          "type": "rubric",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Easter", "Ascension", "Pentecost"],
+                  "except": []
+                }
+              }
+            ],
+            "mode": "and"
+          }
+        },
+        {
+          "value": [
+            {
+              "version_label": "The Lord is risen indeed.",
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "Presider",
+                  "text": "Alleluia. Christ is risen.",
+                  "response": ""
+                },
+                {
+                  "label": "People",
+                  "text": "The Lord is risen indeed. Alleluia."
+                }
+              ],
+              "metadata": {},
+              "style": "preces",
+              "source": { "api": "", "citation": "", "source": "" },
+              "category": []
+            },
+            {
+              "type": "responsive",
+              "metadata": {},
+              "style": "preces",
+              "category": [],
+              "source": { "source": "", "citation": "", "api": "" },
+              "value": [
+                {
+                  "response": "",
+                  "label": "Presider",
+                  "text": "Alleluia. Christ is risen."
+                },
+                {
+                  "text": "Christ is risen indeed. Alleluia.",
+                  "label": "People"
+                }
+              ],
+              "version_label": "Christ is risen indeed."
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Easter", "Ascension", "Pentecost"],
+                  "except": []
+                }
+              }
+            ]
+          },
+          "type": "option"
+        },
+        { "type": "rubric", "value": ["Then may be said"] },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "text": "Beloved, let us love one another,",
+              "label": "Presider",
+              "response": ""
+            },
+            { "label": "People", "text": "For love is of God." },
+            {
+              "label": "Presider",
+              "text": "Whoever does not love does not know God,"
+            },
+            { "text": "For love is of God.", "label": "People" },
+            { "text": "Since God so loves us,", "label": "Presider" },
+            { "text": "Let us love one another.", "label": "People" }
+          ],
+          "type": "responsive"
+        },
+        {
+          "value": ["The Presider may address the assembly in these words"],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            {
+              "metadata": { "rollup": false, "omit_response": false },
+              "category": [],
+              "value": [
+                "Dear friends in Christ (*or* Dearly beloved),\nin the name of God and the Church \nwe have come together today with \n__________ and __________,\nto witness the vows they make,\ncommitting themselves to one another\nin marriage [according to the laws of the state *or* civil jurisdiction of __________].\nForsaking all others, \nthey will bind themselves to one another \nin a covenant of mutual fidelity and steadfast love, \nremaining true to one another in heart, body, and mind, \nas long as they both shall live.",
+                "The lifelong commitment of marriage \nis not to be entered into lightly or thoughtlessly, \nbut responsibly and with reverence. \nLet us pray, then, that God will give them the strength \nto remain steadfast in what they vow this day. \nLet us also pray for the generosity  \nto support them in the commitment they undertake \nand for the wisdom to see God at work in their life together."
+              ],
+              "style": "text",
+              "source": { "citation": "", "source": "", "api": "" },
+              "version_label": "Default",
+              "type": "text"
+            },
+            {
+              "metadata": { "omit_response": false, "omit_label": false },
+              "value": [
+                "Dear friends in Christ (*or* Dearly beloved),\nin the name of God and the Church  \nwe have come together today with  \n___________________________ and ___________________________\nto witness the sacred vows they make this day as they are married  \n[according to the laws of the state or civil jurisdiction of \n___________________________],\nand reaffirm their commitment to one another.",
+                "Forsaking all others, \nthey will renew their covenant of mutual fidelity and steadfast love, \nremaining true to one another in heart, body, and mind, \nas long as they both shall live.",
+                "Let us pray, then, that God will give them the strength \nto remain steadfast in what they vow this day. \nLet us also pray for the generosity  \nto support them in the commitment they undertake, \nand for the wisdom to see God at work in their life together."
+              ],
+              "source": { "source": "", "citation": "", "api": "" },
+              "type": "text",
+              "category": [],
+              "style": "text",
+              "version_label": "For those who have previously made a lifelong commitment to one anothe"
+            }
+          ],
+          "version_label": "For those who have previously made a lifelong commitment to one another",
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "source": { "source": "", "citation": "", "api": "" },
+          "type": "option",
+          "category": []
+        },
+        {
+          "style": "text",
+          "metadata": { "level": 3 },
+          "value": [""],
+          "type": "heading"
+        },
+        {
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "value": [
+            {
+              "type": "responsive",
+              "version_label": "The Lord be with you.",
+              "metadata": {},
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "preces",
+              "value": [
+                {
+                  "label": "Presider",
+                  "response": "",
+                  "text": "The Lord be with you."
+                },
+                { "text": "And also with you.", "label": "People" },
+                { "text": "Let us pray.", "label": "Presider" }
+              ],
+              "category": []
+            },
+            {
+              "value": [
+                {
+                  "label": "Presider",
+                  "text": "God be with you.",
+                  "response": ""
+                },
+                { "label": "People", "text": "And also with you." },
+                { "text": "Let us pray.", "label": "Presider" }
+              ],
+              "type": "responsive",
+              "version_label": "God be with you.",
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "preces",
+              "category": [],
+              "metadata": {}
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option",
+          "value": [
+            {
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "God of abundance: \nassist by your grace ___________________________ and \n___________________________,\nwhose covenant of love and fidelity we witness this day. \nGrant them your protection, that with firm resolve \nthey may honor and keep the vows they make; \nthrough Jesus Christ our Savior, \nwho lives and reigns with you in the unity of the Holy Spirit, \none God, for ever and ever."
+              ]
+            },
+            {
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "Almighty and everliving God: \nlook tenderly upon ___________________________ and \n___________________________,\nwho stand before you in the company of your Church. \nLet their life together bring them great joy. \nGrant them so to love selflessly and live humbly,  \nthat they may be to one another and to the world \na witness and a sign of your never-failing love and care; \nthrough Jesus Christ your Son our Lord, \nwho lives and reigns with you and the Holy Spirit, \none God, to the ages of ages."
+              ]
+            },
+            {
+              "value": [
+                "O God, faithful and true, \nwhose steadfast love endures for ever: \nwe give you thanks for sustaining ___________________________ \nand ___________________________ in the life they share\nand for bringing them to this day. \nNurture them and fill them with joy in their life together, \ncontinuing the good work you have begun in them; \nand grant us, with them, a dwelling place eternal in the heavens \nwhere all your people will share the joy of perfect love, \nand where you, with the Son and the Holy Spirit, live and reign, \none God, now and for ever."
+              ],
+              "style": "prayer",
+              "type": "text"
+            },
+            {
+              "version_label": "For those who bring children",
+              "style": "prayer",
+              "metadata": { "omit_label": false },
+              "value": [
+                "Holy Trinity, one God, \nthree Persons perfect in unity and equal in majesty: \nDraw together with bonds of love and affection \n___________________________ and ___________________________, \nwho with their families\nseek to live in harmony and forbearance all their days, \nthat their joining together will be to us \na reflection of that perfect communion \nwhich is your very essence and life, \nO Father, Son, and Holy Spirit,  \nwho live and reign in glory everlasting"
+              ],
+              "type": "text",
+              "source": { "citation": "", "source": "", "api": "" },
+              "category": []
+            }
+          ]
+        },
+        {
+          "value": ["The Lessons"],
+          "metadata": { "level": 3 },
+          "type": "heading",
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The people sit. Then one or more of the following passages of Scripture is read. if the Holy Communion is to be celebrated, a passage from the Gospels always concludes the Readings. When the blessing is celebrated in the context of the Sunday Eucharist, the Readings of the Sunday are used, except with the permission of the Bishop."
+          ]
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "source": { "source": "", "citation": "", "api": "" },
+              "style": "long",
+              "language": "en",
+              "citation": "Ruth 1:16-17",
+              "label": "The First Reading",
+              "value": [
+                {
+                  "verse": "16",
+                  "text": "But Ruth said, &#147;Do not press me to leave you or to turn back from following you! Where you go, I will go; Where you lodge, I will lodge; your people shall be my people, and your God my God. ",
+                  "book": "Ruth",
+                  "chapter": "1"
+                },
+                {
+                  "text": "Where you die, I will die&#151; there will I be buried. May the LORD do thus and so to me, and more as well, if even death parts me from you!&#148; ",
+                  "verse": "17",
+                  "chapter": "1",
+                  "book": "Ruth"
+                }
+              ],
+              "version": "NRSV",
+              "metadata": {
+                "intro": {
+                  "value": ["A Reading from ${longName}."],
+                  "language": "en",
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  },
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text"
+                },
+                "compiled_intro": {
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text",
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "language": "en",
+                  "value": ["A Reading from the Book of Ruth."]
+                }
+              },
+              "type": "bible-reading",
+              "hidden": false
+            },
+            {
+              "metadata": {
+                "intro": {
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from ${longName}."],
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "type": "text",
+                  "language": "en"
+                },
+                "compiled_intro": {
+                  "value": ["A Reading from the First Book of Samuel."],
+                  "language": "en",
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  },
+                  "style": "text",
+                  "type": "text",
+                  "category": ["Bible Reading Introduction"]
+                }
+              },
+              "type": "bible-reading",
+              "version": "NRSV",
+              "citation": "1 Samuel 18:1b, 3, 20:16-17, 42a",
+              "language": "en",
+              "style": "long",
+              "source": { "api": "", "citation": "", "source": "" },
+              "hidden": false,
+              "label": "The First Reading",
+              "value": [
+                {
+                  "verse": "1",
+                  "chapter": "18",
+                  "text": "The soul of Jonathan was bound to the soul of David, and Jonathan loved him as his own soul. ",
+                  "book": "1 Samuel"
+                },
+                {
+                  "chapter": "18",
+                  "text": "Then Jonathan made a covenant with David, because he loved him as his own soul. ",
+                  "verse": "3",
+                  "book": "1 Samuel"
+                },
+                {
+                  "verse": "16",
+                  "chapter": "18",
+                  "text": "Thus Jonathan made a covenant with the house of David, saying, &#147;May the LORD seek out the enemies of David.&#148; ",
+                  "book": "1 Samuel"
+                },
+                {
+                  "verse": "17",
+                  "text": "Jonathan made David swear again by his love for him; for he loved him as he loved his own life. ",
+                  "book": "1 Samuel",
+                  "chapter": "18"
+                },
+                {
+                  "book": "1 Samuel",
+                  "chapter": "18",
+                  "text": "Then Jonathan said to David, &#147;Go in peace, since both of us have sworn in the name of the LORD, saying, &#145;The LORD shall be between me and you, and between my descendants and your descendants, forever.&#146;&#148; ",
+                  "verse": "42"
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "book": "1 Samuel",
+                  "chapter": "18",
+                  "text": "When David had finished speaking to Saul, the soul of Jonathan was bound to the soul of David, and Jonathan loved him as his own soul. ",
+                  "verse": "1"
+                },
+                {
+                  "verse": "2",
+                  "book": "1 Samuel",
+                  "text": "Saul took him that day and would not let him return to his father&#146;s house. ",
+                  "chapter": "18"
+                },
+                {
+                  "verse": "3",
+                  "book": "1 Samuel",
+                  "text": "Then Jonathan made a covenant with David, because he loved him as his own soul. ",
+                  "chapter": "18"
+                },
+                {
+                  "book": "1 Samuel",
+                  "chapter": "18",
+                  "verse": "4",
+                  "text": "Jonathan stripped himself of the robe that he was wearing, and gave it to David, and his armor, and even his sword and his bow and his belt. "
+                }
+              ],
+              "hidden": false,
+              "style": "long",
+              "source": { "citation": "", "source": "", "api": "" },
+              "label": "The First Reading",
+              "language": "en",
+              "type": "bible-reading",
+              "metadata": {
+                "compiled_intro": {
+                  "value": ["A Reading from the First Book of Samuel."],
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "language": "en",
+                  "type": "text"
+                },
+                "intro": {
+                  "language": "en",
+                  "style": "text",
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "value": ["A Reading from ${longName}."],
+                  "type": "text",
+                  "category": ["Bible Reading Introduction"]
+                }
+              },
+              "citation": "1 Samuel 18:1-4",
+              "version": "NRSV"
+            },
+            {
+              "metadata": {
+                "intro": {
+                  "type": "text",
+                  "style": "text",
+                  "value": ["A Reading from ${longName}."],
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  }
+                },
+                "compiled_intro": {
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "language": "en",
+                  "type": "text",
+                  "sharing": {
+                    "status": "published",
+                    "organization": "venite",
+                    "privacy": "public"
+                  },
+                  "value": ["A Reading from the Book of Ecclesiastes."]
+                }
+              },
+              "type": "bible-reading",
+              "version": "NRSV",
+              "hidden": false,
+              "value": [
+                {
+                  "text": "Two are better than one, because they have a good reward for their toil. ",
+                  "verse": "9",
+                  "book": "Ecclesiastes",
+                  "chapter": "4"
+                },
+                {
+                  "verse": "10",
+                  "book": "Ecclesiastes",
+                  "chapter": "4",
+                  "text": "For if they fall, one will lift up the other; but woe to one who is alone and falls and does not have another to help. "
+                },
+                {
+                  "book": "Ecclesiastes",
+                  "verse": "11",
+                  "text": "Again, if two lie together, they keep warm; but how can one keep warm alone? ",
+                  "chapter": "4"
+                },
+                {
+                  "chapter": "4",
+                  "verse": "12",
+                  "text": "And though one might prevail against another, two will withstand one. A threefold cord is not quickly broken. ",
+                  "book": "Ecclesiastes"
+                }
+              ],
+              "source": { "api": "", "citation": "", "source": "" },
+              "citation": "Ecclesiastes 4:9-12",
+              "label": "The First Reading",
+              "style": "long",
+              "language": "en"
+            },
+            {
+              "style": "long",
+              "language": "en",
+              "value": [
+                {
+                  "verse": "10",
+                  "text": "My beloved speaks and says to me: &#147;Arise, my love, my fair one, and come away; ",
+                  "book": "Song"
+                },
+                {
+                  "text": "for now the winter is past, the rain is over and gone. ",
+                  "book": "Song",
+                  "verse": "11"
+                },
+                {
+                  "verse": "12",
+                  "text": "The flowers appear on the earth; the time of singing has come, and the voice of the turtledove is heard in our land. ",
+                  "book": "Song"
+                },
+                {
+                  "verse": "13",
+                  "text": "The fig tree puts forth its figs, and the vines are in blossom; they give forth fragrance. Arise, my love, my fair one, and come away. ",
+                  "book": "Song"
+                },
+                {
+                  "chapter": "NaN",
+                  "book": "Song",
+                  "verse": "6",
+                  "text": "Set me as a seal upon your heart, as a seal upon your arm; for love is strong as death, passion fierce as the grave. Its flashes are flashes of fire, a raging flame. "
+                },
+                {
+                  "book": "Song",
+                  "verse": "7",
+                  "chapter": "NaN",
+                  "text": "Many waters cannot quench love, neither can floods drown it. If one offered for love all the wealth of his house, it would be utterly scorned. "
+                }
+              ],
+              "label": "The First Reading",
+              "version": "NRSV",
+              "type": "bible-reading",
+              "metadata": {
+                "intro": {
+                  "type": "text",
+                  "style": "text",
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from ${longName}."],
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  }
+                },
+                "compiled_intro": {
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from the Song of Solomon."],
+                  "style": "text",
+                  "sharing": {
+                    "status": "published",
+                    "organization": "venite",
+                    "privacy": "public"
+                  },
+                  "type": "text",
+                  "language": "en"
+                }
+              },
+              "source": { "source": "", "citation": "", "api": "" },
+              "citation": "Song of Solomon 2:10-13, 8:6-7",
+              "hidden": false
+            },
+            {
+              "language": "en",
+              "type": "bible-reading",
+              "hidden": false,
+              "citation": "Micah 4:1-4",
+              "source": { "source": "", "citation": "", "api": "" },
+              "metadata": {
+                "intro": {
+                  "style": "text",
+                  "type": "text",
+                  "value": ["A Reading from ${longName}."],
+                  "category": ["Bible Reading Introduction"],
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "status": "published"
+                  },
+                  "language": "en"
+                },
+                "compiled_intro": {
+                  "value": ["A Reading from the Book of the Prophet Micah."],
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text",
+                  "style": "text",
+                  "sharing": {
+                    "organization": "venite",
+                    "privacy": "public",
+                    "status": "published"
+                  }
+                }
+              },
+              "value": [
+                {
+                  "book": "Micah",
+                  "text": "In days to come the mountain of the Lord&#146;s house shall be established as the highest of the mountains, and shall be raised up above the hills. Peoples shall stream to it, ",
+                  "verse": "1",
+                  "chapter": "4"
+                },
+                {
+                  "chapter": "4",
+                  "text": "and many nations shall come and say: &#147;Come, let us go up to the mountain of the LORD, to the house of the God of Jacob; that he may teach us his ways and that we may walk in his paths.&#148; For out of Zion shall go forth instruction, and the word of the LORD from Jerusalem. ",
+                  "verse": "2",
+                  "book": "Micah"
+                },
+                {
+                  "book": "Micah",
+                  "chapter": "4",
+                  "text": "He shall judge between many peoples, and shall arbitrate between strong nations far away; they shall beat their swords into plowshares, and their spears into pruning hooks; nation shall not lift up sword against nation, neither shall they learn war any more; ",
+                  "verse": "3"
+                },
+                {
+                  "book": "Micah",
+                  "verse": "4",
+                  "text": "but they shall all sit under their own vines and under their own fig trees, and no one shall make them afraid; for the mouth of the LORD of hosts has spoken. ",
+                  "chapter": "4"
+                }
+              ],
+              "style": "long",
+              "version": "NRSV",
+              "label": "The First Reading"
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "value": ["After the Reading, the Reader may say"],
+          "type": "rubric"
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "category": [],
+              "type": "responsive",
+              "version_label": "The Word of the Lord",
+              "value": [
+                {
+                  "text": "The Word of the Lord.",
+                  "response": "Thanks be to God.",
+                  "label": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "style": "preces",
+              "metadata": {},
+              "source": { "api": "", "source": "", "citation": "" }
+            },
+            {
+              "category": [],
+              "metadata": {},
+              "style": "preces",
+              "version_label": "...saying to God’s people.",
+              "source": { "source": "", "api": "", "citation": "" },
+              "value": [
+                {
+                  "response": "",
+                  "label": "",
+                  "text": "Hear what the Spirit is saying to God’s people."
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "type": "responsive"
+            },
+            {
+              "category": [],
+              "value": [
+                {
+                  "response": "",
+                  "text": "Hear what the Spirit is saying to the Churches.",
+                  "label": ""
+                },
+                { "label": "People", "text": "Thanks be to God." }
+              ],
+              "style": "preces",
+              "version_label": "...saying to the Churches.",
+              "source": { "api": "", "citation": "", "source": "" },
+              "type": "responsive",
+              "metadata": {}
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "Between the Readings, a psalm, hymn, or anthem may be sung or said. appropriate Psalms are"
+          ]
+        },
+        {
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "value": [
+            {
+              "type": "psalm",
+              "category": ["Psalm"],
+              "source": {
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api",
+                "citation": "p. 672"
+              },
+              "style": "psalm",
+              "language": "en",
+              "citation": "Psalm 65",
+              "version_label": null,
+              "slug": "psalm_65",
+              "hidden": false,
+              "sharing": {
+                "status": "published",
+                "privacy": "public",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": []
+              },
+              "version": "bcp1979",
+              "metadata": {
+                "omit_gloria": false,
+                "localname": "Psalm 65",
+                "latinname": "Te decet hymnus",
+                "number": "65",
+                "omit_antiphon": false
+              },
+              "label": "Psalm 65",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "number": "1",
+                      "type": "psalm-verse",
+                      "halfverse": "to you shall vows be performed in Jerusalem.",
+                      "verse": "You are to be praised, O God, in Zion; *"
+                    },
+                    {
+                      "number": "2",
+                      "halfverse": "because of their transgressions.",
+                      "verse": "To you that hear prayer shall all flesh come, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "3",
+                      "halfverse": "but you will blot them out.",
+                      "verse": "Our sins are stronger than we are, *"
+                    },
+                    {
+                      "halfverse": "they will be satisfied by the beauty of your house,\n by the holiness of your temple.",
+                      "verse": "Happy are they whom you choose\nand draw to your courts to dwell there! *",
+                      "number": "4",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "5",
+                      "verse": "Awesome things will you show us in your righteousness,\nO God of our salvation, *",
+                      "halfverse": "O Hope of all the ends of the earth\n and of the seas that are far away.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "You make fast the mountains by your power; *",
+                      "number": "6",
+                      "halfverse": "they are girded about with might.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "You still the roaring of the seas, *",
+                      "number": "7",
+                      "type": "psalm-verse",
+                      "halfverse": "the roaring of their waves,\n and the clamor of the peoples."
+                    },
+                    {
+                      "halfverse": "you make the dawn and the dusk to sing for joy.",
+                      "verse": "Those who dwell at the ends of the earth will tremble at your marvelous signs; *",
+                      "type": "psalm-verse",
+                      "number": "8"
+                    },
+                    {
+                      "number": "9",
+                      "halfverse": "the river of God is full of water.",
+                      "type": "psalm-verse",
+                      "verse": "You visit the earth and water it abundantly;\nyou make it very plenteous; *"
+                    },
+                    {
+                      "number": "10",
+                      "verse": "You prepare the grain, *",
+                      "type": "psalm-verse",
+                      "halfverse": "for so you provide for the earth."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "11",
+                      "verse": "You drench the furrows and smooth out the ridges; *",
+                      "halfverse": "with heavy rain you soften the ground and bless its increase."
+                    },
+                    {
+                      "verse": "You crown the year with your goodness, *",
+                      "type": "psalm-verse",
+                      "number": "12",
+                      "halfverse": "and your paths overflow with plenty."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "13",
+                      "verse": "May the fields of the wilderness be rich for grazing, *",
+                      "halfverse": "and the hills be clothed with joy."
+                    },
+                    {
+                      "verse": "May the meadows cover themselves with flocks,\nand the valleys cloak themselves with grain; *",
+                      "number": "14",
+                      "type": "psalm-verse",
+                      "halfverse": "let them shout for joy and sing."
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ]
+            },
+            {
+              "citation": "Psalm 67",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "verse": "May God be merciful to us and bless us, *",
+                      "type": "psalm-verse",
+                      "halfverse": "show us the light of his countenance and come to us.",
+                      "number": "1"
+                    },
+                    {
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "halfverse": "your saving health among all nations.",
+                      "verse": "Let your ways be known upon earth, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "Let the peoples praise you, O God; *",
+                      "number": "3",
+                      "halfverse": "let all the peoples praise you."
+                    },
+                    {
+                      "halfverse": "for you judge the peoples with equity\n and guide all the nations upon earth.",
+                      "verse": "Let the nations be glad and sing for joy, *",
+                      "type": "psalm-verse",
+                      "number": "4"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "let all the peoples praise you.",
+                      "number": "5",
+                      "verse": "Let the peoples praise you, O God; *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "may God, our own God, give us his blessing.",
+                      "verse": "The earth has brought forth her increase; *",
+                      "number": "6"
+                    },
+                    {
+                      "halfverse": "and may all the ends of the earth stand in awe of him.",
+                      "verse": "May God give us his blessing, *",
+                      "type": "psalm-verse",
+                      "number": "7"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "source": {
+                "citation": "p. 675",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "hidden": false,
+              "slug": "psalm_67",
+              "language": "en",
+              "type": "psalm",
+              "category": ["Psalm"],
+              "version": "bcp1979",
+              "style": "psalm",
+              "metadata": {
+                "localname": "Psalm 67",
+                "number": "67",
+                "omit_gloria": false,
+                "latinname": "Deus misereatur",
+                "omit_antiphon": false
+              },
+              "label": "Psalm 67",
+              "version_label": null,
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "privacy": "public",
+                "collaborators": [],
+                "status": "published"
+              }
+            },
+            {
+              "sharing": {
+                "privacy": "public",
+                "collaborators": [],
+                "status": "published",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+              },
+              "source": {
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api",
+                "citation": "p. 708"
+              },
+              "version_label": null,
+              "type": "psalm",
+              "language": "en",
+              "metadata": {
+                "omit_antiphon": false,
+                "latinname": "Benedixisti, Domine",
+                "omit_gloria": false,
+                "localname": "Psalm 85",
+                "number": "85"
+              },
+              "version": "bcp1979",
+              "slug": "psalm_85",
+              "citation": "Psalm 85:7-13",
+              "label": "Psalm 85",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "halfverse": "you have restored the good fortune of Jacob.",
+                      "verse": "You have been gracious to your land, O LORD, *",
+                      "number": "1",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "You have forgiven the iniquity of your people *",
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "halfverse": "and blotted out all their sins."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "3",
+                      "verse": "You have withdrawn all your fury *",
+                      "halfverse": "and turned yourself from your wrathful indignation."
+                    },
+                    {
+                      "number": "4",
+                      "type": "psalm-verse",
+                      "halfverse": "let your anger depart from us.",
+                      "verse": "Restore us then, O God our Savior; *"
+                    },
+                    {
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "verse": "Will you be displeased with us for ever? *",
+                      "halfverse": "will you prolong your anger from age to age?"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "Will you not give us life again, *",
+                      "halfverse": "that your people may rejoice in you?",
+                      "number": "6"
+                    },
+                    {
+                      "number": "7",
+                      "verse": "Show us your mercy, O LORD, *",
+                      "type": "psalm-verse",
+                      "halfverse": "and grant us your salvation."
+                    },
+                    {
+                      "halfverse": "for he is speaking peace to his faithful people\n and to those who turn their hearts to him.",
+                      "number": "8",
+                      "verse": "I will listen to what the LORD God is saying, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "Truly, his salvation is very near to those who fear him, *",
+                      "number": "9",
+                      "halfverse": "that his glory may dwell in our land."
+                    },
+                    {
+                      "verse": "Mercy and truth have met together; *",
+                      "number": "10",
+                      "type": "psalm-verse",
+                      "halfverse": "righteousness and peace have kissed each other."
+                    },
+                    {
+                      "number": "11",
+                      "verse": "Truth shall spring up from the earth, *",
+                      "halfverse": "and righteousness shall look down from heaven.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "12",
+                      "type": "psalm-verse",
+                      "halfverse": "and our land will yield its increase.",
+                      "verse": "The LORD will indeed grant prosperity, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "13",
+                      "halfverse": "and peace shall be a pathway for his feet.",
+                      "verse": "Righteousness shall go before him, *"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "hidden": false,
+              "category": ["Psalm"],
+              "style": "psalm"
+            },
+            {
+              "citation": "Psalm 98",
+              "style": "psalm",
+              "category": ["Psalm"],
+              "language": "en",
+              "version_label": null,
+              "slug": "psalm_98",
+              "metadata": {
+                "omit_antiphon": false,
+                "latinname": "Cantate Domino",
+                "omit_gloria": false,
+                "number": "98",
+                "localname": "Psalm 98"
+              },
+              "type": "psalm",
+              "sharing": {
+                "status": "published",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "privacy": "public"
+              },
+              "label": "Psalm 98",
+              "version": "bcp1979",
+              "source": {
+                "citation": "p. 727",
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api"
+              },
+              "hidden": false,
+              "value": [
+                {
+                  "value": [
+                    {
+                      "verse": "Sing to the LORD a new song, *",
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "halfverse": "for he has done marvelous things."
+                    },
+                    {
+                      "halfverse": "has he won for himself the victory.",
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "verse": "With his right hand and his holy arm *"
+                    },
+                    {
+                      "number": "3",
+                      "halfverse": "his righteousness has he openly shown in the sight of the nations.",
+                      "verse": "The LORD has made known his victory; *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "He remembers his mercy and faithfulness to the house of Israel, *",
+                      "type": "psalm-verse",
+                      "halfverse": "and all the ends of the earth have seen the victory of our God.",
+                      "number": "4"
+                    },
+                    {
+                      "halfverse": "lift up your voice, rejoice, and sing.",
+                      "verse": "Shout with joy to the LORD, all you lands; *",
+                      "number": "5",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "Sing to the LORD with the harp, *",
+                      "number": "6",
+                      "halfverse": "with the harp and the voice of song.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "shout with joy before the King, the LORD.",
+                      "verse": "With trumpets and the sound of the horn *",
+                      "number": "7",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "Let the sea make a noise and all that is in it, *",
+                      "halfverse": "the lands and those who dwell therein.",
+                      "type": "psalm-verse",
+                      "number": "8"
+                    },
+                    {
+                      "verse": "Let the rivers clap their hands, *",
+                      "type": "psalm-verse",
+                      "number": "9",
+                      "halfverse": "and let the hills ring out with joy before the LORD,\n when he comes to judge the earth."
+                    },
+                    {
+                      "halfverse": "and the peoples with equity.",
+                      "type": "psalm-verse",
+                      "verse": "In righteousness shall he judge the world *",
+                      "number": "10"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ]
+            },
+            {
+              "category": ["Psalm"],
+              "type": "psalm",
+              "citation": "Psalm 100",
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "halfverse": "serve the LORD with gladness\n and come before his presence with a song.",
+                      "number": "1",
+                      "verse": "Be joyful in the LORD, all you lands; *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "2",
+                      "halfverse": "he himself has made us, and we are his;\n we are his people and the sheep of his pasture.",
+                      "type": "psalm-verse",
+                      "verse": "Know this: The LORD himself is God; *"
+                    },
+                    {
+                      "number": "3",
+                      "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                      "halfverse": "give thanks to him and call upon his Name.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "number": "4",
+                      "verse": "For the LORD is good;\nhis mercy is everlasting; *",
+                      "type": "psalm-verse",
+                      "halfverse": "and his faithfulness endures from age to age."
+                    }
+                  ]
+                }
+              ],
+              "hidden": false,
+              "version": "bcp1979",
+              "version_label": null,
+              "sharing": {
+                "organization": "venite",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published",
+                "privacy": "public"
+              },
+              "label": "Psalm 100",
+              "slug": "psalm_100",
+              "language": "en",
+              "source": {
+                "citation": "p. 729",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              },
+              "style": "psalm",
+              "metadata": {
+                "number": "100",
+                "localname": "Psalm 100",
+                "omit_gloria": false,
+                "latinname": "Jubilate Deo",
+                "omit_antiphon": false
+              }
+            },
+            {
+              "language": "en",
+              "metadata": {
+                "omit_antiphon": false,
+                "omit_gloria": false,
+                "number": "126",
+                "latinname": "In convertendo",
+                "localname": "Psalm 126"
+              },
+              "source": {
+                "api": "https://www.venite.app/api",
+                "citation": "p. 782",
+                "source": "bcp1979"
+              },
+              "citation": "Psalm 126",
+              "version": "bcp1979",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "number": "1",
+                      "type": "psalm-verse",
+                      "verse": "When the LORD restored the fortunes of Zion, *",
+                      "halfverse": "then were we like those who dream."
+                    },
+                    {
+                      "halfverse": "and our tongue with shouts of joy.",
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "verse": "Then was our mouth filled with laughter, *"
+                    },
+                    {
+                      "verse": "Then they said among the nations, *",
+                      "number": "3",
+                      "halfverse": "“The LORD has done great things for them.”",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "halfverse": "and we are glad indeed.",
+                      "verse": "The LORD has done great things for us, *"
+                    },
+                    {
+                      "number": "5",
+                      "halfverse": "like the watercourses of the Negev.",
+                      "verse": "Restore our fortunes, O LORD, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "Those who sowed with tears *",
+                      "halfverse": "will reap with songs of joy.",
+                      "number": "6"
+                    },
+                    {
+                      "number": "7",
+                      "type": "psalm-verse",
+                      "verse": "Those who go out weeping, carrying the seed, *",
+                      "halfverse": "will come again with joy, shouldering their sheaves."
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "slug": "psalm_126",
+              "sharing": {
+                "privacy": "public",
+                "collaborators": [],
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published"
+              },
+              "label": "Psalm 126",
+              "hidden": false,
+              "version_label": null,
+              "category": ["Psalm"],
+              "type": "psalm",
+              "style": "psalm"
+            },
+            {
+              "hidden": false,
+              "slug": "psalm_127",
+              "label": "Psalm 127",
+              "category": ["Psalm"],
+              "style": "psalm",
+              "citation": "Psalm 127",
+              "version": "bcp1979",
+              "type": "psalm",
+              "language": "en",
+              "sharing": {
+                "privacy": "public",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "collaborators": [],
+                "status": "published"
+              },
+              "metadata": {
+                "number": "127",
+                "omit_antiphon": false,
+                "localname": "Psalm 127",
+                "latinname": "Nisi Dominus",
+                "omit_gloria": false
+              },
+              "source": {
+                "source": "bcp1979",
+                "citation": "p. 782",
+                "api": "https://www.venite.app/api"
+              },
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "their labor is in vain who build it.",
+                      "verse": "Unless the LORD builds the house, *",
+                      "number": "1"
+                    },
+                    {
+                      "verse": "Unless the LORD watches over the city, *",
+                      "type": "psalm-verse",
+                      "halfverse": "in vain the watchman keeps his vigil.",
+                      "number": "2"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "vain, too, to eat the bread of toil,\n for he gives to his beloved sleep.",
+                      "verse": "It is in vain that you rise so early and go to bed so late; *",
+                      "number": "3"
+                    },
+                    {
+                      "verse": "Children are a heritage from the LORD, *",
+                      "halfverse": "and the fruit of the womb is a gift.",
+                      "type": "psalm-verse",
+                      "number": "4"
+                    },
+                    {
+                      "number": "5",
+                      "halfverse": "are the children of one’s youth.",
+                      "verse": "Like arrows in the hand of a warrior *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "he shall not be put to shame\n when he contends with his enemies in the gate.",
+                      "number": "6",
+                      "verse": "Happy is the man who has his quiver full of them! *",
+                      "type": "psalm-verse"
+                    }
+                  ]
+                }
+              ],
+              "version_label": null
+            },
+            {
+              "language": "en",
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "number": "1",
+                      "verse": "Oh, how good and pleasant it is, *",
+                      "type": "psalm-verse",
+                      "halfverse": "when brethren live together in unity!"
+                    },
+                    {
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "verse": "It is like fine oil upon the head *",
+                      "halfverse": "that runs down upon the beard,"
+                    },
+                    {
+                      "halfverse": "and runs down upon the collar of his robe.",
+                      "number": "3",
+                      "type": "psalm-verse",
+                      "verse": "Upon the beard of Aaron, *"
+                    },
+                    {
+                      "halfverse": "that falls upon the hills of Zion.",
+                      "verse": "It is like the dew of Hermon *",
+                      "type": "psalm-verse",
+                      "number": "4"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "verse": "For there the LORD has ordained the blessing: *",
+                      "number": "5",
+                      "halfverse": "life for evermore."
+                    }
+                  ]
+                }
+              ],
+              "citation": "Psalm 133",
+              "sharing": {
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "status": "published",
+                "organization": "venite",
+                "privacy": "public"
+              },
+              "version_label": null,
+              "type": "psalm",
+              "metadata": {
+                "localname": "Psalm 133",
+                "latinname": "Ecce, quam bonum!",
+                "number": "133",
+                "omit_antiphon": false,
+                "omit_gloria": false
+              },
+              "label": "Psalm 133",
+              "style": "psalm",
+              "slug": "psalm_133",
+              "hidden": false,
+              "category": ["Psalm"],
+              "version": "bcp1979",
+              "source": {
+                "citation": "p. 787",
+                "api": "https://www.venite.app/api",
+                "source": "bcp1979"
+              }
+            },
+            {
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public",
+                "collaborators": [],
+                "organization": "venite",
+                "status": "published"
+              },
+              "version": "bcp1979",
+              "style": "psalm",
+              "metadata": {
+                "number": "148",
+                "localname": "Psalm 148",
+                "omit_gloria": false,
+                "omit_antiphon": false,
+                "latinname": "Laudate Dominus"
+              },
+              "slug": "psalm_148",
+              "citation": "Psalm 148",
+              "hidden": false,
+              "value": [
+                {
+                  "type": "psalm-section",
+                  "value": [
+                    {
+                      "halfverse": "praise him in the heights.",
+                      "type": "psalm-verse",
+                      "number": "1",
+                      "verse": "Hallelujah!\nPraise the LORD from the heavens; *"
+                    },
+                    {
+                      "number": "2",
+                      "type": "psalm-verse",
+                      "halfverse": "praise him, all his host.",
+                      "verse": "Praise him, all you angels of his; *"
+                    },
+                    {
+                      "number": "3",
+                      "halfverse": "praise him, all you shining stars.",
+                      "type": "psalm-verse",
+                      "verse": "Praise him, sun and moon; *"
+                    },
+                    {
+                      "verse": "Praise him, heaven of heavens, *",
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "halfverse": "and you waters above the heavens."
+                    },
+                    {
+                      "verse": "Let them praise the Name of the LORD; *",
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "halfverse": "for he commanded, and they were created."
+                    },
+                    {
+                      "verse": "He made them stand fast for ever and ever; *",
+                      "type": "psalm-verse",
+                      "number": "6",
+                      "halfverse": "he gave them a law which shall not pass away."
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "verse": "Praise the LORD from the earth, *",
+                      "halfverse": "you sea-monsters and all deeps;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "tempestuous wind, doing his will;",
+                      "number": "8",
+                      "verse": "Fire and hail, snow and fog, *"
+                    },
+                    {
+                      "halfverse": "fruit trees and all cedars;",
+                      "number": "9",
+                      "type": "psalm-verse",
+                      "verse": "Mountains and all hills, *"
+                    },
+                    {
+                      "number": "10",
+                      "verse": "Wild beasts and all cattle, *",
+                      "halfverse": "creeping things and wingèd birds;",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "princes and all rulers of the world;",
+                      "number": "11",
+                      "type": "psalm-verse",
+                      "verse": "Kings of the earth and all peoples, *"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "halfverse": "old and young together.",
+                      "number": "12",
+                      "verse": "Young men and maidens, *"
+                    },
+                    {
+                      "halfverse": "for his Name only is exalted,\n his splendor is over earth and heaven.",
+                      "number": "13",
+                      "verse": "Let them praise the Name of the LORD, *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "He has raised up strength for his people\nand praise for all his loyal servants, *",
+                      "type": "psalm-verse",
+                      "number": "14",
+                      "halfverse": "the children of Israel, a people who are near him.\n Hallelujah!"
+                    }
+                  ]
+                }
+              ],
+              "source": {
+                "source": "bcp1979",
+                "api": "https://www.venite.app/api",
+                "citation": "p. 805"
+              },
+              "label": "Psalm 148",
+              "language": "en",
+              "version_label": null,
+              "type": "psalm",
+              "category": ["Psalm"]
+            },
+            {
+              "type": "psalm",
+              "value": [
+                {
+                  "value": [
+                    {
+                      "halfverse": "sing his praise in the congregation of the faithful.",
+                      "number": "1",
+                      "verse": "Hallelujah!\nSing to the LORD a new song; *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "Let Israel rejoice in his Maker; *",
+                      "number": "2",
+                      "halfverse": "let the children of Zion be joyful in their King.",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "halfverse": "let them sing praise to him with timbrel and harp.",
+                      "verse": "Let them praise his Name in the dance; *",
+                      "type": "psalm-verse",
+                      "number": "3"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "4",
+                      "halfverse": "and adorns the poor with victory.",
+                      "verse": "For the LORD takes pleasure in his people *"
+                    },
+                    {
+                      "number": "5",
+                      "type": "psalm-verse",
+                      "halfverse": "let them be joyful on their beds.",
+                      "verse": "Let the faithful rejoice in triumph; *"
+                    },
+                    {
+                      "number": "6",
+                      "halfverse": "and a two-edged sword in their hand;",
+                      "verse": "Let the praises of God be in their throat *",
+                      "type": "psalm-verse"
+                    },
+                    {
+                      "verse": "To wreak vengeance on the nations *",
+                      "type": "psalm-verse",
+                      "number": "7",
+                      "halfverse": "and punishment on the peoples;"
+                    },
+                    {
+                      "type": "psalm-verse",
+                      "number": "8",
+                      "halfverse": "and their nobles with links of iron;",
+                      "verse": "To bind their kings in chains *"
+                    },
+                    {
+                      "verse": "To inflict on them the judgment decreed; *",
+                      "halfverse": "this is glory for all his faithful people.\n Hallelujah!",
+                      "number": "9",
+                      "type": "psalm-verse"
+                    }
+                  ],
+                  "type": "psalm-section"
+                }
+              ],
+              "metadata": {
+                "localname": "Psalm 149",
+                "latinname": "Cantate Domino",
+                "omit_antiphon": false,
+                "omit_gloria": false,
+                "number": "149"
+              },
+              "hidden": false,
+              "language": "en",
+              "style": "psalm",
+              "version": "bcp1979",
+              "category": ["Psalm"],
+              "version_label": null,
+              "sharing": {
+                "privacy": "public",
+                "organization": "venite",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "collaborators": [],
+                "status": "published"
+              },
+              "source": {
+                "api": "https://www.venite.app/api",
+                "citation": "p. 807",
+                "source": "bcp1979"
+              },
+              "citation": "Psalm 149:1-5",
+              "slug": "psalm_149",
+              "label": "Psalm 149"
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "style": "long",
+              "language": "en",
+              "label": "The Second Reading",
+              "type": "bible-reading",
+              "hidden": false,
+              "value": [
+                {
+                  "text": "Let love be genuine; hate what is evil, hold fast to what is good; ",
+                  "book": "Romans",
+                  "verse": "9",
+                  "chapter": "12"
+                },
+                {
+                  "chapter": "12",
+                  "text": "love one another with mutual affection; outdo one another in showing honor. ",
+                  "book": "Romans",
+                  "verse": "10"
+                },
+                {
+                  "text": "Do not lag in zeal, be ardent in spirit, serve the Lord. ",
+                  "chapter": "12",
+                  "verse": "11",
+                  "book": "Romans"
+                },
+                {
+                  "text": "Rejoice in hope, be patient in suffering, persevere in prayer. ",
+                  "verse": "12",
+                  "book": "Romans",
+                  "chapter": "12"
+                },
+                {
+                  "text": "Contribute to the needs of the saints; extend hospitality to strangers. ",
+                  "verse": "13",
+                  "book": "Romans",
+                  "chapter": "12"
+                },
+                {
+                  "book": "Romans",
+                  "text": "Bless those who persecute you; bless and do not curse them. ",
+                  "chapter": "12",
+                  "verse": "14"
+                },
+                {
+                  "book": "Romans",
+                  "chapter": "12",
+                  "verse": "15",
+                  "text": "Rejoice with those who rejoice, weep with those who weep. "
+                },
+                {
+                  "chapter": "12",
+                  "verse": "16",
+                  "book": "Romans",
+                  "text": "Live in harmony with one another; do not be haughty, but associate with the lowly; do not claim to be wiser than you are. "
+                },
+                {
+                  "text": "Do not repay anyone evil for evil, but take thought for what is noble in the sight of all. ",
+                  "book": "Romans",
+                  "chapter": "12",
+                  "verse": "17"
+                },
+                {
+                  "text": "If it is possible, so far as it depends on you, live peaceably with all. ",
+                  "verse": "18",
+                  "book": "Romans",
+                  "chapter": "12"
+                }
+              ],
+              "source": { "api": "", "citation": "", "source": "" },
+              "version": "NRSV",
+              "citation": "Romans 12:9-18",
+              "metadata": {
+                "intro": {
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "type": "text",
+                  "sharing": {
+                    "privacy": "public",
+                    "status": "published",
+                    "organization": "venite"
+                  },
+                  "value": ["A Reading from ${longName}."]
+                },
+                "compiled_intro": {
+                  "type": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "language": "en",
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  },
+                  "value": ["A Reading from the Letter to the Romans."]
+                }
+              }
+            },
+            {
+              "version": "NRSV",
+              "type": "bible-reading",
+              "language": "en",
+              "citation": "1 Corinthians 12:31b-13:13",
+              "metadata": {
+                "intro": {
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from ${longName}."],
+                  "sharing": {
+                    "status": "published",
+                    "organization": "venite",
+                    "privacy": "public"
+                  },
+                  "language": "en",
+                  "type": "text"
+                },
+                "compiled_intro": {
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  },
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "language": "en",
+                  "value": [
+                    "A Reading from the First Letter to the Corinthians."
+                  ],
+                  "type": "text"
+                }
+              },
+              "style": "long",
+              "value": [
+                {
+                  "verse": "31",
+                  "chapter": "12",
+                  "text": "I will show you a still more excellent way. ",
+                  "book": "1 Corinthians"
+                },
+                { "type": "heading", "value": [""], "hidden": false },
+                {
+                  "verse": "1",
+                  "text": "If I speak in the tongues of mortals and of angels, but do not have love, I am a noisy gong or a clanging cymbal. ",
+                  "chapter": "13",
+                  "book": "1 Corinthians"
+                },
+                {
+                  "text": "And if I have prophetic powers, and understand all mysteries and all knowledge, and if I have all faith, so as to remove mountains, but do not have love, I am nothing. ",
+                  "verse": "2",
+                  "chapter": "13",
+                  "book": "1 Corinthians"
+                },
+                {
+                  "chapter": "13",
+                  "text": "If I give away all my possessions, and if I hand over my body so that I may boast, but do not have love, I gain nothing. ",
+                  "book": "1 Corinthians",
+                  "verse": "3"
+                },
+                { "hidden": false, "value": [""], "type": "heading" },
+                {
+                  "verse": "4",
+                  "chapter": "13",
+                  "text": "Love is patient; love is kind; love is not envious or boastful or arrogant ",
+                  "book": "1 Corinthians"
+                },
+                {
+                  "verse": "5",
+                  "text": "or rude. It does not insist on its own way; it is not irritable or resentful; ",
+                  "book": "1 Corinthians",
+                  "chapter": "13"
+                },
+                {
+                  "chapter": "13",
+                  "text": "it does not rejoice in wrongdoing, but rejoices in the truth. ",
+                  "book": "1 Corinthians",
+                  "verse": "6"
+                },
+                {
+                  "chapter": "13",
+                  "verse": "7",
+                  "text": "It bears all things, believes all things, hopes all things, endures all things. ",
+                  "book": "1 Corinthians"
+                },
+                { "type": "heading", "hidden": false, "value": [""] },
+                {
+                  "book": "1 Corinthians",
+                  "verse": "8",
+                  "text": "Love never ends. But as for prophecies, they will come to an end; as for tongues, they will cease; as for knowledge, it will come to an end. ",
+                  "chapter": "13"
+                },
+                {
+                  "chapter": "13",
+                  "verse": "9",
+                  "text": "For we know only in part, and we prophesy only in part; ",
+                  "book": "1 Corinthians"
+                },
+                {
+                  "book": "1 Corinthians",
+                  "verse": "10",
+                  "chapter": "13",
+                  "text": "but when the complete comes, the partial will come to an end. "
+                },
+                {
+                  "verse": "11",
+                  "text": "When I was a child, I spoke like a child, I thought like a child, I reasoned like a child; when I became an adult, I put an end to childish ways. ",
+                  "book": "1 Corinthians",
+                  "chapter": "13"
+                },
+                {
+                  "text": "For now we see in a mirror, dimly, but then we will see face to face. Now I know only in part; then I will know fully, even as I have been fully known. ",
+                  "verse": "12",
+                  "book": "1 Corinthians",
+                  "chapter": "13"
+                },
+                {
+                  "book": "1 Corinthians",
+                  "verse": "13",
+                  "chapter": "13",
+                  "text": "And now faith, hope, and love abide, these three; and the greatest of these is love. "
+                }
+              ],
+              "hidden": false,
+              "source": { "source": "", "citation": "", "api": "" },
+              "label": "The Second Reading"
+            },
+            {
+              "language": "en",
+              "metadata": {
+                "compiled_intro": {
+                  "value": [
+                    "A Reading from the Second Letter to the Corinthians."
+                  ],
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "category": ["Bible Reading Introduction"],
+                  "style": "text",
+                  "language": "en",
+                  "type": "text"
+                },
+                "intro": {
+                  "style": "text",
+                  "type": "text",
+                  "value": ["A Reading from ${longName}."],
+                  "sharing": {
+                    "status": "published",
+                    "organization": "venite",
+                    "privacy": "public"
+                  },
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"]
+                }
+              },
+              "value": [
+                {
+                  "chapter": "5",
+                  "text": "So if anyone is in Christ, there is a new creation: everything old has passed away; see, everything has become new! ",
+                  "book": "2 Corinthians",
+                  "verse": "17"
+                },
+                {
+                  "verse": "18",
+                  "book": "2 Corinthians",
+                  "text": "All this is from God, who reconciled us to himself through Christ, and has given us the ministry of reconciliation; ",
+                  "chapter": "5"
+                },
+                {
+                  "chapter": "5",
+                  "verse": "19",
+                  "book": "2 Corinthians",
+                  "text": "that is, in Christ God was reconciling the world to himself, not counting their trespasses against them, and entrusting the message of reconciliation to us. "
+                },
+                {
+                  "chapter": "5",
+                  "verse": "20",
+                  "text": "So we are ambassadors for Christ, since God is making his appeal through us; we entreat you on behalf of Christ, be reconciled to God. ",
+                  "book": "2 Corinthians"
+                }
+              ],
+              "version": "NRSV",
+              "type": "bible-reading",
+              "source": { "citation": "", "source": "", "api": "" },
+              "label": "The Second Reading",
+              "hidden": false,
+              "style": "long",
+              "citation": "2 Corinthians 5:17-20"
+            },
+            {
+              "hidden": false,
+              "source": { "api": "", "source": "", "citation": "" },
+              "language": "en",
+              "style": "long",
+              "version": "NRSV",
+              "citation": "Galatians 5:14, 22-26",
+              "type": "bible-reading",
+              "metadata": {
+                "compiled_intro": {
+                  "value": ["A Reading from the Letter to the Galatians."],
+                  "category": ["Bible Reading Introduction"],
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "status": "published"
+                  },
+                  "style": "text",
+                  "type": "text",
+                  "language": "en"
+                },
+                "intro": {
+                  "style": "text",
+                  "value": ["A Reading from ${longName}."],
+                  "type": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "language": "en",
+                  "sharing": {
+                    "status": "published",
+                    "organization": "venite",
+                    "privacy": "public"
+                  }
+                }
+              },
+              "value": [
+                {
+                  "text": "For the whole law is summed up in a single commandment, &#147;You shall love your neighbor as yourself.&#148; ",
+                  "verse": "14",
+                  "book": "Galatians",
+                  "chapter": "5"
+                },
+                {
+                  "verse": "22",
+                  "chapter": "5",
+                  "book": "Galatians",
+                  "text": "By contrast, the fruit of the Spirit is love, joy, peace, patience, kindness, generosity, faithfulness, "
+                },
+                {
+                  "verse": "23",
+                  "book": "Galatians",
+                  "text": "gentleness, and self-control. There is no law against such things. ",
+                  "chapter": "5"
+                },
+                {
+                  "verse": "24",
+                  "book": "Galatians",
+                  "text": "And those who belong to Christ Jesus have crucified the flesh with its passions and desires. ",
+                  "chapter": "5"
+                },
+                {
+                  "chapter": "5",
+                  "text": "If we live by the Spirit, let us also be guided by the Spirit. ",
+                  "verse": "25",
+                  "book": "Galatians"
+                },
+                {
+                  "chapter": "5",
+                  "text": "Let us not become conceited, competing against one another, envying one another. ",
+                  "verse": "26",
+                  "book": "Galatians"
+                }
+              ],
+              "label": "The Second Reading"
+            },
+            {
+              "hidden": false,
+              "style": "long",
+              "label": "The Second Reading",
+              "metadata": {
+                "compiled_intro": {
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from the Letter to the Ephesians."],
+                  "sharing": {
+                    "privacy": "public",
+                    "status": "published",
+                    "organization": "venite"
+                  },
+                  "type": "text",
+                  "language": "en"
+                },
+                "intro": {
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text",
+                  "sharing": {
+                    "organization": "venite",
+                    "privacy": "public",
+                    "status": "published"
+                  },
+                  "style": "text",
+                  "value": ["A Reading from ${longName}."]
+                }
+              },
+              "language": "en",
+              "value": [
+                {
+                  "verse": "14",
+                  "chapter": "3",
+                  "book": "Ephesians",
+                  "text": "For this reason I bow my knees before the Father, "
+                },
+                {
+                  "chapter": "3",
+                  "text": "from whom every family in heaven and on earth takes its name. ",
+                  "verse": "15",
+                  "book": "Ephesians"
+                },
+                {
+                  "text": "I pray that, according to the riches of his glory, he may grant that you may be strengthened in your inner being with power through his Spirit, ",
+                  "book": "Ephesians",
+                  "verse": "16",
+                  "chapter": "3"
+                },
+                {
+                  "text": "and that Christ may dwell in your hearts through faith, as you are being rooted and grounded in love. ",
+                  "verse": "17",
+                  "chapter": "3",
+                  "book": "Ephesians"
+                },
+                {
+                  "verse": "18",
+                  "text": "I pray that you may have the power to comprehend, with all the saints, what is the breadth and length and height and depth, ",
+                  "book": "Ephesians",
+                  "chapter": "3"
+                },
+                {
+                  "book": "Ephesians",
+                  "verse": "19",
+                  "chapter": "3",
+                  "text": "and to know the love of Christ that surpasses knowledge, so that you may be filled with all the fullness of God. "
+                },
+                {
+                  "book": "Ephesians",
+                  "chapter": "3",
+                  "verse": "20",
+                  "text": "Now to him who by the power at work within us is able to accomplish abundantly far more than all we can ask or imagine, "
+                },
+                {
+                  "chapter": "3",
+                  "verse": "21",
+                  "book": "Ephesians",
+                  "text": "to him be glory in the church and in Christ Jesus to all generations, forever and ever. Amen. "
+                }
+              ],
+              "citation": "Ephesians 3:14-21",
+              "version": "NRSV",
+              "source": { "api": "", "citation": "", "source": "" },
+              "type": "bible-reading"
+            },
+            {
+              "style": "long",
+              "citation": "Colossians 3:12-17",
+              "type": "bible-reading",
+              "hidden": false,
+              "label": "The Second Reading",
+              "metadata": {
+                "intro": {
+                  "value": ["A Reading from ${longName}."],
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text",
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "organization": "venite"
+                  },
+                  "style": "text"
+                },
+                "compiled_intro": {
+                  "sharing": {
+                    "organization": "venite",
+                    "privacy": "public",
+                    "status": "published"
+                  },
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "language": "en",
+                  "type": "text",
+                  "value": ["A Reading from the Letter to the Colossians."]
+                }
+              },
+              "language": "en",
+              "version": "NRSV",
+              "source": { "citation": "", "source": "", "api": "" },
+              "value": [
+                {
+                  "book": "Colossians",
+                  "verse": "12",
+                  "text": "As God&#146;s chosen ones, holy and beloved, clothe yourselves with compassion, kindness, humility, meekness, and patience. ",
+                  "chapter": "3"
+                },
+                {
+                  "chapter": "3",
+                  "verse": "13",
+                  "book": "Colossians",
+                  "text": "Bear with one another and, if anyone has a complaint against another, forgive each other; just as the Lord has forgiven you, so you also must forgive. "
+                },
+                {
+                  "chapter": "3",
+                  "verse": "14",
+                  "text": "Above all, clothe yourselves with love, which binds everything together in perfect harmony. ",
+                  "book": "Colossians"
+                },
+                {
+                  "chapter": "3",
+                  "text": "And let the peace of Christ rule in your hearts, to which indeed you were called in the one body. And be thankful. ",
+                  "book": "Colossians",
+                  "verse": "15"
+                },
+                {
+                  "text": "Let the word of Christ dwell in you richly; teach and admonish one another in all wisdom; and with gratitude in your hearts sing psalms, hymns, and spiritual songs to God. ",
+                  "chapter": "3",
+                  "book": "Colossians",
+                  "verse": "16"
+                },
+                {
+                  "chapter": "3",
+                  "verse": "17",
+                  "book": "Colossians",
+                  "text": "And whatever you do, in word or deed, do everything in the name of the Lord Jesus, giving thanks to God the Father through him. "
+                }
+              ]
+            },
+            {
+              "style": "long",
+              "value": [
+                {
+                  "verse": "18",
+                  "text": "Little children, let us love, not in word or speech, but in truth and action. ",
+                  "book": "1 John",
+                  "chapter": "3"
+                },
+                {
+                  "verse": "19",
+                  "chapter": "3",
+                  "book": "1 John",
+                  "text": "And by this we will know that we are from the truth and will reassure our hearts before him "
+                },
+                { "type": "heading", "hidden": false, "value": [""] },
+                {
+                  "verse": "20",
+                  "text": "whenever our hearts condemn us; for God is greater than our hearts, and he knows everything. ",
+                  "book": "1 John",
+                  "chapter": "3"
+                },
+                {
+                  "chapter": "3",
+                  "book": "1 John",
+                  "text": "Beloved, if our hearts do not condemn us, we have boldness before God; ",
+                  "verse": "21"
+                },
+                {
+                  "verse": "22",
+                  "chapter": "3",
+                  "text": "and we receive from him whatever we ask, because we obey his commandments and do what pleases him. ",
+                  "book": "1 John"
+                },
+                { "value": [""], "hidden": false, "type": "heading" },
+                {
+                  "book": "1 John",
+                  "chapter": "3",
+                  "text": "And this is his commandment, that we should believe in the name of his Son Jesus Christ and love one another, just as he has commanded us. ",
+                  "verse": "23"
+                },
+                {
+                  "verse": "24",
+                  "text": "All who obey his commandments abide in him, and he abides in them. And by this we know that he abides in us, by the Spirit that he has given us. ",
+                  "chapter": "3",
+                  "book": "1 John"
+                }
+              ],
+              "hidden": false,
+              "label": "The Second Reading",
+              "version": "NRSV",
+              "metadata": {
+                "compiled_intro": {
+                  "language": "en",
+                  "category": ["Bible Reading Introduction"],
+                  "type": "text",
+                  "style": "text",
+                  "value": ["A Reading from the First Letter of John."],
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "status": "published"
+                  }
+                },
+                "intro": {
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from ${longName}."],
+                  "type": "text",
+                  "language": "en",
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "style": "text"
+                }
+              },
+              "language": "en",
+              "citation": "1 John 3:18-24",
+              "type": "bible-reading",
+              "source": { "api": "", "citation": "", "source": "" }
+            },
+            {
+              "style": "long",
+              "value": [
+                {
+                  "book": "1 John",
+                  "chapter": "4",
+                  "text": "Beloved, let us love one another, because love is from God; everyone who loves is born of God and knows God. ",
+                  "verse": "7"
+                },
+                {
+                  "verse": "8",
+                  "text": "Whoever does not love does not know God, for God is love. ",
+                  "chapter": "4",
+                  "book": "1 John"
+                },
+                {
+                  "chapter": "4",
+                  "text": "God&#146;s love was revealed among us in this way: God sent his only Son into the world so that we might live through him. ",
+                  "book": "1 John",
+                  "verse": "9"
+                },
+                {
+                  "verse": "10",
+                  "text": "In this is love, not that we loved God but that he loved us and sent his Son to be the atoning sacrifice for our sins. ",
+                  "chapter": "4",
+                  "book": "1 John"
+                },
+                {
+                  "verse": "11",
+                  "chapter": "4",
+                  "text": "Beloved, since God loved us so much, we also ought to love one another. ",
+                  "book": "1 John"
+                },
+                {
+                  "chapter": "4",
+                  "book": "1 John",
+                  "text": "No one has ever seen God; if we love one another, God lives in us, and his love is perfected in us. ",
+                  "verse": "12"
+                },
+                {
+                  "chapter": "4",
+                  "text": "By this we know that we abide in him and he in us, because he has given us of his Spirit. ",
+                  "book": "1 John",
+                  "verse": "13"
+                },
+                { "value": [""], "type": "heading", "hidden": false },
+                {
+                  "text": "And we have seen and do testify that the Father has sent his Son as the Savior of the world. ",
+                  "book": "1 John",
+                  "chapter": "4",
+                  "verse": "14"
+                },
+                {
+                  "chapter": "4",
+                  "text": "God abides in those who confess that Jesus is the Son of God, and they abide in God. ",
+                  "verse": "15",
+                  "book": "1 John"
+                },
+                {
+                  "text": "So we have known and believe the love that God has for us. God is love, and those who abide in love abide in God, and God abides in them. ",
+                  "book": "1 John",
+                  "chapter": "4",
+                  "verse": "16"
+                },
+                {
+                  "text": "The commandment we have from him is this: those who love God must love their brothers and sisters also. ",
+                  "verse": "21",
+                  "chapter": "4",
+                  "book": "1 John"
+                }
+              ],
+              "source": { "citation": "", "source": "", "api": "" },
+              "citation": "1 John 4:7-16, 21",
+              "label": "The Second Reading",
+              "metadata": {
+                "compiled_intro": {
+                  "style": "text",
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from the First Letter of John."],
+                  "sharing": {
+                    "organization": "venite",
+                    "status": "published",
+                    "privacy": "public"
+                  },
+                  "language": "en",
+                  "type": "text"
+                },
+                "intro": {
+                  "category": ["Bible Reading Introduction"],
+                  "value": ["A Reading from ${longName}."],
+                  "type": "text",
+                  "language": "en",
+                  "style": "text",
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "status": "published"
+                  }
+                }
+              },
+              "type": "bible-reading",
+              "language": "en",
+              "version": "NRSV",
+              "hidden": false
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "value": ["After the Reading, the Reader may say"],
+          "type": "rubric"
+        },
+        {
+          "source": { "citation": "", "api": "", "source": "" },
+          "category": [],
+          "version_label": "The Word of the Lord.",
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "source": { "source": "", "citation": "", "api": "" },
+              "version_label": "The Word of the Lord.",
+              "value": [
+                {
+                  "response": "",
+                  "text": "The Word of the Lord.",
+                  "label": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "type": "responsive",
+              "metadata": {},
+              "category": [],
+              "style": "preces"
+            },
+            {
+              "version_label": "...saying to God’s people.",
+              "metadata": {},
+              "source": { "source": "", "api": "", "citation": "" },
+              "style": "preces",
+              "type": "responsive",
+              "value": [
+                {
+                  "response": "",
+                  "label": "",
+                  "text": "Hear what the Spirit is saying to God’s people."
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "category": []
+            },
+            {
+              "source": { "source": "", "citation": "", "api": "" },
+              "category": [],
+              "type": "responsive",
+              "version_label": "...saying to the Churches.",
+              "metadata": {},
+              "value": [
+                {
+                  "text": "Hear what the Spirit is saying to the Churches.",
+                  "response": "",
+                  "label": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "style": "preces"
+            }
+          ]
+        },
+        {
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "version": "NRSV",
+              "type": "bible-reading",
+              "citation": "Matthew 5:1-16",
+              "metadata": {
+                "compiled_intro": {
+                  "sharing": {
+                    "privacy": "public",
+                    "collaborators": [],
+                    "organization": "venite",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+                  },
+                  "category": ["Bible Reading Introduction"],
+                  "hidden": false,
+                  "value": [
+                    {
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to Matthew.",
+                      "response": "Glory to you, Lord Christ."
+                    }
+                  ],
+                  "metadata": {},
+                  "slug": "gospel-intro",
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  },
+                  "style": "responsive",
+                  "source": { "api": "", "citation": "", "source": "" },
+                  "type": "responsive",
+                  "language": "en",
+                  "lastRevision": 13,
+                  "label": "",
+                  "version": "bcp1979",
+                  "date_created": {
+                    "seconds": 1606585913,
+                    "nanoseconds": 503000000
+                  }
+                },
+                "intro": {
+                  "hidden": false,
+                  "lastRevision": 13,
+                  "language": "en",
+                  "metadata": {},
+                  "category": ["Bible Reading Introduction"],
+                  "source": { "citation": "", "source": "", "api": "" },
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
+                    }
+                  ],
+                  "label": "",
+                  "version": "bcp1979",
+                  "slug": "gospel-intro",
+                  "sharing": {
+                    "privacy": "public",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "organization": "venite",
+                    "collaborators": [],
+                    "status": "published"
+                  },
+                  "type": "responsive",
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  },
+                  "date_created": {
+                    "seconds": 1606585913,
+                    "nanoseconds": 503000000
+                  },
+                  "style": "responsive"
+                }
+              },
+              "style": "long",
+              "language": "en",
+              "hidden": false,
+              "value": [
+                {
+                  "book": "Matthew",
+                  "verse": "1",
+                  "chapter": "5",
+                  "text": "When Jesus saw the crowds, he went up the mountain; and after he sat down, his disciples came to him. "
+                },
+                {
+                  "text": "Then he began to speak, and taught them, saying: ",
+                  "chapter": "5",
+                  "verse": "2",
+                  "book": "Matthew"
+                },
+                { "hidden": false, "value": [""], "type": "heading" },
+                {
+                  "chapter": "5",
+                  "book": "Matthew",
+                  "text": "&#147;Blessed are the poor in spirit, for theirs is the kingdom of heaven. ",
+                  "verse": "3"
+                },
+                {
+                  "text": "&#147;Blessed are those who mourn, for they will be comforted. ",
+                  "chapter": "5",
+                  "book": "Matthew",
+                  "verse": "4"
+                },
+                {
+                  "book": "Matthew",
+                  "verse": "5",
+                  "chapter": "5",
+                  "text": "&#147;Blessed are the meek, for they will inherit the earth. "
+                },
+                {
+                  "book": "Matthew",
+                  "chapter": "5",
+                  "verse": "6",
+                  "text": "&#147;Blessed are those who hunger and thirst for righteousness, for they will be filled. "
+                },
+                {
+                  "text": "&#147;Blessed are the merciful, for they will receive mercy. ",
+                  "verse": "7",
+                  "chapter": "5",
+                  "book": "Matthew"
+                },
+                {
+                  "book": "Matthew",
+                  "text": "&#147;Blessed are the pure in heart, for they will see God. ",
+                  "verse": "8",
+                  "chapter": "5"
+                },
+                {
+                  "book": "Matthew",
+                  "chapter": "5",
+                  "verse": "9",
+                  "text": "&#147;Blessed are the peacemakers, for they will be called children of God. "
+                },
+                {
+                  "text": "&#147;Blessed are those who are persecuted for righteousness&#146; sake, for theirs is the kingdom of heaven. ",
+                  "book": "Matthew",
+                  "chapter": "5",
+                  "verse": "10"
+                },
+                {
+                  "text": "&#147;Blessed are you when people revile you and persecute you and utter all kinds of evil against you falsely on my account. ",
+                  "book": "Matthew",
+                  "chapter": "5",
+                  "verse": "11"
+                },
+                {
+                  "book": "Matthew",
+                  "text": "Rejoice and be glad, for your reward is great in heaven, for in the same way they persecuted the prophets who were before you. ",
+                  "chapter": "5",
+                  "verse": "12"
+                },
+                { "type": "heading", "hidden": false, "value": [""] },
+                {
+                  "text": "&#147;You are the salt of the earth; but if salt has lost its taste, how can its saltiness be restored? It is no longer good for anything, but is thrown out and trampled under foot. ",
+                  "verse": "13",
+                  "book": "Matthew",
+                  "chapter": "5"
+                },
+                {
+                  "chapter": "5",
+                  "verse": "14",
+                  "text": "&#147;You are the light of the world. A city built on a hill cannot be hid. ",
+                  "book": "Matthew"
+                },
+                {
+                  "text": "No one after lighting a lamp puts it under the bushel basket, but on the lampstand, and it gives light to all in the house. ",
+                  "verse": "15",
+                  "chapter": "5",
+                  "book": "Matthew"
+                },
+                {
+                  "chapter": "5",
+                  "verse": "16",
+                  "book": "Matthew",
+                  "text": "In the same way, let your light shine before others, so that they may see your good works and give glory to your Father in heaven. "
+                }
+              ],
+              "source": { "source": "", "api": "", "citation": "" },
+              "label": "The Gospel"
+            },
+            {
+              "citation": "Mark 12:28-34",
+              "hidden": false,
+              "type": "bible-reading",
+              "version": "NRSV",
+              "style": "long",
+              "metadata": {
+                "compiled_intro": {
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  },
+                  "language": "en",
+                  "value": [
+                    {
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to Mark.",
+                      "response": "Glory to you, Lord Christ."
+                    }
+                  ],
+                  "date_created": {
+                    "seconds": 1606585913,
+                    "nanoseconds": 503000000
+                  },
+                  "metadata": {},
+                  "version": "bcp1979",
+                  "lastRevision": 13,
+                  "label": "",
+                  "source": { "citation": "", "source": "", "api": "" },
+                  "category": ["Bible Reading Introduction"],
+                  "hidden": false,
+                  "type": "responsive",
+                  "sharing": {
+                    "collaborators": [],
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "organization": "venite",
+                    "privacy": "public"
+                  },
+                  "slug": "gospel-intro",
+                  "style": "responsive"
+                },
+                "intro": {
+                  "type": "responsive",
+                  "style": "responsive",
+                  "date_created": {
+                    "seconds": 1606585913,
+                    "nanoseconds": 503000000
+                  },
+                  "source": { "api": "", "source": "", "citation": "" },
+                  "category": ["Bible Reading Introduction"],
+                  "hidden": false,
+                  "version": "bcp1979",
+                  "label": "",
+                  "language": "en",
+                  "metadata": {},
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  },
+                  "slug": "gospel-intro",
+                  "sharing": {
+                    "status": "published",
+                    "privacy": "public",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": [],
+                    "organization": "venite"
+                  },
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
+                    }
+                  ],
+                  "lastRevision": 13
+                }
+              },
+              "value": [
+                {
+                  "book": "Mark",
+                  "text": "One of the scribes came near and heard them disputing with one another, and seeing that he answered them well, he asked him, &#147;Which commandment is the first of all?&#148; ",
+                  "chapter": "12",
+                  "verse": "28"
+                },
+                {
+                  "verse": "29",
+                  "chapter": "12",
+                  "book": "Mark",
+                  "text": "Jesus answered, &#147;The first is, &#145;Hear, O Israel: the Lord our God, the Lord is one; "
+                },
+                {
+                  "book": "Mark",
+                  "chapter": "12",
+                  "verse": "30",
+                  "text": "you shall love the Lord your God with all your heart, and with all your soul, and with all your mind, and with all your strength.&#146; "
+                },
+                {
+                  "book": "Mark",
+                  "text": "The second is this, &#145;You shall love your neighbor as yourself.&#146; There is no other commandment greater than these.&#148; ",
+                  "chapter": "12",
+                  "verse": "31"
+                },
+                {
+                  "book": "Mark",
+                  "verse": "32",
+                  "chapter": "12",
+                  "text": "Then the scribe said to him, &#147;You are right, Teacher; you have truly said that &#145;he is one, and besides him there is no other&#146;; "
+                },
+                {
+                  "book": "Mark",
+                  "chapter": "12",
+                  "text": "and &#145;to love him with all the heart, and with all the understanding, and with all the strength,&#146; and &#145;to love one&#146;s neighbor as oneself,&#146; &#151;this is much more important than all whole burnt offerings and sacrifices.&#148; ",
+                  "verse": "33"
+                },
+                {
+                  "chapter": "12",
+                  "book": "Mark",
+                  "verse": "34",
+                  "text": "When Jesus saw that he answered wisely, he said to him, &#147;You are not far from the kingdom of God.&#148; After that no one dared to ask him any question. "
+                }
+              ],
+              "language": "en",
+              "source": { "source": "", "api": "", "citation": "" },
+              "label": "The Gospel"
+            },
+            {
+              "metadata": {
+                "intro": {
+                  "type": "responsive",
+                  "category": ["Bible Reading Introduction"],
+                  "language": "en",
+                  "source": { "source": "", "citation": "", "api": "" },
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
+                    }
+                  ],
+                  "hidden": false,
+                  "version": "bcp1979",
+                  "style": "responsive",
+                  "label": "",
+                  "slug": "gospel-intro",
+                  "date_created": {
+                    "nanoseconds": 503000000,
+                    "seconds": 1606585913
+                  },
+                  "lastRevision": 13,
+                  "sharing": {
+                    "privacy": "public",
+                    "collaborators": [],
+                    "status": "published",
+                    "organization": "venite",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+                  },
+                  "metadata": {},
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  }
+                },
+                "compiled_intro": {
+                  "source": { "api": "", "source": "", "citation": "" },
+                  "date_created": {
+                    "nanoseconds": 503000000,
+                    "seconds": 1606585913
+                  },
+                  "hidden": false,
+                  "language": "en",
+                  "value": [
+                    {
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to Luke.",
+                      "response": "Glory to you, Lord Christ."
+                    }
+                  ],
+                  "label": "",
+                  "category": ["Bible Reading Introduction"],
+                  "sharing": {
+                    "organization": "venite",
+                    "privacy": "public",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": []
+                  },
+                  "date_modified": {
+                    "nanoseconds": 106000000,
+                    "seconds": 1606586010
+                  },
+                  "slug": "gospel-intro",
+                  "type": "responsive",
+                  "style": "responsive",
+                  "lastRevision": 13,
+                  "metadata": {},
+                  "version": "bcp1979"
+                }
+              },
+              "value": [
+                {
+                  "chapter": "6",
+                  "verse": "32",
+                  "book": "Luke",
+                  "text": "&#147;If you love those who love you, what credit is that to you? For even sinners love those who love them. "
+                },
+                {
+                  "text": "If you do good to those who do good to you, what credit is that to you? For even sinners do the same. ",
+                  "chapter": "6",
+                  "book": "Luke",
+                  "verse": "33"
+                },
+                {
+                  "chapter": "6",
+                  "book": "Luke",
+                  "text": "If you lend to those from whom you hope to receive, what credit is that to you? Even sinners lend to sinners, to receive as much again. ",
+                  "verse": "34"
+                },
+                {
+                  "book": "Luke",
+                  "chapter": "6",
+                  "text": "But love your enemies, do good, and lend, expecting nothing in return. Your reward will be great, and you will be children of the Most High; for he is kind to the ungrateful and the wicked. ",
+                  "verse": "35"
+                },
+                {
+                  "chapter": "6",
+                  "book": "Luke",
+                  "text": "Be merciful, just as your Father is merciful. ",
+                  "verse": "36"
+                },
+                { "value": [""], "type": "heading", "hidden": false },
+                {
+                  "text": "&#147;Do not judge, and you will not be judged; do not condemn, and you will not be condemned. Forgive, and you will be forgiven; ",
+                  "book": "Luke",
+                  "verse": "37",
+                  "chapter": "6"
+                },
+                {
+                  "verse": "38",
+                  "chapter": "6",
+                  "text": "give, and it will be given to you. A good measure, pressed down, shaken together, running over, will be put into your lap; for the measure you give will be the measure you get back.&#148; ",
+                  "book": "Luke"
+                }
+              ],
+              "version": "NRSV",
+              "source": { "source": "", "api": "", "citation": "" },
+              "language": "en",
+              "style": "long",
+              "hidden": false,
+              "type": "bible-reading",
+              "label": "The Gospel",
+              "citation": "Luke 6:32-38"
+            },
+            {
+              "label": "The Gospel",
+              "type": "bible-reading",
+              "source": { "api": "", "citation": "", "source": "" },
+              "style": "long",
+              "version": "NRSV",
+              "hidden": false,
+              "value": [
+                {
+                  "chapter": "15",
+                  "verse": "9",
+                  "text": "As the Father has loved me, so I have loved you; abide in my love. ",
+                  "book": "John"
+                },
+                {
+                  "book": "John",
+                  "verse": "10",
+                  "text": "If you keep my commandments, you will abide in my love, just as I have kept my Father&#146;s commandments and abide in his love. ",
+                  "chapter": "15"
+                },
+                {
+                  "book": "John",
+                  "chapter": "15",
+                  "text": "I have said these things to you so that my joy may be in you, and that your joy may be complete. ",
+                  "verse": "11"
+                },
+                {
+                  "book": "John",
+                  "text": "&#147;This is my commandment, that you love one another as I have loved you. ",
+                  "verse": "12",
+                  "chapter": "15"
+                },
+                {
+                  "chapter": "15",
+                  "text": "No one has greater love than this, to lay down one&#146;s life for one&#146;s friends. ",
+                  "book": "John",
+                  "verse": "13"
+                },
+                {
+                  "book": "John",
+                  "chapter": "15",
+                  "verse": "14",
+                  "text": "You are my friends if you do what I command you. "
+                },
+                {
+                  "verse": "15",
+                  "chapter": "15",
+                  "book": "John",
+                  "text": "I do not call you servants any longer, because the servant does not know what the master is doing; but I have called you friends, because I have made known to you everything that I have heard from my Father. "
+                },
+                {
+                  "verse": "16",
+                  "chapter": "15",
+                  "book": "John",
+                  "text": "You did not choose me but I chose you. And I appointed you to go and bear fruit, fruit that will last, so that the Father will give you whatever you ask him in my name. "
+                },
+                {
+                  "verse": "17",
+                  "book": "John",
+                  "chapter": "15",
+                  "text": "I am giving you these commands so that you may love one another. "
+                }
+              ],
+              "citation": "John 15:9-17",
+              "metadata": {
+                "intro": {
+                  "language": "en",
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": []
+                  },
+                  "metadata": {},
+                  "hidden": false,
+                  "slug": "gospel-intro",
+                  "label": "",
+                  "date_modified": {
+                    "seconds": 1606586010,
+                    "nanoseconds": 106000000
+                  },
+                  "source": { "source": "", "api": "", "citation": "" },
+                  "lastRevision": 13,
+                  "style": "responsive",
+                  "type": "responsive",
+                  "version": "bcp1979",
+                  "value": [
+                    {
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}.",
+                      "response": "Glory to you, Lord Christ."
+                    }
+                  ],
+                  "category": ["Bible Reading Introduction"],
+                  "date_created": {
+                    "nanoseconds": 503000000,
+                    "seconds": 1606585913
+                  }
+                },
+                "compiled_intro": {
+                  "lastRevision": 13,
+                  "language": "en",
+                  "sharing": {
+                    "organization": "venite",
+                    "privacy": "public",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "collaborators": [],
+                    "status": "published"
+                  },
+                  "date_modified": {
+                    "seconds": 1606586010,
+                    "nanoseconds": 106000000
+                  },
+                  "metadata": {},
+                  "slug": "gospel-intro",
+                  "type": "responsive",
+                  "style": "responsive",
+                  "hidden": false,
+                  "version": "bcp1979",
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to John."
+                    }
+                  ],
+                  "date_created": {
+                    "nanoseconds": 503000000,
+                    "seconds": 1606585913
+                  },
+                  "category": ["Bible Reading Introduction"],
+                  "label": "",
+                  "source": { "api": "", "source": "", "citation": "" }
+                }
+              },
+              "language": "en"
+            },
+            {
+              "style": "long",
+              "hidden": false,
+              "language": "en",
+              "value": [
+                {
+                  "chapter": "17",
+                  "text": "After Jesus had spoken these words, he looked up to heaven and said, &#147;Father, the hour has come; glorify your Son so that the Son may glorify you, ",
+                  "verse": "1",
+                  "book": "John"
+                },
+                {
+                  "verse": "2",
+                  "text": "since you have given him authority over all people, to give eternal life to all whom you have given him. ",
+                  "chapter": "17",
+                  "book": "John"
+                },
+                {
+                  "verse": "18",
+                  "chapter": "17",
+                  "text": "As you have sent me into the world, so I have sent them into the world. ",
+                  "book": "John"
+                },
+                {
+                  "verse": "19",
+                  "chapter": "17",
+                  "text": "And for their sakes I sanctify myself, so that they also may be sanctified in truth. ",
+                  "book": "John"
+                },
+                { "value": [""], "type": "heading", "hidden": false },
+                {
+                  "verse": "20",
+                  "book": "John",
+                  "chapter": "17",
+                  "text": "&#148;I ask not only on behalf of these, but also on behalf of those who will believe in me through their word, "
+                },
+                {
+                  "book": "John",
+                  "verse": "21",
+                  "text": "that they may all be one. As you, Father, are in me and I am in you, may they also be in us, so that the world may believe that you have sent me. ",
+                  "chapter": "17"
+                },
+                {
+                  "chapter": "17",
+                  "text": "The glory that you have given me I have given them, so that they may be one, as we are one, ",
+                  "book": "John",
+                  "verse": "22"
+                },
+                {
+                  "text": "I in them and you in me, that they may become completely one, so that the world may know that you have sent me and have loved them even as you have loved me. ",
+                  "book": "John",
+                  "chapter": "17",
+                  "verse": "23"
+                },
+                { "value": [""], "type": "heading", "hidden": false },
+                {
+                  "verse": "24",
+                  "text": "Father, I desire that those also, whom you have given me, may be with me where I am, to see my glory, which you have given me because you loved me before the foundation of the world. ",
+                  "chapter": "17",
+                  "book": "John"
+                },
+                {
+                  "text": "&#147;Righteous Father, the world does not know you, but I know you; and these know that you have sent me. ",
+                  "verse": "25",
+                  "chapter": "17",
+                  "book": "John"
+                },
+                {
+                  "book": "John",
+                  "chapter": "17",
+                  "text": "I made your name known to them, and I will make it known, so that the love with which you have loved me may be in them, and I in them.&#148; ",
+                  "verse": "26"
+                }
+              ],
+              "metadata": {
+                "compiled_intro": {
+                  "lastRevision": 13,
+                  "category": ["Bible Reading Introduction"],
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to John."
+                    }
+                  ],
+                  "version": "bcp1979",
+                  "type": "responsive",
+                  "slug": "gospel-intro",
+                  "hidden": false,
+                  "style": "responsive",
+                  "metadata": {},
+                  "language": "en",
+                  "date_created": {
+                    "nanoseconds": 503000000,
+                    "seconds": 1606585913
+                  },
+                  "sharing": {
+                    "privacy": "public",
+                    "organization": "venite",
+                    "collaborators": [],
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+                  },
+                  "source": { "citation": "", "api": "", "source": "" },
+                  "label": "",
+                  "date_modified": {
+                    "seconds": 1606586010,
+                    "nanoseconds": 106000000
+                  }
+                },
+                "intro": {
+                  "hidden": false,
+                  "lastRevision": 13,
+                  "type": "responsive",
+                  "value": [
+                    {
+                      "response": "Glory to you, Lord Christ.",
+                      "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
+                    }
+                  ],
+                  "language": "en",
+                  "style": "responsive",
+                  "sharing": {
+                    "collaborators": [],
+                    "organization": "venite",
+                    "status": "published",
+                    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                    "privacy": "public"
+                  },
+                  "date_modified": {
+                    "seconds": 1606586010,
+                    "nanoseconds": 106000000
+                  },
+                  "slug": "gospel-intro",
+                  "label": "",
+                  "date_created": {
+                    "seconds": 1606585913,
+                    "nanoseconds": 503000000
+                  },
+                  "version": "bcp1979",
+                  "category": ["Bible Reading Introduction"],
+                  "metadata": {},
+                  "source": { "citation": "", "source": "", "api": "" }
+                }
+              },
+              "citation": "John 17:1-2, 18-26",
+              "type": "bible-reading",
+              "source": { "citation": "", "api": "", "source": "" },
+              "label": "The Gospel",
+              "version": "NRSV"
+            }
+          ]
+        },
+        { "value": ["After the Gospel, the Reader says"], "type": "rubric" },
+        {
+          "type": "responsive",
+          "value": [
+            { "label": "", "text": "The Gospel of the Lord.", "response": "" },
+            { "label": "People", "text": "Praise to you, Lord Christ." }
+          ],
+          "style": "preces"
+        },
+        {
+          "metadata": { "level": 3 },
+          "type": "heading",
+          "style": "text",
+          "value": ["The Sermon"]
+        },
+        {
+          "metadata": { "level": 2 },
+          "type": "heading",
+          "style": "text",
+          "value": [
+            "The Witnessing of the Vows and the Blessing of the Covenant"
+          ]
+        },
+        {
+          "value": [
+            "The couple comes before the assembly. if there is to be a presentation, the presenters stand with the couple, and the Presider says to them"
+          ],
+          "type": "rubric"
+        },
+        {
+          "value": [
+            {
+              "text": "Who presents ___________________________ and ___________________________ as they seek the blessing of God and the Church on their love and life together?",
+              "label": "Presider",
+              "response": ""
+            },
+            { "text": "We do.", "label": "Presenters" },
+            {
+              "label": "Presider",
+              "text": "Will you love, respect, and pray for ____________________ and ____________________, and do all in your power to stand with them in the life they will share?"
+            },
+            { "text": "We will.", "label": "Presenters" }
+          ],
+          "style": "preces",
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "value": ["The Presider then addresses the couple, saying"]
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "value": [
+            "_______________________ and _______________________, you have come before God and the Church to exchange [and renew] solemn vows with one another and to ask God’s blessing."
+          ]
+        },
+        {
+          "value": ["The Presider addresses one member of the couple, saying"],
+          "type": "rubric"
+        },
+        {
+          "style": "preces",
+          "type": "responsive",
+          "value": [
+            {
+              "text": "_______________________, do you freely and unreservedly offer yourself to _______________________?",
+              "response": "",
+              "label": "Presider"
+            },
+            { "text": "I do.", "label": "Answer" },
+            {
+              "text": "Will you (*continue to*) live together in faithfulness and holiness of life as long as you both shall live?",
+              "label": "Presider"
+            },
+            { "text": "I will, with God’s help.", "label": "Answer" }
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Presider addresses the other member of the couple, saying"
+          ]
+        },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "text": "_______________________, do you freely and unreservedly offer yourself to _______________________?",
+              "label": "Presider"
+            },
+            { "label": "Answer", "text": "I do." },
+            {
+              "text": "Will you (*continue to*) live together in faithfulness and holiness of life as long as you both shall live?",
+              "label": "Presider"
+            },
+            { "text": "I will, with God’s help.", "label": "Answer" }
+          ],
+          "type": "responsive"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The assembly stands, the couple faces the People, and the Presider addresses them, saying"
+          ]
+        },
+        {
+          "value": [
+            {
+              "label": "Presider",
+              "response": "",
+              "text": "Will all of you gathered to witness these vows do all in your power to uphold and honor this couple in the covenant they make?"
+            },
+            { "text": "We will.", "label": "People" },
+            {
+              "text": "Will you pray for them, especially in times of trouble, and celebrate with them in times of joy?",
+              "label": "Presider"
+            },
+            { "text": "We will.", "label": "People" }
+          ],
+          "type": "responsive",
+          "style": "preces"
+        },
+        {
+          "type": "heading",
+          "value": ["The Prayers"],
+          "metadata": { "level": 3 },
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["The Presider then introduces the prayers"]
+        },
+        {
+          "type": "text",
+          "value": [
+            "Then let us pray for ___________________________ and ___________________________ in their life together and for the concerns of this community."
+          ],
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "A Deacon or another leader bids prayers for the couple. ",
+            "Prayers for the Church and for the world, for the concerns of the local community, for those who suffer or face trouble, and for the departed are also appropriate. if the rite takes place in the principal Sunday worship of the congregation, the rubric concerning the Prayers of the People on page 359 of the Book of Common Prayer is followed.",
+            "Adaptations or insertions may be made to the form that follows.",
+            "A bar in the margin indicates a bidding that may be omitted."
+          ]
+        },
+        {
+          "metadata": { "response": "Hear our prayer." },
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "label": "",
+              "text": "For ___________________________ and ___________________________, seeking your blessing and the blessing of your holy people;  \nLoving God,  *or*  Lord, in your mercy,",
+              "optional": false
+            },
+            {
+              "response": "Hear our prayer.",
+              "optional": false,
+              "text": "For a spirit of loving-kindness to shelter them all their days;\nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "optional": false,
+              "text": "For friends to support them and communities to enfold them; \nLoving God,  *or*  Lord, in your mercy,",
+              "response": "Hear our prayer."
+            },
+            {
+              "response": "Hear our prayer.",
+              "optional": false,
+              "text": "For peace in their home and love in their family; \nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "optional": true,
+              "text": "For the grace and wisdom to care for the children you entrust to them (*or* may entrust to them);\nLoving God,  *or*  Lord, in your mercy,",
+              "response": "Hear our prayer."
+            },
+            {
+              "response": "Hear our prayer.",
+              "optional": false,
+              "text": "For the honesty to acknowledge when they hurt each other, and the humility to seek each other’s forgiveness and yours;\nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "optional": false,
+              "response": "Hear our prayer.",
+              "text": "For the outpouring of your love through their work and witness;\nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "optional": false,
+              "response": "Hear our prayer.",
+              "text": "For the strength to keep the vows each of us has made; \nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "text": "For all who have been reborn and made new in the waters of Baptism;\nLoving God,  *or*  Lord, in your mercy,",
+              "optional": true,
+              "response": "Hear our prayer."
+            },
+            {
+              "response": "Hear our prayer.",
+              "optional": true,
+              "text": "For those who lead and serve in communities of faith; \nLoving God,  *or*  Lord, in your mercy,"
+            },
+            {
+              "response": "Hear our prayer.",
+              "text": "For those who seek justice, peace, and concord among nations;\nLoving God,  *or*  Lord, in your mercy,",
+              "optional": true
+            },
+            {
+              "optional": true,
+              "text": "For those who are sick or suffering, homeless or poor; \nLoving God,  *or*  Lord, in your mercy,",
+              "response": "Hear our prayer."
+            },
+            {
+              "optional": true,
+              "text": "For victims of violence and those who inflict it;\nLoving God,  *or*  Lord, in your mercy,",
+              "response": "Hear our prayer."
+            },
+            {
+              "text": "For communion with all who have died\n[especially those whom we remember this day:  _______________________________________];\nLoving God,  *or*  Lord, in your mercy,",
+              "response": "Hear our prayer.",
+              "optional": true
+            }
+          ],
+          "style": "litany"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Presider concludes the Prayers with the following or another appropriate Collect"
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "Giver of every gift, source of all goodness, \nhear the prayers we bring before you for \n___________________________ and ___________________________, \nwho seek your blessing this day. \nStrengthen them as they share in the saving work of Jesus, \nand bring about for them and for all you have created \nthe fullness of life he promised, \nwho now lives and reigns for ever and ever."
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If the Eucharist is to follow, the Lord’s Prayer is omitted here."
+          ]
+        },
+        {
+          "value": [
+            {
+              "metadata": { "omit_label": false, "omit_response": false },
+              "type": "text",
+              "source": { "source": "", "citation": "", "api": "" },
+              "version_label": "Contemporary",
+              "style": "text",
+              "value": [
+                "As our Savior Christ \nhas taught us,  \nwe now pray,"
+              ],
+              "category": []
+            },
+            {
+              "category": [],
+              "version_label": "Traditional",
+              "value": [
+                "And now, as our Savior \nChrist has taught us, \nwe are bold to say,"
+              ],
+              "metadata": { "rollup": false, "omit_label": false },
+              "type": "text",
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "text"
+            }
+          ],
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 }
+        },
+        {
+          "type": "option",
+          "hidden": false,
+          "value": [
+            {
+              "type": "text",
+              "category": [],
+              "hidden": false,
+              "version_label": "Contemporary",
+              "label": "The Lord’s Prayer",
+              "value": [
+                "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+              ],
+              "style": "prayer",
+              "display_format": "unison"
+            },
+            {
+              "hidden": false,
+              "label": "The Lord’s Prayer",
+              "style": "prayer",
+              "value": [
+                "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+              ],
+              "version_label": "Traditional",
+              "category": [],
+              "source": { "api": "", "source": "", "citation": "" },
+              "display_format": "unison",
+              "type": "text"
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 }
+        },
+        {
+          "value": ["The Marriage"],
+          "metadata": { "level": 2 },
+          "type": "heading",
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["he people sit. The couple stands, facing the Presider."]
+        },
+        {
+          "style": "text",
+          "value": [
+            "_______________________ and _______________________, \nI invite you now, illumined by the Word of God  \nand strengthened by the prayer of this community,  \nto make your covenant before God and the Church."
+          ],
+          "type": "text"
+        },
+        {
+          "value": [
+            "Each member of the couple, in turn, takes the hand of the other and says"
+          ],
+          "type": "rubric"
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "value": [
+            {
+              "metadata": { "rollup": false, "omit_label": false },
+              "source": { "citation": "", "source": "", "api": "" },
+              "type": "text",
+              "version_label": "Option 1",
+              "style": "text",
+              "value": [
+                "In the name of God, \nI, _______________________, give myself to you, \n_______________________, and take you to myself.\nI will support and care for you by the grace of God: \nin times of sickness, in times of health. \nI will hold and cherish you in the love of Christ: \nin times of plenty, in times of want. \nI will honor and love you with the Spirit’s help: \nin times of anguish, in times of joy, \nforsaking all others, as long as we both shall live. \nThis is my solemn vow."
+              ],
+              "category": []
+            },
+            {
+              "metadata": { "rollup": false, "omit_label": false },
+              "category": [],
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "text",
+              "value": [
+                "In the name of God, \nI, ___________________________, give myself to you, \n___________________________, and take you to myself.\nI will support and care for you: \nin times of sickness, in times of health. \nI will hold and cherish you: \nin times of plenty, in times of want. \nI will honor and love you:  \nin times of anguish, in times of joy, \nforsaking all others, as long as we both shall live. \nThis is my solemn vow."
+              ],
+              "type": "text",
+              "version_label": "Option 2"
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If rings are to be exchanged, they are brought before the Presider, who prays using the following words"
+          ]
+        },
+        {
+          "type": "text",
+          "style": "prayer",
+          "value": [
+            "Let us pray.",
+            "Bless, O God, these rings as signs of the enduring covenant \n___________________________ and ___________________________ \nhave made with each other,  \nthrough Jesus Christ our Lord."
+          ],
+          "category": [],
+          "source": { "source": "", "api": "", "citation": "" },
+          "metadata": { "omit_response": false, "rollup": false }
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The two people place the rings on the fingers of one another, first the one, then the other, saying"
+          ]
+        },
+        {
+          "version_label": "...in the name of God.",
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "source": { "source": "", "api": "", "citation": "" },
+          "category": [],
+          "type": "option",
+          "value": [
+            {
+              "style": "text",
+              "source": { "source": "", "api": "", "citation": "" },
+              "type": "text",
+              "value": [
+                "____________________, I give you this ring as a symbol of my vow,\nand with all that I am, and all that I have, I honor you,  \nin the name of God."
+              ],
+              "version_label": "...in the name of God.",
+              "metadata": { "rollup": false, "omit_label": false },
+              "category": []
+            },
+            {
+              "metadata": {
+                "omit_label": false,
+                "rollup": false,
+                "omit_response": false
+              },
+              "style": "text",
+              "type": "text",
+              "version_label": "...in the name of th Father, and of the Son...",
+              "source": { "citation": "", "source": "", "api": "" },
+              "category": [],
+              "value": [
+                "____________________, I give you this ring as a symbol of my vow,\nand with all that I am, and all that I have, I honor you,  \nin the name of the Father,\nand of the Son,\nand of the Holy Spirit."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "If the two have previously given and worn rings as a symbol of their commitment, the rings may be blessed on the hands of the couple, the Presider saying"
+          ]
+        },
+        {
+          "type": "text",
+          "value": [
+            "Let us pray.",
+            "By the rings which they have worn, faithful God, \n___________________________ and ___________________________ \nhave shown to one another and the world \ntheir love and faithfulness. \nBless now these rings, \nthat from this day forward  \nthey may be signs of the vows ___________________________ and \n___________________________ have exchanged \nin your presence and in the communion of your Church, \nthrough Christ our Lord."
+          ],
+          "style": "prayer"
+        },
+        {
+          "style": "text",
+          "metadata": { "level": 3 },
+          "value": ["Pronouncement"],
+          "type": "heading"
+        },
+        {
+          "type": "rubric",
+          "value": ["The Presider joins the right hands of the couple and says"]
+        },
+        {
+          "value": [
+            "Now that _______________________ and _______________________ \nhave exchanged vows of love and fidelity \nin the presence of God and the Church, \nI pronounce that they are  \nmarried [according to the laws of the state or civil jurisdiction of \n___________________________]\nand bound to one another \nas long as they both shall live."
+          ],
+          "style": "prayer",
+          "type": "text"
+        },
+        {
+          "value": ["Blessing of the Couple"],
+          "metadata": { "level": 2 },
+          "style": "text",
+          "type": "heading"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "As the couple stands or kneels, the Presider invokes God’s blessing upon them, saying"
+          ]
+        },
+        {
+          "category": [],
+          "value": [
+            "Let us pray.",
+            "Most gracious God,  \nwe praise you for the tender mercy and unfailing care \nrevealed to us in Jesus the Christ  \nand for the great joy and comfort bestowed upon us  \nin the gift of human love.  \nWe give you thanks for ___________________________ and \n___________________________, \nand the covenant of faithfulness they have made.  \nPour out the abundance of your Holy Spirit upon them.  \nKeep them in your steadfast love;  \nprotect them from all danger;  \nfill them with your wisdom and peace;  \nlead them in holy service to each other and the world. "
+          ],
+          "style": "text",
+          "source": { "api": "", "source": "", "citation": "" },
+          "type": "text",
+          "metadata": { "omit_response": false, "omit_label": false }
+        },
+        {
+          "type": "rubric",
+          "value": ["The Presider continues with one of the following"]
+        },
+        {
+          "value": [
+            {
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "God the Father, \nGod the Son, \nGod the Holy Spirit,  \nbless, preserve, and keep you, \nand mercifully grant you rich and boundless grace, \nthat you may please God in body and soul. \nGod make you a sign of the loving-kindness and steadfast fidelity \nmanifest in the life, death, and resurrection of our Savior, \nand bring you at last to the delight of the heavenly banquet, \nwhere he lives and reigns for ever and ever. "
+              ]
+            },
+            {
+              "value": [
+                "God, the holy and undivided Trinity, \nbless, preserve, and keep you, \nand mercifully grant you rich and boundless grace, \nthat you may please God in body and soul. \nGod make you a sign of the loving-kindness and steadfast fidelity \nmanifest in the life, death, and resurrection of our Savior, \nand bring you at last to the delight of the heavenly banquet, \nwhere he lives and reigns for ever and ever."
+              ],
+              "style": "prayer",
+              "type": "text"
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "type": "option"
+        },
+        {
+          "style": "text",
+          "metadata": { "level": 3 },
+          "value": ["The Peace"],
+          "type": "heading"
+        },
+        { "type": "rubric", "value": [""] },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "type": "option",
+          "value": [
+            {
+              "style": "preces",
+              "source": { "api": "", "citation": "", "source": "" },
+              "category": [],
+              "value": [
+                {
+                  "text": "The peace of the Lord be always with you.",
+                  "response": "",
+                  "label": "Presider"
+                },
+                { "text": "And also with you.", "label": "People" }
+              ],
+              "metadata": {},
+              "type": "responsive",
+              "version_label": "The Peace of the Lord"
+            },
+            {
+              "category": [],
+              "version_label": "The Peace of Christ",
+              "metadata": {},
+              "value": [
+                {
+                  "label": "Presider",
+                  "text": "The peace of Christ be always with you.",
+                  "response": ""
+                },
+                { "text": "And also with you.", "label": "People" }
+              ],
+              "source": { "api": "", "citation": "", "source": "" },
+              "style": "preces",
+              "type": "responsive"
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The liturgy continues with the holy Communion. When the Eucharist is not celebrated, the Presider blesses the people. The deacon, or in the absence of a deacon, the Priest, dismisses them."
+          ]
+        },
+        {
+          "metadata": { "level": 3 },
+          "value": ["At the Eucharist"],
+          "type": "heading",
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The liturgy continues with the offertory, at which the couple may present the offerings of bread and wine."
+          ]
+        },
+        {
+          "value": ["The following proper preface may be said"],
+          "type": "rubric"
+        },
+        {
+          "type": "text",
+          "value": [
+            "Because in the giving of two people to each other in faithful love \nyou reveal the joy and abundant life you share  \nwith your Son Jesus Christ and the Holy Spirit."
+          ],
+          "style": "text"
+        },
+        {
+          "type": "rubric",
+          "value": ["The following postcommunion prayer may be said"]
+        },
+        {
+          "source": { "api": "", "source": "", "citation": "" },
+          "value": [
+            "God our strength and joy, \nwe thank you for the communion of our life together, \nfor the example of holy love that you give us in \n___________________________ and ___________________________,\nand for the Sacrament of the Body and Blood  \nof our Savior Jesus Christ. \nGrant that it may renew our hope \nand nourish us for the work you set before us \nto witness to the presence of Christ in the world, \nthrough the power of your Spirit, \nand to the glory of your Name."
+          ],
+          "style": "prayer",
+          "type": "text",
+          "metadata": { "omit_response": false, "omit_label": false }
+        }
+      ],
+      "sharing": {
+        "privacy": "public",
+        "status": "published",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "slug": "the-witnessing-and-blessing-of-a-marriage"
+    }
+  ]
+}
