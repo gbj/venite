@@ -421,7 +421,7 @@
     "day": "5th-epiphany",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "1 Corinthians 2:1-16"
+    "citation": "1 Corinthians 2:1-12,(13-16)"
   },
   {
     "whentype": "year",
@@ -1605,7 +1605,7 @@
     "day": "proper-6",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "Genesis 18:1-15"
+    "citation": "Genesis 18:1-15; (21:1-7)"
   },
   {
     "whentype": "year",
@@ -1629,7 +1629,7 @@
     "day": "proper-6",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Matthew 9:35-10:23"
+    "citation": "Matthew 9:35-10:8,(9-23)"
   },
   {
     "whentype": "year",
@@ -1925,7 +1925,7 @@
     "day": "proper-15",
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
-    "citation": "Matthew 15:10-28"
+    "citation": "Matthew 15:10-20,(21-28)"
   },
   {
     "whentype": "year",
