@@ -95,5 +95,23 @@ describe('parseReference', () => {
       { start: { book: Book.Judith, chapter: 9, verse: 1 }, end: null },
       { start: { book: null, chapter: null, verse: 11 }, end: { book: null, chapter: null, verse: 14 } },
     ]);
+
+    expect(parseReference('Wisdom of Solomon 1:16-2:1')).toEqual([
+      {
+        start: { book: Book.Wisdom, chapter: 1, verse: 16 },
+        end: { book: Book.Wisdom, chapter: 2, verse: 1 },
+      },
+    ]);
+
+    expect(parseReference('Wisdom of Solomon 1:16-2:1,12-22')).toEqual([
+      {
+        start: { book: Book.Wisdom, chapter: 1, verse: 16 },
+        end: { book: Book.Wisdom, chapter: 2, verse: 1 },
+      },
+      {
+        start: { book: Book.Wisdom, chapter: 2, verse: 12 },
+        end: { book: Book.Wisdom, chapter: 2, verse: 22 },
+      },
+    ]);
   });
 });

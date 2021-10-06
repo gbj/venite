@@ -19,6 +19,7 @@ export function parseReference(reference: string): BibleReferenceRange[] {
   let prev: BibleReferenceRange | null = null;
   let bracketOpened: boolean = false;
   for (let part of reference.split(/([,;\[\]])/)) {
+    console.log('\n\npart = ', part);
     if (['', ',', ';', '[', ']'].includes(part.trim())) {
       if (part.trim() == '[') {
         bracketOpened = true;
@@ -48,7 +49,9 @@ function parseSingleReference(
   const BLANK_REF = { book: null, chapter: null, verse: null };
 
   const start = first_half
-    ? queryFromRe(first_half, /([\d\s]*[\w\.]+)\s*(\d+)?:?(\d+)?/, start_partial_structure, null) ?? { ...BLANK_REF }
+    ? queryFromRe(first_half, /([\d\s]*[\w\.]+[a-zA-Z\s]*)\s*(\d+)?:?(\d+)?/, start_partial_structure, null) ?? {
+        ...BLANK_REF,
+      }
     : { ...BLANK_REF };
 
   // fill out the start of the range with the details of the end of the previous range
@@ -74,6 +77,7 @@ function queryFromRe(
 ): BibleReferenceQuery | null {
   let query: BibleReferenceQuery | null = null;
   const parts = reference.trim().match(re);
+
   if (partial_structure) {
     if (parts) {
       // book, chapter, and verse matched
