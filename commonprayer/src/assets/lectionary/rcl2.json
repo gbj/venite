@@ -669,7 +669,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 1:3-6,15-19"
+    "citation": "Ephesians 1:3-6,15-19a"
   },
   {
     "whentype": "year",
@@ -1133,7 +1133,7 @@
     "day": "8th-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 49:8-16"
+    "citation": "Isaiah 49:8-16a"
   },
   {
     "whentype": "year",
@@ -1381,7 +1381,7 @@
     "day": "2nd-lent",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 12:1-4"
+    "citation": "Genesis 12:1-4a"
   },
   {
     "whentype": "year",
@@ -1509,7 +1509,7 @@
     "day": "holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 50:4-9"
+    "citation": "Isaiah 50:4-9a"
   },
   {
     "whentype": "year",
@@ -1749,7 +1749,7 @@
     "day": "wednesday-holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 50:4-9"
+    "citation": "Isaiah 50:4-9a"
   },
   {
     "whentype": "year",
@@ -1781,7 +1781,7 @@
     "day": "wednesday-holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 50:4-9"
+    "citation": "Isaiah 50:4-9a"
   },
   {
     "whentype": "year",
@@ -3493,7 +3493,7 @@
     "day": "2nd-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Acts 2:14,22-32"
+    "citation": "Acts 2:14a,22-32"
   },
   {
     "whentype": "year",
@@ -3525,7 +3525,7 @@
     "day": "3rd-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Acts 2:14,36-41"
+    "citation": "Acts 2:14a,36-41"
   },
   {
     "whentype": "year",
@@ -4125,7 +4125,7 @@
     "day": "trinity-sunday",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Genesis 1:1-2:4"
+    "citation": "Genesis 1:1-2:4a"
   },
   {
     "whentype": "year",
@@ -4229,7 +4229,7 @@
     "day": "proper-3",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 49:8-16"
+    "citation": "Isaiah 49:8-16a"
   },
   {
     "whentype": "year",
@@ -4325,7 +4325,7 @@
     "day": "proper-6",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Exodus 19:2-8"
+    "citation": "Exodus 19:2-8a"
   },
   {
     "whentype": "year",
@@ -4373,7 +4373,7 @@
     "day": "proper-7",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 6:1-11"
+    "citation": "Romans 6:1b-11"
   },
   {
     "whentype": "year",
@@ -4437,7 +4437,7 @@
     "day": "proper-9",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 7:15-25"
+    "citation": "Romans 7:15-25a"
   },
   {
     "whentype": "year",
@@ -4629,7 +4629,7 @@
     "day": "proper-15",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Romans 11:1-2,29-32"
+    "citation": "Romans 11:1-2a,29-32"
   },
   {
     "whentype": "year",
@@ -4853,7 +4853,7 @@
     "day": "proper-22",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Philippians 3:4-14"
+    "citation": "Philippians 3:4b-14"
   },
   {
     "whentype": "year",
@@ -5069,7 +5069,7 @@
     "day": "proper-29",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 95:1-7"
+    "citation": "Psalm 95:1-7a"
   },
   {
     "whentype": "year",
@@ -6621,7 +6621,7 @@
     "day": "proper-19",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 50:4-9"
+    "citation": "Isaiah 50:4-9a"
   },
   {
     "whentype": "year",
