@@ -629,3 +629,9 @@ ion-popover {
   --width: 75% !important;
   --max-width: 650px !important;
 }
+
+/* Hebrew text */
+[lang=he] {
+  --ldf-drop-float: right;
+  --ldf-drop-line-height: 0.4em;
+}

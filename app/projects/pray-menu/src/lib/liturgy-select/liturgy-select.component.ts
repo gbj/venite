@@ -372,7 +372,6 @@ export class LiturgySelectComponent implements OnInit {
         .get("use-black-letter-collects")
         .pipe(first())
         .subscribe((pref) => {
-          console.log("ublc pref?.value = ", pref?.value);
           if (pref?.value === "false") {
             this.useBlackLetterCollect.setValue(false);
           }

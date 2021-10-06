@@ -18,8 +18,15 @@ import {
   Text,
 } from "@venite/ldf";
 
-import { Observable, of, combineLatest } from "rxjs";
-import { filter, map, startWith, switchMap, tap } from "rxjs/operators";
+import { Observable, of, combineLatest, from } from "rxjs";
+import {
+  catchError,
+  filter,
+  map,
+  startWith,
+  switchMap,
+  tap,
+} from "rxjs/operators";
 import {
   DOCUMENT_SERVICE,
   DocumentServiceInterface,
@@ -33,6 +40,7 @@ import {
 import { LiturgyConfig } from "@venite/ng-pray/lib/liturgy-config";
 import { isCompletelyCompiled } from "./is-completely-compiled";
 import { DocumentService } from "../services/document.service";
+import { OsisBibleService } from "../services/osis-bible.service";
 
 const LOADING = new LiturgicalDocument({
   type: "text",
@@ -62,7 +70,8 @@ export class PrayService {
     private lectionaryService: LectionaryServiceInterface,
     @Inject(CANTICLE_TABLE_SERVICE)
     private canticleTableService: CanticleTableServiceInterface,
-    @Inject(BIBLE_SERVICE) private bibleService: BibleServiceInterface
+    @Inject(BIBLE_SERVICE) private bibleService: BibleServiceInterface,
+    private osisBibleService: OsisBibleService
   ) {}
 
   /** Returns the complete and filtered form for a doc within a particular liturgical context
@@ -216,7 +225,8 @@ export class PrayService {
           doc,
           typeof doc.version === "object"
             ? prefs[doc.version.preference]
-            : doc.version
+            : doc.version,
+          prefs["originalLanguages"] == "true"
         );
       }
 
@@ -304,7 +314,6 @@ export class PrayService {
         );
         break;
       case "collect":
-        console.log("prefs.ublc = ", prefs.ublc);
         result = this.documents
           .findDocumentsByCategory(
             ["Collect of the Day"],
@@ -908,9 +917,10 @@ export class PrayService {
   /** Fetches values for Bible readings */
   lookupBibleReading(
     doc: LiturgicalDocument,
-    version: string = "NRSV"
+    version: string = "NRSV",
+    includeOriginal?: boolean
   ): Observable<LiturgicalDocument> {
-    return this.bibleService.getText(doc.citation, version).pipe(
+    const reading$ = this.bibleService.getText(doc.citation, version).pipe(
       startWith(new BibleReading()),
       map(
         (versionWithText) =>
@@ -922,6 +932,27 @@ export class PrayService {
           })
       )
     );
+
+    if (includeOriginal) {
+      const original$ = from(
+        this.osisBibleService.getOriginalText(doc.citation)
+      ).pipe(
+        tap((r) => console.log("original language reading", r)),
+        catchError((e) => {
+          console.warn("includeOriginal error: ", e, doc.citation);
+          return of(null);
+        })
+      );
+      return combineLatest([reading$, original$]).pipe(
+        map(([reading, original]) =>
+          original
+            ? docsToOption([reading, { ...reading, ...original }])
+            : reading
+        )
+      );
+    } else {
+      return reading$;
+    }
   }
 
   /** Finds and inserts an appropriate seasonal antiphon */

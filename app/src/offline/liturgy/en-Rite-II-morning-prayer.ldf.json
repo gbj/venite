@@ -1,141 +1,616 @@
 {
+  "metadata": {
+    "preferences": {
+      "bibleVersion": {
+        "category": "Translations",
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NRSV",
+            "label": "New Revised Standard Version (NRSV)"
+          },
+          {
+            "label": "Common English Bible (CEB)",
+            "value": "CEB",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "ESV",
+            "label": "English Standard Version (ESV)"
+          },
+          {
+            "value": "KJV",
+            "default": false,
+            "label": "King James Version (KJV)",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "key": "bibleVersion",
+        "label": "Bible Version"
+      },
+      "psalmCycle": {
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Daily Office Lectionary",
+            "value": "bcp1979_daily_psalms"
+          },
+          {
+            "value": "bcp1979_30day_psalter",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "30-day Cycle"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "RCL (Track 1)",
+            "value": "rclsundayTrack1"
+          },
+          {
+            "label": "RCL (Track 2)",
+            "metadata": { "alternateYear": false },
+            "value": "rclsunday",
+            "default": false
+          }
+        ],
+        "key": "psalmCycle",
+        "label": "Psalm Cycle",
+        "category": "Cycles"
+      },
+      "psalterVersion": {
+        "category": "Translations",
+        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology.",
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "bcp1979",
+            "label": "1979 Book of Common Prayer"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "ip",
+            "label": "Inclusive Psalter",
+            "default": false
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Coverdale (1662 BCP)",
+            "value": "coverdale"
+          }
+        ],
+        "key": "psalterVersion",
+        "label": "Psalter Version"
+      },
+      "angelus": {
+        "key": "angelus",
+        "label": "Angelus",
+        "category": "Supplemental Devotions",
+        "options": [
+          {
+            "label": "—",
+            "metadata": { "alternateYear": false },
+            "value": "no",
+            "default": false
+          },
+          {
+            "label": "Before the Office",
+            "value": "before",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "value": "after",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "After the Office"
+          }
+        ]
+      },
+      "insertGloria": {
+        "category": "Advanced",
+        "label": "Insert Gloria Patri after each Psalm",
+        "options": [
+          {
+            "value": "false",
+            "label": "No",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "true",
+            "label": "Yes"
+          }
+        ],
+        "key": "insertGloria"
+      },
+      "readingB": {
+        "options": [
+          {
+            "label": "—",
+            "value": "none",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "value": "first_reading",
+            "metadata": { "alternateYear": false },
+            "label": "OT/First Reading",
+            "default": false
+          },
+          {
+            "label": "Epistle/Second Reading",
+            "value": "second_reading",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "Gospel",
+            "default": true,
+            "value": "gospel",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "key": "readingB",
+        "label": "Second Reading",
+        "category": "Readings"
+      },
+      "andrewes": {
+        "key": "andrewes",
+        "category": "Supplemental Devotions",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "—",
+            "value": "noo"
+          },
+          {
+            "default": false,
+            "label": "After the Office",
+            "metadata": { "alternateYear": false },
+            "value": "after"
+          },
+          {
+            "default": false,
+            "value": "after",
+            "metadata": { "alternateYear": false },
+            "label": "After the Office"
+          }
+        ],
+        "label": "Lancelot Andrewes’s Private Prayers"
+      },
+      "lectionary": {
+        "label": "Lectionary",
+        "category": "Cycles",
+        "options": [
+          {
+            "value": "bcp1979_daily_office",
+            "default": false,
+            "label": "Daily Office Lectionary",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "rclsundayTrack1",
+            "default": false,
+            "label": "RCL Track 1"
+          },
+          {
+            "default": false,
+            "label": "RCL Track 2",
+            "metadata": { "alternateYear": false },
+            "value": "rclsunday"
+          }
+        ],
+        "key": "lectionary"
+      },
+      "readingC": {
+        "label": "Third Reading",
+        "key": "readingC",
+        "options": [
+          {
+            "label": "—",
+            "default": true,
+            "value": "none",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "first_reading",
+            "metadata": { "alternateYear": false },
+            "label": "OT/First Reading",
+            "default": false
+          },
+          {
+            "label": "Epistle/Second Reading",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "second_reading"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "gospel",
+            "label": "Gospel",
+            "default": false
+          }
+        ],
+        "category": "Readings"
+      },
+      "readingA": {
+        "key": "readingA",
+        "category": "Readings",
+        "label": "First Reading",
+        "options": [
+          {
+            "default": true,
+            "metadata": { "alternateYear": false },
+            "label": "OT/First Reading",
+            "value": "first_reading"
+          },
+          {
+            "value": "second_reading",
+            "label": "Epistle/Second Reading",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "gospel",
+            "label": "Gospel",
+            "metadata": { "alternateYear": false },
+            "default": false
+          }
+        ]
+      },
+      "canticleTable": {
+        "label": "Canticle Table",
+        "options": [
+          {
+            "label": "1979 Table of Suggested Canticles",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "bcp1979"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "tdb",
+            "default": false,
+            "label": "Te Deum/Benedictus"
+          },
+          {
+            "value": "eow",
+            "metadata": { "alternateYear": false },
+            "label": "Enriching Our Worship",
+            "default": false
+          },
+          {
+            "label": "Order of St. Julian of Norwich",
+            "value": "ojn",
+            "metadata": { "alternateYear": false },
+            "default": false
+          }
+        ],
+        "key": "canticleTable",
+        "category": "Cycles"
+      },
+      "veniteGloria": {
+        "category": "Advanced",
+        "label": "Include Gloria Patri in the Venite/Jubilate",
+        "options": [
+          {
+            "default": true,
+            "metadata": { "alternateYear": false },
+            "label": "No",
+            "value": "no"
+          },
+          {
+            "label": "Yes",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "yes"
+          }
+        ],
+        "key": "veniteGloria"
+      },
+      "sermon": {
+        "options": [
+          {
+            "value": "none",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "—"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "after_office",
+            "label": "After the Office"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "After the Readings",
+            "value": "after_readings"
+          },
+          {
+            "default": false,
+            "label": "After the Collects",
+            "metadata": { "alternateYear": false },
+            "value": "after_collects"
+          }
+        ],
+        "key": "sermon",
+        "label": "Sermon",
+        "category": "Advanced"
+      },
+      "originalLanguages": {
+        "label": "Include Original-Language Biblical Texts",
+        "options": [
+          {
+            "default": false,
+            "value": "false",
+            "label": "No",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "default": false,
+            "label": "Yes",
+            "metadata": { "alternateYear": false },
+            "value": "true"
+          }
+        ],
+        "key": "originalLanguages",
+        "category": "Translations"
+      },
+      "omitForeOffice": {
+        "category": "Advanced",
+        "key": "omitForeOffice",
+        "options": [
+          {
+            "default": false,
+            "label": "No",
+            "metadata": { "alternateYear": false },
+            "value": "no"
+          },
+          {
+            "label": "Yes",
+            "value": "yes",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "Omit Fore-Office"
+      }
+    },
+    "special_preferences": {
+      "palms": {
+        "label": "Palms",
+        "key": "palms",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "—",
+            "value": "no"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "before",
+            "label": "Before the Office"
+          },
+          {
+            "label": "Before the Office",
+            "default": false,
+            "value": "before",
+            "metadata": { "alternateYear": false }
+          }
+        ]
+      },
+      "insertGloria": ""
+    },
+    "supplement": false,
+    "evening": false,
+    "liturgyversions": ["bcp1979", "eow", "eow", "eow"]
+  },
+  "version": "Rite-II",
   "hidden": false,
+  "sharing": {
+    "status": "published",
+    "privacy": "public",
+    "organization": "venite",
+    "collaborators": [],
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+  },
+  "type": "liturgy",
   "value": [
     {
-      "style": "text",
-      "metadata": { "level": 1 },
       "type": "heading",
+      "value": ["Morning Prayer"],
       "hidden": false,
-      "value": ["Morning Prayer"]
+      "metadata": { "level": 1 },
+      "style": "text"
     },
     {
-      "type": "heading",
+      "value": [""],
       "metadata": { "level": 1 },
       "style": "date",
+      "hidden": false,
+      "type": "heading"
+    },
+    {
       "value": [""],
+      "style": "day",
+      "type": "heading",
+      "metadata": { "level": 1 },
       "hidden": false
     },
     {
-      "hidden": false,
-      "value": [""],
-      "type": "heading",
-      "metadata": { "level": 1 },
-      "style": "day"
-    },
-    {
-      "metadata": { "liturgyversions": [] },
+      "lookup": { "type": "slug" },
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public"
+      },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "angelus", "value": "before", "is": true } }
+        ]
+      },
+      "language": "en",
       "type": "liturgy",
-      "source": { "api": "", "citation": "", "source": "" },
+      "label": "The Angelus",
+      "metadata": { "liturgyversions": [] },
+      "source": { "source": "", "citation": "", "api": "" },
       "slug": "the-angelus",
       "version": "Rite-II",
       "lastRevision": 61,
+      "hidden": false
+    },
+    {
+      "version": "Rite-II",
+      "slug": "palms",
+      "hidden": false,
+      "lastRevision": 61,
+      "label": "The Angelus",
+      "source": { "source": "", "api": "", "citation": "" },
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "organization": "venite",
+        "privacy": "public",
+        "collaborators": []
+      },
       "language": "en",
       "condition": {
+        "mode": "and",
         "conditions": [
-          { "preference": { "value": "before", "is": true, "key": "angelus" } }
-        ],
-        "mode": "and"
+          { "preference": { "is": true, "value": "before", "key": "palms" } }
+        ]
       },
-      "sharing": {
-        "status": "published",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": [],
-        "organization": "venite",
-        "privacy": "public"
-      },
-      "label": "The Angelus",
-      "hidden": false,
+      "metadata": { "liturgyversions": [] },
+      "type": "liturgy",
       "lookup": { "type": "slug" }
     },
     {
-      "metadata": { "liturgyversions": [] },
-      "source": { "api": "", "citation": "", "source": "" },
-      "sharing": {
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "organization": "venite",
-        "status": "published",
-        "collaborators": []
-      },
-      "lookup": { "type": "slug" },
-      "type": "liturgy",
-      "language": "en",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "key": "palms", "is": true, "value": "before" } }
-        ]
-      },
+      "category": ["Opening Sentence"],
+      "lookup": { "filter": "seasonal", "rotate": true, "type": "category" },
+      "type": "bible-reading",
+      "style": "short",
       "hidden": false,
-      "version": "Rite-II",
-      "lastRevision": 61,
-      "label": "The Angelus",
-      "slug": "palms"
-    },
-    {
-      "lookup": { "type": "category", "rotate": true, "filter": "seasonal" },
       "condition": {
         "mode": "and",
         "conditions": [
           {
-            "preference": { "value": "no", "key": "omitForeOffice", "is": true }
+            "preference": { "value": "no", "is": true, "key": "omitForeOffice" }
           }
         ]
-      },
-      "hidden": false,
-      "style": "short",
-      "type": "bible-reading",
-      "category": ["Opening Sentence"]
+      }
     },
     {
-      "metadata": { "editor_selected": 1, "selected": 1 },
+      "slug": "confession_intro",
       "condition": {
         "conditions": [
           {
-            "preference": { "value": "no", "key": "omitForeOffice", "is": true }
+            "preference": { "is": true, "key": "omitForeOffice", "value": "no" }
           }
         ],
         "mode": "and"
       },
-      "hidden": false,
+      "type": "option",
+      "source": { "source": "bcp1979", "citation": "p. 79", "api": "" },
       "value": [
         {
-          "style": "text",
-          "version_label": "Long",
-          "hidden": false,
-          "source": { "citation": "", "source": "", "api": "" },
-          "type": "text",
           "metadata": {},
           "category": [],
-          "label": "Confession of Sin",
           "value": [
             "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
-          ]
+          ],
+          "hidden": false,
+          "label": "Confession of Sin",
+          "version_label": "Long",
+          "type": "text",
+          "style": "text",
+          "source": { "api": "", "citation": "", "source": "" }
         },
         {
           "label": "Confession of Sin",
-          "category": [],
-          "hidden": false,
-          "style": "text",
-          "metadata": {},
           "type": "text",
-          "source": { "api": "", "source": "", "citation": "" },
+          "hidden": false,
+          "metadata": {},
+          "value": ["Let us confess our sins against God and our neighbor."],
           "version_label": "Short",
-          "value": ["Let us confess our sins against God and our neighbor."]
+          "category": [],
+          "source": { "citation": "", "api": "", "source": "" },
+          "style": "text"
         }
       ],
-      "type": "option",
-      "source": { "source": "bcp1979", "citation": "p. 79", "api": "" },
-      "slug": "confession_intro",
-      "category": []
+      "hidden": false,
+      "category": [],
+      "metadata": { "editor_selected": 1, "selected": 1 }
     },
     {
+      "type": "rubric",
       "hidden": false,
+      "condition": {
+        "conditions": [
+          {
+            "preference": { "value": "no", "is": true, "key": "omitForeOffice" }
+          }
+        ],
+        "mode": "and"
+      },
       "value": [
         "Silence may be kept.",
         "Officiant and People together, all kneeling"
+      ]
+    },
+    {
+      "source": { "citation": "", "source": "", "api": "" },
+      "slug": "confession",
+      "category": [],
+      "value": [
+        {
+          "category": [],
+          "metadata": { "omit_response": false },
+          "display_format": "unison",
+          "version_label": "Rite II",
+          "source": { "source": "", "api": "", "citation": "" },
+          "type": "text",
+          "hidden": false,
+          "style": "prayer",
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ]
+        },
+        {
+          "source": { "source": "", "citation": "", "api": "" },
+          "display_format": "unison",
+          "value": [
+            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
+          ],
+          "metadata": { "omit_response": false },
+          "version_label": "EOW",
+          "type": "text",
+          "style": "text",
+          "hidden": false,
+          "category": []
+        }
       ],
-      "type": "rubric",
+      "hidden": false,
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
       "condition": {
         "conditions": [
           {
@@ -148,199 +623,161 @@
     {
       "value": [
         {
-          "value": [
-            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
-          ],
-          "display_format": "unison",
-          "source": { "citation": "", "source": "", "api": "" },
-          "version_label": "Rite II",
-          "hidden": false,
           "type": "text",
-          "style": "prayer",
-          "category": [],
-          "metadata": { "omit_response": false }
-        },
-        {
-          "style": "text",
-          "value": [
-            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
-          ],
-          "display_format": "unison",
-          "source": { "citation": "", "source": "", "api": "" },
-          "version_label": "EOW",
-          "hidden": false,
-          "category": [],
-          "metadata": { "omit_response": false },
-          "type": "text"
-        }
-      ],
-      "type": "option",
-      "metadata": { "selected": 0, "editor_selected": 0 },
-      "source": { "source": "", "citation": "", "api": "" },
-      "condition": {
-        "conditions": [
-          {
-            "preference": { "key": "omitForeOffice", "value": "no", "is": true }
-          }
-        ],
-        "mode": "and"
-      },
-      "slug": "confession",
-      "category": [],
-      "hidden": false
-    },
-    {
-      "metadata": { "editor_selected": 0, "selected": 0 },
-      "slug": "absolution",
-      "type": "option",
-      "source": { "source": "", "citation": "", "api": "" },
-      "value": [
-        {
-          "type": "text",
-          "source": { "source": "", "api": "", "citation": "" },
-          "category": [],
-          "metadata": {},
+          "source": { "api": "", "source": "", "citation": "" },
           "version_label": "Lay/Deacon",
-          "style": "prayer",
+          "metadata": {},
           "value": [
             "Almighty God have mercy on us, forgive us all our sins through our Lord Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
           ],
-          "hidden": false
-        },
-        {
-          "source": { "citation": "", "api": "", "source": "" },
-          "style": "prayer",
-          "metadata": {},
-          "version_label": "Priest",
           "category": [],
           "hidden": false,
+          "style": "prayer"
+        },
+        {
+          "category": [],
+          "version_label": "Priest",
+          "metadata": {},
+          "hidden": false,
+          "source": { "api": "", "source": "", "citation": "" },
           "value": [
             "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
           ],
+          "style": "prayer",
           "type": "text"
         },
         {
-          "version_label": "EOW",
+          "style": "prayer",
           "value": [
             "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
           ],
-          "category": [],
-          "metadata": {},
+          "hidden": false,
           "source": { "api": "", "citation": "", "source": "" },
           "type": "text",
-          "hidden": false,
-          "style": "prayer"
+          "metadata": {},
+          "version_label": "EOW",
+          "category": []
         }
       ],
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "slug": "absolution",
       "hidden": false,
+      "type": "option",
+      "category": [],
+      "source": { "api": "", "citation": "", "source": "" },
       "condition": {
-        "mode": "and",
         "conditions": [
           {
-            "preference": { "key": "omitForeOffice", "is": true, "value": "no" }
+            "preference": { "is": true, "value": "no", "key": "omitForeOffice" }
           }
-        ]
-      },
-      "category": []
+        ],
+        "mode": "and"
+      }
     },
     {
-      "hidden": false,
-      "type": "heading",
       "metadata": { "level": 2 },
-      "value": ["Invitatory and Psalter"],
-      "source": { "source": "", "api": "", "citation": "" },
+      "source": { "api": "", "citation": "", "source": "" },
+      "category": [],
+      "type": "heading",
+      "hidden": false,
       "style": "text",
-      "category": []
+      "value": ["Invitatory and Psalter"]
     },
     {
-      "source": { "citation": "", "api": "", "source": "" },
-      "metadata": {},
+      "category": [],
+      "hidden": false,
+      "source": { "api": "", "citation": "", "source": "" },
       "value": ["All stand"],
       "type": "rubric",
-      "category": [],
-      "hidden": false
+      "metadata": {}
     },
     {
+      "source": { "citation": "p. 80", "source": "bcp1979", "api": "" },
+      "hidden": false,
       "value": [
         {
+          "label": "Officiant",
           "text": "Lord, open our lips.",
-          "label": "Officiant"
+          "response": ""
         },
         {
           "label": "People",
           "text": "And our mouth shall proclaim your praise."
         }
       ],
-      "hidden": false,
-      "type": "responsive",
-      "metadata": {},
-      "source": { "citation": "p. 80", "source": "bcp1979", "api": "" },
       "style": "preces",
+      "category": [],
+      "metadata": {},
+      "type": "responsive"
+    },
+    {
+      "slug": "gloria-patri",
+      "hidden": false,
+      "source": { "api": "", "source": "", "citation": "" },
+      "version": "bcp1979",
+      "type": "refrain",
+      "lookup": { "allow_multiple": false, "rotate": false, "type": "slug" },
+      "style": "gloria",
+      "metadata": {},
       "category": []
     },
     {
-      "lookup": { "rotate": false, "allow_multiple": false, "type": "slug" },
-      "style": "gloria",
-      "category": [],
-      "version": "bcp1979",
-      "slug": "gloria-patri",
-      "type": "refrain",
-      "hidden": false,
-      "source": { "citation": "", "source": "", "api": "" },
-      "metadata": {}
-    },
-    {
-      "style": "text",
-      "value": ["Alleluia."],
       "type": "text",
+      "style": "text",
+      "hidden": false,
+      "value": ["Alleluia."],
       "condition": {
+        "mode": "and",
         "conditions": [
-          { "season": { "except": ["Lent", "HolyWeek"], "only": [] } }
-        ],
-        "mode": "and"
-      },
-      "hidden": false
+          { "season": { "only": [], "except": ["Lent", "HolyWeek"] } }
+        ]
+      }
     },
     {
-      "source": { "source": "", "citation": "", "api": "" },
-      "hidden": false,
-      "category": [],
-      "type": "option",
-      "condition": {
-        "conditions": [
-          {
-            "preference": { "key": "veniteGloria", "value": "yes", "is": true }
-          }
-        ],
-        "mode": "and"
-      },
       "value": [
         {
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 83",
+            "source": "bcp1979"
+          },
           "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"],
+                  "except": []
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "lastRevision": 0,
+          "language": "en",
+          "slug": "pascha_nostrum",
+          "category": ["Invitatory"],
+          "hidden": false,
           "sharing": {
-            "organization": "venite",
             "privacy": "public",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "collaborators": [],
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "status": "published"
           },
-          "version_label": null,
           "type": "psalm",
-          "version": "bcp1979",
-          "style": "invitatory",
-          "category": ["Invitatory"],
           "value": [
             {
               "value": [
                 {
+                  "halfverse": "therefore let us keep the feast,",
                   "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *",
-                  "type": "psalm-verse",
-                  "halfverse": "therefore let us keep the feast,"
+                  "type": "psalm-verse"
                 },
                 {
                   "type": "psalm-verse",
-                  "verse": "Not with the old leaven, the leaven of malice and evil, *",
-                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia."
+                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
+                  "verse": "Not with the old leaven, the leaven of malice and evil, *"
                 }
               ],
               "type": "psalm-section"
@@ -349,14 +786,14 @@
               "type": "psalm-section",
               "value": [
                 {
-                  "halfverse": "death no longer has dominion over him.",
                   "type": "psalm-verse",
+                  "halfverse": "death no longer has dominion over him.",
                   "verse": "Christ being raised from the dead will never die again; *"
                 },
                 {
-                  "verse": "The death that he died, he died to sin, once for all; *",
+                  "type": "psalm-verse",
                   "halfverse": "but the life he lives, he lives to God.",
-                  "type": "psalm-verse"
+                  "verse": "The death that he died, he died to sin, once for all; *"
                 },
                 {
                   "verse": "So also consider yourselves dead to sin, *",
@@ -368,374 +805,13 @@
             {
               "value": [
                 {
-                  "verse": "Christ has been raised from the dead, *",
+                  "type": "psalm-verse",
                   "halfverse": "the first fruits of those who have fallen asleep.",
-                  "type": "psalm-verse"
+                  "verse": "Christ has been raised from the dead, *"
                 },
                 {
-                  "type": "psalm-verse",
                   "verse": "For since by a man came death, * ",
-                  "halfverse": "by a man has come also the resurrection of the dead."
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "so also in Christ shall all be made alive. Alleluia.",
-                  "verse": "For as in Adam all die, *"
-                }
-              ],
-              "type": "psalm-section"
-            }
-          ],
-          "slug": "pascha_nostrum",
-          "hidden": false,
-          "label": "Christ our Passover",
-          "lastRevision": 0,
-          "metadata": {
-            "omit_gloria": true,
-            "omit_antiphon": false,
-            "localname": "Christ our Passover",
-            "number": null,
-            "latinname": "Pascha Nostrum"
-          },
-          "source": {
-            "citation": "p. 83",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
-          "language": "en",
-          "condition": {
-            "conditions": [
-              {
-                "season": {
-                  "except": [],
-                  "only": ["Easter", "Ascension", "Pentecost"]
-                }
-              }
-            ],
-            "mode": "and"
-          }
-        },
-        {
-          "hidden": false,
-          "citation": "Psalm 95:1-7",
-          "version": "bcp1979",
-          "style": "invitatory",
-          "value": [
-            {
-              "value": [
-                {
-                  "verse": "Come, let us sing to the Lord; *",
-                  "type": "psalm-verse",
-                  "halfverse": "let us shout for joy to the Rock of our salvation."
-                },
-                {
-                  "verse": "Let us come before his presence with thanksgiving *",
-                  "halfverse": "and raise a loud shout to him with psalms.",
-                  "type": "psalm-verse"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and a great King above all gods.",
-                  "verse": "For the Lord is a great God, *"
-                },
-                {
-                  "halfverse": "and the heights of the hills are his also.",
-                  "type": "psalm-verse",
-                  "verse": "In his hand are the caverns of the earth, *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and his hands have molded the dry land.",
-                  "verse": "The sea is his, for he made it, *"
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "verse": "Come, let us bow down, and bend the knee, *",
-                  "type": "psalm-verse",
-                  "halfverse": "and kneel before the Lord our Maker."
-                },
-                {
-                  "halfverse": "Oh, that today you would hearken to his voice!",
-                  "type": "psalm-verse",
-                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *"
-                }
-              ]
-            }
-          ],
-          "label": "Venite",
-          "sharing": {
-            "status": "published",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "organization": "venite",
-            "collaborators": []
-          },
-          "version_label": "Venite (BCP)",
-          "slug": "venite",
-          "type": "psalm",
-          "source": {
-            "citation": "p. 82",
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api"
-          },
-          "category": ["Invitatory"],
-          "language": "en",
-          "condition": {
-            "mode": "or",
-            "conditions": [
-              {
-                "preference": {
-                  "is": false,
-                  "value": "bcp1979_30day_psalter",
-                  "key": "psalmCycle"
-                }
-              },
-              { "day_of_month": { "neq": "19" } }
-            ]
-          },
-          "metadata": {
-            "gloria": {
-              "category": [null],
-              "sharing": {
-                "collaborators": [],
-                "status": "published",
-                "organization": "venite",
-                "privacy": "public",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-              },
-              "hidden": false,
-              "version_label": "Rite II",
-              "language": "en",
-              "citation": null,
-              "type": "refrain",
-              "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "label": null,
-              "style": "gloria",
-              "slug": "gloria-patri",
-              "version": "bcp1979"
-            },
-            "latinname": null,
-            "omit_gloria": false,
-            "localname": "Venite",
-            "insert_seasonal_antiphon": true,
-            "omit_antiphon": false,
-            "number": null
-          }
-        },
-        {
-          "version": "bcp1979",
-          "language": "en",
-          "source": {
-            "citation": "p. 82",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
-          "metadata": {
-            "number": null,
-            "latinname": null,
-            "insert_seasonal_antiphon": true,
-            "localname": "Jubilate",
-            "gloria": {
-              "hidden": false,
-              "type": "refrain",
-              "style": "gloria",
-              "version_label": "Rite II",
-              "slug": "gloria-patri",
-              "sharing": {
-                "status": "published",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-                "collaborators": [],
-                "privacy": "public",
-                "organization": "venite"
-              },
-              "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "citation": null,
-              "category": [null],
-              "version": "bcp1979",
-              "label": null,
-              "language": "en"
-            },
-            "omit_gloria": false,
-            "omit_antiphon": false
-          },
-          "value": [
-            {
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
-                  "verse": "Be joyful in the Lord, all you lands; *"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "verse": "Know this: The Lord himself is God; *",
-                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture."
-                }
-              ]
-            },
-            {
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
-                  "halfverse": "give thanks to him and call upon his Name."
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
-                  "halfverse": "and his faithfulness endures from age to age."
-                }
-              ],
-              "type": "psalm-section"
-            },
-            { "value": [], "type": "psalm-section" }
-          ],
-          "type": "psalm",
-          "version_label": "Jubilate (BCP)",
-          "hidden": false,
-          "sharing": {
-            "collaborators": [],
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "organization": "venite",
-            "privacy": "public",
-            "status": "published"
-          },
-          "category": ["Invitatory"],
-          "style": "invitatory",
-          "slug": "jubilate",
-          "label": "Jubilate",
-          "citation": "Psalm 100"
-        },
-        {
-          "condition": {
-            "conditions": [
-              {
-                "preference": {
-                  "value": "bcp1979_30day_psalter",
-                  "is": false,
-                  "key": "psalmCycle"
-                }
-              },
-              { "day_of_month": { "neq": "19" } }
-            ],
-            "mode": "or"
-          },
-          "label": "Psalm 95",
-          "language": "en",
-          "citation": null,
-          "hidden": false,
-          "sharing": {
-            "privacy": "public",
-            "organization": "venite",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "collaborators": [],
-            "status": "published"
-          },
-          "style": "psalm",
-          "category": ["Psalm"],
-          "slug": "psalm_95",
-          "metadata": {
-            "omit_gloria": false,
-            "latinname": "Venite, exultemus",
-            "omit_antiphon": false,
-            "number": "95",
-            "localname": "Psalm 95"
-          },
-          "source": {
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 724"
-          },
-          "version": "bcp1979",
-          "lookup": { "type": "slug" },
-          "type": "psalm",
-          "version_label": "Ps. 95 (BCP)"
-        }
-      ],
-      "metadata": { "selected": 0, "editor_selected": 0 }
-    },
-    {
-      "value": [
-        {
-          "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
-          "version": "bcp1979",
-          "language": "en",
-          "label": "Christ our Passover",
-          "hidden": false,
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *",
-                  "type": "psalm-verse",
-                  "halfverse": "therefore let us keep the feast,"
-                },
-                {
-                  "verse": "Not with the old leaven, the leaven of malice and evil, *",
-                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
-                  "type": "psalm-verse"
-                }
-              ]
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "death no longer has dominion over him.",
-                  "verse": "Christ being raised from the dead will never die again; *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "but the life he lives, he lives to God.",
-                  "verse": "The death that he died, he died to sin, once for all; *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "verse": "So also consider yourselves dead to sin, *",
-                  "halfverse": "and alive to God in Jesus Christ our Lord. Alleluia."
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "verse": "Christ has been raised from the dead, *",
-                  "halfverse": "the first fruits of those who have fallen asleep.",
-                  "type": "psalm-verse"
-                },
-                {
                   "halfverse": "by a man has come also the resurrection of the dead.",
-                  "verse": "For since by a man came death, * ",
                   "type": "psalm-verse"
                 },
                 {
@@ -743,63 +819,71 @@
                   "verse": "For as in Adam all die, *",
                   "halfverse": "so also in Christ shall all be made alive. Alleluia."
                 }
-              ]
+              ],
+              "type": "psalm-section"
             }
           ],
-          "category": ["Invitatory"],
           "metadata": {
-            "latinname": "Pascha Nostrum",
-            "localname": "Christ our Passover",
             "omit_antiphon": false,
+            "latinname": "Pascha Nostrum",
             "omit_gloria": true,
+            "localname": "Christ our Passover",
             "number": null
           },
-          "source": {
-            "source": "bcp1979",
-            "citation": "p. 83",
-            "api": "https://www.venite.app/api"
-          },
-          "type": "psalm",
-          "slug": "pascha_nostrum",
+          "version": "bcp1979",
+          "label": "Christ our Passover",
           "version_label": null,
-          "condition": {
-            "conditions": [
-              {
-                "season": {
-                  "except": [],
-                  "only": ["Easter", "Ascension", "Pentecost"]
-                }
-              }
-            ],
-            "mode": "and"
-          },
-          "lastRevision": 0,
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "collaborators": [],
-            "privacy": "public",
-            "status": "published",
-            "organization": "venite"
-          },
           "style": "invitatory"
         },
         {
-          "type": "psalm",
-          "source": {
-            "source": "bcp1979",
-            "api": "https://www.venite.app/api",
-            "citation": "p. 82"
-          },
           "version": "bcp1979",
-          "language": "en",
+          "citation": "Psalm 95:1-7",
+          "type": "psalm",
+          "category": ["Invitatory"],
+          "metadata": {
+            "omit_antiphon": false,
+            "number": null,
+            "gloria": {
+              "slug": "gloria-patri",
+              "version": "bcp1979",
+              "label": null,
+              "category": [null],
+              "version_label": "Rite II",
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "hidden": false,
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite"
+              },
+              "type": "refrain"
+            },
+            "latinname": null,
+            "insert_seasonal_antiphon": true,
+            "omit_gloria": false,
+            "localname": "Venite"
+          },
           "style": "invitatory",
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 82",
+            "source": "bcp1979"
+          },
           "condition": {
             "mode": "or",
             "conditions": [
               {
                 "preference": {
-                  "key": "psalmCycle",
                   "is": false,
+                  "key": "psalmCycle",
                   "value": "bcp1979_30day_psalter"
                 }
               },
@@ -807,32 +891,16 @@
             ]
           },
           "version_label": "Venite (BCP)",
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "organization": "venite",
-            "status": "published",
-            "collaborators": []
-          },
-          "label": "Venite",
           "hidden": false,
-          "slug": "venite",
-          "metadata": {
-            "omit_antiphon": false,
-            "localname": "Venite",
-            "latinname": null,
-            "number": null,
-            "omit_gloria": true,
-            "insert_seasonal_antiphon": true
-          },
-          "category": ["Invitatory"],
-          "citation": "Psalm 95:1-7",
+          "language": "en",
+          "label": "Venite",
           "value": [
             {
+              "type": "psalm-section",
               "value": [
                 {
-                  "halfverse": "let us shout for joy to the Rock of our salvation.",
                   "verse": "Come, let us sing to the Lord; *",
+                  "halfverse": "let us shout for joy to the Rock of our salvation.",
                   "type": "psalm-verse"
                 },
                 {
@@ -840,79 +908,71 @@
                   "type": "psalm-verse",
                   "halfverse": "and raise a loud shout to him with psalms."
                 }
-              ],
-              "type": "psalm-section"
+              ]
             },
-            {
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and a great King above all gods.",
-                  "verse": "For the Lord is a great God, *"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and the heights of the hills are his also.",
-                  "verse": "In his hand are the caverns of the earth, *"
-                },
-                {
-                  "halfverse": "and his hands have molded the dry land.",
-                  "verse": "The sea is his, for he made it, *",
-                  "type": "psalm-verse"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "and kneel before the Lord our Maker.",
-                  "verse": "Come, let us bow down, and bend the knee, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
-                  "type": "psalm-verse",
-                  "halfverse": "Oh, that today you would hearken to his voice!"
-                }
-              ],
-              "type": "psalm-section"
-            }
-          ]
-        },
-        {
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "organization": "venite",
-            "privacy": "public",
-            "collaborators": [],
-            "status": "published"
-          },
-          "type": "psalm",
-          "source": {
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979",
-            "citation": "p. 82"
-          },
-          "label": "Jubilate",
-          "slug": "jubilate",
-          "value": [
             {
               "type": "psalm-section",
               "value": [
                 {
+                  "halfverse": "and a great King above all gods.",
                   "type": "psalm-verse",
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
-                  "verse": "Be joyful in the Lord, all you lands; *"
+                  "verse": "For the Lord is a great God, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also."
+                },
+                {
+                  "halfverse": "and his hands have molded the dry land.",
+                  "type": "psalm-verse",
+                  "verse": "The sea is his, for he made it, *"
                 }
               ]
             },
             {
               "value": [
                 {
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the Lord our Maker.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "Oh, that today you would hearken to his voice!",
                   "type": "psalm-verse",
-                  "verse": "Know this: The Lord himself is God; *",
-                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture."
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "slug": "venite",
+          "sharing": {
+            "status": "published",
+            "collaborators": [],
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public"
+          }
+        },
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Be joyful in the Lord, all you lands; *",
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture.",
+                  "verse": "Know this: The Lord himself is God; *"
                 }
               ],
               "type": "psalm-section"
@@ -931,101 +991,483 @@
               "type": "psalm-section",
               "value": [
                 {
-                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
                   "type": "psalm-verse",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
                   "halfverse": "and his faithfulness endures from age to age."
                 }
               ]
             },
-            { "value": [], "type": "psalm-section" }
+            { "type": "psalm-section", "value": [] }
           ],
-          "style": "invitatory",
-          "version": "bcp1979",
+          "version_label": "Jubilate (BCP)",
           "language": "en",
-          "category": ["Invitatory"],
+          "label": "Jubilate",
+          "type": "psalm",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "organization": "venite",
+            "collaborators": [],
+            "status": "published"
+          },
           "metadata": {
-            "localname": "Jubilate",
-            "insert_seasonal_antiphon": true,
+            "omit_gloria": false,
+            "gloria": {
+              "version": "bcp1979",
+              "style": "gloria",
+              "slug": "gloria-patri",
+              "label": null,
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "privacy": "public"
+              },
+              "category": [null],
+              "citation": null,
+              "version_label": "Rite II",
+              "language": "en",
+              "hidden": false,
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "type": "refrain"
+            },
             "latinname": null,
             "number": null,
+            "insert_seasonal_antiphon": true,
             "omit_antiphon": false,
-            "omit_gloria": true
+            "localname": "Jubilate"
           },
+          "style": "invitatory",
+          "citation": "Psalm 100",
+          "version": "bcp1979",
+          "category": ["Invitatory"],
+          "slug": "jubilate",
           "hidden": false,
-          "version_label": "Jubilate (BCP)",
-          "citation": "Psalm 100"
+          "source": {
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979",
+            "citation": "p. 82"
+          }
         },
         {
-          "slug": "psalm_95",
           "version_label": "Ps. 95 (BCP)",
-          "version": "bcp1979",
-          "hidden": false,
           "sharing": {
-            "organization": "venite",
+            "collaborators": [],
             "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "privacy": "public",
             "status": "published",
-            "collaborators": []
+            "organization": "venite"
           },
-          "label": "Psalm 95",
-          "lookup": { "type": "slug" },
-          "citation": null,
-          "style": "psalm",
+          "category": ["Psalm"],
           "condition": {
-            "mode": "or",
             "conditions": [
               {
                 "preference": {
-                  "value": "bcp1979_30day_psalter",
                   "key": "psalmCycle",
+                  "value": "bcp1979_30day_psalter",
                   "is": false
                 }
               },
               { "day_of_month": { "neq": "19" } }
-            ]
+            ],
+            "mode": "or"
           },
-          "category": ["Psalm"],
+          "type": "psalm",
+          "style": "psalm",
+          "version": "bcp1979",
+          "slug": "psalm_95",
           "metadata": {
-            "number": "95",
-            "omit_gloria": true,
-            "omit_antiphon": false,
             "localname": "Psalm 95",
-            "latinname": "Venite, exultemus"
+            "number": "95",
+            "latinname": "Venite, exultemus",
+            "omit_gloria": false,
+            "omit_antiphon": false
           },
           "language": "en",
+          "label": "Psalm 95",
+          "source": {
+            "citation": "p. 724",
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979"
+          },
+          "citation": null,
+          "lookup": { "type": "slug" },
+          "hidden": false
+        }
+      ],
+      "hidden": false,
+      "metadata": { "editor_selected": 1, "selected": 1 },
+      "category": [],
+      "type": "option",
+      "source": { "api": "", "source": "", "citation": "" },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": { "key": "veniteGloria", "is": true, "value": "yes" }
+          }
+        ]
+      }
+    },
+    {
+      "value": [
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "therefore let us keep the feast,",
+                  "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Not with the old leaven, the leaven of malice and evil, *",
+                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "halfverse": "death no longer has dominion over him.",
+                  "type": "psalm-verse",
+                  "verse": "Christ being raised from the dead will never die again; *"
+                },
+                {
+                  "verse": "The death that he died, he died to sin, once for all; *",
+                  "type": "psalm-verse",
+                  "halfverse": "but the life he lives, he lives to God."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and alive to God in Jesus Christ our Lord. Alleluia.",
+                  "verse": "So also consider yourselves dead to sin, *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "verse": "Christ has been raised from the dead, *",
+                  "type": "psalm-verse",
+                  "halfverse": "the first fruits of those who have fallen asleep."
+                },
+                {
+                  "verse": "For since by a man came death, * ",
+                  "type": "psalm-verse",
+                  "halfverse": "by a man has come also the resurrection of the dead."
+                },
+                {
+                  "halfverse": "so also in Christ shall all be made alive. Alleluia.",
+                  "type": "psalm-verse",
+                  "verse": "For as in Adam all die, *"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "slug": "pascha_nostrum",
+          "style": "invitatory",
+          "version": "bcp1979",
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "type": "psalm",
+          "source": {
+            "api": "https://www.venite.app/api",
+            "citation": "p. 83",
+            "source": "bcp1979"
+          },
+          "category": ["Invitatory"],
+          "language": "en",
+          "version_label": null,
+          "hidden": false,
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "lastRevision": 0,
+          "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
+          "label": "Christ our Passover",
+          "metadata": {
+            "number": null,
+            "latinname": "Pascha Nostrum",
+            "omit_gloria": true,
+            "localname": "Christ our Passover",
+            "omit_antiphon": false
+          }
+        },
+        {
+          "label": "Venite",
+          "hidden": false,
+          "source": {
+            "citation": "p. 82",
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api"
+          },
+          "category": ["Invitatory"],
+          "sharing": {
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "status": "published",
+            "collaborators": []
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "let us shout for joy to the Rock of our salvation.",
+                  "type": "psalm-verse",
+                  "verse": "Come, let us sing to the Lord; *"
+                },
+                {
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "type": "psalm-verse",
+                  "halfverse": "and raise a loud shout to him with psalms."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "and a great King above all gods.",
+                  "verse": "For the Lord is a great God, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "halfverse": "and the heights of the hills are his also.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "The sea is his, for he made it, *",
+                  "halfverse": "and his hands have molded the dry land."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and kneel before the Lord our Maker.",
+                  "verse": "Come, let us bow down, and bend the knee, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "halfverse": "Oh, that today you would hearken to his voice!"
+                }
+              ]
+            }
+          ],
+          "type": "psalm",
+          "language": "en",
+          "version": "bcp1979",
+          "condition": {
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "key": "psalmCycle",
+                  "value": "bcp1979_30day_psalter"
+                }
+              },
+              { "day_of_month": { "neq": "19" } }
+            ],
+            "mode": "or"
+          },
+          "metadata": {
+            "changeable": false,
+            "latinname": null,
+            "localname": "Venite",
+            "number": null,
+            "omit_antiphon": false,
+            "insert_seasonal_antiphon": true,
+            "omit_gloria": true
+          },
+          "slug": "venite",
+          "citation": "Psalm 95:1-7",
+          "version_label": "Venite (BCP)",
+          "style": "invitatory"
+        },
+        {
+          "language": "en",
+          "version_label": "Jubilate (BCP)",
+          "style": "invitatory",
+          "version": "bcp1979",
+          "category": ["Invitatory"],
+          "hidden": false,
+          "citation": "Psalm 100",
+          "slug": "jubilate",
+          "type": "psalm",
+          "label": "Jubilate",
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "type": "psalm-verse",
+                  "verse": "Be joyful in the Lord, all you lands; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Know this: The Lord himself is God; *",
+                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture."
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                  "type": "psalm-verse",
+                  "halfverse": "give thanks to him and call upon his Name."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
+                  "halfverse": "and his faithfulness endures from age to age."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            { "value": [], "type": "psalm-section" }
+          ],
+          "sharing": {
+            "collaborators": [],
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 82",
+            "api": "https://www.venite.app/api"
+          },
+          "metadata": {
+            "omit_gloria": true,
+            "omit_antiphon": false,
+            "latinname": null,
+            "number": null,
+            "localname": "Jubilate",
+            "insert_seasonal_antiphon": true
+          }
+        },
+        {
+          "type": "psalm",
+          "citation": null,
           "source": {
             "api": "https://www.venite.app/api",
             "source": "bcp1979",
             "citation": "p. 724"
           },
-          "type": "psalm"
+          "hidden": false,
+          "lookup": { "type": "slug" },
+          "version_label": "Ps. 95 (BCP)",
+          "condition": {
+            "mode": "or",
+            "conditions": [
+              {
+                "preference": {
+                  "key": "psalmCycle",
+                  "is": false,
+                  "value": "bcp1979_30day_psalter"
+                }
+              },
+              { "day_of_month": { "neq": "19" } }
+            ]
+          },
+          "slug": "psalm_95",
+          "metadata": {
+            "latinname": "Venite, exultemus",
+            "omit_gloria": true,
+            "number": "95",
+            "omit_antiphon": false,
+            "localname": "Psalm 95"
+          },
+          "language": "en",
+          "style": "psalm",
+          "label": "Psalm 95",
+          "category": ["Psalm"],
+          "version": "bcp1979",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          }
         }
       ],
-      "hidden": false,
       "type": "option",
-      "metadata": { "selected": 0, "editor_selected": 0 },
       "condition": {
+        "mode": "and",
         "conditions": [
           {
-            "preference": { "value": "yes", "is": false, "key": "veniteGloria" }
+            "preference": { "value": "yes", "key": "veniteGloria", "is": false }
           }
-        ],
-        "mode": "and"
-      }
+        ]
+      },
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "hidden": false
     },
     {
+      "type": "psalm",
+      "metadata": {},
+      "version": { "preference": "psalterVersion" },
       "hidden": false,
+      "style": "psalm",
       "lookup": {
         "item": "morning_psalms",
         "table": { "preference": "psalmCycle" },
         "type": "lectionary"
-      },
-      "type": "psalm",
-      "metadata": {},
-      "style": "psalm",
-      "version": { "preference": "psalterVersion" }
+      }
     },
     {
+      "style": "gloria",
+      "source": { "citation": "", "api": "", "source": "" },
+      "slug": "gloria-patri",
+      "hidden": false,
+      "version": "bcp1979",
+      "metadata": {},
+      "category": [],
+      "lookup": { "allow_multiple": false, "type": "slug", "rotate": false },
+      "type": "refrain",
       "condition": {
         "conditions": [
           {
@@ -1037,122 +1479,110 @@
           }
         ],
         "mode": "and"
-      },
-      "version": "bcp1979",
-      "style": "gloria",
-      "slug": "gloria-patri",
-      "type": "refrain",
-      "source": { "source": "", "citation": "", "api": "" },
-      "lookup": { "type": "slug", "allow_multiple": false, "rotate": false },
-      "hidden": false,
-      "metadata": {},
-      "category": []
+      }
     },
     {
       "source": { "source": "", "api": "", "citation": "" },
-      "value": ["The Lessons"],
+      "category": [],
+      "hidden": false,
+      "type": "heading",
       "metadata": { "level": 2 },
       "style": "text",
-      "type": "heading",
-      "category": [],
-      "hidden": false
+      "value": ["The Lessons"]
     },
     {
-      "version": { "preference": "bibleVersion" },
-      "metadata": {
-        "intro": {
-          "category": ["Bible Reading Introduction"],
-          "value": ["A Reading from ${longName}."],
-          "language": "en",
-          "style": "text",
-          "sharing": {
-            "organization": "venite",
-            "status": "published",
-            "privacy": "public"
-          },
-          "type": "text"
-        }
-      },
-      "style": "long",
-      "category": [],
       "label": "The First Lesson",
+      "style": "long",
+      "hidden": false,
+      "category": [],
       "lookup": {
-        "type": "lectionary",
         "item": { "preference": "readingA" },
+        "type": "lectionary",
         "table": { "preference": "lectionary" }
       },
-      "type": "bible-reading",
-      "source": { "source": "", "citation": "", "api": "" },
-      "hidden": false
+      "source": { "api": "", "source": "", "citation": "" },
+      "metadata": {
+        "intro": {
+          "value": ["A Reading from ${longName}."],
+          "category": ["Bible Reading Introduction"],
+          "style": "text",
+          "type": "text",
+          "sharing": {
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "language": "en"
+        }
+      },
+      "version": { "preference": "bibleVersion" },
+      "type": "bible-reading"
     },
     {
-      "style": "responsive",
+      "hidden": false,
       "value": [
         {
-          "text": "The Word of the Lord.",
           "response": "Thanks be to God.",
+          "text": "The Word of the Lord.",
           "label": ""
         }
       ],
       "type": "responsive",
-      "hidden": false
+      "style": "responsive"
     },
     {
+      "hidden": false,
+      "type": "psalm",
+      "source": { "source": "", "api": "", "citation": "" },
       "category": [],
       "metadata": {
-        "omit_antiphon": false,
-        "insert_seasonal_antiphon": false,
+        "omit_gloria": false,
         "changeable": true,
-        "omit_gloria": false
+        "omit_antiphon": false,
+        "insert_seasonal_antiphon": false
       },
-      "source": { "citation": "", "source": "", "api": "" },
-      "hidden": false,
       "lookup": {
-        "item": 1,
+        "table": { "preference": "canticleTable" },
         "rotate": false,
-        "type": "canticle",
-        "table": { "preference": "canticleTable" }
-      },
-      "type": "psalm"
+        "item": 1,
+        "type": "canticle"
+      }
     },
     {
-      "hidden": false,
       "lookup": {
         "item": { "preference": "readingB" },
         "type": "lectionary",
         "table": { "preference": "lectionary" }
       },
-      "category": [],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "key": "readingB", "is": false, "value": "none" } }
-        ]
-      },
-      "type": "bible-reading",
-      "label": "The Second Lesson",
       "version": { "preference": "bibleVersion" },
       "style": "long",
-      "source": { "citation": "", "api": "", "source": "" },
       "metadata": {
         "intro": {
           "sharing": {
-            "status": "published",
+            "organization": "venite",
             "privacy": "public",
-            "organization": "venite"
+            "status": "published"
           },
           "value": ["A Reading from ${longName}."],
           "type": "text",
-          "style": "text",
           "category": ["Bible Reading Introduction"],
-          "language": "en"
+          "language": "en",
+          "style": "text"
         }
-      }
+      },
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "readingB", "is": false, "value": "none" } }
+        ],
+        "mode": "and"
+      },
+      "source": { "source": "", "citation": "", "api": "" },
+      "label": "The Second Lesson",
+      "type": "bible-reading",
+      "category": [],
+      "hidden": false
     },
     {
-      "style": "responsive",
-      "type": "responsive",
-      "hidden": false,
       "value": [
         {
           "text": "The Word of the Lord.",
@@ -1160,208 +1590,213 @@
           "response": "Thanks be to God."
         }
       ],
+      "style": "responsive",
       "condition": {
-        "mode": "and",
         "conditions": [
-          { "preference": { "is": false, "value": "none", "key": "readingB" } }
-        ]
-      }
+          { "preference": { "value": "none", "is": false, "key": "readingB" } }
+        ],
+        "mode": "and"
+      },
+      "type": "responsive",
+      "hidden": false
     },
     {
-      "category": [],
-      "source": { "source": "", "citation": "", "api": "" },
       "metadata": {
+        "omit_antiphon": false,
         "insert_seasonal_antiphon": false,
         "omit_gloria": false,
-        "changeable": true,
-        "omit_antiphon": false
+        "changeable": true
       },
-      "hidden": false,
+      "category": [],
+      "type": "psalm",
       "lookup": {
         "rotate": false,
         "type": "canticle",
         "table": { "preference": "canticleTable" },
         "item": 2
       },
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "value": "none", "is": false, "key": "readingB" } }
+        ]
+      },
+      "source": { "source": "", "citation": "", "api": "" }
+    },
+    {
+      "lookup": {
+        "type": "lectionary",
+        "item": { "preference": "readingC" },
+        "table": { "preference": "lectionary" }
+      },
+      "type": "bible-reading",
+      "style": "long",
       "condition": {
         "conditions": [
-          { "preference": { "key": "readingB", "value": "none", "is": false } }
+          { "preference": { "key": "readingC", "value": "none", "is": false } }
         ],
         "mode": "and"
       },
-      "type": "psalm"
-    },
-    {
-      "style": "long",
-      "lookup": {
-        "item": { "preference": "readingC" },
-        "type": "lectionary",
-        "table": { "preference": "lectionary" }
-      },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "value": "none", "key": "readingC", "is": false } }
-        ]
-      },
-      "version": { "preference": "bibleVersion" },
-      "hidden": false,
       "metadata": {
         "intro": {
-          "category": ["Bible Reading Introduction"],
+          "type": "text",
           "language": "en",
-          "value": ["A Reading from ${longName}."],
           "style": "text",
+          "category": ["Bible Reading Introduction"],
           "sharing": {
             "status": "published",
-            "organization": "venite",
-            "privacy": "public"
+            "privacy": "public",
+            "organization": "venite"
           },
-          "type": "text"
+          "value": ["A Reading from ${longName}."]
         }
       },
-      "type": "bible-reading"
+      "hidden": false,
+      "version": { "preference": "bibleVersion" }
     },
     {
-      "type": "responsive",
+      "hidden": false,
       "style": "responsive",
+      "type": "responsive",
       "condition": {
         "mode": "and",
         "conditions": [
-          { "preference": { "is": false, "value": "none", "key": "readingC" } }
+          { "preference": { "key": "readingC", "is": false, "value": "none" } }
         ]
       },
-      "hidden": false,
       "value": [
         {
           "response": "Thanks be to God.",
-          "label": "",
-          "text": "The Word of the Lord."
+          "text": "The Word of the Lord.",
+          "label": ""
         }
       ]
     },
     {
-      "lookup": { "type": "slug" },
       "type": "refrain",
-      "slug": "holy_saturday_reading",
-      "source": { "source": "", "citation": "", "api": "" },
       "style": "gloria",
-      "category": [],
-      "metadata": {},
-      "hidden": false,
       "condition": {
-        "mode": "and",
         "conditions": [
           {
-            "season": { "except": [], "only": ["HolyWeek"] },
-            "weekday": { "only": ["Saturday"], "except": [] }
+            "season": { "only": ["HolyWeek"], "except": [] },
+            "weekday": { "except": [], "only": ["Saturday"] }
           }
-        ]
-      }
+        ],
+        "mode": "and"
+      },
+      "category": [],
+      "lookup": { "type": "slug" },
+      "metadata": {},
+      "hidden": false,
+      "slug": "holy_saturday_reading",
+      "source": { "source": "", "api": "", "citation": "" }
     },
     {
-      "style": "text",
-      "category": [],
-      "source": { "citation": "", "api": "", "source": "" },
+      "metadata": { "level": 3 },
+      "source": { "api": "", "source": "", "citation": "" },
       "condition": {
-        "mode": "and",
         "conditions": [
           {
             "preference": {
               "key": "sermon",
-              "is": true,
-              "value": "after_readings"
+              "value": "after_readings",
+              "is": true
             }
           }
-        ]
+        ],
+        "mode": "and"
       },
-      "type": "heading",
-      "metadata": { "level": 3 },
+      "category": [],
       "hidden": false,
+      "type": "heading",
+      "style": "text",
       "value": ["The Sermon"]
     },
     {
-      "hidden": false,
-      "label": "The Apostles’ Creed",
-      "type": "text",
       "display_format": "unison",
-      "style": "text",
-      "category": [],
       "source": { "source": "bcp1979", "api": "", "citation": "p. 96" },
-      "metadata": { "omit_response": false, "response": "Amen." },
-      "response": "Amen.",
+      "style": "text",
+      "hidden": false,
       "value": [
         "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only Son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
-      ]
+      ],
+      "response": "Amen.",
+      "metadata": { "response": "Amen.", "omit_response": false },
+      "label": "The Apostles’ Creed",
+      "type": "text",
+      "category": []
     },
     {
       "type": "heading",
-      "source": { "api": "", "citation": "p. 97", "source": "bcp1979" },
-      "style": "text",
-      "hidden": false,
       "metadata": { "level": 2 },
+      "style": "text",
       "category": [],
-      "value": ["The Prayers"]
-    },
-    {
-      "value": [
-        {
-          "label": "Officiant",
-          "text": "The Lord be with you."
-        },
-        { "text": "And also with you.", "label": "People" },
-        { "label": "Officiant", "text": "Let us pray." }
-      ],
-      "style": "preces",
-      "type": "responsive",
+      "source": { "citation": "p. 97", "api": "", "source": "bcp1979" },
+      "value": ["The Prayers"],
       "hidden": false
     },
     {
-      "hidden": false,
-      "metadata": { "selected": 0, "editor_selected": 0 },
-      "type": "option",
-      "slug": "lords_prayer",
-      "category": [],
+      "type": "responsive",
+      "style": "preces",
       "value": [
         {
-          "version_label": "Traditional",
-          "source": { "citation": "", "api": "", "source": "" },
-          "label": "The Lord’s Prayer",
-          "type": "text",
-          "metadata": { "omit_response": false },
+          "text": "The Lord be with you.",
+          "label": "Officiant",
+          "response": ""
+        },
+        { "text": "And also with you.", "label": "People" },
+        { "text": "Let us pray.", "label": "Officiant" }
+      ],
+      "hidden": false
+    },
+    {
+      "type": "option",
+      "category": [],
+      "slug": "lords_prayer",
+      "hidden": false,
+      "source": { "api": "", "source": "", "citation": "" },
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "hidden": false,
           "value": [
             "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
           ],
-          "hidden": false,
-          "style": "prayer",
           "display_format": "unison",
-          "category": []
+          "style": "prayer",
+          "version_label": "Traditional",
+          "metadata": { "omit_response": false },
+          "category": [],
+          "source": { "citation": "", "source": "", "api": "" },
+          "label": "The Lord’s Prayer",
+          "type": "text"
         },
         {
-          "version_label": "Contemporary",
-          "type": "text",
+          "hidden": false,
+          "source": { "citation": "", "api": "", "source": "" },
           "metadata": { "omit_response": false },
+          "display_format": "unison",
+          "type": "text",
           "value": [
             "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
           ],
           "style": "prayer",
+          "version_label": "Contemporary",
           "category": [],
-          "display_format": "unison",
-          "source": { "citation": "", "api": "", "source": "" },
-          "label": "The Lord’s Prayer",
-          "hidden": false
+          "label": "The Lord’s Prayer"
         }
-      ],
-      "source": { "source": "", "citation": "", "api": "" }
+      ]
     },
     {
+      "category": [],
+      "hidden": false,
+      "condition": { "mode": "and", "conditions": [{ "feastDay": true }] },
+      "type": "option",
+      "source": { "source": "", "citation": "", "api": "" },
       "value": [
         {
-          "label": "Suffrages B",
-          "category": [],
-          "style": "preces",
-          "source": { "source": "", "api": "", "citation": "" },
-          "type": "responsive",
+          "hidden": false,
           "value": [
             {
               "text": "Save your people, Lord, and bless your inheritance;",
@@ -1369,36 +1804,45 @@
               "label": "V."
             },
             {
-              "label": "R.",
-              "text": "Govern and uphold them, now and always."
+              "text": "Govern and uphold them, now and always.",
+              "label": "R."
             },
-            { "text": "Day by day we bless you;", "label": "V." },
-            { "label": "R.", "text": "We praise your name for ever." },
-            { "text": "Lord, keep us from all sin today;", "label": "V." },
+            { "label": "V.", "text": "Day by day we bless you;" },
+            { "text": "We praise your name for ever.", "label": "R." },
+            { "label": "V.", "text": "Lord, keep us from all sin today;" },
             { "label": "R.", "text": "Have mercy on us, Lord, have mercy." },
-            { "label": "V.", "text": "Lord, show us your love and mercy;" },
-            { "label": "R.", "text": "For we put our trust in you." },
+            { "text": "Lord, show us your love and mercy;", "label": "V." },
+            { "text": "For we put our trust in you.", "label": "R." },
             { "label": "V.", "text": "In you, Lord, is our hope;" },
-            { "label": "R.", "text": "And we shall never hope in vain." }
+            { "text": "And we shall never hope in vain.", "label": "R." }
           ],
-          "metadata": {},
-          "hidden": false
+          "source": { "api": "", "source": "", "citation": "" },
+          "label": "Suffrages B",
+          "style": "preces",
+          "category": [],
+          "type": "responsive",
+          "metadata": {}
         },
         {
+          "hidden": false,
+          "metadata": {},
+          "type": "responsive",
+          "style": "preces",
+          "source": { "api": "", "source": "", "citation": "" },
           "value": [
             {
               "label": "V.",
               "text": "Show us your mercy, O Lord;",
               "response": ""
             },
-            { "text": "And grant us your salvation.", "label": "R." },
+            { "label": "R.", "text": "And grant us your salvation." },
             {
               "text": "Clothe your ministers with righteousness;",
               "label": "V."
             },
-            { "label": "R.", "text": "Let your people sing with joy." },
-            { "text": "Give peace, O Lord, in all the world;", "label": "V." },
-            { "text": "For only in you can we live in safety.", "label": "R." },
+            { "text": "Let your people sing with joy.", "label": "R." },
+            { "label": "V.", "text": "Give peace, O Lord, in all the world;" },
+            { "label": "R.", "text": "For only in you can we live in safety." },
             {
               "text": "Lord, keep this nation under your care; ",
               "label": "V."
@@ -1417,173 +1861,32 @@
               "label": "R.",
               "text": "Nor the hope of the poor be taken away."
             },
-            { "text": "Create in us clean hearts, O God;", "label": "V." },
+            { "label": "V.", "text": "Create in us clean hearts, O God;" },
             { "text": "And sustain us with your Holy Spirit.", "label": "R." }
           ],
-          "style": "preces",
-          "label": "Suffrages A",
           "category": [],
-          "type": "responsive",
-          "source": { "source": "", "api": "", "citation": "" },
-          "hidden": false,
-          "metadata": {}
+          "label": "Suffrages A"
         },
         {
-          "source": { "api": "", "source": "EOW 1", "citation": "p. 42" },
-          "metadata": {},
-          "label": "Suffrages For Use in Morning Prayer",
-          "style": "preces",
           "value": [
             {
-              "text": "Help us, O God our Savior;",
+              "response": "",
               "label": "V.",
-              "response": ""
+              "text": "Help us, O God our Savior;"
             },
-            { "text": "Deliver us and forgive us our sins.", "label": "R." },
-            { "label": "V.", "text": "Look upon your congregation." },
+            { "label": "R.", "text": "Deliver us and forgive us our sins." },
+            { "text": "Look upon your congregation.", "label": "V." },
             {
-              "text": "Give to your people the blessing of peace.",
-              "label": "R."
+              "label": "R.",
+              "text": "Give to your people the blessing of peace."
             },
-            { "text": "Declare your glory among the nations;", "label": "V." },
+            { "label": "V.", "text": "Declare your glory among the nations;" },
             { "label": "R.", "text": "And your wonders among all peoples." },
             {
               "label": "V.",
               "text": "Do not let the oppressed be shamed and turned away;"
             },
-            { "text": "Never forget the lives of your poor.", "label": "R." },
-            {
-              "label": "V.",
-              "text": "Continue your loving-kindness to those who know you;"
-            },
-            {
-              "label": "R.",
-              "text": "And your favor to those who are true of heart."
-            },
-            {
-              "text": "Satisfy us by your loving-kindness in the morning;",
-              "label": "V."
-            },
-            {
-              "label": "R.",
-              "text": "So shall we rejoice and be glad all the days of our life."
-            }
-          ],
-          "category": [],
-          "type": "responsive",
-          "version_label": "EOW",
-          "hidden": false
-        }
-      ],
-      "metadata": { "selected": 0, "editor_selected": 0 },
-      "type": "option",
-      "source": { "citation": "", "source": "", "api": "" },
-      "hidden": false,
-      "condition": { "mode": "and", "conditions": [{ "feastDay": true }] },
-      "slug": "suffrages_mp",
-      "category": []
-    },
-    {
-      "condition": { "conditions": [{ "feastDay": false }], "mode": "and" },
-      "type": "option",
-      "hidden": false,
-      "category": [],
-      "value": [
-        {
-          "source": { "citation": "", "api": "", "source": "" },
-          "metadata": {},
-          "category": [],
-          "style": "preces",
-          "label": "Suffrages A",
-          "hidden": false,
-          "type": "responsive",
-          "value": [
-            {
-              "label": "V.",
-              "text": "Show us your mercy, O Lord;",
-              "response": ""
-            },
-            { "label": "R.", "text": "And grant us your salvation." },
-            {
-              "label": "V.",
-              "text": "Clothe your ministers with righteousness;"
-            },
-            { "label": "R.", "text": "Let your people sing with joy." },
-            { "label": "V.", "text": "Give peace, O Lord, in all the world;" },
-            { "label": "R.", "text": "For only in you can we live in safety." },
-            {
-              "text": "Lord, keep this nation under your care; ",
-              "label": "V."
-            },
-            {
-              "text": "And guide us in the way of justice and truth.",
-              "label": "R."
-            },
-            { "label": "V.", "text": "Let your way be known upon earth;" },
-            { "text": "Your saving health among all nations.", "label": "R." },
-            {
-              "label": "V.",
-              "text": "Let not the needy, O Lord, be forgotten;"
-            },
-            {
-              "label": "R.",
-              "text": "Nor the hope of the poor be taken away."
-            },
-            { "text": "Create in us clean hearts, O God;", "label": "V." },
-            { "label": "R.", "text": "And sustain us with your Holy Spirit." }
-          ]
-        },
-        {
-          "type": "responsive",
-          "style": "preces",
-          "value": [
-            {
-              "text": "Save your people, Lord, and bless your inheritance;",
-              "label": "V.",
-              "response": ""
-            },
-            {
-              "label": "R.",
-              "text": "Govern and uphold them, now and always."
-            },
-            { "text": "Day by day we bless you;", "label": "V." },
-            { "text": "We praise your name for ever.", "label": "R." },
-            { "label": "V.", "text": "Lord, keep us from all sin today;" },
-            { "text": "Have mercy on us, Lord, have mercy.", "label": "R." },
-            { "text": "Lord, show us your love and mercy;", "label": "V." },
-            { "label": "R.", "text": "For we put our trust in you." },
-            { "text": "In you, Lord, is our hope;", "label": "V." },
-            { "text": "And we shall never hope in vain.", "label": "R." }
-          ],
-          "source": { "citation": "", "api": "", "source": "" },
-          "hidden": false,
-          "metadata": {},
-          "label": "Suffrages B",
-          "category": []
-        },
-        {
-          "label": "Suffrages for Use in Morning Prayer",
-          "category": [],
-          "hidden": false,
-          "value": [
-            {
-              "label": "V.",
-              "response": "",
-              "text": "Help us, O God our Savior;"
-            },
-            { "text": "Deliver us and forgive us our sins.", "label": "R." },
-            { "text": "Look upon your congregation.", "label": "V." },
-            {
-              "text": "Give to your people the blessing of peace.",
-              "label": "R."
-            },
-            { "label": "V.", "text": "Declare your glory among the nations;" },
-            { "label": "R.", "text": "And your wonders among all peoples." },
-            {
-              "text": "Do not let the oppressed be shamed and turned away;",
-              "label": "V."
-            },
-            { "text": "Never forget the lives of your poor.", "label": "R." },
+            { "label": "R.", "text": "Never forget the lives of your poor." },
             {
               "label": "V.",
               "text": "Continue your loving-kindness to those who know you;"
@@ -1597,43 +1900,178 @@
               "label": "V."
             },
             {
+              "label": "R.",
+              "text": "So shall we rejoice and be glad all the days of our life."
+            }
+          ],
+          "style": "preces",
+          "label": "Suffrages For Use in Morning Prayer",
+          "source": { "source": "EOW 1", "api": "", "citation": "p. 42" },
+          "metadata": {},
+          "category": [],
+          "hidden": false,
+          "type": "responsive",
+          "version_label": "EOW"
+        }
+      ],
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "slug": "suffrages_mp"
+    },
+    {
+      "value": [
+        {
+          "metadata": {},
+          "style": "preces",
+          "hidden": false,
+          "source": { "citation": "", "api": "", "source": "" },
+          "value": [
+            {
+              "label": "V.",
+              "response": "",
+              "text": "Show us your mercy, O Lord;"
+            },
+            { "text": "And grant us your salvation.", "label": "R." },
+            {
+              "label": "V.",
+              "text": "Clothe your ministers with righteousness;"
+            },
+            { "label": "R.", "text": "Let your people sing with joy." },
+            { "text": "Give peace, O Lord, in all the world;", "label": "V." },
+            { "label": "R.", "text": "For only in you can we live in safety." },
+            {
+              "label": "V.",
+              "text": "Lord, keep this nation under your care; "
+            },
+            {
+              "label": "R.",
+              "text": "And guide us in the way of justice and truth."
+            },
+            { "label": "V.", "text": "Let your way be known upon earth;" },
+            { "text": "Your saving health among all nations.", "label": "R." },
+            {
+              "text": "Let not the needy, O Lord, be forgotten;",
+              "label": "V."
+            },
+            {
+              "text": "Nor the hope of the poor be taken away.",
+              "label": "R."
+            },
+            { "label": "V.", "text": "Create in us clean hearts, O God;" },
+            { "text": "And sustain us with your Holy Spirit.", "label": "R." }
+          ],
+          "type": "responsive",
+          "label": "Suffrages A",
+          "category": []
+        },
+        {
+          "style": "preces",
+          "metadata": {},
+          "type": "responsive",
+          "category": [],
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Save your people, Lord, and bless your inheritance;"
+            },
+            {
+              "label": "R.",
+              "text": "Govern and uphold them, now and always."
+            },
+            { "label": "V.", "text": "Day by day we bless you;" },
+            { "label": "R.", "text": "We praise your name for ever." },
+            { "label": "V.", "text": "Lord, keep us from all sin today;" },
+            { "text": "Have mercy on us, Lord, have mercy.", "label": "R." },
+            { "text": "Lord, show us your love and mercy;", "label": "V." },
+            { "text": "For we put our trust in you.", "label": "R." },
+            { "text": "In you, Lord, is our hope;", "label": "V." },
+            { "text": "And we shall never hope in vain.", "label": "R." }
+          ],
+          "label": "Suffrages B",
+          "hidden": false,
+          "source": { "citation": "", "api": "", "source": "" }
+        },
+        {
+          "metadata": {},
+          "category": [],
+          "style": "preces",
+          "version_label": "EOW",
+          "value": [
+            {
+              "label": "V.",
+              "text": "Help us, O God our Savior;",
+              "response": ""
+            },
+            { "text": "Deliver us and forgive us our sins.", "label": "R." },
+            { "text": "Look upon your congregation.", "label": "V." },
+            {
+              "label": "R.",
+              "text": "Give to your people the blessing of peace."
+            },
+            { "label": "V.", "text": "Declare your glory among the nations;" },
+            { "label": "R.", "text": "And your wonders among all peoples." },
+            {
+              "label": "V.",
+              "text": "Do not let the oppressed be shamed and turned away;"
+            },
+            { "label": "R.", "text": "Never forget the lives of your poor." },
+            {
+              "label": "V.",
+              "text": "Continue your loving-kindness to those who know you;"
+            },
+            {
+              "label": "R.",
+              "text": "And your favor to those who are true of heart."
+            },
+            {
+              "label": "V.",
+              "text": "Satisfy us by your loving-kindness in the morning;"
+            },
+            {
               "text": "So shall we rejoice and be glad all the days of our life.",
               "label": "R."
             }
           ],
-          "style": "preces",
-          "source": { "citation": "p. 42", "api": "", "source": "EOW 1" },
           "type": "responsive",
-          "version_label": "EOW",
-          "metadata": {}
+          "label": "Suffrages for Use in Morning Prayer",
+          "source": { "source": "EOW 1", "api": "", "citation": "p. 42" },
+          "hidden": false
         }
       ],
-      "slug": "suffrages_mp",
-      "source": { "citation": "", "api": "", "source": "" },
-      "metadata": { "editor_selected": 0, "selected": 0 }
-    },
-    {
-      "type": "text",
-      "lookup": { "type": "collect", "allow_multiple": true, "rotate": false },
-      "label": "The Collect of the Day",
-      "language": "en",
-      "source": { "api": "", "citation": "", "source": "" },
-      "metadata": {
-        "omit_label": false,
-        "omit_response": false,
-        "rollup": false
-      },
+      "metadata": { "editor_selected": 0, "selected": 0 },
       "category": [],
-      "style": "prayer",
+      "condition": { "conditions": [{ "feastDay": false }], "mode": "and" },
+      "source": { "source": "", "citation": "", "api": "" },
+      "slug": "suffrages_mp",
       "hidden": false,
-      "version": "bcp1979"
+      "type": "option"
     },
     {
+      "label": "The Collect of the Day",
+      "category": [],
+      "lookup": { "allow_multiple": true, "rotate": false, "type": "collect" },
+      "language": "en",
+      "version": "bcp1979",
+      "hidden": false,
+      "source": { "api": "", "source": "", "citation": "" },
+      "metadata": {
+        "rollup": false,
+        "omit_label": false,
+        "omit_response": false
+      },
+      "style": "prayer",
+      "type": "text"
+    },
+    {
+      "style": "prayer",
+      "language": "en",
+      "source": { "citation": "", "source": "", "api": "" },
+      "hidden": false,
+      "slug": "mp_daily_collect",
+      "type": "text",
+      "lookup": { "filter": "—", "type": "slug", "rotate": true },
       "category": [],
       "value": [""],
-      "slug": "mp_daily_collect",
-      "language": "en",
-      "hidden": false,
       "condition": {
         "conditions": [
           {
@@ -1645,102 +2083,98 @@
         ],
         "mode": "and"
       },
-      "style": "prayer",
-      "lookup": { "type": "slug", "filter": "—", "rotate": true },
-      "type": "text",
       "version": "bcp1979",
-      "source": { "api": "", "source": "", "citation": "" },
       "metadata": { "omit_response": false }
     },
     {
-      "style": "prayer",
-      "label": "A Collect for Fridays",
+      "metadata": {},
       "value": [
         "Almighty God, whose most dear Son went not up to joy but first he suffered pain, and entered not into glory before he was crucified: Mercifully grant that we, walking in the way of the cross, may find it none other than the way of life and peace; through Jesus Christ our Lord."
       ],
+      "type": "text",
+      "style": "prayer",
+      "hidden": false,
+      "label": "A Collect for Fridays",
+      "source": { "api": "", "source": "", "citation": "" },
+      "category": [],
       "condition": {
         "mode": "and",
         "conditions": [{ "weekday": { "only": ["Friday"], "except": [] } }]
-      },
-      "metadata": {},
-      "type": "text",
-      "hidden": false,
-      "source": { "source": "", "citation": "", "api": "" },
-      "category": []
+      }
     },
     {
-      "category": [],
+      "type": "text",
+      "hidden": false,
       "condition": {
-        "conditions": [{ "weekday": { "except": [], "only": ["Saturday"] } }],
-        "mode": "and"
+        "mode": "and",
+        "conditions": [{ "weekday": { "except": [], "only": ["Saturday"] } }]
       },
       "style": "prayer",
-      "type": "text",
-      "label": "A Collect for Saturdays",
+      "source": { "source": "", "citation": "", "api": "" },
+      "category": [],
       "metadata": {},
-      "source": { "source": "", "api": "", "citation": "" },
-      "hidden": false,
+      "label": "A Collect for Saturdays",
       "value": [
         "Almighty God, who after the creation of the world rested from all your works and sanctified a day of rest for all your creatures: Grant that we, putting away all earthly anxieties, may be duly prepared for the service of your sanctuary, and that our rest here upon earth may be a preparation for the eternal rest promised to your people in heaven; through Jesus Christ our Lord."
       ]
     },
     {
+      "condition": {
+        "conditions": [{ "weekday": { "only": ["Sunday"], "except": [] } }],
+        "mode": "and"
+      },
+      "style": "prayer",
+      "source": { "source": "", "api": "", "citation": "" },
       "label": "A Collect for Sundays",
-      "source": { "citation": "", "source": "", "api": "" },
+      "category": [],
       "value": [
         "O God, you make us glad with the weekly remembrance of the glorious resurrection of your Son our Lord: Give us this day such blessing through our worship of you, that the week to come may be spent in your favor; through Jesus Christ our Lord."
       ],
-      "style": "prayer",
-      "condition": {
-        "mode": "and",
-        "conditions": [{ "weekday": { "only": ["Sunday"], "except": [] } }]
-      },
-      "metadata": {},
       "hidden": false,
-      "category": [],
+      "metadata": {},
       "type": "text"
     },
     {
-      "slug": "mp_prayers_for_mission",
-      "metadata": { "omit_response": false },
-      "version": "bcp1979",
-      "source": { "citation": "", "source": "", "api": "" },
-      "type": "text",
-      "value": [""],
-      "hidden": false,
       "category": [],
+      "hidden": false,
+      "type": "text",
+      "metadata": { "omit_response": false },
       "language": "en",
-      "lookup": { "type": "slug", "rotate": true },
-      "style": "prayer"
+      "slug": "mp_prayers_for_mission",
+      "lookup": { "rotate": true, "type": "slug" },
+      "style": "prayer",
+      "value": [""],
+      "version": "bcp1979",
+      "source": { "source": "", "citation": "", "api": "" }
     },
     {
+      "category": [],
+      "type": "heading",
+      "hidden": false,
       "condition": {
+        "mode": "and",
         "conditions": [
           {
             "preference": {
+              "key": "sermon",
               "is": true,
-              "value": "after_collects",
-              "key": "sermon"
+              "value": "after_collects"
             }
           }
-        ],
-        "mode": "and"
+        ]
       },
-      "hidden": false,
-      "metadata": { "level": 3 },
-      "category": [],
       "style": "text",
-      "type": "heading",
+      "source": { "api": "", "citation": "", "source": "" },
       "value": ["The Sermon"],
-      "source": { "api": "", "citation": "", "source": "" }
+      "metadata": { "level": 3 }
     },
     {
-      "hidden": false,
+      "type": "rubric",
       "value": [
         "Here may be sung a hymn or anthem.",
         "Authorized intercessions and thanksgivings may follow."
       ],
-      "type": "rubric"
+      "hidden": false
     },
     { "type": "text", "hidden": false, "style": "authorized-prayers" },
     {
@@ -1751,584 +2185,172 @@
       ]
     },
     {
-      "hidden": false,
-      "style": "prayer",
-      "metadata": {},
-      "label": "The General Thanksgiving",
       "source": { "source": "bcp1979", "api": "", "citation": "p. 101" },
-      "type": "text",
+      "metadata": {},
       "category": [],
       "value": [
         "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
         "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages. "
-      ]
+      ],
+      "type": "text",
+      "hidden": false,
+      "label": "The General Thanksgiving",
+      "style": "prayer"
     },
     {
+      "metadata": {},
+      "category": [],
       "value": [
         "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
       ],
-      "hidden": false,
-      "style": "prayer",
       "label": "A Prayer of St. Chrysostom",
+      "source": { "api": "", "source": "bcp1979", "citation": "p. 102" },
+      "hidden": false,
       "type": "text",
-      "source": { "api": "", "citation": "p. 102", "source": "bcp1979" },
-      "metadata": {},
-      "category": []
+      "style": "prayer"
     },
-    { "value": ["Then may be said"], "hidden": false, "type": "rubric" },
+    { "value": ["Then may be said"], "type": "rubric", "hidden": false },
     {
       "type": "responsive",
-      "value": [
-        {
-          "response": "Thanks be to God.",
-          "text": "Let us bless the Lord.",
-          "label": ""
-        }
-      ],
-      "hidden": false,
+      "style": "responsive",
       "condition": {
         "conditions": [
           {
             "season": {
-              "only": [],
-              "except": ["Easter", "Ascension", "Pentecost"]
+              "except": ["Easter", "Ascension", "Pentecost"],
+              "only": []
             }
           }
         ],
         "mode": "and"
+      },
+      "value": [
+        {
+          "label": "",
+          "response": "Thanks be to God.",
+          "text": "Let us bless the Lord."
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "type": "responsive",
+      "value": [
+        {
+          "label": "",
+          "text": "Let us bless the Lord. Alleluia, alleluia.",
+          "response": "Thanks be to God. Alleluia, alleluia."
+        }
+      ],
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "season": {
+              "except": [],
+              "only": ["Easter", "Ascension", "Pentecost"]
+            }
+          }
+        ]
       },
       "style": "responsive"
     },
     {
-      "hidden": false,
-      "style": "responsive",
-      "type": "responsive",
-      "value": [
-        {
-          "text": "Let us bless the Lord. Alleluia, alleluia.",
-          "label": "",
-          "response": "Thanks be to God. Alleluia, alleluia."
-        }
-      ],
-      "condition": {
-        "conditions": [
-          {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost"],
-              "except": []
-            }
-          }
-        ],
-        "mode": "and"
-      }
-    },
-    {
       "value": ["The Officiant may then conclude with one of the following"],
-      "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "style": "short",
-      "category": ["Closing Sentence"],
-      "type": "bible-reading",
-      "lookup": { "rotate": true, "type": "category" },
+      "type": "rubric",
       "hidden": false
     },
     {
+      "style": "short",
+      "lookup": { "type": "category", "rotate": true },
+      "category": ["Closing Sentence"],
       "hidden": false,
-      "source": { "api": "", "source": "", "citation": "" },
+      "type": "bible-reading"
+    },
+    {
+      "type": "heading",
+      "hidden": false,
+      "metadata": { "level": 3, "omit_response": false },
       "category": [],
-      "style": "text",
-      "value": ["The Sermon"],
       "condition": {
         "conditions": [
           {
             "preference": {
-              "value": "after_office",
               "is": true,
-              "key": "sermon"
+              "key": "sermon",
+              "value": "after_office"
             }
           }
         ],
         "mode": "and"
       },
-      "type": "heading",
-      "metadata": { "omit_response": false, "level": 3 }
+      "source": { "api": "", "source": "", "citation": "" },
+      "style": "text",
+      "value": ["The Sermon"]
     },
     {
+      "language": "en",
+      "metadata": {},
+      "lastRevision": 61,
       "condition": {
         "conditions": [
-          { "preference": { "is": true, "key": "angelus", "value": "after" } }
+          { "preference": { "key": "angelus", "is": true, "value": "after" } }
         ],
         "mode": "and"
       },
+      "lookup": { "type": "slug" },
       "version": "Rite-II",
       "type": "liturgy",
+      "hidden": false,
       "slug": "the-angelus",
-      "lookup": { "type": "slug" },
       "sharing": {
         "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
         "collaborators": [],
         "status": "published",
-        "organization": "venite",
-        "privacy": "public"
+        "privacy": "public",
+        "organization": "venite"
       },
-      "language": "en",
-      "label": "The Angelus",
-      "hidden": false,
-      "lastRevision": 61,
-      "metadata": {}
+      "label": "The Angelus"
     },
     {
-      "type": "liturgy",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "value": "after", "key": "andrewes", "is": true } }
+        ]
+      },
+      "lookup": { "type": "slug" },
+      "slug": "andrewes-morning",
       "hidden": false,
+      "metadata": {
+        "liturgyversions": [],
+        "supplement": false,
+        "evening": false
+      },
+      "category": [],
+      "lastRevision": 61,
+      "language": "en",
+      "type": "liturgy",
       "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
         "organization": "venite",
         "collaborators": [],
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "privacy": "public",
-        "status": "published"
+        "status": "published",
+        "privacy": "public"
       },
-      "version": "Rite-II",
-      "language": "en",
-      "metadata": {
-        "evening": false,
-        "liturgyversions": [],
-        "supplement": false
-      },
-      "condition": {
-        "conditions": [
-          { "preference": { "is": true, "value": "after", "key": "andrewes" } }
-        ],
-        "mode": "and"
-      },
-      "lastRevision": 61,
-      "source": { "api": "", "citation": "", "source": "" },
-      "category": [],
+      "source": { "citation": "", "api": "", "source": "" },
       "label": "The Angelus",
-      "lookup": { "type": "slug" },
-      "slug": "andrewes-morning"
+      "version": "Rite-II"
     }
   ],
   "category": [],
-  "type": "liturgy",
-  "metadata": {
-    "special_preferences": {
-      "palms": {
-        "key": "palms",
-        "label": "Palms",
-        "options": [
-          {
-            "label": "—",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "no"
-          },
-          {
-            "value": "before",
-            "default": false,
-            "label": "Before the Office",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "label": "Before the Office",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "before"
-          }
-        ]
-      },
-      "insertGloria": ""
-    },
-    "supplement": false,
-    "preferences": {
-      "psalterVersion": {
-        "category": "Translations",
-        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology.",
-        "key": "psalterVersion",
-        "label": "Psalter Version",
-        "options": [
-          {
-            "label": "1979 Book of Common Prayer",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "bcp1979"
-          },
-          {
-            "default": false,
-            "value": "ip",
-            "metadata": { "alternateYear": false },
-            "label": "Inclusive Psalter"
-          },
-          {
-            "default": false,
-            "label": "Coverdale (1662 BCP)",
-            "value": "coverdale",
-            "metadata": { "alternateYear": false }
-          }
-        ]
-      },
-      "angelus": {
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "value": "no",
-            "default": false,
-            "label": "—"
-          },
-          {
-            "label": "Before the Office",
-            "metadata": { "alternateYear": false },
-            "value": "before",
-            "default": false
-          },
-          {
-            "default": false,
-            "value": "after",
-            "metadata": { "alternateYear": false },
-            "label": "After the Office"
-          }
-        ],
-        "category": "Supplemental Devotions",
-        "key": "angelus",
-        "label": "Angelus"
-      },
-      "sermon": {
-        "key": "sermon",
-        "category": "Advanced",
-        "options": [
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "—",
-            "value": "none"
-          },
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "after_office",
-            "label": "After the Office"
-          },
-          {
-            "label": "After the Readings",
-            "default": false,
-            "value": "after_readings",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "label": "After the Collects",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "after_collects"
-          }
-        ],
-        "label": "Sermon"
-      },
-      "readingA": {
-        "label": "First Reading",
-        "category": "Readings",
-        "key": "readingA",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "label": "OT/First Reading",
-            "default": true,
-            "value": "first_reading"
-          },
-          {
-            "default": false,
-            "value": "second_reading",
-            "metadata": { "alternateYear": false },
-            "label": "Epistle/Second Reading"
-          },
-          {
-            "label": "Gospel",
-            "metadata": { "alternateYear": false },
-            "value": "gospel",
-            "default": false
-          }
-        ]
-      },
-      "readingB": {
-        "key": "readingB",
-        "label": "Second Reading",
-        "category": "Readings",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "—",
-            "value": "none"
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "value": "first_reading",
-            "label": "OT/First Reading"
-          },
-          {
-            "label": "Epistle/Second Reading",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "second_reading"
-          },
-          {
-            "value": "gospel",
-            "default": true,
-            "metadata": { "alternateYear": false },
-            "label": "Gospel"
-          }
-        ]
-      },
-      "bibleVersion": {
-        "options": [
-          {
-            "value": "NRSV",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "New Revised Standard Version (NRSV)"
-          },
-          {
-            "value": "CEB",
-            "label": "Common English Bible (CEB)",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "English Standard Version (ESV)",
-            "value": "ESV"
-          },
-          {
-            "label": "King James Version (KJV)",
-            "default": false,
-            "value": "KJV",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "label": "Bible Version",
-        "category": "Translations",
-        "key": "bibleVersion"
-      },
-      "veniteGloria": {
-        "label": "Include Gloria Patri in the Venite/Jubilate",
-        "options": [
-          {
-            "value": "no",
-            "metadata": { "alternateYear": false },
-            "label": "No",
-            "default": true
-          },
-          {
-            "label": "Yes",
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "value": "yes"
-          }
-        ],
-        "category": "Advanced",
-        "key": "veniteGloria"
-      },
-      "andrewes": {
-        "options": [
-          {
-            "label": "—",
-            "metadata": { "alternateYear": false },
-            "value": "noo",
-            "default": false
-          },
-          {
-            "value": "after",
-            "default": false,
-            "label": "After the Office",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "after",
-            "label": "After the Office"
-          }
-        ],
-        "label": "Lancelot Andrewes’s Private Prayers",
-        "key": "andrewes",
-        "category": "Supplemental Devotions"
-      },
-      "insertGloria": {
-        "label": "Insert Gloria Patri after each Psalm",
-        "category": "Advanced",
-        "options": [
-          {
-            "label": "No",
-            "default": false,
-            "value": "false",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "value": "true",
-            "label": "Yes",
-            "default": false
-          }
-        ],
-        "key": "insertGloria"
-      },
-      "psalmCycle": {
-        "category": "Cycles",
-        "label": "Psalm Cycle",
-        "key": "psalmCycle",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "label": "Daily Office Lectionary",
-            "default": false,
-            "value": "bcp1979_daily_psalms"
-          },
-          {
-            "label": "30-day Cycle",
-            "metadata": { "alternateYear": false },
-            "value": "bcp1979_30day_psalter",
-            "default": false
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "label": "RCL (Track 1)",
-            "default": false,
-            "value": "rclsundayTrack1"
-          },
-          {
-            "value": "rclsunday",
-            "default": false,
-            "label": "RCL (Track 2)",
-            "metadata": { "alternateYear": false }
-          }
-        ]
-      },
-      "omitForeOffice": {
-        "key": "omitForeOffice",
-        "options": [
-          {
-            "label": "No",
-            "value": "no",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "default": false,
-            "value": "yes",
-            "label": "Yes",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "category": "Advanced",
-        "label": "Omit Fore-Office"
-      },
-      "canticleTable": {
-        "key": "canticleTable",
-        "category": "Cycles",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "1979 Table of Suggested Canticles",
-            "value": "bcp1979"
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "value": "tdb",
-            "default": false,
-            "label": "Te Deum/Benedictus"
-          },
-          {
-            "value": "eow",
-            "label": "Enriching Our Worship",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "value": "ojn",
-            "label": "Order of St. Julian of Norwich",
-            "default": false
-          }
-        ],
-        "label": "Canticle Table"
-      },
-      "readingC": {
-        "category": "Readings",
-        "options": [
-          {
-            "default": true,
-            "value": "none",
-            "metadata": { "alternateYear": false },
-            "label": "—"
-          },
-          {
-            "value": "first_reading",
-            "label": "OT/First Reading",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "value": "second_reading",
-            "label": "Epistle/Second Reading",
-            "metadata": { "alternateYear": false },
-            "default": false
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "label": "Gospel",
-            "default": false,
-            "value": "gospel"
-          }
-        ],
-        "label": "Third Reading",
-        "key": "readingC"
-      },
-      "lectionary": {
-        "options": [
-          {
-            "value": "bcp1979_daily_office",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "Daily Office Lectionary"
-          },
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "RCL Track 1",
-            "value": "rclsundayTrack1"
-          },
-          {
-            "value": "rclsunday",
-            "metadata": { "alternateYear": false },
-            "label": "RCL Track 2",
-            "default": false
-          }
-        ],
-        "label": "Lectionary",
-        "category": "Cycles",
-        "key": "lectionary"
-      }
-    },
-    "liturgyversions": ["bcp1979", "eow", "eow", "eow"],
-    "evening": false
-  },
-  "date_created": { "nanoseconds": 614000000, "seconds": 1618225182 },
-  "version": "Rite-II",
-  "sharing": {
-    "privacy": "public",
-    "status": "published",
-    "collaborators": [],
-    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-    "organization": "venite"
-  },
-  "language": "en",
-  "slug": "morning-prayer",
-  "date_modified": { "seconds": 1620825818, "nanoseconds": 304000000 },
-  "lastRevision": 776,
+  "source": { "source": "", "api": "", "citation": "" },
   "id": "V6M03606PFtMGR0ttiEW",
+  "language": "en",
   "label": "Morning Prayer",
-  "source": { "api": "", "citation": "", "source": "" }
+  "date_modified": { "seconds": 1633528170, "nanoseconds": 796000000 },
+  "lastRevision": 796,
+  "slug": "morning-prayer",
+  "date_created": { "nanoseconds": 614000000, "seconds": 1618225182 }
 }

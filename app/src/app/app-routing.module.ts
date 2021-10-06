@@ -93,16 +93,23 @@ const routes: Routes = [
     canActivate: [LoginGuard],
   },
   {
-    path: 'meditate',
-    loadChildren: () => import('./meditate/meditate.module').then( m => m.MeditatePageModule)
+    path: "meditate",
+    loadChildren: () =>
+      import("./meditate/meditate.module").then((m) => m.MeditatePageModule),
   },
   {
-    path: 'lectionary',
-    loadChildren: () => import('./lectionary/lectionary.module').then( m => m.LectionaryPageModule)
+    path: "lectionary",
+    loadChildren: () =>
+      import("./lectionary/lectionary.module").then(
+        (m) => m.LectionaryPageModule
+      ),
   },
   {
-    path: 'prayers-and-thanksgivings',
-    loadChildren: () => import('./prayers-and-thanksgivings/prayers-and-thanksgivings.module').then( m => m.PrayersAndThanksgivingsPageModule)
+    path: "prayers-and-thanksgivings",
+    loadChildren: () =>
+      import(
+        "./prayers-and-thanksgivings/prayers-and-thanksgivings.module"
+      ).then((m) => m.PrayersAndThanksgivingsPageModule),
   },
 ];
 
