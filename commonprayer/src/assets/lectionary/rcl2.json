@@ -5197,7 +5197,7 @@
     "day": "first-advent",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 80:1-7,17-18"
+    "citation": "Psalm 80:1-7,16-18"
   },
   {
     "whentype": "year",
@@ -5469,7 +5469,7 @@
     "day": "5th-epiphany",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 147:1-11,20c"
+    "citation": "Psalm 147:1-12,21c"
   },
   {
     "whentype": "year",
@@ -6165,7 +6165,7 @@
     "day": "proper-1",
     "lectionary": "rclsunday",
     "type": "gospel",
-    "citation": "Mark 2:1-12"
+    "citation": "Mark 1:40-45"
   },
   {
     "whentype": "year",
