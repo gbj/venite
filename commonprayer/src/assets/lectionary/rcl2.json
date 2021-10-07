@@ -612,6 +612,14 @@
     "when": "B",
     "day": "holy-name",
     "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Philippians 2:5-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "holy-name",
+    "lectionary": "rclsunday",
     "type": "gospel",
     "citation": "Luke 2:15-21"
   },
@@ -638,6 +646,14 @@
     "lectionary": "rclsunday",
     "type": "second_reading",
     "citation": "Galatians 4:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "holy-name",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Philippians 2:5-11"
   },
   {
     "whentype": "year",
@@ -2812,6 +2828,14 @@
     "when": "B",
     "day": "easter",
     "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Isaiah 25:6-9"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter",
+    "lectionary": "rclsunday",
     "type": "morning_psalms",
     "citation": "Psalm 118:1-2,14-24"
   },
@@ -2821,7 +2845,15 @@
     "day": "easter",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Colossians 3:1-4"
+    "citation": "1 Corinthians 15:1-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Acts 10:34-43"
   },
   {
     "whentype": "year",
@@ -2830,6 +2862,14 @@
     "lectionary": "rclsunday",
     "type": "gospel",
     "citation": "John 20:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter",
+    "lectionary": "rclsunday",
+    "type": "gospel",
+    "citation": "Mark 16:1-8"
   },
   {
     "whentype": "year",
@@ -5842,38 +5882,6 @@
   {
     "whentype": "year",
     "when": "B",
-    "day": "easter",
-    "lectionary": "rclsunday",
-    "type": "first_reading",
-    "citation": "Acts 10:34-43"
-  },
-  {
-    "whentype": "year",
-    "when": "B",
-    "day": "easter",
-    "lectionary": "rclsunday",
-    "type": "morning_psalms",
-    "citation": "Psalm 118:1-2,14-24"
-  },
-  {
-    "whentype": "year",
-    "when": "B",
-    "day": "easter",
-    "lectionary": "rclsunday",
-    "type": "second_reading",
-    "citation": "1 Corinthians 15:1-11"
-  },
-  {
-    "whentype": "year",
-    "when": "B",
-    "day": "easter",
-    "lectionary": "rclsunday",
-    "type": "gospel",
-    "citation": "John 20:1-18"
-  },
-  {
-    "whentype": "year",
-    "when": "B",
     "day": "2nd-easter",
     "lectionary": "rclsunday",
     "type": "first_reading",
@@ -6076,6 +6084,14 @@
     "when": "B",
     "day": "pentecost",
     "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Ezekiel 37:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "pentecost",
+    "lectionary": "rclsunday",
     "type": "morning_psalms",
     "citation": "Psalm 104:25-35,37"
   },
@@ -6086,6 +6102,14 @@
     "lectionary": "rclsunday",
     "type": "second_reading",
     "citation": "Romans 8:22-27"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "pentecost",
+    "lectionary": "rclsunday",
+    "type": "second_reading",
+    "citation": "Acts 2:1-21"
   },
   {
     "whentype": "year",
@@ -6366,6 +6390,14 @@
     "lectionary": "rclsunday",
     "type": "first_reading",
     "citation": "Wisdom of Solomon 1:13-15; 2:23-24"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "proper-8",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Lamentations 3:21-33"
   },
   {
     "whentype": "year",
@@ -6750,6 +6782,14 @@
     "lectionary": "rclsunday",
     "type": "first_reading",
     "citation": "Wisdom of Solomon 1:16-2:1,12-22"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "proper-20",
+    "lectionary": "rclsunday",
+    "type": "first_reading",
+    "citation": "Jeremiah 11:18-20"
   },
   {
     "whentype": "year",

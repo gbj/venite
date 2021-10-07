@@ -2780,8 +2780,24 @@
     "when": "B",
     "day": "easter",
     "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Acts 10:34-43"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter",
+    "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 20:1-18"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Mark 16:1-8"
   },
   {
     "whentype": "year",
@@ -2886,6 +2902,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Romans 8:22-27"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "pentecost",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Acts 2:1-21"
   },
   {
     "whentype": "year",
@@ -3086,6 +3110,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "Mark 4:35-41"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "proper-7",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "1 Samuel 17:57-18:5,10-16"
   },
   {
     "whentype": "year",
@@ -3462,6 +3494,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "morning_psalms",
     "citation": "Psalm 19"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "proper-19",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Wisdom of Solomon 7:26-8:1"
   },
   {
     "whentype": "year",
