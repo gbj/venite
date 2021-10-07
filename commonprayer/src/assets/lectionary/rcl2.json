@@ -1893,7 +1893,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Exodus 12:1-14"
+    "citation": "Exodus 12:1-4,(5-10),11-14"
   },
   {
     "whentype": "year",
@@ -1925,7 +1925,7 @@
     "day": "thursday-holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Exodus 12:1-14"
+    "citation": "Exodus 12:1-4,(5-10),11-14"
   },
   {
     "whentype": "year",
@@ -5365,7 +5365,7 @@
     "day": "2nd-epiphany",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "1 Samuel 3:1-20"
+    "citation": "1 Samuel 3:1-10,(11-20)"
   },
   {
     "whentype": "year",
@@ -6317,7 +6317,7 @@
     "day": "proper-6",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "2 Corinthians 5:6-17"
+    "citation": "2 Corinthians 5:6-10,(11-13),14-17"
   },
   {
     "whentype": "year",
@@ -6701,7 +6701,7 @@
     "day": "proper-18",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "James 2:1-17"
+    "citation": "James 2:1-10,(11-13),14-17"
   },
   {
     "whentype": "year",
@@ -7021,7 +7021,7 @@
     "day": "proper-28",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Hebrews 10:11-25"
+    "citation": "Hebrews 10:11-14,(15-18),19-25"
   },
   {
     "whentype": "year",

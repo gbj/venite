@@ -2965,7 +2965,7 @@
     "day": "proper-4",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Samuel 3:1-20"
+    "citation": "1 Samuel 3:1-10,(11-20)"
   },
   {
     "whentype": "year",
@@ -2997,7 +2997,7 @@
     "day": "proper-5",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "1 Samuel 8:4-11(12-15),16-20(11:14-15)"
+    "citation": "1 Samuel 8:4-11,(12-15),16-20; (11:14-15)"
   },
   {
     "whentype": "year",
@@ -3045,7 +3045,7 @@
     "day": "proper-6",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "2 Corinthians 5:6-17"
+    "citation": "2 Corinthians 5:6-10,(11-13),14-17"
   },
   {
     "whentype": "year",
@@ -3437,7 +3437,7 @@
     "day": "proper-18",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "James 2:1-17"
+    "citation": "James 2:1-10,(11-13),14-17"
   },
   {
     "whentype": "year",
@@ -3613,7 +3613,7 @@
     "day": "proper-24",
     "lectionary": "rclsundayTrack1",
     "type": "first_reading",
-    "citation": "Job 38:1-7,34-41"
+    "citation": "Job 38:1-7,(34-41)"
   },
   {
     "whentype": "year",
@@ -3757,7 +3757,7 @@
     "day": "proper-28",
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
-    "citation": "Hebrews 10:11-25"
+    "citation": "Hebrews 10:11-14,(15-18),19-25"
   },
   {
     "whentype": "year",
