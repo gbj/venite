@@ -196,6 +196,14 @@
     "when": "B",
     "day": "holy-name",
     "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Philippians 2:5-11"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "holy-name",
+    "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "Luke 2:15-21"
   },
@@ -206,6 +214,14 @@
     "lectionary": "rclsundayTrack1",
     "type": "second_reading",
     "citation": "Galatians 4:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "holy-name",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Philippians 2:5-11"
   },
   {
     "whentype": "year",
