@@ -733,7 +733,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 1:3-6,15-19"
+    "citation": "Ephesians 1:3-6,15-19a"
   },
   {
     "whentype": "year",
@@ -789,7 +789,7 @@
     "day": "2nd-sunday-after-christmas",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Ephesians 1:3-6,15-19"
+    "citation": "Ephesians 1:3-6,15-19a"
   },
   {
     "whentype": "year",
@@ -5237,7 +5237,7 @@
     "day": "second-advent",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "2 Peter 3:8-15"
+    "citation": "2 Peter 3:8-15a"
   },
   {
     "whentype": "year",
@@ -5789,7 +5789,7 @@
     "day": "holy-week",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 50:4-9"
+    "citation": "Isaiah 50:4-9a"
   },
   {
     "whentype": "year",
@@ -6621,7 +6621,7 @@
     "day": "proper-16",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Joshua 24:1-2,14-18"
+    "citation": "Joshua 24:1-2a,14-18"
   },
   {
     "whentype": "year",
@@ -6685,7 +6685,7 @@
     "day": "proper-18",
     "lectionary": "rclsunday",
     "type": "first_reading",
-    "citation": "Isaiah 35:4-7"
+    "citation": "Isaiah 35:4-7a"
   },
   {
     "whentype": "year",
@@ -7053,7 +7053,7 @@
     "day": "proper-29",
     "lectionary": "rclsunday",
     "type": "second_reading",
-    "citation": "Revelation 1:4-8"
+    "citation": "Revelation 1:4b-8"
   },
   {
     "whentype": "year",
