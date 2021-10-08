@@ -117,6 +117,13 @@ menu.cp-doc-menu li button.error img {
   margin: 0;
 }
 
+.doc.rubric > p {
+  margin-top: 1rem;
+}
+.doc.rubric > p:first-child {
+  margin: 0;
+}
+
 .doc {
   padding: 1px;
 }
