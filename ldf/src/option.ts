@@ -116,13 +116,17 @@ export class Option extends LiturgicalDocument {
         label = `${option.citation.toString()}${formattedText}`;
       }
     }
+    // Readings with same citation + different versions => Version
+    else if (uniqueCitations == 1) {
+      label = versionToString(option.version);
+    }
     // Readings with one version => John 1:1-4
     else if (option.type == 'bible-reading' && option.citation && uniqueVersions == 1) {
       label = option.citation.toString();
     }
-    // Readings with multiple versions => John 1:1-4
+    // Readings with multiple versions => John 1:1-4 (Version)
     else if (option.type == 'bible-reading' && option.citation && uniqueVersions > 1) {
-      label = `${option.citation.toString()} (${option.version})`;
+      label = `${option.citation.toString()} (${versionToString(option.version)})`;
     }
     // Canticles, if only one version
     else if (
