@@ -51,6 +51,11 @@ export enum TTSState {
   Ending = "Ending",
 }
 
+type TextWithLanguage = {
+  text: string;
+  language: string;
+};
+
 @Injectable({
   providedIn: "root",
 })
@@ -108,7 +113,7 @@ export class SpeechService {
         s
           .replace(/&nbsp;/g, " ")
           .replace(/YHWH/g, "Addo-nigh")
-          .replace(/Venite/g, "ven-EAT-aye")
+          .replace(/Venite/g, "ven-E-tae")
           .replace(/Compline/g, "COMP-linn")
       );
     }
@@ -124,54 +129,69 @@ export class SpeechService {
       }
     }
 
-    function docToUtterances(doc: LiturgicalDocument): (number | string)[] {
+    function docToUtterances(
+      doc: LiturgicalDocument
+    ): (number | TextWithLanguage)[] {
+      let utterances;
       if (doc) {
         switch (doc?.type) {
           case "liturgy":
-            return ((doc as Liturgy).value || [])
+            utterances = ((doc as Liturgy).value || [])
               .map((child) => docToUtterances(child).concat([BETWEEN_DOCS]))
               .flat();
+            break;
           case "option":
             const selected = (doc as Option).value[doc.metadata?.selected ?? 0];
-            return docToUtterances(selected);
+            utterances = docToUtterances(selected);
+            break;
           case "responsive":
-            return responsivePrayerToUtterances(doc as ResponsivePrayer);
+            utterances = responsivePrayerToUtterances(doc as ResponsivePrayer);
+            break;
           case "bible-reading":
-            return bibleReadingToUtterances(doc as BibleReading);
+            utterances = bibleReadingToUtterances(doc as BibleReading);
+            break;
           case "psalm":
-            return psalmToUtterances(doc as Psalm, BETWEEN_PSALM_VERSE);
+            utterances = psalmToUtterances(doc as Psalm, BETWEEN_PSALM_VERSE);
+            break;
           case "rubric":
-            return (doc.value || []).join("").includes("Silence")
+            utterances = (doc.value || []).join("").includes("Silence")
               ? [SILENCE]
               : [];
+            break;
           case "meditation":
           case "image":
-            return [];
+            utterances = [];
+            break;
           default:
-            return (
-              ((doc as Heading | Refrain | Rubric | Text)?.value || [])
-                // Filter out unneeded "Heading" value
-                .filter(
-                  (piece: any) =>
-                    doc?.type !== "heading" || (piece as string) !== "Heading"
-                )
-                // stringfiy each one
-                .map((piece: any) => piece.toString())
-                // add response if this type takes it
-                .concat(
-                  doc?.metadata?.response && !doc?.metadata?.omit_response
-                    ? doc.metadata.response
-                    : []
-                )
-                .concat(
-                  doc.style === "prayer" &&
-                    !doc?.metadata?.response &&
-                    !doc?.metadata?.omit_response
-                    ? ["Amen"]
-                    : []
-                )
-            );
+            utterances = (
+              (doc as Heading | Refrain | Rubric | Text)?.value || []
+            )
+              // Filter out unneeded "Heading" value
+              .filter(
+                (piece: any) =>
+                  doc?.type !== "heading" || (piece as string) !== "Heading"
+              )
+              // stringfiy each one
+              .map((piece: any) => piece.toString())
+              // add response if this type takes it
+              .concat(
+                doc?.metadata?.response && !doc?.metadata?.omit_response
+                  ? doc.metadata.response
+                  : []
+              )
+              .concat(
+                doc.style === "prayer" &&
+                  !doc?.metadata?.response &&
+                  !doc?.metadata?.omit_response
+                  ? ["Amen"]
+                  : []
+              );
+            break;
         }
+
+        return utterances.map((text) =>
+          typeof text === "string" ? { text, language: doc.language } : text
+        );
       } else {
         return [];
       }
@@ -201,7 +221,9 @@ export class SpeechService {
       }
     }
 
-    function bibleReadingToUtterances(d: BibleReading): (number | string)[] {
+    function bibleReadingToUtterances(
+      d: BibleReading
+    ): (number | string | TextWithLanguage)[] {
       const doc = new BibleReading(d);
       doc.compileIntro();
 
@@ -217,7 +239,7 @@ export class SpeechService {
             (verse as Heading).type === "heading"
               ? docToUtterances(verse as Heading)
               : processText((verse as BibleReadingVerse).text).split(
-                  /[^\w \t’'-]/g
+                  /[@#'!&(),\[\].+\/-]/g
                 )
           )
           .flat(),
@@ -231,7 +253,7 @@ export class SpeechService {
     function psalmToUtterances(
       doc: Psalm,
       pauseLength: number = 1000
-    ): (number | string)[] {
+    ): (number | string | TextWithLanguage)[] {
       const obj = new Psalm(doc),
         includeAntiphon: boolean = obj.includeAntiphon(),
         filteredValue =
@@ -243,7 +265,7 @@ export class SpeechService {
           | Refrain
           | { [x: string]: string | Refrain }
           | undefined
-      ): (number | string)[] {
+      ): (number | string | TextWithLanguage)[] {
         if (typeof antiphon == "string") {
           const refrain = new Refrain({
             type: "refrain",
@@ -274,7 +296,7 @@ export class SpeechService {
         value: string | undefined = undefined,
         level: number = 3,
         showLatinName: boolean = true
-      ): (number | string)[] {
+      ): (number | string | TextWithLanguage)[] {
         let label: string = obj.label;
         if (
           obj.style == "canticle" &&
@@ -308,7 +330,9 @@ export class SpeechService {
         ].filter((text) => text !== null);
       }
 
-      function gloriaNode(gloria: string | Refrain): (number | string)[] {
+      function gloriaNode(
+        gloria: string | Refrain
+      ): (number | string | TextWithLanguage)[] {
         if (typeof gloria === "string") {
           return [gloria];
         } else {
@@ -360,22 +384,26 @@ export class SpeechService {
             .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
             .filter((value) => value || " ")
             .map((value, utteranceIdx) =>
-              typeof value === "string"
-                ? from(
-                    this.utteranceFromText(
-                      processText(value),
-                      doc.language ?? "en",
-                      settings
-                    )
-                  ).pipe(
-                    switchMap((utterance) => this.speak(utterance, voices)),
+              typeof value === "number"
+                ? timer(value).pipe(
                     map((data) => ({
                       subdoc: subdocIdx + index,
                       utterance: utteranceIdx + startingUtteranceIndex,
                       data,
                     }))
                   )
-                : timer(value).pipe(
+                : from(
+                    this.utteranceFromText(
+                      processText(
+                        typeof value === "string" ? value : value.text
+                      ),
+                      (typeof value === "string"
+                        ? doc.language
+                        : value.language) || "en",
+                      settings
+                    )
+                  ).pipe(
+                    switchMap((utterance) => this.speak(utterance, voices)),
                     map((data) => ({
                       subdoc: subdocIdx + index,
                       utterance: utteranceIdx + startingUtteranceIndex,
@@ -442,13 +470,19 @@ export class SpeechService {
     }
   }
 
+  isOriginalLanguage(lang: string): boolean {
+    return lang === "he" || lang === "el";
+  }
+
   async utteranceFromText(
     text: string,
     lang: string,
     settings: DisplaySettings
   ): Promise<SpeechSynthesisUtterance> {
     const voices = await this.getVoices(),
-      chosenVoice = voices.find((voice) => voice.name === settings.voiceChoice);
+      chosenVoice = this.isOriginalLanguage(lang)
+        ? voices.find((voice) => voice.lang.startsWith(lang))
+        : voices.find((voice) => voice.name === settings.voiceChoice);
 
     const u: SpeechSynthesisUtterance =
       this.platform.is("capacitor") && this.platform.is("android")
@@ -459,11 +493,15 @@ export class SpeechService {
     }
     u.lang = chosenVoice?.lang || lang;
     u.pitch = 1;
-    u.rate = settings.voiceRate ?? 0.75;
+    u.rate = this.isOriginalLanguage(lang) ? 0.2 : settings.voiceRate ?? 0.75;
     // iOS needs to sloooooow down if using Capacitor TextToSpeech
     // in this case I've just reverted to using the Web Speech Synthesis API on iOS because it's actually better
     // * (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
     u.volume = settings.voiceBackgroundVolume ?? 1;
+
+    if (lang == "he") {
+      console.log("u = ", u);
+    }
 
     return u;
   }
