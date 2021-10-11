@@ -33,6 +33,7 @@ export class DisplaySettingsConfig {
   dropcaps: { value: string; label: string }[];
   ask_about_unison_texts?: undefined | boolean;
   psalm_pause: boolean;
+  font_accessibility: boolean;
 }
 
 export type LiturgyConfig = {

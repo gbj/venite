@@ -100,6 +100,17 @@ export class AppComponent {
           document.body.classList.toggle("dark", false);
         }
       });
+
+      // iOS text accessibility/font scaling
+      if (this.platform.is("ios")) {
+        this.preferences.get("font_accessibility").subscribe((pref) => {
+          if (pref?.value === "true") {
+            document.body.classList.add("dynamic-text");
+          } else {
+            document.body.classList.remove("dynamic-text");
+          }
+        });
+      }
     });
 
     if (this.platform.is("capacitor")) {

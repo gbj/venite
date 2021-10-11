@@ -236,9 +236,10 @@ export class PrayService {
     originalPrefs: Record<string, Preference> | undefined
   ): Observable<LiturgicalDocument> {
     const language = doc.language || "en",
-      versions: string[] = (alternateVersions?.length > 0
-        ? [doc.version, ...alternateVersions]
-        : [doc.version]
+      versions: string[] = (
+        alternateVersions?.length > 0
+          ? [doc.version, ...alternateVersions]
+          : [doc.version]
       )
         .filter((version) => version !== undefined)
         .map((version) =>

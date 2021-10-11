@@ -92,6 +92,10 @@
         <ion-select-option value="xxl"><ion-label>{{ 'displaySettings.Size.XXL' | translate }}</ion-label></ion-select-option>
       </ion-select>
     </ion-item>
+    <ion-item *ngIf="showAccessibility">
+      <ion-label>{{ 'displaySettings.font-accessibility' | translate }}</ion-label>
+      <ion-checkbox [checked]="fontAccessibility$ | async" (ionChange)="setFontAccessibility($event)"></ion-checkbox>
+    </ion-item>
     <ion-item *ngIf="config.fonts">
       <ion-label position="stacked">{{ 'displaySettings.Font' | translate }}</ion-label>
       <ion-segment [value]="settings.font" (ionChange)="updateSetting(uid, 'font', $event)">

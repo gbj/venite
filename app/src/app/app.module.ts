@@ -147,6 +147,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
         ],
         ask_about_unison_texts: true,
         psalm_pause: true,
+        font_accessibility: true,
       },
       liturgySettings: {
         sundayCollectsFirst: true,

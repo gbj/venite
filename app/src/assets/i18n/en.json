@@ -128,7 +128,8 @@
     },
     "Voice": "Voice",
     "Response-and-Unison-Bolded": "Both",
-    "Unison": "Unison"
+    "Unison": "Unison",
+    "font-accessibility": "Scale font size based on device text size"
   },
   "editor": {
     "psalm_not_found": "We had trouble finding that psalm. Double-check the citation and try again.",

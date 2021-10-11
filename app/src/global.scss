@@ -27,7 +27,7 @@
 
 // React to system font size choice
 @supports (font: -apple-system-body) {
-  html {
+  body.dynamic-text {
     font: -apple-system-body;
   }
 }
@@ -467,6 +467,7 @@ body * {
 
   @media (min-width: 767px) {
     .fontscale-s {
+      --ldf-max-width: 650px;
       font-size: 100%;
     }
 
@@ -481,18 +482,43 @@ body * {
     }
 
     .fontscale-xl {
-      --ldf-max-width: 800px;
+      --ldf-max-width: 700px;
       font-size: 175%;
     }
 
     .fontscale-xxl {
-      --ldf-max-width: 1000px;
+      --ldf-max-width: 700px;
       font-size: 200%;
+    }
+
+     @supports (font: -apple-system-body) {
+       body.dynamic-text {
+        .fontscale-s {
+          font-size: 90%;
+        }
+      
+        .fontscale-m {
+          font-size: 115%;
+        }
+      
+        .fontscale-l {
+          font-size: 130%;
+        }
+      
+        .fontscale-xl {
+          font-size: 145%;
+        }
+      
+        .fontscale-xxl {
+          font-size: 160%;
+        }
+       }
     }
   }
 
   @media (min-width: 1068px) {
     .fontscale-s {
+      --ldf-max-width: 850px;
       font-size: 100%;
     }
 

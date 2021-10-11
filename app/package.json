@@ -54,7 +54,7 @@
     "@venite/ng-darkmode": "0.0.13",
     "@venite/ng-localstorage": "^0.1.0",
     "@venite/ng-platform": "0.0.2",
-    "@venite/ng-pray": "^0.6.3",
+    "@venite/ng-pray": "^0.6.4",
     "@venite/ng-pray-menu": "^0.5.5",
     "@venite/ng-reminders": "^0.2.4",
     "@venite/ng-service-api": "^0.8.0",
