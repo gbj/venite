@@ -15,11 +15,10 @@ export type BibleReferenceRange = {
 };
 
 export function parseReference(reference: string): BibleReferenceRange[] {
-  const list = [];
+  let list = [];
   let prev: BibleReferenceRange | null = null;
   let bracketOpened: boolean = false;
   for (let part of reference.split(/([,;\[\]])/)) {
-    console.log('\n\npart = ', part);
     if (['', ',', ';', '[', ']'].includes(part.trim())) {
       if (part.trim() == '[') {
         bracketOpened = true;
@@ -32,6 +31,32 @@ export function parseReference(reference: string): BibleReferenceRange[] {
       prev = current;
     }
   }
+
+  // handle citations like 1 Cor. 13:[1-3]4-13
+  if (list[0]?.start?.verse == null && list[1]?.bracketed) {
+    list = [
+      {
+        start: {
+          book: list[1].start.book ?? list[0].start.book ?? null,
+          chapter: list[1].start.chapter ?? list[0].start.chapter ?? null,
+          verse: list[1].start.verse ?? list[0].start.verse ?? null,
+        },
+        end: {
+          book: list[1]?.end?.book ?? list[0]?.end?.book ?? list[1]?.start?.book ?? list[0]?.start?.book ?? null,
+          chapter:
+            list[1]?.end?.chapter ??
+            list[0]?.end?.chapter ??
+            list[1]?.start?.chapter ??
+            list[0]?.start?.chapter ??
+            null,
+          verse: list[1]?.end?.verse ?? list[0]?.end?.verse ?? list[1]?.start?.verse ?? list[0]?.start?.verse ?? null,
+        } as BibleReferenceQuery,
+        bracketed: true,
+      },
+      ...list.slice(2),
+    ];
+  }
+
   return list;
 }
 

@@ -113,5 +113,17 @@ describe('parseReference', () => {
         end: { book: Book.Wisdom, chapter: 2, verse: 22 },
       },
     ]);
+
+    expect(parseReference('1 Cor. 13:[1-3]4-13')).toEqual([
+      {
+        start: { book: Book.FirstCorinthians, chapter: 13, verse: 1 },
+        end: { book: Book.FirstCorinthians, chapter: 13, verse: 3 },
+        bracketed: true,
+      },
+      {
+        start: { book: null, chapter: null, verse: 4 },
+        end: { book: null, chapter: null, verse: 13 },
+      },
+    ]);
   });
 });
