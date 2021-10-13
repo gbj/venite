@@ -6,6 +6,16 @@ type DocActionMenuProps = {
 
 export function DocActionMenu({ hidden } : DocActionMenuProps) {
   return <menu id="cp-doc-header" class={hidden ? "cp-doc-menu hidden" : "cp-doc-menu"}>
+          <li>
+        <button class="venite" id="clear-button">
+          <label>Clear</label>
+        </button>
+      </li>
+      <li>
+        <button class="venite" id="select-all-button">
+          <label>Select All</label>
+        </button>
+      </li>
       <li>
         <button class="venite">
           <img src="/assets/icon/venite.svg" />

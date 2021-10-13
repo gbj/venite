@@ -38,14 +38,14 @@ window.addEventListener("click", (ev) => {
   }
 });
 
-const handle = (el: HTMLElement) => {
+const handle = (el: HTMLElement, force?: boolean | undefined) => {
   el.dataset.toggled =
     el.dataset.toggled == undefined || el.dataset.toggled === "false"
       ? "true"
       : "false";
 
   // toggled
-  if (el.dataset.toggled === "true") {
+  if ((el.dataset.toggled === "true" && force !== false) || force === true) {
     // highlight the element
     el.classList.add("selected");
 
@@ -193,5 +193,23 @@ document.querySelectorAll(".doc").forEach((el: HTMLElement) => {
     ev.dataTransfer.setData("application/json", JSON.stringify(doc));
     ev.dataTransfer.setData("text/html", el.innerHTML);
     ev.dataTransfer.setData("text/plain", el.innerText);
+  });
+});
+
+const selectAllBtn = document.getElementById("select-all-button");
+selectAllBtn.addEventListener("click", () => {
+  requestAnimationFrame(() => {
+    document
+      .querySelectorAll(".cp-doc > article.doc")
+      .forEach((el) => handle(el as HTMLElement, true));
+  });
+});
+
+const clearBtn = document.getElementById("clear-button");
+clearBtn.addEventListener("click", () => {
+  requestAnimationFrame(() => {
+    document
+      .querySelectorAll(".cp-doc > article.doc")
+      .forEach((el) => handle(el as HTMLElement, false));
   });
 });
