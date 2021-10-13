@@ -18,11 +18,12 @@ export function parseReference(reference: string): BibleReferenceRange[] {
   let list = [];
   let prev: BibleReferenceRange | null = null;
   let bracketOpened: boolean = false;
-  for (let part of reference.split(/([,;\[\]])/)) {
-    if (['', ',', ';', '[', ']'].includes(part.trim())) {
-      if (part.trim() == '[') {
+  for (let part of reference.split(/([,;\[\]\(\)])/)) {
+    const trimmed = part.trim();
+    if (['', ',', ';', '[', ']', '(', ')'].includes(trimmed)) {
+      if (trimmed == '[' || trimmed == '(') {
         bracketOpened = true;
-      } else {
+      } else if (trimmed == ']' || trimmed == ')') {
         bracketOpened = false;
       }
     } else {
