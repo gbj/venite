@@ -431,11 +431,16 @@ export class PrayService {
             Boolean(doc.lookup.random)
           );
         } else if (doc.slug) {
+          const versions2 =
+            doc.type === "psalm" && typeof doc.version === "object"
+              ? [prefs[doc.version.preference]]
+              : versions;
+
           result = this.lookupBySlug(
             doc,
             doc.slug,
             language,
-            versions,
+            versions2,
             day,
             prefs,
             doc.lookup.filter,
@@ -481,7 +486,13 @@ export class PrayService {
       .findDocumentsBySlug(
         slug,
         language,
-        docBase?.version ? [versionToString(docBase.version)] : versions,
+        docBase?.version
+          ? [
+              typeof docBase?.version === "object"
+                ? prefs[docBase.version.preference]
+                : docBase.version,
+            ]
+          : versions,
         false,
         this.bulletinMode
       )
