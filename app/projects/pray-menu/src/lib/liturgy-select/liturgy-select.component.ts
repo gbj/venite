@@ -479,7 +479,8 @@ export class LiturgySelectComponent implements OnInit {
           ) &&
           (!day.holy_day_observed ||
             (day.holy_day_observed &&
-              day.slug !== day.holy_day_observed?.slug)) &&
+              day.slug !== day.holy_day_observed?.slug) ||
+            day.holy_day_observed?.slug === "thanksgiving-day") &&
           day.holy_days?.length > 0;
 
         // or
