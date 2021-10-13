@@ -2365,7 +2365,15 @@
     "day": "easter-day-the-great-vigil",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 42 and 43"
+    "citation": "Psalm 42"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 43"
   },
   {
     "whentype": "year",
@@ -2541,7 +2549,15 @@
     "day": "easter-day-the-great-vigil",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 42 and 43"
+    "citation": "Psalm 42"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 43"
   },
   {
     "whentype": "year",
@@ -2717,7 +2733,15 @@
     "day": "easter-day-the-great-vigil",
     "lectionary": "rclsunday",
     "type": "morning_psalms",
-    "citation": "Psalm 42 and 43"
+    "citation": "Psalm 42"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "easter-day-the-great-vigil",
+    "lectionary": "rclsunday",
+    "type": "morning_psalms",
+    "citation": "Psalm 43"
   },
   {
     "whentype": "year",

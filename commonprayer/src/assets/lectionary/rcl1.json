@@ -4509,7 +4509,15 @@
     "day": "proper-7",
     "lectionary": "rclsundayTrack1",
     "type": "morning_psalms",
-    "citation": "Psalm 42 and 43"
+    "citation": "Psalm 42"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "proper-7",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 43"
   },
   {
     "whentype": "year",
