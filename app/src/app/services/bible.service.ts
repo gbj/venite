@@ -51,6 +51,10 @@ export class BibleService implements BibleServiceInterface {
       version = "NRSV";
     }
 
+    if (version == "NRSV" || version == "KJV") {
+      citation = citation.replace("(", "[").replace(")", "]");
+    }
+
     return this.http
       .get<BibleReading>(
         `https://us-central1-venite-2.cloudfunctions.net/bible`,
