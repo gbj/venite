@@ -106,10 +106,6 @@ export function ldfToHTML(
   }
   // compiled documents
   else {
-    const doc = docToHtml(inDoc, config);
-    // Very limited Markdown
-    return doc
-      .replace(/\*\*([^\*>]*)\*\*/g, "<strong>$1</strong>")
-      .replace(/\*([^\*>]*)\*/g, "<em>$1</em>");
+    return docToHtml(inDoc, config);
   }
 }

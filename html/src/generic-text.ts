@@ -1,6 +1,7 @@
 import { Heading, LiturgicalDocument } from "@venite/ldf/dist/cjs";
 import { ldfToHTML } from ".";
 import { LDFToHTMLConfig } from "./config";
+import { processText } from "./process-text";
 
 export function genericTextToHTML(
   doc: LiturgicalDocument,
@@ -34,8 +35,8 @@ export function genericTextToHTML(
       (line, lineIndex) =>
         `<p>${
           doc.type === "rubric"
-            ? `<em class="rubric">${line}</em>`
-            : line.replace(/\n/g, "<br>").replace(/\t/g, "    ")
+            ? `<em class="rubric">${processText(line)}</em>`
+            : processText(line)
         }${
           doc?.metadata?.response &&
           doc.value &&
