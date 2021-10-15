@@ -1,7 +1,7 @@
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.21.0?dts";
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.25";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.26";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 import { Page } from "../../ssg/page.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/exists.ts";

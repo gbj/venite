@@ -1,1397 +1,1509 @@
-{"data": [{
-  "sharing": {
-    "status": "published",
-    "collaborators": [],
-    "privacy": "public",
-    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-    "organization": "venite"
-  },
-  "source": { "citation": "", "source": "", "api": "" },
-  "metadata": {
-    "liturgyversions": ["bcp1979", "Rite-II", "Rite-II", "eow", "EOW", "eow"],
-    "preferences": {
-      "renewal": {
-        "label": "Renewal of Baptismal Vows",
-        "key": "renewal",
-        "options": [
-          {
-            "value": "no",
-            "metadata": { "alternateYear": false },
-            "label": "No",
-            "default": false
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "Yes",
-            "value": "yes"
-          }
-        ]
-      },
-      "bibleVersion": {
-        "key": "bibleVersion",
-        "options": [
-          {
-            "value": "NRSV",
-            "default": false,
-            "label": "New Revised Standard Version (NRSV)",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "value": "CEB",
-            "label": "Common English Bible (CEB)",
-            "default": false
-          },
-          {
-            "default": false,
-            "label": "English Standard Version (ESV)",
-            "metadata": { "alternateYear": false },
-            "value": "ESV"
-          },
-          {
-            "default": false,
-            "value": "KJV",
-            "label": "King James Version (KJV)",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "label": "Bible Translation"
-      },
-      "readingB": {
-        "key": "readingB",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "OT/First Reading",
-            "value": "first_reading"
-          },
-          {
-            "label": "Epistle/Second Reading",
-            "default": true,
-            "metadata": { "alternateYear": false },
-            "value": "second_reading"
-          },
-          {
-            "default": false,
-            "label": "—",
-            "value": "none",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "label": "Second Reading"
-      },
-      "lectionary": {
-        "label": "Lectionary",
-        "key": "lectionary",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "label": "RCL (Track 1)",
-            "default": false,
-            "value": "rclsundayTrack1"
-          },
-          {
-            "label": "RCL (Track 2)",
-            "metadata": { "alternateYear": false },
-            "value": "rclsunday",
-            "default": false
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "value": "bcp1979_daily_office",
-            "label": "Daily Office",
-            "default": false
-          },
-          {
-            "metadata": { "alternateYear": false },
-            "label": "Lesser Feasts & Fasts (2018)",
-            "default": false,
-            "value": "lff2018"
-          }
-        ]
-      },
-      "readingA": {
-        "label": "First Reading",
-        "key": "readingA",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "value": "first_reading",
-            "label": "OT/First Reading",
-            "default": false
-          },
-          {
-            "default": false,
-            "label": "Epistle/Second Reading",
-            "metadata": { "alternateYear": false },
-            "value": "second_reading"
-          }
-        ]
-      },
-      "psalterVersion": {
-        "label": "Psalter Version",
-        "key": "psalterVersion",
-        "options": [
-          {
-            "label": "1979 Book of Common Prayer",
-            "value": "bcp1979",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "label": "Inclusive Psalter",
-            "value": "ip",
-            "default": false,
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "value": "coverdale",
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "label": "Coverdale (1662 BCP)"
-          }
-        ]
-      }
-    },
-    "evening": false,
-    "special_preferences": {
-      "footwashing": {
-        "label": "footwashing",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "label": "No",
-            "default": false,
-            "value": "false"
-          },
-          {
-            "value": "true",
-            "default": false,
-            "label": "Yes",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "key": "footwashing"
-      },
-      "palms": {
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "default": false,
-            "value": "false",
-            "label": "—"
-          },
-          {
-            "default": false,
-            "label": "Before the Service",
-            "value": "true",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "label": "Liturgy of the Palms",
-        "key": "palms"
-      }
-    },
-    "supplement": false
-  },
-  "type": "liturgy",
-  "hidden": false,
-  "value": [
-    {
-      "hidden": false,
-      "value": ["The Holy Eucharist"],
-      "metadata": { "level": 1, "omit_response": false },
-      "category": [],
-      "source": { "source": "", "api": "", "citation": "" },
-      "style": "text",
-      "type": "heading"
-    },
-    {
-      "type": "heading",
-      "value": [""],
-      "metadata": { "level": 1 },
-      "hidden": false,
-      "style": "date"
-    },
-    {
-      "style": "day",
-      "value": ["Heading"],
-      "metadata": { "level": 1 },
-      "type": "heading",
-      "hidden": false
-    },
-    {
-      "type": "heading",
-      "metadata": { "omit_response": false, "level": 2 },
-      "value": ["The Word of God"],
-      "source": { "source": "bcp1979", "api": "", "citation": "p. 355" },
-      "hidden": false,
-      "style": "text",
-      "category": []
-    },
-    {
-      "date_created": { "seconds": 1603549748, "nanoseconds": 777000000 },
-      "sharing": {
-        "status": "published",
-        "privacy": "public",
-        "organization": "venite",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": []
-      },
-      "version": "Rite-II",
-      "source": { "api": "", "source": "", "citation": "" },
-      "date_modified": { "seconds": 1603550236, "nanoseconds": 509000000 },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "value": "true", "key": "palms", "is": true } }
-        ]
-      },
-      "slug": "palms",
-      "hidden": false,
-      "category": [],
-      "label": "Palms",
-      "language": "en",
-      "lookup": { "type": "slug" },
-      "lastRevision": 84,
-      "metadata": {
-        "evening": false,
-        "special_preferences": {},
-        "preferences": {},
-        "liturgyversions": [],
-        "supplement": false
-      },
-      "type": "liturgy"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": ["A hymn, psalm, or anthem may be sung. "]
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [" The people standing, the Celebrant says"]
-    },
-    {
-      "value": [
-        {
-          "text": "Blessed be God: Father, Son, and Holy Spirit.",
-          "response": "",
-          "label": ""
-        },
-        {
-          "text": "And blessed be his kingdom, now and for ever. Amen.",
-          "label": "People"
-        }
-      ],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "season": {
-              "only": [],
-              "except": ["Lent", "HolyWeek", "Easter", "Ascension"]
-            }
-          }
-        ]
-      },
-      "type": "responsive",
-      "style": "preces",
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "style": "preces",
-      "condition": {
-        "conditions": [
-          { "season": { "only": ["Easter", "Ascension"], "except": [] } }
-        ],
-        "mode": "and"
-      },
-      "type": "responsive",
-      "value": [
-        { "response": "", "text": "Alleluia. Christ is risen.", "label": "" },
-        { "text": "The Lord is risen indeed. Alleluia.", "label": "People" }
-      ]
-    },
-    {
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "season": { "except": [], "only": ["Lent", "HolyWeek"] } }
-        ]
-      },
-      "value": [
-        {
-          "label": "",
-          "response": "",
-          "text": "Bless the Lord who forgives all our sins;"
-        },
-        { "text": "His mercy endures for ever.", "label": "People" }
-      ],
-      "type": "responsive",
-      "style": "preces",
-      "hidden": false
-    },
-    { "hidden": false, "type": "rubric", "value": ["The Celebrant may say"] },
-    {
-      "metadata": { "omit_response": false },
-      "category": [],
-      "value": [
-        "Almighty God, to you all hearts are open, all desires known, and from you no secrets are hid: Cleanse the thoughts of our hearts by the inspiration of your Holy Spirit, that we may perfectly love you, and worthily magnify your holy Name; through Christ our Lord."
-      ],
-      "hidden": false,
-      "type": "text",
-      "style": "prayer",
-      "label": "The Collect for Purity",
-      "source": { "citation": "", "source": "", "api": "" }
-    },
+{
+  "data": [
     {
       "value": [
         {
           "category": [],
-          "type": "text",
-          "label": "Gloria in Excelsis",
-          "style": "text",
-          "display_format": "unison",
-          "version_label": "Gloria",
-          "source": { "citation": "", "source": "", "api": "" },
+          "type": "heading",
+          "value": ["The Holy Eucharist"],
           "hidden": false,
-          "value": [
-            "Glory to God in the highest,\n    and peace to his people on earth.",
-            "Lord God, heavenly King,\nalmighty God and Father,\n    we worship you, we give you thanks,\n    we praise you for your glory.",
-            "Lord Jesus Christ, only Son of the Father,\nLord God, Lamb of God,\nyou take away the sin of the world:\n    have mercy on us;\nyou are seated at the right hand of the Father:\n    receive our prayer.",
-            "For you alone are the Holy One,\nyou alone are the Lord,\nyou alone are the Most High,\n    Jesus Christ,\n    with the Holy Spirit,\n    in the glory of God the Father. Amen."
-          ],
-          "metadata": { "omit_response": false }
+          "style": "text",
+          "source": { "api": "", "source": "", "citation": "" },
+          "metadata": { "level": 1, "omit_response": false }
         },
         {
-          "source": { "source": "", "api": "", "citation": "" },
+          "hidden": false,
+          "metadata": { "level": 1 },
+          "style": "date",
+          "type": "heading",
+          "value": [""]
+        },
+        {
+          "style": "day",
+          "type": "heading",
+          "hidden": false,
+          "metadata": { "level": 1 },
+          "value": ["Heading"]
+        },
+        {
+          "metadata": { "omit_response": false, "level": 2 },
+          "type": "heading",
+          "style": "text",
+          "hidden": false,
+          "source": { "citation": "", "source": "", "api": "" },
+          "value": ["The Word of God"],
+          "category": []
+        },
+        {
+          "type": "rubric",
+          "value": ["A hymn, psalm, or anthem may be sung. "],
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "value": [" The people standing, the Celebrant says"],
+          "type": "rubric"
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": ["Advent", "Easter", "Ascension", "Pentecost"],
+                  "only": []
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "metadata": { "selected": 0, "editor_selected": 0 },
           "value": [
             {
-              "response": "Christ, have mercy.",
-              "text": "Lord, have mercy.",
-              "label": ""
+              "source": { "source": "", "citation": "", "api": "" },
+              "category": [],
+              "style": "preces",
+              "type": "responsive",
+              "metadata": {},
+              "value": [
+                {
+                  "response": "",
+                  "text": "Blessed be the one, holy, and living God.",
+                  "label": "Celebrant"
+                },
+                { "text": "Glory to God for ever and ever.", "label": "People" }
+              ],
+              "hidden": false,
+              "version_label": "Blessed be the one..."
             },
-            { "text": "Lord, have mercy.", "response": "" }
-          ],
-          "style": "responsive",
-          "category": [],
-          "hidden": false,
-          "type": "responsive",
-          "version_label": "Kyrie",
-          "metadata": {}
-        },
-        {
-          "category": [],
-          "source": { "citation": "", "source": "", "api": "" },
-          "version_label": "Trisagion",
-          "type": "responsive",
-          "value": [
             {
-              "response": "Have mercy upon us.",
-              "text": "Holy God,\nHoly and Mighty,\nHoly Immortal One,",
-              "label": ""
+              "hidden": false,
+              "value": [
+                {
+                  "label": "Celebrant",
+                  "response": "",
+                  "text": "Blessed be our God."
+                },
+                { "text": "For ever and ever. Amen.", "label": "People" }
+              ],
+              "metadata": {},
+              "style": "preces",
+              "source": { "citation": "", "source": "", "api": "" },
+              "type": "responsive",
+              "version_label": "Blessed be our God.",
+              "category": []
             }
           ],
           "hidden": false,
-          "metadata": {},
-          "style": "responsive"
-        }
-      ],
-      "type": "option",
-      "metadata": { "editor_selected": 0, "selected": 0 },
-      "hidden": false
-    },
-    {
-      "hidden": false,
-      "value": ["The Collect of the Day"],
-      "source": { "api": "", "citation": "", "source": "" },
-      "type": "heading",
-      "metadata": { "omit_response": false, "level": 3 },
-      "category": [],
-      "style": "text"
-    },
-    {
-      "value": ["The Celebrant says to the people"],
-      "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "value": [
-        { "response": "", "text": "The Lord be with you.", "label": "" },
-        { "label": "People", "text": "And also with you." },
-        { "label": "Celebrant", "text": "Let us pray." }
-      ],
-      "hidden": false,
-      "style": "preces",
-      "type": "responsive"
-    },
-    {
-      "type": "text",
-      "hidden": false,
-      "lookup": { "type": "collect" },
-      "metadata": {
-        "omit_response": false,
-        "omit_label": true,
-        "rollup": false
-      },
-      "style": "prayer",
-      "source": { "citation": "", "source": "", "api": "" }
-    },
-    {
-      "value": ["The Lessons"],
-      "type": "heading",
-      "style": "text",
-      "metadata": { "omit_response": false, "level": 2 },
-      "source": { "api": "", "citation": "", "source": "" },
-      "hidden": false,
-      "category": []
-    },
-    {
-      "style": "long",
-      "category": [],
-      "source": { "citation": "", "source": "", "api": "" },
-      "hidden": false,
-      "type": "bible-reading",
-      "version": { "preference": "bibleVersion" },
-      "lookup": {
-        "rotate": false,
-        "item": { "preference": "readingA" },
-        "type": "lectionary",
-        "table": { "preference": "lectionary" }
-      },
-      "metadata": {
-        "intro": {
-          "language": "en",
-          "sharing": {
-            "organization": "venite",
-            "status": "published",
-            "privacy": "public"
+          "type": "option"
+        },
+        {
+          "condition": {
+            "conditions": [
+              { "season": { "only": ["Easter", "Ascension"], "except": [] } }
+            ],
+            "mode": "and"
           },
-          "style": "text",
-          "category": ["Bible Reading Introduction"],
-          "value": ["A Reading from ${longName}."],
+          "category": [],
+          "style": "preces",
+          "source": { "api": "", "citation": "", "source": "" },
+          "type": "responsive",
+          "value": [
+            {
+              "text": "Alleluia. Christ is risen.",
+              "response": "",
+              "label": "Celebrant"
+            },
+            { "label": "People", "text": "Christ is risen indeed. Alleluia." }
+          ],
+          "version_label": "Blessed be our God.",
+          "metadata": {},
+          "hidden": false
+        },
+        {
+          "style": "preces",
+          "hidden": false,
+          "value": [
+            {
+              "label": "Celebrant",
+              "text": "Blessed be the God of our salvation:",
+              "response": ""
+            },
+            {
+              "label": "People",
+              "text": "Who bears our burdens and forgives our sins."
+            }
+          ],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "season": { "except": [], "only": ["Lent", "HolyWeek"] } }
+            ]
+          },
+          "type": "responsive"
+        },
+        {
+          "style": "preces",
+          "value": [
+            {
+              "label": "Celebrant",
+              "text": "Blessed are you, holy and living One.",
+              "response": ""
+            },
+            {
+              "text": "You come to your people and set them free.",
+              "label": "People"
+            }
+          ],
+          "type": "responsive",
+          "condition": {
+            "mode": "and",
+            "conditions": [{ "season": { "only": ["Advent"], "except": [] } }]
+          },
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["The Celebrant may say"],
+          "hidden": false
+        },
+        {
+          "value": [
+            "Almighty God, to you all hearts are open, all desires known, and from you no secrets are hid: Cleanse the thoughts of our hearts by the inspiration of your Holy Spirit, that we may perfectly love you, and worthily magnify your holy Name; through Christ our Lord."
+          ],
+          "metadata": { "omit_response": false },
+          "label": "The Collect for Purity",
+          "style": "prayer",
+          "hidden": false,
+          "source": { "api": "", "citation": "", "source": "" },
+          "category": [],
           "type": "text"
-        }
-      },
-      "label": "The First Reading"
-    },
-    {
-      "metadata": { "editor_selected": 0, "selected": 0 },
-      "hidden": false,
-      "type": "option",
-      "value": [
+        },
+        {
+          "type": "option",
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "value": [
+            {
+              "hidden": false,
+              "metadata": { "omit_response": false },
+              "source": { "source": "", "api": "", "citation": "" },
+              "value": [
+                "Glory to God in the highest,\n    and peace to his people on earth.",
+                "Lord God, heavenly King,\nalmighty God and Father,\n    we worship you, we give you thanks,\n    we praise you for your glory.",
+                "Lord Jesus Christ, only Son of the Father,\nLord God, Lamb of God,\nyou take away the sin of the world:\n    have mercy on us;\nyou are seated at the right hand of the Father:\n    receive our prayer.",
+                "For you alone are the Holy One,\nyou alone are the Lord,\nyou alone are the Most High,\n    Jesus Christ,\n    with the Holy Spirit,\n    in the glory of God the Father. Amen."
+              ],
+              "type": "text",
+              "category": [],
+              "style": "text",
+              "display_format": "unison",
+              "label": "Gloria in Excelsis",
+              "version_label": "Gloria"
+            },
+            {
+              "value": [
+                {
+                  "label": "",
+                  "response": "Christ, have mercy.",
+                  "text": "Lord, have mercy."
+                },
+                { "response": "", "text": "Lord, have mercy." }
+              ],
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "style": "responsive",
+              "hidden": false,
+              "metadata": {},
+              "type": "responsive",
+              "version_label": "Kyrie"
+            },
+            {
+              "category": [],
+              "hidden": false,
+              "version_label": "Trisagion",
+              "value": [
+                {
+                  "response": "Have mercy upon us.",
+                  "text": "Holy God,\nHoly and Mighty,\nHoly Immortal One,",
+                  "label": ""
+                }
+              ],
+              "metadata": {},
+              "style": "responsive",
+              "type": "responsive",
+              "source": { "api": "", "citation": "", "source": "" }
+            }
+          ],
+          "hidden": false
+        },
         {
           "source": { "citation": "", "api": "", "source": "" },
-          "hidden": false,
-          "style": "responsive",
+          "type": "heading",
+          "style": "text",
           "category": [],
-          "metadata": {},
-          "version_label": "BCP",
-          "type": "responsive",
-          "value": [
-            {
-              "response": "Thanks be to God.",
-              "text": "The Word of the Lord.",
-              "label": ""
-            }
-          ]
+          "metadata": { "level": 3, "omit_response": false },
+          "value": ["The Collect of the Day"],
+          "hidden": false
         },
         {
+          "type": "rubric",
+          "value": ["The Celebrant says to the people"],
+          "hidden": false
+        },
+        {
+          "value": [
+            {
+              "label": "Celebrant",
+              "response": "",
+              "text": "God be with you."
+            },
+            { "text": "And also with you.", "label": "People" },
+            { "text": "Let us pray.", "label": "Celebrant" }
+          ],
+          "type": "responsive",
+          "style": "preces",
+          "hidden": false
+        },
+        {
+          "metadata": { "omit_response": false, "omit_label": true },
+          "source": { "citation": "", "api": "", "source": "" },
+          "style": "prayer",
+          "hidden": false,
+          "type": "text",
+          "lookup": { "type": "collect" }
+        },
+        {
+          "metadata": { "level": 2, "omit_response": false },
+          "hidden": false,
+          "type": "heading",
+          "source": { "citation": "", "api": "", "source": "" },
+          "category": [],
+          "style": "text",
+          "value": ["The Lessons"]
+        },
+        {
+          "style": "long",
+          "type": "bible-reading",
+          "category": [],
+          "label": "The First Reading",
+          "lookup": {
+            "item": { "preference": "readingA" },
+            "table": { "preference": "lectionary" },
+            "type": "lectionary",
+            "rotate": false
+          },
+          "version": { "preference": "bibleVersion" },
+          "source": { "api": "", "citation": "", "source": "" },
+          "hidden": false,
+          "metadata": {
+            "intro": {
+              "value": ["A Reading from ${longName}."],
+              "language": "en",
+              "type": "text",
+              "category": ["Bible Reading Introduction"],
+              "sharing": {
+                "status": "published",
+                "organization": "venite",
+                "privacy": "public"
+              },
+              "style": "text"
+            }
+          }
+        },
+        {
+          "type": "responsive",
+          "hidden": false,
+          "style": "responsive",
           "value": [
             {
               "text": "Hear what the Spirit is saying to God’s people.",
               "label": "",
               "response": "Thanks be to God."
             }
-          ],
-          "source": { "api": "", "source": "", "citation": "" },
-          "hidden": false,
-          "style": "responsive",
-          "metadata": {},
-          "type": "responsive",
-          "version_label": "EOW",
-          "category": []
-        }
-      ]
-    },
-    {
-      "version": { "preference": "psalterVersion" },
-      "source": { "api": "", "citation": "", "source": "" },
-      "style": "psalm",
-      "hidden": false,
-      "lookup": {
-        "item": "morning_psalms",
-        "allow_multiple": false,
-        "table": { "preference": "lectionary" },
-        "rotate": false,
-        "type": "lectionary"
-      },
-      "category": [],
-      "metadata": {
-        "omit_gloria": true,
-        "changeable": false,
-        "insert_seasonal_antiphon": false,
-        "omit_antiphon": false
-      },
-      "type": "psalm"
-    },
-    {
-      "metadata": {
-        "intro": {
-          "type": "text",
-          "style": "text",
-          "language": "en",
-          "value": ["A Reading from ${longName}."],
-          "sharing": {
-            "privacy": "public",
-            "organization": "venite",
-            "status": "published"
-          },
-          "category": ["Bible Reading Introduction"]
-        }
-      },
-      "source": { "citation": "", "api": "", "source": "" },
-      "version": { "preference": "bibleVersion" },
-      "hidden": false,
-      "label": "The Second Reading",
-      "lookup": {
-        "item": { "preference": "readingB" },
-        "table": { "preference": "lectionary" },
-        "type": "lectionary",
-        "rotate": false
-      },
-      "style": "long",
-      "type": "bible-reading",
-      "category": [],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "is": false, "value": "none", "key": "readingB" } }
-        ]
-      }
-    },
-    {
-      "condition": {
-        "conditions": [
-          { "preference": { "is": false, "value": "none", "key": "readingB" } }
-        ],
-        "mode": "and"
-      },
-      "hidden": false,
-      "type": "option",
-      "value": [
+          ]
+        },
         {
-          "source": { "source": "", "citation": "", "api": "" },
+          "source": { "citation": "", "source": "", "api": "" },
+          "metadata": {
+            "omit_gloria": true,
+            "omit_antiphon": false,
+            "changeable": false,
+            "insert_seasonal_antiphon": false
+          },
+          "lookup": {
+            "rotate": false,
+            "type": "lectionary",
+            "table": { "preference": "lectionary" },
+            "item": "morning_psalms",
+            "allow_multiple": false
+          },
+          "style": "psalm",
+          "type": "psalm",
           "category": [],
+          "version": { "preference": "psalterVersion" },
+          "hidden": false
+        },
+        {
+          "version": { "preference": "bibleVersion" },
+          "label": "The Second Reading",
+          "metadata": {
+            "intro": {
+              "type": "text",
+              "sharing": {
+                "organization": "venite",
+                "status": "published",
+                "privacy": "public"
+              },
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "value": ["A Reading from ${longName}."]
+            }
+          },
+          "type": "bible-reading",
           "hidden": false,
-          "version_label": "BCP",
+          "source": { "api": "", "source": "", "citation": "" },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "value": "none",
+                  "is": false,
+                  "key": "readingB"
+                }
+              }
+            ]
+          },
+          "lookup": {
+            "rotate": false,
+            "type": "lectionary",
+            "item": { "preference": "readingB" },
+            "table": { "preference": "lectionary" }
+          },
+          "style": "long",
+          "category": []
+        },
+        {
+          "value": [
+            {
+              "response": "Thanks be to God.",
+              "label": "",
+              "text": "Hear what the Spirit is saying to God’s people."
+            }
+          ],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "is": false,
+                  "value": "none",
+                  "key": "readingB"
+                }
+              }
+            ]
+          },
+          "style": "responsive",
+          "type": "responsive",
+          "hidden": false
+        },
+        {
+          "metadata": {
+            "intro": {
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "value": [
+                {
+                  "response": "Glory to you, Lord Christ.",
+                  "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
+                }
+              ],
+              "hidden": false,
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "collaborators": [],
+                "privacy": "public"
+              },
+              "lastRevision": 13,
+              "slug": "gospel-intro",
+              "version": "bcp1979",
+              "type": "responsive",
+              "date_created": {
+                "seconds": 1606585913,
+                "nanoseconds": 503000000
+              },
+              "style": "responsive",
+              "label": "",
+              "metadata": {},
+              "date_modified": {
+                "seconds": 1606586010,
+                "nanoseconds": 106000000
+              },
+              "source": { "api": "", "citation": "", "source": "" }
+            }
+          },
+          "version": { "preference": "bibleVersion" },
+          "category": [],
+          "label": "The Gospel",
+          "hidden": false,
+          "type": "bible-reading",
+          "source": { "source": "", "api": "", "citation": "" },
+          "style": "long",
+          "lookup": {
+            "table": { "preference": "lectionary" },
+            "rotate": false,
+            "item": "gospel",
+            "type": "lectionary"
+          }
+        },
+        {
+          "type": "responsive",
+          "style": "responsive",
+          "hidden": false,
           "value": [
             {
               "label": "",
-              "response": "Thanks be to God.",
-              "text": "The Word of the Lord."
+              "text": "The Gospel of the Lord.",
+              "response": "Praise to you, Lord Christ."
             }
-          ],
-          "type": "responsive",
-          "style": "responsive",
-          "metadata": {}
+          ]
         },
         {
-          "type": "responsive",
           "category": [],
-          "hidden": false,
-          "version_label": "EOW",
           "source": { "api": "", "citation": "", "source": "" },
-          "value": [
-            {
-              "response": "Thanks be to God.",
-              "text": "Hear what the Spirit is saying to God’s people.",
-              "label": ""
-            }
-          ],
-          "style": "responsive"
-        }
-      ],
-      "metadata": { "selected": 0, "editor_selected": 0 }
-    },
-    {
-      "lookup": {
-        "item": "gospel",
-        "type": "lectionary",
-        "table": { "preference": "lectionary" },
-        "rotate": false
-      },
-      "label": "The Gospel",
-      "hidden": false,
-      "metadata": {
-        "intro": {
-          "type": "responsive",
-          "category": ["Bible Reading Introduction"],
-          "version": "bcp1979",
-          "date_created": { "seconds": 1606585913, "nanoseconds": 503000000 },
-          "date_modified": { "seconds": 1606586010, "nanoseconds": 106000000 },
-          "source": { "api": "", "source": "", "citation": "" },
-          "value": [
-            {
-              "response": "Glory to you, Lord Christ.",
-              "text": "The Holy Gospel of our Lord Jesus Christ, according to ${shortName}."
-            }
-          ],
+          "type": "heading",
           "hidden": false,
-          "metadata": {},
-          "style": "responsive",
-          "language": "en",
-          "lastRevision": 13,
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "status": "published",
-            "organization": "venite",
-            "collaborators": [],
-            "privacy": "public"
-          },
-          "label": "",
-          "slug": "gospel-intro"
-        }
-      },
-      "category": [],
-      "source": { "citation": "", "api": "", "source": "" },
-      "type": "bible-reading",
-      "style": "long",
-      "version": { "preference": "bibleVersion" }
-    },
-    {
-      "type": "responsive",
-      "hidden": false,
-      "value": [
-        {
-          "response": "Praise to you, Lord Christ.",
-          "text": "The Gospel of the Lord.",
-          "label": ""
-        }
-      ],
-      "style": "responsive"
-    },
-    {
-      "source": { "citation": "", "api": "", "source": "" },
-      "hidden": false,
-      "style": "text",
-      "value": ["The Sermon"],
-      "category": [],
-      "metadata": { "omit_response": false, "level": 3 },
-      "type": "heading"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [
-        "On Sundays and other Major Feasts there follows, all standing"
-      ],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "key": "renewal", "is": true, "value": "no" } },
-          {
-            "preference": { "value": "true", "key": "footwashing", "is": false }
-          }
-        ]
-      }
-    },
-    {
-      "metadata": { "selected": 0, "editor_selected": 0 },
-      "value": [
-        {
-          "source": { "source": "bcp1979", "api": "", "citation": "p. 358" },
-          "display_format": "unison",
-          "hidden": false,
-          "category": [],
-          "value": [
-            "We believe in one God,\n    the Father, the Almighty,\n    maker of heaven and earth,\n    of all that is, seen and unseen.",
-            "We believe in one Lord, Jesus Christ,\n    the only Son of God,\n    eternally begotten of the Father,\n    God from God, Light from Light,\n    true God from true God,\n    begotten, not made,\n    of one Being with the Father.\n    Through him all things were made.\n    For us and for our salvation\n        he came down from heaven:\n    by the power of the Holy Spirit\n        he became incarnate from the Virgin Mary,\n        and was made man.\n    For our sake he was crucified under Pontius Pilate;\n        he suffered death and was buried.\n        On the third day he rose again\n            in accordance with the Scriptures;\n        he ascended into heaven\n            and is seated at the right hand of the Father.\n    He will come again in glory to judge the living and the dead,\n        and his kingdom will have no end.",
-            "We believe in the Holy Spirit, the Lord, the giver of life,\n    who proceeds from the Father and the Son.\n    With the Father and the Son he is worshiped and glorified.\n    He has spoken through the Prophets.\n    We believe in one holy catholic and apostolic Church.\n    We acknowledge one baptism for the forgiveness of sins.\n    We look for the resurrection of the dead,\n        and the life of the world to come. Amen."
-          ],
-          "label": "The Nicene Creed",
+          "value": ["The Sermon"],
           "style": "text",
-          "version_label": "BCP",
-          "type": "text",
-          "metadata": {
-            "omit_response": false,
-            "rollup": false,
-            "omit_label": false
+          "metadata": { "omit_response": false, "level": 3 }
+        },
+        {
+          "value": [
+            "On Sundays and other Major Feasts there follows, all standing"
+          ],
+          "type": "rubric",
+          "hidden": false,
+          "condition": {
+            "conditions": [
+              { "preference": { "key": "renewal", "value": "no", "is": true } },
+              {
+                "preference": {
+                  "key": "footwashing",
+                  "value": "true",
+                  "is": false
+                }
+              }
+            ],
+            "mode": "and"
           }
         },
         {
-          "label": "The Nicene Creed",
-          "style": "text",
-          "metadata": {
-            "omit_response": false,
-            "rollup": false,
-            "omit_label": false
+          "hidden": false,
+          "type": "text",
+          "condition": {
+            "conditions": [
+              { "preference": { "key": "renewal", "value": "no", "is": true } },
+              {
+                "preference": {
+                  "is": false,
+                  "value": "true",
+                  "key": "footwashing"
+                }
+              }
+            ],
+            "mode": "and"
           },
-          "version_label": "EOW",
+          "metadata": { "omit_response": false },
+          "source": { "citation": "", "source": "", "api": "" },
           "category": [],
+          "display_format": "unison",
+          "style": "text",
+          "label": "The Nicene Creed",
           "value": [
             "We believe in one God,\n    the Father, the Almighty,\n    maker of heaven and earth,\n    of all that is, seen and unseen.",
             "We believe in one Lord, Jesus Christ,\n    the only Son of God,\n    eternally begotten of the Father,\n    God from God, Light from Light,\n    true God from true God,\n    begotten, not made,\n    of one Being with the Father.\n    Through him all things were made.\n    For us and for our salvation\n        he came down from heaven:\n        was incarnate of the Holy Spirit and the Virgin Mary\n        and became truly human.\n        For our sake he was crucified under Pontius Pilate;\n        he suffered death and was buried.\n        On the third day he rose again\n        in accordance with the Scriptures;\n        he ascended into heaven\n        and is seated at the right hand of the Father.\n        He will come again in glory to judge the living and the dead,\n        and his kingdom will have no end.",
             "We believe in the Holy Spirit, the Lord, the giver of life,\n    who proceeds from the Father and the Son,\n    who with the Father and the Son is worshiped and glorified,\n    who has spoken through the prophets.\n    We believe in one holy catholic and apostolic Church.\n    We acknowledge one baptism for the forgiveness of sins.\n    We look for the resurrection of the dead,\n        and the life of the world to come. Amen."
-          ],
-          "display_format": "unison",
-          "type": "text",
-          "source": { "source": "EOW", "api": "", "citation": "p. 53" },
+          ]
+        },
+        {
+          "date_modified": { "nanoseconds": 624000000, "seconds": 1603561955 },
+          "version": "Rite-II",
+          "date_created": { "seconds": 1603561650, "nanoseconds": 470000000 },
+          "type": "liturgy",
+          "metadata": {
+            "supplement": false,
+            "liturgyversions": [],
+            "special_preferences": {},
+            "preferences": {},
+            "evening": false
+          },
+          "source": { "source": "", "citation": "", "api": "" },
+          "condition": {
+            "conditions": [
+              { "preference": { "key": "renewal", "value": "yes", "is": true } }
+            ],
+            "mode": "and"
+          },
+          "lookup": { "type": "slug" },
+          "language": "en",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published"
+          },
+          "category": [],
+          "lastRevision": 86,
+          "slug": "renewal-of-baptismal-vows",
+          "label": "The Renewal of Baptismal Vows",
           "hidden": false
-        }
-      ],
-      "category": [],
-      "hidden": false,
-      "source": { "citation": "", "source": "", "api": "" },
-      "condition": {
-        "conditions": [
-          { "preference": { "value": "no", "is": true, "key": "renewal" } },
-          {
-            "preference": { "key": "footwashing", "is": false, "value": "true" }
-          }
-        ],
-        "mode": "and"
-      },
-      "type": "option"
-    },
-    {
-      "slug": "renewal-of-baptismal-vows",
-      "lastRevision": 86,
-      "hidden": false,
-      "date_created": { "nanoseconds": 470000000, "seconds": 1603561650 },
-      "label": "The Renewal of Baptismal Vows",
-      "lookup": { "type": "slug" },
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          { "preference": { "is": true, "value": "yes", "key": "renewal" } }
-        ]
-      },
-      "version": "Rite-II",
-      "sharing": {
-        "status": "published",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "organization": "venite",
-        "privacy": "public",
-        "collaborators": []
-      },
-      "metadata": {
-        "liturgyversions": [],
-        "preferences": {},
-        "special_preferences": {},
-        "supplement": false,
-        "evening": false
-      },
-      "type": "liturgy",
-      "source": { "citation": "", "api": "", "source": "" },
-      "date_modified": { "seconds": 1603561955, "nanoseconds": 624000000 },
-      "language": "en",
-      "category": []
-    },
-    {
-      "language": "en",
-      "version": "Rite-II",
-      "lastRevision": 89,
-      "sharing": {
-        "organization": "venite",
-        "collaborators": [],
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "privacy": "public",
-        "status": "published"
-      },
-      "metadata": {
-        "supplement": true,
-        "evening": false,
-        "liturgyversions": [],
-        "preferences": {},
-        "special_preferences": {}
-      },
-      "date_created": { "nanoseconds": 470000000, "seconds": 1603561650 },
-      "date_modified": { "seconds": 1603827111, "nanoseconds": 501000000 },
-      "lookup": { "type": "slug", "rotate": false },
-      "label": "The Renewal of Baptismal Vows",
-      "type": "liturgy",
-      "category": [],
-      "hidden": false,
-      "slug": "footwashing",
-      "condition": {
-        "conditions": [
-          {
-            "preference": { "key": "footwashing", "value": "true", "is": true }
-          }
-        ],
-        "mode": "and"
-      },
-      "source": { "citation": "", "source": "", "api": "" }
-    },
-    {
-      "metadata": { "level": 3, "omit_response": false },
-      "category": [],
-      "type": "heading",
-      "source": { "citation": "", "api": "", "source": "" },
-      "style": "text",
-      "value": ["The Prayers of the People"],
-      "hidden": false
-    },
-    {
-      "type": "liturgy",
-      "source": { "api": "", "citation": "", "source": "" },
-      "hidden": false,
-      "lookup": { "type": "category", "rotate": false },
-      "style": "short",
-      "category": ["Prayers of the People"],
-      "metadata": {
-        "supplement": false,
-        "evening": false,
-        "liturgyversions": []
-      }
-    },
-    {
-      "source": { "citation": "", "api": "", "source": "" },
-      "style": "prayer",
-      "metadata": { "omit_response": false },
-      "hidden": false,
-      "lookup": { "rotate": false, "filter": "—", "type": "category" },
-      "type": "text",
-      "category": ["POTP Collect"]
-    },
-    {
-      "category": [],
-      "value": ["Confession of Sin"],
-      "source": { "citation": "p. 360", "source": "BCP", "api": "" },
-      "metadata": { "omit_response": false, "level": 3 },
-      "hidden": false,
-      "type": "heading",
-      "style": "text"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": ["The Deacon or Celebrant says"]
-    },
-    {
-      "value": ["Let us confess our sins against God and our neighbor."],
-      "style": "text",
-      "hidden": false,
-      "type": "text"
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["Silence may be kept.", "Minister and People"]
-    },
-    {
-      "category": [],
-      "style": "prayer",
-      "type": "text",
-      "value": [
-        "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
-      ],
-      "display_format": "unison",
-      "metadata": { "omit_response": false },
-      "source": { "citation": "", "api": "", "source": "" },
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["The Bishop, when present, or the Priest, stands and says"]
-    },
-    {
-      "hidden": false,
-      "style": "prayer",
-      "value": [
-        "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life. "
-      ],
-      "type": "text"
-    },
-    {
-      "hidden": false,
-      "category": [],
-      "style": "text",
-      "metadata": { "level": 3, "omit_response": false },
-      "source": { "api": "", "source": "", "citation": "" },
-      "type": "heading",
-      "value": ["The Peace"]
-    },
-    {
-      "value": ["All stand. The Celebrant says to the people"],
-      "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "value": [
-        {
-          "label": "",
-          "response": "",
-          "text": "The peace of the Lord be always with you."
-        },
-        { "text": "And also with you.", "label": "People" }
-      ],
-      "type": "responsive",
-      "hidden": false,
-      "style": "preces"
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": [
-        "Then the Ministers and People may greet one another in the name of the Lord."
-      ]
-    },
-    {
-      "value": ["The Holy Communion"],
-      "source": { "source": "", "api": "", "citation": "" },
-      "metadata": { "level": 2, "omit_response": false },
-      "type": "heading",
-      "category": [],
-      "style": "text",
-      "hidden": false
-    },
-    {
-      "style": "short",
-      "type": "bible-reading",
-      "source": { "citation": "", "api": "", "source": "" },
-      "hidden": false,
-      "category": ["offertory_sentence"],
-      "metadata": {},
-      "lookup": { "type": "category", "rotate": false, "filter": "—" }
-    },
-    {
-      "style": "short",
-      "hidden": false,
-      "metadata": {},
-      "type": "bible-reading",
-      "lookup": { "rotate": false, "filter": "—", "type": "category" },
-      "category": ["Eucharistic Prayer"],
-      "source": { "api": "", "source": "", "citation": "" }
-    },
-    {
-      "type": "option",
-      "metadata": { "editor_selected": 1, "selected": 1 },
-      "hidden": false,
-      "value": [
-        {
-          "type": "text",
-          "value": [
-            "And now, as our Savior\nChrist has taught us,\nwe are bold to say,"
-          ],
-          "source": { "source": "", "api": "", "citation": "" },
-          "style": "text",
-          "hidden": false,
-          "version_label": "Traditional",
-          "metadata": { "omit_response": false },
-          "category": []
-        },
-        {
-          "style": "text",
-          "version_label": "Contemporary",
-          "type": "text",
-          "value": ["As our Savior Christ\nhas taught us,\nwe now pray,"],
-          "hidden": false,
-          "source": { "citation": "", "source": "", "api": "" },
-          "metadata": { "omit_response": false },
-          "category": []
-        }
-      ]
-    },
-    {
-      "hidden": false,
-      "metadata": { "editor_selected": 1, "selected": 1 },
-      "type": "option",
-      "value": [
-        {
-          "style": "prayer",
-          "metadata": { "omit_response": false },
-          "display_format": "unison",
-          "version_label": "Traditional",
-          "value": [
-            "Our Father, who art in heaven,\n    hallowed be thy Name,\n    thy kingdom come,\n    thy will be done,\n        on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n    as we forgive those\n        who trespass against us.\nAnd lead us not into temptation,\n    but deliver us from evil.\nFor thine is the kingdom,\n    and the power, and the glory,\n    for ever and ever."
-          ],
-          "type": "text",
-          "source": { "citation": "", "source": "", "api": "" },
-          "hidden": false,
-          "category": []
-        },
-        {
-          "category": [],
-          "version_label": "Contemporary",
-          "hidden": false,
-          "display_format": "unison",
-          "metadata": { "omit_response": false },
-          "value": [
-            "Our Father in heaven,\n    hallowed be your Name,\n    your kingdom come,\n    your will be done,\n        on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n    as we forgive those\n        who sin against us.\nSave us from the time of trial,\n    and deliver us from evil.\nFor the kingdom, the power,\n    and the glory are yours,\n    now and for ever. "
-          ],
-          "type": "text",
-          "source": { "source": "", "api": "", "citation": "" },
-          "style": "prayer"
-        }
-      ]
-    },
-    {
-      "style": "text",
-      "category": [],
-      "source": { "source": "", "api": "", "citation": "" },
-      "value": ["The Breaking of the Bread"],
-      "type": "heading",
-      "metadata": { "omit_response": false, "level": 3 },
-      "hidden": false
-    },
-    {
-      "value": [
-        "The Celebrant breaks the consecrated Bread.",
-        "\nA period of silence is kept."
-      ],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": ["Then may be sung or said"]
-    },
-    {
-      "style": "responsive",
-      "value": [
-        {
-          "text": "[Alleluia.] Christ our Passover is sacrificed for us;",
-          "response": "Therefore let us keep the feast. [Alleluia.]",
-          "label": ""
-        }
-      ],
-      "type": "responsive",
-      "hidden": false
-    },
-    {
-      "value": [
-        "In place of, or in addition to, the preceding, some other suitable anthem may be used."
-      ],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "value": [
-        "Facing the people, the Celebrant says the following Invitation"
-      ],
-      "hidden": false,
-      "type": "rubric"
-    },
-    {
-      "hidden": false,
-      "metadata": { "selected": 1, "editor_selected": 1 },
-      "value": [
-        {
-          "style": "text",
-          "hidden": false,
-          "metadata": { "omit_response": false },
-          "category": [],
-          "source": { "api": "", "citation": "", "source": "" },
-          "version_label": "Short",
-          "value": ["The Gifts of God for the People of God."],
-          "type": "text"
         },
         {
           "hidden": false,
-          "metadata": { "omit_response": false },
           "source": { "api": "", "source": "", "citation": "" },
           "category": [],
-          "value": [
-            "The Gifts of God for the People of God. Take them in remembrance that Christ died for you, and feed on him in your hearts by faith, with thanksgiving."
-          ],
-          "style": "text",
-          "version_label": "Long",
-          "type": "text"
-        }
-      ],
-      "type": "option"
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": [
-        "The ministers receive the Sacrament in both kinds, and then immediately deliver it to the people."
-      ]
-    },
-    {
-      "value": [
-        "The Bread and the Cup are given to the communicants with these words"
-      ],
-      "type": "rubric",
-      "hidden": false
-    },
-    {
-      "type": "option",
-      "value": [
+          "version": "Rite-II",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "preference": {
+                  "key": "footwashing",
+                  "value": "true",
+                  "is": true
+                }
+              }
+            ]
+          },
+          "label": "The Renewal of Baptismal Vows",
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": [],
+            "privacy": "public"
+          },
+          "lastRevision": 89,
+          "lookup": { "type": "slug", "rotate": false },
+          "type": "liturgy",
+          "slug": "footwashing",
+          "date_created": { "nanoseconds": 470000000, "seconds": 1603561650 },
+          "date_modified": { "seconds": 1603827111, "nanoseconds": 501000000 },
+          "metadata": {
+            "supplement": true,
+            "evening": false,
+            "preferences": {},
+            "special_preferences": {},
+            "liturgyversions": []
+          },
+          "language": "en"
+        },
         {
-          "value": [
-            "The Body (Blood) of our Lord Jesus Christ keep you in everlasting life. [Amen.]"
-          ],
           "style": "text",
-          "type": "text",
+          "type": "heading",
+          "source": { "source": "", "citation": "", "api": "" },
+          "value": ["The Prayers of the People"],
+          "metadata": { "omit_response": false, "level": 3 },
+          "category": [],
           "hidden": false
         },
         {
+          "type": "rubric",
           "hidden": false,
           "value": [
-            "The Body of Christ, the bread of heaven. [Amen.]\nThe Blood of Christ, the cup of salvation. [Amen.]"
-          ],
-          "type": "text",
-          "style": "text"
-        }
-      ],
-      "hidden": false,
-      "metadata": { "selected": 1, "editor_selected": 1 }
-    },
-    {
-      "type": "rubric",
-      "value": ["After Communion, the Celebrant says"],
-      "hidden": false
-    },
-    {
-      "value": ["Let us pray."],
-      "style": "text",
-      "type": "text",
-      "hidden": false
-    },
-    { "hidden": false, "value": ["Celebrant and People"], "type": "rubric" },
-    {
-      "type": "option",
-      "metadata": { "editor_selected": 0, "selected": 0 },
-      "value": [
-        {
-          "value": [
-            "Eternal God, heavenly Father,\nyou have graciously accepted us as living members\nof your Son our Savior Jesus Christ,\nand you have fed us with spiritual food\nin the Sacrament of his Body and Blood.\nSend us now into the world in peace,\nand grant us strength and courage\nto love and serve you\nwith gladness and singleness of heart;\nthrough Christ our Lord."
-          ],
-          "hidden": false,
-          "metadata": { "omit_response": false },
-          "type": "text",
-          "category": [],
-          "display_format": "unison",
-          "source": { "citation": "p. 365", "source": "BCP", "api": "" },
-          "version_label": "“Eternal God, heavenly Father”",
-          "style": "prayer"
+            "This book contains no forms for the Prayers of the People. Rather, it calls attention to the generous and flexible—and frequently overlooked—provisions of the Book of Common Prayer.",
+            "Of the six forms provided (BCP pp. 383–393), none are required. Any of them may be used or adapted to the occasion. They may also be replaced by other forms. All that is required is that the topics listed at the top of page 383 be included in the prayers"
+          ]
         },
         {
-          "version_label": "“Almighty and everliving God”",
-          "category": [],
+          "lookup": { "type": "category", "rotate": false },
+          "hidden": false,
+          "source": { "citation": "", "api": "", "source": "" },
+          "style": "short",
+          "metadata": {
+            "supplement": false,
+            "liturgyversions": [],
+            "evening": false
+          },
+          "category": ["Prayers of the People"],
+          "type": "liturgy"
+        },
+        {
+          "source": { "citation": "", "api": "", "source": "" },
+          "hidden": false,
+          "type": "text",
+          "category": ["POTP Collect"],
           "style": "prayer",
-          "hidden": false,
-          "source": { "source": "BCP", "citation": "p. 366", "api": "" },
-          "value": [
-            "Almighty and everliving God,\nwe thank you for feeding us with the spiritual food\nof the most precious Body and Blood\nof your Son our Savior Jesus Christ;\nand for assuring us in these holy mysteries\nthat we are living members of the Body of your Son,\nand heirs of your eternal kingdom.\nAnd now, Father, send us out\nto do the work you have given us to do,\nto love and serve you\nas faithful witnesses of Christ our Lord.\nTo him, to you, and to the Holy Spirit,\nbe honor and glory, now and for ever. "
-          ],
-          "type": "text",
-          "metadata": { "omit_response": false },
-          "display_format": "unison"
-        }
-      ],
-      "hidden": false
-    },
-    {
-      "type": "rubric",
-      "hidden": false,
-      "value": [
-        "The Bishop, when present, or the Priest, may bless the people."
-      ]
-    },
-    {
-      "hidden": false,
-      "type": "rubric",
-      "value": ["The Deacon, or the Celebrant, dismisses them with these words"]
-    },
-    {
-      "metadata": { "selected": 3, "editor_selected": 3 },
-      "hidden": false,
-      "type": "option",
-      "value": [
-        {
-          "metadata": {},
-          "value": [
-            {
-              "text": "Let us go forth in the name of Christ.",
-              "response": "",
-              "label": ""
-            },
-            { "label": "People", "text": "Thanks be to God." }
-          ],
-          "type": "responsive",
-          "category": [],
-          "version_label": "Name of Christ",
-          "style": "preces",
-          "hidden": false,
-          "source": { "citation": "", "source": "", "api": "" }
+          "lookup": { "rotate": false, "filter": "—", "type": "category" },
+          "metadata": { "omit_response": false }
         },
         {
-          "category": [],
-          "type": "responsive",
-          "metadata": {},
+          "type": "heading",
+          "value": ["Confession of Sin"],
           "hidden": false,
-          "source": { "citation": "", "api": "", "source": "" },
-          "version_label": "Love and Serve",
-          "style": "preces",
-          "value": [
-            {
-              "label": "",
-              "response": "",
-              "text": "Go in peace to love and serve the Lord."
-            },
-            { "label": "People", "text": "Thanks be to God." }
-          ]
+          "source": { "api": "", "source": "BCP", "citation": "p. 360" },
+          "category": [],
+          "style": "text",
+          "metadata": { "omit_response": false, "level": 3 }
         },
         {
-          "style": "preces",
-          "version_label": "Rejoicing in the Power",
-          "hidden": false,
-          "metadata": {},
-          "type": "responsive",
-          "source": { "source": "", "citation": "", "api": "" },
-          "category": [],
-          "value": [
-            {
-              "label": "",
-              "text": "Let us go forth into the world, rejoicing in the power of the Spirit.",
-              "response": ""
-            },
-            { "text": "Thanks be to God.", "label": "People" }
-          ]
-        },
-        {
-          "hidden": false,
-          "metadata": {},
-          "style": "preces",
-          "value": [
-            { "label": "", "response": "", "text": "Let us bless the Lord." },
-            { "text": "Thanks be to God.", "label": "People" }
-          ],
-          "category": [],
-          "type": "responsive",
-          "version_label": "Bless the Lord",
-          "source": { "api": "", "citation": "", "source": "" }
-        }
-      ],
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "season": {
-              "except": ["Easter", "Ascension", "Pentecost", "Pentecost"],
-              "only": []
-            }
-          }
-        ]
-      }
-    },
-    {
-      "type": "option",
-      "condition": {
-        "mode": "and",
-        "conditions": [
-          {
-            "season": {
-              "only": ["Easter", "Ascension", "Pentecost", "Pentecost"],
-              "except": []
-            }
-          }
-        ]
-      },
-      "hidden": false,
-      "metadata": { "editor_selected": 3, "selected": 3 },
-      "value": [
-        {
-          "version_label": "Name of Christ",
-          "metadata": {},
-          "style": "preces",
-          "source": { "citation": "", "api": "", "source": "" },
-          "category": [],
-          "value": [
-            {
-              "text": "Let us go forth in the name of Christ. Alleluia, alleluia.",
-              "label": "",
-              "response": ""
-            },
-            {
-              "label": "People",
-              "text": "Thanks be to God. Alleluia, alleluia."
-            }
-          ],
-          "type": "responsive",
+          "value": ["The Deacon or Celebrant says"],
+          "type": "rubric",
           "hidden": false
         },
         {
-          "metadata": {},
-          "source": { "source": "", "citation": "", "api": "" },
-          "version_label": "Love and Serve",
-          "type": "responsive",
-          "hidden": false,
-          "category": [],
-          "value": [
-            {
-              "label": "",
-              "text": "Go in peace to love and serve the Lord. Alleluia, alleluia.",
-              "response": ""
-            },
-            {
-              "text": "Thanks be to God. Alleluia, alleluia.",
-              "label": "People"
-            }
-          ],
-          "style": "preces"
+          "style": "text",
+          "value": ["Let us confess our sins to God."],
+          "type": "text",
+          "hidden": false
         },
         {
-          "hidden": false,
-          "source": { "source": "", "citation": "", "api": "" },
-          "type": "responsive",
-          "version_label": "Rejoicing in the Power",
-          "metadata": {},
-          "style": "preces",
+          "type": "rubric",
+          "value": ["Silence may be kept.", "Minister and People"],
+          "hidden": false
+        },
+        {
           "value": [
-            {
-              "label": "",
-              "response": "",
-              "text": "Let us go forth into the world, rejoicing in the power of the Spirit. Alleluia, alleluia."
-            },
-            {
-              "text": "Thanks be to God. Alleluia, alleluia.",
-              "label": "People"
-            }
+            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\n    in ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\n    the evil we have done,\n    and the evil done on our behalf.\nForgive, restore, and strengthen us \nthrough our Savior Jesus Christ, \nthat we may abide in your love \nand serve only your will."
           ],
+          "style": "prayer",
+          "display_format": "unison",
+          "type": "text",
+          "metadata": { "omit_response": false },
+          "category": [],
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" }
+        },
+        {
+          "value": ["The Bishop, when present, or the Priest, stands and says"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "style": "prayer",
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "style": "text",
+          "type": "heading",
+          "source": { "source": "", "api": "", "citation": "" },
+          "hidden": false,
+          "metadata": { "level": 3, "omit_response": false },
+          "value": ["The Peace"],
           "category": []
         },
         {
+          "type": "rubric",
+          "value": ["All stand. The Celebrant says to the people"],
+          "hidden": false
+        },
+        {
           "style": "preces",
+          "value": [
+            {
+              "label": "",
+              "text": "The peace of Christ be always with you.",
+              "response": ""
+            },
+            { "label": "People", "text": "And also with you." }
+          ],
           "type": "responsive",
-          "version_label": "Bless the Lord",
-          "metadata": {},
-          "source": { "api": "", "citation": "", "source": "" },
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "value": [
+            "Then the Ministers and People may greet one another in the name of the Lord."
+          ],
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "value": ["The Holy Communion"],
+          "type": "heading",
+          "style": "text",
           "category": [],
+          "metadata": { "omit_response": false, "level": 2 },
+          "source": { "api": "", "source": "", "citation": "" }
+        },
+        {
+          "category": ["offertory_sentence"],
+          "metadata": {},
+          "source": { "api": "", "source": "", "citation": "" },
+          "type": "bible-reading",
+          "hidden": false,
+          "style": "short",
+          "lookup": { "rotate": false, "filter": "—", "type": "category" }
+        },
+        {
+          "source": { "source": "", "citation": "", "api": "" },
+          "metadata": {},
+          "category": ["Eucharistic Prayer"],
+          "hidden": false,
+          "style": "short",
+          "lookup": {
+            "rotate": false,
+            "filter": "—",
+            "allow_multiple": false,
+            "type": "category"
+          },
+          "type": "bible-reading"
+        },
+        {
+          "hidden": false,
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "value": [
+            {
+              "source": { "api": "", "source": "", "citation": "" },
+              "style": "text",
+              "hidden": false,
+              "value": [
+                "And now, as our Savior\nChrist has taught us,\nwe are bold to say,"
+              ],
+              "version_label": "Traditional",
+              "metadata": { "omit_response": false },
+              "type": "text",
+              "category": []
+            },
+            {
+              "type": "text",
+              "value": ["As our Savior Christ\nhas taught us,\nwe now pray,"],
+              "source": { "source": "", "api": "", "citation": "" },
+              "category": [],
+              "metadata": { "omit_response": false },
+              "version_label": "Contemporary",
+              "style": "text",
+              "hidden": false
+            }
+          ],
+          "type": "option"
+        },
+        {
+          "type": "option",
+          "value": [
+            {
+              "source": { "api": "", "source": "", "citation": "" },
+              "type": "text",
+              "hidden": false,
+              "version_label": "Traditional",
+              "style": "prayer",
+              "value": [
+                "Our Father, who art in heaven,\n    hallowed be thy Name,\n    thy kingdom come,\n    thy will be done,\n        on earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n    as we forgive those\n        who trespass against us.\nAnd lead us not into temptation,\n    but deliver us from evil.\nFor thine is the kingdom,\n    and the power, and the glory,\n    for ever and ever."
+              ],
+              "metadata": { "omit_response": false },
+              "category": [],
+              "display_format": "unison"
+            },
+            {
+              "source": { "source": "", "citation": "", "api": "" },
+              "display_format": "unison",
+              "version_label": "Contemporary",
+              "hidden": false,
+              "category": [],
+              "type": "text",
+              "metadata": { "omit_response": false },
+              "value": [
+                "Our Father in heaven,\n    hallowed be your Name,\n    your kingdom come,\n    your will be done,\n        on earth as in heaven.\nGive us today our daily bread.\nForgive us our sins\n    as we forgive those\n        who sin against us.\nSave us from the time of trial,\n    and deliver us from evil.\nFor the kingdom, the power,\n    and the glory are yours,\n    now and for ever. "
+              ],
+              "style": "prayer"
+            }
+          ],
+          "metadata": { "editor_selected": 0, "selected": 0 },
+          "hidden": false
+        },
+        {
+          "source": { "api": "", "source": "", "citation": "" },
+          "type": "heading",
+          "hidden": false,
+          "style": "text",
+          "value": ["The Breaking of the Bread"],
+          "category": [],
+          "metadata": { "omit_response": false, "level": 3 }
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The Celebrant breaks the consecrated Bread.",
+            "\nA period of silence is kept."
+          ]
+        },
+        {
+          "type": "rubric",
+          "hidden": false,
+          "value": ["Then may be sung or said"]
+        },
+        {
+          "type": "option",
+          "metadata": { "selected": 0, "editor_selected": 0 },
           "hidden": false,
           "value": [
             {
-              "response": "",
-              "label": "",
-              "text": "Let us bless the Lord. Alleluia, alleluia."
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "responsive",
+              "category": [],
+              "metadata": {},
+              "hidden": false,
+              "value": [
+                {
+                  "label": "",
+                  "response": "Therefore let us keep the feast. [Alleluia.]",
+                  "text": "[Alleluia.] Christ our Passover is sacrificed for us;"
+                }
+              ],
+              "type": "responsive",
+              "version_label": "Christ our Passover"
             },
             {
-              "text": "Thanks be to God. Alleluia, alleluia.",
-              "label": "People"
+              "metadata": {},
+              "type": "responsive",
+              "version_label": "We break this bread",
+              "source": { "api": "", "citation": "", "source": "" },
+              "hidden": false,
+              "style": "responsive",
+              "value": [
+                {
+                  "response": "We who are many are one body,\nfor we all share in the one bread.",
+                  "text": "We break this bread\nto share in the Body of Christ.",
+                  "label": ""
+                }
+              ],
+              "category": []
+            },
+            {
+              "value": [
+                {
+                  "label": "",
+                  "text": "God of promise, you have prepared a banquet for us.",
+                  "response": "Happy are those who are called to the Supper of the Lamb."
+                }
+              ],
+              "type": "responsive",
+              "metadata": {},
+              "version_label": "God of promise",
+              "category": [],
+              "hidden": false,
+              "style": "responsive",
+              "source": { "source": "", "citation": "", "api": "" }
+            },
+            {
+              "source": { "source": "", "citation": "", "api": "" },
+              "hidden": false,
+              "type": "responsive",
+              "metadata": {},
+              "category": [],
+              "version_label": "This is the true bread",
+              "style": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "response": "Whoever eats this bread will live for ever.",
+                  "text": "This is the true bread which comes down from heaven and gives life to the world."
+                }
+              ]
+            },
+            {
+              "hidden": false,
+              "style": "text",
+              "source": { "api": "", "source": "", "citation": "" },
+              "category": [],
+              "metadata": { "omit_response": false },
+              "version_label": "Lamb of God",
+              "type": "text",
+              "value": [
+                "Lamb of God, you take away the sins of the world:\n\thave mercy on us.\nLamb of God, you take away the sins of the world:\n\thave mercy on us.\nLamb of God, you take away the sins of the world:\n\tgrant us peace."
+              ]
             }
           ]
+        },
+        {
+          "hidden": false,
+          "value": [
+            "In place of, or in addition to, the preceding, some other suitable anthem may be used."
+          ],
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            " Facing the people, the Celebrant says the following Invitation"
+          ]
+        },
+        {
+          "hidden": false,
+          "type": "option",
+          "value": [
+            {
+              "source": { "citation": "", "api": "", "source": "" },
+              "metadata": { "omit_response": false },
+              "value": ["The Gifts of God for the People of God."],
+              "style": "text",
+              "hidden": false,
+              "version_label": "Short",
+              "category": [],
+              "type": "text"
+            },
+            {
+              "metadata": { "omit_response": false },
+              "value": [
+                "The Gifts of God for the People of God. Take them in remembrance that Christ died for you, and feed on him in your hearts by faith, with thanksgiving."
+              ],
+              "hidden": false,
+              "category": [],
+              "style": "text",
+              "source": { "source": "", "citation": "", "api": "" },
+              "type": "text",
+              "version_label": "Long"
+            }
+          ],
+          "metadata": { "selected": 0, "editor_selected": 0 }
+        },
+        {
+          "value": [
+            "The ministers receive the Sacrament in both kinds, and then immediately deliver it to the people."
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "type": "rubric",
+          "value": [
+            "The Bread and the Cup are given to the communicants with these words"
+          ]
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "value": [
+                "The Body (Blood) of our Lord Jesus Christ keep you in everlasting life. [Amen.]"
+              ],
+              "hidden": false,
+              "style": "text",
+              "type": "text"
+            },
+            {
+              "style": "text",
+              "value": [
+                "The Body of Christ, the bread of heaven. [Amen.]\nThe Blood of Christ, the cup of salvation. [Amen.]"
+              ],
+              "hidden": false,
+              "type": "text"
+            }
+          ],
+          "type": "option",
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["After Communion, the Celebrant says"],
+          "hidden": false
+        },
+        {
+          "style": "text",
+          "hidden": false,
+          "value": ["Let us pray."],
+          "type": "text"
+        },
+        {
+          "value": ["Celebrant and People"],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "metadata": { "selected": 0, "editor_selected": 0 },
+          "value": [
+            {
+              "hidden": false,
+              "display_format": "unison",
+              "metadata": { "omit_response": false, "rollup": false },
+              "version_label": "God of abundance",
+              "value": [
+                "God of abundance,\nyou have fed us\nwith the bread of life and cup of salvation;\nyou have united us\nwith Christ and one another;\nand you have made us one\nwith all your people in heaven and on earth.\nNow send us forth\nin the power of your Spirit,\nthat we may proclaim your redeeming love to the world\nand continue for ever\nin the risen life of Christ our Savior."
+              ],
+              "source": { "citation": "", "source": "", "api": "" },
+              "style": "prayer",
+              "type": "text",
+              "category": []
+            },
+            {
+              "version_label": "Loving God",
+              "style": "prayer",
+              "hidden": false,
+              "type": "text",
+              "metadata": { "rollup": false, "omit_response": false },
+              "category": [],
+              "value": [
+                "Loving God,\nwe give you thanks\nfor restoring us in your image\nand nourishing us with spiritual food\nin the Sacrament of Christ’s Body and Blood.\nNow send us forth\na people, forgiven, healed, renewed;\nthat we may proclaim your love to the world\nand continue in the risen life of Christ our Savior."
+              ],
+              "display_format": "unison",
+              "source": { "source": "", "api": "", "citation": "" }
+            }
+          ],
+          "type": "option",
+          "hidden": false
+        },
+        {
+          "value": [
+            "The Bishop, when present, or the Priest, may bless the people."
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "type": "option",
+          "metadata": { "selected": 4, "editor_selected": 4 },
+          "value": [
+            {
+              "style": "prayer",
+              "value": [
+                "Holy eternal Majesty,\nHoly incarnate Word,\nHoly abiding Spirit,\nBless you for evermore."
+              ],
+              "hidden": false,
+              "type": "text"
+            },
+            {
+              "value": [
+                "May the blessing of the God of Abraham and Sarah, and of Jesus Christ born of our sister Mary, and of the Holy Spirit, who broods over the world as a mother over her children, be upon you and remain with you always."
+              ],
+              "style": "prayer",
+              "type": "text",
+              "hidden": false
+            },
+            {
+              "value": [
+                "God’s Blessing be with you,\nChrist’s peace be with you,\nthe Spirit’s outpouring be with you,\nnow and always. "
+              ],
+              "type": "text",
+              "hidden": false,
+              "style": "prayer"
+            },
+            {
+              "type": "text",
+              "value": [
+                "The Wisdom of God\nthe Love of God\nand the Grace of God\nstrengthen you\nto be Christ’s hands and heart in this world,\nin the name of the Holy Trinity."
+              ],
+              "hidden": false,
+              "style": "prayer"
+            },
+            {
+              "hidden": false,
+              "style": "prayer",
+              "type": "text",
+              "value": [
+                "Live without fear: your Creator has made you holy, has always protected you, and loves you as a mother. Go in peace to follow the good road and may God’s blessing be with you always."
+              ]
+            }
+          ],
+          "hidden": false
+        },
+        {
+          "value": [
+            "The Deacon, or the Celebrant, dismisses them with these words"
+          ],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "category": [],
+              "hidden": false,
+              "style": "preces",
+              "version_label": "Name of Christ",
+              "type": "responsive",
+              "value": [
+                {
+                  "label": "",
+                  "text": "Let us go forth in the name of Christ.",
+                  "response": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "metadata": {},
+              "source": { "api": "", "citation": "", "source": "" }
+            },
+            {
+              "style": "preces",
+              "category": [],
+              "version_label": "Love and Serve",
+              "value": [
+                {
+                  "text": "Go in peace to love and serve the Lord.",
+                  "label": "",
+                  "response": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "type": "responsive",
+              "metadata": {},
+              "source": { "api": "", "citation": "", "source": "" },
+              "hidden": false
+            },
+            {
+              "type": "responsive",
+              "metadata": {},
+              "hidden": false,
+              "version_label": "Rejoicing in the Power",
+              "value": [
+                {
+                  "response": "",
+                  "text": "Let us go forth into the world, rejoicing in the power of the Spirit.",
+                  "label": ""
+                },
+                { "text": "Thanks be to God.", "label": "People" }
+              ],
+              "category": [],
+              "source": { "source": "", "api": "", "citation": "" },
+              "style": "preces"
+            },
+            {
+              "source": { "api": "", "citation": "", "source": "" },
+              "category": [],
+              "metadata": {},
+              "value": [
+                {
+                  "response": "",
+                  "label": "",
+                  "text": "Let us bless the Lord."
+                },
+                { "label": "People", "text": "Thanks be to God." }
+              ],
+              "hidden": false,
+              "style": "preces",
+              "type": "responsive",
+              "version_label": "Bless the Lord"
+            }
+          ],
+          "metadata": { "selected": 3, "editor_selected": 3 },
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": ["Easter", "Ascension", "Pentecost", "Pentecost"],
+                  "only": []
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "type": "option"
+        },
+        {
+          "value": [
+            {
+              "version_label": "Name of Christ",
+              "style": "preces",
+              "hidden": false,
+              "type": "responsive",
+              "metadata": {},
+              "value": [
+                {
+                  "label": "",
+                  "response": "",
+                  "text": "Let us go forth in the name of Christ. Alleluia, alleluia."
+                },
+                {
+                  "text": "Thanks be to God. Alleluia, alleluia.",
+                  "label": "People"
+                }
+              ],
+              "category": [],
+              "source": { "citation": "", "source": "", "api": "" }
+            },
+            {
+              "hidden": false,
+              "version_label": "Love and Serve",
+              "category": [],
+              "value": [
+                {
+                  "response": "",
+                  "text": "Go in peace to love and serve the Lord. Alleluia, alleluia.",
+                  "label": ""
+                },
+                {
+                  "label": "People",
+                  "text": "Thanks be to God. Alleluia, alleluia."
+                }
+              ],
+              "metadata": {},
+              "style": "preces",
+              "type": "responsive",
+              "source": { "api": "", "source": "", "citation": "" }
+            },
+            {
+              "version_label": "Rejoicing in the Power",
+              "type": "responsive",
+              "style": "preces",
+              "category": [],
+              "hidden": false,
+              "value": [
+                {
+                  "text": "Let us go forth into the world, rejoicing in the power of the Spirit. Alleluia, alleluia.",
+                  "response": "",
+                  "label": ""
+                },
+                {
+                  "text": "Thanks be to God. Alleluia, alleluia.",
+                  "label": "People"
+                }
+              ],
+              "source": { "source": "", "api": "", "citation": "" },
+              "metadata": {}
+            },
+            {
+              "value": [
+                {
+                  "text": "Let us bless the Lord. Alleluia, alleluia.",
+                  "label": "",
+                  "response": ""
+                },
+                {
+                  "text": "Thanks be to God. Alleluia, alleluia.",
+                  "label": "People"
+                }
+              ],
+              "category": [],
+              "version_label": "Bless the Lord",
+              "type": "responsive",
+              "style": "preces",
+              "source": { "api": "", "source": "", "citation": "" },
+              "metadata": {},
+              "hidden": false
+            }
+          ],
+          "metadata": { "selected": 3, "editor_selected": 3 },
+          "hidden": false,
+          "type": "option",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Ascension", "Pentecost", "Pentecost"]
+                }
+              }
+            ]
+          }
         }
-      ]
+      ],
+      "metadata": {
+        "preferences": {
+          "readingB": {
+            "key": "readingB",
+            "label": "Second Reading",
+            "options": [
+              {
+                "label": "OT/First Reading",
+                "metadata": { "alternateYear": false },
+                "default": false,
+                "value": "first_reading"
+              },
+              {
+                "label": "Epistle/Second Reading",
+                "metadata": { "alternateYear": false },
+                "value": "second_reading",
+                "default": true
+              },
+              {
+                "value": "none",
+                "metadata": { "alternateYear": false },
+                "label": "—",
+                "default": false
+              }
+            ]
+          },
+          "renewal": {
+            "key": "renewal",
+            "label": "Renewal of Baptismal Vows",
+            "options": [
+              {
+                "value": "no",
+                "metadata": { "alternateYear": false },
+                "default": false,
+                "label": "No"
+              },
+              {
+                "label": "Yes",
+                "value": "yes",
+                "default": false,
+                "metadata": { "alternateYear": false }
+              }
+            ]
+          },
+          "psalterVersion": {
+            "key": "psalterVersion",
+            "label": "Psalter Version",
+            "options": [
+              {
+                "default": false,
+                "value": "bcp1979",
+                "metadata": { "alternateYear": false },
+                "label": "1979 Book of Common Prayer"
+              },
+              {
+                "default": false,
+                "value": "ip",
+                "metadata": { "alternateYear": false },
+                "label": "Inclusive Psalter"
+              },
+              {
+                "label": "Coverdale (1662 BCP)",
+                "default": false,
+                "metadata": { "alternateYear": false },
+                "value": "coverdale"
+              }
+            ]
+          },
+          "bibleVersion": {
+            "key": "bibleVersion",
+            "label": "Bible Translation",
+            "options": [
+              {
+                "label": "New Revised Standard Version (NRSV)",
+                "default": false,
+                "metadata": { "alternateYear": false },
+                "value": "NRSV"
+              },
+              {
+                "metadata": { "alternateYear": false },
+                "label": "Common English Bible (CEB)",
+                "value": "CEB",
+                "default": false
+              },
+              {
+                "metadata": { "alternateYear": false },
+                "default": false,
+                "label": "English Standard Version (ESV)",
+                "value": "ESV"
+              },
+              {
+                "value": "KJV",
+                "metadata": { "alternateYear": false },
+                "default": false,
+                "label": "King James Version (KJV)"
+              }
+            ]
+          },
+          "readingA": {
+            "options": [
+              {
+                "value": "first_reading",
+                "label": "OT/First Reading",
+                "metadata": { "alternateYear": false },
+                "default": false
+              },
+              {
+                "label": "Epistle/Second Reading",
+                "value": "second_reading",
+                "default": false,
+                "metadata": { "alternateYear": false }
+              }
+            ],
+            "key": "readingA",
+            "label": "First Reading"
+          },
+          "lectionary": {
+            "label": "Lectionary",
+            "key": "lectionary",
+            "options": [
+              {
+                "label": "RCL (Track 1)",
+                "metadata": { "alternateYear": false },
+                "value": "rclsundayTrack1",
+                "default": false
+              },
+              {
+                "default": false,
+                "label": "RCL (Track 2)",
+                "value": "rclsunday",
+                "metadata": { "alternateYear": false }
+              },
+              {
+                "default": false,
+                "label": "Daily Office",
+                "value": "bcp1979_daily_office",
+                "metadata": { "alternateYear": false }
+              },
+              {
+                "default": false,
+                "value": "lff2018",
+                "metadata": { "alternateYear": false },
+                "label": "Lesser Feasts & Fasts (2018)"
+              }
+            ]
+          }
+        },
+        "liturgyversions": ["EOW", "eow", "bcp1979", "Rite-II"],
+        "evening": false,
+        "supplement": false,
+        "special_preferences": {
+          "footwashing": {
+            "label": "footwashing",
+            "options": [
+              {
+                "value": "false",
+                "default": false,
+                "label": "No",
+                "metadata": { "alternateYear": false }
+              },
+              {
+                "default": false,
+                "label": "Yes",
+                "metadata": { "alternateYear": false },
+                "value": "true"
+              }
+            ],
+            "key": "footwashing"
+          },
+          "palms": {
+            "options": [
+              {
+                "label": "—",
+                "default": false,
+                "value": "false",
+                "metadata": { "alternateYear": false }
+              },
+              {
+                "default": false,
+                "label": "Before the Service",
+                "value": "true",
+                "metadata": { "alternateYear": false }
+              }
+            ],
+            "key": "palms",
+            "label": "Liturgy of the Palms"
+          }
+        }
+      },
+      "date_modified": { "seconds": 1621349910, "nanoseconds": 657000000 },
+      "hidden": false,
+      "lastRevision": 940,
+      "sharing": {
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published"
+      },
+      "date_created": { "nanoseconds": 242000000, "seconds": 1611244708 },
+      "language": "en",
+      "label": "Eucharist",
+      "source": { "api": "", "source": "", "citation": "" },
+      "category": [],
+      "type": "liturgy",
+      "version": "EOW"
     }
-  ],
-  "language": "en",
-  "slug": "eucharist",
-  "version": "Rite-II",
-  "lastRevision": 791,
-  "date_created": { "nanoseconds": 67000000, "seconds": 1603678355 },
-  "date_modified": { "seconds": 1621349864, "nanoseconds": 50000000 },
-  "label": "Eucharist",
-  "category": []
+  ]
 }
-]}

@@ -236,3 +236,7 @@ a.source:visited {
 .litany > .line {
   margin-bottom: 1rem;
 }
+
+.rubric {
+  color: #ea0000;
+}
