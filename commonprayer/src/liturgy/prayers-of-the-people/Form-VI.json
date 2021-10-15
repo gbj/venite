@@ -1,0 +1,219 @@
+{
+  "index": 600,
+  "data": [
+    {
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "type": "liturgy",
+      "value": [
+        {
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "value": ["Form VI"],
+          "metadata": {
+            "level": 3
+          },
+          "style": "text",
+          "type": "heading",
+          "hidden": false
+        },
+        {
+          "style": "text",
+          "value": ["In peace, we pray to you, Lord God."],
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "value": ["Silence"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "style": "litany",
+          "type": "responsive",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "value": [
+            {
+              "text": "For all people in their daily life and work;",
+              "response": "For our families, friends, and neighbors, and for those who are alone.",
+              "label": ""
+            },
+            {
+              "response": "For all who work for justice, freedom, and peace.",
+              "text": "For this community, the nation, and the world;"
+            },
+            {
+              "text": "For the just and proper use of your creation;",
+              "response": "For the victims of hunger, fear, injustice, and oppression."
+            },
+            {
+              "response": "For those who minister to the sick, the friendless, and the needy.",
+              "text": "For all who are in danger, sorrow, or any kind of trouble;"
+            },
+            {
+              "response": "For all who proclaim the Gospel, and all who seek the Truth.",
+              "text": "For the peace and unity of the Church of God;"
+            },
+            {
+              "text": "For [N. our Presiding Bishop, and N. (N.) our Bishop(s); and for] all bishops and other ministers;",
+              "response": "For all who serve God in his Church."
+            }
+          ],
+          "metadata": {},
+          "category": []
+        },
+        {
+          "style": "text",
+          "value": ["For the special needs and concerns of this congregation."],
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["Silence", "The People may add their own petitions"],
+          "hidden": false
+        },
+        {
+          "type": "responsive",
+          "value": [
+            {
+              "response": "For your mercy is great.",
+              "text": "Hear us, Lord;",
+              "label": ""
+            }
+          ],
+          "hidden": false,
+          "style": "responsive"
+        },
+        {
+          "type": "text",
+          "hidden": false,
+          "style": "text",
+          "value": ["We thank you, Lord, for all the blessings of this life."]
+        },
+        {
+          "value": ["Silence", "The People may add their own thanksgivings"],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "value": ["We will exalt you, O God our King;"],
+          "hidden": false,
+          "style": "text",
+          "metadata": {
+            "rollup": false
+          },
+          "category": [],
+          "type": "responsive"
+        },
+        {
+          "type": "text",
+          "style": "text",
+          "hidden": false,
+          "value": [
+            "We pray for all who have died, that they may have a place in your eternal kingdom."
+          ]
+        },
+        {
+          "value": ["Silence", "The People may add their own petitions"],
+          "hidden": false,
+          "type": "rubric"
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "text": "Lord, let your loving-kindness be upon them;",
+              "label": "",
+              "response": " Who put their trust in you."
+            }
+          ],
+          "style": "responsive",
+          "type": "responsive"
+        },
+        {
+          "hidden": false,
+          "value": ["We pray to you also for the forgiveness of our sins."],
+          "style": "text",
+          "type": "text"
+        },
+        {
+          "hidden": false,
+          "value": ["Silence may be kept."],
+          "type": "rubric"
+        },
+        {
+          "value": ["Leader and People"],
+          "type": "rubric",
+          "hidden": false
+        },
+        {
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "type": "text",
+          "hidden": false,
+          "display_format": "unison",
+          "style": "prayer",
+          "metadata": {
+            "rollup": false,
+            "response": "Amen.",
+            "omit_response": false
+          },
+          "category": [],
+          "value": [
+            "Have mercy upon us, most merciful Father;\nin your compassion forgive us our sins,\nknown and unknown,\nthings done and left undone;\nand so uphold us by your Spirit\nthat we may live and serve you in newness of life,\nto the honor and glory of your Name;\nthrough Jesus Christ our Lord."
+          ]
+        }
+      ],
+      "date_modified": {
+        "seconds": 1609900873,
+        "nanoseconds": 442000000
+      },
+      "id": "vMCgf4uMDO424L3euSEO",
+      "lastRevision": 108,
+      "language": "en",
+      "date_created": {
+        "seconds": 1609900227,
+        "nanoseconds": 805000000
+      },
+      "version": "bcp1979",
+      "sharing": {
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "slug": "form-vi",
+      "label": "Form VI",
+      "category": ["Prayers of the People"],
+      "metadata": {
+        "preferences": {},
+        "supplement": true,
+        "liturgyversions": [],
+        "evening": false,
+        "special_preferences": {}
+      },
+      "hidden": false
+    }
+  ]
+}

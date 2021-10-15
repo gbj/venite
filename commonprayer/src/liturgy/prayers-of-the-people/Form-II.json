@@ -1,0 +1,61 @@
+{
+  "index": 200,
+  "data": [
+    {
+      "type": "responsive",
+      "citation": null,
+      "category": ["potp", "Prayers of the People"],
+      "slug": "potp_form_ii",
+      "metadata": {
+        "response": "[Silence]"
+      },
+      "version_label": "Form II",
+      "version": "bcp1979",
+      "label": "Form II",
+      "hidden": false,
+      "language": "en",
+      "value": [
+        {
+          "text": "I ask your prayers for God’s people throughout the world; for our Bishop(s) ____________; for this gathering; and for all ministers and people.\n\nPray for the Church.",
+          "optional": false
+        },
+        {
+          "text": "I ask your prayers for peace; for goodwill among nations; and for the well-being of all people.\n\nPray for justice and peace.",
+          "optional": false
+        },
+        {
+          "optional": false,
+          "text": "I ask your prayers for the poor, the sick, the hungry, the oppressed, and those in prison.\n\nPray for those in any need or trouble."
+        },
+        {
+          "text": "I ask your prayers for all who seek God, or a deeper knowledge of him.\n\nPray that they may find and be found by him.",
+          "optional": false
+        },
+        {
+          "text": "I ask your prayers for the departed [especially ____________].\n\nPray for those who have died.",
+          "optional": false
+        },
+        {
+          "optional": true,
+          "text": "I ask your prayers for ____________."
+        },
+        {
+          "text": "I ask your thanksgiving for ____________.",
+          "optional": true
+        },
+        {
+          "text": "Praise God for those in every generation in whom Christ has been honored [especially ____________ whom we remember today].\n\nPray that we may have grace to glorify Christ in our own day.",
+          "optional": false
+        }
+      ],
+      "style": "litany",
+      "sharing": {
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": []
+      }
+    }
+  ]
+}

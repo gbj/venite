@@ -1,0 +1,74 @@
+{
+  "index": 300,
+  "data": [
+    {
+      "citation": null,
+      "style": "litany",
+      "version": "bcp1979",
+      "metadata": {
+        "response": null
+      },
+      "slug": "potp_form_iii",
+      "label": "Form III",
+      "type": "responsive",
+      "version_label": "Form III",
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published"
+      },
+      "hidden": false,
+      "language": "en",
+      "value": [
+        {
+          "optional": false,
+          "text": "Father, we pray for your holy Catholic Church;",
+          "response": "That we all may be one."
+        },
+        {
+          "response": "That your Name may be glorified by all people.",
+          "text": "Grant that every member of the Church may truly and humbly serve you;",
+          "optional": false
+        },
+        {
+          "optional": false,
+          "text": "We pray for all bishops, priests, and deacons;",
+          "response": "That they may be faithful ministers of your Word and Sacraments."
+        },
+        {
+          "text": "We pray for all who govern and hold authority in the nations of the world;",
+          "optional": false,
+          "response": "That there may be justice and peace on the earth."
+        },
+        {
+          "response": "That our works may find favor in your sight.",
+          "optional": false,
+          "text": "Give us grace to do your will in all that we undertake;"
+        },
+        {
+          "text": "Have compassion on those who suffer from any grief or trouble;",
+          "response": "That they may be delivered from their distress.",
+          "optional": false
+        },
+        {
+          "text": "Give to the departed eternal rest.",
+          "optional": false,
+          "response": "Let light perpetual shine upon them."
+        },
+        {
+          "optional": false,
+          "response": "May we also come to share in your heavenly kingdom.",
+          "text": "We praise you for your saints who have entered into joy;"
+        },
+        {
+          "response": "[Silence]",
+          "text": "Let us pray for our own needs and those of others.",
+          "optional": false
+        }
+      ],
+      "category": ["potp", "Prayers of the People"]
+    }
+  ]
+}
