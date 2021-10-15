@@ -83,6 +83,10 @@ article {
   align-items: center;
 }
 
+.heading > .source:only-child {
+  margin-left: auto;
+}
+
 /* Responsive Prayers */
 .responsive-prayer.preces .line {
   display: table-row;
