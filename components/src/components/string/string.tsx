@@ -149,7 +149,6 @@ export class StringComponent {
 
     if(firstChunk) {
       const splitTest = (firstChunk || '').split(/[\s.!?\\]/);
-      console.log('firstChunk = ', firstChunk)
       const 
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2

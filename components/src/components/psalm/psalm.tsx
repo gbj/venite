@@ -238,8 +238,6 @@ export class PsalmComponent {
   render() {
     const includeAntiphon : boolean = this.obj.includeAntiphon();
 
-    console.log('includeAntiphon = ', includeAntiphon);
-
     // create blank psalm verse pattern
     let pattern : PsalmVerse,
       templateMaker : (text : string) => PsalmVerse = (verse : string) => ({ type: 'psalm-verse', number: '', halfverse: '', verse });

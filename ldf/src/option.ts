@@ -117,7 +117,7 @@ export class Option extends LiturgicalDocument {
       }
     }
     // Readings with same citation + different versions => Version
-    else if (uniqueCitations == 1) {
+    else if (option.type == 'bible-reading' && uniqueCitations == 1) {
       label = versionToString(option.version);
     }
     // Readings with one version => John 1:1-4

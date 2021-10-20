@@ -364,4 +364,173 @@ describe('Option.getVersionLabel()', () => {
     expect(obj.getVersionLabel(obj.value[1])).toEqual('John 1:2 (ESV) (“He was in the beginning with God....');
     expect(obj.getVersionLabel(obj.value[2])).toEqual('John 1:3 (NRSV) (“All things came into being throu...');
   });
+
+  it('should use full version names if given multiple versions of same canticle', () => {
+    const obj = new Option({
+      type: 'option',
+      metadata: { selected: 0, editor_selected: 0 },
+      value: [
+        new Psalm({
+          label: 'Canticle 16: The Song of Zechariah',
+          citation: 'Luke 1: 68-79',
+          slug: 'canticle-16',
+          type: 'psalm',
+          hidden: false,
+          style: 'canticle',
+          version_label: null,
+          language: 'en',
+          metadata: {
+            number: '16',
+            latinname: 'Benedictus Dominus Deus',
+            localname: 'The Song of Zechariah',
+            changeable: true,
+          },
+          value: [
+            {
+              type: 'psalm-section',
+              value: [
+                {
+                  halfverse: 'he has come to his people and set them free.',
+                  verse: 'Blessed be the Lord, the God of Israel; *',
+                  type: 'psalm-verse',
+                },
+                {
+                  verse: 'He has raised up for us a mighty savior, *',
+                  type: 'psalm-verse',
+                  halfverse: 'born of the house of his servant David.',
+                },
+                {
+                  halfverse: 'from the hands of all who hate us.',
+                  verse: 'Through his holy prophets he promised of old,\nthat he would save us from our enemies, *',
+                  type: 'psalm-verse',
+                },
+                {
+                  verse: 'He promised to show mercy to our fathers *',
+                  halfverse: 'and to remember his holy covenant.',
+                  type: 'psalm-verse',
+                },
+                {
+                  verse: 'This was the oath he swore to our father Abraham, *',
+                  type: 'psalm-verse',
+                  halfverse: 'to set us free from the hands of our enemies,',
+                },
+                {
+                  type: 'psalm-verse',
+                  halfverse: 'holy and righteous in his sight\nall the days of our life.',
+                  verse: 'Free to worship him without fear, *',
+                },
+                {
+                  type: 'psalm-verse',
+                  halfverse: 'for you will go before the Lord to prepare his way,',
+                  verse: 'You, my child, shall be called the prophet of the Most High, *',
+                },
+                {
+                  type: 'psalm-verse',
+                  halfverse: 'by the forgiveness of their sins.',
+                  verse: 'To give his people knowledge of salvation *',
+                },
+                {
+                  halfverse: 'the dawn from on high shall break upon us,',
+                  type: 'psalm-verse',
+                  verse: 'In the tender compassion of our God *',
+                },
+                {
+                  halfverse: 'and to guide our feet into the way of peace.',
+                  verse: 'To shine on those who dwell in darkness and the shadow of death, *',
+                  type: 'psalm-verse',
+                },
+              ],
+            },
+          ],
+          version: 'bcp1979',
+          category: ['Canticle'],
+        }),
+        new Psalm({
+          value: [
+            {
+              value: [
+                {
+                  halfverse: 'you have come to your people and set them free.',
+                  verse: 'Blessed be the Lord, the God of Israel; *',
+                  type: 'psalm-verse',
+                },
+                {
+                  halfverse: 'born of the house of your servant David.',
+                  verse: 'You have raised up for us a mighty savior, *',
+                  type: 'psalm-verse',
+                },
+                {
+                  verse: 'Through your holy prophets you promised of old,\nthat you would save us from our enemies, *',
+                  type: 'psalm-verse',
+                  halfverse: 'from the hands of all who hate us.',
+                },
+                {
+                  halfverse: 'and to remember your holy covenant.',
+                  verse: 'To show mercy to our forebears *',
+                  type: 'psalm-verse',
+                },
+                {
+                  type: 'psalm-verse',
+                  halfverse: 'to set us free from the hands of our enemies,',
+                  verse: 'This was the oath you swore to our father Abraham, *',
+                },
+                {
+                  verse: 'Free to worship you without fear, *',
+                  halfverse: 'holy and righteous before you,\nall the days of our life.',
+                  type: 'psalm-verse',
+                },
+                {
+                  halfverse: 'for you will go before the Lord to prepare the way,',
+                  verse: 'And you, child, shall be called the prophet of the Most High, *',
+                  type: 'psalm-verse',
+                },
+                {
+                  halfverse: 'by the forgiveness of their sins.',
+                  type: 'psalm-verse',
+                  verse: 'To give God’s people knowledge of salvation *',
+                },
+                {
+                  type: 'psalm-verse',
+                  halfverse: 'the dawn from on high shall break upon us,',
+                  verse: 'In the tender compassion of our God *',
+                },
+                {
+                  halfverse: 'and to guide our feet into the way of peace.',
+                  verse: 'To shine on those who dwell in darkness\nand the shadow of death, *',
+                  type: 'psalm-verse',
+                },
+              ],
+              type: 'psalm-section',
+            },
+          ],
+          metadata: {
+            latinname: 'Benedictus Dominus Deus',
+            localname: 'The Song of Zechariah',
+            number: '16',
+            changeable: true,
+          },
+          language: 'en',
+          sharing: {
+            organization: 'venite',
+            collaborators: [],
+            privacy: 'public',
+            status: 'published',
+            owner: 'ikvC2kTwM0MhmiqfMOi2fFZynJr2',
+          },
+          type: 'psalm',
+          slug: 'canticle-16',
+          version: 'eow',
+          style: 'canticle',
+          hidden: false,
+          citation: 'Luke 1: 68-79',
+          category: ['Canticle', 'Canticle'],
+          version_label: null,
+          label: 'Canticle 16: The Song of Zechariah',
+        }),
+      ],
+    });
+
+    expect(obj.getVersionLabel(obj.value[0])).toEqual('Rite II');
+    expect(obj.getVersionLabel(obj.value[1])).toEqual('EOW');
+  });
 });
