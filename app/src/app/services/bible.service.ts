@@ -51,19 +51,23 @@ export class BibleService implements BibleServiceInterface {
       version = "NRSV";
     }
 
+    let adaptedCitation = citation;
     if (version == "NRSV" || version == "KJV") {
-      citation = citation.replace("(", "[").replace(")", "]");
+      adaptedCitation = citation.replace("(", "[").replace(")", "]");
+    } else if (version == "ESV") {
+      // ESV API can't handle brackets well
+      adaptedCitation = citation.replace(/[\[\]]/g, ", ");
     }
 
     return this.http
       .get<BibleReading>(
         `https://us-central1-venite-2.cloudfunctions.net/bible`,
-        { params: { citation, version } }
+        { params: { citation: adaptedCitation, version } }
       )
       .pipe(
         map((doc) =>
           !didSwitchVersion
-            ? doc
+            ? new BibleReading({ ...doc, citation })
             : new BibleReading({ ...doc, citation: `${citation} (${version})` })
         ),
         startWith(LOADING),
