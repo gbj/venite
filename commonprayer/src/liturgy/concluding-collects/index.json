@@ -1,0 +1,18 @@
+{
+  "label": "The Collect at the Prayers",
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=394",
+    "label": "BCP p. 394"
+  },
+  "prelude": {
+    "type": "text",
+    "style": "text",
+    "value": [
+      "For the concluding Collect, the Celebrant selects",
+      "(a)    a Collect appropriate to the season or occasion being celebrated;",
+      "(b)    a Collect expressive of some special need in the life of the local congregation;",
+      "(c)    a Collect for the mission of the Church;",
+      "(d)    a general Collect such as the following:"
+    ]
+  }
+}

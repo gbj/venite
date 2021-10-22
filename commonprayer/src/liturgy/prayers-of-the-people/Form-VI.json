@@ -1,20 +1,14 @@
 {
   "index": 600,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=392",
+    "label": "BCP p. 392"
+  },
   "data": [
     {
-      "source": {
-        "source": "",
-        "citation": "",
-        "api": ""
-      },
       "type": "liturgy",
       "value": [
         {
-          "source": {
-            "citation": "",
-            "source": "",
-            "api": ""
-          },
           "value": ["Form VI"],
           "metadata": {
             "level": 3
@@ -22,6 +16,10 @@
           "style": "text",
           "type": "heading",
           "hidden": false
+        },
+        {
+          "type": "rubric",
+          "value": ["The Leader and People pray responsively"]
         },
         {
           "style": "text",
@@ -113,7 +111,12 @@
             "citation": "",
             "api": ""
           },
-          "value": ["We will exalt you, O God our King;"],
+          "value": [
+            {
+              "text": "We will exalt you, O God our King;",
+              "response": "And praise your Name for ever and ever."
+            }
+          ],
           "hidden": false,
           "style": "text",
           "metadata": {
@@ -141,78 +144,74 @@
             {
               "text": "Lord, let your loving-kindness be upon them;",
               "label": "",
-              "response": " Who put their trust in you."
+              "response": "Who put their trust in you."
             }
           ],
           "style": "responsive",
           "type": "responsive"
         },
         {
-          "hidden": false,
-          "value": ["We pray to you also for the forgiveness of our sins."],
-          "style": "text",
-          "type": "text"
-        },
-        {
-          "hidden": false,
-          "value": ["Silence may be kept."],
-          "type": "rubric"
-        },
-        {
-          "value": ["Leader and People"],
-          "type": "rubric",
-          "hidden": false
-        },
-        {
-          "source": {
-            "source": "",
-            "citation": "",
-            "api": ""
-          },
-          "type": "text",
-          "hidden": false,
-          "display_format": "unison",
-          "style": "prayer",
-          "metadata": {
-            "rollup": false,
-            "response": "Amen.",
-            "omit_response": false
-          },
-          "category": [],
+          "type": "liturgy",
+          "display_format": "optional",
           "value": [
-            "Have mercy upon us, most merciful Father;\nin your compassion forgive us our sins,\nknown and unknown,\nthings done and left undone;\nand so uphold us by your Spirit\nthat we may live and serve you in newness of life,\nto the honor and glory of your Name;\nthrough Jesus Christ our Lord."
+            {
+              "hidden": false,
+              "value": ["We pray to you also for the forgiveness of our sins."],
+              "style": "text",
+              "type": "text"
+            },
+            {
+              "hidden": false,
+              "value": ["Silence may be kept."],
+              "type": "rubric"
+            },
+            {
+              "value": ["Leader and People"],
+              "type": "rubric",
+              "hidden": false
+            },
+            {
+              "source": {
+                "source": "",
+                "citation": "",
+                "api": ""
+              },
+              "type": "text",
+              "hidden": false,
+              "display_format": "unison",
+              "style": "prayer",
+              "metadata": {
+                "rollup": false,
+                "response": "Amen.",
+                "omit_response": false
+              },
+              "category": [],
+              "value": [
+                "Have mercy upon us, most merciful Father;\nin your compassion forgive us our sins,\nknown and unknown,\nthings done and left undone;\nand so uphold us by your Spirit\nthat we may live and serve you in newness of life,\nto the honor and glory of your Name;\nthrough Jesus Christ our Lord."
+              ]
+            }
           ]
+        },
+        {
+          "type": "rubric",
+          "value": [
+            "The Celebrant concludes with an absolution or a suitable Collect."
+          ]
+        },
+        {
+          "compile_hidden": true,
+          "type": "text",
+          "style": "prayer",
+          "lookup": {
+            "type": "category"
+          },
+          "category": ["Concluding Collects"]
         }
       ],
-      "date_modified": {
-        "seconds": 1609900873,
-        "nanoseconds": 442000000
-      },
-      "id": "vMCgf4uMDO424L3euSEO",
-      "lastRevision": 108,
-      "language": "en",
-      "date_created": {
-        "seconds": 1609900227,
-        "nanoseconds": 805000000
-      },
-      "version": "bcp1979",
-      "sharing": {
-        "organization": "venite",
-        "collaborators": [],
-        "status": "published",
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-      },
       "slug": "form-vi",
       "label": "Form VI",
       "category": ["Prayers of the People"],
-      "metadata": {
-        "preferences": {},
-        "supplement": true,
-        "liturgyversions": [],
-        "evening": false,
-        "special_preferences": {}
-      },
+      "version": "Rite-II",
       "hidden": false
     }
   ]

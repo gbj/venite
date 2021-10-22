@@ -1,13 +1,13 @@
 import h from "https://cdn.skypack.dev/vhtml@2.2.0";
 import * as path from "https://deno.land/std@0.98.0/path/mod.ts";
 import { LiturgicalDocument } from "https://cdn.skypack.dev/@venite/ldf@^0.21.0?dts";
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.27";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.30";
 import { LDF_TO_HTML_CONFIG } from "../../ssg/ldf-to-html-config.tsx";
 import { Page } from "../../ssg/page.ts";
 import { exists } from "https://deno.land/std@0.98.0/fs/exists.ts";
 import { VERSION_LABELS } from "../../ssg/version-labels.ts";
 import { Mode } from "./mode.ts";
-import { Doc } from "../doc/doc.tsx";
+import { Doc, sourceToHTML } from "../doc/doc.tsx";
 import { Index } from "../../index.tsx";
 
 const SHORT_DOC_LENGTH = 1000;
@@ -94,7 +94,7 @@ export const Category = await Page({
   main: async (srcDir: string, categorySlug: string, subpath? : string) => {
     const children: { index: number; html: string; ldf: string; version: string; label?: string; url: string; }[] = [];
 
-    let metadata: { label?: string } = {};
+    let metadata: { label?: string, prelude?: LiturgicalDocument, source?: { url: string; label?: string } } = {};
     if (await exists(path.join(srcDir, "index.json"))) {
       metadata = JSON.parse(
         await Deno.readTextFile(path.join(srcDir, "index.json"))
@@ -103,6 +103,7 @@ export const Category = await Page({
 
     await buildDocs(srcDir, subpath, categorySlug, children);
 
+    // group versions and labels
     const versions = groupBy(
       children.sort((a, b) => a.index - b.index),
       child => child.version
@@ -126,7 +127,9 @@ export const Category = await Page({
 
     return (
       <main data-mode={mode}>
+        {metadata?.source && <section dangerouslySetInnerHTML={{ __html: sourceToHTML(metadata.source)}}></section>}
         {metadata?.label && <h1>{metadata.label}</h1>}
+        {metadata?.prelude && <section dangerouslySetInnerHTML={{ __html: ldfToHTML(metadata?.prelude, LDF_TO_HTML_CONFIG)}}></section>}
         <input
           type="search"
           placeholder="Search"
@@ -144,7 +147,7 @@ export const Category = await Page({
               {Object.keys(versions).length > 1 && uniqueLabels.length > 1 && <h2>{VERSION_LABELS[version] || version}</h2>}
               {/* Labeled */}
               {mode === Mode.Labeled && Object.entries(labels).map(([label, entries]) => <section>
-                <h2 class="label">{label}</h2>
+                {label.length > 1 && <h2 class="label">{label}</h2>}
                 {entries.map(entry =>
                   <li class="document"
                     data-copyable={entry.html.length < SHORT_DOC_LENGTH ? "true" : "false"}

@@ -1,0 +1,29 @@
+{
+  "label": "The Prayers of the People",
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=383",
+    "label": "BCP p. 383"
+  },
+  "prelude": {
+    "type": "liturgy",
+    "value": [
+      {
+        "type": "text",
+        "value": [
+          "Prayer is offered with intercession for",
+          "The Universal Church, its members, and its mission\nThe Nation and all in authority\nThe welfare of the world\nThe concerns of the local community\nThose who suffer and those in any trouble\nThe departed (with commemoration of a saint when appropriate)"
+        ]
+      },
+      {
+        "type": "rubric",
+        "value": [
+          "Any of the forms which follow may be used.",
+          "Adaptations or insertions suitable to the occasion may be made.",
+          "Any of the forms may be conformed to the language of the Rite being used.",
+          "A bar in the margin indicates petitions which may be omitted.",
+          "The Celebrant may introduce the Prayers with a sentence of invitation related to the occasion, or the season, or the Proper of the Day."
+        ]
+      }
+    ]
+  }
+}

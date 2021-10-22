@@ -32,6 +32,7 @@ async function build(
       buildPage("psalter", { isDev }),
       buildPage("collects", { isDev }),
       buildPage("canticle-table", { isDev }),
+      buildPage("eucharist", { isDev }),
       buildPage("calendar", {
         isDev,
         route: "calendar/bcp",

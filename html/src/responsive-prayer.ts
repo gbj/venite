@@ -30,18 +30,20 @@ export function responsivePrayerToHTML(
     }"  lang="${doc.language || "en"}">
       ${[
         header,
-        ...(doc.value || []).map(
-          (line) =>
-            `<p class="line ${
-              line.optional ? "optional" : ""
-            }"><span class="text">${processText(line.text)}</span><br/>${
-              line.response || doc.metadata?.response
-                ? `<strong class="response">${processText(
-                    line.response || doc.metadata?.response || ""
-                  )}</strong>`
-                : ""
-            }</p>`
-        ),
+        ...(doc.value || []).map((line) => {
+          const response = line.response || doc.metadata?.response || "";
+
+          return `<p class="line ${
+            line.optional ? "optional" : ""
+          }"><span class="text">${processText(line.text)}</span><br/>${
+            ["[Silence]", "[Silencio]"].includes(response.trim())
+              ? `<em class="rubric silence">${response.replace(
+                  /[\[\]]/g,
+                  ""
+                )}</em>`
+              : `<strong class="response">${processText(response)}</strong>`
+          }</p>`;
+        }),
       ].join("\n")}
       </article>`;
   } else if (doc.style === "preces") {

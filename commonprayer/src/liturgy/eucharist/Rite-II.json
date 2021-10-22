@@ -769,13 +769,13 @@
           }
         },
         {
-          "source": { "citation": "", "api": "", "source": "" },
-          "style": "prayer",
-          "metadata": { "omit_response": false },
-          "hidden": false,
-          "lookup": { "rotate": false, "filter": "—", "type": "category" },
+          "compile_hidden": true,
           "type": "text",
-          "category": ["POTP Collect"]
+          "style": "prayer",
+          "lookup": {
+            "type": "category"
+          },
+          "category": ["Concluding Collects"]
         },
         {
           "category": [],
@@ -1377,10 +1377,7 @@
       "language": "en",
       "slug": "eucharist",
       "version": "Rite-II",
-      "lastRevision": 791,
-      "date_created": { "nanoseconds": 67000000, "seconds": 1603678355 },
-      "date_modified": { "seconds": 1621349864, "nanoseconds": 50000000 },
-      "label": "Eucharist",
+      "label": "The Holy Eucharist",
       "category": []
     }
   ]

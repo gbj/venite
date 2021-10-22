@@ -85,7 +85,8 @@ export async function buildCategoryPage(
   categoryName: string,
   isDev: boolean
 ): Promise<SSGRefreshMap> {
-  // build category page
+  // build category page if there's not an existing page with that name
+  const OVERRIDE_PAGES = ["eucharist"];
   const page = Category(srcDir, categoryName, subpath),
     html = await Index(page, isDev),
     dest = path.join(
@@ -97,10 +98,13 @@ export async function buildCategoryPage(
       subpath || "",
       categoryName
     );
+
   if (!(await exists(dest))) {
     await Deno.mkdir(dest, { recursive: true });
   }
-  await Deno.writeTextFile(path.join(dest, "index.html"), html);
+  if (!OVERRIDE_PAGES.includes(categoryName)) {
+    await Deno.writeTextFile(path.join(dest, "index.html"), html);
+  }
 
   const categoryPagePath = path.join(
     path.fromFileUrl(import.meta.url),

@@ -1,129 +1,148 @@
 {
   "index": 100,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=383",
+    "label": "BCP p. 383"
+  },
   "data": [
     {
-      "lastRevision": 1,
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
-      "date_modified": {
-        "seconds": 1604544640,
-        "nanoseconds": 960000000
-      },
+      "type": "liturgy",
+      "version": "Rite-II",
       "label": "Form I",
-      "style": "litany",
-      "hidden": false,
-      "sharing": {
-        "status": "published",
-        "organization": "venite",
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": []
-      },
-      "version": "bcp1979",
+      "category": ["Prayers of the People"],
       "value": [
         {
-          "optional": false,
-          "response": "",
-          "text": "With all our heart and with all our mind, let us pray to the Lord, saying “Lord, have mercy.”"
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["Form I"]
         },
         {
-          "response": "Lord, have mercy.",
-          "text": "For the peace from above, for the loving-kindness of God, and for the salvation of our souls, let us pray to the Lord.",
-          "optional": true
+          "type": "rubric",
+          "value": ["Deacon or other leader"]
         },
         {
-          "response": "Lord, have mercy.",
-          "optional": false,
-          "text": "For the peace of the world, for the welfare of the Holy Church of God, and for the unity of all peoples, let us pray to the Lord."
+          "style": "litany",
+          "hidden": false,
+          "version": "bcp1979",
+          "value": [
+            {
+              "optional": false,
+              "response": "",
+              "text": "With all our heart and with all our mind, let us pray to the Lord, saying “Lord, have mercy.”"
+            },
+            {
+              "response": "Lord, have mercy.",
+              "text": "For the peace from above, for the loving-kindness of God, and for the salvation of our souls, let us pray to the Lord.",
+              "optional": true
+            },
+            {
+              "response": "Lord, have mercy.",
+              "optional": false,
+              "text": "For the peace of the world, for the welfare of the Holy Church of God, and for the unity of all peoples, let us pray to the Lord."
+            },
+            {
+              "response": "Lord, have mercy.",
+              "text": "For our Bishop, and for all the clergy and people, let us pray to the Lord.",
+              "optional": false
+            },
+            {
+              "optional": false,
+              "response": "Lord, have mercy.",
+              "text": "For our President, for the leaders of the nations, and for all in authority, let us pray to the Lord."
+            },
+            {
+              "optional": false,
+              "response": "Lord, have mercy.",
+              "text": "For this city (town, village, __________), for every city and community, and for those who live in them, let us pray to the Lord."
+            },
+            {
+              "optional": true,
+              "response": "Lord, have mercy.",
+              "text": "For seasonable weather, and for an abundance of the fruits of the earth, let us pray to the Lord."
+            },
+            {
+              "response": "Lord, have mercy.",
+              "optional": false,
+              "text": "For the good earth which God has given us, and for the wisdom and will to conserve it, let us pray to the Lord."
+            },
+            {
+              "text": "For those who travel on land, on water, or in the air [or through outer space], let us pray to the Lord.",
+              "response": "Lord, have mercy.",
+              "optional": true
+            },
+            {
+              "text": "For the aged and infirm, for the widowed and orphans, and for the sick and the suffering, let us pray to the Lord.",
+              "response": "Lord, have mercy.",
+              "optional": false
+            },
+            {
+              "response": "Lord, have mercy.",
+              "optional": true,
+              "text": "For __________, let us pray to the Lord."
+            },
+            {
+              "optional": false,
+              "text": "For the poor and the oppressed, for the unemployed and the destitute, for prisoners and captives, and for all who remember and care for them, let us pray to the Lord.",
+              "response": "Lord, have mercy."
+            },
+            {
+              "text": "For all who have died in the hope of the resurrection, and for all the departed, let us pray to the Lord.",
+              "response": "Lord, have mercy.",
+              "optional": false
+            },
+            {
+              "optional": false,
+              "response": "Lord, have mercy.",
+              "text": "For deliverance from all danger, violence, oppression, and degradation, let us pray to the Lord."
+            },
+            {
+              "text": "For the absolution and remission of our sins and offenses, let us pray to the Lord.",
+              "optional": true,
+              "response": "Lord, have mercy."
+            },
+            {
+              "text": "  That we may end our lives in faith and hope, without suffering and without reproach, let us pray to the Lord.",
+              "response": "Lord, have mercy.",
+              "optional": false
+            },
+            {
+              "text": "Defend us, deliver us, and in thy compassion protect us, O Lord, by thy grace.",
+              "optional": true,
+              "response": "Lord, have mercy."
+            },
+            {
+              "text": "In the communion of [__________ and of all the] saints, let us commend ourselves, and one another, and all our life, to Christ our God.",
+              "optional": false,
+              "response": "To thee, O Lord our God."
+            }
+          ],
+          "version_label": "Form I",
+          "language": "en",
+          "category": ["Prayers of the People"],
+          "citation": null,
+          "type": "responsive",
+          "metadata": {
+            "response": ""
+          }
         },
         {
-          "response": "Lord, have mercy.",
-          "text": "For our Bishop, and for all the clergy and people, let us pray to the Lord.",
-          "optional": false
+          "type": "rubric",
+          "value": ["Silence"]
         },
         {
-          "optional": false,
-          "response": "Lord, have mercy.",
-          "text": "For our President, for the leaders of the nations, and for all in authority, let us pray to the Lord."
+          "type": "rubric",
+          "value": ["The Celebrant adds a concluding Collect."]
         },
         {
-          "optional": false,
-          "response": "Lord, have mercy.",
-          "text": "For this city (town, village,                            ), for every city and community, and for those who live in them, let us pray to the Lord."
-        },
-        {
-          "optional": true,
-          "response": "Lord, have mercy.",
-          "text": "For seasonable weather, and for an abundance of the fruits of the earth, let us pray to the Lord."
-        },
-        {
-          "response": "Lord, have mercy.",
-          "optional": false,
-          "text": "For the good earth which God has given us, and for the wisdom and will to conserve it, let us pray to the Lord."
-        },
-        {
-          "text": "For those who travel on land, on water, or in the air [or through outer space], let us pray to the Lord.",
-          "response": "Lord, have mercy.",
-          "optional": true
-        },
-        {
-          "text": "For the aged and infirm, for the widowed and orphans, and for the sick and the suffering, let us pray to the Lord.",
-          "response": "Lord, have mercy.",
-          "optional": false
-        },
-        {
-          "response": "Lord, have mercy.",
-          "optional": true,
-          "text": "For ____________, let us pray to the Lord."
-        },
-        {
-          "optional": false,
-          "text": "For the poor and the oppressed, for the unemployed and the destitute, for prisoners and captives, and for all who remember and care for them, let us pray to the Lord.",
-          "response": "Lord, have mercy."
-        },
-        {
-          "text": "For all who have died in the hope of the resurrection, and for all the departed, let us pray to the Lord.",
-          "response": "Lord, have mercy.",
-          "optional": false
-        },
-        {
-          "optional": false,
-          "response": "Lord, have mercy.",
-          "text": "For deliverance from all danger, violence, oppression, and degradation, let us pray to the Lord."
-        },
-        {
-          "text": "For the absolution and remission of our sins and offenses, let us pray to the Lord.",
-          "optional": true,
-          "response": "Lord, have mercy."
-        },
-        {
-          "text": "  That we may end our lives in faith and hope, without suffering and without reproach, let us pray to the Lord.",
-          "response": "Lord, have mercy.",
-          "optional": false
-        },
-        {
-          "text": "Defend us, deliver us, and in thy compassion protect us, O Lord, by thy grace.",
-          "optional": true,
-          "response": "Lord, have mercy."
-        },
-        {
-          "text": "In the communion of [____________ and of all the] saints, let us commend ourselves, and one another, and all our life, to Christ our God.",
-          "optional": false,
-          "response": "To thee, O Lord our God."
+          "compile_hidden": true,
+          "type": "text",
+          "style": "prayer",
+          "lookup": {
+            "type": "category"
+          },
+          "category": ["Concluding Collects"]
         }
-      ],
-      "version_label": "Form I",
-      "language": "en",
-      "category": ["potp", "Prayers of the People"],
-      "citation": null,
-      "type": "responsive",
-      "metadata": {
-        "response": ""
-      },
-      "slug": "potp_form_i"
+      ]
     }
   ]
 }

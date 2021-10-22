@@ -1,94 +1,112 @@
 {
   "index": 400,
+  "source": {
+    "url": "https://www.episcopalchurch.org/wp-content/uploads/sites/2/2019/11/bcp_compressed.pdf#page=388",
+    "label": "BCP p. 388"
+  },
   "data": [
     {
-      "type": "responsive",
-      "category": ["potp", "Prayers of the People"],
+      "type": "liturgy",
+      "label": "Form IV",
+      "version": "Rite-II",
+      "category": ["Prayers of the People"],
       "value": [
         {
-          "text": "Let us pray for the Church and for the world.\n\nGrant, Almighty God, that all who confess your Name may be united in your truth, live together in your love, and reveal your glory in the world.",
-          "optional": false,
-          "response": "[Silence]"
+          "type": "heading",
+          "metadata": { "level": 3 },
+          "value": ["Form IV"]
         },
         {
-          "optional": false,
-          "text": "Lord, in your mercy",
-          "response": "Hear our prayer."
+          "type": "rubric",
+          "value": ["Deacon or other leader"]
         },
         {
-          "optional": false,
-          "response": "[Silence]",
-          "text": "Guide the people of this land, and of all the nations, in the ways of justice and peace; that we may honor one another and serve the common good."
+          "type": "responsive",
+          "value": [
+            {
+              "text": "Let us pray for the Church and for the world.\n\nGrant, Almighty God, that all who confess your Name may be united in your truth, live together in your love, and reveal your glory in the world.",
+              "optional": false,
+              "response": "[Silence]"
+            },
+            {
+              "optional": false,
+              "text": "Lord, in your mercy",
+              "response": "Hear our prayer."
+            },
+            {
+              "optional": false,
+              "response": "[Silence]",
+              "text": "Guide the people of this land, and of all the nations, in the ways of justice and peace; that we may honor one another and serve the common good."
+            },
+            {
+              "text": "Lord, in your mercy",
+              "optional": false,
+              "response": "Hear our prayer."
+            },
+            {
+              "response": "[Silence]",
+              "text": "Give us all a reverence for the earth as your own creation, that we may use its resources rightly in the service of others and to your honor and glory.",
+              "optional": false
+            },
+            {
+              "response": "Hear our prayer.",
+              "text": "Lord, in your mercy",
+              "optional": false
+            },
+            {
+              "text": "Bless all whose lives are closely linked with ours, and grant that we may serve Christ in them, and love one another as he loves us.",
+              "optional": false,
+              "response": "[Silence]"
+            },
+            {
+              "optional": false,
+              "text": "Lord, in your mercy",
+              "response": "Hear our prayer."
+            },
+            {
+              "response": "[Silence]",
+              "optional": false,
+              "text": "Comfort and heal all those who suffer in body, mind, or spirit; give them courage and hope in their troubles, and bring them the joy of your salvation."
+            },
+            {
+              "optional": false,
+              "response": "Hear our prayer.",
+              "text": "Lord, in your mercy"
+            },
+            {
+              "text": "We commend to your mercy all who have died, that your will for them may be fulfilled; and we pray that we may share with all your saints in your eternal kingdom.",
+              "optional": false,
+              "response": "[Silence]"
+            },
+            {
+              "response": "Hear our prayer.",
+              "text": "Lord, in your mercy",
+              "optional": false
+            }
+          ],
+          "hidden": false,
+          "citation": null,
+          "metadata": {
+            "response": null
+          },
+          "language": "en",
+          "style": "litany",
+          "version_label": "Form IV"
         },
         {
-          "text": "Lord, in your mercy",
-          "optional": false,
-          "response": "Hear our prayer."
+          "type": "rubric",
+          "value": ["The Celebrant adds a concluding Collect."]
         },
         {
-          "response": "[Silence]",
-          "text": "Give us all a reverence for the earth as your own creation, that we may use its resources rightly in the service of others and to your honor and glory.",
-          "optional": false
-        },
-        {
-          "response": "Hear our prayer.",
-          "text": "Lord, in your mercy",
-          "optional": false
-        },
-        {
-          "text": "Bless all whose lives are closely linked with ours, and grant that we may serve Christ in them, and love one another as he loves us.",
-          "optional": false,
-          "response": "[Silence]"
-        },
-        {
-          "optional": false,
-          "text": "Lord, in your mercy",
-          "response": "Hear our prayer."
-        },
-        {
-          "response": "[Silence]",
-          "optional": false,
-          "text": "Comfort and heal all those who suffer in body, mind, or spirit; give them courage and hope in their troubles, and bring them the joy of your salvation."
-        },
-        {
-          "optional": false,
-          "response": "Hear our prayer.",
-          "text": "Lord, in your mercy"
-        },
-        {
-          "text": "We commend to your mercy all who have died, that your will for them may be fulfilled; and we pray that we may share with all your saints in your eternal kingdom.",
-          "optional": false,
-          "response": "[Silence]"
-        },
-        {
-          "response": "Hear our prayer.",
-          "text": "Lord, in your mercy",
-          "optional": false
+          "compile_hidden": true,
+          "type": "text",
+          "style": "prayer",
+          "lookup": {
+            "type": "category"
+          },
+          "category": ["Concluding Collects"]
         }
-      ],
-      "lastRevision": 0,
-      "hidden": false,
-      "sharing": {
-        "organization": "venite",
-        "status": "published",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": [],
-        "privacy": "public"
-      },
-      "label": "Form IV",
-      "citation": null,
-      "version": "bcp1979",
-      "metadata": {
-        "response": null
-      },
-      "language": "en",
-      "slug": "potp_form_iv",
-      "style": "litany",
-      "date_modified": {
-        "seconds": 1604544609,
-        "nanoseconds": 989000000
-      },
-      "version_label": "Form IV"
+      ]
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.27";
+import { ldfToHTML } from "https://cdn.skypack.dev/@venite/html@0.3.30";
 import {
   BibleReading,
   CanticleTableEntry,
@@ -160,7 +160,7 @@ export class CompileServiceController {
                 }
               }
             } catch (e) {
-              console.warn(child, e, decodeURI(ldf));
+              console.warn(child, we, decodeURI(ldf));
             }
           }
         }

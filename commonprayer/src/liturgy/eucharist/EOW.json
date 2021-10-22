@@ -1487,19 +1487,8 @@
           }
         }
       },
-      "date_modified": { "seconds": 1621349910, "nanoseconds": 657000000 },
-      "hidden": false,
-      "lastRevision": 940,
-      "sharing": {
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "organization": "venite",
-        "collaborators": [],
-        "status": "published"
-      },
-      "date_created": { "nanoseconds": 242000000, "seconds": 1611244708 },
       "language": "en",
-      "label": "Eucharist",
+      "label": "The Holy Eucharist",
       "source": { "api": "", "source": "", "citation": "" },
       "category": [],
       "type": "liturgy",

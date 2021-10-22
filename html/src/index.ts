@@ -27,15 +27,21 @@ function docToHtml(inDoc: LiturgicalDocument, config: LDFToHTMLConfig): string {
 
   switch (inDoc?.type) {
     case "liturgy":
-      return ((inDoc as Liturgy).value || [])
-        .map((subDoc: LiturgicalDocument) => [
-          subDoc.slug ? `<a name="${subDoc.slug}"></a>` : null,
-          ldfToHTML(subDoc, { ...config, includeLDF: true }),
-        ])
-        .flat()
-        .flat()
-        .filter((n) => Boolean(n))
-        .join("\n");
+      return (
+        `<section class="liturgy${
+          inDoc.display_format ? " " + inDoc.display_format : ""
+        }">` +
+        ((inDoc as Liturgy).value || [])
+          .map((subDoc: LiturgicalDocument) => [
+            subDoc.slug ? `<a name="${subDoc.slug}"></a>` : null,
+            ldfToHTML(subDoc, { ...config, includeLDF: true }),
+          ])
+          .flat()
+          .flat()
+          .filter((n) => Boolean(n))
+          .join("\n") +
+        "</section>"
+      );
     case "parallel":
       return parallelToHTML(inDoc as Parallel, config);
     case "option":
