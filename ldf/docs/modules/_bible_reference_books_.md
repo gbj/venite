@@ -110,6 +110,7 @@
   ['Third John', Book.ThirdJohn],
   ['Jude', Book.Jude],
   ['Revelation', Book.Revelation],
+  ['Rev', Book.Revelation],
   ['Apocalypse', Book.Revelation],
   ['Ester', Book.Ester],
   ['Wisdom', Book.Wisdom],
@@ -143,4 +144,4 @@
   ['Judith', Book.Judith],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/505628ab/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/95c32f56/ldf/src/bible-reference/books.ts#L3)*

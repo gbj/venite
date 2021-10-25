@@ -98,6 +98,7 @@ export const BOOKS: [string, Book][] = [
   ['Third John', Book.ThirdJohn],
   ['Jude', Book.Jude],
   ['Revelation', Book.Revelation],
+  ['Rev', Book.Revelation],
   ['Apocalypse', Book.Revelation],
   ['Ester', Book.Ester],
   ['Wisdom', Book.Wisdom],
