@@ -24,8 +24,8 @@
     </ion-item>
   </ion-list>
   <ion-toolbar>
-    <ion-text *ngIf="error" slot="start" color="primary">{{ "issue.pending" | translate }}</ion-text>
-    <ion-text *ngIf="error" slot="start" color="danger">{{ "issue.error" | translate }}</ion-text>
+    <ion-text *ngIf="state == 'pending'" slot="start" color="primary">{{ "issue.pending" | translate }}</ion-text>
+    <ion-text *ngIf="state == 'error'" slot="start" color="danger">{{ "issue.error" | translate }}</ion-text>
     <ion-buttons slot="end">
       <ion-button (click)="dismiss()">
         <ion-label>{{ 'cancel' | translate }}</ion-label>
