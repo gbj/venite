@@ -992,7 +992,7 @@
     },
     "citation": "1 Peter 1:3-4,18-21",
     "style": "canticle",
-    "label": "Canticle M"
+    "label": "Canticle M: A Song of Faith"
   },
   {
     "sharing": {
@@ -1086,7 +1086,7 @@
       "latinname": "Priusquam errarem",
       "omit_gloria": false
     },
-    "label": "Canticle B",
+    "label": "Canticle B: A Song of Pilgrimage",
     "language": "en",
     "hidden": false,
     "version": "eow",
@@ -1280,7 +1280,7 @@
       }
     ],
     "style": "canticle",
-    "label": "Canticle G",
+    "label": "Canticle G: A Song of Ezekiel",
     "version": "eow",
     "metadata": {
       "latinname": null,
@@ -1356,7 +1356,7 @@
     ],
     "version": "eow",
     "citation": "Isaiah 35:1-7,10",
-    "label": "Canticle D",
+    "label": "Canticle D: A Song of the Wilderness",
     "language": "en",
     "slug": "canticle-d",
     "sharing": {
@@ -1437,7 +1437,7 @@
       }
     ],
     "slug": "canticle-j",
-    "label": "Canticle J",
+    "label": "Canticle J: A Song of Judith",
     "language": "en",
     "citation": "Judith 16:13-16",
     "version": "eow"
@@ -1451,7 +1451,7 @@
       "privacy": "public"
     },
     "version": "eow",
-    "label": "Canticle N",
+    "label": "Canticle N: A Song of God’s Love",
     "style": "canticle",
     "value": [
       {
@@ -1514,7 +1514,7 @@
       "privacy": "public"
     },
     "style": "canticle",
-    "label": "Canticle P",
+    "label": "Canticle P: A Song of the Spirit",
     "value": [
       {
         "value": [
@@ -1637,7 +1637,7 @@
       "number": "I"
     },
     "type": "psalm",
-    "label": "Canticle I",
+    "label": "Canticle I: A Song of Jonah",
     "style": "canticle",
     "hidden": false
   },
@@ -1747,7 +1747,7 @@
     "version": "eow",
     "style": "canticle",
     "slug": "canticle-l",
-    "label": "Canticle L",
+    "label": "Canticle L: A Song of Christ’s Humility",
     "sharing": {
       "privacy": "public",
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -1868,13 +1868,13 @@
     "citation": "Revelation 21:22-26, 22:1-4",
     "version": "eow",
     "version_label": null,
-    "label": "Canticle O",
+    "label": "Canticle O: A Song of the Heavenly City",
     "type": "psalm",
     "slug": "canticle-o",
     "category": ["Canticle", "Canticle"]
   },
   {
-    "label": "Canticle Q",
+    "label": "Canticle Q: A Song of Christ’s Goodness",
     "citation": "Anselm of Canterbury",
     "value": [
       {
@@ -1993,7 +1993,7 @@
       "omit_antiphon": false
     },
     "style": "canticle",
-    "label": "Canticle H",
+    "label": "Canticle H: A Song of Hosea",
     "sharing": {
       "collaborators": [],
       "organization": "venite",
@@ -2014,7 +2014,7 @@
       "number": "F"
     },
     "hidden": false,
-    "label": "Canticle F",
+    "label": "Canticle F: A Song of Lamentation",
     "sharing": {
       "organization": "venite",
       "privacy": "public",
@@ -2078,7 +2078,7 @@
     "style": "canticle"
   },
   {
-    "label": "Canticle K",
+    "label": "Canticle K: A Song of Our Adoption",
     "citation": "Ephesians 1:3-10",
     "hidden": false,
     "version_label": null,
@@ -2221,10 +2221,10 @@
       "number": "R",
       "omit_antiphon": false
     },
-    "label": "Canticle R"
+    "label": "Canticle R: A Song of True Motherhood"
   },
   {
-    "label": "Canticle A",
+    "label": "Canticle A: A Song of Wisdom",
     "version_label": null,
     "type": "psalm",
     "version": "eow",
@@ -2307,7 +2307,7 @@
     },
     "slug": "canticle-c",
     "version_label": null,
-    "label": "Canticle C",
+    "label": "Canticle C: The Song of Hannah",
     "type": "psalm",
     "category": ["Canticle", "Canticle"],
     "version": "eow",
@@ -2608,7 +2608,7 @@
     "category": ["Canticle", "Canticle"],
     "citation": "Isaiah 66:10-14",
     "style": "canticle",
-    "label": "Canticle E",
+    "label": "Canticle E: A Song of Jerusalem Our Mother",
     "version": "eow",
     "sharing": {
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -2630,7 +2630,7 @@
     },
     "language": "en",
     "type": "psalm",
-    "label": "Canticle S",
+    "label": "Canticle S: A Song of Our True Nature",
     "citation": "Julian of Norwich",
     "metadata": {
       "latinname": null,
