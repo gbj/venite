@@ -29852,6 +29852,178 @@
       ]
     }
   ],
+  "en-rite_i-noonday_sentence": [
+    {
+      "language": "en",
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "status": "published"
+      },
+      "id": "na0WxsbcrZjNBS3FVahQ",
+      "date_created": { "seconds": 1635344434, "nanoseconds": 896000000 },
+      "version": "rite_i",
+      "source": { "citation": "", "api": "", "source": "" },
+      "date_modified": { "seconds": 1635344449, "nanoseconds": 113000000 },
+      "metadata": { "response": "Thanks be to God." },
+      "style": "short",
+      "citation": "Malachi 1:11",
+      "value": [
+        {
+          "chapter": "1",
+          "text": "From the rising of the sun to its setting my Name shall be great among the nations, and in every place incense shall be offered to my Name, and a pure offering; for my Name shall be great among the nations, says the Lord of Hosts.",
+          "verse": "11",
+          "book": "Malachi"
+        }
+      ],
+      "hidden": false,
+      "category": [],
+      "slug": "noonday_sentence",
+      "lastRevision": 24,
+      "type": "bible-reading"
+    },
+    {
+      "type": "bible-reading",
+      "lastRevision": 25,
+      "citation": " 2 Corinthians 5:17-18",
+      "date_modified": { "seconds": 1635344422, "nanoseconds": 359000000 },
+      "date_created": { "nanoseconds": 577000000, "seconds": 1635344390 },
+      "source": { "source": "", "api": "", "citation": "" },
+      "category": [],
+      "metadata": { "response": "Thanks be to God." },
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "collaborators": []
+      },
+      "version": "rite_i",
+      "value": [
+        {
+          "chapter": "5",
+          "verse": "17-18",
+          "book": "2 Cor.",
+          "text": "If any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new. And all things are of God, who hath reconciled us to himself by Jesus Christ, and hath given to us the ministry of reconciliation."
+        }
+      ],
+      "language": "en",
+      "id": "GHYoJ8GdyueNxNTVuJD8",
+      "style": "short",
+      "slug": "noonday_sentence",
+      "hidden": false
+    }
+  ],
+  "en-rite_i-noonday_collect": [
+    {
+      "style": "prayer",
+      "hidden": false,
+      "slug": "noonday_collect",
+      "label": "",
+      "category": [],
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "type": "text",
+      "id": "Fw6lXPEU42NkhuB3AHcT",
+      "lastRevision": 25,
+      "date_created": { "seconds": 1635344563, "nanoseconds": 463000000 },
+      "date_modified": { "seconds": 1635344579, "nanoseconds": 601000000 },
+      "value": [
+        "Almighty Savior, who at noonday didst call thy servant Saint Paul to be an apostle to the Gentiles: We pray thee to illumine the world with the radiance of thy glory, that all nations may come and worship thee; for thou livest and reignest for ever and ever."
+      ],
+      "metadata": { "omit_response": false, "rollup": false },
+      "lookup": "category",
+      "language": "en",
+      "source": { "source": "", "citation": "", "api": "" },
+      "version": "rite_i"
+    },
+    {
+      "hidden": false,
+      "language": "en",
+      "lastRevision": 31,
+      "type": "text",
+      "slug": "noonday_collect",
+      "version": "rite_i",
+      "metadata": { "omit_response": false, "rollup": false },
+      "date_created": { "nanoseconds": 147000000, "seconds": 1635344540 },
+      "sharing": {
+        "organization": "venite",
+        "privacy": "public",
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "style": "prayer",
+      "lookup": "category",
+      "id": "weNHxybcXbjxhYxNOrvv",
+      "category": [],
+      "label": "",
+      "value": [
+        "O Lord Jesus Christ, who saidst unto thine Apostles, Peace I leave with you, my peace I give unto you: Regard not our sins, but the faith of thy Church; and grant to us the peace and unity of that heavenly City, where with the Father and the Holy Ghost thou livest and reignest ever, one God, world without end."
+      ],
+      "source": { "source": "", "citation": "", "api": "" },
+      "date_modified": { "seconds": 1635344557, "nanoseconds": 158000000 }
+    },
+    {
+      "hidden": false,
+      "label": "",
+      "language": "en",
+      "style": "prayer",
+      "metadata": { "rollup": false, "omit_response": false },
+      "value": [
+        "Gracious heavenly Father, we beseech thee to send thy Holy Spirit into our hearts, to direct and rule us in accordance with thy will, to comfort us in all our afflictions, to defend us from all error, and to lead us into thy truth; through Jesus Christ our Lord."
+      ],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "privacy": "public",
+        "status": "published"
+      },
+      "source": { "citation": "", "api": "", "source": "" },
+      "version": "rite_i",
+      "date_modified": { "seconds": 1635344489, "nanoseconds": 685000000 },
+      "lastRevision": 24,
+      "lookup": "category",
+      "slug": "noonday_collect",
+      "type": "text",
+      "category": [],
+      "date_created": { "seconds": 1635344471, "nanoseconds": 179000000 },
+      "id": "JMVs688iN87LGH0INBxa"
+    },
+    {
+      "style": "prayer",
+      "metadata": { "omit_response": false, "rollup": false },
+      "language": "en",
+      "id": "MOxQpHX9eiHEHGkMsZaa",
+      "sharing": {
+        "privacy": "public",
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "version": "rite_i",
+      "source": { "api": "", "source": "", "citation": "" },
+      "type": "text",
+      "value": [
+        "Blessed Savior, who at this hour didst hang upon the cross, stretching out thy loving arms: grant that all the nations of the earth may look unto thee and be saved; for thy tender mercies’ sake."
+      ],
+      "slug": "noonday_collect",
+      "label": "",
+      "date_created": { "nanoseconds": 113000000, "seconds": 1635344497 },
+      "lastRevision": 33,
+      "hidden": false,
+      "category": [],
+      "lookup": "category",
+      "date_modified": { "seconds": 1635344513, "nanoseconds": 858000000 }
+    }
+  ],
   "en-bcp1979-noonday_collect": [
     {
       "type": "text",
