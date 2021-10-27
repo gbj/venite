@@ -53,7 +53,7 @@ export class IssueService {
     try {
       device = await Device.getInfo();
     } catch (e) {
-      console.warn(e);
+      console.warn("Capacitor Device plugin error", e);
       device = {};
     }
     return this.afs

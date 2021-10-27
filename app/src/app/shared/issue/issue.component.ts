@@ -20,23 +20,29 @@ export class IssueComponent implements OnInit {
   name = this.auth.currentUser()?.displayName;
   email = this.auth.currentUser()?.email;
   description = "";
-  //name = new FormControl(this.auth.currentUser()?.displayName);
-  //email = new FormControl(this.auth.currentUser()?.email);
-  //description = new FormControl("");
+  state: "idle" | "pending" | "error" = "idle";
 
   ngOnInit() {}
 
   async report(): Promise<void> {
-    await this.issues.create({
-      name: this.name,
-      email: this.email,
-      location: window.location.toString(),
-      description: this.description,
-      status: Status.Open,
-      priority: null,
-    });
+    try {
+      this.state = "pending";
+      await this.issues.create({
+        name: this.name,
+        email: this.email,
+        location: window.location.toString(),
+        description: this.description,
+        status: Status.Open,
+        priority: null,
+      });
 
-    return await this.modal.dismiss();
+      this.state = "idle";
+
+      return await this.modal.dismiss();
+    } catch (e) {
+      console.warn("Error reporting issue", e);
+      this.state = "error";
+    }
   }
 
   dismiss() {

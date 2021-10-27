@@ -354,7 +354,9 @@
   "issue": {
     "name": "Your Name",
     "email": "Your Email",
-    "description": "Please describe the issue."
+    "description": "Please describe the issue.",
+    "pending": "Submitting...",
+    "error": "Ironically, something went wrong when reporting your issue. Try again later?"
   },
   "meditate": {
     "reset": "Reset"
