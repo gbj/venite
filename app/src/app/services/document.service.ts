@@ -618,9 +618,14 @@ export class DocumentService {
   ): Observable<IdAndDoc[]> {
     return this.afs
       .collection<LiturgicalDocument>("Document", (ref) => {
-        const q = ref
-          .where("sharing.owner", "==", uid)
-          .where("type", "==", "liturgy");
+        let q;
+        if (uid !== "ikvC2kTwM0MhmiqfMOi2fFZynJr2") {
+          q = ref
+            .where("sharing.owner", "==", uid)
+            .where("type", "==", "liturgy");
+        } else {
+          q = ref.where("sharing.owner", "==", uid);
+        }
         if (dateLimit) {
           return q.where("date_modified", ">=", dateLimit);
         } else {

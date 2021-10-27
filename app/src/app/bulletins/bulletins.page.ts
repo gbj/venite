@@ -147,8 +147,9 @@ export class BulletinsPage implements OnInit {
       this.search$,
       myUnfilteredDocs$,
       orgDocs$,
+      this.auth.user,
     ]).pipe(
-      map(([search, docs, orgDocs]) =>
+      map(([search, docs, orgDocs, user]) =>
         docSearch(
           this.mode === "bulletins",
           this.mode === "templates",
