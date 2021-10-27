@@ -1055,7 +1055,8 @@ function titleCase(str: string | undefined) {
       .toLowerCase()
       .split(" ")
       .map(function (word) {
-        const firstLetter = word.startsWith("[") ? word[1] : word[0];
+        const firstLetter =
+          word.startsWith("[") || word.startsWith("(") ? word[1] : word[0];
         return ![
           "de",
           "of",
