@@ -1,0 +1,183 @@
+{
+  "data": [
+    {
+      "version_label": null,
+      "version": "Rite-II",
+      "style": "short",
+      "citation": "Psalm 50:14",
+      "language": "en",
+      "hidden": false,
+      "type": "bible-reading",
+      "label": null,
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "value": [
+        {
+          "text": "Offer to God a sacrifice of thanksgiving, and make good your vows to the Most High."
+        }
+      ],
+      "category": ["Offertory Sentences"]
+    },
+    {
+      "version": "Rite-II",
+      "version_label": null,
+      "category": ["Offertory Sentences"],
+      "style": "short",
+      "type": "bible-reading",
+      "citation": "Psalm 96:8",
+      "hidden": false,
+      "language": "en",
+      "value": [
+        {
+          "text": "Ascribe to the Lord the honor due his Name; bring offering and come into his courts. "
+        }
+      ],
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "label": null
+    },
+    {
+      "hidden": false,
+      "version": "Rite-II",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "style": "short",
+      "citation": "Ephesians 5:2",
+      "category": ["Offertory Sentences"],
+      "label": null,
+      "version_label": null,
+      "value": [
+        {
+          "text": "Walk in love, as Christ loved us and gave himself for us, an offering and sacrifice to God. "
+        }
+      ],
+      "language": "en",
+      "type": "bible-reading"
+    },
+    {
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "citation": "Romans 12:1",
+      "version_label": null,
+      "hidden": false,
+      "value": [
+        {
+          "text": "I appeal to you, brethren, by the mercies of God, to present yourselves as a living sacrifice, holy and acceptable to God, which is your spiritual worship."
+        }
+      ],
+      "style": "short",
+      "type": "bible-reading",
+      "language": "en",
+      "label": null,
+      "category": ["Offertory Sentences"],
+      "version": "Rite-II"
+    },
+    {
+      "style": "short",
+      "type": "bible-reading",
+      "value": [
+        {
+          "text": "If you are offering your gift at the altar, and there remember that your brother has something against you, leave your gift there before the altar and go; first be reconciled to your brother, and then come and offer your gift."
+        }
+      ],
+      "hidden": false,
+      "category": ["Offertory Sentences"],
+      "version_label": null,
+      "citation": "Matthew 5:23, 24",
+      "language": "en",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version": "Rite-II",
+      "label": null
+    },
+    {
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "citation": "Hebrews 13:14, 15",
+      "version": "Rite-II",
+      "style": "short",
+      "version_label": null,
+      "category": ["Offertory Sentences"],
+      "value": [
+        {
+          "text": "Through Christ let us continually offer to God the sacrifice of praise, that is, the fruit of lips that acknowledge his Name. But do not neglect to do good and to share what you have, for such sacrifices are pleasing to God."
+        }
+      ],
+      "hidden": false,
+      "label": null,
+      "language": "en",
+      "type": "bible-reading"
+    },
+    {
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "style": "short",
+      "value": [
+        {
+          "text": "O Lord our God, you are worthy to receive glory and honor and power; because you have created all things, and by your will they were created and have their being."
+        }
+      ],
+      "version_label": null,
+      "language": "en",
+      "citation": "Revelation 4:11",
+      "category": ["Offertory Sentences"],
+      "version": "Rite-II",
+      "hidden": false,
+      "type": "bible-reading",
+      "label": null
+    },
+    {
+      "value": [
+        {
+          "text": "Yours, O Lord, is the greatness, the power, the glory, the victory, and the majesty. For everything in heaven and on earth is yours. Yours, O Lord, is the kingdom, and you are exalted as head over all."
+        }
+      ],
+      "language": "en",
+      "version_label": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version": "Rite-II",
+      "category": ["Offertory Sentences"],
+      "type": "bible-reading",
+      "hidden": false,
+      "style": "short",
+      "citation": "1 Chronicles 29:11",
+      "label": null
+    },
+
+    {
+      "hidden": false,
+      "type": "text",
+      "category": ["Offertory Sentences"],
+      "language": "en",
+      "version": "Rite-II",
+      "value": [
+        "Let us with gladness present the offerings and oblations of our life and labor to the Lord."
+      ],
+      "style": "text",
+      "label": null,
+      "version_label": null,
+      "citation": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      }
+    }
+  ]
+}

@@ -1133,7 +1133,8 @@
           "lookup": { "rotate": false, "filter": "—", "type": "category" },
           "metadata": {},
           "type": "bible-reading",
-          "category": ["offertory_sentence"],
+          "category": ["Offertory Sentences"],
+          "version": "Rite-I",
           "hidden": false,
           "source": { "api": "", "citation": "", "source": "" }
         },

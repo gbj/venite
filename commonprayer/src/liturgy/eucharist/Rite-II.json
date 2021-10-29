@@ -902,7 +902,8 @@
           "hidden": false,
           "category": ["Offertory Sentences"],
           "metadata": {},
-          "lookup": { "type": "category", "rotate": false, "filter": "—" }
+          "lookup": { "type": "category", "rotate": false, "filter": "—" },
+          "version": "Rite-II"
         },
         {
           "type": "rubric",

@@ -17,7 +17,7 @@ export default function Eucharist(): PageProps {
           <a href="/eucharist/Rite-I">The Holy Eucharist: Rite I</a>
         </li>
         <li>
-          <a href="/eucharist/Rite-I">The Holy Eucharist: Rite II</a>
+          <a href="/eucharist/Rite-II">The Holy Eucharist: Rite II</a>
         </li>
         <li>
           <a href="/eucharist/EOW">The Holy Eucharist: <em>Enriching Our Worship</em></a>
