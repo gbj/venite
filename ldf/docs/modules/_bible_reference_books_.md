@@ -36,7 +36,9 @@
   ['2 Chronicles', Book.SecondChronicles],
   ['2 Chron.', Book.SecondChronicles],
   ['Ezra', Book.Ezra],
+  ['Neh.', Book.Nehemiah],
   ['Nehemiah', Book.Nehemiah],
+  ['Est', Book.Esther],
   ['Esther', Book.Esther],
   ['Job', Book.Job],
   ['Psalms', Book.Psalms],
@@ -144,4 +146,4 @@
   ['Judith', Book.Judith],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/95c32f56/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/d2da7864/ldf/src/bible-reference/books.ts#L3)*

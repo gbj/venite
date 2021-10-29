@@ -1,6 +1,6 @@
 import { Book } from './book';
 import { BOOKS } from './books';
-import { jaro } from 'jaro-winkler-typescript';
+import { findBestMatch } from 'string-similarity';
 
 export type BibleReferenceQuery = {
   book: Book | null;
@@ -144,12 +144,11 @@ function fillOut(query: BibleReferenceQuery | null, template: BibleReferenceQuer
   };
 }
 
-// Use Jaro-algorithm string-similarities to determine book name
 export function book_name_to_book(book_name: string): Book | null {
-  const scores = BOOKS.map(([key]) => jaro(key, book_name, { caseSensitive: false })),
-    highest = Math.max(...scores),
-    indexOfHighest = scores.indexOf(highest),
-    [, book] = BOOKS[indexOfHighest];
-
-  return book;
+  const { bestMatch } = findBestMatch(
+    book_name,
+    BOOKS.map(([abbrev]) => abbrev),
+  );
+  const book = BOOKS.find(([abbrev]) => abbrev === bestMatch.target);
+  return book ? book[1] : null;
 }

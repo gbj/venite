@@ -217,4 +217,11 @@ describe('parseReference', () => {
       end: { book: null, chapter: null, verse: 49 },
     },
   ]);
+
+  expect(parseReference('Neh. 20:1-4')).toEqual([
+    {
+      start: { book: Book.Nehemiah, chapter: 20, verse: 1 },
+      end: { book: Book.Nehemiah, chapter: 20, verse: 4 },
+    },
+  ]);
 });
