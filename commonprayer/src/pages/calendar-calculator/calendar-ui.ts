@@ -64,13 +64,16 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
     title = el.querySelector("h1"),
     subtitle = el.querySelector("h2"),
     collect = el.querySelector("#collect"),
-    readingList = el.querySelector("#readings"),
     morningPsalmList = el.querySelector("#morning-psalms"),
     eveningPsalmList = el.querySelector("#evening-psalms"),
-    readings: LectionaryEntry[] = await LectionaryService.findReadings(
+    dailyOfficeReadingList = el.querySelector("#readings"),
+    rclReadingList = el.querySelector("#rcl"),
+    dailyOfficeReadings: LectionaryEntry[] =
+      await LectionaryService.findReadings(day, "daily-office"),
+    /*     rclReadings: LectionaryEntry[] = await LectionaryService.findReadings(
       day,
-      "daily-office"
-    ),
+      "rcl1"
+    ), */
     psalms: LectionaryEntry[] = await LectionaryService.findReadings(
       day,
       psalter === Psalter.DailyOffice ? "daily-office-psalter" : "30day-psalter"
@@ -95,7 +98,35 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
   );
 
   // readings
+  loadReadings(dailyOfficeReadingList, dailyOfficeReadings);
+  /*   if (rclReadings?.length > 0) {
+    loadReadings(rclReadingList, rclReadings);
+  } */
 
+  // empty out past entries
+  while (details.firstChild) {
+    details.removeChild(details.firstChild);
+  }
+
+  // add the template
+  details.append(el);
+}
+
+// run main
+const dateField = document.getElementById("date") as HTMLInputElement;
+
+function dateValue(): string {
+  return dateField.value;
+}
+
+function psalterValue(): Psalter {
+  return (document.querySelector("[name=psalter]:checked") as HTMLInputElement)
+    .value as Psalter;
+}
+
+// Add any set of readings
+function loadReadings(readingList: Element, readings: LectionaryEntry[]) {
+  console.log("loading readings...");
   // first, synchronously add headings
   readings.forEach((entry) => {
     const heading = document.createElement("h4");
@@ -121,26 +152,6 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
     el.innerHTML = content;
     document.getElementById(entry.type).replaceWith(el);
   });
-
-  // empty out past entries
-  while (details.firstChild) {
-    details.removeChild(details.firstChild);
-  }
-
-  // add the template
-  details.append(el);
-}
-
-// run main
-const dateField = document.getElementById("date") as HTMLInputElement;
-
-function dateValue(): string {
-  return dateField.value;
-}
-
-function psalterValue(): Psalter {
-  return (document.querySelector("[name=psalter]:checked") as HTMLInputElement)
-    .value as Psalter;
 }
 
 // update every time date field changes, or any psalter radio button changes
