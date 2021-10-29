@@ -193,8 +193,6 @@ export class PrayService {
         doc.day = day;
       }
 
-      console.log("slug = ", doc.slug, "gloria = ", doc.metadata?.gloria);
-
       // if psalm with Gloria inserted, condition-check the provided Gloria
       if (
         doc.metadata?.gloria &&
