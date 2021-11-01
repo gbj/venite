@@ -212,6 +212,11 @@ export class CalendarService implements CalendarServiceInterface {
         isNovember && isThursday && nthWeekOfMonth === 4
           ? this.findSpecialDays(kalendar, "thanksgiving-day")
           : of([] as HolyDay[]);
+    // All Saints’ Sunday
+    const allSaintsSunday$ =
+      isNovember && isSunday && nthWeekOfMonth === 1
+        ? this.findFeastDays(kalendar, "11/1")
+        : of([] as HolyDay[]);
     // Transferred feasts
     const allHolyDays = KALENDAR[kalendar]
         .filter((hd) => !hd?.type?.rank || hd?.type?.rank > 2)
@@ -243,14 +248,16 @@ export class CalendarService implements CalendarServiceInterface {
       feasts$,
       specials$,
       thanksgiving$,
+      allSaintsSunday$,
       transferred$,
     ]).pipe(
       // OR together the feasts and specials
-      map(([feasts, specials, thanksgiving, transferred]) =>
+      map(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) =>
         feasts
           .concat(transferred ? [transferred] : [])
           .concat(specials)
           .concat(thanksgiving)
+          .concat(allSaintsSunday)
       ),
       // remove black-letter days that fall on a major feast or a Sunday
       map((holydays) => {
