@@ -1245,7 +1245,7 @@ export class PrayPage implements OnInit, OnDestroy {
       this.swapData$
         .pipe(
           map(([, pAndTs]) => pAndTs),
-          take(2)
+          take(3)
         )
         .subscribe((data) => {
           this.loadingController.dismiss();
