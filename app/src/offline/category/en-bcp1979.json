@@ -17131,5 +17131,361 @@
       "organization": "venite"
     },
     "version_label": null
+  },
+  {
+    "slug": "prayers-7b-0",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Collect for the Departed (Rite I)"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "O eternal Lord God, who holdest all souls in life: Give, we beseech thee, to thy whole Church in paradise and on earth thy light and thy peace; and grant that we, following the good examples of those who have served thee here and are now at rest, may at the last enter with them into thine unending joy; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+    ],
+    "language": "en",
+    "label": "For the Departed (Rite I)"
+  },
+  {
+    "slug": "prayers-7b-1",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Collect for the Departed (Rite I)"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Almighty God, we remember this day before thee thy faithful servant *N.*; and we pray that, having opened to *him* the gates of larger life, thou wilt receive *him* more and more into thy joyful service, that, with all who have faithfully served thee in the past, *he* may share in the eternal victory of Jesus Christ our Lord; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, for ever and ever."
+    ],
+    "language": "en",
+    "label": "For the Departed (Rite I)"
+  },
+  {
+    "slug": "prayers-7b-2",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Almighty and everliving God, we yield unto thee most high praise and hearty thanks for the wonderful grace and virtue declared in all thy saints, who have been the choice vessels of thy grace, and the lights of the world in their several generations; most humbly beseeching thee to give us grace so to follow the example of their steadfastness in thy faith, and obedience to thy holy commandments, that at the day of the general resurrection, we, with all those who are of the mystical body of thy Son, may be set on his right hand, and hear that his most joyful voice: “Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world.” Grant this, O Father, for the sake of the same thy Son Jesus Christ, our only Mediator and Advocate."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-3",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Almighty God, with whom do live the spirits of those who depart hence in the Lord, and with whom the souls of the faithful, after they are delivered from the burden of the flesh, are in joy and felicity: We give thee hearty thanks for the good examples of all those thy servants, who, having finished their course in faith, do now rest from their labors. And we beseech thee that we, with all those who are departed in the true faith of thy holy Name, may have our perfect consummation and bliss, both in body and soul, in thy eternal and everlasting glory; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-4",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Into thy hands, O Lord, we commend thy servant *N.*, our dear *brother*, as into the hands of a faithful Creator and most merciful Savior, beseeching thee that *he* may be precious in thy sight. Wash *him*, we pray thee, in the blood of that immaculate Lamb that was slain to take away the sins of the world; that, whatsoever defilements *he* may have contracted in the midst of this earthly life being purged and done away, *he* may be presented pure and without spot before thee; through the merits of Jesus Christ thine only Son our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-5",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Remember thy servant, O Lord, according to the favor which thou bearest unto thy people; and grant that, increasing in knowledge and love of thee, *he* may go from strength to strength in the life of perfect service in thy heavenly kingdom; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-6",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Almighty God, our heavenly Father, in whose hands are the living and the dead: We give thee thanks for all thy servants who have laid down their lives in the service of our country. Grant to them thy mercy and the light of thy presence; and give us such a lively sense of thy righteous will, that the work which thou hast begun in them may be perfected; through Jesus Christ thy Son our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-7",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "O God, whose days are without end, and whose mercies cannot be numbered: Make us, we beseech thee, deeply sensible of the shortness and uncertainty of life; and let thy Holy Spirit lead us in holiness and righteousness all our days; that, when we shall have served thee in our generation, we may be gathered unto our fathers, having the testimony of a good conscience; in the communion of the Catholic Church; in the confidence of a certain faith; in the comfort of a reasonable, religious, and holy hope; in favor with thee our God; and in perfect charity with the world. All which we ask through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-8",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "O God, the King of saints, we praise and magnify thy holy Name for all thy servants who have finished their course in thy faith and fear; for the blessed Virgin Mary; for the holy patriarchs, prophets, apostles, and martyrs; and for all other thy righteous servants, known to us and unknown; and we beseech thee that, encouraged by their examples, aided by their prayers, and strengthened by their fellowship, we also may be partakers of the inheritance of the saints in light; through the merits of thy Son Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-9",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "O Lord Jesus Christ, Son of the living God, we pray thee to set thy passion, cross, and death, between thy judgment and our souls, now and in the hour of our death. Give mercy and grace to the living, pardon and rest to the dead, to thy holy Church peace and concord, and to us sinners everlasting life and glory; who with the Father and the Holy Spirit livest and reignest, one God, now and for ever."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7b-10",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite I)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "rite_i",
+    "value": [
+      "Almighty God, Father of mercies and giver of comfort: Deal graciously, we pray thee, with all those who mourn, that casting every care on thee, they may know the consolation of thy love; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-0",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Collect for the Departed"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Eternal Lord God, you hold all souls in life: Give to your whole Church in paradise and on earth your light and your peace; and grant that we, following the good examples of those who have served you here and are now at rest, may at the last enter with them into your unending joy; through Jesus Christ our Lord, who lives and reigns with you, in the unity of the Holy Spirit, one God, now and for ever."
+    ],
+    "language": "en",
+    "label": "Collect for the Departed"
+  },
+  {
+    "slug": "prayers-7c-1",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Collect for the Departed"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Almighty God, we remember before you today your faithful servant *N.*; and we pray that, having opened to *him* the gates of larger life, you will receive *him* more and more into your joyful service, that, with all who have faithfully served you in the past, *he* may share in the eternal victory of Jesus Christ our Lord; who lives and reigns with you, in the unity of the Holy Spirit, one God, for ever and ever."
+    ],
+    "language": "en",
+    "label": "Collect for the Departed"
+  },
+  {
+    "slug": "prayers-7c-2",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Almighty God, with whom still live the spirits of those who die in the Lord, and with whom the souls of the faithful are in joy and felicity: We give you heartfelt thanks for the good examples of all your servants, who, having finished their course in faith, now find rest and refreshment. May we, with all who have died in the true faith of your holy Name, have perfect fulfillment and bliss in your eternal and everlasting glory; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-3",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "O God, whose days are without end, and whose mercies cannot be numbered: Make us, we pray, deeply aware of the shortness and uncertainty of human life; and let your Holy Spirit lead us in holiness and righteousness all our days; that, when we shall have served you in our generation, we may be gathered to our ancestors, having the testimony of a good conscience, in the communion of the Catholic Church, in the confidence of a certain faith, in the comfort of a religious and holy hope, in favor with you, our God, and in perfect charity with the world. All this we ask through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-4",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "O God, the King of saints, we praise and glorify your holy Name for all your servants who have finished their course in your faith and fear: for the blessed Virgin Mary; for the holy patriarchs, prophets, apostles, and martyrs; and for all your other righteous servants, known to us and unknown; and we pray that, encouraged by their examples, aided by their prayers, and strengthened by their fellowship, we also may be partakers of the inheritance of the saints in light; through the merits of your Son Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-5",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Lord Jesus Christ, by your death you took away the sting of death: Grant to us your servants so to follow in faith where you have led the way, that we may at length fall asleep peacefully in you and wake up in your likeness; for your tender mercies’ sake."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-6",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Father of all, we pray to you for those we love, but see no longer: Grant them your peace; let light perpetual shine upon them; and, in your loving wisdom and almighty power, work in them the good purpose of your perfect will; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-7",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Merciful God, Father of our Lord Jesus Christ who is the Resurrection and the Life: Raise us, we humbly pray, from the death of sin to the life of righteousness; that when we depart this life we may rest in him, and at the resurrection receive that blessing which your well-beloved Son shall then pronounce: “Come, you blessed of my Father, receive the kingdom prepared for you from the beginning of the world.” Grant this, O merciful Father, through Jesus Christ, our Mediator and Redeemer."
+    ],
+    "language": "en"
+  },
+  {
+    "slug": "prayers-7c-8",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Grant, O Lord, to all who are bereaved the spirit of faith and courage, that they may have strength to meet the days to come with steadfastness and patience; not sorrowing as those without hope, but in thankful remembrance of your great goodness, and in the joyful expectation of eternal life with those they love. And this we ask in the Name of Jesus Christ our Savior."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
+  },
+  {
+    "slug": "prayers-7c-9",
+    "style": "prayer",
+    "category": [
+      "Prayers and Thanksgivings",
+      "Prayers",
+      "Prayers for the Dead (Rite II)",
+      "Additional Prayers"
+    ],
+    "type": "text",
+    "version": "bcp1979",
+    "value": [
+      "Almighty God, Father of mercies and giver of comfort: Deal graciously, we pray, with all who mourn; that, casting all their care on you, they may know the consolation of your love; through Jesus Christ our Lord."
+    ],
+    "language": "en",
+    "label": "Additional Prayers"
   }
 ]
