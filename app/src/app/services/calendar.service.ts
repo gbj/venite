@@ -254,6 +254,9 @@ export class CalendarService implements CalendarServiceInterface {
       allSaintsSunday$,
       transferred$,
     ]).pipe(
+      tap(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) =>
+        console.log("special days = ", specials)
+      ),
       // OR together the feasts and specials
       map(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) =>
         feasts

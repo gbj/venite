@@ -9650,7 +9650,7 @@
     "when": "1",
     "lectionary": "bcp1979_daily_office",
     "citation": "1 Pet. 2:4-10",
-    "type": "second_reading",
+    "type": "holy_day_evening_2",
     "whentype": "year"
   },
   {
@@ -19296,7 +19296,7 @@
     "whentype": "year",
     "when": "1",
     "day": "eve-of-pentecost",
-    "type": "first_reading",
+    "type": "holy_day_evening_1",
     "lectionary": "bcp1979_daily_office",
     "id": "8891"
   },
@@ -20243,7 +20243,7 @@
     "lectionary": "bcp1979_daily_office",
     "day": "eve-of-pentecost",
     "citation": "1 Pet. 2:4-10",
-    "type": "second_reading"
+    "type": "holy_day_evening_2"
   },
   {
     "type": "second_reading",
@@ -20696,7 +20696,7 @@
     "whentype": "year"
   },
   {
-    "type": "first_reading",
+    "type": "holy_day_evening_1",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "when": "2",

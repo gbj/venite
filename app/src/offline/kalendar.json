@@ -6040,6 +6040,7 @@
       "color": "Red",
       "season": "Pentecost",
       "readings": "eve-of-pentecost",
+      "propers": "eve-of-pentecost",
       "collect": "pentecost",
       "name": "Eve of Pentecost",
       "eve": true,

@@ -155,7 +155,7 @@ export class LiturgicalDay {
     return new LiturgicalDay({
       ...this,
       slug,
-      propers: holy_day_is_observed && holy_day_rank > 2 ? observed?.slug : propers,
+      propers: holy_day_is_observed && holy_day_rank > 2 ? observed?.propers || observed?.slug : propers,
       color,
       season,
       octave,

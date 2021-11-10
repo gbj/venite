@@ -119,7 +119,7 @@ export class LectionaryService {
               ) {
                 return entries.filter(
                   (entry) =>
-                    entry.day == day.slug &&
+                    entry.day == (day.propers || day.slug) &&
                     (!readingType || entry.type == readingType)
                 );
               } else {

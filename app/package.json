@@ -50,7 +50,7 @@
     "@venite/bible-api": "^0.1.1",
     "@venite/components": "^0.16.8",
     "@venite/docx": "^0.2.1",
-    "@venite/ldf": "^0.21.9",
+    "@venite/ldf": "^0.21.10",
     "@venite/ng-darkmode": "0.0.13",
     "@venite/ng-localstorage": "^0.1.0",
     "@venite/ng-platform": "0.0.2",
