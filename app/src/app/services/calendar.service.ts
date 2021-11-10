@@ -121,6 +121,9 @@ export class CalendarService implements CalendarServiceInterface {
                       ...day,
                       color: KALENDAR["bcp1979"].find((d) => d.mmdd == day.mmdd)
                         ?.color,
+                      season: KALENDAR["bcp1979"].find(
+                        (d) => d.mmdd == day.mmdd
+                      )?.season,
                     }
               )
           : KALENDAR[kalendar].filter((day) => day.mmdd == mmdd),
