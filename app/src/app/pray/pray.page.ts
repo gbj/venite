@@ -473,6 +473,8 @@ export class PrayPage implements OnInit, OnDestroy {
           state.hasOwnProperty("prefs")
       ),
       switchMap((state) => {
+        const bulletinPrefs = (state.liturgy["selected_prefs"] ||
+          {}) as ClientPreferences;
         // get default preferences
         const basePrefs = Object.entries(
           (state.liturgy.type === "liturgy"
@@ -488,13 +490,26 @@ export class PrayPage implements OnInit, OnDestroy {
           ])
           .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
 
-        return this.prayService.compile(
-          state.liturgy,
-          state.day || state.liturgy?.day,
-          { ...basePrefs, ...state.prefs },
-          state.liturgy?.metadata?.liturgyversions || [state.liturgy?.version],
-          state.liturgy?.metadata?.preferences
-        );
+        return this.prayService
+          .compile(
+            state.liturgy,
+            state.day || state.liturgy?.day,
+            { ...basePrefs, ...state.prefs, ...bulletinPrefs },
+            state.liturgy?.metadata?.liturgyversions || [
+              state.liturgy?.version,
+            ],
+            state.liturgy?.metadata?.preferences
+          )
+          .pipe(
+            map(
+              (doc) =>
+                new LiturgicalDocument({
+                  ...doc,
+                  //@ts-ignore
+                  selected_prefs: doc.selected_prefs || state.prefs,
+                })
+            )
+          );
       }),
       shareReplay()
     );
