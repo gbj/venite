@@ -5199,7 +5199,10 @@
       "mmdd": "10/31",
       "eve": true,
       "kalendar": "bcp1979",
-      "season": "Saints"
+      "season": "Saints",
+      "type": {
+        "rank": 3
+      }
     },
     {
       "season": "HolyWeek",
