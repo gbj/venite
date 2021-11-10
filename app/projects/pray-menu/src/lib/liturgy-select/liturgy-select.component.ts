@@ -625,10 +625,12 @@ export class LiturgySelectComponent implements OnInit {
   }
 
   setMonth(value: string) {
+    this.form.controls.observance.setValue(null);
     (this.form.controls.date as FormGroup).controls.month.setValue(value);
   }
 
   setDate(value: string) {
+    this.form.controls.observance.setValue(null);
     (this.form.controls.date as FormGroup).controls.day.setValue(value);
   }
 
