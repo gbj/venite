@@ -5094,7 +5094,7 @@
       "slug": "december-29",
       "color": "White",
       "type": {
-        "rank": 2
+        "rank": 2.5
       },
       "kalendar": "bcp1979",
       "mmdd": "12/29"
@@ -5104,7 +5104,7 @@
       "mmdd": "12/30",
       "slug": "december-30",
       "type": {
-        "rank": 2
+        "rank": 2.5
       },
       "season": "Christmas",
       "kalendar": "bcp1979"
@@ -5125,7 +5125,7 @@
         "season": "Christmas",
         "slug": "december-31",
         "type": {
-          "rank": 2
+          "rank": 2.5
         }
       },
       "kalendar": "bcp1979"
