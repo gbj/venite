@@ -1100,7 +1100,12 @@ export class PrayPage implements OnInit, OnDestroy {
         handler: async () => {
           if (this.auth.currentUser()?.uid) {
             this.actionSheetController.dismiss();
-            this.beginEditing(data.doc);
+            this.beginEditing(
+              new LiturgicalDocument({
+                ...data.doc,
+                slug: `${data.doc.slug}-${data.doc.day.date}`,
+              })
+            );
           } else {
             const login = await this.modal.create({
               component: LoginComponent,
