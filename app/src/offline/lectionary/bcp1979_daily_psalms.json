@@ -4549,7 +4549,7 @@
     "whentype": "year",
     "id": "6642",
     "lectionary": "bcp1979_daily_psalms",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "citation": "psalm_46",
     "type": "morning_psalms"
   },
@@ -7497,7 +7497,7 @@
     "citation": "psalm_143_bracket"
   },
   {
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "type": "evening_psalms",
     "whentype": "year",
     "id": "6611",
@@ -9453,7 +9453,7 @@
     "type": "morning_psalms",
     "when": "2",
     "citation": "psalm_45",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "id": "6609",
     "whentype": "year",
     "lectionary": "bcp1979_daily_psalms"
@@ -11427,7 +11427,7 @@
     "id": "6604",
     "when": "1",
     "citation": "psalm_46",
-    "day": "dec. 24-fourth-advent"
+    "day": "december-24"
   },
   {
     "day": "monday-proper-5",
@@ -11943,7 +11943,7 @@
     "id": "7789"
   },
   {
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "citation": "psalm_45",
     "when": "1",
     "id": "6603",
@@ -16130,7 +16130,7 @@
   {
     "type": "evening_psalms",
     "whentype": "year",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "when": "1",
     "lectionary": "bcp1979_daily_psalms",
     "citation": "psalm_89_i",

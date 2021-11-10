@@ -4944,16 +4944,30 @@
       "slug": "christmas-day"
     },
     {
-      "name": "Christmas Eve",
-      "slug": "christmas-eve",
-      "eve": true,
-      "season": "Christmas",
-      "type": {
-        "rank": 5
-      },
       "mmdd": "12/24",
-      "color": "White",
-      "kalendar": "bcp1979"
+      "morning": {
+        "color": "Blue",
+        "name": "December 24",
+        "calendar": "bcp1979",
+        "slug": "december-24",
+        "type": {
+          "rank": 3
+        },
+        "season": "Advent",
+        "mmdd": "12/24"
+      },
+      "evening": {
+        "name": "Christmas Eve",
+        "slug": "christmas-eve",
+        "eve": true,
+        "season": "Christmas",
+        "type": {
+          "rank": 5
+        },
+        "mmdd": "12/24",
+        "color": "White",
+        "kalendar": "bcp1979"
+      }
     },
     {
       "name": "Clare, Abbess at Assisi, 1253",
@@ -6712,19 +6726,6 @@
         "rank": 2,
         "name": "Black Letter"
       }
-    }
-  ],
-  "undefined": [
-    {
-      "color": "Blue",
-      "name": "December 24",
-      "calendar": "bcp1979",
-      "slug": "december-24",
-      "type": {
-        "rank": 3
-      },
-      "season": "Advent",
-      "mmdd": "12/24"
     }
   ]
 }

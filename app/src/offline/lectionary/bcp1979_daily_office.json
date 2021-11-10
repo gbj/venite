@@ -297,7 +297,7 @@
     "when": "2"
   },
   {
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "citation": "Baruch 4:36-5:9",
     "whentype": "year",
     "when": "2",
@@ -398,7 +398,7 @@
   {
     "id": "6602",
     "type": "gospel",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "whentype": "year",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
@@ -1890,7 +1890,7 @@
     "type": "second_reading"
   },
   {
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "type": "second_reading",
     "id": "6837",
     "lectionary": "bcp1979_daily_office",
@@ -9359,7 +9359,7 @@
   {
     "when": "1",
     "id": "6601",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "citation": "Rev. 22:12-17,21",
     "type": "second_reading",
     "whentype": "year",
@@ -22769,7 +22769,7 @@
     "type": "first_reading",
     "whentype": "year",
     "when": "1",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "id": "6600",
     "citation": "Isa. 35:1-10"
   },
@@ -22878,7 +22878,7 @@
     "id": "6608",
     "lectionary": "bcp1979_daily_office",
     "type": "gospel",
-    "day": "dec. 24-fourth-advent",
+    "day": "december-24",
     "whentype": "year"
   },
   {
