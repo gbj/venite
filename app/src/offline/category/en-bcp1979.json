@@ -9798,6 +9798,30 @@
     "category": ["Collect", "Collect of the Day"]
   },
   {
+    "value": [
+      "Almighty God, give us grace to cast away the works of darkness, and put on the armor of light, now in the time of this mortal life in which your Son Jesus Christ came to visit us in great humility; that in the last day, when he shall come again in his glorious majesty to judge both the living and the dead, we may rise to the life immortal; through him who lives and reigns with you and the Holy Spirit, one God, now and for ever."
+    ],
+    "sharing": {
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite"
+    },
+    "style": "prayer",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "language": "en",
+    "hidden": false,
+    "slug": "Advent",
+    "version": "bcp1979",
+    "type": "text",
+    "category": ["Collect", "Collect of the Day"],
+    "label": "Seasonal Collect"
+  },
+  {
     "slug": "the-presentation-of-our-lord-jesus-christ-in-the-temple",
     "value": [
       "O God, whose servant Brigid, kindled with the flame of your love, became a shining light in your church: Grant that we also may be aflame with the spirit of love and discipline, and walk before you as children of light; through Jesus Christ our Lord, who lives and reigns with you, in the unity of the Holy Spirit, one God, now and for ever. "
