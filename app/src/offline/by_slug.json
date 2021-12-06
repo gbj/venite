@@ -7962,7 +7962,7 @@
       "metadata": {
         "omit_antiphon": false,
         "omit_gloria": false,
-        "latinname": "Laudate Dominus",
+        "latinname": "Laudate Dominum",
         "number": "148",
         "localname": "Psalm 148"
       },
@@ -19575,7 +19575,7 @@
       "language": "en",
       "metadata": {
         "number": "147",
-        "latinname": "Laudate Dominus",
+        "latinname": "Laudate Dominum",
         "omit_gloria": false,
         "omit_antiphon": false,
         "localname": "Psalm 147"
@@ -27071,7 +27071,7 @@
         "localname": "Psalm 117",
         "omit_gloria": false,
         "omit_antiphon": false,
-        "latinname": "Laudate Dominus",
+        "latinname": "Laudate Dominum",
         "number": "117"
       },
       "category": ["Psalm"],
