@@ -181,7 +181,7 @@ const CanticleTablePage = await Page({
       <tr>
         <td></td>
         <td><em>Christmas:*</em><br/><a href="/canticle/canticle-c">C. A Song of Hannah</a> <em>or</em> <br/><a href="/canticle/canticle-9">9. The First Song of Isaiah</a></td>
-        <td><em>Christmas:*</em><br/><a href="/canticle/canticle-n">N. A Song of God’s Love</a> <em>or</em> <br/><a href="/canticle/canticle-20">2. Glory to God</a></td>
+        <td><em>Christmas:*</em><br/><a href="/canticle/canticle-n">N. A Song of God’s Love</a> <em>or</em> <br/><a href="/canticle/canticle-20">20. Glory to God</a></td>
       </tr>
       <tr>
         <td></td>

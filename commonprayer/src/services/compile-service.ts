@@ -284,6 +284,14 @@ export class CompileServiceController {
     }
   }
 
+  findCollect(
+    collects: LiturgicalDocument[],
+    day: LiturgicalDay,
+    allowMultiple = true
+  ): LiturgicalDocument {
+    return findCollect(collects, day, true, false, false, false, allowMultiple);
+  }
+
   filterAndRotate(
     original: LiturgicalDocument,
     day: LiturgicalDay,

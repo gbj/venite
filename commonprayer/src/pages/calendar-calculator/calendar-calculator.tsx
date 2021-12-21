@@ -7,6 +7,12 @@ export enum Psalter {
   ThirtyDay = "30",
 }
 
+export enum Calendar {
+  BCP1979 = "bcp1979",
+  LFF2018 = "lff2018",
+}
+
+
 
 const CalendarAboutPage = await Page({
   styles: [path.join(path.fromFileUrl(import.meta.url), "..", "calendar-calculator.css")],
@@ -28,6 +34,17 @@ const CalendarAboutPage = await Page({
       <input type="date" id="date" aria-label="Date" />
       <fieldset>
         <label>
+          BCP Calendar (1979)
+          {/* TODO pref */}
+          <input type="radio" name="calendar" value={Calendar.BCP1979} checked />
+        </label>
+        <label>
+          <em>Lesser Feasts and Fasts</em> (2018)
+          <input type="radio" name="calendar" value={Calendar.LFF2018}/>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
           Daily Office Psalter
           {/* TODO pref */}
           <input type="radio" name="psalter" value={Psalter.DailyOffice} checked />
@@ -46,6 +63,7 @@ const CalendarAboutPage = await Page({
     <template id="day-details-template">
       <h1></h1>
       <section class="collect">
+        <h2>The Collect of the Day</h2>
         <article id="collect"></article>
       </section>
 

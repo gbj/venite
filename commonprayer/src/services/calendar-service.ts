@@ -192,12 +192,12 @@ export class CalendarServiceController {
           (day) => (day as any).slug === slug && (day as any)?.type?.rank >= 3
         )
         .concat(
-          k.specials.filter(
+          (k.specials || []).filter(
             (day) => (day as any).slug === slug || (day as any).day === slug
           )
         );
     } else {
-      return k.specials.filter(
+      return (k.specials || []).filter(
         (day) => (day as any).slug === slug || (day as any).day === slug
       );
     }

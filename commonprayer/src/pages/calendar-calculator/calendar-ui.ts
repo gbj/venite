@@ -5,6 +5,7 @@ import {
   docToHTML,
 } from "./services.bundle.js";
 import { getLocale } from "./locale.js";
+import { LiturgicalDay } from "https://cdn.skypack.dev/-/@venite/ldf@v0.21.0-o7XcB8LjDo072SMByRuY/dist=es2020,mode=types/dist/index.js";
 
 export type LectionaryEntry = {
   citation: string;
@@ -18,6 +19,11 @@ export type LectionaryEntry = {
 export enum Psalter {
   DailyOffice = "office",
   ThirtyDay = "30",
+}
+
+export enum Calendar {
+  BCP1979 = "bcp1979",
+  LFF2018 = "lff2018",
 }
 
 const LOCALIZATION = {
@@ -40,9 +46,14 @@ function buildList<T>(el: Element, items: T[], f: (t: T) => string) {
   el.innerHTML = items.map(f).join("\n");
 }
 
-async function setDay(ymd: string, calendar: string, psalter: Psalter) {
+async function setDay(
+  ymd: string,
+  psalter: Psalter,
+  calendar,
+  version = "Rite-II"
+) {
   const locale = getLocale(),
-    day = await CalendarService.findDay(ymd, "bcp1979"),
+    day = await CalendarService.findDay(ymd, calendar),
     details = document.getElementById("day-details"),
     template = document.getElementById(
       "day-details-template"
@@ -83,7 +94,11 @@ async function setDay(ymd: string, calendar: string, psalter: Psalter) {
 
   // fill template
   title.innerText = dayName;
-  //buildList(readingList, readings, (entry) => `<li>${entry.citation}</li>`);
+
+  // collect
+  loadCollect(collect, version, day);
+
+  // Psalms
   buildList(
     morningPsalmList,
     morningPsalms,
@@ -124,6 +139,11 @@ function psalterValue(): Psalter {
     .value as Psalter;
 }
 
+function calendarValue(): Calendar {
+  return (document.querySelector("[name=calendar]:checked") as HTMLInputElement)
+    .value as Calendar;
+}
+
 // Add any set of readings
 function loadReadings(readingList: Element, readings: LectionaryEntry[]) {
   console.log("loading readings...");
@@ -154,15 +174,28 @@ function loadReadings(readingList: Element, readings: LectionaryEntry[]) {
   });
 }
 
-// update every time date field changes, or any psalter radio button changes
-dateField.onchange = () => setDay(dateValue(), "bcp1979", psalterValue());
-document.querySelectorAll("[name=psalter]").forEach((el: HTMLElement) => {
-  el.onchange = () => setDay(dateValue(), "bcp1979", psalterValue());
-});
+// update every time date field changes, or any radio button changes
+dateField.onchange = () => setDay(dateValue(), psalterValue(), calendarValue());
+document
+  .querySelectorAll("[name=psalter], [name=calendar]")
+  .forEach((el: HTMLElement) => {
+    el.onchange = () => setDay(dateValue(), psalterValue(), calendarValue());
+  });
 
 // Start with current day
 const now = new Date();
 dateField.value = `${now.getFullYear()}-${(now.getMonth() + 1)
   .toString()
   .padStart(2, "0")}-${now.getDate().toString().padStart(2, "0")}`;
-setDay(dateValue(), "bcp1979", psalterValue());
+setDay(dateValue(), psalterValue(), calendarValue());
+
+async function loadCollect(el: Element, version: string, day: LiturgicalDay) {
+  const collects = await CompileService.lookupByCategory(
+      ["Collect of the Day"],
+      version
+    ),
+    doc = CompileService.findCollect(collects, day),
+    html = docToHTML(doc);
+  console.log("loadCollect", doc, html);
+  el.innerHTML = html;
+}
