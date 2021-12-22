@@ -284,8 +284,10 @@ export class SpeechService {
           // antiphon is something like an O antiphon tree:
           // { '12/23': '...', '12/24': '...' }
           const date = obj.day ? dateFromYMDString(obj?.day?.date) : new Date();
+
           return antiphonNode(
-            antiphon[`${date.getMonth() + 1}/${date.getDate()}`]
+            antiphon[`${date.getMonth() + 1}-${date.getDate()}`] ||
+              antiphon[`${date.getMonth() + 1}/${date.getDate()}`]
           );
         } else {
           return [];
