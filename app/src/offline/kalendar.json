@@ -4650,6 +4650,59 @@
   ],
   "bcp1979": [
     {
+      "mmdd": "12/31",
+      "evening": {
+        "type": {
+          "rank": 5
+        },
+        "color": "White",
+        "slug": "eve-holy-name",
+        "name": "Eve of the Holy Name of Our Lord Jesus Christ",
+        "season": "Christmas"
+      },
+      "morning": {
+        "color": "white",
+        "season": "Christmas",
+        "slug": "december-31",
+        "type": {
+          "rank": 2.5
+        }
+      },
+      "kalendar": "bcp1979"
+    },
+    {
+      "slug": "january-5",
+      "kalendar": "bcp1979",
+      "evening": {
+        "season": "Epiphany",
+        "type": {
+          "rank": 5,
+          "name": "Principal Feast"
+        },
+        "slug": "eve-epiphany",
+        "color": "Green",
+        "name": "Eve of the Epiphany"
+      },
+      "mmdd": "1/5",
+      "morning": {
+        "type": {
+          "rank": 2.5
+        },
+        "color": "White",
+        "slug": "january-5",
+        "season": "Christmas"
+      }
+    },
+    {
+      "name": "Thanksgiving Day",
+      "slug": "thanksgiving-day",
+      "kalendar": "lff2018",
+      "type": {
+        "name": "Holy Day",
+        "rank": 3
+      }
+    },
+    {
       "slug": "absalom-jones",
       "kalendar": "bcp1979",
       "type": {

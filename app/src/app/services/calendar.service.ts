@@ -112,7 +112,7 @@ export class CalendarService implements CalendarServiceInterface {
     const feastDayToday: HolyDay[] =
         kalendar === "lff2018"
           ? KALENDAR["bcp1979"]
-              .filter((day) => day.mmdd === mmdd && day?.type?.rank >= 3)
+              .filter((day) => day.mmdd === mmdd && day?.type?.rank >= 2.5)
               .concat(KALENDAR["lff2018"].filter((day) => day.mmdd === mmdd))
               .map((day) =>
                 day.color
