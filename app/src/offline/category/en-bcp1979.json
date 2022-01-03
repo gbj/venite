@@ -1812,7 +1812,29 @@
       "privacy": "public"
     },
     "value": [
-      "O God, you make us glad by the yearly festival of the birth of your only Son Jesus Christ: Grant that we, who joyfully receive him as our Redeemer, may with sure confidence behold him when he comes to be our Judge; who lives and reigns with you and the Holy Spirit, one God, now and for ever.",
+      "O God, you make us glad by the yearly festival of the birth of your only Son Jesus Christ: Grant that we, who joyfully receive him as our Redeemer, may with sure confidence behold him when he comes to be our Judge; who lives and reigns with you and the Holy Spirit, one God, now and for ever."
+    ],
+    "category": ["Collect", "Collect of the Day"],
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "hidden": false
+  },
+  {
+    "version": "bcp1979",
+    "style": "prayer",
+    "language": "en",
+    "type": "text",
+    "slug": "christmas-day",
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "privacy": "public"
+    },
+    "value": [
       "Almighty God, you have given your only-begotten Son to take our nature upon him, and to be born [this day] of a pure virgin: Grant that we, who have been born again and made your children by adoption and grace, may daily be renewed by your Holy Spirit; through our Lord Jesus Christ, to whom with you and the same Spirit be honor and glory, now and for ever."
     ],
     "category": ["Collect", "Collect of the Day"],
@@ -1826,7 +1848,7 @@
     "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "style": "prayer",
     "value": [
-      "O Lord our God, who by your Son Jesus Christcalled your servant Augustine to preach the Gospel to the English people: We pray that all whom you call and send may do your will, bide your time, and see your glory; through the same Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever. "
+      "O Lord our God, who by your Son Jesus Christ called your servant Augustine to preach the Gospel to the English people: We pray that all whom you call and send may do your will, bide your time, and see your glory; through the same Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever. "
     ],
     "slug": "augustine",
     "version": "bcp1979",

@@ -147,8 +147,29 @@
   },
   {
     "value": [
-      "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end.",
-      "O God, who hast caused this holy night to shine with the illumination of the true Light: Grant us, we beseech thee, that as we have known the mystery of that Light upon earth, so may we also perfectly enjoy him in heaven; where with thee and the Holy Spirit he liveth and reigneth, one God, in glory everlasting.",
+      "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+    ],
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "category": ["Collect", "Collect of the Day"],
+    "version": "rite_i",
+    "language": "en",
+    "type": "text",
+    "slug": "christmas",
+    "hidden": false,
+    "style": "prayer",
+    "sharing": {
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published",
+      "collaborators": []
+    }
+  },
+  {
+    "value": [
       "Almighty God, who hast given us thy only-begotten Son to take our nature upon him, and as at this time to be born of a pure virgin: Grant that we, being regenerate and made thy children by adoption and grace, may daily be renewed by thy Holy Spirit; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the same Spirit ever, one God, world without end."
     ],
     "metadata": {
@@ -160,6 +181,29 @@
     "language": "en",
     "type": "text",
     "slug": "christmas",
+    "hidden": false,
+    "style": "prayer",
+    "sharing": {
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published",
+      "collaborators": []
+    }
+  },
+  {
+    "value": [
+      "O God, who hast caused this holy night to shine with the illumination of the true Light: Grant us, we beseech thee, that as we have known the mystery of that Light upon earth, so may we also perfectly enjoy him in heaven; where with thee and the Holy Spirit he liveth and reigneth, one God, in glory everlasting."
+    ],
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "category": ["Collect", "Collect of the Day"],
+    "version": "rite_i",
+    "language": "en",
+    "type": "text",
+    "slug": "christmas-eve",
     "hidden": false,
     "style": "prayer",
     "sharing": {
@@ -5265,7 +5309,29 @@
     "slug": "christmas-day",
     "style": "prayer",
     "value": [
-      "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end.",
+      "O God, who makest us glad by the yearly remembrance of the birth of thy only Son Jesus Christ: Grant that as we joyfully receive him for our Redeemer, so we may with sure confidence behold him when he shall come to be our Judge; who liveth and reigneth with thee and the Holy Ghost, one God, world without end."
+    ],
+    "sharing": {
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "organization": "venite",
+      "status": "published",
+      "collaborators": []
+    },
+    "type": "text",
+    "version": "rite_i",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "language": "en"
+  },
+  {
+    "hidden": false,
+    "category": ["Collect", "Collect of the Day"],
+    "slug": "christmas-day",
+    "style": "prayer",
+    "value": [
       "Almighty God, who hast given us thy only-begotten Son to take our nature upon him, and as at this time to be born of a pure virgin: Grant that we, being regenerate and made thy children by adoption and grace, may daily be renewed by thy Holy Spirit; through the same our Lord Jesus Christ, who liveth and reigneth with thee and the same Spirit ever, one God, world without end."
     ],
     "sharing": {
