@@ -44,6 +44,12 @@
             "value": "after",
             "metadata": { "alternateYear": false },
             "label": "After the Office"
+          },
+          {
+            "label": "After the Office (in Latin)",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "after"
           }
         ],
         "label": "Hymns to Mary"
@@ -932,6 +938,44 @@
         }
       ],
       "version": "Rite-II"
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "supplement": false,
+        "preferences": {},
+        "evening": false,
+        "liturgyversions": ["usccb"],
+        "special_preferences": {}
+      },
+      "type": "liturgy",
+      "source": { "source": "", "citation": "", "api": "" },
+      "version": "Latin",
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "language": "en",
+      "category": [],
+      "label": "Marian Antiphons",
+      "lookup": { "type": "slug" },
+      "lastRevision": 97,
+      "slug": "marian-antiphons",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "is": true,
+              "key": "marian_antiphons",
+              "value": "latin"
+            }
+          }
+        ]
+      }
     }
   ],
   "language": "en",
