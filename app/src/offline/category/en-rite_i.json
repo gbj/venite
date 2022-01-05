@@ -12516,6 +12516,29 @@
     }
   },
   {
+    "slug": "eve-epiphany",
+    "version": "rite_i",
+    "value": [
+      "O God, who by the leading of a star didst manifest thy only-begotten Son to the peoples of the earth: Lead us, who know thee now by faith, to thy presence, where we may behold thy glory face to face; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, now and for ever."
+    ],
+    "language": "en",
+    "style": "prayer",
+    "hidden": false,
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "type": "text",
+    "category": ["Collect", "Collect of the Day"],
+    "sharing": {
+      "organization": "venite",
+      "status": "published",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public"
+    }
+  },
+  {
     "style": "prayer",
     "language": "en",
     "type": "text",

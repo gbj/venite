@@ -2646,6 +2646,29 @@
     "language": "en"
   },
   {
+    "category": ["Collect", "Collect of the Day"],
+    "value": [
+      "O God, by the leading of a star you manifested your only Son to the Peoples of the earth:  Lead us, who know you now by faith, to your presence, where we may see your glory face to face; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, now and for ever."
+    ],
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public"
+    },
+    "hidden": false,
+    "slug": "eve-epiphany",
+    "type": "text",
+    "version": "bcp1979",
+    "style": "prayer",
+    "language": "en"
+  },
+  {
     "version": "bcp1979",
     "sharing": {
       "status": "published",
@@ -6229,7 +6252,7 @@
     "hidden": false,
     "value": [
       "O God, you make us glad by the yearly festival of the birth of your only Son Jesus Christ: Grant that we, who joyfully receive him as our Redeemer, may with sure confidence behold him when he comes to be our Judge; who lives and reigns with you and the Holy Spirit, one God, now and for ever."
-   ],
+    ],
     "version": "bcp1979",
     "sharing": {
       "organization": "venite",
