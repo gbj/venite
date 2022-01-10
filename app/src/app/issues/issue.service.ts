@@ -62,10 +62,11 @@ export class IssueService {
       .set({
         ...report,
         date_created: firebase.firestore.Timestamp.now(),
-        platform: device.platform,
-        os: device.operatingSystem,
-        osVersion: device.osVersion,
-        version: app.version,
+        platform: device.platform || "[Android or Web -- device plugin error]",
+        os: device.operatingSystem || "[Android or Web -- device plugin error]",
+        osVersion:
+          device.osVersion || "[Android or Web -- device plugin error]",
+        version: app.version || "[Android or Web -- device plugin error]",
       });
   }
 
