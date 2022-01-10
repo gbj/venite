@@ -68,3 +68,9 @@ details {
   max-width: 100%;
   margin: auto;
 }
+
+ion-input[type=date] {
+  max-width: 200px;
+  display: block;
+  margin: auto;
+}

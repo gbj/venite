@@ -8,6 +8,7 @@ import {
   Liturgy,
   Psalm,
   Option,
+  dateFromYMDString,
 } from "@venite/ldf";
 import { PrayService } from "@venite/ng-pray";
 import {
@@ -24,6 +25,7 @@ import { DocumentService } from "../services/document.service";
 import { LectionaryService } from "../services/lectionary.service";
 import { DisplaySettings } from "@venite/ldf";
 import { FormControl } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
 
 type Lectionaries = "bcp1979_daily_office" | "bcp1979_30day_psalter";
 
@@ -33,7 +35,7 @@ type Lectionaries = "bcp1979_daily_office" | "bcp1979_30day_psalter";
   styleUrls: ["./daily-readings.page.scss"],
 })
 export class DailyReadingsPage implements OnInit {
-  today: Date;
+  searchDate$: Observable<Date>;
   currentLiturgy$: BehaviorSubject<string | undefined> = new BehaviorSubject(
     undefined
   );
@@ -58,14 +60,29 @@ export class DailyReadingsPage implements OnInit {
     @Inject(LECTIONARY_SERVICE) private lectionaryService: LectionaryService,
     private prayService: PrayService,
     @Inject(PREFERENCES_SERVICE)
-    private preferencesService: PreferencesServiceInterface
+    private preferencesService: PreferencesServiceInterface,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    this.today = new Date();
+    this.searchDate$ = this.route.params.pipe(
+      map((params) => {
+        if (params.ymd) {
+          try {
+            return dateFromYMDString(params.ymd);
+          } catch (e) {
+            console.warn(e);
+            return new Date();
+          }
+        } else {
+          return new Date();
+        }
+      })
+    );
 
     this.currentLiturgy$.next(
-      this.today.getHours() <= 14 ? "morning-prayer" : "evening-prayer"
+      new Date().getHours() <= 14 ? "morning-prayer" : "evening-prayer"
     );
 
     this.liturgy$ = this.currentLiturgy$.pipe(
@@ -77,14 +94,14 @@ export class DailyReadingsPage implements OnInit {
     );
 
     const week$ = this.calendarService.buildWeek(
-      of(this.today),
+      this.searchDate$,
       this.kalendar.valueChanges.pipe(startWith(this.kalendar.value)),
       of(false)
     );
     this.day$ = this.liturgy$.pipe(
       switchMap((liturgy) =>
         this.calendarService.buildDay(
-          of(this.today),
+          this.searchDate$,
           this.kalendar.valueChanges.pipe(startWith(this.kalendar.value)),
           of(liturgy),
           week$,
@@ -95,12 +112,19 @@ export class DailyReadingsPage implements OnInit {
 
     this.readings$ = this.day$.pipe(
       switchMap((day) =>
-        this.lectionaryService.getReadings(
-          day,
-          "bcp1979_daily_office",
-          undefined,
-          false
-        )
+        this.lectionaryService
+          .getReadings(day, "bcp1979_daily_office", undefined, false)
+          .pipe(
+            // remove other year's readings for days of rank 2.5 (Christmas etc.)
+            map((entries) =>
+              entries.filter(
+                (entry) =>
+                  entry.type.startsWith("holy_day") ||
+                  entry.whentype != "year" ||
+                  entry.when == day.years["bcp1979_daily_office"]
+              )
+            )
+          )
       ),
       map((entries) =>
         entries.sort((a, b) => (readingOrder(a) <= readingOrder(b) ? -1 : 1))
@@ -224,6 +248,15 @@ export class DailyReadingsPage implements OnInit {
           this.kalendar.setValue(data.value);
         }
       });
+  }
+  navigate(ev: Event) {
+    if ((ev.target as HTMLInputElement).value) {
+      this.router.navigate([
+        "/",
+        "daily-readings",
+        (ev.target as HTMLInputElement).value,
+      ]);
+    }
   }
 
   processSettings(settings: DisplaySettings): string[] {

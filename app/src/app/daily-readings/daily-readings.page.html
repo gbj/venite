@@ -12,6 +12,9 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-toolbar *ngIf="searchDate$ | async as date">
+    <ion-input type="date" [value]="date | date:'yyyy-MM-dd'" (ionChange)="navigate($event)"></ion-input>
+  </ion-toolbar>
   <div class="readings" *ngIf="liturgy$ | async as liturgy else loading">
       <form>
         <ion-segment [value]="timeOfDay.value" (ionChange)="timeOfDay.setValue($event.detail.value)">

@@ -8,6 +8,10 @@ const routes: Routes = [
     path: "",
     component: DailyReadingsPage,
   },
+  {
+    path: ":ymd",
+    component: DailyReadingsPage,
+  },
 ];
 
 @NgModule({
