@@ -46,7 +46,7 @@
 
   
       <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
-        <h2>{{ today | date:'longDate' }}</h2>
+        <h2 *ngIf="searchDate$ | async as date">{{ date | date:'longDate' }}</h2>
         <ng-container *ngIf="day$ | async as day else loading">
           <ldf-day-name [day]="day"></ldf-day-name>
           <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">

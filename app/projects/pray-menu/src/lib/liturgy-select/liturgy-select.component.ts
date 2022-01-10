@@ -62,6 +62,7 @@ import {
   tap,
 } from "rxjs/operators";
 import { LiturgyTimeRanges } from "@venite/ng-service-api";
+import { h } from "@venite/components/dist/types/stencil-public-runtime";
 
 type DateValues = {
   year: string;
@@ -500,10 +501,8 @@ export class LiturgySelectComponent implements OnInit {
           isTransferred = Number(m) !== Number(mm) || Number(d) !== Number(dd);
         }
 
-        const baseDaySlug = `${date
-            .toLocaleString("en", { weekday: "long" })
-            .toLowerCase()}-${day.week.propers || day.week.slug}`,
-          baseDayWeekdayFragment =
+        let baseDaySlug;
+        const baseDayWeekdayFragment =
             date.getDay() === 0
               ? ""
               : `${date.toLocaleString("en", { weekday: "long" })} after ${
@@ -511,26 +510,55 @@ export class LiturgySelectComponent implements OnInit {
                 }`,
           baseDayName = `${baseDayWeekdayFragment}${day.week.name}`;
 
+        // 12/29 if transferred
+        const specialDate = (day.holy_days || []).find(
+          (hd) => hd.type?.rank > 2 && hd.type?.rank < 3
+        );
+        if (specialDate) {
+          baseDaySlug = specialDate.slug;
+        } else {
+          baseDaySlug = `${date
+            .toLocaleString("en", { weekday: "long" })
+            .toLowerCase()}-${day.week.propers || day.week.slug}`;
+        }
+
         // decision tree
+        const baseDay =
+          date.getMonth() == 11 && date.getDate() >= 26 && date.getDate() <= 28
+            ? null
+            : { slug: baseDaySlug, name: baseDayName };
         if (liturgyOk && decideWhetherToObserveBlackLetter) {
-          return [{ slug: baseDaySlug, name: baseDayName }].concat(
-            day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
-          );
+          return [baseDay]
+            .concat(
+              day.holy_days.map((hd) => ({
+                slug: hd.slug,
+                name:
+                  hd.slug == day.holy_day_observed?.slug
+                    ? `${hd.name} (Default)`
+                    : hd.name,
+              }))
+            )
+            .filter((day) => day);
         } else if (liturgyOk && decideWhetherToTransfer) {
-          return [{ slug: baseDaySlug, name: baseDayName }].concat(
-            day.holy_days.map((hd) => ({ slug: hd.slug, name: hd.name }))
-          );
+          return [baseDay]
+            .concat(
+              day.holy_days.map((hd) => ({
+                slug: hd.slug,
+                name:
+                  hd.slug == day.holy_day_observed?.slug
+                    ? `${hd.name} (Default)`
+                    : hd.name,
+              }))
+            )
+            .filter((day) => day);
         } else if (liturgyOk && isTransferred) {
           return [
             {
               slug: day.holy_day_observed.slug,
-              name: day.holy_day_observed.name,
+              name: `${day.holy_day_observed.name} (Default)`,
             },
-            {
-              slug: baseDaySlug,
-              name: baseDayName,
-            },
-          ];
+            baseDay,
+          ].filter((day) => day);
         } else {
           return [];
         }
