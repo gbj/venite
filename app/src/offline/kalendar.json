@@ -4680,7 +4680,7 @@
           "name": "Principal Feast"
         },
         "slug": "eve-epiphany",
-        "color": "Green",
+        "color": "White",
         "name": "Eve of the Epiphany"
       },
       "mmdd": "1/5",
@@ -6415,6 +6415,16 @@
       "type": {
         "rank": 5,
         "name": "Trinity Sunday"
+      },
+      "color": "White"
+    },
+    {
+      "kalendar": "bcp1979",
+      "slug": "sunday-1st-epiphany",
+      "season": "Epiphany",
+      "type": {
+        "rank": 5,
+        "name": "The First Sunday after the Epiphany: The Baptism of Our Lord Jesus Christ"
       },
       "color": "White"
     },
