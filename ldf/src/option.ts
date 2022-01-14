@@ -10,6 +10,8 @@ const VERSIONS: { [x: string]: string } = {
   eow: 'EOW',
   coverdale: 'Coverdale',
   rite_i: 'Rite I',
+  bhs: 'Hebrew',
+  hebrew: 'Hebrew',
 };
 
 function modifiedVersion(option: LiturgicalDocument): string | { preference: string } {
@@ -86,6 +88,8 @@ export class Option extends LiturgicalDocument {
       (option.slug?.match(/psalm_119_/) || option.citation?.toString().match(/Ps[^\d]+119/))
     ) {
       label = option.label;
+    } else if (option.type == 'psalm' && uniqueVersions > 1) {
+      label = option.version_label || VERSIONS[versionToString(option.version)];
     }
     // Other psalms: Psalm 121
     else if (

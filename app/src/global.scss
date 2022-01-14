@@ -340,6 +340,7 @@ body * {
   --ldf-psalm-verse-indentation: 0;
   --ldf-psalm-text-display: block;
   --ldf-psalm-verse-display: inline-block;
+  --ldf-psalm-halfverse-display: inline-block;
   --ldf-psalm-first-verse-display: inline;
   --ldf-psalm-number-margin-right: 0.5em;
   --ldf-psalm-antiphon-display: block;
@@ -660,4 +661,30 @@ ion-popover {
 [lang=he] {
   --ldf-drop-float: right;
   --ldf-drop-line-height: 0.4em;
+  --ldf-text-align: right;
+  text-align: right;
+}
+
+ldf-psalm[lang=he] {
+  --ldf-psalm-halfverse-display: none;
+  --ldf-psalm-first-verse-display: inline;
+  --ldf-psalm-grid-template-columns: 1fr 2em;
+  --ldf-psalm-grid-template-areas: "verse number";
+  --ldf-drop-font-size: 1em;
+  --ldf-drop-margin-right: none;
+  --ldf-drop-firstword-font-variant: normal;
+  --ldf-drop-font-family: var(--ldf-font-face);
+  --ldf-drop-float: none;
+
+  .firstword .drop {
+    --ldf-drop-float: none;
+  }
+}
+
+ldf-psalm[lang=he] .halfverse {
+  display: none !important;
+}
+
+ldf-psalm[lang=he] .verse {
+  font-size: 1.5rem;
 }

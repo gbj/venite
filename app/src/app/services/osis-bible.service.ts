@@ -15,7 +15,19 @@ type Verses = { book: Book; chapter: number; verses: string[] };
   providedIn: "root",
 })
 export class OsisBibleService {
+  private _hebrewPsalms: Promise<LiturgicalDocument[]>;
+
   constructor() {}
+
+  async getHebrewPsalm(slug: string): Promise<LiturgicalDocument | undefined> {
+    if (!this._hebrewPsalms) {
+      this._hebrewPsalms = fetch(`/offline/psalter/hebrew_psalms.json`).then(
+        (res) => res.json()
+      );
+    }
+    const psalms = await this._hebrewPsalms;
+    return psalms.find((doc) => doc.slug == slug);
+  }
 
   async getOriginalText(citation: string): Promise<LiturgicalDocument> {
     const v = this.versesFromCitation(citation);

@@ -316,7 +316,7 @@ export class PsalmComponent {
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
                     citation={{label: this.obj?.label, book: this.obj?.style === 'psalm' ? 'Psalm' : undefined, chapter: this.obj?.metadata?.number, verse: verse.number}}
-                    dropcap={verseIndex == 0 ? 'force' : 'disabled'}
+                    dropcap={(verseIndex == 0 && this.obj?.language !== "he") ? 'force' : 'disabled'}
                     index={verseIndex}
                     fragment={this.path}
                   >

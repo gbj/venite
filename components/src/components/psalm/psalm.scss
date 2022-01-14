@@ -3,6 +3,11 @@ ldf-psalm, :host {
   --ldf-drop-margin-right: var(--ldf-drop-psalm-margin-right);
 }
 
+ldf-psalm[lang=he] .verse, :host[lang=he] .verse {
+  text-align: right;
+  --ldf-drop-float: right;
+}
+
 .psalm-set {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -37,7 +42,9 @@ ldf-psalm, :host {
   .verse,
   .halfverse {
     display: var(--ldf-psalm-verse-display);
-    display: var(--ldf-psalm-verse-display);
+  }
+  .halfverse {
+    display: var(--ldf-psalm-halfverse-display, var(--ldf-psalm-verse-display));
   }
 }
 

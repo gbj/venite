@@ -16,6 +16,8 @@ import {
   Psalm,
   versionToString,
   Text,
+  Option,
+  BibleReadingVerse,
 } from "@venite/ldf";
 
 import { Observable, of, combineLatest, from } from "rxjs";
@@ -809,7 +811,30 @@ export class PrayService {
                 : a?.metadata?.number - b?.metadata?.number
             ),
           })
-      )
+      ),
+      // add Hebrew psalms if necessary
+      switchMap((liturgy) => {
+        if (prefs["originalLanguages"] == "true") {
+          console.log("loading Hebrew psalms.");
+          return combineLatest(
+            (liturgy as Liturgy).value.map((doc) =>
+              from(this.osisBibleService.getHebrewPsalm(doc.slug)).pipe(
+                map((hebrew) =>
+                  docsToOption([
+                    new LiturgicalDocument({
+                      ...doc,
+                      version_label: "English",
+                    }),
+                    new LiturgicalDocument(hebrew),
+                  ])
+                )
+              )
+            )
+          ).pipe(map((docs) => docsToLiturgy(docs)));
+        } else {
+          return of(liturgy);
+        }
+      })
     );
 
     return combineLatest([gloriaQuery$, psalms$]).pipe(
