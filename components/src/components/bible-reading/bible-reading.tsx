@@ -301,14 +301,15 @@ export class BibleReadingComponent {
             <div lang={this.obj?.language} class={`bible-reading ${this.obj?.display_format || 'default'}`}>
               {/* Bible text */}
               <p>
-                {this.verses.map(verse =>
+                {this.verses.map((verse, verseIndex) =>
                   verse.hasOwnProperty('type') && (verse as Heading).type  === 'heading'
                   ? <ldf-heading doc={new Heading(verse as Heading)}></ldf-heading>
                   : <ldf-string
-                    citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
-                    id={this.obj.uid}
-                    text={(verse as BibleReadingVerse).text}
-                    fragment={this.path}
+                      citation={{book: (verse as BibleReadingVerse).book, chapter: (verse as BibleReadingVerse).chapter, verse: (verse as BibleReadingVerse).verse}}
+                      id={this.obj.uid}
+                      text={(verse as BibleReadingVerse).text}
+                      fragment={this.path}
+                      dropcap={this.obj?.display_format == "force_dropcap" && verseIndex === 0 ? "force" : "disabled"}
                   >
                   </ldf-string>
                 )}

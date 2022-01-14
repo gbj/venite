@@ -199,7 +199,7 @@ export class TextComponent {
                         <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                           <ldf-string text={chunk}
                             citation={{label: this.obj.label}}
-                            dropcap={prayerIndex === 0 && chunkIndex <= 1 ? "enabled" : "disabled"}
+                            dropcap={this.obj?.display_format == "force_dropcap" && prayerIndex === 0 && chunkIndex === 0 ? "force" : (prayerIndex === 0 && chunkIndex <= 1 ? "enabled" : "disabled")}
                             index={prayerIndex + chunkIndex}
                             fragment={this.path}
                           >
