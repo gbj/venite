@@ -800,7 +800,7 @@
     {
       "condition": {
         "conditions": [
-          { "preference": { "is": false, "value": "beforefore", "key": "owe" } }
+          { "preference": { "is": false, "value": "before", "key": "owe" } }
         ],
         "mode": "and"
       },

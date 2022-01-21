@@ -166,7 +166,7 @@
     {
       "condition": {
         "conditions": [
-          { "preference": { "key": "owe", "is": false, "value": "beforeore" } },
+          { "preference": { "key": "owe", "is": false, "value": "before" } },
           { "preference": { "value": "yes", "is": false, "key": "ofe" } }
         ],
         "mode": "and"
