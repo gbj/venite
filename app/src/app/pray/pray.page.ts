@@ -103,6 +103,9 @@ import { MediaSession } from "capacitor-media-session";
 import { LoginComponent } from "../auth/login/login.component";
 import { MediaSessionService } from "../services/media-session.service";
 
+import { App } from "@capacitor/app";
+import { PluginListenerHandle } from "@capacitor/core";
+
 interface PrayState {
   liturgy: LiturgicalDocument;
   day: LiturgicalDay;
@@ -184,6 +187,9 @@ export class PrayPage implements OnInit, OnDestroy {
 
   pronouns: Promise<Record<string, string>> | undefined;
 
+  // Redirecting to today's liturgy
+  todaysLiturgyListener: PluginListenerHandle;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -217,6 +223,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
   ionViewWillEnter() {
     if (!this.bulletinMode) {
+      // window location hash
       this.doc$.subscribe(() => {
         const hash = window?.location?.hash;
 
@@ -230,6 +237,53 @@ export class PrayPage implements OnInit, OnDestroy {
           }
         }, 1000);
       });
+
+      // When you reopen app, check if it's on previous day's liturgy
+      this.todaysLiturgyListener = App.addListener(
+        "appStateChange",
+        async ({ isActive }) => {
+          if (isActive) {
+            const today = new Date(),
+              todayYear = today.getFullYear(),
+              todayDate = today.getDate(),
+              todayMonth = today.getMonth() + 1;
+            const params = this.route.snapshot.params;
+            if (
+              //@ts-ignore
+              this.route.snapshot._routerState.url.startsWith("/pray") &&
+              !this.bulletinMode &&
+              params.y &&
+              params.m &&
+              params.d &&
+              (Number(params.y) < todayYear ||
+                (Number(params.y) == todayYear &&
+                  Number(params.m) < todayMonth) ||
+                (Number(params.y) == todayYear &&
+                  Number(params.m) == todayMonth &&
+                  Number(params.d) < todayDate))
+            ) {
+              const alert = await this.alert.create({
+                header: "Go to today’s liturgy?",
+                message:
+                  "It looks like you may be using a previous day’s liturgy. Do you want to choose today’s liturgy instead?",
+                buttons: [
+                  {
+                    text: "No, thanks.",
+                    role: "cancel",
+                  },
+                  {
+                    text: "Yes, please!",
+                    handler: () => {
+                      this.router.navigateByUrl("/");
+                    },
+                  },
+                ],
+              });
+              await alert.present();
+            }
+          }
+        }
+      );
     }
   }
 
@@ -247,6 +301,10 @@ export class PrayPage implements OnInit, OnDestroy {
     }
 
     this.pronouns = undefined;
+
+    if (!this.bulletinMode) {
+      this.todaysLiturgyListener.remove();
+    }
   }
 
   ngOnInit() {
