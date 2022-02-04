@@ -307,7 +307,7 @@ export class LiturgySelectComponent implements OnInit {
 
     // Date observables
     this.daysInMonth$ = this.form.controls.date.valueChanges.pipe(
-      map((values: DateValues) => daysInMonth(values.month, values.year)),
+      map((values: DateValues) => daysInMonth(values.year, values.month)),
       startWith(daysInMonth(today.getFullYear(), today.getMonth() + 1))
     );
   }
