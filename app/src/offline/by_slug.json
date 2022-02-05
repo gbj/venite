@@ -30538,11 +30538,16 @@
             "conditions": [
               {
                 "season": {
-                  "only": ["OrdinaryTime", "Lent", "HolyWeek"],
+                  "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"],
                   "except": []
                 },
                 "date": {
                   "lt": "4/21"
+                }
+              },
+              {
+                "date": {
+                  "gt": "2/2"
                 }
               }
             ],
@@ -31251,10 +31256,15 @@
               {
                 "season": {
                   "except": [],
-                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                  "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"]
                 },
                 "date": {
                   "lt": "4/21"
+                }
+              },
+              {
+                "date": {
+                  "gt": "2/2"
                 }
               }
             ],

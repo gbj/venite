@@ -1256,6 +1256,11 @@
                   "except": [],
                   "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"]
                 }
+              },
+              {
+                "date": {
+                  "gt": "2/2"
+                }
               }
             ],
             "mode": "and"
