@@ -837,7 +837,7 @@
                 "date": { "lt": "4/21" },
                 "season": {
                   "except": [],
-                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                  "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"]
                 }
               }
             ],
@@ -1074,7 +1074,7 @@
                 "date": { "lt": "4/21" },
                 "season": {
                   "except": [],
-                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                  "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"]
                 }
               }
             ],
