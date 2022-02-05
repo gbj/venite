@@ -3929,7 +3929,8 @@
       "type": {
         "rank": 3,
         "name": "Holy Day"
-      }
+      },
+      "season": "Saints"
     },
     {
       "slug": "epiphany",
