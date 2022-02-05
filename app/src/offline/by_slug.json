@@ -29429,38 +29429,6 @@
               }
             },
             {
-              "style": "short",
-              "hidden": false,
-              "type": "bible-reading",
-              "source": {
-                "api": "",
-                "source": "",
-                "citation": ""
-              },
-              "label": "",
-              "language": "en",
-              "value": [
-                {
-                  "book": "2 Corinthians",
-                  "chapter": "4",
-                  "verse": "5",
-                  "text": "It is not ourselves that we proclaim; we proclaim Christ Jesus as Lord, and ourselves as your servants, for Jesus’ sake. "
-                },
-                {
-                  "text": "For the same God who said, “Out of darkness let light shine,” has caused his light to shine within us, to give the light of revelation—the revelation of the glory of God in the face of Jesus Christ.",
-                  "chapter": "4",
-                  "verse": "6",
-                  "book": "2 Corinthians"
-                }
-              ],
-              "version": "NRSV",
-              "category": [],
-              "citation": "2 Corinthians 4:5-6",
-              "metadata": {
-                "response": " "
-              }
-            },
-            {
               "source": {
                 "source": "",
                 "citation": "",

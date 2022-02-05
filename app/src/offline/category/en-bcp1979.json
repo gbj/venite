@@ -2852,27 +2852,6 @@
     "category": ["Collect", "Collect of the Day"]
   },
   {
-    "style": "short",
-    "version_label": null,
-    "hidden": false,
-    "language": "en",
-    "citation": null,
-    "metadata": {
-      "omit_response": false,
-      "response": "Amen."
-    },
-    "value": [
-      {
-        "text": "It is not ourselves that we proclaim; we proclaim Christ Jesus as Lord, and ourselves as your servants, for Jesus' sake. For the same God who said, “Out of darkness let light shine,” has caused his light to shine within us, to give the light of revelation—the revelation of the glory of God in the face of Jesus Christ."
-      }
-    ],
-    "slug": "opening_sentence",
-    "type": "bible-reading",
-    "category": ["Evening", "Opening Sentence"],
-    "label": null,
-    "version": "bcp1979"
-  },
-  {
     "language": "en",
     "slug": "offertory_1",
     "version_label": null,
@@ -11367,34 +11346,6 @@
     "language": "en",
     "category": ["Collect", "Collect of the Day"],
     "type": "text"
-  },
-  {
-    "type": "bible-reading",
-    "language": "en",
-    "version_label": null,
-    "label": null,
-    "slug": "opening_sentence",
-    "value": [
-      {
-        "text": "It is not ourselves that we proclaim; we proclaim Christ Jesus as Lord, and ourselves as your servants, for Jesus' sake. For the same God who said, “Out of darkness let light shine,” has caused his light to shine within us, to give the light of revelation—the revelation of the glory of God in the face of Jesus Christ."
-      }
-    ],
-    "hidden": false,
-    "metadata": {
-      "omit_response": false,
-      "response": "Amen."
-    },
-    "version": "bcp1979",
-    "category": ["Evening", "Opening Sentence"],
-    "sharing": {
-      "privacy": "public",
-      "collaborators": [],
-      "status": "published",
-      "organization": "venite",
-      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-    },
-    "citation": null,
-    "style": "short"
   },
   {
     "language": "en",
