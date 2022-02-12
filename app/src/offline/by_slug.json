@@ -31007,6 +31007,75 @@
       "hidden": false
     }
   ],
+  "en-Latin-ave-regina": [
+    {
+      "source": { "source": "", "citation": "", "api": "" },
+      "lastRevision": 25,
+      "id": "KUCDCW9Pa4kA24yi8O0D",
+      "version": "Latin",
+      "category": [],
+      "language": "en",
+      "metadata": {
+        "liturgyversions": [],
+        "preferences": {},
+        "evening": true,
+        "pronouns": [],
+        "supplement": true,
+        "special_preferences": {}
+      },
+      "type": "liturgy",
+      "label": "Ave Regina",
+      "date_created": { "nanoseconds": 568000000, "seconds": 1641223413 },
+      "slug": "ave-regina",
+      "value": [
+        {
+          "hidden": false,
+          "metadata": { "level": 1 },
+          "style": "text",
+          "value": ["Ave Regina"],
+          "type": "heading"
+        },
+        {
+          "value": [
+            "Ave, Regina caelorum,\nAve, Domina Angelorum: \nSalve, radix, salve, porta\nEx qua mundo lux est orta:\nGaude, Virgo gloriosa, \nSuper omnes speciosa, \nVale, o valde decora, \nEt pro nobis Christum exora."
+          ],
+          "type": "text",
+          "hidden": false,
+          "style": "text"
+        },
+        {
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Dignare me laudare te, Virgo sacrata."
+            },
+            { "text": "Da mihi virtutem contra hostes tuos.", "label": "R." }
+          ],
+          "hidden": false,
+          "style": "preces",
+          "type": "responsive"
+        },
+        {
+          "type": "text",
+          "hidden": false,
+          "style": "prayer",
+          "value": [
+            "Concede, misericors Deus, fragilitati nostrae praesidium: ut, qui sanctae Dei Genitricis memoriam agimus; intercessionis eius auxilio, a nostris iniquitatibus resurgamus. Per eundem Christum Dominum nostrum. "
+          ]
+        }
+      ],
+      "hidden": false,
+      "date_modified": { "seconds": 1641223463, "nanoseconds": 814000000 },
+      "sharing": {
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": []
+      }
+    }
+  ],
   "en-Rite-II-ave-regina": [
     {
       "metadata": {
@@ -31143,6 +31212,260 @@
       ],
       "type": "liturgy",
       "hidden": false,
+      "category": []
+    }
+  ],
+  "en-Latin-marian-antiphons": [
+    {
+      "hidden": false,
+      "language": "en",
+      "date_created": { "nanoseconds": 181000000, "seconds": 1641222862 },
+      "label": "Marian Antiphons",
+      "slug": "marian-antiphons",
+      "id": "vTshU5f3ZflvKqd5cBa6",
+      "version": "Latin",
+      "type": "liturgy",
+      "value": [
+        {
+          "hidden": false,
+          "condition": {
+            "conditions": [
+              { "date": { "lt": "2/2" } },
+              {
+                "season": {
+                  "except": [],
+                  "only": [
+                    "Advent",
+                    "Christmas",
+                    "Epiphany",
+                    "Easter",
+                    "Ascension",
+                    "Pentecost",
+                    "OrdinaryTime"
+                  ]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "lookup": {
+            "type": "slug",
+            "allow_multiple": false,
+            "rotate": false
+          },
+          "version": "Latin",
+          "source": { "api": "", "source": "", "citation": "" },
+          "lastRevision": 56,
+          "type": "liturgy",
+          "slug": "alma-redemptoris",
+          "category": [],
+          "metadata": {
+            "evening": true,
+            "pronouns": [],
+            "liturgyversions": [],
+            "special_preferences": {},
+            "preferences": {},
+            "supplement": true
+          },
+          "label": "Alma Redemptoris",
+          "sharing": {
+            "privacy": "public",
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "collaborators": []
+          },
+          "language": "en"
+        },
+        {
+          "date_modified": { "seconds": 1603539837, "nanoseconds": 289000000 },
+          "category": [],
+          "slug": "alma-redemptoris",
+          "type": "liturgy",
+          "lookup": {
+            "rotate": false,
+            "type": "slug",
+            "allow_multiple": false
+          },
+          "hidden": false,
+          "source": { "api": "", "source": "", "citation": "" },
+          "metadata": {
+            "liturgyversions": [],
+            "pronouns": [],
+            "evening": true,
+            "supplement": true,
+            "preferences": {},
+            "special_preferences": {}
+          },
+          "label": "Alma Redemptoris",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "date": { "gt": "11/1" },
+                "season": { "except": [], "only": ["Advent", "Christmas"] }
+              }
+            ]
+          },
+          "version": "Latin",
+          "language": "en",
+          "sharing": {
+            "collaborators": [],
+            "status": "published",
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite"
+          },
+          "lastRevision": 56
+        },
+        {
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                },
+                "date": { "lt": "4/21" }
+              }
+            ]
+          },
+          "slug": "ave-regina",
+          "version": "Latin",
+          "category": [],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "collaborators": []
+          },
+          "lookup": {
+            "rotate": false,
+            "allow_multiple": false,
+            "type": "slug"
+          },
+          "metadata": {
+            "evening": true,
+            "liturgyversions": [],
+            "preferences": {},
+            "pronouns": [],
+            "special_preferences": {},
+            "supplement": true
+          },
+          "lastRevision": 19,
+          "language": "en",
+          "type": "liturgy",
+          "label": "Ave Regina",
+          "source": { "api": "", "source": "", "citation": "" },
+          "hidden": false
+        },
+        {
+          "slug": "regina-coeli",
+          "sharing": {
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "lastRevision": 24,
+          "hidden": false,
+          "metadata": {
+            "supplement": false,
+            "pronouns": [],
+            "preferences": {},
+            "liturgyversions": [],
+            "evening": false,
+            "special_preferences": {}
+          },
+          "version": "Latin",
+          "category": [],
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "date": { "gte": "3/22" },
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Pentecost", "Ascension", "Ascension"]
+                }
+              }
+            ]
+          },
+          "source": { "citation": "", "api": "", "source": "" },
+          "lookup": {
+            "type": "slug",
+            "rotate": false,
+            "allow_multiple": false
+          },
+          "type": "liturgy",
+          "language": "en",
+          "label": "Regina Coeli"
+        },
+        {
+          "label": "Salve Regina",
+          "slug": "salve-regina",
+          "type": "liturgy",
+          "category": [],
+          "lastRevision": 17,
+          "hidden": false,
+          "sharing": {
+            "status": "published",
+            "privacy": "public",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite"
+          },
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["OrdinaryTime", "Pentecost"],
+                  "except": []
+                },
+                "date": { "gte": "5/10" }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Latin",
+          "lookup": {
+            "type": "slug",
+            "rotate": false,
+            "allow_multiple": false
+          },
+          "source": { "citation": "", "api": "", "source": "" },
+          "language": "en",
+          "metadata": {
+            "liturgyversions": [],
+            "evening": false,
+            "pronouns": [],
+            "special_preferences": {},
+            "preferences": {},
+            "supplement": false
+          }
+        }
+      ],
+      "metadata": {
+        "pronouns": [],
+        "evening": true,
+        "special_preferences": {},
+        "supplement": true,
+        "preferences": {},
+        "liturgyversions": ["latin"]
+      },
+      "date_modified": { "seconds": 1641224368, "nanoseconds": 21000000 },
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "source": { "citation": "", "source": "", "api": "" },
+      "lastRevision": 132,
       "category": []
     }
   ],
