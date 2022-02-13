@@ -299,6 +299,7 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
+    console.log("findDocumentsBySlug", slug, language, rawVersions);
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
       versions: string[]
