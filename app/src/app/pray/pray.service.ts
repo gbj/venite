@@ -761,6 +761,7 @@ export class PrayService {
     );
 
     const psalms$ = this.findReadings(doc, day, prefs, originalPrefs).pipe(
+      tap((psalms) => console.log("lookupPsalter entries = ", psalms)),
       map((entries) =>
         (entries || []).map(
           (entry) =>
@@ -778,7 +779,6 @@ export class PrayService {
             })
         )
       ),
-      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
       // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
       // in which case multiple entries means multiples options, as in the RCL
       map(
@@ -793,9 +793,13 @@ export class PrayService {
       ),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
+      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
+
       switchMap((option) =>
         this.compile(option, day, prefs, [version], originalPrefs)
       ),
+      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
+
       // sort the psalms by number in increasing order
       map(
         (liturgy) =>

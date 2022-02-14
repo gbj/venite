@@ -310,7 +310,6 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
-    console.log("findDocumentsBySlug", slug, language, rawVersions);
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
       versions: string[]
@@ -374,6 +373,7 @@ export class DocumentService {
 
     // first, try JSON database
     if (!disableOffline) {
+      console.log("findDocumentsBySlug offline", slug);
       if (
         [
           "morning-prayer",
@@ -519,18 +519,20 @@ export class DocumentService {
         veniteLiturgies$,
         myDocs$,
         myOrganizationLiturgies$,
-      ]).pipe(
-        map(([user, venite, mine, org]) =>
-          user
-            ? mine.concat(org).concat(
-                // filter out anything I own
-                venite.filter((doc) =>
-                  doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true
+      ])
+        .pipe(
+          map(([user, venite, mine, org]) =>
+            user
+              ? mine.concat(org).concat(
+                  // filter out anything I own
+                  venite.filter((doc) =>
+                    doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true
+                  )
                 )
-              )
-            : mine.concat(venite)
+              : mine.concat(venite)
+          )
         )
-      );
+        .pipe(filter((docs) => docs.length > 0));
 
       return processDocs(docs$, versions);
     }
