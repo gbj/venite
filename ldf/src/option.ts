@@ -77,7 +77,9 @@ export class Option extends LiturgicalDocument {
 
     let label: string = '';
 
-    if (option.type == 'liturgy') {
+    if (option.version_label) {
+      label = option.version_label;
+    } else if (option.type == 'liturgy') {
       label = option.label || option.version_label || 'Option';
     }
     // Psalm 119 parts => Psalm 119: Aleph

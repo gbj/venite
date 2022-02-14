@@ -18,7 +18,7 @@
 
 Ƭ **BibleBookName**: *Record‹string, object›*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L1)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L1)*
 
 ## Object literals
 
@@ -26,11 +26,11 @@
 
 ### ▪ **BIBLE_BOOK_NAMES**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:3](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L3)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:3](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L3)*
 
 ▪ **1 Chronicles**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:76](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L76)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:76](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L76)*
 
 * **en**: *object*
 
@@ -40,7 +40,7 @@
 
 ▪ **1 Corinthians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:354](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L354)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:386](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L386)*
 
 * **en**: *object*
 
@@ -54,9 +54,15 @@
 
   * **short**: *string* = "1 Corinthians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The First Epistle of St. Paul the Apostle to the Corinthians"
+
+  * **short**: *string* = "1 Corinthians"
+
 ▪ **1 Esdras**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:564](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L564)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:680](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L680)*
 
 * **en**: *object*
 
@@ -66,7 +72,7 @@
 
 ▪ **1 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:514](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L514)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:610](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L610)*
 
 * **en**: *object*
 
@@ -80,9 +86,15 @@
 
   * **short**: *string* = "2 John"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The First Epistle General of St. John"
+
+  * **short**: *string* = "2 John"
+
 ▪ **1 Kings**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:64](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L64)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:64](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L64)*
 
 * **en**: *object*
 
@@ -92,7 +104,7 @@
 
 ▪ **1 Maccabees**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:266](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L266)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:270](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L270)*
 
 * **en**: *object*
 
@@ -102,7 +114,7 @@
 
 ▪ **1 Peter**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:494](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L494)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:582](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L582)*
 
 * **en**: *object*
 
@@ -116,9 +128,15 @@
 
   * **short**: *string* = "1 Peter"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The First Epistle General of St. Peter"
+
+  * **short**: *string* = "1 Peter"
+
 ▪ **1 Samuel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:52](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L52)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:52](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L52)*
 
 * **en**: *object*
 
@@ -128,7 +146,7 @@
 
 ▪ **1 Thessalonians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:414](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L414)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:470](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L470)*
 
 * **en**: *object*
 
@@ -142,9 +160,15 @@
 
   * **short**: *string* = "1 Thessalonians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The First Epistle of St. Paul the Apostle to the Thessalonians"
+
+  * **short**: *string* = "1 Thessalonians"
+
 ▪ **1 Timothy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:434](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L434)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:498](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L498)*
 
 * **en**: *object*
 
@@ -158,9 +182,15 @@
 
   * **short**: *string* = "1 Timothy"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The First Epistle of St. Paul the Apostle to Timothy"
+
+  * **short**: *string* = "1 Timothy"
+
 ▪ **2 Chronicles**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:82](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L82)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:82](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L82)*
 
 * **en**: *object*
 
@@ -170,7 +200,7 @@
 
 ▪ **2 Corinthians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:364](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L364)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:400](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L400)*
 
 * **en**: *object*
 
@@ -184,9 +214,15 @@
 
   * **short**: *string* = "2 Corinthians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Second Epistle of St. Paul the Apostle to the Corinthians"
+
+  * **short**: *string* = "2 Corinthians"
+
 ▪ **2 Esdras**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:570](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L570)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:686](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L686)*
 
 * **en**: *object*
 
@@ -196,7 +232,7 @@
 
 ▪ **2 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:524](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L524)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:624](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L624)*
 
 * **en**: *object*
 
@@ -210,9 +246,15 @@
 
   * **short**: *string* = "2 John"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Second Epistle General of St. John"
+
+  * **short**: *string* = "2 John"
+
 ▪ **2 Kings**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:70](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L70)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:70](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L70)*
 
 * **en**: *object*
 
@@ -222,7 +264,7 @@
 
 ▪ **2 Maccabees**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:272](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L272)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:276](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L276)*
 
 * **en**: *object*
 
@@ -232,7 +274,7 @@
 
 ▪ **2 Peter**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:504](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L504)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:596](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L596)*
 
 * **en**: *object*
 
@@ -246,9 +288,15 @@
 
   * **short**: *string* = "2 Peter"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Second Epistle General of St. Peter"
+
+  * **short**: *string* = "2 Peter"
+
 ▪ **2 Samuel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:58](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L58)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:58](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L58)*
 
 * **en**: *object*
 
@@ -258,7 +306,7 @@
 
 ▪ **2 Thessalonians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:424](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L424)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:484](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L484)*
 
 * **en**: *object*
 
@@ -272,9 +320,15 @@
 
   * **short**: *string* = "2 Thessalonians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Second Epistle of St. Paul the Apostle to the Thessalonians"
+
+  * **short**: *string* = "2 Thessalonians"
+
 ▪ **2 Timothy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:444](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L444)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:512](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L512)*
 
 * **en**: *object*
 
@@ -288,9 +342,15 @@
 
   * **short**: *string* = "2 Timothy"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Second Epistle of St. Paul the Apostle to Timothy"
+
+  * **short**: *string* = "2 Timothy"
+
 ▪ **3 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:534](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L534)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:638](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L638)*
 
 * **en**: *object*
 
@@ -304,9 +364,15 @@
 
   * **short**: *string* = "3 John"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Third Epistle General of St. John"
+
+  * **short**: *string* = "3 John"
+
 ▪ **Acts**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:334](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L334)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:358](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L358)*
 
 * **en**: *object*
 
@@ -320,9 +386,15 @@
 
   * **short**: *string* = "Acts"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Book of the Acts of the Apostles"
+
+  * **short**: *string* = "Acts"
+
 ▪ **Amos**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:182](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L182)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:186](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L186)*
 
 * **en**: *object*
 
@@ -332,7 +404,7 @@
 
 ▪ **Azariah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:248](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L248)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:252](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L252)*
 
 * **en**: *object*
 
@@ -342,7 +414,7 @@
 
 ▪ **Baruch**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:260](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L260)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:264](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L264)*
 
 * **en**: *object*
 
@@ -352,7 +424,7 @@
 
 ▪ **Bel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:576](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L576)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:692](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L692)*
 
 * **en**: *object*
 
@@ -362,7 +434,7 @@
 
 ▪ **Colossians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:404](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L404)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:456](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L456)*
 
 * **en**: *object*
 
@@ -376,9 +448,15 @@
 
   * **short**: *string* = "Colossians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to the Colossians"
+
+  * **short**: *string* = "Colossians"
+
 ▪ **Daniel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:160](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L160)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:160](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L160)*
 
 * **en**: *object*
 
@@ -392,9 +470,15 @@
 
   * **short**: *string* = "Daniel"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Book of the Prophet Daniel"
+
+  * **short**: *string* = "Daniel"
+
 ▪ **Deuteronomy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:28](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L28)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:28](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L28)*
 
 * **en**: *object*
 
@@ -404,7 +488,7 @@
 
 ▪ **Ecclesiastes**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:124](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L124)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:124](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L124)*
 
 * **en**: *object*
 
@@ -414,7 +498,7 @@
 
 ▪ **Ephesians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:384](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L384)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:428](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L428)*
 
 * **en**: *object*
 
@@ -428,9 +512,15 @@
 
   * **short**: *string* = "Ephesians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to the Ephesians"
+
+  * **short**: *string* = "Ephesians"
+
 ▪ **Esther**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:100](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L100)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:100](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L100)*
 
 * **en**: *object*
 
@@ -440,7 +530,7 @@
 
 ▪ **Exodus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:10](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L10)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:10](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L10)*
 
 * **en**: *object*
 
@@ -450,7 +540,7 @@
 
 ▪ **Ezekiel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:154](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L154)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:154](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L154)*
 
 * **en**: *object*
 
@@ -460,7 +550,7 @@
 
 ▪ **Ezra**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:88](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L88)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:88](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L88)*
 
 * **en**: *object*
 
@@ -470,7 +560,7 @@
 
 ▪ **Galatians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:374](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L374)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:414](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L414)*
 
 * **en**: *object*
 
@@ -484,9 +574,15 @@
 
   * **short**: *string* = "Galatians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to the Galatians"
+
+  * **short**: *string* = "Galatians"
+
 ▪ **Genesis**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:4](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L4)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:4](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L4)*
 
 * **en**: *object*
 
@@ -496,7 +592,7 @@
 
 ▪ **Habakkuk**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:212](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L212)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:216](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L216)*
 
 * **en**: *object*
 
@@ -506,7 +602,7 @@
 
 ▪ **Haggai**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:224](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L224)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:228](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L228)*
 
 * **en**: *object*
 
@@ -516,7 +612,7 @@
 
 ▪ **Hebrews**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:474](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L474)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:554](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L554)*
 
 * **en**: *object*
 
@@ -530,9 +626,15 @@
 
   * **short**: *string* = "Hebrews"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle to the Hebrews"
+
+  * **short**: *string* = "Hebrews"
+
 ▪ **Hosea**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:170](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L170)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:174](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L174)*
 
 * **en**: *object*
 
@@ -542,7 +644,7 @@
 
 ▪ **Isaiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:136](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L136)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:136](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L136)*
 
 * **en**: *object*
 
@@ -552,7 +654,7 @@
 
 ▪ **James**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:484](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L484)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:568](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L568)*
 
 * **en**: *object*
 
@@ -566,9 +668,15 @@
 
   * **short**: *string* = "James"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle General of St. James"
+
+  * **short**: *string* = "James"
+
 ▪ **Jeremiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:142](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L142)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:142](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L142)*
 
 * **en**: *object*
 
@@ -578,7 +686,7 @@
 
 ▪ **Job**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:106](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L106)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:106](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L106)*
 
 * **en**: *object*
 
@@ -588,7 +696,7 @@
 
 ▪ **Joel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:176](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L176)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:180](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L180)*
 
 * **en**: *object*
 
@@ -598,7 +706,7 @@
 
 ▪ **John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:324](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L324)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:344](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L344)*
 
 * **en**: *object*
 
@@ -612,9 +720,15 @@
 
   * **short**: *string* = "John"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Gospel According to St. John"
+
+  * **short**: *string* = "John"
+
 ▪ **Jonah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:194](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L194)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:198](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L198)*
 
 * **en**: *object*
 
@@ -624,7 +738,7 @@
 
 ▪ **Joshua**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:34](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L34)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:34](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L34)*
 
 * **en**: *object*
 
@@ -634,7 +748,7 @@
 
 ▪ **Jude**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:544](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L544)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:652](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L652)*
 
 * **en**: *object*
 
@@ -648,9 +762,15 @@
 
   * **short**: *string* = "Jude"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle General of St. Jude"
+
+  * **short**: *string* = "Jude"
+
 ▪ **Judges**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:40](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L40)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:40](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L40)*
 
 * **en**: *object*
 
@@ -660,7 +780,7 @@
 
 ▪ **Judith**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:254](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L254)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:258](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L258)*
 
 * **en**: *object*
 
@@ -670,7 +790,7 @@
 
 ▪ **Lamentations**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:148](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L148)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:148](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L148)*
 
 * **en**: *object*
 
@@ -680,7 +800,7 @@
 
 ▪ **Letter of Jeremiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:582](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L582)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:698](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L698)*
 
 * **en**: *object*
 
@@ -690,7 +810,7 @@
 
 ▪ **Leviticus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:16](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L16)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:16](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L16)*
 
 * **en**: *object*
 
@@ -700,7 +820,7 @@
 
 ▪ **Luke**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:314](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L314)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:330](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L330)*
 
 * **en**: *object*
 
@@ -714,9 +834,15 @@
 
   * **short**: *string* = "Luke"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Gospel According to St. Luke"
+
+  * **short**: *string* = "Luke"
+
 ▪ **Malachi**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:236](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L236)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:240](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L240)*
 
 * **en**: *object*
 
@@ -726,7 +852,7 @@
 
 ▪ **Mark**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:304](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L304)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:316](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L316)*
 
 * **en**: *object*
 
@@ -740,9 +866,15 @@
 
   * **short**: *string* = "Mark"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Gospel According to St. Mark"
+
+  * **short**: *string* = "Mark"
+
 ▪ **Matthew**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:294](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L294)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:302](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L302)*
 
 * **en**: *object*
 
@@ -756,9 +888,15 @@
 
   * **short**: *string* = "Matthew"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Gospel According to St. Matthew"
+
+  * **short**: *string* = "Matthew"
+
 ▪ **Micah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:200](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L200)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:204](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L204)*
 
 * **en**: *object*
 
@@ -768,7 +906,7 @@
 
 ▪ **Nahum**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:206](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L206)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:210](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L210)*
 
 * **en**: *object*
 
@@ -778,7 +916,7 @@
 
 ▪ **Nehemiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:94](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L94)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:94](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L94)*
 
 * **en**: *object*
 
@@ -788,7 +926,7 @@
 
 ▪ **Numbers**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:22](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L22)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:22](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L22)*
 
 * **en**: *object*
 
@@ -798,7 +936,7 @@
 
 ▪ **Obadiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:188](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L188)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:192](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L192)*
 
 * **en**: *object*
 
@@ -808,7 +946,7 @@
 
 ▪ **Philemon**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:464](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L464)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:540](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L540)*
 
 * **en**: *object*
 
@@ -822,9 +960,15 @@
 
   * **short**: *string* = "Philemon"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to Philemon"
+
+  * **short**: *string* = "Philemon"
+
 ▪ **Philippians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:394](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L394)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:442](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L442)*
 
 * **en**: *object*
 
@@ -838,9 +982,15 @@
 
   * **short**: *string* = "Philippians"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to the Philippians"
+
+  * **short**: *string* = "Philippians"
+
 ▪ **Proverbs**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:118](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L118)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:118](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L118)*
 
 * **en**: *object*
 
@@ -850,7 +1000,7 @@
 
 ▪ **Psalms**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:112](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L112)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:112](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L112)*
 
 * **en**: *object*
 
@@ -860,7 +1010,7 @@
 
 ▪ **Revelation**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:554](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L554)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:666](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L666)*
 
 * **en**: *object*
 
@@ -874,9 +1024,15 @@
 
   * **short**: *string* = "Revelation"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Revelation to St. John the Divine"
+
+  * **short**: *string* = "Revelation"
+
 ▪ **Romans**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:344](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L344)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:372](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L372)*
 
 * **en**: *object*
 
@@ -890,9 +1046,15 @@
 
   * **short**: *string* = "Romans"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to the Romans"
+
+  * **short**: *string* = "Romans"
+
 ▪ **Ruth**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:46](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L46)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:46](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L46)*
 
 * **en**: *object*
 
@@ -902,7 +1064,7 @@
 
 ▪ **Sirach**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:284](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L284)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:288](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L288)*
 
 * **en**: *object*
 
@@ -916,9 +1078,15 @@
 
   * **short**: *string* = "Sirach"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Book of Ecclesiasticus"
+
+  * **short**: *string* = "Sirach"
+
 ▪ **The Song of Solomon**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:130](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L130)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:130](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L130)*
 
 * **en**: *object*
 
@@ -928,7 +1096,7 @@
 
 ▪ **Titus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:454](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L454)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:526](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L526)*
 
 * **en**: *object*
 
@@ -942,9 +1110,15 @@
 
   * **short**: *string* = "Titus"
 
+* **iu**: *object*
+
+  * **long**: *string* = "The Epistle of St. Paul the Apostle to Titus"
+
+  * **short**: *string* = "Titus"
+
 ▪ **Tobit**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:242](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L242)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:246](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L246)*
 
 * **en**: *object*
 
@@ -954,7 +1128,7 @@
 
 ▪ **Wisdom**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:278](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L278)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:282](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L282)*
 
 * **en**: *object*
 
@@ -964,7 +1138,7 @@
 
 ▪ **Zechariah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:230](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L230)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:234](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L234)*
 
 * **en**: *object*
 
@@ -974,7 +1148,7 @@
 
 ▪ **Zephaniah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:218](https://github.com/gbj/venite/blob/41d0c651/ldf/src/bible-reading/bible-book-names.i18n.ts#L218)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:222](https://github.com/gbj/venite/blob/53f452a3/ldf/src/bible-reading/bible-book-names.i18n.ts#L222)*
 
 * **en**: *object*
 

@@ -166,6 +166,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Daniel',
       long: 'The Book of the Prophet Daniel',
     },
+    iu: {
+      short: 'Daniel',
+      long: 'The Book of the Prophet Daniel',
+    },
   },
   Hosea: {
     en: {
@@ -290,6 +294,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Sirach',
       long: 'The Book of Ecclesiasticus',
     },
+    iu: {
+      short: 'Sirach',
+      long: 'The Book of Ecclesiasticus',
+    },
   },
   Matthew: {
     en: {
@@ -297,6 +305,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Gospel According to Matthew',
     },
     'en-CA': {
+      short: 'Matthew',
+      long: 'The Gospel According to St. Matthew',
+    },
+    iu: {
       short: 'Matthew',
       long: 'The Gospel According to St. Matthew',
     },
@@ -310,6 +322,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Mark',
       long: 'The Gospel According to St. Mark',
     },
+    iu: {
+      short: 'Mark',
+      long: 'The Gospel According to St. Mark',
+    },
   },
   Luke: {
     en: {
@@ -317,6 +333,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Gospel According to Luke',
     },
     'en-CA': {
+      short: 'Luke',
+      long: 'The Gospel According to St. Luke',
+    },
+    iu: {
       short: 'Luke',
       long: 'The Gospel According to St. Luke',
     },
@@ -330,6 +350,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'John',
       long: 'The Gospel According to St. John',
     },
+    iu: {
+      short: 'John',
+      long: 'The Gospel According to St. John',
+    },
   },
   Acts: {
     en: {
@@ -337,6 +361,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Acts of the Apostles',
     },
     'en-CA': {
+      short: 'Acts',
+      long: 'The Book of the Acts of the Apostles',
+    },
+    iu: {
       short: 'Acts',
       long: 'The Book of the Acts of the Apostles',
     },
@@ -350,6 +378,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Romans',
       long: 'The Epistle of St. Paul the Apostle to the Romans',
     },
+    iu: {
+      short: 'Romans',
+      long: 'The Epistle of St. Paul the Apostle to the Romans',
+    },
   },
   '1 Corinthians': {
     en: {
@@ -357,6 +389,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The First Letter to the Corinthians',
     },
     'en-CA': {
+      short: '1 Corinthians',
+      long: 'The First Epistle of St. Paul the Apostle to the Corinthians',
+    },
+    iu: {
       short: '1 Corinthians',
       long: 'The First Epistle of St. Paul the Apostle to the Corinthians',
     },
@@ -370,6 +406,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Corinthians',
       long: 'The Second Epistle of St. Paul the Apostle to the Corinthians',
     },
+    iu: {
+      short: '2 Corinthians',
+      long: 'The Second Epistle of St. Paul the Apostle to the Corinthians',
+    },
   },
   Galatians: {
     en: {
@@ -377,6 +417,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Letter to the Galatians',
     },
     'en-CA': {
+      short: 'Galatians',
+      long: 'The Epistle of St. Paul the Apostle to the Galatians',
+    },
+    iu: {
       short: 'Galatians',
       long: 'The Epistle of St. Paul the Apostle to the Galatians',
     },
@@ -390,6 +434,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ephesians',
       long: 'The Epistle of St. Paul the Apostle to the Ephesians',
     },
+    iu: {
+      short: 'Ephesians',
+      long: 'The Epistle of St. Paul the Apostle to the Ephesians',
+    },
   },
   Philippians: {
     en: {
@@ -397,6 +445,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Letter to the Philippians',
     },
     'en-CA': {
+      short: 'Philippians',
+      long: 'The Epistle of St. Paul the Apostle to the Philippians',
+    },
+    iu: {
       short: 'Philippians',
       long: 'The Epistle of St. Paul the Apostle to the Philippians',
     },
@@ -410,6 +462,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Colossians',
       long: 'The Epistle of St. Paul the Apostle to the Colossians',
     },
+    iu: {
+      short: 'Colossians',
+      long: 'The Epistle of St. Paul the Apostle to the Colossians',
+    },
   },
   '1 Thessalonians': {
     en: {
@@ -417,6 +473,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The First Letter to the Thessalonians',
     },
     'en-CA': {
+      short: '1 Thessalonians',
+      long: 'The First Epistle of St. Paul the Apostle to the Thessalonians',
+    },
+    iu: {
       short: '1 Thessalonians',
       long: 'The First Epistle of St. Paul the Apostle to the Thessalonians',
     },
@@ -430,6 +490,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Thessalonians',
       long: 'The Second Epistle of St. Paul the Apostle to the Thessalonians',
     },
+    iu: {
+      short: '2 Thessalonians',
+      long: 'The Second Epistle of St. Paul the Apostle to the Thessalonians',
+    },
   },
   '1 Timothy': {
     en: {
@@ -437,6 +501,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The First Letter to Timothy',
     },
     'en-CA': {
+      short: '1 Timothy',
+      long: 'The First Epistle of St. Paul the Apostle to Timothy',
+    },
+    iu: {
       short: '1 Timothy',
       long: 'The First Epistle of St. Paul the Apostle to Timothy',
     },
@@ -450,6 +518,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Timothy',
       long: 'The Second Epistle of St. Paul the Apostle to Timothy',
     },
+    iu: {
+      short: '2 Timothy',
+      long: 'The Second Epistle of St. Paul the Apostle to Timothy',
+    },
   },
   Titus: {
     en: {
@@ -457,6 +529,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Letter to Titus',
     },
     'en-CA': {
+      short: 'Titus',
+      long: 'The Epistle of St. Paul the Apostle to Titus',
+    },
+    iu: {
       short: 'Titus',
       long: 'The Epistle of St. Paul the Apostle to Titus',
     },
@@ -470,6 +546,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Philemon',
       long: 'The Epistle of St. Paul the Apostle to Philemon',
     },
+    iu: {
+      short: 'Philemon',
+      long: 'The Epistle of St. Paul the Apostle to Philemon',
+    },
   },
   Hebrews: {
     en: {
@@ -477,6 +557,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Book of Hebrews',
     },
     'en-CA': {
+      short: 'Hebrews',
+      long: 'The Epistle to the Hebrews',
+    },
+    iu: {
       short: 'Hebrews',
       long: 'The Epistle to the Hebrews',
     },
@@ -490,6 +574,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'James',
       long: 'The Epistle General of St. James',
     },
+    iu: {
+      short: 'James',
+      long: 'The Epistle General of St. James',
+    },
   },
   '1 Peter': {
     en: {
@@ -497,6 +585,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The First Letter of Peter',
     },
     'en-CA': {
+      short: '1 Peter',
+      long: 'The First Epistle General of St. Peter',
+    },
+    iu: {
       short: '1 Peter',
       long: 'The First Epistle General of St. Peter',
     },
@@ -510,6 +602,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Peter',
       long: 'The Second Epistle General of St. Peter',
     },
+    iu: {
+      short: '2 Peter',
+      long: 'The Second Epistle General of St. Peter',
+    },
   },
   '1 John': {
     en: {
@@ -517,6 +613,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The First Letter of John',
     },
     'en-CA': {
+      short: '2 John',
+      long: 'The First Epistle General of St. John',
+    },
+    iu: {
       short: '2 John',
       long: 'The First Epistle General of St. John',
     },
@@ -530,6 +630,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 John',
       long: 'The Second Epistle General of St. John',
     },
+    iu: {
+      short: '2 John',
+      long: 'The Second Epistle General of St. John',
+    },
   },
   '3 John': {
     en: {
@@ -537,6 +641,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Third Letter of John',
     },
     'en-CA': {
+      short: '3 John',
+      long: 'The Third Epistle General of St. John',
+    },
+    iu: {
       short: '3 John',
       long: 'The Third Epistle General of St. John',
     },
@@ -550,6 +658,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jude',
       long: 'The Epistle General of St. Jude',
     },
+    iu: {
+      short: 'Jude',
+      long: 'The Epistle General of St. Jude',
+    },
   },
   Revelation: {
     en: {
@@ -557,6 +669,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       long: 'The Book of Revelation',
     },
     'en-CA': {
+      short: 'Revelation',
+      long: 'The Revelation to St. John the Divine',
+    },
+    iu: {
       short: 'Revelation',
       long: 'The Revelation to St. John the Divine',
     },
