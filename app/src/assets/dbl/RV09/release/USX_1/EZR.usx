@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="EZR" style="id">EZRVR.TXT Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">ESDRAS</para>
+  <para style="toc3">Esd.</para>
+  <para style="toc2">Esdras</para>
+  <para style="toc1">Esdras</para>
+  <para style="mt1">LIBRO DE ESDRAS.</para>
+  <chapter number="1" style="c" sid="EZR 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 1:1"/>Y EN el primer año de Ciro rey de Persia, para que se cumpliese la palabra de Jehová <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="2CH 36:22">2 Cr. 36.22</ref>,<ref loc="2CH 36:23">23</ref>. <ref loc="JER 25:12">Jer. 25.12</ref>,<ref loc="JER 25:13">13</ref> y <ref loc="JER 29:10">29.10</ref> y <ref loc="JER 33:10-14">33.10-14</ref>.</char></note>por boca de Jeremías, excitó Jehová el espíritu de Ciro rey de Persia, el cual hizo pasar pregón por todo su reino, y también por escrito, diciendo:<verse eid="EZR 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 1:2"/>Así ha dicho Ciro rey de Persia: Jehová Dios de los cielos me ha dado todos los reinos de la tierra, <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ISA 44:28">Is. 44.28</ref> y <ref loc="ISA 45:1">45.1</ref>,<ref loc="ISA 45:13">13</ref>.</char></note>y me ha mandado que le edifique casa en Jerusalem, que está en Judá.<verse eid="EZR 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 1:3"/>¿Quién hay entre vosotros de todo su pueblo? Sea Dios con él, y suba á Jerusalem que está en Judá, y edifique la casa á Jehová Dios de Israel, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="DAN 6:26">Dn. 6.26</ref>.</char></note>(él es el Dios,) la cual está en Jerusalem.<verse eid="EZR 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 1:4"/>Y á cualquiera que hubiere quedado de todos los lugares donde peregrinare, los hombres de su lugar le ayuden con plata, y oro, y hacienda, y con bestias; con dones voluntarios para la casa de Dios, la cuál está en Jerusalem.<verse eid="EZR 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 1:5"/>Entonces se levantaron los cabezas de las familias de Judá y de Benjamín, y los sacerdotes y Levitas, todos aquellos cuyo espíritu despertó Dios para subir á edificar la casa de Jehová, la cual está en Jerusalem.<verse eid="EZR 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 1:6"/>Y todos los que estaban en sus alrededores confortaron las manos de ellos con vasos de plata y de oro, con hacienda y bestias, y con cosas preciosas, á más de lo que se ofreció voluntariamente.<verse eid="EZR 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 1:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.7 </char>
+      <char style="xt" closed="false">cp. 5.14 y <ref loc="EZR 6:5">6.5</ref>.</char>
+    </note>Y el rey Ciro sacó los vasos de la casa de Jehová, que Nabucodonosor <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="2CH 36:7">2 Cr. 36.7</ref>.</char></note>había traspasado de Jerusalem, y puesto en la casa de sus dioses.<verse eid="EZR 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 1:8"/>Sacólos pues Ciro rey de Persia, por mano de Mitrídates <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false">cp. 7.21.</char></note>tesorero, el cual los dió por <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false">cp. 5.14.</char></note>cuenta á Sesbassar príncipe de Judá.<verse eid="EZR 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 1:9"/>Y esta es la cuenta de ellos: treinta tazones de oro, mil tazones de plata, veinte y nueve cuchillos,<verse eid="EZR 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 1:10"/>Treinta tazas de oro, cuatrocientas y diez otras tazas de plata, y mil otros vasos.<verse eid="EZR 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 1:11"/>Todos los vasos de oro y de plata, cinco mil y cuatrocientos. Todos los hizo llevar Sesbassar con los que subieron del cautiverio de Babilonia á Jerusalem.<verse eid="EZR 1:11"/></para>
+  <chapter eid="EZR 1"/>
+  <chapter number="2" style="c" sid="EZR 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 2:1"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">Hasta ver. 70, Neh. 7.6-73.</char></note>ESTOS son los hijos de la provincia que subieron de la cautividad, de la transmigración <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="2KI 24:14-16">2 R. 24.14-16</ref> y <ref loc="2KI 25:11">25.11</ref>. <ref loc="2CH 36:20">2 Cr. 36.20</ref>.</char></note>que Nabucodonosor rey de Babilonia hizo traspasar á Babilonia, y que volvieron á Jerusalem y á Judá, cada uno á su ciudad:<verse eid="EZR 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 2:2"/>Los cuales vinieron con Zorobabel, Jesuá, Nehemías, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="NEH 7:7">Neh. 7.7</ref>.</char></note>Seraías, Reelaías, Mardochêo, Bilsán, Mispar, Bigvai, Rehum <char style="it">y</char> Baana. La cuenta de los varones del pueblo de Israel:<verse eid="EZR 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 2:3"/>Los hijos de Paros, dos mil ciento setenta y dos;<verse eid="EZR 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 2:4"/>Los hijos de Sephatías, trescientos setenta y dos;<verse eid="EZR 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 2:5"/>Los hijos de Ara, setecientos setenta y cinco;<verse eid="EZR 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 2:6"/>Los hijos de Pahath-moab, de los hijos de Josué <char style="it">y</char> de Joab, dos mil ochocientos y doce;<verse eid="EZR 2:6"/></para>
+  <para style="s">1 Enumeración de los Israelitas</para>
+  <para style="s">2 que volvieron á Judea</para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 2:7"/>Los hijos de Elam, mil doscientos cincuenta y cuatro;<verse eid="EZR 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 2:8"/>Los hijos de Zattu, novecientos cuarenta y cinco;<verse eid="EZR 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 2:9"/>Los hijos de Zachâi, setecientos y sesenta;<verse eid="EZR 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 2:10"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="NEH 7:15">Neh. 7.15</ref>.</char></note>Bani, seiscientos cuarenta y dos;<verse eid="EZR 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 2:11"/>Los hijos de Bebai, seiscientos veinte y tres;<verse eid="EZR 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 2:12"/>Los hijos de Azgad, mil doscientos veinte y dos;<verse eid="EZR 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 2:13"/>Los hijos de Adonicam, seiscientos sesenta y seis;<verse eid="EZR 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 2:14"/>Los hijos de Bigvai, dos mil cincuenta y seis;<verse eid="EZR 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 2:15"/>Los hijos de Adin, cuatrocientos cincuenta y cuatro;<verse eid="EZR 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 2:16"/>Los hijos de Ater, de Ezechîas, noventa y ocho;<verse eid="EZR 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 2:17"/>Los hijos de Besai, trescientos veinte y tres;<verse eid="EZR 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 2:18"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="NEH 7:24">Neh. 7.24</ref>.</char></note>Jora, ciento y doce;<verse eid="EZR 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 2:19"/>Los hijos de Hasum, doscientos veinte y tres;<verse eid="EZR 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 2:20"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="NEH 7:25">Neh. 7.25</ref>.</char></note>Gibbar, noventa y cinco;<verse eid="EZR 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 2:21"/>Los hijos de Beth-lehem, ciento veinte y tres;<verse eid="EZR 2:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 2:22"/>Los varones de Nethopha, cincuenta y seis;<verse eid="EZR 2:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 2:23"/>Los varones de Anathoth, ciento veinte y ocho;<verse eid="EZR 2:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 2:24"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.24 </char><char style="xt" closed="false"><ref loc="NEH 7:28">Neh. 7.28</ref>.</char></note>Asmeveth, cuarenta y dos;<verse eid="EZR 2:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EZR 2:25"/>Los hijos de Chîriath-jearim, Cephira, y Beeroth, setecientos cuarenta y tres;<verse eid="EZR 2:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EZR 2:26"/>Los hijos de Rama y Gabaa, seiscientos veinte y uno;<verse eid="EZR 2:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EZR 2:27"/>Los varones de Michmas, ciento veinte y dos;<verse eid="EZR 2:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EZR 2:28"/>Los varones de Beth-el y Hai, doscientos veinte y tres;<verse eid="EZR 2:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EZR 2:29"/>Los hijos de Nebo, cincuenta y dos;<verse eid="EZR 2:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EZR 2:30"/>Los hijos de Magbis, ciento cincuenta y seis;<verse eid="EZR 2:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EZR 2:31"/>Los hijos del otro Elam, mil doscientos cincuenta y cuatro;<verse eid="EZR 2:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EZR 2:32"/>Los hijos de Harim, trescientos y veinte;<verse eid="EZR 2:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="EZR 2:33"/>Los hijos de Lod, Hadid, y Ono, setecientos veinte y cinco;<verse eid="EZR 2:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="EZR 2:34"/>Los hijos de Jericó, trescientos cuarenta y cinco;<verse eid="EZR 2:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="EZR 2:35"/>Los hijos de Senaa, tres mil seiscientos y treinta;<verse eid="EZR 2:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="EZR 2:36"/>Los sacerdotes: los hijos de Jedaía, de la casa de Jesuá, novecientos setenta y tres;<verse eid="EZR 2:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="EZR 2:37"/>Los hijos de Immer, mil cincuenta y dos;<verse eid="EZR 2:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="EZR 2:38"/>Los hijos de Pashur, mil doscientos cuarenta y siete;<verse eid="EZR 2:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="EZR 2:39"/>Los hijos de Harim, mil diez y siete.<verse eid="EZR 2:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="EZR 2:40"/>Los Levitas: los hijos de Jesuá y de Cadmiel, <note caller="+" style="x"><char style="xo" closed="false">2.40 </char><char style="xt" closed="false">cp. 3.9. <ref loc="NEH 7:43">Neh. 7.43</ref>.</char></note>de los hijos de Odovías, setenta y cuatro.<verse eid="EZR 2:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="EZR 2:41"/>Los cantores: los hijos de Asaph, ciento veinte y ocho.<verse eid="EZR 2:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="EZR 2:42"/>Los hijos de los porteros: los hijos de Sallum, los hijos de Ater, los hijos de Talmón, los hijos de Accub, los hijos de Hatita, los hijos de Sobai; <char style="it">en</char> todos, ciento treinta y nueve.<verse eid="EZR 2:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="EZR 2:43"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.43 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:2">1 Cr. 9.2</ref>.</char>
+    </note>Los Nethineos: los hijos de Siha, los hijos de Hasupha, los hijos de Thabaoth,<verse eid="EZR 2:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="EZR 2:44"/>Los hijos de Chêros, los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.44 </char><char style="xt" closed="false"><ref loc="NEH 7:47">Neh. 7.47</ref>.</char></note>Siaa, los hijos de Phadón;<verse eid="EZR 2:44"/></para>
+  <para style="p">
+    <verse number="45" style="v" sid="EZR 2:45"/>Los hijos de Lebana, los hijos de Hagaba, los hijos de Accub;<verse eid="EZR 2:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="EZR 2:46"/>Los hijos de Hagab, los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.46 </char><char style="xt" closed="false"><ref loc="NEH 7:48">Neh. 7.48</ref>.</char></note>Samlai, los hijos de Hanán;<verse eid="EZR 2:46"/></para>
+  <para style="p">
+    <verse number="47" style="v" sid="EZR 2:47"/>los hijos de Giddel, los hijos de Gaher, los hijos de Reaía;<verse eid="EZR 2:47"/></para>
+  <para style="p">
+    <verse number="48" style="v" sid="EZR 2:48"/>Los hijos de Resin, los hijos de Necoda, los hijos de Gazam;<verse eid="EZR 2:48"/></para>
+  <para style="p">
+    <verse number="49" style="v" sid="EZR 2:49"/>Los hijos de Uzza, los hijos de Phasea, los hijos de Besai;<verse eid="EZR 2:49"/></para>
+  <para style="p">
+    <verse number="50" style="v" sid="EZR 2:50"/>Los hijos de Asena, los hijos de Meunim, los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.50 </char><char style="xt" closed="false"><ref loc="NEH 7:52">Neh. 7.52</ref>.</char></note>Nephusim;<verse eid="EZR 2:50"/></para>
+  <para style="p">
+    <verse number="51" style="v" sid="EZR 2:51"/>Los hijos de Bacbuc, los hijos de Hacusa, los hijos de Harhur;<verse eid="EZR 2:51"/></para>
+  <para style="p">
+    <verse number="52" style="v" sid="EZR 2:52"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.52 </char><char style="xt" closed="false"><ref loc="NEH 7:54">Neh. 7.54</ref>.</char></note>Basluth, los hijos de Mehida, los hijos de Harsa;<verse eid="EZR 2:52"/></para>
+  <para style="p">
+    <verse number="53" style="v" sid="EZR 2:53"/>Los hijos de Barcos, los hijos de Sisera, los hijos de Thema;<verse eid="EZR 2:53"/></para>
+  <para style="p">
+    <verse number="54" style="v" sid="EZR 2:54"/>Los hijos de Nesía, los hijos de Hatipha.<verse eid="EZR 2:54"/></para>
+  <para style="p">
+    <verse number="55" style="v" sid="EZR 2:55"/>Los hijos de los siervos de Salomón: los hijos de Sotai, los hijos de Sophereth, los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.55 </char><char style="xt" closed="false"><ref loc="NEH 7:57">Neh. 7.57</ref>.</char></note>Peruda;<verse eid="EZR 2:55"/></para>
+  <para style="p">
+    <verse number="56" style="v" sid="EZR 2:56"/>Los hijos de Jaala, lo hijos de Darcón, los hijos de Giddel;<verse eid="EZR 2:56"/></para>
+  <para style="s">1 desde Babilonia.</para>
+  <para style="s">2 Restauración del altar.</para>
+  <para style="p">
+    <verse number="57" style="v" sid="EZR 2:57"/>Los hijos de Sephatías, los hijos de Hatil, los hijos de Phochêreth-hassebaim, los hijos de <note caller="+" style="x"><char style="xo" closed="false">2.57 </char><char style="xt" closed="false"><ref loc="NEH 7:59">Neh. 7.59</ref>.</char></note>Ami.<verse eid="EZR 2:57"/></para>
+  <para style="p">
+    <verse number="58" style="v" sid="EZR 2:58"/>Todos los Nethineos, é hijos de los siervos de Salomón, trescientos noventa y dos.<verse eid="EZR 2:58"/></para>
+  <para style="p">
+    <verse number="59" style="v" sid="EZR 2:59"/>Y estos fueron los que subieron de Tel-mela, Tel-harsa, Chêrub, <note caller="+" style="x"><char style="xo" closed="false">2.59 </char><char style="xt" closed="false"><ref loc="NEH 7:61">Neh. 7.61</ref>.</char></note>Addan, é Immer, los cuales no pudieron mostrar la casa de sus padres, ni su linaje, si eran de Israel:<verse eid="EZR 2:59"/></para>
+  <para style="p">
+    <verse number="60" style="v" sid="EZR 2:60"/>Los hijos de Delaía, los hijos de Tobías, los hijos de Necoda, seiscientos <note caller="+" style="x"><char style="xo" closed="false">2.60 </char><char style="xt" closed="false"><ref loc="NEH 7:62">Neh. 7.62</ref>.</char></note>cincuenta y dos.<verse eid="EZR 2:60"/></para>
+  <para style="p">
+    <verse number="61" style="v" sid="EZR 2:61"/>Y de los hijos de los sacerdotes: los hijos de Abaía, los hijos de Cos, los hijos de Barzillai, el cual tomó mujer de las hijas de <note caller="+" style="x"><char style="xo" closed="false">2.61 </char><char style="xt" closed="false"><ref loc="2SA 17:27">2 S. 17.27</ref>.</char></note>Barzillai Galaadita, y fué llamado del nombre de ellas.<verse eid="EZR 2:61"/></para>
+  <para style="p">
+    <verse number="62" style="v" sid="EZR 2:62"/>Estos buscaron su registro de genealogías, y no fué hallado; y <note caller="+" style="x"><char style="xo" closed="false">2.62 </char><char style="xt" closed="false"><ref loc="NUM 3:10">Nm. 3.10</ref>.</char></note>fueron echados del sacerdocio.<verse eid="EZR 2:62"/></para>
+  <para style="p">
+    <verse number="63" style="v" sid="EZR 2:63"/>Y el <note caller="+" style="f"><char style="fr" closed="false">2.63 </char><char style="ft" closed="false">Esto es, <char style="it">Gobernador.</char> Neh. 8.9.</char></note>Tirsatha les dijo que <note caller="+" style="x"><char style="xo" closed="false">2.63 </char><char style="xt" closed="false"><ref loc="LEV 22:2">Lv. 22.2</ref>,<ref loc="LEV 22:10">10</ref>,<ref loc="LEV 22:15">15</ref>,<ref loc="LEV 22:16">16</ref>.</char></note>no comiesen de las cosas más santas, hasta que hubiese sacerdote con <note caller="+" style="x"><char style="xo" closed="false">2.63 </char><char style="xt" closed="false"><ref loc="EXO 28:30">Ex. 28.30</ref>.</char></note>Urim y Thummim.<verse eid="EZR 2:63"/></para>
+  <para style="p">
+    <verse number="64" style="v" sid="EZR 2:64"/>Toda la congregación, unida como un <char style="it">solo hombre,</char> era de cuarenta y dos mil trescientos y sesenta,<verse eid="EZR 2:64"/></para>
+  <para style="p">
+    <verse number="65" style="v" sid="EZR 2:65"/>Sin sus siervos y siervas, los cuales eran siete mil trescientos treinta y siete: y tenían <note caller="+" style="x"><char style="xo" closed="false">2.65 </char><char style="xt" closed="false"><ref loc="NEH 7:67">Neh. 7.67</ref>.</char></note>doscientos cantores y cantoras.<verse eid="EZR 2:65"/></para>
+  <para style="p">
+    <verse number="66" style="v" sid="EZR 2:66"/>Sus caballos eran setecientos treinta y seis; sus mulos, doscientos cuarenta y cinco;<verse eid="EZR 2:66"/></para>
+  <para style="p">
+    <verse number="67" style="v" sid="EZR 2:67"/>Sus camellos, cuatrocientos treinta y cinco; asnos, seis mil setecientos y veinte.<verse eid="EZR 2:67"/></para>
+  <para style="p">
+    <verse number="68" style="v" sid="EZR 2:68"/>Y algunos de los cabezas de los padres, cuando vinieron á la casa de Jehová la cual estaba en Jerusalem, ofrecieron voluntariamente para la casa de Dios, para levantarla en su asiento.<verse eid="EZR 2:68"/></para>
+  <para style="p">
+    <verse number="69" style="v" sid="EZR 2:69"/>Según sus fuerzas dieron al tesorero de la obra <note caller="+" style="x"><char style="xo" closed="false">2.69 </char><char style="xt" closed="false"><ref loc="NEH 7:70-72">Neh. 7.70-72</ref>.</char></note>sesenta y un mil <note caller="+" style="x"><char style="xo" closed="false">2.69 </char><char style="xt" closed="false"><ref loc="1CH 29:7">1 Cr. 29.7</ref>.</char></note>dracmas de oro, y cinco mil libras de plata, y cien túnicas sacerdotales.<verse eid="EZR 2:69"/></para>
+  <para style="p">
+    <verse number="70" style="v" sid="EZR 2:70"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.70 </char><char style="xt" closed="false"><ref loc="NEH 7:73">Neh. 7.73</ref>.</char></note>habitaron los sacerdotes, y los Levitas, y <char style="it">los</char> del pueblo, y los cantores, y los porteros y los Nethineos, en sus ciudades; y todo Israel en sus ciudades.<verse eid="EZR 2:70"/></para>
+  <chapter eid="EZR 2"/>
+  <chapter number="3" style="c" sid="EZR 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 3:1"/>Y LLEGADO el mes séptimo, y <char style="it">ya</char> los hijos de Israel en las ciudades, juntóse el pueblo como un solo hombre en Jerusalem.<verse eid="EZR 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 3:2"/>Entonces se levantó <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="HAG 1:1">Hag. 1.1</ref>,<ref loc="HAG 1:12">12</ref>,<ref loc="HAG 1:14">14</ref> y <ref loc="HAG 2:2">2.2</ref>,<ref loc="HAG 2:4">4</ref>. <ref loc="ZEC 3:1">Zac. 3.1</ref>,<ref loc="ZEC 3:3">3</ref>,<ref loc="ZEC 3:6">6</ref>,<ref loc="ZEC 3:8">8</ref>.</char></note>Jesuá hijo de Josadec, y sus hermanos los sacerdotes, y <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="MAT 1:12">Mt. 1.12</ref>. <ref loc="LUK 3:27">Lc. 3.27</ref>.</char></note>Zorobabel hijo de Sealthiel, y sus hermanos, y edificaron el altar del Dios de Israel, para ofrecer sobre él holocaustos <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="DEU 12:5">Dt. 12.5</ref>,<ref loc="DEU 12:6">6</ref>.</char></note>como está escrito en la ley de Moisés <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="DEU 33:1">Dt. 33.1</ref>.</char></note>varón de Dios.<verse eid="EZR 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 3:3"/>Y asentaron el altar sobre sus basas, bien que tenían miedo de los pueblos de las tierras, y ofrecieron sobre él holocaustos á Jehová, <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="NUM 28:3">Nm. 28.3</ref>,<ref loc="NUM 28:4">4</ref>.</char></note>holocaustos á la mañana y á la tarde.<verse eid="EZR 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 3:4"/>Hicieron asimismo la <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="NEH 8:14">Neh. 8.14</ref>,<ref loc="NEH 8:17">17</ref>. <ref loc="ZEC 14:16">Zac. 14.16</ref>.</char></note>solemnidad de las cabañas, <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="LEV 23:34">Lv. 23.34</ref>.</char></note>como está escrito, y <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="NUM 29:12-38">Nm. 29.12-38</ref>.</char></note>holocaustos cada día por cuenta, conforme al rito, cada cosa en su día;<verse eid="EZR 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 3:5"/>Y á más de esto, el holocausto <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="EXO 29:38">Ex. 29.38</ref>. <ref loc="NUM 28:11">Nm. 28.11</ref>.</char></note>continuo, y las nuevas lunas, y todas las <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="NUM 29:39">Nm. 29.39</ref>.</char></note>fiestas santificadas de Jehová, y todo <char style="it">sacrificio</char> espontáneo, <char style="it">toda</char> ofrenda voluntaria á Jehová.<verse eid="EZR 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 3:6"/>Desde el primer día del mes séptimo comenzaron á ofrecer holocaustos á Jehová; mas el templo de Jehová no estaba aún fundado.<verse eid="EZR 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 3:7"/>Y dieron dinero á los carpinteros y oficiales; asimismo <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="1KI 5:6">1 R. 5.6</ref>,<ref loc="1KI 5:9">9</ref>.</char></note>comida y bebida y aceite á los Sidonios y Tirios, para que trajesen madera de cedro del Líbano á la mar de <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="JOS 19:46">Jos. 19.46</ref>.</char></note>Joppe, <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false">cp. 1.2,3.</char></note>conforme á la voluntad de Ciro rey de Persia acerca de esto.<verse eid="EZR 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 3:8"/>Y en el año segundo de su venida á la casa de Dios en Jerusalem, en el mes segundo, comenzaron <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">ver. 2.</char></note>Zorobabel hijo de Sealthiel, y Jesuá hijo de Josadec, y los otros sus hermanos, los sacerdotes y los Levitas, y todos los que habían venido de la cautividad á Jerusalem; y pusieron á los Levitas de <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="1CH 23:24">1 Cr. 23.24</ref>.</char></note>veinte años arriba para que tuviesen cargo de la obra de la casa de Jehová.<verse eid="EZR 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 3:9"/>Jesuá también, sus hijos y sus hermanos, Cadmiel y sus hijos, hijos de <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 2.40.</char></note>Judá, como un <char style="it">solo hombre</char> asistían para dar priesa á los que hacían la obra en la casa de Dios: los hijos de Henadad, sus hijos y sus hermanos, Levitas.<verse eid="EZR 3:9"/></para>
+  <para style="s">1 Construcción del templo.</para>
+  <para style="s">2 Los enemigos dificultan</para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 3:10"/>Y cuando los albañiles del templo de Jehová echaban los cimientos, pusieron á los sacerdotes <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 2.69.</char></note>vestidos de <char style="it">sus ropas,</char> con <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="1CH 15:24">1 Cr. 15.24</ref>.</char></note>trompetas, y á Levitas hijos de Asaph con <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="1CH 15:16">1 Cr. 15.16</ref>.</char></note>címbalos, para que alabasen á Jehová, <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="1CH 25:1">1 Cr. 25.1</ref>,<ref loc="1CH 25:2">2</ref>.</char></note>según ordenanza de David rey de Israel.<verse eid="EZR 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 3:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 12:24">Neh. 12.24</ref>.</char>
+    </note>Y cantaban, alabando y confesando á Jehová, <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false"><ref loc="1CH 16:34">1 Cr. 16.34</ref>,<ref loc="1CH 16:41">41</ref>.</char></note><char style="it">y decían:</char> Porque es bueno, porque para siempre es su misericordia sobre Israel. Y todo el pueblo aclamaba con grande júbilo, alabando á Jehová, porque á la casa de Jehová se echaba el cimiento.<verse eid="EZR 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 3:12"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false"><ref loc="HAG 2:3">Hag. 2.3</ref>.</char></note>muchos de los sacerdotes y de los Levitas y de los cabezas de los padres, ancianos que habían visto la casa primera, viendo fundar esta casa, lloraban en alta voz, mientras muchos <char style="it">otros</char> daban grandes gritos de alegría.<verse eid="EZR 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 3:13"/>Y no podía discernir el pueblo el clamor de los gritos de alegría, de la voz del lloro del pueblo: porque clamaba el pueblo con grande júbilo, y oíase el ruido hasta de lejos.<verse eid="EZR 3:13"/></para>
+  <chapter eid="EZR 3"/>
+  <chapter number="4" style="c" sid="EZR 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 4:1"/>Y OYENDO <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">vers. 7,8,9.</char></note>los enemigos de Judá y de Benjamín, que los <char style="it">venidos</char> de la cautividad edificaban el templo de Jehová Dios de Israel,<verse eid="EZR 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 4:2"/>Llegáronse á Zorobabel, y á los cabezas de los padres, y dijéronles: Edificaremos con vosotros, porque como vosotros buscaremos á vuestro Dios, y á él sacrificamos desde <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="2KI 17:24">2 R. 17.24</ref>,<ref loc="2KI 17:32">32</ref>,<ref loc="2KI 17:33">33</ref> y <ref loc="2KI 19:37">19.37</ref>.</char></note>los días de Esar-haddón rey de Asiria, que nos hizo subir aquí.<verse eid="EZR 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 4:3"/>Y dijóles Zorobabel, y Jesuá, y los demás cabezas de los padres de Israel: No nos conviene edificar con vosotros casa á nuestro Dios, sino que nosotros solos <char style="it">la</char> edificaremos á Jehová Dios de Israel, como nos mandó el <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">cp. 3.7.</char></note>rey Ciro, rey de Persia.<verse eid="EZR 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 4:4"/>Mas el pueblo de la tierra debilitaba las manos del pueblo de Judá, y los arredraban de edificar.<verse eid="EZR 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 4:5"/>Cohecharon además contra ellos consejeros para disipar su consejo, todo el tiempo de Ciro rey de Persia, y hasta el reinado de Darío rey de Persia.<verse eid="EZR 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 4:6"/>Y en el reinado de <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="EZR 1:1">Esd. 1.1</ref>, etc.</char></note>Assuero, en el principio de su reinado, escribieron acusaciones contra los moradores de Judá y de Jerusalem.<verse eid="EZR 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 4:7"/>Y en días de Artajerjes, Bislam, <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false">cp. 1.8.</char></note>Mitrídates, Tabeel, y los demás sus compañeros, escribieron á Artajerjes rey de Persia; y la escritura de la carta estaba hecha en <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="2KI 18:26">2 R. 18.26</ref>.</char></note>siriaco, y declarada en siriaco.<verse eid="EZR 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 4:8"/>Rehum canciller, y Simsai secretario, escribieron una carta contra Jerusalem al rey Artajerjes, como se sigue.<verse eid="EZR 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 4:9"/>Entonces Rehum canciller, y Simsai secretario, y los demás sus compañeros, los Dineos, y los Apharsathachêos, Thepharleos, Apharseos, los Erchûeos, los Babilonios, Susanchêos, Dieveos, y Elamitas;<verse eid="EZR 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 4:10"/>Y los demás pueblos que el grande y glorioso <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">ver. 2.</char></note>Asnappar trasportó, é hizo habitar en las ciudades de Samaria, y los demás de la otra parte del río, etcétera, <char style="it">escribieron.</char><verse eid="EZR 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 4:11"/>Este es el traslado de la carta que enviaron: Al rey Artajerjes: Tus siervos de la otra parte del río, etcétera.<verse eid="EZR 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 4:12"/>Sea notorio al rey, que los Judíos que subieron de ti á nosotros, vinieron á Jerusalem; y edifican la ciudad rebelde y mala, y han erigido los muros; y compuesto los fundamentos.<verse eid="EZR 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 4:13"/>Ahora, notorio sea al rey, que si aquella ciudad fuere reedificada, y los muros fueren establecidos, <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 7.24.</char></note>el tributo, pecho, y rentas no darán, y el catastro de lo reyes será menoscabado.<verse eid="EZR 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 4:14"/>Ya pues que estamos mantenidos de palacio, no nos es justo ver el menosprecio del rey: hemos enviado por tanto, y hécho <char style="it">lo</char> saber al rey,<verse eid="EZR 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 4:15"/>Para que busque en el libro de las historias de nuestros padres; y hallarás en el libro de las historias, y sabrás que esta ciudad es ciudad rebelde, y perjudicial á los reyes y á las provincias, y que de tiempo antiguo forman en medio de ella rebeliones; por lo que esta ciudad fué destruída.<verse eid="EZR 4:15"/></para>
+  <para style="s">1 la construcción del templo.</para>
+  <para style="s">2 Los Judíos escriben á Darío.</para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 4:16"/>Hacemos saber al rey, que si esta ciudad fuere edificada, y erigidos sus muros, la parte allá del río no será tuya.<verse eid="EZR 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 4:17"/>El rey envió <char style="it">esta</char> respuesta á Rehum canciller, y á Simsai secretario, y á los demás sus compañeros que habitan en Samaria, y á los demás de la parte allá del río:</para>
+  <para style="q" vid="EZR 4:17">Paz, etc.<verse eid="EZR 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 4:18"/>La carta que nos enviasteis claramente fué leída delante de mí.<verse eid="EZR 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 4:19"/>Y por mí fué dado mandamiento, y buscaron, y hallaron que aquella ciudad de tiempo antiguo se levanta contra los reyes, y se rebela, y se forma en ella sedición:<verse eid="EZR 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 4:20"/>Y que reyes fuertes hubo en Jerusalem, <note caller="+" style="x"><char style="xo" closed="false">4.20 </char><char style="xt" closed="false"><ref loc="1KI 4:21">1 R. 4.21</ref>.</char></note>quienes señorearon en todo <char style="it">lo que está</char> á la parte allá del río; y que tributo, y pecho, y rentas se les daba.<verse eid="EZR 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 4:21"/>Ahora <char style="it">pues</char> dad orden que cesen aquellos hombres, y no sea esa ciudad edificada, hasta que por mí sea dado mandamiento.<verse eid="EZR 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 4:22"/>Y mirad bien que no hagáis error en esto: ¿por qué habrá de crecer el daño para perjuicio de los reyes?<verse eid="EZR 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 4:23"/>Entonces, cuando el traslado de la carta del rey Artajerjes fué leído delante de Rehum, y de Simsai secretario, y sus compañeros, fueron prestamente á Jerusalem á los Judíos, é hiciéronles cesar con poder y fuerza.<verse eid="EZR 4:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 4:24"/>Cesó entonces la obra de la casa de Dios, la cual estaba en Jerusalem: y cesó hasta el año segundo del reinado de Darío rey de Persia.<verse eid="EZR 4:24"/></para>
+  <chapter eid="EZR 4"/>
+  <chapter number="5" style="c" sid="EZR 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 5:1"/>Y PROFETIZARON <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="HAG 1:1">Hag. 1.1</ref>.</char></note>Haggeo profeta, y <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 6.14. <ref loc="ZEC 1:1">Zac. 1.1</ref>.</char></note>Zacarías hijo de Iddo, profetas, á los Judíos que estaba en Judá y en Jerusalem <char style="it">yendo</char> en nombre del Dios de Israel á ellos.<verse eid="EZR 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 5:2"/>Entonces se levantaron Zorobabel hijo de Sealthiel, y Jesuá hijo de Josadec; y comenzaron á edificar la casa de Dios que estaba en Jerusalem; y con ellos los profetas de Dios que les ayudaban.<verse eid="EZR 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 5:3"/>En aquel tiempo vino á ellos Tatnai, capitán de la parte allá del río, y Setharboznai y sus compañeros, y dijéronles así: ¿Quién os dió mandamiento para edificar esta casa, y restablecer estos muros?<verse eid="EZR 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 5:4"/>Entonces les dijimos en orden á esto cuáles eran los nombres de los varones que edificaban este edificio.<verse eid="EZR 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 5:5"/>Mas <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="PSA 33:18">Sal. 33.18</ref>.</char></note>los ojos de su Dios fueron sobre los ancianos de los Judíos, y no les hicieron cesar hasta que el negocio viniese á Darío: y entonces respondieron por carta sobre esto.<verse eid="EZR 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 5:6"/>Traslado de la carta que Tatnai, capitán de la parte allá del río, y Sethar-boznai, y sus compañeros los Apharsachêos, que estaban á la parte allá del río, enviaron al rey Darío.<verse eid="EZR 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 5:7"/>Enviáronle carta, y de esta manera estaba escrito en ella.</para>
+  <para style="q" vid="EZR 5:7">Al rey Darío toda paz.<verse eid="EZR 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 5:8"/>Sea notorio al rey, que fuimos á la provincia de Judea, á la casa del gran Dios, la cual se edifica de piedra de mármol; y los maderos son puestos en las paredes, y la obra se hace apriesa, y prospera en sus manos.<verse eid="EZR 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 5:9"/>Entonces preguntamos á los ancianos, diciéndoles así: ¿Quién os dió mandameinto para edificar esta casa, y para restablecer estos muros?<verse eid="EZR 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 5:10"/>Y también les preguntamos sus nombres para hacértelo saber, para escribir <char style="it">te</char> los nombres de los varones que estaban por cabezas de ellos.<verse eid="EZR 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 5:11"/>Y respondiéronnos, diciendo así: Nosotros somos siervos de Dios del cielo y de la tierra, y reedificamos la casa que ya muchos años antes había sido edificada, la cual edificó y fundó <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="1KI 6:1">1 R. 6.1</ref>.</char></note>el gran rey de Israel.<verse eid="EZR 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 5:12"/>Mas <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="2CH 36:16">2 Cr. 36.16</ref>,<ref loc="2CH 36:17">17</ref>.</char></note>después que nuestros padres ensañaron al Dios de los cielos, él los entregó en mano de <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="2KI 24:2">2 R. 24.2</ref> y <ref loc="2KI 25:8">25.8</ref>,<ref loc="2KI 25:9">9</ref>,<ref loc="2KI 25:11">11</ref>.</char></note>Nabucodonosor rey de Babilonia, Caldeo, el cual destruyó esta casa, é hizo trasportar el pueblo á Babilonia.<verse eid="EZR 5:12"/></para>
+  <para style="s">1 Continúa la reedificación</para>
+  <para style="s">2 por orden del rey Darío.</para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 5:13"/>Empero el primer año <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">cp. 1.1.</char></note>de Ciro rey de Babilonia, el <char style="it">mismo</char> rey Ciro dió mandamiento para que esta casa de Dios fuese edificada.<verse eid="EZR 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 5:14"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false">cp. 1.7,8 y <ref loc="EZR 6:5">6.5</ref>.</char></note>también los vasos de oro y de plata de la casa de Dios, que Nabucodonosor había sacado del templo que estaba en Jerusalem, y los había metido en el templo de Babilonia, el rey Ciro los sacó del templo de Babilonia, y fueron entregados á <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false">cp. 1.8 y <ref loc="EZR 2:2">2.2</ref> y <ref loc="EZR 3:2">3.2</ref>,<ref loc="EZR 3:8">8</ref>. <ref loc="HAG 1:14">Hag. 1.14</ref> y <ref loc="HAG 2:2">2.2</ref>,<ref loc="HAG 2:21">21</ref>. <ref loc="ZEC 4:9">Zac. 4.9</ref>, etc.</char></note>Sesbassar, al cual había puesto por gobernador;<verse eid="EZR 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 5:15"/>Y le dijo: Toma estos vasos, ve y ponlos en el templo que está en Jerusalem; y la casa de Dios sea edificada en su lugar.<verse eid="EZR 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 5:16"/>Entonces este Sesbassar vino, y <note caller="+" style="x"><char style="xo" closed="false">5.16 </char><char style="xt" closed="false">cp. 3.8,10.</char></note>puso los fundamentos de la casa de Dios que estaba en Jerusalem, y desde entonces hasta ahora se edifica, y aun no está acabada.<verse eid="EZR 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 5:17"/>Y ahora, si al rey parece bien, búsquese en la casa de los tesoros del rey que está allí en Babilonia, si es así que por el rey Ciro había sido dado mandamiento para edificar esta casa de Dios en Jerusalem, y envíenos <char style="it">á decir</char> la voluntad del rey sobre esto.<verse eid="EZR 5:17"/></para>
+  <chapter eid="EZR 5"/>
+  <chapter number="6" style="c" sid="EZR 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 6:1"/>ENTONCES el rey Darío dió mandamiento, y <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 5.17.</char></note>buscaron en la casa de los libros, donde guardaban los tesoros allí en Babilonia.<verse eid="EZR 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 6:2"/>Y fué hallado en Achmetta, en el palacio que está en la provincia de Media, un libro, dentro del cual estaba escrito así:</para>
+  <para style="q" vid="EZR 6:2">Memoria:<verse eid="EZR 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 6:3"/>En el año primero del rey Ciro, el <char style="it">mismo</char> rey Ciro dió mandamiento acerca de la casa de Dios que estaba en Jerusalem, que fuese la casa edificada para lugar en que sacrifiquen sacrificios, y que sus paredes fuesen cubiertas; su altura de sesenta codos, y de sesenta codos su anchura;<verse eid="EZR 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 6:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 6:36">1 R. 6.36</ref>.</char>
+    </note>Los órdenes, tres de piedra de mármol, y un orden de madera nueva; y que el gasto sea dado de la casa del rey.<verse eid="EZR 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 6:5"/>Y también <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false">cp. 1.7,8 y <ref loc="EZR 5:14">5.14</ref>.</char></note>los vasos de oro y de plata de la casa de Dios, que Nabucodonosor sacó del templo que estaba en Jerusalem y los pasó á Babilonia, sean devueltos y vayan al templo que está en Jerusalem, á su lugar, y sean puestos en la casa de Dios.<verse eid="EZR 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 6:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.6 </char>
+      <char style="xt" closed="false">cp. 5.3,6.</char>
+    </note>Ahora pues, Tatnai, jefe del lado allá del río, Sethar-boznai, y sus compañeros los <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 4.9.</char></note>Apharsachêos que estáis á la otra parte del río, apartaos de ahí.<verse eid="EZR 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 6:7"/>Dejad la obra de la casa de este Dios al principal de los Judíos, y á sus ancianos, para que edifiquen la casa de este Dios en su lugar.<verse eid="EZR 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 6:8"/>Y por mí es dado mandamiento de lo que habéis de hacer con los ancianos de estos Judíos, para edificar la casa de este Dios: que de la hacienda del rey, que tiene del <note caller="+" style="x"><char style="xo" closed="false">6.8 </char><char style="xt" closed="false">cp. 4.13.</char></note>tributo de la parte allá del río, los gastos sean dados luego á aquellos varones, para que no cesen.<verse eid="EZR 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 6:9"/>Y lo que fuere necesario, becerros y carneros y corderos, para holocaustos al Dios del cielo, trigo, sal, vino y aceite, conforme á lo que dijeren los sacerdotes que están en Jerusalem, déseles cada un día sin obstáculo alguno;<verse eid="EZR 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 6:10"/>Para que ofrezcan olores de holganza al Dios del cielo, y oren por la vida del rey y por sus hijos.<verse eid="EZR 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 6:11"/>También es dado por mí mandamiento, que cualquiera que mudare este decreto, sea derribado un madero de su casa, y enhiesto, sea colgado en él: y su casa sea hecha muladar por esto.<verse eid="EZR 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 6:12"/>Y el Dios que hizo habitar allí su <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false"><ref loc="1KI 9:3">1 R. 9.3</ref>.</char></note>nombre, destruya todo rey y pueblo que pusiere su mano para mudar ó destruir esta casa de Dios, la cual está en Jerusalem. Yo Darío puse el decreto: sea hecho prestamente.<verse eid="EZR 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 6:13"/>Entonces Tatnai, gobernador del otro lado del río, y Sethar-boznai, y sus compañeros, hicieron prestamente según el rey Darío había enviado.<verse eid="EZR 6:13"/></para>
+  <para style="s">1 Reorganización del culto.</para>
+  <para style="s">2 Esdras enviado á Judea.</para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 6:14"/>Y los ancianos de los Judíos edificaban y prosperaban, conforme á la profecía de Haggeo profeta, y de Zacarías hijo de Iddo. Edificaron pues, y acabaron, por el mandamiento del Dios de Israel, y por el mandamiento de <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false">cp. 1.1 y <ref loc="EZR 5:13">5.13</ref>.</char></note>Ciro, y de <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false">cp. 4.24.</char></note>Darío, y de <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false">cp. 7.1.</char></note>Artajerjes rey de Persia.<verse eid="EZR 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 6:15"/>Y esta casa fué acabada al tercer día del mes de <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="EST 3:7">Est. 3.7</ref>,<ref loc="EST 3:13">13</ref> y <ref loc="EST 8:12">8.12</ref>.</char></note>Adar, que era el sexto año del reinado del rey Darío.<verse eid="EZR 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 6:16"/>Y los hijos de Israel, los sacerdotes y los Levitas, y los demás que habían venido de la trasportación, hicieron <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="1KI 8:63">1 R. 8.63</ref>.</char></note>la dedicación de esta casa de Dios con gozo.<verse eid="EZR 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 6:17"/>Y <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false">cp. 8.35.</char></note>ofrecieron en la dedicación de esta casa de Dios cien becerros, doscientos carneros, cuatrocientos corderos; y machos de cabrío en expiación por todo Israel, doce, conforme al número de las tribus de Israel.<verse eid="EZR 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 6:18"/>Y pusieron á los sacerdotes en sus <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="1CH 24:1">1 Cr. 24.1</ref>.</char></note>clases, y á los Levitas en sus divisiones, sobre la obra de Dios que está en Jerusalem, conforme á lo escrito <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="NUM 3:6">Nm. 3.6</ref> y <ref loc="NUM 8:9">8.9</ref>.</char></note>en el libro de Moisés.<verse eid="EZR 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 6:19"/>Y los de la transmigración hicieron la pascua <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="EXO 12:6">Ex. 12.6</ref>.</char></note>a los catorce del mes primero.<verse eid="EZR 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 6:20"/>Porque los sacerdotes y los Levitas se habían <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="2CH 30:15">2 Cr. 30.15</ref>.</char></note>purificado á una; todos fueron limpios: y <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="2CH 35:11">2 Cr. 35.11</ref>.</char></note>sacrificaron la pascua por todos los de la transmigración, y por sus hermanos los sacerdotes, y por sí mismos.<verse eid="EZR 6:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 6:21"/>Y comieron los hijos de Israel que habían vuelto de la transmigración, y todos los que se habían apartado á ellos de la inmundicia de las gentes de la tierra, para buscar á Jehová Dios de Israel.<verse eid="EZR 6:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 6:22"/>Y celebraron <note caller="+" style="x"><char style="xo" closed="false">6.22 </char><char style="xt" closed="false"><ref loc="EXO 12:15">Ex. 12.15</ref> y <ref loc="EXO 13:6">13.6</ref>.</char></note>la solemnidad de los panes ázimos siete días con regocijo, por cuanto Jehová los había alegrado, y convertido el corazón del rey de Asiria á ellos, para esforzar sus manos en la obra de la casa de Dios, del Dios de Israel.<verse eid="EZR 6:22"/></para>
+  <chapter eid="EZR 6"/>
+  <chapter number="7" style="c" sid="EZR 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 7:1"/>PASADAS estas cosas, en el reinado de <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false"><ref loc="NEH 2:1">Neh. 2.1</ref>.</char></note>Artajerjes rey de Persia, Esdras, <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false"><ref loc="1CH 6:4-14">1 Cr. 6.4-14</ref>.</char></note>hijo de Seraías, hijo de Azarías, hijo de Hilcías,<verse eid="EZR 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 7:2"/>Hijo de Sallum, hijo de Sadoc, hijo de Achîtob,<verse eid="EZR 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 7:3"/>Hijo de Amarías, hijo de Azarías, hijo de Meraioth,<verse eid="EZR 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 7:4"/>Hijo de Zeraías, hijo de Uzzi, hijo de Bucci,<verse eid="EZR 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 7:5"/>Hijo de Abisue, hijo de Phinees, hijo de Eleazar, hijo de Aarón, primer sacerdote:<verse eid="EZR 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 7:6"/>Este Esdras subió de Babilonia, <note caller="+" style="x"><char style="xo" closed="false">7.6 </char><char style="xt" closed="false"><ref loc="NEH 8:1">Neh. 8.1</ref>,<ref loc="NEH 8:4">4</ref>,<ref loc="NEH 8:5">5</ref>,<ref loc="NEH 8:13">13</ref> y <ref loc="NEH 12:26">12.26</ref>,<ref loc="NEH 12:36">36</ref>.</char></note>el cual era escriba diligente en la ley de Moisés, que Jehová Dios de Israel había dado; y concedióle el rey, según <note caller="+" style="x"><char style="xo" closed="false">7.6 </char><char style="xt" closed="false">vers. 9,28.</char></note>la mano de Jehová su Dios sobre él, todo lo que pidió.<verse eid="EZR 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 7:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.7 </char>
+      <char style="xt" closed="false">cp. 8.1-14.</char>
+    </note>Y subieron <char style="it">con él</char> á Jerusalem de los hijos de Israel, y de los sacerdotes, <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false">cp. 8.15-19.</char></note>y Levitas, y cantores, y porteros, <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false">cp. 2.43 y <ref loc="EZR 8:17">8.17</ref>,<ref loc="EZR 8:20">20</ref>.</char></note>y Nethineos, en el séptimo año del rey Artajerjes.<verse eid="EZR 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 7:8"/>Y llegó á Jerusalem en el mes quinto, el año séptimo del rey.<verse eid="EZR 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 7:9"/>Porque el <char style="it">día</char> primero del primer mes fué el principio de la partida de Babilonia, y al primero del mes quinto llegó á Jerusalem, según la buena mano de su Dios sobre él<verse eid="EZR 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 7:10"/>Porque Esdras había preparado su corazón para inquirir la ley de Jehová, y para hacer y <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false"><ref loc="NEH 8:1-8">Neh. 8.1-8</ref>.</char></note>enseñar á Israel mandamientos y juicios.<verse eid="EZR 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 7:11"/>Y este es el traslado de la carta que dió el rey Artajerjes á Esdras, sacerdote escriba, escriba de las palabras mandadas de Jehová, y de sus estatutos á Israel:<verse eid="EZR 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 7:12"/>Artajerjes, <note caller="+" style="x"><char style="xo" closed="false">7.12 </char><char style="xt" closed="false"><ref loc="EXO 26:7">Ex. 26.7</ref>. <ref loc="DAN 2:37">Dn. 2.37</ref>.</char></note>rey de los reyes, á Esdras sacerdote, escriba perfecto de la ley del Dios del cielo:</para>
+  <para style="q" vid="EZR 7:12">Salud, etc.<verse eid="EZR 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 7:13"/>Por mí es dado mandamiento, que cualquiera que quisiere en mi reino, del pueblo de Israel y de sus sacerdotes y Levitas, ir contigo á Jerusalem, vaya.<verse eid="EZR 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 7:14"/>Porque de parte del rey y de sus <note caller="+" style="x"><char style="xo" closed="false">7.14 </char><char style="xt" closed="false"><ref loc="EST 1:14">Est. 1.14</ref>.</char></note>siete consultores eres enviado á visitar á Judea y á Jerusalem, conforme á la ley de tu Dios que está en tu mano;<verse eid="EZR 7:14"/></para>
+  <para style="s">1 Misión confiada á Esdras.</para>
+  <para style="s">2 Israelitas que fueron con él.</para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 7:15"/>Y á llevar la plata y el oro que el rey y sus consultores voluntariamente ofrecen al Dios de Israel, cuya morada está en Jerusalem;<verse eid="EZR 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 7:16"/>Y toda la plata y el oro que hallares en toda la provincia de Babilonia, con las ofrendas voluntarias del pueblo y de los sacerdotes, que de su voluntad ofrecieren para la casa de su Dios que está en Jerusalem.<verse eid="EZR 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 7:17"/>Comprarás pues prestamente con esta plata becerros, carneros, corderos, con sus <note caller="+" style="x"><char style="xo" closed="false">7.17 </char><char style="xt" closed="false"><ref loc="NUM 15:4-13">Nm. 15.4-13</ref>.</char></note>presentes y sus <note caller="+" style="x"><char style="xo" closed="false">7.17 </char><char style="xt" closed="false"><ref loc="NUM 15:10">Nm. 15.10</ref>.</char></note>libaciones, y los ofrecerás sobre el altar de la casa de vuestro Dios que está en Jerusalem.<verse eid="EZR 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 7:18"/>Y lo que á ti y á tus hermanos pluguiere hacer de la otra plata y oro, hacedlo conforme á la voluntad de vuestro Dios.<verse eid="EZR 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 7:19"/>Y los vasos que te son entregados para el servicio de la casa de tu Dios, los restituirás delante de Dios en Jerusalem.<verse eid="EZR 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 7:20"/>Y lo demás necesario para la casa de tu Dios que te fuere menester dar, daráslo de la casa de los tesoros del rey.<verse eid="EZR 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 7:21"/>Y por mí el rey Artajerjes es dado mandamiento á todos los tesoreros que están al otro lado del río, que todo lo que os demandare Esdras sacerdote, escriba de la ley del Dios del cielo, concédase <char style="it">le</char> luego,<verse eid="EZR 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 7:22"/>Hasta cien talentos de plata, y hasta cien coros de trigo, y hasta cien batos de vino, y hasta cien batos de aceite; y sal sin tasa.<verse eid="EZR 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 7:23"/>Todo lo que es mandado por el Dios del cielo, sea hecho prestamente para la casa del Dios del cielo: pues, ¿por qué habría de ser su ira contra el reino del rey y de sus hijos?<verse eid="EZR 7:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 7:24"/>Y á vosotros os hacemos saber, que á todos los sacerdotes y Levitas, cantores, porteros, Nethineos y ministros de la casa de Dios, ninguno pueda imponerles <note caller="+" style="x"><char style="xo" closed="false">7.24 </char><char style="xt" closed="false">cp. 4.13.</char></note>tributo, ó pecho, ó renta.<verse eid="EZR 7:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EZR 7:25"/>Y tú, Esdras, conforme á la sabiduría de tu Dios que tienes, pon jueces y gobernadores, que gobiernen á todo el pueblo que está del otro lado del río, á todos los que tienen noticia de las leyes de tu Dios; y al que no la tuviere, le enseñaréis.<verse eid="EZR 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EZR 7:26"/>Y cualquiera que no hiciere la ley de tu Dios, y la ley del rey, prestamente sea juzgado, ó á muerte, ó á dasarraigo, ó á pena de la hacienda, ó á prisión.<verse eid="EZR 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EZR 7:27"/>Bendito Jehová, Dios de nuestros padres, que puso tal cosa en el corazón del rey, para honrar la casa de Jehová que está en Jerusalem.<verse eid="EZR 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EZR 7:28"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.28 </char>
+      <char style="xt" closed="false">cp. 9.9.</char>
+    </note>E inclinó hacia mí <char style="it">su</char> misericordia delante del rey y de sus consultores, y de todos los príncipes poderosos del rey. Y yo, confortado según la mano de mi Dios sobre mí, junté los principales de Israel para que subiesen conmigo.<verse eid="EZR 7:28"/></para>
+  <chapter eid="EZR 7"/>
+  <chapter number="8" style="c" sid="EZR 8"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 8:1"/>Y ESTOS son los cabezas de sus familias, y genealogía de aquellos que subieron conmigo de Babilonia, reinando el rey Artajerjes:<verse eid="EZR 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 8:2"/>De los hijos de Phinees, Gersón; de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="1CH 24:3">1 Cr. 24.3</ref>,<ref loc="1CH 24:4">4</ref>.</char></note>Ithamar, <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="NEH 10:6">Neh. 10.6</ref>.</char></note>Daniel; de los hijos de David, <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="1CH 3:22">1 Cr. 3.22</ref>.</char></note>Hattus;<verse eid="EZR 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 8:3"/>De los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="1CH 3:21">1 Cr. 3.21</ref>.</char></note>Sechânías y de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false">cp. 2.3.</char></note>Pharos, Zacarías, y con él, en la línea de varones, ciento y cincuenta;<verse eid="EZR 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 8:4"/>De los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.4 </char><char style="xt" closed="false">cp. 2.6.</char></note>Pahath-moab, Elioenai, hijo de Zarahi, y con él doscientos varones;<verse eid="EZR 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 8:5"/>De los hijos de Sechânías, el hijo de Jahaziel, y con él trescientos varones;<verse eid="EZR 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 8:6"/>De los hijos de Adín, Ebed, hijo de Jonathán, y con él cincuenta varones;<verse eid="EZR 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 8:7"/>De los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false">cp. 2.7.</char></note>Elam, Isaía, hijo de Athalías, y con él setenta varones;<verse eid="EZR 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 8:8"/>Y de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.8 </char><char style="xt" closed="false">cp. 2.4.</char></note>Sephatías, Zebadías, hijo de Michâel, y con él ochenta varones;<verse eid="EZR 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 8:9"/>De los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false">cp. 2.6.</char></note>Joab, Obadías, hijo de Jehiel, y con él doscientos diez y ocho varones;<verse eid="EZR 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 8:10"/>Y de los hijos de Solomith, el hijo de Josiphías, y con él ciento y sesenta varones;<verse eid="EZR 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 8:11"/>Y de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.11 </char><char style="xt" closed="false">cp. 2.11 y <ref loc="EZR 10:28">10.28</ref>.</char></note>Bebai, Zacarías, hijo de Bebai, y con él veintiocho varones;<verse eid="EZR 8:11"/></para>
+  <para style="s">1 Viaje próspero de Esdras</para>
+  <para style="s">2 y llegada á Jerusalem.</para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 8:12"/>Y de los hijos de Azgad, Johanán, hijo de Catán, y con él ciento y diez varones;<verse eid="EZR 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 8:13"/>Y de los hijos de Adonicam, los postreros, cuyos nombres son estos, Eliphelet, Jeiel, y Semaías, y con ellos sesenta varones;<verse eid="EZR 8:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 8:14"/>Y de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.14 </char><char style="xt" closed="false">cp. 2.2,14.</char></note>Bigvai, Utai y Zabud, y con ellos sesenta varones.<verse eid="EZR 8:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 8:15"/>Y juntélos junto al río que viene á Ahava, y reposamos allí tres días: y habiendo buscado entre el pueblo y entre los sacerdotes, no hallé allí de los <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false">cp. 7.7.</char></note>hijos de Leví.<verse eid="EZR 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 8:16"/>Entonces despaché á Eliezer, y á Ariel, y á Semaías, y á Elnathán, y á Jarib, y á Elnathán, y á Nathán, y á Zacarías, y á Mesullam, principales; asimismo á Joiarib y á Elnathán, hombres doctos;<verse eid="EZR 8:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 8:17"/>Y enviélos á Iddo, jefe en el lugar de Casipia, y puse en boca de ellos las palabras que habían de hablar á Iddo, y á sus hermanos los Nethineos en el lugar de Casipia, para que nos trajesen ministros para la casa de nuestro Dios.<verse eid="EZR 8:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 8:18"/>Y trajéronnos, <note caller="+" style="x"><char style="xo" closed="false">8.18 </char><char style="xt" closed="false">cp. 7.6.</char></note>según la buena mano de nuestro Dios sobre nosotros, un varón entendido de los hijos de <note caller="+" style="x"><char style="xo" closed="false">8.18 </char><char style="xt" closed="false"><ref loc="1CH 6:19">1 Cr. 6.19</ref>.</char></note>Mahalí, hijo de Leví, hijo de Israel; y á Serabías con sus hijos y sus hermanos, dieciocho;<verse eid="EZR 8:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 8:19"/>Y á Hasabías, y con él á Isaía de los hijos de Merari, á sus hermanos y á sus hijos, veinte;<verse eid="EZR 8:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 8:20"/>Y de los Nethineos, á quienes David con los príncipes puso para el ministerio de los Levitas, doscientos y veinte Nethineos: todos los cuales <note caller="+" style="x"><char style="xo" closed="false">8.20 </char><char style="xt" closed="false"><ref loc="NUM 1:17">Nm. 1.17</ref>.</char></note>fueron declarados por sus nombres.<verse eid="EZR 8:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 8:21"/>Y <note caller="+" style="x"><char style="xo" closed="false">8.21 </char><char style="xt" closed="false"><ref loc="2CH 20:3">2 Cr. 20.3</ref>.</char></note>publiqué ayuno allí junto al río de Ahava, para <note caller="+" style="x"><char style="xo" closed="false">8.21 </char><char style="xt" closed="false"><ref loc="LEV 16:29">Lv. 16.29</ref>.</char></note>afligirnos delante de nuestro Dios, para solicitar de él camino derecho para nosotros, y para nuestros niños, y para toda nuestra hacienda.<verse eid="EZR 8:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 8:22"/>Porque tuve vergüenza de pedir al rey tropa y gente de á caballo que nos defendiesen del enemigo en el camino: porque habíamos hablado al rey, diciendo: <note caller="+" style="x"><char style="xo" closed="false">8.22 </char><char style="xt" closed="false">cp. 7.6.</char></note>La mano de nuestro Dios es para bien <note caller="+" style="x"><char style="xo" closed="false">8.22 </char><char style="xt" closed="false"><ref loc="ROM 8:28">Ro. 8.28</ref>.</char></note>sobre todos los que le buscan; mas su fortaleza y su furor sobre todos <note caller="+" style="x"><char style="xo" closed="false">8.22 </char><char style="xt" closed="false"><ref loc="JOS 24:20">Jos. 24.20</ref>.</char></note>los que le dejan.<verse eid="EZR 8:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 8:23"/>Ayunamos pues, y pedimos á nuestro Dios sobre esto, y él nos <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false"><ref loc="GEN 25:21">Gn. 25.21</ref>.</char></note>fué propicio.<verse eid="EZR 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 8:24"/>Aparté luego doce de los principales de los sacerdotes, á <note caller="+" style="x"><char style="xo" closed="false">8.24 </char><char style="xt" closed="false">ver. 18.</char></note>Serebías y á Hasabías, y con ellos diez de sus hermanos;<verse eid="EZR 8:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EZR 8:25"/>Y peséles <note caller="+" style="x"><char style="xo" closed="false">8.25 </char><char style="xt" closed="false">cp. 7.15,16.</char></note>la plata, y el oro, y los vasos, la ofrenda que para la casa de nuestro Dios habían ofrecido el rey, y sus consultores, y sus príncipes, todos los que se hallaron en Israel.<verse eid="EZR 8:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EZR 8:26"/>Pesé pues en manos de ellos seiscientos y cincuenta talentos de plata, y vasos de plata por cien talentos, y cien talentos de oro;<verse eid="EZR 8:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EZR 8:27"/>Además veinte <note caller="+" style="x"><char style="xo" closed="false">8.27 </char><char style="xt" closed="false">cp. 1.10.</char></note>tazones de oro, de mil dracmas; y dos vasos de metal limpio muy bueno, preciados como el oro.<verse eid="EZR 8:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EZR 8:28"/>Y díjeles: Vosotros sois consagrados á Jehová, y <note caller="+" style="x"><char style="xo" closed="false">8.28 </char><char style="xt" closed="false"><ref loc="LEV 21:6">Lv. 21.6</ref>.</char></note>santos los vasos; <note caller="+" style="x"><char style="xo" closed="false">8.28 </char><char style="xt" closed="false"><ref loc="LEV 22:2">Lv. 22.2</ref>,<ref loc="LEV 22:3">3</ref>.</char></note>y la plata y el oro ofrenda voluntaria á Jehová, Dios de nuestros padres.<verse eid="EZR 8:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EZR 8:29"/>Velad, y guardadlos, hasta que los peséis delante de los príncipes de los sacerdotes y Levitas, y de los jefes de los padres de Israel en Jerusalem, en las <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false"><ref loc="2KI 23:11">2 R. 23.11</ref>.</char></note>cámaras de la casa de Jehová.<verse eid="EZR 8:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EZR 8:30"/>Los sacerdotes pues y Levitas recibieron el peso de la plata y del oro y de los vasos, para traerlo á Jerusalem á la casa de nuestro Dios.<verse eid="EZR 8:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EZR 8:31"/>Y partimos del río de <note caller="+" style="x"><char style="xo" closed="false">8.31 </char><char style="xt" closed="false">vers. 15,21.</char></note>Ahava el doce del mes primero, para ir á Jerusalem: y <note caller="+" style="x"><char style="xo" closed="false">8.31 </char><char style="xt" closed="false">cp. 7.6,9.</char></note>la mano de nuestro Dios fué sobre nosotros, el cual nos libró de mano de enemigo y de asechador en el camino.<verse eid="EZR 8:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EZR 8:32"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.32 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 2:11">Neh. 2.11</ref>.</char>
+    </note>Y llegamos á Jerusalem, y reposamos allí tres días.<verse eid="EZR 8:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="EZR 8:33"/>Al cuarto día fué luego <note caller="+" style="x"><char style="xo" closed="false">8.33 </char><char style="xt" closed="false">vers. 26,30.</char></note>pesada la plata, y el oro, y los vasos, en la casa de nuestro Dios, por mano de <note caller="+" style="x"><char style="xo" closed="false">8.33 </char><char style="xt" closed="false"><ref loc="NEH 3:4">Neh. 3.4</ref>,<ref loc="NEH 3:21">21</ref>.</char></note>Meremoth hijo de Urías sacerdote, y con él Eleazar hijo de Phinees; y con ellos <note caller="+" style="x"><char style="xo" closed="false">8.33 </char><char style="xt" closed="false"><ref loc="NEH 8:7">Neh. 8.7</ref>.</char></note>Jozabad hijo de Jesuá, y Noadías hijo de Binnui, Levitas;<verse eid="EZR 8:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="EZR 8:34"/>Por cuenta y por peso todo: y se apuntó todo aquel peso en aquel tiempo.<verse eid="EZR 8:34"/></para>
+  <para style="s">1 Oración de Esdras á causa</para>
+  <para style="s">2 de las uniones ilícitas.</para>
+  <para style="p">
+    <verse number="35" style="v" sid="EZR 8:35"/>Los que habían venido de la cautividad, <note caller="+" style="x"><char style="xo" closed="false">8.35 </char><char style="xt" closed="false">cp. 2.1.</char></note>los hijos de la transmigración, ofrecieron holocaustos al Dios de Israel, <note caller="+" style="x"><char style="xo" closed="false">8.35 </char><char style="xt" closed="false">cp. 6.17.</char></note>doce becerros por todo Israel, noventa y seis carneros, setenta y siete corderos, doce machos cabríos por expiación: todo el holocausto á Jehová.<verse eid="EZR 8:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="EZR 8:36"/>Y dieron los <note caller="+" style="x"><char style="xo" closed="false">8.36 </char><char style="xt" closed="false">cp. 7.21.</char></note>despachos del rey á sus <note caller="+" style="x"><char style="xo" closed="false">8.36 </char><char style="xt" closed="false"><ref loc="EST 3:12">Est. 3.12</ref> y <ref loc="EST 8:9">8.9</ref> y <ref loc="EST 9:3">9.3</ref>. <ref loc="NEH 2:7">Neh. 2.7</ref>,<ref loc="NEH 2:9">9</ref> y <ref loc="NEH 3:7">3.7</ref>. <ref loc="DAN 3:2">Dn. 3.2</ref>,<ref loc="DAN 3:3">3</ref>,<ref loc="DAN 3:27">27</ref> y <ref loc="DAN 6:2">6.2</ref>,<ref loc="DAN 6:3">3</ref>.</char></note>gobernadores y capitanes del otro lado del río, los cuales favorecieron al pueblo y á la casa de Dios.<verse eid="EZR 8:36"/></para>
+  <chapter eid="EZR 8"/>
+  <chapter number="9" style="c" sid="EZR 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 9:1"/>Y ACABADAS estas cosas, los príncipes se llegaron á mí, diciendo: El pueblo de Israel, y los sacerdotes y Levitas, no se han <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false">cp. 6.21.</char></note>apartado de los pueblos de las tierras, de los Cananeos, Hetheos, Pherezeos, Jebuseos, Ammonitas, y Moabitas, Egipcios, y Amorrheos, <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="DEU 12:30">Dt. 12.30</ref>,<ref loc="DEU 12:31">31</ref>.</char></note><char style="it">haciendo</char> conforme á sus abominaciones.<verse eid="EZR 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 9:2"/>Porque han tomado de <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 34:16">Ex. 34.16</ref>. cp. 10.2. <ref loc="NEH 10:30">Neh. 10.30</ref> y <ref loc="NEH 13:23">13.23</ref>,<ref loc="NEH 13:27">27</ref>.</char></note>sus hijas para sí y para sus hijos, y la simiente <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="DEU 7:6">Dt. 7.6</ref>.</char></note>santa ha sido <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="PSA 106:35">Sal. 106.35</ref>.</char></note>mezclada con los pueblos de las tierras; y la mano de los príncipes y de los <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="NEH 2:16">Neh. 2.16</ref>, etc.</char></note>gobernadores ha sido la primera en esta prevaricación.<verse eid="EZR 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 9:3"/>Lo cual oyendo yo, <note caller="+" style="x"><char style="xo" closed="false">9.3 </char><char style="xt" closed="false"><ref loc="GEN 44:13">Gn. 44.13</ref>. <ref loc="JOB 1:20">Job 1.20</ref>.</char></note>rasgué mi vestido y mi manto, y arranqué de los cabellos de mi cabeza y de mi barba, y sentéme atónito.<verse eid="EZR 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 9:4"/>Y juntáronse á mí todos los <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false">cp. 10.3. <ref loc="ISA 66:2">Is. 66.2</ref>,<ref loc="ISA 66:5">5</ref>.</char></note>temerosos de las palabras del Dios de Israel, á causa de la prevaricación de los de la transmigración; mas yo estuve sentado atónito hasta el <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="1KI 18:29">1 R. 18.29</ref>.</char></note>sacrificio de la tarde.<verse eid="EZR 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 9:5"/>Y al sacrificio de la tarde levantéme de mi aflicción; y habiendo rasgado mi vestido y mi manto, postréme de rodillas, y <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="1KI 8:22">1 R. 8.22</ref>.</char></note>extendí mis palmas á Jehová mi Dios,<verse eid="EZR 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 9:6"/>Y dije: Dios mío, confuso y avergonzado estoy para levantar, oh Dios mío, mi rostro á ti: <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="PSA 38:4">Sal. 38.4</ref>.</char></note>porque nuestras iniquidades se han multiplicado sobre nuestra cabeza, y nuestros delitos han <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="2CH 28:9">2 Cr. 28.9</ref>.</char></note>crecido hasta el cielo.<verse eid="EZR 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 9:7"/>Desde los días de nuestros padres hasta este día estamos en grande culpa; y por nuestras iniquidades nosotros, nuestros reyes, y nuestros sacerdotes, hemos sido entregados en manos de los reyes de las tierras, á cuchillo, á cautiverio, y á robo, y á <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="DAN 9:7">Dn. 9.7</ref>,<ref loc="DAN 9:8">8</ref>.</char></note>confusión de rostro, como hoy día.<verse eid="EZR 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 9:8"/>Y ahora como por un breve momento fué la misericordia de Jehová nuestro Dios, para hacer que nos quedase un resto libre, y para darnos <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="ISA 22:23">Is. 22.23</ref>,<ref loc="ISA 22:25">25</ref>.</char></note>estaca en el lugar de su santuario, á fin de alumbrar nuestros ojos nuestro Dios, y darnos <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="PSA 13:3">Sal. 13.3</ref>.</char></note>una poca de vida en nuestra servidumbre.<verse eid="EZR 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 9:9"/>Porque siervos éramos: mas en nuestra servidumbre no nos desamparó nuestro Dios, antes inclinó sobre nosotros <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false">cp. 7.28.</char></note>misericordia delante de los reyes de Persia, para que <char style="it">se</char> nos diese vida para alzar la casa de nuestro Dios, y para hacer restaurar sus asolamientos, y para darnos vallado en Judá y en Jerusalem.<verse eid="EZR 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 9:10"/>Mas ahora, ¿qué diremos, oh Dios nuestro, después de esto? porque nosotros hemos dejado tus mandamientos,<verse eid="EZR 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 9:11"/>Los cuales prescribiste por mano de tus siervos los profetas, diciendo: La tierra á la cual entráis para poseerla, tierra inmunda es á causa de la inmundicia de los pueblos de aquellas regiones, por las abominaciones de que la han henchido de uno á otro extremo con su inmundicia.<verse eid="EZR 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 9:12"/>Ahora pues, <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="EXO 23:32">Ex. 23.32</ref>. <ref loc="DEU 7:3">Dt. 7.3</ref>.</char></note>no daréis vuestras hijas á los hijos de ellos, ni sus hijas tomaréis para vuestros hijos, <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="DEU 23:6">Dt. 23.6</ref>.</char></note>ni procuraréis su paz ni su bien para siempre; para que seáis corroborados, y comáis el bien de la tierra, y la dejéis por heredad á vuestros hijos para siempre.<verse eid="EZR 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 9:13"/>Mas después de todo lo que nos ha sobrevenido á causa de nuestras malas obras, y á causa de nuestro grande delito, ya que tú, Dios nuestro, estorbaste que fuésemos oprimidos bajo de nuestras iniquidades, y nos diste este tal efugio;<verse eid="EZR 9:13"/></para>
+  <para style="s">1 Junta del pueblo en Jerusalem</para>
+  <para style="s">2 para resolver esta cuestión.</para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 9:14"/>¿Hemos de volver á infringir tus mandamientos, y á emparentar con los pueblos de estas abominaciones? ¿No te ensañarías contra nosotros hasta consumirnos, sin que quedara resto ni escapatoria?<verse eid="EZR 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 9:15"/>Jehová, Dios de Israel, <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="NEH 9:33">Neh. 9.33</ref>. <ref loc="JOB 8:3">Job 8.3</ref>. <ref loc="PSA 119:137">Sal. 119.137</ref>. <ref loc="JER 12:1">Jer. 12.1</ref>. <ref loc="DAN 9:14">Dn. 9.14</ref>.</char></note>tú eres justo: pues que hemos quedado algunos salvos, como este día, henos aquí delante de ti en nuestros delitos; porque no es posible subsistir en tu presencia á causa de esto.<verse eid="EZR 9:15"/></para>
+  <chapter eid="EZR 9"/>
+  <chapter number="10" style="c" sid="EZR 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 10:1"/>Y ORANDO <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="NEH 1:6">Neh. 1.6</ref>. <ref loc="DAN 9:20">Dn. 9.20</ref>.</char></note>Esdras y confesando, llorando y postrándose <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="2CH 20:9">2 Cr. 20.9</ref>.</char></note>delante de la casa de Dios, juntóse á él una muy grande multitud de Israel, hombres y mujeres y niños; y lloraba el pueblo con gran llanto.<verse eid="EZR 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EZR 10:2"/>Entonces respondió Sechânías hijo de Jehiel, de los hijos de Elam, y dijo á Esdras: Nosotros hemos prevaricado contra nuestro Dios, pues tomamos mujeres extranjeras de los pueblos de la tierra: mas hay aún esperanza para Israel sobre esto.<verse eid="EZR 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 10:3"/>Ahora pues hagamos pacto con nuestro Dios, que echaremos todas las mujeres y los nacidos de ellas, según el consejo del Señor, y de los que <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false">cp. 9.4.</char></note>temen el <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false"><ref loc="DEU 7:2">Dt. 7.2</ref>,<ref loc="DEU 7:3">3</ref>.</char></note>mandamiento de nuestro Dios: y hágase conforme á la ley.<verse eid="EZR 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 10:4"/>Levántate, porque á ti toca el negocio, y nosotros seremos contigo; esfuérzate, y ponlo por obra.<verse eid="EZR 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 10:5"/>Entonces se levantó Esdras, y <note caller="+" style="x"><char style="xo" closed="false">10.5 </char><char style="xt" closed="false"><ref loc="NEH 5:12">Neh. 5.12</ref> y <ref loc="NEH 13:25">13.25</ref>.</char></note>juramentó á los príncipes de los sacerdotes y de los Levitas, y á todo Israel, que harían conforme á esto; y ellos juraron.<verse eid="EZR 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 10:6"/>Levantóse luego Esdras <note caller="+" style="x"><char style="xo" closed="false">10.6 </char><char style="xt" closed="false">ver. 1.</char></note>de delante la casa de Dios, y fuése á la cámara de <note caller="+" style="x"><char style="xo" closed="false">10.6 </char><char style="xt" closed="false"><ref loc="NEH 12:22">Neh. 12.22</ref>,<ref loc="NEH 12:23">23</ref>.</char></note>Johanán hijo de Eliasib: é ido allá, no comió pan ni bebió agua, porque se entristeció sobre la prevaricación de los de la transmigración.<verse eid="EZR 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 10:7"/>E hicieron pasar pregón por Judá y por Jerusalem á todos los hijos de la transmigración, que se juntasen en Jerusalem:<verse eid="EZR 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 10:8"/>Y que el que no viniera dentro de tres días, conforme al acuerdo de los príncipes y de los ancianos, perdiese toda su hacienda, y él fuese apartado de la compañía de los de la transmigración.<verse eid="EZR 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 10:9"/>Así todos los hombres de Judá y de Benjamín se reunieron en Jerusalem dentro de tres días, á los veinte del mes, el cual era el mes noveno; y sentóse todo el pueblo en la plaza de la casa de Dios, temblando con motivo de aquel negocio, y á causa de las lluvias.<verse eid="EZR 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 10:10"/>Y levantóse Esdras el sacerdote, y díjoles: Vosotros habéis prevaricado, por cuanto tomasteis mujeres extrañas, añadiendo <char style="it">así</char> sobre el pecado de Israel.<verse eid="EZR 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 10:11"/>Ahora pues, <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="JOS 7:19">Jos. 7.19</ref>.</char></note>dad gloria á Jehová Dios de vuestros padres, y haced su voluntad, y apartaos de los pueblos de las tierras, y de las mujeres extranjeras.<verse eid="EZR 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 10:12"/>Y respondió todo aquel concurso, y dijeron en alta voz: Así se haga conforme á tu palabra.<verse eid="EZR 10:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 10:13"/>Mas el pueblo es mucho, y el tiempo lluvioso, y no hay fuerza para estar en la calle: ni la obra es de un día ni de dos, porque somos muchos los que hemos prevaricado en este negocio.<verse eid="EZR 10:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EZR 10:14"/>Estén ahora nuestros príncipes, los de toda la congregación; y todos aquellos que en nuestras ciudades hubieren tomado mujeres extranjeras, vengan á <note caller="+" style="x"><char style="xo" closed="false">10.14 </char><char style="xt" closed="false"><ref loc="NEH 10:34">Neh. 10.34</ref> y <ref loc="NEH 13:31">13.31</ref>.</char></note>tiempos aplazados, y con ellos los ancianos de cada ciudad, y los jueces de ellas, hasta que apartemos de nosotros el furor de la ira de nuestro Dios sobre esto.<verse eid="EZR 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 10:15"/>Fueron pues puestos sobre este negocio Jonathán hijo de Asael, y Jaazías hijo de Tikvah; y Mesullam y Sabethai, Levitas, les ayudaron.<verse eid="EZR 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 10:16"/>E hicieron así los hijos de la transmigración. Y apartados que fueron luego Esdras sacerdote, y los varones cabezas de familias en la casa de sus padres, todos ellos por sus nombres, sentáronse <note caller="+" style="x"><char style="xo" closed="false">10.16 </char><char style="xt" closed="false">vers. 9,17.</char></note>el primer día del mes décimo para inquirir el negocio.<verse eid="EZR 10:16"/></para>
+  <para style="s">1 Expulsión de las</para>
+  <para style="s">2 mujeres extranjeras.</para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 10:17"/>Y concluyeron, con todos aquellos que habían tomado mujeres extranjeras, al primer día del mes primero.<verse eid="EZR 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 10:18"/>Y de los hijos de los sacerdotes que habían tomado mujeres extranjeras, fueron hallados <char style="it">estos:</char> De los hijos de <note caller="+" style="x"><char style="xo" closed="false">10.18 </char><char style="xt" closed="false">cp. 3.2.</char></note>Jesuá hijo de Josadec, y de sus hermanos: Maasías, y Eliezer, y Jarib, y Gedalías;<verse eid="EZR 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 10:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 10:15">2 R. 10.15</ref>.</char>
+    </note>Y dieron su mano <char style="it">en promesa</char> de echar sus mujeres, y <char style="it">ofrecieron</char> como culpados <note caller="+" style="x"><char style="xo" closed="false">10.19 </char><char style="xt" closed="false"><ref loc="LEV 6:6">Lv. 6.6</ref>.</char></note>un carnero de los rebaños por su delito.<verse eid="EZR 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EZR 10:20"/>Y de los hijos de Immer: Hanani y Zebadías.<verse eid="EZR 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 10:21"/>Y de lo hijos de <note caller="+" style="x"><char style="xo" closed="false">10.21 </char><char style="xt" closed="false">cp. 2.39. <ref loc="NEH 10:5">Neh. 10.5</ref>.</char></note>Harím: Maasías, y Elías, y Semeías, y Jehiel, y Uzzías.<verse eid="EZR 10:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EZR 10:22"/>Y de los hijos de Phasur: Elioenai, Maasías, Ismael, Nathanael, Jozabad, y Elasa.<verse eid="EZR 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 10:23"/>Y de los hijos de los Levitas: Jozabad, y Simi, Kelaía (este es Kelita), Pethaía, Judá y Eliezer.<verse eid="EZR 10:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 10:24"/>Y de los cantores, Eliasib; y de los porteros: Sellum, y Telem, y Uri.<verse eid="EZR 10:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EZR 10:25"/>Asimismo de Israel: De los hijos de Pharos: Ramía é Izzías, y Malchías, y Miamim, y Eleazar, y Malchías, y Benaías.<verse eid="EZR 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EZR 10:26"/>Y de los hijos de Elam: Mathanías, Zachârías, y Jehiel, y Abdi, y Jeremoth, y Elía.<verse eid="EZR 10:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EZR 10:27"/>Y de los hijos de Zattu: Elioenai, Eliasib, Mathanías, y Jeremoth, y Zabad, y Aziza.<verse eid="EZR 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EZR 10:28"/>Y de los hijos de Bebai: Johanán, Hananías, Zabbai, Atlai.<verse eid="EZR 10:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EZR 10:29"/>Y de los hijos de Bani: Mesullam, Malluch, y Adaías, Jasub, y Seal, y Ramoth.<verse eid="EZR 10:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EZR 10:30"/>Y de los hijos de Pahath-moab: Adna, y Chêleal, Benaías, Maasías, Mathanías, Besaleel, Binnui y Manasés.<verse eid="EZR 10:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EZR 10:31"/>Y de los hijos de Harim: Eliezer, Issia, Malchîas, Semeía, Simeón,<verse eid="EZR 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EZR 10:32"/>Benjamín, Malluch, Semarías.<verse eid="EZR 10:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="EZR 10:33"/>De los hijos de Hasum: Mathenai, Mathatha, Zabad, Eliphelet, Jeremai, Manasés, Sami.<verse eid="EZR 10:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="EZR 10:34"/>De los hijos de Bani: Maadi, Amram y Uel,<verse eid="EZR 10:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="EZR 10:35"/>Benaías, Bedías, Chêluhi,<verse eid="EZR 10:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="EZR 10:36"/>Vanías, Meremoth, Eliasib,<verse eid="EZR 10:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="EZR 10:37"/>Mathanías, Mathenai, y Jaasai,<verse eid="EZR 10:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="EZR 10:38"/>Y Bani, y Binnui, Simi,<verse eid="EZR 10:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="EZR 10:39"/>Y Selemías y Nathán y Adaías,<verse eid="EZR 10:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="EZR 10:40"/>Machnadbai, Sasai, Sarai,<verse eid="EZR 10:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="EZR 10:41"/>Azareel, y Selamías, Semarías,<verse eid="EZR 10:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="EZR 10:42"/>Sallum, Amarías, Joseph.<verse eid="EZR 10:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="EZR 10:43"/>Y de los hijos de Nebo: Jehiel, Matithías, Zabad, Zebina, Jadau, y Joel, Benaías.<verse eid="EZR 10:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="EZR 10:44"/>Todos estos habían tomado mujeres extranjeras; y había mujeres de ellos que habían parido hijos.<verse eid="EZR 10:44"/></para>
+  <chapter eid="EZR 10"/>
+</usx>

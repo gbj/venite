@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HEB" style="id">HEBVR.cor Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">HEBREOS</para>
+  <para style="toc3">He.</para>
+  <para style="toc2">Hebreos</para>
+  <para style="toc1">Carta a los Hebreos</para>
+  <para style="mt2">LA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS HEBREOS.</para>
+  <chapter number="1" style="c" sid="HEB 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 1:1"/>DIOS, habiendo hablado muchas veces y <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="NUM 12:6">Nm. 12.6</ref>,<ref loc="NUM 12:8">8</ref>.</char></note>en muchas maneras en otro tiempo á los padres por los profetas,<verse eid="HEB 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 1:2"/>En <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="GAL 4:4">Ga. 4.4</ref>. cp. 9.26. <ref loc="1PE 1:20">1 P. 1.20</ref>.</char></note>estos porstreros días nos ha hablado por <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false">ver. 8. cp. 3.6 y <ref loc="HEB 5:8">5.8</ref> y <ref loc="HEB 7:28">7.28</ref>.</char></note>el Hijo, al cual constituyó <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="PSA 2:8">Sal. 2.8</ref>. <ref loc="MAT 21:38">Mt. 21.38</ref>. <ref loc="ROM 8:17">Ro. 8.17</ref>.</char></note>heredero de todo, <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="JHN 1:3">Jn. 1.3</ref>. <ref loc="EPH 3:9">Ef. 3.9</ref>.</char></note>por el cual asimismo hizo el universo:<verse eid="HEB 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 1:3"/>El cual <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Jn. 1.14</ref>.</char></note>siendo el resplandor <char style="fm">1.3</char> de su gloria, y <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="2CO 4:4">2 Co. 4.4</ref>.</char></note>la misma imagen de su sustancia, y <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="COL 1:17">Col. 1.17</ref>.</char></note>sustentando todas las cosas con la palabra de su potencia, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">cp. 9.14.</char></note>habiendo hecho la purgación de nuestros pecados por sí mismo, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>. cp. 8.1.</char></note>se sentó á la diestra de la Majestad en las alturas,<verse eid="HEB 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 1:4"/>Hecho tanto más excelente que los ángeles, cuanto <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="EPH 1:21">Ef. 1.21</ref>. <ref loc="PHP 2:9">Fil. 2.9</ref>,<ref loc="PHP 2:10">10</ref>.</char></note>alcanzó por herencia más excelente nombre que ellos.<verse eid="HEB 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 1:5"/>Porque ¿á cuál de los ángeles dijo <char style="it">Dios</char> jamás:</para>
+  <para style="q" vid="HEB 1:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.5 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 2:7">Sal. 2.7</ref>.</char>
+    </note>Mi hijo eres tú,</para>
+  <para style="q" vid="HEB 1:5">Hoy yo te he engendrado?</para>
+  <para style="q" vid="HEB 1:5">Y otra vez:</para>
+  <para style="q" vid="HEB 1:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.5 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 7:14">2 S. 7.14</ref>.</char>
+    </note>Yo seré á él Padre,</para>
+  <para style="q" vid="HEB 1:5">Y él me será á mí hijo?<verse eid="HEB 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 1:6"/>Y otra vez, cuando introduce <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Ro. 8.29</ref>.</char></note>al Primogénito en la tierra, dice: Y adórenle todos los ángeles de Dios.<verse eid="HEB 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 1:7"/>Y ciertamente de los ángeles dice:</para>
+  <para style="q" vid="HEB 1:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 104:4">Sal. 104.4</ref>.</char>
+    </note>El que hace á sus ángeles espíritus,</para>
+  <para style="q" vid="HEB 1:7">Y á sus ministros llama de fuego.<verse eid="HEB 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 1:8"/>Mas al hijo:</para>
+  <para style="q" vid="HEB 1:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 45:6">Sal. 45.6</ref>,<ref loc="PSA 45:7">7</ref>.</char>
+    </note>Tu trono, oh Dios, por el siglo del siglo;</para>
+  <para style="q" vid="HEB 1:8">Vara de equidad la vara de tu reino;<verse eid="HEB 1:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="HEB 1:9"/>Has amado la justicia, y aborrecido la maldad;</para>
+  <para style="q" vid="HEB 1:9">Por lo cual te ungió Dios, el Dios tuyo,</para>
+  <para style="q" vid="HEB 1:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 61:1">Is. 61.1</ref>,<ref loc="ISA 61:3">3</ref>.</char>
+    </note>Con óleo de alegría más que á tus compañeros.<verse eid="HEB 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 1:10"/>Y:</para>
+  <para style="q" vid="HEB 1:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 102:25-27">Sal. 102.25-27</ref>.</char>
+    </note>Tú, oh Señor, en el principio fundaste la tierra;</para>
+  <para style="q" vid="HEB 1:10">Y los cielos son obras de tus manos:<verse eid="HEB 1:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="HEB 1:11"/>Ellos perecerán, mas tú eres permanente;</para>
+  <para style="q" vid="HEB 1:11">Y todos ellos se envejecerán como una vestidura;<verse eid="HEB 1:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="HEB 1:12"/>Y como un vestido los envolverás, y serán mudados;</para>
+  <para style="q" vid="HEB 1:12">Empero tú eres el mismo,</para>
+  <para style="q" vid="HEB 1:12">Y tus años no acabarán.<verse eid="HEB 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 1:13"/>Pues, ¿á cuál de los ángeles dijo jamás:</para>
+  <para style="q" vid="HEB 1:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 110:1">Sal. 110.1</ref>.</char>
+    </note>Siéntate á mi diestra,</para>
+  <para style="q" vid="HEB 1:13">Hasta que ponga á tus enemigos por estrado de tus pies?<verse eid="HEB 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 1:14"/>¿No son <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="GEN 28:12">Gn. 28.12</ref> y <ref loc="GEN 32:1">32.1</ref>,<ref loc="GEN 32:2">2</ref>,<ref loc="GEN 32:24">24</ref>. <ref loc="PSA 103:20">Sal. 103.20</ref>,<ref loc="PSA 103:21">21</ref>. <ref loc="LUK 1:19">Lc. 1.19</ref>,<ref loc="LUK 1:26">26</ref> y <ref loc="LUK 2:9">2.9</ref>,<ref loc="LUK 2:13">13</ref>. <ref loc="ACT 12:7">Hch. 12.7</ref>.</char></note>todos espíritus administradores, enviados para servicio á favor de los que serán herederos de salud?<verse eid="HEB 1:14"/></para>
+  <chapter eid="HEB 1"/>
+  <chapter number="2" style="c" sid="HEB 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 2:1"/>POR tanto, es menester que con más diligencia atendamos á las cosas que hemos oído, porque acaso no nos escurramos.<verse eid="HEB 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 2:2"/>Porque si la palabra dicha <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="ACT 7:53">Hch. 7.53</ref>.</char></note>por los ángeles fué firme, y toda rebelión y desobediencia recibió justa paga de retribución,<verse eid="HEB 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 2:3"/>¿Cómo escaparemos <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">cp. 10.28,29 y <ref loc="HEB 12:25">12.25</ref>.</char></note>nosotros, si tuviéremos en poco una salud tan grande? <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="MRK 1:14">Mr. 1.14</ref>.</char></note>La cual, habiendo comenzado á ser publicada por el Señor, ha sido <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="LUK 1:2">Lc. 1.2</ref>.</char></note>confirmada hasta nosotros por los que oyeron;<verse eid="HEB 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 2:4"/>Testificando juntamente con ellos Dios, con <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="ACT 5:12">Hch. 5.12</ref>.</char></note>señales y milagros, y diversas <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="ACT 2:22">Hch. 2.22</ref>. <ref loc="1CO 2:4">1 Co. 2.4</ref>.</char></note>maravillas, y <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="1CO 12:4">1 Co. 12.4</ref>,<ref loc="1CO 12:11">11</ref>.</char></note>repartimientos del Espíritu Santo según su voluntad.<verse eid="HEB 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 2:5"/>Porque no sujetó á los ángeles <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false">cp. 1.2,4,8.</char></note>el mundo venidero, del cual hablamos.<verse eid="HEB 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 2:6"/>Testificó empero uno en cierto lugar, diciendo:</para>
+  <para style="q" vid="HEB 2:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 8:4-6">Sal. 8.4-6</ref>.</char>
+    </note>¿Qué es el hombre, que te acuerdas de él?</para>
+  <para style="q" vid="HEB 2:6">¿O el hijo del hombre, que le visitas?<verse eid="HEB 2:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="HEB 2:7"/>Tú le hiciste un poco menor que los ángeles,</para>
+  <para style="q" vid="HEB 2:7">Coronástele de gloria y de honra,</para>
+  <para style="q" vid="HEB 2:7">Y pusístete sobre las obras de tus manos;<verse eid="HEB 2:7"/></para>
+  <para style="s">1 Cristo, superior á los ángeles.</para>
+  <para style="s">2 Cristo, superior á Moisés.</para>
+  <para style="q">
+    <verse number="8" style="v" sid="HEB 2:8"/>Todas <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="EPH 1:22">Ef. 1.22</ref>. <ref loc="PHP 3:21">Fil. 3.21</ref>.</char></note>las cosas sujetaste debajo de sus pies.</para>
+  <para style="m" vid="HEB 2:8">Porque en cuanto le sujetó todas las cosas, nada dejó que no sea sujeto á él; <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="1CO 15:27">1 Co. 15.27</ref>.</char></note>mas aun no vemos que todas las cosas le sean sujetas.<verse eid="HEB 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 2:9"/>Empero vemos coronado de gloria y de honra, por el padecimiento de muerte, á aquel Jesús <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">ver. 7. <ref loc="ACT 2:33">Hch. 2.33</ref>. <ref loc="PHP 2:7-9">Fil. 2.7-9</ref>.</char></note>que es hecho un poco menor que los ángeles, para que por gracia de Dios <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="MAT 16:28">Mt. 16.28</ref>.</char></note>gustase la muerte <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="2CO 5:15">2 Co. 5.15</ref>. <ref loc="1TI 2:6">1 Ti. 2.6</ref>. <ref loc="1JN 2:2">1 Jn. 2.2</ref>.</char></note>por todos.<verse eid="HEB 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 2:10"/>Porque convenía <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="LUK 24:26">Lc. 24.26</ref>,<ref loc="LUK 24:46">46</ref>.</char></note>que aquel <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="1CO 8:6">1 Co. 8.6</ref>. <ref loc="COL 1:16">Col. 1.16</ref>. cp. 1.2.</char></note>por cuya causa son todas las cosas, y por el cual todas las cosas <char style="it">subsisten,</char> habiendo de llevar á la gloria á muchos hijos, <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="ACT 3:15">Hch. 3.15</ref>. cp. 12.2.</char></note>hiciese <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false">cp. 5.9.</char></note>consumado por aflicciones al autor de la salud de ellos.<verse eid="HEB 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 2:11"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="JHN 17:19">Jn. 17.19</ref>. cp. 10.10,29.</char></note>el que santifica y los que son santificados, <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ROM 8:14">Ro. 8.14</ref>.</char></note>de uno son todos: por lo cual <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Ro. 8.29</ref>.</char></note>no se avergüenza de llamarlos hermanos,<verse eid="HEB 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 2:12"/>Diciendo:</para>
+  <para style="q" vid="HEB 2:12">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 22:22">Sal. 22.22</ref>.</char>
+    </note>Anunciaré á mis hermanos tu nombre,</para>
+  <para style="q" vid="HEB 2:12">En medio de la congregación te alabaré.<verse eid="HEB 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 2:13"/>Y otra vez: <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="ISA 8:17">Is. 8.17</ref>.</char></note>Yo confiaré en él. Y otra vez: <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="ISA 8:18">Is. 8.18</ref>.</char></note>He aquí, yo y <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="JHN 17:2">Jn. 17.2</ref>.</char></note>los hijos que me dió Dios.<verse eid="HEB 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 2:14"/>Así que, por cuanto los hijos participaron de carne y sangre, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="ROM 8:3">Ro. 8.3</ref>.</char></note>él también participó de lo mismo, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="2TI 1:10">2 Ti. 1.10</ref>. <ref loc="1JN 3:8">1 Jn. 3.8</ref>.</char></note>para destruir por la muerte al que tenía el imperio de la muerte, es á saber, al diablo,<verse eid="HEB 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 2:15"/>Y librar á <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="ROM 8:15">Ro. 8.15</ref>.</char></note>los que por el temor de la muerte estaban por toda la vida sujetos á servidumbre.<verse eid="HEB 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 2:16"/>Porque ciertamente no tomó á los ángeles, sino á la simiente de Abraham tomó.<verse eid="HEB 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 2:17"/>Por lo cual, debía ser en todo semejante á los hermanos, para venir <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 4.15,16 y <ref loc="HEB 5:1">5.1</ref>,<ref loc="HEB 5:2">2</ref>.</char></note>a ser misericordioso y fiel Pontífice en lo que es para con Dios, para expiar los pecados del pueblo.<verse eid="HEB 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 2:18"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.18 </char>
+      <char style="xt" closed="false">cp. 4.15,16 y <ref loc="HEB 5:1">5.1</ref>,<ref loc="HEB 5:2">2</ref>.</char>
+    </note>Porque en cuanto él mismo padeció siendo tentado, es poderoso para socorrer á los que son tentados.<verse eid="HEB 2:18"/></para>
+  <chapter eid="HEB 2"/>
+  <chapter number="3" style="c" sid="HEB 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 3:1"/>POR tanto, hermanos santos, participantes de <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="PHP 3:14">Fil. 3.14</ref>.</char></note>la vocación celestial, considerad <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="JHN 20:21">Jn. 20.21</ref>.</char></note>al Apóstol y <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 2.17 y <ref loc="HEB 4:14">4.14</ref>,<ref loc="HEB 4:15">15</ref> y <ref loc="HEB 5:5">5.5</ref>,<ref loc="HEB 5:10">10</ref>, etc.</char></note>Pontífice de nuestra <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="1TI 6:13">1 Ti. 6.13</ref>.</char></note>profesión, Cristo Jesús;<verse eid="HEB 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 3:2"/>El cual es fiel al que le constituyó, como también lo fué Moisés sobre toda su casa.<verse eid="HEB 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 3:3"/>Porque de tanto mayor gloria que Moisés éste es estimado digno, cuanto <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="MAT 16:18">Mt. 16.18</ref>.</char></note>tiene mayor dignidad que la casa el que la fabricó.<verse eid="HEB 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 3:4"/>Porque toda casa es edificada de alguno: mas el que crió todas las cosas es Dios.<verse eid="HEB 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 3:5"/>Y Moisés á la verdad fué fiel sobre toda su casa, como <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="EXO 14:31">Ex. 14.31</ref>. <ref loc="NUM 12:7">Nm. 12.7</ref>.</char></note>siervo, <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="DEU 18:15">Dt. 18.15</ref>,<ref loc="DEU 18:18">18</ref>,<ref loc="DEU 18:19">19</ref>.</char></note>para testificar lo que se había de decir;<verse eid="HEB 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 3:6"/>Mas Cristo como <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">cp. 1.2,8 y <ref loc="HEB 5:8">5.8</ref> y <ref loc="HEB 7:3">7.3</ref>,<ref loc="HEB 7:28">28</ref>.</char></note>hijo, sobre su casa; <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="1TI 3:15">1 Ti. 3.15</ref>. <ref loc="1PE 2:5">1 P. 2.5</ref>.</char></note>la cual casa somos nosotros, si hasta el cabo <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">ver. 14.</char></note>retuviéremos firme la confianza y la gloria <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="ROM 5:2">Ro. 5.2</ref>. cp. 6.11,18.</char></note>de la esperanza.<verse eid="HEB 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 3:7"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="ACT 1:16">Hch. 1.16</ref>. cp. 9.8.</char></note>como dice el Espíritu Santo:</para>
+  <para style="q" vid="HEB 3:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 95:7-11">Sal. 95.7-11</ref>.</char>
+    </note>Si oyereis hoy su voz,<verse eid="HEB 3:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="HEB 3:8"/>No endurezcáis vuestros corazones</para>
+  <para style="q" vid="HEB 3:8">Como en la provocación, en el día de la tentación en el desierto,<verse eid="HEB 3:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="HEB 3:9"/>Donde me tentaron vuestros padres; me probaron,</para>
+  <para style="q" vid="HEB 3:9">Y vieron mis obras cuarenta años.<verse eid="HEB 3:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="HEB 3:10"/>A causa de lo cual me enemisté con esta generación,</para>
+  <para style="q" vid="HEB 3:10">Y dije: Siempre divagan ellos de corazón,</para>
+  <para style="q" vid="HEB 3:10">Y no han conocido mis caminos.<verse eid="HEB 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 3:11"/>Juré, pues, en mi ira:</para>
+  <para style="q" vid="HEB 3:11">No entrarán en mi reposo.<verse eid="HEB 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 3:12"/>Mirad, hermanos, que en ninguno de vosotros haya corazón malo de incredulidad para apartarse del Dios vivo:<verse eid="HEB 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 3:13"/>Antes <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 10.24,25.</char></note>exhortaos los unos á los otros cada día, entre tanto que se dice Hoy; porque ninguno de vosotros se endurezca <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="ROM 7:11">Ro. 7.11</ref>.</char></note>con engaño de pecado:<verse eid="HEB 3:13"/></para>
+  <para style="s">1 Peligros de la incredulidad.</para>
+  <para style="s">2 El verdadero reposo.</para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 3:14"/>Porque participantes de Cristo somos hechos, con tal que <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false">ver. 6.</char></note>conservemos firme hasta el fin el principio de nuestra confianza;<verse eid="HEB 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 3:15"/>Entre tanto que se dice:</para>
+  <para style="q" vid="HEB 3:15">Si oyereis <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false">ver. 7.</char></note>hoy su voz,</para>
+  <para style="q" vid="HEB 3:15">No endurezcáis vuestros corazones, como en la provocación.<verse eid="HEB 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 3:16"/>Porque algunos de los <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="NUM 14:2">Nm. 14.2</ref>,<ref loc="NUM 14:4">4</ref>,<ref loc="NUM 14:11">11</ref>,<ref loc="NUM 14:24">24</ref>,<ref loc="NUM 14:30">30</ref>. <ref loc="DEU 1:34">Dt. 1.34</ref>,<ref loc="DEU 1:36">36</ref>,<ref loc="DEU 1:38">38</ref>.</char></note>que habían salido de Egipto con Moisés, habiendo oído, provocaron, aunque no todos.<verse eid="HEB 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 3:17"/>Mas ¿con cuáles estuvo enojado cuarenta años? ¿No fué con los que pecaron, <note caller="+" style="x"><char style="xo" closed="false">3.17 </char><char style="xt" closed="false"><ref loc="1CO 10:5">1 Co. 10.5</ref>.</char></note>cuyos cuerpos cayeron en el desierto?<verse eid="HEB 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 3:18"/>¿Y á quiénes juró que no entrarían en su reposo, sino á aquellos que no obedecieron?<verse eid="HEB 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 3:19"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false">cp. 4.6,11.</char></note>vemos que no pudieron entrar á causa de incredulidad.<verse eid="HEB 3:19"/></para>
+  <chapter eid="HEB 3"/>
+  <chapter number="4" style="c" sid="HEB 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 4:1"/>TEMAMOS, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 12.15.</char></note>pues, que quedando aún la promesa de entrar en su reposo, parezca alguno de vosotros haberse apartado.<verse eid="HEB 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 4:2"/>Porque también á nosotros se nos ha evangelizado como <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false">cp. 3.18.</char></note>a ellos; mas no les aprovechó el oir la palabra á los que <char style="it">la</char> oyeron sin mezclar fe.<verse eid="HEB 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 4:3"/>Empero entramos en el reposo los que hemos creído, de la manera que dijo:</para>
+  <para style="q" vid="HEB 4:3">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 95:11">Sal. 95.11</ref>. cp. 3.11.</char>
+    </note>Como juré en mi ira,</para>
+  <para style="q" vid="HEB 4:3">No entrarán en mi reposo: aun acabadas las obras desde el principio del mundo.<verse eid="HEB 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 4:4"/>Porque en un cierto lugar dijo así del séptimo día: <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="GEN 2:2">Gn. 2.2</ref>.</char></note>Y reposó Dios de todas sus obras en el séptimo día.<verse eid="HEB 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 4:5"/>Y otra vez aquí:</para>
+  <para style="q" vid="HEB 4:5">No entrarán en mi reposo.<verse eid="HEB 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 4:6"/>Así que, pues que resta que algunos han de entrar en él, <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 3.19.</char></note>y aquellos á quienes primero fué anunciado no entraron por causa de desobediencia,<verse eid="HEB 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 4:7"/>Determina otra vez un cierto día, diciendo <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="PSA 95">Sal. 95</ref> tít.</char></note>por David: Hoy, después de tanto tiempo; como está dicho:</para>
+  <para style="q" vid="HEB 4:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 95:7">Sal. 95.7</ref>. cp. 3.7,13.</char>
+    </note>Si oyereis su voz hoy,</para>
+  <para style="q" vid="HEB 4:7">No endurezcáis vuestros corazones.<verse eid="HEB 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 4:8"/>Porque si <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="ACT 7:45">Hch. 7.45</ref>.</char></note>Josué les hubiera dado el reposo, no hablaría después de otro día.<verse eid="HEB 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 4:9"/>Por tanto, queda un reposo para el pueblo de Dios.<verse eid="HEB 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 4:10"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="REV 6:11">Ap. 6.11</ref>.</char></note>el que ha entrado en su reposo, también él ha reposado de sus obras, como Dios de las suyas.<verse eid="HEB 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 4:11"/>Procuremos pues de entrar en aquel reposo; que <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false">cp. 3.12,18,19.</char></note>ninguno caiga en semejante ejemplo de desobediencia.<verse eid="HEB 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 4:12"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="JHN 12:48">Jn. 12.48</ref>.</char></note>la palabra de Dios <char style="it">es</char> <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="ISA 49:2">Is. 49.2</ref>. <ref loc="1PE 1:23">1 P. 1.23</ref>.</char></note>viva y eficaz, y más penetrante que toda espada de dos filos: y que alcanza hasta partir <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="1TH 5:23">1 Ts. 5.23</ref>.</char></note>el alma, y aun el espíritu, y las coyunturas y tuétanos, y <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="1CO 14:25">1 Co. 14.25</ref>.</char></note>discierne los pensamientos y las intenciones del corazón.<verse eid="HEB 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 4:13"/>Y no hay cosa criada que no sea manifiesta en su presencia; antes todas las cosas están desnudas y abiertas á los ojos de aquel á quien tenemos que dar cuenta.<verse eid="HEB 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 4:14"/>Por tanto, teniendo <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 3.1.</char></note>un gran Pontífice, <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 7.26.</char></note>que penetró los cielos, Jesús el Hijo de Dios, <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 10.23.</char></note>retengamos nuestra <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="1TI 6:13">1 Ti. 6.13</ref>.</char></note>profesión.<verse eid="HEB 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 4:15"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false"><ref loc="ISA 53:3">Is. 53.3</ref>.</char></note>no tenemos un Pontífice <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 5.2.</char></note>que no se pueda compadecer de nuestras flaquezas; mas <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 2.18.</char></note>tentado en todo según <char style="it">nuestra</char> semejanza, <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false"><ref loc="JHN 8:46">Jn. 8.46</ref>. <ref loc="2CO 5:21">2 Co. 5.21</ref>.</char></note><char style="it">pero</char> sin pecado.<verse eid="HEB 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 4:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.16 </char>
+      <char style="xt" closed="false">cp. 10.19,22.</char>
+    </note>Lleguémonos pues confiadamente al trono de la gracia, para alcanzar misericordia, y hallar gracia para el oportuno socorro.<verse eid="HEB 4:16"/></para>
+  <chapter eid="HEB 4"/>
+  <chapter number="5" style="c" sid="HEB 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 5:1"/>PORQUE todo pontífice, tomado de entre los hombres, <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 8.3.</char></note>es constituído á favor de los hombres <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 2.17.</char></note>en lo que á Dios toca, <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 9.9.</char></note>para que ofrezca presentes y sacrificios por los pecados:<verse eid="HEB 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 5:2"/>Que se pueda compadecer <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false">cp. 2.18 y <ref loc="HEB 4:15">4.15</ref>.</char></note>de los ignorantes y extraviados, pues que <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false">cp. 7.28.</char></note>él también está rodeado de flaqueza;<verse eid="HEB 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 5:3"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="LEV 4:3">Lv. 4.3</ref>.</char></note>por causa de ella debe, como por sí mismo, así también por el pueblo, ofrecer por los pecados.<verse eid="HEB 5:3"/></para>
+  <para style="s">1 Cristo, Sacerdote eterno.</para>
+  <para style="s">2 Perseverancia cristiana.</para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 5:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 16:5">Nm. 16.5</ref>.</char>
+    </note>Ni nadie toma para sí la honra, sino el que es llamado de Dios, <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="EXO 28:1">Ex. 28.1</ref>.</char></note>como Aarón.<verse eid="HEB 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 5:5"/>Así también Cristo <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="JHN 8:54">Jn. 8.54</ref>.</char></note>no se glorificó á sí mismo haciéndose Pontífice, mas el que le dijo:</para>
+  <para style="q" vid="HEB 5:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.5 </char>
+      <char style="xt" closed="false">cp. 1.5.</char>
+    </note>Tú eres mi Hijo,</para>
+  <para style="q" vid="HEB 5:5">Yo te he engendrado hoy;<verse eid="HEB 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 5:6"/>Como también dice en otro <char style="it">lugar:</char></para>
+  <para style="q" vid="HEB 5:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 110:4">Sal. 110.4</ref>. cp. 7.17,21.</char>
+    </note>Tú eres sacerdote eternamente,</para>
+  <para style="q" vid="HEB 5:6">Según el orden de Melchîsedec.<verse eid="HEB 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 5:7"/>El cual en los días de su carne, <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="MAT 26:39">Mt. 26.39</ref>,<ref loc="MAT 26:44">44</ref>.</char></note>ofreciendo ruegos y súplicas <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="MAT 27:46">Mt. 27.46</ref>,<ref loc="MAT 27:50">50</ref>.</char></note>con gran clamor y lágrimas <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="MRK 14:36">Mr. 14.36</ref>.</char></note>al que le podía librar de la muerte, fué oído por su reverencial miedo.<verse eid="HEB 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 5:8"/>Y aunque era <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="JHN 14:31">Jn. 14.31</ref>. cp. 1.2.</char></note>Hijo, por lo que padeció <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="PHP 2:8">Fil. 2.8</ref>.</char></note>aprendió la obediencia;<verse eid="HEB 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 5:9"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false">cp. 2.10.</char></note>consumado, vino á ser causa de eterna salud á todos los que le obedecen;<verse eid="HEB 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 5:10"/>Nombrado de Dios <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false">ver. 6.</char></note>pontífice según el orden de Melchîsedec.<verse eid="HEB 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 5:11"/>Del cual <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="2PE 3:16">2 P. 3.16</ref>.</char></note>tenemos mucho que decir, y dificultoso de declarar, por cuanto sois flacos para oir.<verse eid="HEB 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 5:12"/>Porque debiendo ser ya maestros á causa del tiempo, tenéis necesidad de volver á ser enseñados cuáles sean <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false">cp. 6.1.</char></note>los primeros <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="GAL 4:3">Ga. 4.3</ref>.</char></note>rudimentos de <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="ROM 3:2">Ro. 3.2</ref>.</char></note>las palabras de Dios; y habéis llegado á ser tales que tengáis necesidad de <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="1CO 3:2">1 Co. 3.2</ref>.</char></note>leche, y no de manjar sólido.<verse eid="HEB 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 5:13"/>Que cualquiera que participa de la leche, es inhábil para la palabra de la justicia, porque es niño;<verse eid="HEB 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 5:14"/>Mas la vianda firme es para los perfectos, para los que por la costumbre tienen los sentidos ejercitados en el discernimiento del bien y del mal.<verse eid="HEB 5:14"/></para>
+  <chapter eid="HEB 5"/>
+  <chapter number="6" style="c" sid="HEB 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 6:1"/>POR tanto, dejando la palabra del comienzo <char style="it">en la doctrina</char> de Cristo, vamos adelante á la perfección; no echando otra vez el fundamento del arrepentimiento <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 9.14.</char></note>de obras muertas, y de la fe en Dios,<verse eid="HEB 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 6:2"/>De la doctrina <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="ACT 19:4">Hch. 19.4</ref>,<ref loc="ACT 19:5">5</ref>.</char></note>de bautismos, <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="ACT 8:14-17">Hch. 8.14-17</ref>.</char></note>y de la imposición de manos, <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">Hch. 17.32,32.</char></note>y de la resurrección de los muertos, <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="ACT 24:25">Hch. 24.25</ref>.</char></note>y del juicio eterno.<verse eid="HEB 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 6:3"/>Y esto haremos á la verdad, si Dios <char style="it">lo</char> permitiere.<verse eid="HEB 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 6:4"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="MAT 12:31">Mt. 12.31</ref>,<ref loc="MAT 12:45">45</ref>. cp. 10.26.</char></note>es imposible que los que una vez fueron <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false">cp. 10.32.</char></note>iluminados y gustaron <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="JHN 4:10">Jn. 4.10</ref>.</char></note>el don celestial, y <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false">cp. 2.4.</char></note>fueron hechos partícipes del Espíritu Santo.<verse eid="HEB 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 6:5"/>Y asimismo gustaron la buena palabra de Dios, y las virtudes <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false">cp. 2.5.</char></note>del siglo venidero,<verse eid="HEB 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 6:6"/>Y recayeron, sean otra vez renovados <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 12.17.</char></note>para arrepentimiento, <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 10.29.</char></note>crucificando de nuevo para sí mismos al Hijo de Dios, y exponiéndole á vituperio.<verse eid="HEB 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 6:7"/>Porque la tierra <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false"><ref loc="PSA 65:10">Sal. 65.10</ref>.</char></note>que embebe el agua que muchas veces vino sobre ella, y produce hierba provechosa á aquellos de los cuales es labrada, <char style="fm">6.7</char> recibe bendición de Dios:<verse eid="HEB 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 6:8"/>Mas <note caller="+" style="x"><char style="xo" closed="false">6.8 </char><char style="xt" closed="false"><ref loc="ISA 5:6">Is. 5.6</ref>.</char></note>la que produce espinas y abrojos, es reprobada, y cercana de maldición; cuyo fin será el ser abrasada.<verse eid="HEB 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 6:9"/>Pero de vosotros, oh amados, esperamos mejores cosas, y más cercanas á salud, aunque hablamos así.<verse eid="HEB 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 6:10"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="MAT 10:42">Mt. 10.42</ref>.</char></note>Dios no es injusto para olvidar vuestra obra y el trabajo de amor que habéis mostrado á su nombre, habiendo <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="ROM 15:25">Ro. 15.25</ref>. <ref loc="2TI 1:18">2 Ti. 1.18</ref>.</char></note>asistido y asistiendo aún á los santos.<verse eid="HEB 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 6:11"/>Mas deseamos que <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 3.6.</char></note>cada uno de vosotros muestre la misma solicitud hasta el cabo, para cumplimiento de la esperanza:<verse eid="HEB 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 6:12"/>Que no os hagáis <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 5.11.</char></note>perezosos, mas imitadores de aquellos que por la fe y la paciencia heredan <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false"><ref loc="GAL 3:18">Ga. 3.18</ref>.</char></note>las promesas.<verse eid="HEB 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 6:13"/>Porque prometiendo Dios á Abraham, no pudiendo jurar por otro mayor, <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="LUK 1:73">Lc. 1.73</ref>.</char></note>juró por sí mismo,<verse eid="HEB 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 6:14"/>Diciendo: <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="GEN 22:16">Gn. 22.16</ref>,<ref loc="GEN 22:17">17</ref>.</char></note>De cierto te bendeciré bendiciendo, y multiplicando te multiplicaré.<verse eid="HEB 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 6:15"/>Y así, esperando con largura de ánimo, alcanzó la promesa.<verse eid="HEB 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 6:16"/>Porque los hombres ciertamente por el mayor <char style="it">que ellos</char> juran: y el fin de todas sus controversias es <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="EXO 22:11">Ex. 22.11</ref>.</char></note>el juramento para confirmación.<verse eid="HEB 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 6:17"/>Por lo cual, queriendo Dios mostrar más abundantemente á los <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false">cp. 11.9.</char></note>herederos de la promesa <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="PSA 110:4">Sal. 110.4</ref>.</char></note>la inmutabilidad de su consejo, interpuso juramento;<verse eid="HEB 6:17"/></para>
+  <para style="s">1 El sacerdocio de Melchîsedec</para>
+  <para style="s">2 superior al levítico.</para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 6:18"/>Para que por dos cosas inmutables, en las cuales es <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="TIT 1:2">Tit. 1.2</ref>.</char></note>imposible que Dios mienta, tengamos un fortísimo consuelo, los que nos acogemos á trabarnos de la esperanza propuesta:<verse eid="HEB 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 6:19"/>La cual tenemos como segura y firme ancla del alma, <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="LEV 16:15">Lv. 16.15</ref>.</char></note>y que entra hasta dentro del <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false">cp. 9.3.</char></note>velo;<verse eid="HEB 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 6:20"/>Donde <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false">cp. 4.14.</char></note>entró por nosotros <char style="it">como</char> precursor Jesús, <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false">cp. 3.1 y <ref loc="HEB 5:6">5.6</ref>.</char></note>hecho Pontífice eternalmente según el orden de Melchîsedec.<verse eid="HEB 6:20"/></para>
+  <chapter eid="HEB 6"/>
+  <chapter number="7" style="c" sid="HEB 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 7:1"/>PORQUE este <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false"><ref loc="GEN 14:18-20">Gn. 14.18-20</ref>.</char></note>Melchîsedec, rey de Salem, sacerdote del Dios Altísimo, el cual salió á recibir á Abraham que volvía de la derrota de los reyes, y le bendijo,<verse eid="HEB 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 7:2"/>Al cual asimismo dió Abraham los diezmos de todo, primeramente él se interpreta Rey de justicia; y luego también Rey de Salem, que es, Rey de paz;<verse eid="HEB 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 7:3"/>Sin padre, sin madre, sin linaje; que ni tiene principio de días, ni fin de vida, mas hecho semejante al <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false">ver. 28. cp. 1.2.</char></note>Hijo de Dios, permanece sacerdote <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false">cp. 10.1,12,14.</char></note>para siempre.<verse eid="HEB 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 7:4"/>Mirad pues cuán grande fué éste, al cual aun Abraham el patriarca dió diezmos de los despojos.<verse eid="HEB 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 7:5"/>Y ciertamente <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false"><ref loc="NUM 18:21">Nm. 18.21</ref>,<ref loc="NUM 18:26">26</ref>. <ref loc="2CH 31:4">2 Cr. 31.4</ref>,<ref loc="2CH 31:5">5</ref>.</char></note>los que de los hijos de Leví toman el sacerdocio, tienen mandamiento de tomar del pueblo los diezmos según la ley, es á saber, de sus hermanos aunque también hayan salido de los lomos de Abraham.<verse eid="HEB 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 7:6"/>Mas aquél cuya genealogía no es contada de ellos, tomó de Abraham los diezmos, y bendijo <note caller="+" style="x"><char style="xo" closed="false">7.6 </char><char style="xt" closed="false"><ref loc="ROM 4:13">Ro. 4.13</ref>. <ref loc="GAL 3:16">Ga. 3.16</ref>.</char></note>al que tenía las promesas.<verse eid="HEB 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 7:7"/>Y sin contradicción alguna, lo que es menos es bendecido de lo que es más.<verse eid="HEB 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 7:8"/>Y aquí ciertamente los hombres mortales toman los diezmos: mas allí, aquel <note caller="+" style="x"><char style="xo" closed="false">7.8 </char><char style="xt" closed="false">cp. 5.6.</char></note>del cual está dado testimonio que vive.<verse eid="HEB 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 7:9"/>Y, por decirlo así, en Abraham fué diezmado también Leví, que recibe los diezmos;<verse eid="HEB 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 7:10"/>Porque aun estaba en los lomos de su padre cuando Melchîsedec le salió al encuentro.<verse eid="HEB 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 7:11"/>Si <note caller="+" style="x"><char style="xo" closed="false">7.11 </char><char style="xt" closed="false"><ref loc="GAL 2:21">Ga. 2.21</ref>. cp. 8.7.</char></note>pues la perfección era por el sacerdocio Levítico (porque debajo de él recibió el pueblo la ley) ¿qué necesidad <char style="it">había</char> aún de que se levantase otro sacerdote <note caller="+" style="x"><char style="xo" closed="false">7.11 </char><char style="xt" closed="false">cp. 5.6.</char></note>según el orden de Melchîsedec, y que no fuese llamado según el orden de Aarón?<verse eid="HEB 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 7:12"/>Pues mudado el sacerdocio, necesario es que se haga también mudanza de la ley.<verse eid="HEB 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 7:13"/>Porque aquel del cual esto se dice, de otra tribu es, de la cual nadie asistió al altar.<verse eid="HEB 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 7:14"/>Porque notorio es que <note caller="+" style="x"><char style="xo" closed="false">7.14 </char><char style="xt" closed="false"><ref loc="ISA 11:1">Is. 11.1</ref>. <ref loc="MIC 5:2">Mi. 5.2</ref>. <ref loc="MAT 1:3">Mt. 1.3</ref>.</char></note>el Señor nuestro nació de la tribu de Judá, sobre cuya tribu nada habló Moisés tocante al sacerdocio.<verse eid="HEB 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 7:15"/>Y aun más manifiesto es, si á semejanza de Melchîsedec se levanta otro sacerdote,<verse eid="HEB 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 7:16"/>El cual no es hecho conforme á la ley del mandamiento carnal, sino según la virtud de vida indisoluble;<verse eid="HEB 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 7:17"/>Pues se da testimonio <char style="it">de él:</char></para>
+  <para style="q" vid="HEB 7:17">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.17 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 110:4">Sal. 110.4</ref>.</char>
+    </note>Tú eres sacerdote para siempre,</para>
+  <para style="q" vid="HEB 7:17">Según el orden de Melchîsedec.<verse eid="HEB 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 7:18"/>El mandamiento precedente, cierto se abroga por <note caller="+" style="x"><char style="xo" closed="false">7.18 </char><char style="xt" closed="false"><ref loc="ROM 8:3">Ro. 8.3</ref>. <ref loc="GAL 4:9">Ga. 4.9</ref>.</char></note>su flaqueza é inutilidad;<verse eid="HEB 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 7:19"/>Porque nada perfeccionó la ley; mas <char style="it">hízolo</char> <note caller="+" style="x"><char style="xo" closed="false">7.19 </char><char style="xt" closed="false"><ref loc="GAL 3:24">Ga. 3.24</ref>.</char></note>la introducción de mejor esperanza, por la cual <note caller="+" style="x"><char style="xo" closed="false">7.19 </char><char style="xt" closed="false">cp. 4.16.</char></note>nos acercamos á Dios.<verse eid="HEB 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 7:20"/>Y por cuanto no <char style="it">fué</char> sin juramento,<verse eid="HEB 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 7:21"/>(Porque los otros cierto sin juramento fueron hechos sacerdotes; mas éste, con juramento por el que le dijo:</para>
+  <para style="q" vid="HEB 7:21">Juró el Señor, y no se arrepentirá:</para>
+  <para style="q" vid="HEB 7:21">Tú eres sacerdote eternamente</para>
+  <para style="q" vid="HEB 7:21">Según el orden de Melchîsedec:)<verse eid="HEB 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 7:22"/>Tanto <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false">cp. 8.6.</char></note>de mejor testamento es hecho fiador Jesús.<verse eid="HEB 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 7:23"/>Y los otros cierto fueron muchos sacerdotes, en cuanto por la muerte no podían permanecer.<verse eid="HEB 7:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 7:24"/>Mas éste, por cuanto permanece para siempre, tiene un sacerdocio inmutable:<verse eid="HEB 7:24"/></para>
+  <para style="s">1 Un nuevo pontífice</para>
+  <para style="s">2 requiere un nuevo pacto.</para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 7:25"/>Por lo cual puede también salvar eternamente á los <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false">cp. 11.6.</char></note>que por él se allegan á Dios, viviendo siempre para <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false"><ref loc="ROM 8:34">Ro. 8.34</ref>.</char></note>interceder por ellos.<verse eid="HEB 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 7:26"/>Porque tal <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false">cp. 3.1.</char></note>pontífice nos convenía: <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false"><ref loc="REV 15:4">Ap. 15.4</ref>.</char></note>santo, inocente, limpio, <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false">cp. 4.15.</char></note>apartado de los pecadores, <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false"><ref loc="EPH 1:20">Ef. 1.20</ref>.</char></note>y hecho más sublime de los cielos;<verse eid="HEB 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 7:27"/>Que no tiene necesidad <note caller="+" style="x"><char style="xo" closed="false">7.27 </char><char style="xt" closed="false">cp. 10.11.</char></note>cada día, como los <char style="it">otros</char> sacerdotes, de ofrecer <note caller="+" style="x"><char style="xo" closed="false">7.27 </char><char style="xt" closed="false">cp. 5.3.</char></note>primero sacrificios por sus pecados, y luego por los del pueblo: porque <note caller="+" style="x"><char style="xo" closed="false">7.27 </char><char style="xt" closed="false"><ref loc="ROM 6:10">Ro. 6.10</ref>. cp. 9.12,14,28 y <ref loc="ROM 10:12">10.12</ref>.</char></note>esto <char style="it">lo</char> hizo <note caller="+" style="x"><char style="xo" closed="false">7.27 </char><char style="xt" closed="false">cp. 10.10.</char></note>una sola vez, ofreciéndose á sí mismo.<verse eid="HEB 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 7:28"/>Porque la ley constituye sacerdotes á hombres flacos; mas la palabra del <note caller="+" style="x"><char style="xo" closed="false">7.28 </char><char style="xt" closed="false">ver. 21.</char></note>juramento, después de la ley, <char style="it">constituye</char> al <note caller="+" style="x"><char style="xo" closed="false">7.28 </char><char style="xt" closed="false">cp. 1.2.</char></note>Hijo, <note caller="+" style="x"><char style="xo" closed="false">7.28 </char><char style="xt" closed="false"><ref loc="LEV 21:10">Lv. 21.10</ref>. cp. 5.9.</char></note>hecho perfecto para siempre.<verse eid="HEB 7:28"/></para>
+  <chapter eid="HEB 7"/>
+  <chapter number="8" style="c" sid="HEB 8"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 8:1"/>ASÍ que, la suma acerca de lo dicho <char style="it">es:</char> Tenemos tal <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false">cp. 3.1.</char></note>pontífice <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>. cp. 1.3.</char></note>que se asentó á la diestra del trono de la Majestad en los cielos;<verse eid="HEB 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 8:2"/>Ministro <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false">cp. 9.2,8,12,24,25.</char></note>del santuario, y de aquel verdadero tabernáculo que el Señor asentó, y no hombre.<verse eid="HEB 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 8:3"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false">cp. 5.1.</char></note>todo pontífice es puesto para ofrecer presentes y sacrificios; por lo cual <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="EPH 5:2">Ef. 5.2</ref>.</char></note>es necesario que también éste tuviese algo que ofrecer.<verse eid="HEB 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 8:4"/>Así que, si estuviese sobre la tierra, ni aun sería sacerdote, habiendo aún los sacerdotes que ofrecen los presentes según la ley;<verse eid="HEB 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 8:5"/>Los cuales sirven de bosquejo y <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false"><ref loc="COL 2:17">Col. 2.17</ref>. cp. 10.1.</char></note>sombre de las cosas celestiales, como fué respondido á Moisés cuando había de acabar el tabernáculo: <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false"><ref loc="EXO 25:40">Ex. 25.40</ref>.</char></note>Mira, dice, haz todas las cosas conforme al dechado que te ha sido mostrado en el monte.<verse eid="HEB 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 8:6"/>Mas ahora <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">cp. 1.4.</char></note>tanto mejor ministerio es el suyo, cuanto es <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">cp. 9.15 y <ref loc="HEB 12:24">12.24</ref>.</char></note>mediador de un <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">cp. 7.22.</char></note>mejor pacto, el cual ha sido formado sobre mejores promesas.<verse eid="HEB 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 8:7"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false">cp. 7.11,18.</char></note>si aquel primero fuera sin falta, cierto no se hubiera procurado lugar de segundo.<verse eid="HEB 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 8:8"/>Porque reprendiéndolos dice:</para>
+  <para style="q" vid="HEB 8:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:31-34">Jer. 31.31-34</ref>.</char>
+    </note>He aquí vienen días, dice el Señor,</para>
+  <para style="q" vid="HEB 8:8">Y consumaré para con la casa de Israel y para con la casa de Judá un nuevo pacto;<verse eid="HEB 8:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="HEB 8:9"/>No como el pacto que hice con sus padres</para>
+  <para style="q" vid="HEB 8:9">El día que los tomé por la mano para sacarlos de la tierra de Egipto:</para>
+  <para style="q" vid="HEB 8:9">Porque ellos no permanecieron en mi pacto,</para>
+  <para style="q" vid="HEB 8:9">Y yo los menosprecié, dice el Señor.<verse eid="HEB 8:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="HEB 8:10"/>Por lo cual, este es el pacto que ordenaré á la casa de Israel</para>
+  <para style="q" vid="HEB 8:10">Después de aquellos días, dice el Señor:</para>
+  <para style="q" vid="HEB 8:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.10 </char>
+      <char style="xt" closed="false">cp. 10.16.</char>
+    </note>Daré mis leyes en el alma de ellos,</para>
+  <para style="q" vid="HEB 8:10">Y sobre el corazón de ellos las escribiré;</para>
+  <para style="q" vid="HEB 8:10">Y seré á ellos por Dios,</para>
+  <para style="q" vid="HEB 8:10">Y ellos me serán á mí por pueblo:<verse eid="HEB 8:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="HEB 8:11"/>Y ninguno eneseñará á su prójimo,</para>
+  <para style="q" vid="HEB 8:11">Ni ninguno á su hermano, diciendo: Conoce al Señor:</para>
+  <para style="q" vid="HEB 8:11">Porque todos me conocerán,</para>
+  <para style="q" vid="HEB 8:11">Desde el menor de ellos hasta el mayor.<verse eid="HEB 8:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="HEB 8:12"/>Porque seré propicio á sus injusticias,</para>
+  <para style="q" vid="HEB 8:12">Y de sus pecados y de sus iniquidades no me acordaré más.<verse eid="HEB 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 8:13"/>Diciendo, Nuevo <char style="it">pacto,</char> <note caller="+" style="x"><char style="xo" closed="false">8.13 </char><char style="xt" closed="false"><ref loc="2CO 5:17">2 Co. 5.17</ref>.</char></note>dió por viejo al primero; y lo que es dado por viejo y se envejece, cerca está de desvanecerse.<verse eid="HEB 8:13"/></para>
+  <chapter eid="HEB 8"/>
+  <chapter number="9" style="c" sid="HEB 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 9:1"/>TENÍA empero también el primer <char style="it">pacto</char> reglamentos del culto, y <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="EXO 25:8">Ex. 25.8</ref>.</char></note>santuario mundano.<verse eid="HEB 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 9:2"/>Porque el tabernáculo <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 26:1">Ex. 26.1</ref>.</char></note>fué hecho: el primero, <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 26:35">Ex. 26.35</ref>.</char></note>en que <char style="it">estaban</char> las <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 25:31-39">Ex. 25.31-39</ref>.</char></note>lámparas, y <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 25:23-29">Ex. 25.23-29</ref>.</char></note>la mesa, y <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EXO 25:30">Ex. 25.30</ref>.</char></note>los panes de la proposición; lo que llaman el Santuario.<verse eid="HEB 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 9:3"/>Tras el segundo velo <note caller="+" style="x"><char style="xo" closed="false">9.3 </char><char style="xt" closed="false"><ref loc="EXO 26:31-35">Ex. 26.31-35</ref>.</char></note><char style="it">estaba</char> el tabernáculo, que llaman el Lugar Santísimo;<verse eid="HEB 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 9:4"/>El cual tenía un <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="2CH 26:19">2 Cr. 26.19</ref>.</char></note>incensario de oro, y el <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="EXO 25:10">Ex. 25.10</ref>,<ref loc="EXO 25:11">11</ref> y <ref loc="EXO 40:3">40.3</ref>,<ref loc="EXO 40:21">21</ref>.</char></note>arca del pacto cubierta de todas partes alrededor de oro; en la que <char style="it">estaba</char> una urna de oro <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="EXO 16:33">Ex. 16.33</ref>,<ref loc="EXO 16:34">34</ref>.</char></note>que contenía el maná, y la vara <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="NUM 17:10">Nm. 17.10</ref>.</char></note>de Aarón que reverdeció, y <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="EXO 25:16">Ex. 25.16</ref> y <ref loc="EXO 40:20">40.20</ref>. <ref loc="1KI 8:21">1 R. 8.21</ref>.</char></note>las tablas del pacto;<verse eid="HEB 9:4"/></para>
+  <para style="s">1 La entrada al Santísimo.</para>
+  <para style="s">2 El sacrificio de Cristo,</para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 9:5"/>Y sobre ella <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="EXO 25:18-22">Ex. 25.18-22</ref>.</char></note>los querubines de gloria que cubrían <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="LEV 16:2">Lv. 16.2</ref>.</char></note>el propiciatorio; de las cuales cosas no se puede ahora hablar en particular.<verse eid="HEB 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 9:6"/>Y estas cosas así ordenadas, en el primer tabernáculo siempre entraban <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="NUM 28:3">Nm. 28.3</ref>.</char></note>los sacerdotes para hacer los oficios del culto;<verse eid="HEB 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 9:7"/>Mas en <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false">ver. 3.</char></note>el segundo, <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="EXO 30:10">Ex. 30.10</ref>. <ref loc="LEV 16:34">Lv. 16.34</ref>.</char></note>sólo el pontífice una vez en el año, no sin sangre, la cual ofrece por sí mismo, y por los pecados de ignorancia del pueblo:<verse eid="HEB 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 9:8"/>Dando en esto á entender <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false">cp. 3.7.</char></note>el Espíritu Santo, que aun no estaba descubierto <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="JHN 14:6">Jn. 14.6</ref>.</char></note>el camino para el santuario, entre tanto que el primer tabernáculo estuviese en pie.<verse eid="HEB 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 9:9"/>Lo cual <char style="it">era</char> <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false">cp. 11.19.</char></note>figura de aquel tiempo presente, en el cual se ofrecían presentes y sacrificios <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false">cp. 7.19 y <ref loc="HEB 10:1">10.1</ref>,<ref loc="HEB 10:11">11</ref>.</char></note>que no podían hacer perfecto, cuanto á la conciencia, al que servía <char style="it">con ellos;</char><verse eid="HEB 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 9:10"/>
+    <char style="it">Consistiendo</char> sólo en <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="LEV 11:2-47">Lv. 11.2-47</ref>.</char></note>viandas y en bebidas, y en diversos lavamientos, y ordenanzas <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false">cp. 7.16.</char></note>acerca de la carne, impuestas hasta el tiempo de la corrección.<verse eid="HEB 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 9:11"/>Mas estando ya presente Cristo, pontífice <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false">cp. 10.1.</char></note>de los bienes que habían de venir, <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false">cp. 8.2.</char></note>por el más amplio y más perfecto tabernáculo, no <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false"><ref loc="MRK 14:58">Mr. 14.58</ref>.</char></note>hecho de manos, es á saber, no de esta creación;<verse eid="HEB 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 9:12"/>Y no por sangre de machos cabríos ni de becerros, mas por <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>.</char></note>su propia sangre, entró <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false">cp. 10.10.</char></note>una sola vez en <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false">cp. 10.19.</char></note>el santuario, habiendo obtenido eterna redención.<verse eid="HEB 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 9:13"/>Porque <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false">vers. 12,19. <ref loc="LEV 16:14-16">Lv. 16.14-16</ref>.</char></note>si la sangre de los toros y de los machos cabríos, y <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false"><ref loc="NUM 19:2">Nm. 19.2</ref>,<ref loc="NUM 19:17">17</ref>,<ref loc="NUM 19:18">18</ref>.</char></note>la ceniza de la becerra, rociada á los inmundos, santifica para la purificación de la carne,<verse eid="HEB 9:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 9:14"/>¿Cuánto más <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="REV 7:14">Ap. 7.14</ref>.</char></note>la sangre de Cristo, el cual por el Espíritu eterno se ofreció á sí mismo sin mancha á Dios, <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="TIT 2:14">Tit. 2.14</ref>. cp. 10.22. <ref loc="REV 1:5">Ap. 1.5</ref>.</char></note>limpiará vuestras conciencias <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false">cp. 6.1.</char></note>de las obras de muerte para que sirváis al Dios vivo?<verse eid="HEB 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 9:15"/>Así que, por eso es <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false">cp. 8.6.</char></note>mediador del <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false">cp. 8.8,13.</char></note>nuevo testamento, para que interviniendo muerte para la remisión de las rebeliones que había bajo del primer testamento, <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false">cp. 3.1.</char></note>los que son llamados reciban la promesa de la herencia eterna.<verse eid="HEB 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 9:16"/>Porque donde hay testamento, necesario es que intervenga muerte del testador.<verse eid="HEB 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 9:17"/>Porque <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="GAL 3:15">Ga. 3.15</ref>.</char></note>el testamento con la muerte es confirmado; de otra manera no es válido entre tanto que el testador vive.<verse eid="HEB 9:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 9:18"/>De donde <char style="it">vino</char> que ni aun el primero fué consagrado sin sangre.<verse eid="HEB 9:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 9:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">9.19 </char><char style="xt" closed="false"><ref loc="EXO 24:7">Ex. 24.7</ref>,<ref loc="EXO 24:8">8</ref>.</char></note>habiendo leído Moisés todos los mandamientos de la ley á todo el pueblo, tomando la sangre de <note caller="+" style="x"><char style="xo" closed="false">9.19 </char><char style="xt" closed="false">ver. 12.</char></note>los becerros y de los machos cabríos, <note caller="+" style="x"><char style="xo" closed="false">9.19 </char><char style="xt" closed="false"><ref loc="LEV 14:4">Lv. 14.4</ref>,<ref loc="LEV 14:6">6</ref>,<ref loc="LEV 14:7">7</ref>,<ref loc="LEV 14:49">49</ref>,<ref loc="LEV 14:51">51</ref>,<ref loc="LEV 14:52">52</ref>.</char></note>con agua, y lana de grana, é hisopo, roció al mismo libro, y también á todo el pueblo,<verse eid="HEB 9:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 9:20"/>Diciendo: Esta es <note caller="+" style="x"><char style="xo" closed="false">9.20 </char><char style="xt" closed="false"><ref loc="MAT 26:28">Mt. 26.28</ref>.</char></note>la sangre del testamento que Dios os ha mandado.<verse eid="HEB 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 9:21"/>Y además de esto <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="EXO 24:6">Ex. 24.6</ref>. <ref loc="LEV 8:15">Lv. 8.15</ref>,<ref loc="LEV 8:19">19</ref> y <ref loc="LEV 16:14">16.14</ref>,<ref loc="LEV 16:16">16</ref>,<ref loc="LEV 16:18">18</ref>,<ref loc="LEV 16:19">19</ref>.</char></note>roció también con la sangre el tabernáculo y todos los vasos del ministerio.<verse eid="HEB 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 9:22"/>Y casi todo es purificado según la ley con sangre; y <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="LEV 17:11">Lv. 17.11</ref>.</char></note>sin derramamiento de sangre no se hace remisión.<verse eid="HEB 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 9:23"/>Fué, pues, necesario que <note caller="+" style="x"><char style="xo" closed="false">9.23 </char><char style="xt" closed="false">cp. 8.5.</char></note>las figuras de las cosas celestiales fuesen purificadas con estas cosas; empero las mismas cosas celestiales con mejores sacrificios que éstos.<verse eid="HEB 9:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 9:24"/>Porque no entró Cristo en el santuario hecho de mano, figura <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false">cp. 8.2.</char></note>del verdadero, sino <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false">cp. 4.14.</char></note>en el mismo cielo para presentarse ahora <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false"><ref loc="ROM 8:34">Ro. 8.34</ref>.</char></note>por nosotros en la presencia de Dios.<verse eid="HEB 9:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 9:25"/>Y no para ofrecerse muchas veces á sí mismo, <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false">ver. 7.</char></note>como entra el pontífice en el santuario <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false"><ref loc="LEV 16:34">Lv. 16.34</ref>.</char></note>cada año con sangre ajena;<verse eid="HEB 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 9:26"/>De otra manera fuera necesario que hubiera padecido muchas veces desde el principio del mundo: mas ahora <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false">ver. 12.</char></note>una vez <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false">cp. 1.2.</char></note>en la consumación de los siglos, <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false"><ref loc="1JN 3:5">1 Jn. 3.5</ref>.</char></note>para deshacimiento del pecado se presentó por el sacrificio de sí mismo.<verse eid="HEB 9:26"/></para>
+  <para style="s">1 único y perfecto.</para>
+  <para style="s">2 “El camino nuevo y vivo.”</para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 9:27"/>Y de la manera que está establecido á los hombres que mueran una vez, y después el juicio;<verse eid="HEB 9:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 9:28"/>Así también Cristo fué ofrecido una vez <note caller="+" style="x"><char style="xo" closed="false">9.28 </char><char style="xt" closed="false"><ref loc="1PE 2:24">1 P. 2.24</ref>.</char></note>para agotar los pecados <note caller="+" style="x"><char style="xo" closed="false">9.28 </char><char style="xt" closed="false"><ref loc="MAT 20:28">Mt. 20.28</ref>.</char></note>de muchos; y la segunda vez, sin pecado, será visto de <note caller="+" style="x"><char style="xo" closed="false">9.28 </char><char style="xt" closed="false"><ref loc="1CO 1:7">1 Co. 1.7</ref>.</char></note>los que le esperan para salud.<verse eid="HEB 9:28"/></para>
+  <chapter eid="HEB 9"/>
+  <chapter number="10" style="c" sid="HEB 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 10:1"/>PORQUE la ley, teniendo <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="COL 2:17">Col. 2.17</ref>. cp. 8.5.</char></note>la sombra de <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 9.11.</char></note>los bienes venideros, no la imagen misma de las cosas, <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 9.9.</char></note>nunca puede, por los mismos sacrificios que ofrecen continuamente cada año, hacer perfectos á los que se allegan.<verse eid="HEB 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 10:2"/>De otra manera cesarían de ofrecerse; porque los que tributan <char style="it">este</char> culto, limpios de una vez, no tendrían más conciencia de pecado.<verse eid="HEB 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 10:3"/>Empero <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false"><ref loc="LEV 16:21">Lv. 16.21</ref>. cp. 9.7.</char></note>en estos <char style="it">sacrificios</char> cada año se hace conmemoración de los pecados.<verse eid="HEB 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 10:4"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false"><ref loc="MIC 6:6-8">Mi. 6.6-8</ref>.</char></note>la sangre de los toros y de los machos cabríos no puede quitar los pecados.<verse eid="HEB 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 10:5"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">10.5 </char><char style="xt" closed="false">cp. 1.6.</char></note>entrando en el mundo, dice:</para>
+  <para style="q" vid="HEB 10:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.5 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 40:6-8">Sal. 40.6-8</ref>.</char>
+    </note>Sacrificio y presente no quisiste;</para>
+  <para style="q" vid="HEB 10:5">Mas <note caller="+" style="x"><char style="xo" closed="false">10.5 </char><char style="xt" closed="false">ver. 10. <ref loc="JHN 6:51">Jn. 6.51</ref>.</char></note>me apropiaste cuerpo:<verse eid="HEB 10:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="HEB 10:6"/>Holocaustos y <char style="it">expiaciones</char> por el pecado no te agradaron.<verse eid="HEB 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 10:7"/>Entonces dije: Heme aquí</para>
+  <para style="q" vid="HEB 10:7">(En la cabecera del libro está escrito de mí)</para>
+  <para style="q" vid="HEB 10:7">Para que haga, oh Dios, tu voluntad.<verse eid="HEB 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 10:8"/>Diciendo arriba: Sacrificio y presente, y holocaustos y <char style="it">expiaciones</char> por el pecado no quisiste, ni te agradaron, (las cuales cosas se ofrecen según la ley,)<verse eid="HEB 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 10:9"/>Entonces dijo: Heme aquí para que haga, oh Dios, tu voluntad. Quita lo primero, para establecer lo postrero.<verse eid="HEB 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 10:10"/>En la cual <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false"><ref loc="JHN 17:19">Jn. 17.19</ref>.</char></note>voluntad somos santificados por la ofrenda del <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false">ver. 5. <ref loc="JHN 6:51">Jn. 6.51</ref>.</char></note>cuerpo de Jesucristo <char style="it">hecha</char> <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false"><ref loc="ROM 6:10">Ro. 6.10</ref>. cp. 7.27.</char></note>una sola vez.<verse eid="HEB 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 10:11"/>Así que, todo sacerdote se presenta <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="NUM 28:3">Nm. 28.3</ref>. cp. 7.27.</char></note>cada día ministrando y ofreciendo muchas veces los mismos sacrificios, que nunca pueden quitar los pecados:<verse eid="HEB 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 10:12"/>Pero éste, habiendo ofrecido por los pecados <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false">cp. 7.27.</char></note>un <char style="it">solo</char> sacrificio <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false">cp. 1.3.</char></note>para siempre, está sentado á la diestra de Dios,<verse eid="HEB 10:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 10:13"/>Esperando lo que resta, hasta que <note caller="+" style="x"><char style="xo" closed="false">10.13 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>.</char></note>sus enemigos sean puestos por estrado de sus pies.<verse eid="HEB 10:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 10:14"/>Porque con una sola ofrenda <note caller="+" style="x"><char style="xo" closed="false">10.14 </char><char style="xt" closed="false">ver. 1.</char></note>hizo perfectos para siempre á <note caller="+" style="x"><char style="xo" closed="false">10.14 </char><char style="xt" closed="false">ver. 10.</char></note>los santificados.<verse eid="HEB 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 10:15"/>Y atestíguanos <note caller="+" style="x"><char style="xo" closed="false">10.15 </char><char style="xt" closed="false">cp. 3.7.</char></note>lo mismo el Espíritu Santo; que después que dijo:<verse eid="HEB 10:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="HEB 10:16"/>Y este es el pacto que haré con ellos</para>
+  <para style="q" vid="HEB 10:16">Después de aquellos días, dice el Señor:</para>
+  <para style="q" vid="HEB 10:16">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.16 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:33">Jer. 31.33</ref>. cp. 8.10.</char>
+    </note>Daré mis leyes en sus corazones,</para>
+  <para style="q" vid="HEB 10:16">Y en sus almas las escribiré:<verse eid="HEB 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 10:17"/>
+    <char style="it">Añade:</char></para>
+  <para style="q" vid="HEB 10:17">Y nunca más me acordaré de sus pecados é iniquidades.<verse eid="HEB 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 10:18"/>Pues donde hay remisión de éstos, no hay más ofrenda por pecado.<verse eid="HEB 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 10:19"/>Así que, hermanos, <note caller="+" style="x"><char style="xo" closed="false">10.19 </char><char style="xt" closed="false"><ref loc="ROM 5:2">Ro. 5.2</ref>. cp. 4.10.</char></note>teniendo libertad para entrar en <note caller="+" style="x"><char style="xo" closed="false">10.19 </char><char style="xt" closed="false">cp. 8.2.</char></note>el santuario por la sangre de Jesucristo,<verse eid="HEB 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 10:20"/>Por el camino que él nos consagró nuevo y vivo, <note caller="+" style="x"><char style="xo" closed="false">10.20 </char><char style="xt" closed="false">cp. 9.3.</char></note>por el velo, esto es, por su carne;<verse eid="HEB 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 10:21"/>Y <char style="it">teniendo</char> <note caller="+" style="x"><char style="xo" closed="false">10.21 </char><char style="xt" closed="false">cp. 3.1.</char></note>un gran sacerdote sobre <note caller="+" style="x"><char style="xo" closed="false">10.21 </char><char style="xt" closed="false"><ref loc="1TI 3:15">1 Ti. 3.15</ref>.</char></note>la casa de Dios,<verse eid="HEB 10:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 10:22"/>Lleguémonos con corazón verdadero, <note caller="+" style="x"><char style="xo" closed="false">10.22 </char><char style="xt" closed="false"><ref loc="COL 2:2">Col. 2.2</ref>. cp. 6.11.</char></note>en plena certidumbre de fe, purificados los corazones <note caller="+" style="x"><char style="xo" closed="false">10.22 </char><char style="xt" closed="false">cp. 9.14.</char></note>de mala conciencia, y <note caller="+" style="x"><char style="xo" closed="false">10.22 </char><char style="xt" closed="false"><ref loc="1CO 6:11">1 Co. 6.11</ref>.</char></note>lavados los cuerpos con agua limpia.<verse eid="HEB 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 10:23"/>Mantengamos firme la <note caller="+" style="x"><char style="xo" closed="false">10.23 </char><char style="xt" closed="false"><ref loc="1TI 6:13">1 Ti. 6.13</ref>.</char></note>profesión de nuestra fe sin fluctuar; que <note caller="+" style="x"><char style="xo" closed="false">10.23 </char><char style="xt" closed="false"><ref loc="1CO 1:9">1 Co. 1.9</ref>. cp. 11.11.</char></note>fiel es el que prometió:<verse eid="HEB 10:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 10:24"/>Y considerémonos los unos á los otros para provocarnos al amor y á las buenas obras;<verse eid="HEB 10:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 10:25"/>No dejando <note caller="+" style="x"><char style="xo" closed="false">10.25 </char><char style="xt" closed="false"><ref loc="ACT 2:42">Hch. 2.42</ref>. <ref loc="JUD 1:19">Jud. 19</ref>.</char></note>nuestra congregación, como algunos tienen por costumbre, mas exhortándonos; y tanto más, cuanto veis que <note caller="+" style="x"><char style="xo" closed="false">10.25 </char><char style="xt" closed="false"><ref loc="LUK 17:24">Lc. 17.24</ref>. <ref loc="1CO 3:13">1 Co. 3.13</ref>.</char></note>aquel día se acerca.<verse eid="HEB 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 10:26"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.26 </char><char style="xt" closed="false">cp. 6.4.</char></note>si pecáremos voluntariamente después de haber recibido el conocimiento de la verdad, <note caller="+" style="x"><char style="xo" closed="false">10.26 </char><char style="xt" closed="false"><ref loc="1JN 5:16">1 Jn. 5.16</ref>.</char></note>ya no queda sacrificio por el pecado,<verse eid="HEB 10:26"/></para>
+  <para style="s">1 Perseverancia en la fe.</para>
+  <para style="s">2 Excelencia de la fe,</para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 10:27"/>Sino una horrenda esperanza de juicio, y hervor de fuego que ha de devorar á los adversarios.<verse eid="HEB 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 10:28"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.28 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 17:2">Dt. 17.2</ref>,<ref loc="DEU 17:6">6</ref>.</char>
+    </note>El que menospreciare la ley de Moisés, por el testimonio de dos ó de tres testigos <char style="fm">10.28</char> muere sin ninguna misericordia:<verse eid="HEB 10:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 10:29"/>¿Cuánto pensáis <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">cp. 2.3.</char></note>que será más digno de mayor castigo, <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">cp. 6.6.</char></note>el que hollare al <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">cp. 1.2.</char></note>Hijo de Dios, y tuviere por inmunda <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">cp. 13.20.</char></note>la sangre del <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">ver. 16.</char></note>testamento, en la cual fué <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">ver. 10.</char></note>santificado, <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false"><ref loc="MAT 12:31">Mt. 12.31</ref>,<ref loc="MAT 12:32">32</ref>.</char></note>e hiciere afrenta al Espíritu de gracia?<verse eid="HEB 10:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 10:30"/>Sabemos <char style="it">quién</char> es el que dijo: <note caller="+" style="x"><char style="xo" closed="false">10.30 </char><char style="xt" closed="false"><ref loc="DEU 32:35">Dt. 32.35</ref>. <ref loc="ROM 12:19">Ro. 12.19</ref>.</char></note>Mía es la venganza, yo daré el pago, dice el Señor. Y otra vez: <note caller="+" style="x"><char style="xo" closed="false">10.30 </char><char style="xt" closed="false"><ref loc="DEU 32:36">Dt. 32.36</ref>.</char></note>El Señor juzgará su pueblo.<verse eid="HEB 10:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="HEB 10:31"/>Horrenda cosa es caer en las manos del Dios vivo.<verse eid="HEB 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 10:32"/>Empero <note caller="+" style="x"><char style="xo" closed="false">10.32 </char><char style="xt" closed="false"><ref loc="2JN 1:8">2 Jn. 8</ref>.</char></note>traed á la memoria los días pasados, en los cuales, después de haber sido iluminados, sufristeis gran combate de aflicciones:<verse eid="HEB 10:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="HEB 10:33"/>Por una parte, ciertamente, con vituperios y tribulaciones fuisteis hechos espectáculo; y por otra parte hechos compañeros de los que estaban en tal estado.<verse eid="HEB 10:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="HEB 10:34"/>Porque de mis prisiones también os resentisteis conmigo, y <note caller="+" style="x"><char style="xo" closed="false">10.34 </char><char style="xt" closed="false"><ref loc="MAT 5:12">Mt. 5.12</ref>. <ref loc="JAS 1:10">Stg. 1.10</ref>.</char></note>el robo de vuestros bienes padecisteis con gozo, conociendo que <note caller="+" style="x"><char style="xo" closed="false">10.34 </char><char style="xt" closed="false"><ref loc="MAT 6:20">Mt. 6.20</ref>.</char></note>tenéis en vosotros una mejor sustancia en los cielos, y que permanece.<verse eid="HEB 10:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="HEB 10:35"/>No perdáis pues vuestra confianza, que tiene grande remuneración de galardón:<verse eid="HEB 10:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="HEB 10:36"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.36 </char><char style="xt" closed="false"><ref loc="LUK 21:19">Lc. 21.19</ref>. cp. 12.1. <ref loc="JAS 1:3">Stg. 1.3</ref>,<ref loc="JAS 1:4">4</ref>.</char></note>la paciencia os es necesaria; para que, habiendo hecho la voluntad de Dios, <note caller="+" style="x"><char style="xo" closed="false">10.36 </char><char style="xt" closed="false">cp. 9.15.</char></note>obtengáis la promesa.<verse eid="HEB 10:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="HEB 10:37"/>Porque aun <note caller="+" style="x"><char style="xo" closed="false">10.37 </char><char style="xt" closed="false"><ref loc="1PE 5:10">1 P. 5.10</ref>.</char></note>un poquito,</para>
+  <para style="q" vid="HEB 10:37">Y el que ha de venir <note caller="+" style="x"><char style="xo" closed="false">10.37 </char><char style="xt" closed="false"><ref loc="HAB 2:3">Hab. 2.3</ref>,<ref loc="HAB 2:4">4</ref>.</char></note>vendrá, y no tardará.<verse eid="HEB 10:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="HEB 10:38"/>Ahora el justo <note caller="+" style="x"><char style="xo" closed="false">10.38 </char><char style="xt" closed="false"><ref loc="ROM 1:17">Ro. 1.17</ref>.</char></note>vivirá por fe;</para>
+  <para style="q" vid="HEB 10:38">Mas si se retirare, no agradará á mi alma.<verse eid="HEB 10:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 10:39"/>Pero nosotros no somos tales <note caller="+" style="x"><char style="xo" closed="false">10.39 </char><char style="xt" closed="false"><ref loc="2PE 2:20">2 P. 2.20</ref>,<ref loc="2PE 2:21">21</ref>.</char></note>que nos retiremos para perdición, sino fieles para ganancia del alma.<verse eid="HEB 10:39"/></para>
+  <chapter eid="HEB 10"/>
+  <chapter number="11" style="c" sid="HEB 11"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 11:1"/>ES pues la fe la sustancia de las cosas que se esperan, la demostración de las cosas <note caller="+" style="x"><char style="xo" closed="false">11.1 </char><char style="xt" closed="false"><ref loc="2CO 4:18">2 Co. 4.18</ref>.</char></note>que no se ven.<verse eid="HEB 11:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 11:2"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false">vers. 4,5,39.</char></note>por ella alcanzaron testimonio los antiguos.<verse eid="HEB 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 11:3"/>Por la fe entendemos haber sido compuestos los siglos <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="2PE 3:5">2 P. 3.5</ref>.</char></note>por la palabra de Dios, <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="ROM 4:17">Ro. 4.17</ref>.</char></note>siendo hecho lo que se ve, de lo que no se veía.<verse eid="HEB 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 11:4"/>Por la fe <note caller="+" style="x"><char style="xo" closed="false">11.4 </char><char style="xt" closed="false"><ref loc="GEN 4:4">Gn. 4.4</ref>.</char></note>Abel ofreció á Dios mayor sacrificio que Caín, por la cual alcanzó testimonio de que era justo, dando Dios testimonio á sus presentes; y difunto, aun habla por ella.<verse eid="HEB 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 11:5"/>Por la fe <note caller="+" style="x"><char style="xo" closed="false">11.5 </char><char style="xt" closed="false"><ref loc="GEN 5:22">Gn. 5.22</ref>,<ref loc="GEN 5:24">24</ref>.</char></note>Enoc fué traspuesto para no ver muerte, y no fué hallado, porque lo traspuso Dios. Y antes que fuese traspuesto, tuvo testimonio de haber agradado á Dios.<verse eid="HEB 11:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 11:6"/>Empero sin fe es imposible agradar á Dios; porque es menester que el que á Dios se allega, crea que le hay, y que es galardonador de los que le buscan.<verse eid="HEB 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 11:7"/>Por la fe Noé, <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="GEN 6:13">Gn. 6.13</ref>,<ref loc="GEN 6:22">22</ref>.</char></note>habiendo recibido respuesta de cosas que aun no se veían, con temor aparejó el arca <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="1PE 3:20">1 P. 3.20</ref>.</char></note>en que su casa se salvase: por la cual <char style="it">fe</char> <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="MAT 12:41">Mt. 12.41</ref>.</char></note>condenó al mundo, y fué hecho heredero de <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="ROM 3:22">Ro. 3.22</ref>.</char></note>la justicia que es por la fe.<verse eid="HEB 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 11:8"/>Por la fe <note caller="+" style="x"><char style="xo" closed="false">11.8 </char><char style="xt" closed="false"><ref loc="GEN 12:1">Gn. 12.1</ref>,<ref loc="GEN 12:4">4</ref>.</char></note>Abraham, siendo llamado, obedeció para salir al lugar que había de recibir por heredad; y salió sin saber dónde iba.<verse eid="HEB 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 11:9"/>Por fe habitó en la tierra prometida como en <char style="it">tierra</char> ajena, <note caller="+" style="x"><char style="xo" closed="false">11.9 </char><char style="xt" closed="false"><ref loc="GEN 12:8">Gn. 12.8</ref> y <ref loc="GEN 13:3">13.3</ref>,<ref loc="GEN 13:18">18</ref> y <ref loc="GEN 18:1">18.1</ref>,<ref loc="GEN 18:9">9</ref>.</char></note>morando en cabañas con Isaac y Jacob, herederos juntamente de la misma promesa:<verse eid="HEB 11:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 11:10"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.10 </char><char style="xt" closed="false">cp. 12.22.</char></note>esperaba ciudad <note caller="+" style="x"><char style="xo" closed="false">11.10 </char><char style="xt" closed="false"><ref loc="REV 21:14">Ap. 21.14</ref>.</char></note>con fundamentos, el artífice y <note caller="+" style="x"><char style="xo" closed="false">11.10 </char><char style="xt" closed="false">cp. 13.14. <ref loc="REV 21:2">Ap. 21.2</ref>,<ref loc="REV 21:10">10</ref>.</char></note>hacedor de la cual es Dios.<verse eid="HEB 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 11:11"/>Por la fe también <note caller="+" style="x"><char style="xo" closed="false">11.11 </char><char style="xt" closed="false"><ref loc="GEN 17:19">Gn. 17.19</ref>.</char></note>la misma Sara, siendo estéril, recibió fuerza para concebir simiente; y parió aun fuera del tiempo de la edad, porque creyó ser fiel el que <char style="it">lo</char> había prometido.<verse eid="HEB 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 11:12"/>Por lo cual también, de uno, y <note caller="+" style="x"><char style="xo" closed="false">11.12 </char><char style="xt" closed="false"><ref loc="ROM 4:19">Ro. 4.19</ref>.</char></note>ése ya amortecido, <note caller="+" style="x"><char style="xo" closed="false">11.12 </char><char style="xt" closed="false"><ref loc="GEN 22:17">Gn. 22.17</ref>.</char></note>salieron como las estrellas del cielo en multitud, y como la arena inmunerable que está á la orilla de la mar.<verse eid="HEB 11:12"/></para>
+  <para style="s">1 y ejemplos que muestran</para>
+  <para style="s">2 su eficacia y poder.</para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 11:13"/>Conforme á la fe murieron todos éstos sin haber recibido las promesas, sino <note caller="+" style="x"><char style="xo" closed="false">11.13 </char><char style="xt" closed="false"><ref loc="JHN 8:56">Jn. 8.56</ref>. <ref loc="2CO 4:18">2 Co. 4.18</ref>.</char></note>mirándolas de lejos, y creyéndolas, y saludándolas, y confesando que eran <note caller="+" style="x"><char style="xo" closed="false">11.13 </char><char style="xt" closed="false"><ref loc="GEN 23:4">Gn. 23.4</ref>. <ref loc="PSA 39:12">Sal. 39.12</ref>.</char></note>peregrinos y advenedizos sobre la tierra.<verse eid="HEB 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 11:14"/>Porque los que esto dicen, claramente dan á entender que buscan una patria.<verse eid="HEB 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 11:15"/>Que si se acordaran de aquella de donde salieron, cierto tenían tiempo para volverse:<verse eid="HEB 11:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 11:16"/>Empero deseaban la mejor, es á saber, la celestial; por lo cual <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false">cp. 2.11.</char></note>Dios no se avergüenza <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false"><ref loc="EXO 3:6">Ex. 3.6</ref>.</char></note>de llamarse Dios de ellos: porque <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false">cp. 13.14.</char></note>les había aparejado ciudad.<verse eid="HEB 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 11:17"/>Por fe ofreció Abraham á Isaac cuando fué probado, y ofrecía al unigénito el que había recibido las promesas,<verse eid="HEB 11:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 11:18"/>Habiéndole sido dicho: <note caller="+" style="x"><char style="xo" closed="false">11.18 </char><char style="xt" closed="false"><ref loc="GEN 21:12">Gn. 21.12</ref>. <ref loc="ROM 9:7">Ro. 9.7</ref>.</char></note>En Isaac te será llamada simiente:<verse eid="HEB 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 11:19"/>Pensando que <note caller="+" style="x"><char style="xo" closed="false">11.19 </char><char style="xt" closed="false"><ref loc="ROM 4:17">Ro. 4.17</ref>,<ref loc="ROM 4:19">19</ref>,<ref loc="ROM 4:21">21</ref>.</char></note>aun de los muertos <char style="it">es</char> Dios poderoso para levantar; de donde también le volvió á recibir por <note caller="+" style="x"><char style="xo" closed="false">11.19 </char><char style="xt" closed="false">cp. 9.9.</char></note>figura.<verse eid="HEB 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 11:20"/>Por fe <note caller="+" style="x"><char style="xo" closed="false">11.20 </char><char style="xt" closed="false"><ref loc="GEN 27:27-29">Gn. 27.27-29</ref>,<ref loc="GEN 27:39">39</ref>,<ref loc="GEN 27:40">40</ref>.</char></note>bendijo Isaac á Jacob y á Esaú respecto á cosas que habían de ser.<verse eid="HEB 11:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 11:21"/>Por fe Jacob, muriéndose, <note caller="+" style="x"><char style="xo" closed="false">11.21 </char><char style="xt" closed="false"><ref loc="GEN 48:1">Gn. 48.1</ref>,<ref loc="GEN 48:5">5</ref>,<ref loc="GEN 48:16">16</ref>,<ref loc="GEN 48:20">20</ref>.</char></note>bendijo á cada uno de los hijos de José, y adoró <char style="it">estribando</char> sobre la punta de su bordón.<verse eid="HEB 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 11:22"/>Por fe <note caller="+" style="x"><char style="xo" closed="false">11.22 </char><char style="xt" closed="false"><ref loc="GEN 50:24">Gn. 50.24</ref>,<ref loc="GEN 50:25">25</ref>.</char></note>José, muriéndose, se acordó de la partida de los hijos de Israel; y dió mandamiento acerca de sus huesos.<verse eid="HEB 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 11:23"/>Por fe Moisés, nacido, <note caller="+" style="x"><char style="xo" closed="false">11.23 </char><char style="xt" closed="false"><ref loc="EXO 2:2">Ex. 2.2</ref>.</char></note>fué escondido de sus padres por tres meses, porque le vieron hermoso niño; y no temieron el mandamiento del rey.<verse eid="HEB 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 11:24"/>Por fe <note caller="+" style="x"><char style="xo" closed="false">11.24 </char><char style="xt" closed="false"><ref loc="EXO 2:10">Ex. 2.10</ref>,<ref loc="EXO 2:11">11</ref>.</char></note>Moisés, hecho ya grande, rehusó ser llamado hijo de la hija de Faraón;<verse eid="HEB 11:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 11:25"/>Escogiendo antes ser afligido con el pueblo de Dios, que gozar de comodidades temporales de pecado.<verse eid="HEB 11:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 11:26"/>Teniendo por mayores riquezas <note caller="+" style="x"><char style="xo" closed="false">11.26 </char><char style="xt" closed="false">cp. 13.13. <ref loc="1PE 4:14">1 P. 4.14</ref>.</char></note>el vituperio de Cristo que los tesoros de los Egipcios; porque miraba á <note caller="+" style="x"><char style="xo" closed="false">11.26 </char><char style="xt" closed="false">cp. 10.35.</char></note>la remuneración.<verse eid="HEB 11:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 11:27"/>Por fe <note caller="+" style="x"><char style="xo" closed="false">11.27 </char><char style="xt" closed="false"><ref loc="EXO 10:28">Ex. 10.28</ref>,<ref loc="EXO 10:29">29</ref>.</char></note>dejó á Egipto, no temiendo la ira del rey; porque se sostuvo <note caller="+" style="x"><char style="xo" closed="false">11.27 </char><char style="xt" closed="false">ver. 13.</char></note>como viendo al Invisible.<verse eid="HEB 11:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 11:28"/>Por fe celebró la pascua <note caller="+" style="x"><char style="xo" closed="false">11.28 </char><char style="xt" closed="false"><ref loc="EXO 12:21">Ex. 12.21</ref>,<ref loc="EXO 12:22">22</ref>.</char></note>y el derramamiento de la sangre, para que el que mataba los primogénitos no los tocase.<verse eid="HEB 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 11:29"/>Por fe pasaron <note caller="+" style="x"><char style="xo" closed="false">11.29 </char><char style="xt" closed="false"><ref loc="EXO 14:22-29">Ex. 14.22-29</ref>.</char></note>el mar Bermejo como por tierra seca: lo cual probando los Egipcios, fueron sumergidos.<verse eid="HEB 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 11:30"/>Por fe <note caller="+" style="x"><char style="xo" closed="false">11.30 </char><char style="xt" closed="false"><ref loc="JOS 6:20">Jos. 6.20</ref>.</char></note>cayeron los muros de Jericó con rodearlos siete días.<verse eid="HEB 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="HEB 11:31"/>Por fe Rahab la ramera <note caller="+" style="x"><char style="xo" closed="false">11.31 </char><char style="xt" closed="false"><ref loc="JOS 6:23">Jos. 6.23</ref>. <ref loc="JAS 2:25">Stg. 2.25</ref>.</char></note>no pereció juntamente con los incrédulos, habiendo recibido á los espías con paz.<verse eid="HEB 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 11:32"/>¿Y qué más digo? porque el tiempo me faltará contando <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="JDG 6:11">Jue. 6.11</ref>.</char></note>de Gedeón, <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="JDG 4:6">Jue. 4.6</ref>.</char></note>de Barac, <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="JDG 13:24">Jue. 13.24</ref>.</char></note>de Samsón, <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="JDG 11:1">Jue. 11.1</ref>.</char></note>de Jephté, de <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="1SA 16:1">1 S. 16.1</ref>,<ref loc="1SA 16:13">13</ref> y <ref loc="1SA 17:45">17.45</ref>.</char></note>David, <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="1SA 1:20">1 S. 1.20</ref> y <ref loc="1SA 12:17">12.17</ref>.</char></note>de Samuel, y de los profetas:<verse eid="HEB 11:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="HEB 11:33"/>Que por fe <note caller="+" style="x"><char style="xo" closed="false">11.33 </char><char style="xt" closed="false"><ref loc="2SA 5:1-5">2 S. 5.1-5</ref>.</char></note>ganaron reinos, obraron justicia, <note caller="+" style="x"><char style="xo" closed="false">11.33 </char><char style="xt" closed="false"><ref loc="2SA 7:11">2 S. 7.11</ref>,<ref loc="2SA 7:12">12</ref>.</char></note>alcanzaron promesas, <note caller="+" style="x"><char style="xo" closed="false">11.33 </char><char style="xt" closed="false"><ref loc="JDG 14:5">Jue. 14.5</ref>,<ref loc="JDG 14:6">6</ref>. <ref loc="1SA 17:34-36">1 S. 17.34-36</ref>.</char></note>taparon las bocas de leones,<verse eid="HEB 11:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="HEB 11:34"/>Apagaron fuegos <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false"><ref loc="DAN 3:25">Dn. 3.25</ref>.</char></note>impetuosos, <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false"><ref loc="1SA 20:1">1 S. 20.1</ref>.</char></note>evitaron filo de cuchillo, convalecieron de enfermedades, fueron hechos fuertes en batallas, <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false"><ref loc="JDG 7:21">Jue. 7.21</ref> y <ref loc="JDG 15:8">15.8</ref>,<ref loc="JDG 15:15">15</ref>. <ref loc="1SA 17:51">1 S. 17.51</ref>,<ref loc="1SA 17:52">52</ref>. <ref loc="2SA 8:1-6">2 S. 8.1-6</ref>.</char></note>trastornaron campos de extraños.<verse eid="HEB 11:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="HEB 11:35"/>Las mujeres <note caller="+" style="x"><char style="xo" closed="false">11.35 </char><char style="xt" closed="false"><ref loc="1KI 17:22">1 R. 17.22</ref>. <ref loc="2KI 4:35">2 R. 4.35</ref>.</char></note>recibieron sus muertos por resurrección; unos fueron estirados, no aceptando el rescate, para ganar mejor resurrección;<verse eid="HEB 11:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="HEB 11:36"/>Otros experimentaron vituperios y azotes; y á más de esto prisiones y cárceles;<verse eid="HEB 11:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="HEB 11:37"/>Fueron apedreados, <note caller="+" style="x"><char style="xo" closed="false">11.37 </char><char style="xt" closed="false"><ref loc="1KI 21:13">1 R. 21.13</ref>. <ref loc="2CH 24:21">2 Cr. 24.21</ref>.</char></note>aserrados, tentados, muertos á cuchillo; <note caller="+" style="x"><char style="xo" closed="false">11.37 </char><char style="xt" closed="false"><ref loc="2KI 1:8">2 R. 1.8</ref>.</char></note>anduvieron de acá para allá <char style="it">cubiertos</char> de pieles de ovejas y de cabras, pobres, angustiados, maltratados;<verse eid="HEB 11:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="HEB 11:38"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.38 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 57:1">Is. 57.1</ref>.</char>
+    </note>De los cuales el mundo no era digno; perdidos por los desiertos, por los montes, por las cuevas y por las cavernas de la tierra.<verse eid="HEB 11:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 11:39"/>Y todos éstos, <note caller="+" style="x"><char style="xo" closed="false">11.39 </char><char style="xt" closed="false">ver. 2.</char></note>aprobados por testimonio de la fe, no <note caller="+" style="x"><char style="xo" closed="false">11.39 </char><char style="xt" closed="false">ver. 13. <ref loc="1PE 1:12">1 P. 1.12</ref>.</char></note>recibieron la promesa;<verse eid="HEB 11:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="HEB 11:40"/>Proveyendo Dios alguna cosa mejor para nosotros, para que no fuesen <note caller="+" style="x"><char style="xo" closed="false">11.40 </char><char style="xt" closed="false">cp. 5.9.</char></note>perfeccionados sin nosotros.<verse eid="HEB 11:40"/></para>
+  <chapter eid="HEB 11"/>
+  <chapter number="12" style="c" sid="HEB 12"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 12:1"/>POR tanto nosotros también, teniendo en derredor nuestro una tan grande nube de testigos, dejando todo el peso del <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false"><ref loc="2CO 7:1">2 Co. 7.1</ref>.</char></note>pecado que nos rodea, <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false"><ref loc="1CO 9:24">1 Co. 9.24</ref>.</char></note>corramos con paciencia la carrera que nos es propuesta,<verse eid="HEB 12:1"/></para>
+  <para style="s">1 La carrera del cristiano.</para>
+  <para style="s">2 Exhortación á la santidad.</para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 12:2"/>Puestos los ojos en al autor y <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="1CO 1:8">1 Co. 1.8</ref>.</char></note>consumador de la fe, <char style="it">en</char> Jesús; <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="1PE 1:11">1 P. 1.11</ref>.</char></note>el cual, habiéndole sido propuesto gozo, sufrió la cruz, menospreciando la vergüenza, y <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false">cp. 1.3.</char></note>sentóse á la diestra del trono de Dios.<verse eid="HEB 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 12:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 10:24">Mt. 10.24</ref>. <ref loc="JHN 15:20">Jn. 15.20</ref>.</char>
+    </note>Reducid pues á vuestro pensameinto á aquel que sufrió <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false"><ref loc="1PE 2:23">1 P. 2.23</ref>.</char></note>tal contradicción de pecadores contra sí mismo, porque no os fatiguéis en vuestros ánimos desmayando.<verse eid="HEB 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 12:4"/>Que aun no habéis <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false">cp. 10.32-34.</char></note>resistido hasta la sangre, combatiendo contra el pecado:<verse eid="HEB 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 12:5"/>Y estáis ya olvidados de la exhortación que como con hijos habla con vosotros, <char style="it">diciendo:</char></para>
+  <para style="q" vid="HEB 12:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.5 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 3:11">Pr. 3.11</ref>,<ref loc="PRO 3:12">12</ref>.</char>
+    </note>Hijo mío, no menosprecies el castigo del Señor,</para>
+  <para style="q" vid="HEB 12:5">Ni desmayes cuando eres de él reprendido.<verse eid="HEB 12:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="HEB 12:6"/>Porque el Señor al que ama castiga,</para>
+  <para style="q" vid="HEB 12:6">Y azota á cualquiera que recibe por hijo.<verse eid="HEB 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 12:7"/>Si sufrís el castigo, <note caller="+" style="x"><char style="xo" closed="false">12.7 </char><char style="xt" closed="false"><ref loc="DEU 8:5">Dt. 8.5</ref>.</char></note>Dios se os presenta como á hijos; porque ¿qué hijo es <char style="it">aquel</char> á quien el padre no castiga?<verse eid="HEB 12:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 12:8"/>Mas si estáis fuera del castigo, <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false"><ref loc="1PE 5:9">1 P. 5.9</ref>.</char></note>del cual todos han sido hechos participantes, luego sois bastardos, y no hijos.<verse eid="HEB 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 12:9"/>Por otra parte, tuvimos por castigadores á los padres de nuestra carne, y los reverenciábamos, ¿por qué no obedeceremos mucho mejor <note caller="+" style="x"><char style="xo" closed="false">12.9 </char><char style="xt" closed="false"><ref loc="NUM 16:22">Nm. 16.22</ref>.</char></note>al Padre de los espíritus, y viviremos?<verse eid="HEB 12:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 12:10"/>Y aquéllos, á la verdad, por pocos días nos castigaban como á ellos les parecía, mas éste para lo que <char style="it">nos</char> es provechoso, <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false"><ref loc="2PE 1:4">2 P. 1.4</ref>.</char></note>para que recibamos su santificación.<verse eid="HEB 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 12:11"/>Es verdad que ningún castigo al presente parece ser <char style="it">causa</char> de gozo, sino de tristeza; <note caller="+" style="x"><char style="xo" closed="false">12.11 </char><char style="xt" closed="false"><ref loc="JAS 3:17">Stg. 3.17</ref>,<ref loc="JAS 3:18">18</ref>.</char></note>mas después da fruto apacible de justicia á los que en él son ejercitados.<verse eid="HEB 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 12:12"/>Por lo cual alzad <note caller="+" style="x"><char style="xo" closed="false">12.12 </char><char style="xt" closed="false"><ref loc="ISA 35:3">Is. 35.3</ref>.</char></note>las manos caídas y las rodillas paralizadas;<verse eid="HEB 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 12:13"/>Y haced derechos pasos <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false"><ref loc="PRO 4:26">Pr. 4.26</ref>.</char></note>a vuestros pies, porque lo que es cojo no salga fuera de camino, <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false"><ref loc="GAL 6:1">Ga. 6.1</ref>.</char></note>antes sea sanado.<verse eid="HEB 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 12:14"/>Seguid <note caller="+" style="x"><char style="xo" closed="false">12.14 </char><char style="xt" closed="false"><ref loc="ROM 14:19">Ro. 14.19</ref>.</char></note>la paz con todos, y <note caller="+" style="x"><char style="xo" closed="false">12.14 </char><char style="xt" closed="false"><ref loc="1TH 4:3">1 Ts. 4.3</ref>.</char></note>la santidad, <note caller="+" style="x"><char style="xo" closed="false">12.14 </char><char style="xt" closed="false"><ref loc="MAT 5:8">Mt. 5.8</ref>.</char></note>sin la cual nadie verá al Señor:<verse eid="HEB 12:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 12:15"/>Mirando bien que ninguno se aparte de la gracia de Dios, que ninguna raíz de amargura brotando <char style="it">os</char> impida, y por ella muchos sean contaminados;<verse eid="HEB 12:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 12:16"/>Que ninguno sea <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false">cp. 13.4.</char></note>fornicario, ó <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false"><ref loc="1TI 1:9">1 Ti. 1.9</ref>.</char></note>profano, como <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false"><ref loc="GEN 25:33">Gn. 25.33</ref>.</char></note>Esaú, que por una vianda vendió su primogenitura.<verse eid="HEB 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 12:17"/>Porque ya sabéis que aun después, deseando heredar la bendición, fue reprobado (que no halló lugar de arrepentimiento), aunque la procuró <note caller="+" style="x"><char style="xo" closed="false">12.17 </char><char style="xt" closed="false"><ref loc="GEN 27:34">Gn. 27.34</ref>,<ref loc="GEN 27:36">36</ref>,<ref loc="GEN 27:38">38</ref>.</char></note>con lágrimas.<verse eid="HEB 12:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 12:18"/>Porque no os habéis llegado <note caller="+" style="x"><char style="xo" closed="false">12.18 </char><char style="xt" closed="false"><ref loc="EXO 19:12">Ex. 19.12</ref>,<ref loc="EXO 19:18">18</ref>,<ref loc="EXO 19:19">19</ref>.</char></note>al monte que se podía tocar, y al fuego encendido, y al turbión, y á la oscuridad, y á la tempestad,<verse eid="HEB 12:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 12:19"/>Y al <note caller="+" style="x"><char style="xo" closed="false">12.19 </char><char style="xt" closed="false"><ref loc="EXO 19:16">Ex. 19.16</ref>.</char></note>sonido de la trompeta, y á la voz de las palabras, la cual los que la oyeron <note caller="+" style="x"><char style="xo" closed="false">12.19 </char><char style="xt" closed="false"><ref loc="EXO 20:19">Ex. 20.19</ref>.</char></note>rogaron que no se les hablase más;<verse eid="HEB 12:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 12:20"/>Porque no podían tolerar lo que se mandaba: <note caller="+" style="x"><char style="xo" closed="false">12.20 </char><char style="xt" closed="false"><ref loc="EXO 19:12">Ex. 19.12</ref>,<ref loc="EXO 19:13">13</ref>.</char></note>Si bestia tocare al monte, será apedreada, ó pasada con dardo.<verse eid="HEB 12:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 12:21"/>Y tan terrible cosa <note caller="+" style="x"><char style="xo" closed="false">12.21 </char><char style="xt" closed="false"><ref loc="EXO 19:16">Ex. 19.16</ref>.</char></note>era lo que se veía, que Moisés dijo: Estoy asombrado y temblando.<verse eid="HEB 12:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 12:22"/>Mas os habéis <note caller="+" style="x"><char style="xo" closed="false">12.22 </char><char style="xt" closed="false"><ref loc="REV 14:1">Ap. 14.1</ref>.</char></note>llegado al monte de Sión, y á <note caller="+" style="x"><char style="xo" closed="false">12.22 </char><char style="xt" closed="false">cp. 11.10,16 y 13,14.</char></note>la ciudad del Dios vivo, <note caller="+" style="x"><char style="xo" closed="false">12.22 </char><char style="xt" closed="false"><ref loc="GAL 4:26">Ga. 4.26</ref>.</char></note>Jerusalem la celestial, y á la compañía de muchos millares de ángeles,<verse eid="HEB 12:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 12:23"/>Y á <note caller="+" style="x"><char style="xo" closed="false">12.23 </char><char style="xt" closed="false">cp. 2.12.</char></note>la congregación de los <note caller="+" style="x"><char style="xo" closed="false">12.23 </char><char style="xt" closed="false"><ref loc="EXO 4:22">Ex. 4.22</ref>.</char></note>primogénitos <note caller="+" style="x"><char style="xo" closed="false">12.23 </char><char style="xt" closed="false"><ref loc="LUK 10:20">Lc. 10.20</ref>.</char></note>que están alistados en los cielos, y á Dios el Juez de todos, y á los espíritus de los justos hechos perfectos,<verse eid="HEB 12:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 12:24"/>Y á Jesús <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false">cp. 8.6.</char></note>el Mediador del nuevo testamento, y á <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false"><ref loc="1PE 1:2">1 P. 1.2</ref>.</char></note>la sangre del esparcimiento que habla <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false">cp. 7.19.</char></note>mejor que la de Abel.<verse eid="HEB 12:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 12:25"/>Mirad que no desechéis al que habla. Porque <note caller="+" style="x"><char style="xo" closed="false">12.25 </char><char style="xt" closed="false">cp. 2.3.</char></note>si aquellos no escaparon que desecharon al que <note caller="+" style="x"><char style="xo" closed="false">12.25 </char><char style="xt" closed="false">cp. 8.5.</char></note>hablaba en la tierra, mucho menos nosotros, si desecháramos al que habla de los cielos.<verse eid="HEB 12:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 12:26"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.26 </char>
+      <char style="xt" closed="false">ver. 19.</char>
+    </note>La voz del cual entonces conmovió la tierra; mas ahora ha denunciado, diciendo: <note caller="+" style="x"><char style="xo" closed="false">12.26 </char><char style="xt" closed="false"><ref loc="HAG 2:6">Hag. 2.6</ref>.</char></note>Aun una vez, y yo conmoveré no solamente la tierra, mas aun el cielo.<verse eid="HEB 12:26"/></para>
+  <para style="s">1 Varios consejos</para>
+  <para style="s">2 y exhortaciones.</para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 12:27"/>Y esta <char style="it">palabra,</char> Aun una vez, declara la mudanza de las cosas movibles, como de cosas hechas, para que queden las cosas que son firmes.<verse eid="HEB 12:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 12:28"/>Así que, tomando el reino inmóvil, retengamos la gracia por la cual vamos á Dios agradándole con temor y reverencia;<verse eid="HEB 12:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 12:29"/>Porque nuestro Dios es <note caller="+" style="x"><char style="xo" closed="false">12.29 </char><char style="xt" closed="false"><ref loc="PSA 21:9">Sal. 21.9</ref>. <ref loc="2TH 1:8">2 Ts. 1.8</ref>.</char></note>fuego consumidor.<verse eid="HEB 12:29"/></para>
+  <chapter eid="HEB 12"/>
+  <chapter number="13" style="c" sid="HEB 13"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 13:1"/>PERMANEZCA el <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false"><ref loc="ROM 12:10">Ro. 12.10</ref>. <ref loc="1JN 3:10">1 Jn. 3.10</ref>,<ref loc="1JN 3:11">11</ref>,<ref loc="1JN 3:18">18</ref>.</char></note>amor fraternal.<verse eid="HEB 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 13:2"/>No olvidéis la hospitalidad, porque por ésta algunos, <note caller="+" style="x"><char style="xo" closed="false">13.2 </char><char style="xt" closed="false"><ref loc="GEN 18:3">Gn. 18.3</ref> y <ref loc="GEN 19:2">19.2</ref>.</char></note>sin saberlo, hospedaron ángeles.<verse eid="HEB 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 13:3"/>Acordaos <note caller="+" style="x"><char style="xo" closed="false">13.3 </char><char style="xt" closed="false"><ref loc="MAT 25:36">Mt. 25.36</ref>. <ref loc="ROM 12:15">Ro. 12.15</ref>. <ref loc="1CO 12:26">1 Co. 12.26</ref>. <ref loc="COL 4:18">Col. 4.18</ref>.</char></note>de los presos, como presos juntamente con ellos; y de los afligidos, como que también vosotros mismos sois del cuerpo.<verse eid="HEB 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 13:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 7:38">1 Co. 7.38</ref>. <ref loc="1TI 4:3">1 Ti. 4.3</ref>.</char>
+    </note>Honroso es en todos el matrimonio, y el lecho sin mancilla; <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false"><ref loc="1CO 5:9-11">1 Co. 5.9-11</ref>.</char></note>mas á los fornicarios y á los adúlteros juzgará Dios.<verse eid="HEB 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 13:5"/>Sean las costumbres vuestras sin avaricia; <note caller="+" style="x"><char style="xo" closed="false">13.5 </char><char style="xt" closed="false"><ref loc="MAT 6:25">Mt. 6.25</ref>,<ref loc="MAT 6:34">34</ref>. <ref loc="PHP 4:6">Fil. 4.6</ref>,<ref loc="PHP 4:11">11</ref>,<ref loc="PHP 4:12">12</ref>. <ref loc="1TI 6:8">1 Ti. 6.8</ref>.</char></note>contentos de lo presente; porque él dijo: <note caller="+" style="x"><char style="xo" closed="false">13.5 </char><char style="xt" closed="false"><ref loc="JOS 1:5">Jos. 1.5</ref>.</char></note>No te desampararé, ni te dejaré.<verse eid="HEB 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 13:6"/>De tal manera que digamos confiadamente:</para>
+  <para style="q" vid="HEB 13:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 118:6">Sal. 118.6</ref>.</char>
+    </note>El Señor es mi ayudador; no temeré</para>
+  <para style="q" vid="HEB 13:6">Lo que me hará el hombre.<verse eid="HEB 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 13:7"/>Acordaos de vuestros pastores, que os hablaron la palabra de Dios; la fe de los cuales imitad, considerando cuál haya sido el éxito de <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>su conducta.<verse eid="HEB 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 13:8"/>Jesucristo <note caller="+" style="x"><char style="xo" closed="false">13.8 </char><char style="xt" closed="false"><ref loc="REV 1:4">Ap. 1.4</ref>,<ref loc="REV 1:8">8</ref>,<ref loc="REV 1:11">11</ref>,<ref loc="REV 1:17">17</ref>.</char></note><char style="it">es</char> el mismo ayer, y hoy, y por los siglos.<verse eid="HEB 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 13:9"/>No seáis llevados <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="EPH 4:14">Ef. 4.14</ref>.</char></note>de acá para allá por doctrinas diversas y extrañas; porque buena cosa es afirmar el corazón en la gracia, <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="ROM 14:17">Ro. 14.17</ref>.</char></note>no en viandas, que nunca aprovecharon á los que anduvieron en ellas.<verse eid="HEB 13:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 13:10"/>Tenemos un altar, del cual no tienen facultad de comer los que sirven al tabernáculo.<verse eid="HEB 13:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 13:11"/>Porque <note caller="+" style="x"><char style="xo" closed="false">13.11 </char><char style="xt" closed="false"><ref loc="EXO 29:14">Ex. 29.14</ref>.</char></note>los cuerpos de aquellos animales, la sangre de los cuales es metida por el pecado en el santuario por el pontífice, son quemados fuera del real.<verse eid="HEB 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 13:12"/>Por lo cual también Jesús, para <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false">cp. 10.10.</char></note>santificar al pueblo por su propia sangre, <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false"><ref loc="MAT 21:39">Mt. 21.39</ref> y <ref loc="MAT 27:32">27.32</ref>. <ref loc="JHN 19:17">Jn. 19.17</ref>,<ref loc="JHN 19:18">18</ref>.</char></note>padeció fuera de la puerta.<verse eid="HEB 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 13:13"/>Salgamos pues á él fuera del real, llevando <note caller="+" style="x"><char style="xo" closed="false">13.13 </char><char style="xt" closed="false">cp. 11.26.</char></note>su vituperio.<verse eid="HEB 13:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 13:14"/>Porque <note caller="+" style="x"><char style="xo" closed="false">13.14 </char><char style="xt" closed="false"><ref loc="PHP 3:20">Fil. 3.20</ref>. cp. 11.10,16.</char></note>no tenemos aquí ciudad permanente, mas buscamos la por venir.<verse eid="HEB 13:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 13:15"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">13.15 </char><char style="xt" closed="false"><ref loc="EPH 5:20">Ef. 5.20</ref>.</char></note>ofrezcamos por medio de él á Dios siempre <note caller="+" style="x"><char style="xo" closed="false">13.15 </char><char style="xt" closed="false"><ref loc="LEV 7:12">Lv. 7.12</ref>. <ref loc="1PE 2:5">1 P. 2.5</ref>.</char></note>sacrificio de alabanza, es á saber, <note caller="+" style="x"><char style="xo" closed="false">13.15 </char><char style="xt" closed="false"><ref loc="HOS 14:2">Os. 14.2</ref>.</char></note>fruto de labios que confiesen á su nombre.<verse eid="HEB 13:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 13:16"/>Y de hacer bien y de <note caller="+" style="x"><char style="xo" closed="false">13.16 </char><char style="xt" closed="false"><ref loc="1TI 6:18">1 Ti. 6.18</ref>.</char></note>la comunicación no os olvidéis: porque <note caller="+" style="x"><char style="xo" closed="false">13.16 </char><char style="xt" closed="false"><ref loc="PHP 4:18">Fil. 4.18</ref>.</char></note>de tales sacrificios se agrada Dios.<verse eid="HEB 13:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 13:17"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.17 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 12:28">1 Co. 12.28</ref>.</char>
+    </note>Obedeced á vuestros pastores, y sujetaos á ellos; porque ellos velan por vuestras almas, como aquellos que han de <note caller="+" style="x"><char style="xo" closed="false">13.17 </char><char style="xt" closed="false"><ref loc="LUK 16:2">Lc. 16.2</ref>.</char></note>dar cuenta; <note caller="+" style="x"><char style="xo" closed="false">13.17 </char><char style="xt" closed="false"><ref loc="ACT 20:24">Hch. 20.24</ref>,<ref loc="ACT 20:26">26</ref>.</char></note>para que lo hagan con alegría, y no gimiendo; porque esto no os es útil.<verse eid="HEB 13:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 13:18"/>Orad por nosotros: <note caller="+" style="x"><char style="xo" closed="false">13.18 </char><char style="xt" closed="false"><ref loc="1TH 5:25">1 Ts. 5.25</ref>. <ref loc="2TH 3:1">2 Ts. 3.1</ref>.</char></note>porque confiamos que tenemos buena conciencia, deseando conversar bien en todo.<verse eid="HEB 13:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 13:19"/>Y más os ruego que lo hagáis así, para que yo os sea más presto restituído.<verse eid="HEB 13:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 13:20"/>Y <note caller="+" style="x"><char style="xo" closed="false">13.20 </char><char style="xt" closed="false"><ref loc="ROM 15:33">Ro. 15.33</ref>.</char></note>el Dios de paz <note caller="+" style="x"><char style="xo" closed="false">13.20 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>que sacó de los muertos á nuestro Señor Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">13.20 </char><char style="xt" closed="false"><ref loc="JHN 10:11">Jn. 10.11</ref>,<ref loc="JHN 10:16">16</ref>. <ref loc="1PE 2:25">1 P. 2.25</ref> y <ref loc="1PE 5:4">5.4</ref>.</char></note>el gran pastor de las ovejas, <note caller="+" style="x"><char style="xo" closed="false">13.20 </char><char style="xt" closed="false">cp. 10.29.</char></note>por la sangre del testamento eterno,<verse eid="HEB 13:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 13:21"/>Os haga aptos <note caller="+" style="x"><char style="xo" closed="false">13.21 </char><char style="xt" closed="false"><ref loc="1PE 5:10">1 P. 5.10</ref>.</char></note>en toda obra buena para que hagáis su voluntad, <note caller="+" style="x"><char style="xo" closed="false">13.21 </char><char style="xt" closed="false"><ref loc="PHP 2:13">Fil. 2.13</ref>.</char></note>haciendo él en vosotros lo que es agradable delante de él por Jesucristo: <note caller="+" style="x"><char style="xo" closed="false">13.21 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Ro. 11.36</ref>.</char></note>al cual <char style="it">sea</char> gloria por los siglos de los siglos. Amén.<verse eid="HEB 13:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 13:22"/>Empero os ruego, hermanos, que soportéis la palabra de exhortación; porque os he escrito en breve.<verse eid="HEB 13:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 13:23"/>Sabed que <note caller="+" style="x"><char style="xo" closed="false">13.23 </char><char style="xt" closed="false"><ref loc="2CO 1:1">2 Co. 1.1</ref>. <ref loc="COL 1:1">Col. 1.1</ref>. <ref loc="1TH 3:2">1 Ts. 3.2</ref>.</char></note>nuestro hermano Timoteo está suelto; con el cual, si viniere más presto, os <char style="it">iré</char> á ver.<verse eid="HEB 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 13:24"/>Saludad á todos vuestros <note caller="+" style="x"><char style="xo" closed="false">13.24 </char><char style="xt" closed="false">ver. 7.</char></note>pastores, y á <note caller="+" style="x"><char style="xo" closed="false">13.24 </char><char style="xt" closed="false"><ref loc="PHP 4:22">Fil. 4.22</ref>.</char></note>todos los santos. Los de Italia os saludan.<verse eid="HEB 13:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 13:25"/>La gracia sea con todos vosotros. Amén.</para>
+  <para style="b" vid="HEB 13:25"/>
+  <para style="p" vid="HEB 13:25">Fué escrita á los Hebreos desde Italia con Timoteo.<verse eid="HEB 13:25"/></para>
+  <chapter eid="HEB 13"/>
+</usx>

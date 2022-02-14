@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="PHM" style="id">PHMVR.TXT Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">FILEMÓN</para>
+  <para style="toc3">Flm.</para>
+  <para style="toc2">Filemón</para>
+  <para style="toc1">Carta de san Pablo a Filemón</para>
+  <para style="mt2">LA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A FILEMÓN.</para>
+  <chapter number="1" style="c" sid="PHM 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="PHM 1:1"/>PABLO, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false">ver. 9. <ref loc="EPH 3:1">Ef. 3.1</ref>.</char></note>prisionero de Jesucristo, y el hermano <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 16:1">Hch. 16.1</ref>.</char></note>Timoteo, á Filemón amado, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="PHP 2:25">Fil. 2.25</ref>.</char></note>y coadjutor nuestro;<verse eid="PHM 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="PHM 1:2"/>Y á la amada Apphia, y á <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="COL 4:17">Col. 4.17</ref>.</char></note>Archîpo, compañero de nuestra milicia, y á <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ROM 16:5">Ro. 16.5</ref>.</char></note>la iglesia <char style="it">que está</char> en tu casa:<verse eid="PHM 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="PHM 1:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:7">Ro. 1.7</ref>.</char>
+    </note>Gracia á vosotros y paz de Dios nuestro Padre, y del Señor Jesucristo.<verse eid="PHM 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="PHM 1:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:8">Ro. 1.8</ref>,<ref loc="ROM 1:9">9</ref>. <ref loc="2TI 1:3">2 Ti. 1.3</ref>.</char>
+    </note>Doy gracias á mi Dios, haciendo siempre memoria de ti en mis oraciones.<verse eid="PHM 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="PHM 1:5"/>Oyendo tu caridad, <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="EPH 1:15">Ef. 1.15</ref>.</char></note>y la fe que tienes en el Señor Jesús, y para con todos los santos;<verse eid="PHM 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="PHM 1:6"/>Para que la comunicación de tu fe sea eficaz, <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="PHP 1:9">Fil. 1.9</ref>.</char></note>en el conocimiento de todo el bien que está en vosotros, por Cristo Jesús.<verse eid="PHM 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="PHM 1:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 7:4">2 Co. 7.4</ref>,<ref loc="2CO 7:13">13</ref>.</char>
+    </note>Porque tenemos gran gozo y consolación de tu caridad, de que por ti, oh hermano, han sido <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="2TI 1:16">2 Ti. 1.16</ref>.</char></note>recreadas <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false">ver. 20.</char></note>las entrañas de los santos.<verse eid="PHM 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="PHM 1:8"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="1TH 2:6">1 Ts. 2.6</ref>.</char></note>aunque tengo mucha resolución en Cristo para mandarte lo que conviene,<verse eid="PHM 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="PHM 1:9"/>Ruégo <char style="it">te</char> más bien por amor, siendo tal cual <char style="it">soy,</char> Pablo viejo, y aun ahora <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false">ver. 1. <ref loc="EPH 3:1">Ef. 3.1</ref>.</char></note>prisionero de Jesucristo:<verse eid="PHM 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="PHM 1:10"/>Ruégote por mi hijo <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="COL 4:9">Col. 4.9</ref>.</char></note>Onésimo, <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="1CO 4:15">1 Co. 4.15</ref>.</char></note>que he engendrado en mis prisiones,<verse eid="PHM 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="PHM 1:11"/>El cual en otro tiempo te fué inútil, mas ahora á ti y á mí es útil;<verse eid="PHM 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="PHM 1:12"/>El cual te vuelvo á enviar; tu pues, recíbele como á mis entrañas.<verse eid="PHM 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="PHM 1:13"/>Yo quisiera detenerle conmigo, para que en lugar de ti me sirviese en <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="PHP 1:13">Fil. 1.13</ref>.</char></note>las prisiones del evangelio;<verse eid="PHM 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="PHM 1:14"/>Mas nada quise hacer sin tu consejo, porque tu beneficio no fuese como de necesidad, sino voluntario.<verse eid="PHM 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="PHM 1:15"/>Porque acaso por esto se ha apartado de ti por <char style="it">algún</char> tiempo, para que le recibieses para siempre;<verse eid="PHM 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="PHM 1:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.16 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 7:22">1 Co. 7.22</ref>. <ref loc="EPH 6:5">Ef. 6.5</ref>.</char>
+    </note>No ya como siervo, antes más que siervo, <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="1TI 6:2">1 Ti. 6.2</ref>.</char></note><char style="it">como</char> hermano amado, mayormente de mí, pero cuánto más de ti, <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="COL 3:22">Col. 3.22</ref>.</char></note>en la carne y en el Señor.<verse eid="PHM 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="PHM 1:17"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="2CO 8:23">2 Co. 8.23</ref>.</char></note>si me tienes por compañero, recíbele como á mi.<verse eid="PHM 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="PHM 1:18"/>Y si en algo te dañó, ó te debe, ponlo á mi cuenta.<verse eid="PHM 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="PHM 1:19"/>Yo Pablo lo escribí de mi mano, yo <char style="it">lo</char> pagaré: por no decirte que aun á ti mismo te me debes demás.<verse eid="PHM 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="PHM 1:20"/>Sí, hermano, góceme yo de ti en el Señor; <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false">ver. 7.</char></note>recrea mis entrañas en el Señor.<verse eid="PHM 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="PHM 1:21"/>Te he escrito confiando en tu obediencia, sabiendo que aun harás más de lo que digo.<verse eid="PHM 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="PHM 1:22"/>Y asimismo prepárame también alojamiento; porque espero que <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="2CO 1:11">2 Co. 1.11</ref>.</char></note>por vuestras oraciones os tengo de ser concedido.<verse eid="PHM 1:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="PHM 1:23"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.23 </char>
+      <char style="xt" closed="false">Para vers. 23,24. <ref loc="COL 4:10">Col. 4.10</ref>,<ref loc="COL 4:12">12</ref>,<ref loc="COL 4:14">14</ref>.</char>
+    </note>Te saludan <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="COL 1:7">Col. 1.7</ref>.</char></note>Epafras, mi compañero en la prisión por Cristo Jesús,<verse eid="PHM 1:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="PHM 1:24"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.24 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 12:12">Hch. 12.12</ref>.</char>
+    </note>Marcos, <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="ACT 19:29">Hch. 19.29</ref>.</char></note>Aristarco, <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="COL 4:14">Col. 4.14</ref>.</char></note>Demas y <char style="fm">1.24</char>Lucas, mis cooperadores.<verse eid="PHM 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="PHM 1:25"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.25 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 6:18">Ga. 6.18</ref>.</char>
+    </note>La gracia de nuestro Señor Jesucristo sea con vuestro espíritu. Amén.</para>
+  <para style="b" vid="PHM 1:25"/>
+  <para style="p" vid="PHM 1:25">A Filemón fué enviada de Roma por Onésimo, siervo.<verse eid="PHM 1:25"/></para>
+  <chapter eid="PHM 1"/>
+</usx>

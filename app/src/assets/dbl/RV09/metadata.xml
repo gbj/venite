@@ -1,0 +1,722 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.2.1" id="592420522e16049f" revision="7">
+    <identification>
+      <name>Reina Valera 1909</name>
+      <nameLocal>Reina Valera 1909</nameLocal>
+      <description>Español: Reina Valera 1909</description>
+      <abbreviation>RV09</abbreviation>
+      <abbreviationLocal>RV09</abbreviationLocal>
+      <scope>Bible</scope>
+      <dateCompleted>1909-10-01</dateCompleted>
+      <bundleProducer>Paratext/9.0.103.19</bundleProducer>
+      <systemId type="paratext">
+        <id>592420522e16049ff4adb111aa2d12908819e6a7</id>
+        <csetId>27103515d0f5c35d35b5f78a75975592649796c9</csetId>
+        <name>VRV09</name>
+        <fullName>Reina Valera 1909</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>o7vhwK6yvHEcChjaZ</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>New</translationType>
+      <audience>Common</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>UBS</abbr>
+        <url>http://www.unitedbiblesocieties.org/</url>
+        <nameLocal>United Bible Societies</nameLocal>
+        <uid>545d2cb007eaee5131ab123a</uid>
+        <name>United Bible Societies</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <uid>13036b334cf0aa987db4a3b2</uid>
+        <name>Americas Publishing Committee</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb007eaee5131ab123a</uid>
+        <name>United Bible Societies</name>
+      </contributor>
+      <contributor>
+        <content>false</content>
+        <management>true</management>
+        <uid>13036b334cf0aa987db4a3b2</uid>
+        <name>Americas Publishing Committee</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>spa</iso>
+      <name>Spanish</name>
+      <nameLocal>Español</nameLocal>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>es</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>ZZ</iso>
+        <name>Unspecific</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-gen">
+        <abbr>Gn.</abbr>
+        <short>Génesis</short>
+        <long>Génesis</long>
+      </name>
+      <name id="book-exo">
+        <abbr>Ex.</abbr>
+        <short>Éxodo</short>
+        <long>Éxodo</long>
+      </name>
+      <name id="book-lev">
+        <abbr>Lv.</abbr>
+        <short>Levítico</short>
+        <long>Levítico</long>
+      </name>
+      <name id="book-num">
+        <abbr>Nm.</abbr>
+        <short>Números</short>
+        <long>Números</long>
+      </name>
+      <name id="book-deu">
+        <abbr>Dt.</abbr>
+        <short>Deuteronomio</short>
+        <long>Deuteronomio</long>
+      </name>
+      <name id="book-jos">
+        <abbr>Jos.</abbr>
+        <short>Josué</short>
+        <long>Josué</long>
+      </name>
+      <name id="book-jdg">
+        <abbr>Jue.</abbr>
+        <short>Jueces</short>
+        <long>Jueces</long>
+      </name>
+      <name id="book-rut">
+        <abbr>Rt.</abbr>
+        <short>Rut</short>
+        <long>Rut</long>
+      </name>
+      <name id="book-1sa">
+        <abbr>1 S.</abbr>
+        <short>1 Samuel</short>
+        <long>Primer libro de Samuel</long>
+      </name>
+      <name id="book-2sa">
+        <abbr>2 S.</abbr>
+        <short>2 Samuel</short>
+        <long>Segundo libro de Samuel</long>
+      </name>
+      <name id="book-1ki">
+        <abbr>1 R.</abbr>
+        <short>1 Reyes</short>
+        <long>Primer libro de los Reyes</long>
+      </name>
+      <name id="book-2ki">
+        <abbr>2 R.</abbr>
+        <short>2 Reyes</short>
+        <long>Segundo libro de los Reyes</long>
+      </name>
+      <name id="book-1ch">
+        <abbr>1 Cr.</abbr>
+        <short>1 Crónicas</short>
+        <long>Primer libro de las Crónicas</long>
+      </name>
+      <name id="book-2ch">
+        <abbr>2 Cr.</abbr>
+        <short>2 Crónicas</short>
+        <long>Segundo libro de las Crónicas</long>
+      </name>
+      <name id="book-ezr">
+        <abbr>Esd.</abbr>
+        <short>Esdras</short>
+        <long>Esdras</long>
+      </name>
+      <name id="book-neh">
+        <abbr>Neh.</abbr>
+        <short>Nehemías</short>
+        <long>Nehemías</long>
+      </name>
+      <name id="book-est">
+        <abbr>Est.</abbr>
+        <short>Ester</short>
+        <long>Ester</long>
+      </name>
+      <name id="book-job">
+        <abbr>Job</abbr>
+        <short>Job</short>
+        <long>Job</long>
+      </name>
+      <name id="book-psa">
+        <abbr>Sal.</abbr>
+        <short>Salmos</short>
+        <long>Salmos</long>
+      </name>
+      <name id="book-pro">
+        <abbr>Pr.</abbr>
+        <short>Proverbios</short>
+        <long>Proverbios</long>
+      </name>
+      <name id="book-ecc">
+        <abbr>Ec.</abbr>
+        <short>Eclesiastés</short>
+        <long>Eclesiastés</long>
+      </name>
+      <name id="book-sng">
+        <abbr>Cnt.</abbr>
+        <short>Cantares</short>
+        <long>El Cantar de los Cantares</long>
+      </name>
+      <name id="book-isa">
+        <abbr>Is.</abbr>
+        <short>Isaías</short>
+        <long>Isaías</long>
+      </name>
+      <name id="book-jer">
+        <abbr>Jer.</abbr>
+        <short>Jeremías</short>
+        <long>Jeremías</long>
+      </name>
+      <name id="book-lam">
+        <abbr>Lm.</abbr>
+        <short>Lamentaciones</short>
+        <long>Lamentaciones</long>
+      </name>
+      <name id="book-ezk">
+        <abbr>Ez.</abbr>
+        <short>Ezequiel</short>
+        <long>Ezequiel</long>
+      </name>
+      <name id="book-dan">
+        <abbr>Dn.</abbr>
+        <short>Daniel</short>
+        <long>Daniel</long>
+      </name>
+      <name id="book-hos">
+        <abbr>Os.</abbr>
+        <short>Oseas</short>
+        <long>Oseas</long>
+      </name>
+      <name id="book-jol">
+        <abbr>Jl.</abbr>
+        <short>Joel</short>
+        <long>Joel</long>
+      </name>
+      <name id="book-amo">
+        <abbr>Am.</abbr>
+        <short>Amós</short>
+        <long>Amós</long>
+      </name>
+      <name id="book-oba">
+        <abbr>Abd.</abbr>
+        <short>Abdías</short>
+        <long>Abdías</long>
+      </name>
+      <name id="book-jon">
+        <abbr>Jon.</abbr>
+        <short>Jonás</short>
+        <long>Jonás</long>
+      </name>
+      <name id="book-mic">
+        <abbr>Mi.</abbr>
+        <short>Miqueas</short>
+        <long>Miqueas</long>
+      </name>
+      <name id="book-nam">
+        <abbr>Nah.</abbr>
+        <short>Nahúm</short>
+        <long>Nahúm</long>
+      </name>
+      <name id="book-hab">
+        <abbr>Hab.</abbr>
+        <short>Habacuc</short>
+        <long>Habacuc</long>
+      </name>
+      <name id="book-zep">
+        <abbr>Sof.</abbr>
+        <short>Sofonías</short>
+        <long>Sofonías</long>
+      </name>
+      <name id="book-hag">
+        <abbr>Hag.</abbr>
+        <short>Hageo</short>
+        <long>Hageo</long>
+      </name>
+      <name id="book-zec">
+        <abbr>Zac.</abbr>
+        <short>Zacarías</short>
+        <long>Zacarías</long>
+      </name>
+      <name id="book-mal">
+        <abbr>Mal.</abbr>
+        <short>Malaquías</short>
+        <long>Malaquías</long>
+      </name>
+      <name id="book-mat">
+        <abbr>Mt.</abbr>
+        <short>San Mateo</short>
+        <long>Evangelio según San Mateo</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Mr.</abbr>
+        <short>San Marcos</short>
+        <long>Evangelio según San Marcos</long>
+      </name>
+      <name id="book-luk">
+        <abbr>Lc.</abbr>
+        <short>San Lucas</short>
+        <long>Evangelio según San Lucas</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>Jn.</abbr>
+        <short>San Juan</short>
+        <long>Evangelio según San Juan</long>
+      </name>
+      <name id="book-act">
+        <abbr>Hch.</abbr>
+        <short>Hechos</short>
+        <long>Hechos de los Apóstoles</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Ro.</abbr>
+        <short>Romanos</short>
+        <long>Carta de san Pablo a los Romanos</long>
+      </name>
+      <name id="book-1co">
+        <abbr>1 Co.</abbr>
+        <short>1 Corintios</short>
+        <long>Primera carta de san Pablo a los Corintios</long>
+      </name>
+      <name id="book-2co">
+        <abbr>2 Co.</abbr>
+        <short>2 Corintios</short>
+        <long>Segunda carta de san Pablo a los Corintios</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Ga.</abbr>
+        <short>Gálatas</short>
+        <long>Carta de san Pablo a los Gálatas</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Ef.</abbr>
+        <short>Efesios</short>
+        <long>Carta de san Pablo a los Efesios</long>
+      </name>
+      <name id="book-php">
+        <abbr>Fil.</abbr>
+        <short>Filipenses</short>
+        <long>Carta de san Pablo a los Filipenses</long>
+      </name>
+      <name id="book-col">
+        <abbr>Col.</abbr>
+        <short>Colosenses</short>
+        <long>Carta de san Pablo a los Colosenses</long>
+      </name>
+      <name id="book-1th">
+        <abbr>1 Ts.</abbr>
+        <short>1 Tesalonicenses</short>
+        <long>Primera carta de san Pablo a los Tesalonicenses</long>
+      </name>
+      <name id="book-2th">
+        <abbr>2 Ts.</abbr>
+        <short>2 Tesalonicenses</short>
+        <long>Segunda carta de san Pablo a los Tesalonicenses</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>1 Ti.</abbr>
+        <short>1 Timoteo</short>
+        <long>Primera carta de san Pablo a Timoteo</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>2 Ti.</abbr>
+        <short>2 Timoteo</short>
+        <long>Segunda carta de san Pablo a Timoteo</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Tit.</abbr>
+        <short>Tito</short>
+        <long>Carta de san Pablo a Tito</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Flm.</abbr>
+        <short>Filemón</short>
+        <long>Carta de san Pablo a Filemón</long>
+      </name>
+      <name id="book-heb">
+        <abbr>He.</abbr>
+        <short>Hebreos</short>
+        <long>Carta a los Hebreos</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Stg.</abbr>
+        <short>Santiago</short>
+        <long>Carta de Santiago</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>1 P.</abbr>
+        <short>1 Pedro</short>
+        <long>Primera carta de san Pedro</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>2 P.</abbr>
+        <short>2 Pedro</short>
+        <long>Segunda carta de san Pedro</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>1 Jn.</abbr>
+        <short>1 Juan</short>
+        <long>Primera carta de san Juan</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>2 Jn.</abbr>
+        <short>2 Juan</short>
+        <long>Segunda carta de san Juan</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>3 Jn.</abbr>
+        <short>3 Juan</short>
+        <long>Tercera carta de san Juan</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Jud.</abbr>
+        <short>Judas</short>
+        <long>Carta de san Judas</long>
+      </name>
+      <name id="book-rev">
+        <abbr>Ap.</abbr>
+        <short>Apocalipsis</short>
+        <long>Apocalipsis</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="769f93f23f9ddddd1a6bc66b124db49c" mimeType="application/xml" size="272773" uri="release/USX_1/1CH.usx"/>
+      <resource checksum="0c346f8b86182b92bcc995927a7cd4a3" mimeType="application/xml" size="183184" uri="release/USX_1/1CO.usx"/>
+      <resource checksum="9ed4e05b4c3831578f3c05bf4f3680cb" mimeType="application/xml" size="51363" uri="release/USX_1/1JN.usx"/>
+      <resource checksum="58777704606edf8a434ae40a602b2e54" mimeType="application/xml" size="334262" uri="release/USX_1/1KI.usx"/>
+      <resource checksum="9bb282b08db31aeacc1f56fbcce1f976" mimeType="application/xml" size="59407" uri="release/USX_1/1PE.usx"/>
+      <resource checksum="e7a5cdebbb2e98726f84c99f7ee9d2a8" mimeType="application/xml" size="342313" uri="release/USX_1/1SA.usx"/>
+      <resource checksum="7b26524019808dc582e2bcde40674921" mimeType="application/xml" size="41923" uri="release/USX_1/1TH.usx"/>
+      <resource checksum="ddaa9474278ac6469b5a9afcec61e1ca" mimeType="application/xml" size="52541" uri="release/USX_1/1TI.usx"/>
+      <resource checksum="4e9e4422ea0d6a745806335a736175b4" mimeType="application/xml" size="326629" uri="release/USX_1/2CH.usx"/>
+      <resource checksum="32ff0058c7d618409d970ad98bcbc456" mimeType="application/xml" size="115515" uri="release/USX_1/2CO.usx"/>
+      <resource checksum="83bc75af61eeb6e3ff236b0dc7a999c4" mimeType="application/xml" size="7096" uri="release/USX_1/2JN.usx"/>
+      <resource checksum="b4b5e3efdb5635553b2d15964c97042e" mimeType="application/xml" size="302595" uri="release/USX_1/2KI.usx"/>
+      <resource checksum="181b299197578a42344b158d31c08779" mimeType="application/xml" size="33737" uri="release/USX_1/2PE.usx"/>
+      <resource checksum="d5ab91274a2cd6fb03b418c806e387c1" mimeType="application/xml" size="275996" uri="release/USX_1/2SA.usx"/>
+      <resource checksum="a15f7f9d218eddb81e1a29eb23a09a25" mimeType="application/xml" size="22555" uri="release/USX_1/2TH.usx"/>
+      <resource checksum="64c242d95a1fe2354ee98fec0fce2437" mimeType="application/xml" size="38943" uri="release/USX_1/2TI.usx"/>
+      <resource checksum="c8d5e17d787bcf2335e2c6de740a12c0" mimeType="application/xml" size="5820" uri="release/USX_1/3JN.usx"/>
+      <resource checksum="afcd779ca2fe117dd667ef479482d0f5" mimeType="application/xml" size="385542" uri="release/USX_1/ACT.usx"/>
+      <resource checksum="4c95aac0922655b361101022e12ca9d3" mimeType="application/xml" size="62354" uri="release/USX_1/AMO.usx"/>
+      <resource checksum="61a0a809890e6f3752e8284d2d0b4806" mimeType="application/xml" size="43663" uri="release/USX_1/COL.usx"/>
+      <resource checksum="fe78eae74bfc681a1d6b207b5f3304a7" mimeType="application/xml" size="146476" uri="release/USX_1/DAN.usx"/>
+      <resource checksum="85e625e20ffdf1a12c848a0cf0f8028c" mimeType="application/xml" size="436017" uri="release/USX_1/DEU.usx"/>
+      <resource checksum="dc6d0ffcb84cc80309278bcdd8160955" mimeType="application/xml" size="87616" uri="release/USX_1/ECC.usx"/>
+      <resource checksum="d29c915bd8d4b93c120149eeba88233f" mimeType="application/xml" size="72002" uri="release/USX_1/EPH.usx"/>
+      <resource checksum="405a9471f1f648972574cb957396b6f4" mimeType="application/xml" size="67328" uri="release/USX_1/EST.usx"/>
+      <resource checksum="93a64af28006ee3384606ac550023f71" mimeType="application/xml" size="465670" uri="release/USX_1/EXO.usx"/>
+      <resource checksum="29adcea24697446cdda7346347ae2983" mimeType="application/xml" size="499969" uri="release/USX_1/EZK.usx"/>
+      <resource checksum="c1b8e4a52ee4406a83fa1bc489793994" mimeType="application/xml" size="98868" uri="release/USX_1/EZR.usx"/>
+      <resource checksum="40c500f61c2fd77318b4232ee184e7f6" mimeType="application/xml" size="66294" uri="release/USX_1/GAL.usx"/>
+      <resource checksum="792150b9de2fb041f73582c8d92548df" mimeType="application/xml" size="563891" uri="release/USX_1/GEN.usx"/>
+      <resource checksum="08593cef2d81ace243bb51fbbdf8e939" mimeType="application/xml" size="22404" uri="release/USX_1/HAB.usx"/>
+      <resource checksum="a5a16c15106d6f9dffc52aef45c0bee2" mimeType="application/xml" size="17795" uri="release/USX_1/HAG.usx"/>
+      <resource checksum="aac220b08b312ff0f2f8921c48dd2851" mimeType="application/xml" size="144888" uri="release/USX_1/HEB.usx"/>
+      <resource checksum="a3763baccbb63619f6f93e64238394c6" mimeType="application/xml" size="82439" uri="release/USX_1/HOS.usx"/>
+      <resource checksum="2d65b96b9aaba10381d75b0440a6b7ee" mimeType="application/xml" size="570084" uri="release/USX_1/ISA.usx"/>
+      <resource checksum="10e829d547187a4546f2c81dfd8958f6" mimeType="application/xml" size="47471" uri="release/USX_1/JAS.usx"/>
+      <resource checksum="5ef67f500a4d2ede4bd3372ed2818ad0" mimeType="application/xml" size="259845" uri="release/USX_1/JDG.usx"/>
+      <resource checksum="284c325c96c07ec5e8039a5792249c0c" mimeType="application/xml" size="571154" uri="release/USX_1/JER.usx"/>
+      <resource checksum="8f08a4c4bf3abc440b88fab0dfb2379c" mimeType="application/xml" size="311848" uri="release/USX_1/JHN.usx"/>
+      <resource checksum="a3b0872b5c659831c71f4597ed5fd11a" mimeType="application/xml" size="357221" uri="release/USX_1/JOB.usx"/>
+      <resource checksum="735a38976abdfd95ec3dad15216164e6" mimeType="application/xml" size="33069" uri="release/USX_1/JOL.usx"/>
+      <resource checksum="96dc5f444badb3d72ae67f8d7087f3fb" mimeType="application/xml" size="18142" uri="release/USX_1/JON.usx"/>
+      <resource checksum="cd7fa0f583a95fc5ded741e2070b116f" mimeType="application/xml" size="267695" uri="release/USX_1/JOS.usx"/>
+      <resource checksum="6bc75b11c41bc69c58860c9914d21222" mimeType="application/xml" size="14934" uri="release/USX_1/JUD.usx"/>
+      <resource checksum="fb920cde622fc9dd57f96f15ca979c36" mimeType="application/xml" size="65462" uri="release/USX_1/LAM.usx"/>
+      <resource checksum="7e1601494ac803e4a37904db391aea24" mimeType="application/xml" size="342634" uri="release/USX_1/LEV.usx"/>
+      <resource checksum="691e6481275d4048efa1866bed82746a" mimeType="application/xml" size="394696" uri="release/USX_1/LUK.usx"/>
+      <resource checksum="90cbff0cb0c4af9f8d2d3d084aeeb9f2" mimeType="application/xml" size="29239" uri="release/USX_1/MAL.usx"/>
+      <resource checksum="d9cadca197c35453e0b103562ab7752f" mimeType="application/xml" size="389591" uri="release/USX_1/MAT.usx"/>
+      <resource checksum="74b3bd7f2cdcfe9772ac66add9c6ba9a" mimeType="application/xml" size="45879" uri="release/USX_1/MIC.usx"/>
+      <resource checksum="42e4662994b4517f2bec18b0fe3fae53" mimeType="application/xml" size="208252" uri="release/USX_1/MRK.usx"/>
+      <resource checksum="2d1ad1820f6c06446af0f7dbae08273e" mimeType="application/xml" size="17426" uri="release/USX_1/NAM.usx"/>
+      <resource checksum="af29441c4d026f3e0782538ffe5d654d" mimeType="application/xml" size="149274" uri="release/USX_1/NEH.usx"/>
+      <resource checksum="02159a88522ac7e882d3d77cb84f89f0" mimeType="application/xml" size="490127" uri="release/USX_1/NUM.usx"/>
+      <resource checksum="fec81b741fb64de0553c31e7b2181361" mimeType="application/xml" size="10279" uri="release/USX_1/OBA.usx"/>
+      <resource checksum="352d4faf15d7b9b475548f2096c7880e" mimeType="application/xml" size="10410" uri="release/USX_1/PHM.usx"/>
+      <resource checksum="16618122af01871c0d4b3481825acdcb" mimeType="application/xml" size="46962" uri="release/USX_1/PHP.usx"/>
+      <resource checksum="caf11e043220772e01bbd01674fddb3e" mimeType="application/xml" size="344836" uri="release/USX_1/PRO.usx"/>
+      <resource checksum="7fcdb46d57dae4e6e21f1fd9cc58136b" mimeType="application/xml" size="1084985" uri="release/USX_1/PSA.usx"/>
+      <resource checksum="4b9ff1fdac989637027e773d061de598" mimeType="application/xml" size="213609" uri="release/USX_1/REV.usx"/>
+      <resource checksum="7b9c4a04e7798077d1cf8777e5cedf12" mimeType="application/xml" size="185665" uri="release/USX_1/ROM.usx"/>
+      <resource checksum="30acdc0dc30ef390774ebf6a9c4047f9" mimeType="application/xml" size="34791" uri="release/USX_1/RUT.usx"/>
+      <resource checksum="7be3ddffaf4f5ffe7c2d18b309ec1462" mimeType="application/xml" size="56024" uri="release/USX_1/SNG.usx"/>
+      <resource checksum="1aee7d05cc796f5126eb1c486ab47935" mimeType="application/xml" size="22044" uri="release/USX_1/TIT.usx"/>
+      <resource checksum="d6ee51d0f6fd4273310d4a7ce302a5e3" mimeType="application/xml" size="94485" uri="release/USX_1/ZEC.usx"/>
+      <resource checksum="661a79b399fac89a95eef06cb6952b10" mimeType="application/xml" size="25868" uri="release/USX_1/ZEP.usx"/>
+      <resource checksum="c789792e0256da180f3fe13f2a056c5b" mimeType="application/xml" size="2721" uri="release/spa_es.ldml"/>
+      <resource checksum="56fbf94e2db7e7e8971772f6483efa11" mimeType="application/xml" size="92991" uri="release/styles.xml"/>
+      <resource checksum="b4a78a89eaeee61d938d4ec94d8df47c" mimeType="text/plain" size="15359" uri="release/versification.vrs"/>
+      <resource checksum="48fa7f9f53b49008daa7bf2cdda9e49a" mimeType="application/zip" size="1786688" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CH"/>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1KI"/>
+        <book code="1PE"/>
+        <book code="1SA"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CH"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2KI"/>
+        <book code="2PE"/>
+        <book code="2SA"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="AMO"/>
+        <book code="COL"/>
+        <book code="DAN"/>
+        <book code="DEU"/>
+        <book code="ECC"/>
+        <book code="EPH"/>
+        <book code="EST"/>
+        <book code="EXO"/>
+        <book code="EZK"/>
+        <book code="EZR"/>
+        <book code="GAL"/>
+        <book code="GEN"/>
+        <book code="HAB"/>
+        <book code="HAG"/>
+        <book code="HEB"/>
+        <book code="HOS"/>
+        <book code="ISA"/>
+        <book code="JAS"/>
+        <book code="JDG"/>
+        <book code="JER"/>
+        <book code="JHN"/>
+        <book code="JOB"/>
+        <book code="JOL"/>
+        <book code="JON"/>
+        <book code="JOS"/>
+        <book code="JUD"/>
+        <book code="LAM"/>
+        <book code="LEV"/>
+        <book code="LUK"/>
+        <book code="MAL"/>
+        <book code="MAT"/>
+        <book code="MIC"/>
+        <book code="MRK"/>
+        <book code="NAM"/>
+        <book code="NEH"/>
+        <book code="NUM"/>
+        <book code="OBA"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="PRO"/>
+        <book code="PSA"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="RUT"/>
+        <book code="SNG"/>
+        <book code="TIT"/>
+        <book code="ZEC"/>
+        <book code="ZEP"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p1" default="true">
+        <name>Reina Valera 1909</name>
+        <nameLocal>Reina Valera 1909</nameLocal>
+        <description>Biblia Reina Valera 1909</description>
+        <descriptionLocal>Biblia Reina Valera 1909</descriptionLocal>
+        <abbreviation>RVR09</abbreviation>
+        <abbreviationLocal>RVR09</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CH"/>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1KI"/>
+          <book code="1PE"/>
+          <book code="1SA"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CH"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2KI"/>
+          <book code="2PE"/>
+          <book code="2SA"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="AMO"/>
+          <book code="COL"/>
+          <book code="DAN"/>
+          <book code="DEU"/>
+          <book code="ECC"/>
+          <book code="EPH"/>
+          <book code="EST"/>
+          <book code="EXO"/>
+          <book code="EZK"/>
+          <book code="EZR"/>
+          <book code="GAL"/>
+          <book code="GEN"/>
+          <book code="HAB"/>
+          <book code="HAG"/>
+          <book code="HEB"/>
+          <book code="HOS"/>
+          <book code="ISA"/>
+          <book code="JAS"/>
+          <book code="JDG"/>
+          <book code="JER"/>
+          <book code="JHN"/>
+          <book code="JOB"/>
+          <book code="JOL"/>
+          <book code="JON"/>
+          <book code="JOS"/>
+          <book code="JUD"/>
+          <book code="LAM"/>
+          <book code="LEV"/>
+          <book code="LUK"/>
+          <book code="MAL"/>
+          <book code="MAT"/>
+          <book code="MIC"/>
+          <book code="MRK"/>
+          <book code="NAM"/>
+          <book code="NEH"/>
+          <book code="NUM"/>
+          <book code="OBA"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="PRO"/>
+          <book code="PSA"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="RUT"/>
+          <book code="SNG"/>
+          <book code="TIT"/>
+          <book code="ZEC"/>
+          <book code="ZEP"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-gen" src="release/USX_1/GEN.usx" role="GEN"/>
+          <content name="book-exo" src="release/USX_1/EXO.usx" role="EXO"/>
+          <content name="book-lev" src="release/USX_1/LEV.usx" role="LEV"/>
+          <content name="book-num" src="release/USX_1/NUM.usx" role="NUM"/>
+          <content name="book-deu" src="release/USX_1/DEU.usx" role="DEU"/>
+          <content name="book-jos" src="release/USX_1/JOS.usx" role="JOS"/>
+          <content name="book-jdg" src="release/USX_1/JDG.usx" role="JDG"/>
+          <content name="book-rut" src="release/USX_1/RUT.usx" role="RUT"/>
+          <content name="book-1sa" src="release/USX_1/1SA.usx" role="1SA"/>
+          <content name="book-2sa" src="release/USX_1/2SA.usx" role="2SA"/>
+          <content name="book-1ki" src="release/USX_1/1KI.usx" role="1KI"/>
+          <content name="book-2ki" src="release/USX_1/2KI.usx" role="2KI"/>
+          <content name="book-1ch" src="release/USX_1/1CH.usx" role="1CH"/>
+          <content name="book-2ch" src="release/USX_1/2CH.usx" role="2CH"/>
+          <content name="book-ezr" src="release/USX_1/EZR.usx" role="EZR"/>
+          <content name="book-neh" src="release/USX_1/NEH.usx" role="NEH"/>
+          <content name="book-est" src="release/USX_1/EST.usx" role="EST"/>
+          <content name="book-job" src="release/USX_1/JOB.usx" role="JOB"/>
+          <content name="book-psa" src="release/USX_1/PSA.usx" role="PSA"/>
+          <content name="book-pro" src="release/USX_1/PRO.usx" role="PRO"/>
+          <content name="book-ecc" src="release/USX_1/ECC.usx" role="ECC"/>
+          <content name="book-sng" src="release/USX_1/SNG.usx" role="SNG"/>
+          <content name="book-isa" src="release/USX_1/ISA.usx" role="ISA"/>
+          <content name="book-jer" src="release/USX_1/JER.usx" role="JER"/>
+          <content name="book-lam" src="release/USX_1/LAM.usx" role="LAM"/>
+          <content name="book-ezk" src="release/USX_1/EZK.usx" role="EZK"/>
+          <content name="book-dan" src="release/USX_1/DAN.usx" role="DAN"/>
+          <content name="book-hos" src="release/USX_1/HOS.usx" role="HOS"/>
+          <content name="book-jol" src="release/USX_1/JOL.usx" role="JOL"/>
+          <content name="book-amo" src="release/USX_1/AMO.usx" role="AMO"/>
+          <content name="book-oba" src="release/USX_1/OBA.usx" role="OBA"/>
+          <content name="book-jon" src="release/USX_1/JON.usx" role="JON"/>
+          <content name="book-mic" src="release/USX_1/MIC.usx" role="MIC"/>
+          <content name="book-nam" src="release/USX_1/NAM.usx" role="NAM"/>
+          <content name="book-hab" src="release/USX_1/HAB.usx" role="HAB"/>
+          <content name="book-zep" src="release/USX_1/ZEP.usx" role="ZEP"/>
+          <content name="book-hag" src="release/USX_1/HAG.usx" role="HAG"/>
+          <content name="book-zec" src="release/USX_1/ZEC.usx" role="ZEC"/>
+          <content name="book-mal" src="release/USX_1/MAL.usx" role="MAL"/>
+          <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+          <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+          <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+          <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+          <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+          <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+          <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+          <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+          <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+          <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+          <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+          <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+          <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+          <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+          <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+          <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+          <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+          <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+          <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+          <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+          <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+          <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+          <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+          <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+          <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Reina-Valera 1909 - Dominio público.</p>
+          <p>Fue realizada por Sociedades Bíblicas Unidas y publicada por primera vez en 1909.</p>
+        </statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Reina-Valera 1909 - Dominio público.</p>
+        <p>Fue realizada por Sociedades Bíblicas Unidas y publicada por primera vez en 1909.</p>
+      </promoVersionInfo>
+    </promotion>
+    <archiveStatus>
+      <archivistName>Emma Canales</archivistName>
+      <dateArchived>2019-04-23T14:23:08.249824</dateArchived>
+      <dateUpdated>2020-08-05T05:37:45.305363</dateUpdated>
+      <comments>Updated metadata</comments>
+    </archiveStatus>
+  </DBLMetadata>

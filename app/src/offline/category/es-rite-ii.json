@@ -1,0 +1,1753 @@
+[
+  {
+    "slug": "prayer_a",
+    "date_modified": {
+      "seconds": 1610564379,
+      "nanoseconds": 146000000
+    },
+    "label": "Prayer A",
+    "lastRevision": 13,
+    "language": "en",
+    "source": {
+      "source": "",
+      "api": "",
+      "citation": ""
+    },
+    "category": [null, "Eucharistic Prayer"],
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public"
+    },
+    "value": [
+      {
+        "type": "option",
+        "value": [
+          {
+            "version": "bcp1979",
+            "category": ["sursum_corda"],
+            "style": "preces",
+            "metadata": {
+              "response": null
+            },
+            "hidden": false,
+            "type": "responsive",
+            "version_label": "BCP (“give God”)",
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "The Lord be with you."
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "label": "People",
+                "text": "It is right to give God thanks and praise."
+              }
+            ],
+            "language": "en",
+            "slug": "sursum_corda_god",
+            "label": null,
+            "citation": null
+          },
+          {
+            "metadata": {
+              "response": null
+            },
+            "citation": null,
+            "hidden": false,
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "The Lord be with you."
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "style": "preces",
+            "slug": "sursum_corda_our",
+            "language": "en",
+            "version": "eow",
+            "label": null,
+            "version_label": "EOW (“give our”)",
+            "category": ["sursum_corda"],
+            "type": "responsive"
+          },
+          {
+            "category": ["sursum_corda"],
+            "label": null,
+            "slug": "sursum_corda",
+            "citation": null,
+            "metadata": {
+              "response": null
+            },
+            "type": "responsive",
+            "version": "bcp1979",
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "It is right to give him thanks and praise."
+              }
+            ],
+            "language": "en",
+            "version_label": "BCP (“give him”)",
+            "style": "preces",
+            "hidden": false
+          },
+          {
+            "version_label": "Expansive (“God be with you.”)",
+            "label": null,
+            "slug": "sursum_corda_expansive",
+            "metadata": {
+              "response": null
+            },
+            "type": "responsive",
+            "hidden": false,
+            "category": ["sursum_corda"],
+            "value": [
+              {
+                "text": "God be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "It is right to give our thanks and praise."
+              }
+            ],
+            "version": "eow",
+            "citation": null,
+            "language": "en",
+            "style": "preces"
+          }
+        ],
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        }
+      },
+      {
+        "value": [
+          {
+            "hidden": false,
+            "value": [
+              "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Father Almighty, Creator of heaven and earth."
+            ],
+            "citation": null,
+            "label": null,
+            "style": "text",
+            "type": "text",
+            "category": [null],
+            "version_label": null,
+            "version": "bcp1979",
+            "metadata": {
+              "omit_response": true,
+              "response": null
+            },
+            "slug": "prepreface_a",
+            "language": "en"
+          },
+          {
+            "version_label": "Expansive",
+            "category": [null],
+            "version": "eow",
+            "hidden": false,
+            "citation": null,
+            "slug": "prepreface_a",
+            "metadata": {
+              "omit_response": true,
+              "response": null
+            },
+            "style": "text",
+            "type": "text",
+            "label": null,
+            "language": "en",
+            "value": [
+              "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Almighty God, Creator of heaven and earth."
+            ]
+          }
+        ],
+        "type": "option",
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        }
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "lookup": {
+          "type": "slug",
+          "filter": "seasonal"
+        },
+        "slug": "proper_preface"
+      },
+      {
+        "label": null,
+        "language": "en",
+        "citation": null,
+        "category": [null],
+        "value": [
+          "Therefore we praise you, joining our voices with Angels and Archangels and with all the company of heaven, who for ever sing this hymn to proclaim the glory of your Name:"
+        ],
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "type": "text",
+        "hidden": false,
+        "style": "text",
+        "version": "bcp1979",
+        "slug": "postpreface_a",
+        "version_label": null
+      },
+      {
+        "value": [
+          {
+            "citation": null,
+            "category": [""],
+            "version_label": null,
+            "type": "text",
+            "style": "text",
+            "hidden": false,
+            "label": null,
+            "slug": "sanctus",
+            "language": "en",
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "version": "bcp1979"
+          },
+          {
+            "version": "eow",
+            "hidden": false,
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "style": "text",
+            "citation": null,
+            "language": "en",
+            "category": [""],
+            "label": null,
+            "type": "text",
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is the one who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "version_label": null,
+            "slug": "sanctus"
+          }
+        ],
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        },
+        "type": "option"
+      },
+      {
+        "type": "option",
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        },
+        "value": [
+          {
+            "version_label": null,
+            "version": "bcp1979",
+            "hidden": false,
+            "source": {
+              "citation": "p. 362",
+              "source": "bcp1979",
+              "api": "https://www.venite.app/api"
+            },
+            "category": [null],
+            "style": "text",
+            "metadata": {
+              "omit_response": true,
+              "response": null
+            },
+            "value": [
+              "Holy and gracious Father: In your infinite love you made us for yourself, and, when we had fallen into sin and become subject to evil and death, you, in your mercy, sent Jesus Christ, your only and eternal Son, to share our human nature, to live and die as one of us, to reconcile us to you, the God and Father of all.",
+              "He stretched out his arms upon the cross, and offered himself, in obedience to your will, a perfect sacrifice for the whole world."
+            ],
+            "citation": null,
+            "label": null,
+            "type": "text",
+            "language": "en",
+            "slug": "prayer_body_a"
+          },
+          {
+            "language": "en",
+            "style": "text",
+            "type": "text",
+            "version_label": "Expansive",
+            "slug": "prayer_body_a",
+            "version": "eow",
+            "hidden": false,
+            "citation": null,
+            "metadata": {
+              "response": null,
+              "omit_response": true
+            },
+            "value": [
+              "Holy and gracious God: In your infinite love you made us for yourself, and, when we had fallen into sin and become subject to evil and death, you, in your mercy, sent Jesus Christ, your only and eternal Son, to share our human nature, to live and die as one of us, to reconcile us to you, the God and maker of all.",
+              "Jesus stretched out his arms upon the cross, and offered himself, in obedience to your will, a perfect sacrifice for the whole world."
+            ],
+            "label": null,
+            "category": [null],
+            "source": {
+              "source": "bcp1979",
+              "api": "https://www.venite.app/api",
+              "citation": "p. 362"
+            }
+          }
+        ]
+      },
+      {
+        "version_label": null,
+        "hidden": false,
+        "version": "bcp1979",
+        "label": null,
+        "value": [
+          "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+        ],
+        "type": "rubric",
+        "category": [null],
+        "language": "en",
+        "citation": null,
+        "slug": "institution_rubric"
+      },
+      {
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        },
+        "value": [
+          {
+            "hidden": false,
+            "version": "bcp1979",
+            "metadata": {
+              "omit_response": true,
+              "response": null
+            },
+            "language": "en",
+            "value": [
+              "On the night he was handed over to suffering and death, our Lord Jesus Christ took bread; and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
+              "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+            ],
+            "type": "text",
+            "style": "text",
+            "category": [null],
+            "label": null,
+            "slug": "institution",
+            "citation": null,
+            "version_label": null
+          },
+          {
+            "version_label": null,
+            "slug": "institution",
+            "style": "text",
+            "version": "eow",
+            "citation": null,
+            "metadata": {
+              "response": null,
+              "omit_response": true
+            },
+            "label": null,
+            "type": "text",
+            "hidden": false,
+            "category": [null],
+            "value": [
+              "On the night before he died for us, \nOur Savior Jesus Christ took bread, \nand when he had given thanks to you, \nhe broke it, and gave it to his friends, and said: \n“Take, eat: \nThis is my Body which is given for you. \nDo this for the remembrance of me.”",
+              "As supper was ending, Jesus took the cup of wine, \nand when he had given thanks, \nhe gave it to them, and said: \n“Drink this, all of you: \nThis is my Blood of the new Covenant, \nwhich is poured out for you and for all \nfor the forgiveness of sins. \nWhenever you drink it, \ndo this for the remembrance of me.”"
+            ],
+            "language": "en"
+          }
+        ],
+        "type": "option"
+      },
+      {
+        "label": null,
+        "value": [
+          {
+            "text": "Therefore we proclaim the mystery of faith:",
+            "optional": false,
+            "response": "Christ has died.\nChrist is risen.\nChrist will come again."
+          }
+        ],
+        "hidden": false,
+        "style": "litany",
+        "slug": "acclamation_a",
+        "metadata": {
+          "response": null
+        },
+        "citation": "BCP p. 363",
+        "type": "responsive",
+        "version": "bcp1979",
+        "language": "en",
+        "category": [null],
+        "version_label": null
+      },
+      {
+        "slug": "prayer_conclusion_a",
+        "label": null,
+        "style": "text",
+        "value": [
+          "We celebrate the memorial of our redemption, O Father, in this sacrifice of praise and thanksgiving. Recalling his death, resurrection, and ascension, we offer you these gifts.",
+          "Sanctify them by your Holy Spirit to be for your people the Body and Blood of your Son, the holy food and drink of new and unending life in him. Sanctify us also that we may faithfully receive this holy Sacrament, and serve you in unity, constancy, and peace; and at the last day bring us with all your saints into the joy of your eternal kingdom.",
+          "All this we ask through your Son Jesus Christ: By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever. "
+        ],
+        "language": "en",
+        "hidden": false,
+        "citation": null,
+        "version": "bcp1979",
+        "category": [null],
+        "type": "text",
+        "version_label": null,
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        }
+      }
+    ],
+    "metadata": {
+      "liturgyversions": ["bcp1979"],
+      "supplement": true,
+      "evening": false
+    },
+    "version": "Rite-II",
+    "type": "liturgy",
+    "hidden": false
+  },
+  {
+    "version": "Rite-II",
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "hidden": false,
+    "type": "liturgy",
+    "category": [null, "Eucharistic Prayer"],
+    "label": "Prayer B",
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "collaborators": []
+    },
+    "language": "en",
+    "value": [
+      {
+        "type": "option",
+        "value": [
+          {
+            "type": "responsive",
+            "citation": null,
+            "hidden": false,
+            "version_label": "BCP (“give God”)",
+            "language": "en",
+            "label": null,
+            "version": "bcp1979",
+            "style": "preces",
+            "metadata": {
+              "response": null
+            },
+            "category": ["sursum_corda"],
+            "slug": "sursum_corda_god",
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give God thanks and praise.",
+                "label": "People"
+              }
+            ]
+          },
+          {
+            "hidden": false,
+            "metadata": {
+              "response": null
+            },
+            "version": "eow",
+            "style": "preces",
+            "version_label": "EOW (“give our”)",
+            "citation": null,
+            "slug": "sursum_corda_our",
+            "category": ["sursum_corda"],
+            "type": "responsive",
+            "label": null,
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "language": "en"
+          },
+          {
+            "label": null,
+            "slug": "sursum_corda",
+            "version_label": "BCP (“give him”)",
+            "hidden": false,
+            "citation": null,
+            "style": "preces",
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "It is right to give him thanks and praise."
+              }
+            ],
+            "category": ["sursum_corda"],
+            "version": "bcp1979",
+            "metadata": {
+              "response": null
+            },
+            "type": "responsive",
+            "language": "en"
+          },
+          {
+            "type": "responsive",
+            "version_label": "Expansive (“God be with you.”)",
+            "citation": null,
+            "category": ["sursum_corda"],
+            "language": "en",
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "God be with you."
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "label": "People",
+                "text": "It is right to give our thanks and praise."
+              }
+            ],
+            "style": "preces",
+            "metadata": {
+              "response": null
+            },
+            "slug": "sursum_corda_expansive",
+            "hidden": false,
+            "version": "eow",
+            "label": null
+          }
+        ],
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        }
+      },
+      {
+        "value": [
+          {
+            "version_label": null,
+            "version": "bcp1979",
+            "slug": "prepreface_a",
+            "type": "text",
+            "value": [
+              "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Father Almighty, Creator of heaven and earth."
+            ],
+            "category": [null],
+            "citation": null,
+            "language": "en",
+            "hidden": false,
+            "style": "text",
+            "metadata": {
+              "omit_response": true,
+              "response": null
+            },
+            "label": null
+          },
+          {
+            "version_label": "Expansive",
+            "citation": null,
+            "version": "eow",
+            "value": [
+              "It is right, and a good and joyful thing, always and everywhere to give thanks to you, Almighty God, Creator of heaven and earth."
+            ],
+            "type": "text",
+            "label": null,
+            "slug": "prepreface_a",
+            "language": "en",
+            "metadata": {
+              "response": null,
+              "omit_response": true
+            },
+            "category": [null],
+            "style": "text",
+            "hidden": false
+          }
+        ],
+        "type": "option",
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        }
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "lookup": {
+          "type": "slug",
+          "filter": "seasonal"
+        },
+        "slug": "proper_preface"
+      },
+      {
+        "version_label": null,
+        "version": "bcp1979",
+        "slug": "postpreface_a",
+        "type": "text",
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "style": "text",
+        "hidden": false,
+        "label": null,
+        "citation": null,
+        "category": [null],
+        "language": "en",
+        "value": [
+          "Therefore we praise you, joining our voices with Angels and Archangels and with all the company of heaven, who for ever sing this hymn to proclaim the glory of your Name:"
+        ]
+      },
+      {
+        "metadata": {
+          "editor_selected": 0,
+          "selected": 0
+        },
+        "value": [
+          {
+            "version": "bcp1979",
+            "type": "text",
+            "metadata": {
+              "omit_response": true,
+              "response": ""
+            },
+            "style": "text",
+            "language": "en",
+            "slug": "sanctus",
+            "label": null,
+            "hidden": false,
+            "version_label": null,
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "citation": null,
+            "category": [""]
+          },
+          {
+            "type": "text",
+            "slug": "sanctus",
+            "language": "en",
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is the one who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "label": null,
+            "version_label": null,
+            "version": "eow",
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "hidden": false,
+            "citation": null,
+            "category": [""],
+            "style": "text"
+          }
+        ],
+        "type": "option"
+      },
+      {
+        "source": {
+          "api": "https://www.venite.app/api",
+          "citation": "p. 368",
+          "source": "bcp1979"
+        },
+        "label": null,
+        "language": "en",
+        "category": [null],
+        "version_label": null,
+        "hidden": false,
+        "type": "text",
+        "citation": null,
+        "value": [
+          "We give thanks to you, O God, for the goodness and love which you have made known to us in creation; in the calling of Israel to be your people; in your Word spoken through the prophets; and above all in the Word made flesh, Jesus, your Son. For in these last days you sent him to be incarnate from the Virgin Mary, to be the Savior and Redeemer of the world. In him, you have delivered us from evil, and made us worthy to stand before you. In him, you have brought us out of error into truth, out of sin into righteousness, out of death into life."
+        ],
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "style": "text",
+        "slug": "prayer_body_b"
+      },
+      {
+        "label": null,
+        "hidden": false,
+        "type": "rubric",
+        "value": [
+          "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+        ],
+        "language": "en",
+        "citation": null,
+        "category": [null],
+        "version_label": null,
+        "slug": "institution_rubric",
+        "version": "bcp1979"
+      },
+      {
+        "label": null,
+        "type": "text",
+        "version": "bcp1979",
+        "style": "text",
+        "slug": "institution_b",
+        "value": [
+          "On the night before he died for us, our Lord Jesus Christ took bread; and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
+          "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+        ],
+        "category": [null],
+        "hidden": false,
+        "citation": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "language": "en",
+        "version_label": null
+      },
+      {
+        "label": null,
+        "hidden": false,
+        "language": "en",
+        "value": [
+          {
+            "response": "We remember his death,\nWe proclaim his resurrection,\nWe await his coming in glory;",
+            "optional": false,
+            "text": "Therefore, according to his command, O Father,"
+          }
+        ],
+        "style": "litany",
+        "metadata": {
+          "response": null
+        },
+        "type": "responsive",
+        "citation": null,
+        "category": [null],
+        "source": {
+          "source": "bcp1979",
+          "citation": "p. 368",
+          "api": "https://www.venite.app/api"
+        },
+        "version_label": null,
+        "slug": "acclamation_b",
+        "version": "bcp1979"
+      },
+      {
+        "version_label": null,
+        "type": "text",
+        "citation": null,
+        "category": [null],
+        "slug": "prayer_conclusion_b",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "value": [
+          "And we offer our sacrifice of praise and thanksgiving to you, O Lord of all; presenting to you, from your creation, this bread and this wine.",
+          "We pray you, gracious God, to send your Holy Spirit upon these gifts that they may be the Sacrament of the Body of Christ and his Blood of the new Covenant. Unite us to your Son in his sacrifice, that we may be acceptable through him, being sanctified by the Holy Spirit. In the fullness of time, put all things in subjection under your Christ, and bring us to that heavenly country where, with [____________ and] all your saints, we may enter the everlasting heritage of your sons and daughters; through Jesus Christ our Lord, the firstborn of all creation, the head of the Church, and the author of our salvation.",
+          "By him, and with him, and in him, in the unity of the Holy Spirit all honor and glory is yours, Almighty Father, now and for ever."
+        ],
+        "version": "bcp1979",
+        "label": null,
+        "style": "text",
+        "hidden": false,
+        "language": "en"
+      }
+    ],
+    "date_modified": {
+      "seconds": 1609789263,
+      "nanoseconds": 580000000
+    },
+    "slug": "prayer_b",
+    "metadata": {
+      "evening": false,
+      "supplement": true,
+      "liturgyversions": ["bcp1979"]
+    },
+    "lastRevision": 19
+  },
+  {
+    "type": "liturgy",
+    "label": "Prayer C",
+    "sharing": {
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "status": "published",
+      "privacy": "public"
+    },
+    "language": "en",
+    "version": "Rite-II",
+    "lastRevision": 9,
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "category": [null, "Eucharistic Prayer"],
+    "metadata": {
+      "evening": false,
+      "liturgyversions": [],
+      "supplement": true
+    },
+    "hidden": false,
+    "value": [
+      {
+        "type": "option",
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        },
+        "value": [
+          {
+            "label": null,
+            "metadata": {
+              "response": null
+            },
+            "slug": "sursum_corda_god",
+            "version": "bcp1979",
+            "style": "preces",
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "The Lord be with you."
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "It is right to give God thanks and praise."
+              }
+            ],
+            "language": "en",
+            "type": "responsive",
+            "hidden": false,
+            "version_label": "BCP (“give God”)",
+            "citation": null,
+            "category": ["sursum_corda"]
+          },
+          {
+            "version": "eow",
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "The Lord be with you."
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "citation": null,
+            "label": null,
+            "language": "en",
+            "version_label": "EOW (“give our”)",
+            "metadata": {
+              "response": null
+            },
+            "category": ["sursum_corda"],
+            "type": "responsive",
+            "hidden": false,
+            "slug": "sursum_corda_our",
+            "style": "preces"
+          },
+          {
+            "metadata": {
+              "response": null
+            },
+            "version_label": "BCP (“give him”)",
+            "slug": "sursum_corda",
+            "citation": null,
+            "style": "preces",
+            "value": [
+              {
+                "label": "Celebrant",
+                "text": "The Lord be with you."
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "We lift them to the Lord.",
+                "label": "People"
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "It is right to give him thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "category": ["sursum_corda"],
+            "language": "en",
+            "hidden": false,
+            "version": "bcp1979",
+            "type": "responsive",
+            "label": null
+          },
+          {
+            "value": [
+              {
+                "text": "God be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "And also with you.",
+                "label": "People"
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "style": "preces",
+            "language": "en",
+            "slug": "sursum_corda_expansive",
+            "hidden": false,
+            "category": ["sursum_corda"],
+            "metadata": {
+              "response": null
+            },
+            "type": "responsive",
+            "label": null,
+            "citation": null,
+            "version_label": "Expansive (“God be with you.”)",
+            "version": "eow"
+          }
+        ]
+      },
+      {
+        "source": {
+          "api": "https://www.venite.app/api",
+          "source": "bcp1979",
+          "citation": "p. 370"
+        },
+        "slug": "preface_c",
+        "citation": null,
+        "type": "responsive",
+        "value": [
+          {
+            "text": "God of all power, Ruler of the Universe, you are worthy of glory and praise.",
+            "response": "Glory to you for ever and ever.",
+            "optional": false
+          },
+          {
+            "text": "At your command all things came to be: the vast expanse of interstellar space, galaxies, suns, the planets in their courses, and this fragile earth, our island home.",
+            "response": "By your will they were created and have their being.",
+            "optional": false
+          },
+          {
+            "text": "From the primal elements you brought forth the human race, and blessed us with memory, reason, and skill. You made us the rulers of creation. But we turned against you, and betrayed your trust; and we turned against one another.",
+            "response": " Have mercy, Lord, for we are sinners in your sight.",
+            "optional": false
+          },
+          {
+            "response": "By his blood, he reconciled us.\nBy his wounds, we are healed.",
+            "text": "Again and again, you called us to return. Through prophets and sages you revealed your righteous Law. And in the fullness of time you sent your only Son, born of a woman, to fulfill your Law, to open for us the way of freedom and peace.",
+            "optional": false
+          }
+        ],
+        "version_label": null,
+        "version": "bcp1979",
+        "category": [null],
+        "style": "litany",
+        "label": null,
+        "hidden": false,
+        "metadata": {
+          "response": null
+        },
+        "language": "en"
+      },
+      {
+        "language": "en",
+        "slug": "postpreface_c",
+        "category": [null],
+        "citation": null,
+        "version_label": null,
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "hidden": false,
+        "label": null,
+        "style": "text",
+        "value": [
+          "And therefore we praise you, joining with the heavenly chorus, with prophets, apostles, and martyrs, and with all those in every generation who have looked to you in hope, to proclaim with them your glory, in their unending hymn:"
+        ],
+        "type": "text"
+      },
+      {
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        },
+        "value": [
+          {
+            "version_label": null,
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "citation": null,
+            "label": null,
+            "type": "text",
+            "hidden": false,
+            "language": "en",
+            "category": [""],
+            "slug": "sanctus",
+            "style": "text",
+            "version": "bcp1979"
+          },
+          {
+            "language": "en",
+            "version_label": null,
+            "label": null,
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "style": "text",
+            "version": "eow",
+            "category": [""],
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is the one who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "type": "text",
+            "slug": "sanctus",
+            "citation": null,
+            "hidden": false
+          }
+        ],
+        "type": "option"
+      },
+      {
+        "type": "text",
+        "value": [
+          "And so, Father, we who have been redeemed by him, and made a new people by water and the Spirit, now bring before you these gifts. Sanctify them by your Holy Spirit to be the Body and Blood of Jesus Christ our Lord."
+        ],
+        "version_label": null,
+        "citation": null,
+        "version": "bcp1979",
+        "language": "en",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "slug": "epiclesis_c",
+        "hidden": false,
+        "category": [null],
+        "label": null,
+        "style": "text"
+      },
+      {
+        "version_label": null,
+        "category": [null],
+        "type": "rubric",
+        "citation": null,
+        "version": "bcp1979",
+        "language": "en",
+        "value": [
+          "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+        ],
+        "label": null,
+        "hidden": false,
+        "slug": "institution_rubric"
+      },
+      {
+        "style": "text",
+        "category": [null],
+        "version": "bcp1979",
+        "hidden": false,
+        "language": "en",
+        "slug": "institution_c",
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "value": [
+          "On the night he was betrayed he took bread, said the blessing, broke the bread, and gave it to his friends, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”",
+          "After supper, he took the cup of wine, gave thanks, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+        ],
+        "citation": null,
+        "label": null,
+        "type": "text",
+        "version_label": null
+      },
+      {
+        "citation": null,
+        "value": [
+          {
+            "optional": false,
+            "text": "Remembering now his work of redemption, and offering to you this sacrifice of thanksgiving,",
+            "response": "We celebrate his death and resurrection,\nas we await the day of his coming."
+          },
+          {
+            "response": "Risen Lord, be known to us in the breaking of the Bread.",
+            "text": "Lord God of our Fathers: God of Abraham, Isaac, and Jacob; God and Father of our Lord Jesus Christ: Open our eyes to see your hand at work in the world about us. Deliver us from the presumption of coming to this Table for solace only, and not for strength; for pardon only, and not for renewal. Let the grace of this Holy Communion make us one body, one spirit in Christ, that we may worthily serve the world in his name.",
+            "optional": false
+          }
+        ],
+        "version": "bcp1979",
+        "hidden": false,
+        "style": "litany",
+        "label": null,
+        "type": "responsive",
+        "metadata": {
+          "response": null
+        },
+        "category": [null],
+        "language": "en",
+        "slug": "acclamation_c",
+        "version_label": null
+      },
+      {
+        "category": [null],
+        "version_label": null,
+        "type": "text",
+        "language": "en",
+        "version": "bcp1979",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "value": [
+          "Accept these prayers and praises, Father, through Jesus Christ our great High Priest, to whom, with you and the Holy Spirit, your Church gives honor, glory, and worship, from generation to generation."
+        ],
+        "citation": null,
+        "style": "text",
+        "label": null,
+        "hidden": false,
+        "slug": "prayer_conclusion_c"
+      }
+    ],
+    "date_modified": {
+      "seconds": 1603679674,
+      "nanoseconds": 400000000
+    },
+    "slug": "prayer_c"
+  },
+  {
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "label": "Prayer D",
+    "type": "liturgy",
+    "slug": "prayer_d",
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "version": "Rite-II",
+    "metadata": {
+      "liturgyversions": [],
+      "supplement": true,
+      "evening": false
+    },
+    "language": "en",
+    "category": [null, "Eucharistic Prayer"],
+    "value": [
+      {
+        "value": [
+          {
+            "type": "responsive",
+            "version": "bcp1979",
+            "category": ["sursum_corda"],
+            "hidden": false,
+            "style": "preces",
+            "slug": "sursum_corda_god",
+            "metadata": {
+              "response": null
+            },
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "It is right to give God thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "citation": null,
+            "label": null,
+            "version_label": "BCP (“give God”)",
+            "language": "en"
+          },
+          {
+            "language": "en",
+            "style": "preces",
+            "label": null,
+            "citation": null,
+            "slug": "sursum_corda_our",
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "hidden": false,
+            "type": "responsive",
+            "category": ["sursum_corda"],
+            "version_label": "EOW (“give our”)",
+            "version": "eow",
+            "metadata": {
+              "response": null
+            }
+          },
+          {
+            "label": null,
+            "style": "preces",
+            "version": "bcp1979",
+            "value": [
+              {
+                "text": "The Lord be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "text": "Lift up your hearts.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "text": "Let us give thanks to the Lord our God.",
+                "label": "Celebrant"
+              },
+              {
+                "text": "It is right to give him thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "slug": "sursum_corda",
+            "citation": null,
+            "hidden": false,
+            "category": ["sursum_corda"],
+            "type": "responsive",
+            "language": "en",
+            "metadata": {
+              "response": null
+            },
+            "version_label": "BCP (“give him”)"
+          },
+          {
+            "category": ["sursum_corda"],
+            "version": "eow",
+            "citation": null,
+            "hidden": false,
+            "slug": "sursum_corda_expansive",
+            "metadata": {
+              "response": null
+            },
+            "version_label": "Expansive (“God be with you.”)",
+            "style": "preces",
+            "label": null,
+            "type": "responsive",
+            "value": [
+              {
+                "text": "God be with you.",
+                "label": "Celebrant"
+              },
+              {
+                "label": "People",
+                "text": "And also with you."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Lift up your hearts."
+              },
+              {
+                "label": "People",
+                "text": "We lift them to the Lord."
+              },
+              {
+                "label": "Celebrant",
+                "text": "Let us give thanks to the Lord our God."
+              },
+              {
+                "text": "It is right to give our thanks and praise.",
+                "label": "People"
+              }
+            ],
+            "language": "en"
+          }
+        ],
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        },
+        "type": "option"
+      },
+      {
+        "hidden": false,
+        "version_label": null,
+        "source": {
+          "source": "bcp1979",
+          "api": "https://www.venite.app/api",
+          "citation": "p. 373"
+        },
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "category": [null],
+        "label": null,
+        "value": [
+          "It is truly right to glorify you, Father, and to give you thanks; for you alone are God, living and true, dwelling in light inaccessible from before time and for ever.",
+          "Fountain of life and source of all goodness, you made all things and fill them with your blessing; you created them to rejoice in the splendor of your radiance.",
+          "Countless throngs of angels stand before you to serve you night and day; and, beholding the glory of your presence, they offer you unceasing praise. Joining with them, and giving voice to every creature under heaven, we acclaim you, and glorify your Name, as we sing (say),"
+        ],
+        "citation": null,
+        "slug": "preface_d",
+        "style": "text",
+        "version": "bcp1979",
+        "type": "text",
+        "language": "en"
+      },
+      {
+        "metadata": {
+          "selected": 0,
+          "editor_selected": 0
+        },
+        "value": [
+          {
+            "category": [""],
+            "language": "en",
+            "slug": "sanctus",
+            "style": "text",
+            "version_label": null,
+            "type": "text",
+            "metadata": {
+              "response": "",
+              "omit_response": true
+            },
+            "version": "bcp1979",
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is he who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "citation": null,
+            "label": null,
+            "hidden": false
+          },
+          {
+            "language": "en",
+            "slug": "sanctus",
+            "style": "text",
+            "citation": null,
+            "category": [""],
+            "metadata": {
+              "omit_response": true,
+              "response": ""
+            },
+            "value": [
+              "Holy, Holy, Holy Lord, God of power and might,\nheaven and earth are full of your glory.\n    Hosanna in the highest.\nBlessed is the one who comes in the name of the Lord.\n    Hosanna in the highest."
+            ],
+            "type": "text",
+            "version_label": null,
+            "hidden": false,
+            "label": null,
+            "version": "eow"
+          }
+        ],
+        "type": "option"
+      },
+      {
+        "hidden": false,
+        "style": "text",
+        "type": "text",
+        "version": "bcp1979",
+        "version_label": null,
+        "category": [null],
+        "citation": null,
+        "language": "en",
+        "slug": "postpreface_d",
+        "value": [
+          "We acclaim you, holy Lord, glorious in power. Your mighty works reveal your wisdom and love. You formed us in your own image, giving the whole world into our care, so that, in obedience to you, our Creator, we might rule and serve all your creatures. When our disobedience took us far from you, you did not abandon us to the power of death. In your mercy you came to our help, so that in seeking you we might find you. Again and again you called us into covenant with you, and through the prophets you taught us to hope for salvation. ",
+          " Father, you loved the world so much that in the fullness of time you sent your only Son to be our Savior. Incarnate by the Holy Spirit, born of the Virgin Mary, he lived as one of us, yet without sin. To the poor he proclaimed the good news of salvation; to prisoners, freedom; to the sorrowful, joy. To fulfill your purpose he gave himself up to death; and, rising from the grave, destroyed death, and made the whole creation new.",
+          "And, that we might live no longer for ourselves, but for him who died and rose for us, he sent the Holy Spirit, his own first gift for those who believe, to complete his work in the world, and to bring to fulfillment the sanctification of all."
+        ],
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "label": null
+      },
+      {
+        "category": [null],
+        "value": [
+          "At the following words concerning the bread, the Celebrant is to hold it, or to lay a hand upon it; and at the words concerning the cup, to hold or place a hand upon the cup and any other vessel containing wine to be consecrated."
+        ],
+        "label": null,
+        "citation": null,
+        "language": "en",
+        "hidden": false,
+        "slug": "institution_rubric",
+        "type": "rubric",
+        "version": "bcp1979",
+        "version_label": null
+      },
+      {
+        "language": "en",
+        "value": [
+          "When the hour had come for him to be glorified by you, his heavenly Father, having loved his own who were in the world, he loved them to the end; at supper with them he took bread, and when he had given thanks to you, he broke it, and gave it to his disciples, and said, “Take, eat: This is my Body, which is given for you. Do this for the remembrance of me.”\n\n",
+          "After supper he took the cup of wine; and when he had given thanks, he gave it to them, and said, “Drink this, all of you: This is my Blood of the new Covenant, which is shed for you and for many for the forgiveness of sins. Whenever you drink it, do this for the remembrance of me.”"
+        ],
+        "hidden": false,
+        "type": "text",
+        "slug": "institution_d",
+        "version_label": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "style": "text",
+        "category": [null],
+        "label": null,
+        "version": "bcp1979",
+        "citation": null
+      },
+      {
+        "hidden": false,
+        "style": "litany",
+        "version_label": null,
+        "type": "responsive",
+        "slug": "acclamation_d",
+        "citation": null,
+        "language": "en",
+        "metadata": {
+          "response": null
+        },
+        "value": [
+          {
+            "text": "Father, we now celebrate this memorial of our redemption. Recalling Christ's death and his descent among the dead, proclaiming his resurrection and ascension to your right hand, awaiting his coming in glory; and offering to you, from the gifts you have given us, this bread and this cup, we praise you and we bless you.",
+            "optional": false,
+            "response": "We praise you, we bless you,\nwe give thanks to you,\nand we pray to you, Lord our God."
+          }
+        ],
+        "version": "bcp1979",
+        "category": [null],
+        "label": null
+      },
+      {
+        "label": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "type": "text",
+        "style": "text",
+        "value": [
+          "Lord, we pray that in your goodness and mercy your Holy Spirit may descend upon us, and upon these gifts, sanctifying them and showing them to be holy gifts for your holy people, the bread of life and the cup of salvation, the Body and Blood of your Son Jesus Christ.",
+          "Grant that all who share this bread and cup may become one body and one spirit, a living sacrifice in Christ, to the praise of your Name.",
+          "Remember, Lord, your one holy catholic and apostolic Church, redeemed by the blood of your Christ. Reveal its unity, guard its faith, and preserve it in peace.",
+          "[Remember (NN. and) all who minister in your Church.]",
+          "[Remember all your people, and those who seek your truth.]",
+          "[Remember  ____________.]",
+          "[Remember all who have died in the peace of Christ, and those whose faith is known to you alone; bring them into the place of eternal joy and light.]",
+          "And grant that we may find our inheritance with [the Blessed Virgin Mary, with patriarchs, prophets, apostles, and martyrs, (with ____________) and] all the saints who have found favor with you in ages past. We praise you in union with them and give you glory through your Son Jesus Christ our Lord."
+        ],
+        "citation": null,
+        "language": "en",
+        "version": "bcp1979",
+        "hidden": false,
+        "version_label": null,
+        "category": [null],
+        "slug": "intercessions_d"
+      },
+      {
+        "category": [null],
+        "label": null,
+        "version_label": null,
+        "language": "en",
+        "type": "text",
+        "slug": "prayer_conclusion_d",
+        "style": "text",
+        "value": [
+          "Through Christ, and with Christ, and in Christ, all honor and glory are yours, Almighty God and Father, in the unity of the Holy Spirit, for ever and ever."
+        ],
+        "version": "bcp1979",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "hidden": false,
+        "citation": null
+      }
+    ],
+    "hidden": false,
+    "lastRevision": 14,
+    "date_modified": {
+      "seconds": 1604346014,
+      "nanoseconds": 68000000
+    }
+  }
+]

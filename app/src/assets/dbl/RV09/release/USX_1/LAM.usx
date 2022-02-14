@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="LAM" style="id">LAMVR. Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">LAMENTACIONES</para>
+  <para style="toc3">Lm.</para>
+  <para style="toc2">Lamentaciones</para>
+  <para style="toc1">Lamentaciones</para>
+  <para style="mt1">LAS LAMENTACIONES</para>
+  <para style="mt2">DE JEREMÍAS.</para>
+  <chapter number="1" style="c" sid="LAM 1"/>
+  <para style="q">
+    <verse number="1" style="v" sid="LAM 1:1"/>¡CÓMO está sentada sola la ciudad populosa!</para>
+  <para style="q" vid="LAM 1:1">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 47:9">Is. 47.9</ref>. <ref loc="JER 15:8">Jer. 15.8</ref>.</char>
+    </note>La grande entre las naciones se ha vuelto como viuda,</para>
+  <para style="q" vid="LAM 1:1">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:20">Esd. 4.20</ref>.</char>
+    </note>La señora de provincias es hecha tributaria.<verse eid="LAM 1:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="LAM 1:2"/>Amargamente llora en la noche, y sus lágrimas en sus mejillas;</para>
+  <para style="q" vid="LAM 1:2">No tiene quien la consuele de todos sus <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="JER 22:22">Jer. 22.22</ref> y <ref loc="JER 30:14">30.14</ref>.</char></note>amadores:</para>
+  <para style="q" vid="LAM 1:2">Todos sus amigos le faltaron, volviéronsele enemigos.<verse eid="LAM 1:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="LAM 1:3"/>Fuése Judá, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="JER 52:27">Jer. 52.27</ref>.</char></note>a causa de la aflicción y de la grandeza de servidumbre;</para>
+  <para style="q" vid="LAM 1:3">Ella moró entre las gentes, y no halló descanso:</para>
+  <para style="q" vid="LAM 1:3">Todos sus perseguidores la alcanzaron entre estrechuras.<verse eid="LAM 1:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="LAM 1:4"/>Las calzadas de Sión tienen luto, porque no hay quien venga á <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false">cp. 2.6.</char></note>las solemnidades;</para>
+  <para style="q" vid="LAM 1:4">Todas sus puertas están asoladas, sus sacerdotes gimen,</para>
+  <para style="q" vid="LAM 1:4">Sus vírgenes afligidas, y ella tiene amargura.<verse eid="LAM 1:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="LAM 1:5"/>Sus enemigos han sido hechos <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="DEU 28:13">Dt. 28.13</ref>,<ref loc="DEU 28:44">44</ref>.</char></note>cabeza, sus aborrecedores fueron prosperados;</para>
+  <para style="q" vid="LAM 1:5">Porque Jehová la afligió <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="JER 30:14">Jer. 30.14</ref>,<ref loc="JER 30:15">15</ref>.</char></note>por la multitud de sus rebeliones:</para>
+  <para style="q" vid="LAM 1:5">Sus niños fueron en cautividad delante del enemigo.<verse eid="LAM 1:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="LAM 1:6"/>Fuése de la hija de Sión toda su hermosura:</para>
+  <para style="q" vid="LAM 1:6">Sus príncipes fueron como ciervos que no hallan pasto,</para>
+  <para style="q" vid="LAM 1:6">Y anduvieron sin fortaleza delante del perseguidor.<verse eid="LAM 1:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="LAM 1:7"/>Jerusalem, cuando cayó su pueblo en mano del enemigo y no hubo quien le ayudase,</para>
+  <para style="q" vid="LAM 1:7">Se acordó de los días de su aflicción, y de sus rebeliones,</para>
+  <para style="q" vid="LAM 1:7">Y de todas sus cosas deseables que tuvo desde los tiempos antiguos:</para>
+  <para style="q" vid="LAM 1:7">Miráronla los enemigos, y escarnecieron de sus sábados.<verse eid="LAM 1:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="LAM 1:8"/>Pecado cometió Jerusalem; por lo cual ella ha sido removida:</para>
+  <para style="q" vid="LAM 1:8">Todos los que la honraban la han menospreciado, porque <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="EZK 16:37">Ez. 16.37</ref>. <ref loc="HOS 2:10">Os. 2.10</ref>.</char></note>vieron su vergüenza;</para>
+  <para style="q" vid="LAM 1:8">Y ella suspira, y se vuelve atrás.<verse eid="LAM 1:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="LAM 1:9"/>Sus inmundicias en sus faldas; <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="DEU 32:29">Dt. 32.29</ref>. <ref loc="ISA 47:7">Is. 47.7</ref>.</char></note>no se acordó de su postrimería:</para>
+  <para style="q" vid="LAM 1:9">Por tanto ella ha descendido maravillosamente, no tiene consolador.</para>
+  <para style="q" vid="LAM 1:9">Mira, oh Jehová, mi aflicción, porque el enemigo se ha engrandecido.<verse eid="LAM 1:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="LAM 1:10"/>Extendió su mano el enemigo á todas sus cosas preciosas;</para>
+  <para style="q" vid="LAM 1:10">Y ella ha visto <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="PSA 79:1">Sal. 79.1</ref>. <ref loc="JER 51:51">Jer. 51.51</ref>.</char></note>entrar en su santuario las gentes,</para>
+  <para style="q" vid="LAM 1:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 23:3">Dt. 23.3</ref>. <ref loc="NEH 13:1">Neh. 13.1</ref>.</char>
+    </note>De las cuales mandaste que no entrasen en tu congregación.<verse eid="LAM 1:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="LAM 1:11"/>Todo su pueblo buscó su pan suspirando;</para>
+  <para style="q" vid="LAM 1:11">Dieron por la comida todas sus cosas preciosas, para entretener la vida.</para>
+  <para style="q" vid="LAM 1:11">Mira, oh Jehová, y ve que estoy abatida.<verse eid="LAM 1:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="LAM 1:12"/>¿No os conmueve á cuantos pasáis por el camino?</para>
+  <para style="q" vid="LAM 1:12">Mirad, y ved si hay dolor como mi dolor que me ha venido;</para>
+  <para style="q" vid="LAM 1:12">Porque Jehová me ha angustiado en el día de la ira de su furor.<verse eid="LAM 1:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="LAM 1:13"/>Desde lo alto envió fuego en mis huesos, el cual se enseñoreó:</para>
+  <para style="q" vid="LAM 1:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 12:13">Ez. 12.13</ref> y <ref loc="EZK 17:20">17.20</ref>.</char>
+    </note>Ha extendido red á mis pies, tornóme atrás,</para>
+  <para style="q" vid="LAM 1:13">Púsome asolada, y que siempre tenga dolor.<verse eid="LAM 1:13"/></para>
+  <para style="s">1 Asolamiento de</para>
+  <para style="s">2 Jerusalem.</para>
+  <para style="q">
+    <verse number="14" style="v" sid="LAM 1:14"/>El yugo de mis rebeliones <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="DEU 28:48">Dt. 28.48</ref>.</char></note>está ligado por su mano,</para>
+  <para style="q" vid="LAM 1:14">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 40:12">Job 40.12</ref>.</char>
+    </note>Enlazadas han subido sobre mi cerviz: ha hecho caer mis fuerzas:</para>
+  <para style="q" vid="LAM 1:14">Hame entregado el Señor en sus manos, contra quienes no podré levantarme.<verse eid="LAM 1:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="LAM 1:15"/>El Señor ha hollado todos <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="JER 8:16">Jer. 8.16</ref>.</char></note>mis fuertes en medio de mí;</para>
+  <para style="q" vid="LAM 1:15">Llamó contra mí compañía para quebrantar mis mancebos:</para>
+  <para style="q" vid="LAM 1:15">Como lagar <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="ISA 63:3">Is. 63.3</ref>.</char></note>ha pisado el Señor á la virgen hija de Judá.<verse eid="LAM 1:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="LAM 1:16"/>Por esta causa yo lloro; mis ojos, mis ojos fluyen aguas;</para>
+  <para style="q" vid="LAM 1:16">Porque se alejó de mí consolador que dé reposo á mi alma:</para>
+  <para style="q" vid="LAM 1:16">Mis hijos son destruídos, porque el enemigo prevaleció.<verse eid="LAM 1:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="LAM 1:17"/>Sión <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="JER 4:31">Jer. 4.31</ref>.</char></note>extendió sus manos, no tiene quien la consuele;</para>
+  <para style="q" vid="LAM 1:17">Jehová dió mandamiento contra Jacob, que sus enemigos lo cercasen:</para>
+  <para style="q" vid="LAM 1:17">Jerusalem fué en abominación entre ellos.<verse eid="LAM 1:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="LAM 1:18"/>Jehová es justo; que yo contra su boca me rebelé.</para>
+  <para style="q" vid="LAM 1:18">Oid ahora, pueblos todos, y ved mi dolor:</para>
+  <para style="q" vid="LAM 1:18">Mis vírgenes y mis mancebos fueron en cautiverio.<verse eid="LAM 1:18"/></para>
+  <para style="q">
+    <verse number="19" style="v" sid="LAM 1:19"/>Dí voces á mis amadores, mas <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false">ver. 2. <ref loc="JER 30:14">Jer. 30.14</ref>.</char></note>ellos me han engañado;</para>
+  <para style="q" vid="LAM 1:19">Mis sacerdotes y mis ancianos en la ciudad <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false">ver. 11.</char></note>perecieron,</para>
+  <para style="q" vid="LAM 1:19">Buscando comida para sí con que entretener su vida.<verse eid="LAM 1:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="LAM 1:20"/>Mira, oh Jehová, que estoy atribulada: <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="JOB 30:27">Job 30.27</ref>. <ref loc="ISA 16:11">Is. 16.11</ref>. <ref loc="JER 4:19">Jer. 4.19</ref>. cp. 2.11.</char></note>mis entrañas rugen,</para>
+  <para style="q" vid="LAM 1:20">Mi corazón está trastornado en medio de mí; porque me rebelé desaforadamente:</para>
+  <para style="q" vid="LAM 1:20">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:25">Dt. 32.25</ref>. <ref loc="EZK 7:15">Ez. 7.15</ref>.</char>
+    </note>De fuera deshijó el cuchillo, de dentro parece una muerte.<verse eid="LAM 1:20"/></para>
+  <para style="q">
+    <verse number="21" style="v" sid="LAM 1:21"/>Oyeron que gemía, y no hay consolador para mí:</para>
+  <para style="q" vid="LAM 1:21">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.21 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 12:4">Jer. 12.4</ref> y <ref loc="JER 25:21">25.21</ref>.</char>
+    </note>Todos mis enemigos han oído mi mal, se han holgado de que tú lo hiciste.</para>
+  <para style="q" vid="LAM 1:21">Harás venir el día que has anunciado, y serán como yo.<verse eid="LAM 1:21"/></para>
+  <para style="q">
+    <verse number="22" style="v" sid="LAM 1:22"/>Entre delante de ti <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="PSA 109:15">Sal. 109.15</ref>.</char></note>toda su maldad,</para>
+  <para style="q" vid="LAM 1:22">Y haz con ellos como hiciste conmigo por todas mis rebeliones:</para>
+  <para style="q" vid="LAM 1:22">Porque muchos son mis suspiros, y mi corazón está doloroso.<verse eid="LAM 1:22"/></para>
+  <chapter eid="LAM 1"/>
+  <chapter number="2" style="c" sid="LAM 2"/>
+  <para style="q">
+    <verse number="1" style="v" sid="LAM 2:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.1 </char>
+      <char style="xt" closed="false">cp. 1.1.</char>
+    </note>¡CÓMO oscureció el Señor en su furor á la hija de Sión!</para>
+  <para style="q" vid="LAM 2:1">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 14:15">Is. 14.15</ref>.</char>
+    </note>Derribó del cielo á la tierra la <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="2SA 1:19">2 S. 1.19</ref>.</char></note>hermosura de Israel,</para>
+  <para style="q" vid="LAM 2:1">Y no se acordó del <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="1CH 28:2">1 Cr. 28.2</ref>.</char></note>estrado de sus pies en el día de su ira.<verse eid="LAM 2:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="LAM 2:2"/>Destruyó el Señor, y no perdonó;</para>
+  <para style="q" vid="LAM 2:2">Destruyó en su furor todas las tiendas de Jacob:</para>
+  <para style="q" vid="LAM 2:2">Echó por tierra las fortalezas de la hija de Judá,</para>
+  <para style="q" vid="LAM 2:2">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 74:7">Sal. 74.7</ref> y <ref loc="PSA 89:39">89.39</ref>.</char>
+    </note>Deslustró el reino y sus príncipes.<verse eid="LAM 2:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="LAM 2:3"/>Cortó con el furor de su ira todo el <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">ver. 17.</char></note>cuerno de Israel;</para>
+  <para style="q" vid="LAM 2:3">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 74:11">Sal. 74.11</ref>.</char>
+    </note>Hizo volver atrás su diestra delante del enemigo;</para>
+  <para style="q" vid="LAM 2:3">Y encendióse en Jacob como llama de fuego que ha devorado en contorno.<verse eid="LAM 2:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="LAM 2:4"/>Entesó su arco como enemigo, <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="ISA 63:10">Is. 63.10</ref>. <ref loc="JER 30:14">Jer. 30.14</ref>.</char></note>afirmó su mano derecha como adversario,</para>
+  <para style="q" vid="LAM 2:4">Y mató toda cosa hermosa á la vista:</para>
+  <para style="q" vid="LAM 2:4">En la tienda de la hija de Sión derramó como fuego su enojo.<verse eid="LAM 2:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="LAM 2:5"/>Fué el Señor como enemigo, destruyó á Israel;</para>
+  <para style="q" vid="LAM 2:5">Destruyó todos sus palacios, disipó sus fortalezas:</para>
+  <para style="q" vid="LAM 2:5">Y multiplicó en la hija de Judá la tristeza y lamento.<verse eid="LAM 2:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="LAM 2:6"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="PSA 80:12">Sal. 80.12</ref> y <ref loc="PSA 89:40">89.40</ref>. <ref loc="ISA 5:5">Is. 5.5</ref>.</char></note>quitó su tienda como de un huerto,</para>
+  <para style="q" vid="LAM 2:6">Destruyó el <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="PSA 74:4">Sal. 74.4</ref>,<ref loc="PSA 74:8">8</ref>.</char></note>lugar de su congregación:</para>
+  <para style="q" vid="LAM 2:6">Jehová ha hecho olvidar en Sión solemnidades y <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="ISA 1:13">Is. 1.13</ref>.</char></note>sábados,</para>
+  <para style="q" vid="LAM 2:6">Y <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="DEU 32:19">Dt. 32.19</ref>.</char></note>ha desechado en el furor de su ira rey y sacerdote.<verse eid="LAM 2:6"/></para>
+  <para style="s">1 Cerco, hambre y</para>
+  <para style="s">2 ruina de Jerusalem.</para>
+  <para style="q">
+    <verse number="7" style="v" sid="LAM 2:7"/>Desechó el Señor su altar, menospreció su santuario,</para>
+  <para style="q" vid="LAM 2:7">Ha entregado en mano del enemigo los muros de sus palacios:</para>
+  <para style="q" vid="LAM 2:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 74:4">Sal. 74.4</ref>.</char>
+    </note>Dieron grita en la casa de Jehová como en día de fiesta.<verse eid="LAM 2:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="LAM 2:8"/>Jehová determinó destruir el muro de la hija de Sión;</para>
+  <para style="q" vid="LAM 2:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 21:13">2 R. 21.13</ref>.</char>
+    </note>Extendió el cordel, no retrajo su mano de destruir:</para>
+  <para style="q" vid="LAM 2:8">Hizo pues, se lamentara el antemuro y el muro; <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="JER 14:2">Jer. 14.2</ref>.</char></note>fueron destruídos juntamente.<verse eid="LAM 2:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="LAM 2:9"/>Sus puertas fueron echadas por tierra, destruyó y quebrantó sus cerrojos:</para>
+  <para style="q" vid="LAM 2:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:36">Dt. 28.36</ref>.</char>
+    </note>Su rey y sus príncipes están entre las gentes donde <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="2CH 15:3">2 Cr. 15.3</ref>.</char></note>no hay ley;</para>
+  <para style="q" vid="LAM 2:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 74:9">Sal. 74.9</ref>.</char>
+    </note>Sus profetas tampoco hallaron visión de Jehová.<verse eid="LAM 2:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="LAM 2:10"/>Sentáronse en tierra, <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="ISA 3:26">Is. 3.26</ref>.</char></note>callaron los ancianos de la hija de Sión;</para>
+  <para style="q" vid="LAM 2:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 7:6">Jos. 7.6</ref>.</char>
+    </note>Echaron polvo sobre sus cabezas, ciñéronse de saco;</para>
+  <para style="q" vid="LAM 2:10">Las vírgenes de Jerusalem bajaron sus cabezas á tierra.<verse eid="LAM 2:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="LAM 2:11"/>Mis ojos desfallecieron de lágrimas, rugieron mis entrañas,</para>
+  <para style="q" vid="LAM 2:11">Mi hígado se derramó por tierra <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false">cp. 3.48.</char></note>por el quebrantamiento de la hija de mi pueblo,</para>
+  <para style="q" vid="LAM 2:11">Cuando desfallecía el niño y el que mamaba, en las plazas de la ciudad.<verse eid="LAM 2:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="LAM 2:12"/>Decían á sus madres: ¿Dónde está el trigo y el vino?</para>
+  <para style="q" vid="LAM 2:12">Desfallecían como heridos en las calles de la ciudad,</para>
+  <para style="q" vid="LAM 2:12">Derramando sus almas en el regazo de sus madres.<verse eid="LAM 2:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="LAM 2:13"/>¿Qué testigo te traeré, ó <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="ISA 46:5">Is. 46.5</ref>.</char></note>a quién te haré</para>
+  <para style="q" vid="LAM 2:13">semejante, hija de Jerusalem?</para>
+  <para style="q" vid="LAM 2:13">¿A quién te compararé para consolarte, oh virgen hija de Sión?</para>
+  <para style="q" vid="LAM 2:13">Porque <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="2SA 5:20">2 S. 5.20</ref>. <ref loc="EZK 26:3">Ez. 26.3</ref>.</char></note>grande es tu quebrantamiento como la mar: ¿quién te medicinará?<verse eid="LAM 2:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="LAM 2:14"/>Tus profetas <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="JER 2:8">Jer. 2.8</ref> y <ref loc="JER 23:16">23.16</ref>.</char></note>vieron para ti vanidad y locura;</para>
+  <para style="q" vid="LAM 2:14">Y <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="ISA 58:1">Is. 58.1</ref>.</char></note>no descubrieron tu pecado <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="JER 30:3">Jer. 30.3</ref>.</char></note>para estorbar tu cautiverio,</para>
+  <para style="q" vid="LAM 2:14">Sino que te predicaron <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="JER 23:33">Jer. 23.33</ref>.</char></note>vanas profecías y extravíos.<verse eid="LAM 2:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="LAM 2:15"/>Todos los que pasaban por el camino, <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="JOB 27:23">Job 27.23</ref>.</char></note>batieron las manos sobre ti;</para>
+  <para style="q" vid="LAM 2:15">Silbaron, y movieron sus cabezas sobre la hija de Jerusalem, <char style="it">diciendo:</char></para>
+  <para style="q" vid="LAM 2:15">¿Es ésta la ciudad que decían <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="PSA 48:2">Sal. 48.2</ref>.</char></note>de perfecta hermosura, el gozo de toda la tierra?<verse eid="LAM 2:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="LAM 2:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.16 </char>
+      <char style="xt" closed="false">cp. 3.46-51 y <ref loc="LAM 4:16">4.16</ref>,<ref loc="LAM 4:17">17</ref>.</char>
+    </note>Todos tus enemigos abrieron sobre ti su boca,</para>
+  <para style="q" vid="LAM 2:16">Silbaron, y rechinaron los dientes; dijeron: Devoremos:</para>
+  <para style="q" vid="LAM 2:16">Cierto éste es el día que esperábamos; lo hemos hallado, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="PSA 35:21">Sal. 35.21</ref>.</char></note>vímoslo.<verse eid="LAM 2:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="LAM 2:17"/>Jehová ha hecho lo que tenía <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false"><ref loc="LEV 26:16">Lv. 26.16</ref>, etc. <ref loc="DEU 28:15">Dt. 28.15</ref>, etc.</char></note>determinado,</para>
+  <para style="q" vid="LAM 2:17">Ha cumplido su palabra que él había mandado <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 1.7.</char></note>desde tiempo antiguo:</para>
+  <para style="q" vid="LAM 2:17">Destruyó, y no perdonó;</para>
+  <para style="q" vid="LAM 2:17">Y alegró sobre ti al enemigo,</para>
+  <para style="q" vid="LAM 2:17">Y enalteció el <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">ver. 3.</char></note>cuerno de tus adversarios.<verse eid="LAM 2:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="LAM 2:18"/>El corazón de ellos clamaba al Señor:</para>
+  <para style="q" vid="LAM 2:18">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.18 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 22:29">Jer. 22.29</ref>.</char>
+    </note>Oh muro de la hija de Sión, echa lágrimas como un arroyo día y noche;</para>
+  <para style="q" vid="LAM 2:18">No descanses, ni cesen <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="PSA 17:8">Sal. 17.8</ref>.</char></note>las niñas de tus ojos.<verse eid="LAM 2:18"/></para>
+  <para style="q">
+    <verse number="19" style="v" sid="LAM 2:19"/>Levántate, da voces en la noche, en el principio de <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="EXO 14:24">Ex. 14.24</ref>.</char></note>las velas;</para>
+  <para style="q" vid="LAM 2:19">Derrama <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="1SA 7:6">1 S. 7.6</ref>.</char></note>como agua tu corazón ante la presencia del Señor;</para>
+  <para style="q" vid="LAM 2:19">Alza tus manos á él por la vida de <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false">ver. 11.</char></note>tus pequeñitos,</para>
+  <para style="q" vid="LAM 2:19">Que desfallecen de hambre en las entradas de todas las calles.<verse eid="LAM 2:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="LAM 2:20"/>Mira, oh Jehová, y considera á quién has hecho así.</para>
+  <para style="q" vid="LAM 2:20">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 19:9">Jer. 19.9</ref>. cp. 4.10.</char>
+    </note>¿Han de comer las mujeres su fruto, los pequeñitos de sus crías?</para>
+  <para style="q" vid="LAM 2:20">¿Han de ser muertos en el santuario del Señor el sacerdote y el profeta?<verse eid="LAM 2:20"/></para>
+  <para style="s">1 Lamento de Jeremías</para>
+  <para style="s">2 y su invocación á Dios.</para>
+  <para style="q">
+    <verse number="21" style="v" sid="LAM 2:21"/>Niños y viejos yacían <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false"><ref loc="2CH 36:17">2 Cr. 36.17</ref>. <ref loc="JER 6:11">Jer. 6.11</ref>.</char></note>por tierra en las calles;</para>
+  <para style="q" vid="LAM 2:21">Mis vírgenes y mis mancebos cayeron á cuchillo:</para>
+  <para style="q" vid="LAM 2:21">Mataste en el día de tu furor, <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false">cp. 3.43.</char></note>degollaste, no perdonaste.<verse eid="LAM 2:21"/></para>
+  <para style="q">
+    <verse number="22" style="v" sid="LAM 2:22"/>Has llamado, como á día de solemnidad, mis temores de todas partes;</para>
+  <para style="q" vid="LAM 2:22">Y en el día del furor de Jehová no hubo quien escapase ni quedase vivo:</para>
+  <para style="q" vid="LAM 2:22">Los que crié y mantuve, mi enemigo los acabó.<verse eid="LAM 2:22"/></para>
+  <chapter eid="LAM 2"/>
+  <chapter number="3" style="c" sid="LAM 3"/>
+  <para style="q">
+    <verse number="1" style="v" sid="LAM 3:1"/>YO soy el hombre que <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="JER 20:18">Jer. 20.18</ref>.</char></note>ha visto aflicción <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="PSA 2:9">Sal. 2.9</ref>.</char></note>en la vara de su enojo.<verse eid="LAM 3:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="LAM 3:2"/>Guióme y <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="ISA 5:30">Is. 5.30</ref>.</char></note>llevóme en tinieblas, mas no en luz.<verse eid="LAM 3:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="LAM 3:3"/>Ciertamente contra mí volvió y revolvió su mano todo el día.<verse eid="LAM 3:3"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="4" style="v" sid="LAM 3:4"/>Hizo envejecer <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="JOB 16:8">Job 16.8</ref>.</char></note>mi carne y mi piel; <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="PSA 51:8">Sal. 51.8</ref>. <ref loc="ISA 38:13">Is. 38.13</ref>.</char></note>quebrantó mis huesos.<verse eid="LAM 3:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="LAM 3:5"/>Edificó contra mí, y cercóme de tósigo y de trabajo.<verse eid="LAM 3:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="LAM 3:6"/>Asentóme en oscuridades, <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="PSA 88:5">Sal. 88.5</ref>,<ref loc="PSA 88:6">6</ref> y <ref loc="PSA 143:3">143.3</ref>.</char></note>como los ya muertos de mucho tiempo.<verse eid="LAM 3:6"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="7" style="v" sid="LAM 3:7"/>Cercóme por todos lados, <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="PSA 88:8">Sal. 88.8</ref>.</char></note>y no puedo salir; agravó mis grillos.<verse eid="LAM 3:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="LAM 3:8"/>Aun <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="PSA 22:2">Sal. 22.2</ref>.</char></note>cuando clamé y dí voces, cerró <char style="it">los oídos a</char> mi oración.<verse eid="LAM 3:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="LAM 3:9"/>Cercó mis caminos con piedra tajada, torció mis senderos.<verse eid="LAM 3:9"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="10" style="v" sid="LAM 3:10"/>Como <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="HOS 13:8">Os. 13.8</ref>.</char></note>oso que acecha fué para mí, como león en escondrijos.<verse eid="LAM 3:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="LAM 3:11"/>Torció mis caminos, y depedazóme; tornóme asolado.<verse eid="LAM 3:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="LAM 3:12"/>Su arco entesó, y <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false"><ref loc="JOB 16:12">Job 16.12</ref>.</char></note>púsome como blanco á la saeta.<verse eid="LAM 3:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="LAM 3:13"/>Hizo entrar en mis riñones <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="JOB 6:4">Job 6.4</ref>.</char></note>las saetas de su aljaba.<verse eid="LAM 3:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="LAM 3:14"/>Fuí escarnio á todo mi pueblo, <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="JOB 30:9">Job 30.9</ref>. <ref loc="PSA 69:12">Sal. 69.12</ref>.</char></note>canción de ellos todos los días.<verse eid="LAM 3:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="LAM 3:15"/>Hartóme de amarguras, <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="JER 9:15">Jer. 9.15</ref>.</char></note>embriagóme de ajenjos.<verse eid="LAM 3:15"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="16" style="v" sid="LAM 3:16"/>Quebróme los dientes con <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="PRO 20:17">Pr. 20.17</ref>.</char></note>cascajo, cubrióme de ceniza.<verse eid="LAM 3:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="LAM 3:17"/>Y mi alma se alejó de la paz, olvidéme del bien.<verse eid="LAM 3:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="LAM 3:18"/>Y dije: Pereció mi fortaleza, y mi esperanza de Jehová.<verse eid="LAM 3:18"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="19" style="v" sid="LAM 3:19"/>Acuérdate de mi aflicción y de mi abatimiento, del ajenjo y de la hiel.<verse eid="LAM 3:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="LAM 3:20"/>Tendrálo aún en memoria mi alma, porque en mí está humillada.<verse eid="LAM 3:20"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="21" style="v" sid="LAM 3:21"/>Esto reduciré á mi corazón, <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false">ver. 24.</char></note>por lo cual esperaré.<verse eid="LAM 3:21"/></para>
+  <para style="q">
+    <verse number="22" style="v" sid="LAM 3:22"/>
+    <char style="it">Es por</char> la misericordia de <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="MAL 3:6">Mal. 3.6</ref>.</char></note>Jehová que no somos consumidos, porque nunca decayeron sus misericordias.<verse eid="LAM 3:22"/></para>
+  <para style="q">
+    <verse number="23" style="v" sid="LAM 3:23"/>Nuevas son <note caller="+" style="x"><char style="xo" closed="false">3.23 </char><char style="xt" closed="false"><ref loc="JOB 7:18">Job 7.18</ref>.</char></note>cada mañana; <note caller="+" style="x"><char style="xo" closed="false">3.23 </char><char style="xt" closed="false"><ref loc="PSA 36:5">Sal. 36.5</ref>.</char></note>grande es tu fidelidad.<verse eid="LAM 3:23"/></para>
+  <para style="q">
+    <verse number="24" style="v" sid="LAM 3:24"/>Mi parte es Jehová, <note caller="+" style="x"><char style="xo" closed="false">3.24 </char><char style="xt" closed="false"><ref loc="PSA 16:5">Sal. 16.5</ref>.</char></note>dijo mi alma; por tanto en él esperaré.<verse eid="LAM 3:24"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="25" style="v" sid="LAM 3:25"/>Bueno es Jehová á <note caller="+" style="x"><char style="xo" closed="false">3.25 </char><char style="xt" closed="false"><ref loc="PSA 130:6">Sal. 130.6</ref>. <ref loc="ISA 30:18">Is. 30.18</ref>.</char></note>los que en él esperan, al alma que le buscare.<verse eid="LAM 3:25"/></para>
+  <para style="q">
+    <verse number="26" style="v" sid="LAM 3:26"/>Bueno es esperar <note caller="+" style="x"><char style="xo" closed="false">3.26 </char><char style="xt" closed="false"><ref loc="PSA 37:7">Sal. 37.7</ref>.</char></note>callando en la salud de Jehová.<verse eid="LAM 3:26"/></para>
+  <para style="q">
+    <verse number="27" style="v" sid="LAM 3:27"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.27 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 94:12">Sal. 94.12</ref> y <ref loc="PSA 119:71">119.71</ref>.</char>
+    </note>Bueno es al hombre, <note caller="+" style="x"><char style="xo" closed="false">3.27 </char><char style="xt" closed="false"><ref loc="MAT 11:29">Mt. 11.29</ref>.</char></note>si llevare el yugo desde su mocedad.<verse eid="LAM 3:27"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="28" style="v" sid="LAM 3:28"/>Sentaráse solo, y callará, porque lo llevó sobre sí.<verse eid="LAM 3:28"/></para>
+  <para style="q">
+    <verse number="29" style="v" sid="LAM 3:29"/>Pondrá su boca <note caller="+" style="x"><char style="xo" closed="false">3.29 </char><char style="xt" closed="false"><ref loc="JOB 42:6">Job 42.6</ref>.</char></note>en el polvo, por si quizá hay esperanza.<verse eid="LAM 3:29"/></para>
+  <para style="q">
+    <verse number="30" style="v" sid="LAM 3:30"/>Dará la mejilla <note caller="+" style="x"><char style="xo" closed="false">3.30 </char><char style="xt" closed="false"><ref loc="ISA 50:6">Is. 50.6</ref>. <ref loc="MAT 5:39">Mt. 5.39</ref>.</char></note>al que le hiriere; hartaráse de afrenta.<verse eid="LAM 3:30"/></para>
+  <para style="q">
+    <verse number="31" style="v" sid="LAM 3:31"/>Porque el Señor no desechará para siempre:<verse eid="LAM 3:31"/></para>
+  <para style="s">1 Reconoce el profeta la</para>
+  <para style="s">2 justicia y bondad de Dios.</para>
+  <para style="q">
+    <verse number="32" style="v" sid="LAM 3:32"/>Antes si afligiere, también se compadecerá según la multitud de sus misericordias.<verse eid="LAM 3:32"/></para>
+  <para style="q">
+    <verse number="33" style="v" sid="LAM 3:33"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.33 </char><char style="xt" closed="false"><ref loc="HEB 12:10">He. 12.10</ref>.</char></note>no aflige ni congoja de su corazón á los hijos de los hombres.<verse eid="LAM 3:33"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="34" style="v" sid="LAM 3:34"/>Desmenuzar bajo de sus pies todos los encarcelados de la tierra,<verse eid="LAM 3:34"/></para>
+  <para style="q">
+    <verse number="35" style="v" sid="LAM 3:35"/>Hacer apartar el derecho del hombre ante la presencia del Altísimo,<verse eid="LAM 3:35"/></para>
+  <para style="q">
+    <verse number="36" style="v" sid="LAM 3:36"/>Trastornar al hombre en su causa, el Señor no lo sabe.<verse eid="LAM 3:36"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="37" style="v" sid="LAM 3:37"/>¿Quién <char style="it">será</char> aquel <note caller="+" style="x"><char style="xo" closed="false">3.37 </char><char style="xt" closed="false"><ref loc="PSA 33:9">Sal. 33.9</ref>.</char></note>que diga, que vino <char style="it">algo</char> que el Señor no mandó?<verse eid="LAM 3:37"/></para>
+  <para style="q">
+    <verse number="38" style="v" sid="LAM 3:38"/>¿De la boca del Altísimo no saldrá malo y bueno?<verse eid="LAM 3:38"/></para>
+  <para style="q">
+    <verse number="39" style="v" sid="LAM 3:39"/>¿Por qué murmura el hombre viviente, <note caller="+" style="x"><char style="xo" closed="false">3.39 </char><char style="xt" closed="false"><ref loc="MIC 7:9">Mi. 7.9</ref>.</char></note>el hombre en su pecado?<verse eid="LAM 3:39"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="40" style="v" sid="LAM 3:40"/>Escudriñemos nuestros caminos, y busquemos, y volvámonos á Jehová.<verse eid="LAM 3:40"/></para>
+  <para style="q">
+    <verse number="41" style="v" sid="LAM 3:41"/>Levantemos <note caller="+" style="x"><char style="xo" closed="false">3.41 </char><char style="xt" closed="false"><ref loc="PSA 25:1">Sal. 25.1</ref> y <ref loc="PSA 119:48">119.48</ref>.</char></note>nuestros corazones con las manos á Dios en los cielos.<verse eid="LAM 3:41"/></para>
+  <para style="q">
+    <verse number="42" style="v" sid="LAM 3:42"/>Nosotros nos hemos rebelado, y fuimos desleales; tú no perdonaste.<verse eid="LAM 3:42"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="43" style="v" sid="LAM 3:43"/>Desplegaste la ira, y nos perseguiste; <note caller="+" style="x"><char style="xo" closed="false">3.43 </char><char style="xt" closed="false">cp. 2.21.</char></note>mataste, no perdonaste.<verse eid="LAM 3:43"/></para>
+  <para style="q">
+    <verse number="44" style="v" sid="LAM 3:44"/>Te cubriste de nube, <note caller="+" style="x"><char style="xo" closed="false">3.44 </char><char style="xt" closed="false">ver. 8.</char></note>porque no pasase la oración <char style="it">nuestra.</char><verse eid="LAM 3:44"/></para>
+  <para style="q">
+    <verse number="45" style="v" sid="LAM 3:45"/>Raedura y abominación <note caller="+" style="x"><char style="xo" closed="false">3.45 </char><char style="xt" closed="false"><ref loc="1CO 4:13">1 Co. 4.13</ref>.</char></note>nos tornaste en medio de los pueblos.<verse eid="LAM 3:45"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="46" style="v" sid="LAM 3:46"/>Todos nuestros enemigos <note caller="+" style="x"><char style="xo" closed="false">3.46 </char><char style="xt" closed="false">cp. 2.16,17 y <ref loc="LAM 4:16">4.16</ref>,<ref loc="LAM 4:17">17</ref>.</char></note>abrieron sobre nosotros su boca.<verse eid="LAM 3:46"/></para>
+  <para style="q">
+    <verse number="47" style="v" sid="LAM 3:47"/>Temor y lazo fué para nosotros, asolamiento y quebrantamiento.<verse eid="LAM 3:47"/></para>
+  <para style="q">
+    <verse number="48" style="v" sid="LAM 3:48"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.48 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 119:136">Sal. 119.136</ref>.</char>
+    </note>Ríos de aguas echan mis ojos, por el quebrantamiento de la hija de mi pueblo.<verse eid="LAM 3:48"/></para>
+  <para style="q">
+    <verse number="49" style="v" sid="LAM 3:49"/>Mis ojos destilan, y no cesan, porque no hay alivio,<verse eid="LAM 3:49"/></para>
+  <para style="q">
+    <verse number="50" style="v" sid="LAM 3:50"/>Hasta que Jehová mire y vea desde los cielos.<verse eid="LAM 3:50"/></para>
+  <para style="q">
+    <verse number="51" style="v" sid="LAM 3:51"/>Mis ojos contristaron mi alma, por todas las hijas de mi ciudad.<verse eid="LAM 3:51"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="52" style="v" sid="LAM 3:52"/>Mis enemigos me dieron caza <note caller="+" style="x"><char style="xo" closed="false">3.52 </char><char style="xt" closed="false"><ref loc="PSA 11:1">Sal. 11.1</ref>.</char></note>como á ave, <note caller="+" style="x"><char style="xo" closed="false">3.52 </char><char style="xt" closed="false"><ref loc="PSA 35:19">Sal. 35.19</ref>.</char></note>sin por qué.<verse eid="LAM 3:52"/></para>
+  <para style="q">
+    <verse number="53" style="v" sid="LAM 3:53"/>Ataron mi vida <note caller="+" style="x"><char style="xo" closed="false">3.53 </char><char style="xt" closed="false"><ref loc="JER 37:16">Jer. 37.16</ref> y <ref loc="JER 38:6">38.6</ref>,<ref loc="JER 38:9">9</ref>,<ref loc="JER 38:10">10</ref>.</char></note>en mazmorra, <note caller="+" style="x"><char style="xo" closed="false">3.53 </char><char style="xt" closed="false"><ref loc="JOB 12:14">Job 12.14</ref>. <ref loc="DAN 6:17">Dn. 6.17</ref>.</char></note>pusieron piedra sobre mí.<verse eid="LAM 3:53"/></para>
+  <para style="q">
+    <verse number="54" style="v" sid="LAM 3:54"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.54 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 69:2">Sal. 69.2</ref>.</char>
+    </note>Aguas de avenida vinieron sobre mi cabeza; <note caller="+" style="x"><char style="xo" closed="false">3.54 </char><char style="xt" closed="false"><ref loc="PSA 88:5">Sal. 88.5</ref>.</char></note>yo dije: Muerto soy.<verse eid="LAM 3:54"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="55" style="v" sid="LAM 3:55"/>Invoqué tu nombre, oh Jehová, desde la cárcel profunda.<verse eid="LAM 3:55"/></para>
+  <para style="q">
+    <verse number="56" style="v" sid="LAM 3:56"/>Oiste mi voz; no escondas tu oído á mi clamor, para mi respiro<verse eid="LAM 3:56"/></para>
+  <para style="q">
+    <verse number="57" style="v" sid="LAM 3:57"/>Acercástete el día <note caller="+" style="x"><char style="xo" closed="false">3.57 </char><char style="xt" closed="false"><ref loc="JAS 4:8">Stg. 4.8</ref>.</char></note>que te invoqué: dijiste: No temas.<verse eid="LAM 3:57"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="58" style="v" sid="LAM 3:58"/>Abogaste, Señor, la causa de mi alma; redimiste mi vida.<verse eid="LAM 3:58"/></para>
+  <para style="q">
+    <verse number="59" style="v" sid="LAM 3:59"/>Tú has visto, oh Jehová, mi agravio; <note caller="+" style="x"><char style="xo" closed="false">3.59 </char><char style="xt" closed="false"><ref loc="PSA 9:4">Sal. 9.4</ref> y <ref loc="PSA 35:23">35.23</ref>.</char></note>defiende mi causa.<verse eid="LAM 3:59"/></para>
+  <para style="q">
+    <verse number="60" style="v" sid="LAM 3:60"/>Tú has visto toda su venganza; todos sus <note caller="+" style="x"><char style="xo" closed="false">3.60 </char><char style="xt" closed="false"><ref loc="JER 11:19">Jer. 11.19</ref>.</char></note>pensamientos contra mí.<verse eid="LAM 3:60"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="61" style="v" sid="LAM 3:61"/>Tú has oído el oprobio de ellos, oh Jehová, todas sus maquinaciones contra mí;<verse eid="LAM 3:61"/></para>
+  <para style="q">
+    <verse number="62" style="v" sid="LAM 3:62"/>Los dichos de los que contra mí se levantaron, y su designio contra mí todo el día.<verse eid="LAM 3:62"/></para>
+  <para style="q">
+    <verse number="63" style="v" sid="LAM 3:63"/>Su sentarse, <note caller="+" style="x"><char style="xo" closed="false">3.63 </char><char style="xt" closed="false"><ref loc="PSA 139:2">Sal. 139.2</ref>.</char></note>y su levantarse mira: <note caller="+" style="x"><char style="xo" closed="false">3.63 </char><char style="xt" closed="false">ver. 14.</char></note>yo soy su canción.<verse eid="LAM 3:63"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="64" style="v" sid="LAM 3:64"/>Dales el pago, oh Jehová, <note caller="+" style="x"><char style="xo" closed="false">3.64 </char><char style="xt" closed="false"><ref loc="PSA 28:4">Sal. 28.4</ref>.</char></note>según la obra de sus manos.<verse eid="LAM 3:64"/></para>
+  <para style="q">
+    <verse number="65" style="v" sid="LAM 3:65"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.65 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 11:20">Jer. 11.20</ref>. <ref loc="2TI 4:14">2 Ti. 4.14</ref>.</char>
+    </note>Dales ansia de corazón, tu maldición á ellos.<verse eid="LAM 3:65"/></para>
+  <para style="q">
+    <verse number="66" style="v" sid="LAM 3:66"/>Persíguelos en tu furor, <note caller="+" style="x"><char style="xo" closed="false">3.66 </char><char style="xt" closed="false"><ref loc="DEU 25:19">Dt. 25.19</ref>. <ref loc="JER 10:11">Jer. 10.11</ref>.</char></note>y quebrántalos de debajo de los cielos, oh Jehová.<verse eid="LAM 3:66"/></para>
+  <chapter eid="LAM 3"/>
+  <chapter number="4" style="c" sid="LAM 4"/>
+  <para style="q">
+    <verse number="1" style="v" sid="LAM 4:1"/>¡CÓMO se ha oscurecido el oro! <char style="it">¡Cómo</char> el buen oro se ha demudado!</para>
+  <para style="q" vid="LAM 4:1">Las piedras del santuario están esparcidas por <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 2.19.</char></note>las encrucijadas de todas las calles.<verse eid="LAM 4:1"/></para>
+  <para style="s">1 Calamidades de Sión</para>
+  <para style="s">2 por sus muchos pecados.</para>
+  <para style="q">
+    <verse number="2" style="v" sid="LAM 4:2"/>Los hijos de Sión, preciados y estimados más que el oro puro,</para>
+  <para style="q" vid="LAM 4:2">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 19:11">Jer. 19.11</ref>. <ref loc="2CO 4:7">2 Co. 4.7</ref>.</char>
+    </note>¡Cómo son tenidos por vasos de barro, obra de manos de alfarero!<verse eid="LAM 4:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="LAM 4:3"/>Aun los monstruos marinos sacan la teta, dan de mamar á sus chiquitos:</para>
+  <para style="q" vid="LAM 4:3">La hija de mi pueblo es cruel, <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="JOB 39:13-17">Job 39.13-17</ref>.</char></note>como los avestruces en el desierto.<verse eid="LAM 4:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="LAM 4:4"/>La lengua del niño de <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="PSA 22:15">Sal. 22.15</ref>.</char></note>teta, de sed se pegó á su paladar:</para>
+  <para style="q" vid="LAM 4:4">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.4 </char>
+      <char style="xt" closed="false">cp. 2.11,12.</char>
+    </note>Los chiquitos pidieron pan, y no hubo quien se lo partiese.<verse eid="LAM 4:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="LAM 4:5"/>Los que comían delicadamente, asolados fueron en las calles;</para>
+  <para style="q" vid="LAM 4:5">Los que se criaron en carmesí, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="JOB 24:8">Job 24.8</ref>.</char></note>abrazaron los estercoleros.<verse eid="LAM 4:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="LAM 4:6"/>Y aumentóse la iniquidad de la hija de mi pueblo más que el pecado de Sodoma,</para>
+  <para style="q" vid="LAM 4:6">Que <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="GEN 19:25">Gn. 19.25</ref>. <ref loc="2PE 2:6">2 P. 2.6</ref>. <ref loc="JUD 1:7">Jud. 7</ref>.</char></note>xué trastornada en un momento, y no asentaron sobre ella compañías.<verse eid="LAM 4:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="LAM 4:7"/>Sus <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="NUM 6:2">Nm. 6.2</ref>.</char></note>Nazareos fueron blancos más que la nieve, más lustrosos que la leche.</para>
+  <para style="q" vid="LAM 4:7">Su compostura más rubicunda que los rubíes, más bellos que el zafiro:<verse eid="LAM 4:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="LAM 4:8"/>Oscura más que la negrura es la forma de ellos; no los conocen por las calles:</para>
+  <para style="q" vid="LAM 4:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 19:20">Job 19.20</ref>. <ref loc="PSA 102:5">Sal. 102.5</ref>.</char>
+    </note>Su piel está pegada á sus huesos, seca como un palo.<verse eid="LAM 4:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="LAM 4:9"/>Más dichosos fueron los muertos á cuchillo que los muertos del hambre;</para>
+  <para style="q" vid="LAM 4:9">Porque éstos murieron poco á poco por falta de los frutos de la tierra.<verse eid="LAM 4:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="LAM 4:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.10 </char>
+      <char style="xt" closed="false">cp. 2.20.</char>
+    </note>Las manos de las mujeres <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="DEU 28:56">Dt. 28.56</ref>,<ref loc="DEU 28:57">57</ref>. <ref loc="1KI 3:26">1 R. 3.26</ref>.</char></note>piadosas cocieron á sus hijos;</para>
+  <para style="q" vid="LAM 4:10">Fuéronles comida en el quebrantamiento de la hija de mi pueblo.<verse eid="LAM 4:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="LAM 4:11"/>Cumplió Jehová su enojo, derramó el ardor de su ira;</para>
+  <para style="q" vid="LAM 4:11">Y encendió fuego en Sión, que consumió sus fundamentos.<verse eid="LAM 4:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="LAM 4:12"/>Nunca los reyes de la tierra, ni todos los que habitan en el mundo,</para>
+  <para style="q" vid="LAM 4:12">Creyeron que el enemigo y el adversario entrara por las puertas de Jerusalem.<verse eid="LAM 4:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="LAM 4:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:31">Jer. 5.31</ref> y <ref loc="JER 6:13">6.13</ref>. <ref loc="EZK 22:26">Ez. 22.26</ref>,<ref loc="EZK 22:28">28</ref>. <ref loc="ZEP 3:4">Sof. 3.4</ref>.</char>
+    </note>
+    <char style="it">Es</char> por los pecados de sus profetas, por las maldades de sus sacerdotes,</para>
+  <para style="q" vid="LAM 4:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 23:31">Mt. 23.31</ref>,<ref loc="MAT 23:37">37</ref>.</char>
+    </note>Que derramaron en medio de ella la sangre de los justos.<verse eid="LAM 4:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="LAM 4:14"/>Titubearon como ciegos en las calles, fueron contaminados en sangre,</para>
+  <para style="q" vid="LAM 4:14">De modo que no pudiesen tocar á sus vestiduras.<verse eid="LAM 4:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="LAM 4:15"/>Apartaos ¡inmundos!, les <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false"><ref loc="LEV 13:45">Lv. 13.45</ref>.</char></note>gritaban, Apartaos, apartaos, no toquéis.</para>
+  <para style="q" vid="LAM 4:15">Cuando huyeron y fueron dispersos, dijeron entre las gentes: Nunca más morarán <char style="it">aquí</char>.<verse eid="LAM 4:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="LAM 4:16"/>La ira de Jehová los apartó, no los mirará más:</para>
+  <para style="q" vid="LAM 4:16">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.16 </char>
+      <char style="xt" closed="false">cp. 5.12,14.</char>
+    </note>No respetaron la faz de los sacerdotes, ni tuvieron compasión de los viejos.<verse eid="LAM 4:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="LAM 4:17"/>Aun nos han desfallecido nuestros ojos <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="JER 37:7">Jer. 37.7</ref>.</char></note>tras nuestro vano socorro:</para>
+  <para style="q" vid="LAM 4:17">En nuestra esperanza aguardamos <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ISA 30:5">Is. 30.5</ref>,<ref loc="ISA 30:6">6</ref>.</char></note>gente que no puede salvar.<verse eid="LAM 4:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="LAM 4:18"/>Cazaron nuestro pasos, <note caller="+" style="x"><char style="xo" closed="false">4.18 </char><char style="xt" closed="false"><ref loc="2KI 25:4">2 R. 25.4</ref>,<ref loc="2KI 25:5">5</ref>.</char></note>que no anduviésemos por nuestras calles:</para>
+  <para style="q" vid="LAM 4:18">Acercóse nuestro fin, cumpliéronse nuestros días; porque nuestro fin vino.<verse eid="LAM 4:18"/></para>
+  <para style="q">
+    <verse number="19" style="v" sid="LAM 4:19"/>Ligeros fueron nuestros perseguidores <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="JER 4:13">Jer. 4.13</ref>.</char></note>más que las águilas del cielo:</para>
+  <para style="q" vid="LAM 4:19">Sobre los montes nos persiguieron, en el desierto nos pusieron emboscadas.<verse eid="LAM 4:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="LAM 4:20"/>El resuello de nuestras narices, el ungido de Jehová,</para>
+  <para style="q" vid="LAM 4:20">De quien habíamos dicho: A su sombra tendremos vida entre las gentes: <note caller="+" style="x"><char style="xo" closed="false">4.20 </char><char style="xt" closed="false"><ref loc="EZK 12:13">Ez. 12.13</ref> y <ref loc="EZK 19:4">19.4</ref>,<ref loc="EZK 19:8">8</ref>.</char></note>fué preso en sus hoyos.<verse eid="LAM 4:20"/></para>
+  <para style="q">
+    <verse number="21" style="v" sid="LAM 4:21"/>Gózate y alégrate, hija de Edom, la que habitas en tierra de <note caller="+" style="x"><char style="xo" closed="false">4.21 </char><char style="xt" closed="false"><ref loc="JER 25:20">Jer. 25.20</ref>.</char></note>Hus:</para>
+  <para style="q" vid="LAM 4:21">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.21 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 25:15">Jer. 25.15</ref>,<ref loc="JER 25:16">16</ref>.</char>
+    </note>Aun hasta ti pasará el cáliz; embriagarte has, y vomitarás.<verse eid="LAM 4:21"/></para>
+  <para style="s">1 Oración del pueblo</para>
+  <para style="s">2 afligido á Dios.</para>
+  <para style="q">
+    <verse number="22" style="v" sid="LAM 4:22"/>Cumplido es tu castigo, oh hija de Sión:</para>
+  <para style="q" vid="LAM 4:22">Nunca más te hará trasportar.</para>
+  <para style="q" vid="LAM 4:22">Visitará tu iniquidad, oh hija de Edom;</para>
+  <para style="q" vid="LAM 4:22">Descubrirá tus pecados.<verse eid="LAM 4:22"/></para>
+  <chapter eid="LAM 4"/>
+  <chapter number="5" style="c" sid="LAM 5"/>
+  <para style="q">
+    <verse number="1" style="v" sid="LAM 5:1"/>ACUÉRDATE, oh Jehová, <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="PSA 89:50">Sal. 89.50</ref>.</char></note>de lo que nos ha sucedido:</para>
+  <para style="q" vid="LAM 5:1">Ve y mira nuestro oprobio.<verse eid="LAM 5:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="LAM 5:2"/>Nuestra heredad se ha <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="PSA 79:1">Sal. 79.1</ref>.</char></note>vuelto á extraños,</para>
+  <para style="q" vid="LAM 5:2">Nuestras casas á forasteros.<verse eid="LAM 5:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="LAM 5:3"/>Huérfanos somos sin padre,</para>
+  <para style="q" vid="LAM 5:3">Nuestras madres como viudas.<verse eid="LAM 5:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="LAM 5:4"/>Nuestra agua bebemos por dinero;</para>
+  <para style="q" vid="LAM 5:4">Nuestra leña por precio compramos.<verse eid="LAM 5:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="LAM 5:5"/>Persecución padecemos sobre nuestra cerviz:</para>
+  <para style="q" vid="LAM 5:5">Nos cansamos, y no hay para nosotros reposo.<verse eid="LAM 5:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="LAM 5:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 50:15">Jer. 50.15</ref>.</char>
+    </note>Al Egipcio y al Asirio dimos la mano, para saciarnos de pan.<verse eid="LAM 5:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="LAM 5:7"/>Nuestros padres pecaron, y son muertos;</para>
+  <para style="q" vid="LAM 5:7">Y nosotros llevamos sus castigos.<verse eid="LAM 5:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="LAM 5:8"/>Siervos se enseñorearon <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="NEH 2:10">Neh. 2.10</ref>,<ref loc="NEH 2:19">19</ref>.</char></note>de nosotros;</para>
+  <para style="q" vid="LAM 5:8">No hubo quien de su mano nos librase.<verse eid="LAM 5:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="LAM 5:9"/>Con peligro de nuestras vidas traíamos nuestro pan</para>
+  <para style="q" vid="LAM 5:9">Delante del cuchillo del desierto.<verse eid="LAM 5:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="LAM 5:10"/>Nuestra piel <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="PSA 119:83">Sal. 119.83</ref>.</char></note>se ennegreció como un horno</para>
+  <para style="q" vid="LAM 5:10">A causa del ardor del hambre.<verse eid="LAM 5:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="LAM 5:11"/>Violaron á las mujeres <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="ISA 13:16">Is. 13.16</ref>. <ref loc="ZEC 14:2">Zac. 14.2</ref>.</char></note>en Sión,</para>
+  <para style="q" vid="LAM 5:11">A las vírgenes en las ciudades de Judá.<verse eid="LAM 5:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="LAM 5:12"/>A los príncipes colgaron por su mano;</para>
+  <para style="q" vid="LAM 5:12">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.12 </char>
+      <char style="xt" closed="false">cp. 4.16.</char>
+    </note>No respetaron el rostro de los viejos.<verse eid="LAM 5:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="LAM 5:13"/>Llevaron los mozos <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="JDG 16:21">Jue. 16.21</ref>.</char></note>a moler,</para>
+  <para style="q" vid="LAM 5:13">Y los muchachos desfallecieron en la leña.<verse eid="LAM 5:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="LAM 5:14"/>Los ancianos cesaron de la puerta,</para>
+  <para style="q" vid="LAM 5:14">Los mancebos de sus canciones.<verse eid="LAM 5:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="LAM 5:15"/>Cesó el gozo de nuestro corazón;</para>
+  <para style="q" vid="LAM 5:15">Nuestro corro se tornó en luto.<verse eid="LAM 5:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="LAM 5:16"/>Cayó la corona de nuestra cabeza:</para>
+  <para style="q" vid="LAM 5:16">¡Ay ahora de nosotros! porque pecamos.<verse eid="LAM 5:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="LAM 5:17"/>Por esto fué entristecido nuestro corazón,</para>
+  <para style="q" vid="LAM 5:17">Por esto se entenebrecieron nuestros ojos:<verse eid="LAM 5:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="LAM 5:18"/>Por el monte de Sión que está asolado;</para>
+  <para style="q" vid="LAM 5:18">Zorras andan en él.<verse eid="LAM 5:18"/></para>
+  <para style="q">
+    <verse number="19" style="v" sid="LAM 5:19"/>Mas tú, Jehová, <note caller="+" style="x"><char style="xo" closed="false">5.19 </char><char style="xt" closed="false"><ref loc="PSA 9:7">Sal. 9.7</ref> y <ref loc="PSA 102:12">102.12</ref>. <ref loc="HAB 1:12">Hab. 1.12</ref>.</char></note>permanecerás para siempre:</para>
+  <para style="q" vid="LAM 5:19">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 45:6">Sal. 45.6</ref>.</char>
+    </note>Tu trono de generación en generación.<verse eid="LAM 5:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="LAM 5:20"/>¿Por qué te olvidarás <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="PSA 13:1">Sal. 13.1</ref>.</char></note>para siempre de nosotros,</para>
+  <para style="q" vid="LAM 5:20">Y nos dejarás por largos días?<verse eid="LAM 5:20"/></para>
+  <para style="q">
+    <verse number="21" style="v" sid="LAM 5:21"/>Vuélvenos, <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false"><ref loc="PSA 80:3">Sal. 80.3</ref>,<ref loc="PSA 80:7">7</ref>,<ref loc="PSA 80:19">19</ref>. <ref loc="JER 31:18">Jer. 31.18</ref>.</char></note>oh Jehová, á ti, y nos volveremos:</para>
+  <para style="q" vid="LAM 5:21">Renueva nuestros días como al principio.<verse eid="LAM 5:21"/></para>
+  <para style="q">
+    <verse number="22" style="v" sid="LAM 5:22"/>Porque repeliendo nos has desechado;</para>
+  <para style="q" vid="LAM 5:22">Te has airado contra nosotros en gran manera.<verse eid="LAM 5:22"/></para>
+  <chapter eid="LAM 5"/>
+</usx>

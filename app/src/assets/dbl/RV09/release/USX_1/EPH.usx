@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="EPH" style="id">EPHVR.COR - Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">A LOS EFESIOS</para>
+  <para style="toc3">Ef.</para>
+  <para style="toc2">Efesios</para>
+  <para style="toc1">Carta de san Pablo a los Efesios</para>
+  <para style="mt2">LA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS EFESIOS.</para>
+  <chapter number="1" style="c" sid="EPH 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 1:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 1:1">Col. 1.1</ref>,<ref loc="COL 1:2">2</ref>.</char>
+    </note>PABLO, apóstol de Jesucristo por la voluntad de Dios, á los santos <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ROM 1:7">Ro. 1.7</ref>.</char></note>y fieles en Cristo Jesús que están en Efeso:<verse eid="EPH 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 1:2"/>Gracia <char style="it">sea</char> á vosotros, y paz de Dios Padre nuestro, y del Señor Jesucristo.<verse eid="EPH 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 1:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 1:3">2 Co. 1.3</ref>.</char>
+    </note>Bendito el Dios y Padre del Señor nuestro Jesucristo, el cual nos bendijo con toda bendición espiritual en <note caller="+" style="f"><char style="fr" closed="false">1.3 </char><char style="ft" closed="false">ó, <char style="it">bienes.</char></char></note><char style="it">lugares</char> <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">ver. 20. cp. 2.6 y <ref loc="EPH 3:10">3.10</ref>.</char></note>celestiales en Cristo:<verse eid="EPH 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 1:4"/>Según nos escogió <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="2TH 2:13">2 Ts. 2.13</ref>.</char></note>en él antes de la fundación del mundo, para que fuésemos santos y sin mancha <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false">cp. 5.27. <ref loc="1TH 4:7">1 Ts. 4.7</ref>.</char></note>delante de él en amor;<verse eid="EPH 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 1:5"/>Habiéndonos predestinado <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false">ver. 11. <ref loc="ROM 8:29">Ro. 8.29</ref>,<ref loc="ROM 8:30">30</ref>.</char></note>para ser adoptados hijos <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="ROM 8:15">Ro. 8.15</ref>. <ref loc="1JN 3:1">1 Jn. 3.1</ref>.</char></note>por Jesucristo á sí mismo, <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false">ver. 9. <ref loc="MAT 11:26">Mt. 11.26</ref>. <ref loc="1CO 1:21">1 Co. 1.21</ref>.</char></note>según el puro afecto de su voluntad,<verse eid="EPH 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 1:6"/>Para alabanza de la gloria de su gracia, con la cual nos hizo aceptos en <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="MAT 3:17">Mt. 3.17</ref>. <ref loc="COL 1:13">Col. 1.13</ref>.</char></note>el Amado:<verse eid="EPH 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 1:7"/>En el cual tenemos redención por su sangre, <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>. <ref loc="ROM 3:24">Ro. 3.24</ref>. <ref loc="COL 1:14">Col. 1.14</ref>.</char></note>la remisión de pecados por las riquezas de su gracia,<verse eid="EPH 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 1:8"/>Que sobreabundó en nosotros en toda <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="COL 2:3">Col. 2.3</ref>.</char></note>sabiduría é inteligencia;<verse eid="EPH 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 1:9"/>Descubriéndonos el misterio <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="ROM 16:25">Ro. 16.25</ref>.</char></note>de su voluntad, según su beneplácito, que se había propuesto en sí mismo,<verse eid="EPH 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 1:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.10 </char>
+      <char style="xt" closed="false">vers. 20-23.</char>
+    </note>De reunir <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="COL 1:20">Col. 1.20</ref>.</char></note>todas las cosas en Cristo, en la dispensación del cumplimiento de los tiempos, así las que <char style="it">están</char> en los cielos, como las que <char style="it">están</char> en la tierra:<verse eid="EPH 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 1:11"/>En él <char style="it">digo,</char> en quien asimismo <note caller="+" style="f"><char style="fr" closed="false">1.11 </char><char style="ft" closed="false">ó, <char style="it">fuimos hechos su herencia.</char> vers. 14,18.</char></note>tuvimos suerte, habiendo sido predestinados <note caller="+" style="x"><char style="xo" closed="false">1.11 </char><char style="xt" closed="false">ver. 9 Ro. 8.28. cp. 3.11.</char></note>conforme al propósito del que hace todas las cosas según el consejo de su voluntad,<verse eid="EPH 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 1:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.12 </char>
+      <char style="xt" closed="false">vers. 6,14. <ref loc="PHP 1:11">Fil. 1.11</ref>.</char>
+    </note>Para que seamos para alabanza de su gloria, nosotros que antes esperamos en Cristo.<verse eid="EPH 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 1:13"/>En el cual <char style="it">esperasteis</char> también vosotros en oyendo la palabra de verdad, el evangelio de vuestra salud: en el cual también desde que creísteis, fuisteis sellados <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false">cp. 4.30.</char></note>con el Espíritu Santo de la promesa,<verse eid="EPH 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 1:14"/>Que es las arras <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="2CO 1:22">2 Co. 1.22</ref>.</char></note>de nuestra herencia, para la redención <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ROM 8:23">Ro. 8.23</ref>.</char></note>de la posesión adquirida <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>.</char></note>para alabanza de su gloria.<verse eid="EPH 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 1:15"/>Por lo cual también yo, <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="COL 1:3">Col. 1.3</ref>,<ref loc="COL 1:4">4</ref>.</char></note>habiendo oído de vuestra fe en el Señor Jesús, y amor para con todos los santos,<verse eid="EPH 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 1:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:8">Ro. 1.8</ref>.</char>
+    </note>No ceso de dar gracias por vosotros, haciendo memoria de vosotros en mis oraciones;<verse eid="EPH 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 1:17"/>Que el Dios del Señor nuestro Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="JHN 20:17">Jn. 20.17</ref>.</char></note>el Padre de gloria, os dé espíritu de sabiduría y de revelación <note caller="+" style="f"><char style="fr" closed="false">1.17 </char><char style="ft" closed="false">ó, <char style="it">en el conocimiento de él.</char></char></note>para su conocimiento;<verse eid="EPH 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 1:18"/>Alumbrando los ojos de vuestro entendimiento, para que sepáis cuál sea <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">cp. 4.4.</char></note>la esperanza de su vocación, y cuáles las riquezas de la gloria de su <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">ver. 11.</char></note>herencia en los santos,<verse eid="EPH 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 1:19"/>Y cuál aquella supereminente grandeza de su poder para con nosotros los que creemos, <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="COL 1:29">Col. 1.29</ref> y <ref loc="COL 2:12">2.12</ref>.</char></note>por la operación de la potencia de su fortaleza,<verse eid="EPH 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 1:20"/>La cual obró en Cristo, <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>resucitándole de los muertos, y <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>. <ref loc="COL 3:1">Col. 3.1</ref>.</char></note>colocándole á su diestra <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false">ver. 3.</char></note>en los cielos,<verse eid="EPH 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 1:21"/>Sobre <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="COL 2:10">Col. 2.10</ref>.</char></note>todo <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="COL 1:16">Col. 1.16</ref>.</char></note>principado, y potestad, y potencia, y señorío, y <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="PHP 2:9">Fil. 2.9</ref>.</char></note>todo nombre que se nombra, no sólo en este siglo, mas aun en el venidero:<verse eid="EPH 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 1:22"/>Y <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="PSA 8:6">Sal. 8.6</ref>. <ref loc="1CO 15:27">1 Co. 15.27</ref>.</char></note>sometió todas las cosas debajo de sus pies, y diólo <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false">cp. 4.15 y <ref loc="EPH 5:23">5.23</ref>. <ref loc="COL 1:18">Col. 1.18</ref>.</char></note>por cabeza sobre todas las cosas á la iglesia,<verse eid="EPH 1:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EPH 1:23"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.23 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 12:12">1 Co. 12.12</ref>.</char>
+    </note>La cual es su cuerpo, <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="JHN 1:16">Jn. 1.16</ref>. cp. 4.13. <ref loc="COL 1:19">Col. 1.19</ref>.</char></note>la plenitud de Aquel <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false">cp. 4.10.</char></note>que hinche todas las cosas en todos.<verse eid="EPH 1:23"/></para>
+  <chapter eid="EPH 1"/>
+  <chapter number="2" style="c" sid="EPH 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 2:1"/>Y DE <char style="it">ella recibisteis</char> vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="COL 2:13">Col. 2.13</ref>.</char></note>que estabais muertos en vuestros delitos y pecados,<verse eid="EPH 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 2:2"/>En que <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false">vers. 3,11,13.</char></note>en otro tiempo anduvisteis conforme á la <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="GAL 1:4">Ga. 1.4</ref>.</char></note>condición de este mundo, conforme <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="JHN 12:31">Jn. 12.31</ref>. cp. 6.12.</char></note>al príncipe de la potestad del aire, el espíritu que ahora obra en <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false">cp. 5.6. <ref loc="COL 3:6">Col. 3.6</ref>.</char></note>los hijos de desobediencia:<verse eid="EPH 2:2"/></para>
+  <para style="s">1 Vocación de los Gentiles.</para>
+  <para style="s">2 Unión de Judíos y Gentiles.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 2:3"/>Entre los cuales todos nosotros también vivimos en otro tiempo en <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="GAL 5:26">Ga. 5.26</ref>.</char></note>los deseos de nuestra carne, haciendo la voluntad de la carne y de los pensamientos; y <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="PSA 51:5">Sal. 51.5</ref>.</char></note>éramos por naturaleza hijos de ira, también como los demás.<verse eid="EPH 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 2:4"/>Empero Dios, que es rico en misericordia, por su mucho amor con que nos amó,<verse eid="EPH 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 2:5"/>Aun estando <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ROM 5:6">Ro. 5.6</ref>,<ref loc="ROM 5:8">8</ref>,<ref loc="ROM 5:10">10</ref>.</char></note>nosotros muertos en pecados, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ROM 6:4">Ro. 6.4</ref>,<ref loc="ROM 6:5">5</ref>.</char></note>nos dió vida juntamente con Cristo; por gracia sois salvos;<verse eid="EPH 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 2:6"/>Y juntamente nos resucitó, y asimismo nos hizo sentar <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false">cp. 1.3.</char></note>en los cielos con Cristo Jesús,<verse eid="EPH 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 2:7"/>Para mostrar en los siglos venideros las abundantes riquezas de su gracia en <char style="it">su</char> bondad para con nosotros en Cristo Jesús.<verse eid="EPH 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 2:8"/>Porque por gracia <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false">ver. 5. <ref loc="ROM 3:24">Ro. 3.24</ref>.</char></note>sois salvos <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="ROM 4:16">Ro. 4.16</ref>.</char></note>por la fe; y esto no de vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="JHN 6:44">Jn. 6.44</ref>,<ref loc="JHN 6:65">65</ref>.</char></note><char style="it">pues es</char> don de Dios:<verse eid="EPH 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 2:9"/>No por obras, <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="ROM 11:6">Ro. 11.6</ref>.</char></note>para que nadie se gloríe.<verse eid="EPH 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 2:10"/>Porque somos hechura suya, criados en Cristo Jesús para buenas obras, <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false">cp. 1.4.</char></note>las cuales Dios preparó para que anduviésemos en ellas.<verse eid="EPH 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 2:11"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false">cp. 5.8.</char></note>acordaos que en otro tiempo vosotros los Gentiles en la carne, que erais llamados incircuncisión por la que se llama <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="COL 2:11">Col. 2.11</ref>.</char></note>circuncisión, hecha con mano en la carne;<verse eid="EPH 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 2:12"/>Que en aquel tiempo estabais sin Cristo, alejados de la república de Israel, y extranjeros á <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="ROM 9:4">Ro. 9.4</ref>.</char></note>los pactos de la promesa, <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="1TH 4:13">1 Ts. 4.13</ref>.</char></note>sin esperanza y sin Dios en el mundo.<verse eid="EPH 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 2:13"/>Mas ahora en Cristo Jesús, vosotros que en otro tiempo estabais lejos, <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="ACT 2:39">Hch. 2.39</ref>.</char></note>habéis sido hechos cercanos por la sangre de Cristo.<verse eid="EPH 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 2:14"/>Porque él es nuestra paz, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="JHN 10:16">Jn. 10.16</ref>.</char></note>que de ambos hizo uno, derribando la pared intermedia de separación;<verse eid="EPH 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 2:15"/>Dirimiendo <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="COL 2:14">Col. 2.14</ref>.</char></note>en su carne <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="COL 1:21">Col. 1.21</ref>,<ref loc="COL 1:22">22</ref>.</char></note>las enemistades, la ley de los mandamientos en orden á ritos, para edificar en sí mismo los dos en un <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="GAL 6:15">Ga. 6.15</ref>.</char></note>nuevo hombre, haciendo la paz,<verse eid="EPH 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 2:16"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="COL 1:20">Col. 1.20</ref>,<ref loc="COL 1:21">21</ref>,<ref loc="COL 1:22">22</ref>.</char></note>reconciliar por la cruz con Dios á ambos en <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false">cp. 4.4.</char></note>un mismo cuerpo, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="ROM 6:6">Ro. 6.6</ref> y <ref loc="ROM 8:3">8.3</ref>. <ref loc="COL 2:15">Col. 2.15</ref>.</char></note>matando en ella las enemistades.<verse eid="EPH 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 2:17"/>Y vino, <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false"><ref loc="ISA 57:19">Is. 57.19</ref>.</char></note>y anunció la paz á vosotros que estabais lejos, y á los que estaban cerca:<verse eid="EPH 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 2:18"/>Que <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="JHN 14:6">Jn. 14.6</ref>,<ref loc="JHN 14:13">13</ref>.</char></note>por él los unos y los otros <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false">cp. 3.12.</char></note>tenemos entrada <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="1CO 12:13">1 Co. 12.13</ref>.</char></note>por un mismo Espíritu al Padre.<verse eid="EPH 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 2:19"/>Así que ya no sois <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false">ver. 12.</char></note>extranjeros ni advenedizos, sino <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="HEB 12:22">He. 12.22</ref>,<ref loc="HEB 12:23">23</ref>.</char></note>juntamente ciudadanos con los santos, y domésticos de Dios;<verse eid="EPH 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 2:20"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 2:7">Col. 2.7</ref>.</char>
+    </note>Edificados sobre el fundamento de los <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="REV 21:14">Ap. 21.14</ref>.</char></note>apóstoles y <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false">cp. 3.5.</char></note>profetas, siendo <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="PSA 118:22">Sal. 118.22</ref>.</char></note>la principal piedra del ángulo Jesucristo mismo;<verse eid="EPH 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 2:21"/>En el cual, compaginado todo el edificio, va creciendo para <char style="it">ser</char> <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false"><ref loc="1CO 3:16">1 Co. 3.16</ref>.</char></note>un templo santo en el Señor:<verse eid="EPH 2:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 2:22"/>En el cual <note caller="+" style="x"><char style="xo" closed="false">2.22 </char><char style="xt" closed="false"><ref loc="1PE 2:5">1 P. 2.5</ref>.</char></note>vosotros también sois juntamente edificados, para morada de Dios en Espíritu.<verse eid="EPH 2:22"/></para>
+  <chapter eid="EPH 2"/>
+  <chapter number="3" style="c" sid="EPH 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 3:1"/>POR esta causa yo Pablo, prisionero de Cristo Jesús por vosotros los Gentiles,<verse eid="EPH 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 3:2"/>Si es que habéis oído <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="ROM 1:5">Ro. 1.5</ref>. <ref loc="COL 1:25">Col. 1.25</ref>.</char></note>la dispensación de la gracia de Dios que me ha sido dada para con vosotros,<verse eid="EPH 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 3:3"/>
+    <char style="it">A saber,</char> <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="ACT 22:17">Hch. 22.17</ref>,<ref loc="ACT 22:21">21</ref>.</char></note>que por revelación <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">ver. 9.</char></note>me fué declarado el misterio, <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">cp. 1.9,10.</char></note>como antes he escrito en breve;<verse eid="EPH 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 3:4"/>Leyendo lo cual podéis entender cuál sea mi inteligencia <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false">cp. 6.19.</char></note>en el misterio de Cristo:<verse eid="EPH 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 3:5"/>El cual <char style="it">misterio</char> en los otros siglos no se dió á conocer á los hijos de los hombres <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 2.20.</char></note>como ahora es revelado á sus santos apóstoles y profetas en el Espíritu:<verse eid="EPH 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 3:6"/>Que los Gentiles <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="GAL 3:29">Ga. 3.29</ref>.</char></note>sean juntamente herederos, é <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">cp. 2.16.</char></note>incorporados, y consortes de su promesa en Cristo por el evangelio:<verse eid="EPH 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 3:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 1:23">Col. 1.23</ref>,<ref loc="COL 1:25">25</ref>.</char>
+    </note>Del cual yo soy hecho ministro por el don de la gracia de Dios que me ha sido dado <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false">cp. 1.19.</char></note>según la operación de su potencia.<verse eid="EPH 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 3:8"/>A mí, que soy <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="1CO 15:9">1 Co. 15.9</ref>. <ref loc="1TI 1:15">1 Ti. 1.15</ref>.</char></note>menos que el más pequeño de todos los santos, es dada esta gracia de anunciar entre los Gentiles el evangelio de las inescrutables <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">cp. 1.7.</char></note>riquezas de Cristo,<verse eid="EPH 3:8"/></para>
+  <para style="s">1 Oración de Pablo.</para>
+  <para style="s">2 La unidad de la fe.</para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 3:9"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="COL 1:26">Col. 1.26</ref>,<ref loc="COL 1:27">27</ref>.</char></note>de aclarar á todos cuál sea la dispensación del misterio escondido desde los siglos en Dios, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="JHN 1:3">Jn. 1.3</ref>. cp. 2.10.</char></note>que crió todas las cosas.<verse eid="EPH 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 3:10"/>Para que la multiforme sabiduría de Dios sea ahora notificada por la iglesia á <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 1.21.</char></note>los principados y potestades <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 1.3.</char></note>en los cielos,<verse eid="EPH 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 3:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.11 </char>
+      <char style="xt" closed="false">cp. 1.11.</char>
+    </note>Conforme á la determinación eterna, que hizo en Cristo Jesús nuestro Señor:<verse eid="EPH 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 3:12"/>En el cual tenemos seguridad y <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false">cp. 2.18.</char></note>entrada <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false"><ref loc="HEB 4:16">He. 4.16</ref>.</char></note>con confianza por <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false"><ref loc="MRK 11:22">Mr. 11.22</ref>.</char></note>la fe de él.<verse eid="EPH 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 3:13"/>Por tanto, pido <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="LUK 18:1">Lc. 18.1</ref>.</char></note>que no desmayéis á causa de mis tribulaciones por vosotros, <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="2CO 1:6">2 Co. 1.6</ref>.</char></note>las cuales son vuestra gloria.<verse eid="EPH 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 3:14"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.14 </char>
+      <char style="xt" closed="false">ver. 1.</char>
+    </note>Por esta causa <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="ROM 14:11">Ro. 14.11</ref>. <ref loc="PHP 2:10">Fil. 2.10</ref>.</char></note>doblo mis rodillas al Padre de nuestro Señor Jesucristo,<verse eid="EPH 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 3:15"/>Del cual es nombrada toda <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false">cp. 1.10.</char></note>la parentela en los cielos y en la tierra,<verse eid="EPH 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 3:16"/>Que os dé, conforme á <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">cp. 1.18.</char></note>las riquezas de su gloria, <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="1CO 16:13">1 Co. 16.13</ref>. cp. 6.10. <ref loc="COL 1:11">Col. 1.11</ref>.</char></note>el ser corroborados con potencia en el hombre interior por su Espíritu.<verse eid="EPH 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 3:17"/>Que habite Cristo <note caller="+" style="x"><char style="xo" closed="false">3.17 </char><char style="xt" closed="false">cp. 2.22.</char></note>por la fe en vuestros corazones; para que, <note caller="+" style="x"><char style="xo" closed="false">3.17 </char><char style="xt" closed="false"><ref loc="COL 2:7">Col. 2.7</ref>.</char></note>arraigados y fundados en amor,<verse eid="EPH 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 3:18"/>Podáis bien comprender con todos los santos cuál sea la anchura y la longura y la profundidad y la altura,<verse eid="EPH 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 3:19"/>Y conocer el amor de Cristo, que excede á todo conocimiento, para que seáis <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false">cp. 1.23.</char></note>llenos de toda la plenitud de Dios.<verse eid="EPH 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 3:20"/>Y á Aquel que es poderoso <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="ROM 16:25">Ro. 16.25</ref>. <ref loc="JUD 1:24">Jud. 24</ref>.</char></note>para hacer todas las cosas mucho más abundantemente de lo que pedimos ó entendemos, <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false">cp. 1.19.</char></note>por la potencia que obra en nosotros,<verse eid="EPH 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 3:21"/>A él <char style="it">sea</char> gloria en la iglesia por Cristo Jesús, por todas edades del siglo de los siglos. Amén.<verse eid="EPH 3:21"/></para>
+  <chapter eid="EPH 3"/>
+  <chapter number="4" style="c" sid="EPH 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 4:1"/>YO pues, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 3.1.</char></note>preso en el Señor, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="COL 1:10">Col. 1.10</ref>. <ref loc="1TH 2:12">1 Ts. 2.12</ref>.</char></note>os ruego que andéis como es digno de la vocación con que sois llamados;<verse eid="EPH 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 4:2"/>Con toda humildad <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="ACT 20:19">Hch. 20.19</ref>. <ref loc="GAL 5:22">Ga. 5.22</ref>,<ref loc="GAL 5:23">23</ref>. <ref loc="COL 3:12">Col. 3.12</ref>,<ref loc="COL 3:13">13</ref>.</char></note>y mansedumbre, con paciencia soportando los unos á los otros en amor;<verse eid="EPH 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 4:3"/>Solícitos á guardar la unidad del Espíritu <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="COL 3:14">Col. 3.14</ref>.</char></note>en el vínculo de la paz.<verse eid="EPH 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 4:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.4 </char>
+      <char style="xt" closed="false">cp. 2.16. <ref loc="1CO 10:17">1 Co. 10.17</ref>. <ref loc="COL 3:15">Col. 3.15</ref>.</char>
+    </note>Un cuerpo, y <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false">cp. 2.18.</char></note>un Espíritu; como sois también llamados á una misma <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false">cp. 1.18.</char></note>esperanza de vuestra vocación:<verse eid="EPH 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 4:5"/>Un <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="1CO 1:13">1 Co. 1.13</ref>.</char></note>Señor, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false">ver. 13.</char></note>una fe, un bautismo,<verse eid="EPH 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 4:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 8:6">1 Co. 8.6</ref>.</char>
+    </note>Un Dios y Padre de todos, el cual es sobre todas las cosas, y <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Ro. 11.36</ref>.</char></note>por todas las cosas, y en todos vosotros.<verse eid="EPH 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 4:7"/>Empero <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Ro. 12.3</ref>.</char></note>a cada uno de nosotros es dada la gracia conforme á la medida del don de Cristo.<verse eid="EPH 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 4:8"/>Por lo cual dice:</para>
+  <para style="q" vid="EPH 4:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 68:18">Sal. 68.18</ref>.</char>
+    </note>Subiendo á lo alto, llevó cautiva la cautividad,</para>
+  <para style="q" vid="EPH 4:8">Y dió dones á los hombres.<verse eid="EPH 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 4:9"/>(Y que subió, ¿qué es, sino que también había descendido primero á <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false"><ref loc="1PE 3:19">1 P. 3.19</ref>.</char></note>las partes más bajas de la tierra?<verse eid="EPH 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 4:10"/>El que descendió, él mismo es el que también <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="LUK 24:51">Lc. 24.51</ref>.</char></note>subió <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="HEB 4:14">He. 4.14</ref>.</char></note>sobre todos los cielos <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 1.23.</char></note>para cumplir todas las cosas.)<verse eid="EPH 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 4:11"/>Y él mismo dió unos, ciertamente <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false">cp. 2.20.</char></note>apóstoles; y otros, profetas; y otros, <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="ACT 21:8">Hch. 21.8</ref>.</char></note>evangelistas; y otros, <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>.</char></note>pastores y <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="ACT 13:1">Hch. 13.1</ref>.</char></note>doctores;<verse eid="EPH 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 4:12"/>Para perfección de los santos, para la obra del ministerio, para edificación <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false">cp. 1.23.</char></note>del cuerpo de Cristo;<verse eid="EPH 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 4:13"/>Hasta que todos lleguemos á la unidad de la fe y del conocimiento del Hijo de Dios, á un varón perfecto, á la medida de la edad de <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 1.23.</char></note>la plenitud de Cristo:<verse eid="EPH 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 4:14"/>Que ya no seamos <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="1CO 14:20">1 Co. 14.20</ref>.</char></note>niños <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="HEB 13:9">He. 13.9</ref>.</char></note>fluctuantes, y llevados por doquiera de todo viento de doctrina, por estratagema de hombres que, para engañar, emplean con astucia los artificios del error:<verse eid="EPH 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 4:15"/>Antes siguiendo la verdad en amor, <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 1.22 y <ref loc="EPH 2:21">2.21</ref>.</char></note>crezcamos en todas cosas en aquel que es la cabeza, <char style="it">á saber,</char> Cristo;<verse eid="EPH 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 4:16"/>Del cual, todo el cuerpo <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="COL 2:19">Col. 2.19</ref>.</char></note>compuesto y bien ligado entre sí por todas las junturas de su alimento, <char style="it">que recibe</char> según la operación, cada miembro conforme á su medida toma aumento de cuerpo edificándose en amor.<verse eid="EPH 4:16"/></para>
+  <para style="s">1 “El nuevo hombre.”</para>
+  <para style="s">2 La santidad cristiana.</para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 4:17"/>Esto pues digo, y requiero en el Señor, <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false">cp. 2.2.</char></note>que no andéis más como los otros Gentiles, que andan <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ROM 1:21">Ro. 1.21</ref>.</char></note>en la vanidad de su sentido.<verse eid="EPH 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 4:18"/>Teniendo el entendimiento entenebrecido, <note caller="+" style="x"><char style="xo" closed="false">4.18 </char><char style="xt" closed="false">cp. 2.12.</char></note>ajenos de la vida de Dios por <note caller="+" style="x"><char style="xo" closed="false">4.18 </char><char style="xt" closed="false"><ref loc="ACT 17:30">Hch. 17.30</ref>. <ref loc="1PE 1:14">1 P. 1.14</ref>.</char></note>la ignorancia que en ellos hay, por la dureza de su corazón:<verse eid="EPH 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 4:19"/>Los cuales después <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="1TI 4:2">1 Ti. 4.2</ref>.</char></note>que <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="ROM 1:24">Ro. 1.24</ref>,<ref loc="ROM 1:26">26</ref>.</char></note>perdieron el sentido <char style="it">de la conciencia,</char> se entregaron á la desvergüenza para cometer con avidez toda suerte de impureza.<verse eid="EPH 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 4:20"/>Mas vosotros no habéis aprendido así á Cristo:<verse eid="EPH 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 4:21"/>Si empero lo habéis oído, <note caller="+" style="x"><char style="xo" closed="false">4.21 </char><char style="xt" closed="false">cp. 1.13.</char></note>y habéis sido por él enseñados, como la verdad está en Jesús,<verse eid="EPH 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 4:22"/>A que <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false"><ref loc="COL 3:8">Col. 3.8</ref>.</char></note>dejéis, <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false">ver. 17.</char></note>cuanto á la pasada <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false"><ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>manera de vivir; <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false"><ref loc="ROM 6:6">Ro. 6.6</ref>.</char></note>el viejo hombre que está viciado conforme á los deseos de error;<verse eid="EPH 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EPH 4:23"/>Y <note caller="+" style="x"><char style="xo" closed="false">4.23 </char><char style="xt" closed="false"><ref loc="COL 3:10">Col. 3.10</ref>.</char></note>a renovarnos en el espíritu de vuestra mente,<verse eid="EPH 4:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EPH 4:24"/>Y vestir <note caller="+" style="x"><char style="xo" closed="false">4.24 </char><char style="xt" closed="false">cp. 2.15.</char></note>el nuevo hombre que es criado conforme á Dios en justicia y en santidad de verdad.<verse eid="EPH 4:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EPH 4:25"/>Por lo cual, dejada la mentira, <note caller="+" style="x"><char style="xo" closed="false">4.25 </char><char style="xt" closed="false">ver. 15.</char></note>hablad verdad cada uno con su prójimo; porque somos <note caller="+" style="x"><char style="xo" closed="false">4.25 </char><char style="xt" closed="false"><ref loc="ROM 12:5">Ro. 12.5</ref>.</char></note>miembros los unos de los otros.<verse eid="EPH 4:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EPH 4:26"/>Airaos, <note caller="+" style="x"><char style="xo" closed="false">4.26 </char><char style="xt" closed="false"><ref loc="PSA 4:4">Sal. 4.4</ref>.</char></note>y no pequéis; no se ponga el sol sobre vuestro enojo;<verse eid="EPH 4:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EPH 4:27"/>Ni deis lugar al diablo.<verse eid="EPH 4:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EPH 4:28"/>El que hurtaba, no hurte más; antes trabaje, <note caller="+" style="x"><char style="xo" closed="false">4.28 </char><char style="xt" closed="false"><ref loc="1TH 4:11">1 Ts. 4.11</ref>.</char></note>obrando con sus manos lo que es bueno, <note caller="+" style="x"><char style="xo" closed="false">4.28 </char><char style="xt" closed="false"><ref loc="ROM 12:13">Ro. 12.13</ref>.</char></note>para que tenga de qué dar al que padeciere necesidad.<verse eid="EPH 4:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EPH 4:29"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.29 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 12:34-37">Mt. 12.34-37</ref>. <ref loc="COL 3:8">Col. 3.8</ref>.</char>
+    </note>Ninguna palabra torpe salga de vuestra boca, sino la que sea buena para edificación, para que dé <note caller="+" style="x"><char style="xo" closed="false">4.29 </char><char style="xt" closed="false"><ref loc="COL 4:6">Col. 4.6</ref>.</char></note>gracia á los oyentes.<verse eid="EPH 4:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EPH 4:30"/>Y <note caller="+" style="x"><char style="xo" closed="false">4.30 </char><char style="xt" closed="false"><ref loc="HEB 10:29">He. 10.29</ref>.</char></note>no contristéis al Espíritu Santo de Dios, <note caller="+" style="x"><char style="xo" closed="false">4.30 </char><char style="xt" closed="false">cp. 1.13.</char></note>con el cual estáis sellados para el día de la <note caller="+" style="x"><char style="xo" closed="false">4.30 </char><char style="xt" closed="false">cp. 1.14.</char></note>redención.<verse eid="EPH 4:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EPH 4:31"/>Toda amargura, <note caller="+" style="x"><char style="xo" closed="false">4.31 </char><char style="xt" closed="false"><ref loc="COL 3:19">Col. 3.19</ref>.</char></note>y enojó, é ira, y voces, y maledicencia sea quitada de vosotros, y toda malicia:<verse eid="EPH 4:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EPH 4:32"/>Antes sed los unos con los otros <note caller="+" style="x"><char style="xo" closed="false">4.32 </char><char style="xt" closed="false"><ref loc="COL 3:12">Col. 3.12</ref>,<ref loc="COL 3:13">13</ref>.</char></note>benignos, misericordiosos, <note caller="+" style="x"><char style="xo" closed="false">4.32 </char><char style="xt" closed="false"><ref loc="MAT 6:14">Mt. 6.14</ref>.</char></note>perdónandoos los unos á los otros, como también Dios os perdonó en Cristo.<verse eid="EPH 4:32"/></para>
+  <chapter eid="EPH 4"/>
+  <chapter number="5" style="c" sid="EPH 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 5:1"/>SED, <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="MAT 5:45">Mt. 5.45</ref>,<ref loc="MAT 5:48">48</ref>.</char></note>pues, imitadores de Dios como hijos amados:<verse eid="EPH 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 5:2"/>Y andad en amor, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="JHN 13:34">Jn. 13.34</ref>.</char></note>como también Cristo nos amó, y se entregó á sí mismo por nosotros, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="HEB 7:27">He. 7.27</ref>.</char></note>ofrenda y sacrificio á Dios en olor suave.<verse eid="EPH 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 5:3"/>Pero <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="COL 3:5">Col. 3.5</ref>.</char></note>fornicación y toda inmundicia, ó avaricia, ni aun se nombre entre vosotros, como conviene á santos;<verse eid="EPH 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 5:4"/>Ni <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="COL 3:8">Col. 3.8</ref>.</char></note>palabras torpes, ni necedades, ni truhanerías, que no convienen; sino antes bien acciones de gracias.<verse eid="EPH 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 5:5"/>Porque sabéis esto, que ningún fornicario, ó inmundo, ó avaro, <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="COL 3:5">Col. 3.5</ref>.</char></note>que es servidor de ídolos, <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="HEB 12:14">He. 12.14</ref>.</char></note>tiene herencia en el reino de Cristo y de Dios.<verse eid="EPH 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 5:6"/>Nadie os engañe con palabras vanas; porque <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="COL 3:6">Col. 3.6</ref>.</char></note>por estas cosas viene la ira de Dios <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false">cp. 2.2.</char></note>sobre los hijos de desobediencia.<verse eid="EPH 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 5:7"/>No seáis pues aparceros con ellos;<verse eid="EPH 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 5:8"/>Porque en otro tiempo <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false">cp. 2.11,12.</char></note>erais tinieblas; mas ahora <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="JHN 8:12">Jn. 8.12</ref>.</char></note>sois luz en el Señor: andad como <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="LUK 16:8">Lc. 16.8</ref>.</char></note>hijos de luz,<verse eid="EPH 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 5:9"/>(Porque <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false"><ref loc="GAL 5:22">Ga. 5.22</ref>.</char></note>el fruto del Espíritu es en toda bondad, y justicia, y verdad;)<verse eid="EPH 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 5:10"/>Aprobando <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="ROM 12:2">Ro. 12.2</ref>.</char></note>lo que es agradable al Señor.<verse eid="EPH 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 5:11"/>Y no comuniquéis con <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="ROM 6:21">Ro. 6.21</ref> y <ref loc="ROM 13:12">13.12</ref>.</char></note>las obras infructuosas de las tinieblas; sino antes bien redargüidlas.<verse eid="EPH 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 5:12"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="ROM 1:26">Ro. 1.26</ref>.</char></note>torpe cosa es aun hablar de lo que ellos hacen en oculto.<verse eid="EPH 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 5:13"/>Mas todas las cosas cuando son redargüidas, son manifestadas por la luz; porque lo que manifiesta todo, la luz es.<verse eid="EPH 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 5:14"/>Por lo cual dice: <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="ROM 13:11">Ro. 13.11</ref>.</char></note>Despiértate, tú que duermes, y levántate de los muertos, y te alumbrará Cristo.<verse eid="EPH 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 5:15"/>Mirad, <note caller="+" style="x"><char style="xo" closed="false">5.15 </char><char style="xt" closed="false"><ref loc="COL 4:5">Col. 4.5</ref>.</char></note>pues, cómo andéis avisadamente; no como necios, mas como sabios;<verse eid="EPH 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 5:16"/>Redimiendo el tiempo, porque los días son malos.<verse eid="EPH 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 5:17"/>Por tanto, no seáis imprudentes, <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="ROM 12:2">Ro. 12.2</ref>.</char></note>sino entendidos de cuál sea la voluntad del Señor.<verse eid="EPH 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 5:18"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="ROM 13:13">Ro. 13.13</ref>.</char></note>no os embriaguéis de vino, en lo cual hay disolución; mas sed llenos de Espíritu;<verse eid="EPH 5:18"/></para>
+  <para style="s">1 Deberes domésticos.</para>
+  <para style="s">2 La armadura de Dios.</para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 5:19"/>Hablando entre vosotros <note caller="+" style="x"><char style="xo" closed="false">5.19 </char><char style="xt" closed="false"><ref loc="COL 3:16">Col. 3.16</ref>.</char></note>con salmos, y con himnos, y canciones espirituales, cantando y alabando al Señor en vuestros corazones;<verse eid="EPH 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 5:20"/>Dando gracias siempre <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="COL 3:17">Col. 3.17</ref>. <ref loc="1TH 1:2">1 Ts. 1.2</ref>. <ref loc="2TH 1:3">2 Ts. 1.3</ref>.</char></note>de todo al <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="COL 1:12">Col. 1.12</ref>.</char></note>Dios y Padre <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="HEB 13:15">He. 13.15</ref>. <ref loc="1PE 2:5">1 P. 2.5</ref> y <ref loc="1PE 4:11">4.11</ref>.</char></note>en el nombre de nuestro Señor Jesucristo:<verse eid="EPH 5:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 5:21"/>Sujetados los unos á los otros en el temor de Dios.<verse eid="EPH 5:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 5:22"/>Las casadas <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false"><ref loc="COL 3:18-4:1">Col. 3.18—4.1</ref>.</char></note>estén sujetas á sus propios maridos, <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false">cp. 6.5.</char></note>como al Señor.<verse eid="EPH 5:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EPH 5:23"/>Porque el marido <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false"><ref loc="1CO 11:3">1 Co. 11.3</ref>.</char></note>es cabeza de la mujer, así como <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false">cp. 1.22,23.</char></note>Cristo es cabeza de la iglesia; y él es el que da la salud <char style="fm">5.23</char> al cuerpo.<verse eid="EPH 5:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EPH 5:24"/>Así que, como la iglesia está sujeta á Cristo, así también las casadas <char style="it">lo estén</char> á sus maridos en todo.<verse eid="EPH 5:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EPH 5:25"/>Maridos, <note caller="+" style="x"><char style="xo" closed="false">5.25 </char><char style="xt" closed="false"><ref loc="COL 3:19">Col. 3.19</ref>. <ref loc="1PE 3:7">1 P. 3.7</ref>.</char></note>amad á vuestras mujeres, así como Cristo amó á la iglesia, y <note caller="+" style="x"><char style="xo" closed="false">5.25 </char><char style="xt" closed="false">ver. 2.</char></note>se entregó á sí mismo por ella,<verse eid="EPH 5:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EPH 5:26"/>Para santificarla limpiándola <note caller="+" style="x"><char style="xo" closed="false">5.26 </char><char style="xt" closed="false"><ref loc="TIT 3:5">Tit. 3.5</ref>. <ref loc="1PE 3:21">1 P. 3.21</ref>.</char></note>en el lavacro del agua <note caller="+" style="x"><char style="xo" closed="false">5.26 </char><char style="xt" closed="false"><ref loc="MAT 28:19">Mt. 28.19</ref>.</char></note>por la palabra,<verse eid="EPH 5:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EPH 5:27"/>Para presentársela <note caller="+" style="x"><char style="xo" closed="false">5.27 </char><char style="xt" closed="false"><ref loc="COL 1:22">Col. 1.22</ref>.</char></note>gloriosa para sí, una iglesia que <note caller="+" style="x"><char style="xo" closed="false">5.27 </char><char style="xt" closed="false"><ref loc="SNG 4:7">Cnt. 4.7</ref>.</char></note>no tuviese mancha ni arruga, ni cosa semejante; <note caller="+" style="x"><char style="xo" closed="false">5.27 </char><char style="xt" closed="false">cp. 1.4.</char></note>sino que fuese santa y sin mancha.<verse eid="EPH 5:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EPH 5:28"/>Así también los maridos deben amar á sus mujeres como á sus mismos cuerpos. El que ama á su mujer, á sí mismo se ama.<verse eid="EPH 5:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EPH 5:29"/>Porque ninguno aborreció jamás á su propia carne, antes la sustenta y regala, como también Cristo á la iglesia;<verse eid="EPH 5:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EPH 5:30"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.30 </char><char style="xt" closed="false"><ref loc="1CO 6:15">1 Co. 6.15</ref> y <ref loc="1CO 12:27">12.27</ref>.</char></note>somos miembros de su cuerpo, de su carne y de sus huesos.<verse eid="EPH 5:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EPH 5:31"/>Por esto <note caller="+" style="x"><char style="xo" closed="false">5.31 </char><char style="xt" closed="false"><ref loc="GEN 2:24">Gn. 2.24</ref>.</char></note>dejará el hombre á su padre y á su madre, y se allegará á su mujer, y serán dos en una carne.<verse eid="EPH 5:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EPH 5:32"/>Este misterio grande es: mas yo digo <char style="it">esto</char> con respecto á Cristo y á la iglesia.<verse eid="EPH 5:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="EPH 5:33"/>Cada uno <note caller="+" style="x"><char style="xo" closed="false">5.33 </char><char style="xt" closed="false"><ref loc="COL 3:19">Col. 3.19</ref>.</char></note>empero de vosotros de por sí, ame también á su mujer como á sí mismo; y la mujer <note caller="+" style="x"><char style="xo" closed="false">5.33 </char><char style="xt" closed="false"><ref loc="1PE 3:6">1 P. 3.6</ref>.</char></note>reverencie á su marido.<verse eid="EPH 5:33"/></para>
+  <chapter eid="EPH 5"/>
+  <chapter number="6" style="c" sid="EPH 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 6:1"/>HIJOS, <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="COL 3:20">Col. 3.20</ref>.</char></note>obedeced en el Señor á vuestros padres; porque esto es justo.<verse eid="EPH 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 6:2"/>Honra á tu padre <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="EXO 20:12">Ex. 20.12</ref>. <ref loc="MAT 15:4">Mt. 15.4</ref>. <ref loc="MRK 7:10">Mr. 7.10</ref>.</char></note>y á tu madre, que es el primer mandamiento con promesa,<verse eid="EPH 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 6:3"/>Para que te vaya bien, y seas de larga vida sobre la tierra.<verse eid="EPH 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 6:4"/>Y <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="COL 3:21">Col. 3.21</ref>.</char></note>vosotros, padres, no provoquéis á ira á vuestros hijos; sino <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="GEN 18:19">Gn. 18.19</ref>. <ref loc="PRO 22:6">Pr. 22.6</ref>.</char></note>criadlos en disciplina y <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="2TI 3:15">2 Ti. 3.15</ref>.</char></note>amonestación del Señor.<verse eid="EPH 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 6:5"/>Siervos, <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="COL 3:22">Col. 3.22</ref>. <ref loc="1TI 6:1">1 Ti. 6.1</ref>. <ref loc="TIT 2:9">Tit. 2.9</ref>. <ref loc="1PE 2:18">1 P. 2.18</ref>.</char></note>obedeced á vuestros amos según la carne <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="1CO 2:3">1 Co. 2.3</ref>. <ref loc="2CO 7:15">2 Co. 7.15</ref>. <ref loc="PHP 2:12">Fil. 2.12</ref>.</char></note>con temor y temblor, con <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="2CO 11:3">2 Co. 11.3</ref>.</char></note>sencillez de vuestro corazón, <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="ROM 14:6">Ro. 14.6</ref>,<ref loc="ROM 14:8">8</ref>.</char></note>como á Cristo;<verse eid="EPH 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 6:6"/>No sirviendo al ojo, como los que agradan á los hombres; sino como <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false"><ref loc="1CO 7:22">1 Co. 7.22</ref>.</char></note>siervos de Cristo, haciendo de ánimo la voluntad de Dios;<verse eid="EPH 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 6:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 3:23">Col. 3.23</ref>,<ref loc="COL 3:24">24</ref>.</char>
+    </note>Sirviendo con buena voluntad, como al Señor, y no á los hombres;<verse eid="EPH 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 6:8"/>Sabiendo que el bien que cada uno hiciere, <char style="fm">6.7</char> esto recibirá del Señor, <note caller="+" style="x"><char style="xo" closed="false">6.8 </char><char style="xt" closed="false"><ref loc="COL 3:11">Col. 3.11</ref>.</char></note>sea siervo ó sea libre.<verse eid="EPH 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 6:9"/>Y vosotros, <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="COL 4:1">Col. 4.1</ref>.</char></note>amos, haced á ellos lo mismo, dejando las amenazas: sabiendo que el Señor de ellos y vuestro está en los cielos, <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="COL 3:25">Col. 3.25</ref>.</char></note>y que no hay acepción de personas con él.<verse eid="EPH 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 6:10"/>Por lo demás, hermanos míos, <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="2TI 2:1">2 Ti. 2.1</ref>.</char></note>confortaos en el Señor, y en la potencia de su fortaleza.<verse eid="EPH 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 6:11"/>Vestíos de <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="2CO 10:4">2 Co. 10.4</ref>.</char></note>toda la armadura <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="ROM 13:12">Ro. 13.12</ref>.</char></note>de Dios, para que podáis estar firmes contra las asechanzas del diablo.<verse eid="EPH 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EPH 6:12"/>Porque no <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false"><ref loc="1CO 9:25">1 Co. 9.25</ref>.</char></note>tenemos lucha contra sangre y carne; sino contra <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 1.21.</char></note>principados, contra potestades, contra señores del mundo, <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false"><ref loc="LUK 22:53">Lc. 22.53</ref>. <ref loc="COL 1:13">Col. 1.13</ref>.</char></note>gobernadores de estas tinieblas, contra malicias espirituales en los aires.<verse eid="EPH 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 6:13"/>Por tanto, tomad toda la armadura de Dios, para que podáis resistir <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false">cp. 5.16.</char></note>en el día malo, y estar firmes, habiendo acabado todo.<verse eid="EPH 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 6:14"/>Estad pues <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="ISA 11:5">Is. 11.5</ref>. <ref loc="1PE 1:13">1 P. 1.13</ref>.</char></note>firmes, ceñidos vuestros lomos de verdad, y <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="ISA 59:17">Is. 59.17</ref>. <ref loc="1TH 5:8">1 Ts. 5.8</ref>.</char></note>vestidos de la cota de justicia.<verse eid="EPH 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 6:15"/>Y calzados los pies <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="ISA 52:7">Is. 52.7</ref>.</char></note>con el apresto del evangelio de paz;<verse eid="EPH 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 6:16"/>Sobre todo, tomando el escudo de la fe, con que podáis apagar todos los dardos de fuego del maligno.<verse eid="EPH 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 6:17"/>Y tomad el yelmo de salud, y <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="HEB 4:12">He. 4.12</ref>.</char></note>la espada del Espíritu; que es la palabra de Dios;<verse eid="EPH 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 6:18"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.18 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 18:1">Lc. 18.1</ref>. <ref loc="COL 4:2-4">Col. 4.2-4</ref>.</char>
+    </note>Orando en todo tiempo con toda deprecación y súplica <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="ROM 8:26">Ro. 8.26</ref>.</char></note>en el Espíritu, y velando en ello con toda instancia y <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false">cp. 1.16. <ref loc="1TI 2:1">1 Ti. 2.1</ref>.</char></note>suplicación por todos los santos,<verse eid="EPH 6:18"/></para>
+  <para style="s">1 Salutaciones</para>
+  <para style="s">2 finales.</para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 6:19"/>Y por mí, <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="COL 4:3">Col. 4.3</ref>.</char></note>para que me sea dada palabra en el abrir de mi boca con confianza, para hacer notorio <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false">cp. 3.4.</char></note>el misterio del evangelio,<verse eid="EPH 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 6:20"/>Por el cual <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="2CO 5:20">2 Co. 5.20</ref>.</char></note>soy embajador <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="ACT 28:20">Hch. 28.20</ref>.</char></note>en cadenas; que resueltamente hable de él, como debo hablar.<verse eid="EPH 6:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 6:21"/>Mas <note caller="+" style="x"><char style="xo" closed="false">6.21 </char><char style="xt" closed="false"><ref loc="COL 4:7-9">Col. 4.7-9</ref>.</char></note>para que también vosotros sepáis mis negocios, <char style="it">y</char> cómo lo paso, <note caller="+" style="x"><char style="xo" closed="false">6.21 </char><char style="xt" closed="false"><ref loc="ACT 20:4">Hch. 20.4</ref>.</char></note>todo os lo hará saber Tichîco, hermano amado y fiel ministro en el Señor:<verse eid="EPH 6:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 6:22"/>Al cual os he enviado para esto mismo, para que entendáis lo tocante á nosotros, y que consuele vuestros corazones.<verse eid="EPH 6:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EPH 6:23"/>Paz sea á los hermanos y amor con fe, de Dios Padre y del Señor Jesucristo.<verse eid="EPH 6:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EPH 6:24"/>Gracia sea con todos los que aman á nuestro Señor Jesucristo en sinceridad. Amén.</para>
+  <para style="b" vid="EPH 6:24"/>
+  <para style="p" vid="EPH 6:24">Escrita de Roma á los Efesios por Tichîco.<verse eid="EPH 6:24"/></para>
+  <chapter eid="EPH 6"/>
+</usx>

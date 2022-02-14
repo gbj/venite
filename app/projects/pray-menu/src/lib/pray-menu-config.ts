@@ -2,7 +2,8 @@ export interface PrayMenuConfig {
   defaultLanguage: string;
   defaultVersion: string;
   defaultKalendar: string;
-  versionOptions: { value: string; label: string }[];
+  languageOptions: { value: string; label: string }[];
+  versionOptions: Record<string, { value: string; label: string }[]>;
   prayersAndThanksgivings?: {
     preset: boolean;
     component: any;
@@ -14,4 +15,5 @@ export interface PrayMenuConfig {
   blackLetterObservanceLiturgies?: string[];
   blackLetterObservanceDays?: string[];
   blackLetterCollectsOptional?: boolean;
+  filterVersions?: boolean;
 }

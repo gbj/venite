@@ -778,6 +778,7 @@ export class PrayService {
             })
         )
       ),
+      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
       // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
       // in which case multiple entries means multiples options, as in the RCL
       map(

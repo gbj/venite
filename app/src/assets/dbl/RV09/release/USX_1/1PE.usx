@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="1PE" style="id">1PEVR.COR Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">1 PEDRO</para>
+  <para style="toc3">1 P.</para>
+  <para style="toc2">1 Pedro</para>
+  <para style="toc1">Primera carta de san Pedro</para>
+  <para style="mt2">LA PRIMERA EPÍSTOLA UNIVERSAL DE</para>
+  <para style="mt1">SAN PEDRO APÓSTOL.</para>
+  <chapter number="1" style="c" sid="1PE 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 1:1"/>PEDRO, apóstol de Jesucristo, á los extranjeros <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 2:9">Hch. 2.9</ref>. <ref loc="JAS 1:1">Stg. 1.1</ref>.</char></note>esparcidos en Ponto, en Galacia, en Capadocia, en Asia, y en Bithinia,<verse eid="1PE 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1PE 1:2"/>Elegidos <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false">cp. 2.9.</char></note>según <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ACT 2:23">Hch. 2.23</ref>. <ref loc="ROM 8:29">Ro. 8.29</ref> y <ref loc="ROM 14:2">14.2</ref>.</char></note>la presciencia de Dios Padre en santificación del Espíritu, para obedecer y <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="HEB 10:22">He. 10.22</ref> y <ref loc="HEB 12:24">12.24</ref>.</char></note>ser rociados con la sangre de Jesucristo: <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="2PE 1:2">2 P. 1.2</ref>.</char></note>Gracia y paz os sea multiplicada.<verse eid="1PE 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 1:3"/>Bendito el Dios <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="2CO 1:3">2 Co. 1.3</ref>. <ref loc="EPH 1:3">Ef. 1.3</ref>.</char></note>y Padre de nuestro Señor Jesucristo, que según su grande misericordia <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">ver. 23. <ref loc="JHN 3:3">Jn. 3.3</ref>.</char></note>nos ha regenerado en esperanza viva, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">cp. 3.21.</char></note>por la resurrección de Jesucristo de los muertos,<verse eid="1PE 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 1:4"/>Para una herencia incorruptible, y que no puede contaminarse, ni marchitarse, <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="MAT 6:20">Mt. 6.20</ref>.</char></note>reservada en los cielos<verse eid="1PE 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 1:5"/>Para nosotros <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="JHN 10:28">Jn. 10.28</ref>,<ref loc="JHN 10:29">29</ref>.</char></note>que somos guardados en la virtud de Dios por fe, para alcanzar la salud que está aparejada para ser manifestada en el postrimero tiempo.<verse eid="1PE 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1PE 1:6"/>En lo cual vosotros os alegráis, estando <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false">cp. 5.10.</char></note>al presente un poco de tiempo afligidos en diversas tentaciones, <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="JAS 1:2">Stg. 1.2</ref>.</char></note>si es necesario,<verse eid="1PE 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 1:7"/>Para que <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="JAS 1:3">Stg. 1.3</ref>.</char></note>la prueba de vuestra fe, mucho más preciosa que el oro, el cual perece, bien que sea <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="1CO 3:13">1 Co. 3.13</ref>.</char></note>probado con fuego, <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="ROM 2:7">Ro. 2.7</ref>,<ref loc="ROM 2:10">10</ref>.</char></note>sea hallada en alabanza, gloria y honra, <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false">cp. 4.13.</char></note>cuando Jesucristo fuere manifestado:<verse eid="1PE 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 1:8"/>Al cual, no habiendo visto, le amáis; <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="JHN 20:29">Jn. 20.29</ref>.</char></note>en el cual creyendo, aunque al presente no lo veáis, <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="JHN 16:22">Jn. 16.22</ref>.</char></note>os alegráis con gozo inefable y glorificado;<verse eid="1PE 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 1:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 10:36">He. 10.36</ref>. cp. 5.4.</char>
+    </note>Obteniendo el fin de vuestra fe, <char style="it">que es</char> la salud de <char style="it">vuestras</char> almas.<verse eid="1PE 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 1:10"/>De la cual salud <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="ROM 1:2">Ro. 1.2</ref>.</char></note>los profetas que profetizaron de la gracia que había de venir á vosotros, han inquirido y diligentemente buscado,<verse eid="1PE 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 1:11"/>Escudriñando cuándo y en qué punto de tiempo significaba <note caller="+" style="x"><char style="xo" closed="false">1.11 </char><char style="xt" closed="false"><ref loc="2PE 1:21">2 P. 1.21</ref>.</char></note>el Espíritu de Cristo que estaba en ellos, el cual prenunciaba <note caller="+" style="x"><char style="xo" closed="false">1.11 </char><char style="xt" closed="false"><ref loc="LUK 24:26">Lc. 24.26</ref>.</char></note>las aflicciones que habían de venir á Cristo, y las glorias después de ellas.<verse eid="1PE 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 1:12"/>A los cuales fué revelado, que no para sí mismos, sino para nosotros administraban las cosas que ahora os son anunciadas de los que os han predicado el evangelio por <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="ACT 2:2-4">Hch. 2.2-4</ref>.</char></note>el Espíritu Santo enviado del cielo; en las cuales desean mirar los ángeles.<verse eid="1PE 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 1:13"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="EPH 6:14">Ef. 6.14</ref>.</char></note>teniendo los lomos de vuestro entendimiento ceñidos, <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false">cp. 4.7 y <ref loc="1PE 5:8">5.8</ref>.</char></note>con templanza, esperad perfectamente en la gracia que os es <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false">ver. 7.</char></note>presentada cuando Jesucristo os es manifestado:<verse eid="1PE 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1PE 1:14"/>Como hijos obedientes, <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false">cp. 4.2,3.</char></note>no conformándoos con los deseos que antes teníais estando <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ACT 17:30">Hch. 17.30</ref>. <ref loc="EPH 4:18">Ef. 4.18</ref>.</char></note>en vuestra ignorancia;<verse eid="1PE 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1PE 1:15"/>Sino como aquel <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="2CO 7:1">2 Co. 7.1</ref>. <ref loc="1TH 4:7">1 Ts. 4.7</ref>. <ref loc="2PE 3:11">2 P. 3.11</ref>.</char></note>que os ha llamado es santo, sed también vosotros santos en toda <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false">ver. 18. <ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>conversación:<verse eid="1PE 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1PE 1:16"/>Porque escrito está: <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="LEV 11:44">Lv. 11.44</ref>.</char></note>Sed santos, porque yo soy santo.<verse eid="1PE 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 1:17"/>Y si invocáis por Padre á aquel que <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="JAS 2:1">Stg. 2.1</ref>.</char></note>sin acepción de personas juzga según la obra de cada uno, conversad en <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 3.15.</char></note>temor todo el tiempo de vuestra <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 2.11.</char></note>peregrinación:<verse eid="1PE 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1PE 1:18"/>Sabiendo <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="1CO 6:20">1 Co. 6.20</ref>.</char></note>que habéis sido rescatados de vuestra vana <char style="fm">1.15</char> conversación, la cual <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="GAL 3:13">Ga. 3.13</ref> y <ref loc="GAL 4:5">4.5</ref>.</char></note>recibisteis de vuestros padres, no con cosas corruptibles, <char style="it">como</char> oro ó plata;<verse eid="1PE 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1PE 1:19"/>Sino con la <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>.</char></note>sangre preciosa de Cristo, como de <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="JHN 1:29">Jn. 1.29</ref>.</char></note>un cordero <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="HEB 9:14">He. 9.14</ref>.</char></note>sin mancha y sin contaminación:<verse eid="1PE 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1PE 1:20"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 2:23">Hch. 2.23</ref>. <ref loc="REV 13:8">Ap. 13.8</ref>.</char>
+    </note>Ya ordenado de antes de la fundación del mundo, pero manifestado <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="HEB 1:2">He. 1.2</ref>.</char></note>en los postrimeros tiempos por amor de vosotros,<verse eid="1PE 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1PE 1:21"/>Que por él creéis á Dios, <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>el cual le resucitó de los muertos, y <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="ACT 3:13">Hch. 3.13</ref>. <ref loc="PHP 2:9">Fil. 2.9</ref>.</char></note>le ha dado gloria, para que vuestra fe y esperanza sea en Dios.<verse eid="1PE 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1PE 1:22"/>Habiendo <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="ACT 15:9">Hch. 15.9</ref>. <ref loc="JAS 4:8">Stg. 4.8</ref>.</char></note>purificado vuestra almas en la obediencia de la verdad, por el Espíritu, <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="HEB 13:1">He. 13.1</ref>. cp. 2.17 y <ref loc="HEB 3:8">3.8</ref>.</char></note>en caridad hermanable sin fingimiento, amaos unos á otros <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="1TI 1:5">1 Ti. 1.5</ref>.</char></note>entrañablemente de corazón puro:<verse eid="1PE 1:22"/></para>
+  <para style="s">1 Cristo, la piedra angular.</para>
+  <para style="s">2 Sumisión á la autoridad.</para>
+  <para style="p">
+    <verse number="23" style="v" sid="1PE 1:23"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.23 </char>
+      <char style="xt" closed="false">ver. 3.</char>
+    </note>Siendo renacidos, no de simiente corruptible, sino de incorruptible, <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="JAS 1:18">Stg. 1.18</ref>.</char></note>por la <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="ACT 10:36">Hch. 10.36</ref>,<ref loc="ACT 10:37">37</ref>.</char></note>palabra de Dios, <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="HEB 4:12">He. 4.12</ref>.</char></note>que vive y permanece para siempre.<verse eid="1PE 1:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1PE 1:24"/>Porque</para>
+  <para style="q" vid="1PE 1:24">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.24 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 40:6">Is. 40.6</ref>,<ref loc="ISA 40:8">8</ref>. <ref loc="JAS 1:11">Stg. 1.11</ref>.</char>
+    </note>Toda carne es como la hierba,</para>
+  <para style="q" vid="1PE 1:24">Y toda la gloria del hombre como la flor de la hierba:</para>
+  <para style="q" vid="1PE 1:24">Secóse la hierba, y la flor se cayó;<verse eid="1PE 1:24"/></para>
+  <para style="q">
+    <verse number="25" style="v" sid="1PE 1:25"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.25 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 119:89">Sal. 119.89</ref>. <ref loc="MAT 24:35">Mt. 24.35</ref>.</char>
+    </note>Mas la palabra del Señor permanece perpetuamente.</para>
+  <para style="m" vid="1PE 1:25">Y esta es la palabra que por el evangelio os ha sido anunciada.<verse eid="1PE 1:25"/></para>
+  <chapter eid="1PE 1"/>
+  <chapter number="2" style="c" sid="1PE 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 2:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 4:22">Ef. 4.22</ref>.</char>
+    </note>DEJANDO pues toda <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="EPH 4:31">Ef. 4.31</ref>.</char></note>malicia, y todo engaño, y fingimientos, y envidias, y todas <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="JAS 4:11">Stg. 4.11</ref>.</char></note>las detracciones,<verse eid="1PE 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1PE 2:2"/>Desead, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="MAT 18:3">Mt. 18.3</ref>.</char></note>como niños recién nacidos, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="1CO 3:2">1 Co. 3.2</ref>.</char></note>la leche espiritual, sin engaño, para que por ella crezcáis en salud:<verse eid="1PE 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 2:3"/>Si empero habéis <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="HEB 6:5">He. 6.5</ref>.</char></note>gustado que el Señor es <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="LUK 6:35">Lc. 6.35</ref>.</char></note>benigno;<verse eid="1PE 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 2:4"/>Al cual allegándoos, piedra viva, <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">vers. 6,7.</char></note>reprobada cierto de los hombres, empero elegida de Dios, preciosa,<verse eid="1PE 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 2:5"/>Vosotros también, como piedras vivas, sed <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="EPH 2:20-22">Ef. 2.20-22</ref>.</char></note>edificados <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ACT 26:18">Hch. 26.18</ref>.</char></note>una casa espitirual, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false">ver. 9.</char></note>y un sacerdocio santo, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ROM 12:1">Ro. 12.1</ref>. <ref loc="HEB 13:15">He. 13.15</ref>.</char></note>para ofrecer sacrificios espirituales, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="PHP 4:18">Fil. 4.18</ref>.</char></note>agradables á Dios por Jesucristo.<verse eid="1PE 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1PE 2:6"/>Por lo cual también contiene la Escritura:</para>
+  <para style="q" vid="1PE 2:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 28:16">Is. 28.16</ref>. <ref loc="ROM 9:33">Ro. 9.33</ref>.</char>
+    </note>He aquí, pongo en Sión la principal piedra del ángulo, escogida, preciosa;</para>
+  <para style="q" vid="1PE 2:6">Y el que creyere en ella, no será confundido.<verse eid="1PE 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 2:7"/>
+    <char style="it">Ella</char> es pues honor á vosotros que creéis: mas para los desobedientes,</para>
+  <para style="q" vid="1PE 2:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 118:22">Sal. 118.22</ref>.</char>
+    </note>La piedra que los edificadores reprobaron,</para>
+  <para style="q" vid="1PE 2:7">Esta fué hecha la cabeza del ángulo;<verse eid="1PE 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 2:8"/>Y</para>
+  <para style="q" vid="1PE 2:8">Piedra de tropiezo, <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="ISA 8:14">Is. 8.14</ref>.</char></note>y roca de escándalo</para>
+  <para style="m" vid="1PE 2:8">á aquellos que tropiezan en la palabra, siendo desobedientes; <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="ROM 9:22">Ro. 9.22</ref>.</char></note>para lo cual fueron también ordenados.<verse eid="1PE 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 2:9"/>Mas vosotros sois <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">cp. 1.2.</char></note>linaje escogido, real <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="REV 1:6">Ap. 1.6</ref>.</char></note>sacerdocio, <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="DEU 26:19">Dt. 26.19</ref>.</char></note>gente santa, pueblo adquirido, para que anunciéis las virtudes de aquel que os ha llamado <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="HEB 3:6">He. 3.6</ref>.</char></note>de las tinieblas á su luz admirable.<verse eid="1PE 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 2:10"/>Vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="ROM 9:25">Ro. 9.25</ref>,<ref loc="ROM 9:26">26</ref>.</char></note>que en el tiempo pasado no erais pueblo, mas ahora sois pueblo de Dios; que en el tiempo pasado no habíais alcanzado misericordia.<verse eid="1PE 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 2:11"/>Amados, yo os ruego como á extranjeros y peregrinos, os abstengáis de los deseos carnales <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="JAS 4:1">Stg. 4.1</ref>.</char></note>que batallan contra el alma,<verse eid="1PE 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 2:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 2:15">Fil. 2.15</ref>.</char>
+    </note>Teniendo vuestra <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>conversación honesta entre los Gentiles; para que, en lo que ellos murmuran de vosotros como de <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false">cp. 3.16.</char></note>malhechores, glorifiquen á Dios en el día de <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="LUK 19:44">Lc. 19.44</ref>.</char></note>la visitación, <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="MAT 5:16">Mt. 5.16</ref>.</char></note>estimándoos por las buenas obras.<verse eid="1PE 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 2:13"/>Sed pues <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="ROM 13:1">Ro. 13.1</ref>.</char></note>sujetos á toda ordenación humana por respeto á Dios: ya sea al rey, como á superior,<verse eid="1PE 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1PE 2:14"/>Ya á los gobernadores, como de él enviados <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="ROM 13:4">Ro. 13.4</ref>.</char></note>para venganza de los malhechores, y para loor de los que hacen bien.<verse eid="1PE 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1PE 2:15"/>Porque esta es <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false">cp. 3.17.</char></note>la voluntad de Dios; que haciendo bien, hagáis callara la ignorancia de los hombres vanos:<verse eid="1PE 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1PE 2:16"/>Como libres, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="GAL 5:1">Ga. 5.1</ref>.</char></note>y no como teniendo la libertad por cobertura de malicia, sino <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="1CO 7:22">1 Co. 7.22</ref>.</char></note>como siervos de Dios.<verse eid="1PE 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 2:17"/>Honrad á todos. Amad la fraternidad. Temed á Dios. Honrad al rey.<verse eid="1PE 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1PE 2:18"/>Siervos, <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="EPH 6:5">Ef. 6.5</ref>.</char></note>sed sujetos con todo temor á vuestros amos; no solamente á los buenos y humanos, sino también á los rigurosos.<verse eid="1PE 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1PE 2:19"/>Porque esto es <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="MAT 5:10">Mt. 5.10</ref>.</char></note>agradable, si alguno á causa de la conciencia delante de Dios, sufre molestias padeciendo injustamente.<verse eid="1PE 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1PE 2:20"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false">cp. 3.14.</char></note>¿qué gloria es, si pecando vosotros sois abofeteados, y lo sufrís? mas si haciendo bien sois afligidos, y lo sufrís, esto ciertamente es agradable delante de Dios.<verse eid="1PE 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1PE 2:21"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false"><ref loc="ACT 14:22">Hch. 14.22</ref>.</char></note>para esto sois llamados; pues que también <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false">cp. 3.18.</char></note>Cristo padeció por nosotros, dejándonos ejemplo, para que vosotros sigáis sus pisadas:<verse eid="1PE 2:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1PE 2:22"/>El cual no hizo pecado; <note caller="+" style="x"><char style="xo" closed="false">2.22 </char><char style="xt" closed="false"><ref loc="ISA 53:9">Is. 53.9</ref>.</char></note>ni fué hallado engaño en su boca:<verse eid="1PE 2:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1PE 2:23"/>Quien cuando le maldecían <note caller="+" style="x"><char style="xo" closed="false">2.23 </char><char style="xt" closed="false"><ref loc="ISA 53:7">Is. 53.7</ref>.</char></note>no retornaba maldición: cuando padecía, no amenazaba, sino remitía <note caller="+" style="x"><char style="xo" closed="false">2.23 </char><char style="xt" closed="false"><ref loc="LUK 23:46">Lc. 23.46</ref>.</char></note><char style="it">la causa</char> al que juzga justamente:<verse eid="1PE 2:23"/></para>
+  <para style="s">1 Deberes de los cónyuges.</para>
+  <para style="s">2 Sufrir por hacer el bien.</para>
+  <para style="p">
+    <verse number="24" style="v" sid="1PE 2:24"/>El cual mismo <note caller="+" style="x"><char style="xo" closed="false">2.24 </char><char style="xt" closed="false"><ref loc="ISA 53:4">Is. 53.4</ref>. <ref loc="MAT 8:17">Mt. 8.17</ref>.</char></note>llevó nuestros pecados en su cuerpo sobre el madero, para que nosotros <note caller="+" style="x"><char style="xo" closed="false">2.24 </char><char style="xt" closed="false"><ref loc="ROM 6:2">Ro. 6.2</ref>.</char></note>siendo muertos á los pecados, vivamos á la justicia: <note caller="+" style="x"><char style="xo" closed="false">2.24 </char><char style="xt" closed="false"><ref loc="ISA 53:5">Is. 53.5</ref>.</char></note>por la herida del cual habéis sido sanados.<verse eid="1PE 2:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1PE 2:25"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.25 </char><char style="xt" closed="false"><ref loc="ISA 53:6">Is. 53.6</ref>.</char></note>vosotros erais como ovejas descarriadas; mas ahora habéis vuelto <note caller="+" style="x"><char style="xo" closed="false">2.25 </char><char style="xt" closed="false">cp. 5.4.</char></note>al Padre y Obispo de vuestras almas.<verse eid="1PE 2:25"/></para>
+  <chapter eid="1PE 2"/>
+  <chapter number="3" style="c" sid="1PE 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 3:1"/>ASIMISMO <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="EPH 5:22">Ef. 5.22</ref>.</char></note>vosotras, mujeres, <char style="it">sed</char> sujetas á vuestros maridos; para que <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="1CO 7:16">1 Co. 7.16</ref>.</char></note>también los que no creen á la palabra, sean ganados sin palabra por la <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>conversación de sus mujeres,<verse eid="1PE 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1PE 3:2"/>Considerando vuestra casta <char style="fm">3.1</char> conversación, que es en temor.<verse eid="1PE 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 3:3"/>El adorno de las cuales <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="1TI 2:9">1 Ti. 2.9</ref>.</char></note>no sea exterior con encrespamiento del cabello, y atavío de oro, ni en compostura de ropas;<verse eid="1PE 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 3:4"/>Sino <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="ROM 7:22">Ro. 7.22</ref>.</char></note>el hombre del corazón que está encubierto, en incorruptible <char style="it">ornato</char> de espíritu agradable y pacífico, lo cual es de grande estima delante de Dios.<verse eid="1PE 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 3:5"/>Porque así también se ataviaban en el tiempo antiguo aquellas santas mujeres que esperaban en Dios, <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="EPH 5:22">Ef. 5.22</ref>.</char></note>siendo sujetas á sus maridos:<verse eid="1PE 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1PE 3:6"/>Como Sara obedecía á Abraham, <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="GEN 18:12">Gn. 18.12</ref>.</char></note>llamándole señor; de la cual vosotras sois hechas hijas, haciendo bien, y no sois espantadas de ningún pavor.<verse eid="1PE 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 3:7"/>Vosotros maridos, <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="1CO 7:3">1 Co. 7.3</ref>. <ref loc="EPH 5:25">Ef. 5.25</ref>.</char></note>semejantemente, habitad con ellas según ciencia, dando honor <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="1TH 4:4">1 Ts. 4.4</ref>.</char></note>a la mujer como á vaso más frágil, y como á herederas juntamente de la gracia de la vida; <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="1CO 7:5">1 Co. 7.5</ref>.</char></note>para que vuestras oraciones no sean impedidas.<verse eid="1PE 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 3:8"/>Y finalmente, <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="ROM 12:16">Ro. 12.16</ref>.</char></note>sed todos de un mismo corazón, compasivos, <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">cp. 1.22.</char></note>amándoos fraternalmente, <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="EPH 4:32">Ef. 4.32</ref>. <ref loc="COL 3:12">Col. 3.12</ref>.</char></note>misericordiosos, amigables;<verse eid="1PE 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 3:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 5:39">Mt. 5.39</ref>.</char>
+    </note>No volviendo mal por mal, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 2.23.</char></note>ni maldición por maldición, sino antes por el contrario, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="MAT 5:44">Mt. 5.44</ref>. <ref loc="ROM 12:14">Ro. 12.14</ref>.</char></note>bendiciendo; sabiendo que vosotros sois llamados para que poseáis bendición en herencia.<verse eid="1PE 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 3:10"/>Porque</para>
+  <para style="q" vid="1PE 3:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 34:12-16">Sal. 34.12-16</ref>.</char>
+    </note>El que quiere amar la vida,</para>
+  <para style="q" vid="1PE 3:10">Y ver días buenos,</para>
+  <para style="q" vid="1PE 3:10">Refrene su lengua de mal,</para>
+  <para style="q" vid="1PE 3:10">Y sus labios no hablen engaño;<verse eid="1PE 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 3:11"/>Apártase del mal, y haga bien;</para>
+  <para style="q" vid="1PE 3:11">Busque la paz, y sígala.<verse eid="1PE 3:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="1PE 3:12"/>Porque los ojos del Señor están sobre los justos,</para>
+  <para style="q" vid="1PE 3:12">Y sus oídos <char style="it">atentos</char> á sus oraciones:</para>
+  <para style="q" vid="1PE 3:12">Pero el rostro del Señor está sobre aquellos que hacen mal.<verse eid="1PE 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 3:13"/>¿Y quién es aquel que os podrá dañar, si vosotros seguís el bien?<verse eid="1PE 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1PE 3:14"/>Mas también <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false">cp. 2.19,20.</char></note>si alguna cosa padecéis por hacer bien, <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="MAT 5:10-12">Mt. 5.10-12</ref>.</char></note><char style="it">sois</char> bienaventurados. Por tanto, <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="ISA 8:12">Is. 8.12</ref>,<ref loc="ISA 8:13">13</ref>.</char></note>no temáis por el temor de ellos, ni <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="JHN 14:1">Jn. 14.1</ref>,<ref loc="JHN 14:27">27</ref>.</char></note>seáis turbados;<verse eid="1PE 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1PE 3:15"/>Sino <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="MAT 6:9">Mt. 6.9</ref>.</char></note>santificad al Señor Dios en vuestros corazones, y <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="COL 4:6">Col. 4.6</ref>.</char></note><char style="it">estad</char> siempre aparejados para responder con <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="2TI 2:25">2 Ti. 2.25</ref>.</char></note>masedumbre y <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="EPH 5:33">Ef. 5.33</ref>.</char></note>reverencia á cada uno que os demande razón de la esperanza que hay en vosotros:<verse eid="1PE 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1PE 3:16"/>Teniendo <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">ver. 21.</char></note>buena conciencia, <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">cp. 2.12.</char></note>para que en lo que murmuran de vosotros como de malhechores, sean confundidos los que <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="MAT 5:44">Mt. 5.44</ref>.</char></note>blasfeman vuestra buena <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">ver. 1.</char></note>conversación en Cristo.<verse eid="1PE 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 3:17"/>Porque mejor es que padezcáis haciendo bien, si la voluntad de Dios así lo quiere, que haciendo mal.<verse eid="1PE 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1PE 3:18"/>Porque también Cristo <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false">cp. 2.21,24.</char></note>padeció <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="HEB 9:26">He. 9.26</ref>,<ref loc="HEB 9:28">28</ref>.</char></note>una vez por los pecados, el justo por los injustos, <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="EPH 2:18">Ef. 2.18</ref>.</char></note>para llevarnos á Dios, siendo á la verdad muerto <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="COL 1:22">Col. 1.22</ref>.</char></note>en la carne, pero <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="ROM 8:11">Ro. 8.11</ref>.</char></note>vivificado <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="1TI 3:16">1 Ti. 3.16</ref>.</char></note>en espíritu;<verse eid="1PE 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1PE 3:19"/>En el cual también fué y <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="ACT 2:27">Hch. 2.27</ref>,<ref loc="ACT 2:31">31</ref>. <ref loc="EPH 4:9">Ef. 4.9</ref>.</char></note>predicó á los espíritus encarcelados;<verse eid="1PE 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1PE 3:20"/>Los cuales en otro tiempo fueron desobedientes, <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="GEN 6:3">Gn. 6.3</ref>,<ref loc="GEN 6:5">5</ref>,<ref loc="GEN 6:13">13</ref>,<ref loc="GEN 6:14">14</ref>. <ref loc="MAT 24:37-39">Mt. 24.37-39</ref>.</char></note>cuando una vez esperaba la paciencia de Dios en los días de Noé, cuando <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="HEB 11:7">He. 11.7</ref>.</char></note>se aparejaba el arca; en la cual pocas, es á saber, ocho personas fueron salvas por agua.<verse eid="1PE 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1PE 3:21"/>A la <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false"><ref loc="HEB 9:24">He. 9.24</ref>.</char></note>figura de la cual <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false"><ref loc="EPH 5:26">Ef. 5.26</ref>.</char></note>el bautismo que ahora corresponde nos salva (no quitando <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false"><ref loc="TIT 3:5">Tit. 3.5</ref>.</char></note>las inmundicias de la carne, sino <char style="it">como</char> demanda de <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false">ver. 16.</char></note>una buena conciencia delante de Dios,) <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false">cp. 1.3.</char></note>por la resurrección de Jesucristo:<verse eid="1PE 3:21"/></para>
+  <para style="s">1 La nueva vida en Cristo.</para>
+  <para style="s">2 Padecer como cristianos.</para>
+  <para style="p">
+    <verse number="22" style="v" sid="1PE 3:22"/>El cual está á la diestra de Dios, habiendo subido al cielo; <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="1CO 15:24">1 Co. 15.24</ref>. <ref loc="EPH 1:21">Ef. 1.21</ref>.</char></note>estando á él <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="MAT 28:18">Mt. 28.18</ref>.</char></note>sujetos los ángeles, y las potestades, y virtudes.<verse eid="1PE 3:22"/></para>
+  <chapter eid="1PE 3"/>
+  <chapter number="4" style="c" sid="1PE 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 4:1"/>PUES que <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 3.18.</char></note>Cristo ha padecido por nosotros en la carne, vosotros también estad armados del mismo pensamiento: que <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="ROM 6:2">Ro. 6.2</ref>,<ref loc="ROM 6:7">7</ref>. <ref loc="COL 3:3">Col. 3.3</ref>,<ref loc="COL 3:5">5</ref>.</char></note>el que ha padecido en la carne, cesó de pecado;<verse eid="1PE 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1PE 4:2"/>Para <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="ROM 6:11">Ro. 6.11</ref>,<ref loc="ROM 6:13">13</ref>.</char></note>que ya el tiempo que queda en carne, viva, no á <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="TIT 2:12">Tit. 2.12</ref>.</char></note>las concupiscencias de los hombres, <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false">ver. 19.</char></note>sino á la voluntad de Dios.<verse eid="1PE 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 4:3"/>Porque nos debe bastar que el tiempo pasado de nuestra vida <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="EPH 4:17">Ef. 4.17</ref>,<ref loc="EPH 4:18">18</ref>,<ref loc="EPH 4:19">19</ref>.</char></note>hayamos hecho la voluntad de los Gentiles, cuando conversábamos en lascivias, en concupiscencias, en embriagueces, y en abominables <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="GAL 5:20">Ga. 5.20</ref>.</char></note>idolatrías.<verse eid="1PE 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 4:4"/>En lo cual les parece cosa extraña que vosotros no corráis con ellos en el mismo desenfrenamiento de disolución, <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false">cp. 3.16.</char></note>ultrajándoos:<verse eid="1PE 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 4:5"/>Los cuales darán cuenta al que está aparejado <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="ACT 10:42">Hch. 10.42</ref>.</char></note>para juzgar los vivos y los muertos.<verse eid="1PE 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1PE 4:6"/>Porque por esto también <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 3.19.</char></note>ha sido predicado el evangelio á los muertos; para que sean juzgados en carne según los hombres, y vivan en espíritu según Dios.<verse eid="1PE 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 4:7"/>Mas <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="MAT 24:14">Mt. 24.14</ref>. <ref loc="ROM 13:11">Ro. 13.11</ref>.</char></note>el fin de todas las cosas se acerca: <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="MAT 26:41">Mt. 26.41</ref>. <ref loc="LUK 21:36">Lc. 21.36</ref>.</char></note>sed pues templados, y velad en oración.<verse eid="1PE 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 4:8"/>Y sobre todo, <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="JHN 13:34">Jn. 13.34</ref>.</char></note>tened entre vosotros ferviente caridad; <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="COL 3:14">Col. 3.14</ref>.</char></note>porque la <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="PRO 10:12">Pr. 10.12</ref>.</char></note>caridad cubrirá multitud de pecados.<verse eid="1PE 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 4:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TI 3:2">1 Ti. 3.2</ref>.</char>
+    </note>Hospedaos los unos á los otros sin murmuraciones.<verse eid="1PE 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 4:10"/>Cada uno <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="ROM 12:6">Ro. 12.6</ref>.</char></note>según el don que ha recibido, adminístrelo á los otros, como buenos <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="LUK 12:42">Lc. 12.42</ref>.</char></note>dispensadores de las <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="DEU 9:29">Dt. 9.29</ref>.</char></note>diferentes gracias de Dios.<verse eid="1PE 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 4:11"/>Si alguno habla, <char style="it">hable</char> conforme á las <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="ROM 3:2">Ro. 3.2</ref>.</char></note>palabras de Dios; <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="ROM 12:7">Ro. 12.7</ref>.</char></note>si alguno ministra, <char style="it">ministre</char> conforme á la virtud que Dios suministra: para que <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="1CO 10:31">1 Co. 10.31</ref>.</char></note>en todas cosas sea Dios glorificado por Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false">cp. 5.11.</char></note>al cual es gloria é imperio para siempre jamás. Amén.<verse eid="1PE 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 4:12"/>Carísimos, no os maravilléis cuando sois <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false">cp. 1.7.</char></note>examinados por fuego, lo cual se hace para vuestra prueba, como si alguna cosa peregrina os aconteciese;<verse eid="1PE 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 4:13"/>Antes bien gozaos <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="ACT 5:41">Hch. 5.41</ref>.</char></note>en que <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="2CO 1:5">2 Co. 1.5</ref>,<ref loc="2CO 1:7">7</ref>.</char></note>sois participantes de las aflicciones de Cristo; <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 1.5-7.</char></note>para que también en la revelación de su gloria os gocéis en triunfo.<verse eid="1PE 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1PE 4:14"/>Si sois vituperados <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="JHN 15:21">Jn. 15.21</ref>.</char></note>en el nombre de Cristo, sois bienaventurados; porque la gloria y el Espíritu de Dios reposan sobre vosotros. Cierto, <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 2.12.</char></note>según ellos, él es blasfemado, mas según vosotros es glorificado.<verse eid="1PE 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1PE 4:15"/>Así que, ninguno de vosotros padezca como homicida, ó ladrón, ó malhechor, <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false"><ref loc="2TH 3:11">2 Ts. 3.11</ref>.</char></note>o por meterse en negocios ajenos.<verse eid="1PE 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1PE 4:16"/>Pero si <char style="it">alguno padece</char> <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="ACT 11:26">Hch. 11.26</ref>.</char></note>como Cristiano, no se avergüence; antes glorifique á Dios en esta parte.<verse eid="1PE 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 4:17"/>Porque es tiempo de que el juicio comience de <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="HEB 10:21">He. 10.21</ref>.</char></note>la casa de Dios: y <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ROM 2:9">Ro. 2.9</ref>.</char></note>si primero <char style="it">comienza</char> por nosotros, ¿qué será el fin de aquellos que no obedecen al evangelio de Dios?<verse eid="1PE 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1PE 4:18"/>Y si el justo <note caller="+" style="x"><char style="xo" closed="false">4.18 </char><char style="xt" closed="false"><ref loc="PRO 11:31">Pr. 11.31</ref>.</char></note>con dificultad se salva; ¿á dónde aparecerá el infiel y el pecador?<verse eid="1PE 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1PE 4:19"/>Y por eso los que son afligidos según <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false">ver. 2.</char></note>la voluntad de Dios, <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="LUK 23:46">Lc. 23.46</ref>.</char></note>encomiéndenle sus almas, como á fiel Criador, haciendo bien.<verse eid="1PE 4:19"/></para>
+  <chapter eid="1PE 4"/>
+  <chapter number="5" style="c" sid="1PE 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 5:1"/>RUEGO á <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="ACT 11:30">Hch. 11.30</ref>.</char></note>los ancianos que están entre vosotros, yo <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="2JN 1:1">2 Jn. 1</ref>. <ref loc="3JN 1:1">3 Jn. 1</ref>.</char></note>anciano <char style="it">también</char> con ellos, y <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="LUK 24:48">Lc. 24.48</ref>.</char></note>testigo de las afliciciones de Cristo, que soy también participante de la gloria que ha de ser revelada:<verse eid="1PE 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1PE 5:2"/>Apacentad la grey <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="JHN 21:16">Jn. 21.16</ref>.</char></note>de Dios que está entre vosotros, teniendo cuidado <char style="it">de ella,</char> no por fuerza, sino voluntariamente; <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="1TI 3:3">1 Ti. 3.3</ref>,<ref loc="1TI 3:8">8</ref>. <ref loc="TIT 1:7">Tit. 1.7</ref>.</char></note>no por ganancia deshonesta, sino de un ánimo pronto;<verse eid="1PE 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 5:3"/>Y no como <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="MAT 20:25">Mt. 20.25</ref>.</char></note>teniendo señorío sobre las <char style="fm">4.10</char>heredades <char style="it">del Señor,</char> sino siendo dechados de la grey.<verse eid="1PE 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 5:4"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="HEB 13:20">He. 13.20</ref>.</char></note>cuando apareciere el Príncipe de los pastores, vosotros recibiréis la corona <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false">cp. 1.4.</char></note>incorruptible de gloria.<verse eid="1PE 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 5:5"/>Igualmente, mancebos, sed sujetos á <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="ACT 11:30">Hch. 11.30</ref>.</char></note>los ancianos; y <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="ROM 12:10">Ro. 12.10</ref>.</char></note>todos sumisos unos á otros, revestíos de <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="EPH 4:2">Ef. 4.2</ref>.</char></note>humildad; porque <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="PRO 3:34">Pr. 3.34</ref>.</char></note>Dios resiste á los soberbios, y da gracia á los humildes.<verse eid="1PE 5:5"/></para>
+  <para style="s">1 Humildad y vigilancia.</para>
+  <para style="s">2 Salutaciones finales.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="1PE 5:6"/>Humillaos pues <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="MAT 23:12">Mt. 23.12</ref>. <ref loc="JAS 4:10">Stg. 4.10</ref>.</char></note>bajo la poderosa mano de Dios, para que él os ensalce cuando fuere tiempo;<verse eid="1PE 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 5:7"/>Echando <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="PSA 37:5">Sal. 37.5</ref>.</char></note>toda vuestra solicitud en él, porque él tiene cuidado de vosotros.<verse eid="1PE 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 5:8"/>Sed templados, y velad; porque vuestro adversario <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="EPH 6:11">Ef. 6.11</ref>.</char></note>el diablo, cual león rugiente, anda alrededor buscando á quien devore:<verse eid="1PE 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 5:9"/>Al cual resistid firmes en la fe, <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false"><ref loc="ACT 14:22">Hch. 14.22</ref>.</char></note>sabiendo que las mismas aflicciones han de ser cumplidas en la compañía de vuestros hermanos que están en el mundo.<verse eid="1PE 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 5:10"/>Mas el Dios de toda gracia, <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="1CO 1:9">1 Co. 1.9</ref>.</char></note>que nos ha llamado á su gloria eterna por Jesucristo, después que hubiereis un poco de tiempo padecido, él mismo <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="HEB 13:21">He. 13.21</ref>.</char></note>os perfeccione, confirme, corrobore y establezca.<verse eid="1PE 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 5:11"/>A él sea gloria <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false">cp. 4.11.</char></note>e imperio para siempre. Amén.<verse eid="1PE 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 5:12"/>Por <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="ACT 15:34">Hch. 15.34</ref>.</char></note>Silvano, el <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="2CO 11:5">2 Co. 11.5</ref>.</char></note>hermano fiel, <char style="fm">5.12</char>según yo pienso, os he escrito brevemente, amonestándo <char style="it">os,</char> y testificando que ésta es la verdadera <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="ACT 13:43">Hch. 13.43</ref>.</char></note>gracia de Dios, en la cual estáis.<verse eid="1PE 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 5:13"/>La <char style="it">iglesia</char> que está en Babilonia, juntamente elegida con vosotros, os saluda, y <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="ACT 12:12">Hch. 12.12</ref>.</char></note>Marcos mi hijo.<verse eid="1PE 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1PE 5:14"/>Saludaos unos á otros <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="ROM 16:16">Ro. 16.16</ref>.</char></note>con ósculo de caridad. <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="EPH 6:23">Ef. 6.23</ref>.</char></note>Paz sea con todos vosotros los que estáis en Jesucristo. Amén.<verse eid="1PE 5:14"/></para>
+  <chapter eid="1PE 5"/>
+</usx>

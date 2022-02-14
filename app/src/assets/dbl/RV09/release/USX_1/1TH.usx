@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="1TH" style="id">1THVR.cor Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">1 TESALONICENSES</para>
+  <para style="toc3">1 Ts.</para>
+  <para style="toc2">1 Tesalonicenses</para>
+  <para style="toc1">Primera carta de san Pablo a los Tesalonicenses</para>
+  <para style="mt2">LA PRIMERA EPISTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS TESALONICENSES.</para>
+  <chapter number="1" style="c" sid="1TH 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TH 1:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="2TH 1:1">2 Ts. 1.1</ref>,<ref loc="2TH 1:2">2</ref>.</char>
+    </note>PABLO, y <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 15:34">Hch. 15.34</ref>.</char></note>Silvano, y <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false">cp. 3.6.</char></note>Timoteo, á la iglesia de <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 17:1">Hch. 17.1</ref>.</char></note>los Tesalonicenses <char style="it">que es</char> en Dios Padre y en el Señor Jesucristo: <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ROM 1:7">Ro. 1.7</ref>.</char></note>Gracia y paz á vosotros de Dios nuestro Padre y del Señor Jesucristo.<verse eid="1TH 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TH 1:2"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:8">Ro. 1.8</ref>,<ref loc="ROM 1:9">9</ref>. <ref loc="EPH 5:20">Ef. 5.20</ref>.</char>
+    </note>Damos siempre gracias á Dios por todos vosotros, haciendo <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="PHP 1:3">Fil. 1.3</ref>.</char></note>memoria de vosotros en nuestras oraciones;<verse eid="1TH 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TH 1:3"/>Sin cesar acordándonos delante del Dios y Padre nuestro de <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="GAL 5:6">Ga. 5.6</ref>. cp. 3.6.</char></note>la obra de vuestra fe, y del trabajo de amor, y de <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="ROM 2:7">Ro. 2.7</ref>.</char></note>la tolerancia de la esperanza del <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="COL 2:2">Col. 2.2</ref>.</char></note>Señor nuestro Jesucristo:<verse eid="1TH 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TH 1:4"/>Sabiendo, hermanos amados de Dios, <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="COL 3:12">Col. 3.12</ref>.</char></note>vuestra elección:<verse eid="1TH 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TH 1:5"/>Por cuanto <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="1CO 2:4">1 Co. 2.4</ref>.</char></note>nuestro evangelio no fué á vosotros en palabra solamente, mas también en potencia, y en Espíritu Santo, <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="COL 2:2">Col. 2.2</ref>. <ref loc="HEB 2:3">He. 2.3</ref>.</char></note>y en gran plenitud; como <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false">cp. 2.10.</char></note>sabéis cuáles fuimos entre vosotros por amor de vosotros.<verse eid="1TH 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TH 1:6"/>Y vosotros fuisteis hechos imitadores de nosotros, y del Señor, <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="ACT 17:5-10">Hch. 17.5-10</ref>.</char></note>recibiendo la palabra con mucha tribulación, <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="ACT 13:52">Hch. 13.52</ref>.</char></note>con gozo del Espíritu Santo:<verse eid="1TH 1:6"/></para>
+  <para style="s">1 Exito del Evangelio</para>
+  <para style="s">2 en Tesalónica.</para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TH 1:7"/>En tal manera que habéis sido <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false">cp. 4.10.</char></note>ejemplo á todos los que han creído en <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Hch. 19.21</ref>.</char></note>Macedonia y en Acaya.<verse eid="1TH 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TH 1:8"/>Porque de vosotros ha sido divulgada la palabra del Señor no sólo en Macedonia y en Acaya, mas aun <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="2TH 1:4">2 Ts. 1.4</ref>.</char></note>en todo lugar vuestra fe en Dios se ha extendido; de modo que no tenemos necesidad de hablar nada.<verse eid="1TH 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TH 1:9"/>Porque ellos cuentan de nosotros <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false">cp. 2.1.</char></note>cuál entrada tuvimos á vosotros; y <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="ACT 15:19">Hch. 15.19</ref>.</char></note>cómo os convertisteis <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="1CO 12:2">1 Co. 12.2</ref>. <ref loc="GAL 4:8">Ga. 4.8</ref>.</char></note>de los ídolos á Dios, para servir al <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="ACT 14:15">Hch. 14.15</ref>.</char></note>Dios vivo y verdadero.<verse eid="1TH 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TH 1:10"/>Y <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="1CO 1:7">1 Co. 1.7</ref>.</char></note>esperar á su Hijo de los cielos, al cual resucitó de los muertos; á Jesús, <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="COL 1:13">Col. 1.13</ref>.</char></note>el cual nos libró <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="MAT 3:7">Mt. 3.7</ref>. cp. 5.9.</char></note>de la ira que ha de venir.<verse eid="1TH 1:10"/></para>
+  <chapter eid="1TH 1"/>
+  <chapter number="2" style="c" sid="1TH 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TH 2:1"/>PORQUE, <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">cp. 1.9.</char></note>hermanos, vosotros mismos sabéis que nuestra entrada á vosotros no fué vana:<verse eid="1TH 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TH 2:2"/>Pues aun habiendo padecido antes, y sido afrentados <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="ACT 16:22">Hch. 16.22</ref>.</char></note>en Filipos, como sabéis, tuvimos denuedo en Dios nuestro <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="ACT 17:2">Hch. 17.2</ref>,<ref loc="ACT 17:3">3</ref>.</char></note>para anunciaros el evangelio de Dios con gran combate.<verse eid="1TH 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TH 2:3"/>Porque nuestra exhortación no <char style="it">fué</char> de error, ni de <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">cp. 4.7.</char></note>inmundicia, ni por engaño;<verse eid="1TH 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TH 2:4"/>Sino según fuimos aprobados de Dios para que se nos encargase el evangelio, así hablamos; <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="GAL 1:10">Ga. 1.10</ref>.</char></note>no como los que agradan á los hombres, sino á Dios, el cual prueba nuestros corazones.<verse eid="1TH 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TH 2:5"/>Porque nunca fuimos lisonjeros en la palabra, como sabéis, ni tocados <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="2CO 7:2">2 Co. 7.2</ref>.</char></note>de avaricia; Dios es testigo;<verse eid="1TH 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TH 2:6"/>Ni buscamos de los hombres gloria, ni de vosotros, ni de otros, aunque <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="1CO 9:4">1 Co. 9.4</ref>,<ref loc="1CO 9:6">6</ref>,<ref loc="1CO 9:12">12</ref>,<ref loc="1CO 9:18">18</ref>. <ref loc="2TH 3:9">2 Ts. 3.9</ref>.</char></note>podíamos seros carga <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="1CO 9:1">1 Co. 9.1</ref>.</char></note>como apóstoles de Cristo.<verse eid="1TH 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TH 2:7"/>Antes fuimos blandos entre vosotros como la que cría, que regala á sus hijos:<verse eid="1TH 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TH 2:8"/>Tan amadores de vosotros, que quisiéramos entregaros no sólo el evangelio de Dios, mas aun <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="2CO 12:15">2 Co. 12.15</ref>. <ref loc="PHP 2:17">Fil. 2.17</ref>.</char></note>nuestras propias almas; porque nos erais carísimos.<verse eid="1TH 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TH 2:9"/>Porque ya, hermanos, os acordáis de nuestro <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="ACT 18:3">Hch. 18.3</ref>. <ref loc="2TH 3:8">2 Ts. 3.8</ref>.</char></note>trabajo y fatiga: que trabajando de noche y de día por no ser gravosos á ninguno de vosotros, os predicamos el evangelio de Dios.<verse eid="1TH 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TH 2:10"/>Vosotros sois testigos, y Dios, de cuán santa y justa é irreprensiblemente nos condujimos con vosotros que creísteis:<verse eid="1TH 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TH 2:11"/>Así como sabéis de qué modo exhortábamos y consolábamos á cada uno de vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="1CO 4:14">1 Co. 4.14</ref>.</char></note>como el padre á sus hijos,<verse eid="1TH 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TH 2:12"/>Y os protestábamos que <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="EPH 4:1">Ef. 4.1</ref>. cp. 4.1.</char></note>anduvieseis <char style="it">como es</char> digno de Dios, <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false">cp. 5.24.</char></note>que os llamó á su reino y gloria.<verse eid="1TH 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TH 2:13"/>Por lo cual, también nosotros damos gracias á Dios sin cesar, <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false">cp. 1.3.</char></note>de que habiendo recibido la palabra de Dios que oísteis de nosotros, recibisteis <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="GAL 4:14">Ga. 4.14</ref>.</char></note>no palabra de hombres, sino según es en verdad, la palabra de Dios, el cual obra en vosotros los que creísteis.<verse eid="1TH 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TH 2:14"/>Porque vosotros, hermanos, habéis sido imitadores <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="GAL 1:22">Ga. 1.22</ref>.</char></note>de las iglesias de Dios en Cristo Jesús que están en Judea; <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="ACT 17:5">Hch. 17.5</ref>. cp. 3.4. <ref loc="2TH 1:4">2 Ts. 1.4</ref>,<ref loc="2TH 1:5">5</ref>.</char></note>pues habéis padecido también vosotros las mismas cosas de los de vuestra propia nación, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="HEB 10:33">He. 10.33</ref>,<ref loc="HEB 10:34">34</ref>.</char></note>como también ellos de los Judíos;<verse eid="1TH 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TH 2:15"/>Los cuales aun mataron al Señor Jesús y <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="MAT 5:12">Mt. 5.12</ref>. <ref loc="ACT 7:52">Hch. 7.52</ref>.</char></note>a sus propios profetas, y á nosotros nos han perseguido; y no agradan á Dios, y se oponen á todos los hombres;<verse eid="1TH 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TH 2:16"/>Prohibiéndonos hablar <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="ACT 13:45">Hch. 13.45</ref>,<ref loc="ACT 13:50">50</ref> y <ref loc="ACT 17:5">17.5</ref>,<ref loc="ACT 17:13">13</ref>.</char></note>a los Gentiles, á fin de que se salven, para <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="MAT 23:32">Mt. 23.32</ref>.</char></note>henchir <char style="it">la medida de</char> sus pecados siempre: pues vino sobre ellos la ira hasta el extremo.<verse eid="1TH 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TH 2:17"/>Mas nosotros, hermanos, privados de vosotros por un poco de tiempo, <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false"><ref loc="COL 2:5">Col. 2.5</ref>.</char></note>de vista, no de corazón, tanto más <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 3.10.</char></note>procuramos con mucho deseo ver vuestro rostro.<verse eid="1TH 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TH 2:18"/>Por lo cual quisimos ir á vosotros, yo Pablo á la verdad, una vez y otra; mas Satanás nos embarazó.<verse eid="1TH 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1TH 2:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="PHP 4:1">Fil. 4.1</ref>.</char></note>¿cuál es nuestra esperanza, ó gozo, ó corona <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="2TH 1:4">2 Ts. 1.4</ref>.</char></note>de que me gloríe? ¿No sois vosotros, delante de nuestro Señor Jesucristo <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false">cp. 3.13. <ref loc="2TH 2:1">2 Ts. 2.1</ref>,<ref loc="2TH 2:8">8</ref>.</char></note>en su venida?<verse eid="1TH 2:19"/></para>
+  <para style="s">1 El amor de Pablo.</para>
+  <para style="s">2 Santidad y caridad.</para>
+  <para style="p">
+    <verse number="20" style="v" sid="1TH 2:20"/>Que vosotros sois nuestra gloria y gozo.<verse eid="1TH 2:20"/></para>
+  <chapter eid="1TH 2"/>
+  <chapter number="3" style="c" sid="1TH 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TH 3:1"/>POR lo cual, no pudiendo esperar más, <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="ACT 17:15">Hch. 17.15</ref>,<ref loc="ACT 17:16">16</ref>.</char></note>acordamos quedarnos solos en Atenas,<verse eid="1TH 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TH 3:2"/>Y enviamos á <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="1CO 16:10">1 Co. 16.10</ref>.</char></note>Timoteo, nuestro hermano, y ministro de Dios, y colaborador nuestro en el evangelio de Cristo, <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="ROM 16:25">Ro. 16.25</ref>.</char></note>a confirmaros y exhortaros en vuestra fe,<verse eid="1TH 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TH 3:3"/>Para que nadie se conmueva por estas tribulaciones; porque vosotros sabéis <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="ACT 9:16">Hch. 9.16</ref> y <ref loc="ACT 14:22">14.22</ref>. <ref loc="1PE 4:12">1 P. 4.12</ref>.</char></note>que nosotros somos puestos para esto.<verse eid="1TH 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TH 3:4"/>Que aun estando con vosotros, os predecíamos que habíamos de pasar tribulaciones, como <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false">cp. 2.14.</char></note>ha acontecido y sabéis.<verse eid="1TH 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TH 3:5"/>Por lo cual, también yo, no esperando más, he enviado á reconocer vuestra fe, no sea que os haya tentado el tentador, y que <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="GAL 4:11">Ga. 4.11</ref>. <ref loc="PHP 2:16">Fil. 2.16</ref>.</char></note>nuestro trabajo haya sido en vano.<verse eid="1TH 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TH 3:6"/>Empero <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="ACT 18:1">Hch. 18.1</ref>,<ref loc="ACT 18:5">5</ref>. cp. 1.1,3.</char></note>volviendo de vosotros á nosotros Timoteo, y haciéndonos saber vuestra fe y caridad, y que siempre tenéis buena memoria de nosotros, deseando vernos, como también nosotros á vosotros,<verse eid="1TH 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TH 3:7"/>En ello, hermanos, recibimos consolación de vosotros en toda nuestra necesidad y aflicción por causa de vuestra fe:<verse eid="1TH 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TH 3:8"/>Porque ahora vivimos, si vosotros <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="PHP 4:1">Fil. 4.1</ref>.</char></note>estáis firmes en el Señor.<verse eid="1TH 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TH 3:9"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 1.2.</char></note>¿qué hacimiento de gracias podremos dar á Dios por vosotros, por todo el gozo con que nos gozamos á causa de vosotros delante de nuestro Dios,<verse eid="1TH 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TH 3:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.10 </char>
+      <char style="xt" closed="false">cp. 2.9.</char>
+    </note>Orando de noche y de día con grande instancia, <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 2.17.</char></note>que veamos vuestro rostro, y que <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="2CO 13:9">2 Co. 13.9</ref>,<ref loc="2CO 13:11">11</ref>.</char></note>cumplamos lo que falta á vuestra fe?<verse eid="1TH 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TH 3:11"/>Mas el mismo Dios y Padre nuestro, y el Señor nuestro Jesucristo, encamine nuestro viaje á vosotros.<verse eid="1TH 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TH 3:12"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false">cp. 4.1,10.</char></note>a vosotros multiplique el Señor, y haga abundar el amor entre vosotros, y para con todos, como <char style="it">es</char> también de nosotros para con vosotros;<verse eid="1TH 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TH 3:13"/>Para <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="JAS 5:8">Stg. 5.8</ref>.</char></note>que sean confirmados vuestros corazones en santidad, irreprensibles delante de Dios y nuestro Padre, <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 2.19.</char></note>para la venida de nuestro Señor Jesucristo <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 4.14. <ref loc="JUD 1:14">Jud. 14</ref>.</char></note>con todos sus santos.<verse eid="1TH 3:13"/></para>
+  <chapter eid="1TH 3"/>
+  <chapter number="4" style="c" sid="1TH 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TH 4:1"/>RESTA pues, hermanos, que os roguemos y exhortemos en el Señor Jesús, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="PHP 4:9">Fil. 4.9</ref>. <ref loc="COL 2:6">Col. 2.6</ref>.</char></note>que de la manera que fuisteis enseñados de nosotros de cómo os conviene andar, y agradar á Dios, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 3.12.</char></note><char style="it">así</char> vayáis creciendo.<verse eid="1TH 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TH 4:2"/>Porque ya sabéis qué mandamientos os dimos por el Señor Jesús.<verse eid="1TH 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TH 4:3"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="ROM 12:2">Ro. 12.2</ref>. <ref loc="EPH 5:17">Ef. 5.17</ref>.</char></note>la voluntad de Dios es vuestra <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">vers. 4,7. <ref loc="ROM 6:19">Ro. 6.19</ref>,<ref loc="ROM 6:22">22</ref>.</char></note>santificación: <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="1CO 6:18">1 Co. 6.18</ref>. <ref loc="EPH 5:3">Ef. 5.3</ref>.</char></note>que os apartéis de fornicación;<verse eid="1TH 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TH 4:4"/>Que cada uno de vosotros sepa tener <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="1PE 3:7">1 P. 3.7</ref>.</char></note>su vaso en santificación y honor;<verse eid="1TH 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TH 4:5"/>No con afecto <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="COL 3:5">Col. 3.5</ref>.</char></note>de concupiscencia, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="EPH 4:17">Ef. 4.17</ref>,<ref loc="EPH 4:18">18</ref>.</char></note>como los Gentiles que no conocen á Dios:<verse eid="1TH 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TH 4:6"/>Que ninguno oprima, ni engañe <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="2CO 7:11">2 Co. 7.11</ref>.</char></note>en nada á su hermano: porque el Señor es vengador de todo esto, como ya os hemos dicho y protestado.<verse eid="1TH 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TH 4:7"/>Porque no nos ha llamado Dios <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false">cp. 2.3.</char></note>a inmundicia, sino á santificación.<verse eid="1TH 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TH 4:8"/>Así que, el que menosprecia, no menosprecia á hombre, sino á Dios, <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="1JN 3:24">1 Jn. 3.24</ref>.</char></note>el cual también nos dió su Espíritu Santo.<verse eid="1TH 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TH 4:9"/>Mas acerca de <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false"><ref loc="HEB 13:1">He. 13.1</ref>.</char></note>la caridad fraterna <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false">cp. 5.1.</char></note>no habéis menester que os escriba: porque vosotros mismos habéis aprendido de Dios <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false"><ref loc="JHN 13:34">Jn. 13.34</ref>.</char></note>que os améis los unos á los otros;<verse eid="1TH 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TH 4:10"/>Y también <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 1.7.</char></note>lo hacéis <char style="it">así</char> con todos los hermanos que están por toda Macedonia. Empero os rogamos, hermanos, que abundéis más;<verse eid="1TH 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TH 4:11"/>Y que procuréis tener <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="2TH 3:12">2 Ts. 3.12</ref>.</char></note>quietud, y <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="2TH 3:11">2 Ts. 3.11</ref>. <ref loc="1PE 4:15">1 P. 4.15</ref>.</char></note>hacer vuestros negocios, y <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="EPH 4:28">Ef. 4.28</ref>. cp. 2.9.</char></note>obréis de vuestras manos de la manera que os hemos mandado;<verse eid="1TH 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TH 4:12"/>A fin de que andéis honestamente <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="MRK 4:11">Mr. 4.11</ref>.</char></note>para con los extraños, y no necesitéis de nada.<verse eid="1TH 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TH 4:13"/>Tampoco, hermanos, queremos que ignoréis acerca de los que duermen, que no os entristezcáis como los otros <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="EPH 2:12">Ef. 2.12</ref>.</char></note>que no tienen esperanza.<verse eid="1TH 4:13"/></para>
+  <para style="s">1 La venida de Cristo.</para>
+  <para style="s">2 Exhortaciones varias.</para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TH 4:14"/>Porque si creemos que Jesús murió y resucitó, así <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="1CO 15:18">1 Co. 15.18</ref>. cp. 3.13.</char></note>también traerá Dios con él á los que durmieron en Jesús.<verse eid="1TH 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TH 4:15"/>Por lo cual, os decimos esto en palabra del Señor: que <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false"><ref loc="1CO 15:51">1 Co. 15.51</ref>.</char></note>nosotros que vivimos, que habremos quedado hasta la venida del Señor, no seremos delanteros á los que durmieron.<verse eid="1TH 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TH 4:16"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="MAT 16:27">Mt. 16.27</ref>.</char></note>el mismo Señor con aclamación, con voz de <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="JUD 1:9">Jud. 9</ref>.</char></note>arcángel, y con <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="1CO 15:52">1 Co. 15.52</ref>.</char></note>trompeta de Dios, descenderá del cielo; y los muertos en Cristo resucitarán <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="1CO 15:23">1 Co. 15.23</ref>.</char></note>primero:<verse eid="1TH 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TH 4:17"/>Luego nosotros, los que vivimos, los que quedamos, juntamente con ellos seremos arrebatados <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ACT 1:9">Hch. 1.9</ref>. <ref loc="REV 11:12">Ap. 11.12</ref>.</char></note>en las nubes á recibir al Señor en el aire, y así <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="JHN 12:26">Jn. 12.26</ref>.</char></note>estaremos siempre con el Señor.<verse eid="1TH 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TH 4:18"/>Por tanto, consolaos los unos á los otros en estas palabras.<verse eid="1TH 4:18"/></para>
+  <chapter eid="1TH 4"/>
+  <chapter number="5" style="c" sid="1TH 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TH 5:1"/>EMPERO acerca de <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="ACT 1:7">Hch. 1.7</ref>.</char></note>los tiempos y de los momentos, <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 4.9.</char></note>no tenéis, hermanos, necesidad de que yo os escriba:<verse eid="1TH 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TH 5:2"/>Porque vosotros sabéis bien, que <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="LUK 17:24">Lc. 17.24</ref>.</char></note>el día del Señor vendrá <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="MAT 24:43">Mt. 24.43</ref>.</char></note>así como ladrón de noche,<verse eid="1TH 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TH 5:3"/>Que cuando dirán, Paz y seguridad, entonces <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="LUK 21:34">Lc. 21.34</ref>.</char></note>vendrá sobre ellos destrucción de repente, como los dolores á la mujer preñada; y no escaparán.<verse eid="1TH 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TH 5:4"/>Mas vosotros, <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="ROM 13:12">Ro. 13.12</ref>,<ref loc="ROM 13:13">13</ref>.</char></note>hermanos, no estáis en tinieblas, para que aquel día os sobrecoja como ladrón;<verse eid="1TH 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TH 5:5"/>Porque todos vosotros <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="LUK 16:8">Lc. 16.8</ref>.</char></note>sois hijos de luz, é hijos del día; no somos de la noche, ni de las tinieblas.<verse eid="1TH 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TH 5:6"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="MAT 25:5">Mt. 25.5</ref>. <ref loc="ROM 13:11">Ro. 13.11</ref>.</char></note>no durmamos como los demás; antes <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="1PE 5:8">1 P. 5.8</ref>.</char></note>velemos y seamos sobrios.<verse eid="1TH 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TH 5:7"/>Porque los que duermen, de noche duermen; y <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="ROM 13:13">Ro. 13.13</ref>. <ref loc="EPH 5:18">Ef. 5.18</ref>.</char></note>los que están borrachos, de noche están borrachos.<verse eid="1TH 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TH 5:8"/>Mas nosotros, que somos del día, estemos sobrios, <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="ISA 59:17">Is. 59.17</ref>. <ref loc="EPH 6:14">Ef. 6.14</ref>,<ref loc="EPH 6:16">16</ref>,<ref loc="EPH 6:17">17</ref>.</char></note>vestidos de cota de fe y de caridad, y la esperanza de salud por yelmo.<verse eid="1TH 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TH 5:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false"><ref loc="ROM 5:9">Ro. 5.9</ref> y <ref loc="ROM 9:22">9.22</ref>. cp. 2.16.</char></note>no nos ha puesto Dios para ira, sino para alcanzar salud por nuestro Señor Jesucristo;<verse eid="1TH 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TH 5:10"/>El cual <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="ROM 14:9">Ro. 14.9</ref>.</char></note>murió por nosotros, para que ó que velemos, ó que durmamos, vivamos juntamente con él.<verse eid="1TH 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TH 5:11"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false">cp. 5.11.</char></note>consolaos los unos á los otros, y edificaos los unos á los otros, así como lo hacéis.<verse eid="1TH 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TH 5:12"/>Y os rogamos, hermanos, <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="1CO 16:18">1 Co. 16.18</ref>.</char></note>que reconozcáis á los que trabajan entre vosotros, y <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="1TI 5:17">1 Ti. 5.17</ref>.</char></note>os presiden en el Señor, y os amonestan:<verse eid="1TH 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TH 5:13"/>Y que los tengáis en mucha estima por amor de su obra. <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="MRK 9:50">Mr. 9.50</ref>.</char></note>Tened paz los unos con los otros.<verse eid="1TH 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TH 5:14"/>También os rogamos, hermanos, que amonestéis á los que andan desordenadamente, que consoléis á los de poco ánimo, <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="ROM 15:1">Ro. 15.1</ref>. <ref loc="GAL 6:1">Ga. 6.1</ref>,<ref loc="GAL 6:2">2</ref>.</char></note>que soportéis á los flacos, <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="1CO 13:4">1 Co. 13.4</ref>. <ref loc="GAL 5:22">Ga. 5.22</ref>.</char></note>que seáis sufridos para con todos.<verse eid="1TH 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TH 5:15"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.15 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 5:39">Mt. 5.39</ref>.</char>
+    </note>Mirad que ninguno dé á otro mal por mal; antes seguid lo bueno siempre los unos para con los otros, y para con todos.<verse eid="1TH 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TH 5:16"/>Estad siempre <note caller="+" style="x"><char style="xo" closed="false">5.16 </char><char style="xt" closed="false"><ref loc="ROM 12:12">Ro. 12.12</ref>. <ref loc="PHP 3:1">Fil. 3.1</ref>.</char></note>gozosos.<verse eid="1TH 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TH 5:17"/>Orad <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="LUK 18:1">Lc. 18.1</ref>.</char></note>sin cesar.<verse eid="1TH 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TH 5:18"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.18 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:20">Ef. 5.20</ref>. <ref loc="COL 4:2">Col. 4.2</ref>.</char>
+    </note>Dad gracias en todo; porque esta es <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false">cp. 4.3.</char></note>la voluntad de Dios para con vosotros en Cristo Jesús.<verse eid="1TH 5:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1TH 5:19"/>No apaguéis <note caller="+" style="x"><char style="xo" closed="false">5.19 </char><char style="xt" closed="false"><ref loc="EPH 4:30">Ef. 4.30</ref>. <ref loc="2TI 1:6">2 Ti. 1.6</ref>.</char></note>el Espíritu.<verse eid="1TH 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1TH 5:20"/>No menospreciéis <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="1CO 14:1">1 Co. 14.1</ref>,<ref loc="1CO 14:39">39</ref>.</char></note>las profecías.<verse eid="1TH 5:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1TH 5:21"/>Examinadlo <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false"><ref loc="1JN 4:1">1 Jn. 4.1</ref>.</char></note>todo; retened lo bueno.<verse eid="1TH 5:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1TH 5:22"/>Apartaos de toda <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false">cp. 4.12.</char></note>especie de mal.<verse eid="1TH 5:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1TH 5:23"/>Y el Dios de paz <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false">cp. 3.13.</char></note>os santifique en todo; para que vuestro <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false"><ref loc="HEB 4:12">He. 4.12</ref>.</char></note>espíritu y alma y cuerpo sea guardado entero sin reprensión <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false">cp. 2.19.</char></note>para la venida de nuestro Señor Jesucristo.<verse eid="1TH 5:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1TH 5:24"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.24 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 7:9">Dt. 7.9</ref>.</char>
+    </note>Fiel es el que os ha llamado; el cual también <char style="it">lo</char> hará.<verse eid="1TH 5:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1TH 5:25"/>Hermanos, <note caller="+" style="x"><char style="xo" closed="false">5.25 </char><char style="xt" closed="false"><ref loc="2TH 3:1">2 Ts. 3.1</ref>.</char></note>orad por nosotros.<verse eid="1TH 5:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1TH 5:26"/>Saludad á todos los hermanos en <note caller="+" style="x"><char style="xo" closed="false">5.26 </char><char style="xt" closed="false"><ref loc="ROM 16:16">Ro. 16.16</ref>.</char></note>ósculo santo.<verse eid="1TH 5:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1TH 5:27"/>Conjúroos por el Señor, que <note caller="+" style="x"><char style="xo" closed="false">5.27 </char><char style="xt" closed="false"><ref loc="COL 4:16">Col. 4.16</ref>.</char></note>esta carta sea leída á todos los santos hermanos.<verse eid="1TH 5:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1TH 5:28"/>La gracia de nuestro Señor Jesucristo sea con vosotros. Amén.</para>
+  <para style="b" vid="1TH 5:28"/>
+  <para style="p" vid="1TH 5:28">La primera <char style="it">espístola</char> á los Tesalonicenses fué escrita de Atenas.<verse eid="1TH 5:28"/></para>
+  <chapter eid="1TH 5"/>
+</usx>

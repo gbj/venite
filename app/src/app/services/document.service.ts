@@ -9,6 +9,7 @@ import {
   startWith,
   switchMap,
   first,
+  tap,
 } from "rxjs/operators";
 
 import {
@@ -178,7 +179,8 @@ export class DocumentService {
               )
           : mine.concat(venite)
       ),
-      map((docs) => docs.map((doc) => new Liturgy({ ...doc, id: undefined })))
+      map((docs) => docs.map((doc) => new Liturgy({ ...doc, id: undefined }))),
+      filter((docs) => docs?.length > 0)
     );
 
     // load from JSON for quicker load + offline access (but won't include your/org liturgies)
@@ -186,25 +188,34 @@ export class DocumentService {
       this.http.get<Liturgy>(
         `/offline/liturgy/${language}-${version}-${slug}.ldf.json`
       );
-    const offlineLiturgies$ = combineLatest([
-      loadLiturgy("en", "Rite-II", "morning-prayer"),
-      loadLiturgy("en", "Rite-II", "noonday-prayer"),
-      loadLiturgy("en", "Rite-II", "evening-prayer"),
-      loadLiturgy("en", "Rite-II", "compline"),
-      loadLiturgy("en", "Rite-I", "morning-prayer"),
-      loadLiturgy("en", "Rite-I", "evening-prayer"),
-      loadLiturgy("en", "EOW", "morning-prayer"),
-      loadLiturgy("en", "EOW", "evening-prayer"),
-      loadLiturgy("en", "Daily-Devotions", "morning-prayer"),
-      loadLiturgy("en", "Daily-Devotions", "noonday-prayer"),
-      loadLiturgy("en", "Daily-Devotions", "evening-prayer"),
-      loadLiturgy("en", "Daily-Devotions", "compline"),
-      loadLiturgy("en", "Rite-II", "eucharist"),
-      loadLiturgy("en", "Rite-I", "eucharist"),
-      loadLiturgy("en", "EOW", "eucharist"),
-    ]);
+    const offlineLiturgies$ = combineLatest(
+      language == "es"
+        ? [
+            loadLiturgy("es", "LOC", "morning-prayer"),
+            loadLiturgy("es", "LOC", "evening-prayer"),
+          ]
+        : [
+            loadLiturgy("en", "Rite-II", "morning-prayer"),
+            loadLiturgy("en", "Rite-II", "noonday-prayer"),
+            loadLiturgy("en", "Rite-II", "evening-prayer"),
+            loadLiturgy("en", "Rite-II", "compline"),
+            loadLiturgy("en", "Rite-I", "morning-prayer"),
+            loadLiturgy("en", "Rite-I", "evening-prayer"),
+            loadLiturgy("en", "EOW", "morning-prayer"),
+            loadLiturgy("en", "EOW", "evening-prayer"),
+            loadLiturgy("en", "Daily-Devotions", "morning-prayer"),
+            loadLiturgy("en", "Daily-Devotions", "noonday-prayer"),
+            loadLiturgy("en", "Daily-Devotions", "evening-prayer"),
+            loadLiturgy("en", "Daily-Devotions", "compline"),
+            loadLiturgy("en", "Rite-II", "eucharist"),
+            loadLiturgy("en", "Rite-I", "eucharist"),
+            loadLiturgy("en", "EOW", "eucharist"),
+          ]
+    );
 
-    return concat(offlineLiturgies$, onlineLiturgies$);
+    return concat(offlineLiturgies$, onlineLiturgies$).pipe(
+      tap((docs) => console.log("docs = ", docs))
+    );
   }
 
   getAllLiturgyOptions(): Observable<Liturgy[]> {
@@ -550,6 +561,10 @@ export class DocumentService {
           )
         )
       ).pipe(
+        catchError((e) => {
+          console.warn(e);
+          return of([]);
+        }),
         map((docs) =>
           docs
             .flat()

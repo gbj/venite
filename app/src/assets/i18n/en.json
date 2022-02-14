@@ -1,4 +1,5 @@
 {
+  "lang": "Language",
   "Language": "Language",
   "cancel": "Cancel",
   "ok": "OK",
@@ -7,7 +8,8 @@
   "loading-preferences": "Loading Preferences...",
   "login-to-continue": "Log in to continue using the app.",
   "language": {
-    "en": "English"
+    "en": "English",
+    "es": "Spanish"
   },
   "read-aloud": "Read Aloud",
   "psalter": {

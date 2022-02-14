@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="SNG" style="id">SNGVR.TXT Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">CANTARES</para>
+  <para style="toc3">Cnt.</para>
+  <para style="toc2">Cantares</para>
+  <para style="toc1">El Cantar de los Cantares</para>
+  <para style="mt1">EL CANTAR DE LOS CANTARES</para>
+  <para style="mt2">DE SALOMÓN.</para>
+  <chapter number="1" style="c" sid="SNG 1"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 1:1"/>CANCIÓN de canciones, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="1KI 4:32">1 R. 4.32</ref>.</char></note>la cual es de Salomón.<verse eid="SNG 1:1"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 1:2"/>¡Oh si él me besara con ósculos de su boca!</para>
+  <para style="q" vid="SNG 1:2">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.2 </char>
+      <char style="xt" closed="false">cp. 4.10.</char>
+    </note>Porque mejores son tus amores que el vino.<verse eid="SNG 1:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 1:3"/>Por el olor de tus suaves ungüentos,</para>
+  <para style="q" vid="SNG 1:3">(Ungüento derramado es <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="ECC 7:1">Ec. 7.1</ref>.</char></note>tu nombre,)</para>
+  <para style="q" vid="SNG 1:3">Por eso las doncellas te amaron.<verse eid="SNG 1:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 1:4"/>Llévame en pos de ti, correremos.</para>
+  <para style="q" vid="SNG 1:4">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 45:14">Sal. 45.14</ref>,<ref loc="PSA 45:15">15</ref>. cp. 3.9,11 y <ref loc="PSA 7:5">7.5</ref>. y 8.11,12.</char>
+    </note>Metióme el rey en sus cámaras:</para>
+  <para style="q" vid="SNG 1:4">Nos gozaremos y alegraremos en ti;</para>
+  <para style="q" vid="SNG 1:4">Acordarémonos de tus amores más que del vino:</para>
+  <para style="q" vid="SNG 1:4">Los rectos te aman.<verse eid="SNG 1:4"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 1:5"/>Morena soy, oh hijas de Jerusalem,</para>
+  <para style="q" vid="SNG 1:5">Mas codiciable;</para>
+  <para style="q" vid="SNG 1:5">Como las <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="PSA 120:5">Sal. 120.5</ref>.</char></note>cabañas de <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="ISA 60:7">Is. 60.7</ref>.</char></note>Cedar,</para>
+  <para style="q" vid="SNG 1:5">Como las tiendas de Salomón.<verse eid="SNG 1:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 1:6"/>No miréis en que soy morena,</para>
+  <para style="q" vid="SNG 1:6">Porque el sol me miró.</para>
+  <para style="q" vid="SNG 1:6">Los hijos de mi madre se airaron contra mí,</para>
+  <para style="q" vid="SNG 1:6">Hiciéronme guarda de viñas;</para>
+  <para style="q" vid="SNG 1:6">
+    <char style="it">Y</char> mi viña, que era mía, no guardé.<verse eid="SNG 1:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 1:7"/>Hazme saber, oh tú á quien ama mi alma,</para>
+  <para style="q" vid="SNG 1:7">Dónde repastas, dónde haces tener majada al medio día:</para>
+  <para style="q" vid="SNG 1:7">Porque, ¿por qué había yo de estar como vagueando</para>
+  <para style="q" vid="SNG 1:7">Tras los rebaños de tus compañeros?<verse eid="SNG 1:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 1:8"/>Si tú no lo sabes, <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false">cp. 5.9 y <ref loc="SNG 6:1">6.1</ref>.</char></note>oh hermosa entre las mujeres,</para>
+  <para style="q" vid="SNG 1:8">Sal, yéndote por las huellas del rebaño,</para>
+  <para style="q" vid="SNG 1:8">Y apacienta tus cabritas junto á las cabañas de los pastores.<verse eid="SNG 1:8"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 1:9"/>A <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="2CH 1:16">2 Cr. 1.16</ref>,<ref loc="2CH 1:17">17</ref>.</char></note>yegua de los carros de Faraón</para>
+  <para style="q" vid="SNG 1:9">Te he comparado, <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false">cp. 2.2,10,13 y <ref loc="SNG 4:1">4.1</ref>,<ref loc="SNG 4:7">7</ref> y <ref loc="SNG 5:2">5.2</ref> y <ref loc="SNG 6:4">6.4</ref>.</char></note>amiga mía.<verse eid="SNG 1:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 1:10"/>Hermosas <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="EZK 16:11-13">Ez. 16.11-13</ref>.</char></note>son tus mejillas entre los pendientes,</para>
+  <para style="q" vid="SNG 1:10">Tu cuello entre los collares.<verse eid="SNG 1:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 1:11"/>Zarcillos de oro te haremos,</para>
+  <para style="q" vid="SNG 1:11">Con clavos de plata.<verse eid="SNG 1:11"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 1:12"/>Mientras que el rey estaba en su reclinatorio,</para>
+  <para style="q" vid="SNG 1:12">Mi <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false">cp. 4.13,14. <ref loc="MRK 14:3">Mr. 14.3</ref>.</char></note>nardo dió su olor.<verse eid="SNG 1:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 1:13"/>Mi amado es para mí un manojito de mirra,</para>
+  <para style="q" vid="SNG 1:13">Que reposa entre mis pechos.<verse eid="SNG 1:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="SNG 1:14"/>Racimo de copher en las viñas de Engadi</para>
+  <para style="q" vid="SNG 1:14">Es para mí mi amado.<verse eid="SNG 1:14"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="15" style="v" sid="SNG 1:15"/>He aquí que tú eres <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false">cp. 4.1.</char></note>hermosa, amiga mía;</para>
+  <para style="q" vid="SNG 1:15">He aquí que eres bella: tus ojos de paloma.<verse eid="SNG 1:15"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="16" style="v" sid="SNG 1:16"/>He aquí que tú eres hermoso, amado mío, y suave:</para>
+  <para style="q" vid="SNG 1:16">Nuestro lecho también florido.<verse eid="SNG 1:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="SNG 1:17"/>Las vigas de nuestra casa son de cedro,</para>
+  <para style="q" vid="SNG 1:17">
+    <char style="it">Y</char> de ciprés los artesonados.<verse eid="SNG 1:17"/></para>
+  <chapter eid="SNG 1"/>
+  <chapter number="2" style="c" sid="SNG 2"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 2:1"/>YO soy la <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="ISA 35:1">Is. 35.1</ref>.</char></note>rosa de Sarón,</para>
+  <para style="q" vid="SNG 2:1">Y el lirio de los valles.<verse eid="SNG 2:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 2:2"/>Como el lirio entre las espinas,</para>
+  <para style="q" vid="SNG 2:2">Así es mi amiga entre las doncellas.<verse eid="SNG 2:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 2:3"/>Como el manzano entre los árboles silvestres,</para>
+  <para style="q" vid="SNG 2:3">Así es mi amado entre los mancebos:</para>
+  <para style="q" vid="SNG 2:3">Bajo la sombra del deseado me senté,</para>
+  <para style="q" vid="SNG 2:3">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 22:2">Ap. 22.2</ref>.</char>
+    </note>Y su fruto fué dulce en mi paladar.<verse eid="SNG 2:3"/></para>
+  <para style="s">1 El amor de la</para>
+  <para style="s">2 esposa y el esposo.</para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 2:4"/>Llevóme á la cámara del vino,</para>
+  <para style="q" vid="SNG 2:4">Y su bandera sobre mí fué amor.<verse eid="SNG 2:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 2:5"/>Sustentadme con frascos, corroboradme con manzanas;</para>
+  <para style="q" vid="SNG 2:5">Porque estoy enferma de amor.<verse eid="SNG 2:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 2:6"/>Su izquierda <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false">cp. 8.3.</char></note><char style="it">esté</char> debajo de mi cabeza,</para>
+  <para style="q" vid="SNG 2:6">Y su derecha me abrace.<verse eid="SNG 2:6"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 2:7"/>Yo os conjuro, <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false">cp. 1.5.</char></note>oh doncellas de Jerusalem,</para>
+  <para style="q" vid="SNG 2:7">Por las gamas y por las ciervas del campo,</para>
+  <para style="q" vid="SNG 2:7">Que no despertéis ni hagáis velar al amor</para>
+  <para style="q" vid="SNG 2:7">Hasta que quiera.<verse eid="SNG 2:7"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 2:8"/>¡La voz de mi amado! He aquí él viene</para>
+  <para style="q" vid="SNG 2:8">Saltando sobre los montes, brincando sobre los collados.<verse eid="SNG 2:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 2:9"/>Mi amado <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">ver. 17. cp. 8.14.</char></note>es semejante al gamo, ó al cabrito de los ciervos.</para>
+  <para style="q" vid="SNG 2:9">Helo aquí, está tras nuestra pared,</para>
+  <para style="q" vid="SNG 2:9">Mirando por las ventanas,</para>
+  <para style="q" vid="SNG 2:9">Mostrándose por las rejas.<verse eid="SNG 2:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 2:10"/>Mi amado habló, y me dijo:</para>
+  <para style="q" vid="SNG 2:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.10 </char>
+      <char style="xt" closed="false">ver. 13.</char>
+    </note>Levántate, oh amiga mía, hermosa mía, y vente.<verse eid="SNG 2:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 2:11"/>Porque he aquí ha pasado el invierno,</para>
+  <para style="q" vid="SNG 2:11">Hase mudado, la lluvia se fué;<verse eid="SNG 2:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 2:12"/>Hanse mostrado las flores en la tierra,</para>
+  <para style="q" vid="SNG 2:12">El tiempo de la canción es venido,</para>
+  <para style="q" vid="SNG 2:12">Y en nuestro país se ha oído la voz de la <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="PSA 74:19">Sal. 74.19</ref>. <ref loc="JER 8:7">Jer. 8.7</ref>.</char></note>tórtola;<verse eid="SNG 2:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 2:13"/>La higuera ha echado sus higos,</para>
+  <para style="q" vid="SNG 2:13">Y las vides <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false">ver. 15. cp. 7.12.</char></note>en cierne</para>
+  <para style="q" vid="SNG 2:13">Dieron olor:</para>
+  <para style="q" vid="SNG 2:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.13 </char>
+      <char style="xt" closed="false">ver. 10.</char>
+    </note>Levántate, oh amiga mía, hermosa mía, y vente.<verse eid="SNG 2:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="SNG 2:14"/>Paloma mía, que estás en los</para>
+  <para style="q" vid="SNG 2:14">agujeros de la peña, en lo</para>
+  <para style="q" vid="SNG 2:14">escondido de escarpados</para>
+  <para style="q" vid="SNG 2:14">parajes,</para>
+  <para style="q" vid="SNG 2:14">Muéstrame tu rostro, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false">cp. 8.13.</char></note>hazme oir tu voz;</para>
+  <para style="q" vid="SNG 2:14">Porque dulce es la voz tuya, y hermoso tu aspecto.<verse eid="SNG 2:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="SNG 2:15"/>Cazadnos <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="EZK 13:4">Ez. 13.4</ref>.</char></note>las zorra, las zorras pequeñas, que echan á perder las viñas;</para>
+  <para style="q" vid="SNG 2:15">Pues que nuestras viñas están en cierne.<verse eid="SNG 2:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="SNG 2:16"/>Mi amado es mío, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false">cp. 6.3 y <ref loc="SNG 7:10">7.10</ref>.</char></note>y yo suya;</para>
+  <para style="q" vid="SNG 2:16">El <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false">cp. 4.5.</char></note>apacienta entre lirios.<verse eid="SNG 2:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="SNG 2:17"/>Hasta que apunte el día, <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 4.6.</char></note>y huyan las sombras,</para>
+  <para style="q" vid="SNG 2:17">Tórnate, amado mío; <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">ver. 9. cp. 8.14.</char></note>sé semejante al gamo, ó al cabrito de los ciervos,</para>
+  <para style="q" vid="SNG 2:17">Sobre los montes de Bether.<verse eid="SNG 2:17"/></para>
+  <chapter eid="SNG 2"/>
+  <chapter number="3" style="c" sid="SNG 3"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 3:1"/>POR las noches <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="ISA 26:9">Is. 26.9</ref>.</char></note>busqué en mi lecho al que ama mi alma:</para>
+  <para style="q" vid="SNG 3:1">Busquélo, y no lo hallé.<verse eid="SNG 3:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 3:2"/>Levantaréme ahora, y rodearé por la ciudad;</para>
+  <para style="q" vid="SNG 3:2">Por las calles y por las plazas</para>
+  <para style="q" vid="SNG 3:2">Buscaré al que ama mi alma:</para>
+  <para style="q" vid="SNG 3:2">Busquélo, y no lo hallé.<verse eid="SNG 3:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 3:3"/>Halláronme <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">cp. 5.7. <ref loc="JER 6:17">Jer. 6.17</ref>.</char></note>los guardas que rondan la ciudad,</para>
+  <para style="q" vid="SNG 3:3">
+    <char style="it">Y díjeles:</char> ¿Habéis visto al que ama mi alma?<verse eid="SNG 3:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 3:4"/>Pasando de ellos un poco,</para>
+  <para style="q" vid="SNG 3:4">Hallé luego al que mi alma ama:</para>
+  <para style="q" vid="SNG 3:4">Trabé de él, y no lo dejé,</para>
+  <para style="q" vid="SNG 3:4">Hasta que lo metí en casa de mi madre,</para>
+  <para style="q" vid="SNG 3:4">Y en la cámara de la que me engendró.<verse eid="SNG 3:4"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 3:5"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.5 </char>
+      <char style="xt" closed="false">cp. 2.7.</char>
+    </note>Yo os conjuro, <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 1.5.</char></note>oh doncellas de Jerusalem,</para>
+  <para style="q" vid="SNG 3:5">Por las gamas y por las ciervas del campo,</para>
+  <para style="q" vid="SNG 3:5">Que no despertéis ni hagáis velar al amor,</para>
+  <para style="q" vid="SNG 3:5">Hasta que quiera.<verse eid="SNG 3:5"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 3:6"/>¿Quién <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">cp. 8.5.</char></note>es ésta que sube del desierto <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="JOL 2:30">Jl. 2.30</ref>.</char></note>como columnita de humo,</para>
+  <para style="q" vid="SNG 3:6">Sahumada de mirra y de incienso,</para>
+  <para style="q" vid="SNG 3:6">Y de todos polvos aromáticos?<verse eid="SNG 3:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 3:7"/>He aquí es la litera de Salomón:</para>
+  <para style="q" vid="SNG 3:7">Sesenta valientes la rodean,</para>
+  <para style="q" vid="SNG 3:7">De los fuertes de Israel.<verse eid="SNG 3:7"/></para>
+  <para style="s">1 La hermosura</para>
+  <para style="s">2 de la esposa.</para>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 3:8"/>Todos ellos tienen espadas, diestros en la guerra;</para>
+  <para style="q" vid="SNG 3:8">Cada uno su espada sobre su muslo,</para>
+  <para style="q" vid="SNG 3:8">Por los temores de la noche.<verse eid="SNG 3:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 3:9"/>El rey Salomón se hizo una carroza</para>
+  <para style="q" vid="SNG 3:9">De madera del Líbano.<verse eid="SNG 3:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 3:10"/>Sus columnas hizo de plata,</para>
+  <para style="q" vid="SNG 3:10">Su respaldo de oro, su cielo de grana,</para>
+  <para style="q" vid="SNG 3:10">Su interior enlosado de amor,</para>
+  <para style="q" vid="SNG 3:10">Por las <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 1.5.</char></note>doncellas de Jerusalem.<verse eid="SNG 3:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 3:11"/>Salid, oh doncellas de Sión, y ved al rey Salomón</para>
+  <para style="q" vid="SNG 3:11">Con la corona con que le coronó su madre <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false"><ref loc="ISA 62:5">Is. 62.5</ref>.</char></note>el día de su desposorio,</para>
+  <para style="q" vid="SNG 3:11">Y el día del gozo de su corazón.<verse eid="SNG 3:11"/></para>
+  <chapter eid="SNG 3"/>
+  <chapter number="4" style="c" sid="SNG 4"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 4:1"/>HE aquí que tú eres <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 1.15.</char></note>hermosa, amiga mía, he aquí que tú eres hermosa;</para>
+  <para style="q" vid="SNG 4:1">Tus ojos entre tus <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 6.5-7.</char></note>guedejas <char style="it">como</char> de paloma;</para>
+  <para style="q" vid="SNG 4:1">Tus cabellos <char style="fm">4.1</char> como manada de cabras,</para>
+  <para style="q" vid="SNG 4:1">Que se muestran desde el monte de <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="MIC 7:14">Mi. 7.14</ref>.</char></note>Galaad.<verse eid="SNG 4:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 4:2"/>Tus dientes, <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false">cp. 6.6.</char></note>como manadas de trasquiladas <char style="it">ovejas,</char></para>
+  <para style="q" vid="SNG 4:2">Que suben del lavadero,</para>
+  <para style="q" vid="SNG 4:2">Todas con crías mellizas,</para>
+  <para style="q" vid="SNG 4:2">Y ninguna entre ellas estéril.<verse eid="SNG 4:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 4:3"/>Tus labios, como un hilo de grana,</para>
+  <para style="q" vid="SNG 4:3">Y tu habla hermosa;</para>
+  <para style="q" vid="SNG 4:3">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.3 </char>
+      <char style="xt" closed="false">cp. 6.7.</char>
+    </note>Tus sienes, como cachos de <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">cp. 6.11.</char></note>granada</para>
+  <para style="q" vid="SNG 4:3">á la parte adentro de tus guedejas.<verse eid="SNG 4:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 4:4"/>Tu cuello, <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false">cp. 7.4.</char></note>como la torre de David, edificada para muestra;</para>
+  <para style="q" vid="SNG 4:4">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 27:10">Ez. 27.10</ref>,<ref loc="EZK 27:11">11</ref>.</char>
+    </note>Mil escudos están colgados de ella,</para>
+  <para style="q" vid="SNG 4:4">Todos escudos de valientes.<verse eid="SNG 4:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 4:5"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.5 </char>
+      <char style="xt" closed="false">cp. 7.3.</char>
+    </note>Tus dos pechos, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false">cp. 2.9.</char></note>como dos cabritos mellizos de gama,</para>
+  <para style="q" vid="SNG 4:5">Que <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false">cp. 2.16.</char></note>son apacentados entre azucenas.<verse eid="SNG 4:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 4:6"/>Hasta <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 2.17.</char></note>que apunte el día y huyan las sombras,</para>
+  <para style="q" vid="SNG 4:6">Iréme al monte de la <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 3.6.</char></note>mirra,</para>
+  <para style="q" vid="SNG 4:6">Y al collado del incienso.<verse eid="SNG 4:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 4:7"/>Toda tú eres hermosa, amiga mía</para>
+  <para style="q" vid="SNG 4:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:27">Ef. 5.27</ref>.</char>
+    </note>Y en ti no hay mancha.<verse eid="SNG 4:7"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 4:8"/>Conmigo del <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="PSA 72:16">Sal. 72.16</ref>.</char></note>Líbano, oh esposa,</para>
+  <para style="q" vid="SNG 4:8">Conmigo ven del Líbano:</para>
+  <para style="q" vid="SNG 4:8">Mira desde la cumbre de Amana,</para>
+  <para style="q" vid="SNG 4:8">Desde la cumbre de Senir <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="DEU 3:9">Dt. 3.9</ref>.</char></note>y de Hermón,</para>
+  <para style="q" vid="SNG 4:8">Desde las guaridas de los leones,</para>
+  <para style="q" vid="SNG 4:8">Desde los montes de los <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="ISA 11:6">Is. 11.6</ref>. <ref loc="JER 5:6">Jer. 5.6</ref>.</char></note>tigres.<verse eid="SNG 4:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 4:9"/>Prendiste mi corazón, hermana, esposa <char style="it">mía;</char></para>
+  <para style="q" vid="SNG 4:9">Has preso mi corazón con uno de tus ojos,</para>
+  <para style="q" vid="SNG 4:9">Con una gargantilla de tu cuello.<verse eid="SNG 4:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 4:10"/>¡Cuán hermosos son tus amores, <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 5.1,2.</char></note>hermana, esposa <char style="it">mía!</char></para>
+  <para style="q" vid="SNG 4:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.10 </char>
+      <char style="xt" closed="false">cp. 1.2,4.</char>
+    </note>¡Cuánto mejores que el vino tus amores,</para>
+  <para style="q" vid="SNG 4:10">Y el olor de tus ungüentos que todas las especias aromáticas!<verse eid="SNG 4:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 4:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 5:3">Pr. 5.3</ref>.</char>
+    </note>
+    <char style="it">Como</char> panal de miel destilan tus labios, oh esposa;</para>
+  <para style="q" vid="SNG 4:11">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 24:13">Pr. 24.13</ref>,<ref loc="PRO 24:14">14</ref>.</char>
+    </note>Miel y leche hay debajo de tu lengua;</para>
+  <para style="q" vid="SNG 4:11">Y el olor de tus vestidos <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="GEN 27:27">Gn. 27.27</ref>. <ref loc="HOS 14:6">Os. 14.6</ref>,<ref loc="HOS 14:7">7</ref>.</char></note>como el olor del Líbano.<verse eid="SNG 4:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 4:12"/>Huerto cerrado <char style="it">eres,</char> mi hermana, esposa <char style="it">mía;</char></para>
+  <para style="q" vid="SNG 4:12">Fuente cerrada, fuente sellada.<verse eid="SNG 4:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 4:13"/>Tus renuevos paraíso de <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">ver. 3.</char></note>granados, con frutos suaves,</para>
+  <para style="q" vid="SNG 4:13">De cámphoras y <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 1.12.</char></note>nardos,<verse eid="SNG 4:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="SNG 4:14"/>Nardo y azafrán,</para>
+  <para style="q" vid="SNG 4:14">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.14 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 30:23">Ex. 30.23</ref>.</char>
+    </note>Caña aromática y canela, con todos los árboles de <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 5.1.</char></note>incienso;</para>
+  <para style="q" vid="SNG 4:14">Mirra y áloes, con todas las principales especias.<verse eid="SNG 4:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="SNG 4:15"/>Fuente de huertos,</para>
+  <para style="q" vid="SNG 4:15">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:13">Jer. 2.13</ref>.</char>
+    </note>Pozo de aguas vivas,</para>
+  <para style="q" vid="SNG 4:15">Que corren del Líbano.<verse eid="SNG 4:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="SNG 4:16"/>Levántate, Aquilón, y ven, Austro:</para>
+  <para style="q" vid="SNG 4:16">Sopla mi huerto, despréndanse sus aromas.</para>
+  <para style="q" vid="SNG 4:16">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.16 </char>
+      <char style="xt" closed="false">cp. 5.1.</char>
+    </note>Venga mi amado á su huerto,</para>
+  <para style="q" vid="SNG 4:16">Y coma de su dulce fruta.<verse eid="SNG 4:16"/></para>
+  <chapter eid="SNG 4"/>
+  <chapter number="5" style="c" sid="SNG 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="SNG 5:1"/>YO <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 4.16.</char></note>vine á mi huerto, oh hermana, esposa <char style="it">mía:</char></para>
+  <para style="q" vid="SNG 5:1">Cogido he mi <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 4.14.</char></note>mirra y mis aromas;</para>
+  <para style="q" vid="SNG 5:1">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.1 </char>
+      <char style="xt" closed="false">cp. 4.11.</char>
+    </note>He comido mi panal y mi miel,</para>
+  <para style="q" vid="SNG 5:1">Mi vino y mi leche he bebido.</para>
+  <para style="q" vid="SNG 5:1">Comed, amigos;</para>
+  <para style="q" vid="SNG 5:1">Babed, amados, y embriagaos.<verse eid="SNG 5:1"/></para>
+  <para style="s">1 Tibieza de la esposa</para>
+  <para style="s">2 y su arrepentimiento.</para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 5:2"/>Yo dormía, pero mi corazón velaba:</para>
+  <para style="q" vid="SNG 5:2">La voz de mi amado <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="REV 3:20">Ap. 3.20</ref>.</char></note>que llamaba:</para>
+  <para style="q" vid="SNG 5:2">Abreme, hermana mía, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false">cp. 1.15.</char></note>amiga mía, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false">cp. 2.14.</char></note>paloma mía, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false">cp. 6.9.</char></note>perfecta mía;</para>
+  <para style="q" vid="SNG 5:2">Porque mi cabeza está llena de rocío,</para>
+  <para style="q" vid="SNG 5:2">Mis cabellos de las gotas de la noche.<verse eid="SNG 5:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 5:3"/>Heme desnudado mi ropa; ¿cómo la tengo de vestir?</para>
+  <para style="q" vid="SNG 5:3">He lavado mis pies; ¿cómo los tengo de ensuciar?<verse eid="SNG 5:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 5:4"/>Mi amado metió su mano por el agujero,</para>
+  <para style="q" vid="SNG 5:4">Y mis entrañas se conmovieron dentro de mí.<verse eid="SNG 5:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 5:5"/>Yo me levanté para abrir á mi amado,</para>
+  <para style="q" vid="SNG 5:5">Y mis manos gotearon mirra,</para>
+  <para style="q" vid="SNG 5:5">Y mis dedos mirra que corría</para>
+  <para style="q" vid="SNG 5:5">Sobre las aldabas del candado.<verse eid="SNG 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="SNG 5:6"/>Abrí yo á mi amado;</para>
+  <para style="q" vid="SNG 5:6">Mas mi amado se había ido, había ya pasado:</para>
+  <para style="q" vid="SNG 5:6">Y <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false">ver. 2.</char></note>tras su hablar salió mi alma:</para>
+  <para style="q" vid="SNG 5:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.6 </char>
+      <char style="xt" closed="false">cp. 3.1.</char>
+    </note>Busquélo, y no lo hallé;</para>
+  <para style="q" vid="SNG 5:6">Llamélo, y no me respondió.<verse eid="SNG 5:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 5:7"/>Halláronme <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false">cp. 3.3.</char></note>los guardas que rondan la ciudad:</para>
+  <para style="q" vid="SNG 5:7">Hiriéronme, llagáronme,</para>
+  <para style="q" vid="SNG 5:7">Quitáronme mi manto de encima los guardas de los muros.<verse eid="SNG 5:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 5:8"/>Yo os conjuro, <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false">cp. 1.5.</char></note>oh doncellas de Jerusalem, si hallareis á mi amado,</para>
+  <para style="q" vid="SNG 5:8">Que le hagáis saber cómo <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false">cp. 2.5.</char></note>de amor estoy enferma.<verse eid="SNG 5:8"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 5:9"/>¿Qué es tu amado más que <char style="it">otro</char> amado,</para>
+  <para style="q" vid="SNG 5:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.9 </char>
+      <char style="xt" closed="false">cp. 1.8.</char>
+    </note>Oh la más hermosa de todas las mujeres?</para>
+  <para style="q" vid="SNG 5:9">¿Qué es tu amado más que <char style="it">otro</char> amado,</para>
+  <para style="q" vid="SNG 5:9">Que así nos conjuras?<verse eid="SNG 5:9"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 5:10"/>Mi amado es blanco y rubio,</para>
+  <para style="q" vid="SNG 5:10">Señalado entre diez mil.<verse eid="SNG 5:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 5:11"/>Su cabeza, <char style="it">como</char> <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="PSA 19:10">Sal. 19.10</ref>.</char></note>oro finísimo;</para>
+  <para style="q" vid="SNG 5:11">Sus cabellos crespos, negros como el cuervo.<verse eid="SNG 5:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 5:12"/>Sus ojos, <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false">cp. 1.15 y <ref loc="SNG 4:1">4.1</ref>.</char></note>como palomas junto á los arroyos de las aguas,</para>
+  <para style="q" vid="SNG 5:12">Que se lavan con leche, <char style="it">y</char> á la perfección colocados.<verse eid="SNG 5:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 5:13"/>Sus mejillas, como una <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">cp. 6.2.</char></note>era de especias aromáticas, <char style="it">como</char> fragantes flores:</para>
+  <para style="q" vid="SNG 5:13">Sus labios, <char style="it">como</char> <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">cp. 2.1.</char></note>lirios que destilan mirra que trasciende.<verse eid="SNG 5:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="SNG 5:14"/>Sus manos, <char style="it">como</char> anillos de oro engastados de <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="EXO 28:20">Ex. 28.20</ref>. <ref loc="EZK 1:16">Ez. 1.16</ref>.</char></note>jacintos:</para>
+  <para style="q" vid="SNG 5:14">Su vientre, <char style="it">como</char> claro marfil cubierto de <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="EXO 24:10">Ex. 24.10</ref>.</char></note>zafiros.<verse eid="SNG 5:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="SNG 5:15"/>Sus piernas, <char style="it">como</char> columnas de mármol fundadas sobre basas de fino oro:</para>
+  <para style="q" vid="SNG 5:15">Su aspecto como el <note caller="+" style="x"><char style="xo" closed="false">5.15 </char><char style="xt" closed="false">cp. 4.8.</char></note>Líbano, escogido como los cedros.<verse eid="SNG 5:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="SNG 5:16"/>Su paladar, dulcísimo: y todo él codiciable.</para>
+  <para style="q" vid="SNG 5:16">Tal es mi amado, tal es mi amigo,</para>
+  <para style="q" vid="SNG 5:16">Oh doncellas de Jerusalem.<verse eid="SNG 5:16"/></para>
+  <chapter eid="SNG 5"/>
+  <chapter number="6" style="c" sid="SNG 6"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 6:1"/>¿DÓNDE se ha ido tu amado,</para>
+  <para style="q" vid="SNG 6:1">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.1 </char>
+      <char style="xt" closed="false">cp. 1.8.</char>
+    </note>Oh la más hermosa de todas las mujeres?</para>
+  <para style="q" vid="SNG 6:1">¿Adónde se apartó tu amado,</para>
+  <para style="q" vid="SNG 6:1">Y le buscaremos contigo?<verse eid="SNG 6:1"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 6:2"/>Mi amado descendió <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">cp. 4.16.</char></note>a su huerto, <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">cp. 5.13.</char></note>a las eras de los aromas</para>
+  <para style="q" vid="SNG 6:2">Para apacentar en los huertos, y para coger los <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">cp. 2.1.</char></note>lirios.<verse eid="SNG 6:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 6:3"/>Yo soy de mi amado, <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false">cp. 2.16 y <ref loc="SNG 7:10">7.10</ref>.</char></note>y mi amado es mío:</para>
+  <para style="q" vid="SNG 6:3">El apacienta entre los lirios.<verse eid="SNG 6:3"/></para>
+  <para style="s">1 Elogio de</para>
+  <para style="s">2 la esposa.</para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 6:4"/>Hermosa eres tú, oh amiga mía, como <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="1KI 14:17">1 R. 14.17</ref>.</char></note>Tirsa;</para>
+  <para style="q" vid="SNG 6:4">De desear, como Jerusalem;</para>
+  <para style="q" vid="SNG 6:4">Imponente como ejércitos en orden.<verse eid="SNG 6:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 6:5"/>Aparta tus ojos de delante de mí,</para>
+  <para style="q" vid="SNG 6:5">Porque ellos me vencieron.</para>
+  <para style="q" vid="SNG 6:5">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.5 </char>
+      <char style="xt" closed="false">cp. 4.1,2.</char>
+    </note>Tu cabello es como manada de cabras,</para>
+  <para style="q" vid="SNG 6:5">Que se muestran en Galaad.<verse eid="SNG 6:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 6:6"/>Tus dientes, <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 4.2.</char></note>como manada de ovejas</para>
+  <para style="q" vid="SNG 6:6">Que suben del lavadero,</para>
+  <para style="q" vid="SNG 6:6">Todas con crías mellizas,</para>
+  <para style="q" vid="SNG 6:6">Y estéril no hay entre ellas.<verse eid="SNG 6:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 6:7"/>Como <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false">cp. 4.3.</char></note>cachos de granada son tus sienes</para>
+  <para style="q" vid="SNG 6:7">Entre tus guedejas.<verse eid="SNG 6:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 6:8"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.8 </char>
+      <char style="xt" closed="false">cp. 3.7.</char>
+    </note>Sesenta son las reinas, y ochenta las concubinas,</para>
+  <para style="q" vid="SNG 6:8">Y las doncellas sin cuento:<verse eid="SNG 6:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 6:9"/>
+    <char style="it">Mas</char> una es la paloma mía, la <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false">cp. 5.2.</char></note>perfecta mía;</para>
+  <para style="q" vid="SNG 6:9">Unica es á su madre,</para>
+  <para style="q" vid="SNG 6:9">Escogida á la que la engendró.</para>
+  <para style="q" vid="SNG 6:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 30:13">Gn. 30.13</ref>.</char>
+    </note>Viéronla las doncellas, y llamáronla bienaventurada;</para>
+  <para style="q" vid="SNG 6:9">Las reinas y las concubinas, y la alabaron.<verse eid="SNG 6:9"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 6:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.10 </char>
+      <char style="xt" closed="false">cp. 3.6 y <ref loc="SNG 8:5">8.5</ref>.</char>
+    </note>¿Quién es ésta que se muestra como el alba,</para>
+  <para style="q" vid="SNG 6:10">Hermosa como la luna,</para>
+  <para style="q" vid="SNG 6:10">Esclarecida como el sol,</para>
+  <para style="q" vid="SNG 6:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.10 </char>
+      <char style="xt" closed="false">ver. 4.</char>
+    </note>Imponente como ejércitos en orden?<verse eid="SNG 6:10"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 6:11"/>Al huerto de los nogales descendí</para>
+  <para style="q" vid="SNG 6:11">A ver los frutos del valle,</para>
+  <para style="q" vid="SNG 6:11">
+    <char style="it">Y</char> <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 7.12.</char></note>para ver si brotaban las vides,</para>
+  <para style="q" vid="SNG 6:11">Si florecían los granados.<verse eid="SNG 6:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 6:12"/>No lo supe: hame mi alma hecho</para>
+  <para style="q" vid="SNG 6:12">
+    <char style="it">Como</char> los carros de Amminadab.<verse eid="SNG 6:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 6:13"/>Tórnate, tórnate, <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="1KI 1:3">1 R. 1.3</ref>, etc.</char></note>oh Sulamita;</para>
+  <para style="q" vid="SNG 6:13">Tórnate, tórnate, y te miraremos.</para>
+  <para style="b" vid="SNG 6:13"/>
+  <para style="q" vid="SNG 6:13">¿Qué veréis en la Sulamita?</para>
+  <para style="q" vid="SNG 6:13">Como la reunión de dos campamentos.<verse eid="SNG 6:13"/></para>
+  <chapter eid="SNG 6"/>
+  <chapter number="7" style="c" sid="SNG 7"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 7:1"/>¡CUÁN hermosos son tus pies en los calzados, <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false"><ref loc="PSA 45:13">Sal. 45.13</ref>.</char></note>oh hija de príncipe!</para>
+  <para style="q" vid="SNG 7:1">Los contornos de tus muslos son como joyas,</para>
+  <para style="q" vid="SNG 7:1">Obra de mano de excelente maestro.<verse eid="SNG 7:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 7:2"/>Tu ombligo, <char style="it">como</char> una taza redonda,</para>
+  <para style="q" vid="SNG 7:2">Que no le falta bebida.</para>
+  <para style="q" vid="SNG 7:2">Tu vientre, <char style="it">como</char> montón de trigo,</para>
+  <para style="q" vid="SNG 7:2">Cercado de <note caller="+" style="x"><char style="xo" closed="false">7.2 </char><char style="xt" closed="false">cp. 2.1.</char></note>lirios.<verse eid="SNG 7:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 7:3"/>Tus dos pechos, <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false">cp. 4.5.</char></note>como dos cabritos</para>
+  <para style="q" vid="SNG 7:3">Mellizos de gama.<verse eid="SNG 7:3"/></para>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 7:4"/>Tu cuello, <note caller="+" style="x"><char style="xo" closed="false">7.4 </char><char style="xt" closed="false">cp. 4.4.</char></note>como torre de marfil;</para>
+  <para style="q" vid="SNG 7:4">Tus ojos, <char style="it">como</char> las pesqueras de <note caller="+" style="x"><char style="xo" closed="false">7.4 </char><char style="xt" closed="false"><ref loc="NUM 21:26">Nm. 21.26</ref>.</char></note>Hesbón junto á la puerta de Bat-rabbim;</para>
+  <para style="q" vid="SNG 7:4">Tu nariz, como la torre del Líbano,</para>
+  <para style="q" vid="SNG 7:4">Que mira hacia Damasco.<verse eid="SNG 7:4"/></para>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 7:5"/>Tu cabeza encima de ti, como el Carmelo;</para>
+  <para style="q" vid="SNG 7:5">Y el cabello de tu cabeza, como la purpura del rey</para>
+  <para style="q" vid="SNG 7:5">Ligada en los corredores.<verse eid="SNG 7:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 7:6"/>¡Qué hermosa eres, y cuán suave,</para>
+  <para style="q" vid="SNG 7:6">Oh amor deleitoso!<verse eid="SNG 7:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 7:7"/>Y tu estatura es semejante á la palma,</para>
+  <para style="q" vid="SNG 7:7">Y tus pechos á los racimos!<verse eid="SNG 7:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 7:8"/>Yo dije: Subiré á la palma,</para>
+  <para style="q" vid="SNG 7:8">Asiré sus ramos:</para>
+  <para style="q" vid="SNG 7:8">Y tus pechos serán ahora como racimos de vid,</para>
+  <para style="q" vid="SNG 7:8">Y el olor de tu boca como de manzanas;<verse eid="SNG 7:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 7:9"/>Y tu paladar como el buen vino,</para>
+  <para style="q" vid="SNG 7:9">Que se entra á mi amado suavemente,</para>
+  <para style="q" vid="SNG 7:9">Y hace hablar los labios de los viejos.<verse eid="SNG 7:9"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 7:10"/>Yo soy <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false">cp. 2.16 y <ref loc="SNG 6:3">6.3</ref>.</char></note>de mi amado,</para>
+  <para style="q" vid="SNG 7:10">Y <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false"><ref loc="PSA 45:11">Sal. 45.11</ref>.</char></note>conmigo tiene su contentamiento.<verse eid="SNG 7:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 7:11"/>Ven, oh amado mío, salgamos al campo,</para>
+  <para style="q" vid="SNG 7:11">Moremos en las aldeas.<verse eid="SNG 7:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 7:12"/>Levantémonos de mañana á las viñas;</para>
+  <para style="q" vid="SNG 7:12">Veamos si <note caller="+" style="x"><char style="xo" closed="false">7.12 </char><char style="xt" closed="false">cp. 6.11.</char></note>brotan las vides, si se abre el <note caller="+" style="x"><char style="xo" closed="false">7.12 </char><char style="xt" closed="false">cp. 2.13.</char></note>cierne,</para>
+  <para style="q" vid="SNG 7:12">Si han florecido <char style="fm">7.12</char>los granados;</para>
+  <para style="q" vid="SNG 7:12">Allí te daré mis amores.<verse eid="SNG 7:12"/></para>
+  <para style="s">1 El poder</para>
+  <para style="s">2 del amor.</para>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 7:13"/>Las mandrágoras <note caller="+" style="x"><char style="xo" closed="false">7.13 </char><char style="xt" closed="false"><ref loc="GEN 30:14">Gn. 30.14</ref>.</char></note>han dado olor,</para>
+  <para style="q" vid="SNG 7:13">Y á nuestras puertas <note caller="+" style="x"><char style="xo" closed="false">7.13 </char><char style="xt" closed="false"><ref loc="MAT 13:52">Mt. 13.52</ref>.</char></note>hay toda suerte de dulces frutas, nuevas y añejas.</para>
+  <para style="q" vid="SNG 7:13">Que para ti, oh amado mío, he guardado.<verse eid="SNG 7:13"/></para>
+  <chapter eid="SNG 7"/>
+  <chapter number="8" style="c" sid="SNG 8"/>
+  <para style="q">
+    <verse number="1" style="v" sid="SNG 8:1"/>¡OH quién te me diese como hermano</para>
+  <para style="q" vid="SNG 8:1">Que mamó los pechos de mi madre;</para>
+  <para style="q" vid="SNG 8:1">
+    <char style="it">De modo</char> que te halle yo fuera, y te bese,</para>
+  <para style="q" vid="SNG 8:1">Y no me menosprecien!<verse eid="SNG 8:1"/></para>
+  <para style="q">
+    <verse number="2" style="v" sid="SNG 8:2"/>Yo te llevaría, te metiera en casa de mi madre:</para>
+  <para style="q" vid="SNG 8:2">Tú me enseñarías,</para>
+  <para style="q" vid="SNG 8:2">Y yo te hiciera beber vino</para>
+  <para style="q" vid="SNG 8:2">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 9:2">Pr. 9.2</ref>,<ref loc="PRO 9:5">5</ref>.</char>
+    </note>Adobado del mosto de mis <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false">cp. 4.3.</char></note>granadas.<verse eid="SNG 8:2"/></para>
+  <para style="q">
+    <verse number="3" style="v" sid="SNG 8:3"/>Su izquierda <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false">cp. 2.6.</char></note><char style="it">esté</char> debajo de mi cabeza,</para>
+  <para style="q" vid="SNG 8:3">Y su derecha me abrace.<verse eid="SNG 8:3"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="4" style="v" sid="SNG 8:4"/>Conjúroos, <note caller="+" style="x"><char style="xo" closed="false">8.4 </char><char style="xt" closed="false">cp. 1.5.</char></note>oh doncellas de Jerusalem,</para>
+  <para style="q" vid="SNG 8:4">Que no despertéis, ni hagáis velar al amor,</para>
+  <para style="q" vid="SNG 8:4">Hasta que quiera.<verse eid="SNG 8:4"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="5" style="v" sid="SNG 8:5"/>¿Quién es ésta <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false">cp. 3.6.</char></note>que sube del desierto,</para>
+  <para style="q" vid="SNG 8:5">Recostada sobre su amado?</para>
+  <para style="q" vid="SNG 8:5">Debajo de un manzano te desperté:</para>
+  <para style="q" vid="SNG 8:5">Allí tuvo tu madre dolores,</para>
+  <para style="q" vid="SNG 8:5">Allí tuvo dolores la que te parió.<verse eid="SNG 8:5"/></para>
+  <para style="q">
+    <verse number="6" style="v" sid="SNG 8:6"/>Ponme <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false"><ref loc="ISA 49:16">Is. 49.16</ref>. <ref loc="JER 22:24">Jer. 22.24</ref>.</char></note>como un sello sobre tu corazón, como una marca sobre tu brazo:</para>
+  <para style="q" vid="SNG 8:6">Porque <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false"><ref loc="ROM 8:35">Ro. 8.35</ref>.</char></note>fuerte es como la muerte el amor;</para>
+  <para style="q" vid="SNG 8:6">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 6:34">Pr. 6.34</ref>,<ref loc="PRO 6:35">35</ref>.</char>
+    </note>Duro como el sepulcro el celo:</para>
+  <para style="q" vid="SNG 8:6">Sus brasas, brasas de fuego,</para>
+  <para style="q" vid="SNG 8:6">Fuerte llama.<verse eid="SNG 8:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="SNG 8:7"/>Las muchas aguas no podrán apagar el amor,</para>
+  <para style="q" vid="SNG 8:7">Ni lo ahogarán los ríos.</para>
+  <para style="q" vid="SNG 8:7">
+    <char style="fm">8.6</char>Si diese el hombre toda la hacienda de su casa por este amor,</para>
+  <para style="q" vid="SNG 8:7">De cierto lo menospreciaran.<verse eid="SNG 8:7"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="8" style="v" sid="SNG 8:8"/>Tenemos una pequeña hermana,</para>
+  <para style="q" vid="SNG 8:8">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:7">Ez. 16.7</ref>.</char>
+    </note>Que no tiene pechos:</para>
+  <para style="q" vid="SNG 8:8">¿Qué haremos á nuestra hermana</para>
+  <para style="q" vid="SNG 8:8">Cuando de ella se hablare?<verse eid="SNG 8:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="SNG 8:9"/>Si ella es muro,</para>
+  <para style="q" vid="SNG 8:9">Edificaremos sobre él un palacio de plata:</para>
+  <para style="q" vid="SNG 8:9">Y si fuere puerta,</para>
+  <para style="q" vid="SNG 8:9">La guarneceremos con tablas de cedro.<verse eid="SNG 8:9"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="10" style="v" sid="SNG 8:10"/>Yo soy muro, y mis pechos <note caller="+" style="x"><char style="xo" closed="false">8.10 </char><char style="xt" closed="false">cp. 5.13.</char></note>como torres,</para>
+  <para style="q" vid="SNG 8:10">Desde que fuí en sus ojos como la que halla paz.<verse eid="SNG 8:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="SNG 8:11"/>Salomón <note caller="+" style="x"><char style="xo" closed="false">8.11 </char><char style="xt" closed="false"><ref loc="ECC 2:4">Ec. 2.4</ref>.</char></note>tuvo una viña en Baal-hamón,</para>
+  <para style="q" vid="SNG 8:11">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 21:33">Mt. 21.33</ref>.</char>
+    </note>La cual entregó á guardas,</para>
+  <para style="q" vid="SNG 8:11">Cada uno de los cuales debía traer mil <char style="it">monedas</char> de plata por su fruto.<verse eid="SNG 8:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="SNG 8:12"/>Mi viña, que es mía, está delante de mí:</para>
+  <para style="q" vid="SNG 8:12">Las mil serán tuyas, oh Salomón,</para>
+  <para style="q" vid="SNG 8:12">Y doscientas, de los que guardan su fruto.<verse eid="SNG 8:12"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="13" style="v" sid="SNG 8:13"/>Oh tú la que moras en los huertos,</para>
+  <para style="q" vid="SNG 8:13">Los compañeros escuchan tu voz:</para>
+  <para style="q" vid="SNG 8:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.13 </char>
+      <char style="xt" closed="false">cp. 2.14.</char>
+    </note>Házmela oir.<verse eid="SNG 8:13"/></para>
+  <para style="b"/>
+  <para style="q">
+    <verse number="14" style="v" sid="SNG 8:14"/>Huye, amado mío;</para>
+  <para style="q" vid="SNG 8:14">Y <note caller="+" style="x"><char style="xo" closed="false">8.14 </char><char style="xt" closed="false">cp. 2.9,17.</char></note>sé semejante al gamo, ó al cervatillo,</para>
+  <para style="q" vid="SNG 8:14">Sobre las montañas de los aromas.<verse eid="SNG 8:14"/></para>
+  <chapter eid="SNG 8"/>
+</usx>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="GAL" style="id">GALVR.COR Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">A LOS GÁLATAS</para>
+  <para style="toc3">Ga.</para>
+  <para style="toc2">Gálatas</para>
+  <para style="toc1">Carta de san Pablo a los Gálatas</para>
+  <para style="mt2">LA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS GÁLATAS.</para>
+  <chapter number="1" style="c" sid="GAL 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 1:1"/>PABLO, apóstol, (<note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false">vers. 11,12.</char></note>no de los hombres ni por hombre, mas <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 9:6">Hch. 9.6</ref>. <ref loc="1TI 1:1">1 Ti. 1.1</ref>. <ref loc="TIT 1:3">Tit. 1.3</ref>.</char></note>por Jesucristo y por Dios el Padre, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>que lo resucitó de los muertos),<verse eid="GAL 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 1:2"/>Y todos los hermanos <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="PHP 4:21">Fil. 4.21</ref>.</char></note>que están conmigo, á las iglesias de <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ACT 16:6">Hch. 16.6</ref>.</char></note>Galacia:<verse eid="GAL 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 1:3"/>Gracia <char style="it">sea</char> á vosotros, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="ROM 1:7">Ro. 1.7</ref>.</char></note>y paz de Dios el Padre, y de nuestro Señor Jesucristo,<verse eid="GAL 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 1:4"/>El cual <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="MAT 20:28">Mt. 20.28</ref>. <ref loc="ROM 4:25">Ro. 4.25</ref>. cp. 2.20.</char></note>se dió á sí mismo por nuestros pecados para librarnos <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="JHN 15:19">Jn. 15.19</ref>.</char></note>de este presente siglo malo, conforme á la voluntad de Dios y Padre nuestro;<verse eid="GAL 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 1:5"/>Al cual <char style="it">sea</char> la gloria por siglos de siglos. Amén.<verse eid="GAL 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 1:6"/>Estoy maravillado de que tan pronto os hayáis traspasado <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false">ver. 15. cp. 5.8.</char></note>del que os llamó á la gracia de Cristo, á otro evangelio:<verse eid="GAL 1:6"/></para>
+  <para style="s">1 Autoridad divina</para>
+  <para style="s">2 del apostolado de Pablo.</para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 1:7"/>No que hay otro, <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="2CO 11:4">2 Co. 11.4</ref>.</char></note>sino que hay algunos <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="ACT 15:24">Hch. 15.24</ref>. cp. 5.10.</char></note>que os inquietan, y quieren pervertir el evangelio de Cristo.<verse eid="GAL 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 1:8"/>Mas aun si nosotros ó <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="2CO 11:14">2 Co. 11.14</ref>.</char></note>un ángel del cielo os anunciare otro evangelio del que os hemos anunciado, sea anatema.<verse eid="GAL 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 1:9"/>Como antes hemos dicho, también ahora decimos otra vez: Si alguno os anunciare otro evangelio del que habéis recibido, sea <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false">cp. 5.12.</char></note>anatema.<verse eid="GAL 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 1:10"/>Porque, <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="1TH 2:4">1 Ts. 2.4</ref>.</char></note>¿persuado yo ahora á hombres ó á Dios? ¿ó busco de agradar á hombres? Cierto, que si todavía agradara á los hombres, no sería siervo de Cristo.<verse eid="GAL 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 1:11"/>Mas os hago saber, hermanos, que <note caller="+" style="x"><char style="xo" closed="false">1.11 </char><char style="xt" closed="false"><ref loc="ROM 2:16">Ro. 2.16</ref>.</char></note>el evangelio que ha sido anunciado por mí, no es según hombre;<verse eid="GAL 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 1:12"/>Pues <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="1CO 11:23">1 Co. 11.23</ref>.</char></note>ni yo lo recibí, ni lo aprendí de hombre, sino <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="2CO 12:2">2 Co. 12.2</ref>,<ref loc="2CO 12:7">7</ref>. cp. 2.2. <ref loc="EPH 3:3">Ef. 3.3</ref>.</char></note>por revelación de Jesucristo.<verse eid="GAL 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 1:13"/>Porque ya habéis oído acerca de <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="EPH 4:22">Ef. 4.22</ref>. <ref loc="HEB 13:7">He. 13.7</ref>.</char></note>mi conducta otro tiempo en el Judaismo, que perseguía <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="ACT 8:3">Hch. 8.3</ref>.</char></note>sobremanera la iglesia de Dios, y la destruía;<verse eid="GAL 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 1:14"/>Y aprovechaba en el Judaismo sobre muchos de mis iguales en mi nación, <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="PHP 3:6">Fil. 3.6</ref>.</char></note>siendo muy más celador <char style="it">que todos</char> <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="MAT 15:2">Mt. 15.2</ref>. <ref loc="COL 2:8">Col. 2.8</ref>.</char></note>de las tradiciones de mis padres.<verse eid="GAL 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 1:15"/>Mas cuando plugo á Dios, <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="ROM 1:1">Ro. 1.1</ref>,<ref loc="ROM 1:5">5</ref>.</char></note>que me apartó desde el vientre de mi madre, y <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false">ver. 6.</char></note>me llamó por su gracia,<verse eid="GAL 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 1:16"/>Revelar á su Hijo en mí, <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="ACT 9:15">Hch. 9.15</ref>. cp. 2.7,8.</char></note>para que le predicase entre los Gentiles, luego no conferí con carne y sangre;<verse eid="GAL 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 1:17"/>Ni fuí á Jerusalem á los que eran apóstoles antes que yo; sino que me fuí á la <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 4.25.</char></note>Arabia, y volví de nuevo á Damasco.<verse eid="GAL 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 1:18"/>Depués, pasados <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="ACT 9:23">Hch. 9.23</ref>.</char></note>tres años, <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="ACT 9:26-30">Hch. 9.26-30</ref>.</char></note>fuí á Jerusalem á ver á Pedro, y estuve con él quince días.<verse eid="GAL 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="GAL 1:19"/>Mas á ningún otro de los apóstoles vi, <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="ACT 12:17">Hch. 12.17</ref>.</char></note>sino á Jacobo el hermano del Señor.<verse eid="GAL 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="GAL 1:20"/>Y en esto que os escribo, he aquí delante de Dios, no miento.<verse eid="GAL 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="GAL 1:21"/>Después fuí á las partes de <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="ACT 15:23">Hch. 15.23</ref>.</char></note>Siria y de <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="ACT 9:30">Hch. 9.30</ref>.</char></note>Cilicia;<verse eid="GAL 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="GAL 1:22"/>Y no era conocido de vista á las iglesias de Judea, que <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="2CO 5:17">2 Co. 5.17</ref>.</char></note>eran en Cristo;<verse eid="GAL 1:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="GAL 1:23"/>Solamente habían oído decir: Aquel que en otro tiempo nos perseguía, ahora anuncia la fe que en otro tiempo destruía.<verse eid="GAL 1:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="GAL 1:24"/>Y <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="2CO 9:13">2 Co. 9.13</ref>.</char></note>glorificaban á Dios en mí.<verse eid="GAL 1:24"/></para>
+  <chapter eid="GAL 1"/>
+  <chapter number="2" style="c" sid="GAL 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 2:1"/>DESPUÉS, pasados catorce años, <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="ACT 15:2">Hch. 15.2</ref>.</char></note>fuí otra vez á Jerusalem juntamente con <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="ACT 4:36">Hch. 4.36</ref>.</char></note>Bernabé, tomando también conmigo á <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="2CO 2:13">2 Co. 2.13</ref>.</char></note>Tito.<verse eid="GAL 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 2:2"/>Empero fuí <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false">cp. 1.12.</char></note>por revelación, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="ACT 15:12">Hch. 15.12</ref>.</char></note>y comuniquéles el evangelio que predico entre los Gentiles; mas particularmente á los que parecían ser algo, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false">cp. 4.11. <ref loc="1TH 3:5">1 Ts. 3.5</ref>.</char></note>por no correr en vano, ó haber corrido.<verse eid="GAL 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 2:3"/>Mas ni aun Tito, que estaba conmigo, siendo Griego, <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="ACT 16:3">Hch. 16.3</ref>.</char></note>fué compelido á circuncidarse.<verse eid="GAL 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 2:4"/>Y eso por causa de los <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="2CO 11:26">2 Co. 11.26</ref>.</char></note>falsos hermanos, que se <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="2PE 2:1">2 P. 2.1</ref>.</char></note>entraban secretamente para espiar nuestra <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 5.1.</char></note>libertad que tenemos en Cristo Jesús, <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 4.3,9,24,25 y <ref loc="GAL 5:1">5.1</ref>.</char></note>para ponernos en servidumbre;<verse eid="GAL 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 2:5"/>A los cuales ni aun por una hora cedimos sujetándonos, para que la verdad del evangelio permaneciese con vosotros.<verse eid="GAL 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 2:6"/>Empero de aquellos que parecían ser algo (cuáles hayan sido algún tiempo, no tengo que ver; Dios no acepta apariencia de hombre), á mí ciertamente los que parecían ser algo, nada me dieron.<verse eid="GAL 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 2:7"/>Antes por el contrario, <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false">ver. 8. <ref loc="ACT 9:15">Hch. 9.15</ref>. cp. 1.16.</char></note>como vieron que el evangelio de la incircuncisión <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false"><ref loc="1TI 1:11">1 Ti. 1.11</ref>.</char></note>me era encargado, como á Pedro el de la circuncisión,<verse eid="GAL 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 2:8"/>(Porque el que hizo por Pedro para el apostolado de la circuncisión, <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false">cp. 3.5.</char></note>hizo también por mí para con los Gentiles;)<verse eid="GAL 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 2:9"/>Y como vieron la gracia que me era dada, <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">ver. 12. <ref loc="ACT 12:17">Hch. 12.17</ref>.</char></note>Jacobo y <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="1CO 1:12">1 Co. 1.12</ref>.</char></note>Cefas y Juan, que <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">vers. 2,6.</char></note>parecían ser las <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="REV 3:12">Ap. 3.12</ref>.</char></note>columnas, nos dieron las diestras de compañía á mí y á <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">ver. 1.</char></note>Bernabé, para que nosotros fuésemos á los Gentiles, y ellos á la circuncisión.<verse eid="GAL 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 2:10"/>Solamente <char style="it">nos pidieron</char> <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="ROM 12:13">Ro. 12.13</ref>.</char></note>que nos acordásemos de los pobres; lo mismo que fuí también solícito en hacer.<verse eid="GAL 2:10"/></para>
+  <para style="s">1 Pablo resiste á Pedro.</para>
+  <para style="s">2 La ley y la fe.</para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 2:11"/>Empero viniendo Pedro á <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ACT 11:26">Hch. 11.26</ref>.</char></note>Antioquía, le resistí en la cara, porque era de condenar.<verse eid="GAL 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 2:12"/>Porque antes que viniesen unos <char style="it">de parte</char> de Jacobo, <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="ACT 10:28">Hch. 10.28</ref> y <ref loc="ACT 11:3">11.3</ref> y <ref loc="ACT 15:28">15.28</ref>,<ref loc="ACT 15:29">29</ref>.</char></note>comía con los Gentiles; mas después que vinieron, se retraía y apartaba, teniendo miedo de <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="ACT 10:45">Hch. 10.45</ref>.</char></note>los que eran de la circuncisión.<verse eid="GAL 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 2:13"/>Y á su disimulación consentían también los otros Judíos; de tal manera que aun Bernabé fué también llevado <char style="it">de ellos</char> en su simulación.<verse eid="GAL 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 2:14"/>Mas cuando vi que no andaban derechamente conforme á la verdad del evangelio, dije á Pedro delante de todos: Si tú, siendo Judío, vives como los Gentiles y no como Judío, ¿por qué constriñes á los Gentiles á judaizar?<verse eid="GAL 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 2:15"/>Nosotros Judíos naturales, y no <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="EPH 2:12">Ef. 2.12</ref>.</char></note>pecadores de los Gentiles,<verse eid="GAL 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 2:16"/>Sabiendo <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="ACT 13:38">Hch. 13.38</ref>,<ref loc="ACT 13:39">39</ref>. cp. 3.11.</char></note>que el hombre no es justificado por las obras de la ley, sino <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="ROM 1:17">Ro. 1.17</ref> y <ref loc="ROM 3:22">3.22</ref>,<ref loc="ROM 3:28">28</ref> y <ref loc="ROM 5:1">5.1</ref>. cp. 3.24.</char></note>por la fe de Jesucristo, nosotros también hemos creído en Jesucristo, para que fuésemos justificados por la fe de Cristo, y no por las obras de la ley; por cuanto por las obras de la ley ninguna carne será justificada.<verse eid="GAL 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 2:17"/>Y si buscando nosotros ser justificados en Cristo, también nosotros somos hallados pecadores, ¿es por eso Cristo ministro de pecado? En ninguna manera.<verse eid="GAL 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 2:18"/>Porque si las cosas que destruí, las mismas vuelvo á edificar, transgresor me hago.<verse eid="GAL 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="GAL 2:19"/>Porque yo <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="ROM 3:20">Ro. 3.20</ref>.</char></note>por la ley <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="ROM 7:4">Ro. 7.4</ref>,<ref loc="ROM 7:6">6</ref>.</char></note>soy muerto á la ley, <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false"><ref loc="ROM 6:11">Ro. 6.11</ref>.</char></note>para vivir á Dios.<verse eid="GAL 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="GAL 2:20"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 6:6">Ro. 6.6</ref>.</char>
+    </note>Con Cristo estoy juntamente crucificado, y vivo, no ya yo, mas vive Cristo en mí: y lo que ahora vivo en la carne, <char style="it">lo</char> vivo en la fe del Hijo de Dios, el cual me <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="ROM 8:37">Ro. 8.37</ref>.</char></note>amó, y se <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false">cp. 1.4. <ref loc="TIT 2:14">Tit. 2.14</ref>.</char></note>entregó á sí mismo por mí.<verse eid="GAL 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="GAL 2:21"/>No desecho la gracia de Dios: <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false">cp. 3.21 y <ref loc="GAL 5:4">5.4</ref>. <ref loc="HEB 7:11">He. 7.11</ref>.</char></note>porque si por la ley fuese la justicia, entonces por demás murió Cristo.<verse eid="GAL 2:21"/></para>
+  <chapter eid="GAL 2"/>
+  <chapter number="3" style="c" sid="GAL 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 3:1"/>¡OH Gálatas insensatos! <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 5.7.</char></note>¿quién os fascinó, para no obedecer á la verdad, ante cuyos ojos Jesucristo fué ya descrito <char style="it">como</char> crucificado entre vosotros?<verse eid="GAL 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 3:2"/>Esto solo quiero saber de vosotros: ¿Recibisteis <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false">ver. 14. <ref loc="EPH 1:13">Ef. 1.13</ref>. <ref loc="HEB 6:4">He. 6.4</ref>.</char></note>el Espíritu por las obras de la ley, <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="ROM 10:17">Ro. 10.17</ref>.</char></note>o por el oir de la fe?<verse eid="GAL 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 3:3"/>¿Tan necios sois? <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">cp. 4.9.</char></note>¿habiendo comenzado por el Espíritu, ahora os perfeccionáis por la carne?<verse eid="GAL 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 3:4"/>¿Tantas cosas habéis padecido <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="HEB 10:32">He. 10.32</ref>,<ref loc="HEB 10:35">35</ref>,<ref loc="HEB 10:36">36</ref>.</char></note>en vano? si empero en vano.<verse eid="GAL 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 3:5"/>Aquel, pues, que os daba el Espíritu, y obraba maravillas entre vosotros <char style="it">¿hacíalo</char> por las obras de la ley, ó por el oir de la fe?<verse eid="GAL 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 3:6"/>Como <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="GEN 15:6">Gn. 15.6</ref>. <ref loc="ROM 4:3">Ro. 4.3</ref>,<ref loc="ROM 4:9">9</ref>,<ref loc="ROM 4:21">21</ref>,<ref loc="ROM 4:22">22</ref>. <ref loc="JAS 2:23">Stg. 2.23</ref>.</char></note>Abraham creyó á Dios, y le fué imputado á justicia.<verse eid="GAL 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 3:7"/>Sabéis por tanto, que <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false">ver. 29.</char></note>los que son de fe, los tales son hijos de Abraham.<verse eid="GAL 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 3:8"/>Y viendo antes <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">ver. 22. cp. 4.30.</char></note>la Escritura que Dios por la fe <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="ROM 3:30">Ro. 3.30</ref>.</char></note>había de justificar á los Gentiles, evangelizó antes á Abraham, <char style="it">diciendo:</char> En ti serán benditas <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="GEN 12:3">Gn. 12.3</ref>.</char></note>todas las naciones.<verse eid="GAL 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 3:9"/>Luego los de la fe son benditos con el creyente Abraham.<verse eid="GAL 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 3:10"/>Porque todos los que son de las obras de la ley, <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="ROM 4:15">Ro. 4.15</ref>.</char></note>están bajo de maldición. Porque escrito está: <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false"><ref loc="DEU 27:26">Dt. 27.26</ref>.</char></note>Maldito todo aquel que no permaneciere en todas las cosas que están escritas en el libro de la ley, para hacerlas.<verse eid="GAL 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 3:11"/>Mas por cuanto <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false">cp. 2.16.</char></note>por la ley ninguno se justifica para con Dios, queda manifiesto: Que <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false"><ref loc="HAB 2:4">Hab. 2.4</ref>. <ref loc="ROM 1:17">Ro. 1.17</ref>. <ref loc="HEB 10:38">He. 10.38</ref>.</char></note>el justo por la fe vivirá.<verse eid="GAL 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 3:12"/>La ley también no es de la fe; sino, <note caller="+" style="x"><char style="xo" closed="false">3.12 </char><char style="xt" closed="false"><ref loc="LEV 18:5">Lv. 18.5</ref>.</char></note>El hombre que los hiciere, vivirá en ellos.<verse eid="GAL 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 3:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 5:21">2 Co. 5.21</ref>.</char>
+    </note>Cristo nos <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 4.5.</char></note>redimió de la maldición de la ley, hecho por nosotros maldición; (porque está escrito: <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="DEU 21:23">Dt. 21.23</ref>.</char></note>Maldito cualquiera que <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="ACT 5:30">Hch. 5.30</ref>.</char></note>es colgado en madero:)<verse eid="GAL 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 3:14"/>Para que la bendición de Abraham fuese sobre los Gentiles en Cristo Jesús; para que por la fe recibamos <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="ACT 2:33">Hch. 2.33</ref>.</char></note>la promesa del Espíritu.<verse eid="GAL 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 3:15"/>Hermanos, hablo <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="ROM 3:5">Ro. 3.5</ref>.</char></note>como hombre: Aunque un <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="ROM 9:4">Ro. 9.4</ref>.</char></note>pacto sea de hombre, con todo, siendo confirmado, nadie lo cancela, ó le añade.<verse eid="GAL 3:15"/></para>
+  <para style="s">1 La ley nos conduce á Cristo.</para>
+  <para style="s">2 La servidumbre de la ley.</para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 3:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.16 </char>
+      <char style="xt" closed="false">ver. 8. <ref loc="ROM 4:16">Ro. 4.16</ref>.</char>
+    </note>A Abraham <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="ACT 13:32">Hch. 13.32</ref>.</char></note>fueron hechas las promesas, y á su simiente. No dice: Y á las simientes, como de muchos; sino como de uno: <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="GEN 13:15">Gn. 13.15</ref> y <ref loc="GEN 17:8">17.8</ref>.</char></note>Y á tu simiente, la cual es Cristo.<verse eid="GAL 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 3:17"/>Esto pues digo: Que el contrato confirmado de Dios para con Cristo, <note caller="+" style="x"><char style="xo" closed="false">3.17 </char><char style="xt" closed="false"><ref loc="EXO 12:40">Ex. 12.40</ref>,<ref loc="EXO 12:41">41</ref>.</char></note>la ley que fué hecha cuatrocientos treinta años después, no lo abroga, <note caller="+" style="x"><char style="xo" closed="false">3.17 </char><char style="xt" closed="false"><ref loc="ROM 4:14">Ro. 4.14</ref>. <ref loc="HEB 6:12">He. 6.12</ref>.</char></note>para invalidar la promesa.<verse eid="GAL 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 3:18"/>Porque si la herencia es por la ley, ya no es por la promesa: empero Dios por la promesa hizo la donación á Abraham.<verse eid="GAL 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="GAL 3:19"/>¿Pues de qué <char style="it">sirve</char> la ley? <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="ROM 4:15">Ro. 4.15</ref>. <ref loc="1TI 1:9">1 Ti. 1.9</ref>.</char></note>Fué puesta por causa de las rebeliones, <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="GEN 13:15">Gn. 13.15</ref> y <ref loc="GEN 17:8">17.8</ref>.</char></note>hasta que viniese la simiente á quien fué hecha la promesa, <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="ACT 7:53">Hch. 7.53</ref>.</char></note>ordenada <char style="it">aquélla</char> por los ángeles en la mano <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="EXO 20:19">Ex. 20.19</ref>,<ref loc="EXO 20:21">21</ref>,<ref loc="EXO 20:22">22</ref>.</char></note>de un mediador.<verse eid="GAL 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="GAL 3:20"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="1TI 2:5">1 Ti. 2.5</ref>.</char></note>el mediador no es de uno, pero Dios es uno.<verse eid="GAL 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="GAL 3:21"/>¿Luego la ley es contra las promesas de Dios? En ninguna manera: porque si la ley dada pudiera vivificar, la justicia fuera verdaderamente por la ley.<verse eid="GAL 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="GAL 3:22"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.22 </char>
+      <char style="xt" closed="false">ver. 8.</char>
+    </note>Mas encerró la Escritura <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="ROM 3:9">Ro. 3.9</ref> y <ref loc="ROM 11:32">11.32</ref>.</char></note>todo bajo pecado, para que la promesa fuese dada á los creyentes por la fe de Jesucristo.<verse eid="GAL 3:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="GAL 3:23"/>Empero antes que viniese la fe, estábamos guardados bajo la ley, encerrados para aquella fe que había de ser descubierta.<verse eid="GAL 3:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="GAL 3:24"/>De manera que <note caller="+" style="x"><char style="xo" closed="false">3.24 </char><char style="xt" closed="false"><ref loc="MAT 5:17">Mt. 5.17</ref>.</char></note>la ley nuestro ayo fué para <char style="it">llevarnos</char> á Cristo, <note caller="+" style="x"><char style="xo" closed="false">3.24 </char><char style="xt" closed="false">ver. 11.</char></note>para que fuésemos justificados por la fe.<verse eid="GAL 3:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="GAL 3:25"/>Mas venida la fe, ya no estamos bajo ayo;<verse eid="GAL 3:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="GAL 3:26"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.26 </char><char style="xt" closed="false"><ref loc="JHN 1:12">Jn. 1.12</ref>. cp. 4.5. <ref loc="1JN 3:1">1 Jn. 3.1</ref>,<ref loc="1JN 3:2">2</ref>.</char></note>todos sois hijos de Dios por la fe en Cristo Jesús.<verse eid="GAL 3:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="GAL 3:27"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.27 </char><char style="xt" closed="false"><ref loc="ROM 6:3">Ro. 6.3</ref>.</char></note>todos los que habéis sido bautizados en Cristo, <note caller="+" style="x"><char style="xo" closed="false">3.27 </char><char style="xt" closed="false"><ref loc="ROM 13:14">Ro. 13.14</ref>.</char></note>de Cristo estáis vestidos.<verse eid="GAL 3:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="GAL 3:28"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.28 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:16">Ro. 1.16</ref>. cp. 5.6 y <ref loc="ROM 6:15">6.15</ref>.</char>
+    </note>No hay Judío, ni Griego; <note caller="+" style="x"><char style="xo" closed="false">3.28 </char><char style="xt" closed="false"><ref loc="1CO 12:13">1 Co. 12.13</ref>.</char></note>no hay siervo, ni libre; no hay varón, ni hembra: porque todos vosotros sois <note caller="+" style="x"><char style="xo" closed="false">3.28 </char><char style="xt" closed="false"><ref loc="JHN 17:21">Jn. 17.21</ref>. <ref loc="1CO 10:17">1 Co. 10.17</ref>. <ref loc="EPH 2:14">Ef. 2.14</ref>,<ref loc="EPH 2:16">16</ref>.</char></note>uno en Cristo Jesús.<verse eid="GAL 3:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="GAL 3:29"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.29 </char><char style="xt" closed="false"><ref loc="ROM 9:7">Ro. 9.7</ref>.</char></note>si vosotros sois de Cristo, ciertamente la simiente de Abraham sois, y <note caller="+" style="x"><char style="xo" closed="false">3.29 </char><char style="xt" closed="false">cp. 4.1,7. <ref loc="EPH 3:6">Ef. 3.6</ref>.</char></note>conforme á la promesa los herederos.<verse eid="GAL 3:29"/></para>
+  <chapter eid="GAL 3"/>
+  <chapter number="4" style="c" sid="GAL 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 4:1"/>TAMBIÉN digo: Entre tanto que <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 3.29.</char></note>el heredero es niño, en nada difiere del siervo, aunque es señor de todo;<verse eid="GAL 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 4:2"/>Mas está debajo de tutores y curadores hasta el tiempo señalado por el padre.<verse eid="GAL 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 4:3"/>Así también nosotros, cuando éramos niños, <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">cp. 2.4. <ref loc="COL 2:8">Col. 2.8</ref>,<ref loc="COL 2:20">20</ref>.</char></note>éramos siervos bajo los rudimentos del mundo.<verse eid="GAL 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 4:4"/>Mas <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="MRK 1:15">Mr. 1.15</ref>.</char></note>venido el cumplimiento del tiempo, Dios envió su Hijo, <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Jn. 1.14</ref>. <ref loc="ROM 1:3">Ro. 1.3</ref>.</char></note>hecho de mujer, <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="MAT 5:17">Mt. 5.17</ref>. <ref loc="LUK 2:27">Lc. 2.27</ref>.</char></note>hecho súbdito á la ley,<verse eid="GAL 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 4:5"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.5 </char>
+      <char style="xt" closed="false">cp. 3.13.</char>
+    </note>Para que redimiese á los que estaban debajo de la ley, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="ROM 8:15">Ro. 8.15</ref>. cp. 3.26.</char></note>a fin de que recibiésemos la adopción de hijos.<verse eid="GAL 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 4:6"/>Y por cuanto sois hijos, Dios envió el Espíritu de su Hijo en vuestros corazones, el cual clama: Abba, Padre.<verse eid="GAL 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 4:7"/>Así que ya no eres más siervo, sino hijo, <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="ROM 8:17">Ro. 8.17</ref>.</char></note>y si hijo, también heredero de Dios por Cristo.<verse eid="GAL 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 4:8"/>Antes, en otro tiempo, no conociendo á Dios, servíais á los que <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="1CO 8:4">1 Co. 8.4</ref>.</char></note>por naturaleza no son dioses:<verse eid="GAL 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 4:9"/>Mas ahora, habiendo conocido á Dios, ó más bien, siendo conocidos de Dios, ¿cómo os volvéis de nuevo á <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false"><ref loc="HEB 7:18">He. 7.18</ref>.</char></note>los flacos y pobres rudimentos, en los cuales queréis volver á servir?<verse eid="GAL 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 4:10"/>Guardáis los días, <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="ROM 14:5">Ro. 14.5</ref>. <ref loc="COL 2:16">Col. 2.16</ref>.</char></note>y los meses, y los tiempos, y los años.<verse eid="GAL 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 4:11"/>Temo de vosotros, <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false">cp. 2.2.</char></note>que no haya trabajado en vano en vosotros.<verse eid="GAL 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 4:12"/>Hermanos, os ruego, sed como yo, porque yo soy como vosotros: ningún agravio me habéis hecho.<verse eid="GAL 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 4:13"/>Que vosotros sabéis que <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="1CO 2:3">1 Co. 2.3</ref>.</char></note>por flaqueza de carne os anuncié el evangelio <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 1.6.</char></note>al principio:<verse eid="GAL 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 4:14"/>Y no desechasteis ni menospreciasteis mi tentación que <char style="it">estaba</char> en mi carne: antes me recibisteis como á un ángel de Dios, <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="MAT 10:40">Mt. 10.40</ref>. <ref loc="1TH 2:13">1 Ts. 2.13</ref>.</char></note>como á Cristo Jesús.<verse eid="GAL 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 4:15"/>¿Dónde está pues vuestra bienaventuranza? porque yo os doy testimonio que si se pudiera <char style="it">hacer,</char> os hubierais sacado vuestros ojos para dármelos.<verse eid="GAL 4:15"/></para>
+  <para style="s">1 Alegoría de Sara y Agar.</para>
+  <para style="s">2 La libertad cristiana.</para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 4:16"/>¿Heme pues hecho vuestro enemigo, diciéndoos la verdad?<verse eid="GAL 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 4:17"/>Tienen <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ROM 10:2">Ro. 10.2</ref>.</char></note>celos de vosotros, <char style="it">pero</char> no bien: antes os quieren echar fuera para que vosotros los celéis á ellos.<verse eid="GAL 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 4:18"/>Bueno es ser celosos en bien siempre; y no solamente cuando estoy presente con vosotros.<verse eid="GAL 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="GAL 4:19"/>Hijitos míos, <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="1CO 4:15">1 Co. 4.15</ref>. <ref loc="1TH 2:7">1 Ts. 2.7</ref>.</char></note>que vuelvo otra vez á estar de parto de vosotros, hasta que Cristo sea formado <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="2CO 13:5">2 Co. 13.5</ref>.</char></note>en vosotros;<verse eid="GAL 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="GAL 4:20"/>Querría cierto estar ahora con vosotros, y mudar mi voz; porque estoy perplejo en cuanto á vosotros.<verse eid="GAL 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="GAL 4:21"/>Decidme, los que queréis estar debajo de la ley, ¿no habéis oído la ley?<verse eid="GAL 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="GAL 4:22"/>Porque escrito está que Abraham tuvo dos hijos; <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false"><ref loc="GEN 16:15">Gn. 16.15</ref>.</char></note>uno de la sierva, <note caller="+" style="x"><char style="xo" closed="false">4.22 </char><char style="xt" closed="false"><ref loc="GEN 21:2">Gn. 21.2</ref>.</char></note>el otro de la libre.<verse eid="GAL 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="GAL 4:23"/>Mas <note caller="+" style="x"><char style="xo" closed="false">4.23 </char><char style="xt" closed="false"><ref loc="ROM 9:7">Ro. 9.7</ref>.</char></note>el de la sierva nació según la carne; pero <note caller="+" style="x"><char style="xo" closed="false">4.23 </char><char style="xt" closed="false"><ref loc="GEN 17:15-19">Gn. 17.15-19</ref> y <ref loc="GEN 18:10-14">18.10-14</ref> y <ref loc="GEN 21:1">21.1</ref>.</char></note>el de la libre <char style="it">nació</char> por la promesa.<verse eid="GAL 4:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="GAL 4:24"/>Las cuales cosas son dichas por alegoría: porque estas <char style="it">mujeres</char> son los dos pactos; el uno ciertamente del monte Sinaí, el cual engendró <note caller="+" style="x"><char style="xo" closed="false">4.24 </char><char style="xt" closed="false">cp. 2.4.</char></note>para servidumbre, que es Agar.<verse eid="GAL 4:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="GAL 4:25"/>Porque Agar ó Sinaí es un monte de <note caller="+" style="x"><char style="xo" closed="false">4.25 </char><char style="xt" closed="false">cp. 1.17.</char></note>Arabia, el cual es conjunto á la que ahora es Jerusalem, la cual sirve con sus hijos.<verse eid="GAL 4:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="GAL 4:26"/>Mas la <note caller="+" style="x"><char style="xo" closed="false">4.26 </char><char style="xt" closed="false"><ref loc="HEB 12:22">He. 12.22</ref>. <ref loc="REV 3:12">Ap. 3.12</ref> y <ref loc="REV 21:2">21.2</ref>,<ref loc="REV 21:10">10</ref>.</char></note>Jerusalem de arriba libre es; la cual es la madre de todos nosotros.<verse eid="GAL 4:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="GAL 4:27"/>Porque está escrito:</para>
+  <para style="q" vid="GAL 4:27">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.27 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 54:1">Is. 54.1</ref>.</char>
+    </note>Alégrate, estéril, que no pares:</para>
+  <para style="q" vid="GAL 4:27">Prorrumpe y clama, la que no estás de parto;</para>
+  <para style="q" vid="GAL 4:27">Porque más son los hijos de la dejada, que de la que tiene marido.<verse eid="GAL 4:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="GAL 4:28"/>Así que, hermanos, nosotros como Isaac somos <note caller="+" style="x"><char style="xo" closed="false">4.28 </char><char style="xt" closed="false">cp. 3.29.</char></note>hijos de la promesa.<verse eid="GAL 4:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="GAL 4:29"/>Empero como entonces <note caller="+" style="x"><char style="xo" closed="false">4.29 </char><char style="xt" closed="false"><ref loc="GEN 21:9">Gn. 21.9</ref>.</char></note>el que era engendrado según la carne, perseguía al que <char style="it">había nacido</char> según el Espíritu, así también ahora.<verse eid="GAL 4:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="GAL 4:30"/>Mas ¿qué dice la Escritura? <note caller="+" style="x"><char style="xo" closed="false">4.30 </char><char style="xt" closed="false"><ref loc="GEN 21:10">Gn. 21.10</ref>.</char></note>Echa fuera á la sierva y á su hijo; porque no será heredero el hijo de la sierva con el hijo de la libre.<verse eid="GAL 4:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="GAL 4:31"/>De manera, hermanos, que no somos hijos de la sierva, mas de la libre.<verse eid="GAL 4:31"/></para>
+  <chapter eid="GAL 4"/>
+  <chapter number="5" style="c" sid="GAL 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 5:1"/>ESTAD, pues, firmes en <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="JHN 8:32">Jn. 8.32</ref>,<ref loc="JHN 8:36">36</ref>. <ref loc="ROM 6:18">Ro. 6.18</ref> y <ref loc="ROM 8:2">8.2</ref>. <ref loc="2CO 3:17">2 Co. 3.17</ref>. cp. 2.4 y 4.31.</char></note>la libertad con que Cristo nos hizo libres, y no volváis otra vez á ser presos <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 2.4.</char></note>en el yugo de servidumbre.<verse eid="GAL 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 5:2"/>He aquí yo Pablo os digo, <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="ACT 15:1">Hch. 15.1</ref>.</char></note>que si os circuncidareis, Cristo no os aprovechará nada.<verse eid="GAL 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 5:3"/>Y otra vez vuelvo á protestar á todo hombre que se circuncidare, <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="ROM 2:25">Ro. 2.25</ref>. cp. 3.10.</char></note>que está obligado á hacer toda la ley.<verse eid="GAL 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 5:4"/>Vacíos sois de Cristo <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false">cp. 2.21.</char></note>los que por la ley os justificáis; <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="HEB 12:15">He. 12.15</ref>.</char></note>de la gracia habéis caído.<verse eid="GAL 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 5:5"/>Porque nosotros por el Espíritu <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="ROM 8:23">Ro. 8.23</ref>,<ref loc="ROM 8:25">25</ref>.</char></note>esperamos la esperanza de la justicia por la fe.<verse eid="GAL 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 5:6"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="1CO 7:19">1 Co. 7.19</ref>. cp. 6.15. <ref loc="COL 3:11">Col. 3.11</ref>.</char></note>en Cristo Jesús ni la circuncisión vale algo, ni la incircuncisión; sino <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="1TH 1:3">1 Ts. 1.3</ref>. <ref loc="JAS 2:18">Stg. 2.18</ref>,<ref loc="JAS 2:20">20</ref>,<ref loc="JAS 2:22">22</ref>.</char></note>la fe que obra por la caridad.<verse eid="GAL 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 5:7"/>Vosotros corríais bien: <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false">cp. 3.1.</char></note>¿quién os embarazó para no obedecer á la verdad?<verse eid="GAL 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 5:8"/>Esta persuasión no <char style="it">es</char> de <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false">cp. 1.6.</char></note>aquel que os llama.<verse eid="GAL 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 5:9"/>Un poco de levadura <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false"><ref loc="1CO 5:6">1 Co. 5.6</ref>.</char></note>leuda toda la masa.<verse eid="GAL 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 5:10"/>Yo confío de vosotros en el Señor, que ninguna otra cosa sentiréis: mas <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false">cp. 1.7.</char></note>el que os inquieta, llevará el juicio, quienquiera que él sea.<verse eid="GAL 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 5:11"/>Y yo, hermanos, <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false">ver. 3.</char></note>si aun predico la circuncisión, <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false">cp. 4.29 y <ref loc="GAL 6:12">6.12</ref>.</char></note>¿por qué padezco pesecución todavía? pues que quitado es <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="1CO 1:23">1 Co. 1.23</ref>.</char></note>el escándalo de la cruz.<verse eid="GAL 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 5:12"/>Ojalá <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false">cp. 1.8,9.</char></note>fuesen también cortados los que os inquietan.<verse eid="GAL 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 5:13"/>Porque vosotros, hermanos, <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">ver. 1.</char></note>a libertad habéis sido llamados; solamente que <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="1CO 8:9">1 Co. 8.9</ref>. <ref loc="1PE 2:16">1 P. 2.16</ref>. <ref loc="2PE 2:19">2 P. 2.19</ref>.</char></note>no <char style="it">uséis</char> la libertad como ocasión á la carne, sino servíos por amor los unos á los otros.<verse eid="GAL 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 5:14"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="MAT 7:12">Mt. 7.12</ref> y <ref loc="MAT 22:40">22.40</ref>. cp. 6.2.</char></note>toda la ley en aquesta sola palabra se cumple: <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="LEV 19:18">Lv. 19.18</ref>. <ref loc="ROM 13:9">Ro. 13.9</ref>.</char></note>Amarás á tu prójimo como á ti mismo.<verse eid="GAL 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 5:15"/>Y si os mordéis y os coméis los unos á los otros, mirad que también no os consumáis los unos á los otros.<verse eid="GAL 5:15"/></para>
+  <para style="s">1 Los frutos del Espíritu.</para>
+  <para style="s">2 La cruz de Cristo.</para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 5:16"/>Digo pues: <note caller="+" style="x"><char style="xo" closed="false">5.16 </char><char style="xt" closed="false"><ref loc="ROM 8:1">Ro. 8.1</ref>,<ref loc="ROM 8:4">4</ref>.</char></note>Andad en el Espíritu, y no satisfagáis la concupiscencia de la carne.<verse eid="GAL 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 5:17"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="ROM 7:23">Ro. 7.23</ref>.</char></note>la carne codicia contra el Espíritu, y el Espíritu contra la carne: y estas cosas se oponen la una á la otra, <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="ROM 7:15">Ro. 7.15</ref>,<ref loc="ROM 7:19">19</ref>.</char></note>para que no hagáis lo que quisieres.<verse eid="GAL 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 5:18"/>Mas <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="ROM 8:14">Ro. 8.14</ref>.</char></note>si sois guiados del Espíritu, no estáis bajo la ley.<verse eid="GAL 5:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="GAL 5:19"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.19 </char><char style="xt" closed="false"><ref loc="1CO 3:3">1 Co. 3.3</ref>. <ref loc="COL 3:5">Col. 3.5</ref>.</char></note>manifiestas son las obras de la carne, que son: adulterio, fornicación, inmundicia, disolución,<verse eid="GAL 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="GAL 5:20"/>Idolatría, hechicerías, enemistades, pleitos, celos, iras, contiendas, disensiones, herejías,<verse eid="GAL 5:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="GAL 5:21"/>Envidias, homicidios, borracheras, banqueteos, y cosas semejantes á éstas: de las cuales os denuncio, como ya os he anunciado, que <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false"><ref loc="1CO 6:9">1 Co. 6.9</ref>. <ref loc="EPH 5:5">Ef. 5.5</ref>. <ref loc="COL 3:6">Col. 3.6</ref>. <ref loc="REV 22:15">Ap. 22.15</ref>.</char></note>los que hacen tales cosas no heredarán el reino de Dios.<verse eid="GAL 5:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="GAL 5:22"/>Mas <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false"><ref loc="EPH 5:9">Ef. 5.9</ref>.</char></note>el fruto del Espíritu es: caridad, gozo, paz, tolerancia, <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false"><ref loc="COL 3:12">Col. 3.12</ref>.</char></note>benignidad, bondad, fe,<verse eid="GAL 5:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="GAL 5:23"/>Mansedumbre, templanza: <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false"><ref loc="1TI 1:9">1 Ti. 1.9</ref>.</char></note>contra tales cosas no hay ley.<verse eid="GAL 5:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="GAL 5:24"/>Porque los que son de Cristo, <note caller="+" style="x"><char style="xo" closed="false">5.24 </char><char style="xt" closed="false">ver. 16. <ref loc="ROM 6:6">Ro. 6.6</ref>. <ref loc="1PE 2:11">1 P. 2.11</ref>.</char></note>han crucificado la carne con los afectos y concupiscencias.<verse eid="GAL 5:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="GAL 5:25"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.25 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 3:5">Col. 3.5</ref>.</char>
+    </note>Si vivimos en el Espíritu, andemos también en el Espíritu.<verse eid="GAL 5:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="GAL 5:26"/>No seamos codiciosos de <note caller="+" style="x"><char style="xo" closed="false">5.26 </char><char style="xt" closed="false"><ref loc="PHP 2:3">Fil. 2.3</ref>.</char></note>vana gloria, irritando los unos á los otros, envidiándose los unos á los otros.<verse eid="GAL 5:26"/></para>
+  <chapter eid="GAL 5"/>
+  <chapter number="6" style="c" sid="GAL 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="GAL 6:1"/>HERMANOS, <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="JAS 5:19">Stg. 5.19</ref>.</char></note>si alguno fuere tomado en alguna falta, vosotros <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="1CO 3:1">1 Co. 3.1</ref>.</char></note>que sois espirituales, restaurad al tal con <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="1CO 4:21">1 Co. 4.21</ref>. <ref loc="2TI 2:25">2 Ti. 2.25</ref>.</char></note>el espíritu de mansedumbre; considerándote á ti mismo, porque tú no seas también tentado.<verse eid="GAL 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="GAL 6:2"/>Sobrellevad los unos las <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="ROM 15:1">Ro. 15.1</ref>. cp. 5.14.</char></note>cargas de los otros; y cumplid así <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="JHN 13:34">Jn. 13.34</ref>.</char></note>la ley de Cristo.<verse eid="GAL 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="GAL 6:3"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="1CO 8:2">1 Co. 8.2</ref>.</char></note>el que estima de sí que es algo, no siendo nada, á sí mismo se engaña.<verse eid="GAL 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="GAL 6:4"/>Así que <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="1CO 11:28">1 Co. 11.28</ref>.</char></note>cada uno examine su obra, y entonces tendrá gloria sólo respecto de sí mismo, y no en otro.<verse eid="GAL 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="GAL 6:5"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="ROM 14:12">Ro. 14.12</ref>.</char></note>cada cual llevará su carga.<verse eid="GAL 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="GAL 6:6"/>Y el que es enseñado <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false"><ref loc="1CO 9:14">1 Co. 9.14</ref>.</char></note>en la palabra, comunique en todos los bienes al que <char style="it">lo</char> instruye.<verse eid="GAL 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="GAL 6:7"/>No os engañeis: Dios no <char style="it">puede</char> ser burlado: que <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false"><ref loc="2CO 9:6">2 Co. 9.6</ref>.</char></note>todo lo que el hombre sembrare, eso también segará.<verse eid="GAL 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="GAL 6:8"/>Porque el que siembra para su carne, de la carne segará corrupción; mas el que siembra para el Espíritu, del Espíritu segará vida eterna.<verse eid="GAL 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="GAL 6:9"/>No nos cansemos, <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="2TH 3:13">2 Ts. 3.13</ref>.</char></note>pues, de hacer bien; que á su tiempo segaremos, <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="HEB 10:26">He. 10.26</ref>.</char></note>si no hubiéremos desmayado.<verse eid="GAL 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="GAL 6:10"/>Así que, entre tanto que tenemos tiempo, <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="1TH 5:15">1 Ts. 5.15</ref>. <ref loc="1TI 6:18">1 Ti. 6.18</ref>.</char></note>hagamos bien á todos, y mayormente á <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="EPH 2:19">Ef. 2.19</ref>. <ref loc="3JN 1:5">3 Jn. 5</ref>.</char></note>los domésticos de la fe.<verse eid="GAL 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="GAL 6:11"/>Mirad en cuán grandes letras os he escrito <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="1CO 16:21">1 Co. 16.21</ref>.</char></note>de mi mano.<verse eid="GAL 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="GAL 6:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 11:13">2 Co. 11.13</ref>.</char>
+    </note>Todos los que quieren agradar en al carne, <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 2.3,14.</char></note>éstos os constriñen á que os circuncidéis, solamente por no padecer <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 5.11.</char></note>persecución por la cruz de Cristo.<verse eid="GAL 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="GAL 6:13"/>Porque ni aun los mismos que se circuncidan guardan la ley; sino que quieren que vosotros seáis circuncidados, para gloriarse en vuestra carne.<verse eid="GAL 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="GAL 6:14"/>Mas lejos esté de mí <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="PHP 3:3">Fil. 3.3</ref>,<ref loc="PHP 3:7">7</ref>,<ref loc="PHP 3:8">8</ref>.</char></note>gloriarme, sino en la cruz de nuestro Señor Jesucristo, por el cual el mundo me es <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="ROM 6:6">Ro. 6.6</ref>.</char></note>crucificado á mí, y yo al mundo.<verse eid="GAL 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="GAL 6:15"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false">cp. 5.6.</char></note>en Cristo Jesús, ni la circuncisión vale nada, ni la incircuncisión, sino <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="JHN 3:5">Jn. 3.5</ref>,<ref loc="JHN 3:7">7</ref>. <ref loc="2CO 5:17">2 Co. 5.17</ref>. <ref loc="EPH 2:15">Ef. 2.15</ref>.</char></note>la nueva criatura.<verse eid="GAL 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="GAL 6:16"/>Y todos <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="PHP 3:16">Fil. 3.16</ref>.</char></note>los que anduvieren conforme á esta regla, <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="PSA 125:5">Sal. 125.5</ref>.</char></note>paz sobre ellos, y misericordia, y sobre <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="ROM 9:8">Ro. 9.8</ref>.</char></note>el Israel de Dios.<verse eid="GAL 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="GAL 6:17"/>De aquí adelante nadie me sea molesto; porque yo traigo en mi cuerpo <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="2CO 1:5">2 Co. 1.5</ref> y <ref loc="2CO 11:23-25">11.23-25</ref>.</char></note>las marcas del Señor Jesús.<verse eid="GAL 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="GAL 6:18"/>Hermanos, <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="2TI 4:22">2 Ti. 4.22</ref>. <ref loc="PHM 1:25">Flm. 25</ref>.</char></note>la gracia de nuestro Señor Jesucristo sea con vuestro espíritu. Amén.</para>
+  <para style="b" vid="GAL 6:18"/>
+  <para style="p" vid="GAL 6:18">Enviada de Roma á los Gálatas.<verse eid="GAL 6:18"/></para>
+  <chapter eid="GAL 6"/>
+</usx>

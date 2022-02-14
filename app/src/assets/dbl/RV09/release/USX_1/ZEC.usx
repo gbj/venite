@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="ZEC" style="id">ZECVR.COR Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">ZACARÍAS</para>
+  <para style="toc3">Zac.</para>
+  <para style="toc2">Zacarías</para>
+  <para style="toc1">Zacarías</para>
+  <para style="mt1">LIBRO DE ZACARÍAS.</para>
+  <chapter number="1" style="c" sid="ZEC 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 1:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HAG 2:1">Hag. 2.1</ref>,<ref loc="HAG 2:10">10</ref>.</char>
+    </note>EN el mes octavo, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="HAG 1:1">Hag. 1.1</ref>.</char></note>en el año segundo de Darío, fué palabra de Jehová á Zacarías profeta, hijo de Berechîas, hijo de <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="NEH 12:4">Neh. 12.4</ref>,<ref loc="NEH 12:16">16</ref>.</char></note>Iddo, diciendo:<verse eid="ZEC 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 1:2"/>Enojóse Jehová con ira contra vuestros padres.<verse eid="ZEC 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 1:3"/>Les dirás pues: Así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="MAL 3:7">Mal. 3.7</ref>.</char></note>Volveos á mí, dice Jehová de los ejércitos, y yo me volveré á vosotros, ha dicho Jehová de los ejércitos.<verse eid="ZEC 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 1:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 78:8">Sal. 78.8</ref>.</char>
+    </note>No seáis como vuestros padres, <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="2CH 36:15">2 Cr. 36.15</ref>,<ref loc="2CH 36:16">16</ref>.</char></note>a los cuales dieron voces los primeros profetas, diciendo: Así ha dicho Jehová de los ejércitos: Volveos ahora de vuestros malos caminos, y de vuestras malas obras: y no atendieron, ni me escucharon, dice Jehová.<verse eid="ZEC 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 1:5"/>Vuestros padres, ¿dónde están? y los profetas ¿han de vivir para siempre?<verse eid="ZEC 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 1:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 24:35">Mt. 24.35</ref>.</char>
+    </note>Empero mis palabras y mis ordenanzas que mandé á mis siervos los profetas, ¿no alcanzaron á vuestros padres? Por eso se volvieron ellos y dijeron: <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="LAM 2:17">Lm. 2.17</ref>.</char></note>Como Jehová de los ejércitos pensó tratarnos <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="JER 35:15">Jer. 35.15</ref>. <ref loc="EZK 36:31">Ez. 36.31</ref>.</char></note>conforme á nuestros caminos, y conforme á nuestras obras, así lo hizo con nosotros.<verse eid="ZEC 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 1:7"/>A los veinticuatro del mes undécimo, que es el mes de Sebath, en el año segundo de Darío, fué palabra de Jehová á Zacarías profeta, hijo de Berechîas, hijo de Iddo, diciendo:<verse eid="ZEC 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 1:8"/>Vi de noche, y he aquí <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="JOS 5:13">Jos. 5.13</ref>. <ref loc="DAN 9:21">Dn. 9.21</ref>. <ref loc="REV 6:4">Ap. 6.4</ref>.</char></note>un varón que cabalgaba sobre un caballo bermejo, el cual estaba entre los mirtos que había en la hondura; y detrás de él había <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false">cp. 6.2-7.</char></note>caballos bermejos, overos, y blancos.<verse eid="ZEC 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 1:9"/>Entonces dije: ¿Qué son éstos, señor mío? Y díjome <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false">vers. 13,14. cp. 2.3 y <ref loc="ZEC 4:1">4.1</ref>,<ref loc="ZEC 4:4">4</ref>,<ref loc="ZEC 4:5">5</ref> y <ref loc="ZEC 5:5">5.5</ref>,<ref loc="ZEC 5:10">10</ref> y <ref loc="ZEC 6:4">6.4</ref>.</char></note>el ángel que hablaba conmigo: Yo te enseñaré qué son éstos.<verse eid="ZEC 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 1:10"/>Y aquel varón que estaba entre los mirtos respondió, y dijo: Estos son los que Jehová ha enviado á recorrer la tierra.<verse eid="ZEC 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 1:11"/>Y ellos hablaron á aquel ángel de Jehová que estaba entre los mirtos, y dijeron: Hemos recorrido la tierra, y he aquí toda la tierra está reposada y quieta.<verse eid="ZEC 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 1:12"/>Y respondió el ángel de Jehová, y dijo: Oh Jehová de los ejércitos, <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="HAB 2:6">Hab. 2.6</ref>. <ref loc="REV 6:10">Ap. 6.10</ref>.</char></note>¿hasta cuándo no tendrás piedad de Jerusalem, y de las ciudades de Judá, <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="MAL 1:4">Mal. 1.4</ref>.</char></note>con las cuales has estado airado <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="JER 25:11">Jer. 25.11</ref>. cp. 7.5.</char></note>por espacio de setenta años?<verse eid="ZEC 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 1:13"/>Y Jehová respondió buenas palabras, <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="JER 29:10">Jer. 29.10</ref>.</char></note>palabras consolatorias á aquel ángel que hablaba conmigo.<verse eid="ZEC 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 1:14"/>Y díjome el ángel que hablaba conmigo: Clama diciendo: Así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="JOL 2:18">Jl. 2.18</ref>. cp. 8.2.</char></note>Celé á Jerusalem y á Sión con gran celo:<verse eid="ZEC 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 1:15"/>Y con grande enojo estoy airado contra las gentes que están reposadas; porque <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="ISA 47:6">Is. 47.6</ref>.</char></note>yo estaba enojado un poco, y ellos ayudaron para el mal.<verse eid="ZEC 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ZEC 1:16"/>Por tanto, así ha dicho Jehová: Yo me he tornado á Jerusalem con miseraciones; <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="EZR 6:14">Esd. 6.14</ref>,<ref loc="EZR 6:15">15</ref>. cp. 4.9.</char></note>en ella será edificada mi casa, dice Jehová de los ejércitos, y <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="JER 31:39">Jer. 31.39</ref>. <ref loc="EZK 47:3">Ez. 47.3</ref>.</char></note>la plomada será tendida sobre Jerusalem.<verse eid="ZEC 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ZEC 1:17"/>Clama aún, diciendo: Así dice Jehová de los ejércitos: Aun serán ensanchadas mis ciudades por la abundancia del bien; y aun <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="ISA 51:3">Is. 51.3</ref>.</char></note>consolará Jehová á Sión, y <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 2.12.</char></note>escogerá todavía á Jerusalem.<verse eid="ZEC 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ZEC 1:18"/>Después alcé mis ojos, y miré, y he aquí <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="DAN 8:3">Dn. 8.3</ref>,<ref loc="DAN 8:8">8</ref>,<ref loc="DAN 8:9">9</ref>,<ref loc="DAN 8:21">21</ref>.</char></note>cuatro cuernos.<verse eid="ZEC 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ZEC 1:19"/>Y dije al <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false">ver. 9.</char></note>ángel que hablaba conmigo: ¿Qué son éstos? Y respondióme: <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="1KI 22:11">1 R. 22.11</ref>.</char></note>Estos son los cuernos que aventaron á Judá, á Israel, y á Jerusalem.<verse eid="ZEC 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ZEC 1:20"/>Mostróme luego Jehová cuatro carpinteros.<verse eid="ZEC 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ZEC 1:21"/>Y yo dije: ¿Qué vienen éstos á hacer? Y respondióme, diciendo: Estos son los cuernos que aventaron á Judá, tanto que ninguno alzó su cabeza; mas éstos han venido para hacerlos temblar, para derribar los cuernos de las gentes, que <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="PSA 75:4">Sal. 75.4</ref>,<ref loc="PSA 75:5">5</ref>.</char></note>alzaron el cuerno sobre la tierra de Judá para aventarla.<verse eid="ZEC 1:21"/></para>
+  <chapter eid="ZEC 1"/>
+  <chapter number="2" style="c" sid="ZEC 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 2:1"/>ALCÉ después mis ojos, y miré y he aquí <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="EZK 40:3">Ez. 40.3</ref> y <ref loc="EZK 47:3">47.3</ref>.</char></note>un varón que tenía en su mano un cordel de medir.<verse eid="ZEC 2:1"/></para>
+  <para style="s">1 Cuidado de Jehová sobre Sión.</para>
+  <para style="s">2 Josué y el Pimpollo.</para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 2:2"/>Y díjele: ¿A dónde vas? Y él me respondió: <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="REV 11:1">Ap. 11.1</ref>.</char></note>A medir á Jerusalem, para ver cuánta es su anchura, y cuánta su longitud.<verse eid="ZEC 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 2:3"/>Y he aquí, salía <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">cp. 1.19.</char></note>aquel ángel que hablaba conmigo, y otro ángel le salió al encuentro,<verse eid="ZEC 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 2:4"/>Y díjole: Corre, habla á este mozo, diciendo: <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="EST 9:19">Est. 9.19</ref>. <ref loc="EZK 38:11">Ez. 38.11</ref>.</char></note>Sin muros será habitada Jerusalem <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="JER 31:27">Jer. 31.27</ref>.</char></note>a causa de la multitud de los hombres, y de las bestias en medio de ella.<verse eid="ZEC 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 2:5"/>Yo seré para ella, dice Jehová, muro de fuego en derredor, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ISA 60:19">Is. 60.19</ref>. <ref loc="REV 21:23">Ap. 21.23</ref>.</char></note>y seré por gloria en medio de ella.<verse eid="ZEC 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 2:6"/>Eh, eh, <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="ISA 48:20">Is. 48.20</ref>.</char></note>huid <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="JER 3:18">Jer. 3.18</ref>.</char></note>de la tierra del aquilón, dice Jehová, pues por los cuatro vientos de los cielos os esparcí, dice Jehová.<verse eid="ZEC 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 2:7"/>Oh Sión, la que moras con la hija de Babilonia, escápate.<verse eid="ZEC 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 2:8"/>Porque así ha dicho Jehová de los ejércitos: Después de la gloria me enviará él á las gentes que os despojaron: <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="DEU 32:10">Dt. 32.10</ref>.</char></note>porque el que os toca, toca á la niña de su ojo.<verse eid="ZEC 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 2:9"/>Porque he aquí yo <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="ISA 11:15">Is. 11.15</ref> y <ref loc="ISA 19:16">19.16</ref>.</char></note>alzo mi mano sobre ellos, y serán despojo á sus siervos, y <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">cp. 4.9.</char></note>sabréis que Jehová de los ejércitos me envió.<verse eid="ZEC 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 2:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEP 3:14">Sof. 3.14</ref>.</char>
+    </note>Canta y alégrate, hija de Sión: porque <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="PSA 40:7">Sal. 40.7</ref>.</char></note>he aquí vengo, y <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false">cp. 8.3.</char></note>moraré en medio de ti, ha dicho Jehová.<verse eid="ZEC 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 2:11"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ISA 2:2">Is. 2.2</ref>,<ref loc="ISA 2:3">3</ref> y <ref loc="ISA 49:22">49.22</ref> y <ref loc="ISA 55:5">55.5</ref> y <ref loc="ISA 60:3">60.3</ref> y <ref loc="ISA 66:23">66.23</ref>. cp. 8.22.</char></note>uniránse muchas gentes á Jehová <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ISA 2:11">Is. 2.11</ref>. cp. 3.10.</char></note>en aquel día, y me serán por pueblo, y moraré en medio de ti; y entonces conocerás que Jehová de los ejércitos me ha enviado á ti.<verse eid="ZEC 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 2:12"/>Y Jehová poseerá á Judá su heredad en la tierra santa, <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false">cp. 1.17.</char></note>y escogerá aún á Jerusalem.<verse eid="ZEC 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 2:13"/>Calle toda carne <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="HAB 2:20">Hab. 2.20</ref>.</char></note>delante de Jehová; porque él se ha despertado de su santa morada.<verse eid="ZEC 2:13"/></para>
+  <chapter eid="ZEC 2"/>
+  <chapter number="3" style="c" sid="ZEC 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 3:1"/>Y MOSTRÓME á <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 6.11.</char></note>Josué, <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="HAG 1:1">Hag. 1.1</ref>.</char></note>el gran sacerdote, el cual estaba delante del ángel de Jehová; y Satán estaba á su mano derecha para serle adversario.<verse eid="ZEC 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 3:2"/>Y dijo Jehová á Satán: Jehová te reprenda, oh Satán; Jehová, que ha escogido á Jerusalem, te reprenda. ¿No es éste <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="AMO 4:11">Am. 4.11</ref>.</char></note>tizón arrebatado del incendio?<verse eid="ZEC 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 3:3"/>Y Josué estaba vestido de <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="ISA 64:6">Is. 64.6</ref>. <ref loc="JUD 1:23">Jud. 23</ref>.</char></note>vestimentas viles, y estaba delante del ángel.<verse eid="ZEC 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 3:4"/>Y habló el <char style="it">ángel,</char> é intimó á los que estaban delante de sí, diciendo: <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="REV 7:14">Ap. 7.14</ref>.</char></note>Quitadle esas vestimentas viles. Y á él dijo: Mira <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="ISA 6:7">Is. 6.7</ref>.</char></note>que he hecho pasar tu pecado de ti, <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="ISA 61:10">Is. 61.10</ref>. <ref loc="EZK 16:10">Ez. 16.10</ref>.</char></note>y te he hecho vestir de ropas de gala.<verse eid="ZEC 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 3:5"/>Después dijo: Pongan <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 6.11.</char></note>mitra limpia sobre su cabeza. Y pusieron una mitra limpia sobre su cabeza, y vistiéronle de ropas. Y el ángel de Jehová estaba en pie.<verse eid="ZEC 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 3:6"/>Y el ángel de Jehová protestó al mismo Josué, diciendo:<verse eid="ZEC 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 3:7"/>Así dice Jehová de los ejércitos: Si anduvieres por mis caminos, y <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="GEN 26:5">Gn. 26.5</ref>.</char></note>si guardares mi ordenanza, también tú gobernarás mi casa, también tú guardarás mis atrios, y entre estos que aquí están te daré plaza.<verse eid="ZEC 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 3:8"/>Escucha pues ahora, Josué gran sacerdote, tú, y tus amigos que se sientan delante de ti; porque son varones <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="EZK 12:11">Ez. 12.11</ref> y <ref loc="EZK 24:24">24.24</ref>.</char></note>simbólicos: He aquí, yo traigo á <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="ISA 42:1">Is. 42.1</ref>.</char></note>mi siervo, <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="JER 23:5">Jer. 23.5</ref> y <ref loc="JER 33:15">33.15</ref>. cp. 6.12. <ref loc="LUK 1:78">Lc. 1.78</ref>.</char></note>el Pimpollo.<verse eid="ZEC 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 3:9"/>Porque he aquí aquella piedra que puse delante de <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 6.11.</char></note>Josué; sobre esta única piedra hay <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 4.10. <ref loc="REV 5:6">Ap. 5.6</ref>.</char></note>siete ojos: he aquí, yo <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="EXO 28:11">Ex. 28.11</ref>,<ref loc="EXO 28:21">21</ref>.</char></note>grabaré su escultura, dice Jehová de los ejércitos, y quitaré el pecado de la tierra <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">cp. 13.1. <ref loc="HEB 7:27">He. 7.27</ref>.</char></note>en un día.<verse eid="ZEC 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 3:10"/>En aquel día, <note caller="+" style="x"><char style="xo" closed="false">3.10 </char><char style="xt" closed="false">cp. 2.11.</char></note>dice Jehová de los ejércitos, cada uno de vosotros llamará á su compañero debajo de la vid, y debajo de la higuera.<verse eid="ZEC 3:10"/></para>
+  <chapter eid="ZEC 3"/>
+  <chapter number="4" style="c" sid="ZEC 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 4:1"/>Y VOLVIÓ <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 1.19.</char></note>el ángel que hablaba conmigo, y despertóme como un hombre que es despertado de su sueño.<verse eid="ZEC 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 4:2"/>Y díjome: ¿Qué ves? Y respondí: He mirado, y he aquí <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="EXO 25:31">Ex. 25.31</ref>.</char></note>un candelero todo de oro, con su vaso sobre su cabeza, <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="EXO 25:37">Ex. 25.37</ref>. <ref loc="REV 1:12">Ap. 1.12</ref> y <ref loc="REV 4:5">4.5</ref>.</char></note>y sus siete lámparas encima del candelero; y siete canales para las lámparas que están encima de él;<verse eid="ZEC 4:2"/></para>
+  <para style="s">1 “No con ejército, ni con fuerza.”</para>
+  <para style="s">2 Varias visiones.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 4:3"/>Y sobre él dos olivas, la una á la derecha del vaso, y la otra á su izquierda.<verse eid="ZEC 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 4:4"/>Proseguí, y hablé á aquel ángel que hablaba conmigo, diciendo: ¿Qué es esto, señor mío?<verse eid="ZEC 4:4"/></para>
+  <para style="s">1 La visión de los cuatro carros.</para>
+  <para style="s">2 Ayuno no grato á Dios.</para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 4:5"/>Y el ángel que hablaba conmigo respondió, y díjome: ¿No sabes qué es esto? Y dije: No, señor mío.<verse eid="ZEC 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 4:6"/>Entonces respondió y hablóme, diciendo: Esta es palabra de Jehová á Zorobabel, en que se dice: No con <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="DAN 2:34">Dn. 2.34</ref>. <ref loc="HAG 2:21-23">Hag. 2.21-23</ref>.</char></note>ejército, ni con fuerza, sino <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="HAG 2:5">Hag. 2.5</ref>.</char></note>con mi espíritu, ha dicho Jehová de los ejércitos.<verse eid="ZEC 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 4:7"/>¿Quién eres tú, <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="JER 51:25">Jer. 51.25</ref>.</char></note>oh gran monte? Delante de Zorobabel <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="ISA 40:4">Is. 40.4</ref>.</char></note><char style="it">serás reducido</char> á llanura: él sacará <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="PSA 118:22">Sal. 118.22</ref>.</char></note>la primera piedra <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="EZR 3:10">Esd. 3.10</ref>.</char></note>con aclamaciones de Gracia, gracia á ella.<verse eid="ZEC 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 4:8"/>Y fué palabra de Jehová á mí, diciendo:<verse eid="ZEC 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 4:9"/>Las manos de Zorobabel echarán el fundamento á esta casa, y sus manos la acabarán; y conocerás que Jehová de los ejércitos me envió á vosotros.<verse eid="ZEC 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 4:10"/>Porque los que menospreciaron el día <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="HAG 2:3">Hag. 2.3</ref>.</char></note>de las pequeñeces se alergrarán, y verán la plomada en la mano de Zorobabel. Aquellas siete <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 3.9.</char></note><char style="it">son</char> los ojos de Jehová que recorren por toda la tierra.<verse eid="ZEC 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 4:11"/>Hablé más, y díjele: ¿Qué <char style="it">significan</char> estas dos olivas á la derecha del candelero, y á su izquieda?<verse eid="ZEC 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 4:12"/>Hablé aún de nuevo, y díjele: ¿Qué <char style="it">significan</char> las dos ramas de olivas que por medio de dos tubos de oro vierten de sí <char style="it">aceite como</char> oro?<verse eid="ZEC 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 4:13"/>Y respondióme, diciendo: ¿No sabes qué es esto? Y dije: Señor mío, no.<verse eid="ZEC 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 4:14"/>Y él dijo: <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="REV 11:4">Ap. 11.4</ref>.</char></note>Estos dos hijos de aceite son los que están delante del Señor de toda la tierra.<verse eid="ZEC 4:14"/></para>
+  <chapter eid="ZEC 4"/>
+  <chapter number="5" style="c" sid="ZEC 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 5:1"/>Y TORNÉME, y alcé mis ojos, y miré, y he aquí un <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="JER 36:2">Jer. 36.2</ref>.</char></note>rollo que volaba.<verse eid="ZEC 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 5:2"/>Y díjome: ¿Qué ves? Y respondí: Veo un rollo que vuela, de veinte codos de largo, y diez codos de ancho.<verse eid="ZEC 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 5:3"/>Díjome entonces: Esta es la <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="JER 29:18">Jer. 29.18</ref>.</char></note>maldición que sale sobre la haz de toda la tierra; porque todo aquel que hurta, (como <char style="it">está</char> de la una parte del rollo) será destruído; y todo aquel que jura, (como <char style="it">está</char> de la otra parte del rollo) será destruído.<verse eid="ZEC 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 5:4"/>Yo la saqué, dice Jehová de los ejércitos, y vendrá á la casa del ladrón, y á la casa del que jura falsamente en mi nombre; y <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="PRO 3:33">Pr. 3.33</ref>.</char></note>permanecerá en medio de su casa, y <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="LEV 14:45">Lv. 14.45</ref>.</char></note>consumirála, con sus enmaderamientos y sus piedras.<verse eid="ZEC 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 5:5"/>Y salió <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false">cp. 1.19.</char></note>aquel ángel que hablaba conmigo, y díjome: Alza ahora tus ojos, y mira qué es esto que sale.<verse eid="ZEC 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 5:6"/>Y dije: ¿Qué es? Y él dijo: Este es un <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="EZK 45:11">Ez. 45.11</ref>.</char></note>epha que sale. Además dijo: Este es el ojo de ellos en toda la tierra.<verse eid="ZEC 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 5:7"/>Y he aquí, traían un talento de plomo, y una mujer estaba asentada en medio de aquel epha.<verse eid="ZEC 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 5:8"/>Y él dijo: Esta es la Maldad; y echóla dentro del epha, y echó la masa de plomo en su boca.<verse eid="ZEC 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 5:9"/>Alcé luego mis ojos, y miré, y he aquí dos mujeres que salían, y traían viento en sus alas, y tenían alas como de cigüeña, y alzaron el epha entre la tierra y los cielos.<verse eid="ZEC 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 5:10"/>Y dije al ángel que hablaba conmigo: ¿A dónde llevan el epha?<verse eid="ZEC 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 5:11"/>Y él me respondió: Para que le sea edificada casa en <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="GEN 11:2">Gn. 11.2</ref>.</char></note>tierra de Shinar: y será asentado y puesto allá sobre su asiento.<verse eid="ZEC 5:11"/></para>
+  <chapter eid="ZEC 5"/>
+  <chapter number="6" style="c" sid="ZEC 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 6:1"/>Y TORNÉME, y alcé mis ojos y miré, y he aquí cuatro carros que salían de entre dos montes; y aquellos montes eran de metal.<verse eid="ZEC 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 6:2"/>En el primer carro había <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">cp. 1.8. <ref loc="REV 6:2">Ap. 6.2</ref>,<ref loc="REV 6:4">4</ref>,<ref loc="REV 6:5">5</ref>.</char></note>caballos bermejos, y el segundo carro caballos negros,<verse eid="ZEC 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 6:3"/>Y en el tercer carro caballos blancos, y en el cuarto carro caballos overos ruciorodados.<verse eid="ZEC 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 6:4"/>Respondí entonces, y dije al ángel que conmigo hablaba: Señor mío, ¿qué es esto?<verse eid="ZEC 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 6:5"/>Y el ángel me respondió, y díjome: <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="PSA 104:4">Sal. 104.4</ref>. <ref loc="HEB 1:7">He. 1.7</ref>,<ref loc="HEB 1:14">14</ref>.</char></note>Estos son los cuatro vientos de los cielos, que salen de donde están delante del Señor de toda la tierra.<verse eid="ZEC 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 6:6"/>En el que estaban los caballos negros, salieron hacia la tierra <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">ver. 8. <ref loc="JER 1:13">Jer. 1.13</ref>.</char></note>del aquilón; y los blancos salieron tras ellos; y lo overos salieron hacia la tierra del mediodía.<verse eid="ZEC 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 6:7"/>Y los rucios salieron, y se afanaron por <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false">cp. 1.10.</char></note>ir á recorrer la tierra. Y dijo: Id, recorred la tierra. Y recorrieron la tierra.<verse eid="ZEC 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 6:8"/>Luego me llamó, y hablóme deciendo: Mira, los que salieron hacia la tierra del aquilón hicieron reposar mi <note caller="+" style="x"><char style="xo" closed="false">6.8 </char><char style="xt" closed="false"><ref loc="JDG 8:3">Jue. 8.3</ref>. <ref loc="ECC 10:4">Ec. 10.4</ref>.</char></note>espíritu en la tierra del aquilón.<verse eid="ZEC 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 6:9"/>Y fué á mí palabra de Jehová, diciendo:<verse eid="ZEC 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 6:10"/>Toma de los del cautiverio, de Heldai, y de Tobías, y de Jedaía, los cuales volvieron de Babilonia; y vendrás tú en aquel día, y entrarás en casa de Josías hijo de Sefanías;<verse eid="ZEC 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 6:11"/>Tomarás pues plata y oro, y harás <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 3.5. <ref loc="REV 19:12">Ap. 19.12</ref>.</char></note>coronas, y las pondrás en la cabeza del gran sacerdote <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 3.1.</char></note>Josué, hijo de Josadac;<verse eid="ZEC 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 6:12"/>Y le hablarás, diciendo: Así ha hablado Jehová de los ejércitos, diciendo: He aquí el varón cuyo nombre es <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 3.8.</char></note>Pimpollo, el cual germinará <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">ó, </char><char style="xk" closed="false">de debajo de sí. </char><char style="xt" closed="false"><ref loc="EXO 10:23">Ex. 10.23</ref>.</char></note>de su lugar, y edificará el templo de Jehová:<verse eid="ZEC 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 6:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 16:18">Mt. 16.18</ref>. <ref loc="EPH 2:20-22">Ef. 2.20-22</ref>. <ref loc="HEB 3:3">He. 3.3</ref>.</char>
+    </note>El edificará el templo de Jehová, y él <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="EZK 21:27">Ez. 21.27</ref>.</char></note>llevará gloria, y se sentará y dominará en su trono, y <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="PSA 110:4">Sal. 110.4</ref>. <ref loc="HEB 3:1">He. 3.1</ref>.</char></note>será sacerdote en su solio; y consejo de paz será entre ambos á dos.<verse eid="ZEC 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 6:14"/>Y Helem, y Tobías, y Jedaía, y Hen, hijo de Sefanías, tendrán coronas por memorial en el templo de Jehová.<verse eid="ZEC 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 6:15"/>Y <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="ISA 57:19">Is. 57.19</ref>. <ref loc="EPH 2:13">Ef. 2.13</ref>,<ref loc="EPH 2:19">19</ref>.</char></note>los que están lejos <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="ISA 60:10">Is. 60.10</ref>.</char></note>vendrán y edificarán en el templo de Jehová, y conoceréis que Jehová de los ejércitos me ha enviado á vosotros. Y será <char style="it">esto,</char> si oyereis obedientes la voz de Jehová vuestro Dios.<verse eid="ZEC 6:15"/></para>
+  <chapter eid="ZEC 6"/>
+  <chapter number="7" style="c" sid="ZEC 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 7:1"/>Y ACONTECIÓ <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false">cp. 1.1,7.</char></note>en el año cuarto del rey Darío, que fué palabra de Jehová á Zacarías á los cuatro del mes noveno, que es <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false"><ref loc="NEH 1:1">Neh. 1.1</ref>.</char></note>Chisleu;<verse eid="ZEC 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 7:2"/>Cuando fué enviado á la casa de Dios, Saraser, con Regem-melech y sus hombres, á implorar el favor de Jehová,<verse eid="ZEC 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 7:3"/>Y á hablar á <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false"><ref loc="MAL 2:7">Mal. 2.7</ref>.</char></note>los sacerdotes que estaban en la casa de Jehová de los ejércitos, y á <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false"><ref loc="EZR 5:1">Esd. 5.1</ref>,<ref loc="EZR 5:2">2</ref> y <ref loc="EZR 6:14">6.14</ref>. cp. 8.9.</char></note>los profetas, diciendo: ¿Lloraremos <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false"><ref loc="2KI 25:8">2 R. 25.8</ref>. <ref loc="JER 52:12">Jer. 52.12</ref>. cp. 8.19.</char></note>en el mes quinto? ¿haremos abstinencia como hemos hecho ya algunos años?<verse eid="ZEC 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 7:4"/>Fué pues á mí palabra de Jehová de los ejércitos, diciendo:<verse eid="ZEC 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 7:5"/>Habla á todo el pueblo del país, y á los sacerdotes, diciendo: Cuando ayunasteis <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false"><ref loc="ISA 58:5">Is. 58.5</ref>.</char></note>y llorasteis en el quinto y <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false"><ref loc="2KI 25:25">2 R. 25.25</ref>. <ref loc="JER 41:1">Jer. 41.1</ref>,<ref loc="JER 41:2">2</ref>.</char></note>en el séptimo <char style="it">mes</char> <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false">cp. 1.12.</char></note>estos setenta años, ¿habéis ayunado para mí?<verse eid="ZEC 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 7:6"/>Y cuando coméis y bebéis, ¿no coméis y bebéis para vosotros?<verse eid="ZEC 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 7:7"/>¿No son <char style="it">estas</char> las palabras que publicó Jehová por mano de los profetas primeros, cuando Jerusalem estaba habitada y quieta, y sus ciudades en sus alrededores, y <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false"><ref loc="JER 17:26">Jer. 17.26</ref>.</char></note>el mediodía y la campiña se habitaban?<verse eid="ZEC 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 7:8"/>Y fué palabra de Jehová á Zacarías, diciendo:<verse eid="ZEC 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 7:9"/>Así habló Jehová de los ejércitos, diciendo: <note caller="+" style="x"><char style="xo" closed="false">7.9 </char><char style="xt" closed="false"><ref loc="MIC 6:8">Mi. 6.8</ref>.</char></note>Juzgad juicio verdadero, y haced misericordia y piedad cada cual con su hermano:<verse eid="ZEC 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 7:10"/>No agraviéis á la viuda, <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false"><ref loc="ISA 1:17-23">Is. 1.17-23</ref>. <ref loc="JER 5:28">Jer. 5.28</ref>.</char></note>ni al huérfano, ni al extranjero, ni al pobre; ni ninguno piense mal en su corazón contra su hermano.<verse eid="ZEC 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 7:11"/>Empero no quisieron escuchar, antes dieron hombro rebelado, y <note caller="+" style="x"><char style="xo" closed="false">7.11 </char><char style="xt" closed="false"><ref loc="NEH 9:30">Neh. 9.30</ref>.</char></note>agravaron sus oídos para no oir:<verse eid="ZEC 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 7:12"/>Y pusieron su corazón como diamante, para no oir la ley ni las palabras que Jehová de los ejércitos enviaba por su espíritu, por mano de los profetas primeros: fué, por tanto, hecho grande castigo por Jehová de los ejércitos.<verse eid="ZEC 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 7:13"/>Y aconteció que como él clamó, y no escucharon, así ellos clamaron, y yo no escuché, dice Jehová de los ejércitos;<verse eid="ZEC 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 7:14"/>Antes los esparcí con torbellino por todas las gentes que ellos no conocían, y la tierra fué desolada tras de ellos, <note caller="+" style="x"><char style="xo" closed="false">7.14 </char><char style="xt" closed="false"><ref loc="ZEP 3:6">Sof. 3.6</ref>. cp. 9.8.</char></note>sin quedar quien fuese ni viniese; pues tornaron en asolamiento el país deseable.<verse eid="ZEC 7:14"/></para>
+  <chapter eid="ZEC 7"/>
+  <chapter number="8" style="c" sid="ZEC 8"/>
+  <para style="s">1 Restauración de Sión.</para>
+  <para style="s">2 Bendiciones prometidas.</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 8:1"/>Y FUÉ <char style="it">á mí</char> palabra de Jehová de los ejércitos, diciendo:<verse eid="ZEC 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 8:2"/>Así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="JOL 2:18">Jl. 2.18</ref>. cp. 1.14.</char></note>Yo he celado á Sión con grande celo, y con grande ira la celé.<verse eid="ZEC 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 8:3"/>Así dice Jehová: <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false">cp. 1.16.</char></note>Yo he restituído á Sión, y moraré en medio de Jerusalem: y Jerusalem <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="ISA 1:21">Is. 1.21</ref>,<ref loc="ISA 1:26">26</ref>.</char></note>se llamará Ciudad de Verdad, y el monte de Jehová de los ejércitos, Monte de Santidad.<verse eid="ZEC 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 8:4"/>Así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">8.4 </char><char style="xt" closed="false"><ref loc="ISA 65:20">Is. 65.20</ref>,<ref loc="ISA 65:22">22</ref>.</char></note>Aun han de morar viejos y viejas en las plazas de Jerusalem, y cada cual con bordón en su mano por la multitud de los días.<verse eid="ZEC 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 8:5"/>Y las calles de la ciudad serán llenas de muchachos y muchachas, que jugarán en las calles.<verse eid="ZEC 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 8:6"/>Así dice Jehová de los ejércitos: Si esto parecerá dificultoso á los ojos del <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">ver. 12. <ref loc="ZEP 2:7">Sof. 2.7</ref>.</char></note>resto de este pueblo en aquellos días, ¿también será dificultoso delante de mis ojos? dice Jehová de los ejércitos.<verse eid="ZEC 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 8:7"/>Así ha dicho Jehová de los ejércitos: He aquí, yo salvo mi pueblo <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false"><ref loc="ISA 43:5">Is. 43.5</ref> y <ref loc="ISA 49:12">49.12</ref>. <ref loc="MAL 1:11">Mal. 1.11</ref>.</char></note>de la tierra del oriente, y de la tierra donde se pone el sol;<verse eid="ZEC 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 8:8"/>Y traerélos, y habitarán en medio de Jerusalem; <note caller="+" style="x"><char style="xo" closed="false">8.8 </char><char style="xt" closed="false">cp. 13.9.</char></note>y me serán por pueblo, y yo seré á ellos por Dios con verdad y con justicia.<verse eid="ZEC 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 8:9"/>Así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="HAG 2:4">Hag. 2.4</ref>.</char></note>Esfuércense vuestras manos, de vosotros los que oís en estos días estas palabras de la boca de <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="EZR 5:1">Esd. 5.1</ref>,<ref loc="EZR 5:2">2</ref>.</char></note>los profetas, desde <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="HAG 2:18">Hag. 2.18</ref>.</char></note>el día que se echó el cimiento á la casa de Jehová de los ejércitos, para edificar el templo.<verse eid="ZEC 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 8:10"/>Porque antes de estos días no ha habido paga de hombre, ni paga de bestia, ni hubo paz alguna para entrante ni para saliente, á causa del enemigo: y yo dejé todos los hombres, cada cual contra su compañero.<verse eid="ZEC 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 8:11"/>Mas ahora no <char style="it">lo haré</char> con el resto de este pueblo como en aquellos días pasados, dice Jehová de los ejércitos.<verse eid="ZEC 8:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 8:12"/>Porque <char style="it">habrá</char> simiente de paz; la vid dará su fruto, y dará su producto la tierra, y los cielos darán su rocío; y haré que el resto de este pueblo posea todo esto.<verse eid="ZEC 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 8:13"/>Y será que como <note caller="+" style="x"><char style="xo" closed="false">8.13 </char><char style="xt" closed="false"><ref loc="JER 42:18">Jer. 42.18</ref>.</char></note>fuisteis maldición entre las gentes, oh casa de Judá y casa de Israel, así os salvaré, y <note caller="+" style="x"><char style="xo" closed="false">8.13 </char><char style="xt" closed="false"><ref loc="GEN 12:2">Gn. 12.2</ref>.</char></note>seréis bendición. No temáis, mas esfuércense vuestras manos.<verse eid="ZEC 8:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 8:14"/>Porque así ha dicho Jehová de los ejércitos: <note caller="+" style="x"><char style="xo" closed="false">8.14 </char><char style="xt" closed="false"><ref loc="JER 31:28">Jer. 31.28</ref> y <ref loc="JER 32:42">32.42</ref>.</char></note>Como pensé haceros mal cuando vuestros padres me provocaron á ira, dice Jehová de los ejércitos, y no me arrepentí;<verse eid="ZEC 8:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 8:15"/>Así tornando he pensado de hacer bien á Jerusalem y á la casa de Judá en estos días: no temáis.<verse eid="ZEC 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ZEC 8:16"/>Estas son las cosas que habéis de hacer: <note caller="+" style="x"><char style="xo" closed="false">8.16 </char><char style="xt" closed="false"><ref loc="EPH 4:25">Ef. 4.25</ref>.</char></note>Hablad verdad cada cual con su prójimo; juzgad en vuestras puertas verdad y juicio de paz:<verse eid="ZEC 8:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ZEC 8:17"/>Y ninguno de vosotros piense mal en su corazón contra su prójimo, ni ameis juramento falso: porque todas estas son cosas que aborrezco, dice Jehová<verse eid="ZEC 8:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ZEC 8:18"/>Y fué á mí palabra de Jehová de los ejércitos, diciendo:<verse eid="ZEC 8:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ZEC 8:19"/>Así ha dicho Jehová de los ejércitos: El ayuno <note caller="+" style="x"><char style="xo" closed="false">8.19 </char><char style="xt" closed="false"><ref loc="JER 39:2">Jer. 39.2</ref> y <ref loc="JER 52:6">52.6</ref>.</char></note>del cuarto <char style="it">mes,</char> y el ayuno del <note caller="+" style="x"><char style="xo" closed="false">8.19 </char><char style="xt" closed="false">cp. 7.3,5.</char></note>quinto, y el ayuno del <char style="fm">8.19</char> séptimo, y el ayuno del <note caller="+" style="x"><char style="xo" closed="false">8.19 </char><char style="xt" closed="false"><ref loc="2KI 25:1">2 R. 25.1</ref>. <ref loc="JER 39:1">Jer. 39.1</ref>.</char></note>décimo, se tornarán á la casa de Judá en gozo y alegría, y en festivas solemnidades. Amad pues verdad y paz.<verse eid="ZEC 8:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ZEC 8:20"/>Así ha dicho Jehová de los ejércitos: Aun vendrán pueblos, y moradores de muchas ciudades;<verse eid="ZEC 8:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ZEC 8:21"/>Y vendrán los moradores de la una á la otra, y dirán: Vamos á implorar el favor de Jehová, y á buscar á Jehová de los ejércitos. Yo también iré.<verse eid="ZEC 8:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ZEC 8:22"/>Y <note caller="+" style="x"><char style="xo" closed="false">8.22 </char><char style="xt" closed="false">cp. 2.11.</char></note>vendrán muchos pueblos y fuertes naciones á buscar á Jehová de los ejércitos en Jerusalem, y á implorar el favor de Jehová.<verse eid="ZEC 8:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ZEC 8:23"/>Así ha dicho Jehová de los ejércitos: En aquellos días <char style="it">acontecerá</char> que <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false"><ref loc="GEN 31:7">Gn. 31.7</ref>.</char></note>diez hombres <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false"><ref loc="ISA 66:18">Is. 66.18</ref>. <ref loc="REV 5:9">Ap. 5.9</ref>.</char></note>de todas las lenguas de las gentes, trabarán de la falda de un Judío, diciendo: Iremos con vosotros, porque hemos oído que Dios está con vosotros.<verse eid="ZEC 8:23"/></para>
+  <chapter eid="ZEC 8"/>
+  <chapter number="9" style="c" sid="ZEC 9"/>
+  <para style="s">1 Castigo de varios pueblos.</para>
+  <para style="s">2 Judá será salvo.</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 9:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.1 </char>
+      <char style="xt" closed="false">cp. 12.1.</char>
+    </note>CARGA de la palabra de Jehová contra tierra de Hadrach, y de Damasco su reposo: porque á Jehová están vueltos los ojos de los hombres, y de todas las tribus de Israel.<verse eid="ZEC 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 9:2"/>Y también <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="JER 49:23">Jer. 49.23</ref>.</char></note>Hamath tendrá término en ella; <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="ISA 23:1">Is. 23.1</ref>.</char></note>Tiro y <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EZK 28:21">Ez. 28.21</ref>.</char></note>Sidón, <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EZK 28:3-5">Ez. 28.3-5</ref>,<ref loc="EZK 28:12">12</ref>.</char></note>aunque muy sabia sea.<verse eid="ZEC 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 9:3"/>Bien que Tiro se edificó fortaleza, y amontonó plata como polvo, y oro como lodo de las calles,<verse eid="ZEC 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 9:4"/>He aquí, el Señor la empobrecerá, <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="EZK 26:17">Ez. 26.17</ref>.</char></note>y herirá en la mar su fortaleza, y ella será consumida de fuego.<verse eid="ZEC 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 9:5"/>Ascalón verá, y temerá; <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="ZEP 2:4">Sof. 2.4</ref>.</char></note>Gaza también, y se dolerá en gran manera: asimismo Ecrón, porque su esperanza será confundida; y de Gaza perecerá el rey, y Ascalón no será habitada.<verse eid="ZEC 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 9:6"/>Y habitará en <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="AMO 1:8">Am. 1.8</ref>.</char></note>Asdod un extranjero, y yo talaré la soberbia de los Palestinos:<verse eid="ZEC 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 9:7"/>Y quitaré <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="LEV 3:17">Lv. 3.17</ref>.</char></note>sus sangres de su boca, y sus abominaciones de sus dientes, y quedarán ellos también para nuestro Dios, y serán como capitanes en Judá, y Ecrón como <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="JDG 1:21">Jue. 1.21</ref>.</char></note>el Jebuseo.<verse eid="ZEC 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 9:8"/>Y <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="PSA 34:7">Sal. 34.7</ref>.</char></note>seré real de ejército á mi casa, á causa <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false">cp. 7.14.</char></note>del que va y del que viene: y no pasará más sobre ellos <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="ISA 11:9">Is. 11.9</ref>.</char></note>angustiador; porque ahora miré con mis ojos.<verse eid="ZEC 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 9:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 12:6">Is. 12.6</ref>.</char>
+    </note>Alégrate mucho, <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="ZEP 3:14">Sof. 3.14</ref>.</char></note>hija de Sión; da voces de júbilo, hija de Jerusalem: <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="MAT 21:5">Mt. 21.5</ref>.</char></note>he aquí, <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="JER 23:5">Jer. 23.5</ref>. <ref loc="MIC 5:2">Mi. 5.2</ref>.</char></note>tu rey vendrá á ti, justo y salvador, <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="MAT 11:29">Mt. 11.29</ref>.</char></note>humilde, y cabalgando sobre un asno, así sobre un pollino hijo de asna.<verse eid="ZEC 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 9:10"/>Y de Ephraim <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="HOS 1:7">Os. 1.7</ref>.</char></note>destruiré los carros, y los caballo de Jerusalem; y los arcos de guerra serán quebrados: y hablará <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="EPH 2:14">Ef. 2.14</ref>.</char></note>paz á las gentes; y su señorío será <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="PSA 72:8">Sal. 72.8</ref>.</char></note>de mar á mar, y desde el río hasta los fines de la tierra.<verse eid="ZEC 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 9:11"/>Y tú también por <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false"><ref loc="EXO 24:8">Ex. 24.8</ref>. <ref loc="HEB 10:29">He. 10.29</ref>.</char></note>la sangre de tu pacto serás salva; yo he sacado tus presos del aljibe en que no hay agua.<verse eid="ZEC 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 9:12"/>Tornaos á la fortaleza, oh <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="ISA 49:9">Is. 49.9</ref>.</char></note>presos de esperanza: hoy también os <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="ISA 61:7">Is. 61.7</ref>.</char></note>anuncio que os daré doblado.<verse eid="ZEC 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 9:13"/>Porque entesado he para mí á Judá <char style="it">como</char> arco, henchí á Ephraim; y despertaré tus hijos, oh Sión, contra tus hijos, <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false"><ref loc="EZK 27:13">Ez. 27.13</ref>.</char></note>oh Grecia, y te pondré como espada de valiente.<verse eid="ZEC 9:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 9:14"/>Y Jehová será visto sobre ellos, y su dardo saldrá como relámpago: y <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="ISA 18:3">Is. 18.3</ref>.</char></note>el Señor Jehová tocará trompeta, é irá <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="ISA 21:1">Is. 21.1</ref>.</char></note>como torbellinos del austro.<verse eid="ZEC 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 9:15"/>Jehová de los ejércitos los amparará, y ellos devorarán, y sujetarán á las piedras de la honda, y beberán y harán estrépido como <char style="it">tomados</char> del vino; y se llenarán como <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="EXO 27:3">Ex. 27.3</ref>.</char></note>cuenco, ó como los lados del altar.<verse eid="ZEC 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ZEC 9:16"/>Y los salvará <note caller="+" style="x"><char style="xo" closed="false">9.16 </char><char style="xt" closed="false"><ref loc="ISA 2:11">Is. 2.11</ref>.</char></note>en aquel día Jehová su Dios como á rebaño de su pueblo: porque <note caller="+" style="x"><char style="xo" closed="false">9.16 </char><char style="xt" closed="false"><ref loc="ISA 62:3">Is. 62.3</ref>.</char></note>serán engrandecidos en <note caller="+" style="x"><char style="xo" closed="false">9.16 </char><char style="xt" closed="false"><ref loc="ISA 11:10">Is. 11.10</ref>,<ref loc="ISA 11:12">12</ref>.</char></note>su tierra como piedras de corona.<verse eid="ZEC 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ZEC 9:17"/>Porque ¡cuánta es su bondad, y cuánta su hermosura! El trigo alegrará á los mancebos, y el vino á las doncellas.<verse eid="ZEC 9:17"/></para>
+  <chapter eid="ZEC 9"/>
+  <chapter number="10" style="c" sid="ZEC 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 10:1"/>PEDID á Jehová <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="DEU 11:14">Dt. 11.14</ref>.</char></note>lluvia en la sazón tardía: Jehová hará relámpagos, y os dará lluvia abundante, y hierba en el campo á cada uno.<verse eid="ZEC 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 10:2"/>Porque las imágenes han hablado vanidad, y <note caller="+" style="x"><char style="xo" closed="false">10.2 </char><char style="xt" closed="false"><ref loc="JER 27:9">Jer. 27.9</ref>.</char></note>los adivinos han visto mentira, y <note caller="+" style="x"><char style="xo" closed="false">10.2 </char><char style="xt" closed="false"><ref loc="JER 23:25">Jer. 23.25</ref>.</char></note>han hablado sueños vanos, en vano consuelan: por lo cual se fueron ellos como ovejas, fueron humillados <note caller="+" style="x"><char style="xo" closed="false">10.2 </char><char style="xt" closed="false"><ref loc="EZK 34:5">Ez. 34.5</ref>. <ref loc="MAT 9:36">Mt. 9.36</ref>.</char></note>porque no <char style="it">tuvieron</char> pastor.<verse eid="ZEC 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 10:3"/>Contra los pastores se ha encendido mi enojo, y castigaré <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false"><ref loc="ISA 14:9">Is. 14.9</ref>.</char></note>los machos de cabrío: mas Jehová de los ejércitos visitará su rebaño, la casa de Judá, y tornarálos como su caballo de honor en la guerra.<verse eid="ZEC 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 10:4"/>De él saldrá el <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false"><ref loc="PSA 118:22">Sal. 118.22</ref>.</char></note>ángulo, de él la <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false"><ref loc="ISA 22:23">Is. 22.23</ref>.</char></note>clavija, de él <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false">cp. 9.13.</char></note>el arco de la guerra, de él también todo apremiador.<verse eid="ZEC 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 10:5"/>Y serán como valientes, que en la batalla pisan <char style="it">al enemigo</char> en el lodo de las calles; y pelearán, porque Jehová <char style="it">será</char> con ellos; y los que cabalgan en caballos serán avergonzados.<verse eid="ZEC 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 10:6"/>Porque yo fortificaré la casa de Judá, y guardaré la casa de José; y harélos volver, porque de ellos tendré piedad; y serán como si no los hubiera desechado; porque yo soy Jehová su Dios, que los oiré.<verse eid="ZEC 10:6"/></para>
+  <para style="s">1 “Las ovejas de la matanza.”</para>
+  <para style="s">2 “Suavidad y Ataduras.”</para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 10:7"/>Y será Ephraim como valiente, y <note caller="+" style="x"><char style="xo" closed="false">10.7 </char><char style="xt" closed="false"><ref loc="PSA 104:15">Sal. 104.15</ref>. cp. 9.15.</char></note>alegraráse su corazón como de vino: sus hijos también verán y se alegrarán; su corazón se gozará en Jehová.<verse eid="ZEC 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 10:8"/>Yo <note caller="+" style="x"><char style="xo" closed="false">10.8 </char><char style="xt" closed="false"><ref loc="ISA 5:26">Is. 5.26</ref>.</char></note>les silbaré y los juntaré, porque los he redimido; y serán multiplicados como fueron multiplicados.<verse eid="ZEC 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 10:9"/>Bien que <note caller="+" style="x"><char style="xo" closed="false">10.9 </char><char style="xt" closed="false"><ref loc="HOS 2:23">Os. 2.23</ref>.</char></note>los sembraré entre los pueblos, <note caller="+" style="x"><char style="xo" closed="false">10.9 </char><char style="xt" closed="false"><ref loc="DEU 30:1-3">Dt. 30.1-3</ref>.</char></note>aun en lejanos países se acordarán de mí; y vivirán con sus hijos, y tornarán.<verse eid="ZEC 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 10:10"/>Porque yo los tornaré de la tierra de Egipto, y los recogeré <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false"><ref loc="ISA 11:11">Is. 11.11</ref> y <ref loc="ISA 27:13">27.13</ref>. <ref loc="HOS 11:11">Os. 11.11</ref>.</char></note>de la Asiria; y traerélos á la tierra de Galaad y del Líbano, y <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false"><ref loc="ISA 49:20">Is. 49.20</ref>.</char></note>no les bastará.<verse eid="ZEC 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 10:11"/>Y la tribulación <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="ISA 11:15">Is. 11.15</ref>.</char></note>pasará por la mar, y en la mar herirá las ondas, y se secarán todas las honduras del río: y la soberbia del Assur será derribada, y <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="EZK 30:13">Ez. 30.13</ref>.</char></note>se perderá el cetro de Egipto.<verse eid="ZEC 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 10:12"/>Y yo los fortificaré en Jehová, y <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false"><ref loc="MIC 4:5">Mi. 4.5</ref>.</char></note>caminarán en su nombre, dice Jehová.<verse eid="ZEC 10:12"/></para>
+  <chapter eid="ZEC 10"/>
+  <chapter number="11" style="c" sid="ZEC 11"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 11:1"/>OH Líbano, abre tus puertas, y queme fuego tus cedros.<verse eid="ZEC 11:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 11:2"/>Aulla, oh haya, porque el cedro cayó, porque los magníficos son talados. Aullad, <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false"><ref loc="ISA 2:13">Is. 2.13</ref>.</char></note>alcornoques de Basán, porque el fuerte monte es derribado.<verse eid="ZEC 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 11:3"/>Voz de aullido de pastores, porque su magnificencia es asolada; estruendo de bramidos de cachorros de leones, porque la soberbia del Jordán es destruída.<verse eid="ZEC 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 11:4"/>Así ha dicho Jehová mi Dios: <note caller="+" style="x"><char style="xo" closed="false">11.4 </char><char style="xt" closed="false">ver. 7.</char></note>Apacienta las ovejas de la matanza;<verse eid="ZEC 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 11:5"/>A las cuales mataban sus compradores, y no se tenían por culpables; y el que las vendía, decía: Bendito sea Jehová, que he enriquecido; ni sus pastores tenían piedad de ellas.<verse eid="ZEC 11:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 11:6"/>Por tanto, no más tendré piedad de los moradores de la tierra, dice Jehová: porque he aquí, yo entregaré los hombres, cada cual en mano de su compañero, y en mano de su rey; y quebrantarán la tierra, y yo no libraré de sus manos.<verse eid="ZEC 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 11:7"/>Apacenté pues las ovejas de la matanza, es á saber, <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="ISA 14:32">Is. 14.32</ref>. <ref loc="ZEP 3:12">Sof. 3.12</ref>.</char></note>los pobres del rebaño. Y me tomé dos cayados; al uno puse por nombre Suavidad, y al otro Ataduras; y apacenté las ovejas.<verse eid="ZEC 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 11:8"/>E hice matar tres pastores en un mes, y mi alma se angustió por ellos, y también el alma de ellos me aborreció á mí.<verse eid="ZEC 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 11:9"/>Y dije: No os apacentaré; la que muriere, muera; y la que se perdiere, se pierda; y las que quedaren, que cada una coma la carne de su compañera.<verse eid="ZEC 11:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 11:10"/>Tomé luego mi cayado Suavidad, y quebrélo, para deshacer mi pacto que concerté con todos los pueblos.<verse eid="ZEC 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 11:11"/>Y fué deshecho en ese día, y así conocieron los pobres del rebaño que miran á mí, que era palabra de Jehová.<verse eid="ZEC 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 11:12"/>Y díjeles: Si os parece bien, dadme mi salario; y si no, dejadlo. Y pesaron para mi salario <note caller="+" style="x"><char style="xo" closed="false">11.12 </char><char style="xt" closed="false"><ref loc="EXO 21:32">Ex. 21.32</ref>. <ref loc="HOS 3:2">Os. 3.2</ref>.</char></note>treinta <char style="it">piezas</char> de plata.<verse eid="ZEC 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 11:13"/>Y díjome Jehová: Echalo al tesorero, <note caller="+" style="x"><char style="xo" closed="false">11.13 </char><char style="xt" closed="false"><ref loc="MAT 27:9">Mt. 27.9</ref>,<ref loc="MAT 27:10">10</ref>.</char></note>hermoso precio con que me han apreciado. Y tomé las treinta <char style="it">piezas</char> de plata, y echélas en la casa de Jehová al tesorero.<verse eid="ZEC 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 11:14"/>Quebré luego el otro mi cayado Ataduras, para romper la hermandad entre Judá é Israel.<verse eid="ZEC 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 11:15"/>Y díjome Jehová: <note caller="+" style="x"><char style="xo" closed="false">11.15 </char><char style="xt" closed="false"><ref loc="EZK 34:3">Ez. 34.3</ref>,<ref loc="EZK 34:4">4</ref>.</char></note>Toma aún el hato de un pastor insensato; porque he aquí, yo levanto pastor en la tierra, que no visitará las perdidas, no buscará la pequeña, no curará la perniquebrada, ni llevará la cansada á cuestas; sino que se comerá la carne de la gruesa, y romperá sus uñas.<verse eid="ZEC 11:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ZEC 11:16"/>Mal haya <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false"><ref loc="JER 23:1">Jer. 23.1</ref>. <ref loc="JHN 10:12">Jn. 10.12</ref>.</char></note>el pastor de nada, que deja el ganado. Espada sobre su brazo, y sobre su ojo derecho: del todo se secará su brazo, y enteramente será su ojo derecho oscurecido.<verse eid="ZEC 11:16"/></para>
+  <chapter eid="ZEC 11"/>
+  <chapter number="12" style="c" sid="ZEC 12"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 12:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.1 </char>
+      <char style="xt" closed="false">
+        <ref loc="NAM 1:1">Nah. 1.1</ref>. cp. 9.1.</char>
+    </note>CARGA de la palabra de Jehová acerca de Israel. Jehová, que extiende los cielos, y funda la tierra, y <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false"><ref loc="NUM 16:22">Nm. 16.22</ref>.</char></note>forma el espíritu del hombre dentro de él, ha dicho:<verse eid="ZEC 12:1"/></para>
+  <para style="s">1 Jehová, protector de Judá.</para>
+  <para style="s">2 “Habrá manantial abierto.”</para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 12:2"/>He aquí, <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="ISA 51:17">Is. 51.17</ref>,<ref loc="ISA 51:22">22</ref>,<ref loc="ISA 51:23">23</ref>.</char></note>yo pongo á Jerusalem por vaso de temblor á todos los pueblos de alrededor cuando estén en el sitio contra Judá y contra Jerusalem.<verse eid="ZEC 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 12:3"/>Y será en aquel día, que yo pondré á Jerusalem por piedra pesada á todos los pueblos: todos los que se la cargaren, serán despedazados, bien que todas las gentes de la tierra se juntarán contra ella.<verse eid="ZEC 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 12:4"/>En aquel día, dice Jehová, heriré con <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false"><ref loc="DEU 28:28">Dt. 28.28</ref>.</char></note>aturdimiento á todo caballo, y con locura al que en él sube; mas sobre la casa de Judá abriré mis ojos, y á todo caballo de los pueblos heriré con ceguera.<verse eid="ZEC 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 12:5"/>Y los capitanes de Judá dirán en su corazón: Mi fuerza son los moradores de Jerusalem en Jehová de los ejércitos su Dios.<verse eid="ZEC 12:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 12:6"/>En aquel día pondré los capitanes de Judá <note caller="+" style="x"><char style="xo" closed="false">12.6 </char><char style="xt" closed="false"><ref loc="JER 5:14">Jer. 5.14</ref>.</char></note>como un brasero de fuego en leña, y como una hacha de fuego en gavillas; y consumirán á diestra y á siniestra todos los pueblos alrededor: y <note caller="+" style="x"><char style="xo" closed="false">12.6 </char><char style="xt" closed="false">cp. 2.4.</char></note>Jerusalem será otra vez habitada <note caller="+" style="x"><char style="xo" closed="false">12.6 </char><char style="xt" closed="false">cp. 6.12.</char></note>en su lugar, en Jerusalem.<verse eid="ZEC 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 12:7"/>Y librará Jehová las tiendas de Judá primero, porque la gloria de la casa de David y del morador de Jerusalem no se engrandezca sobre Judá.<verse eid="ZEC 12:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 12:8"/>En aquel día Jehová defenderá al morador de Jerusalem: y <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false"><ref loc="JOL 3:10">Jl. 3.10</ref>.</char></note>el que entre ellos fuere flaco, en aquel tiempo será como David; y la casa de David como ángeles, como <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false"><ref loc="EXO 32:34">Ex. 32.34</ref>.</char></note>el ángel de Jehová delante de ellos.<verse eid="ZEC 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 12:9"/>Y será que en aquel día yo procuraré quebrantar todas las gentes que vinieren contra Jerusalem.<verse eid="ZEC 12:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 12:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 39:29">Ez. 39.29</ref>.</char>
+    </note>Y derramaré sobre la casa de David, y sobre los moradores de Jerusalem, espíritu de gracia y de oración; <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false"><ref loc="JHN 19:37">Jn. 19.37</ref>. <ref loc="REV 1:7">Ap. 1.7</ref>.</char></note>y mirarán á mí, á quien traspasaron, y harán llanto sobre él, <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false"><ref loc="JER 6:26">Jer. 6.26</ref>.</char></note>como llanto sobre unigénito, afligiéndose sobre él como quien se aflige sobre primogénito.<verse eid="ZEC 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 12:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.11 </char>
+      <char style="xt" closed="false">ver. 3.</char>
+    </note>En aquel día habrá gran <note caller="+" style="x"><char style="xo" closed="false">12.11 </char><char style="xt" closed="false"><ref loc="MAT 24:30">Mt. 24.30</ref>.</char></note>llanto en Jerusalem, como <note caller="+" style="x"><char style="xo" closed="false">12.11 </char><char style="xt" closed="false"><ref loc="2KI 23:29">2 R. 23.29</ref>.</char></note>el llanto de Adadrimón en el valle de Megiddo.<verse eid="ZEC 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 12:12"/>Y la tierra lamentará, cada linaje de por sí; el linaje de la casa de David por sí, y <note caller="+" style="x"><char style="xo" closed="false">12.12 </char><char style="xt" closed="false"><ref loc="JOL 2:16">Jl. 2.16</ref>. cp. 7.3. <ref loc="1CO 7:5">1 Co. 7.5</ref>.</char></note>sus mujeres por sí; el linaje de la casa de <note caller="+" style="x"><char style="xo" closed="false">12.12 </char><char style="xt" closed="false"><ref loc="2SA 5:14">2 S. 5.14</ref>.</char></note>Nathán por sí, y sus mujeres por sí;<verse eid="ZEC 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 12:13"/>El linaje de la casa de Leví por sí, y sus mujeres por sí; el linaje de <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false"><ref loc="NUM 3:18">Nm. 3.18</ref>.</char></note>Simei por sí, y sus mujeres por sí;<verse eid="ZEC 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 12:14"/>Todos los otros linajes, los linajes por sí, y sus mujeres por sí.<verse eid="ZEC 12:14"/></para>
+  <chapter eid="ZEC 12"/>
+  <chapter number="13" style="c" sid="ZEC 13"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 13:1"/>EN aquel tiempo <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false"><ref loc="EZK 36:25">Ez. 36.25</ref>.</char></note>habrá manantial abierto para la casa de David y para los moradores de Jerusalem, para el pecado y la inmundicia.<verse eid="ZEC 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 13:2"/>Y será en aquel día, dice Jehová de los ejércitos, que talaré de la tierra los nombres de las imágenes, y nunca más vendrán en memoria: y también haré talar de la tierra los profetas, y espíritu de inmundicia.<verse eid="ZEC 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 13:3"/>Y será que cuando alguno más profetizare, diránle su padre y su madre que lo engendraron: No vivirás, porque has hablado mentira en el nombre de Jehová: y su padre y su madre que lo engendraron, <note caller="+" style="x"><char style="xo" closed="false">13.3 </char><char style="xt" closed="false"><ref loc="DEU 13:6">Dt. 13.6</ref>,<ref loc="DEU 13:8">8</ref>.</char></note>le alancearán cuando profetizare.<verse eid="ZEC 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 13:4"/>Y será en aquel tiempo, que todos <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false"><ref loc="MIC 3:6">Mi. 3.6</ref>,<ref loc="MIC 3:7">7</ref>.</char></note>los profetas se avergonzarán de su visión cuando profetizaren; ni nunca más <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false"><ref loc="2KI 1:8">2 R. 1.8</ref>.</char></note>se vestirán de manto velloso para mentir.<verse eid="ZEC 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 13:5"/>Y dirá: <note caller="+" style="x"><char style="xo" closed="false">13.5 </char><char style="xt" closed="false"><ref loc="AMO 7:14">Am. 7.14</ref>.</char></note>No soy profeta; labrador soy de la tierra: porque <char style="it">esto</char> aprendí del hombre desde mi juventud.<verse eid="ZEC 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 13:6"/>Y le preguntarán: ¿Qué heridas son éstas en tus manos? Y él responderá: Con ellas fuí herido en casa de mis amigos.<verse eid="ZEC 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 13:7"/>Levántate, oh espada, sobre <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="ISA 40:11">Is. 40.11</ref>.</char></note>el pastor, y sobre el hombre <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="LEV 6:2">Lv. 6.2</ref>. <ref loc="JHN 10:30">Jn. 10.30</ref>.</char></note>compañero mío, dice Jehová de los ejércitos. <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="MAT 26:31">Mt. 26.31</ref>.</char></note>Hiere al pastor, y se derramarán las ovejas: mas tornaré mi mano sobre los chiquitos.<verse eid="ZEC 13:7"/></para>
+  <para style="s">1 “El día de Jehová.”</para>
+  <para style="s">2 Exaltación de Jerusalem.</para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 13:8"/>Y acontecerá en toda la tierra, dice Jehová, que las dos partes serán taladas en ella, y se perderán; <note caller="+" style="x"><char style="xo" closed="false">13.8 </char><char style="xt" closed="false">cp. 14.2.</char></note>mas la tercera quedará en ella.<verse eid="ZEC 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 13:9"/>Y meteré en el fuego la tercera parte, y los <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="MAL 3:2">Mal. 3.2</ref>,<ref loc="MAL 3:5">5</ref>.</char></note>fundiré como se funde la plata, y <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="1PE 1:7">1 P. 1.7</ref>.</char></note>probarélos como se prueba el oro. El invocará mi nombre, y yo le oiré, y <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="HOS 2:23">Os. 2.23</ref>.</char></note>diré: Pueblo mío: y él dirá: Jehová es mi Dios.<verse eid="ZEC 13:9"/></para>
+  <chapter eid="ZEC 13"/>
+  <chapter number="14" style="c" sid="ZEC 14"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEC 14:1"/>HE aquí, <note caller="+" style="x"><char style="xo" closed="false">14.1 </char><char style="xt" closed="false"><ref loc="ISA 13:9">Is. 13.9</ref>. <ref loc="JOL 2:1">Jl. 2.1</ref>.</char></note>el día de Jehová viene, y tus despojos serán repartidos en medio de ti.<verse eid="ZEC 14:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ZEC 14:2"/>Porque <note caller="+" style="x"><char style="xo" closed="false">14.2 </char><char style="xt" closed="false"><ref loc="JOL 3:2">Jl. 3.2</ref>. <ref loc="REV 16:14">Ap. 16.14</ref>.</char></note>yo reuniré todas las gentes en batalla contra Jerusalem; y la ciudad será tomada, y saqueadas serán las casas, y forzadas las mujeres: y la mitad de la ciudad irá en cautiverio, mas el resto del pueblo no será talado de la ciudad.<verse eid="ZEC 14:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ZEC 14:3"/>Después saldrá Jehová, y peleará con aquellas gentes, <note caller="+" style="x"><char style="xo" closed="false">14.3 </char><char style="xt" closed="false"><ref loc="EXO 15:3">Ex. 15.3</ref>.</char></note>como peleó el día de la batalla.<verse eid="ZEC 14:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ZEC 14:4"/>Y afirmaránse sus pies en aquel día <note caller="+" style="x"><char style="xo" closed="false">14.4 </char><char style="xt" closed="false"><ref loc="EZK 11:23">Ez. 11.23</ref>.</char></note>sobre el monte de las Olivas, que está en frente de Jerusalem á la parte de oriente: y el monte de las Olivas, se partirá por medio de sí hacia el oriente y hacia el occidente, <note caller="+" style="x"><char style="xo" closed="false">14.4 </char><char style="xt" closed="false">ver. 5. <ref loc="JOL 3:14">Jl. 3.14</ref>.</char></note><char style="it">haciendo</char> un muy grande valle; y la mitad del monte se apartará hacia el norte, y la otra mitad hacia el mediodía.<verse eid="ZEC 14:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ZEC 14:5"/>Y huiréis al valle de los montes; porque el valle de los montes llegará hasta Hasal; y huiréis de la manera que huisteis <note caller="+" style="x"><char style="xo" closed="false">14.5 </char><char style="xt" closed="false"><ref loc="AMO 1:1">Am. 1.1</ref>.</char></note>por causa del terremoto en los días de Uzzías, rey de Judá: y vendrá Jehová mi Dios, y <note caller="+" style="x"><char style="xo" closed="false">14.5 </char><char style="xt" closed="false"><ref loc="DEU 33:2">Dt. 33.2</ref>. <ref loc="1TH 3:13">1 Ts. 3.13</ref>.</char></note>con él todos los santos.<verse eid="ZEC 14:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ZEC 14:6"/>Y acontecerá que en ese día no habrá luz clara, ni oscura.<verse eid="ZEC 14:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ZEC 14:7"/>Y será un día, el cual es conocido de Jehová, que ni será día ni noche; mas acontecerá que <note caller="+" style="x"><char style="xo" closed="false">14.7 </char><char style="xt" closed="false"><ref loc="ISA 30:26">Is. 30.26</ref> y <ref loc="ISA 60:19">60.19</ref>,<ref loc="ISA 60:20">20</ref>. <ref loc="REV 21:23">Ap. 21.23</ref>.</char></note>al tiempo de la tarde habrá luz.<verse eid="ZEC 14:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ZEC 14:8"/>Acontecerá también en aquel día, que saldrán <note caller="+" style="x"><char style="xo" closed="false">14.8 </char><char style="xt" closed="false"><ref loc="EZK 47:1">Ez. 47.1</ref>. <ref loc="JHN 4:10">Jn. 4.10</ref>.</char></note>de Jerusalem aguas vivas; la mitad de ellas hacia la mar oriental, y la otra mitad hacia la mar occidental, en verano y en invierno.<verse eid="ZEC 14:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ZEC 14:9"/>Y Jehová será <note caller="+" style="x"><char style="xo" closed="false">14.9 </char><char style="xt" closed="false"><ref loc="PSA 47:7">Sal. 47.7</ref>.</char></note>rey sobre toda la tierra. En aquel día Jehová será uno, y uno su nombre.<verse eid="ZEC 14:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ZEC 14:10"/>Y toda la tierra se tornará <note caller="+" style="x"><char style="xo" closed="false">14.10 </char><char style="xt" closed="false"><ref loc="ISA 40:4">Is. 40.4</ref>.</char></note>como llanura desde Gabaa hasta Rimmón al mediodía de Jerusalem: y <note caller="+" style="x"><char style="xo" closed="false">14.10 </char><char style="xt" closed="false"><ref loc="ISA 2:2">Is. 2.2</ref>.</char></note>ésta será enaltecida, y habitarse ha en su lugar desde la <note caller="+" style="x"><char style="xo" closed="false">14.10 </char><char style="xt" closed="false"><ref loc="JER 37:13">Jer. 37.13</ref>.</char></note>puerta de Benjamín hasta el lugar de la puerta primera, <note caller="+" style="x"><char style="xo" closed="false">14.10 </char><char style="xt" closed="false"><ref loc="NEH 3:1">Neh. 3.1</ref>. <ref loc="JER 31:38">Jer. 31.38</ref>.</char></note>hasta la puerta de los rincones; <char style="fm">14.10</char> y desde la torre de Hananeel hasta los lagares del rey.<verse eid="ZEC 14:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ZEC 14:11"/>Y morarán en ella, y nunca más será anatema: sino que será Jerusalem habitada confiadamente.<verse eid="ZEC 14:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ZEC 14:12"/>Y esta será la plaga con que herirá Jehová á todos los pueblos que pelearon contra Jerusalem: la carne de ellos se disolverá estando ellos sobre sus pies, y se consumirán sus ojos en sus cuencas, y su lengua se les deshará en su boca.<verse eid="ZEC 14:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ZEC 14:13"/>Y acontecerá en aquel día que habrá en ellos gran quebrantamiento de Jehová; porque trabará cada uno de <note caller="+" style="x"><char style="xo" closed="false">14.13 </char><char style="xt" closed="false"><ref loc="JDG 7:22">Jue. 7.22</ref>. <ref loc="1SA 14:20">1 S. 14.20</ref>. <ref loc="2CH 20:23">2 Cr. 20.23</ref>.</char></note>la mano de su compañero, y su mano echará contra la mano de su compañero.<verse eid="ZEC 14:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ZEC 14:14"/>Y Judá también peleará en Jerusalem. Y serán reunidas las riquezas de todas las gentes de alrededor: oro, y plata, y ropas de vestir, en grande abundancia.<verse eid="ZEC 14:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ZEC 14:15"/>Y tal como esto será la plaga de los caballos, de los mulos, de los camellos, de los asnos, y de todas las bestias que estuvieren en aquellos campamentos.<verse eid="ZEC 14:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ZEC 14:16"/>Y todos los que quedaren de las gentes que vinieron contra Jerusalem <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false">cp. 8.22.</char></note>subirán <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false"><ref loc="ISA 66:23">Is. 66.23</ref>.</char></note>de año en año á adorar al Rey, Jehová de los ejércitos, y á celebrar <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false"><ref loc="LEV 23:34">Lv. 23.34</ref>.</char></note>la fiesta de las Cabañas.<verse eid="ZEC 14:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ZEC 14:17"/>Y acontecerá, <note caller="+" style="x"><char style="xo" closed="false">14.17 </char><char style="xt" closed="false"><ref loc="ISA 60:12">Is. 60.12</ref>.</char></note>que los de las familias de la tierra que no subieren á Jerusalem á adorar al Rey, Jehová de los ejércitos, <note caller="+" style="x"><char style="xo" closed="false">14.17 </char><char style="xt" closed="false"><ref loc="JER 3:3">Jer. 3.3</ref>.</char></note>no vendrá sobre ellos lluvia.<verse eid="ZEC 14:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ZEC 14:18"/>Y si la familia de Egipto no subiere, y no vinere, <note caller="+" style="x"><char style="xo" closed="false">14.18 </char><char style="xt" closed="false"><ref loc="DEU 11:10">Dt. 11.10</ref>.</char></note>sobre ellos no <char style="it">habrá lluvia;</char> vendrá la plaga con que Jehová herirá las gentes que no subieren á celebrar la fiesta de las Cabañas.<verse eid="ZEC 14:18"/></para>
+  <para style="s">1 Ingratitud del pueblo.</para>
+  <para style="s">2 Infidelidad de los sacerdotes.</para>
+  <para style="p">
+    <verse number="19" style="v" sid="ZEC 14:19"/>Esta será <char style="it">la pena</char> del pecado de Egipto, y del pecado de todas las gentes que no subieran á celebrar la fiesta de las Cabañas.<verse eid="ZEC 14:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ZEC 14:20"/>En aquel tiempo estará sobre las campanillas de los caballos: <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="EXO 28:36">Ex. 28.36</ref>.</char></note>SANTIDAD A JEHOVÁ; y las <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="2CH 35:13">2 Cr. 35.13</ref>.</char></note>ollas en la casa de Jehová serán como los <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false">cp. 9.15.</char></note>tazones delante del altar.<verse eid="ZEC 14:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ZEC 14:21"/>Y será toda olla en Jerusalem y en Judá santidad á Jehová de los ejércitos: y todos los que sacrificaren, vendrán y tomarán de ellas, y cocerán en ellas: y <note caller="+" style="x"><char style="xo" closed="false">14.21 </char><char style="xt" closed="false"><ref loc="EZK 44:9">Ez. 44.9</ref>.</char></note>no habrá más <note caller="+" style="x"><char style="xo" closed="false">14.21 </char><char style="xt" closed="false"><ref loc="DEU 7:1">Dt. 7.1</ref>,<ref loc="DEU 7:2">2</ref>.</char></note>Cananeo alguno en la casa de Jehová de los ejércitos en aquel tiempo.<verse eid="ZEC 14:21"/></para>
+  <chapter eid="ZEC 14"/>
+</usx>

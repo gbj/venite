@@ -22,24 +22,24 @@
 
   <!-- Language, Version, Kalendar -->
   <form [formGroup]="form">
-    <ng-container *ngIf="languageOptions$ | async as options">
-      <ion-item *ngIf="options.length > 1">
-        <ion-label position="stacked">{{ 'language' | translate }}</ion-label>
-        <ion-select name="language" formControlName="language" ngDefaultControl (ionChange)="form.controls.language.setValue($event.detail.value)">
-          <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
-        </ion-select>
-      </ion-item>
+    <ng-container *ngIf="versionOptions$ | async as versionOptions">
+      <ion-segment class="version-segment" *ngIf="versionOptions.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
+        <ion-segment-button *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-segment-button>
+      </ion-segment>
     </ng-container>
-    <ng-container *ngIf="versionOptions$ | async as options">
-      <ion-item *ngIf="options.length > 1 && !config?.segmentButtonForVersions">
+    <ion-item *ngIf="languageOptions.length > 1">
+      <ion-label position="stacked">{{ 'lang' | translate }}</ion-label>
+      <ion-select name="language" formControlName="language" ngDefaultControl (ionChange)="setLanguage($event.detail.value)">
+        <ion-select-option *ngFor="let opt of languageOptions" [value]="opt.value">{{ opt.label }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ng-container *ngIf="versionOptions$ | async as versionOptions">
+      <ion-item *ngIf="versionOptions.length > 1 && !config?.segmentButtonForVersions">
         <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
         <ion-select name="version" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
-          <ion-select-option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-select-option>
+          <ion-select-option *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-segment class="version-segment" *ngIf="options.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
-        <ion-segment-button *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</ion-segment-button>
-      </ion-segment>
     </ng-container>
     <ng-container *ngIf="kalendarOptions$ | async as options">
       <ion-item *ngIf="options.length > 1">

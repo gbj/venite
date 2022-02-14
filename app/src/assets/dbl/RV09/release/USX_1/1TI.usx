@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="1TI" style="id">Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">1 TIMOTEO</para>
+  <para style="toc3">1 Ti.</para>
+  <para style="toc2">1 Timoteo</para>
+  <para style="toc1">Primera carta de san Pablo a Timoteo</para>
+  <para style="mt2">LA PRIMERA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A TIMOTEO.</para>
+  <chapter number="1" style="c" sid="1TI 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 1:1"/>PABLO, apóstol de Jesucristo <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="TIT 1:3">Tit. 1.3</ref>.</char></note>por la ordenación de <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="LUK 1:47">Lc. 1.47</ref>.</char></note>Dios nuestro Salvador, y del Señor Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="COL 1:27">Col. 1.27</ref>.</char></note>nuestra esperanza;<verse eid="1TI 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 1:2"/>A <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ACT 16:1">Hch. 16.1</ref>.</char></note>Timoteo, <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false">ver. 18. <ref loc="1CO 4:17">1 Co. 4.17</ref>.</char></note>verdadero hijo en la fe: Gracia, misericordia y paz de Dios nuestro Padre, y de Cristo Jesús nuestro Señor.<verse eid="1TI 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 1:3"/>Como te rogué que te quedases en Efeso, cuando partí para Macedonia, para que requirieses á algunos <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">cp. 6.3.</char></note>que no enseñen diversa doctrina,<verse eid="1TI 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 1:4"/>Ni presten atención <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false">cp. 4.7. <ref loc="2TI 4:4">2 Ti. 4.4</ref>. <ref loc="TIT 1:14">Tit. 1.14</ref>.</char></note>a fábulas y <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="TIT 3:9">Tit. 3.9</ref>.</char></note>genealogías sin término, que antes engendran <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="2TI 2:23">2 Ti. 2.23</ref>.</char></note>cuestiones que la edificación de Dios que es por fe; <char style="it">así te encargo ahora.</char><verse eid="1TI 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 1:5"/>Pues <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="ROM 13:10">Ro. 13.10</ref>.</char></note>el fin del mandamiento es la caridad <char style="it">nacida</char> de <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="2TI 2:22">2 Ti. 2.22</ref>.</char></note>corazón limpio, y de <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false">ver. 19.</char></note>buena conciencia, y de fe no fingida:<verse eid="1TI 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 1:6"/>De lo cual distrayéndose algunos, se apartaron á vanas pláticas;<verse eid="1TI 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 1:7"/>Queriendo ser doctores de la ley, sin entender ni lo que hablan, ni lo que afirman.<verse eid="1TI 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 1:8"/>Sabemos <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="ROM 7:16">Ro. 7.16</ref>.</char></note>empero que la ley es buena, si alguno usa de ella legítimamente;<verse eid="1TI 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 1:9"/>Conociendo esto, que la ley no es puesta para el justo, sino para los injustos y para los desobedientes, para los impíos y pecadores, para los malos y <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="HEB 12:16">He. 12.16</ref>.</char></note>profanos, para los parricidas y matricidas, para los homicidas,<verse eid="1TI 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 1:10"/>Para <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="1CO 6:9">1 Co. 6.9</ref>. <ref loc="HEB 13:4">He. 13.4</ref>.</char></note>los fornicarios, para los sodomitas, para <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="EXO 21:16">Ex. 21.16</ref>.</char></note>los ladrones de hombres, para los mentirosos y <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="MAT 5:33">Mt. 5.33</ref>.</char></note>perjuros, y si hay alguna otra cosa contraria <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="2TI 4:3">2 Ti. 4.3</ref>.</char></note>a la sana doctrina;<verse eid="1TI 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 1:11"/>Según el evangelio de la gloria del Dios bendito, <note caller="+" style="x"><char style="xo" closed="false">1.11 </char><char style="xt" closed="false">cp. 2.7.</char></note>el cual á mí me ha sido encargado.<verse eid="1TI 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 1:12"/>Y doy gracias <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="PHP 4:13">Fil. 4.13</ref>.</char></note>al que me fortificó, á Cristo Jesús nuestro Señor, de que me tuvo por fiel, poniéndome en el ministerio:<verse eid="1TI 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 1:13"/>Habiendo sido antes blasfemo y <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="ACT 8:3">Hch. 8.3</ref>.</char></note>perseguidor é injuriador: mas <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="1CO 7:25">1 Co. 7.25</ref>.</char></note>fuí recibido á misericordia, porque <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="JHN 9:39">Jn. 9.39</ref>,<ref loc="JHN 9:41">41</ref>. <ref loc="ACT 3:17">Hch. 3.17</ref>.</char></note>lo hice con ignorancia en incredulidad.<verse eid="1TI 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 1:14"/>Mas <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="1CO 15:10">1 Co. 15.10</ref>.</char></note>la gracia de nuestro Señor fué más abundante con la fe y amor que <char style="it">es</char> en Cristo Jesús.<verse eid="1TI 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 1:15"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.15 </char>
+      <char style="xt" closed="false">cp. 3.1. <ref loc="2TI 2:11">2 Ti. 2.11</ref>. <ref loc="TIT 3:8">Tit. 3.8</ref>.</char>
+    </note>Palabra fiel y digna de ser recibida de todos: que <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="ROM 5:8">Ro. 5.8</ref>. <ref loc="1JN 3:5">1 Jn. 3.5</ref>.</char></note>Cristo Jesús vino al mundo para salvar á los pecadores, <note caller="+" style="x"><char style="xo" closed="false">1.15 </char><char style="xt" closed="false"><ref loc="EPH 3:8">Ef. 3.8</ref>.</char></note>de los cuales yo soy el primero.<verse eid="1TI 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TI 1:16"/>Mas por esto fuí recibido á misericordia, para que Jesucristo mostrase en mí el primero toda su clemencia, para ejemplo de los que habían de creer en él para vida eterna.<verse eid="1TI 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TI 1:17"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 6.16.</char></note>al Rey de siglos, inmortal, invisible, <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="ROM 16:27">Ro. 16.27</ref>. <ref loc="JUD 1:25">Jud. 25</ref>.</char></note>al solo sabio Dios <char style="it">sea</char> honor y gloria por los siglos de los siglos. Amén.<verse eid="1TI 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TI 1:18"/>Este mandamiento, <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">ver. 2.</char></note>hijo Timoteo, te encargo, para que, conforme á las <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">cp. 4.14. <ref loc="2TI 1:6">2 Ti. 1.6</ref>.</char></note>profecías pasadas de ti, <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="1CO 9:7">1 Co. 9.7</ref>. cp. 6.12. <ref loc="2TI 2:3">2 Ti. 2.3</ref>,<ref loc="2TI 2:4">4</ref>.</char></note>milites por ellas buena milicia;<verse eid="1TI 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1TI 1:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.19 </char>
+      <char style="xt" closed="false">cp. 3.9.</char>
+    </note>Manteniendo la fe <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false">ver. 5.</char></note>y buena conciencia, la cual echando de sí algunos, <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false">cp. 6.9.</char></note>hicieron naufragio en la fe:<verse eid="1TI 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1TI 1:20"/>De los cuales son <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="2TI 2:17">2 Ti. 2.17</ref>.</char></note>Himeneo y <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="ACT 19:33">Hch. 19.33</ref>.</char></note>Alejandro, <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="1CO 5:5">1 Co. 5.5</ref>.</char></note>los cuales entregué á Satanás, para que aprendan á no blasfemar.<verse eid="1TI 1:20"/></para>
+  <chapter eid="1TI 1"/>
+  <chapter number="2" style="c" sid="1TI 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 2:1"/>AMONESTO pues, ante todas cosas, que se hagan <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="EPH 6:18">Ef. 6.18</ref>.</char></note>rogativas, oraciones, peticiones, hacimientos de gracias, por todos los hombres;<verse eid="1TI 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 2:2"/>Por los reyes y <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="ROM 13:1">Ro. 13.1</ref>.</char></note>por todos los que están en eminencia, para que vivamos quieta y reposadamente en toda piedad y honestidad.<verse eid="1TI 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 2:3"/>Porque esto es <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">cp. 5.4.</char></note>bueno y agradable delante <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="LUK 1:47">Lc. 1.47</ref>.</char></note>de Dios nuestro Salvador;<verse eid="1TI 2:3"/></para>
+  <para style="s">1 Un Dios y un Mediador.</para>
+  <para style="s">2 Obispos y diáconos.</para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 2:4"/>El cual <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="JHN 3:16">Jn. 3.16</ref>,<ref loc="JHN 3:17">17</ref>. cp. 4.10.</char></note>quiere que todos los hombres sean salvos, y <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="2TI 3:7">2 Ti. 3.7</ref>.</char></note>que vengan al conocimiento de la verdad.<verse eid="1TI 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 2:5"/>Porque hay un Dios, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="ROM 3:30">Ro. 3.30</ref>.</char></note>asimismo <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="GAL 3:19">Ga. 3.19</ref>,<ref loc="GAL 3:20">20</ref>. <ref loc="HEB 8:6">He. 8.6</ref> y <ref loc="HEB 9:15">9.15</ref> y <ref loc="HEB 12:24">12.24</ref>.</char></note>un mediador entre Dios y los hombres, Jesucristo hombre;<verse eid="1TI 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 2:6"/>El cual se dió <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="MAT 20:28">Mt. 20.28</ref>. <ref loc="EPH 1:7">Ef. 1.7</ref>. <ref loc="COL 1:14">Col. 1.14</ref>. <ref loc="TIT 2:14">Tit. 2.14</ref>.</char></note>a sí mismo <char style="it">en</char> precio del rescate por todos, <char style="it">para</char> testimonio <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false"><ref loc="ROM 5:6">Ro. 5.6</ref>. <ref loc="EPH 1:10">Ef. 1.10</ref>.</char></note>en sus tiempos:<verse eid="1TI 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 2:7"/>De lo que yo soy puesto por predicador y <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false"><ref loc="1CO 9:1">1 Co. 9.1</ref>.</char></note>apóstol, (digo verdad en Cristo, no miento) <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false"><ref loc="ACT 9:15">Hch. 9.15</ref> y <ref loc="ACT 13:2">13.2</ref>.</char></note>doctor de los Gentiles en fidelidad y verdad.<verse eid="1TI 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 2:8"/>Quiero, pues, que los hombres oren <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="MAL 1:11">Mal. 1.11</ref>. <ref loc="JHN 4:21">Jn. 4.21</ref>.</char></note>en todo lugar, levantando <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="PSA 24:4">Sal. 24.4</ref>.</char></note>manos limpias, sin ira ni contienda.<verse eid="1TI 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 2:9"/>Asimismo también <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="1PE 3:3">1 P. 3.3</ref>. <ref loc="TIT 2:3">Tit. 2.3</ref>.</char></note>las mujeres, ataviándose en hábito honesto, con vergüenza y modestia; no con cabellos encrespados, ú oro, ó perlas, ó vestidos costosos.<verse eid="1TI 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 2:10"/>Sino de buenas obras, <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="1PE 3:4">1 P. 3.4</ref>.</char></note>como conviene á mujeres que profesan piedad.<verse eid="1TI 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 2:11"/>La mujer aprenda en silencio, con toda sujeción.<verse eid="1TI 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 2:12"/>Porque no permito <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="1CO 14:34">1 Co. 14.34</ref>.</char></note>a la mujer enseñar, ni tomar autoridad sobre el hombre, sino estar en silencio.<verse eid="1TI 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 2:13"/>Porque Adam fué <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="GEN 1:27">Gn. 1.27</ref>.</char></note>formado el primero, después Eva;<verse eid="1TI 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 2:14"/>Y Adam no fué engañado, sino <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="2CO 11:3">2 Co. 11.3</ref>.</char></note>la mujer, siendo seducida, vino á ser <char style="it">envuelta</char> en transgresión:<verse eid="1TI 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 2:15"/>Empero se salvará engendrando hijos, si permaneciere en la fe y caridad y santidad, con modestia.<verse eid="1TI 2:15"/></para>
+  <chapter eid="1TI 2"/>
+  <chapter number="3" style="c" sid="1TI 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 3:1"/>PALABRA fiel: <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 1.15.</char></note>Si alguno apetece obispado, buena obra desea.<verse eid="1TI 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 3:2"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.2 </char>
+      <char style="xt" closed="false">Hasta ver. 4, Tit. 1.6-8.</char>
+    </note>Conviene, pues, que el <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>.</char></note>obispo <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="1PE 4:9">1 P. 4.9</ref>.</char></note>sea irreprensible, marido de una mujer, solícito, templado, compuesto, <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="1PE 4:9">1 P. 4.9</ref>.</char></note>hospedador, <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="2TI 2:24">2 Ti. 2.24</ref>.</char></note>apto para enseñar;<verse eid="1TI 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 3:3"/>No amador del vino, no heridor, no codicioso de torpes ganancias, sino moderado, no litigioso, ajeno de avaricia;<verse eid="1TI 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 3:4"/>Que gobierne bien su casa, <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false">ver. 12. <ref loc="TIT 1:6">Tit. 1.6</ref>.</char></note>que tenga sus hijos en sujeción con toda <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="TIT 2:7">Tit. 2.7</ref>.</char></note>honestidad;<verse eid="1TI 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 3:5"/>(Porque el que no sabe gobernar su casa, ¿cómo cuidará de <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">ver. 15.</char></note>la iglesia de Dios?)<verse eid="1TI 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 3:6"/>No un neófito, porque inflándose no caiga en <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="2PE 2:4">2 P. 2.4</ref>.</char></note>juicio del diablo.<verse eid="1TI 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 3:7"/>También conviene que <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="ACT 6:3">Hch. 6.3</ref>.</char></note>tenga buen testimonio de <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="MRK 4:11">Mr. 4.11</ref>.</char></note>los extraños, porque no caiga en afrenta <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false"><ref loc="2TI 2:26">2 Ti. 2.26</ref>.</char></note>y en lazo del diablo.<verse eid="1TI 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 3:8"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 1:1">Fil. 1.1</ref>.</char>
+    </note>Los diáconos asimismo, <char style="it">deben ser</char> <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false"><ref loc="TIT 2:2">Tit. 2.2</ref>.</char></note>honestos, no bilingües, no dados á mucho vino, no amadores de torpes ganancias;<verse eid="1TI 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 3:9"/>Que tengan <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="2TI 1:3">2 Ti. 1.3</ref>.</char></note>el misterio de la fe con limpia conciencia.<verse eid="1TI 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 3:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.10 </char>
+      <char style="xt" closed="false">cp. 5.22.</char>
+    </note>Y éstos también sean antes probados; y así ministren, si fueren sin crimen.<verse eid="1TI 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 3:11"/>Las mujeres <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false"><ref loc="TIT 2:3">Tit. 2.3</ref>.</char></note>asimismo, honestas, no detractoras, templadas, fieles en todo.<verse eid="1TI 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 3:12"/>Los diáconos sean maridos de una mujer, que gobiernen bien sus hijos y sus casas.<verse eid="1TI 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 3:13"/>Porque los que bien ministraren, ganan para sí buen grado, y mucha confianza en la fe que es en Cristo Jesús.<verse eid="1TI 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 3:14"/>Esto te escribo con esperanza que iré presto á ti:<verse eid="1TI 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 3:15"/>Y si no fuere tan presto, para que sepas cómo te conviene conversar <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="HEB 3:6">He. 3.6</ref>.</char></note>en la casa de Dios, que es la iglesia del Dios vivo, columna y apoyo de la verdad.<verse eid="1TI 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TI 3:16"/>Y sin cotradicción, grande es <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">ver. 9.</char></note>el misterio de la piedad: Dios ha sido manifestado <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Jn. 1.14</ref>.</char></note>en carne; <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="MAT 3:16">Mt. 3.16</ref>.</char></note>ha sido justificado con el Espíritu; ha sido <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="MAT 28:2">Mt. 28.2</ref>. <ref loc="LUK 2:13">Lc. 2.13</ref> y <ref loc="LUK 24:4">24.4</ref>.</char></note>visto de los ángeles; ha sido predicado á los Gentiles; ha sido <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="COL 1:6">Col. 1.6</ref>,<ref loc="COL 1:23">23</ref>.</char></note>creído en el mundo; ha sido <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="ACT 1:2">Hch. 1.2</ref>.</char></note>recibido en gloria.<verse eid="1TI 3:16"/></para>
+  <chapter eid="1TI 3"/>
+  <chapter number="4" style="c" sid="1TI 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 4:1"/>EMPERO el Espíritu <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="MAT 24:23">Mt. 24.23</ref>. <ref loc="2TH 2:3">2 Ts. 2.3</ref>,<ref loc="2TH 2:9">9</ref>.</char></note>dice manifiestamente, que <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="2TI 3:1">2 Ti. 3.1</ref>.</char></note>en los venideros tiempos alguno apostatarán de la fe escuchando á <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="1JN 4:6">1 Jn. 4.6</ref>.</char></note>espíritus de error y á doctrinas de demonios;<verse eid="1TI 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 4:2"/>Que con hipocresía hablarán mentira, <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false"><ref loc="EPH 4:19">Ef. 4.19</ref>.</char></note>teniendo cauterizada la conciencia.<verse eid="1TI 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 4:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 7:28">1 Co. 7.28</ref>. <ref loc="HEB 13:4">He. 13.4</ref>.</char>
+    </note>Que prohibirán casarse, <char style="it">y mandarán</char> abstenerse de las viandas que Dios crió para que <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="ROM 14:6">Ro. 14.6</ref>.</char></note>con hacimiento de gracias participasen de ellas los fieles, y los que han conocido la verdad.<verse eid="1TI 4:3"/></para>
+  <para style="s">1 Deberes del ministerio.</para>
+  <para style="s">2 Sobre las viudas.</para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 4:4"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="GEN 1:31">Gn. 1.31</ref>.</char></note>todo lo que Dios crió es bueno, y nada hay que desechar, tomándose con hacimiento de gracias:<verse eid="1TI 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 4:5"/>Porque por la palabra de Dios y por la oración es santificado.<verse eid="1TI 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 4:6"/>Si esto propusieres á los hermanos, serás buen ministro de Jesucristo, criado en las palabras de la fe y de <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">ver. 13.</char></note>la buena doctrina, la cual has <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false"><ref loc="2TI 3:10">2 Ti. 3.10</ref>.</char></note>alcanzado.<verse eid="1TI 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 4:7"/>Mas las <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false">cp. 1.4.</char></note>fábulas profanas y de viejas <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="2TI 2:23">2 Ti. 2.23</ref>.</char></note>desecha, y ejercítate para la piedad.<verse eid="1TI 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 4:8"/>Porque el ejercicio corporal para poco es provechoso; mas la piedad para todo aprovecha, <note caller="+" style="x"><char style="xo" closed="false">4.8 </char><char style="xt" closed="false"><ref loc="MAT 6:33">Mt. 6.33</ref>.</char></note>pues tiene promesa de esta vida presente, y de la venidera.<verse eid="1TI 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 4:9"/>Palabra fiel es esta, <note caller="+" style="x"><char style="xo" closed="false">4.9 </char><char style="xt" closed="false">cp. 1.15.</char></note>y digna de ser recibida de todos.<verse eid="1TI 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 4:10"/>Que por esto aun trabajamos y sufrimos oprobios, porque <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 6.17.</char></note>esperamos en el Dios viviente, el cual es <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false"><ref loc="1JN 4:14">1 Jn. 4.14</ref>.</char></note>Salvador de todos los hombres, mayormente de los que creen.<verse eid="1TI 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 4:11"/>Esto manda y enseña.<verse eid="1TI 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 4:12"/>Ninguno <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="1CO 16:11">1 Co. 16.11</ref>.</char></note>tenga en poco tu juventud; pero sé ejemplo de los fieles en palabra, en <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="GAL 1:13">Ga. 1.13</ref>.</char></note>conversación, en caridad, en espíritu, en fe, en <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false">cp. 5.2.</char></note>limpieza.<verse eid="1TI 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 4:13"/>Entre tanto que voy, ocúpate en leer, en <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="ACT 13:15">Hch. 13.15</ref>.</char></note>exhortar, en <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false">cp. 5.17.</char></note>enseñar.<verse eid="1TI 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 4:14"/>No descuides el don <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="2TI 1:6">2 Ti. 1.6</ref>.</char></note>que está en ti, que te es dado <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 1.18.</char></note>por profecía <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false">cp. 5.22.</char></note>con la imposición de las manos del <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="ACT 20:27">Hch. 20.27</ref>. cp. 5.17.</char></note>presbiterio.<verse eid="1TI 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 4:15"/>Medita estas cosas; ocúpate en ellas; para que tu aprovechamiento sea manifiesto á todos.<verse eid="1TI 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TI 4:16"/>Ten cuidado de ti mismo y de la doctrina; persiste en ello; pues haciendo esto, á ti mismo salvarás y á los que te oyeren.<verse eid="1TI 4:16"/></para>
+  <chapter eid="1TI 4"/>
+  <chapter number="5" style="c" sid="1TI 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 5:1"/>NO reprendas al anciano, sino exhórtale como á padre: á los más jóvenes, como á hermanos;<verse eid="1TI 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 5:2"/>A las ancianas, como á madres; á las jovencitas, como á hermanas, con toda pureza.<verse eid="1TI 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 5:3"/>Honra á las viudas <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false">vers. 5,16.</char></note>que en verdad son viudas.<verse eid="1TI 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 5:4"/>Pero si alguna viuda tuviere hijos, ó nietos, aprendan primero <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="MAT 15:4-6">Mt. 15.4-6</ref>.</char></note>a gobernar su casa piadosamente, y á recompensar á sus padres: <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false">cp. 2.3.</char></note>porque esto es lo honesto y agradable delante de Dios.<verse eid="1TI 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 5:5"/>Ahora, la que en verdad es viuda y solitaria, espera en Dios, y es <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="LUK 2:37">Lc. 2.37</ref>.</char></note>diligente en suplicaciones y oraciones <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="1TH 2:9">1 Ts. 2.9</ref>.</char></note>noche y día.<verse eid="1TI 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 5:6"/>Pero la que vive en delicias, <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="REV 3:1">Ap. 3.1</ref>.</char></note>viviendo está muerta.<verse eid="1TI 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 5:7"/>Denuncia pues estas cosas, para que sean sin reprensión.<verse eid="1TI 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 5:8"/>Y si alguno no tiene cuidado de los suyos, y mayormente de los de su casa, <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="2TI 3:5">2 Ti. 3.5</ref>.</char></note>la fe negó, y es peor que <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="1CO 6:6">1 Co. 6.6</ref>.</char></note>un infiel.<verse eid="1TI 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 5:9"/>La viuda sea puesta en clase <char style="it">especial,</char> no menos que de sesenta años, <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false">cp. 3.2.</char></note>que haya sido esposa de un <char style="it">solo</char> marido.<verse eid="1TI 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 5:10"/>Que <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="ACT 6:3">Hch. 6.3</ref>.</char></note>tenga testimonio en buenas obras; si crió hijos; <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="ACT 16:15">Hch. 16.15</ref>.</char></note>si ha ejercitado la hospitalidad; si <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="JHN 13:5">Jn. 13.5</ref>,<ref loc="JHN 13:14">14</ref>.</char></note>ha lavado los pies de los santos; si ha socorrido á los afligidos; si ha seguido toda buena obra.<verse eid="1TI 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 5:11"/>Pero viudas más jóvenes no admitas: porque después de hacerse licenciosas contra Cristo, quieren casarse.<verse eid="1TI 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 5:12"/>Condenadas ya, por haber falseado la primera fe.<verse eid="1TI 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 5:13"/>Y aun también se acostrumbran <char style="it">á ser</char> ociosas, á andar de casa en casa; y no solamente ociosas, sino también <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="3JN 1:10">3 Jn. 10</ref>.</char></note>parleras <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="2TH 3:11">2 Ts. 3.11</ref>.</char></note>y curiosas, hablando lo que no conviene.<verse eid="1TI 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 5:14"/>Quiero pues, que las que son jóvenes se casen, críen hijos, <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="TIT 2:5">Tit. 2.5</ref>.</char></note>gobiernen la casa; que ninguna ocasión den al adversario para maldecir.<verse eid="1TI 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 5:15"/>Porque ya algunas han vuelto atrás en pos de Satanás.<verse eid="1TI 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TI 5:16"/>Si algún fiel ó alguna fiel tiene viudas, manténgalas, y no sea gravada la iglesia; á fin de que haya lo suficiente <note caller="+" style="x"><char style="xo" closed="false">5.16 </char><char style="xt" closed="false">vers. 3,5.</char></note>para las que de verdad son viudas.<verse eid="1TI 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TI 5:17"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.17 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 11:30">Hch. 11.30</ref>. cp. 4.14.</char>
+    </note>Los ancianos que <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="ROM 12:8">Ro. 12.8</ref>.</char></note>gobiernan bien, <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="1TH 5:13">1 Ts. 5.13</ref>.</char></note>sean tenidos por dignos de doblada <note caller="+" style="x"><char style="xo" closed="false">5.17 </char><char style="xt" closed="false"><ref loc="ACT 28:10">Hch. 28.10</ref>.</char></note>honra; mayormente los que trabajan en predicar y enseñar.<verse eid="1TI 5:17"/></para>
+  <para style="s">1 Los ancianos. Los siervos.</para>
+  <para style="s">2 Contra el amor del dinero.</para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TI 5:18"/>Porque la Escritura dice: <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="DEU 25:4">Dt. 25.4</ref>.</char></note>No embozarás al buey que trilla; <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="LUK 10:7">Lc. 10.7</ref>.</char></note>y: Digno es el obrero de su jornal.<verse eid="1TI 5:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1TI 5:19"/>Contra el anciano no recibas acusación sino <note caller="+" style="x"><char style="xo" closed="false">5.19 </char><char style="xt" closed="false"><ref loc="DEU 19:15">Dt. 19.15</ref>.</char></note>con dos ó tres testigos.<verse eid="1TI 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1TI 5:20"/>A los que pecaren, repréndelos delante de todos, para que los otros también teman.<verse eid="1TI 5:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1TI 5:21"/>
+    <char style="it">Te</char> requiero delante de <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false">cp. 6.13.</char></note>Dios y del Señor Jesucristo, y de sus ángeles escogidos, que guardes estas cosas sin perjuicio de nadie, que nada hagas inclinándote á la una parte.<verse eid="1TI 5:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1TI 5:22"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.22 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 6:6">Hch. 6.6</ref>. cp. 4.14.</char>
+    </note>No impongas <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false">cp. 3.10.</char></note>de ligero las manos á ninguno, <note caller="+" style="x"><char style="xo" closed="false">5.22 </char><char style="xt" closed="false"><ref loc="2JN 1:11">2 Jn. 11</ref>.</char></note>ni comuniques en pecados ajenos: consérvate en limpieza.<verse eid="1TI 5:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1TI 5:23"/>No bebas de aquí adelante agua, sino usa de <note caller="+" style="x"><char style="xo" closed="false">5.23 </char><char style="xt" closed="false">cp. 3.3,8.</char></note>un poco de vino por causa del estómago, y de tus continuas enfermedades.<verse eid="1TI 5:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1TI 5:24"/>Los pecados de algunos hombres, <note caller="+" style="x"><char style="xo" closed="false">5.24 </char><char style="xt" closed="false"><ref loc="TIT 3:11">Tit. 3.11</ref>.</char></note>antes que vengan <char style="it">ellos</char> á juicio, son manifiestos; mas á otros les vienen después.<verse eid="1TI 5:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1TI 5:25"/>Asimismo las buenas obras antes son manifiestas; y las que son de otra manera, no pueden esconderse.<verse eid="1TI 5:25"/></para>
+  <chapter eid="1TI 5"/>
+  <chapter number="6" style="c" sid="1TI 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1TI 6:1"/>TODOS <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="EPH 6:5">Ef. 6.5</ref>.</char></note>los que están debajo del yugo de servidumbre, tengan á sus señores por dignos de toda honra, porque no sea <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="JAS 2:7">Stg. 2.7</ref>.</char></note>blasfemado <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 5.14.</char></note>el nombre del Señor y la doctrina.<verse eid="1TI 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1TI 6:2"/>Y los que tienen amos fieles, no los tengan en menos, por ser <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false">cp. 4.6. <ref loc="PHM 1:16">Flm. 16</ref>.</char></note>hermanos; antes sírvanles mejor, por cuanto son fieles y amados, <char style="it">y</char> partícipes del beneficio. Esto enseña y exhorta.<verse eid="1TI 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1TI 6:3"/>Si alguno enseña otra cosa, y <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false">cp. 1.10.</char></note>no asiente á sanas palabras de nuestro Señor Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="TIT 1:1">Tit. 1.1</ref>.</char></note>y á la doctrina que es conforme á la piedad;<verse eid="1TI 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1TI 6:4"/>Es hinchado, nada sabe, <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false">cp. 1.4.</char></note>y enloquece acerca de cuestiones y <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="2TI 2:14">2 Ti. 2.14</ref>.</char></note>contiendas de palabras, de las cuales nacen envidias, pleitos, <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="EPH 4:31">Ef. 4.31</ref>.</char></note>maledicencias, malas sospechas,<verse eid="1TI 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1TI 6:5"/>Porfías de hombres <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="TIT 1:15">Tit. 1.15</ref>.</char></note>corruptos de entendimiento y privados de la verdad, que tienen la piedad por granjería: apártate de los tales.<verse eid="1TI 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1TI 6:6"/>Empero <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 4.8.</char></note>grande granjería es la piedad <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false"><ref loc="PHP 4:11">Fil. 4.11</ref>. <ref loc="HEB 13:5">He. 13.5</ref>.</char></note>con contentamiento.<verse eid="1TI 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1TI 6:7"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false"><ref loc="JOB 1:21">Job 1.21</ref>.</char></note>nada hemos traído á este mundo, y sin duda nada podremos sacar.<verse eid="1TI 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1TI 6:8"/>Así que, teniendo sustento y con qué cubrirnos, seamos contentos con esto.<verse eid="1TI 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1TI 6:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="MAT 13:22">Mt. 13.22</ref> y <ref loc="MAT 19:23">19.23</ref>.</char></note>los que quieren enriquecerse, caen en tentación y lazo, y en muchas codicias locas y dañosas, <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false">cp. 1.19.</char></note>que hunden á los hombres en perdición y muerte.<verse eid="1TI 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1TI 6:10"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="2TI 3:2">2 Ti. 3.2</ref>.</char></note>el amor del dinero es la raíz de todos los males: el cual codiciando algunos, se descaminaron de la fe, y fueron traspasados de muchos dolores.<verse eid="1TI 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1TI 6:11"/>Mas tú, <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="2TI 3:17">2 Ti. 3.17</ref>.</char></note>oh hombre de Dios, huye de estas cosas, y sigue la justicia, la piedad, la fe, la caridad, la paciencia, la mansedumbre.<verse eid="1TI 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1TI 6:12"/>Pelea <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false"><ref loc="2TI 4:7">2 Ti. 4.7</ref>.</char></note>la buena batalla de la fe, <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">ver. 19. <ref loc="PHP 3:12">Fil. 3.12</ref>.</char></note>echa mano de la vida eterna, á la cual asimismo eres llamado, habiendo hecho buena profesión delante de muchos testigos.<verse eid="1TI 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1TI 6:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.13 </char>
+      <char style="xt" closed="false">cp. 1.18.</char>
+    </note>Te mando <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false">cp. 5.21.</char></note>delante de Dios, <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="JHN 5:21">Jn. 5.21</ref>.</char></note>que da vida á todas las cosas, y de Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="JHN 18:37">Jn. 18.37</ref>. <ref loc="REV 1:5">Ap. 1.5</ref> y <ref loc="REV 3:14">3.14</ref>.</char></note>que testificó la buena profesión delante de Poncio Pilato,<verse eid="1TI 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1TI 6:14"/>Que guardes el mandamiento sin mácula ni reprensión, <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="PHP 1:6">Fil. 1.6</ref>,<ref loc="PHP 1:10">10</ref>.</char></note>hasta la aparición de nuestro Señor Jesucristo:<verse eid="1TI 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1TI 6:15"/>La cual <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false">cp. 2.6.</char></note>a su tiempo mostrará <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false">cp. 1.11.</char></note>el Bienaventurado y solo Poderoso, <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="REV 17:14">Ap. 17.14</ref>.</char></note>Rey de reyes, y Señor de señores;<verse eid="1TI 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1TI 6:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.16 </char>
+      <char style="xt" closed="false">cp. 1.17.</char>
+    </note>Quien sólo tiene inmortalidad, que habita en luz inaccesible; á quien <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="JHN 1:18">Jn. 1.18</ref>.</char></note>ninguno de los hombres ha visto ni puede ver: al cual <char style="it">sea</char> la honra y el imperio sempiterno. Amén.<verse eid="1TI 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1TI 6:17"/>A los ricos de <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="2TI 4:10">2 Ti. 4.10</ref>.</char></note>este siglo manda que <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="ROM 11:20">Ro. 11.20</ref>.</char></note>no sean altivos, ni pongan la esperanza en la incertidumbre de las riquezas, sino en el Dios vivo, que nos da todas las cosas en abundancia de que gocemos:<verse eid="1TI 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1TI 6:18"/>Que hagan bien, que sean ricos en buenas obras, dadivosos, que con facilidad comuniquen;<verse eid="1TI 6:18"/></para>
+  <para style="s">1 Fortaleza y constancia</para>
+  <para style="s">2 en el trabajo cristiano.</para>
+  <para style="p">
+    <verse number="19" style="v" sid="1TI 6:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 19:21">Mt. 19.21</ref>.</char>
+    </note>Atesorando para sí buen fundamento para lo por venir, que <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false">ver. 12.</char></note>echen mano á la vida eterna.<verse eid="1TI 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1TI 6:20"/>Oh Timoteo, <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="2TI 1:12">2 Ti. 1.12</ref>,<ref loc="2TI 1:14">14</ref>.</char></note>guarda lo que se te ha encomendado, <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="2TI 2:16">2 Ti. 2.16</ref>.</char></note>evitando las profanas pláticas de vanas cosas, y <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false"><ref loc="TIT 1:14">Tit. 1.14</ref>.</char></note>los argumentos de la falsamente llamada ciencia:<verse eid="1TI 6:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1TI 6:21"/>La cual profesando algunos, fueron descaminados acerca de la fe. La gracia sea contigo. Amén.</para>
+  <para style="b" vid="1TI 6:21"/>
+  <para style="p" vid="1TI 6:21">La primera <char style="it">espístola</char> á Timoteo fué escrita de Laodicea, que es metrópoli de la Frigia Pacatiana.<verse eid="1TI 6:21"/></para>
+  <chapter eid="1TI 6"/>
+</usx>

@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="NEH" style="id">NEHVR. Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">NEHEMÍAS</para>
+  <para style="toc3">Neh.</para>
+  <para style="toc2">Nehemías</para>
+  <para style="toc1">Nehemías</para>
+  <para style="mt1">LIBRO DE NEHEMÍAS</para>
+  <chapter number="1" style="c" sid="NEH 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 1:1"/>PALABRAS de <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false">cp. 10.1.</char></note>Nehemías, hijo de Hachâlías. Y acaeció en el mes de Chisleu, en el año <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false">cp. 2.1.</char></note>veinte, estando yo en <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="EST 1:2">Est. 1.2</ref>. <ref loc="DAN 8:2">Dn. 8.2</ref>.</char></note>Susán, capital del reino,<verse eid="NEH 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 1:2"/>Que vino <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false">cp. 7.2.</char></note>Hanani, uno de mis hermanos, él y ciertos varones de Judá, y preguntéles por los Judíos que habían escapado, que habían quedado de la cautividad, y por Jerusalem.<verse eid="NEH 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 1:3"/>Y dijéronme: El residuo, los que quedaron de la cautividad allí en la provincia, están en gran mal y afrenta, y el muro de Jerusalem <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false">cp. 2.13.</char></note>derribado, y sus puertas quemadas á fuego.<verse eid="NEH 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 1:4"/>Y fué que, como yo oí estas palabras, <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="EZR 9:3">Esd. 9.3</ref>.</char></note>sentéme y lloré, y enlutéme por algunos días, y ayuné y oré delante del Dios de los cielos.<verse eid="NEH 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 1:5"/>Y dije: <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="DEU 7:21">Dt. 7.21</ref>. <ref loc="DAN 9:4">Dn. 9.4</ref>.</char></note>Ruégote, oh Jehová, Dios de los cielos, fuerte, grande, y terrible, <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="DEU 7:9">Dt. 7.9</ref>.</char></note>que guarda el pacto y la misericordia á los que le aman y guardan sus mandamientos;<verse eid="NEH 1:5"/></para>
+  <para style="s">1 Nehemías va á Jerusalem</para>
+  <para style="s">2 con cartas de Artajerjes.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 1:6"/>Esté ahora atento tu oído, y tus ojos abiertos, para oir la oración de tu siervo, que yo hago ahora delante de ti día y noche, por los hijos de Israel tus siervos; y <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="EZR 10:1">Esd. 10.1</ref>.</char></note>confieso los pecados de los hijos de Israel que hemos contra ti cometido; sí, yo y la casa de mi padre hemos pecado.<verse eid="NEH 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 1:7"/>En extremo nos hemos corrompido contra ti, y no hemos guardado los mandamientos, y estatutos y juicios, que mandaste á Moisés tu siervo.<verse eid="NEH 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 1:8"/>Acuérdate ahora de la palabra que ordenaste á Moisés tu siervo, diciendo: <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="LEV 26:33">Lv. 26.33</ref>. <ref loc="DEU 4:25-27">Dt. 4.25-27</ref> y <ref loc="DEU 28:64">28.64</ref>.</char></note>Vosotros prevaricaréis, y yo os esparciré por los pueblos:<verse eid="NEH 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 1:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:39-42">Lv. 26.39-42</ref>. <ref loc="DEU 4:29-31">Dt. 4.29-31</ref> y <ref loc="DEU 30:2">30.2</ref>,<ref loc="DEU 30:3">3</ref>.</char>
+    </note>Mas os volveréis á mí, y guardaréis mis mandamientos, y los pondréis por obra. <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="DEU 30:4">Dt. 30.4</ref>.</char></note>Si fuere vuestro lanzamiento hasta el cabo de los cielos, de allí os juntaré; y traerlos he <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="DEU 12:5">Dt. 12.5</ref>.</char></note>al lugar que escogí para hacer habitar allí mi nombre.<verse eid="NEH 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 1:10"/>Ellos pues son tus siervos y tu pueblo, los cuales redimiste con tu gran fortaleza, y con tu mano fuerte.<verse eid="NEH 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 1:11"/>Ruégote, oh Jehová, esté ahora atento tu oído á la oración de tu siervo, y la oración de tus siervos, quienes desean temer tu nombre: y ahora concede hoy próspero suceso á tu siervo, y dale gracia delante de aquel varón. Porque yo servía de copero al rey.<verse eid="NEH 1:11"/></para>
+  <chapter eid="NEH 1"/>
+  <chapter number="2" style="c" sid="NEH 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 2:1"/>Y FUÉ en el mes de <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="EST 3:7">Est. 3.7</ref>.</char></note>Nisán, en el año <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">cp. 1.1.</char></note>veinte del rey Artajerjes, que estando ya el vino delante de él, <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">cp. 1.11.</char></note>tomé el vino, y dílo al rey. Y como yo no había estado <char style="it">antes</char> triste en su presencia,<verse eid="NEH 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 2:2"/>Díjome el rey: ¿Por qué está triste tu rostro, pues no estás enfermo? No es esto sino quebranto de corazón. Entonces temí en gran manera.<verse eid="NEH 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 2:3"/>Y dije al rey: <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="1KI 1:31">1 R. 1.31</ref>.</char></note>El rey viva para siempre. ¿Cómo no estará triste mi rostro, cuando la ciudad, casa de los sepulcros de mis padres, está desierta, <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false">cp. 1.3.</char></note>y sus puertas consumidas del fuego?<verse eid="NEH 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 2:4"/>Y díjome el rey: ¿Qué cosa pides? Entonces oré al <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 1.4,5.</char></note>Dios de los cielos,<verse eid="NEH 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 2:5"/>Y dije al rey: Si al rey place, y si agrada tu siervo delante de ti, que me envíes á Judá, á la ciudad de los sepulcros de mis padres, y la reedificaré.<verse eid="NEH 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 2:6"/>Entonces el rey me dijo, (y la reina estaba sentada junto á él): ¿Hasta cuándo será tu viaje, y cuándo volverás? Y plugo al rey enviarme, después que <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false">cp. 5.14 y <ref loc="NEH 13:6">13.6</ref>.</char></note>yo le señalé tiempo.<verse eid="NEH 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 2:7"/>Además dije al rey: Si al rey place, dénseme cartas para los <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false"><ref loc="EZR 8:36">Esd. 8.36</ref>.</char></note>gobernadores de la otra parte del río, que me franqueen el paso hasta que llegue á Judá;<verse eid="NEH 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 2:8"/>Y carta para Asaph, guarda del bosque del rey, á fin que me dé madera para enmaderar los portales del <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false">cp. 7.2.</char></note>palacio de la casa, y para el muro de la ciudad, y la casa donde entraré. Y otorgóme <char style="it">lo</char> el rey, <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false">ver. 18. <ref loc="EZR 7:6">Esd. 7.6</ref>.</char></note>según la benéfica mano de Jehová sobre mí.<verse eid="NEH 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 2:9"/>Y vine luego á los gobernadores de la otra parte del río, y les dí las cartas del rey. Y el rey envió conmigo capitanes del ejército y gente de á caballo.<verse eid="NEH 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 2:10"/>Y oyéndolo <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false">cp. 4.1,7 y <ref loc="NEH 6:1">6.1</ref>,<ref loc="NEH 6:2">2</ref>,<ref loc="NEH 6:5">5</ref>,<ref loc="NEH 6:12">12</ref>,<ref loc="NEH 6:14">14</ref> y <ref loc="NEH 13:28">13.28</ref>.</char></note>Sanballat <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="ISA 15:5">Is. 15.5</ref>. <ref loc="JER 48:3">Jer. 48.3</ref>,<ref loc="JER 48:5">5</ref>.</char></note>Horonita, y <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false">cp. 4.3,7 y <ref loc="NEH 6:1">6.1</ref>,<ref loc="NEH 6:12">12</ref>,<ref loc="NEH 6:14">14</ref>,<ref loc="NEH 6:17">17</ref>,<ref loc="NEH 6:19">19</ref> y <ref loc="NEH 13:4">13.4</ref>,<ref loc="NEH 13:7">7</ref>,<ref loc="NEH 13:8">8</ref>.</char></note>Tobías, el siervo Ammonita, disgustóles en extremo que viniese alguno <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="EST 10:3">Est. 10.3</ref>.</char></note>para procurar el bien de los hijos de Israel.<verse eid="NEH 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 2:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:32">Esd. 8.32</ref>.</char>
+    </note>Llegué pues á Jerusalem, y estado que hube allí tres días,<verse eid="NEH 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 2:12"/>Levantéme de noche, yo y unos pocos varones conmigo, y no declaré á hombre alguno lo que Dios había puesto en mi corazón que hiciese en Jerusalem; ni había bestia conmigo, excepto la cabalgadura en que cabalgaba.<verse eid="NEH 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 2:13"/>Y salí de noche <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="2CH 26:9">2 Cr. 26.9</ref>. cp. 3.13,14.</char></note>por la puerta del Valle hacia la fuente del Dragón y á la puerta del Muladar; y consideré los muros de Jerusalem que estaban derribados, y sus puertas que estaban consumidas del fuego.<verse eid="NEH 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 2:14"/>Pasé luego á <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false">cp. 3.15 y <ref loc="NEH 12:37">12.37</ref>.</char></note>la puerta de la Fuente, y al <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="2KI 20:20">2 R. 20.20</ref>.</char></note>estanque del Rey; mas no había lugar por donde pasase la cabalgadura en que iba.<verse eid="NEH 2:14"/></para>
+  <para style="s">1 Nehemías examina los muros</para>
+  <para style="s">2 de Jerusalem. Nombres de los</para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 2:15"/>Y subí por <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false"><ref loc="2SA 15:23">2 S. 15.23</ref>.</char></note>el torrente de noche, y consideré el muro, y regresando entré por la puerta del Valle, y volvíme.<verse eid="NEH 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 2:16"/>Y no sabían <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="EZR 9:2">Esd. 9.2</ref>.</char></note>los magistrados dónde yo había ido, ni qué había hecho; ni hasta entonces lo había yo declarado á los Judíos y sacerdotes, ni á los nobles y magistrados, ni á los demás que hacían la obra.<verse eid="NEH 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 2:17"/>Díjeles pues: Vosotros veis el mal en que estamos, que Jerusalem está desierta, y sus puertas consumidas del fuego: venid, y edifiquemos el muro de Jerusalem, y no seamos más <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 1.3. <ref loc="PSA 44:13">Sal. 44.13</ref> y <ref loc="PSA 79:4">79.4</ref>.</char></note>en oprobio.<verse eid="NEH 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 2:18"/>Entonces les declaré cómo <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false">ver. 8.</char></note>la mano de mi Dios era buena sobre mí, y asimismo las palabras del rey, que me había dicho. Y dijeron: Levantémonos, y edifiquemos. Así <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false"><ref loc="2SA 2:7">2 S. 2.7</ref>.</char></note>esforzaron sus manos para bien.<verse eid="NEH 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 2:19"/>Mas habiéndolo oído Samballat Horonita, y Tobías el siervo Ammonita, y <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false">cp. 6.1,2,6.</char></note>Gesem el Arabe, escarnecieron de nosotros, y nos despreciaron, diciendo: ¿Qué es esto que hacéis vosotros? <note caller="+" style="x"><char style="xo" closed="false">2.19 </char><char style="xt" closed="false">cp. 6.6.</char></note>¿os rebeláis contra el rey?<verse eid="NEH 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 2:20"/>Y volvíles respuesta, y díjeles: El Dios de los cielos, él nos prosperará, y nosotros sus siervos nos levantaremos y edificaremos: que <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="EZR 4:3">Esd. 4.3</ref>.</char></note>vosotros no tenéis parte, ni derecho, ni memoria en Jerusalem.<verse eid="NEH 2:20"/></para>
+  <chapter eid="NEH 2"/>
+  <chapter number="3" style="c" sid="NEH 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 3:1"/>Y LEVANTÓSE <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">vers. 20,21. cp. 12.10,22,23 y <ref loc="NEH 13:4">13.4</ref>,<ref loc="NEH 13:7">7</ref>,<ref loc="NEH 13:28">28</ref>. <ref loc="EZR 10:6">Esd. 10.6</ref>.</char></note>Eliasib el gran sacerdote con sus hermanos los sacerdotes, y edificaron la <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">ver. 32. cp. 12.39. <ref loc="JHN 5:2">Jn. 5.2</ref>.</char></note>puerta de las Ovejas. Ellos aparejaron y levantaron sus puertas hasta la torre de Meah, aparejáronla hasta la torre de Hananeel.<verse eid="NEH 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 3:2"/>Y junto á ella edificaron los varones de Jericó: y luego edificó Zachûr hijo de Imri.<verse eid="NEH 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 3:3"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="2CH 33:14">2 Cr. 33.14</ref>.</char></note>los hijos de Senaa edificaron la puerta del Pescado: ellos la enmaderaron, y levantaron sus puertas, con sus cerraduras y sus cerrojos.<verse eid="NEH 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 3:4"/>Y junto á ellos restauró Meremoth hijo de Urías, hijo de Cos; y al lado de ellos, restauró Mesullam hijo de Berechîas, hijo de Mesezabeel. Junto á ellos restauró Sadoc hijo de Baana.<verse eid="NEH 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 3:5"/>E inmediato á ellos restauraron los Tecoitas; mas sus grandes no prestaron su cerviz á <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="JDG 5:23">Jue. 5.23</ref>.</char></note>la obra de su Señor.<verse eid="NEH 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 3:6"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">cp. 12.39.</char></note>la puerta Vieja restauraron Joiada hijo de Pasea, y Mesullam hijo de Besodías: ellos la enmaderaron, y levantaron sus puertas, con sus cerraduras y sus cerrojos.<verse eid="NEH 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 3:7"/>Junto á ellos restauró Melatías Gabaonita, y Jadón Meronothita, varones de Gabaón y de Mizpa, por <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false">cp. 2.8.</char></note>la silla del gobernador de la otra parte del río.<verse eid="NEH 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 3:8"/>Y junto á ellos restauró Uzziel hijo de Harhaía, de los plateros; junto al cual restauró también Hananías, hijo de <char style="it">un</char> perfumero. Así dejaron <char style="it">reparado</char> á Jerusalem hasta el <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">cp. 12.38.</char></note>muro ancho.<verse eid="NEH 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 3:9"/>Junto á ellos restauró también Repaías hijo de Hur, príncipe de la <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">ver. 12.</char></note>mitad de la región de Jerusalem.<verse eid="NEH 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 3:10"/>Asimismo restauró junto á ellos, y frente á su casa, Jedaías hijo de Harumaph; y junto á él restauró Hattus hijo de Hasbanías.<verse eid="NEH 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 3:11"/>Malchîas hijo de Harim y Hasub hijo de Pahath-moab, restauraron la otra medida, <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false">cp. 12.38.</char></note>y la torre de los Hornos.<verse eid="NEH 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 3:12"/>Junto á ellos restauró Sallum hijo de Lohes, príncipe de la mitad de la región de Jerusalem, él con sus hijas.<verse eid="NEH 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 3:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 26:9">2 Cr. 26.9</ref>.</char>
+    </note>La puerta del Valle la restauró Hanún con los moradores de Zanoa: ellos la reedificaron, y levantaron sus puertas, con sus cerraduras y sus cerrojos, y mil codos en el muro hasta <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 2.13 y <ref loc="NEH 12:31">12.31</ref>.</char></note>la puerta del Muladar.<verse eid="NEH 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 3:14"/>Y reedificó la puerta del Muladar, Malchîas hijo de Rechâb, príncipe de la provincia de Beth-haccerem: él la reedificó, y levantó sus puertas, sus cerraduras y sus cerrojos.<verse eid="NEH 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 3:15"/>Y Sallum hijo de Chôl-hoce, príncipe de la región de Mizpa, restauró la <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false">cp. 2.14.</char></note>puerta de la Fuente: él la reedificó, y la enmaderó, y levantó sus puertas, sus cerraduras y sus cerrojos, y el muro del estanque de <note caller="+" style="f"><char style="fr" closed="false">3.15 </char><char style="ft" closed="false">Llámase <char style="it">Siloé.</char> Is. 8.6. Jn. 9.7,11.</char></note>Selah hacia la <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="2KI 25:4">2 R. 25.4</ref>.</char></note>huerta del rey, y hasta las <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false">cp. 12.37.</char></note>gradas que descienden de la ciudad de David.<verse eid="NEH 3:15"/></para>
+  <para style="s">1 varones que los restauraron.</para>
+  <para style="s">2 Conjuración de los enemigos.</para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 3:16"/>Después de él restauró Nehemías hijo de Azbuc, príncipe de la mitad de la región de Beth-sur, hasta delante de los <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="1KI 2:10">1 R. 2.10</ref>. <ref loc="ACT 2:29">Hch. 2.29</ref>.</char></note>sepulcros de David, y hasta el <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="ISA 22:11">Is. 22.11</ref>.</char></note>estanque labrado, y hasta la casa de los Valientes.<verse eid="NEH 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 3:17"/>Tras él restauraron los Levitas, Rehum hijo de Bani; junto á él restauró Asabías, príncipe de la mitad de la región de Ceila en su región.<verse eid="NEH 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 3:18"/>Después de él restauraron sus hermanos, Bavvai hijo de Henadad, príncipe de la mitad de la región de Ceila.<verse eid="NEH 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 3:19"/>Y junto á él restauró Ezer hijo de Jesuá, príncipe de Mizpa, la otra medida frente á la subida de la <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="1KI 10:17">1 R. 10.17</ref>.</char></note>armería de la esquina.<verse eid="NEH 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 3:20"/>Después de él se enfervorizó á restaurar Baruch hijo de <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="EZR 2:9">Esd. 2.9</ref>.</char></note>Zachâi la otra medida, desde la esquina hasta la puerta de la casa de Eliasib gran sacerdote.<verse eid="NEH 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 3:21"/>Tras él restauró Meremoth hijo de Urías hijo de Cos la otra medida, desde la entrada de la casa de Eliasib, hasta el cabo de la casa de Eliasib.<verse eid="NEH 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 3:22"/>Después de él restauraron los sacerdotes, los varones <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="GEN 13:10">Gn. 13.10</ref> y <ref loc="GEN 19:17">19.17</ref>. <ref loc="2SA 18:23">2 S. 18.23</ref>. cp. 12.28.</char></note>de la campiña.<verse eid="NEH 3:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 3:23"/>Después de ellos restauraron Benjamín y Hasub, frente á su casa: y después de estos restauró Azarías, hijo de Maasías hijo de Ananías, cerca de su casa.<verse eid="NEH 3:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 3:24"/>Después de él restauró Binnui hijo de Henadad la otra medida, desde la casa de Azarías hasta la revuelta, y hasta la esquina.<verse eid="NEH 3:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 3:25"/>Paal hijo de Uzai, enfrente de la esquina y la torre alta que sale de la casa del rey, que está en el patio de la cárcel. Después de él, Pedaía hijo de Pharos.<verse eid="NEH 3:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 3:26"/>(Y los Nethineos <note caller="+" style="x"><char style="xo" closed="false">3.26 </char><char style="xt" closed="false">cp. 11.21.</char></note>estuvieron en Ophel hasta enfrente de la puerta de las Aguas al oriente, y la torre que sobresalía.)<verse eid="NEH 3:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 3:27"/>Después de él restauraron los Tecoitas la otra medida, enfrente de la grande torre que sobresale, hasta el muro de Ophel.<verse eid="NEH 3:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 3:28"/>Desde <note caller="+" style="x"><char style="xo" closed="false">3.28 </char><char style="xt" closed="false"><ref loc="2CH 23:15">2 Cr. 23.15</ref>.</char></note>la puerta de los Caballos restauraron los sacerdotes, cada uno enfrente de su casa.<verse eid="NEH 3:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 3:29"/>Después de ellos restauró Sadoc hijo de Immer, enfrente de su casa: y después de él restauró Semaías hijo de Sechânías, guarda de la <note caller="+" style="x"><char style="xo" closed="false">3.29 </char><char style="xt" closed="false"><ref loc="JER 19:2">Jer. 19.2</ref>.</char></note>puerta oriental.<verse eid="NEH 3:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 3:30"/>Tras él restauró Hananías hijo de Selemías, y Anún hijo sexto de Salaph, la otra medida. Después de él restauró Mesullam, hijo de Berechîas, enfrente de su cámara.<verse eid="NEH 3:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 3:31"/>Después de él restauró Malchîas hijo del platero, hasta la casa de los Nethineos y de los tratantes, enfrente de la puerta del Juicio, y hasta la sala de la esquina.<verse eid="NEH 3:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 3:32"/>Y entre la sala de la esquina hasta la <note caller="+" style="x"><char style="xo" closed="false">3.32 </char><char style="xt" closed="false">ver. 1.</char></note>puerta de las Ovejas, restauraron los plateros, y los tratantes.<verse eid="NEH 3:32"/></para>
+  <chapter eid="NEH 3"/>
+  <chapter number="4" style="c" sid="NEH 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 4:1"/>Y FUÉ <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 2.10.</char></note>que como oyó Sanballat que nosotros edificábamos el muro, encolerizóse y enojóse en gran manera, é hizo escarnio de los Judíos.<verse eid="NEH 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 4:2"/>Y habló delante de sus hermanos y del ejército de Samaria, y dijo: ¿Qué hacen estos débiles Judíos? ¿hanles de permitir? ¿han de sacrificar? ¿han de acabar en un día? ¿han de resucitar de los montones del polvo las piedras que fueron quemadas?<verse eid="NEH 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 4:3"/>Y estaba junto á él <char style="fm">4.1</char>Tobías Ammonita, el cual dijo: Aun lo que ellos edifican, <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="LAM 5:18">Lm. 5.18</ref>.</char></note>si subiere una zorra derribará su muro de piedra.<verse eid="NEH 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 4:4"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 123:3">Sal. 123.3</ref>,<ref loc="PSA 123:4">4</ref>.</char>
+    </note>Oye, oh Dios nuestro, que somos en menosprecio, y <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="PSA 79:12">Sal. 79.12</ref>.</char></note>vuelve el baldón de ellos sobre su cabeza, y dalos en presa en la tierra de su cautiverio:<verse eid="NEH 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 4:5"/>Y <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="PSA 69:27">Sal. 69.27</ref>,<ref loc="PSA 69:28">28</ref> y <ref loc="PSA 109:14">109.14</ref>,<ref loc="PSA 109:15">15</ref>.</char></note>no cubras su iniquidad, ni su pecado sea raído delante de tu rostro; porque se airaron contra los que edificaban.<verse eid="NEH 4:5"/></para>
+  <para style="s">1 Los edificadores organizados</para>
+  <para style="s">2 y armados para la defensa.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 4:6"/>Edificamos pues el muro, y toda la muralla fué junta hasta su mitad: y el pueblo tuvo ánimo para obrar.<verse eid="NEH 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 4:7"/>Mas acaeció que oyendo Sanballat y Tobías, y los <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false">cp. 2.19.</char></note>Arabes, y los Ammonitas, y los de Asdod, que los muros de Jerusalem eran reparados, porque ya los portillos comenzaban á cerrarse, encolerizáronse mucho;<verse eid="NEH 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 4:8"/>Y conspiraron todos á una para venir á combatir á Jerusalem, y á hacerle daño.<verse eid="NEH 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 4:9"/>Entonces oramos á nuestro Dios, y por causa de ellos pusimos guarda contra ellos de día y de noche.<verse eid="NEH 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 4:10"/>Y dijo Judá: Las fuerzas de los acarreadores se han enflaquecido, y el escombro es mucho, y no podemos edificar el muro.<verse eid="NEH 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 4:11"/>Y nuestros enemigos dijeron: No sepan, ni vean, hasta que entremos en medio de ellos, y los matemos, y hagamos cesar la obra.<verse eid="NEH 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 4:12"/>Sucedió empero, que como vinieron los Judíos que habitaban entre ellos, nos dieron aviso diez veces de todos los lugares de donde volvían á nosotros.<verse eid="NEH 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 4:13"/>Entonces puse por los bajos del lugar, detrás del muro, en las alturas de los peñascos, puse el pueblo por familias con sus espadas, con sus lanzas, y con sus arcos.<verse eid="NEH 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 4:14"/>Después miré, y levantéme, y dije á los principales y á los magistrados, y al resto del pueblo: No temáis delante de ellos: acordaos del Seños grande y terrible, y pelead por vuestros hermanos, por vuestros hijos y por vuestras hijas, por vuestras mujeres y por vuestras casas.<verse eid="NEH 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 4:15"/>Y sucedió que como oyeron nuestros enemigos que lo habíamos entendido, Dios disipó el consejo de ellos, y volvímonos todos al muro, cada uno á su obra.<verse eid="NEH 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 4:16"/>Mas fué que desde aquel día la mitad de los mancebos trabajaba en la obra, y la otra mitad de ellos tenía <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false"><ref loc="2CH 26:14">2 Cr. 26.14</ref>.</char></note>lanzas y escudos, y arcos, y corazas; y los príncipes estaban tras toda la casa de Judá.<verse eid="NEH 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 4:17"/>Los que edificaban en el muro, y los que llevaban cargas y los que cargaban, con la una mano trabajaban en la obra, y en la otra tenían la espada.<verse eid="NEH 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 4:18"/>Porque los que edificaban, cada uno tenía su espada ceñida á sus lomos, y así edificaban: y el que tocaba la trompeta estaba junto á mí.<verse eid="NEH 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 4:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.19 </char>
+      <char style="xt" closed="false">ver. 14. cp. 5.7 y <ref loc="NEH 7:5">7.5</ref>.</char>
+    </note>Y dije á los principales, y á los magistrados y al resto del pueblo: La obra es grande y larga, y nosotros estamos apartados en el muro, lejos los unos de los otros.<verse eid="NEH 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 4:20"/>En el lugar donde oyereis la voz de la trompeta, reuníos allí á nosotros: <note caller="+" style="x"><char style="xo" closed="false">4.20 </char><char style="xt" closed="false"><ref loc="EXO 14:14">Ex. 14.14</ref>.</char></note>nuestro Dios peleará por nosotros.<verse eid="NEH 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 4:21"/>Nosotros pues trabajábamos en la obra; y la mitad de ellos tenían lanzas desde la subida del alba hasta salir las estrellas.<verse eid="NEH 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 4:22"/>También dije entonces al pueblo: Cada uno con su criado se quede dentro de Jerusalem, y hágannos de noche centinela, y de día á la obra.<verse eid="NEH 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 4:23"/>Y ni yo, ni mis hermanos, ni mis mozos, ni la gente de guardia que me seguía, desnudamos nuestro vestido: cada uno se desnudaba <char style="it">solamente</char> para lavarse.<verse eid="NEH 4:23"/></para>
+  <chapter eid="NEH 4"/>
+  <chapter number="5" style="c" sid="NEH 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 5:1"/>ENTONCES fué grande el clamor del pueblo y de sus mujeres <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="LEV 25:35">Lv. 25.35</ref>,<ref loc="LEV 25:36">36</ref>.</char></note>contra los Judíos sus hermanos.<verse eid="NEH 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 5:2"/>Y había quien decía: Nosotros, nuestros hijos y nuestras hijas, somos muchos: hemos por tanto tomado grano para comer y vivir.<verse eid="NEH 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 5:3"/>Y había quienes decían: Hemos empeñado nuestras tierras, y nuestras viñas, y nuestras casas, para comprar grano en el hambre.<verse eid="NEH 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 5:4"/>Y había quienes decían: Hemos tomado prestado dinero para el <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="EZR 4:13">Esd. 4.13</ref>.</char></note>tributo del rey, sobre nuestras tierras y viñas.<verse eid="NEH 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 5:5"/>Ahora bien, nuestra carne es como la carne de nuestros hermanos, nuestros hijos como sus hijos; y he aquí que nosotros sujetamos nuestros hijos y <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="EXO 21:7">Ex. 21.7</ref>.</char></note>nuestras hijas á servidumbre, y hay algunas de nuestras hijas sujetas: mas no hay facultad en nuestras manos para rescatarlas, porque nuestras tierras y nuestras viñas son de otros.<verse eid="NEH 5:5"/></para>
+  <para style="s">1 Reprensión de la usura.</para>
+  <para style="s">2 Desinterés de Nehemías.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 5:6"/>Y enojéme en gran manera cuando oí su clamor y estas palabras.<verse eid="NEH 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 5:7"/>Medité <char style="it">lo</char> entonces para conmigo, y reprendí á los principales y á los magistrados, y díjeles: <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="EXO 22:25">Ex. 22.25</ref>.</char></note>¿Tomáis cada uno usura de vuestros hermanos? Y convoqué contra ellos una grande junta.<verse eid="NEH 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 5:8"/>Y díjeles: <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="LEV 25:48">Lv. 25.48</ref>,<ref loc="LEV 25:49">49</ref>.</char></note>Nosotros rescatamos á nuestros hermanos Judíos que habían sido vendidos á las gentes, conforme á la facultad que <char style="it">había</char> en nosotros: ¿y vosotros aun vendéis á vuestros hermanos, y serán vendidos á nosotros? Y callaron, que no tuvieron qué responder.<verse eid="NEH 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 5:9"/>Y dije: No es bien lo que hacéis, ¿no andaréis <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false"><ref loc="LEV 25:17">Lv. 25.17</ref>,<ref loc="LEV 25:36">36</ref>,<ref loc="LEV 25:43">43</ref>.</char></note>en temor de nuestro Dios, <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false">cp. 4.4.</char></note>por <char style="it">no ser</char> el oprobio de las gentes enemigas nuestras?<verse eid="NEH 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 5:10"/>También yo, y mis hermanos, y mis criados, les hemos prestado dinero y grano: relevémosles ahora de este gravamen.<verse eid="NEH 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 5:11"/>Ruégoos que les devolváis hoy sus tierras, sus viñas, sus olivares, y sus casas, y la centésima parte del dinero y grano, del vino y del aceite que demandáis de ellos.<verse eid="NEH 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 5:12"/>Y dijeron: Devolveremos, y nada les demandaremos; haremos así como tú dices. Entonces convoqué los sacerdotes, <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="EZR 10:5">Esd. 10.5</ref>.</char></note>y juramentélos que harían conforme á esto.<verse eid="NEH 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 5:13"/>Además <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="ACT 18:6">Hch. 18.6</ref>.</char></note>sacudí mi vestido, y dije: Así sacuda Dios de su casa y de su trabajo á todo hombre que no cumpliere esto, y así sea sacudido y vacío. Y respondió toda la congregación: <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">cp. 8.6.</char></note>¡Amén! Y alabaron á Jehová. Y el pueblo hizo conforme á esto.<verse eid="NEH 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 5:14"/>También desde el día que me mandó <char style="it">el rey</char> que fuese gobernador de ellos en la tierra de Judá, desde el año <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false">cp. 2.1.</char></note>veinte del rey Artajerjes hasta el año <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false">cp. 13.6.</char></note>treinta y dos, doce años, ni yo ni mis hermanos <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false">ver. 18. <ref loc="2TH 3:8">2 Ts. 3.8</ref>.</char></note>comimos el pan del gobernador.<verse eid="NEH 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 5:15"/>Mas los primeros gobernadores que fueron antes de mí, cargaron al pueblo, y tomaron de ellos por el pan y por el vino sobre cuarenta siclos de plata: á más de esto, sus criados se enseñoreaban sobre el pueblo; pero yo no hice así, á causa del temor de Dios.<verse eid="NEH 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 5:16"/>También en la obra de este muro instauré <char style="it">mi parte,</char> y no compramos heredad: y todos mis criados juntos estaban allí á la obra.<verse eid="NEH 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 5:17"/>Además ciento y cincuenta hombres de los Judíos y magistrados, y los que venían á nosotros de las gentes que están en nuestros contornos, estaban á mi mesa.<verse eid="NEH 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 5:18"/>Y lo que <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="1KI 4:22">1 R. 4.22</ref>.</char></note>se aderezaba para cada día era un buey, seis ovejas escogidas, y aves también se aparejaban para mí, y cada diez días vino en toda abundancia: y con todo esto nunca requerí el pan del gobernador, porque la servidumbre de este pueblo era grave.<verse eid="NEH 5:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 5:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 20:3">2 R. 20.3</ref>. cp. 13.14,22,31.</char>
+    </note>Acuérdate de mí para bien, Dios mío, y de todo lo que hice á este pueblo.<verse eid="NEH 5:19"/></para>
+  <chapter eid="NEH 5"/>
+  <chapter number="6" style="c" sid="NEH 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 6:1"/>Y FUÉ que habiendo <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 2.10.</char></note>oído Sanballat, y Tobías, y Gesem el Arabe, y los demás nuestros enemigos, que había yo edificado el muro, y que no quedaba en él portillo, (aunque <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 3.3.</char></note>hasta aquel tiempo no había puesto en las puertas las hojas,)<verse eid="NEH 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 6:2"/>Sanballat y Gesem enviaron á decirme: Ven, y compongámonos juntos en <char style="it">alguna de</char> las aldeas en el campo de <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="1CH 8:12">1 Cr. 8.12</ref>.</char></note>Ono. Mas ellos habían pensado hacerme mal.<verse eid="NEH 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 6:3"/>Y enviéles mensajeros, diciendo: Yo hago una grande obra, y no puedo ir; porque cesaría la obra, dejándola yo para ir á vosotros.<verse eid="NEH 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 6:4"/>Y enviaron á mí con el mismo asunto por cuatro veces, y yo les respondí de la misma manera.<verse eid="NEH 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 6:5"/>Envió entonces Sanballat á mí su criado, á <char style="it">decir</char> lo mismo por quinta vez, con una carta abierta en su mano,<verse eid="NEH 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 6:6"/>En la cual estaba escrito: Hase oído entre las gentes, y <note caller="+" style="f"><char style="fr" closed="false">6.6 </char><char style="ft" closed="false">ó, <char style="it">Gesem.</char> vers. 1,2.</char></note>Gasmu lo dice, <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false">cp. 2.19.</char></note>que tú y los Judíos pensáis rebelaros; y que por eso edificas tú el muro, con la mira, según estas palabras, de ser tú su rey;<verse eid="NEH 6:6"/></para>
+  <para style="s">1 Fracasan varias estratagemas</para>
+  <para style="s">2 contra Nehemías.</para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 6:7"/>Y que has puesto profetas que prediquen de ti en Jerusalem, diciendo: ¡Rey en Judá! Y ahora serán oídas del rey las tales palabras: ven por tanto, y consultemos juntos.<verse eid="NEH 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 6:8"/>Entonces envié yo á decirles: No hay tal cosa como dices, sino que de tu corazón tú lo inventas.<verse eid="NEH 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 6:9"/>Porque todos ellos nos ponían miedo, diciendo: Debilitaránse las manos de ellos en la obra, y no será hecha. Esfuerza pues mis manos, <char style="it">oh Dios.</char><verse eid="NEH 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 6:10"/>Vine luego en secreto á casa de Semaías hijo de Delaías, hijo de Mehetabeel, porque él estaba <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="JER 36:5">Jer. 36.5</ref>.</char></note>encerrado; el cual <char style="it">me</char> dijo: Juntémonos en la casa de Dios dentro del templo, y cerremos las puertas del templo, porque vienen para matarte; sí, esta noche vendrán á matarte.<verse eid="NEH 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 6:11"/>Entonces dije: ¿Un hombre como yo ha de huir? ¿y quién, que como yo fuera, entraría al templo para salvar la vida? No entraré.<verse eid="NEH 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 6:12"/>Y entendí que Dios no lo había enviado, sino que hablaba aquella profecía contra mí, porque Tobías y Sanballat le habían alquilado por salario.<verse eid="NEH 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 6:13"/>Porque sobornado fué para hacerme temer así, y que pecase, y les sirviera de mal nombre con que fuera yo infamado.<verse eid="NEH 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 6:14"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.14 </char>
+      <char style="xt" closed="false">cp. 13.29.</char>
+    </note>Acuérdate, Dios mío, de Tobías y de Sanballat, conforme á estas sus obras, y también de Noadías profetisa, y de los otros profetas que hacían por ponerme miedo.<verse eid="NEH 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 6:15"/>Acabóse pues el muro el veinticinco <char style="it">del mes</char> de Elul, en cincuenta y dos días.<verse eid="NEH 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 6:16"/>Y como <char style="it">lo</char> oyeron <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false">cp. 2.10 y <ref loc="NEH 4:1">4.1</ref>,<ref loc="NEH 4:7">7</ref>.</char></note>todos nuestros enemigos, temieron todas las gentes que estaban en nuestros alrededores, y abatiéronse mucho sus ojos, y <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="PSA 126:2">Sal. 126.2</ref>.</char></note>conocieron que por nuestro Dios había sido hecha esta obra.<verse eid="NEH 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 6:17"/>Asimismo en aquellos días iban muchas cartas de los principales de Judá á Tobías, y las de Tobías venían á ellos.<verse eid="NEH 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 6:18"/>Porque muchos en Judá se habían conjurado con él, porque era yerno de Sechânías hijo de Ara; y Johanán su hijo había tomado la hija de <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="EZR 8:16">Esd. 8.16</ref>.</char></note>Mesullam, hijo de Berechîas.<verse eid="NEH 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 6:19"/>También contaban delante de mí sus buenas obras, y referíanle mis palabras. Y enviaba Tobías cartas para atemorizarme.<verse eid="NEH 6:19"/></para>
+  <chapter eid="NEH 6"/>
+  <chapter number="7" style="c" sid="NEH 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 7:1"/>Y LUEGO <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false">cp. 6.1.</char></note>que el muro fué edificado, y asenté las puertas, y fueron señalados porteros y cantores y Levitas,<verse eid="NEH 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 7:2"/>Mandé á mi hermano <note caller="+" style="x"><char style="xo" closed="false">7.2 </char><char style="xt" closed="false">cp. 1.2.</char></note>Hanani, y á Hananías, príncipe del palacio de Jerusalem, (porque era éste, como varón de verdad y temeroso de Dios, sobre muchos;)<verse eid="NEH 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 7:3"/>Y díjeles: No se abran las puertas de Jerusalem hasta que caliente el sol: y aun ellos presentes, cierren las puertas, y atrancad. Y señalé guardas de los moradores de Jerusalem, cada cual en su guardia, y cada uno delante de su casa.<verse eid="NEH 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 7:4"/>Y la ciudad era espaciosa y grande, pero poco pueblo dentro de ella, y no había casas reedificadas.<verse eid="NEH 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 7:5"/>Y puso Dios en mi corazón que juntase los principales, y los magistrados, y el pueblo, para que fuesen empadronados por el orden de sus linajes: y hallé el libro de la genealogía de los que habían subido <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false"><ref loc="EZR 1:11">Esd. 1.11</ref>.</char></note>antes, y encontré en él escrito:<verse eid="NEH 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 7:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.6 </char>
+      <char style="xt" closed="false">Hasta ver. 73, Esd. 2.1-70.</char>
+    </note>Estos son los hijos de la provincia que subieron de la cautividad, de la transmigración que hizo pasar Nabucodonosor rey de Babilonia, y que volvieron á Jerusalem y á Judá, cada uno á su ciudad;<verse eid="NEH 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 7:7"/>Los cuales vinieron con Zorobabel, Jesuá, Nehemías, <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false"><ref loc="EZR 2:2">Esd. 2.2</ref>.</char></note>Azarías, Raamías, Nahamani, Mardochêo, Bilsán, Misperet, Bigvai, Nehum, Baana. La cuenta de los varones del pueblo de Israel:<verse eid="NEH 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 7:8"/>Los hijos de Paros, dos mil ciento setenta y dos;<verse eid="NEH 7:8"/></para>
+  <para style="s">1 Israelitas que</para>
+  <para style="s">2 volvieron con Zorobabel.</para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 7:9"/>Los hijos de Sephatías, trescientos setenta y dos;<verse eid="NEH 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 7:10"/>Los hijos de Ara, <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false"><ref loc="EZR 2:5">Esd. 2.5</ref>.</char></note>seiscientos cincuenta y dos;<verse eid="NEH 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 7:11"/>Los hijos de Pahath-moab, de los hijos de Jesuá y de Joab, dos mil ochocientos <note caller="+" style="x"><char style="xo" closed="false">7.11 </char><char style="xt" closed="false"><ref loc="EZR 2:6">Esd. 2.6</ref>.</char></note>dieciocho;<verse eid="NEH 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 7:12"/>Los hijos de Elam, mil doscientos cincuenta y cuatro;<verse eid="NEH 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 7:13"/>Los hijos de Zattu, <note caller="+" style="x"><char style="xo" closed="false">7.13 </char><char style="xt" closed="false"><ref loc="EZR 2:8">Esd. 2.8</ref>.</char></note>ochocientos cuarenta y cinco;<verse eid="NEH 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 7:14"/>Los hijos de Zachâi, setecientos y sesenta;<verse eid="NEH 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 7:15"/>Los hijos de <note caller="+" style="x"><char style="xo" closed="false">7.15 </char><char style="xt" closed="false"><ref loc="EZR 2:10">Esd. 2.10</ref>.</char></note>Binnui, seiscientos cuarenta y <note caller="+" style="x"><char style="xo" closed="false">7.15 </char><char style="xt" closed="false"><ref loc="EZR 2:10-15">Esd. 2.10-15</ref>.</char></note>ocho;<verse eid="NEH 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 7:16"/>Los hijos de Bebai, <char style="fm">7.15</char>seiscientos veintiocho;<verse eid="NEH 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 7:17"/>Los hijos de Azgad, <char style="fm">7.15</char>dos mil seiscientos veintidós;<verse eid="NEH 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 7:18"/>Los hijos de Adonicam, <char style="fm">7.15</char>seiscientos sesenta y siete;<verse eid="NEH 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 7:19"/>Los hijos de Bigvai, <char style="fm">7.15</char>dos mil sesenta y siete;<verse eid="NEH 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 7:20"/>Los hijos de Addin, <char style="fm">7.15</char>seiscientos cincuenta y cinco;<verse eid="NEH 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 7:21"/>Los hijos de Ater, de Ezechîas, noventa y ocho;<verse eid="NEH 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 7:22"/>Los hijos de Hasum, <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false"><ref loc="EZR 2:19">Esd. 2.19</ref>.</char></note>trescientos veintiocho;<verse eid="NEH 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 7:23"/>Los hijos de Besai, trescientos veinticuatro;<verse eid="NEH 7:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 7:24"/>Los hijos de Hariph, ciento doce;<verse eid="NEH 7:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 7:25"/>Los hijos de Gabaón, noventa y cinco;<verse eid="NEH 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 7:26"/>Los varones de Beth-lehem y de Netopha, <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false"><ref loc="EZR 2:21">Esd. 2.21</ref>,<ref loc="EZR 2:22">22</ref>.</char></note>ciento ochenta y ocho;<verse eid="NEH 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 7:27"/>Los varones de Anathoth, ciento veintiocho;<verse eid="NEH 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 7:28"/>Los varones de <note caller="+" style="x"><char style="xo" closed="false">7.28 </char><char style="xt" closed="false"><ref loc="EZR 2:24">Esd. 2.24</ref>.</char></note>Beth-azmaveth, cuarenta y dos;<verse eid="NEH 7:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 7:29"/>Los varones de <note caller="+" style="x"><char style="xo" closed="false">7.29 </char><char style="xt" closed="false"><ref loc="EZR 2:25">Esd. 2.25</ref>.</char></note>Chîriath-jearim, Chephira y Beeroth, setecientos cuarenta y tres;<verse eid="NEH 7:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 7:30"/>Los varones de Rama y de Gebaa, seiscientos veintiuno;<verse eid="NEH 7:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 7:31"/>Los varones de Michmas, ciento veintidós;<verse eid="NEH 7:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 7:32"/>Los varones de Beth-el y de Ai, <note caller="+" style="x"><char style="xo" closed="false">7.32 </char><char style="xt" closed="false"><ref loc="EZR 2:28">Esd. 2.28</ref>.</char></note>ciento veintitrés;<verse eid="NEH 7:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="NEH 7:33"/>Los varones de la otra Nebo, cincuenta y dos;<verse eid="NEH 7:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="NEH 7:34"/>Los hijos de la otra Elam, mil doscientos cincuenta y cuatro;<verse eid="NEH 7:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="NEH 7:35"/>Los hijos de Harim, trescientos y veinte;<verse eid="NEH 7:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="NEH 7:36"/>Los hijos de Jericó, trescientos cuarenta y cinco;<verse eid="NEH 7:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="NEH 7:37"/>Los hijos de Lod, de Hadid, y Ono, <note caller="+" style="x"><char style="xo" closed="false">7.37 </char><char style="xt" closed="false"><ref loc="EZR 2:33">Esd. 2.33</ref>.</char></note>setecientos veintiuno;<verse eid="NEH 7:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="NEH 7:38"/>Los hijos de Senaa, tres mil novecientos y treinta.<verse eid="NEH 7:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="NEH 7:39"/>Sacerdotes: los hijos de Jedaías, de la casa de Jesuá, novecientos setenta y tres;<verse eid="NEH 7:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="NEH 7:40"/>Los hijos de Immer, mil cincuenta y dos;<verse eid="NEH 7:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="NEH 7:41"/>Los hijos de Pashur, mil doscientos cuarenta y siete;<verse eid="NEH 7:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="NEH 7:42"/>Los hijos de Harim, mil diez y siete.<verse eid="NEH 7:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="NEH 7:43"/>Levitas: los hijos de Jesuá, de Cadmiel, de los hijos de <note caller="+" style="x"><char style="xo" closed="false">7.43 </char><char style="xt" closed="false"><ref loc="EZR 2:40">Esd. 2.40</ref> y <ref loc="EZR 3:9">3.9</ref>.</char></note>Odevía, setenta y cuatro.<verse eid="NEH 7:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="NEH 7:44"/>Cantores: los hijos de Asaph, <note caller="+" style="x"><char style="xo" closed="false">7.44 </char><char style="xt" closed="false"><ref loc="EZR 2:41">Esd. 2.41</ref>,<ref loc="EZR 2:42">42</ref>.</char></note>ciento cuarenta y ocho.<verse eid="NEH 7:44"/></para>
+  <para style="p">
+    <verse number="45" style="v" sid="NEH 7:45"/>Porteros: los hijos de Sallum, los hijos de Ater, los hijos de Talmón, los hijos de Accub, los hijos de Hatita, los hijos de Sobai, ciento treinta y ocho.<verse eid="NEH 7:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="NEH 7:46"/>Nethineos: los hijos de Siha, los hijos de Hasupha, los hijos de Thabaoth,<verse eid="NEH 7:46"/></para>
+  <para style="p">
+    <verse number="47" style="v" sid="NEH 7:47"/>Los hijos de Chêros, los hijos de Siaa, los hijos de Phadón,<verse eid="NEH 7:47"/></para>
+  <para style="p">
+    <verse number="48" style="v" sid="NEH 7:48"/>Los hijos de Lebana, los hijos de Hagaba, los hijos de Salmai,<verse eid="NEH 7:48"/></para>
+  <para style="p">
+    <verse number="49" style="v" sid="NEH 7:49"/>Los hijos de Hanán, los hijos de Giddel, los hijos de Gahar,<verse eid="NEH 7:49"/></para>
+  <para style="p">
+    <verse number="50" style="v" sid="NEH 7:50"/>Los hijos de Rehaía, los hijos de Resín, los hijos de Necoda,<verse eid="NEH 7:50"/></para>
+  <para style="p">
+    <verse number="51" style="v" sid="NEH 7:51"/>Los hijos de Gazzam, los hijos de Uzza, los hijos de Phasea,<verse eid="NEH 7:51"/></para>
+  <para style="p">
+    <verse number="52" style="v" sid="NEH 7:52"/>Los hijos de Besai, los hijos de Meunim, los hijos de Nephisesim,<verse eid="NEH 7:52"/></para>
+  <para style="p">
+    <verse number="53" style="v" sid="NEH 7:53"/>Los hijos de Bacbuc, los hijos de Hacupha, los hijos de Harhur,<verse eid="NEH 7:53"/></para>
+  <para style="p">
+    <verse number="54" style="v" sid="NEH 7:54"/>Los hijos de Baslith, los hijos de Mehida, los hijos de Harsa,<verse eid="NEH 7:54"/></para>
+  <para style="p">
+    <verse number="55" style="v" sid="NEH 7:55"/>Los hijos de Barcos, los hijos de Sísera, los hijos de Tema,<verse eid="NEH 7:55"/></para>
+  <para style="p">
+    <verse number="56" style="v" sid="NEH 7:56"/>Los hijos de Nesía, los hijos de Hatipha.<verse eid="NEH 7:56"/></para>
+  <para style="p">
+    <verse number="57" style="v" sid="NEH 7:57"/>Los hijos de los siervos de Salomón: los hijos de Sotai, los hijos de Sophereth, los hijos de Perida,<verse eid="NEH 7:57"/></para>
+  <para style="s">1 Dones para la obra.</para>
+  <para style="s">2 Lectura pública de la ley.</para>
+  <para style="p">
+    <verse number="58" style="v" sid="NEH 7:58"/>Los hijos de Jahala, los hijos de Darcón, los hijos de Giddel,<verse eid="NEH 7:58"/></para>
+  <para style="p">
+    <verse number="59" style="v" sid="NEH 7:59"/>Los hijos de Sephatías, los hijos de Hattil, los hijos de Pochêreth-hassebaim, los hijos de <note caller="+" style="x"><char style="xo" closed="false">7.59 </char><char style="xt" closed="false"><ref loc="EZR 2:57">Esd. 2.57</ref>.</char></note>Amón.<verse eid="NEH 7:59"/></para>
+  <para style="p">
+    <verse number="60" style="v" sid="NEH 7:60"/>Todos los Nethineos, é hijos de los siervos de Salomón, trescientos noventa y dos.<verse eid="NEH 7:60"/></para>
+  <para style="p">
+    <verse number="61" style="v" sid="NEH 7:61"/>Y estos son los que subieron de Tel-melah, Tel-harsa, Chêrub, Addón, é Immer, los cuales no pudieron mostrar la casa de sus padres, ni su linaje, si eran de Israel:<verse eid="NEH 7:61"/></para>
+  <para style="p">
+    <verse number="62" style="v" sid="NEH 7:62"/>Los hijos de Delaía, los hijos de Tobías, los hijos de Necoda, <note caller="+" style="x"><char style="xo" closed="false">7.62 </char><char style="xt" closed="false"><ref loc="EZR 2:60">Esd. 2.60</ref>.</char></note>seiscientos cuarenta y dos.<verse eid="NEH 7:62"/></para>
+  <para style="p">
+    <verse number="63" style="v" sid="NEH 7:63"/>Y de los sacerdotes: los hijos de Habaías, los hijos de Cos, los hijos de Barzillai, el cual tomó mujer de las hijas de Barzillai Galaadita, y se llamó del nombre de ellas.<verse eid="NEH 7:63"/></para>
+  <para style="p">
+    <verse number="64" style="v" sid="NEH 7:64"/>Estos buscaron su registro de genealogías, y no se halló; y fueron echados del sacerdocio.<verse eid="NEH 7:64"/></para>
+  <para style="p">
+    <verse number="65" style="v" sid="NEH 7:65"/>Y díjoles el <note caller="+" style="x"><char style="xo" closed="false">7.65 </char><char style="xt" closed="false">ver. 70. cp. 8.9.</char></note>Tirsatha que no comiesen de las cosas más santas, hasta que hubiese sacerdote con Urim y Thummim.<verse eid="NEH 7:65"/></para>
+  <para style="p">
+    <verse number="66" style="v" sid="NEH 7:66"/>La congregación toda junta era <char style="it">de</char> cuarenta y dos mil trescientos y sesenta,<verse eid="NEH 7:66"/></para>
+  <para style="p">
+    <verse number="67" style="v" sid="NEH 7:67"/>Sin sus siervos y siervas, que eran siete mil trescientos treinta y siete; y entre ellos había <note caller="+" style="x"><char style="xo" closed="false">7.67 </char><char style="xt" closed="false"><ref loc="EZR 2:65">Esd. 2.65</ref>.</char></note>doscientos cuarenta y cinco cantores y cantoras.<verse eid="NEH 7:67"/></para>
+  <para style="p">
+    <verse number="68" style="v" sid="NEH 7:68"/>Sus caballos, setecientos treinta y seis; sus mulos, doscientos cuarenta y cinco;<verse eid="NEH 7:68"/></para>
+  <para style="p">
+    <verse number="69" style="v" sid="NEH 7:69"/>Camellos, cuatrocientos treinta y cinco; asnos, seis mil setecientos y veinte.<verse eid="NEH 7:69"/></para>
+  <para style="p">
+    <verse number="70" style="v" sid="NEH 7:70"/>Y algunos de los príncipes de las familias dieron para la obra. El Tirsatha dió para el tesoro mil dracmas de oro, cincuenta tazones, y quinientas treinta vestiduras sacerdotales.<verse eid="NEH 7:70"/></para>
+  <para style="p">
+    <verse number="71" style="v" sid="NEH 7:71"/>Y de los príncipes de las familias dieron para el tesoro de la obra, veinte mil dracmas de oro, y dos mil y doscientas libras de plata.<verse eid="NEH 7:71"/></para>
+  <para style="p">
+    <verse number="72" style="v" sid="NEH 7:72"/>Y lo que dió el resto del pueblo fué veinte mil dracmas de oro, y dos mil libras de plata, y sesenta y siete vestiduras sacerdotales.<verse eid="NEH 7:72"/></para>
+  <para style="p">
+    <verse number="73" style="v" sid="NEH 7:73"/>Y habitaron los sacerdotes y los Levitas, y los porteros, y los cantores, y los del pueblo, y los Nethineos, y todo Israel, en sus ciudades. <note caller="+" style="x"><char style="xo" closed="false">7.73 </char><char style="xt" closed="false"><ref loc="EZR 3:1">Esd. 3.1</ref>.</char></note>Y venido el mes séptimo, los hijos de Israel estaban en sus ciudades.<verse eid="NEH 7:73"/></para>
+  <chapter eid="NEH 7"/>
+  <chapter number="8" style="c" sid="NEH 8"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 8:1"/>Y JUNTÓSE <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="EZR 3:1">Esd. 3.1</ref>.</char></note>todo el pueblo como un solo hombre en la plaza que está delante de la <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false">cp. 3.26.</char></note>puerta de las Aguas, y dijeron á Esdras el <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="EZR 7:6">Esd. 7.6</ref>.</char></note>escriba, que trajese el libro de la ley de Moisés, la cual mandó Jehová á Israel.<verse eid="NEH 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 8:2"/>Y Esdras el sacerdote, trajo la ley delante de la congregación, así de hombres como de mujeres, y de todo entendido para escuchar, el primer día del mes séptimo.<verse eid="NEH 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 8:3"/>Y leyó en el <char style="it">libro</char> delante de la plaza que está delante de la puerta de las Aguas, desde el alba hasta el medio día, en presencia de hombres y mujeres y entendidos; y los oídos de todo el pueblo estaban <char style="it">atentos</char> al libro de la ley.<verse eid="NEH 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 8:4"/>Y Esdras el escriba estaba sobre un púlpito de madera, que habían hecho para ello; y junto á él estaban Mathithías, y Sema, y Anías, y Urías, é Hilcías, y Maasías, á su mano derecha; y á su mano izquierda, Pedaía, Misael, y Malchîas, y Hasum, y Hasbedana, Zachârías, y Mesullam.<verse eid="NEH 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 8:5"/>Abrió pues Esdras el libro á ojos de todo el pueblo, (porque estaba más alto que todo el pueblo); y como lo abrió, todo el pueblo estuvo atento.<verse eid="NEH 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 8:6"/>Bendijo entonces Esdras á Jehová, Dios grande. Y todo el pueblo respondió, <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">cp. 5.13.</char></note>¡Amén! ¡Amén! alzando sus manos; y humilláronse, y adoraron á Jehová inclinados á tierra.<verse eid="NEH 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 8:7"/>Y Jesuá, y Bani, y Serebías, Jamín, Accub, Sabethai, Odías, Maasías, Celita, Azarías, Jozabed, Hanán, Pelaía, Levitas, <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false"><ref loc="2CH 35:3">2 Cr. 35.3</ref>.</char></note>hacían entender al pueblo la ley: y el pueblo <char style="it">estaba</char> en su lugar.<verse eid="NEH 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 8:8"/>Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura.<verse eid="NEH 8:8"/></para>
+  <para style="s">1 Fiesta de las cabañas.</para>
+  <para style="s">2 Humillación por el pecado.</para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 8:9"/>Y Nehemías el <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="EZR 2:63">Esd. 2.63</ref>. cp. 7.65 y <ref loc="EZR 10:1">10.1</ref>.</char></note>Tirsatha, y el sacerdote Esdras, escriba, y los Levitas <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false">vers. 7,8,12.</char></note>que hacían entender al pueblo, dijeron á todo el pueblo: Día santo es á Jehová nuestro Dios; no os entristezcáis, ni lloréis: porque todo el pueblo lloraba oyendo las palabras de la ley.<verse eid="NEH 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 8:10"/>Díjoles luego: Id, comed grosuras, y bebed <char style="it">vino</char> dulce, y enviad porciones á los que no tienen prevenido; porque día santo es á nuestro Señor: y no os entristezcáis, porque el gozo de Jehová es vuestra fortaleza.<verse eid="NEH 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 8:11"/>Los Levitas pues, hacían callar á todo el pueblo, diciendo: Callad, que es día santo, y no os entristezcáis.<verse eid="NEH 8:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 8:12"/>Y todo el pueblo se fué á comer y á beber, y á enviar porciones, y á gozar de grande alegría, porque <note caller="+" style="x"><char style="xo" closed="false">8.12 </char><char style="xt" closed="false">vers. 7,8,9.</char></note>habían entendido las palabras que les habían enseñado.<verse eid="NEH 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 8:13"/>Y el día siguiente se juntaron los príncipes de las familias de todo el pueblo, sacerdotes, y Levitas, á Esdras escriba, para entender las palabras de la ley.<verse eid="NEH 8:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 8:14"/>Y hallaron escrito en la ley que Jehová había mandado por mano de Moisés, que habitasen los hijos de Israel en cabañas <note caller="+" style="x"><char style="xo" closed="false">8.14 </char><char style="xt" closed="false"><ref loc="LEV 23:34">Lv. 23.34</ref>,<ref loc="LEV 23:42">42</ref>. <ref loc="DEU 16:13">Dt. 16.13</ref>.</char></note>en la solemnidad del mes séptimo;<verse eid="NEH 8:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 8:15"/>Y que hiciesen saber, y pasar pregón por todas sus ciudades y por Jerusalem, diciendo: <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false"><ref loc="LEV 23:4">Lv. 23.4</ref>. <ref loc="DEU 16:16">Dt. 16.16</ref>.</char></note>Salid al monte, y traed ramos de oliva, y ramos de pino, y ramos de arrayán, y ramos de palmas, y ramos de <char style="it">todo</char> árbol espeso, para hacer cabañas como está escrito.<verse eid="NEH 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 8:16"/>Salió pues el pueblo, y trajeron, é hiciéronse cabañas, cada uno sobre su <note caller="+" style="x"><char style="xo" closed="false">8.16 </char><char style="xt" closed="false"><ref loc="2SA 11:2">2 S. 11.2</ref>.</char></note>terrado, y en sus patios, y en los patios de la casa de Dios, y en la <note caller="+" style="x"><char style="xo" closed="false">8.16 </char><char style="xt" closed="false">cp. 3.26.</char></note>plaza de la puerta de las Aguas, <note caller="+" style="x"><char style="xo" closed="false">8.16 </char><char style="xt" closed="false"><ref loc="2KI 14:13">2 R. 14.13</ref>. cp. 12.39.</char></note>y en la plaza de la puerta de Ephraim.<verse eid="NEH 8:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 8:17"/>Y toda la congregación que volvió de la cautividad hicieron cabañas, y en cabañas habitaron; porque desde los días de Josué hijo de Nun hasta aquel día, <note caller="+" style="x"><char style="xo" closed="false">8.17 </char><char style="xt" closed="false"><ref loc="EZR 3:4">Esd. 3.4</ref>.</char></note>no habían hecho así los hijos de Israel. Y hubo alegría muy grande.<verse eid="NEH 8:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 8:18"/>Y leyó <char style="it">Esdras</char> <note caller="+" style="x"><char style="xo" closed="false">8.18 </char><char style="xt" closed="false"><ref loc="DEU 31:10">Dt. 31.10</ref>,<ref loc="DEU 31:11">11</ref>.</char></note>en el libro de la ley de Dios cada día, desde el primer día hasta el postrero; é hicieron la solemnidad por siete días, y al octavo día congregación, según el rito.<verse eid="NEH 8:18"/></para>
+  <para style="b"/>
+  <chapter eid="NEH 8"/>
+  <chapter number="9" style="c" sid="NEH 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 9:1"/>Y EL día veinticuatro del <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false">cp. 8.2.</char></note>mismo mes se juntaron los hijos de Israel en ayuno, y con <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="1KI 20:31">1 R. 20.31</ref>.</char></note>sacos, y <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="JOS 7:6">Jos. 7.6</ref>.</char></note>tierra sobre sí.<verse eid="NEH 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 9:2"/>Y <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="EZR 10:11">Esd. 10.11</ref>. cp. 13.3,30.</char></note>habíase ya apartado la simiente de Israel de todos los extranjeros; y estando <char style="it">en pie,</char> confesaron sus pecados, y las iniquidades de sus padres.<verse eid="NEH 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 9:3"/>Y puestos de pie en su lugar, <note caller="+" style="x"><char style="xo" closed="false">9.3 </char><char style="xt" closed="false">cp. 8.7,8,18 y <ref loc="NEH 13:1">13.1</ref>.</char></note>leyeron en el libro de la ley de Jehóva su Dios la cuarta parte del día, y la cuarta parte confesaron y adoraron á Jehóva su Dios.<verse eid="NEH 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 9:4"/>Levantáronse luego sobre la grada de los Levitas, <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false">cp. 8.7.</char></note>Jesuá y Bani, Cadmiel, Sebanías, Bunni Serebías, Bani y Chênani, y clamaron en voz alta á Jehová su Dios.<verse eid="NEH 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 9:5"/>Y dijeron los Levitas, Jesuá y Cadmiel, Bani, Hosabnías, Serebías, Odaías, Sebanías <char style="it">y</char> Pethaía: Levantaos, bendecid á Jehová vuestro Dios desde el siglo hasta el siglo: y bendigan el nombre tuyo, glorioso y alto sobre toda bendición y alabanza.<verse eid="NEH 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 9:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 19:15">2 R. 19.15</ref>.</char>
+    </note>Tú, oh Jehová, eres solo; tú hiciste los cielos, y <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="DEU 10:14">Dt. 10.14</ref>.</char></note>los cielos de los cielos, y toda su milicia, la tierra y todo lo que está en ella, los mares y todo lo que hay en ellos; y tú vivificas todas estas cosas, y los ejércitos de los cielos te adoran.<verse eid="NEH 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 9:7"/>Tú eres, oh Jehová, el Dios que escogiste á <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="GEN 11:31">Gn. 11.31</ref> y <ref loc="GEN 12:1">12.1</ref> y <ref loc="GEN 17:5">17.5</ref>.</char></note>Abram, y lo sacaste de Ur de los Caldeos, y pusístele el nombre Abraham;<verse eid="NEH 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 9:8"/>Y hallaste <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="GEN 15:6">Gn. 15.6</ref>.</char></note>fiel su corazón delante de ti, é hiciste con él <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="GEN 12:7">Gn. 12.7</ref> y <ref loc="GEN 15:18">15.18</ref> y <ref loc="GEN 17:7-9">17.7-9</ref>.</char></note>alianza para darle la tierra del <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="EXO 13:5">Ex. 13.5</ref>.</char></note>Cananeo, del Hetheo, y del Amorrheo, y del Pherezeo, y del Jebuseo, y del Gergeseo, para darla á su simiente: y <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="JOS 23:14">Jos. 23.14</ref>.</char></note>cumpliste tu palabra, porque eres justo.<verse eid="NEH 9:8"/></para>
+  <para style="s">1 Confiesan los Levitas</para>
+  <para style="s">2 los pecados del pueblo.</para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 9:9"/>Y miraste <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="EXO 3:7">Ex. 3.7</ref>.</char></note>la aflicción de nuestos padres en Egipto, y oíste el clamor de ellos en el mar Bermejo;<verse eid="NEH 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 9:10"/>Y diste señales y maravillas en Faraón, y en todos sus siervos, y en todo el pueblo de su tierra; porque sabías que habían hecho soberbiamente contra ellos; é <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="EXO 9:16">Ex. 9.16</ref>.</char></note>hicístete nombre grande, como este día.<verse eid="NEH 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 9:11"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 14:21">Ex. 14.21</ref>,<ref loc="EXO 14:22">22</ref>,<ref loc="EXO 14:27">27</ref>,<ref loc="EXO 14:28">28</ref>.</char>
+    </note>Y dividiste la mar delante de ellos, y pasaron por medio de ella en seco; y á sus perseguidores echaste en los profundos, como una piedra en grandes aguas.<verse eid="NEH 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 9:12"/>Y con columna de nube <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="EXO 13:21">Ex. 13.21</ref>,<ref loc="EXO 13:22">22</ref>.</char></note>los guiaste de día, y con columna de fuego de noche, para alumbrarles el camino por donde habían de ir.<verse eid="NEH 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 9:13"/>Y sobre el monte de Sinaí <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false"><ref loc="EXO 19:20">Ex. 19.20</ref> y <ref loc="EXO 20:1">20.1</ref>.</char></note>descendiste, y hablaste con ellos desde el cielo, y dísteles juicios rectos, leyes verdaderas, y estatutos y mandamientos buenos:<verse eid="NEH 9:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 9:14"/>Y notificásteles <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="EXO 20:8-11">Ex. 20.8-11</ref>.</char></note>el sábado tuyo santo, y les prescribiste, por mano de Moisés tu siervo, mandamientos y estatutos y ley.<verse eid="NEH 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 9:15"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.15 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 16:14">Ex. 16.14</ref>,<ref loc="EXO 16:15">15</ref>. <ref loc="JHN 6:31">Jn. 6.31</ref>.</char>
+    </note>Y dísteles pan del cielo en su hambre, y en su sed les <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="EXO 17:6">Ex. 17.6</ref>. <ref loc="NUM 20:9">Nm. 20.9</ref>, etc.</char></note>sacaste aguas de la piedra; y dijísteles que <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="DEU 1:8">Dt. 1.8</ref>.</char></note>entrasen á poseer la tierra, por la cual alzaste tu mano que se la habías de dar.<verse eid="NEH 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 9:16"/>Mas ellos y nuestros padres hicieron soberbiamente, y endurecieron su cerviz, y no escucharon tus mandamientos,<verse eid="NEH 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 9:17"/>Y no quisieron oir, ni <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="PSA 78:11">Sal. 78.11</ref>,<ref loc="PSA 78:42">42</ref>,<ref loc="PSA 78:43">43</ref>.</char></note>se acordaron de tus maravillas que habías hecho con ellos; antes endurecieron su cerviz, y en su rebelión pensaron poner <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="NUM 14:4">Nm. 14.4</ref>.</char></note>caudillo para volverse á su servidumbre. Tú empero, eres Dios de perdones, clemente y piadoso, tardo <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="EXO 34:6">Ex. 34.6</ref>. <ref loc="JOL 2:13">Jl. 2.13</ref>.</char></note>para la ira, y de mucha misericordia, que no los dejaste.<verse eid="NEH 9:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 9:18"/>Además, <note caller="+" style="x"><char style="xo" closed="false">9.18 </char><char style="xt" closed="false"><ref loc="EXO 32:4">Ex. 32.4</ref>.</char></note>cuando hicieron para sí becerro de fundición, y dijeron: Este es tu Dios que te hizo subir de Egipto; y cometieron grandes abominaciones;<verse eid="NEH 9:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 9:19"/>Tú, con todo, por tus muchas misericordias no los abandonaste en el desierto: la columna de nube no se apartó de ellos de día, para guiarlos por el camino, ni la columna de fuego de noche, para alumbrarles el camino por el cual habían de ir.<verse eid="NEH 9:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 9:20"/>Y diste tu <note caller="+" style="x"><char style="xo" closed="false">9.20 </char><char style="xt" closed="false"><ref loc="NUM 11:17">Nm. 11.17</ref>. <ref loc="ISA 63:11">Is. 63.11</ref>.</char></note>espíritu bueno para enseñarlos, y no retiraste tu maná de su boca, y agua les diste en su sed.<verse eid="NEH 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 9:21"/>Y sustentástelos <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="DEU 2:7">Dt. 2.7</ref>.</char></note>cuarenta años en el desierto; de ninguna cosa tuvieron necesidad: <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="DEU 8:4">Dt. 8.4</ref> y <ref loc="DEU 29:5">29.5</ref>.</char></note>sus vestidos no se envejecieron, ni se hincharon sus pies.<verse eid="NEH 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 9:22"/>Y dísteles reinos y pueblos, y los distribuiste por <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="NUM 24:17">Nm. 24.17</ref>. <ref loc="JER 48:45">Jer. 48.45</ref>.</char></note>cantones: y poseyeron la tierra de <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="NUM 21:21">Nm. 21.21</ref>.</char></note>Sehón, y la tierra <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="NUM 32:37">Nm. 32.37</ref>.</char></note>del rey Hesbón, y la tierra de <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="NUM 21:33-35">Nm. 21.33-35</ref>.</char></note>Og rey de Basán.<verse eid="NEH 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 9:23"/>Y multiplicaste sus hijos como las <note caller="+" style="x"><char style="xo" closed="false">9.23 </char><char style="xt" closed="false"><ref loc="GEN 15:5">Gn. 15.5</ref>.</char></note>estrellas del cielo, y metístelos en la tierra, de la cual habías dicho á sus padres que habían de entrar á poseerla.<verse eid="NEH 9:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 9:24"/>Y los hijos vinieron y poseyeron la tierra, y humillaste delante de ellos á los moradores del país, á los Cananeos, los cuales entregaste en su mano, y á sus reyes, y á los pueblos de la tierra, para que hiciesen de ellos á su voluntad.<verse eid="NEH 9:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 9:25"/>Y tomaron ciudades fortalecidas, y <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false"><ref loc="NUM 13:27">Nm. 13.27</ref>.</char></note>tierra pingüe, y heredaron <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false"><ref loc="DEU 6:11">Dt. 6.11</ref>.</char></note>casas llenas de todo bien, cisternas hechas, viñas y olivares, y muchos árboles de comer; y comieron, y hartáronse, y engrosáronse, y deleitáronse en tu grande bondad.<verse eid="NEH 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 9:26"/>Empero <char style="it">te</char> irritaron, y rebeláronse contra ti, y <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false"><ref loc="1KI 14:9">1 R. 14.9</ref>.</char></note>echaron tu ley tras sus espaldas, y mataron <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false"><ref loc="1KI 18:4">1 R. 18.4</ref> y <ref loc="1KI 19:10">19.10</ref>. <ref loc="MAT 23:37">Mt. 23.37</ref>. <ref loc="ACT 7:52">Hch. 7.52</ref>.</char></note>tus profetas que protestaban contra ellos para convertirlos á ti; é hicieron grandes abominaciones.<verse eid="NEH 9:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 9:27"/>Y <note caller="+" style="x"><char style="xo" closed="false">9.27 </char><char style="xt" closed="false"><ref loc="JDG 2:14">Jue. 2.14</ref> y <ref loc="JDG 3:8">3.8</ref>,<ref loc="JDG 3:9">9</ref>.</char></note>entregástelos en mano de sus enemigos, los cuales los afligieron: y en el tiempo de su tribulación clamaron á ti, y tú desde los cielos los oíste; y según tus muchas miseraciones les dabas salvadores, que los salvasen de mano de sus enemigos.<verse eid="NEH 9:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 9:28"/>Mas en teniendo <note caller="+" style="x"><char style="xo" closed="false">9.28 </char><char style="xt" closed="false"><ref loc="JDG 3:11">Jue. 3.11</ref>,<ref loc="JDG 3:12">12</ref>,<ref loc="JDG 3:30">30</ref> y <ref loc="JDG 4:1">4.1</ref> y <ref loc="JDG 5:31">5.31</ref> y <ref loc="JDG 6:1">6.1</ref>.</char></note>reposo, se volvían á hacer lo malo delante de ti; por lo cual los dejaste en mano de sus enemigos, que se enseñorearon de ellos: pero convertidos clamaban otra vez á ti, y tú desde los cielos los oías, y según tus miseraciones muchas veces los libraste.<verse eid="NEH 9:28"/></para>
+  <para style="s">1 Alianza solemne</para>
+  <para style="s">2 del pueblo con Dios.</para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 9:29"/>Y protestásteles que se volviesen á tu ley; mas ellos hicieron soberbiamente, y no oyeron tus mandamientos, sino que pecaron contra tus juicios, <note caller="+" style="x"><char style="xo" closed="false">9.29 </char><char style="xt" closed="false"><ref loc="LEV 18:5">Lv. 18.5</ref>.</char></note>los cuales si el hombre hiciere, en ellos vivirá; y dieron hombro renitente, y endurecieron su cerviz, y no escucharon.<verse eid="NEH 9:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 9:30"/>Y alargaste sobre ellos muchos años, y protestásteles con tu espíritu por mano de tus profetas, mas no escucharon; <note caller="+" style="x"><char style="xo" closed="false">9.30 </char><char style="xt" closed="false"><ref loc="EZR 9:7">Esd. 9.7</ref>.</char></note>por lo cual los entregaste en mano de los pueblos de la tierra.<verse eid="NEH 9:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 9:31"/>Empero por tus muchas misericordias <note caller="+" style="x"><char style="xo" closed="false">9.31 </char><char style="xt" closed="false"><ref loc="JER 4:27">Jer. 4.27</ref>.</char></note>no los consumiste, ni los dejaste; porque eres Dios clemente <note caller="+" style="x"><char style="xo" closed="false">9.31 </char><char style="xt" closed="false">ver. 17.</char></note>y misericordioso.<verse eid="NEH 9:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 9:32"/>Ahora pues, Dios nuestro, Dios grande, fuerte, terrible, <note caller="+" style="x"><char style="xo" closed="false">9.32 </char><char style="xt" closed="false"><ref loc="DEU 7:9">Dt. 7.9</ref>.</char></note>que guardas el pacto y la misericordia, no sea tenido en poco delante de ti todo el <note caller="+" style="x"><char style="xo" closed="false">9.32 </char><char style="xt" closed="false"><ref loc="MAL 1:13">Mal. 1.13</ref>.</char></note>trabajo que nos ha alcanzando á nuestros reyes, á nuestros príncipes, á nuestros sacerdotes, y á nuestros profetas, y á nuestros padres, y á todo tu pueblo, <note caller="+" style="x"><char style="xo" closed="false">9.32 </char><char style="xt" closed="false"><ref loc="2KI 17:3">2 R. 17.3</ref>.</char></note>desde los días de los reyes de Asiria hasta este día.<verse eid="NEH 9:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="NEH 9:33"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.33 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 9:15">Esd. 9.15</ref>.</char>
+    </note>Tú empero eres justo en todo lo que ha venido sobre nosotros; porque rectamente has hecho, mas nosotros hemos hecho lo malo:<verse eid="NEH 9:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="NEH 9:34"/>Y nuestros reyes, nuestros príncipes, nuestros sacerdotes, y nuestros padres, no pusieron por obra tu ley, ni atendieron á tus mandamientos y á tus testimonios, con que les protestabas.<verse eid="NEH 9:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="NEH 9:35"/>Y ellos en su reino y en tu mucho bien que les diste, y en la tierra espaciosa y pingüe que entregaste delante de ellos, no te sirvieron, ni se convirtieron de sus malas obras.<verse eid="NEH 9:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="NEH 9:36"/>He aquí que hoy <note caller="+" style="x"><char style="xo" closed="false">9.36 </char><char style="xt" closed="false"><ref loc="EZR 9:9">Esd. 9.9</ref>.</char></note>somos siervos, henos aquí, siervos en la tierra que diste á nuestros padres para que comiesen sus fruto y su bien.<verse eid="NEH 9:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="NEH 9:37"/>Y se multiplica su fruto para los reyes que has puesto sobre nosotros por nuestros pecados, quienes se enseñorean sobre nuestros cuerpos, y sobre nuestras bestias, conforme á su voluntad, y estamos en grande angustia.<verse eid="NEH 9:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="NEH 9:38"/>A causa pues de todo eso nosotros hacemos fiel <note caller="+" style="x"><char style="xo" closed="false">9.38 </char><char style="xt" closed="false"><ref loc="2KI 23:3">2 R. 23.3</ref>. <ref loc="EZR 10:3">Esd. 10.3</ref>. cp. 10.29.</char></note>alianza, y la escribimos, signada de nuestros príncipes, de nuestros Levitas, y de <note caller="+" style="x"><char style="xo" closed="false">9.38 </char><char style="xt" closed="false">cp. 10.1.</char></note>nuestros sacerdotes.<verse eid="NEH 9:38"/></para>
+  <chapter eid="NEH 9"/>
+  <chapter number="10" style="c" sid="NEH 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 10:1"/>Y <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 9.38.</char></note>LOS que firmaron fueron, <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 8.9.</char></note>Nehemías el Tirsatha, <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 1.1.</char></note>hijo de Hachâlías, y Sedecías,<verse eid="NEH 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 10:2"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.2 </char>
+      <char style="xt" closed="false">cp. 11.11.</char>
+    </note>Seraías, <note caller="+" style="x"><char style="xo" closed="false">10.2 </char><char style="xt" closed="false">cp. 3.23.</char></note>Azarías, Jeremías,<verse eid="NEH 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 10:3"/>Pashur, Amarías, Malchías,<verse eid="NEH 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 10:4"/>Hattus, Sebanías, Malluch,<verse eid="NEH 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 10:5"/>Harim, Meremoth, Obadías,<verse eid="NEH 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 10:6"/>Daniel, Ginethón, Baruch,<verse eid="NEH 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 10:7"/>Mesullam, Abías, Miamín,<verse eid="NEH 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 10:8"/>Maazías, Bilgai, Semeías: estos, sacerdotes.<verse eid="NEH 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 10:9"/>Y Levitas: Jesuá hijo de Azanías, Binnui de los hijos de Henadad, Cadmiel;<verse eid="NEH 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 10:10"/>Y sus hermanos Sebanías, Odaía, Celita, Pelaías, Hanán;<verse eid="NEH 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 10:11"/>Michâ, Rehob, Hasabías,<verse eid="NEH 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 10:12"/>Zachû, Serebías, Sebanías,<verse eid="NEH 10:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 10:13"/>Odaía, Bani, Beninu.<verse eid="NEH 10:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 10:14"/>Cabezas del pueblo: Pharos, Pahath-moab, Elam, Zattu, Bani,<verse eid="NEH 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 10:15"/>Bunni, Azgad, Bebai,<verse eid="NEH 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 10:16"/>Adonías, Bigvai, Adín,<verse eid="NEH 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 10:17"/>Ater, Ezekías, Azur,<verse eid="NEH 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 10:18"/>Odaía, Hasum, Besai,<verse eid="NEH 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 10:19"/>Ariph, Anathoth, Nebai,<verse eid="NEH 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 10:20"/>Magpías, Mesullam, Hezir,<verse eid="NEH 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 10:21"/>Mesezabeel, Sadoc, Jadua,<verse eid="NEH 10:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 10:22"/>Pelatías, Hanán, Anaías,<verse eid="NEH 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 10:23"/>Hoseas, Hananías, Asub,<verse eid="NEH 10:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 10:24"/>Lohes, Pilha, Sobec,<verse eid="NEH 10:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 10:25"/>Rehum, Hasabna, Maaseías,<verse eid="NEH 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 10:26"/>Y Ahijas, Hanán, Anan,<verse eid="NEH 10:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 10:27"/>Malluch, Harim, Baana.<verse eid="NEH 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 10:28"/>Y el resto del pueblo, <note caller="+" style="x"><char style="xo" closed="false">10.28 </char><char style="xt" closed="false"><ref loc="EZR 2:36-43">Esd. 2.36-43</ref>.</char></note>los sacerdotes, Levitas, porteros, y cantores, Nethineos, <note caller="+" style="x"><char style="xo" closed="false">10.28 </char><char style="xt" closed="false"><ref loc="EZR 6:21">Esd. 6.21</ref>.</char></note>y todos los que se habían apartado de los pueblos de las tierras á la ley de Dios, sus mujeres, sus hijos y sus hijas, y todo el que tenía comprensión y discernimiento,<verse eid="NEH 10:28"/></para>
+  <para style="s">1 Promesas del pueblo.</para>
+  <para style="s">2 Varones designados</para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 10:29"/>Adhiriéronse á sus hermanos, sus principales, y vinieron en la protestación y en <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false"><ref loc="DEU 29:12">Dt. 29.12</ref>,<ref loc="DEU 29:14">14</ref>.</char></note>el juramento de que andarían en la ley de Dios, que fué dada por mano de Moisés <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false"><ref loc="DEU 33:1">Dt. 33.1</ref>.</char></note>siervo de Dios, y que guardarían y cumplirían todos los mandamientos de Jehová nuestro Señor, y sus juicios y sus estatutos;<verse eid="NEH 10:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 10:30"/>Y que no daríamos nuestras <note caller="+" style="x"><char style="xo" closed="false">10.30 </char><char style="xt" closed="false"><ref loc="EXO 34:16">Ex. 34.16</ref>. <ref loc="DEU 7:3">Dt. 7.3</ref>. <ref loc="EZR 9:12">Esd. 9.12</ref>,<ref loc="EZR 9:14">14</ref>.</char></note>hijas á los pueblos de la tierra, ni tomaríamos sus hijas para nuestros hijos.<verse eid="NEH 10:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 10:31"/>Asimismo, que si los pueblos de la tierra <note caller="+" style="x"><char style="xo" closed="false">10.31 </char><char style="xt" closed="false"><ref loc="EXO 20:10">Ex. 20.10</ref>. <ref loc="LEV 23:3">Lv. 23.3</ref>. <ref loc="DEU 5:12">Dt. 5.12</ref>. cp. 13.15-22.</char></note>trajesen á vender mercaderías y comestibles en día de sábado, nada tomaríamos de ellos en sábado, ni en día santificado; y que dejaríamos <note caller="+" style="x"><char style="xo" closed="false">10.31 </char><char style="xt" closed="false"><ref loc="EXO 23:10">Ex. 23.10</ref>,<ref loc="EXO 23:11">11</ref>. <ref loc="LEV 25:4">Lv. 25.4</ref>.</char></note>el año séptimo, <note caller="+" style="x"><char style="xo" closed="false">10.31 </char><char style="xt" closed="false"><ref loc="DEU 15:2">Dt. 15.2</ref>.</char></note>con remisión de toda deuda.<verse eid="NEH 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 10:32"/>Impusímonos además por ley el cargo de contribuir cada año con la tercera parte de un siclo, para la obra de la casa de nuestro Dios;<verse eid="NEH 10:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="NEH 10:33"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.33 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 24:5">Lv. 24.5</ref>,<ref loc="LEV 24:6">6</ref>.</char>
+    </note>Para el pan de la proposición, y para la ofrenda continua, y para el <note caller="+" style="x"><char style="xo" closed="false">10.33 </char><char style="xt" closed="false">Nm. cps. 28,29.</char></note>holocausto continuo, de los sábados, y de las nuevas lunas, y de las <note caller="+" style="x"><char style="xo" closed="false">10.33 </char><char style="xt" closed="false"><ref loc="NUM 29:39">Nm. 29.39</ref>.</char></note>festividades, y para las santificaciones y sacrificios por el pecado <note caller="+" style="x"><char style="xo" closed="false">10.33 </char><char style="xt" closed="false"><ref loc="LEV 1:4">Lv. 1.4</ref>.</char></note>para expiar á Israel, y para toda la obra de la casa de nuestro Dios.<verse eid="NEH 10:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="NEH 10:34"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.34 </char>
+      <char style="xt" closed="false">cp. 11.1.</char>
+    </note>Echamos también las suertes, los sacerdotes, los Levitas, y el pueblo, acerca de la <note caller="+" style="x"><char style="xo" closed="false">10.34 </char><char style="xt" closed="false">cp. 13.31.</char></note>ofrenda de la leña, para traerla á la casa de nuestro Dios, según las casas de nuestros padres, <note caller="+" style="x"><char style="xo" closed="false">10.34 </char><char style="xt" closed="false"><ref loc="EZR 10:14">Esd. 10.14</ref>.</char></note>en los tiempos determinados cada un año, para quemar sobre el altar de Jehová nuestro Dios, como está escrito en la <note caller="+" style="x"><char style="xo" closed="false">10.34 </char><char style="xt" closed="false"><ref loc="LEV 6:12">Lv. 6.12</ref>.</char></note>ley.<verse eid="NEH 10:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="NEH 10:35"/>Y que cada año traeríamos <note caller="+" style="x"><char style="xo" closed="false">10.35 </char><char style="xt" closed="false"><ref loc="EXO 23:19">Ex. 23.19</ref> y <ref loc="EXO 34:26">34.26</ref>. <ref loc="DEU 26:2">Dt. 26.2</ref>.</char></note>las primicias de nuestra tierra, y las primicias de todo fruto de todo árbol, á la casa de Jehová:<verse eid="NEH 10:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="NEH 10:36"/>Asimismo los primogénitos de nuestros hijos y de nuestras bestias, <note caller="+" style="x"><char style="xo" closed="false">10.36 </char><char style="xt" closed="false"><ref loc="EXO 13:2">Ex. 13.2</ref>,<ref loc="EXO 13:12">12</ref>,<ref loc="EXO 13:13">13</ref>. <ref loc="LEV 27:26">Lv. 27.26</ref>,<ref loc="LEV 27:27">27</ref>. <ref loc="NUM 18:15">Nm. 18.15</ref>,<ref loc="NUM 18:16">16</ref>.</char></note>como está escrito en la ley; y <char style="it">que</char> traeríamos los primogénitos de nuestras vacas y de nuestras ovejas á la casa de nuestro Dios, á los sacerdotes que ministran en la casa de nuestro Dios:<verse eid="NEH 10:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="NEH 10:37"/>
+    <char style="it">Que</char> traeríamos también <note caller="+" style="x"><char style="xo" closed="false">10.37 </char><char style="xt" closed="false"><ref loc="LEV 23:17">Lv. 23.17</ref>. <ref loc="NUM 15:19">Nm. 15.19</ref>. <ref loc="DEU 18:4">Dt. 18.4</ref>.</char></note>las primicias de nuestras masas, y nuestras ofrendas, y del fruto de todo árbol, del vino y del aceite, á los sacerdotes, á las <note caller="+" style="x"><char style="xo" closed="false">10.37 </char><char style="xt" closed="false">vers. 38,39.</char></note>cámaras de la casa de nuestro Dios, y el <note caller="+" style="x"><char style="xo" closed="false">10.37 </char><char style="xt" closed="false"><ref loc="LEV 27:30">Lv. 27.30</ref>.</char></note>diezmo de nuestra tierra á los Levitas; y que los Levitas recibirían las décimas de nuestras labores en todas las ciudades:<verse eid="NEH 10:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="NEH 10:38"/>Y que estaría el sacerdote hijo de Aarón con los Levitas, cuando los Levitas recibirían el diezmo: y que los Levitas llevarían <note caller="+" style="x"><char style="xo" closed="false">10.38 </char><char style="xt" closed="false"><ref loc="NUM 18:26">Nm. 18.26</ref>.</char></note>el diezmo del diezmo á la casa de nuestro Dios, á las cámaras en la <note caller="+" style="x"><char style="xo" closed="false">10.38 </char><char style="xt" closed="false"><ref loc="1CH 26:20">1 Cr. 26.20</ref>.</char></note>casa del tesoro.<verse eid="NEH 10:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="NEH 10:39"/>Porque á las cámaras han de llevar los hijos de Israel y los hijos de Leví la ofrenda del grano, del vino, y del aceite; y allí estarán los vasos del santuario, y los sacerdotes que ministran, y los porteros, y los cantores; y no abandonaremos la casa de nuestro Dios.<verse eid="NEH 10:39"/></para>
+  <chapter eid="NEH 10"/>
+  <chapter number="11" style="c" sid="NEH 11"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 11:1"/>Y HABITARON los príncipes del pueblo en Jerusalem; mas el resto del pueblo <note caller="+" style="x"><char style="xo" closed="false">11.1 </char><char style="xt" closed="false">cp. 10.34.</char></note>echó suertes para traer uno de diez que morase en Jerusalem, <note caller="+" style="x"><char style="xo" closed="false">11.1 </char><char style="xt" closed="false">ver. 18. <ref loc="ISA 48:2">Is. 48.2</ref> y <ref loc="ISA 52:1">52.1</ref>. <ref loc="MAT 4:5">Mt. 4.5</ref> y <ref loc="MAT 27:53">27.53</ref>. <ref loc="REV 11:2">Ap. 11.2</ref> y <ref loc="REV 21:2">21.2</ref>.</char></note>ciudad santa, y las nueve partes en las <char style="it">otras</char> ciudades.<verse eid="NEH 11:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 11:2"/>Y bendijo el pueblo á todos los varones que voluntariamente se ofrecieron á morar en Jerusalem.<verse eid="NEH 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 11:3"/>Y estos son los principales de la provincia que moraron en Jerusalem; mas en las ciudades de Judá habitaron cada uno en su posesión en sus ciudades, de Israel, de los sacerdotes, y Levitas, y Nethineos, y <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="EZR 2:55">Esd. 2.55</ref>.</char></note>de los hijos de los siervos de Salomón.<verse eid="NEH 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 11:4"/>En Jerusalem pues habitaron de los hijos de Judá, y de los hijos de Benjamín. De los hijos de Judá: Athaías, hijo de Uzzías, hijo de Zacarías, hijo de Amarías, hijo de Sephatías, hijo de Mahalaleel, de los hijos de <note caller="+" style="x"><char style="xo" closed="false">11.4 </char><char style="xt" closed="false"><ref loc="GEN 38:29">Gn. 38.29</ref>. <ref loc="1CH 9:4">1 Cr. 9.4</ref>.</char></note>Phares;<verse eid="NEH 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 11:5"/>Y Maasías hijo de Baruch, hijo de Colhoze, hijo de Hazaías, hijo de Adaías, hijo de Joiarib, hijo de Zacarías, hijo de Siloni.<verse eid="NEH 11:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 11:6"/>Todos los hijos de Phares que moraron en Jerusalem, fueron cuatrocientos setenta y ocho hombres fuertes.<verse eid="NEH 11:6"/></para>
+  <para style="s">1 para habitar en Jerusalem.</para>
+  <para style="s">2 Habitantes de las ciudades.</para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 11:7"/>Y estos son los hijos de Benjamín: Salú hijo de Mesullam, hijo de Joed, hijo de Pedaías, hijo de Colaías, hijo de Maaseías, hijo de Ithiel, hijo de Jesaía.<verse eid="NEH 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 11:8"/>Y tras él, Gabbai, Sallai, <note caller="+" style="x"><char style="xo" closed="false">11.8 </char><char style="xt" closed="false"><ref loc="1CH 9:9">1 Cr. 9.9</ref>.</char></note>novecientos veinte y ocho.<verse eid="NEH 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 11:9"/>Y Joel hijo de Zichri, era prefecto de ellos, y Jehudas hijo de Senua, el segundo de la ciudad.<verse eid="NEH 11:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 11:10"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.10 </char>
+      <char style="xt" closed="false">Hasta ver. 14, 1 Cr. 9.10-13.</char>
+    </note>De los sacerdotes: Jedaías hijo de Joiarib, Jachîn,<verse eid="NEH 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 11:11"/>Seraías hijo de Hilcías, hijo de Mesullam, hijo de Sadoc, hijo de Meraioth, hijo de Ahitub, príncipe de la casa de Dios,<verse eid="NEH 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 11:12"/>Y sus hermanos los que hacían la obra de la casa, ochocientos veintidós: y Adaías hijo de Jeroham, hijo de Pelalías, hijo de Amsi, hijo de Zacarías, hijo de Pashur, hijo de Malachías,<verse eid="NEH 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 11:13"/>Y sus hermanos, príncipes de familias, doscientos cuarenta y dos: y Amasai hijo de Azarael, hijo de Azai, hijo de Mesillemoth, hijo de Immer,<verse eid="NEH 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 11:14"/>Y sus hermanos, hombres de grande vigor, ciento veintiocho: jefe de los cuales era Zabdiel, hijo de Gedolim.<verse eid="NEH 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 11:15"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.15 </char>
+      <char style="xt" closed="false">Hasta ver. 19, 1 Cr. 9.14-17.</char>
+    </note>Y de los Levitas: Semaías hijo de Hassub, hijo de Azricam, hijo de Hasabías, hijo de Buni;<verse eid="NEH 11:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 11:16"/>Y Sabethai y Jozabad, de los principales de los Levitas, sobrestantes de <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false"><ref loc="1CH 26:29">1 Cr. 26.29</ref>.</char></note>la obra exterior de la casa de Dios;<verse eid="NEH 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 11:17"/>Y Mattanías hijo de Michâ, hijo de Zabdi, hijo de Asaph, el principal, el que empezaba las alabanzas y acción de gracias al tiempo de la oración; y Bacbucías el segundo de entre sus hermanos; y Abda hijo de Samua, hijo de Galal, hijo de Jeduthún.<verse eid="NEH 11:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 11:18"/>Todos los Levitas en la santa ciudad fueron doscientos ochenta y cuatro.<verse eid="NEH 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 11:19"/>Y los porteros, Accub, Talmón, y sus hermanos, guardas en las puertas, ciento setenta y dos.<verse eid="NEH 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 11:20"/>Y el resto de Israel, de los sacerdotes, de los Levitas, en todas las ciudades de Judá, <note caller="+" style="x"><char style="xo" closed="false">11.20 </char><char style="xt" closed="false">ver. 3.</char></note>cada uno en su heredad.<verse eid="NEH 11:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 11:21"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.21 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:2">1 Cr. 9.2</ref>.</char>
+    </note>Y los Nethineos habitaban en <note caller="+" style="x"><char style="xo" closed="false">11.21 </char><char style="xt" closed="false">cp. 3.26.</char></note>Ophel; y Siha y Gispa eran sobre los Nethineos.<verse eid="NEH 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 11:22"/>Y el prepósito de los Levitas en Jerusalem era Uzzi hijo de Bani, hijo de Hasabías, hijo de Mattanías, hijo de Michâ de los cantores los hijos de Asaph, sobre la obra de la casa de Dios.<verse eid="NEH 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 11:23"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.23 </char><char style="xt" closed="false"><ref loc="EZR 6:8">Esd. 6.8</ref>,<ref loc="EZR 6:9">9</ref> y <ref loc="EZR 7:20">7.20</ref>.</char></note>había mandamiento del rey acerca de ellos, y determinación acerca de los cantores para cada día.<verse eid="NEH 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 11:24"/>Y Pethahías hijo de Mesezabel, de los hijos de <note caller="+" style="x"><char style="xo" closed="false">11.24 </char><char style="xt" closed="false"><ref loc="GEN 38:30">Gn. 38.30</ref>.</char></note>Zerah hijo de Judá, estaba á la mano del rey en todo negocio del pueblo.<verse eid="NEH 11:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 11:25"/>Y tocante á las aldeas y sus tierras, algunos de los hijos de Judá habitaron en <note caller="+" style="x"><char style="xo" closed="false">11.25 </char><char style="xt" closed="false"><ref loc="JOS 21:11">Jos. 21.11</ref>.</char></note>Chîriat-arba y sus aldeas, y en Dibón y sus aldeas, y en Jecabseel y sus aldeas;<verse eid="NEH 11:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 11:26"/>Y en Jesuá, Moladah, y en Beth-pelet;<verse eid="NEH 11:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 11:27"/>Y en Hasar-sual, y en Beer-seba, y en sus aldeas;<verse eid="NEH 11:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 11:28"/>Y en Siclag, y en Mechôna, y en sus aldeas;<verse eid="NEH 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 11:29"/>Y en En-rimmón, y en Soreah y en Jarmuth;<verse eid="NEH 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 11:30"/>Zanoah, Adullam, y en sus aldeas; en Lachîs y sus tierras, Azeca y sus aldeas. Y habitaron desde Beer-seba hasta el valle de Hinnom.<verse eid="NEH 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 11:31"/>Y los hijos de Benjamín desde Geba <char style="it">habitaron</char> en Michmas, y Aía, y en Beth-el y sus aldeas;<verse eid="NEH 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 11:32"/>En Anathoth, Nob, Ananiah;<verse eid="NEH 11:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="NEH 11:33"/>Hasor, Rama, Gitthaim;<verse eid="NEH 11:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="NEH 11:34"/>Hadid, Seboim, Neballath;<verse eid="NEH 11:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="NEH 11:35"/>Lod, y Ono, <note caller="+" style="x"><char style="xo" closed="false">11.35 </char><char style="xt" closed="false"><ref loc="1CH 4:14">1 Cr. 4.14</ref>.</char></note>valle de los artífices.<verse eid="NEH 11:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="NEH 11:36"/>Y algunos de los Levitas, en los repartimientos de Judá y de Benjamín.<verse eid="NEH 11:36"/></para>
+  <chapter eid="NEH 11"/>
+  <chapter number="12" style="c" sid="NEH 12"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 12:1"/>Y ESTOS son los <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false"><ref loc="EZR 2:1">Esd. 2.1</ref>,<ref loc="EZR 2:2">2</ref>.</char></note>sacerdotes y Levitas que subieron con Zorobabel hijo de Sealthiel, y con Jesuá: Seraías, Jeremías, Esdras,<verse eid="NEH 12:1"/></para>
+  <para style="s">1 Sacerdotes y Levitas que</para>
+  <para style="s">2 volvieron con Zorobabel.</para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 12:2"/>Amarías, Malluch, Hartus,<verse eid="NEH 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 12:3"/>Sechânías, Rehum, Meremoth,<verse eid="NEH 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 12:4"/>Iddo, <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false">ver. 16.</char></note>Ginetho, Abías,<verse eid="NEH 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 12:5"/>Miamin, Maadías, Bilga,<verse eid="NEH 12:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 12:6"/>Semaías, y Joiarib, Jedaías,<verse eid="NEH 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 12:7"/>Sallum, Amoc, Hilcías, Jedaías. Estos eran los príncipes de los sacerdotes y sus hermanos en los días de Jesuá.<verse eid="NEH 12:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 12:8"/>Y los Levitas: Jesuá, Binnui, Cadmiel, Serebías, Judá, <char style="it">y</char> Mathanías, <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false">vers. 24,25. cp. 11.17.</char></note>que con sus hermanos <char style="it">oficiaba</char> en los himnos.<verse eid="NEH 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 12:9"/>Y Bacbucías y Unni, sus hermanos, cada cual en su ministerio.<verse eid="NEH 12:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 12:10"/>Y Jesuá engendró á Joiacim, y Joiacim engendró á Eliasib, y Eliasib engendró á Joiada,<verse eid="NEH 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 12:11"/>Y Joiada engendró á Jonathán, y Jonathán engendró á Jaddua.<verse eid="NEH 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 12:12"/>Y en los días de Joiacim los sacerdotes cabezas de familias fueron: de Seraías, Meraías; de Jeremías, Hananías;<verse eid="NEH 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 12:13"/>De Esdras, Mesullam; de Amarías, Johanán;<verse eid="NEH 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 12:14"/>De Melichâ, Jonathán; de Sebanías, Joseph;<verse eid="NEH 12:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 12:15"/>De Harim, Adna; de Meraioth, Helcai;<verse eid="NEH 12:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 12:16"/>De Iddo, Zacarías; de Ginnethón, Mesullam;<verse eid="NEH 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 12:17"/>De Abías, Zichri; de Miniamín, de Moadías, Piltai;<verse eid="NEH 12:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 12:18"/>De Bilga, Sammua; de Semaías, Jonathán;<verse eid="NEH 12:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 12:19"/>De Joiarib, Mathenai; de Jedaías, Uzzi;<verse eid="NEH 12:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 12:20"/>De Sallai, Callai; de Amoc, Eber;<verse eid="NEH 12:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 12:21"/>De Hilcías, Hasabías; de Jedaías, Nathanael.<verse eid="NEH 12:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 12:22"/>Los Levitas en días de Eliasib, de Joiada, y de <note caller="+" style="x"><char style="xo" closed="false">12.22 </char><char style="xt" closed="false"><ref loc="EZR 10:6">Esd. 10.6</ref>.</char></note>Johanán y Jaddua, fueron escritos por cabezas de familias; también los sacerdotes, hasta el reinado de Darío el Persa.<verse eid="NEH 12:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 12:23"/>Los hijos de Leví, cabezas de familias, fueron escritos en el libro de las <note caller="+" style="x"><char style="xo" closed="false">12.23 </char><char style="xt" closed="false"><ref loc="1CH 9:14-16">1 Cr. 9.14-16</ref>.</char></note>Crónicas hasta los días de Johanán, hijo de Eliasib.<verse eid="NEH 12:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 12:24"/>Los cabezas de los Levitas: Hasabías, Serebías, y Jesuá hijo de Cadmiel, y sus hermanos <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false">ver. 9.</char></note>delante de ellos, <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false">ver. 8. <ref loc="2CH 5:13">2 Cr. 5.13</ref>. cp. 11.17.</char></note>para alabar y para rendir gracias, <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false">1 Cr. cp. 25.</char></note>conforme al estatuto de David <note caller="+" style="x"><char style="xo" closed="false">12.24 </char><char style="xt" closed="false"><ref loc="2CH 8:14">2 Cr. 8.14</ref>.</char></note>varón de Dios, guardando su turno.<verse eid="NEH 12:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 12:25"/>Mathanías, y Bacbucías, Obadías, Mesullam, Talmón, Accub, guardas, eran porteros para la guardia á las entradas de las puertas.<verse eid="NEH 12:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 12:26"/>Estos fueron en los días de Joiacim, hijo de Jesuá, hijo de Josadac, y en los días del gobernador Nehemías, y del sacerdote Esdras, <note caller="+" style="x"><char style="xo" closed="false">12.26 </char><char style="xt" closed="false"><ref loc="EZR 7:6">Esd. 7.6</ref>.</char></note>escriba.<verse eid="NEH 12:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 12:27"/>Y á la dedicación del muro de Jerusalem buscaron á los Levitas <note caller="+" style="x"><char style="xo" closed="false">12.27 </char><char style="xt" closed="false">cp. 11.36.</char></note>de todos sus lugares, para traerlos á Jerusalem, para hacer la dedicación y la fiesta con alabanzas y con cánticos, <note caller="+" style="x"><char style="xo" closed="false">12.27 </char><char style="xt" closed="false"><ref loc="1CH 15:16">1 Cr. 15.16</ref>. <ref loc="2CH 5:13">2 Cr. 5.13</ref> y <ref loc="2CH 7:6">7.6</ref>.</char></note>con címbalos, salterios y cítaras.<verse eid="NEH 12:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 12:28"/>Y fueron reunidos los hijos de los cantores, así de la <note caller="+" style="x"><char style="xo" closed="false">12.28 </char><char style="xt" closed="false">cp. 3.22.</char></note>campiña alrededor de Jerusalem como de las aldeas de Netophati;<verse eid="NEH 12:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 12:29"/>Y de la casa de Gilgal, y de los campos de Geba, y de Azmaveth; porque los cantores se habían edificado aldeas alrededor de Jerusalem.<verse eid="NEH 12:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 12:30"/>Y <note caller="+" style="x"><char style="xo" closed="false">12.30 </char><char style="xt" closed="false">cp. 13.22,30.</char></note>se purificaron los sacerdotes y los Levitas; y purificaron al pueblo, y las puertas, y el muro.<verse eid="NEH 12:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 12:31"/>Hice luego subir á los príncipes de Judá sobre el muro, y puse dos coros grandes que fueron en procesión: <note caller="+" style="x"><char style="xo" closed="false">12.31 </char><char style="xt" closed="false">ver. 38.</char></note><char style="it">el uno</char> á la mano derecha sobre el muro hacia <note caller="+" style="x"><char style="xo" closed="false">12.31 </char><char style="xt" closed="false">cp. 2.13 y <ref loc="NEH 3:13">3.13</ref>,<ref loc="NEH 3:14">14</ref>.</char></note>la puerta del Muladar.<verse eid="NEH 12:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="NEH 12:32"/>E iba tras de ellos Osaías, y la mitad de los príncipes de Judá,<verse eid="NEH 12:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="NEH 12:33"/>Y Azarías, Esdras y Mesullam,<verse eid="NEH 12:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="NEH 12:34"/>Judá y Benjamín, y Semaías, y Jeremías;<verse eid="NEH 12:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="NEH 12:35"/>Y de los hijos de los sacerdotes <char style="it">iban</char> <note caller="+" style="x"><char style="xo" closed="false">12.35 </char><char style="xt" closed="false"><ref loc="1CH 15:24">1 Cr. 15.24</ref>.</char></note>con trompetas, Zacarías hijo de Jonathán, hijo de Semaías, hijo de Mathanías, hijo de Michâías, hijo de Zachûr, hijo de Asaph;<verse eid="NEH 12:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="NEH 12:36"/>Y sus hermanos Semaías, y Azarael, Milalai, Gilalai, Maai, Nathanael, Judá y Hanani, <note caller="+" style="x"><char style="xo" closed="false">12.36 </char><char style="xt" closed="false"><ref loc="1CH 23:5">1 Cr. 23.5</ref>.</char></note>con los instrumentos músicos de David varón de Dios; y Esdras escriba, delante de ellos.<verse eid="NEH 12:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="NEH 12:37"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.37 </char>
+      <char style="xt" closed="false">cp. 2.14 y <ref loc="NEH 3:15">3.15</ref>.</char>
+    </note>Y á la puerta de la Fuente, en derecho delante de ellos, subieron por las gradas de la ciudad de David, por la subida del muro, desde la casa de David <note caller="+" style="x"><char style="xo" closed="false">12.37 </char><char style="xt" closed="false">cp. 3.26.</char></note>hasta la puerta de las Aguas al oriente.<verse eid="NEH 12:37"/></para>
+  <para style="s">1 Dedicación del muro.</para>
+  <para style="s">2 Abuso de Eliasib, corregido.</para>
+  <para style="p">
+    <verse number="38" style="v" sid="NEH 12:38"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.38 </char>
+      <char style="xt" closed="false">ver. 31.</char>
+    </note>Y el segundo coro iba del lado opuesto, y yo en pos de él, con la mitad del pueblo sobre el muro, desde <note caller="+" style="x"><char style="xo" closed="false">12.38 </char><char style="xt" closed="false">cp. 3.11.</char></note>la torre de los Hornos <note caller="+" style="x"><char style="xo" closed="false">12.38 </char><char style="xt" closed="false">cp. 3.8.</char></note>hasta el muro ancho;<verse eid="NEH 12:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="NEH 12:39"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.39 </char>
+      <char style="xt" closed="false">cp. 8.16.</char>
+    </note>Y desde la puerta de Ephraim hasta la <note caller="+" style="x"><char style="xo" closed="false">12.39 </char><char style="xt" closed="false">cp. 3.6.</char></note>puerta vieja, y á la <note caller="+" style="x"><char style="xo" closed="false">12.39 </char><char style="xt" closed="false"><ref loc="2CH 33:13">2 Cr. 33.13</ref>.</char></note>puerta del Pescado, y la <note caller="+" style="x"><char style="xo" closed="false">12.39 </char><char style="xt" closed="false">cp. 3.1.</char></note>torre de Hananeel, y la torre de Hamath, hasta la puerta de las Ovejas: y pararon en <note caller="+" style="x"><char style="xo" closed="false">12.39 </char><char style="xt" closed="false">cp. 3.25.</char></note>la puerta de la Cárcel.<verse eid="NEH 12:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="NEH 12:40"/>Pararon luego los dos coros en la casa de Dios; y yo, y la mitad de los magistrados conmigo;<verse eid="NEH 12:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="NEH 12:41"/>Y los sacerdotes, Eliacim, Maaseías, Miniamin, Michâías, Elioenai, Zacarías, y Hananías, con trompetas;<verse eid="NEH 12:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="NEH 12:42"/>Y Maaseías, y Semeías, y Eleazar, y Uzzi, y Johanán, y Malchías, y Elam, y Ezer. Y los cantores cantaban alto, é Israhía <char style="it">era</char> el prefecto.<verse eid="NEH 12:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="NEH 12:43"/>Y sacrificaron aquel día grandes víctimas, é hicieron alegrías; <note caller="+" style="x"><char style="xo" closed="false">12.43 </char><char style="xt" closed="false"><ref loc="2CH 20:27">2 Cr. 20.27</ref>.</char></note>porque Dios los había recreado con grande contentamiento: alegráronse también la mujeres y muchachos; y el alborozo de Jerusalem fué oído de lejos.<verse eid="NEH 12:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="NEH 12:44"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.44 </char>
+      <char style="xt" closed="false">cp. 13.5,12,13.</char>
+    </note>Y en aquel día fueron puestos varones sobres las <note caller="+" style="x"><char style="xo" closed="false">12.44 </char><char style="xt" closed="false">cp. 3.30.</char></note>cámaras de los tesoros, de las ofrendas, de las primicias, y de los diezmos, para juntar en ellas, de los campos de las ciudades, las porciones legales para los sacerdotes y Levitas: porque era grande el gozo de Judá con respecto á los sacerdotes y Levitas que asistían.<verse eid="NEH 12:44"/></para>
+  <para style="p">
+    <verse number="45" style="v" sid="NEH 12:45"/>Y habían guardado la observancia de su Dios, y la observancia de la expiación, <note caller="+" style="x"><char style="xo" closed="false">12.45 </char><char style="xt" closed="false">1 Cr. cps. 25 y <ref loc="1CH 26">26</ref>.</char></note>como también los cantores y los porteros, conforme al estatuto de David y de Salomón su hijo.<verse eid="NEH 12:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="NEH 12:46"/>Porque desde el tiempo de David <note caller="+" style="x"><char style="xo" closed="false">12.46 </char><char style="xt" closed="false"><ref loc="1CH 25:1">1 Cr. 25.1</ref>. <ref loc="2CH 29:30">2 Cr. 29.30</ref>.</char></note>y de Asaph, ya de antiguo, había príncipes de cantores, y cántico y alabanza, y acción de gracias á Dios.<verse eid="NEH 12:46"/></para>
+  <para style="p">
+    <verse number="47" style="v" sid="NEH 12:47"/>Y todo Israel en días de Zorobabel, y en días de Nehemías, daba raciones á los cantores y á los porteros, <note caller="+" style="x"><char style="xo" closed="false">12.47 </char><char style="xt" closed="false">cp. 11.23.</char></note>cada cosa en su día: <note caller="+" style="x"><char style="xo" closed="false">12.47 </char><char style="xt" closed="false"><ref loc="NUM 18:21">Nm. 18.21</ref>,<ref loc="NUM 18:24">24</ref>.</char></note>consagraban asimismo <char style="it">sus porciones</char> á los Levitas, y los Levitas consagraban <char style="it">parte</char> á los hijos de Aarón.<verse eid="NEH 12:47"/></para>
+  <chapter eid="NEH 12"/>
+  <chapter number="13" style="c" sid="NEH 13"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NEH 13:1"/>AQUEL día <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false">cp. 8.3,8,9,18 y <ref loc="NEH 9:3">9.3</ref>.</char></note>se leyó en el libro de Moisés oyéndolo el pueblo, <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false"><ref loc="DEU 23:3">Dt. 23.3</ref>,<ref loc="DEU 23:4">4</ref>,<ref loc="DEU 23:5">5</ref>.</char></note>y fué hallado en él escrito, que los Ammonitas y Moabitas no debían entrar jamás en la congregación de Dios;<verse eid="NEH 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="NEH 13:2"/>Por cuanto no salieron á recibir á los hijos de Israel con pan y agua, antes alquilaron <note caller="+" style="x"><char style="xo" closed="false">13.2 </char><char style="xt" closed="false"><ref loc="NUM 22:5">Nm. 22.5</ref>.</char></note>a Balaam contra ellos, para que los maldijera: <note caller="+" style="x"><char style="xo" closed="false">13.2 </char><char style="xt" closed="false"><ref loc="NUM 23:11">Nm. 23.11</ref> y <ref loc="NUM 24:10">24.10</ref>.</char></note>mas nuestro Dios volvió la maldición en bendición.<verse eid="NEH 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="NEH 13:3"/>Y fué que, como oyeron la ley, <note caller="+" style="x"><char style="xo" closed="false">13.3 </char><char style="xt" closed="false">cp. 9.2.</char></note>apartaron de Israel toda <note caller="+" style="x"><char style="xo" closed="false">13.3 </char><char style="xt" closed="false"><ref loc="EXO 12:38">Ex. 12.38</ref>.</char></note>mistura.<verse eid="NEH 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="NEH 13:4"/>Y antes de esto, <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false">cp. 3.1.</char></note>Eliasib sacerdote, siendo superintendente de la cámara de la casa de nuestro Dios, había emparentado con <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false">cp. 2.10.</char></note>Tobías,<verse eid="NEH 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="NEH 13:5"/>Y le había hecho una grande cámara, <note caller="+" style="x"><char style="xo" closed="false">13.5 </char><char style="xt" closed="false">cp. 12.44.</char></note>en la cual guardaban antes las ofrendas, y el perfume, y los vasos, y el diezmo del grano, y del vino y del aceite, que estaba mandado <char style="it">dar</char> á los Levitas, á los cantores, y á los porteros; y la ofrenda de los sacerdotes.<verse eid="NEH 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="NEH 13:6"/>Mas á todo esto, yo no estaba en Jerusalem; <note caller="+" style="x"><char style="xo" closed="false">13.6 </char><char style="xt" closed="false">cp. 5.14.</char></note>porque el año treinta y dos de Artajerjes <note caller="+" style="x"><char style="xo" closed="false">13.6 </char><char style="xt" closed="false"><ref loc="EZR 6:22">Esd. 6.22</ref>.</char></note>rey de Babilonia, vine al rey; y al cabo de días fuí enviado del rey.<verse eid="NEH 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="NEH 13:7"/>Y venido á Jerusalem, entendí el mal que había hecho Eliasib en atención á Tobías, haciendo para él cámara en los patios de la casa de Dios.<verse eid="NEH 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="NEH 13:8"/>Y dolióme en gran manera; y eché todas las alhajas de la casa de Tobías fuera de la cámara;<verse eid="NEH 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="NEH 13:9"/>Y dije <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="2CH 29:5">2 Cr. 29.5</ref>,<ref loc="2CH 29:16">16</ref>,<ref loc="2CH 29:18">18</ref>.</char></note>que limpiasen las cámaras, é hice volver allí las alhajas de la casa de Dios, las ofrendas y el perfume.<verse eid="NEH 13:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="NEH 13:10"/>Entendí asimismo que las partes de los Levitas <note caller="+" style="x"><char style="xo" closed="false">13.10 </char><char style="xt" closed="false"><ref loc="2CH 32:4">2 Cr. 32.4</ref>. <ref loc="MAL 3:8">Mal. 3.8</ref>.</char></note>no se les habían dado; y que los Levitas y cantores que hacían el servicio se habían huído cada uno á <note caller="+" style="x"><char style="xo" closed="false">13.10 </char><char style="xt" closed="false">cp. 12.28,29.</char></note>su heredad.<verse eid="NEH 13:10"/></para>
+  <para style="s">1 Nehemías corrige</para>
+  <para style="s">2 varios desórdenes.</para>
+  <para style="p">
+    <verse number="11" style="v" sid="NEH 13:11"/>Y <note caller="+" style="x"><char style="xo" closed="false">13.11 </char><char style="xt" closed="false">vers. 17,25.</char></note>reprendí á los magistrados, y dije: ¿Por qué está la casa de Dios abandonada? Y juntélos, y púselos en su lugar.<verse eid="NEH 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NEH 13:12"/>Y <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false">cp. 10.38 y <ref loc="NEH 12:44">12.44</ref>.</char></note>todo Judá trajo el diezmo del grano, del vino y del aceite, á los almacenes.<verse eid="NEH 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="NEH 13:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 31:12">2 Cr. 31.12</ref>,<ref loc="2CH 31:13">13</ref>.</char>
+    </note>Y puse por sobrestantes de ellos á Selemías sacerdote, y á Sadoc escriba, y de los Levitas, á Pedaías; y á mano de ellos Hanán hijo de Zaccur, hijo de Mathanías: pues que eran tenidos por <note caller="+" style="x"><char style="xo" closed="false">13.13 </char><char style="xt" closed="false">cp. 7.2. <ref loc="1CO 4:2">1 Co. 4.2</ref>.</char></note>fieles, y de ellos era el repartir á sus hermanos.<verse eid="NEH 13:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="NEH 13:14"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.14 </char>
+      <char style="xt" closed="false">vers. 22,31. cp. 5.19.</char>
+    </note>Acuérdate de mí, oh Dios, en orden á esto, y no raigas mis misericordias que hice en la casa de mi Dios, y en sus observancias.<verse eid="NEH 13:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="NEH 13:15"/>En aquellos días ví en Judá algunos que pisaban en lagares <note caller="+" style="x"><char style="xo" closed="false">13.15 </char><char style="xt" closed="false"><ref loc="EXO 20:10">Ex. 20.10</ref>.</char></note>el sábado, y que acarreaban haces, y cargaban asnos con vino, y también de uvas, de higos, y toda suerte de carga, <note caller="+" style="x"><char style="xo" closed="false">13.15 </char><char style="xt" closed="false">cp. 10.31.</char></note>y traían á Jerusalem en día de sábado; y protesté <char style="it">les</char> acerca del día que vendían el mantenimiento.<verse eid="NEH 13:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="NEH 13:16"/>También estaban en ella <note caller="+" style="x"><char style="xo" closed="false">13.16 </char><char style="xt" closed="false"><ref loc="JOS 19:29">Jos. 19.29</ref>. <ref loc="AMO 1:9">Am. 1.9</ref>.</char></note>Tirios que traían pescado y toda mercadería, y vendían en sábado á los hijos de Judá en Jerusalem.<verse eid="NEH 13:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="NEH 13:17"/>Y <note caller="+" style="x"><char style="xo" closed="false">13.17 </char><char style="xt" closed="false">vers. 11,25.</char></note>reprendí á los señores de Judá, y díjeles: ¿Qué mala cosa es esta que vosotros hacéis, profanando así el día del sábado?<verse eid="NEH 13:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="NEH 13:18"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.18 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 17:21">Jer. 17.21</ref>,<ref loc="JER 17:23">23</ref>.</char>
+    </note>¿No hicieron así vuestros padres, y trajo nuestro Dios sobre nosotros todo este mal, y sobre esta ciudad? ¿Y vosotros añadís ira sobre Israel profanando el sábado?<verse eid="NEH 13:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="NEH 13:19"/>Sucedió pues, que cuando iba oscureciendo á las puertas de Jerusalem <note caller="+" style="x"><char style="xo" closed="false">13.19 </char><char style="xt" closed="false"><ref loc="LEV 23:32">Lv. 23.32</ref>.</char></note>antes del sábado, dije que se cerrasen las puertas, y ordené que no las abriesen hasta después del sábado; y puse á las puertas algunos de mis criados, para que en día de sábado no entrasen carga.<verse eid="NEH 13:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="NEH 13:20"/>Y quedáronse fuera de Jerusalem una y dos veces los negociantes, y los que vendían toda especie de mercancía.<verse eid="NEH 13:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="NEH 13:21"/>Y protestéles, y díjeles: ¿Por qué os quedáis vosotros delante del muro? Si lo hacéis otra vez, os echaré mano. Desde entonces no vinieron en sábado.<verse eid="NEH 13:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="NEH 13:22"/>Y dije á los Levitas <note caller="+" style="x"><char style="xo" closed="false">13.22 </char><char style="xt" closed="false">cp. 12.30.</char></note>que se purificasen, y viniesen á guardar las puertas, para santificar el día del sábado. También por esto acuérdate de mí, Dios mío, y perdóname según la muchedumbre de tu misericordia.<verse eid="NEH 13:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="NEH 13:23"/>Ví asimismo en aquellos días Judíos que <note caller="+" style="x"><char style="xo" closed="false">13.23 </char><char style="xt" closed="false"><ref loc="EZR 9:2">Esd. 9.2</ref> y <ref loc="EZR 10:10">10.10</ref>.</char></note>habían tomado mujeres de <note caller="+" style="x"><char style="xo" closed="false">13.23 </char><char style="xt" closed="false">cp. 4.7.</char></note>Asdod, <note caller="+" style="x"><char style="xo" closed="false">13.23 </char><char style="xt" closed="false">ver. 1. <ref loc="EZR 9:1">Esd. 9.1</ref>.</char></note>Ammonitas, y Moabitas:<verse eid="NEH 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="NEH 13:24"/>Y sus hijos la mitad hablaban asdod, y conforme á la lengua de cada pueblo; que no sabían hablar judaico.<verse eid="NEH 13:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="NEH 13:25"/>Y reñí con ellos, y maldíjelos, y herí algunos de ellos, y arranquéles los cabellos, <note caller="+" style="x"><char style="xo" closed="false">13.25 </char><char style="xt" closed="false"><ref loc="EZR 10:5">Esd. 10.5</ref>. cp. 10.29,30.</char></note>y juramentélos, <char style="it">diciendo:</char> No daréis vuestras hijas á sus hijos, y no tomaréis de sus hijas para vuestros hijos, ó para vosotros.<verse eid="NEH 13:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="NEH 13:26"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.26 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 11:1-8">1 R. 11.1-8</ref>.</char>
+    </note>¿No pecó por esto Salomón, rey de Israel? Bien que en muchas gentes no hubo rey como él, <note caller="+" style="x"><char style="xo" closed="false">13.26 </char><char style="xt" closed="false"><ref loc="2SA 12:24">2 S. 12.24</ref>.</char></note>que era amado de su Dios y Dios lo había puesto por rey sobre todo Israel, aun á él hicieron pecar las mujeres extranjeras.<verse eid="NEH 13:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="NEH 13:27"/>¿Y obedeceremos á vosotros para cometer todo este mal tan grande <note caller="+" style="x"><char style="xo" closed="false">13.27 </char><char style="xt" closed="false"><ref loc="EZR 10:2">Esd. 10.2</ref>.</char></note>de prevaricar contra nuestro Dios, tomando mujeres extranjeras?<verse eid="NEH 13:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="NEH 13:28"/>Y uno de los hijos <note caller="+" style="x"><char style="xo" closed="false">13.28 </char><char style="xt" closed="false">cp. 12.10,11,22.</char></note>de Joiada hijo de <note caller="+" style="x"><char style="xo" closed="false">13.28 </char><char style="xt" closed="false">cp. 3.1.</char></note>Eliasib el gran sacerdote, era yerno de <note caller="+" style="x"><char style="xo" closed="false">13.28 </char><char style="xt" closed="false">cp. 2.10.</char></note>Sanballat Horonita: ahuyentélo por tanto de mí.<verse eid="NEH 13:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="NEH 13:29"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.29 </char>
+      <char style="xt" closed="false">cp. 6.14.</char>
+    </note>Acuérdate de ellos, Dios mío, contra <note caller="+" style="x"><char style="xo" closed="false">13.29 </char><char style="xt" closed="false"><ref loc="MAL 2:4">Mal. 2.4</ref>.</char></note>los que contaminan el sacerdocio, y el pacto del sacerdocio y de los Levitas.<verse eid="NEH 13:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="NEH 13:30"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.30 </char>
+      <char style="xt" closed="false">cp. 10.30.</char>
+    </note>Limpiélos pues de todo extranjero, y puse á los sacerdotes y Levitas por <char style="it">sus</char> clases, á cada uno en su obra;<verse eid="NEH 13:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="NEH 13:31"/>Y para la <note caller="+" style="x"><char style="xo" closed="false">13.31 </char><char style="xt" closed="false">cp. 10.34.</char></note>ofrenda de la leña en <note caller="+" style="x"><char style="xo" closed="false">13.31 </char><char style="xt" closed="false"><ref loc="EZR 10:14">Esd. 10.14</ref>.</char></note>los tiempos señalados, y para las primicias. <note caller="+" style="x"><char style="xo" closed="false">13.31 </char><char style="xt" closed="false">ver. 14.</char></note>Acuérdate de mí, Dios mío, para bien.<verse eid="NEH 13:31"/></para>
+  <chapter eid="NEH 13"/>
+</usx>

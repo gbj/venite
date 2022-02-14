@@ -1,0 +1,29 @@
+﻿<ldml><identity><version number="" /><generation date="2018-10-01T15:26:20Z" /><language type="es" /></identity><characters><exemplarCharacters>[A-Za-z\u00C1\u00C9\u00CD\u00D1\u00D3\u00DA\u00DC\u00E1\u00E9\u00ED\u00F1\u00F3\u00FA\u00FC{Ch}{LL}{ch}{ll}]</exemplarCharacters><exemplarCharacters type="punctuation">[!()+-.\:;?\u00A1\u00BF\u200C\u200D\u201C\u201D{...}]</exemplarCharacters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:exemplarCharacters type="wordFormingPunctuation">[\-]</sil:exemplarCharacters><sil:exemplarCharacters type="footnotes">[]</sil:exemplarCharacters><sil:exemplarCharacters type="crossrefs">[]</sil:exemplarCharacters><sil:exemplarCharacters type="verseSegments">[a b c d e f g h i j k l m n o p q r s t u v w x y z {aa} {bb} {cc} {dd} {ee} {ff} {gg} {hh} {ii} {jj} {kk} {ll} {mm} {nn} {oo} {pp} {qq} {rr} {ss} {tt} {uu} {vv} {ww} {xx} {yy} {zz}]</sil:exemplarCharacters><sil:exemplarCharacters type="diacritics">[]</sil:exemplarCharacters><sil:exemplarCharacters type="wordBreaks">[]</sil:exemplarCharacters></special></characters><delimiters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:matched-pairs><sil:matched-pair open="“" close="”" paraClose="false" /><sil:matched-pair open="¿" close="?" paraClose="false" /><sil:matched-pair open="¡" close="!" paraClose="false" /></sil:matched-pairs><sil:quotation-marks paraContinueType="all"><sil:quotationContinue></sil:quotationContinue><sil:quotation open="“" close="”" level="3" /></sil:quotation-marks></special><quotationStart>“</quotationStart><quotationEnd>”</quotationEnd><alternateQuotationStart>‘</alternateQuotationStart><alternateQuotationEnd>’</alternateQuotationEnd></delimiters><layout><orientation><characterOrder>left-to-right</characterOrder></orientation></layout><collations><defaultCollation>standard</defaultCollation><collation type="standard"><cr><![CDATA[&[before 1] [first regular] < a\/A << á\/Á < b\/B < c\/C < ch\/Ch < d\/D < e\/E << é\/É < f\/F < g\/G < h\/H < i\/I << í\/Í < j\/J < k\/K < l\/L < ll\/LL < m\/M < n\/N < ñ\/Ñ < o\/O << ó\/Ó < p\/P < q\/Q < r\/R < s\/S < t\/T < u\/U << ú\/Ú << ü\/Ü < v\/V < w\/W < x\/X < y\/Y < z\/Z]]></cr><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:simple><![CDATA[a/A á/Á
+b/B
+c/C
+ch/Ch
+d/D
+e/E é/É
+f/F
+g/G
+h/H
+i/I í/Í
+j/J
+k/K
+l/L
+ll/LL
+m/M
+n/N
+ñ/Ñ
+o/O ó/Ó
+p/P
+q/Q
+r/R
+s/S
+t/T
+u/U ú/Ú ü/Ü
+v/V
+w/W
+x/X
+y/Y
+z/Z]]></sil:simple></special></collation></collations><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:external-resources><sil:font name="Arial" /><sil:font name="Tahoma" /></sil:external-resources></special></ldml>

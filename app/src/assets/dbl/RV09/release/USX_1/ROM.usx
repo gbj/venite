@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="ROM" style="id">ROMVR.COR Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">ROMANOS</para>
+  <para style="toc3">Ro.</para>
+  <para style="toc2">Romanos</para>
+  <para style="toc1">Carta de san Pablo a los Romanos</para>
+  <para style="mt2">LA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS ROMANOS.</para>
+  <chapter number="1" style="c" sid="ROM 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 1:1"/>PABLO, siervo de Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="1CO 1:1">1 Co. 1.1</ref>. <ref loc="GAL 1:1">Ga. 1.1</ref>,<ref loc="GAL 1:15">15</ref>.</char></note>llamado <char style="it">á ser</char> apóstol, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 13:2">Hch. 13.2</ref>. <ref loc="GAL 1:15">Ga. 1.15</ref>.</char></note>apartado para el evangelio de Dios,<verse eid="ROM 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 1:2"/>Que él había antes prometido <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false">cp. 3.21 y <ref loc="ROM 16:26">16.26</ref>.</char></note>por sus profetas en las santas Escrituras,<verse eid="ROM 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 1:3"/>Acerca de su Hijo, <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="MAT 1:1">Mt. 1.1</ref>.</char></note>(que fué hecho de la simiente de David según la carne;<verse eid="ROM 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 1:4"/>El cual fué <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="ACT 13:33">Hch. 13.33</ref>.</char></note>declarado Hijo de Dios con potencia, <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="ACT 10:38">Hch. 10.38</ref>. <ref loc="HEB 9:14">He. 9.14</ref>.</char></note>según el espíritu de santidad, por la resurrección de los muertos), de Jesucristo Señor nuestro,<verse eid="ROM 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 1:5"/>Por el cual <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false">cp. 15.15. <ref loc="1CO 15:10">1 Co. 15.10</ref>. <ref loc="GAL 1:15">Ga. 1.15</ref>.</char></note>recibimos la gracia y el apostolado, para la obediencia de la fe en todas las naciones en su nombre,<verse eid="ROM 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 1:6"/>Entre las cuales sois también vosotros, <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false"><ref loc="1CO 1:2">1 Co. 1.2</ref>,<ref loc="1CO 1:24">24</ref>.</char></note>llamados de Jesucristo:<verse eid="ROM 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 1:7"/>A todos los que estáis en Roma, amados de Dios, llamados santos: <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="1CO 1:3">1 Co. 1.3</ref>. <ref loc="2CO 1:2">2 Co. 1.2</ref>.</char></note>Gracia y paz tengáis de Dios nuestro Padre, y del Señor Jesucristo.<verse eid="ROM 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 1:8"/>Primeramente, <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="1CO 1:4">1 Co. 1.4</ref>. <ref loc="EPH 1:15">Ef. 1.15</ref>,<ref loc="EPH 1:16">16</ref>. <ref loc="PHP 1:3">Fil. 1.3</ref>. <ref loc="COL 1:3">Col. 1.3</ref>,<ref loc="COL 1:4">4</ref>.</char></note>doy gracias á mi Dios por Jesucristo acerca de todos vosotros, de que <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false">cp. 16.19.</char></note>vuestra fe es predicada en todo el mundo.<verse eid="ROM 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 1:9"/>Porque testigo me es Dios, al cual sirvo en mi espíritu en el evangelio de su Hijo, que <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="1TH 1:2">1 Ts. 1.2</ref>. <ref loc="PHM 1:4">Flm. 4</ref>.</char></note>sin cesar me acuerdo de vosotros siempre en mis oraciones,<verse eid="ROM 1:9"/></para>
+  <para style="s">1 Poder del evangelio.</para>
+  <para style="s">2 Depravación de los Gentiles.</para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 1:10"/>Rogando, <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false">cp. 15.23,32.</char></note>si al fin algún tiempo haya de tener, por la voluntad de Dios, próspero viaje para ir á vosotros.<verse eid="ROM 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 1:11"/>Porque os deseo ver, para repartir con vosotros algún don espiritual, para confirmaros;<verse eid="ROM 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 1:12"/>Es á saber, para ser juntamente consolado con vosotros por la común fe vuestra y juntamente mía.<verse eid="ROM 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 1:13"/>Mas no quiero, hermanos, que ingnoréis que <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false">cp. 15.22,23.</char></note>muchas veces me he propuesto ir á vosotros (empero hasta ahora he sido estorbado), para tener también entre vosotros algún fruto, como entre los demás Gentiles.<verse eid="ROM 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 1:14"/>A Griegos y <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ACT 28:2">Hch. 28.2</ref>.</char></note>a bárbaros, á sabios y á no sabios soy deudor.<verse eid="ROM 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 1:15"/>Así que, cuanto á mí, presto estoy á anunciar el evangelio también á vosotros que estáis en Roma.<verse eid="ROM 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 1:16"/>Porque no me avergüenzo del evangelio: <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="1CO 1:18">1 Co. 1.18</ref>,<ref loc="1CO 1:24">24</ref>.</char></note>porque es potencia de Dios para salud á todo aquel que cree; <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false"><ref loc="ACT 18:4">Hch. 18.4</ref> y <ref loc="ACT 19:10">19.10</ref> y <ref loc="ACT 20:21">20.21</ref>.</char></note>al Judío primeramente y también al Griego.<verse eid="ROM 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 1:17"/>Porque <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 3.21.</char></note>en él la justicia de Dios se descubre de fe en fe; como está escrito: Mas <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false"><ref loc="HAB 2:4">Hab. 2.4</ref>. <ref loc="GAL 3:11">Ga. 3.11</ref>. <ref loc="HEB 10:38">He. 10.38</ref>.</char></note>el justo vivirá por la fe.<verse eid="ROM 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 1:18"/>Porque manifiesta <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="EPH 5:6">Ef. 5.6</ref>.</char></note>es la ira de Dios del cielo contra toda impiedad é injusticia de los hombres, que detienen la verdad con injusticia:<verse eid="ROM 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 1:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">1.19 </char><char style="xt" closed="false"><ref loc="ACT 14:17">Hch. 14.17</ref> y <ref loc="ACT 17:24-27">17.24-27</ref>. cp. 2.14,15.</char></note>lo que de Dios se conoce, á ellos es manifiesto; porque Dios se lo manifestó.<verse eid="ROM 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 1:20"/>Porque <char style="fm">1.19</char> las cosas invisibles de él, su eterna potencia y divinidad, se echan de ver desde la creación del mundo, siendo entendidas por las cosas que son hechas; de modo que son <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false">cp. 3.19.</char></note>inexcusables:<verse eid="ROM 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 1:21"/>Porque habiendo conocido á Dios, no le glorificaron como á Dios, ni dieron gracias; antes <note caller="+" style="x"><char style="xo" closed="false">1.21 </char><char style="xt" closed="false"><ref loc="EPH 4:17">Ef. 4.17</ref>,<ref loc="EPH 4:18">18</ref>.</char></note>se desvanecieron en sus discursos, y el necio corazón de ellos fué entenebrecido.<verse eid="ROM 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 1:22"/>Diciéndose ser sabios, se hicieron fatuos,<verse eid="ROM 1:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 1:23"/>Y trocaron la gloria del Dios incorruptible en semejanza <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="DEU 4:15-19">Dt. 4.15-19</ref>.</char></note>de imagen de hombre corruptible, y de aves, y de animales de cuatro pies, y de serpientes.<verse eid="ROM 1:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 1:24"/>Por lo cual también <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="PSA 81:12">Sal. 81.12</ref>.</char></note>Dios los entregó á inmundicia, en las concupiscencias de sus corazones, <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="1CO 6:18">1 Co. 6.18</ref>.</char></note>de suerte que contaminaron sus cuerpos entre sí mismos:<verse eid="ROM 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 1:25"/>Los cuales mudaron la verdad de Dios <note caller="+" style="x"><char style="xo" closed="false">1.25 </char><char style="xt" closed="false"><ref loc="ISA 28:15">Is. 28.15</ref> y <ref loc="ISA 44:20">44.20</ref>. <ref loc="JER 10:14">Jer. 10.14</ref>. <ref loc="AMO 2:4">Am. 2.4</ref>. <ref loc="2TH 2:11">2 Ts. 2.11</ref>.</char></note>en mentira, honrando y sirviendo á las criaturas antes que al Criador, el cual es bendito por los siglos. Amén.<verse eid="ROM 1:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 1:26"/>Por esto Dios los entregó á afectos vergonzosos; pues aun sus mujeres mudaron el natural uso en el uso que es contra naturaleza:<verse eid="ROM 1:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 1:27"/>Y del mismo modo también los hombres, dejando el uso natural de las mujeres, se encendieron en sus concupiscencias los unos con los otros, cometiendo cosas nefandas hombres con hombres, y recibiendo en sí mismos la recompensa que convino á su extravío.<verse eid="ROM 1:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 1:28"/>Y como á ellos no les pareció tener á Dios en <char style="it">su</char> noticia, <note caller="+" style="x"><char style="xo" closed="false">1.28 </char><char style="xt" closed="false">vers. 24,26. <ref loc="PSA 81:12">Sal. 81.12</ref>.</char></note>Dios los entregó á una mente depravada, <note caller="+" style="x"><char style="xo" closed="false">1.28 </char><char style="xt" closed="false"><ref loc="EPH 5:4">Ef. 5.4</ref>.</char></note>para hacer lo que no conviene,<verse eid="ROM 1:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 1:29"/>Estando atestados de toda iniquidad, de fornicación, de malicia, de avaricia, de maldad; llenos de envidia, de homicidios, de contiendas, de engaños, de malignidades;<verse eid="ROM 1:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 1:30"/>Murmuradores, detractores, aborrecedores de Dios, injuriosos, soberbios, altivos, inventores de males, desobedientes á los padres,<verse eid="ROM 1:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 1:31"/>Necios, desleales, sin afecto natural, implacables, sin misericordia:<verse eid="ROM 1:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 1:32"/>Que <note caller="+" style="x"><char style="xo" closed="false">1.32 </char><char style="xt" closed="false">cp. 2.2.</char></note>habiendo entendido el juicio de Dios que los que hacen tales cosas <note caller="+" style="x"><char style="xo" closed="false">1.32 </char><char style="xt" closed="false">cp. 6.21.</char></note>son dignos de muerte, no sólo las hacen, más aún <note caller="+" style="x"><char style="xo" closed="false">1.32 </char><char style="xt" closed="false"><ref loc="PSA 50:18">Sal. 50.18</ref>. <ref loc="HOS 7:3">Os. 7.3</ref>.</char></note>consienten á los que las hacen.<verse eid="ROM 1:32"/></para>
+  <chapter eid="ROM 1"/>
+  <chapter number="2" style="c" sid="ROM 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 2:1"/>POR lo cual eres inexcusable, oh hombre, cuaquiera que juzgas: <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false"><ref loc="MAT 7:1">Mt. 7.1</ref>,<ref loc="MAT 7:2">2</ref>. <ref loc="JHN 8:7">Jn. 8.7</ref>.</char></note>porque en lo que juzgas á otro, te condenas á ti mismo; porque lo mismo haces, tú que juzgas.<verse eid="ROM 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 2:2"/>Mas sabemos que el juicio de Dios es según verdad contra los que hacen tales cosas.<verse eid="ROM 2:2"/></para>
+  <para style="s">1 Impenitencia de los Judíos.</para>
+  <para style="s">2 La verdadera circuncisión.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 2:3"/>¿Y piensas esto, oh hombre, que juzgas á los que hacen tales cosas, y haces las mismas, que tú escaparás del juicio de Dios.?<verse eid="ROM 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 2:4"/>¿O menosprecias las <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 9.23. <ref loc="EPH 1:7">Ef. 1.7</ref>,<ref loc="EPH 1:18">18</ref> y <ref loc="EPH 2:4">2.4</ref>,<ref loc="EPH 2:7">7</ref> y <ref loc="EPH 3:16">3.16</ref>.</char></note>riquezas de su benignidad, y <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 3.25.</char></note>paciencia, <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false">cp. 9.22. <ref loc="1TI 1:16">1 Ti. 1.16</ref>.</char></note>y longanimidad, <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="ISA 30:18">Is. 30.18</ref>. <ref loc="2PE 3:9">2 P. 3.9</ref>.</char></note>ignorando que su benignidad te guía á arrepentimiento?<verse eid="ROM 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 2:5"/>Mas por tu dureza, y por tu corazón no arrepentido, <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="JAS 5:3">Stg. 5.3</ref>.</char></note>atesoras para ti mismo ira para el día de la ira y de la manifestación del justo juicio de Dios;<verse eid="ROM 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 2:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 20:12">Ap. 20.12</ref>,<ref loc="REV 20:13">13</ref>.</char>
+    </note>El cual pagará á cada uno conforme á sus obras:<verse eid="ROM 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 2:7"/>A los que perseverando en bien hacer, buscan gloria y honra é inmortalidad, <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false">cp. 5.21 y <ref loc="ROM 6:23">6.23</ref>.</char></note>la vida eterna.<verse eid="ROM 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 2:8"/>Mas á los que son contenciosos, y <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false">cp. 1.18.</char></note>no obedecen á la verdad, antes obedecen á la injusticia, enojo é ira;<verse eid="ROM 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 2:9"/>Tribulación y angustia sobre toda persona humana que obra lo malo, <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false">cp. 1.16.</char></note>el Judío <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="LUK 12:47">Lc. 12.47</ref>,<ref loc="LUK 12:48">48</ref>.</char></note>primeramente, y también el Griego:<verse eid="ROM 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 2:10"/>Mas gloria y honra y paz á cualquiera que obra el bien, al Judío primeramente, y también al Griego.<verse eid="ROM 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 2:11"/>Porque no hay acepción <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="DEU 10:17">Dt. 10.17</ref>.</char></note>de personas para con Dios.<verse eid="ROM 2:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 2:12"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="LUK 12:47">Lc. 12.47</ref>,<ref loc="LUK 12:48">48</ref>.</char></note>todos lo que sin ley pecaron, sin ley también perecerán; y todos los que en la ley pecaron, por la ley serán juzgados:<verse eid="ROM 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 2:13"/>Porque no <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="JAS 1:22">Stg. 1.22</ref>,<ref loc="JAS 1:23">23</ref>,<ref loc="JAS 1:25">25</ref>.</char></note>los oidores de la ley son justos para con Dios, mas los hacedores de la ley <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="LUK 18:14">Lc. 18.14</ref>.</char></note>serán justificados.<verse eid="ROM 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 2:14"/>Porque los Gentiles que no tienen ley, naturalmente haciendo lo que es de la ley, los tales, aunque no tengan ley, ellos son ley á sí mismos:<verse eid="ROM 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 2:15"/>Mostrando la obra de la ley escrita en sus corazones, dando testimonio juntamente sus conciencias, y acusándose y también excusándose <note caller="+" style="x"><char style="xo" closed="false">2.15 </char><char style="xt" closed="false">cp. 1.19.</char></note>sus pensamientos unos con otros;<verse eid="ROM 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 2:16"/>En el día que <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="1CO 4:5">1 Co. 4.5</ref>. <ref loc="REV 20:12">Ap. 20.12</ref>.</char></note>juzgará el Señor lo encubierto de los hombres, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false">cp. 16.25. <ref loc="2TI 2:8">2 Ti. 2.8</ref>.</char></note>conforme á mi evangelio, <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="JHN 5:22">Jn. 5.22</ref>,<ref loc="JHN 5:27">27</ref>. <ref loc="ACT 10:42">Hch. 10.42</ref> y <ref loc="ACT 17:31">17.31</ref>. <ref loc="2TI 4:1">2 Ti. 4.1</ref>,<ref loc="2TI 4:8">8</ref>. <ref loc="1PE 4:5">1 P. 4.5</ref>.</char></note>por Jesucristo.<verse eid="ROM 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 2:17"/>He aquí, <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false"><ref loc="MAT 3:9">Mt. 3.9</ref>. <ref loc="JHN 8:33">Jn. 8.33</ref>,<ref loc="JHN 8:39">39</ref>.</char></note>tú tienes el sobrenombre de Judío, y <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">cp. 9.4.</char></note>estás reposado en la ley, y <note caller="+" style="x"><char style="xo" closed="false">2.17 </char><char style="xt" closed="false">ver. 23.</char></note>te glorías en Dios,<verse eid="ROM 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 2:18"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.18 </char><char style="xt" closed="false">cp. 3.2.</char></note>sabes su voluntad, y apruebas lo mejor, instruído por la ley;<verse eid="ROM 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 2:19"/>Y confías que eres guía de los ciegos, luz de los que están en tinieblas,<verse eid="ROM 2:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 2:20"/>Enseñador de los que no saben, maestro de niños, <note caller="+" style="x"><char style="xo" closed="false">2.20 </char><char style="xt" closed="false"><ref loc="2TI 3:5">2 Ti. 3.5</ref>.</char></note>que tienes la forma de la ciencia y de la verdad en la ley:<verse eid="ROM 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 2:21"/>Tú pues, <note caller="+" style="x"><char style="xo" closed="false">2.21 </char><char style="xt" closed="false"><ref loc="MAT 23:3-32">Mt. 23.3-32</ref>.</char></note>que enseñas á otro, ¿no te enseñas á ti mismo? ¿Tú, que predicas que no se ha de hurtar, hurtas?<verse eid="ROM 2:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 2:22"/>¿Tú, que dices que no se ha de adulterar, adulteras? ¿Tú, que abominas los ídolos, <note caller="+" style="x"><char style="xo" closed="false">2.22 </char><char style="xt" closed="false"><ref loc="MAL 1:8">Mal. 1.8</ref>,<ref loc="MAL 1:12">12</ref>,<ref loc="MAL 1:14">14</ref> y <ref loc="MAL 3:8">3.8</ref>.</char></note>cometes sacrilegio?<verse eid="ROM 2:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 2:23"/>¿Tú, que te jactas de la ley, con infracción de la ley deshonras á Dios?<verse eid="ROM 2:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 2:24"/>Porque el nombre de Dios es blasfemado por causa de vosotros entre los Gentiles, <note caller="+" style="x"><char style="xo" closed="false">2.24 </char><char style="xt" closed="false"><ref loc="ISA 52:5">Is. 52.5</ref>.</char></note>como está esctrito.<verse eid="ROM 2:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 2:25"/>Porque la circuncisión en verdad <note caller="+" style="x"><char style="xo" closed="false">2.25 </char><char style="xt" closed="false"><ref loc="GAL 5:3">Ga. 5.3</ref>.</char></note>aprovecha, si guardares la ley; mas si eres rebelde á la ley, tu circuncisión es hecha incircuncisión.<verse eid="ROM 2:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 2:26"/>De manera que, <note caller="+" style="x"><char style="xo" closed="false">2.26 </char><char style="xt" closed="false"><ref loc="ACT 10:35">Hch. 10.35</ref>.</char></note>si el incircunciso guardare las justicias de la ley, ¿no será tenida su incircuncisión por circuncisión?<verse eid="ROM 2:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 2:27"/>Y lo que de su natural es incircunciso, guardando perfectamente la ley, te <note caller="+" style="x"><char style="xo" closed="false">2.27 </char><char style="xt" closed="false"><ref loc="MAT 12:41">Mt. 12.41</ref>.</char></note>juzgará á ti, que <note caller="+" style="x"><char style="xo" closed="false">2.27 </char><char style="xt" closed="false">cp. 7.6. <ref loc="2CO 3:6">2 Co. 3.6</ref>.</char></note>con la letra y con la circuncisión eres rebelde á la ley.<verse eid="ROM 2:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 2:28"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.28 </char><char style="xt" closed="false">ver. 17.</char></note>no es Judío el que lo es en manifiesto; ni la circuncisión es la que es en manifiesto en la carne:<verse eid="ROM 2:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 2:29"/>Mas es Judío el que lo es en lo interior; y <note caller="+" style="x"><char style="xo" closed="false">2.29 </char><char style="xt" closed="false"><ref loc="DEU 10:16">Dt. 10.16</ref>. <ref loc="PHP 3:3">Fil. 3.3</ref>. <ref loc="COL 2:11">Col. 2.11</ref>.</char></note>la circuncisión es la del corazón, <note caller="+" style="x"><char style="xo" closed="false">2.29 </char><char style="xt" closed="false">cp. 7.6.</char></note>en espíritu, no <char style="fm">2.27</char> en letra; la alabanza del cual no es de los hombres, sino de Dios.<verse eid="ROM 2:29"/></para>
+  <chapter eid="ROM 2"/>
+  <chapter number="3" style="c" sid="ROM 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 3:1"/>¿QUÉ, pues, tiene más el Judío? ¿ó qué aprovecha la circuncisión?,<verse eid="ROM 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 3:2"/>Mucho en todas maneras. Lo primero ciertamente, que <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="HEB 5:12">He. 5.12</ref>.</char></note>la palabra de Dios les ha sido <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false">cp. 2.18 y <ref loc="ROM 9:4">9.4</ref>.</char></note>confiada.<verse eid="ROM 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 3:3"/>¿Pues qué <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">cp. 10.16.</char></note>si algunos de ellos han sido incrédulos? ¿la incredulidad de ellos habrá hecho vana la <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false"><ref loc="2TI 2:13">2 Ti. 2.13</ref>.</char></note>verdad de Dios?<verse eid="ROM 3:3"/></para>
+  <para style="s">1 “No hay justo ni aun uno.”</para>
+  <para style="s">2 Justificación por la fe.</para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 3:4"/>En ninguna manera; antes bien sea <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="JHN 3:33">Jn. 3.33</ref> y <ref loc="JHN 8:26">8.26</ref>.</char></note>Dios verdadero, mas <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="PSA 116:11">Sal. 116.11</ref>.</char></note>todo hombre mentiroso; como está escrito:</para>
+  <para style="q" vid="ROM 3:4">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 51:4">Sal. 51.4</ref>.</char>
+    </note>Para que seas justificado en tus dichos,</para>
+  <para style="q" vid="ROM 3:4">Y venzas cuando de ti se juzgare.<verse eid="ROM 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 3:5"/>Y si nuestra iniquidad <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 5.8.</char></note>encarece la justicia de Dios, ¿qué diremos? ¿Será injusto Dios que da castigo? <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="GAL 3:15">Ga. 3.15</ref>.</char></note>(hablo como hombre.)<verse eid="ROM 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 3:6"/>En ninguna manera: de otra suerte ¿cómo juzgaría Dios el mundo?<verse eid="ROM 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 3:7"/>Empero si <note caller="+" style="x"><char style="xo" closed="false">3.7 </char><char style="xt" closed="false">ver. 4.</char></note>la verdad de Dios por <char style="fm">3.7</char> mi mentira creció á gloria suya, ¿por qué aun así yo soy juzgado como pecador?<verse eid="ROM 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 3:8"/>¿Y por qué no <char style="it">decir</char> (como somos blasfemados, y como algunos dicen que nosotros decimos): <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">cp. 6.1,15.</char></note>Hagamos males para que vengan bienes? la condenación de los cuales es justa.<verse eid="ROM 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 3:9"/>¿Qué pues? ¿Somos mejores que ellos? En ninguna manera: porque ya hemos acusado á Judíos y á Gentiles, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false">vers. 19,23.</char></note>que todos están debajo de pecado.<verse eid="ROM 3:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="ROM 3:10"/>Como está escrito:</para>
+  <para style="q" vid="ROM 3:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 14:1-3">Sal. 14.1-3</ref> y <ref loc="PSA 53:1-3">53.1-3</ref>.</char>
+    </note>No hay justo, ni aun uno;<verse eid="ROM 3:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="ROM 3:11"/>No hay quien entienda,</para>
+  <para style="q" vid="ROM 3:11">No hay quien busque á Dios;<verse eid="ROM 3:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="ROM 3:12"/>Todos se apartaron, á una fueron hechos inútiles;</para>
+  <para style="q" vid="ROM 3:12">No hay quien haga lo bueno, no hay ni aun uno:<verse eid="ROM 3:12"/></para>
+  <para style="q">
+    <verse number="13" style="v" sid="ROM 3:13"/>Sepulcro abierto <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="PSA 5:9">Sal. 5.9</ref>.</char></note>es su garganta;</para>
+  <para style="q" vid="ROM 3:13">Con sus lenguas tratan engañosamente;</para>
+  <para style="q" vid="ROM 3:13">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 140:3">Sal. 140.3</ref>.</char>
+    </note>Veneno de áspides está debajo de sus labios;<verse eid="ROM 3:13"/></para>
+  <para style="q">
+    <verse number="14" style="v" sid="ROM 3:14"/>Cuya boca <note caller="+" style="x"><char style="xo" closed="false">3.14 </char><char style="xt" closed="false"><ref loc="PSA 10:7">Sal. 10.7</ref>.</char></note>está llena de maledicencia y de amargura;<verse eid="ROM 3:14"/></para>
+  <para style="q">
+    <verse number="15" style="v" sid="ROM 3:15"/>Sus pies <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="ISA 59:7">Is. 59.7</ref>,<ref loc="ISA 59:8">8</ref>.</char></note>son ligeros á derramar sangre;<verse eid="ROM 3:15"/></para>
+  <para style="q">
+    <verse number="16" style="v" sid="ROM 3:16"/>Quebrantamiento y desventura hay en sus caminos;<verse eid="ROM 3:16"/></para>
+  <para style="q">
+    <verse number="17" style="v" sid="ROM 3:17"/>Y camino de paz no conocieron:<verse eid="ROM 3:17"/></para>
+  <para style="q">
+    <verse number="18" style="v" sid="ROM 3:18"/>No hay temor de Dios <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="PSA 36:1">Sal. 36.1</ref>.</char></note>delante de sus ojos.<verse eid="ROM 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 3:19"/>Empero sabemos que todo lo que la ley dice, á los que están en la ley lo dice, <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false">cp. 1.20 y <ref loc="ROM 2:1">2.1</ref>.</char></note>para que toda boca se tape, y que <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false">ver. 9.</char></note>todo el mundo se sujete á Dios:<verse eid="ROM 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 3:20"/>Porque por las obras <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="PSA 143:2">Sal. 143.2</ref>. <ref loc="GAL 2:16">Ga. 2.16</ref> y <ref loc="GAL 3:11">3.11</ref>.</char></note>de la ley ninguna carne se justificará delante de él; porque <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false">cp. 7.7.</char></note>por la ley <char style="it">es</char> el conocimiento del pecado.<verse eid="ROM 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 3:21"/>Mas ahora, <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false">cp. 1.17.</char></note>sin la ley, la justicia de Dios se ha manifestado, testificada por la ley y por los profetas:<verse eid="ROM 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 3:22"/>La justicia de Dios <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false">cp. 4.3,5.</char></note>por la fe de Jesucristo, para todos los que creen en él: porque <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false">cp. 10.12. <ref loc="COL 3:11">Col. 3.11</ref>.</char></note>no hay diferencia;<verse eid="ROM 3:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 3:23"/>Por cuanto todos pecaron, y están distituídos de la gloria de Dios;<verse eid="ROM 3:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 3:24"/>Siendo justificados gratuitamente <note caller="+" style="x"><char style="xo" closed="false">3.24 </char><char style="xt" closed="false">cp. 4.16. <ref loc="EPH 2:5">Ef. 2.5</ref>,<ref loc="EPH 2:8">8</ref>. <ref loc="TIT 3:5">Tit. 3.5</ref>,<ref loc="TIT 3:7">7</ref>.</char></note>por su gracia <note caller="+" style="x"><char style="xo" closed="false">3.24 </char><char style="xt" closed="false"><ref loc="EPH 1:7">Ef. 1.7</ref>. <ref loc="COL 1:14">Col. 1.14</ref>. <ref loc="HEB 9:12">He. 9.12</ref>.</char></note>por la redención que es en Cristo Jesús;<verse eid="ROM 3:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 3:25"/>Al cual Dios ha propuesto <note caller="+" style="x"><char style="xo" closed="false">3.25 </char><char style="xt" closed="false"><ref loc="LEV 16:15">Lv. 16.15</ref>. <ref loc="1JN 2:2">1 Jn. 2.2</ref> y <ref loc="1JN 4:10">4.10</ref>.</char></note>en propiciación por la fe en <note caller="+" style="x"><char style="xo" closed="false">3.25 </char><char style="xt" closed="false"><ref loc="EPH 2:13">Ef. 2.13</ref>. <ref loc="COL 1:20">Col. 1.20</ref>.</char></note>su sangre, para manifestación de su justicia, atento á haber pasado por alto, en su paciencia, <note caller="+" style="x"><char style="xo" closed="false">3.25 </char><char style="xt" closed="false"><ref loc="HEB 9:15">He. 9.15</ref>.</char></note>los pecados pasados,<verse eid="ROM 3:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 3:26"/>Con la mira de manifestar su justicia en este tiempo: para que él sea el justo, y el que justifica al que es de la fe de Jesús.<verse eid="ROM 3:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 3:27"/>¿Dondé pues <note caller="+" style="x"><char style="xo" closed="false">3.27 </char><char style="xt" closed="false">cp. 2.17.</char></note>está la jactancia? Es excluída. ¿Por cuál ley? ¿de las obras? No; mas por la ley de la fe.<verse eid="ROM 3:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 3:28"/>Así que, concluímos ser el hombre justificado por fe <note caller="+" style="x"><char style="xo" closed="false">3.28 </char><char style="xt" closed="false">ver. 21. cp. 4.6 y <ref loc="ROM 7:8">7.8</ref>,<ref loc="ROM 7:9">9</ref>.</char></note>sin las obras de la ley.<verse eid="ROM 3:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 3:29"/>¿Es Dios solamente <char style="it">Dios</char> de los Judíos? ¿No es también <char style="it">Dios</char> de los Gentiles? Cierto, también de los Gentiles.<verse eid="ROM 3:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 3:30"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.30 </char><char style="xt" closed="false">cp. 10.12. <ref loc="GAL 3:8">Ga. 3.8</ref>.</char></note>uno es Dios, el cual justificará por la fe la circuncisión, y por medio de la fe la incircuncisión.<verse eid="ROM 3:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 3:31"/>¿Luego deshacemos la ley por la fe? En ninguna manera; antes <note caller="+" style="x"><char style="xo" closed="false">3.31 </char><char style="xt" closed="false"><ref loc="MAT 5:17">Mt. 5.17</ref>.</char></note>establecemos la ley.<verse eid="ROM 3:31"/></para>
+  <chapter eid="ROM 3"/>
+  <chapter number="4" style="c" sid="ROM 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 4:1"/>¿QUÉ, pues, diremos que halló <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="MAT 3:9">Mt. 3.9</ref>.</char></note>Abraham nuestro padre según la carne?<verse eid="ROM 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 4:2"/>Que si Abraham fué <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false">cp. 3.27,28.</char></note>justificado por la obras, tiene de qué gloriarse; mas no para con Dios.<verse eid="ROM 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 4:3"/>Porque ¿qué dice la Escritura? <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false"><ref loc="GEN 15:6">Gn. 15.6</ref>. <ref loc="GAL 3:6">Ga. 3.6</ref>. <ref loc="JAS 2:23">Stg. 2.23</ref>.</char></note>Y creyó Abraham á Dios, y le fué atribuído á justicia.<verse eid="ROM 4:3"/></para>
+  <para style="s">1 Abraham</para>
+  <para style="s">2 justificado por la fe.</para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 4:4"/>Empero al que obra, no se le cuenta el salario por merced, sino por deuda.<verse eid="ROM 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 4:5"/>Mas al que no obra, pero cree en aquél que justifica al impío, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false">cp. 3.22.</char></note>la fe le es contada por justicia.<verse eid="ROM 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 4:6"/>Como también David dice ser bienaventurado el hombre al cual Dios atribuye justicia <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 3.28.</char></note>sin obras,<verse eid="ROM 4:6"/></para>
+  <para style="q">
+    <verse number="7" style="v" sid="ROM 4:7"/>
+    <char style="it">Diciendo:</char></para>
+  <para style="q" vid="ROM 4:7">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">4.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 32:1">Sal. 32.1</ref>,<ref loc="PSA 32:2">2</ref>.</char>
+    </note>Bienaventurados aquellos cuyas iniquidades son perdonadas,</para>
+  <para style="q" vid="ROM 4:7">Y cuyos pecados son cubiertos.<verse eid="ROM 4:7"/></para>
+  <para style="q">
+    <verse number="8" style="v" sid="ROM 4:8"/>Bienaventurado el varón al cual el Señor no imputó pecado.<verse eid="ROM 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 4:9"/>¿Es pues esta bienaventuranza <char style="it">solamente</char> en la circuncisión ó también en la incircuncisión? porque decimos que á Abraham fué contada la fe por justicia.<verse eid="ROM 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 4:10"/>¿Cómo pues <char style="it">le</char> fué contada? ¿en la circuncisión, ó en la incircuncisión? No en la circuncisión, sino en la incircuncisión.<verse eid="ROM 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 4:11"/>Y recibió la circuncisión <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="GEN 17:11">Gn. 17.11</ref>.</char></note>por señal, por sello de la justicia de la fe que tuvo en la incircuncisión: para que <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="LUK 19:9">Lc. 19.9</ref>.</char></note>fuese padre de todos los creyentes no circuncidados, para que también á ellos les sea contado por justicia;<verse eid="ROM 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 4:12"/>Y padre de la circuncisión, no solamente á los que son de la circuncisión, más también á los que siguen las pisadas de la fe que fué en nuestro padre Abraham antes de ser circuncidado.<verse eid="ROM 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 4:13"/>Porque no por la ley <note caller="+" style="x"><char style="xo" closed="false">4.13 </char><char style="xt" closed="false"><ref loc="GEN 17:4-6">Gn. 17.4-6</ref>.</char></note>fué <char style="it">dada</char> la promesa á Abraham ó á su simiente, que sería heredero del mundo, sino por la justicia de la fe.<verse eid="ROM 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 4:14"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="GAL 3:18">Ga. 3.18</ref>.</char></note>si los que son de la ley son los herederos, vana es la fe, y anulada es la promesa.<verse eid="ROM 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 4:15"/>Porque <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 7.5,10. <ref loc="2CO 3:7">2 Co. 3.7</ref>,<ref loc="2CO 3:9">9</ref>. <ref loc="GAL 3:10">Ga. 3.10</ref>.</char></note>la ley obra ira; porque <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 5.13,20 y <ref loc="ROM 7:7">7.7</ref>,<ref loc="ROM 7:8">8</ref>,<ref loc="ROM 7:11">11</ref>,<ref loc="ROM 7:13">13</ref>.</char></note>donde no hay ley, tampoco hay transgresión.<verse eid="ROM 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 4:16"/>Por tanto <char style="it">es</char> por la fe, para que <char style="it">sea</char> <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false">cp. 3.24.</char></note>por gracia; para que la promesa sea firme á toda simiente, no solamente al que es de la ley, mas también al que es de la fe de Abraham, <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false">ver. 1. cp. 9.8.</char></note>el cual es padre de todos nosotros.<verse eid="ROM 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 4:17"/>(Como está escrito: <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="GEN 17:5">Gn. 17.5</ref>.</char></note>Que por padre de muchas gentes te he puesto) delante de Dios, al cual creyó; <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="JHN 5:21">Jn. 5.21</ref>.</char></note>el cual da vida á los muertos, y llama <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="1CO 1:28">1 Co. 1.28</ref>.</char></note>las cosas que no son, como las que son.<verse eid="ROM 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 4:18"/>El creyó en esperanza contra esperanza, para venir á ser padre de muchas gentes, conforme á lo que <char style="it">le</char> había sido dicho: <note caller="+" style="x"><char style="xo" closed="false">4.18 </char><char style="xt" closed="false"><ref loc="GEN 15:5">Gn. 15.5</ref>.</char></note>Así será tu simiente.<verse eid="ROM 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 4:19"/>Y no se enflaqueció en la fe, <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="GEN 17:17">Gn. 17.17</ref>.</char></note>ni consideró su cuerpo ya muerto (siendo ya de casi cien años,) ni la matriz muerta de Sara;<verse eid="ROM 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 4:20"/>Tampoco en la promesa de Dios dudó con desconfianza: antes fué esforzado en fe, dando gloria á Dios,<verse eid="ROM 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 4:21"/>Plenamente convencido de que todo lo que había prometido, <note caller="+" style="x"><char style="xo" closed="false">4.21 </char><char style="xt" closed="false"><ref loc="GEN 18:14">Gn. 18.14</ref>.</char></note>era también poderoso para hacerlo.<verse eid="ROM 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 4:22"/>Por lo cual también le fué atribuído á justicia.<verse eid="ROM 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 4:23"/>Y <note caller="+" style="x"><char style="xo" closed="false">4.23 </char><char style="xt" closed="false">cp. 15.4.</char></note>no solamente por él fué escrito que le haya sido imputado;<verse eid="ROM 4:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 4:24"/>Sino también por nosotros, á quienes será imputado, <char style="it">esto es,</char> á los que creemos <note caller="+" style="x"><char style="xo" closed="false">4.24 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref> y <ref loc="ACT 13:30">13.30</ref>.</char></note>en el que levantó de los muertos á Jesús Señor nuestro,<verse eid="ROM 4:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 4:25"/>El cual fué entregado <note caller="+" style="x"><char style="xo" closed="false">4.25 </char><char style="xt" closed="false"><ref loc="ISA 53:5">Is. 53.5</ref>,<ref loc="ISA 53:6">6</ref>,<ref loc="ISA 53:10">10</ref>. cp. 5.6,8 y 8.32,34. <ref loc="2CO 5:21">2 Co. 5.21</ref>. <ref loc="GAL 1:4">Ga. 1.4</ref>. <ref loc="EPH 5:2">Ef. 5.2</ref>. <ref loc="1PE 2:24">1 P. 2.24</ref> y <ref loc="1PE 3:18">3.18</ref>.</char></note>por nuestros delitos, y resucitado para nuestra <note caller="+" style="x"><char style="xo" closed="false">4.25 </char><char style="xt" closed="false">cp. 5.18.</char></note>justificación.<verse eid="ROM 4:25"/></para>
+  <chapter eid="ROM 4"/>
+  <chapter number="5" style="c" sid="ROM 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 5:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.1 </char>
+      <char style="xt" closed="false">cp. 3.28,30.</char>
+    </note>JUSTIFICADOS pues por la fe, tenemos <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="LUK 2:14">Lc. 2.14</ref>.</char></note>paz para con Dios por medio de nuestro Señor Jesucristo:<verse eid="ROM 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 5:2"/>Por el cual también tenemos <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="EPH 2:18">Ef. 2.18</ref>.</char></note>entrada por la fe á esta gracia en la cual estamos <char style="it">firmes,</char> y <note caller="+" style="x"><char style="xo" closed="false">5.2 </char><char style="xt" closed="false"><ref loc="HEB 3:6">He. 3.6</ref>.</char></note>nos gloriamos en la esperanza de la gloria de Dios.<verse eid="ROM 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 5:3"/>Y no sólo esto, mas aun <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="MAT 5:12">Mt. 5.12</ref>. <ref loc="1PE 3:14">1 P. 3.14</ref>.</char></note>nos gloriamos en las tribulaciones, <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="JAS 1:3">Stg. 1.3</ref>.</char></note>sabiendo que la tribulación produce paciencia;<verse eid="ROM 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 5:4"/>Y la paciencia, <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="2CO 8:2">2 Co. 8.2</ref>. <ref loc="JAS 1:3">Stg. 1.3</ref>,<ref loc="JAS 1:12">12</ref>.</char></note>prueba; y la prueba, esperanza;<verse eid="ROM 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 5:5"/>Y la esperanza <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="PHP 1:20">Fil. 1.20</ref>.</char></note>no avergüenza; porque el amor de Dios está derramado en nuestros corazones por el Espíritu Santo que nos es dado.<verse eid="ROM 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 5:6"/>Porque Cristo, <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false">cp. 3.25.</char></note>cuando aún éramos flacos, á su tiempo <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false">cp. 4.25.</char></note>murió por los impíos.<verse eid="ROM 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 5:7"/>Ciertamente apenas muere algun por un justo: con todo podrá ser que alguno osara morir por el bueno.<verse eid="ROM 5:7"/></para>
+  <para style="s">1 Adam y Cristo.</para>
+  <para style="s">2 El reinado de la gracia.</para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 5:8"/>Mas Dios encarece su caridad para con nosotros, porque siendo aún pecadores, Cristo murió por nosotros.<verse eid="ROM 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 5:9"/>Luego mucho más ahora, justificados <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false">cp. 3.25.</char></note>en su sangre, por él seremos salvos <note caller="+" style="x"><char style="xo" closed="false">5.9 </char><char style="xt" closed="false">cp. 1.18. <ref loc="1TH 1:10">1 Ts. 1.10</ref>.</char></note>de la ira.<verse eid="ROM 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 5:10"/>Porque <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false">cp. 8.32.</char></note>si siendo enemigos, <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="2CO 5:18">2 Co. 5.18</ref>,<ref loc="2CO 5:19">19</ref>. <ref loc="EPH 2:16">Ef. 2.16</ref>. <ref loc="COL 1:20">Col. 1.20</ref>,<ref loc="COL 1:21">21</ref>.</char></note>fuimos reconciliados con Dios por la muerte de su Hijo, mucho más, estando reconciliados, seremos salvos <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="2CO 4:10">2 Co. 4.10</ref>,<ref loc="2CO 4:11">11</ref>.</char></note>por su vida.<verse eid="ROM 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 5:11"/>Y no sólo esto, mas aun nos gloriamos en Dios por el Señor nuestro Jesucristo, por el cual hemos ahora recibido la reconciliación.<verse eid="ROM 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 5:12"/>De consiguiente, <char style="it">vino la reconciliación por uno,</char> así <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="GEN 3:6">Gn. 3.6</ref>.</char></note>como el pecado entró en el mundo por un hombre, y <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="GEN 2:17">Gn. 2.17</ref> y <ref loc="GEN 3:19">3.19</ref>. <ref loc="1CO 15:21">1 Co. 15.21</ref>,<ref loc="1CO 15:22">22</ref>.</char></note>por el pecado la muerte, y la muerte así pasó á todos los hombres, pues que todos pecaron.<verse eid="ROM 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 5:13"/>Porque hasta la ley, el pecado estaba en el mundo; pero <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false">cp. 4.15.</char></note>no se imputa pecado no habiendo ley.<verse eid="ROM 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 5:14"/>No obstante, reinó la muerte desde Adam hasta Moisés, aun en los que no pecaron á la manera de la rebelión de Adam; <note caller="+" style="x"><char style="xo" closed="false">5.14 </char><char style="xt" closed="false"><ref loc="1CO 15:45">1 Co. 15.45</ref>.</char></note>el cual es figura del que había de venir.<verse eid="ROM 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 5:15"/>Mas no como el delito, tal fué el don: porque si por el delito de aquel uno murieron los muchos, mucho más abundó la gracia de Dios á los muchos, y el don por la gracia de un hombre, Jesucristo.<verse eid="ROM 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 5:16"/>Ni tampoco de la manera que por un pecado, <char style="it">así</char> también el don: porque el juicio á la verdad <char style="it">vino</char> de un <char style="it">pecado</char> para condenación, mas la gracia <char style="it">vino</char> de muchos delitos para justificación.<verse eid="ROM 5:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 5:17"/>Porque, si por un delito reinó la muerte por uno, mucho más reinarán en vida por un Jesucristo los que reciben la abundancia de gracia, y del don de la justicia.<verse eid="ROM 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 5:18"/>Así que, de la manera que por un delito <char style="it">vino la culpa</char> á todos los hombres para condenación, así por una justicia <char style="it">vino la gracia</char> <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false"><ref loc="HEB 2:9">He. 2.9</ref>.</char></note>a todos los hombres para <note caller="+" style="x"><char style="xo" closed="false">5.18 </char><char style="xt" closed="false">cp. 4.25.</char></note>justificación de vida.<verse eid="ROM 5:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 5:19"/>Porque como por la desobediencia de un hombre los muchos fueron constituídos pecadores, así por la obediencia de uno los muchos serán constituídos justos.<verse eid="ROM 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 5:20"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.20 </char>
+      <char style="xt" closed="false">cp. 4.15.</char>
+    </note>La ley empero entró para que el pecado creciese; mas cuando el pecado creció, <note caller="+" style="x"><char style="xo" closed="false">5.20 </char><char style="xt" closed="false"><ref loc="1TI 1:14">1 Ti. 1.14</ref>.</char></note>sobrepujó la gracia;<verse eid="ROM 5:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 5:21"/>Para que, de la manera que el pecado reinó para muerte, así también <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false"><ref loc="JHN 1:17">Jn. 1.17</ref>.</char></note>la gracia reine por la justicia para <note caller="+" style="x"><char style="xo" closed="false">5.21 </char><char style="xt" closed="false">cp. 2.7.</char></note>vida eterna por Jesucristo Señor nuestro.<verse eid="ROM 5:21"/></para>
+  <chapter eid="ROM 5"/>
+  <chapter number="6" style="c" sid="ROM 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 6:1"/>¿PUES qué diremos? <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 3.8.</char></note>Perseveraremos en pecado para que <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false">cp. 5.21.</char></note>la gracia crezca?<verse eid="ROM 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 6:2"/>En ninguna manera. Porque los que somos muertos al pecado, <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="COL 2:20">Col. 2.20</ref> y <ref loc="COL 3:3">3.3</ref>. <ref loc="1PE 2:24">1 P. 2.24</ref>.</char></note>¿cómo viviremos aún en él?<verse eid="ROM 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 6:3"/>¿O no sabéis que <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="GAL 3:27">Ga. 3.27</ref>.</char></note>todos los que somos bautizados <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="MAT 28:19">Mt. 28.19</ref>.</char></note>en Cristo Jesús, somos bautizados en su muerte?<verse eid="ROM 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 6:4"/>Porque somos <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="COL 2:12">Col. 2.12</ref>.</char></note>sepultados juntamente con él á muerte por el bautismo; para que como <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false">cp. 8.11. <ref loc="EPH 2:5">Ef. 2.5</ref>.</char></note>Cristo resucitó de los muertos por <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="JHN 11:40">Jn. 11.40</ref>.</char></note>la gloria del Padre, <note caller="+" style="x"><char style="xo" closed="false">6.4 </char><char style="xt" closed="false"><ref loc="2CO 5:17">2 Co. 5.17</ref>. <ref loc="GAL 6:15">Ga. 6.15</ref>. <ref loc="EPH 4:23">Ef. 4.23</ref>,<ref loc="EPH 4:24">24</ref>. <ref loc="COL 3:10">Col. 3.10</ref>.</char></note>así también nosotros andemos en novedad de vida.<verse eid="ROM 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 6:5"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.5 </char><char style="xt" closed="false"><ref loc="PHP 3:10">Fil. 3.10</ref>,<ref loc="PHP 3:11">11</ref>.</char></note>si fuimos plantados juntamente en <char style="it">él</char> á la semejanza de su muerte, así también <char style="it">lo seremos á la</char> de su resurrección:<verse eid="ROM 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 6:6"/>Sabiendo esto, que <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false"><ref loc="GAL 2:20">Ga. 2.20</ref> y <ref loc="GAL 5:24">5.24</ref> y <ref loc="GAL 6:14">6.14</ref>. <ref loc="EPH 4:22">Ef. 4.22</ref>.</char></note>nuestro viejo hombre juntamente fué crucificado con <char style="it">él,</char> para <note caller="+" style="x"><char style="xo" closed="false">6.6 </char><char style="xt" closed="false"><ref loc="COL 2:11">Col. 2.11</ref>.</char></note>que el cuerpo del pecado sea deshecho, á fin de que no sirvamos más al pecado.<verse eid="ROM 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 6:7"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false"><ref loc="1PE 4:1">1 P. 4.1</ref>.</char></note>el que es muerto, justificado es del pecado.<verse eid="ROM 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 6:8"/>Y si morimos con Cristo, <note caller="+" style="x"><char style="xo" closed="false">6.8 </char><char style="xt" closed="false"><ref loc="2TI 2:11">2 Ti. 2.11</ref>.</char></note>creemos que también viviremos con él;<verse eid="ROM 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 6:9"/>Sabiendo que Cristo, habiendo resucitado de entre los muertos, ya no muere: la muerte no se enseñoreará más de él.<verse eid="ROM 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 6:10"/>Porque el haber muerto, <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="HEB 9:28">He. 9.28</ref>.</char></note>al pecado murió <note caller="+" style="x"><char style="xo" closed="false">6.10 </char><char style="xt" closed="false"><ref loc="HEB 10:10">He. 10.10</ref>.</char></note>una vez; mas el vivir, á Dios vive.<verse eid="ROM 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 6:11"/>Así también vosotros, pensad que de cierto estáis muertos al pecado, mas <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="GAL 2:19">Ga. 2.19</ref>.</char></note>vivos á Dios en Cristo Jesús Señor nuestro.<verse eid="ROM 6:11"/></para>
+  <para style="s">1 “Libertados del pecado.”</para>
+  <para style="s">2 La ley descubre el pecado.</para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 6:12"/>No reine, pues, el pecado en vuestro cuerpo mortal, para que le obedezcáis en sus concupiscencias;<verse eid="ROM 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 6:13"/>Ni tampoco presentéis vuestros miembros al pecado por instrumento de iniquidad; antes presentaos á Dios como vivos de los muertos, y vuestros miembros á Dios por <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="2CO 6:7">2 Co. 6.7</ref>.</char></note>instrumentos de justicia.<verse eid="ROM 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 6:14"/>Porque el pecado no se enseñoreará de vosotros; pues <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="JHN 1:17">Jn. 1.17</ref>.</char></note>no estáis bajo la ley, sino bajo la gracia.<verse eid="ROM 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 6:15"/>¿Pues qué? <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false">ver. 1.</char></note>¿Pecaremos, porque no estamos bajo de la ley, sino bajo de la gracia? En ninguna manera.<verse eid="ROM 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 6:16"/>¿No sabéis <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="JHN 8:34">Jn. 8.34</ref>.</char></note>que á quien os prestáis vosotros mismos por siervos para obedecer <char style="it">le,</char> sois siervos de aquel á quien obedecéis, ó del pecado para muerte, ó de la obediencia para justicia?<verse eid="ROM 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 6:17"/>Empero gracias á Dios, que aunque fuistes siervos del pecado, habéis obedecido de corazón á <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="2TI 1:13">2 Ti. 1.13</ref>.</char></note>aquella forma de doctrina á la cual sois entregados;<verse eid="ROM 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 6:18"/>Y <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="JHN 8:32">Jn. 8.32</ref>.</char></note>libertados del pecado, <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="1CO 7:22">1 Co. 7.22</ref>. <ref loc="1PE 2:16">1 P. 2.16</ref>.</char></note>sois hechos siervos de la justicia.<verse eid="ROM 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 6:19"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.19 </char>
+      <char style="xt" closed="false">cp. 3.5.</char>
+    </note>Humana cosa digo, <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="GAL 4:13">Ga. 4.13</ref>.</char></note>por la flaqueza de vuestra carne: que como para iniquidad presentasteis vuestros miembros á servir á la inmundicia y á la iniquidad, así ahora para santidad presentéis vuestros miembros á servir á la justicia.<verse eid="ROM 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 6:20"/>Porque cuando fuisteis siervos del pecado, erais libres acerca de la justicia.<verse eid="ROM 6:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 6:21"/>¿Qué fruto, pues, <note caller="+" style="x"><char style="xo" closed="false">6.21 </char><char style="xt" closed="false">cp. 7.5.</char></note>teníais de aquellas cosas de las cuales ahora os avergonzáis? porque <note caller="+" style="x"><char style="xo" closed="false">6.21 </char><char style="xt" closed="false">cp. 8.6,13.</char></note>el fin de ellas es muerte.<verse eid="ROM 6:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 6:22"/>Mas ahora, librados del pecado, y hechos siervos á Dios, tenéis por vuestro fruto la santificación, y por fin la vida eterna.<verse eid="ROM 6:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 6:23"/>Porque <note caller="+" style="x"><char style="xo" closed="false">6.23 </char><char style="xt" closed="false">cp. 5.12.</char></note>la paga del pecado es muerte: mas <note caller="+" style="x"><char style="xo" closed="false">6.23 </char><char style="xt" closed="false">cp. 2.7. <ref loc="1PE 1:3">1 P. 1.3</ref>,<ref loc="1PE 1:4">4</ref>.</char></note>la dádiva de Dios es vida eterna en Cristo Jesús Señor nuestro.<verse eid="ROM 6:23"/></para>
+  <chapter eid="ROM 6"/>
+  <chapter number="7" style="c" sid="ROM 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 7:1"/>¿IGNORÁIS, hermanos, (porque hablo con los que saben la ley) que la ley se enseñorea del hombre entre tanto que vive?<verse eid="ROM 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 7:2"/>Porque la mujer <note caller="+" style="x"><char style="xo" closed="false">7.2 </char><char style="xt" closed="false"><ref loc="1CO 7:39">1 Co. 7.39</ref>.</char></note>que está sujeta á marido, mientras el marido vive está obligada á la ley; mas muerto el marido, libre es de la ley del marido.<verse eid="ROM 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 7:3"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false"><ref loc="MAT 5:32">Mt. 5.32</ref>.</char></note>viviendo el marido, se llamará adúltera si fuere de otro varón; mas si su marido muriere, es libre de la ley; de tal manera que no será adúltera si fuere de otro marido.<verse eid="ROM 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 7:4"/>Así también vosotros, hermanos míos, <note caller="+" style="x"><char style="xo" closed="false">7.4 </char><char style="xt" closed="false">cp. 8.2. <ref loc="GAL 5:18">Ga. 5.18</ref>. <ref loc="EPH 2:15">Ef. 2.15</ref>. <ref loc="COL 2:14">Col. 2.14</ref>.</char></note>estáis muertos á la ley <note caller="+" style="x"><char style="xo" closed="false">7.4 </char><char style="xt" closed="false"><ref loc="EPH 2:16">Ef. 2.16</ref>. <ref loc="COL 1:22">Col. 1.22</ref>.</char></note>por el cuerpo de Cristo, para que seáis de otro, <char style="it">á saber,</char> del que resucitó de los muertos, á fin de que fructifiquemos á Dios.<verse eid="ROM 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 7:5"/>Porque mientras estábamos en la carne, <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false"><ref loc="GAL 5:24">Ga. 5.24</ref>.</char></note>los afectos de los pecados que eran por la ley, obraban <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false">cp. 6.13.</char></note>en nuestros miembros <note caller="+" style="x"><char style="xo" closed="false">7.5 </char><char style="xt" closed="false">cp. 6.21.</char></note>fructificando para muerte.<verse eid="ROM 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 7:6"/>Mas ahora estamos libres de la ley, habiendo muerto á aquella en la cual estábamos detenidos, para que sirvamos <note caller="+" style="x"><char style="xo" closed="false">7.6 </char><char style="xt" closed="false"><ref loc="2CO 3:6">2 Co. 3.6</ref>.</char></note>en novedad de espíritu, y no en vejez de letra.<verse eid="ROM 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 7:7"/>¿Qué pues diremos? ¿La ley es pecado? En ninguna manera. Empero <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false">cp. 3.20 y <ref loc="ROM 4:15">4.15</ref>.</char></note>yo no conocí el pecado sino por la ley: porque tampoco conociera la concupiscencia, si la ley no dijera: <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false"><ref loc="EXO 20:17">Ex. 20.17</ref>.</char></note>No codiciarás.<verse eid="ROM 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 7:8"/>Mas <note caller="+" style="x"><char style="xo" closed="false">7.8 </char><char style="xt" closed="false"><ref loc="GAL 5:13">Ga. 5.13</ref>. <ref loc="1TI 5:14">1 Ti. 5.14</ref>.</char></note>el pecado, tomando ocasión, obró en mí por el mandamiento toda concupiscencia: porque sin la ley el pecado <char style="it">está</char> muerto.<verse eid="ROM 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 7:9"/>Así que, yo sin la ley vivía por algún tiempo: mas venido el mandamiento, el pecado revivió, y yo morí.<verse eid="ROM 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 7:10"/>Y hallé que el mandamiento, <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false">cp. 10.5.</char></note><char style="it">intimado</char> para vida, <char style="it">para mí</char> era mortal:<verse eid="ROM 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 7:11"/>Porque el pecado, tomando ocasión, <note caller="+" style="x"><char style="xo" closed="false">7.11 </char><char style="xt" closed="false"><ref loc="GEN 3:13">Gn. 3.13</ref>.</char></note>me engañó por el mandamiento, y por él me mató.<verse eid="ROM 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 7:12"/>De manera que <note caller="+" style="x"><char style="xo" closed="false">7.12 </char><char style="xt" closed="false"><ref loc="PSA 19:8">Sal. 19.8</ref>.</char></note>la ley á la verdad es santa, y el mandamiento santo, y <note caller="+" style="x"><char style="xo" closed="false">7.12 </char><char style="xt" closed="false"><ref loc="PSA 119:137">Sal. 119.137</ref>.</char></note>justo, y bueno.<verse eid="ROM 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 7:13"/>¿Luego lo que es bueno, á mí me es hecho muerte? No; sino que el pecado, para mostrarse pecado, por lo bueno me obró la muerte, haciéndose pecado sobremanera pecante por el mandamiento.<verse eid="ROM 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 7:14"/>Porque sabemos que la ley es <note caller="+" style="x"><char style="xo" closed="false">7.14 </char><char style="xt" closed="false"><ref loc="1CO 3:1">1 Co. 3.1</ref>.</char></note>espiritual; mas yo soy carnal, <note caller="+" style="x"><char style="xo" closed="false">7.14 </char><char style="xt" closed="false"><ref loc="1KI 21:20">1 R. 21.20</ref>.</char></note>vendido á sujeción del pecado.<verse eid="ROM 7:14"/></para>
+  <para style="s">1 La carne contra el espíritu.</para>
+  <para style="s">2 La obra del Espíritu Santo.</para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 7:15"/>Porque lo que hago, no lo entiendo; <note caller="+" style="x"><char style="xo" closed="false">7.15 </char><char style="xt" closed="false"><ref loc="GAL 5:17">Ga. 5.17</ref>.</char></note>ni lo que quiero, hago; antes lo que aborrezco, aquello hago.<verse eid="ROM 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 7:16"/>Y si lo que no quiero, esto hago, apruebo que la ley es buena.<verse eid="ROM 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 7:17"/>De manera que ya no obro aquello, sino el pecado que mora en mí.<verse eid="ROM 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 7:18"/>Y yo sé que <note caller="+" style="x"><char style="xo" closed="false">7.18 </char><char style="xt" closed="false"><ref loc="GEN 6:5">Gn. 6.5</ref> y <ref loc="GEN 8:21">8.21</ref>.</char></note>en mí (es á saber, en mi carne) no mora el bien: porque tengo el querer, mas efectuar el bien no lo alcanzo.<verse eid="ROM 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 7:19"/>Porque no hago el bien que quiero; mas el mal que no quiero, éste hago.<verse eid="ROM 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 7:20"/>Y si hago lo que no quiero, ya no lo obro yo, sino el pecado que mora en mí.<verse eid="ROM 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 7:21"/>Así que, queriendo yo hacer el bien, hallo <char style="it">esta</char> ley: Que el mal está en mí.<verse eid="ROM 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 7:22"/>Porque <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false"><ref loc="2CO 4:16">2 Co. 4.16</ref>. <ref loc="EPH 3:16">Ef. 3.16</ref>.</char></note>según el hombre interior, <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false"><ref loc="PSA 119:35">Sal. 119.35</ref>.</char></note>me deleito en la ley de Dios:<verse eid="ROM 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 7:23"/>Mas <note caller="+" style="x"><char style="xo" closed="false">7.23 </char><char style="xt" closed="false"><ref loc="GAL 5:17">Ga. 5.17</ref>.</char></note>veo otra ley en <note caller="+" style="x"><char style="xo" closed="false">7.23 </char><char style="xt" closed="false">cp. 6.13.</char></note>mis miembros, que se rebela contra la ley de mi espíritu, y que me lleva cautivo á la ley del pecado que está en mis miembros.<verse eid="ROM 7:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 7:24"/>¡Miserable hombre de mí! ¿quién me librará del <note caller="+" style="x"><char style="xo" closed="false">7.24 </char><char style="xt" closed="false">cp. 6.6 y <ref loc="ROM 8:23">8.23</ref>.</char></note>cuerpo de esta muerte?<verse eid="ROM 7:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 7:25"/>Gracias doy á Dios, <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false"><ref loc="1CO 15:57">1 Co. 15.57</ref>.</char></note>por Jesucristo Señor nuestro. Así que, yo mismo con la mente sirvo á la ley de Dios, mas con la carne á la ley del pecado.<verse eid="ROM 7:25"/></para>
+  <chapter eid="ROM 7"/>
+  <chapter number="8" style="c" sid="ROM 8"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 8:1"/>AHORA pues, ninguna condenación hay para los que están en Cristo Jesús, los que <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="GAL 5:16">Ga. 5.16</ref>,<ref loc="GAL 5:25">25</ref>.</char></note>no andan conforme á la carne, mas conforme al espíritu.<verse eid="ROM 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 8:2"/>Porque la ley <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="1CO 15:45">1 Co. 15.45</ref>.</char></note>del Espíritu de vida en Cristo Jesús <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false"><ref loc="JHN 8:32">Jn. 8.32</ref>. <ref loc="GAL 5:1">Ga. 5.1</ref>.</char></note>me ha librado de <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false">cp. 7.24,25.</char></note>la ley del pecado y de la muerte.<verse eid="ROM 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 8:3"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="ACT 13:39">Hch. 13.39</ref>. <ref loc="HEB 7:19">He. 7.19</ref> y <ref loc="HEB 10:1">10.1</ref>,<ref loc="HEB 10:2">2</ref>,<ref loc="HEB 10:10">10</ref>,<ref loc="HEB 10:14">14</ref>.</char></note>lo que era imposible á la ley, por cuanto era débil por la carne, <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="2CO 5:21">2 Co. 5.21</ref>.</char></note>Dios enviando á su Hijo en semejanza de carne de pecado, y <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="HEB 10:6">He. 10.6</ref>,<ref loc="HEB 10:8">8</ref>.</char></note>a causa del pecado, condenó al pecado en la carne;<verse eid="ROM 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 8:4"/>Para que la justicia de la ley fuese cumplida en nosotros, que no andamos conforme á la carne, mas conforme al espíritu.<verse eid="ROM 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 8:5"/>Porque los que viven conforme á la carne, <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false"><ref loc="GAL 5:19-21">Ga. 5.19-21</ref>.</char></note>de las cosas que son de la carne se ocupan; mas los que conforme al espíritu, de <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false"><ref loc="GAL 5:22">Ga. 5.22</ref>,<ref loc="GAL 5:23">23</ref>,<ref loc="GAL 5:25">25</ref>.</char></note>las cosas del espíritu.<verse eid="ROM 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 8:6"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false">cp. 6.21.</char></note>la intención de la carne es muerte; mas la intención del espíritu, vida y paz:<verse eid="ROM 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 8:7"/>Por cuanto <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false"><ref loc="JAS 4:4">Stg. 4.4</ref>.</char></note>la intención de la carne es enemistad contra Dios; porque no se sujeta á la ley de Dios, ni tampoco puede.<verse eid="ROM 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 8:8"/>Así que, los que están en la carne no pueden agradar á Dios.<verse eid="ROM 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 8:9"/>Mas vosotros no estáis en la carne, sino en el espíritu, si es que el Espíritu de Dios mora en vosotros. Y si alguno no tiene <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="JHN 14:26">Jn. 14.26</ref>. <ref loc="1CO 2:11">1 Co. 2.11</ref>,<ref loc="1CO 2:12">12</ref>.</char></note>el Espíritu de Cristo, el tal no es de él.<verse eid="ROM 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 8:10"/>Empero si Cristo está en vosotros, el cuerpo á la verdad está muerto á causa del pecado; mas <note caller="+" style="x"><char style="xo" closed="false">8.10 </char><char style="xt" closed="false"><ref loc="1CO 15:45">1 Co. 15.45</ref>.</char></note>el espíritu vive á causa de la justicia.<verse eid="ROM 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 8:11"/>Y si el Espíritu de <note caller="+" style="x"><char style="xo" closed="false">8.11 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>aquel que levantó de los muertos á Jesús mora en vosotros, el que levantó á Cristo Jesús de los muertos, <note caller="+" style="x"><char style="xo" closed="false">8.11 </char><char style="xt" closed="false"><ref loc="JHN 5:21">Jn. 5.21</ref>.</char></note>vivificará también vuestros cuerpos mortales por su Espíritu que mora en vosotros.<verse eid="ROM 8:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 8:12"/>Así que, hermanos, deudores somos, no á la carne, para que vivamos conforme á la carne:<verse eid="ROM 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 8:13"/>Porque si viviereis conforme á la carne, moriréis; mas si por el espíritu <note caller="+" style="x"><char style="xo" closed="false">8.13 </char><char style="xt" closed="false"><ref loc="COL 3:5">Col. 3.5</ref>.</char></note>mortificáis las obras de la carne, viviréis.<verse eid="ROM 8:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 8:14"/>Porque todos <note caller="+" style="x"><char style="xo" closed="false">8.14 </char><char style="xt" closed="false"><ref loc="GAL 5:18">Ga. 5.18</ref>.</char></note>los que son guiados por el Espíritu de Dios, los tales son hijos de Dios.<verse eid="ROM 8:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 8:15"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false"><ref loc="HEB 2:15">He. 2.15</ref>.</char></note>no habéis recibido <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false"><ref loc="2TI 1:7">2 Ti. 1.7</ref>. <ref loc="1JN 4:18">1 Jn. 4.18</ref>.</char></note>el espíritu de servidumbre para <char style="it">estar</char> otra vez en temor; mas habéis recibido el <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false"><ref loc="GAL 4:5">Ga. 4.5</ref>. <ref loc="EPH 1:5">Ef. 1.5</ref>.</char></note>espíritu de adopción, por el cual clamamos, <note caller="+" style="x"><char style="xo" closed="false">8.15 </char><char style="xt" closed="false"><ref loc="GAL 4:6">Ga. 4.6</ref>.</char></note>Abba, Padre.<verse eid="ROM 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 8:16"/>Porque el mismo Espíritu da testimonio á nuestro espíritu que somos hijos de Dios.<verse eid="ROM 8:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 8:17"/>Y si hijos, también herederos; <note caller="+" style="x"><char style="xo" closed="false">8.17 </char><char style="xt" closed="false"><ref loc="GAL 4:7">Ga. 4.7</ref>.</char></note>herederos de Dios, y coherederos de Cristo; <note caller="+" style="x"><char style="xo" closed="false">8.17 </char><char style="xt" closed="false"><ref loc="ACT 14:22">Hch. 14.22</ref>. <ref loc="2CO 1:7">2 Co. 1.7</ref>. <ref loc="PHP 1:29">Fil. 1.29</ref>.</char></note>si empero padecemos juntamente <char style="it">con él,</char> para que juntamente <char style="it">con él</char> seamos glorificados.<verse eid="ROM 8:17"/></para>
+  <para style="s">1 El anhelar de las criaturas.</para>
+  <para style="s">2 Dios por nosotros.</para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 8:18"/>Porque tengo por cierto que <note caller="+" style="x"><char style="xo" closed="false">8.18 </char><char style="xt" closed="false"><ref loc="2CO 4:17">2 Co. 4.17</ref>. <ref loc="1PE 1:6">1 P. 1.6</ref>,<ref loc="1PE 1:7">7</ref> y <ref loc="1PE 4:13">4.13</ref>.</char></note>lo que en este tiempo se padece, no es de comparar con la gloria venidera que en nosotros ha de ser manifestada.<verse eid="ROM 8:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 8:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.19 </char><char style="xt" closed="false"><ref loc="2PE 3:13">2 P. 3.13</ref>.</char></note>el continuo anhelar de las criaturas espera la manifestación de los hijos de Dios.<verse eid="ROM 8:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 8:20"/>Porque las criaturas sujetas fueron á <note caller="+" style="x"><char style="xo" closed="false">8.20 </char><char style="xt" closed="false"><ref loc="ECC 1:2">Ec. 1.2</ref>.</char></note>vanidad, no de grado, mas <note caller="+" style="x"><char style="xo" closed="false">8.20 </char><char style="xt" closed="false"><ref loc="GEN 3:17">Gn. 3.17</ref>.</char></note>por causa del que las sujetó con esperanza,<verse eid="ROM 8:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 8:21"/>Que también las mismas criaturas serán libradas de la servidumbre de <note caller="+" style="x"><char style="xo" closed="false">8.21 </char><char style="xt" closed="false"><ref loc="1CO 15:42">1 Co. 15.42</ref>,<ref loc="1CO 15:50">50</ref>.</char></note>corrupción en la libertad gloriosa de los hijos de Dios.<verse eid="ROM 8:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 8:22"/>Porque sabemos que todas las criaturas gimen á una, y á una están de parto hasta ahora.<verse eid="ROM 8:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 8:23"/>Y no sólo ellas, mas también nosotros mismos, que tenemos <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false"><ref loc="JAS 1:18">Stg. 1.18</ref>.</char></note>las primicias del Espíritu, <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false"><ref loc="2CO 5:2">2 Co. 5.2</ref>,<ref loc="2CO 5:4">4</ref>.</char></note>nosotros también gemimos dentro de nosotros mismos, esperando <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false">ver. 15.</char></note>la adopción, <char style="it">es á saber,</char> <note caller="+" style="x"><char style="xo" closed="false">8.23 </char><char style="xt" closed="false">cp. 7.24.</char></note>la redención de nuestro cuerpo.<verse eid="ROM 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 8:24"/>Porque en esperanza somos salvos; mas la esperanza que se ve, no es esperanza; porque lo que alguno ve, ¿á qué esperarlo?<verse eid="ROM 8:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 8:25"/>Empero si lo que no vemos esperamos, por paciencia esperamos.<verse eid="ROM 8:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 8:26"/>Y asimismo también el Espíritu ayuda nuestra flaqueza: <note caller="+" style="x"><char style="xo" closed="false">8.26 </char><char style="xt" closed="false"><ref loc="MAT 20:22">Mt. 20.22</ref>. <ref loc="JAS 4:3">Stg. 4.3</ref>.</char></note>porque qué hemos de pedir como conviene, no lo sabemos; sino que <note caller="+" style="x"><char style="xo" closed="false">8.26 </char><char style="xt" closed="false"><ref loc="ZEC 12:10">Zac. 12.10</ref>. <ref loc="JHN 14:16">Jn. 14.16</ref>. <ref loc="EPH 6:18">Ef. 6.18</ref>.</char></note>el mismo Espíritu pide por nosotros con gemidos indecibles.<verse eid="ROM 8:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 8:27"/>Mas el que escudriña los corazones, sabe cuál es el intento del Espíritu, porque <note caller="+" style="x"><char style="xo" closed="false">8.27 </char><char style="xt" closed="false"><ref loc="1JN 5:14">1 Jn. 5.14</ref>.</char></note>conforme á <char style="it">la voluntad de Dios,</char> <note caller="+" style="x"><char style="xo" closed="false">8.27 </char><char style="xt" closed="false">ver. 34.</char></note>demanda por los santos.<verse eid="ROM 8:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 8:28"/>Y sabemos que á los que á Dios aman, todas las cosas les ayudan á bien, <char style="it">es á saber,</char> á los que <note caller="+" style="x"><char style="xo" closed="false">8.28 </char><char style="xt" closed="false">cp. 1.6 y <ref loc="ROM 9:11">9.11</ref>. <ref loc="EPH 1:11">Ef. 1.11</ref>.</char></note>conforme al propósito son llamados.<verse eid="ROM 8:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 8:29"/>Porque <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false">cp. 11.2. <ref loc="1PE 1:2">1 P. 1.2</ref>.</char></note>a los que antes conoció, <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false"><ref loc="EPH 1:5">Ef. 1.5</ref>,<ref loc="EPH 1:11">11</ref>.</char></note>también predestinó <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false"><ref loc="2CO 3:18">2 Co. 3.18</ref>. <ref loc="1JN 3:2">1 Jn. 3.2</ref>.</char></note>para que fuesen hechos conformes á <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false"><ref loc="GEN 1:26">Gn. 1.26</ref>.</char></note>la imagen de su Hijo, <note caller="+" style="x"><char style="xo" closed="false">8.29 </char><char style="xt" closed="false"><ref loc="COL 1:15">Col. 1.15</ref>,<ref loc="COL 1:18">18</ref>. <ref loc="HEB 1:6">He. 1.6</ref>. <ref loc="REV 1:5">Ap. 1.5</ref>.</char></note>para que él sea el primogénito entre muchos hermanos;<verse eid="ROM 8:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 8:30"/>Y á los que predestinó, á éstos también <note caller="+" style="x"><char style="xo" closed="false">8.30 </char><char style="xt" closed="false"><ref loc="1CO 1:9">1 Co. 1.9</ref>. <ref loc="GAL 1:6">Ga. 1.6</ref>,<ref loc="GAL 1:15">15</ref>. <ref loc="EPH 4:4">Ef. 4.4</ref>. <ref loc="1PE 2:9">1 P. 2.9</ref>,<ref loc="1PE 2:21">21</ref>.</char></note>llamó; y á los que llamó, á éstos también <note caller="+" style="x"><char style="xo" closed="false">8.30 </char><char style="xt" closed="false"><ref loc="1CO 6:11">1 Co. 6.11</ref>.</char></note>justificó; y á los que justificó, á éstos también <note caller="+" style="x"><char style="xo" closed="false">8.30 </char><char style="xt" closed="false"><ref loc="JHN 17:22">Jn. 17.22</ref>.</char></note>glorificó.<verse eid="ROM 8:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 8:31"/>¿Pues qué diremos á esto? Si Dios por nosotros, ¿quién contra nosotros?<verse eid="ROM 8:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 8:32"/>El que aun <note caller="+" style="x"><char style="xo" closed="false">8.32 </char><char style="xt" closed="false"><ref loc="JHN 3:16">Jn. 3.16</ref>.</char></note>a su propio Hijo no perdonó, antes le entregó por todos nosotros, ¿cómo no nos dará también con él todas las cosas?<verse eid="ROM 8:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="ROM 8:33"/>¿Quién acusará á <note caller="+" style="x"><char style="xo" closed="false">8.33 </char><char style="xt" closed="false">cp. 16.13.</char></note>los escogidos de Dios? <note caller="+" style="x"><char style="xo" closed="false">8.33 </char><char style="xt" closed="false"><ref loc="ISA 50:8">Is. 50.8</ref>,<ref loc="ISA 50:9">9</ref>.</char></note>Dios es el que justifica.<verse eid="ROM 8:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="ROM 8:34"/>¿Quién es <note caller="+" style="x"><char style="xo" closed="false">8.34 </char><char style="xt" closed="false"><ref loc="PSA 37:33">Sal. 37.33</ref>.</char></note>el que condenará? Cristo es el que murió; más aún, el que también resucitó, <note caller="+" style="x"><char style="xo" closed="false">8.34 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>.</char></note>quien además está á la diestra de Dios, <note caller="+" style="x"><char style="xo" closed="false">8.34 </char><char style="xt" closed="false">ver. 27. <ref loc="HEB 7:25">He. 7.25</ref> y <ref loc="HEB 9:24">9.24</ref>. <ref loc="1JN 2:1">1 Jn. 2.1</ref>.</char></note>el que también intercede por nosotros.<verse eid="ROM 8:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="ROM 8:35"/>¿Quién nos apartará del amor de Cristo? tribulación? ó angustia? ó persecución? ó hambre? ó desnudez? ó peligro? ó cuchillo?<verse eid="ROM 8:35"/></para>
+  <para style="q">
+    <verse number="36" style="v" sid="ROM 8:36"/>Como está escrito:</para>
+  <para style="q" vid="ROM 8:36">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">8.36 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 44:22">Sal. 44.22</ref>.</char>
+    </note>Por causa de ti somos muertos todo el tiempo:</para>
+  <para style="q" vid="ROM 8:36">Somos estimados como ovejas de matadero.<verse eid="ROM 8:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="ROM 8:37"/>Antes, en todas estas cosas <note caller="+" style="x"><char style="xo" closed="false">8.37 </char><char style="xt" closed="false"><ref loc="1CO 15:57">1 Co. 15.57</ref>. <ref loc="2CO 2:14">2 Co. 2.14</ref>.</char></note>hacemos más que vencer por medio de aquel que nos amó.<verse eid="ROM 8:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="ROM 8:38"/>Por lo cual estoy cierto que ni la muerte, ni la vida, ni ángeles, ni <note caller="+" style="x"><char style="xo" closed="false">8.38 </char><char style="xt" closed="false"><ref loc="EPH 6:12">Ef. 6.12</ref>. <ref loc="COL 2:10">Col. 2.10</ref>,<ref loc="COL 2:15">15</ref>. <ref loc="1PE 3:22">1 P. 3.22</ref>.</char></note>principados, ni potestades, ni <note caller="+" style="x"><char style="xo" closed="false">8.38 </char><char style="xt" closed="false"><ref loc="1CO 3:22">1 Co. 3.22</ref>.</char></note>lo presente, ni lo por venir,<verse eid="ROM 8:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="ROM 8:39"/>Ni lo alto, ni lo bajo, ni ninguna criatura nos podrá apartar del <note caller="+" style="x"><char style="xo" closed="false">8.39 </char><char style="xt" closed="false">cp. 5.8.</char></note>amor de Dios, que es en Cristo Jesús Señor nuestro.<verse eid="ROM 8:39"/></para>
+  <chapter eid="ROM 8"/>
+  <chapter number="9" style="c" sid="ROM 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 9:1"/>VERDAD digo en Cristo, no miento, <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false">cp. 2.15.</char></note>dándome testimonio mi conciencia en el Espíritu Santo,<verse eid="ROM 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 9:2"/>Que tengo gran tristeza <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false">cp. 10.1.</char></note>y continuo dolor en mi corazón.<verse eid="ROM 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 9:3"/>Porque deseara yo mismo <note caller="+" style="x"><char style="xo" closed="false">9.3 </char><char style="xt" closed="false"><ref loc="EXO 32:32">Ex. 32.32</ref>.</char></note>ser apartado de Cristo por mis hermanos, los que son mis parientes <note caller="+" style="x"><char style="xo" closed="false">9.3 </char><char style="xt" closed="false"><ref loc="1CO 10:18">1 Co. 10.18</ref>.</char></note>según la carne;<verse eid="ROM 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 9:4"/>Que son israelitas, <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="EXO 4:22">Ex. 4.22</ref>.</char></note>de los cuales es la adopción, y <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="1SA 4:21">1 S. 4.21</ref>.</char></note>la gloria, y <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="GEN 17:2">Gn. 17.2</ref>. <ref loc="LUK 1:72">Lc. 1.72</ref>. <ref loc="ACT 3:25">Hch. 3.25</ref>.</char></note>el pacto, y la data de la ley, y <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="HEB 9:1">He. 9.1</ref>,<ref loc="HEB 9:6">6</ref>.</char></note>el culto, y <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false"><ref loc="ACT 13:32">Hch. 13.32</ref>.</char></note>las promesas;<verse eid="ROM 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 9:5"/>Cuyos <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false">cp. 11.28.</char></note>son los padres, y <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false">cp. 1.3.</char></note>de los cuales es Cristo según la carne, <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="1JN 5:20">1 Jn. 5.20</ref>.</char></note>el cual es Dios sobre todas las cosas, <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false">cp. 1.25.</char></note>bendito por los siglos. Amén.<verse eid="ROM 9:5"/></para>
+  <para style="s">1 Incredulidad de Israel</para>
+  <para style="s">2 y llamamiento de los Gentiles.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 9:6"/>No empero que la palabra de Dios haya faltado: porque <note caller="+" style="x"><char style="xo" closed="false">9.6 </char><char style="xt" closed="false"><ref loc="GAL 6:16">Ga. 6.16</ref>.</char></note>no todos los que son de Israel son Israelitas;<verse eid="ROM 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 9:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 8:37">Jn. 8.37</ref>,<ref loc="JHN 8:39">39</ref>.</char>
+    </note>Ni por ser simiente de Abraham, son todos hijos; mas: <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="GEN 21:12">Gn. 21.12</ref>. <ref loc="GAL 3:29">Ga. 3.29</ref>.</char></note>En Isaac te será llamada simiente.<verse eid="ROM 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 9:8"/>Quiere decir: No los que son hijos de la carne, éstos son los hijos de Dios; mas los que son <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false">cp. 4.16. <ref loc="GAL 4:28">Ga. 4.28</ref>.</char></note>hijos de la promesa, son contados en la generación.<verse eid="ROM 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 9:9"/>Porque la palabra de la promesa es esta: <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="GEN 18:10">Gn. 18.10</ref>.</char></note>Como en este tiempo vendré, y tendrá Sara un hijo.<verse eid="ROM 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 9:10"/>Y no sólo esto; mas también <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="GEN 25:21">Gn. 25.21</ref>.</char></note>Rebeca concibiendo de uno, de Isaac nuestro padre,<verse eid="ROM 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 9:11"/>(Porque no siendo aún nacidos, ni habiendo hecho aún ni bien ni mal, para que el propósito de Dios conforme á la elección, no por las obras sino <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false">cp. 8.28.</char></note>por el que llama, permaneciese;)<verse eid="ROM 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 9:12"/>Le fué dicho que <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="GEN 25:23">Gn. 25.23</ref>.</char></note>el mayor serviría al menor.<verse eid="ROM 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 9:13"/>Como está escrito: <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false"><ref loc="MAL 1:2">Mal. 1.2</ref>,<ref loc="MAL 1:3">3</ref>.</char></note>A Jacob amé, mas á Esaú aborrecí.<verse eid="ROM 9:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 9:14"/>¿Pues qué diremos? ¿Que hay injusticia en Dios? En ninguna manera.<verse eid="ROM 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 9:15"/>Mas á Moisés dice: <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="EXO 33:19">Ex. 33.19</ref>.</char></note>Tendré misericordia del que tendré misericordia, y me compadeceré del que me compadeceré.<verse eid="ROM 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 9:16"/>Así que no es del que quiere, ni del que corre, sino de Dios que tiene misericordia.<verse eid="ROM 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 9:17"/>Porque la Escritura dice de Faraón: <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="EXO 9:16">Ex. 9.16</ref>.</char></note>Que para esto mismo te he levantado, para mostrar en ti mi potencia, y que mi nombre sea anunciado por toda la tierra.<verse eid="ROM 9:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 9:18"/>De manera que del que quiere tiene misericordia; y al que quiere, endurece.<verse eid="ROM 9:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 9:19"/>Me dirás pues: ¿Por qué, pues, se enoja? porque ¿quién resistirá á su voluntad?<verse eid="ROM 9:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 9:20"/>Mas antes, <note caller="+" style="x"><char style="xo" closed="false">9.20 </char><char style="xt" closed="false">cp. 2.1.</char></note>oh hombre, ¿quién eres tú, para que alterques con Dios? <note caller="+" style="x"><char style="xo" closed="false">9.20 </char><char style="xt" closed="false"><ref loc="ISA 29:16">Is. 29.16</ref> y <ref loc="ISA 45:9">45.9</ref>.</char></note>Dirá el vaso de barro al que le labró: ¿Por qué me has hecho tal?<verse eid="ROM 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 9:21"/>¿O no tiene <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="JER 18:6">Jer. 18.6</ref>.</char></note>potestad el alfarero para hacer de la misma masa <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="2TI 2:20">2 Ti. 2.20</ref>.</char></note>un vaso para honra, y otro para vergüenza?<verse eid="ROM 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 9:22"/>¿Y qué, si Dios, queriendo mostrar la ira y hacer notoria su potencia, soportó con mucha <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false">cp. 2.4.</char></note>mansedumbre los vasos de ira preparados para muerte,<verse eid="ROM 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 9:23"/>Y para hacer notorias <char style="fm">9.22</char> las riquezas de su gloria, <char style="it">mostrólas</char> para con los vasos de misericordia que él ha <note caller="+" style="x"><char style="xo" closed="false">9.23 </char><char style="xt" closed="false">cp. 8.28-30.</char></note>preparado para gloria;<verse eid="ROM 9:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 9:24"/>Los cuales también <char style="fm">9.23</char> ha llamado, <char style="it">es á saber,</char> á nosotros, <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false">cp. 3.29.</char></note>no sólo de los Judíos, mas también de los Gentiles?<verse eid="ROM 9:24"/></para>
+  <para style="q">
+    <verse number="25" style="v" sid="ROM 9:25"/>Como también en Oseas dice:</para>
+  <para style="q" vid="ROM 9:25">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.25 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:23">Os. 2.23</ref>. <ref loc="1PE 2:10">1 P. 2.10</ref>.</char>
+    </note>Llamaré al que no era mi pueblo, pueblo mío;</para>
+  <para style="q" vid="ROM 9:25">Y á la no amada, amada.<verse eid="ROM 9:25"/></para>
+  <para style="q">
+    <verse number="26" style="v" sid="ROM 9:26"/>Y será, <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false"><ref loc="HOS 1:10">Os. 1.10</ref>.</char></note>que en el lugar donde les fué dicho: Vosotros no sois pueblo mío:</para>
+  <para style="q" vid="ROM 9:26">Allí serán llamados hijos del Dios viviente.<verse eid="ROM 9:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 9:27"/>También Isaías clama tocante á Israel: <note caller="+" style="x"><char style="xo" closed="false">9.27 </char><char style="xt" closed="false"><ref loc="ISA 10:22">Is. 10.22</ref>,<ref loc="ISA 10:23">23</ref>.</char></note>Si fuere el número de los hijos de Israel como la arena de la mar, <note caller="+" style="x"><char style="xo" closed="false">9.27 </char><char style="xt" closed="false">cp. 11.5.</char></note>las reliquias serán salvas:<verse eid="ROM 9:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 9:28"/>Porque palabra consumadora y abreviadora en justicia, <note caller="+" style="x"><char style="xo" closed="false">9.28 </char><char style="xt" closed="false"><ref loc="ISA 28:22">Is. 28.22</ref>.</char></note>porque palabra abreviada, hará el Señor sobre la tierra.<verse eid="ROM 9:28"/></para>
+  <para style="q">
+    <verse number="29" style="v" sid="ROM 9:29"/>Y como antes dijo Isaías:</para>
+  <para style="q" vid="ROM 9:29">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.29 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:9">Is. 1.9</ref>.</char>
+    </note>Si el Señor de los ejércitos no nos hubiera dejado simiente,</para>
+  <para style="q" vid="ROM 9:29">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.29 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 13:19">Is. 13.19</ref>.</char>
+    </note>Como Sodoma habríamos venido á ser, y á Gomorra fuéramos semejantes.<verse eid="ROM 9:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 9:30"/>¿Pues qué diremos? Que los Gentiles que no seguían justicia, han alcanzado la justicia, es á saber, <note caller="+" style="x"><char style="xo" closed="false">9.30 </char><char style="xt" closed="false">cp. 1.17 y <ref loc="ROM 10:3">10.3</ref>.</char></note>la justicia que es por la fe;<verse eid="ROM 9:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 9:31"/>Mas Israel <note caller="+" style="x"><char style="xo" closed="false">9.31 </char><char style="xt" closed="false">cp. 10.2,3 y <ref loc="ROM 11:7">11.7</ref>.</char></note>que seguía la ley de justicia, no ha llegado á la ley de justicia.<verse eid="ROM 9:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 9:32"/>¿Por qué? Porque <char style="it">la seguían</char> no por fe, mas como por las obras de la ley: por lo cual <note caller="+" style="x"><char style="xo" closed="false">9.32 </char><char style="xt" closed="false"><ref loc="LUK 2:34">Lc. 2.34</ref>. <ref loc="1CO 1:23">1 Co. 1.23</ref>.</char></note>tropezaron en la piedra de tropiezo,<verse eid="ROM 9:32"/></para>
+  <para style="q">
+    <verse number="33" style="v" sid="ROM 9:33"/>Como está escrito:</para>
+  <para style="q" vid="ROM 9:33">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.33 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 8:14">Is. 8.14</ref> y <ref loc="ISA 28:16">28.16</ref>. <ref loc="1PE 2:6-8">1 P. 2.6-8</ref>.</char>
+    </note>He aquí pongo en Sión piedra de tropiezo, y piedra de caída;</para>
+  <para style="q" vid="ROM 9:33">Y <note caller="+" style="x"><char style="xo" closed="false">9.33 </char><char style="xt" closed="false">cp. 10.11.</char></note>aquel que creyere en ella, no será avergonzado.<verse eid="ROM 9:33"/></para>
+  <chapter eid="ROM 9"/>
+  <chapter number="10" style="c" sid="ROM 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 10:1"/>HERMANOS, ciertamente <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false">cp. 9.2,3.</char></note>la voluntad de mi corazón y mi oración á Dios sobre Israel, es para salud.<verse eid="ROM 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 10:2"/>Porque yo les doy testimonio <note caller="+" style="x"><char style="xo" closed="false">10.2 </char><char style="xt" closed="false"><ref loc="ACT 21:20">Hch. 21.20</ref>.</char></note>que tienen celo de Dios, mas no conforme á ciencia.<verse eid="ROM 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 10:3"/>Porque ignorando la justicia de Dios, y procurando establecer la suya propia, <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false"><ref loc="PHP 3:9">Fil. 3.9</ref>.</char></note>no se han sujetado á la justicia de Dios.<verse eid="ROM 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 10:4"/>Porque el fin de la ley <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false"><ref loc="MAT 5:17">Mt. 5.17</ref>.</char></note>es Cristo, para justicia á todo aquel que cree.<verse eid="ROM 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 10:5"/>Porque Moisés describe la justicia que es por la ley: <note caller="+" style="x"><char style="xo" closed="false">10.5 </char><char style="xt" closed="false"><ref loc="LEV 18:5">Lv. 18.5</ref>. <ref loc="GAL 3:12">Ga. 3.12</ref>.</char></note>Que el hombre que hiciere estas cosas, vivirá por ellas.<verse eid="ROM 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 10:6"/>Mas la justicia que es por la fe dice así: <note caller="+" style="x"><char style="xo" closed="false">10.6 </char><char style="xt" closed="false"><ref loc="DEU 30:12">Dt. 30.12</ref>,<ref loc="DEU 30:13">13</ref>.</char></note>No digas en tu corazón: ¿Quién subirá al cielo? (esto es, <note caller="+" style="x"><char style="xo" closed="false">10.6 </char><char style="xt" closed="false"><ref loc="JHN 3:13">Jn. 3.13</ref>.</char></note>para traer abajo á Cristo:)<verse eid="ROM 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 10:7"/>O, ¿quién descenderá al abismo? (esto es, para volver á traer á Cristo de los muertos.)<verse eid="ROM 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 10:8"/>Mas ¿qué dice? <note caller="+" style="x"><char style="xo" closed="false">10.8 </char><char style="xt" closed="false"><ref loc="DEU 30:14">Dt. 30.14</ref>.</char></note>Cercana está la palabra, en tu boca y en tu corazón. Esta es la palabra de fe, la cual predicamos:<verse eid="ROM 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 10:9"/>Que <note caller="+" style="x"><char style="xo" closed="false">10.9 </char><char style="xt" closed="false"><ref loc="MAT 10:32">Mt. 10.32</ref>. <ref loc="LUK 12:8">Lc. 12.8</ref>.</char></note>si confesares con tu boca al Señor Jesús, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo.<verse eid="ROM 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 10:10"/>Porque con el corazón se cree para justicia; mas con la boca se hace confesión para salud.<verse eid="ROM 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 10:11"/>Porque la Escritura dice: <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="ISA 28:16">Is. 28.16</ref>. cp. 9.33.</char></note>Todo aquel que en él creyere, no será avergonzado.<verse eid="ROM 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 10:12"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false"><ref loc="MAT 8:11">Mt. 8.11</ref>. cp. 1.16.</char></note>no hay diferencia de Judío y de Griego: porque <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false"><ref loc="ACT 10:36">Hch. 10.36</ref>. cp. 3.29.</char></note>el mismo que es Señor de todos, rico es para con todos los que le invocan:<verse eid="ROM 10:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 10:13"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.13 </char><char style="xt" closed="false"><ref loc="JOL 2:32">Jl. 2.32</ref>. <ref loc="ACT 2:21">Hch. 2.21</ref>.</char></note>todo aquel que invocare el nombre del Señor, será salvo.<verse eid="ROM 10:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 10:14"/>¿Cómo, pues invocarán á aquel en el cual no han creído? ¿y cómo creerán á aquel de quien no han oído? ¿y cómo oirán sin <char style="it">haber</char> quien <char style="it">les</char> predique?<verse eid="ROM 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 10:15"/>¿Y cómo predicarán si no <note caller="+" style="x"><char style="xo" closed="false">10.15 </char><char style="xt" closed="false"><ref loc="ACT 13:2">Hch. 13.2</ref>.</char></note>xueren enviados? Como está escrito: <note caller="+" style="x"><char style="xo" closed="false">10.15 </char><char style="xt" closed="false"><ref loc="ISA 52:7">Is. 52.7</ref>.</char></note>¡Cuán hermosos son los pies de los que anuncian el evangelio de la paz, de los que anuncian el evangelio de los bienes!<verse eid="ROM 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 10:16"/>Mas no todos obedecen al evangelio; pues Isaías dice: <note caller="+" style="x"><char style="xo" closed="false">10.16 </char><char style="xt" closed="false"><ref loc="ISA 53:1">Is. 53.1</ref>. <ref loc="JHN 12:38">Jn. 12.38</ref>.</char></note>Señor, ¿quién ha creído á nuestro anuncio?<verse eid="ROM 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 10:17"/>Luego la fe es por el oir; y el oir por la palabra de Dios.<verse eid="ROM 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 10:18"/>Mas digo: ¿No han oído? <note caller="+" style="x"><char style="xo" closed="false">10.18 </char><char style="xt" closed="false"><ref loc="PSA 19:4">Sal. 19.4</ref>.</char></note>Antes bien,</para>
+  <para style="q" vid="ROM 10:18">Por toda la tierra ha salido la fama de ellos,</para>
+  <para style="q" vid="ROM 10:18">Y hasta los cabos de la redondez de la tierra las palabras de ellos.<verse eid="ROM 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 10:19"/>Mas digo: ¿No ha conocido <char style="it">esto</char> Israel? Primeramente Moisés dice:</para>
+  <para style="q" vid="ROM 10:19">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:21">Dt. 32.21</ref>. cp. 11.11.</char>
+    </note>Yo os provocaré á celos con gente que no es <char style="it">mía;</char></para>
+  <para style="q" vid="ROM 10:19">Con <note caller="+" style="x"><char style="xo" closed="false">10.19 </char><char style="xt" closed="false"><ref loc="TIT 3:3">Tit. 3.3</ref>.</char></note>gente insensata os provocaré á ira.<verse eid="ROM 10:19"/></para>
+  <para style="q">
+    <verse number="20" style="v" sid="ROM 10:20"/>E Isaías determinadamente dice:</para>
+  <para style="q" vid="ROM 10:20">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">10.20 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 65:1">Is. 65.1</ref>. cp. 9.30.</char>
+    </note>Fuí hallado de los que no me buscaban;</para>
+  <para style="q" vid="ROM 10:20">Manifestéme á los que no preguntaban por mí.<verse eid="ROM 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 10:21"/>Mas acerca de Israel dice: <note caller="+" style="x"><char style="xo" closed="false">10.21 </char><char style="xt" closed="false"><ref loc="ISA 65:2">Is. 65.2</ref>.</char></note>Todo el día extendí mis manos á un pueblo rebelde y contradictor.<verse eid="ROM 10:21"/></para>
+  <chapter eid="ROM 10"/>
+  <chapter number="11" style="c" sid="ROM 11"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 11:1"/>DIGO pues: ¿Ha desechado Dios á su pueblo? En ninguna manera. Porque también <note caller="+" style="x"><char style="xo" closed="false">11.1 </char><char style="xt" closed="false"><ref loc="2CO 11:22">2 Co. 11.22</ref>. <ref loc="PHP 3:5">Fil. 3.5</ref>.</char></note>yo soy Israelita, de la simiente de Abraham, de la tribu de Benjamín.<verse eid="ROM 11:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 11:2"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 94:14">Sal. 94.14</ref>.</char>
+    </note>No ha desechado Dios á su pueblo, al cual <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false">cp. 8.29.</char></note>antes conoció. ¿O no sabéis qué dice de Elías la Escritura? cómo hablando con Dios contra Israel <char style="it">dice:</char><verse eid="ROM 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 11:3"/>Señor, <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="1KI 19:10">1 R. 19.10</ref>,<ref loc="1KI 19:14">14</ref>.</char></note>a tus profetas han muerto, y tus altares han derruído; y yo he quedado solo, y procuran matarme.<verse eid="ROM 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 11:4"/>Mas ¿qué le dice la divina respuesta? <note caller="+" style="x"><char style="xo" closed="false">11.4 </char><char style="xt" closed="false"><ref loc="1KI 19:18">1 R. 19.18</ref>.</char></note>He dejado para mí siete mil hombres, que no han doblado la rodilla delante de Baal.<verse eid="ROM 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 11:5"/>Así también, <note caller="+" style="x"><char style="xo" closed="false">11.5 </char><char style="xt" closed="false">cp. 9.27.</char></note>aun en este tiempo han quedado reliquias por la elección de gracia.<verse eid="ROM 11:5"/></para>
+  <para style="s">1 La conversión de los Gentiles</para>
+  <para style="s">2 y la restauración de Israel.</para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 11:6"/>Y <note caller="+" style="x"><char style="xo" closed="false">11.6 </char><char style="xt" closed="false">cp. 4.4,5. <ref loc="GAL 5:4">Ga. 5.4</ref>.</char></note>si por gracia, luego no por las obras; de otra manera la gracia ya no es gracia. Y si por las obras, ya no es gracia; de otra manera la obra ya no es obra.<verse eid="ROM 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 11:7"/>¿Qué pues? Lo que buscaba <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false">cp. 9.31 y <ref loc="ROM 10:3">10.3</ref>.</char></note>Israel aquello no ha alcanzado; mas la elección lo ha alcanzado: y los demás fueron endurecidos;<verse eid="ROM 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 11:8"/>Como está escrito: <note caller="+" style="x"><char style="xo" closed="false">11.8 </char><char style="xt" closed="false"><ref loc="ISA 29:10">Is. 29.10</ref>.</char></note>Dióles Dios espíritu de remordimiento, <note caller="+" style="x"><char style="xo" closed="false">11.8 </char><char style="xt" closed="false"><ref loc="ISA 6:9">Is. 6.9</ref>. <ref loc="MAT 13:14">Mt. 13.14</ref>.</char></note>ojos con que no vean, y oídos con que no oigan, hasta el día de hoy.<verse eid="ROM 11:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="ROM 11:9"/>Y David dice:</para>
+  <para style="q" vid="ROM 11:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 69:22">Sal. 69.22</ref>,<ref loc="PSA 69:23">23</ref>.</char>
+    </note>Séales vuelta su mesa en lazo, y en red,</para>
+  <para style="q" vid="ROM 11:9">Y en tropezadero, y en paga:<verse eid="ROM 11:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="ROM 11:10"/>Sus ojos sean obscurecidos para que no vean,</para>
+  <para style="q" vid="ROM 11:10">Y agóbiales siempre el espinazo.<verse eid="ROM 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 11:11"/>Digo pues: ¿Han tropezado para que cayesen? En ninguna manera; mas por el tropiezo de ellos <note caller="+" style="x"><char style="xo" closed="false">11.11 </char><char style="xt" closed="false"><ref loc="ACT 28:28">Hch. 28.28</ref>.</char></note><char style="it">vino</char> la salud á los Gentiles, <note caller="+" style="x"><char style="xo" closed="false">11.11 </char><char style="xt" closed="false">cp. 10.19.</char></note>para que fuesen provocados á celos.<verse eid="ROM 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 11:12"/>Y si la falta de ellos es la riqueza del mundo, y el menoscabo de ellos la riqueza de los Gentiles, ¿cuánto más el henchimiento de ellos?<verse eid="ROM 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 11:13"/>Porque á vosotros hablo, Gentiles. Por cuanto pues, <note caller="+" style="x"><char style="xo" closed="false">11.13 </char><char style="xt" closed="false"><ref loc="ACT 9:15">Hch. 9.15</ref>. cp. 15.16.</char></note>yo soy apóstol de los Gentiles, mi ministerio honro.<verse eid="ROM 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 11:14"/>Por si en alguna manera provocase á celos á mi carne, é <note caller="+" style="x"><char style="xo" closed="false">11.14 </char><char style="xt" closed="false"><ref loc="1CO 9:22">1 Co. 9.22</ref>.</char></note>hiciese salvos á algunos de ellos.<verse eid="ROM 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 11:15"/>Porque si el extrañamiento de ellos <char style="it">es</char> la reconciliación del mundo, ¿qué <char style="it">será</char> el recibimiento <char style="it">de ellos,</char> sino vida de los muertos?<verse eid="ROM 11:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 11:16"/>Y si el <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false"><ref loc="LEV 23:10">Lv. 23.10</ref>. <ref loc="NUM 15:19">Nm. 15.19</ref>,<ref loc="NUM 15:20">20</ref>.</char></note>primer fruto es santo, también lo es el todo, y si la raíz es santa, también lo son las ramas.<verse eid="ROM 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 11:17"/>Que si <note caller="+" style="x"><char style="xo" closed="false">11.17 </char><char style="xt" closed="false"><ref loc="JER 11:16">Jer. 11.16</ref>. <ref loc="JHN 15:2">Jn. 15.2</ref>.</char></note>algunas de las ramas fueron quebradas, <note caller="+" style="x"><char style="xo" closed="false">11.17 </char><char style="xt" closed="false"><ref loc="EPH 2:12">Ef. 2.12</ref>.</char></note>y tú, siendo acebuche, has sido ingerido en lugar de ellas, y has sido hecho participante de la raíz y de la grosura de la oliva;<verse eid="ROM 11:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 11:18"/>No te jactes contra las ramas; y si te jactas, <char style="it">sabe que</char> no sustentas tú á la raíz, sino la raíz á ti.<verse eid="ROM 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 11:19"/>Pues las ramas, dirás, fueron quebradas para que yo fuese ingerido.<verse eid="ROM 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 11:20"/>Bien: por su incredulidad fueron quebradas, mas tú <note caller="+" style="x"><char style="xo" closed="false">11.20 </char><char style="xt" closed="false"><ref loc="1CO 10:12">1 Co. 10.12</ref>. <ref loc="2CO 1:24">2 Co. 1.24</ref>.</char></note>por la fe estás en pie. No te ensoberbezcas, antes teme.<verse eid="ROM 11:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 11:21"/>Que si Dios no perdonó á las ramas naturales, á ti tampoco no perdone.<verse eid="ROM 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 11:22"/>Mira, pues, la bondad y la severidad de Dios: la severidad ciertamente en los que cayeron; mas la bondad para contigo, si permanecieres en la bondad; pues de otra manera <note caller="+" style="x"><char style="xo" closed="false">11.22 </char><char style="xt" closed="false"><ref loc="JHN 15:2">Jn. 15.2</ref>.</char></note>tú también serás cortado.<verse eid="ROM 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 11:23"/>Y aun ellos, si no permanecieren en incredulidad, serán ingeridos; que poderoso es Dios para volverlos á ingerir.<verse eid="ROM 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 11:24"/>Porque si tú eres cortado del natural acebuche, y contra natura fuiste ingerido en la buena oliva, ¿cuánto más éstos, que son las <char style="it">ramas</char> naturales, serán ingeridos en su oliva?<verse eid="ROM 11:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 11:25"/>Porque no quiero, hermanos, que ignoréis este misterio, para que no seáis <note caller="+" style="x"><char style="xo" closed="false">11.25 </char><char style="xt" closed="false">cp. 12.16.</char></note>acerca de vosotros mismos arrogantes: que el <note caller="+" style="x"><char style="xo" closed="false">11.25 </char><char style="xt" closed="false"><ref loc="2CO 3:14">2 Co. 3.14</ref>.</char></note>endurecimiento en parte ha acontecido en Israel, <note caller="+" style="x"><char style="xo" closed="false">11.25 </char><char style="xt" closed="false"><ref loc="LUK 21:24">Lc. 21.24</ref>.</char></note>hasta que haya entrado la plenitud de los Gentiles;<verse eid="ROM 11:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 11:26"/>Y luego todo Israel será salvo; como está escrito:</para>
+  <para style="q" vid="ROM 11:26">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.26 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 59:20">Is. 59.20</ref>,<ref loc="ISA 59:21">21</ref>.</char>
+    </note>Vendrá de Sión el Libertador,</para>
+  <para style="q" vid="ROM 11:26">Que quitará de Jacob la impiedad;<verse eid="ROM 11:26"/></para>
+  <para style="q">
+    <verse number="27" style="v" sid="ROM 11:27"/>Y este es mi pacto con ellos,</para>
+  <para style="q" vid="ROM 11:27">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.27 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 27:9">Is. 27.9</ref>.</char>
+    </note>Cuando quitare su pecados.<verse eid="ROM 11:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 11:28"/>Así que, cuanto al evangelio, son enemigos por causa de vosotros: mas cuanto á la elección, son muy <note caller="+" style="x"><char style="xo" closed="false">11.28 </char><char style="xt" closed="false"><ref loc="DEU 7:8">Dt. 7.8</ref> y <ref loc="DEU 10:15">10.15</ref>.</char></note>amados por causa de los padres.<verse eid="ROM 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 11:29"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.29 </char><char style="xt" closed="false"><ref loc="NUM 23:19">Nm. 23.19</ref>.</char></note>sin arrepentimiento son las mercedes y la vocación de Dios.<verse eid="ROM 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 11:30"/>Porque como también vosotros <note caller="+" style="x"><char style="xo" closed="false">11.30 </char><char style="xt" closed="false"><ref loc="EPH 2:2">Ef. 2.2</ref>.</char></note>en algún tiempo no creísteis á Dios, mas ahora habéis alcanzado misericordia por la incredulidad de ellos;<verse eid="ROM 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 11:31"/>Así también éstos ahora no ha creído, para que, por la misericordia para con vosotros, ellos también alcancen misericordia.<verse eid="ROM 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 11:32"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false">cp. 3.9. <ref loc="GAL 3:22">Ga. 3.22</ref>.</char></note>Dios encerró á todos en incredulidad, para tener misericordia de todos.<verse eid="ROM 11:32"/></para>
+  <para style="s">1 Amor, fervor, humildad.</para>
+  <para style="s">2 Sumisión á las autoridades.</para>
+  <para style="p">
+    <verse number="33" style="v" sid="ROM 11:33"/>¡Oh profundidad de las riquezas de la sabiduría y de la ciencia de Dios! ¡Cuán incomprensibles son <note caller="+" style="x"><char style="xo" closed="false">11.33 </char><char style="xt" closed="false"><ref loc="JOB 11:7">Job 11.7</ref>. <ref loc="PSA 36:6">Sal. 36.6</ref>.</char></note>sus juicios, é <note caller="+" style="x"><char style="xo" closed="false">11.33 </char><char style="xt" closed="false"><ref loc="DEU 29:29">Dt. 29.29</ref>.</char></note>inescrutables sus caminos!<verse eid="ROM 11:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="ROM 11:34"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false"><ref loc="JOB 15:8">Job 15.8</ref>. <ref loc="ISA 40:13">Is. 40.13</ref>. <ref loc="JER 23:18">Jer. 23.18</ref>. <ref loc="1CO 2:16">1 Co. 2.16</ref>.</char></note>¿quién entendió la mente del Señor? ¿ó quién fué su consejero?<verse eid="ROM 11:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="ROM 11:35"/>¿O <note caller="+" style="x"><char style="xo" closed="false">11.35 </char><char style="xt" closed="false"><ref loc="JOB 35:7">Job 35.7</ref>.</char></note>quién le dió á él primero, para que le sea pagado?<verse eid="ROM 11:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="ROM 11:36"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.36 </char><char style="xt" closed="false"><ref loc="1CO 8:6">1 Co. 8.6</ref>. <ref loc="COL 1:16">Col. 1.16</ref>.</char></note>de él, y por él, y en él, son todas las cosas. <note caller="+" style="x"><char style="xo" closed="false">11.36 </char><char style="xt" closed="false"><ref loc="GAL 1:5">Ga. 1.5</ref>. <ref loc="1TI 1:17">1 Ti. 1.17</ref>. <ref loc="2TI 4:18">2 Ti. 4.18</ref>.</char></note>A él sea gloria por siglos. Amén.<verse eid="ROM 11:36"/></para>
+  <chapter eid="ROM 11"/>
+  <chapter number="12" style="c" sid="ROM 12"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 12:1"/>ASÍ que, hermanos, <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false"><ref loc="1CO 1:10">1 Co. 1.10</ref>. <ref loc="2CO 10:1">2 Co. 10.1</ref>.</char></note>os ruego por las misericordias de Dios, <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false">cp. 6.13.</char></note>que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable á Dios, <char style="it">que es</char> vuestro racional culto.<verse eid="ROM 12:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 12:2"/>Y <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="1PE 1:14">1 P. 1.14</ref>.</char></note>no os conforméis <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="1JN 2:15">1 Jn. 2.15</ref>.</char></note>a este siglo; mas reformaos <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="TIT 3:5">Tit. 3.5</ref>.</char></note>por la renovación de vuestro entendimiento, para que experimentéis <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="EPH 5:10">Ef. 5.10</ref>,<ref loc="EPH 5:17">17</ref>. <ref loc="1TH 4:3">1 Ts. 4.3</ref>.</char></note>cuál sea la buena voluntad de Dios, agradable y perfecta.<verse eid="ROM 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 12:3"/>Digo pues por la gracia que me es dada, á cada cual que está entre vosotros, que <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false"><ref loc="1CO 4:6">1 Co. 4.6</ref>.</char></note>no tenga más alto concepto de sí que el que debe tener, sino que piense de sí con templanza, <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false"><ref loc="1CO 7:17">1 Co. 7.17</ref>. <ref loc="EPH 4:7">Ef. 4.7</ref>.</char></note>conforme á la medida de la fe que Dios repartió á cada uno.<verse eid="ROM 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 12:4"/>Porque <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false"><ref loc="1CO 12:12">1 Co. 12.12</ref>. <ref loc="EPH 4:4">Ef. 4.4</ref>,<ref loc="EPH 4:16">16</ref>.</char></note>de la manera que en un cuerpo tenemos muchos miembros, empero todos los miembros no tienen la misma operación;<verse eid="ROM 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 12:5"/>Así <note caller="+" style="x"><char style="xo" closed="false">12.5 </char><char style="xt" closed="false"><ref loc="JHN 17:21">Jn. 17.21</ref>. <ref loc="1CO 6:15">1 Co. 6.15</ref> y <ref loc="1CO 12:20">12.20</ref>,<ref loc="1CO 12:27">27</ref>. <ref loc="EPH 1:23">Ef. 1.23</ref>.</char></note>muchos somos un cuerpo en Cristo, mas todos <note caller="+" style="x"><char style="xo" closed="false">12.5 </char><char style="xt" closed="false"><ref loc="EPH 4:25">Ef. 4.25</ref>.</char></note>miembros los unos de los otros.<verse eid="ROM 12:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 12:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 12:4">1 Co. 12.4</ref>.</char>
+    </note>De manera que, teniendo diferentes dones según la gracia que nos es dada, si <char style="it">el de</char> <note caller="+" style="x"><char style="xo" closed="false">12.6 </char><char style="xt" closed="false"><ref loc="ACT 2:18">Hch. 2.18</ref>.</char></note>profecía, <char style="it">úsese</char> conforme á la medida de la fe;<verse eid="ROM 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 12:7"/>ó si ministerio, en servir; ó el que enseña, en doctrina;<verse eid="ROM 12:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 12:8"/>El que exhorta, en exhortar; el que reparte, <char style="it">hágalo</char> en simplicidad; el que preside, con solicitud; el que hace misericordia, con alegría.<verse eid="ROM 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 12:9"/>El amor sea sin fingimiento: aborreciendo lo malo, llegándoos á lo bueno;<verse eid="ROM 12:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 12:10"/>Amándoos los unos á los otros con caridad fraternal; previniéndoos con honra los unos á los otros;<verse eid="ROM 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 12:11"/>En el cuidado no perezosos; ardientes en espíritu; sirviendo al Señor;<verse eid="ROM 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 12:12"/>Gozosos en la esperanza; sufridos en la tribulación; <note caller="+" style="x"><char style="xo" closed="false">12.12 </char><char style="xt" closed="false"><ref loc="LUK 18:1">Lc. 18.1</ref>.</char></note>constantes en la oración;<verse eid="ROM 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 12:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 16:1">1 Co. 16.1</ref>. <ref loc="2CO 9:1">2 Co. 9.1</ref>,<ref loc="2CO 9:12">12</ref>. <ref loc="GAL 2:10">Ga. 2.10</ref>.</char>
+    </note>Comunicando á las necesidades de los santos; siguiendo la hospitalidad.<verse eid="ROM 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 12:14"/>Bendecid á los <note caller="+" style="x"><char style="xo" closed="false">12.14 </char><char style="xt" closed="false"><ref loc="MAT 5:44">Mt. 5.44</ref>.</char></note>que os persiguen: bendecid y no maldigáis.<verse eid="ROM 12:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 12:15"/>Gozaos con los que <note caller="+" style="x"><char style="xo" closed="false">12.15 </char><char style="xt" closed="false"><ref loc="JOB 30:25">Job 30.25</ref>.</char></note>se gozan: llorad con los que lloran.<verse eid="ROM 12:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 12:16"/>Unánimes <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false">cp. 15.5.</char></note>entre vosotros: <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false"><ref loc="PSA 131:1">Sal. 131.1</ref>.</char></note>no altivos, mas acomodándoos á los humildes. <note caller="+" style="x"><char style="xo" closed="false">12.16 </char><char style="xt" closed="false"><ref loc="PRO 3:7">Pr. 3.7</ref>. cp. 11.25.</char></note>No seáis sabios en vuestra opinión.<verse eid="ROM 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 12:17"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12.17 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 5:39">Mt. 5.39</ref>.</char>
+    </note>No paguéis á nadie mal por mal; <note caller="+" style="x"><char style="xo" closed="false">12.17 </char><char style="xt" closed="false"><ref loc="2CO 8:21">2 Co. 8.21</ref>.</char></note>procurad lo bueno delante de todos los hombres.<verse eid="ROM 12:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 12:18"/>Si se puede hacer, cuanto está en vosotros, <note caller="+" style="x"><char style="xo" closed="false">12.18 </char><char style="xt" closed="false"><ref loc="MRK 9:50">Mr. 9.50</ref>.</char></note>tened paz con todos los hombres.<verse eid="ROM 12:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 12:19"/>No os venguéis <note caller="+" style="x"><char style="xo" closed="false">12.19 </char><char style="xt" closed="false"><ref loc="LEV 19:18">Lv. 19.18</ref>.</char></note>vosotros mismos, amados míos; antes dad lugar á la ira; porque escrito está: <note caller="+" style="x"><char style="xo" closed="false">12.19 </char><char style="xt" closed="false"><ref loc="DEU 32:35">Dt. 32.35</ref>. <ref loc="HEB 10:30">He. 10.30</ref>.</char></note>Mía es la venganza: yo pagaré, dice el Señor.<verse eid="ROM 12:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 12:20"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">12.20 </char><char style="xt" closed="false"><ref loc="PRO 25:21">Pr. 25.21</ref>,<ref loc="PRO 25:22">22</ref>.</char></note>si tu enemigo tuviere hambre, dale de comer; si tuviere sed, dale de beber: que haciendo esto, ascuas de fuego amontonas sobre su cabeza.<verse eid="ROM 12:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 12:21"/>No seas vencido de lo malo; mas vence con el bien el mal.<verse eid="ROM 12:21"/></para>
+  <chapter eid="ROM 12"/>
+  <chapter number="13" style="c" sid="ROM 13"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 13:1"/>TODA <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false"><ref loc="TIT 3:1">Tit. 3.1</ref>. <ref loc="1PE 2:13">1 P. 2.13</ref>.</char></note>alma se someta á las potestades superiores; porque <note caller="+" style="x"><char style="xo" closed="false">13.1 </char><char style="xt" closed="false"><ref loc="JHN 19:11">Jn. 19.11</ref>.</char></note>no hay potestad sino de Dios; y las que son, de Dios son ordenadas.<verse eid="ROM 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 13:2"/>Asi que, el que se opone á la potestad, á la ordenación de Dios resiste: y los que resisten, ellos mismos ganan condenación para sí.<verse eid="ROM 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 13:3"/>Porque los magistrados no son para temor al que bien hace, sino al malo. ¿Quieres pues no temer la potestad? <note caller="+" style="x"><char style="xo" closed="false">13.3 </char><char style="xt" closed="false"><ref loc="1PE 2:14">1 P. 2.14</ref>.</char></note>haz lo bueno, y tendrás alabanza de ella;<verse eid="ROM 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 13:4"/>Porque es ministro de Dios para tu bien. Mas si hicieres lo malo, teme: porque no en vano lleva el cuchillo; porque es ministro de Dios, vengador para castigo al que hace lo malo.<verse eid="ROM 13:4"/></para>
+  <para style="s">1 El amor, resumen de la ley.</para>
+  <para style="s">2 Tolerancia y caridad</para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 13:5"/>Por lo cual es necesario que <char style="it">le</char> estéis sujetos, no solamente por la ira, mas aun por la conciencia.<verse eid="ROM 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 13:6"/>Porque por esto pagáis también <note caller="+" style="x"><char style="xo" closed="false">13.6 </char><char style="xt" closed="false"><ref loc="LUK 20:22">Lc. 20.22</ref>.</char></note>los tributos; porque son ministros de Dios que sirven á esto mismo.<verse eid="ROM 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 13:7"/>Pagad á todos lo que debéis: <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="MAT 22:21">Mt. 22.21</ref>. <ref loc="LUK 20:25">Lc. 20.25</ref>.</char></note>al que tributo, tributo; al que pecho, <note caller="+" style="x"><char style="xo" closed="false">13.7 </char><char style="xt" closed="false"><ref loc="MAT 17:25">Mt. 17.25</ref>.</char></note>pecho; al que temor, temor; al que honra, honra.<verse eid="ROM 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 13:8"/>No debáis á nadie nada, sino amaros unos á otros; <note caller="+" style="x"><char style="xo" closed="false">13.8 </char><char style="xt" closed="false">ver. 10. <ref loc="JHN 13:34">Jn. 13.34</ref>. <ref loc="COL 3:14">Col. 3.14</ref>. <ref loc="1TI 1:5">1 Ti. 1.5</ref>.</char></note>porque el que ama al prójimo, cumplió la ley.<verse eid="ROM 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 13:9"/>Porque: <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="EXO 20:13-17">Ex. 20.13-17</ref>.</char></note>No adulterarás; no matarás; no hurtarás; no dirás falso testimonio; no codiciarás: y si hay algún otro mandamiento, en esta sentencia se comprende sumariamente: <note caller="+" style="x"><char style="xo" closed="false">13.9 </char><char style="xt" closed="false"><ref loc="LEV 19:18">Lv. 19.18</ref>. <ref loc="MAT 19:19">Mt. 19.19</ref> y <ref loc="MAT 22:39">22.39</ref>. <ref loc="GAL 5:14">Ga. 5.14</ref>. <ref loc="JAS 2:8">Stg. 2.8</ref>.</char></note>Amarás á tu prójimo como á ti mismo.<verse eid="ROM 13:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 13:10"/>La caridad no hace mal al prójimo: <note caller="+" style="x"><char style="xo" closed="false">13.10 </char><char style="xt" closed="false"><ref loc="MAT 22:40">Mt. 22.40</ref>.</char></note>así que, el cumplimento de la ley es la caridad.<verse eid="ROM 13:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 13:11"/>Y esto, conociendo el tiempo, que es ya hora de <note caller="+" style="x"><char style="xo" closed="false">13.11 </char><char style="xt" closed="false"><ref loc="1CO 15:34">1 Co. 15.34</ref>. <ref loc="EPH 5:14">Ef. 5.14</ref>. <ref loc="1TH 5:6">1 Ts. 5.6</ref>.</char></note>levantarnos del sueño; porque ahora nos está más cerca nuestra salud que cuando creímos.<verse eid="ROM 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 13:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 9:4">Jn. 9.4</ref>.</char>
+    </note>La noche ha pasado, y ha llegado el día: <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false"><ref loc="EPH 5:11">Ef. 5.11</ref>.</char></note>echemos, pues, las obras de las tinieblas, y <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false"><ref loc="2CO 6:7">2 Co. 6.7</ref>. <ref loc="EPH 6:11">Ef. 6.11</ref>,<ref loc="EPH 6:13">13</ref>. <ref loc="1TH 5:5">1 Ts. 5.5</ref>,<ref loc="1TH 5:8">8</ref>.</char></note>vistámonos las armas de luz,<verse eid="ROM 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 13:13"/>Andemos como de día, honestamente: no en glotonerías y borracheras, no en <note caller="+" style="x"><char style="xo" closed="false">13.13 </char><char style="xt" closed="false"><ref loc="1CO 6:9">1 Co. 6.9</ref>.</char></note>lechos y disoluciones, no en pendencias y envidia:<verse eid="ROM 13:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 13:14"/>Mas vestíos <note caller="+" style="x"><char style="xo" closed="false">13.14 </char><char style="xt" closed="false"><ref loc="GAL 3:27">Ga. 3.27</ref>.</char></note>del Señor Jesucristo, y no hagáis caso de la carne en <char style="it">sus</char> deseos.<verse eid="ROM 13:14"/></para>
+  <chapter eid="ROM 13"/>
+  <chapter number="14" style="c" sid="ROM 14"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 14:1"/>RECIBID al <note caller="+" style="x"><char style="xo" closed="false">14.1 </char><char style="xt" closed="false">cp. 15.1. <ref loc="1CO 8:9">1 Co. 8.9</ref>,<ref loc="1CO 8:11">11</ref>.</char></note>xlaco en la fe, <char style="it">pero</char> no para contiendas de disputas.<verse eid="ROM 14:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 14:2"/>Porque uno cree que se ha de comer de todas cosas: otro que es débil, come legumbres.<verse eid="ROM 14:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 14:3"/>El que come, no menosprecie al que no come: y <note caller="+" style="x"><char style="xo" closed="false">14.3 </char><char style="xt" closed="false"><ref loc="COL 2:16">Col. 2.16</ref>.</char></note>el que no come, no juzgue al que come; porque Dios le ha levantado.<verse eid="ROM 14:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 14:4"/>¿Tú quién eres que juzgas al siervo ajeno? para su señor está en pie, ó cae: mas se afirmará; que poderoso es el Señor para afirmarle.<verse eid="ROM 14:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 14:5"/>Uno hace diferencia <note caller="+" style="x"><char style="xo" closed="false">14.5 </char><char style="xt" closed="false"><ref loc="GAL 4:10">Ga. 4.10</ref>.</char></note>entre día y día; otro juzga <char style="it">iguales</char> todos los días. Cada uno esté asegurado en su ánimo.<verse eid="ROM 14:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 14:6"/>El que hace caso del día, háce <char style="it">lo</char> para el Señor: y el que no hace caso del día, no lo hace para el Señor. El que come, come para el Señor, porque <note caller="+" style="x"><char style="xo" closed="false">14.6 </char><char style="xt" closed="false"><ref loc="1CO 10:31">1 Co. 10.31</ref>. <ref loc="1TI 4:3">1 Ti. 4.3</ref>,<ref loc="1TI 4:4">4</ref>.</char></note>da gracias á Dios; y el que no come, no come para el Señor, y da gracias á Dios.<verse eid="ROM 14:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 14:7"/>Porque <note caller="+" style="x"><char style="xo" closed="false">14.7 </char><char style="xt" closed="false"><ref loc="2CO 5:15">2 Co. 5.15</ref>. <ref loc="GAL 2:20">Ga. 2.20</ref>. <ref loc="1TH 5:10">1 Ts. 5.10</ref>.</char></note>ninguno de nosotros vive para sí, y ninguno muere para sí.<verse eid="ROM 14:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 14:8"/>Que si vivimos, para el Señor vivimos; y si morimos, para el Señor morimos. Así que, ó que vivamos, ó que muramos, del Señor somos.<verse eid="ROM 14:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 14:9"/>Porque Cristo para esto <note caller="+" style="x"><char style="xo" closed="false">14.9 </char><char style="xt" closed="false">cp. 8.34.</char></note>murió, y resucitó, y volvió á vivir, para ser <note caller="+" style="x"><char style="xo" closed="false">14.9 </char><char style="xt" closed="false"><ref loc="ACT 10:36">Hch. 10.36</ref>,<ref loc="ACT 10:42">42</ref>.</char></note>Señor así de los muertos como de los que viven.<verse eid="ROM 14:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 14:10"/>Mas tú ¿por qué juzgas á tu hermano? ó tú también, ¿por qué menosprecias á tu hermano? <note caller="+" style="x"><char style="xo" closed="false">14.10 </char><char style="xt" closed="false"><ref loc="MAT 25:31">Mt. 25.31</ref>,<ref loc="MAT 25:32">32</ref>. cp. 2.16.</char></note>porque todos hemos de estar ante el tribunal de Cristo.<verse eid="ROM 14:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 14:11"/>Porque escrito está:</para>
+  <para style="q" vid="ROM 14:11">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">14.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 45:23">Is. 45.23</ref>.</char>
+    </note>Vivo yo, dice el Señor, que á mí se doblará toda rodilla,</para>
+  <para style="q" vid="ROM 14:11">Y toda lengua confesará á Dios.<verse eid="ROM 14:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 14:12"/>De manera que, <note caller="+" style="x"><char style="xo" closed="false">14.12 </char><char style="xt" closed="false"><ref loc="MAT 12:36">Mt. 12.36</ref>. <ref loc="1PE 4:5">1 P. 4.5</ref>.</char></note>cada uno de nosotros dará á Dios razón de sí.<verse eid="ROM 14:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 14:13"/>Así que, no juzguemos más los unos de los otros: antes bien juzgad de <note caller="+" style="x"><char style="xo" closed="false">14.13 </char><char style="xt" closed="false"><ref loc="1CO 8:13">1 Co. 8.13</ref> y <ref loc="1CO 10:32">10.32</ref>.</char></note>no poner tropiezo ó escándalo al hermano.<verse eid="ROM 14:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 14:14"/>Yo sé, y confío en el Señor Jesús, <note caller="+" style="x"><char style="xo" closed="false">14.14 </char><char style="xt" closed="false"><ref loc="ACT 10:15">Hch. 10.15</ref>.</char></note>que de suyo nada hay inmundo: mas <note caller="+" style="x"><char style="xo" closed="false">14.14 </char><char style="xt" closed="false"><ref loc="1CO 8:7">1 Co. 8.7</ref>,<ref loc="1CO 8:10">10</ref>.</char></note>a aquel que piensa alguna cosa ser inmunda, para él es inmunda.<verse eid="ROM 14:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 14:15"/>Empero si por causa de la comida tu hermano es contristado, ya no andas conforme á la caridad. <note caller="+" style="x"><char style="xo" closed="false">14.15 </char><char style="xt" closed="false"><ref loc="1CO 8:11">1 Co. 8.11</ref>.</char></note>No arruines con tu comida á aquél por el cual Cristo murió.<verse eid="ROM 14:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 14:16"/>No sea pues blasfemado vuestro bien:<verse eid="ROM 14:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 14:17"/>Que el reino <note caller="+" style="x"><char style="xo" closed="false">14.17 </char><char style="xt" closed="false"><ref loc="1CO 8:8">1 Co. 8.8</ref>.</char></note>de Dios no es comida ni bebida, sino justicia y paz y gozo por el Espíritu Santo.<verse eid="ROM 14:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 14:18"/>Porque el que en esto sirve á Cristo, agrada á Dios, y es acepto á los hombres.<verse eid="ROM 14:18"/></para>
+  <para style="s">1 con los débiles en la fe.</para>
+  <para style="s">2 La obra entre los Gentiles.</para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 14:19"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">14.19 </char><char style="xt" closed="false"><ref loc="2TI 2:22">2 Ti. 2.22</ref>. <ref loc="HEB 12:14">He. 12.14</ref>.</char></note>sigamos lo que hace á la paz, y á la <note caller="+" style="x"><char style="xo" closed="false">14.19 </char><char style="xt" closed="false"><ref loc="2CO 12:19">2 Co. 12.19</ref>. <ref loc="1TH 5:11">1 Ts. 5.11</ref>.</char></note>edificación de los unos á los otros.<verse eid="ROM 14:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 14:20"/>No destruyas la obra de Dios por causa de la comida. <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="TIT 1:15">Tit. 1.15</ref>.</char></note>Todas las cosas á la verdad son limpias: <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="1CO 8:9-12">1 Co. 8.9-12</ref>.</char></note>mas malo es al hombre que come con escándalo.<verse eid="ROM 14:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 14:21"/>Bueno es no comer carne, <note caller="+" style="x"><char style="xo" closed="false">14.21 </char><char style="xt" closed="false"><ref loc="1CO 8:13">1 Co. 8.13</ref>.</char></note>ni beber vino, ni <char style="it">nada</char> en que tu hermano tropiece, ó se ofenda ó sea debilitado.<verse eid="ROM 14:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 14:22"/>¿Tienes tú fe? Tenla para contigo delante de Dios. Bienaventurado el que no se condena á sí mismo con lo que aprueba.<verse eid="ROM 14:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 14:23"/>Mas el que hace diferencia, si comiere, es condenado, porque no <char style="it">comió</char> por fe: y todo lo que no es de fe, es pecado.<verse eid="ROM 14:23"/></para>
+  <chapter eid="ROM 14"/>
+  <chapter number="15" style="c" sid="ROM 15"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 15:1"/>ASÍ que, <note caller="+" style="x"><char style="xo" closed="false">15.1 </char><char style="xt" closed="false"><ref loc="GAL 6:1">Ga. 6.1</ref>. <ref loc="1TH 5:14">1 Ts. 5.14</ref>.</char></note>los que somos más firmes debemos sobrellevar las <note caller="+" style="x"><char style="xo" closed="false">15.1 </char><char style="xt" closed="false">cp. 14.1.</char></note>flaquezas de los flacos, y no agradarnos á nosotros mismos.<verse eid="ROM 15:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 15:2"/>Cada uno de nosotros <note caller="+" style="x"><char style="xo" closed="false">15.2 </char><char style="xt" closed="false"><ref loc="1CO 10:33">1 Co. 10.33</ref>.</char></note>agrade á su prójimo en bien, <note caller="+" style="x"><char style="xo" closed="false">15.2 </char><char style="xt" closed="false">cp. 14.19.</char></note>a edificación.<verse eid="ROM 15:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 15:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 2:5">Fil. 2.5</ref>.</char>
+    </note>Porque Cristo no se agradó á sí mismo; antes bien, como está escrito: <note caller="+" style="x"><char style="xo" closed="false">15.3 </char><char style="xt" closed="false"><ref loc="PSA 69:9">Sal. 69.9</ref>.</char></note>Los vituperios de los que te vituperan, cayeron sobre mí.<verse eid="ROM 15:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 15:4"/>Porque <note caller="+" style="x"><char style="xo" closed="false">15.4 </char><char style="xt" closed="false">cp. 4.23,24. <ref loc="1CO 9:9">1 Co. 9.9</ref>,<ref loc="1CO 9:10">10</ref> y <ref loc="1CO 10:6">10.6</ref>. <ref loc="2TI 3:16">2 Ti. 3.16</ref>,<ref loc="2TI 3:17">17</ref>.</char></note>las cosas que antes fueron escritas, para nuestra enseñanza fueron escritas; para que por la paciencia, y por <note caller="+" style="x"><char style="xo" closed="false">15.4 </char><char style="xt" closed="false"><ref loc="PSA 119:50">Sal. 119.50</ref>.</char></note>la consolación de las Escrituras, tengamos esperanza.<verse eid="ROM 15:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 15:5"/>Mas el Dios de la paciencia y de la consolación <note caller="+" style="x"><char style="xo" closed="false">15.5 </char><char style="xt" closed="false">cp. 12.16.</char></note>os dé que entre vosotros seáis unánimes según Cristo Jesús;<verse eid="ROM 15:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 15:6"/>Para que concordes, á una boca glorifiquéis <note caller="+" style="x"><char style="xo" closed="false">15.6 </char><char style="xt" closed="false"><ref loc="2CO 1:3">2 Co. 1.3</ref> y <ref loc="2CO 11:31">11.31</ref>. <ref loc="EPH 1:3">Ef. 1.3</ref>.</char></note>al Dios y Padre de nuestro Señor Jesucristo.<verse eid="ROM 15:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 15:7"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">15.7 </char><char style="xt" closed="false">cp. 14.1,3.</char></note>sobrellevaos los unos á los otros, como también Cristo nos sobrellevó, para gloria de Dios.<verse eid="ROM 15:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 15:8"/>Digo, pues, que <note caller="+" style="x"><char style="xo" closed="false">15.8 </char><char style="xt" closed="false"><ref loc="MAT 15:24">Mt. 15.24</ref>.</char></note>Cristo Jesús fué hecho ministro de la circuncisión por la verdad de Dios, <note caller="+" style="x"><char style="xo" closed="false">15.8 </char><char style="xt" closed="false"><ref loc="2CO 1:20">2 Co. 1.20</ref>.</char></note>para confirmar las promesas <char style="it">hechas</char> á los padres,<verse eid="ROM 15:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 15:9"/>Y para que los Gentiles glorifiquen á Dios por la misericordia; como está escrito:</para>
+  <para style="q" vid="ROM 15:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 22:50">2 S. 22.50</ref>. <ref loc="PSA 18:49">Sal. 18.49</ref>.</char>
+    </note>Por tanto yo te confesaré entre los Gentiles,</para>
+  <para style="q" vid="ROM 15:9">Y cantaré á tu nombre.<verse eid="ROM 15:9"/></para>
+  <para style="q">
+    <verse number="10" style="v" sid="ROM 15:10"/>Y otra vez dice:</para>
+  <para style="q" vid="ROM 15:10">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:43">Dt. 32.43</ref>.</char>
+    </note>Alegraos, Gentiles, con su pueblo.<verse eid="ROM 15:10"/></para>
+  <para style="q">
+    <verse number="11" style="v" sid="ROM 15:11"/>Y otra vez:</para>
+  <para style="q" vid="ROM 15:11">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.11 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 117:1">Sal. 117.1</ref>.</char>
+    </note>Alabad al Señor todos los Gentiles,</para>
+  <para style="q" vid="ROM 15:11">Y magnificadle, todos los pueblos.<verse eid="ROM 15:11"/></para>
+  <para style="q">
+    <verse number="12" style="v" sid="ROM 15:12"/>Y otra vez, dice Isaías:</para>
+  <para style="q" vid="ROM 15:12">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:10">Is. 11.10</ref>.</char>
+    </note>Estará la raíz de Jessé,</para>
+  <para style="q" vid="ROM 15:12">Y el que se levantará á regir los Gentiles:</para>
+  <para style="q" vid="ROM 15:12">Los Gentiles esperarán en él.<verse eid="ROM 15:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 15:13"/>Y el Dios de esperanza os llene de todo gozo y paz creyendo, para que abundéis en esperanza por la virtud del Espíritu Santo.<verse eid="ROM 15:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 15:14"/>Empero <note caller="+" style="x"><char style="xo" closed="false">15.14 </char><char style="xt" closed="false"><ref loc="2PE 1:12">2 P. 1.12</ref>. <ref loc="1JN 2:21">1 Jn. 2.21</ref>.</char></note>cierto estoy yo de vosotros, hermanos míos, que aun vosotros mismos estáis llenos de bodad, llenos de todo conocimiento, de tal manera que podáis amonestaros los unos á los otros.<verse eid="ROM 15:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 15:15"/>Mas os he escrito, hermanos, en parte resueltamente, como amonestádoos por <note caller="+" style="x"><char style="xo" closed="false">15.15 </char><char style="xt" closed="false">cp. 1.5.</char></note>la gracia que de Dios me es dada,<verse eid="ROM 15:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 15:16"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 9:15">Hch. 9.15</ref>. cp. 11.13.</char>
+    </note>Para ser ministro de Jesucristo á los Gentiles, ministrando el evangelio de Dios, para que la ofrenda de los Gentiles sea <note caller="+" style="x"><char style="xo" closed="false">15.16 </char><char style="xt" closed="false">ver. 31. <ref loc="2CO 8:12">2 Co. 8.12</ref>.</char></note>agradable, santificada por el Espíritu Santo.<verse eid="ROM 15:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 15:17"/>Tengo, pues, de qué gloriarme en Cristo Jesús en lo que mira á Dios.<verse eid="ROM 15:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 15:18"/>Porque no osaría hablar alguna cosa <note caller="+" style="x"><char style="xo" closed="false">15.18 </char><char style="xt" closed="false"><ref loc="ACT 15:12">Hch. 15.12</ref> y <ref loc="ACT 21:19">21.19</ref>. <ref loc="GAL 2:8">Ga. 2.8</ref>.</char></note>que Cristo no haya hecho por mí <note caller="+" style="x"><char style="xo" closed="false">15.18 </char><char style="xt" closed="false">cp. 1.5 y <ref loc="ROM 16:26">16.26</ref>.</char></note>para la obediencia de los Gentiles, con la palabra y con las obras,<verse eid="ROM 15:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 15:19"/>Con potencia de milagros <note caller="+" style="x"><char style="xo" closed="false">15.19 </char><char style="xt" closed="false"><ref loc="ACT 19:11">Hch. 19.11</ref>.</char></note>y prodigios, en virtud del Espíritu de Dios: de manera que desde Jerusalem, y por los alrededores hasta Ilírico, he llenado <char style="it">todo</char> del evangelio de Cristo.<verse eid="ROM 15:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 15:20"/>Y de esta manera me esforcé á predicar el evangelio, no donde <char style="it">antes</char> Cristo fuese nombrado, <note caller="+" style="x"><char style="xo" closed="false">15.20 </char><char style="xt" closed="false"><ref loc="1CO 3:10">1 Co. 3.10</ref>. <ref loc="2CO 10:13">2 Co. 10.13</ref>,<ref loc="2CO 10:15">15</ref>,<ref loc="2CO 10:16">16</ref>.</char></note>por no edificar sobre ajeno fundamento:<verse eid="ROM 15:20"/></para>
+  <para style="q">
+    <verse number="21" style="v" sid="ROM 15:21"/>Sino, como esta escrito:</para>
+  <para style="q" vid="ROM 15:21">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">15.21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 52:15">Is. 52.15</ref>.</char>
+    </note>A los que no fué anunciado de él, verán:</para>
+  <para style="q" vid="ROM 15:21">Y los que no oyeron, entenderán.<verse eid="ROM 15:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 15:22"/>Por lo cual aun he <note caller="+" style="x"><char style="xo" closed="false">15.22 </char><char style="xt" closed="false"><ref loc="1TH 2:18">1 Ts. 2.18</ref>.</char></note>sido impedido muchas veces de venir á vosotros.<verse eid="ROM 15:22"/></para>
+  <para style="s">1 La colecta para Judea.</para>
+  <para style="s">2 Salutaciones finales.</para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 15:23"/>Mas ahora no teniendo más lugar en estas <note caller="+" style="x"><char style="xo" closed="false">15.23 </char><char style="xt" closed="false"><ref loc="2CO 11:10">2 Co. 11.10</ref>.</char></note>regiones, <note caller="+" style="x"><char style="xo" closed="false">15.23 </char><char style="xt" closed="false">ver. 32. <ref loc="ACT 19:21">Hch. 19.21</ref>. cp. 1.11.</char></note>y deseando ir á vosotros muchos años há,<verse eid="ROM 15:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 15:24"/>Cuando partiere para España, iré á vosotros; porque espero que pasando os veré, <note caller="+" style="x"><char style="xo" closed="false">15.24 </char><char style="xt" closed="false"><ref loc="ACT 15:3">Hch. 15.3</ref>.</char></note>y que seré llevado de vosotros allá, si empero antes hubiere gozado de vosotros.<verse eid="ROM 15:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 15:25"/>Mas ahora <note caller="+" style="x"><char style="xo" closed="false">15.25 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Hch. 19.21</ref> y <ref loc="ACT 20:3">20.3</ref>,<ref loc="ACT 20:22">22</ref> y <ref loc="ACT 24:17">24.17</ref>.</char></note>parto para Jerusalem á ministrar á los santos.<verse eid="ROM 15:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 15:26"/>Porque <note caller="+" style="x"><char style="xo" closed="false">15.26 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Hch. 19.21</ref>. <ref loc="1TH 1:7">1 Ts. 1.7</ref>,<ref loc="1TH 1:8">8</ref>.</char></note>Macedonia y Acaya tuvieron <note caller="+" style="x"><char style="xo" closed="false">15.26 </char><char style="xt" closed="false"><ref loc="ACT 24:17">Hch. 24.17</ref>. <ref loc="2CO 9:2">2 Co. 9.2</ref>.</char></note>por bien hacer una colecta para los pobres de los santos que están en Jerusalem.<verse eid="ROM 15:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 15:27"/>Porque les pareció bueno, y son deudores á ellos: <note caller="+" style="x"><char style="xo" closed="false">15.27 </char><char style="xt" closed="false">cp. 11.17. <ref loc="1CO 9:11">1 Co. 9.11</ref>.</char></note>porque si los Gentiles han sido hechos participantes de sus bienes espirituales, deben también ellos servirles en los carnales.<verse eid="ROM 15:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 15:28"/>Así que, cuando hubiere concluído esto, y les hubiere consignado <note caller="+" style="x"><char style="xo" closed="false">15.28 </char><char style="xt" closed="false">cp. 1.13.</char></note>este fruto, pasaré por vosotros á España.<verse eid="ROM 15:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 15:29"/>Y sé <note caller="+" style="x"><char style="xo" closed="false">15.29 </char><char style="xt" closed="false">cp. 1.11.</char></note>que cuando llegue á vosotros, llegaré con abundancia de la bendición del evangelio de Cristo.<verse eid="ROM 15:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 15:30"/>Ruégoos empero, hermanos, por el Señor nuestro Jesucristo, y por la caridad del Espíritu, <note caller="+" style="x"><char style="xo" closed="false">15.30 </char><char style="xt" closed="false"><ref loc="2CO 1:11">2 Co. 1.11</ref>. <ref loc="COL 4:12">Col. 4.12</ref>.</char></note>que me ayudéis con oraciones por mí á Dios,<verse eid="ROM 15:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 15:31"/>Que sea librado <note caller="+" style="x"><char style="xo" closed="false">15.31 </char><char style="xt" closed="false"><ref loc="ACT 20:22">Hch. 20.22</ref>,<ref loc="ACT 20:23">23</ref>. <ref loc="2CO 1:10">2 Co. 1.10</ref>. <ref loc="2TH 3:2">2 Ts. 3.2</ref>.</char></note>de los rebeldes que están en Judea, y que la ofrenda de mi servicio á los santos en Jerusalem sea <note caller="+" style="x"><char style="xo" closed="false">15.31 </char><char style="xt" closed="false">ver. 16.</char></note>acepta;<verse eid="ROM 15:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 15:32"/>Para <note caller="+" style="x"><char style="xo" closed="false">15.32 </char><char style="xt" closed="false">cp. 1.10.</char></note>que con gozo llegue á vosotros por la voluntad de Dios, y que sea recreado juntamente con vosotros.<verse eid="ROM 15:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="ROM 15:33"/>Y <note caller="+" style="x"><char style="xo" closed="false">15.33 </char><char style="xt" closed="false">cp. 16.20. <ref loc="PHP 4:9">Fil. 4.9</ref>. <ref loc="1TH 5:23">1 Ts. 5.23</ref>.</char></note>el Dios de paz sea con todos vosotros. Amén.<verse eid="ROM 15:33"/></para>
+  <chapter eid="ROM 15"/>
+  <chapter number="16" style="c" sid="ROM 16"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 16:1"/>ENCOMIÉNDOOS empero á Febe nuestra hermana, la cual es diaconisa de la iglesia que está en <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false"><ref loc="ACT 18:18">Hch. 18.18</ref>.</char></note>Cencreas:<verse eid="ROM 16:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="ROM 16:2"/>Que la recibáis en el Señor, <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false"><ref loc="PHP 2:29">Fil. 2.29</ref>.</char></note>como es digno á <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false">ver. 15.</char></note>los santos, y que la ayudéis en cualquiera cosa en que os hubiere menester: porque ella ha ayudado á muchos, y <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false"><ref loc="PHP 4:3">Fil. 4.3</ref>.</char></note>a mí mismo.<verse eid="ROM 16:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 16:3"/>Saludad <note caller="+" style="x"><char style="xo" closed="false">16.3 </char><char style="xt" closed="false"><ref loc="ACT 18:2">Hch. 18.2</ref>.</char></note>a Priscila y Aquila, mis coadjutores en Cristo Jesús;<verse eid="ROM 16:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 16:4"/>(Que pusieron sus cuellos por mi vida: á los cuales no doy gracias yo sólo, mas aun todas las iglesias de los Gentiles;)<verse eid="ROM 16:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 16:5"/>Asimismo á <note caller="+" style="x"><char style="xo" closed="false">16.5 </char><char style="xt" closed="false"><ref loc="1CO 16:19">1 Co. 16.19</ref>. <ref loc="COL 4:15">Col. 4.15</ref>. <ref loc="PHM 1:2">Flm. 2</ref>.</char></note>la iglesia de su casa. Saludad á Epeneto, amado mío, que es <note caller="+" style="x"><char style="xo" closed="false">16.5 </char><char style="xt" closed="false"><ref loc="1CO 16:15">1 Co. 16.15</ref>.</char></note>las primicias de Acaya en Cristo.<verse eid="ROM 16:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 16:6"/>Saludad á María, la cual ha trabajado mucho con vosotros.<verse eid="ROM 16:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 16:7"/>Saludad á Andrónico y á Junia, <note caller="+" style="x"><char style="xo" closed="false">16.7 </char><char style="xt" closed="false">vers. 11,21.</char></note>mis parientes, y mis compañeros en la cautividad, los que son insignes entre los apóstoles; <note caller="+" style="x"><char style="xo" closed="false">16.7 </char><char style="xt" closed="false"><ref loc="2CO 5:17">2 Co. 5.17</ref>.</char></note>los cuales también fueron antes de mí en Cristo.<verse eid="ROM 16:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 16:8"/>Saludad á Amplias, amado mío en el Señor.<verse eid="ROM 16:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 16:9"/>Saludad á Urbano, nuestro ayudador en Cristo Jesús, y á Stachîs, amado mío.<verse eid="ROM 16:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 16:10"/>Saludad á Apeles, probado en Cristo. Saludad á los que son de Aristóbulo.<verse eid="ROM 16:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 16:11"/>Saludad á Herodión, mi pariente. Saludad á los que son de <char style="it">la casa de</char> Narciso, los que están en el Señor.<verse eid="ROM 16:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 16:12"/>Saludad á Trifena y á Trifosa, las cuales trabajan en el Señor. Saludad á Pérsida amada, la cual ha trabajado mucho en el Señor.<verse eid="ROM 16:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 16:13"/>Saludad á <note caller="+" style="x"><char style="xo" closed="false">16.13 </char><char style="xt" closed="false"><ref loc="MRK 15:21">Mr. 15.21</ref>.</char></note>Rufo, escogido en el Señor, y á su madre y mía.<verse eid="ROM 16:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 16:14"/>Saludad á Asíncrito, y á Flegonte, á Hermas, á Patrobas, á Hermes, y á los hermanos que están con ellos.<verse eid="ROM 16:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 16:15"/>Saludad á Filólogo y á Julia, á Nereo y á su hermana, y á Olimpas, y á todos <note caller="+" style="x"><char style="xo" closed="false">16.15 </char><char style="xt" closed="false">ver. 2.</char></note>los santos que están con ellos.<verse eid="ROM 16:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 16:16"/>Saludaos <note caller="+" style="x"><char style="xo" closed="false">16.16 </char><char style="xt" closed="false"><ref loc="1CO 16:20">1 Co. 16.20</ref>. <ref loc="2CO 13:12">2 Co. 13.12</ref>. <ref loc="1TH 5:26">1 Ts. 5.26</ref>.</char></note>los unos á los otros con ósculo santo. Os saludan todas las iglesias de Cristo.<verse eid="ROM 16:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 16:17"/>Y os ruego hermanos, que miréis los que causan <note caller="+" style="x"><char style="xo" closed="false">16.17 </char><char style="xt" closed="false"><ref loc="1CO 3:3">1 Co. 3.3</ref>.</char></note>disensiones y <note caller="+" style="x"><char style="xo" closed="false">16.17 </char><char style="xt" closed="false">cp. 14.13.</char></note>escándalos contra la doctrina que vosotros habéis aprendido; y <note caller="+" style="x"><char style="xo" closed="false">16.17 </char><char style="xt" closed="false"><ref loc="2TH 3:6">2 Ts. 3.6</ref>,<ref loc="2TH 3:14">14</ref>. <ref loc="TIT 3:10">Tit. 3.10</ref>.</char></note>apartaos de ellos.<verse eid="ROM 16:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 16:18"/>Porque los tales no sirven al Señor nuestro Jesucristo, sino <note caller="+" style="x"><char style="xo" closed="false">16.18 </char><char style="xt" closed="false"><ref loc="PHP 3:19">Fil. 3.19</ref>.</char></note>a sus vientres; y con suaves palabras y bendiciones engañan los corazones de los simples.<verse eid="ROM 16:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 16:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">16.19 </char><char style="xt" closed="false">cp. 1.8.</char></note>vuestra obediencia ha venido á ser notoria á todos; así que me gozo de vosotros; mas quiero <note caller="+" style="x"><char style="xo" closed="false">16.19 </char><char style="xt" closed="false"><ref loc="MAT 10:16">Mt. 10.16</ref>. <ref loc="1CO 14:20">1 Co. 14.20</ref>.</char></note>que seáis sabios en el bien, y simples en el mal.<verse eid="ROM 16:19"/></para>
+  <para style="s">1 Introducción.</para>
+  <para style="s">2 Sobre las disensiones.</para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 16:20"/>Y <note caller="+" style="x"><char style="xo" closed="false">16.20 </char><char style="xt" closed="false">cp. 15.33.</char></note>el Dios de paz quebrantará presto á Satanás debajo de vuestros pies. <note caller="+" style="x"><char style="xo" closed="false">16.20 </char><char style="xt" closed="false"><ref loc="1CO 16:23">1 Co. 16.23</ref>. <ref loc="1TH 5:28">1 Ts. 5.28</ref>.</char></note>La gracia del Señor nuestro Jesucristo <char style="it">sea</char> con vosotros.<verse eid="ROM 16:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 16:21"/>Os saludan Timoteo, <note caller="+" style="x"><char style="xo" closed="false">16.21 </char><char style="xt" closed="false"><ref loc="ACT 16:1">Hch. 16.1</ref>.</char></note>mi coadjutor, y <note caller="+" style="x"><char style="xo" closed="false">16.21 </char><char style="xt" closed="false"><ref loc="ACT 13:1">Hch. 13.1</ref>.</char></note>Lucio y <note caller="+" style="x"><char style="xo" closed="false">16.21 </char><char style="xt" closed="false"><ref loc="ACT 17:5">Hch. 17.5</ref>,<ref loc="ACT 17:6">6</ref>,<ref loc="ACT 17:7">7</ref>,<ref loc="ACT 17:9">9</ref>.</char></note>Jasón y <note caller="+" style="x"><char style="xo" closed="false">16.21 </char><char style="xt" closed="false"><ref loc="ACT 20:4">Hch. 20.4</ref>.</char></note>Sosipater, mis parientes.<verse eid="ROM 16:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 16:22"/>Yo Tercio, <note caller="+" style="x"><char style="xo" closed="false">16.22 </char><char style="xt" closed="false"><ref loc="1CO 16:21">1 Co. 16.21</ref>.</char></note>que escribí la epístola, os saludo en el Señor.<verse eid="ROM 16:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 16:23"/>Salúdaos <note caller="+" style="x"><char style="xo" closed="false">16.23 </char><char style="xt" closed="false"><ref loc="1CO 1:14">1 Co. 1.14</ref>.</char></note>Gayo, mi huésped, y de toda la iglesia. Salúdaos <note caller="+" style="x"><char style="xo" closed="false">16.23 </char><char style="xt" closed="false"><ref loc="2TI 4:20">2 Ti. 4.20</ref>.</char></note>Erasto, tesorero de la ciudad, y el hermano Cuarto.<verse eid="ROM 16:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 16:24"/>La gracia del Señor nuestro Jesucristo sea con todos vosotros. Amén.<verse eid="ROM 16:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 16:25"/>Y al que <note caller="+" style="x"><char style="xo" closed="false">16.25 </char><char style="xt" closed="false"><ref loc="2TH 2:17">2 Ts. 2.17</ref> y <ref loc="2TH 3:3">3.3</ref>.</char></note>puede confirmaros <note caller="+" style="x"><char style="xo" closed="false">16.25 </char><char style="xt" closed="false">cp. 2.16.</char></note>según mi evangelio y la predicación de Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">16.25 </char><char style="xt" closed="false"><ref loc="EPH 1:9">Ef. 1.9</ref> y <ref loc="EPH 3:3">3.3</ref>,<ref loc="EPH 3:4">4</ref>,<ref loc="EPH 3:5">5</ref>,<ref loc="EPH 3:9">9</ref>. <ref loc="COL 1:26">Col. 1.26</ref>,<ref loc="COL 1:27">27</ref>.</char></note>según la revelación del misterio <note caller="+" style="x"><char style="xo" closed="false">16.25 </char><char style="xt" closed="false"><ref loc="1CO 2:7">1 Co. 2.7</ref>.</char></note>encubierto desde tiempos eternos,<verse eid="ROM 16:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 16:26"/>Mas manifestado ahora, <note caller="+" style="x"><char style="xo" closed="false">16.26 </char><char style="xt" closed="false">cp. 1.2.</char></note>y por las Escrituras de los profetas, según el mandamiento del Dios eterno, declarado á todas las gentes para que obedezcan á la fe;<verse eid="ROM 16:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 16:27"/>Al sólo <note caller="+" style="x"><char style="xo" closed="false">16.27 </char><char style="xt" closed="false"><ref loc="1TI 1:17">1 Ti. 1.17</ref>.</char></note>Dios sabio, sea gloria por Jesucristo para siempre. Amén.</para>
+  <para style="b" vid="ROM 16:27"/>
+  <para style="p" vid="ROM 16:27">Fué escrita de Corinto á los Romanos, <char style="it">enviada</char> por <char style="it">medio de</char> Febe, diaconisa de la iglesia de Cencreas.<verse eid="ROM 16:27"/></para>
+  <chapter eid="ROM 16"/>
+</usx>

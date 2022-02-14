@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="2JN" style="id">2JNVR.TXT Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">2 JUAN</para>
+  <para style="toc3">2 Jn.</para>
+  <para style="toc2">2 Juan</para>
+  <para style="toc1">Segunda carta de san Juan</para>
+  <para style="mt2">LA SEGUNDA EPÍSTOLA DE</para>
+  <para style="mt1">SAN JUAN APÓSTOL.</para>
+  <chapter number="1" style="c" sid="2JN 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="2JN 1:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 11:30">Hch. 11.30</ref>. <ref loc="1PE 5:1">1 P. 5.1</ref>. <ref loc="3JN 1:1">3 Jn. 1</ref>.</char>
+    </note>EL anciano á <note caller="+" style="x"><char style="xo" closed="false">1 </char><char style="xt" closed="false">ver. 13.</char></note>la señora elegida y á sus hijos, <note caller="+" style="x"><char style="xo" closed="false">1 </char><char style="xt" closed="false"><ref loc="3JN 1:1">3 Jn. 1</ref>.</char></note>a los cuales yo amo en verdad y no yo solo, sino también todos los que han conocido <note caller="+" style="x"><char style="xo" closed="false">1 </char><char style="xt" closed="false"><ref loc="JHN 1:17">Jn. 1.17</ref> y <ref loc="JHN 14:6">14.6</ref>.</char></note>la verdad,<verse eid="2JN 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="2JN 1:2"/>Por la verdad que está en nosotros, y será perpetuamente con nosotros:<verse eid="2JN 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="2JN 1:3"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">3 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TI 1:2">1 Ti. 1.2</ref>. <ref loc="REV 1:4">Ap. 1.4</ref>.</char>
+    </note>Sea con vosotros gracia, misericordia, y paz de Dios Padre, y del Señor Jesucristo, Hijo del Padre, en verdad y en amor.<verse eid="2JN 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="2JN 1:4"/>Mucho me he gozado, porque he hallado de tus hijos, <note caller="+" style="x"><char style="xo" closed="false">4 </char><char style="xt" closed="false"><ref loc="3JN 1:3">3 Jn. 1.3</ref>,<ref loc="3JN 1:4">4</ref>.</char></note>que andan en verdad, como nosotros hemos recibido el mandamiento del Padre.<verse eid="2JN 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="2JN 1:5"/>Y ahora te ruego, señora, <note caller="+" style="x"><char style="xo" closed="false">5 </char><char style="xt" closed="false"><ref loc="1JN 2:7">1 Jn. 2.7</ref> y <ref loc="1JN 3:11">3.11</ref>.</char></note>no como escribiéndote un nuevo mandamiento, sino aquel que nosotros hemos tenido desde el principio, que nos amemos unos á otros.<verse eid="2JN 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="2JN 1:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1JN 5:3">1 Jn. 5.3</ref>.</char>
+    </note>Y este es amor, que andemos según sus mandamientos. Este es el mandamiento: Que andéis <note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="fl" closed="false">q.d. </char><char style="fqa" closed="false">en el amor.</char></note>en él, como vosotros habéis oído desde el principio.<verse eid="2JN 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="2JN 1:7"/>Porque muchos engañadores son entrados en el mundo, <note caller="+" style="x"><char style="xo" closed="false">7 </char><char style="xt" closed="false"><ref loc="1JN 2:22">1 Jn. 2.22</ref> y <ref loc="1JN 4:3">4.3</ref>.</char></note>los cuales no confiesan que Jesucristo ha venido en carne. Este tal el engañador es, y <note caller="+" style="x"><char style="xo" closed="false">7 </char><char style="xt" closed="false"><ref loc="1JN 2:18">1 Jn. 2.18</ref>.</char></note>el anticristo.<verse eid="2JN 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="2JN 1:8"/>Mirad por vosotros mismos, porque <note caller="+" style="x"><char style="xo" closed="false">8 </char><char style="xt" closed="false"><ref loc="GAL 3:4">Ga. 3.4</ref>. <ref loc="HEB 10:32">He. 10.32</ref>,<ref loc="HEB 10:35">35</ref>.</char></note>no <note caller="+" style="f"><char style="fr" closed="false">1.8 </char><char style="ft" closed="false">ó, <char style="it">perdáis.</char></char></note>perdamos las cosas que hemos obrado, sino que <note caller="+" style="f"><char style="fr" closed="false">1.8 </char><char style="ft" closed="false">ó, <char style="it">recibáis.</char></char></note>recibamos galardón cumplido.<verse eid="2JN 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="2JN 1:9"/>Cualquiera que se rebela, y no persevera en la doctrina de Cristo, <note caller="+" style="x"><char style="xo" closed="false">9 </char><char style="xt" closed="false"><ref loc="1JN 2:23">1 Jn. 2.23</ref>.</char></note>no tiene á Dios: el que persevera en la doctrina de Cristo, el tal tiene al Padre y al Hijo.<verse eid="2JN 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="2JN 1:10"/>Si alguno viene á vosotros, y no trae esta doctrina, <note caller="+" style="x"><char style="xo" closed="false">10 </char><char style="xt" closed="false"><ref loc="ROM 16:17">Ro. 16.17</ref>. <ref loc="GAL 1:8">Ga. 1.8</ref>,<ref loc="GAL 1:9">9</ref>.</char></note>no lo recibáis en casa, ni le digáis: ¡bienvenido!<verse eid="2JN 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="2JN 1:11"/>Porque el que le dice bienvenido, <note caller="+" style="x"><char style="xo" closed="false">11 </char><char style="xt" closed="false"><ref loc="1TI 5:22">1 Ti. 5.22</ref>.</char></note>comunica con sus malas obras.<verse eid="2JN 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="2JN 1:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">12 </char>
+      <char style="xt" closed="false">
+        <ref loc="3JN 1:13">3 Jn. 13</ref>.</char>
+    </note>Aunque tengo muchas cosas que escribiros, no he querido <char style="it">comunicarlas</char> por medio de papel y tinta; mas espero ir á vosotros, y hablar boca á boca, <note caller="+" style="x"><char style="xo" closed="false">12 </char><char style="xt" closed="false"><ref loc="JHN 15:11">Jn. 15.11</ref>.</char></note>para que <note caller="+" style="f"><char style="fr" closed="false">1.12 </char><char style="ft" closed="false">ó, <char style="it">vuestro.</char></char></note>nuestro gozo sea cumplido.<verse eid="2JN 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="2JN 1:13"/>Los hijos de tu hermana <note caller="+" style="x"><char style="xo" closed="false">13 </char><char style="xt" closed="false">ver. 1.</char></note>elegida te saludan. Amén.<verse eid="2JN 1:13"/></para>
+  <chapter eid="2JN 1"/>
+</usx>

@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="1CO" style="id">1COVR.SFM Reina Valera 1909 Texto corregido 1999 CAP-SBM. Actualizado CAP Miami Oct 2011.</book>
+  <para style="h">1 CORINTIOS</para>
+  <para style="toc3">1 Co.</para>
+  <para style="toc2">1 Corintios</para>
+  <para style="toc1">Primera carta de san Pablo a los Corintios</para>
+  <para style="mt2">LA PRIMERA EPÍSTOLA DEL APÓSTOL SAN PABLO</para>
+  <para style="mt1">A LOS CORINTIOS.</para>
+  <chapter number="1" style="c" sid="1CO 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 1:1"/>PABLO, <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ROM 1:1">Ro. 1.1</ref>.</char></note>llamado <char style="it">á ser</char> apóstol de Jesucristo <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="2CO 1:1">2 Co. 1.1</ref>.</char></note>por la voluntad de Dios, y <note caller="+" style="x"><char style="xo" closed="false">1.1 </char><char style="xt" closed="false"><ref loc="ACT 18:17">Hch. 18.17</ref>.</char></note>Sóstenes el hermano,<verse eid="1CO 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 1:2"/>A la iglesia de Dios que está en <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ACT 18:1">Hch. 18.1</ref>.</char></note>Corinto, santificados en Cristo Jesús, <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ROM 1:7">Ro. 1.7</ref>.</char></note>llamados <note caller="+" style="x"><char style="xo" closed="false">1.2 </char><char style="xt" closed="false"><ref loc="ACT 9:13">Hch. 9.13</ref>.</char></note>santos, y á todos los que invocan el nombre de nuestro Señor Jesucristo en cualquier lugar, <char style="it">Señor</char> de ellos y nuestro:<verse eid="1CO 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 1:3"/>Gracia y paz de Dios <note caller="+" style="x"><char style="xo" closed="false">1.3 </char><char style="xt" closed="false"><ref loc="ROM 1:7">Ro. 1.7</ref>.</char></note>nuestro Padre, y del Señor Jesucristo.<verse eid="1CO 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 1:4"/>Gracias doy á mi Dios <note caller="+" style="x"><char style="xo" closed="false">1.4 </char><char style="xt" closed="false"><ref loc="ROM 1:8">Ro. 1.8</ref>.</char></note>siempre por vosotros, por la gracia de Dios que os es dada en Cristo Jesús;<verse eid="1CO 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 1:5"/>Que en todas las cosas sois enriquecidos en él, <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="2CO 8:7">2 Co. 8.7</ref>.</char></note>en toda lengua y en toda <note caller="+" style="x"><char style="xo" closed="false">1.5 </char><char style="xt" closed="false"><ref loc="ROM 15:14">Ro. 15.14</ref>.</char></note>ciencia;<verse eid="1CO 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 1:6"/>Así como <note caller="+" style="x"><char style="xo" closed="false">1.6 </char><char style="xt" closed="false">cp. 2.1. <ref loc="2TI 1:8">2 Ti. 1.8</ref>.</char></note>el testimonio de Cristo ha sido confirmado en vosotros:<verse eid="1CO 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 1:7"/>De tal manera que nada os falte en ningún don, <note caller="+" style="x"><char style="xo" closed="false">1.7 </char><char style="xt" closed="false"><ref loc="2PE 3:12">2 P. 3.12</ref>.</char></note>esperando la manifestación de nuestro Señor Jesucristo:<verse eid="1CO 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 1:8"/>El cual también <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="1TH 3:13">1 Ts. 3.13</ref>.</char></note>os confirmará hasta el fin, <char style="it">para que seáis</char> sin falta <note caller="+" style="x"><char style="xo" closed="false">1.8 </char><char style="xt" closed="false"><ref loc="2CO 1:14">2 Co. 1.14</ref>.</char></note>en el día de nuestro Señor Jesucristo.<verse eid="1CO 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 1:9"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.9 </char>
+      <char style="xt" closed="false">cp. 10.13.</char>
+    </note>Fiel es Dios, por el cual sois llamados á la <note caller="+" style="x"><char style="xo" closed="false">1.9 </char><char style="xt" closed="false"><ref loc="1JN 1:3">1 Jn. 1.3</ref>.</char></note>participación de su Hijo Jesucristo nuestro Señor.<verse eid="1CO 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 1:10"/>Os ruego pues, hermanos, por el nombre de nuestro Señor Jesucristo, que habléis todos <note caller="+" style="x"><char style="xo" closed="false">1.10 </char><char style="xt" closed="false"><ref loc="ROM 12:16">Ro. 12.16</ref>.</char></note>una misma cosa, y que no haya entre vosotros disensiones, antes seáis perfectamente unidos en una misma mente y en un mismo parecer.<verse eid="1CO 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 1:11"/>Porque me ha sido declarado de vosotros, hermanos míos, por los <char style="it">que son</char> de Cloé, que hay entre vosotros contiendas;<verse eid="1CO 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 1:12"/>Quiero decir, que <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false">cp. 3.4.</char></note>cada uno de vosotros dice: Yo cierto soy de Pablo; pues yo de <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false"><ref loc="ACT 18:24">Hch. 18.24</ref>.</char></note>Apolos; y yo de <note caller="+" style="x"><char style="xo" closed="false">1.12 </char><char style="xt" closed="false">cp. 3.22 y <ref loc="1CO 15:5">15.5</ref>. <ref loc="GAL 2:9">Ga. 2.9</ref>.</char></note>Cefas; y yo de Cristo.<verse eid="1CO 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 1:13"/>¿Está dividido Cristo? <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="EPH 4:5">Ef. 4.5</ref>.</char></note>¿Fué crucificado Pablo por vosotros? ¿ó habéis sido <note caller="+" style="x"><char style="xo" closed="false">1.13 </char><char style="xt" closed="false"><ref loc="MAT 28:19">Mt. 28.19</ref>.</char></note>bautizados en el nombre de Pablo?<verse eid="1CO 1:13"/></para>
+  <para style="s">1 “La palabra de la cruz.”</para>
+  <para style="s">2 La sabiduría espiritual.</para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 1:14"/>Doy gracias á Dios, que <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ACT 10:48">Hch. 10.48</ref>.</char></note>a ninguno de vosotros he bautizado, sino <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ACT 18:8">Hch. 18.8</ref>.</char></note>a Crispo y á <note caller="+" style="x"><char style="xo" closed="false">1.14 </char><char style="xt" closed="false"><ref loc="ROM 16:23">Ro. 16.23</ref>.</char></note>Gayo;<verse eid="1CO 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 1:15"/>Para que ninguno diga que habéis sido bautizados en mi nombre.<verse eid="1CO 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 1:16"/>Y también bauticé la familia de <note caller="+" style="x"><char style="xo" closed="false">1.16 </char><char style="xt" closed="false">cp. 16.15,17.</char></note>Estéfanas: mas no sé si he bautizado algún otro.<verse eid="1CO 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 1:17"/>Porque no me envió Cristo á bautizar, sino á predicar el evangelio: <note caller="+" style="x"><char style="xo" closed="false">1.17 </char><char style="xt" closed="false">cp. 2.1,4,13. <ref loc="2CO 10:10">2 Co. 10.10</ref>.</char></note>no en sabiduría de palabras, porque no sea hecha vana la cruz de Cristo.<verse eid="1CO 1:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 1:18"/>Porque la palabra de la cruz es locura á <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false"><ref loc="2CO 2:15">2 Co. 2.15</ref>. <ref loc="2TH 2:10">2 Ts. 2.10</ref>.</char></note>los que se pierden; mas á <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">cp. 15.2.</char></note>los que se salvan, <char style="it">es á saber,</char> á nosotros, <note caller="+" style="x"><char style="xo" closed="false">1.18 </char><char style="xt" closed="false">ver. 24. <ref loc="ROM 1:16">Ro. 1.16</ref>.</char></note>es potencia de Dios.<verse eid="1CO 1:18"/></para>
+  <para style="q">
+    <verse number="19" style="v" sid="1CO 1:19"/>Porque está escrito:</para>
+  <para style="q" vid="1CO 1:19">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">1.19 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 29:14">Is. 29.14</ref>. <ref loc="MAT 11:25">Mt. 11.25</ref>.</char>
+    </note>Destruiré la sabiduría de los sabios,</para>
+  <para style="q" vid="1CO 1:19">Y desecharé la inteligencia de los entendidos.<verse eid="1CO 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 1:20"/>¿Qué es del sabio? ¿qué del escriba? ¿qué del escudriñador <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false">cp. 2.6.</char></note>de este siglo? ¿no ha <note caller="+" style="x"><char style="xo" closed="false">1.20 </char><char style="xt" closed="false"><ref loc="ROM 1:22">Ro. 1.22</ref>.</char></note>enloquecido Dios la sabiduría del mundo?<verse eid="1CO 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 1:21"/>Porque por no haber el mundo conocido en la sabiduría de Dios á Dios por sabiduría, agradó á Dios salvar á los creyentes por la locura de la predicación.<verse eid="1CO 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 1:22"/>Porque <note caller="+" style="x"><char style="xo" closed="false">1.22 </char><char style="xt" closed="false"><ref loc="MAT 12:38">Mt. 12.38</ref>.</char></note>los Judíos piden señales, y los Griegos buscan sabiduría:<verse eid="1CO 1:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 1:23"/>Mas <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="2CO 4:5">2 Co. 4.5</ref>. <ref loc="GAL 5:11">Ga. 5.11</ref>.</char></note>nosotros predicamos á Cristo crucificado, á los Judíos ciertamente <note caller="+" style="x"><char style="xo" closed="false">1.23 </char><char style="xt" closed="false"><ref loc="ROM 14:13">Ro. 14.13</ref>.</char></note>tropezadero, y á los Gentiles locura;<verse eid="1CO 1:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 1:24"/>Empero á los llamados, así Judíos como Griegos, Cristo <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false">ver. 18.</char></note>potencia de Dios, y <note caller="+" style="x"><char style="xo" closed="false">1.24 </char><char style="xt" closed="false"><ref loc="LUK 11:49">Lc. 11.49</ref>.</char></note>sabiduría de Dios.<verse eid="1CO 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 1:25"/>Porque lo loco de Dios es más sabio que los hombres; y lo flaco de Dios es más fuerte que los hombres.<verse eid="1CO 1:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 1:26"/>Porque mirad, hermanos, vuestra <note caller="+" style="x"><char style="xo" closed="false">1.26 </char><char style="xt" closed="false"><ref loc="EPH 4:1">Ef. 4.1</ref>. <ref loc="2TI 1:9">2 Ti. 1.9</ref>.</char></note>vocación, que <note caller="+" style="x"><char style="xo" closed="false">1.26 </char><char style="xt" closed="false"><ref loc="JHN 7:48">Jn. 7.48</ref>.</char></note>no sois muchos sabios según la carne, no muchos poderosos, no muchos nobles;<verse eid="1CO 1:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 1:27"/>Antes <note caller="+" style="x"><char style="xo" closed="false">1.27 </char><char style="xt" closed="false"><ref loc="JAS 2:5">Stg. 2.5</ref>.</char></note>lo necio del mundo escogió Dios, para avergonzar á los sabios; y lo flaco del mundo escogió Dios, para avergonzar lo fuerte;<verse eid="1CO 1:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 1:28"/>Y lo vil del mundo y lo menos preciado escogió Dios, <char style="it">y</char> <note caller="+" style="x"><char style="xo" closed="false">1.28 </char><char style="xt" closed="false"><ref loc="ROM 4:17">Ro. 4.17</ref>.</char></note>lo que no es, <note caller="+" style="x"><char style="xo" closed="false">1.28 </char><char style="xt" closed="false">cp. 2.6.</char></note>para deshacer lo que es:<verse eid="1CO 1:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 1:29"/>Para que ninguna <note caller="+" style="x"><char style="xo" closed="false">1.29 </char><char style="xt" closed="false"><ref loc="ROM 3:27">Ro. 3.27</ref>.</char></note>carne se jacte en su presencia.<verse eid="1CO 1:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 1:30"/>Mas de él sois vosotros en Cristo Jesús, el cual nos ha sido hecho por Dios <note caller="+" style="x"><char style="xo" closed="false">1.30 </char><char style="xt" closed="false">ver. 24.</char></note>sabiduría, y <note caller="+" style="x"><char style="xo" closed="false">1.30 </char><char style="xt" closed="false"><ref loc="2CO 5:21">2 Co. 5.21</ref>. <ref loc="PHP 3:9">Fil. 3.9</ref>.</char></note>justificación, y <note caller="+" style="x"><char style="xo" closed="false">1.30 </char><char style="xt" closed="false"><ref loc="JHN 17:19">Jn. 17.19</ref>. cp. 6.11.</char></note>santificación, <note caller="+" style="x"><char style="xo" closed="false">1.30 </char><char style="xt" closed="false"><ref loc="EPH 1:7">Ef. 1.7</ref>. <ref loc="COL 1:14">Col. 1.14</ref>.</char></note>y redención:<verse eid="1CO 1:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 1:31"/>Para que, como está escrito: <note caller="+" style="x"><char style="xo" closed="false">1.31 </char><char style="xt" closed="false"><ref loc="JER 9:23">Jer. 9.23</ref>,<ref loc="JER 9:24">24</ref>. <ref loc="2CO 10:17">2 Co. 10.17</ref>.</char></note>El que se gloría, gloríese en el Señor.<verse eid="1CO 1:31"/></para>
+  <chapter eid="1CO 1"/>
+  <chapter number="2" style="c" sid="1CO 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 2:1"/>ASÍ que, hermanos, cuando fuí á vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">vers. 4,6,13. <ref loc="2CO 1:12">2 Co. 1.12</ref>.</char></note>no fuí con altivez de palabra, ó de sabiduría, á anunciaros <note caller="+" style="x"><char style="xo" closed="false">2.1 </char><char style="xt" closed="false">cp. 1.6.</char></note>el testimonio de Cristo.<verse eid="1CO 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 2:2"/>Porque no me propuse saber algo entre vosotros, <note caller="+" style="x"><char style="xo" closed="false">2.2 </char><char style="xt" closed="false"><ref loc="GAL 6:14">Ga. 6.14</ref>.</char></note>sino á Jesucristo, y á éste crucificado.<verse eid="1CO 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 2:3"/>Y estuve yo con vosotros <note caller="+" style="x"><char style="xo" closed="false">2.3 </char><char style="xt" closed="false"><ref loc="2CO 12:5">2 Co. 12.5</ref>,<ref loc="2CO 12:9">9</ref>,<ref loc="2CO 12:10">10</ref>. <ref loc="GAL 4:13">Ga. 4.13</ref>.</char></note>con flaqueza, y mucho temor y temblor;<verse eid="1CO 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 2:4"/>Y ni mi palabra ni mi predicación fué con palabras persuasivas de humana sabiduría, mas <note caller="+" style="x"><char style="xo" closed="false">2.4 </char><char style="xt" closed="false"><ref loc="1TH 1:5">1 Ts. 1.5</ref>.</char></note>con demostración del Espíritu y de poder;<verse eid="1CO 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 2:5"/>Para que vuestra fe no esté fundada en sabiduría de hombres, mas <note caller="+" style="x"><char style="xo" closed="false">2.5 </char><char style="xt" closed="false"><ref loc="2CO 4:7">2 Co. 4.7</ref> y <ref loc="2CO 6:7">6.7</ref>.</char></note>en poder de Dios.<verse eid="1CO 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 2:6"/>Empero hablamos sabiduría de Dios <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false">cp. 14.20.</char></note>entre perfectos; y sabiduría, no <note caller="+" style="x"><char style="xo" closed="false">2.6 </char><char style="xt" closed="false">cp. 1.20.</char></note>de este siglo, ni de los príncipes de este siglo, que se deshacen:<verse eid="1CO 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 2:7"/>Mas hablamos sabiduría de Dios en misterio, la <char style="it">sabiduría</char> oculta, <note caller="+" style="x"><char style="xo" closed="false">2.7 </char><char style="xt" closed="false"><ref loc="ROM 16:25">Ro. 16.25</ref>.</char></note>la cual Dios predestinó antes de los siglos para nuestra gloria:<verse eid="1CO 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 2:8"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.8 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 11:25">Mt. 11.25</ref>.</char>
+    </note>La que ninguno de los príncipes de este siglo conoció; porque <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="ACT 3:17">Hch. 3.17</ref>.</char></note>si la hubieran conocido, nunca hubieran crucificado al <note caller="+" style="x"><char style="xo" closed="false">2.8 </char><char style="xt" closed="false"><ref loc="PSA 24:7-10">Sal. 24.7-10</ref>.</char></note>Señor de gloria:<verse eid="1CO 2:8"/></para>
+  <para style="q">
+    <verse number="9" style="v" sid="1CO 2:9"/>Antes, como está escrito:</para>
+  <para style="q" vid="1CO 2:9">
+    <note caller="+" style="x">
+      <char style="xo" closed="false">2.9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 64:4">Is. 64.4</ref>.</char>
+    </note>Cosas que ojo no vió, ni oreja oyó,</para>
+  <para style="q" vid="1CO 2:9">Ni han subido en corazón de hombre, <char style="it">Son</char></para>
+  <para style="q" vid="1CO 2:9">las que ha Dios <note caller="+" style="x"><char style="xo" closed="false">2.9 </char><char style="xt" closed="false"><ref loc="MAT 25:34">Mt. 25.34</ref>.</char></note>preparado para aquellos que le aman.<verse eid="1CO 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 2:10"/>Empero <note caller="+" style="x"><char style="xo" closed="false">2.10 </char><char style="xt" closed="false"><ref loc="JHN 14:26">Jn. 14.26</ref>.</char></note>Dios nos <char style="it">lo</char> reveló á nosotros por el Espíritu: porque el Espíritu todo lo escudriña, aun lo profundo de Dios.<verse eid="1CO 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 2:11"/>Porque ¿quién de los hombres sabe las cosas del hombre, sino el espíritu del hombre que está en él? Así tampoco nadie conoció las cosas de Dios, sino <note caller="+" style="x"><char style="xo" closed="false">2.11 </char><char style="xt" closed="false"><ref loc="ROM 8:9">Ro. 8.9</ref>.</char></note>el Espíritu de Dios.<verse eid="1CO 2:11"/></para>
+  <para style="s">1 Los obreros cristianos como</para>
+  <para style="s">2 coadjutores de Dios.</para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 2:12"/>Y <note caller="+" style="x"><char style="xo" closed="false">2.12 </char><char style="xt" closed="false"><ref loc="ROM 8:15">Ro. 8.15</ref>.</char></note>nosotros hemos recibido, no el espíritu del mundo, sino el Espíritu que es de Dios, para que conozcamos lo que Dios nos ha dado;<verse eid="1CO 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 2:13"/>Lo cual también hablamos, <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false">cp. 1.17.</char></note>no con doctas palabras de humana sabiduría, mas con doctrina del Espíritu, <note caller="+" style="x"><char style="xo" closed="false">2.13 </char><char style="xt" closed="false"><ref loc="2CO 10:12">2 Co. 10.12</ref>.</char></note>acomodando lo espiritual á lo espiritual.<verse eid="1CO 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 2:14"/>Mas el <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false">cp. 15.44,46.</char></note>hombre animal no percibe las cosas que son del Espíritu de Dios, <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false">cp. 1.18,21,23.</char></note>porque le son locura: y <note caller="+" style="x"><char style="xo" closed="false">2.14 </char><char style="xt" closed="false"><ref loc="ROM 8:5">Ro. 8.5</ref>,<ref loc="ROM 8:7">7</ref>.</char></note>no las puede entender, porque se han de examinar espiritualmente.<verse eid="1CO 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 2:15"/>Empero el espiritual juzga todas las cosas; mas él no es juzgado de nadie.<verse eid="1CO 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 2:16"/>Porque <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="ISA 40:13">Is. 40.13</ref>.</char></note>¿quién conoció la mente del Señor? ¿quién le instruyó? Mas <note caller="+" style="x"><char style="xo" closed="false">2.16 </char><char style="xt" closed="false"><ref loc="JHN 15:15">Jn. 15.15</ref>.</char></note>nosotros tenemos la mente de Cristo.<verse eid="1CO 2:16"/></para>
+  <chapter eid="1CO 2"/>
+  <chapter number="3" style="c" sid="1CO 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 3:1"/>DE manera que yo, hermanos, no pude hablaros como á <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 2.15.</char></note>espirituales, sino como á <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false">cp. 2.14.</char></note>carnales, como á <note caller="+" style="x"><char style="xo" closed="false">3.1 </char><char style="xt" closed="false"><ref loc="EPH 4:14">Ef. 4.14</ref>. <ref loc="HEB 5:13">He. 5.13</ref>.</char></note>niños en Cristo.<verse eid="1CO 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 3:2"/>Os dí á beber <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="HEB 5:12">He. 5.12</ref>,<ref loc="HEB 5:13">13</ref>.</char></note>leche, y no vianda: <note caller="+" style="x"><char style="xo" closed="false">3.2 </char><char style="xt" closed="false"><ref loc="JHN 16:12">Jn. 16.12</ref>.</char></note>porque aun no podíais, ni aun podéis ahora;<verse eid="1CO 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 3:3"/>Porque todavía sois carnales: pues habiendo entre vosotros celos, y <note caller="+" style="x"><char style="xo" closed="false">3.3 </char><char style="xt" closed="false">cp. 1.11.</char></note>contiendas, y disensiones, ¿no sois carnales, y andáis como hombres?<verse eid="1CO 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 3:4"/>Porque diciendo el uno: <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false">cp. 1.12.</char></note>Yo cierto soy de Pablo; y el otro: Yo de <note caller="+" style="x"><char style="xo" closed="false">3.4 </char><char style="xt" closed="false"><ref loc="ACT 18:24">Hch. 18.24</ref>.</char></note>Apolos; ¿no sois carnales?<verse eid="1CO 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 3:5"/>¿Qué pues es Pablo? ¿y qué es Apolos? <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 4.1. <ref loc="2CO 3:3">2 Co. 3.3</ref>.</char></note>Ministros por los cuales habéis creído; y <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false">cp. 12.18.</char></note><char style="it">eso</char> según que <note caller="+" style="x"><char style="xo" closed="false">3.5 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Ro. 12.3</ref>,<ref loc="ROM 12:6">6</ref>. <ref loc="1PE 4:11">1 P. 4.11</ref>.</char></note>a cada uno ha concedido el Señor.<verse eid="1CO 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 3:6"/>Yo <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="ACT 18:4-11">Hch. 18.4-11</ref>. cp. 4.15 y <ref loc="ACT 9:1">9.1</ref>.</char></note>planté, <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false"><ref loc="ACT 18:27">Hch. 18.27</ref>.</char></note>Apolos regó: <note caller="+" style="x"><char style="xo" closed="false">3.6 </char><char style="xt" closed="false">cp. 15.10.</char></note>mas Dios ha dado el crecimiento.<verse eid="1CO 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 3:7"/>Así que, ni el que planta es algo, ni el que riega; sino Dios, que da el crecimiento.<verse eid="1CO 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 3:8"/>Y el que planta y el que riega son una misma cosa; aunque <note caller="+" style="x"><char style="xo" closed="false">3.8 </char><char style="xt" closed="false">cp. 4.5 y <ref loc="1CO 9:16">9.16</ref>,<ref loc="1CO 9:17">17</ref>.</char></note>cada uno recibirá su recompensa conforme á su labor.<verse eid="1CO 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 3:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="2CO 6:1">2 Co. 6.1</ref>.</char></note>nosotros, coadjutores somos de Dios; y vosotros labranza de Dios sois, <note caller="+" style="x"><char style="xo" closed="false">3.9 </char><char style="xt" closed="false"><ref loc="EPH 2:20">Ef. 2.20</ref>. <ref loc="COL 2:7">Col. 2.7</ref>.</char></note>edificio de Dios sois.<verse eid="1CO 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 3:10"/>Conforme á la gracia de Dios que me ha sido dada, yo como perito arquitecto puse el fundamento, y otro edifica encima: empero cada uno vea cómo sobreedifica.<verse eid="1CO 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 3:11"/>Porque nadie puede poner otro fundamento que el que está puesto, <note caller="+" style="x"><char style="xo" closed="false">3.11 </char><char style="xt" closed="false"><ref loc="EPH 2:20">Ef. 2.20</ref>.</char></note>el cual es Jesucristo.<verse eid="1CO 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 3:12"/>Y si alguno edificare sobre este fundamento oro, plata, piedras preciosas, madera, heno, hojarasca;<verse eid="1CO 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 3:13"/>La obra <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false">cp. 4.5.</char></note>de cada uno será manifestada: porque <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="MAL 3:17">Mal. 3.17</ref>. cp. 1.8.</char></note>el día la declarará; porque <note caller="+" style="x"><char style="xo" closed="false">3.13 </char><char style="xt" closed="false"><ref loc="2TH 1:8">2 Ts. 1.8</ref>.</char></note>por el fuego será manifestada; y la obra de cada uno cuál sea, el fuego hará la prueba.<verse eid="1CO 3:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 3:14"/>Si permaneciere la obra de alguno que sobreedificó, recibirá recompensa.<verse eid="1CO 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 3:15"/>Si la obra de alguno fuere quemada, <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="LUK 9:25">Lc. 9.25</ref>.</char></note>será perdida: él empero será salvo, mas así <note caller="+" style="x"><char style="xo" closed="false">3.15 </char><char style="xt" closed="false"><ref loc="JUD 1:23">Jud. 23</ref>.</char></note>como por fuego.<verse eid="1CO 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 3:16"/>¿No sabéis <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false">cp. 6.19. <ref loc="2CO 6:16">2 Co. 6.16</ref>. <ref loc="EPH 2:21">Ef. 2.21</ref>.</char></note>que sois templo de Dios, y que <note caller="+" style="x"><char style="xo" closed="false">3.16 </char><char style="xt" closed="false"><ref loc="ROM 8:9">Ro. 8.9</ref>. <ref loc="2TI 1:14">2 Ti. 1.14</ref>.</char></note>el Espíritu de Dios mora en vosotros?<verse eid="1CO 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 3:17"/>Si alguno violare el templo de Dios, Dios destruirá al tal: porque el templo de Dios, el cual sois vosotros, santo es.<verse eid="1CO 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 3:18"/>Nadie <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false"><ref loc="GAL 6:3">Ga. 6.3</ref>.</char></note>se engañe á sí mismo: <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false">cp. 8.2.</char></note>si alguno entre vosotros parece ser sabio en <note caller="+" style="x"><char style="xo" closed="false">3.18 </char><char style="xt" closed="false">cp. 2.6.</char></note>este siglo, hágase simple, para ser sabio.<verse eid="1CO 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 3:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false">cp. 1.20 y <ref loc="1CO 2:6">2.6</ref>.</char></note>la sabiduría de esta mundo es necedad para con Dios; pues escrito está: <note caller="+" style="x"><char style="xo" closed="false">3.19 </char><char style="xt" closed="false"><ref loc="JOB 5:13">Job 5.13</ref>.</char></note>El que prende á los sabios en la astucia de ellos.<verse eid="1CO 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 3:20"/>Y otra vez: <note caller="+" style="x"><char style="xo" closed="false">3.20 </char><char style="xt" closed="false"><ref loc="PSA 94:11">Sal. 94.11</ref>.</char></note>El Señor conoce los pensamientos de los sabios, que son vanos.<verse eid="1CO 3:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 3:21"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">3.21 </char><char style="xt" closed="false">cp. 4.6 y <ref loc="1CO 5:6">5.6</ref>.</char></note>ninguno se gloríe en los hombres; porque todo es vuestro,<verse eid="1CO 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 3:22"/>Sea Pablo, sea Apolos, sea <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false">cp. 1.12.</char></note>Cefas, sea el mundo, sea la vida, sea la muerte, sea <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="ROM 8:38">Ro. 8.38</ref>.</char></note>lo presente, sea lo por venir; <note caller="+" style="x"><char style="xo" closed="false">3.22 </char><char style="xt" closed="false"><ref loc="ROM 8:28">Ro. 8.28</ref>.</char></note>todo es vuestro;<verse eid="1CO 3:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 3:23"/>Y <note caller="+" style="x"><char style="xo" closed="false">3.23 </char><char style="xt" closed="false"><ref loc="2CO 10:7">2 Co. 10.7</ref>. <ref loc="GAL 3:29">Ga. 3.29</ref>.</char></note>vosotros de Cristo; y Cristo de Dios.<verse eid="1CO 3:23"/></para>
+  <chapter eid="1CO 3"/>
+  <chapter number="4" style="c" sid="1CO 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 4:1"/>TÉNGANNOS los hombres por <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false">cp. 3.5. <ref loc="2CO 6:4">2 Co. 6.4</ref>.</char></note>ministros de Cristo, <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="TIT 1:7">Tit. 1.7</ref>.</char></note>y dispensadores de <note caller="+" style="x"><char style="xo" closed="false">4.1 </char><char style="xt" closed="false"><ref loc="COL 1:26">Col. 1.26</ref>,<ref loc="COL 1:27">27</ref>.</char></note>los misterios de Dios.<verse eid="1CO 4:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 4:2"/>Mas ahora se requiere en los dispensadores, que cada uno sea hallado <note caller="+" style="x"><char style="xo" closed="false">4.2 </char><char style="xt" closed="false">cp. 7.25.</char></note>fiel.<verse eid="1CO 4:2"/></para>
+  <para style="s">1 Sufrimientos del apóstol.</para>
+  <para style="s">2 El incestuoso castigado.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 4:3"/>Yo en muy poco tengo el ser <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">cp. 2.15.</char></note>juzgado de vosotros, ó de <note caller="+" style="x"><char style="xo" closed="false">4.3 </char><char style="xt" closed="false">cp. 3.13.</char></note>juicio humano; y ni aun yo me juzgo.<verse eid="1CO 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 4:4"/>Porque aunque <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="ACT 23:1">Hch. 23.1</ref>.</char></note>de nada tengo mala conciencia, <note caller="+" style="x"><char style="xo" closed="false">4.4 </char><char style="xt" closed="false"><ref loc="1JN 3:20">1 Jn. 3.20</ref>,<ref loc="1JN 3:21">21</ref>.</char></note>no por eso soy justificado; mas el que me juzga, el Señor es.<verse eid="1CO 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 4:5"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">4.5 </char><char style="xt" closed="false"><ref loc="MAT 7:1">Mt. 7.1</ref>.</char></note>no juzguéis nada antes de tiempo, hasta que venga el Señor, el cual también aclarará lo oculto de las tinieblas, y manifestará los intentos de los corazones: y entonces cada uno tendrá de Dios la alabanza.<verse eid="1CO 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 4:6"/>Esto empero, hermanos, he <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">cp. 3.21.</char></note>pasado por ejemplo en mí y en Apolos por amor de vosotros; <char style="fm">4.6</char> para que en nosotros aprendáis á no saber más de lo que está escrito, <note caller="+" style="x"><char style="xo" closed="false">4.6 </char><char style="xt" closed="false">vers. 18,19.</char></note>hinchándoos por causa de otro el uno contra el otro.<verse eid="1CO 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 4:7"/>Porque ¿quién te distingue? <note caller="+" style="x"><char style="xo" closed="false">4.7 </char><char style="xt" closed="false"><ref loc="JHN 3:27">Jn. 3.27</ref>. <ref loc="JAS 1:17">Stg. 1.17</ref>.</char></note>¿ó qué tienes que no hayas recibido? Y si lo recibiste, ¿de qué te glorías como si no hubieras recibido?<verse eid="1CO 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 4:8"/>Ya estáis hartos, ya estáis ricos, sin nosotros reináis; y ojalá reinéis, para que nosotros reinemos también juntamente con vosotros.<verse eid="1CO 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 4:9"/>Porque á lo que pienso, Dios nos ha mostrado á nosotros los apóstoles por los postreros, como á sentenciados á muerte: porque somos hechos espectáculo al mundo, y á los ángeles, y á los hombres.<verse eid="1CO 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 4:10"/>Nosotros necios por amor <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 1.18 y <ref loc="1CO 3:18">3.18</ref>.</char></note>de Cristo, y vosotros prudentes en Cristo; <note caller="+" style="x"><char style="xo" closed="false">4.10 </char><char style="xt" closed="false">cp. 2.3.</char></note>nosotros flacos, y vosotros fuertes; vosotros nobles, y nosotros viles.<verse eid="1CO 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 4:11"/>Hasta esta hora <note caller="+" style="x"><char style="xo" closed="false">4.11 </char><char style="xt" closed="false"><ref loc="2CO 11:27">2 Co. 11.27</ref>.</char></note>hambreamos, y tenemos sed, y estamos desnudos, y somos heridos de golpes, y andamos vagabundos;<verse eid="1CO 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 4:12"/>Y <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="ACT 18:3">Hch. 18.3</ref>. <ref loc="1TI 4:10">1 Ti. 4.10</ref>.</char></note>trabajamos, obrando con nuestras manos: <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="MAT 5:44">Mt. 5.44</ref>.</char></note>nos maldicen, y bendecimos: <note caller="+" style="x"><char style="xo" closed="false">4.12 </char><char style="xt" closed="false"><ref loc="JHN 15:20">Jn. 15.20</ref>.</char></note>padecemos persecución, y sufrimos:<verse eid="1CO 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 4:13"/>Somos blasfemados, y rogamos: hemos venido á ser como la hez del mundo, el desecho de todos hasta ahora.<verse eid="1CO 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 4:14"/>No escribo esto para avergonzaros: mas amonéstoos <note caller="+" style="x"><char style="xo" closed="false">4.14 </char><char style="xt" closed="false"><ref loc="2CO 6:13">2 Co. 6.13</ref> y <ref loc="2CO 12:14">12.14</ref>. <ref loc="1TH 2:11">1 Ts. 2.11</ref>.</char></note>como á mis hijos amados.<verse eid="1CO 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 4:15"/>Porque aunque tengáis diez mil ayos en Cristo, no <char style="it">tendréis</char> muchos padres; que <note caller="+" style="x"><char style="xo" closed="false">4.15 </char><char style="xt" closed="false">cp. 3.6. <ref loc="GAL 4:19">Ga. 4.19</ref>. <ref loc="1TI 1:2">1 Ti. 1.2</ref>. <ref loc="PHM 1:10">Flm. 10</ref>.</char></note>en Cristo Jesús yo os engendré por el evangelio.<verse eid="1CO 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 4:16"/>Por tanto, os ruego <note caller="+" style="x"><char style="xo" closed="false">4.16 </char><char style="xt" closed="false">cp. 11.1. <ref loc="PHP 3:17">Fil. 3.17</ref>.</char></note>que me imitéis.<verse eid="1CO 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 4:17"/>Por lo cual os he enviado <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="ACT 19:22">Hch. 19.22</ref>.</char></note>a Timoteo, <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false"><ref loc="2TI 1:2">2 Ti. 1.2</ref>.</char></note>que es mi hijo amado y fiel en el Señor, el cual os amonestará de mis caminos cuáles sean en Cristo, <note caller="+" style="x"><char style="xo" closed="false">4.17 </char><char style="xt" closed="false">cp. 7.17 y <ref loc="1CO 11:16">11.16</ref>.</char></note>de la manera que enseño en todas partes en todas las iglesias.<verse eid="1CO 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 4:18"/>Mas algunos están envanecidos, como si nunca hubiese yo de ir á vosotros.<verse eid="1CO 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 4:19"/>Empero iré <note caller="+" style="x"><char style="xo" closed="false">4.19 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Hch. 19.21</ref> y <ref loc="ACT 20:2">20.2</ref>. cp. 16.5,6.</char></note>presto á vosotros, si el Señor quisiere; y entenderé, no las palabras de los que andan hinchados, sino la virtud.<verse eid="1CO 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 4:20"/>Porque el reino de Dios no consiste en palabras, sino en virtud.<verse eid="1CO 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 4:21"/>¿Qué queréis? <note caller="+" style="x"><char style="xo" closed="false">4.21 </char><char style="xt" closed="false"><ref loc="2CO 1:23">2 Co. 1.23</ref> y <ref loc="2CO 2:1">2.1</ref>,<ref loc="2CO 2:3">3</ref>.</char></note>¿iré á vosotros con vara, ó con caridad y espíritu de mansedumbre?<verse eid="1CO 4:21"/></para>
+  <chapter eid="1CO 4"/>
+  <chapter number="5" style="c" sid="1CO 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 5:1"/>DE cierto se oye que hay entre vosotros <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false">cp. 6.18. <ref loc="2CO 12:21">2 Co. 12.21</ref>.</char></note>fornicación, y tal fornicación cual ni aun se nombra entre los Gentiles; tanto <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="LEV 18:8">Lv. 18.8</ref>. <ref loc="DEU 22:30">Dt. 22.30</ref> y <ref loc="DEU 27:20">27.20</ref>.</char></note>que alguno tenga la <note caller="+" style="x"><char style="xo" closed="false">5.1 </char><char style="xt" closed="false"><ref loc="2CO 7:12">2 Co. 7.12</ref>.</char></note>mujer de su padre.<verse eid="1CO 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 5:2"/>Y vosotros estáis hinchados, y no más bien tuvisteis duelo, para que fuese quitado de en medio de vosotros el que hizo tal obra.<verse eid="1CO 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 5:3"/>Y <note caller="+" style="x"><char style="xo" closed="false">5.3 </char><char style="xt" closed="false"><ref loc="COL 2:5">Col. 2.5</ref>.</char></note>ciertamente, como ausente con el cuerpo, mas presente en espíritu, ya como presente he juzgado al que esto así ha cometido:<verse eid="1CO 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 5:4"/>En el nombre del Señor nuestro Jesucristo, juntados vosotros y mi espíritu, <note caller="+" style="x"><char style="xo" closed="false">5.4 </char><char style="xt" closed="false"><ref loc="MAT 16:19">Mt. 16.19</ref>. <ref loc="2CO 2:10">2 Co. 2.10</ref> y <ref loc="2CO 13:3">13.3</ref>,<ref loc="2CO 13:10">10</ref>.</char></note>con la facultad de nuestro Señor Jesucristo,<verse eid="1CO 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 5:5"/>El tal sea entregado <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false"><ref loc="1TI 1:20">1 Ti. 1.20</ref>.</char></note>a Satanás para muerte de la carne, porque el espíritu sea salvo en <note caller="+" style="x"><char style="xo" closed="false">5.5 </char><char style="xt" closed="false">cp. 3.13. <ref loc="2CO 1:14">2 Co. 1.14</ref>.</char></note>el día del Señor Jesús.<verse eid="1CO 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 5:6"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">5.6 </char>
+      <char style="xt" closed="false">ver. 2.</char>
+    </note>No es buena vuestra jactancia. <note caller="+" style="x"><char style="xo" closed="false">5.6 </char><char style="xt" closed="false"><ref loc="MAT 16:6">Mt. 16.6</ref>. cp. 15.33. <ref loc="GAL 5:9">Ga. 5.9</ref>.</char></note>¿No sabéis que un poco de levadura leuda toda la masa?<verse eid="1CO 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 5:7"/>Limpiad pues la vieja levadura, para que seáis nueva masa, como sois sin levadura: porque nuestra pascua, <char style="it">que es</char> <note caller="+" style="x"><char style="xo" closed="false">5.7 </char><char style="xt" closed="false"><ref loc="JHN 1:29">Jn. 1.29</ref> y <ref loc="JHN 19:36">19.36</ref>.</char></note>Cristo, fué sacrificada por nosotros.<verse eid="1CO 5:7"/></para>
+  <para style="s">1 El juicio en la iglesia.</para>
+  <para style="s">2 Contra la fornicación.</para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 5:8"/>Así que <note caller="+" style="x"><char style="xo" closed="false">5.8 </char><char style="xt" closed="false"><ref loc="EXO 12:15">Ex. 12.15</ref>.</char></note>hagamos fiesta, no en la vieja levadura, ni en la levadura de malicia y de maldad, sino en ázimos de sinceridad y de verdad.<verse eid="1CO 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 5:9"/>Os he escrito por carta, que no os envolváis con los fornicarios:<verse eid="1CO 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 5:10"/>No absolutamente con los fornicarios de este mundo, ó con los avaros, ó con los ladrones, ó con los idólatras; pues en tal caso os sería menester <note caller="+" style="x"><char style="xo" closed="false">5.10 </char><char style="xt" closed="false"><ref loc="JHN 17:15">Jn. 17.15</ref>. <ref loc="1JN 5:19">1 Jn. 5.19</ref>.</char></note>salir del mundo.<verse eid="1CO 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 5:11"/>Mas ahora os he escrito, que no os envolváis, <char style="it">es á saber,</char> que <note caller="+" style="x"><char style="xo" closed="false">5.11 </char><char style="xt" closed="false"><ref loc="MAT 18:15-17">Mt. 18.15-17</ref>.</char></note>si alguno llamándose hermano fuere fornicario, ó avaro, ó idólatra, ó maldiciente, ó borracho, ó ladrón, con el tal ni aun comáis.<verse eid="1CO 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 5:12"/>Porque ¿qué me va á mí en juzgar <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false"><ref loc="MRK 4:11">Mr. 4.11</ref>.</char></note>a los que están fuera? ¿No juzgáis vosotros <note caller="+" style="x"><char style="xo" closed="false">5.12 </char><char style="xt" closed="false">cp. 6.1-4.</char></note>a los que están dentro?<verse eid="1CO 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 5:13"/>Porque á los que están fuera, Dios juzgará: <note caller="+" style="x"><char style="xo" closed="false">5.13 </char><char style="xt" closed="false"><ref loc="DEU 13:5">Dt. 13.5</ref>.</char></note>quitad <char style="it">pues</char> á ese malo de entre vosotros.<verse eid="1CO 5:13"/></para>
+  <chapter eid="1CO 5"/>
+  <chapter number="6" style="c" sid="1CO 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 6:1"/>¿OSA alguno de vosotros, teniendo algo con otro, ir á juicio delante de los injustos, y <note caller="+" style="x"><char style="xo" closed="false">6.1 </char><char style="xt" closed="false"><ref loc="MAT 18:17">Mt. 18.17</ref>. cp. 5.12.</char></note>no delante de los santos?<verse eid="1CO 6:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 6:2"/>¿O no sabéis que <note caller="+" style="x"><char style="xo" closed="false">6.2 </char><char style="xt" closed="false"><ref loc="MAT 19:28">Mt. 19.28</ref>.</char></note>los santos han de juzgar al mundo? Y si el mundo ha de ser juzgado por vosotros, ¿sois indignos de juzgar cosas muy pequeñas?<verse eid="1CO 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 6:3"/>¿O no sabéis que hemos de <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="2PE 2:4">2 P. 2.4</ref>. <ref loc="JUD 1:6">Jud. 6</ref>.</char></note>juzgar á los angeles? ¿cuánto más las cosas <note caller="+" style="x"><char style="xo" closed="false">6.3 </char><char style="xt" closed="false"><ref loc="LUK 21:34">Lc. 21.34</ref>.</char></note>de este siglo?<verse eid="1CO 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 6:4"/>Por tanto, si hubiereis de tener juicios de cosas de este siglo, poned para juzgar á los que son de menor estima en la iglesia.<verse eid="1CO 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 6:5"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">6.5 </char>
+      <char style="xt" closed="false">cp. 4.14 y <ref loc="1CO 15:34">15.34</ref>.</char>
+    </note>Para avergonzaros lo digo. ¿Pues qué, no hay entre vosotros sabio, ni aun uno que pueda juzgar entre sus hermanos;<verse eid="1CO 6:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 6:6"/>Sino que el hermano con el hermano pleitea en juicio, y esto ante los infieles?<verse eid="1CO 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 6:7"/>Así que, por cierto es ya una falta en vosotros que tengáis pleitos entre vosotros mismos. <note caller="+" style="x"><char style="xo" closed="false">6.7 </char><char style="xt" closed="false"><ref loc="MAT 5:39">Mt. 5.39</ref>.</char></note>¿Por qué no sufrís antes la injuria? ¿por qué no <char style="it">sufrís</char> antes ser defraudados?<verse eid="1CO 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 6:8"/>Empero vosotros hacéis la injuria, y defraudáis, y esto á los hermanos.<verse eid="1CO 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 6:9"/>¿No sabéis que los injustos <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false">cp. 15.50. <ref loc="GAL 5:19-21">Ga. 5.19-21</ref>. <ref loc="EPH 5:5">Ef. 5.5</ref>.</char></note>no poseerán el reino de Dios? <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false">cp. 15.33. <ref loc="GAL 6:7">Ga. 6.7</ref>.</char></note>No erréis, que ni los <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="REV 21:8">Ap. 21.8</ref> y <ref loc="REV 22:15">22.15</ref>.</char></note>fornicarios, ni los idólatras, ni los adúlteros, ni los afeminados, ni <note caller="+" style="x"><char style="xo" closed="false">6.9 </char><char style="xt" closed="false"><ref loc="LEV 18:22">Lv. 18.22</ref>.</char></note>los que se echan con varones,<verse eid="1CO 6:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 6:10"/>Ni los ladrones, ni los avaros, ni los borrachos, ni los maldicientes, ni los robadores, heredarán el reino de Dios.<verse eid="1CO 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 6:11"/>Y esto <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 12.2.</char></note>erais algunos: <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="ACT 22:16">Hch. 22.16</ref>. <ref loc="HEB 10:22">He. 10.22</ref>.</char></note>mas <char style="it">ya</char> sois lavados, mas <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false">cp. 1.30.</char></note><char style="it">ya</char> sois santificados, mas <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="ROM 8:30">Ro. 8.30</ref>.</char></note><char style="it">ya</char> sois justificados <note caller="+" style="x"><char style="xo" closed="false">6.11 </char><char style="xt" closed="false"><ref loc="JHN 20:31">Jn. 20.31</ref>.</char></note>en el nombre del Señor Jesús, y por el Espíritu de nuestro Dios.<verse eid="1CO 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 6:12"/>Todas las cosas <note caller="+" style="x"><char style="xo" closed="false">6.12 </char><char style="xt" closed="false">cp. 10.23.</char></note>me son lícitas, mas no todas convienen: todas las cosas me son lícitas, mas yo no me meteré debajo de potestad de nada.<verse eid="1CO 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 6:13"/>Las viandas para el vientre, y el vientre para las viandas; empero y á él y á ellas deshará Dios. Mas el cuerpo no es para la fornicación, sino <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false">vers. 15,19,20.</char></note>para el Señor; <note caller="+" style="x"><char style="xo" closed="false">6.13 </char><char style="xt" closed="false"><ref loc="EPH 5:23">Ef. 5.23</ref>.</char></note>y el Señor para el cuerpo:<verse eid="1CO 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 6:14"/>Y <note caller="+" style="x"><char style="xo" closed="false">6.14 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>Dios que levantó al Señor, también á nosotros nos levantará con su poder.<verse eid="1CO 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 6:15"/>¿No sabéis que <note caller="+" style="x"><char style="xo" closed="false">6.15 </char><char style="xt" closed="false"><ref loc="EPH 5:30">Ef. 5.30</ref>.</char></note>vuestros cuerpos son miembros de Cristo? ¿Quitaré pues los miembros de Cristo, y los haré miembros de una ramera? Lejos sea.<verse eid="1CO 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 6:16"/>¿O no sabéis que el que se junta con una ramera, es hecho <char style="it">con ella</char> un cuerpo? porque serán, dice, <note caller="+" style="x"><char style="xo" closed="false">6.16 </char><char style="xt" closed="false"><ref loc="GEN 2:24">Gn. 2.24</ref>.</char></note>los dos en una carne.<verse eid="1CO 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 6:17"/>Empero <note caller="+" style="x"><char style="xo" closed="false">6.17 </char><char style="xt" closed="false"><ref loc="JHN 17:21">Jn. 17.21</ref>,<ref loc="JHN 17:23">23</ref>. <ref loc="EPH 4:4">Ef. 4.4</ref>.</char></note>el que se junta con el Señor, un espíritu es.<verse eid="1CO 6:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 6:18"/>Huid la <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="MAT 15:19">Mt. 15.19</ref>. <ref loc="ACT 15:20">Hch. 15.20</ref>,<ref loc="ACT 15:29">29</ref>. <ref loc="ROM 1:29">Ro. 1.29</ref>.</char></note>fornicación. Cualquier <char style="it">otro</char> pecado que el hombre hiciere, fuera del cuerpo es; mas el que fornica, <note caller="+" style="x"><char style="xo" closed="false">6.18 </char><char style="xt" closed="false"><ref loc="ROM 1:24">Ro. 1.24</ref>.</char></note>contra su propio cuerpo peca.<verse eid="1CO 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 6:19"/>¿O ignoráis que <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="JHN 2:21">Jn. 2.21</ref>. cp. 3.16. <ref loc="2CO 6:16">2 Co. 6.16</ref>.</char></note>vuestro cuerpo es templo del Espíritu Santo, el cual está en vosotros, el cual tenéis de Dios, y que <note caller="+" style="x"><char style="xo" closed="false">6.19 </char><char style="xt" closed="false"><ref loc="ROM 14:7">Ro. 14.7</ref>,<ref loc="ROM 14:8">8</ref>.</char></note>no sois vuestros?<verse eid="1CO 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 6:20"/>Porque comprados <note caller="+" style="x"><char style="xo" closed="false">6.20 </char><char style="xt" closed="false">cp. 7.23. <ref loc="1PE 1:18">1 P. 1.18</ref>,<ref loc="1PE 1:19">19</ref>. <ref loc="2PE 2:1">2 P. 2.1</ref>.</char></note>sois por precio: glorificad pues á Dios en vuestro cuerpo y en vuestro espíritu, los cuales son de Dios.<verse eid="1CO 6:20"/></para>
+  <chapter eid="1CO 6"/>
+  <chapter number="7" style="c" sid="1CO 7"/>
+  <para style="s">1 Del casamiento</para>
+  <para style="s">2 y del celibato.</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 7:1"/>CUANTO á las cosas de que me escribisteis, <note caller="+" style="x"><char style="xo" closed="false">7.1 </char><char style="xt" closed="false">vers. 8,26.</char></note>bien es al hombre no tocar mujer.<verse eid="1CO 7:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 7:2"/>Mas á causa de <note caller="+" style="x"><char style="xo" closed="false">7.2 </char><char style="xt" closed="false">cp. 6.18.</char></note>las fornicaciones, cada uno tenga su mujer, y cada una tenga su marido.<verse eid="1CO 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 7:3"/>El marido <note caller="+" style="x"><char style="xo" closed="false">7.3 </char><char style="xt" closed="false"><ref loc="1PE 3:7">1 P. 3.7</ref>.</char></note>pague á la mujer la debida benevolencia; y asimismo la mujer al marido.<verse eid="1CO 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 7:4"/>La mujer no tiene potestad de su propio cuerpo, sino el marido: é igualmente tampoco el marido tiene potestad de su propio cuerpo, sino la mujer.<verse eid="1CO 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 7:5"/>No os defraudéis el uno al otro, á no ser por algún tiempo de <char style="it">mutuo</char> consentimiento, para ocuparos en la oración: y volved á juntaros en uno, porque no os tiente Satanás á causa de vuestra incontinencia.<verse eid="1CO 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 7:6"/>Mas esto digo por permisión, <note caller="+" style="x"><char style="xo" closed="false">7.6 </char><char style="xt" closed="false">vers. 10,12,40. <ref loc="2CO 8:8">2 Co. 8.8</ref>.</char></note>no por mandamiento.<verse eid="1CO 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 7:7"/>Quisiera más bien que todos los hombres fuesen <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false">cp. 9.5.</char></note>como yo: empero <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false">cp. 12.4.</char></note>cada uno tiene su propio don de Dios; <note caller="+" style="x"><char style="xo" closed="false">7.7 </char><char style="xt" closed="false"><ref loc="MAT 19:11">Mt. 19.11</ref>.</char></note>uno á la verdad así, y otro así.<verse eid="1CO 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 7:8"/>Digo pues á los solteros y á las viudas, que <note caller="+" style="x"><char style="xo" closed="false">7.8 </char><char style="xt" closed="false">vers. 1,26.</char></note>bueno les es si se quedaren <note caller="+" style="x"><char style="xo" closed="false">7.8 </char><char style="xt" closed="false">ver. 7. cp. 9.5.</char></note>como yo.<verse eid="1CO 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 7:9"/>Y si no tienen <note caller="+" style="x"><char style="xo" closed="false">7.9 </char><char style="xt" closed="false"><ref loc="1TI 5:14">1 Ti. 5.14</ref>.</char></note>don de continencia, cásense; que mejor es casarse que quemarse.<verse eid="1CO 7:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 7:10"/>Mas á los que están juntos en matrimonio, denuncio, <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false">vers. 6,25.</char></note>no yo, sino el Señor: <note caller="+" style="x"><char style="xo" closed="false">7.10 </char><char style="xt" closed="false"><ref loc="MAT 5:32">Mt. 5.32</ref>.</char></note>Que la mujer no se aparte del marido;<verse eid="1CO 7:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 7:11"/>Y si se apartare, que se quede sin casar, ó reconcíliese con su marido; y que el marido no despida á su mujer.<verse eid="1CO 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 7:12"/>Y á los demás yo digo, no el Señor: si algún hermano tiene mujer infiel, y ella consiente en habitar con él, no la despida.<verse eid="1CO 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 7:13"/>Y la mujer que tiene marido infiel, y él consiente en habitar con ella, no lo deje.<verse eid="1CO 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 7:14"/>Porque el marido infiel es santificado en la mujer, y la mujer infiel en el marido: pues de otra manera vuestros hijos serían inmundos; empero ahora son santos.<verse eid="1CO 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 7:15"/>Pero si el infiel se aparta, apártese: que no es el hermano ó la hermana sujeto á servidumbre en semejante <char style="it">caso;</char> antes <note caller="+" style="x"><char style="xo" closed="false">7.15 </char><char style="xt" closed="false"><ref loc="ROM 8:30">Ro. 8.30</ref> y <ref loc="ROM 14:19">14.19</ref>.</char></note>a paz nos llamó Dios.<verse eid="1CO 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 7:16"/>Porque <note caller="+" style="x"><char style="xo" closed="false">7.16 </char><char style="xt" closed="false"><ref loc="1PE 3:1">1 P. 3.1</ref>.</char></note>¿de dónde sabes, oh mujer, si quizá harás salva á tu marido? ¿ó de dónde sabes, oh marido, si quizá harás <note caller="+" style="x"><char style="xo" closed="false">7.16 </char><char style="xt" closed="false"><ref loc="ROM 11:14">Ro. 11.14</ref>.</char></note>salvo á tu mujer?<verse eid="1CO 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 7:17"/>Empero cada uno <note caller="+" style="x"><char style="xo" closed="false">7.17 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Ro. 12.3</ref>.</char></note>como el Señor le repartió, y como Dios llamó á cada uno, así ande: y <note caller="+" style="x"><char style="xo" closed="false">7.17 </char><char style="xt" closed="false">cp. 11.34.</char></note>así enseño <note caller="+" style="x"><char style="xo" closed="false">7.17 </char><char style="xt" closed="false">cp. 4.17 y <ref loc="1CO 11:16">11.16</ref> y <ref loc="1CO 14:33">14.33</ref>. <ref loc="2CO 11:28">2 Co. 11.28</ref>.</char></note>en todas las iglesias.<verse eid="1CO 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 7:18"/>¿Es llamado alguno circuncidado? quédese circunciso. ¿Es llamado alguno incircuncidado? que <note caller="+" style="x"><char style="xo" closed="false">7.18 </char><char style="xt" closed="false"><ref loc="ACT 15:1">Hch. 15.1</ref>,<ref loc="ACT 15:5">5</ref>,<ref loc="ACT 15:19">19</ref>. <ref loc="GAL 5:2">Ga. 5.2</ref>.</char></note>no se circuncide.<verse eid="1CO 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 7:19"/>La circuncisión nada es, <note caller="+" style="x"><char style="xo" closed="false">7.19 </char><char style="xt" closed="false"><ref loc="GAL 5:6">Ga. 5.6</ref>.</char></note>y la incircuncisión nada es; sino <note caller="+" style="x"><char style="xo" closed="false">7.19 </char><char style="xt" closed="false"><ref loc="1JN 2:3">1 Jn. 2.3</ref> y <ref loc="1JN 3:24">3.24</ref>.</char></note>la observancia de las mandamientos de Dios.<verse eid="1CO 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 7:20"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.20 </char>
+      <char style="xt" closed="false">ver. 24.</char>
+    </note>Cada uno en la vocación en que fué llamado, en ella se quede.<verse eid="1CO 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 7:21"/>¿Eres llamado siendo siervo? no se te dé cuidado; mas también si puedes hacerte libre, procúralo más.<verse eid="1CO 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 7:22"/>Porque el que en el Señor es llamado siendo siervo, liberto es <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false"><ref loc="JHN 8:36">Jn. 8.36</ref>. <ref loc="PHM 1:16">Flm. 16</ref>.</char></note>del Señor: asimismo también el que es llamado siendo libre, <note caller="+" style="x"><char style="xo" closed="false">7.22 </char><char style="xt" closed="false"><ref loc="EPH 6:6">Ef. 6.6</ref>. <ref loc="1PE 2:16">1 P. 2.16</ref>.</char></note>siervo es de Cristo.<verse eid="1CO 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 7:23"/>Por precio <note caller="+" style="x"><char style="xo" closed="false">7.23 </char><char style="xt" closed="false">cp. 6.20.</char></note>sois comprados; no os hagáis siervos de los hombres.<verse eid="1CO 7:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 7:24"/>Cada uno, hermanos, en lo que es llamado, en esto se quede para con Dios.<verse eid="1CO 7:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 7:25"/>Empero de las vírgenes <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false">ver. 40. <ref loc="2CO 8:8">2 Co. 8.8</ref>,<ref loc="2CO 8:10">10</ref> y <ref loc="2CO 11:17">11.17</ref>.</char></note>no tengo mandamiento del Señor; mas doy mi parecer, como <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false"><ref loc="2CO 4:1">2 Co. 4.1</ref>.</char></note>quien ha alcanzado misericordia del Señor <note caller="+" style="x"><char style="xo" closed="false">7.25 </char><char style="xt" closed="false">cp. 4.2.</char></note>para ser fiel.<verse eid="1CO 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 7:26"/>Tengo, pues, esto por bueno á causa de <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false"><ref loc="2CO 6:4">2 Co. 6.4</ref> y <ref loc="2CO 12:10">12.10</ref>.</char></note>la necesidad que apremia, que <note caller="+" style="x"><char style="xo" closed="false">7.26 </char><char style="xt" closed="false">vers. 1,8.</char></note>bueno es al hombre estarse así.<verse eid="1CO 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 7:27"/>¿Estás ligado á mujer? no procures soltarte. ¿Estás suelto de mujer? no procures mujer.<verse eid="1CO 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 7:28"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.28 </char>
+      <char style="xt" closed="false">ver. 11.</char>
+    </note>Mas también si tomares mujer, no pecaste; y si la doncella se casare, no pecó: pero aflicción de carne tendrán los tales; mas <note caller="+" style="x"><char style="xo" closed="false">7.28 </char><char style="xt" closed="false"><ref loc="2CO 1:23">2 Co. 1.23</ref>.</char></note>yo os dejo.<verse eid="1CO 7:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 7:29"/>Esto empero <note caller="+" style="x"><char style="xo" closed="false">7.29 </char><char style="xt" closed="false"><ref loc="ROM 13:11">Ro. 13.11</ref>.</char></note>digo, hermanos, que el tiempo es corto: lo que resta es, que los que tienen mujeres sean como los que no las tienen,<verse eid="1CO 7:29"/></para>
+  <para style="s">1 Consejos del apóstol.</para>
+  <para style="s">2 Lo ofrecido á los ídolos.</para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 7:30"/>Y los que lloran, como los que no lloran; y los que se huelgan, como los que no se huelgan; y los que compran, como los que <note caller="+" style="x"><char style="xo" closed="false">7.30 </char><char style="xt" closed="false"><ref loc="2CO 6:10">2 Co. 6.10</ref>.</char></note>no poseen;<verse eid="1CO 7:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 7:31"/>Y los que usan de este mundo, como los que no usan: porque <note caller="+" style="x"><char style="xo" closed="false">7.31 </char><char style="xt" closed="false"><ref loc="JAS 1:10">Stg. 1.10</ref> y <ref loc="JAS 4:14">4.14</ref>. <ref loc="1PE 1:24">1 P. 1.24</ref>. <ref loc="1JN 2:17">1 Jn. 2.17</ref>.</char></note>la apariencia de este mundo se pasa.<verse eid="1CO 7:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="1CO 7:32"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">7.32 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 10:41">Lc. 10.41</ref>,<ref loc="LUK 10:42">42</ref>.</char>
+    </note>Quisiera, pues, que estuvieseis sin congoja. <note caller="+" style="x"><char style="xo" closed="false">7.32 </char><char style="xt" closed="false"><ref loc="1TI 5:5">1 Ti. 5.5</ref>.</char></note>El soltero tiene cuidado de las cosas que son del Señor, <note caller="+" style="x"><char style="xo" closed="false">7.32 </char><char style="xt" closed="false">ver. 34.</char></note>cómo ha de agradar al Señor:<verse eid="1CO 7:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="1CO 7:33"/>Empero el que se casó tiene cuidado de las cosas que son del mundo, cómo ha de agradar á su mujer.<verse eid="1CO 7:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="1CO 7:34"/>Hay asimismo diferencia entre la casada y la doncella: la doncella tiene cuidado de las cosas del Señor, para ser santa así en el cuerpo como en el espíritu: mas la casada tiene cuidado de las cosas del mundo, cómo ha de agradar á su marido.<verse eid="1CO 7:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="1CO 7:35"/>Esto empero digo para vuestro provecho; no para echaros lazo, sino para lo honesto y decente, y para que sin impedimento os lleguéis al Señor.<verse eid="1CO 7:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="1CO 7:36"/>Mas, si á alguno parece cosa fea en su <char style="it">hija</char> virgen, que pase ya de edad, y que así conviene que se haga, haga lo que quisiere, no peca; cásese.<verse eid="1CO 7:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="1CO 7:37"/>Pero el que <note caller="+" style="x"><char style="xo" closed="false">7.37 </char><char style="xt" closed="false">cp. 15.58.</char></note>está firme en su corazón, y no tiene necesidad, sino que tiene libertad de su voluntad, y determinó en su corazón esto, el guardar su <char style="it">hija</char> virgen, bien hace.<verse eid="1CO 7:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="1CO 7:38"/>Así que, el que la da en casamiento, bien hace; y el que no la da en casamiento, hace mejor.<verse eid="1CO 7:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="1CO 7:39"/>La mujer <note caller="+" style="x"><char style="xo" closed="false">7.39 </char><char style="xt" closed="false"><ref loc="ROM 7:2">Ro. 7.2</ref>.</char></note>casada está atada á la ley, mientras vive su marido; mas si su marido muriere, libre es: cásese con quien quisiere, con tal que sea <note caller="+" style="x"><char style="xo" closed="false">7.39 </char><char style="xt" closed="false">cp. 11.11 y <ref loc="1CO 15:58">15.58</ref>. <ref loc="2CO 6:14">2 Co. 6.14</ref>.</char></note>en el Señor.<verse eid="1CO 7:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="1CO 7:40"/>Empero más venturosa será si se quedare así, <note caller="+" style="x"><char style="xo" closed="false">7.40 </char><char style="xt" closed="false">ver. 25.</char></note>según mi consejo; y pienso que también yo tengo Espíritu de Dios.<verse eid="1CO 7:40"/></para>
+  <chapter eid="1CO 7"/>
+  <chapter number="8" style="c" sid="1CO 8"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 8:1"/>Y POR lo que hace <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false">vers. 4,7,10. <ref loc="ACT 15:29">Hch. 15.29</ref>.</char></note>a lo sacrificado á los ídolos, sabemos que todos tenemos <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="ROM 14:14">Ro. 14.14</ref>,<ref loc="ROM 14:22">22</ref>. cp. 10.15.</char></note>ciencia. <note caller="+" style="x"><char style="xo" closed="false">8.1 </char><char style="xt" closed="false"><ref loc="ROM 14:3">Ro. 14.3</ref>,<ref loc="ROM 14:10">10</ref>.</char></note>La ciencia hincha, mas la caridad edifica.<verse eid="1CO 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 8:2"/>Y <note caller="+" style="x"><char style="xo" closed="false">8.2 </char><char style="xt" closed="false">cp. 13.8,9,12. <ref loc="GAL 6:3">Ga. 6.3</ref>. <ref loc="1TI 6:4">1 Ti. 6.4</ref>.</char></note>si alguno se imagina que sabe algo, aun no sabe nada como debe saber.<verse eid="1CO 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 8:3"/>Mas si alguno ama á Dios, <note caller="+" style="x"><char style="xo" closed="false">8.3 </char><char style="xt" closed="false"><ref loc="GAL 4:9">Ga. 4.9</ref>.</char></note>el tal es conocido de él.<verse eid="1CO 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 8:4"/>Acerca, pues, de las viandas que son saacrificadas á los ídolos, sabemos que <note caller="+" style="x"><char style="xo" closed="false">8.4 </char><char style="xt" closed="false"><ref loc="ISA 41:24">Is. 41.24</ref>.</char></note>el ídolo nada es en el mundo, <note caller="+" style="x"><char style="xo" closed="false">8.4 </char><char style="xt" closed="false"><ref loc="ACT 14:15">Hch. 14.15</ref>. cp. 10.19.</char></note>y que no hay más de un Dios.<verse eid="1CO 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 8:5"/>Porque aunque haya algunos que <note caller="+" style="x"><char style="xo" closed="false">8.5 </char><char style="xt" closed="false"><ref loc="JHN 10:34">Jn. 10.34</ref>.</char></note>se llamen dioses, ó en el cielo, ó en la tierra (como hay muchos dioses y muchos señores),<verse eid="1CO 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 8:6"/>Nosotros empero no tenemos más de un Dios, <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false"><ref loc="EPH 4:5">Ef. 4.5</ref>,<ref loc="EPH 4:6">6</ref>.</char></note>el Padre, del cual son todas las cosas, y nosotros <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Ro. 11.36</ref>. cp. 11.12.</char></note>en él: y <char style="fm">8.6</char> un Señor Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">8.6 </char><char style="xt" closed="false"><ref loc="JHN 1:3">Jn. 1.3</ref>.</char></note>por el cual son todas las cosas, y nosotros por él.<verse eid="1CO 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 8:7"/>Mas no en todos hay esta ciencia: porque algunos con conciencia del ídolo hasta aquí, <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false">cp. 10.25,27-29.</char></note>comen como sacrificado á ídolos; y su conciencia, siendo flaca, es <note caller="+" style="x"><char style="xo" closed="false">8.7 </char><char style="xt" closed="false"><ref loc="ROM 14:14">Ro. 14.14</ref>,<ref loc="ROM 14:23">23</ref>.</char></note>contaminada.<verse eid="1CO 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 8:8"/>Si bien la vianda no nos hace más aceptos á Dios: porque ni que comamos, seremos más ricos; ni que no comamos, seremos más pobres.<verse eid="1CO 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 8:9"/>Mas mirad que esta vuestra libertad no sea <note caller="+" style="x"><char style="xo" closed="false">8.9 </char><char style="xt" closed="false"><ref loc="ROM 14:1">Ro. 14.1</ref>,<ref loc="ROM 14:13">13</ref>.</char></note>tropezadero á los que son flacos.<verse eid="1CO 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 8:10"/>Porque si te ve alguno, á ti que tienes <note caller="+" style="x"><char style="xo" closed="false">8.10 </char><char style="xt" closed="false">ver. 1.</char></note>ciencia, que estás sentado á la mesa en el lugar de los ídolos, ¿la conciencia de aquel que es flaco, no será adelantada á comer de lo sacrificado á los ídolos?<verse eid="1CO 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 8:11"/>Y por tu ciencia se perderá el hermano flaco por el cual Cristo murió.<verse eid="1CO 8:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 8:12"/>De esta manera, pues, pecando contra los hermanos, é hiriendo su flaca conciencia, contra Cristo pecáis.<verse eid="1CO 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 8:13"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">8.13 </char><char style="xt" closed="false"><ref loc="ROM 14:13">Ro. 14.13</ref>,<ref loc="ROM 14:21">21</ref>.</char></note>si la comida es á mi hermano ocasión de caer, jamás comeré carne por no escandalizar á mi hermano.<verse eid="1CO 8:13"/></para>
+  <chapter eid="1CO 8"/>
+  <chapter number="9" style="c" sid="1CO 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 9:1"/>¿NO soy apóstol? <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="2CO 12:12">2 Co. 12.12</ref>. <ref loc="GAL 1:19">Ga. 1.19</ref>. <ref loc="1TI 2:7">1 Ti. 2.7</ref>. <ref loc="2TI 1:11">2 Ti. 1.11</ref>.</char></note>¿no soy libre? <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false"><ref loc="ACT 9:3">Hch. 9.3</ref>,<ref loc="ACT 9:17">17</ref>.</char></note>¿no he visto á Jesús el Señor nuestro? <note caller="+" style="x"><char style="xo" closed="false">9.1 </char><char style="xt" closed="false">cp. 3.6.</char></note>¿no sois vosotros mi obra en el Señor?<verse eid="1CO 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 9:2"/>Si á los otros no soy apóstol, á vosotros ciertamente lo soy: porque <note caller="+" style="x"><char style="xo" closed="false">9.2 </char><char style="xt" closed="false"><ref loc="2CO 3:2">2 Co. 3.2</ref> y <ref loc="2CO 13:3">13.3</ref>.</char></note>el sello de mi apostolado sois vosotros en el Señor.<verse eid="1CO 9:2"/></para>
+  <para style="s">1 Desinterés de Pablo.</para>
+  <para style="s">2 El atleta cristiano.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 9:3"/>Esta es mi respuesta á los que me preguntan.<verse eid="1CO 9:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 9:4"/>Qué, <note caller="+" style="x"><char style="xo" closed="false">9.4 </char><char style="xt" closed="false">ver. 14. <ref loc="1TH 2:6">1 Ts. 2.6</ref>,<ref loc="1TH 2:9">9</ref>. <ref loc="2TH 3:8">2 Ts. 3.8</ref>,<ref loc="2TH 3:9">9</ref>.</char></note>¿no tenemos potestad de comer y de beber?<verse eid="1CO 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 9:5"/>¿No tenemos potestad de traer <char style="it">con nosotros</char> <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false">cp. 7.15.</char></note>una hermana mujer también como los otros apóstoles, y <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false"><ref loc="MAT 12:46">Mt. 12.46</ref>.</char></note>los hermanos del Señor, y <note caller="+" style="x"><char style="xo" closed="false">9.5 </char><char style="xt" closed="false">cp. 1.12.</char></note>Cefas?<verse eid="1CO 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 9:6"/>¿O sólo yo y Bernabé no tenemos potestad de no trabajar?<verse eid="1CO 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 9:7"/>¿Quién <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="2CO 10:4">2 Co. 10.4</ref>.</char></note>jamás peleó á sus expensas? ¿quién <note caller="+" style="x"><char style="xo" closed="false">9.7 </char><char style="xt" closed="false"><ref loc="DEU 20:6">Dt. 20.6</ref>.</char></note>planta viña, y no come de su fruto? ¿ó quién apacienta el ganado, y no come de la leche del ganado?<verse eid="1CO 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 9:8"/>¿Digo esto <note caller="+" style="x"><char style="xo" closed="false">9.8 </char><char style="xt" closed="false"><ref loc="ROM 3:5">Ro. 3.5</ref>.</char></note>según los hombres? ¿no dice esto también la ley?<verse eid="1CO 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 9:9"/>Porque en la ley de Moisés está escrito: <note caller="+" style="x"><char style="xo" closed="false">9.9 </char><char style="xt" closed="false"><ref loc="DEU 25:4">Dt. 25.4</ref>. <ref loc="1TI 5:18">1 Ti. 5.18</ref>.</char></note>No pondrás bozal al buey que trilla. ¿Tiene Dios cuidado de los bueyes?<verse eid="1CO 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 9:10"/>¿O dícelo enteramente por nosotros? Pues <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="ROM 15:4">Ro. 15.4</ref>.</char></note>por nosotros está escrito: porque <note caller="+" style="x"><char style="xo" closed="false">9.10 </char><char style="xt" closed="false"><ref loc="2TI 2:6">2 Ti. 2.6</ref>.</char></note>con esperanza ha de arar el que ara; y el que trilla, con esperanza de recibir el fruto.<verse eid="1CO 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 9:11"/>Si nosotros os sembramos <note caller="+" style="x"><char style="xo" closed="false">9.11 </char><char style="xt" closed="false"><ref loc="ROM 15:27">Ro. 15.27</ref>.</char></note>lo espiritual, ¿es gran cosa si segáremos lo vuestro carnal?<verse eid="1CO 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 9:12"/>Si otros tienen en vosotros esta potestad, ¿no más bien nosotros? <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="ACT 20:33">Hch. 20.33</ref>.</char></note>Mas no hemos usado de esta potestad: antes lo sufrimos todo, <note caller="+" style="x"><char style="xo" closed="false">9.12 </char><char style="xt" closed="false"><ref loc="2CO 6:3">2 Co. 6.3</ref> y <ref loc="2CO 11:12">11.12</ref> y <ref loc="2CO 12:13">12.13</ref>.</char></note>por no poner ningún obstáculo al evangelio de Cristo.<verse eid="1CO 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 9:13"/>¿No sabéis que los que <note caller="+" style="x"><char style="xo" closed="false">9.13 </char><char style="xt" closed="false"><ref loc="LEV 6:16">Lv. 6.16</ref>,<ref loc="LEV 6:26">26</ref> y <ref loc="LEV 7:6">7.6</ref>,<ref loc="LEV 7:31">31</ref>,<ref loc="LEV 7:32">32</ref>. <ref loc="NUM 5:9">Nm. 5.9</ref>,<ref loc="NUM 5:10">10</ref> y <ref loc="NUM 18:8-20">18.8-20</ref>. <ref loc="DEU 10:9">Dt. 10.9</ref> y <ref loc="DEU 18:1">18.1</ref>.</char></note>trabajan en el santuario, comen del santuario; y que los que sirven al altar, del altar participan?<verse eid="1CO 9:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 9:14"/>Así también <note caller="+" style="x"><char style="xo" closed="false">9.14 </char><char style="xt" closed="false"><ref loc="MAT 10:10">Mt. 10.10</ref>. <ref loc="LUK 10:7">Lc. 10.7</ref>. <ref loc="GAL 6:6">Ga. 6.6</ref>. <ref loc="1TI 5:17">1 Ti. 5.17</ref>.</char></note>ordenó el Señor á los que anuncian el evangelio, que vivan del evangelio.<verse eid="1CO 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 9:15"/>Mas yo de nada de esto me aproveché: ni tampoco he escrito esto para que se haga así conmigo; <note caller="+" style="x"><char style="xo" closed="false">9.15 </char><char style="xt" closed="false"><ref loc="2CO 11:10">2 Co. 11.10</ref>.</char></note>porque tengo por mejor morir, antes que nadie haga vana <char style="it">esta</char> mi gloria.<verse eid="1CO 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 9:16"/>Pues bien que anuncio el evangelio, no tengo por qué gloriarme porque me es impuesta necesidad; y ¡ay de mí si no anunciare el evangelio!<verse eid="1CO 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 9:17"/>Por lo cual, si lo hago de voluntad, <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false"><ref loc="JHN 4:36">Jn. 4.36</ref>. cp. 3.8,14.</char></note>premio tendré; mas si por fuerza, <note caller="+" style="x"><char style="xo" closed="false">9.17 </char><char style="xt" closed="false">cp. 4.1. <ref loc="EPH 3:2">Ef. 3.2</ref>.</char></note>la dispensación me ha sido encargada.<verse eid="1CO 9:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 9:18"/>¿Cuál, pues, es mi merced? Que <note caller="+" style="x"><char style="xo" closed="false">9.18 </char><char style="xt" closed="false"><ref loc="2CO 11:7">2 Co. 11.7</ref>.</char></note>predicando el evangelio, ponga el evangelio de Cristo de balde, para no usar mal de mi potestad en el evangelio.<verse eid="1CO 9:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 9:19"/>Por lo cual, <note caller="+" style="x"><char style="xo" closed="false">9.19 </char><char style="xt" closed="false">ver. 1.</char></note>siendo libre para con todos, <note caller="+" style="x"><char style="xo" closed="false">9.19 </char><char style="xt" closed="false"><ref loc="GAL 5:13">Ga. 5.13</ref>.</char></note>me he hecho siervo de todos por ganar á más.<verse eid="1CO 9:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 9:20"/>Heme hecho <note caller="+" style="x"><char style="xo" closed="false">9.20 </char><char style="xt" closed="false"><ref loc="ACT 16:3">Hch. 16.3</ref> y <ref loc="ACT 18:18">18.18</ref> y <ref loc="ACT 21:23-26">21.23-26</ref>.</char></note>a los Judíos como Judío, por ganar á los Judíos; á los que están sujetos á la ley (aunque yo no sea sujeto á la ley) como sujeto á la ley, por ganar á los que están sujetos á la ley;<verse eid="1CO 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 9:21"/>A los que son sin ley, <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false"><ref loc="GAL 2:3">Ga. 2.3</ref> y <ref loc="GAL 3:2">3.2</ref>.</char></note>como si yo fuera sin ley, <note caller="+" style="x"><char style="xo" closed="false">9.21 </char><char style="xt" closed="false">cp. 7.22.</char></note>(no estando yo sin ley de Dios, mas en la ley de Cristo) por ganar á los que estaban sin ley.<verse eid="1CO 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 9:22"/>Me he hecho á los flacos <note caller="+" style="x"><char style="xo" closed="false">9.22 </char><char style="xt" closed="false"><ref loc="2CO 11:29">2 Co. 11.29</ref>.</char></note>flaco, por ganar á los flacos: á todos me he hecho todo, para que de todo punto salve á algunos.<verse eid="1CO 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 9:23"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">9.23 </char>
+      <char style="xt" closed="false">cp. 10.24.</char>
+    </note>Y esto hago por causa del evangelio, por hacerme juntamente participante de él.<verse eid="1CO 9:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 9:24"/>¿No sabéis que los que corren en el estadio, todos á la verdad corren, mas uno lleva el premio? <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false"><ref loc="GAL 2:2">Ga. 2.2</ref>. <ref loc="HEB 12:1">He. 12.1</ref>.</char></note>Corred de tal manera que <char style="it">lo</char> <note caller="+" style="x"><char style="xo" closed="false">9.24 </char><char style="xt" closed="false"><ref loc="PHP 3:13">Fil. 3.13</ref>.</char></note>obtengáis.<verse eid="1CO 9:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 9:25"/>Y todo aquel <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false"><ref loc="2TI 2:5">2 Ti. 2.5</ref> y <ref loc="2TI 4:8">4.8</ref>.</char></note>que lucha, de todo se abstiene: y ellos, á la verdad, para recibir una <char style="fm">9.25</char> corona corruptible; mas nosotros, <note caller="+" style="x"><char style="xo" closed="false">9.25 </char><char style="xt" closed="false"><ref loc="1PE 1:4">1 P. 1.4</ref>.</char></note>incorruptible.<verse eid="1CO 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 9:26"/>Así que, yo de esta manera corro, no como á cosa incierta; de esta manera peleo, no como quien <note caller="+" style="x"><char style="xo" closed="false">9.26 </char><char style="xt" closed="false">cp. 14.9.</char></note>hiere el aire:<verse eid="1CO 9:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 9:27"/>Antes hiero mi cuerpo, y <note caller="+" style="x"><char style="xo" closed="false">9.27 </char><char style="xt" closed="false"><ref loc="ROM 6:19">Ro. 6.19</ref>.</char></note>lo pongo en servidumbre; no sea que, habiendo predicado á otros, yo mismo venga á ser <note caller="+" style="x"><char style="xo" closed="false">9.27 </char><char style="xt" closed="false"><ref loc="2CO 13:5-7">2 Co. 13.5-7</ref>.</char></note>reprobado.<verse eid="1CO 9:27"/></para>
+  <chapter eid="1CO 9"/>
+  <chapter number="10" style="c" sid="1CO 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 10:1"/>PORQUE no quiero, hermanos, que ignoréis <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="EXO 13:21">Ex. 13.21</ref>.</char></note>que nuestros padres todos estuvieron bajo la nube, <note caller="+" style="x"><char style="xo" closed="false">10.1 </char><char style="xt" closed="false"><ref loc="EXO 14:22">Ex. 14.22</ref>.</char></note>y todos pasaron la mar;<verse eid="1CO 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 10:2"/>Y todos en Moisés fueron bautizados en la nube y en la mar;<verse eid="1CO 10:2"/></para>
+  <para style="s">1 Exhortaciones contra</para>
+  <para style="s">2 la idolatría.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 10:3"/>Y <note caller="+" style="x"><char style="xo" closed="false">10.3 </char><char style="xt" closed="false"><ref loc="EXO 16:15">Ex. 16.15</ref>,<ref loc="EXO 16:35">35</ref>. <ref loc="JHN 6:31">Jn. 6.31</ref>.</char></note>todos comieron la misma vianda espiritual;<verse eid="1CO 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 10:4"/>Y <note caller="+" style="x"><char style="xo" closed="false">10.4 </char><char style="xt" closed="false"><ref loc="EXO 17:6">Ex. 17.6</ref>.</char></note>todos bebieron la misma bebida espiritual; porque bebían de la piedra espiritual que los seguía, y la piedra era Cristo.<verse eid="1CO 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 10:5"/>Mas de muchos de ellos no se agradó Dios; <note caller="+" style="x"><char style="xo" closed="false">10.5 </char><char style="xt" closed="false"><ref loc="NUM 14:29">Nm. 14.29</ref>,<ref loc="NUM 14:32">32</ref>,<ref loc="NUM 14:35">35</ref> y <ref loc="NUM 26:64">26.64</ref>,<ref loc="NUM 26:65">65</ref>.</char></note>por lo cual fueron postrados en el desierto.<verse eid="1CO 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 10:6"/>Empero estas cosas fueron en figura de nosotros, para que no codiciemos cosas malas, <note caller="+" style="x"><char style="xo" closed="false">10.6 </char><char style="xt" closed="false"><ref loc="NUM 11:4">Nm. 11.4</ref>.</char></note>como ellos codiciaron.<verse eid="1CO 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 10:7"/>Ni seáis honradores de ídolos, como algunos de ellos, según está escrito: <note caller="+" style="x"><char style="xo" closed="false">10.7 </char><char style="xt" closed="false"><ref loc="EXO 32:6">Ex. 32.6</ref>.</char></note>Sentóse el pueblo á comer y á beber, y se levantaron á jugar.<verse eid="1CO 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 10:8"/>Ni <note caller="+" style="x"><char style="xo" closed="false">10.8 </char><char style="xt" closed="false">cp. 6.18.</char></note>forniquemos, como algunos de ellos fornicaron, y <note caller="+" style="x"><char style="xo" closed="false">10.8 </char><char style="xt" closed="false"><ref loc="NUM 25:1-9">Nm. 25.1-9</ref>.</char></note>cayeron en un día veinte y tres mil.<verse eid="1CO 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 10:9"/>Ni tentemos á Cristo, como también algunos de ellos <char style="it">le</char> tentaron, y <note caller="+" style="x"><char style="xo" closed="false">10.9 </char><char style="xt" closed="false"><ref loc="NUM 21:5">Nm. 21.5</ref>,<ref loc="NUM 21:6">6</ref>.</char></note>perecieron por las serpientes.<verse eid="1CO 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 10:10"/>Ni <note caller="+" style="x"><char style="xo" closed="false">10.10 </char><char style="xt" closed="false"><ref loc="NUM 14:2">Nm. 14.2</ref>,<ref loc="NUM 14:37">37</ref>.</char></note>murmuréis, como algunos de ellos murmuraron, y <char style="fm">10.10</char> perecieron por el destructor.<verse eid="1CO 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 10:11"/>Y estas cosas les acontecieron en figura; y <note caller="+" style="x"><char style="xo" closed="false">10.11 </char><char style="xt" closed="false"><ref loc="ROM 15:4">Ro. 15.4</ref>.</char></note>son escritas para nuestra admonición, en quienes los fines de los siglos han parado.<verse eid="1CO 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 10:12"/>Así que, <note caller="+" style="x"><char style="xo" closed="false">10.12 </char><char style="xt" closed="false"><ref loc="ROM 11:20">Ro. 11.20</ref>.</char></note>el que piensa estar <char style="it">firme,</char> mire no caiga.<verse eid="1CO 10:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 10:13"/>No os ha tomado tentación, sino humana: mas <note caller="+" style="x"><char style="xo" closed="false">10.13 </char><char style="xt" closed="false">cp. 1.9.</char></note>fiel es Dios, <note caller="+" style="x"><char style="xo" closed="false">10.13 </char><char style="xt" closed="false"><ref loc="2PE 2:9">2 P. 2.9</ref>.</char></note>que no os dejará ser tentados más de lo que podeís <char style="it">llevar;</char> antes dará también juntamente con la tentación la salida, para que podáis aguantar.<verse eid="1CO 10:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 10:14"/>Por tanto, amados míos, <note caller="+" style="x"><char style="xo" closed="false">10.14 </char><char style="xt" closed="false">ver. 7.</char></note>huid de la idolatría.<verse eid="1CO 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 10:15"/>Como <note caller="+" style="x"><char style="xo" closed="false">10.15 </char><char style="xt" closed="false">cp. 8.1.</char></note>a sabios hablo; juzgad vosotros lo que digo.<verse eid="1CO 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 10:16"/>La copa de bendición <note caller="+" style="x"><char style="xo" closed="false">10.16 </char><char style="xt" closed="false"><ref loc="MAT 26:26">Mt. 26.26</ref>,<ref loc="MAT 26:27">27</ref>,<ref loc="MAT 26:28">28</ref>. cp. 11.25 y <ref loc="MAT 14:16">14.16</ref>.</char></note>que bendecimos, ¿no es la comunión de la sangre de Cristo? El pan que partimos, ¿no es la comunión del cuerpo de Cristo?<verse eid="1CO 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 10:17"/>Porque un pan, <char style="it">es que</char> muchos somos <note caller="+" style="x"><char style="xo" closed="false">10.17 </char><char style="xt" closed="false">cp. 12.27. <ref loc="EPH 4:4">Ef. 4.4</ref>,<ref loc="EPH 4:16">16</ref>.</char></note>un cuerpo; pues todos participamos de aquel un pan.<verse eid="1CO 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 10:18"/>Mirad <note caller="+" style="x"><char style="xo" closed="false">10.18 </char><char style="xt" closed="false"><ref loc="ROM 9:3">Ro. 9.3</ref>,<ref loc="ROM 9:5">5</ref>.</char></note>a Israel según la carne: los que comen de <note caller="+" style="x"><char style="xo" closed="false">10.18 </char><char style="xt" closed="false"><ref loc="LEV 3:3">Lv. 3.3</ref> y <ref loc="LEV 7:15">7.15</ref>.</char></note>los sacrificios ¿no son partícipes con el altar?<verse eid="1CO 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 10:19"/>¿Qué pues digo? <note caller="+" style="x"><char style="xo" closed="false">10.19 </char><char style="xt" closed="false">cp. 8.4.</char></note>¿Que el ídolo es algo? ¿ó que sea algo lo que es sacrificado á los ídolos?<verse eid="1CO 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 10:20"/>Antes <char style="it">digo</char> que lo que <note caller="+" style="x"><char style="xo" closed="false">10.20 </char><char style="xt" closed="false"><ref loc="DEU 32:17">Dt. 32.17</ref>.</char></note>los Gentiles sacrifican, á los demonios <char style="it">lo</char> sacrifican, y no á Dios: y no querría que vosotros fueseis partícipes con los demonios.<verse eid="1CO 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 10:21"/>No podéis beber <note caller="+" style="x"><char style="xo" closed="false">10.21 </char><char style="xt" closed="false"><ref loc="2CO 6:15">2 Co. 6.15</ref>,<ref loc="2CO 6:16">16</ref>.</char></note>la copa del Señor, y la copa de los demonios: no podéis ser partícipes de la mesa del Señor, y de la mesa de los demonios.<verse eid="1CO 10:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 10:22"/>¿O <note caller="+" style="x"><char style="xo" closed="false">10.22 </char><char style="xt" closed="false"><ref loc="EXO 20:5">Ex. 20.5</ref>. <ref loc="NUM 25:11">Nm. 25.11</ref>.</char></note>provocaremos á celo al Señor? ¿Somos más fuertes que él?<verse eid="1CO 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 10:23"/>Todo me es lícito, <note caller="+" style="x"><char style="xo" closed="false">10.23 </char><char style="xt" closed="false">cp. 6.12.</char></note>mas no todo conviene: todo me es lícito, mas no todo edifica.<verse eid="1CO 10:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 10:24"/>Ninguno <note caller="+" style="x"><char style="xo" closed="false">10.24 </char><char style="xt" closed="false"><ref loc="ROM 15:1">Ro. 15.1</ref>,<ref loc="ROM 15:2">2</ref>.</char></note>busque su propio <char style="it">bien,</char> sino el del otro.<verse eid="1CO 10:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 10:25"/>De todo lo que se vende en la carnicería, comed, sin preguntar nada <note caller="+" style="x"><char style="xo" closed="false">10.25 </char><char style="xt" closed="false">cp. 8.7.</char></note>por causa de la conciencia;<verse eid="1CO 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 10:26"/>Porque <note caller="+" style="x"><char style="xo" closed="false">10.26 </char><char style="xt" closed="false"><ref loc="PSA 24:1">Sal. 24.1</ref>.</char></note>del Señor es la tierra y lo que la hinche.<verse eid="1CO 10:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 10:27"/>Y si algún infiel os llama, y queréis ir, de todo lo que se os pone delante comed, sin preguntar nada <char style="fm">10.25</char> por causa de la conciencia.<verse eid="1CO 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 10:28"/>Mas si alguien os dijere: Esto fué sacrificado á los ídolos: no <char style="it">lo</char> comáis, <note caller="+" style="x"><char style="xo" closed="false">10.28 </char><char style="xt" closed="false">cp. 8.10,12.</char></note>por causa de aquel que lo declaró, y por causa de la conciencia: porque del Señor es la tierra y lo que la hinche.<verse eid="1CO 10:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 10:29"/>La conciencia, digo, no tuya, sino del otro. Pues ¿por qué ha de ser <note caller="+" style="x"><char style="xo" closed="false">10.29 </char><char style="xt" closed="false">cp. 9.1,19.</char></note>juzgada mi libertad por otra conciencia?<verse eid="1CO 10:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 10:30"/>Y si yo con agradecimiento participo, <note caller="+" style="x"><char style="xo" closed="false">10.30 </char><char style="xt" closed="false"><ref loc="ROM 14:6">Ro. 14.6</ref>.</char></note>¿por qué he de ser blasfemado por lo que doy gracias?<verse eid="1CO 10:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 10:31"/>Si pues coméis, ó bebéis, ó hacéis otra cosa, <note caller="+" style="x"><char style="xo" closed="false">10.31 </char><char style="xt" closed="false"><ref loc="COL 3:17">Col. 3.17</ref>. <ref loc="1PE 4:11">1 P. 4.11</ref>.</char></note>haced <char style="it">lo</char> todo á gloria de Dios.<verse eid="1CO 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="1CO 10:32"/>Sed sin ofensa <note caller="+" style="x"><char style="xo" closed="false">10.32 </char><char style="xt" closed="false"><ref loc="ROM 14:13">Ro. 14.13</ref>.</char></note>a Judíos, y á Gentiles, y á la <note caller="+" style="x"><char style="xo" closed="false">10.32 </char><char style="xt" closed="false"><ref loc="ACT 20:28">Hch. 20.28</ref>. cp. 11.22 y <ref loc="ACT 15:9">15.9</ref>.</char></note>iglesia de Dios:<verse eid="1CO 10:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="1CO 10:33"/>Como <note caller="+" style="x"><char style="xo" closed="false">10.33 </char><char style="xt" closed="false"><ref loc="ROM 15:2">Ro. 15.2</ref>.</char></note>también yo en todas las cosas complazco á todos, no procurando mi propio beneficio, sino el de muchos, para que sean <note caller="+" style="x"><char style="xo" closed="false">10.33 </char><char style="xt" closed="false"><ref loc="ROM 11:14">Ro. 11.14</ref>.</char></note>salvos.<verse eid="1CO 10:33"/></para>
+  <chapter eid="1CO 10"/>
+  <chapter number="11" style="c" sid="1CO 11"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 11:1"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.1 </char>
+      <char style="xt" closed="false">cp. 4.16.</char>
+    </note>SED imitadores de mí, así como yo de Cristo.<verse eid="1CO 11:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 11:2"/>Y <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false">vers. 17,22.</char></note>os alabo, hermanos, que en todo os acordáis de mi, y <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false">cp. 7.17. <ref loc="1TH 4:1">1 Ts. 4.1</ref>,<ref loc="1TH 4:2">2</ref>.</char></note>retenéis las <note caller="+" style="x"><char style="xo" closed="false">11.2 </char><char style="xt" closed="false"><ref loc="2TH 2:15">2 Ts. 2.15</ref>.</char></note>instrucciones <char style="it">mías,</char> de la manera que os enseñé.<verse eid="1CO 11:2"/></para>
+  <para style="s">1 Atavío de las mujeres.</para>
+  <para style="s">2 Sobre la cena del Señor.</para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 11:3"/>Mas quiero que sepáis, <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="EPH 5:23">Ef. 5.23</ref>.</char></note>que Cristo es la cabeza de todo varón; y el varón es <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="GEN 3:16">Gn. 3.16</ref>.</char></note>la cabeza de la mujer; y Dios <note caller="+" style="x"><char style="xo" closed="false">11.3 </char><char style="xt" closed="false"><ref loc="JHN 14:28">Jn. 14.28</ref>. cp. 3.23 y 15.27,28. <ref loc="PHP 2:7-9">Fil. 2.7-9</ref>.</char></note>la cabeza de Cristo.<verse eid="1CO 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 11:4"/>Todo varón que ora ó <note caller="+" style="x"><char style="xo" closed="false">11.4 </char><char style="xt" closed="false">cp. 12.10,28 y <ref loc="1CO 14:3-6">14.3-6</ref>.</char></note>profetiza cubierta la cabeza, afrenta su cabeza.<verse eid="1CO 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 11:5"/>Mas <note caller="+" style="x"><char style="xo" closed="false">11.5 </char><char style="xt" closed="false"><ref loc="ACT 21:9">Hch. 21.9</ref>.</char></note>toda mujer que ora ó profetiza no cubierta su cabeza, afrenta su cabeza; porque lo mismo es que si se rayese.<verse eid="1CO 11:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 11:6"/>Porque si la mujer no se cubre, trasquílese también: y si es <note caller="+" style="x"><char style="xo" closed="false">11.6 </char><char style="xt" closed="false"><ref loc="NUM 5:18">Nm. 5.18</ref>.</char></note>deshonesto á la mujer trasquilarse ó raerse, cúbrase.<verse eid="1CO 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 11:7"/>Porque el varón no ha de cubrir la cabeza, porque <note caller="+" style="x"><char style="xo" closed="false">11.7 </char><char style="xt" closed="false"><ref loc="GEN 1:26">Gn. 1.26</ref>.</char></note>es imagen y gloria de Dios: mas la mujer es gloria del varón.<verse eid="1CO 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 11:8"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.8 </char><char style="xt" closed="false"><ref loc="GEN 2:21-23">Gn. 2.21-23</ref>.</char></note>el varón no es de la mujer, sino la mujer del varón.<verse eid="1CO 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 11:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.9 </char><char style="xt" closed="false"><ref loc="GEN 2:18">Gn. 2.18</ref>.</char></note>tampoco el varón fué criado por causa de la mujer, sino la mujer por causa del varón.<verse eid="1CO 11:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 11:10"/>Por lo cual, la mujer debe tener <char style="it">señal de</char> potestad sobre su cabeza, <note caller="+" style="x"><char style="xo" closed="false">11.10 </char><char style="xt" closed="false"><ref loc="ECC 5:6">Ec. 5.6</ref>.</char></note>por causa de los ángeles.<verse eid="1CO 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 11:11"/>Mas <note caller="+" style="x"><char style="xo" closed="false">11.11 </char><char style="xt" closed="false"><ref loc="GAL 3:28">Ga. 3.28</ref>.</char></note>ni el varón sin la mujer, ni la mujer sin el varón, <note caller="+" style="x"><char style="xo" closed="false">11.11 </char><char style="xt" closed="false">cp. 7.39.</char></note>en el Señor.<verse eid="1CO 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 11:12"/>Porque como la mujer es del varón, así también el varón es por la mujer: empero todo de Dios.<verse eid="1CO 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 11:13"/>Juzgad vosotros mismos: ¿es honesto orar la mujer á Dios no cubierta?<verse eid="1CO 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 11:14"/>La misma naturaleza ¿no os enseña que al hombre sea deshonesto criar cabello?<verse eid="1CO 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 11:15"/>Por el contrario, á la mujer criar el cabello le es honroso; porque en lugar de velo le es dado el cabello.<verse eid="1CO 11:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 11:16"/>Con todo eso, si alguno parece ser contencioso, nosotros no tenemos tal costumbre, <note caller="+" style="x"><char style="xo" closed="false">11.16 </char><char style="xt" closed="false">cp. 4.17 y <ref loc="1CO 7:17">7.17</ref> y <ref loc="1CO 14:33">14.33</ref> y <ref loc="1CO 16:1">16.1</ref>.</char></note>ni las iglesias de Dios.<verse eid="1CO 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 11:17"/>Esto empero os denuncio, que no alabo, que no por mejor sino por peor os juntáis.<verse eid="1CO 11:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 11:18"/>Porque lo primero, cuando os juntáis en la iglesia, <note caller="+" style="x"><char style="xo" closed="false">11.18 </char><char style="xt" closed="false">cp. 1.10 y <ref loc="1CO 3:3">3.3</ref>.</char></note>oigo que hay entre vosotros disensiones; y en parte lo creo.<verse eid="1CO 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 11:19"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.19 </char><char style="xt" closed="false"><ref loc="MAT 18:7">Mt. 18.7</ref>. <ref loc="1TI 4:1">1 Ti. 4.1</ref>,<ref loc="1TI 4:2">2</ref>. <ref loc="2PE 2:1">2 P. 2.1</ref>,<ref loc="2PE 2:2">2</ref>.</char></note>preciso es que haya entre vosotros aun herejías, para que los que son probados se manifiesten entre vosotros.<verse eid="1CO 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 11:20"/>Cuando pues os juntáis en uno, <char style="it">esto</char> no es comer la cena del Señor.<verse eid="1CO 11:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 11:21"/>Porque cada uno toma antes para comer su propia cena; y el uno tiene hambre, y <note caller="+" style="x"><char style="xo" closed="false">11.21 </char><char style="xt" closed="false"><ref loc="2PE 2:13">2 P. 2.13</ref>.</char></note>el otro está embriagado.<verse eid="1CO 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 11:22"/>Pues qué, ¿no tenéis casas en que comáis y bebáis? ¿ó menospreciáis <note caller="+" style="x"><char style="xo" closed="false">11.22 </char><char style="xt" closed="false">cp. 10.32.</char></note>la iglesia de Dios, y avergonzáis á los que no tienen? ¿Qué os diré? ¿os alabaré? En esto no os alabo.<verse eid="1CO 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 11:23"/>Porque <note caller="+" style="x"><char style="xo" closed="false">11.23 </char><char style="xt" closed="false">cp. 15.3.</char></note>yo recibí del Señor lo que también os he enseñado: <note caller="+" style="x"><char style="xo" closed="false">11.23 </char><char style="xt" closed="false"><ref loc="MAT 26:26-28">Mt. 26.26-28</ref>. <ref loc="MRK 14:22-24">Mr. 14.22-24</ref>. <ref loc="LUK 22:19">Lc. 22.19</ref>,<ref loc="LUK 22:20">20</ref>. cp. 10.16.</char></note>Que el Señor Jesús, la noche que fué entregado, tomó pan;<verse eid="1CO 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 11:24"/>Y habiendo dado gracias, lo partió, y dijo: Tomad, comed: esto es mi cuerpo que por vosotros es partido: haced esto en memoria de mí.<verse eid="1CO 11:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 11:25"/>Asimismo <char style="it">tomó</char> también la copa, después de haber cenado, diciendo: Esta copa es el nuevo pacto en mi sangre: haced esto todas las veces que bebiereis, en memoria de mí.<verse eid="1CO 11:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 11:26"/>Porque todas las veces que comiereis este pan, y bebiereis esta copa, la muerte del Señor anunciáis <note caller="+" style="x"><char style="xo" closed="false">11.26 </char><char style="xt" closed="false">cp. 4.5.</char></note>hasta que venga.<verse eid="1CO 11:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 11:27"/>De manera <note caller="+" style="x"><char style="xo" closed="false">11.27 </char><char style="xt" closed="false"><ref loc="JHN 6:51">Jn. 6.51</ref>,<ref loc="JHN 6:53-56">53-56</ref>.</char></note>que, cualquiera que comiere este pan ó bebiere esta copa del Señor indignamente, será culpado del cuerpo y de la sangre del Señor.<verse eid="1CO 11:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 11:28"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">11.28 </char><char style="xt" closed="false"><ref loc="2CO 13:5">2 Co. 13.5</ref>. <ref loc="1JN 3:20">1 Jn. 3.20</ref>,<ref loc="1JN 3:21">21</ref>.</char></note>pruébese cada uno á sí mismo, y coma así de aquel pan, y beba de aquella copa.<verse eid="1CO 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 11:29"/>Porque el que come y bebe indignamente, juicio come y bebe para sí, no discerniendo el cuerpo del Señor.<verse eid="1CO 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 11:30"/>Por lo cual hay muchos enfermos y <note caller="+" style="x"><char style="xo" closed="false">11.30 </char><char style="xt" closed="false"><ref loc="JHN 5:14">Jn. 5.14</ref>.</char></note>debilitados entre vosotros; y muchos <note caller="+" style="x"><char style="xo" closed="false">11.30 </char><char style="xt" closed="false"><ref loc="MAT 27:52">Mt. 27.52</ref>.</char></note>duermen.<verse eid="1CO 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 11:31"/>Que si nos examinásemos á nosotros mismos, cierto no seríamos juzgados.<verse eid="1CO 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="1CO 11:32"/>Mas siendo juzgados, <note caller="+" style="x"><char style="xo" closed="false">11.32 </char><char style="xt" closed="false"><ref loc="HEB 12:7-10">He. 12.7-10</ref>.</char></note>somos castigados del Señor, para que no seamos condenados con el mundo.<verse eid="1CO 11:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="1CO 11:33"/>Así, que, hermanos míos, cuando os juntáis á comer, esperaos unos á otros.<verse eid="1CO 11:33"/></para>
+  <para style="s">1 Diversidad de dones.</para>
+  <para style="s">2 Los miembros y el cuerpo.</para>
+  <para style="p">
+    <verse number="34" style="v" sid="1CO 11:34"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">11.34 </char>
+      <char style="xt" closed="false">vers. 21,29.</char>
+    </note>Si alguno tuviere hambre, coma en su casa, porque no os juntéis para juicio. Las demás cosas <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false">cp. 7.17.</char></note>ordenaré cuando <note caller="+" style="x"><char style="xo" closed="false">11.34 </char><char style="xt" closed="false">cp. 4.19.</char></note>llegare.<verse eid="1CO 11:34"/></para>
+  <chapter eid="1CO 11"/>
+  <chapter number="12" style="c" sid="1CO 12"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 12:1"/>Y ACERCA <note caller="+" style="x"><char style="xo" closed="false">12.1 </char><char style="xt" closed="false">cp. 14.1.</char></note>de los <char style="it">dones</char> espirituales, no quiero, hermanos, que ignoréis.<verse eid="1CO 12:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 12:2"/>Sabéis <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false">cp. 6.11.</char></note>que cuando erais Gentiles, ibais, como erais llevados, <note caller="+" style="x"><char style="xo" closed="false">12.2 </char><char style="xt" closed="false"><ref loc="PSA 115:5">Sal. 115.5</ref>.</char></note>a los ídolos mudos.<verse eid="1CO 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 12:3"/>Por tanto os hago saber, que <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false"><ref loc="1JN 4:2">1 Jn. 4.2</ref>,<ref loc="1JN 4:3">3</ref>.</char></note>nadie que hable por Espíritu de Dios, llama <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false">cp. 16.22.</char></note>anatema á Jesús; y <note caller="+" style="x"><char style="xo" closed="false">12.3 </char><char style="xt" closed="false"><ref loc="MAT 16:17">Mt. 16.17</ref>.</char></note>nadie puede llamar á Jesús Señor, sino por Espíritu Santo.<verse eid="1CO 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 12:4"/>Empero <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false"><ref loc="ROM 12:4-6">Ro. 12.4-6</ref>. cp. 7.7.</char></note>hay repartimiento de dones; mas <note caller="+" style="x"><char style="xo" closed="false">12.4 </char><char style="xt" closed="false"><ref loc="EPH 4:4-6">Ef. 4.4-6</ref>.</char></note>el mismo Espíritu <char style="it">es.</char><verse eid="1CO 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 12:5"/>Y hay <note caller="+" style="x"><char style="xo" closed="false">12.5 </char><char style="xt" closed="false"><ref loc="EPH 4:11">Ef. 4.11</ref>.</char></note>repartimiento de ministerios; mas el mismo Señor <char style="it">es.</char><verse eid="1CO 12:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 12:6"/>Y hay repartimiento de operaciones; mas el mismo Dios <note caller="+" style="x"><char style="xo" closed="false">12.6 </char><char style="xt" closed="false"><ref loc="EPH 1:23">Ef. 1.23</ref>.</char></note>es el que obra todas las cosas en todos.<verse eid="1CO 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 12:7"/>Empero á cada uno <note caller="+" style="x"><char style="xo" closed="false">12.7 </char><char style="xt" closed="false"><ref loc="ROM 12:6">Ro. 12.6</ref>,<ref loc="ROM 12:8">8</ref>. <ref loc="1PE 4:10">1 P. 4.10</ref>,<ref loc="1PE 4:11">11</ref>.</char></note>le es dada manifestación del Espíritu para provecho.<verse eid="1CO 12:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 12:8"/>Porque á la verdad, á éste es dada por el Espíritu palabra de <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false"><ref loc="EPH 1:17">Ef. 1.17</ref>. <ref loc="COL 1:9">Col. 1.9</ref>.</char></note>sabiduría; á otro, palabra de <note caller="+" style="x"><char style="xo" closed="false">12.8 </char><char style="xt" closed="false">cp. 13.2,8 y <ref loc="1CO 14:6">14.6</ref>. <ref loc="2PE 1:5">2 P. 1.5</ref>.</char></note>ciencia según el mismo Espíritu;<verse eid="1CO 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 12:9"/>A otro, <note caller="+" style="x"><char style="xo" closed="false">12.9 </char><char style="xt" closed="false">cp. 13.2.</char></note>fe por el mismo Espíritu, y á otro, <note caller="+" style="x"><char style="xo" closed="false">12.9 </char><char style="xt" closed="false">vers. 28,30.</char></note>dones de sanidades por el mismo Espíritu;<verse eid="1CO 12:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 12:10"/>A otro, operaciones de milagros; y á otro, profecía; y á otro, <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false"><ref loc="1JN 4:1">1 Jn. 4.1</ref>.</char></note>discreción de espíritus; y á otro, <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false"><ref loc="ACT 2:4">Hch. 2.4</ref>.</char></note>géneros de lenguas; y á otro, <note caller="+" style="x"><char style="xo" closed="false">12.10 </char><char style="xt" closed="false">cp. 14.26.</char></note>interpretación de lenguas.<verse eid="1CO 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 12:11"/>Mas todas estas cosas obra uno y el mismo Espíritu, repartiendo particularmente á cada uno como quiere.<verse eid="1CO 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 12:12"/>Porque <note caller="+" style="x"><char style="xo" closed="false">12.12 </char><char style="xt" closed="false">ver. 20. <ref loc="ROM 12:4">Ro. 12.4</ref>,<ref loc="ROM 12:5">5</ref>. cp. 10.17.</char></note>de la manera que el cuerpo es uno, y tiene muchos miembros, empero todos los miembros del cuerpo, siendo muchos, son un cuerpo, así también Cristo.<verse eid="1CO 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 12:13"/>Porque por un Espíritu somos todos bautizados en un cuerpo, <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false"><ref loc="GAL 3:28">Ga. 3.28</ref>. <ref loc="EPH 6:8">Ef. 6.8</ref>.</char></note>ora Judíos ó Griegos, ora siervos ó libres; y todos <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false"><ref loc="JHN 6:63">Jn. 6.63</ref> y <ref loc="JHN 7:39">7.39</ref>.</char></note>hemos bebido de <note caller="+" style="x"><char style="xo" closed="false">12.13 </char><char style="xt" closed="false">vers. 4,11.</char></note>un mismo Espíritu.<verse eid="1CO 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 12:14"/>Pues ni tampoco el cuerpo es un miembro, sino muchos.<verse eid="1CO 12:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 12:15"/>Si dijere el pie: Porque no soy mano, no soy del cuerpo: ¿por eso no será del cuerpo?<verse eid="1CO 12:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 12:16"/>Y si dijere la oreja: Porque no soy ojo, no soy del cuerpo: ¿por eso no será del cuerpo?<verse eid="1CO 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 12:17"/>Si todo el cuerpo fuese ojo, ¿dónde estaría el oído? Si todo fuese oído, ¿dónde estaría el olfato?<verse eid="1CO 12:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 12:18"/>Mas ahora Dios ha colocado los miembros cada uno de ellos en el cuerpo, como quiso.<verse eid="1CO 12:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 12:19"/>Que si todos fueran un miembro, ¿dónde estuviera el cuerpo?<verse eid="1CO 12:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 12:20"/>Mas ahora muchos miembros son á la verdad, empero un cuerpo.<verse eid="1CO 12:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 12:21"/>Ni el ojo puede decir á la mano: No te he menester: ni asimismo la cabeza á los pies: No tengo necesidad de vosotros.<verse eid="1CO 12:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 12:22"/>Antes, mucho más los miembros del cuerpo que parecen más flacos, son necesarios;<verse eid="1CO 12:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 12:23"/>Y á aquellos del cuerpo que estimamos ser más viles, á éstos vestimos más honrosamente; y los que en nosotros son menos honestos, tienen más compostura.<verse eid="1CO 12:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 12:24"/>Porque los que en nosotros son más honestos, no tienen necesidad: mas Dios ordenó el cuerpo, dando más abundante honor al que le faltaba;<verse eid="1CO 12:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 12:25"/>Para que no haya desavenencia en el cuerpo, sino que los miembros todos se interesen los unos por los otros.<verse eid="1CO 12:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 12:26"/>Por manera que si un miembro padece, todos los miembros á una se duelen; y si un miembro es honrado, todos los miembros <note caller="+" style="x"><char style="xo" closed="false">12.26 </char><char style="xt" closed="false"><ref loc="ROM 12:15">Ro. 12.15</ref>.</char></note>a una se gozan.<verse eid="1CO 12:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 12:27"/>Pues <note caller="+" style="x"><char style="xo" closed="false">12.27 </char><char style="xt" closed="false"><ref loc="ROM 12:5">Ro. 12.5</ref>. cp. 10.17. <ref loc="EPH 1:23">Ef. 1.23</ref> y <ref loc="EPH 3:6">3.6</ref> y <ref loc="EPH 4:12">4.12</ref>. <ref loc="COL 1:24">Col. 1.24</ref>.</char></note>vosotros sois el cuerpo de Cristo, y <note caller="+" style="x"><char style="xo" closed="false">12.27 </char><char style="xt" closed="false"><ref loc="EPH 5:30">Ef. 5.30</ref>.</char></note>miembros en parte.<verse eid="1CO 12:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 12:28"/>Y á unos puso Dios en la iglesia, primeramente <note caller="+" style="x"><char style="xo" closed="false">12.28 </char><char style="xt" closed="false"><ref loc="EPH 4:11">Ef. 4.11</ref>.</char></note>apóstoles, luego <note caller="+" style="x"><char style="xo" closed="false">12.28 </char><char style="xt" closed="false"><ref loc="ACT 11:27">Hch. 11.27</ref>.</char></note>profetas, lo tercero doctores; luego <note caller="+" style="x"><char style="xo" closed="false">12.28 </char><char style="xt" closed="false">ver. 10.</char></note>facultades; luego dones de sanidades, ayudas, <note caller="+" style="x"><char style="xo" closed="false">12.28 </char><char style="xt" closed="false"><ref loc="ROM 12:8">Ro. 12.8</ref>. <ref loc="1TI 5:17">1 Ti. 5.17</ref>. <ref loc="1PE 5:1-3">1 P. 5.1-3</ref>.</char></note>gobernaciones, géneros de lenguas.<verse eid="1CO 12:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 12:29"/>¿Son todos apóstoles? ¿son todos profetas? ¿todos doctores? ¿todos facultades?<verse eid="1CO 12:29"/></para>
+  <para style="s">1 Excelencia de la caridad.</para>
+  <para style="s">2 Dones de profecía</para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 12:30"/>¿Tienen todos dones de sanidad? <note caller="+" style="x"><char style="xo" closed="false">12.30 </char><char style="xt" closed="false">ver. 10.</char></note>¿hablan todos lenguas? ¿interpretan todos?<verse eid="1CO 12:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 12:31"/>Empero <note caller="+" style="x"><char style="xo" closed="false">12.31 </char><char style="xt" closed="false">cp. 14.1,39.</char></note>procurad los mejores dones; mas aun yo os muestro un camino más excelente.<verse eid="1CO 12:31"/></para>
+  <chapter eid="1CO 12"/>
+  <chapter number="13" style="c" sid="1CO 13"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 13:1"/>SI yo hablase lenguas humanas y angélicas, y no tengo caridad, vengo á ser <char style="it">como</char> metal que resuena, ó címbalo que retiñe.<verse eid="1CO 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 13:2"/>Y si tuviese profecía, y entendiese todos los misterios y toda <note caller="+" style="x"><char style="xo" closed="false">13.2 </char><char style="xt" closed="false">cp. 12.8,9.</char></note>ciencia; y si tuviese toda <char style="fm">13.2</char>la fe, <note caller="+" style="x"><char style="xo" closed="false">13.2 </char><char style="xt" closed="false"><ref loc="MAT 17:20">Mt. 17.20</ref>.</char></note>de tal manera que traspasase los montes, y no tengo caridad, nada soy.<verse eid="1CO 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 13:3"/>Y si repartiese toda mi hacienda para dar de comer <char style="it">á pobres,</char> y si entregase mi cuerpo para ser quemado, y no tengo caridad, de nada me sirve.<verse eid="1CO 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 13:4"/>La caridad es <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false"><ref loc="2CO 6:6">2 Co. 6.6</ref>.</char></note>sufrida, es benigna; la caridad no tiene envidia, la caridad no hace sinrazón, no <note caller="+" style="x"><char style="xo" closed="false">13.4 </char><char style="xt" closed="false">cp. 4.6.</char></note>se ensancha;<verse eid="1CO 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 13:5"/>No es injuriosa, <note caller="+" style="x"><char style="xo" closed="false">13.5 </char><char style="xt" closed="false">cp. 10.24.</char></note>no busca lo suyo, no se irrita, no piensa el mal;<verse eid="1CO 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 13:6"/>No se huelga de la injusticia, <note caller="+" style="x"><char style="xo" closed="false">13.6 </char><char style="xt" closed="false"><ref loc="ROM 1:32">Ro. 1.32</ref>.</char></note>mas <note caller="+" style="x"><char style="xo" closed="false">13.6 </char><char style="xt" closed="false"><ref loc="2JN 1:4">2 Jn. 4</ref>.</char></note>se huelga de la verdad;<verse eid="1CO 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 13:7"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.7 </char>
+      <char style="xt" closed="false">cp. 9.12.</char>
+    </note>Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.<verse eid="1CO 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 13:8"/>La caridad nunca deja de ser: mas <note caller="+" style="x"><char style="xo" closed="false">13.8 </char><char style="xt" closed="false">cp. 14.39.</char></note>las profecías se han de acabar, y cesarán las lenguas, y la ciencia ha de ser quitada;<verse eid="1CO 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 13:9"/>Porque en parte conocemos, y en parte profetizamos;<verse eid="1CO 13:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 13:10"/>Mas cuando venga lo que es perfecto, entonces lo que es en parte será quitado.<verse eid="1CO 13:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 13:11"/>Cuando yo era niño, hablaba como niño, pensaba como niño, juzgaba como niño, mas cuando ya fuí hombre hecho, dejé lo que era de niño.<verse eid="1CO 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 13:12"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">13.12 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 3:18">2 Co. 3.18</ref> y <ref loc="2CO 4:18">4.18</ref> y <ref loc="2CO 5:7">5.7</ref>.</char>
+    </note>Ahora vemos por espejo, en obscuridad; mas entonces <char style="it">veremos</char> <note caller="+" style="x"><char style="xo" closed="false">13.12 </char><char style="xt" closed="false"><ref loc="1JN 3:2">1 Jn. 3.2</ref>. <ref loc="REV 22:4">Ap. 22.4</ref>.</char></note>cara á cara: ahora conozco en parte; mas entonces conoceré como soy conocido.<verse eid="1CO 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 13:13"/>Y ahora permanecen la fe, la esperanza, y la caridad, estas tres: empero la mayor de ellas es la caridad.<verse eid="1CO 13:13"/></para>
+  <chapter eid="1CO 13"/>
+  <chapter number="14" style="c" sid="1CO 14"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 14:1"/>SEGUID la caridad; y <note caller="+" style="x"><char style="xo" closed="false">14.1 </char><char style="xt" closed="false">cp. 12.31.</char></note>procurad los <char style="it">dones</char> espirituales, mas sobre todo que profeticéis.<verse eid="1CO 14:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 14:2"/>Porque el que habla en lenguas, no habla á los hombres, sino á Dios; porque nadie le entiende, aunque en espíritu hable misterios.<verse eid="1CO 14:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 14:3"/>Mas el que profetiza, habla á los hombres <char style="it">para</char> <note caller="+" style="x"><char style="xo" closed="false">14.3 </char><char style="xt" closed="false"><ref loc="ROM 14:19">Ro. 14.19</ref>.</char></note>edificación, y exhortación, y consolación.<verse eid="1CO 14:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 14:4"/>El que habla lengua extraña, á sí mismo se edifica; mas el que porfetiza, <note caller="+" style="x"><char style="xo" closed="false">14.4 </char><char style="xt" closed="false">ver. 17.</char></note>edifica á la iglesia.<verse eid="1CO 14:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 14:5"/>Así que, quisiera que todos vosotros hablaseis lenguas, empero más que profetizaseis: porque mayor es el que profetiza que el que habla lenguas, <note caller="+" style="x"><char style="xo" closed="false">14.5 </char><char style="xt" closed="false">ver. 13.</char></note>si también no interpretare, para que la iglesia tome edificación.<verse eid="1CO 14:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 14:6"/>Ahora pues, hermanos, si yo fuere á vosotros hablando lenguas, ¿qué os aprovecharé, si no os hablare, ó con <note caller="+" style="x"><char style="xo" closed="false">14.6 </char><char style="xt" closed="false">ver. 26.</char></note>revelación, ó con <note caller="+" style="x"><char style="xo" closed="false">14.6 </char><char style="xt" closed="false">cp. 12.8.</char></note>ciencia, ó con profecía, ó con doctrina?<verse eid="1CO 14:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 14:7"/>Ciertamente las cosas inanimadas que hacen sonidos, como la flauta ó la vihuela, si no dieren distinción de voces, ¿comó se sabrá lo que se tañe con la flauta, ó con la vihuela?<verse eid="1CO 14:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 14:8"/>Y si la trompeta diere sonido incierto, ¿quién se apercibirá á la batalla?<verse eid="1CO 14:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 14:9"/>Así también vosotros, si por la lengua no diereis palabra bien significante, ¿cómo se entenderá lo que se dice? porque hablaréis al aire.<verse eid="1CO 14:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 14:10"/>Tantos géneros de voces, por ejemplo, hay en el mundo, y nada hay mudo;<verse eid="1CO 14:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 14:11"/>Mas si yo ignorare el valor de la voz, seré <note caller="+" style="x"><char style="xo" closed="false">14.11 </char><char style="xt" closed="false"><ref loc="ACT 28:2">Hch. 28.2</ref>.</char></note>bárbaro al que habla, y el que habla será bárbaro para mí.<verse eid="1CO 14:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 14:12"/>Así también vosotros; pues que anheláis espirituales <char style="it">dones,</char> procurad ser excelentes para la edificación de la iglesia.<verse eid="1CO 14:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 14:13"/>Por lo cual, el que habla lengua <char style="it">extraña,</char> pida que <char style="it">la</char> interprete.<verse eid="1CO 14:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 14:14"/>Porque si yo orare en lengua <char style="it">desconocida,</char> mi espíritu ora; mas mi entendimiento es sin fruto.<verse eid="1CO 14:14"/></para>
+  <para style="s">1 y de lenguas.</para>
+  <para style="s">2 Orden en las reuniones.</para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 14:15"/>¿Qué pues? Oraré con el espíritu, mas oraré también con entendimiento; <note caller="+" style="x"><char style="xo" closed="false">14.15 </char><char style="xt" closed="false"><ref loc="EPH 5:19">Ef. 5.19</ref>. <ref loc="COL 3:16">Col. 3.16</ref>.</char></note>cantaré con el espíritu, mas <note caller="+" style="x"><char style="xo" closed="false">14.15 </char><char style="xt" closed="false"><ref loc="PSA 47:7">Sal. 47.7</ref>.</char></note>cantaré también con entendimiento.<verse eid="1CO 14:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 14:16"/>Porque si bendijeres con el espíritu, el que ocupa lugar de <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false">vers. 23,24.</char></note>un mero particular, ¿cómo dirá <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false"><ref loc="NEH 5:13">Neh. 5.13</ref>. <ref loc="REV 5:14">Ap. 5.14</ref>.</char></note>amén <note caller="+" style="x"><char style="xo" closed="false">14.16 </char><char style="xt" closed="false">cp. 11.24.</char></note>a tu acción de gracias? pues no sabe lo que has dicho.<verse eid="1CO 14:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 14:17"/>Porque tú, á la verdad, bien haces gracias; mas el otro no es edificado.<verse eid="1CO 14:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 14:18"/>Doy gracias á Dios que hablo lenguas más que todos vosotros:<verse eid="1CO 14:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 14:19"/>Pero en la iglesia más quiero hablar cinco palabras con mi sentido, para que enseñe también á los otros, que diez mil palabras en lengua <char style="it">desconocida.</char><verse eid="1CO 14:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 14:20"/>Hermanos, <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="EPH 4:14">Ef. 4.14</ref>. <ref loc="HEB 5:12">He. 5.12</ref>,<ref loc="HEB 5:13">13</ref>.</char></note>no seáis niños en el sentido, sino <note caller="+" style="x"><char style="xo" closed="false">14.20 </char><char style="xt" closed="false"><ref loc="MAT 11:25">Mt. 11.25</ref>. <ref loc="ROM 16:19">Ro. 16.19</ref>.</char></note>sed niños en la malicia: empero perfectos en el sentido.<verse eid="1CO 14:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 14:21"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">14.21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:19">Ro. 3.19</ref>.</char>
+    </note>En la ley está escrito: <note caller="+" style="x"><char style="xo" closed="false">14.21 </char><char style="xt" closed="false"><ref loc="ISA 28:11">Is. 28.11</ref>,<ref loc="ISA 28:12">12</ref>.</char></note>En otras lenguas y en otros labios hablaré á este pueblo; y ni aun así me oirán, dice el Señor.<verse eid="1CO 14:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 14:22"/>Así que, las lenguas por señal son, no á los fieles, sino á los infieles: mas <note caller="+" style="x"><char style="xo" closed="false">14.22 </char><char style="xt" closed="false">cp. 11.4.</char></note>la profecía, no á los infieles, sino á los fieles.<verse eid="1CO 14:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 14:23"/>De manera que, si toda la iglesia se juntare en uno, y todos hablan lenguas, y entran indoctos ó infieles, <note caller="+" style="x"><char style="xo" closed="false">14.23 </char><char style="xt" closed="false"><ref loc="ACT 2:13">Hch. 2.13</ref>.</char></note>¿no dirán que estáis locos?<verse eid="1CO 14:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 14:24"/>Mas si todos profetizan, y entra algún infiel ó indocto, de todos es convencido, <note caller="+" style="x"><char style="xo" closed="false">14.24 </char><char style="xt" closed="false">cp. 2.15.</char></note>de todos es juzgado;<verse eid="1CO 14:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 14:25"/>Lo oculto de su corazón se hace manifiesto: y así, postrándose sobre el rostro, adorará á Dios, declarando <note caller="+" style="x"><char style="xo" closed="false">14.25 </char><char style="xt" closed="false"><ref loc="ISA 45:14">Is. 45.14</ref>. <ref loc="ZEC 8:23">Zac. 8.23</ref>.</char></note>que verdaderamente Dios está en vosotros.<verse eid="1CO 14:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 14:26"/>¿Qué hay pues, hermanos? Cuando os juntáis, cada uno de vosotros tiene <note caller="+" style="x"><char style="xo" closed="false">14.26 </char><char style="xt" closed="false"><ref loc="EPH 5:19">Ef. 5.19</ref>.</char></note>salmo, tiene <note caller="+" style="x"><char style="xo" closed="false">14.26 </char><char style="xt" closed="false">ver. 6.</char></note>doctrina, tiene <note caller="+" style="x"><char style="xo" closed="false">14.26 </char><char style="xt" closed="false">cp. 12.10.</char></note>lengua, tiene <char style="fm">14.26</char> revelación, tiene <char style="fm">14.26</char> interpretación: <note caller="+" style="x"><char style="xo" closed="false">14.26 </char><char style="xt" closed="false"><ref loc="2CO 12:19">2 Co. 12.19</ref> y <ref loc="2CO 13:10">13.10</ref>.</char></note>hagáse todo para edificación.<verse eid="1CO 14:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 14:27"/>Si hablare alguno en lengua <char style="it">extraña, sea esto</char> por dos, ó á lo más tres, y por turno; mas uno interprete.<verse eid="1CO 14:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 14:28"/>Y si no hubiere intérprete, calle en la iglesia, y hable á sí mismo y á Dios.<verse eid="1CO 14:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 14:29"/>Asimismo, <note caller="+" style="x"><char style="xo" closed="false">14.29 </char><char style="xt" closed="false">vers. 32,37. <ref loc="ACT 11:27">Hch. 11.27</ref>.</char></note>los profetas hablen dos ó tres, y <note caller="+" style="x"><char style="xo" closed="false">14.29 </char><char style="xt" closed="false">cp. 12.10.</char></note>los demás juzguen.<verse eid="1CO 14:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 14:30"/>Y si á otro que estuviere sentado, <note caller="+" style="x"><char style="xo" closed="false">14.30 </char><char style="xt" closed="false"><ref loc="1TH 5:19">1 Ts. 5.19</ref>,<ref loc="1TH 5:20">20</ref>.</char></note>fuere revelado, calle el primero.<verse eid="1CO 14:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 14:31"/>Porque podéis todos profetizar uno por uno, para que todos aprendan, y todos sean exhortados.<verse eid="1CO 14:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="1CO 14:32"/>Y los espíritus de los que profetizaren, sujétense á los profetas;<verse eid="1CO 14:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="1CO 14:33"/>Porque Dios no es Dios de disensión, sino de paz; <note caller="+" style="x"><char style="xo" closed="false">14.33 </char><char style="xt" closed="false">cp. 7.17.</char></note>como en todas las iglesias de los santos.<verse eid="1CO 14:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="1CO 14:34"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">14.34 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TI 2:11">1 Ti. 2.11</ref>,<ref loc="1TI 2:12">12</ref>.</char>
+    </note>Vuestras mujeres callen en las congregaciones; porque no les es permitido hablar, sino que estén sujetas, como también la ley <note caller="+" style="x"><char style="xo" closed="false">14.34 </char><char style="xt" closed="false"><ref loc="GEN 3:16">Gn. 3.16</ref>.</char></note>dice.<verse eid="1CO 14:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="1CO 14:35"/>Y si quieren aprender alguna cosa, pregunten en casa á sus maridos; porque deshonesta cosa es hablar una mujer en la congregación.<verse eid="1CO 14:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="1CO 14:36"/>Qué, ¿ha salido de vosotros la palabra de Dios? ¿ó á vosotros solos ha llegado?<verse eid="1CO 14:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="1CO 14:37"/>Si alguno <note caller="+" style="x"><char style="xo" closed="false">14.37 </char><char style="xt" closed="false"><ref loc="2CO 10:7">2 Co. 10.7</ref>. <ref loc="1JN 4:6">1 Jn. 4.6</ref>.</char></note>a su parecer, es profeta, ó espiritual, reconozca lo que os escribo, porque son mandamientos del Señor.<verse eid="1CO 14:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="1CO 14:38"/>Mas el que ignora, ignore.<verse eid="1CO 14:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="1CO 14:39"/>Así que, hermanos, <note caller="+" style="x"><char style="xo" closed="false">14.39 </char><char style="xt" closed="false">cp. 12.31.</char></note>procurad profetizar; y no impidáis el hablar lenguas.<verse eid="1CO 14:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="1CO 14:40"/>Empero hagáse todo decentemente y con orden.<verse eid="1CO 14:40"/></para>
+  <chapter eid="1CO 14"/>
+  <chapter number="15" style="c" sid="1CO 15"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 15:1"/>ADEMÁS os declaro, hermanos, <note caller="+" style="x"><char style="xo" closed="false">15.1 </char><char style="xt" closed="false"><ref loc="ROM 2:16">Ro. 2.16</ref>.</char></note>el evangelio <note caller="+" style="x"><char style="xo" closed="false">15.1 </char><char style="xt" closed="false">cp. 3.6.</char></note>que os he predicado, el cual también recibisteis, <note caller="+" style="x"><char style="xo" closed="false">15.1 </char><char style="xt" closed="false">cp. 16.13.</char></note>en el cual también perseveráis;<verse eid="1CO 15:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 15:2"/>Por el cual asimismo, <note caller="+" style="x"><char style="xo" closed="false">15.2 </char><char style="xt" closed="false"><ref loc="ROM 1:16">Ro. 1.16</ref>. cp. 1.18.</char></note>si retenéis la palabra que os he predicado, sois salvos, <note caller="+" style="x"><char style="xo" closed="false">15.2 </char><char style="xt" closed="false"><ref loc="GAL 3:4">Ga. 3.4</ref>.</char></note>si no creísteis en vano.<verse eid="1CO 15:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 15:3"/>Porque primeramente <note caller="+" style="x"><char style="xo" closed="false">15.3 </char><char style="xt" closed="false">cp. 11.23.</char></note>os he enseñado lo que asimismo recibí: Que Cristo fué muerto <note caller="+" style="x"><char style="xo" closed="false">15.3 </char><char style="xt" closed="false"><ref loc="JHN 1:29">Jn. 1.29</ref>. <ref loc="HEB 5:1">He. 5.1</ref>,<ref loc="HEB 5:3">3</ref>.</char></note>por nuestros pecados <note caller="+" style="x"><char style="xo" closed="false">15.3 </char><char style="xt" closed="false"><ref loc="MRK 9:12">Mr. 9.12</ref>. <ref loc="ACT 3:18">Hch. 3.18</ref>.</char></note>conforme á las Escrituras;<verse eid="1CO 15:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 15:4"/>Y que fué sepultado, y que resucitó al tercer día, <note caller="+" style="x"><char style="xo" closed="false">15.4 </char><char style="xt" closed="false"><ref loc="ACT 2:25">Hch. 2.25</ref>,<ref loc="ACT 2:31">31</ref> y <ref loc="ACT 13:33">13.33</ref>,<ref loc="ACT 13:35">35</ref>.</char></note>conforme á las Escrituras;<verse eid="1CO 15:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 15:5"/>Y que <note caller="+" style="x"><char style="xo" closed="false">15.5 </char><char style="xt" closed="false"><ref loc="LUK 24:34">Lc. 24.34</ref>.</char></note>apareció á <note caller="+" style="x"><char style="xo" closed="false">15.5 </char><char style="xt" closed="false">cp. 1.12.</char></note>Cefas, <note caller="+" style="x"><char style="xo" closed="false">15.5 </char><char style="xt" closed="false"><ref loc="LUK 24:36">Lc. 24.36</ref>.</char></note>y después á los doce.<verse eid="1CO 15:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 15:6"/>Después apareció á más de quinientos hermanos juntos; de los cuales muchos viven aún, y otros son <note caller="+" style="x"><char style="xo" closed="false">15.6 </char><char style="xt" closed="false">vers. 18,20,51.</char></note>muertos.<verse eid="1CO 15:6"/></para>
+  <para style="s">1 La resurrección.</para>
+  <para style="s">2 “Cristo, las primicias.”</para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 15:7"/>Después apareció á Jacobo; después <note caller="+" style="x"><char style="xo" closed="false">15.7 </char><char style="xt" closed="false"><ref loc="LUK 24:50">Lc. 24.50</ref>. <ref loc="ACT 1:3">Hch. 1.3</ref>,<ref loc="ACT 1:4">4</ref>.</char></note>a todos los apóstoles.<verse eid="1CO 15:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 15:8"/>Y el postrero de todos, como á un abortivo, <note caller="+" style="x"><char style="xo" closed="false">15.8 </char><char style="xt" closed="false"><ref loc="ACT 9:3">Hch. 9.3</ref>,<ref loc="ACT 9:17">17</ref>. cp. 9.1.</char></note>me apareció á mí.<verse eid="1CO 15:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 15:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">15.9 </char><char style="xt" closed="false"><ref loc="EPH 3:8">Ef. 3.8</ref>.</char></note>yo soy el más pequeño de los apóstoles, que no soy digno de ser llamado apóstol, porque <note caller="+" style="x"><char style="xo" closed="false">15.9 </char><char style="xt" closed="false"><ref loc="ACT 8:3">Hch. 8.3</ref>.</char></note>perseguí la iglesia de Dios.<verse eid="1CO 15:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 15:10"/>Empero <note caller="+" style="x"><char style="xo" closed="false">15.10 </char><char style="xt" closed="false"><ref loc="ROM 1:5">Ro. 1.5</ref>.</char></note>por la gracia de Dios soy lo que soy: y su gracia no ha sido en vano para conmigo; antes <note caller="+" style="x"><char style="xo" closed="false">15.10 </char><char style="xt" closed="false"><ref loc="2CO 11:23">2 Co. 11.23</ref> y <ref loc="2CO 12:11">12.11</ref>.</char></note>he trabajado más que todos ellos: <note caller="+" style="x"><char style="xo" closed="false">15.10 </char><char style="xt" closed="false">cp. 3.6. <ref loc="2CO 3:5">2 Co. 3.5</ref>. <ref loc="EPH 3:7">Ef. 3.7</ref>.</char></note>pero no yo, sino la gracia de Dios que fué conmigo.<verse eid="1CO 15:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 15:11"/>Porque, ó <char style="it">sea</char> yo ó <char style="it">sean</char> ellos, así predicamos, y así habéis creído.<verse eid="1CO 15:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 15:12"/>Y si Cristo es predicado que resucitó de los muertos <note caller="+" style="x"><char style="xo" closed="false">15.12 </char><char style="xt" closed="false"><ref loc="2TI 2:18">2 Ti. 2.18</ref>.</char></note>¿cómo dicen algunos entre vosotros que no hay resurrección de muertos?<verse eid="1CO 15:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 15:13"/>Porque si no hay resurrección de muertos, Cristo tampoco resucitó:<verse eid="1CO 15:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 15:14"/>Y si Cristo no resucitó, vana es entonces nuestra predicación, vana es también vuestra fe.<verse eid="1CO 15:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 15:15"/>Y aun somos hallados falsos testigos de Dios; porque <note caller="+" style="x"><char style="xo" closed="false">15.15 </char><char style="xt" closed="false"><ref loc="ACT 2:24">Hch. 2.24</ref>.</char></note>hemos testificado de Dios que él haya levantado á Cristo; al cual no levantó, si en verdad los muertos no resucitan.<verse eid="1CO 15:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 15:16"/>Porque si los muertos no resucitan, tampoco Cristo resucitó.<verse eid="1CO 15:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 15:17"/>Y si Cristo no resucitó, vuestra fe es vana; <note caller="+" style="x"><char style="xo" closed="false">15.17 </char><char style="xt" closed="false"><ref loc="ROM 4:25">Ro. 4.25</ref>.</char></note>aun estáis en vuestros pecados.<verse eid="1CO 15:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 15:18"/>Entonces también los que <note caller="+" style="x"><char style="xo" closed="false">15.18 </char><char style="xt" closed="false">ver. 6.</char></note>durmieron en Cristo son perdidos.<verse eid="1CO 15:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 15:19"/>Si en esta vida solamente esperamos en Cristo, los más miserables somos de todos los hombres.<verse eid="1CO 15:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 15:20"/>Mas ahora <note caller="+" style="x"><char style="xo" closed="false">15.20 </char><char style="xt" closed="false"><ref loc="1PE 1:3">1 P. 1.3</ref>.</char></note>Cristo ha resucitado de los muertos; <note caller="+" style="x"><char style="xo" closed="false">15.20 </char><char style="xt" closed="false"><ref loc="ACT 26:23">Hch. 26.23</ref>.</char></note>primicias de los que durmieron es hecho.<verse eid="1CO 15:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 15:21"/>Porque <note caller="+" style="x"><char style="xo" closed="false">15.21 </char><char style="xt" closed="false"><ref loc="ROM 5:12-18">Ro. 5.12-18</ref>.</char></note>por cuanto la muerte <char style="it">entró</char> por un hombre, también por un hombre la resurrección de los muertos.<verse eid="1CO 15:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 15:22"/>Porque así <char style="fm">15.21</char> como en Adam todos mueren, así también en Cristo todos serán vivificados.<verse eid="1CO 15:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 15:23"/>Mas cada uno en su orden: Cristo las primicias; <note caller="+" style="x"><char style="xo" closed="false">15.23 </char><char style="xt" closed="false"><ref loc="1TH 4:15">1 Ts. 4.15</ref>, etc.</char></note>luego los que son de Cristo, en su venida.<verse eid="1CO 15:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 15:24"/>Luego el fin; cuando entregará <note caller="+" style="x"><char style="xo" closed="false">15.24 </char><char style="xt" closed="false"><ref loc="DAN 7:14">Dn. 7.14</ref>,<ref loc="DAN 7:27">27</ref>.</char></note>el reino á Dios y al Padre, cuando habrá quitado todo imperio, y toda potencia y potestad.<verse eid="1CO 15:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="1CO 15:25"/>Porque es menester que él reine, hasta poner <note caller="+" style="x"><char style="xo" closed="false">15.25 </char><char style="xt" closed="false"><ref loc="PSA 110:1">Sal. 110.1</ref>.</char></note>a todos sus enemigos debajo de sus pies.<verse eid="1CO 15:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="1CO 15:26"/>Y el postrer enemigo que será deshecho, será <note caller="+" style="x"><char style="xo" closed="false">15.26 </char><char style="xt" closed="false"><ref loc="2TI 1:10">2 Ti. 1.10</ref>. <ref loc="REV 20:14">Ap. 20.14</ref> y <ref loc="REV 21:4">21.4</ref>.</char></note>la muerte.<verse eid="1CO 15:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="1CO 15:27"/>Porque todas las cosas sujetó debajo de sus pies. Y cuando dice: <note caller="+" style="x"><char style="xo" closed="false">15.27 </char><char style="xt" closed="false"><ref loc="PSA 8:6">Sal. 8.6</ref>. <ref loc="EPH 1:22">Ef. 1.22</ref>.</char></note>Todas las cosas son sujetadas á él, claro está exceptuado aquel que sujetó á él todas las cosas.<verse eid="1CO 15:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="1CO 15:28"/>Mas luego que todas las cosas <note caller="+" style="x"><char style="xo" closed="false">15.28 </char><char style="xt" closed="false"><ref loc="PHP 3:21">Fil. 3.21</ref>.</char></note>le fueren sujetas, entonces <note caller="+" style="x"><char style="xo" closed="false">15.28 </char><char style="xt" closed="false">cp. 11.3.</char></note>también el mismo Hijo se sujetará al que le sujetó á él todas las cosas, para que Dios sea todas las cosas en todos.<verse eid="1CO 15:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="1CO 15:29"/>De otro modo, ¿qué harán los que se bautizan por los muertos, si en ninguna manera los muertos resucitan? ¿Por qué pues se bautizan por los muertos?<verse eid="1CO 15:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="1CO 15:30"/>¿Y por qué nosotros peligramos á toda hora?<verse eid="1CO 15:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="1CO 15:31"/>Sí, por la gloria que en orden á vosotros tengo en Cristo Jesús Señor nuestro, <note caller="+" style="x"><char style="xo" closed="false">15.31 </char><char style="xt" closed="false"><ref loc="LUK 9:23">Lc. 9.23</ref>.</char></note>cada día <note caller="+" style="x"><char style="xo" closed="false">15.31 </char><char style="xt" closed="false"><ref loc="2CO 4:10">2 Co. 4.10</ref>.</char></note>muero.<verse eid="1CO 15:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="1CO 15:32"/>Si <note caller="+" style="x"><char style="xo" closed="false">15.32 </char><char style="xt" closed="false">cp. 9.8.</char></note>como hombre <note caller="+" style="x"><char style="xo" closed="false">15.32 </char><char style="xt" closed="false"><ref loc="2CO 1:8">2 Co. 1.8</ref>.</char></note>batallé en <note caller="+" style="x"><char style="xo" closed="false">15.32 </char><char style="xt" closed="false"><ref loc="ACT 18:19">Hch. 18.19</ref>.</char></note>Efeso contra las bestias, ¿qué me aprovecha? Si los muertos no resucitan, <note caller="+" style="x"><char style="xo" closed="false">15.32 </char><char style="xt" closed="false"><ref loc="ISA 22:13">Is. 22.13</ref>.</char></note>comamos y bebamos, que mañana moriremos.<verse eid="1CO 15:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="1CO 15:33"/>No erréis: <note caller="+" style="x"><char style="xo" closed="false">15.33 </char><char style="xt" closed="false"><ref loc="GAL 5:9">Ga. 5.9</ref>. <ref loc="2TI 2:17">2 Ti. 2.17</ref>.</char></note>las malas conversaciones corrompen las buenas costumbres.<verse eid="1CO 15:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="1CO 15:34"/>Velad debidamente, <note caller="+" style="x"><char style="xo" closed="false">15.34 </char><char style="xt" closed="false"><ref loc="ROM 13:11">Ro. 13.11</ref>.</char></note>y no pequéis; <note caller="+" style="x"><char style="xo" closed="false">15.34 </char><char style="xt" closed="false"><ref loc="1TH 4:5">1 Ts. 4.5</ref>.</char></note>porque algunos no conocen á Dios: <note caller="+" style="x"><char style="xo" closed="false">15.34 </char><char style="xt" closed="false">cp. 6.5.</char></note>para vergüenza vuestra hablo.<verse eid="1CO 15:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="1CO 15:35"/>Mas dirá alguno: ¿Cómo resucitarán los muertos? ¿Con qué cuerpo vendrán?<verse eid="1CO 15:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="1CO 15:36"/>Necio, <note caller="+" style="x"><char style="xo" closed="false">15.36 </char><char style="xt" closed="false"><ref loc="JHN 12:24">Jn. 12.24</ref>.</char></note>lo que tú siembras no se vivifica, si no muriere <char style="it">antes.</char><verse eid="1CO 15:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="1CO 15:37"/>Y lo que siembras, no siembras el cuerpo que ha de salir, sino el grano desnudo, acaso de trigo, ó de otro <char style="it">grano:</char><verse eid="1CO 15:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="1CO 15:38"/>Mas Dios le da el cuerpo como quiso, y á cada simiente su propio cuerpo.<verse eid="1CO 15:38"/></para>
+  <para style="s">1 El hombre celestial.</para>
+  <para style="s">2 Proyectos de Pablo.</para>
+  <para style="p">
+    <verse number="39" style="v" sid="1CO 15:39"/>Toda carne no es la misma carne; mas una carne ciertamente es la de los hombres, y otra carne la de los animales, y otra la de los peces, y otra la de las aves.<verse eid="1CO 15:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="1CO 15:40"/>Y cuerpos hay celestiales, y cuerpos terrestres; mas ciertamente una es la gloria de los celestiales, y otra la de los terrestres:<verse eid="1CO 15:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="1CO 15:41"/>Otra es la gloria del sol, y otra la gloria de la luna, y otra la gloria de las estrellas: porque una estrella es diferente de otra en gloria.<verse eid="1CO 15:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="1CO 15:42"/>Así también es la resurrección de los muertos. Se siembra en <note caller="+" style="x"><char style="xo" closed="false">15.42 </char><char style="xt" closed="false">ver. 50. <ref loc="ROM 8:21">Ro. 8.21</ref>. <ref loc="GAL 6:8">Ga. 6.8</ref>. <ref loc="2PE 2:12">2 P. 2.12</ref>,<ref loc="2PE 2:19">19</ref>.</char></note>corrupción se levantará en <note caller="+" style="x"><char style="xo" closed="false">15.42 </char><char style="xt" closed="false"><ref loc="ROM 2:7">Ro. 2.7</ref>.</char></note>incorrupción;<verse eid="1CO 15:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="1CO 15:43"/>Se siembra <note caller="+" style="x"><char style="xo" closed="false">15.43 </char><char style="xt" closed="false"><ref loc="PHP 3:21">Fil. 3.21</ref>.</char></note>en vergüenza, se levantará con gloria; se siembra en flaqueza, se levantará con potencia;<verse eid="1CO 15:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="1CO 15:44"/>Se siembra cuerpo animal, resucitará espiritual cuerpo. Hay <note caller="+" style="x"><char style="xo" closed="false">15.44 </char><char style="xt" closed="false">cp. 2.14.</char></note>cuerpo animal, y hay cuerpo espiritual.<verse eid="1CO 15:44"/></para>
+  <para style="p">
+    <verse number="45" style="v" sid="1CO 15:45"/>Así también está escrito: Fué hecho el primer hombre <note caller="+" style="x"><char style="xo" closed="false">15.45 </char><char style="xt" closed="false"><ref loc="GEN 2:7">Gn. 2.7</ref>.</char></note>Adam en ánima viviente; <note caller="+" style="x"><char style="xo" closed="false">15.45 </char><char style="xt" closed="false"><ref loc="ROM 5:14">Ro. 5.14</ref>.</char></note>el postrer Adam en <note caller="+" style="x"><char style="xo" closed="false">15.45 </char><char style="xt" closed="false"><ref loc="JHN 5:21">Jn. 5.21</ref> y <ref loc="JHN 6:33">6.33</ref>,<ref loc="JHN 6:39">39</ref>,<ref loc="JHN 6:40">40</ref>,<ref loc="JHN 6:54">54</ref>,<ref loc="JHN 6:57">57</ref>. <ref loc="ROM 8:2">Ro. 8.2</ref>,<ref loc="ROM 8:10">10</ref>.</char></note>espíritu vivificante.<verse eid="1CO 15:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="1CO 15:46"/>Mas lo espiritual no es primero, sino lo animal; luego lo espiritual.<verse eid="1CO 15:46"/></para>
+  <para style="p">
+    <verse number="47" style="v" sid="1CO 15:47"/>El primer hombre, <note caller="+" style="x"><char style="xo" closed="false">15.47 </char><char style="xt" closed="false"><ref loc="JHN 3:31">Jn. 3.31</ref>.</char></note>es de la tierra, terreno: el segundo hombre, <char style="it">que es</char> el Señor, es del cielo.<verse eid="1CO 15:47"/></para>
+  <para style="p">
+    <verse number="48" style="v" sid="1CO 15:48"/>Cual el terreno, tales también los terrenos; <note caller="+" style="x"><char style="xo" closed="false">15.48 </char><char style="xt" closed="false"><ref loc="PHP 3:20">Fil. 3.20</ref>,<ref loc="PHP 3:21">21</ref>.</char></note>y cual el celestial, tales también los celestiales.<verse eid="1CO 15:48"/></para>
+  <para style="p">
+    <verse number="49" style="v" sid="1CO 15:49"/>Y como trajimos la imagen del terreno, <note caller="+" style="x"><char style="xo" closed="false">15.49 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Ro. 8.29</ref>.</char></note>traeremos también la imagen del celestial.<verse eid="1CO 15:49"/></para>
+  <para style="p">
+    <verse number="50" style="v" sid="1CO 15:50"/>Esto empero digo, hermanos: que <note caller="+" style="x"><char style="xo" closed="false">15.50 </char><char style="xt" closed="false"><ref loc="MAT 16:17">Mt. 16.17</ref>. <ref loc="JHN 3:3">Jn. 3.3</ref>,<ref loc="JHN 3:5">5</ref>.</char></note>la carne y la sangre <note caller="+" style="x"><char style="xo" closed="false">15.50 </char><char style="xt" closed="false">cp. 6.9.</char></note>no pueden heredar el reino de Dios; ni <note caller="+" style="x"><char style="xo" closed="false">15.50 </char><char style="xt" closed="false">ver. 42.</char></note>la corrupción hereda la incorrupción.<verse eid="1CO 15:50"/></para>
+  <para style="p">
+    <verse number="51" style="v" sid="1CO 15:51"/>He aquí, os digo un misterio: <note caller="+" style="x"><char style="xo" closed="false">15.51 </char><char style="xt" closed="false"><ref loc="1TH 4:15">1 Ts. 4.15</ref>,<ref loc="1TH 4:17">17</ref>.</char></note>Todos ciertamente no dormiremos, <note caller="+" style="x"><char style="xo" closed="false">15.51 </char><char style="xt" closed="false"><ref loc="PHP 3:21">Fil. 3.21</ref>.</char></note>mas todos seremos transformados.<verse eid="1CO 15:51"/></para>
+  <para style="p">
+    <verse number="52" style="v" sid="1CO 15:52"/>En un momento, en un abrir de ojo, <note caller="+" style="x"><char style="xo" closed="false">15.52 </char><char style="xt" closed="false"><ref loc="1TH 4:16">1 Ts. 4.16</ref>.</char></note>a la final trompeta; porque será tocada la trompeta, y los muertos serán levantados sin corrupción, y nosotros seremos transformados.<verse eid="1CO 15:52"/></para>
+  <para style="p">
+    <verse number="53" style="v" sid="1CO 15:53"/>Porque es menester que esto corruptible sea vestido de incorrupción, y <note caller="+" style="x"><char style="xo" closed="false">15.53 </char><char style="xt" closed="false"><ref loc="2CO 5:4">2 Co. 5.4</ref>.</char></note>esto mortal sea vestido de inmortalidad.<verse eid="1CO 15:53"/></para>
+  <para style="p">
+    <verse number="54" style="v" sid="1CO 15:54"/>Y cuando esto corruptible fuere vestido de incorrupción, y esto mortal fuere vestido de inmortalidad, entonces se efectuará la palabra que está escrita: <note caller="+" style="x"><char style="xo" closed="false">15.54 </char><char style="xt" closed="false"><ref loc="ISA 25:8">Is. 25.8</ref>. <ref loc="REV 20:14">Ap. 20.14</ref> y <ref loc="REV 21:4">21.4</ref>.</char></note>Sorbida es la muerte con victoria.<verse eid="1CO 15:54"/></para>
+  <para style="p">
+    <verse number="55" style="v" sid="1CO 15:55"/>¿Dónde está, <note caller="+" style="x"><char style="xo" closed="false">15.55 </char><char style="xt" closed="false"><ref loc="HOS 13:14">Os. 13.14</ref>.</char></note>oh muerte, tu aguijón? ¿dónde, oh sepulcro, tu victoria?<verse eid="1CO 15:55"/></para>
+  <para style="p">
+    <verse number="56" style="v" sid="1CO 15:56"/>Ya que el aguijón de la muerte es el pecado, y <note caller="+" style="x"><char style="xo" closed="false">15.56 </char><char style="xt" closed="false"><ref loc="ROM 4:15">Ro. 4.15</ref>.</char></note>la potencia del pecado, la ley.<verse eid="1CO 15:56"/></para>
+  <para style="p">
+    <verse number="57" style="v" sid="1CO 15:57"/>Mas á Dios gracias, <note caller="+" style="x"><char style="xo" closed="false">15.57 </char><char style="xt" closed="false"><ref loc="1JN 5:4">1 Jn. 5.4</ref>,<ref loc="1JN 5:5">5</ref>.</char></note>que nos da la victoria por el Señor nuestro Jesucristo.<verse eid="1CO 15:57"/></para>
+  <para style="p">
+    <verse number="58" style="v" sid="1CO 15:58"/>Así que, hermanos míos amados, estad firmes y constantes, creciendo en <note caller="+" style="x"><char style="xo" closed="false">15.58 </char><char style="xt" closed="false">cp. 16.10.</char></note>la obra del Señor siempre, sabiendo <note caller="+" style="x"><char style="xo" closed="false">15.58 </char><char style="xt" closed="false">cp. 3.8.</char></note>que vuestro trabajo en el Señor no es vano.<verse eid="1CO 15:58"/></para>
+  <chapter eid="1CO 15"/>
+  <chapter number="16" style="c" sid="1CO 16"/>
+  <para style="p">
+    <verse number="1" style="v" sid="1CO 16:1"/>CUANTO <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false"><ref loc="ACT 24:17">Hch. 24.17</ref>.</char></note>a la colecta para <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false"><ref loc="ROM 12:13">Ro. 12.13</ref>.</char></note>los santos, haced vosotros también de la manera que <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false">cp. 11.34.</char></note>ordené en <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false">cp. 11.16.</char></note>las iglesias de <note caller="+" style="x"><char style="xo" closed="false">16.1 </char><char style="xt" closed="false"><ref loc="ACT 16:6">Hch. 16.6</ref>.</char></note>Galacia.<verse eid="1CO 16:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="1CO 16:2"/>Cada primer <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false"><ref loc="ACT 20:7">Hch. 20.7</ref>. <ref loc="REV 1:10">Ap. 1.10</ref>.</char></note>día de la semana cada uno de vosotros aparte en su casa, guardando <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false"><ref loc="2CO 8:3">2 Co. 8.3</ref>,<ref loc="2CO 8:11">11</ref>.</char></note>lo que por la bondad de Dios pudiere; para que cuando yo llegare, <note caller="+" style="x"><char style="xo" closed="false">16.2 </char><char style="xt" closed="false"><ref loc="2CO 9:3">2 Co. 9.3</ref>.</char></note>no se hagan entonces colectas.<verse eid="1CO 16:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="1CO 16:3"/>Y cuando habré llegado, los que aprobareis por cartas, á éstos enviaré que lleven vuestro <note caller="+" style="x"><char style="xo" closed="false">16.3 </char><char style="xt" closed="false"><ref loc="2CO 8:4">2 Co. 8.4</ref>,<ref loc="2CO 8:6">6</ref>,<ref loc="2CO 8:19">19</ref>.</char></note>beneficio á Jerusalem.<verse eid="1CO 16:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1CO 16:4"/>Y si fuere digno el negocio de que yo también vaya, irán conmigo.<verse eid="1CO 16:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1CO 16:5"/>Y á vosotros iré, <note caller="+" style="x"><char style="xo" closed="false">16.5 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Hch. 19.21</ref>.</char></note>cuando hubiere pasado por Macedonia, porque por Macedonia tengo de pasar.<verse eid="1CO 16:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="1CO 16:6"/>Y podrá ser que me quede con vosotros, ó invernaré también, para que vosotros me llevéis <note caller="+" style="x"><char style="xo" closed="false">16.6 </char><char style="xt" closed="false"><ref loc="ACT 15:3">Hch. 15.3</ref>.</char></note>a donde hubiere de ir.<verse eid="1CO 16:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1CO 16:7"/>Porque no os quiero ahora ver <note caller="+" style="x"><char style="xo" closed="false">16.7 </char><char style="xt" closed="false"><ref loc="2CO 1:15">2 Co. 1.15</ref>,<ref loc="2CO 1:16">16</ref>.</char></note>de paso; porque espero estar con vosotros algún tiempo, si el Señor lo permitiere.<verse eid="1CO 16:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1CO 16:8"/>Empero estaré en <note caller="+" style="x"><char style="xo" closed="false">16.8 </char><char style="xt" closed="false"><ref loc="ACT 18:19">Hch. 18.19</ref>.</char></note>Efeso hasta <note caller="+" style="x"><char style="xo" closed="false">16.8 </char><char style="xt" closed="false"><ref loc="ACT 20:16">Hch. 20.16</ref>.</char></note>Pentecostés;<verse eid="1CO 16:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1CO 16:9"/>Porque <note caller="+" style="x"><char style="xo" closed="false">16.9 </char><char style="xt" closed="false"><ref loc="ACT 14:26">Hch. 14.26</ref>.</char></note>se me ha abierto puerta grande y eficaz, y <note caller="+" style="x"><char style="xo" closed="false">16.9 </char><char style="xt" closed="false"><ref loc="ACT 19:9">Hch. 19.9</ref>.</char></note>muchos son los adversarios.<verse eid="1CO 16:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1CO 16:10"/>Y <note caller="+" style="x"><char style="xo" closed="false">16.10 </char><char style="xt" closed="false">cp. 4.17. <ref loc="2CO 1:1">2 Co. 1.1</ref>.</char></note>si llegare Timoteo, mirad que esté con vosotros seguramente; porque <note caller="+" style="x"><char style="xo" closed="false">16.10 </char><char style="xt" closed="false"><ref loc="ROM 16:21">Ro. 16.21</ref>. <ref loc="1TH 3:2">1 Ts. 3.2</ref>.</char></note>la obra del Señor hace también como yo.<verse eid="1CO 16:10"/></para>
+  <para style="s">1 Salutaciones</para>
+  <para style="s">2 finales.</para>
+  <para style="p">
+    <verse number="11" style="v" sid="1CO 16:11"/>Por tanto, <note caller="+" style="x"><char style="xo" closed="false">16.11 </char><char style="xt" closed="false"><ref loc="1TI 4:12">1 Ti. 4.12</ref>.</char></note>nadie le tenga en poco; antes, llevadlo en paz, para que venga á mí: porque lo espero con los hermanos.<verse eid="1CO 16:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="1CO 16:12"/>Acerca del <note caller="+" style="x"><char style="xo" closed="false">16.12 </char><char style="xt" closed="false"><ref loc="ACT 18:24">Hch. 18.24</ref>. cp. 1.12 y <ref loc="ACT 3:5">3.5</ref>.</char></note>hermano Apolos, mucho le he rogado que fuese á vosotros con los hermanos; mas en ninguna manera tuvo voluntad de ir por ahora; pero irá cuando tuviere oportunidad.<verse eid="1CO 16:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1CO 16:13"/>
+    <note caller="+" style="x">
+      <char style="xo" closed="false">16.13 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 24:42">Mt. 24.42</ref>.</char>
+    </note>Velad, <note caller="+" style="x"><char style="xo" closed="false">16.13 </char><char style="xt" closed="false"><ref loc="PHP 1:27">Fil. 1.27</ref> y <ref loc="PHP 4:1">4.1</ref>.</char></note>estad firmes en la fe; <note caller="+" style="x"><char style="xo" closed="false">16.13 </char><char style="xt" closed="false"><ref loc="1SA 4:9">1 S. 4.9</ref>.</char></note>portaos varonilmente, y <note caller="+" style="x"><char style="xo" closed="false">16.13 </char><char style="xt" closed="false"><ref loc="EPH 3:16">Ef. 3.16</ref>.</char></note>esforzaos.<verse eid="1CO 16:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="1CO 16:14"/>Todas vuestras cosas <note caller="+" style="x"><char style="xo" closed="false">16.14 </char><char style="xt" closed="false">cp. 14.1.</char></note>sean hechas con caridad.<verse eid="1CO 16:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="1CO 16:15"/>Y os ruego, hermanos, (ya sabéis que <note caller="+" style="x"><char style="xo" closed="false">16.15 </char><char style="xt" closed="false">cp. 1.16.</char></note>la casa de Estéfanas es <note caller="+" style="x"><char style="xo" closed="false">16.15 </char><char style="xt" closed="false"><ref loc="ROM 16:5">Ro. 16.5</ref>.</char></note>las primicias de <note caller="+" style="x"><char style="xo" closed="false">16.15 </char><char style="xt" closed="false"><ref loc="ACT 18:12">Hch. 18.12</ref>.</char></note>Acaya, y que se han dedicado <note caller="+" style="x"><char style="xo" closed="false">16.15 </char><char style="xt" closed="false"><ref loc="2CO 8:4">2 Co. 8.4</ref>.</char></note>al ministerio de los santos,)<verse eid="1CO 16:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="1CO 16:16"/>Que <note caller="+" style="x"><char style="xo" closed="false">16.16 </char><char style="xt" closed="false"><ref loc="1TH 5:12">1 Ts. 5.12</ref>.</char></note>vosotros os sujetéis á los tales, y á todos los que ayudan y trabajan.<verse eid="1CO 16:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1CO 16:17"/>Huélgome de la venida de Estéfanas y de Fortunato y de Achâico: <note caller="+" style="x"><char style="xo" closed="false">16.17 </char><char style="xt" closed="false"><ref loc="2CO 11:9">2 Co. 11.9</ref>. <ref loc="PHP 2:30">Fil. 2.30</ref>.</char></note>porque éstos suplieron lo que á vosotros faltaba.<verse eid="1CO 16:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1CO 16:18"/>Porque recrearon mi espíritu y el vuestro: reconoced pues á los tales.<verse eid="1CO 16:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1CO 16:19"/>Las iglesias de Asia os saludan. Os saludan mucho en el Señor <note caller="+" style="x"><char style="xo" closed="false">16.19 </char><char style="xt" closed="false"><ref loc="ACT 18:2">Hch. 18.2</ref>.</char></note>Aquila y Priscila, <note caller="+" style="x"><char style="xo" closed="false">16.19 </char><char style="xt" closed="false"><ref loc="ROM 16:5">Ro. 16.5</ref>.</char></note>con la iglesia que está en su casa.<verse eid="1CO 16:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="1CO 16:20"/>Os saludan todos los hermanos. <note caller="+" style="x"><char style="xo" closed="false">16.20 </char><char style="xt" closed="false"><ref loc="ROM 16:16">Ro. 16.16</ref>.</char></note>Saludaos los unos á los otros con ósculo santo.<verse eid="1CO 16:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="1CO 16:21"/>La salutación de mí, <note caller="+" style="x"><char style="xo" closed="false">16.21 </char><char style="xt" closed="false"><ref loc="ROM 16:22">Ro. 16.22</ref>. <ref loc="COL 4:18">Col. 4.18</ref>. <ref loc="2TH 3:17">2 Ts. 3.17</ref>.</char></note>Pablo, de mi mano.<verse eid="1CO 16:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1CO 16:22"/>El que no amare al Señor Jesucristo, <note caller="+" style="x"><char style="xo" closed="false">16.22 </char><char style="xt" closed="false">cp. 12.3.</char></note>sea anatema. <note caller="+" style="x"><char style="xo" closed="false">16.22 </char><char style="xt" closed="false"><ref loc="PHP 4:5">Fil. 4.5</ref>.</char></note>Maranatha.<verse eid="1CO 16:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="1CO 16:23"/>La gracia del Señor <note caller="+" style="x"><char style="xo" closed="false">16.23 </char><char style="xt" closed="false"><ref loc="ROM 16:20">Ro. 16.20</ref>.</char></note>Jesucristo sea con vosotros.<verse eid="1CO 16:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="1CO 16:24"/>Mi amor en Cristo Jesús sea con todos vosotros. Amén.</para>
+  <para style="b" vid="1CO 16:24"/>
+  <para style="p" vid="1CO 16:24">La primera á los Corintios fué enviada de Filipos con Estéfanas, y Fortunato, y Achâico, y Timoteo.<verse eid="1CO 16:24"/></para>
+  <chapter eid="1CO 16"/>
+</usx>

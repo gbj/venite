@@ -106,12 +106,19 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
         defaultKalendar: "bcp1979",
         defaultLanguage: "en",
         defaultVersion: "Rite-II",
-        versionOptions: [
-          { value: "Rite-II", label: "Rite II" },
-          { value: "Rite-I", label: "Rite I" },
-          { value: "EOW", label: "Enriching Our Worship" },
-          { value: "Daily-Devotions", label: "Daily Devotions" },
+        languageOptions: [
+          { value: "en", label: "English" },
+          { value: "es", label: "Español" },
         ],
+        versionOptions: {
+          en: [
+            { value: "Rite-II", label: "Rite II" },
+            { value: "Rite-I", label: "Rite I" },
+            { value: "EOW", label: "Enriching Our Worship" },
+            { value: "Daily-Devotions", label: "Daily Devotions" },
+          ],
+          es: [{ value: "LOC", label: "Libro de Oración Común" }],
+        },
         prayersAndThanksgivings: {
           preset: false,
           component: false,
@@ -119,6 +126,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
         hasBulletinMode: false,
         serverReturnsDate: false,
         blackLetterCollectsOptional: true,
+        filterVersions: true,
       },
       providers: [
         AuthService,

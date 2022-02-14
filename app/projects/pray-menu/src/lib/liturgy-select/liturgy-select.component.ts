@@ -114,7 +114,7 @@ export class LiturgySelectComponent implements OnInit {
     new BehaviorSubject([]);
 
   // Language/version/kalendar
-  languageOptions$: Observable<{ value: string; label: string }[]>;
+  languageOptions: { value: string; label: string }[];
   versionOptions$: Observable<{ value: string; label: string }[]>;
   kalendarOptions$: Observable<Kalendar[]>;
   language$: Observable<string>;
@@ -287,23 +287,12 @@ export class LiturgySelectComponent implements OnInit {
     );
 
     // Language, version, kalendar
-    this.languageOptions$ = this.liturgyOptions$.pipe(
-      map((liturgies) =>
-        Array.from(
-          new Set(liturgies.map((liturgy) => liturgy.language || "en"))
-        )
-      ),
-      map((languages) =>
-        languages.map((language) => ({
-          value: language,
-          label:
-            (this.translate.instant(`language.${language}`) as string) ||
-            language,
-        }))
-      ),
-      shareReplay()
+    this.languageOptions = this.config.languageOptions;
+    this.versionOptions$ = this.language$.pipe(
+      tap((l) => console.log("versionOptions language = ", l)),
+      map((language) => this.config.versionOptions[language]),
+      tap((l) => console.log("versionOptions versions = ", l))
     );
-    this.versionOptions$ = of(this.config.versionOptions);
 
     // Date observables
     this.daysInMonth$ = this.form.controls.date.valueChanges.pipe(
@@ -342,7 +331,6 @@ export class LiturgySelectComponent implements OnInit {
 
     // Date when we re-enter the view
     this.startingDate$.subscribe((today) => {
-      console.log("startingDate$ new value = ", today);
       (this.form.controls.date as FormGroup).controls.year.setValue(
         today.getFullYear().toString()
       );
@@ -1082,6 +1070,11 @@ export class LiturgySelectComponent implements OnInit {
     }
 
     return nonDefaultPrefs;
+  }
+
+  setLanguage(lang: string) {
+    this.form.controls.language.setValue(lang);
+    this.preferencesService.set("language", lang, this.auth.currentUser()?.uid);
   }
 }
 
