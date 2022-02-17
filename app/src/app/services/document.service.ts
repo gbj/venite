@@ -373,7 +373,7 @@ export class DocumentService {
 
     // first, try JSON database
     if (!disableOffline) {
-      console.log("findDocumentsBySlug offline", slug);
+      console.log("findDocumentsBySlug offline", slug, language, versions);
       if (
         [
           "morning-prayer",
@@ -412,7 +412,9 @@ export class DocumentService {
               this.findDocumentsBySlug(slug, language, rawVersions, true)
             )
           );
-          return concat(processDocs(of(attempt), versions), firebaseVersions$);
+          return language == "en"
+            ? concat(processDocs(of(attempt), versions), firebaseVersions$)
+            : of(attempt);
         } else {
           return this.findDocumentsBySlug(slug, language, rawVersions, true);
         }
@@ -545,6 +547,7 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
+    console.log("findDocumentsByCategory", versions, language);
     if (!disableOffline) {
       const attempt$ = combineLatest(
         Array.from(
@@ -552,9 +555,14 @@ export class DocumentService {
             (versions || [])
               .map((v) => v.toLowerCase())
               .filter((version) =>
-                ["bcp1979", "rite_i", "eow", "rite-ii", "rite-i"].includes(
-                  version
-                )
+                [
+                  "bcp1979",
+                  "rite_i",
+                  "eow",
+                  "rite-ii",
+                  "rite-i",
+                  "loc",
+                ].includes(version)
               )
           )
         ).map((version) =>

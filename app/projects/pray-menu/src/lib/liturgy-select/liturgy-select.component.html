@@ -34,7 +34,7 @@
       </ion-select>
     </ion-item>
     <ng-container *ngIf="versionOptions$ | async as versionOptions">
-      <ion-item *ngIf="versionOptions.length > 1 && !config?.segmentButtonForVersions">
+      <ion-item *ngIf="versionOptions.length >= 1 && !config?.segmentButtonForVersions">
         <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
         <ion-select name="version" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
           <ion-select-option *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-select-option>

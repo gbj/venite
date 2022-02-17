@@ -749,6 +749,8 @@ export class PrayService {
     originalPrefs: Record<string, Preference> | undefined,
     liturgyversions: string[]
   ): Observable<LiturgicalDocument> {
+    console.log("lookupPsalter ", doc, day, liturgyversions);
+
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
     const version: string =
       typeof doc.version === "object"
@@ -936,6 +938,8 @@ export class PrayService {
           entries.map(
             (entry) =>
               new LiturgicalDocument({
+                language: doc.language,
+                version: doc.version,
                 slug: entry.slug,
                 lookup: {
                   type: "slug",
@@ -946,6 +950,7 @@ export class PrayService {
               })
           )
         ),
+        tap((docs) => console.log("canticle ", docs)),
         map((docs) => docsToOption(docs, versions)),
         switchMap((doc) =>
           this.compile(doc, day, prefs, versions, originalPrefs)

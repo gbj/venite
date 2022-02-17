@@ -38,7 +38,9 @@ export class BibleReading extends LiturgicalDocument {
           .replace(/\$\{longName\}/g, (longName ?? abbrev).replace('The', 'the'))
           .replace(/\$\{shortName\}/g, shortName ?? abbrev)
           .replace(/\$\{chapter\}/g, `${ordinalSuffix(Number(chapter) || 1)}`)
-          .replace(/\$\{verse\}/g, `${ordinalSuffix(Number(verse) || 1)}`);
+          .replace(/\$\{verse\}/g, `${ordinalSuffix(Number(verse) || 1)}`)
+          .replace('de El', 'del')
+          .replace('de La', 'de la');
 
       this.metadata?.intro?.value?.forEach((introValue: any) => {
         // Intro is presumably a Text or similar

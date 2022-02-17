@@ -31709,7 +31709,7 @@
       "category": []
     }
   ],
-  "en-salterio1979-gloria-patri": [
+  "es-loc-gloria-patri": [
     {
       "style": "gloria",
       "citation": null,
@@ -31725,7 +31725,7 @@
       "type": "refrain",
       "value": [
         "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
-        "como era en el principio, aho ra y siempre, por los siglos de los siglos. Amén."
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
       ],
       "version": "loc",
       "language": "es",
@@ -55177,6 +55177,813 @@
       "hidden": false,
       "language": "es",
       "slug": "psalm_105_i"
+    }
+  ],
+  "es-loc-canticle-8": [
+    {
+      "hidden": false,
+      "slug": "canticle-8",
+      "style": "canticle",
+      "type": "psalm",
+      "language": "es",
+      "label": "Cántico 1: Cántico de Moses",
+      "metadata": {
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "Rite II"
+        },
+        "localname": "Cántico de Moses",
+        "number": "1",
+        "latinname": "Cantemus Domino",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "category": ["Canticle", "Canticle"],
+      "lastRevision": 2,
+      "citation": "Exodo 15:1-6, 11-13, 17-18",
+      "version": "loc",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Cantaré al Señor, porque es excelso y sublime; *",
+              "halfverse": "caballos y jinetes ha arrojado en el mar."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "él se hizo mi Salvador.",
+              "verse": "Mi fuerza y mi refugio es el Señor; *"
+            },
+            {
+              "verse": "El es mi Dios; yo lo alabaré; *",
+              "type": "psalm-verse",
+              "halfverse": "el Dios de mis padres; yo lo ensalzaré."
+            },
+            {
+              "verse": "El Señor es valiente en la batalla: *",
+              "halfverse": "su Nombre es YAHVÉ.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Los carros de Faraón y su ejército precipitó en el mar; *",
+              "halfverse": "lo mejor de los escuderos se lo tragó el Mar Rojo.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "hasta el fondo cayeron como piedra.",
+              "verse": "Los cubrió el abismo; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Tu diestra, Señor, es gloriosa en su fuerza; *",
+              "halfverse": "tu diestra, Señor, aplasta al enemigo."
+            },
+            {
+              "halfverse": "venerado por sus hazañas loables, hacedor de maravillas?",
+              "verse": "¿Quién como tú, Señor, entre los dioses?\n¿Quién como tú, glorioso en santidad, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Tendiste tu diestra; *",
+              "type": "psalm-verse",
+              "halfverse": "se los tragó la tierra."
+            },
+            {
+              "verse": "Guiaste con tu misericordia al pueblo rescatado: *",
+              "type": "psalm-verse",
+              "halfverse": "lo llevaste con tu poder hasta tu santa morada."
+            },
+            {
+              "verse": "Lo introduces y lo plantas *",
+              "type": "psalm-verse",
+              "halfverse": "en el monte de tu heredad,"
+            },
+            {
+              "verse": "El lugar de descanso que te has preparado, *",
+              "halfverse": "el santuario, Señor, que tus manos fundaron.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "El Señor reinará *",
+              "type": "psalm-verse",
+              "halfverse": "ahora y por siempre."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "source": {
+        "source": "LOC",
+        "api": "",
+        "citation": "p. 47"
+      },
+      "sharing": {
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "status": "published",
+        "organization": "venite"
+      },
+      "version_label": null
+    }
+  ],
+  "es-loc-canticle-9": [
+    {
+      "citation": "Isaías 12:2-6",
+      "slug": "canticle-9",
+      "label": "Cántico 2: Primer Cántico de Isaías",
+      "type": "psalm",
+      "language": "es",
+      "hidden": false,
+      "style": "canticle",
+      "source": {
+        "citation": "p. 48",
+        "api": "",
+        "source": "LOC"
+      },
+      "version": "lox",
+      "category": ["Canticle", "Canticle"],
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "confiaré en él y no temeré.",
+              "type": "psalm-verse",
+              "verse": "He aquí es Dios quien me salva; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Mi fortaleza y mi refugio es el Señor; *",
+              "halfverse": "él se hizo mi Salvador."
+            },
+            {
+              "halfverse": "de las fuentes de salvación..",
+              "verse": "Sacarán ustedes aguas con júbilo *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "Den gracias al Señor e invoquen su Nombre.",
+              "verse": "Aquel día dirán: *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Cuenten a los pueblos sus hazañas; *",
+              "halfverse": "pregonen que su Nombre es excelso.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "y esto es conocido por toda la tierra.",
+              "verse": "Canten alabanzas al Señor, porque ha hecho cosas sublimes, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Vitoreen, habitantes de Sión, con gritos de júbilo, *",
+              "type": "psalm-verse",
+              "halfverse": "porque grande es en medio de ti el Santo de Israel."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "privacy": "public",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "metadata": {
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "Rite II"
+        },
+        "latinname": "Ecce, Deus",
+        "number": "2",
+        "omit_antiphon": false,
+        "localname": "Primer Cántico de Isaías",
+        "omit_gloria": false
+      },
+      "lastRevision": 2
+    }
+  ],
+  "es-loc-canticle-10": [
+    {
+      "category": ["Canticle", "Canticle"],
+      "type": "psalm",
+      "version": "loc",
+      "metadata": {
+        "latinname": "Quaerite Dominum",
+        "number": "3",
+        "localname": "Segundo Cántico de Isaías",
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "Rite II"
+        },
+        "omit_antiphon": false,
+        "insert_seasonal_antiphon": false,
+        "omit_gloria": false
+      },
+      "slug": "canticle-10",
+      "citation": "Isaías 55:6-11",
+      "date_modified": {
+        "_seconds": 1606479172,
+        "_nanoseconds": 494000000
+      },
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "hidden": false,
+      "sharing": {
+        "collaborators": [],
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "privacy": "public"
+      },
+      "version_label": null,
+      "style": "canticle",
+      "label": "Cántico 3: Segundo Cántico de Isaías",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Busquen al Señor mientras se deja encontrar; *",
+              "halfverse": "llámenle mientras se acerca.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Dejen los malos su camino, *",
+              "halfverse": "y los inicuos sus pensamientos."
+            },
+            {
+              "halfverse": "a nuestro Dios, porque es rico en perdón.",
+              "type": "psalm-verse",
+              "verse": "Vuélvanse al Señor, y tendrá compasión de ellos, *"
+            },
+            {
+              "halfverse": "ni sus caminos, mis caminos, dice el Señor.",
+              "type": "psalm-verse",
+              "verse": "Pues mis pensamientos no son sus pensamientos, *"
+            },
+            {
+              "halfverse": "así mis caminos son más altos que sus caminos,\ny mis pensamientos más que sus pensamientos.",
+              "type": "psalm-verse",
+              "verse": "Porque así como los cielos son más altos que la tierra, "
+            },
+            {
+              "halfverse": "y no vuelven allá sin empapar la tierra,",
+              "type": "psalm-verse",
+              "verse": "Como la lluvia y la nieve descienden del firmamento, *"
+            },
+            {
+              "verse": "Haciéndola germinar y crecer, *",
+              "halfverse": "y produciendo simiente al sembrador y pan al que come,",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "no regresará a mi vacía;",
+              "type": "psalm-verse",
+              "verse": "Así será mi palabra, la que sale de mi boca: *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "y cumplirá aquello para lo cual la envié.",
+              "verse": "Sino que realizará mi propósito, *"
+            }
+          ]
+        }
+      ],
+      "lastRevision": 3,
+      "language": "es"
+    }
+  ],
+  "es-loc-canticle-11": [
+    {
+      "version_label": null,
+      "citation": "Isaías 60:1-3, 11a, 14c, 18-19",
+      "metadata": {
+        "omit_antiphon": false,
+        "localname": "Tercer Cántico de Isaías",
+        "latinname": "Surge, illuminare",
+        "omit_gloria": false,
+        "number": "4",
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "Rite II"
+        }
+      },
+      "version": "loc",
+      "language": "es",
+      "label": "Cántico 4: Tercer Cántico de Isaías",
+      "hidden": false,
+      "style": "canticle",
+      "category": ["Canticle", "Canticle"],
+      "slug": "canticle-11",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "y la gloria del Señor sobre ti ha amanecido.",
+              "verse": "Surge, ilumina, pues ha llegado tu luz, *"
+            },
+            {
+              "halfverse": "y densa oscuridad a los pueblos.",
+              "verse": "Mira cómo las tinieblas cubren la tierra, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Mas sobre ti amanece el Señor, *",
+              "halfverse": "y su gloria aparece sobre ti.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Correrán las naciones a tu luz, *",
+              "halfverse": "y los reyes a la claridad de tu alborada.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "ni de día ni de noche se cerrarán.",
+              "verse": "Abiertas de continuo estarán tus puertas; *"
+            },
+            {
+              "verse": "Te llamarán la Ciudad del Señor, *",
+              "type": "psalm-verse",
+              "halfverse": "la Sión del Santo de Israel."
+            },
+            {
+              "halfverse": "ni de ruina o destrucción en tus fronteras.",
+              "verse": "No se oirá más de violencia en tu tierra, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Llamarás a tus murallas, Salvación, *",
+              "halfverse": "y a tus puertas, Alabanza."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "ni de noche necesitarás el lustre de la luna.",
+              "verse": "El sol no será para ti ya más tu luz del día, *"
+            },
+            {
+              "halfverse": "y tu Dios será tu gloria.",
+              "verse": "Tendrás al Señor por luz eterna, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public"
+      },
+      "type": "psalm"
+    }
+  ],
+  "es-loc-canticle-12": [
+    {
+      "source": {
+        "api": "",
+        "citation": "p. 51",
+        "source": "LOC"
+      },
+      "citation": "Daniel (dc) 3:57-87",
+      "sharing": {
+        "collaborators": [],
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      },
+      "slug": "canticle-12",
+      "version_label": null,
+      "hidden": false,
+      "date_modified": {
+        "_seconds": 1615403720,
+        "_nanoseconds": 718000000
+      },
+      "category": ["Canticle", "Canticle"],
+      "type": "psalm",
+      "version": "loc",
+      "language": "es",
+      "metadata": {
+        "latinname": "Benedicite, omnia opera Domini",
+        "omit_gloria": true,
+        "localname": "Cántico de la Creación",
+        "changeable": false,
+        "number": "5",
+        "omit_antiphon": false,
+        "insert_seasonal_antiphon": false
+      },
+      "label": "Cántico 5: Cántico de la Creación",
+      "lastRevision": 3,
+      "style": "canticle",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Bendigan al Señor, obras todas del Señor, *",
+              "type": "psalm-verse",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            },
+            {
+              "verse": "En la bóveda celeste, bendigan al Señor, *",
+              "type": "psalm-verse",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            }
+          ],
+          "label": "Invocación",
+          "type": "psalm-section"
+        },
+        {
+          "value": [
+            {
+              "verse": "Bendigan al Señor, ángeles y potestades del Señor, *",
+              "halfverse": "cielos y aguas que están sobre los cielos.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Sol y luna, y estrellas del cielo, bendigan al Señor, *",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "vientos todos, fuego y calor.",
+              "type": "psalm-verse",
+              "verse": "Bendigan al Señor, lluvias todas y rocío, *"
+            },
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "verse": "Inviernos y veranos, bendigan al Señor, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "gotas de rocío y copos de nieve.",
+              "verse": "Bendigan al Señor, fríos y heladas, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Escarchas y fríos, hielos y celliscas, bendigan al Señor, *",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Bendigan al Señor, noches y días, *",
+              "type": "psalm-verse",
+              "halfverse": "luz radiante y oscuridad acogedora."
+            },
+            {
+              "verse": "Rayos y nubes, bendigan al Señor, *",
+              "type": "psalm-verse",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            }
+          ],
+          "type": "psalm-section",
+          "label": "I\t\tEl Orden Cósmico"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Bendiga la tierra al Señor, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Montes y colinas y cuanto germina en la tierra, bendigan al Señor, *",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            },
+            {
+              "halfverse": "cetáceos y cuanto se mueve en las aguas.",
+              "type": "psalm-verse",
+              "verse": "Bendigan al Señor, manantiales y fuentes, mares y ríos, *"
+            },
+            {
+              "verse": "Aves del cielo, bendigan al Señor, *",
+              "type": "psalm-verse",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "y todos los rebaños y ganados.",
+              "verse": "Bendigan al Señor, bestias silvestres, *"
+            },
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Hombres y mujeres de todos los lugares, bendigan al Señor, *"
+            }
+          ],
+          "label": "II\t\tLa Tierra y sus Criaturas",
+          "type": "psalm-section"
+        },
+        {
+          "value": [
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "verse": "Bendiga al Señor el pueblo de Dios, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Sacerdotes y siervos del Señor, bendigan al Señor, *"
+            },
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Bendigan al Señor, espíritus y almas de los justos, *"
+            },
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Santos y humildes de corazón, bendigan al Señor, *"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "III\t\tEl Pueblo de Dios"
+        },
+        {
+          "label": "Doxología",
+          "value": [
+            {
+              "halfverse": "alábenle y exáltenle sobre todo para siempre.",
+              "verse": "Bendigamos al Señor: Padre, Hijo y Espíritu Santo, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "En la bóveda celeste, bendito sea el Señor, *",
+              "halfverse": "alábenle y exáltenle sobre todo para siempre."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ]
+    }
+  ],
+  "es-loc-canticle-13": [
+    {
+      "label": "Cántico 6: Cantico de Alabanza",
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "digno de alabanza, eres bendito.",
+              "verse": "Bendito eres tú, Señor Dios de nuestros padres; *"
+            },
+            {
+              "verse": "Bendito el fulgor de tu santo Nombre, *",
+              "halfverse": "alabado y exaltado sobre todo para siempre.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "en el trono de tu reino eres bendito.",
+              "verse": "Bendito eres en el templo de tu santa gloria, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "alabado y exaltado sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Bendito eres, sentado sobre querubines, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "en la bóveda celeste eres bendito.",
+              "verse": "Bendito tú, que sondeas los abismos; *"
+            },
+            {
+              "halfverse": "alabado y exaltado sobre todo para siempre.",
+              "type": "psalm-verse",
+              "verse": "Bendito tú: Padre, Hijo y Espíritu Santo, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "localname": "Cantico de Alabanza",
+        "omit_antiphon": false,
+        "latinname": "Benedictus es, Domine",
+        "number": "6",
+        "omit_gloria": true,
+        "insert_seasonal_antiphon": false,
+        "changeable": false
+      },
+      "slug": "canticle-13",
+      "version_label": null,
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "language": "es",
+      "date_modified": {
+        "_seconds": 1607457674,
+        "_nanoseconds": 586000000
+      },
+      "category": ["Canticle", "Canticle"],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "status": "published",
+        "collaborators": [],
+        "organization": "venite"
+      },
+      "citation": "Daniel (dc) 3:26, 52-56",
+      "lastRevision": 4,
+      "hidden": false,
+      "version": "loc",
+      "style": "canticle"
+    }
+  ],
+  "es-loc-canticle-14": [
+    {
+      "version": "bcp1979",
+      "category": ["Canticle"],
+      "label": "Cántico 7: Cántico de Penitencia",
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Señor Dios, Rey del universo, *",
+              "halfverse": "Dios de Abrahán, de Isaac y de Jacob,\ny de todo su justo linaje:",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "con toda su inmensa formación.",
+              "type": "psalm-verse",
+              "verse": "Tú hiciste los cielos y la tierra, *"
+            },
+            {
+              "halfverse": "tiemblan a causa de tu poder.",
+              "verse": "Ante tu presencia todas las cosas se estremecen con temor;",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "y sobrepasa cuanto podemos sondear.",
+              "type": "psalm-verse",
+              "verse": "Sin embargo, tu benigna promesa es inmensurable, *"
+            },
+            {
+              "verse": "Señor, tu compasión es abundante, *",
+              "type": "psalm-verse",
+              "halfverse": "paciente y rica en misericordia."
+            },
+            {
+              "halfverse": "no nos castigas como lo merecemos.",
+              "type": "psalm-verse",
+              "verse": "Retienes tu mano; *"
+            },
+            {
+              "halfverse": "para que se arrepientan de su pecado y sean salvos.",
+              "verse": "Por tu gran bondad, Señor,\nhas prometido el perdón a los pecadores, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Ahora, Señor, doblo la rodilla de mi corazón, *",
+              "type": "psalm-verse",
+              "halfverse": "y apelo a ti, confiado en tu bondad misericordiosa."
+            },
+            {
+              "verse": "He pecado, oh Señor, he pecado, *",
+              "halfverse": "y reconozco a fondo mi iniquidad.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Por tanto, humildemente te imploro: *",
+              "type": "psalm-verse",
+              "halfverse": "¡Perdóname, Señor, perdóname!"
+            },
+            {
+              "verse": "No permitas que perezca en mi pecado, *",
+              "type": "psalm-verse",
+              "halfverse": "ni me condenes a las honduras del abismo."
+            },
+            {
+              "halfverse": "y en mí manifestarás tu benevolencia.",
+              "type": "psalm-verse",
+              "verse": "Pues tú, Señor, eres Dios de los que se arrepienten, *"
+            },
+            {
+              "halfverse": "y cantaré sin cesar tus alabanzas todos los días de mi vida.",
+              "verse": "Indigno como soy, tú me salvarás,\nde acuerdo con tu piedad inmensa, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "y tuya es la gloria por los siglos de los siglos. Amén.",
+              "verse": "Todas las potestades celestiales te aclaman, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "style": "canticle",
+      "citation": "Oración de Manasés 1-2, 4, 6-7, 11-15",
+      "language": "en",
+      "version_label": null,
+      "slug": "canticle-14",
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Kyrie Pantokrator",
+        "omit_antiphon": false,
+        "localname": "Cántico de Penitencia",
+        "number": "7"
+      }
     }
   ]
 }

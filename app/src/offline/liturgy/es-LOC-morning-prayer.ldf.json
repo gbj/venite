@@ -590,7 +590,7 @@
       "language": "en",
       "value": [
         "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
-        "como era en el principio, aho ra y siempre, por los siglos de los siglos. Amén."
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
       ],
       "style": "gloria",
       "hidden": false,
@@ -1339,7 +1339,8 @@
     },
     {
       "lookup": { "type": "slug", "rotate": false, "allow_multiple": false },
-      "version": "bcp1979",
+      "version": "loc",
+      "language": "es",
       "category": [],
       "condition": {
         "conditions": [
@@ -1382,11 +1383,12 @@
       "type": "bible-reading",
       "category": [],
       "source": { "citation": "", "source": "", "api": "" },
-      "label": "The First Lesson",
+      "label": "La Primera Lectura",
       "hidden": false,
+      "language": "es",
       "metadata": {
         "intro": {
-          "value": ["A Reading from ${longName}."],
+          "value": ["Lectura de ${longName}."],
           "category": ["Bible Reading Introduction"],
           "language": "en",
           "style": "text",
@@ -1427,9 +1429,12 @@
         "omit_antiphon": false,
         "omit_gloria": false,
         "insert_seasonal_antiphon": false
-      }
+      },
+      "language": "es",
+      "version": "loc"
     },
     {
+      "language": "es",
       "metadata": {
         "intro": {
           "sharing": {
@@ -1441,10 +1446,10 @@
           "category": ["Bible Reading Introduction"],
           "type": "text",
           "style": "text",
-          "value": ["A Reading from ${longName}."]
+          "value": ["Lectura de ${longName}."]
         }
       },
-      "label": "The Second Lesson",
+      "label": "La Segunda Lectura",
       "condition": {
         "conditions": [
           { "preference": { "is": false, "key": "readingB", "value": "none" } }
@@ -1512,6 +1517,7 @@
         "item": { "preference": "readingC" },
         "type": "lectionary"
       },
+      "language": "es",
       "metadata": {
         "intro": {
           "language": "en",
@@ -1522,7 +1528,7 @@
           },
           "type": "text",
           "style": "text",
-          "value": ["A Reading from ${longName}."],
+          "value": ["Lectura de ${longName}."],
           "category": ["Bible Reading Introduction"]
         }
       },
@@ -1841,9 +1847,9 @@
     },
     {
       "label": "The Collect of the Day",
-      "language": "en",
+      "language": "es",
       "category": [],
-      "version": "bcp1979",
+      "version": "loc",
       "lookup": { "rotate": false, "allow_multiple": true, "type": "collect" },
       "source": { "citation": "", "source": "", "api": "" },
       "style": "prayer",

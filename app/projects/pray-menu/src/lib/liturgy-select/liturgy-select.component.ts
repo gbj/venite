@@ -1074,6 +1074,9 @@ export class LiturgySelectComponent implements OnInit {
 
   setLanguage(lang: string) {
     this.form.controls.language.setValue(lang);
+    if (this.config.versionOptions) {
+      this.form.controls.version.setValue(this.config.versionOptions[lang][0]);
+    }
     this.preferencesService.set("language", lang, this.auth.currentUser()?.uid);
   }
 }
