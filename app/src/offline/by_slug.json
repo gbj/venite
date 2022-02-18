@@ -55209,7 +55209,7 @@
           "language": "es",
           "slug": "gloria-patri",
           "hidden": false,
-          "version_label": "Rite II"
+          "version_label": "LOC"
         },
         "localname": "Cántico de Moses",
         "number": "1",
@@ -55396,7 +55396,7 @@
           "language": "es",
           "slug": "gloria-patri",
           "hidden": false,
-          "version_label": "Rite II"
+          "version_label": "LOC"
         },
         "latinname": "Ecce, Deus",
         "number": "2",
@@ -55437,7 +55437,7 @@
           "language": "es",
           "slug": "gloria-patri",
           "hidden": false,
-          "version_label": "Rite II"
+          "version_label": "LOC"
         },
         "omit_antiphon": false,
         "insert_seasonal_antiphon": false,
@@ -55450,9 +55450,9 @@
         "_nanoseconds": 494000000
       },
       "source": {
-        "source": "",
+        "source": "LOC",
         "api": "",
-        "citation": ""
+        "citation": "p. 49"
       },
       "hidden": false,
       "sharing": {
@@ -55552,7 +55552,7 @@
           "language": "es",
           "slug": "gloria-patri",
           "hidden": false,
-          "version_label": "Rite II"
+          "version_label": "LOC"
         }
       },
       "version": "loc",
@@ -55626,7 +55626,12 @@
         "collaborators": [],
         "privacy": "public"
       },
-      "type": "psalm"
+      "type": "psalm",
+      "source": {
+        "api": "",
+        "citation": "p. 50",
+        "source": "LOC"
+      }
     }
   ],
   "es-loc-canticle-12": [
@@ -55864,9 +55869,9 @@
       "slug": "canticle-13",
       "version_label": null,
       "source": {
-        "source": "",
+        "source": "LOC",
         "api": "",
-        "citation": ""
+        "citation": "p. 53"
       },
       "language": "es",
       "date_modified": {
@@ -55890,7 +55895,7 @@
   ],
   "es-loc-canticle-14": [
     {
-      "version": "bcp1979",
+      "version": "loc",
       "category": ["Canticle"],
       "label": "Cántico 7: Cántico de Penitencia",
       "type": "psalm",
@@ -55974,7 +55979,7 @@
       "hidden": false,
       "style": "canticle",
       "citation": "Oración de Manasés 1-2, 4, 6-7, 11-15",
-      "language": "en",
+      "language": "es",
       "version_label": null,
       "slug": "canticle-14",
       "metadata": {
@@ -55983,7 +55988,535 @@
         "omit_antiphon": false,
         "localname": "Cántico de Penitencia",
         "number": "7"
+      },
+      "source": {
+        "api": "",
+        "citation": "p. 53",
+        "source": "LOC"
       }
+    }
+  ],
+  "es-loc-canticle-15": [
+    {
+      "style": "canticle",
+      "label": "Cántico 8: Cántico de María",
+      "category": ["Canticle"],
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Magnificat",
+        "changeable": false,
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "LOC"
+        },
+        "number": "8",
+        "localname": "Cántico de María",
+        "insert_antiphon": false,
+        "insert_seasonal_antiphon": false,
+        "omit_gloria": false
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Proclama mi alma la grandeza del Señor,\nse alegra mi espíritu en Dios mi Salvador, *",
+              "halfverse": "porque ha mirado la humillación de su esclava.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "porque el Poderoso ha hecho obras grandes por mí;\nsu Nombre es santo.",
+              "verse": "Desde ahora me felicitarán todas las generaciones, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "de generación en generación.",
+              "verse": "Su misericordia llega a sus fieles, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "El hace proezas con su brazo; *",
+              "halfverse": "dispersa a los soberbios de corazón.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "y enaltece a los humildes.",
+              "type": "psalm-verse",
+              "verse": "Derriba del trono a los poderosos, *"
+            },
+            {
+              "halfverse": "y a los ricos despide vacíos.",
+              "verse": "A los hambrientos los colma de bienes, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "acordándose de la misericordia,",
+              "type": "psalm-verse",
+              "verse": "Auxilia a Israel, su siervo, *"
+            },
+            {
+              "halfverse": "en favor de Abrahán y su descendencia para siempre.",
+              "type": "psalm-verse",
+              "verse": "Como lo había prometido a nuestros padres, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "type": "psalm",
+      "hidden": false,
+      "slug": "canticle-15",
+      "language": "es",
+      "version": "loc",
+      "lastRevision": 33,
+      "citation": "San Lucas 1:46-55",
+      "source": {
+        "api": "",
+        "citation": "p. 54",
+        "source": "LOC"
+      }
+    }
+  ],
+  "es-loc-canticle-16": [
+    {
+      "label": "Cántico 9: Cántico de Zacarías",
+      "citation": "San Lucas 1:68-79",
+      "slug": "canticle-16",
+      "type": "psalm",
+      "hidden": false,
+      "style": "canticle",
+      "version_label": null,
+      "language": "es",
+      "metadata": {
+        "number": "9",
+        "latinname": "Benedictus Dominus Deus",
+        "omit_gloria": false,
+        "omit_antiphon": false,
+        "localname": "Cántico de Zacarías",
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "LOC"
+        }
+      },
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "porque ha visitado y redimido a su pueblo,",
+              "verse": "Bendito sea el Señor, Dios de Israel, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Suscitándonos un poderoso Salvador *",
+              "type": "psalm-verse",
+              "halfverse": "en la casa de David su siervo,"
+            },
+            {
+              "halfverse": "por boca de sus santos profetas.",
+              "verse": "Según lo había predicho desde antiguo *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "por boca de sus santos profetas.",
+              "verse": "Según lo había predicho desde antiguo *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Es el Salvador que nos libra de nuestros enemigos,",
+              "halfverse": "y de la mano de todos los que nos odian,",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Realizando la misericordia que tuvo con nuestros padres, *",
+              "type": "psalm-verse",
+              "halfverse": "recordando su santa alianza\ny el juramento que juró a nuestro padre Abrahán;"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "le sirvamos con santidad y justicia\nen su presencia, todos nuestros días.",
+              "verse": "Para concedernos que, libres de temor,\narrancados de la mano de los enemigos, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "porque irás delante del Señor a preparar sus caminos, *",
+              "verse": "Y a ti, niño, te llamarán profeta del Altísimo, *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "el perdón de sus pecados.",
+              "verse": "Anunciando a su pueblo la salvación, *"
+            },
+            {
+              "halfverse": "nos visitará el sol que nace de lo alto,",
+              "type": "psalm-verse",
+              "verse": "Por la entrañable misericordia de nuestro Dios, *"
+            },
+            {
+              "halfverse": "para guiar nuestros pasos por el camino de la paz.",
+              "verse": "Para iluminar a los que viven en tinieblas y en sombra de muerte, *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "api": "",
+        "citation": "p. 55",
+        "source": "LOC"
+      },
+      "version": "loc",
+      "category": ["Canticle"]
+    }
+  ],
+  "es-loc-canticle-17": [
+    {
+      "metadata": {
+        "latinname": "Nunc Dimittis",
+        "omit_gloria": false,
+        "number": "10",
+        "omit_antiphon": false,
+        "localname": "Cántico de Simeón",
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "LOC"
+        }
+      },
+      "version_label": null,
+      "type": "psalm",
+      "version": "loc",
+      "category": ["Canticle"],
+      "language": "es",
+      "style": "canticle",
+      "label": "Cántico 10: Cántico de Simeón",
+      "slug": "canticle-17",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Ahora despides, Señor, a tu siervo, *",
+              "type": "psalm-verse",
+              "halfverse": "conforme a tu palabra, en paz."
+            },
+            {
+              "verse": "Porque mis ojos han visto a tu Salvador, *",
+              "type": "psalm-verse",
+              "halfverse": "a quien has presentado ante todos los pueblos:"
+            },
+            {
+              "halfverse": "y gloria de tu pueblo Israel.",
+              "type": "psalm-verse",
+              "verse": "Luz para alumbrar a las naciones, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": "San Lucas 2:29-32",
+      "hidden": false,
+      "source": {
+        "api": "",
+        "citation": "p. 56",
+        "source": "LOC"
+      }
+    }
+  ],
+  "es-loc-canticle-18": [
+    {
+      "metadata": {
+        "latinname": "Dignus es",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Cántico al Cordero",
+        "number": "11"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Digno es, Señor nuestro Dios, *",
+              "halfverse": "atribuirte la gloria, el honor y el poder;",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "y por tu voluntad existió y fue creado.",
+              "verse": "Porque tú has creado el universo, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "porque con tu sangre compraste para Dios,",
+              "verse": "Y digno es atribuir lo mismo a ti, Cordero inmolado, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "un reino de sacerdotes para servir a nuestro Dios.",
+              "verse": "De toda raza, lengua, pueblo y nación, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Por tanto, al que está sentado en el trono, *",
+              "type": "psalm-verse",
+              "halfverse": "y a Cristo el Cordero,"
+            },
+            {
+              "verse": "Sean adoración y honor, gloria y señorío, *",
+              "type": "psalm-verse",
+              "halfverse": "por los siglos de los siglos. Amén."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version_label": null,
+      "style": "canticle",
+      "label": "Cántico 11: Cántico al Cordero",
+      "hidden": false,
+      "slug": "canticle-18",
+      "citation": "Apocalipsis 4:11; 5:9-10, 13",
+      "category": ["Canticle"],
+      "version": "loc",
+      "type": "psalm",
+      "language": "es",
+      "source": {
+        "api": "",
+        "citation": "p. 56",
+        "source": "LOC"
+      }
+    }
+  ],
+  "es-loc-canticle-19": [
+    {
+      "metadata": {
+        "latinname": "Magna et mirabilia",
+        "omit_antiphon": false,
+        "number": "12",
+        "gloria": {
+          "style": "gloria",
+          "citation": null,
+          "category": [null],
+          "label": null,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "type": "refrain",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "version": "loc",
+          "language": "es",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "version_label": "LOC"
+        },
+        "localname": "Cántico de los Redimidos",
+        "omit_gloria": false
+      },
+      "lastRevision": 2,
+      "source": {
+        "source": "LOC",
+        "api": "",
+        "citation": "p. 57"
+      },
+      "slug": "canticle-19",
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "Señor Dios, Rey del universo;",
+              "verse": "Grandes y asombrosas son tus obras, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "oh Rey de los siglos.",
+              "type": "psalm-verse",
+              "verse": "Justos y fidedignos tus caminos, *"
+            },
+            {
+              "verse": "¿Quién no te acatará y bendecirá tu Nombre? *",
+              "halfverse": "Tú sólo eres el Santo.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "Pues tus hechos justos se hicieron manifiestos.",
+              "verse": "Todas las naciones vendrán y se postrarán ante ti, *"
+            }
+          ]
+        }
+      ],
+      "version": "loc",
+      "citation": "Apocalipsis 15:3-4",
+      "style": "canticle",
+      "label": "Cántico 12: Cántico de los Redimidos",
+      "version_label": null,
+      "type": "psalm",
+      "language": "es",
+      "category": ["Canticle"]
+    }
+  ],
+  "es-loc-canticle-20": [
+    {
+      "category": ["Canticle"],
+      "hidden": false,
+      "metadata": {
+        "latinname": "Gloria in excelsis",
+        "omit_gloria": true,
+        "omit_antiphon": false,
+        "number": "13",
+        "localname": "Gloria d Dios"
+      },
+      "style": "canticle",
+      "label": "Cántico 13: Gloria a Dios",
+      "version_label": null,
+      "slug": "canticle-20",
+      "citation": null,
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Gloria a Dios en el cielo, ",
+              "halfverse": "y en la tierra paz a quienes ama el Señor. \n"
+            },
+            {
+              "verse": "Por tu inmensa gloria ",
+              "halfverse": "te alabamos,\nte bendecimos,\nte adoramos,\nte glorificamos,\nte damos gracias,",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Señor Dios, Rey celestial,\nDios Padre todopoderoso.\n"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Señor, Hijo único Jesucristo,\nSeñor Dios, Cordero de Dios,\nHijo del Padre:\nTú que quitas el pecado del mundo,",
+              "halfverse": "ten piedad de nosotros;"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Tú que quitas el pecado del mundo,",
+              "halfverse": "atiende nuestra súplica;"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Tú que estás sentado a la derecha del Padre, ",
+              "halfverse": "ten piedad de nosotros: \n"
+            },
+            {
+              "verse": "Porque sólo tú eres Santo,\nsólo tú Señor,\nsólo tú Altísimo, Jesucristo,",
+              "type": "psalm-verse",
+              "halfverse": "con el Espíritu Santo\nen la gloria de Dios Padre. Amén."
+            }
+          ]
+        }
+      ],
+      "lastRevision": 31,
+      "version": "loc",
+      "language": "es",
+      "source": {
+        "api": "",
+        "source": "LOC",
+        "citation": "p. 57"
+      }
+    }
+  ],
+  "es-loc-canticle-21": [
+    {
+      "hidden": false,
+      "type": "psalm",
+      "citation": null,
+      "version": "loc",
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Te Deum laudamus",
+        "omit_gloria": true,
+        "number": "14",
+        "localname": "Te Deum"
+      },
+      "lastRevision": 4,
+      "version_label": null,
+      "slug": "canticle-21",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "A ti, como Dios, te alabamos;\na ti, Señor, te reconocemos;\na ti, eterno Padre, te venera toda la tierra.\nLos ángeles todos, los cielos y todas\n\tlas potestades te honran;\nlos querubines y serafines te cantan sin cesar:\n\tSanto, santo, santo es el Señor, Dios del universo.\n\tLlenos están el cielo y la tierra de tu gloria.\nA ti te ensalza el glorioso coro de los apóstoles,\nla multitud admirable de los profetas,\nla brillante muchedumbre de los mártires.\nA ti te glorifica la santa Iglesia por todo el orbe;\n\tA ti, Padre de majestad inmensa,\n\ta tu adorable, verdadero y único Hijo,\n\ttambién al Espíritu Santo, el Paráclito.\n\nTú eres el Rey de la gloria, oh Cristo;\ntú eres el Hijo único del Padre;\ntú, al hacerte hombre para salvarnos,\nno desdeñaste el seno de la Virgen.\nTú, quebrantando el aguijón de la muerte,\nabriste a los creyentes el reino del cielo.\nTú estás sentado a la derecha del Padre.\nCreemos que un día has de venir como juez.\n\tTe rogamos, pues, que vengas en ayuda de tus siervos,\n\ta quienes redimiste con tu preciosa sangre.\n\tHaz que en la gloria eterna\n\tnos contemos entre tus santos.\n"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "canticle",
+      "language": "es",
+      "category": ["Canticle"],
+      "label": "Cántico 14: Te Deum"
     }
   ]
 }
