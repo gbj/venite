@@ -2806,22 +2806,25 @@ export class LdfString {
 import { TextComponent as ITextComponent } from '@venite/components/dist/types/components/text/text';
 export declare interface LdfText extends Components.LdfText {}
 @ProxyCmp({
-  inputs: ['doc', 'editable', 'path']
+  inputs: ['doc', 'editable', 'path'],
+  methods: ['setPrayerList']
 })
 @Component({
   selector: 'ldf-text',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   inputs: ['doc', 'editable', 'path'],
-  outputs: ['ldfDocShouldChange']
+  outputs: ['ldfDocShouldChange', 'ldfAskForPrayerList']
 })
 export class LdfText {
   /** Used to add Prayers and Thanksgivings */
   ldfDocShouldChange!: ITextComponent['ldfDocShouldChange'];
+  /** Request prayer list for Prayers and Thanksgivings */
+  ldfAskForPrayerList!: ITextComponent['ldfAskForPrayerList'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ldfDocShouldChange']);
+    proxyOutputs(this, this.el, ['ldfDocShouldChange', 'ldfAskForPrayerList']);
   }
 }

@@ -50,3 +50,17 @@ h3.editable-label {
 }
 
 /* .text.abbreviated is handled in the DOM itself, in the component */
+
+.prayer-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.prayer-list li {
+  list-style-type: none;
+  text-align: center;
+  margin: 0.5em 0;
+  padding: 0;
+}

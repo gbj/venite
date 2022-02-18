@@ -16,9 +16,23 @@
 
 ## Events
 
-| Event                | Description                           | Type                  |
-| -------------------- | ------------------------------------- | --------------------- |
-| `ldfDocShouldChange` | Used to add Prayers and Thanksgivings | `CustomEvent<Change>` |
+| Event                 | Description                                       | Type                   |
+| --------------------- | ------------------------------------------------- | ---------------------- |
+| `ldfAskForPrayerList` | Request prayer list for Prayers and Thanksgivings | `CustomEvent<boolean>` |
+| `ldfDocShouldChange`  | Used to add Prayers and Thanksgivings             | `CustomEvent<Change>`  |
+
+
+## Methods
+
+### `setPrayerList(intentions: string[]) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies

@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, State, Element, Host, Event, h, EventEmitter } from '@stencil/core';
+import { Component, Prop, Watch, State, Element, Host, Event, h, EventEmitter, Method } from '@stencil/core';
 import { Text, Heading, Change } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 import showdown from 'showdown';
@@ -23,6 +23,15 @@ export class TextComponent {
   @State() obj : Text;
   @State() localeStrings: { [x: string]: string; };
 
+  // prayer list for authorized prayers
+  @State() intentions: string[] = [];
+
+  @Method()
+  async setPrayerList(intentions : string[]): Promise<void> {
+    console.log("(PrayerList) setPrayerList", intentions);
+    this.intentions = intentions;
+  }
+
   // Properties
   /**
    * An LDF Text object.
@@ -35,6 +44,11 @@ export class TextComponent {
         this.obj = new Text(JSON.parse(newDoc));
       } else {
         this.obj = new Text(newDoc);
+      }
+
+      if (this.obj?.style == "authorized-prayers") {
+        console.log("(PrayerList) ldfAskForPrayerList")
+        this.ldfAskForPrayerList.emit(true);
       }
     } catch(e) {
       console.warn(e);
@@ -53,7 +67,10 @@ export class TextComponent {
   @Prop() editable : boolean;
 
   /** Used to add Prayers and Thanksgivings */
-  @Event({ bubbles: true }) ldfDocShouldChange : EventEmitter<Change>;
+  @Event({ bubbles: true }) ldfDocShouldChange: EventEmitter<Change>;
+  
+  /** Request prayer list for Prayers and Thanksgivings */
+  @Event({ bubbles: true }) ldfAskForPrayerList : EventEmitter<boolean>;
 
   // Lifecycle events
   async componentWillLoad() {
@@ -102,11 +119,17 @@ export class TextComponent {
         index = Number(splits[splits.length - 1]),
         base = splits.slice(0, splits.length - 1).join('/');
 
-      return <ldf-label-bar>
-        <ion-button onClick={() => this.addPAndT(base, index)} fill="clear">
-          {localeStrings.authorized_prayers}
-        </ion-button>
-      </ldf-label-bar>;
+      return <Host>
+        <ldf-label-bar>
+          <ion-button onClick={() => this.addPAndT(base, index)} fill="clear">
+            {localeStrings.authorized_prayers}
+          </ion-button>
+        </ldf-label-bar>
+        {this.intentions?.length > 0 ?? <strong class="prayer-list">{localeStrings['prayer-list']}</strong>}
+        <ul class="prayer-list">
+          {(this.intentions || []).map(intention => <li>{intention}</li>)}
+        </ul>
+      </Host>;
     } else {
         let value = this.obj?.metadata?.rollup
         ? (this.obj?.value || []).map(s => s.replace(/\s+/g, ' '))
