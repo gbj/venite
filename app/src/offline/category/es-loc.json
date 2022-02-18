@@ -2,41 +2,275 @@
   {
     "type": "text",
     "style": "prayer",
+    "slug": "proper-4",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, tú infalible providencia ordena todas las cosas en el cielo como en la tierra: Aparta de nosotros todo mal, te suplicamos, y concédenos aquellos beneficios que puedan ayudarnos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 4"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
     "slug": "st-mark",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios omnipotente, que por la mano del evangelistaMarcos has entregado a tu Iglesia el Evangelio de Jesucristo el Hijo de Dios: Te damos gracias por este testimonio, y te rogamos nos mantengas firmes en su verdad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios omnipotente, que por la mano del evangelistaMarcos has entregado a tu Iglesia el Evangelio de Jesucristo el Hijo de Dios: Te damos gracias por este testimonio, y te rogamos nos mantengas firmes en su verdad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "San Marcos Abril 25"
+    "label": "San Marcos"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "sunday-trinity-sunday",
+    "slug": "fourth-advent",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios omnipotente y eterno, que por la confesión de una fe verdadera nos diste a tus siervos la gracia de reconocer la gloria de la Trinidad eterna, y de adorar la Unidad enel poder de tu divina Majestad: Consérvanos firmes en esta fe y adoración, y llévanos al fin a contemplarte en tu sola y eterna gloria; tú que vives y reinas, un solo Dios, por los siglos de los siglos."
+      "Dios todopoderoso, te suplicamos que purifiques nuestra conciencia con tu visitación diaria, para que, cuando venga tu Hijo Jesucristo, encuentre en nosotros la mansión que le ha sido preparada; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Primer Domingo después de Pentecostés: Domingo de Trinidad"
+    "label": "Cuarto Domingo de Adviento"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "annunciation",
+    "slug": "st-matthias",
     "metadata": { "response": "Amén." },
     "value": [
-      "Derrama tu gracia en nuestros corazones, oh Señor, para que los que hemos conocido la encarnación de tu Hijo Jesucristo, anunciada por un ángel a María la Virgen, seamos llevados por la cruz y pasión de Cristo a la gloria de su resurrección; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Dios omnipotente, que en lugar de Judas escogiste a tu fiel siervo Matías para ser contado entre el número de los Doce: Concede que tu Iglesia, librada de falsos apóstoles, sea guiada y gobernada siempre por pastores fieles y verdaderos; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "La Anunciación Marzo 25"
+    "label": "San Matías"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "ss-peter-and-paul",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente, cuyos benditos apóstoles Pedro y Pablo te glorificaron con su martirio: Concede que tu Iglesia, instruida por su enseñanza y ejemplo, y entrelazada en unidad por tu Espíritu, permanezca siempre firme sobre el único cimiento, que es Jesucristo nuestro Señor; que vive y reina contigo, en la unidad del Espíritu Santo, un soloDios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Pedro y San Pablo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-st-john-the-baptist",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, por cuya providencia nació maravillosamente tu siervo Juan el Bautista, y fue enviado a preparar el camino de tu Hijo nuestro Salvador, predicando el arrepentimiento: Haz que sigamos de tal manera su enseñanza y santa vida que verdaderamente nos arrepintamos según su predicación, y que, a ejemplo suyo, constantemente hablemos la verdad, audazmente reprochemos el vicio y pacientemente suframos porcausa de la verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Natividad de San Juan Bautista"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "1st-sunday-after-christmas",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Este domingo tiene preferencia sobre las tres conmemoraciones que siguen al Día de Navidad. Si fuera necesario, la observancia de una, dos o todas ellas ha de ser pospuesta un día.Dios todopoderoso, tú has derramado sobre nosotros la nueva luz de tu Verbo encarnado: Concede que esta luz, que arde en nuestro corazón, resplandezca en nuestra vida; mediante nuestro Señor Jesucristo, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo después del Día de Navidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-andrew",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, que diste a tu apóstol Andrés una gracia tal que prestamente obedeció el llamado de tu Hijo Jesucristo y trajo a su hermano con él: Concédenos, a los llamados por tu Santo Verbo, la gracia para seguirle sin demora y traer a su bondadosa presencia a los que amamos; por aquél que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Andrés"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-28",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Bendito Señor, tú que inspiraste las Sagradas Escrituras para nuestra enseñanza: Concede que de tal manera las oigamos, las leamos, las consideremos, las aprendamos e interiormente las asimilemos, que podamos abrazar y siempre mantener la esperanza bendita de la vida eterna, que nos has dado en nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 28"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-18",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concede, oh Señor, que confiemos en ti de todo corazón; porque, así como tú siempre resistes a los soberbios que confían en su propia fortaleza, de la misma manera jamás abandonas a aquéllos que se glorían en tu misericordia; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 18"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "4th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, cuyo Hijo Jesús es el buen pastor de tu pueblo: Concede que, al escuchar su voz, reconozcamos a aquél que llama a cada uno de nosotros por su nombre, y le sigamos a donde nos guíe; quien contigo y el Espíritu Santo vive y reina, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Cuarto Domingo de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "tuesday-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que por la gloriosa resurrección de tu Hijo Jesucristo destruiste la muerte y nos alumbraste con vida e inmortalidad: Concede a los que hemos resucitado con él, que habitemos en su presencia, y nos gocemos en la esperanza de la gloria eterna; por Jesucristo nuestro Señor, a quien contigo y el Espíritu Santo, sea el dominio y la alabanza, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Martes de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-21",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que manifiestas tu infinito poder especialmente mostrando piedad y misericordia: Derrama sobre nosotros la plenitud de tu gracia; a fin de que, esforzándonos para obtener tus promesas, seamos partícipes de tus tesoros celestiales; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 21"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-thomas",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Eterno Dios, que fortaleciste a tu apóstol Tomás con una fe cierta y firme en la resurrección de tu Hijo: Concede que creamos en Jesucristo, nuestro Señor y nuestro Dios, tan perfectamente y sin duda, que nuestra fe no se halle deficiente a tus ojos; por aquél que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Santo Tomás"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "saturday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén.o la siguiente:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "saturday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "pentecost",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Lecciones señaladas, cada una de ellas seguida por un Salmo, Cántico o himno. Después del Sermón, sigue el Santo Bautismo, la Confirmación (comenzando con la Presentación de los Candidatos) o laRenovación de Votos Bautismales, página 213.Dios omnipotente, en este día abriste el camino de la vida eterna a toda raza y nación por el don prometido de tu Espíritu Santo: Esparce este don sobre todo el mundo por la predicación del Evangelio, para que llegue a los confines de la tierra; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.o bien:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Pentecostés"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "pentecost",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que en este día enseñaste a los corazones de tus fieles, enviándoles la luz de tu Espíritu Santo: Concédenos por el mismo Espíritu, que tengamos un juicio acertado en todas las cosas, y que nos regocijemos siempre en su santa fortaleza; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Pentecostés"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-matthew",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios eterno, que has establecido y constituido en orden maravilloso los ministerios de los ángeles y los mortales: Concede, en tu misericordia, que así como tus santos ángeles continuamente te sirven y adoran en el cielo, asimismo, por tu mandato, nos socorran y defiendan en la tierra; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Miguel y Todos Los Angeles"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-16",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concede, oh Dios de misericordia, que tu Iglesia,congregada en unidad por tu Espíritu Santo, manifiestetu poder entre todos los pueblos, para gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 16"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "3rd-lent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, tú sabes que en nosotros no hay poder para ayudarnos: Guárdanos tanto exteriormente en cuerpo como interiormente en alma, para que seamos defendidos de todas las adversidades que puedan sobrevenir al cuerpo, y de los malos pensamientos que puedan asaltar y herir el alma; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Tercer Domingo en Cuaresma"
   },
   {
     "type": "text",
@@ -44,7 +278,7 @@
     "slug": "trinity-sunday",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios omnipotente y eterno, que por la confesión de una fe verdadera nos diste a tus siervos la gracia de reconocer la gloria de la Trinidad eterna, y de adorar la Unidad enel poder de tu divina Majestad: Consérvanos firmes en esta fe y adoración, y llévanos al fin a contemplarte en tu sola y eterna gloria; tú que vives y reinas, un solo Dios, por los siglos de los siglos."
+      "Dios omnipotente y eterno, que por la confesión de una fe verdadera nos diste a tus siervos la gracia de reconocer la gloria de la Trinidad eterna, y de adorar la Unidad enel poder de tu divina Majestad: Consérvanos firmes en esta fe y adoración, y llévanos al fin a contemplarte en tu sola y eterna gloria; tú que vives y reinas, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -54,15 +288,93 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-james",
+    "slug": "7th-epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que en el santo monte revelaste ante testigos escogidos a tu muy amado Hijo, maravillosamente transfigurado, con vestiduras blancas y resplandecientes: Concede, en tu misericordia, que, librados de la inquietud de este mundo, contemplemos por fe al Rey en toda su hermosura; quien contigo, oh Padre, y contigo, oh Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos."
+      "Oh Señor, tú nos has enseñado que todo lo que hacemos sin amor es de ningún valor: Envía tu Espíritu Santo, yderrama en nuestros corazones tu excelentísimo don, que es el amor, el vínculo verdadero de la paz y de todas las virtudes, sin el cual todos aquéllos que viven son considerados como muertos ante ti. Concédenos esto, por amor de tu único Hijo Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "La Transfiguración Agosto 6"
+    "label": "Séptimo Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "sunday-trinity-sunday",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente y eterno, que por la confesión de una fe verdadera nos diste a tus siervos la gracia de reconocer la gloria de la Trinidad eterna, y de adorar la Unidad enel poder de tu divina Majestad: Consérvanos firmes en esta fe y adoración, y llévanos al fin a contemplarte en tu sola y eterna gloria; tú que vives y reinas, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo después de Pentecostés: Domingo de Trinidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "wednesday-last-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Miércoles de Ceniza"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-24",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, que en Cristo has revelado tu gloria a todas las naciones: Mantén las obras de tu misericordia; a fin de que tu Iglesia, esparcida por todo el mundo, persevere con fe inquebrantable en la confesión de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 24"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "independence-day",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Señor Dios omnipotente, que has hecho a todos los pueblos de la tierra para tu gloria, y para servirte en libertad y paz: Otorga a los habitantes de nuestro país tal celo por la justicia y tal fuerza de moderación, que usemos nuestra libertad de acuerdo con tu santa voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "17. Por la Nación"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-stephen",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "La Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-michael",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente, que inspiraste a tu siervo Lucas el médico a manifestar en el Evangelio el amor y poder sanativo de tu Hijo: Continúa en tu Iglesia, por tu gracia, el mismo amor y poder de sanidad, para alabanza y gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Lucas"
   },
   {
     "type": "text",
@@ -80,15 +392,80 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "friday-easter",
+    "slug": "conversion-of-st-paul",
     "metadata": { "response": "Amén." },
     "value": [
-      "Padre todopoderoso, que entregaste a tu único Hijo para morar por nuestros pecados y resucitar para nuestra justificación: Danos gracia para desechar la levadura de malicia e iniquidad, de tal modo que te sirvamos siempre con pureza de vida y verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, que por la predicación de tu apóstol Pablohiciste que la luz del Evangelio resplandeciera por todo el mundo: Concede, te suplicamos, que nosotros, recordando su portentosa conversión, manifestemos nuestra gratitud siguiendo su santa enseñanza; por Jesucristo nuestroSeñor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Viernes de Pascua"
+    "label": "Conversión de San Pablo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "Advent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, danos gracia para despojarnos de las obras de las tinieblas y revestirnos con las armas de la luz, ahora en esta vida mortal, en la cual Jesucristo tu Hijo, con gran humildad, vino a visitarnos; a fin de queen el día postrero, cuando vuelva con majestad gloriosa a juzgar a vivos y muertos, resucitemos a la vida inmortal; mediante él, quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo de Adviento"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "holy-innocents",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Recordamos en este día, oh Dios, la matanza de los niños inocentes de Belén, ordenada por el Rey Herodes. Recibe, te suplicamos, en tus brazos de misericordia, a todas las víctimas inocentes; y por tu gran poder frustra los designios de tiranos sanguinarios, y establece tu dominio de justicia, amor y paz; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Los Santos Inocentes"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-25",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Todopoderoso y eterno Dios, aumenta en nosotros tus dones de fe, esperanza y amor; y para que obtengamos tus promesas, haz que amemos lo que mandas; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amen."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 25"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "the-presentation",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, humildemente te rogamos que, así como tu Hijo unigénito fue presentado en el templo en este día, así seamos presentados ante ti con corazones puros y limpios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "La Presentación"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-14",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Otórganos, te suplicamos, oh Señor, el espíritu de pensar y hacer siempre lo justo; para que nosotros, que sin ti no podemos existir, seamos capaces, con tu ayuda, de vivir según tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 14"
   },
   {
     "type": "text",
@@ -96,12 +473,12 @@
     "slug": "christmas-day",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, tú nos alegras anualmente con la festividaddel nacimiento de tu único Hijo Jesucristo: Concédenos que, así como le recibimos con júbilo como Redentor, de la misma manera le contemplemos con segura confianza cuando venga a ser nuestro Juez; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, tú nos alegras anualmente con la festividaddel nacimiento de tu único Hijo Jesucristo: Concédenos que, así como le recibimos con júbilo como Redentor, de la misma manera le contemplemos con segura confianza cuando venga a ser nuestro Juez; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén.o la siguiente:"
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Natividad de Nuestro Señor: Día de Navidad Diciembre 25"
+    "label": "Natividad de Nuestro Señor: Día de Navidad"
   },
   {
     "type": "text",
@@ -109,350 +486,25 @@
     "slug": "christmas-day",
     "metadata": { "response": "Amén." },
     "value": [
-      "Omnipotente Dios, tú has dado a tu unigénito Hijo para asumir nuestra naturaleza, y nacer [este día] de una virgen pura: Concede que, siendo nacidos de nuevo y hechos tus hijos por adopción y gracia, seamos renovados cada día con tu Espíritu Santo; mediante nuestro Señor Jesucristo, a quien contigo y el mismo Espíritu sea el honor y la gloria, ahora y por siempre."
+      "Omnipotente Dios, tú has dado a tu unigénito Hijo para asumir nuestra naturaleza, y nacer [este día] de una virgen pura: Concede que, siendo nacidos de nuevo y hechos tus hijos por adopción y gracia, seamos renovados cada día con tu Espíritu Santo; mediante nuestro Señor Jesucristo, a quien contigo y el mismo Espíritu sea el honor y la gloria, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Natividad de Nuestro Señor: Día de Navidad Diciembre 25"
+    "label": "Natividad de Nuestro Señor: Día de Navidad"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-17",
+    "slug": "epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Señor de todo poder y fortaleza, autor y dador de todo bien: Injerta en nuestros corazones el amor a tu Nombre, acrecienta en nosotros la verdadera religión, nútrenos con toda bondad, y produce en nosotros los frutos de buenas obras; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 17 El domingo más cercano a Agosto 31"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-2",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente y de misericordia, guárdanos en tu bondad de todo aquello que pueda causarnos daño; para que, dispuestos tanto en mente como en cuerpo, y con alegría de corazón, logremos lo que sea propio a tus designios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 2 Semana del domingo más cercano a Mayo 18"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-of-st-john-the-baptist",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, por cuya providencia nació maravillosamente tu siervo Juan el Bautista, y fue enviado a preparar el camino de tu Hijo nuestro Salvador, predicando el arrepentimiento: Haz que sigamos de tal manera su enseñanza y santa vida que verdaderamente nos arrepintamos según su predicación, y que, a ejemplo suyo, constantemente hablemos la verdad, audazmente reprochemos el vicio y pacientemente suframos porcausa de la verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Natividad de San Juan Bautista Junio 24"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "thursday-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, que en el misterio Pascual has establecido el nuevo pacto de la reconciliación: Concede a todos los que nacen de nuevo en la comunión del Cuerpo de Cristo que manifiesten en sus vidas lo que por fe profesan; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Jueves de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "pentecost",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Lecciones señaladas, cada una de ellas seguida por un Salmo, Cántico o himno. Después del Sermón, sigue el Santo Bautismo, la Confirmación (comenzando con la Presentación de los Candidatos) o laRenovación de Votos Bautismales, página 213.Dios omnipotente, en este día abriste el camino de la vida eterna a toda raza y nación por el don prometido de tu Espíritu Santo: Esparce este don sobre todo el mundo por la predicación del Evangelio, para que llegue a los confines de la tierra; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Pentecostés"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "pentecost",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que en este día enseñaste a los corazones de tus fieles, enviándoles la luz de tu Espíritu Santo: Concédenos por el mismo Espíritu, que tengamos un juicio acertado en todas las cosas, y que nos regocijemos siempre en su santa fortaleza; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Pentecostés"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-of-the-visitation",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Padre celestial, por tu gracia la virgen madre de tu Hijo encarnado fue bendita al llevarlo en su seno, y aún más bendita al guardar tu palabra: Concede a los quehonramos la exaltación de su humildad que sigamos el ejemplo de su devoción a tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Visitación Mayo 31"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-4",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, tú infalible providencia ordena todas las cosas en el cielo como en la tierra: Aparta de nosotros todo mal, te suplicamos, y concédenos aquellos beneficios que puedan ayudarnos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 4 El domingo más cercano a Junio 1"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-of-the-annunciation",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Derrama tu gracia en nuestros corazones, oh Señor, para que los que hemos conocido la encarnación de tu Hijo Jesucristo, anunciada por un ángel a María la Virgen, seamos llevados por la cruz y pasión de Cristo a la gloria de su resurrección; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Anunciación Marzo 25"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-matthias",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, que en lugar de Judas escogiste a tu fiel siervo Matías para ser contado entre el número de los Doce: Concede que tu Iglesia, librada de falsos apóstoles, sea guiada y gobernada siempre por pastores fieles y verdaderos; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Matías Febrero 24"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "5th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, conocerte verdaderamente es vida eterna: Concede que conozcamos tan perfectamente que tu Hijo Jesucristo es el camino, la verdad y la vida, que sigamos sus pasos con perseverancia en el camino que conduce a la vida eterna; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Quinto Domingo de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "saturday-6th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "saturday-6th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "friday-last-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Miércoles de Ceniza"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "1st-lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Omnipotente Dios, cuyo bendito Hijo fue llevado por el Espíritu para ser tentado por Satanás: Apresúrate a socorrer a los que somos atacados por múltiples tentaciones; y así como tú conoces las flaquezas de cada uno de nosotros, haz que cada uno te halle poderoso para salvar; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Primer Domingo en Cuaresma"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-26",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios de poder y piedad, sólo de ti mana el don que hace posible que tu pueblo fiel te sirva sincera y laudablemente: Concédenos que, para lograr el premio de tus promesas celestiales, podamos correr sin tropiezos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 26 El domingo más cercano a Noviembre 2"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "tuesday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que por la pasión de tu bendito Hijoconvertiste a un instrumento de muerte vergonzosa en un medio de vida para nosotros: Concede que de t ;l modo nos gloriemos en la cruz de Cristo que suframos con alegría la vergüenza y privación por causa de tu Hijo nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Martes Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "monday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, cuyo muy amado Hijo no ascendió al gozo de tu presencia sin antes padecer, ni entró en gloria sin antes ser crucificado: Concédenos, por tu misericordia, que nosotros, caminando por la vía de la cruz, encontremos que ésta es la vía de la vida y de la paz; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Lunes Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "2nd-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, cuyo Hijo nuestro SalvadorJesucristo es la luz del mundo: Concede que tu pueblo, iluminado por tu Palabra y Sacramentos, brille con el resplandor de la gloria de Cristo, para que el sea conocido, adorado y obedecido hasta los confines de la tierra; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre.Amén."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Segundo Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "ss-philip-and-james",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, que diste gracia y fortaleza a tus apóstoles Felipe y Santiago para dar testimonio de la verdad: Concede que, recordando su victoria de fe, glorifiquemos, tanto en la vida como en la muerte, el Nombre de nuestro Señor Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Felipe y Santiago Mayo 1"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "christmas",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, tú nos alegras anualmente con la festividaddel nacimiento de tu único Hijo Jesucristo: Concédenos que, así como le recibimos con júbilo como Redentor, de la misma manera le contemplemos con segura confianza cuando venga a ser nuestro Juez; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Natividad de Nuestro Señor: Día de Navidad Diciembre 25"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "christmas",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Omnipotente Dios, tú has dado a tu unigénito Hijo para asumir nuestra naturaleza, y nacer [este día] de una virgen pura: Concede que, siendo nacidos de nuevo y hechos tus hijos por adopción y gracia, seamos renovados cada día con tu Espíritu Santo; mediante nuestro Señor Jesucristo, a quien contigo y el mismo Espíritu sea el honor y la gloria, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Natividad de Nuestro Señor: Día de Navidad Diciembre 25"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-19",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, puesto que sin ti no podemos complacerte: Concede, por tu misericordia, que tu Espíritu Santo dirija y gobierne nuestros corazones; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 19 El domingo más cercano a Septiembre 14"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "2nd-sunday-after-christmas",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que maravillosamente creaste y aún más maravillosamente restauraste la dignidad de la naturaleza humana: Concede que compartamos la vida divina de quien se humilló para compartir nuestra humanidad, tu Hijo Jesucristo; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Segundo Domingo después del Día de Navidad"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-28",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Bendito Señor, tú que inspiraste las Sagradas Escrituras para nuestra enseñanza: Concede que de tal manera las oigamos, las leamos, las consideremos, las aprendamos e interiormente las asimilemos, que podamos abrazar y siempre mantener la esperanza bendita de la vida eterna, que nos has dado en nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 28 El domingo más cercano a Noviembre 16"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-11",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, fuente de toda sabiduría, tú conoces nuestras necesidades antes de que te pidamos, y nuestra ignorancia en pedir: Ten compasión de nuestras flaquezas, y danos, por tu misericordia, aquellas cosas que por nuestra indignidad y ceguedad no sabemos ni nos atrevemos a pedirte; por los méritos de Jesucristo tu Hijo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 11 El domingo más cercano a Julio 20"
+    "label": "La Epifanía"
   },
   {
     "type": "text",
@@ -460,7 +512,7 @@
     "slug": "2nd-easter",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso y eterno, que en el misterio Pascual has establecido el nuevo pacto de la reconciliación: Concede a todos los que nacen de nuevo en la comunión del Cuerpo de Cristo que manifiesten en sus vidas lo que por fe profesan; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios todopoderoso y eterno, que en el misterio Pascual has establecido el nuevo pacto de la reconciliación: Concede a todos los que nacen de nuevo en la comunión del Cuerpo de Cristo que manifiesten en sus vidas lo que por fe profesan; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -470,88 +522,10 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "the-visitation",
+    "slug": "friday-last-epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Padre celestial, por tu gracia la virgen madre de tu Hijo encarnado fue bendita al llevarlo en su seno, y aún más bendita al guardar tu palabra: Concede a los quehonramos la exaltación de su humildad que sigamos el ejemplo de su devoción a tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Visitación Mayo 31"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-joseph",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que de la familia de tu siervo David levantaste a José para ser el guardián de tu Hijo encarnado, y esposo de su virgen madre: Danos gracia para imitar su rectitudde vida y su obediencia a tus mandatos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San José Marzo 19"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "wednesday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Señor Dios, cuyo bendito Hijo nuestro Salvador entregó su cuerpo a los azotes y su rostro al esputo:Otórganos tu gracia para soportar gozosamente los sufrimientos de esta vida temporal, confiados en la gloria que ha de ser revelada; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Miércoles Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-bartholomew",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, cuyo Hijo nuestro Salvador fue levantado en lo alto de la cruz, a fin de atraer hacia él a todo el mundo: Concede, en tu misericordia, a quienes nos gloriamos en el misterio de nuestra redención, que recibamos tu gracia para tomar nuestra cruz y seguirle; quien vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria sempiterna."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Santa Cruz Septiembre 14"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente y eterno, en tu tierno amor hacia el género humano, enviaste a tu Hijo nuestro Salvador Jesucristo para asumir nuestra naturaleza, y padecer muerte en la cruz, mostrándonos ejemplo de su gran humildad: Concédenos, en tu misericordia, que caminemos por el sendero de su padecimiento y participemos también en su resurrección; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Domingo de Pasión: Domingo de Ramos"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "4th-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, tú riges todas las cosas tanto en el cielo como en la tierra: Escucha con misericordia las súplicas de tu pueblo, y en nuestro tiempo concédenos tu paz; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Cuarto Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "Lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -561,309 +535,23 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "6th-easter",
+    "slug": "proper-26",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, tú has preparado para los que te aman cosas tan buenas que sobrepasan nuestro entendimiento: Infundeen nuestros corazones tal amor hacia ti, que, amándoteen todo y sobre todas las cosas, obtengamos tus promesas, que exceden todo lo que podamos anhelar; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios de poder y piedad, sólo de ti mana el don que hace posible que tu pueblo fiel te sirva sincera y laudablemente: Concédenos que, para lograr el premio de tus promesas celestiales, podamos correr sin tropiezos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Sexto Domingo de Pascua"
+    "label": "Propio 26"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-22",
+    "slug": "all-saints-day",
     "metadata": { "response": "Amén." },
     "value": [
-      "Omnipotente y sempiterno Dios, tú estás siempre más presto a escuchar que nosotros a orar, y a ofrecer másde lo que deseamos o merecemos: Derrama sobre nosotros la abundancia de tu misericordia, perdonándonos todo aquello que perturba nuestra conciencia, y otorgándonos aquello que no somos dignos de pedirte, sino por los méritos y mediación de Jesucristonuestro Salvador; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 22 El domingo más cercano a Octubre 5"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "the-transfiguration",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Santa María Virgen Agosto 15"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "3rd-lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, tú sabes que en nosotros no hay poder para ayudarnos: Guárdanos tanto exteriormente en cuerpo como interiormente en alma, para que seamos defendidos de todas las adversidades que puedan sobrevenir al cuerpo, y de los malos pensamientos que puedan asaltar y herir el alma; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Tercer Domingo en Cuaresma"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Epifanía Enero 6"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "wednesday-last-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Miércoles de Ceniza"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "ss-peter-and-paul",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, cuyos benditos apóstoles Pedro y Pablo te glorificaron con su martirio: Concede que tu Iglesia, instruida por su enseñanza y ejemplo, y entrelazada en unidad por tu Espíritu, permanezca siempre firme sobre el único cimiento, que es Jesucristo nuestro Señor; que vive y reina contigo, en la unidad del Espíritu Santo, un soloDios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Pedro y San Pablo Junio 29"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-9",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, tú nos has enseñado a guardar tus mandamientos amándote a ti y a nuestro prójimo: Danos la gracia de tu Espíritu Santo para que nos consagremos a ti de todo corazón, y nos unamos unos a otros con afecto puro; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 9 El domingo más cercano a Julio 6"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-matthew",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios eterno, que has establecido y constituido en orden maravilloso los ministerios de los ángeles y los mortales: Concede, en tu misericordia, que así como tus santos ángeles continuamente te sirven y adoran en el cielo, asimismo, por tu mandato, nos socorran y defiendan en la tierra; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Miguel y Todos Los Angeles Septiembre 29"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "first-advent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, danos gracia para despojarnos de las obras de las tinieblas y revestirnos con las armas de la luz, ahora en esta vida mortal, en la cual Jesucristo tu Hijo, con gran humildad, vino a visitarnos; a fin de queen el día postrero, cuando vuelva con majestad gloriosa a juzgar a vivos y muertos, resucitemos a la vida inmortal; mediante él, quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Primer Domingo de Adviento"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-james-of-jerusalem",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Te damos gracias, oh Señor, por la gloriosa compañía de los apóstoles, y especialmente en este día por Simón y Judas; y te rogamos que, así como ellos fueron fieles y celosos en su misión, asimismo, con ardiente devoción, demos a conocer el amor y la misericordia de nuestro Señor y Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Simón y San Judas Octubre 28"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-27",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, cuyo bendito Hijo vino al mundo para destruir las obras de Satanás y hacernos hijos de Dios y herederos de la vida eterna: Concede que, teniendo esta esperanza, nos purifiquemos así como él es puro; para que, cuando vuelva con poder y gran gloria, seamos hechos a su semejanza en su glorioso y eterno reino; donde contigo y el Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 27 El domingo más cercano a Noviembre 9"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "Advent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, danos gracia para despojarnos de las obras de las tinieblas y revestirnos con las armas de la luz, ahora en esta vida mortal, en la cual Jesucristo tu Hijo, con gran humildad, vino a visitarnos; a fin de queen el día postrero, cuando vuelva con majestad gloriosa a juzgar a vivos y muertos, resucitemos a la vida inmortal; mediante él, quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Primer Domingo de Adviento"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "4th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, cuyo Hijo Jesús es el buen pastor de tu pueblo: Concede que, al escuchar su voz, reconozcamos a aquél que llama a cada uno de nosotros por su nombre, y le sigamos a donde nos guíe; quien contigo y el Espíritu Santo vive y reina, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Cuarto Domingo de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "easter-vigil",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que hiciste resplandecer esta noche santísima con la gloria de la resurrección del Señor: Aviva en tu Iglesia aquel Espíritu de adopción que nos es dado en el Bautismo, para que nosotros, siendo renovados tanto en cuerpo como en mente, te adoremos en sinceridad y verdad; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "saturday-last-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Miércoles de Ceniza"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "1st-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Padre celestial, que en el bautismo de Jesús en el Río Jordán, le proclamaste tu Hijo amado y le ungiste con el Espíritu Santo: Concede que todos los que son bautizados en su Nombre, guarden el pacto que han hecho, y valerosamente le confiesen como Señor y Salvador; quien contigo y el Espíritu Santo vive y reina, un solo Dios, en gloria eterna."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Primer Domingo después de la Epifanía: Bautismo de Nuestro Señor"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "friday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Mira con bondad, te suplicamos, Dios omnipotente, a esta tu familia, por la cual nuestro Señor Jesucristo aceptó ser traicionado y entregado a hombres crueles, y sufrir muerte en la cruz; quien vive ahora y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Viernes Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-1",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Recuerda, oh Señor, lo que has forjado en nosotros y no lo que merecemos; y, puesto que nos has llamado para servirte, haznos dignos de nuestro llamado; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 1 Semana del domingo más cercano a Mayo 11"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-13",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Que tu constante misericordia purifique y defienda a tu Iglesia, oh Señor; y, puesto que no puede continuar en seguridad sin tu auxilio, protégela y dirígela siempre portu bondad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 13 El domingo más cercano a Agosto 3"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-stephen",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Epifanía Enero 6"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "thursday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Padre todopoderoso, cuyo amado Hijo, en la víspera de su padecimiento, instituyó el Sacramento de su Cuerpo y Sangre: Concédenos, en tu misericordia, que lo recibamos con gratitud como memorial de Jesucristo nuestro Señor, que en estos santos misterios nos da una prenda de la vida eterna; quien vive ahora y reinacontigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Jueves Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "6th-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, fortaleza de los que ponen su confianza en ti: Acepta con misericordia nuestras súplicas, y puesto que, por nuestra flaqueza, no podemos hacer nada bueno sinti, danos el auxilio de tu gracia; para que, al guardar tus mandamientos, te agrademos, tanto de voluntad como de hecho; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Sexto Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-of-all-saints",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Señor Dios omnipotente, en cuyo Nombre los fundadores de este país ganaron su libertad y la nuestra [y encendieron la antorcha de la libertad para naciones que todavía no existían]: Concede que nosotros y todos los habitantes de esta tierra recibamos tu gracia para mantener nuestras libertades en justicia y paz; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Señor Dios omnipotente, en cuyo Nombre los fundadores de este país ganaron su libertad y la nuestra [y encendieron la antorcha de la libertad para naciones que todavía no existían]: Concede que nosotros y todos los habitantes de esta tierra recibamos tu gracia para mantener nuestras libertades en justicia y paz; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -873,67 +561,67 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "1st-sunday-after-christmas",
+    "slug": "proper-20",
     "metadata": { "response": "Amén." },
     "value": [
-      "Este domingo tiene preferencia sobre las tres conmemoraciones que siguen al Día de Navidad. Si fuera necesario, la observancia de una, dos o todas ellas ha de ser pospuesta un día.Dios todopoderoso, tú has derramado sobre nosotros la nueva luz de tu Verbo encarnado: Concede que esta luz, que arde en nuestro corazón, resplandezca en nuestra vida; mediante nuestro Señor Jesucristo, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Concede, oh Señor, que no nos afanemos por las cosas terrenales, sino que amemos las celestiales, y aunahora que estamos inmersos en cosas transitorias, haz que anhelemos lo que permanece para siempre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Primer Domingo después del Día de Navidad"
+    "label": "Propio 20"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "eve-of-the-transfiguration",
+    "slug": "st-john",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Derrama, oh Señor, sobre tu Iglesia el resplandor de tu luz, para que, iluminados por la enseñanza de tu apóstol y evangelista Juan, andemos en la luz de tu verdad de tal manera que al fin alcancemos la plenitud de la vida eterna; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Santa María Virgen Agosto 15"
+    "label": "San Juan"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-barnabas",
+    "slug": "proper-15",
     "metadata": { "response": "Amén." },
     "value": [
-      "Concédenos, oh Dios, que sigamos el ejemplo de tu fiel siervo Bernabé, que no buscaba su propio provecho sino el bienestar de tu Iglesia, y ofrecía generosamente sus bienes y su vida para el socorro de los pobres y la propagación del Evangelio; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios omnipotente, por nosotros entregaste a tu Hijoúnico como sacrificio por los pecados y como ejemplo de vida piadosa: Danos gracia para recibir con gratitud los frutos de su obra redentora, y seguir de día en día las huellas benditas de su santísima vida; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "San Bernabé Junio 11"
+    "label": "Propio 15"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-thomas",
+    "slug": "annunciation",
     "metadata": { "response": "Amén." },
     "value": [
-      "Eterno Dios, que fortaleciste a tu apóstol Tomás con una fe cierta y firme en la resurrección de tu Hijo: Concede que creamos en Jesucristo, nuestro Señor y nuestro Dios, tan perfectamente y sin duda, que nuestra fe no se halle deficiente a tus ojos; por aquél que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Derrama tu gracia en nuestros corazones, oh Señor, para que los que hemos conocido la encarnación de tu Hijo Jesucristo, anunciada por un ángel a María la Virgen, seamos llevados por la cruz y pasión de Cristo a la gloria de su resurrección; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Santo Tomás Diciembre 21"
+    "label": "La Anunciación"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "christmas-eve",
+    "slug": "5th-easter",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que has hecho resplandecer esta noche santa con la claridad de la Luz verdadera: Concede a los que hemos conocido el misterio de esa Luz en la tierra, que también nos gocemos de él plenamente, en el cielo; donde vive y reina contigo y el Espíritu santo, un solo Dios, en gloria eterna."
+      "Dios todopoderoso, conocerte verdaderamente es vida eterna: Concede que conozcamos tan perfectamente que tu Hijo Jesucristo es el camino, la verdad y la vida, que sigamos sus pasos con perseverancia en el camino que conduce a la vida eterna; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Natividad de Nuestro Señor: Día de Navidad Diciembre 25"
+    "label": "Quinto Domingo de Pascua"
   },
   {
     "type": "text",
@@ -941,7 +629,7 @@
     "slug": "third-advent",
     "metadata": { "response": "Amén." },
     "value": [
-      "Suscita tu poder, oh Señor, y con gran potencia ven a nosotros; ya que estamos impedidos penosamente por nuestros pecados, haz que tu abundante gracia y misericordia nos ayuden y libren prontamente; por Jesucristo nuestro Señor, a quien contigo y el Espíritu Santo, sea el honor y la gloria, ahora y por siempre."
+      "Suscita tu poder, oh Señor, y con gran potencia ven a nosotros; ya que estamos impedidos penosamente por nuestros pecados, haz que tu abundante gracia y misericordia nos ayuden y libren prontamente; por Jesucristo nuestro Señor, a quien contigo y el Espíritu Santo, sea el honor y la gloria, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -951,132 +639,41 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-23",
+    "slug": "st-james-of-jerusalem",
     "metadata": { "response": "Amén." },
     "value": [
-      "Te rogamos, oh Señor, que tu gracia siempre nos preceda y acompañe, para que continuamente nos dediquemos a buenas obras; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Te damos gracias, oh Señor, por la gloriosa compañía de los apóstoles, y especialmente en este día por Simón y Judas; y te rogamos que, así como ellos fueron fieles y celosos en su misión, asimismo, con ardiente devoción, demos a conocer el amor y la misericordia de nuestro Señor y Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 23 El domingo más cercano a Octubre 12"
+    "label": "San Simón y San Judas"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "holy-name",
+    "slug": "st-mary-magdalene",
     "metadata": { "response": "Amén." },
     "value": [
-      "Padre eterno, tú diste a tu Hijo encarnado el santonombre de Jesús para ser el signo de nuestra salvación: Te suplicamos que siembres en cada corazón el amor de quien es el Salvador del mundo, nuestro Señor Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
+      "Dios bondadoso, recordamos hoy en tu presencia a tu siervo y apóstol Santiago, el primero entre los Doce en padecer martirio por el Nombre de Jesucristo; y te suplicamos que derrames sobre los dirigentes de tu Iglesia ese espíritu de servicio abnegado por el cual sólo pueden tener verdadera autoridad entre tu pueblo; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "El Santo Nombre de Jesús Enero 1"
+    "label": "Santiago"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "eve-wednesday-6th-easter",
+    "slug": "st-barnabas",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
+      "Concédenos, oh Dios, que sigamos el ejemplo de tu fiel siervo Bernabé, que no buscaba su propio provecho sino el bienestar de tu Iglesia, y ofrecía generosamente sus bienes y su vida para el socorro de los pobres y la propagación del Evangelio; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-wednesday-6th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "all-souls-day",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Señor Dios eterno, que mantienes en vida a todas las almas: Concede a toda tu Iglesia en el paraíso y en la tierra tu luz y tu paz; y permite que, siguiendo los buenos ejemplos de los que te han servido aquí y ahora descansan, podamos al fin entrar con ellos a tu gozo eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "8. Por los Difuntos"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "all-souls-day",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Omnipotente Dios, recordamos hoy en tu presencia a tu siervo fiel, N., y te rogamos que, habiendo abierto para él las puertas de una vida más amplia, le recibas más y más en tu grato servicio, para que, con todos los que te han servido fielmente en el pasado, participe del triunfo eterno de Jesucristo nuestro Señor; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "8. Por los Difuntos"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "holy-cross",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Mateo Septiembre 21"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-luke",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concede, oh Dios, que tu Iglesia, siguiendo el ejemplo de tu siervo Santiago el Justo, hermano de nuestro Señor, se dedique continuamente a la oración y la reconciliaciónde todos los que están en desacuerdo y enemistad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Santiago de Jerusalén Octubre 23"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "holy-innocents",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Recordamos en este día, oh Dios, la matanza de los niños inocentes de Belén, ordenada por el Rey Herodes. Recibe, te suplicamos, en tus brazos de misericordia, a todas las víctimas inocentes; y por tu gran poder frustra los designios de tiranos sanguinarios, y establece tu dominio de justicia, amor y paz; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Los Santos Inocentes Diciembre 28"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "7th-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Señor, tú nos has enseñado que todo lo que hacemos sin amor es de ningún valor: Envía tu Espíritu Santo, yderrama en nuestros corazones tu excelentísimo don, que es el amor, el vínculo verdadero de la paz y de todas las virtudes, sin el cual todos aquéllos que viven son considerados como muertos ante ti. Concédenos esto, por amor de tu único Hijo Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Séptimo Domingo después de la Epifanía"
+    "label": "San Bernabé"
   },
   {
     "type": "text",
@@ -1084,51 +681,298 @@
     "slug": "st-mary-the-virgin",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso y eterno, que diste gracia a tu apóstol Bartolomé para creer verdaderamente y predicar tu Palabra: Concede que tu Iglesia ame lo que él creyó y predique lo que él enseñó; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Dios todopoderoso y eterno, que diste gracia a tu apóstol Bartolomé para creer verdaderamente y predicar tu Palabra: Concede que tu Iglesia ame lo que él creyó y predique lo que él enseñó; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "San Bartolomé Agosto 24"
+    "label": "San Bartolomé"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "3rd-epiphany",
+    "slug": "proper-12",
     "metadata": { "response": "Amén." },
     "value": [
-      "Danos gracia, Señor, para responder prestamente al llamamiento de nuestro Salvador Jesucristo y proclamar las Buenas Nuevas de su salvación a todos los pueblos; para que nosotros, y todo el mundo, percibamos la gloria de sus obras maravillosas; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Oh Dios, protector de cuantos en ti confían, sin quien nada es fuerte, nada es santo: Multiplica en nosotros tu misericordia, a fin de que, bajo tu dirección y guía, nos sirvamos de los bienes temporales, de tal manera que no perdamos los eternos; por Jesucristo nuestro Señor que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Tercer Domingo después de la Epifanía"
+    "label": "Propio 12"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-29",
+    "slug": "the-transfiguration",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios omnipotente y eterno, cuya voluntad es restaurar todas las cosas en tu muy amado Hijo, el Rey de reyes y Señor de señores: Concede, de tu piedad, que todos los pueblos de la tierra, divididos y esclavizados por el pecado, sean libertados y unificados bajo su reino de amor; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 29 El domingo más cercano a Noviembre 23"
+    "label": "Santa María Virgen"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "confession-of-st-peter",
+    "slug": "thursday-easter",
     "metadata": { "response": "Amén." },
     "value": [
-      "Padre todopoderoso, que inspiraste a Simón Pedro, el primero entre los apóstoles, a confesar a Jesús como Mesías e Hijo del Dios vivo: Mantén a tu Iglesia firme sobre la roca de esta fe, para que, en paz y unidad, proclamemos la única verdad y sigamos al único Señor, nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Dios todopoderoso y eterno, que en el misterio Pascual has establecido el nuevo pacto de la reconciliación: Concede a todos los que nacen de nuevo en la comunión del Cuerpo de Cristo que manifiesten en sus vidas lo que por fe profesan; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Confesión de San Pedro Enero 18"
+    "label": "Jueves de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "5th-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Líbranos, oh Dios, de la esclavitud de nuestros pecados, y danos la libertad de esa vida abundante que nos has manifestado en tu Hijo, nuestro Salvador Jesucristo; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Quinto Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "thursday-last-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Miércoles de Ceniza"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "3rd-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, cuyo bendito Hijo se dio a conocer a sus discípulos en la fracción del pan: Abre los ojos de nuestra fe, para que podamos contemplarle en toda su obra redentora; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Tercer Domingo de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-23",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Te rogamos, oh Señor, que tu gracia siempre nos preceda y acompañe, para que continuamente nos dediquemos a buenas obras; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 23"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "4th-lent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre bondadoso, cuyo bendito Hijo Jesucristo descendió del cielo para ser el pan verdadero que da vida al mundo: Danos siempre este pan, para que él viva en nosotros y nosotros en él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Cuarto Domingo en Cuaresma"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, que por nuestra redención entregaste a tu unigénito Hijo a muerte de cruz, y por su resurrección gloriosa nos libraste del poder de nuestro enemigo: Concédenos morir diariamente al pecado, detal manera que, en el gozo de su resurrección, vivamos siempre con Jesucristo tu Hijo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén.o bien:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente, que por medio de tu Hijo unigénito Jesucristo has vencido la muerte y nos abriste la puertade la vida eterna: Concede a los que celebramos con gozo el día de la resurrección del Señor, que seamos resucitados de la muerte del pecado por tu Espíritu vivificador; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "all-souls-day",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Señor Dios eterno, que mantienes en vida a todas las almas: Concede a toda tu Iglesia en el paraíso y en la tierra tu luz y tu paz; y permite que, siguiendo los buenos ejemplos de los que te han servido aquí y ahora descansan, podamos al fin entrar con ellos a tu gozo eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén.o bien:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "8. Por los Difuntos"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "all-souls-day",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Omnipotente Dios, recordamos hoy en tu presencia a tu siervo fiel, N., y te rogamos que, habiendo abierto para él las puertas de una vida más amplia, le recibas más y más en tu grato servicio, para que, con todos los que te han servido fielmente en el pasado, participe del triunfo eterno de Jesucristo nuestro Señor; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "8. Por los Difuntos"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-the-visitation",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre celestial, por tu gracia la virgen madre de tu Hijo encarnado fue bendita al llevarlo en su seno, y aún más bendita al guardar tu palabra: Concede a los quehonramos la exaltación de su humildad que sigamos el ejemplo de su devoción a tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "La Visitación"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "1st-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre celestial, que en el bautismo de Jesús en el Río Jordán, le proclamaste tu Hijo amado y le ungiste con el Espíritu Santo: Concede que todos los que son bautizados en su Nombre, guarden el pacto que han hecho, y valerosamente le confiesen como Señor y Salvador; quien contigo y el Espíritu Santo vive y reina, un solo Dios, en gloria eterna. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo después de la Epifanía: Bautismo de Nuestro Señor"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-11",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente, fuente de toda sabiduría, tú conoces nuestras necesidades antes de que te pidamos, y nuestra ignorancia en pedir: Ten compasión de nuestras flaquezas, y danos, por tu misericordia, aquellas cosas que por nuestra indignidad y ceguedad no sabemos ni nos atrevemos a pedirte; por los méritos de Jesucristo tu Hijo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 11"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, tú has preparado para los que te aman cosas tan buenas que sobrepasan nuestro entendimiento: Infundeen nuestros corazones tal amor hacia ti, que, amándoteen todo y sobre todas las cosas, obtengamos tus promesas, que exceden todo lo que podamos anhelar; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Sexto Domingo de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "holy-name",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre eterno, tú diste a tu Hijo encarnado el santonombre de Jesús para ser el signo de nuestra salvación: Te suplicamos que siembres en cada corazón el amor de quien es el Salvador del mundo, nuestro Señor Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "El Santo Nombre de Jesús"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-2",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente y de misericordia, guárdanos en tu bondad de todo aquello que pueda causarnos daño; para que, dispuestos tanto en mente como en cuerpo, y con alegría de corazón, logremos lo que sea propio a tus designios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 2"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "wednesday-holy-week",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Señor Dios, cuyo bendito Hijo nuestro Salvador entregó su cuerpo a los azotes y su rostro al esputo:Otórganos tu gracia para soportar gozosamente los sufrimientos de esta vida temporal, confiados en la gloria que ha de ser revelada; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Miércoles Santo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-3",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concede, oh Señor, que el curso de este mundo seagobernado pacíficamente por tu providencia, y que tuIglesia pueda servirte con gozo, confianza y serenidad;por Jesucristo nuestro Señor, que vive y reinacontigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 3"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-joseph",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que de la familia de tu siervo David levantaste a José para ser el guardián de tu Hijo encarnado, y esposo de su virgen madre: Danos gracia para imitar su rectitudde vida y su obediencia a tus mandatos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San José"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "palm-sunday",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente y eterno, en tu tierno amor hacia el género humano, enviaste a tu Hijo nuestro Salvador Jesucristo para asumir nuestra naturaleza, y padecer muerte en la cruz, mostrándonos ejemplo de su gran humildad: Concédenos, en tu misericordia, que caminemos por el sendero de su padecimiento y participemos también en su resurrección; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Domingo de Pasión: Domingo de Ramos"
   },
   {
     "type": "text",
@@ -1141,462 +985,20 @@
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 5 El domingo más cercano a Junio 8"
+    "label": "Propio 5"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "eve-of-holy-cross",
+    "slug": "6th-epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, fortaleza de los que ponen su confianza en ti: Acepta con misericordia nuestras súplicas, y puesto que, por nuestra flaqueza, no podemos hacer nada bueno sinti, danos el auxilio de tu gracia; para que, al guardar tus mandamientos, te agrademos, tanto de voluntad como de hecho; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "San Mateo Septiembre 21"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-12",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, protector de cuantos en ti confían, sin quien nada es fuerte, nada es santo: Multiplica en nosotros tu misericordia, a fin de que, bajo tu dirección y guía, nos sirvamos de los bienes temporales, de tal manera que no perdamos los eternos; por Jesucristo nuestro Señor que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 12 El domingo más cercano a Julio 27"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "3rd-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, cuyo bendito Hijo se dio a conocer a sus discípulos en la fracción del pan: Abre los ojos de nuestra fe, para que podamos contemplarle en toda su obra redentora; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Tercer Domingo de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "second-advent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios de misericordia, que enviaste a tus mensajeros, los profetas, a predicar el arrepentimiento y preparar el camino de nuestra salvación: Danos gracia para atender sus advertencias y abandonar nuestros pecados, a fin de que recibamos gozosamente la venida de Jesucristo nuestro Redentor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Segundo Domingo de Adviento"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-michael",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, que inspiraste a tu siervo Lucas el médico a manifestar en el Evangelio el amor y poder sanativo de tu Hijo: Continúa en tu Iglesia, por tu gracia, el mismo amor y poder de sanidad, para alabanza y gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Lucas Octubre 18"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "conversion-of-st-paul",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que por la predicación de tu apóstol Pablohiciste que la luz del Evangelio resplandeciera por todo el mundo: Concede, te suplicamos, que nosotros, recordando su portentosa conversión, manifestemos nuestra gratitud siguiendo su santa enseñanza; por Jesucristo nuestroSeñor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Conversión de San Pablo Enero 25"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "5th-lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, sólo tú puedes ordenar los afectos y voluntades rebeldes de los pecadores: Concede gracia a tu pueblo para amar lo que tú dispones y desear lo que tú prometes; a fin de que, en medio de los rápidos y variados cambios del mundo, nuestros corazones permanezcan fijos allí donde se encuentran los verdaderos goces; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Quinto Domingo en Cuaresma"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "friday-6th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "friday-6th-easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de la Ascensión"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-15",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, por nosotros entregaste a tu Hijoúnico como sacrificio por los pecados y como ejemplo de vida piadosa: Danos gracia para recibir con gratitud los frutos de su obra redentora, y seguir de día en día las huellas benditas de su santísima vida; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 15 El domingo más cercano a Agosto 17"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "4th-lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Padre bondadoso, cuyo bendito Hijo Jesucristo descendió del cielo para ser el pan verdadero que da vida al mundo: Danos siempre este pan, para que él viva en nosotros y nosotros en él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Cuarto Domingo en Cuaresma"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "independence-day",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Señor Dios omnipotente, que has hecho a todos los pueblos de la tierra para tu gloria, y para servirte en libertad y paz: Otorga a los habitantes de nuestro país tal celo por la justicia y tal fuerza de moderación, que usemos nuestra libertad de acuerdo con tu santa voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "17. Por la Nación"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-16",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concede, oh Dios de misericordia, que tu Iglesia,congregada en unidad por tu Espíritu Santo, manifiestetu poder entre todos los pueblos, para gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 16 El domingo más cercano a Agosto 24"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-mary-magdalene",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios bondadoso, recordamos hoy en tu presencia a tu siervo y apóstol Santiago, el primero entre los Doce en padecer martirio por el Nombre de Jesucristo; y te suplicamos que derrames sobre los dirigentes de tu Iglesia ese espíritu de servicio abnegado por el cual sólo pueden tener verdadera autoridad entre tu pueblo; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Santiago Julio 25"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-andrew",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, que diste a tu apóstol Andrés una gracia tal que prestamente obedeció el llamado de tu Hijo Jesucristo y trajo a su hermano con él: Concédenos, a los llamados por tu Santo Verbo, la gracia para seguirle sin demora y traer a su bondadosa presencia a los que amamos; por aquél que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Andrés Noviembre 30"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "palm-sunday",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente y eterno, en tu tierno amor hacia el género humano, enviaste a tu Hijo nuestro Salvador Jesucristo para asumir nuestra naturaleza, y padecer muerte en la cruz, mostrándonos ejemplo de su gran humildad: Concédenos, en tu misericordia, que caminemos por el sendero de su padecimiento y participemos también en su resurrección; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Domingo de Pasión: Domingo de Ramos"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-14",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Otórganos, te suplicamos, oh Señor, el espíritu de pensar y hacer siempre lo justo; para que nosotros, que sin ti no podemos existir, seamos capaces, con tu ayuda, de vivir según tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 14 El domingo más cercano a Agosto 10"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "saturday-holy-week",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, Creador de cielo y tierra: Concede que, así como el cuerpo crucificado de tu amado Hijo fue puesto en el sepulcro y descansó en este Sábado santo, de la misma manera aguardemos con él la venida del tercer día, y resucitemos con él a la vida nueva; quien viveahora y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Sábado Santo"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-21",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que manifiestas tu infinito poder especialmente mostrando piedad y misericordia: Derrama sobre nosotros la plenitud de tu gracia; a fin de que, esforzándonos para obtener tus promesas, seamos partícipes de tus tesoros celestiales; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 21 El domingo más cercano a Septiembre 28"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "8th-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Amantísimo Padre, cuya voluntad es que te demos gracias por todas las cosas, que no temamos nada sino el perderte a ti, y que te confiemos todas nuestras preocupaciones, pues cuidas de nosotros: Presérvanos de temores infieles y de ansiedades mundanas, para que ninguna nube de esta vida mortal oculte de nosotros laluz de ese amor inmortal que tú nos has manifestado entu Hijo Jesucristo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Octavo Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "last-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, que antes de la pasión de tu unigénito Hijo, revelaste su gloria en el monte santo: Concédenos que, al contemplar por fe la luz de su rostro, seamos fortalecidos para llevar nuestra cruz y ser transformados a su imagen de gloria en gloria; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Ultimo Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-10",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Señor, atiende, en tu bondad, las súplicas de tu pueblo que clama a ti, y concede que podamos percibir y comprender lo que debemos hacer, y tengamos también la gracia y el poder para cumplirlo fielmente; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 10 El domingo más cercano a Julio 13"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "eve-of-the-presentation",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, humildemente te rogamos que, así como tu Hijo unigénito fue presentado en el templo en este día, así seamos presentados ante ti con corazones puros y limpios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "La Presentación Febrero 2"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, que por nuestra redención entregaste a tu unigénito Hijo a muerte de cruz, y por su resurrección gloriosa nos libraste del poder de nuestro enemigo: Concédenos morir diariamente al pecado, detal manera que, en el gozo de su resurrección, vivamos siempre con Jesucristo tu Hijo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "easter",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios omnipotente, que por medio de tu Hijo unigénito Jesucristo has vencido la muerte y nos abriste la puertade la vida eterna: Concede a los que celebramos con gozo el día de la resurrección del Señor, que seamos resucitados de la muerte del pecado por tu Espíritu vivificador; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Pascua"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-20",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Concede, oh Señor, que no nos afanemos por las cosas terrenales, sino que amemos las celestiales, y aunahora que estamos inmersos en cosas transitorias, haz que anhelemos lo que permanece para siempre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 20 El domingo más cercano a Septiembre 21"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-24",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso y eterno, que en Cristo has revelado tu gloria a todas las naciones: Mantén las obras de tu misericordia; a fin de que tu Iglesia, esparcida por todo el mundo, persevere con fe inquebrantable en la confesión de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 24 El domingo más cercano a Octubre 19"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "fourth-advent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso, te suplicamos que purifiques nuestra conciencia con tu visitación diaria, para que, cuando venga tu Hijo Jesucristo, encuentre en nosotros la mansión que le ha sido preparada; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Cuarto Domingo de Adviento"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "2nd-lent",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Dios, cuya gloria es siempre tener misericordia: Sé benigno a todos los que se han descarriado de tus caminos, y tráelos de nuevo con corazones penitentes y fe firme, para recibir y abrazar la verdad inmutable de tu Verbo, Jesucristo tu Hijo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Segundo Domingo en Cuaresma"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "thanksgiving-day",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Padre omnipotente y bondadoso, te damos gracias por los frutos de la tierra en su tiempo, y por la labor de quienes los cosechan: Haznos fieles mayordomos de tus dádivas abundantes, que recibimos para la satisfacción de nuestras necesidades y el alivio de los menesterosos, para gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Acción de Gracias"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "ss-simon-and-jude",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Dios todopoderoso tú has entrelazado a tus elegidos en una sola comunión y hermandad en el cuerpo místico de tu Hijo Cristo nuestro Señor: Danos gracia para que de tal modo sigamos a tus benditos santos en toda virtuosa y santa vida que alcancemos los gozos inefables que tú has preparado para los que te aman sinceramente; por Jesucristo nuestro Señor, que contigo y el Espíritu Santo vive y reina, un solo Dios, en gloria sempiterna."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Día de Todos Los Santos Noviembre 1"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "5th-epiphany",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Líbranos, oh Dios, de la esclavitud de nuestros pecados, y danos la libertad de esa vida abundante que nos has manifestado en tu Hijo, nuestro Salvador Jesucristo; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Quinto Domingo después de la Epifanía"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-6",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Mantén, oh Señor, a tu familia, la Iglesia, en tu constante fe y amor; para que, mediante tu gracia, proclamemos tu verdad con valentía, y administremos tu justicia con compasión; por amor de nuestro Salvador Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 6 El domingo más cercano a Junio 15"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "proper-7",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Oh Señor, haz que tengamos perpetuo amor y reverenciaa tu santo Nombre, pues nunca privas de tu auxilio yguía a los que has establecido sobre la base firme de tu bondad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "Propio 7 El domingo más cercano a Junio 22"
-  },
-  {
-    "type": "text",
-    "style": "prayer",
-    "slug": "st-john",
-    "metadata": { "response": "Amén." },
-    "value": [
-      "Derrama, oh Señor, sobre tu Iglesia el resplandor de tu luz, para que, iluminados por la enseñanza de tu apóstol y evangelista Juan, andemos en la luz de tu verdad de tal manera que al fin alcancemos la plenitud de la vida eterna; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
-    ],
-    "category": ["Collect of the Day"],
-    "language": "es",
-    "version": "loc",
-    "label": "San Juan Diciembre 27"
+    "label": "Sexto Domingo después de la Epifanía"
   },
   {
     "type": "text",
@@ -1614,36 +1016,192 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-3",
+    "slug": "2nd-lent",
     "metadata": { "response": "Amén." },
     "value": [
-      "Concede, oh Señor, que el curso de este mundo seagobernado pacíficamente por tu providencia, y que tuIglesia pueda servirte con gozo, confianza y serenidad;por Jesucristo nuestro Señor, que vive y reinacontigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Oh Dios, cuya gloria es siempre tener misericordia: Sé benigno a todos los que se han descarriado de tus caminos, y tráelos de nuevo con corazones penitentes y fe firme, para recibir y abrazar la verdad inmutable de tu Verbo, Jesucristo tu Hijo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 3 El domingo más cercano a Mayo 25"
+    "label": "Segundo Domingo en Cuaresma"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "thursday-last-epiphany",
+    "slug": "proper-13",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Que tu constante misericordia purifique y defienda a tu Iglesia, oh Señor; y, puesto que no puede continuar en seguridad sin tu auxilio, protégela y dirígela siempre portu bondad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Miércoles de Ceniza"
+    "label": "Propio 13"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "all-saints-day",
+    "slug": "proper-9",
     "metadata": { "response": "Amén." },
     "value": [
-      "Señor Dios omnipotente, en cuyo Nombre los fundadores de este país ganaron su libertad y la nuestra [y encendieron la antorcha de la libertad para naciones que todavía no existían]: Concede que nosotros y todos los habitantes de esta tierra recibamos tu gracia para mantener nuestras libertades en justicia y paz; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Oh Dios, tú nos has enseñado a guardar tus mandamientos amándote a ti y a nuestro prójimo: Danos la gracia de tu Espíritu Santo para que nos consagremos a ti de todo corazón, y nos unamos unos a otros con afecto puro; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 9"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "christmas-eve",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que has hecho resplandecer esta noche santa con la claridad de la Luz verdadera: Concede a los que hemos conocido el misterio de esa Luz en la tierra, que también nos gocemos de él plenamente, en el cielo; donde vive y reina contigo y el Espíritu santo, un solo Dios, en gloria eterna. Amén.o bien:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Natividad de Nuestro Señor: Día de Navidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-22",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Omnipotente y sempiterno Dios, tú estás siempre más presto a escuchar que nosotros a orar, y a ofrecer másde lo que deseamos o merecemos: Derrama sobre nosotros la abundancia de tu misericordia, perdonándonos todo aquello que perturba nuestra conciencia, y otorgándonos aquello que no somos dignos de pedirte, sino por los méritos y mediación de Jesucristonuestro Salvador; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 22"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "holy-week",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente y eterno, en tu tierno amor hacia el género humano, enviaste a tu Hijo nuestro Salvador Jesucristo para asumir nuestra naturaleza, y padecer muerte en la cruz, mostrándonos ejemplo de su gran humildad: Concédenos, en tu misericordia, que caminemos por el sendero de su padecimiento y participemos también en su resurrección; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Domingo de Pasión: Domingo de Ramos"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "thursday-holy-week",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre todopoderoso, cuyo amado Hijo, en la víspera de su padecimiento, instituyó el Sacramento de su Cuerpo y Sangre: Concédenos, en tu misericordia, que lo recibamos con gratitud como memorial de Jesucristo nuestro Señor, que en estos santos misterios nos da una prenda de la vida eterna; quien vive ahora y reinacontigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Jueves Santo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "2nd-sunday-after-christmas",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que maravillosamente creaste y aún más maravillosamente restauraste la dignidad de la naturaleza humana: Concede que compartamos la vida divina de quien se humilló para compartir nuestra humanidad, tu Hijo Jesucristo; que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Segundo Domingo después del Día de Navidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-luke",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concede, oh Dios, que tu Iglesia, siguiendo el ejemplo de tu siervo Santiago el Justo, hermano de nuestro Señor, se dedique continuamente a la oración y la reconciliaciónde todos los que están en desacuerdo y enemistad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Santiago de Jerusalén"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "2nd-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo Hijo nuestro SalvadorJesucristo es la luz del mundo: Concede que tu pueblo, iluminado por tu Palabra y Sacramentos, brille con el resplandor de la gloria de Cristo, para que el sea conocido, adorado y obedecido hasta los confines de la tierra; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre.Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Segundo Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-19",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, puesto que sin ti no podemos complacerte: Concede, por tu misericordia, que tu Espíritu Santo dirija y gobierne nuestros corazones; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 19"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "ss-simon-and-jude",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso tú has entrelazado a tus elegidos en una sola comunión y hermandad en el cuerpo místico de tu Hijo Cristo nuestro Señor: Danos gracia para que de tal modo sigamos a tus benditos santos en toda virtuosa y santa vida que alcancemos los gozos inefables que tú has preparado para los que te aman sinceramente; por Jesucristo nuestro Señor, que contigo y el Espíritu Santo vive y reina, un solo Dios, en gloria sempiterna. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Todos Los Santos"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-james",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que en el santo monte revelaste ante testigos escogidos a tu muy amado Hijo, maravillosamente transfigurado, con vestiduras blancas y resplandecientes: Concede, en tu misericordia, que, librados de la inquietud de este mundo, contemplemos por fe al Rey en toda su hermosura; quien contigo, oh Padre, y contigo, oh Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "La Transfiguración"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "confession-of-st-peter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre todopoderoso, que inspiraste a Simón Pedro, el primero entre los apóstoles, a confesar a Jesús como Mesías e Hijo del Dios vivo: Mantén a tu Iglesia firme sobre la roca de esta fe, para que, en paz y unidad, proclamemos la única verdad y sigamos al único Señor, nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Confesión de San Pedro"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-all-saints",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Señor Dios omnipotente, en cuyo Nombre los fundadores de este país ganaron su libertad y la nuestra [y encendieron la antorcha de la libertad para naciones que todavía no existían]: Concede que nosotros y todos los habitantes de esta tierra recibamos tu gracia para mantener nuestras libertades en justicia y paz; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -1653,10 +1211,114 @@
   {
     "type": "text",
     "style": "prayer",
+    "slug": "first-advent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, danos gracia para despojarnos de las obras de las tinieblas y revestirnos con las armas de la luz, ahora en esta vida mortal, en la cual Jesucristo tu Hijo, con gran humildad, vino a visitarnos; a fin de queen el día postrero, cuando vuelva con majestad gloriosa a juzgar a vivos y muertos, resucitemos a la vida inmortal; mediante él, quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo de Adviento"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "8th-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Amantísimo Padre, cuya voluntad es que te demos gracias por todas las cosas, que no temamos nada sino el perderte a ti, y que te confiemos todas nuestras preocupaciones, pues cuidas de nosotros: Presérvanos de temores infieles y de ansiedades mundanas, para que ninguna nube de esta vida mortal oculte de nosotros laluz de ese amor inmortal que tú nos has manifestado entu Hijo Jesucristo nuestro Señor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Octavo Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-the-presentation",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, humildemente te rogamos que, así como tu Hijo unigénito fue presentado en el templo en este día, así seamos presentados ante ti con corazones puros y limpios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "La Presentación"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "friday-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre todopoderoso, que entregaste a tu único Hijo para morar por nuestros pecados y resucitar para nuestra justificación: Danos gracia para desechar la levadura de malicia e iniquidad, de tal modo que te sirvamos siempre con pureza de vida y verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Viernes de Pascua"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-holy-cross",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Mateo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "ss-philip-and-james",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, que diste gracia y fortaleza a tus apóstoles Felipe y Santiago para dar testimonio de la verdad: Concede que, recordando su victoria de fe, glorifiquemos, tanto en la vida como en la muerte, el Nombre de nuestro Señor Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Felipe y Santiago"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "friday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén.o la siguiente:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "friday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
     "slug": "7th-easter",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, Rey de la gloria, que con gran triunfo exaltastea tu único Hijo Jesucristo a tu reino celestial: No nos dejes desconsolados, mas envíanos tu Espíritu Santo para fortalecernos y exaltarnos al mismo lugar, adondenuestro Salvador Cristo nos ha precedido; quien vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
+      "Oh Dios, Rey de la gloria, que con gran triunfo exaltastea tu único Hijo Jesucristo a tu reino celestial: No nos dejes desconsolados, mas envíanos tu Espíritu Santo para fortalecernos y exaltarnos al mismo lugar, adondenuestro Salvador Cristo nos ha precedido; quien vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -1666,106 +1328,145 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "the-presentation",
+    "slug": "easter-vigil",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso y eterno, humildemente te rogamos que, así como tu Hijo unigénito fue presentado en el templo en este día, así seamos presentados ante ti con corazones puros y limpios; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, que hiciste resplandecer esta noche santísima con la gloria de la resurrección del Señor: Aviva en tu Iglesia aquel Espíritu de adopción que nos es dado en el Bautismo, para que nosotros, siendo renovados tanto en cuerpo como en mente, te adoremos en sinceridad y verdad; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén.o bien:"
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "La Presentación Febrero 2"
+    "label": "Día de Pascua"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-18",
+    "slug": "holy-cross",
     "metadata": { "response": "Amén." },
     "value": [
-      "Concede, oh Señor, que confiemos en ti de todo corazón; porque, así como tú siempre resistes a los soberbios que confían en su propia fortaleza, de la misma manera jamás abandonas a aquéllos que se glorían en tu misericordia; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 18 El domingo más cercano a Septiembre 7"
+    "label": "San Mateo"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-8",
+    "slug": "friday-holy-week",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso, has edificado tu Iglesia sobre el fundamento de los apóstoles y profetas siendo Jesucristo mismo la piedra angular: Concédenos que estemos unidos en espíritu por su enseñanza, de tal modo que lleguemos a ser un templo santo aceptable a ti; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Mira con bondad, te suplicamos, Dios omnipotente, a esta tu familia, por la cual nuestro Señor Jesucristo aceptó ser traicionado y entregado a hombres crueles, y sufrir muerte en la cruz; quien vive ahora y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 8 El domingo más cercano a Junio 29"
+    "label": "Viernes Santo"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "thursday-6th-easter",
+    "slug": "eve-epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
+      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Día de la Ascensión"
+    "label": "La Epifanía"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "thursday-6th-easter",
+    "slug": "saturday-holy-week",
     "metadata": { "response": "Amén." },
     "value": [
-      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Oh Dios, Creador de cielo y tierra: Concede que, así como el cuerpo crucificado de tu amado Hijo fue puesto en el sepulcro y descansó en este Sábado santo, de la misma manera aguardemos con él la venida del tercer día, y resucitemos con él a la vida nueva; quien viveahora y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Día de la Ascensión"
+    "label": "Sábado Santo"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "nativity-of-st-john-the-baptist",
+    "slug": "proper-6",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios todopoderoso, por cuya providencia nació maravillosamente tu siervo Juan el Bautista, y fue enviado a preparar el camino de tu Hijo nuestro Salvador, predicando el arrepentimiento: Haz que sigamos de tal manera su enseñanza y santa vida que verdaderamente nos arrepintamos según su predicación, y que, a ejemplo suyo, constantemente hablemos la verdad, audazmente reprochemos el vicio y pacientemente suframos porcausa de la verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+      "Mantén, oh Señor, a tu familia, la Iglesia, en tu constante fe y amor; para que, mediante tu gracia, proclamemos tu verdad con valentía, y administremos tu justicia con compasión; por amor de nuestro Salvador Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Natividad de San Juan Bautista Junio 24"
+    "label": "Propio 6"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "epiphany",
+    "slug": "eve-of-the-annunciation",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Derrama tu gracia en nuestros corazones, oh Señor, para que los que hemos conocido la encarnación de tu Hijo Jesucristo, anunciada por un ángel a María la Virgen, seamos llevados por la cruz y pasión de Cristo a la gloria de su resurrección; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "La Epifanía Enero 6"
+    "label": "La Anunciación"
   },
   {
     "type": "text",
     "style": "prayer",
-    "slug": "tuesday-easter",
+    "slug": "the-visitation",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que por la gloriosa resurrección de tu Hijo Jesucristo destruiste la muerte y nos alumbraste con vida e inmortalidad: Concede a los que hemos resucitado con él, que habitemos en su presencia, y nos gocemos en la esperanza de la gloria eterna; por Jesucristo nuestro Señor, a quien contigo y el Espíritu Santo, sea el dominio y la alabanza, por los siglos de los siglos."
+      "Padre celestial, por tu gracia la virgen madre de tu Hijo encarnado fue bendita al llevarlo en su seno, y aún más bendita al guardar tu palabra: Concede a los quehonramos la exaltación de su humildad que sigamos el ejemplo de su devoción a tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Martes de Pascua"
+    "label": "La Visitación"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "last-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que antes de la pasión de tu unigénito Hijo, revelaste su gloria en el monte santo: Concédenos que, al contemplar por fe la luz de su rostro, seamos fortalecidos para llevar nuestra cruz y ser transformados a su imagen de gloria en gloria; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Ultimo Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-bartholomew",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente, cuyo Hijo nuestro Salvador fue levantado en lo alto de la cruz, a fin de atraer hacia él a todo el mundo: Concede, en tu misericordia, a quienes nos gloriamos en el misterio de nuestra redención, que recibamos tu gracia para tomar nuestra cruz y seguirle; quien vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria sempiterna. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Santa Cruz"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "5th-lent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, sólo tú puedes ordenar los afectos y voluntades rebeldes de los pecadores: Concede gracia a tu pueblo para amar lo que tú dispones y desear lo que tú prometes; a fin de que, en medio de los rápidos y variados cambios del mundo, nuestros corazones permanezcan fijos allí donde se encuentran los verdaderos goces; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Quinto Domingo en Cuaresma"
   },
   {
     "type": "text",
@@ -1773,7 +1474,7 @@
     "slug": "wednesday-easter",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, cuyo bendito Hijo se dio a conocer a sus discípulos en la fracción del pan: Abre los ojos de nuestra fe, para que podamos contemplarle en toda su obra redentora; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, cuyo bendito Hijo se dio a conocer a sus discípulos en la fracción del pan: Abre los ojos de nuestra fe, para que podamos contemplarle en toda su obra redentora; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -1783,14 +1484,313 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "proper-25",
+    "slug": "3rd-epiphany",
     "metadata": { "response": "Amén." },
     "value": [
-      "Todopoderoso y eterno Dios, aumenta en nosotros tus dones de fe, esperanza y amor; y para que obtengamos tus promesas, haz que amemos lo que mandas; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amen."
+      "Danos gracia, Señor, para responder prestamente al llamamiento de nuestro Salvador Jesucristo y proclamar las Buenas Nuevas de su salvación a todos los pueblos; para que nosotros, y todo el mundo, percibamos la gloria de sus obras maravillosas; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Propio 25 El domingo más cercano a Octubre 26"
+    "label": "Tercer Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-27",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, cuyo bendito Hijo vino al mundo para destruir las obras de Satanás y hacernos hijos de Dios y herederos de la vida eterna: Concede que, teniendo esta esperanza, nos purifiquemos así como él es puro; para que, cuando vuelva con poder y gran gloria, seamos hechos a su semejanza en su glorioso y eterno reino; donde contigo y el Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 27"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-29",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios omnipotente y eterno, cuya voluntad es restaurar todas las cosas en tu muy amado Hijo, el Rey de reyes y Señor de señores: Concede, de tu piedad, que todos los pueblos de la tierra, divididos y esclavizados por el pecado, sean libertados y unificados bajo su reino de amor; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 29"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-10",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Señor, atiende, en tu bondad, las súplicas de tu pueblo que clama a ti, y concede que podamos percibir y comprender lo que debemos hacer, y tengamos también la gracia y el poder para cumplirlo fielmente; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 10"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "monday-holy-week",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo muy amado Hijo no ascendió al gozo de tu presencia sin antes padecer, ni entró en gloria sin antes ser crucificado: Concédenos, por tu misericordia, que nosotros, caminando por la vía de la cruz, encontremos que ésta es la vía de la vida y de la paz; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Lunes Santo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "tuesday-holy-week",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que por la pasión de tu bendito Hijoconvertiste a un instrumento de muerte vergonzosa en un medio de vida para nosotros: Concede que de t ;l modo nos gloriemos en la cruz de Cristo que suframos con alegría la vergüenza y privación por causa de tu Hijo nuestro Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Martes Santo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-1",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Recuerda, oh Señor, lo que has forjado en nosotros y no lo que merecemos; y, puesto que nos has llamado para servirte, haznos dignos de nuestro llamado; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 1"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "thanksgiving-day",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Padre omnipotente y bondadoso, te damos gracias por los frutos de la tierra en su tiempo, y por la labor de quienes los cosechan: Haznos fieles mayordomos de tus dádivas abundantes, que recibimos para la satisfacción de nuestras necesidades y el alivio de los menesterosos, para gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de Acción de Gracias"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "1st-lent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Omnipotente Dios, cuyo bendito Hijo fue llevado por el Espíritu para ser tentado por Satanás: Apresúrate a socorrer a los que somos atacados por múltiples tentaciones; y así como tú conoces las flaquezas de cada uno de nosotros, haz que cada uno te halle poderoso para salvar; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Primer Domingo en Cuaresma"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-wednesday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén.o la siguiente:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-wednesday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-7",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Señor, haz que tengamos perpetuo amor y reverenciaa tu santo Nombre, pues nunca privas de tu auxilio yguía a los que has establecido sobre la base firme de tu bondad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 7"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "saturday-last-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Miércoles de Ceniza"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-8",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, has edificado tu Iglesia sobre el fundamento de los apóstoles y profetas siendo Jesucristo mismo la piedra angular: Concédenos que estemos unidos en espíritu por su enseñanza, de tal modo que lleguemos a ser un templo santo aceptable a ti; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 8"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "thursday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, cuyo bendito Hijo nuestro Señor Jesucristo ascendió por encima de todos los cielos para llenarlo todo: Danos fe, por tu misericordia, para percibir que, según su promesa, habita con su Iglesia en la tierra, hasta el final de los tiempos; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna. Amén.o la siguiente:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "thursday-6th-easter",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Concédenos, te suplicamos, Dios omnipotente, que, así como creemos que tu unigénito Hijo nuestro Señor Jesucristo ascendió a los cielos, así también ascendamos allá en corazón y mente, y habitemos siempre con él; quien vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Día de la Ascensión"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "eve-of-the-transfiguration",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Santa María Virgen"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "christmas",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Oh Dios, tú nos alegras anualmente con la festividaddel nacimiento de tu único Hijo Jesucristo: Concédenos que, así como le recibimos con júbilo como Redentor, de la misma manera le contemplemos con segura confianza cuando venga a ser nuestro Juez; quien vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén.o la siguiente:"
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Natividad de Nuestro Señor: Día de Navidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "christmas",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Omnipotente Dios, tú has dado a tu unigénito Hijo para asumir nuestra naturaleza, y nacer [este día] de una virgen pura: Concede que, siendo nacidos de nuevo y hechos tus hijos por adopción y gracia, seamos renovados cada día con tu Espíritu Santo; mediante nuestro Señor Jesucristo, a quien contigo y el mismo Espíritu sea el honor y la gloria, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Natividad de Nuestro Señor: Día de Navidad"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "second-advent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios de misericordia, que enviaste a tus mensajeros, los profetas, a predicar el arrepentimiento y preparar el camino de nuestra salvación: Danos gracia para atender sus advertencias y abandonar nuestros pecados, a fin de que recibamos gozosamente la venida de Jesucristo nuestro Redentor; que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Segundo Domingo de Adviento"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "4th-epiphany",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, tú riges todas las cosas tanto en el cielo como en la tierra: Escucha con misericordia las súplicas de tu pueblo, y en nuestro tiempo concédenos tu paz; por nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Cuarto Domingo después de la Epifanía"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "Lent",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso y eterno, tú no aborreces nada de lo que has creado, y perdonas los pecados de todos los penitentes: Crea y forma en nosotros, corazones nuevos y contritos, para que, lamentando debidamente nuestros pecados y reconociendo nuestra miseria, obtengamos de ti, Dios de toda misericordia, perfecta remisión y perdón; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Miércoles de Ceniza"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "proper-17",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Señor de todo poder y fortaleza, autor y dador de todo bien: Injerta en nuestros corazones el amor a tu Nombre, acrecienta en nosotros la verdadera religión, nútrenos con toda bondad, y produce en nosotros los frutos de buenas obras; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Propio 17"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "nativity-of-st-john-the-baptist",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Dios todopoderoso, por cuya providencia nació maravillosamente tu siervo Juan el Bautista, y fue enviado a preparar el camino de tu Hijo nuestro Salvador, predicando el arrepentimiento: Haz que sigamos de tal manera su enseñanza y santa vida que verdaderamente nos arrepintamos según su predicación, y que, a ejemplo suyo, constantemente hablemos la verdad, audazmente reprochemos el vicio y pacientemente suframos porcausa de la verdad; por Jesucristo tu Hijo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Natividad de San Juan Bautista"
   }
 ]
