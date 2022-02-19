@@ -547,7 +547,6 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
-    console.log("findDocumentsByCategory", versions, language);
     if (!disableOffline) {
       const attempt$ = combineLatest(
         Array.from(
@@ -608,6 +607,7 @@ export class DocumentService {
         .pipe(
           // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
           map((docs) => {
+            console.log("findDocumentsByCategory", category, docs);
             if (versions?.length > 0) {
               return docs.filter((doc) =>
                 versions.includes(versionToString(doc.version))

@@ -56516,7 +56516,156 @@
       "style": "canticle",
       "language": "es",
       "category": ["Canticle"],
-      "label": "Cántico 14: Te Deum"
+      "label": "Cántico 14: Te Deum",
+      "source": {
+        "api": "",
+        "source": "LOC",
+        "citation": "p. 58"
+      }
+    }
+  ],
+  "es-loc-mp_daily_collect": [
+    {
+      "version": "loc",
+      "source": {
+        "citation": "p. 62",
+        "api": "",
+        "source": "LOC"
+      },
+      "hidden": false,
+      "category": [],
+      "metadata": { "response": "Amén." },
+      "value": [
+        "Oh Dios, Rey eterno, que con tu luz separas el día de la noche, y transformas en claridad la sombra de muerte: Arroja de nosotros todo mal deseo, inclina nuestro corazón a guardar tu ley, y guía nuestros pasos por el sendero de la paz; para que, al hacer con gusto tu voluntad durante el día, nos alegre darte gracias cuando llegue la noche; por Jesucristo nuestro Señor."
+      ],
+      "language": "es",
+      "type": "text",
+      "style": "prayer",
+      "label": "Colecta por la renovación de la vida",
+      "lastRevision": 19,
+      "slug": "mp_daily_collect"
+    },
+    {
+      "category": [],
+      "lastRevision": 24,
+      "metadata": { "response": "Amén." },
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "Oh Dios, autor de la paz y amante de la concordia, conocerte es vida eterna, y servirte, plena libertad: Defiende a estos tus humildes siervos de todos los asaltos de nuestros enemigos; para que, confiados en tu protección, no temamos la fuerza de ningún adversario; por el poder de Jesucristo nuestro Señor."
+      ],
+      "version": "loc",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "language": "es",
+      "slug": "mp_daily_collect",
+      "label": "Colecta por la paz",
+      "type": "text"
+    },
+    {
+      "category": [],
+      "hidden": false,
+      "slug": "mp_daily_collect",
+      "version": "loc",
+      "type": "text",
+      "metadata": { "response": "Amén." },
+      "language": "es",
+      "lastRevision": 24,
+      "style": "prayer",
+      "value": [
+        "Señor Dios, todopoderoso y eterno Padre, nos hiciste llegar sanos y salvos hasta este nuevo día: Consérvanos con tu gran poder, para que no caigamos en pecado, ni nos venza la adversidad; y, en todo lo que hagamos, dirígenos a realizar tus designios; por Jesucristo nuestro Señor."
+      ],
+      "source": {
+        "citation": "p. 63",
+        "source": "LOC",
+        "api": ""
+      },
+      "label": "Colecta por la gracia"
+    },
+    {
+      "label": "Colecta para guía divina",
+      "category": [],
+      "lastRevision": 24,
+      "slug": "mp_daily_collect",
+      "hidden": false,
+      "metadata": { "response": "Amén." },
+      "language": "es",
+      "type": "text",
+      "version": "loc",
+      "source": {
+        "source": "LOC",
+        "citation": "p. 63",
+        "api": ""
+      },
+      "style": "prayer",
+      "value": [
+        "Padre celestial, en ti vivimos, nos movemos y tenemos el ser: Te suplicamos humildemente que nos guíes y gobiernes con tu Santo Espíritu, para que en todos los afanes y quehaceres de nuestra vida no te olvidemos, sino que recordemos que siempre caminamos en tu presencia; por Jesucristo nuestro Señor."
+      ]
+    }
+  ],
+  "es-loc-mp_prayers_for_mission": [
+    {
+      "category": [],
+      "value": [
+        "Dios todopoderoso y eterno, cuyo Espíritu gobierna y santifica a todo el cuerpo de tu pueblo fiel: Recibe las súplicas y oraciones que te ofrecemos por todos los miembros de tu santa Iglesia, para que en su vocación y ministerio te sirvan verdadera y devotamente; por nuestro Señor y Salvador Jesucristo."
+      ],
+      "hidden": false,
+      "version": "loc",
+      "source": {
+        "source": "LOC",
+        "api": "",
+        "citation": "p. 64"
+      },
+      "language": "es",
+      "slug": "mp_prayers_for_mission",
+      "type": "text",
+      "style": "prayer",
+      "label": "Por la misión de la Iglesia",
+      "metadata": {
+        "omit_response": false
+      },
+      "lastRevision": 17
+    },
+    {
+      "slug": "mp_prayers_for_mission",
+      "source": {
+        "source": "LOC",
+        "citation": "p. 64",
+        "api": ""
+      },
+      "value": [
+        "Oh Dios, que has hecho de una sola sangre a todos los pueblos de la tierra, y enviaste a tu bendito Hijo a predicar la paz, tanto a los que están lejos como a los que están cerca: Concede que la gente en todo lugar te busque y te encuentre; trae a las naciones a tu redil; derrama tu Espíritu sobre toda carne; y apresura la venida de tu reino; por Jesucristo nuestro Señor."
+      ],
+      "style": "prayer",
+      "hidden": false,
+      "language": "es",
+      "label": "Por la misión de la Iglesia",
+      "type": "text",
+      "lastRevision": 24,
+      "version": "loc",
+      "category": []
+    },
+    {
+      "category": [],
+      "version": "loc",
+      "value": [
+        "Señor Jesucristo, tú extendiste tus brazos amorosos sobre el cruel madero de la cruz, para estrechar a todos los seres humanos en tu abrazo salvador: Revístenos con tu Espíritu de tal manera que, extendiendo nuestras manos en amor, llevemos a quienes no te conocen a reconocerte y amarte; por el honor de tu Nombre."
+      ],
+      "label": "Por la misión de la Iglesia",
+      "slug": "mp_prayers_for_mission",
+      "style": "prayer",
+      "type": "text",
+      "language": "es",
+      "source": {
+        "citation": "p. 64",
+        "api": "",
+        "source": "LOC"
+      },
+      "hidden": false,
+      "lastRevision": 30
     }
   ]
 }

@@ -20,7 +20,7 @@
         "category": "Traducciones"
       },
       "readingB": {
-        "category": "Las Lecturas",
+        "category": "Lecturas",
         "label": "Segunda Lectura",
         "key": "readingB",
         "options": [
@@ -79,7 +79,7 @@
         ],
         "key": "readingC",
         "label": "Tercera Lectura",
-        "category": "Readings"
+        "category": "Lecturas"
       },
       "sermon": {
         "category": "Advanced",
@@ -201,7 +201,7 @@
         "label": "Incluir la Gloria Patri en el Salmo Invitatorio"
       },
       "readingA": {
-        "category": "Readings",
+        "category": "Lecturas",
         "key": "readingA",
         "label": "Primera Lectura",
         "options": [
@@ -338,7 +338,7 @@
     },
     "evening": false,
     "supplement": false,
-    "liturgyversions": ["bcp1979", "loc", "salterio1979"]
+    "liturgyversions": ["loc", "salterio1979"]
   },
   "language": "es",
   "date_modified": { "seconds": 1644863991, "nanoseconds": 700000000 },
@@ -427,7 +427,9 @@
       },
       "lookup": { "type": "category", "filter": "seasonal", "rotate": true },
       "category": ["Opening Sentence"],
-      "style": "short"
+      "style": "short",
+      "language": "es",
+      "version": "loc"
     },
     {
       "source": { "api": "", "source": "bcp1979", "citation": "p. 79" },
@@ -639,8 +641,8 @@
           "slug": "pascha_nostrum",
           "type": "psalm",
           "lastRevision": 0,
-          "language": "en",
-          "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
+          "language": "es",
+          "citation": "Corintios 5:7-8; Romanos 6:9-11; Corintios 15:20-22",
           "version_label": null,
           "label": "Cristo Nuestra Pascua",
           "category": ["Invitatory"],
@@ -721,57 +723,49 @@
             ],
             "mode": "and"
           },
-          "version": "bcp1979"
+          "version": "loc"
         },
         {
-          "version": "bcp1979",
+          "version": "loc",
           "hidden": false,
           "metadata": {
             "omit_antiphon": false,
             "number": null,
             "gloria": {
-              "version": "bcp1979",
-              "citation": null,
-              "sharing": {
-                "privacy": "public",
-                "collaborators": [],
-                "organization": "venite",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-                "status": "published"
-              },
-              "label": null,
-              "style": "gloria",
-              "version_label": "Rite II",
-              "category": [null],
               "slug": "gloria-patri",
-              "hidden": false,
-              "type": "refrain",
               "language": "en",
               "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ]
+                "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+                "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+              ],
+              "style": "gloria",
+              "hidden": false,
+              "citation": null,
+              "version": "loc",
+              "type": "refrain",
+              "category": [null],
+              "label": null
             },
             "insert_seasonal_antiphon": true,
             "latinname": null,
             "localname": "Venite",
             "omit_gloria": false
           },
-          "version_label": "Venite (BCP)",
+          "version_label": "Venite",
           "category": ["Invitatory"],
           "style": "invitatory",
-          "language": "en",
+          "language": "es",
           "value": [
             {
               "value": [
                 {
-                  "halfverse": "let us shout for joy to the Rock of our salvation.",
+                  "halfverse": "aclamemos con júbilo a la Roca que nos salva.",
                   "type": "psalm-verse",
-                  "verse": "Come, let us sing to the Lord; *"
+                  "verse": "Vengan, cantemos alegremente al Señor; *"
                 },
                 {
-                  "halfverse": "and raise a loud shout to him with psalms.",
-                  "verse": "Let us come before his presence with thanksgiving *",
+                  "halfverse": "vitoreándole con cánticos;",
+                  "verse": "Lleguemos ante su presencia con alabanza, *",
                   "type": "psalm-verse"
                 }
               ],
@@ -781,18 +775,18 @@
               "value": [
                 {
                   "type": "psalm-verse",
-                  "halfverse": "and a great King above all gods.",
-                  "verse": "For the Lord is a great God, *"
+                  "halfverse": "y Rey grande sobre todos los dioses.",
+                  "verse": "Porque el Señor es Dios grande, *"
                 },
                 {
-                  "halfverse": "and the heights of the hills are his also.",
+                  "halfverse": "y las alturas de los montes son suyas.",
                   "type": "psalm-verse",
-                  "verse": "In his hand are the caverns of the earth, *"
+                  "verse": "En su mano están las profundidades de la tierra, *"
                 },
                 {
-                  "halfverse": "and his hands have molded the dry land.",
+                  "halfverse": "y sus manos formaron la tierra seca.",
                   "type": "psalm-verse",
-                  "verse": "The sea is his, for he made it, *"
+                  "verse": "Suyo el mar, pues él lo hizo, *"
                 }
               ],
               "type": "psalm-section"
@@ -802,12 +796,12 @@
               "value": [
                 {
                   "type": "psalm-verse",
-                  "verse": "Come, let us bow down, and bend the knee, *",
-                  "halfverse": "and kneel before the Lord our Maker."
+                  "verse": "Vengan, adoremos y postrémonos; **",
+                  "halfverse": "arrodillémonos delante del Señor nuestro Hacedor;"
                 },
                 {
-                  "halfverse": "Oh, that today you would hearken to his voice!",
-                  "verse": "For he is our God,\nand we are the Pueblo of his pasture and the sheep of his hand. *",
+                  "halfverse": "¡Ojalá escuchen hoy su voz!",
+                  "verse": "Porque él es nuestro Dios;\nnosotros el pueblo de su dehesa, y ovejas de su mano. *",
                   "type": "psalm-verse"
                 }
               ]
@@ -829,10 +823,10 @@
             "mode": "or"
           },
           "slug": "venite",
-          "citation": "Psalm 95:1-7",
+          "citation": "Salmo 95:1-7",
           "source": {
-            "source": "bcp1979",
-            "citation": "p. 82",
+            "source": "LOC",
+            "citation": "p. 45",
             "api": "https://www.venite.app/api"
           },
           "sharing": {
@@ -846,8 +840,8 @@
         {
           "hidden": false,
           "source": {
-            "citation": "p. 82",
-            "source": "bcp1979",
+            "citation": "p. 45",
+            "source": "LOC",
             "api": "https://www.venite.app/api"
           },
           "style": "invitatory",
@@ -860,16 +854,16 @@
             "collaborators": []
           },
           "slug": "jubilate",
-          "citation": "Psalm 100",
-          "version": "bcp1979",
-          "version_label": "Jubilate (BCP)",
+          "citation": "Salmo 100",
+          "version": "loc",
+          "version_label": "Jubilate",
           "value": [
             {
               "value": [
                 {
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "halfverse": "sirvan al Señor con alegría;\nvengan ante su presencia con cánticos.",
                   "type": "psalm-verse",
-                  "verse": "Be joyful in the Lord, all you lands; *"
+                  "verse": "Regocíjense en el Señor, pueblos todos; *"
                 }
               ],
               "type": "psalm-section"
@@ -877,8 +871,8 @@
             {
               "value": [
                 {
-                  "verse": "Know this: The Lord himself is God; *",
-                  "halfverse": "he himself has made us, and we are his;\nwe are his Pueblo and the sheep of his pasture.",
+                  "verse": "Sepan que el Señor es Dios; *",
+                  "halfverse": "él nos hizo y somos suyos,\nsu pueblo y ovejas de su rebaño.",
                   "type": "psalm-verse"
                 }
               ],
@@ -888,8 +882,8 @@
               "type": "psalm-section",
               "value": [
                 {
-                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
-                  "halfverse": "give thanks to him and call upon his Name.",
+                  "verse": "Entren por sus puertas con acción de gracias,\nen sus atrios con alabanza; *",
+                  "halfverse": "denle gracias, y bendigan su Nombre;",
                   "type": "psalm-verse"
                 }
               ]
@@ -898,9 +892,9 @@
               "type": "psalm-section",
               "value": [
                 {
-                  "halfverse": "and his faithfulness endures from age to age.",
+                  "halfverse": "su fidelidad perdura de generación en generación.",
                   "type": "psalm-verse",
-                  "verse": "For the Lord is good;\nhis mercy is everlasting; *"
+                  "verse": "Porque el Señor es bueno;\npara siempre es su misericordia; *"
                 }
               ]
             },
@@ -915,38 +909,119 @@
             "insert_seasonal_antiphon": true,
             "omit_gloria": false,
             "gloria": {
-              "category": [null],
-              "type": "refrain",
-              "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "sharing": {
-                "collaborators": [],
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-                "organization": "venite",
-                "privacy": "public",
-                "status": "published"
-              },
-              "label": null,
-              "citation": null,
-              "hidden": false,
-              "version": "bcp1979",
               "slug": "gloria-patri",
-              "version_label": "Rite II",
               "language": "en",
-              "style": "gloria"
+              "value": [
+                "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+                "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+              ],
+              "style": "gloria",
+              "hidden": false,
+              "citation": null,
+              "version": "loc",
+              "type": "refrain",
+              "category": [null],
+              "label": null
             },
             "number": null
           },
           "type": "psalm"
         },
         {
-          "lookup": { "type": "slug" },
-          "label": "Psalm 95",
-          "category": ["Psalm"],
           "slug": "psalm_95",
-          "language": "en",
+          "type": "psalm",
+          "version_label": "Salmo 95",
+          "hidden": false,
+          "version": "loc",
+          "style": "psalm",
+          "language": "es",
+          "metadata": {
+            "number": "95",
+            "omit_antiphon": false,
+            "localname": "Salmo 95",
+            "omit_gloria": false,
+            "latinname": "Venite, exultemus"
+          },
+          "citation": null,
+          "category": ["Psalm"],
+          "source": {
+            "source": "LOC",
+            "citation": "p. 618"
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "number": "1",
+                  "type": "psalm-verse",
+                  "halfverse": "aclamemos con júbilo a la Roca que nos salva.",
+                  "verse": "Vengan, cantemos alegremente al Señor; *"
+                },
+                {
+                  "number": "2",
+                  "verse": "Lleguemos ante su presencia con alabanza, *",
+                  "type": "psalm-verse",
+                  "halfverse": "vitoreándole con cánticos;"
+                },
+                {
+                  "verse": "Porque el Señor es Dios grande, *",
+                  "type": "psalm-verse",
+                  "halfverse": "y Rey grande sobre todos los dioses.",
+                  "number": "3"
+                },
+                {
+                  "verse": "En su mano están las profundidades de la tierra, *",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": "y las alturas de los montes son suyas."
+                },
+                {
+                  "halfverse": "y sus manos formaron la tierra seca.",
+                  "verse": "Suyo el mar, pues él lo hizo, *",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Vengan, adoremos y postrémonos; *",
+                  "halfverse": "arrodillémonos delante del Señor nuestro Hacedor;",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "¡Ojalá escuchen hoy su voz!",
+                  "type": "psalm-verse",
+                  "verse": "Porque él es nuestro Dios;\nnosotros el pueblo de su dehesa, y ovejas de su mano. *",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "donde me tentaron sus antepasados.",
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "verse": "No endurezcan su corazón,\ncomo en Meribá, y en el día de Masá en el desierto, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "9",
+                  "verse": "Me pusieron a prueba, *",
+                  "halfverse": "aunque habían visto mis obras."
+                },
+                {
+                  "verse": "Durante cuarenta años aborrecí aquella generación, y dije: *",
+                  "type": "psalm-verse",
+                  "halfverse": "\"Es un pueblo que divaga de corazón; no reconoce mis caminos\".",
+                  "number": "10"
+                },
+                {
+                  "number": "11",
+                  "type": "psalm-verse",
+                  "verse": "Por tanto, juré en mi furor: *",
+                  "halfverse": "\"No entrarán en mi reposo\"."
+                }
+              ]
+            }
+          ],
+          "label": "Salmo 95",
           "condition": {
             "mode": "or",
             "conditions": [
@@ -959,32 +1034,7 @@
               },
               { "day_of_month": { "neq": "19" } }
             ]
-          },
-          "sharing": {
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "privacy": "public",
-            "collaborators": [],
-            "status": "published",
-            "organization": "venite"
-          },
-          "citation": null,
-          "version_label": "Ps. 95 (BCP)",
-          "metadata": {
-            "localname": "Psalm 95",
-            "omit_antiphon": false,
-            "latinname": "Venite, exultemus",
-            "number": "95",
-            "omit_gloria": false
-          },
-          "source": {
-            "citation": "p. 724",
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979"
-          },
-          "version": "bcp1979",
-          "type": "psalm",
-          "hidden": false,
-          "style": "psalm"
+          }
         }
       ],
       "metadata": { "editor_selected": 0, "selected": 0 },
@@ -998,6 +1048,92 @@
       "type": "option",
       "value": [
         {
+          "source": {
+            "source": "LOC",
+            "api": "https://www.venite.app/api",
+            "citation": "p. 46"
+          },
+          "sharing": {
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public"
+          },
+          "slug": "pascha_nostrum",
+          "type": "psalm",
+          "lastRevision": 0,
+          "language": "es",
+          "citation": "Corintios 5:7-8; Romanos 6:9-11; Corintios 15:20-22",
+          "version_label": null,
+          "label": "Cristo Nuestra Pascua",
+          "category": ["Invitatory"],
+          "style": "invitatory",
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "¡Celebremos la fiesta!",
+                  "verse": "¡Aleluya!\nCristo, nuestra Pascua, se ha sacrificado por nosotros. *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "No con la vieja levadura, la levadura de malicia y de maldad,",
+                  "halfverse": "sino con el pan ázimo de sinceridad y verdad. ¡Aleluya!"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "verse": "Cristo, siendo resucitado de los muertos, ya no muere; *",
+                  "halfverse": "la muerte ya no tiene señorío sobre él.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "mas su vida es un vivir para Dios.",
+                  "verse": "Su muerte fue un morir al pecado de una vez para siempre, *"
+                },
+                {
+                  "halfverse": "pero vivos para Dios en Jesucristo nuestro Señor. ¡Aleluya!",
+                  "verse": "Así también ustedes, considérense muertos al pecado, *",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "primicia de los que durmieron;",
+                  "verse": "Cristo ha sido resucitado de los muertos, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Porque habiendo venido por un hombre la muerte, *",
+                  "type": "psalm-verse",
+                  "halfverse": "también por un hombre vino la resurrección de los muertos."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "así también eén n Cro todos serán vivificadosad¡os ¡Aya!uya!",
+                  "verse": "Pues así como en Adán mueren todos, *"
+                }
+              ]
+            }
+          ],
+          "metadata": {
+            "localname": "Christ our Passover",
+            "omit_gloria": true,
+            "latinname": "Pascha Nostrum",
+            "number": null,
+            "omit_antiphon": false
+          },
+          "hidden": false,
           "condition": {
             "conditions": [
               {
@@ -1009,268 +1145,76 @@
             ],
             "mode": "and"
           },
-          "slug": "pascha_nostrum",
-          "metadata": {
-            "omit_gloria": true,
-            "number": null,
-            "localname": "Christ our Passover",
-            "latinname": "Pascha Nostrum",
-            "omit_antiphon": false
-          },
-          "version": "bcp1979",
-          "language": "en",
-          "value": [
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "therefore let us keep the feast,",
-                  "verse": "Alleluia.\nChrist our Passover has been sacrificed for us; *"
-                },
-                {
-                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
-                  "type": "psalm-verse",
-                  "verse": "Not with the old leaven, the leaven of malice and evil, *"
-                }
-              ]
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "death no longer has dominion over him.",
-                  "verse": "Christ being raised from the dead will never die again; *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "The death that he died, he died to sin, once for all; *",
-                  "halfverse": "but the life he lives, he lives to God.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and alive to God in Jesus Christ our Lord. Alleluia.",
-                  "verse": "So also consider yourselves dead to sin, *"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "verse": "Christ has been raised from the dead, *",
-                  "halfverse": "the first fruits of those who have fallen asleep.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "by a man has come also the resurrection of the dead.",
-                  "verse": "For since by a man came death, * "
-                },
-                {
-                  "halfverse": "so also in Christ shall all be made alive. Alleluia.",
-                  "type": "psalm-verse",
-                  "verse": "For as in Adam all die, *"
-                }
-              ]
-            }
-          ],
-          "lastRevision": 0,
-          "label": "Christ our Passover",
-          "source": {
-            "source": "bcp1979",
-            "citation": "p. 83",
-            "api": "https://www.venite.app/api"
-          },
-          "version_label": null,
-          "sharing": {
-            "privacy": "public",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-            "collaborators": [],
-            "status": "published",
-            "organization": "venite"
-          },
-          "type": "psalm",
-          "hidden": false,
-          "style": "invitatory",
-          "citation": "1 Cor. 5:7-8; Romans 6:9-11; 1 Cor. 15:20-22",
-          "category": ["Invitatory"]
+          "version": "loc"
         },
         {
-          "value": [
-            {
-              "value": [
-                {
-                  "verse": "Come, let us sing to the Lord; *",
-                  "halfverse": "let us shout for joy to the Rock of our salvation.",
-                  "type": "psalm-verse"
-                },
-                {
-                  "type": "psalm-verse",
-                  "halfverse": "and raise a loud shout to him with psalms.",
-                  "verse": "Let us come before his presence with thanksgiving *"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "and a great King above all gods.",
-                  "verse": "For the Lord is a great God, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "verse": "In his hand are the caverns of the earth, *",
-                  "type": "psalm-verse",
-                  "halfverse": "and the heights of the hills are his also."
-                },
-                {
-                  "halfverse": "and his hands have molded the dry land.",
-                  "type": "psalm-verse",
-                  "verse": "The sea is his, for he made it, *"
-                }
-              ],
-              "type": "psalm-section"
-            },
-            {
-              "value": [
-                {
-                  "halfverse": "and kneel before the Lord our Maker.",
-                  "verse": "Come, let us bow down, and bend the knee, *",
-                  "type": "psalm-verse"
-                },
-                {
-                  "halfverse": "Oh, that today you would hearken to his voice!",
-                  "type": "psalm-verse",
-                  "verse": "For he is our God,\nand we are the Pueblo of his pasture and the sheep of his hand. *"
-                }
-              ],
-              "type": "psalm-section"
-            }
-          ],
-          "sharing": {
-            "collaborators": [],
-            "status": "published",
-            "privacy": "public",
-            "organization": "venite",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-          },
-          "category": ["Invitatory"],
-          "citation": "Psalm 95:1-7",
-          "language": "en",
-          "condition": {
-            "conditions": [
-              {
-                "preference": {
-                  "is": false,
-                  "key": "psalmCycle",
-                  "value": "bcp1979_30day_psalter"
-                }
-              },
-              { "day_of_month": { "neq": "19" } }
-            ],
-            "mode": "or"
-          },
-          "label": "Venite",
-          "source": {
-            "source": "bcp1979",
-            "citation": "p. 82",
-            "api": "https://www.venite.app/api"
-          },
-          "slug": "venite",
+          "version": "loc",
           "hidden": false,
-          "version": "bcp1979",
-          "style": "invitatory",
-          "type": "psalm",
           "metadata": {
             "omit_antiphon": false,
-            "insert_seasonal_antiphon": true,
             "number": null,
-            "changeable": false,
-            "omit_gloria": true,
+            "insert_seasonal_antiphon": true,
             "latinname": null,
-            "localname": "Venite"
+            "localname": "Venite",
+            "omit_gloria": true
           },
-          "version_label": "Venite (BCP)"
-        },
-        {
-          "version_label": "Jubilate (BCP)",
-          "sharing": {
-            "status": "published",
-            "organization": "venite",
-            "collaborators": [],
-            "privacy": "public",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-          },
-          "source": {
-            "api": "https://www.venite.app/api",
-            "source": "bcp1979",
-            "citation": "p. 82"
-          },
-          "type": "psalm",
-          "style": "invitatory",
+          "version_label": "Venite",
           "category": ["Invitatory"],
-          "citation": "Psalm 100",
-          "version": "bcp1979",
+          "style": "invitatory",
+          "language": "es",
           "value": [
             {
               "value": [
                 {
-                  "verse": "Be joyful in the Lord, all you lands; *",
-                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song.",
+                  "halfverse": "aclamemos con júbilo a la Roca que nos salva.",
+                  "type": "psalm-verse",
+                  "verse": "Vengan, cantemos alegremente al Señor; *"
+                },
+                {
+                  "halfverse": "vitoreándole con cánticos;",
+                  "verse": "Lleguemos ante su presencia con alabanza, *",
                   "type": "psalm-verse"
                 }
               ],
               "type": "psalm-section"
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "he himself has made us, and we are his;\nwe are his Pueblo and the sheep of his pasture.",
-                  "verse": "Know this: The Lord himself is God; *",
-                  "type": "psalm-verse"
-                }
-              ]
-            },
-            {
-              "type": "psalm-section",
-              "value": [
-                {
-                  "halfverse": "give thanks to him and call upon his Name.",
-                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
-                  "type": "psalm-verse"
-                }
-              ]
             },
             {
               "value": [
                 {
                   "type": "psalm-verse",
-                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
-                  "halfverse": "and his faithfulness endures from age to age."
+                  "halfverse": "y Rey grande sobre todos los dioses.",
+                  "verse": "Porque el Señor es Dios grande, *"
+                },
+                {
+                  "halfverse": "y las alturas de los montes son suyas.",
+                  "type": "psalm-verse",
+                  "verse": "En su mano están las profundidades de la tierra, *"
+                },
+                {
+                  "halfverse": "y sus manos formaron la tierra seca.",
+                  "type": "psalm-verse",
+                  "verse": "Suyo el mar, pues él lo hizo, *"
                 }
               ],
               "type": "psalm-section"
             },
-            { "type": "psalm-section", "value": [] }
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Vengan, adoremos y postrémonos; **",
+                  "halfverse": "arrodillémonos delante del Señor nuestro Hacedor;"
+                },
+                {
+                  "halfverse": "¡Ojalá escuchen hoy su voz!",
+                  "verse": "Porque él es nuestro Dios;\nnosotros el pueblo de su dehesa, y ovejas de su mano. *",
+                  "type": "psalm-verse"
+                }
+              ]
+            }
           ],
-          "hidden": false,
-          "slug": "jubilate",
-          "metadata": {
-            "number": null,
-            "omit_gloria": true,
-            "localname": "Jubilate",
-            "latinname": null,
-            "insert_seasonal_antiphon": true,
-            "omit_antiphon": false
-          },
-          "language": "en",
-          "label": "Jubilate"
-        },
-        {
+          "label": "Venite",
           "type": "psalm",
           "condition": {
             "conditions": [
@@ -1285,35 +1229,204 @@
             ],
             "mode": "or"
           },
-          "citation": null,
+          "slug": "venite",
+          "citation": "Salmo 95:1-7",
+          "source": {
+            "source": "LOC",
+            "citation": "p. 45",
+            "api": "https://www.venite.app/api"
+          },
           "sharing": {
-            "status": "published",
-            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "collaborators": [],
             "privacy": "public",
-            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-          },
-          "label": "Psalm 95",
+            "organization": "venite",
+            "status": "published"
+          }
+        },
+        {
           "hidden": false,
           "source": {
-            "api": "https://www.venite.app/api",
-            "citation": "p. 724",
-            "source": "bcp1979"
+            "citation": "p. 45",
+            "source": "LOC",
+            "api": "https://www.venite.app/api"
           },
-          "slug": "psalm_95",
-          "version": "bcp1979",
+          "style": "invitatory",
+          "category": ["Invitatory"],
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "slug": "jubilate",
+          "citation": "Salmo 100",
+          "version": "loc",
+          "version_label": "Jubilate",
+          "value": [
+            {
+              "value": [
+                {
+                  "halfverse": "sirvan al Señor con alegría;\nvengan ante su presencia con cánticos.",
+                  "type": "psalm-verse",
+                  "verse": "Regocíjense en el Señor, pueblos todos; *"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "verse": "Sepan que el Señor es Dios; *",
+                  "halfverse": "él nos hizo y somos suyos,\nsu pueblo y ovejas de su rebaño.",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Entren por sus puertas con acción de gracias,\nen sus atrios con alabanza; *",
+                  "halfverse": "denle gracias, y bendigan su Nombre;",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "su fidelidad perdura de generación en generación.",
+                  "type": "psalm-verse",
+                  "verse": "Porque el Señor es bueno;\npara siempre es su misericordia; *"
+                }
+              ]
+            },
+            { "type": "psalm-section", "value": [] }
+          ],
           "language": "en",
-          "lookup": { "type": "slug" },
-          "version_label": "Ps. 95 (BCP)",
+          "label": "Jubilate",
           "metadata": {
+            "latinname": null,
+            "localname": "Jubilate",
+            "omit_antiphon": false,
+            "insert_seasonal_antiphon": true,
             "omit_gloria": true,
-            "latinname": "Venite, exultemus",
-            "number": "95",
-            "localname": "Psalm 95",
-            "omit_antiphon": false
+            "number": null
           },
+          "type": "psalm"
+        },
+        {
+          "slug": "psalm_95",
+          "type": "psalm",
+          "version_label": "Salmo 95",
+          "hidden": false,
+          "version": "loc",
+          "style": "psalm",
+          "language": "es",
+          "metadata": {
+            "number": "95",
+            "omit_antiphon": false,
+            "localname": "Salmo 95",
+            "omit_gloria": false,
+            "latinname": "Venite, exultemus"
+          },
+          "citation": null,
           "category": ["Psalm"],
-          "style": "psalm"
+          "source": {
+            "source": "LOC",
+            "citation": "p. 618"
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "number": "1",
+                  "type": "psalm-verse",
+                  "halfverse": "aclamemos con júbilo a la Roca que nos salva.",
+                  "verse": "Vengan, cantemos alegremente al Señor; *"
+                },
+                {
+                  "number": "2",
+                  "verse": "Lleguemos ante su presencia con alabanza, *",
+                  "type": "psalm-verse",
+                  "halfverse": "vitoreándole con cánticos;"
+                },
+                {
+                  "verse": "Porque el Señor es Dios grande, *",
+                  "type": "psalm-verse",
+                  "halfverse": "y Rey grande sobre todos los dioses.",
+                  "number": "3"
+                },
+                {
+                  "verse": "En su mano están las profundidades de la tierra, *",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": "y las alturas de los montes son suyas."
+                },
+                {
+                  "halfverse": "y sus manos formaron la tierra seca.",
+                  "verse": "Suyo el mar, pues él lo hizo, *",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Vengan, adoremos y postrémonos; *",
+                  "halfverse": "arrodillémonos delante del Señor nuestro Hacedor;",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "¡Ojalá escuchen hoy su voz!",
+                  "type": "psalm-verse",
+                  "verse": "Porque él es nuestro Dios;\nnosotros el pueblo de su dehesa, y ovejas de su mano. *",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "donde me tentaron sus antepasados.",
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "verse": "No endurezcan su corazón,\ncomo en Meribá, y en el día de Masá en el desierto, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "9",
+                  "verse": "Me pusieron a prueba, *",
+                  "halfverse": "aunque habían visto mis obras."
+                },
+                {
+                  "verse": "Durante cuarenta años aborrecí aquella generación, y dije: *",
+                  "type": "psalm-verse",
+                  "halfverse": "\"Es un pueblo que divaga de corazón; no reconoce mis caminos\".",
+                  "number": "10"
+                },
+                {
+                  "number": "11",
+                  "type": "psalm-verse",
+                  "verse": "Por tanto, juré en mi furor: *",
+                  "halfverse": "\"No entrarán en mi reposo\"."
+                }
+              ]
+            }
+          ],
+          "label": "Salmo 95",
+          "condition": {
+            "mode": "or",
+            "conditions": [
+              {
+                "preference": {
+                  "key": "psalmCycle",
+                  "value": "bcp1979_30day_psalter",
+                  "is": false
+                }
+              },
+              { "day_of_month": { "neq": "19" } }
+            ]
+          }
         }
       ],
       "condition": {
@@ -1937,11 +2050,11 @@
       }
     },
     {
-      "version": "bcp1979",
+      "version": "loc",
       "style": "prayer",
       "metadata": { "omit_response": false },
       "type": "text",
-      "language": "en",
+      "language": "es",
       "slug": "mp_prayers_for_mission",
       "value": [""],
       "category": [],
@@ -2070,7 +2183,9 @@
       "hidden": false,
       "category": ["Closing Sentence"],
       "style": "short",
-      "type": "bible-reading"
+      "type": "bible-reading",
+      "language": "es",
+      "version": "loc"
     },
     {
       "condition": {

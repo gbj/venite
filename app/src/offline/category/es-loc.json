@@ -1792,5 +1792,821 @@
     "language": "es",
     "version": "loc",
     "label": "Natividad de San Juan Bautista"
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Advent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 37" },
+    "citation": "San Marcos 13:35, 36",
+    "value": [
+      {
+        "text": "Velen, porque no saben cuándo vendrá el señor de la casa; si al anochecer, o a la medianoche, o al canto del gallo, o a la mañana; para que cuando venga de repente, no los halle durmiendo."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Advent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 37" },
+    "citation": "Isaías 40:3",
+    "value": [
+      {
+        "text": "Preparen camino al Señor; enderezen calzada en la soledad a nuestro Dios."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Advent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 37" },
+    "citation": "(Isaías 40:5)",
+    "value": [
+      {
+        "text": "Se manifestará la gloria del Señor, y toda carne juntamente la verá."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Christmas"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 37" },
+    "citation": "San Lucas 2:10, 11",
+    "value": [
+      {
+        "text": "He aquí les doy nuevas de gran gozo, que será para todo el pueblo: que les ha nacido hoy, en la ciudad de David, un Salvador, que es Cristo el Señor."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Christmas"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 37" },
+    "citation": "Apocalipsis 21:3",
+    "value": [
+      {
+        "text": "He aquí el tabernáculo de Dios con los hombres, y él morará con ellos; y ellos serán su pueblo, y Dios mismo estará con ellos como su Dios."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Epiphany"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "Isaías 60:3",
+    "value": [
+      {
+        "text": "Andarán las naciones a tu luz, y los reyes al resplandor de tu nacimiento."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Epiphany"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "Isaías 49:6b",
+    "value": [
+      {
+        "text": "Te di por luz de las naciones, para que seas mi salvación hasta lo postrero de la tierra."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Epiphany"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "Malaquías 1:11",
+    "value": [
+      {
+        "text": "Desde donde el sol nace hasta donde se pone, es grande mi Nombre entre las naciones; y en todo lugar se ofrece a mi Nombre incienso y ofrenda limpia, porque grande es mi Nombre entre las naciones, dice el Señor de los ejércitos."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Lent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "1 San Juan 1:8, 9",
+    "value": [
+      {
+        "text": "Si decimos que no tenemos pecado, nos engañamos a nosotros mismos, y la verdad no está en nosotros. Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados, y limpiarnos de toda maldad."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Lent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "Joel 2:13",
+    "value": [
+      {
+        "text": "Rasguen su corazón, y no sus vestidos, y conviértanse al Señor su Dios; porque misericordioso es y clemente, tardo para la ira y grande en misericordia, y que se duele del castigo."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Lent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "San Lucas 15:18, 19",
+    "value": [
+      {
+        "text": "Me levantaré e iré a mi padre, y le diré: “Padre, he pecado contra el cielo y contra ti. Ya no soy digno de ser llamado tu hijo.”"
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Lent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "Daniel 9:9, 10",
+    "value": [
+      {
+        "text": "Del Señor nuestro Dios es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado, y no obedecimos a la voz del Señor nuestro Dios, para Andar en sus leyes que él puso delante de nosotros."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Lent"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 38" },
+    "citation": "San Marcos 8:34",
+    "value": [
+      {
+        "text": "Jesús dijo: “Si alguno quiere venir en pos de mí, niéguese a sí mismo, y tome su cruz, y sígame.”"
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "HolyWeek"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Isaías 53:6",
+    "value": [
+      {
+        "text": "Todos nosotros nos descarriamos como ovejas, cada cual se apartó por su camino; mas el Señor cargó en él el pecado de todos nosotros."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "HolyWeek"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Lamentaciones 1:12",
+    "value": [
+      {
+        "text": "¿No les conmueve a cuantos pasan por el camino? Miren, y vean si hay dolor como mi dolor que me ha venido; porque el Señor me ha angustiado."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "",
+    "value": [
+      {
+        "text": [
+          "¡Aleluya! Cristo ha resucitado.",
+          "Es verdad! El Señor ha resucitado. ¡Aleluya!"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Salmo 118:24",
+    "value": [
+      {
+        "text": "Este es el día en que actuó el Señor; regocijémonos y alegrémonos en él."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "1 Corintios 15:57",
+    "value": [
+      {
+        "text": "Gracias sean dadas a Dios, que nos da la victoria por medio de nuestro Señor Jesucristo."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Colosenses 3:1",
+    "value": [
+      {
+        "text": "Si han resucitado con Cristo, busquen las cosas de arriba, donde está Cristo sentado a la diestra de Dios."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Hebreos 9:24",
+    "value": [
+      {
+        "text": "No entró Cristo en el santuario hecho de mano, figura del verdadero, sino en el cielo mismo para presentarse ahora por nosotros ante Dios."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Easter", "Ascension", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 39" },
+    "citation": "Hechos 1:8",
+    "value": [
+      {
+        "text": "Recibirán poder, cuando haya venido sobre ustedes el Espíritu Santo, y me serán testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "TrinitySunday"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Apocalipsis 4:8",
+    "value": [
+      {
+        "text": "Santo, santo, santo es el Señor Dios todopoderoso, el que era, el que es y el que ha de venir."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Saints"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Colosenses 1:12",
+    "value": [
+      {
+        "text": "Damos gracias al Padre que nos hizo aptos para participar de la herencia de los santos en luz."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Saints"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Efesios 2:19",
+    "value": [
+      {
+        "text": "Ya no son extranjeros ni advenedizos, sino conciudadanos de los santos, y miembros de la familia de Dios."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Saints"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Salmo 19:4",
+    "value": [
+      {
+        "text": "Por toda la tierra salió su sonido, y hasta el extremo del mundo su mensaje."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Thanksgiving"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Salmo 105:1",
+    "value": [
+      {
+        "text": "Den gracias al Señor, invoquen su Nombre; den a conocer sus hazañas entre los pueblos."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Filipenses 1:2",
+    "value": [
+      {
+        "text": "Gracia y paz a ustedes, de Dios nuestro Padre y del Señor Jesucristo."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Salmo 122:1",
+    "value": [
+      { "text": "Me alegré cuando me dijeron: “Vamos a la casa del Señor.”" }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Salmo 19:14",
+    "value": [
+      {
+        "text": "Sean gratos los dichos de mi boca y la meditación de mi corazón delante de ti, oh Señor, Roca mía y Redentor mío."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Salmo 43:3",
+    "value": [
+      {
+        "text": "Envía tu luz y tu verdad; que éstas me guíen, y me conduzcan a tu santo monte, a tus moradas."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 40" },
+    "citation": "Habacuc 2:20",
+    "value": [
+      {
+        "text": "El Señor está en su santo templo; calle delante de él toda la tierra."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 41" },
+    "citation": "San Juan 4:23",
+    "value": [
+      {
+        "text": "La hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 41" },
+    "citation": "Isaías 57:15",
+    "value": [
+      {
+        "text": "Así dijo el Alto y Sublime, el que habita la eternidad, y cuyo Nombre es el Santo: “Yo habito en la altura y la santidad, y con el quebrantado y humilde de espíritu, para hacer vivir el espíritu de los humildes, y para vivificar el corazón de los quebrantados.”"
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 80" },
+    "citation": "Salmo 141:2",
+    "value": [
+      {
+        "text": "Ascienda mi oración como incienso ante tu presencia, él alzar de mis manos como el sacrificio vespertino."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 80" },
+    "citation": "Filipenses 1:2",
+    "value": [
+      {
+        "text": "Gracia y paz a ustedes, de Dios nuestro Padre y del Señor Jesucristo."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 80" },
+    "citation": "Salmo 96:9",
+    "value": [
+      {
+        "text": "Adoren al Señor en la hermosura de la santidad; tiemble delante de él toda la tierra."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 80" },
+    "citation": "Salmo 74:15, 16",
+    "value": [
+      {
+        "text": "Tuyo es el día, tuya también la noche; tú estableciste la luna y el sol. Tú fijaste todos los linderos de la tierra; el verano y el invierno tú los formaste."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 80" },
+    "citation": "Salmo 16:7, 8",
+    "value": [
+      {
+        "text": "Bendeciré al Señor que me aconseja; aun en las noches me enseña mi corazón. Al Señor he puesto siempre delante de mí; porque está a mi diestra no seré conmovido."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 81" },
+    "citation": "Amós 5:8",
+    "value": [
+      {
+        "text": "Busquen al que hace las Pléyades y el Orión, y vuelve las tinieblas en mañana, y hace oscurecer el día como noche; el que llama a las aguas del mar, y las derrama sobre la faz de la tierra; el Señor es su Nombre."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 81" },
+    "citation": "Salmo 139:10, 11",
+    "value": [
+      {
+        "text": "Si dijere: “Ciertamente las tinieblas me encubrirán, y aún la luz se hará noche alrededor de mí,” las tinieblas no son oscuras para ti; la noche resplandece como el día; lo mismo te son las tinieblas que la luz."
+      }
+    ]
+  },
+  {
+    "type": "bible-reading",
+    "style": "short",
+    "category": ["Opening Sentence", "Evening"],
+    "language": "es",
+    "version": "loc",
+    "metadata": { "omit_response": true, "response": null },
+    "source": { "api": "", "source": "LOC", "citation": "p. 81" },
+    "citation": "San Juan 8:12",
+    "value": [
+      {
+        "text": "Jesus dijo: “Yo soy la luz del mundo; el que me sigue, no andará en tinieblas, sino que tendrá la luz de la vida.”"
+      }
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Advent"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 43" },
+    "value": ["Nuestro Rey y Salvador se acerca: vengan y adorémosle."]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Christmas"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 43" },
+    "value": ["¡Aleluya! Un niño nos es nacido: vengan y adorémosle. ¡Aleluya!"]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": [
+      "Seasonal Antiphon",
+      "Epiphany",
+      "the-transfiguration",
+      "holy-cross"
+    ],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 43" },
+    "value": ["El Señor ha manifestado su gloria: vengan y adorémosle."]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Lent", "HolyWeek"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 43" },
+    "value": ["Misericordioso y clemente es el Señor: vengan y adorémosle."]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Easter"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 43" },
+    "value": [
+      "¡Aleluya! Es verdad, el Señor ha resucitado: vengan y adorémosle. ¡Aleluya!"
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Ascension"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "¡Aleluya! Cristo el Señor ascendió a los cielos: vengan y adorémosle. ¡Aleluya!"
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Pentecost"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "¡Aleluya! El Espíritu del Señor renueva la faz de la tierra: vengan y adorémosle. ¡Aleluya!"
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "TrinitySunday"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "Padre, Hijo y Espíritu Santo, un solo Dios: vengan y adorémosle."
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": ["La tierra es del Señor, pues él la hizo: vengan y adorémosle."]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "Adoren al Señor en la hermosura de la santidad: vengan y adorémosle."
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "OrdinaryTime"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": ["La misericordia del Señor es para siempre: vengan y adorémosle."]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Incarnation"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "[¡Aleluya!] El Verbo se hizo carne y habitó entre nosotros: vengan y adorémosle. [¡Aleluya!]"
+    ]
+  },
+  {
+    "type": "refrain",
+    "style": "antiphon",
+    "category": ["Seasonal Antiphon", "Saints"],
+    "language": "es",
+    "version": "loc",
+    "source": { "api": "", "source": "LOC", "citation": "p. 44" },
+    "value": [
+      "[¡Aleluya!] El Señor es glorioso en sus santos: vengan y adorémosle. [¡Aleluya!]"
+    ]
+  },
+  {
+    "language": "es",
+    "style": "short",
+    "category": ["Closing Sentence"],
+    "value": [
+      {
+        "text": "La gracia de nuestro Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo sean con todos nosotros, ahora y siempre."
+      }
+    ],
+    "version": "loc",
+    "type": "bible-reading",
+    "citation": "2 Corintios 13:14",
+    "metadata": {
+      "response": "Amén."
+    }
+  },
+  {
+    "language": "es",
+    "style": "short",
+    "category": ["Closing Sentence"],
+    "value": [
+      {
+        "text": "La gracia de nuestro Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo sean con todos nosotros, ahora y siempre."
+      }
+    ],
+    "version": "loc",
+    "type": "bible-reading",
+    "citation": "2 Corintios 13:14",
+    "metadata": {
+      "response": "Amén."
+    }
+  },
+  {
+    "language": "es",
+    "style": "short",
+    "category": ["Closing Sentence"],
+    "value": [
+      {
+        "text": "Que el Dios de la esperanza nos colme de todo gozo y paz en nuestra fe, por el poder del Espíritu Santo."
+      }
+    ],
+    "version": "loc",
+    "type": "bible-reading",
+    "citation": "Romanos 15:13",
+    "metadata": {
+      "response": "Amén."
+    }
+  },
+  {
+    "language": "es",
+    "style": "short",
+    "category": ["Closing Sentence"],
+    "value": [
+      {
+        "text": "Gloria a Dios, cuyo poder, actuando en nosotros, puede realizar todas las cosas infinitamente mejor de lo que podemos pedir o pensar: Gloria a él en la Iglesia de generación en generación, y en Cristo Jesús por los siglos de los siglos."
+      }
+    ],
+    "version": "loc",
+    "type": "bible-reading",
+    "citation": "Efesios 3:20, 21",
+    "metadata": {
+      "response": "Amén."
+    }
   }
 ]
