@@ -720,15 +720,26 @@ export class PrayPage implements OnInit, OnDestroy {
     );
 
     const pAndTs$ = this.doc$.pipe(
+      tap((doc) => console.log("pAndTs doc", doc.language, doc.version)),
       switchMap((doc) =>
-        this.documents.findDocumentsByCategory(
-          ["Prayers and Thanksgivings"],
-          doc?.language ?? "en",
-          ["bcp1979"]
-        )
+        combineLatest([
+          this.documents
+            .findDocumentsByCategory(
+              ["Prayers and Thanksgivings"],
+              doc?.language ?? "en",
+              [doc?.version == "LOC" ? "loc" : "bcp1979"]
+            )
+            .pipe(startWith([])),
+          of(doc.language),
+        ])
       ),
-      filter((docs) => docs?.length > 1),
-      map((docs) => docs.sort((a, b) => (a.slug <= b.slug ? -1 : 1)))
+      filter(([docs]) => docs?.length > 1),
+      tap(([docs]) => console.log("pAndT docs = ", docs)),
+      map(([docs, language]) =>
+        language == "es"
+          ? docs
+          : docs.sort((a, b) => (a.slug <= b.slug ? -1 : 1))
+      )
     );
 
     this.swapData$ = combineLatest([

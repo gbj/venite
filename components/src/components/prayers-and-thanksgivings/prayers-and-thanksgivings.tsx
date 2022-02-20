@@ -4,8 +4,10 @@ import { Text, Change } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './prayers-and-thanksgivings.i18n.en.json';
+import ES from './prayers-and-thanksgivings.i18n.es.json';
 const LOCALE = {
   'en': EN,
+  'es': ES
 };
 @Component({
   tag: 'ldf-prayers-and-thanksgivings',
@@ -112,7 +114,7 @@ export class PrayersAndThanksgivingsComponent {
     }
 
     const options = !this.filter ? this.currentOptions || [] :
-      (this.currentOptions || []).filter(doc => doc.label?.toLowerCase()?.includes(this.filter.toLowerCase()) || (doc.value || [])[0]?.toLowerCase()?.includes(this.filter.toLowerCase()));
+      (this.currentOptions || []).filter(doc => doc.label?.toLowerCase()?.includes(this.filter.toLowerCase()) || JSON.stringify(doc.value)?.toLowerCase()?.includes(this.filter.toLowerCase()));
 
     const categories = Array.from(groupBy(options, (item : Text) => (item.category || [])[1]));
 
@@ -134,12 +136,23 @@ export class PrayersAndThanksgivingsComponent {
           <h3 class="padded">{subcategory}</h3>,
           ...subvalues
             .sort((a, b) => Number(a.label?.split('.')[0]) < Number(b.label?.split('.')[0]) ? -1 : 1)
-            .map(option => <ion-item button onClick={() => this.addPrayer(option)}>
-            <ion-label>
-              <h3>{option.label}</h3>
-              <p>{option.value[0].replace(/\*/g, '').replace("  ", " ")}</p>
-            </ion-label>
-          </ion-item>)
+            .map(option => {
+              let summary;
+              if (option.type == "text") {
+                summary = option.value[0]?.replace(/\*/g, '')?.replace("  ", " ");
+              } else if (option.type == "liturgy") {
+                summary = option.value[0]?.value[0]?.replace(/\*/g, '')?.replace("  ", " ")
+              } else if (option.type == "responsive-prayer") {
+                summary = option.value[0]?.text;
+              }
+              summary = summary || "";
+              return <ion-item button onClick={() => this.addPrayer(option)}>
+                <ion-label>
+                  <h3>{option.label}</h3>
+                  <p>{summary}</p>
+                </ion-label>
+              </ion-item>
+            })
         ])
       ])}
     </ion-list>;

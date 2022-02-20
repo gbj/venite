@@ -2091,7 +2091,13 @@
       ],
       "hidden": false
     },
-    { "type": "text", "hidden": false, "style": "authorized-prayers" },
+    {
+      "type": "text",
+      "hidden": false,
+      "style": "authorized-prayers",
+      "language": "es",
+      "version": "loc"
+    },
     {
       "hidden": false,
       "type": "rubric",
