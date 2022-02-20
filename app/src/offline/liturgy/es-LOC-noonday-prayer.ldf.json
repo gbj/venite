@@ -1,0 +1,428 @@
+{
+  "date_modified": { "seconds": 1645388951, "nanoseconds": 408000000 },
+  "label": "Mediodía",
+  "lastRevision": 394,
+  "date_created": { "nanoseconds": 37000000, "seconds": 1645388544 },
+  "type": "liturgy",
+  "hidden": false,
+  "slug": "noonday-prayer",
+  "version": "LOC",
+  "source": { "api": "", "citation": "", "source": "" },
+  "value": [
+    {
+      "type": "heading",
+      "metadata": { "level": 1 },
+      "hidden": false,
+      "value": ["Oficio para el Mediodía"]
+    },
+    {
+      "label": "",
+      "hidden": false,
+      "style": "date",
+      "citation": "",
+      "value": [""],
+      "type": "heading",
+      "metadata": { "level": 2 }
+    },
+    {
+      "metadata": { "level": 2 },
+      "type": "heading",
+      "label": "",
+      "citation": "",
+      "hidden": false,
+      "value": [""],
+      "style": "day"
+    },
+    {
+      "hidden": false,
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "collaborators": [],
+        "status": "published"
+      },
+      "slug": "the-angelus",
+      "version": "LOC",
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "angelus", "value": "before", "is": true } }
+        ],
+        "mode": "and"
+      },
+      "language": "es",
+      "metadata": { "evening": false, "liturgyversions": [], "pronouns": [] },
+      "label": "The Angelus",
+      "lastRevision": 61,
+      "category": [],
+      "type": "liturgy",
+      "source": { "citation": "", "source": "", "api": "" },
+      "lookup": { "type": "slug", "allow_multiple": false }
+    },
+    {
+      "hidden": false,
+      "value": ["Oficio para el Mediodía"],
+      "style": "text",
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "before", "is": true, "key": "angelus" } }
+        ],
+        "mode": "and"
+      },
+      "type": "heading",
+      "metadata": { "level": 1 }
+    },
+    {
+      "value": [
+        {
+          "text": "Oh Dios, dígnate librarnos.",
+          "label": "Oficiante",
+          "response": ""
+        },
+        { "label": "Pueblo", "text": "Señor, apresúrate a socorrernos." }
+      ],
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces"
+    },
+    { "value": ["Oficiante y Pueblo:"], "type": "rubric" },
+    {
+      "slug": "gloria-patri",
+      "language": "en",
+      "value": [
+        "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      ],
+      "style": "gloria",
+      "hidden": false,
+      "citation": null,
+      "version": "loc",
+      "type": "refrain",
+      "category": [null],
+      "label": null
+    },
+    {
+      "type": "text",
+      "style": "text",
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "except": ["Lent", "HolyWeek"], "only": [] } }
+        ]
+      },
+      "value": ["¡Aleluya!"]
+    },
+    {
+      "style": "psalm",
+      "version_label": null,
+      "version": "salterio1979",
+      "hidden": false,
+      "citation": null,
+      "slug": "psalm_119_nun",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "metadata": {
+        "omit_gloria": false,
+        "latinname": "Lucerna pedibus meis",
+        "insert_seasonal_antiphon": false,
+        "changeable": false,
+        "localname": "Salmo 119: Nun",
+        "number": "119",
+        "omit_antiphon": false
+      },
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "language": "en",
+      "lookup": { "allow_multiple": false, "type": "slug", "rotate": false },
+      "source": { "source": "", "api": "", "citation": "" },
+      "label": "Salmo 119: Nun"
+    },
+    {
+      "metadata": {
+        "omit_gloria": false,
+        "number": "121",
+        "localname": "Salmo 121",
+        "omit_antiphon": false,
+        "latinname": "Levavi oculum",
+        "insert_seasonal_antiphon": false,
+        "changeable": false
+      },
+      "citation": null,
+      "lookup": { "rotate": false, "allow_multiple": false, "type": "slug" },
+      "category": ["Psalm"],
+      "version_label": null,
+      "slug": "psalm_121",
+      "sharing": {
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite"
+      },
+      "source": {
+        "api": "https://www.venite.app/api",
+        "citation": "",
+        "source": ""
+      },
+      "style": "psalm",
+      "language": "en",
+      "version": "salterio1979",
+      "label": "Psalm 121",
+      "type": "psalm",
+      "hidden": false
+    },
+    {
+      "type": "psalm",
+      "source": {
+        "source": "",
+        "api": "https://www.venite.app/api",
+        "citation": ""
+      },
+      "language": "en",
+      "citation": null,
+      "category": ["Psalm"],
+      "label": "Salmo 126",
+      "hidden": false,
+      "version_label": null,
+      "sharing": {
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "privacy": "public",
+        "organization": "venite"
+      },
+      "style": "psalm",
+      "lookup": { "type": "slug", "rotate": false, "allow_multiple": false },
+      "metadata": {
+        "number": "126",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "localname": "Psalm 126",
+        "insert_seasonal_antiphon": false,
+        "latinname": "In convertendo",
+        "changeable": false
+      },
+      "slug": "psalm_126",
+      "version": "salterio1979"
+    },
+    {
+      "slug": "gloria-patri",
+      "language": "en",
+      "value": [
+        "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      ],
+      "style": "gloria",
+      "hidden": false,
+      "citation": null,
+      "version": "loc",
+      "type": "refrain",
+      "category": [null],
+      "label": null,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "value": "false",
+              "key": "insertGloria",
+              "is": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {},
+      "lookup": { "rotate": true, "filter": "—", "type": "slug" },
+      "category": ["Opening Sentence"],
+      "type": "bible-reading",
+      "style": "short",
+      "slug": "noonday_sentence",
+      "language": "es",
+      "version": "loc",
+      "hidden": false
+    },
+    {
+      "value": ["Puede seguir una meditación en voz alta o en silencio."],
+      "hidden": false,
+      "type": "rubric",
+      "metadata": {}
+    },
+    {
+      "metadata": { "delay": 0, "length": 300 },
+      "type": "meditation",
+      "hidden": false
+    },
+    {
+      "value": ["Luego el Oficiante comienza las Plegarias diciendo:"],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "style": "responsive",
+      "type": "responsive",
+      "value": [
+        {
+          "text": "Señor, ten piedad.",
+          "label": "",
+          "response": "Cristo, ten piedad."
+        },
+        { "response": "", "text": "Señor, ten piedad." }
+      ]
+    },
+    {
+      "style": "prayer",
+      "type": "text",
+      "response": " ",
+      "display_format": "unison",
+      "value": [
+        "Padre nuestro que estás en el cielo,\n\tsantificado sea tu Nombre,\n\tvenga tu reino,\n\thágase tu voluntad,\n\t\ten la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\n\tcomo también nosotros perdonamos\n\t\ta los que nos ofenden.\nNo nos dejes caer en tentación \n\ty líbranos del mal."
+      ]
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "label": "Oficiante",
+          "response": "",
+          "text": "Señor, escucha nuestra oración;"
+        },
+        { "text": "Y llegue a ti nuestro clamor.", "label": "Pueblo" },
+        { "text": "Oremos.", "label": "Oficiante" }
+      ],
+      "style": "preces",
+      "type": "responsive"
+    },
+    {
+      "slug": "noonday_collect",
+      "metadata": {},
+      "lookup": { "rotate": true, "type": "slug" },
+      "category": [],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "value": ["Se puede ofrecer intercesiones libres."],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "style": "authorized-prayers",
+      "version": "loc",
+      "language": "es",
+      "source": { "source": "", "api": "", "citation": "" },
+      "metadata": { "omit_label": false },
+      "type": "text",
+      "category": []
+    },
+    {
+      "value": [
+        {
+          "label": "",
+          "text": "Bendigamos al Señor.",
+          "response": "Demos gracias a Dios."
+        }
+      ],
+      "type": "responsive",
+      "style": "responsive",
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "metadata": {},
+      "label": "The Angelus",
+      "slug": "the-angelus",
+      "type": "liturgy",
+      "language": "en",
+      "version": "Rite-II",
+      "lastRevision": 61,
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "after", "key": "angelus", "is": true } }
+        ],
+        "mode": "and"
+      },
+      "lookup": { "type": "slug" },
+      "sharing": {
+        "organization": "venite",
+        "status": "published",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      }
+    }
+  ],
+  "language": "es",
+  "id": "poP9RVu6g0YlWJEdZzFL",
+  "metadata": {
+    "preferences": {
+      "angelus": {
+        "label": "Angelus",
+        "key": "angelus",
+        "options": [
+          {
+            "label": "—",
+            "value": "none",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "value": "before",
+            "default": false,
+            "label": "Before the Liturgy",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "After the Liturgy",
+            "value": "after"
+          }
+        ]
+      },
+      "insertGloria": {
+        "options": [
+          {
+            "value": "false",
+            "metadata": { "alternateYear": false },
+            "label": "No",
+            "default": false
+          },
+          {
+            "value": "true",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Yes"
+          }
+        ],
+        "category": "Advanced",
+        "label": "Insert Gloria Patri after each Psalm",
+        "key": "insertGloria"
+      }
+    },
+    "pronouns": [],
+    "evening": false,
+    "special_preferences": {},
+    "liturgyversions": ["loc"],
+    "supplement": false
+  },
+  "sharing": {
+    "organization": "venite",
+    "status": "draft",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "privacy": "public",
+    "collaborators": []
+  },
+  "category": []
+}

@@ -31883,7 +31883,7 @@
             {
               "verse": "He aquí, anhelo tus mandamientos; *",
               "number": "40",
-              "halfverse": "en tu justicia, preserva mi vida.\nSalmo 119:33 657",
+              "halfverse": "en tu justicia, preserva mi vida.\n",
               "type": "psalm-verse"
             }
           ],
@@ -50583,7 +50583,7 @@
         "omit_gloria": false,
         "number": "119",
         "latinname": "Beati immaculati",
-        "localname": "Salmo 119: Alef"
+        "localname": "Salmo 119: Nun"
       },
       "language": "es",
       "hidden": false,
@@ -50592,7 +50592,7 @@
         "citation": "p. 654"
       },
       "version": "loc",
-      "label": "Salmo 119: Alef"
+      "label": "Salmo 119: Nun"
     }
   ],
   "en-salterio1979-psalm_51": [
@@ -56666,6 +56666,140 @@
       },
       "hidden": false,
       "lastRevision": 30
+    }
+  ],
+  "es-loc-noonday_collect": [
+    {
+      "type": "text",
+      "metadata": { "response": "Amén." },
+      "style": "prayer",
+      "value": [
+        "Padre celestial, envía tu Santo Espíritu a nuestros corazones, para que nos dirija y gobierne según tu voluntad, nos consuele en todas nuestras aflicciones, nos defienda de todo error, y nos conduzca a toda verdad; por Jesucristo nuestro Señor."
+      ],
+      "slug": "noonday_collect",
+      "version": "loc",
+      "lookup": "category",
+      "lastRevision": 21,
+      "category": [],
+      "language": "es",
+      "hidden": false,
+      "label": ""
+    },
+    {
+      "style": "prayer",
+      "hidden": false,
+      "lastRevision": 30,
+      "label": "",
+      "metadata": { "response": "Amén." },
+      "lookup": "category",
+      "slug": "noonday_collect",
+      "value": [
+        "Bendito Salvador, en esta hora colgabas en la cruz, extendiendo tus brazos amorosos: Concede que todos los pueblos de la tierra miren hacia ti y sean salvos; por tu entrañable misericordia."
+      ],
+      "language": "es",
+      "type": "text",
+      "version": "loc",
+      "category": []
+    },
+    {
+      "lastRevision": 28,
+      "label": "",
+      "type": "text",
+      "language": "es",
+      "style": "prayer",
+      "category": [],
+      "version": "loc",
+      "slug": "noonday_collect",
+      "value": [
+        "Señor Jesucristo, que dijiste a tus apóstoles, “La paz les dejo, mi paz les doy”: No mires nuestros pecados sino la fe de tu Iglesia; y concédenos la paz y la unidad de esa Ciudad celestial; donde con el Padre y el Espíritu Santo tú vives y reinas ahora y por siempre."
+      ],
+      "hidden": false,
+      "metadata": { "response": "Amén." },
+      "lookup": "category"
+    },
+    {
+      "metadata": { "response": "Amén." },
+      "lastRevision": 22,
+      "category": [],
+      "hidden": false,
+      "style": "prayer",
+      "lookup": "category",
+      "slug": "noonday_collect",
+      "label": "",
+      "version": "loc",
+      "language": "es",
+      "type": "text",
+      "value": [
+        "Salvador todopoderoso, que al mediodía llamaste a tu siervo San Pablo para ser un apóstol a los gentiles: Te rogamos que ilumines al mundo con el resplandor de tu gloria, para que todas las naciones vengan y te adoren; tú que vives y reinas por los siglos de los siglos."
+      ]
+    }
+  ],
+  "es-loc-noonday_sentence": [
+    {
+      "type": "bible-reading",
+      "citation": "Romanos 5:5",
+      "style": "short",
+      "category": [],
+      "lastRevision": 14,
+      "version": "bcp1979",
+      "slug": "noonday_sentence",
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "hidden": false,
+      "value": [
+        {
+          "book": "Romans",
+          "text": "El amor de Dios ha sido derramado en nuestros corazones por el Espíritu Santo que nos fue dado.",
+          "verse": "5",
+          "chapter": "5"
+        }
+      ],
+      "language": "es"
+    },
+    {
+      "category": [],
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "type": "bible-reading",
+      "citation": "2 Corintios 5:17-18",
+      "version": "loc",
+      "lastRevision": 21,
+      "language": "es",
+      "slug": "noonday_sentence",
+      "value": [
+        {
+          "verse": "17-18",
+          "text": "Si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas. Y todo esto proviene de Dios, quien nos reconcilió consigo mismo por Cristo, y nos dio el ministerio de la reconciliación. ",
+          "chapter": "5",
+          "book": "2 Cor."
+        }
+      ],
+      "hidden": false,
+      "style": "short"
+    },
+    {
+      "language": "es",
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "category": [],
+      "value": [
+        {
+          "verse": "11",
+          "text": "Desde donde el sol nace hasta donde se pone, es grande mi Nombre entre las naciones, y en todo lugar se ofrece a mi Nombre incienso y ofrenda limpia, porque grande es mi Nombre entre las naciones, dice el Señor de los ejércitos.",
+          "book": "Malachi",
+          "chapter": "1"
+        }
+      ],
+      "citation": "Malaquías 1:11",
+      "slug": "noonday_sentence",
+      "version": "loc",
+      "lastRevision": 22,
+      "type": "bible-reading",
+      "style": "short",
+      "hidden": false
     }
   ]
 }

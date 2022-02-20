@@ -192,6 +192,7 @@ export class DocumentService {
       language == "es"
         ? [
             loadLiturgy("es", "LOC", "morning-prayer"),
+            loadLiturgy("es", "LOC", "noonday-prayer"),
             loadLiturgy("es", "LOC", "evening-prayer"),
           ]
         : [
@@ -373,7 +374,6 @@ export class DocumentService {
 
     // first, try JSON database
     if (!disableOffline) {
-      console.log("findDocumentsBySlug offline", slug, language, versions);
       if (
         [
           "morning-prayer",
