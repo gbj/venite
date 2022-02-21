@@ -194,6 +194,7 @@ export class DocumentService {
             loadLiturgy("es", "LOC", "morning-prayer"),
             loadLiturgy("es", "LOC", "noonday-prayer"),
             loadLiturgy("es", "LOC", "evening-prayer"),
+            loadLiturgy("es", "LOC", "compline"),
           ]
         : [
             loadLiturgy("en", "Rite-II", "morning-prayer"),

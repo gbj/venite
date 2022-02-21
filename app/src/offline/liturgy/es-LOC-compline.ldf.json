@@ -1,0 +1,1361 @@
+{
+  "date_modified": { "seconds": 1645410021, "nanoseconds": 992000000 },
+  "sharing": {
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "status": "draft",
+    "organization": "venite",
+    "privacy": "public",
+    "collaborators": []
+  },
+  "hidden": false,
+  "category": [],
+  "id": "K2cQu07xWhoKLnaiTxmq",
+  "lastRevision": 455,
+  "version": "LOC",
+  "label": "Completas",
+  "value": [
+    {
+      "metadata": { "level": 1 },
+      "style": "text",
+      "value": ["Oficio de Completas"],
+      "hidden": false,
+      "type": "heading"
+    },
+    {
+      "style": "date",
+      "type": "heading",
+      "hidden": false,
+      "value": [""],
+      "metadata": { "level": 1 }
+    },
+    {
+      "hidden": false,
+      "metadata": { "level": 1 },
+      "style": "day",
+      "type": "heading",
+      "category": [],
+      "value": ["Heading"],
+      "source": { "api": "", "citation": "", "source": "" }
+    },
+    { "type": "rubric", "value": ["El Oficiante comienza:"], "hidden": false },
+    {
+      "source": { "api": "", "citation": "p. 93", "source": "LOC" },
+      "category": [],
+      "style": "text",
+      "metadata": { "omit_response": false, "response": "Amén." },
+      "type": "text",
+      "hidden": false,
+      "value": [
+        "El Señor todopoderoso nos conceda una noche tranquila y un perfecto fin."
+      ]
+    },
+    {
+      "style": "preces",
+      "value": [
+        {
+          "label": "Oficiante",
+          "response": "",
+          "text": "Nuestro auxilio está en el Nombre del Señor;"
+        },
+        { "text": "Que hizo el cielo y la tierra.", "label": "Pueblo" }
+      ],
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "value": ["Entonces el Oficiante puede decir:"],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "value": ["Confesemos nuestros pecados a Dios."],
+      "hidden": false,
+      "style": "text",
+      "type": "text"
+    },
+    { "value": ["Oficiante y Pueblo:"], "type": "rubric", "hidden": false },
+    {
+      "category": [],
+      "hidden": false,
+      "source": { "source": "", "api": "", "citation": "" },
+      "metadata": { "omit_response": false, "response": "Amén." },
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "Dios todopoderoso, nuestro Padre celestial:\nHemos pecado contra ti,\npor nuestra propia culpa,\npor pensamiento, palabra y obra,\ny por lo que hemos dejado de hacer.\nPor amor de tu Hijo nuestro Señor Jesucristo,\nperdona nuestras ofensas\ny concédenos que te sirvamos\nen novedad de vida,\npara gloria de tu Nombre. "
+      ],
+      "display_format": "unison"
+    },
+    { "type": "rubric", "value": ["Oficiante:"], "hidden": false },
+    {
+      "hidden": false,
+      "value": [
+        "Que el Dios todopoderoso nos conceda el perdón de todos nuestros pecados, y la gracia y fortaleza del Espíritu Santo."
+      ],
+      "style": "prayer",
+      "metadata": { "response": "Amén." },
+      "type": "text"
+    },
+    {
+      "value": [
+        {
+          "response": "",
+          "label": "Oficiante",
+          "text": "Oh Dios, dígnate librarnos."
+        },
+        { "label": "Pueblo", "text": "Señor, apresúrate a socorrernos." }
+      ],
+      "hidden": false,
+      "type": "responsive",
+      "style": "preces"
+    },
+    {
+      "type": "rubric",
+      "hidden": false,
+      "value": ["Señor, apresúrate a socorrernos."]
+    },
+    {
+      "slug": "gloria-patri",
+      "language": "es",
+      "value": [
+        "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      ],
+      "style": "gloria",
+      "hidden": false,
+      "citation": null,
+      "version": "loc",
+      "type": "refrain",
+      "category": [null],
+      "label": null
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "only": [], "except": ["Lent", "HolyWeek"] } }
+        ]
+      },
+      "style": "text",
+      "value": ["¡Aleluya!"],
+      "type": "text",
+      "hidden": false
+    },
+    {
+      "value": [
+        "Se canta o dice uno o más de los siguientes Salmos, o bien otras selecciones adecuadas del Salterio."
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "version": "loc",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "verse": "Respóndeme cuando clamo, oh Dios de mi justicia; *",
+              "halfverse": "cuando estaba en angustia, tú me libraste;\nten misericordia de mí, y escucha mi oración.",
+              "number": "1",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "amarán la vanidad, y buscarán la mentira?\"",
+              "verse": "\"Mortales, ¿hasta cuándo volverán mi honra en infamia, *",
+              "type": "psalm-verse",
+              "number": "2"
+            },
+            {
+              "verse": "Sepan, pues, que el Señor ha escogido a los fieles para sí; *",
+              "number": "3",
+              "halfverse": "el Señor oirá cuando yo a él clamare.",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "mediten en su corazón estando en su cama, y callen.",
+              "verse": "Tiemblen y no pequen; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "y confíen en el Señor.",
+              "verse": "Ofrezcan sacrificios rectos, *",
+              "number": "5"
+            },
+            {
+              "number": "6",
+              "verse": "Muchos son los que dicen: \"¿Quién nos mostrará el bien?\" *",
+              "type": "psalm-verse",
+              "halfverse": "Alza sobre nosotros, oh Señor, la luz de tu rostro."
+            },
+            {
+              "number": "7",
+              "type": "psalm-verse",
+              "halfverse": "mayor que la de ellos cuando abundaba su grano\ny su mosto.",
+              "verse": "Tú diste alegría a mi corazón, *"
+            },
+            {
+              "verse": "En paz me acostaré, y en seguida dormiré; *",
+              "type": "psalm-verse",
+              "number": "8",
+              "halfverse": "porque sólo tú, oh Señor, me haces vivir seguro."
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "citation": null,
+      "category": ["Psalm"],
+      "hidden": false,
+      "label": "Salmo 4",
+      "slug": "psalm_4",
+      "source": {
+        "source": "LOC",
+        "citation": "p. 487"
+      },
+      "metadata": {
+        "latinname": "Cum invocarem",
+        "omit_antiphon": false,
+        "number": "4",
+        "localname": "Salmo 4",
+        "omit_gloria": false
+      },
+      "language": "es",
+      "style": "psalm",
+      "version_label": null
+    },
+    {
+      "type": "psalm",
+      "style": "psalm",
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "halfverse": "líbrame en tu justicia.",
+              "verse": "En ti, oh Señor, he esperado;\nno sea yo avergonzado jamás; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Inclina a mí tu oído; *",
+              "type": "psalm-verse",
+              "halfverse": "apresúrate a librarme.",
+              "number": "2"
+            },
+            {
+              "halfverse": "por tu Nombre me guiarás y me encaminarás.",
+              "type": "psalm-verse",
+              "verse": "Sé tú mi roca fuerte, y fortaleza para salvarme; porque tú eres mi risco y mi castillo; *",
+              "number": "3"
+            },
+            {
+              "halfverse": "pues tú eres mi refugio.",
+              "verse": "Me sacarás de la red que han escondido para mí, *",
+              "number": "4",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "En tu mano encomiendo mi espíritu; *",
+              "halfverse": "tú me has redimido, oh Señor, Dios de verdad.",
+              "number": "5"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "version": "loc",
+      "label": "Salmo 31",
+      "slug": "psalm_31_abbrev",
+      "language": "es",
+      "metadata": {
+        "latinname": "In te, Domine, speravi",
+        "number": "31",
+        "localname": "Salmo 31",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "category": ["Psalm"],
+      "citation": "Salmo 31:1-5",
+      "source": {
+        "source": "LOC",
+        "citation": "p. 521"
+      }
+    },
+    {
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "El que habita al abrigo del Altísimo, *",
+              "number": "1",
+              "halfverse": "mora bajo la sombra del Omnipotente."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Dirá al Señor: \"Refugio mío y castillo mío, *",
+              "number": "2",
+              "halfverse": "mi Dios, en quien confío\"."
+            },
+            {
+              "verse": "El te librará del lazo del cazador, *",
+              "number": "3",
+              "type": "psalm-verse",
+              "halfverse": "de la peste destructora."
+            },
+            {
+              "verse": "Con sus plumas te cubrirá, y debajo de sus alas estarás seguro; *",
+              "number": "4",
+              "type": "psalm-verse",
+              "halfverse": "escudo y adarga será su fidelidad."
+            },
+            {
+              "number": "5",
+              "type": "psalm-verse",
+              "verse": "No temerás espanto nocturno, *",
+              "halfverse": "ni saeta que vuele de día;"
+            },
+            {
+              "halfverse": "ni enfermedad que a mediodía desola.",
+              "type": "psalm-verse",
+              "verse": "Ni pestilencia que acecha en la oscuridad, *",
+              "number": "6"
+            },
+            {
+              "halfverse": "mas a ti no te alcanzará.",
+              "number": "7",
+              "verse": "Caerán a tu lado mil, y diez mil a tu diestra, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Ciertamente con tus ojos mirarás, *",
+              "halfverse": "y verás la recompensa de los malvados;",
+              "number": "8",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "del Altísimo, tu habitación,",
+              "number": "9",
+              "verse": "Porque hiciste del Señor tu refugio, *"
+            },
+            {
+              "halfverse": "ni plaga tocará tu morada.",
+              "number": "10",
+              "type": "psalm-verse",
+              "verse": "No te sobrevendrá mal alguno, *"
+            },
+            {
+              "halfverse": "que te guarden en todos tus caminos.",
+              "type": "psalm-verse",
+              "verse": "Pues a sus ángeles mandará cerca de ti, *",
+              "number": "11"
+            },
+            {
+              "number": "12",
+              "halfverse": "para que tu pie no tropiece en piedra.",
+              "type": "psalm-verse",
+              "verse": "En las manos te llevarán, *"
+            },
+            {
+              "halfverse": "hollarás al cachorro del león y a la serpiente.",
+              "type": "psalm-verse",
+              "verse": "Sobre el león y el áspid pisarás; *",
+              "number": "13"
+            },
+            {
+              "number": "14",
+              "halfverse": "lo protegeré, por cuanto ha conocido mi Nombre.",
+              "verse": "\"Por cuanto ha hecho pacto de amor conmigo, yo lo libraré; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "15",
+              "halfverse": "con él estaré en la angustia;\nlo libraré, y le glorificaré.",
+              "verse": "Me invocará, y yo le responderé; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "y le mostraré mi salvación\".",
+              "number": "16",
+              "verse": "Lo saciaré de largos días, *"
+            }
+          ]
+        }
+      ],
+      "type": "psalm",
+      "citation": null,
+      "metadata": {
+        "omit_antiphon": false,
+        "latinname": "Qui habitat",
+        "number": "91",
+        "omit_gloria": false,
+        "localname": "Salmo 91"
+      },
+      "version": "loc",
+      "language": "es",
+      "style": "psalm",
+      "slug": "psalm_91",
+      "version_label": null,
+      "hidden": false,
+      "label": "Salmo 91",
+      "category": ["Psalm"],
+      "source": {
+        "source": "LOC",
+        "citation": "p. 613"
+      }
+    },
+    {
+      "version": "loc",
+      "version_label": null,
+      "slug": "psalm_134",
+      "label": "Salmo 134",
+      "language": "es",
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "verse": "Y ahora bendigan al Señor, siervos todos del Señor, *",
+              "halfverse": "los que de noche están de pie en la casa del Señor.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Eleven las manos hacia el santuario, y bendigan al Señor. *",
+              "type": "psalm-verse",
+              "number": "2",
+              "halfverse": "El Señor que hizo los cielos y la tierra, te bendiga desde Sión."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "hidden": false,
+      "category": ["Psalm"],
+      "citation": null,
+      "metadata": {
+        "localname": "Salmo 134",
+        "omit_gloria": false,
+        "number": "134",
+        "omit_antiphon": false,
+        "latinname": "Ecce nunc"
+      },
+      "source": {
+        "source": "LOC",
+        "citation": "p. 678"
+      },
+      "style": "psalm",
+      "type": "psalm"
+    },
+    {
+      "type": "rubric",
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "key": "insertGloria",
+              "value": "false",
+              "is": true
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "hidden": false,
+      "value": ["Al final de los Salmos se canta o dice:"]
+    },
+    {
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "is": true,
+              "value": "false",
+              "key": "insertGloria"
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "slug": "gloria-patri",
+      "language": "es",
+      "value": [
+        "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+        "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+      ],
+      "style": "gloria",
+      "hidden": false,
+      "citation": null,
+      "version": "loc",
+      "type": "refrain",
+      "category": [null],
+      "label": null
+    },
+    {
+      "source": { "api": "", "citation": "", "source": "" },
+      "style": "text",
+      "category": [],
+      "value": [" "],
+      "type": "heading",
+      "hidden": false,
+      "metadata": { "level": 3 }
+    },
+    {
+      "slug": "compline_chapter",
+      "lookup": { "rotate": true, "filter": "—", "type": "slug" },
+      "type": "bible-reading",
+      "metadata": {},
+      "source": { "api": "", "citation": "", "source": "" },
+      "hidden": false,
+      "style": "short",
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "type": "rubric",
+      "value": ["Puede cantarse un himno adecuado para la noche."],
+      "hidden": false
+    },
+    { "type": "rubric", "hidden": false, "value": ["Entonces sigue:"] },
+    {
+      "source": { "api": "", "citation": "p. 98", "source": "LOC" },
+      "hidden": false,
+      "type": "responsive",
+      "metadata": {},
+      "category": [],
+      "style": "preces",
+      "value": [
+        {
+          "label": "V.",
+          "text": "En tus manos, oh Señor, encomiendo mi espíritu;",
+          "response": ""
+        },
+        {
+          "label": "R.",
+          "text": "Tú me has redimido, oh Señor, Dios de verdad."
+        },
+        {
+          "label": "V.",
+          "text": "Guárdanos, oh Señor, como a la niña de tus ojos;"
+        },
+        { "label": "R.", "text": "Escóndenos bajo la sombra de tus alas." }
+      ]
+    },
+    {
+      "value": [
+        { "label": "Oficiante", "response": "", "text": "Señor, ten piedad." },
+        { "text": "Cristo, ten piedad.", "label": "Pueblo" },
+        { "text": "Señor, ten piedad.", "label": "Oficiante" }
+      ],
+      "hidden": false,
+      "style": "preces",
+      "type": "responsive"
+    },
+    { "type": "rubric", "hidden": false, "value": ["Oficiante y Pueblo"] },
+    {
+      "value": [
+        "\nPadre nuestro que estás en el cielo,\n\tsantificado sea tu Nombre,\n\tvenga tu reino,\n\thágase tu voluntad,\n\t\ten la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\n\tcomo también nosotros perdonamos\n\t\ta los que nos ofenden.\nNo nos dejes caer en tentación\ny libranos del mal."
+      ],
+      "style": "prayer",
+      "metadata": { "response": " " },
+      "type": "text",
+      "display_format": "unison"
+    },
+    {
+      "type": "responsive",
+      "hidden": false,
+      "style": "preces",
+      "value": [
+        {
+          "label": "Oficiante",
+          "text": "Señor, escucha nuestra oración.",
+          "response": ""
+        },
+        { "text": "Y llegue a ti nuestro clamor.", "label": "Pueblo" },
+        { "label": "Oficiante", "text": "Oremos." }
+      ]
+    },
+    {
+      "hidden": false,
+      "lookup": { "filter": "—", "type": "slug", "rotate": true },
+      "metadata": {},
+      "source": { "source": "", "citation": "", "api": "" },
+      "slug": "compline_collect",
+      "type": "text",
+      "style": "prayer",
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "style": "prayer",
+      "condition": {
+        "conditions": [{ "weekday": { "except": [], "only": ["Saturday"] } }],
+        "mode": "and"
+      },
+      "response": "Amén.",
+      "type": "text",
+      "label": "Colecta para los sábados",
+      "value": [
+        "Te damos gracias, oh Dios, por revelarnos a tu Hijo Jesucristo, a través de la luz de su resurrección: Concede que así como cantamos tu gloria al declinar el día, nuestro gozo abunde en la mañana al celebrar el Misterio Pascual; por Jesucristo nuestro Señor."
+      ],
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "value": [
+            "Vela, oh amantísimo Señor, con los que trabajan, o velan, o lloran esta noche. A tus ángeles manda que guarden a los que duermen. Cuida a los enfermos, Cristo Señor; otorga reposo a los cansados, bendice a los moribundos, consuela a los que sufren, compadécete de los afligidos, escuda a los gozosos. Todo esto te pedimos por tu gran amor."
+          ],
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "metadata": { "response": "Amén." }
+        },
+        {
+          "value": [
+            "Oh Dios, tu providencia inagotable sustenta al mundo en que vivimos y aun nuestra propia vida: Vela, :le día y de noche, por los que trabajan mientras otros duermen, y concede que jamás olvidemos que nuestra vida común depende de nuestras faenas mutuas; por Jesucristo nuestro Señor."
+          ],
+          "hidden": false,
+          "type": "text",
+          "style": "prayer",
+          "metadata": { "response": "Amén." }
+        }
+      ],
+      "metadata": { "editor_selected": 0, "selected": 0 }
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "Puede observarse una pausa, durante la cual se puede ofrecer intercesiones y acciones de gracias espontáneas."
+      ],
+      "hidden": false
+    },
+    {
+      "metadata": { "delay": 0, "length": 300 },
+      "hidden": false,
+      "type": "meditation"
+    },
+    {
+      "value": [
+        "El Oficio concluye con el Cántico de Simeón, acompañado de esta Antífona, que todos cantan o dicen al unísono:"
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "version": "loc",
+      "language": "es",
+      "condition": {
+        "conditions": [
+          { "season": { "only": [], "except": ["Easter", "Ascension"] } }
+        ],
+        "mode": "and"
+      },
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "conforme a tu palabra, en paz.",
+              "type": "psalm-verse",
+              "number": "",
+              "verse": "Ahora despides, Señor, a tu siervo, *"
+            },
+            {
+              "halfverse": "a quien has presentado ante todos los pueblos:",
+              "type": "psalm-verse",
+              "number": "",
+              "verse": "Porque mis ojos han visto a tu Salvador, *"
+            },
+            {
+              "number": "",
+              "verse": "Luz para alumbrar a las naciones, *",
+              "type": "psalm-verse",
+              "halfverse": "y gloria de tu pueblo Israel."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "style": "canticle",
+      "source": { "api": "", "source": "", "citation": "" },
+      "metadata": {
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "gloria": {
+          "slug": "gloria-patri",
+          "language": "es",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "style": "gloria",
+          "hidden": false,
+          "citation": null,
+          "version": "loc",
+          "type": "refrain",
+          "category": [null],
+          "label": null
+        },
+        "insert_antiphon": false,
+        "antiphon": {
+          "type": "refrain",
+          "hidden": false,
+          "value": [
+            "Guíanos, Señor, despiertos, y guárdanos mientras dormimos; que despiertos velemos con Cristo, y dormidos descansemos en paz."
+          ],
+          "style": "antiphon"
+        }
+      },
+      "category": [],
+      "type": "psalm",
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "style": "canticle",
+      "metadata": {
+        "insert_antiphon": false,
+        "omit_antiphon": false,
+        "gloria": {
+          "slug": "gloria-patri",
+          "language": "es",
+          "value": [
+            "Gloria al Padre, y al Hijo y al Espíritu Santo: ",
+            "como era en el principio, ahora y siempre, por los siglos de los siglos. Amén."
+          ],
+          "style": "gloria",
+          "hidden": false,
+          "citation": null,
+          "version": "loc",
+          "type": "refrain",
+          "category": [null],
+          "label": null
+        },
+        "antiphon": {
+          "style": "antiphon",
+          "value": [
+            "Guíanos, Señor, despiertos, y guárdanos mientras dormimos; que despiertos velemos con Cristo, y dormidos descansemos en paz. ¡Aleluya, aleluya, aleluya!"
+          ],
+          "hidden": false,
+          "type": "refrain"
+        },
+        "omit_gloria": false
+      },
+      "category": [],
+      "version": "loc",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "only": ["Easter", "Ascension"], "except": [] } }
+        ]
+      },
+      "language": "es",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "Ahora despides, Señor, a tu siervo, *",
+              "halfverse": "conforme a tu palabra, en paz.",
+              "number": "",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "a quien has presentado ante todos los pueblos:",
+              "number": "",
+              "verse": "Porque mis ojos han visto a tu Salvador, *"
+            },
+            {
+              "number": "",
+              "verse": "Luz para alumbrar a las naciones, *",
+              "halfverse": "y gloria de tu pueblo Israel.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "source": { "api": "", "citation": "", "source": "" }
+    },
+    {
+      "style": "preces",
+      "hidden": false,
+      "value": [
+        {
+          "label": "Oficiante",
+          "response": "",
+          "text": "Bendigamos al Señor."
+        },
+        { "text": "Demos gracias a Dios.", "label": "Pueblo" }
+      ],
+      "type": "responsive"
+    },
+    { "type": "rubric", "hidden": false, "value": ["El Oficiante concluye:"] },
+    {
+      "style": "prayer",
+      "metadata": { "response": "Amén." },
+      "value": [
+        "Que el Señor omnipotente y misericordioso: Padre, Hijo y Espíritu Santo, nos bendiga y nos guarde. "
+      ],
+      "type": "text",
+      "hidden": false
+    },
+    {
+      "source": { "citation": "", "api": "", "source": "" },
+      "version": "Rite-II",
+      "label": "Marian Antiphons",
+      "sharing": {
+        "privacy": "public",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "collaborators": []
+      },
+      "value": [
+        {
+          "type": "liturgy",
+          "label": "Alma Redemptoris",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              { "date": { "lt": "2/2" } },
+              {
+                "season": {
+                  "except": [],
+                  "only": [
+                    "Advent",
+                    "Christmas",
+                    "Epiphany",
+                    "Easter",
+                    "Ascension",
+                    "Pentecost",
+                    "OrdinaryTime"
+                  ]
+                }
+              }
+            ]
+          },
+          "source": { "citation": "", "api": "", "source": "" },
+          "sharing": {
+            "organization": "venite",
+            "status": "published",
+            "privacy": "public",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "metadata": {
+            "evening": true,
+            "liturgyversions": [],
+            "preferences": {},
+            "supplement": true,
+            "special_preferences": {}
+          },
+          "hidden": false,
+          "lookup": { "type": "slug" },
+          "category": [],
+          "slug": "alma-redemptoris",
+          "lastRevision": 56,
+          "language": "es",
+          "version": "Rite-II"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "source": { "source": "", "citation": "", "api": "" },
+          "label": "Alma Redemptoris",
+          "lastRevision": 56,
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "date": { "gt": "11/1" },
+                "season": { "only": ["Advent", "Christmas"], "except": [] }
+              }
+            ]
+          },
+          "version": "Rite-II",
+          "language": "es",
+          "category": [],
+          "metadata": {
+            "preferences": {},
+            "evening": true,
+            "liturgyversions": [],
+            "special_preferences": {},
+            "supplement": true
+          },
+          "date_modified": { "seconds": 1603539837, "nanoseconds": 289000000 },
+          "type": "liturgy",
+          "hidden": false,
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "slug": "alma-redemptoris"
+        },
+        {
+          "hidden": false,
+          "source": { "source": "", "citation": "", "api": "" },
+          "lookup": { "type": "slug" },
+          "lastRevision": 19,
+          "version": "Rite-II",
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "organization": "venite",
+            "status": "published"
+          },
+          "slug": "ave-regina",
+          "category": [],
+          "label": "Ave Regina",
+          "condition": {
+            "conditions": [
+              {
+                "date": { "lt": "4/21" },
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "language": "es",
+          "type": "liturgy",
+          "metadata": {
+            "evening": true,
+            "special_preferences": {},
+            "liturgyversions": [],
+            "preferences": {},
+            "supplement": true
+          }
+        },
+        {
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "date": { "gte": "3/22" },
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Pentecost", "Ascension", "Ascension"]
+                }
+              }
+            ]
+          },
+          "category": [],
+          "slug": "regina-coeli",
+          "lastRevision": 24,
+          "version": "Rite-II",
+          "source": { "source": "", "api": "", "citation": "" },
+          "lookup": { "type": "slug" },
+          "language": "es",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": []
+          },
+          "hidden": false,
+          "label": "Regina Coeli",
+          "type": "liturgy",
+          "metadata": {
+            "liturgyversions": [],
+            "evening": false,
+            "supplement": false,
+            "special_preferences": {},
+            "preferences": {}
+          }
+        },
+        {
+          "slug": "salve-regina",
+          "metadata": {
+            "supplement": false,
+            "liturgyversions": [],
+            "preferences": {},
+            "special_preferences": {},
+            "evening": false
+          },
+          "lookup": { "type": "slug" },
+          "language": "es",
+          "version": "Rite-II",
+          "label": "Salve Regina",
+          "sharing": {
+            "privacy": "public",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "status": "published"
+          },
+          "type": "liturgy",
+          "category": [],
+          "source": { "source": "", "api": "", "citation": "" },
+          "condition": {
+            "conditions": [
+              {
+                "date": { "gte": "5/10" },
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "lastRevision": 17,
+          "hidden": false
+        }
+      ],
+      "category": [],
+      "date_modified": { "nanoseconds": 961000000, "seconds": 1614613831 },
+      "condition": {
+        "conditions": [
+          {
+            "preference": {
+              "value": "after",
+              "is": true,
+              "key": "marianAntiphons"
+            }
+          }
+        ],
+        "mode": "and"
+      },
+      "metadata": {
+        "special_preferences": {},
+        "evening": true,
+        "liturgyversions": ["usccb"],
+        "preferences": {},
+        "supplement": true
+      },
+      "lastRevision": 114,
+      "type": "liturgy",
+      "language": "es",
+      "slug": "marian-antiphons",
+      "hidden": false,
+      "lookup": { "type": "slug" }
+    },
+    {
+      "lookup": { "type": "slug" },
+      "label": "Marian Antiphons",
+      "date_modified": { "nanoseconds": 961000000, "seconds": 1614613831 },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": {
+              "value": "latin",
+              "key": "marianAntiphons",
+              "is": true
+            }
+          }
+        ]
+      },
+      "value": [
+        {
+          "label": "Alma Redemptoris",
+          "hidden": false,
+          "category": [],
+          "lastRevision": 56,
+          "lookup": { "type": "slug" },
+          "source": { "source": "", "citation": "", "api": "" },
+          "slug": "alma-redemptoris",
+          "version": "Latin",
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite"
+          },
+          "condition": {
+            "conditions": [
+              { "date": { "lt": "2/2" } },
+              {
+                "season": {
+                  "except": [],
+                  "only": [
+                    "Advent",
+                    "Christmas",
+                    "Epiphany",
+                    "Easter",
+                    "Ascension",
+                    "Pentecost",
+                    "OrdinaryTime"
+                  ]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "language": "es",
+          "metadata": {
+            "special_preferences": {},
+            "preferences": {},
+            "evening": true,
+            "liturgyversions": [],
+            "supplement": true
+          },
+          "type": "liturgy"
+        },
+        {
+          "date_modified": { "nanoseconds": 289000000, "seconds": 1603539837 },
+          "metadata": {
+            "liturgyversions": [],
+            "supplement": true,
+            "special_preferences": {},
+            "preferences": {},
+            "evening": true
+          },
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "collaborators": []
+          },
+          "slug": "alma-redemptoris",
+          "language": "es",
+          "label": "Alma Redemptoris",
+          "source": { "source": "", "api": "", "citation": "" },
+          "category": [],
+          "version": "Latin",
+          "hidden": false,
+          "lastRevision": 56,
+          "condition": {
+            "conditions": [
+              {
+                "date": { "gt": "11/1" },
+                "season": { "except": [], "only": ["Advent", "Christmas"] }
+              }
+            ],
+            "mode": "and"
+          },
+          "lookup": { "type": "slug" },
+          "type": "liturgy"
+        },
+        {
+          "language": "es",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Lent", "HolyWeek"]
+                },
+                "date": { "lt": "4/21" }
+              }
+            ]
+          },
+          "hidden": false,
+          "sharing": {
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "privacy": "public",
+            "organization": "venite"
+          },
+          "source": { "api": "", "citation": "", "source": "" },
+          "metadata": {
+            "liturgyversions": [],
+            "evening": true,
+            "supplement": true,
+            "preferences": {},
+            "special_preferences": {}
+          },
+          "type": "liturgy",
+          "lastRevision": 19,
+          "version": "Latin",
+          "lookup": { "type": "slug" },
+          "label": "Ave Regina",
+          "category": [],
+          "slug": "ave-regina"
+        },
+        {
+          "sharing": {
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite"
+          },
+          "type": "liturgy",
+          "hidden": false,
+          "version": "Latin",
+          "metadata": {
+            "preferences": {},
+            "evening": false,
+            "supplement": false,
+            "special_preferences": {},
+            "liturgyversions": []
+          },
+          "lookup": { "type": "slug" },
+          "category": [],
+          "label": "Regina Coeli",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Pentecost", "Ascension", "Ascension"]
+                },
+                "date": { "gte": "3/22" }
+              }
+            ],
+            "mode": "and"
+          },
+          "lastRevision": 24,
+          "source": { "api": "", "source": "", "citation": "" },
+          "language": "es",
+          "slug": "regina-coeli"
+        },
+        {
+          "hidden": false,
+          "version": "Latin",
+          "metadata": {
+            "preferences": {},
+            "evening": false,
+            "supplement": false,
+            "special_preferences": {},
+            "liturgyversions": []
+          },
+          "type": "liturgy",
+          "slug": "salve-regina",
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "only": ["OrdinaryTime", "Pentecost"],
+                  "except": []
+                },
+                "date": { "gte": "5/10" }
+              }
+            ]
+          },
+          "category": [],
+          "lookup": { "type": "slug" },
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "label": "Salve Regina",
+          "language": "es",
+          "source": { "api": "", "source": "", "citation": "" },
+          "lastRevision": 17
+        }
+      ],
+      "slug": "marian-antiphons",
+      "hidden": false,
+      "source": { "api": "", "citation": "", "source": "" },
+      "metadata": {
+        "preferences": {},
+        "special_preferences": {},
+        "supplement": true,
+        "evening": true,
+        "liturgyversions": ["usccb"]
+      },
+      "version": "Latin",
+      "type": "liturgy",
+      "sharing": {
+        "status": "published",
+        "privacy": "public",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": []
+      },
+      "lastRevision": 114,
+      "category": [],
+      "language": "es"
+    }
+  ],
+  "language": "es",
+  "source": { "api": "", "source": "", "citation": "" },
+  "slug": "compline",
+  "type": "liturgy",
+  "metadata": {
+    "preferences": {
+      "marianAntiphons": {
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "—",
+            "value": "none"
+          },
+          {
+            "value": "after",
+            "default": false,
+            "label": "After the Office",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "latin",
+            "label": "After the Office (in Latin)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "Hymns to Mary",
+        "key": "marianAntiphons"
+      },
+      "insertGloria": {
+        "label": "Insert Gloria Patri after each Psalm",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "default": true,
+            "label": "No",
+            "value": "false"
+          },
+          {
+            "value": "true",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Yes"
+          }
+        ],
+        "key": "insertGloria"
+      },
+      "psalterVersion": {
+        "key": "psalterVersion",
+        "options": [
+          {
+            "value": "bcp1979",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Book of Common Prayer (1979)"
+          },
+          {
+            "label": "Inclusive Psalter",
+            "value": "ip",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "Psalter Version"
+      }
+    },
+    "supplement": false,
+    "special_preferences": {},
+    "evening": true,
+    "pronouns": [],
+    "liturgyversions": ["bcp1979", "bcp1979"]
+  },
+  "date_created": { "nanoseconds": 572000000, "seconds": 1645409367 }
+}

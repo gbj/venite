@@ -56801,5 +56801,158 @@
       "style": "short",
       "hidden": false
     }
+  ],
+  "es-loc-compline_collect": [
+    {
+      "style": "prayer",
+      "version": "loc",
+      "label": "",
+      "language": "es",
+      "category": [],
+      "slug": "compline_collect",
+      "value": [
+        "Sé nuestra luz en las tinieblas, oh Señor, y por tu gran misericordia defiéndenos de todos los peligros y riesgos de esta noche; por amor de tu único Hijo, nuestro Salvador Jesucristo."
+      ],
+      "metadata": { "response": "Amén." },
+      "hidden": false,
+      "lastRevision": 23,
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "language": "es",
+      "slug": "compline_collect",
+      "value": [
+        "Sé con nosotros, oh Señor misericordioso, y protégenos en las horas de esta noche, para que, los que estamos agobiados por los cambios y azares de esta vida, descansemos sólo en ti, que nunca cambias; por Jesucristo nuestro Señor."
+      ],
+      "metadata": { "response": "Amén." },
+
+      "style": "prayer",
+      "hidden": false,
+      "lastRevision": 11,
+      "label": "",
+      "version": "loc",
+      "category": []
+    },
+    {
+      "category": [],
+      "language": "es",
+      "lastRevision": 19,
+      "value": [
+        "Míranos, oh Señor, desde tu trono celestial, e ilumina esta noche con tu célico resplandor; para que, así de noche como de día, tu pueblo glorifique tu santo Nombre; por Jesucristo nuestro Señor."
+      ],
+      "metadata": { "response": "Amén." },
+      "version": "loc",
+      "label": "",
+      "hidden": false,
+      "slug": "compline_collect",
+      "type": "text",
+      "style": "prayer"
+    },
+    {
+      "style": "prayer",
+      "language": "es",
+      "type": "text",
+      "value": [
+        "Visita, oh Señor, este lugar, y ahuyenta de él todas las asechanzas del enemigo; que tus santos ángeles moren con nosotros para preservarnos en paz; y que tu bendición sea siempre sobre nosotros; por Jesucristo nuestro Señor."
+      ],
+      "metadata": { "response": "Amén." },
+      "slug": "compline_collect",
+      "label": "",
+      "category": [],
+      "lastRevision": 15,
+      "version": "loc",
+      "hidden": false
+    }
+  ],
+  "es-loc-compline_chapter": [
+    {
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "lastRevision": 16,
+      "style": "short",
+      "citation": "Jeremías 14:9,22",
+      "hidden": false,
+      "version": "loc",
+      "language": "es",
+      "category": [],
+      "value": [
+        {
+          "verse": "9,22",
+          "text": "Tú estás entre nosotros, oh Señor, y sobre nosotros es invocado tu Nombre; no nos desampares, Señor nuestro Dios.",
+          "book": "Jeremiah",
+          "chapter": "14"
+        }
+      ],
+      "slug": "compline_chapter",
+      "type": "bible-reading"
+    },
+    {
+      "language": "es",
+      "version": "loc",
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "type": "bible-reading",
+      "lastRevision": 28,
+      "citation": "1 San Pedro 5:8-9a ",
+      "hidden": false,
+      "category": [],
+      "slug": "compline_chapter",
+      "value": [
+        {
+          "chapter": "5",
+          "verse": "8-9a",
+          "book": "1 Peter",
+          "text": "Sean sobrios, y velen; porque su adversario el diablo, como león rugiente, anda alrededor buscando a quien devorar; al cual resistan firmes en la fe."
+        }
+      ],
+      "style": "short"
+    },
+    {
+      "citation": "Hebreos 12:20-21",
+      "hidden": false,
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "lastRevision": 22,
+      "type": "bible-reading",
+      "slug": "compline_chapter",
+      "version": "loc",
+      "style": "short",
+      "category": [],
+      "language": "es",
+      "value": [
+        {
+          "verse": "20-21",
+          "chapter": "12",
+          "book": "Hebrews",
+          "text": "El Dios de paz que resucitó de los muertos a nuestro Señor Jesucristo, el gran Pastor de las ovejas, por la sangre del pacto eterno, les haga aptos en toda obra buena para que hagan su voluntad, haciendo él en ustedes lo que es agradable delante de él por Jesucristo; al cual sea la gloria por los siglos de los siglos."
+        }
+      ]
+    },
+    {
+      "version": "bcp1979",
+      "style": "short",
+      "hidden": false,
+      "type": "bible-reading",
+      "lastRevision": 21,
+      "slug": "compline_chapter",
+      "language": "en",
+      "metadata": {
+        "response": "Demos gracias a Dios."
+      },
+      "category": [],
+      "citation": "San Mateo 11:28-30",
+      "value": [
+        {
+          "verse": "28-30",
+          "chapter": "11",
+          "book": "Matthew",
+          "text": "Vengan a mí todos los que están trabajados y cargados, y yo los haré descansar. Lleven mi yugo sobre ustedes, y aprendan de mí, que soy manso y humilde de corazón; y hallarán descanso para sus almas; porque mi yugo es fácil y ligera mi carga."
+        }
+      ]
+    }
   ]
 }
