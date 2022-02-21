@@ -493,8 +493,7 @@
     },
     {
       "display_format": "unison",
-      "version_label": "Rite II",
-      "metadata": { "omit_response": false },
+      "metadata": { "omit_response": false, "response": "Amén." },
       "style": "prayer",
       "category": [],
       "value": [
@@ -530,7 +529,7 @@
           "style": "prayer",
           "type": "text",
           "version_label": "Laico/Diácono",
-          "metadata": {},
+          "metadata": { "response": "Amén." },
           "source": { "citation": "", "api": "", "source": "" },
           "value": [
             "Dios omnipotente tenga misericordia de nosotros, perdone todos nuestros pecados por Jesucristo nuestro Señor, nos fortalezca en toda bondad y, por el poder del Espíritu Santo, nos conserve en la vida eterna."
@@ -542,7 +541,7 @@
             "Dios omnipotente tenga misericordia de ustedes, perdone todos sus pecados por Jesucristo nuestro Señor, les fortalezca en toda bondad y, por el poder del Espíritu Santo, les conserve en la vida eterna."
           ],
           "source": { "citation": "", "source": "", "api": "" },
-          "metadata": {},
+          "metadata": { "response": "Amén." },
           "category": [],
           "style": "prayer",
           "version_label": "Sacerdote",
@@ -566,7 +565,7 @@
     {
       "source": { "citation": "", "source": "", "api": "" },
       "type": "rubric",
-      "value": ["All stand"],
+      "value": ["Todos de pie."],
       "hidden": false,
       "metadata": {},
       "category": []
@@ -1621,7 +1620,9 @@
         "changeable": true,
         "omit_gloria": false
       },
-      "source": { "source": "", "citation": "", "api": "" }
+      "source": { "source": "", "citation": "", "api": "" },
+      "language": "es",
+      "version": "loc"
     },
     {
       "hidden": false,
@@ -1725,7 +1726,7 @@
       "hidden": false,
       "label": "Credo de los Apóstoles",
       "style": "text",
-      "metadata": { "omit_response": false, "response": "Amen." }
+      "metadata": { "omit_response": false, "response": "Amén." }
     },
     {
       "metadata": { "level": 2 },
@@ -1760,7 +1761,8 @@
       ],
       "language": "es",
       "style": "prayer",
-      "source": { "source": "", "api": "", "citation": "" }
+      "source": { "source": "", "api": "", "citation": "" },
+      "display_format": "unison"
     },
     {
       "category": [],

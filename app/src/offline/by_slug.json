@@ -56954,5 +56954,161 @@
         }
       ]
     }
+  ],
+  "es-loc-ep-daily-collect": [
+    {
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "style": "prayer",
+      "lastRevision": 16,
+      "language": "es",
+      "category": [],
+      "slug": "ep-daily-collect",
+      "value": [
+        "Santísimo Dios, manantial de todos los buenos deseos, de todos los juicios rectos y de todas las obras justas: Concede a tus siervos la paz que el mundo no les puede dar, a fin de que nuestras mentes estén fijas en hacer tu voluntad, y para que, librados del temor de todo enemigo, vivamos en paz y tranquilidad; por las bondades de Cristo Jesús nuestro Salvador."
+      ],
+      "metadata": { "response": "Amén." },
+      "label": "Colecta por la paz",
+      "type": "text",
+      "version": "loc",
+      "hidden": false
+    },
+    {
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "slug": "ep-daily-collect",
+      "type": "text",
+      "hidden": false,
+      "metadata": { "response": "Amén." },
+      "value": [
+        "Sé nuestra luz en las tinieblas, oh Señor, y por tu gran misericordia defiéndenos de todos los peligros y riesgos de esta noche; por amor de tu único Hijo, nuestro Salvador Jesucristo."
+      ],
+      "version": "loc",
+      "label": "Colecta por ayuda en todo peligro",
+      "style": "prayer",
+      "lastRevision": 23,
+      "category": [],
+      "language": "es"
+    },
+    {
+      "type": "text",
+      "style": "prayer",
+      "hidden": false,
+      "metadata": { "response": "Amén." },
+      "lastRevision": 24,
+      "label": "Colecta para pedir protección",
+      "slug": "ep-daily-collect",
+      "value": [
+        "Oh Dios, tú eres la vida de los que viven, la luz de los fieles, la fortaleza de los que trabajan, y el descanso de los muertos: Te damos gracias por las bendiciones del día que termina, y humildemente te suplicamos nos des tu protección durante la noche que comienza. Llévanos en seguridad hasta las horas del alba; por aquél que murió y resucitó por nosotros, tu Hijo nuestro Salvador Jesucristo."
+      ],
+      "category": [],
+      "language": "es",
+      "version": "loc",
+      "source": {
+        "citation": "",
+        "source": "",
+        "api": ""
+      }
+    },
+    {
+      "value": [
+        "Quédate con nosotros, Señor Jesús, ahora que la noche se acerca y ha pasado el día. Sé nuestro compañero en el camino, enciende nuestros corazones, y despierta la esperanza, para que te conozcamos tal como te revelas en las Escrituras y en la fracción del pan. Concede esto por amor de tu Nombre."
+      ],
+      "category": [],
+      "slug": "ep-daily-collect",
+      "hidden": false,
+      "style": "prayer",
+      "type": "text",
+      "version": "loc",
+      "label": "Colecta por la presencia de Cristo",
+      "metadata": {
+        "response": "Amén."
+      },
+      "lastRevision": 17,
+      "language": "es",
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      }
+    }
+  ],
+  "es-loc-ep_prayers_for_mission": [
+    {
+      "version": "loc",
+      "hidden": false,
+      "lastRevision": 19,
+      "slug": "ep_prayers_for_mission",
+      "value": [
+        "Dios y Padre de todos, los cielos de los cielos te adoran: Haz que toda la tierra también te rinda culto, que todas las naciones te obedezcan, que todas las lenguas te confiesen y bendigan, y que todas las personas en todas partes te amen y te sirvan en paz; por Jesucristo nuestro Señor."
+      ],
+      "style": "prayer",
+      "category": [],
+      "type": "text",
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "label": "",
+      "language": "es",
+      "metadata": {
+        "response": "Amén."
+      }
+    },
+    {
+      "hidden": false,
+      "version": "loc",
+      "value": [
+        "Vela, oh amantísimo Señor, con los que trabajan, o velan, o lloran esta noche. A tus ángeles manda que guarden a los que duermen. Cuida a los enfermos, Cristo Señor; otorga reposo a los cansados, bendice a los moribundos, consuela a los que sufren, compadécete de los afligidos, escuda a los gozosos. Todo esto te pedimos por tu gran amor."
+      ],
+      "type": "text",
+      "label": "",
+      "style": "prayer",
+      "metadata": {
+        "response": "Amén."
+      },
+      "category": [],
+      "language": "es",
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "lastRevision": 14,
+      "date_created": {
+        "nanoseconds": 346000000,
+        "seconds": 1603108698
+      },
+      "slug": "ep_prayers_for_mission"
+    },
+    {
+      "style": "prayer",
+      "metadata": {
+        "response": "Amén."
+      },
+      "version": "loc",
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "category": [],
+      "lastRevision": 14,
+      "label": "",
+      "type": "text",
+      "value": [
+        "Oh Dios, tú manifiestas en tus siervos las señales de tu presencia: Envía sobre nosotros el Espíritu de amor, para que en el compañerismo mutuo tu gracia abundante se acreciente entre nosotros; por Jesucristo nuestro Señor."
+      ],
+      "hidden": false,
+      "slug": "ep_prayers_for_mission",
+      "language": "es"
+    }
   ]
 }
