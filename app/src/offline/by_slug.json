@@ -31895,7 +31895,7 @@
         "source": "LOC",
         "citation": "p. 654"
       },
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: He",
       "language": "es",
       "slug": "psalm_119_he",
       "style": "psalm",
@@ -31906,7 +31906,7 @@
       "metadata": {
         "omit_antiphon": false,
         "number": "119",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: He",
         "latinname": "Beati immaculati",
         "omit_gloria": false
       }
@@ -34653,11 +34653,11 @@
       "hidden": false,
       "slug": "psalm_119_teth",
       "type": "psalm",
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Tet",
       "metadata": {
         "omit_antiphon": false,
         "latinname": "Beati immaculati",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Tet",
         "omit_gloria": false,
         "number": "119"
       },
@@ -35220,7 +35220,7 @@
               "number": "16",
               "verse": "Me regocijo en tus estatutos; *",
               "type": "psalm-verse",
-              "halfverse": "no me olvidaré de tus palabras.\nSalmo 119:9 655"
+              "halfverse": "no me olvidaré de tus palabras."
             }
           ],
           "type": "psalm-section"
@@ -35230,7 +35230,7 @@
         "omit_gloria": false,
         "latinname": "Beati immaculati",
         "number": "119",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Bet",
         "omit_antiphon": false
       },
       "type": "psalm",
@@ -35245,7 +35245,7 @@
       "hidden": false,
       "version_label": null,
       "version": "loc",
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Bet",
       "slug": "psalm_119_beth"
     }
   ],
@@ -35863,7 +35863,7 @@
     {
       "category": ["Psalm"],
       "type": "psalm",
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Tau",
       "style": "psalm",
       "version_label": null,
       "value": [
@@ -35925,7 +35925,7 @@
         "latinname": "Beati immaculati",
         "omit_gloria": false,
         "omit_antiphon": false,
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Tau",
         "number": "119"
       },
       "language": "es",
@@ -37211,7 +37211,7 @@
         "source": "LOC",
         "citation": "p. 654"
       },
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Sámec",
       "citation": null,
       "value": [
         {
@@ -37277,7 +37277,7 @@
       "metadata": {
         "latinname": "Beati immaculati",
         "omit_gloria": false,
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Sámec",
         "omit_antiphon": false,
         "number": "119"
       },
@@ -37524,7 +37524,7 @@
       "citation": null,
       "version_label": null,
       "type": "psalm",
-      "label": "Salmo 106: Parte I",
+      "label": "Salmo 106: Parte II",
       "language": "es",
       "value": [
         {
@@ -37716,7 +37716,7 @@
       "metadata": {
         "omit_antiphon": false,
         "omit_gloria": false,
-        "localname": "Salmo 106: Parte I",
+        "localname": "Salmo 106: Parte II",
         "number": "106",
         "latinname": "Confitemini Domino"
       },
@@ -37731,13 +37731,13 @@
   ],
   "en-salterio1979-psalm_119_qoph": [
     {
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Cof",
       "slug": "psalm_119_qoph",
       "language": "es",
       "metadata": {
         "omit_antiphon": false,
         "number": "119",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Cof",
         "omit_gloria": false,
         "latinname": "Beati immaculati"
       },
@@ -39034,7 +39034,7 @@
   ],
   "en-salterio1979-psalm_119_heth": [
     {
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Chet",
       "citation": null,
       "category": ["Psalm"],
       "hidden": false,
@@ -39042,7 +39042,7 @@
         "number": "119",
         "omit_gloria": false,
         "latinname": "Beati immaculati",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Chet",
         "omit_antiphon": false
       },
       "source": {
@@ -39095,7 +39095,7 @@
               "type": "psalm-verse"
             },
             {
-              "halfverse": "enséñame tus estatutos.\nSalmo 119:57 659",
+              "halfverse": "enséñame tus estatutos.",
               "verse": "De tu amor, oh Señor, está llena la tierra; *",
               "type": "psalm-verse",
               "number": "64"
@@ -39204,7 +39204,7 @@
       "slug": "psalm_119_daleth",
       "citation": null,
       "style": "psalm",
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Dálet",
       "value": [
         {
           "type": "psalm-section",
@@ -39262,7 +39262,7 @@
       ],
       "category": ["Psalm"],
       "metadata": {
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Dálet",
         "omit_antiphon": false,
         "number": "119",
         "latinname": "Beati immaculati",
@@ -39278,7 +39278,7 @@
       "metadata": {
         "omit_gloria": false,
         "omit_antiphon": false,
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Ayin",
         "latinname": "Beati immaculati",
         "number": "119"
       },
@@ -39347,7 +39347,7 @@
       },
       "hidden": false,
       "citation": null,
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Ayin",
       "version": "loc",
       "version_label": null
     }
@@ -40069,7 +40069,7 @@
         "omit_gloria": false,
         "latinname": "Beati immaculati",
         "omit_antiphon": false,
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Tsade",
         "number": "119"
       },
       "value": [
@@ -40131,7 +40131,7 @@
         "source": "LOC",
         "citation": "p. 654"
       },
-      "label": "Salmo 119: Alef"
+      "label": "Salmo 119: Tsade"
     }
   ],
   "en-salterio1979-psalm_87": [
@@ -40832,12 +40832,12 @@
         "number": "119",
         "latinname": "Beati immaculati",
         "omit_gloria": false,
-        "localname": "Salmo 119: Alef"
+        "localname": "Salmo 119: Zain"
       },
       "type": "psalm",
       "version": "loc",
       "hidden": false,
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Zain",
       "version_label": null,
       "source": {
         "source": "LOC",
@@ -43047,7 +43047,7 @@
     {
       "metadata": {
         "omit_gloria": false,
-        "localname": "Salmo 18: Parte I",
+        "localname": "Salmo 18: Parte II",
         "omit_antiphon": false,
         "latinname": "Diligam te, Domine",
         "number": "18"
@@ -43061,7 +43061,7 @@
       "category": ["Psalm"],
       "type": "psalm",
       "language": "es",
-      "label": "Salmo 18: Parte I",
+      "label": "Salmo 18: Parte II",
       "version_label": null,
       "value": [
         {
@@ -46752,7 +46752,7 @@
   ],
   "en-salterio1979-psalm_37_ii": [
     {
-      "label": "Salmo 37: Parte I",
+      "label": "Salmo 37: Parte II",
       "value": [
         {
           "value": [
@@ -46907,7 +46907,7 @@
       "category": ["Psalm"],
       "hidden": false,
       "metadata": {
-        "localname": "Salmo 37: Parte I",
+        "localname": "Salmo 37: Parte II",
         "latinname": "Noli aemulari",
         "number": "37",
         "omit_antiphon": false,
@@ -47097,7 +47097,7 @@
       "metadata": {
         "latinname": "Confitemini Domino",
         "omit_antiphon": false,
-        "localname": "Salmo 107: Parte I",
+        "localname": "Salmo 107: Parte II",
         "number": "107",
         "omit_gloria": false
       },
@@ -47187,7 +47187,7 @@
       },
       "style": "psalm",
       "language": "es",
-      "label": "Salmo 107: Parte I"
+      "label": "Salmo 107: Parte II"
     }
   ],
   "en-salterio1979-psalm_80": [
@@ -47788,7 +47788,7 @@
   ],
   "en-salterio1979-psalm_119_gimel": [
     {
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Guímel",
       "version_label": null,
       "category": ["Psalm"],
       "language": "es",
@@ -47797,7 +47797,7 @@
       "hidden": false,
       "type": "psalm",
       "metadata": {
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Guímel",
         "omit_gloria": false,
         "latinname": "Beati immaculati",
         "number": "119",
@@ -48852,7 +48852,7 @@
       "metadata": {
         "omit_gloria": false,
         "number": "119",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Pe",
         "latinname": "Beati immaculati",
         "omit_antiphon": false
       },
@@ -48903,7 +48903,7 @@
               "verse": "Haz resplandecer tu rostro sobre tu siervo, *"
             },
             {
-              "halfverse": "a causa de los que no guardan tu ley.\nSalmo 119:129 665",
+              "halfverse": "a causa de los que no guardan tu ley.",
               "type": "psalm-verse",
               "number": "136",
               "verse": "Ríos de aguas brotan de mis ojos *"
@@ -48924,7 +48924,7 @@
       "slug": "psalm_119_pe",
       "hidden": false,
       "citation": null,
-      "label": "Salmo 119: Alef"
+      "label": "Salmo 119: Pe"
     }
   ],
   "en-salterio1979-psalm_23": [
@@ -48997,7 +48997,7 @@
   ],
   "en-salterio1979-psalm_119_shin": [
     {
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Sin",
       "language": "es",
       "style": "psalm",
       "value": [
@@ -49059,7 +49059,7 @@
       "type": "psalm",
       "metadata": {
         "omit_gloria": false,
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Sin",
         "latinname": "Beati immaculati",
         "omit_antiphon": false,
         "number": "119"
@@ -50445,7 +50445,7 @@
       "metadata": {
         "omit_gloria": false,
         "latinname": "Beati immaculati",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Lámed",
         "omit_antiphon": false,
         "number": "119"
       },
@@ -50511,7 +50511,7 @@
       },
       "style": "psalm",
       "category": ["Psalm"],
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Lámed",
       "type": "psalm"
     }
   ],
@@ -50568,7 +50568,7 @@
             {
               "verse": "Mi corazón incliné a cumplir tus estatutos, *",
               "type": "psalm-verse",
-              "halfverse": "eternamente y hasta el fin.\nSalmo 119:105 663",
+              "halfverse": "eternamente y hasta el fin.",
               "number": "112"
             }
           ]
@@ -50750,10 +50750,10 @@
   "en-salterio1979-psalm_119_kaph": [
     {
       "category": ["Psalm"],
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Caf",
       "slug": "psalm_119_kaph",
       "metadata": {
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Caf",
         "number": "119",
         "omit_gloria": false,
         "omit_antiphon": false,
@@ -50808,7 +50808,7 @@
             {
               "verse": "Vivifícame conforme a tu bondad, *",
               "type": "psalm-verse",
-              "halfverse": "para que guarde los decretos de tu boca.\nSalmo 119:81 661",
+              "halfverse": "para que guarde los decretos de tu boca.",
               "number": "88"
             }
           ]
@@ -51373,7 +51373,7 @@
       "citation": null,
       "type": "psalm",
       "language": "es",
-      "label": "Salmo 78: Parte I",
+      "label": "Salmo 78: Parte II",
       "hidden": false,
       "category": ["Psalm"],
       "version_label": null,
@@ -51382,7 +51382,7 @@
         "omit_gloria": false,
         "number": "78",
         "latinname": "Attendite, popule",
-        "localname": "Salmo 78: Parte I"
+        "localname": "Salmo 78: Parte II"
       },
       "style": "psalm"
     }
@@ -51685,7 +51685,7 @@
     {
       "slug": "psalm_119_mem",
       "citation": null,
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Mem",
       "version": "loc",
       "value": [
         {
@@ -51754,7 +51754,7 @@
         "omit_gloria": false,
         "omit_antiphon": false,
         "number": "119",
-        "localname": "Salmo 119: Alef"
+        "localname": "Salmo 119: Mem"
       },
       "category": ["Psalm"],
       "version_label": null,
@@ -51994,7 +51994,7 @@
       "citation": null,
       "metadata": {
         "number": "89",
-        "localname": "Salmo 89: Parte I",
+        "localname": "Salmo 89: Parte II",
         "omit_gloria": false,
         "omit_antiphon": false,
         "latinname": "Misericordias Domini"
@@ -52219,7 +52219,7 @@
       },
       "language": "es",
       "type": "psalm",
-      "label": "Salmo 89: Parte I",
+      "label": "Salmo 89: Parte II",
       "style": "psalm"
     }
   ],
@@ -52526,7 +52526,7 @@
         "omit_gloria": false,
         "latinname": "Beati immaculati",
         "omit_antiphon": false,
-        "localname": "Salmo 119: Alef"
+        "localname": "Salmo 119: Yod"
       },
       "source": {
         "source": "LOC",
@@ -52594,7 +52594,7 @@
       "style": "psalm",
       "version": "loc",
       "slug": "psalm_119_yodh",
-      "label": "Salmo 119: Alef"
+      "label": "Salmo 119: Yod"
     }
   ],
   "en-salterio1979-psalm_36": [
@@ -52704,14 +52704,14 @@
   "en-salterio1979-psalm_119_waw": [
     {
       "metadata": {
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Vau",
         "latinname": "Beati immaculati",
         "omit_antiphon": false,
         "omit_gloria": false,
         "number": "119"
       },
       "hidden": false,
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Vau",
       "slug": "psalm_119_waw",
       "category": ["Psalm"],
       "style": "psalm",
@@ -54504,7 +54504,7 @@
         "citation": "p. 654"
       },
       "version": "loc",
-      "label": "Salmo 119: Alef",
+      "label": "Salmo 119: Resh",
       "style": "psalm",
       "slug": "psalm_119_resh",
       "hidden": false,
@@ -54512,7 +54512,7 @@
       "version_label": null,
       "metadata": {
         "number": "119",
-        "localname": "Salmo 119: Alef",
+        "localname": "Salmo 119: Resh",
         "omit_gloria": false,
         "omit_antiphon": false,
         "latinname": "Beati immaculati"
@@ -54566,7 +54566,7 @@
               "type": "psalm-verse",
               "number": "160",
               "verse": "La esencia de tu palabra es la verdad; *",
-              "halfverse": "eternos son todos tus justos juicios.\nSalmo 119:153 667"
+              "halfverse": "eternos son todos tus justos juicios."
             }
           ],
           "type": "psalm-section"
