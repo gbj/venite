@@ -1302,21 +1302,15 @@
           {
             "value": "after",
             "default": false,
-            "label": "After the Office",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "value": "latin",
-            "label": "After the Office (in Latin)",
-            "default": false,
+            "label": "Después del Oficio",
             "metadata": { "alternateYear": false }
           }
         ],
-        "label": "Hymns to Mary",
+        "label": "Himnos Marianos",
         "key": "marianAntiphons"
       },
       "insertGloria": {
-        "label": "Insert Gloria Patri after each Psalm",
+        "label": "Inserta al Gloria Patri después de cada Salmo",
         "options": [
           {
             "metadata": { "alternateYear": false },
@@ -1328,7 +1322,7 @@
             "value": "true",
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "Yes"
+            "label": "Sí"
           }
         ],
         "key": "insertGloria"
@@ -1337,25 +1331,20 @@
         "key": "psalterVersion",
         "options": [
           {
-            "value": "bcp1979",
+            "value": "salterio1979",
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "Book of Common Prayer (1979)"
-          },
-          {
-            "label": "Inclusive Psalter",
-            "value": "ip",
-            "metadata": { "alternateYear": false }
+            "label": "El Salterio (1979)"
           }
         ],
-        "label": "Psalter Version"
+        "label": "Traducción de los Salmos"
       }
     },
     "supplement": false,
     "special_preferences": {},
     "evening": true,
     "pronouns": [],
-    "liturgyversions": ["bcp1979", "bcp1979"]
+    "liturgyversions": ["loc"]
   },
   "date_created": { "nanoseconds": 572000000, "seconds": 1645409367 }
 }

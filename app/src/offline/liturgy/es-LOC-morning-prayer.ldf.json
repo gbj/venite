@@ -14,7 +14,36 @@
       "bibleVersion": {
         "key": "bibleVersion",
         "options": [
-          { "value": "RV09", "default": true, "label": "Reina-Valera (1909)" }
+          {
+            "value": "RV09",
+            "label": "Reina-Valera (1909)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "NRSV",
+            "label": "New Revised Standard Version (NRSV)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "CEB",
+            "label": "Common English Bible (CEB)"
+          },
+          {
+            "default": false,
+            "value": "ESV",
+            "label": "English Standard Version (ESV)",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "KJV",
+            "metadata": { "alternateYear": false },
+            "label": "King James Version (KJV)",
+            "default": false
+          }
         ],
         "label": "La Biblia",
         "category": "Traducciones"
@@ -34,19 +63,19 @@
             "value": "first_reading",
             "metadata": { "alternateYear": false },
             "default": false,
-            "label": "OT/First Reading"
+            "label": "Antiguo Testamento"
           },
           {
             "metadata": { "alternateYear": false },
             "value": "second_reading",
             "default": false,
-            "label": "Epistle/Second Reading"
+            "label": "Nuevo Testamento"
           },
           {
             "metadata": { "alternateYear": false },
             "value": "gospel",
             "default": true,
-            "label": "Gospel"
+            "label": "Evangelio"
           }
         ]
       },
@@ -59,7 +88,7 @@
             "value": "none"
           },
           {
-            "label": "OT/First Reading",
+            "label": "Antiguo Testamento",
             "value": "first_reading",
             "metadata": { "alternateYear": false },
             "default": false
@@ -68,11 +97,11 @@
             "default": false,
             "metadata": { "alternateYear": false },
             "value": "second_reading",
-            "label": "Epistle/Second Reading"
+            "label": "Nuevo Testamento"
           },
           {
             "value": "gospel",
-            "label": "Gospel",
+            "label": "Evangelio",
             "metadata": { "alternateYear": false },
             "default": false
           }
@@ -82,7 +111,7 @@
         "category": "Lecturas"
       },
       "sermon": {
-        "category": "Advanced",
+        "category": "Configuración Avanzada",
         "label": "Sermón",
         "key": "sermon",
         "options": [
@@ -129,7 +158,7 @@
           }
         ],
         "label": "Omitir la primera parte del oficio",
-        "category": "Advanced"
+        "category": "Configuración Avanzada"
       },
       "psalmCycle": {
         "label": "Ciclo de los Psalmos",
@@ -179,7 +208,7 @@
             "value": "true"
           }
         ],
-        "label": "Inserta Gloria Patri después de cada Salmo"
+        "label": "Inserta al Gloria Patri después de cada Salmo"
       },
       "veniteGloria": {
         "category": "Configuración Avanzada",
@@ -208,17 +237,17 @@
           {
             "default": true,
             "value": "first_reading",
-            "label": "OT/First Reading",
+            "label": "Antiguo Testamento",
             "metadata": { "alternateYear": false }
           },
           {
             "default": false,
             "metadata": { "alternateYear": false },
             "value": "second_reading",
-            "label": "Epistle/Second Reading"
+            "label": "Nuevo Testamento"
           },
           {
-            "label": "Gospel",
+            "label": "Evangelio",
             "metadata": { "alternateYear": false },
             "value": "gospel",
             "default": false
@@ -263,7 +292,7 @@
           },
           {
             "default": false,
-            "label": "Ante el Oficio",
+            "label": "Antes del Oficio",
             "metadata": { "alternateYear": false },
             "value": "before"
           },
@@ -1980,8 +2009,8 @@
       "slug": "mp_daily_collect",
       "category": [],
       "source": { "citation": "", "source": "", "api": "" },
-      "language": "en",
-      "version": "bcp1979",
+      "language": "es",
+      "version": "loc",
       "metadata": { "omit_response": false },
       "hidden": false,
       "condition": {

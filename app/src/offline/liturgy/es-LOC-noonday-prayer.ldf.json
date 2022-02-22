@@ -368,7 +368,7 @@
   "metadata": {
     "preferences": {
       "angelus": {
-        "label": "Angelus",
+        "label": "El Ángelus",
         "key": "angelus",
         "options": [
           {
@@ -380,16 +380,17 @@
           {
             "value": "before",
             "default": false,
-            "label": "Before the Liturgy",
+            "label": "Antes del Oficio",
             "metadata": { "alternateYear": false }
           },
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "After the Liturgy",
+            "label": "Después del Oficio",
             "value": "after"
           }
-        ]
+        ],
+        "category": "Configuración Avanzada"
       },
       "insertGloria": {
         "options": [
@@ -403,11 +404,11 @@
             "value": "true",
             "metadata": { "alternateYear": false },
             "default": false,
-            "label": "Yes"
+            "label": "Sí"
           }
         ],
-        "category": "Advanced",
-        "label": "Insert Gloria Patri after each Psalm",
+        "category": "Configuración Avanzada",
+        "label": "Inserta al Gloria Patri después de cada Salmo",
         "key": "insertGloria"
       }
     },

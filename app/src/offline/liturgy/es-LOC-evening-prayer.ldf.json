@@ -1149,62 +1149,66 @@
         "category": "Traducciones",
         "key": "psalterVersion",
         "options": [
-          { "default": true, "label": "LOC 1979", "value": "salterio1979" }
+          {
+            "default": true,
+            "label": "El Salterio (1979)",
+            "value": "salterio1979"
+          }
         ],
         "label": "El Salterio"
       },
       "psalmCycle": {
-        "category": "Cycles",
-        "label": "Psalm Cycle",
+        "label": "Ciclo de los Psalmos",
         "key": "psalmCycle",
         "options": [
           {
-            "metadata": { "alternateYear": false },
+            "label": "El Leccionario del Oficio Diario",
+            "value": "bcp1979_daily_psalms",
             "default": false,
-            "label": "Daily Office Lectionary",
-            "value": "bcp1979_daily_psalms"
+            "metadata": { "alternateYear": false }
           },
           {
-            "label": "30-day Cycle",
-            "value": "bcp1979_30day_psalter",
+            "default": false,
             "metadata": { "alternateYear": false },
-            "default": false
+            "value": "bcp1979_30day_psalter",
+            "label": "Ciclo de 30 Días"
           },
           {
             "value": "rclsundayTrack1",
-            "label": "RCL (Track 1)",
-            "metadata": { "alternateYear": false },
-            "default": false
-          },
-          {
             "metadata": { "alternateYear": false },
             "default": false,
+            "label": "Leccionario Común Revisado (1)"
+          },
+          {
+            "default": false,
+            "label": "Leccionario Común Revisado (2)",
             "value": "rclsunday",
-            "label": "RCL (Track 2)"
+            "metadata": { "alternateYear": false }
           }
-        ]
+        ],
+        "category": "Ciclos"
       },
       "ofe": {
         "key": "ofe",
         "options": [
           {
-            "value": "no",
+            "default": false,
             "label": "No",
-            "metadata": { "alternateYear": false },
-            "default": false
+            "value": "no",
+            "metadata": { "alternateYear": false }
           },
           {
             "value": "yes",
             "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "Yes"
+            "label": "Sí",
+            "metadata": { "alternateYear": false }
           }
         ],
-        "label": "Omit Fore-Office",
-        "category": "Advanced"
+        "label": "Omitir la primera parte del oficio",
+        "category": "Configuración Avanzada"
       },
       "sermon": {
-        "category": "Advanced",
+        "category": "Configuración Avanzada",
         "options": [
           {
             "metadata": { "alternateYear": false },
@@ -1213,13 +1217,13 @@
             "label": "—"
           },
           {
-            "label": "After the Office",
+            "label": "Después del Oficio",
             "value": "after_office",
             "default": false,
             "metadata": { "alternateYear": false }
           },
           {
-            "label": "After the Readings",
+            "label": "Después de las Lecturas",
             "value": "after_readings",
             "metadata": { "alternateYear": false },
             "default": false
@@ -1228,14 +1232,14 @@
             "value": "after_collects",
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "After the Collects"
+            "label": "Despues de las Colectas"
           }
         ],
-        "label": "Sermon",
+        "label": "El Sermón",
         "key": "sermon"
       },
       "angelus": {
-        "category": "Supplemental Devotions",
+        "category": "Devociones Suplementarias",
         "options": [
           {
             "label": "—",
@@ -1244,7 +1248,7 @@
             "value": "no"
           },
           {
-            "label": "Before the Office",
+            "label": "Antes del Oficio",
             "default": false,
             "value": "before",
             "metadata": { "alternateYear": false }
@@ -1252,31 +1256,12 @@
           {
             "value": "after",
             "metadata": { "alternateYear": false },
-            "label": "After the Office",
+            "label": "Después del Oficio",
             "default": false
           }
         ],
         "key": "angelus",
-        "label": "Angelus"
-      },
-      "andrewes": {
-        "key": "andrewes",
-        "category": "Supplemental Devotions",
-        "options": [
-          {
-            "default": false,
-            "value": "no",
-            "metadata": { "alternateYear": false },
-            "label": "—"
-          },
-          {
-            "value": "after",
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "label": "After the Office"
-          }
-        ],
-        "label": "Lancelot Andrewes’s Private Prayers"
+        "label": "El Ángelus"
       },
       "insertGloria": {
         "options": [
@@ -1288,37 +1273,37 @@
           },
           {
             "value": "true",
-            "label": "Yes",
+            "label": "Sí",
             "default": false,
             "metadata": { "alternateYear": false }
           }
         ],
-        "category": "Advanced",
-        "label": "Insert Gloria Patri after each Psalm",
+        "category": "Configuración Avanzada",
+        "label": "Inserta al Gloria Patri después de cada Salmo",
         "key": "insertGloria"
       },
       "lectionary": {
-        "category": "Cycles",
-        "label": "Lectionary",
+        "label": "Leccionario",
         "key": "lectionary",
+        "category": "Ciclos",
         "options": [
           {
             "default": false,
-            "value": "bcp1979_daily_office",
+            "label": "El Leccionario del Oficio Diario",
             "metadata": { "alternateYear": false },
-            "label": "Daily Office Lectionary"
+            "value": "bcp1979_daily_office"
           },
           {
             "value": "rclsundayTrack1",
-            "label": "RCL Track 1",
-            "default": false,
-            "metadata": { "alternateYear": false }
+            "label": "Leccionario Común Revisado (1)",
+            "metadata": { "alternateYear": false },
+            "default": false
           },
           {
-            "metadata": { "alternateYear": false },
+            "default": false,
             "value": "rclsunday",
-            "label": "RCL Track 2",
-            "default": false
+            "metadata": { "alternateYear": false },
+            "label": "Leccionario Común Revisado (2)"
           }
         ]
       },
@@ -1331,7 +1316,7 @@
             "default": false
           },
           {
-            "label": "OT/First Reading (Alternate Year)",
+            "label": "Antiguo Testamento (del Año Pasado)",
             "metadata": { "alternateYear": true },
             "value": "first_reading_alt",
             "default": false
@@ -1339,19 +1324,19 @@
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "OT/First Reading",
+            "label": "Antiguo Testamento",
             "value": "first_reading"
           },
           {
             "value": "second_reading",
             "default": true,
-            "label": "Epistle/Second Reading",
+            "label": "Nuevo Testamento",
             "metadata": { "alternateYear": false }
           },
           {
             "default": true,
             "value": "gospel",
-            "label": "Gospel",
+            "label": "Evangelio",
             "metadata": { "alternateYear": false }
           }
         ],
@@ -1360,9 +1345,9 @@
         "label": "Second Reading"
       },
       "owe": {
-        "category": "Supplemental Devotions",
+        "category": "Devociones Suplementarios",
         "key": "owe",
-        "label": "An Order of Worship for the Evening",
+        "label": "Orden de Adoración para el Anochecer",
         "options": [
           {
             "metadata": { "alternateYear": false },
@@ -1373,7 +1358,7 @@
           {
             "value": "before",
             "default": false,
-            "label": "Before the Office",
+            "label": "Antes del Oficio",
             "metadata": { "alternateYear": false }
           }
         ]
@@ -1388,28 +1373,22 @@
             "value": "no"
           },
           {
-            "label": "After the Office",
+            "label": "Después del Oficio",
             "default": false,
             "metadata": { "alternateYear": false },
             "value": "after"
-          },
-          {
-            "label": "After the Office (in Latin)",
-            "value": "latin",
-            "default": false,
-            "metadata": { "alternateYear": false }
           }
         ],
-        "label": "Hymns to Mary",
-        "category": "Supplemental Devotions"
+        "label": "Himnos Marianos",
+        "category": "Devociones Suplementarias"
       },
       "canticleTable": {
-        "category": "Cycles",
-        "label": "Canticle Table",
+        "category": "Ciclos",
+        "label": "Ciclo de los Cánticos",
         "options": [
           {
             "value": "bcp1979",
-            "label": "1979 Table of Suggested Canticles",
+            "label": "Cánticos Sugeridos (1979)",
             "default": false,
             "metadata": { "alternateYear": false }
           },
@@ -1417,12 +1396,6 @@
             "default": false,
             "label": "Magnificat/Nunc Dimittis",
             "value": "magnunc",
-            "metadata": { "alternateYear": false }
-          },
-          {
-            "default": false,
-            "value": "eow",
-            "label": "Enriching Our Worship",
             "metadata": { "alternateYear": false }
           },
           {
@@ -1434,28 +1407,17 @@
         ],
         "key": "canticleTable"
       },
-      "originalLanguages": {
-        "label": "Include Original-Language Biblical Texts",
-        "key": "originalLanguages",
-        "options": [
-          {
-            "metadata": { "alternateYear": false },
-            "value": "false",
-            "label": "No"
-          },
-          {
-            "value": "true",
-            "label": "Yes",
-            "metadata": { "alternateYear": false }
-          }
-        ],
-        "category": "Translations"
-      },
       "bibleVersion": {
-        "category": "Translations",
+        "category": "Traducciones",
         "label": "Bible Version",
         "key": "bibleVersion",
         "options": [
+          {
+            "value": "RV09",
+            "label": "Reina-Valera (1909)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
           {
             "value": "NRSV",
             "label": "New Revised Standard Version (NRSV)",
@@ -1497,17 +1459,17 @@
             "value": "first_reading",
             "metadata": { "alternateYear": false },
             "default": true,
-            "label": "OT/First Reading"
+            "label": "Antiguo Testamento"
           },
           {
-            "label": "Epistle/Second Reading",
+            "label": "Nuevo Testamento",
             "metadata": { "alternateYear": false },
             "value": "second_reading",
             "default": false
           },
           {
             "metadata": { "alternateYear": false },
-            "label": "Gospel",
+            "label": "Evangelio",
             "value": "gospel",
             "default": false
           }
@@ -1528,21 +1490,21 @@
             "metadata": { "alternateYear": true }
           },
           {
-            "label": "OT/First Reading",
+            "label": "Antiguo Testamento",
             "default": true,
             "metadata": { "alternateYear": false },
             "value": "first_reading"
           },
           {
             "metadata": { "alternateYear": false },
-            "label": "Epistle/Second Reading",
+            "label": "Nuevo Testamento",
             "value": "second_reading",
             "default": false
           },
           {
             "value": "gospel",
             "default": false,
-            "label": "Gospel",
+            "label": "Evangelio",
             "metadata": { "alternateYear": false }
           }
         ],
