@@ -42,6 +42,31 @@
             <ion-label class="sm-only">{{ "daily-readings.lff2018-short" | translate }}</ion-label>
           </ion-segment-button>
         </ion-segment>
+        <ion-segment [value]="psalterVersion.value" (ionChange)="psalterVersion.setValue($event.detail.value)">
+          <ion-segment-button value="bcp1979">
+            <ion-label>{{ "daily-readings.bcp-psalter" | translate }}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="salterio1979">
+            <ion-label>{{ "daily-readings.el-salterio" | translate }}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-segment [value]="bibleVersion.value" (ionChange)="bibleVersion.setValue($event.detail.value)">
+          <ion-segment-button value="NRSV">
+            <ion-label>NRSV</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="CEB">
+            <ion-label>CEB</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="ESV">
+            <ion-label>ESV</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="KJV">
+            <ion-label>KJV</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="RV09">
+            <ion-label>Reina-Valera</ion-label>
+          </ion-segment-button>
+        </ion-segment>
       </form>
 
   

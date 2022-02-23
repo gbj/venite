@@ -52,6 +52,7 @@ export class DailyReadingsPage implements OnInit {
   timeOfDay: FormControl = new FormControl(
     new Date().getHours() <= 14 ? "morning" : "evening"
   );
+  psalterVersion: FormControl = new FormControl("bcp1979");
   bibleVersion: FormControl = new FormControl("NRSV");
 
   constructor(
@@ -129,32 +130,42 @@ export class DailyReadingsPage implements OnInit {
       map((entries) =>
         entries.sort((a, b) => (readingOrder(a) <= readingOrder(b) ? -1 : 1))
       ),
-      map((entries) =>
-        entries.map((entry) =>
-          this.prayService.lookupBibleReading(
-            new BibleReading({
-              type: "bible-reading",
-              style: "long",
-              citation: entry.citation,
-            }),
-            this.bibleVersion.value
+      switchMap((entries) =>
+        combineLatest(
+          entries.map((entry) =>
+            this.bibleVersion.valueChanges.pipe(
+              startWith(this.bibleVersion.value),
+              switchMap((version) =>
+                this.prayService.lookupBibleReading(
+                  new BibleReading({
+                    type: "bible-reading",
+                    style: "long",
+                    citation: entry.citation,
+                  }),
+                  version
+                )
+              )
+            )
           )
         )
-      ),
-      switchMap((readings) => combineLatest(readings))
+      )
     );
 
     this.psalms$ = combineLatest([
+      this.psalterVersion.valueChanges.pipe(
+        startWith(this.psalterVersion.value)
+      ),
       this.psalmCycle.valueChanges.pipe(startWith(undefined)),
       this.timeOfDay.valueChanges.pipe(startWith(undefined)),
       this.day$,
     ]).pipe(
-      switchMap(([table, timeOfDay, day]) =>
+      switchMap(([version, table, timeOfDay, day]) =>
         this.prayService
           .lookupPsalter(
             new Psalm({
               type: "psalm",
               style: "psalm",
+              version,
               lookup: {
                 table: table || this.psalmCycle.value,
                 item: `${timeOfDay || this.timeOfDay.value}_psalms`,
