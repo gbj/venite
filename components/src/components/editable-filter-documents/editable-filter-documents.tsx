@@ -144,7 +144,7 @@ export class EditableFilterDocumentsComponent {
               </ion-button>
 
               {/* Versions, for e.g., psalms */}
-              {this.versions && <ion-item>
+              {this.versions && Object.values(this.versions).length > 1 && <ion-item>
                 <ion-label>{ localeStrings.version }</ion-label>
                 <ion-select value={this.version} onIonChange={(ev : CustomEvent) => this.chooseVersion(ev.detail.value)}>
                   {Object.entries(this.versions)

@@ -702,7 +702,7 @@ export class PrayPage implements OnInit, OnDestroy {
         this.documents.findDocumentsByCategory(
           ["Canticle"],
           doc?.language || "en",
-          ["bcp1979", "rite_i", "eow"]
+          doc?.language == "es" ? ["loc"] : ["bcp1979", "rite_i", "eow"]
         )
       ),
       map((docs) =>

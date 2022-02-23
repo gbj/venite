@@ -4,8 +4,10 @@ import { Psalm, PsalmSection, PsalmVerse, Refrain, Heading, dateFromYMDString, L
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './psalm.i18n.en.json';
+import ES from './psalm.i18n.es.json';
 const LOCALE = {
   'en': EN,
+  'es': ES
 };
 
 @Component({
