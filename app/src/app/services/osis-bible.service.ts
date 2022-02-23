@@ -120,12 +120,6 @@ export class OsisBibleService {
             child.getAttribute("sID") ||
             child.getAttribute("eID"),
           [, chapter, verse] = verseId.split(".");
-        console.log(
-          "includeOriginal pushing",
-          currentChapter,
-          currentVerse,
-          currentWords
-        );
         if (currentChapter && currentVerse) {
           verses.push({
             book,

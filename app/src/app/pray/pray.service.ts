@@ -821,23 +821,40 @@ export class PrayService {
       ),
       // add Hebrew psalms if necessary
       switchMap((liturgy) => {
-        if (prefs["originalLanguages"] == "true") {
-          console.log("loading Hebrew psalms.");
-          return combineLatest(
-            (liturgy as Liturgy).value.map((doc) =>
-              from(this.osisBibleService.getHebrewPsalm(doc.slug)).pipe(
-                map((hebrew) =>
-                  docsToOption([
-                    new LiturgicalDocument({
-                      ...doc,
-                      version_label: "English",
-                    }),
-                    new LiturgicalDocument(hebrew),
-                  ])
+        if (prefs["originalLanguages"] == "true" && liturgy.value) {
+          if (liturgy.type == "liturgy") {
+            return combineLatest(
+              (liturgy as Liturgy).value.map((doc) =>
+                from(this.osisBibleService.getHebrewPsalm(doc.slug)).pipe(
+                  map((hebrew) =>
+                    hebrew
+                      ? docsToOption([
+                          new LiturgicalDocument({
+                            ...doc,
+                            version_label: "English",
+                          }),
+                          new LiturgicalDocument(hebrew),
+                        ])
+                      : doc
+                  )
                 )
               )
-            )
-          ).pipe(map((docs) => docsToLiturgy(docs)));
+            ).pipe(map((docs) => docsToLiturgy(docs)));
+          } else {
+            return from(
+              this.osisBibleService.getHebrewPsalm(liturgy.slug)
+            ).pipe(
+              map((hebrew) =>
+                docsToOption([
+                  new LiturgicalDocument({
+                    ...liturgy,
+                    version_label: "English",
+                  }),
+                  new LiturgicalDocument(hebrew),
+                ])
+              )
+            );
+          }
         } else {
           return of(liturgy);
         }
@@ -846,7 +863,7 @@ export class PrayService {
 
     return combineLatest([gloriaQuery$, psalms$]).pipe(
       map(([gloria, psalms]) =>
-        psalms.type === "psalm"
+        psalms.type === "psalm" || psalms.type === "option"
           ? new LiturgicalDocument({
               ...psalms,
               metadata: { ...psalms.metadata, gloria: docsToOption(gloria) },
