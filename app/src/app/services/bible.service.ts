@@ -142,7 +142,20 @@ export class BibleService implements BibleServiceInterface {
       switchMap((doc) =>
         doc?.value?.length > 0 && (doc.value[0] as BibleReadingVerse).text
           ? of(doc)
-          : this.getText(citation, "NRSV")
+          : this.getText(citation, "NRSV").pipe(
+              map(
+                (doc) =>
+                  new BibleReading({
+                    ...doc,
+                    value: [
+                      {
+                        text: " [Este libro no aparece en nuestra edición de la Reina-Valera.]\n\n",
+                      },
+                      ...doc.value,
+                    ],
+                  })
+              )
+            )
       )
     );
   }
