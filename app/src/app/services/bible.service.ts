@@ -1,5 +1,5 @@
-import { Injectable, InjectionToken } from "@angular/core";
-import { Observable, of } from "rxjs";
+import { Injectable } from "@angular/core";
+import { Observable, of, from } from "rxjs";
 import {
   BibleReading,
   BibleReadingVerse,
@@ -138,7 +138,12 @@ export class BibleService implements BibleServiceInterface {
           url = `/assets/dbl/${version}/release/USX_1/${usxBookCode}.usx`,
           xml = await this.fetchXml(url);
         return usxToLdf(language, version, xml, usxBookCode, verses);
-      })
+      }),
+      switchMap((doc) =>
+        doc?.value?.length > 0 && (doc.value[0] as BibleReadingVerse).text
+          ? of(doc)
+          : this.getText(citation, "NRSV")
+      )
     );
   }
 
