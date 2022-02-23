@@ -1,0 +1,138 @@
+{
+  "sharing": {
+    "privacy": "public",
+    "status": "published",
+    "collaborators": [],
+    "organization": "venite",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+  },
+  "hidden": false,
+  "metadata": {
+    "special_preferences": {},
+    "supplement": false,
+    "evening": false,
+    "pronouns": [],
+    "preferences": {
+      "noPreferences": {
+        "label": "No Preferences",
+        "options": [{}],
+        "key": "noPreferences"
+      }
+    },
+    "liturgyversions": []
+  },
+  "date_created": { "seconds": 1645642266, "nanoseconds": 269000000 },
+  "type": "liturgy",
+  "version": "Rite-I",
+  "category": [],
+  "lastRevision": 83,
+  "source": { "source": "", "citation": "", "api": "" },
+  "date_modified": { "seconds": 1645642287, "nanoseconds": 661000000 },
+  "value": [
+    {
+      "metadata": { "level": 1 },
+      "type": "heading",
+      "hidden": false,
+      "value": ["El Ángelus"]
+    },
+    {
+      "value": [
+        {
+          "text": "El ángel del Señor anunció a María.",
+          "response": "",
+          "label": "V."
+        },
+        {
+          "label": "R.",
+          "text": "Y ella concibió por obra y gracia del Espíritu Santo. "
+        }
+      ],
+      "type": "responsive",
+      "style": "preces",
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "metadata": { "response": "Amén." },
+      "hidden": false,
+      "style": "prayer",
+      "value": [
+        "Dios te salve María, llena eres de gracia, el Señor es contigo; bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "label": "V.",
+          "text": "He aquí la esclava del Señor. ",
+          "response": ""
+        },
+        { "text": "Hágase en mí según tu palabra.", "label": "R." }
+      ],
+      "style": "preces"
+    },
+    {
+      "type": "text",
+      "metadata": { "response": "Amén." },
+      "hidden": false,
+      "style": "prayer",
+      "value": [
+        "Dios te salve María, llena eres de gracia, el Señor es contigo; bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte."
+      ]
+    },
+    {
+      "type": "responsive",
+      "style": "preces",
+      "value": [
+        {
+          "label": "V.",
+          "response": "",
+          "text": "Y el Verbo de Dios se hizo carne."
+        },
+        { "text": "Y habitó entre nosotros.", "label": "R." }
+      ],
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "metadata": { "response": "Amén." },
+      "hidden": false,
+      "style": "prayer",
+      "value": [
+        "Dios te salve María, llena eres de gracia, el Señor es contigo; bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte."
+      ]
+    },
+    {
+      "value": [
+        {
+          "text": "Ruega por nosotros, Santa Madre de Dios.",
+          "label": "V.",
+          "response": ""
+        },
+        {
+          "text": "Para que seamos dignos de alcanzar las promesas y gracias de Nuestro Señor Jesucristo.",
+          "label": "R."
+        },
+        { "text": "Oremos.", "label": "" }
+      ],
+      "style": "preces",
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "hidden": false,
+      "style": "prayer",
+      "metadata": { "response": "Amén." },
+      "value": [
+        "Infunde, Señor tu gracia en nuestros corazones para que cuantos, por el anuncio del ángel, hemos conocido la encarnación de tu Hijo Jesucristo, por su pasión y su cruz lleguemos a la gloria de su resurrección. Por Jesucristo, Nuestro Señor."
+      ]
+    }
+  ],
+  "language": "es",
+  "slug": "the-angelus",
+  "label": "El Ángelus",
+  "id": "36aFm7EzMn0EBgoygkEl"
+}

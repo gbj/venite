@@ -195,6 +195,7 @@ export class DocumentService {
             loadLiturgy("es", "LOC", "noonday-prayer"),
             loadLiturgy("es", "LOC", "evening-prayer"),
             loadLiturgy("es", "LOC", "compline"),
+            loadLiturgy("es", "LOC", "the-angelus"),
           ]
         : [
             loadLiturgy("en", "Rite-II", "morning-prayer"),
@@ -382,6 +383,7 @@ export class DocumentService {
           "evening-prayer",
           "compline",
           "eucharist",
+          "the-angelus",
         ].includes(slug)
       ) {
         const key = `/offline/liturgy/${language}-${
