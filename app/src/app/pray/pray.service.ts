@@ -227,7 +227,7 @@ export class PrayService {
             ? prefs[doc.version.preference]
             : doc.version,
           prefs["originalLanguages"] == "true"
-        );
+        ).pipe(filter((doc) => doc.value?.length > 0));
       }
 
       // if doc has a `lookup` and not a `value`, compile it
