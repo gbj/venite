@@ -2213,7 +2213,9 @@
     {
       "type": "rubric",
       "hidden": false,
-      "value": ["The Oficiante may then conclude with one of the following"]
+      "value": [
+        "El Oficiante puede entonces concluir con uno de los siguientes versículos:"
+      ]
     },
     {
       "lookup": { "rotate": true, "type": "category" },
