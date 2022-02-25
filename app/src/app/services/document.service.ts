@@ -384,6 +384,8 @@ export class DocumentService {
           "compline",
           "eucharist",
           "the-angelus",
+          "litany",
+          "supplication",
         ].includes(slug)
       ) {
         const key = `/offline/liturgy/${language}-${
