@@ -1,6 +1,6 @@
 {
   "name": "@venite/ng-pray-menu",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "peerDependencies": {
     "@angular/common": "~9.1.6",
     "@angular/core": "~9.1.6",
