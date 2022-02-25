@@ -287,6 +287,7 @@ function usxToVerses(
       }
 
       while (
+        node &&
         node.nextSibling &&
         (node.nextSibling.nodeType == Node.TEXT_NODE ||
           (node.nextSibling as HTMLElement).tagName !== "verse")

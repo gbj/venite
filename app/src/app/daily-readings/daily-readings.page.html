@@ -42,33 +42,7 @@
             <ion-label class="sm-only">{{ "daily-readings.lff2018-short" | translate }}</ion-label>
           </ion-segment-button>
         </ion-segment>
-        <ion-segment [value]="psalterVersion.value" (ionChange)="psalterVersion.setValue($event.detail.value)">
-          <ion-segment-button value="bcp1979">
-            <ion-label>{{ "daily-readings.bcp-psalter" | translate }}</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="salterio1979">
-            <ion-label>{{ "daily-readings.el-salterio" | translate }}</ion-label>
-          </ion-segment-button>
-        </ion-segment>
-        <ion-segment [value]="bibleVersion.value" (ionChange)="bibleVersion.setValue($event.detail.value)">
-          <ion-segment-button value="NRSV">
-            <ion-label>NRSV</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="CEB">
-            <ion-label>CEB</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="ESV">
-            <ion-label>ESV</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="KJV">
-            <ion-label>KJV</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="RV09">
-            <ion-label>Reina-Valera</ion-label>
-          </ion-segment-button>
-        </ion-segment>
       </form>
-
   
       <div *ngIf="settings$ | async as settings" [ngClass]="processSettings(settings)">
         <h2 *ngIf="searchDate$ | async as date">{{ date | date:'longDate' }}</h2>
@@ -96,8 +70,19 @@
         <ng-container *ngIf="collects$ | async as collects else loading2">
           <h3>{{ "daily-readings.collects" | translate }}</h3>
           <details *ngFor="let collect of collects">
-            <summary>{{ collect?.type === 'option' ? collect.value[0].label : collect?.label }}</summary>
-            <ldf-liturgical-document [doc]="collect"></ldf-liturgical-document>
+            <summary>{{ collect.label }}</summary>
+            <ldf-liturgical-document [doc]="collect.doc"></ldf-liturgical-document>
+          </details>
+        </ng-container>
+          <ng-container *ngIf="canticles$ | async as canticles else loading2">
+          <h3>{{ "daily-readings.canticles" | translate }}</h3>
+          <details>
+            <summary>{{ canticles.first.label || (canticles.first.value[0]?.label )}}</summary>
+            <ldf-liturgical-document [doc]="canticles.first"></ldf-liturgical-document>
+          </details>
+          <details>
+            <summary>{{ canticles.second.label || (canticles.second.value[0]?.label )  }}</summary>
+            <ldf-liturgical-document [doc]="canticles.second"></ldf-liturgical-document>
           </details>
         </ng-container>
       </div>

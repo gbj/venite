@@ -5,7 +5,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import { CanticleTableEntry } from "@venite/ldf";
 import { CanticleTableServiceInterface } from "@venite/ng-service-api";
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -38,7 +38,8 @@ export class CanticleTableService implements CanticleTableServiceInterface {
               entries[`${fallbackTable}-${nth}`] || []
             )
           : entries[`${table ?? "bcp1979"}-${nth}`] || []
-      )
+      ),
+      tap((entries) => console.log("canticle table entries A", entries))
     );
 
     // Firestore version of this transitioned to local copy

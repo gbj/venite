@@ -951,6 +951,7 @@ export class PrayService {
             DEFAULT_CANTICLES
           )
         ),
+        tap((entries) => console.log("canticle table entries C", entries)),
         map((entries) =>
           entries.map(
             (entry) =>
@@ -967,7 +968,6 @@ export class PrayService {
               })
           )
         ),
-        tap((docs) => console.log("canticle ", docs)),
         map((docs) => docsToOption(docs, versions)),
         switchMap((doc) =>
           this.compile(doc, day, prefs, versions, originalPrefs)

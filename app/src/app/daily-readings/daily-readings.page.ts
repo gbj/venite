@@ -43,7 +43,7 @@ export class DailyReadingsPage implements OnInit {
   day$: Observable<LiturgicalDay>;
   readings$: Observable<LiturgicalDocument[]>;
   psalms$: Observable<LiturgicalDocument[]>;
-  collects$: Observable<LiturgicalDocument[]>;
+  collects$: Observable<{ label: string; doc: LiturgicalDocument }>;
 
   settings$: Observable<DisplaySettings>;
 
@@ -52,8 +52,12 @@ export class DailyReadingsPage implements OnInit {
   timeOfDay: FormControl = new FormControl(
     new Date().getHours() <= 14 ? "morning" : "evening"
   );
-  psalterVersion: FormControl = new FormControl("bcp1979");
-  bibleVersion: FormControl = new FormControl("NRSV");
+  psalterVersion$: Observable<{ value: string; label: string }>;
+  bibleVersion$: Observable<{ value: string; label: string }>;
+  canticles$: Observable<{
+    first: LiturgicalDocument;
+    second: LiturgicalDocument;
+  }>;
 
   constructor(
     @Inject(CALENDAR_SERVICE) private calendarService: CalendarService,
@@ -86,12 +90,78 @@ export class DailyReadingsPage implements OnInit {
       new Date().getHours() <= 14 ? "morning-prayer" : "evening-prayer"
     );
 
-    this.liturgy$ = this.currentLiturgy$.pipe(
-      switchMap((slug) =>
+    const language$ = this.preferencesService
+      .get("language")
+      .pipe(map((pref) => pref?.value || "en"));
+
+    const version$ = this.preferencesService
+      .get("version")
+      .pipe(map((pref) => pref?.value || "Rite-II"));
+
+    this.liturgy$ = combineLatest([
+      this.currentLiturgy$.pipe(startWith(this.currentLiturgy$.getValue())),
+      language$,
+      version$,
+    ]).pipe(
+      switchMap(([slug, language, version]) =>
         this.documentService
-          .findDocumentsBySlug(slug)
+          .findDocumentsBySlug(slug, language, [version])
           .pipe(map((docs) => docs[0]))
+      ),
+      tap((liturgy) => console.log("liturgy = ", liturgy))
+    );
+
+    const preferences$ = this.liturgy$.pipe(
+      switchMap((liturgy) =>
+        this.preferencesService
+          .getPreferencesForLiturgy(liturgy)
+          .pipe(map((preferences) => ({ liturgy, preferences })))
       )
+    );
+    this.psalterVersion$ = preferences$.pipe(
+      tap((data) => console.log("psalterVersion$ data = ", data)),
+      map(({ liturgy, preferences }) => {
+        const stored = preferences.find((pref) => pref.key == "psalterVersion"),
+          psalterVersionOptions =
+            ((liturgy as Liturgy).metadata?.preferences || {})["psalterVersion"]
+              ?.options || [],
+          defaultOption = psalterVersionOptions.find(
+            (option) => option.default
+          ),
+          firstOption = psalterVersionOptions[0];
+        if (stored?.value) {
+          return {
+            value: stored.value,
+            label:
+              psalterVersionOptions.find(
+                (option) => option.value == stored.value
+              )?.label || stored.value,
+          };
+        } else {
+          return defaultOption || firstOption;
+        }
+      })
+    );
+    this.bibleVersion$ = preferences$.pipe(
+      tap((data) => console.log("bibleVersion$ data = ", data)),
+      map(({ liturgy, preferences }) => {
+        const stored = preferences.find((pref) => pref.key == "bibleVersion"),
+          bibleVersionOptions =
+            ((liturgy as Liturgy).metadata?.preferences || {})["bibleVersion"]
+              ?.options || [],
+          defaultOption = bibleVersionOptions.find((option) => option.default),
+          firstOption = bibleVersionOptions[0];
+        if (stored?.value) {
+          return {
+            value: stored.value,
+            label:
+              bibleVersionOptions.find((option) => option.value == stored.value)
+                ?.label || stored.value,
+          };
+        } else {
+          return defaultOption || firstOption;
+        }
+      })
     );
 
     const week$ = this.calendarService.buildWeek(
@@ -99,6 +169,7 @@ export class DailyReadingsPage implements OnInit {
       this.kalendar.valueChanges.pipe(startWith(this.kalendar.value)),
       of(false)
     );
+
     this.day$ = this.liturgy$.pipe(
       switchMap((liturgy) =>
         this.calendarService.buildDay(
@@ -133,16 +204,15 @@ export class DailyReadingsPage implements OnInit {
       switchMap((entries) =>
         combineLatest(
           entries.map((entry) =>
-            this.bibleVersion.valueChanges.pipe(
-              startWith(this.bibleVersion.value),
-              switchMap((version) =>
+            this.bibleVersion$.pipe(
+              switchMap(({ value }) =>
                 this.prayService.lookupBibleReading(
                   new BibleReading({
                     type: "bible-reading",
                     style: "long",
                     citation: entry.citation,
                   }),
-                  version
+                  value
                 )
               )
             )
@@ -152,9 +222,7 @@ export class DailyReadingsPage implements OnInit {
     );
 
     this.psalms$ = combineLatest([
-      this.psalterVersion.valueChanges.pipe(
-        startWith(this.psalterVersion.value)
-      ),
+      this.psalterVersion$.pipe(map(({ value }) => value)),
       this.psalmCycle.valueChanges.pipe(startWith(undefined)),
       this.timeOfDay.valueChanges.pipe(startWith(undefined)),
       this.day$,
@@ -184,45 +252,84 @@ export class DailyReadingsPage implements OnInit {
       )
     );
 
+    //@ts-ignore
     this.collects$ = this.day$.pipe(
       switchMap((day) =>
         this.prayService.compile(COLLECT_RECIPE, day, {}, [], {})
       ),
-      map((doc) =>
-        doc.type === "liturgy" || doc.type === "option"
-          ? (doc as Liturgy).value.filter((d) => Boolean(d))
-          : [doc]
-      ),
       map((docs) =>
-        docs
-          .map((doc) =>
-            doc.type === "liturgy" || doc.type === "option"
-              ? (doc as Liturgy).value.filter((d) => Boolean(d))
-              : [doc]
-          )
-          .flat()
-      ),
-      // set collect version labels
-      map((docs) =>
-        docs.map((doc) =>
-          doc.type === "option"
-            ? new LiturgicalDocument({
-                ...doc,
-                value: (doc as Option).value.map(
-                  (opt) =>
-                    new LiturgicalDocument({
-                      ...opt,
-                      version_label:
-                        opt.version === "rite_i"
-                          ? "Traditional"
-                          : "Contemporary",
-                      version: undefined,
-                    })
-                ),
-              })
-            : doc
+        docs.value?.length == 3
+          ? [
+              { label: "Contemporary", doc: (docs as Option).value[0] },
+              { label: "Traditional", doc: (docs as Option).value[1] },
+              { label: "Español", doc: (docs as Option).value[2] },
+            ]
+          : { label: "", doc: docs }
+      )
+    );
+
+    const canticleTable$ = preferences$.pipe(
+      map(({ liturgy, preferences }) => {
+        const stored = preferences.find((pref) => pref.key == "canticleTable"),
+          canticleTableOptions =
+            ((liturgy as Liturgy).metadata?.preferences || {})["canticleTable"]
+              ?.options || [],
+          defaultOption = canticleTableOptions.find((option) => option.default),
+          firstOption = canticleTableOptions[0];
+        return stored?.value || (defaultOption || firstOption).value;
+      })
+    );
+    const firstCanticle$ = combineLatest([
+      this.liturgy$,
+      canticleTable$,
+      this.day$,
+    ]).pipe(
+      switchMap(([liturgy, table, day]) =>
+        this.prayService.compile(
+          new LiturgicalDocument({
+            type: "psalm",
+            lookup: {
+              table,
+              type: "canticle",
+              rotate: false,
+              item: 1,
+            },
+            language: liturgy.language,
+          }),
+          day,
+          {},
+          liturgy?.metadata?.liturgyversions || [],
+          {}
         )
       )
+    );
+    const secondCanticle$ = combineLatest([
+      this.liturgy$,
+      canticleTable$,
+      this.day$,
+    ]).pipe(
+      switchMap(([liturgy, table, day]) =>
+        this.prayService.compile(
+          new LiturgicalDocument({
+            type: "psalm",
+            lookup: {
+              table,
+              type: "canticle",
+              rotate: false,
+              item: 2,
+            },
+            language: liturgy.language,
+          }),
+          day,
+          {},
+          liturgy?.metadata?.liturgyversions || [],
+          {}
+        )
+      )
+    );
+    this.canticles$ = combineLatest([firstCanticle$, secondCanticle$]).pipe(
+      map(([first, second]) => ({ first, second })),
+      tap((data) => console.log("canticles$", data))
     );
 
     // Grab display settings from preferences
@@ -317,8 +424,8 @@ function readingOrder(entry: LectionaryEntry): number {
   }
 }
 
-const COLLECT_RECIPE: Liturgy = new Liturgy({
-  type: "liturgy",
+const COLLECT_RECIPE = new LiturgicalDocument({
+  type: "option",
   value: [
     new LiturgicalDocument({
       hidden: false,
@@ -328,6 +435,33 @@ const COLLECT_RECIPE: Liturgy = new Liturgy({
         type: "collect",
         allow_multiple: true,
       },
+      language: "en",
+      version: "bcp1979",
+      version_label: "Contemporary",
+    }),
+    new LiturgicalDocument({
+      hidden: false,
+      type: "text",
+      style: "prayer",
+      lookup: {
+        type: "collect",
+        allow_multiple: true,
+      },
+      language: "en",
+      version: "rite_i",
+      version_label: "Traditional",
+    }),
+    new LiturgicalDocument({
+      hidden: false,
+      type: "text",
+      style: "prayer",
+      lookup: {
+        type: "collect",
+        allow_multiple: true,
+      },
+      language: "es",
+      version: "loc",
+      version_label: "Español",
     }),
   ],
 });
