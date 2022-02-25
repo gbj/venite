@@ -36,7 +36,7 @@ export class StringComponent {
   /**
    * Minimum length (in characters) a string must be to have a dropcap.
    */
-  @Prop() dropcapMinLength : number = 200;
+  @Prop() dropcapMinLength : number = 180;
 
   /**
    * Enable or disable replacement of tetragrammaton.
@@ -61,7 +61,7 @@ export class StringComponent {
     if(this.replaceTetragrammaton) {
       processed = processed.map(node => typeof node === 'string' ? this.processTetragrammaton(node) : node).flat();
     }
-    if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length > this.dropcapMinLength)) {
+    if(this.dropcap == 'force' || (this.dropcap == 'enabled' && (this.index == 0 || !this.index) && this.text && this.text.length >= this.dropcapMinLength)) {
       processed = this.processDropcap(processed);
     }
     this.processedString = processed;
