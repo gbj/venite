@@ -369,10 +369,18 @@ export class DocumentService {
     const uniqueVersions = Array.from(
         new Set(rawVersions?.length == 0 ? ["bcp1979"] : rawVersions)
       ),
-      versions =
+      baseVersions =
         uniqueVersions?.length <= 10
           ? uniqueVersions
-          : uniqueVersions.slice(0, 10);
+          : uniqueVersions.slice(0, 10),
+      versions =
+        baseVersions[0] == "rite_i" &&
+        baseVersions.length == 1 &&
+        slug.startsWith("canticle")
+          ? ["rite_i", "bcp1979"]
+          : baseVersions;
+
+    console.log("findDocumentsBySlug", slug, versions);
 
     // first, try JSON database
     if (!disableOffline) {
