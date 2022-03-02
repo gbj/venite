@@ -57110,5 +57110,625 @@
       "slug": "ep_prayers_for_mission",
       "language": "es"
     }
+  ],
+  "en-rite_i-canticle-1": [
+    {
+      "metadata": {
+        "localname": "A Song of Creation",
+        "omit_antiphon": false,
+        "latinname": "Benedicite, omnia opera Domini",
+        "omit_gloria": true,
+        "number": "1"
+      },
+      "label": "Canticle 1: A Song of Creation",
+      "slug": "canticle-1",
+      "style": "canticle",
+      "hidden": false,
+      "version_label": null,
+      "language": "en",
+      "version": "rite_i",
+      "lastRevision": 3,
+      "category": ["Canticle", "Canticle"],
+      "type": "psalm",
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public"
+      },
+      "value": [
+        {
+          "label": "I\t\tInvocation",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "praise him and magnify him for ever.",
+              "verse": "O all ye works of the Lord, bless ye the Lord; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "praise him and magnify him for ever.",
+              "verse": "O ye angels of the Lord, bless ye the Lord; *"
+            }
+          ],
+          "type": "psalm-section"
+        },
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "O ye waters that be above the firmament, bless ye the Lord;",
+              "verse": "O ye heavens, bless ye the Lord; *"
+            },
+            {
+              "halfverse": "praise him and magnify him for ever.",
+              "verse": "O all ye powers of the Lord, bless ye the Lord; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "O ye sun and moon, bless ye the Lord; *",
+              "halfverse": "O ye stars of heaven, bless ye the Lord;",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "praise him and magnify him for ever.",
+              "verse": "O ye showers and dew, bless ye the Lord; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O ye fire and heat, bless ye the Lord;",
+              "verse": "O ye winds of God, bless ye the Lord; *"
+            },
+            {
+              "halfverse": "praise him and magnify him for ever.",
+              "type": "psalm-verse",
+              "verse": "O ye winter and summer, bless ye the Lord; *"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "O ye frost and cold, bless ye the Lord;",
+              "verse": "O ye dews and frosts, bless ye the Lord; *"
+            },
+            {
+              "verse": "O ye ice and snow, bless ye the Lord; *",
+              "halfverse": "praise him and magnify him for ever.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "O ye light and darkness, bless ye the Lord;",
+              "verse": "O ye nights and days, bless ye the Lord; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": " O ye lightnings and clouds, bless ye the Lord; *",
+              "halfverse": "praise him and magnify him for ever.",
+              "type": "psalm-verse"
+            }
+          ],
+          "label": "II\t\tThe Cosmic Order"
+        },
+        {
+          "type": "psalm-section",
+          "label": "III\t\tThe Earth and its Creatures",
+          "value": [
+            {
+              "verse": "O let the earth bless the Lord; *",
+              "type": "psalm-verse",
+              "halfverse": "O ye mountains and hills, bless ye the Lord;"
+            },
+            {
+              "halfverse": "praise him and magnify him for ever.",
+              "type": "psalm-verse",
+              "verse": " O all ye green things upon the earth, bless ye the Lord; *"
+            },
+            {
+              "halfverse": "O ye seas and floods, bless ye the Lord;",
+              "verse": "O ye wells, bless ye the Lord; *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "O ye whales and all that move in the waters, bless ye the Lord;",
+              "type": "psalm-verse",
+              "halfverse": "praise him and magnify him for ever."
+            },
+            {
+              "halfverse": "O all ye beasts and cattle, bless ye the Lord;",
+              "verse": "O all ye fowls of the air, bless ye the Lord; *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "O ye children of men, bless ye the Lord; *",
+              "halfverse": "praise him and magnify him for ever."
+            }
+          ]
+        },
+        {
+          "value": [
+            {
+              "halfverse": "O ye priests of the Lord, bless ye the Lord;",
+              "type": "psalm-verse",
+              "verse": "O ye people of God, bless ye the Lord; *"
+            },
+            {
+              "verse": " O ye servants of the Lord, bless ye the Lord; *",
+              "type": "psalm-verse",
+              "halfverse": "praise him and magnify him for ever."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "O ye spirits and souls of the righteous, bless ye the Lord; *",
+              "halfverse": "O ye holy and humble men of heart, bless ye the Lord."
+            },
+            {
+              "halfverse": "praise him and magnify him for ever.",
+              "type": "psalm-verse",
+              "verse": "Let us bless the Father, the Son, and the Holy Spirit; *"
+            }
+          ],
+          "type": "psalm-section",
+          "label": "IV\t\tThe People of God"
+        }
+      ],
+      "citation": "Song of the Three Young Men, 35-65",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      }
+    }
+  ],
+  "en-rite_i-canticle-2": [
+    {
+      "citation": "Song of the Three Young Men, 29-34",
+      "label": "Canticle 2: A Song of Praise",
+      "slug": "canticle-2",
+      "category": ["Canticle", "Canticle"],
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "privacy": "public",
+        "collaborators": []
+      },
+      "language": "en",
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "verse": "Blessed art thou, O Lord God of our fathers; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "verse": "Blessed art thou for the name of thy Majesty; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "verse": "Blessed art thou in the temple of thy holiness; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "type": "psalm-verse",
+              "verse": "Blessed art thou that beholdest the depths,\nand dwellest between the Cherubim; *"
+            },
+            {
+              "verse": "Blessed art thou on the glorious throne of thy kingdom; *",
+              "type": "psalm-verse",
+              "halfverse": "praised and exalted above all for ever."
+            },
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "verse": "Blessed art thou in the firmament of heaven; *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "praised and exalted above all for ever.",
+              "verse": "Blessed art thou, O Father, Son, and Holy Spirit; *",
+              "type": "psalm-verse"
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "metadata": {
+        "number": "2",
+        "latinname": "Benedictus es, Domine",
+        "localname": "A Song of Praise",
+        "omit_gloria": true,
+        "omit_antiphon": false
+      },
+      "version_label": null,
+      "style": "canticle",
+      "version": "rite_i"
+    }
+  ],
+  "en-rite_i-canticle-3": [
+    {
+      "version": "rite_i",
+      "slug": "canticle-3",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "category": ["Canticle", "Canticle"],
+      "hidden": false,
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "halfverse": "and my spirit hath rejoiced in God my Savior.",
+              "verse": "My soul doth magnify the Lord, *"
+            },
+            {
+              "halfverse": "the lowliness of his handmaiden.",
+              "verse": "For he hath regarded *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For behold from henceforth *",
+              "halfverse": "all generations shall call me blessed.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "For he that is mighty hath magnified me, *",
+              "type": "psalm-verse",
+              "halfverse": "and holy is his Name."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "And his mercy is on them that fear him *",
+              "halfverse": "throughout all generations."
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "he hath scattered the proud in the imagination of their hearts.",
+              "verse": "He hath showed strength with his arm; *"
+            },
+            {
+              "verse": "He hath put down the mighty from their seat, *",
+              "halfverse": "and hath exalted the humble and meek.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "He hath filled the hungry with good things, *",
+              "halfverse": "and the rich he hath sent empty away.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "He remembering his mercy hath holpen his servant Israel, *",
+              "halfverse": "as he promised to our forefathers,\nAbraham and his seed for ever."
+            }
+          ]
+        }
+      ],
+      "citation": "Luke 1:46-55",
+      "metadata": {
+        "localname": "The Song of Mary",
+        "latinname": "Magnificat",
+        "omit_antiphon": false,
+        "omit_gloria": false,
+        "number": "3",
+        "gloria": {
+          "label": null,
+          "category": [null],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "privacy": "public",
+            "status": "published",
+            "collaborators": [],
+            "organization": "venite"
+          },
+          "hidden": false,
+          "type": "refrain",
+          "style": "gloria",
+          "version_label": "",
+          "language": "en",
+          "version": "rite_i",
+          "slug": "gloria-patri",
+          "value": [
+            "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+            "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+          ],
+          "citation": null
+        }
+      },
+      "language": "en",
+      "style": "canticle",
+      "lastRevision": 2,
+      "label": "Canticle 3: The Song of Mary",
+      "version_label": null,
+      "type": "psalm",
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "privacy": "public",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      }
+    }
+  ],
+  "en-rite_i-canticle-4": [
+    {
+      "hidden": false,
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "sharing": {
+        "privacy": "public",
+        "status": "published",
+        "collaborators": [],
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "metadata": {
+        "number": "4",
+        "gloria": {
+          "label": null,
+          "version_label": "",
+          "sharing": {
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "privacy": "public"
+          },
+          "style": "gloria",
+          "value": [
+            "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+            "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+          ],
+          "category": [null],
+          "language": "en",
+          "version": "rite_i",
+          "slug": "gloria-patri",
+          "hidden": false,
+          "citation": null,
+          "type": "refrain"
+        },
+        "omit_gloria": false,
+        "localname": "The Song of Zechariah",
+        "omit_antiphon": false,
+        "latinname": "Benedictus Dominus Deus"
+      },
+      "lastRevision": 2,
+      "type": "psalm",
+      "language": "en",
+      "version_label": null,
+      "slug": "canticle-4",
+      "style": "canticle",
+      "version": "rite_i",
+      "category": ["Canticle", "Canticle"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "for he hath visited and redeemed his people;",
+              "type": "psalm-verse",
+              "verse": "Blessed be the Lord God of Israel, *"
+            },
+            {
+              "halfverse": "in the house of his servant David,",
+              "verse": "And hath raised up a mighty salvation for us *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "As he spake by the mouth of his holy prophets, *",
+              "type": "psalm-verse",
+              "halfverse": "which have been since the world began:"
+            },
+            {
+              "halfverse": "and from the hand of all that hate us;",
+              "verse": "That we should be saved from our enemies, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "To perform the mercy promised to our forefathers, *",
+              "type": "psalm-verse",
+              "halfverse": "and to remember his holy covenant;"
+            },
+            {
+              "halfverse": "that he would give us,",
+              "verse": "To perform the oath which he sware to our forefather Abraham, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "halfverse": "might serve him without fear,",
+              "verse": "That we being delivered out of the hand of our enemies *"
+            },
+            {
+              "verse": "In holiness and righteousness before him, *",
+              "type": "psalm-verse",
+              "halfverse": "all the days of our life."
+            },
+            {
+              "halfverse": "for thou shalt go before the face of the Lord to prepare his ways;",
+              "type": "psalm-verse",
+              "verse": "And thou, child, shalt be called the prophet of the Highest, *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": " To give knowledge of salvation unto his people *",
+              "halfverse": "for the remission of their sins,"
+            },
+            {
+              "halfverse": "whereby the dayspring from on high hath visited us;",
+              "type": "psalm-verse",
+              "verse": "Through the tender mercy of our God, *"
+            },
+            {
+              "halfverse": "and to guide our feet into the way of peace.",
+              "type": "psalm-verse",
+              "verse": "To give light to them that sit in darkness\nand in the shadow of death, *"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "label": "Canticle 4: The Song of Zechariah",
+      "citation": "Luke 1: 68-79"
+    }
+  ],
+  "en-rite_i-canticle-5": [
+    {
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public"
+      },
+      "version": "rite_i",
+      "hidden": false,
+      "metadata": {
+        "latinname": "Nunc Dimittis",
+        "omit_antiphon": false,
+        "number": "5",
+        "localname": "The Song of Simeon",
+        "omit_gloria": false
+      },
+      "label": "Canticle 5: The Song of Simeon",
+      "style": "canticle",
+      "slug": "canticle-5",
+      "language": "en",
+      "version_label": null,
+      "category": ["Canticle", "Canticle"],
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "according to thy word;",
+              "verse": "Lord, now lettest thou thy servant depart in peace, *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "which thou hast prepared before the face of all people,",
+              "type": "psalm-verse",
+              "verse": "For mine eyes have seen thy salvation, *"
+            },
+            {
+              "halfverse": "and to be the glory of thy people Israel.",
+              "verse": "To be a light to lighten the Gentiles, *",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "type": "psalm",
+      "citation": "Luke 2:29-32"
+    }
+  ],
+  "en-rite_i-canticle-6": [
+    {
+      "label": "Canticle 6: Glory be to God",
+      "hidden": false,
+      "version_label": null,
+      "category": ["Canticle", "Canticle"],
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "type": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "type": "psalm-verse",
+              "verse": "Glory be to God on high,\n    and on earth peace, good will towards men.\n\nWe praise thee, we bless thee,\n    we worship thee,\n    we glorify thee,\n    we give thanks to thee for thy great glory,\nO Lord God, heavenly King, God the Father Almighty.\n\nO Lord, the only-begotten Son, Jesus Christ;\nO Lord God, Lamb of God, Son of the Father,\n    that takest away the sins of the world,\n    have mercy upon us.\nThou that takest away the sins of the world,\n    receive our prayer.\nThou that sittest at the right hand of God the Father,\n    have mercy upon us.\n\nFor thou only art holy,\nthou only art the Lord,\nthou only, O Christ,\n    with the Holy Ghost,\n    art most high in the glory of God the Father."
+            }
+          ]
+        }
+      ],
+      "sharing": {
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "privacy": "public",
+        "organization": "venite"
+      },
+      "version": "rite_i",
+      "language": "en",
+      "date_modified": {
+        "_seconds": 1611597745,
+        "_nanoseconds": 397000000
+      },
+      "style": "canticle",
+      "citation": null,
+      "lastRevision": 8,
+      "metadata": {
+        "changeable": false,
+        "omit_response": false,
+        "omit_antiphon": false,
+        "number": "6",
+        "insert_seasonal_antiphon": false,
+        "localname": "Glory be to God",
+        "rollup": false,
+        "latinname": "Gloria in Excelsis",
+        "omit_gloria": false
+      },
+      "slug": "canticle-6"
+    }
+  ],
+  "en-rite_i-canticle-7": [
+    {
+      "date_modified": {
+        "_seconds": 1611597903,
+        "_nanoseconds": 854000000
+      },
+      "citation": null,
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "organization": "venite",
+        "privacy": "public",
+        "status": "published"
+      },
+      "slug": "canticle-7",
+      "version_label": null,
+      "hidden": false,
+      "type": "psalm",
+      "value": [
+        {
+          "value": [
+            {
+              "verse": "We praise thee, O God; we acknowledge thee to be the Lord.\nAll the earth doth worship thee, the Father everlasting.\nTo thee all Angels cry aloud,\nthe Heavens and all the Powers therein.\nTo thee Cherubim and Seraphim continually do cry:\n    Holy, holy, holy, Lord God of Sabaoth;\n    Heaven and earth are full of the majesty of thy glory.\nThe glorious company of the apostles praise thee.\nThe goodly fellowship of the prophets praise thee.\nThe noble army of martyrs praise thee.\nThe holy Church throughout all the world\n            doth acknowledge thee,\n    the Father, of an infinite majesty,\n    thine adorable, true, and only Son,\n    also the Holy Ghost the Comforter.\n\nThou art the King of glory, O Christ.\nThou art the everlasting Son of the Father.\nWhen thou tookest upon thee to deliver man,\nthou didst humble thyself to be born of a Virgin.\nWhen thou hadst overcome the sharpness of death,\nthou didst open the kingdom of heaven to all believers.\nThou sittest at the right hand of God, in the glory of the Father.\nWe believe that thou shalt come to be our judge.\n    We therefore pray thee, help thy servants,\n    whom thou hast redeemed with thy precious blood.\n    Make them to be numbered with thy saints,\n    in glory everlasting.",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "category": ["Canticle", "Canticle"],
+      "version": "rite_i",
+      "lastRevision": 28,
+      "metadata": {
+        "number": "7",
+        "omit_gloria": true,
+        "latinname": "Te Deum laudamus",
+        "omit_antiphon": false,
+        "localname": "You are God"
+      },
+      "language": "en",
+      "style": "canticle",
+      "label": "Canticle 7: Te Deum"
+    }
   ]
 }
