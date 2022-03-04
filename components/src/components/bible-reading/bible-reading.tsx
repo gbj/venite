@@ -286,13 +286,13 @@ export class BibleReadingComponent {
       }
       /* `short` renders a few verses, with a response and citation. */
       else if(this.obj.style == 'short') {
-        const shortResponse : boolean = (this.obj?.metadata?.response || localeStrings.amen).length <= 5;
+        const shortResponse : boolean = (this.obj?.metadata?.response || localeStrings?.amen)?.length <= 5;
 
         let responseNode : JSX.Element;
         if(!this.obj?.metadata?.response) {
-          responseNode = <span class="response"> {localeStrings.amen}</span>;
+          responseNode = <span class="response"> {localeStrings?.amen}</span>;
         } else {
-          responseNode = <span class="response"> {this.obj.metadata.response}</span>;
+          responseNode = <span class="response"> {this.obj?.metadata?.response}</span>;
         }
 
         return (
