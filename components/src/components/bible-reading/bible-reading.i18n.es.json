@@ -1,4 +1,13 @@
 {
-  "amen": "Amén.",
-  "loading": "Se está cargando..."
+  "amen": "Amen.",
+  "book": "Book",
+  "chapter": "Chapter",
+  "citation": "Citation (e.g., John 1:1)",
+  "label": "Label",
+  "loading": "Loading...",
+  "verse": "Verse",
+  "changeReading": "Change Reading",
+  "newCitation": "Biblical citation.",
+  "cancel": "Cancel",
+  "ok": "OK"
 }

@@ -1,5 +1,8 @@
 {
-  "amen": "Amén.",
-  "prayer-list": "Oraciones",
-  "authorized_prayers": "Oraciones y Acciones de Gracias"
+  "amen": "Amen.",
+  "authorized_prayers": "Prayers and Thanksgivings",
+  "label": "Label",
+  "source": "Source",
+  "source_citation": "Citation",
+  "prayer-list": "Prayer List"
 }
