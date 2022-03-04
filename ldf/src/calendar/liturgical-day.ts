@@ -220,8 +220,10 @@ export class LiturgicalDay {
     const isSunday = this.getDate().getDay() === 0,
       hasRank = (this.holy_day_observed?.type?.rank || 1) >= 3,
       holyWeek = this.slug?.includes('holy-week'),
+      ashWednesdayWeek = this.slug?.includes('last-epiphany'),
+      ascensionWeek = this.slug?.includes('6th-easter'),
       easterWeek = this.week?.slug === 'easter';
-    return isSunday || (hasRank && !holyWeek && !easterWeek);
+    return isSunday || (hasRank && !holyWeek && !easterWeek && !ashWednesdayWeek && !ascensionWeek);
   }
 
   //** Constructor takes a Javascript object containing the class's properties */

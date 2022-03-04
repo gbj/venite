@@ -38,8 +38,7 @@ export class CanticleTableService implements CanticleTableServiceInterface {
               entries[`${fallbackTable}-${nth}`] || []
             )
           : entries[`${table ?? "bcp1979"}-${nth}`] || []
-      ),
-      tap((entries) => console.log("canticle table entries A", entries))
+      )
     );
 
     // Firestore version of this transitioned to local copy
