@@ -23,7 +23,7 @@
                   {{ opt.label }}
                 </ion-select-option>
               </ion-select>
-              <ion-text class="preference-description" *ngIf="item?.description" [innerHTML]="item?.description"></ion-text>
+              <ion-text class="preference-description" *ngIf="item?.description && (!item?.descriptionOnlyIfValue || item?.descriptionOnlyIfValue == data?.form?.value[item?.key])" [innerHTML]="item?.description"></ion-text>
             </ion-item>
           </ng-container>
         </ng-container>

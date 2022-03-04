@@ -15,6 +15,9 @@ export class Preference {
   /** Optional: Additional descriptive text. Can include HTML. */
   description?: string;
 
+  /** Optional: Only show description (if any) if the given value is selected */
+  descriptionOnlyIfValue?: string;
+
   /** Array of options for this preference, in order they will be displayed.
    * Defaults to first in array if `PreferenceOption.default` is not set.  */
   options: PreferenceOption[];

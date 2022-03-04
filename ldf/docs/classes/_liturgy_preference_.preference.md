@@ -18,6 +18,7 @@
 
 * [category](_liturgy_preference_.preference.md#optional-category)
 * [description](_liturgy_preference_.preference.md#optional-description)
+* [descriptionOnlyIfValue](_liturgy_preference_.preference.md#optional-descriptiononlyifvalue)
 * [index](_liturgy_preference_.preference.md#optional-index)
 * [key](_liturgy_preference_.preference.md#optional-key)
 * [label](_liturgy_preference_.preference.md#label)
@@ -34,7 +35,7 @@
 
 \+ **new Preference**(`data`: Partial‹[Preference](_liturgy_preference_.preference.md)›): *[Preference](_liturgy_preference_.preference.md)*
 
-*Defined in [liturgy/preference.ts:35](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L35)*
+*Defined in [liturgy/preference.ts:38](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L38)*
 
 **Parameters:**
 
@@ -50,7 +51,7 @@ Name | Type | Default |
 
 • **category**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L13)*
+*Defined in [liturgy/preference.ts:13](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L13)*
 
 Optional: Category to which a preference belongs, if any.
 
@@ -64,9 +65,19 @@ ___
 
 • **description**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:16](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L16)*
+*Defined in [liturgy/preference.ts:16](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L16)*
 
 Optional: Additional descriptive text. Can include HTML.
+
+___
+
+### `Optional` descriptionOnlyIfValue
+
+• **descriptionOnlyIfValue**? : *undefined | string*
+
+*Defined in [liturgy/preference.ts:19](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L19)*
+
+Optional: Only show description (if any) if the given value is selected
 
 ___
 
@@ -74,7 +85,7 @@ ___
 
 • **index**? : *undefined | number*
 
-*Defined in [liturgy/preference.ts:23](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L23)*
+*Defined in [liturgy/preference.ts:26](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L26)*
 
 Index for ordering within a set of preferences in the UI. (If not present, defaults to alphabet order.)
 
@@ -84,7 +95,7 @@ ___
 
 • **key**? : *undefined | string*
 
-*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L4)*
+*Defined in [liturgy/preference.ts:4](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L4)*
 
 Key of this preference within the parent `Liturgy`’s `preferences`
 
@@ -94,7 +105,7 @@ ___
 
 • **label**: *string*
 
-*Defined in [liturgy/preference.ts:7](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L7)*
+*Defined in [liturgy/preference.ts:7](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L7)*
 
 Human-readable label for the preference
 
@@ -104,7 +115,7 @@ ___
 
 • **options**: *[PreferenceOption](_liturgy_preference_.preferenceoption.md)[]*
 
-*Defined in [liturgy/preference.ts:20](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L20)*
+*Defined in [liturgy/preference.ts:23](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L23)*
 
 Array of options for this preference, in order they will be displayed.
 Defaults to first in array if `PreferenceOption.default` is not set.
@@ -115,7 +126,7 @@ Defaults to first in array if `PreferenceOption.default` is not set.
 
 ▸ **getDefaultPref**(): *string*
 
-*Defined in [liturgy/preference.ts:31](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L31)*
+*Defined in [liturgy/preference.ts:34](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L34)*
 
 Returns the default value for the preference
 
@@ -127,7 +138,7 @@ ___
 
 ▸ **getPreferenceOption**(`value`: string): *[PreferenceOption](_liturgy_preference_.preferenceoption.md) | undefined*
 
-*Defined in [liturgy/preference.ts:26](https://github.com/gbj/venite/blob/d0aafc2f/ldf/src/liturgy/preference.ts#L26)*
+*Defined in [liturgy/preference.ts:29](https://github.com/gbj/venite/blob/6d6b51f4/ldf/src/liturgy/preference.ts#L29)*
 
 Given a `value` for the preference, returns the full option
 
