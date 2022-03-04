@@ -61,6 +61,7 @@ interface PrayRootConfig {
     EditorPageModule,
     SharedModule,
   ],
+  exports: [MarkFavoriteComponent],
   declarations: [PrayPage, MarkFavoriteComponent, FavoriteTextComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AudioService, Media],

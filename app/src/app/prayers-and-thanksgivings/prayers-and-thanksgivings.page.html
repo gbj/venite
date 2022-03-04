@@ -12,9 +12,22 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="ldf-wrapper" *ngIf="pAndTs$ | async as docs else loading">
-    <ldf-prayers-and-thanksgivings [options]="docs"></ldf-prayers-and-thanksgivings>
-
+  <div class="ldf-wrapper">
+    <ion-searchbar [formControl]="search"></ion-searchbar>
+    <ng-container *ngFor="let category of tree$ | async">
+      <h2>{{ category[0] }}</h2>
+      <ng-container *ngFor="let subcategory of category[1]">
+        <h3>{{ subcategory[0] }}</h3>
+        <ng-container *ngFor="let option of subcategory[1]">
+          <ion-item button (click)="openDoc(option[0], option[1])">
+            <ion-label>
+              <h3>{{ option[0].label }}</h3>
+              <p>{{ option[1] }}</p>
+            </ion-label>
+          </ion-item>
+        </ng-container>
+      </ng-container>
+    </ng-container>
   </div>
 </ion-content>
 
