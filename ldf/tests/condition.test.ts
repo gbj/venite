@@ -12,14 +12,14 @@ const day = new LiturgicalDay({
     name: 'Last Sunday after the Epiphany',
     color: {
       name: 'green',
-      hex: '#409940'
+      hex: '#409940',
     },
-    cycle: 'Epiphany'
+    cycle: 'Epiphany',
   },
   years: {
     bcp1979_daily_office: 2,
     bcp1979_daily_psalms: 2,
-    rclsunday: 'A'
+    rclsunday: 'A',
   },
   holy_days: [
     {
@@ -28,19 +28,19 @@ const day = new LiturgicalDay({
       season: 'Lent' as 'Lent',
       type: {
         name: 'Fast',
-        rank: 3
+        rank: 3,
       },
       color: {
         name: 'purple',
-        hex: '#800080'
-      }
-    }
+        hex: '#800080',
+      },
+    },
   ],
   season: 'Lent' as 'Lent',
   color: {
     name: 'purple',
-    hex: '#800080'
-  }
+    hex: '#800080',
+  },
 });
 
 const annunciation = new LiturgicalDay({
@@ -56,14 +56,28 @@ const annunciation = new LiturgicalDay({
     name: 'Fourth Sunday in Lent',
     color: {
       name: 'purple',
-      hex: '#800080'
+      hex: '#800080',
     },
-    cycle: 'Easter'
+    cycle: 'Easter',
   },
   years: {
     bcp1979_daily_office: 2,
     bcp1979_daily_psalms: 2,
-    rclsunday: 'A'
+    rclsunday: 'A',
+  },
+  holy_day_observed: {
+    mmdd: '3/25',
+    slug: 'annunciation',
+    name: 'The Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary',
+    season: 'Saints' as 'Saints',
+    type: {
+      name: 'Holy Days',
+      rank: 3,
+    },
+    color: {
+      name: 'blue',
+      hex: '#213a5e',
+    },
   },
   holy_days: [
     {
@@ -73,30 +87,30 @@ const annunciation = new LiturgicalDay({
       season: 'Saints' as 'Saints',
       type: {
         name: 'Holy Days',
-        rank: 3
+        rank: 3,
       },
       color: {
         name: 'blue',
-        hex: '#213a5e'
-      }
-    }
+        hex: '#213a5e',
+      },
+    },
   ],
   season: 'Saints' as 'Saints',
   color: {
     name: 'blue',
-    hex: '#213a5e'
-  }
+    hex: '#213a5e',
+  },
 });
 
 describe('Condition', () => {
   it('should match day slugs', () => {
     const condition = new Condition();
 
-    condition.day = {only: ['wednesday-last-epiphany']};
-    let include : boolean = condition.include(day, new ClientPreferences());
+    condition.day = { only: ['wednesday-last-epiphany'] };
+    let include: boolean = condition.include(day, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.day = {except: ['wednesday-last-epiphany']};
+    condition.day = { except: ['wednesday-last-epiphany'] };
     include = condition.include(day, new ClientPreferences());
     expect(include).toEqual(false);
   });
@@ -104,11 +118,11 @@ describe('Condition', () => {
   it('should match weeks', () => {
     const condition = new Condition();
 
-    condition.week = {only: ['4th-lent']};
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    condition.week = { only: ['4th-lent'] };
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.week = {except: ['4th-lent']};
+    condition.week = { except: ['4th-lent'] };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
   });
@@ -116,11 +130,11 @@ describe('Condition', () => {
   it('should match weekdays', () => {
     const condition = new Condition();
 
-    condition.weekday = {only: ['Wednesday']};
-    let include : boolean = condition.include(day, new ClientPreferences());
+    condition.weekday = { only: ['Wednesday'] };
+    let include: boolean = condition.include(day, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.weekday = {except: ['Wednesday']};
+    condition.weekday = { except: ['Wednesday'] };
     include = condition.include(day, new ClientPreferences());
     expect(include).toEqual(false);
   });
@@ -129,23 +143,23 @@ describe('Condition', () => {
     const condition = new Condition();
 
     condition.season = { only: ['Lent'] };
-    let include : boolean = condition.include(day, new ClientPreferences());
+    let include: boolean = condition.include(day, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.season = {except: ['Lent']};
+    condition.season = { except: ['Lent'] };
     include = condition.include(day, new ClientPreferences());
     expect(include).toEqual(false);
 
     const condition2 = new Condition({
-        "season": {
-          "only": ["Advent", "Lent", "HolyWeek", "Ember", "Rogation"]
-        }
-      });
+      season: {
+        only: ['Advent', 'Lent', 'HolyWeek', 'Ember', 'Rogation'],
+      },
+    });
     expect(condition2.include(day, {})).toEqual(true);
   });
 
   it('should handle multiple seasons', () => {
-    const condition = new Condition({ season: { except: [ 'Easter', 'Ascension' ], only: [] }});
+    const condition = new Condition({ season: { except: ['Easter', 'Ascension'], only: [] } });
     expect(condition.include(day, new ClientPreferences())).toEqual(true);
   });
 
@@ -153,27 +167,26 @@ describe('Condition', () => {
     const condition = new Condition();
 
     condition.feastDay = true;
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
     condition.feastDay = false;
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
-
   });
 
   it('should still exclude Alleluias on saints’ days in Lent', () => {
     const condition = new Condition();
 
     condition.season = { only: ['Saints'] };
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
     condition.season = { only: ['Lent'] };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.season = {except: ['Lent']};
+    condition.season = { except: ['Lent'] };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
   });
@@ -181,23 +194,23 @@ describe('Condition', () => {
   it('should handle date <, >, <=, >=', () => {
     const condition = new Condition();
 
-    condition.date = { lt: '3/26'};
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    condition.date = { lt: '3/26' };
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.date = { gt: '3/26'};
+    condition.date = { gt: '3/26' };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
 
-    condition.date = { gte: '3/25'};
+    condition.date = { gte: '3/25' };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.date = { lt: '4/1', gt: '3/1'};
+    condition.date = { lt: '4/1', gt: '3/1' };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
-    condition.date = { lt: '3/1', gt: '2/1 '};
+    condition.date = { lt: '3/1', gt: '2/1 ' };
     include = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
   });
@@ -205,8 +218,8 @@ describe('Condition', () => {
   it('should return false for inappropriate dates', () => {
     const condition = new Condition();
 
-    condition.date = { lt: '3as/'};
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    condition.date = { lt: '3as/' };
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(false);
   });
 
@@ -214,7 +227,7 @@ describe('Condition', () => {
     const condition = new Condition();
 
     condition.day_of_month = { eq: 25 };
-    let include : boolean = condition.include(annunciation, new ClientPreferences());
+    let include: boolean = condition.include(annunciation, new ClientPreferences());
     expect(include).toEqual(true);
 
     condition.day_of_month = { neq: 25 };
@@ -228,9 +241,9 @@ describe('Condition', () => {
     condition.preference = {
       key: 'angelus',
       value: 'before',
-      is: true
+      is: true,
     };
-    let include : boolean = condition.include(annunciation, {'angelus': 'before'});
+    let include: boolean = condition.include(annunciation, { angelus: 'before' });
     expect(include).toEqual(true);
   });
 
@@ -240,9 +253,9 @@ describe('Condition', () => {
     condition.preference = {
       key: 'angelus',
       value: 'before',
-      is: false
+      is: false,
     };
-    let include : boolean = condition.include(annunciation, {'angelus': 'before'});
+    let include: boolean = condition.include(annunciation, { angelus: 'before' });
     expect(include).toEqual(false);
 
     include = condition.include(annunciation, {});

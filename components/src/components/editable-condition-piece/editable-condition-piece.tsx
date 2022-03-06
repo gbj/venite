@@ -151,8 +151,16 @@ export class EditableConditionComponent {
         <ion-item>
           <ion-label>{localeStrings.feastDay}</ion-label>
           <ion-toggle
-            checked={this.workingCondition.feastDay !== undefined}
+            checked={this.workingCondition.feastDay === true}
             onIonChange={(ev) => this.toggleSubcondition('feastDay', ev.detail.checked, ev.detail.checked)}
+          ></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>{localeStrings.notFeastDay}</ion-label>
+          <ion-toggle
+            checked={this.workingCondition.feastDay === false}
+            onIonChange={(ev) => this.toggleSubcondition('feastDay', ev.detail.checked, !ev.detail.checked)}
           ></ion-toggle>
         </ion-item>
 

@@ -222,7 +222,7 @@ export class LiturgicalDay {
       holyWeek = this.slug?.includes('holy-week'),
       ashWednesdayWeek = this.slug?.includes('last-epiphany'),
       ascensionWeek = this.slug?.includes('6th-easter'),
-      easterWeek = this.week?.slug === 'easter';
+      easterWeek = this.slug?.includes('easter');
     return isSunday || (hasRank && !holyWeek && !easterWeek && !ashWednesdayWeek && !ascensionWeek);
   }
 

@@ -23,7 +23,7 @@
 
 Ƭ **StyleTuple**: *typeof STYLES*
 
-*Defined in [responsive-prayer.ts:4](https://github.com/gbj/venite/blob/0c59dbe7/ldf/src/responsive-prayer.ts#L4)*
+*Defined in [responsive-prayer.ts:4](https://github.com/gbj/venite/blob/b39999bc/ldf/src/responsive-prayer.ts#L4)*
 
 ## Variables
 
@@ -31,4 +31,4 @@
 
 • **STYLES**: *["preces", "litany", "responsive"]* = ['preces', 'litany', 'responsive'] as const
 
-*Defined in [responsive-prayer.ts:3](https://github.com/gbj/venite/blob/0c59dbe7/ldf/src/responsive-prayer.ts#L3)*
+*Defined in [responsive-prayer.ts:3](https://github.com/gbj/venite/blob/b39999bc/ldf/src/responsive-prayer.ts#L3)*

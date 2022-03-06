@@ -100,7 +100,7 @@ export class Condition {
             .map((a) => (a && a.type && a.type.rank ? a.type.rank : 3)), // if rank is undefined, holy days default to 3
         ),
         isSunday: boolean = dateFromYMDString(day.date).getDay() == 0,
-        isFeast: boolean = highestFeastRank >= 3 || isSunday;
+        isFeast: boolean = new LiturgicalDay(day).isFeast();
       evaluatedConditions.push(isFeast == this.feastDay);
     }
 

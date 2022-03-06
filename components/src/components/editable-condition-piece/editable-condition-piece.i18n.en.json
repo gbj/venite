@@ -6,6 +6,7 @@
   "dayOfMonthIsNot": "Day of Month Is Not",
   "except": "Except",
   "feastDay": "Only on Holy Days and Sundays",
+  "notFeastDay": "Except on Holy Days and Sundays",
   "gt": "After",
   "gte": "On or After",
   "lt": "Before",
