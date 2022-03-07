@@ -5380,7 +5380,10 @@
     {
       "kalendar": "bcp1979",
       "season": "Ascension",
-      "slug": "friday-6th-easter"
+      "slug": "friday-6th-easter",
+      "type": {
+        "rank": 2.5
+      }
     },
     {
       "name": "Friday in Easter Week",
@@ -6084,7 +6087,10 @@
     {
       "kalendar": "bcp1979",
       "season": "Ascension",
-      "slug": "saturday-6th-easter"
+      "slug": "saturday-6th-easter",
+      "type": {
+        "rank": 2.5
+      }
     },
     {
       "kalendar": "bcp1979",
