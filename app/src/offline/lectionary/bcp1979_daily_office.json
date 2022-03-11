@@ -127,7 +127,7 @@
   },
   {
     "when": "1",
-    "citation": "Rev. 21:22-22:5",
+    "citation": "Revelation 21:22-22:5",
     "type": "second_reading",
     "day": "thursday-fourth-advent",
     "whentype": "year",
@@ -146,7 +146,7 @@
   {
     "whentype": "year",
     "when": "2",
-    "citation": "Rev. 2:8-17",
+    "citation": "Revelation 2:8-17",
     "id": "6404",
     "day": "thursday-second-advent",
     "type": "second_reading",
@@ -166,7 +166,7 @@
     "when": "1",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
-    "citation": "Rev. 15:1-8",
+    "citation": "Revelation 15:1-8",
     "id": "11306",
     "type": "second_reading"
   },
@@ -343,7 +343,7 @@
   },
   {
     "id": "9380",
-    "citation": "Rev. 15:1-8",
+    "citation": "Revelation 15:1-8",
     "day": "sunday-proper-6",
     "type": "second_reading",
     "whentype": "year",
@@ -482,7 +482,7 @@
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "type": "second_reading",
-    "citation": "Rev. 18:9-20",
+    "citation": "Revelation 18:9-20",
     "day": "tuesday-proper-27"
   },
   {
@@ -504,7 +504,7 @@
     "day": "wednesday-proper-23"
   },
   {
-    "citation": "Rev. 21:9-21",
+    "citation": "Revelation 21:9-21",
     "day": "wednesday-proper-28",
     "id": "11456",
     "when": "1",
@@ -618,7 +618,7 @@
     "lectionary": "bcp1979_daily_office",
     "day": "monday-proper-25",
     "whentype": "year",
-    "citation": "Rev. 1:4-20"
+    "citation": "Revelation 1:4-20"
   },
   {
     "day": "sunday-second-advent",
@@ -1190,7 +1190,7 @@
   {
     "when": "1",
     "id": "11252",
-    "citation": "Rev. 10:1-11",
+    "citation": "Revelation 10:1-11",
     "lectionary": "bcp1979_daily_office",
     "day": "monday-proper-26",
     "whentype": "year",
@@ -1496,7 +1496,7 @@
   {
     "type": "second_reading",
     "when": "2",
-    "citation": "Rev. 1:1-8",
+    "citation": "Revelation 1:1-8",
     "day": "monday-second-advent",
     "whentype": "year",
     "id": "6365",
@@ -1535,7 +1535,7 @@
     "id": "11280",
     "type": "second_reading",
     "whentype": "year",
-    "citation": "Rev. 12:1-12",
+    "citation": "Revelation 12:1-12",
     "when": "1"
   },
   {
@@ -2058,7 +2058,7 @@
     "day": "january-9",
     "whentype": "year",
     "when": "1",
-    "citation": "Rev. 2:18-29"
+    "citation": "Revelation 2:18-29"
   },
   {
     "type": "gospel",
@@ -2251,7 +2251,7 @@
   },
   {
     "day": "saturday-proper-24",
-    "citation": "Rev. 10:1-11",
+    "citation": "Revelation 10:1-11",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "id": "11143",
@@ -2791,7 +2791,7 @@
   {
     "day": "friday-third-advent",
     "whentype": "year",
-    "citation": "Rev. 5:6-14",
+    "citation": "Revelation 5:6-14",
     "lectionary": "bcp1979_daily_office",
     "id": "6503",
     "type": "second_reading",
@@ -2821,7 +2821,7 @@
     "day": "saturday-second-advent",
     "type": "second_reading",
     "whentype": "year",
-    "citation": "Rev. 3:1-6",
+    "citation": "Revelation 3:1-6",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -2944,7 +2944,7 @@
   {
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
-    "citation": "Rev. 16:1-11",
+    "citation": "Revelation 16:1-11",
     "day": "wednesday-proper-26",
     "type": "second_reading",
     "when": "2",
@@ -3200,7 +3200,7 @@
     "day": "saturday-proper-25",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 13:11-18"
+    "citation": "Revelation 13:11-18"
   },
   {
     "lectionary": "bcp1979_daily_office",
@@ -3215,7 +3215,7 @@
     "type": "second_reading",
     "day": "tuesday-proper-28",
     "id": "11440",
-    "citation": "Rev. 21:1-8",
+    "citation": "Revelation 21:1-8",
     "when": "1",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office"
@@ -3881,7 +3881,7 @@
     "when": "1",
     "id": "12141",
     "lectionary": "bcp1979_daily_office",
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "citation": "Zech. 9:9-12",
     "day": "sunday-holy-week",
     "whentype": "year"
@@ -4077,7 +4077,7 @@
   },
   {
     "type": "second_reading",
-    "citation": "Rev. 1:9-20",
+    "citation": "Revelation 1:9-20",
     "day": "december-30",
     "id": "6659",
     "whentype": "year",
@@ -4307,7 +4307,7 @@
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "day": "wednesday-second-advent",
-    "citation": "Rev. 1:17-2:7"
+    "citation": "Revelation 1:17-2:7"
   },
   {
     "citation": "Eph. 6:10-20",
@@ -4654,7 +4654,7 @@
   {
     "day": "monday-proper-27",
     "when": "2",
-    "citation": "Rev. 18:15-24",
+    "citation": "Revelation 18:15-24",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "type": "second_reading",
@@ -5150,7 +5150,7 @@
     "when": "1",
     "lectionary": "bcp1979_daily_office",
     "day": "monday-proper-27",
-    "citation": "Rev. 18:1-8",
+    "citation": "Revelation 18:1-8",
     "type": "second_reading",
     "whentype": "year"
   },
@@ -5185,7 +5185,7 @@
     "type": "second_reading",
     "id": "11180",
     "day": "tuesday-proper-25",
-    "citation": "Rev. 11:14-19",
+    "citation": "Revelation 11:14-19",
     "when": "2",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year"
@@ -5469,7 +5469,7 @@
     "type": "first_reading"
   },
   {
-    "citation": "Rev. 21:9-21",
+    "citation": "Revelation 21:9-21",
     "day": "wednesday-fourth-advent",
     "id": "6563",
     "whentype": "year",
@@ -5766,11 +5766,11 @@
     "id": "6543"
   },
   {
-    "day": "saturday-pentecost",
+    "day": "eve-trinity-sunday",
     "id": "8911",
     "citation": "Eph. 3:14-21",
     "when": "2",
-    "type": "holy_day_evening_2",
+    "type": "second_reading",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office"
   },
@@ -5838,7 +5838,7 @@
     "id": "11088"
   },
   {
-    "citation": "Rev. 19:11-16",
+    "citation": "Revelation 19:11-16",
     "lectionary": "bcp1979_daily_office",
     "id": "6697",
     "when": "2",
@@ -6084,7 +6084,7 @@
     "whentype": "year",
     "when": "2",
     "day": "thursday-proper-26",
-    "citation": "Rev. 16:12-21",
+    "citation": "Revelation 16:12-21",
     "id": "11300",
     "type": "second_reading",
     "lectionary": "bcp1979_daily_office"
@@ -6580,7 +6580,7 @@
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "when": "2",
-    "citation": "Rev. 2:18-29",
+    "citation": "Revelation 2:18-29",
     "id": "6414",
     "type": "second_reading"
   },
@@ -7173,7 +7173,7 @@
     "lectionary": "bcp1979_daily_office",
     "day": "thursday-proper-24",
     "whentype": "year",
-    "citation": "Rev. 9:1-12",
+    "citation": "Revelation 9:1-12",
     "type": "second_reading",
     "id": "11121",
     "when": "2"
@@ -7298,7 +7298,7 @@
   {
     "day": "sunday-fourth-advent",
     "id": "6528",
-    "citation": "Rev. 12:1-10",
+    "citation": "Revelation 12:1-10",
     "whentype": "year",
     "type": "second_reading",
     "when": "2",
@@ -7625,7 +7625,7 @@
     "citation": "Zech. 12:9-11,13:1,7-9",
     "whentype": "year",
     "day": "sunday-holy-week",
-    "type": "first_reading",
+    "type": "holy_day_evening_1",
     "id": "12140"
   },
   {
@@ -7703,7 +7703,7 @@
   {
     "id": "6836",
     "day": "january-11",
-    "citation": "Rev. 3:7-13",
+    "citation": "Revelation 3:7-13",
     "lectionary": "bcp1979_daily_office",
     "when": "1",
     "type": "second_reading",
@@ -7967,7 +7967,7 @@
     "when": "2",
     "lectionary": "bcp1979_daily_office",
     "day": "wednesday-proper-25",
-    "citation": "Rev. 12:1-6",
+    "citation": "Revelation 12:1-6",
     "type": "second_reading"
   },
   {
@@ -8075,7 +8075,7 @@
     "when": "2",
     "id": "6477",
     "day": "wednesday-third-advent",
-    "citation": "Rev. 4:1-8",
+    "citation": "Revelation 4:1-8",
     "type": "second_reading"
   },
   {
@@ -8268,7 +8268,7 @@
     "lectionary": "bcp1979_daily_office"
   },
   {
-    "type": "second_reading",
+    "type": "holy_day_morning_2",
     "citation": "1 Tim. 6:12-16",
     "id": "8180",
     "lectionary": "bcp1979_daily_office",
@@ -8403,7 +8403,7 @@
     "when": "1"
   },
   {
-    "citation": "Rev. 9:13-21",
+    "citation": "Revelation 9:13-21",
     "type": "second_reading",
     "lectionary": "bcp1979_daily_office",
     "when": "2",
@@ -8778,7 +8778,7 @@
     "day": "january-7",
     "whentype": "year",
     "type": "second_reading",
-    "citation": "Rev. 2:1-7"
+    "citation": "Revelation 2:1-7"
   },
   {
     "citation": "Matt. 13:18-23",
@@ -8835,7 +8835,7 @@
     "type": "second_reading"
   },
   {
-    "citation": "Rev. 2:8-17",
+    "citation": "Revelation 2:8-17",
     "when": "1",
     "type": "second_reading",
     "day": "january-8",
@@ -9181,7 +9181,7 @@
     "when": "1",
     "type": "second_reading",
     "id": "11186",
-    "citation": "Rev. 5:1-10",
+    "citation": "Revelation 5:1-10",
     "whentype": "year",
     "day": "wednesday-proper-25"
   },
@@ -9360,7 +9360,7 @@
     "when": "1",
     "id": "6601",
     "day": "december-24",
-    "citation": "Rev. 22:12-17,21",
+    "citation": "Revelation 22:12-17,21",
     "type": "second_reading",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office"
@@ -9570,7 +9570,7 @@
     "lectionary": "bcp1979_daily_office",
     "day": "wednesday-proper-27",
     "id": "11364",
-    "citation": "Rev. 18:21-24"
+    "citation": "Revelation 18:21-24"
   },
   {
     "whentype": "year",
@@ -9686,7 +9686,7 @@
     "when": "2",
     "lectionary": "bcp1979_daily_office",
     "id": "6688",
-    "citation": "Rev. 21:1-6",
+    "citation": "Revelation 21:1-6",
     "whentype": "year"
   },
   {
@@ -10029,7 +10029,7 @@
     "whentype": "year",
     "day": "saturday-proper-28",
     "type": "second_reading",
-    "citation": "Rev. 22:14-21"
+    "citation": "Revelation 22:14-21"
   },
   {
     "whentype": "year",
@@ -10307,7 +10307,7 @@
     "day": "monday-proper-25",
     "lectionary": "bcp1979_daily_office",
     "id": "11168",
-    "citation": "Rev. 11:1-14",
+    "citation": "Revelation 11:1-14",
     "when": "2"
   },
   {
@@ -10746,14 +10746,14 @@
     "day": "january-10",
     "whentype": "year",
     "id": "6824",
-    "citation": "Rev. 3:1-6",
+    "citation": "Revelation 3:1-6",
     "type": "second_reading",
     "lectionary": "bcp1979_daily_office",
     "when": "1"
   },
   {
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 5:1-14",
+    "citation": "Revelation 5:1-14",
     "id": "8760",
     "whentype": "year",
     "day": "eve-wednesday-6th-easter",
@@ -10829,7 +10829,7 @@
     "id": "11430",
     "day": "monday-proper-28",
     "whentype": "year",
-    "citation": "Rev. 20:7-15",
+    "citation": "Revelation 20:7-15",
     "when": "1"
   },
   {
@@ -11032,7 +11032,7 @@
   },
   {
     "whentype": "year",
-    "type": "second_reading",
+    "type": "holy_day_morning_2",
     "citation": "1 Tim. 6:12-16",
     "when": "1",
     "id": "8550",
@@ -11267,7 +11267,7 @@
   {
     "whentype": "year",
     "id": "9200",
-    "citation": "Rev. 10:1-11",
+    "citation": "Revelation 10:1-11",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
     "type": "second_reading",
@@ -12024,7 +12024,7 @@
     "when": "1",
     "lectionary": "bcp1979_daily_office",
     "day": "saturday-proper-27",
-    "citation": "Rev. 20:1-6",
+    "citation": "Revelation 20:1-6",
     "whentype": "year",
     "type": "second_reading",
     "id": "11404"
@@ -12080,7 +12080,7 @@
     "whentype": "year",
     "type": "second_reading",
     "id": "11359",
-    "citation": "Rev. 19:1-10",
+    "citation": "Revelation 19:1-10",
     "when": "2"
   },
   {
@@ -12366,7 +12366,7 @@
     "whentype": "year",
     "type": "second_reading",
     "when": "2",
-    "citation": "Rev. 8:1-13",
+    "citation": "Revelation 8:1-13",
     "day": "wednesday-proper-24",
     "lectionary": "bcp1979_daily_office",
     "id": "11109"
@@ -12606,7 +12606,7 @@
     "when": "2"
   },
   {
-    "citation": "Rev. 3:7-13",
+    "citation": "Revelation 3:7-13",
     "when": "2",
     "lectionary": "bcp1979_daily_office",
     "id": "6451",
@@ -12891,7 +12891,7 @@
     "lectionary": "bcp1979_daily_office",
     "when": "1",
     "day": "january-12",
-    "citation": "Rev. 3:14-22"
+    "citation": "Revelation 3:14-22"
   },
   {
     "citation": "Matt. 9:35-10:4",
@@ -12926,7 +12926,7 @@
     "id": "6649",
     "day": "december-29",
     "when": "1",
-    "citation": "Rev. 1:1-8",
+    "citation": "Revelation 1:1-8",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -13038,7 +13038,7 @@
     "when": "1"
   },
   {
-    "citation": "Rev. 14:1-13",
+    "citation": "Revelation 14:1-13",
     "day": "monday-proper-26",
     "when": "2",
     "lectionary": "bcp1979_daily_office",
@@ -13160,7 +13160,7 @@
     "type": "second_reading",
     "day": "friday-proper-25",
     "when": "2",
-    "citation": "Rev. 13:1-10"
+    "citation": "Revelation 13:1-10"
   },
   {
     "citation": "Eccles. 3:16-4:3",
@@ -13176,7 +13176,7 @@
     "lectionary": "bcp1979_daily_office",
     "id": "11082",
     "whentype": "year",
-    "citation": "Rev. 7:1-8",
+    "citation": "Revelation 7:1-8",
     "when": "2",
     "day": "monday-proper-24"
   },
@@ -13249,7 +13249,7 @@
     "whentype": "year",
     "id": "11294",
     "when": "1",
-    "citation": "Rev. 14:1-13",
+    "citation": "Revelation 14:1-13",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -13267,7 +13267,7 @@
     "type": "second_reading",
     "when": "2",
     "whentype": "year",
-    "citation": "Rev. 14:14-15:8",
+    "citation": "Revelation 14:14-15:8",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -13316,7 +13316,7 @@
     "type": "second_reading"
   },
   {
-    "citation": "Rev. 11:1-19",
+    "citation": "Revelation 11:1-19",
     "type": "second_reading",
     "when": "1",
     "id": "11268",
@@ -13510,7 +13510,7 @@
     "day": "tuesday-7th-easter",
     "whentype": "year",
     "citation": "Eph. 3:14-21",
-    "type": "holy_day_evening_2",
+    "type": "second_reading",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -13569,7 +13569,7 @@
   },
   {
     "day": "sunday-proper-18",
-    "citation": "Rev. 14:1-7,13",
+    "citation": "Revelation 14:1-7,13",
     "id": "10506",
     "when": "2",
     "whentype": "year",
@@ -13975,7 +13975,7 @@
   {
     "id": "11208",
     "type": "second_reading",
-    "citation": "Rev. 12:7-17",
+    "citation": "Revelation 12:7-17",
     "whentype": "year",
     "day": "thursday-proper-25",
     "when": "2",
@@ -14029,7 +14029,7 @@
   {
     "lectionary": "bcp1979_daily_office",
     "id": "6684",
-    "citation": "Rev. 21:1-6",
+    "citation": "Revelation 21:1-6",
     "whentype": "year",
     "type": "second_reading",
     "when": "1",
@@ -14074,7 +14074,7 @@
   {
     "id": "8175",
     "whentype": "year",
-    "type": "gospel",
+    "type": "holy_day_evening_2",
     "citation": "Matt. 21:12-17",
     "when": "1",
     "day": "sunday-holy-week",
@@ -14171,7 +14171,7 @@
     "day": "saturday-7th-easter"
   },
   {
-    "citation": "Rev. 18:1-14",
+    "citation": "Revelation 18:1-14",
     "id": "11323",
     "whentype": "year",
     "day": "saturday-proper-26",
@@ -14751,7 +14751,7 @@
     "type": "second_reading",
     "when": "1",
     "day": "thursday-proper-27",
-    "citation": "Rev. 19:1-10",
+    "citation": "Revelation 19:1-10",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office"
   },
@@ -14929,7 +14929,7 @@
   {
     "lectionary": "bcp1979_daily_office",
     "day": "sunday-proper-5",
-    "citation": "Rev. 12:1-12",
+    "citation": "Revelation 12:1-12",
     "id": "9288",
     "when": "1",
     "whentype": "year",
@@ -15084,7 +15084,7 @@
     "id": "9110",
     "day": "sunday-proper-3",
     "whentype": "year",
-    "citation": "Rev. 7:1-4,9-17",
+    "citation": "Revelation 7:1-4,9-17",
     "lectionary": "bcp1979_daily_office",
     "type": "second_reading"
   },
@@ -15198,7 +15198,7 @@
   },
   {
     "type": "second_reading",
-    "citation": "Rev. 6:12-7:4",
+    "citation": "Revelation 6:12-7:4",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "day": "friday-proper-25",
@@ -15235,7 +15235,7 @@
   {
     "id": "11392",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 19:11-16",
+    "citation": "Revelation 19:11-16",
     "when": "1",
     "day": "friday-proper-27",
     "type": "second_reading",
@@ -15324,7 +15324,7 @@
   },
   {
     "id": "8922",
-    "citation": "Rev. 19:4-16",
+    "citation": "Revelation 19:4-16",
     "type": "second_reading",
     "whentype": "year",
     "when": "2",
@@ -16072,7 +16072,7 @@
   {
     "when": "2",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 4:9-5:5",
+    "citation": "Revelation 4:9-5:5",
     "id": "6548",
     "whentype": "year",
     "day": "thursday-third-advent",
@@ -16592,7 +16592,7 @@
     "id": "9722"
   },
   {
-    "citation": "Rev. 20:11-21:8",
+    "citation": "Revelation 20:11-21:8",
     "id": "6549",
     "day": "tuesday-fourth-advent",
     "lectionary": "bcp1979_daily_office",
@@ -16747,7 +16747,7 @@
   {
     "type": "second_reading",
     "when": "1",
-    "citation": "Rev. 21:22-27",
+    "citation": "Revelation 21:22-27",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "day": "epiphany",
@@ -17542,7 +17542,7 @@
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "day": "wednesday-proper-27",
-    "citation": "Rev. 19:11-21",
+    "citation": "Revelation 19:11-21",
     "type": "second_reading"
   },
   {
@@ -17862,7 +17862,7 @@
   },
   {
     "id": "6775",
-    "citation": "Rev. 21:22-27",
+    "citation": "Revelation 21:22-27",
     "lectionary": "bcp1979_daily_office",
     "day": "epiphany",
     "type": "second_reading",
@@ -18221,7 +18221,7 @@
     "id": "9484"
   },
   {
-    "citation": "Rev. 7:9-17",
+    "citation": "Revelation 7:9-17",
     "type": "second_reading",
     "whentype": "year",
     "when": "2",
@@ -18250,7 +18250,7 @@
   {
     "citation": "Eph. 3:14-21",
     "type": "second_reading",
-    "day": "saturday-pentecost",
+    "day": "eve-trinity-sunday",
     "whentype": "year",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
@@ -18757,7 +18757,7 @@
     "lectionary": "bcp1979_daily_office",
     "type": "second_reading",
     "day": "tuesday-second-advent",
-    "citation": "Rev. 1:9-16",
+    "citation": "Revelation 1:9-16",
     "id": "6378"
   },
   {
@@ -18907,7 +18907,7 @@
   {
     "citation": "Luke 19:41-48",
     "day": "sunday-holy-week",
-    "type": "gospel",
+    "type": "holy_day_evening_2",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "when": "2",
@@ -19095,7 +19095,7 @@
   },
   {
     "type": "second_reading",
-    "citation": "Rev. 20:1-10",
+    "citation": "Revelation 20:1-10",
     "id": "6535",
     "day": "monday-fourth-advent",
     "lectionary": "bcp1979_daily_office",
@@ -19187,7 +19187,7 @@
     "day": "sunday-proper-19",
     "id": "10595",
     "type": "second_reading",
-    "citation": "Rev. 18:1-8",
+    "citation": "Revelation 18:1-8",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "when": "2"
@@ -19420,7 +19420,7 @@
   {
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
-    "citation": "Rev. 5:1-14",
+    "citation": "Revelation 5:1-14",
     "id": "10418",
     "when": "2",
     "day": "sunday-proper-17",
@@ -19630,7 +19630,7 @@
     "when": "1",
     "id": "11202",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 5:11-6:11",
+    "citation": "Revelation 5:11-6:11",
     "day": "thursday-proper-25"
   },
   {
@@ -19726,7 +19726,7 @@
   {
     "day": "tuesday-third-advent",
     "id": "6463",
-    "citation": "Rev. 3:14-22",
+    "citation": "Revelation 3:14-22",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "when": "2",
@@ -20050,7 +20050,7 @@
   {
     "when": "2",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 6:1-17",
+    "citation": "Revelation 6:1-17",
     "day": "saturday-third-advent",
     "whentype": "year",
     "id": "6515",
@@ -20238,7 +20238,7 @@
   },
   {
     "type": "second_reading",
-    "citation": "Rev. 7:[4-8]9-17",
+    "citation": "Revelation 7:[4-8]9-17",
     "day": "saturday-proper-25",
     "whentype": "year",
     "id": "11226",
@@ -21465,7 +21465,7 @@
     "id": "11316",
     "lectionary": "bcp1979_daily_office",
     "day": "saturday-proper-26",
-    "citation": "Rev. 17:1-14",
+    "citation": "Revelation 17:1-14",
     "whentype": "year",
     "when": "1"
   },
@@ -21619,7 +21619,7 @@
     "lectionary": "bcp1979_daily_office",
     "day": "tuesday-proper-25",
     "id": "11174",
-    "citation": "Rev. 4:1-11",
+    "citation": "Revelation 4:1-11",
     "when": "1"
   },
   {
@@ -21858,7 +21858,7 @@
   },
   {
     "whentype": "year",
-    "citation": "Rev. 4:1-11",
+    "citation": "Revelation 4:1-11",
     "type": "second_reading",
     "lectionary": "bcp1979_daily_office",
     "day": "sunday-proper-16",
@@ -22128,7 +22128,7 @@
   },
   {
     "type": "second_reading",
-    "citation": "Rev. 17:1-18",
+    "citation": "Revelation 17:1-18",
     "lectionary": "bcp1979_daily_office",
     "id": "11311",
     "whentype": "year",
@@ -22193,7 +22193,7 @@
     "citation": "Zech. 12:9-11,13:1,7-9",
     "id": "8173",
     "whentype": "year",
-    "type": "first_reading",
+    "type": "holy_day_evening_1",
     "when": "1",
     "lectionary": "bcp1979_daily_office"
   },
@@ -22343,8 +22343,8 @@
   },
   {
     "id": "8907",
-    "day": "saturday-pentecost",
-    "type": "holy_day_evening_1",
+    "day": "eve-trinity-sunday",
+    "type": "first_reading",
     "citation": "Ecclus. 42:15-25",
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
@@ -22463,7 +22463,7 @@
     "whentype": "year",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
-    "citation": "Rev. 22:6-11,18-20",
+    "citation": "Revelation 22:6-11,18-20",
     "day": "friday-fourth-advent",
     "id": "6587"
   },
@@ -22903,8 +22903,8 @@
     "lectionary": "bcp1979_daily_office",
     "whentype": "year",
     "citation": "Ecclus. 42:15-25",
-    "type": "holy_day_evening_1",
-    "day": "saturday-pentecost",
+    "type": "first_reading",
+    "day": "eve-trinity-sunday",
     "id": "8910",
     "when": "2"
   },
@@ -22950,7 +22950,7 @@
     "lectionary": "bcp1979_daily_office",
     "id": "11482",
     "day": "friday-proper-28",
-    "citation": "Rev. 22:6-13",
+    "citation": "Revelation 22:6-13",
     "when": "1"
   },
   {
@@ -23077,7 +23077,7 @@
     "id": "11472",
     "when": "1",
     "type": "second_reading",
-    "citation": "Rev. 21:22-22:5"
+    "citation": "Revelation 21:22-22:5"
   },
   {
     "type": "first_reading",
@@ -23406,7 +23406,7 @@
   {
     "citation": "Zech. 9:9-12",
     "id": "8179",
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "when": "2",
     "lectionary": "bcp1979_daily_office",
     "day": "sunday-holy-week",

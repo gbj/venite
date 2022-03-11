@@ -207,7 +207,27 @@ export class LectionaryService {
                 return of(entries);
               }
             }),
-            tap((e) => console.log("getReadings for day", day, "\n\n", e))
+            // Palm Sunday
+            map((entries) => {
+              if (
+                entries?.length > 1 &&
+                [
+                  "holy_day_morning_1",
+                  "holy_day_morning_2",
+                  "holy_day_evening_1",
+                  "holy_day_evening_2",
+                ].includes(entries[0].type) &&
+                entries[0].type == entries[1].type &&
+                entries[0].when !== entries[1].when
+              ) {
+                return entries.filter(
+                  (entry) =>
+                    entry.when == day.years["bcp1979_daily_office"].toString()
+                );
+              } else {
+                return entries;
+              }
+            })
           )
           .toPromise();
       }
