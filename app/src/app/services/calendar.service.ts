@@ -146,7 +146,7 @@ export class CalendarService implements CalendarServiceInterface {
     return of(
       kalendar === "lff2018"
         ? KALENDAR["bcp1979"]
-            .filter((day) => day.slug === slug && day?.type?.rank >= 3)
+            .filter((day) => day.slug === slug && day?.type?.rank >= 2.5)
             .concat(KALENDAR["lff2018"].filter((day) => day.slug === slug))
         : KALENDAR[kalendar].filter(
             (day) => day.slug == slug || day.day == slug
