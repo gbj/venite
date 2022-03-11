@@ -152,10 +152,10 @@ export class StringComponent {
       const 
             firstWord = splitTest ? splitTest[0] : '',
             re = firstWord.length > 2
-              ? /^ ?([\"\'“”‘’¡\!\?\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff])([\wñáéíóú\u0590-\u05ff\u0370-\u03ff\,]*)/
-              : /^ ?([\"\'“”‘’¡\!\?\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff])([\wñáéíóú\u0590-\u05ff\u0370-\u03ff\,]*[\s.!?]*[\wñáéíóú\u0590-\u05ff\u0370-\u03ff]*)/,
-            reIncludingPunctuation = firstWord[0]?.match(/[\"\'“”‘’¡\!\?\[\]\(\)]/)
-              ? /^ ?([\"\'“”‘’¡\!\?\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff]{2})\s*([\wñáéíóú\u0590-\u05ff\u0370-\u03ff]*)/
+              ? /^ ?([\"\'“”‘’¡\!\?¿\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff])([\wñáéíóú\u0590-\u05ff\u0370-\u03ff\,]*)/
+              : /^ ?([\"\'“”‘’¡\!\?¿\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff])([\wñáéíóú\u0590-\u05ff\u0370-\u03ff\,]*[\s.!?]*[\wñáéíóú\u0590-\u05ff\u0370-\u03ff]*)/,
+            reIncludingPunctuation = firstWord[0]?.match(/[\"\'“”‘’¡\!\?¿\[\]\(\)]/)
+              ? /^ ?([\"\'“”‘’¡\!\?¿\[\]\(\)\,\wñáéíóú\u0590-\u05ff\u0370-\u03ff]{2})\s*([\wñáéíóú\u0590-\u05ff\u0370-\u03ff]*)/
               : re,
             buffer = firstWord.length == 1,
             split = firstChunk.split(reIncludingPunctuation).filter(s => s !== ''),
