@@ -222,8 +222,9 @@ export class LiturgicalDay {
       holyWeek = this.slug?.includes('holy-week'),
       ashWednesdayWeek = this.slug?.includes('last-epiphany'),
       ascensionWeek = this.slug?.includes('6th-easter'),
-      easterWeek = this.slug?.includes('easter');
-    return isSunday || (hasRank && !holyWeek && !easterWeek && !ashWednesdayWeek && !ascensionWeek);
+      easterWeek = this.slug?.includes('easter'),
+      ember = this.season?.includes('Ember');
+    return isSunday || (hasRank && !holyWeek && !easterWeek && !ashWednesdayWeek && !ascensionWeek && !ember);
   }
 
   //** Constructor takes a Javascript object containing the class's properties */
