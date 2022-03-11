@@ -449,12 +449,13 @@ export class DocumentService {
             .where("sharing.status", "==", "published")
             .where("sharing.privacy", "==", "public");
 
+          const filteredVersions =
+            versions.filter((v) => Boolean(v)).length == 0
+              ? ["bcp1979", "Rite-II"]
+              : versions.filter((v) => Boolean(v));
+
           if (versions?.length > 0) {
-            query = query.where(
-              "version",
-              "in",
-              versions.filter((v) => Boolean(v))
-            );
+            query = query.where("version", "in", filteredVersions);
           }
           return query;
         })
