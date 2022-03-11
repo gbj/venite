@@ -163,7 +163,7 @@ export class PrayPage implements OnInit, OnDestroy {
   contentEl: IonContent;
 
   // Canticle Swap/Prayers & Thanksgivings
-  swapData$: Observable<[CanticleData, PAndTData]>;
+  swapData$: Observable<[CanticleData, PAndTData, string]>;
 
   // Bulletin editor
   bulletinMode: boolean = false;
@@ -212,7 +212,8 @@ export class PrayPage implements OnInit, OnDestroy {
     private location: Location,
     private alert: AlertController,
     @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface,
-    public mediaSessionService: MediaSessionService
+    public mediaSessionService: MediaSessionService,
+    private audio: AudioService
   ) {}
 
   ngOnDestroy() {
@@ -746,13 +747,18 @@ export class PrayPage implements OnInit, OnDestroy {
       liturgyVersions$,
       canticleOptions$,
       pAndTs$,
+      this.preferencesService.get("meditationBell").pipe(
+        map((pref) => pref?.value || "singing-bowl"),
+        map((val) => (val === "silence" ? "silence-short" : "singing-bowl"))
+      ),
     ]).pipe(
-      map(([liturgyVersions, canticleOptions, pAndTs]) => [
+      map(([liturgyVersions, canticleOptions, pAndTs, bell]) => [
         {
           liturgyVersions,
           canticleOptions,
         },
         pAndTs,
+        bell,
       ])
     );
   }
@@ -1569,5 +1575,85 @@ export class PrayPage implements OnInit, OnDestroy {
     await alert.present();
 
     await loading.dismiss();
+  }
+
+  async timerChanged(
+    ev: CustomEvent<
+      "start" | "pause" | "resume" | "rewind" | "complete" | number
+    >,
+    bell: string
+  ) {
+    const el = ev.target as any;
+    console.log("timerChanged", ev);
+    const audioFile = `/assets/audio/${bell}.mp3`;
+    if (typeof ev.detail === "number") {
+      const duration = await el.duration();
+
+      if (ev.detail > 0) {
+        MediaSession.setPositionState({
+          duration,
+          position: duration - ev.detail,
+          playbackRate: 1,
+        });
+      } else {
+        MediaSession.destroy();
+      }
+    } else {
+      switch (ev.detail) {
+        case "start":
+          await this.audio.create(audioFile, false);
+          await this.audio.play();
+          MediaSession.init({
+            play: true,
+            pause: true,
+            stop: true,
+            previoustrack: true,
+          });
+          MediaSession.addListener("play", () => {
+            el.resume();
+            this.audio.play();
+          });
+          MediaSession.addListener("pause", () => {
+            el.pause();
+            this.audio.pause();
+          });
+          MediaSession.addListener("previoustrack", async () => {
+            el.rewind();
+            await this.audio.destroy();
+            await this.audio.create(audioFile, false);
+            await this.audio.play();
+          });
+          MediaSession.setMetadata({
+            artist: "Venite",
+            album: "Venite",
+            title: this.translate.instant("menu.meditate"),
+            artwork: [
+              {
+                src: "/assets/icon/icon-512x512.png",
+                sizes: "512x512",
+                type: "image/png",
+              },
+            ],
+          });
+          break;
+        case "pause":
+          await this.audio.pause();
+          break;
+        case "resume":
+          await this.audio.play();
+          break;
+        case "rewind":
+          await this.audio.destroy();
+          await this.audio.create(audioFile, false);
+          await this.audio.play();
+          break;
+        case "complete":
+          await this.audio.destroy();
+          await this.audio.create(audioFile, false);
+          this.audio.play();
+          MediaSession.destroy();
+          break;
+      }
+    }
   }
 }
