@@ -105,6 +105,7 @@ import { MediaSessionService } from "../services/media-session.service";
 
 import { App } from "@capacitor/app";
 import { PluginListenerHandle } from "@capacitor/core";
+import { PrayerListService } from "../prayer-list/prayer-list.service";
 
 interface PrayState {
   liturgy: LiturgicalDocument;
@@ -213,7 +214,8 @@ export class PrayPage implements OnInit, OnDestroy {
     private alert: AlertController,
     @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface,
     public mediaSessionService: MediaSessionService,
-    private audio: AudioService
+    private audio: AudioService,
+    private prayerList: PrayerListService
   ) {}
 
   ngOnDestroy() {
@@ -1655,5 +1657,16 @@ export class PrayPage implements OnInit, OnDestroy {
           break;
       }
     }
+  }
+
+  sendPrayerList(ev: Event) {
+    console.log("(PrayerList) sending prayer list");
+    this.auth.user.subscribe((user) => {
+      this.prayerList.read(user?.uid).subscribe((data) => {
+        window.requestAnimationFrame(() =>
+          (ev.target as any).setPrayerList((data[0]?.text || "").split(/\n\n/g))
+        );
+      });
+    });
   }
 }

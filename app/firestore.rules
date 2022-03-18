@@ -1,6 +1,11 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+  	function userOwnsOrg(uid, orgId) {
+    	let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
+      return uid == org.owner;
+    }
+  
     function userInOrg(uid, orgId) {
       let org = get(/databases/$(database)/documents/Organization/$(orgId)).data;
       let userProfile = get(/databases/$(database)/documents/Users/$(request.auth.uid)).data;
@@ -41,7 +46,7 @@ service cloud.firestore {
     match /Document/{docId} {
       allow read: if true; //hasReadAccess(resource.data.sharing);
       allow update: if hasWriteAccess(resource.data.sharing);
-      allow delete: if request.auth.uid == resource.data.sharing.owner;
+      allow delete: if request.auth.uid == resource.data.sharing.owner || userOwnsOrg(request.auth.uid, resource.data.sharing.organization);
       allow create: if request.auth.uid != null;
     }
 
@@ -60,8 +65,8 @@ service cloud.firestore {
       allow read: if request.auth.uid == resource.data.uid;
       allow create, update, delete: if request.auth.uid == request.resource.data.uid;
     }
-
-    match /Preferences/{docId} {
+    
+       match /Preferences/{docId} {
       allow read: if request.auth.uid == resource.data.uid;
       allow create, update, delete: if request.auth.uid == request.resource.data.uid;
     }
@@ -150,6 +155,11 @@ service cloud.firestore {
     match /RecycleBin/{docId} {
       allow create: if true;
       allow read, update, delete: if request.auth.uid == request.resource.data.sharing.owner;
+    }
+
+     match /PrayerList/{docId} {
+      allow read, update, delete: if request.auth.uid == resource.data.user;
+      allow create: if request.auth.uid != null;
     }
   }
 }

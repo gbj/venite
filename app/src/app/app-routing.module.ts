@@ -111,6 +111,10 @@ const routes: Routes = [
         "./prayers-and-thanksgivings/prayers-and-thanksgivings.module"
       ).then((m) => m.PrayersAndThanksgivingsPageModule),
   },
+  {
+    path: 'prayer-list',
+    loadChildren: () => import('./prayer-list/prayer-list.module').then( m => m.PrayerListPageModule)
+  },
 ];
 
 @NgModule({

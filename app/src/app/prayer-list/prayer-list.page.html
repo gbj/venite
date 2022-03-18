@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'prayer-list.title' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <venite-auth-menu-button></venite-auth-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ "prayer-list.title" | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ "prayer-list.description" | translate }}</p>
+      <ion-textarea
+        [placeholder]="'prayer-list.start-typing' | translate"
+        [formControl]="prayerList"
+        auto-grow="true"
+      ></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

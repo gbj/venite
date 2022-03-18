@@ -385,5 +385,10 @@
     "compline": "Compline",
     "to": "to"
   },
-  "use-black-letter-collects": "Include collects for minor feasts."
+  "use-black-letter-collects": "Include collects for minor feasts.",
+  "prayer-list": {
+    "title": "Prayer List",
+    "description": "You can use this area to take notes on prayer intentions. The list will appear during the Daily Office, under the Prayers & Thanksgivings.",
+    "start-typing": "I am praying for..."
+  }
 }
