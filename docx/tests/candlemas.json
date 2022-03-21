@@ -1,0 +1,330 @@
+{
+  "date_created": { "nanoseconds": 530000000, "seconds": 1642795822 },
+  "date_modified": { "seconds": 1642796287, "nanoseconds": 446000000 },
+  "type": "liturgy",
+  "sharing": {
+    "privacy": "public",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "organization": "venite",
+    "collaborators": [],
+    "status": "published"
+  },
+  "slug": "candlemas-procession",
+  "lastRevision": 92,
+  "value": [
+    {
+      "style": "text",
+      "value": ["Candlemas Procession"],
+      "metadata": { "level": 1 },
+      "type": "heading"
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "This procession is intended for use immediately before the Holy Eucharist on the Feast of the Presentation of Our Lord in the Temple.",
+        "When circumstances permit, the congregation gathers at a place apart from the church so that all may enter the church in procession. If necessary, however, the procession takes place within the church. In this case it is suitable that the Presider begin the rite standing just inside the door of the church.",
+        "Candles for use in Church during the year and candles to be carried in procession are on a table. Alternatively those who will process are provided with unlighted candles.",
+        "The congregation stands.",
+        "The Presider greets the people with these words"
+      ]
+    },
+    {
+      "value": [
+        {
+          "text": "Light and peace, in Jesus Christ our Lord.",
+          "label": "",
+          "response": ""
+        },
+        { "label": "People", "text": "Thanks be to God." }
+      ],
+      "type": "responsive",
+      "style": "preces"
+    },
+    {
+      "type": "text",
+      "style": "text",
+      "value": [
+        "Dear people of God, forty days ago we celebrated the joyful feast of the incarnation of Jesus. Today we recall the day on which he was presented in the temple, fulfilling the law of Moses. Led by the Spirit, Simeon and Anna came to the temple, recognized the child as the Christ, and proclaimed him with joy. United by the same Spirit, we now enter the house of God, where we shall recognize Christ in the breaking of bread."
+      ]
+    },
+    { "style": "text", "value": ["Let us pray."], "type": "text" },
+    {
+      "value": [
+        "O eternal God, who have created all things; on this day you fulfilled the petitions of the just Simeon: we humbly ask you to bless and sanctify these candles for our use. Graciously hear our prayers and be merciful to us, whom you have redeemed by your Son, who is the light of the world, and who lives and reigns with you and the Holy Spirit, one God for ever and ever."
+      ],
+      "style": "prayer",
+      "type": "text"
+    },
+    {
+      "value": [
+        "The following canticle is then sung or said, during which the candles are lighted, if the people are not already holding them."
+      ],
+      "type": "rubric"
+    },
+    {
+      "value": [
+        {
+          "text": "A Light to enlighten the nations,\n    and the glory of your people Israel.",
+          "response": "A Light to enlighten the nations,\n    and the glory of your people Israel.",
+          "label": ""
+        },
+        {
+          "response": "A Light to enlighten the nations,\n    and the glory of your people Israel.",
+          "text": "Lord, you now have set your servant free *\n    to go in peace as you have promised."
+        },
+        {
+          "response": "A Light to enlighten the nations,\n    and the glory of your people Israel.",
+          "text": "For these eyes of mine have seen the Savior, *\n    whom you have prepared for all the world to see."
+        }
+      ],
+      "style": "responsive",
+      "type": "responsive"
+    },
+    {
+      "value": ["The Presider then says the following prayer"],
+      "type": "rubric"
+    },
+    { "style": "text", "type": "text", "value": ["Let us pray."] },
+    {
+      "value": [
+        "O God, source of all light, today you revealed to the aged Simeon your light which enlightens the nations. Fill our hearts with the light of faith, that we who bear these candles may walk in the path of goodness, through Jesus Christ the Light of the World."
+      ],
+      "type": "text",
+      "style": "prayer"
+    },
+    {
+      "style": "text",
+      "metadata": { "level": 3 },
+      "type": "heading",
+      "value": ["The Procession"]
+    },
+    {
+      "value": [
+        {
+          "label": "Deacon",
+          "text": "Let us go forth in peace.",
+          "response": ""
+        },
+        { "text": "In the name of Christ. Amen.", "label": "People" }
+      ],
+      "type": "responsive",
+      "style": "preces"
+    },
+    {
+      "value": [
+        "During the procession, all carry lighted candles; and appropriate hymns, psalms, or anthems are sung.",
+        "In a suitable place, the procession may halt while the following or some other appropriate Collect is said."
+      ],
+      "type": "rubric"
+    },
+    { "value": ["Let us pray."], "type": "text", "style": "text" },
+    {
+      "type": "text",
+      "style": "prayer",
+      "value": [
+        "O God, you have made this day holy by the presentation of your Son in the Temple, and by the purification of the Blessed Virgin Mary: Mercifully grant that we, who delight in her humble readiness to be the birth-giver of the Only- begotten, may rejoice for ever in our adoption as his sisters and brothers; through Jesus Christ our Lord."
+      ]
+    },
+    {
+      "value": [
+        "The following antiphon and psalm is appropriate as the procession approaches the Altar"
+      ],
+      "type": "rubric"
+    },
+    {
+      "type": "refrain",
+      "value": [
+        "We have waited in silence on your loving-kindness, O Lord, in the midst of your temple. Your praise, like your Name, O God, reaches to the world's end; your right hand is full of justice."
+      ],
+      "style": "antiphon"
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "In place of the long antiphon given above, this shorter form may be used with the appointed Psalm"
+      ]
+    },
+    {
+      "style": "antiphon",
+      "type": "refrain",
+      "value": [
+        "We have waited on your loving kindness, O Lord, in the midst of your temple."
+      ]
+    },
+    {
+      "slug": "psalm_48",
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "verse": "Great is the LORD, and highly to be praised; *",
+              "halfverse": "in the city of our God is his holy hill."
+            },
+            {
+              "halfverse": "the very center of the world and the city of the great King.",
+              "number": "2",
+              "verse": "Beautiful and lofty, the joy of all the earth, is the hill of Zion, *",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "God is in her citadels; *",
+              "number": "3",
+              "halfverse": "he is known to be her sure refuge."
+            },
+            {
+              "verse": "Behold, the kings of the earth assembled *",
+              "number": "4",
+              "halfverse": "and marched forward together.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "they retreated and fled in terror.",
+              "number": "5",
+              "verse": "They looked and were astounded; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "6",
+              "halfverse": "they writhed like a woman in childbirth,\n like ships of the sea when the east wind shatters them.",
+              "verse": "Trembling seized them there; *",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "7",
+              "verse": "As we have heard, so have we seen,\nin the city of the LORD of hosts, in the city of our God; *",
+              "halfverse": "God has established her for ever.",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "We have waited in silence on your loving-kindness, O God, *",
+              "number": "8",
+              "type": "psalm-verse",
+              "halfverse": "in the midst of your temple."
+            },
+            {
+              "number": "9",
+              "verse": "Your praise, like your Name, O God, reaches to the world’s end; *",
+              "type": "psalm-verse",
+              "halfverse": "your right hand is full of justice."
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "Let Mount Zion be glad\nand the cities of Judah rejoice, *",
+              "number": "10",
+              "halfverse": "because of your judgments."
+            },
+            {
+              "verse": "Make the circuit of Zion;\nwalk round about her; *",
+              "number": "11",
+              "halfverse": "count the number of her towers.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "12",
+              "halfverse": "that you may tell those who come after.",
+              "verse": "Consider well her bulwarks;\nexamine her strongholds; *"
+            },
+            {
+              "halfverse": "he shall be our guide for evermore.",
+              "verse": "This God is our God for ever and ever; *",
+              "number": "13",
+              "type": "psalm-verse"
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "citation": "Psalm 48:1-2, 10-13",
+      "source": {
+        "api": "https://www.venite.app/api",
+        "source": "bcp1979",
+        "citation": "p. 651"
+      },
+      "category": ["Psalm"],
+      "metadata": {
+        "number": "48",
+        "omit_antiphon": false,
+        "latinname": "Magnus Dominus",
+        "omit_gloria": false,
+        "localname": "Psalm 48"
+      },
+      "style": "psalm",
+      "hidden": false,
+      "language": "en",
+      "label": "Psalm 48",
+      "version": "bcp1979",
+      "type": "psalm",
+      "sharing": {
+        "collaborators": [],
+        "privacy": "public",
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published"
+      }
+    },
+    {
+      "value": [
+        "On arrival in the sanctuary, the Presider goes to the usual place, and the Eucharist begins with or the Collect of the Day.",
+        "After the Collect, all extinguish their candles."
+      ],
+      "type": "rubric"
+    }
+  ],
+  "category": [],
+  "version": "Rite-II",
+  "language": "en",
+  "label": "Candlemas Procession",
+  "source": { "api": "", "citation": "", "source": "" },
+  "metadata": {
+    "special_preferences": {},
+    "preferences": {},
+    "evening": false,
+    "supplement": false,
+    "pronouns": []
+  },
+  "day": {
+    "evening": false,
+    "date": "2022-3-21",
+    "kalendar": "bcp1979",
+    "slug": "monday-3rd-lent",
+    "propers": "monday-3rd-lent",
+    "week": {
+      "kalendar": "bcp1979",
+      "color": "Purple",
+      "name": "Third Sunday in Lent",
+      "slug": "3rd-lent",
+      "cycle": "Easter",
+      "week": 3,
+      "season": "Lent"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "C"
+    },
+    "holy_days": [
+      {
+        "name": "Thomas Ken, Bishop of Bath and Wells, 1711",
+        "slug": "thomas-ken",
+        "mmdd": "3/21",
+        "type": { "rank": 2, "name": "Black Letter" },
+        "kalendar": "bcp1979"
+      }
+    ],
+    "season": "Lent",
+    "color": "Purple",
+    "holy_day_observed": {
+      "name": "Thomas Ken, Bishop of Bath and Wells, 1711",
+      "slug": "thomas-ken",
+      "mmdd": "3/21",
+      "type": { "rank": 2, "name": "Black Letter" },
+      "kalendar": "bcp1979"
+    }
+  },
+  "selected_prefs": { "ublc": "true" }
+}
