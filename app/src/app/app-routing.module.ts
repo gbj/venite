@@ -112,8 +112,12 @@ const routes: Routes = [
       ).then((m) => m.PrayersAndThanksgivingsPageModule),
   },
   {
-    path: 'prayer-list',
-    loadChildren: () => import('./prayer-list/prayer-list.module').then( m => m.PrayerListPageModule)
+    path: "prayer-list",
+    loadChildren: () =>
+      import("./prayer-list/prayer-list.module").then(
+        (m) => m.PrayerListPageModule
+      ),
+    canActivate: [LoginGuard],
   },
 ];
 
