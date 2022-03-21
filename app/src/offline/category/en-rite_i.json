@@ -13165,5 +13165,230 @@
       "omit_gloria": false
     },
     "slug": "canticle-6"
+  },
+  {
+    "slug": "monday-6th-easter",
+    "language": "en",
+    "category": ["Collect", "Collect of the Day"],
+    "version": "rite_i",
+    "type": "liturgy",
+    "value": [
+      {
+        "label": "The Sixth Sunday of Easter",
+        "slug": "6th-easter",
+        "type": "text",
+        "value": [
+          "O God, who hast prepared for those who love thee such good things as pass man’s understanding: Pour into our hearts such love towards thee, that we, loving thee in all things and above all things, may obtain thy promises, which exceed all that we can desire; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+        ],
+        "style": "prayer",
+        "metadata": {
+          "response": "Amen.",
+          "omit_response": false
+        }
+      },
+      {
+        "type": "option",
+        "value": [
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "I. For fruitful seasons",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, Lord of heaven and earth: We humbly pray that thy gracious providence may give and preserve to our use the harvests of the land and of the seas, and may prosper all who labor to gather them, that we, who constantly receive good things from thy hand, may always give thee thanks; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "II. For Commerce and Industry",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, whose Son Jesus Christ in his earthly life shared our toil and hallowed our labor: Be present with thy people where they work; make those who carry on the industries and commerce of this land responsive to thy will; and give to us all a pride in what we do, and a just return for our labor; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "III. For stewardship of creation",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "O merciful Creator, thy hand is open wide to satisfy the needs of every living creature: Make us, we beseech thee, ever thankful for thy loving providence; and grant that we, remembering the account that we must one day give, may be faithful stewards of thy good gifts; through Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tuesday-6th-easter",
+    "language": "en",
+    "category": ["Collect", "Collect of the Day"],
+    "version": "rite_i",
+    "type": "liturgy",
+    "value": [
+      {
+        "label": "The Sixth Sunday of Easter",
+        "slug": "6th-easter",
+        "type": "text",
+        "value": [
+          "O God, who hast prepared for those who love thee such good things as pass man’s understanding: Pour into our hearts such love towards thee, that we, loving thee in all things and above all things, may obtain thy promises, which exceed all that we can desire; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+        ],
+        "style": "prayer",
+        "metadata": {
+          "response": "Amen.",
+          "omit_response": false
+        }
+      },
+      {
+        "type": "option",
+        "value": [
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "I. For fruitful seasons",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, Lord of heaven and earth: We humbly pray that thy gracious providence may give and preserve to our use the harvests of the land and of the seas, and may prosper all who labor to gather them, that we, who constantly receive good things from thy hand, may always give thee thanks; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "II. For Commerce and Industry",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, whose Son Jesus Christ in his earthly life shared our toil and hallowed our labor: Be present with thy people where they work; make those who carry on the industries and commerce of this land responsive to thy will; and give to us all a pride in what we do, and a just return for our labor; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "III. For stewardship of creation",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "O merciful Creator, thy hand is open wide to satisfy the needs of every living creature: Make us, we beseech thee, ever thankful for thy loving providence; and grant that we, remembering the account that we must one day give, may be faithful stewards of thy good gifts; through Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wednesday-6th-easter",
+    "language": "en",
+    "category": ["Collect", "Collect of the Day"],
+    "version": "rite_i",
+    "type": "liturgy",
+    "value": [
+      {
+        "label": "The Sixth Sunday of Easter",
+        "slug": "6th-easter",
+        "type": "text",
+        "value": [
+          "O God, who hast prepared for those who love thee such good things as pass man’s understanding: Pour into our hearts such love towards thee, that we, loving thee in all things and above all things, may obtain thy promises, which exceed all that we can desire; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+        ],
+        "style": "prayer",
+        "metadata": {
+          "response": "Amen.",
+          "omit_response": false
+        }
+      },
+      {
+        "type": "option",
+        "value": [
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "I. For fruitful seasons",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, Lord of heaven and earth: We humbly pray that thy gracious providence may give and preserve to our use the harvests of the land and of the seas, and may prosper all who labor to gather them, that we, who constantly receive good things from thy hand, may always give thee thanks; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "II. For Commerce and Industry",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "Almighty God, whose Son Jesus Christ in his earthly life shared our toil and hallowed our labor: Be present with thy people where they work; make those who carry on the industries and commerce of this land responsive to thy will; and give to us all a pride in what we do, and a just return for our labor; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          },
+          {
+            "version": "rite_i",
+            "metadata": {
+              "omit_response": false,
+              "response": "Amen."
+            },
+            "label": "III. For stewardship of creation",
+            "language": "en",
+            "category": ["Collect", "Collect of the Day"],
+            "value": [
+              "O merciful Creator, thy hand is open wide to satisfy the needs of every living creature: Make us, we beseech thee, ever thankful for thy loving providence; and grant that we, remembering the account that we must one day give, may be faithful stewards of thy good gifts; through Jesus Christ our Lord, who with thee and the Holy Spirit liveth and reigneth, one God, for ever and ever."
+            ],
+            "style": "prayer",
+            "hidden": false,
+            "type": "text"
+          }
+        ]
+      }
+    ]
   }
 ]

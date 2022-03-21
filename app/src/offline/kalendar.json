@@ -6567,6 +6567,51 @@
       "kalendar": "bcp1979"
     },
     {
+      "slug": "monday-6th-easter",
+      "name": "Monday after the Sixth Sunday of Easter: Rogation Day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 3,
+        "name": "Feast"
+      }
+    },
+    {
+      "slug": "tuesday-6th-easter",
+      "name": "Tuesday after the Sixth Sunday of Easter: Rogation Day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 3,
+        "name": "Feast"
+      }
+    },
+    {
+      "slug": "wednesday-6th-easter",
+      "evening": {
+        "eve": true,
+        "kalendar": "bcp1979",
+        "season": "Ascension",
+        "name": "Eve of the Ascension",
+        "day": "wednesday-6th-easter",
+        "slug": "eve-wednesday-6th-easter",
+        "collect": "eve-wednesday-6th-easter",
+        "readings": "eve-wednesday-6th-easter",
+        "type": {
+          "rank": 5,
+          "name": "Feast"
+        }
+      },
+      "morning": {
+        "slug": "wednesday-6th-easter",
+        "name": "Wednesay after the Sixth Sunday of Easter: Rogation Day",
+        "kalendar": "bcp1979",
+        "type": {
+          "rank": 3,
+          "name": "Feast"
+        }
+      },
+      "kalendar": "bcp1979"
+    },
+    {
       "season": "Ascension",
       "slug": "thursday-6th-easter",
       "name": "Ascension Day",
@@ -6648,20 +6693,6 @@
       "type": {
         "rank": 2,
         "name": "Black Letter"
-      }
-    },
-    {
-      "eve": true,
-      "kalendar": "bcp1979",
-      "season": "Ascension",
-      "name": "Eve of the Ascension",
-      "day": "wednesday-6th-easter",
-      "slug": "eve-wednesday-6th-easter",
-      "collect": "eve-wednesday-6th-easter",
-      "readings": "eve-wednesday-6th-easter",
-      "type": {
-        "rank": 5,
-        "name": "Feast"
       }
     },
     {
