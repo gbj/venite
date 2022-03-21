@@ -364,11 +364,14 @@ export class CalendarService implements CalendarServiceInterface {
   ): HolyDay | null {
     const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
       december13 = dateFromYMDString(`${year}-12-13`),
+      december13isWednesday = december13.getDay() == 3,
+      nextWeek = dateFromYMDString(`${year}-12-20`),
       date = vigil
         ? addOneDay(dateFromYMDString(day?.date))
         : dateFromYMDString(day?.date),
+      baseDay = december13isWednesday ? nextWeek : december13,
       distanceInDays =
-        (date.getTime() - december13.getTime()) / (24 * 60 * 60 * 1000);
+        (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
     if (distanceInDays <= 7 && distanceInDays >= 0) {
       const weekday = date.getDay();
       if (weekday == 3 || weekday == 5 || weekday == 6) {
