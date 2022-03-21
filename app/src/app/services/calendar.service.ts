@@ -18,6 +18,7 @@ import {
   liturgicalWeek,
   liturgicalDay,
   transferredFeast,
+  dateFromYMDString,
 } from "@venite/ldf";
 import { CalendarServiceInterface } from "@venite/ng-service-api";
 
@@ -212,13 +213,17 @@ export class CalendarService implements CalendarServiceInterface {
       specials$ = this.findSpecialDays(kalendar, day.slug);
 
     // Thanksgiving Day
-    const isNovember = date.getMonth() === 10, // January is 0, Feb 1, etc., so Sept is 8
+    const isNovember = date.getMonth() === 10, // January is 0, Feb 1, etc., so Sept is 8, Nov is 10
+      isSeptember = date.getMonth() === 8,
+      isDecember = date.getMonth() === 11,
       isThursday = date.getDay() === 4, // Sunday is 0, Monday is 1
       nthWeekOfMonth = Math.ceil(date.getDate() / 7),
       thanksgiving$ =
         isNovember && isThursday && nthWeekOfMonth === 4
           ? this.findSpecialDays(kalendar, "thanksgiving-day")
-          : of([] as HolyDay[]);
+          : of([] as HolyDay[]),
+      septemberEmber = isSeptember ? this.septemberEmberDays(day, vigil) : null,
+      decemberEmber = isDecember ? this.decemberEmberDays(day, vigil) : null;
     // All Saints’ Sunday
     const allSaintsSunday$ =
       isNovember && isSunday && nthWeekOfMonth === 1
@@ -264,6 +269,8 @@ export class CalendarService implements CalendarServiceInterface {
           .concat(transferred ? [transferred] : [])
           .concat(specials)
           .concat(thanksgiving)
+          .concat(septemberEmber ? [septemberEmber] : [])
+          .concat(decemberEmber ? [decemberEmber] : [])
           .concat(allSaintsSunday)
       ),
       // remove black-letter days that fall on a major feast or a Sunday
@@ -310,6 +317,77 @@ export class CalendarService implements CalendarServiceInterface {
         return day.addHolyDays(uniqueBy(holydays, "slug"));
       })
     );
+  }
+
+  /* September Ember Days are defined as the Wednesday, Friday, and Saturday
+   * after the Feast of the Holy Cross  */
+  septemberEmberDays(
+    day: LiturgicalDay,
+    vigil: boolean = false
+  ): HolyDay | null {
+    const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
+      holyCrossDay = dateFromYMDString(`${year}-09-14`),
+      holyCrossIsWednesday = holyCrossDay.getDay() == 3,
+      stMatthewDay = dateFromYMDString(`${year}-09-21`),
+      date = vigil
+        ? addOneDay(dateFromYMDString(day?.date))
+        : dateFromYMDString(day?.date),
+      baseDay = holyCrossIsWednesday ? stMatthewDay : holyCrossDay,
+      distanceInDays =
+        (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
+    if (distanceInDays <= 7 && distanceInDays >= 0) {
+      const weekday = date.getDay();
+      if (weekday == 3 || weekday == 5 || weekday == 6) {
+        return {
+          slug: day.slug,
+          name: "Ember Day",
+          collect: "ember-day",
+          kalendar: "bcp1979",
+          type: {
+            rank: 2,
+            name: "Ember",
+          },
+        };
+      } else {
+        return null;
+      }
+    } else {
+      return null;
+    }
+  }
+
+  /* December Ember Days are defined as the Wednesday, Friday, and Saturday
+   * after December 13  */
+  decemberEmberDays(
+    day: LiturgicalDay,
+    vigil: boolean = false
+  ): HolyDay | null {
+    const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
+      december13 = dateFromYMDString(`${year}-12-13`),
+      date = vigil
+        ? addOneDay(dateFromYMDString(day?.date))
+        : dateFromYMDString(day?.date),
+      distanceInDays =
+        (date.getTime() - december13.getTime()) / (24 * 60 * 60 * 1000);
+    if (distanceInDays <= 7 && distanceInDays >= 0) {
+      const weekday = date.getDay();
+      if (weekday == 3 || weekday == 5 || weekday == 6) {
+        return {
+          slug: day.slug,
+          name: "Ember Day",
+          collect: "ember-day",
+          kalendar: "bcp1979",
+          type: {
+            rank: 2,
+            name: "Ember",
+          },
+        };
+      } else {
+        return null;
+      }
+    } else {
+      return null;
+    }
   }
 
   buildWeek(

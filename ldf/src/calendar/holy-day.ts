@@ -32,6 +32,9 @@ export class HolyDay {
   /** Optional: Slug used to find readings in the API, if different from `slug` property */
   readings?: string;
 
+  /** Optional: Slug used to find collect in the API, if different from `slug` property */
+  collect?: string;
+
   /** Optional: Human-readable name of the feast */
   name?: string;
 

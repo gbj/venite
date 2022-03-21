@@ -6825,6 +6825,66 @@
         "rank": 2,
         "name": "Black Letter"
       }
+    },
+    {
+      "slug": "wednesday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "friday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "saturday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "wednesday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "friday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "saturday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "bcp1979",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
     }
   ]
 }

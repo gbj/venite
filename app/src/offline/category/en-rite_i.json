@@ -13390,5 +13390,50 @@
         ]
       }
     ]
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "language": "en",
+    "version": "rite_i",
+    "metadata": {
+      "response": "Amen."
+    },
+    "slug": "ember-day",
+    "label": "I. For those to be ordained",
+    "value": [
+      "Almighty God, the giver of all good gifts, who of thy divine providence hast appointed various orders in thy Church: Give thy grace, we humbly beseech thee, to all who are [now] called to any office and ministry for thy people; and so fill them with the truth of thy doctrine and clothe them with holiness of life, that they may faithfully serve before thee, to the glory of thy great Name and for the benefit of thy holy Church; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+    ],
+    "category": ["Collect", "Collect of the Day"]
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "language": "en",
+    "version": "rite_i",
+    "metadata": {
+      "response": "Amen."
+    },
+    "slug": "ember-day",
+    "label": "II. For the choice of fit persons for the ministry",
+    "value": [
+      "O God, who didst lead thy holy apostles to ordain ministers in every place: Grant that thy Church, under the guidance of the Holy Spirit, may choose suitable persons for the ministry of Word and Sacrament, and may uphold them in their work for the extension of thy kingdom; through him who is the Shepherd and Bishop of our souls, Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever."
+    ],
+    "category": ["Collect", "Collect of the Day"]
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "language": "en",
+    "version": "rite_i",
+    "metadata": {
+      "response": "Amen."
+    },
+    "slug": "ember-day",
+    "label": "III. For all Christians in their vocation",
+    "value": [
+      "Almighty and everlasting God, by whose Spirit the whole body of thy faithful people is governed and sanctified: Receive our supplications and prayers, which we offer before thee for all members of thy holy Church, that in their vocation and ministry they may truly and devoutly serve thee; through our Lord and Savior Jesus Christ, who liveth and reigneth with thee, in the unity of the same Spirit, one God, now and for ever."
+    ],
+    "category": ["Collect", "Collect of the Day"]
   }
 ]

@@ -20,7 +20,7 @@ export function findCollect(
   sundayRedLetterDaysAlsoIncludeSundayCollect: boolean = false,
 ): LiturgicalDocument | null {
   const date = dateFromYMDString(day.date),
-    observedDay = day.collect || day.propers || day.slug,
+    observedDay = (day.holy_day_observed ? day.collect : null) || day.propers || day.slug,
     isAllSaintsOctave = date.getMonth() === 10 && date.getDate() === 8,
     isInOctaveOfAllSaints = date.getMonth() === 10 && date.getDate() >= 1 && date.getDate() <= 8,
     suppressSundayCollect =
@@ -44,7 +44,11 @@ export function findCollect(
               .map((collect) => (collect.type === 'text' ? processCollectText(collect as Text, holyday) : collect)),
           )
           .concat(
-            collects.filter((collect) => collect.slug === holyday.slug && !holyday.category?.includes(holyday.slug)),
+            collects.filter(
+              (collect) =>
+                (collect.slug === holyday.slug || collect.slug === holyday.collect) &&
+                !(holyday.slug && holyday.category?.includes(holyday.slug)),
+            ),
           )
           .flat(),
       ),
