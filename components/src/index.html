@@ -65,62 +65,35 @@
     })
 
     const LITURGY = {
-  "type": "bible-reading",
-  "style": "long",
-  "language": "es",
-  "version": "RV09",
-  "value": [
+   "type": "option",
+   "label": "Ephesians 3. 20, 21.",
+   "category": ["Prayers", "Acts of Praise"],
+   "value": [
     {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "16",
-      "text": "¿No sabéis que sois templo de Dios, y que el Espíritu de Dios mora en vosotros? "
+     "type": "text",
+     "style": "prayer",
+     "label": "Ephesians 3. 20, 21.",
+     "category": ["Prayers", "Acts of Praise"],
+     "value": [
+      " ",
+      "ᑖᑦᓱᒪᓕ ᐱᔪᓐᓇᕐᖕᓂᕐᖕᒥᒍᑦ ᐅᕙᑦᑎᓐᓂ ᐱᓇᓱᐊᖅᑑᑉ ᐱᓇᓱᐊᕐᕕᒋᔪᓐᓇᖅᐹᑎᒍᑦ ᐱᔪᒪᔪᓐᓇᖅᑕᑦᑕ ᐃᓱᒪᒋᔪᓐᓇᖅᑕᑦᑕᓗ ᐅᖓᑖᓃᑦᑐᓂᒃ, ᑖᓐᓇ ᓂᖅᑐᖅᑕᐅᓕ ᐅᒃᐱᖅᑑᖃᑎᒌᓂ ᙭ᔅᑑᓯ ᔩᓱᓯᒥᓗ ᑭᖑᕚᕇᓕᒫᓄᑦ, ᐃᓱᖃᖏᑦᑐᒥᑦ ᐃᓱᖃᖏᑦᑐᒧᑦ. ᐋᒥᓐ."
+     ],
+     "language": "iu",
+     "version_label": "Inuktitut"
     },
     {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "17",
-      "text": "Si alguno violare el templo de Dios, Dios destruirá al tal: porque el templo de Dios, el cual sois vosotros, santo es. "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "18",
-      "text": "Nadie se engañe á sí mismo: si alguno entre vosotros parece ser sabio en este siglo, hágase simple, para ser sabio. "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "19",
-      "text": "Porque la sabiduría de esta mundo es necedad para con Dios; pues escrito está: El que prende á los sabios en la astucia de ellos. "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "20",
-      "text": "Y otra vez: El Señor conoce los pensamientos de los sabios, que son vanos. "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "21",
-      "text": "Así que, ninguno se gloríe en los hombres; porque todo es vuestro, "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "22",
-      "text": "Sea Pablo, sea Apolos, sea Cefas, sea el mundo, sea la vida, sea la muerte, sea lo presente, sea lo por venir; todo es vuestro; "
-    },
-    {
-      "book": "1CO",
-      "chapter": "3",
-      "verse": "23",
-      "text": "Y vosotros de Cristo; y Cristo de Dios. "
+     "type": "text",
+     "style": "prayer",
+     "label": "Ephesians 3. 20, 21.",
+     "category": ["Prayers", "Acts of Praise"],
+     "value": [
+      " ",
+      "NOW unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, unto him be glory in the Church and in Christ Jesus, throughout all ages, world without end."
+     ],
+     "version_label": "English"
     }
-  ]
-}
-    
+   ]
+  }    
     const node = document.createElement('ldf-liturgical-document');
     node.setAttribute('doc', JSON.stringify(LITURGY));
     node.setAttribute('editable', false);
