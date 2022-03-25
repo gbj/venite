@@ -1081,6 +1081,11 @@ export class LiturgySelectComponent implements OnInit {
     }
     this.preferencesService.set("language", lang, this.auth.currentUser()?.uid);
   }
+
+  setVersion(version: string) {
+    this.form.controls.version.setValue(version);
+    this.form.controls.observance.setValue(undefined);
+  }
 }
 
 // Returns a list of all possible dates in a given year and month

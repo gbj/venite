@@ -23,7 +23,7 @@
   <!-- Language, Version, Kalendar -->
   <form [formGroup]="form">
     <ng-container *ngIf="versionOptions$ | async as versionOptions">
-      <ion-segment class="version-segment" *ngIf="versionOptions.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
+      <ion-segment class="version-segment" *ngIf="versionOptions.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="setVersion($event.detail.value)">
         <ion-segment-button *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-segment-button>
       </ion-segment>
     </ng-container>
