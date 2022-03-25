@@ -31,10 +31,13 @@ export function findCollect(
     sundaySlug = day.week?.propers || day.week?.slug,
     sundayCollects = collects.filter((collect) => collect.slug === sundaySlug),
     sundayCollect = !suppressSundayCollect && sundayCollects.length > 0 ? docsToOption(sundayCollects) : null,
+    redLetterOrSunday = redLetterCollect || sundayCollect,
     season = !FAKE_SEASONS.includes(day.season) ? day.season : day.week?.season || day.season,
     seasonalCollects = collects.filter((collect) => collect.slug === season),
     octaveCollect = day.octave ? docsToOption(collects.filter((collect) => collect.slug === day.octave)) : null,
-    blackLetterDays = (day.holy_days || []).filter((feast) => feast.type && feast.type.rank < 3),
+    blackLetterDays = (day.holy_days || []).filter(
+      (feast) => feast.type && feast.type.rank < 3 && feast?.slug !== redLetterOrSunday?.slug,
+    ),
     blackLetterCollects = blackLetterDays.map((holyday) =>
       docsToOption(
         (holyday.category || [])
@@ -53,7 +56,6 @@ export function findCollect(
           .flat(),
       ),
     ),
-    redLetterOrSunday = redLetterCollect || sundayCollect,
     // don't include the seasonal collect if it's the same as the Sunday, i.e., on the First Sunday of Advent
     observedSeasonalCollect = seasonalCollects
       ? docsToLiturgy(
