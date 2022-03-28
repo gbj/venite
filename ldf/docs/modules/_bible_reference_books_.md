@@ -177,4 +177,4 @@
   ['Judith', Book.Judith],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/9b89f1d2/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/0c141d89/ldf/src/bible-reference/books.ts#L3)*

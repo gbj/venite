@@ -12,6 +12,10 @@ const VERSIONS: { [x: string]: string } = {
   rite_i: 'Rite I',
   bhs: 'Hebrew',
   hebrew: 'Hebrew',
+  EAIB: 'EAIB',
+  BCP: 'BCP',
+  eaib: 'EAIB',
+  bcp: 'BCP',
 };
 
 function modifiedVersion(option: LiturgicalDocument): string | { preference: string } {
