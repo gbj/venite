@@ -57730,5 +57730,45 @@
       "style": "canticle",
       "label": "Canticle 7: Te Deum"
     }
+  ],
+  "en-bcp1979-holy_saturday_reading": [
+    {
+      "slug": "holy_saturday_reading",
+      "date_modified": { "seconds": 1617451127, "nanoseconds": 15000000 },
+      "lastRevision": 35,
+      "style": "text",
+      "source": {
+        "source": "attr. to St. Epiphanius of Cyprus",
+        "citation": "",
+        "api": ""
+      },
+      "value": [
+        "What is happening? Today there is a great silence over the earth, a great silence, and stillness, a great silence because the King sleeps; the earth was in terror and was still, because God slept in the flesh and raised up those who were sleeping from the ages. God has died in the flesh, and the underworld has trembled.",
+        "Truly he goes to seek out our first parent like a lost sheep; he wishes to visit those who sit in darkness and in the shadow of death. He goes to free the prisoner Adam and his fellow-prisoner Eve from their pains, he who is God, and Adam's son.",
+        "The Lord goes in to them holding his victorious weapon, his cross. When Adam, the first created man, sees him, he strikes his breast in terror and calls out to all: 'My Lord be with you all. And Christ in reply says to Adam: ‘And with your spirit.’ And grasping his hand he raises him up, saying: ‘Awake, O sleeper, and arise from the dead, and Christ shall give you light.",
+        "‘I am your God, who for your sake became your son, who for you and your descendants now speak and command with authority those in prison: Come forth, and those in darkness: Have light, and those who sleep: Rise.",
+        "‘I command you: Awake, sleeper, I have not made you to be held a prisoner in the underworld. Arise from the dead; I am the life of the dead. Arise, O man, work of my hands, arise, you who were fashioned in my image. Rise, let us go hence; for you in me and I in you, together we are one undivided person.",
+        "‘For you, I your God became your son; for you, I the Master took on your form; that of slave; for you, I who am above the heavens came on earth and under the earth; for you, man, I became as a man without help, free among the dead; for you, who left a garden, I was handed over to Jews from a garden and crucified in a garden.",
+        "‘Look at the spittle on my face, which I received because of you, in order to restore you to that first divine inbreathing at creation. See the blows on my cheeks, which I accepted in order to refashion your distorted form to my own image.",
+        "See the scourging of my back, which I accepted in order to disperse the load of your sins which was laid upon your back. See my hands nailed to the tree for a good purpose, for you, who stretched out your hand to the tree for an evil one.",
+        "‘I slept on the cross and a sword pierced my side, for you, who slept in paradise and brought forth Eve from your side. My side healed the pain of your side; my sleep will release you from your sleep in Hades; my sword has checked the sword which was turned against you.",
+        "‘But arise, let us go hence. The enemy brought you out of the land of paradise; I will reinstate you, no longer in paradise, but on the throne of heaven. I denied you the tree of life, which was a figure, but now I myself am united to you, I who am life. I posted the cherubim to guard you as they would slaves; now I make the cherubim worship you as they would God.",
+        "‘The cherubim throne has been prepared, the bearers are ready and waiting, the bridal chamber is in order, the food is provided, the everlasting houses and rooms are in readiness; the treasures of good things have been opened; the kingdom of heaven has been prepared before the ages.’"
+      ],
+      "category": [],
+      "hidden": false,
+      "sharing": {
+        "status": "published",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public"
+      },
+      "type": "text",
+      "metadata": {},
+      "label": "“The Lord’s descent into hell”",
+      "language": "en",
+      "version": "modern"
+    }
   ]
 }

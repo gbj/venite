@@ -764,7 +764,7 @@
             {
               "value": [
                 {
-                  "verse": "Christ is risen from the dead, *\n",
+                  "verse": "Christ is risen from the dead, *",
                   "type": "psalm-verse",
                   "halfverse": "and become the first fruits of them that slept."
                 },
@@ -1171,26 +1171,26 @@
           "style": "invitatory",
           "value": [
             {
+              "type": "psalm-section",
               "value": [
                 {
-                  "halfverse": "therefore let us keep the feast,",
                   "type": "psalm-verse",
-                  "verse": "Alleluia.\nChrist our Passover is sacrificed for us; *"
+                  "verse": "Alleluia.\nChrist our Passover is sacrificed for us; *",
+                  "halfverse": "therefore let us keep the feast,"
                 },
                 {
+                  "verse": "Not with old leaven,\nneither with the leaven of malice and wickedness, *",
                   "type": "psalm-verse",
-                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia.",
-                  "verse": "Not with old leaven,\nneither with the leaven of malice and wickedness, *"
+                  "halfverse": "but with the unleavened bread of sincerity and truth. Alleluia."
                 }
-              ],
-              "type": "psalm-section"
+              ]
             },
             {
               "value": [
                 {
-                  "verse": "Christ being raised from the dead dieth no more; *",
                   "halfverse": "death hath no more dominion over him.",
-                  "type": "psalm-verse"
+                  "type": "psalm-verse",
+                  "verse": "Christ being raised from the dead dieth no more; *"
                 },
                 {
                   "type": "psalm-verse",
@@ -1198,32 +1198,32 @@
                   "verse": "For in that he died, he died unto sin once; *"
                 },
                 {
-                  "halfverse": "but alive unto God through Jesus Christ our Lord. Alleluia.",
+                  "verse": "Likewise reckon ye also yourselves to be dead indeed unto sin, *\n",
                   "type": "psalm-verse",
-                  "verse": "Likewise reckon ye also yourselves to be dead indeed unto sin, *\n"
+                  "halfverse": "but alive unto God through Jesus Christ our Lord. Alleluia."
                 }
               ],
               "type": "psalm-section"
             },
             {
-              "type": "psalm-section",
               "value": [
                 {
-                  "verse": "Christ is risen from the dead, *\n",
-                  "halfverse": "and become the first fruits of them that slept.",
-                  "type": "psalm-verse"
+                  "verse": "Christ is risen from the dead, *",
+                  "type": "psalm-verse",
+                  "halfverse": "and become the first fruits of them that slept."
                 },
                 {
                   "halfverse": "by man came also the resurrection of the dead.",
-                  "type": "psalm-verse",
-                  "verse": "For since by man came death, *"
+                  "verse": "For since by man came death, *",
+                  "type": "psalm-verse"
                 },
                 {
                   "type": "psalm-verse",
-                  "verse": "For as in Adam all die, *\n",
-                  "halfverse": "even so in Christ shall all be made alive. Alleluia."
+                  "halfverse": "even so in Christ shall all be made alive. Alleluia.",
+                  "verse": "For as in Adam all die, *\n"
                 }
-              ]
+              ],
+              "type": "psalm-section"
             }
           ],
           "category": ["Invitatory"],
