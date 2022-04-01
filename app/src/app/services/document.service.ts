@@ -476,7 +476,9 @@ export class DocumentService {
                     query = query.where(
                       "version",
                       "in",
-                      versions.filter((v) => Boolean(v))
+                      versions.filter((v) => Boolean(v))?.length > 0
+                        ? versions.filter((v) => Boolean(v))
+                        : ["bcp1979"]
                     );
                   }
                   return query;
