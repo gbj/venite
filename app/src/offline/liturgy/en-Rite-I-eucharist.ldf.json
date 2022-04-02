@@ -671,6 +671,12 @@
       "hidden": false
     },
     {
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "palms", "value": "true", "is": false } }
+        ],
+        "mode": "and"
+      },
       "source": { "api": "", "source": "", "citation": "" },
       "lookup": {
         "item": "gospel",
@@ -716,6 +722,60 @@
       }
     },
     {
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "palms", "value": "true", "is": true } }
+        ],
+        "mode": "and"
+      },
+      "source": { "api": "", "source": "", "citation": "" },
+      "lookup": {
+        "item": "gospel",
+        "table": { "preference": "lectionary" },
+        "rotate": false,
+        "type": "lectionary"
+      },
+      "label": "The Gospel",
+      "style": "long",
+      "category": [],
+      "type": "bible-reading",
+      "version": { "preference": "bibleVersion" },
+      "hidden": false,
+      "metadata": {
+        "intro": {
+          "source": { "api": "", "citation": "", "source": "" },
+          "category": ["Bible Reading Introduction"],
+          "lastRevision": 13,
+          "hidden": false,
+          "slug": "gospel-intro",
+          "date_modified": { "seconds": 1606586010, "nanoseconds": 106000000 },
+          "version": "bcp1979",
+          "type": "text",
+          "style": "text",
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "privacy": "public",
+            "collaborators": [],
+            "organization": "venite"
+          },
+          "language": "en",
+          "value": [
+            "The Passion of our Lord Jesus Christ according to ${shortName}."
+          ],
+          "metadata": {},
+          "label": "",
+          "date_created": { "seconds": 1606585913, "nanoseconds": 503000000 }
+        }
+      }
+    },
+    {
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "palms", "value": "true", "is": false } }
+        ],
+        "mode": "and"
+      },
       "value": [
         {
           "text": "The Gospel of the Lord.",

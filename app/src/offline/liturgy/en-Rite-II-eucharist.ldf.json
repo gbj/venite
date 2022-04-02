@@ -529,8 +529,8 @@
           "slug": "gospel-intro",
           "date_modified": { "seconds": 1606586010, "nanoseconds": 106000000 },
           "version": "bcp1979",
-          "type": "responsive",
-          "style": "responsive",
+          "type": "text",
+          "style": "text",
           "sharing": {
             "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
             "status": "published",
@@ -540,10 +540,7 @@
           },
           "language": "en",
           "value": [
-            {
-              "response": "Glory to you, Lord Christ.",
-              "text": "The Passion of our Lord Jesus Christ according to ${shortName}."
-            }
+            "The Passion of our Lord Jesus Christ according to ${shortName}."
           ],
           "metadata": {},
           "label": "",
