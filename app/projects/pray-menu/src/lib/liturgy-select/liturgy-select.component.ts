@@ -427,6 +427,9 @@ export class LiturgySelectComponent implements OnInit {
         )
       )
       .subscribe((liturgies) => {
+        // clear proper liturgy preferences
+        this.properLiturgyPreference$.next({});
+
         if (
           JSON.stringify(liturgies) !==
           JSON.stringify(this.availableProperLiturgies$.getValue())
