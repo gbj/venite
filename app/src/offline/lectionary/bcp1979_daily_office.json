@@ -1436,7 +1436,7 @@
     "day": "sunday-easter",
     "citation": "Exod. 12:1-14",
     "when": "1",
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "lectionary": "bcp1979_daily_office"
   },
   {
@@ -3842,7 +3842,7 @@
     "when": "2"
   },
   {
-    "type": "gospel",
+    "type": "holy_day_morning_2",
     "lectionary": "bcp1979_daily_office",
     "id": "8253",
     "whentype": "year",
@@ -10873,7 +10873,7 @@
     "day": "sunday-easter",
     "id": "8259",
     "whentype": "year",
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "lectionary": "bcp1979_daily_office",
     "citation": "Exod. 12:1-14"
   },
@@ -13957,7 +13957,7 @@
   {
     "whentype": "year",
     "day": "sunday-easter",
-    "lectionary": "bcp1979_daily_office",
+    "lectionary": "holy_day_evening_1",
     "type": "second_reading",
     "citation": "Isa. 51:9-11",
     "when": "1",
@@ -14805,7 +14805,7 @@
     "citation": "Isa. 51:9-11",
     "id": "8260",
     "when": "2",
-    "type": "second_reading",
+    "type": "holy_day_evening_1",
     "lectionary": "bcp1979_daily_office",
     "day": "sunday-easter"
   },
@@ -15056,10 +15056,46 @@
     "when": "2",
     "id": "8261",
     "day": "sunday-easter",
-    "type": "gospel",
+    "type": "holy_day_morning_2",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
     "citation": "John 1:1-18"
+  },
+  {
+    "when": "2",
+    "id": "8261",
+    "day": "sunday-easter",
+    "type": "holy_day_evening_2",
+    "whentype": "year",
+    "lectionary": "bcp1979_daily_office",
+    "citation": "Luke 24:13-35"
+  },
+  {
+    "when": "2",
+    "id": "8261",
+    "day": "sunday-easter",
+    "type": "holy_day_evening_2",
+    "whentype": "year",
+    "lectionary": "bcp1979_daily_office",
+    "citation": "John 20:19-23"
+  },
+  {
+    "when": "1",
+    "id": "8261",
+    "day": "sunday-easter",
+    "type": "holy_day_evening_2",
+    "whentype": "year",
+    "lectionary": "bcp1979_daily_office",
+    "citation": "Luke 24:13-35"
+  },
+  {
+    "when": "1",
+    "id": "8261",
+    "day": "sunday-easter",
+    "type": "holy_day_evening_2",
+    "whentype": "year",
+    "lectionary": "bcp1979_daily_office",
+    "citation": "John 20:19-23"
   },
   {
     "citation": "Neh. 4:1-23",
