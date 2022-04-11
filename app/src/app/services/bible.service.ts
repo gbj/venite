@@ -140,7 +140,7 @@ export class BibleService implements BibleServiceInterface {
         return usxToLdf(language, version, xml, usxBookCode, verses);
       }),
       switchMap((doc) =>
-        doc?.value?.length > 0 && (doc.value[0] as BibleReadingVerse).text
+        doc?.value?.length > 0 //&& (doc.value[0] as BibleReadingVerse).text
           ? of(doc)
           : this.getText(citation, "NRSV").pipe(
               map(
