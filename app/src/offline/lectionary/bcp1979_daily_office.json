@@ -10473,7 +10473,7 @@
     "id": "8876"
   },
   {
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "id": "8235",
     "day": "friday-holy-week",
     "when": "2",
@@ -17159,7 +17159,7 @@
     "lectionary": "bcp1979_daily_office"
   },
   {
-    "type": "first_reading",
+    "type": "holy_day_morning_1",
     "citation": "Gen. 22:1-14",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
@@ -22186,7 +22186,7 @@
     "when": "1",
     "whentype": "year",
     "lectionary": "bcp1979_daily_office",
-    "type": "first_reading"
+    "type": "holy_day_morning_1"
   },
   {
     "id": "11557",
