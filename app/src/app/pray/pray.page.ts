@@ -1664,7 +1664,7 @@ export class PrayPage implements OnInit, OnDestroy {
     this.auth.user.subscribe((user) => {
       this.prayerList.read(user?.uid).subscribe((data) => {
         window.requestAnimationFrame(() =>
-          (ev.target as any).setPrayerList((data[0]?.text || "").split(/\n\n/g))
+          (ev.target as any).setPrayerList(data.map((d) => d.text).join("\n"))
         );
       });
     });

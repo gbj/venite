@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `setPrayerList(intentions: string[]) => Promise<void>`
+### `setPrayerList(intentions: string[] | string) => Promise<void>`
 
 
 

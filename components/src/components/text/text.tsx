@@ -24,11 +24,10 @@ export class TextComponent {
   @State() localeStrings: { [x: string]: string; };
 
   // prayer list for authorized prayers
-  @State() intentions: string[] = [];
+  @State() intentions: string[] | string = "";
 
   @Method()
-  async setPrayerList(intentions : string[]): Promise<void> {
-    console.log("(PrayerList) setPrayerList", intentions);
+  async setPrayerList(intentions : string[] | string): Promise<void> {
     this.intentions = intentions;
   }
 
@@ -126,9 +125,11 @@ export class TextComponent {
           </ion-button>
         </ldf-label-bar>
         {this.intentions?.length > 0 ?? <strong class="prayer-list">{localeStrings['prayer-list']}</strong>}
-        <ul class="prayer-list">
-          {(this.intentions || []).map(intention => <li>{intention}</li>)}
-        </ul>
+        {Array.isArray(this.intentions)
+          ? <ul class="prayer-list">
+              {this.intentions.map(intention => <li>{intention}</li>)}
+            </ul>
+          : <p class="prayer-list formatted">{this.intentions}</p>}
       </Host>;
     } else {
         let value = this.obj?.metadata?.rollup

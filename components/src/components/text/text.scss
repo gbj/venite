@@ -58,6 +58,11 @@ h3.editable-label {
   text-align: center;
 }
 
+.prayer-list.formatted {
+  text-align: left;
+  white-space: pre-wrap;
+}
+
 .prayer-list li {
   list-style-type: none;
   text-align: center;
