@@ -219,7 +219,7 @@ export class LiturgicalDay {
   isFeast(): boolean {
     const isSunday = this.getDate().getDay() === 0,
       hasRank = (this.holy_day_observed?.type?.rank || 1) >= 3,
-      holyWeek = this.slug?.includes('holy-week'),
+      holyWeek = this.slug?.includes('holy-week') || this.slug?.includes('palm-sunday'),
       ashWednesdayWeek = this.slug?.includes('last-epiphany'),
       ascensionWeek = this.slug?.includes('6th-easter'),
       easterWeek = this.slug?.includes('easter'),

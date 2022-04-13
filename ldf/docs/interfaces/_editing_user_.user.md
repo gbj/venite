@@ -22,7 +22,7 @@
 
 • **color**? : *undefined | string*
 
-*Defined in [editing/user.ts:6](https://github.com/gbj/venite/blob/0c141d89/ldf/src/editing/user.ts#L6)*
+*Defined in [editing/user.ts:6](https://github.com/gbj/venite/blob/681c6764/ldf/src/editing/user.ts#L6)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **displayName**: *string*
 
-*Defined in [editing/user.ts:3](https://github.com/gbj/venite/blob/0c141d89/ldf/src/editing/user.ts#L3)*
+*Defined in [editing/user.ts:3](https://github.com/gbj/venite/blob/681c6764/ldf/src/editing/user.ts#L3)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **email**: *string*
 
-*Defined in [editing/user.ts:4](https://github.com/gbj/venite/blob/0c141d89/ldf/src/editing/user.ts#L4)*
+*Defined in [editing/user.ts:4](https://github.com/gbj/venite/blob/681c6764/ldf/src/editing/user.ts#L4)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **photoURL**? : *undefined | string*
 
-*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/0c141d89/ldf/src/editing/user.ts#L5)*
+*Defined in [editing/user.ts:5](https://github.com/gbj/venite/blob/681c6764/ldf/src/editing/user.ts#L5)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **uid**: *string*
 
-*Defined in [editing/user.ts:2](https://github.com/gbj/venite/blob/0c141d89/ldf/src/editing/user.ts#L2)*
+*Defined in [editing/user.ts:2](https://github.com/gbj/venite/blob/681c6764/ldf/src/editing/user.ts#L2)*

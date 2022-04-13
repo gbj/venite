@@ -14,7 +14,7 @@
 
 ▸ **versionToString**(`version`: string | object): *string*
 
-*Defined in [utils/version-to-string.ts:1](https://github.com/gbj/venite/blob/0c141d89/ldf/src/utils/version-to-string.ts#L1)*
+*Defined in [utils/version-to-string.ts:1](https://github.com/gbj/venite/blob/681c6764/ldf/src/utils/version-to-string.ts#L1)*
 
 **Parameters:**
 
