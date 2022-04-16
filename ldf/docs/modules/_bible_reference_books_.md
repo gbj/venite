@@ -175,6 +175,8 @@
   ['Bel', Book.Bel],
   ['Bel and the Dragon', Book.Bel],
   ['Judith', Book.Judith],
+  ['Tob', Book.Tobit],
+  ['Tobit', Book.Tobit],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/681c6764/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/deb31a84/ldf/src/bible-reference/books.ts#L3)*

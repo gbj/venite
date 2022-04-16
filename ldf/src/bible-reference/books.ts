@@ -163,4 +163,6 @@ export const BOOKS: [string, Book][] = [
   ['Bel', Book.Bel],
   ['Bel and the Dragon', Book.Bel],
   ['Judith', Book.Judith],
+  ['Tob', Book.Tobit],
+  ['Tobit', Book.Tobit],
 ];
