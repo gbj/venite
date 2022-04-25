@@ -238,7 +238,10 @@ export class LiturgySelectComponent implements OnInit {
                 undefined
               )
             )
-        ).pipe(startWith([]));
+        ).pipe(
+          startWith([]),
+          map((l) => l.flat())
+        );
       }),
       // transform from array of all documents with slug to first document found with correct language and version
       // or just the right language
@@ -246,7 +249,7 @@ export class LiturgySelectComponent implements OnInit {
         const documents = docs.flat(),
           language = this.form.controls.language.value,
           version = this.form.controls.version.value;
-        const matchesLanguageAndVersion = documents.find(
+        const matchesLanguageAndVersion = documents.filter(
           (doc) => doc.language == language && doc.version == version
         );
         if (!matchesLanguageAndVersion) {
