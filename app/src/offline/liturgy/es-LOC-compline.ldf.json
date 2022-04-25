@@ -26,7 +26,8 @@
       "type": "heading",
       "hidden": false,
       "value": [""],
-      "metadata": { "level": 1 }
+      "metadata": { "level": 1 },
+      "language": "es"
     },
     {
       "hidden": false,
@@ -35,7 +36,8 @@
       "type": "heading",
       "category": [],
       "value": ["Heading"],
-      "source": { "api": "", "citation": "", "source": "" }
+      "source": { "api": "", "citation": "", "source": "" },
+      "language": "es"
     },
     { "type": "rubric", "value": ["El Oficiante comienza:"], "hidden": false },
     {

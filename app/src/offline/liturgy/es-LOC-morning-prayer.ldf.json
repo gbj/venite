@@ -384,14 +384,16 @@
       "style": "date",
       "type": "heading",
       "hidden": false,
-      "value": [""]
+      "value": [""],
+      "language": "es"
     },
     {
       "metadata": { "level": 1 },
       "hidden": false,
       "style": "day",
       "value": [""],
-      "type": "heading"
+      "type": "heading",
+      "language": "es"
     },
     {
       "lookup": { "type": "slug" },

@@ -22,7 +22,8 @@
       "citation": "",
       "value": [""],
       "type": "heading",
-      "metadata": { "level": 2 }
+      "metadata": { "level": 2 },
+      "language": "es"
     },
     {
       "metadata": { "level": 2 },
@@ -31,7 +32,8 @@
       "citation": "",
       "hidden": false,
       "value": [""],
-      "style": "day"
+      "style": "day",
+      "language": "es"
     },
     {
       "hidden": false,

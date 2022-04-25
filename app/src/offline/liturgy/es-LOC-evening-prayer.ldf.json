@@ -23,14 +23,16 @@
       "type": "heading",
       "value": [""],
       "metadata": { "level": 1 },
-      "style": "date"
+      "style": "date",
+      "language": "es"
     },
     {
       "type": "heading",
       "metadata": { "level": 1 },
       "style": "day",
       "value": [""],
-      "hidden": false
+      "hidden": false,
+      "language": "es"
     },
     {
       "type": "liturgy",
