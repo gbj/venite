@@ -175,7 +175,7 @@ export class HeadingComponent {
           {isDate && !this.editable && this.dateNode()}
           {isDate && this.editable && <code class="lookup">{localeStrings.date}</code>}
 
-          {isDay && !this.editable && <div class="date"><ldf-day-name day={this.obj?.day}></ldf-day-name></div>}
+          {isDay && !this.editable && <div class="date"><ldf-day-name day={this.obj?.day} lang={this.obj?.language || 'en'}></ldf-day-name></div>}
           {isDay && !this.editable && this.obj?.day?.holy_days?.length > 0 && <ul class="holy-days">
             {this.obj?.day?.holy_days
               .filter(day => day.type?.rank < 3)

@@ -3,10 +3,12 @@ import { LiturgicalDay, dateFromYMDString, Text } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './day-name.i18n.en.json';
+import ES from './day-name.i18n.es.json';
+
 const LOCALE = {
   'en': EN,
+  'es': ES
 };
-
 
 @Component({
   tag: 'ldf-day-name',
@@ -57,11 +59,13 @@ export class DayNameComponent {
   // Render day as string
   dayToNodes(day : LiturgicalDay, localeStrings : {[x: string]: string}) : JSX.Element {
     // Holy Day => name of day
-    if(day?.holy_day_observed?.name && day?.holy_day_observed?.type?.rank >= 3) {
+    if (day?.holy_day_observed?.name && day?.holy_day_observed?.type?.rank >= 3) {
+      console.log("Holy Day name", day?.holy_day_observed?.name, localeStrings[day?.holy_day_observed?.name] || localeStrings[day?.holy_day_observed?.name.replace("St.", "Saint")], localeStrings)
+      const name = localeStrings[day?.holy_day_observed?.name] || localeStrings[day?.holy_day_observed?.name.replace("St.", "Saint")] || day?.holy_day_observed?.name;
       return !day.holy_day_observed.bio 
-        ? [<p class="holy-day-name">{day?.holy_day_observed?.name}</p>, day?.holy_day_observed?.subtitle ? <p class="holy-day-subtitle">{day.holy_day_observed.subtitle}</p> : undefined]
+        ? [<p class="holy-day-name">{name}</p>, day?.holy_day_observed?.subtitle ? <p class="holy-day-subtitle">{day.holy_day_observed.subtitle}</p> : undefined]
         : <details>
-            <summary>{day.holy_day_observed.name}</summary>
+            <summary>{name}</summary>
             <ldf-text doc={new Text({type: "text", style: "text", value: day.holy_day_observed.bio})}></ldf-text>
           </details>;
     } else {
@@ -73,17 +77,17 @@ export class DayNameComponent {
         const the = localeStrings.the || ' the ';
         return [
           day?.week?.omit_the ? '' : ` ${the[1].toUpperCase()}${the.slice(2, localeStrings.the.length)} `,          ,
-          day?.week?.name
+          localeStrings[day?.week?.name] || day?.week?.name
         ];
       }
       // weekday => [weekday] after (the) [Sunday]
       else {
         return [
-          date.toLocaleDateString(locale, { weekday: 'long' }),
-          localeStrings.after || ' after the ',
+          capitalize(date.toLocaleDateString(locale, { weekday: 'long' })),
+          localeStrings.after || ' after ',
           day?.week?.omit_the ? '' : localeStrings.the,
-          day?.week?.name
-        ];
+          localeStrings[day?.week?.name] || day?.week?.name
+        ].join("").replace(/de\s+el/, "del");
       }
     }
   }
@@ -101,4 +105,8 @@ export class DayNameComponent {
       </Host>
     )
   }
+}
+
+function capitalize(word: string): string {
+  return word[0].toUpperCase() + word.slice(1);
 }
