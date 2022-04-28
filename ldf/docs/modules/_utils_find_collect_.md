@@ -20,7 +20,7 @@
 
 • **FAKE_SEASONS**: *string[]* = ['Saints', 'Mary']
 
-*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/deb31a84/ldf/src/utils/find-collect.ts#L9)*
+*Defined in [utils/find-collect.ts:9](https://github.com/gbj/venite/blob/af8bf378/ldf/src/utils/find-collect.ts#L9)*
 
 ## Functions
 
@@ -28,7 +28,7 @@
 
 ▸ **filterMultiple**(`day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `allowMultiple`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[]*
 
-*Defined in [utils/find-collect.ts:113](https://github.com/gbj/venite/blob/deb31a84/ldf/src/utils/find-collect.ts#L113)*
+*Defined in [utils/find-collect.ts:113](https://github.com/gbj/venite/blob/af8bf378/ldf/src/utils/find-collect.ts#L113)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **findCollect**(`collects`: [LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)[], `day`: [LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md), `sundayFirst`: boolean, `emberDayPrecedesSunday`: boolean, `allSaintsSuppressesCollectOfTheDayUnlessSunday`: boolean, `allSaintsOctaveSuppressesCollectOfTheDayUnlessSunday`: boolean, `allowMultiple`: boolean, `sundayRedLetterDaysAlsoIncludeSundayCollect`: boolean): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md) | null*
 
-*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/deb31a84/ldf/src/utils/find-collect.ts#L12)*
+*Defined in [utils/find-collect.ts:12](https://github.com/gbj/venite/blob/af8bf378/ldf/src/utils/find-collect.ts#L12)*
 
 Given a set of all possible collects and a `LiturgicalDay`, returns a `LiturgicalDocument` of the correct collect or sequence of collects
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **processCollectText**(`collect`: [Text](../classes/_text_.text.md), `day`: [HolyDay](../classes/_calendar_holy_day_.holyday.md)): *[LiturgicalDocument](../classes/_liturgical_document_.liturgicaldocument.md)*
 
-*Defined in [utils/find-collect.ts:129](https://github.com/gbj/venite/blob/deb31a84/ldf/src/utils/find-collect.ts#L129)*
+*Defined in [utils/find-collect.ts:129](https://github.com/gbj/venite/blob/af8bf378/ldf/src/utils/find-collect.ts#L129)*
 
 **Parameters:**
 

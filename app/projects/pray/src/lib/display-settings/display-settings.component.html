@@ -139,5 +139,9 @@
       <ion-label>{{ 'displaySettings.Reading-Verses' | translate }}</ion-label>
       <ion-checkbox [value]="settings.bibleVerses" [checked]="settings.bibleVerses" (ionChange)="updateSetting(uid, 'bibleVerses', $event)" slot="start"></ion-checkbox>
     </ion-item>
+    <ion-item *ngIf="config.hide_rubrics">
+      <ion-label>{{ 'displaySettings.Hide-Rubrics' | translate }}</ion-label>
+      <ion-checkbox [value]="settings.hideRubrics" [checked]="settings.hideRubrics" (ionChange)="updateSetting(uid, 'hideRubrics', $event)" slot="start"></ion-checkbox>
+    </ion-item>
   </ng-container>
 </ng-template>
