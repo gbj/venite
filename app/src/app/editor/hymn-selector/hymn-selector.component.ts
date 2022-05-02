@@ -36,6 +36,8 @@ export class HymnSelectorComponent implements OnInit {
     let value: string[] = [];
 
     if (mode === "title") {
+      console.log("hymn = ", hymn);
+      value = [""];
       this.hymnSelected.next(
         new LiturgicalDocument({
           type: "text",
