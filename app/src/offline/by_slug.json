@@ -8628,8 +8628,8 @@
             {
               "type": "psalm-verse",
               "number": "11",
-              "halfverse": "and all the kings of Canaan.",
-              "verse": "Sihon, king of the Amorites,\nand Og, the kingdoms of Bashan, *"
+              "halfverse": "and all the kingdoms of Canaan.",
+              "verse": "Sihon, king of the Amorites,\nand Og, the king of Bashan, *"
             },
             {
               "number": "12",
@@ -31706,6 +31706,246 @@
       "hidden": false,
       "label": "Marian Antiphons",
       "version": "Rite-II",
+      "category": []
+    }
+  ],
+  "es-LOC-marian-antiphons": [
+    {
+      "value": [
+        {
+          "language": "es",
+          "version": "LOC",
+          "condition": {
+            "conditions": [
+              {
+                "date": {
+                  "lt": "2/2"
+                }
+              },
+              {
+                "season": {
+                  "except": [],
+                  "only": [
+                    "Advent",
+                    "Christmas",
+                    "Epiphany",
+                    "Easter",
+                    "Ascension",
+                    "Pentecost",
+                    "OrdinaryTime"
+                  ]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "label": "Alma Redemptoris",
+          "category": [],
+          "lastRevision": 56,
+          "lookup": {
+            "type": "slug"
+          },
+          "source": {
+            "api": "",
+            "source": "",
+            "citation": ""
+          },
+          "slug": "alma-redemptoris",
+          "type": "liturgy",
+          "metadata": {
+            "evening": true,
+            "preferences": {},
+            "liturgyversions": [],
+            "supplement": true,
+            "special_preferences": {}
+          },
+          "hidden": false
+        },
+        {
+          "label": "Alma Redemptoris",
+          "version": "LOC",
+          "category": [],
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "type": "liturgy",
+          "lastRevision": 56,
+          "lookup": {
+            "type": "slug"
+          },
+          "slug": "alma-redemptoris",
+          "hidden": false,
+          "language": "es",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Advent", "Christmas"]
+                },
+                "date": {
+                  "gt": "11/1"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "date_modified": {
+            "seconds": 1603539837,
+            "nanoseconds": 289000000
+          },
+          "metadata": {
+            "supplement": true,
+            "preferences": {},
+            "evening": true,
+            "liturgyversions": [],
+            "special_preferences": {}
+          }
+        },
+        {
+          "label": "Ave Regina",
+          "version": "LOC",
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "hidden": false,
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Epiphany", "Lent", "HolyWeek"]
+                },
+                "date": {
+                  "lt": "4/21"
+                }
+              },
+              {
+                "date": {
+                  "gt": "2/2"
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "category": [],
+          "lastRevision": 19,
+          "language": "es",
+          "metadata": {
+            "preferences": {},
+            "liturgyversions": [],
+            "special_preferences": {},
+            "evening": true,
+            "supplement": true
+          },
+          "lookup": {
+            "type": "slug"
+          },
+          "slug": "ave-regina"
+        },
+        {
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "slug": "regina-coeli",
+          "version": "LOC",
+          "metadata": {
+            "evening": false,
+            "special_preferences": {},
+            "preferences": {},
+            "liturgyversions": [],
+            "supplement": false
+          },
+          "lookup": {
+            "type": "slug"
+          },
+          "label": "Regina Coeli",
+          "type": "liturgy",
+          "language": "es",
+          "hidden": false,
+          "condition": {
+            "conditions": [
+              {
+                "date": {
+                  "gte": "3/22"
+                },
+                "season": {
+                  "only": ["Easter", "Pentecost", "Ascension", "Ascension"],
+                  "except": []
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "lastRevision": 24,
+          "category": []
+        },
+        {
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["OrdinaryTime", "Pentecost"]
+                },
+                "date": {
+                  "gte": "5/10"
+                }
+              }
+            ]
+          },
+          "type": "liturgy",
+          "label": "Salve Regina",
+          "lastRevision": 17,
+          "language": "es",
+          "lookup": {
+            "type": "slug"
+          },
+          "source": {
+            "citation": "",
+            "source": "",
+            "api": ""
+          },
+          "version": "LOC",
+          "slug": "salve-regina",
+          "metadata": {
+            "evening": false,
+            "supplement": false,
+            "liturgyversions": [],
+            "special_preferences": {},
+            "preferences": {}
+          },
+          "category": [],
+          "hidden": false
+        }
+      ],
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "lastRevision": 114,
+      "slug": "marian-antiphons",
+      "metadata": {
+        "evening": true,
+        "supplement": true,
+        "special_preferences": {},
+        "preferences": {},
+        "liturgyversions": ["usccb"]
+      },
+      "language": "es",
+      "type": "liturgy",
+      "hidden": false,
+      "label": "Marian Antiphons",
+      "version": "LOC",
       "category": []
     }
   ],
