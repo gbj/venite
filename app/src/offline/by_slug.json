@@ -58010,5 +58010,351 @@
       "language": "en",
       "version": "modern"
     }
+  ],
+  "es-LOC-alma-redemptoris": [
+    {
+      "lastRevision": 56,
+      "metadata": {
+        "special_preferences": {},
+        "supplement": true,
+        "evening": true,
+        "preferences": {},
+        "liturgyversions": []
+      },
+      "label": "Alma Redemptoris",
+      "language": "es",
+      "value": [
+        {
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          },
+          "metadata": {
+            "level": 1
+          },
+          "hidden": false,
+          "category": [],
+          "value": ["Alma Redemptoris"],
+          "style": "text",
+          "type": "heading"
+        },
+        {
+          "style": "text",
+          "value": [
+            "Madre del Redentor, virgen fecunda,\npuerta del cielo siempre abierta,\nestrella del mar,\n\nven a librar al pueblo que tropieza\ny se quiere levantar.\n\nAnte la admiración\nde cielo y tierra,\nengendraste a tu santo Creador,\ny permaneces siempre Virgen.\n\nRecibe el saludo del ángel Gabriel,\ny ten piedad de nosotros, pecadores."
+          ],
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "value": [
+            {
+              "label": "V.",
+              "response": "",
+              "text": "El ángel del Señor anunció a María."
+            },
+            {
+              "text": "Y ella concibió por obra y gracia del Espíritu Santo. ",
+              "label": "R."
+            }
+          ],
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Advent"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "type": "responsive",
+          "hidden": false,
+          "style": "preces"
+        },
+        {
+          "type": "text",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Advent"],
+                  "except": []
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "metadata": { "response": "Amén." },
+          "value": [
+            "Derrama tu gracia en nuestros corazones, oh Señor, para que los que hemos conocido la encarnación de tu Hijo Jesucristo, anunciada por un ángel a María la Virgen, seamos llevados por la cruz y pasión de Cristo a la gloria de su resurrección; quien vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+          ],
+          "style": "prayer",
+          "hidden": false
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Christmas", "Epiphany"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Y el Verbo de Dios se hizo carne."
+            },
+            {
+              "text": "Y habitó entre nosotros..",
+              "label": "R."
+            }
+          ],
+          "hidden": false,
+          "style": "preces"
+        },
+        {
+          "style": "prayer",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Christmas", "Epiphany"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "value": [
+            "Almighty and everlasting God, who stooped to raise fallen humanity through the child-bearing of blessed Mary; grant that we, who have seen your glory revealed in our human nature and your love made perfect in our weakness, may daily be renewed in your image and conformed to the pattern of your Son Jesus Christ our Lord, who is alive and reigns with you, in the unity of the Holy Spirit, one God, now and for ever."
+          ],
+          "type": "text",
+          "hidden": false
+        }
+      ],
+      "category": [],
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "hidden": false,
+      "slug": "alma-redemptoris",
+      "type": "liturgy",
+      "version": "LOC"
+    }
+  ],
+  "es-LOC-ave-regina": [
+    {
+      "metadata": {
+        "evening": true,
+        "special_preferences": {},
+        "supplement": true,
+        "preferences": {},
+        "liturgyversions": []
+      },
+      "value": [
+        {
+          "metadata": {
+            "level": 1
+          },
+          "type": "heading",
+          "value": ["Ave Regina"],
+          "hidden": false,
+          "style": "text"
+        },
+        {
+          "style": "text",
+          "hidden": false,
+          "value": [
+            "Salve, Reina de los cielos\ny Señora de los Ángeles;\nsalve raíz, salve puerta,\nque dio paso a nuestra luz\n\nAlégrate, virgen gloriosa,\nentre todas la más bella;\nsalve, agraciada doncella,\nruega a Cristo por nosotros."
+          ],
+          "type": "text"
+        },
+        {
+          "type": "responsive",
+          "hidden": false,
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "He aquí la esclava del Señor. "
+            },
+            {
+              "label": "R.",
+              "text": "Hágase en mí según tu palabra."
+            }
+          ],
+          "style": "preces"
+        },
+        {
+          "hidden": false,
+          "value": [
+            "Padre celestial, por tu gracia la virgen madre de tu Hijo encarnado fue bendita al llevarlo en su seno, y aún más bendita al guardar tu palabra: Concede a los que honramos la exaltación de su humildad que sigamos el ejemplo de su devoción a tu voluntad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
+          ],
+          "style": "prayer",
+          "type": "text",
+          "metadata": { "response": "Amén." }
+        }
+      ],
+      "type": "liturgy",
+      "slug": "ave-regina",
+      "language": "es",
+      "category": [],
+      "label": "Ave Regina",
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "hidden": false,
+      "lastRevision": 19,
+      "version": "LOC"
+    }
+  ],
+  "es-LOC-regina-coeli": [
+    {
+      "lastRevision": 28,
+      "category": [],
+      "language": "es",
+      "value": [
+        {
+          "metadata": {
+            "level": 1
+          },
+          "type": "heading",
+          "value": ["Regina Coeli"],
+          "style": "text",
+          "hidden": false
+        },
+        {
+          "value": [
+            "Reina del cielo, alégrate, aleluya.\nPorque el Señor, a quien has llevado en tu vientre, aleluya.\nHa resucitado según su palabra, aleluya.\nRuega al Señor por nosotros, aleluya."
+          ],
+          "hidden": false,
+          "type": "text",
+          "style": "text"
+        },
+        {
+          "type": "responsive",
+          "hidden": false,
+          "value": [
+            {
+              "text": "Goza y alégrate Virgen María, aleluya.",
+              "response": "",
+              "label": "V."
+            },
+            {
+              "text": "Porque en verdad ha resucitado el Señor, aleluya.",
+              "label": "R."
+            }
+          ],
+          "style": "preces"
+        },
+        {
+          "value": [
+            "Oh Dios, que por la resurrección de Tu Hijo, Nuestro Señor Jesucristo, has llenado el mundo de alegría, concédenos, por intercesión de su Madre, la Virgen María, llegar a los gozos eternos. Por Jesucristo Nuestro Señor."
+          ],
+          "metadata": { "response": "Amén." },
+          "type": "text",
+          "style": "prayer",
+          "hidden": false
+        }
+      ],
+      "label": "Regina Coeli",
+      "metadata": {
+        "special_preferences": {},
+        "liturgyversions": [],
+        "supplement": true,
+        "preferences": {},
+        "evening": true
+      },
+      "type": "liturgy",
+      "version": "LOC",
+      "hidden": false,
+      "source": {
+        "api": "",
+        "citation": "",
+        "source": ""
+      },
+      "slug": "regina-coeli"
+    }
+  ],
+  "es-LOC-salve-regina": [
+    {
+      "type": "liturgy",
+      "language": "es",
+      "value": [
+        {
+          "type": "heading",
+          "metadata": {
+            "level": 1
+          },
+          "hidden": false,
+          "value": ["Salve Regina"],
+          "style": "text"
+        },
+        {
+          "type": "text",
+          "value": [
+            "Dios te salve, Reina y Madre de misericordia, vida y dulzura y esperanza nuestra: Dios te salve. A ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando en este valle de lágrimas.\n\nEa, pues, Señora abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos y, después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima! ¡oh piadosa! ¡oh dulce Virgen María!"
+          ],
+          "style": "text",
+          "hidden": false
+        },
+        {
+          "type": "responsive",
+          "hidden": false,
+          "style": "preces",
+          "value": [
+            {
+              "text": "Ruega por nosotros santa Madre de Dios,",
+              "response": "",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "Para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo."
+            }
+          ]
+        },
+        {
+          "style": "prayer",
+          "value": [
+            "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+          ],
+          "type": "text",
+          "hidden": false,
+          "metadata": { "response": "Amén." }
+        }
+      ],
+      "metadata": {
+        "liturgyversions": [],
+        "supplement": true,
+        "evening": false,
+        "special_preferences": {},
+        "preferences": {}
+      },
+      "hidden": false,
+      "category": [],
+      "slug": "salve-regina",
+      "lastRevision": 18,
+      "version": "LOC",
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "label": "Salve Regina"
+    }
   ]
 }
