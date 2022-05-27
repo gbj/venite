@@ -84,6 +84,15 @@ export class LectionaryService {
       alternateYear
     );
 
+    const propers = day.propers || day.slug,
+      isRcl =
+        lectionaryName == "rclsunday" || lectionaryName == "rclsundayTrack1";
+    let propersOptions = [propers];
+    if ((propers == "christmas-day" || propers == "christmas-eve") && isRcl) {
+      propersOptions.push("christmas", "christmas-day-ii", "christmas-day-iii");
+    }
+    console.log("propersOptions = ", propersOptions);
+
     // if possible, look for it in the JSON lectionary files
     if (
       !disableOffline &&
@@ -119,7 +128,7 @@ export class LectionaryService {
               ) {
                 return entries.filter(
                   (entry) =>
-                    entry.day == (day.propers || day.slug) &&
+                    propersOptions.includes(entry.day) &&
                     (!readingType || entry.type == readingType)
                 );
               } else {
@@ -154,7 +163,7 @@ export class LectionaryService {
                   // by day or (if RCL and not a holy day) by Sunday
                   halfFiltered = halfFiltered.filter(
                     (entry) =>
-                      entry.day == (day.propers || day.slug) ||
+                      propersOptions.includes(entry.day) ||
                       ((lectionaryName === "rclsunday" ||
                         lectionaryName === "rclsundayTrack1") &&
                         !day.holy_day_observed &&
@@ -165,7 +174,7 @@ export class LectionaryService {
                   if (halfFiltered?.length == 0) {
                     halfFiltered = beforeFiltering.filter(
                       (entry) =>
-                        entry.day == (day.propers || day.slug) ||
+                        propersOptions.includes(entry.day) ||
                         ((lectionaryName === "rclsunday" ||
                           lectionaryName === "rclsundayTrack1") &&
                           !day.holy_day_observed &&
@@ -178,7 +187,7 @@ export class LectionaryService {
                   if (halfFiltered?.length == 0) {
                     halfFiltered = beforeFiltering.filter(
                       (entry) =>
-                        entry.day == (day.propers || day.slug) ||
+                        propersOptions.includes(entry.day) ||
                         ((lectionaryName === "rclsunday" ||
                           lectionaryName === "rclsundayTrack1") &&
                           entry.day === day.week?.slug)

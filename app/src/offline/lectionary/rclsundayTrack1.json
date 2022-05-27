@@ -6798,5 +6798,197 @@
     "lectionary": "rclsundayTrack1",
     "type": "gospel",
     "citation": "John 6:25-35"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 62:6-12"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 97"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Titus 3:4-7"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-ii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "Luke 2:(1-7),8-20"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "A",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 1:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "B",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 1:1-14"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "first_reading",
+    "citation": "Isaiah 52:7-10"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "morning_psalms",
+    "citation": "Psalm 98"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "second_reading",
+    "citation": "Hebrews 1:1-4,(5-12)"
+  },
+  {
+    "whentype": "year",
+    "when": "C",
+    "day": "christmas-day-iii",
+    "lectionary": "rclsundayTrack1",
+    "type": "gospel",
+    "citation": "John 1:1-14"
   }
 ]
