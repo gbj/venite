@@ -2178,6 +2178,11 @@
     },
     { "type": "text", "hidden": false, "style": "authorized-prayers" },
     {
+      "hidden": false,
+      "type": "meditation",
+      "metadata": { "length": 300, "delay": 0 }
+    },
+    {
       "type": "rubric",
       "hidden": false,
       "value": [

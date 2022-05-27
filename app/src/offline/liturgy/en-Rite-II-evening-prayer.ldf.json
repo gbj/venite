@@ -1432,6 +1432,11 @@
     },
     { "hidden": false, "style": "authorized-prayers", "type": "text" },
     {
+      "hidden": false,
+      "type": "meditation",
+      "metadata": { "length": 300, "delay": 0 }
+    },
+    {
       "type": "rubric",
       "value": [
         "Before the close of the Office one or both of the following may be used"
