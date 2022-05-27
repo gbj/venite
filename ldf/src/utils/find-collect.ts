@@ -115,11 +115,21 @@ function filterMultiple(
   collects: LiturgicalDocument[],
   allowMultiple: boolean,
 ): LiturgicalDocument[] {
+  const alreadyPresent: Record<string, boolean> = {};
+  let duplicatesRemoved: LiturgicalDocument[] = [];
+  collects.forEach((collect) => {
+    let json = JSON.stringify(collect);
+    if (!alreadyPresent[json]) {
+      duplicatesRemoved.push(collect);
+    }
+    alreadyPresent[json] = true;
+  });
+
   if (allowMultiple) {
-    return collects;
+    return duplicatesRemoved;
   } else {
     return [
-      collects.find((c) => c.slug === day.holy_day_observed?.slug) ||
+      duplicatesRemoved.find((c) => c.slug === day.holy_day_observed?.slug) ||
         (day.slug !== day.week.slug && collects.find((c) => c.slug === (day.holy_days || [])[0]?.slug)) ||
         collects[0],
     ];

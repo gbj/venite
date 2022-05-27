@@ -25,7 +25,7 @@
 
 \+ **new LiturgicalColor**(`data`: Partial‹[LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md)›): *[LiturgicalColor](_calendar_liturgical_color_.liturgicalcolor.md)*
 
-*Defined in [calendar/liturgical-color.ts:16](https://github.com/gbj/venite/blob/af8bf378/ldf/src/calendar/liturgical-color.ts#L16)*
+*Defined in [calendar/liturgical-color.ts:16](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/calendar/liturgical-color.ts#L16)*
 
 **Parameters:**
 
@@ -41,7 +41,7 @@ Name | Type | Default |
 
 • **hex**: *string*
 
-*Defined in [calendar/liturgical-color.ts:10](https://github.com/gbj/venite/blob/af8bf378/ldf/src/calendar/liturgical-color.ts#L10)*
+*Defined in [calendar/liturgical-color.ts:10](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/calendar/liturgical-color.ts#L10)*
 
 Hex code (including #) or other CSS-compliant color code
 
@@ -54,7 +54,7 @@ ___
 
 • **image**? : *undefined | string*
 
-*Defined in [calendar/liturgical-color.ts:13](https://github.com/gbj/venite/blob/af8bf378/ldf/src/calendar/liturgical-color.ts#L13)*
+*Defined in [calendar/liturgical-color.ts:13](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/calendar/liturgical-color.ts#L13)*
 
 URL for icon to be used for this color
 
@@ -64,7 +64,7 @@ ___
 
 • **imageUrl**? : *undefined | string*
 
-*Defined in [calendar/liturgical-color.ts:16](https://github.com/gbj/venite/blob/af8bf378/ldf/src/calendar/liturgical-color.ts#L16)*
+*Defined in [calendar/liturgical-color.ts:16](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/calendar/liturgical-color.ts#L16)*
 
 Citation URL for the image
 
@@ -74,7 +74,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [calendar/liturgical-color.ts:5](https://github.com/gbj/venite/blob/af8bf378/ldf/src/calendar/liturgical-color.ts#L5)*
+*Defined in [calendar/liturgical-color.ts:5](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/calendar/liturgical-color.ts#L5)*
 
 Unique, identifying name
 

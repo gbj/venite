@@ -14,7 +14,7 @@
 
 ▸ **sortPsalms**(`a`: [Psalm](../classes/_psalm_.psalm.md), `b`: [Psalm](../classes/_psalm_.psalm.md)): *number*
 
-*Defined in [utils/sort-psalms.ts:3](https://github.com/gbj/venite/blob/af8bf378/ldf/src/utils/sort-psalms.ts#L3)*
+*Defined in [utils/sort-psalms.ts:3](https://github.com/gbj/venite/blob/4b8fe1f9/ldf/src/utils/sort-psalms.ts#L3)*
 
 **Parameters:**
 
