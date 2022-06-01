@@ -466,7 +466,7 @@
       },
       "type": "liturgy",
       "label": "The Angelus",
-      "version": "Rite-II",
+      "version": "Rite-I",
       "source": { "citation": "", "api": "", "source": "" },
       "lastRevision": 61,
       "metadata": { "liturgyversions": [] },
