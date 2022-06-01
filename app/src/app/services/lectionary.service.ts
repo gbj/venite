@@ -90,8 +90,11 @@ export class LectionaryService {
     let propersOptions = [propers];
     if ((propers == "christmas-day" || propers == "christmas-eve") && isRcl) {
       propersOptions.push("christmas", "christmas-day-ii", "christmas-day-iii");
+    } else if (propers == "sunday-pentecost") {
+      propersOptions.push("pentecost");
+    } else if (propers == "sunday-trinity-sunday") {
+      propersOptions.push("trinity-sunday");
     }
-    console.log("propersOptions = ", propersOptions);
 
     // if possible, look for it in the JSON lectionary files
     if (
