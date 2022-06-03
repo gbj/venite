@@ -688,3 +688,12 @@ ldf-psalm[lang=he] .halfverse {
 ldf-psalm[lang=he] .verse {
   font-size: 1.5rem;
 }
+
+ldf-psalm[lang=el] .verse, ldf-psalm[lang=el] .halfverse {
+  --ldf-font-face:'Times New Roman', Times, serif;
+  --ldf-drop-font-size: 1em;
+  --ldf-drop-margin-right: none;
+  --ldf-drop-firstword-font-variant: normal;
+  --ldf-drop-font-family: var(--ldf-font-face);
+  --ldf-drop-float: none;
+}

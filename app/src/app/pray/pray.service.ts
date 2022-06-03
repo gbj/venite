@@ -795,12 +795,10 @@ export class PrayService {
       ),
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
-      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
 
       switchMap((option) =>
         this.compile(option, day, prefs, [version], originalPrefs)
       ),
-      tap((psalms) => console.log("lookupPsalter psalms = ", psalms)),
 
       // sort the psalms by number in increasing order
       map(
@@ -819,21 +817,25 @@ export class PrayService {
             ),
           })
       ),
-      // add Hebrew psalms if necessary
+      // add Hebrew + LXX psalms if necessary
       switchMap((liturgy) => {
         if (prefs["originalLanguages"] == "true" && liturgy.value) {
           if (liturgy.type == "liturgy") {
             return combineLatest(
               (liturgy as Liturgy).value.map((doc) =>
-                from(this.osisBibleService.getHebrewPsalm(doc.slug)).pipe(
-                  map((hebrew) =>
-                    hebrew
+                combineLatest([
+                  from(this.osisBibleService.getHebrewPsalm(doc.slug)),
+                  from(this.osisBibleService.getLxxPsalm(doc)),
+                ]).pipe(
+                  map(([hebrew, lxx]) =>
+                    hebrew || lxx
                       ? docsToOption([
                           new LiturgicalDocument({
                             ...doc,
                             version_label: "English",
                           }),
                           new LiturgicalDocument(hebrew),
+                          new LiturgicalDocument(lxx),
                         ])
                       : doc
                   )
@@ -841,16 +843,18 @@ export class PrayService {
               )
             ).pipe(map((docs) => docsToLiturgy(docs)));
           } else {
-            return from(
-              this.osisBibleService.getHebrewPsalm(liturgy.slug)
-            ).pipe(
-              map((hebrew) =>
+            return combineLatest([
+              from(this.osisBibleService.getHebrewPsalm(doc.slug)),
+              from(this.osisBibleService.getLxxPsalm(doc)),
+            ]).pipe(
+              map(([hebrew, lxx]) =>
                 docsToOption([
                   new LiturgicalDocument({
                     ...liturgy,
                     version_label: "English",
                   }),
                   new LiturgicalDocument(hebrew),
+                  new LiturgicalDocument(lxx),
                 ])
               )
             );

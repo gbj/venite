@@ -6,16 +6,21 @@ import {
   Book,
   LiturgicalDocument,
   parseReference,
+  Psalm,
 } from "@venite/ldf";
 import NRSV_STRUCTURE from "../../offline/bible/nrsv_structure.json";
 
 type Verses = { book: Book; chapter: number; verses: string[] };
+
+type LxxPsalmVerse = { number: number; a: string; b: string };
+type LxxPsalms = Record<string, LxxPsalmVerse[]>;
 
 @Injectable({
   providedIn: "root",
 })
 export class OsisBibleService {
   private _hebrewPsalms: Promise<LiturgicalDocument[]>;
+  private _lxxPsalms: Promise<LxxPsalms>;
 
   constructor() {}
 
@@ -27,6 +32,76 @@ export class OsisBibleService {
     }
     const psalms = await this._hebrewPsalms;
     return psalms.find((doc) => doc.slug == slug);
+  }
+
+  async getLxxPsalm(
+    doc: LiturgicalDocument
+  ): Promise<LiturgicalDocument | undefined> {
+    // helper
+    function lxxVerse(
+      psalms: LxxPsalms,
+      num: string,
+      verse_num: number,
+      part: "a" | "b"
+    ): string {
+      let psalmNum = Number(num);
+      let verseNum = verse_num;
+
+      // see numbering at https://www.oca.org/liturgics/outlines/septuagint-numbering-psalms
+      if (psalmNum <= 9) {
+        psalmNum = psalmNum;
+      } else if (psalmNum == 10) {
+        psalmNum = 9;
+        verseNum = verseNum + 21;
+      } else if (psalmNum <= 114) {
+        psalmNum = psalmNum - 1;
+      } else if (psalmNum == 115) {
+        psalmNum = 113;
+        verseNum = verseNum + 8;
+      } else if (psalmNum == 116 && verseNum <= 9) {
+        psalmNum = 114;
+      } else if (psalmNum == 116 && verseNum <= 19) {
+        psalmNum = 115;
+        verseNum = verseNum - 9;
+      } else if (psalmNum <= 146) {
+        psalmNum = psalmNum - 1;
+      } else if (psalmNum == 147 && verseNum <= 11) {
+        psalmNum = 146;
+      } else if (psalmNum == 147) {
+        verseNum = verseNum - 11;
+      }
+
+      return (psalms[psalmNum].find((verse) => verse.number == verseNum) || {})[
+        part
+      ];
+    }
+
+    // body
+    if (!this._lxxPsalms) {
+      this._lxxPsalms = fetch(`/offline/psalter/lxx_psalms.json`).then((res) =>
+        res.json()
+      );
+    }
+    const psalms = await this._lxxPsalms;
+    if (doc.type == "psalm") {
+      const number = (doc as Psalm).metadata?.number;
+      return new LiturgicalDocument({
+        ...doc,
+        language: "el",
+        version: "LXX",
+        version_label: "LXX",
+        value: ((doc as Psalm).value || []).map((section) => ({
+          ...section,
+          value: (section.value || []).map((verse) => ({
+            ...verse,
+            verse: lxxVerse(psalms, number, Number(verse.number), "a"),
+            halfverse: lxxVerse(psalms, number, Number(verse.number), "b"),
+          })),
+        })),
+      });
+    } else {
+      return doc;
+    }
   }
 
   async getOriginalText(citation: string): Promise<LiturgicalDocument> {
