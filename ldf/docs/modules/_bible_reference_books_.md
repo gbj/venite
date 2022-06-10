@@ -60,6 +60,7 @@
   ['Prov.', Book.Proverbs],
   ['Ecclesiastes', Book.Ecclesiastes],
   ['Eccl.', Book.Ecclesiastes],
+  ['Eccles.', Book.Ecclesiastes],
   ['Song of Solomon', Book.SongOfSolomon],
   ['Song of Songs', Book.SongOfSolomon],
   ['Cantic', Book.SongOfSolomon],
@@ -179,4 +180,4 @@
   ['Tobit', Book.Tobit],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/4c7ddca2/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/e66b12e4/ldf/src/bible-reference/books.ts#L3)*

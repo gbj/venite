@@ -48,6 +48,7 @@ export const BOOKS: [string, Book][] = [
   ['Prov.', Book.Proverbs],
   ['Ecclesiastes', Book.Ecclesiastes],
   ['Eccl.', Book.Ecclesiastes],
+  ['Eccles.', Book.Ecclesiastes],
   ['Song of Solomon', Book.SongOfSolomon],
   ['Song of Songs', Book.SongOfSolomon],
   ['Cantic', Book.SongOfSolomon],
