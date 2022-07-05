@@ -2,17 +2,17 @@
   <form [formGroup]="data.form">
     <ng-container *ngFor="let category of data.categories">
       <ion-list *ngIf="data.preference_tree[category].length > 0">
-        <ion-item *ngIf="(category !== 'Advanced Settings' && !onlyAdvanced)">
+        <ion-item *ngIf="(category !== 'Advanced Settings' && category !== 'Configuración Avanzada' && !onlyAdvanced)">
           <h3 class="category-header">{{ category }}</h3>
         </ion-item>
-        <ion-item *ngIf="category == 'Advanced Settings'">
+        <ion-item *ngIf="category == 'Advanced Settings' || category == 'Configuración Avanzada'">
           <h3 class="category-header" (click)="toggleAdvancedSettingsShown()">{{ category }}</h3>
           <ion-button slot="end" fill="clear" color="primary" (click)="toggleAdvancedSettingsShown()">
             <ion-icon *ngIf="advancedSettingsShown" name="remove" slot="icon-only"></ion-icon>
             <ion-icon *ngIf="!advancedSettingsShown" name="add" slot="icon-only"></ion-icon>
           </ion-button>
         </ion-item>
-        <ng-container *ngIf="(category !== 'Advanced Settings' && !onlyAdvanced) || (category === 'Advanced Settings' && advancedSettingsShown)">
+        <ng-container *ngIf="(category !== 'Advanced Settings' && category !== 'Configuración Avanzada' && !onlyAdvanced) || ((category === 'Advanced Settings' || category == 'Configuración Avanzada') && advancedSettingsShown)">
           <ng-container *ngFor="let item of data.preference_tree[category]">
             <!-- item[0] is the key, item[1] is the Preference -->
             <ion-item *ngIf="item?.options?.length > 1">
