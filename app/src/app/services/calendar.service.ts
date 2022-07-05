@@ -314,7 +314,7 @@ export class CalendarService implements CalendarServiceInterface {
         }
 
         // incorporate them into the `LiturgicalDay`
-        return day.addHolyDays(uniqueBy(holydays, "slug"));
+        return day.addHolyDays(uniqueBy(holydays, "slug"), true);
       })
     );
   }

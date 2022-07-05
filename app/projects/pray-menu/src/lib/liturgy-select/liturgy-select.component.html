@@ -113,6 +113,21 @@
       </ion-radio-group>
     </ng-container>
 
+    <ng-container *ngIf="dayName$ | async as day else blankHeader">
+      <ng-container *ngIf="day.alternate">
+        <ion-radio-group formControlName="alternate" ngDefaultControl (ionChange)="form.controls.observance.setValue($event.detail.value)">
+          <ion-item>
+            <ion-label><ldf-day-name [day]="day"></ldf-day-name></ion-label>
+            <ion-radio slot="end" [value]="day.propers || day.slug"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label><ldf-day-name [day]="day.alternate"></ldf-day-name></ion-label>
+            <ion-radio slot="end" [value]="day.alternate.propers || day.alternate.slug"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ng-container>
+    </ng-container>
+
     <!-- Proper Liturgies -->
     <ng-container *ngIf="availableProperLiturgies$ | async as liturgies">
       <ion-item *ngFor="let liturgy of liturgies">

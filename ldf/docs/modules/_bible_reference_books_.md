@@ -180,4 +180,4 @@
   ['Tobit', Book.Tobit],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/e66b12e4/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/9ff8a866/ldf/src/bible-reference/books.ts#L3)*

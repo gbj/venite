@@ -15,6 +15,7 @@ interface ObservedInterface {
   octave?: string | undefined;
   mmdd?: string;
   kalendar?: string;
+  alternate?: ObservedInterface;
 }
 
 /**
@@ -95,13 +96,16 @@ export class LiturgicalDay {
    */
   collect?: string;
 
+  /** Optionally, an alternate observance for the same day */
+  alternate?: LiturgicalDay;
+
   /** Returns a native Date from the day's date string */
   getDate(): Date {
     return dateFromYMDString(this.date);
   }
 
   /** Given a LiturgicalDay, returns a new LiturgicalDay that includes the feasts passed */
-  addHolyDays(holydays: HolyDay[]): LiturgicalDay {
+  addHolyDays(holydays: HolyDay[], saveAlternate?: boolean): LiturgicalDay {
     const day: LiturgicalDay = this;
 
     holydays = holydays
@@ -162,6 +166,7 @@ export class LiturgicalDay {
       collect,
       holy_days: (this.holy_days || new Array()).concat(holydays),
       holy_day_observed: holy_day_is_observed ? (observed as HolyDay) : this.holy_day_observed,
+      alternate: saveAlternate && slug !== this.slug ? this : undefined,
     });
   }
 
