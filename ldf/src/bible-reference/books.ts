@@ -136,6 +136,7 @@ export const BOOKS: [string, Book][] = [
   ['Wisdom of Solomon', Book.Wisdom],
   ['Ecclesiasticus', Book.Ecclesiasticus],
   ['Ecclus.', Book.Ecclesiasticus],
+  ['Sirach', Book.Ecclesiasticus],
   ['Baruch', Book.Baruch],
   ['Epistle of Jeremiah', Book.EpistleJeremiah],
   ['Ep. Jer.', Book.EpistleJeremiah],
