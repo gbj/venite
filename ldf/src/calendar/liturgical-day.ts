@@ -166,7 +166,7 @@ export class LiturgicalDay {
       collect,
       holy_days: (this.holy_days || new Array()).concat(holydays),
       holy_day_observed: holy_day_is_observed ? (observed as HolyDay) : this.holy_day_observed,
-      alternate: saveAlternate && slug !== this.slug ? this : undefined,
+      alternate: saveAlternate && slug !== this.slug && holy_day_rank < 5 ? this : undefined,
     });
   }
 

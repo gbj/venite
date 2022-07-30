@@ -148,6 +148,7 @@
   ['Wisdom of Solomon', Book.Wisdom],
   ['Ecclesiasticus', Book.Ecclesiasticus],
   ['Ecclus.', Book.Ecclesiasticus],
+  ['Sirach', Book.Ecclesiasticus],
   ['Baruch', Book.Baruch],
   ['Epistle of Jeremiah', Book.EpistleJeremiah],
   ['Ep. Jer.', Book.EpistleJeremiah],
@@ -180,4 +181,4 @@
   ['Tobit', Book.Tobit],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/9ff8a866/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/0b12d524/ldf/src/bible-reference/books.ts#L3)*
