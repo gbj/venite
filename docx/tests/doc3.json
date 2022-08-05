@@ -1,0 +1,3489 @@
+{
+  "version": "Rite-II",
+  "language": "en",
+  "hidden": false,
+  "date_created": { "seconds": 1618225182, "nanoseconds": 614000000 },
+  "sharing": {
+    "privacy": "public",
+    "collaborators": [],
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "organization": "venite",
+    "status": "published"
+  },
+  "value": [
+    {
+      "value": ["Morning Prayer"],
+      "metadata": { "level": 1 },
+      "style": "text",
+      "type": "heading",
+      "hidden": false
+    },
+    {
+      "value": [""],
+      "metadata": { "level": 1 },
+      "type": "heading",
+      "hidden": false,
+      "style": "date",
+      "day": {
+        "evening": false,
+        "date": "2022-7-30",
+        "kalendar": "lff2018",
+        "slug": "saturday-7th-pentecost",
+        "propers": "saturday-proper-12",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "cycle": "Easter",
+          "season": "OrdinaryTime",
+          "name": "Seventh Sunday after Pentecost",
+          "kalendar": "bcp1979",
+          "week": 21,
+          "slug": "7th-pentecost",
+          "proper": 12,
+          "propers": "proper-12"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "C"
+        },
+        "holy_days": [
+          {
+            "bio": [
+              "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+              "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+              "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+              "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+              "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+            ],
+            "type": { "rank": 2, "name": "Black Letter" },
+            "slug": "william-wilberforce",
+            "kalendar": "lff2018",
+            "mmdd": "7/30",
+            "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green",
+        "holy_day_observed": {
+          "bio": [
+            "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+            "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+            "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+            "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+            "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+          ],
+          "type": { "rank": 2, "name": "Black Letter" },
+          "slug": "william-wilberforce",
+          "kalendar": "lff2018",
+          "mmdd": "7/30",
+          "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "hidden": false,
+      "value": [""],
+      "metadata": { "level": 1 },
+      "style": "day",
+      "day": {
+        "evening": false,
+        "date": "2022-7-30",
+        "kalendar": "lff2018",
+        "slug": "saturday-7th-pentecost",
+        "propers": "saturday-proper-12",
+        "week": {
+          "omit_the": false,
+          "color": "Green",
+          "cycle": "Easter",
+          "season": "OrdinaryTime",
+          "name": "Seventh Sunday after Pentecost",
+          "kalendar": "bcp1979",
+          "week": 21,
+          "slug": "7th-pentecost",
+          "proper": 12,
+          "propers": "proper-12"
+        },
+        "years": {
+          "bcp1979_daily_office": 2,
+          "bcp1979_daily_psalms": 2,
+          "rclsunday": "C"
+        },
+        "holy_days": [
+          {
+            "bio": [
+              "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+              "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+              "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+              "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+              "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+            ],
+            "type": { "rank": 2, "name": "Black Letter" },
+            "slug": "william-wilberforce",
+            "kalendar": "lff2018",
+            "mmdd": "7/30",
+            "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+          }
+        ],
+        "season": "OrdinaryTime",
+        "color": "Green",
+        "holy_day_observed": {
+          "bio": [
+            "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+            "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+            "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+            "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+            "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+          ],
+          "type": { "rank": 2, "name": "Black Letter" },
+          "slug": "william-wilberforce",
+          "kalendar": "lff2018",
+          "mmdd": "7/30",
+          "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+        }
+      }
+    },
+    {
+      "category": ["OrdinaryTime", "Opening Sentence"],
+      "style": "short",
+      "citation": "Habakkuk 2:20",
+      "label": null,
+      "metadata": { "omit_response": true, "response": null },
+      "type": "bible-reading",
+      "language": "en",
+      "value": [
+        {
+          "text": "The Lord is in his holy temple; let all the earth keep silence before him."
+        }
+      ],
+      "version": "bcp1979",
+      "hidden": false,
+      "slug": "opening_sentence",
+      "version_label": null
+    },
+    {
+      "metadata": { "selected": 1, "editor_selected": 1 },
+      "slug": "confession_intro",
+      "type": "option",
+      "hidden": false,
+      "category": [],
+      "source": { "source": "bcp1979", "api": "", "citation": "p. 79" },
+      "condition": {
+        "conditions": [
+          {
+            "preference": { "value": "no", "is": true, "key": "omitForeOffice" }
+          }
+        ],
+        "mode": "and"
+      },
+      "value": [
+        {
+          "type": "text",
+          "hidden": false,
+          "label": "Confession of Sin",
+          "value": [
+            "Dearly beloved, we have come together in the presence of Almighty God our heavenly Father, to set forth his praise, to hear his holy Word, and to ask, for ourselves and on behalf of others, those things that are necessary for our life and our salvation. And so that we may prepare ourselves in heart and mind to worship him, let us kneel in silence, and with penitent and obedient hearts confess our sins, that we may obtain forgiveness by his infinite goodness and mercy. "
+          ],
+          "source": { "api": "", "source": "", "citation": "" },
+          "category": [],
+          "metadata": {},
+          "style": "text",
+          "version_label": "Long"
+        },
+        {
+          "category": [],
+          "hidden": false,
+          "value": ["Let us confess our sins against God and our neighbor."],
+          "source": { "api": "", "source": "", "citation": "" },
+          "style": "text",
+          "version_label": "Short",
+          "label": "Confession of Sin",
+          "metadata": {},
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Silence may be kept.",
+        "Officiant and People together, all kneeling"
+      ],
+      "type": "rubric"
+    },
+    {
+      "slug": "confession",
+      "condition": {
+        "conditions": [
+          {
+            "preference": { "key": "omitForeOffice", "value": "no", "is": true }
+          }
+        ],
+        "mode": "and"
+      },
+      "source": { "api": "", "citation": "", "source": "" },
+      "value": [
+        {
+          "version_label": "Rite II",
+          "hidden": false,
+          "type": "text",
+          "display_format": "unison",
+          "source": { "api": "", "source": "", "citation": "" },
+          "style": "prayer",
+          "category": [],
+          "metadata": { "omit_response": false },
+          "value": [
+            "Most merciful God,\nwe confess that we have sinned against you\nin thought, word, and deed,\nby what we have done,\nand by what we have left undone.\nWe have not loved you with our whole heart;\nwe have not loved our neighbors as ourselves.\nWe are truly sorry and we humbly repent.\nFor the sake of your Son Jesus Christ,\nhave mercy on us and forgive us;\nthat we may delight in your will,\nand walk in your ways,\nto the glory of your Name."
+          ]
+        },
+        {
+          "type": "text",
+          "hidden": false,
+          "value": [
+            "God of all mercy,\nwe confess that we have sinned against you,\nopposing your will in our lives.\nWe have denied your goodness in each other,\nin ourselves, and in the world you have created.\nWe repent of the evil that enslaves us,\nthe evil we have done,\nand the evil done on our behalf.\nForgive, restore, and strengthen us\nthrough our Savior Jesus Christ,\nthat we may abide in your love\nand serve only your will."
+          ],
+          "style": "text",
+          "source": { "citation": "", "api": "", "source": "" },
+          "display_format": "unison",
+          "metadata": { "omit_response": false },
+          "version_label": "EOW",
+          "category": []
+        }
+      ],
+      "category": [],
+      "type": "option",
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "hidden": false
+    },
+    {
+      "category": [],
+      "slug": "absolution",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "source": { "api": "", "citation": "", "source": "" },
+      "condition": {
+        "conditions": [
+          {
+            "preference": { "key": "omitForeOffice", "is": true, "value": "no" }
+          }
+        ],
+        "mode": "and"
+      },
+      "type": "option",
+      "value": [
+        {
+          "version_label": "Lay/Deacon",
+          "style": "prayer",
+          "type": "text",
+          "metadata": {},
+          "hidden": false,
+          "source": { "source": "", "citation": "", "api": "" },
+          "value": [
+            "Almighty God have mercy on us, forgive us all our sins through our Lord Jesus Christ, strengthen us in all goodness, and by the power of the Holy Spirit keep us in eternal life."
+          ],
+          "category": []
+        },
+        {
+          "type": "text",
+          "source": { "citation": "", "source": "", "api": "" },
+          "metadata": {},
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through our Lord Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ],
+          "style": "prayer",
+          "hidden": false,
+          "category": [],
+          "version_label": "Priest"
+        },
+        {
+          "metadata": {},
+          "category": [],
+          "type": "text",
+          "style": "prayer",
+          "source": { "api": "", "citation": "", "source": "" },
+          "version_label": "EOW",
+          "hidden": false,
+          "value": [
+            "Almighty God have mercy on you, forgive you all your sins through the grace of Jesus Christ, strengthen you in all goodness, and by the power of the Holy Spirit keep you in eternal life."
+          ]
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "category": [],
+      "style": "text",
+      "metadata": { "level": 2 },
+      "source": { "source": "", "api": "", "citation": "" },
+      "type": "heading",
+      "value": ["Invitatory and Psalter"],
+      "hidden": false
+    },
+    {
+      "metadata": {},
+      "type": "rubric",
+      "value": ["All stand"],
+      "category": [],
+      "hidden": false,
+      "source": { "api": "", "citation": "", "source": "" }
+    },
+    {
+      "hidden": false,
+      "style": "preces",
+      "value": [
+        {
+          "text": "Lord, open our lips.",
+          "response": "",
+          "label": "Officiant"
+        },
+        {
+          "text": "And our mouth shall proclaim your praise.",
+          "label": "People"
+        }
+      ],
+      "category": [],
+      "source": { "api": "", "source": "bcp1979", "citation": "p. 80" },
+      "type": "responsive",
+      "metadata": {}
+    },
+    {
+      "category": [null],
+      "language": "en",
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "style": "gloria",
+      "version_label": "Rite II",
+      "type": "refrain",
+      "label": null,
+      "hidden": false,
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "metadata": {}
+    },
+    {
+      "style": "text",
+      "hidden": false,
+      "type": "text",
+      "value": ["Alleluia."]
+    },
+    {
+      "source": { "source": "", "citation": "", "api": "" },
+      "category": [],
+      "hidden": false,
+      "value": [
+        {
+          "value": [
+            {
+              "value": [
+                {
+                  "verse": "Come, let us sing to the Lord; *",
+                  "type": "psalm-verse",
+                  "halfverse": "let us shout for joy to the Rock of our salvation."
+                },
+                {
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "type": "psalm-verse",
+                  "halfverse": "and raise a loud shout to him with psalms."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "For the Lord is a great God, *",
+                  "type": "psalm-verse",
+                  "halfverse": "and a great King above all gods."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and the heights of the hills are his also.",
+                  "verse": "In his hand are the caverns of the earth, *"
+                },
+                {
+                  "halfverse": "and his hands have molded the dry land.",
+                  "type": "psalm-verse",
+                  "verse": "The sea is his, for he made it, *"
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the Lord our Maker.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "halfverse": "Oh, that today you would hearken to his voice!",
+                  "type": "psalm-verse"
+                }
+              ]
+            }
+          ],
+          "sharing": {
+            "status": "published",
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": []
+          },
+          "style": "invitatory",
+          "version": "bcp1979",
+          "category": ["Invitatory"],
+          "version_label": "Venite (BCP)",
+          "metadata": {
+            "omit_antiphon": false,
+            "latinname": null,
+            "localname": "Venite",
+            "omit_gloria": false,
+            "gloria": {
+              "category": [null],
+              "citation": null,
+              "hidden": false,
+              "slug": "gloria-patri",
+              "version": "bcp1979",
+              "sharing": {
+                "status": "published",
+                "privacy": "public",
+                "organization": "venite",
+                "collaborators": [],
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+              },
+              "label": null,
+              "type": "refrain",
+              "style": "gloria",
+              "version_label": "Rite II",
+              "language": "en",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ]
+            },
+            "number": null,
+            "antiphon": {
+              "style": "antiphon",
+              "language": "en",
+              "lastRevision": 21,
+              "slug": "",
+              "label": "",
+              "metadata": { "omit_response": false },
+              "category": ["Seasonal Antiphon", "OrdinaryTime"],
+              "value": [
+                "The mercy of the Lord is everlasting: Come let us adore him."
+              ],
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "privacy": "public",
+                "collaborators": []
+              },
+              "type": "refrain",
+              "version": "bcp1979",
+              "hidden": false,
+              "source": { "source": "", "api": "", "citation": "" }
+            }
+          },
+          "slug": "venite",
+          "type": "psalm",
+          "citation": "Psalm 95:1-7",
+          "language": "en",
+          "label": "Venite",
+          "source": {
+            "source": "bcp1979",
+            "api": "https://www.venite.app/api",
+            "citation": "p. 82"
+          },
+          "hidden": false
+        },
+        {
+          "version": "bcp1979",
+          "citation": "Psalm 100",
+          "slug": "jubilate",
+          "metadata": {
+            "omit_antiphon": false,
+            "gloria": {
+              "sharing": {
+                "organization": "venite",
+                "collaborators": [],
+                "privacy": "public",
+                "status": "published",
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+              },
+              "label": null,
+              "citation": null,
+              "hidden": false,
+              "version_label": "Rite II",
+              "category": [null],
+              "style": "gloria",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "version": "bcp1979",
+              "language": "en",
+              "type": "refrain",
+              "slug": "gloria-patri"
+            },
+            "latinname": null,
+            "omit_gloria": false,
+            "number": null,
+            "localname": "Jubilate",
+            "antiphon": {
+              "style": "antiphon",
+              "language": "en",
+              "lastRevision": 21,
+              "slug": "",
+              "label": "",
+              "metadata": { "omit_response": false },
+              "category": ["Seasonal Antiphon", "OrdinaryTime"],
+              "value": [
+                "The mercy of the Lord is everlasting: Come let us adore him."
+              ],
+              "sharing": {
+                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+                "organization": "venite",
+                "status": "published",
+                "privacy": "public",
+                "collaborators": []
+              },
+              "type": "refrain",
+              "version": "bcp1979",
+              "hidden": false,
+              "source": { "source": "", "api": "", "citation": "" }
+            }
+          },
+          "type": "psalm",
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Be joyful in the Lord, all you lands; *",
+                  "halfverse": "serve the Lord with gladness\nand come before his presence with a song."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "he himself has made us, and we are his;\nwe are his people and the sheep of his pasture.",
+                  "verse": "Know this: The Lord himself is God; *",
+                  "type": "psalm-verse"
+                }
+              ]
+            },
+            {
+              "value": [
+                {
+                  "verse": "Enter his gates with thanksgiving;\ngo into his courts with praise; *",
+                  "type": "psalm-verse",
+                  "halfverse": "give thanks to him and call upon his Name."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "For the Lord is good;\nhis mercy is everlasting; *",
+                  "halfverse": "and his faithfulness endures from age to age."
+                }
+              ],
+              "type": "psalm-section"
+            },
+            { "type": "psalm-section", "value": [] }
+          ],
+          "label": "Jubilate",
+          "style": "invitatory",
+          "category": ["Invitatory"],
+          "hidden": false,
+          "sharing": {
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public"
+          },
+          "language": "en",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 82",
+            "api": "https://www.venite.app/api"
+          },
+          "version_label": "Jubilate (BCP)"
+        },
+        {
+          "slug": "psalm_95",
+          "type": "psalm",
+          "version_label": "Ps. 95 (BCP)",
+          "hidden": false,
+          "version": "bcp1979",
+          "style": "psalm",
+          "language": "en",
+          "metadata": {
+            "number": "95",
+            "omit_antiphon": false,
+            "localname": "Psalm 95",
+            "omit_gloria": true,
+            "latinname": "Venite, exultemus",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            }
+          },
+          "category": ["Psalm"],
+          "source": {
+            "citation": "p. 724",
+            "api": "https://www.venite.app/api",
+            "source": "bcp1979"
+          },
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "number": "1",
+                  "type": "psalm-verse",
+                  "halfverse": "let us shout for joy to the Rock of our salvation.",
+                  "verse": "Come, let us sing to the LORD; *"
+                },
+                {
+                  "number": "2",
+                  "verse": "Let us come before his presence with thanksgiving *",
+                  "type": "psalm-verse",
+                  "halfverse": "and raise a loud shout to him with psalms."
+                },
+                {
+                  "verse": "For the LORD is a great God, *",
+                  "type": "psalm-verse",
+                  "halfverse": "and a great King above all gods.",
+                  "number": "3"
+                },
+                {
+                  "verse": "In his hand are the caverns of the earth, *",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": "and the heights of the hills are his also."
+                },
+                {
+                  "halfverse": "and his hands have molded the dry land.",
+                  "verse": "The sea is his, for he made it, *",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Come, let us bow down, and bend the knee, *",
+                  "halfverse": "and kneel before the LORD our Maker.",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "Oh, that today you would hearken to his voice!",
+                  "type": "psalm-verse",
+                  "verse": "For he is our God,\nand we are the people of his pasture and the sheep of his hand. *",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "at Meribah, and on that day at Massah,\n when they tempted me.",
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "verse": "Harden not your hearts,\nas your forebears did in the wilderness, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "9",
+                  "verse": "They put me to the test, *",
+                  "halfverse": "though they had seen my works."
+                },
+                {
+                  "verse": "Forty years long I detested that generation and said, *",
+                  "type": "psalm-verse",
+                  "halfverse": "“This people are wayward in their hearts;\n they do not know my ways.”",
+                  "number": "10"
+                },
+                {
+                  "number": "11",
+                  "type": "psalm-verse",
+                  "verse": "So I swore in my wrath, *",
+                  "halfverse": "“They shall not enter into my rest.”"
+                }
+              ]
+            }
+          ],
+          "label": "Psalm 95"
+        }
+      ],
+      "type": "option",
+      "metadata": { "selected": 1, "editor_selected": 1 },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": { "is": true, "value": "yes", "key": "veniteGloria" }
+          }
+        ]
+      }
+    },
+    {
+      "type": "option",
+      "metadata": {
+        "selected": 0,
+        "gloria": {
+          "version": "bcp1979",
+          "category": [null],
+          "label": null,
+          "version_label": "Rite II",
+          "type": "refrain",
+          "slug": "gloria-patri",
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ],
+          "citation": null,
+          "language": "en",
+          "style": "gloria",
+          "hidden": false
+        },
+        "editor_selected": 0
+      },
+      "value": [
+        {
+          "label": "Psalm 75",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "calling upon your Name and declaring all your wonderful deeds.",
+                  "number": "1",
+                  "verse": "We give you thanks, O God, we give you thanks, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "“I will appoint a time,” says God; *",
+                  "type": "psalm-verse",
+                  "halfverse": "“I will judge with equity.",
+                  "number": "2"
+                },
+                {
+                  "verse": "Though the earth and all its inhabitants are quaking, *",
+                  "number": "3",
+                  "type": "psalm-verse",
+                  "halfverse": "I will make its pillars fast."
+                },
+                {
+                  "verse": "I will say to the boasters, ‘Boast no more,’ *",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": "and to the wicked, ‘Do not toss your horns;"
+                },
+                {
+                  "verse": "Do not toss your horns so high, *",
+                  "number": "5",
+                  "halfverse": "nor speak with a proud neck.’”",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "nor yet from the wilderness or the mountains.",
+                  "verse": "For judgment is neither from the east nor from the west, *",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "he puts down one and lifts up another.",
+                  "verse": "It is God who judges; *",
+                  "type": "psalm-verse",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "and all the wicked of the earth shall drink and drain the dregs.",
+                  "verse": "For in the LORD’s hand there is a cup,\nfull of spiced and foaming wine, which he pours out, *",
+                  "type": "psalm-verse",
+                  "number": "8"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "But I will rejoice for ever; *",
+                  "number": "9",
+                  "halfverse": "I will sing praises to the God of Jacob."
+                },
+                {
+                  "verse": "He shall break off all the horns of the wicked; *",
+                  "type": "psalm-verse",
+                  "number": "10",
+                  "halfverse": "but the horns of the righteous shall be exalted."
+                }
+              ]
+            }
+          ],
+          "hidden": false,
+          "version": "bcp1979",
+          "category": ["Psalm"],
+          "type": "psalm",
+          "lastRevision": 2,
+          "slug": "psalm_75",
+          "version_label": "English",
+          "metadata": {
+            "omit_gloria": true,
+            "latinname": "Confitebimur tibi",
+            "number": "75",
+            "localname": "Psalm 75",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            }
+          },
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 691",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "en",
+          "style": "psalm"
+        },
+        {
+          "label": "Psalm 75",
+          "citation": null,
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "",
+                  "number": "1",
+                  "verse": "לַמְנַצֵּ֥חַ אַל תַּשְׁחֵ֑ת מִזְמ֖וֹר לְאָסָ֣ף שִֽׁיר",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "ה֘וֹדִ֤ינוּ לְּךָ֨ אֱֽלֹהִ֗ים ה֭וֹדִינוּ וְקָר֣וֹב שְׁמֶ֑ךָ סִ֝פְּר֗וּ נִפְלְאוֹתֶֽיךָ",
+                  "type": "psalm-verse",
+                  "halfverse": "",
+                  "number": "2"
+                },
+                {
+                  "verse": "כִּ֭י אֶקַּ֣ח מוֹעֵ֑ד אֲ֝נִ֗י מֵישָׁרִ֥ים אֶשְׁפֹּֽט",
+                  "number": "3",
+                  "type": "psalm-verse",
+                  "halfverse": ""
+                },
+                {
+                  "verse": "נְֽמֹגִ֗ים אֶ֥רֶץ וְכָל יֹשְׁבֶ֑יהָ אָנֹכִ֨י תִכַּ֖נְתִּי עַמּוּדֶ֣יהָ סֶּֽלָה",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": ""
+                },
+                {
+                  "verse": "אָמַ֣רְתִּי לַֽ֭הוֹלְלִים אַל תָּהֹ֑לּוּ וְ֝לָרְשָׁעִ֗ים אַל תָּרִ֥ימוּ קָֽרֶן",
+                  "number": "5",
+                  "halfverse": "",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "",
+                  "verse": "אַל תָּרִ֣ימוּ לַמָּר֣וֹם קַרְנְכֶ֑ם תְּדַבְּר֖וּ בְצַוָּ֣אר עָתָֽק",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "",
+                  "verse": "כִּ֤י לֹ֣א מִ֭מּוֹצָא וּמִֽמַּעֲרָ֑ב וְ֝לֹ֗א מִמִּדְבַּ֥ר הָרִֽים",
+                  "type": "psalm-verse",
+                  "number": "7"
+                },
+                {
+                  "halfverse": "",
+                  "verse": "כִּֽי אֱלֹהִ֥ים שֹׁפֵ֑ט זֶ֥ה יַ֝שְׁפִּ֗יל וְזֶ֣ה יָרִֽים",
+                  "type": "psalm-verse",
+                  "number": "8"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "כִּ֤י כ֪וֹס בְּֽיַד יְהוָ֡ה וְיַ֤יִן חָמַ֨ר מָ֥לֵא מֶסֶךְ֮ וַיַּגֵּ֪ר מִ֫זֶּ֥ה אַךְ שְׁ֭מָרֶיהָ יִמְצ֣וּ יִשְׁתּ֑וּ כֹּ֝֗ל רִשְׁעֵי אָֽרֶץ",
+                  "number": "9",
+                  "halfverse": ""
+                },
+                {
+                  "verse": "וַ֭אֲנִי אַגִּ֣יד לְעֹלָ֑ם אֲ֝זַמְּרָ֗ה לֵאלֹהֵ֥י יַעֲקֹֽב",
+                  "type": "psalm-verse",
+                  "number": "10",
+                  "halfverse": ""
+                }
+              ]
+            }
+          ],
+          "hidden": false,
+          "version": "BHS",
+          "category": ["Psalm"],
+          "type": "psalm",
+          "lastRevision": 2,
+          "slug": "psalm_75",
+          "version_label": "Hebrew",
+          "metadata": {
+            "omit_gloria": false,
+            "latinname": "Confitebimur tibi",
+            "number": "75",
+            "localname": "Psalm 75",
+            "omit_antiphon": false
+          },
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 691",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "he",
+          "style": "psalm"
+        },
+        {
+          "label": "Psalm 75",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                { "number": "1", "type": "psalm-verse" },
+                {
+                  "verse": "Εξομολογησόμεθά σοι, ὁ Θεός,",
+                  "type": "psalm-verse",
+                  "halfverse": "ἐξομολογησόμεθά σοι καὶ ἐπικαλεσόμεθα τὸ ὄνομά σου.",
+                  "number": "2"
+                },
+                {
+                  "verse": "διηγήσομαι πάντα τὰ θαυμάσιά σου, ὅταν λάβω καιρόν·",
+                  "number": "3",
+                  "type": "psalm-verse",
+                  "halfverse": "ἐγὼ εὐθύτητας κρινῶ."
+                },
+                {
+                  "verse": "ἐτάκη ἡ γῆ καὶ πάντες οἱ κατοικοῦντες ἐν αὐτῇ,",
+                  "type": "psalm-verse",
+                  "number": "4",
+                  "halfverse": "ἐγὼ ἐστερέωσα τοὺς στύλους αὐτῆς."
+                },
+                {
+                  "verse": "εἶπα τοῖς παρανομοῦσι· μὴ παρανομεῖτε,",
+                  "number": "5",
+                  "halfverse": "καὶ τοῖς ἁμαρτάνουσι· μὴ ὑψοῦτε κέρας,",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "καὶ μὴ λαλεῖτε κατὰ τοῦ Θεοῦ ἀδικίαν.",
+                  "verse": "μὴ ἐπαίρετε εἰς ὕψος τὸ κέρας ὑμῶν",
+                  "number": "6"
+                },
+                {
+                  "halfverse": "οὔτε ἀπὸ ἐρήμων ὀρέων, 8ὅτι ὁ Θεὸς κριτής ἐστι,τοῦτον ταπεινοῖ καὶ τοῦτον ὑψοῖ.",
+                  "verse": "ὅτι οὔτε ἐξ ἐξόδων οὔτε ἀπὸ δυσμῶν",
+                  "type": "psalm-verse",
+                  "number": "7"
+                },
+                { "type": "psalm-verse", "number": "8" },
+                {
+                  "type": "psalm-verse",
+                  "verse": "ὅτι ποτήριον ἐν χειρὶ Κυρίου οἴνου ἀκράτου πλῆρες κεράσματος.",
+                  "number": "9",
+                  "halfverse": "καὶ ἔκλινεν ἐκ τούτου εἰς τοῦτο, πλὴν ὁ τρυγίας αὐτοῦ οὐκ ἐξεκενώθη,πίονται πάντες οἱ ἁμαρτωλοὶ τῆς γῆς·"
+                },
+                {
+                  "verse": "ἐγὼ δὲ ἀγαλλιάσομαι εἰς τὸν αἰῶνα,",
+                  "type": "psalm-verse",
+                  "number": "10",
+                  "halfverse": "ψαλῶ τῷ Θεῷ Ἰακώβ·καὶ πάντα τὰ κέρατα τῶν ἁμαρτωλῶν συνθλάσω,καὶ ὑψωθήσεται τὰ κέρατα τοῦ δικαίου."
+                }
+              ]
+            }
+          ],
+          "hidden": false,
+          "version": "LXX",
+          "category": ["Psalm"],
+          "type": "psalm",
+          "lastRevision": 2,
+          "slug": "psalm_75",
+          "version_label": "LXX",
+          "metadata": {
+            "omit_gloria": true,
+            "latinname": "Confitebimur tibi",
+            "number": "75",
+            "localname": "Psalm 75",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            }
+          },
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 691",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "el",
+          "style": "psalm"
+        }
+      ]
+    },
+    {
+      "type": "option",
+      "metadata": {
+        "selected": 0,
+        "gloria": {
+          "version": "bcp1979",
+          "category": [null],
+          "label": null,
+          "version_label": "Rite II",
+          "type": "refrain",
+          "slug": "gloria-patri",
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ],
+          "citation": null,
+          "language": "en",
+          "style": "gloria",
+          "hidden": false
+        },
+        "editor_selected": 0
+      },
+      "value": [
+        {
+          "metadata": {
+            "latinname": "Notus in Judaea",
+            "omit_gloria": true,
+            "number": "76",
+            "localname": "Psalm 76",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            }
+          },
+          "type": "psalm",
+          "version": "bcp1979",
+          "version_label": "English",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 692",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "en",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "In Judah is God known; *",
+                  "halfverse": "his Name is great in Israel.",
+                  "number": "1"
+                },
+                {
+                  "halfverse": "and his dwelling is in Zion.",
+                  "verse": "At Salem is his tabernacle, *",
+                  "number": "2",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "There he broke the flashing arrows, *",
+                  "halfverse": "the shield, the sword, and the weapons of battle.",
+                  "type": "psalm-verse",
+                  "number": "3"
+                },
+                {
+                  "number": "4",
+                  "verse": "How glorious you are! *",
+                  "type": "psalm-verse",
+                  "halfverse": "more splendid than the everlasting mountains!"
+                },
+                {
+                  "halfverse": "none of the warriors can lift a hand.",
+                  "verse": "The strong of heart have been despoiled;\nthey sink into sleep; *",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "At your rebuke, O God of Jacob, *",
+                  "type": "psalm-verse",
+                  "number": "6",
+                  "halfverse": "both horse and rider lie stunned."
+                },
+                {
+                  "halfverse": "who can stand before you when you are angry?",
+                  "type": "psalm-verse",
+                  "number": "7",
+                  "verse": "What terror you inspire! *"
+                },
+                {
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "halfverse": "the earth was afraid and was still;",
+                  "verse": "From heaven you pronounced judgment; *"
+                },
+                {
+                  "number": "9",
+                  "halfverse": "and to save all the oppressed of the earth.",
+                  "verse": "When God rose up to judgment *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and the remnant of Hamath will keep your feasts.",
+                  "verse": "Truly, wrathful Edom will give you thanks, *",
+                  "number": "10",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Make a vow to the LORD your God and keep it; *",
+                  "type": "psalm-verse",
+                  "halfverse": "let all around him bring gifts to him who is worthy to be feared.",
+                  "number": "11"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "12",
+                  "verse": "He breaks the spirit of princes, *",
+                  "halfverse": "and strikes terror in the kings of the earth."
+                }
+              ]
+            }
+          ],
+          "slug": "psalm_76",
+          "category": ["Psalm"],
+          "label": "Psalm 76",
+          "style": "psalm",
+          "hidden": false
+        },
+        {
+          "metadata": {
+            "latinname": "Notus in Judaea",
+            "omit_gloria": false,
+            "number": "76",
+            "omit_antiphon": false,
+            "localname": "Psalm 76"
+          },
+          "type": "psalm",
+          "version": "BHS",
+          "version_label": "Hebrew",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 692",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "he",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "לַמְנַצֵּ֥חַ בִּנְגִינֹ֑ת מִזְמ֖וֹר לְאָסָ֣ף שִֽׁיר",
+                  "halfverse": "",
+                  "number": "1"
+                },
+                {
+                  "halfverse": "",
+                  "verse": "נוֹדָ֣ע בִּֽיהוּדָ֣ה אֱלֹהִ֑ים בְּ֝יִשְׂרָאֵ֗ל גָּד֥וֹל שְׁמֽוֹ",
+                  "number": "2",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "וַיְהִ֣י בְשָׁלֵ֣ם סֻכּ֑וֹ וּמְע֖וֹנָת֣וֹ בְצִיּֽוֹן",
+                  "halfverse": "",
+                  "type": "psalm-verse",
+                  "number": "3"
+                },
+                {
+                  "number": "4",
+                  "verse": "שָׁ֭מָּה שִׁבַּ֣ר רִשְׁפֵי קָ֑שֶׁת מָגֵ֬ן וְחֶ֖רֶב וּמִלְחָמָ֣ה סֶֽלָה",
+                  "type": "psalm-verse",
+                  "halfverse": ""
+                },
+                {
+                  "halfverse": "",
+                  "verse": "נָ֭אוֹר אַתָּ֥ה אַדִּ֗יר מֵֽהַרְרֵי טָֽרֶף",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "אֶשְׁתּוֹלְל֨וּ אַבִּ֣ירֵי לֵ֭ב נָמ֣וּ שְׁנָתָ֑ם וְלֹא מָצְא֖וּ כָל אַנְשֵׁי חַ֣יִל יְדֵיהֶֽם",
+                  "type": "psalm-verse",
+                  "number": "6",
+                  "halfverse": ""
+                },
+                {
+                  "halfverse": "",
+                  "type": "psalm-verse",
+                  "number": "7",
+                  "verse": "מִ֭גַּעֲרָ֣תְךָ אֱלֹהֵ֣י יַעֲקֹ֑ב נִ֝רְדָּ֗ם וְרֶ֣כֶב וָסֽוּס"
+                },
+                {
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "halfverse": "",
+                  "verse": "אַתָּ֤ה נ֥וֹרָא אַ֗תָּה וּמִֽי יַעֲמֹ֥ד לְפָנֶ֗יךָ מֵאָ֥ז אַפֶּֽךָ"
+                },
+                {
+                  "number": "9",
+                  "halfverse": "",
+                  "verse": "מִ֭שָּׁמַיִם הִשְׁמַ֣עְתָּ דִּ֑ין אֶ֖רֶץ יָֽרְאָ֣ה וְשָׁקָֽטָה",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "",
+                  "verse": "בְּקוּם לַמִּשְׁפָּ֥ט אֱלֹהִ֑ים לְהוֹשִׁ֖יעַ כָּל עַנְוֵי אֶ֣רֶץ סֶֽלָה",
+                  "number": "10",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "כִּֽי חֲמַ֣ת אָדָ֣ם תּוֹדֶ֑ךָּ שְׁאֵרִ֖ית חֵמֹ֣ת תַּחְגֹּֽר",
+                  "type": "psalm-verse",
+                  "halfverse": "",
+                  "number": "11"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "12",
+                  "verse": "נִֽדֲר֣וּ וְשַׁלְּמוּ֮ לַיהוָ֪ה אֱֽלֹהֵ֫יכֶ֥ם כָּל סְבִיבָ֑יו יוֹבִ֥ילוּ שַׁ֝֗י לַמּוֹרָֽא",
+                  "halfverse": ""
+                }
+              ]
+            }
+          ],
+          "slug": "psalm_76",
+          "category": ["Psalm"],
+          "label": "Psalm 76",
+          "style": "psalm",
+          "hidden": false,
+          "citation": null
+        },
+        {
+          "metadata": {
+            "latinname": "Notus in Judaea",
+            "omit_gloria": true,
+            "number": "76",
+            "localname": "Psalm 76",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            }
+          },
+          "type": "psalm",
+          "version": "LXX",
+          "version_label": "LXX",
+          "source": {
+            "source": "bcp1979",
+            "citation": "p. 692",
+            "api": "https://www.venite.app/api"
+          },
+          "language": "el",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                { "type": "psalm-verse", "number": "1" },
+                {
+                  "halfverse": "ἐν τῷ Ἰσραὴλ μέγα τὸ ὄνομα αὐτοῦ.",
+                  "verse": "Γνωστὸς ἐν τῇ Ἰουδαίᾳ ὁ Θεός,",
+                  "number": "2",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "καὶ ἐγενήθη ἐν εἰρήνῃ ὁ τόπος αὐτοῦ,",
+                  "halfverse": "καὶ τὸ κατοικητήριον αὐτοῦ ἐν Σιών·",
+                  "type": "psalm-verse",
+                  "number": "3"
+                },
+                {
+                  "number": "4",
+                  "verse": "ἐκεῖ συνέτριψε τὰ κράτη τῶν τόξων,",
+                  "type": "psalm-verse",
+                  "halfverse": "ὅπλον καὶ ῥομφαίαν καὶ πόλεμον."
+                },
+                {
+                  "halfverse": "",
+                  "verse": "φωτίζεις σὺ θαυμαστῶς ἀπὸ ὀρέων αἰωνίων·",
+                  "number": "5",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "ἐταράχθησαν πάντες οἱ ἀσύνετοι τῇ καρδίᾳ,",
+                  "type": "psalm-verse",
+                  "number": "6",
+                  "halfverse": "ὕπνωσαν ὕπνον αὐτῶν καὶ οὐχ εὗρον οὐδὲνπάντες οἱ ἄνδρες τοῦ πλούτου ταῖς χερσὶν αὐτῶν."
+                },
+                {
+                  "halfverse": "ἐνύσταξαν οἱ ἐπιβεβηκότες τοῖς ἵπποις.",
+                  "type": "psalm-verse",
+                  "number": "7",
+                  "verse": "ἀπὸ ἐπιτιμήσεώς σου, ὁ Θεὸς Ἰακώβ,"
+                },
+                {
+                  "number": "8",
+                  "type": "psalm-verse",
+                  "halfverse": "ἀπὸ τότε ἡ ὀργή σου. ** Ἅλλη γρ. ἀπὸ τῆς ὀργῆς σου.",
+                  "verse": "σὺ φοβερὸς εἶ, καὶ τίς ἀντιστήσεταί σοι;"
+                },
+                {
+                  "number": "9",
+                  "halfverse": "γῆ ἐφοβήθη καὶ ἡσύχασεν 10ἐν τῷ ἀναστῆναι εἰς κρίσιν τὸν Θεὸντοῦ σῶσαι πάντας τοὺς πραεῖς τῆς γῆς.",
+                  "verse": "ἐκ τοῦ οὐρανοῦ ἠκούτισας κρίσιν,",
+                  "type": "psalm-verse"
+                },
+                { "number": "10", "type": "psalm-verse" },
+                {
+                  "verse": "ὅτι ἐνθύμιον ἀνθρώπου ἐξομολογήσεταί σοι,",
+                  "type": "psalm-verse",
+                  "halfverse": "καὶ ἐγκατάλειμμα ἐνθυμίου ἑορτάσει σοι.",
+                  "number": "11"
+                },
+                {
+                  "type": "psalm-verse",
+                  "number": "12",
+                  "verse": "εὔξασθε καὶ ἀπόδοτε Κυρίῳ τῷ Θεῷ ἡμῶν·",
+                  "halfverse": "πάντες οἱ κύκλῳ αὐτοῦ οἴσουσι δῶρα"
+                }
+              ]
+            }
+          ],
+          "slug": "psalm_76",
+          "category": ["Psalm"],
+          "label": "Psalm 76",
+          "style": "psalm",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "category": [null],
+      "language": "en",
+      "version": "bcp1979",
+      "slug": "gloria-patri",
+      "style": "gloria",
+      "version_label": "Rite II",
+      "type": "refrain",
+      "label": null,
+      "hidden": false,
+      "value": [
+        "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+        "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+      ],
+      "metadata": {}
+    },
+    {
+      "metadata": { "level": 2 },
+      "type": "heading",
+      "hidden": false,
+      "value": ["The Lessons"],
+      "category": [],
+      "source": { "source": "", "api": "", "citation": "" },
+      "style": "text"
+    },
+    {
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "metadata": {
+            "intro": {
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "sharing": {
+                "status": "published",
+                "privacy": "public",
+                "organization": "venite"
+              },
+              "type": "text",
+              "value": ["A Reading from ${longName}."]
+            },
+            "compiled_intro": {
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "sharing": {
+                "status": "published",
+                "privacy": "public",
+                "organization": "venite"
+              },
+              "type": "text",
+              "value": ["A Reading from the Book of Judges."]
+            }
+          },
+          "type": "bible-reading",
+          "source": { "source": "", "api": "", "citation": "" },
+          "hidden": false,
+          "lookup": {
+            "table": { "preference": "lectionary" },
+            "type": "lectionary",
+            "item": { "preference": "readingA" }
+          },
+          "category": [],
+          "style": "long",
+          "label": "The First Lesson",
+          "version": "ESV",
+          "citation": "Judges 5:19-31",
+          "language": "en",
+          "value": [
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "19",
+              "text": "“The kings came, they fought;\n        then fought the kings of Canaan,\n    at Taanach, by the waters of Megiddo;\n        they got no spoils of silver.\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "20",
+              "text": "From heaven the stars fought,\n        from their courses they fought against Sisera.\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "21",
+              "text": "The torrent Kishon swept them away,\n        the ancient torrent, the torrent Kishon.\n        March on, my soul, with might!\n    \n    \n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "22",
+              "text": "“Then loud beat the horses’ hoofs\n        with the galloping, galloping of his steeds.\n    \n    \n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "23",
+              "text": "“Curse Meroz, says the angel of the LORD,\n        curse its inhabitants thoroughly,\n    because they did not come to the help of the LORD,\n        to the help of the LORD against the mighty.\n    \n    \n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "24",
+              "text": "“Most blessed of women be Jael,\n        the wife of Heber the Kenite,\n        of tent-dwelling women most blessed.\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "25",
+              "text": "He asked for water and she gave him milk;\n        she brought him curds in a noble’s bowl.\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "26",
+              "text": "She sent her hand to the tent peg\n        and her right hand to the workmen’s mallet;\n    she struck Sisera;\n        she crushed his head;\n        she shattered and pierced his temple.\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "27",
+              "text": "Between her feet\n        he sank, he fell, he lay still;\n    between her feet\n        he sank, he fell;\n    where he sank,\n        there he fell—dead.\n    \n    \n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "28",
+              "text": "“Out of the window she peered,\n        the mother of Sisera wailed through the lattice:\n    ‘Why is his chariot so long in coming?\n        Why tarry the hoofbeats of his chariots?’\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "29",
+              "text": "Her wisest princesses answer,\n        indeed, she answers herself,\n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "30",
+              "text": "‘Have they not found and divided the spoil?—\n        A womb or two for every man;\n    spoil of dyed materials for Sisera,\n        spoil of dyed materials embroidered,\n        two pieces of dyed work embroidered for the neck as spoil?’\n    \n    \n    "
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "31",
+              "text": "“So may all your enemies perish, O LORD!\n        But your friends be like the sun as he rises in his might.”\n    \n    \n      And the land had rest for forty years. "
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "intro": {
+              "language": "en",
+              "category": ["Bible Reading Introduction"],
+              "style": "text",
+              "sharing": {
+                "status": "published",
+                "privacy": "public",
+                "organization": "venite"
+              },
+              "type": "text",
+              "value": ["A Reading from ${longName}."]
+            }
+          },
+          "type": "bible-reading",
+          "source": { "source": "", "api": "", "citation": "" },
+          "hidden": false,
+          "lookup": {
+            "table": { "preference": "lectionary" },
+            "type": "lectionary",
+            "item": { "preference": "readingA" }
+          },
+          "category": [],
+          "style": "long",
+          "label": "The First Lesson",
+          "version": "Hebrew",
+          "citation": "Judges 5:19-31",
+          "language": "he",
+          "value": [
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "19",
+              "text": "בָּ֤אוּ מְלָכִים֙ נִלְחָ֔מוּ אָ֤ז נִלְחֲמוּ֙ מַלְכֵ֣י כְנַ֔עַן בְּתַעְנַ֖ךְ עַל מֵ֣י מְגִדּ֑וֹ בֶּ֥צַע כֶּ֖סֶף לֹ֥א לָקָֽחוּ"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "20",
+              "text": "מִן שָׁמַ֖יִם נִלְחָ֑מוּ הַכּֽוֹכָבִים֙ מִמְּסִלּוֹתָ֔ם נִלְחֲמ֖וּ עִם סִיסְרָֽא"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "21",
+              "text": "נַ֤חַל קִישׁוֹן֙ גְּרָפָ֔ם נַ֥חַל קְדוּמִ֖ים נַ֣חַל קִישׁ֑וֹן תִּדְרְכִ֥י נַפְשִׁ֖י עֹֽז"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "22",
+              "text": "אָ֥ז הָלְמ֖וּ עִקְּבֵי ס֑וּס מִֽדַּהֲר֖וֹת דַּהֲר֥וֹת אַבִּירָֽיו"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "23",
+              "text": "א֣וֹרוּ מֵר֗וֹז אָמַר֙ מַלְאַ֣ךְ יְהוָ֔ה אֹ֥רוּ אָר֖וֹר יֹשְׁבֶ֑יהָ כִּ֤י לֹֽא בָ֨אוּ֙ לְעֶזְרַ֣ת יְהוָ֔ה לְעֶזְרַ֥ת יְהוָ֖ה בַּגִּבּוֹרִֽים"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "24",
+              "text": "תְּבֹרַךְ֙ מִנָּשִׁ֔ים יָעֵ֕ל אֵ֖שֶׁת חֶ֣בֶר הַקֵּינִ֑י מִנָּשִׁ֥ים בָּאֹ֖הֶל תְּבֹרָֽךְ"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "25",
+              "text": "מַ֥יִם שָׁאַ֖ל חָלָ֣ב נָתָ֑נָה בְּסֵ֥פֶל אַדִּירִ֖ים הִקְרִ֥יבָה חֶמְאָֽה"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "26",
+              "text": "יָדָהּ֙ לַיָּתֵ֣ד תִּשְׁלַ֔חְנָה וִֽימִינָ֖הּ לְהַלְמ֣וּת עֲמֵלִ֑ים וְהָלְמָ֤ה סִֽיסְרָא֙ מָחֲקָ֣ה רֹאשׁ֔וֹ וּמָחֲצָ֥ה וְחָלְפָ֖ה רַקָּתֽוֹ"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "27",
+              "text": "בֵּ֣ין רַגְלֶ֔יהָ כָּרַ֥ע נָפַ֖ל שָׁכָ֑ב בֵּ֤ין רַגְלֶ֨יהָ֙ כָּרַ֣ע נָפָ֔ל בַּאֲשֶׁ֣ר כָּרַ֔ע שָׁ֖ם נָפַ֥ל שָׁדֽוּד"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "28",
+              "text": "בְּעַד֩ הַחַלּ֨וֹן נִשְׁקְפָ֧ה וַתְּיַבֵּ֛ב אֵ֥ם סִֽיסְרָ֖א בְּעַ֣ד הָֽאֶשְׁנָ֑ב מַדּ֗וּעַ בֹּשֵׁ֤שׁ רִכְבּוֹ֙ לָב֔וֹא מַדּ֣וּעַ אֶֽחֱר֔וּ פַּעֲמֵ֖י מַרְכְּבוֹתָֽיו"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "29",
+              "text": "חַכְמ֥וֹת שָׂרוֹתֶ֖יהָ תַּעֲנֶ֑ינָּה אַף הִ֕יא תָּשִׁ֥יב אֲמָרֶ֖יהָ לָֽהּ"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "30",
+              "text": "הֲלֹ֨א יִמְצְא֜וּ יְחַלְּק֣וּ שָׁלָ֗ל רַ֤חַם רַחֲמָתַ֨יִם֙ לְרֹ֣אשׁ גֶּ֔בֶר שְׁלַ֤ל צְבָעִים֙ לְסִ֣יסְרָ֔א שְׁלַ֥ל צְבָעִ֖ים רִקְמָ֑ה צֶ֥בַע רִקְמָתַ֖יִם לְצַוְּארֵ֥י שָׁלָֽל"
+            },
+            {
+              "book": "Judges",
+              "chapter": "5",
+              "verse": "31",
+              "text": "כֵּ֠ן יֹאבְד֤וּ כָל אוֹיְבֶ֨יךָ֙ יְהוָ֔ה וְאֹ֣הֲבָ֔יו כְּצֵ֥את הַשֶּׁ֖מֶשׁ בִּגְבֻרָת֑וֹ וַתִּשְׁקֹ֥ט הָאָ֖רֶץ אַרְבָּעִ֥ים שָׁנָֽה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": [
+        {
+          "label": "",
+          "response": "Thanks be to God.",
+          "text": "The Word of the Lord."
+        }
+      ],
+      "hidden": false,
+      "type": "responsive",
+      "style": "responsive"
+    },
+    {
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "the desert shall rejoice and blossom;",
+                  "verse": "The wilderness and the dry land shall be glad, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "It shall blossom abundantly, *",
+                  "halfverse": "and rejoice with joy and singing."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "the majesty of our God.",
+                  "verse": "They shall see the glory of the Lord, *"
+                },
+                {
+                  "halfverse": "and make firm the feeble knees.",
+                  "type": "psalm-verse",
+                  "verse": "Strengthen the weary hands, *"
+                },
+                {
+                  "verse": "Say to the anxious, “Be strong, do not fear! *",
+                  "halfverse": "Here is your God, coming with judgment to save you.”",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and the ears of the deaf be unstopped.",
+                  "verse": "Then shall the eyes of the blind be opened, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Then shall the lame leap like a deer, *",
+                  "halfverse": "and the tongue of the speechless sing for joy.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and streams in the desert;",
+                  "verse": "For waters shall break forth in the wilderness *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and the thirsty ground, springs of water.",
+                  "verse": "The burning sand shall become a pool *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "The ransomed of God shall return with singing, *",
+                  "type": "psalm-verse",
+                  "halfverse": "with everlasting joy upon their heads."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and sorrow and sighing shall flee away.",
+                  "verse": "Joy and gladness shall be theirs, *"
+                }
+              ]
+            }
+          ],
+          "version": "eow",
+          "citation": "Isaiah 35:1-7,10",
+          "label": "Canticle D: A Song of the Wilderness",
+          "language": "en",
+          "slug": "canticle-d",
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "organization": "venite"
+          },
+          "category": ["Canticle", "Canticle"],
+          "metadata": {
+            "localname": "A Song of the Wilderness",
+            "number": "D",
+            "latinname": null,
+            "changeable": true
+          },
+          "type": "psalm",
+          "version_label": null,
+          "style": "canticle",
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "version_label": null,
+          "slug": "canticle-12",
+          "metadata": {
+            "omit_gloria": true,
+            "localname": "A Song of Creation",
+            "latinname": "Benedicite, omnia opera Domini",
+            "number": "12",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            },
+            "changeable": true
+          },
+          "style": "canticle",
+          "language": "en",
+          "citation": "Song of the Three Young Men, 35-65",
+          "label": "Canticle 12: A Song of Creation",
+          "value": [
+            {
+              "value": [
+                {
+                  "verse": "Glorify the Lord, all you works of the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever."
+                },
+                {
+                  "verse": "In the firmament of his power, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever."
+                }
+              ],
+              "type": "psalm-section",
+              "label": "Invocation"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "O heavens and all waters above the heavens.",
+                  "verse": "Glorify the Lord, you angels and all powers of the Lord, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Sun and moon and stars of the sky, glorify the Lord, *",
+                  "halfverse": "praise him and highly exalt him for ever."
+                },
+                {
+                  "verse": "Glorify the Lord, every shower of rain and fall of dew, *",
+                  "halfverse": "all winds and fire and heat.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Winter and Summer, glorify the Lord, *",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "drops of dew and flakes of snow",
+                  "verse": "Glorify the Lord, O chill and cold, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "Frost and cold, ice and sleet, glorify the Lord, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Glorify the Lord, O nights and days, *",
+                  "halfverse": "O shining light and enfolding dark.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Storm clouds and thunderbolts, glorify the Lord, *",
+                  "halfverse": "praise him and highly exalt him for ever."
+                }
+              ],
+              "type": "psalm-section",
+              "label": "I\t\tThe Cosmic Order"
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "Let the earth glorify the Lord, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O mountains and hills,\nand all that grows upon the earth, *",
+                  "halfverse": "praise him and highly exalt him for ever."
+                },
+                {
+                  "halfverse": "O whales and all that move in the waters.",
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O springs of water, seas, and streams, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "All birds of the air, glorify the Lord, *"
+                },
+                {
+                  "verse": "Glorify the Lord, O beasts of the wild, *",
+                  "halfverse": "and all you flocks and herds.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "O men and women everywhere, glorify the Lord, *",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "type": "psalm-verse"
+                }
+              ],
+              "label": "II\t\tThe Earth and its Creatures"
+            },
+            {
+              "value": [
+                {
+                  "verse": "Let the people of God glorify the Lord, *",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Glorify the Lord, O priests and servants of the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever."
+                },
+                {
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "Glorify the Lord, O spirits and souls of the righteous, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "You that are holy and humble of heart, glorify the Lord, *"
+                }
+              ],
+              "type": "psalm-section",
+              "label": "III\t\tThe People of God"
+            },
+            {
+              "value": [
+                {
+                  "verse": "Let us glorify the Lord: Father, Son, and Holy Spirit; *",
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "praise him and highly exalt him for ever.",
+                  "verse": "In the firmament of his power, glorify the Lord, *"
+                }
+              ],
+              "type": "psalm-section",
+              "label": "Doxology"
+            }
+          ],
+          "type": "psalm",
+          "version": "bcp1979",
+          "category": ["Canticle"]
+        },
+        {
+          "metadata": {
+            "latinname": "Benedicite, omnia opera Domini",
+            "localname": "A Song of Creation",
+            "number": "12",
+            "changeable": true
+          },
+          "hidden": false,
+          "category": ["Canticle", "Canticle"],
+          "label": "Canticle 12: A Song of Creation",
+          "citation": "Song of the Three Young Men, 35-65",
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "sing praise and give honor for ever.",
+                  "verse": "Glorify the Lord, all you works of the Lord, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "In the high vault of heaven, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever."
+                }
+              ],
+              "label": "Invocation"
+            },
+            {
+              "label": "I\t\tThe Cosmic Order",
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Glorify the Lord, you angels and all powers of the Lord, *",
+                  "halfverse": "O heavens and all waters above the heavens.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Sun and moon and stars of the sky, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever."
+                },
+                {
+                  "halfverse": "all winds and fire and heat.",
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, every shower of rain and fall of dew, *"
+                },
+                {
+                  "verse": "Winter and Summer, glorify the Lord, *",
+                  "halfverse": "sing praise and give honor for ever.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Glorify the Lord, O chill and cold, *",
+                  "type": "psalm-verse",
+                  "halfverse": "drops of dew and flakes of snow"
+                },
+                {
+                  "halfverse": "sing praise and give honor for ever.",
+                  "verse": "Frost and cold, ice and sleet, glorify the Lord, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "Glorify the Lord, O nights and days, *",
+                  "type": "psalm-verse",
+                  "halfverse": "O shining light and enfolding dark."
+                },
+                {
+                  "verse": "Storm clouds and thunderbolts, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever."
+                }
+              ]
+            },
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "verse": "Let the earth glorify the Lord, *",
+                  "halfverse": "sing praise and give honor for ever.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "sing praise and give honor for ever.",
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O mountains and hills, and all that grows upon the earth, *"
+                },
+                {
+                  "halfverse": "O whales and all that move in the waters.",
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O springs of water, seas, and streams, *"
+                },
+                {
+                  "halfverse": "sing praise and give honor for ever.",
+                  "verse": "All birds of the air, glorify the Lord, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "and all you flocks and herds.",
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O beasts of the wild, *"
+                },
+                {
+                  "verse": "O men and women everywhere, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever."
+                }
+              ],
+              "label": "II\t\tThe Earth and its Creatures"
+            },
+            {
+              "value": [
+                {
+                  "type": "psalm-verse",
+                  "verse": "Let the people of God glorify the Lord, *",
+                  "halfverse": "sing praise and give honor for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "Glorify the Lord, O priests and servants of the Lord, *",
+                  "halfverse": "sing praise and give honor for ever."
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever.",
+                  "verse": "Glorify the Lord, O spirits and souls of the righteous, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "verse": "You that are holy and humble of heart, glorify the Lord, *",
+                  "halfverse": "sing praise and give honor for ever."
+                }
+              ],
+              "type": "psalm-section",
+              "label": "III\t\tThe People of God"
+            },
+            {
+              "label": "Doxology",
+              "value": [
+                {
+                  "halfverse": "sing praise and give honor for ever.",
+                  "verse": "Let us glorify the Lord:  Father, Son, and Holy Spirit; *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "verse": "In the firmament of his power, glorify the Lord, *",
+                  "type": "psalm-verse",
+                  "halfverse": "sing praise and give honor for ever."
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "version_label": null,
+          "slug": "canticle-12",
+          "version": "eow",
+          "language": "en",
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "style": "canticle",
+          "type": "psalm"
+        }
+      ]
+    },
+    {
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "category": [],
+          "style": "long",
+          "label": "The Second Lesson",
+          "version": "ESV",
+          "type": "bible-reading",
+          "hidden": false,
+          "source": { "source": "", "citation": "", "api": "" },
+          "lookup": {
+            "type": "lectionary",
+            "item": { "preference": "readingB" },
+            "table": { "preference": "lectionary" }
+          },
+          "metadata": {
+            "intro": {
+              "value": ["A Reading from ${longName}."],
+              "category": ["Bible Reading Introduction"],
+              "type": "text",
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "organization": "venite"
+              },
+              "language": "en",
+              "style": "text"
+            },
+            "compiled_intro": {
+              "value": ["A Reading from the Acts of the Apostles."],
+              "category": ["Bible Reading Introduction"],
+              "type": "text",
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "organization": "venite"
+              },
+              "language": "en",
+              "style": "text"
+            }
+          },
+          "citation": "Acts 2:22-36",
+          "language": "en",
+          "value": [
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "22",
+              "text": "“Men of Israel, hear these words: Jesus of Nazareth, a man attested to you by God with mighty works and wonders and signs that God did through him in your midst, as you yourselves know—"
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "23",
+              "text": "this Jesus, delivered up according to the definite plan and foreknowledge of God, you crucified and killed by the hands of lawless men. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "24",
+              "text": "God raised him up, loosing the pangs of death, because it was not possible for him to be held by it. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "25",
+              "text": "For David says concerning him,\n\n    “‘I saw the Lord always before me,\n        for he is at my right hand that I may not be shaken;\n    "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "26",
+              "text": "therefore my heart was glad, and my tongue rejoiced;\n        my flesh also will dwell in hope.\n    "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "27",
+              "text": "For you will not abandon my soul to Hades,\n        or let your Holy One see corruption.\n    "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "28",
+              "text": "You have made known to me the paths of life;\n        you will make me full of gladness with your presence.’\n    \n    \n      "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "29",
+              "text": "“Brothers, I may say to you with confidence about the patriarch David that he both died and was buried, and his tomb is with us to this day. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "30",
+              "text": "Being therefore a prophet, and knowing that God had sworn with an oath to him that he would set one of his descendants on his throne, "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "31",
+              "text": "he foresaw and spoke about the resurrection of the Christ, that he was not abandoned to Hades, nor did his flesh see corruption. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "32",
+              "text": "This Jesus God raised up, and of that we all are witnesses. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "33",
+              "text": "Being therefore exalted at the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this that you yourselves are seeing and hearing. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "34",
+              "text": "For David did not ascend into the heavens, but he himself says,\n\n    “‘The Lord said to my Lord,\n    “Sit at my right hand,\n    "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "35",
+              "text": "until I make your enemies your footstool.”’\n    \n    \n      "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "36",
+              "text": "Let all the house of Israel therefore know for certain that God has made him both Lord and Christ, this Jesus whom you crucified.” "
+            }
+          ]
+        },
+        {
+          "category": [],
+          "style": "long",
+          "label": "The Second Lesson",
+          "version": "GNT",
+          "type": "bible-reading",
+          "hidden": false,
+          "source": { "source": "", "citation": "", "api": "" },
+          "lookup": {
+            "type": "lectionary",
+            "item": { "preference": "readingB" },
+            "table": { "preference": "lectionary" }
+          },
+          "metadata": {
+            "intro": {
+              "value": ["A Reading from ${longName}."],
+              "category": ["Bible Reading Introduction"],
+              "type": "text",
+              "sharing": {
+                "privacy": "public",
+                "status": "published",
+                "organization": "venite"
+              },
+              "language": "en",
+              "style": "text"
+            }
+          },
+          "citation": "Acts 2:22-36",
+          "language": "el",
+          "value": [
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "22",
+              "text": "Ανδρες Ἰσραηλῖται, ἀκούσατε τοὺς λόγους τούτους. Ἰησοῦν τὸν Ναζωραῖον, ἄνδρα⸂ ἀποδεδειγμένον ἀπὸ τοῦ θεοῦ⸃ εἰς ὑμᾶς δυνάμεσι καὶ τέρασι καὶ σημείοις οἷς ἐποίησεν δι’ αὐτοῦ ὁ θεὸς ἐν μέσῳ ὑμῶν, ⸀ καθὼς αὐτοὶ οἴδατε, "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "23",
+              "text": "τοῦτον τῇ ὡρισμένῃ βουλῇ καὶ προγνώσει τοῦ θεοῦ⸀ ἔκδοτον διὰ⸀ χειρὸς ἀνόμων προσπήξαντες ἀνείλατε, "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "24",
+              "text": "ὃν ὁ θεὸς ἀνέστησεν λύσας τὰς ὠδῖνας τοῦ θανάτου, καθότι οὐκ ἦν δυνατὸν κρατεῖσθαι αὐτὸν ὑπ’ αὐτοῦ· "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "25",
+              "text": "Δαυὶδ γὰρ λέγει εἰς αὐτόν· Προορώμην τὸν κύριον ἐνώπιόν μου διὰ παντός, ὅτι ἐκ δεξιῶν μού ἐστιν ἵνα μὴ σαλευθῶ. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "26",
+              "text": "διὰ τοῦτο ηὐφράνθη⸂ ἡ καρδία μου⸃ καὶ ἠγαλλιάσατο ἡ γλῶσσά μου, ἔτι δὲ καὶ ἡ σάρξ μου κατασκηνώσει ἐπ’ ἐλπίδι· "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "27",
+              "text": "ὅτι οὐκ ἐγκαταλείψεις τὴν ψυχήν μου εἰς⸀ ᾅδην, οὐδὲ δώσεις τὸν ὅσιόν σου ἰδεῖν διαφθοράν. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "28",
+              "text": "ἐγνώρισάς μοι ὁδοὺς ζωῆς, πληρώσεις με εὐφροσύνης μετὰ τοῦ προσώπου σου. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "29",
+              "text": "Ἄνδρες ἀδελφοί, ἐξὸν εἰπεῖν μετὰ παρρησίας πρὸς ὑμᾶς περὶ τοῦ πατριάρχου Δαυὶδ, ὅτι καὶ ἐτελεύτησεν καὶ ἐτάφη, καὶ τὸ μνῆμα αὐτοῦ ἔστιν ἐν ἡμῖν ἄχρι τῆς ἡμέρας ταύτης· "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "30",
+              "text": "προφήτης οὖν ὑπάρχων, καὶ εἰδὼς ὅτι ὅρκῳ ὤμοσεν αὐτῷ ὁ θεὸς ἐκ καρποῦ τῆς ὀσφύος⸀ αὐτοῦ καθίσαι ἐπὶ⸂ τὸν θρόνον⸃ αὐτοῦ, "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "31",
+              "text": "προϊδὼν ἐλάλησεν περὶ τῆς ἀναστάσεως τοῦ χριστοῦ ὅτι⸂ οὔτε ἐγκατελείφθη⸃ εἰς⸀ ᾅδην⸀ οὔτε ἡ σὰρξ αὐτοῦ εἶδεν διαφθοράν. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "32",
+              "text": "τοῦτον τὸν Ἰησοῦν ἀνέστησεν ὁ θεός, οὗ πάντες ἡμεῖς ἐσμεν μάρτυρες. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "33",
+              "text": "τῇ δεξιᾷ οὖν τοῦ θεοῦ ὑψωθεὶς τήν τε ἐπαγγελίαν τοῦ⸂ πνεύματος τοῦ ἁγίου⸃ λαβὼν παρὰ τοῦ πατρὸς ἐξέχεεν τοῦτο⸀ ὃ⸀ ὑμεῖς βλέπετε καὶ ἀκούετε. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "34",
+              "text": "οὐ γὰρ Δαυὶδ ἀνέβη εἰς τοὺς οὐρανούς, λέγει δὲ αὐτός· Εἶπεν⸀ ὁ κύριος τῷ κυρίῳ μου· Κάθου ἐκ δεξιῶν μου, "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "35",
+              "text": "ἕως ἂν θῶ τοὺς ἐχθρούς σου ὑποπόδιον τῶν ποδῶν σου. "
+            },
+            {
+              "book": "Acts",
+              "chapter": "2",
+              "verse": "36",
+              "text": "ἀσφαλῶς οὖν γινωσκέτω πᾶς οἶκος Ἰσραὴλ ὅτι καὶ κύριον⸂ αὐτὸν καὶ χριστὸν⸃ ⸂ ἐποίησεν ὁ θεός⸃, τοῦτον τὸν Ἰησοῦν ὃν ὑμεῖς ἐσταυρώσατε. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "style": "responsive",
+      "hidden": false,
+      "value": [
+        {
+          "response": "Thanks be to God.",
+          "label": "",
+          "text": "The Word of the Lord."
+        }
+      ],
+      "type": "responsive"
+    },
+    {
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "language": "en",
+          "value": [
+            {
+              "value": [
+                {
+                  "verse": "I saw no temple in the city, *",
+                  "type": "psalm-verse",
+                  "halfverse": "for its temple is the God of surpassing strength and the Lamb."
+                },
+                {
+                  "halfverse": "for the glory of God shines on it, and its lamp is the Lamb.",
+                  "verse": "And the city has no need of sun or moon to light it, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "and the rulers of the world lay their honor and glory there.",
+                  "verse": "By its light the nations shall walk, *"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "into it they will bring the honor and glory of nations.",
+                  "verse": "Its gates shall never be shut by day, nor shall there be any night; *"
+                },
+                {
+                  "halfverse": "flowing from the throne of God and of the Lamb.",
+                  "type": "psalm-verse",
+                  "verse": "I saw the clean river of the water of life, bright as crystal, *"
+                },
+                {
+                  "halfverse": "and the leaves of the tree were for the healing of nations.",
+                  "verse": "The tree of life spanned the river, giving fruit every month, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "there they will see God’s face, whose Name shall be on their foreheads.",
+                  "verse": "All curses cease where the throne of God and the Lamb stands,\nand all servants give worship there; *",
+                  "type": "psalm-verse"
+                }
+              ],
+              "type": "psalm-section"
+            }
+          ],
+          "sharing": {
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+            "status": "published",
+            "collaborators": [],
+            "privacy": "public",
+            "organization": "venite"
+          },
+          "hidden": false,
+          "style": "canticle",
+          "metadata": {
+            "latinname": null,
+            "localname": "A Song of the Heavenly City",
+            "number": "O",
+            "changeable": true
+          },
+          "citation": "Revelation 21:22-26, 22:1-4",
+          "version": "eow",
+          "version_label": null,
+          "label": "Canticle O: A Song of the Heavenly City",
+          "type": "psalm",
+          "slug": "canticle-o",
+          "category": ["Canticle", "Canticle"]
+        },
+        {
+          "metadata": {
+            "latinname": "Magna et mirabilia",
+            "number": "19",
+            "gloria": {
+              "version": "bcp1979",
+              "category": [null],
+              "label": null,
+              "version_label": "Rite II",
+              "type": "refrain",
+              "slug": "gloria-patri",
+              "value": [
+                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+              ],
+              "citation": null,
+              "language": "en",
+              "style": "gloria",
+              "hidden": false
+            },
+            "localname": "The Song of the Redeemed",
+            "changeable": true
+          },
+          "lastRevision": 2,
+          "source": { "source": "", "api": "", "citation": "" },
+          "slug": "canticle-19",
+          "hidden": false,
+          "value": [
+            {
+              "type": "psalm-section",
+              "value": [
+                {
+                  "halfverse": "surpassing human understanding.",
+                  "verse": "O ruler of the universe, Lord God,\ngreat deeds are they that you have done, *",
+                  "type": "psalm-verse"
+                },
+                {
+                  "halfverse": "O King of all the ages.",
+                  "type": "psalm-verse",
+                  "verse": "Your ways are ways of righteousness and truth, *"
+                },
+                {
+                  "verse": "Who can fail to do you homage, Lord,\nand sing the praises of your Name? *",
+                  "halfverse": "for you only are the Holy One.",
+                  "type": "psalm-verse"
+                },
+                {
+                  "type": "psalm-verse",
+                  "halfverse": "because your just and holy works have been revealed.",
+                  "verse": "All nations will draw near and fall down before you, *"
+                }
+              ]
+            }
+          ],
+          "version": "bcp1979",
+          "citation": "Revelation 15:3-4",
+          "style": "canticle",
+          "label": "Canticle 19: The Song of the Redeemed",
+          "version_label": null,
+          "type": "psalm",
+          "language": "en",
+          "category": ["Canticle"]
+        }
+      ]
+    },
+    {
+      "source": { "source": "bcp1979", "api": "", "citation": "p. 96" },
+      "type": "text",
+      "style": "text",
+      "hidden": false,
+      "display_format": "unison",
+      "response": "Amen.",
+      "label": "The Apostles’ Creed",
+      "category": [],
+      "value": [
+        "I believe in God, the Father almighty,\n\tcreator of heaven and earth.\nI believe in Jesus Christ, his only Son, our Lord.\n\tHe was conceived by the power of the Holy Spirit\n\tand born of the Virgin Mary.\n\tHe suffered under Pontius Pilate,\n\twas crucified, died, and was buried. \n\tHe descended to the dead.\n\tOn the third day he rose again.\n\tHe ascended into heaven,\n\tand is seated at the right hand of the Father.\n\tHe will come again to judge the living and the dead.\nI believe in the Holy Spirit,\n\tthe holy catholic Church,\n\tthe communion of saints,\n\tthe forgiveness of sins,\n\tthe resurrection of the body,\n\tand the life everlasting."
+      ],
+      "metadata": { "response": "Amen.", "omit_response": false }
+    },
+    {
+      "source": { "api": "", "citation": "p. 97", "source": "bcp1979" },
+      "type": "heading",
+      "category": [],
+      "metadata": { "level": 2 },
+      "value": ["The Prayers"],
+      "hidden": false,
+      "style": "text"
+    },
+    {
+      "value": [
+        {
+          "label": "Officiant",
+          "response": "",
+          "text": "The Lord be with you."
+        },
+        { "label": "People", "text": "And also with you." },
+        { "text": "Let us pray.", "label": "Officiant" }
+      ],
+      "hidden": false,
+      "style": "preces",
+      "type": "responsive"
+    },
+    {
+      "value": [
+        {
+          "source": { "citation": "", "source": "", "api": "" },
+          "label": "The Lord’s Prayer",
+          "display_format": "unison",
+          "type": "text",
+          "metadata": { "omit_response": false },
+          "value": [
+            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+          ],
+          "version_label": "Traditional",
+          "hidden": false,
+          "style": "prayer",
+          "category": []
+        },
+        {
+          "source": { "source": "", "citation": "", "api": "" },
+          "category": [],
+          "version_label": "Contemporary",
+          "style": "prayer",
+          "type": "text",
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "metadata": { "omit_response": false },
+          "display_format": "unison",
+          "hidden": false,
+          "label": "The Lord’s Prayer"
+        }
+      ],
+      "source": { "citation": "", "api": "", "source": "" },
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "category": [],
+      "type": "option",
+      "slug": "lords_prayer",
+      "hidden": false
+    },
+    {
+      "source": { "citation": "", "api": "", "source": "" },
+      "type": "option",
+      "slug": "suffrages_mp",
+      "value": [
+        {
+          "source": { "source": "", "api": "", "citation": "" },
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Show us your mercy, O Lord;"
+            },
+            { "label": "R.", "text": "And grant us your salvation." },
+            {
+              "label": "V.",
+              "text": "Clothe your ministers with righteousness;"
+            },
+            { "label": "R.", "text": "Let your people sing with joy." },
+            { "text": "Give peace, O Lord, in all the world;", "label": "V." },
+            { "text": "For only in you can we live in safety.", "label": "R." },
+            {
+              "text": "Lord, keep this nation under your care; ",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "And guide us in the way of justice and truth."
+            },
+            { "label": "V.", "text": "Let your way be known upon earth;" },
+            { "text": "Your saving health among all nations.", "label": "R." },
+            {
+              "label": "V.",
+              "text": "Let not the needy, O Lord, be forgotten;"
+            },
+            {
+              "label": "R.",
+              "text": "Nor the hope of the poor be taken away."
+            },
+            { "text": "Create in us clean hearts, O God;", "label": "V." },
+            { "label": "R.", "text": "And sustain us with your Holy Spirit." }
+          ],
+          "style": "preces",
+          "metadata": {},
+          "type": "responsive",
+          "label": "Suffrages A",
+          "hidden": false,
+          "category": []
+        },
+        {
+          "value": [
+            {
+              "response": "",
+              "text": "Save your people, Lord, and bless your inheritance;",
+              "label": "V."
+            },
+            {
+              "text": "Govern and uphold them, now and always.",
+              "label": "R."
+            },
+            { "text": "Day by day we bless you;", "label": "V." },
+            { "text": "We praise your name for ever.", "label": "R." },
+            { "text": "Lord, keep us from all sin today;", "label": "V." },
+            { "text": "Have mercy on us, Lord, have mercy.", "label": "R." },
+            { "text": "Lord, show us your love and mercy;", "label": "V." },
+            { "text": "For we put our trust in you.", "label": "R." },
+            { "text": "In you, Lord, is our hope;", "label": "V." },
+            { "label": "R.", "text": "And we shall never hope in vain." }
+          ],
+          "source": { "source": "", "citation": "", "api": "" },
+          "style": "preces",
+          "type": "responsive",
+          "metadata": {},
+          "category": [],
+          "label": "Suffrages B",
+          "hidden": false
+        },
+        {
+          "hidden": false,
+          "value": [
+            {
+              "response": "",
+              "label": "V.",
+              "text": "Help us, O God our Savior;"
+            },
+            { "text": "Deliver us and forgive us our sins.", "label": "R." },
+            { "text": "Look upon your congregation.", "label": "V." },
+            {
+              "text": "Give to your people the blessing of peace.",
+              "label": "R."
+            },
+            { "label": "V.", "text": "Declare your glory among the nations;" },
+            { "label": "R.", "text": "And your wonders among all peoples." },
+            {
+              "text": "Do not let the oppressed be shamed and turned away;",
+              "label": "V."
+            },
+            { "label": "R.", "text": "Never forget the lives of your poor." },
+            {
+              "text": "Continue your loving-kindness to those who know you;",
+              "label": "V."
+            },
+            {
+              "label": "R.",
+              "text": "And your favor to those who are true of heart."
+            },
+            {
+              "text": "Satisfy us by your loving-kindness in the morning;",
+              "label": "V."
+            },
+            {
+              "text": "So shall we rejoice and be glad all the days of our life.",
+              "label": "R."
+            }
+          ],
+          "category": [],
+          "metadata": {},
+          "type": "responsive",
+          "version_label": "EOW",
+          "style": "preces",
+          "source": { "citation": "p. 42", "api": "", "source": "EOW 1" },
+          "label": "Suffrages for Use in Morning Prayer"
+        }
+      ],
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "hidden": false,
+      "condition": { "mode": "and", "conditions": [{ "feastDay": false }] },
+      "category": []
+    },
+    {
+      "slug": "proper-12",
+      "hidden": false,
+      "language": "en",
+      "version": "bcp1979",
+      "category": ["Collect", "Collect of the Day"],
+      "metadata": {
+        "omit_label": false,
+        "rollup": false,
+        "omit_response": false,
+        "response": "Amen."
+      },
+      "style": "prayer",
+      "type": "text",
+      "value": [
+        "O god, the protector of all who trust in you, without whom nothing is strong, nothing is holy: Increase and multiply upon us your mercy; that, with you as our ruler and guide, we may so pass through things temporal, that we lose not the things eternal; through Jesus Christ our Lord, who lives and reigns with you and the Holy Spirit, one God, for ever and ever."
+      ],
+      "sharing": {
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "collaborators": [],
+        "status": "published",
+        "privacy": "public"
+      },
+      "label": "The Collect of the Day"
+    },
+    {
+      "hidden": false,
+      "value": [
+        "Almighty God, who after the creation of the world rested from all your works and sanctified a day of rest for all your creatures: Grant that we, putting away all earthly anxieties, may be duly prepared for the service of your sanctuary, and that our rest here upon earth may be a preparation for the eternal rest promised to your people in heaven; through Jesus Christ our Lord."
+      ],
+      "category": [],
+      "metadata": {},
+      "type": "text",
+      "style": "prayer",
+      "label": "A Collect for Saturdays",
+      "source": { "api": "", "citation": "", "source": "" }
+    },
+    {
+      "category": [],
+      "version": "bcp1979",
+      "value": [
+        "Lord Jesus Christ, you stretched out your arms of love on the hard wood of the cross that everyone might come within the reach of your saving embrace: So clothe us in your Spirit that we, reaching forth our hands in love, may bring those who do not know you to the knowledge and love of you; for the honor of your Name."
+      ],
+      "label": "A Prayer for Mission",
+      "slug": "mp_prayers_for_mission",
+      "style": "prayer",
+      "type": "text",
+      "language": "en",
+      "source": { "citation": "", "api": "", "source": "" },
+      "hidden": false,
+      "lastRevision": 30,
+      "metadata": { "omit_response": false }
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Here may be sung a hymn or anthem.",
+        "Authorized intercessions and thanksgivings may follow."
+      ]
+    },
+    { "type": "text", "hidden": false, "style": "authorized-prayers" },
+    {
+      "value": [
+        "Before the close of the Office one or both of the following may be used"
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "category": [],
+      "metadata": {},
+      "type": "text",
+      "label": "The General Thanksgiving",
+      "value": [
+        "Almighty God, Father of all mercies,\nwe your unworthy servants give you humble thanks\nfor all your goodness and loving-kindness\nto us and to all whom you have made.\nWe bless you for our creation, preservation,\nand all the blessings of this life;\nbut above all for your immeasurable love\nin the redemption of the world by our Lord Jesus Christ;\nfor the means of grace, and for the hope of glory.",
+        "And, we pray, give us such an awareness of your mercies,\nthat with truly thankful hearts we may show forth your praise,\nnot only with our lips, but in our lives,\nby giving up our selves to your service,\nand by walking before you\nin holiness and righteousness all our days;\nthrough Jesus Christ our Lord,\nto whom, with you and the Holy Spirit,\nbe honor and glory throughout all ages. "
+      ],
+      "hidden": false,
+      "style": "prayer",
+      "source": { "source": "bcp1979", "citation": "p. 101", "api": "" }
+    },
+    {
+      "hidden": false,
+      "style": "prayer",
+      "source": { "api": "", "citation": "p. 102", "source": "bcp1979" },
+      "label": "A Prayer of St. Chrysostom",
+      "metadata": {},
+      "type": "text",
+      "value": [
+        "Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
+      ],
+      "category": []
+    },
+    { "value": ["Then may be said"], "hidden": false, "type": "rubric" },
+    {
+      "hidden": false,
+      "style": "responsive",
+      "type": "responsive",
+      "value": [
+        {
+          "label": "",
+          "text": "Let us bless the Lord.",
+          "response": "Thanks be to God."
+        }
+      ]
+    },
+    {
+      "value": ["The Officiant may then conclude with one of the following"],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "citation": "Romans 15:13",
+      "lastRevision": 22,
+      "language": "en",
+      "category": ["Closing Sentence"],
+      "value": [
+        {
+          "text": "May the God of hope fill us with all joy and peace in believing through the power of the Holy Spirit.",
+          "verse": "13",
+          "chapter": "15",
+          "book": "Romans"
+        }
+      ],
+      "type": "bible-reading",
+      "date_created": { "seconds": 1611692948, "nanoseconds": 334000000 },
+      "source": { "api": "", "source": "", "citation": "" },
+      "slug": "closing_sentence",
+      "hidden": false,
+      "metadata": {},
+      "version": "eow",
+      "sharing": {
+        "status": "published",
+        "collaborators": [],
+        "organization": "venite",
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "id": "Fj6dKIXsceza13UshYHU",
+      "style": "short",
+      "date_modified": { "_seconds": 1611693358, "_nanoseconds": 753000000 }
+    },
+    {
+      "type": "heading",
+      "metadata": { "level": 1 },
+      "hidden": false,
+      "value": ["The Angelus"]
+    },
+    {
+      "value": [
+        {
+          "text": "The Angel of the Lord announced unto Mary,",
+          "response": "",
+          "label": "V."
+        },
+        { "text": "And she conceived of the Holy Spirit.", "label": "R." }
+      ],
+      "style": "preces",
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "metadata": {},
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ]
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "response": "",
+          "label": "V.",
+          "text": "Behold the handmaid of the Lord,"
+        },
+        { "label": "R.", "text": "Be it done unto me according to your Word." }
+      ],
+      "style": "preces",
+      "type": "responsive"
+    },
+    {
+      "style": "prayer",
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "style": "preces",
+      "value": [
+        {
+          "text": "And the Word was made flesh.",
+          "response": "",
+          "label": "V."
+        },
+        { "text": "And dwelt among us.", "label": "R." }
+      ],
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "hidden": false,
+      "style": "prayer",
+      "type": "text"
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "text": "Pray for us, O Holy Mother of God.",
+          "response": "",
+          "label": "V."
+        },
+        {
+          "label": "R.",
+          "text": "That we may be made worthy of the promises of Christ."
+        },
+        { "text": "Let us pray.", "label": "" }
+      ],
+      "style": "preces"
+    },
+    {
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "Pour your grace into our hearts, O Lord, that we who have known the incarnation of your Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought to the glory of his resurrection; who lives and reigns with you, in the unity of the Holy Spirit, one God, now and for ever."
+      ]
+    }
+  ],
+  "source": { "citation": "", "api": "", "source": "" },
+  "category": [],
+  "lastRevision": 796,
+  "type": "liturgy",
+  "date_modified": { "seconds": 1636555478, "nanoseconds": 46000000 },
+  "label": "Morning Prayer",
+  "slug": "morning-prayer",
+  "metadata": {
+    "supplement": false,
+    "special_preferences": {
+      "insertGloria": "",
+      "palms": {
+        "key": "palms",
+        "options": [
+          {
+            "label": "—",
+            "metadata": { "alternateYear": false },
+            "value": "no",
+            "default": false
+          },
+          {
+            "label": "Before the Office",
+            "metadata": { "alternateYear": false },
+            "value": "before",
+            "default": false
+          },
+          {
+            "value": "before",
+            "default": false,
+            "label": "Before the Office",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "Palms"
+      }
+    },
+    "preferences": {
+      "originalLanguages": {
+        "label": "Include Original-Language Biblical Texts",
+        "category": "Translations",
+        "key": "originalLanguages",
+        "options": [
+          {
+            "label": "No",
+            "value": "false",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "default": false,
+            "value": "true",
+            "label": "Yes",
+            "metadata": { "alternateYear": false }
+          }
+        ]
+      },
+      "readingA": {
+        "category": "Readings",
+        "options": [
+          {
+            "label": "OT/First Reading",
+            "value": "first_reading",
+            "default": true,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "second_reading",
+            "label": "Epistle/Second Reading",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "Gospel",
+            "value": "gospel",
+            "metadata": { "alternateYear": false },
+            "default": false
+          }
+        ],
+        "label": "First Reading",
+        "key": "readingA"
+      },
+      "veniteGloria": {
+        "category": "Advanced",
+        "key": "veniteGloria",
+        "label": "Include Gloria Patri in the Venite/Jubilate",
+        "options": [
+          {
+            "value": "no",
+            "default": true,
+            "label": "No",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "yes",
+            "metadata": { "alternateYear": false },
+            "label": "Yes",
+            "default": false
+          }
+        ]
+      },
+      "bibleVersion": {
+        "key": "bibleVersion",
+        "category": "Translations",
+        "options": [
+          {
+            "default": false,
+            "label": "New Revised Standard Version (NRSV)",
+            "value": "NRSV",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "CEB",
+            "label": "Common English Bible (CEB)",
+            "default": false
+          },
+          {
+            "default": false,
+            "value": "ESV",
+            "label": "English Standard Version (ESV)",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "KJV",
+            "default": false,
+            "label": "King James Version (KJV)",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "Bible Version"
+      },
+      "omitForeOffice": {
+        "label": "Omit Fore-Office",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "value": "no",
+            "label": "No",
+            "default": false
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "label": "Yes",
+            "default": false,
+            "value": "yes"
+          }
+        ],
+        "category": "Advanced",
+        "key": "omitForeOffice"
+      },
+      "angelus": {
+        "label": "Angelus",
+        "category": "Supplemental Devotions",
+        "key": "angelus",
+        "options": [
+          {
+            "value": "no",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "—"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Before the Office",
+            "value": "before"
+          },
+          {
+            "label": "After the Office",
+            "value": "after",
+            "metadata": { "alternateYear": false },
+            "default": false
+          }
+        ]
+      },
+      "andrewes": {
+        "label": "Lancelot Andrewes’s Private Prayers",
+        "key": "andrewes",
+        "category": "Supplemental Devotions",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "value": "noo",
+            "default": false,
+            "label": "—"
+          },
+          {
+            "value": "after",
+            "label": "After the Office",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "default": false,
+            "label": "After the Office",
+            "value": "after",
+            "metadata": { "alternateYear": false }
+          }
+        ]
+      },
+      "readingC": {
+        "options": [
+          {
+            "value": "none",
+            "metadata": { "alternateYear": false },
+            "default": true,
+            "label": "—"
+          },
+          {
+            "value": "first_reading",
+            "metadata": { "alternateYear": false },
+            "label": "OT/First Reading",
+            "default": false
+          },
+          {
+            "default": false,
+            "value": "second_reading",
+            "label": "Epistle/Second Reading",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "gospel",
+            "default": false,
+            "label": "Gospel"
+          }
+        ],
+        "category": "Readings",
+        "label": "Third Reading",
+        "key": "readingC"
+      },
+      "insertGloria": {
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "false",
+            "label": "No"
+          },
+          {
+            "default": false,
+            "label": "Yes",
+            "metadata": { "alternateYear": false },
+            "value": "true"
+          }
+        ],
+        "category": "Advanced",
+        "label": "Insert Gloria Patri after each Psalm",
+        "key": "insertGloria"
+      },
+      "canticleTable": {
+        "category": "Cycles",
+        "label": "Canticle Table",
+        "key": "canticleTable",
+        "options": [
+          {
+            "value": "bcp1979",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "1979 Table of Suggested Canticles"
+          },
+          {
+            "label": "Te Deum/Benedictus",
+            "value": "tdb",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "value": "eow",
+            "default": false,
+            "label": "Enriching Our Worship",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "ojn",
+            "label": "Order of St. Julian of Norwich",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          }
+        ]
+      },
+      "psalmCycle": {
+        "label": "Psalm Cycle",
+        "category": "Cycles",
+        "options": [
+          {
+            "label": "Daily Office Lectionary",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "bcp1979_daily_psalms"
+          },
+          {
+            "label": "30-day Cycle",
+            "value": "bcp1979_30day_psalter",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "label": "RCL (Track 1)",
+            "value": "rclsundayTrack1",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "label": "RCL (Track 2)",
+            "value": "rclsunday",
+            "default": false
+          }
+        ],
+        "key": "psalmCycle"
+      },
+      "readingB": {
+        "category": "Readings",
+        "options": [
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "—",
+            "value": "none"
+          },
+          {
+            "label": "OT/First Reading",
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "first_reading"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Epistle/Second Reading",
+            "value": "second_reading"
+          },
+          {
+            "default": true,
+            "label": "Gospel",
+            "value": "gospel",
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "key": "readingB",
+        "label": "Second Reading"
+      },
+      "lectionary": {
+        "options": [
+          {
+            "value": "bcp1979_daily_office",
+            "label": "Daily Office Lectionary",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "rclsundayTrack1",
+            "label": "RCL Track 1",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "RCL Track 2",
+            "metadata": { "alternateYear": false },
+            "value": "rclsunday",
+            "default": false
+          }
+        ],
+        "label": "Lectionary",
+        "category": "Cycles",
+        "key": "lectionary"
+      },
+      "psalterVersion": {
+        "key": "psalterVersion",
+        "category": "Translations",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "value": "bcp1979",
+            "label": "1979 Book of Common Prayer",
+            "default": false
+          },
+          {
+            "default": false,
+            "label": "Inclusive Psalter",
+            "value": "ip",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "coverdale",
+            "label": "Coverdale (1662 BCP)"
+          }
+        ],
+        "label": "Psalter Version",
+        "description": "The <a href='https://yptheology.org/inclusive-psalter/' target='_blank'>Inclusive Psalter</a> is a project of Young Peoples’ Theology."
+      },
+      "sermon": {
+        "options": [
+          {
+            "default": false,
+            "value": "none",
+            "metadata": { "alternateYear": false },
+            "label": "—"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "value": "after_office",
+            "label": "After the Office",
+            "default": false
+          },
+          {
+            "default": false,
+            "value": "after_readings",
+            "metadata": { "alternateYear": false },
+            "label": "After the Readings"
+          },
+          {
+            "default": false,
+            "value": "after_collects",
+            "metadata": { "alternateYear": false },
+            "label": "After the Collects"
+          }
+        ],
+        "key": "sermon",
+        "category": "Advanced",
+        "label": "Sermon"
+      }
+    },
+    "evening": false,
+    "liturgyversions": ["bcp1979", "eow", "eow", "eow"]
+  },
+  "day": {
+    "evening": false,
+    "date": "2022-7-30",
+    "kalendar": "lff2018",
+    "slug": "saturday-7th-pentecost",
+    "propers": "saturday-proper-12",
+    "week": {
+      "omit_the": false,
+      "color": "Green",
+      "cycle": "Easter",
+      "season": "OrdinaryTime",
+      "name": "Seventh Sunday after Pentecost",
+      "kalendar": "bcp1979",
+      "week": 21,
+      "slug": "7th-pentecost",
+      "proper": 12,
+      "propers": "proper-12"
+    },
+    "years": {
+      "bcp1979_daily_office": 2,
+      "bcp1979_daily_psalms": 2,
+      "rclsunday": "C"
+    },
+    "holy_days": [
+      {
+        "bio": [
+          "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+          "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+          "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+          "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+          "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+        ],
+        "type": { "rank": 2, "name": "Black Letter" },
+        "slug": "william-wilberforce",
+        "kalendar": "lff2018",
+        "mmdd": "7/30",
+        "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+      }
+    ],
+    "season": "OrdinaryTime",
+    "color": "Green",
+    "holy_day_observed": {
+      "bio": [
+        "The life of William Wilberforce refutes the popular notion that a politician cannot be a saintly Christian, dedicated to the service of humanity. ",
+        "Wilberforce was born into an affluent family in Hull, Yorkshire, on August 24th, 1759, and was educated at St. John’s College, Cambridge. In 1780, he was elected to the House of Commons, and he served in it until 1825. He died in London, July 29th, 1833, and was buried in Westminster Abbey. ",
+        "His conversion to an evangelical Christian life occurred in 1784, several years after he entered Parliament. Fortunately, he was induced by his friends not to abandon his political activities after this inward change in his life, but thereafter he steadfastly refused to accept high office or a peerage. ",
+        "He gave himself unstintingly to the promotion of overseas missions, popular education, and the reformation of public manners and morals. He also supported parliamentary reform and Catholic emancipation. Above all, his fame rests upon his persistent, uncompromising, and single-minded crusade for the abolition of slavery and the slave-trade. That sordid traffic was abolished in 1807. He died just one month before Parliament put an end to slavery in the British dominions. One of the last letters written by John Wesley was addressed to Wilberforce. In it Wesley gave him his blessing for his noble enterprise. ",
+        "Wilberforce’s eloquence as a speaker, his charm in personal address, and his profound religious spirit, made him a formidable power for good; and his countrymen came to recognize in him a man of heroic greatness. "
+      ],
+      "type": { "rank": 2, "name": "Black Letter" },
+      "slug": "william-wilberforce",
+      "kalendar": "lff2018",
+      "mmdd": "7/30",
+      "name": "WILLIAM WILBERFORCE, Social Reformer, 1833"
+    }
+  },
+  "selected_prefs": {
+    "originalLanguages": "true",
+    "readingA": "first_reading",
+    "veniteGloria": "yes",
+    "bibleVersion": "ESV",
+    "omitForeOffice": "no",
+    "angelus": "after",
+    "andrewes": "noo",
+    "readingC": "none",
+    "insertGloria": "false",
+    "canticleTable": "eow",
+    "psalmCycle": "bcp1979_daily_psalms",
+    "readingB": "second_reading",
+    "lectionary": "bcp1979_daily_office",
+    "psalterVersion": "bcp1979",
+    "sermon": "none",
+    "ublc": "false"
+  }
+}

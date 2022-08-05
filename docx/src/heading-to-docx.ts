@@ -3,7 +3,13 @@ import {
   Heading,
   LiturgicalDay,
 } from "@venite/ldf/dist/cjs";
-import { Paragraph, TextRun, TabStopType, TabStopPosition } from "docx";
+import {
+  Paragraph,
+  TextRun,
+  TabStopType,
+  TabStopPosition,
+  AlignmentType,
+} from "docx";
 import { LDFStyles } from "./ldf-styles";
 import { DocxChild } from "./ldf-to-docx";
 import { LocaleStrings } from "./locale-strings";
@@ -24,11 +30,9 @@ export function headingToDocx(
   function texts(): DocxChild[] {
     const value = doc?.value ?? [];
 
-    const sections = [
-      doc?.citation,
-      (doc?.value || [])[1],
-      doc?.source,
-    ].filter((n) => Boolean(n)).length;
+    const sections = [doc?.citation, (doc?.value || [])[1], doc?.source].filter(
+      (n) => Boolean(n)
+    ).length;
 
     const children: DocxChild[] = [
       headerNode(
@@ -151,7 +155,7 @@ export function headingToDocx(
         return [
           date.toLocaleDateString("en", { weekday: "long" }),
           localeStrings.after || " after the ",
-          day?.week?.omit_the ? "" : localeStrings.the,
+          (day?.week?.omit_the ? "" : localeStrings.the).replace("  ", " "),
           day?.week?.name,
         ];
       }
@@ -162,7 +166,7 @@ export function headingToDocx(
     date = isDate ? dateNode() : null,
     day = isDay && doc.day ? dayNode(doc.day) : null;
 
-  return [
+  const base = [
     ...(text ? text : []),
     date ? headerNode(level, [date], true) : null,
     day
@@ -173,4 +177,20 @@ export function headingToDocx(
         )
       : null,
   ].filter(notEmpty);
+
+  if (isDay) {
+    (doc.day?.holy_days || [])
+      .filter((hd) => (hd?.type?.rank || 3) < 3 && hd.name)
+      .forEach((hd) => {
+        base.push(
+          new Paragraph({
+            style: "Default",
+            children: [new TextRun({ text: `\t${hd.name}`, italics: true })],
+            alignment: AlignmentType.CENTER,
+          })
+        );
+      });
+  }
+
+  return base;
 }
