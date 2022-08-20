@@ -790,7 +790,7 @@ export class LiturgySelectComponent implements OnInit {
             : prefs[key];
           return availableReadings.includes(t);
         })
-        .reduce((a, b) => a && b);
+        .reduce((a, b) => a && b, true);
     }
     return allReadingsAvailable;
   }
