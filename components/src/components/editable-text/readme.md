@@ -7,16 +7,16 @@
 
 ## Properties
 
-| Property        | Attribute     | Description                                                                      | Type                                                                                            | Default     |
-| --------------- | ------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------- |
-| `inputType`     | `input-type`  | Type to apply to `<input type=...>`, if `short` is `true`                        | `"date" \| "email" \| "number" \| "password" \| "search" \| "tel" \| "text" \| "time" \| "url"` | `undefined` |
-| `path`          | `path`        | A JSON Pointer that points to the text field being edited                        | `string`                                                                                        | `undefined` |
-| `placeholder`   | `placeholder` | Displays if text is falsy or an empty string                                     | `string`                                                                                        | `undefined` |
-| `short`         | `short`       | Whether to display as a short, single-line input                                 | `boolean`                                                                                       | `undefined` |
-| `template`      | `template`    | The base object this expresses as part of `LiturgicalDocument`.value             | `BibleReadingVerse \| Heading \| PsalmVerse \| ResponsivePrayerLine \| string`                  | `""`        |
-| `templateMaker` | --            | Function that converts a text node into a `template` — used when a node is split | `(s: string) => string \| ResponsivePrayerLine \| BibleReadingVerse \| PsalmVerse \| Heading`   | `(s) => s`  |
-| `text`          | `text`        | Starting text for editing                                                        | `string`                                                                                        | `undefined` |
-| `unit`          | `unit`        | Optional unit information (e.g., 'px') to add after the input                    | `string`                                                                                        | `undefined` |
+| Property        | Attribute     | Description                                                                      | Type                                                                                                                                     | Default     |
+| --------------- | ------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `inputType`     | `input-type`  | Type to apply to `<input type=...>`, if `short` is `true`                        | `"date" \| "datetime-local" \| "email" \| "month" \| "number" \| "password" \| "search" \| "tel" \| "text" \| "time" \| "url" \| "week"` | `undefined` |
+| `path`          | `path`        | A JSON Pointer that points to the text field being edited                        | `string`                                                                                                                                 | `undefined` |
+| `placeholder`   | `placeholder` | Displays if text is falsy or an empty string                                     | `string`                                                                                                                                 | `undefined` |
+| `short`         | `short`       | Whether to display as a short, single-line input                                 | `boolean`                                                                                                                                | `undefined` |
+| `template`      | `template`    | The base object this expresses as part of `LiturgicalDocument`.value             | `BibleReadingVerse \| Heading \| PsalmVerse \| ResponsivePrayerLine \| string`                                                           | `""`        |
+| `templateMaker` | --            | Function that converts a text node into a `template` — used when a node is split | `(s: string) => string \| ResponsivePrayerLine \| BibleReadingVerse \| PsalmVerse \| Heading`                                            | `(s) => s`  |
+| `text`          | `text`        | Starting text for editing                                                        | `string`                                                                                                                                 | `undefined` |
+| `unit`          | `unit`        | Optional unit information (e.g., 'px') to add after the input                    | `string`                                                                                                                                 | `undefined` |
 
 
 ## Events

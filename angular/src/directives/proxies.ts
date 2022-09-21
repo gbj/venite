@@ -5,17 +5,59 @@ import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import { Components } from '@venite/components';
 
+
+export declare interface IonAccordion extends Components.IonAccordion {}
+@ProxyCmp({
+  inputs: ['disabled', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value']
+})
+@Component({
+  selector: 'ion-accordion',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value']
+})
+export class IonAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+import { AccordionGroup as IAccordionGroup } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/accordion-group/accordion-group';
+export declare interface IonAccordionGroup extends Components.IonAccordionGroup {}
+@ProxyCmp({
+  inputs: ['animated', 'disabled', 'expand', 'multiple', 'readonly', 'value']
+})
+@Component({
+  selector: 'ion-accordion-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['animated', 'disabled', 'expand', 'multiple', 'readonly', 'value'],
+  outputs: ['ionChange']
+})
+export class IonAccordionGroup {
+  /** Emitted when the value property has changed. */
+  ionChange!: IAccordionGroup['ionChange'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionChange']);
+  }
+}
+
 import { ActionSheet as IActionSheet } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/action-sheet/action-sheet';
 export declare interface IonActionSheet extends Components.IonActionSheet {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })
 @Component({
   selector: 'ion-action-sheet',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'subHeader', 'translucent'],
   outputs: ['ionActionSheetDidPresent', 'ionActionSheetWillPresent', 'ionActionSheetWillDismiss', 'ionActionSheetDidDismiss']
 })
 export class IonActionSheet {
@@ -38,14 +80,14 @@ export class IonActionSheet {
 import { Alert as IAlert } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/alert/alert';
 export declare interface IonAlert extends Components.IonAlert {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'htmlAttributes', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })
 @Component({
   selector: 'ion-alert',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'cssClass', 'enterAnimation', 'header', 'htmlAttributes', 'inputs', 'keyboardClose', 'leaveAnimation', 'message', 'subHeader', 'translucent'],
   outputs: ['ionAlertDidPresent', 'ionAlertWillPresent', 'ionAlertWillDismiss', 'ionAlertDidDismiss']
 })
 export class IonAlert {
@@ -100,13 +142,13 @@ export class IonAvatar {
 
 export declare interface IonBackButton extends Components.IonBackButton {}
 @ProxyCmp({
-  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type']
+  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'routerAnimation', 'text', 'type']
 })
 @Component({
   selector: 'ion-back-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'text', 'type']
+  inputs: ['color', 'defaultHref', 'disabled', 'icon', 'routerAnimation', 'text', 'type']
 })
 export class IonBackButton {
   protected el: HTMLElement;
@@ -158,16 +200,64 @@ export class IonBadge {
   }
 }
 
+import { Breadcrumb as IBreadcrumb } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/breadcrumb/breadcrumb';
+export declare interface IonBreadcrumb extends Components.IonBreadcrumb {}
+@ProxyCmp({
+  inputs: ['active', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'separator', 'target']
+})
+@Component({
+  selector: 'ion-breadcrumb',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['active', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'separator', 'target'],
+  outputs: ['ionFocus', 'ionBlur']
+})
+export class IonBreadcrumb {
+  /** Emitted when the breadcrumb has focus. */
+  ionFocus!: IBreadcrumb['ionFocus'];
+  /** Emitted when the breadcrumb loses focus. */
+  ionBlur!: IBreadcrumb['ionBlur'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionFocus', 'ionBlur']);
+  }
+}
+
+import { Breadcrumbs as IBreadcrumbs } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/breadcrumbs/breadcrumbs';
+export declare interface IonBreadcrumbs extends Components.IonBreadcrumbs {}
+@ProxyCmp({
+  inputs: ['color', 'itemsAfterCollapse', 'itemsBeforeCollapse', 'maxItems']
+})
+@Component({
+  selector: 'ion-breadcrumbs',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'itemsAfterCollapse', 'itemsBeforeCollapse', 'maxItems'],
+  outputs: ['ionCollapsedClick']
+})
+export class IonBreadcrumbs {
+  /** Emitted when the collapsed indicator is clicked on. */
+  ionCollapsedClick!: IBreadcrumbs['ionCollapsedClick'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionCollapsedClick']);
+  }
+}
+
 import { Button as IButton } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/button/button';
 export declare interface IonButton extends Components.IonButton {}
 @ProxyCmp({
-  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type']
+  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerAnimation', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type']
 })
 @Component({
   selector: 'ion-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type'],
+  inputs: ['buttonType', 'color', 'disabled', 'download', 'expand', 'fill', 'href', 'rel', 'routerAnimation', 'routerDirection', 'shape', 'size', 'strong', 'target', 'type'],
   outputs: ['ionFocus', 'ionBlur']
 })
 export class IonButton {
@@ -205,13 +295,13 @@ export class IonButtons {
 
 export declare interface IonCard extends Components.IonCard {}
 @ProxyCmp({
-  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type']
+  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'target', 'type']
 })
 @Component({
   selector: 'ion-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'target', 'type']
+  inputs: ['button', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'target', 'type']
 })
 export class IonCard {
   protected el: HTMLElement;
@@ -309,9 +399,9 @@ export declare interface IonCheckbox extends Components.IonCheckbox {}
 export class IonCheckbox {
   /** Emitted when the checked property has changed. */
   ionChange!: ICheckbox['ionChange'];
-  /** Emitted when the toggle has focus. */
+  /** Emitted when the checkbox has focus. */
   ionFocus!: ICheckbox['ionFocus'];
-  /** Emitted when the toggle loses focus. */
+  /** Emitted when the checkbox loses focus. */
   ionBlur!: ICheckbox['ionBlur'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -324,13 +414,13 @@ export class IonCheckbox {
 
 export declare interface IonChip extends Components.IonChip {}
 @ProxyCmp({
-  inputs: ['color', 'outline']
+  inputs: ['color', 'disabled', 'outline']
 })
 @Component({
   selector: 'ion-chip',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['color', 'outline']
+  inputs: ['color', 'disabled', 'outline']
 })
 export class IonChip {
   protected el: HTMLElement;
@@ -373,12 +463,14 @@ export declare interface IonContent extends Components.IonContent {}
   outputs: ['ionScrollStart', 'ionScroll', 'ionScrollEnd']
 })
 export class IonContent {
-  /** Emitted when the scroll has started. */
+  /** Emitted when the scroll has started. This event is disabled by default.
+Set `scrollEvents` to `true` to enable. */
   ionScrollStart!: IContent['ionScrollStart'];
   /** Emitted while scrolling. This event is disabled by default.
-Look at the property: `scrollEvents` */
+Set `scrollEvents` to `true` to enable. */
   ionScroll!: IContent['ionScroll'];
-  /** Emitted when the scroll has ended. */
+  /** Emitted when the scroll has ended. This event is disabled by default.
+Set `scrollEvents` to `true` to enable. */
   ionScrollEnd!: IContent['ionScrollEnd'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -391,14 +483,14 @@ Look at the property: `scrollEvents` */
 import { Datetime as IDatetime } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/datetime/datetime';
 export declare interface IonDatetime extends Components.IonDatetime {}
 @ProxyCmp({
-  inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'],
-  methods: ['open']
+  inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'monthValues', 'multiple', 'name', 'preferWheel', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues'],
+  methods: ['confirm', 'reset', 'cancel']
 })
 @Component({
   selector: 'ion-datetime',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled', 'displayFormat', 'displayTimezone', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'name', 'pickerFormat', 'pickerOptions', 'placeholder', 'readonly', 'value', 'yearValues'],
+  inputs: ['cancelText', 'clearText', 'color', 'dayValues', 'disabled', 'doneText', 'firstDayOfWeek', 'hourCycle', 'hourValues', 'isDateEnabled', 'locale', 'max', 'min', 'minuteValues', 'monthValues', 'multiple', 'name', 'preferWheel', 'presentation', 'readonly', 'showClearButton', 'showDefaultButtons', 'showDefaultTimeLabel', 'showDefaultTitle', 'size', 'value', 'yearValues'],
   outputs: ['ionCancel', 'ionChange', 'ionFocus', 'ionBlur']
 })
 export class IonDatetime {
@@ -415,6 +507,25 @@ export class IonDatetime {
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ['ionCancel', 'ionChange', 'ionFocus', 'ionBlur']);
+  }
+}
+
+
+export declare interface IonDatetimeButton extends Components.IonDatetimeButton {}
+@ProxyCmp({
+  inputs: ['color', 'datetime', 'disabled']
+})
+@Component({
+  selector: 'ion-datetime-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'datetime', 'disabled']
+})
+export class IonDatetimeButton {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
   }
 }
 
@@ -441,13 +552,13 @@ export class IonFab {
 import { FabButton as IFabButton } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/fab-button/fab-button';
 export declare interface IonFabButton extends Components.IonFabButton {}
 @ProxyCmp({
-  inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type']
+  inputs: ['activated', 'closeIcon', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type']
 })
 @Component({
   selector: 'ion-fab-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['activated', 'color', 'disabled', 'download', 'href', 'rel', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type'],
+  inputs: ['activated', 'closeIcon', 'color', 'disabled', 'download', 'href', 'rel', 'routerAnimation', 'routerDirection', 'show', 'size', 'target', 'translucent', 'type'],
   outputs: ['ionFocus', 'ionBlur']
 })
 export class IonFabButton {
@@ -485,13 +596,13 @@ export class IonFabList {
 
 export declare interface IonFooter extends Components.IonFooter {}
 @ProxyCmp({
-  inputs: ['translucent']
+  inputs: ['collapse', 'translucent']
 })
 @Component({
   selector: 'ion-footer',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['translucent']
+  inputs: ['collapse', 'translucent']
 })
 export class IonFooter {
   protected el: HTMLElement;
@@ -542,13 +653,13 @@ export class IonHeader {
 
 export declare interface IonIcon extends Components.IonIcon {}
 @ProxyCmp({
-  inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src']
+  inputs: ['color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'sanitize', 'size', 'src']
 })
 @Component({
   selector: 'ion-icon',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['ariaLabel', 'color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'size', 'src']
+  inputs: ['color', 'flipRtl', 'icon', 'ios', 'lazy', 'md', 'mode', 'name', 'sanitize', 'size', 'src']
 })
 export class IonIcon {
   protected el: HTMLElement;
@@ -664,13 +775,13 @@ export class IonInput {
 
 export declare interface IonItem extends Components.IonItem {}
 @ProxyCmp({
-  inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type']
+  inputs: ['button', 'color', 'counter', 'counterFormatter', 'detail', 'detailIcon', 'disabled', 'download', 'fill', 'href', 'lines', 'rel', 'routerAnimation', 'routerDirection', 'shape', 'target', 'type']
 })
 @Component({
   selector: 'ion-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['button', 'color', 'detail', 'detailIcon', 'disabled', 'download', 'href', 'lines', 'rel', 'routerDirection', 'target', 'type']
+  inputs: ['button', 'color', 'counter', 'counterFormatter', 'detail', 'detailIcon', 'disabled', 'download', 'fill', 'href', 'lines', 'rel', 'routerAnimation', 'routerDirection', 'shape', 'target', 'type']
 })
 export class IonItem {
   protected el: HTMLElement;
@@ -842,14 +953,14 @@ export class IonListHeader {
 import { Loading as ILoading } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/loading/loading';
 export declare interface IonLoading extends Components.IonLoading {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })
 @Component({
   selector: 'ion-loading',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
+  inputs: ['animated', 'backdropDismiss', 'cssClass', 'duration', 'enterAnimation', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'message', 'showBackdrop', 'spinner', 'translucent'],
   outputs: ['ionLoadingDidPresent', 'ionLoadingWillPresent', 'ionLoadingWillDismiss', 'ionLoadingDidDismiss']
 })
 export class IonLoading {
@@ -940,15 +1051,15 @@ export class IonMenuToggle {
 import { Modal as IModal } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/modal/modal';
 export declare interface IonModal extends Components.IonModal {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'],
-  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
+  inputs: ['animated', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'enterAnimation', 'handle', 'handleBehavior', 'htmlAttributes', 'initialBreakpoint', 'isOpen', 'keepContentsMounted', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose', 'trigger'],
+  methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss', 'setCurrentBreakpoint', 'getCurrentBreakpoint']
 })
 @Component({
   selector: 'ion-modal',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose'],
-  outputs: ['ionModalDidPresent', 'ionModalWillPresent', 'ionModalWillDismiss', 'ionModalDidDismiss']
+  inputs: ['animated', 'backdropBreakpoint', 'backdropDismiss', 'breakpoints', 'canDismiss', 'enterAnimation', 'handle', 'handleBehavior', 'htmlAttributes', 'initialBreakpoint', 'isOpen', 'keepContentsMounted', 'keyboardClose', 'leaveAnimation', 'presentingElement', 'showBackdrop', 'swipeToClose', 'trigger'],
+  outputs: ['ionModalDidPresent', 'ionModalWillPresent', 'ionModalWillDismiss', 'ionModalDidDismiss', 'ionBreakpointDidChange', 'didPresent', 'willPresent', 'willDismiss', 'didDismiss']
 })
 export class IonModal {
   /** Emitted after the modal has presented. */
@@ -959,11 +1070,25 @@ export class IonModal {
   ionModalWillDismiss!: IModal['willDismiss'];
   /** Emitted after the modal has dismissed. */
   ionModalDidDismiss!: IModal['didDismiss'];
+  /** Emitted after the modal breakpoint has changed. */
+  ionBreakpointDidChange!: IModal['ionBreakpointDidChange'];
+  /** Emitted after the modal has presented.
+Shorthand for ionModalWillDismiss. */
+  didPresent!: IModal['didPresentShorthand'];
+  /** Emitted before the modal has presented.
+Shorthand for ionModalWillPresent. */
+  willPresent!: IModal['willPresentShorthand'];
+  /** Emitted before the modal has dismissed.
+Shorthand for ionModalWillDismiss. */
+  willDismiss!: IModal['willDismissShorthand'];
+  /** Emitted after the modal has dismissed.
+Shorthand for ionModalDidDismiss. */
+  didDismiss!: IModal['didDismissShorthand'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionModalDidPresent', 'ionModalWillPresent', 'ionModalWillDismiss', 'ionModalDidDismiss']);
+    proxyOutputs(this, this.el, ['ionModalDidPresent', 'ionModalWillPresent', 'ionModalWillDismiss', 'ionModalDidDismiss', 'ionBreakpointDidChange', 'didPresent', 'willPresent', 'willDismiss', 'didDismiss']);
   }
 }
 
@@ -996,13 +1121,13 @@ export class IonNav {
 
 export declare interface IonNavLink extends Components.IonNavLink {}
 @ProxyCmp({
-  inputs: ['component', 'componentProps', 'routerDirection']
+  inputs: ['component', 'componentProps', 'routerAnimation', 'routerDirection']
 })
 @Component({
   selector: 'ion-nav-link',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['component', 'componentProps', 'routerDirection']
+  inputs: ['component', 'componentProps', 'routerAnimation', 'routerDirection']
 })
 export class IonNavLink {
   protected el: HTMLElement;
@@ -1034,14 +1159,14 @@ export class IonNote {
 import { Picker as IPicker } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/picker/picker';
 export declare interface IonPicker extends Components.IonPicker {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss', 'getColumn']
 })
 @Component({
   selector: 'ion-picker',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
+  inputs: ['animated', 'backdropDismiss', 'buttons', 'columns', 'cssClass', 'duration', 'enterAnimation', 'htmlAttributes', 'keyboardClose', 'leaveAnimation', 'showBackdrop'],
   outputs: ['ionPickerDidPresent', 'ionPickerWillPresent', 'ionPickerWillDismiss', 'ionPickerDidDismiss']
 })
 export class IonPicker {
@@ -1080,18 +1205,61 @@ export class IonPickerColumn {
   }
 }
 
+import { PickerColumnInternal as IPickerColumnInternal } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/picker-column-internal/picker-column-internal';
+export declare interface IonPickerColumnInternal extends Components.IonPickerColumnInternal {}
+@ProxyCmp({
+  inputs: ['color', 'items', 'value']
+})
+@Component({
+  selector: 'ion-picker-column-internal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['color', 'items', 'value'],
+  outputs: ['ionChange']
+})
+export class IonPickerColumnInternal {
+  /** Emitted when the value has changed. */
+  ionChange!: IPickerColumnInternal['ionChange'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionChange']);
+  }
+}
+
+import { PickerInternal as IPickerInternal } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/picker-internal/picker-internal';
+export declare interface IonPickerInternal extends Components.IonPickerInternal {}
+
+@Component({
+  selector: 'ion-picker-internal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  outputs: ['ionInputModeChange']
+})
+export class IonPickerInternal {
+  /**  */
+  ionInputModeChange!: IPickerInternal['ionInputModeChange'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionInputModeChange']);
+  }
+}
+
 import { Popover as IPopover } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/popover/popover';
 export declare interface IonPopover extends Components.IonPopover {}
 @ProxyCmp({
-  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'],
+  inputs: ['alignment', 'animated', 'arrow', 'backdropDismiss', 'component', 'componentProps', 'dismissOnSelect', 'enterAnimation', 'event', 'htmlAttributes', 'isOpen', 'keepContentsMounted', 'keyboardClose', 'leaveAnimation', 'reference', 'showBackdrop', 'side', 'size', 'translucent', 'trigger', 'triggerAction'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })
 @Component({
   selector: 'ion-popover',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'backdropDismiss', 'component', 'componentProps', 'cssClass', 'enterAnimation', 'event', 'keyboardClose', 'leaveAnimation', 'showBackdrop', 'translucent'],
-  outputs: ['ionPopoverDidPresent', 'ionPopoverWillPresent', 'ionPopoverWillDismiss', 'ionPopoverDidDismiss']
+  inputs: ['alignment', 'animated', 'arrow', 'backdropDismiss', 'component', 'componentProps', 'dismissOnSelect', 'enterAnimation', 'event', 'htmlAttributes', 'isOpen', 'keepContentsMounted', 'keyboardClose', 'leaveAnimation', 'reference', 'showBackdrop', 'side', 'size', 'translucent', 'trigger', 'triggerAction'],
+  outputs: ['ionPopoverDidPresent', 'ionPopoverWillPresent', 'ionPopoverWillDismiss', 'ionPopoverDidDismiss', 'didPresent', 'willPresent', 'willDismiss', 'didDismiss']
 })
 export class IonPopover {
   /** Emitted after the popover has presented. */
@@ -1102,11 +1270,23 @@ export class IonPopover {
   ionPopoverWillDismiss!: IPopover['willDismiss'];
   /** Emitted after the popover has dismissed. */
   ionPopoverDidDismiss!: IPopover['didDismiss'];
+  /** Emitted after the popover has presented.
+Shorthand for ionPopoverWillDismiss. */
+  didPresent!: IPopover['didPresentShorthand'];
+  /** Emitted before the popover has presented.
+Shorthand for ionPopoverWillPresent. */
+  willPresent!: IPopover['willPresentShorthand'];
+  /** Emitted before the popover has dismissed.
+Shorthand for ionPopoverWillDismiss. */
+  willDismiss!: IPopover['willDismissShorthand'];
+  /** Emitted after the popover has dismissed.
+Shorthand for ionPopoverDidDismiss. */
+  didDismiss!: IPopover['didDismissShorthand'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionPopoverDidPresent', 'ionPopoverWillPresent', 'ionPopoverWillDismiss', 'ionPopoverDidDismiss']);
+    proxyOutputs(this, this.el, ['ionPopoverDidPresent', 'ionPopoverWillPresent', 'ionPopoverWillDismiss', 'ionPopoverDidDismiss', 'didPresent', 'willPresent', 'willDismiss', 'didDismiss']);
   }
 }
 
@@ -1180,14 +1360,14 @@ export class IonRadioGroup {
 import { Range as IRange } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/range/range';
 export declare interface IonRange extends Components.IonRange {}
 @ProxyCmp({
-  inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value']
+  inputs: ['activeBarStart', 'color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value']
 })
 @Component({
   selector: 'ion-range',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'snaps', 'step', 'ticks', 'value'],
-  outputs: ['ionChange', 'ionFocus', 'ionBlur']
+  inputs: ['activeBarStart', 'color', 'debounce', 'disabled', 'dualKnobs', 'max', 'min', 'name', 'pin', 'pinFormatter', 'snaps', 'step', 'ticks', 'value'],
+  outputs: ['ionChange', 'ionFocus', 'ionBlur', 'ionKnobMoveStart', 'ionKnobMoveEnd']
 })
 export class IonRange {
   /** Emitted when the value property has changed. */
@@ -1196,11 +1376,17 @@ export class IonRange {
   ionFocus!: IRange['ionFocus'];
   /** Emitted when the range loses focus. */
   ionBlur!: IRange['ionBlur'];
+  /** Emitted when the user starts moving the range knob, whether through
+mouse drag, touch gesture, or keyboard interaction. */
+  ionKnobMoveStart!: IRange['ionKnobMoveStart'];
+  /** Emitted when the user finishes moving the range knob, whether through
+mouse drag, touch gesture, or keyboard interaction. */
+  ionKnobMoveEnd!: IRange['ionKnobMoveEnd'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionChange', 'ionFocus', 'ionBlur']);
+    proxyOutputs(this, this.el, ['ionChange', 'ionFocus', 'ionBlur', 'ionKnobMoveStart', 'ionKnobMoveEnd']);
   }
 }
 
@@ -1319,13 +1505,13 @@ export class IonRippleEffect {
 import { Route as IRoute } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/route/route';
 export declare interface IonRoute extends Components.IonRoute {}
 @ProxyCmp({
-  inputs: ['component', 'componentProps', 'url']
+  inputs: ['beforeEnter', 'beforeLeave', 'component', 'componentProps', 'url']
 })
 @Component({
   selector: 'ion-route',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['component', 'componentProps', 'url'],
+  inputs: ['beforeEnter', 'beforeLeave', 'component', 'componentProps', 'url'],
   outputs: ['ionRouteDataChanged']
 })
 export class IonRoute {
@@ -1394,13 +1580,13 @@ export class IonRouter {
 
 export declare interface IonRouterLink extends Components.IonRouterLink {}
 @ProxyCmp({
-  inputs: ['color', 'href', 'rel', 'routerDirection', 'target']
+  inputs: ['color', 'href', 'rel', 'routerAnimation', 'routerDirection', 'target']
 })
 @Component({
   selector: 'ion-router-link',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['color', 'href', 'rel', 'routerDirection', 'target']
+  inputs: ['color', 'href', 'rel', 'routerAnimation', 'routerDirection', 'target']
 })
 export class IonRouterLink {
   protected el: HTMLElement;
@@ -1448,14 +1634,14 @@ export class IonRow {
 import { Searchbar as ISearchbar } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/searchbar/searchbar';
 export declare interface IonSearchbar extends Components.IonSearchbar {}
 @ProxyCmp({
-  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'],
+  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'showClearButton', 'spellcheck', 'type', 'value'],
   methods: ['setFocus', 'getInputElement']
 })
 @Component({
   selector: 'ion-searchbar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'spellcheck', 'type', 'value'],
+  inputs: ['animated', 'autocomplete', 'autocorrect', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color', 'debounce', 'disabled', 'enterkeyhint', 'inputmode', 'placeholder', 'searchIcon', 'showCancelButton', 'showClearButton', 'spellcheck', 'type', 'value'],
   outputs: ['ionInput', 'ionChange', 'ionCancel', 'ionClear', 'ionBlur', 'ionFocus']
 })
 export class IonSearchbar {
@@ -1482,13 +1668,13 @@ export class IonSearchbar {
 import { Segment as ISegment } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/segment/segment';
 export declare interface IonSegment extends Components.IonSegment {}
 @ProxyCmp({
-  inputs: ['color', 'disabled', 'scrollable', 'value']
+  inputs: ['color', 'disabled', 'scrollable', 'selectOnFocus', 'swipeGesture', 'value']
 })
 @Component({
   selector: 'ion-segment',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['color', 'disabled', 'scrollable', 'value'],
+  inputs: ['color', 'disabled', 'scrollable', 'selectOnFocus', 'swipeGesture', 'value'],
   outputs: ['ionChange']
 })
 export class IonSegment {
@@ -1533,13 +1719,15 @@ export declare interface IonSelect extends Components.IonSelect {}
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   inputs: ['cancelText', 'compareWith', 'disabled', 'interface', 'interfaceOptions', 'multiple', 'name', 'okText', 'placeholder', 'selectedText', 'value'],
-  outputs: ['ionChange', 'ionCancel', 'ionFocus', 'ionBlur']
+  outputs: ['ionChange', 'ionCancel', 'ionDismiss', 'ionFocus', 'ionBlur']
 })
 export class IonSelect {
   /** Emitted when the value has changed. */
   ionChange!: ISelect['ionChange'];
   /** Emitted when the selection is cancelled. */
   ionCancel!: ISelect['ionCancel'];
+  /** Emitted when the overlay is dismissed. */
+  ionDismiss!: ISelect['ionDismiss'];
   /** Emitted when the select has focus. */
   ionFocus!: ISelect['ionFocus'];
   /** Emitted when the select loses focus. */
@@ -1548,7 +1736,7 @@ export class IonSelect {
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionChange', 'ionCancel', 'ionFocus', 'ionBlur']);
+    proxyOutputs(this, this.el, ['ionChange', 'ionCancel', 'ionDismiss', 'ionFocus', 'ionBlur']);
   }
 }
 
@@ -1574,13 +1762,13 @@ export class IonSelectOption {
 
 export declare interface IonSelectPopover extends Components.IonSelectPopover {}
 @ProxyCmp({
-  inputs: ['header', 'message', 'options', 'subHeader']
+  inputs: ['header', 'message', 'multiple', 'options', 'subHeader']
 })
 @Component({
   selector: 'ion-select-popover',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['header', 'message', 'options', 'subHeader']
+  inputs: ['header', 'message', 'multiple', 'options', 'subHeader']
 })
 export class IonSelectPopover {
   protected el: HTMLElement;
@@ -1890,14 +2078,14 @@ export class IonTitle {
 import { Toast as IToast } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/toast/toast';
 export declare interface IonToast extends Components.IonToast {}
 @ProxyCmp({
-  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
+  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'htmlAttributes', 'icon', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
   methods: ['present', 'dismiss', 'onDidDismiss', 'onWillDismiss']
 })
 @Component({
   selector: 'ion-toast',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
+  inputs: ['animated', 'buttons', 'color', 'cssClass', 'duration', 'enterAnimation', 'header', 'htmlAttributes', 'icon', 'keyboardClose', 'leaveAnimation', 'message', 'position', 'translucent'],
   outputs: ['ionToastDidPresent', 'ionToastWillPresent', 'ionToastWillDismiss', 'ionToastDidDismiss']
 })
 export class IonToast {
@@ -1920,13 +2108,13 @@ export class IonToast {
 import { Toggle as IToggle } from '@venite/components/Users/gjohnston/Documents/venite/components/node_modules/@ionic/core/dist/collection/components/toggle/toggle';
 export declare interface IonToggle extends Components.IonToggle {}
 @ProxyCmp({
-  inputs: ['checked', 'color', 'disabled', 'name', 'value']
+  inputs: ['checked', 'color', 'disabled', 'enableOnOffLabels', 'name', 'value']
 })
 @Component({
   selector: 'ion-toggle',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['checked', 'color', 'disabled', 'name', 'value'],
+  inputs: ['checked', 'color', 'disabled', 'enableOnOffLabels', 'name', 'value'],
   outputs: ['ionChange', 'ionFocus', 'ionBlur']
 })
 export class IonToggle {

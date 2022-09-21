@@ -1,3 +1,4 @@
+import { IonInputCustomEvent } from '@ionic/core';
 import { Component, Element, Prop, Event, EventEmitter, State, h } from '@stencil/core';
 import { Change } from '@venite/ldf';
 
@@ -60,8 +61,8 @@ export class EditableStringListComponent {
     }
   }
 
-  onInput(ev : CustomEvent<KeyboardEvent>) {
-    this.currentValue = (ev.target as HTMLInputElement).value;
+  onInput(ev : IonInputCustomEvent<InputEvent>) {
+    this.currentValue = (ev.target as HTMLIonInputElement).value?.toString();
   }
 
   onKeyDown(ev : KeyboardEvent) {

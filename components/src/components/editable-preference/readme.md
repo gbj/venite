@@ -57,6 +57,7 @@ graph TD;
   ldf-editable-preference --> ion-icon
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
+  ion-item --> ion-note
   ldf-editable-text --> ion-input
   ldf-editable-delete --> ion-buttons
   ldf-editable-delete --> ion-button

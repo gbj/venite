@@ -49,6 +49,7 @@ graph TD;
   ldf-editable-string-list --> ion-button
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
+  ion-item --> ion-note
   ion-chip --> ion-ripple-effect
   ion-button --> ion-ripple-effect
   ldf-editable-condition-piece --> ldf-editable-string-list

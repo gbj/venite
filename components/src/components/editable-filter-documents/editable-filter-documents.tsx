@@ -73,6 +73,7 @@ export class EditableFilterDocumentsComponent {
   async setOptions(options : LiturgicalDocument[]): Promise<void> {
     this.options = options;
     this.optionsChange();
+    console.log("component setOptions", options);
   }
 
   // Lifecycle events

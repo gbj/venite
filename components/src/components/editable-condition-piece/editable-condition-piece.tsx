@@ -197,29 +197,29 @@ export class EditableConditionComponent {
             <ion-item lines="none">
               <ion-label position="stacked">{localeStrings.lte}</ion-label>
               <ion-datetime
-                displayFormat="MMMM D"
-                onIonChange={(ev) => this.setDateField('lte', ev.detail.value)}
+                presentation="date"
+                onIonChange={(ev) => this.setDateField('lte', Array.isArray(ev.detail.value) ? ev.detail.value[0] : ev.detail.value)}
               ></ion-datetime>
             </ion-item>
             <ion-item lines="none">
               <ion-label position="stacked">{localeStrings.lt}</ion-label>
               <ion-datetime
-                displayFormat="MMMM D"
-                onIonChange={(ev) => this.setDateField('lt', ev.detail.value)}
+                presentation="date"
+                onIonChange={(ev) => this.setDateField('lt', Array.isArray(ev.detail.value) ? ev.detail.value[0] : ev.detail.value)}
               ></ion-datetime>
             </ion-item>
             <ion-item lines="none">
               <ion-label position="stacked">{localeStrings.gte}</ion-label>
               <ion-datetime
-                displayFormat="MMMM D"
-                onIonChange={(ev) => this.setDateField('gte', ev.detail.value)}
+                presentation="date"
+                onIonChange={(ev) => this.setDateField('gte', Array.isArray(ev.detail.value) ? ev.detail.value[0] : ev.detail.value)}
               ></ion-datetime>
             </ion-item>
             <ion-item lines="none">
               <ion-label position="stacked">{localeStrings.gt}</ion-label>
               <ion-datetime
-                displayFormat="MMMM D"
-                onIonChange={(ev) => this.setDateField('gt', ev.detail.value)}
+                //displayFormat="MMMM D"
+                onIonChange={(ev) => this.setDateField('gt', Array.isArray(ev.detail.value) ? ev.detail.value[0] : ev.detail.value)}
               ></ion-datetime>
             </ion-item>
           </div>}

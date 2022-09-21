@@ -1,13 +1,21 @@
 apply plugin: 'com.android.application'
 
+configurations.all {
+    resolutionStrategy { force 'androidx.core:core:1.6.0' }
+}
+
+configurations.all {
+    resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "app.venite"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 74
-        versionName "2.3.9"
+        versionCode 75
+        versionName "2.3.10"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

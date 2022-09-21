@@ -76,6 +76,26 @@ graph TD;
   ldf-editable-metadata-metadata-fields --> ion-card-content
   ldf-editable-select --> ion-select
   ldf-editable-select --> ion-select-option
+  ion-select --> ion-select-popover
+  ion-select --> ion-popover
+  ion-select --> ion-action-sheet
+  ion-select --> ion-alert
+  ion-select-popover --> ion-item
+  ion-select-popover --> ion-checkbox
+  ion-select-popover --> ion-label
+  ion-select-popover --> ion-radio-group
+  ion-select-popover --> ion-radio
+  ion-select-popover --> ion-list
+  ion-select-popover --> ion-list-header
+  ion-item --> ion-icon
+  ion-item --> ion-ripple-effect
+  ion-item --> ion-note
+  ion-popover --> ion-backdrop
+  ion-action-sheet --> ion-backdrop
+  ion-action-sheet --> ion-icon
+  ion-action-sheet --> ion-ripple-effect
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
   ldf-editable-boolean --> ion-checkbox
   ldf-editable-text --> ion-input
   ldf-editable-string-list --> ion-item
@@ -84,8 +104,6 @@ graph TD;
   ldf-editable-string-list --> ion-icon
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
-  ion-item --> ion-icon
-  ion-item --> ion-ripple-effect
   ion-chip --> ion-ripple-effect
   ion-button --> ion-ripple-effect
   ldf-editable-antiphon-field --> ion-radio-group

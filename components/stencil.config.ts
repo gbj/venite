@@ -39,6 +39,9 @@ export const config: Config = {
     },
   ],
   plugins: [sass()],
+  extras: {
+    experimentalImportInjection: true,
+  },
   // uncomment lines below if we go back to fetching static JSON
   //copy: [{
   //  src: "**/*.i18n.*.json",

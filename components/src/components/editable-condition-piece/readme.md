@@ -52,7 +52,35 @@ graph TD;
   ldf-editable-condition-piece --> ldf-editable-string-list
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
+  ion-item --> ion-note
+  ion-toggle --> ion-icon
+  ion-datetime --> ion-buttons
+  ion-datetime --> ion-button
+  ion-datetime --> ion-picker-internal
+  ion-datetime --> ion-picker-column-internal
+  ion-datetime --> ion-item
+  ion-datetime --> ion-label
+  ion-datetime --> ion-icon
+  ion-datetime --> ion-popover
+  ion-button --> ion-ripple-effect
+  ion-popover --> ion-backdrop
   ldf-editable-text --> ion-input
+  ion-select --> ion-select-popover
+  ion-select --> ion-popover
+  ion-select --> ion-action-sheet
+  ion-select --> ion-alert
+  ion-select-popover --> ion-item
+  ion-select-popover --> ion-checkbox
+  ion-select-popover --> ion-label
+  ion-select-popover --> ion-radio-group
+  ion-select-popover --> ion-radio
+  ion-select-popover --> ion-list
+  ion-select-popover --> ion-list-header
+  ion-action-sheet --> ion-backdrop
+  ion-action-sheet --> ion-icon
+  ion-action-sheet --> ion-ripple-effect
+  ion-alert --> ion-ripple-effect
+  ion-alert --> ion-backdrop
   ion-chip --> ion-ripple-effect
   ldf-editable-string-list --> ion-item
   ldf-editable-string-list --> ion-label
@@ -60,7 +88,6 @@ graph TD;
   ldf-editable-string-list --> ion-icon
   ldf-editable-string-list --> ion-input
   ldf-editable-string-list --> ion-button
-  ion-button --> ion-ripple-effect
   ldf-editable-condition --> ldf-editable-condition-piece
   style ldf-editable-condition-piece fill:#f9f,stroke:#333,stroke-width:4px
 ```
