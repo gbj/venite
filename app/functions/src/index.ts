@@ -113,6 +113,7 @@ export const bible = functions.https.onRequest(async (request, response) => {
   if (citation && version) {
     try {
       const reading = await getBibleText(citation, version);
+      console.log("reading = ", reading);
       if (reading?.value?.length > 0) {
         response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
         response.status(200).send(reading);
