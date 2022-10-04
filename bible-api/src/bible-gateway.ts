@@ -51,6 +51,31 @@ export function parseBibleGatewayResponse(
               if (!text.endsWith(" ")) {
                 text += " ";
               }
+            } else if (
+              child instanceof HTMLElement &&
+              !child.childNodes.length
+            ) {
+              if (
+                !child.classNames.includes("chapternum") &&
+                !child.classNames.includes("versenum") &&
+                !child.classNames.includes("crossreference")
+              ) {
+                text += child.text;
+              }
+            } else if (child instanceof HTMLElement) {
+              for (const subchild of child.childNodes) {
+                if (subchild instanceof HTMLElement) {
+                  if (
+                    !subchild.classNames.includes("chapternum") &&
+                    !subchild.classNames.includes("versenum") &&
+                    !subchild.classNames.includes("crossreference")
+                  ) {
+                    text += subchild.text;
+                  }
+                } else {
+                  text += subchild.toString();
+                }
+              }
             }
           }
         } else {
@@ -61,7 +86,7 @@ export function parseBibleGatewayResponse(
           book,
           chapter,
           verse,
-          text,
+          text: text.replace(/^\d+\s+/, ""),
         } as BibleReadingVerse;
       });
     paragraphResults.push(verses);

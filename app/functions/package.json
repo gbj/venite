@@ -14,7 +14,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@venite/bible-api": "^0.1.5",
+    "@venite/bible-api": "^0.1.6",
     "@venite/docx": "^0.2.4",
     "@venite/http": "^0.1.1",
     "@venite/hymnal-api": "^0.1.2",
