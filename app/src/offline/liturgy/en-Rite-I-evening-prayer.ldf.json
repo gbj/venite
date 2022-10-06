@@ -1407,6 +1407,18 @@
             "metadata": { "alternateYear": false }
           },
           {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
+          },
+          {
             "label": "Common English Bible (CEB)",
             "default": false,
             "metadata": { "alternateYear": false },
@@ -1433,14 +1445,8 @@
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "value": "RSV",
-            "label": "Revised Standard Version (RSV)"
-          },
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
-            "value": "NKJV",
-            "label": "New King James Version (NKJV)"
+            "value": "NIV",
+            "label": "New International Version (NIV)"
           }
         ],
         "label": "Bible Version"

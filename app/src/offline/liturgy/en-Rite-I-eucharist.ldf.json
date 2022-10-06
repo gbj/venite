@@ -59,6 +59,18 @@
         "options": [
           {
             "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "King James Version (KJV)",
+            "value": "KJV"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
             "label": "New Revised Standard Version (NRSV)",
             "value": "NRSV",
             "metadata": { "alternateYear": false }
@@ -78,26 +90,20 @@
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "label": "King James Version (KJV)",
-            "value": "KJV"
-          },
-          {
-            "default": false,
-            "metadata": { "alternateYear": false },
             "value": "NRSVUE",
             "label": "NRSV Updated Edition (NRSVue)"
           },
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "value": "RSV",
-            "label": "Revised Standard Version (RSV)"
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
           },
           {
             "default": false,
             "metadata": { "alternateYear": false },
-            "value": "NKJV",
-            "label": "New King James Version (NKJV)"
+            "value": "NIV",
+            "label": "New International Version (NIV)"
           }
         ],
         "label": "Bible Translation",

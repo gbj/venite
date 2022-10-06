@@ -1446,6 +1446,12 @@
             "metadata": { "alternateYear": false },
             "value": "NKJV",
             "label": "New King James Version (NKJV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NIV",
+            "label": "New International Version (NIV)"
           }
         ]
       },
