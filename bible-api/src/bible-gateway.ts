@@ -62,7 +62,12 @@ export function parseBibleGatewayResponse(
               ) {
                 text += child.text;
               }
-            } else if (child instanceof HTMLElement) {
+            } else if (
+              child instanceof HTMLElement &&
+              !child.classNames.includes("chapternum") &&
+              !child.classNames.includes("versenum") &&
+              !child.classNames.includes("crossreference")
+            ) {
               for (const subchild of child.childNodes) {
                 if (subchild instanceof HTMLElement) {
                   if (

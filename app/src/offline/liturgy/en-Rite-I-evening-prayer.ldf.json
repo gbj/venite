@@ -1423,6 +1423,24 @@
             "metadata": { "alternateYear": false },
             "label": "New Revised Standard Version (NRSV)",
             "default": false
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NRSVUE",
+            "label": "NRSV Updated Edition (NRSVue)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
           }
         ],
         "label": "Bible Version"

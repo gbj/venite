@@ -1415,6 +1415,18 @@
         "key": "bibleVersion",
         "options": [
           {
+            "value": "RVR1960",
+            "label": "Reina-Valera (1960)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "DHH",
+            "label": "Dios Habla Hoy (DHH)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
             "value": "RV09",
             "label": "Reina-Valera (1909)",
             "default": false,
@@ -1443,6 +1455,24 @@
             "metadata": { "alternateYear": false },
             "label": "King James Version (KJV)",
             "default": false
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NRSVUE",
+            "label": "NRSV Updated Edition (NRSVue)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
           }
         ]
       },

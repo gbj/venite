@@ -78,6 +78,24 @@
             "value": "KJV",
             "label": "King James Version (KJV)",
             "metadata": { "alternateYear": false }
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NRSVUE",
+            "label": "NRSV Updated Edition (NRSVue)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
           }
         ]
       },
