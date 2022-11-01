@@ -667,7 +667,12 @@
           "citation": "",
           "api": ""
         },
-        "value": ["We will exalt you, O God our King;"],
+        "value": [
+          {
+            "text": "We will exalt you, O God our King;",
+            "response": "And praise your Name for ever and ever."
+          }
+        ],
         "hidden": false,
         "style": "text",
         "metadata": {
