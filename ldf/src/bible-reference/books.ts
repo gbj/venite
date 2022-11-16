@@ -76,6 +76,7 @@ export const BOOKS: [string, Book][] = [
   ['Zechariah', Book.Zechariah],
   ['Zech.', Book.Zechariah],
   ['Malachi', Book.Malachi],
+  ['Mal.', Book.Malachi],
   ['Matthew', Book.Matthew],
   ['Matt.', Book.Matthew],
   ['Mark', Book.Mark],

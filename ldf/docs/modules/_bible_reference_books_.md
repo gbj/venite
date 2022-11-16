@@ -88,6 +88,7 @@
   ['Zechariah', Book.Zechariah],
   ['Zech.', Book.Zechariah],
   ['Malachi', Book.Malachi],
+  ['Mal.', Book.Malachi],
   ['Matthew', Book.Matthew],
   ['Matt.', Book.Matthew],
   ['Mark', Book.Mark],
@@ -181,4 +182,4 @@
   ['Tobit', Book.Tobit],
 ]
 
-*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/ba56caf0/ldf/src/bible-reference/books.ts#L3)*
+*Defined in [bible-reference/books.ts:3](https://github.com/gbj/venite/blob/94a92f56/ldf/src/bible-reference/books.ts#L3)*
