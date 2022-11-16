@@ -34,7 +34,8 @@ export function findCollect(
     redLetterOrSunday = redLetterCollect || sundayCollect,
     season = !FAKE_SEASONS.includes(day.season) ? day.season : day.week?.season || day.season,
     seasonalCollects = collects.filter((collect) => collect.slug === season),
-    octaveCollect = day.octave ? docsToOption(collects.filter((collect) => collect.slug === day.octave)) : null,
+    octave = day?.octave || (day?.holy_days && day?.holy_days[0] && day.holy_days[0].octave),
+    octaveCollect = octave ? docsToOption(collects.filter((collect) => collect.slug === octave)) : null,
     blackLetterDays = (day.holy_days || []).filter(
       (feast) => feast.type && feast.type.rank < 3 && feast?.slug !== redLetterOrSunday?.slug,
     ),
