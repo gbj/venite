@@ -1,6 +1,9 @@
 {
   "name": "@venite/ng-service-api",
   "version": "0.8.0",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
@@ -8,7 +11,6 @@
     "@ionic/angular": "^5.0.0",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
-    "@venite/ldf": "~0.18.11",
-    "tslib": "^1.10.0"
+    "@venite/ldf": "~0.18.11"
   }
 }
