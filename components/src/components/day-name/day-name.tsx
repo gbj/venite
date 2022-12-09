@@ -4,10 +4,12 @@ import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './day-name.i18n.en.json';
 import ES from './day-name.i18n.es.json';
+import FR from './day-name.i18n.fr.json';
 
 const LOCALE = {
   'en': EN,
-  'es': ES
+  'es': ES,
+  'fr': FR
 };
 
 @Component({
@@ -87,7 +89,7 @@ export class DayNameComponent {
           localeStrings.after || ' after ',
           day?.week?.omit_the ? '' : localeStrings.the,
           localeStrings[day?.week?.name] || day?.week?.name
-        ].join("").replace(/de\s+el/, "del");
+        ].join("").replace(/de\s+el/, "del").replace(/de\s+le/, "du");
       }
     }
   }
