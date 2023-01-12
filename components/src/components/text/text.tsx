@@ -136,7 +136,7 @@ export class TextComponent {
         ? (this.obj?.value || []).map(s => s.replace(/\s+/g, ' '))
         : (this.obj?.value || []);
       let compiledValue : string[][] = value.map(s => {
-        return s.split(/([\*\w\n\s,:;\.\-–—'“☩✠”‘’\!\?”\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f]+([^\*\w\n\s,;:\.'“”☩✠‘’”\-–—\!\?\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f]))/g);
+        return s.split(/([\*\w\n\s,:;\.\-–—'“☩✠”‘’\!\?”\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]+([^\*\w\n\s,;:\.'“”☩✠‘’”\-–—\!\?\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]))/g);
       })
       if(!this.editable && this.obj?.display_format === 'abbreviated') {
         const firstSection = compiledValue[0],

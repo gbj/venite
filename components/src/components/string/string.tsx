@@ -168,7 +168,11 @@ export class StringComponent {
         .concat(processed.slice(1));
     }
 
-    return final;
+    if (typeof first === 'string' && first.match(/[\u0e00-\u0e5b]/)) {
+      return processed;
+    } else {
+      return final;
+    }
   }
 
   // Lifecycle events
