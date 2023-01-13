@@ -24,6 +24,6 @@
     "@venite/http": "^0.1.1"
   },
   "devDependencies": {
-    "firebase-admin": "^9.2.0"
+    "firebase-admin": "^11.4.1"
   }
 }
