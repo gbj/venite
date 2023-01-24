@@ -147,6 +147,7 @@ import { FileOpener } from "@ionic-native/file-opener/ngx";
           { value: "garamond", label: "Cormorant Garamond" },
           { value: "eb-garamond", label: "EB Garamond" },
           { value: "gill-sans", label: "Gill Sans" },
+          { value: "open-dyslexic", label: "Open Dyslexic" },
         ],
         dropcaps: [
           { value: "plain", label: "Y" },

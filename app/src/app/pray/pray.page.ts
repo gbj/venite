@@ -68,7 +68,7 @@ import {
   LOCAL_STORAGE,
   LocalStorageServiceInterface,
 } from "@venite/ng-service-api";
-import { DisplaySettingsComponent } from "@venite/ng-pray";
+import { DisplaySettingsComponent } from "./display-settings/display-settings.component";
 import { PrayService } from "./pray.service";
 import { AuthService } from "../auth/auth.service";
 import { DocumentService } from "../services/document.service";

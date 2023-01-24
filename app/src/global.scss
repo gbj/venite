@@ -143,6 +143,35 @@
         url('/assets/fonts/eb-garamond-v15-latin-500italic.svg#EBGaramond') format('svg'); /* Legacy iOS */
   }
 
+  /* Open Dyslexic */
+  @font-face {
+    font-family: 'Open Dyslexic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/OpenDyslexic-Regular.otf'); 
+  }
+
+  @font-face {
+    font-family: 'Open Dyslexic';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/assets/fonts/OpenDyslexic-Bold.otf');
+  }
+
+  @font-face {
+    font-family: 'Open Dyslexic';
+    font-style: italic;
+    font-weight: normal;
+    src: url('/assets/fonts/OpenDyslexic-Italic.otf');
+  }
+
+  @font-face {
+    font-family: 'Open Dyslexic';
+    font-style: italic;
+    font-weight: bold;
+    src: url('/assets/fonts/OpenDyslexic-BoldItalic.otf');
+  }
+
 /* EB Garamond Initials */
 @font-face {
   font-family: "EB Garamond Initials";
@@ -249,6 +278,10 @@ body * {
 
   .font-gill-sans {
     --ldf-font-face: "Gill Sans", sans-serif;
+  }
+
+   .font-open-dyslexic {
+    --ldf-font-face: "Open Dyslexic", sans-serif;
   }
 
   /* Label/Header Styling */
