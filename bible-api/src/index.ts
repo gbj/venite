@@ -4,3 +4,4 @@ export * from "./get-bible-text";
 export * from "./kjv";
 export * from "./bible-gateway";
 export * from "./nrsv";
+export * from "./you-version";
