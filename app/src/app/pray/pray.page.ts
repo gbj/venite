@@ -99,7 +99,7 @@ import { Share } from "@capacitor/share";
 import { Clipboard } from "@capacitor/clipboard";
 import * as clipboardPolyfill from "clipboard-polyfill";
 
-import { MediaSession } from "capacitor-media-session";
+import { MediaSession } from "@jofr/capacitor-media-session";
 import { LoginComponent } from "../auth/login/login.component";
 import { MediaSessionService } from "../services/media-session.service";
 
@@ -1597,34 +1597,32 @@ export class PrayPage implements OnInit, OnDestroy {
           position: duration - ev.detail,
           playbackRate: 1,
         });
+        MediaSession.setPlaybackState({ playbackState: "playing" });
       } else {
-        MediaSession.destroy();
+        //MediaSession.destroy();
       }
     } else {
       switch (ev.detail) {
         case "start":
           await this.audio.create(audioFile, false);
           await this.audio.play();
-          MediaSession.init({
-            play: true,
-            pause: true,
-            stop: true,
-            previoustrack: true,
-          });
-          MediaSession.addListener("play", () => {
+          MediaSession.setActionHandler({ action: "play" }, () => {
             el.resume();
             this.audio.play();
           });
-          MediaSession.addListener("pause", () => {
+          MediaSession.setActionHandler({ action: "pause" }, () => {
             el.pause();
             this.audio.pause();
           });
-          MediaSession.addListener("previoustrack", async () => {
-            el.rewind();
-            await this.audio.destroy();
-            await this.audio.create(audioFile, false);
-            await this.audio.play();
-          });
+          MediaSession.setActionHandler(
+            { action: "previoustrack" },
+            async () => {
+              el.rewind();
+              await this.audio.destroy();
+              await this.audio.create(audioFile, false);
+              await this.audio.play();
+            }
+          );
           MediaSession.setMetadata({
             artist: "Venite",
             album: "Venite",
@@ -1637,6 +1635,7 @@ export class PrayPage implements OnInit, OnDestroy {
               },
             ],
           });
+          MediaSession.setPlaybackState({ playbackState: "playing" });
           break;
         case "pause":
           await this.audio.pause();
@@ -1653,7 +1652,7 @@ export class PrayPage implements OnInit, OnDestroy {
           await this.audio.destroy();
           await this.audio.create(audioFile, false);
           this.audio.play();
-          MediaSession.destroy();
+          //MediaSession.destroy();
           break;
       }
     }

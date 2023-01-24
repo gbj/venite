@@ -53,11 +53,6 @@
 	<string>background</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>To take a photo to use as a user avatar.</string>
 	<key>NSLocationAlwaysUsageDescription</key>

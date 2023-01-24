@@ -7,7 +7,7 @@ import {
   PreferencesServiceInterface,
   PREFERENCES_SERVICE,
 } from "@venite/ng-service-api";
-import { MediaSession } from "capacitor-media-session";
+import { MediaSession } from "@jofr/capacitor-media-session";
 import { Observable, of } from "rxjs";
 import { distinct, map, switchMap, tap } from "rxjs/operators";
 import { AudioService } from "../pray/audio.service";
@@ -90,33 +90,31 @@ export class MeditatePage implements OnInit {
           playbackRate: 1,
         });
       } else {
-        MediaSession.destroy();
+        //MediaSession.destroy();
       }
     } else {
       switch (ev.detail) {
         case "start":
           await this.audio.create(audioFile, false);
           await this.audio.play();
-          MediaSession.init({
-            play: true,
-            pause: true,
-            stop: true,
-            previoustrack: true,
-          });
-          MediaSession.addListener("play", () => {
+          MediaSession.setPlaybackState({ playbackState: "playing" });
+          MediaSession.setActionHandler({ action: "play" }, () => {
             this.el.nativeElement.resume();
             this.audio.play();
           });
-          MediaSession.addListener("pause", () => {
+          MediaSession.setActionHandler({ action: "pause" }, () => {
             this.el.nativeElement.pause();
             this.audio.pause();
           });
-          MediaSession.addListener("previoustrack", async () => {
-            this.el.nativeElement.rewind();
-            await this.audio.destroy();
-            await this.audio.create(audioFile, false);
-            await this.audio.play();
-          });
+          MediaSession.setActionHandler(
+            { action: "previoustrack" },
+            async () => {
+              this.el.nativeElement.rewind();
+              await this.audio.destroy();
+              await this.audio.create(audioFile, false);
+              await this.audio.play();
+            }
+          );
           MediaSession.setMetadata({
             artist: "Venite",
             album: "Venite",
@@ -146,7 +144,7 @@ export class MeditatePage implements OnInit {
           await this.audio.destroy();
           await this.audio.create(audioFile, false);
           this.audio.play();
-          MediaSession.destroy();
+          //MediaSession.destroy();
           break;
       }
     }

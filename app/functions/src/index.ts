@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import { getBibleText } from "@venite/bible-api";
+import { getBibleText, getYouVersionBook } from "@venite/bible-api";
 import { loadText, loadScore } from "@venite/hymnal-api";
 import { ldfToDocx } from "@venite/docx";
 import { Packer } from "docx";
@@ -129,6 +129,35 @@ export const bible = functions.https.onRequest(async (request, response) => {
       .send("'Citation' and 'Version' parameters are required.");
   }
 });
+
+export const youVersion = functions.https.onRequest(
+  async (request, response) => {
+    response.set("Access-Control-Allow-Origin", "*"); // CORS allowed
+
+    const bibleNumber = request.query?.bibleNumber?.toString(),
+      bookCode = request.query?.bookCode?.toString(),
+      chapter = request.query?.chapter?.toString(),
+      bibleVersion = request.query?.bibleVersion?.toString();
+    if (bibleNumber && bookCode && chapter && bibleVersion) {
+      try {
+        const reading = await getYouVersionBook(
+          bibleNumber,
+          bookCode,
+          chapter,
+          bibleVersion
+        );
+        response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
+        response.status(200).send(reading);
+      } catch (e) {
+        response.status(400).send(`[Error] ${e.toString()}`);
+      }
+    } else {
+      response
+        .status(400)
+        .send("'Citation' and 'Version' parameters are required.");
+    }
+  }
+);
 
 export const hymnText = functions.https.onRequest(async (request, response) => {
   response.set("Access-Control-Allow-Origin", "*"); // CORS allowed

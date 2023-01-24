@@ -6,7 +6,7 @@ import {
   Liturgy,
   Option,
 } from "@venite/ldf";
-import { MediaSession } from "capacitor-media-session";
+import { MediaSession } from "@jofr/capacitor-media-session";
 import { PlatformService } from "@venite/ng-platform";
 import { combineLatest, Observable, of, Subscription } from "rxjs";
 import { AudioService } from "../pray/audio.service";
@@ -46,7 +46,9 @@ export class MediaSessionService {
   ) {}
 
   isAvailable(): boolean {
-    return this.platform.is("capacitor") || Boolean(navigator.mediaSession);
+    return (
+      this.platform.is("capacitor") || Boolean((navigator as any).mediaSession)
+    );
   }
 
   async initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
@@ -55,12 +57,6 @@ export class MediaSessionService {
       await this.audio.play();
 
       this.docLabel = doc.label || "";
-      await MediaSession.init({
-        play: true,
-        pause: true,
-        nexttrack: true,
-        previoustrack: true,
-      });
 
       await MediaSession.setMetadata({
         artist: "Venite",
@@ -75,16 +71,18 @@ export class MediaSessionService {
         ],
       });
 
-      MediaSession.addListener("play", () => {
+      await MediaSession.setPlaybackState({ playbackState: "playing" });
+
+      MediaSession.setActionHandler({ action: "play" }, () => {
         this.zone.run(() => this.resumeSpeech(doc, settings));
       });
-      MediaSession.addListener("pause", () => {
+      MediaSession.setActionHandler({ action: "pause" }, () => {
         this.zone.run(() => this.pauseSpeech());
       });
-      MediaSession.addListener("nexttrack", () => {
+      MediaSession.setActionHandler({ action: "nexttrack" }, () => {
         this.zone.run(() => this.fastForward(doc, settings));
       });
-      MediaSession.addListener("previoustrack", () => {
+      MediaSession.setActionHandler({ action: "previoustrack" }, () => {
         this.zone.run(() => this.rewind(doc, settings));
       });
     }
@@ -374,8 +372,8 @@ export class MediaSessionService {
     this.speechService.pause();
     this.audio.pause();
     this.audio.destroy();
-    if (this.isAvailable()) {
+    /* if (this.isAvailable()) {
       MediaSession.destroy();
-    }
+    } */
   }
 }

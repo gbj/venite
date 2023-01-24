@@ -16,6 +16,10 @@
 		"classpath": "com.capacitorjs.plugins.clipboard.ClipboardPlugin"
 	},
 	{
+		"pkg": "@capacitor/device",
+		"classpath": "com.capacitorjs.plugins.device.DevicePlugin"
+	},
+	{
 		"pkg": "@capacitor/filesystem",
 		"classpath": "com.capacitorjs.plugins.filesystem.FilesystemPlugin"
 	},
@@ -32,19 +36,19 @@
 		"classpath": "com.capacitorjs.plugins.localnotifications.LocalNotificationsPlugin"
 	},
 	{
+		"pkg": "@capacitor/preferences",
+		"classpath": "com.capacitorjs.plugins.preferences.PreferencesPlugin"
+	},
+	{
 		"pkg": "@capacitor/share",
 		"classpath": "com.capacitorjs.plugins.share.SharePlugin"
 	},
 	{
-		"pkg": "@capacitor/storage",
-		"classpath": "com.capacitorjs.plugins.storage.StoragePlugin"
+		"pkg": "@jofr/capacitor-media-session",
+		"classpath": "io.github.jofr.capacitor.mediasessionplugin.MediaSessionPlugin"
 	},
 	{
 		"pkg": "capacitor-firebase-auth",
 		"classpath": "com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth"
-	},
-	{
-		"pkg": "capacitor-media-session",
-		"classpath": "app.venite.mediasession.MediaSession"
 	}
 ]
