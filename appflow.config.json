@@ -1,11 +1,10 @@
 {
-  "apps":
-  [
-      {
-          "appId": "9a37f920",
-          "root": "app",
-          "dependencyInstallCommand": "npm install",
-          "webBuildCommand": "npm run build"
-      }
+  "apps": [
+    {
+      "appId": "9a37f920",
+      "root": "app",
+      "dependencyInstallCommand": "npm install --force",
+      "webBuildCommand": "npm run build"
+    }
   ]
 }
