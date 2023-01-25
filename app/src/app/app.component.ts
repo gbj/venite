@@ -25,7 +25,7 @@ import { FirebaseAnalytics } from "@capacitor-community/firebase-analytics";
 import { environment } from "../environments/environment";
 import { IssueComponent } from "./shared/issue/issue.component";
 import { IssueService } from "./issues/issue.service";
-import { LocalStorageService } from "@venite/ng-localstorage";
+import { LocalStorageService } from "./services/local-storage.service";
 
 @Component({
   selector: "venite-root",

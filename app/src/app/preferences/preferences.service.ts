@@ -10,6 +10,7 @@ import {
   shareReplay,
   startWith,
   first,
+  catchError,
 } from "rxjs/operators";
 
 import {
@@ -17,7 +18,6 @@ import {
   AUTH_SERVICE,
   StoredPreference,
 } from "@venite/ng-service-api";
-import { LocalStorageService } from "@venite/ng-localstorage";
 
 import {
   DisplaySettings,
@@ -26,6 +26,7 @@ import {
 } from "@venite/ldf";
 import { isOnline } from "../editor/ldf-editor/is-online";
 import { LiturgyTimeRanges } from "@venite/ng-service-api";
+import { LocalStorageService } from "../services/local-storage.service";
 
 type OldPreferences = {
   defaultLanguage?: string;
@@ -68,22 +69,21 @@ export class PreferencesService {
   }
 
   private async loadOldPreferences() {
-    const oldPrefs = await this.storage.get("preferences");
+    console.log("loadOldPreferences");
+    const oldPrefs = this.storage.get("preferences");
     if (oldPrefs) {
-      try {
-        this._oldVenitePreferences = JSON.parse(oldPrefs);
-      } catch (e) {
-        console.warn(e);
-      }
+      return oldPrefs.then((prefs) => JSON.parse(prefs || "{}"));
+    } else {
+      return undefined;
     }
-    return oldPrefs;
   }
 
   private async getOldPref(
     key: string,
     liturgy: LiturgicalDocument = undefined
   ): Promise<StoredPreference> {
-    const old = await this._oldVenitePreferences;
+    console.log("getOldPref");
+    const old = (await this._oldVenitePreferences) || {};
     if (key === "language") {
       return { key: "language", value: old?.defaultLanguage };
     } else if (key === "version") {
@@ -103,6 +103,7 @@ export class PreferencesService {
   private async getOldPrefsForLiturgy(
     liturgy: LiturgicalDocument
   ): Promise<StoredPreference[]> {
+    console.log("getOldPrefsForLiturgy");
     const old = await this._oldVenitePreferences,
       language = liturgy.language,
       version = versionToString(liturgy.version),
@@ -240,7 +241,7 @@ export class PreferencesService {
     return this.auth.user.pipe(
       map((user) => [user?.uid, key]),
       tap(([uid, key]) =>
-        console.log("(PreferencesService) getStored", uid, key)
+        console.log("(PreferencesService) getStored query", uid, key)
       ),
       switchMap(([uid, key]) => {
         // if logged in, use Firestore
@@ -250,7 +251,14 @@ export class PreferencesService {
           return from(this.storage.get(this.localStorageKey(key)));
         }
       }),
-      shareReplay()
+      tap((value) =>
+        console.log("(PreferencesService) getStored found", value)
+      ),
+      shareReplay(),
+      catchError((e) => {
+        console.log("getStored error", e);
+        return of({});
+      })
     );
   }
 

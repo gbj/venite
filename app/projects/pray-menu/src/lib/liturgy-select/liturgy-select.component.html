@@ -141,11 +141,11 @@
 <div class="pray-buttons">
   <ng-container *ngIf="prayButton">
     <ng-container *ngIf="prayData$ | async as data else notLoaded">
-      <ng-container *ngIf="preferencesLoaded$ | async else notLoaded">
+      <!--<ng-container *ngIf="preferencesLoaded$ | async else notLoaded">-->
         <ion-button (click)="pray(data)" [disabled]="isNavigating">
           <ion-label>{{ 'Pray' | translate }}</ion-label>
         </ion-button>
-      </ng-container>
+      <!--</ng-container>-->
     </ng-container>
     <ng-template #notLoaded>
       <ion-button disabled="true">
