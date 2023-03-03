@@ -41,12 +41,12 @@ export function filterCanticleTableEntries(
     seasonEntries = filteredEntries.filter((e) => e.season == day.season);
 
   let preferredEntries = filteredEntries;
-  if (dayEntries?.length > 0) {
+  if (seasonEntries?.length > 0) {
+    preferredEntries = seasonEntries;
+  } else if (dayEntries?.length > 0) {
     preferredEntries = dayEntries;
   } else if (weekEntries?.length > 0) {
     preferredEntries = weekEntries;
-  } else if (seasonEntries?.length > 0) {
-    preferredEntries = seasonEntries;
   }
 
   if (preferredEntries?.length == 0 && fallbackTable) {

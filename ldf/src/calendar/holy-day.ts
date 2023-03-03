@@ -44,6 +44,9 @@ export class HolyDay {
   /** A machine-readable identifier for the liturgical season */
   season?: Seasons[number];
 
+  /** A machine-readable identifier for the season this day was before a holy day overrode it. */
+  base_season?: Seasons[number];
+
   /** A machine-readable identifier day within the octave of which a day falls */
   octave?: string | undefined;
 
