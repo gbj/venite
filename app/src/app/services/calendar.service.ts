@@ -210,7 +210,8 @@ export class CalendarService implements CalendarServiceInterface {
       observedM = observedDate.getMonth() + 1,
       observedD = observedDate.getDate(),
       feasts$ = this.findFeastDays(kalendar, `${observedM}/${observedD}`),
-      specials$ = this.findSpecialDays(kalendar, day.slug);
+      specials$ = this.findSpecialDays(kalendar, day.slug),
+      originalSeason = day.season;
 
     // Thanksgiving Day
     const isNovember = date.getMonth() === 10, // January is 0, Feb 1, etc., so Sept is 8, Nov is 10
@@ -314,7 +315,23 @@ export class CalendarService implements CalendarServiceInterface {
         }
 
         // incorporate them into the `LiturgicalDay`
-        return day.addHolyDays(uniqueBy(holydays, "slug"), true);
+        const dayWithHolyDays = day.addHolyDays(
+          uniqueBy(holydays, "slug"),
+          true
+        );
+        // make sure season is Lent if we're in Lent
+        if (originalSeason == "Lent" || originalSeason == "HolyWeek") {
+          dayWithHolyDays.season = originalSeason;
+        }
+        const date = dateFromYMDString(day.date),
+          weekday = date.getDay();
+        if (
+          day.week.slug == "last-epiphany" &&
+          (weekday == 3 || weekday == 4 || weekday == 5 || weekday == 6)
+        ) {
+          dayWithHolyDays.season = "Lent";
+        }
+        return dayWithHolyDays;
       })
     );
   }
