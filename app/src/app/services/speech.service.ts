@@ -111,9 +111,10 @@ export class SpeechService {
     function processText(s: string): string {
       return processEntities(
         s
+          .replace(/[@#'!&(),\[\]\.]['"“”‘’]/g, "")
           .replace(/&nbsp;/g, " ")
-          .replace(/YHWH/g, "Addo-nigh")
-          .replace(/Venite/g, "ven-E-tae")
+          .replace(/YHWH/g, "Adonai")
+          .replace(/Venite/g, "ven-EE-tay")
           .replace(/Compline/g, "COMP-linn")
       );
     }
@@ -239,7 +240,7 @@ export class SpeechService {
             (verse as Heading).type === "heading"
               ? docToUtterances(verse as Heading)
               : processText((verse as BibleReadingVerse).text).split(
-                  /[@#'!&(),\[\].+\/-]/g
+                  /[@#'!&(),\[\].+\/]/g
                 )
           )
           .flat(),
